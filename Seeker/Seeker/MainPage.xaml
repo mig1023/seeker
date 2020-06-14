@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Seeker.MainPage">
+    <ScrollView>
+        <StackLayout Padding="30">
+            <Label Text="Text text text text text text text text text text text text text text text text text text text text text text text END" Margin="5" FontSize="Default"/>
+            <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand">
+                <Button Text="Vartiant 1" BackgroundColor="#2196F3" TextColor="White"/>
+                <Button Text="Vartiant 2" BackgroundColor="#2196F3" TextColor="White"/>
+                <Button Text="Vartiant 3" BackgroundColor="#2196F3" TextColor="White"/>
+                <Button Text="Vartiant 4" BackgroundColor="#2196F3" TextColor="White"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
