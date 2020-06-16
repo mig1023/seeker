@@ -7,14 +7,9 @@
              x:Class="Seeker.MainPage">
     <ScrollView>
         <StackLayout Padding="30">
-            <Label Text="Header" Margin="5" FontSize="Large"/>
-            <Label Text="Text text text text text text text text text text text text text text text text text text text text text text text END" Margin="5" FontSize="Default"/>
-            <StackLayout Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand">
-                <Button Text="Vartiant 1" BackgroundColor="#2196F3" TextColor="White"/>
-                <Button Text="Vartiant 2" BackgroundColor="#2196F3" TextColor="White"/>
-                <Button Text="Vartiant 3" BackgroundColor="#2196F3" TextColor="White"/>
-                <Button Text="Vartiant 4" BackgroundColor="#2196F3" TextColor="White"/>
-            </StackLayout>
+            <Label x:Name="Title" Text="" Margin="5" FontSize="Large"/>
+            <Label x:Name="Text" Text="" Margin="5" FontSize="Default"/>
+            <StackLayout x:Name="Options" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
