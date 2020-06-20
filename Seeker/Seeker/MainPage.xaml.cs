@@ -15,11 +15,14 @@ namespace Seeker
         {
             InitializeComponent();
 
-            GoToParagraph(1);
+            Paragraph(1);
         }
 
-        public void GoToParagraph(int id)
+        public void Paragraph(int id)
         {
+            if (!Gamebook.Data.DummyParagraphs.ContainsKey(id))
+                return;
+
             Gamebook.Paragraph paragraph = Gamebook.Data.DummyParagraphs[id];
 
             this.Title.Text = paragraph.Title;
@@ -52,7 +55,7 @@ namespace Seeker
             int? newParagraph = Game.Router.Find(b.Text);
 
             if (newParagraph != null)
-                GoToParagraph(newParagraph ?? 0);
+                Paragraph(newParagraph ?? 0);
         }
     }
 }
