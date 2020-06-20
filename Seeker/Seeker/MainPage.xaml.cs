@@ -11,8 +11,6 @@ namespace Seeker
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        private static Dictionary<string, int> tmpRouter = new Dictionary<string, int>();
-
         public MainPage()
         {
             InitializeComponent();
@@ -27,7 +25,7 @@ namespace Seeker
             this.Title.Text = paragraph.Title;
             this.Text.Text = paragraph.Text;
 
-            tmpRouter.Clear();
+            Game.Router.Clean();
 
             Options.Children.Clear();
 
@@ -40,7 +38,7 @@ namespace Seeker
                     BackgroundColor = Color.FromHex("#2196F3")
                 };
 
-                tmpRouter.Add(option.Text, option.Destination);
+                Game.Router.Add(option.Text, option.Destination);
 
                 button.Clicked += Option_Click;
 
@@ -51,11 +49,7 @@ namespace Seeker
         private void Option_Click(object sender, EventArgs e)
         {
             Button b = sender as Button;
-            int? newParagraph = null;
-
-            foreach(KeyValuePair<string, int> k in tmpRouter)
-                if (k.Key == b.Text)
-                    newParagraph = k.Value;
+            int? newParagraph = Game.Router.Find(b.Text);
 
             if (newParagraph != null)
                 GoToParagraph(newParagraph ?? 0);
