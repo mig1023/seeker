@@ -12,18 +12,17 @@ namespace Seeker.Gamebook
         {
             [1] = new Paragraph
             {
-                ID = 1,
                 Title = "First",
                 Text = "First",
                 Options = new List<Option>
                 {
                     new Option { Destination = 2, Text = "second" },
                     new Option { Destination = 3, Text = "third" },
+                    new Option { Destination = 4, Text = "fourth" },
                 }
             },
             [2] = new Paragraph
             {
-                ID = 1,
                 Title = "Second",
                 Text = "Second",
                 Options = new List<Option>
@@ -34,13 +33,21 @@ namespace Seeker.Gamebook
             },
             [3] = new Paragraph
             {
-                ID = 1,
                 Title = "Third",
                 Text = "Third",
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "first" },
                     new Option { Destination = 2, Text = "second" },
+                }
+            },
+            [4] = new Paragraph
+            {
+                Title = "Fourth",
+                Text = "Fourth",
+                Options = new List<Option>
+                {
+                    new Option { Destination = 1, Text = "back" },
                 }
             }
         };
