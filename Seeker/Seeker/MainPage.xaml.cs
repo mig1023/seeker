@@ -27,6 +27,8 @@ namespace Seeker
             Game.Router.Clean();
             Options.Children.Clear();
 
+            string buttonsColor = Game.Buttons.NextColor();
+
             foreach (string gamebook in DependencyService.Get<Other.IAssets>().GetAllFromAssets())
             {
                 if (!gamebook.Contains(".xml"))
@@ -38,7 +40,7 @@ namespace Seeker
                 {
                     Text = gamebookName,
                     TextColor = Xamarin.Forms.Color.White,
-                    BackgroundColor = Color.FromHex("#2196F3")
+                    BackgroundColor = Color.FromHex(buttonsColor)
                 };
 
                 button.Clicked += Gamebook_Click;
@@ -67,13 +69,15 @@ namespace Seeker
             Game.Router.Clean();
             Options.Children.Clear();
 
+            string buttonsColor = Game.Buttons.NextColor();
+
             foreach (Gamebook.Option option in paragraph.Options)
             {
                 Button button = new Button()
                 {
                     Text = option.Text,
                     TextColor = Xamarin.Forms.Color.White,
-                    BackgroundColor = Color.FromHex("#2196F3")
+                    BackgroundColor = Color.FromHex(buttonsColor)
                 };
 
                 Game.Router.Add(option.Text, option.Destination);
