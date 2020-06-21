@@ -10,6 +10,21 @@
             <Label x:Name="Title" Text="" Margin="5" FontSize="Large"/>
             <Label x:Name="Text" Text="" Margin="5" FontSize="Default"/>
             <StackLayout x:Name="Options" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" />
+            
+            
+             <StackLayout Orientation="Horizontal">
+              <Entry x:Name="fileNameEntry" HorizontalOptions="FillAndExpand" />
+                <Button Text="Обновить" Clicked="OnAppearing" />
+            </StackLayout>
+            <Editor Grid.Row="1" x:Name="textEditor" />
+            <ListView x:Name="filesList" Grid.Row="2" ItemSelected="FileSelect">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding}">
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ScrollView>
 </ContentPage>

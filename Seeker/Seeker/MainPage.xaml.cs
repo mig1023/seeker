@@ -57,5 +57,42 @@ namespace Seeker
             if (newParagraph != null)
                 Paragraph(newParagraph ?? 0);
         }
+
+        async void OnAppearing(object sender, EventArgs args)
+        {
+            base.OnAppearing();
+            await UpdateFileList();
+        }
+
+        async void Save(object sender, EventArgs args)
+        {
+            string filename = fileNameEntry.Text;
+            
+            if (String.IsNullOrEmpty(filename)) return;
+            
+            if (await DependencyService.Get<Other.IFile>().ExistsAsync(filename))
+            {
+                bool isRewrited = await DisplayAlert("Подверждение", "Файл уже существует, перезаписать его?", "Да", "Нет");
+                if (isRewrited == false) return;
+            }
+            
+            await UpdateFileList();
+        }
+        async void FileSelect(object sender, SelectedItemChangedEventArgs args)
+        {
+            if (args.SelectedItem == null) return;
+            
+            string filename = (string)args.SelectedItem;
+            textEditor.Text = await DependencyService.Get<Other.IFile>().LoadTextAsync((string)args.SelectedItem);
+            
+            fileNameEntry.Text = filename;
+            filesList.SelectedItem = null;
+
+        }
+        async Task UpdateFileList()
+        {
+            filesList.ItemsSource = await DependencyService.Get<Other.IFile>().GetFilesAsync();
+            filesList.SelectedItem = null;
+        }
     }
 }
