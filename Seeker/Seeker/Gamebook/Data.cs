@@ -16,7 +16,7 @@ namespace Seeker.Gamebook
         {
             Paragraphs.Clear();
 
-            string content = DependencyService.Get<IAssets>().GetFromAssets(name);
+            string content = DependencyService.Get<Other.IAssets>().GetFromAssets(name);
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.LoadXml(content);
