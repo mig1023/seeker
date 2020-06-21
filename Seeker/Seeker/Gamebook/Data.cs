@@ -1,6 +1,10 @@
-﻿using System;
+﻿using Android.Content.Res;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Xml;
+using Xamarin.Forms;
 
 namespace Seeker.Gamebook
 {
@@ -8,48 +12,46 @@ namespace Seeker.Gamebook
     {
         public static Dictionary<int, Paragraph> Paragraphs = new Dictionary<int, Paragraph>();
 
-        public static Dictionary<int, Paragraph> DummyParagraphs = new Dictionary<int, Paragraph>
+        public static void LoadGameBook(string name)
         {
-            [1] = new Paragraph
+            Paragraphs.Clear();
+
+            string content = DependencyService.Get<IAssets>().GetFromAssets(name);
+
+            XmlDocument xmlFile = new XmlDocument();
+            xmlFile.LoadXml(content);
+
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Paragraphs/Paragraph"))
             {
-                Title = "First",
-                Text = "First",
-                Options = new List<Option>
+                Paragraph paragraph = new Paragraph
                 {
-                    new Option { Destination = 2, Text = "second" },
-                    new Option { Destination = 3, Text = "third" },
-                    new Option { Destination = 4, Text = "fourth" },
-                }
-            },
-            [2] = new Paragraph
-            {
-                Title = "Second",
-                Text = "Second",
-                Options = new List<Option>
+                    Options = new List<Option>()
+                };
+
+                bool success = Int32.TryParse(xmlNode["ID"].InnerText, out int value);
+                int idParagraph = (success ? value : 0);
+
+                paragraph.Title = xmlNode["Title"].InnerText;
+                paragraph.Text = xmlNode["Text"].InnerText;
+
+                foreach (XmlNode xmlOption in xmlNode.SelectNodes("Options/Option"))
                 {
-                    new Option { Destination = 1, Text = "first" },
-                    new Option { Destination = 3, Text = "third" },
+                    bool optionExist = Int32.TryParse(xmlOption.Attributes["Destination"].Value, out int desination);
+
+                    if (!optionExist)
+                        continue;
+
+                    Option option = new Option
+                    {
+                        Destination = desination,
+                        Text = xmlOption.Attributes["Text"].Value
+                    };
+
+                    paragraph.Options.Add(option);
                 }
-            },
-            [3] = new Paragraph
-            {
-                Title = "Third",
-                Text = "Third",
-                Options = new List<Option>
-                {
-                    new Option { Destination = 1, Text = "first" },
-                    new Option { Destination = 2, Text = "second" },
-                }
-            },
-            [4] = new Paragraph
-            {
-                Title = "Fourth",
-                Text = "Fourth",
-                Options = new List<Option>
-                {
-                    new Option { Destination = 1, Text = "back" },
-                }
+
+                Paragraphs.Add(idParagraph, paragraph);
             }
-        };
+        }
     }
 }
