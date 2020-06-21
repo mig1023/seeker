@@ -7,5 +7,6 @@ namespace Seeker.Other
     public interface IAssets
     {
         string GetFromAssets(string name);
+        List<string> GetAllFromAssets();
     }
 }
