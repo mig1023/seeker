@@ -91,10 +91,7 @@ namespace Seeker
         private void Option_Click(object sender, EventArgs e)
         {
             Button b = sender as Button;
-            int? newParagraph = Game.Router.Find(b.Text);
-
-            if (newParagraph != null)
-                Paragraph(newParagraph ?? 0);
+            Paragraph(Game.Router.Find(b.Text));
         }
     }
 }

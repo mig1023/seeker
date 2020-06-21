@@ -18,13 +18,12 @@ namespace Seeker.Game
             Destinations.Add(text, index);
         }
 
-        public static int? Find(string text)
+        public static int Find(string text)
         {
-            foreach (KeyValuePair<string, int> k in Destinations)
-                if (k.Key == text)
-                    return k.Value;
+            if (!Destinations.ContainsKey(text))
+                return 0;
 
-            return null;
+            return Destinations[text];
         }
     }
 }
