@@ -21,8 +21,7 @@ namespace Seeker
 
         public void Gamebooks()
         {
-            this.Title.Text = "Choose the book:";
-            this.Text.Text = String.Empty;
+            this.Text.Text = "Choose the book:";
 
             Game.Router.Clean();
             Options.Children.Clear();
@@ -52,26 +51,25 @@ namespace Seeker
         private void Gamebook_Click(object sender, EventArgs e)
         {
             Button b = sender as Button;
-            Gamebook.Data.LoadGameBook(b.Text + ".xml");
-            Paragraph(1);
+            Game.Data.Load("BlackCastleDungeon.xml");
+            Paragraph(0);
         }
 
         public void Paragraph(int id)
         {
-            if (!Gamebook.Data.Paragraphs.ContainsKey(id))
+            if (!Gamebook.BlackCastleDungeon.Paragraphs.ContainsKey(id))
                 return;
 
-            Gamebook.Paragraph paragraph = Gamebook.Data.Paragraphs[id];
+            Game.Paragraph paragraph = Gamebook.BlackCastleDungeon.Paragraphs[id];
 
-            this.Title.Text = paragraph.Title;
-            this.Text.Text = paragraph.Text;
+            this.Text.Text = (Game.Data.Paragraphs.ContainsKey(id) ? Game.Data.Paragraphs[id] : String.Empty);
 
             Game.Router.Clean();
             Options.Children.Clear();
 
             string buttonsColor = Game.Buttons.NextColor();
 
-            foreach (Gamebook.Option option in paragraph.Options)
+            foreach (Game.Option option in paragraph.Options)
             {
                 Button button = new Button()
                 {
