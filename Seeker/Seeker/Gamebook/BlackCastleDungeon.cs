@@ -1989,7 +1989,7 @@ namespace Seeker.Gamebook
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 33, Text = "Далее },
+                    new Option { Destination = 33, Text = "Далее" },
                 }
             },
             [251] = new Paragraph
@@ -2105,7 +2105,7 @@ namespace Seeker.Gamebook
                     new Option { Destination = 191, Text = "По лестнице вверх" },
                     new Option { Destination = 30, Text = "По лестнице вниз" },
                     new Option { Destination = 53, Text = "В дверь направо" },
-                    new Option { Destination = 467, Text = ""В дверь налево" },
+                    new Option { Destination = 467, Text = "В дверь налево" },
                 }
             },
             [265] = new Paragraph
@@ -4126,7 +4126,7 @@ namespace Seeker.Gamebook
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 349, Text = "Есть банан },
+                    new Option { Destination = 349, Text = "Есть банан" },
                     new Option { Destination = 215, Text = "Драться с ней" },
                 }
             },
@@ -4142,7 +4142,7 @@ namespace Seeker.Gamebook
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 182, Text = "Далее' },
+                    new Option { Destination = 182, Text = "Далее" },
                 }
             },
             [528] = new Paragraph
@@ -4271,8 +4271,8 @@ namespace Seeker.Gamebook
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 365, Text = "Вы можете наложить какое-нибудь заклятие" },
-                    new Option { Destination = 241, Text = "Если вам удалось победить рыцаря, то идите по коридору дальше, пока не дойдете до двери " },
+                    new Option { Destination = 365, Text = "Использовать аклятие" },
+                    new Option { Destination = 241, Text = "По коридору дальше" },
                 }
             },
             [544] = new Paragraph
@@ -4302,7 +4302,7 @@ namespace Seeker.Gamebook
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 501, Text = "Далее },
+                    new Option { Destination = 501, Text = "Далее" },
                 }
             },
             [548] = new Paragraph
