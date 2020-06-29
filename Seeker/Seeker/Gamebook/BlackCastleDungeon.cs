@@ -104,6 +104,8 @@ namespace Seeker.Gamebook
             },
             [11] = new Paragraph
             {
+                OpenOption = "PirateTreasure",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 234, Text = "Далее" },
@@ -403,6 +405,7 @@ namespace Seeker.Gamebook
                 {
                     new Option { Destination = 101, Text = "К деревне" },
                     new Option { Destination = 262, Text = "К лесу" },
+                    new Option { Destination = 187, Text = "Пойти поискать клад", OnlyIf = "PirateTreasure" },
                 }
             },
             [48] = new Paragraph

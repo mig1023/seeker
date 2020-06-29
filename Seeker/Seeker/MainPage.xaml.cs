@@ -59,6 +59,9 @@ namespace Seeker
 
             this.Text.Text = (Game.Data.Paragraphs.ContainsKey(id) ? Game.Data.Paragraphs[id] : String.Empty);
 
+            if (!String.IsNullOrEmpty(paragraph.OpenOption))
+                Game.Data.OpenedOption.Add(paragraph.OpenOption);
+
             Game.Router.Clean();
             Options.Children.Clear();
 
@@ -66,6 +69,9 @@ namespace Seeker
 
             foreach (Game.Option option in paragraph.Options)
             {
+                if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.OpenedOption.Contains(option.OnlyIf))
+                    continue;
+
                 Button button = new Button()
                 {
                     Text = option.Text,

@@ -12,9 +12,12 @@ namespace Seeker.Game
     {
         public static Dictionary<int, string> Paragraphs = new Dictionary<int, string>();
 
+        public static List<string> OpenedOption = new List<string>();
+
         public static void Load(string name)
         {
             Paragraphs.Clear();
+            OpenedOption.Clear();
 
             if (String.IsNullOrEmpty(name))
                 return;

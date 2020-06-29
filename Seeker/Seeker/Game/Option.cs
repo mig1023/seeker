@@ -8,5 +8,7 @@ namespace Seeker.Game
     {
         public int Destination { get; set; }
         public string Text { get; set; }
+
+        public string OnlyIf { get; set; }
     }
 }
