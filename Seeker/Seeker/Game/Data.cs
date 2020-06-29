@@ -28,7 +28,7 @@ namespace Seeker.Game
             {
                 bool success = Int32.TryParse(xmlNode["ID"].InnerText, out int value);
                 int idParagraph = (success ? value : 0);
-                string text = xmlNode["Text"].InnerText;
+                string text = System.Text.RegularExpressions.Regex.Unescape(xmlNode["Text"].InnerText);
 
                 Paragraphs.Add(idParagraph, text);
             }
