@@ -19,6 +19,7 @@ namespace Seeker.Gamebook
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "В путь!" },
+                    new Option { Destination = 618, Text = "Правила и инструкции" },
                 }
             },
             [1] = new Paragraph
@@ -4838,6 +4839,13 @@ namespace Seeker.Gamebook
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
+                }
+            },
+            [618] = new Paragraph
+            {
+                Options = new List<Option>
+                {
+                    new Option { Destination = 0, Text = "Далее" },
                 }
             },
         };

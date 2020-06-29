@@ -21,23 +21,18 @@ namespace Seeker
 
         public void Gamebooks()
         {
-            this.Text.Text = "Choose the book:";
+            this.Text.Text = "Выберите книгу:";
 
             Game.Router.Clean();
             Options.Children.Clear();
 
             string buttonsColor = Game.Buttons.NextColor();
 
-            foreach (string gamebook in DependencyService.Get<Other.IAssets>().GetAllFromAssets())
+            foreach (string gamebook in Gamebook.List.Get())
             {
-                if (!gamebook.Contains(".xml"))
-                    continue;
-
-                string gamebookName = gamebook.Remove(gamebook.Length - 4);
-
                 Button button = new Button()
                 {
-                    Text = gamebookName,
+                    Text = gamebook,
                     TextColor = Xamarin.Forms.Color.White,
                     BackgroundColor = Color.FromHex(buttonsColor)
                 };
@@ -51,7 +46,7 @@ namespace Seeker
         private void Gamebook_Click(object sender, EventArgs e)
         {
             Button b = sender as Button;
-            Game.Data.Load("BlackCastleDungeon.xml");
+            Game.Data.Load(Gamebook.List.Find(b.Text));
             Paragraph(0);
         }
 

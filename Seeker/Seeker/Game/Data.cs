@@ -16,6 +16,9 @@ namespace Seeker.Game
         {
             Paragraphs.Clear();
 
+            if (String.IsNullOrEmpty(name))
+                return;
+
             string content = DependencyService.Get<Other.IAssets>().GetFromAssets(name);
 
             XmlDocument xmlFile = new XmlDocument();
