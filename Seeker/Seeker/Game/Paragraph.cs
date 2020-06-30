@@ -10,6 +10,8 @@ namespace Seeker.Game
         public string Text { get; set; }
         
         public List<Option> Options { get; set; }
+
+        public List<Character> Enemies { get; set; }
         
         public string OpenOption { get; set; }
         public bool GoodLuckCheck { get; set; }

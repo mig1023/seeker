@@ -10,6 +10,10 @@ namespace Seeker.Game
 {
     class Data
     {
+        public static Paragraph CurrentParagraph { get; set; }
+
+        public static Character Protagonist = new Character();
+
         public static Dictionary<int, string> Paragraphs = new Dictionary<int, string>();
 
         public static List<string> OpenedOption = new List<string>();

@@ -58,8 +58,11 @@ namespace Seeker
             Game.Router.Clean();
             Options.Children.Clear();
             GoodLuckOptions.IsVisible = false;
+            FightPlace.IsVisible = false;
 
             Game.Paragraph paragraph = Gamebook.BlackCastleDungeon.Paragraphs[id];
+
+            Game.Data.CurrentParagraph = paragraph;
 
             this.Text.Text = (Game.Data.Paragraphs.ContainsKey(id) ? Game.Data.Paragraphs[id] : String.Empty);
 
@@ -79,9 +82,25 @@ namespace Seeker
 
                 button.Clicked += GoodLuck_Click;
 
-
                 GoodLuckOptions.Children.Add(button);
                 GoodLuckOptions.IsVisible = true;
+            }
+
+            if (paragraph.Enemies.Count > 0)
+            {
+                FightPlace.Children.Clear();
+
+                Button button = new Button()
+                {
+                    Text = "Сражаться",
+                    TextColor = Xamarin.Forms.Color.White,
+                    BackgroundColor = Color.FromHex(Game.Buttons.NextColor())
+                };
+
+                button.Clicked += Fight_Click;
+
+                FightPlace.Children.Add(button);
+                FightPlace.IsVisible = true;
             }
 
             string buttonsColor = Game.Buttons.NextColor();
@@ -129,6 +148,23 @@ namespace Seeker
             luck.HorizontalTextAlignment = TextAlignment.Center;
 
             GoodLuckOptions.Children.Add(luck);
+        }
+
+        private void Fight_Click(object sender, EventArgs e)
+        {
+            FightPlace.Children.Clear();
+
+            Label fight = new Label();
+
+            List<string> fightResult = Gamebook.BlackCastleDungeon.Fight();
+
+            foreach (string s in fightResult)
+                fight.Text += String.Format("{0}\n", s);
+
+            fight.FontSize = 10;
+            fight.HorizontalTextAlignment = TextAlignment.Start;
+
+            FightPlace.Children.Add(fight);
         }
 
         private void Option_Click(object sender, EventArgs e)

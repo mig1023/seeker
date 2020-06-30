@@ -12,11 +12,65 @@ namespace Seeker.Gamebook
     {
         public static bool GoodLuckCheck()
         {
-            bool goodLuck = Dice.Roll(dices: 2) < Protagonist.Luck;
+            bool goodLuck = Dice.Roll(dices: 2) < Game.Data.Protagonist.Luck;
 
-            Protagonist.Luck -= 1;
+            Game.Data.Protagonist.Luck -= 1;
 
             return goodLuck;
+        }
+
+        public static List<string> Fight()
+        {
+            List<string> fight = new List<string>();
+
+            while (true)
+            {
+                foreach (Character enemy in Game.Data.CurrentParagraph.Enemies)
+                {
+                    fight.Add(String.Format("ПРОТИВНИК: {0} (выносливость {1})", enemy.Name, enemy.Endurance));
+
+                    int protagonistHitStrength = Game.Dice.Roll(dices: 2) + Game.Data.Protagonist.Mastery;
+                    fight.Add(String.Format("Сила вашего удара: {0}", protagonistHitStrength));
+
+                    int enemyHitStrength = Game.Dice.Roll(dices: 2) + enemy.Mastery;
+                    fight.Add(String.Format("Сила его удара: {0}", enemyHitStrength));
+
+                    if (protagonistHitStrength > enemyHitStrength)
+                    {
+                        fight.Add(String.Format("Вы ранили противника"));
+                        enemy.Endurance -= 2;
+
+                        bool enemyLost = true;
+
+                        foreach (Character e in Game.Data.CurrentParagraph.Enemies)
+                            if (e.Endurance > 0)
+                                enemyLost = false;
+
+                        if (enemyLost)
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add(String.Format("Вы ПОБЕДИЛИ :)"));
+                            return fight;
+                        }
+                    }
+                    else if (protagonistHitStrength < enemyHitStrength)
+                    {
+                        fight.Add(String.Format("Противник ранил вас"));
+                        Game.Data.Protagonist.Endurance -= 2;
+
+                        if (Game.Data.Protagonist.Endurance <= 0)
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add(String.Format("Вы ПРОИГРАЛИ :("));
+                            return fight;
+                        }
+                    }
+
+                    fight.Add(String.Empty);
+                }
+            }
+
+            return fight;
         }
 
         public static Dictionary<int, Paragraph> Paragraphs = new Dictionary<int, Paragraph>
@@ -72,6 +126,22 @@ namespace Seeker.Gamebook
             },
             [6] = new Paragraph
             {
+                Enemies = new List<Character>
+                {
+                    new Character
+                    {
+                        Name = "ПЕРВЫЙ ДРОВОСЕК",
+                        Mastery = 5,
+                        Endurance = 4,
+                    },
+                    new Character
+                    {
+                        Name = "ВТОРОЙ ДРОВОСЕК",
+                        Mastery = 6,
+                        Endurance = 7,
+                    }
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 420, Text = "Отправиться дальше" },
