@@ -86,9 +86,22 @@ namespace Seeker
                 GoodLuckOptions.IsVisible = true;
             }
 
-            if (paragraph.Enemies.Count > 0)
+            if ((paragraph.Enemies != null) && (paragraph.Enemies.Count > 0))
             {
                 FightPlace.Children.Clear();
+
+                foreach (Game.Character enemy in paragraph.Enemies)
+                {
+                    Label enemyName = new Label();
+                    enemyName.Text = enemy.Name;
+                    enemyName.HorizontalTextAlignment = TextAlignment.Center;
+                    FightPlace.Children.Add(enemyName);
+
+                    Label enemyParams = new Label();
+                    enemyParams.Text = String.Format("мастерство {0}  выносливость {1}", enemy.Mastery, enemy.Endurance);
+                    enemyParams.HorizontalTextAlignment = TextAlignment.Center;
+                    FightPlace.Children.Add(enemyParams);
+                }
 
                 Button button = new Button()
                 {
@@ -154,17 +167,24 @@ namespace Seeker
         {
             FightPlace.Children.Clear();
 
-            Label fight = new Label();
-
             List<string> fightResult = Gamebook.BlackCastleDungeon.Fight();
 
             foreach (string s in fightResult)
-                fight.Text += String.Format("{0}\n", s);
+            {
+                Label fight = new Label();
 
-            fight.FontSize = 10;
-            fight.HorizontalTextAlignment = TextAlignment.Start;
+                if (s.Contains("BAD|"))
+                    fight.TextColor = Color.Red;
 
-            FightPlace.Children.Add(fight);
+                if (s.Contains("GOOD|"))
+                    fight.TextColor = Color.Green;
+
+                fight.Text = s.Replace("GOOD|", String.Empty).Replace("BAD|", String.Empty);
+                fight.FontSize = 10;
+                fight.HorizontalTextAlignment = TextAlignment.Start;
+
+                FightPlace.Children.Add(fight);
+            }
         }
 
         private void Option_Click(object sender, EventArgs e)

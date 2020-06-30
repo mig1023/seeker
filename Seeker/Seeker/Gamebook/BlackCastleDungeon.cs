@@ -27,7 +27,10 @@ namespace Seeker.Gamebook
             {
                 foreach (Character enemy in Game.Data.CurrentParagraph.Enemies)
                 {
-                    fight.Add(String.Format("ПРОТИВНИК: {0} (выносливость {1})", enemy.Name, enemy.Endurance));
+                    if (enemy.Endurance <= 0)
+                        continue;
+
+                    fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
 
                     int protagonistHitStrength = Game.Dice.Roll(dices: 2) + Game.Data.Protagonist.Mastery;
                     fight.Add(String.Format("Сила вашего удара: {0}", protagonistHitStrength));
@@ -37,7 +40,7 @@ namespace Seeker.Gamebook
 
                     if (protagonistHitStrength > enemyHitStrength)
                     {
-                        fight.Add(String.Format("Вы ранили противника"));
+                        fight.Add(String.Format("GOOD|Вы ранили противника"));
                         enemy.Endurance -= 2;
 
                         bool enemyLost = true;
@@ -49,19 +52,19 @@ namespace Seeker.Gamebook
                         if (enemyLost)
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("Вы ПОБЕДИЛИ :)"));
+                            fight.Add(String.Format("GOOD|Вы ПОБЕДИЛИ :)"));
                             return fight;
                         }
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("Противник ранил вас"));
+                        fight.Add(String.Format("BAD|Противник ранил вас"));
                         Game.Data.Protagonist.Endurance -= 2;
 
                         if (Game.Data.Protagonist.Endurance <= 0)
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("Вы ПРОИГРАЛИ :("));
+                            fight.Add(String.Format("BAD|Вы ПРОИГРАЛИ :("));
                             return fight;
                         }
                     }
@@ -69,8 +72,6 @@ namespace Seeker.Gamebook
                     fight.Add(String.Empty);
                 }
             }
-
-            return fight;
         }
 
         public static Dictionary<int, Paragraph> Paragraphs = new Dictionary<int, Paragraph>
