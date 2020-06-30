@@ -170,15 +170,27 @@ namespace Seeker
             {
                 Label fight = new Label();
 
-                if (s.Contains("BAD|"))
+                string text = s;
+
+                if (text.Contains("BAD|"))
                     fight.TextColor = Color.Red;
 
-                if (s.Contains("GOOD|"))
+                if (text.Contains("GOOD|"))
                     fight.TextColor = Color.Green;
 
-                fight.Text = s.Replace("GOOD|", String.Empty).Replace("BAD|", String.Empty);
+                if (text.Contains("HEAD|"))
+                {
+                    fight.HorizontalTextAlignment = TextAlignment.Center;
+                    fight.FontAttributes = FontAttributes.Bold;
+                }
+                else
+                    fight.HorizontalTextAlignment = TextAlignment.Start;
+
+                foreach (string r in new List<string> { "GOOD", "BAD", "HEAD" })
+                    text = text.Replace(String.Format("{0}|", r), String.Empty);
+
+                fight.Text = text;
                 fight.FontSize = 10;
-                fight.HorizontalTextAlignment = TextAlignment.Start;
 
                 FightPlace.Children.Add(fight);
             }

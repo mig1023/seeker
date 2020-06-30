@@ -23,8 +23,12 @@ namespace Seeker.Gamebook
         {
             List<string> fight = new List<string>();
 
+            int round = 1;
+
             while (true)
             {
+                fight.Add(String.Format("HEAD|Раунд: {0}", round));
+
                 foreach (Character enemy in Game.Data.CurrentParagraph.Enemies)
                 {
                     if (enemy.Endurance <= 0)
@@ -71,6 +75,8 @@ namespace Seeker.Gamebook
 
                     fight.Add(String.Empty);
                 }
+
+                round += 1;
             }
         }
 
