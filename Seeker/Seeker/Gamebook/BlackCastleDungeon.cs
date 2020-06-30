@@ -10,12 +10,13 @@ namespace Seeker.Gamebook
 {
     class BlackCastleDungeon
     {
-        private static Random rand = new Random();
-
         public static bool GoodLuckCheck()
         {
-            // tmp
-            return rand.Next(2) == 0;
+            bool goodLuck = Dice.Roll(dices: 2) < Protagonist.Luck;
+
+            Protagonist.Luck -= 1;
+
+            return goodLuck;
         }
 
         public static Dictionary<int, Paragraph> Paragraphs = new Dictionary<int, Paragraph>

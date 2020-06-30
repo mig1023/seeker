@@ -35,6 +35,8 @@ namespace Seeker.Game
 
                 Paragraphs.Add(idParagraph, text);
             }
+
+            Protagonist.Init();
         }
     }
 }
