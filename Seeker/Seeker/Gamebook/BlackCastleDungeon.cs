@@ -2137,8 +2137,8 @@ namespace Seeker.Gamebook
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 565, Text = "Знаете пароль," },
-                    new Option { Destination = 264, Text = "Еси лев мёртв" },
+                    new Option { Destination = 565, Text = "Знаете пароль" },
+                    new Option { Destination = 264, Text = "Если лев мёртв" },
                 }
             },
             [258] = new Paragraph

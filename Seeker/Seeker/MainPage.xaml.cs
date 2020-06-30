@@ -92,13 +92,10 @@ namespace Seeker
 
                 foreach (Game.Character enemy in paragraph.Enemies)
                 {
-                    Label enemyName = new Label();
-                    enemyName.Text = enemy.Name;
-                    enemyName.HorizontalTextAlignment = TextAlignment.Center;
-                    FightPlace.Children.Add(enemyName);
+                    string represent = String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance);
 
                     Label enemyParams = new Label();
-                    enemyParams.Text = String.Format("мастерство {0}  выносливость {1}", enemy.Mastery, enemy.Endurance);
+                    enemyParams.Text = represent.Replace("\n", System.Environment.NewLine);
                     enemyParams.HorizontalTextAlignment = TextAlignment.Center;
                     FightPlace.Children.Add(enemyParams);
                 }
