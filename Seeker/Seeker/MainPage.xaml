@@ -7,8 +7,9 @@
              x:Class="Seeker.MainPage">
     <ScrollView>
         <StackLayout Padding="30">
-            <Label x:Name="Title" Text="" Margin="5" FontSize="Large"/>
-            <Label x:Name="Text" Text="" Margin="5" FontSize="Default"/>
+            <Label x:Name="Text" Text="" Margin="5" FontSize="Medium"/>
+            <StackLayout x:Name="GoodLuckOptions" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand"
+                         IsVisible="False" Padding="20"/>
             <StackLayout x:Name="Options" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" />
         </StackLayout>
     </ScrollView>
