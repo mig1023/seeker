@@ -10,8 +10,6 @@ namespace Seeker.Gamebook
 {
     class BlackCastleDungeon
     {
-
-
         public static Dictionary<int, Paragraph> Paragraphs = new Dictionary<int, Paragraph>
         {
             [0] = new Paragraph
@@ -153,11 +151,9 @@ namespace Seeker.Gamebook
             },
             [14] = new Paragraph
             {
-                //GoodLuckCheck = true,
-
                 Action = new Actions
                 {
-                    ActionName = "GoodLuckCheck",
+                    ActionName = "Luck",
                     ButtonName = "Проверить удачу",
                 },
 
@@ -490,8 +486,6 @@ namespace Seeker.Gamebook
             },
             [54] = new Paragraph
             {
-                GoodLuckCheck = true,
-
                 Options = new List<Option>
                 {
                     new Option { Destination = 558, Text = "Если вы удачливы" },
@@ -818,8 +812,6 @@ namespace Seeker.Gamebook
             },
             [97] = new Paragraph
             {
-                GoodLuckCheck = true,
-
                 Options = new List<Option>
                 {
                     new Option { Destination = 306, Text = "Удачлив" },
@@ -913,8 +905,6 @@ namespace Seeker.Gamebook
             },
             [109] = new Paragraph
             {
-                GoodLuckCheck = true,
-
                 Options = new List<Option>
                 {
                     new Option { Destination = 453, Text = "Удачлив" },
@@ -1771,8 +1761,6 @@ namespace Seeker.Gamebook
             },
             [218] = new Paragraph
             {
-                GoodLuckCheck = true,
-
                 Options = new List<Option>
                 {
                     new Option { Destination = 463, Text = "Удачлив" },
@@ -3205,8 +3193,6 @@ namespace Seeker.Gamebook
             },
             [401] = new Paragraph
             {
-                GoodLuckCheck = true,
-
                 Options = new List<Option>
                 {
                     new Option { Destination = 546, Text = "Удачлив" },
@@ -3323,8 +3309,6 @@ namespace Seeker.Gamebook
             },
             [415] = new Paragraph
             {
-                GoodLuckCheck = true,
-
                 Options = new List<Option>
                 {
                     new Option { Destination = 57, Text = "Удачлив" },
@@ -3763,8 +3747,6 @@ namespace Seeker.Gamebook
             },
             [472] = new Paragraph
             {
-                GoodLuckCheck = true,
-
                 Options = new List<Option>
                 {
                     new Option { Destination = 588, Text = "Удачлив" },
@@ -3913,8 +3895,6 @@ namespace Seeker.Gamebook
             },
             [491] = new Paragraph
             {
-                GoodLuckCheck = true,
-
                 Options = new List<Option>
                 {
                     new Option { Destination = 571, Text = "Удачлив" },

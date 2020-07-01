@@ -69,35 +69,15 @@ namespace Seeker
             if (!String.IsNullOrEmpty(paragraph.OpenOption))
                 Game.Data.OpenedOption.Add(paragraph.OpenOption);
 
-            //if (paragraph.GoodLuckCheck)
-            //{
-            //    GoodLuckOptions.Children.Clear();
-
-            //    Button button = new Button()
-            //    {
-            //        Text = "Проверить удачу",
-            //        TextColor = Xamarin.Forms.Color.White,
-            //        BackgroundColor = Color.FromHex(Game.Buttons.NextColor())
-            //    };
-
-            //    button.Clicked += GoodLuck_Click;
-
-            //    GoodLuckOptions.Children.Add(button);
-            //    GoodLuckOptions.IsVisible = true;
-            //}
-
             if (paragraph.Action != null)
             {
-
-                //foreach (Game.Character enemy in paragraph.Enemies)
-                //{
-                //    string represent = String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance);
-
-                //    Label enemyParams = new Label();
-                //    enemyParams.Text = represent.Replace("\n", System.Environment.NewLine);
-                //    enemyParams.HorizontalTextAlignment = TextAlignment.Center;
-                //    FightPlace.Children.Add(enemyParams);
-                //}
+                foreach (string s in Game.Data.CurrentParagraph.Action.Do("Representer"))
+                {
+                    Label enemy = new Label();
+                    enemy.Text = s.Replace("\n", System.Environment.NewLine);
+                    enemy.HorizontalTextAlignment = TextAlignment.Center;
+                    Action.Children.Add(enemy);
+                }
 
                 Button button = new Button()
                 {
@@ -134,65 +114,43 @@ namespace Seeker
             }
         }
 
-        //private void GoodLuck_Click(object sender, EventArgs e)
-        //{
-        //    GoodLuckOptions.Children.Clear();
-
-        //    Label luck = new Label();
-
-        //    if (Gamebook.BlackCastleDungeon.GoodLuckCheck())
-        //    {
-        //        luck.Text = "УСПЕХ :)";
-        //        luck.TextColor = Color.Green;
-                
-        //    }
-        //    else
-        //    {
-        //        luck.Text = "НЕУДАЧА :(";
-        //        luck.TextColor = Color.Red;
-        //    };
-
-        //    luck.FontAttributes = FontAttributes.Bold;
-        //    luck.FontSize = 22;
-        //    luck.HorizontalTextAlignment = TextAlignment.Center;
-
-        //    GoodLuckOptions.Children.Add(luck);
-        //}
-
         private void Action_Click(object sender, EventArgs e)
         {
             Action.Children.Clear();
 
-            //List<string> fightResult = Gamebook.BlackCastleDungeon.Fight();
             List<string> actionResult = Game.Data.CurrentParagraph.Action.Do();
 
             foreach (string s in actionResult)
             {
-                Label fight = new Label();
+                Label actions = new Label();
 
                 string text = s;
 
+                if (text.Contains("BIG|"))
+                    actions.FontSize = 22;
+                else
+                    actions.FontSize = 10;
+
                 if (text.Contains("BAD|"))
-                    fight.TextColor = Color.Red;
+                    actions.TextColor = Color.Red;
 
                 if (text.Contains("GOOD|"))
-                    fight.TextColor = Color.Green;
+                    actions.TextColor = Color.Green;
 
                 if (text.Contains("HEAD|"))
                 {
-                    fight.HorizontalTextAlignment = TextAlignment.Center;
-                    fight.FontAttributes = FontAttributes.Bold;
+                    actions.HorizontalTextAlignment = TextAlignment.Center;
+                    actions.FontAttributes = FontAttributes.Bold;
                 }
                 else
-                    fight.HorizontalTextAlignment = TextAlignment.Start;
+                    actions.HorizontalTextAlignment = TextAlignment.Start;
 
-                foreach (string r in new List<string> { "GOOD", "BAD", "HEAD" })
+                foreach (string r in new List<string> { "BIG", "GOOD", "BAD", "HEAD" })
                     text = text.Replace(String.Format("{0}|", r), String.Empty);
 
-                fight.Text = text;
-                fight.FontSize = 10;
-
-                Action.Children.Add(fight);
+                actions.Text = text;
+                
+                Action.Children.Add(actions);
             }
         }
 

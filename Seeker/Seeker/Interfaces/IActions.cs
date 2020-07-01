@@ -10,6 +10,6 @@ namespace Seeker.Interfaces
 
         string ButtonName { get; set; }
 
-        List<string> Do();
+        List<string> Do(string action = "");
     }
 }

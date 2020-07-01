@@ -11,21 +11,30 @@ namespace Seeker.Gamebook
         public string ButtonName { get; set; }
 
 
-        public List<string> Do()
+        public List<string> Do(string action = "")
         {
-            var method = typeof(Actions).GetMethod(ActionName);
-            List<string> tmp = method.Invoke(this, new object[] { }) as List<string>;
+            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
 
-            return tmp;
+            return typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
         }
 
-        public List<string> GoodLuckCheck()
+        public List<string> Representer()
+        {
+            List<string> enemies = new List<string>();
+
+            foreach (Character enemy in Enemies)
+                enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance));
+
+            return enemies;
+        }
+
+        public List<string> Luck()
         {
             bool goodLuck = Game.Dice.Roll(dices: 2) < Game.Data.Protagonist.Luck;
 
             Game.Data.Protagonist.Luck -= 1;
 
-            return new List<string> { (goodLuck ? "УСПЕХ :)" : "НЕУДАЧА :(") };
+            return new List<string> { (goodLuck ? "BIG|HEAD|GOOD|УСПЕХ :)" : "BIG|HEAD|BAD|НЕУДАЧА :(") };
         }
 
         public List<string> Fight()
