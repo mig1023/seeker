@@ -12,16 +12,16 @@ namespace Seeker.Game
     {
         public static Paragraph CurrentParagraph { get; set; }
 
-        public static Dictionary<int, string> Paragraphs = new Dictionary<int, string>();
+        public static Dictionary<int, string> TextOfParagraphs = new Dictionary<int, string>();
 
         public static List<string> OpenedOption = new List<string>();
 
-        public static Interfaces.IParagraphs OptionsAndActions;
+        public static Interfaces.IParagraphs Paragraphs;
         public static Interfaces.ICharacter Protagonist;
 
         public static void Load(string name)
         {
-            Paragraphs.Clear();
+            TextOfParagraphs.Clear();
             OpenedOption.Clear();
 
             if (String.IsNullOrEmpty(name))
@@ -38,11 +38,11 @@ namespace Seeker.Game
                 int idParagraph = (success ? value : 0);
                 string text = System.Text.RegularExpressions.Regex.Unescape(xmlNode["Text"].InnerText);
 
-                Paragraphs.Add(idParagraph, text);
+                TextOfParagraphs.Add(idParagraph, text);
             }
 
             Protagonist = Gamebook.List.GetProtagonist(name);
-            OptionsAndActions = Gamebook.List.GetParagraphs(name);
+            Paragraphs = Gamebook.List.GetParagraphs(name);
 
             Protagonist.Init();
         }

@@ -57,11 +57,11 @@ namespace Seeker
             Action.Children.Clear();
             Action.IsVisible = false;
 
-            Game.Paragraph paragraph = Game.Data.OptionsAndActions.Get(id);
+            Game.Paragraph paragraph = Game.Data.Paragraphs.Get(id);
 
             Game.Data.CurrentParagraph = paragraph;
 
-            this.Text.Text = (Game.Data.Paragraphs.ContainsKey(id) ? Game.Data.Paragraphs[id] : String.Empty);
+            this.Text.Text = (Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty);
 
             if (!String.IsNullOrEmpty(paragraph.OpenOption))
                 Game.Data.OpenedOption.Add(paragraph.OpenOption);
