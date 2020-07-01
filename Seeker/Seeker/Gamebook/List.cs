@@ -11,9 +11,29 @@ namespace Seeker.Gamebook
             ["Подземелья чёрного замка"] = "BlackCastleDungeon.xml",
         };
 
+        private static Dictionary<string, Interfaces.ICharacter> Characters = new Dictionary<string, Interfaces.ICharacter>
+        {
+            ["BlackCastleDungeon.xml"] = new BlackCastleDungeon.Character(),
+        };
+
+        private static Dictionary<string, Interfaces.IParagraphs> Paragraphs = new Dictionary<string, Interfaces.IParagraphs>
+        {
+            ["BlackCastleDungeon.xml"] = new BlackCastleDungeon.Paragraphs(),
+        };
+
         public static List<string> Get()
         {
             return new List<string>(Destinations.Keys);
+        }
+
+        public static Interfaces.ICharacter GetProtagonist(string name)
+        {
+            return Characters[name];
+        }
+
+        public static Interfaces.IParagraphs GetParagraphs(string name)
+        {
+            return Paragraphs[name];
         }
 
         public static string Find(string text)

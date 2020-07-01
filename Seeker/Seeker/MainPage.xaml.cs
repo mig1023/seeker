@@ -52,15 +52,12 @@ namespace Seeker
 
         public void Paragraph(int id)
         {
-            if (!Gamebook.BlackCastleDungeon.Paragraphs.Get.ContainsKey(id))
-                return;
-
             Game.Router.Clean();
             Options.Children.Clear();
             Action.Children.Clear();
             Action.IsVisible = false;
 
-            Game.Paragraph paragraph = Gamebook.BlackCastleDungeon.Paragraphs.Get[id];
+            Game.Paragraph paragraph = Game.Data.OptionsAndActions.Get(id);
 
             Game.Data.CurrentParagraph = paragraph;
 

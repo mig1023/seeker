@@ -8,9 +8,14 @@ using Seeker.Game;
 
 namespace Seeker.Gamebook.BlackCastleDungeon
 {
-    class Paragraphs
+    class Paragraphs : Interfaces.IParagraphs
     {
-        public static Dictionary<int, Paragraph> Get = new Dictionary<int, Paragraph>
+        public Paragraph Get(int id)
+        {
+            return Paragraph[id];
+        }
+
+        private static Dictionary<int, Paragraph> Paragraph = new Dictionary<int, Paragraph>
         {
             [0] = new Paragraph
             {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Seeker.Gamebook.BlackCastleDungeon
 {
-    class Actions : Seeker.Interfaces.IActions
+    class Actions : Interfaces.IActions
     {
         public List<Character> Enemies { get; set; }
         public string ActionName { get; set; }
@@ -30,9 +30,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public List<string> Luck()
         {
-            bool goodLuck = Game.Dice.Roll(dices: 2) < Game.Data.Protagonist.Luck;
+            bool goodLuck = Game.Dice.Roll(dices: 2) < Character.Protagonist.Luck;
 
-            Game.Data.Protagonist.Luck -= 1;
+            Character.Protagonist.Luck -= 1;
 
             return new List<string> { (goodLuck ? "BIG|HEAD|GOOD|УСПЕХ :)" : "BIG|HEAD|BAD|НЕУДАЧА :(") };
         }
@@ -54,7 +54,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                     fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
 
-                    int protagonistHitStrength = Game.Dice.Roll(dices: 2) + Game.Data.Protagonist.Mastery;
+                    int protagonistHitStrength = Game.Dice.Roll(dices: 2) + Character.Protagonist.Mastery;
                     fight.Add(String.Format("Сила вашего удара: {0}", protagonistHitStrength));
 
                     int enemyHitStrength = Game.Dice.Roll(dices: 2) + enemy.Mastery;
@@ -81,9 +81,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
                         fight.Add(String.Format("BAD|Противник ранил вас"));
-                        Game.Data.Protagonist.Endurance -= 2;
+                        Character.Protagonist.Endurance -= 2;
 
-                        if (Game.Data.Protagonist.Endurance <= 0)
+                        if (Character.Protagonist.Endurance <= 0)
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BAD|Вы ПРОИГРАЛИ :("));

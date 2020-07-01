@@ -12,11 +12,12 @@ namespace Seeker.Game
     {
         public static Paragraph CurrentParagraph { get; set; }
 
-        public static Gamebook.BlackCastleDungeon.Character Protagonist = new Gamebook.BlackCastleDungeon.Character();
-
         public static Dictionary<int, string> Paragraphs = new Dictionary<int, string>();
 
         public static List<string> OpenedOption = new List<string>();
+
+        public static Interfaces.IParagraphs OptionsAndActions;
+        public static Interfaces.ICharacter Protagonist;
 
         public static void Load(string name)
         {
@@ -39,6 +40,9 @@ namespace Seeker.Game
 
                 Paragraphs.Add(idParagraph, text);
             }
+
+            Protagonist = Gamebook.List.GetProtagonist(name);
+            OptionsAndActions = Gamebook.List.GetParagraphs(name);
 
             Protagonist.Init();
         }

@@ -4,8 +4,10 @@ using System.Text;
 
 namespace Seeker.Gamebook.BlackCastleDungeon
 {
-    class Character
+    class Character : Interfaces.ICharacter
     {
+        public static Character Protagonist = new Gamebook.BlackCastleDungeon.Character();
+
         public string Name { get; set; }
 
         public int Mastery { get; set; }
