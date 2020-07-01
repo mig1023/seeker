@@ -28,7 +28,7 @@ namespace Seeker
 
             string buttonsColor = Game.Buttons.NextColor();
 
-            foreach (string gamebook in Gamebook.List.Get())
+            foreach (string gamebook in Gamebook.List.GetBooks())
             {
                 Button button = new Button()
                 {

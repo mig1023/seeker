@@ -21,7 +21,7 @@ namespace Seeker.Gamebook
             ["BlackCastleDungeon.xml"] = new BlackCastleDungeon.Paragraphs(),
         };
 
-        public static List<string> Get()
+        public static List<string> GetBooks()
         {
             return new List<string>(Destinations.Keys);
         }
