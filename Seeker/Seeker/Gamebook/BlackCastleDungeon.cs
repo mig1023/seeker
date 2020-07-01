@@ -10,75 +10,7 @@ namespace Seeker.Gamebook
 {
     class BlackCastleDungeon
     {
-        public static bool GoodLuckCheck()
-        {
-            bool goodLuck = Dice.Roll(dices: 2) < Game.Data.Protagonist.Luck;
 
-            Game.Data.Protagonist.Luck -= 1;
-
-            return goodLuck;
-        }
-
-        public static List<string> Fight()
-        {
-            List<string> fight = new List<string>();
-
-            int round = 1;
-
-            while (true)
-            {
-                fight.Add(String.Format("HEAD|Раунд: {0}", round));
-
-                foreach (Character enemy in Game.Data.CurrentParagraph.Enemies)
-                {
-                    if (enemy.Endurance <= 0)
-                        continue;
-
-                    fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
-
-                    int protagonistHitStrength = Game.Dice.Roll(dices: 2) + Game.Data.Protagonist.Mastery;
-                    fight.Add(String.Format("Сила вашего удара: {0}", protagonistHitStrength));
-
-                    int enemyHitStrength = Game.Dice.Roll(dices: 2) + enemy.Mastery;
-                    fight.Add(String.Format("Сила его удара: {0}", enemyHitStrength));
-
-                    if (protagonistHitStrength > enemyHitStrength)
-                    {
-                        fight.Add(String.Format("GOOD|Вы ранили противника"));
-                        enemy.Endurance -= 2;
-
-                        bool enemyLost = true;
-
-                        foreach (Character e in Game.Data.CurrentParagraph.Enemies)
-                            if (e.Endurance > 0)
-                                enemyLost = false;
-
-                        if (enemyLost)
-                        {
-                            fight.Add(String.Empty);
-                            fight.Add(String.Format("GOOD|Вы ПОБЕДИЛИ :)"));
-                            return fight;
-                        }
-                    }
-                    else if (protagonistHitStrength < enemyHitStrength)
-                    {
-                        fight.Add(String.Format("BAD|Противник ранил вас"));
-                        Game.Data.Protagonist.Endurance -= 2;
-
-                        if (Game.Data.Protagonist.Endurance <= 0)
-                        {
-                            fight.Add(String.Empty);
-                            fight.Add(String.Format("BAD|Вы ПРОИГРАЛИ :("));
-                            return fight;
-                        }
-                    }
-
-                    fight.Add(String.Empty);
-                }
-
-                round += 1;
-            }
-        }
 
         public static Dictionary<int, Paragraph> Paragraphs = new Dictionary<int, Paragraph>
         {
@@ -133,20 +65,26 @@ namespace Seeker.Gamebook
             },
             [6] = new Paragraph
             {
-                Enemies = new List<Character>
+                Action = new Actions
                 {
-                    new Character
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
                     {
-                        Name = "ПЕРВЫЙ ДРОВОСЕК",
-                        Mastery = 5,
-                        Endurance = 4,
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ ДРОВОСЕК",
+                            Mastery = 5,
+                            Endurance = 4,
+                        },
+                        new Character
+                        {
+                            Name = "ВТОРОЙ ДРОВОСЕК",
+                            Mastery = 6,
+                            Endurance = 7,
+                        }
                     },
-                    new Character
-                    {
-                        Name = "ВТОРОЙ ДРОВОСЕК",
-                        Mastery = 6,
-                        Endurance = 7,
-                    }
                 },
 
                 Options = new List<Option>
@@ -215,7 +153,13 @@ namespace Seeker.Gamebook
             },
             [14] = new Paragraph
             {
-                GoodLuckCheck = true,
+                //GoodLuckCheck = true,
+
+                Action = new Actions
+                {
+                    ActionName = "GoodLuckCheck",
+                    ButtonName = "Проверить удачу",
+                },
 
                 Options = new List<Option>
                 {

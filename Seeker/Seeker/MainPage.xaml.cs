@@ -57,8 +57,8 @@ namespace Seeker
 
             Game.Router.Clean();
             Options.Children.Clear();
-            GoodLuckOptions.IsVisible = false;
-            FightPlace.IsVisible = false;
+            Action.Children.Clear();
+            Action.IsVisible = false;
 
             Game.Paragraph paragraph = Gamebook.BlackCastleDungeon.Paragraphs[id];
 
@@ -69,48 +69,47 @@ namespace Seeker
             if (!String.IsNullOrEmpty(paragraph.OpenOption))
                 Game.Data.OpenedOption.Add(paragraph.OpenOption);
 
-            if (paragraph.GoodLuckCheck)
+            //if (paragraph.GoodLuckCheck)
+            //{
+            //    GoodLuckOptions.Children.Clear();
+
+            //    Button button = new Button()
+            //    {
+            //        Text = "Проверить удачу",
+            //        TextColor = Xamarin.Forms.Color.White,
+            //        BackgroundColor = Color.FromHex(Game.Buttons.NextColor())
+            //    };
+
+            //    button.Clicked += GoodLuck_Click;
+
+            //    GoodLuckOptions.Children.Add(button);
+            //    GoodLuckOptions.IsVisible = true;
+            //}
+
+            if (paragraph.Action != null)
             {
-                GoodLuckOptions.Children.Clear();
+
+                //foreach (Game.Character enemy in paragraph.Enemies)
+                //{
+                //    string represent = String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance);
+
+                //    Label enemyParams = new Label();
+                //    enemyParams.Text = represent.Replace("\n", System.Environment.NewLine);
+                //    enemyParams.HorizontalTextAlignment = TextAlignment.Center;
+                //    FightPlace.Children.Add(enemyParams);
+                //}
 
                 Button button = new Button()
                 {
-                    Text = "Проверить удачу",
+                    Text = paragraph.Action.ButtonName,
                     TextColor = Xamarin.Forms.Color.White,
                     BackgroundColor = Color.FromHex(Game.Buttons.NextColor())
                 };
 
-                button.Clicked += GoodLuck_Click;
+                button.Clicked += Action_Click;
 
-                GoodLuckOptions.Children.Add(button);
-                GoodLuckOptions.IsVisible = true;
-            }
-
-            if ((paragraph.Enemies != null) && (paragraph.Enemies.Count > 0))
-            {
-                FightPlace.Children.Clear();
-
-                foreach (Game.Character enemy in paragraph.Enemies)
-                {
-                    string represent = String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance);
-
-                    Label enemyParams = new Label();
-                    enemyParams.Text = represent.Replace("\n", System.Environment.NewLine);
-                    enemyParams.HorizontalTextAlignment = TextAlignment.Center;
-                    FightPlace.Children.Add(enemyParams);
-                }
-
-                Button button = new Button()
-                {
-                    Text = "Сражаться",
-                    TextColor = Xamarin.Forms.Color.White,
-                    BackgroundColor = Color.FromHex(Game.Buttons.NextColor())
-                };
-
-                button.Clicked += Fight_Click;
-
-                FightPlace.Children.Add(button);
-                FightPlace.IsVisible = true;
+                Action.Children.Add(button);
+                Action.IsVisible = true;
             }
 
             string buttonsColor = Game.Buttons.NextColor();
@@ -135,38 +134,39 @@ namespace Seeker
             }
         }
 
-        private void GoodLuck_Click(object sender, EventArgs e)
-        {
-            GoodLuckOptions.Children.Clear();
+        //private void GoodLuck_Click(object sender, EventArgs e)
+        //{
+        //    GoodLuckOptions.Children.Clear();
 
-            Label luck = new Label();
+        //    Label luck = new Label();
 
-            if (Gamebook.BlackCastleDungeon.GoodLuckCheck())
-            {
-                luck.Text = "УСПЕХ :)";
-                luck.TextColor = Color.Green;
+        //    if (Gamebook.BlackCastleDungeon.GoodLuckCheck())
+        //    {
+        //        luck.Text = "УСПЕХ :)";
+        //        luck.TextColor = Color.Green;
                 
-            }
-            else
-            {
-                luck.Text = "НЕУДАЧА :(";
-                luck.TextColor = Color.Red;
-            };
+        //    }
+        //    else
+        //    {
+        //        luck.Text = "НЕУДАЧА :(";
+        //        luck.TextColor = Color.Red;
+        //    };
 
-            luck.FontAttributes = FontAttributes.Bold;
-            luck.FontSize = 22;
-            luck.HorizontalTextAlignment = TextAlignment.Center;
+        //    luck.FontAttributes = FontAttributes.Bold;
+        //    luck.FontSize = 22;
+        //    luck.HorizontalTextAlignment = TextAlignment.Center;
 
-            GoodLuckOptions.Children.Add(luck);
-        }
+        //    GoodLuckOptions.Children.Add(luck);
+        //}
 
-        private void Fight_Click(object sender, EventArgs e)
+        private void Action_Click(object sender, EventArgs e)
         {
-            FightPlace.Children.Clear();
+            Action.Children.Clear();
 
-            List<string> fightResult = Gamebook.BlackCastleDungeon.Fight();
+            //List<string> fightResult = Gamebook.BlackCastleDungeon.Fight();
+            List<string> actionResult = Game.Data.CurrentParagraph.Action.Do();
 
-            foreach (string s in fightResult)
+            foreach (string s in actionResult)
             {
                 Label fight = new Label();
 
@@ -192,7 +192,7 @@ namespace Seeker
                 fight.Text = text;
                 fight.FontSize = 10;
 
-                FightPlace.Children.Add(fight);
+                Action.Children.Add(fight);
             }
         }
 

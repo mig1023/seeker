@@ -11,8 +11,8 @@ namespace Seeker.Game
         
         public List<Option> Options { get; set; }
 
-        public List<Character> Enemies { get; set; }
-        
+        public Seeker.Interfaces.IActions Action { get; set; }
+
         public string OpenOption { get; set; }
         public bool GoodLuckCheck { get; set; }
     }

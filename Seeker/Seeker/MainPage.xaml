@@ -8,9 +8,7 @@
     <ScrollView>
         <StackLayout Padding="30">
             <Label x:Name="Text" Text="" Margin="5" FontSize="Medium"/>
-            <StackLayout x:Name="FightPlace" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand"
-                         IsVisible="False" Padding="20" BackgroundColor="LightGray"/>
-            <StackLayout x:Name="GoodLuckOptions" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand"
+            <StackLayout x:Name="Action" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand"
                          IsVisible="False" Padding="20" BackgroundColor="LightGray"/>
             <StackLayout x:Name="Options" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" />
         </StackLayout>

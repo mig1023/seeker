@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Seeker.Game
+namespace Seeker.Gamebook
 {
     class Character
     {
@@ -14,9 +14,9 @@ namespace Seeker.Game
 
         public void Init()
         {
-            Mastery = Dice.Roll() + 6;
-            Endurance = Dice.Roll(dices: 2) + 12;
-            Luck = Dice.Roll() + 6;
+            Mastery = Game.Dice.Roll() + 6;
+            Endurance = Game.Dice.Roll(dices: 2) + 12;
+            Luck = Game.Dice.Roll() + 6;
         }
     }
 }
