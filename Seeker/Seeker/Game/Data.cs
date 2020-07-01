@@ -12,7 +12,7 @@ namespace Seeker.Game
     {
         public static Paragraph CurrentParagraph { get; set; }
 
-        public static Gamebook.Character Protagonist = new Gamebook.Character();
+        public static Gamebook.BlackCastleDungeon.Character Protagonist = new Gamebook.BlackCastleDungeon.Character();
 
         public static Dictionary<int, string> Paragraphs = new Dictionary<int, string>();
 

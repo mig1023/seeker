@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 using Seeker.Game;
 
-namespace Seeker.Gamebook
+namespace Seeker.Gamebook.BlackCastleDungeon
 {
-    class BlackCastleDungeon
+    class Paragraphs
     {
-        public static Dictionary<int, Paragraph> Paragraphs = new Dictionary<int, Paragraph>
+        public static Dictionary<int, Paragraph> Get = new Dictionary<int, Paragraph>
         {
             [0] = new Paragraph
             {

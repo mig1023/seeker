@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Seeker.Gamebook
+namespace Seeker.Gamebook.BlackCastleDungeon
 {
     class Actions : Seeker.Interfaces.IActions
     {
