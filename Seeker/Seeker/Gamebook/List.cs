@@ -21,6 +21,11 @@ namespace Seeker.Gamebook
             ["BlackCastleDungeon.xml"] = new BlackCastleDungeon.Paragraphs(),
         };
 
+        private static Dictionary<string, Interfaces.IActions> Actions = new Dictionary<string, Interfaces.IActions>
+        {
+            ["BlackCastleDungeon.xml"] = new BlackCastleDungeon.Actions(),
+        };
+
         public static List<string> GetBooks()
         {
             return new List<string>(Destinations.Keys);
@@ -34,6 +39,11 @@ namespace Seeker.Gamebook
         public static Interfaces.IParagraphs GetParagraphs(string name)
         {
             return Paragraphs[name];
+        }
+
+        public static Interfaces.IActions GetActions(string name)
+        {
+            return Actions[name];
         }
 
         public static string Find(string text)

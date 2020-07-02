@@ -18,6 +18,7 @@ namespace Seeker.Game
 
         public static Interfaces.IParagraphs Paragraphs;
         public static Interfaces.ICharacter Protagonist;
+        public static Interfaces.IActions Actions;
 
         public static void Load(string name)
         {
@@ -43,6 +44,7 @@ namespace Seeker.Game
 
             Protagonist = Gamebook.List.GetProtagonist(name);
             Paragraphs = Gamebook.List.GetParagraphs(name);
+            Actions = Gamebook.List.GetActions(name);
 
             Protagonist.Init();
         }

@@ -5,12 +5,29 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Seeker.MainPage">
-    <ScrollView>
-        <StackLayout Padding="30">
-            <Label x:Name="Text" Text="" Margin="5" FontSize="Medium"/>
-            <StackLayout x:Name="Action" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand"
-                         IsVisible="False" Padding="20" BackgroundColor="LightGray"/>
-            <StackLayout x:Name="Options" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" />
-        </StackLayout>
-    </ScrollView>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+
+            <ScrollView Grid.Column="0" Grid.Row="0">
+                <StackLayout Padding="30">
+                    <Label x:Name="Text" Text="" Margin="5" FontSize="Medium"/>
+                    <StackLayout x:Name="Action" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand"
+                             IsVisible="False" Padding="20" BackgroundColor="LightGray"/>
+                    <StackLayout x:Name="Options" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+            </ScrollView>
+
+            <Label x:Name="Status" Text="" FontSize="12" TextColor="White" BackgroundColor="#0A5C96" IsVisible="False"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="1" />
+            
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>

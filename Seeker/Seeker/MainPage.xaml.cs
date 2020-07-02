@@ -41,6 +41,8 @@ namespace Seeker
 
                 Options.Children.Add(button);
             }
+
+            UpdateStatus();
         }
 
         private void Gamebook_Click(object sender, EventArgs e)
@@ -109,6 +111,22 @@ namespace Seeker
 
                 Options.Children.Add(button);
             }
+
+            UpdateStatus();
+        }
+
+        private void UpdateStatus()
+        {
+            string status = (Game.Data.Actions == null ? String.Empty : Game.Data.Actions.Status());
+
+            if (String.IsNullOrEmpty(status))
+            {
+                Status.IsVisible = false;
+                return;
+            }
+
+            Status.Text = status;
+            Status.IsVisible = true;
         }
 
         private void Action_Click(object sender, EventArgs e)
@@ -149,6 +167,8 @@ namespace Seeker
                 
                 Action.Children.Add(actions);
             }
+
+            UpdateStatus();
         }
 
         private void Option_Click(object sender, EventArgs e)
