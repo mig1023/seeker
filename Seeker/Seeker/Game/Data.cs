@@ -17,7 +17,6 @@ namespace Seeker.Game
         public static List<string> OpenedOption = new List<string>();
 
         public static Interfaces.IParagraphs Paragraphs;
-        public static Interfaces.ICharacter Protagonist;
         public static Interfaces.IActions Actions;
 
         public static void Load(string name)
@@ -42,11 +41,10 @@ namespace Seeker.Game
                 TextOfParagraphs.Add(idParagraph, text);
             }
 
-            Protagonist = Gamebook.List.GetProtagonist(name);
             Paragraphs = Gamebook.List.GetParagraphs(name);
             Actions = Gamebook.List.GetActions(name);
 
-            Protagonist.Init();
+            Gamebook.List.SetProtagonistInit(name);
         }
     }
 }

@@ -6,14 +6,16 @@ namespace Seeker.Gamebook
 {
     class List
     {
+        delegate void ProtagonistInit();
+
         private static Dictionary<string, string> Destinations = new Dictionary<string, string>
         {
             ["Подземелья чёрного замка"] = "BlackCastleDungeon.xml",
         };
 
-        private static Dictionary<string, Interfaces.ICharacter> Characters = new Dictionary<string, Interfaces.ICharacter>
+        private static Dictionary<string, ProtagonistInit> CharactersInit = new Dictionary<string, ProtagonistInit>
         {
-            ["BlackCastleDungeon.xml"] = new BlackCastleDungeon.Character(),
+            ["BlackCastleDungeon.xml"] = BlackCastleDungeon.Character.Protagonist.Init,
         };
 
         private static Dictionary<string, Interfaces.IParagraphs> Paragraphs = new Dictionary<string, Interfaces.IParagraphs>
@@ -31,9 +33,9 @@ namespace Seeker.Gamebook
             return new List<string>(Destinations.Keys);
         }
 
-        public static Interfaces.ICharacter GetProtagonist(string name)
+        public static void SetProtagonistInit(string name)
         {
-            return Characters[name];
+            CharactersInit[name]();
         }
 
         public static Interfaces.IParagraphs GetParagraphs(string name)

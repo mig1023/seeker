@@ -15,13 +15,16 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
 
-            return typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
+
+            System.Reflection.MethodInfo m = typeof(Actions).GetMethod(actionName);
+
+            return m.Invoke(this, new object[] { }) as List<string>;
         }
 
         public string Status()
         {
             string statusLine = String.Format(
-                "Мастерство: {0}  Выносливость {1}  Удача {2}",
+                "Мастерство: {0}  Выносливость: {1}  Удача: {2}",
                 Character.Protagonist.Mastery, Character.Protagonist.Endurance, Character.Protagonist.Luck
             );
 
