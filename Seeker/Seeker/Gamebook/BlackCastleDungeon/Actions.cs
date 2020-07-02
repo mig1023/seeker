@@ -82,6 +82,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         fight.Add(String.Format("GOOD|Вы ранили противника"));
                         enemy.Endurance -= 2;
 
+                        if (enemy.Endurance <= 0)
+                            enemy.Endurance = 0;
+
                         bool enemyLost = true;
 
                         foreach (Character e in Enemies)
@@ -99,6 +102,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     {
                         fight.Add(String.Format("BAD|Противник ранил вас"));
                         Character.Protagonist.Endurance -= 2;
+
+                        if (Character.Protagonist.Endurance < 0)
+                            Character.Protagonist.Endurance = 0;
 
                         if (Character.Protagonist.Endurance <= 0)
                         {

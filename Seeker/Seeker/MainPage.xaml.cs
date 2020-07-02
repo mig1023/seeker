@@ -49,8 +49,7 @@ namespace Seeker
         {
             Button b = sender as Button;
             Game.Data.Load(b.Text);
-            Paragraph(523);
-            //Paragraph(0);
+            Paragraph(0);
         }
 
         public void Paragraph(int id)
@@ -59,6 +58,9 @@ namespace Seeker
             Options.Children.Clear();
             Action.Children.Clear();
             Action.IsVisible = false;
+
+            if (id == 0)
+                Game.Data.Protagonist();
 
             Game.Paragraph paragraph = Game.Data.Paragraphs.Get(id);
 

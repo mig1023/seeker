@@ -15,6 +15,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
             currentValue += Value;
 
+            if (currentValue < 0)
+                currentValue = 0;
+
             Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
         }
     }
