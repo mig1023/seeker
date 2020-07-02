@@ -68,6 +68,9 @@ namespace Seeker
             if (!String.IsNullOrEmpty(paragraph.OpenOption))
                 Game.Data.OpenedOption.Add(paragraph.OpenOption);
 
+            if (paragraph.Modification != null)
+                Game.Data.CurrentParagraph.Modification.Do();
+
             if (paragraph.Action != null)
             {
                 foreach (string s in Game.Data.CurrentParagraph.Action.Do("Representer"))
@@ -135,11 +138,11 @@ namespace Seeker
 
             List<string> actionResult = Game.Data.CurrentParagraph.Action.Do();
 
-            foreach (string s in actionResult)
+            foreach (string actionLine in actionResult)
             {
                 Label actions = new Label();
 
-                string text = s;
+                string text = actionLine;
 
                 if (text.Contains("BIG|"))
                     actions.FontSize = 22;
