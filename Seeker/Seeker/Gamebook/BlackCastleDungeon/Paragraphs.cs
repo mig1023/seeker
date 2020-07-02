@@ -4144,9 +4144,17 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [523] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Endurance",
+                    Value = -6,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 39, Text = "Далее" },
+                    new Option { Destination = 523, Text = "ЕЩЁ РАЗ" },
+                    new Option { Destination = 523, Text = "ЕЩЁ РАЗ РАЗ РАЗ" },
                 }
             },
             [524] = new Paragraph

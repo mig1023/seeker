@@ -49,7 +49,8 @@ namespace Seeker
         {
             Button b = sender as Button;
             Game.Data.Load(b.Text);
-            Paragraph(0);
+            Paragraph(523);
+            //Paragraph(0);
         }
 
         public void Paragraph(int id)
@@ -116,6 +117,7 @@ namespace Seeker
             }
 
             UpdateStatus();
+            CheckGameOver();
         }
 
         private void UpdateStatus()
@@ -130,6 +132,30 @@ namespace Seeker
 
             Status.Text = status;
             Status.IsVisible = true;
+        }
+
+        private void CheckGameOver()
+        {
+            bool gameOver = (Game.Data.Actions == null ? false : Game.Data.Actions.GameOver());
+
+            if (gameOver)
+            {
+                Game.Router.Clean();
+                Options.Children.Clear();
+
+                Button button = new Button()
+                {
+                    Text = "Начать сначала",
+                    TextColor = Xamarin.Forms.Color.White,
+                    BackgroundColor = Color.FromHex(Game.Buttons.NextColor())
+                };
+
+                Game.Router.Add("Начать сначала", 0);
+
+                button.Clicked += Option_Click;
+
+                Options.Children.Add(button);
+            }
         }
 
         private void Action_Click(object sender, EventArgs e)
@@ -172,6 +198,7 @@ namespace Seeker
             }
 
             UpdateStatus();
+            CheckGameOver();
         }
 
         private void Option_Click(object sender, EventArgs e)

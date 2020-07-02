@@ -14,11 +14,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public List<string> Do(string action = "")
         {
             string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-
-
-            System.Reflection.MethodInfo m = typeof(Actions).GetMethod(actionName);
-
-            return m.Invoke(this, new object[] { }) as List<string>;
+            return typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
         }
 
         public string Status()
@@ -29,6 +25,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             );
 
             return statusLine;
+        }
+
+        public bool GameOver()
+        {
+            return (Character.Protagonist.Endurance <= 0 ? true : false);
         }
 
         public List<string> Representer()
