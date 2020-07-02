@@ -27,7 +27,7 @@ namespace Seeker.Game
             if (String.IsNullOrEmpty(name))
                 return;
 
-            string content = DependencyService.Get<Other.IAssets>().GetFromAssets(name);
+            string content = DependencyService.Get<Other.IAssets>().GetFromAssets(Gamebook.List.GetDescription(name).XmlBook);
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.LoadXml(content);
@@ -41,10 +41,10 @@ namespace Seeker.Game
                 TextOfParagraphs.Add(idParagraph, text);
             }
 
-            Paragraphs = Gamebook.List.GetParagraphs(name);
-            Actions = Gamebook.List.GetActions(name);
+            Paragraphs = Gamebook.List.GetDescription(name).Paragraphs;
+            Actions = Gamebook.List.GetDescription(name).Actions;
 
-            Gamebook.List.SetProtagonistInit(name);
+            Gamebook.List.GetDescription(name).Protagonist();
         }
     }
 }

@@ -48,7 +48,7 @@ namespace Seeker
         private void Gamebook_Click(object sender, EventArgs e)
         {
             Button b = sender as Button;
-            Game.Data.Load(Gamebook.List.Find(b.Text));
+            Game.Data.Load(b.Text);
             Paragraph(0);
         }
 

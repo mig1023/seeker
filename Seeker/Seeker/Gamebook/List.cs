@@ -6,54 +6,25 @@ namespace Seeker.Gamebook
 {
     class List
     {
-        delegate void ProtagonistInit();
-
-        private static Dictionary<string, string> Destinations = new Dictionary<string, string>
+        private static Dictionary<string, Description> Books = new Dictionary<string, Description>
         {
-            ["Подземелья чёрного замка"] = "BlackCastleDungeon.xml",
-        };
-
-        private static Dictionary<string, ProtagonistInit> CharactersInit = new Dictionary<string, ProtagonistInit>
-        {
-            ["BlackCastleDungeon.xml"] = BlackCastleDungeon.Character.Protagonist.Init,
-        };
-
-        private static Dictionary<string, Interfaces.IParagraphs> Paragraphs = new Dictionary<string, Interfaces.IParagraphs>
-        {
-            ["BlackCastleDungeon.xml"] = new BlackCastleDungeon.Paragraphs(),
-        };
-
-        private static Dictionary<string, Interfaces.IActions> Actions = new Dictionary<string, Interfaces.IActions>
-        {
-            ["BlackCastleDungeon.xml"] = new BlackCastleDungeon.Actions(),
+            ["Подземелья чёрного замка"] = new Description
+            {
+                XmlBook = "BlackCastleDungeon.xml",
+                Protagonist = BlackCastleDungeon.Character.Protagonist.Init,
+                Paragraphs = new BlackCastleDungeon.Paragraphs(),
+                Actions = new BlackCastleDungeon.Actions(),
+            },
         };
 
         public static List<string> GetBooks()
         {
-            return new List<string>(Destinations.Keys);
+            return new List<string>(Books.Keys);
         }
 
-        public static void SetProtagonistInit(string name)
+        public static Description GetDescription(string name)
         {
-            CharactersInit[name]();
-        }
-
-        public static Interfaces.IParagraphs GetParagraphs(string name)
-        {
-            return Paragraphs[name];
-        }
-
-        public static Interfaces.IActions GetActions(string name)
-        {
-            return Actions[name];
-        }
-
-        public static string Find(string text)
-        {
-            if (!Destinations.ContainsKey(text))
-                return String.Empty;
-
-            return Destinations[text];
+            return Books[name];
         }
     }
 }
