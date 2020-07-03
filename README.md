@@ -1,3 +1,3 @@
 # seeker
 
-Gamebooks on the smartphone
+Gamebooks on Android
