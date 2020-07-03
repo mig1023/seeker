@@ -20,8 +20,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public string Status()
         {
             string statusLine = String.Format(
-                "Мастерство: {0}  Выносливость: {1}  Удача: {2}",
-                Character.Protagonist.Mastery, Character.Protagonist.Endurance, Character.Protagonist.Luck
+                "Мастерство: {0}{1}Выносливость: {2}{1}Удача: {3}",
+                Character.Protagonist.Mastery, "  ", Character.Protagonist.Endurance, Character.Protagonist.Luck
             );
 
             return statusLine;
