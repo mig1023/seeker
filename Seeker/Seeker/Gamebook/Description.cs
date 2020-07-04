@@ -15,5 +15,7 @@ namespace Seeker.Gamebook
         public Interfaces.IParagraphs Paragraphs;
 
         public Interfaces.IActions Actions;
+
+        public string Disclaimer;
     }
 }

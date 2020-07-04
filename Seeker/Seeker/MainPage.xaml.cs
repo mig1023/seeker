@@ -40,6 +40,13 @@ namespace Seeker
                 button.Clicked += Gamebook_Click;
 
                 Options.Children.Add(button);
+
+                Label disclaimer = new Label();
+                disclaimer.Text = String.Format("© {0}", Gamebook.List.GetDescription(gamebook).Disclaimer);
+                disclaimer.HorizontalTextAlignment = TextAlignment.Center;
+                disclaimer.Margin = new Thickness(0, 0, 0, 8);
+
+                Options.Children.Add(disclaimer);
             }
 
             UpdateStatus();

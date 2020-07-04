@@ -14,6 +14,7 @@ namespace Seeker.Gamebook
                 Protagonist = BlackCastleDungeon.Character.Protagonist.Init,
                 Paragraphs = new BlackCastleDungeon.Paragraphs(),
                 Actions = new BlackCastleDungeon.Actions(),
+                Disclaimer = "Браславский Дмитрий, 1991",
             },
         };
 
