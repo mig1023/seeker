@@ -131,15 +131,32 @@ namespace Seeker
 
         private void UpdateStatus()
         {
-            string status = (Game.Data.Actions == null ? String.Empty : Game.Data.Actions.Status());
+            List<string> statuses = (Game.Data.Actions == null ? new List<string> { } : Game.Data.Actions.Status());
 
-            if (String.IsNullOrEmpty(status))
+            if (statuses.Count <= 0)
             {
                 Status.IsVisible = false;
                 return;
             }
 
-            Status.Text = status;
+            foreach(string status in statuses)
+            {
+                Label label = new Label();
+
+                label.Text = status;
+                label.FontSize = 12;
+                label.TextColor = Color.White;
+                label.BackgroundColor = Color.FromHex("#0A5C96");
+
+                label.HorizontalTextAlignment = TextAlignment.Center;
+                label.VerticalTextAlignment = TextAlignment.Center;
+
+                label.HorizontalOptions = LayoutOptions.FillAndExpand;
+                label.VerticalOptions = LayoutOptions.FillAndExpand;
+
+                Status.Children.Add(label);
+            }
+
             Status.IsVisible = true;
         }
 

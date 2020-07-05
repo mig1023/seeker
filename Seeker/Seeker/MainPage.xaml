@@ -25,9 +25,9 @@
                 </StackLayout>
             </ScrollView>
 
-            <Label x:Name="Status" Text="" FontSize="12" TextColor="White" BackgroundColor="#0A5C96" IsVisible="False"
-                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="1" />
-            
+            <StackLayout x:Name="Status" IsVisible="False" Orientation="Horizontal" Spacing="0" Grid.Column="0" Grid.Row="1">
+
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

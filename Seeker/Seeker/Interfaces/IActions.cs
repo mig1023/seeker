@@ -12,7 +12,7 @@ namespace Seeker.Interfaces
 
         List<string> Do(string action = "");
 
-        string Status();
+        List<string> Status();
 
         bool GameOver();
     }
