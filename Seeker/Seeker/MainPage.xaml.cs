@@ -139,7 +139,9 @@ namespace Seeker
                 return;
             }
 
-            foreach(string status in statuses)
+            Status.Children.Clear();
+
+            foreach (string status in statuses)
             {
                 Label label = new Label();
 
