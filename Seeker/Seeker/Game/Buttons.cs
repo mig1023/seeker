@@ -6,43 +6,18 @@ namespace Seeker.Game
 {
     class Buttons
     {
-        static Random rand = new Random();
+        public enum ButtonTypes { Main, Action, Option }
 
-        static List<string> ButtonsColors = new List<string>
+        static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
-            "#3CB371",
-            "#2E8B57",
-            "#228B22",
-            "#008000",
-            "#006400",
-            "#6B8E23",
-            "#556B2F",
-            "#20B2AA",
-            "#008B8B",
-            "#008080",
-            "#4682B4",
-            "#1E90FF",
-            "#6495ED",
-            "#7B68EE",
-            "#4169E1",
-            "#191970",
-            "#696969",
-            "#008080",
-            "#800080",
-            "#BA55D3",
-            "#8A2BE2",
-            "#9400D3",
-            "#9932CC",
-            "#800080",
-            "#4B0082",
-            "#6A5ACD",
-            "#483D8B",
-            "#C71585",
+            [ButtonTypes.Main] = "#4682B4",
+            [ButtonTypes.Action] = "#6495ED",
+            [ButtonTypes.Option] = "#696969",
         };
 
-        public static string NextColor()
+        public static string NextColor(ButtonTypes button)
         {
-            return ButtonsColors[rand.Next(ButtonsColors.Count)];
+            return ButtonsColors[button];
         }
     }
 }
