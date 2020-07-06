@@ -969,6 +969,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [97] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Luck",
+                    ButtonName = "Проверить удачу",
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 306, Text = "Удачлив" },
@@ -1078,6 +1084,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [109] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Luck",
+                    ButtonName = "Проверить удачу",
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 453, Text = "Удачлив" },
@@ -2032,6 +2044,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [218] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Luck",
+                    ButtonName = "Проверить удачу",
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 463, Text = "Удачлив" },
@@ -3734,6 +3752,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [401] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Luck",
+                    ButtonName = "Проверить удачу",
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 546, Text = "Удачлив" },
@@ -3850,6 +3874,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [415] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Luck",
+                    ButtonName = "Проверить удачу",
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 57, Text = "Удачлив" },
@@ -3979,9 +4009,16 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [431] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Luck",
+                    ButtonName = "Проверить удачу",
+                },
+		
                 Options = new List<Option>
                 {
-                    new Option { Destination = 59, Text = "Далее" },
+                    new Option { Destination = 59, Text = "Удачлив" },
+		    new Option { Destination = 0, Text = "Нет" },
                 }
             },
             [432] = new Paragraph
@@ -4288,6 +4325,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [472] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Luck",
+                    ButtonName = "Проверить удачу",
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 588, Text = "Удачлив" },
@@ -4464,6 +4507,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [491] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Luck",
+                    ButtonName = "Проверить удачу",
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 571, Text = "Удачлив" },
