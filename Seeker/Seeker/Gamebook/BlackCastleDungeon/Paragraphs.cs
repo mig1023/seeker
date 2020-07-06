@@ -180,6 +180,34 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [16] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВАЯ ЛЕТУЧАЯ МЫШЬ",
+                            Mastery = 6,
+                            Endurance = 8,
+                        },
+                        new Character
+                        {
+                            Name = "ВТОРАЯ ЛЕТУЧАЯ МЫШЬ",
+                            Mastery = 5,
+                            Endurance = 7,
+                        }
+			new Character
+                        {
+                            Name = "ТРЕТЬЯ ЛЕТУЧАЯ МЫШЬ",
+                            Mastery = 5,
+                            Endurance = 6,
+                        }
+                    },
+                },   
+		    
                 Options = new List<Option>
                 {
                     new Option { Destination = 557, Text = "Воспользоваться заклятием Огня" },
@@ -322,6 +350,28 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [33] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ОРК",
+                            Mastery = 6,
+                            Endurance = 8,
+                        },
+			new Character
+                        {
+                            Name = "ГОБЛИН",
+                            Mastery = 7,
+                            Endurance = 5,
+                        },
+                    },
+                },
+		    
                 Options = new List<Option>
                 {
                     new Option { Destination = 143, Text = "Если хотите, можете попробовать убежать" },
@@ -352,6 +402,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [37] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ДРАКОН",
+                            Mastery = 9,
+                            Endurance = 4,
+                        },
+                    },
+                },
+		    
                 Options = new List<Option>
                 {
                     new Option { Destination = 451, Text = "Заклятие Огня" },
@@ -379,6 +445,28 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [40] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ ГОБЛИН",
+                            Mastery = 6,
+                            Endurance = 9,
+                        },
+			new Character
+                        {
+                            Name = "ВТОРОЙ ГОБЛИН",
+                            Mastery = 7,
+                            Endurance = 5,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 118, Text = "Далее" },
@@ -386,6 +474,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [41] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ДРАКОН",
+                            Mastery = 9,
+                            Endurance = 4,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 454, Text = "Далее" },
@@ -491,6 +595,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [54] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ГИГАНТСКИЙ ПАУК",
+                            Mastery = 8,
+                            Endurance = 8,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 558, Text = "Если вы удачливы" },
@@ -578,6 +698,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [65] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "НАЧАЛЬНИК СТРАЖИ",
+                            Mastery = 9,
+                            Endurance = 5,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 468, Text = "Далее" },
@@ -789,6 +925,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [93] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ЖЕНЩИНА-ВАМПИР",
+                            Mastery = 11,
+                            Endurance = 14,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 301, Text = "Выйти в дверь" },
@@ -855,6 +1007,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [102] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ГОБЛИН",
+                            Mastery = 8,
+                            Endurance = 9,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 8, Text = "Далее" },
@@ -933,6 +1101,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [112] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ЗЕЛЕНЫЙ РЫЦАРЬ",
+                            Mastery = 10,
+                            Endurance = 10,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 414, Text = "Далее" },
@@ -1023,6 +1207,34 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [123] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ РАЗБОЙНИК",
+                            Mastery = 6,
+                            Endurance = 4,
+                        },
+			new Character
+                        {
+                            Name = "ВТОРОЙ РАЗБОЙНИК",
+                            Mastery = 7,
+                            Endurance = 8,
+                        },
+			new Character
+                        {
+                            Name = "ТРЕТИЙ РАЗБОЙНИК",
+                            Mastery = 5,
+                            Endurance = 5,
+                        },
+                    },
+                },
+		    
                 Options = new List<Option>
                 {
                     new Option { Destination = 46, Text = "Уйти" },
@@ -1489,6 +1701,28 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [183] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ ЗЕЛЕНЫЙ РЫЦАРЬ",
+                            Mastery = 10,
+                            Endurance = 10,
+                        },
+			new Character
+                        {
+                            Name = "ВТОРОЙ ЗЕЛЕНЫЙ РЫЦАРЬ",
+                            Mastery = 10,
+                            Endurance = 10,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 436, Text = "Далее" },
@@ -1562,6 +1796,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [192] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ГОБЛИН",
+                            Mastery = 7,
+                            Endurance = 9,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 437, Text = "Далее" },
@@ -1742,6 +1992,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [215] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ОБЕЗЬЯНА",
+                            Mastery = 9,
+                            Endurance = 14,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 408, Text = "Далее" },
@@ -1774,6 +2040,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [219] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ГИГАНТСКИЙ ПАУК",
+                            Mastery = 5,
+                            Endurance = 8,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 189, Text = "Далее" },
@@ -1966,6 +2248,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [243] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПРИЗРАК",
+                            Mastery = 10,
+                            Endurance = 9,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 39, Text = "Уйти от греха подальше" },
@@ -1976,6 +2274,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [244] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПАУК",
+                            Mastery = 8,
+                            Endurance = 8,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 19, Text = "Далее" },
@@ -1999,6 +2313,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [247] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ДУХ МЕРТВЫХ",
+                            Mastery = 10,
+                            Endurance = 12,
+                        },
+                    },
+                },  
+		    
                 Options = new List<Option>
                 {
                     new Option { Destination = 83, Text = "Попытаться убежать" },
@@ -2078,6 +2408,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [257] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ЛЕВ",
+                            Mastery = 9,
+                            Endurance = 15,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 565, Text = "Знаете пароль" },
@@ -2145,6 +2491,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [265] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ГИЕНА",
+                            Mastery = 6,
+                            Endurance = 6,
+                        },
+                    },
+                },
+		    
                 Options = new List<Option>
                 {
                     new Option { Destination = 125, Text = "Далее" },
@@ -2338,6 +2700,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [290] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ГОБЛИН",
+                            Mastery = 6,
+                            Endurance = 9,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 118, Text = "Далее" },
@@ -2363,6 +2741,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [293] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "БАРЛАД ДЭРТ",
+                            Mastery = 14,
+                            Endurance = 12,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 169, Text = "Далее" },
@@ -2421,9 +2815,43 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [301] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ РЫЦАРЬ",
+                            Mastery = 10,
+                            Endurance = 10,
+                        },
+			new Character
+                        {
+                            Name = "ВТОРОЙ РЫЦАРЬ",
+                            Mastery = 10,
+                            Endurance = 10,
+                        },
+			new Character
+                        {
+                            Name = "ТРЕТИЙ РЫЦАРЬ",
+                            Mastery = 10,
+                            Endurance = 10,
+                        },
+			new Character
+                        {
+                            Name = "КАПИТАН РЫЦАРЕЙ",
+                            Mastery = 12,
+                            Endurance = 12,
+                        },
+                    },
+                },
+		
                 Options = new List<Option>
                 {
-                    new Option { Destination = 170, Text = "Есть Оберег," },
+                    new Option { Destination = 170, Text = "Есть Оберег" },
                     new Option { Destination = 606, Text = "Есть серебряный сосуд" },
                     new Option { Destination = 594, Text = "В правую дверь" },
                     new Option { Destination = 599, Text = "В левую дверь" },
@@ -2485,6 +2913,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [309] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ЗЕЛЕНЫЙ РЫЦАРЬ",
+                            Mastery = 10,
+                            Endurance = 10,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 111, Text = "Наложить заклятие Копии" },
@@ -2535,6 +2979,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [316] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ДРАКОН",
+                            Mastery = 12,
+                            Endurance = 8,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 513, Text = "Удалось" },
@@ -2615,6 +3075,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [326] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ВОДЯНОЙ",
+                            Mastery = 7,
+                            Endurance = 7,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 573, Text = "Если вы победили" },
@@ -2630,6 +3106,28 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [328] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ ОРК",
+                            Mastery = 8,
+                            Endurance = 5,
+                        },
+			new Character
+                        {
+                            Name = "ВТОРОЙ ОРК",
+                            Mastery = 7,
+                            Endurance = 7,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 505, Text = "Если убили обоих врагов" },
@@ -2852,6 +3350,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [356] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ТРОЛЛЬ",
+                            Mastery = 9,
+                            Endurance = 14,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 207, Text = "Далее" },
@@ -2985,6 +3499,28 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [374] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ ЧЕЛОВЕК",
+                            Mastery = 8,
+                            Endurance = 5,
+                        },
+			new Character
+                        {
+                            Name = "ВТОРОЙ ЧЕЛОВЕК",
+                            Mastery = 6,
+                            Endurance = 9,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 34, Text = "Далее" },
@@ -3871,6 +4407,34 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [487] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ ОРК",
+                            Mastery = 10,
+                            Endurance = 6,
+                        },
+			new Character
+                        {
+                            Name = "ВТОРОЙ ОРК",
+                            Mastery = 7,
+                            Endurance = 7,
+                        },
+			new Character
+                        {
+                            Name = "ТРЕТИЙ ОРК",
+                            Mastery = 7,
+                            Endurance = 7,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 100, Text = "Далее" },
@@ -3952,6 +4516,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [498] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+			new Character
+                        {
+                            Name = "ОРК",
+                            Mastery = 7,
+                            Endurance = 7,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 300, Text = "Далее" },
@@ -4106,6 +4686,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [518] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+			new Character
+                        {
+                            Name = "ТОРГОВЕЦ",
+                            Mastery = 6,
+                            Endurance = 12,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 477, Text = "Далее" },
@@ -4197,6 +4793,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [529] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+			new Character
+                        {
+                            Name = "МЕДВЕДИЦА",
+                            Mastery = 8,
+                            Endurance = 10,
+                        },
+		    },
+                },
+		    
                 Options = new List<Option>
                 {
                     new Option { Destination = 44, Text = "Далее" },
@@ -4219,6 +4831,28 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [532] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+			new Character
+                        {
+                            Name = "ПЕРВЫЙ ГОБЛИН",
+                            Mastery = 8,
+                            Endurance = 10,
+                        },
+			new Character
+                        {
+                            Name = "ВТОРОЙ ГОБЛИН",
+                            Mastery = 6,
+                            Endurance = 8,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 323, Text = "Далее" },
@@ -4277,6 +4911,28 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [539] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+			new Character
+                        {
+                            Name = "ГОБЛИН",
+                            Mastery = 4,
+                            Endurance = 7,
+                        },
+			new Character
+                        {
+                            Name = "ВТОРОЙ ГОБЛИН",
+                            Mastery = 8,
+                            Endurance = 9,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 484, Text = "Зайти в сторожку" },
@@ -4312,6 +4968,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [543] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+			new Character
+                        {
+                            Name = "ЗЕЛЕНЫЙ РЫЦАРЬ",
+                            Mastery = 11,
+                            Endurance = 14,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 365, Text = "Использовать аклятие" },
@@ -4390,6 +5062,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [553] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+			new Character
+                        {
+                            Name = "ГАРПИЯ",
+                            Mastery = 10,
+                            Endurance = 12,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 388, Text = "Далее" },
@@ -4427,6 +5115,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [558] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+			new Character
+                        {
+                            Name = "ГИГАНТСКИЙ ПАУК",
+                            Mastery = 8,
+                            Endurance = 8,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 189, Text = "Далее" },
@@ -4466,6 +5170,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [563] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+			new Character
+                        {
+                            Name = "ЛЕСОВИЧОК",
+                            Mastery = 6,
+                            Endurance = 8,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 450, Text = "Далее" },
@@ -4499,6 +5219,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [567] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+			new Character
+                        {
+                            Name = "ЗЕЛЕНЫЙ РЫЦАРЬ",
+                            Mastery = 10,
+                            Endurance = 10,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 395, Text = "Заклятье Силы" },
@@ -4516,6 +5252,34 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [569] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+			new Character
+                        {
+                            Name = "ПЕРВЫЙ ОРК",
+                            Mastery = 10,
+                            Endurance = 6,
+                        },
+			new Character
+                        {
+                            Name = "ВТОРОЙ ОРК",
+                            Mastery = 7,
+                            Endurance = 7,
+                        },
+			new Character
+                        {
+                            Name = "ТРЕТИЙ ОРК",
+                            Mastery = 7,
+                            Endurance = 7,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 48, Text = "Далее" },
@@ -4597,6 +5361,28 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [580] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+			new Character
+                        {
+                            Name = "ПЕРВЫЙ ГОБЛИН",
+                            Mastery = 4,
+                            Endurance = 9,
+                        },
+			new Character
+                        {
+                            Name = "ВТОРОЙ ГОБЛИН",
+                            Mastery = 7,
+                            Endurance = 5,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 118, Text = "Далее" },
@@ -4776,6 +5562,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [604] = new Paragraph
             {
+		Action = new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+			new Character
+                        {
+                            Name = "ПОВАР",
+                            Mastery = 8,
+                            Endurance = 10,
+                        },
+		    },
+                },
+		
                 Options = new List<Option>
                 {
                     new Option { Destination = 173, Text = "Заглянуть в сундук" },
