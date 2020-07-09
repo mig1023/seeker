@@ -219,6 +219,9 @@ namespace Seeker
                 if (text.Contains("GOOD|"))
                     actions.TextColor = Color.Green;
 
+                if (text.Contains("BOLD|"))
+                    actions.FontAttributes = FontAttributes.Bold;
+
                 if (text.Contains("HEAD|"))
                 {
                     actions.HorizontalTextAlignment = TextAlignment.Center;
@@ -227,7 +230,7 @@ namespace Seeker
                 else
                     actions.HorizontalTextAlignment = TextAlignment.Start;
 
-                foreach (string r in new List<string> { "BIG", "GOOD", "BAD", "HEAD" })
+                foreach (string r in new List<string> { "BIG", "GOOD", "BAD", "HEAD", "BOLD" })
                     text = text.Replace(String.Format("{0}|", r), String.Empty);
 
                 actions.Text = text;

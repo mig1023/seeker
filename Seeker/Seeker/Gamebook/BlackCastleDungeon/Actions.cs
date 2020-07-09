@@ -115,6 +115,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             return fight;
                         }
                     }
+                    else
+                        fight.Add(String.Format("BOLD|Ничья в раунде"));
 
                     fight.Add(String.Empty);
                 }
