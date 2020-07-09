@@ -270,6 +270,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [21] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Endurance",
+                    Value = 2,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 186, Text = "Воспользуетесь предложением и скажете, что ищете Черный замок" },
@@ -316,6 +322,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [26] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Endurance",
+                    Value = 6,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 341, Text = "Далее" },
@@ -958,6 +970,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [91] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Endurance",
+                    Value = 4,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 379, Text = "Уйти" },
@@ -1334,6 +1352,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [126] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Mastery",
+                    Value = 1,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 434, Text = "Далее" },
@@ -1377,6 +1401,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [132] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Endurance",
+                    Value = 6,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 336, Text = "Сорвать его" },
@@ -1714,6 +1744,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [173] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Endurance",
+                    Value = 2,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 379, Text = "Далее" },
@@ -1735,6 +1771,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [176] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Endurance",
+                    Value = 5,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 106, Text = "Уходить" },
@@ -1750,6 +1792,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [178] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Endurance",
+                    Value = 6,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 406, Text = "Далее" },
@@ -2054,6 +2102,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [209] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Endurance",
+                    Value = 2,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 332, Text = "Далее" },
@@ -2304,10 +2358,10 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             [234] = new Paragraph
             {
                 Options = new List<Option>
-        {
-            new Option { Destination = 47, Text = "По тропинке" },
-            new Option { Destination = 82, Text = "По дороге" },
-        }
+                {
+                    new Option { Destination = 47, Text = "По тропинке" },
+                    new Option { Destination = 82, Text = "По дороге" },
+                }
             },
             [235] = new Paragraph
             {
@@ -2348,6 +2402,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [239] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Endurance",
+                    Value = 5,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 531, Text = "Свернуть на нее" },
@@ -2664,6 +2724,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [268] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Endurance",
+                    Value = 4,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 80, Text = "Далее" },
@@ -3564,6 +3630,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [358] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Endurance",
+                    Value = 2,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 510, Text = "Направо" },
@@ -4344,6 +4416,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [448] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Endurance",
+                    Value = 5,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 235, Text = "На юг" },
