@@ -43,7 +43,7 @@ namespace Seeker
 
                 Label disclaimer = new Label();
                 disclaimer.Text = String.Format("© {0}", Gamebook.List.GetDescription(gamebook).Disclaimer);
-                disclaimer.HorizontalTextAlignment = TextAlignment.Center;
+                disclaimer.HorizontalTextAlignment = TextAlignment.Start;
                 disclaimer.Margin = new Thickness(0, 0, 0, 8);
 
                 Options.Children.Add(disclaimer);
