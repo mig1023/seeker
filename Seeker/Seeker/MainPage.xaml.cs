@@ -141,35 +141,23 @@ namespace Seeker
 
         private void UpdateStatus()
         {
-            List<string> statuses = (Game.Data.Actions == null ? new List<string> { } : Game.Data.Actions.Status());
+            List<Label> statuses = (Game.Data.Actions == null ? null : Game.Data.Actions.Status());
 
-            if (statuses.Count <= 0)
+            if (statuses == null)
             {
                 Status.IsVisible = false;
+
                 return;
             }
-
-            Status.Children.Clear();
-
-            foreach (string status in statuses)
+            else
             {
-                Label label = new Label();
+                Status.Children.Clear();
 
-                label.Text = status;
-                label.FontSize = 12;
-                label.TextColor = Color.White;
-                label.BackgroundColor = Color.FromHex("#0A5C96");
+                foreach (Label status in statuses)
+                    Status.Children.Add(status);
 
-                label.HorizontalTextAlignment = TextAlignment.Center;
-                label.VerticalTextAlignment = TextAlignment.Center;
-
-                label.HorizontalOptions = LayoutOptions.FillAndExpand;
-                label.VerticalOptions = LayoutOptions.FillAndExpand;
-
-                Status.Children.Add(label);
-            }
-
-            Status.IsVisible = true;
+                Status.IsVisible = true;
+            }           
         }
 
         private void CheckGameOver()

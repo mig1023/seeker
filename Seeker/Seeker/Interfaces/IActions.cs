@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace Seeker.Interfaces
 {
@@ -12,7 +13,7 @@ namespace Seeker.Interfaces
 
         List<string> Do(string action = "");
 
-        List<string> Status();
+        List<Label> Status();
 
         bool GameOver();
     }
