@@ -18,6 +18,8 @@ namespace Seeker.Game
 
         public static Interfaces.IParagraphs Paragraphs;
         public static Interfaces.IActions Actions;
+        public static Interfaces.IConstants Constants;
+
         public static Gamebook.Description.ProtagonistInit Protagonist;
 
         public static void Load(string name)
@@ -44,6 +46,7 @@ namespace Seeker.Game
 
             Paragraphs = Gamebook.List.GetDescription(name).Paragraphs;
             Actions = Gamebook.List.GetDescription(name).Actions;
+            Constants = Gamebook.List.GetDescription(name).Constants;
             Protagonist = Gamebook.List.GetDescription(name).Protagonist;
         }
     }

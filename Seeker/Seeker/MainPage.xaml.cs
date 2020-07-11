@@ -26,15 +26,13 @@ namespace Seeker
             Game.Router.Clean();
             Options.Children.Clear();
 
-            string buttonsColor = Game.Buttons.NextColor(Game.Buttons.ButtonTypes.Main);
-
             foreach (string gamebook in Gamebook.List.GetBooks())
             {
                 Button button = new Button()
                 {
                     Text = gamebook,
                     TextColor = Xamarin.Forms.Color.White,
-                    BackgroundColor = Color.FromHex(buttonsColor)
+                    BackgroundColor = Color.FromHex("#4682B4")
                 };
 
                 button.Clicked += Gamebook_Click;
@@ -95,7 +93,7 @@ namespace Seeker
                 {
                     Text = paragraph.Action.ButtonName,
                     TextColor = Xamarin.Forms.Color.White,
-                    BackgroundColor = Color.FromHex(Game.Buttons.NextColor(Game.Buttons.ButtonTypes.Action))
+                    BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Action))
                 };
 
                 button.Clicked += Action_Click;
@@ -104,11 +102,11 @@ namespace Seeker
                 Action.IsVisible = true;
             }
 
-            string buttonsColor = Game.Buttons.NextColor(Game.Buttons.ButtonTypes.Main);
+            string buttonsColor = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Main);
 
             foreach (Game.Option option in paragraph.Options)
             {
-                string color = Game.Buttons.NextColor(Game.Buttons.ButtonTypes.Main);
+                string color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Main);
 
                 if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.OpenedOption.Contains(option.OnlyIf))
                     continue;
@@ -118,7 +116,7 @@ namespace Seeker
                     if (!Game.Data.OpenedOption.Contains(option.OnlyIf))
                         continue;
                     else
-                        color = Game.Buttons.NextColor(Game.Buttons.ButtonTypes.Option);
+                        color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option);
                 }
 
                 Button button = new Button()
@@ -173,7 +171,7 @@ namespace Seeker
                 {
                     Text = "Начать сначала",
                     TextColor = Xamarin.Forms.Color.White,
-                    BackgroundColor = Color.FromHex(Game.Buttons.NextColor(Game.Buttons.ButtonTypes.Option))
+                    BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option))
                 };
 
                 Game.Router.Add("Начать сначала", 0);
