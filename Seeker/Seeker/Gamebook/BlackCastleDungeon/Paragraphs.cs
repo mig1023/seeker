@@ -1897,6 +1897,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [187] = new Paragraph
             {
+                Modification = new Modification
+                {
+                    Name = "Luck",
+                    Value = 1,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 47, Text = "Далее" },

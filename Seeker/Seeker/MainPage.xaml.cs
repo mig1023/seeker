@@ -71,24 +71,13 @@ namespace Seeker
 
             if (paragraph.Action != null)
             {
-                foreach (string s in Game.Data.CurrentParagraph.Action.Do("Representer"))
-                {
-                    Label enemy = new Label();
-                    enemy.Text = s.Replace("\n", System.Environment.NewLine);
-                    enemy.HorizontalTextAlignment = TextAlignment.Center;
+                foreach (Label enemy in Game.Interface.Represent(Game.Data.CurrentParagraph.Action.Do("Representer")))
                     Action.Children.Add(enemy);
-                }
 
-                Button button = new Button()
-                {
-                    Text = paragraph.Action.ButtonName,
-                    TextColor = Xamarin.Forms.Color.White,
-                    BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Action))
-                };
-
+                Button button = Game.Interface.ActionButton(paragraph.Action.ButtonName);
                 button.Clicked += Action_Click;
-
                 Action.Children.Add(button);
+
                 Action.IsVisible = true;
             }
 
@@ -100,21 +89,13 @@ namespace Seeker
 
                 if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.OpenedOption.Contains(option.OnlyIf))
                     continue;
+                else if (!String.IsNullOrEmpty(option.OnlyIf))
+                    color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option);
 
-                if (!String.IsNullOrEmpty(option.OnlyIf))
-                {
-                    if (!Game.Data.OpenedOption.Contains(option.OnlyIf))
-                        continue;
-                    else
-                        color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option);
-                }
+                Button button = Game.Interface.OptionButton(option);
 
-                Button button = new Button()
-                {
-                    Text = option.Text,
-                    TextColor = Xamarin.Forms.Color.White,
-                    BackgroundColor = Color.FromHex(color)
-                };
+                if (button == null)
+                    continue;
 
                 Game.Router.Add(option.Text, option.Destination);
 

@@ -52,6 +52,50 @@ namespace Seeker.Game
             };
         }
 
+        public static List<Label> Represent(List<string> enemiesLines)
+        {
+            List<Label> enemies = new List<Label>();
+
+            foreach (string enemyLine in enemiesLines)
+            {
+                Label enemy = new Label();
+
+                enemy.Text = enemyLine.Replace("\n", System.Environment.NewLine);
+                enemy.HorizontalTextAlignment = TextAlignment.Center;
+
+                enemies.Add(enemy);
+            }
+
+            return enemies;
+        }
+
+        public static Button ActionButton(string actionName)
+        {
+            return new Button()
+            {
+                Text = actionName,
+                TextColor = Xamarin.Forms.Color.White,
+                BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Action))
+            };
+        }
+
+        public static Button OptionButton(Game.Option option)
+        {
+            string color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Main);
+
+            if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.OpenedOption.Contains(option.OnlyIf))
+                return null;
+            else if (!String.IsNullOrEmpty(option.OnlyIf))
+                color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option);
+
+            return new Button()
+            {
+                Text = option.Text,
+                TextColor = Xamarin.Forms.Color.White,
+                BackgroundColor = Color.FromHex(color)
+            };
+        }
+
         public static List<Label> Actions(List<string> actionsLines)
         {
             List<Label> actionLabels = new List<Label>();
@@ -94,7 +138,5 @@ namespace Seeker.Game
 
             return actionLabels;
         }
-
-
     }
 }
