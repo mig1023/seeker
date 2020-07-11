@@ -28,22 +28,11 @@ namespace Seeker
 
             foreach (string gamebook in Gamebook.List.GetBooks())
             {
-                Button button = new Button()
-                {
-                    Text = gamebook,
-                    TextColor = Xamarin.Forms.Color.White,
-                    BackgroundColor = Color.FromHex(Gamebook.List.GetDescription(gamebook).BookColor)
-                };
-
+                Button button = Game.Interface.GamebookButton(gamebook);
                 button.Clicked += Gamebook_Click;
-
                 Options.Children.Add(button);
 
-                Label disclaimer = new Label();
-                disclaimer.Text = String.Format("© {0}", Gamebook.List.GetDescription(gamebook).Disclaimer);
-                disclaimer.HorizontalTextAlignment = TextAlignment.Start;
-                disclaimer.Margin = new Thickness(0, 0, 0, 8);
-
+                Label disclaimer = Game.Interface.GamebookDisclaimer(gamebook);
                 Options.Children.Add(disclaimer);
             }
 
@@ -62,6 +51,7 @@ namespace Seeker
             Game.Router.Clean();
             Options.Children.Clear();
             Action.Children.Clear();
+
             Action.IsVisible = false;
 
             if (id == 0)

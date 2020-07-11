@@ -32,6 +32,26 @@ namespace Seeker.Game
             return statusLabels;
         }
 
+        public static Button GamebookButton(string gamebook)
+        {
+            return new Button()
+            {
+                Text = gamebook,
+                TextColor = Xamarin.Forms.Color.White,
+                BackgroundColor = Color.FromHex(Gamebook.List.GetDescription(gamebook).BookColor)
+            };
+        }
+
+        public static Label GamebookDisclaimer(string gamebook)
+        {
+            return new Label()
+            {
+                Text = String.Format("© {0}", Gamebook.List.GetDescription(gamebook).Disclaimer),
+                HorizontalTextAlignment = TextAlignment.Start,
+                Margin = new Thickness(0, 0, 0, 8),
+            };
+        }
+
         public static List<Label> Actions(List<string> actionsLines)
         {
             List<Label> actionLabels = new List<Label>();
@@ -74,5 +94,7 @@ namespace Seeker.Game
 
             return actionLabels;
         }
+
+
     }
 }
