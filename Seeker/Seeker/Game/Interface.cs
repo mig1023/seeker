@@ -18,7 +18,7 @@ namespace Seeker.Game
                 label.Text = status;
                 label.FontSize = 12;
                 label.TextColor = Color.White;
-                label.BackgroundColor = Color.FromHex("#0A5C96");
+                label.BackgroundColor = Color.FromHex(Game.Data.Constants.GetStatusBarColor());
 
                 label.HorizontalTextAlignment = TextAlignment.Center;
                 label.VerticalTextAlignment = TextAlignment.Center;

@@ -19,5 +19,10 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             return ButtonsColors[type];
         }
+
+        public string GetStatusBarColor()
+        {
+            return "#0A5C96";
+        }
     }
 }

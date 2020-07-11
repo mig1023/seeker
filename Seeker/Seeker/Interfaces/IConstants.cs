@@ -7,5 +7,7 @@ namespace Seeker.Interfaces
     interface IConstants
     {
         string GetButtonsColor(Game.Buttons.ButtonTypes type);
+
+        string GetStatusBarColor();
     }
 }
