@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Xamarin.Forms;
+
 
 namespace Seeker.Gamebook.BlackCastleDungeon
 {
@@ -18,7 +18,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
         }
 
-        public List<Label> Status()
+        public List<string> Status()
         {
             List<string> statusLines = new List<string>
             {
@@ -27,27 +27,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 String.Format("Удача: {0}", Character.Protagonist.Luck)
             };
 
-            List<Label> statusLabels = new List<Label>();
-
-            foreach (string status in statusLines)
-            {
-                Label label = new Label();
-
-                label.Text = status;
-                label.FontSize = 12;
-                label.TextColor = Color.White;
-                label.BackgroundColor = Color.FromHex("#0A5C96");
-
-                label.HorizontalTextAlignment = TextAlignment.Center;
-                label.VerticalTextAlignment = TextAlignment.Center;
-
-                label.HorizontalOptions = LayoutOptions.FillAndExpand;
-                label.VerticalOptions = LayoutOptions.FillAndExpand;
-
-                statusLabels.Add(label);
-            }
-
-            return statusLabels;
+            return statusLines;
         }
 
         public bool GameOver()

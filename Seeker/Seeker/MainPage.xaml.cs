@@ -139,7 +139,7 @@ namespace Seeker
 
         private void UpdateStatus()
         {
-            List<Label> statuses = (Game.Data.Actions == null ? null : Game.Data.Actions.Status());
+            List<string> statuses = (Game.Data.Actions == null ? null : Game.Data.Actions.Status());
 
             if (statuses == null)
             {
@@ -151,7 +151,7 @@ namespace Seeker
             {
                 Status.Children.Clear();
 
-                foreach (Label status in statuses)
+                foreach (Label status in Game.Interface.StatusBar(statuses))
                     Status.Children.Add(status);
 
                 Status.IsVisible = true;
