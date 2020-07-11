@@ -141,16 +141,12 @@ namespace Seeker
         {
             List<string> statuses = (Game.Data.Actions == null ? null : Game.Data.Actions.Status());
 
-            if (statuses == null)
-            {
-                Status.IsVisible = false;
+            Status.Children.Clear();
 
-                return;
-            }
+            if (statuses == null)
+                Status.IsVisible = false;
             else
             {
-                Status.Children.Clear();
-
                 foreach (Label status in Game.Interface.StatusBar(statuses))
                     Status.Children.Add(status);
 
@@ -188,41 +184,8 @@ namespace Seeker
 
             List<string> actionResult = Game.Data.CurrentParagraph.Action.Do();
 
-            foreach (string actionLine in actionResult)
-            {
-                Label actions = new Label();
-
-                string text = actionLine;
-
-                if (text.Contains("BIG|"))
-                    actions.FontSize = 22;
-                else
-                    actions.FontSize = 10;
-
-                if (text.Contains("BAD|"))
-                    actions.TextColor = Color.Red;
-
-                if (text.Contains("GOOD|"))
-                    actions.TextColor = Color.Green;
-
-                if (text.Contains("BOLD|"))
-                    actions.FontAttributes = FontAttributes.Bold;
-
-                if (text.Contains("HEAD|"))
-                {
-                    actions.HorizontalTextAlignment = TextAlignment.Center;
-                    actions.FontAttributes = FontAttributes.Bold;
-                }
-                else
-                    actions.HorizontalTextAlignment = TextAlignment.Start;
-
-                foreach (string r in new List<string> { "BIG", "GOOD", "BAD", "HEAD", "BOLD" })
-                    text = text.Replace(String.Format("{0}|", r), String.Empty);
-
-                actions.Text = text;
-                
-                Action.Children.Add(actions);
-            }
+            foreach (Label action in Game.Interface.Actions(actionResult))
+                Action.Children.Add(action);
 
             UpdateStatus();
             CheckGameOver();
