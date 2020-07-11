@@ -10,6 +10,8 @@ namespace Seeker.Gamebook
 
         public string XmlBook;
 
+        public string BookColor;
+
         public ProtagonistInit Protagonist;
 
         public Interfaces.IParagraphs Paragraphs;

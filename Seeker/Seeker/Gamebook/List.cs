@@ -16,6 +16,7 @@ namespace Seeker.Gamebook
                 Actions = new BlackCastleDungeon.Actions(),
                 Constants = new BlackCastleDungeon.Constants(),
                 Disclaimer = "Браславский Дмитрий, 1991",
+                BookColor = "#4682B4",
             },
         };
 

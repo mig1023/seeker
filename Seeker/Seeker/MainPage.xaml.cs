@@ -32,7 +32,7 @@ namespace Seeker
                 {
                     Text = gamebook,
                     TextColor = Xamarin.Forms.Color.White,
-                    BackgroundColor = Color.FromHex("#4682B4")
+                    BackgroundColor = Color.FromHex(Gamebook.List.GetDescription(gamebook).BookColor)
                 };
 
                 button.Clicked += Gamebook_Click;
