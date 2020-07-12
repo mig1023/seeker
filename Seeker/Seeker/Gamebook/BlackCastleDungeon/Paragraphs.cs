@@ -108,7 +108,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-
                 Modification = new Modification
                 {
                     Name = "Luck",
@@ -468,22 +467,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ДРАКОН",
-                            Mastery = 9,
-                            Endurance = 4,
+                            new Character
+                            {
+                                Name = "ДРАКОН",
+                                Mastery = 9,
+                                Endurance = 4,
+                            },
                         },
                     },
                 },
-				},
 
                 Modification = new Modification
                 {
@@ -520,28 +519,28 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ ГОБЛИН",
-                            Mastery = 6,
-                            Endurance = 9,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ ГОБЛИН",
-                            Mastery = 7,
-                            Endurance = 5,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ГОБЛИН",
+                                Mastery = 6,
+                                Endurance = 9,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ГОБЛИН",
+                                Mastery = 7,
+                                Endurance = 5,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -552,22 +551,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ДРАКОН",
-                            Mastery = 9,
-                            Endurance = 4,
+                            new Character
+                            {
+                                Name = "ДРАКОН",
+                                Mastery = 9,
+                                Endurance = 4,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -682,22 +681,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ГИГАНТСКИЙ ПАУК",
-                            Mastery = 8,
-                            Endurance = 8,
+                            new Character
+                            {
+                                Name = "ГИГАНТСКИЙ ПАУК",
+                                Mastery = 8,
+                                Endurance = 8,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -788,22 +787,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "НАЧАЛЬНИК СТРАЖИ",
-                            Mastery = 9,
-                            Endurance = 5,
+                            new Character
+                            {
+                                Name = "НАЧАЛЬНИК СТРАЖИ",
+                                Mastery = 9,
+                                Endurance = 5,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -1036,22 +1035,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ЖЕНЩИНА-ВАМПИР",
-                            Mastery = 11,
-                            Endurance = 14,
+                            new Character
+                            {
+                                Name = "ЖЕНЩИНА-ВАМПИР",
+                                Mastery = 11,
+                                Endurance = 14,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -1083,12 +1082,12 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Luck",
-                    ButtonName = "Проверить удачу",
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -1130,22 +1129,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ГОБЛИН",
-                            Mastery = 8,
-                            Endurance = 9,
+                            new Character
+                            {
+                                Name = "ГОБЛИН",
+                                Mastery = 8,
+                                Endurance = 9,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -1204,12 +1203,12 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Luck",
-                    ButtonName = "Проверить удачу",
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -1242,22 +1241,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ЗЕЛЕНЫЙ РЫЦАРЬ",
-                            Mastery = 10,
-                            Endurance = 10,
+                            new Character
+                            {
+                                Name = "ЗЕЛЕНЫЙ РЫЦАРЬ",
+                                Mastery = 10,
+                                Endurance = 10,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -1357,34 +1356,34 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ РАЗБОЙНИК",
-                            Mastery = 6,
-                            Endurance = 4,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ РАЗБОЙНИК",
-                            Mastery = 7,
-                            Endurance = 8,
-                        },
-                        new Character
-                        {
-                            Name = "ТРЕТИЙ РАЗБОЙНИК",
-                            Mastery = 5,
-                            Endurance = 5,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ РАЗБОЙНИК",
+                                Mastery = 6,
+                                Endurance = 4,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ РАЗБОЙНИК",
+                                Mastery = 7,
+                                Endurance = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ТРЕТИЙ РАЗБОЙНИК",
+                                Mastery = 5,
+                                Endurance = 5,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -1904,28 +1903,28 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ ЗЕЛЕНЫЙ РЫЦАРЬ",
-                            Mastery = 10,
-                            Endurance = 10,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ ЗЕЛЕНЫЙ РЫЦАРЬ",
-                            Mastery = 10,
-                            Endurance = 10,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ЗЕЛЕНЫЙ РЫЦАРЬ",
+                                Mastery = 10,
+                                Endurance = 10,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ЗЕЛЕНЫЙ РЫЦАРЬ",
+                                Mastery = 10,
+                                Endurance = 10,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -2014,22 +2013,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ГОБЛИН",
-                            Mastery = 7,
-                            Endurance = 9,
+                            new Character
+                            {
+                                Name = "ГОБЛИН",
+                                Mastery = 7,
+                                Endurance = 9,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -2233,22 +2232,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ОБЕЗЬЯНА",
-                            Mastery = 9,
-                            Endurance = 14,
+                            new Character
+                            {
+                                Name = "ОБЕЗЬЯНА",
+                                Mastery = 9,
+                                Endurance = 14,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -2276,12 +2275,12 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Luck",
-                    ButtonName = "Проверить удачу",
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -2293,22 +2292,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ГИГАНТСКИЙ ПАУК",
-                            Mastery = 5,
-                            Endurance = 8,
+                            new Character
+                            {
+                                Name = "ГИГАНТСКИЙ ПАУК",
+                                Mastery = 5,
+                                Endurance = 8,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -2522,22 +2521,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПРИЗРАК",
-                            Mastery = 10,
-                            Endurance = 9,
+                            new Character
+                            {
+                                Name = "ПРИЗРАК",
+                                Mastery = 10,
+                                Endurance = 9,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -2551,22 +2550,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПАУК",
-                            Mastery = 8,
-                            Endurance = 8,
+                            new Character
+                            {
+                                Name = "ПАУК",
+                                Mastery = 8,
+                                Endurance = 8,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -2593,22 +2592,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ДУХ МЕРТВЫХ",
-                            Mastery = 10,
-                            Endurance = 12,
+                            new Character
+                            {
+                                Name = "ДУХ МЕРТВЫХ",
+                                Mastery = 10,
+                                Endurance = 12,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -2691,22 +2690,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ЛЕВ",
-                            Mastery = 9,
-                            Endurance = 15,
+                            new Character
+                            {
+                                Name = "ЛЕВ",
+                                Mastery = 9,
+                                Endurance = 15,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -2783,22 +2782,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ГИЕНА",
-                            Mastery = 6,
-                            Endurance = 6,
+                            new Character
+                            {
+                                Name = "ГИЕНА",
+                                Mastery = 6,
+                                Endurance = 6,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -3007,22 +3006,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ГОБЛИН",
-                            Mastery = 6,
-                            Endurance = 9,
+                            new Character
+                            {
+                                Name = "ГОБЛИН",
+                                Mastery = 6,
+                                Endurance = 9,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -3051,22 +3050,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "БАРЛАД ДЭРТ",
-                            Mastery = 14,
-                            Endurance = 12,
+                            new Character
+                            {
+                                Name = "БАРЛАД ДЭРТ",
+                                Mastery = 14,
+                                Endurance = 12,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -3134,40 +3133,40 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ РЫЦАРЬ",
-                            Mastery = 10,
-                            Endurance = 10,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ РЫЦАРЬ",
-                            Mastery = 10,
-                            Endurance = 10,
-                        },
-                        new Character
-                        {
-                            Name = "ТРЕТИЙ РЫЦАРЬ",
-                            Mastery = 10,
-                            Endurance = 10,
-                        },
-                        new Character
-                        {
-                            Name = "КАПИТАН РЫЦАРЕЙ",
-                            Mastery = 12,
-                            Endurance = 12,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ РЫЦАРЬ",
+                                Mastery = 10,
+                                Endurance = 10,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ РЫЦАРЬ",
+                                Mastery = 10,
+                                Endurance = 10,
+                            },
+                            new Character
+                            {
+                                Name = "ТРЕТИЙ РЫЦАРЬ",
+                                Mastery = 10,
+                                Endurance = 10,
+                            },
+                            new Character
+                            {
+                                Name = "КАПИТАН РЫЦАРЕЙ",
+                                Mastery = 12,
+                                Endurance = 12,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -3235,22 +3234,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ЗЕЛЕНЫЙ РЫЦАРЬ",
-                            Mastery = 10,
-                            Endurance = 10,
+                            new Character
+                            {
+                                Name = "ЗЕЛЕНЫЙ РЫЦАРЬ",
+                                Mastery = 10,
+                                Endurance = 10,
+                            },
                         },
                     },
                 },
-				},
 
                 Modification = new Modification
                 {
@@ -3328,22 +3327,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ДРАКОН",
-                            Mastery = 12,
-                            Endurance = 8,
+                            new Character
+                            {
+                                Name = "ДРАКОН",
+                                Mastery = 12,
+                                Endurance = 8,
+                            },
                         },
                     },
                 },
-				},
 
                 Modification = new Modification
                 {
@@ -3433,22 +3432,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ВОДЯНОЙ",
-                            Mastery = 7,
-                            Endurance = 7,
+                            new Character
+                            {
+                                Name = "ВОДЯНОЙ",
+                                Mastery = 7,
+                                Endurance = 7,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -3467,27 +3466,27 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ ОРК",
-                            Mastery = 8,
-                            Endurance = 5,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ОРК",
+                                Mastery = 8,
+                                Endurance = 5,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ОРК",
+                                Mastery = 7,
+                                Endurance = 7,
+                            },
                         },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ ОРК",
-                            Mastery = 7,
-                            Endurance = 7,
-                        },
-            },
-				},
+                    },
                 },
 
                 Options = new List<Option>
@@ -3720,22 +3719,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ТРОЛЛЬ",
-                            Mastery = 9,
-                            Endurance = 14,
+                            new Character
+                            {
+                                Name = "ТРОЛЛЬ",
+                                Mastery = 9,
+                                Endurance = 14,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -3878,28 +3877,28 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ ЧЕЛОВЕК",
-                            Mastery = 8,
-                            Endurance = 5,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ ЧЕЛОВЕК",
-                            Mastery = 6,
-                            Endurance = 9,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ЧЕЛОВЕК",
+                                Mastery = 8,
+                                Endurance = 5,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ЧЕЛОВЕК",
+                                Mastery = 6,
+                                Endurance = 9,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -4122,12 +4121,12 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Luck",
-                    ButtonName = "Проверить удачу",
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -4259,12 +4258,12 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Luck",
-                    ButtonName = "Проверить удачу",
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -4397,12 +4396,12 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Luck",
-                    ButtonName = "Проверить удачу",
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -4746,12 +4745,12 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Luck",
-                    ButtonName = "Проверить удачу",
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -4894,34 +4893,34 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ ОРК",
-                            Mastery = 10,
-                            Endurance = 6,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ ОРК",
-                            Mastery = 7,
-                            Endurance = 7,
-                        },
-                        new Character
-                        {
-                            Name = "ТРЕТИЙ ОРК",
-                            Mastery = 7,
-                            Endurance = 7,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ОРК",
+                                Mastery = 10,
+                                Endurance = 6,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ОРК",
+                                Mastery = 7,
+                                Endurance = 7,
+                            },
+                            new Character
+                            {
+                                Name = "ТРЕТИЙ ОРК",
+                                Mastery = 7,
+                                Endurance = 7,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -4954,12 +4953,12 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Luck",
-                    ButtonName = "Проверить удачу",
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -5015,22 +5014,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ОРК",
-                            Mastery = 7,
-                            Endurance = 7,
+                            new Character
+                            {
+                                Name = "ОРК",
+                                Mastery = 7,
+                                Endurance = 7,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -5200,22 +5199,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ТОРГОВЕЦ",
-                            Mastery = 6,
-                            Endurance = 12,
+                            new Character
+                            {
+                                Name = "ТОРГОВЕЦ",
+                                Mastery = 6,
+                                Endurance = 12,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -5309,22 +5308,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ОБОРОТЕНЬ",
-                            Mastery = 10,
-                            Endurance = 10,
+                            new Character
+                            {
+                                Name = "ОБОРОТЕНЬ",
+                                Mastery = 10,
+                                Endurance = 10,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -5335,22 +5334,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "МЕДВЕДИЦА",
-                            Mastery = 8,
-                            Endurance = 10,
+                            new Character
+                            {
+                                Name = "МЕДВЕДИЦА",
+                                Mastery = 8,
+                                Endurance = 10,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -5376,28 +5375,28 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ ГОБЛИН",
-                            Mastery = 8,
-                            Endurance = 10,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ ГОБЛИН",
-                            Mastery = 6,
-                            Endurance = 8,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ГОБЛИН",
+                                Mastery = 8,
+                                Endurance = 10,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ГОБЛИН",
+                                Mastery = 6,
+                                Endurance = 8,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -5459,28 +5458,28 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ГОБЛИН",
-                            Mastery = 4,
-                            Endurance = 7,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ ГОБЛИН",
-                            Mastery = 8,
-                            Endurance = 9,
+                            new Character
+                            {
+                                Name = "ГОБЛИН",
+                                Mastery = 4,
+                                Endurance = 7,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ГОБЛИН",
+                                Mastery = 8,
+                                Endurance = 9,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -5519,22 +5518,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ЗЕЛЕНЫЙ РЫЦАРЬ",
-                            Mastery = 11,
-                            Endurance = 14,
+                            new Character
+                            {
+                                Name = "ЗЕЛЕНЫЙ РЫЦАРЬ",
+                                Mastery = 11,
+                                Endurance = 14,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -5616,22 +5615,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ГАРПИЯ",
-                            Mastery = 10,
-                            Endurance = 12,
+                            new Character
+                            {
+                                Name = "ГАРПИЯ",
+                                Mastery = 10,
+                                Endurance = 12,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -5672,22 +5671,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ГИГАНТСКИЙ ПАУК",
-                            Mastery = 8,
-                            Endurance = 8,
+                            new Character
+                            {
+                                Name = "ГИГАНТСКИЙ ПАУК",
+                                Mastery = 8,
+                                Endurance = 8,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -5730,22 +5729,22 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ЛЕСОВИЧОК",
-                            Mastery = 6,
-                            Endurance = 8,
+                            new Character
+                            {
+                                Name = "ЛЕСОВИЧОК",
+                                Mastery = 6,
+                                Endurance = 8,
+                            },
                         },
                     },
                 },
-				},
 
                 Options = new List<Option>
                 {
@@ -5782,21 +5781,21 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ЗЕЛЕНЫЙ РЫЦАРЬ",
-                            Mastery = 10,
-                            Endurance = 10,
+                            new Character
+                            {
+                                Name = "ЗЕЛЕНЫЙ РЫЦАРЬ",
+                                Mastery = 10,
+                                Endurance = 10,
+                            },
                         },
                     },
-				},
                 },
 
                 Options = new List<Option>
@@ -5818,33 +5817,33 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ ОРК",
-                            Mastery = 10,
-                            Endurance = 6,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ ОРК",
-                            Mastery = 7,
-                            Endurance = 7,
-                        },
-                        new Character
-                        {
-                            Name = "ТРЕТИЙ ОРК",
-                            Mastery = 7,
-                            Endurance = 7,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ОРК",
+                                Mastery = 10,
+                                Endurance = 6,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ОРК",
+                                Mastery = 7,
+                                Endurance = 7,
+                            },
+                            new Character
+                            {
+                                Name = "ТРЕТИЙ ОРК",
+                                Mastery = 7,
+                                Endurance = 7,
+                            },
                         },
                     },
-				},
                 },
 
                 Options = new List<Option>
@@ -5942,27 +5941,27 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ ГОБЛИН",
-                            Mastery = 4,
-                            Endurance = 9,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ ГОБЛИН",
-                            Mastery = 7,
-                            Endurance = 5,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ГОБЛИН",
+                                Mastery = 4,
+                                Endurance = 9,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ГОБЛИН",
+                                Mastery = 7,
+                                Endurance = 5,
+                            },
                         },
                     },
-					},
                 },
 
                 Options = new List<Option>
@@ -6164,21 +6163,21 @@ new Actions
             {
                 Actions = new List<Actions>
                 {
-new Actions
-                {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПОВАР",
-                            Mastery = 8,
-                            Endurance = 10,
+                            new Character
+                            {
+                                Name = "ПОВАР",
+                                Mastery = 8,
+                                Endurance = 10,
+                            },
                         },
                     },
-					},
                 },
 
                 Options = new List<Option>
