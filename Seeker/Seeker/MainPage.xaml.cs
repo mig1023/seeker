@@ -49,10 +49,9 @@ namespace Seeker
         public void Paragraph(int id)
         {
             Game.Router.Clean();
+            ActionsPlaces.Clear();
             Options.Children.Clear();
             Action.Children.Clear();
-
-            Action.IsVisible = false;
 
             if (id == 0)
                 Game.Data.Protagonist();
@@ -75,19 +74,29 @@ namespace Seeker
 
                 foreach (Interfaces.IActions action in paragraph.Actions)
                 {
+                    StackLayout actionPlace = new StackLayout()
+                    {
+                        Orientation = StackOrientation.Vertical,
+                        Spacing = 5,
+                        HorizontalOptions = LayoutOptions.FillAndExpand,
+                        Padding = 20,
+                        BackgroundColor = Color.LightGray
+                    };
+
                     foreach (Label enemy in Game.Interface.Represent(action.Do("Representer")))
-                        Action.Children.Add(enemy);
+                        actionPlace.Children.Add(enemy);
 
                     Button button = Game.Interface.ActionButton(action.ButtonName);
                     button.Clicked += Action_Click;
-                    Action.Children.Add(button);
+                    actionPlace.Children.Add(button);
+
+                    Action.Children.Add(actionPlace);
 
                     Destinations.Add(action.ButtonName, index);
+                    ActionsPlaces.Add(index, actionPlace);
 
                     index += 1;
                 }
-
-                Action.IsVisible = true;
             }
 
             foreach (Game.Option option in paragraph.Options)
@@ -157,17 +166,19 @@ namespace Seeker
         }
 
         private static Dictionary<string, int> Destinations = new Dictionary<string, int>();
+        private static Dictionary<int, StackLayout> ActionsPlaces = new Dictionary<int, StackLayout>();
 
         private void Action_Click(object sender, EventArgs e)
         {
-            Action.Children.Clear();
-
             Button b = sender as Button;
+            int actionIndex = Destinations[b.Text];
 
-            List<string> actionResult = Game.Data.CurrentParagraph.Actions[Destinations[b.Text]].Do();
+            ActionsPlaces[actionIndex].Children.Clear();
+
+            List<string> actionResult = Game.Data.CurrentParagraph.Actions[actionIndex].Do();
 
             foreach (Label action in Game.Interface.Actions(actionResult))
-                Action.Children.Add(action);
+                ActionsPlaces[actionIndex].Children.Add(action);
 
             UpdateStatus();
             CheckGameOver();

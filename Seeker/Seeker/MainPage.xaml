@@ -19,8 +19,9 @@
             <ScrollView Grid.Column="0" Grid.Row="0">
                 <StackLayout Padding="30">
                     <Label x:Name="Text" Text="" Margin="5" FontSize="Medium"/>
-                    <StackLayout x:Name="Action" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand"
-                             IsVisible="False" Padding="20" BackgroundColor="LightGray"/>
+                    <StackLayout x:Name="Action" Orientation="Vertical" HorizontalOptions="FillAndExpand"/>
+                    <!--<StackLayout x:Name="Action" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand"
+                             IsVisible="False" Padding="20" BackgroundColor="LightGray"/>-->
                     <StackLayout x:Name="Options" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" />
                 </StackLayout>
             </ScrollView>
