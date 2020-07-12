@@ -81,8 +81,6 @@ namespace Seeker
                 Action.IsVisible = true;
             }
 
-            string buttonsColor = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Main);
-
             foreach (Game.Option option in paragraph.Options)
             {
                 string color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Main);
