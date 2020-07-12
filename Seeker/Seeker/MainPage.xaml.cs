@@ -49,7 +49,7 @@ namespace Seeker
         public void Paragraph(int id)
         {
             Game.Router.Clean();
-            ActionsPlaces.Clear();
+
             Options.Children.Clear();
             Action.Children.Clear();
 
@@ -92,8 +92,8 @@ namespace Seeker
 
                     Action.Children.Add(actionPlace);
 
-                    Destinations.Add(action.ButtonName, index);
-                    ActionsPlaces.Add(index, actionPlace);
+                    Game.Router.AddAction(action.ButtonName, index);
+                    Game.Router.AddActionsPlaces(index, actionPlace);
 
                     index += 1;
                 }
@@ -113,7 +113,7 @@ namespace Seeker
                 if (button == null)
                     continue;
 
-                Game.Router.Add(option.Text, option.Destination);
+                Game.Router.AddDestination(option.Text, option.Destination);
 
                 button.Clicked += Option_Click;
 
@@ -157,28 +157,27 @@ namespace Seeker
                     BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option))
                 };
 
-                Game.Router.Add("Начать сначала", 0);
+                Game.Router.AddDestination("Начать сначала", 0);
 
                 button.Clicked += Option_Click;
 
                 Options.Children.Add(button);
             }
         }
-
-        private static Dictionary<string, int> Destinations = new Dictionary<string, int>();
-        private static Dictionary<int, StackLayout> ActionsPlaces = new Dictionary<int, StackLayout>();
-
+               
         private void Action_Click(object sender, EventArgs e)
         {
             Button b = sender as Button;
-            int actionIndex = Destinations[b.Text];
+            int actionIndex = Game.Router.FindAction(b.Text);
 
-            ActionsPlaces[actionIndex].Children.Clear();
+            StackLayout actionPlace = Game.Router.FindActionsPlaces(actionIndex);
+
+            actionPlace.Children.Clear();
 
             List<string> actionResult = Game.Data.CurrentParagraph.Actions[actionIndex].Do();
 
             foreach (Label action in Game.Interface.Actions(actionResult))
-                ActionsPlaces[actionIndex].Children.Add(action);
+                actionPlace.Children.Add(action);
 
             UpdateStatus();
             CheckGameOver();
@@ -187,7 +186,7 @@ namespace Seeker
         private void Option_Click(object sender, EventArgs e)
         {
             Button b = sender as Button;
-            Paragraph(Game.Router.Find(b.Text));
+            Paragraph(Game.Router.FindDestination(b.Text));
         }
     }
 }
