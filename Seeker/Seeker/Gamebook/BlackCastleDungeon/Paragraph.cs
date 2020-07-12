@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Seeker.Game
+namespace Seeker.Gamebook.BlackCastleDungeon
 {
     class Paragraph
-    {     
-        public List<Option> Options { get; set; }
+    {
+        public List<Game.Option> Options { get; set; }
 
-        public List<Interfaces.IActions> Actions { get; set; }
+        public List<Actions> Actions { get; set; }
 
         public Interfaces.IModification Modification { get; set; }
 

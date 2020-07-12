@@ -10,9 +10,24 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 {
     class Paragraphs : Interfaces.IParagraphs
     {
-        public Paragraph Get(int id)
+        public Game.Paragraph Get(int id)
         {
-            return Paragraph[id];
+            Paragraph source = Paragraph[id];
+
+            Game.Paragraph paragraph = new Game.Paragraph();
+
+            if (source.Options != null)
+                paragraph.Options = new List<Option>(source.Options);
+
+            if (source.Actions != null)
+                paragraph.Actions = new List<Interfaces.IActions>(source.Actions);
+
+            if (source.Modification != null)
+                paragraph.Modification = source.Modification;
+
+            source.OpenOption = paragraph.OpenOption;
+
+            return paragraph;
         }
 
         private static Dictionary<int, Paragraph> Paragraph = new Dictionary<int, Paragraph>
@@ -68,27 +83,31 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [6] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ ДРОВОСЕК",
-                            Mastery = 5,
-                            Endurance = 4,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ДРОВОСЕК",
+                                Mastery = 5,
+                                Endurance = 4,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ДРОВОСЕК",
+                                Mastery = 6,
+                                Endurance = 7,
+                            }
                         },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ ДРОВОСЕК",
-                            Mastery = 6,
-                            Endurance = 7,
-                        }
                     },
                 },
+
 
                 Modification = new Modification
                 {
@@ -168,10 +187,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [14] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Luck",
-                    ButtonName = "Проверить удачу",
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
                 },
 
                 Options = new List<Option>
@@ -192,31 +214,34 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [16] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВАЯ ЛЕТУЧАЯ МЫШЬ",
-                            Mastery = 6,
-                            Endurance = 8,
+                            new Character
+                            {
+                                Name = "ПЕРВАЯ ЛЕТУЧАЯ МЫШЬ",
+                                Mastery = 6,
+                                Endurance = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРАЯ ЛЕТУЧАЯ МЫШЬ",
+                                Mastery = 5,
+                                Endurance = 7,
+                            },
+                            new Character
+                            {
+                                Name = "ТРЕТЬЯ ЛЕТУЧАЯ МЫШЬ",
+                                Mastery = 5,
+                                Endurance = 6,
+                            }
                         },
-                        new Character
-                        {
-                            Name = "ВТОРАЯ ЛЕТУЧАЯ МЫШЬ",
-                            Mastery = 5,
-                            Endurance = 7,
-                        },
-                        new Character
-                        {
-                            Name = "ТРЕТЬЯ ЛЕТУЧАЯ МЫШЬ",
-                            Mastery = 5,
-                            Endurance = 6,
-                        }
                     },
                 },
 
@@ -386,24 +411,27 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [33] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ОРК",
-                            Mastery = 6,
-                            Endurance = 8,
-                        },
-                        new Character
-                        {
-                            Name = "ГОБЛИН",
-                            Mastery = 7,
-                            Endurance = 5,
+                            new Character
+                            {
+                                Name = "ОРК",
+                                Mastery = 6,
+                                Endurance = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ГОБЛИН",
+                                Mastery = 7,
+                                Endurance = 5,
+                            },
                         },
                     },
                 },
@@ -438,7 +466,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [37] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -453,6 +483,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Modification = new Modification
                 {
@@ -487,7 +518,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [40] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -508,6 +541,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -516,7 +550,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [41] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -531,6 +567,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -643,7 +680,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [54] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -658,6 +697,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -746,7 +786,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [65] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -761,6 +803,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -991,7 +1034,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [93] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -1006,6 +1051,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -1035,11 +1081,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [97] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Luck",
                     ButtonName = "Проверить удачу",
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -1079,7 +1128,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [102] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -1094,6 +1145,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -1150,11 +1202,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [109] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Luck",
                     ButtonName = "Проверить удачу",
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -1185,7 +1240,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [112] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -1200,6 +1257,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -1297,7 +1355,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [123] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -1324,6 +1384,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -1841,7 +1902,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [183] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -1862,6 +1925,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -1948,7 +2012,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [192] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -1963,6 +2029,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -2164,7 +2231,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [215] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -2179,6 +2248,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -2204,11 +2274,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [218] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Luck",
                     ButtonName = "Проверить удачу",
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -2218,7 +2291,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [219] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -2233,6 +2308,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -2444,7 +2520,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [243] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -2459,6 +2537,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -2470,7 +2549,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [244] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -2485,6 +2566,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -2509,7 +2591,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [247] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -2524,6 +2608,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -2604,7 +2689,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [257] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -2619,6 +2706,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -2693,7 +2781,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [265] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -2708,6 +2798,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -2914,7 +3005,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [290] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -2929,6 +3022,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -2955,7 +3049,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [293] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -2970,6 +3066,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -3035,7 +3132,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [301] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -3068,6 +3167,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -3133,7 +3233,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [309] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -3148,6 +3250,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Modification = new Modification
                 {
@@ -3223,7 +3326,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [316] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -3238,6 +3343,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Modification = new Modification
                 {
@@ -3325,7 +3431,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [326] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -3340,6 +3448,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -3356,7 +3465,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [328] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -3376,6 +3487,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             Endurance = 7,
                         },
             },
+				},
                 },
 
                 Options = new List<Option>
@@ -3606,7 +3718,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [356] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -3621,6 +3735,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -3761,7 +3876,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [374] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -3782,6 +3899,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -4002,11 +4120,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [401] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Luck",
                     ButtonName = "Проверить удачу",
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -4136,11 +4257,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [415] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Luck",
                     ButtonName = "Проверить удачу",
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -4271,11 +4395,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [431] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Luck",
                     ButtonName = "Проверить удачу",
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -4617,11 +4744,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [472] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Luck",
                     ButtonName = "Проверить удачу",
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -4762,7 +4892,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [487] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -4789,6 +4921,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -4819,11 +4952,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [491] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Luck",
                     ButtonName = "Проверить удачу",
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -4877,7 +5013,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [498] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -4892,6 +5030,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -5059,7 +5198,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [518] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -5074,6 +5215,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -5165,7 +5307,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [528] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -5180,6 +5324,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -5188,7 +5333,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [529] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -5203,6 +5350,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -5226,7 +5374,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [532] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -5247,6 +5397,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -5306,7 +5457,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [539] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -5327,6 +5480,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -5363,7 +5517,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [543] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -5378,6 +5534,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -5457,7 +5614,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [553] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -5472,6 +5631,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -5510,7 +5670,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [558] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -5525,6 +5687,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -5565,7 +5728,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [563] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -5580,6 +5745,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
                     },
                 },
+				},
 
                 Options = new List<Option>
                 {
@@ -5614,7 +5780,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [567] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -5628,6 +5796,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             Endurance = 10,
                         },
                     },
+				},
                 },
 
                 Options = new List<Option>
@@ -5647,7 +5816,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [569] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -5673,6 +5844,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             Endurance = 7,
                         },
                     },
+				},
                 },
 
                 Options = new List<Option>
@@ -5768,7 +5940,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [580] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -5788,6 +5962,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             Endurance = 5,
                         },
                     },
+					},
                 },
 
                 Options = new List<Option>
@@ -5987,7 +6162,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [604] = new Paragraph
             {
-                Action = new Actions
+                Actions = new List<Actions>
+                {
+new Actions
                 {
                     ActionName = "Fight",
                     ButtonName = "Сражаться",
@@ -6001,6 +6178,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             Endurance = 10,
                         },
                     },
+					},
                 },
 
                 Options = new List<Option>

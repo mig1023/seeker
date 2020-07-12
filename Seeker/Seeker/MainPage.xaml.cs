@@ -69,14 +69,23 @@ namespace Seeker
             if (paragraph.Modification != null)
                 Game.Data.CurrentParagraph.Modification.Do();
 
-            if (paragraph.Action != null)
+            if ((paragraph.Actions != null) && (paragraph.Actions.Count > 0))
             {
-                foreach (Label enemy in Game.Interface.Represent(Game.Data.CurrentParagraph.Action.Do("Representer")))
-                    Action.Children.Add(enemy);
+                int index = 0;
 
-                Button button = Game.Interface.ActionButton(paragraph.Action.ButtonName);
-                button.Clicked += Action_Click;
-                Action.Children.Add(button);
+                foreach (Interfaces.IActions action in paragraph.Actions)
+                {
+                    foreach (Label enemy in Game.Interface.Represent(action.Do("Representer")))
+                        Action.Children.Add(enemy);
+
+                    Button button = Game.Interface.ActionButton(action.ButtonName);
+                    button.Clicked += Action_Click;
+                    Action.Children.Add(button);
+
+                    Destinations.Add(action.ButtonName, index);
+
+                    index += 1;
+                }
 
                 Action.IsVisible = true;
             }
@@ -147,11 +156,15 @@ namespace Seeker
             }
         }
 
+        private static Dictionary<string, int> Destinations = new Dictionary<string, int>();
+
         private void Action_Click(object sender, EventArgs e)
         {
             Action.Children.Clear();
 
-            List<string> actionResult = Game.Data.CurrentParagraph.Action.Do();
+            Button b = sender as Button;
+
+            List<string> actionResult = Game.Data.CurrentParagraph.Actions[Destinations[b.Text]].Do();
 
             foreach (Label action in Game.Interface.Actions(actionResult))
                 Action.Children.Add(action);
