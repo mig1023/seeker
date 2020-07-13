@@ -109,6 +109,19 @@ namespace Seeker.Game
 
             return aftertext;
         }
+
+        public static StackLayout ActionPlace()
+        {
+            return new StackLayout()
+            {
+                Orientation = StackOrientation.Vertical,
+                Spacing = 5,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                Padding = 20,
+                BackgroundColor = Color.LightGray
+            };
+        }
+
         public static List<Label> Actions(List<string> actionsLines)
         {
             List<Label> actionLabels = new List<Label>();

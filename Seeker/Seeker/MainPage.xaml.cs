@@ -74,14 +74,7 @@ namespace Seeker
 
                 foreach (Interfaces.IActions action in paragraph.Actions)
                 {
-                    StackLayout actionPlace = new StackLayout()
-                    {
-                        Orientation = StackOrientation.Vertical,
-                        Spacing = 5,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        Padding = 20,
-                        BackgroundColor = Color.LightGray
-                    };
+                    StackLayout actionPlace = Game.Interface.ActionPlace();
 
                     foreach (Label enemy in Game.Interface.Represent(action.Do("Representer")))
                         actionPlace.Children.Add(enemy);
