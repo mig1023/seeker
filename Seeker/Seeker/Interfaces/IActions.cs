@@ -11,6 +11,8 @@ namespace Seeker.Interfaces
 
         string ButtonName { get; set; }
 
+        string Aftertext { get; set; }
+
         List<string> Do(string action = "");
 
         List<string> Status();

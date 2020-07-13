@@ -96,6 +96,19 @@ namespace Seeker.Game
             };
         }
 
+        public static Label Aftertext(string text)
+        {
+            Label aftertext = new Label()
+            {
+                Text = text,
+                Margin = 5,
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+            };
+
+            aftertext.Text = text.Replace("\n", System.Environment.NewLine);
+
+            return aftertext;
+        }
         public static List<Label> Actions(List<string> actionsLines)
         {
             List<Label> actionLabels = new List<Label>();

@@ -10,7 +10,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public List<Character> Enemies { get; set; }
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
-
+        public string Aftertext { get; set; }
 
         public List<string> Do(string action = "")
         {

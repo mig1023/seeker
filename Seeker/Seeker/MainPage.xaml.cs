@@ -96,6 +96,9 @@ namespace Seeker
                     Game.Router.AddActionsPlaces(index, actionPlace);
 
                     index += 1;
+
+                    if (!String.IsNullOrEmpty(action.Aftertext))
+                        Action.Children.Add(Game.Interface.Aftertext(action.Aftertext));
                 }
             }
 
