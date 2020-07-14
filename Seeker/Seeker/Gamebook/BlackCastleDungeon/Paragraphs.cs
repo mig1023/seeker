@@ -105,6 +105,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 7,
                             }
                         },
+
+                        Aftertext = "Если вы победили их, то наградой вам будет всего 1 золотой в кармане Первого дровосека. Дровосеки люди небогатые, и вряд ли стоило убивать их. Потеряйте 1 УДАЧУ. Теперь отправляйтесь дальше.",
                     },
                 },
 
@@ -247,6 +249,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 6,
                             }
                         },
+
+                        Aftertext = "Если вы победите их, то можете откинуть ставни и осмотреть домик или же уйти и направиться к центральному строению.",
                     },
                 },
 
@@ -433,7 +437,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Actions
                     {
                         ActionName = "Fight",
-                        ButtonName = "Сражаться",
+                        ButtonName = "Сражаться c орком",
 
                         Enemies = new List<Character>
                         {
@@ -443,6 +447,18 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Mastery = 6,
                                 Endurance = 8,
                             },
+                        },
+
+                        Aftertext = "Если вы убили его, то сделали это как раз вовремя: из погреба с бутылкой вина поднимается Гоблин. Увидев вас, он бросает бутылку и хватается за боевой топор.",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться c гоблином",
+
+                        Enemies = new List<Character>
+                        {
                             new Character
                             {
                                 Name = "ГОБЛИН",
@@ -560,6 +576,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 5,
                             },
                         },
+
+                        Aftertext = "Если вам удалось убить Гоблинов и остаться в живых, то можете забрать у них бронзовый свисток и медный ключик, которые им больше не понадобятся, и перейти реку.",
                     },
                 },
 
@@ -707,6 +725,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Actions
                     {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+
+                        Aftertext = "Если вы не удачливы, то паук затягивает вас на дерево, и вам приходится драться с ним. Во время боя уменьшайте вашу СИЛУ УДАРА на 1. Ведь вы не слишком-то привыкли драться на деревьях. Пользоваться заклятием Огня на дереве неразумно. Копии же просто негде будет поместиться. Однако вы можете воспользоваться заклятиями либо Силы, либо Слабости.",
+                    },
+
+                    new Actions
+                    {
                         ActionName = "Fight",
                         ButtonName = "Сражаться",
 
@@ -825,6 +851,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 5,
                             },
                         },
+
+                        Aftertext = "Если вы победили Начальника стражи за три раунда, то всё хорошо. Если же нет, то Орки услышали подозрительный шум и не входили только потому, что ждали подмогу. Подоспевший отряд Гоблинов врывается раньше, чем вы успеваете добить вашего врага. И даже в самых кошмарных снах вы не видели того, что они сделали с вами…",
                     },
                 },
 
@@ -1082,6 +1110,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 14,
                             },
                         },
+
+                        Aftertext = "Если вы победили ее, то поторопитесь выйти в дверь, скрытую за портьерой, висящей слева от вас.",
                     },
                 },
 
@@ -1279,6 +1309,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Actions
                     {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+
+                        Aftertext = "Если вы удачливы, то вам удается оседлать коня Первого рыцаря, и ваша СИЛА УДАРА не изменяется, если же нет — драться все же придется, стоя на земле.",
+                    },
+
+                    new Actions
+                    {
                         ActionName = "Fight",
                         ButtonName = "Сражаться",
 
@@ -1421,6 +1459,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 5,
                             },
                         },
+
+                        Aftertext = "Если вы победили их, то можете либо поскорее уйти, опасаясь, что поблизости могут быть их друзья, либо обшарить карманы убитых.",
                     },
                 },
 
@@ -2099,6 +2139,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 9,
                             },
                         },
+
+                        Aftertext = "Если вы убили его, то можете взять бронзовый свисток из его кармана и отправляться дальше по тропинке в лес.",
                     },
                 },
 
@@ -2628,6 +2670,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 9,
                             },
                         },
+
+                        Aftertext = "Если вы победили Призрака, то он исчезает, а вы можете либо уйти от греха подальше (вернувшись и выбрав что-нибудь более приятное), либо осмотреть сундуки у противоположной стены. С какого вы начнете: с большого, среднего или маленького?",
                     },
                 },
 
@@ -2657,6 +2701,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 8,
                             },
                         },
+
+                        Aftertext = "Если вы победили паука, придите в себя, переведите дух и идите по дороге дальше.",
                     },
                 },
 
@@ -2699,6 +2745,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 12,
                             },
                         },
+
+                        Aftertext = "Если вам удалось победить, то можете оглядеться.",
                     },
                 },
 
@@ -2892,6 +2940,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 6,
                             },
                         },
+
+                        Aftertext = "Если вы убили ее, можете двигаться дальше.",
                     },
                 },
 
@@ -3122,6 +3172,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 9,
                             },
                         },
+
+                        Aftertext = "Если победитель вы, то можете забрать у ваших противников бронзовый свисток и медный ключик, которые им больше не понадобятся, и перейти реку.",
                     },
                 },
 
@@ -3241,7 +3293,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Actions
                     {
                         ActionName = "Fight",
-                        ButtonName = "Сражаться",
+                        ButtonName = "Сражаться c двумя рыцарями",
 
                         Enemies = new List<Character>
                         {
@@ -3257,12 +3309,36 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Mastery = 10,
                                 Endurance = 10,
                             },
+                        },
+
+                        Aftertext = "А через 6 раундов атаки к ним присоединится еще один рыцарь.",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться c третьим рыцарем",
+
+                        Enemies = new List<Character>
+                        {
                             new Character
                             {
                                 Name = "ТРЕТИЙ РЫЦАРЬ",
                                 Mastery = 10,
                                 Endurance = 10,
                             },
+                        },
+
+                        Aftertext = "Когда вы победите двух рыцарей, в дело вступит Капитан.",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться c капитаном",
+
+                        Enemies = new List<Character>
+                        {
                             new Character
                             {
                                 Name = "КАПИТАН РЫЦАРЕЙ",
@@ -3270,6 +3346,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 12,
                             },
                         },
+
+                        Aftertext = "Если же произойдет чудо и вы сможете перебить всю охрану, то поднимитесь по лестнице на небольшой балкончик, куда выходят две двери. Вы пойдете в правую дверь или в левую?",
                     },
                 },
 
@@ -3458,6 +3536,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 8,
                             },
                         },
+
+                         Aftertext = "Удастся ли вам дважды ранить Дракона?",
                     },
                 },
 
@@ -3606,6 +3686,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 7,
                             },
                         },
+
+                        Aftertext = "Убиты ли оба врага за 8 раундов?",
                     },
                 },
 
@@ -3856,6 +3938,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 14,
                             },
                         },
+
+                        Aftertext = "Если вы победили Тролля, можете взять из его кармана Золотое кольцо. Добавьте себе 1 УДАЧУ. Теперь уходите.",
                     },
                 },
 
@@ -4535,6 +4619,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     {
                         ActionName = "Luck",
                         ButtonName = "Проверить удачу",
+
+                        Aftertext = "Если вы не удачливы, то дерево падает прямо на вас раньше, чем вы успеваете понять, что происходит. Доверчивость сослужила вам плохую службу. Вы забыли, что лес наводнен шпионами злого волшебника и попались на удочку одного из них. Ваше путешествие закончено.",
                     },
                 },
 
@@ -5058,7 +5144,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Actions
                     {
                         ActionName = "Fight",
-                        ButtonName = "Сражаться",
+                        ButtonName = "Сражаться c первым орком",
 
                         Enemies = new List<Character>
                         {
@@ -5068,6 +5154,18 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Mastery = 10,
                                 Endurance = 6,
                             },
+                        },
+
+                        Aftertext = "Если убили его за три раунда атаки, то сражайтесь с двумя остальными. Если же нет, то через три раунда оставшиеся два Орка приходят на помощь своему предводителю, и вам придется биться с тремя сразу.",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться с двумя другими",
+
+                        Enemies = new List<Character>
+                        {
                             new Character
                             {
                                 Name = "ВТОРОЙ ОРК",
@@ -5081,6 +5179,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 7,
                             },
                         },
+
+                        Aftertext = "Если после всего этого вы еще остались живы, то можете переступить через тела своих поверженных противников и войти в ворота.",
                     },
                 },
 
@@ -5174,6 +5274,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [498] = new Paragraph
             {
+                Options = new List<Option>
+                {
+                    new Option { Destination = 300, Text = "Далее" },
+                }
+            },
+            [499] = new Paragraph
+            {
                 Actions = new List<Actions>
                 {
                     new Actions
@@ -5190,16 +5297,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 7,
                             },
                         },
+
+                        Aftertext = "Если вы победили стража, можете войти в ворота.",
                     },
                 },
 
-                Options = new List<Option>
-                {
-                    new Option { Destination = 300, Text = "Далее" },
-                }
-            },
-            [499] = new Paragraph
-            {
                 Options = new List<Option>
                 {
                     new Option { Destination = 48, Text = "Далее" },
@@ -5496,6 +5598,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 10,
                             },
                         },
+
+                        Aftertext = "Если вы убили Оборотня, то можете снять с его шеи Оберег и надеть на себя. Потом отправляйтесь в путь, ведь и так потеряно слишком много времени.",
                     },
                 },
 
@@ -5522,6 +5626,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 10,
                             },
                         },
+
+                        Aftertext = "Если вы победили медведицу, то выбираетесь из берлоги и идете дальше по дороге, которая уходит в глубь леса.",
                     },
                 },
 
@@ -5569,6 +5675,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 8,
                             },
                         },
+
+                        Aftertext = "Если вы справились с охраной, то можете открыть дверь, которую они охраняли.",
                     },
                 },
 
@@ -5635,7 +5743,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Actions
                     {
                         ActionName = "Fight",
-                        ButtonName = "Сражаться",
+                        ButtonName = "Сражаться c гоблином",
 
                         Enemies = new List<Character>
                         {
@@ -5645,6 +5753,18 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Mastery = 4,
                                 Endurance = 7,
                             },
+                        },
+
+                        Aftertext = "Как только вы убиваете Гоблина, из дома появляется еще один. Он менее пьян и будет не столь легким противником.",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться со вторым",
+
+                        Enemies = new List<Character>
+                        {
                             new Character
                             {
                                 Name = "ВТОРОЙ ГОБЛИН",
@@ -5652,6 +5772,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 9,
                             },
                         },
+
+                        Aftertext = "Если же вы убиваете и второго Гоблина, то остальные решают не искушать судьбу и убегают, выпрыгнув в окно. Вы же можете зайти в сторожку и посмотреть, нет ли там чего-нибудь для вас полезного, а можете решить, что лучше сразу пойти к зданию в центре двора.",
                     },
                 },
 
@@ -5706,6 +5828,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 14,
                             },
                         },
+
+                        Aftertext = "Если вам удалось победить рыцаря, то идите по коридору дальше, пока не дойдете до двери.",
                     },
                 },
 
@@ -5917,6 +6041,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 8,
                             },
                         },
+
+                        Aftertext = "Победить его не так уж сложно. После этого вы можете взять у него из кармана серебряный свисток и отправиться по дороге дальше.",
                     },
                 },
 
@@ -5969,6 +6095,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 10,
                             },
                         },
+
+                        Aftertext = "Если вы победили врага, то путь вперед свободен, и вы бежите дальше по коридору, пока дорогу не преграждает дверь.",
                     },
                 },
 
@@ -5994,7 +6122,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Actions
                     {
                         ActionName = "Fight",
-                        ButtonName = "Сражаться",
+                        ButtonName = "Сражаться c орком",
 
                         Enemies = new List<Character>
                         {
@@ -6004,6 +6132,26 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Mastery = 10,
                                 Endurance = 6,
                             },
+                        },
+
+                        Aftertext = "Если вы убили его за три раунда атаки, то сражайтесь с двумя остальными. Если же нет, то через три раунда они приходят на помощь своему предводителю, и вам придется биться с тремя сразу. После того как первый Орк все же будет повержен, если хотите, ПРОВЕРЬТЕ СВОЮ УДАЧУ.",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+
+                        Aftertext = "Если вы удачливы, то остальные Орки не захотят умирать, защищая ворота, и убегут в лес. Если же нет, то придется драться со всеми.",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться с остальными",
+
+                        Enemies = new List<Character>
+                        {
                             new Character
                             {
                                 Name = "ВТОРОЙ ОРК",
@@ -6017,6 +6165,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 7,
                             },
                         },
+
+                        Aftertext = "Если вы еще остались живы после битвы, то можете проскользнуть в ворота, оставив стражу лежать на дороге.",
                     },
                 },
 
@@ -6141,6 +6291,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 5,
                             },
                         },
+
+                        Aftertext = "Когда вы добьете своих врагов, можете забрать у них бронзовый свисток и медный ключик, которые им больше не понадобятся, и перейти реку.",
                     },
                 },
 
@@ -6366,6 +6518,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 Endurance = 10,
                             },
                         },
+
+                        Aftertext = "Его несложно убить, однако пока вы сражались, второй поваренок успел куда-то спрятаться. У вас нет времени его искать, и остается только надеяться, что он вылезет, когда вы будете уже далеко. Теперь можете или заглянуть в сундук или побыстрее уйти из кухни.",
                     },
                 },
 
