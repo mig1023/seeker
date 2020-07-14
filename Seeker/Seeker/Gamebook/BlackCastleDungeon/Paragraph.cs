@@ -10,7 +10,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public List<Actions> Actions { get; set; }
 
-        public Interfaces.IModification Modification { get; set; }
+        public List<Modification> Modification { get; set; }
 
         public string OpenOption { get; set; }
     }

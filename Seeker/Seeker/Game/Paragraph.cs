@@ -10,7 +10,7 @@ namespace Seeker.Game
 
         public List<Interfaces.IActions> Actions { get; set; }
 
-        public Interfaces.IModification Modification { get; set; }
+        public List<Interfaces.IModification> Modification { get; set; }
 
         public string OpenOption { get; set; }
     }

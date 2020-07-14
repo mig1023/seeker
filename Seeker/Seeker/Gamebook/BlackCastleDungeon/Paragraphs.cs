@@ -23,7 +23,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 paragraph.Actions = new List<Interfaces.IActions>(source.Actions);
 
             if (source.Modification != null)
-                paragraph.Modification = source.Modification;
+                paragraph.Modification = new List<Interfaces.IModification>(source.Modification);
 
             source.OpenOption = paragraph.OpenOption;
 
@@ -108,10 +108,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Luck",
-                    Value = -1,
+                    new Modification
+                    {
+                        Name = "Luck",
+                        Value = -1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -121,10 +124,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [7] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -244,10 +250,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -1,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -294,10 +303,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [21] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = 2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -346,10 +358,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [26] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = 6,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 6,
+                    },
                 },
 
                 Options = new List<Option>
@@ -397,10 +412,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [32] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Mastery",
-                    Value = -1,
+                    new Modification
+                    {
+                        Name = "Mastery",
+                        Value = -1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -484,10 +502,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -575,10 +596,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [42] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -894,10 +918,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [77] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -1,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -945,10 +972,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [83] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1012,10 +1042,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [91] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = 4,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 4,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1226,10 +1259,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [111] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1281,10 +1317,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [115] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1412,10 +1451,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [126] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Mastery",
-                    Value = 1,
+                    new Modification
+                    {
+                        Name = "Mastery",
+                        Value = 1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1461,10 +1503,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [132] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = 6,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 6,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1539,10 +1584,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [141] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1681,13 +1729,19 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [159] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
+                    new Modification
+                    {
+                        Name = "Mastery",
+                        Value = -1,
+                    },
                 },
-
-                // -1 Mastery
 
                 Options = new List<Option>
                 {
@@ -1706,10 +1760,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [161] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1804,10 +1861,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [173] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = 2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1831,10 +1891,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [176] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = 5,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 5,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1852,10 +1915,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [178] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = 6,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 6,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1960,10 +2026,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [187] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Luck",
-                    Value = 1,
+                    new Modification
+                    {
+                        Name = "Luck",
+                        Value = 1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1973,10 +2042,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [188] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -1,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -2079,10 +2151,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [198] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -2138,13 +2213,19 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [205] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -3,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -3,
+                    },
+                    new Modification
+                    {
+                        Name = "Mastery",
+                        Value = -1,
+                    },
                 },
-
-                // -1 Mastery
 
                 Options = new List<Option>
                 {
@@ -2174,10 +2255,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [209] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = 2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -2411,10 +2495,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [231] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -1,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -2446,10 +2533,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [235] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -2483,10 +2573,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [239] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = 5,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 5,
+                    },
                 },
 
                 Options = new List<Option>
@@ -2553,7 +2646,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Actions
                     {
                         ActionName = "Fight",
-                        ButtonName = "Сражаться",
+                        ButtonName = "Сражаться с пауком",
 
                         Enemies = new List<Character>
                         {
@@ -2748,10 +2841,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [262] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Luck",
-                    Value = -1,
+                    new Modification
+                    {
+                        Name = "Luck",
+                        Value = -1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -2820,10 +2916,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [268] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = 4,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 4,
+                    },
                 },
 
                 Options = new List<Option>
@@ -2905,10 +3004,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [278] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -4,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -4,
+                    },
                 },
 
                 Options = new List<Option>
@@ -3103,10 +3205,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [298] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -3251,10 +3356,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -3,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -3,
+                    },
                 },
 
                 Options = new List<Option>
@@ -3272,10 +3380,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [311] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -1,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -3285,10 +3396,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [312] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -4,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -4,
+                    },
                 },
 
                 Options = new List<Option>
@@ -3312,10 +3426,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [315] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -3344,10 +3461,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -4,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -4,
+                    },
                 },
 
                 Options = new List<Option>
@@ -3597,10 +3717,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [342] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -3,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -3,
+                    },
                 },
 
                 Options = new List<Option>
@@ -3750,10 +3873,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [358] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = 2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -4020,10 +4146,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [389] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -3,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -3,
+                    },
                 },
 
                 Options = new List<Option>
@@ -4136,10 +4265,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [402] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -1,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -4158,10 +4290,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [404] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -3,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -3,
+                    },
                 },
 
                 Options = new List<Option>
@@ -4449,10 +4584,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [437] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -4486,10 +4624,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [441] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -3,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -3,
+                    },
                 },
 
                 Options = new List<Option>
@@ -4499,10 +4640,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [442] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -4548,10 +4692,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [448] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = 5,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 5,
+                    },
                 },
 
                 Options = new List<Option>
@@ -4715,10 +4862,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [469] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -4767,13 +4917,19 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [474] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
+                    new Modification
+                    {
+                        Name = "Mastery",
+                        Value = -1,
+                    },
                 },
-
-                // -1 Mastery
 
                 Options = new List<Option>
                 {
@@ -4799,10 +4955,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [477] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Luck",
-                    Value = -1,
+                    new Modification
+                    {
+                        Name = "Luck",
+                        Value = -1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -4838,10 +4997,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [481] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -5133,10 +5295,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [512] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -5165,10 +5330,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [515] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -8,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -8,
+                    },
                 },
 
                 Options = new List<Option>
@@ -5239,10 +5407,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [521] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -5260,10 +5431,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [523] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -6,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -6,
+                    },
                 },
 
                 Options = new List<Option>
@@ -5905,10 +6079,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [577] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Mastery",
-                    Value = -1,
+                    new Modification
+                    {
+                        Name = "Mastery",
+                        Value = -1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -5918,10 +6095,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [578] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -2,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -2,
+                    },
                 },
 
                 Options = new List<Option>
@@ -6027,10 +6207,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [588] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -6,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -6,
+                    },
                 },
 
                 Options = new List<Option>
@@ -6068,10 +6251,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [593] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -3,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -3,
+                    },
                 },
 
                 Options = new List<Option>
@@ -6134,10 +6320,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [601] = new Paragraph
             {
-                Modification = new Modification
+                Modification = new List<Modification>
                 {
-                    Name = "Endurance",
-                    Value = -6,
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = -6,
+                    },
                 },
 
                 Options = new List<Option>

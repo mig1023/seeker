@@ -65,8 +65,9 @@ namespace Seeker
             if (!String.IsNullOrEmpty(paragraph.OpenOption))
                 Game.Data.OpenedOption.Add(paragraph.OpenOption);
 
-            if (paragraph.Modification != null)
-                Game.Data.CurrentParagraph.Modification.Do();
+            if ((paragraph.Modification != null) && (paragraph.Modification.Count > 0))
+                foreach(Interfaces.IModification modification in paragraph.Modification)
+                    modification.Do();
 
             if ((paragraph.Actions != null) && (paragraph.Actions.Count > 0))
             {
