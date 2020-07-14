@@ -58,12 +58,26 @@ namespace Seeker.Game
 
             foreach (string enemyLine in enemiesLines)
             {
-                Label enemy = new Label();
+                string[] enemyParam = enemyLine.Split('\n');
 
-                enemy.Text = enemyLine.Replace("\n", System.Environment.NewLine);
-                enemy.HorizontalTextAlignment = TextAlignment.Center;
+                Label enemy = new Label()
+                {
+                    FontSize = 18,
+                    FontAttributes = FontAttributes.Bold,
+                    Text = enemyParam[0],
+                    HorizontalTextAlignment = TextAlignment.Center
+                };
 
                 enemies.Add(enemy);
+
+                Label param = new Label()
+                {
+                    Text = enemyParam[1],
+                    HorizontalTextAlignment = TextAlignment.Center
+                };
+
+                enemies.Add(param);
+
             }
 
             return enemies;
