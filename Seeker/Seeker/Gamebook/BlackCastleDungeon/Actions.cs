@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public int RoundsToWin { get; set; }
+        public int WoundsToWin { get; set; }
 
         public List<string> Do(string action = "")
         {
@@ -63,6 +64,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             List<string> fight = new List<string>();
 
             int round = 1;
+            int enemyWounds = 0;
 
             while (true)
             {
@@ -89,13 +91,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         if (enemy.Endurance <= 0)
                             enemy.Endurance = 0;
 
+                        enemyWounds += 1;
+
                         bool enemyLost = true;
 
                         foreach (Character e in Enemies)
                             if (e.Endurance > 0)
                                 enemyLost = false;
 
-                        if (enemyLost)
+                        if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("GOOD|Вы ПОБЕДИЛИ :)"));
@@ -120,7 +124,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     else
                         fight.Add(String.Format("BOLD|Ничья в раунде"));
 
-                    if (RoundsToWin <= round)
+                    if ((RoundsToWin > 0) && (RoundsToWin <= round))
                     {
                         fight.Add(String.Empty);
                         fight.Add(String.Format("BAD|Отведённые на победу раунды истекли. Вы ПРОИГРАЛИ :(", RoundsToWin));
