@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
+        public int RoundsToWin { get; set; }
 
         public List<string> Do(string action = "")
         {
@@ -118,6 +119,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     }
                     else
                         fight.Add(String.Format("BOLD|Ничья в раунде"));
+
+                    if (RoundsToWin <= round)
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add(String.Format("BAD|Отведённые на победу раунды истекли. Вы ПРОИГРАЛИ :(", RoundsToWin));
+                        return fight;
+                    }
 
                     fight.Add(String.Empty);
                 }
