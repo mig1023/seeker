@@ -1258,6 +1258,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [108] = new Paragraph
             {
+                OpenOption = "GoldAmulet",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 407, Text = "Далее" },
@@ -4225,6 +4227,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 605, Text = "Есть золотой амулет", OnlyIf = "GoldAmulet" },
                     new Option { Destination = 577, Text = "Выхватить меч" },
                     new Option { Destination = 293, Text = "Стоять и смотреть" },
                 }
