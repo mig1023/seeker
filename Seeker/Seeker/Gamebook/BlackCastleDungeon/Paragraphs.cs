@@ -3107,7 +3107,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 387, Text = "Зеркальце" },
                     new Option { Destination = 69, Text = "Бронзовый свисток" },
-                    new Option { Destination = 233, Text = "Золотое кольцо" },
+                    new Option { Destination = 233, Text = "Золотое кольцо", OnlyIf = "GoldRing" },
                     new Option { Destination = 567, Text = "Сражаться" },
                 }
             },
@@ -3917,7 +3917,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 233, Text = "Золотое кольцо" },
+                    new Option { Destination = 233, Text = "Золотое кольцо", OnlyIf = "GoldRing" },
                     new Option { Destination = 69, Text = "Бронзовый свисток" },
                     new Option { Destination = 168, Text = "Четки" },
                     new Option { Destination = 543, Text = "Драться" },
@@ -3943,6 +3943,17 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         },
 
                         Aftertext = "Если вы победили Тролля, можете взять из его кармана Золотое кольцо. Добавьте себе 1 УДАЧУ. Теперь уходите.",
+                    },
+                },
+
+                OpenOption = "GoldRing",
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Luck",
+                        Value = 1,
                     },
                 },
 
@@ -4227,9 +4238,10 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 605, Text = "Есть золотой амулет", OnlyIf = "GoldAmulet" },
                     new Option { Destination = 577, Text = "Выхватить меч" },
                     new Option { Destination = 293, Text = "Стоять и смотреть" },
+                    new Option { Destination = 605, Text = "Есть золотое кольцо", OnlyIf = "GoldRing" },
+                    new Option { Destination = 605, Text = "Есть золотой амулет", OnlyIf = "GoldAmulet" },
                 }
             },
             [389] = new Paragraph
