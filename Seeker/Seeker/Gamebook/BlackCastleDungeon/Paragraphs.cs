@@ -145,6 +145,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [8] = new Paragraph
             {
+                OpenOption = "BronzeWhistle",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 118, Text = "К мосту" },
@@ -477,6 +479,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [34] = new Paragraph
             {
+                OpenOption = "Mirror",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 3, Text = "Далее" },
@@ -580,6 +584,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Aftertext = "Если вам удалось убить Гоблинов и остаться в живых, то можете забрать у них бронзовый свисток и медный ключик, которые им больше не понадобятся, и перейти реку.",
                     },
                 },
+
+                OpenOption = "BronzeWhistle",
 
                 Options = new List<Option>
                 {
@@ -3105,8 +3111,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 387, Text = "Зеркальце" },
-                    new Option { Destination = 69, Text = "Бронзовый свисток" },
+                    new Option { Destination = 387, Text = "Зеркальце", OnlyIf = "Mirror" },
+                    new Option { Destination = 69, Text = "Бронзовый свисток", OnlyIf = "BronzeWhistle" },
                     new Option { Destination = 233, Text = "Золотое кольцо", OnlyIf = "GoldRing" },
                     new Option { Destination = 567, Text = "Сражаться" },
                 }
@@ -3179,6 +3185,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Aftertext = "Если победитель вы, то можете забрать у ваших противников бронзовый свисток и медный ключик, которые им больше не понадобятся, и перейти реку.",
                     },
                 },
+
+                OpenOption = "BronzeWhistle",
 
                 Options = new List<Option>
                 {
@@ -3918,7 +3926,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 233, Text = "Золотое кольцо", OnlyIf = "GoldRing" },
-                    new Option { Destination = 69, Text = "Бронзовый свисток" },
+                    new Option { Destination = 69, Text = "Бронзовый свисток", OnlyIf = "BronzeWhistle" },
                     new Option { Destination = 168, Text = "Четки" },
                     new Option { Destination = 543, Text = "Драться" },
                 }
@@ -4294,8 +4302,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 294, Text = "Бронзовый свисток" },
-                    new Option { Destination = 596, Text = "Зеркальце" },
+                    new Option { Destination = 294, Text = "Бронзовый свисток", OnlyIf = "BronzeWhistle" },
+                    new Option { Destination = 596, Text = "Зеркальце", OnlyIf = "Mirror" },
                     new Option { Destination = 171, Text = "Флакончик духов" },
                     new Option { Destination = 93, Text = "Сражаться" },
                 }
@@ -5131,6 +5139,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [484] = new Paragraph
             {
+                OpenOption = "BronzeWhistle",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 308, Text = "Далее" },
@@ -5518,6 +5528,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [520] = new Paragraph
             {
+                OpenOption = "Mirror",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 3, Text = "Далее" },
@@ -5912,7 +5924,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 92, Text = "Зеркальце" },
+                    new Option { Destination = 92, Text = "Зеркальце", OnlyIf = "Mirror" },
                     new Option { Destination = 296, Text = "Гребень" },
                     new Option { Destination = 490, Text = "Оберег" },
                     new Option { Destination = 255, Text = "Придумать что-то другое" },
@@ -6311,6 +6323,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Aftertext = "Когда вы добьете своих врагов, можете забрать у них бронзовый свисток и медный ключик, которые им больше не понадобятся, и перейти реку.",
                     },
                 },
+
+                OpenOption = "BronzeWhistle",
 
                 Options = new List<Option>
                 {
