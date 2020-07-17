@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (source.Modification != null)
                 paragraph.Modification = new List<Interfaces.IModification>(source.Modification);
 
-            source.OpenOption = paragraph.OpenOption;
+            paragraph.OpenOption = source.OpenOption;
 
             return paragraph;
         }
