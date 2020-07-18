@@ -1688,7 +1688,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 460, Text = "Показать серебряный свисток" },
+                    new Option { Destination = 460, Text = "Показать серебряный свисток", OnlyIf = "SilverWhistle" },
                     new Option { Destination = 348, Text = "Возвратиться и пойти налево" },
                     new Option { Destination = 537, Text = "Возвратиться и пойти обратно" },
                 }
@@ -2404,7 +2404,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 354, Text = "Белую стрелу" },
                     new Option { Destination = 28, Text = "Бриллиант" },
-                    new Option { Destination = 142, Text = "Серебряный свисток" },
+                    new Option { Destination = 142, Text = "Серебряный свисток", OnlyIf = "SilverWhistle" },
                     new Option { Destination = 106, Text = "Уйти" },
                 }
             },
@@ -2626,6 +2626,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [239] = new Paragraph
             {
+                OpenOption = "SilverWhistle",
+
                 Modification = new List<Modification>
                 {
                     new Modification
@@ -6079,6 +6081,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Aftertext = "Победить его не так уж сложно. После этого вы можете взять у него из кармана серебряный свисток и отправиться по дороге дальше.",
                     },
                 },
+
+                OpenOption = "SilverWhistle",
 
                 Options = new List<Option>
                 {
