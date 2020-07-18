@@ -479,7 +479,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [34] = new Paragraph
             {
-                OpenOption = "Mirror",
+                OpenOption = "Mirror, GoldenWhistle",
 
                 Options = new List<Option>
                 {
@@ -2108,6 +2108,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [189] = new Paragraph
             {
+                OpenOption = "GoldenWhistle",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 19, Text = "Далее" },
@@ -4608,7 +4610,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 583, Text = "Золотой свисток" },
+                    new Option { Destination = 583, Text = "Золотой свисток", OnlyIf = "GoldenWhistle" },
                     new Option { Destination = 597, Text = "Выломать ее" },
                     new Option { Destination = 398, Text = "Выйти в правую дверь" },
                     new Option { Destination = 206, Text = "Выйти в левую дверь" },
@@ -5532,7 +5534,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [520] = new Paragraph
             {
-                OpenOption = "Mirror",
+                OpenOption = "Mirror, GoldenWhistle",
 
                 Options = new List<Option>
                 {
