@@ -2514,7 +2514,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 63, Text = "Медный ключик" },
+                    new Option { Destination = 63, Text = "Медный ключик", OnlyIf = "CopperKey" },
                     new Option { Destination = 150, Text = "Кусок металла" },
                     new Option { Destination = 473, Text = "Фигурный ключ" },
                     new Option { Destination = 416, Text = "Покинуть домик" },
@@ -3093,6 +3093,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [281] = new Paragraph
             {
+                OpenOption = "Beads",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 547, Text = "Правую" },
@@ -3186,7 +3188,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "BronzeWhistle",
+                OpenOption = "BronzeWhistle, CopperKey",
 
                 Options = new List<Option>
                 {
@@ -3927,7 +3929,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 233, Text = "Золотое кольцо", OnlyIf = "GoldRing" },
                     new Option { Destination = 69, Text = "Бронзовый свисток", OnlyIf = "BronzeWhistle" },
-                    new Option { Destination = 168, Text = "Четки" },
+                    new Option { Destination = 168, Text = "Четки", OnlyIf = "Beads" },
                     new Option { Destination = 543, Text = "Драться" },
                 }
             },
@@ -4293,7 +4295,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 291, Text = "Есть медный ключик" },
+                    new Option { Destination = 291, Text = "Есть медный ключик", OnlyIf = "CopperKey" },
                     new Option { Destination = 337, Text = "Попробуете открыть дверь за вами" },
                     new Option { Destination = 595, Text = "Попробуете открыть дверь слева" },
                 }
@@ -6324,7 +6326,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "BronzeWhistle",
+                OpenOption = "BronzeWhistle, CopperKey",
 
                 Options = new List<Option>
                 {

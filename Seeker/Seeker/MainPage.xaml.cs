@@ -63,7 +63,12 @@ namespace Seeker
             this.Text.Text = (Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty);
 
             if (!String.IsNullOrEmpty(paragraph.OpenOption))
-                Game.Data.OpenedOption.Add(paragraph.OpenOption);
+            {
+                string[] allOption = paragraph.OpenOption.Split(',');
+
+                foreach (string option in allOption)
+                    Game.Data.OpenedOption.Add(option.Trim());
+            }
 
             if ((paragraph.Modification != null) && (paragraph.Modification.Count > 0))
                 foreach(Interfaces.IModification modification in paragraph.Modification)
