@@ -870,6 +870,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [66] = new Paragraph
             {
+                OpenOption = "StorkFeather",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 46, Text = "Далее" },
@@ -3764,6 +3766,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [335] = new Paragraph
             {
+                OpenOption = "StorkFeather",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 46, Text = "Далее" },
@@ -4863,6 +4867,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [453] = new Paragraph
             {
+                OpenOption = "StorkFeather",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 46, Text = "Далее" },
@@ -5493,7 +5499,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Option { Destination = 134, Text = "Коготь дракона" },
                     new Option { Destination = 42, Text = "Бриллиант" },
                     new Option { Destination = 161, Text = "Гребень", OnlyIf = "Comb" },
-                    new Option { Destination = 488, Text = "Перо аиста" },
+                    new Option { Destination = 488, Text = "Перо аиста", OnlyIf = "StorkFeather" },
                     new Option { Destination = 316, Text = "Драться" },
                 }
             },
