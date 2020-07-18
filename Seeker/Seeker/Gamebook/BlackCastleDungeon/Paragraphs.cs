@@ -3255,6 +3255,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [296] = new Paragraph
             {
+                OpenOption = "PerfumeBottle",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 255, Text = "Поговорить с женами мага" },
@@ -4306,7 +4308,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 294, Text = "Бронзовый свисток", OnlyIf = "BronzeWhistle" },
                     new Option { Destination = 596, Text = "Зеркальце", OnlyIf = "Mirror" },
-                    new Option { Destination = 171, Text = "Флакончик духов" },
+                    new Option { Destination = 171, Text = "Флакончик духов", OnlyIf = "PerfumeBottle" },
                     new Option { Destination = 93, Text = "Сражаться" },
                 }
             },
