@@ -1805,6 +1805,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 371, Text = "Напасть на него" },
                     new Option { Destination = 276, Text = "Пойдете дальше" },
+                    new Option { Destination = 135, Text = "Трое из Авенло", OnlyIf = "ThreeFromAvenlo" },
                 }
             },
             [161] = new Paragraph
@@ -3879,6 +3880,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [349] = new Paragraph
             {
+                OpenOption = "Comb",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 615, Text = "Пойдете за ней" },
@@ -4449,6 +4452,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [408] = new Paragraph
             {
+                OpenOption = "Comb",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 131, Text = "Выпьете" },
@@ -5111,6 +5116,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Option { Destination = 345, Text = "О самом волшебнике" },
                     new Option { Destination = 208, Text = "О Принцессе" },
                     new Option { Destination = 591, Text = "Уйти из библиотеки" },
+                    new Option { Destination = 455, Text = "Трое из Авенло", OnlyIf = "ThreeFromAvenlo" },
                 }
             },
             [481] = new Paragraph
@@ -5486,7 +5492,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 134, Text = "Коготь дракона" },
                     new Option { Destination = 42, Text = "Бриллиант" },
-                    new Option { Destination = 161, Text = "Гребень" },
+                    new Option { Destination = 161, Text = "Гребень", OnlyIf = "Comb" },
                     new Option { Destination = 488, Text = "Перо аиста" },
                     new Option { Destination = 316, Text = "Драться" },
                 }
@@ -5536,7 +5542,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [520] = new Paragraph
             {
-                OpenOption = "Mirror, GoldenWhistle",
+                OpenOption = "Mirror, GoldenWhistle, ThreeFromAvenlo",
 
                 Options = new List<Option>
                 {
@@ -5933,7 +5939,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 92, Text = "Зеркальце", OnlyIf = "Mirror" },
-                    new Option { Destination = 296, Text = "Гребень" },
+                    new Option { Destination = 296, Text = "Гребень", OnlyIf = "Comb" },
                     new Option { Destination = 490, Text = "Оберег" },
                     new Option { Destination = 255, Text = "Придумать что-то другое" },
                 }
