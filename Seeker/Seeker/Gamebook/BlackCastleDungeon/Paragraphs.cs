@@ -810,7 +810,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 267, Text = "Достаньте перо павлина" },
+                    new Option { Destination = 267, Text = "Достаньте перо павлина", OnlyIf = "PeacockFeather" },
                     new Option { Destination = 147, Text = "Кто сидит за следующей решеткой" },
                 }
             },
@@ -2175,7 +2175,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 27, Text = "Перо павлина" },
+                    new Option { Destination = 27, Text = "Перо павлина", OnlyIf = "PeacockFeather" },
                     new Option { Destination = 270, Text = "Серебряный браслет" },
                     new Option { Destination = 533, Text = "Белую стрелу" },
                     new Option { Destination = 137, Text = "Дать денег" },
@@ -3062,7 +3062,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 554, Text = "Подсвечник" },
-                    new Option { Destination = 78, Text = "Перо павлина" },
+                    new Option { Destination = 78, Text = "Перо павлина", OnlyIf = "PeacockFeather" },
                     new Option { Destination = 386, Text = "Серебряный сосуд" },
                     new Option { Destination = 429, Text = "Золотое ожерелье", OnlyIf = "GoldNecklace" },
                     new Option { Destination = 572, Text = "Если нет ни одного из этих предметов" },
@@ -4511,6 +4511,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [414] = new Paragraph
             {
+                OpenOption = "PeacockFeather",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 338, Text = "Далее" },
@@ -4706,6 +4708,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [436] = new Paragraph
             {
+                OpenOption = "PeacockFeather",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 338, Text = "Направо" },
