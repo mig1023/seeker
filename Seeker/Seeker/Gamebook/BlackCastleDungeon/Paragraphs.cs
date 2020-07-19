@@ -3069,6 +3069,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Option { Destination = 78, Text = "Перо павлина", OnlyIf = "PeacockFeather" },
                     new Option { Destination = 386, Text = "Серебряный сосуд", OnlyIf = "SilverVessel" },
                     new Option { Destination = 429, Text = "Золотое ожерелье", OnlyIf = "GoldNecklace" },
+                    new Option { Destination = 287, Text = "Зажечь свечу", OnlyIf = "CandleAndFlint" },
                     new Option { Destination = 572, Text = "Если нет ни одного из этих предметов" },
                 }
             },
@@ -6264,7 +6265,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [573] = new Paragraph
             {
-                OpenOption = "WhiteArrow",
+                OpenOption = "WhiteArrow, CandleAndFlint",
 
                 Options = new List<Option>
                 {
