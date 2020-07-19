@@ -3377,7 +3377,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 170, Text = "Есть Оберег" },
+                    new Option { Destination = 170, Text = "Есть Оберег", OnlyIf = "Amulet" },
                     new Option { Destination = 606, Text = "Есть серебряный сосуд", OnlyIf = "SilverVessel" },
                     new Option { Destination = 594, Text = "В правую дверь" },
                     new Option { Destination = 599, Text = "В левую дверь" },
@@ -5659,6 +5659,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
+                OpenOption = "Amulet",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 240, Text = "Далее" },
@@ -5771,7 +5773,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 363, Text = "Есть Оберег" },
+                    new Option { Destination = 363, Text = "Есть Оберег", OnlyIf = "Amulet" },
                     new Option { Destination = 479, Text = "Есть серебряный сосуд", OnlyIf = "SilverVessel" },
                     new Option { Destination = 283, Text = "Подумать" },
                     new Option { Destination = 567, Text = "Атаковать" },
@@ -5956,7 +5958,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 92, Text = "Зеркальце", OnlyIf = "Mirror" },
                     new Option { Destination = 296, Text = "Гребень", OnlyIf = "Comb" },
-                    new Option { Destination = 490, Text = "Оберег" },
+                    new Option { Destination = 490, Text = "Оберег", OnlyIf = "Amulet" },
                     new Option { Destination = 255, Text = "Придумать что-то другое" },
                 }
             },
