@@ -327,6 +327,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [22] = new Paragraph
             {
+                OpenOption = "WhiteArrow",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 427, Text = "Через дверь в той же стене, где вход" },
@@ -2177,7 +2179,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 27, Text = "Перо павлина", OnlyIf = "PeacockFeather" },
                     new Option { Destination = 270, Text = "Серебряный браслет" },
-                    new Option { Destination = 533, Text = "Белую стрелу" },
+                    new Option { Destination = 533, Text = "Белую стрелу", OnlyIf = "WhiteArrow" },
                     new Option { Destination = 137, Text = "Дать денег" },
                     new Option { Destination = 522, Text = "Срразиться" },
                 }
@@ -2405,7 +2407,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 354, Text = "Белую стрелу" },
+                    new Option { Destination = 354, Text = "Белую стрелу", OnlyIf = "WhiteArrow" },
                     new Option { Destination = 28, Text = "Бриллиант" },
                     new Option { Destination = 142, Text = "Серебряный свисток", OnlyIf = "SilverWhistle" },
                     new Option { Destination = 106, Text = "Уйти" },
@@ -5755,7 +5757,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 71, Text = "Есть белая стрела" },
+                    new Option { Destination = 71, Text = "Есть белая стрела", OnlyIf = "WhiteArrow" },
                     new Option { Destination = 362, Text = "Есть бляха с золотым орлом" },
                     new Option { Destination = 478, Text = "Войти в правую дверь" },
                     new Option { Destination = 603, Text = "Войти левую дверь" },
@@ -6260,6 +6262,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [573] = new Paragraph
             {
+                OpenOption = "WhiteArrow",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 561, Text = "Попробовать переплыть" },
