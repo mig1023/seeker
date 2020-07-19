@@ -1027,6 +1027,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [84] = new Paragraph
             {
+                OpenOption = "BadgeWithAnEagle",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 547, Text = "Правую" },
@@ -5758,7 +5760,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 71, Text = "Есть белая стрела", OnlyIf = "WhiteArrow" },
-                    new Option { Destination = 362, Text = "Есть бляха с золотым орлом" },
+                    new Option { Destination = 362, Text = "Есть бляха с золотым орлом", OnlyIf = "BadgeWithAnEagle" },
                     new Option { Destination = 478, Text = "Войти в правую дверь" },
                     new Option { Destination = 603, Text = "Войти левую дверь" },
                     new Option { Destination = 282, Text = "Войти в среднюю дверь" },
