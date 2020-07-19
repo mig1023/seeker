@@ -3063,7 +3063,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 554, Text = "Подсвечник" },
                     new Option { Destination = 78, Text = "Перо павлина", OnlyIf = "PeacockFeather" },
-                    new Option { Destination = 386, Text = "Серебряный сосуд" },
+                    new Option { Destination = 386, Text = "Серебряный сосуд", OnlyIf = "SilverVessel" },
                     new Option { Destination = 429, Text = "Золотое ожерелье", OnlyIf = "GoldNecklace" },
                     new Option { Destination = 572, Text = "Если нет ни одного из этих предметов" },
                 }
@@ -3378,7 +3378,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 170, Text = "Есть Оберег" },
-                    new Option { Destination = 606, Text = "Есть серебряный сосуд" },
+                    new Option { Destination = 606, Text = "Есть серебряный сосуд", OnlyIf = "SilverVessel" },
                     new Option { Destination = 594, Text = "В правую дверь" },
                     new Option { Destination = 599, Text = "В левую дверь" },
                 }
@@ -5770,7 +5770,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 363, Text = "Есть Оберег" },
-                    new Option { Destination = 479, Text = "Есть серебряный сосуд" },
+                    new Option { Destination = 479, Text = "Есть серебряный сосуд", OnlyIf = "SilverVessel" },
                     new Option { Destination = 283, Text = "Подумать" },
                     new Option { Destination = 567, Text = "Атаковать" },
                 }
@@ -5903,6 +5903,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [545] = new Paragraph
             {
+                OpenOption = "SilverVessel",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 253, Text = "Взять стеклянный сосуд" },
