@@ -1956,6 +1956,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
+                OpenOption = "Banana",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 106, Text = "Уходить" },
@@ -4857,7 +4859,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "CurlyKey",
+                OpenOption = "CurlyKey, Banana",
 
                 Options = new List<Option>
                 {
@@ -5642,7 +5644,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 349, Text = "Есть банан" },
+                    new Option { Destination = 349, Text = "Есть банан", OnlyIf = "Banana" },
                     new Option { Destination = 215, Text = "Драться с ней" },
                 }
             },
