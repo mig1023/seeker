@@ -3052,6 +3052,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 279, Text = "Подойти к зеркалу" },
                     new Option { Destination = 385, Text = "Подойти к столикам" },
+                    new Option { Destination = 475, Text = "Воспользоваться золотым апельсином", OnlyIf = "GoldenOrange" },
                 }
             },
             [276] = new Paragraph
@@ -3782,6 +3783,17 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [336] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Luck",
+                        Value = 1,
+                    },
+                },
+
+                OpenOption = "GoldenOrange",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 24, Text = "Далее" },
