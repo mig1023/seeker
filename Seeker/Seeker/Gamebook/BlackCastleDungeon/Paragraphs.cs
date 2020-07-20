@@ -2195,6 +2195,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [196] = new Paragraph
             {
+                OpenOption = "RingWithRuby",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 560, Text = "Шкаф" },
@@ -2524,7 +2526,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 63, Text = "Медный ключик", OnlyIf = "CopperKey" },
-                    new Option { Destination = 150, Text = "Кусок металла" },
+                    new Option { Destination = 150, Text = "Кусок металла", },
                     new Option { Destination = 473, Text = "Фигурный ключ", OnlyIf = "CurlyKey" },
                     new Option { Destination = 416, Text = "Покинуть домик" },
                 }
@@ -3053,6 +3055,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Option { Destination = 279, Text = "Подойти к зеркалу" },
                     new Option { Destination = 385, Text = "Подойти к столикам" },
                     new Option { Destination = 475, Text = "Воспользоваться золотым апельсином", OnlyIf = "GoldenOrange" },
+                    new Option { Destination = 324, Text = "Воспользоваться кольцом с рубином", OnlyIf = "RingWithRuby" },
                 }
             },
             [276] = new Paragraph
