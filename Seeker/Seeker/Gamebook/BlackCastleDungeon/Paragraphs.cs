@@ -2525,7 +2525,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 63, Text = "Медный ключик", OnlyIf = "CopperKey" },
                     new Option { Destination = 150, Text = "Кусок металла" },
-                    new Option { Destination = 473, Text = "Фигурный ключ" },
+                    new Option { Destination = 473, Text = "Фигурный ключ", OnlyIf = "CurlyKey" },
                     new Option { Destination = 416, Text = "Покинуть домик" },
                 }
             },
@@ -4851,6 +4851,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
+                OpenOption = "CurlyKey",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 235, Text = "На юг" },
@@ -5862,7 +5864,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 284, Text = "Есть фигурный ключ" },
+                    new Option { Destination = 284, Text = "Есть фигурный ключ", OnlyIf = "CurlyKey" },
                     new Option { Destination = 474, Text = "Заняться большим сундуком" },
                     new Option { Destination = 380, Text = "Заняться маленьким сундуком" },
                     new Option { Destination = 39, Text = "Вернуться в залу" },
