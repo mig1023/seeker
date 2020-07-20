@@ -2115,7 +2115,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [189] = new Paragraph
             {
-                OpenOption = "GoldenWhistle",
+                OpenOption = "GoldenWhistle, Diamond",
 
                 Options = new List<Option>
                 {
@@ -2410,7 +2410,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 354, Text = "Белую стрелу", OnlyIf = "WhiteArrow" },
-                    new Option { Destination = 28, Text = "Бриллиант" },
+                    new Option { Destination = 28, Text = "Бриллиант", OnlyIf = "Diamond" },
                     new Option { Destination = 142, Text = "Серебряный свисток", OnlyIf = "SilverWhistle" },
                     new Option { Destination = 106, Text = "Уйти" },
                 }
@@ -5510,7 +5510,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 134, Text = "Коготь дракона" },
-                    new Option { Destination = 42, Text = "Бриллиант" },
+                    new Option { Destination = 42, Text = "Бриллиант", OnlyIf = "Diamond" },
                     new Option { Destination = 161, Text = "Гребень", OnlyIf = "Comb" },
                     new Option { Destination = 488, Text = "Перо аиста", OnlyIf = "StorkFeather" },
                     new Option { Destination = 316, Text = "Драться" },
