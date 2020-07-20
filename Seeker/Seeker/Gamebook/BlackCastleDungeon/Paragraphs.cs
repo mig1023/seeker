@@ -2878,6 +2878,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [258] = new Paragraph
             {
+                OpenOption = "RingWithEmerald",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 560, Text = "Шкаф" },
@@ -3056,6 +3058,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Option { Destination = 385, Text = "Подойти к столикам" },
                     new Option { Destination = 475, Text = "Воспользоваться золотым апельсином", OnlyIf = "GoldenOrange" },
                     new Option { Destination = 324, Text = "Воспользоваться кольцом с рубином", OnlyIf = "RingWithRuby" },
+                    new Option { Destination = 444, Text = "Воспользоваться кольцом с изумрудом", OnlyIf = "RingWithEmerald" },
                 }
             },
             [276] = new Paragraph
