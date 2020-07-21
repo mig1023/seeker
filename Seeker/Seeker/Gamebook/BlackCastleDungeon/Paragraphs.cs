@@ -2182,7 +2182,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 27, Text = "Перо павлина", OnlyIf = "PeacockFeather" },
-                    new Option { Destination = 270, Text = "Серебряный браслет" },
+                    new Option { Destination = 270, Text = "Серебряный браслет", OnlyIf = "SilverBracelet" },
                     new Option { Destination = 533, Text = "Белую стрелу", OnlyIf = "WhiteArrow" },
                     new Option { Destination = 137, Text = "Дать денег" },
                     new Option { Destination = 522, Text = "Срразиться" },
@@ -4859,7 +4859,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "CurlyKey, Banana, PieceOfMetal",
+                OpenOption = "CurlyKey, Banana, PieceOfMetal, SilverBracelet",
 
                 Options = new List<Option>
                 {
