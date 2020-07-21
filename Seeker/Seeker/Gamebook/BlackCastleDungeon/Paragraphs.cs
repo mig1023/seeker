@@ -881,6 +881,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [67] = new Paragraph
             {
+                OpenOption = "DragonClaw",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 98, Text = "Далее" },
@@ -1708,9 +1710,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [149] = new Paragraph
             {
+                OpenOption = "FirstClue",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 98, Text = "Далее" },
+                    new Option { Destination = 67, Text = "Это 'Дракон'", OnlyIf = "FirstClue" },
                 }
             },
             [150] = new Paragraph
@@ -5531,7 +5536,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 134, Text = "Коготь дракона" },
+                    new Option { Destination = 134, Text = "Коготь дракона", OnlyIf = "DragonClaw" },
                     new Option { Destination = 42, Text = "Бриллиант", OnlyIf = "Diamond" },
                     new Option { Destination = 161, Text = "Гребень", OnlyIf = "Comb" },
                     new Option { Destination = 488, Text = "Перо аиста", OnlyIf = "StorkFeather" },
