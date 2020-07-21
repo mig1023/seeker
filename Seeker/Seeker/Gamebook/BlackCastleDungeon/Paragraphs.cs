@@ -881,11 +881,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [67] = new Paragraph
             {
-                OpenOption = "DragonClaw",
+                OpenOption = "SecondClue, DragonClaw",
 
                 Options = new List<Option>
                 {
                     new Option { Destination = 98, Text = "Далее" },
+                    new Option { Destination = 95, Text = "Это 'Пароль'", OnlyIf = "SecondClue" },
                 }
             },
             [68] = new Paragraph
@@ -1144,9 +1145,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [95] = new Paragraph
             {
+                OpenOption = "ThirdClue, Password",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 98, Text = "Уйти" },
+                    new Option { Destination = 163, Text = "Это 'Совесть'", OnlyIf = "ThirdClue" },
                 }
             },
             [96] = new Paragraph
