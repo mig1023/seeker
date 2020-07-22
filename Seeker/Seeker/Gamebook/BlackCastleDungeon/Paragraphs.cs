@@ -3584,7 +3584,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             },
                         },
 
-                         Aftertext = "Удастся ли вам дважды ранить Дракона?",
+                        WoundsToWin = 2,
+                        Aftertext = "Удастся ли вам дважды ранить Дракона?",
                     },
                 },
 
@@ -3842,6 +3843,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [340] = new Paragraph
             {
+                // + 3 endurann
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 509, Text = "Далее" },
