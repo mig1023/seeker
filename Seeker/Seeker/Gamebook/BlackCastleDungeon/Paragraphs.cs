@@ -2521,7 +2521,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 144, Text = "Есть шкура оленя" },
+                    new Option { Destination = 144, Text = "Есть шкура оленя", OnlyIf = "DeerSkin" },
                     new Option { Destination = 465, Text = "Идти дальше" },
                 }
             },
@@ -5009,6 +5009,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [464] = new Paragraph
             {
+                OpenOption = "DeerSkin",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 600, Text = "Согласны" },
