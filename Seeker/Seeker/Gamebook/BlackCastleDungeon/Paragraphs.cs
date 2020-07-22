@@ -414,7 +414,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 48, Text = "Покажите шкура лисы" },
+                    new Option { Destination = 48, Text = "Покажите шкуру лисы", OnlyIf = "FoxSkin" },
                     new Option { Destination = 428, Text = "Придется драться" },
                 }
             },
@@ -3843,7 +3843,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [340] = new Paragraph
             {
-                // + 3 endurann
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 3,
+                    },
+                },
 
                 Options = new List<Option>
                 {
@@ -4109,6 +4116,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [367] = new Paragraph
             {
+                OpenOption = "FoxSkin",
+                
                 Options = new List<Option>
                 {
                     new Option { Destination = 44, Text = "Далее" },
