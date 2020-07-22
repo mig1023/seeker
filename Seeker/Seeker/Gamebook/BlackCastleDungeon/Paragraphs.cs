@@ -1414,6 +1414,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 190, Text = "Прямо к воротам" },
                     new Option { Destination = 236, Text = "Пойти налево в обход замка" },
+                    new Option { Destination = 167, Text = "Есть волшебный пояс", OnlyIf = "MoleBelt" },
                 }
             },
             [119] = new Paragraph
@@ -1772,6 +1773,17 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [156] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Luck",
+                        Value = 1,
+                    },
+                },
+
+                OpenOption = "MoleBelt",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 44, Text = "Далее" },
@@ -2493,7 +2505,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 190, Text = "Есть волшебный пояс" },
+                    new Option { Destination = 167, Text = "Есть волшебный пояс", OnlyIf = "MoleBelt" },
+                    new Option { Destination = 190, Text = "К стене впереди" },
                     new Option { Destination = 236, Text = "Направиться влево, в обход замка" },
                 }
             },
