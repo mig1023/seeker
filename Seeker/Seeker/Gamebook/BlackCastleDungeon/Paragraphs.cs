@@ -37,7 +37,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "В путь!" },
-                    new Option { Destination = 618, Text = "Правила и инструкции" },
+                    new Option { Destination = 619, Text = "Правила и инструкции" },
                 }
             },
             [1] = new Paragraph
@@ -1446,9 +1446,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-		             // !!
-                    new Option { Destination = 48, Text = "Если вы пришли с параграфа 319, то отправляйтесь на 48," },
-                    new Option { Destination = 100, Text = "Если же с параграфа 190, то на 100." },
+                    new Option { Destination = 48, Text = "Далее" },
                 }
             },
             [123] = new Paragraph
@@ -2153,6 +2151,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Option { Destination = 449, Text = "Азартный игрок" },
                     new Option { Destination = 26, Text = "Собираетесь наняться служить в его армии" },
                     new Option { Destination = 341, Text = "Сражаться" },
+                    new Option { Destination = 618, Text = "Сказать пароль домика", OnlyIf = "Password" },
                 }
             },
             [191] = new Paragraph
@@ -3638,6 +3637,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Option { Destination = 31, Text = "Бродячий торговец" },
                     new Option { Destination = 439, Text = "Азартный игрок" },
                     new Option { Destination = 146, Text = "Собираетесь наняться в армию чародея" },
+                    new Option { Destination = 122, Text = "Сказать пароль домика", OnlyIf = "Password" },
                 }
             },
             [320] = new Paragraph
@@ -4532,7 +4532,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 200, Text = "Заклятие Иллюзии" },
                     new Option { Destination = 114, Text = "Заклятие Огня" },
-                    new Option { Destination = 56, Text = "Ннет ни того, ни другого" },
+                    new Option { Destination = 56, Text = "Нет ни того, ни другого" },
                 }
             },
             [410] = new Paragraph
@@ -6760,6 +6760,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 }
             },
             [618] = new Paragraph
+            {
+                Options = new List<Option>
+                {
+                    new Option { Destination = 100, Text = "Далее" },
+                }
+            },
+            [619] = new Paragraph
             {
                 Options = new List<Option>
                 {
