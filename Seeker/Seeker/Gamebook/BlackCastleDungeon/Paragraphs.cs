@@ -1675,6 +1675,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [144] = new Paragraph
             {
+                OpenOption = "HiddenLadder",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 465, Text = "Далее" },
@@ -1878,6 +1880,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Option { Destination = 560, Text = "Осмотреть шкаф" },
                     new Option { Destination = 288, Text = "Осмотреть карты на столе" },
                     new Option { Destination = 493, Text = "Сделано и то, и другое" },
+                    new Option { Destination = 152, Text = "Открыть тайный проход на лестницу", OnlyIf = "HiddenLadder" },
                 }
             },
             [166] = new Paragraph
@@ -3124,6 +3127,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 509, Text = "Далее" },
+                    new Option { Destination = 266, Text = "Открыть тайный проход на лестницу", OnlyIf = "HiddenLadder" },
                 }
             },
             [280] = new Paragraph
