@@ -2769,6 +2769,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [246] = new Paragraph
             {
+                OpenOption = "Pass",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 550, Text = "Скажете ему, что вам надо на 2-й этаж" },
@@ -2841,6 +2843,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Option { Destination = 541, Text = "Заклятие Огня" },
                     new Option { Destination = 494, Text = "Сразитесь с ними" },
                     new Option { Destination = 364, Text = "Если есть меч Зеленого рыцаря" },
+                    new Option { Destination = 272, Text = "Предъявить пропуск", OnlyIf = "Pass" },
                 }
             },
             [253] = new Paragraph
@@ -3675,6 +3678,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Option { Destination = 522, Text = "Замахнетесь" },
                     new Option { Destination = 137, Text = "Дадите денег" },
                     new Option { Destination = 194, Text = "Предложите подарок" },
+                    new Option { Destination = 343, Text = "Предъявить пропуск", OnlyIf = "Pass" },
                 }
             },
             [324] = new Paragraph
@@ -5826,6 +5830,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 323, Text = "Далее" },
+                    new Option { Destination = 552, Text = "Предъявить пропуск" },
                 }
             },
             [533] = new Paragraph
