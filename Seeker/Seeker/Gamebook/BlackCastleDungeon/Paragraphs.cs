@@ -4548,6 +4548,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [411] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Endurance",
+                        Value = 6,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 578, Text = "Попробовать овощи" },
@@ -5370,6 +5379,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [495] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Luck",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 325, Text = "Далее" },
