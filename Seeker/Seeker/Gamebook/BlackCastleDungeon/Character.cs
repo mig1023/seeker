@@ -13,12 +13,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public int Mastery { get; set; }
         public int Endurance { get; set; }
         public int Luck { get; set; }
+        public int Gold { get; set; }
 
         public void Init()
         {
             Mastery = Game.Dice.Roll() + 6;
             Endurance = Game.Dice.Roll(dices: 2) + 12;
             Luck = Game.Dice.Roll() + 6;
+            Gold = 15;
         }
     }
 }

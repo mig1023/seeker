@@ -7,12 +7,18 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 {
     class Actions : Interfaces.IActions
     {
-        public List<Character> Enemies { get; set; }
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
+
+        // Fight
+        public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
+
+        // Get
+        public string Text { get; set; }
+        public int Price { get; set; }
 
         public List<string> Do(string action = "")
         {
@@ -26,7 +32,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 String.Format("Мастерство: {0}", Character.Protagonist.Mastery),
                 String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
-                String.Format("Удача: {0}", Character.Protagonist.Luck)
+                String.Format("Удача: {0}", Character.Protagonist.Luck),
+                String.Format("Золото: {0}", Character.Protagonist.Gold)
             };
 
             return statusLines;
@@ -40,6 +47,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public List<string> Representer()
         {
             List<string> enemies = new List<string>();
+
+            if (ActionName == "Get")
+                return new List<string> { Text };
 
             if (Enemies == null)
                 return enemies;
@@ -57,6 +67,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             Character.Protagonist.Luck -= 1;
 
             return new List<string> { (goodLuck ? "BIG|HEAD|GOOD|УСПЕХ :)" : "BIG|HEAD|BAD|НЕУДАЧА :(") };
+        }
+
+        public List<string> Get()
+        {
+            List<string> getResult = new List<string>();
+
+            getResult.Add(String.Format("Ну, типа получил"));
+
+            return getResult;
         }
 
         public List<string> Fight()

@@ -60,6 +60,7 @@ namespace Seeker.Game
             {
                 string[] enemyParam = enemyLine.Split('\n');
 
+
                 Label enemy = new Label()
                 {
                     FontSize = 18,
@@ -70,14 +71,16 @@ namespace Seeker.Game
 
                 enemies.Add(enemy);
 
-                Label param = new Label()
+                if (enemyParam.Length > 1)
                 {
-                    Text = enemyParam[1],
-                    HorizontalTextAlignment = TextAlignment.Center
-                };
+                    Label param = new Label()
+                    {
+                        Text = enemyParam[1],
+                        HorizontalTextAlignment = TextAlignment.Center
+                    };
 
-                enemies.Add(param);
-
+                    enemies.Add(param);
+                }
             }
 
             return enemies;
