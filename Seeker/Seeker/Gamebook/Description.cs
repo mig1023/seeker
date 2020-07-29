@@ -8,13 +8,15 @@ namespace Seeker.Gamebook
     {
         public delegate void ProtagonistInit();
 
+        public delegate bool CheckOnlyIfFunc(string option);
+
         public string XmlBook;
 
         public string BookColor;
 
         public ProtagonistInit Protagonist;
 
-        public Interfaces.ICharacter Character;
+        public CheckOnlyIfFunc CheckOnlyIf;
 
         public Interfaces.IParagraphs Paragraphs;
 

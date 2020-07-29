@@ -54,6 +54,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return (ThisIsSpell && (Character.Protagonist.SpellSlots <= 0) ? false : true);
         }
 
+        public static bool CheckOnlyIf(string option)
+        {
+            if (option.Contains("ЗАКЛЯТИЕ"))
+                return Character.Protagonist.Spells.Contains(option);
+            else
+                return Game.Data.OpenedOption.Contains(option);
+        }
+
         public List<string> Representer()
         {
             List<string> enemies = new List<string>();

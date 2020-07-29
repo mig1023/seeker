@@ -12,7 +12,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "BlackCastleDungeon.xml",
                 Protagonist = BlackCastleDungeon.Character.Protagonist.Init,
-                Character = BlackCastleDungeon.Character.Protagonist,
+                CheckOnlyIf = BlackCastleDungeon.Actions.CheckOnlyIf,
                 Paragraphs = new BlackCastleDungeon.Paragraphs(),
                 Actions = new BlackCastleDungeon.Actions(),
                 Constants = new BlackCastleDungeon.Constants(),

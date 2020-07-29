@@ -22,7 +22,7 @@ namespace Seeker.Game
         public static Interfaces.IConstants Constants;
 
         public static Gamebook.Description.ProtagonistInit Protagonist;
-        public static Interfaces.ICharacter Character;
+        public static Gamebook.Description.CheckOnlyIfFunc CheckOnlyIf;
 
         public static void Load(string name)
         {
@@ -50,7 +50,7 @@ namespace Seeker.Game
             Actions = Gamebook.List.GetDescription(name).Actions;
             Constants = Gamebook.List.GetDescription(name).Constants;
             Protagonist = Gamebook.List.GetDescription(name).Protagonist;
-            Character = Gamebook.List.GetDescription(name).Character;
+            CheckOnlyIf = Gamebook.List.GetDescription(name).CheckOnlyIf;
         }
     }
 }

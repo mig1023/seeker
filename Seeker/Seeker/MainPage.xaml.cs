@@ -104,7 +104,7 @@ namespace Seeker
 
             foreach (Game.Option option in paragraph.Options)
             {
-                if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.Character.CheckOnlyIf(option.OnlyIf))
+                if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf))
                     continue;
 
                 Button button = Game.Interface.OptionButton(option);
