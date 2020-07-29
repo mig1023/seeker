@@ -29,7 +29,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public bool CheckOnlyIf(string option)
         {
-            if (option.Contains("ЗАКЛЯТЬЕ"))
+            if (option.Contains("ЗАКЛЯТИЕ"))
                 return Protagonist.Spells.Contains(option);
             else
                 return Game.Data.OpenedOption.Contains(option);

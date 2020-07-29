@@ -100,12 +100,9 @@ namespace Seeker.Game
 
         public static Button OptionButton(Game.Option option)
         {
-            string color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Main);
-
-            if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.OpenedOption.Contains(option.OnlyIf))
-                return null;
-            else if (!String.IsNullOrEmpty(option.OnlyIf))
-                color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option);
+            string color = Game.Data.Constants.GetButtonsColor(
+                !String.IsNullOrEmpty(option.OnlyIf) ? Game.Buttons.ButtonTypes.Option : Game.Buttons.ButtonTypes.Main
+            );
 
             return new Button()
             {

@@ -108,8 +108,8 @@ namespace Seeker
 
                 if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.Character.CheckOnlyIf(option.OnlyIf))
                     continue;
-                else if (!String.IsNullOrEmpty(option.OnlyIf))
-                    color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option);
+                //else if (!String.IsNullOrEmpty(option.OnlyIf))
+                //    color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option);
 
                 Button button = Game.Interface.OptionButton(option);
 

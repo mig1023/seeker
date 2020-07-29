@@ -4895,7 +4895,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 62, Text = "Исцелить медвежонка" },
+                    new Option { Destination = 62, Text = "Исцелить медвежонка", OnlyIf = "ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ" },
                     new Option { Destination = 529, Text = "Драться с медведицей" },
                 }
             },
