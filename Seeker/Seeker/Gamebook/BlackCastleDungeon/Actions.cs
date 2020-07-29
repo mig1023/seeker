@@ -19,11 +19,16 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         // Get
         public string Text { get; set; }
         public int Price { get; set; }
+        public bool ThisIsSpell { get; set; }
 
-        public List<string> Do(string action = "")
+        public List<string> Do(out bool reload, string action = "")
         {
             string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-            return typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
+            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
+
+            reload = ((actionResult.Count >= 1) && (actionResult[0] == "RELOAD") ? true : false);
+
+            return actionResult;
         }
 
         public List<string> Status()
@@ -44,12 +49,33 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return (Character.Protagonist.Endurance <= 0 ? true : false);
         }
 
+        public bool IsButtonEnabled()
+        {
+            return (ThisIsSpell && (Character.Protagonist.SpellSlots <= 0) ? false : true);
+        }
+
         public List<string> Representer()
         {
             List<string> enemies = new List<string>();
 
             if (ActionName == "Get")
-                return new List<string> { Text };
+            {
+                string countMarker = String.Empty;
+
+                if (ThisIsSpell)
+                {
+                    int count = 0;
+
+                    foreach (string spell in Character.Protagonist.Spells)
+                        if (spell == Text)
+                            count += 1;
+
+                    if (count > 0)
+                        countMarker = String.Format(" (x{0})", count);
+                }
+
+                return new List<string> { String.Format("{0}{1}", Text, countMarker) };
+            }
 
             if (Enemies == null)
                 return enemies;
@@ -71,11 +97,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public List<string> Get()
         {
-            List<string> getResult = new List<string>();
+            if (Character.Protagonist.SpellSlots >= 1)
+            {
+                Character.Protagonist.Spells.Add(Text);
+                Character.Protagonist.SpellSlots -= 1;
+            }
 
-            getResult.Add(String.Format("Ну, типа получил"));
-
-            return getResult;
+            return new List<string> { "RELOAD" };
         }
 
         public List<string> Fight()

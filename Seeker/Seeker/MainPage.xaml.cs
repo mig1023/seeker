@@ -59,6 +59,7 @@ namespace Seeker
             Game.Paragraph paragraph = Game.Data.Paragraphs.Get(id);
 
             Game.Data.CurrentParagraph = paragraph;
+            Game.Data.CurrentParagraphID = id;
 
             this.Text.Text = (Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty);
 
@@ -82,10 +83,10 @@ namespace Seeker
                 {
                     StackLayout actionPlace = Game.Interface.ActionPlace();
 
-                    foreach (Label enemy in Game.Interface.Represent(action.Do("Representer")))
+                    foreach (Label enemy in Game.Interface.Represent(action.Do(out _, "Representer")))
                         actionPlace.Children.Add(enemy);
 
-                    Button button = Game.Interface.ActionButton(action.ButtonName);
+                    Button button = Game.Interface.ActionButton(action.ButtonName, action.IsButtonEnabled());
                     button.Clicked += Action_Click;
                     actionPlace.Children.Add(button);
 
@@ -176,13 +177,18 @@ namespace Seeker
 
             actionPlace.Children.Clear();
 
-            List<string> actionResult = Game.Data.CurrentParagraph.Actions[actionIndex].Do();
+            List<string> actionResult = Game.Data.CurrentParagraph.Actions[actionIndex].Do(out bool reload);
 
-            foreach (Label action in Game.Interface.Actions(actionResult))
-                actionPlace.Children.Add(action);
+            if (reload)
+                Paragraph(Game.Data.CurrentParagraphID);
+            else
+            {
+                foreach (Label action in Game.Interface.Actions(actionResult))
+                    actionPlace.Children.Add(action);
 
-            UpdateStatus();
-            CheckGameOver();
+                UpdateStatus();
+                CheckGameOver();
+            }
         }
 
         private void Option_Click(object sender, EventArgs e)

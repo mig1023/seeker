@@ -13,10 +13,12 @@ namespace Seeker.Interfaces
 
         string Aftertext { get; set; }
 
-        List<string> Do(string action = "");
+        List<string> Do(out bool reload, string action = "");
 
         List<string> Status();
 
         bool GameOver();
+
+        bool IsButtonEnabled();
     }
 }
