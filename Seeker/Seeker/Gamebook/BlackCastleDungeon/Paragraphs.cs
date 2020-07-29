@@ -68,9 +68,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 416, Text = "Вернуться обратно и направиться к зданию в центре двора" },
-                    new Option { Destination = 372, Text = "Заклятие Плавания" },
-                    new Option { Destination = 103, Text = "Заклятие Левитации" },
-                    new Option { Destination = 311, Text = "Заклятием Плавания и поплыть по течению реки" },
+                    new Option { Destination = 372, Text = "Заклятие Плавания", OnlyIf = "ЗАКЛЯТИЕ ПЛАВАНИЯ" },
+                    new Option { Destination = 103, Text = "Заклятие Левитации", OnlyIf = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ" },
+                    new Option { Destination = 311, Text = "Заклятием Плавания и поплыть по течению реки" , OnlyIf = "ЗАКЛЯТИЕ ПЛАВАНИЯ"},
                 }
             },
             [5] = new Paragraph
@@ -137,9 +137,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 36, Text = "Заклятия Силы" },
-                    new Option { Destination = 314, Text = "Заклятия Слабости" },
-                    new Option { Destination = 112, Text = "Заклятия Огня" },
+                    new Option { Destination = 36, Text = "Заклятия Силы", OnlyIf = "ЗАКЛЯТИЕ СИЛЫ" },
+                    new Option { Destination = 314, Text = "Заклятия Слабости", OnlyIf = "ЗАКЛЯТИЕ СЛАБОСТИ" },
+                    new Option { Destination = 112, Text = "Заклятия Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
                     new Option { Destination = 183, Text = "Драться" },
                 }
             },
@@ -181,8 +181,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 312, Text = "Построите плот" },
-                    new Option { Destination = 201, Text = "Воспользуетесь заклятием Плавания" },
-                    new Option { Destination = 425, Text = "Воспользуетесь заклятием Левитации" },
+                    new Option { Destination = 201, Text = "Воспользуетесь заклятием Плавания", OnlyIf = "ЗАКЛЯТИЕ ПЛАВАНИЯ" },
+                    new Option { Destination = 425, Text = "Воспользуетесь заклятием Левитации", OnlyIf = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ" },
                 }
             },
             [13] = new Paragraph
@@ -215,9 +215,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 417, Text = "Заклятие Силы" },
-                    new Option { Destination = 228, Text = "Заклятие Слабости" },
-                    new Option { Destination = 521, Text = "Заклятие Огня" },
+                    new Option { Destination = 417, Text = "Заклятие Силы", OnlyIf = "ЗАКЛЯТИЕ СИЛЫ" },
+                    new Option { Destination = 228, Text = "Заклятие Слабости", OnlyIf = "ЗАКЛЯТИЕ СЛАБОСТИ" },
+                    new Option { Destination = 521, Text = "Заклятие Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
                     new Option { Destination = 326, Text = "Драться без помощи магии" },
                 }
             },
@@ -267,7 +267,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 557, Text = "Воспользоваться заклятием Огня" },
+                    new Option { Destination = 557, Text = "Воспользоваться заклятием Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
                     new Option { Destination = 120, Text = "Если вы победите их, осмотреть домик" },
                     new Option { Destination = 416, Text = "Уйти и направиться к центральному строению" },
                 }
@@ -535,7 +535,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 451, Text = "Заклятие Огня" },
+                    new Option { Destination = 451, Text = "Заклятие Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
                     new Option { Destination = 454, Text = "Дракон убит" },
                 }
             },
@@ -759,8 +759,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 558, Text = "Если вы удачливы" },
-                    new Option { Destination = 410, Text = "Заклятие Силы" },
-                    new Option { Destination = 219, Text = "Заклятие Слабости" },
+                    new Option { Destination = 410, Text = "Заклятие Силы", OnlyIf = "ЗАКЛЯТИЕ СИЛЫ" },
+                    new Option { Destination = 219, Text = "Заклятие Слабости", OnlyIf = "ЗАКЛЯТИЕ СЛАБОСТИ" },
                     new Option { Destination = 189, Text = "Если вы победили" },
                 }
             },
@@ -908,7 +908,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 39, Text = "Отойти от окна" },
-                    new Option { Destination = 273, Text = "Воспользоваться заклятием Левитации" },
+                    new Option { Destination = 273, Text = "Воспользоваться заклятием Левитации", OnlyIf = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ" },
                 }
             },
             [71] = new Paragraph
@@ -1750,8 +1750,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 538, Text = "Заклятие Огня" },
-                    new Option { Destination = 370, Text = "Заклятие Иллюзии" },
+                    new Option { Destination = 538, Text = "Заклятие Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
+                    new Option { Destination = 370, Text = "Заклятие Иллюзии", OnlyIf = "ЗАКЛЯТИЕ ИЛЛЮЗИИ" },
                 }
             },
             [154] = new Paragraph
@@ -2208,7 +2208,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Option { Destination = 270, Text = "Серебряный браслет", OnlyIf = "SilverBracelet" },
                     new Option { Destination = 533, Text = "Белую стрелу", OnlyIf = "WhiteArrow" },
                     new Option { Destination = 137, Text = "Дать денег" },
-                    new Option { Destination = 522, Text = "Срразиться" },
+                    new Option { Destination = 522, Text = "Сразиться" },
                 }
             },
             [195] = new Paragraph
@@ -2367,8 +2367,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 9, Text = "Заклятием Левитации" },
-                    new Option { Destination = 313, Text = "Заклятием Плавания" },
+                    new Option { Destination = 9, Text = "Заклятием Левитации", OnlyIf = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ" },
+                    new Option { Destination = 313, Text = "Заклятием Плавания", OnlyIf = "ЗАКЛЯТИЕ ПЛАВАНИЯ" },
                     new Option { Destination = 423, Text = "Пойти по тропинке" },
                 }
             },
@@ -2376,8 +2376,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 5, Text = "Заклятием Плавания" },
-                    new Option { Destination = 105, Text = "Заклятием Левитации" },
+                    new Option { Destination = 5, Text = "Заклятием Плавания", OnlyIf = "ЗАКЛЯТИЕ ПЛАВАНИЯ" },
+                    new Option { Destination = 105, Text = "Заклятием Левитации", OnlyIf = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ" },
                     new Option { Destination = 177, Text = "Вернуться и попробовать пройти через кустарник" },
                 }
             },
@@ -2640,7 +2640,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 331, Text = "Пойти дальше" },
-                    new Option { Destination = 87, Text = "Использовать заклятие Левитации" },
+                    new Option { Destination = 87, Text = "Использовать заклятие Левитации", OnlyIf = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ" },
                 }
             },
             [237] = new Paragraph
@@ -2839,8 +2839,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 564, Text = "Заклятие Слабости" },
-                    new Option { Destination = 541, Text = "Заклятие Огня" },
+                    new Option { Destination = 564, Text = "Заклятие Слабости", OnlyIf = "ЗАКЛЯТИЕ СЛАБОСТИ" },
+                    new Option { Destination = 541, Text = "Заклятие Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
                     new Option { Destination = 494, Text = "Сразитесь с ними" },
                     new Option { Destination = 364, Text = "Если есть меч Зеленого рыцаря" },
                     new Option { Destination = 272, Text = "Предъявить пропуск", OnlyIf = "Pass" },
@@ -3106,7 +3106,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     new Option { Destination = 386, Text = "Серебряный сосуд", OnlyIf = "SilverVessel" },
                     new Option { Destination = 429, Text = "Золотое ожерелье", OnlyIf = "GoldNecklace" },
                     new Option { Destination = 287, Text = "Зажечь свечу", OnlyIf = "CandleAndFlint" },
-                    new Option { Destination = 572, Text = "Если нет ни одного из этих предметов" },
+                    new Option { Destination = 572, Text = "Нет ни одного из этих предметов" },
                 }
             },
             [278] = new Paragraph
@@ -3511,7 +3511,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 111, Text = "Наложить заклятие Копии" },
+                    new Option { Destination = 111, Text = "Наложить заклятие Копии", OnlyIf = "ЗАКЛЯТИЕ КОПИИ" },
                     new Option { Destination = 126, Text = "Если победили" },
                 }
             },
@@ -3882,9 +3882,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 164, Text = "Заклятие Силы" },
-                    new Option { Destination = 289, Text = "Заклятие Слабости" },
-                    new Option { Destination = 506, Text = "Заклятие Огня" },
+                    new Option { Destination = 164, Text = "Заклятие Силы", OnlyIf = "ЗАКЛЯТИЕ СИЛЫ" },
+                    new Option { Destination = 289, Text = "Заклятие Слабости", OnlyIf = "ЗАКЛЯТИЕ СЛАБОСТИ" },
+                    new Option { Destination = 506, Text = "Заклятие Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
                     new Option { Destination = 487, Text = "Драться" },
                 }
             },
@@ -4163,7 +4163,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 538, Text = "Заклятие Огня" },
+                    new Option { Destination = 538, Text = "Заклятие Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
                     new Option { Destination = 68, Text = "Ждать" },
                 }
             },
@@ -4225,8 +4225,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 254, Text = "Заклятье Плавания" },
-                    new Option { Destination = 508, Text = "Заклятье Левитации" },
+                    new Option { Destination = 254, Text = "Заклятье Плавания", OnlyIf = "ЗАКЛЯТИЕ ПЛАВАНИЯ" },
+                    new Option { Destination = 508, Text = "Заклятье Левитации", OnlyIf = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ" },
                     new Option { Destination = 311, Text = "Попробовать проплыть по течению под замок" },
                     new Option { Destination = 424, Text = "К палаткам" },
                 }
@@ -4494,10 +4494,10 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 183, Text = "Выхватить меч" },
-                    new Option { Destination = 36, Text = "Заклятие Силы" },
-                    new Option { Destination = 334, Text = "Заклятие Слабости" },
-                    new Option { Destination = 7, Text = "Заклятие Копии" },
-                    new Option { Destination = 112, Text = "Заклятие Огня" },
+                    new Option { Destination = 36, Text = "Заклятие Силы", OnlyIf = "ЗАКЛЯТИЕ СИЛЫ" },
+                    new Option { Destination = 334, Text = "Заклятие Слабости", OnlyIf = "ЗАКЛЯТИЕ СЛАБОСТИ" },
+                    new Option { Destination = 7, Text = "Заклятие Копии", OnlyIf = "ЗАКЛЯТИЕ КОПИИ" },
+                    new Option { Destination = 112, Text = "Заклятие Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
                 }
             },
             [405] = new Paragraph
@@ -4538,8 +4538,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 200, Text = "Заклятие Иллюзии" },
-                    new Option { Destination = 114, Text = "Заклятие Огня" },
+                    new Option { Destination = 200, Text = "Заклятие Иллюзии", OnlyIf = "ЗАКЛЯТИЕ ИЛЛЮЗИИ" },
+                    new Option { Destination = 114, Text = "Заклятие Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
                     new Option { Destination = 56, Text = "Нет ни того, ни другого" },
                 }
             },
@@ -4572,9 +4572,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 316, Text = "Биться" },
-                    new Option { Destination = 37, Text = "Заклятье Огня" },
-                    new Option { Destination = 357, Text = "Заклятье Силы" },
-                    new Option { Destination = 256, Text = "Заклятье Слабости" },
+                    new Option { Destination = 37, Text = "Заклятье Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
+                    new Option { Destination = 357, Text = "Заклятье Силы", OnlyIf = "ЗАКЛЯТИЕ СИЛЫ" },
+                    new Option { Destination = 256, Text = "Заклятье Слабости", OnlyIf = "ЗАКЛЯТИЕ СЛАБОСТИ" },
                     new Option { Destination = 516, Text = "Предложить подарок" },
                 }
             },
@@ -4668,9 +4668,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 58, Text = "Заклятье Силы" },
-                    new Option { Destination = 580, Text = "Заклятье Слабости" },
-                    new Option { Destination = 290, Text = "Заклятье Огня" },
+                    new Option { Destination = 58, Text = "Заклятье Силы", OnlyIf = "ЗАКЛЯТИЕ СИЛЫ" },
+                    new Option { Destination = 580, Text = "Заклятье Слабости", OnlyIf = "ЗАКЛЯТИЕ СЛАБОСТИ" },
+                    new Option { Destination = 290, Text = "Заклятье Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
                     new Option { Destination = 40, Text = "Драться с ними" },
                 }
             },
@@ -4712,9 +4712,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 499, Text = "Заклятье Огня" },
-                    new Option { Destination = 85, Text = "Заклятье Силы" },
-                    new Option { Destination = 390, Text = "Заклятье Слабости" },
+                    new Option { Destination = 499, Text = "Заклятье Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
+                    new Option { Destination = 85, Text = "Заклятье Силы", OnlyIf = "ЗАКЛЯТИЕ СИЛЫ" },
+                    new Option { Destination = 390, Text = "Заклятье Слабости", OnlyIf = "ЗАКЛЯТИЕ СЛАБОСТИ" },
                     new Option { Destination = 569, Text = "Сражаться мечом" },
                 }
             },
@@ -5558,9 +5558,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 41, Text = "Заклятье Огня" },
-                    new Option { Destination = 476, Text = "Заклятье Силы" },
-                    new Option { Destination = 172, Text = "Заклятье Слабости" },
+                    new Option { Destination = 41, Text = "Заклятье Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
+                    new Option { Destination = 476, Text = "Заклятье Силы", OnlyIf = "ЗАКЛЯТИЕ СИЛЫ" },
+                    new Option { Destination = 172, Text = "Заклятье Слабости", OnlyIf = "ЗАКЛЯТИЕ СЛАБОСТИ" },
                     new Option { Destination = 347, Text = "Продолжать драться" },
                     new Option { Destination = 601, Text = "Попробовать убежать" },
                 }
@@ -5605,7 +5605,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 359, Text = "Подождать" },
-                    new Option { Destination = 105, Text = "Заклятье Левитации" },
+                    new Option { Destination = 105, Text = "Заклятье Левитации", OnlyIf = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ" },
                 }
             },
             [518] = new Paragraph
@@ -5690,8 +5690,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 39, Text = "Далее" },
-                    new Option { Destination = 523, Text = "ЕЩЁ РАЗ" },
-                    new Option { Destination = 523, Text = "ЕЩЁ РАЗ РАЗ РАЗ" },
                 }
             },
             [524] = new Paragraph
@@ -5880,7 +5878,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 370, Text = "Заклятье Иллюзии" },
+                    new Option { Destination = 370, Text = "Заклятье Иллюзии", OnlyIf = "ЗАКЛЯТИЕ ИЛЛЮЗИИ" },
                     new Option { Destination = 68, Text = "Спокойно ждать" },
                 }
             },
@@ -5983,7 +5981,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 365, Text = "Использовать аклятие" },
+                    new Option { Destination = 365, Text = "Использовать заклятие" },
                     new Option { Destination = 241, Text = "По коридору дальше" },
                 }
             },
@@ -6225,7 +6223,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 556, Text = "В правую" },
                     new Option { Destination = 277, Text = "В ту, что напротив" },
-                    new Option { Destination = 483, Text = "Заклятье Левитации" },
+                    new Option { Destination = 483, Text = "Заклятье Левитации", OnlyIf = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ" },
                     new Option { Destination = 39, Text = "Вернуться в залу" },
                 }
             },
@@ -6254,9 +6252,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 395, Text = "Заклятье Силы" },
-                    new Option { Destination = 299, Text = "Заклятье Слабости" },
-                    new Option { Destination = 96, Text = "Заклятье Огня" },
+                    new Option { Destination = 395, Text = "Заклятье Силы", OnlyIf = "ЗАКЛЯТИЕ СИЛЫ" },
+                    new Option { Destination = 299, Text = "Заклятье Слабости", OnlyIf = "ЗАКЛЯТИЕ СЛАБОСТИ" },
+                    new Option { Destination = 96, Text = "Заклятье Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
                     new Option { Destination = 241, Text = "Если вы победили врага" },
                 }
             },
