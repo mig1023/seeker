@@ -14,6 +14,8 @@ namespace Seeker.Gamebook
 
         public ProtagonistInit Protagonist;
 
+        public Interfaces.ICharacter Character;
+
         public Interfaces.IParagraphs Paragraphs;
 
         public Interfaces.IActions Actions;

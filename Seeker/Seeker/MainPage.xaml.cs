@@ -106,7 +106,7 @@ namespace Seeker
             {
                 string color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Main);
 
-                if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.OpenedOption.Contains(option.OnlyIf))
+                if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.Character.CheckOnlyIf(option.OnlyIf))
                     continue;
                 else if (!String.IsNullOrEmpty(option.OnlyIf))
                     color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option);

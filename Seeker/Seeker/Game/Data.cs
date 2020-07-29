@@ -11,6 +11,7 @@ namespace Seeker.Game
     class Data
     {
         public static Paragraph CurrentParagraph { get; set; }
+        public static int CurrentParagraphID { get; set; }
 
         public static Dictionary<int, string> TextOfParagraphs = new Dictionary<int, string>();
 
@@ -21,6 +22,7 @@ namespace Seeker.Game
         public static Interfaces.IConstants Constants;
 
         public static Gamebook.Description.ProtagonistInit Protagonist;
+        public static Interfaces.ICharacter Character;
 
         public static void Load(string name)
         {
@@ -48,6 +50,7 @@ namespace Seeker.Game
             Actions = Gamebook.List.GetDescription(name).Actions;
             Constants = Gamebook.List.GetDescription(name).Constants;
             Protagonist = Gamebook.List.GetDescription(name).Protagonist;
+            Character = Gamebook.List.GetDescription(name).Character;
         }
     }
 }

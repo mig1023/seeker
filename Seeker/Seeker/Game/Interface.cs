@@ -60,7 +60,6 @@ namespace Seeker.Game
             {
                 string[] enemyParam = enemyLine.Split('\n');
 
-
                 Label enemy = new Label()
                 {
                     FontSize = 18,
@@ -86,13 +85,16 @@ namespace Seeker.Game
             return enemies;
         }
 
-        public static Button ActionButton(string actionName)
+        public static Button ActionButton(string actionName, bool enabled = true)
         {
+            string color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Action);
+
             return new Button()
             {
                 Text = actionName,
                 TextColor = Xamarin.Forms.Color.White,
-                BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Action))
+                IsEnabled = enabled,
+                BackgroundColor = (enabled ? Color.FromHex(color) : Color.Gray)
             };
         }
 

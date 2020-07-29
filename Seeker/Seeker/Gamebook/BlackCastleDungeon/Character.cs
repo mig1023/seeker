@@ -26,5 +26,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             SpellSlots = 10;
             Spells = new List<string>();
         }
+
+        public bool CheckOnlyIf(string option)
+        {
+            if (option.Contains("ЗАКЛЯТЬЕ"))
+                return Protagonist.Spells.Contains(option);
+            else
+                return Game.Data.OpenedOption.Contains(option);
+        }
     }
 }

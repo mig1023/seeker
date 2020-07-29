@@ -7,5 +7,7 @@ namespace Seeker.Interfaces
     interface ICharacter
     {
         void Init();
+
+        bool CheckOnlyIf(string option);
     }
 }
