@@ -104,12 +104,8 @@ namespace Seeker
 
             foreach (Game.Option option in paragraph.Options)
             {
-                string color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Main);
-
                 if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.Character.CheckOnlyIf(option.OnlyIf))
                     continue;
-                //else if (!String.IsNullOrEmpty(option.OnlyIf))
-                //    color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option);
 
                 Button button = Game.Interface.OptionButton(option);
 
@@ -122,6 +118,8 @@ namespace Seeker
 
                 Options.Children.Add(button);
             }
+
+            MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
 
             UpdateStatus();
             CheckGameOver();
@@ -146,26 +144,26 @@ namespace Seeker
 
         private void CheckGameOver()
         {
-            bool gameOver = (Game.Data.Actions == null ? false : Game.Data.Actions.GameOver());
+            bool gameOver = ((Game.Data.Actions != null) && Game.Data.Actions.GameOver());
 
-            if (gameOver)
+            if (!gameOver)
+                return;
+
+            Game.Router.Clean();
+            Options.Children.Clear();
+
+            Button button = new Button()
             {
-                Game.Router.Clean();
-                Options.Children.Clear();
+                Text = "Начать сначала",
+                TextColor = Xamarin.Forms.Color.White,
+                BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option))
+            };
 
-                Button button = new Button()
-                {
-                    Text = "Начать сначала",
-                    TextColor = Xamarin.Forms.Color.White,
-                    BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option))
-                };
+            Game.Router.AddDestination("Начать сначала", 0);
 
-                Game.Router.AddDestination("Начать сначала", 0);
+            button.Clicked += Option_Click;
 
-                button.Clicked += Option_Click;
-
-                Options.Children.Add(button);
-            }
+            Options.Children.Add(button);
         }
                
         private void Action_Click(object sender, EventArgs e)

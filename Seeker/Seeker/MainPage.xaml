@@ -16,7 +16,7 @@
                 <RowDefinition Height="40" />
             </Grid.RowDefinitions>
 
-            <ScrollView Grid.Column="0" Grid.Row="0">
+            <ScrollView x:Name="MainScroll" Grid.Column="0" Grid.Row="0">
                 <StackLayout Padding="30">
                     <Label x:Name="Text" Text="" Margin="5" FontSize="Medium"/>
                     <StackLayout x:Name="Action" Orientation="Vertical" HorizontalOptions="FillAndExpand"/>
