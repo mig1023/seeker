@@ -8,17 +8,23 @@ namespace Seeker.Gamebook.BlackCastleDungeon
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public string ValueString { get; set; }
 
         public void Do()
         {
-            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+            if (Name == "RemoveSpell")
+                Character.Protagonist.Spells.RemoveAt(Character.Protagonist.Spells.IndexOf(ValueString));
+            else
+            {
+                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-            currentValue += Value;
+                currentValue += Value;
 
-            if (currentValue < 0)
-                currentValue = 0;
+                if (currentValue < 0)
+                    currentValue = 0;
 
-            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+            }
         }
     }
 }
