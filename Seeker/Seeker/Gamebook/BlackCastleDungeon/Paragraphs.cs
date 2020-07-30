@@ -431,6 +431,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 10, Text = "Далее" },
+                    new Option { Destination = 90, Text = "Воспользоваться латами", OnlyIf = "GreenArmour" },
                 }
             },
             [31] = new Paragraph
@@ -771,6 +772,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 519, Text = "Попробуете с ними поговорить" },
                     new Option { Destination = 328, Text = "Будете драться" },
+                    new Option { Destination = 113, Text = "Воспользоваться латами", OnlyIf = "GreenArmour" },
                 }
             },
             [54] = new Paragraph
@@ -1652,7 +1654,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "GreenSword",
+                OpenOption = "GreenSword, GreenArmour",
 
                 Options = new List<Option>
                 {
@@ -6123,6 +6125,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [527] = new Paragraph
             {
+                OpenOption = "GreenArmour",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 182, Text = "Далее" },
@@ -6234,6 +6238,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 323, Text = "Далее" },
                     new Option { Destination = 552, Text = "Предъявить пропуск" },
+                    new Option { Destination = 592, Text = "Воспользоваться латами", OnlyIf = "GreenArmour" },
                 }
             },
             [533] = new Paragraph
