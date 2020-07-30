@@ -1652,6 +1652,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
+                OpenOption = "GreenSword",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 434, Text = "Далее" },
@@ -6364,7 +6366,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 364, Text = "Есть меч Зеленого рыцаря" },
+                    new Option { Destination = 364, Text = "Есть меч Зеленого рыцаря", OnlyIf = "GreenSword" },
                     new Option { Destination = 494, Text = "Нет меча" },
                 }
             },
