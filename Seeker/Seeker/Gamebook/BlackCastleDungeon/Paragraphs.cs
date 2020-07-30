@@ -75,6 +75,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [5] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ПЛАВАНИЯ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 216, Text = "К острову" },
@@ -133,6 +142,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Name = "Endurance",
                         Value = -2,
                     },
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ КОПИИ",
+                    },
                 },
 
                 Options = new List<Option>
@@ -154,6 +168,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [9] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 222, Text = "Далее" },
@@ -498,6 +521,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [36] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СИЛЫ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 183, Text = "Далее" },
@@ -530,6 +562,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     {
                         Name = "Endurance",
                         Value = -2,
+                    },
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ОГНЯ",
                     },
                 },
 
@@ -596,6 +633,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [41] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ОГНЯ",
+                    },
+                },
+
                 Actions = new List<Actions>
                 {
                     new Actions
@@ -788,6 +834,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [58] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СИЛЫ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 40, Text = "Далее" },
@@ -818,6 +873,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [62] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 457, Text = "Амулет" },
@@ -1040,6 +1104,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [85] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СИЛЫ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 569, Text = "Сражайтесь" },
@@ -1055,6 +1128,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [87] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 331, Text = "Дальше в обход" },
@@ -1155,6 +1237,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [96] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ОГНЯ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 241, Text = "Дальше по коридору" },
@@ -1235,6 +1326,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [103] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 424, Text = "Далее" },
@@ -1249,6 +1349,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [105] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 413, Text = "К острову" },
@@ -1317,6 +1426,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Name = "Endurance",
                         Value = -2,
                     },
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ КОПИИ",
+                    },
                 },
 
                 Options = new List<Option>
@@ -1326,6 +1440,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [112] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ОГНЯ",
+                    },
+                },
+
                 Actions = new List<Actions>
                 {
                     new Actions
@@ -1369,6 +1492,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [114] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ОГНЯ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
@@ -1868,6 +2000,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [164] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СИЛЫ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 487, Text = "Драться" },
@@ -1932,6 +2073,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [172] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СЛАБОСТИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 347, Text = "Далее" },
@@ -2262,6 +2412,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [200] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ИЛЛЮЗИИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 318, Text = "Осмотреть ларь в углу" },
@@ -2270,6 +2429,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [201] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ПЛАВАНИЯ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 192, Text = "Далее" },
@@ -2461,6 +2629,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [219] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СЛАБОСТИ",
+                    },
+                },
+
                 Actions = new List<Actions>
                 {
                     new Actions
@@ -2559,6 +2736,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [228] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СЛАБОСТИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 332, Text = "Уйти по дороге" },
@@ -2855,6 +3041,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [254] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ПЛАВАНИЯ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 366, Text = "Далее" },
@@ -2873,6 +3068,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [256] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СЛАБОСТИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 316, Text = "Далее" },
@@ -3064,6 +3268,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [273] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 39, Text = "Вернетесь обратно" },
@@ -3211,6 +3424,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [289] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СЛАБОСТИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 487, Text = "Далее" },
@@ -3218,6 +3440,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [290] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ОГНЯ",
+                    },
+                },
+
                 Actions = new List<Actions>
                 {
                     new Actions
@@ -3339,6 +3570,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [299] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СЛАБОСТИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 567, Text = "Далее" },
@@ -3531,6 +3771,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Name = "Endurance",
                         Value = -1,
                     },
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ПЛАВАНИЯ",
+                    },
                 },
 
                 Options = new List<Option>
@@ -3556,6 +3801,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [313] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ПЛАВАНИЯ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 222, Text = "Далее" },
@@ -3563,6 +3817,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [314] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СЛАБОСТИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 183, Text = "Далее" },
@@ -3806,6 +4069,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [334] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СЛАБОСТИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 99, Text = "Далее" },
@@ -4054,6 +4326,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [357] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СИЛЫ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 316, Text = "Далее" },
@@ -4161,6 +4442,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [370] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ИЛЛЮЗИИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 538, Text = "Заклятие Огня", OnlyIf = "ЗАКЛЯТИЕ ОГНЯ" },
@@ -4176,6 +4466,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [372] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ПЛАВАНИЯ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 424, Text = "Далее" },
@@ -4354,6 +4653,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [390] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СЛАБОСТИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 569, Text = "Далее" },
@@ -4394,6 +4702,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [395] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СИЛЫ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 567, Text = "Далее" },
@@ -4545,6 +4862,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [410] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СИЛЫ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 54, Text = "Далее" },
@@ -4621,6 +4947,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [417] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СИЛЫ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 326, Text = "Далее" },
@@ -4684,6 +5019,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [425] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 614, Text = "Наложить еще одно заклятие Левитации или Плавания" },
@@ -4937,6 +5281,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [451] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ОГНЯ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 454, Text = "Далее" },
@@ -5163,6 +5516,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [476] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СИЛЫ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 347, Text = "Далее" },
@@ -5236,6 +5598,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [483] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 39, Text = "Вернуться обратно" },
@@ -5424,6 +5795,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [499] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ОГНЯ",
+                    },
+                },
+
                 Actions = new List<Actions>
                 {
                     new Actions
@@ -5496,6 +5876,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [506] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ОГНЯ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 100, Text = "Далее" },
@@ -5511,6 +5900,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [508] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ЛЕВИТАЦИИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 366, Text = "Далее" },
@@ -5660,6 +6058,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     {
                         Name = "Endurance",
                         Value = -2,
+                    },
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ОГНЯ",
                     },
                 },
 
@@ -5876,6 +6279,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [538] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ОГНЯ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 370, Text = "Заклятье Иллюзии", OnlyIf = "ЗАКЛЯТИЕ ИЛЛЮЗИИ" },
@@ -5941,6 +6353,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [541] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ОГНЯ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 364, Text = "Есть меч Зеленого рыцаря" },
@@ -6107,6 +6528,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [557] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ ОГНЯ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 120, Text = "Осмотреть домик" },
@@ -6203,6 +6633,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [564] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СЛАБОСТИ",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 480, Text = "Далее" },
@@ -6421,6 +6860,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [580] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "RemoveSpell",
+                        ValueString = "ЗАКЛЯТИЕ СЛАБОСТИ",
+                    },
+                },
+
                 Actions = new List<Actions>
                 {
                     new Actions
