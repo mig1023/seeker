@@ -2123,14 +2123,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [176] = new Paragraph
             {
-                //OpenOption = "Banana",
+                OpenOption = "Banana",
 
                 Actions = new List<Actions>
                 {
                     new Actions
                     {
                         ActionName = "Get",
-                        Text = "ЯБЛОКО",
+                        Text = "ЯБЛОКО, 1 золотой",
                         ButtonName = "Купить яблоко",
                         Price = 1,
                         
@@ -2139,15 +2139,74 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             Name = "Endurance",
                             Value = 1,
                         },
+
+                        Aftertext = "добавит 1 ВЫНОСЛИВОСТЬ",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "МАНДАРИН, 2 золотых",
+                        ButtonName = "Купить мандарин",
+                        Price = 2,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Endurance",
+                            Value = 2,
+                        },
+
+                        Aftertext = "добавит 2 ВЫНОСЛИВОСТИ",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "АПЕЛЬСИН, 1 золотых",
+                        ButtonName = "Купить апельсин",
+                        Price = 1,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Endurance",
+                            Value = 1,
+                        },
+
+                        Aftertext = "добавит 1 ВЫНОСЛИВОСТЬ",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "БАНАН, 2 золотых",
+                        ButtonName = "Купить банан",
+                        Price = 2,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Endurance",
+                            Value = 2,
+                        },
+
+                        Aftertext = "добавит 2 ВЫНОСЛИВОСТИ",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "МОЛОКО, 2 золотых",
+                        ButtonName = "Купить молоко",
+                        Price = 2,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Endurance",
+                            Value = 3,
+                        },
+
+                        Aftertext = "прибавит 3 ВЫНОСЛИВОСТИ.\n\nЗа 4 золотых он предлагает наполнить вашу флягу целиком или за 2 — наполовину. Если вы хотите что-то купить — покупайте. Все, кроме молока и воды (если вам не в чем ее нести), можете съесть сразу же или взять с собой. Если хотите, можете купить еще и заплечный мешок — он стоит 8 золотых, но в него помещается больше, чем в ваш: не 7, а 9 предметов. Однако два заплечных мешка нести неудобно, и если свой у вас еще с собой, вы должны будете оставить его в доме у торговца. Теперь можете либо уходить, либо попробовать поговорить с ним еще.",
                     },
                 },
-
-
-
-
-
-
-
 
                 Options = new List<Option>
                 {
