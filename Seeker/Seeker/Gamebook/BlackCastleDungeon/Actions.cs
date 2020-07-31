@@ -19,6 +19,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         // Get
         public string Text { get; set; }
         public int Price { get; set; }
+        public bool Used { get; set; }
+        public Modification Benefit { get; set; }
         public bool ThisIsSpell { get; set; }
 
         public List<string> Do(out bool reload, string action = "")
@@ -51,7 +53,10 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public bool IsButtonEnabled()
         {
-            return (ThisIsSpell && (Character.Protagonist.SpellSlots <= 0) ? false : true);
+            bool enabledSpellButton = ThisIsSpell && (Character.Protagonist.SpellSlots > 0);
+            bool enabledGetOptions = (Price > 0) && !Used;
+
+            return enabledSpellButton || enabledGetOptions;
         }
 
         public static bool CheckOnlyIf(string option)
@@ -105,10 +110,18 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public List<string> Get()
         {
-            if (Character.Protagonist.SpellSlots >= 1)
+            if (ThisIsSpell && (Character.Protagonist.SpellSlots >= 1))
             {
                 Character.Protagonist.Spells.Add(Text);
                 Character.Protagonist.SpellSlots -= 1;
+            }
+            else if ((Price > 0) && (Character.Protagonist.Gold >= Price))
+            {
+                Character.Protagonist.Gold -= Price;
+
+                Used = true;
+
+                Benefit.Do();
             }
 
             return new List<string> { "RELOAD" };
