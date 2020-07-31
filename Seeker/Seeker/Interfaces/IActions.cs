@@ -13,7 +13,7 @@ namespace Seeker.Interfaces
 
         string Aftertext { get; set; }
 
-        List<string> Do(out bool reload, string action = "");
+        List<string> Do(out bool reload, string action = "", bool openOption = false);
 
         List<string> Status();
 

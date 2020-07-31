@@ -63,13 +63,7 @@ namespace Seeker
 
             this.Text.Text = (Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty);
 
-            if (!String.IsNullOrEmpty(paragraph.OpenOption))
-            {
-                string[] allOption = paragraph.OpenOption.Split(',');
-
-                foreach (string option in allOption)
-                    Game.Data.OpenedOption.Add(option.Trim());
-            }
+            Game.Option.OpenOption(paragraph.OpenOption);
 
             if ((paragraph.Modification != null) && (paragraph.Modification.Count > 0))
                 foreach(Interfaces.IModification modification in paragraph.Modification)
@@ -176,7 +170,7 @@ namespace Seeker
 
             actionPlace.Children.Clear();
 
-            List<string> actionResult = Game.Data.CurrentParagraph.Actions[actionIndex].Do(out bool reload);
+            List<string> actionResult = Game.Data.CurrentParagraph.Actions[actionIndex].Do(out bool reload, openOption: true);
 
             if (reload)
                 Paragraph(Game.Data.CurrentParagraphID, reload: true);

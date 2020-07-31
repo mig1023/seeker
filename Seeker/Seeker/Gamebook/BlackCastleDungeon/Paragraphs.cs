@@ -2123,8 +2123,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [176] = new Paragraph
             {
-                OpenOption = "Banana",
-
                 Actions = new List<Actions>
                 {
                     new Actions
@@ -2182,6 +2180,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         ButtonName = "Купить банан",
                         Price = 2,
 
+                        OpenOption = "Banana",
+
                         Benefit = new Modification
                         {
                             Name = "Endurance",
@@ -2210,7 +2210,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 106, Text = "Уходить" },
+                    new Option { Destination = 106, Text = "Уйти" },
                     new Option { Destination = 213, Text = "Поговорить с ним еще" },
                 }
             },
