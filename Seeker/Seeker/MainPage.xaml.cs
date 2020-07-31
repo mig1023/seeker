@@ -46,7 +46,7 @@ namespace Seeker
             Paragraph(0);
         }
 
-        public void Paragraph(int id)
+        public void Paragraph(int id, bool reload = false)
         {
             Game.Router.Clean();
 
@@ -119,7 +119,8 @@ namespace Seeker
                 Options.Children.Add(button);
             }
 
-            MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
+            if (!reload)
+                MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
 
             UpdateStatus();
             CheckGameOver();
@@ -178,7 +179,7 @@ namespace Seeker
             List<string> actionResult = Game.Data.CurrentParagraph.Actions[actionIndex].Do(out bool reload);
 
             if (reload)
-                Paragraph(Game.Data.CurrentParagraphID);
+                Paragraph(Game.Data.CurrentParagraphID, reload: true);
             else
             {
                 foreach (Label action in Game.Interface.Actions(actionResult))
