@@ -10,8 +10,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
     {
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#CC3366",
-            [ButtonTypes.Action] = "#CC0066",
+            [ButtonTypes.Main] = "#911",
+            [ButtonTypes.Action] = "#ba2020",
             [ButtonTypes.Option] = "#696969",
         };
 
@@ -22,7 +22,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public string GetStatusBarColor()
         {
-            return "#CC3366";
+            return "#870808";
         }
     }
 }

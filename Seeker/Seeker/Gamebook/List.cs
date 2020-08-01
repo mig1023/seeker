@@ -28,8 +28,8 @@ namespace Seeker.Gamebook
                 Paragraphs = new FaithfulSwordOfTheKing.Paragraphs(),
                 Actions = new FaithfulSwordOfTheKing.Actions(),
                 Constants = new FaithfulSwordOfTheKing.Constants(),
-                Disclaimer = "Браславский Дмитрий",
-                BookColor = "#FF6699",
+                Disclaimer = "Браславский Дмитрий, 1995",
+                BookColor = "#911",
             },
         };
 
