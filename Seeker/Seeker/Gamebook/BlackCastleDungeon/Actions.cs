@@ -127,7 +127,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 if (!Multiple)
                     Used = true;
 
-                Benefit.Do();
+                if (Benefit != null)
+                    Benefit.Do();
             }
 
             return new List<string> { "RELOAD" };
