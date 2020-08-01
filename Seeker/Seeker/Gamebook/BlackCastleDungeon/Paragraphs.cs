@@ -46,6 +46,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 86, Text = "По правой" },
                     new Option { Destination = 110, Text = "По левой" },
+                     new Option { Destination = 448, Text = "ТЕСТ" },
                 }
             },
             [2] = new Paragraph
@@ -125,6 +126,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     {
                         Name = "Luck",
                         Value = -1,
+                    },
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 1,
                     },
                 },
 
@@ -5336,16 +5342,100 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [448] = new Paragraph
             {
-                Modification = new List<Modification>
+                Actions = new List<Actions>
                 {
-                    new Modification
+                    new Actions
                     {
-                        Name = "Endurance",
-                        Value = 5,
+                        ActionName = "Get",
+                        Text = "АНАНАС, 2 золотых",
+                        ButtonName = "Купить ананас",
+                        Price = 2,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Endurance",
+                            Value = 3,
+                        },
+
+                        Aftertext = "добавит 3 ВЫНОСЛИВОСТЬ.",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "БАНАН, 2 золотых",
+                        ButtonName = "Купить банан",
+                        Price = 2,
+                        Multiple = true,
+
+                        OpenOption = "Banana",
+
+                        Benefit = new Modification
+                        {
+                            Name = "Endurance",
+                            Value = 2,
+                        },
+
+                        Aftertext = "добавит 2 ВЫНОСЛИВОСТИ.\n\nНо он притащил еще и кучу вещей, которые, как он считает, могут пригодиться в дороге.",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "КРАСИВЫЙ КУСОЧЕК ДЕРЕВА, 1 золотой",
+                        ButtonName = "Купить кусок дерева",
+                        Price = 1,
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ФИГУРНЫЙ КЛЮЧ, 2 золотых",
+                        ButtonName = "Купить ключ",
+                        Price = 2,
+
+                        OpenOption = "CurlyKey",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПОПОНА ДЛЯ ЛОШАДИ, 5 золотых",
+                        ButtonName = "Купить попну",
+                        Price = 5,
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "БЛЕСТЯЩИЙ КУСОК МЕТАЛЛА, 3 золотых",
+                        ButtonName = "Купить кусок металла",
+                        Price = 3,
+
+                        OpenOption = "PieceOfMetal",
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "СДЕЛАННУЮ ИЗ ЗОЛОТА УСТРИЦУ, 8 золотых",
+                        ButtonName = "Купить устрицу",
+                        Price = 8,
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "СЕРЕБРЯНЫЙ БРАСЛЕТ, 4 золотых",
+                        ButtonName = "Купить браслет",
+                        Price = 4,
+
+                        OpenOption = "SilverBracelet",
+
+                        Aftertext = "Сделайте необходимые покупки и покиньте деревню по одной из дорог: на юг или на запад.",
                     },
                 },
-
-                OpenOption = "CurlyKey, Banana, PieceOfMetal, SilverBracelet",
 
                 Options = new List<Option>
                 {
