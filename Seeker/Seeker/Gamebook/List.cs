@@ -19,6 +19,18 @@ namespace Seeker.Gamebook
                 Disclaimer = "Браславский Дмитрий, 1991",
                 BookColor = "#4682B4",
             },
+
+            ["Верная шпага короля"] = new Description
+            {
+                XmlBook = "FaithfulSwordOfTheKing.xml",
+                Protagonist = FaithfulSwordOfTheKing.Character.Protagonist.Init,
+                CheckOnlyIf = FaithfulSwordOfTheKing.Actions.CheckOnlyIf,
+                Paragraphs = new FaithfulSwordOfTheKing.Paragraphs(),
+                Actions = new FaithfulSwordOfTheKing.Actions(),
+                Constants = new FaithfulSwordOfTheKing.Constants(),
+                Disclaimer = "Браславский Дмитрий",
+                BookColor = "#FF6699",
+            },
         };
 
         public static List<string> GetBooks()
