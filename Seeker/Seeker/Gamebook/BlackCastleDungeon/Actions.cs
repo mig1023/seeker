@@ -21,6 +21,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public string Text { get; set; }
         public int Price { get; set; }
         public bool Used { get; set; }
+        public bool Multiple { get; set; }
         public Modification Benefit { get; set; }
         public bool ThisIsSpell { get; set; }
 
@@ -123,7 +124,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Character.Protagonist.Gold -= Price;
 
-                Used = true;
+                if (!Multiple)
+                    Used = true;
 
                 Benefit.Do();
             }

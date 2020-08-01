@@ -2131,6 +2131,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Text = "ЯБЛОКО, 1 золотой",
                         ButtonName = "Купить яблоко",
                         Price = 1,
+                        Multiple = true,
                         
                         Benefit = new Modification
                         {
@@ -2147,6 +2148,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Text = "МАНДАРИН, 2 золотых",
                         ButtonName = "Купить мандарин",
                         Price = 2,
+                        Multiple = true,
 
                         Benefit = new Modification
                         {
@@ -2163,6 +2165,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Text = "АПЕЛЬСИН, 1 золотых",
                         ButtonName = "Купить апельсин",
                         Price = 1,
+                        Multiple = true,
 
                         Benefit = new Modification
                         {
@@ -2179,6 +2182,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Text = "БАНАН, 2 золотых",
                         ButtonName = "Купить банан",
                         Price = 2,
+                        Multiple = true,
 
                         OpenOption = "Banana",
 
@@ -2588,12 +2592,21 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [209] = new Paragraph
             {
-                Modification = new List<Modification>
+                Actions = new List<Actions>
                 {
-                    new Modification
+                    new Actions
                     {
-                        Name = "Endurance",
-                        Value = 2,
+                        ActionName = "Get",
+                        Text = "РЫБА, 1 золотой",
+                        ButtonName = "Купить порцию",
+                        Price = 1,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Endurance",
+                            Value = 2,
+                        },
                     },
                 },
 
