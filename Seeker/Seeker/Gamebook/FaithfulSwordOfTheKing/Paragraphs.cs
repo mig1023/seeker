@@ -1753,6 +1753,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [189] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ОХРАННИК",
+                                Skill = 7,
+                                Strength = 9,
+                            },
+                        },
+
+                        RoundsToWin = 5,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 586, Text = "Если вы убили его за 5 раундов атаки" },
@@ -1967,6 +1988,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [217] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ВСАДНИК",
+                                Skill = 8,
+                                Strength = 8,
+                            },
+                        },
+
+                        RoundsToWin = 4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 108, Text = "Если вы убили его за 4 раунда атаки" },
@@ -1990,6 +2032,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [220] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ШЕВАЛЬЕ ДО МИШУАР",
+                                Skill = 9,
+                                Strength = 8,
+                            },
+                        },
+
+                        Aftertext = "Если вы выйдете из схватки победителем, то можете либо убить шевалье, сорвав на нём свою злость, либо попытаться распросить его.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 290, Text = "Убить шевалье" },
