@@ -8,23 +8,45 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
     {
         public static Character Protagonist = new Gamebook.FaithfulSwordOfTheKing.Character();
 
+        public enum MeritalArts { SecretBlow, SwordAndDagger, TwoPistols, LefthandFencing, Swimming, Nope };
+
         public string Name { get; set; }
 
-        public int Mastery { get; set; }
-        public int Endurance { get; set; }
-        public int Luck { get; set; }
-        public int Gold { get; set; }
-        public List<string> Spells { get; set; }
-        public int SpellSlots { get; set; }
+        public int Skill { get; set; }
+        public int Strength { get; set; }
+        public int Honor { get; set; }
+        public int Day { get; set; }
+        public double Ecu { get; set; }
+        public MeritalArts MeritalArt { get; set; }
 
         public void Init()
         {
-            Mastery = Game.Dice.Roll() + 6;
-            Endurance = Game.Dice.Roll(dices: 2) + 12;
-            Luck = Game.Dice.Roll() + 6;
-            Gold = 15;
-            SpellSlots = 10;
-            Spells = new List<string>();
+            Dictionary<int, int> Skills = new Dictionary<int, int>
+            {
+                [1] = 12,
+                [2] = 8,
+                [3] = 10,
+                [4] = 7,
+                [5] = 9,
+                [6] = 11
+            };
+
+            Dictionary<int, int> Strengths = new Dictionary<int, int>
+            {
+                [1] = 22,
+                [2] = 18,
+                [3] = 14,
+                [4] = 24,
+                [5] = 16,
+                [6] = 20
+            };
+
+            Skill = Skills[Game.Dice.Roll()];
+            Strength = Strengths[Game.Dice.Roll()];
+            Honor = 3;
+            Day = 1;
+            Ecu = 15;
+            MeritalArt = MeritalArts.Nope;
         }
     }
 }

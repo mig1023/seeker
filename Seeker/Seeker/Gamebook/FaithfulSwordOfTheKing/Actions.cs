@@ -23,7 +23,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public bool Used { get; set; }
         public bool Multiple { get; set; }
         public Modification Benefit { get; set; }
-        public bool ThisIsSpell { get; set; }
+        public Character.MeritalArts? MeritalArt { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool openOption = false)
         {
@@ -42,10 +42,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Мастерство: {0}", Character.Protagonist.Mastery),
-                String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
-                String.Format("Удача: {0}", Character.Protagonist.Luck),
-                String.Format("Золото: {0}", Character.Protagonist.Gold)
+                String.Format("Ловкость: {0}", Character.Protagonist.Skill),
+                String.Format("Сила: {0}", Character.Protagonist.Strength),
+                String.Format("Честь: {0}", Character.Protagonist.Honor),
+                String.Format("День: {0}", Character.Protagonist.Day),
+                String.Format("Экю: {0}", Character.Protagonist.Ecu)
             };
 
             return statusLines;
@@ -53,12 +54,12 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public bool GameOver()
         {
-            return (Character.Protagonist.Endurance <= 0 ? true : false);
+            return ((Character.Protagonist.Strength <= 0) || (Character.Protagonist.Honor <= 0) ? true : false);
         }
 
         public bool IsButtonEnabled()
         {
-            bool disabledSpellButton = ThisIsSpell && (Character.Protagonist.SpellSlots <= 0);
+            bool disabledSpellButton = (MeritalArt != null) && (Character.Protagonist.MeritalArt != Character.MeritalArts.Nope);
             bool disabledGetOptions = (Price > 0) && Used;
 
             return !(disabledSpellButton || disabledGetOptions);
@@ -66,8 +67,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public static bool CheckOnlyIf(string option)
         {
-            if (option.Contains("ЗАКЛЯТИЕ"))
-                return Character.Protagonist.Spells.Contains(option);
+            if (option == Character.Protagonist.MeritalArt.ToString())
+                return true;
             else
                 return Game.Data.OpenedOption.Contains(option);
         }
@@ -76,53 +77,32 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             List<string> enemies = new List<string>();
 
-            if (ActionName == "Get")
-            {
-                string countMarker = String.Empty;
-
-                if (ThisIsSpell)
-                {
-                    int count = 0;
-
-                    foreach (string spell in Character.Protagonist.Spells)
-                        if (spell == Text)
-                            count += 1;
-
-                    if (count > 0)
-                        countMarker = String.Format(" (x{0})", count);
-                }
-
-                return new List<string> { String.Format("{0}{1}", Text, countMarker) };
-            }
+            if ((ActionName == "Get") && (MeritalArt != null))
+                return new List<string> { Text };
 
             if (Enemies == null)
                 return enemies;
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance));
+                enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", enemy.Name, enemy.Skill, enemy.Strength));
 
             return enemies;
         }
 
         public List<string> Luck()
         {
-            bool goodLuck = Game.Dice.Roll(dices: 2) < Character.Protagonist.Luck;
-
-            Character.Protagonist.Luck -= 1;
+            bool goodLuck = Game.Dice.Roll() % 2 == 0;
 
             return new List<string> { (goodLuck ? "BIG|HEAD|GOOD|УСПЕХ :)" : "BIG|HEAD|BAD|НЕУДАЧА :(") };
         }
 
         public List<string> Get()
         {
-            if (ThisIsSpell && (Character.Protagonist.SpellSlots >= 1))
+            if ((MeritalArt != null) && (Character.Protagonist.MeritalArt == Character.MeritalArts.Nope))
+                Character.Protagonist.MeritalArt = MeritalArt ?? Character.MeritalArts.Nope;
+            else if ((Price > 0) && (Character.Protagonist.Ecu >= Price))
             {
-                Character.Protagonist.Spells.Add(Text);
-                Character.Protagonist.SpellSlots -= 1;
-            }
-            else if ((Price > 0) && (Character.Protagonist.Gold >= Price))
-            {
-                Character.Protagonist.Gold -= Price;
+                Character.Protagonist.Ecu -= Price;
 
                 if (!Multiple)
                     Used = true;
@@ -147,31 +127,31 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 foreach (Character enemy in Enemies)
                 {
-                    if (enemy.Endurance <= 0)
+                    if (enemy.Strength <= 0)
                         continue;
 
-                    fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
+                    fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Strength));
 
-                    int protagonistHitStrength = Game.Dice.Roll(dices: 2) + Character.Protagonist.Mastery;
+                    int protagonistHitStrength = Game.Dice.Roll(dices: 2) + Character.Protagonist.Skill;
                     fight.Add(String.Format("Сила вашего удара: {0}", protagonistHitStrength));
 
-                    int enemyHitStrength = Game.Dice.Roll(dices: 2) + enemy.Mastery;
+                    int enemyHitStrength = Game.Dice.Roll(dices: 2) + enemy.Skill;
                     fight.Add(String.Format("Сила его удара: {0}", enemyHitStrength));
 
                     if (protagonistHitStrength > enemyHitStrength)
                     {
                         fight.Add(String.Format("GOOD|Вы ранили противника"));
-                        enemy.Endurance -= 2;
+                        enemy.Strength -= 2;
 
-                        if (enemy.Endurance <= 0)
-                            enemy.Endurance = 0;
+                        if (enemy.Strength <= 0)
+                            enemy.Strength = 0;
 
                         enemyWounds += 1;
 
                         bool enemyLost = true;
 
                         foreach (Character e in Enemies)
-                            if (e.Endurance > 0)
+                            if (e.Strength > 0)
                                 enemyLost = false;
 
                         if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
@@ -184,12 +164,12 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
                         fight.Add(String.Format("BAD|Противник ранил вас"));
-                        Character.Protagonist.Endurance -= 2;
+                        Character.Protagonist.Strength -= 2;
 
-                        if (Character.Protagonist.Endurance < 0)
-                            Character.Protagonist.Endurance = 0;
+                        if (Character.Protagonist.Strength < 0)
+                            Character.Protagonist.Strength = 0;
 
-                        if (Character.Protagonist.Endurance <= 0)
+                        if (Character.Protagonist.Strength <= 0)
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BAD|Вы ПРОИГРАЛИ :("));
