@@ -2076,6 +2076,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [223] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 421, Text = "Удачлив" },
@@ -2110,6 +2119,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [227] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 432, Text = "Удачлив" },
@@ -2118,6 +2136,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [228] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ХОЗЯИН ДОМА",
+                            Skill = 8,
+                            Strength = 10,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 503, Text = "Далее" },
@@ -2125,6 +2159,34 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [229] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ БРОДЯГА",
+                            Skill = 6,
+                            Strength = 8,
+                        },
+                        new Character
+                        {
+                            Name = "ВТОРОЙ БРОДЯГА",
+                            Skill = 7,
+                            Strength = 8,
+                        },
+                        new Character
+                        {
+                            Name = "ТРЕТИЙ БРОДЯГА",
+                            Skill = 7,
+                            Strength = 10,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 47, Text = "Далее" },
@@ -2229,10 +2291,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [243] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "НЕИЗВЕСТНЫЙ",
+                            Skill = 11,
+                            Strength = 12,
+                        },
+                    },
+
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 412, Text = "Если вы уменьшили его СИЛУ до 2, то 412" },
-                    new Option { Destination = 521, Text = ", если же он — вашу, то можете либо воззвать к Богу" },
+                    new Option { Destination = 412, Text = "Если вы победили" },
+                    new Option { Destination = 521, Text = "Если он, то можете воззвать к Богу" },
                 }
             },
             [244] = new Paragraph
@@ -2252,6 +2331,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [246] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ВЕПРЬ",
+                            Skill = 10,
+                            Strength = 12,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 446, Text = "Далее" },
@@ -2266,13 +2361,51 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [248] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ДВОРЯНИН",
+                            Skill = 9,
+                            Strength = 10,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 408, Text = "ЕДалее" },
+                    new Option { Destination = 408, Text = "Далее" },
                 }
             },
             [249] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ ВСАДНИК",
+                            Skill = 8,
+                            Strength = 9,
+                        },
+                        new Character
+                        {
+                            Name = "ВТОРОЙ ВСАДНИК",
+                            Skill = 8,
+                            Strength = 8,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 436, Text = "Далее" },
@@ -2314,6 +2447,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [254] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 522, Text = "Повезло" },
@@ -2397,9 +2539,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [265] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ЛЕГИСТ",
+                            Skill = 12,
+                            Strength = 14,
+                        },
+
+                        WoundsToWin = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 78, Text = "Далее" },
+                    new Option { Destination = 78, Text = "Если удалось ранить его три раза" },
                 }
             },
             [266] = new Paragraph
@@ -2460,6 +2620,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [273] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ЛЕГИСТ",
+                            Skill = 7,
+                            Strength = 8,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 200, Text = "Далее" },
@@ -2622,6 +2798,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [294] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 371, Text = "Удачливы" },
@@ -2630,6 +2815,24 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [295] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ЛЕГИСТ",
+                            Skill = 12,
+                            Strength = 14,
+                        },
+                    },
+
+                    WoundsToWin = 3,
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 78, Text = "Далее" },
@@ -2676,6 +2879,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [301] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ШЕВАЛЬЕ ДЕ БУАЗО",
+                            Skill = 8,
+                            Strength = 8,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 589, Text = "Далее" },
@@ -2728,6 +2947,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [308] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 277, Text = "Удачливы" },
@@ -2857,6 +3085,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [325] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 537, Text = "Удачливы" },
@@ -2896,6 +3133,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [330] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 234, Text = "Удачливы" },
@@ -2918,6 +3164,28 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [333] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ СЛУГА",
+                            Skill = 6,
+                            Strength = 8,
+                        },
+                        new Character
+                        {
+                            Name = "ВТОРОЙ СЛУГА",
+                            Skill = 6,
+                            Strength = 7,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 411, Text = "Далее" },
@@ -3004,9 +3272,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [344] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "БРОДЯГА",
+                            Skill = 8,
+                            Strength = 6,
+                        },
+
+                        RoundsToWin = 4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 251, Text = "Если вы убили его за 4 раунда атаки" },
+                    new Option { Destination = 251, Text = "Если вы убили его за 4 раунда" },
                     new Option { Destination = 523, Text = "Если нет" },
                 }
             },
@@ -3248,6 +3534,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [376] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ВТОРОЙ КАВАЛЕРИСТ",
+                            Skill = 7,
+                            Strength = 8,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 126, Text = "Далее" },
@@ -3285,6 +3587,28 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [381] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ ЧЕЛОВЕК С ТОПОРОМ",
+                            Skill = 8,
+                            Strength = 8,
+                        },
+                        new Character
+                        {
+                            Name = "ВТОРОЙ ЧЕЛОВЕК С ТОПОРОМ",
+                            Skill = 7,
+                            Strength = 6,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 243, Text = "Далее" },
@@ -3340,6 +3664,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [388] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 632, Text = "Удачливы" },
@@ -3401,6 +3734,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [396] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ЧАСОВОЙ",
+                            Skill = 7,
+                            Strength = 8,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 594, Text = "Если вы успели расправиться с ним за 4 раунда атаки" },
@@ -3409,6 +3758,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [397] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ШЕВАЛЬЕ ДЕ МИШУАР",
+                            Skill = 9,
+                            Strength = 8,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 65, Text = "Далее" },
@@ -3423,6 +3788,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [399] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 634, Text = "Удачливы" },
@@ -3509,6 +3883,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [410] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 342, Text = "Удачливы" },
@@ -3609,6 +3992,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [423] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 281, Text = "Удачливы" },
@@ -3674,6 +4066,28 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [432] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ СОЛДАТ",
+                            Skill = 6,
+                            Strength = 6,
+                        },
+                        new Character
+                        {
+                            Name = "ВТОРОЙ СОЛДАТ",
+                            Skill = 7,
+                            Strength = 6,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 372, Text = "Далее" },
@@ -3719,6 +4133,28 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [438] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ МОНАХ",
+                            Skill = 7,
+                            Strength = 8,
+                        },
+                        new Character
+                        {
+                            Name = "ВТОРОЙ МОНАХ",
+                            Skill = 7,
+                            Strength = 7,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 388, Text = "Далее" },
@@ -3816,6 +4252,28 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [451] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ВОЛК",
+                            Skill = 7,
+                            Strength = 10,
+                        },
+                        new Character
+                        {
+                            Name = "ВОЛЧИЦА",
+                            Skill = 6,
+                            Strength = 8,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 184, Text = "Далее" },
@@ -3910,6 +4368,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [463] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 647, Text = "Удачливы" },
@@ -3918,6 +4385,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [464] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ГЕРЦОГ ДЕ ЛАВЕЛЕТТ",
+                            Skill = 6,
+                            Strength = 14,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 318, Text = "Далее" },
@@ -3954,6 +4437,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [469] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 648, Text = "Удачливы" },
@@ -4127,6 +4619,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [492] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 108, Text = "Удачливы" },
@@ -4142,11 +4643,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [494] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ГРАФ МОРТОН",
+                            Skill = 10,
+                            Strength = 12,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 347, Text = "Сохранить ему жизнь" },
                     new Option { Destination = 384, Text = "Прикончить свидетеля вашей глупой ошибки" },
-                    new Option { Destination = 36, Text = "Если же у вас осталось 2 СИЛЫ или меньше" },
+                    new Option { Destination = 36, Text = "Если вы проиграли" },
                 }
             },
             [495] = new Paragraph
@@ -4165,6 +4682,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [497] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 85, Text = "Удачливы" },
@@ -4269,6 +4795,28 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [510] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ УБИЙЦА",
+                            Skill = 9,
+                            Strength = 8,
+                        },
+                        new Character
+                        {
+                            Name = "ВТОРОЙ УБИЙЦА",
+                            Skill = 8,
+                            Strength = 7,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 40, Text = "Далее" },
@@ -4297,6 +4845,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [514] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 383, Text = "Повезло" },
@@ -4319,6 +4876,28 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [517] = new Paragraph
             {
+                 new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ СОЛДАТ",
+                            Skill = 7,
+                            Strength = 8,
+                        },
+                        new Character
+                        {
+                            Name = "ВТОРОЙ СОЛДАТ",
+                            Skill = 6,
+                            Strength = 8,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 143, Text = "Далее" },
@@ -4333,6 +4912,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [519] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ГРАФ МОРТОН",
+                            Skill = 10,
+                            Strength = 12,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 384, Text = "Далее" },
@@ -4362,6 +4957,34 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [523] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ ОБОРВАНЕЦ",
+                            Skill = 6,
+                            Strength = 8,
+                        },
+                        new Character
+                        {
+                            Name = "ВТОРОЙ ОБОРВАНЕЦ",
+                            Skill = 7,
+                            Strength = 8,
+                        },
+                        new Character
+                        {
+                            Name = "ТРЕТИЙ ОБОРВАНЕЦ",
+                            Skill = 7,
+                            Strength = 10,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 47, Text = "Далее" },
@@ -4427,6 +5050,28 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [532] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПЕРВЫЙ КАВАЛЕРИСТ",
+                            Skill = 7,
+                            Strength = 9,
+                        },
+                        new Character
+                        {
+                            Name = "ВТОРОЙ КАВАЛЕРИСТ",
+                            Skill = 7,
+                            Strength = 8,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 126, Text = "Далее" },
@@ -4434,6 +5079,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [533] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "СОЛДАТ",
+                            Skill = 7,
+                            Strength = 8,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 63, Text = "Далее" },
@@ -4466,6 +5127,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [537] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ВТОРОЙ ВСАДНИК",
+                            Skill = 8,
+                            Strength = 10,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 326, Text = "Далее" },
@@ -4619,6 +5296,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [557] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 185, Text = "Фортуна с вами" },
@@ -4759,6 +5445,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [575] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "МОЛОДОЙ ДВОРЯНИН",
+                            Skill = 8,
+                            Strength = 8,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 296, Text = "Далее" },
@@ -4796,6 +5498,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [580] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 297, Text = "Повезло" },
@@ -5067,6 +5778,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [616] = new Paragraph
             {
+                 new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ГОНЕЦ",
+                            Skill = 7,
+                            Strength = 8,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 277, Text = "Далее" },
@@ -5081,6 +5808,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [618] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 303, Text = "Удачливы" },
@@ -5337,6 +6073,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [652] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "ПОСЛАНЕЦ ГУБЕРНАТОРА",
+                            Skill = 9,
+                            Strength = 8,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 476, Text = "Подчинитесь" },
@@ -5373,6 +6125,24 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [657] = new Paragraph
             {
+                new Actions
+                {
+                    ActionName = "Fight",
+                    ButtonName = "Сражаться",
+
+                    Enemies = new List<Character>
+                    {
+                        new Character
+                        {
+                            Name = "МЕДВЕДЬ",
+                            Skill = 1,
+                            Strength = 8,
+                        },
+
+                        Aftertext = "Если вы ещё живы, возвращайтесь обратно и торопитесь в Орлеан: опасность давно уже миновала.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 473, Text = "Попытаетесь убежать" },
