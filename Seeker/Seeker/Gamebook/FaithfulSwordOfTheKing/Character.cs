@@ -18,6 +18,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int Day { get; set; }
         public double Ecu { get; set; }
         public MeritalArts MeritalArt { get; set; }
+        public int Horses { get; set; }
+        public int Pistols { get; set; }
+        public int BulletsAndGubpowder { get; set; }
+        public int Daggers { get; set; }
+
 
         public void Init()
         {
@@ -47,6 +52,10 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             Day = 1;
             Ecu = 1500;
             MeritalArt = MeritalArts.Nope;
+            Horses = 1;
+            Pistols = 2;
+            BulletsAndGubpowder = 5;
+            Daggers = 0;
         }
     }
 }

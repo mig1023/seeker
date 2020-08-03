@@ -114,12 +114,55 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return new List<string> { "RELOAD" };
         }
 
+        private bool NoMoreEnemies(List<Character> enemies)
+        {
+            foreach (Character enemy in Enemies)
+                if (enemy.Strength > 0)
+                    return false;
+
+            return true;
+        }
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
 
             int round = 1;
             int enemyWounds = 0;
+            int shoots = 0;
+
+            Character hero = Character.Protagonist;
+
+            if ((hero.MeritalArt == Character.MeritalArts.TwoPistols) && (hero.Pistols > 1) && (hero.BulletsAndGubpowder > 1))
+                shoots = 2;
+            else if ((hero.Pistols > 0) && (hero.BulletsAndGubpowder > 0))
+                shoots = 1;
+
+            for(int pistol = 1; pistol <= shoots; pistol++)
+            {
+                if (NoMoreEnemies(Enemies))
+                    continue;
+
+                bool hit = Game.Dice.Roll() % 2 == 0;
+
+                fight.Add(String.Format("Выстрел из {0}пистолета: {1}", (shoots > 1 ? String.Format("{0} ", pistol) : ""), (hit ? "попал" : "промах")));
+
+                if (hit)
+                {
+                    foreach (Character enemy in Enemies)
+                        if (enemy.Strength > 0)
+                        {
+                            fight.Add(String.Format("GOOD|{0} убит", enemy.Name));
+                            enemy.Strength = 0;
+                        }
+                }
+            }
+
+            if (NoMoreEnemies(Enemies))
+                return fight;
+
+            if (shoots > 0)
+                fight.Add(String.Empty);
 
             while (true)
             {
@@ -132,7 +175,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                     fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Strength));
 
-                    int protagonistHitStrength = Game.Dice.Roll(dices: 2) + Character.Protagonist.Skill;
+                    int protagonistHitStrength = Game.Dice.Roll(dices: 2) + hero.Skill;
                     fight.Add(String.Format("Сила вашего удара: {0}", protagonistHitStrength));
 
                     int enemyHitStrength = Game.Dice.Roll(dices: 2) + enemy.Skill;
@@ -140,7 +183,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                     if (protagonistHitStrength > enemyHitStrength)
                     {
-                        fight.Add(String.Format("GOOD|Вы ранили противника"));
+                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
                         enemy.Strength -= 2;
 
                         if (enemy.Strength <= 0)
@@ -148,11 +191,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                         enemyWounds += 1;
 
-                        bool enemyLost = true;
-
-                        foreach (Character e in Enemies)
-                            if (e.Strength > 0)
-                                enemyLost = false;
+                        bool enemyLost = NoMoreEnemies(Enemies);
 
                         if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                         {
@@ -163,13 +202,13 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|Противник ранил вас"));
-                        Character.Protagonist.Strength -= 2;
+                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+                        hero.Strength -= 2;
 
-                        if (Character.Protagonist.Strength < 0)
-                            Character.Protagonist.Strength = 0;
+                        if (hero.Strength < 0)
+                                hero.Strength = 0;
 
-                        if (Character.Protagonist.Strength <= 0)
+                        if (hero.Strength <= 0)
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BAD|Вы ПРОИГРАЛИ :("));
