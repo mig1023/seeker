@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 
@@ -167,6 +168,14 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             while (true)
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
+
+                if (round == 1)
+                {
+                    Character enemy = Enemies.First();
+                    enemy.Strength -= 4;
+                    fight.Add(String.Format("Тайный удар шпагой: {0} теряет 4 силы, у него осталось {1}", enemy.Name, enemy.Strength));
+                    fight.Add(String.Empty);
+                }
 
                 foreach (Character enemy in Enemies)
                 {
