@@ -124,6 +124,33 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return true;
         }
 
+        private bool LuckyHit(int roll)
+        {
+            return Game.Dice.Roll() % 2 == 0;
+        }
+
+        private bool EnemyWound(Character hero, ref Character enemy,
+            int roll, int WoundsToWin, ref int enemyWounds, ref List<string> fight, bool daggerReversHit = false)
+        {
+            enemy.Strength -= ((hero.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(roll) && daggerReversHit ? 3 : 2);
+
+            if (enemy.Strength <= 0)
+                enemy.Strength = 0;
+
+            enemyWounds += 1;
+
+            bool enemyLost = NoMoreEnemies(Enemies);
+
+            if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
+            {
+                fight.Add(String.Empty);
+                fight.Add(String.Format("GOOD|Вы ПОБЕДИЛИ :)"));
+                return true;
+            }
+            else
+                return false;
+        }
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -144,7 +171,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 if (NoMoreEnemies(Enemies))
                     continue;
 
-                bool hit = Game.Dice.Roll() % 2 == 0;
+                bool hit = LuckyHit(Game.Dice.Roll());
 
                 fight.Add(String.Format("Выстрел из {0}пистолета: {1}", (shoots > 1 ? String.Format("{0} ", pistol) : ""), (hit ? "попал" : "промах")));
 
@@ -169,7 +196,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
-                if (round == 1)
+                if ((hero.MeritalArt == Character.MeritalArts.SecretBlow) && (round == 1))
                 {
                     Character enemy = Enemies.First();
                     enemy.Strength -= 4;
@@ -181,6 +208,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 {
                     if (enemy.Strength <= 0)
                         continue;
+
+                    Character enemyInThesFight = enemy;
 
                     fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Strength));
 
@@ -195,21 +224,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     if (protagonistHitStrength > enemyHitStrength)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
-                        enemy.Strength -= 2;
 
-                        if (enemy.Strength <= 0)
-                            enemy.Strength = 0;
-
-                        enemyWounds += 1;
-
-                        bool enemyLost = NoMoreEnemies(Enemies);
-
-                        if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
-                        {
-                            fight.Add(String.Empty);
-                            fight.Add(String.Format("GOOD|Вы ПОБЕДИЛИ :)"));
+                        if (EnemyWound(hero, ref enemyInThesFight, protagonistRoll, WoundsToWin, ref enemyWounds, ref fight))
                             return fight;
-                        }
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
@@ -225,6 +242,10 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                             fight.Add(String.Format("BAD|Вы ПРОИГРАЛИ :("));
                             return fight;
                         }
+
+                        if ((hero.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(protagonistRoll))
+                            if (EnemyWound(hero, ref enemyInThesFight, protagonistRoll, WoundsToWin, ref enemyWounds, ref fight, daggerReversHit: true))
+                                return fight;
                     }
                     else
                         fight.Add(String.Format("BOLD|Ничья в раунде"));
