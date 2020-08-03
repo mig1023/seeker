@@ -308,7 +308,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     new Modification
                     {
                         Name = "Ecu",
-                        Value = -0.5,
+                        Value = -50,
                     },
                 },
 
@@ -542,7 +542,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     new Modification
                     {
                         Name = "Ecu",
-                        Value = 8,
+                        Value = 800,
                     },
                     new Modification
                     {
@@ -700,7 +700,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     new Modification
                     {
                         Name = "Ecu",
-                        Value = 1,
+                        Value = 100,
                     },
                 },
 
@@ -836,7 +836,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     new Modification
                     {
                         Name = "Ecu",
-                        Value = 4.5,
+                        Value = 450,
                     },
                     new Modification
                     {
@@ -868,7 +868,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     new Modification
                     {
                         Name = "Ecu",
-                        Value = 7,
+                        Value = 700,
                     },
                 },
 
@@ -3022,7 +3022,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     new Modification
                     {
                         Name = "Ecu",
-                        Value = 1,
+                        Value = 100,
                     },
                 },
 
@@ -3767,6 +3767,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [360] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = 200,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 440, Text = "Далее" },

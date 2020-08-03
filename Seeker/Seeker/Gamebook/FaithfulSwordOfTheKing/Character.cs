@@ -45,7 +45,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             Strength = Strengths[Game.Dice.Roll()];
             Honor = 3;
             Day = 1;
-            Ecu = 15;
+            Ecu = 1500;
             MeritalArt = MeritalArts.Nope;
         }
     }
