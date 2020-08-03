@@ -2440,18 +2440,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [228] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ХОЗЯИН ДОМА",
-                            Skill = 8,
-                            Strength = 10,
+                            new Character
+                            {
+                                Name = "ХОЗЯИН ДОМА",
+                                Skill = 8,
+                                Strength = 10,
+                            },
                         },
                     },
                 },
@@ -2463,30 +2466,33 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [229] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ БРОДЯГА",
-                            Skill = 6,
-                            Strength = 8,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ БРОДЯГА",
-                            Skill = 7,
-                            Strength = 8,
-                        },
-                        new Character
-                        {
-                            Name = "ТРЕТИЙ БРОДЯГА",
-                            Skill = 7,
-                            Strength = 10,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ БРОДЯГА",
+                                Skill = 6,
+                                Strength = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ БРОДЯГА",
+                                Skill = 7,
+                                Strength = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ТРЕТИЙ БРОДЯГА",
+                                Skill = 7,
+                                Strength = 10,
+                            },
                         },
                     },
                 },
@@ -2595,21 +2601,23 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [243] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "НЕИЗВЕСТНЫЙ",
-                            Skill = 11,
-                            Strength = 12,
+                            new Character
+                            {
+                                Name = "НЕИЗВЕСТНЫЙ",
+                                Skill = 11,
+                                Strength = 12,
+                            },
                         },
                     },
-
                 },
 
                 Options = new List<Option>
@@ -2635,18 +2643,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [246] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ВЕПРЬ",
-                            Skill = 10,
-                            Strength = 12,
+                            new Character
+                            {
+                                Name = "ВЕПРЬ",
+                                Skill = 10,
+                                Strength = 12,
+                            },
                         },
                     },
                 },
@@ -2665,18 +2676,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [248] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ДВОРЯНИН",
-                            Skill = 9,
-                            Strength = 10,
+                            new Character
+                            {
+                                Name = "ДВОРЯНИН",
+                                Skill = 9,
+                                Strength = 10,
+                            },
                         },
                     },
                 },
@@ -2688,24 +2702,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [249] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ ВСАДНИК",
-                            Skill = 8,
-                            Strength = 9,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ ВСАДНИК",
-                            Skill = 8,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ВСАДНИК",
+                                Skill = 8,
+                                Strength = 9,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ВСАДНИК",
+                                Skill = 8,
+                                Strength = 8,
+                            },
                         },
                     },
                 },
@@ -2843,18 +2860,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [265] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ЛЕГИСТ",
-                            Skill = 12,
-                            Strength = 14,
+                            new Character
+                            {
+                                Name = "ЛЕГИСТ",
+                                Skill = 12,
+                                Strength = 14,
+                            },
                         },
 
                         WoundsToWin = 3,
@@ -2924,18 +2944,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [273] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ЛЕГИСТ",
-                            Skill = 7,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "ЛЕГИСТ",
+                                Skill = 7,
+                                Strength = 8,
+                            },
                         },
                     },
                 },
@@ -3128,22 +3151,25 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [295] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
-                        {
-                            Name = "ЛЕГИСТ",
-                            Skill = 12,
-                            Strength = 14,
-                        },
-                    },
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
 
-                    WoundsToWin = 3,
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ЛЕГИСТ",
+                                Skill = 12,
+                                Strength = 14,
+                            },
+                        },
+
+                        WoundsToWin = 3,
+                    },
                 },
 
                 Options = new List<Option>
@@ -3192,18 +3218,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [301] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ШЕВАЛЬЕ ДЕ БУАЗО",
-                            Skill = 8,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "ШЕВАЛЬЕ ДЕ БУАЗО",
+                                Skill = 8,
+                                Strength = 8,
+                            },
                         },
                     },
                 },
@@ -3477,24 +3506,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [333] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ СЛУГА",
-                            Skill = 6,
-                            Strength = 8,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ СЛУГА",
-                            Skill = 6,
-                            Strength = 7,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ СЛУГА",
+                                Skill = 6,
+                                Strength = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ СЛУГА",
+                                Skill = 6,
+                                Strength = 7,
+                            },
                         },
                     },
                 },
@@ -3585,18 +3617,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [344] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "БРОДЯГА",
-                            Skill = 8,
-                            Strength = 6,
+                            new Character
+                            {
+                                Name = "БРОДЯГА",
+                                Skill = 8,
+                                Strength = 6,
+                            },
                         },
 
                         RoundsToWin = 4,
@@ -3856,18 +3891,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [376] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ВТОРОЙ КАВАЛЕРИСТ",
-                            Skill = 7,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "ВТОРОЙ КАВАЛЕРИСТ",
+                                Skill = 7,
+                                Strength = 8,
+                            },
                         },
                     },
                 },
@@ -3909,24 +3947,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [381] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ ЧЕЛОВЕК С ТОПОРОМ",
-                            Skill = 8,
-                            Strength = 8,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ ЧЕЛОВЕК С ТОПОРОМ",
-                            Skill = 7,
-                            Strength = 6,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ЧЕЛОВЕК С ТОПОРОМ",
+                                Skill = 8,
+                                Strength = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ЧЕЛОВЕК С ТОПОРОМ",
+                                Skill = 7,
+                                Strength = 6,
+                            },
                         },
                     },
                 },
@@ -4056,18 +4097,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [396] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ЧАСОВОЙ",
-                            Skill = 7,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "ЧАСОВОЙ",
+                                Skill = 7,
+                                Strength = 8,
+                            },
                         },
                     },
                 },
@@ -4080,18 +4124,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [397] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ШЕВАЛЬЕ ДЕ МИШУАР",
-                            Skill = 9,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "ШЕВАЛЬЕ ДЕ МИШУАР",
+                                Skill = 9,
+                                Strength = 8,
+                            },
                         },
                     },
                 },
@@ -4388,24 +4435,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [432] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ СОЛДАТ",
-                            Skill = 6,
-                            Strength = 6,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ СОЛДАТ",
-                            Skill = 7,
-                            Strength = 6,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ СОЛДАТ",
+                                Skill = 6,
+                                Strength = 6,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ СОЛДАТ",
+                                Skill = 7,
+                                Strength = 6,
+                            },
                         },
                     },
                 },
@@ -4455,24 +4505,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [438] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ МОНАХ",
-                            Skill = 7,
-                            Strength = 8,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ МОНАХ",
-                            Skill = 7,
-                            Strength = 7,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ МОНАХ",
+                                Skill = 7,
+                                Strength = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ МОНАХ",
+                                Skill = 7,
+                                Strength = 7,
+                            },
                         },
                     },
                 },
@@ -4574,24 +4627,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [451] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ВОЛК",
-                            Skill = 7,
-                            Strength = 10,
-                        },
-                        new Character
-                        {
-                            Name = "ВОЛЧИЦА",
-                            Skill = 6,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "ВОЛК",
+                                Skill = 7,
+                                Strength = 10,
+                            },
+                            new Character
+                            {
+                                Name = "ВОЛЧИЦА",
+                                Skill = 6,
+                                Strength = 8,
+                            },
                         },
                     },
                 },
@@ -4707,18 +4763,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [464] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ГЕРЦОГ ДЕ ЛАВЕЛЕТТ",
-                            Skill = 6,
-                            Strength = 14,
+                            new Character
+                            {
+                                Name = "ГЕРЦОГ ДЕ ЛАВЕЛЕТТ",
+                                Skill = 6,
+                                Strength = 14,
+                            },
                         },
                     },
                 },
@@ -4965,18 +5024,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [494] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ГРАФ МОРТОН",
-                            Skill = 10,
-                            Strength = 12,
+                            new Character
+                            {
+                                Name = "ГРАФ МОРТОН",
+                                Skill = 10,
+                                Strength = 12,
+                            },
                         },
                     },
                 },
@@ -5117,24 +5179,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [510] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ УБИЙЦА",
-                            Skill = 9,
-                            Strength = 8,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ УБИЙЦА",
-                            Skill = 8,
-                            Strength = 7,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ УБИЙЦА",
+                                Skill = 9,
+                                Strength = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ УБИЙЦА",
+                                Skill = 8,
+                                Strength = 7,
+                            },
                         },
                     },
                 },
@@ -5198,24 +5263,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [517] = new Paragraph
             {
-                 new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ СОЛДАТ",
-                            Skill = 7,
-                            Strength = 8,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ СОЛДАТ",
-                            Skill = 6,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ СОЛДАТ",
+                                Skill = 7,
+                                Strength = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ СОЛДАТ",
+                                Skill = 6,
+                                Strength = 8,
+                            },
                         },
                     },
                 },
@@ -5234,18 +5302,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [519] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ГРАФ МОРТОН",
-                            Skill = 10,
-                            Strength = 12,
+                            new Character
+                            {
+                                Name = "ГРАФ МОРТОН",
+                                Skill = 10,
+                                Strength = 12,
+                            },
                         },
                     },
                 },
@@ -5279,30 +5350,33 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [523] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ ОБОРВАНЕЦ",
-                            Skill = 6,
-                            Strength = 8,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ ОБОРВАНЕЦ",
-                            Skill = 7,
-                            Strength = 8,
-                        },
-                        new Character
-                        {
-                            Name = "ТРЕТИЙ ОБОРВАНЕЦ",
-                            Skill = 7,
-                            Strength = 10,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ОБОРВАНЕЦ",
+                                Skill = 6,
+                                Strength = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ОБОРВАНЕЦ",
+                                Skill = 7,
+                                Strength = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ТРЕТИЙ ОБОРВАНЕЦ",
+                                Skill = 7,
+                                Strength = 10,
+                            },
                         },
                     },
                 },
@@ -5372,24 +5446,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [532] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПЕРВЫЙ КАВАЛЕРИСТ",
-                            Skill = 7,
-                            Strength = 9,
-                        },
-                        new Character
-                        {
-                            Name = "ВТОРОЙ КАВАЛЕРИСТ",
-                            Skill = 7,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ КАВАЛЕРИСТ",
+                                Skill = 7,
+                                Strength = 9,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ КАВАЛЕРИСТ",
+                                Skill = 7,
+                                Strength = 8,
+                            },
                         },
                     },
                 },
@@ -5401,18 +5478,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [533] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "СОЛДАТ",
-                            Skill = 7,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "СОЛДАТ",
+                                Skill = 7,
+                                Strength = 8,
+                            },
                         },
                     },
                 },
@@ -5449,18 +5529,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [537] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ВТОРОЙ ВСАДНИК",
-                            Skill = 8,
-                            Strength = 10,
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ВСАДНИК",
+                                Skill = 8,
+                                Strength = 10,
+                            },
                         },
                     },
                 },
@@ -5767,18 +5850,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [575] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "МОЛОДОЙ ДВОРЯНИН",
-                            Skill = 8,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "МОЛОДОЙ ДВОРЯНИН",
+                                Skill = 8,
+                                Strength = 8,
+                            },
                         },
                     },
                 },
@@ -6100,18 +6186,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [616] = new Paragraph
             {
-                 new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ГОНЕЦ",
-                            Skill = 7,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "ГОНЕЦ",
+                                Skill = 7,
+                                Strength = 8,
+                            },
                         },
                     },
                 },
@@ -6395,18 +6484,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [652] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "ПОСЛАНЕЦ ГУБЕРНАТОРА",
-                            Skill = 9,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "ПОСЛАНЕЦ ГУБЕРНАТОРА",
+                                Skill = 9,
+                                Strength = 8,
+                            },
                         },
                     },
                 },
@@ -6447,18 +6539,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [657] = new Paragraph
             {
-                new Actions
+                Actions = new List<Actions>
                 {
-                    ActionName = "Fight",
-                    ButtonName = "Сражаться",
-
-                    Enemies = new List<Character>
+                    new Actions
                     {
-                        new Character
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
                         {
-                            Name = "МЕДВЕДЬ",
-                            Skill = 1,
-                            Strength = 8,
+                            new Character
+                            {
+                                Name = "МЕДВЕДЬ",
+                                Skill = 1,
+                                Strength = 8,
+                            },
                         },
 
                         Aftertext = "Если вы ещё живы, возвращайтесь обратно и торопитесь в Орлеан: опасность давно уже миновала.",
