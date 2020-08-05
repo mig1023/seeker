@@ -53,7 +53,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             Ecu = 1500;
             MeritalArt = MeritalArts.Nope;
             Horses = 1;
-            Pistols = 2;
+            Pistols = 1;
             BulletsAndGubpowder = 5;
             Daggers = 0;
         }

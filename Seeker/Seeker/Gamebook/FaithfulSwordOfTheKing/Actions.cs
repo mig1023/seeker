@@ -132,7 +132,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         private bool EnemyWound(Character hero, ref Character enemy,
             int roll, int WoundsToWin, ref int enemyWounds, ref List<string> fight, bool daggerReversHit = false)
         {
-            enemy.Strength -= ((hero.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(roll) && daggerReversHit ? 3 : 2);
+
+            enemy.Strength -= ((hero.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(roll) && !daggerReversHit ? 3 : 2);
 
             if (enemy.Strength <= 0)
                 enemy.Strength = 0;
@@ -210,16 +211,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                         continue;
 
                     Character enemyInThesFight = enemy;
-
-                    fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Strength));
+                    fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
 
                     int protagonistRoll = Game.Dice.Roll();
                     int protagonistHitStrength = protagonistRoll + hero.Skill;
-                    fight.Add(String.Format("Сила вашего удара: {0} ⚄ x2 + {1} = {2}", protagonistRoll, hero.Skill, protagonistHitStrength));
+                    fight.Add(String.Format("Мощность вашего удара: {0} ⚄ x 2 + {1} = {2}", protagonistRoll, hero.Skill, protagonistHitStrength));
 
                     int enemyRoll = Game.Dice.Roll();
                     int enemyHitStrength = enemyRoll + enemy.Skill;
-                    fight.Add(String.Format("Сила его удара: {0} ⚄ x2 + {1} = {2}", enemyRoll, enemy.Skill, enemyHitStrength));
+                    fight.Add(String.Format("Мощность его удара: {0} ⚄ x 2 + {1} = {2}", enemyRoll, enemy.Skill, enemyHitStrength));
 
                     if (protagonistHitStrength > enemyHitStrength)
                     {
@@ -244,8 +244,13 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                         }
 
                         if ((hero.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(protagonistRoll))
+                        {
+                            fight.Add(String.Format("GOOD|{0} ранен вашим кинжалом", enemy.Name));
+
                             if (EnemyWound(hero, ref enemyInThesFight, protagonistRoll, WoundsToWin, ref enemyWounds, ref fight, daggerReversHit: true))
                                 return fight;
+                        }
+                            
                     }
                     else
                         fight.Add(String.Format("BOLD|Ничья в раунде"));
