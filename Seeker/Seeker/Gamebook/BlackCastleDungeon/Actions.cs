@@ -152,15 +152,31 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                     fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
 
-                    int protagonistHitStrength = Game.Dice.Roll(dices: 2) + Character.Protagonist.Mastery;
-                    fight.Add(String.Format("Сила вашего удара: {0}", protagonistHitStrength));
+                    int firstHeroRoll = Game.Dice.Roll();
+                    int secondHeroRoll = Game.Dice.Roll();
+                    int heroHitStrength = firstHeroRoll + secondHeroRoll + Character.Protagonist.Mastery;
 
-                    int enemyHitStrength = Game.Dice.Roll(dices: 2) + enemy.Mastery;
-                    fight.Add(String.Format("Сила его удара: {0}", enemyHitStrength));
+                    fight.Add(
+                        String.Format(
+                            "Сила вашего удара: {0} ⚄ + {1} ⚄ + {2} = {3}",
+                            firstHeroRoll, secondHeroRoll, Character.Protagonist.Mastery, heroHitStrength
+                        )
+                    );
 
-                    if (protagonistHitStrength > enemyHitStrength)
+                    int firstEnemyRoll = Game.Dice.Roll();
+                    int secondEnemyRoll = Game.Dice.Roll();
+                    int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Mastery;
+
+                    fight.Add(
+                        String.Format(
+                            "Сила его удара: {0} ⚄ + {1} ⚄ + {2} = {3}",
+                            firstEnemyRoll, secondEnemyRoll, enemy.Mastery, enemyHitStrength
+                        )
+                    );
+
+                    if (heroHitStrength > enemyHitStrength)
                     {
-                        fight.Add(String.Format("GOOD|Вы ранили противника"));
+                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
                         enemy.Endurance -= 2;
 
                         if (enemy.Endurance <= 0)
@@ -181,9 +197,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             return fight;
                         }
                     }
-                    else if (protagonistHitStrength < enemyHitStrength)
+                    else if (heroHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|Противник ранил вас"));
+                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
                         Character.Protagonist.Endurance -= 2;
 
                         if (Character.Protagonist.Endurance < 0)
