@@ -302,6 +302,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 {
                     new Modification
                     {
+                        Name = "HadFoodToday",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
                         Name = "Strength",
                         Value = 2,
                     },
@@ -599,6 +604,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 {
                     new Modification
                     {
+                        Name = "HadFoodToday",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
                         Name = "Strength",
                         Value = 4,
                     },
@@ -650,6 +660,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 {
                     new Modification
                     {
+                        Name = "HadFoodToday",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
                         Name = "Strength",
                         Value = 6,
                     },
@@ -669,6 +684,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 Modification = new List<Modification>
                 {
+                    new Modification
+                    {
+                        Name = "HadFoodToday",
+                        Value = 1,
+                    },
                     new Modification
                     {
                         Name = "Strength",
@@ -800,6 +820,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 {
                     new Modification
                     {
+                        Name = "HadFoodToday",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
                         Name = "Strength",
                         Value = 1,
                     },
@@ -857,6 +882,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 Modification = new List<Modification>
                 {
+                    new Modification
+                    {
+                        Name = "HadFoodToday",
+                        Value = 1,
+                    },
                     new Modification
                     {
                         Name = "Ecu",
@@ -1063,6 +1093,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 {
                     new Modification
                     {
+                        Name = "HadFoodToday",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
                         Name = "Strength",
                         Value = 4,
                     },
@@ -1089,6 +1124,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 Modification = new List<Modification>
                 {
+                    new Modification
+                    {
+                        Name = "HadFoodToday",
+                        Value = 1,
+                    },
                     new Modification
                     {
                         Name = "Strength",
@@ -1158,6 +1198,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 Modification = new List<Modification>
                 {
+                    new Modification
+                    {
+                        Name = "HadFoodToday",
+                        Value = 1,
+                    },
                     new Modification
                     {
                         Name = "Strength",
@@ -1267,6 +1312,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 Modification = new List<Modification>
                 {
+                    new Modification
+                    {
+                        Name = "HadFoodToday",
+                        Value = 1,
+                    },
                     new Modification
                     {
                         Name = "Strength",
@@ -1487,6 +1537,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 {
                     new Modification
                     {
+                        Name = "HadFoodToday",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
                         Name = "Strength",
                         Value = 4,
                     },
@@ -1701,8 +1756,18 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 {
                     new Modification
                     {
+                        Name = "HadFoodToday",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
                         Name = "Strength",
                         Value = 2,
+                    },
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = -400,
                     },
                 },
 
@@ -1908,6 +1973,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 Modification = new List<Modification>
                 {
+                    new Modification
+                    {
+                        Name = "HadFoodToday",
+                        Value = 1,
+                    },
                     new Modification
                     {
                         Name = "Strength",
