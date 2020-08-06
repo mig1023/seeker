@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -95,6 +96,13 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             bool goodLuck = Game.Dice.Roll() % 2 == 0;
 
             return new List<string> { (goodLuck ? "BIG|HEAD|GOOD|УСПЕХ :)" : "BIG|HEAD|BAD|НЕУДАЧА :(") };
+        }
+
+        public List<string> Skill()
+        {
+            bool goodSkill = Game.Dice.Roll(dices: 2) <= Character.Protagonist.Skill;
+
+            return new List<string> { (goodLuck ? "BIG|HEAD|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|HEAD|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(") };
         }
 
         public List<string> Get()
