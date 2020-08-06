@@ -173,6 +173,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 bool hit = LuckyHit();
 
+                hero.BulletsAndGubpowder -= 1;
+
                 fight.Add(String.Format("Выстрел из {0}пистолета: {1}", (shoots > 1 ? String.Format("{0} ", pistol) : ""), (hit ? "попал" : "промах")));
 
                 if (hit)
@@ -182,6 +184,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                         {
                             fight.Add(String.Format("GOOD|{0} убит", enemy.Name));
                             enemy.Strength = 0;
+                            break;
                         }
                 }
             }
@@ -197,12 +200,16 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
                 if ((hero.MeritalArt == Character.MeritalArts.SecretBlow) && (round == 1))
-                {
-                    Character enemy = Enemies.First();
-                    enemy.Strength -= 4;
-                    fight.Add(String.Format("Тайный удар шпагой: {0} теряет 4 силы, у него осталось {1}", enemy.Name, enemy.Strength));
-                    fight.Add(String.Empty);
-                }
+                    foreach (Character enemy in Enemies)
+                        if (enemy.Strength > 0)
+                        {
+                            {
+                                enemy.Strength -= 4;
+                                fight.Add(String.Format("Тайный удар шпагой: {0} теряет 4 силы, у него осталось {1}", enemy.Name, enemy.Strength));
+                                fight.Add(String.Empty);
+                                break;
+                            }
+                        }
 
                 foreach (Character enemy in Enemies)
                 {
