@@ -105,6 +105,14 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return new List<string> { (goodLuck ? "BIG|HEAD|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|HEAD|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(") };
         }
 
+        public List<string> DicesDoubles()
+        {
+            bool firstDicesDouble = Game.Dice.Roll() == Game.Dice.Roll();
+            bool secondDicesDouble = Game.Dice.Roll() == Game.Dice.Roll();
+
+            return new List<string> { (firstDicesDouble || secondDicesDouble ? "BIG|HEAD|BAD|ВЫПАЛИ :(" : "BIG|HEAD|GOOD|НЕ ВЫПАЛИ :)") };
+        }
+
         public List<string> Get()
         {
             if ((MeritalArt != null) && (Character.Protagonist.MeritalArt == Character.MeritalArts.Nope))
