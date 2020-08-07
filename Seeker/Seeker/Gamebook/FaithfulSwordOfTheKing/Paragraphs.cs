@@ -5036,6 +5036,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [403] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Pursuit",
+                        ButtonName = "Погоня",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 292, Text = "Если вас не догнали" },

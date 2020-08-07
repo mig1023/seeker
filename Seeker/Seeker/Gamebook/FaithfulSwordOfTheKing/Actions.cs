@@ -113,6 +113,51 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return new List<string> { (firstDicesDouble || secondDicesDouble ? "BIG|HEAD|BAD|ВЫПАЛИ :(" : "BIG|HEAD|GOOD|НЕ ВЫПАЛИ :)") };
         }
 
+        public List<string> Pursuit()
+        {
+            List<string> pursuit = new List<string>();
+
+            int threeTimesInRow = 0;
+            int theyWin = 0;
+            
+            for (int i = 1; i < 12; i++)
+            {
+                int heroSpeed = Game.Dice.Roll();
+                int enemiesSpeed = Gamebook.Dice.Roll();
+
+                pursuit.Add(String.Format("Ваша скорость: {0} ⚄  Их скорость: {1} ⚄", heroSpeed, enemiesSpeed));
+
+                if (heroSpeed > enemiesSpeed)
+                {
+                    pursuit.Add("GOOD|Вы быстрее");
+                    threeTimesInRow = 0;
+                }
+                else
+                {
+                    pursuit.Add("BAD|Они быстрее");
+                    threeTimesInRow += 1;
+                    theyWin += 1;
+
+                    if (threeTimesInRow >= 3)
+                    {
+                        pursuit.Add(String.Empty);
+                        pursuit.Add("BAD|Они без труда догнали вас :(");
+
+                        return pursuit;
+                    }
+                }
+            }
+
+            pursuit.Add(String.Empty);
+
+            if (theyWin > 6)
+                pursuit.Add("BAD|Они догнали вас :(");
+            else
+                pursuit.Add("GOOD|Они не догнали вас :)");
+
+            return pursuit;
+        }
+
         public List<string> Get()
         {
             if ((MeritalArt != null) && (Character.Protagonist.MeritalArt == Character.MeritalArts.Nope))
