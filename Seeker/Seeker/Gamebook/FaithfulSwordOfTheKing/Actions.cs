@@ -102,7 +102,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             bool goodSkill = Game.Dice.Roll(dices: 2) <= Character.Protagonist.Skill;
 
-            return new List<string> { (goodLuck ? "BIG|HEAD|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|HEAD|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(") };
+            return new List<string> { (goodSkill ? "BIG|HEAD|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|HEAD|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(") };
         }
 
         public List<string> DicesDoubles()
@@ -123,7 +123,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             for (int i = 1; i < 12; i++)
             {
                 int heroSpeed = Game.Dice.Roll();
-                int enemiesSpeed = Gamebook.Dice.Roll();
+                int enemiesSpeed = Game.Dice.Roll();
 
                 pursuit.Add(String.Format("Ваша скорость: {0} ⚄  Их скорость: {1} ⚄", heroSpeed, enemiesSpeed));
 

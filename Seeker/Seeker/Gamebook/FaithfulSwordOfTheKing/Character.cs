@@ -16,7 +16,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int Strength { get; set; }
         public int Honor { get; set; }
         public int Day { get; set; }
-        public double Ecu { get; set; }
+        public int Ecu { get; set; }
         public MeritalArts MeritalArt { get; set; }
         public int Horses { get; set; }
         public int Pistols { get; set; }

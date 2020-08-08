@@ -12,7 +12,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public void Do()
         {
-            double currentValue = (double)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
             currentValue += Value;
 

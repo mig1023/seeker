@@ -7766,9 +7766,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [623] = new Paragraph
             {
-                [621] = new Paragraph
-                {
-                    Modification = new List<Modification>
+                Modification = new List<Modification>
                 {
                     new Modification
                     {
