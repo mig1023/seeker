@@ -290,34 +290,43 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                     if (protagonistHitStrength > enemyHitStrength)
                     {
-                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                        if ((enemy.Chainmail > 0) && (protagonistRoll == 3))
+                            fight.Add(String.Format("BOLD|Кольчуга отразила удар!"));
+                        else
+                        {
+                            fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
 
-                        if (EnemyWound(hero, ref enemyInThesFight, protagonistRoll, WoundsToWin, ref enemyWounds, ref fight))
-                            return fight;
+                            if (EnemyWound(hero, ref enemyInThesFight, protagonistRoll, WoundsToWin, ref enemyWounds, ref fight))
+                                return fight;
+                        }
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
-                        hero.Strength -= 2;
+                        if ((hero.Chainmail > 0) && (enemyRoll == 6))
+                            fight.Add(String.Format("BOLD|Кольчуга отразила удар!"));
+                        else
+                        {
+                            fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+                            hero.Strength -= 2;
 
-                        if (hero.Strength < 0)
+                            if (hero.Strength < 0)
                                 hero.Strength = 0;
 
-                        if (hero.Strength <= 0)
-                        {
-                            fight.Add(String.Empty);
-                            fight.Add(String.Format("BAD|Вы ПРОИГРАЛИ :("));
-                            return fight;
-                        }
-
-                        if ((hero.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(protagonistRoll))
-                        {
-                            fight.Add(String.Format("GOOD|{0} ранен вашим кинжалом", enemy.Name));
-
-                            if (EnemyWound(hero, ref enemyInThesFight, protagonistRoll, WoundsToWin, ref enemyWounds, ref fight, daggerReversHit: true))
+                            if (hero.Strength <= 0)
+                            {
+                                fight.Add(String.Empty);
+                                fight.Add(String.Format("BAD|Вы ПРОИГРАЛИ :("));
                                 return fight;
+                            }
+
+                            if ((hero.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(protagonistRoll))
+                            {
+                                fight.Add(String.Format("GOOD|{0} ранен вашим кинжалом", enemy.Name));
+
+                                if (EnemyWound(hero, ref enemyInThesFight, protagonistRoll, WoundsToWin, ref enemyWounds, ref fight, daggerReversHit: true))
+                                    return fight;
+                            }
                         }
-                            
                     }
                     else
                         fight.Add(String.Format("BOLD|Ничья в раунде"));

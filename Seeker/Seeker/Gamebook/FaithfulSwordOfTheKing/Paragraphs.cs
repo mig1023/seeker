@@ -3787,6 +3787,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [296] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Chainmail",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 262, Text = "Далее" },
@@ -7235,6 +7244,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                                 Name = "МОЛОДОЙ ДВОРЯНИН",
                                 Skill = 8,
                                 Strength = 8,
+                                Chainmail = 1,
                             },
                         },
                     },

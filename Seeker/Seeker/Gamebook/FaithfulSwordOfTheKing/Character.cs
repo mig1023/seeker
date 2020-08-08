@@ -24,7 +24,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int Daggers { get; set; }
         public int Food { get; set; }
         public int HadFoodToday { get; set; }
-
+        public int Chainmail { get; set; }
 
         public void Init()
         {
@@ -60,6 +60,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             Daggers = 0;
             Food = 2;
             HadFoodToday = 0;
+            Chainmail = 0;
         }
     }
 }
