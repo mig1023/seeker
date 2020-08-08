@@ -48,7 +48,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 String.Format("Сила: {0}", Character.Protagonist.Strength),
                 String.Format("Честь: {0}", Character.Protagonist.Honor),
                 String.Format("День: {0}", Character.Protagonist.Day),
-                String.Format("Экю: {0}", (double)Character.Protagonist.Ecu / 100)
+                String.Format("Экю: {0:f2}", (double)Character.Protagonist.Ecu / 100)
             };
 
             return statusLines;
