@@ -437,6 +437,20 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [30] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = -50,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 425, Text = "Выяснять, в чем дело" },
@@ -1740,6 +1754,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [133] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = -150,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 2, Text = "Далее" },
@@ -4880,6 +4903,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [390] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = -200,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 606, Text = "В Орлеан" },
@@ -5054,6 +5086,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [404] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Day",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 102, Text = "Далее" },
@@ -5061,6 +5102,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [405] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = -50,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 540, Text = "Далее" },
@@ -5068,6 +5118,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [406] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 217, Text = "Далее" },
@@ -5083,6 +5142,20 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [408] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Honor",
+                        Value = -1,
+                    },
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = 500,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 137, Text = "Далее" },
@@ -5131,6 +5204,20 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [413] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 2,
+                    },
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = -50,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 112, Text = "Решите, что вам подсыпали снотворного" },
@@ -5139,6 +5226,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [414] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = -10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 175, Text = "Остановитесь на первом" },
@@ -5164,6 +5260,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [417] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 93, Text = "Далее" },
@@ -5171,6 +5276,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [418] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 537, Text = "Далее" },
@@ -5178,6 +5292,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [419] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 105, Text = "Далее" },
@@ -5225,6 +5348,20 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [424] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = 300,
+                    },
+                    new Modification
+                    {
+                        Name = "Pistols",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 528, Text = "Далее" },
@@ -5232,6 +5369,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [425] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = 300,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 331, Text = "Далее" },
@@ -5321,6 +5467,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [434] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Day",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 57, Text = "Далее" },
@@ -5437,6 +5592,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [446] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Honor",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 375, Text = "Согласитесь" },
@@ -5468,6 +5632,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [449] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 250, Text = "Уехать из Тура" },
@@ -5515,6 +5688,20 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [452] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
+                        Name = "Day",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 652, Text = "Далее" },
@@ -5610,6 +5797,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [461] = new Paragraph
             {
+
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 250, Text = "Далее" },
@@ -5669,6 +5858,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [465] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Honor",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 597, Text = "Далее" },
@@ -5715,6 +5913,20 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [470] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
+                        Name = "Day",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 204, Text = "Далее" },
@@ -5781,6 +5993,20 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [479] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = (Game.Dice.Roll() * -1),
+                    },
+                    new Modification
+                    {
+                        Name = "Honor",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 260, Text = "Направитесь в город переночевать" },
@@ -5789,6 +6015,20 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [480] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 2,
+                    },
+                    new Modification
+                    {
+                        Name = "Day",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 343, Text = "Далее" },
@@ -5804,6 +6044,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [482] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 212, Text = "Далее" },
@@ -5818,6 +6067,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [484] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 229, Text = "Выстрелите в негодяя" },
@@ -5864,6 +6122,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [490] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 41, Text = "Согласитесь" },
@@ -5932,6 +6199,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [495] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = 1000,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 137, Text = "Далее" },
@@ -5971,6 +6247,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [499] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = (Game.Dice.Roll(dices: 2) * -1),
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 37, Text = "Покинуть Ангулем" },
@@ -6311,6 +6596,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [530] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = -50,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 144, Text = "Прикажете лодочнику пристать" },
