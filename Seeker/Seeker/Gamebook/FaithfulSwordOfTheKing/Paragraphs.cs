@@ -1741,6 +1741,78 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [130] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ЛОШАДЬ, 5 экю",
+                        ButtonName = "Купить лошадь",
+                        Price = 500,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Horses",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПИСТОЛЕТ, 3 экю",
+                        ButtonName = "Купить пистолет",
+                        Price = 300,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Pistols",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ШПАГА, 3 экю",
+                        ButtonName = "Купить шпагу",
+                        Price = 300,
+                        Multiple = true,
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "КИНЖАЛ, 3 экю",
+                        ButtonName = "Купить кинжал",
+                        Price = 300,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Daggers",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПОРОХ И ПУЛИ на 3 выстрела, 2 экю",
+                        ButtonName = "Купить пули и порох",
+                        Price = 200,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "BulletsAndGubpowder",
+                            Value = 3,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 562, Text = "Далее" },
@@ -1996,6 +2068,72 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [156] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПИСТОЛЕТ, 3 экю",
+                        ButtonName = "Купить пистолет",
+                        Price = 300,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Pistols",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ШПАГА, 2 экю",
+                        ButtonName = "Купить шпагу",
+                        Price = 200,
+                        Multiple = true,
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "КИНЖАЛ, 3 экю",
+                        ButtonName = "Купить кинжал",
+                        Price = 200,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Daggers",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "БОТФОРТЫ, 1 экю",
+                        ButtonName = "Купить ботфорты",
+                        Price = 200,
+                        Multiple = true,
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПОРОХ И ПУЛИ на 5 выстрела, 1 экю",
+                        ButtonName = "Купить пули и порох",
+                        Price = 100,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "BulletsAndGubpowder",
+                            Value = 5,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 23, Text = "Хотите что-то продать" },
@@ -2352,6 +2490,59 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     {
                         Name = "Day",
                         Value = 1,
+                    },
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = 550,
+                    },
+                },
+
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "КИНЖАЛ, 2 экю",
+                        ButtonName = "Купить кинжал",
+                        Price = 200,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Daggers",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПОРОХ И ПУЛИ на 5 выстрела, 2 экю",
+                        ButtonName = "Купить пули и порох",
+                        Price = 200,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "BulletsAndGubpowder",
+                            Value = 5,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПИСТОЛЕТ, 3 экю",
+                        ButtonName = "Купить пистолет",
+                        Price = 300,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Pistols",
+                            Value = 1,
+                        },
                     },
                 },
 
@@ -4475,6 +4666,72 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [353] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПИСТОЛЕТ, 3 экю",
+                        ButtonName = "Купить пистолет",
+                        Price = 300,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Pistols",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ШПАГА, 2 экю",
+                        ButtonName = "Купить шпагу",
+                        Price = 200,
+                        Multiple = true,
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "КИНЖАЛ, 2 экю",
+                        ButtonName = "Купить кинжал",
+                        Price = 200,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Daggers",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПОРОХ И ПУЛИ на 4 выстрела, 1 экю",
+                        ButtonName = "Купить пули и порох",
+                        Price = 100,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "BulletsAndGubpowder",
+                            Value = 4,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "АРКЕБУЗА, 1.5 экю",
+                        ButtonName = "Купить шпагу",
+                        Price = 150,
+                        Multiple = true,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 253, Text = "Далее" },
@@ -5752,6 +6009,69 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [453] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПИСТОЛЕТ, 3 экю",
+                        ButtonName = "Купить пистолет",
+                        Price = 300,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Pistols",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ЛОШАДЬ, 5 экю",
+                        ButtonName = "Купить лошадь",
+                        Price = 500,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Horses",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "КИНЖАЛ, 2 экю",
+                        ButtonName = "Купить кинжал",
+                        Price = 200,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Daggers",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПОРОХ И ПУЛИ на 4 выстрела, 2 экю",
+                        ButtonName = "Купить пули и порох",
+                        Price = 200,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "BulletsAndGubpowder",
+                            Value = 4,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 391, Text = "Заглянуть в трактир" },
@@ -6980,6 +7300,79 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [552] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПИСТОЛЕТ, 4 экю",
+                        ButtonName = "Купить пистолет",
+                        Price = 400,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Pistols",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ШПАГА, 3 экю",
+                        ButtonName = "Купить шпагу",
+                        Price = 300,
+                        Multiple = true,
+                    },
+
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПОРОХ И ПУЛИ на 5 выстрела, 3 экю",
+                        ButtonName = "Купить пули и порох",
+                        Price = 300,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "BulletsAndGubpowder",
+                            Value = 5,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "КИНЖАЛ, 2 экю",
+                        ButtonName = "Купить кинжал",
+                        Price = 200,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Daggers",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ЛОШАДЬ, 6 экю",
+                        ButtonName = "Купить лошадь",
+                        Price = 600,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Horses",
+                            Value = 1,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 363, Text = "Далее" },
@@ -7639,6 +8032,78 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [613] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ЛОШАДЬ, 6 экю",
+                        ButtonName = "Купить лошадь",
+                        Price = 600,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Horses",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПИСТОЛЕТ, 4 экю",
+                        ButtonName = "Купить пистолет",
+                        Price = 400,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Pistols",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ШПАГА, 3 экю",
+                        ButtonName = "Купить шпагу",
+                        Price = 300,
+                        Multiple = true,
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "КИНЖАЛ, 3 экю",
+                        ButtonName = "Купить кинжал",
+                        Price = 300,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Daggers",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПОРОХ И ПУЛИ на 5 выстрела, 3 экю",
+                        ButtonName = "Купить пули и порох",
+                        Price = 300,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "BulletsAndGubpowder",
+                            Value = 5,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 306, Text = "Далее" },
@@ -7817,6 +8282,78 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [627] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПИСТОЛЕТ, 3 экю",
+                        ButtonName = "Купить пистолет",
+                        Price = 300,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Pistols",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ШПАГА, 4 экю",
+                        ButtonName = "Купить шпагу",
+                        Price = 400,
+                        Multiple = true,
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "КИНЖАЛ, 4 экю",
+                        ButtonName = "Купить кинжал",
+                        Price = 400,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Daggers",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПОРОХ И ПУЛИ на 5 выстрела, 1.5 экю",
+                        ButtonName = "Купить пули и порох",
+                        Price = 150,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "BulletsAndGubpowder",
+                            Value = 5,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ЕДА, 2 экю",
+                        ButtonName = "Купить еды",
+                        Price = 200,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Food",
+                            Value = 1,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 54, Text = "Далее" },
@@ -7971,6 +8508,78 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [645] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПИСТОЛЕТ, 4 экю",
+                        ButtonName = "Купить пистолет",
+                        Price = 400,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Pistols",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ШПАГА, 3 экю",
+                        ButtonName = "Купить шпагу",
+                        Price = 300,
+                        Multiple = true,
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ПОРОХ И ПУЛИ на 5 выстрела, 3 экю",
+                        ButtonName = "Купить пули и порох",
+                        Price = 300,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "BulletsAndGubpowder",
+                            Value = 5,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "КИНЖАЛ, 2 экю",
+                        ButtonName = "Купить кинжал",
+                        Price = 200,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Daggers",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "ЛОШАДЬ, 6 экю",
+                        ButtonName = "Купить лошадь",
+                        Price = 600,
+                        Multiple = true,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Horses",
+                            Value = 1,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 125, Text = "Далее" },

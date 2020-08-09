@@ -79,7 +79,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             List<string> enemies = new List<string>();
 
-            if ((ActionName == "Get") && (MeritalArt != null))
+            if (ActionName == "Get")
                 return new List<string> { Text };
 
             if (Enemies == null)
