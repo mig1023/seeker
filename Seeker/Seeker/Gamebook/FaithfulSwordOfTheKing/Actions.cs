@@ -125,7 +125,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 int heroSpeed = Game.Dice.Roll();
                 int enemiesSpeed = Game.Dice.Roll();
 
-                pursuit.Add(String.Format("Ваша скорость: {0} ⚄  Их скорость: {1} ⚄", heroSpeed, enemiesSpeed));
+                pursuit.Add(String.Format("Ваша скорость: {0} ⚄  <-->  Их скорость: {1} ⚄", heroSpeed, enemiesSpeed));
 
                 if (heroSpeed > enemiesSpeed)
                 {

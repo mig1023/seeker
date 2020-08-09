@@ -5364,6 +5364,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     {
                         ActionName = "Pursuit",
                         ButtonName = "Погоня",
+                        Aftertext = "В итоге если большее количество раз выиграли вы, то вас не догнали, если они, то наоборот. Однако если вы проиграли три раза подряд, то всадникам без труда удается нагнать вас.",
                     },
                 },
 
@@ -8789,7 +8790,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "Далее" },
-                    new Option { Destination = 381, Text = "ТЕСТ" },
                 }
             },
         };
