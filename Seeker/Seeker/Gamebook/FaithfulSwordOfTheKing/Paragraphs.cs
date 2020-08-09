@@ -8221,6 +8221,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [622] = new Paragraph
             {
+                OpenOption = "LetterOfRecommendationToTheDuke",
+
                 Modification = new List<Modification>
                 {
                     new Modification
