@@ -3129,9 +3129,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [232] = new Paragraph
             {
-
-
-
                 Options = new List<Option>
                 {
                     new Option { Destination = 505, Text = "Согласитесь на 6 экю" },
@@ -3179,6 +3176,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [237] = new Paragraph
             {
+                OpenOption = "LetterOfRecommendationToTheDuke",
+
                 Modification = new List<Modification>
                 {
                     new Modification
@@ -6175,6 +6174,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 Options = new List<Option>
                 {
                     new Option { Destination = 270, Text = "Письмо герцегу Майенскому", OnlyIf = "LetterToTheDuke" },
+                    new Option { Destination = 302, Text = "Рекомендательное письмо герцегу Майенскому", OnlyIf = "LetterOfRecommendationToTheDuke" },
                     new Option { Destination = 394, Text = "Вы — граф де Монлюк, бывший приближенный Генриха III" },
                     new Option { Destination = 637, Text = "Вы — шевалье де Рево, католик и лигист из Беарна" },
                     new Option { Destination = 270, Text = "Вы — виконт де Тессе из Парижа" },
