@@ -1223,6 +1223,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 117, Text = "Всадник в зелёном камзоле", OnlyIf = "GreenCamisole" },
                     new Option { Destination = 328, Text = "Далее" },
                 }
             },
@@ -1815,6 +1816,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 181, Text = "К графу де Ноайлю", OnlyIf = "CountDeNoaille" },
                     new Option { Destination = 562, Text = "Далее" },
                 }
             },
@@ -3548,6 +3550,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 295, Text = "Всадник в зелёном камзоле", OnlyIf = "GreenCamisole" },
                     new Option { Destination = 78, Text = "Если удалось ранить его три раза" },
                 }
             },
@@ -5852,6 +5855,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [440] = new Paragraph
             {
+                OpenOption = "GreenCamisole",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 531, Text = "Дойти до трактира и позавтракать" },
@@ -6260,6 +6265,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [468] = new Paragraph
             {
+                OpenOption = "CountDeNoaille",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 598, Text = "Далее" },
@@ -6493,6 +6500,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [490] = new Paragraph
             {
+                OpenOption = "GreenCamisole",
+
                 Modification = new List<Modification>
                 {
                     new Modification
@@ -7235,6 +7244,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [544] = new Paragraph
             {
+                OpenOption = "GreenCamisole",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 41, Text = "Согласитесь на это" },
@@ -7482,6 +7493,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 591, Text = "Всадник в зелёном камзоле", OnlyIf = "GreenCamisole" },
                     new Option { Destination = 188, Text = "Далее" },
                 }
             },
