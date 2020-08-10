@@ -2562,6 +2562,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [188] = new Paragraph
             {
+                OpenOption = "DukeName",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 141, Text = "Далее" },
@@ -3974,6 +3976,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 464, Text = "Назвать герцога по имени", OnlyIf = "DukeName" },
                     new Option { Destination = 78, Text = "Далее" },
                 }
             },
@@ -7818,6 +7821,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [591] = new Paragraph
             {
+                OpenOption = "DukeName",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 141, Text = "Далее" },
@@ -8700,6 +8705,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [656] = new Paragraph
             {
+                OpenOption = "DukeName",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 558, Text = "Далее" },
