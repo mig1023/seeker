@@ -1109,6 +1109,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 279, Text = "Воспользоваться ладанкой", OnlyIf = "Incense" },
                     new Option { Destination = 624, Text = "Далее" },
                 }
             },
@@ -7881,6 +7882,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [597] = new Paragraph
             {
+                OpenOption = "Incense",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 19, Text = "Далее" },
