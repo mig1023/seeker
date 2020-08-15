@@ -1708,7 +1708,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 576, Text = "Вы перегородили боковую улицу" },
+                    new Option { Destination = 576, Text = "Вы перегородили боковую улицу", OnlyIf = "StreetIsBlocked" },
                     new Option { Destination = 641, Text = "Не перегородили" },
                 }
             },
@@ -6766,6 +6766,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [511] = new Paragraph
             {
+                OpenOption = "StreetIsBlocked",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 443, Text = "Далее" },
