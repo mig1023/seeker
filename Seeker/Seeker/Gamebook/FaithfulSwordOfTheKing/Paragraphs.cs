@@ -482,6 +482,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [34] = new Paragraph
             {
+                OpenOption = "PierreAuxRealStreet",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 603, Text = "Далее" },
@@ -1817,7 +1819,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 181, Text = "Улица Ваннери, дом 5", OnlyIf = "VenneraStreet" },
+                    new Option { Destination = 454, Text = "Улица Пьер-о-Реаль, дом 11", OnlyIf = "PierreAuxRealStreet" },
+                    new Option { Destination = 555, Text = "Улица Ваннери, дом 5", OnlyIf = "VenneraStreet" },
                     new Option { Destination = 181, Text = "К графу де Ноайлю", OnlyIf = "CountDeNoaille" },
                     new Option { Destination = 562, Text = "Далее" },
                 }
