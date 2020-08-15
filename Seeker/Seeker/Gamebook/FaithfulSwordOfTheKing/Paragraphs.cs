@@ -4670,6 +4670,30 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [352] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Ecu",
+                        Value = -100000,
+                    },
+                    new Modification
+                    {
+                        Name = "Daggers",
+                        Value = -10,
+                    },
+                    new Modification
+                    {
+                        Name = "Pistols",
+                        Value = -10,
+                    },
+                    new Modification
+                    {
+                        Name = "BulletsAndGubpowder",
+                        Value = -100,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 121, Text = "Нападете на него, чтобы завладеть оружием и бежать" },
@@ -7471,6 +7495,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [560] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Daggers",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 609, Text = "Направо" },
