@@ -759,6 +759,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 81, Text = "За клубочком", OnlyIf = "Clew" },
                     new Option { Destination = 21, Text = "Свернете к нему" },
                     new Option { Destination = 400, Text = "Поторопитесь к цели" },
                 }
@@ -1070,6 +1071,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 400, Text = "За клубочком" },
                     new Option { Destination = 51, Text = "Вернуться" },
                 }
             },
@@ -4358,6 +4360,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 383, Text = "За клубочком", OnlyIf = "Clew" },
                     new Option { Destination = 154, Text = "По тропинке направо" },
                     new Option { Destination = 237, Text = "По тропинке налево" },
                     new Option { Destination = 181, Text = "По дороге прямо" },
@@ -4848,6 +4851,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 430, Text = "За клубочком", OnlyIf = "Clew" },
                     new Option { Destination = 514, Text = "Пойдете, куда указывает стрелка" },
                     new Option { Destination = 35, Text = "Не будете сворачивать" },
                 }
@@ -5170,6 +5174,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 35, Text = "За клубочком" },
                     new Option { Destination = 400, Text = "Далее" },
                 }
             },
@@ -6699,6 +6704,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [555] = new Paragraph
             {
+                OpenOption = "Clew",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 450, Text = "Далее" },
