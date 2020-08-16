@@ -46,7 +46,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Option { Destination = 86, Text = "По правой" },
                     new Option { Destination = 110, Text = "По левой" },
-                     new Option { Destination = 448, Text = "ТЕСТ" },
                 }
             },
             [2] = new Paragraph
@@ -4228,7 +4227,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 123, Text = "Далее" },
+                    new Option { Destination = 66, Text = "Назовёте имя Гиены", OnlyIf = "HyenaName" },
+                    new Option { Destination = 123, Text = "Начать бой" },
                 }
             },
             [340] = new Paragraph
@@ -6034,6 +6034,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [503] = new Paragraph
             {
+                OpenOption = "HyenaName",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 125, Text = "Далее" },
@@ -6106,7 +6108,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 38, Text = "Нправо" },
+                    new Option { Destination = 38, Text = "Направо" },
                     new Option { Destination = 214, Text = "Прямо" },
                 }
             },
