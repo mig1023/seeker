@@ -54,11 +54,32 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return statusLines;
         }
 
-        public bool GameOver()
+        public bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            return ((Character.Protagonist.Strength <= 0) || (Character.Protagonist.Honor <= 0) ? true : false);
-        }
+            if (Character.Protagonist.Strength <= 0)
+            {
+                toEndParagraph = 0;
+                toEndText = "Начать сначала";
 
+                return true;
+            }
+            else if (Character.Protagonist.Honor <= 0)
+            {
+                toEndParagraph = 150;
+                toEndText = "Задуматься о чести";
+
+                Character.Protagonist.Strength = 0;
+
+                return true;
+            }
+            else
+            {
+                toEndParagraph = 0;
+                toEndText = String.Empty;
+
+                return false;
+            }
+        }
         public bool IsButtonEnabled()
         {
             bool disabledSpellButton = (MeritalArt != null) && (Character.Protagonist.MeritalArt != Character.MeritalArts.Nope);

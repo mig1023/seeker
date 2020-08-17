@@ -51,8 +51,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return statusLines;
         }
 
-        public bool GameOver()
+        public bool GameOver(out int toEndParagraph, out string toEndText)
         {
+            toEndParagraph = 0;
+            toEndText = "Начать сначала";
+
             return (Character.Protagonist.Endurance <= 0 ? true : false);
         }
 

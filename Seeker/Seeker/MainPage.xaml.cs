@@ -139,9 +139,7 @@ namespace Seeker
 
         private void CheckGameOver()
         {
-            bool gameOver = ((Game.Data.Actions != null) && Game.Data.Actions.GameOver());
-
-            if (!gameOver)
+            if ((Game.Data.Actions == null) || !Game.Data.Actions.GameOver(out int toEndParagraph, out string toEndText))
                 return;
 
             Game.Router.Clean();
@@ -149,12 +147,12 @@ namespace Seeker
 
             Button button = new Button()
             {
-                Text = "Начать сначала",
+                Text = toEndText,
                 TextColor = Xamarin.Forms.Color.White,
                 BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option))
             };
 
-            Game.Router.AddDestination("Начать сначала", 0);
+            Game.Router.AddDestination(toEndText, toEndParagraph);
 
             button.Clicked += Option_Click;
 

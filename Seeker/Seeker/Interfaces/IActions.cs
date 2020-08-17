@@ -17,7 +17,7 @@ namespace Seeker.Interfaces
 
         List<string> Status();
 
-        bool GameOver();
+        bool GameOver(out int toEndParagraph, out string toEndText);
 
         bool IsButtonEnabled();
     }
