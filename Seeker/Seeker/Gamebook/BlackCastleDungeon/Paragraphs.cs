@@ -313,7 +313,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 327, Text = "Заплатите ему" },
+                    new Option { Destination = 327, Text = "Заплатите ему", OnlyIf = "ЗОЛОТО >= 7" },
                     new Option { Destination = 217, Text = "Поищите в заплечном мешке подарок" },
                     new Option { Destination = 106, Text = "Вежливо поблагодарите и уйдете" },
                     new Option { Destination = 518, Text = "Лучше убить его и обыскать лавку" },
@@ -4087,6 +4087,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [327] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -7,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 443, Text = "Далее" },
@@ -7512,6 +7521,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "В путь!" },
+                    new Option { Destination = 18, Text = "TEST" },
                 }
             },
         };

@@ -69,7 +69,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public static bool CheckOnlyIf(string option)
         {
-            if (option.Contains("ЗАКЛЯТИЕ"))
+            if (option.Contains("ЗОЛОТО >="))
+                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Gold;
+            else if (option.Contains("ЗАКЛЯТИЕ"))
                 return Character.Protagonist.Spells.Contains(option);
             else
                 return Game.Data.OpenedOption.Contains(option);
