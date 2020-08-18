@@ -2624,6 +2624,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             Name = "Endurance",
                             Value = 2,
                         },
+
+                        Aftertext = "Вы благодарите радушного хозяина и уходите."
                     },
                 },
 
@@ -7531,7 +7533,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "В путь!" },
-                    new Option { Destination = 91, Text = "TEST" },
+                    new Option { Destination = 107, Text = "TEST" },
                 }
             },
         };
