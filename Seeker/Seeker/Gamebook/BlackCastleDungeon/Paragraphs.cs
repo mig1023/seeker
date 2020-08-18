@@ -1177,12 +1177,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [91] = new Paragraph
             {
-                Modification = new List<Modification>
+                Actions = new List<Actions>
                 {
-                    new Modification
+                    new Actions
                     {
-                        Name = "Endurance",
-                        Value = 4,
+                        ActionName = "Get",
+                        Text = "ТАРЕЛКА ЩЕЙ, 2 золотых",
+                        ButtonName = "Заплатить",
+                        Price = 2,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Endurance",
+                            Value = 2,
+                        },
+
+                        Aftertext = "Восстановите 4 ВЫНОСЛИВОСТИ и уходите.",
                     },
                 },
 
@@ -7521,7 +7531,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "В путь!" },
-                    new Option { Destination = 18, Text = "TEST" },
+                    new Option { Destination = 91, Text = "TEST" },
                 }
             },
         };
