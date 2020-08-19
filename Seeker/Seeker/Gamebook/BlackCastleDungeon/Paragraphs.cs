@@ -1773,9 +1773,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 458, Text = "Три" },
-                    new Option { Destination = 369, Text = "Шесть" },
-                    new Option { Destination = 274, Text = "Восемь" },
+                    new Option { Destination = 458, Text = "3 золотых", OnlyIf = "ЗОЛОТО >= 3" },
+                    new Option { Destination = 369, Text = "6 золотых", OnlyIf = "ЗОЛОТО >= 6" },
+                    new Option { Destination = 274, Text = "8 золотых", OnlyIf = "ЗОЛОТО >= 8" },
                     new Option { Destination = 522, Text = "Отгонять ее мечом" },
                 }
             },
@@ -7592,7 +7592,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "В путь!" },
-                    new Option { Destination = 613, Text = "TEST" },
                 }
             },
         };
