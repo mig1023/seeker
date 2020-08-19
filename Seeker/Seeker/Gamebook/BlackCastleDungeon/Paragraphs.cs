@@ -4374,7 +4374,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 574, Text = "Принять предложение" },
+                    new Option { Destination = 574, Text = "Принять предложение", OnlyIf = "ЗОЛОТО >= 3" },
                     new Option { Destination = 235, Text = "Отказаться и покинуть деревню на юг" },
                     new Option { Destination = 2, Text = "Отказаться и покинуть деревню на запад" },
                 }
@@ -7052,6 +7052,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [574] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
