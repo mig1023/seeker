@@ -3414,6 +3414,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [274] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -8,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 542, Text = "Повинуетесь и войдете" },
@@ -4573,6 +4582,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [369] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -6,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 542, Text = "В эту дверь" },
@@ -5594,6 +5612,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [458] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 252, Text = "В противоположную от входа" },
