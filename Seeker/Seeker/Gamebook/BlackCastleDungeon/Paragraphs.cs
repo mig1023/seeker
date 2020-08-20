@@ -2368,6 +2368,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 {
                     new Modification
                     {
+                        Name = "Gold",
+                        Value = 10,
+                    },
+                    new Modification
+                    {
                         Name = "Luck",
                         Value = 1,
                     },
@@ -4698,6 +4703,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [376] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 155, Text = "Далее" },
@@ -5089,6 +5103,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [414] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 10,
+                    },
+                },
+
                 OpenOption = "PeacockFeather",
 
                 Options = new List<Option>
