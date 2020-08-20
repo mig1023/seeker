@@ -4231,6 +4231,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [335] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 7,
+                    },
+                },
+
                 OpenOption = "StorkFeather",
 
                 Options = new List<Option>
