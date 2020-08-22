@@ -26,6 +26,9 @@ namespace Seeker
             Game.Router.Clean();
             Options.Children.Clear();
 
+            Gamebook.List.Init();
+            Game.Data.Actions = null;
+
             foreach (string gamebook in Gamebook.List.GetBooks())
             {
                 Button button = Game.Interface.GamebookButton(gamebook);
