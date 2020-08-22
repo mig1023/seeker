@@ -237,6 +237,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             List<string> fight = new List<string>();
 
+            List<Character> FightEnemies = new List<Character>();
+
+            foreach (Character enemy in Enemies)
+                FightEnemies.Add(enemy.Clone());
+
             int round = 1;
             int enemyWounds = 0;
             int shoots = 0;
@@ -250,7 +255,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             for(int pistol = 1; pistol <= shoots; pistol++)
             {
-                if (NoMoreEnemies(Enemies))
+                if (NoMoreEnemies(FightEnemies))
                     continue;
 
                 bool hit = LuckyHit();
@@ -261,7 +266,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 if (hit)
                 {
-                    foreach (Character enemy in Enemies)
+                    foreach (Character enemy in FightEnemies)
                         if (enemy.Strength > 0)
                         {
                             fight.Add(String.Format("GOOD|{0} убит", enemy.Name));
@@ -271,7 +276,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 }
             }
 
-            if (NoMoreEnemies(Enemies))
+            if (NoMoreEnemies(FightEnemies))
                 return fight;
 
             if (shoots > 0)
@@ -282,7 +287,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
                 if ((hero.MeritalArt == Character.MeritalArts.SecretBlow) && (round == 1))
-                    foreach (Character enemy in Enemies)
+                    foreach (Character enemy in FightEnemies)
                         if (enemy.Strength > 0)
                         {
                             {
@@ -293,7 +298,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                             }
                         }
 
-                foreach (Character enemy in Enemies)
+                foreach (Character enemy in FightEnemies)
                 {
                     if (enemy.Strength <= 0)
                         continue;

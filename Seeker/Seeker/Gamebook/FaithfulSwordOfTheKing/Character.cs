@@ -62,5 +62,19 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             HadFoodToday = 0;
             Chainmail = 0;
         }
+
+        public Character Clone()
+        {
+            Character newCharacter = new Character();
+
+            newCharacter.Name = this.Name;
+            newCharacter.Skill = this.Skill;
+            newCharacter.Strength = this.Strength;
+            newCharacter.Honor = this.Honor;
+            newCharacter.Day = this.Day;
+            newCharacter.Ecu = this.Ecu;
+
+            return newCharacter;
+        }
     }
 }

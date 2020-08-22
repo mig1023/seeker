@@ -26,5 +26,20 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             SpellSlots = 10;
             Spells = new List<string>();
         }
+
+        public Character Clone()
+        {
+            Character newCharacter = new Character();
+
+            newCharacter.Name = this.Name;
+            newCharacter.Mastery = this.Mastery;
+            newCharacter.Endurance = this.Endurance;
+            newCharacter.Luck = this.Luck;
+            newCharacter.Gold = this.Gold;
+            newCharacter.SpellSlots = this.SpellSlots;
+            newCharacter.Spells = new List<string>();
+
+            return newCharacter;
+        }
     }
 }

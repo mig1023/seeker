@@ -146,11 +146,16 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             int round = 1;
             int enemyWounds = 0;
 
+            List<Character> FightEnemies = new List<Character>();
+
+            foreach (Character enemy in Enemies)
+                FightEnemies.Add(enemy.Clone());
+
             while (true)
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
-                foreach (Character enemy in Enemies)
+                foreach (Character enemy in FightEnemies)
                 {
                     if (enemy.Endurance <= 0)
                         continue;
@@ -191,7 +196,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                         bool enemyLost = true;
 
-                        foreach (Character e in Enemies)
+                        foreach (Character e in FightEnemies)
                             if (e.Endurance > 0)
                                 enemyLost = false;
 
