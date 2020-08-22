@@ -199,7 +199,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         private bool NoMoreEnemies(List<Character> enemies)
         {
-            foreach (Character enemy in Enemies)
+            foreach (Character enemy in enemies)
                 if (enemy.Strength > 0)
                     return false;
 
