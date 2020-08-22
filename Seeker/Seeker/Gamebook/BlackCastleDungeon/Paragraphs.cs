@@ -1711,6 +1711,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [130] = new Paragraph
             {
+                OpenOption = "GreenArmour",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 39, Text = "Осмотреться" },
