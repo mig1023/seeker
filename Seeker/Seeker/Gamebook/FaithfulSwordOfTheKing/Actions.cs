@@ -226,7 +226,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
             {
                 fight.Add(String.Empty);
-                fight.Add(String.Format("GOOD|Вы ПОБЕДИЛИ :)"));
+                fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
                 return true;
             }
             else
@@ -341,7 +341,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                             if (hero.Strength <= 0)
                             {
                                 fight.Add(String.Empty);
-                                fight.Add(String.Format("BAD|Вы ПРОИГРАЛИ :("));
+                                fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
                                 return fight;
                             }
 
@@ -360,7 +360,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     if ((RoundsToWin > 0) && (RoundsToWin <= round))
                     {
                         fight.Add(String.Empty);
-                        fight.Add(String.Format("BAD|Отведённые на победу раунды истекли. Вы ПРОИГРАЛИ :(", RoundsToWin));
+                        fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
+                        fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                         return fight;
                     }
 

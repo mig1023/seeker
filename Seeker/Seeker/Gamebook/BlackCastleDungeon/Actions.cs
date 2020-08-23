@@ -203,7 +203,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("GOOD|Вы ПОБЕДИЛИ :)"));
+                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                             return fight;
                         }
                     }
@@ -218,7 +218,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         if (Character.Protagonist.Endurance <= 0)
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("BAD|Вы ПРОИГРАЛИ :("));
+                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                             return fight;
                         }
                     }
@@ -228,7 +228,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     if ((RoundsToWin > 0) && (RoundsToWin <= round))
                     {
                         fight.Add(String.Empty);
-                        fight.Add(String.Format("BAD|Отведённые на победу раунды истекли. Вы ПРОИГРАЛИ :(", RoundsToWin));
+                        fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
+                        fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                         return fight;
                     }
 
