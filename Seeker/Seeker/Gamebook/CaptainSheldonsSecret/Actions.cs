@@ -94,11 +94,13 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
 
         public List<string> Luck()
         {
-            //bool goodLuck = Game.Dice.Roll(dices: 2) < Character.Protagonist.Luck;
+            int goodLuck = Game.Dice.Roll();
 
-            //return new List<string> { (goodLuck ? "BIG|HEAD|GOOD|УСПЕХ :)" : "BIG|HEAD|BAD|НЕУДАЧА :(") };
+            string goodLuckResult = (Character.Protagonist.Luck[goodLuck] ? "BIG|HEAD|GOOD|УСПЕХ :)" : "BIG|HEAD|BAD|НЕУДАЧА :(");
 
-            return new List<string> { "BIG|HEAD|GOOD|УСПЕХ :)" };
+            Character.Protagonist.Luck[goodLuck] = !Character.Protagonist.Luck[goodLuck];
+
+            return new List<string> { goodLuckResult };
         }
 
         public List<string> Get()

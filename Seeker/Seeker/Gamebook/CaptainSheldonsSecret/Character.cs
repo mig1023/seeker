@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
         public int Strength { get; set; }
         public int Charm { get; set; }
         public int Gold { get; set; }
+        public List<bool> Luck { get; set; }
 
         public void Init()
         {
@@ -66,6 +67,19 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             Strength = Strengths[Game.Dice.Roll(dices: 2)];
             Charm = Charms[Game.Dice.Roll(dices: 2)];
             Gold = 15;
+
+            Luck = new List<bool>
+            {
+                [1] = true,
+                [2] = true,
+                [3] = true,
+                [4] = true,
+                [5] = true,
+                [6] = true,
+            };
+
+            for (int i = 0; i < 2; i++)
+                Luck[Game.Dice.Roll()] = false;
         }
 
         public Character Clone()
