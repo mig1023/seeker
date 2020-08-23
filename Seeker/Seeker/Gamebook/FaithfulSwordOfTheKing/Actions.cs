@@ -114,9 +114,17 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public List<string> Luck()
         {
-            bool goodLuck = Game.Dice.Roll() % 2 == 0;
+            int luckDice = Game.Dice.Roll();
 
-            return new List<string> { (goodLuck ? "BIG|HEAD|GOOD|УСПЕХ :)" : "BIG|HEAD|BAD|НЕУДАЧА :(") };
+            bool goodLuck = luckDice % 2 == 0;
+
+            List<string> luckCheck = new List<string> {
+                        String.Format( "Проверка удачи: {0} ⚄ - {1}", luckDice, (goodLuck ? "чётное" : "нечётное") )
+            };
+
+            luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            return luckCheck;
         }
 
         public List<string> Skill()

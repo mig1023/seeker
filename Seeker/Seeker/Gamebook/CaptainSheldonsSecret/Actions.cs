@@ -94,13 +94,41 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
 
         public List<string> Luck()
         {
+            Dictionary<int, string> luckList = new Dictionary<int, string>
+            {
+                [1] = "①",
+                [2] = "②",
+                [3] = "③",
+                [4] = "④",
+                [5] = "⑤",
+                [6] = "⑥",
+
+                [11] = "❶",
+                [12] = "❷",
+                [13] = "❸",
+                [14] = "❹",
+                [15] = "❺",
+                [16] = "❻",
+            };
+
+            List<string> luckCheck = new List<string> { "Квадраты удачи:" };
+
+            string luckListShow = String.Empty;
+
+            for (int i = 1; i < 7; i++)
+                luckListShow += (Character.Protagonist.Luck[i] ? luckList[i] : luckList[i + 10]) + " ";
+
+            luckCheck.Add("BIG|" + luckListShow);
+
             int goodLuck = Game.Dice.Roll();
 
-            string goodLuckResult = (Character.Protagonist.Luck[goodLuck] ? "BIG|HEAD|GOOD|УСПЕХ :)" : "BIG|HEAD|BAD|НЕУДАЧА :(");
+            luckCheck.Add(String.Format("Проверка удачи: {0} ⚄ - {1}зачёркунтый", goodLuck, (Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty)));
+
+            luckCheck.Add(Character.Protagonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
             Character.Protagonist.Luck[goodLuck] = !Character.Protagonist.Luck[goodLuck];
 
-            return new List<string> { goodLuckResult };
+            return luckCheck;
         }
 
         public List<string> Get()

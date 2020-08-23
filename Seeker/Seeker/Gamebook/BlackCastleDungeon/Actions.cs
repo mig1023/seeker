@@ -111,11 +111,20 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public List<string> Luck()
         {
-            bool goodLuck = Game.Dice.Roll(dices: 2) < Character.Protagonist.Luck;
+            int fisrtDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            bool goodLuck = (fisrtDice + secondDice) < Character.Protagonist.Luck;
+
+            List<string> luckCheck = new List<string> {
+                        String.Format( "Проверка удачи: {0} ⚄ + {1} ⚄ {2} {3}", fisrtDice, secondDice, (goodLuck ? "<=" : ">"), Character.Protagonist.Luck )
+            };
 
             Character.Protagonist.Luck -= 1;
 
-            return new List<string> { (goodLuck ? "BIG|HEAD|GOOD|УСПЕХ :)" : "BIG|HEAD|BAD|НЕУДАЧА :(") };
+            luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            return luckCheck;
         }
 
         public List<string> Get()
