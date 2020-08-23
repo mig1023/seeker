@@ -17,6 +17,18 @@ namespace Seeker.Gamebook
                 Actions = new BlackCastleDungeon.Actions(),
                 Constants = new BlackCastleDungeon.Constants(),
                 Disclaimer = "Браславский Дмитрий, 1991",
+                BookColor = "#000000",
+            },
+
+            ["Тайна капитана Шелдона"] = new Description
+            {
+                XmlBook = "CaptainSheldonsSecret.xml",
+                Protagonist = CaptainSheldonsSecret.Character.Protagonist.Init,
+                CheckOnlyIf = CaptainSheldonsSecret.Actions.CheckOnlyIf,
+                Paragraphs = new CaptainSheldonsSecret.Paragraphs(),
+                Actions = new CaptainSheldonsSecret.Actions(),
+                Constants = new CaptainSheldonsSecret.Constants(),
+                Disclaimer = "Браславский Дмитрий, 1995",
                 BookColor = "#4682B4",
             },
 
