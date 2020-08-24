@@ -43,71 +43,71 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 151, Text = "Штурман уже возвращается с полными кружками, так что вам надо, не теряя времени, решить, что будете делать: заплатите ему 5 золотых и выйдете с ним в море" },
-                    new Option { Destination = 230, Text = ", послушаетесь совета и пойдете нанимать капитана" },
-                    new Option { Destination = 83, Text = "или отклоните оба предложения" },
+                    new Option { Destination = 151, Text = "Выйдете в море со штурманом" },
+                    new Option { Destination = 230, Text = "Пойдете нанимать капитана" },
+                    new Option { Destination = 83, Text = "Отклоните оба предложения" },
                 }
             },
             [2] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 522, Text = "Что вы сделаете? Попытаетесь убить ее" },
-                    new Option { Destination = 156, Text = ", дадите поесть (для этого вам придется потратить 1 еду)" },
-                    new Option { Destination = 403, Text = "или отгоните ее рукой и поплывете дальше" },
+                    new Option { Destination = 522, Text = "Попытаетесь убить ее" },
+                    new Option { Destination = 156, Text = "Дадите поесть" },
+                    new Option { Destination = 403, Text = "Отгоните ее рукой" },
                 }
             },
             [3] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 354, Text = "Если пугает неизвестность и хотите поскорее выбраться из леса, то 354" },
-                    new Option { Destination = 242, Text = ". Если же нет, плывите дальше — 242" },
+                    new Option { Destination = 354, Text = "Поскорее выбраться из леса" },
+                    new Option { Destination = 242, Text = "Поплывите дальше" },
                 }
             },
             [4] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 125, Text = "Выскочив на палубу, вы видите, что 'Гермес' уже начал погружаться в море, но в эту минуту вода вокруг вашей шхуны вспенивается, и палуба уходит из-под ног — 125" },
+                    new Option { Destination = 125, Text = "Далее" },
                 }
             },
             [5] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 380, Text = "Решение за вами: уплывете, как они того требуют" },
-                    new Option { Destination = 409, Text = ", или все же направитесь к ним и узнаете, кто они такие и что в сундуках" },
+                    new Option { Destination = 380, Text = "Уплывете" },
+                    new Option { Destination = 409, Text = "Узнаете, кто они такие и что в сундуках" },
                 }
             },
             [6] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 524, Text = "Ничего не поделаешь — теперь придется возглавить команду самому — 524" },
+                    new Option { Destination = 524, Text = "Далее" },
                 }
             },
             [7] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 164, Text = "Попробуете ее открыть" },
-                    new Option { Destination = 359, Text = ", или проще все-таки подняться наверх" },
+                    new Option { Destination = 164, Text = "Попробуете открыть" },
+                    new Option { Destination = 359, Text = "Поднимитесь наверх" },
                 }
             },
             [8] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 159, Text = "Хотите направиться туда и выяснить, что это было" },
-                    new Option { Destination = 446, Text = ", или поплывете в другую сторону" },
+                    new Option { Destination = 159, Text = "Выяснить, что это было" },
+                    new Option { Destination = 446, Text = "Поплывете в другую сторону" },
                 }
             },
             [9] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 530, Text = "Ничего другого не остается, как покинуть остров, потеряв на нем 40 минут, — 530" },
+                    new Option { Destination = 530, Text = "Далее" },
                 }
             },
             [10] = new Paragraph
@@ -121,8 +121,8 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 615, Text = "Если вам удалось сразить его, то 615" },
-                    new Option { Destination = 184, Text = ". Если вы решили покинуть поле боя, то 184" },
+                    new Option { Destination = 615, Text = "Если вам удалось сразить его" },
+                    new Option { Destination = 184, Text = "Если решили покинуть поле боя" },
                 }
             },
             [12] = new Paragraph
@@ -130,311 +130,310 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
                 Options = new List<Option>
                 {
                     new Option { Destination = 251, Text = "Последуете за ней" },
-                    new Option { Destination = 360, Text = "или решите, что счастливо отделались, и попытаетесь покинуть лес" },
-                    new Option { Destination = 152, Text = "? А, может быть, просто поплывете в другую сторону" },
+                    new Option { Destination = 360, Text = "Попытаетесь покинуть лес" },
+                    new Option { Destination = 152, Text = "Поплывете в другую сторону" },
                 }
             },
             [13] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 16, Text = "На какой остров из тех, где вы еще небыли, выберете путь теперь? На второй" },
-                    new Option { Destination = 233, Text = ", третий" },
-                    new Option { Destination = 165, Text = ", четвертый" },
-                    new Option { Destination = 418, Text = ", пятый" },
-                    new Option { Destination = 395, Text = ", шестой" },
-                    new Option { Destination = 535, Text = ", седьмой" },
-                    new Option { Destination = 100, Text = ", восьмой" },
-                    new Option { Destination = 84, Text = ", девятый" },
-                    new Option { Destination = 352, Text = ", десятый" },
-                    new Option { Destination = 282, Text = ", одиннадцатый" },
-                    new Option { Destination = 456, Text = ", двенадцатый" },
-                    new Option { Destination = 500, Text = "или тринадцатый" },
+                    new Option { Destination = 16, Text = "Второй" },
+                    new Option { Destination = 233, Text = "Третий" },
+                    new Option { Destination = 165, Text = "Четвертый" },
+                    new Option { Destination = 418, Text = "Пятый" },
+                    new Option { Destination = 395, Text = "Шестой" },
+                    new Option { Destination = 535, Text = "Седьмой" },
+                    new Option { Destination = 100, Text = "Восьмой" },
+                    new Option { Destination = 84, Text = "Девятый" },
+                    new Option { Destination = 352, Text = "Десятый" },
+                    new Option { Destination = 282, Text = "Одиннадцатый" },
+                    new Option { Destination = 456, Text = "Двенадцатый" },
+                    new Option { Destination = 500, Text = "Тринадцатый" },
                 }
             },
             [14] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 364, Text = "Куда же теперь: в каюту штурмана" },
-                    new Option { Destination = 411, Text = ", в трюм" },
-                    new Option { Destination = 8, Text = "или покинете корабль и поплывете дальше" },
+                    new Option { Destination = 364, Text = "В каюту штурмана" },
+                    new Option { Destination = 411, Text = "В трюм" },
+                    new Option { Destination = 8, Text = "Покинете корабль" },
                 }
             },
             [15] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 419, Text = "Если вы убили его, то 419" },
+                    new Option { Destination = 419, Text = "Далее" },
                 }
             },
             [16] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 166, Text = "Примете это предложение" },
-                    new Option { Destination = 252, Text = "кто этот человек" },
+                    new Option { Destination = 166, Text = "Примете предложение" },
+                    new Option { Destination = 252, Text = "Скажете, что торопитесь" },
                 }
             },
             [17] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 531, Text = "Предложите ему деньги за то, что он ответит на ваши вопросы" },
-                    new Option { Destination = 365, Text = ", или постараетесь обойтись без его помощи" },
+                    new Option { Destination = 531, Text = "Предложите ему деньги" },
+                    new Option { Destination = 365, Text = "Постараетесь обойтись без его помощи" },
                 }
             },
             [18] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 167, Text = "Конечно, большой и хорошо вооруженный корабль внушает меньше опасений, чем небольшая шхуна, но стоит ли менять свои планы? Решение за вами: догоните корабль Шелтона и попроситесь на борт" },
-                    new Option { Destination = 410, Text = "или будете продолжать путешествие на своей шхуне" },
+                    new Option { Destination = 167, Text = "Догоните корабль Шелтона и попроситесь на борт" },
+                    new Option { Destination = 410, Text = "Продолжать путешествие на своей шхуне" },
                 }
             },
             [19] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 52, Text = "Теперь можете или покинуть картинную галерею и, вернувшись на развилку, поплыть в левый" },
-                    new Option { Destination = 253, Text = "либо в средний тоннель" },
-                    new Option { Destination = 361, Text = ", или рискнуть и проплыть сквозь одну из картин" },
+                    new Option { Destination = 52, Text = "Поплыть в левый тоннель" },
+                    new Option { Destination = 253, Text = "Поплыть в средний тоннель" },
+                    new Option { Destination = 361, Text = "Проплыть сквозь одну из картин" },
                 }
             },
             [20] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 536, Text = "Теперь можете направиться либо к подводному лесу, который виднеется слева от вас" },
-                    new Option { Destination = 267, Text = ", либо к невысокой скале, которая темнеет впереди" },
-                    new Option { Destination = 381, Text = ". Если же вас не устраивает ни то, ни другое, — попытайтесь проплыть между лесом и скалой" },
+                    new Option { Destination = 536, Text = "К подводному лесу" },
+                    new Option { Destination = 267, Text = "К невысокой скале" },
+                    new Option { Destination = 381, Text = "Проплыть между лесом и скалой" },
                 }
             },
             [21] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 420, Text = "К вашим услугам солонина" },
-                    new Option { Destination = 186, Text = ", вино в большой бочке" },
-                    new Option { Destination = 434, Text = "и окорока, подвешенные под потолком" },
-                    new Option { Destination = 15, Text = ". Если же вы не хотите есть, покидайте башню и продолжайте путешествие" },
+                    new Option { Destination = 420, Text = "Солонина" },
+                    new Option { Destination = 186, Text = "Вино в большой бочке" },
+                    new Option { Destination = 434, Text = "Окорока" },
+                    new Option { Destination = 15, Text = "Продолжите путешествие" },
                 }
             },
             [22] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 8, Text = "Закрыв дверь каюты капитана, вы покидаете корабль — 8" },
+                    new Option { Destination = 8, Text = "Далее" },
                 }
             },
             [23] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 254, Text = "Если наденете его на палец, то 254" },
-                    new Option { Destination = 345, Text = ", если нет, то решайте, через какой из тоннелей будете выбираться — через тот, что справа" },
-                    new Option { Destination = 71, Text = ", или через тот, что прямо перед вами" },
+                    new Option { Destination = 254, Text = "Наденете его на палец" },
+                    new Option { Destination = 345, Text = "Через тот, что справа" },
+                    new Option { Destination = 71, Text = "Через тот, что прямо перед вами" },
                 }
             },
             [24] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 2, Text = "К счастью, у вас сохранились все деньги да еще немного еды (на 2" },
-                    new Option { Destination = 523, Text = "Теперь начинайте подводное путешествие — 523" },
+                    new Option { Destination = 523, Text = "Далее" },
                 }
             },
             [25] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 382, Text = "Но времени на долгие размышления нет, и вы направляетесь к коралловому рифу, который виднеется неподалеку, — 382" },
+                    new Option { Destination = 382, Text = "Далее" },
                 }
             },
             [26] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 255, Text = "Теперь необходимо решить: будете путешествовать вместе с Джоном" },
-                    new Option { Destination = 421, Text = "или расстанетесь, чтобы каждый мог исследовать подводное царство самостоятельно, а при встрече узнать, какие приключения выпали на долю другого" },
+                    new Option { Destination = 255, Text = "Путешествовать вместе с Джоном" },
+                    new Option { Destination = 421, Text = "Расстанетесь" },
                 }
             },
             [27] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 537, Text = "Обдумайте увиденное, а потом покиньте башню и, проплыв над остатками крепостной стены, направляйтесь дальше — 537" },
+                    new Option { Destination = 537, Text = "Далее" },
                 }
             },
             [28] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 389, Text = "Остается только одно: отомстить за погибшего — 389" },
+                    new Option { Destination = 389, Text = "Далее" },
                 }
             },
             [29] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 448, Text = "Если Рыба-еж победила, то 448" },
-                    new Option { Destination = 268, Text = ". Если же она мертва, придется вступить в бой с акулой самому — 268" },
+                    new Option { Destination = 448, Text = "Если Рыба-еж победила" },
+                    new Option { Destination = 268, Text = "Если она мертва" },
                 }
             },
             [30] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 549, Text = "После этого Дух исчезает, путь свободен — 549" },
+                    new Option { Destination = 549, Text = "Далее" },
                 }
             },
             [31] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 188, Text = "Вы можете плыть дальше прямо" },
-                    new Option { Destination = 435, Text = "или свернуть направо" },
+                    new Option { Destination = 188, Text = "Прямо" },
+                    new Option { Destination = 435, Text = "Свернуть направо" },
                 }
             },
             [32] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 326, Text = "Если вы убили его, то 326" },
+                    new Option { Destination = 326, Text = "Далее" },
                 }
             },
             [33] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 406, Text = "Если вы уменьшили ВЫНОСЛИВОСТЬ своего противника до 8, то 406" },
-                    new Option { Destination = 362, Text = ". Если же акула сделала то же самое, то 362" },
+                    new Option { Destination = 406, Text = "Уменьшили силу своего противника до восьми" },
+                    new Option { Destination = 362, Text = "Акула сделала то же самое" },
                 }
             },
             [34] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 374, Text = "Теперь уж выбора не осталось: можно двигаться только вперед — 374" },
+                    new Option { Destination = 374, Text = "Далее" },
                 }
             },
             [35] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 353, Text = "Он нажимает на какой-то выступ, в стене открывается скрытый проход, и вновь — свобода! А впереди видны какие-то развалины, к которым вы и направляетесь, — 353" },
+                    new Option { Destination = 353, Text = "Далее" },
                 }
             },
             [36] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 269, Text = "Теперь отправляйтесь дальше: либо к большому подводному пастбищу слева" },
-                    new Option { Destination = 189, Text = ", либо в открытое море" },
+                    new Option { Destination = 269, Text = "К большому подводному пастбищу" },
+                    new Option { Destination = 189, Text = "В открытое море" },
                 }
             },
             [37] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 540, Text = "Приходится покинуть остров ни с чем, проведя на нем ровно полчаса, — 540" },
+                    new Option { Destination = 540, Text = "Далее" },
                 }
             },
             [38] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 374, Text = "Навстречу неизвестности, а быть может, и гибели — 374" },
+                    new Option { Destination = 374, Text = "Далее" },
                 }
             },
             [39] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 294, Text = "Наконец все же следуете за своим спутником" },
+                    new Option { Destination = 294, Text = "Далее" },
                 }
             },
             [40] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 202, Text = "Хотите еще поговорить с Карликом" },
-                    new Option { Destination = 501, Text = "или поблагодарите его и отправитесь дальше" },
+                    new Option { Destination = 202, Text = "Поговорить с Карликом" },
+                    new Option { Destination = 501, Text = "Отправитесь дальше" },
                 }
             },
             [41] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 182, Text = "Вскоре вокруг снова только вода, без конца и без края, — 182" },
+                    new Option { Destination = 182, Text = "Далее" },
                 }
             },
             [42] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 468, Text = "Если понимаете язык рыб, то все в порядке, если же нет— придется либо покормить рыбок" },
-                    new Option { Destination = 516, Text = ", либо просто отправляться дальше" },
+                    new Option { Destination = 468, Text = "Покормить рыбок" },
+                    new Option { Destination = 516, Text = "Отправиться дальше" },
                 }
             },
             [43] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 557, Text = "Если выпавшее число меньше вашего МАСТЕРСТВА, то 557" },
-                    new Option { Destination = 327, Text = ", если же больше или равно, то 327" },
+                    new Option { Destination = 557, Text = "Число меньше ловкости" },
+                    new Option { Destination = 327, Text = "Число больше или равно" },
                 }
             },
             [44] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 19, Text = "Теперь вернитесь на 19" },
+                    new Option { Destination = 19, Text = "Далее" },
                 }
             },
             [45] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 501, Text = "Если у вас и в самом деле есть перстень, то вы знаете, что надо делать, если же нет, то остается только попрощаться с Карликом и двигаться дальше — 501" },
+                    new Option { Destination = 501, Text = "Далее" },
                 }
             },
             [46] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 208, Text = "Но что-либо понять уже невозможно — лев с рычанием, от которого кровь стынет в жилах, бросается вперед — 208" },
+                    new Option { Destination = 208, Text = "Далее" },
                 }
             },
             [47] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 578, Text = "Хотите взять его с собой? Если да, то 578" },
-                    new Option { Destination = 32, Text = ", если нет, то вежливо откажитесь и плывите дальше — 32" },
+                    new Option { Destination = 578, Text = "Взять его с собой" },
+                    new Option { Destination = 32, Text = "Плывёте дальше" },
                 }
             },
             [48] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 628, Text = "Если нет, то остается либо попытаться убить ее и употребить в пищу" },
-                    new Option { Destination = 328, Text = ", либо плыть дальше" },
+                    new Option { Destination = 628, Text = "Попытаться убить ее" },
+                    new Option { Destination = 328, Text = "Плыть дальше" },
                 }
             },
             [49] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 188, Text = "Если вы вернетесь в тот коридор, из которого приплыли, и свернете направо, то 188" },
-                    new Option { Destination = 422, Text = ", если же хотите узнать, куда ведет следующий проход, то 422" },
+                    new Option { Destination = 188, Text = "Направо" },
+                    new Option { Destination = 422, Text = "Куда ведет следующий проход" },
                 }
             },
             [50] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 555, Text = "Затем вы покидаете остров, проведя на нем 20 минут — 555" },
+                    new Option { Destination = 555, Text = "Далее" },
                 }
             },
             [51] = new Paragraph
