@@ -495,14 +495,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 437, Text = "Иначе она лишь грустно улыбнется и исчезнет — 437" },
+                    new Option { Destination = 437, Text = "Далее" },
                 }
             },
             [59] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 15, Text = "Приходится снять латы и покинуть старую башню —15" },
+                    new Option { Destination = 15, Text = "Далее" },
                 }
             },
             [60] = new Paragraph
@@ -519,21 +519,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 324, Text = "Вы покидаете остров, проведя на нем час, — 324" },
+                    new Option { Destination = 324, Text = "Далее" },
                 }
             },
             [62] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 402, Text = "Вы направляетесь к развалинам, что видны неподалеку, надеясь там в безопасности отдохнуть — 402" },
+                    new Option { Destination = 402, Text = "Далее" },
                 }
             },
             [63] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 217, Text = "Если вы убили их, то 217" },
+                    new Option { Destination = 217, Text = "Далее" },
                 }
             },
             [64] = new Paragraph
@@ -548,7 +548,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 214, Text = "Кроме того, если хотите, возьмите немного мяса с собой (добавьте 1 еду) — 214" },
+                    new Option { Destination = 214, Text = "Далее" },
                 }
             },
             [66] = new Paragraph
@@ -572,7 +572,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 611, Text = "Выскакиваете в коридор, но в эту минуту корабль начинает сильно качать, не удержавшись на ногах, вы с размаху падаете на пол (потеряйте 4 ВЫНОСЛИВОСТИ) — 611" },
+                    new Option { Destination = 611, Text = "Далее" },
                 }
             },
             [69] = new Paragraph
@@ -586,7 +586,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 399, Text = "Тогда вы обещаете спасти их позже, когда найдете Неведомое и разгадаете его тайну, а пока спешите уплыть — 399" },
+                    new Option { Destination = 399, Text = "Далее" },
                 }
             },
             [71] = new Paragraph
@@ -609,7 +609,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 429, Text = "Если вам удалось отомстить, то 429" },
+                    new Option { Destination = 429, Text = "Далее" },
                 }
             },
             [74] = new Paragraph
@@ -633,7 +633,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 569, Text = "Проведя на острове 40 минут, вы покидаете его — 569" },
+                    new Option { Destination = 569, Text = "Далее" },
                 }
             },
             [77] = new Paragraph
@@ -655,7 +655,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 269, Text = "Потом ведьма указывает на появившееся вдалеке большое подводное пастбище и говорит, что это и есть ваша цель, — 269" },
+                    new Option { Destination = 269, Text = "Далее" },
                 }
             },
             [80] = new Paragraph
@@ -671,7 +671,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 328, Text = "Прибавьте 1 УДАЧУ — 328" },
+                    new Option { Destination = 328, Text = "Далее" },
                 }
             },
             [82] = new Paragraph
@@ -694,7 +694,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 157, Text = "Если у вас есть гладкий камешек, то лучше сразу попробовать показать его моряку, если нет, — думайте, о чем будете с ним разговаривать —157" },
+                    new Option { Destination = 157, Text = "Далее" },
                 }
             },
             [85] = new Paragraph
@@ -719,7 +719,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 271, Text = "Если вы победили врага и при этом случайно остались живы, то 271" },
+                    new Option { Destination = 271, Text = "Далее" },
                 }
             },
             [87] = new Paragraph
@@ -735,14 +735,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 192, Text = "Если вы убили его, то 192" },
+                    new Option { Destination = 192, Text = "Далее" },
                 }
             },
             [89] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 447, Text = "Рыба-собака выводит вас к высокой скале и исчезает — 447" },
+                    new Option { Destination = 447, Text = "Далее" },
                 }
             },
             [90] = new Paragraph
@@ -766,7 +766,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 540, Text = "Вы провели на острове ровно полчаса — 540" },
+                    new Option { Destination = 540, Text = "Далее" },
                 }
             },
             [93] = new Paragraph
@@ -797,21 +797,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 193, Text = "Дверь медленно открывается —193" },
+                    new Option { Destination = 193, Text = "Далее" },
                 }
             },
             [97] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 324, Text = "После этого выбираетесь из логова Крылатого льва и покидаете остров, проведя на нем 35 минут — 324" },
+                    new Option { Destination = 324, Text = "Далее" },
                 }
             },
             [98] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 422, Text = "Если хотите взять кольцо с собой, наденьте его на палец, если же нет, — можете незаметно выбросить: сейчас за вами никто не наблюдает — 422" },
+                    new Option { Destination = 422, Text = "Далее" },
                 }
             },
             [99] = new Paragraph
@@ -826,7 +826,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 555, Text = "Если удается убить его, то с острова уплываете, потратив на его посещение 40 минут, — 555" },
+                    new Option { Destination = 555, Text = "Далее" },
                 }
             },
             [101] = new Paragraph
@@ -842,7 +842,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 26, Text = "Вы с Джоном пытаетесь отвязать одну из шлюпок, но в это время огромная волна накрывает палубу, и вы оказываетесь в воде далеко от тонущего корабля — 26" },
+                    new Option { Destination = 26, Text = "Далее" },
                 }
             },
             [103] = new Paragraph
@@ -858,7 +858,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 262, Text = "Ну, а если не можете этого сделать, — вступайте в схватку сами — 262" },
+                    new Option { Destination = 262, Text = "Далее" },
                 }
             },
             [105] = new Paragraph
@@ -896,7 +896,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 447, Text = "Ленивый кальмар не станет преследовать, а предпочтет дождаться в засаде более неповоротливую добычу — 447" },
+                    new Option { Destination = 447, Text = "Далее" },
                 }
             },
             [109] = new Paragraph
@@ -910,14 +910,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 369, Text = "Одержав победу, Рыба-молот уплывает, вильнув на прощание хвостом, — 369" },
+                    new Option { Destination = 369, Text = "Далее" },
                 }
             },
             [111] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 289, Text = "Вы прекрасно умеете плавать, но чувствуете, что какая-то сила неумолимо тянет на дно, и вот уже вода смыкается над вашей головой — 289" },
+                    new Option { Destination = 289, Text = "Далее" },
                 }
             },
             [112] = new Paragraph
@@ -948,7 +948,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 90, Text = "Теперь вернитесь на 90" },
+                    new Option { Destination = 90, Text = "Далее" },
                 }
             },
             [116] = new Paragraph
@@ -975,35 +975,35 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 549, Text = "Прежде чем вы успеваете спросить, о каком пастбище идет речь и чем оно может помочь, Дух исчезает — 549" },
+                    new Option { Destination = 549, Text = "Далее" },
                 }
             },
             [119] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 234, Text = "Рыба отказывается от преследования, и вскоре перед вами открывается скопление прекрасных подводных цветов — 234" },
+                    new Option { Destination = 234, Text = "Далее" },
                 }
             },
             [120] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 612, Text = "А пока — плывите дальше — 612" },
+                    new Option { Destination = 612, Text = "Далее" },
                 }
             },
             [121] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 398, Text = "Быстро уплываете прочь от Морского черта и радуетесь, что удалось избежать боя, — 398" },
+                    new Option { Destination = 398, Text = "Далее" },
                 }
             },
             [122] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 41, Text = "Можете еще немного посидеть в кресле и отдохнуть (восстановите 6 ВЫНОСЛИВОСТЕЙ), после чего все-таки придется уходить — время дорого — 41" },
+                    new Option { Destination = 41, Text = "Далее" },
                 }
             },
             [123] = new Paragraph
@@ -1029,7 +1029,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 501, Text = "Не дослушав его до конца, вы плывете дальше — 501" },
+                    new Option { Destination = 501, Text = "Далее" },
                 }
             },
             [125] = new Paragraph
@@ -1053,21 +1053,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 258, Text = "Теперь же пора покидать остров, вы и так потеряли на нем полчаса — 258" },
+                    new Option { Destination = 258, Text = "Далее" },
                 }
             },
             [128] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 236, Text = "Поэтому можете спокойно уплыть из залы по коридору, ведущему дальше, прихватив с собой трезубец, — 236" },
+                    new Option { Destination = 236, Text = "Далее" },
                 }
             },
             [129] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 204, Text = "Теперь ваш путь лежит дальше — 204" },
+                    new Option { Destination = 204, Text = "Далее" },
                 }
             },
             [130] = new Paragraph
@@ -1081,14 +1081,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 472, Text = "Если вы добили его, то 472" },
+                    new Option { Destination = 472, Text = "Далее" },
                 }
             },
             [132] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 559, Text = "К сожалению, жребий выпал одному из ваших соперников — 559" },
+                    new Option { Destination = 559, Text = "Далее" },
                 }
             },
             [133] = new Paragraph
@@ -1104,7 +1104,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 189, Text = "Теперь, когда опасность миновала, можете отправляться дальше —189" },
+                    new Option { Destination = 189, Text = "Далее" },
                 }
             },
             [135] = new Paragraph
@@ -1119,21 +1119,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 85, Text = "После этого прощаетесь с Принцем и покидаете остров, проведя на нем 45 минут, — 85" },
+                    new Option { Destination = 85, Text = "Далее" },
                 }
             },
             [137] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "В случае удачи поблагодарите Рыцаря-водяного, и он уплывает —198" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [138] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 476, Text = "После чего величественно поднимается в воздух и скрывается в вышине — 476" },
+                    new Option { Destination = 476, Text = "Далее" },
                 }
             },
             [139] = new Paragraph
@@ -1158,21 +1158,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 56, Text = "Через несколько минут вы следуете за ним" },
+                    new Option { Destination = 56, Text = "Далее" },
                 }
             },
             [142] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 511, Text = "Конечно, против пистолета вы бессильны, и не остается ничего другого, как подчиниться, — 511" },
+                    new Option { Destination = 511, Text = "Далее" },
                 }
             },
             [143] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 208, Text = "В ту же минуту Лев с рычанием прыгает вперед — 208" },
+                    new Option { Destination = 208, Text = "Далее" },
                 }
             },
             [144] = new Paragraph
@@ -1187,7 +1187,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 447, Text = "Эти маленькие очаровательные существа вызывают у вас такое большое доверие, что, когда они исчезают, становится даже немного грустно, — 447" },
+                    new Option { Destination = 447, Text = "Далее" },
                 }
             },
             [146] = new Paragraph
@@ -1246,14 +1246,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 53, Text = "Если вы убили ее, то 53" },
+                    new Option { Destination = 53, Text = "Далее" },
                 }
             },
             [153] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 3, Text = "Плыть приходится так быстро, что не замечаете, как оказались на опушке огромного подводного леса, необыкновенно похожего на настоящий, — 3" },
+                    new Option { Destination = 3, Text = "Далее" },
                 }
             },
             [154] = new Paragraph
@@ -1268,14 +1268,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 355, Text = "Если удалось убить врага, — 355" },
+                    new Option { Destination = 355, Text = "Далее" },
                 }
             },
             [156] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 243, Text = "Теперь же рыбка уплывает, а вы продолжаете свой путь — 243" },
+                    new Option { Destination = 243, Text = "Далее" },
                 }
             },
             [157] = new Paragraph
@@ -1361,7 +1361,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 366, Text = "Ночью впервые за несколько дней вы можете спокойно уснуть — 366" },
+                    new Option { Destination = 366, Text = "Далее" },
                 }
             },
             [168] = new Paragraph
@@ -1384,7 +1384,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 22, Text = "В случае победы можете спокойно осмотреть каюту капитана — 22" },
+                    new Option { Destination = 22, Text = "Далее" },
                 }
             },
             [171] = new Paragraph
@@ -1400,14 +1400,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 8, Text = "После этого покидаете затонувший корабль и плывете дальше — 8" },
+                    new Option { Destination = 8, Text = "Далее" },
                 }
             },
             [173] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 15, Text = "Теперь самое время покинуть старую башню и отправиться дальше —15" },
+                    new Option { Destination = 15, Text = "Далее" },
                 }
             },
             [174] = new Paragraph
@@ -1429,14 +1429,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 357, Text = "Отдав команде шхуны приказ следовать за 'Гермесом', вы впервые за два дня ложитесь спать, ощущая себя в безопасности, — 357" },
+                    new Option { Destination = 357, Text = "Далее" },
                 }
             },
             [177] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 273, Text = "Когда 'нужный час' настанет, прибавьте 88 к номеру параграфа, на котором будете находиться, — 273" },
+                    new Option { Destination = 273, Text = "Далее" },
                 }
             },
             [178] = new Paragraph
@@ -1463,14 +1463,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 217, Text = "Когда битва будет закончена, — 217" },
+                    new Option { Destination = 217, Text = "Далее" },
                 }
             },
             [181] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 541, Text = "Если вам удалось победить противника, то 541" },
+                    new Option { Destination = 541, Text = "Далее" },
                 }
             },
             [182] = new Paragraph
@@ -1485,21 +1485,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 29, Text = "Если же в вашем распоряжении Рыба-еж, то 29" },
+                    new Option { Destination = 29, Text = "Далее" },
                 }
             },
             [184] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 168, Text = "Вы покидаете поле боя, еще раз обжегшись о листья растения и потеряв еще 4 ВЫНОСЛИВОСТИ, — 168" },
+                    new Option { Destination = 168, Text = "Далее" },
                 }
             },
             [185] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 414, Text = "Если вам удалось их убить, то 414" },
+                    new Option { Destination = 414, Text = "Далее" },
                 }
             },
             [186] = new Paragraph
@@ -1514,7 +1514,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 35, Text = "Рана болезненна, и вам не слишком-то хочется продолжать в том же духе — 35" },
+                    new Option { Destination = 35, Text = "Далее" },
                 }
             },
             [188] = new Paragraph
@@ -1562,7 +1562,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 292, Text = "Вы попадаете в сухую просторную комнату, в которой жарко и душно от множества свечей, горящих вдоль стен в изящных бронзовых канделябрах, — 292" },
+                    new Option { Destination = 292, Text = "Далее" },
                 }
             },
             [194] = new Paragraph
@@ -1603,21 +1603,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 293, Text = "В противном случае остается уповать только на остроту меча — 293" },
+                    new Option { Destination = 293, Text = "Далее" },
                 }
             },
             [199] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 353, Text = "Не остается ничего более оригинального, кроме как направиться к развалинам, которые виднеются неподалеку, — 353" },
+                    new Option { Destination = 353, Text = "Далее" },
                 }
             },
             [200] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 87, Text = "Вы берете бутылку с собой, рассчитывая при случае отправить ее по адресу, — 87" },
+                    new Option { Destination = 87, Text = "Далее" },
                 }
             },
             [201] = new Paragraph
@@ -1640,7 +1640,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 441, Text = "После нескольких бесплодных попыток вы решаете оставить его в покое и отправиться дальше — 441" },
+                    new Option { Destination = 441, Text = "Далее" },
                 }
             },
             [204] = new Paragraph
@@ -1711,28 +1711,28 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 509, Text = "Так что придется покинуть остров, на этот раз проведя на нем 45 минут, — 509" },
+                    new Option { Destination = 509, Text = "Далее" },
                 }
             },
             [213] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 13, Text = "(Для этого вычтите 363 из номера параграфа, на котором будете находиться.) Затем вы, не теряя времени, покидаете остров, проведя на нем всего 20 минут, — 13" },
+                    new Option { Destination = 13, Text = "Далее" },
                 }
             },
             [214] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 189, Text = "Путь дальше свободен, и что-то подсказывает вам, что близок конец подводных приключений, — 189" },
+                    new Option { Destination = 189, Text = "Далее" },
                 }
             },
             [215] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 490, Text = "Вдруг Морской конек останавливается так резко и внезапно, что вы перелетаете через его голову и видите, как он мгновенно исчезает, — 490" },
+                    new Option { Destination = 490, Text = "Далее" },
                 }
             },
             [216] = new Paragraph
@@ -1763,35 +1763,35 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 189, Text = "Теперь можете подкрепиться (восстановите 6 ВЫНОСЛИВОСТЕЙ), немного мяса взять с собой (в качестве 1 еды) и плыть дальше —189" },
+                    new Option { Destination = 189, Text = "Далее" },
                 }
             },
             [220] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 500, Text = "Ваше время истекло, и неведомая сила заставляет направиться к центральному, тринадцатому острову — 500" },
+                    new Option { Destination = 500, Text = "Далее" },
                 }
             },
             [221] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 592, Text = "Она отпугивает рыб, и они в ужасе уплывают — 592" },
+                    new Option { Destination = 592, Text = "Далее" },
                 }
             },
             [222] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 136, Text = "'Я — сын Короля…' Ну что ж, этих объяснений вам вполне достаточно —136" },
+                    new Option { Destination = 136, Text = "Далее" },
                 }
             },
             [223] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 269, Text = "Когда водоворот столь же внезапно успокаивается, вы видите перед собой обширное подводное пастбище, к которому и направляетесь, — 269" },
+                    new Option { Destination = 269, Text = "Далее" },
                 }
             },
             [224] = new Paragraph
@@ -1807,35 +1807,35 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 302, Text = "Если у вас и в самом деле есть раковина, то воспользуйтесь ею, а если нет, отправляйтесь дальше — 302" },
+                    new Option { Destination = 302, Text = "Далее" },
                 }
             },
             [226] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Если враги убиты, а Морской рыцарь еще жив, то он исчезает -198" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [227] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Если после вашей победы Крылатый лев остается живым, то он улетает — 198" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [228] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 524, Text = "Делать нечего — вы покидаете его дом, решив возглавить команду самостоятельно и отправиться в море без спутника, — 524" },
+                    new Option { Destination = 524, Text = "Далее" },
                 }
             },
             [229] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 284, Text = "Если вы передумали, сражайтесь — 284" },
+                    new Option { Destination = 284, Text = "Далее" },
                 }
             },
             [230] = new Paragraph
@@ -1892,7 +1892,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 363, Text = "Если у вас есть большой алмаз или опознавательный знак, скорее предъявите их, иначе придется вступить в бой, — 363" },
+                    new Option { Destination = 363, Text = "Далее" },
                 }
             },
             [237] = new Paragraph
@@ -1907,7 +1907,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Когда бой будет закончен (если, конечно, он закончится в вашу пользу), то 198" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [239] = new Paragraph
@@ -1922,7 +1922,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 407, Text = "Разочарованный, вы покидаете остров, проведя на нем 45 минут, — 407" },
+                    new Option { Destination = 407, Text = "Далее" },
                 }
             },
             [241] = new Paragraph
@@ -1988,21 +1988,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 13, Text = "На бой у вас ушло полчаса, если для победы хватило пяти раундов атаки, или 45 минут, если больше, — 13" },
+                    new Option { Destination = 13, Text = "Далее" },
                 }
             },
             [249] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 629, Text = "Теперь многое становится более понятно, но все же не до конца — 629" },
+                    new Option { Destination = 629, Text = "Далее" },
                 }
             },
             [250] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 3, Text = "Решив не искать на свою голову лишних приключений, вы вскоре оказываетесь на опушке огромного подводного леса, чрезвычайно похожего на настоящий, — 3" },
+                    new Option { Destination = 3, Text = "Далее" },
                 }
             },
             [251] = new Paragraph
@@ -2017,7 +2017,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 85, Text = "Если же нет, то придется покинуть остров, проведя яа нем ровно полчаса, — 85" },
+                    new Option { Destination = 85, Text = "Далее" },
                 }
             },
             [253] = new Paragraph
@@ -2103,28 +2103,28 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 382, Text = "Но делать нечего, и вы направляетесь к коралловому рифу, который виднеется неподалеку, — 382" },
+                    new Option { Destination = 382, Text = "Далее" },
                 }
             },
             [262] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 429, Text = "В случае победы над ним — 429" },
+                    new Option { Destination = 429, Text = "Далее" },
                 }
             },
             [263] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 55, Text = "Спасти корабль уже невозможно: он начинает медленно погружаться в море — 55" },
+                    new Option { Destination = 55, Text = "Далее" },
                 }
             },
             [264] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 195, Text = "Достаточно только пожелать увидеть Короля, и через несколько минут двери королевских покоев распахиваются перед вами —195" },
+                    new Option { Destination = 195, Text = "Далее" },
                 }
             },
             [265] = new Paragraph
@@ -2155,7 +2155,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 369, Text = "Если вы убили своего врага, то 369" },
+                    new Option { Destination = 369, Text = "Далее" },
                 }
             },
             [269] = new Paragraph
@@ -2170,21 +2170,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 94, Text = "Опустившись на дно, понимаете, что всплыть не удастся, и решаете смириться, отправившись на поиски Неведомого в подводном царстве, благо судьба предоставляет такую возможность — 94" },
+                    new Option { Destination = 94, Text = "Далее" },
                 }
             },
             [271] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 196, Text = "Если вы уже находили статуэтку сидящего человечка, то теперь самое время достать ее, если же нет, то 196" },
+                    new Option { Destination = 196, Text = "Далее" },
                 }
             },
             [272] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 269, Text = "С интересом осмотревшись, вы видите вокруг совершенно незнакомые места, а впереди большой подводный луг, к которому, немного поразмыслив, и решаете направиться — 269" },
+                    new Option { Destination = 269, Text = "Далее" },
                 }
             },
             [273] = new Paragraph
@@ -2243,7 +2243,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 253, Text = "Теперь вернитесь на 253" },
+                    new Option { Destination = 253, Text = "Далее" },
                 }
             },
             [279] = new Paragraph
@@ -2258,7 +2258,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 365, Text = "Когда же спрашиваете про Неведомое, то лодочник просто не понимает, о чем вы говорите, и, пожав плечами, уплывает — 365" },
+                    new Option { Destination = 365, Text = "Далее" },
                 }
             },
             [281] = new Paragraph
@@ -2281,7 +2281,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 8, Text = "Необычное указание продолжает занимать ваши мысли все время, пока вы выбираетесь из затонувшего корабля и решаете, куда плыть дальше, — 8" },
+                    new Option { Destination = 8, Text = "Далее" },
                 }
             },
             [284] = new Paragraph
@@ -2304,28 +2304,28 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 501, Text = "Теперь не остается ничего другого, как отправляться дальше, — 501" },
+                    new Option { Destination = 501, Text = "Далее" },
                 }
             },
             [287] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 622, Text = "В ту же секунду раздается угрожающее рычание льва — 622" },
+                    new Option { Destination = 622, Text = "Далее" },
                 }
             },
             [288] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 195, Text = "В конце приемной он распахивает высокую золотую дверь, и вы переплываете порог —195" },
+                    new Option { Destination = 195, Text = "Далее" },
                 }
             },
             [289] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 94, Text = "Тем более что в подводном царстве гораздо больше шансов отыскать Неведомое — 94" },
+                    new Option { Destination = 94, Text = "Далее" },
                 }
             },
             [290] = new Paragraph
@@ -2374,7 +2374,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 526, Text = "Следуете за ней около получаса и так привыкаете видеть эту забавную рыбу впереди себя, что и не замечаете, как она исчезает, — 526" },
+                    new Option { Destination = 526, Text = "Далее" },
                 }
             },
             [296] = new Paragraph
@@ -2390,14 +2390,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 123, Text = "Однако первый остров можете выбрать сами —123" },
+                    new Option { Destination = 123, Text = "Далее" },
                 }
             },
             [298] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 317, Text = "Спасение может быть только в том, чтобы успеть отвязать шлюпку, — 317" },
+                    new Option { Destination = 317, Text = "Далее" },
                 }
             },
             [299] = new Paragraph
@@ -2462,7 +2462,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 545, Text = "Через несколько минут вы следуете за ним" },
+                    new Option { Destination = 545, Text = "Далее" },
                 }
             },
             [307] = new Paragraph
@@ -2507,7 +2507,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 211, Text = "Если знаете рыбий язык, то лучше попробовать объясниться на нем, иначе придется ее убить, — 211" },
+                    new Option { Destination = 211, Text = "Далее" },
                 }
             },
             [312] = new Paragraph
@@ -2522,14 +2522,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 58, Text = "Если у вас есть золотой пояс и вы хотите вернуть его Русалке — сделайте это, если же нет, то 58" },
+                    new Option { Destination = 58, Text = "Далее" },
                 }
             },
             [314] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 32, Text = "Теперь вы можете продолжить свой путь — 32" },
+                    new Option { Destination = 32, Text = "Далее" },
                 }
             },
             [315] = new Paragraph
@@ -2574,7 +2574,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 396, Text = "Теперь же до конца леса уже недалеко, и вы плывете к его опушке — 396" },
+                    new Option { Destination = 396, Text = "Далее" },
                 }
             },
             [321] = new Paragraph
@@ -2622,7 +2622,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 269, Text = "Когда движение прекращается, перед вами открывается обширный подводный луг, к которому и направляетесь, — 269" },
+                    new Option { Destination = 269, Text = "Далее" },
                 }
             },
             [326] = new Paragraph
@@ -2654,7 +2654,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 217, Text = "В случае удачного исхода боя — 217" },
+                    new Option { Destination = 217, Text = "Далее" },
                 }
             },
             [330] = new Paragraph
@@ -2669,7 +2669,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 217, Text = "Насколько честно с вашей стороны будет прибегнуть к помощи магии? Если считаете, что противник слишком подл, чтобы можно было ему верить, и хотите применить волшебство, то сделайте это, если же нет — вернитесь на 217" },
+                    new Option { Destination = 217, Text = "Далее" },
                 }
             },
             [332] = new Paragraph
@@ -2684,7 +2684,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 32, Text = "Потеряйте 1 УДАЧУ — 32" },
+                    new Option { Destination = 32, Text = "Далее" },
                 }
             },
             [334] = new Paragraph
@@ -2699,7 +2699,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 308, Text = "Неожиданно Рыба-фонарик гаснет — 308" },
+                    new Option { Destination = 308, Text = "Далее" },
                 }
             },
             [336] = new Paragraph
@@ -2738,7 +2738,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Но решив, что вы могущественный волшебник, умеющий по своему желанию убивать на любом расстоянии, он в ужасе бросается в море, надеясь, добраться вплавь до своего корабля, — 198" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [341] = new Paragraph
@@ -2753,7 +2753,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 622, Text = "И в ту же секунду раздается угрожающее рычание льва — 622" },
+                    new Option { Destination = 622, Text = "Далее" },
                 }
             },
             [343] = new Paragraph
@@ -2787,7 +2787,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 99, Text = "Стоит его достать, как удар грома сотрясает остров, — 99" },
+                    new Option { Destination = 99, Text = "Далее" },
                 }
             },
             [347] = new Paragraph
@@ -2851,7 +2851,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 232, Text = "Стоит поторопиться покинуть место, внушающее немало опасений, и вскоре перед вами вновь открытое море — 232" },
+                    new Option { Destination = 232, Text = "Далее" },
                 }
             },
             [355] = new Paragraph
@@ -2866,14 +2866,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 99, Text = "Удар грома потрясает остров — 99" },
+                    new Option { Destination = 99, Text = "Далее" },
                 }
             },
             [357] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 245, Text = "Вместе с Мейстоном судорожно пытаетесь освободить от крепления спасательную шлюпку, но в это время огромная волна смывает вас в море — 245" },
+                    new Option { Destination = 245, Text = "Далее" },
                 }
             },
             [358] = new Paragraph
@@ -2906,7 +2906,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 526, Text = "Вы вздыхаете с облегчением и направляетесь дальше, радуясь, что он не стал вас удерживать, — 526" },
+                    new Option { Destination = 526, Text = "Далее" },
                 }
             },
             [361] = new Paragraph
@@ -2958,21 +2958,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 26, Text = "Вы даже не успеваете предупредить своего товарища, как вас обоих смывает с палубы и уносит в море далеко от 'Гермеса', — 26" },
+                    new Option { Destination = 26, Text = "Далее" },
                 }
             },
             [367] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 232, Text = "А пока ваш путь лежит дальше вперед — 232" },
+                    new Option { Destination = 232, Text = "Далее" },
                 }
             },
             [368] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 622, Text = "В ту же секунду раздается угрожающее рычание льва — 622" },
+                    new Option { Destination = 622, Text = "Далее" },
                 }
             },
             [369] = new Paragraph
@@ -3046,7 +3046,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 168, Text = "Теперь отправляйтесь дальше —168" },
+                    new Option { Destination = 168, Text = "Далее" },
                 }
             },
             [378] = new Paragraph
@@ -3061,14 +3061,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 622, Text = "И в ту же секунду раздается угрожающее рычание льва — 622" },
+                    new Option { Destination = 622, Text = "Далее" },
                 }
             },
             [380] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 526, Text = "Может быть, и правильно, что вы решили плыть дальше, — 526" },
+                    new Option { Destination = 526, Text = "Далее" },
                 }
             },
             [381] = new Paragraph
@@ -3093,7 +3093,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 244, Text = "Увы, вам не повезло — прекрасная идея побыстрее скрыться пришла в голову слишком поздно: один из Водяных уже перед вами — 244" },
+                    new Option { Destination = 244, Text = "Далее" },
                 }
             },
             [384] = new Paragraph
@@ -3108,7 +3108,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 549, Text = "Помимо этого, можете восстановить свою УДАЧУ до начального уровня и плыть дальше — 549" },
+                    new Option { Destination = 549, Text = "Далее" },
                 }
             },
             [386] = new Paragraph
@@ -3131,7 +3131,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 369, Text = "В случае победы над акулой — 369" },
+                    new Option { Destination = 369, Text = "Далее" },
                 }
             },
             [389] = new Paragraph
@@ -3147,14 +3147,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 18, Text = "На следующее утро, еще до восхода солнца, Джон уже ждет в порту, и ваша шхуна 'Святая Елена' выходит в море —18" },
+                    new Option { Destination = 18, Text = "Далее" },
                 }
             },
             [391] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 34, Text = "После этого он отплывает в сторону — можете отправляться дальше — 34" },
+                    new Option { Destination = 34, Text = "Далее" },
                 }
             },
             [392] = new Paragraph
@@ -3202,7 +3202,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 36, Text = "Если он мертв, то 36" },
+                    new Option { Destination = 36, Text = "Далее" },
                 }
             },
             [398] = new Paragraph
@@ -3249,7 +3249,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 243, Text = "Вы отгоняете Солнечную рыбу рукой, и она послушно уплывает прочь: можете продолжать путешествие — 243" },
+                    new Option { Destination = 243, Text = "Далее" },
                 }
             },
             [404] = new Paragraph
@@ -3298,7 +3298,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 234, Text = "Потеряйте 2 ВЫНОСЛИВОСТИ и вернитесь на 234" },
+                    new Option { Destination = 234, Text = "Далее" },
                 }
             },
             [409] = new Paragraph
@@ -3329,7 +3329,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 25, Text = "Вы торопитесь следом" },
+                    new Option { Destination = 25, Text = "Далее" },
                 }
             },
             [413] = new Paragraph
@@ -3393,7 +3393,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 15, Text = "В таком случае запишите ее на свой листок как 1 еду и, покинув башню, продолжайте путешествие —15" },
+                    new Option { Destination = 15, Text = "Далее" },
                 }
             },
             [421] = new Paragraph
@@ -3441,42 +3441,42 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 94, Text = "Но еще не все потеряно, ведь в подводном царстве гораздо больше шансов найти разгадку таинственного исчезновения кораблей, — 94" },
+                    new Option { Destination = 94, Text = "Далее" },
                 }
             },
             [427] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 38, Text = "Если убили его, то 38" },
+                    new Option { Destination = 38, Text = "Далее" },
                 }
             },
             [428] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 549, Text = "Но путь дальше свободен — шаловливый Дух исчезает — 549" },
+                    new Option { Destination = 549, Text = "Далее" },
                 }
             },
             [429] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 284, Text = "Если же их нет, — сражайтесь в одиночку — 284" },
+                    new Option { Destination = 284, Text = "Далее" },
                 }
             },
             [430] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 353, Text = "Если победили его, то дальше путь лежит к странным развалинам, виднеющимся неподалеку, — 353" },
+                    new Option { Destination = 353, Text = "Далее" },
                 }
             },
             [431] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 87, Text = "После этого можете отправляться дальше — 87" },
+                    new Option { Destination = 87, Text = "Далее" },
                 }
             },
             [432] = new Paragraph
@@ -3499,7 +3499,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 15, Text = "Вы выплевываете то, что откусили (однако какую-то часть все же успели проглотить, теперь вам нехорошо — потеряйте 4 ВЫНОСЛИВОСТИ), и, не рискуя отведать что-нибудь еще, покидаете башню —15" },
+                    new Option { Destination = 15, Text = "Далее" },
                 }
             },
             [435] = new Paragraph
@@ -3561,7 +3561,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 93, Text = "Решив, что лучше встретить опасность лицом к лицу, вы разворачиваетесь и, приготовив меч, устремляетесь вперед — 93" },
+                    new Option { Destination = 93, Text = "Далее" },
                 }
             },
             [443] = new Paragraph
@@ -3576,14 +3576,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 361, Text = "Но, быть может, вам еще суждено с ним, встретиться? Вернитесь на 361" },
+                    new Option { Destination = 361, Text = "Далее" },
                 }
             },
             [445] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 181, Text = "Остается одно: бой —181" },
+                    new Option { Destination = 181, Text = "Далее" },
                 }
             },
             [446] = new Paragraph
@@ -3606,14 +3606,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 369, Text = "А ваши испытания далеко не закончены — 369" },
+                    new Option { Destination = 369, Text = "Далее" },
                 }
             },
             [449] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Когда вы благополучно покончите со всеми пиратами, — 198" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [450] = new Paragraph
@@ -3629,7 +3629,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 319, Text = "Если вы все же победили его, то 319" },
+                    new Option { Destination = 319, Text = "Далее" },
                 }
             },
             [452] = new Paragraph
@@ -3651,14 +3651,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 105, Text = "Добравшись до развилки, сворачиваете налево —105" },
+                    new Option { Destination = 105, Text = "Далее" },
                 }
             },
             [455] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 353, Text = "Теперь направляетесь к странным развалинам, которые видны неподалеку, — 353" },
+                    new Option { Destination = 353, Text = "Далее" },
                 }
             },
             [456] = new Paragraph
@@ -3673,7 +3673,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 629, Text = "Неужели он и есть таинственное Неведомое? Но почему же тогда погиб его собственный корвет — 629" },
+                    new Option { Destination = 629, Text = "Далее" },
                 }
             },
             [458] = new Paragraph
@@ -3696,7 +3696,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 530, Text = "Теперь же самое время покинуть остров, проведя на нем 20 минут, — 530" },
+                    new Option { Destination = 530, Text = "Далее" },
                 }
             },
             [461] = new Paragraph
@@ -3718,7 +3718,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 15, Text = "Вы решаете оставить проклятый арбалет там, где он лежал, и покинуть башню —15" },
+                    new Option { Destination = 15, Text = "Далее" },
                 }
             },
             [464] = new Paragraph
@@ -3751,7 +3751,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 539, Text = "После этого продолжаете свой путь — 539" },
+                    new Option { Destination = 539, Text = "Далее" },
                 }
             },
             [467] = new Paragraph
@@ -3766,14 +3766,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 516, Text = "Миновав риф, отправляетесь дальше — 516" },
+                    new Option { Destination = 516, Text = "Далее" },
                 }
             },
             [469] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 199, Text = "Через картину первым проплываете вы" },
+                    new Option { Destination = 199, Text = "Далее" },
                 }
             },
             [470] = new Paragraph
@@ -3821,14 +3821,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 305, Text = "Протиснувшись в узкий проход, проделанный прямо в скале и напоминающий чью-то нору, попадаете в огромную комнату — 305" },
+                    new Option { Destination = 305, Text = "Далее" },
                 }
             },
             [476] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 329, Text = "Иначе либо обратитесь к Солнечной рыбе, либо сражайтесь сами — 329" },
+                    new Option { Destination = 329, Text = "Далее" },
                 }
             },
             [477] = new Paragraph
@@ -3866,7 +3866,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 422, Text = "В конце концов, вы выбираете направление, которое кажется правильным, исходя из этого делаете выбор на очередной развилке — 422" },
+                    new Option { Destination = 422, Text = "Далее" },
                 }
             },
             [482] = new Paragraph
@@ -3888,14 +3888,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 461, Text = "Вы свободны, но горизонт чист, вокруг не видно ни корабля, ни острова — 461" },
+                    new Option { Destination = 461, Text = "Далее" },
                 }
             },
             [485] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 195, Text = "Стремление побеседовать с самим Королем? Ну, что ж, желание победителя — закон, и через несколько минут двери королевских покоев распахиваются перед вами —195" },
+                    new Option { Destination = 195, Text = "Далее" },
                 }
             },
             [486] = new Paragraph
@@ -3942,7 +3942,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Если вы убили своего противника, а Носорог еще жив, то он исчезает —198" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [492] = new Paragraph
@@ -3989,7 +3989,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 304, Text = "Ведьма приводит вас на край какой-то глубокой обширной впадины и исчезает — 304" },
+                    new Option { Destination = 304, Text = "Далее" },
                 }
             },
             [498] = new Paragraph
@@ -4027,7 +4027,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 312, Text = "Если он и в самом деле у вас есть, то предъявите его, если же нет, — 312" },
+                    new Option { Destination = 312, Text = "Далее" },
                 }
             },
             [503] = new Paragraph
@@ -4050,28 +4050,28 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 422, Text = "После этого Король делает знак одному из приближенных, и тот через потайную дверцу выводит вас в какой-то коридор, ведущий прочь от королевских покоев, — 422" },
+                    new Option { Destination = 422, Text = "Далее" },
                 }
             },
             [506] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 443, Text = "Так что ничего не остается, кроме как продолжать бой, — 443" },
+                    new Option { Destination = 443, Text = "Далее" },
                 }
             },
             [507] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 32, Text = "Если удалось победить ее, можете продолжать путь — 32" },
+                    new Option { Destination = 32, Text = "Далее" },
                 }
             },
             [508] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 231, Text = "Выбор падает на одинокую угрюмую скалу, возвышающуюся неподалеку, и вы плывете прямо к ней — 231" },
+                    new Option { Destination = 231, Text = "Далее" },
                 }
             },
             [509] = new Paragraph
@@ -4103,7 +4103,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 322, Text = "Если же нет, то 322" },
+                    new Option { Destination = 322, Text = "Далее" },
                 }
             },
             [512] = new Paragraph
@@ -4117,7 +4117,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 208, Text = "Вы ничего не успеваете понять, как лев с рычанием кидается вперед, — 208" },
+                    new Option { Destination = 208, Text = "Далее" },
                 }
             },
             [514] = new Paragraph
@@ -4133,7 +4133,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Тот в ярости щелкает пальцами, и пираты исчезают —198" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [516] = new Paragraph
@@ -4188,7 +4188,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 243, Text = "Ну, что ж, дело сделано, теперь отправляйтесь дальше — 243" },
+                    new Option { Destination = 243, Text = "Далее" },
                 }
             },
             [523] = new Paragraph
@@ -4213,7 +4213,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 358, Text = "Ничего не остается, кроме как отправиться восвояси: вы и так провели на острове целый час — 358" },
+                    new Option { Destination = 358, Text = "Далее" },
                 }
             },
             [526] = new Paragraph
@@ -4236,14 +4236,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 353, Text = "Путь дальше свободен, и вы устремляетесь в открытое море к каким-то непонятным развалинам, которые виднеются впереди, — 353" },
+                    new Option { Destination = 353, Text = "Далее" },
                 }
             },
             [529] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 18, Text = "7 золотых для него достаточно, и вы договариваетесь встретиться на следующее утро в порту, чтобы выйти в море, — 18" },
+                    new Option { Destination = 18, Text = "Далее" },
                 }
             },
             [530] = new Paragraph
@@ -4276,14 +4276,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 182, Text = "Если вы догадались, что значит МВК, то посмотрите параграф с соответствующим номером, если же нет, — придется оставить дверцу в покое и плыть дальше —182" },
+                    new Option { Destination = 182, Text = "Далее" },
                 }
             },
             [533] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 414, Text = "При благополучном для вас исходе схватки — 414" },
+                    new Option { Destination = 414, Text = "Далее" },
                 }
             },
             [534] = new Paragraph
@@ -4329,7 +4329,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 214, Text = "Если повержен и этот противник, то 214" },
+                    new Option { Destination = 214, Text = "Далее" },
                 }
             },
             [540] = new Paragraph
@@ -4354,21 +4354,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 447, Text = "Но, слава Богу, остались в живых и теперь можете плыть дальше — 447" },
+                    new Option { Destination = 447, Text = "Далее" },
                 }
             },
             [542] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 304, Text = "В конце концов, старик высаживает вас и уплывает — 304" },
+                    new Option { Destination = 304, Text = "Далее" },
                 }
             },
             [543] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 34, Text = "Водяной хмурится, но отплывает в сторону, — можете плыть дальше (потеряйте 1 УДАЧУ) — 34" },
+                    new Option { Destination = 34, Text = "Далее" },
                 }
             },
             [544] = new Paragraph
@@ -4383,14 +4383,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 277, Text = "Если остались живы, а свирепые рыбы повержены, то 277" },
+                    new Option { Destination = 277, Text = "Далее" },
                 }
             },
             [546] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 537, Text = "Больше ничего интересного увидеть не удается, и вы покидаете башню и, проплыв высоко над остатками бывшей крепостной стены, двигаетесь дальше — 537" },
+                    new Option { Destination = 537, Text = "Далее" },
                 }
             },
             [547] = new Paragraph
@@ -4445,14 +4445,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 501, Text = "Теперь остается только в свою очередь попрощаться с Карликом и двинуться дальше —501" },
+                    new Option { Destination = 501, Text = "Далее" },
                 }
             },
             [554] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 236, Text = "Путь лежит дальше по этому коридору — 236" },
+                    new Option { Destination = 236, Text = "Далее" },
                 }
             },
             [555] = new Paragraph
@@ -4477,7 +4477,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 261, Text = "После этого вы проплываете через картину сами" },
+                    new Option { Destination = 261, Text = "Далее" },
                 }
             },
             [557] = new Paragraph
@@ -4500,28 +4500,28 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 236, Text = "Вы же покидаете зал, где происходило состязание, через противоположный тоннель и плывете дальше — 236" },
+                    new Option { Destination = 236, Text = "Далее" },
                 }
             },
             [560] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 504, Text = "Прикрыв дверь кухни, возвращаетесь в тоннель, из которого приплыли, и сворачиваете направо — 504" },
+                    new Option { Destination = 504, Text = "Далее" },
                 }
             },
             [561] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 612, Text = "После этого, вытерев меч о ближайшие водоросли, можете плыть дальше — 612" },
+                    new Option { Destination = 612, Text = "Далее" },
                 }
             },
             [562] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 41, Text = "Восстановите 4 ВЫНОСЛИВОСТИ и уходите — время дорого — 41" },
+                    new Option { Destination = 41, Text = "Далее" },
                 }
             },
             [563] = new Paragraph
@@ -4560,7 +4560,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 472, Text = "Оставляете его залечивать раны и плывете дальше — 472" },
+                    new Option { Destination = 472, Text = "Далее" },
                 }
             },
             [568] = new Paragraph
@@ -4593,28 +4593,28 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 429, Text = "Если он мертв, то 429" },
+                    new Option { Destination = 429, Text = "Далее" },
                 }
             },
             [571] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 540, Text = "Ничего другого не остается, как покинуть остров, проведя на нем полчаса, — 540" },
+                    new Option { Destination = 540, Text = "Далее" },
                 }
             },
             [572] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 56, Text = "Первым проплываете через картину с изображением грифа" },
+                    new Option { Destination = 56, Text = "Далее" },
                 }
             },
             [573] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 559, Text = "К сожалению, победил один из ваших соперников — 559" },
+                    new Option { Destination = 559, Text = "Далее" },
                 }
             },
             [574] = new Paragraph
@@ -4654,7 +4654,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 32, Text = "(Если он когда-нибудь понадобится, прибавьте 376 к номеру параграфа, на котором будете в этот момент находиться.) После этого благодарите Морскую звезду, извиняетесь за забывчивость и плывете дальше — 32" },
+                    new Option { Destination = 32, Text = "Далее" },
                 }
             },
             [579] = new Paragraph
@@ -4676,21 +4676,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 365, Text = "Удивленно пожимаете плечами и продолжаете путь — 365" },
+                    new Option { Destination = 365, Text = "Далее" },
                 }
             },
             [582] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 367, Text = "Однако если вы убили ее, то 367" },
+                    new Option { Destination = 367, Text = "Далее" },
                 }
             },
             [583] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Если удалось их перебить, то 198" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [584] = new Paragraph
@@ -4722,7 +4722,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 217, Text = "А сияние медленно гаснет и исчезает — 217" },
+                    new Option { Destination = 217, Text = "Далее" },
                 }
             },
             [588] = new Paragraph
@@ -4736,21 +4736,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Если после боя моряк остается жив, то он исчезает —198" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [590] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 343, Text = "Возьмите их с собой и отправляйтесь дальше — 343" },
+                    new Option { Destination = 343, Text = "Далее" },
                 }
             },
             [591] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 490, Text = "Если хотите изменить свое решение, вернитесь на 490" },
+                    new Option { Destination = 490, Text = "Далее" },
                 }
             },
             [592] = new Paragraph
@@ -4765,7 +4765,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 465, Text = "После, этого офицер с солдатами садится в шлюпку и отплывает, а вы покидаете остров, проведя на нем полчаса, — 465" },
+                    new Option { Destination = 465, Text = "Далее" },
                 }
             },
             [594] = new Paragraph
@@ -4781,14 +4781,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 214, Text = "Восстановите 3 ВЫНОСЛИВОСТИ и отправляйтесь дальше — 214" },
+                    new Option { Destination = 214, Text = "Далее" },
                 }
             },
             [596] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 99, Text = "Когда ВЫНОСЛИВОСТЬ вашего противника уменьшена до 2, удар грома потрясает остров — 99" },
+                    new Option { Destination = 99, Text = "Далее" },
                 }
             },
             [597] = new Paragraph
@@ -4802,14 +4802,14 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Если все пираты мертвы, а Носорог еще жив, то он исчезает -198" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [599] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 123, Text = "Теперь выберите остров, на который отправитесь —123" },
+                    new Option { Destination = 123, Text = "Далее" },
                 }
             },
             [600] = new Paragraph
@@ -4840,7 +4840,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 208, Text = "И откуда только оно взялось? Не успеваете ничего понять, как лев с рычанием бросается вперед, — 208" },
+                    new Option { Destination = 208, Text = "Далее" },
                 }
             },
             [604] = new Paragraph
@@ -4855,21 +4855,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 126, Text = "А теперь пора двигаться дальше —126" },
+                    new Option { Destination = 126, Text = "Далее" },
                 }
             },
             [606] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 592, Text = "Но исчезает и сам амулет, ведь его можно использовать только один раз, — 592" },
+                    new Option { Destination = 592, Text = "Далее" },
                 }
             },
             [607] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Когда последний враг будет убит — 198" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [608] = new Paragraph
@@ -4890,7 +4890,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 305, Text = "Смело плывете по тоннелю, но в конце его попадаете в очень странную комнату — 305" },
+                    new Option { Destination = 305, Text = "Далее" },
                 }
             },
             [611] = new Paragraph
@@ -4913,7 +4913,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 437, Text = "Несколько минут она забавляется игрой, а потом пропадает совсем — 437" },
+                    new Option { Destination = 437, Text = "Далее" },
                 }
             },
             [614] = new Paragraph
@@ -4928,7 +4928,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 168, Text = "Теперь можете отправляться дальше —168" },
+                    new Option { Destination = 168, Text = "Далее" },
                 }
             },
             [616] = new Paragraph
@@ -4942,7 +4942,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 204, Text = "К тому же диадема могла оказаться волшебной, а кто знает, доброй или злой магией она наделена, — 204" },
+                    new Option { Destination = 204, Text = "Далее" },
                 }
             },
             [618] = new Paragraph
@@ -4957,7 +4957,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 8, Text = "Теперь самое время покинуть корабль и плыть дальше — 8" },
+                    new Option { Destination = 8, Text = "Далее" },
                 }
             },
             [620] = new Paragraph
@@ -4971,7 +4971,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 417, Text = "Вы торопитесь вслед" },
+                    new Option { Destination = 417, Text = "Далее" },
                 }
             },
             [622] = new Paragraph
@@ -4993,35 +4993,35 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 258, Text = "Остается одно: покинуть остров, бессмысленно проведя на нем 40 минут, — 258" },
+                    new Option { Destination = 258, Text = "Далее" },
                 }
             },
             [625] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Если битва закончилась вашей победой, — 198" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [626] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 422, Text = "Вежливо поблагодарив Короля, торопитесь вслед за одним из придворных к невысокой боковой дверце, открывающейся в новый коридор — 422" },
+                    new Option { Destination = 422, Text = "Далее" },
                 }
             },
             [627] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 501, Text = "Течение тут же уносит отвергнутый подарок, а Карлик просто возмущен: как можно было предложить ему такую гадость! Приходится оставить капризное существо и двинуться дальше — 501" },
+                    new Option { Destination = 501, Text = "Далее" },
                 }
             },
             [628] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 328, Text = "Закончив трапезу, плывете дальше — 328" },
+                    new Option { Destination = 328, Text = "Далее" },
                 }
             },
             [629] = new Paragraph
