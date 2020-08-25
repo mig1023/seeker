@@ -440,8 +440,8 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 176, Text = "Но решение за вами: нагоните корвет и подниметесь на него, оставив вашу шхуну" },
-                    new Option { Destination = 4, Text = ", или будете продолжать путь" },
+                    new Option { Destination = 176, Text = "Нагонать корвет" },
+                    new Option { Destination = 4, Text = "Продолжить путь" },
                 }
             },
             [52] = new Paragraph
@@ -449,39 +449,39 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
                 Options = new List<Option>
                 {
                     new Option { Destination = 241, Text = "Свернете в него" },
-                    new Option { Destination = 160, Text = "или поплывете дальше прямо" },
+                    new Option { Destination = 160, Text = "Поплывете дальше" },
                 }
             },
             [53] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 532, Text = "За деревом, которое служило жилищем Рыбе-хамелеону, виднеется невысокая скала, к которой и можете направиться" },
-                    new Option { Destination = 404, Text = ". Или же решите не испытывать больше судьбу и поплывете к выходу из подводного леса, который виднеется неподалеку" },
+                    new Option { Destination = 532, Text = "К невысокой скале" },
+                    new Option { Destination = 404, Text = "К выходу из подводного леса" },
                 }
             },
             [54] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 190, Text = "Попробуете теперь правую стену" },
-                    new Option { Destination = 528, Text = ", ту, что перед вами" },
-                    new Option { Destination = 10, Text = ", или все же повернете обратно" },
+                    new Option { Destination = 190, Text = "Правую стену" },
+                    new Option { Destination = 528, Text = "Стену перед вами" },
+                    new Option { Destination = 10, Text = "Повернете обратно" },
                 }
             },
             [55] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 270, Text = "Если удачливы, то 270" },
-                    new Option { Destination = 538, Text = ", если же нет — 538" },
+                    new Option { Destination = 270, Text = "Удачливы" },
+                    new Option { Destination = 538, Text = "Нет" },
                 }
             },
             [56] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 382, Text = "К нему и направляетесь — 382" },
+                    new Option { Destination = 382, Text = "Далее" },
                 }
             },
             [57] = new Paragraph
@@ -509,10 +509,10 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 140, Text = "Если в первой группе победил капитан, а оба ваши противника еще живы, то 140" },
-                    new Option { Destination = 488, Text = ", если они мертвы, — 488" },
-                    new Option { Destination = 334, Text = ", если же остался только один, — 334" },
-                    new Option { Destination = 198, Text = "Если все враги мертвы, а капитан пал в бою, то 198" },
+                    new Option { Destination = 140, Text = "Победил капитан" },
+                    new Option { Destination = 488, Text = "Они оба мертвы" },
+                    new Option { Destination = 334, Text = "Остался только один" },
+                    new Option { Destination = 198, Text = "Все враги мертвы, а капитан пал в бою" },
                 }
             },
             [61] = new Paragraph
@@ -540,8 +540,8 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 489, Text = "Хотите спуститься и посмотреть, что это блестит" },
-                    new Option { Destination = 126, Text = ", или поплывете дальше" },
+                    new Option { Destination = 489, Text = "Спуститься и посмотреть" },
+                    new Option { Destination = 126, Text = "Поплывете дальше" },
                 }
             },
             [65] = new Paragraph
@@ -555,17 +555,16 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 148, Text = "Если хотите помочь ему, то 148" },
-                    new Option { Destination = 198, Text = "Если ваш союзник перебил всех пиратов, то он исчезает" },
-                    new Option { Destination = 583, Text = ", если же нет, сражаться с ними дальше придется вам" },
+                    new Option { Destination = 148, Text = "Помочь ему" },
+                    new Option { Destination = 198, Text = "Если союзник перебил всех пиратов" },
+                    new Option { Destination = 583, Text = "Сражаться придется вам" },
                 }
             },
             [67] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 13, Text = "Вокруг —13" },
-                    new Option { Destination = 123, Text = "Если по пути вы не встречали на этот счет никаких указаний, то выбор будет зависеть только от вашей интуиции —123" },
+                    new Option { Destination = 123, Text = "Выбрать остров" },
                 }
             },
             [68] = new Paragraph
@@ -593,16 +592,16 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 616, Text = "Если с вами золотой щит, то 616" },
-                    new Option { Destination = 422, Text = "Если убили его, то 422" },
+                    new Option { Destination = 616, Text = "С вами золотой щит" },
+                    new Option { Destination = 422, Text = "Убили его" },
                 }
             },
             [72] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 256, Text = "Если удачливы, то 256" },
-                    new Option { Destination = 383, Text = ", если же нет — 383" },
+                    new Option { Destination = 256, Text = "Удачливы" },
+                    new Option { Destination = 383, Text = "Нет" },
                 }
             },
             [73] = new Paragraph
@@ -616,17 +615,17 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 338, Text = "Теперь, если вы еще этого не сделали, можете надеть пояс" },
-                    new Option { Destination = 584, Text = "или взять раковину" },
-                    new Option { Destination = 508, Text = ". Если же нет желания продолжать эксперименты, уплывайте прочь — 508" },
+                    new Option { Destination = 338, Text = "Надеть пояс" },
+                    new Option { Destination = 584, Text = "Взять раковину" },
+                    new Option { Destination = 508, Text = "Уплыть прочь" },
                 }
             },
             [75] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 145, Text = "Примете приглашение и последуете за коралловыми рыбками" },
-                    new Option { Destination = 516, Text = "или поплывете дальше сами" },
+                    new Option { Destination = 145, Text = "Примете приглашение" },
+                    new Option { Destination = 516, Text = "Поплывете дальше сами" },
                 }
             },
             [76] = new Paragraph
@@ -640,8 +639,8 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 241, Text = "Если выпало 1–6, то победили вы" },
-                    new Option { Destination = 160, Text = "Тогда плывите прямо" },
+                    new Option { Destination = 241, Text = "Победили вы" },
+                    new Option { Destination = 160, Text = "Плыть прямо" },
                 }
             },
             [78] = new Paragraph
@@ -662,9 +661,9 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 589, Text = "Если моряк победил, а оба ваши противника еще живы, то 589" },
-                    new Option { Destination = 625, Text = ", если же в живых остался только один, то 625" },
-                    new Option { Destination = 198, Text = "Если все враги мертвы, то 198" },
+                    new Option { Destination = 589, Text = "Моряк победил" },
+                    new Option { Destination = 625, Text = "В живых остался только один" },
+                    new Option { Destination = 198, Text = "Все враги мертвы" },
                 }
             },
             [81] = new Paragraph
@@ -678,16 +677,16 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 595, Text = "Рискнете подплыть подкрепиться" },
-                    new Option { Destination = 214, Text = "или проплывете мимо" },
+                    new Option { Destination = 595, Text = "Подплыть подкрепиться" },
+                    new Option { Destination = 214, Text = "Проплывете мимо" },
                 }
             },
             [83] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 400, Text = "Спросите у словоохотливого хозяина дорогу и пойдете искать Джона" },
-                    new Option { Destination = 524, Text = "или решите, что лучше вернуться на свою шхуну" },
+                    new Option { Destination = 400, Text = "Пойдете искать Джона" },
+                    new Option { Destination = 524, Text = "Вернуться на свою шхуну" },
                 }
             },
             [84] = new Paragraph
@@ -701,18 +700,18 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 248, Text = "На какой остров из тех, где вы еще не были, поплывете теперь? На первый" },
-                    new Option { Destination = 233, Text = ", третий" },
-                    new Option { Destination = 165, Text = ", четвертый" },
-                    new Option { Destination = 418, Text = ", пятый" },
-                    new Option { Destination = 395, Text = ", шестой" },
-                    new Option { Destination = 535, Text = ", седьмой" },
-                    new Option { Destination = 100, Text = ", восьмой" },
-                    new Option { Destination = 84, Text = ", девятый" },
-                    new Option { Destination = 352, Text = ", десятый" },
-                    new Option { Destination = 282, Text = ", одиннадцатый" },
-                    new Option { Destination = 456, Text = ", двенадцатый" },
-                    new Option { Destination = 500, Text = "или тринадцатый" },
+                    new Option { Destination = 248, Text = "Первый" },
+                    new Option { Destination = 233, Text = "Третий" },
+                    new Option { Destination = 165, Text = "Четвертый" },
+                    new Option { Destination = 418, Text = "Пятый" },
+                    new Option { Destination = 395, Text = "Шестой" },
+                    new Option { Destination = 535, Text = "Седьмой" },
+                    new Option { Destination = 100, Text = "Восьмой" },
+                    new Option { Destination = 84, Text = "Девятый" },
+                    new Option { Destination = 352, Text = "Десятый" },
+                    new Option { Destination = 282, Text = "Одиннадцатый" },
+                    new Option { Destination = 456, Text = "Двенадцатый" },
+                    new Option { Destination = 500, Text = "Тринадцатый" },
                 }
             },
             [86] = new Paragraph
@@ -726,9 +725,9 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 384, Text = "Можно направиться к невысокому подводному зданию справа от вас" },
-                    new Option { Destination = 539, Text = ", поплыть в противоположную сторону" },
-                    new Option { Destination = 32, Text = "или вообще не менять направления" },
+                    new Option { Destination = 384, Text = "К невысокому подводному зданию" },
+                    new Option { Destination = 539, Text = "Поплыть в противоположную сторону" },
+                    new Option { Destination = 32, Text = "Не менять направления" },
                 }
             },
             [88] = new Paragraph
@@ -749,17 +748,17 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 253, Text = "Куда вы поплывете: прямо" },
-                    new Option { Destination = 19, Text = ", направо" },
-                    new Option { Destination = 52, Text = "или налево" },
+                    new Option { Destination = 253, Text = "Прямо" },
+                    new Option { Destination = 19, Text = "Направо" },
+                    new Option { Destination = 52, Text = "Налево" },
                 }
             },
             [91] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 436, Text = "'Что же ты хочешь за это? — спрашивает Дух. — Удачи? Совета?' Так что же вы попросите: совета" },
-                    new Option { Destination = 385, Text = "или удачи" },
+                    new Option { Destination = 436, Text = "Совета" },
+                    new Option { Destination = 385, Text = "Удачи" },
                 }
             },
             [92] = new Paragraph
@@ -773,24 +772,24 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 272, Text = "Если у вас есть трезубец, то 272" },
-                    new Option { Destination = 608, Text = ", если же нет, то 608" },
+                    new Option { Destination = 272, Text = "У вас есть трезубец" },
+                    new Option { Destination = 608, Text = "Далее" },
                 }
             },
             [94] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 90, Text = "Хотите направиться туда" },
-                    new Option { Destination = 523, Text = "или поплывете куда глаза глядят" },
+                    new Option { Destination = 90, Text = "Направиться туда" },
+                    new Option { Destination = 523, Text = "Поплывете куда глаза глядят" },
                 }
             },
             [95] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 57, Text = "Хотите вернуться как можно скорее в Грейкейп я не испытывать больше судьбу" },
-                    new Option { Destination = 387, Text = "или смело направитесь вперед" },
+                    new Option { Destination = 57, Text = "Вернуться в Грейкейп" },
+                    new Option { Destination = 387, Text = "Направитесь вперед" },
                 }
             },
             [96] = new Paragraph
@@ -818,8 +817,8 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 457, Text = "Если вы встречали капитана Шелтона, то 457" },
-                    new Option { Destination = 249, Text = ", если нет — 249" },
+                    new Option { Destination = 457, Text = "Вы встречали капитана Шелтона, то 457" },
+                    new Option { Destination = 249, Text = "Далее" },
                 }
             },
             [100] = new Paragraph
@@ -833,9 +832,9 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 450, Text = "Можете заговорить с ним" },
-                    new Option { Destination = 286, Text = ", убить его, надеясь на интересную добычу" },
-                    new Option { Destination = 501, Text = ", или просто проплыть мимо и отправиться дальше" },
+                    new Option { Destination = 450, Text = "Заговорить с ним" },
+                    new Option { Destination = 286, Text = "Убить его" },
+                    new Option { Destination = 501, Text = "Проплыть мимо" },
                 }
             },
             [102] = new Paragraph
