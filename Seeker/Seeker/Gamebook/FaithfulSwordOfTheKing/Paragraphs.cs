@@ -2340,8 +2340,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 288, Text = "Ловкости хватило" },
-                    new Option { Destination = 430, Text = "Нет" },
+                    new Option { Destination = 430, Text = "Ловкости хватило" },
+                    new Option { Destination = 288, Text = "Нет" },
                 }
             },
             [175] = new Paragraph
@@ -4883,8 +4883,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 288, Text = "Ловкости хватило" },
-                    new Option { Destination = 430, Text = "Нет" },
+                    new Option { Destination = 446, Text = "Ловкости хватило" },
+                    new Option { Destination = 29, Text = "Нет" },
                 }
             },
             [360] = new Paragraph
