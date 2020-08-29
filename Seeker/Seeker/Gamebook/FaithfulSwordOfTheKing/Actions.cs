@@ -135,7 +135,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             bool goodSkill = (firstDice + secondDice) <= Character.Protagonist.Skill;
 
             List<string> skillCheck = new List<string> { String.Format(
-                "Проверка ловковти: {0} ⚄ + {1} ⚄ {2} {3} ловкость", firstDice, secondDice, (goodSkill ? "<=" : ">"), Character.Protagonist.Skill
+                "Проверка ловкости: {0} ⚄ + {1} ⚄ {2} {3} ловкость", firstDice, secondDice, (goodSkill ? "<=" : ">"), Character.Protagonist.Skill
             ) };
 
             skillCheck.Add(goodSkill ? "BIG|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(");
@@ -145,10 +145,29 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public List<string> DicesDoubles()
         {
+            List<string> doubleCheck = new List<string>();
+
+            bool doubleFail = false;
+
             bool firstDicesDouble = Game.Dice.Roll() == Game.Dice.Roll();
             bool secondDicesDouble = Game.Dice.Roll() == Game.Dice.Roll();
 
-            return new List<string> { (firstDicesDouble || secondDicesDouble ? "BIG|HEAD|BAD|ВЫПАЛИ :(" : "BIG|HEAD|GOOD|НЕ ВЫПАЛИ :)") };
+            for (int i = 0; i < 2; i++)
+            {
+                int firstDice = Game.Dice.Roll();
+                int secondDice = Game.Dice.Roll();
+
+                bool fail = firstDice == secondDice;
+
+                doubleCheck.Add(String.Format("Бросок: {0} ⚄ и {1} ⚄ - {2}дубль", firstDice, secondDice, (fail ? String.Empty : "НЕ ") ) );
+
+                if (fail)
+                    doubleFail = true;
+            }
+
+            doubleCheck.Add(doubleFail ? "BIG|BAD|ВЫПАЛИ :(" : "BIG|GOOD|НЕ ВЫПАЛИ :)");
+
+            return doubleCheck;
         }
 
         public List<string> Pursuit()
