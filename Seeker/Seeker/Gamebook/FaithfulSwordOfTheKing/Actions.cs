@@ -118,9 +118,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             bool goodLuck = luckDice % 2 == 0;
 
-            List<string> luckCheck = new List<string> {
-                        String.Format( "Проверка удачи: {0} ⚄ - {1}", luckDice, (goodLuck ? "чётное" : "нечётное") )
-            };
+            List<string> luckCheck = new List<string> { String.Format(
+                "Проверка удачи: {0} ⚄ - {1}", luckDice, (goodLuck ? "чётное" : "нечётное")
+            ) };
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
@@ -129,9 +129,18 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public List<string> Skill()
         {
-            bool goodSkill = Game.Dice.Roll(dices: 2) <= Character.Protagonist.Skill;
+            int firstDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
 
-            return new List<string> { (goodSkill ? "BIG|HEAD|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|HEAD|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(") };
+            bool goodSkill = (firstDice + secondDice) <= Character.Protagonist.Skill;
+
+            List<string> skillCheck = new List<string> { String.Format(
+                "Проверка ловковти: {0} ⚄ + {1} ⚄ {2} {3} ловкость", firstDice, secondDice, (goodSkill ? "<=" : ">"), Character.Protagonist.Skill
+            ) };
+
+            skillCheck.Add(goodSkill ? "BIG|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(");
+
+            return skillCheck;
         }
 
         public List<string> DicesDoubles()
