@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "nBb3GY5LX9JRSa9FxUYNsAn7TK6UeUs7s56EIIUK9qePLJv2GqzI2aEkqe8eU+TrL4onAouOtKS45NHTQUwZ+g==",
+  "success": true,
+  "projectFilePath": "D:\\__Visual Studio 2015\\Projects\\Seeker\\Seeker\\Seeker.iOS\\Seeker.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mig29\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\mig29\\.nuget\\packages\\xamarin.essentials\\1.2.0\\xamarin.essentials.1.2.0.nupkg.sha512",
+    "C:\\Users\\mig29\\.nuget\\packages\\xamarin.forms\\4.2.0.709249\\xamarin.forms.4.2.0.709249.nupkg.sha512"
+  ],
+  "logs": []
+}
