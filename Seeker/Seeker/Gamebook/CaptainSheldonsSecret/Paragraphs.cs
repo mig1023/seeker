@@ -1629,7 +1629,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
                 Options = new List<Option>
                 {
                     new Option { Destination = 45, Text = "Есть золотой перстень" },
-                    new Option { Destination = 501, Text = "Поблагодарить это странное существо и распрощаться с ним" },
+                    new Option { Destination = 501, Text = "Поблагодарить и распрощаться" },
                 }
             },
             [203] = new Paragraph
@@ -1684,7 +1684,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
                 Options = new List<Option>
                 {
                     new Option { Destination = 572, Text = "Выпало 1, 2 или 3" },
-                    new Option { Destination = 141, Text = "Выпало 4,5 или 6" },
+                    new Option { Destination = 141, Text = "Выпало 4, 5 или 6" },
                 }
             },
             [210] = new Paragraph
@@ -1698,8 +1698,8 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 234, Text = "Если вы убили ее, то можете плыть дальше: либо к красивым морским цветам впереди" },
-                    new Option { Destination = 48, Text = ", либо просто в открытое море" },
+                    new Option { Destination = 234, Text = "К красивым морским цветам" },
+                    new Option { Destination = 48, Text = "В открытое море" },
                 }
             },
             [212] = new Paragraph
@@ -1734,24 +1734,24 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 274, Text = "Теперь, когда вам понадобится позвать Дельфина, прибавьте 532 к номеру параграфа, на котором будет находиться, и ваш знакомый, благодаря вам избежавший зубов акулы, тотчас появится Теперь же ваш путь лежит дальше: над огромной подводной равниной" },
-                    new Option { Destination = 310, Text = "или через заросли гигантских древовидных растений" },
+                    new Option { Destination = 274, Text = "Над огромной подводной равниной" },
+                    new Option { Destination = 310, Text = "Через заросли гигантских древовидных растений" },
                 }
             },
             [217] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 331, Text = "Если у вас есть амулет, то 331" },
-                    new Option { Destination = 150, Text = ". Если же нет, но вам удалось уменьшить выносливость врага до 12, то 150" },
+                    new Option { Destination = 331, Text = "Есть амулет" },
+                    new Option { Destination = 150, Text = "Удалось уменьшить выносливость врага до 12" },
                 }
             },
             [218] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 217, Text = "Если посланец Принца победил, то он исчезает" },
-                    new Option { Destination = 63, Text = ", иначе же продолжать бой придется вам" },
+                    new Option { Destination = 217, Text = "Посланец Принца победил" },
+                    new Option { Destination = 63, Text = "Бой придется продолжать" },
                 }
             },
             [219] = new Paragraph
@@ -1793,9 +1793,9 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 449, Text = "Если посланник Принца победил, а оба ваших противника еще живы, то 449" },
-                    new Option { Destination = 607, Text = ", если же жив только один, то 607" },
-                    new Option { Destination = 198, Text = "Если же произошло невероятное и все пираты уничтожены, то воин исчезнет —198" },
+                    new Option { Destination = 449, Text = "Посланник Принца победил, а оба ваших противника еще живы" },
+                    new Option { Destination = 607, Text = "Жив только один" },
+                    new Option { Destination = 198, Text = "Все пираты уничтожены" },
                 }
             },
             [225] = new Paragraph
@@ -1837,43 +1837,43 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 351, Text = "Последуете за ним до конца" },
-                    new Option { Destination = 6, Text = "или поблагодарите и, сказав, что передумали, уйдете" },
+                    new Option { Destination = 351, Text = "Последуете за ним" },
+                    new Option { Destination = 6, Text = "Поблагодарите и уйдете" },
                 }
             },
             [231] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 155, Text = "Попробуете заплыть внутрь и посмотреть, нет ли там чего-нибудь интересного" },
-                    new Option { Destination = 402, Text = ", или направитесь прочь от пещеры к необычному строению, отдаленно напоминающему подводную башню" },
-                    new Option { Destination = 527, Text = ", или к тому месту, где на дне видны странные песчаные холмики" },
+                    new Option { Destination = 155, Text = "Попробуете заплыть внутрь" },
+                    new Option { Destination = 402, Text = "Прочь от пещеры к необычному строению" },
+                    new Option { Destination = 527, Text = "К тому месту, где на дне видны странные песчаные холмики" },
                 }
             },
             [232] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 161, Text = "Решайтесь: попытаетесь сделать это" },
-                    new Option { Destination = 20, Text = "или будете продолжать путешествие под водой" },
+                    new Option { Destination = 161, Text = "Попытаетесь сделать это" },
+                    new Option { Destination = 20, Text = "Будете продолжать путешествие под водой" },
                 }
             },
             [233] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 358, Text = "Теперь можете либо покинуть остров, потеряв на нем ровно полчаса" },
-                    new Option { Destination = 525, Text = ", либо попробовать догнать этого человека" },
+                    new Option { Destination = 358, Text = "Покинуть остров" },
+                    new Option { Destination = 525, Text = "Попробовать догнать этого человека" },
                 }
             },
             [234] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 408, Text = "Так что же? Попробуете дотянуться рукой" },
-                    new Option { Destination = 576, Text = "? Мечом" },
-                    new Option { Destination = 11, Text = "? Сначала сразитесь с цветами" },
-                    new Option { Destination = 168, Text = "? Или решите не рисковать и поплывете дальше" },
+                    new Option { Destination = 408, Text = "Дотянуться рукой" },
+                    new Option { Destination = 576, Text = "Дотянуться мечом" },
+                    new Option { Destination = 11, Text = "Сразитесь с цветами" },
+                    new Option { Destination = 168, Text = "Поплывете дальше" },
                 }
             },
             [235] = new Paragraph
@@ -1894,8 +1894,8 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 57, Text = "Понимая, что и 'Гермес' постигла участь его предшественников, можете либо повернуть назад, решив, что Неведомое, которое потопило огромный корвет, без труда справится с вашим суденышком" },
-                    new Option { Destination = 263, Text = ", либо устремиться вперед, надеясь найти разгадку тайны" },
+                    new Option { Destination = 57, Text = "Повернуть назад" },
+                    new Option { Destination = 263, Text = "Устремиться вперед" },
                 }
             },
             [238] = new Paragraph
@@ -1909,8 +1909,8 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 359, Text = "Но вот перед вами лестница: можете либо подняться по ней вверх — на второй этаж и далее к самому верху развалившегося укрепления" },
-                    new Option { Destination = 7, Text = ", либо спуститься вниз, в подвал" },
+                    new Option { Destination = 359, Text = "Подняться вверх" },
+                    new Option { Destination = 7, Text = "Спуститься вниз" },
                 }
             },
             [240] = new Paragraph
@@ -1924,8 +1924,8 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 528, Text = "Если удачливы, то 528" },
-                    new Option { Destination = 162, Text = ", если нет, — 162" },
+                    new Option { Destination = 528, Text = "Удачливы" },
+                    new Option { Destination = 162, Text = "Нет" },
                 }
             },
             [242] = new Paragraph
@@ -1933,50 +1933,50 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
                 Options = new List<Option>
                 {
                     new Option { Destination = 389, Text = "Сразитесь с ней" },
-                    new Option { Destination = 12, Text = "или попробуете приручить, накормив (если, конечно, у вас есть чем)" },
+                    new Option { Destination = 12, Text = "Попробуете приручить, накормив" },
                 }
             },
             [243] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 371, Text = "Хотите спуститься и посмотреть, что это" },
-                    new Option { Destination = 87, Text = ", или поплывете дальше, решив не искать приключений на свою голову" },
+                    new Option { Destination = 371, Text = "Спуститься и посмотреть" },
+                    new Option { Destination = 87, Text = "Поплывете дальше" },
                 }
             },
             [244] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 158, Text = "Если вам удалось убить противника за пять раундов атаки, то вы можете либо снова попытаться бежать" },
-                    new Option { Destination = 414, Text = "Если вы убили всех Рыцарей-водяных, то 414" },
+                    new Option { Destination = 158, Text = "Попытаться бежать" },
+                    new Option { Destination = 414, Text = "Вы убили всех Рыцарей-водяных" },
                 }
             },
             [245] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 169, Text = "Так что решать вам: предпочтете сами исследовать пещеру" },
-                    new Option { Destination = 24, Text = "или отправитесь в открытое море" },
+                    new Option { Destination = 169, Text = "Исследовать пещеру" },
+                    new Option { Destination = 24, Text = "Отправиться в открытое море" },
                 }
             },
             [246] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 390, Text = "Итак, придется либо поплатиться деньгами за свою скрытность и заплатить ему 10 золотых" },
-                    new Option { Destination = 524, Text = ", либо руководить командой в одиночку" },
+                    new Option { Destination = 390, Text = "Заплатить ему 10 золотых" },
+                    new Option { Destination = 524, Text = "Руководить командой в одиночку" },
                 }
             },
             [247] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 542, Text = "Так куда же вы попросите себя доставить: к сокровищам" },
-                    new Option { Destination = 415, Text = ", за добрым советом" },
-                    new Option { Destination = 114, Text = ", к тому, кто топит корабли" },
-                    new Option { Destination = 365, Text = ", или откажетесь от его услуг" },
-                    new Option { Destination = 88, Text = "? А может быть, лучше убить старика и самому воспользоваться лодкой" },
+                    new Option { Destination = 542, Text = "К сокровищам" },
+                    new Option { Destination = 415, Text = "За добрым советом" },
+                    new Option { Destination = 114, Text = "К тому, кто топит корабли" },
+                    new Option { Destination = 365, Text = "Откажетесь от его услуг" },
+                    new Option { Destination = 88, Text = "Убить старика" },
                 }
             },
             [248] = new Paragraph
@@ -2004,8 +2004,8 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 89, Text = "Но может быть, наоборот, она заманивает в ловушку? Если хотите плыть за ней дальше, покинув лес, то 89" },
-                    new Option { Destination = 152, Text = ". Если же нет, то откажитесь следовать за ней, и она уплывет, а вы продолжите прогулку по лесу —152" },
+                    new Option { Destination = 89, Text = "Плыть за ней дальше" },
+                    new Option { Destination = 152, Text = "Отказаться" },
                 }
             },
             [252] = new Paragraph
@@ -2019,79 +2019,79 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 427, Text = "Можете либо атаковать его первым и прорываться с боем" },
-                    new Option { Destination = 391, Text = "Но что тогда вы ему скажете: откроете правду и попросите помочь в поисках Неведомого, которое потопило ваш корабль" },
-                    new Option { Destination = 543, Text = ", или ответите, что специально пришли сюда, чтобы найти подводного Короля" },
+                    new Option { Destination = 427, Text = "Атаковать его первым" },
+                    new Option { Destination = 391, Text = "Откроете правду и попросите помочь в поисках Неведомого" },
+                    new Option { Destination = 543, Text = "Ответите, что пришли, чтобы найти подводного Короля" },
                 }
             },
             [254] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 71, Text = "Теперь самое время покинуть сокровищницу, но через какой коридор это сделать? Через тот, что прямо перед вами" },
-                    new Option { Destination = 345, Text = ", или через тот, что справа от вас" },
+                    new Option { Destination = 71, Text = "Через тот, что прямо перед вами" },
+                    new Option { Destination = 345, Text = "Через тот, что справа от вас" },
                 }
             },
             [255] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 90, Text = "Поплывете внутрь пещеры" },
-                    new Option { Destination = 523, Text = "или в открытое море" },
+                    new Option { Destination = 90, Text = "Внутрь пещеры" },
+                    new Option { Destination = 523, Text = "В открытое море" },
                 }
             },
             [256] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 345, Text = "Но можно попробовать либо проскользнуть в ближайший к вам выход" },
-                    new Option { Destination = 241, Text = "Но в этом случае, чтобы скрыться от преследователей, придется свернуть в боковое ответвление" },
+                    new Option { Destination = 345, Text = "Проскользнуть в ближайший к вам выход" },
+                    new Option { Destination = 241, Text = "Свернуть в боковое ответвление" },
                 }
             },
             [257] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 528, Text = "Тогда какую стену вы попробуете на ощупь первой: ту, что перед вами" },
-                    new Option { Destination = 54, Text = ", левую" },
-                    new Option { Destination = 190, Text = "или правую" },
+                    new Option { Destination = 528, Text = "Ту, что перед вами" },
+                    new Option { Destination = 54, Text = "Ту, что слева" },
+                    new Option { Destination = 190, Text = "Ту, что справа" },
                 }
             },
             [258] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 248, Text = "На какой остров из тех, где вы еще не были, хотите отправиться теперь? На первый" },
-                    new Option { Destination = 16, Text = ", второй" },
-                    new Option { Destination = 233, Text = ", третий" },
-                    new Option { Destination = 418, Text = ", пятый" },
-                    new Option { Destination = 395, Text = ", шестой" },
-                    new Option { Destination = 535, Text = ", седьмой" },
-                    new Option { Destination = 100, Text = ", восьмой" },
-                    new Option { Destination = 84, Text = ", девятый" },
-                    new Option { Destination = 352, Text = ", десятый" },
-                    new Option { Destination = 282, Text = ", одиннадцатый" },
-                    new Option { Destination = 456, Text = ", двенадцатый" },
-                    new Option { Destination = 500, Text = "или тринадцатый" },
+                    new Option { Destination = 248, Text = "Первый" },
+                    new Option { Destination = 16, Text = "Второй" },
+                    new Option { Destination = 233, Text = "Третий" },
+                    new Option { Destination = 418, Text = "Пятый" },
+                    new Option { Destination = 395, Text = "Шестой" },
+                    new Option { Destination = 535, Text = "Седьмой" },
+                    new Option { Destination = 100, Text = "Восьмой" },
+                    new Option { Destination = 84, Text = "Девятый" },
+                    new Option { Destination = 352, Text = "Десятый" },
+                    new Option { Destination = 282, Text = "Одиннадцатый" },
+                    new Option { Destination = 456, Text = "Двенадцатый" },
+                    new Option { Destination = 500, Text = "Тринадцатый" },
                 }
             },
             [259] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 428, Text = "Предложите ему еду (но тогда сколько: 1" },
-                    new Option { Destination = 91, Text = ", 2" },
-                    new Option { Destination = 392, Text = "); деньги: 2 золотых" },
-                    new Option { Destination = 544, Text = ", 4 золотых" },
-                    new Option { Destination = 30, Text = ", а может быть, что-то из вещей, которые с вами" },
+                    new Option { Destination = 428, Text = "Одну порцию еду" },
+                    new Option { Destination = 91, Text = "Две порции еды" },
+                    new Option { Destination = 392, Text = "Два золотых" },
+                    new Option { Destination = 544, Text = "Четыре золотых" },
+                    new Option { Destination = 30, Text = "Что-то из вещей" },
                 }
             },
             [260] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 71, Text = "Вы берете золотой щит и покидаете сокровищницу: можете уплыть через тоннель, начинающийся в противоположной стене зала" },
-                    new Option { Destination = 345, Text = ", или через тот, который виден в правой стене" },
+                    new Option { Destination = 71, Text = "Через тоннель, начинающийся в противоположной стене зала" },
+                    new Option { Destination = 345, Text = "Через тот, который виден в правой стене" },
                 }
             },
             [261] = new Paragraph
@@ -2126,24 +2126,24 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 394, Text = "Попробуете проникнуть во фрегат и выяснить, что произошло, или поплывете дальше один? Если первое, то 394" },
-                    new Option { Destination = 8, Text = ", если второе, — 8" },
+                    new Option { Destination = 394, Text = "Попробуете проникнуть во фрегат" },
+                    new Option { Destination = 8, Text = "Поплывете дальше один" },
                 }
             },
             [266] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 241, Text = "Но как найти механизм, который приведет ее в действие? Ваш спутник считает, что надо попробовать ощупать стены — какой-нибудь выступ вполне может оказаться секретным рычагом — 241" },
+                    new Option { Destination = 241, Text = "Далее" },
                 }
             },
             [267] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 610, Text = "Рискнете проплыть этим тоннелем" },
-                    new Option { Destination = 536, Text = ", направитесь к подводному лесу" },
-                    new Option { Destination = 381, Text = "или постараетесь проскользнуть между лесом и скалами" },
+                    new Option { Destination = 610, Text = "Проплыть этим тоннелем" },
+                    new Option { Destination = 536, Text = "К подводному лесу" },
+                    new Option { Destination = 381, Text = "Проскользнуть между лесом и скалами" },
                 }
             },
             [268] = new Paragraph
@@ -2157,8 +2157,8 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 107, Text = "Если хотите, можете попытаться оседлать его" },
-                    new Option { Destination = 441, Text = ", если же нет — отправляйтесь дальше" },
+                    new Option { Destination = 107, Text = "Попытаться оседлать его" },
+                    new Option { Destination = 441, Text = "Отправиться дальше" },
                 }
             },
             [270] = new Paragraph
@@ -2186,52 +2186,52 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 248, Text = "На какой остров из тех, конечно, где вы еще не успели побывать, лежит ваш путь теперь? На первый" },
-                    new Option { Destination = 16, Text = ", второй" },
-                    new Option { Destination = 165, Text = ", четвертый" },
-                    new Option { Destination = 418, Text = ", пятый" },
-                    new Option { Destination = 395, Text = ", шестой" },
-                    new Option { Destination = 535, Text = ", седьмой" },
-                    new Option { Destination = 100, Text = ", восьмой" },
-                    new Option { Destination = 84, Text = ", девятый" },
-                    new Option { Destination = 352, Text = ", десятый" },
-                    new Option { Destination = 282, Text = ", одиннадцатый" },
-                    new Option { Destination = 456, Text = ", двенадцатый" },
-                    new Option { Destination = 500, Text = "или тринадцатый" },
+                    new Option { Destination = 248, Text = "Первый" },
+                    new Option { Destination = 16, Text = "Второй" },
+                    new Option { Destination = 165, Text = "Четвертый" },
+                    new Option { Destination = 418, Text = "Пятый" },
+                    new Option { Destination = 395, Text = "Шестой" },
+                    new Option { Destination = 535, Text = "Седьмой" },
+                    new Option { Destination = 100, Text = "Восьмой" },
+                    new Option { Destination = 84, Text = "Девятый" },
+                    new Option { Destination = 352, Text = "Десятый" },
+                    new Option { Destination = 282, Text = "Одиннадцатый" },
+                    new Option { Destination = 456, Text = "Двенадцатый" },
+                    new Option { Destination = 500, Text = "Тринадцатый" },
                 }
             },
             [274] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 507, Text = "Ничего хорошего на ее морде не написано, и скорее всего лучшим выходом будет вступить в бой, не дожидаясь, пока она нападет первая" },
-                    new Option { Destination = 314, Text = ". Хотя, быть может, вы попробуете покормить ее, бросив в воду 1 еду" },
+                    new Option { Destination = 507, Text = "Вступить в бой" },
+                    new Option { Destination = 314, Text = "Попробуете покормить" },
                 }
             },
             [275] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 120, Text = "Покормите ее, бросив в воду 1 еду" },
-                    new Option { Destination = 561, Text = ", убьете" },
-                    new Option { Destination = 612, Text = "или просто поплывете дальше, не обращая внимания на назойливую рыбку" },
+                    new Option { Destination = 120, Text = "Покормите ее" },
+                    new Option { Destination = 561, Text = "Убьете её" },
+                    new Option { Destination = 612, Text = "Просто поплывете дальше" },
                 }
             },
             [276] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 197, Text = "Если удачливы, то 197" },
-                    new Option { Destination = 442, Text = ", если нет, — 442" },
+                    new Option { Destination = 197, Text = "Удачливы7" },
+                    new Option { Destination = 442, Text = "Нет" },
                 }
             },
             [277] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 43, Text = "Начнете с правого" },
-                    new Option { Destination = 474, Text = "или с левого" },
-                    new Option { Destination = 508, Text = "? Конечно, у вас всегда остается возможность уплыть, не дотрагиваясь до них" },
+                    new Option { Destination = 43, Text = "С правого" },
+                    new Option { Destination = 474, Text = "С левого" },
+                    new Option { Destination = 508, Text = "Уплыть, не дотрагиваясь" },
                 }
             },
             [278] = new Paragraph
@@ -2245,8 +2245,8 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 458, Text = "Похоже на тайник, но как его открыть? Если у вас есть Рыба-пила, то проблема решена" },
-                    new Option { Destination = 396, Text = "Делать нечего — придется уплывать из леса ни с чем — 396" },
+                    new Option { Destination = 458, Text = "Есть Рыба-пила" },
+                    new Option { Destination = 396, Text = "Уплыть из леса" },
                 }
             },
             [280] = new Paragraph
@@ -2260,16 +2260,16 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 402, Text = "Теперь же прибавьте себе 2 УДАЧИ и отправляйтесь дальше: к развалинам, которые видны неподалеку" },
-                    new Option { Destination = 103, Text = ", или в открытое море" },
+                    new Option { Destination = 402, Text = "К развалинам" },
+                    new Option { Destination = 103, Text = "В открытое море" },
                 }
             },
             [282] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 509, Text = "Но до нее не так уж близко, поэтому решайте: покинете остров, проведя на нем 10 минут" },
-                    new Option { Destination = 459, Text = ", или направитесь к хижине, надеясь, что там может жить тот, кто будет в силах вам помочь" },
+                    new Option { Destination = 509, Text = "Покинуть остров" },
+                    new Option { Destination = 459, Text = "Направиться к хижине" },
                 }
             },
             [283] = new Paragraph
@@ -2283,16 +2283,16 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 229, Text = "Как это ни печально, союзников у вас нет, но, может быть, хотите позвать Солнечную рыбу" },
-                    new Option { Destination = 198, Text = "Если вы чудом победили, то 198" },
+                    new Option { Destination = 229, Text = "Позвать Солнечную рыбу" },
+                    new Option { Destination = 198, Text = "Вы победили" },
                 }
             },
             [285] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 121, Text = "Можете попробовать скрыться от злобной рыбки — 121" },
-                    new Option { Destination = 315, Text = ". Если же вам удалось уменьшить ВЫНОСЛИВОСТЬ Морского черта до 2, то 315" },
+                    new Option { Destination = 121, Text = "Попробовать скрыться" },
+                    new Option { Destination = 315, Text = "Удалось уменьшить силу Морского черта до 2" },
                 }
             },
             [286] = new Paragraph
@@ -2327,42 +2327,41 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 577, Text = "Хотите помочь ему" },
-                    new Option { Destination = 480, Text = "или предоставите Водяному сражаться с пиратами в одиночку" },
+                    new Option { Destination = 577, Text = "Помочь ему" },
+                    new Option { Destination = 480, Text = "Предоставите Водяному сражаться в одиночку" },
                 }
             },
             [291] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 316, Text = "Постучите" },
-                    new Option { Destination = 205, Text = ", откроете ее без стука" },
-                    new Option { Destination = 504, Text = "или вернетесь на развилку и изберете другой тоннель" },
+                    new Option { Destination = 316, Text = "Постучать" },
+                    new Option { Destination = 205, Text = "Открыть без стука" },
+                    new Option { Destination = 504, Text = "Вернуться на развилку" },
                 }
             },
             [292] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 122, Text = "Хотите сесть в него" },
-                    new Option { Destination = 562, Text = ", устроиться на полу, чтобы отдохнуть" },
-                    new Option { Destination = 41, Text = ", или решите, что здесь нет ничего интересного, а время дорого, и уйдете" },
+                    new Option { Destination = 122, Text = "Сесть в него" },
+                    new Option { Destination = 562, Text = "Устроиться на полу" },
+                    new Option { Destination = 41, Text = "Уйти" },
                 }
             },
             [293] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 5, Text = "Если удается отрубить все три его головы (одна голова — 5" },
-                    new Option { Destination = 476, Text = "ВЫНОСЛИВОСТЕЙ), то 476" },
+                    new Option { Destination = 476, Text = "Далее" },
                 }
             },
             [294] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 510, Text = "Если вам повезло, то 510" },
-                    new Option { Destination = 579, Text = ", если же нет, — 579" },
+                    new Option { Destination = 510, Text = "Удачливы" },
+                    new Option { Destination = 579, Text = "Нет" },
                 }
             },
             [295] = new Paragraph
@@ -2376,9 +2375,9 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 558, Text = "Вы не понимаете язык рыб, поэтому остается либо покормить коралловых рыбок, кинув им 1 еду" },
-                    new Option { Destination = 462, Text = ", либо отправиться дальше, минуя риф" },
-                    new Option { Destination = 516, Text = "или огибая его" },
+                    new Option { Destination = 558, Text = "Покормить коралловых рыбок" },
+                    new Option { Destination = 462, Text = "Отправиться дальше, минуя риф" },
+                    new Option { Destination = 516, Text = "Обогнуть его" },
                 }
             },
             [297] = new Paragraph
@@ -2399,58 +2398,58 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 511, Text = "Пойдете с ним" },
-                    new Option { Destination = 142, Text = "или окажете сопротивление" },
+                    new Option { Destination = 511, Text = "Пойти с ним" },
+                    new Option { Destination = 142, Text = "Оказать сопротивление" },
                 }
             },
             [300] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 463, Text = "Если удачливы, то 463" },
-                    new Option { Destination = 563, Text = ", если нет, — 563" },
+                    new Option { Destination = 463, Text = "Удачливы" },
+                    new Option { Destination = 563, Text = "Нет" },
                 }
             },
             [301] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 210, Text = "Так что же: рискнете произнести заклятие" },
-                    new Option { Destination = 49, Text = "или покинете библиотеку" },
+                    new Option { Destination = 210, Text = "Произнести заклятие" },
+                    new Option { Destination = 49, Text = "Покинуть библиотеку" },
                 }
             },
             [302] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 512, Text = "Постараетесь удержаться внизу, схватившись за одну из лопастей мельницы" },
-                    new Option { Destination = 484, Text = ", или всплывете на поверхность" },
+                    new Option { Destination = 512, Text = "Постараться удержаться внизу" },
+                    new Option { Destination = 484, Text = "Всплыть на поверхность" },
                 }
             },
             [303] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 124, Text = "Если хотите умилостивить его (и есть чем), то можете попытаться предложить серебряное блюдо" },
-                    new Option { Destination = 45, Text = ", золотой перстень" },
-                    new Option { Destination = 627, Text = "или сушеного краба" },
-                    new Option { Destination = 501, Text = ". Иначе оскорбленный Карлик не станет больше с вами разговаривать, и останется только отправиться дальше несолоно хлебавши" },
+                    new Option { Destination = 124, Text = "Серебряное блюдо" },
+                    new Option { Destination = 45, Text = "Золотой перстень" },
+                    new Option { Destination = 627, Text = "Сушеного краба" },
+                    new Option { Destination = 501, Text = "Отправиться дальше" },
                 }
             },
             [304] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 565, Text = "Спуститесь во впадину и подплывете к сундукам" },
-                    new Option { Destination = 231, Text = "или предпочтете обогнуть ее и направиться к одинокой скале, стоящей неподалеку" },
+                    new Option { Destination = 565, Text = "К сундукам" },
+                    new Option { Destination = 231, Text = "К одинокой скале" },
                 }
             },
             [305] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 464, Text = "Тем не менее ведьма согласна помочь и спрашивает, хотите ли вы в обмен на ее услуги расстаться с 10 золотыми? Если да, то 464" },
-                    new Option { Destination = 614, Text = ", если же не хотите или у вас просто нет таких денег, то 614" },
+                    new Option { Destination = 464, Text = "Хотите расстаться с 10 золотыми" },
+                    new Option { Destination = 614, Text = "Не хотите" },
                 }
             },
             [306] = new Paragraph
@@ -2464,21 +2463,21 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 501, Text = "Прибавьте себе 1 МАСТЕРСТВО (даже если для этого придется превысить изначальное), поблагодарите Карлика и отправляйтесь дальше" },
-                    new Option { Destination = 202, Text = ". Или хотите поинтересоваться, нет ли у него в запасе еще чего-нибудь столь же полезного" },
+                    new Option { Destination = 501, Text = "Отправиться дальше" },
+                    new Option { Destination = 202, Text = "Поинтересоваться, нет ли у него еще чего-нибудь полезного" },
                 }
             },
             [308] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 513, Text = "Но прежде чем это сделать, вспомните, не случалось ли вам атаковать Карлика" },
-                    new Option { Destination = 46, Text = ", лодочника" },
-                    new Option { Destination = 143, Text = ", стража у входа в подводное королевство" },
-                    new Option { Destination = 603, Text = "или Солнечную рыбу" },
-                    new Option { Destination = 379, Text = "? А быть может, сразу двоих? Тогда кого: стража и Карлика" },
-                    new Option { Destination = 287, Text = ", Карлика и лодочника" },
-                    new Option { Destination = 342, Text = ", лодочника и Солнечную рыбу" },
+                    new Option { Destination = 513, Text = "Карлика" },
+                    new Option { Destination = 46, Text = "Лодочника" },
+                    new Option { Destination = 143, Text = "Стража у входа в королевство" },
+                    new Option { Destination = 603, Text = "Солнечную рыбу" },
+                    new Option { Destination = 379, Text = "Стража и Карлика" },
+                    new Option { Destination = 287, Text = "Карлика и лодочника" },
+                    new Option { Destination = 342, Text = "Лодочника и Солнечную рыбу" },
                     new Option { Destination = 368, Text = "или рыбу и Водяного" },
                     new Option { Destination = 97, Text = "? Ну, а если вы умудрились не напасть ни на одно из этих существ, то 97" },
                 }
