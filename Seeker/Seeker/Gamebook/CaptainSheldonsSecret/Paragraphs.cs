@@ -1743,7 +1743,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
                 Options = new List<Option>
                 {
                     new Option { Destination = 331, Text = "Есть амулет" },
-                    new Option { Destination = 150, Text = "Удалось уменьшить выносливость врага до 12" },
+                    new Option { Destination = 150, Text = "Удалось уменьшить силу врага до 12" },
                 }
             },
             [218] = new Paragraph
