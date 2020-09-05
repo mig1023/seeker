@@ -100,7 +100,8 @@ namespace Seeker.Game
                         Label param = new Label()
                         {
                             Text = enemyParam[1],
-                            HorizontalTextAlignment = TextAlignment.Center
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            Margin = new Thickness(0, -10, 0, 0)
                         };
 
                         enemies.Add(param);
