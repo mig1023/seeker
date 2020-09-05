@@ -92,7 +92,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
                 foreach (Character ally in Allies)
                     enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", ally.Name, ally.Skill, ally.Strength));
 
-                enemies.Add("------ VS ------");
+                enemies.Add("SPLITTER|против");
             }
                 
 

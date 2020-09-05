@@ -58,27 +58,44 @@ namespace Seeker.Game
 
             foreach (string enemyLine in enemiesLines)
             {
-                string[] enemyParam = enemyLine.Split('\n');
-
-                Label enemy = new Label()
+                if (enemyLine.Contains("SPLITTER|"))
                 {
-                    FontSize = 18,
-                    FontAttributes = FontAttributes.Bold,
-                    Text = enemyParam[0],
-                    HorizontalTextAlignment = TextAlignment.Center
-                };
+                    string[] param = enemyLine.Split('|');
 
-                enemies.Add(enemy);
-
-                if (enemyParam.Length > 1)
-                {
-                    Label param = new Label()
+                    Label splitter = new Label()
                     {
-                        Text = enemyParam[1],
+                        BackgroundColor = Color.FromHex("#bdbdbd"),
+                        HorizontalTextAlignment = TextAlignment.Center,
+                        Text = param[1],
+                        LineHeight = 20
+                    };
+
+                    enemies.Add(splitter);
+                }
+                else
+                {
+                    string[] enemyParam = enemyLine.Split('\n');
+
+                    Label enemy = new Label()
+                    {
+                        FontSize = 18,
+                        FontAttributes = FontAttributes.Bold,
+                        Text = enemyParam[0],
                         HorizontalTextAlignment = TextAlignment.Center
                     };
 
-                    enemies.Add(param);
+                    enemies.Add(enemy);
+
+                    if (enemyParam.Length > 1)
+                    {
+                        Label param = new Label()
+                        {
+                            Text = enemyParam[1],
+                            HorizontalTextAlignment = TextAlignment.Center
+                        };
+
+                        enemies.Add(param);
+                    }
                 }
             }
 
