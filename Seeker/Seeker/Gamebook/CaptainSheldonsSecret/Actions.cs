@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
         public string OpenOption { get; set; }
 
         // Fight
+        public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
@@ -86,6 +87,15 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             if (Enemies == null)
                 return enemies;
 
+            if (Allies != null)
+            {
+                foreach (Character ally in Allies)
+                    enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", ally.Name, ally.Skill, ally.Strength));
+
+                enemies.Add("------ VS ------");
+            }
+                
+
             foreach (Character enemy in Enemies)
                 enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", enemy.Name, enemy.Skill, enemy.Strength));
 
@@ -151,94 +161,106 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             int round = 1;
             int enemyWounds = 0;
 
+            List<Character> FightAllies = new List<Character>();
             List<Character> FightEnemies = new List<Character>();
 
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
+            foreach (Character ally in Allies)
+                FightAllies.Add(ally.Clone());
+
             while (true)
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
-                foreach (Character enemy in FightEnemies)
+                foreach (Character ally in FightAllies)
                 {
-                    if (enemy.Strength <= 0)
+                    if (ally.Strength <= 0)
                         continue;
 
-                    fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Strength));
+                    fight.Add(String.Format("{0} (сила {1})", ally.Name, ally.Strength));
 
-                    int firstHeroRoll = Game.Dice.Roll();
-                    int secondHeroRoll = Game.Dice.Roll();
-                    int heroHitStrength = firstHeroRoll + secondHeroRoll + Character.Protagonist.Skill;
-
-                    fight.Add(
-                        String.Format(
-                            "Сила вашего удара: {0} ⚄ + {1} ⚄ + {2} = {3}",
-                            firstHeroRoll, secondHeroRoll, Character.Protagonist.Skill, heroHitStrength
-                        )
-                    );
-
-                    int firstEnemyRoll = Game.Dice.Roll();
-                    int secondEnemyRoll = Game.Dice.Roll();
-                    int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Skill;
-
-                    fight.Add(
-                        String.Format(
-                            "Сила его удара: {0} ⚄ + {1} ⚄ + {2} = {3}",
-                            firstEnemyRoll, secondEnemyRoll, enemy.Skill, enemyHitStrength
-                        )
-                    );
-
-                    if (heroHitStrength > enemyHitStrength)
+                    foreach (Character enemy in FightEnemies)
                     {
-                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
-                        enemy.Strength -= 2;
-
                         if (enemy.Strength <= 0)
-                            enemy.Strength = 0;
+                            continue;
 
-                        enemyWounds += 1;
+                        fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
 
-                        bool enemyLost = true;
+                        int firstHeroRoll = Game.Dice.Roll();
+                        int secondHeroRoll = Game.Dice.Roll();
+                        int allyHitStrength = firstHeroRoll + secondHeroRoll + ally.Skill;
 
-                        foreach (Character e in FightEnemies)
-                            if (e.Strength > 0)
-                                enemyLost = false;
+                        fight.Add(
+                            String.Format(
+                                "{0}: мощность удара : {1} ⚄ + {2} ⚄ + {3} = {4}",
+                                ally.Name, firstHeroRoll, secondHeroRoll, ally.Skill, allyHitStrength
+                            )
+                        );
 
-                        if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
+                        int firstEnemyRoll = Game.Dice.Roll();
+                        int secondEnemyRoll = Game.Dice.Roll();
+                        int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Skill;
+
+                        fight.Add(
+                            String.Format(
+                                "{0}: мощность удара: {1} ⚄ + {2} ⚄ + {3} = {4}",
+                                enemy.Name, firstEnemyRoll, secondEnemyRoll, enemy.Skill, enemyHitStrength
+                            )
+                        );
+
+                        if (allyHitStrength > enemyHitStrength)
                         {
-                            fight.Add(String.Empty);
-                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
-                            return fight;
+                            fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                            enemy.Strength -= 2;
+
+                            if (enemy.Strength <= 0)
+                                enemy.Strength = 0;
+
+                            enemyWounds += 1;
+
+                            bool enemyLost = true;
+
+                            foreach (Character e in FightEnemies)
+                                if (e.Strength > 0)
+                                    enemyLost = false;
+
+                            if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
+                            {
+                                fight.Add(String.Empty);
+                                fight.Add(String.Format("BIG|GOOD|{0} ПОБЕДИЛ :)", ally.Name));
+                                return fight;
+                            }
                         }
-                    }
-                    else if (heroHitStrength < enemyHitStrength)
-                    {
-                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
-                        Character.Protagonist.Strength -= 2;
+                        else if (allyHitStrength < enemyHitStrength)
+                        {
+                            fight.Add(String.Format("BAD|{0} ранен", ally.Name));
+                            ally.Strength -= 2;
 
-                        if (Character.Protagonist.Strength < 0)
-                            Character.Protagonist.Strength = 0;
+                            if (ally.Strength < 0)
+                                ally.Strength = 0;
 
-                        if (Character.Protagonist.Strength <= 0)
+                            if (ally.Strength <= 0)
+                            {
+                                fight.Add(String.Empty);
+                                fight.Add(String.Format("BIG|BAD|{0} ПРОИГРАЛ :(", ally.Name));
+                                return fight;
+                            }
+                        }
+                        else
+                            fight.Add(String.Format("BOLD|Ничья в раунде"));
+
+                        if ((RoundsToWin > 0) && (RoundsToWin <= round))
                         {
                             fight.Add(String.Empty);
+                            fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                             return fight;
                         }
-                    }
-                    else
-                        fight.Add(String.Format("BOLD|Ничья в раунде"));
 
-                    if ((RoundsToWin > 0) && (RoundsToWin <= round))
-                    {
                         fight.Add(String.Empty);
-                        fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
-                        fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
-                        return fight;
                     }
-
-                    fight.Add(String.Empty);
                 }
 
                 round += 1;

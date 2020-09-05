@@ -14,7 +14,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
         public int Strength { get; set; }
         public int Charm { get; set; }
         public int Gold { get; set; }
-        public List<bool> Luck { get; set; }
+        public Dictionary<int, bool> Luck { get; set; }
 
         public void Init()
         {
@@ -63,12 +63,13 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
                 [12] = 5
             };
 
+            Name = "ГЛАВГЕРОЙ";
             Skill = Skills[Game.Dice.Roll(dices: 2)];
             Strength = Strengths[Game.Dice.Roll(dices: 2)];
             Charm = Charms[Game.Dice.Roll(dices: 2)];
             Gold = 15;
 
-            Luck = new List<bool>
+            Luck = new Dictionary<int, bool>
             {
                 [1] = true,
                 [2] = true,
