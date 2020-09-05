@@ -507,6 +507,65 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
             },
             [60] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Пусть сражаются",
+
+                        Allies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "КАПИТАН",
+                                Skill = 10,
+                                Strength = 14,
+                            },
+                        },
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ПИРАТ",
+                                Skill = 10,
+                                Strength = 8,
+                            },
+                        },
+
+                        Aftertext = "Вторая парая: вы против",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Allies = new List<Character>
+                        {
+                            Character.Protagonist
+                        },
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ПИРАТ",
+                                Skill = 9,
+                                Strength = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ТРЕТИЙ ПИРАТ",
+                                Skill = 10,
+                                Strength = 8,
+                            },
+                        },
+
+                        Aftertext = "Если вы убили его",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 140, Text = "Победил капитан" },
