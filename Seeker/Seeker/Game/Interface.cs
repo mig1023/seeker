@@ -52,9 +52,9 @@ namespace Seeker.Game
             };
         }
 
-        public static List<Label> Represent(List<string> enemiesLines)
+        public static List<View> Represent(List<string> enemiesLines)
         {
-            List<Label> enemies = new List<Label>();
+            List<View> enemies = new List<View>();
 
             foreach (string enemyLine in enemiesLines)
             {
@@ -64,13 +64,22 @@ namespace Seeker.Game
 
                     Label splitter = new Label()
                     {
-                        BackgroundColor = Color.FromHex("#bdbdbd"),
+                        VerticalOptions = LayoutOptions.FillAndExpand,
+                        VerticalTextAlignment = TextAlignment.Center,
                         HorizontalTextAlignment = TextAlignment.Center,
                         Text = param[1],
-                        LineHeight = 20
                     };
 
-                    enemies.Add(splitter);
+                    StackLayout splitterForm = new StackLayout()
+                    {
+                        HorizontalOptions = LayoutOptions.FillAndExpand,
+                        HeightRequest = 25,
+                        BackgroundColor = Color.FromHex("#bdbdbd"),
+                    };
+
+                    splitterForm.Children.Add(splitter);
+
+                    enemies.Add(splitterForm);
                 }
                 else
                 {
