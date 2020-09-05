@@ -4,7 +4,7 @@ using System.Text;
 
 using static Seeker.Game.Buttons;
 
-namespace Seeker.Gamebook.CaptainSheldonsSecret
+namespace Seeker.Gamebook.CaptainSheltonsSecret
 {
     class Constants : Interfaces.IConstants
     {

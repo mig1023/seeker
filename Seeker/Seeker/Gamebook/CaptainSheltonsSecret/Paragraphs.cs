@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Seeker.Game;
 
-namespace Seeker.Gamebook.CaptainSheldonsSecret
+namespace Seeker.Gamebook.CaptainSheltonsSecret
 {
     class Paragraphs : Interfaces.IParagraphs
     {
@@ -37,6 +37,7 @@ namespace Seeker.Gamebook.CaptainSheldonsSecret
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "В путь!" },
+                    new Option { Destination = 60, Text = "TEST" },
                 }
             },
             [1] = new Paragraph

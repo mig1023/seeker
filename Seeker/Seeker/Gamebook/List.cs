@@ -20,14 +20,14 @@ namespace Seeker.Gamebook
                 BookColor = "#000000",
             },
 
-            ["Тайна капитана Шелдона"] = new Description
+            ["Тайна капитана Шелтона"] = new Description
             {
-                XmlBook = "CaptainSheldonsSecret.xml",
-                Protagonist = CaptainSheldonsSecret.Character.Protagonist.Init,
-                CheckOnlyIf = CaptainSheldonsSecret.Actions.CheckOnlyIf,
-                Paragraphs = new CaptainSheldonsSecret.Paragraphs(),
-                Actions = new CaptainSheldonsSecret.Actions(),
-                Constants = new CaptainSheldonsSecret.Constants(),
+                XmlBook = "CaptainSheltonsSecret.xml",
+                Protagonist = CaptainSheltonsSecret.Character.Protagonist.Init,
+                CheckOnlyIf = CaptainSheltonsSecret.Actions.CheckOnlyIf,
+                Paragraphs = new CaptainSheltonsSecret.Paragraphs(),
+                Actions = new CaptainSheltonsSecret.Actions(),
+                Constants = new CaptainSheltonsSecret.Constants(),
                 Disclaimer = "Браславский Дмитрий, 1995",
                 BookColor = "#4682B4",
             },

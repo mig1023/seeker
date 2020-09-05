@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Seeker.Gamebook.CaptainSheldonsSecret
+namespace Seeker.Gamebook.CaptainSheltonsSecret
 {
     class Character : Interfaces.ICharacter
     {
-        public static Character Protagonist = new Gamebook.CaptainSheldonsSecret.Character();
+        public static Character Protagonist = new Gamebook.CaptainSheltonsSecret.Character();
 
         public string Name { get; set; }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace Seeker.Gamebook.CaptainSheldonsSecret
+namespace Seeker.Gamebook.CaptainSheltonsSecret
 {
     class Actions : Interfaces.IActions
     {
