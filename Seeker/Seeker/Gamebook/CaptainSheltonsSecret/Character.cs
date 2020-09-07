@@ -14,7 +14,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int Strength { get; set; }
         public int Charm { get; set; }
         public int Gold { get; set; }
-        public bool ExtendedDamage { get; set; }
+        public int ExtendedDamage { get; set; }
+        public int SkillDamage { get; set; }
         public Dictionary<int, bool> Luck { get; set; }
 
         public void Init()
@@ -94,6 +95,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             newCharacter.Charm = this.Charm;
             newCharacter.Gold = this.Gold;
             newCharacter.ExtendedDamage = this.ExtendedDamage;
+            newCharacter.SkillDamage = this.SkillDamage;
 
             return newCharacter;
         }

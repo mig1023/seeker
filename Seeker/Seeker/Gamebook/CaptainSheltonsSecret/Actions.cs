@@ -213,7 +213,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         if (allyHitStrength > enemyHitStrength)
                         {
                             fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
-                            enemy.Strength -= (ally.ExtendedDamage ? 3 : 2);
+                            enemy.Strength -= 2 + ally.ExtendedDamage;
+                            enemy.Skill -= ally.SkillDamage;
 
                             if (enemy.Strength <= 0)
                                 enemy.Strength = 0;
@@ -236,7 +237,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         else if (allyHitStrength < enemyHitStrength)
                         {
                             fight.Add(String.Format("BAD|{0} ранен", ally.Name));
-                            ally.Strength -= (enemy.ExtendedDamage ? 3 : 2);
+                            ally.Strength -= 2 + enemy.ExtendedDamage;
+                            enemy.Skill -= ally.SkillDamage;
 
                             if (ally.Strength < 0)
                                 ally.Strength = 0;
