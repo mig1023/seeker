@@ -596,6 +596,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [55] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 270, Text = "Удачливы" },
@@ -877,6 +886,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [72] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 256, Text = "Удачливы" },
@@ -1321,6 +1339,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [107] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 618, Text = "Удачливы" },
@@ -1879,6 +1906,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [158] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 413, Text = "Удачливы" },
@@ -2134,6 +2170,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [191] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 308, Text = "Удачливы" },
@@ -2211,6 +2256,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [201] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 454, Text = "Удачливы" },
@@ -2812,9 +2866,18 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [276] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 197, Text = "Удачливы7" },
+                    new Option { Destination = 197, Text = "Удачливы" },
                     new Option { Destination = 442, Text = "Нет" },
                 }
             },
@@ -2951,6 +3014,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [294] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 510, Text = "Удачливы" },
@@ -2997,6 +3069,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [300] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 463, Text = "Удачливы" },
@@ -3261,6 +3342,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [332] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 574, Text = "Удачливы" },
@@ -3708,6 +3798,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [387] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 111, Text = "Удачливы" },
@@ -3753,6 +3852,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [393] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 108, Text = "Удачливы" },
@@ -3802,6 +3910,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [399] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 526, Text = "Удачливы" },
@@ -4068,6 +4185,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [432] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 111, Text = "Удачливы" },
@@ -4397,6 +4523,16 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [474] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                        Aftertext = "Если вам не повезло — можете либо перейти к правому сундуку (если вы этого еще не делали), либо уплыть прочь"
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 139, Text = "Если вам повезло" },
@@ -4435,6 +4571,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [479] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 65, Text = "Удачливы" },
@@ -4764,6 +4909,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [521] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 481, Text = "Удачливы" },
@@ -5221,6 +5375,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [576] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 377, Text = "Удачливы" },
@@ -5481,6 +5644,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [611] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Luck",
+                        ButtonName = "Проверить удачу",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 426, Text = "Удачливы" },
