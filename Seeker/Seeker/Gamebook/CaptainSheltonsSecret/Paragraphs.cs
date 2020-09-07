@@ -2123,6 +2123,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 Name = "МОРСКАЯ ЗМЕЯ",
                                 Skill = 10,
                                 Strength = 14,
+                                ExtendedDamage = true,
                             },
                         },
                     },
