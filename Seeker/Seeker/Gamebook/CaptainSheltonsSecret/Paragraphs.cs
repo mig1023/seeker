@@ -2015,6 +2015,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Сражаться",
+                        SkillPenalty = 2,
 
                         Allies = new List<Character>
                         {

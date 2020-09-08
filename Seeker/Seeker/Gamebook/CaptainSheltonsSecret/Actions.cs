@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
         public int DamageToWin { get; set; }
+        public int SkillPenalty { get; set; }
 
         // Get
         public string Text { get; set; }
@@ -191,7 +192,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                         int firstHeroRoll = Game.Dice.Roll();
                         int secondHeroRoll = Game.Dice.Roll();
-                        int allyHitStrength = firstHeroRoll + secondHeroRoll + ally.Skill;
+                        int allyHitStrength = firstHeroRoll + secondHeroRoll + (ally.Skill - SkillPenalty);
 
                         fight.Add(
                             String.Format(
