@@ -25,6 +25,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int Food { get; set; }
         public int HadFoodToday { get; set; }
         public int Chainmail { get; set; }
+        public int LeftHandPenalty { get; set; }
 
         public void Init()
         {
@@ -73,6 +74,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             newCharacter.Honor = this.Honor;
             newCharacter.Day = this.Day;
             newCharacter.Ecu = this.Ecu;
+            newCharacter.LeftHandPenalty = this.LeftHandPenalty;
 
             return newCharacter;
         }

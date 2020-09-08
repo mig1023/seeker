@@ -344,7 +344,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
 
                     int protagonistRoll = Game.Dice.Roll();
-                    int protagonistSkill = hero.Skill - SkillPenalty;
+                    int protagonistSkill = hero.Skill - SkillPenalty - (hero.MeritalArt == Character.MeritalArts.LefthandFencing ? 0 : enemy.LeftHandPenalty);
                     int protagonistHitStrength = protagonistRoll + protagonistSkill;
                     fight.Add(String.Format("Мощность вашего удара: {0} ⚄ x 2 + {1} = {2}", protagonistRoll, protagonistSkill, protagonistHitStrength));
 

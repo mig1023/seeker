@@ -3547,6 +3547,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                                 Name = "ЛЕГИСТ",
                                 Skill = 12,
                                 Strength = 14,
+                                LeftHandPenalty = 1,
                             },
                         },
 
