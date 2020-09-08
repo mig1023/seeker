@@ -176,7 +176,10 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 FightEnemies.Add(enemy.Clone());
 
             foreach (Character ally in Allies)
-                FightAllies.Add(ally.Clone());
+                if (ally == Character.Protagonist)
+                    FightAllies.Add(ally);
+                else
+                    FightAllies.Add(ally.Clone());
 
             while (true)
             {
@@ -188,7 +191,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         continue;
 
                     if (GroupFight)
-                        fight.Add(String.Format("{0} (сила {1})", ally.Name, ally.Strength));
+                        fight.Add(String.Format("{0} (сила {1})", (IsHero(ally.Name) ? "Вы" : ally.Name), ally.Strength));
 
                     foreach (Character enemy in FightEnemies)
                     {
@@ -239,13 +242,13 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                             {
                                 fight.Add(String.Empty);
-                                fight.Add(String.Format("BIG|GOOD|{0} :)", (GroupFight ? ally.Name + " ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ")));
+                                fight.Add(String.Format("BIG|GOOD|{0} :)", (GroupFight && !IsHero(ally.Name) ? ally.Name + " ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ")));
                                 return fight;
                             }
                         }
                         else if (allyHitStrength < enemyHitStrength)
                         {
-                            fight.Add(GroupFight ? String.Format("BAD|{0} ранен",  ally.Name) : "BAD|Вы ранены");
+                            fight.Add(GroupFight && !IsHero(ally.Name) ? String.Format("BAD|{0} ранен",  ally.Name) : "BAD|Вы ранены");
                             ally.Strength -= 2 + enemy.ExtendedDamage;
                             ally.Skill -= enemy.SkillDamage;
 
