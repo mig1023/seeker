@@ -37,6 +37,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "В путь!" },
+                    new Option { Destination = 364, Text = "ТЕСТ" },
                 }
             },
             [1] = new Paragraph
@@ -4061,6 +4062,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [364] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Break",
+                        ButtonName = "Попытаться взломать",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 283, Text = "Удалось" },

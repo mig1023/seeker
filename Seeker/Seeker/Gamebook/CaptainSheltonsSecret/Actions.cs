@@ -105,6 +105,31 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return enemies;
         }
 
+        public List<string> Break()
+        {
+            List<string> breakingDoor = new List<string> { "Ломаете дверь:" };
+
+            bool succesBreaked = false;
+
+            while (!succesBreaked && (Character.Protagonist.Strength > 0))
+            {
+                int firstDice = Game.Dice.Roll();
+                int secondDice = Game.Dice.Roll();
+
+                if (((firstDice == 1) || (firstDice == 6)) && (firstDice == secondDice))
+                    succesBreaked = true;
+                else
+                    Character.Protagonist.Strength -= 1;
+
+                string result = (succesBreaked ? "удачный, дверь поддалась!" : "неудачный, -1 сила" );
+                breakingDoor.Add(String.Format("Удар: {0} ⚄ + {1} ⚄ - {2}", firstDice, secondDice, result));
+            }
+
+            breakingDoor.Add(succesBreaked ? "BIG|GOOD|ДВЕРЬ ВЗЛОМАНА :)" : "BIG|BAD|ВЫ УБИЛИСЬ ОБ ДВЕРЬ :(");
+
+            return breakingDoor;
+        }
+
         public List<string> Luck()
         {
             Dictionary<int, string> luckList = new Dictionary<int, string>
