@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
+        public int DamageToWin { get; set; }
 
         // Get
         public string Text { get; set; }
@@ -224,7 +225,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             bool enemyLost = true;
 
                             foreach (Character e in FightEnemies)
-                                if (e.Strength > 0)
+                                if ((e.Strength > 0) && (e.Strength > DamageToWin))
                                     enemyLost = false;
 
                             if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
@@ -243,7 +244,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             if (ally.Strength < 0)
                                 ally.Strength = 0;
 
-                            if (ally.Strength <= 0)
+                            if ((ally.Strength == 0) || (ally.Strength <= DamageToWin))
                             {
                                 fight.Add(String.Empty);
                                 fight.Add(String.Format("BIG|BAD|{0} ПРОИГРАЛ :(", ally.Name));

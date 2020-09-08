@@ -2175,6 +2175,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Сражаться",
+                        DamageToWin = 8,
 
                         Allies = new List<Character>
                         {
@@ -2190,12 +2191,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 Strength = 16,
                             },
                         },
+
+                        Aftertext = "Сможете ли вы уменьшить силу своего противника до 8 или акула уменьшит вашу?"
                     },
                 },
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 406, Text = "Смогли уменьшить силу противника" },
+                    new Option { Destination = 406, Text = "Смогли уменьшить силу акулы" },
                     new Option { Destination = 362, Text = "Акула уменьшила вашу силу" },
                 }
             },
