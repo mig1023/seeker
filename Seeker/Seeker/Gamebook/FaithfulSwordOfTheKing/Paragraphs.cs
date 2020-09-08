@@ -2947,6 +2947,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     {
                         ActionName = "Fight",
                         ButtonName = "Сражаться",
+                        SkillPenalty = 1,
 
                         Enemies = new List<Character>
                         {

@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
+        public int SkillPenalty { get; set; }
 
         // Get
         public string Text { get; set; }
@@ -343,8 +344,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
 
                     int protagonistRoll = Game.Dice.Roll();
-                    int protagonistHitStrength = protagonistRoll + hero.Skill;
-                    fight.Add(String.Format("Мощность вашего удара: {0} ⚄ x 2 + {1} = {2}", protagonistRoll, hero.Skill, protagonistHitStrength));
+                    int protagonistSkill = hero.Skill - SkillPenalty;
+                    int protagonistHitStrength = protagonistRoll + protagonistSkill;
+                    fight.Add(String.Format("Мощность вашего удара: {0} ⚄ x 2 + {1} = {2}", protagonistRoll, protagonistSkill, protagonistHitStrength));
 
                     int enemyRoll = Game.Dice.Roll();
                     int enemyHitStrength = enemyRoll + enemy.Skill;
