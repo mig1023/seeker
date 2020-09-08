@@ -328,6 +328,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Пусть сражаются",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -647,6 +648,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Пусть сражаются",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -674,6 +676,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Сражаться",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -782,6 +785,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Сражаться",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -986,6 +990,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Пусть сражаются",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -1013,6 +1018,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Сражаться",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -1245,7 +1251,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 457, Text = "Вы встречали капитана Шелтона, то 457" },
+                    new Option { Destination = 457, Text = "Встречали капитана Шелтона" },
                     new Option { Destination = 249, Text = "Далее" },
                 }
             },
@@ -1397,7 +1403,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     new Actions
                     {
                         ActionName = "Fight",
-                        ButtonName = "Сражаться",
+                        ButtonName = "Пусть сражаются",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -1621,7 +1628,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     new Actions
                     {
                         ActionName = "Fight",
-                        ButtonName = "Сражаться",
+                        ButtonName = "Пусть сражаются",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -1696,6 +1704,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Сражаться",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -1718,6 +1727,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Пусть сражаются",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -1773,6 +1783,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Пусть сражаются",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -1800,6 +1811,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Сражаться",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -1900,6 +1912,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Пусть сражаются",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -1950,6 +1963,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Пусть сражаются",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -1976,6 +1990,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Сражаться",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -2319,6 +2334,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Пусть сражаются",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -2432,6 +2448,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Пусть сражаются",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {
@@ -2599,6 +2616,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Пусть сражаются",
+                        GroupFight = true,
 
                         Allies = new List<Character>
                         {

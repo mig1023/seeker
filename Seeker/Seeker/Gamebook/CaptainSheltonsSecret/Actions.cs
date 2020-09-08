@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int WoundsToWin { get; set; }
         public int DamageToWin { get; set; }
         public int SkillPenalty { get; set; }
+        public bool GroupFight { get; set; }
 
         // Get
         public string Text { get; set; }
@@ -89,7 +90,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             if (Enemies == null)
                 return enemies;
 
-            if (Allies != null)
+            if ((Allies != null) && GroupFight)
             {
                 foreach (Character ally in Allies)
                     enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", ally.Name, ally.Skill, ally.Strength));
@@ -181,7 +182,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     if (ally.Strength <= 0)
                         continue;
 
-                    fight.Add(String.Format("{0} (сила {1})", ally.Name, ally.Strength));
+                    if (GroupFight)
+                        fight.Add(String.Format("{0} (сила {1})", ally.Name, ally.Strength));
 
                     foreach (Character enemy in FightEnemies)
                     {
@@ -197,7 +199,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         fight.Add(
                             String.Format(
                                 "{0}: мощность удара : {1} ⚄ + {2} ⚄ + {3} = {4}",
-                                ally.Name, firstHeroRoll, secondHeroRoll, ally.Skill, allyHitStrength
+                                (GroupFight ? ally.Name : "Вы"), firstHeroRoll, secondHeroRoll, ally.Skill, allyHitStrength
                             )
                         );
 
@@ -214,7 +216,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                         if (allyHitStrength > enemyHitStrength)
                         {
-                            fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                            fight.Add(String.Format("GOOD|{0} ранен", (GroupFight ? enemy.Name : "Он")));
                             enemy.Strength -= 2 + ally.ExtendedDamage;
                             enemy.Skill -= ally.SkillDamage;
 
@@ -232,13 +234,13 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                             {
                                 fight.Add(String.Empty);
-                                fight.Add(String.Format("BIG|GOOD|{0} ПОБЕДИЛ :)", ally.Name));
+                                fight.Add(String.Format("BIG|GOOD|{0} :)", (GroupFight ? ally.Name + " ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ")));
                                 return fight;
                             }
                         }
                         else if (allyHitStrength < enemyHitStrength)
                         {
-                            fight.Add(String.Format("BAD|{0} ранен", ally.Name));
+                            fight.Add(GroupFight ? String.Format("BAD|{0} ранен",  ally.Name) : "Вы ранены");
                             ally.Strength -= 2 + enemy.ExtendedDamage;
                             enemy.Skill -= ally.SkillDamage;
 
@@ -248,7 +250,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             if ((ally.Strength == 0) || (ally.Strength <= DamageToWin))
                             {
                                 fight.Add(String.Empty);
-                                fight.Add(String.Format("BIG|BAD|{0} ПРОИГРАЛ :(", ally.Name));
+                                fight.Add(String.Format("BIG|BAD|{0} :(", (GroupFight ? ally.Name + " ПРОИГРАЛ" : "ВЫ ПРОИРАЛИ")));
                                 return fight;
                             }
                         }
@@ -259,7 +261,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
-                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                            fight.Add(String.Format("BIG|BAD|{0} :(", (GroupFight ? ally.Name + " ПРОИГРАЛ" : "ВЫ ПРОИРАЛИ")));
                             return fight;
                         }
 
