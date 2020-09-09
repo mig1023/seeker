@@ -249,26 +249,31 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                         if (allyHitStrength > enemyHitStrength)
                         {
-                            fight.Add(String.Format("GOOD|{0} ранен", (GroupFight ? enemy.Name : "Он")));
-                            enemy.Strength -= 2 + ally.ExtendedDamage;
-                            enemy.Skill -= ally.SkillDamage;
-
-                            if (enemy.Strength <= 0)
-                                enemy.Strength = 0;
-
-                            enemyWounds += 1;
-
-                            bool enemyLost = true;
-
-                            foreach (Character e in FightEnemies)
-                                if ((e.Strength > 0) && (e.Strength > DamageToWin))
-                                    enemyLost = false;
-
-                            if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
+                            if (enemy.SeaArmour && (firstHeroRoll == secondHeroRoll))
+                                fight.Add(String.Format("BOLD|Чешуя отразила ваш удар"));
+                            else
                             {
-                                fight.Add(String.Empty);
-                                fight.Add(String.Format("BIG|GOOD|{0} :)", (GroupFight && !IsHero(ally.Name) ? ally.Name + " ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ")));
-                                return fight;
+                                fight.Add(String.Format("GOOD|{0} ранен", (GroupFight ? enemy.Name : "Он")));
+                                enemy.Strength -= 2 + ally.ExtendedDamage;
+                                enemy.Skill -= ally.SkillDamage;
+
+                                if (enemy.Strength <= 0)
+                                    enemy.Strength = 0;
+
+                                enemyWounds += 1;
+
+                                bool enemyLost = true;
+
+                                foreach (Character e in FightEnemies)
+                                    if ((e.Strength > 0) && (e.Strength > DamageToWin))
+                                        enemyLost = false;
+
+                                if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
+                                {
+                                    fight.Add(String.Empty);
+                                    fight.Add(String.Format("BIG|GOOD|{0} :)", (GroupFight && !IsHero(ally.Name) ? ally.Name + " ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ")));
+                                    return fight;
+                                }
                             }
                         }
                         else if (allyHitStrength < enemyHitStrength)

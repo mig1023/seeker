@@ -37,7 +37,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "В путь!" },
-                    new Option { Destination = 364, Text = "ТЕСТ" },
                 }
             },
             [1] = new Paragraph
@@ -207,6 +206,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 Name = "МОРСКОЙ ДРАКОНЧИК",
                                 Skill = 9,
                                 Strength = 8,
+                                SeaArmour = true,
                             },
                         },
                     },
