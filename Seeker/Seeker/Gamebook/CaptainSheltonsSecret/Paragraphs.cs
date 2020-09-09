@@ -4413,6 +4413,42 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [337] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Пусть сражаются",
+                        GroupFight = true,
+
+                        Allies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "РЫЦАРЬ-ВОДЯНОЙ",
+                                Skill = 10,
+                                Strength = 9,
+                            },
+                        },
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ВОИН",
+                                Skill = 10,
+                                Strength = 10,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ВОИН",
+                                Skill = 10,
+                                Strength = 10,
+                            },
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 63, Text = "Водяной погиб, бой принимать вам" },
@@ -4430,6 +4466,33 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [339] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        RoundsToWin = 4,
+
+                        Allies = new List<Character>
+                        {
+                            Character.Protagonist
+                        },
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ПОВАР-ВОДЯНОЙ",
+                                Skill = 8,
+                                Strength = 8,
+                            },
+                        },
+
+                        Aftertext = "Если удастся убить его за четыре раунда атаки, то лучше поскорее убраться из кухни, вернувшись в коридор, по которому вы приплыли, а если нет, то у вас возникнут проблемы."
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 504, Text = "Удалось убить за четыре раунда атаки" },
@@ -4519,6 +4582,48 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [350] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Пусть сражаются",
+                        GroupFight = true,
+
+                        Allies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "МОРЯК",
+                                Skill = 10,
+                                Strength = 12,
+                            },
+                        },
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ПИРАТ",
+                                Skill = 10,
+                                Strength = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ПИРАТ",
+                                Skill = 9,
+                                Strength = 8,
+                            },
+                            new Character
+                            {
+                                Name = "ТРЕТИЙ ПИРАТ",
+                                Skill = 10,
+                                Strength = 8,
+                            },
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 198, Text = "Все враги мертвы" },
@@ -4849,6 +4954,30 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [388] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Allies = new List<Character>
+                        {
+                            Character.Protagonist
+                        },
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ПЯТНИСТАЯ АКУЛА",
+                                Skill = 10,
+                                Strength = 10,
+                            },
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 369, Text = "Далее" },
@@ -4856,6 +4985,32 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [389] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Allies = new List<Character>
+                        {
+                            Character.Protagonist
+                        },
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "РЫБА-СОБАКА",
+                                Skill = 8,
+                                Strength = 7,
+                            },
+                        },
+
+                        Aftertext = "Если вы убили ее, то можете либо поторопиться и покинуть негостеприимный лес, либо направиться дальше: к группе деревьев неподалеку или к подводному лугу справа от вас?"
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 360, Text = "Покинуть лес" },
@@ -4929,6 +5084,30 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [397] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Allies = new List<Character>
+                        {
+                            Character.Protagonist
+                        },
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "МОРСКОЙ ПАУК",
+                                Skill = 9,
+                                Strength = 9,
+                            },
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 36, Text = "Далее" },
@@ -4936,6 +5115,30 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [398] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Allies = new List<Character>
+                        {
+                            Character.Protagonist
+                        },
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "РЫБА-ЕДИНОРОГ",
+                                Skill = 10,
+                                Strength = 8,
+                            },
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 119, Text = "Попытаться бежать" },
@@ -5041,6 +5244,32 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [409] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Allies = new List<Character>
+                        {
+                            Character.Protagonist
+                        },
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ДВОРЯНИН",
+                                Skill = 10,
+                                Strength = 12,
+                            },
+                        },
+
+                        Aftertext = "Если он убит, то можете приблизиться к кораблю. Но, быть может, лучше уплыть от греха подальше?"
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 70, Text = "Приблизиться к кораблю" },
@@ -5169,6 +5398,38 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [425] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Пусть сражаются",
+                        GroupFight = true,
+
+                        Allies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "РЫБА-МОЛОТ",
+                                Skill = 9,
+                                Strength = 8,
+                            },
+                        },
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ПЯТНИСТАЯ АКУЛА",
+                                Skill = 10,
+                                Strength = 10,
+                            },
+                        },
+
+                        Aftertext = "Хорошо, если Рыба-молот победила. Если же она мертва, придется вступить в бой вам.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 110, Text = "Рыба-молот победила" },
@@ -5184,6 +5445,30 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [427] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Allies = new List<Character>
+                        {
+                            Character.Protagonist
+                        },
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "РЫЦАРЬ-ВОДЯНОЙ",
+                                Skill = 8,
+                                Strength = 8,
+                            },
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 38, Text = "Далее" },
@@ -5205,6 +5490,33 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [430] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Allies = new List<Character>
+                        {
+                            Character.Protagonist
+                        },
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ЭЛЕКТРИЧЕСКИЙ УГОРЬ",
+                                Skill = 8,
+                                Strength = 8,
+                                ExtendedDamage = 2,
+                            },
+                        },
+
+                        Aftertext = "Если победили его, то дальше путь лежит к странным развалинам, виднеющимся неподалеку.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 353, Text = "Далее" },
