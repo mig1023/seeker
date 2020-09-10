@@ -178,6 +178,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [14] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 364, Text = "В каюту штурмана" },
@@ -209,6 +218,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 SeaArmour = true,
                             },
                         },
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -3,
                     },
                 },
 
@@ -261,6 +279,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [21] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 420, Text = "Солонина" },
@@ -453,6 +480,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [36] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 269, Text = "К большому подводному пастбищу" },
@@ -589,6 +625,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [54] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
+                    },
+                    new Modification
+                    {
+                        Name = "Skill",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 190, Text = "Правую стену" },
@@ -636,6 +686,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [59] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 15, Text = "Далее" },
@@ -773,6 +832,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [65] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 6,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 214, Text = "Далее" },
@@ -838,6 +906,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [68] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 611, Text = "Далее" },
@@ -939,6 +1016,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [74] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
+                    },
+                    new Modification
+                    {
+                        Name = "Skill",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 338, Text = "Надеть пояс" },
@@ -956,6 +1047,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [76] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 569, Text = "Далее" },
@@ -1205,6 +1305,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [93] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 272, Text = "У вас есть трезубец" },
@@ -1508,6 +1617,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [122] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 6,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 41, Text = "Далее" },
@@ -2099,6 +2217,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     },
                 },
 
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 53, Text = "Далее" },
@@ -2144,6 +2271,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 SkillDamage = 1,
                             },
                         },
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
+                    },
+                    new Modification
+                    {
+                        Name = "Skill",
+                        Value = -1,
                     },
                 },
 
@@ -2236,6 +2377,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [162] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 257, Text = "Дальше ощупывать стены" },
@@ -2269,6 +2419,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [166] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 6,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 85, Text = "Далее" },
@@ -2387,6 +2546,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [173] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Skill",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 15, Text = "Далее" },
@@ -2526,6 +2694,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [184] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 168, Text = "Далее" },
@@ -2540,6 +2717,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [186] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 5,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 439, Text = "Попить еще" },
@@ -2727,6 +2913,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [203] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 441, Text = "Далее" },
@@ -2755,6 +2950,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 Strength = 8,
                             },
                         },
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
                     },
                 },
 
@@ -2958,6 +3162,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [219] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 6,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 189, Text = "Далее" },
@@ -4189,6 +4402,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [319] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 269, Text = "К большому подводному лугу слева" },
@@ -4772,6 +4994,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [366] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 26, Text = "Далее" },
@@ -5108,6 +5339,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     },
                 },
 
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 36, Text = "Далее" },
@@ -5237,6 +5477,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [408] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 234, Text = "Далее" },
@@ -5286,6 +5535,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [411] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 172, Text = "Уйти из трюма" },
@@ -5358,6 +5616,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [420] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 6,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 15, Text = "Далее" },
@@ -5556,6 +5823,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [434] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 15, Text = "Далее" },
@@ -5905,6 +6181,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [463] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 15, Text = "Далее" },
@@ -6440,6 +6725,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [506] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 443, Text = "Далее" },
@@ -6594,6 +6888,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 Strength = 8,
                             },
                         },
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
                     },
                 },
 
@@ -6755,6 +7058,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     },
                 },
 
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 414, Text = "Далее" },
@@ -6860,6 +7172,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 Strength = 7,
                             },
                         },
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
                     },
                 },
 
@@ -7071,6 +7392,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [560] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 504, Text = "Далее" },
@@ -7085,6 +7415,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [562] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 41, Text = "Далее" },
@@ -7442,6 +7781,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [580] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 219, Text = "Есть трезубец" },
@@ -7727,6 +8075,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [595] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 214, Text = "Далее" },
@@ -8087,6 +8444,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [624] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 258, Text = "Далее" },
@@ -8115,6 +8481,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [628] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 328, Text = "Далее" },
