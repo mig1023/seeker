@@ -27,6 +27,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public bool Used { get; set; }
         public bool Multiple { get; set; }
 
+        private static Dictionary<string, int> StrengthLoss = new Dictionary<string, int>();
+
         public List<string> Do(out bool reload, string action = "", bool openOption = false)
         {
             if (openOption)
@@ -198,13 +200,29 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             List<Character> FightEnemies = new List<Character>();
 
             foreach (Character enemy in Enemies)
-                FightEnemies.Add(enemy.Clone());
+            {
+                Character newEnemy = enemy.Clone();
+
+                if (StrengthLoss.ContainsKey(newEnemy.Name))
+                    newEnemy.Strength = StrengthLoss[newEnemy.Name];
+
+                FightEnemies.Add(newEnemy);
+            }
+                
 
             foreach (Character ally in Allies)
                 if (ally == Character.Protagonist)
                     FightAllies.Add(ally);
                 else
-                    FightAllies.Add(ally.Clone());
+                {
+                    Character newAlly = ally.Clone();
+
+                    if (StrengthLoss.ContainsKey(newAlly.Name))
+                        newAlly.Strength = StrengthLoss[newAlly.Name];
+
+                    FightAllies.Add(newAlly);
+                }
+                    
 
             while (true)
             {
@@ -260,6 +278,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 if (enemy.Strength <= 0)
                                     enemy.Strength = 0;
 
+                                StrengthLoss[enemy.Name] = enemy.Strength;
+
                                 enemyWounds += 1;
 
                                 bool enemyLost = true;
@@ -284,6 +304,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                             if (ally.Strength < 0)
                                 ally.Strength = 0;
+
+                            StrengthLoss[ally.Name] = ally.Strength;
 
                             if ((ally.Strength == 0) || (ally.Strength <= DamageToWin))
                             {
