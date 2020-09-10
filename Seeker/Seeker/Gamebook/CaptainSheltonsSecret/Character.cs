@@ -19,6 +19,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public bool SeaArmour { get; set; }
         public Dictionary<int, bool> Luck { get; set; }
 
+        private static Dictionary<string, int> StrengthLoss = new Dictionary<string, int>();
+
         public void Init()
         {
             Dictionary<int, int> Skills = new Dictionary<int, int>
@@ -100,6 +102,24 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             newCharacter.SeaArmour = this.SeaArmour;
 
             return newCharacter;
+        }
+
+        public Character SetStrength()
+        {
+            if (StrengthLoss.ContainsKey(this.Name))
+                this.Strength = StrengthLoss[this.Name];
+
+            return this;
+        }
+
+        public void SaveStrength()
+        {
+            StrengthLoss[this.Name] = this.Strength;
+        }
+
+        public int GetStrength()
+        {
+            return (StrengthLoss.ContainsKey(this.Name) ? StrengthLoss[this.Name] : this.Strength);
         }
     }
 }
