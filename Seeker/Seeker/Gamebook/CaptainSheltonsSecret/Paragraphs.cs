@@ -3491,6 +3491,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 264, Text = "Есть большой алмаз", OnlyIf ="BigDiamond" },
                     new Option { Destination = 363, Text = "Далее" },
                 }
             },
@@ -8621,6 +8622,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [623] = new Paragraph
             {
+                OpenOption = "BigDiamond",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 71, Text = "Вперёд" },
