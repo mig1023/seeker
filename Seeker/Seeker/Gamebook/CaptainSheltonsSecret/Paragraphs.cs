@@ -1607,10 +1607,10 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 307, Text = "Рыбу-меч" },
-                    new Option { Destination = 452, Text = "Рыбу-пилу" },
-                    new Option { Destination = 503, Text = "Рыбу-луну" },
-                    new Option { Destination = 40, Text = "Рыбу-ежа" },
+                    new Option { Destination = 307, Text = "Рыбу-меч", OnlyIf = "ЗОЛОТО >= 2" },
+                    new Option { Destination = 452, Text = "Рыбу-пилу", OnlyIf = "ЗОЛОТО >= 2"  },
+                    new Option { Destination = 503, Text = "Рыбу-луну", OnlyIf = "ЗОЛОТО >= 2"  },
+                    new Option { Destination = 40, Text = "Рыбу-ежа", OnlyIf = "ЗОЛОТО >= 2"  },
                     new Option { Destination = 286, Text = "Убить его" },
                     new Option { Destination = 501, Text = "Отправиться дальше" },
                 }
@@ -3672,7 +3672,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 390, Text = "Заплатить ему 10 золотых" },
+                    new Option { Destination = 390, Text = "Заплатить ему 10 золотых", OnlyIf = "ЗОЛОТО >= 10" },
                     new Option { Destination = 524, Text = "Руководить командой в одиночку" },
                 }
             },
@@ -3680,9 +3680,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 542, Text = "К сокровищам" },
-                    new Option { Destination = 415, Text = "За добрым советом" },
-                    new Option { Destination = 114, Text = "К тому, кто топит корабли" },
+                    new Option { Destination = 542, Text = "К сокровищам", OnlyIf = "ЗОЛОТО >= 2" },
+                    new Option { Destination = 415, Text = "За добрым советом", OnlyIf = "ЗОЛОТО >= 2" },
+                    new Option { Destination = 114, Text = "К тому, кто топит корабли", OnlyIf = "ЗОЛОТО >= 2" },
                     new Option { Destination = 365, Text = "Откажетесь от его услуг" },
                     new Option { Destination = 88, Text = "Убить старика" },
                 }
@@ -3813,8 +3813,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Option { Destination = 428, Text = "Одну порцию еду" },
                     new Option { Destination = 91, Text = "Две порции еды" },
-                    new Option { Destination = 392, Text = "Два золотых" },
-                    new Option { Destination = 544, Text = "Четыре золотых" },
+                    new Option { Destination = 392, Text = "Два золотых", OnlyIf = "ЗОЛОТО >= 2" },
+                    new Option { Destination = 544, Text = "Четыре золотых", OnlyIf = "ЗОЛОТО >= 4" },
                     new Option { Destination = 30, Text = "Что-то из вещей" },
                 }
             },
@@ -4339,7 +4339,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 464, Text = "Хотите расстаться с 10 золотыми" },
+                    new Option { Destination = 464, Text = "Хотите расстаться с 10 золотыми", OnlyIf = "ЗОЛОТО >= 10" },
                     new Option { Destination = 614, Text = "Не хотите" },
                 }
             },
