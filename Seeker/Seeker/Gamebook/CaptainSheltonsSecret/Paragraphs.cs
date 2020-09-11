@@ -314,6 +314,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [23] = new Paragraph
             {
+                OpenOption = "SilverPlatter",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 254, Text = "Наденете его на палец" },
@@ -4321,7 +4323,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 124, Text = "Серебряное блюдо" },
+                    new Option { Destination = 124, Text = "Серебряное блюдо", OnlyIf = "SilverPlatter" },
                     new Option { Destination = 45, Text = "Золотой перстень" },
                     new Option { Destination = 627, Text = "Сушеного краба" },
                     new Option { Destination = 501, Text = "Отправиться дальше" },
