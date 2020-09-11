@@ -298,6 +298,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [22] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 8, Text = "Далее" },
@@ -388,6 +397,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [30] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 549, Text = "Далее" },
@@ -518,6 +536,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [40] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 202, Text = "Поговорить с Карликом" },
@@ -601,6 +628,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [51] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 176, Text = "Нагонать корвет" },
@@ -1886,6 +1922,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [139] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 5,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 338, Text = "Золотой пояс" },
@@ -2185,6 +2230,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [151] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -5,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 405, Text = "Нагоните корабль капитана Шелтона" },
@@ -2783,6 +2837,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [192] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 365, Text = "Далее" },
@@ -3364,6 +3427,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [230] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 351, Text = "Последуете за ним" },
@@ -4280,6 +4352,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [307] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 501, Text = "Отправиться дальше" },
@@ -5265,6 +5346,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [392] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
@@ -6099,6 +6189,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [452] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 202, Text = "Поговорить с Карликом" },
@@ -6197,6 +6296,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [464] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 471, Text = "Есть сушеный краб" },
@@ -6460,6 +6568,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [485] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 195, Text = "Далее" },
@@ -6988,6 +7105,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [529] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -7,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 18, Text = "Далее" },
@@ -7209,6 +7335,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [541] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 447, Text = "Далее" },
@@ -7330,6 +7465,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [553] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 501, Text = "Далее" },
@@ -7369,6 +7513,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [557] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 474, Text = "Заняться вторым сундуком" },
@@ -7978,6 +8131,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [590] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 343, Text = "Далее" },
@@ -8408,6 +8570,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [619] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 8, Text = "Далее" },
@@ -8415,6 +8586,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [620] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
