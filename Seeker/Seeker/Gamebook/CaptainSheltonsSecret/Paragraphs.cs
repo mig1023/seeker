@@ -4879,8 +4879,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 596, Text = "Воспользоваться ржавым мечом", OnlyIf = "RustySword" },
                     new Option { Destination = 609, Text = "Время для него еще не настало" },
-                    new Option { Destination = 341, Text = "или у вас при себе амулет" },
+                    new Option { Destination = 341, Text = "У вас при себе амулет" },
                 }
             },
             [349] = new Paragraph
@@ -5754,6 +5755,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [424] = new Paragraph
             {
+                OpenOption = "RustySword",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 254, Text = "Надеть его" },
