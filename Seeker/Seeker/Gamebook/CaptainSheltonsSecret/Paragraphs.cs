@@ -587,6 +587,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 467, Text = "Показать золотой перстень", OnlyIf = "GoldRing" },
                     new Option { Destination = 501, Text = "Далее" },
                 }
             },
@@ -3760,6 +3761,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [254] = new Paragraph
             {
+                OpenOption = "GoldRing",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 71, Text = "Через тот, что прямо перед вами" },
