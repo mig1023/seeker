@@ -1001,7 +1001,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 616, Text = "С вами золотой щит" },
+                    new Option { Destination = 616, Text = "С вами золотой щит", OnlyIf = "GoldenShield" },
                     new Option { Destination = 422, Text = "Убили его" },
                 }
             },
@@ -3826,6 +3826,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [260] = new Paragraph
             {
+                OpenOption = "GoldenShield",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 71, Text = "Через тоннель, начинающийся в противоположной стене зала" },
