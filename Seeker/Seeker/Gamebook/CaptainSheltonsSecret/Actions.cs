@@ -297,7 +297,13 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                             ally.SaveStrength();
 
-                            if ((ally.Strength == 0) || (ally.Strength <= DamageToWin))
+                            bool allyLost = true;
+
+                            foreach (Character a in FightAllies)
+                                if (a.Strength > 0)
+                                    allyLost = false;
+
+                            if (allyLost)
                             {
                                 fight.Add(String.Empty);
                                 fight.Add(String.Format("BIG|BAD|{0} :(", (IsHero(ally.Name) ? "ВЫ ПРОИГРАЛИ" : String.Format("{0} ПРОИГРАЛ", ally.Name))));
