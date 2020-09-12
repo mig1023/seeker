@@ -704,6 +704,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [56] = new Paragraph
             {
+                OpenOption = "VulturePictures",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 382, Text = "Далее" },
@@ -1434,6 +1436,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 50, Text = "Гриф с картины", OnlyIf = "VulturePictures" },
                     new Option { Destination = 555, Text = "Далее" },
                 }
             },
