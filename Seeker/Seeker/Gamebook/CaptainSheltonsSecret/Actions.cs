@@ -70,7 +70,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public static bool CheckOnlyIf(string option)
         {
-            if (option.Contains("ЗОЛОТО >="))
+            if (option.Contains(","))
+            {
+                foreach (string oneOption in option.Split(','))
+                    if (!Game.Data.OpenedOption.Contains(oneOption.Trim()))
+                        return false;
+
+                return true;
+            }
+            else if (option.Contains("ЗОЛОТО >="))
                 return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Gold;
             else
                 return Game.Data.OpenedOption.Contains(option);
