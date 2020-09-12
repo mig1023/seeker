@@ -624,6 +624,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [50] = new Paragraph
             {
+                OpenOption = "Vulture",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 555, Text = "Далее" },
@@ -5119,6 +5121,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 494, Text = "Позвать Грифа", OnlyIf = "Vulture" },
                     new Option { Destination = 104, Text = "Позвать их обоих" },
                     new Option { Destination = 262, Text = "Прибегнуть к помощи Крылатого льва" },
                 }
