@@ -3728,6 +3728,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 213, Text = "Есть рог Рыбы-единорога", OnlyIf = "UnicornFishHorn" },
                     new Option { Destination = 13, Text = "Далее" },
                 }
             },
@@ -7473,6 +7474,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [551] = new Paragraph
             {
+                OpenOption = "UnicornFishHorn",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 382, Text = "К симпатичному коралловому рифу" },
