@@ -2478,6 +2478,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 127, Text = "Воспользоваться пером", OnlyIf = "OwlFeather" },
                     new Option { Destination = 624, Text = "Приблизиться к Филину" },
                     new Option { Destination = 258, Text = "Далее" },
                 }
@@ -4516,6 +4517,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [320] = new Paragraph
             {
+                OpenOption = "OwlFeather",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 396, Text = "Далее" },
