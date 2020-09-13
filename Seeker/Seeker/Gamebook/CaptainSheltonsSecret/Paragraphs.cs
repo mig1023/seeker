@@ -37,6 +37,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "В путь!" },
+                    new Option { Destination = 369, Text = "TEST" },
                 }
             },
             [1] = new Paragraph
@@ -3131,6 +3132,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [213] = new Paragraph
             {
+                OpenOption = "Rhinoceros",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 13, Text = "Далее" },
@@ -5867,6 +5870,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 66, Text = "Позвать носорога", OnlyIf = "Rhinoceros" },
                     new Option { Destination = 284, Text = "Далее" },
                 }
             },
@@ -6475,6 +6479,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 113, Text = "Позвать носорога", OnlyIf = "Rhinoceros" },
                     new Option { Destination = 329, Text = "Далее" },
                 }
             },
