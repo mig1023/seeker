@@ -4068,6 +4068,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [281] = new Paragraph
             {
+                OpenOption = "MagicEmeralds",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 402, Text = "К развалинам" },
@@ -6955,6 +6957,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 482, Text = "Признаться", OnlyIf = "MagicEmeralds" },
                     new Option { Destination = 322, Text = "Далее" },
                 }
             },
