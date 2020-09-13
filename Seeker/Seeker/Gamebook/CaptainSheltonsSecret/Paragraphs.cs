@@ -3973,6 +3973,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 216, Text = "Есть фигурка человека", OnlyIf = "FigurineOfMan" },
                     new Option { Destination = 196, Text = "Далее" },
                 }
             },
@@ -5120,6 +5121,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [367] = new Paragraph
             {
+                OpenOption = "FigurineOfMan",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 232, Text = "Далее" },
