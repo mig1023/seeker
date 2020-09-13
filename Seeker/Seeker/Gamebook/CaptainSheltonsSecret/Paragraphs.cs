@@ -4059,7 +4059,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 458, Text = "Есть Рыба-пила" },
+                    new Option { Destination = 458, Text = "Есть Рыба-пила", OnlyIf = "Sawfish" },
                     new Option { Destination = 396, Text = "Уплыть из леса" },
                 }
             },
@@ -6238,6 +6238,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         Value = -2,
                     },
                 },
+
+                OpenOption = "Sawfish",
 
                 Options = new List<Option>
                 {
