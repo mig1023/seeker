@@ -945,6 +945,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 297, Text = "Есть фигурка дельфина", OnlyIf = "DolphinFigurine" },
                     new Option { Destination = 123, Text = "Выбрать остров" },
                 }
             },
@@ -2926,6 +2927,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [196] = new Paragraph
             {
+                OpenOption = "DolphinFigurine",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 274, Text = "Над огромной подводной равниной" },
