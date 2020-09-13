@@ -5873,6 +5873,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 Options = new List<Option>
                 {
                     new Option { Destination = 66, Text = "Позвать носорога", OnlyIf = "Rhinoceros" },
+                    new Option { Destination = 147, Text = "Позвать офицера", OnlyIf = "Officer" },
                     new Option { Destination = 284, Text = "Далее" },
                 }
             },
@@ -8197,6 +8198,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [593] = new Paragraph
             {
+                OpenOption = "Officer",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 465, Text = "Далее" },
