@@ -548,6 +548,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     },
                 },
 
+                OpenOption = "HedgehogFish",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 202, Text = "Поговорить с Карликом" },
@@ -2757,6 +2759,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 29, Text = "Есть рыба-ёж", OnlyIf = "HedgehogFish" },
                     new Option { Destination = 29, Text = "Далее" },
                 }
             },
