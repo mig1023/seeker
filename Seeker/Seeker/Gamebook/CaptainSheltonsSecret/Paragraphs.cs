@@ -4464,6 +4464,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 223, Text = "Есть золотой пояс" },
                     new Option { Destination = 58, Text = "Далее" },
                 }
             },
@@ -4785,6 +4786,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [338] = new Paragraph
             {
+                OpenOption = "GoldenBelt",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 584, Text = "Взять с собой раковину" },
