@@ -170,10 +170,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             luckCheck.Add(String.Format("Проверка удачи: {0} ⚄ - {1}зачёркунтый", goodLuck, (Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty)));
 
             luckCheck.Add(Character.Protagonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
-
+            
             Character.Protagonist.Luck[goodLuck] = !Character.Protagonist.Luck[goodLuck];
 
             return luckCheck;
+        }
+        
+        public List<string> RollDice()
+        {
+            return new List<string> { String.Format("BIG|Бросок: {0} ⚄", Game.Dice.Roll()) };
         }
 
         public List<string> Get()

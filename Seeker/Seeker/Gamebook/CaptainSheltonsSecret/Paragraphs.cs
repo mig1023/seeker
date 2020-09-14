@@ -3085,6 +3085,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [209] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "RollDice",
+                        ButtonName = "Кинуть жребий",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 572, Text = "Выпало 1, 2 или 3" },
@@ -4558,10 +4567,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [323] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "RollDice",
+                        ButtonName = "Кинуть жребий",
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 132, Text = "На нем выпало 1 или 2" },
-                    new Option { Destination = 485, Text = "На неём выпало 3 или 4" },
+                    new Option { Destination = 132, Text = "Выпало 1 или 2" },
+                    new Option { Destination = 485, Text = "Выпало 3 или 4" },
+                    new Option { Destination = 132, Text = "Выпало 5 или 6" },
                 }
             },
             [324] = new Paragraph
