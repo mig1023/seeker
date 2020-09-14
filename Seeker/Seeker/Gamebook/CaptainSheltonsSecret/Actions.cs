@@ -177,6 +177,35 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return luckCheck;
         }
 
+        public List<string> Charm()
+        {
+            int fisrtDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            bool goodCharm = (fisrtDice + secondDice) < Character.Protagonist.Charm;
+
+            List<string> charmCheck = new List<string> {
+                        String.Format( "Проверка обаяния: {0} ⚄ + {1} ⚄ {2} {3}", fisrtDice, secondDice, (goodCharm ? "<=" : ">"), Character.Protagonist.Charm )
+            };
+
+            if (goodCharm)
+            {
+                if (Character.Protagonist.Charm < 12)
+                    Character.Protagonist.Charm += 1;
+
+                charmCheck.Add("BIG|GOOD|ПОЛУЧИЛОСЬ :)");
+            }
+            else
+            {
+                if (Character.Protagonist.Charm > 1)
+                    Character.Protagonist.Charm -= 1;
+
+                charmCheck.Add("BIG|BAD|НЕ ПОЛУЧИЛОСЬ :(");
+            }
+
+            return charmCheck;
+        }
+
         public List<string> Get()
         {
             if ((Price > 0) && (Character.Protagonist.Gold >= Price))
