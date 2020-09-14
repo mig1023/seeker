@@ -28,7 +28,7 @@ namespace Seeker.Gamebook
                 Paragraphs = new CaptainSheltonsSecret.Paragraphs(),
                 Actions = new CaptainSheltonsSecret.Actions(),
                 Constants = new CaptainSheltonsSecret.Constants(),
-                Disclaimer = "Браславский Дмитрий, 1995",
+                Disclaimer = "Браславский Дмитрий, 1992",
                 BookColor = "#4682B4",
             },
 

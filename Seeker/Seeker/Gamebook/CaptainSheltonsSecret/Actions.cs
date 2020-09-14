@@ -18,7 +18,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
         public int DamageToWin { get; set; }
-        public int SkillPenalty { get; set; }
+        public int MasteryPenalty { get; set; }
         public bool GroupFight { get; set; }
 
         // Get
@@ -44,9 +44,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Ловкость: {0}", Character.Protagonist.Skill),
-                String.Format("Сила: {0}", Character.Protagonist.Strength),
-                String.Format("Обаяние: {0}", Character.Protagonist.Charm),
+                String.Format("Мастерство: {0}", Character.Protagonist.Mastery),
+                String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
                 String.Format("Золото: {0}", Character.Protagonist.Gold)
             };
 
@@ -58,7 +57,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             toEndParagraph = 0;
             toEndText = "Начать сначала";
 
-            return (Character.Protagonist.Strength <= 0 ? true : false);
+            return (Character.Protagonist.Endurance <= 0 ? true : false);
         }
 
         public bool IsButtonEnabled()
@@ -101,14 +100,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             if ((Allies != null) && GroupFight)
             {
                 foreach (Character ally in Allies)
-                    enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", ally.Name, ally.Skill, ally.GetStrength()));
+                    enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", ally.Name, ally.Mastery, ally.GetEndurance()));
 
                 enemies.Add("SPLITTER|против");
             }
                 
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", enemy.Name, enemy.Skill, enemy.GetStrength()));
+                enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", enemy.Name, enemy.Mastery, enemy.GetEndurance()));
 
             return enemies;
         }
@@ -119,7 +118,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             bool succesBreaked = false;
 
-            while (!succesBreaked && (Character.Protagonist.Strength > 0))
+            while (!succesBreaked && (Character.Protagonist.Endurance > 0))
             {
                 int firstDice = Game.Dice.Roll();
                 int secondDice = Game.Dice.Roll();
@@ -127,7 +126,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 if (((firstDice == 1) || (firstDice == 6)) && (firstDice == secondDice))
                     succesBreaked = true;
                 else
-                    Character.Protagonist.Strength -= 1;
+                    Character.Protagonist.Endurance -= 1;
 
                 string result = (succesBreaked ? "удачный, дверь поддалась!" : "неудачный, -1 сила" );
                 breakingDoor.Add(String.Format("Удар: {0} ⚄ + {1} ⚄ - {2}", firstDice, secondDice, result));
@@ -177,35 +176,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return luckCheck;
         }
 
-        public List<string> Charm()
-        {
-            int fisrtDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
-            bool goodCharm = (fisrtDice + secondDice) < Character.Protagonist.Charm;
-
-            List<string> charmCheck = new List<string> {
-                        String.Format( "Проверка обаяния: {0} ⚄ + {1} ⚄ {2} {3}", fisrtDice, secondDice, (goodCharm ? "<=" : ">"), Character.Protagonist.Charm )
-            };
-
-            if (goodCharm)
-            {
-                if (Character.Protagonist.Charm < 12)
-                    Character.Protagonist.Charm += 1;
-
-                charmCheck.Add("BIG|GOOD|ПОЛУЧИЛОСЬ :)");
-            }
-            else
-            {
-                if (Character.Protagonist.Charm > 1)
-                    Character.Protagonist.Charm -= 1;
-
-                charmCheck.Add("BIG|BAD|НЕ ПОЛУЧИЛОСЬ :(");
-            }
-
-            return charmCheck;
-        }
-
         public List<string> Get()
         {
             if ((Price > 0) && (Character.Protagonist.Gold >= Price))
@@ -235,13 +205,13 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             List<Character> FightEnemies = new List<Character>();
 
             foreach (Character enemy in Enemies)
-                FightEnemies.Add(enemy.Clone().SetStrength());             
+                FightEnemies.Add(enemy.Clone().SetEndurance());             
 
             foreach (Character ally in Allies)
                 if (ally == Character.Protagonist)
                     FightAllies.Add(ally);
                 else
-                    FightAllies.Add(ally.Clone().SetStrength());                   
+                    FightAllies.Add(ally.Clone().SetEndurance());                   
 
             while (true)
             {
@@ -249,62 +219,62 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 foreach (Character ally in FightAllies)
                 {
-                    if (ally.Strength <= 0)
+                    if (ally.Endurance <= 0)
                         continue;
 
                     if (GroupFight)
-                        fight.Add(String.Format("{0} (сила {1})", (IsHero(ally.Name) ? "Вы" : ally.Name), ally.Strength));
+                        fight.Add(String.Format("{0} (сила {1})", (IsHero(ally.Name) ? "Вы" : ally.Name), ally.Endurance));
 
                     foreach (Character enemy in FightEnemies)
                     {
-                        if (enemy.Strength <= 0)
+                        if (enemy.Endurance <= 0)
                             continue;
 
-                        fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
+                        fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Endurance));
 
                         int firstHeroRoll = Game.Dice.Roll();
                         int secondHeroRoll = Game.Dice.Roll();
-                        int allyHitStrength = firstHeroRoll + secondHeroRoll + (ally.Skill - SkillPenalty);
+                        int allyHitEndurance = firstHeroRoll + secondHeroRoll + (ally.Mastery - MasteryPenalty);
 
                         fight.Add(
                             String.Format(
                                 "{0} мощность удара : {1} ⚄ + {2} ⚄ + {3} = {4}",
-                                (IsHero(ally.Name) ? "Ваша" : String.Format("{0} -", ally.Name)), firstHeroRoll, secondHeroRoll, ally.Skill, allyHitStrength
+                                (IsHero(ally.Name) ? "Ваша" : String.Format("{0} -", ally.Name)), firstHeroRoll, secondHeroRoll, ally.Mastery, allyHitEndurance
                             )
                         );
 
                         int firstEnemyRoll = Game.Dice.Roll();
                         int secondEnemyRoll = Game.Dice.Roll();
-                        int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Skill;
+                        int enemyHitEndurance = firstEnemyRoll + secondEnemyRoll + enemy.Mastery;
 
                         fight.Add(
                             String.Format(
                                 "{0} мощность удара: {1} ⚄ + {2} ⚄ + {3} = {4}",
-                                (GroupFight ? String.Format("{0} -", enemy.Name) : "Его"), firstEnemyRoll, secondEnemyRoll, enemy.Skill, enemyHitStrength
+                                (GroupFight ? String.Format("{0} -", enemy.Name) : "Его"), firstEnemyRoll, secondEnemyRoll, enemy.Mastery, enemyHitEndurance
                             )
                         );
 
-                        if (allyHitStrength > enemyHitStrength)
+                        if (allyHitEndurance > enemyHitEndurance)
                         {
                             if (enemy.SeaArmour && (firstHeroRoll == secondHeroRoll))
                                 fight.Add(String.Format("BOLD|Чешуя отразила ваш удар"));
                             else
                             {
                                 fight.Add(String.Format("GOOD|{0} ранен", (GroupFight ? enemy.Name : "Он")));
-                                enemy.Strength -= 2 + ally.ExtendedDamage;
-                                enemy.Skill -= ally.SkillDamage;
+                                enemy.Endurance -= 2 + ally.ExtendedDamage;
+                                enemy.Mastery -= ally.MasteryDamage;
 
-                                if (enemy.Strength <= 0)
-                                    enemy.Strength = 0;
+                                if (enemy.Endurance <= 0)
+                                    enemy.Endurance = 0;
 
-                                enemy.SaveStrength();
+                                enemy.SaveEndurance();
 
                                 enemyWounds += 1;
 
                                 bool enemyLost = true;
 
                                 foreach (Character e in FightEnemies)
-                                    if ((e.Strength > 0) && (e.Strength > DamageToWin))
+                                    if ((e.Endurance > 0) && (e.Endurance > DamageToWin))
                                         enemyLost = false;
 
                                 if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
@@ -315,21 +285,21 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 }
                             }
                         }
-                        else if (allyHitStrength < enemyHitStrength)
+                        else if (allyHitEndurance < enemyHitEndurance)
                         {
                             fight.Add(GroupFight && !IsHero(ally.Name) ? String.Format("BAD|{0} ранен",  ally.Name) : "BAD|Вы ранены");
-                            ally.Strength -= 2 + enemy.ExtendedDamage;
-                            ally.Skill -= enemy.SkillDamage;
+                            ally.Endurance -= 2 + enemy.ExtendedDamage;
+                            ally.Mastery -= enemy.MasteryDamage;
 
-                            if (ally.Strength < 0)
-                                ally.Strength = 0;
+                            if (ally.Endurance < 0)
+                                ally.Endurance = 0;
 
-                            ally.SaveStrength();
+                            ally.SaveEndurance();
 
                             bool allyLost = true;
 
                             foreach (Character a in FightAllies)
-                                if (a.Strength > 0)
+                                if (a.Endurance > 0)
                                     allyLost = false;
 
                             if (allyLost)

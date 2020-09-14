@@ -37,7 +37,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "В путь!" },
-                    new Option { Destination = 369, Text = "TEST" },
                 }
             },
             [1] = new Paragraph
@@ -137,8 +136,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РАСТЕНИЕ-УБИЙЦА",
-                                Skill = 8,
-                                Strength = 14,
+                                Mastery = 8,
+                                Endurance = 14,
                             },
                         },
                     },
@@ -183,7 +182,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -1,
                     },
                 },
@@ -214,8 +213,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРСКОЙ ДРАКОНЧИК",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                                 SeaArmour = true,
                             },
                         },
@@ -226,7 +225,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -3,
                     },
                 },
@@ -284,7 +283,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -1,
                     },
                 },
@@ -375,8 +374,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫБА-ЕЖ",
-                                Skill = 7,
-                                Strength = 12,
+                                Mastery = 7,
+                                Endurance = 12,
                             },
                         },
 
@@ -385,8 +384,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЯТНИСТАЯ АКУЛА",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -441,8 +440,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "БРЫЗГУН",
-                                Skill = 8,
-                                Strength = 9,
+                                Mastery = 8,
+                                Endurance = 9,
                             },
                         },
                     },
@@ -472,8 +471,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "АКУЛА",
-                                Skill = 10,
-                                Strength = 16,
+                                Mastery = 10,
+                                Endurance = 16,
                             },
                         },
                     },
@@ -505,7 +504,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = 10,
                     },
                 },
@@ -673,12 +672,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                     new Modification
                     {
-                        Name = "Skill",
+                        Name = "Mastery",
                         Value = -1,
                     },
                 },
@@ -736,7 +735,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                 },
@@ -761,8 +760,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КАПИТАН",
-                                Skill = 10,
-                                Strength = 14,
+                                Mastery = 10,
+                                Endurance = 14,
                             },
                         },
 
@@ -771,8 +770,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -794,14 +793,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -850,14 +849,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -882,7 +881,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = 6,
                     },
                 },
@@ -907,8 +906,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "НОСОРОГ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -917,20 +916,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -957,7 +956,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -4,
                     },
                 },
@@ -1000,8 +999,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 9,
-                                Strength = 12,
+                                Mastery = 9,
+                                Endurance = 12,
                             },
                         },
                     },
@@ -1049,8 +1048,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КОНДОР",
-                                Skill = 9,
-                                Strength = 9,
+                                Mastery = 9,
+                                Endurance = 9,
                             },
                         },
                     },
@@ -1067,12 +1066,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                     new Modification
                     {
-                        Name = "Skill",
+                        Name = "Mastery",
                         Value = -1,
                     },
                 },
@@ -1098,7 +1097,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = 4,
                     },
                 },
@@ -1145,8 +1144,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРЯК",
-                                Skill = 10,
-                                Strength = 12,
+                                Mastery = 10,
+                                Endurance = 12,
                             },
                         },
 
@@ -1155,8 +1154,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -1178,14 +1177,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -1267,8 +1266,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "СПРУТ",
-                                Skill = 11,
-                                Strength = 15,
+                                Mastery = 11,
+                                Endurance = 15,
                             },
                         },
                     },
@@ -1307,8 +1306,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "СТАРИК-ЛОДОЧНИК",
-                                Skill = 6,
-                                Strength = 10,
+                                Mastery = 6,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -1356,7 +1355,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -4,
                     },
                 },
@@ -1431,8 +1430,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ГРИФ",
-                                Skill = 8,
-                                Strength = 10,
+                                Mastery = 8,
+                                Endurance = 10,
                             },
                         },
 
@@ -1570,8 +1569,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "НОСОРОГ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -1580,14 +1579,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
 
@@ -1670,7 +1669,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = 6,
                     },
                 },
@@ -1772,8 +1771,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРСКОЙ ЧЕРТ",
-                                Skill = 9,
-                                Strength = 2,
+                                Mastery = 9,
+                                Endurance = 2,
                             },
                         },
                     },
@@ -1806,8 +1805,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КРЫЛАТЫЙ ЛЕВ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -1816,20 +1815,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -1886,8 +1885,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -1904,8 +1903,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 10,
-                                Strength = 9,
+                                Mastery = 10,
+                                Endurance = 9,
                             },
                         },
 
@@ -1914,8 +1913,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                         },
 
@@ -1969,8 +1968,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КАПИТАН",
-                                Skill = 10,
-                                Strength = 14,
+                                Mastery = 10,
+                                Endurance = 14,
                             },
                         },
 
@@ -1979,8 +1978,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                         },
 
@@ -2002,8 +2001,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -2070,8 +2069,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ГИГАНТСКИЙ КРАБ",
-                                Skill = 9,
-                                Strength = 14,
+                                Mastery = 9,
+                                Endurance = 14,
                             },
                         },
                     },
@@ -2098,8 +2097,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРСКОЙ РЫЦАРЬ",
-                                Skill = 11,
-                                Strength = 12,
+                                Mastery = 11,
+                                Endurance = 12,
                             },
                         },
 
@@ -2108,20 +2107,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -2149,8 +2148,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "НОСОРОГ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -2159,8 +2158,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
 
                         },
@@ -2181,14 +2180,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -2209,7 +2208,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     {
                         ActionName = "Fight",
                         ButtonName = "Сражаться",
-                        SkillPenalty = 2,
+                        MasteryPenalty = 2,
 
                         Allies = new List<Character>
                         {
@@ -2221,8 +2220,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КРЫЛАТЫЙ ЛЕВ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -2279,8 +2278,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫБА-ХАМЕЛЕОН",
-                                Skill = 11,
-                                Strength = 2,
+                                Mastery = 11,
+                                Endurance = 2,
                             },
                         },
                     },
@@ -2290,7 +2289,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                 },
@@ -2334,10 +2333,10 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРСКАЯ ЗМЕЯ",
-                                Skill = 10,
-                                Strength = 14,
+                                Mastery = 10,
+                                Endurance = 14,
                                 ExtendedDamage = 1,
-                                SkillDamage = 1,
+                                MasteryDamage = 1,
                             },
                         },
                     },
@@ -2347,12 +2346,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                     new Modification
                     {
-                        Name = "Skill",
+                        Name = "Mastery",
                         Value = -1,
                     },
                 },
@@ -2414,8 +2413,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "АКУЛА",
-                                Skill = 10,
-                                Strength = 16,
+                                Mastery = 10,
+                                Endurance = 16,
                             },
                         },
 
@@ -2450,7 +2449,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                 },
@@ -2493,7 +2492,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = 6,
                     },
                 },
@@ -2544,8 +2543,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫБА",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -2571,8 +2570,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВОИН",
-                                Skill = 11,
-                                Strength = 14,
+                                Mastery = 11,
+                                Endurance = 14,
                             },
                         },
 
@@ -2581,20 +2580,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -2620,7 +2619,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Skill",
+                        Name = "Mastery",
                         Value = 1,
                     },
                 },
@@ -2694,8 +2693,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КРЫЛАТЫЙ ЛЕВ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -2704,8 +2703,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -2735,8 +2734,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ГИГАНТСКИЙ КАЛЬМАР",
-                                Skill = 11,
-                                Strength = 14,
+                                Mastery = 11,
+                                Endurance = 14,
                             },
                         },
                     },
@@ -2770,7 +2769,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -4,
                     },
                 },
@@ -2793,7 +2792,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = 5,
                     },
                 },
@@ -2891,8 +2890,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ЛАТНИК",
-                                Skill = 11,
-                                Strength = 12,
+                                Mastery = 11,
+                                Endurance = 12,
                             },
                         },
 
@@ -2901,14 +2900,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -3000,7 +2999,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                 },
@@ -3029,8 +3028,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ЭЛЕКТРИЧЕСКИЙ СКАТ",
-                                Skill = 8,
-                                Strength = 8,
+                                Mastery = 8,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -3040,7 +3039,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                 },
@@ -3117,8 +3116,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫБА-ВОРЧУН",
-                                Skill = 6,
-                                Strength = 7,
+                                Mastery = 6,
+                                Endurance = 7,
                             },
                         },
                     },
@@ -3188,8 +3187,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВЕЛИКАН",
-                                Skill = 12,
-                                Strength = 24,
+                                Mastery = 12,
+                                Endurance = 24,
                             },
                         },
                     },
@@ -3216,8 +3215,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВОИН ПРИНЦА",
-                                Skill = 11,
-                                Strength = 14,
+                                Mastery = 11,
+                                Endurance = 14,
                             },
                         },
 
@@ -3226,14 +3225,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -3251,7 +3250,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = 6,
                     },
                 },
@@ -3309,14 +3308,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -3338,14 +3337,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВОИН",
-                                Skill = 11,
-                                Strength = 14,
+                                Mastery = 11,
+                                Endurance = 14,
                             },
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -3385,8 +3384,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -3408,14 +3407,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРСКОЙ РЫЦАРЬ",
-                                Skill = 11,
-                                Strength = 12,
+                                Mastery = 11,
+                                Endurance = 12,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -3542,8 +3541,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -3565,14 +3564,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КРЫЛАТЫЙ ЛЕВ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -3641,8 +3640,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "СТАРШИЙ РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 9,
-                                Strength = 10,
+                                Mastery = 9,
+                                Endurance = 10,
                             },
                         },
 
@@ -3664,14 +3663,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 8,
-                                Strength = 8,
+                                Mastery = 8,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 7,
-                                Strength = 9,
+                                Mastery = 7,
+                                Endurance = 9,
                             },
                         },
                     },
@@ -3729,8 +3728,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "НОСОРОГ",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -3880,8 +3879,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КОНДОР",
-                                Skill = 9,
-                                Strength = 9,
+                                Mastery = 9,
+                                Endurance = 9,
                             },
                         },
                     },
@@ -3949,8 +3948,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЯТНИСТАЯ АКУЛА",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -4118,20 +4117,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -4162,8 +4161,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРСКОЙ ЧЕРТ",
-                                Skill = 9,
-                                Strength = 10,
+                                Mastery = 9,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -4248,8 +4247,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ДРАКОН",
-                                Skill = 11,
-                                Strength = 15,
+                                Mastery = 11,
+                                Endurance = 15,
                             },
                         },
                     },
@@ -4455,8 +4454,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВОДЯНОЙ",
-                                Skill = 9,
-                                Strength = 10,
+                                Mastery = 9,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -4521,7 +4520,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = 10,
                     },
                 },
@@ -4633,14 +4632,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -4666,14 +4665,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ГРИФ",
-                                Skill = 8,
-                                Strength = 10,
+                                Mastery = 8,
+                                Endurance = 10,
                             },
                             new Character
                             {
                                 Name = "ФИЛИН",
-                                Skill = 9,
-                                Strength = 9,
+                                Mastery = 9,
+                                Endurance = 9,
                             },
                         },
 
@@ -4682,8 +4681,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КОНДОР",
-                                Skill = 9,
-                                Strength = 9,
+                                Mastery = 9,
+                                Endurance = 9,
                             },
                         },
 
@@ -4765,8 +4764,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 10,
-                                Strength = 9,
+                                Mastery = 10,
+                                Endurance = 9,
                             },
                         },
 
@@ -4775,14 +4774,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -4825,8 +4824,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПОВАР-ВОДЯНОЙ",
-                                Skill = 8,
-                                Strength = 8,
+                                Mastery = 8,
+                                Endurance = 8,
                             },
                         },
 
@@ -4937,8 +4936,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРЯК",
-                                Skill = 10,
-                                Strength = 12,
+                                Mastery = 10,
+                                Endurance = 12,
                             },
                         },
 
@@ -4947,20 +4946,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -5118,7 +5117,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -3,
                     },
                 },
@@ -5326,8 +5325,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЯТНИСТАЯ АКУЛА",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -5357,8 +5356,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫБА-СОБАКА",
-                                Skill = 8,
-                                Strength = 7,
+                                Mastery = 8,
+                                Endurance = 7,
                             },
                         },
 
@@ -5465,8 +5464,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРСКОЙ ПАУК",
-                                Skill = 9,
-                                Strength = 9,
+                                Mastery = 9,
+                                Endurance = 9,
                             },
                         },
                     },
@@ -5476,7 +5475,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -1,
                     },
                 },
@@ -5505,8 +5504,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫБА-ЕДИНОРОГ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -5614,7 +5613,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                 },
@@ -5643,8 +5642,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ДВОРЯНИН",
-                                Skill = 10,
-                                Strength = 12,
+                                Mastery = 10,
+                                Endurance = 12,
                             },
                         },
 
@@ -5672,7 +5671,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                 },
@@ -5753,7 +5752,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = 6,
                     },
                 },
@@ -5813,8 +5812,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫБА-МОЛОТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                         },
 
@@ -5823,8 +5822,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЯТНИСТАЯ АКУЛА",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
 
@@ -5864,8 +5863,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 8,
-                                Strength = 8,
+                                Mastery = 8,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -5911,8 +5910,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ЭЛЕКТРИЧЕСКИЙ УГОРЬ",
-                                Skill = 8,
-                                Strength = 8,
+                                Mastery = 8,
+                                Endurance = 8,
                                 ExtendedDamage = 2,
                             },
                         },
@@ -5964,7 +5963,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -4,
                     },
                 },
@@ -6055,8 +6054,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 9,
-                                Strength = 10,
+                                Mastery = 9,
+                                Endurance = 10,
                             },
                         },
 
@@ -6078,14 +6077,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВТОРОЙ РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 8,
-                                Strength = 8,
+                                Mastery = 8,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 7,
-                                Strength = 9,
+                                Mastery = 7,
+                                Endurance = 9,
                             },
                         },
                     },
@@ -6154,8 +6153,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -6170,8 +6169,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВОИН",
-                                Skill = 11,
-                                Strength = 14,
+                                Mastery = 11,
+                                Endurance = 14,
                             },
                         },
 
@@ -6180,8 +6179,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -6220,8 +6219,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРСКОЙ ПАУК",
-                                Skill = 9,
-                                Strength = 9,
+                                Mastery = 9,
+                                Endurance = 9,
                             },
                         },
 
@@ -6333,7 +6332,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                 },
@@ -6422,8 +6421,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ФИЛИН",
-                                Skill = 9,
-                                Strength = 9,
+                                Mastery = 9,
+                                Endurance = 9,
                             },
                         },
 
@@ -6432,8 +6431,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КОНДОР",
-                                Skill = 9,
-                                Strength = 9,
+                                Mastery = 9,
+                                Endurance = 9,
                             },
                         },
                     },
@@ -6550,8 +6549,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 10,
-                                Strength = 9,
+                                Mastery = 10,
+                                Endurance = 9,
                             },
                         },
 
@@ -6560,20 +6559,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -6647,8 +6646,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КАПИТАН",
-                                Skill = 10,
-                                Strength = 14,
+                                Mastery = 10,
+                                Endurance = 14,
                             },
                         },
 
@@ -6657,20 +6656,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -6726,14 +6725,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВАЯ ПИРАНЬЯ",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                             new Character
                             {
                                 Name = "ВТОРАЯ ПИРАНЬЯ",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
                     },
@@ -6783,8 +6782,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ГРИФ",
-                                Skill = 8,
-                                Strength = 10,
+                                Mastery = 8,
+                                Endurance = 10,
                             },
                         },
 
@@ -6793,8 +6792,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КОНДОР",
-                                Skill = 9,
-                                Strength = 9,
+                                Mastery = 9,
+                                Endurance = 9,
                             },
                         },
                     },
@@ -6896,7 +6895,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                 },
@@ -6925,8 +6924,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫБА-МОЛОТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                         },
 
@@ -7052,8 +7051,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ЭЛЕКТРИЧЕСКИЙ СКАТ",
-                                Skill = 8,
-                                Strength = 8,
+                                Mastery = 8,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -7063,7 +7062,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                 },
@@ -7222,14 +7221,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 8,
-                                Strength = 8,
+                                Mastery = 8,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 7,
-                                Strength = 9,
+                                Mastery = 7,
+                                Endurance = 9,
                             },
                         },
                     },
@@ -7239,7 +7238,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                 },
@@ -7264,8 +7263,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРЯК",
-                                Skill = 10,
-                                Strength = 12,
+                                Mastery = 10,
+                                Endurance = 12,
                             },
                         },
 
@@ -7274,14 +7273,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
 
@@ -7345,8 +7344,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРСКАЯ ИГЛА",
-                                Skill = 8,
-                                Strength = 7,
+                                Mastery = 8,
+                                Endurance = 7,
                             },
                         },
                     },
@@ -7356,7 +7355,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                 },
@@ -7441,14 +7440,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВАЯ БАРРАКУДА",
-                                Skill = 11,
-                                Strength = 15,
+                                Mastery = 11,
+                                Endurance = 15,
                             },
                             new Character
                             {
                                 Name = "ВТОРАЯ БАРРАКУДА",
-                                Skill = 11,
-                                Strength = 15,
+                                Mastery = 11,
+                                Endurance = 15,
                             },
                         },
                     },
@@ -7602,7 +7601,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = 3,
                     },
                 },
@@ -7625,7 +7624,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = 4,
                     },
                 },
@@ -7657,8 +7656,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КАПИТАН",
-                                Skill = 10,
-                                Strength = 14,
+                                Mastery = 10,
+                                Endurance = 14,
                             },
                         },
 
@@ -7667,14 +7666,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ВОИН",
-                                Skill = 10,
-                                Strength = 10,
+                                Mastery = 10,
+                                Endurance = 10,
                             },
                         },
 
@@ -7708,14 +7707,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВАЯ БАРРАКУДА",
-                                Skill = 11,
-                                Strength = 15,
+                                Mastery = 11,
+                                Endurance = 15,
                             },
                             new Character
                             {
                                 Name = "ВТОРАЯ БАРРАКУДА",
-                                Skill = 11,
-                                Strength = 15,
+                                Mastery = 11,
+                                Endurance = 15,
                             },
                         },
                     },
@@ -7746,8 +7745,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "АКУЛА-ЛЮДОЕД",
-                                Skill = 9,
-                                Strength = 11,
+                                Mastery = 9,
+                                Endurance = 11,
                             },
                         },
                     },
@@ -7811,8 +7810,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КОНДОР",
-                                Skill = 9,
-                                Strength = 9,
+                                Mastery = 9,
+                                Endurance = 9,
                             },
                         },
                     },
@@ -7863,8 +7862,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КРЫЛАТЫЙ ЛЕВ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -7918,8 +7917,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "РЫЦАРЬ-ВОДЯНОЙ",
-                                Skill = 10,
-                                Strength = 9,
+                                Mastery = 10,
+                                Endurance = 9,
                             },
                         },
 
@@ -7928,8 +7927,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -7951,14 +7950,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                    },
@@ -7991,7 +7990,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -2,
                     },
                 },
@@ -8028,8 +8027,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "АКУЛА",
-                                Skill = 10,
-                                Strength = 16,
+                                Mastery = 10,
+                                Endurance = 16,
                             },
                         },
                     },
@@ -8059,20 +8058,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -8141,8 +8140,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -8160,8 +8159,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРЯК",
-                                Skill = 10,
-                                Strength = 12,
+                                Mastery = 10,
+                                Endurance = 12,
                             },
                         },
 
@@ -8170,8 +8169,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -8241,14 +8240,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -8266,8 +8265,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "МОРСКОЙ РЫЦАРЬ",
-                                Skill = 11,
-                                Strength = 12,
+                                Mastery = 11,
+                                Endurance = 12,
                             },
                         },
 
@@ -8276,8 +8275,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -8296,7 +8295,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = 3,
                     },
                 },
@@ -8325,8 +8324,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВЕЛИКАН",
-                                Skill = 12,
-                                Strength = 12,
+                                Mastery = 12,
+                                Endurance = 12,
                             },
                         },
 
@@ -8366,8 +8365,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -8385,8 +8384,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "НОСОРОГ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -8395,8 +8394,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -8429,8 +8428,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "КРЫЛАТЫЙ ЛЕВ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -8439,8 +8438,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ПЕРВЫЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
 
@@ -8462,14 +8461,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             new Character
                             {
                                 Name = "ВТОРОЙ ПИРАТ",
-                                Skill = 9,
-                                Strength = 8,
+                                Mastery = 9,
+                                Endurance = 8,
                             },
                             new Character
                             {
                                 Name = "ТРЕТИЙ ПИРАТ",
-                                Skill = 10,
-                                Strength = 8,
+                                Mastery = 10,
+                                Endurance = 8,
                             },
                         },
                     },
@@ -8685,7 +8684,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = -4,
                     },
                 },
@@ -8722,7 +8721,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Modification
                     {
-                        Name = "Strength",
+                        Name = "Endurance",
                         Value = 4,
                     },
                 },

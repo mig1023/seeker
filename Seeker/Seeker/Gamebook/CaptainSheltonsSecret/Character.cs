@@ -10,20 +10,19 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public string Name { get; set; }
 
-        public int Skill { get; set; }
-        public int Strength { get; set; }
-        public int Charm { get; set; }
+        public int Mastery { get; set; }
+        public int Endurance { get; set; }
         public int Gold { get; set; }
         public int ExtendedDamage { get; set; }
-        public int SkillDamage { get; set; }
+        public int MasteryDamage { get; set; }
         public bool SeaArmour { get; set; }
         public Dictionary<int, bool> Luck { get; set; }
 
-        private static Dictionary<string, int> StrengthLoss = new Dictionary<string, int>();
+        private static Dictionary<string, int> EnduranceLoss = new Dictionary<string, int>();
 
         public void Init()
         {
-            Dictionary<int, int> Skills = new Dictionary<int, int>
+            Dictionary<int, int> Masterys = new Dictionary<int, int>
             {
                 [2] = 8,
                 [3] = 10,
@@ -38,7 +37,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 [12] = 11
             };
 
-            Dictionary<int, int> Strengths = new Dictionary<int, int>
+            Dictionary<int, int> Endurances = new Dictionary<int, int>
             {
                 [2] = 22,
                 [3] = 20,
@@ -53,25 +52,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 [12] = 20
             };
 
-            Dictionary<int, int> Charms = new Dictionary<int, int>
-            {
-                [2] = 8,
-                [3] = 6,
-                [4] = 5,
-                [5] = 8,
-                [6] = 6,
-                [7] = 7,
-                [8] = 7,
-                [9] = 7,
-                [10] = 6,
-                [11] = 7,
-                [12] = 5
-            };
+            int dice = Game.Dice.Roll(dices: 2);
 
             Name = "ГЛАВГЕРОЙ";
-            Skill = Skills[Game.Dice.Roll(dices: 2)];
-            Strength = Strengths[Game.Dice.Roll(dices: 2)];
-            Charm = Charms[Game.Dice.Roll(dices: 2)];
+            Mastery = Masterys[dice];
+            Endurance = Endurances[dice];
             Gold = 15;
 
             Luck = new Dictionary<int, bool>
@@ -93,33 +78,32 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             Character newCharacter = new Character();
 
             newCharacter.Name = this.Name;
-            newCharacter.Skill = this.Skill;
-            newCharacter.Strength = this.Strength;
-            newCharacter.Charm = this.Charm;
+            newCharacter.Mastery = this.Mastery;
+            newCharacter.Endurance = this.Endurance;
             newCharacter.Gold = this.Gold;
             newCharacter.ExtendedDamage = this.ExtendedDamage;
-            newCharacter.SkillDamage = this.SkillDamage;
+            newCharacter.MasteryDamage = this.MasteryDamage;
             newCharacter.SeaArmour = this.SeaArmour;
 
             return newCharacter;
         }
 
-        public Character SetStrength()
+        public Character SetEndurance()
         {
-            if (StrengthLoss.ContainsKey(this.Name))
-                this.Strength = StrengthLoss[this.Name];
+            if (EnduranceLoss.ContainsKey(this.Name))
+                this.Endurance = EnduranceLoss[this.Name];
 
             return this;
         }
 
-        public void SaveStrength()
+        public void SaveEndurance()
         {
-            StrengthLoss[this.Name] = this.Strength;
+            EnduranceLoss[this.Name] = this.Endurance;
         }
 
-        public int GetStrength()
+        public int GetEndurance()
         {
-            return (StrengthLoss.ContainsKey(this.Name) ? StrengthLoss[this.Name] : this.Strength);
+            return (EnduranceLoss.ContainsKey(this.Name) ? EnduranceLoss[this.Name] : this.Endurance);
         }
     }
 }
