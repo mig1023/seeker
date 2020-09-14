@@ -2759,6 +2759,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 29, Text = "Позвать рыбу-молот", OnlyIf = "Hammerhead" },
                     new Option { Destination = 29, Text = "Есть рыба-ёж", OnlyIf = "HedgehogFish" },
                     new Option { Destination = 29, Text = "Далее" },
                 }
@@ -4477,6 +4478,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [314] = new Paragraph
             {
+                OpenOption = "Hammerhead",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 32, Text = "Далее" },
