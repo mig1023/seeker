@@ -582,7 +582,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     },
                 },
 
-
                 Options = new List<Option>
                 {
                     new Option { Destination = 557, Text = "Число меньше ловкости" },
@@ -7237,8 +7236,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [532] = new Paragraph
             {
+                OpenOption = "Guess",
+
                 Options = new List<Option>
                 {
+                    new Option { Destination = 96, Text = "Догадался", OnlyIf = "Guess" },
                     new Option { Destination = 182, Text = "Далее" },
                 }
             },
