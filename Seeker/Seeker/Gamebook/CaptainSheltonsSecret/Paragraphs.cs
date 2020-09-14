@@ -573,6 +573,16 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [43] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Mastery",
+                        ButtonName = "Проверить мастерство",
+                    },
+                },
+
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 557, Text = "Число меньше ловкости" },
