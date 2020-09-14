@@ -1110,6 +1110,16 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [77] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "RollDoubleDices",
+                        ButtonName = "Кинуть жребий",
+                        Aftertext = "Если выпало 1 — 6, то победили вы, если же 7 — 12, то повезло Джону. Тогда плывите прямо."
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 241, Text = "Победили вы" },

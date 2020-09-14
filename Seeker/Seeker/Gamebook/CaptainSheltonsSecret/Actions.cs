@@ -181,6 +181,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return new List<string> { String.Format("BIG|Бросок: {0} ⚄", Game.Dice.Roll()) };
         }
 
+        public List<string> RollDoubleDices()
+        {
+            int firstDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            return new List<string> { String.Format("BIG|Бросок: {0} ⚄ + {1} ⚄ = {2}", firstDice, secondDice, (firstDice + secondDice)) };
+        }
+
         public List<string> Get()
         {
             if ((Price > 0) && (Character.Protagonist.Gold >= Price))
