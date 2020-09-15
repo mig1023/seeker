@@ -2257,8 +2257,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 341, Text = "Есть амулет" },
-                    new Option { Destination = 348, Text = "Есть ржавый меч" },
+                    new Option { Destination = 341, Text = "Есть амулет", OnlyIf = "Amulet" },
+                    new Option { Destination = 348, Text = "Есть ржавый меч", OnlyIf = "RustySword" },
                     new Option { Destination = 609, Text = "Далее" },
                 }
             },
@@ -3225,7 +3225,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 331, Text = "Есть амулет" },
+                    new Option { Destination = 331, Text = "Есть амулет", OnlyIf = "Amulet" },
                     new Option { Destination = 150, Text = "Удалось уменьшить силу врага" },
                 }
             },
@@ -4739,6 +4739,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 346, Text = "Воспользоваться амулетом", OnlyIf = "Amulet" },
                     new Option { Destination = 217, Text = "Далее" },
                 }
             },
@@ -4889,8 +4890,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 356, Text = "Воспользоваться амулетом", OnlyIf = "Amulet" },
+                    new Option { Destination = 348, Text = "Есть с собой ржавый меч", OnlyIf = "RustySword" },
                     new Option { Destination = 609, Text = "Далее" },
-                    new Option { Destination = 348, Text = "Есть с собой ржавый меч" },
                 }
             },
             [342] = new Paragraph
@@ -6392,6 +6394,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     },
                 },
 
+                OpenOption = "Amulet",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 471, Text = "Есть сушеный краб" },
@@ -6779,7 +6783,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 591, Text = "Есть амулет" },
+                    new Option { Destination = 591, Text = "Есть амулет", OnlyIf = "Amulet" },
                     new Option { Destination = 592, Text = "Обе рыбины мертвы2" },
                 }
             },
@@ -8243,6 +8247,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 606, Text = "Воспользоваться амулетом", OnlyIf = "Amulet" },
                     new Option { Destination = 490, Text = "Далее" },
                 }
             },
