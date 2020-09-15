@@ -525,6 +525,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [38] = new Paragraph
             {
+                OpenOption = "Trident",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 374, Text = "Далее" },
@@ -1384,7 +1386,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 272, Text = "У вас есть трезубец" },
+                    new Option { Destination = 272, Text = "Есть трезубец", OnlyIf = "Trident" },
                     new Option { Destination = 608, Text = "Далее" },
                 }
             },
@@ -1507,7 +1509,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 Options = new List<Option>
                 {
                     new Option { Destination = 502, Text = "Есть опознавательный знак" },
-                    new Option { Destination = 438, Text = "Есть трезубец" },
+                    new Option { Destination = 438, Text = "Есть трезубец", OnlyIf = "Trident" },
                     new Option { Destination = 312, Text = "Далее" },
                 }
             },
@@ -1757,6 +1759,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [128] = new Paragraph
             {
+                OpenOption = "Trident",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 236, Text = "Далее" },
@@ -6685,6 +6689,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     },
                 },
 
+                OpenOption = "Trident",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 195, Text = "Далее" },
@@ -8059,7 +8065,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 219, Text = "Есть трезубец" },
+                    new Option { Destination = 219, Text = "Есть трезубец", OnlyIf = "Trident" },
                     new Option { Destination = 189, Text = "Плыть дальше" },
                 }
             },
