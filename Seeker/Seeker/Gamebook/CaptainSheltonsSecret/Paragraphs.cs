@@ -6805,8 +6805,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 221, Text = "Есть клешня краба", OnlyIf = "CrabClaw" },
                     new Option { Destination = 591, Text = "Есть амулет", OnlyIf = "Amulet" },
-                    new Option { Destination = 592, Text = "Обе рыбины мертвы2" },
+                    new Option { Destination = 592, Text = "Обе рыбины мертвы" },
                 }
             },
             [491] = new Paragraph
@@ -8409,9 +8410,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [597] = new Paragraph
             {
+                OpenOption = "CrabClaw",
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 32, Text = "Далее" },
                 }
             },
             [598] = new Paragraph
