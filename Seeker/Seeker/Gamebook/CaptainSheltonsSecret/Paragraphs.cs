@@ -1413,6 +1413,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [97] = new Paragraph
             {
+                OpenOption = "WingedLion",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 324, Text = "Далее" },
@@ -5193,6 +5195,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 73, Text = "Позвать Крылатого льва", OnlyIf = "WingedLion" },
                     new Option { Destination = 494, Text = "Позвать Грифа", OnlyIf = "Vulture" },
                     new Option { Destination = 470, Text = "Позвать Филина", OnlyIf = "Owl" },
                     new Option { Destination = 104, Text = "Позвать их обоих", OnlyIf = "Owl, Vulture" },
@@ -5934,6 +5937,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 133, Text = "Позвать Крылатого льва", OnlyIf = "WingedLion" },
                     new Option { Destination = 517, Text = "Позвать капитана", OnlyIf = "Captain" },
                     new Option { Destination = 290, Text = "Позвать рыцаря-водяного", OnlyIf = "Waterknight" },
                     new Option { Destination = 66, Text = "Позвать носорога", OnlyIf = "Rhinoceros" },
@@ -6550,6 +6554,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 180, Text = "Позвать Крылатого льва", OnlyIf = "WingedLion" },
                     new Option { Destination = 564, Text = "Позвать капитана", OnlyIf = "Captain" },
                     new Option { Destination = 337, Text = "Позвать рыцаря-водяного", OnlyIf = "Waterknight" },
                     new Option { Destination = 113, Text = "Позвать носорога", OnlyIf = "Rhinoceros" },
