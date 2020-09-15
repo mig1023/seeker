@@ -2975,6 +2975,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 138, Text = "Показать чешую", OnlyIf = "DragonScales" },
                     new Option { Destination = 293, Text = "Далее" },
                 }
             },
@@ -5785,6 +5786,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [419] = new Paragraph
             {
+                OpenOption = "DragonScales",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 397, Text = "Рискнуть" },
