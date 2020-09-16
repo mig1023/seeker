@@ -6190,6 +6190,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 347, Text = "Есть обруч с рубином", OnlyIf = "Diadem" },
                     new Option { Destination = 2, Text = "Прямо" },
                     new Option { Destination = 146, Text = "Направо" },
                 }
