@@ -1768,6 +1768,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [129] = new Paragraph
             {
+                OpenOption = "Diadem",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 204, Text = "Далее" },
@@ -8281,6 +8283,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 492, Text = "Есть диадема с рубином", OnlyIf = "Diadem" },
                     new Option { Destination = 225, Text = "Есть раковина", OnlyIf = "SeaShell" },
                     new Option { Destination = 302, Text = "К чему-то очень похожему на мельницу" },
                 }
@@ -8588,6 +8591,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [605] = new Paragraph
             {
+                OpenOption = "Diadem",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 126, Text = "Далее" },
