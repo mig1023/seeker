@@ -3401,6 +3401,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 302, Text = "Воспользоваться раковиной", OnlyIf = "SeaShell" },
                     new Option { Destination = 302, Text = "Далее" },
                 }
             },
@@ -8153,6 +8154,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [584] = new Paragraph
             {
+                OpenOption = "SeaShell",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 338, Text = "Взять золотой пояс" },
@@ -8278,7 +8281,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 225, Text = "Есть раковина" },
+                    new Option { Destination = 225, Text = "Есть раковина", OnlyIf = "SeaShell" },
                     new Option { Destination = 302, Text = "К чему-то очень похожему на мельницу" },
                 }
             },
