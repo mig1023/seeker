@@ -1248,6 +1248,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 460, Text = "Показать гладкий камешек", OnlyIf = "SmoothStone" },
                     new Option { Destination = 157, Text = "Далее" },
                 }
             },
@@ -8058,6 +8059,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [578] = new Paragraph
             {
+                OpenOption = "SmoothStone",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 32, Text = "Далее" },
