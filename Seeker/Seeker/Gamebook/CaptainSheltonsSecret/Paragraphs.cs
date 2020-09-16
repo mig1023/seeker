@@ -1424,6 +1424,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [98] = new Paragraph
             {
+                OpenOption = "RingWithTrident",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 422, Text = "Далее" },
@@ -1508,7 +1510,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 502, Text = "Есть опознавательный знак" },
+                    new Option { Destination = 502, Text = "Есть опознавательный знак", OnlyIf = "IdentificationMark" },
                     new Option { Destination = 438, Text = "Есть трезубец", OnlyIf = "Trident" },
                     new Option { Destination = 312, Text = "Далее" },
                 }
@@ -5439,6 +5441,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [391] = new Paragraph
             {
+                OpenOption = "IdentificationMark",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 34, Text = "Далее" },
@@ -6155,6 +6159,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 495, Text = "Показать опознавательный знак", OnlyIf = "IdentificationMark" },
                     new Option { Destination = 201, Text = "Попытаться бежать" },
                     new Option { Destination = 414, Text = "Если вы победили их" },
                 }
@@ -6574,7 +6579,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 92, Text = "Есть кольцо с трезубцем" },
+                    new Option { Destination = 92, Text = "Есть кольцо с трезубцем", OnlyIf = "RingWithTrident" },
                     new Option { Destination = 571, Text = "Нет" },
                 }
             },
@@ -6934,6 +6939,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    
+                    new Option { Destination = 554, Text = "Предъявить", OnlyIf = "IdentificationMark" },
                     new Option { Destination = 312, Text = "Далее" },
                 }
             },
