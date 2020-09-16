@@ -2895,6 +2895,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     },
                 },
 
+                OpenOption = "DriedCrab",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 365, Text = "Далее" },
@@ -3403,7 +3405,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 302, Text = "Воспользоваться раковиной", OnlyIf = "SeaShell" },
+                    new Option { Destination = 496, Text = "Воспользоваться раковиной", OnlyIf = "SeaShell" },
                     new Option { Destination = 302, Text = "Далее" },
                 }
             },
@@ -4396,7 +4398,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     new Option { Destination = 124, Text = "Серебряное блюдо", OnlyIf = "SilverPlatter" },
                     new Option { Destination = 45, Text = "Золотой перстень" },
-                    new Option { Destination = 627, Text = "Сушеного краба" },
+                    new Option { Destination = 627, Text = "Сушеного краба", OnlyIf = "DriedCrab" },
                     new Option { Destination = 501, Text = "Отправиться дальше" },
                 }
             },
@@ -6418,7 +6420,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 471, Text = "Есть сушеный краб" },
+                    new Option { Destination = 471, Text = "Есть сушеный краб", OnlyIf = "DriedCrab" },
                     new Option { Destination = 321, Text = "Распрощаться с хозяйкой и покинуть комнату" },
                 }
             },
@@ -8669,7 +8671,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 471, Text = "Отдать старухе" },
+                    new Option { Destination = 471, Text = "Отдать старухе", OnlyIf = "DriedCrab"  },
                     new Option { Destination = 321, Text = "Попрощаться и уплыть из комнаты" },
                 }
             },
