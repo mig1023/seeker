@@ -2534,6 +2534,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 136, Text = "Отдать жемчужины" },
                     new Option { Destination = 85, Text = "Далее" },
                 }
             },
@@ -3817,6 +3818,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 222, Text = "Отдать жемчужины" },
                     new Option { Destination = 85, Text = "Далее" },
                 }
             },
@@ -6847,6 +6849,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [493] = new Paragraph
             {
+                OpenOption = "StolenPearls",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 234, Text = "К красивым морским цветам впереди" },
