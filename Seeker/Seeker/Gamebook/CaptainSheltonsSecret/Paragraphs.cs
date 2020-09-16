@@ -5955,6 +5955,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     new Option { Destination = 290, Text = "Позвать рыцаря-водяного", OnlyIf = "Waterknight" },
                     new Option { Destination = 66, Text = "Позвать носорога", OnlyIf = "Rhinoceros" },
                     new Option { Destination = 147, Text = "Позвать офицера", OnlyIf = "Officer" },
+                    new Option { Destination = 487, Text = "Позвать моряка", OnlyIf = "Seaman" },
                     new Option { Destination = 284, Text = "Далее" },
                 }
             },
@@ -6375,6 +6376,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [460] = new Paragraph
             {
+                OpenOption = "Seaman",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 530, Text = "Далее" },
@@ -6573,6 +6576,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     new Option { Destination = 564, Text = "Позвать капитана", OnlyIf = "Captain" },
                     new Option { Destination = 337, Text = "Позвать рыцаря-водяного", OnlyIf = "Waterknight" },
                     new Option { Destination = 113, Text = "Позвать носорога", OnlyIf = "Rhinoceros" },
+                    new Option { Destination = 534, Text = "Позвать моряка", OnlyIf = "Seaman" },
                     new Option { Destination = 329, Text = "Далее" },
                 }
             },
