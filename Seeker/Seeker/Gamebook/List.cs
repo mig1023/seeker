@@ -20,7 +20,7 @@ namespace Seeker.Gamebook
                 BookColor = "#000000",
             },
 
-            ["Тайна капитана Шелтона"] = new Description
+            ["Тайна капитана Шелдона"] = new Description
             {
                 XmlBook = "CaptainSheltonsSecret.xml",
                 Protagonist = CaptainSheltonsSecret.Character.Protagonist.Init,
@@ -42,6 +42,18 @@ namespace Seeker.Gamebook
                 Constants = new FaithfulSwordOfTheKing.Constants(),
                 Disclaimer = "Браславский Дмитрий, 1995",
                 BookColor = "#911",
+            },
+	    
+	    ["Приключения безбородого обманщика"] = new Description
+            {
+                XmlBook = "AdventuresOfABeardlessDeceiver.xml",
+                Protagonist = AdventuresOfABeardlessDeceiver.Character.Protagonist.Init,
+                CheckOnlyIf = AdventuresOfABeardlessDeceiver.Actions.CheckOnlyIf,
+                Paragraphs = new AdventuresOfABeardlessDeceiver.Paragraphs(),
+                Actions = new AdventuresOfABeardlessDeceiver.Actions(),
+                Constants = new AdventuresOfABeardlessDeceiver.Constants(),
+                Disclaimer = "Сизиков Владимир, 2015",
+                BookColor = "#006600",
             },
         };
 
