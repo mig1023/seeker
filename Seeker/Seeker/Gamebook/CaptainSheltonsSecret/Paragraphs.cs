@@ -569,6 +569,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 75, Text = "Понять, что они говорят", OnlyIf = "LanguageOfFish" },
                     new Option { Destination = 468, Text = "Покормить рыбок" },
                     new Option { Destination = 516, Text = "Отправиться дальше" },
                 }
@@ -624,6 +625,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 81, Text = "Поговорить с ней", OnlyIf = "LanguageOfFish" },
                     new Option { Destination = 628, Text = "Попытаться убить ее" },
                     new Option { Destination = 328, Text = "Плыть дальше" },
                 }
@@ -4483,6 +4485,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 344, Text = "Объясниться", OnlyIf = "LanguageOfFish" },
                     new Option { Destination = 211, Text = "Далее" },
                 }
             },
@@ -5792,6 +5795,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [417] = new Paragraph
             {
+                OpenOption = "LanguageOfFish",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 375, Text = "Далее" },
