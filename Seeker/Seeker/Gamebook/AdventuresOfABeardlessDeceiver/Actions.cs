@@ -29,6 +29,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             return actionResult;
         }
 
+        public List<string> Representer()
+        {
+            return (String.IsNullOrEmpty(Text) ? new List<string> {} : new List<string> { Text });
+        }
+
         public List<string> Status()
         {
             List<string> statusLines = new List<string>
