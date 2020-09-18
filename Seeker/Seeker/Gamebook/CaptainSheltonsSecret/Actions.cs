@@ -88,11 +88,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             List<string> enemies = new List<string>();
 
             if (ActionName == "Get")
-            {
-                string countMarker = String.Empty;
-
-                return new List<string> { String.Format("{0}{1}", Text, countMarker) };
-            }
+                return new List<string> { Text };
 
             if (Enemies == null)
                 return enemies;
