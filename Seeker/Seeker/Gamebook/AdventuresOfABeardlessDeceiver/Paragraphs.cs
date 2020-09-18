@@ -58,6 +58,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [3] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 92, Text = "В случае успеха" },
@@ -111,6 +121,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [10] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 28, Text = "В случае успеха" },
@@ -170,26 +190,57 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [18] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить силу",
+                        Stat = "Strength",
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 32, Text = "Если у Алдара донской рысак, то он с лёгкостью совершит длинный прыжок. Ведь казаки южнорусских степей обучают своих коней и не таким приёмам. В этом случае" },
-                    new Option { Destination = 54, Text = "Иначе, можно взять немного левее" },
+                    new Option { Destination = 32, Text = "У Алдара донской рысак" },
+                    new Option { Destination = 54, Text = "Взять немного левее" },
                     new Option { Destination = 89, Text = "В случае успеха" },
                     new Option { Destination = 129, Text = "В случае провала" },
                 }
             },
             [19] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить хитрость",
+                        Stat = "Cunning",
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 177, Text = "Если Алдар Косе заручился поддержкой охраны оазиса" },
-                    new Option { Destination = 194, Text = "Если он знает слабое место персидского торговца" },
-                    new Option { Destination = 67, Text = "В случае успеха - 185. В случае провала" },
-                    new Option { Destination = 8, Text = "Либо же, не обращая внимания ни на что, продолжить путь на северо-запад к караван-сараю" },
+                    new Option { Destination = 177, Text = "Алдар Косе заручился поддержкой охраны оазиса" },
+                    new Option { Destination = 194, Text = "Знает слабое место персидского торговца" },
+                    new Option { Destination = 185, Text = "В случае успеха" },
+                    new Option { Destination = 67, Text = "В случае провала" },
+                    new Option { Destination = 8, Text = "Продолжить путь на северо-запад к караван-сараю" },
                 }
             },
             [20] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить силу",
+                        Stat = "Strength",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 80, Text = "В случае успеха" },
@@ -205,6 +256,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [22] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 86, Text = "В случае успеха" },
@@ -265,6 +326,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [30] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить хитрость",
+                        Stat = "Cunning",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 45, Text = "В случае успеха" },
@@ -289,6 +360,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [33] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 100, Text = "В случае успеха" },
@@ -311,6 +392,22 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [36] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 199, Text = "Если обе проверки успешны" },
@@ -319,6 +416,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [37] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить хитрость",
+                        Stat = "Cunning",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 24, Text = "Заплатить 25 ТАНЬГА и переодеться (отметить праздничную одежду в списке имущества). Тогда Алдара пропустят" },
@@ -344,6 +451,22 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [40] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить хитрость",
+                        Stat = "Cunning",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 149, Text = "Если обе проверки удачны" },
@@ -398,6 +521,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [47] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить хитрость",
+                        Stat = "Cunning",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 88, Text = "В случае успеха" },
@@ -494,6 +627,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [60] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 75, Text = "В случае успеха" },
@@ -591,6 +734,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [73] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 196, Text = "В случае успеха" },
@@ -599,6 +752,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [74] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 197, Text = "В случае успеха" },
@@ -614,9 +777,19 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [76] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить хитрость",
+                        Stat = "Cunning",
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 106, Text = "Если у Алдара арабский скакун, то он натренирован не бояться змей, которых много в пустынях аравийского полуострова. В этом случае" },
+                    new Option { Destination = 106, Text = "У Алдара арабский скакун" },
                     new Option { Destination = 119, Text = "В случае успеха" },
                     new Option { Destination = 141, Text = "В случае провала" },
                 }
@@ -698,9 +871,21 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [87] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 88, Text = "Далее" },
+                    new Option { Destination = 189, Text = "Алдар Косе знает человека по имени Серик" },
+                    new Option { Destination = 179, Text = "В случае успеха" },
+                    new Option { Destination = 167, Text = "В случае провала" },
                 }
             },
             [88] = new Paragraph
@@ -719,6 +904,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [90] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить силу",
+                        Stat = "Strength",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 105, Text = "В случае успеха" },
@@ -727,9 +922,21 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [91] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                        TestLevel = 8,
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 92, Text = "Далее" },
+                    new Option { Destination = 61, Text = "В случае успеха" },
+                    new Option { Destination = 121, Text = "В случае провала" },
                 }
             },
             [92] = new Paragraph
@@ -877,6 +1084,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [111] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 112, Text = "Далее" },
