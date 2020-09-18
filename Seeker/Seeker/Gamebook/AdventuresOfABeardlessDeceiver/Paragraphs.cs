@@ -32,6 +32,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         private static Dictionary<int, Paragraph> Paragraph = new Dictionary<int, Paragraph>
         {
+            [0] = new Paragraph
+            {
+                Options = new List<Option>
+                {
+                    new Option { Destination = 205, Text = "В путь!" },
+                    new Option { Destination = 206, Text = "Правила и инструкции" },
+                }
+            },
             [1] = new Paragraph
             {
                 Options = new List<Option>
@@ -1565,6 +1573,20 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
+                }
+            },
+            [205] = new Paragraph
+            {
+                Options = new List<Option>
+                {
+                    new Option { Destination = 1, Text = "Далее" },
+                }
+            },
+            [206] = new Paragraph
+            {
+                Options = new List<Option>
+                {
+                    new Option { Destination = 0, Text = "Далее" },
                 }
             },
         };
