@@ -53,7 +53,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 3, Text = "Далее" },
+                    new Option { Destination = 140, Text = "Далее" },
                 }
             },
             [3] = new Paragraph
@@ -79,7 +79,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 5, Text = "Далее" },
+                    new Option { Destination = 22, Text = "Далее" },
                 }
             },
             [5] = new Paragraph
@@ -94,7 +94,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 7, Text = "Далее" },
+                    new Option { Destination = 187, Text = "Далее" },
                 }
             },
             [7] = new Paragraph
@@ -110,14 +110,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 9, Text = "Далее" },
+                    new Option { Destination = 143, Text = "Далее" },
                 }
             },
             [9] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 10, Text = "Далее" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [10] = new Paragraph
@@ -143,28 +143,28 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 12, Text = "Далее" },
+                    new Option { Destination = 161, Text = "Далее" },
                 }
             },
             [12] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 13, Text = "Далее" },
+                    new Option { Destination = 109, Text = "Далее" },
                 }
             },
             [13] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 14, Text = "Далее" },
+                    new Option { Destination = 161, Text = "Далее" },
                 }
             },
             [14] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 15, Text = "Далее" },
+                    new Option { Destination = 140, Text = "Далее" },
                 }
             },
             [15] = new Paragraph
@@ -180,14 +180,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 17, Text = "Далее" },
+                    new Option { Destination = 187, Text = "Далее" },
                 }
             },
             [17] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 18, Text = "Далее" },
+                    new Option { Destination = 168, Text = "Далее" },
                 }
             },
             [18] = new Paragraph
@@ -205,10 +205,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 32, Text = "У Алдара донской рысак" },
-                    new Option { Destination = 54, Text = "Взять немного левее" },
                     new Option { Destination = 89, Text = "В случае успеха" },
                     new Option { Destination = 129, Text = "В случае провала" },
+                    new Option { Destination = 32, Text = "У Алдара донской рысак" },
+                    new Option { Destination = 54, Text = "Взять немного левее" },
                 }
             },
             [19] = new Paragraph
@@ -226,10 +226,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 177, Text = "Алдар Косе заручился поддержкой охраны оазиса" },
-                    new Option { Destination = 194, Text = "Знает слабое место персидского торговца" },
                     new Option { Destination = 185, Text = "В случае успеха" },
                     new Option { Destination = 67, Text = "В случае провала" },
+                    new Option { Destination = 177, Text = "Алдар Косе заручился поддержкой охраны оазиса" },
+                    new Option { Destination = 194, Text = "Знает слабое место персидского торговца" },
                     new Option { Destination = 8, Text = "Продолжить путь на северо-запад к караван-сараю" },
                 }
             },
@@ -256,7 +256,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 22, Text = "Далее" },
+                    new Option { Destination = 93, Text = "Далее" },
                 }
             },
             [22] = new Paragraph
@@ -282,15 +282,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 78, Text = "Далее" },
                 }
             },
             [24] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 63, Text = "Если у Алдара Косе есть праздничная одежда, и он за время путешествия сменил коня (на арабского скакуна, донского рысака или ахалтекинца), откликнуться на вызов" },
-                    new Option { Destination = 135, Text = "Если же у нашего героя чего-то не хватает, быстро купить нужное (одежду или скакуна) на базаре неподалёку. Главное, чтобы хватило денег" },
+                    new Option { Destination = 63, Text = "Откликнуться на вызов" },
+                    new Option { Destination = 135, Text = "Купить нужное (одежду или скакуна) на базаре неподалёку" },
                     new Option { Destination = 27, Text = "Отказаться от участия в этом соревновании" },
                 }
             },
@@ -306,28 +306,29 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 27, Text = "Далее" },
+                    new Option { Destination = 99, Text = "Далее" },
                 }
             },
             [27] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 28, Text = "Далее" },
+                    new Option { Destination = 174, Text = "Далее" },
                 }
             },
             [28] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 29, Text = "Далее" },
+                    new Option { Destination = 56, Text = "Далее" },
                 }
             },
             [29] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 30, Text = "Далее" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
             [30] = new Paragraph
@@ -353,7 +354,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 136, Text = "Попроситься на приём к караван-баши (этот вариант доступен только, если имеется праздничная одежда)" },
+                    new Option { Destination = 136, Text = "Попроситься на приём к караван-баши (только, если имеется праздничная одежда)" },
                     new Option { Destination = 144, Text = "Принять приглашение погонщиков посидеть у костра" },
                     new Option { Destination = 154, Text = "Послушать, что рассказывает бородач с ослом" },
                 }
@@ -362,7 +363,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 33, Text = "Далее" },
+                    new Option { Destination = 76, Text = "Далее" },
                 }
             },
             [33] = new Paragraph
@@ -388,14 +389,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 35, Text = "Далее" },
+                    new Option { Destination = 187, Text = "Далее" },
                 }
             },
             [35] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 36, Text = "Далее" },
+                    new Option { Destination = 120, Text = "Далее" },
                 }
             },
             [36] = new Paragraph
@@ -439,10 +440,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 24, Text = "Заплатить 25 ТАНЬГА и переодеться (отметить праздничную одежду в списке имущества). Тогда Алдара пропустят" },
-                    new Option { Destination = 24, Text = "Если у Алдара есть ханский перстень, показать его воинам. Они обязаны будут пропустить человека несмотря на его вид" },
                     new Option { Destination = 112, Text = "В случае успеха" },
                     new Option { Destination = 83, Text = "В случае провала" },
+                    new Option { Destination = 24, Text = "Заплатить 25 ТАНЬГА и переодеться", OnlyIf = "ТАНЬГА >= 25" },
+                    new Option { Destination = 24, Text = "Если у Алдара есть ханский перстень" },
                 }
             },
             [38] = new Paragraph
@@ -457,7 +458,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 40, Text = "Далее" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
             [40] = new Paragraph
@@ -491,7 +493,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 42, Text = "Далее" },
+                    new Option { Destination = 168, Text = "Далее" },
                 }
             },
             [42] = new Paragraph
@@ -501,35 +503,35 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     new Option { Destination = 180, Text = "Вызвать Темир-батыра на курес, казахскую борьбу" },
                     new Option { Destination = 36, Text = "Если у Алдара есть домбра, бросить вызов на музыкальный поединок" },
                     new Option { Destination = 192, Text = "Если у нашего героя есть бутыль арака, попытаться хитростью опоить бандита" },
-                    new Option { Destination = 161, Text = "Если же нужных предметов нет и не хочется пока связываться с Темир-батыром, направиться к ханской юрте для выполнения задания" },
+                    new Option { Destination = 161, Text = "Направиться к ханской юрте для выполнения задания" },
                 }
             },
             [43] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 44, Text = "Далее" },
+                    new Option { Destination = 73, Text = "Далее" },
                 }
             },
             [44] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 45, Text = "Далее" },
+                    new Option { Destination = 132, Text = "Далее" },
                 }
             },
             [45] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 46, Text = "Далее" },
+                    new Option { Destination = 120, Text = "Далее" },
                 }
             },
             [46] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 47, Text = "Далее" },
+                    new Option { Destination = 109, Text = "Далее" },
                 }
             },
             [47] = new Paragraph
@@ -555,7 +557,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 49, Text = "Далее" },
+                    new Option { Destination = 123, Text = "Далее" },
                 }
             },
             [49] = new Paragraph
@@ -570,21 +572,22 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 51, Text = "Далее" },
+                    new Option { Destination = 56, Text = "Далее" },
                 }
             },
             [51] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 52, Text = "Далее" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
             [52] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 53, Text = "Далее" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [53] = new Paragraph
@@ -592,6 +595,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 Options = new List<Option>
                 {
                     new Option { Destination = 3, Text = "Река" },
+                    new Option { Destination = 26, Text = "Лес" },
                     new Option { Destination = 134, Text = "Горы" },
                 }
             },
@@ -599,44 +603,44 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 55, Text = "Далее" },
+                    new Option { Destination = 76, Text = "Далее" },
                 }
             },
             [55] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 132, Text = "Далее" }
                 }
             },
             [56] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 71, Text = "Если Алдар Косе сам спас мальчика на реке, то" },
-                    new Option { Destination = 91, Text = "Если же нет, но он прибыл к ойратам в качестве гостя, то" },
-                    new Option { Destination = 111, Text = "А в том случае, если он прибыл как пленник" },
+                    new Option { Destination = 71, Text = "Алдар Косе сам спас мальчика на реке" },
+                    new Option { Destination = 91, Text = "Он прибыл к ойратам в качестве гостя" },
+                    new Option { Destination = 111, Text = "Он прибыл как пленник" },
                 }
             },
             [57] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 58, Text = "Далее" },
+                    new Option { Destination = 7, Text = "Далее" },
                 }
             },
             [58] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 59, Text = "Далее" },
+                    new Option { Destination = 174, Text = "Далее" },
                 }
             },
             [59] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 60, Text = "Далее" },
+                    new Option { Destination = 99, Text = "Далее" },
                 }
             },
             [60] = new Paragraph
@@ -678,36 +682,36 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 64, Text = "Далее" },
+                    new Option { Destination = 148, Text = "Далее" },
                 }
             },
             [64] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 65, Text = "Далее" },
+                    new Option { Destination = 7, Text = "Далее" },
                 }
             },
             [65] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 66, Text = "Далее" },
+                    new Option { Destination = 120, Text = "Далее" },
                 }
             },
             [66] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 163, Text = "Если Алдару удалось получить комнату в караван-сарае" },
-                    new Option { Destination = 172, Text = "Если же он будет спать во внутреннем дворе у костра" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
             [67] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 68, Text = "Далее" },
+                    new Option { Destination = 8, Text = "Далее" },
                 }
             },
             [68] = new Paragraph
@@ -722,14 +726,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 70, Text = "Далее" },
+                    new Option { Destination = 123, Text = "Далее" },
                 }
             },
             [70] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 71, Text = "Далее" },
+                    new Option { Destination = 7, Text = "Далее" },
                 }
             },
             [71] = new Paragraph
@@ -744,7 +748,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 73, Text = "Далее" },
+                    new Option { Destination = 99, Text = "Далее" },
                 }
             },
             [73] = new Paragraph
@@ -789,7 +793,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 76, Text = "Далее" },
+                    new Option { Destination = 120, Text = "Далее" },
                 }
             },
             [76] = new Paragraph
@@ -807,16 +811,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 106, Text = "У Алдара арабский скакун" },
                     new Option { Destination = 119, Text = "В случае успеха" },
                     new Option { Destination = 141, Text = "В случае провала" },
+                    new Option { Destination = 106, Text = "У Алдара арабский скакун" },
                 }
             },
             [77] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 78, Text = "Далее" },
+                    new Option { Destination = 168, Text = "Далее" },
                 }
             },
             [78] = new Paragraph
@@ -840,14 +844,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 81, Text = "Далее" },
+                    new Option { Destination = 56, Text = "Далее" },
                 }
             },
             [81] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 151, Text = "- А какую награду ты желаешь себе, Алдар Косе? Проси всего, что хочешь! Если имя Сауле знакомо Алдару Косе" },
+                    new Option { Destination = 151, Text = "Если имя Сауле знакомо Алдару Косе" },
                     new Option { Destination = 204, Text = "Если оно ни о чём не говорит" },
                 }
             },
@@ -870,21 +874,21 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 85, Text = "Далее" },
+                    new Option { Destination = 46, Text = "Далее" },
                 }
             },
             [85] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 86, Text = "Далее" },
+                    new Option { Destination = 140, Text = "Далее" },
                 }
             },
             [86] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 87, Text = "Далее" },
+                    new Option { Destination = 115, Text = "Далее" },
                 }
             },
             [87] = new Paragraph
@@ -902,23 +906,23 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 189, Text = "Алдар Косе знает человека по имени Серик" },
                     new Option { Destination = 179, Text = "В случае успеха" },
                     new Option { Destination = 167, Text = "В случае провала" },
+                    new Option { Destination = 189, Text = "Алдар Косе знает человека по имени Серик" },
                 }
             },
             [88] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 89, Text = "Далее" },
+                    new Option { Destination = 168, Text = "Далее" },
                 }
             },
             [89] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 90, Text = "Далее" },
+                    new Option { Destination = 76, Text = "Далее" },
                 }
             },
             [90] = new Paragraph
@@ -963,42 +967,42 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 93, Text = "Далее" },
+                    new Option { Destination = 99, Text = "Далее" },
                 }
             },
             [93] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 94, Text = "Далее" },
+                    new Option { Destination = 155, Text = "Далее" },
                 }
             },
             [94] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 95, Text = "Далее" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [95] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 96, Text = "Далее" },
+                    new Option { Destination = 120, Text = "Далее" },
                 }
             },
             [96] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 97, Text = "Далее" },
+                    new Option { Destination = 174, Text = "Далее" },
                 }
             },
             [97] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 98, Text = "Далее" },
+                    new Option { Destination = 115, Text = "Далее" },
                 }
             },
             [98] = new Paragraph
@@ -1014,28 +1018,29 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 100, Text = "Далее" },
+                    new Option { Destination = 165, Text = "Далее" },
                 }
             },
             [100] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 101, Text = "Далее" },
+                    new Option { Destination = 56, Text = "Далее" },
                 }
             },
             [101] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 102, Text = "Далее" },
+                    new Option { Destination = 140, Text = "Далее" },
                 }
             },
             [102] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 103, Text = "Далее" },
+                    new Option { Destination = 151, Text = "Если имя Сауле знакомо Алдару Косе" },
+                    new Option { Destination = 204, Text = "Если оно ни о чём не говорит" },
                 }
             },
             [103] = new Paragraph
@@ -1052,14 +1057,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 105, Text = "Далее" },
+                    new Option { Destination = 8, Text = "Далее" },
                 }
             },
             [105] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 106, Text = "Далее" },
+                    new Option { Destination = 120, Text = "Далее" },
                 }
             },
             [106] = new Paragraph
@@ -1074,7 +1079,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 78, Text = "Пообщаться с казахскими воинами - 23. Посмотреть на товары" },
+                    new Option { Destination = 23, Text = "Пообщаться с казахскими воинами" },
+                    new Option { Destination = 78, Text = "Посмотреть на товары" },
                     new Option { Destination = 124, Text = "Просто побродить по оазису, наблюдая за его обитателями" },
                 }
             },
@@ -1082,7 +1088,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 109, Text = "Далее" },
+                    new Option { Destination = 157, Text = "Далее" },
                 }
             },
             [109] = new Paragraph
@@ -1099,7 +1105,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 111, Text = "Далее" },
+                    new Option { Destination = 99, Text = "Далее" },
                 }
             },
             [111] = new Paragraph
@@ -1117,14 +1123,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 112, Text = "Далее" },
+                    new Option { Destination = 61, Text = "В случае успеха" },
+                    new Option { Destination = 121, Text = "В случае провала" },
                 }
             },
             [112] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 113, Text = "Далее" },
+                    new Option { Destination = 24, Text = "Далее" },
                 }
             },
             [113] = new Paragraph
@@ -1140,7 +1147,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 145, Text = "Если Лихарев обещал подарить коня, то" },
+                    new Option { Destination = 145, Text = "Если Лихарев обещал подарить коня" },
                     new Option { Destination = 175, Text = "Если же нет, то покинуть крепость" },
                 }
             },
@@ -1174,14 +1181,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 118, Text = "Далее" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [118] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 119, Text = "Далее" },
+                    new Option { Destination = 175, Text = "Далее" },
                 }
             },
             [119] = new Paragraph
@@ -1205,14 +1212,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 122, Text = "Далее" },
+                    new Option { Destination = 140, Text = "Далее" },
                 }
             },
             [122] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 123, Text = "Далее" },
+                    new Option { Destination = 152, Text = "Далее" },
                 }
             },
             [123] = new Paragraph
@@ -1230,15 +1237,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 182, Text = "Если у Алдара Косе жеребец-ахалтекинец, то проблем не будет. Ведь туркмены за многие столетия вывели эту породу лошадей специально для плавного хода. В этом случае перейти на" },
-                    new Option { Destination = 153, Text = "В случае успеха - 169. В случае провала" },
+                    new Option { Destination = 169, Text = "В случае успеха" },
+                    new Option { Destination = 153, Text = "В случае провала" },
+                    new Option { Destination = 182, Text = "Если у Алдара Косе жеребец-ахалтекинец" },
                 }
             },
             [124] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 125, Text = "Далее" },
+                    new Option { Destination = 78, Text = "Далее" },
                 }
             },
             [125] = new Paragraph
@@ -1256,38 +1264,40 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 126, Text = "Далее" },
+                    new Option { Destination = 178, Text = "В случае успеха" },
+                    new Option { Destination = 41, Text = "В случае провала" },
                 }
             },
             [126] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 51, Text = "Бросить в блюдо 5 ТАНЬГА" },
-                    new Option { Destination = 195, Text = "Бросить в блюдо 15 ТАНЬГА" },
-                    new Option { Destination = 163, Text = "Если Алдару удалось получить комнату в караван-сарае" },
-                    new Option { Destination = 172, Text = "Если же он будет спать во внутреннем дворе у костра" },
+                    new Option { Destination = 51, Text = "Бросить в блюдо 5 ТАНЬГА", OnlyIf = "ТАНЬГА >= 5" },
+                    new Option { Destination = 195, Text = "Бросить в блюдо 15 ТАНЬГА", OnlyIf = "ТАНЬГА >= 15" },
+                    new Option { Destination = 21, Text = "Бросить в блюдо 25 ТАНЬГА", OnlyIf = "ТАНЬГА >= 25" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
             [127] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 128, Text = "Далее" },
+                    new Option { Destination = 99, Text = "Далее" },
                 }
             },
             [128] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 129, Text = "Далее" },
+                    new Option { Destination = 19, Text = "Далее" },
                 }
             },
             [129] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 130, Text = "Далее" },
+                    new Option { Destination = 174, Text = "Далее" },
                 }
             },
             [130] = new Paragraph
@@ -1305,16 +1315,19 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 43, Text = "Если у Алдара Косе записано «наставление Афанасия», то" },
-                    new Option { Destination = 108, Text = "Если же нет ни того ни другого, тогда ПРОВЕРКА МУДРОСТИ, уровень - 11 В случае успеха - 181. В случае провала" },
+                    new Option { Destination = 181, Text = "В случае успеха" },
+                    new Option { Destination = 108, Text = "В случае провала" },
+                    new Option { Destination = 43, Text = "Если у Алдара Косе записано «наставление Афанасия»" },
+                    new Option { Destination = 137, Text = "Если у Алдара Косе есть знак Тенгри" },
+                    
                 }
             },
             [131] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 125, Text = "Если у Алдара Косе есть 10 ТАНЬГА и желание, принять вызов" },
-                    new Option { Destination = 168, Text = "Иначе покинуть кочевье кипчаков" },
+                    new Option { Destination = 125, Text = "Если у Алдара Косе есть 10 ТАНЬГА и желание, принять вызов", OnlyIf = "ТАНЬГА >= 10" },
+                    new Option { Destination = 168, Text = "Покинуть кочевье кипчаков" },
                 }
             },
             [132] = new Paragraph
@@ -1340,25 +1353,18 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 135, Text = "Далее" },
+                    new Option { Destination = 99, Text = "Далее" },
                 }
             },
             [135] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 136, Text = "Далее" },
+                    new Option { Destination = 63, Text = "Откликнуться на вызов (необходимы праздничная одежда и скакун)" },
+                    new Option { Destination = 27, Text = "Отказаться от участия в этом соревновании" },
                 }
             },
             [136] = new Paragraph
-            {
-                Options = new List<Option>
-                {
-                    new Option { Destination = 166, Text = "В случае успеха" },
-                    new Option { Destination = 184, Text = "В случае провала" },
-                }
-            },
-            [137] = new Paragraph
             {
                 Actions = new List<Actions>
                 {
@@ -1373,7 +1379,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 166, Text = "В случае успеха" },
+                    new Option { Destination = 184, Text = "В случае провала" },
+                }
+            },
+            [137] = new Paragraph
+            {
+                Options = new List<Option>
+                {
+                    new Option { Destination = 130, Text = "Вернуться и пройти проверку ещё раз" },
                 }
             },
             [138] = new Paragraph
@@ -1407,49 +1421,50 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 140, Text = "Далее" },
+                    new Option { Destination = 19, Text = "Далее" },
                 }
             },
             [140] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 141, Text = "Далее" },
+                    new Option { Destination = 165, Text = "Далее" },
                 }
             },
             [141] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 142, Text = "Далее" },
+                    new Option { Destination = 58, Text = "Далее" },
                 }
             },
             [142] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 143, Text = "Далее" },
+                    new Option { Destination = 15, Text = "Далее" },
                 }
             },
             [143] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 84, Text = "Отправиться на местный базар" },
+                    new Option { Destination = 12, Text = "Позаботиться о ночлеге" },
                 }
             },
             [144] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 145, Text = "Далее" },
+                    new Option { Destination = 62, Text = "Далее" },
                 }
             },
             [145] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 146, Text = "Далее" },
+                    new Option { Destination = 175, Text = "Далее" },
                 }
             },
             [146] = new Paragraph
@@ -1464,7 +1479,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 145, Text = "Если Лихарев обещал подарить скакуна, то" },
+                    new Option { Destination = 118, Text = "Если Алдар Косе получал от Лихарева крупную наградуа" },
+                    new Option { Destination = 145, Text = "Если Лихарев обещал подарить скакуна" },
                     new Option { Destination = 175, Text = "Если же нет, покинуть крепость" },
                 }
             },
@@ -1491,7 +1507,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 150, Text = "Далее" },
+                    new Option { Destination = 19, Text = "Далее" },
                 }
             },
             [150] = new Paragraph
@@ -1512,28 +1528,28 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 153, Text = "Далее" },
+                    new Option { Destination = 15, Text = "Далее" },
                 }
             },
             [153] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 154, Text = "Далее" },
+                    new Option { Destination = 18, Text = "Далее" },
                 }
             },
             [154] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 155, Text = "Далее" },
+                    new Option { Destination = 62, Text = "Далее" },
                 }
             },
             [155] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 24, Text = "Если у кочевника есть праздничная одежда, то он переодевается и его беспрепятственно пропускают" },
+                    new Option { Destination = 24, Text = "Есть праздничная одежда" },
                     new Option { Destination = 37, Text = "Если одежды нет" },
                 }
             },
@@ -1549,7 +1565,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 158, Text = "Далее" },
+                    new Option { Destination = 82, Text = "Далее" },
                 }
             },
             [158] = new Paragraph
@@ -1567,14 +1583,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 159, Text = "Далее" },
+                    new Option { Destination = 17, Text = "В случае успеха" },
+                    new Option { Destination = 77, Text = "В случае провала" },
                 }
             },
             [159] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 160, Text = "Далее" },
+                    new Option { Destination = 19, Text = "Далее" },
                 }
             },
             [160] = new Paragraph
@@ -1589,53 +1606,55 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 6, Text = "Если у Алдара есть какой-то из предметов, который можно предъявить в качестве пропуска: ханский перстень, письмо Гулинши-багатура, сообщение из бухарского каравана или записка Джанибека" },
-                    new Option { Destination = 16, Text = "Если наш герой только что сумел посрамить Темир-батыра (неважно как, в поединке или с помощью арака) или ПОПУЛЯРНОСТЬ Алдара Косе равняется 10 или больше" },
-                    new Option { Destination = 49, Text = "Иначе придётся посулить денег охране" },
-                    new Option { Destination = 83, Text = "Если ни один из указанных вариантов не подходит" },
+                    new Option { Destination = 6, Text = "Если у Алдара есть ханский перстень, письмо Гулинши-багатура, сообщение из бухарского каравана или записка Джанибека" },
+                    new Option { Destination = 16, Text = "Если наш герой только что сумел посрамить Темир-батыра или ПОПУЛЯРНОСТЬ Алдара Косе равняется 10 или больше" },
+                    new Option { Destination = 34, Text = "Кочевник знает человека по имени Серик" },
+                    new Option { Destination = 49, Text = "Посулить денег охране" },
+                    new Option { Destination = 83, Text = "Ни один из указанных вариантов не подходит" },
                 }
             },
             [162] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 163, Text = "Далее" },
+                    new Option { Destination = 107, Text = "Далее" },
                 }
             },
             [163] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 164, Text = "Далее" },
+                    new Option { Destination = 93, Text = "Далее" },
                 }
             },
             [164] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 165, Text = "Далее" },
+                    new Option { Destination = 94, Text = "Далее" },
                 }
             },
             [165] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 130, Text = "Если у Алдара Косе есть зелёный камень, то" },
-                    new Option { Destination = 157, Text = "Если же нет, то" },
+                    new Option { Destination = 130, Text = "Если у Алдара Косе есть зелёный камень" },
+                    new Option { Destination = 157, Text = "Если же нет" },
                 }
             },
             [166] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 167, Text = "Далее" },
+                    new Option { Destination = 62, Text = "Далее" },
                 }
             },
             [167] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 168, Text = "Далее" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
             [168] = new Paragraph
@@ -1650,7 +1669,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 170, Text = "Далее" },
+                    new Option { Destination = 18, Text = "Далее" },
                 }
             },
             [170] = new Paragraph
@@ -1676,14 +1695,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 172, Text = "Далее" },
+                    new Option { Destination = 161, Text = "Далее" },
                 }
             },
             [172] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 173, Text = "Далее" },
+                    new Option { Destination = 93, Text = "Далее" },
                 }
             },
             [173] = new Paragraph
@@ -1725,35 +1744,35 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 176, Text = "Далее" },
+                    new Option { Destination = 155, Text = "Далее" },
                 }
             },
             [176] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 177, Text = "Далее" },
+                    new Option { Destination = 161, Text = "Далее" },
                 }
             },
             [177] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 178, Text = "Далее" },
+                    new Option { Destination = 104, Text = "Далее" },
                 }
             },
             [178] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 179, Text = "Далее" },
+                    new Option { Destination = 168, Text = "Далее" },
                 }
             },
             [179] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 180, Text = "Далее" },
+                    new Option { Destination = 93, Text = "Далее" },
                 }
             },
             [180] = new Paragraph
@@ -1786,42 +1805,42 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 182, Text = "Далее" },
+                    new Option { Destination = 73, Text = "Далее" },
                 }
             },
             [182] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 183, Text = "Далее" },
+                    new Option { Destination = 18, Text = "Далее" },
                 }
             },
             [183] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 184, Text = "Далее" },
+                    new Option { Destination = 56, Text = "Далее" },
                 }
             },
             [184] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 185, Text = "Далее" },
+                    new Option { Destination = 62, Text = "Далее" },
                 }
             },
             [185] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 186, Text = "Далее" },
+                    new Option { Destination = 104, Text = "Далее" },
                 }
             },
             [186] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 187, Text = "Далее" },
+                    new Option { Destination = 157, Text = "Далее" },
                 }
             },
             [187] = new Paragraph
@@ -1839,23 +1858,23 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 102, Text = "Если у Алдара Косе есть какое-нибудь доказательство в подтверждение своих слов (письмо Гулинши-багатура, записка Джанибека или сообщение из бухарского каравана), предъявить его" },
                     new Option { Destination = 81, Text = "В случае успеха" },
                     new Option { Destination = 116, Text = "В случае провала" },
+                    new Option { Destination = 102, Text = "Если у Алдара Косе есть письмо Гулинши-багатура, записка Джанибека или сообщение из бухарского каравана" },
                 }
             },
             [188] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 189, Text = "Далее" },
+                    new Option { Destination = 168, Text = "Далее" },
                 }
             },
             [189] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 190, Text = "Далее" },
+                    new Option { Destination = 93, Text = "Далее" },
                 }
             },
             [190] = new Paragraph
@@ -1881,14 +1900,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 192, Text = "Далее" },
+                    new Option { Destination = 198, Text = "Далее" },
                 }
             },
             [192] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 193, Text = "Далее" },
+                    new Option { Destination = 161, Text = "Далее" },
                 }
             },
             [193] = new Paragraph
@@ -1914,63 +1933,66 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 195, Text = "Далее" },
+                    new Option { Destination = 104, Text = "Далее" },
                 }
             },
             [195] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 196, Text = "Далее" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
             [196] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 197, Text = "Далее" },
+                    new Option { Destination = 157, Text = "Далее" },
                 }
             },
             [197] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Далее" },
+                    new Option { Destination = 22, Text = "Далее" },
                 }
             },
             [198] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 57, Text = "Старик" },
+                    new Option { Destination = 64, Text = "Старуха" },
+                    new Option { Destination = 70, Text = "Молодой джигит" },
                 }
             },
             [199] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 200, Text = "Далее" },
+                    new Option { Destination = 161, Text = "Далее" },
                 }
             },
             [200] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 201, Text = "Далее" },
+                    new Option { Destination = 99, Text = "Далее" },
                 }
             },
             [201] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 99, Text = "Начать сначала" },
                 }
             },
             [202] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 203, Text = "Далее" },
+                    new Option { Destination = 31, Text = "Далее" },
                 }
             },
             [203] = new Paragraph
