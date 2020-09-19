@@ -65,6 +65,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
+                        TestLevel = 7,
                     },
                 },
 
@@ -128,6 +129,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
+                        TestLevel = 9,
                     },
                 },
 
@@ -197,6 +199,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить силу",
                         Stat = "Strength",
+                        TestLevel = 13,
                     },
                 },
 
@@ -217,6 +220,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
+                        TestLevel = 11,
                     },
                 },
 
@@ -238,6 +242,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить силу",
                         Stat = "Strength",
+                        TestLevel = 10,
                     },
                 },
 
@@ -263,6 +268,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
+                        TestLevel = 10,
                     },
                 },
 
@@ -333,6 +339,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
+                        TestLevel = 9,
                     },
                 },
 
@@ -367,6 +374,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
+                        TestLevel = 7,
                     },
                 },
 
@@ -399,12 +407,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
+                        TestLevel = 11,
                     },
                     new Actions
                     {
                         ActionName = "Test",
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
+                        TestLevel = 11,
                     },
                 },
 
@@ -423,6 +433,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
+                        TestLevel = 12,
                     },
                 },
 
@@ -458,12 +469,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
+                        TestLevel = 11,
                     },
                     new Actions
                     {
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
+                        TestLevel = 11,
                     },
                 },
 
@@ -528,6 +541,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
+                        TestLevel = 9,
                     },
                 },
 
@@ -634,6 +648,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
+                        TestLevel = 9,
                     },
                 },
 
@@ -741,6 +756,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
+                        TestLevel = 9,
                     },
                 },
 
@@ -759,6 +775,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
+                        TestLevel = 10,
                     },
                 },
 
@@ -784,6 +801,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
+                        TestLevel = 13,
                     },
                 },
 
@@ -878,6 +896,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
+                        TestLevel = 11,
                     },
                 },
 
@@ -911,6 +930,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить силу",
                         Stat = "Strength",
+                        TestLevel = 9,
                     },
                 },
 
@@ -1091,6 +1111,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
+                        TestLevel = 13,
                     },
                 },
 
@@ -1125,6 +1146,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [115] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                        TestLevel = 10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 44, Text = "В случае успеха" },
@@ -1185,6 +1217,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [123] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                        TestLevel = 11,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 182, Text = "Если у Алдара Косе жеребец-ахалтекинец, то проблем не будет. Ведь туркмены за многие столетия вывели эту породу лошадей специально для плавного хода. В этом случае перейти на" },
@@ -1200,6 +1243,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [125] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                        TestLevel = 11,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 126, Text = "Далее" },
@@ -1238,6 +1292,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [130] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                        TestLevel = 11,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 43, Text = "Если у Алдара Косе записано «наставление Афанасия», то" },
@@ -1295,6 +1360,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [137] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить хитрость",
+                        Stat = "Cunning",
+                        TestLevel = 9,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
@@ -1302,6 +1378,24 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [138] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                        TestLevel = 12,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить хитрость",
+                        Stat = "Cunning",
+                        TestLevel = 12,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 29, Text = "Если обе проверки удачны" },
@@ -1376,6 +1470,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [148] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                        TestLevel = 11,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 48, Text = "В случае успеха" },
@@ -1449,6 +1554,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [158] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                        TestLevel = 11,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 159, Text = "Далее" },
@@ -1539,6 +1655,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [170] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                        TestLevel = 8,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 142, Text = "В случае успеха" },
@@ -1561,6 +1688,24 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [173] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                        TestLevel = 10,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить силу",
+                        Stat = "Strength",
+                        TestLevel = 10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 85, Text = "Если обе проверки успешны" },
@@ -1613,6 +1758,24 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [180] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить силу",
+                        Stat = "Strength",
+                        TestLevel = 12,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                        TestLevel = 12,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 13, Text = "Если обе проверки успешны" },
@@ -1663,6 +1826,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [187] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                        TestLevel = 20,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 102, Text = "Если у Алдара Косе есть какое-нибудь доказательство в подтверждение своих слов (письмо Гулинши-багатура, записка Джанибека или сообщение из бухарского каравана), предъявить его" },
@@ -1686,6 +1860,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [190] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить силу",
+                        Stat = "Strength",
+                        TestLevel = 10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 127, Text = "В случае успеха" },
@@ -1708,6 +1893,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [193] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить хитрость",
+                        Stat = "Cunning",
+                        TestLevel = 7,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 146, Text = "В случае успеха" },
@@ -1779,6 +1975,17 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [203] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                        TestLevel = 10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 110, Text = "В случае успеха" },
