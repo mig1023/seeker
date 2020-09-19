@@ -29,12 +29,12 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
             return actionResult;
         }
-        
+
         public List<string> Representer()
         {
-            return (String.IsNullOrEmpty(Text) ? new List<string> {} : new List<string> { Text });
+            return (String.IsNullOrEmpty(Text) ? new List<string> { } : new List<string> { Text });
         }
-        
+
         public List<string> Status()
         {
             List<string> statusLines = new List<string>
@@ -61,7 +61,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public bool IsButtonEnabled()
         {
-            if (Price <= 0)
+            if (Level > 0)
+                return true;
+            else if (Price <= 0)
                 return (Character.Protagonist.StatBonuses > 0);
             else
                 return (Character.Protagonist.Tanga >= Price);
