@@ -65,7 +65,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
-                        TestLevel = 7,
+                        Level = 7,
                     },
                 },
 
@@ -129,7 +129,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
-                        TestLevel = 9,
+                        Level = 9,
                     },
                 },
 
@@ -199,7 +199,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить силу",
                         Stat = "Strength",
-                        TestLevel = 13,
+                        Level = 13,
                     },
                 },
 
@@ -220,7 +220,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
-                        TestLevel = 11,
+                        Level = 11,
                     },
                 },
 
@@ -242,7 +242,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить силу",
                         Stat = "Strength",
-                        TestLevel = 10,
+                        Level = 10,
                     },
                 },
 
@@ -268,7 +268,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
-                        TestLevel = 10,
+                        Level = 10,
                     },
                 },
 
@@ -339,7 +339,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
-                        TestLevel = 9,
+                        Level = 9,
                     },
                 },
 
@@ -374,7 +374,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
-                        TestLevel = 7,
+                        Level = 7,
                     },
                 },
 
@@ -407,14 +407,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
-                        TestLevel = 11,
+                        Level = 11,
                     },
                     new Actions
                     {
                         ActionName = "Test",
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
-                        TestLevel = 11,
+                        Level = 11,
                     },
                 },
 
@@ -433,7 +433,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
-                        TestLevel = 12,
+                        Level = 12,
                     },
                 },
 
@@ -469,14 +469,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
-                        TestLevel = 11,
+                        Level = 11,
                     },
                     new Actions
                     {
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
-                        TestLevel = 11,
+                        Level = 11,
                     },
                 },
 
@@ -541,7 +541,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
-                        TestLevel = 9,
+                        Level = 9,
                     },
                 },
 
@@ -648,7 +648,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
-                        TestLevel = 9,
+                        Level = 9,
                     },
                 },
 
@@ -756,7 +756,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
-                        TestLevel = 9,
+                        Level = 9,
                     },
                 },
 
@@ -775,7 +775,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
-                        TestLevel = 10,
+                        Level = 10,
                     },
                 },
 
@@ -801,7 +801,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
-                        TestLevel = 13,
+                        Level = 13,
                     },
                 },
 
@@ -896,7 +896,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
-                        TestLevel = 11,
+                        Level = 11,
                     },
                 },
 
@@ -930,7 +930,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить силу",
                         Stat = "Strength",
-                        TestLevel = 9,
+                        Level = 9,
                     },
                 },
 
@@ -949,7 +949,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
-                        TestLevel = 8,
+                        Level = 8,
                     },
                 },
 
@@ -1111,7 +1111,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
-                        TestLevel = 13,
+                        Level = 13,
                     },
                 },
 
@@ -1153,7 +1153,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
-                        TestLevel = 10,
+                        Level = 10,
                     },
                 },
 
@@ -1224,7 +1224,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
-                        TestLevel = 11,
+                        Level = 11,
                     },
                 },
 
@@ -1250,7 +1250,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
-                        TestLevel = 11,
+                        Level = 11,
                     },
                 },
 
@@ -1299,7 +1299,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
-                        TestLevel = 11,
+                        Level = 11,
                     },
                 },
 
@@ -1367,7 +1367,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
-                        TestLevel = 9,
+                        Level = 9,
                     },
                 },
 
@@ -1385,14 +1385,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
-                        TestLevel = 12,
+                        Level = 12,
                     },
                     new Actions
                     {
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
-                        TestLevel = 12,
+                        Level = 12,
                     },
                 },
 
@@ -1477,7 +1477,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
-                        TestLevel = 11,
+                        Level = 11,
                     },
                 },
 
@@ -1561,7 +1561,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
-                        TestLevel = 11,
+                        Level = 11,
                     },
                 },
 
@@ -1662,7 +1662,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
-                        TestLevel = 8,
+                        Level = 8,
                     },
                 },
 
@@ -1695,14 +1695,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
-                        TestLevel = 10,
+                        Level = 10,
                     },
                     new Actions
                     {
                         ActionName = "Test",
                         ButtonName = "Проверить силу",
                         Stat = "Strength",
-                        TestLevel = 10,
+                        Level = 10,
                     },
                 },
 
@@ -1765,14 +1765,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить силу",
                         Stat = "Strength",
-                        TestLevel = 12,
+                        Level = 12,
                     },
                     new Actions
                     {
                         ActionName = "Test",
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
-                        TestLevel = 12,
+                        Level = 12,
                     },
                 },
 
@@ -1833,7 +1833,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
-                        TestLevel = 20,
+                        Level = 20,
                     },
                 },
 
@@ -1867,7 +1867,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить силу",
                         Stat = "Strength",
-                        TestLevel = 10,
+                        Level = 10,
                     },
                 },
 
@@ -1900,7 +1900,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
-                        TestLevel = 7,
+                        Level = 7,
                     },
                 },
 
@@ -1982,7 +1982,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ActionName = "Test",
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
-                        TestLevel = 10,
+                        Level = 10,
                     },
                 },
 

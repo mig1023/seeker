@@ -14,7 +14,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public string Text { get; set; }
         public string Stat { get; set; }
-        public int TestLevel { get; set; }
+        public int Level { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool openOption = false)
         {
@@ -28,10 +28,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
             return actionResult;
         }
-
+        
         public List<string> Representer()
         {
-            return (String.IsNullOrEmpty(Text) ? new List<string> {} : new List<string> { Text });
+            return (String.IsNullOrEmpty(Text) ? new List<string> { } : new List<string> { Text });
         }
 
         public List<string> Status()
@@ -85,7 +85,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             int secondDice = Game.Dice.Roll();
 
             int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
-            bool testIsOk = (firstDice + secondDice) + currentStat >= TestLevel;
+            bool testIsOk = (firstDice + secondDice) + currentStat >= Level;
 
             Dictionary<string, string> statNames = new Dictionary<string, string>
             {
@@ -98,7 +98,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             };
 
             List<string> testLines = new List<string> { String.Format(
-                "Проверка {0}: {1} ⚄ + {2} ⚄ + {3} {4} {5}", statNames[Stat], firstDice, secondDice, currentStat, (testIsOk ? ">=" : "<"), TestLevel
+                "Проверка {0}: {1} ⚄ + {2} ⚄ + {3} {4} {5}", statNames[Stat], firstDice, secondDice, currentStat, (testIsOk ? ">=" : "<"), Level
             ) };
 
             testLines.Add(testIsOk ? "BIG|GOOD|АЛДАР СПРАВИЛСЯ :)" : "BIG|BAD|АЛДАР НЕ СПРАВИЛСЯ :(");
