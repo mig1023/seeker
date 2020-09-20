@@ -431,6 +431,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 {
                     new Actions
                     {
+                        ActionName = "Get",
+                        ButtonName = "Купить одежду",
+                        Text = "ПРАЗДНИЧНАЯ ОДЕЖДА",
+                        Price = 25,
+                        OpenOption = "PartyClothes",
+                        Aftertext = "Костюм, несомненно, хороший. Но цена на него безбожно задрана. Алдар понимает, что воины состоят в доле с хитрым торговцем, получая хорошую прибыль с путников, которые хотят попасть в ханскую ставку. Придётся либо платить, либо придумывать другой способ.\n\nЕсли нет ни денег ни перстня, придётся полагаться на свои способности.",
+                    },
+                    new Actions
+                    {
                         ActionName = "Test",
                         ButtonName = "Проверить хитрость",
                         Stat = "Cunning",
@@ -442,8 +451,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 {
                     new Option { Destination = 112, Text = "В случае успеха" },
                     new Option { Destination = 83, Text = "В случае провала" },
-                    new Option { Destination = 24, Text = "Заплатить 25 ТАНЬГА и переодеться", OnlyIf = "ТАНЬГА >= 25" },
-                    new Option { Destination = 24, Text = "Если у Алдара есть ханский перстень" },
+                    new Option { Destination = 24, Text = "Переодеться и зайти", OnlyIf = "PartyClothes" },
+                    new Option { Destination = 24, Text = "Есть ханский перстень", OnlyIf = "KhansRing" },
                 }
             },
             [38] = new Paragraph
@@ -1553,6 +1562,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [144] = new Paragraph
             {
+                OpenOption = "KhansRing",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 62, Text = "Далее" },
@@ -1726,7 +1737,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 6, Text = "Если у Алдара есть ханский перстень, письмо Гулинши-багатура, сообщение из бухарского каравана или записка Джанибека" },
+                    new Option { Destination = 6, Text = "Есть ханский перстень", OnlyIf = "KhansRing" },
+                    new Option { Destination = 6, Text = "Если письмо Гулинши-багатура" },
+                    new Option { Destination = 6, Text = "Если сообщение из бухарского каравана" },
+                    new Option { Destination = 6, Text = "Если записка Джанибека" },
                     new Option { Destination = 16, Text = "Если наш герой только что сумел посрамить Темир-батыра или ПОПУЛЯРНОСТЬ Алдара Косе равняется 10 или больше" },
                     new Option { Destination = 34, Text = "Кочевник знает человека по имени Серик" },
                     new Option { Destination = 49, Text = "Посулить денег охране" },
@@ -1994,6 +2008,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [189] = new Paragraph
             {
+                OpenOption = "KhansRing",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 93, Text = "Далее" },
