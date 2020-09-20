@@ -51,6 +51,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [2] = new Paragraph
             {
+                OpenOption = "Letter",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 140, Text = "Далее" },
@@ -1738,7 +1740,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 Options = new List<Option>
                 {
                     new Option { Destination = 6, Text = "Есть ханский перстень", OnlyIf = "KhansRing" },
-                    new Option { Destination = 6, Text = "Если письмо Гулинши-багатура" },
+                    new Option { Destination = 6, Text = "Если письмо Гулинши-багатура", OnlyIf = "Letter" },
                     new Option { Destination = 6, Text = "Если сообщение из бухарского каравана" },
                     new Option { Destination = 6, Text = "Если записка Джанибека" },
                     new Option { Destination = 16, Text = "Если наш герой только что сумел посрамить Темир-батыра или ПОПУЛЯРНОСТЬ Алдара Косе равняется 10 или больше" },
@@ -1996,7 +1998,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 {
                     new Option { Destination = 81, Text = "В случае успеха" },
                     new Option { Destination = 116, Text = "В случае провала" },
-                    new Option { Destination = 102, Text = "Если у Алдара Косе есть письмо Гулинши-багатура, записка Джанибека или сообщение из бухарского каравана" },
+                    new Option { Destination = 102, Text = "Если письмо Гулинши-багатура", OnlyIf = "Letter" },
+                    new Option { Destination = 102, Text = "Если сообщение из бухарского каравана" },
+                    new Option { Destination = 102, Text = "Если записка Джанибека" },
                 }
             },
             [188] = new Paragraph
