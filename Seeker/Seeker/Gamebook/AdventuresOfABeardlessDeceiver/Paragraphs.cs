@@ -232,7 +232,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 {
                     new Option { Destination = 185, Text = "В случае успеха" },
                     new Option { Destination = 67, Text = "В случае провала" },
-                    new Option { Destination = 177, Text = "Алдар Косе заручился поддержкой охраны оазиса" },
+                    new Option { Destination = 177, Text = "Алдар Косе заручился поддержкой охраны оазиса", OnlyIf = "OasisGuardSupport" },
                     new Option { Destination = 194, Text = "Знает слабое место персидского торговца" },
                     new Option { Destination = 8, Text = "Продолжить путь на северо-запад к караван-сараю" },
                 }
@@ -284,6 +284,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [23] = new Paragraph
             {
+                OpenOption = "OasisGuardSupport",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 78, Text = "Далее" },
