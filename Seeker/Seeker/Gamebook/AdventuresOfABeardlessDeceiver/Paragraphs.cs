@@ -289,7 +289,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 63, Text = "Откликнуться на вызов" },
+                    new Option { Destination = 63, Text = "Откликнуться на вызов", OnlyIf = "PartyClothes" },
                     new Option { Destination = 135, Text = "Купить нужное (одежду или скакуна) на базаре неподалёку" },
                     new Option { Destination = 27, Text = "Отказаться от участия в этом соревновании" },
                 }
@@ -354,7 +354,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 136, Text = "Попроситься на приём к караван-баши (только, если имеется праздничная одежда)" },
+                    new Option { Destination = 136, Text = "Попроситься на приём к караван-баши", OnlyIf = "PartyClothes" },
                     new Option { Destination = 144, Text = "Принять приглашение погонщиков посидеть у костра" },
                     new Option { Destination = 154, Text = "Послушать, что рассказывает бородач с ослом" },
                 }
@@ -501,7 +501,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 Options = new List<Option>
                 {
                     new Option { Destination = 180, Text = "Вызвать Темир-батыра на курес, казахскую борьбу" },
-                    new Option { Destination = 36, Text = "Если у Алдара есть домбра, бросить вызов на музыкальный поединок" },
+                    new Option { Destination = 36, Text = "Бросить вызов на музыкальный поединок", OnlyIf = "Dombra" },
                     new Option { Destination = 192, Text = "Если у нашего героя есть бутыль арака, попытаться хитростью опоить бандита" },
                     new Option { Destination = 161, Text = "Направиться к ханской юрте для выполнения задания" },
                 }
@@ -834,6 +834,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Text = "ДОМБРА",
                         Price = 10,
                         Aftertext = "Двухструнный музыкальный инструмент.",
+                        OpenOption = "Dombra",
                     },
                     new Actions
                     {
@@ -842,6 +843,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Text = "ПРАЗДНИЧНАЯ ОДЕЖДА",
                         Price = 15,
                         Aftertext = "Шелковый халат, шапка из лисьего меха и расшитая нательная рубаха.",
+                        OpenOption = "PartyClothes",
                     },
                     new Actions
                     {
@@ -909,6 +911,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Text = "ПРАЗДНИЧНАЯ ОДЕЖДА",
                         Price = 20,
                         Aftertext = "Шелковый халат, шапка-малахай из лисьего меха и расшитая нательная рубаха.",
+                        OpenOption = "PartyClothes",
                     },
                     new Actions
                     {
@@ -917,6 +920,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Text = "ДОМБРА",
                         Price = 15,
                         Aftertext = "Двухструнный музыкальный инструмент.",
+                         OpenOption = "Dombra",
                     },
                     new Actions
                     {
@@ -1134,6 +1138,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [105] = new Paragraph
             {
+                OpenOption = "PartyClothes",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 120, Text = "Далее" },
@@ -1430,9 +1436,29 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [135] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить одежду",
+                        Text = "ПРАЗДНИЧНАЯ ОДЕЖДА",
+                        Price = 30,
+                        Aftertext = "Чистопородных коней на базаре нет. А скакун-полукровка обойдётся в 150 ТАНЬГА с учётом того, что Алдар Косе отдаст своего жеребца торговцу.",
+                        OpenOption = "PartyClothes",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить скакуна",
+                        Text = "СКАКУН-ПОЛУКРОВКА",
+                        Price = 150,
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 63, Text = "Откликнуться на вызов (необходимы праздничная одежда и скакун)" },
+                    new Option { Destination = 63, Text = "Откликнуться на вызов", OnlyIf = "PartyClothes" },
                     new Option { Destination = 27, Text = "Отказаться от участия в этом соревновании" },
                 }
             },
@@ -1621,15 +1647,37 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 24, Text = "Есть праздничная одежда" },
-                    new Option { Destination = 37, Text = "Если одежды нет" },
+                    new Option { Destination = 24, Text = "Есть праздничная одежда", OnlyIf = "PartyClothes" },
+                    new Option { Destination = 37, Text = "Праздничной одежды нет" },
                 }
             },
             [156] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить домбру",
+                        Text = "ДОМБРА",
+                        Price = 10,
+                        Aftertext = "Домбра необходима, если Алдар решит принять участие в конкурсе акынов, который сейчас начнётся.",
+                        OpenOption = "Dombra",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить одежду",
+                        Text = "ПРАЗДНИЧНАЯ ОДЕЖДА",
+                        Price = 15,
+                        OpenOption = "PartyClothes",
+                        Aftertext = "Праздничная одежда, состоящая из расшитого золотистыми узорами халата, шапки с лисьим мехом и нательной рубашки с вышивкой. Ну а нарядная одежда всегда полезна, чтобы произвести хорошее впечатление на хана и его окружение. Не в лохмотьях же, в конце концов, соваться в ханскую ставку?\n\nКупить всё, что нужно и на что хватит денег, и отметить соответствующие изменения на листе персонажа.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 74, Text = "Принять участие в айтысе (необходима домбра)" },
+                    new Option { Destination = 74, Text = "Принять участие в айтысе", OnlyIf = "Dombra" },
                     new Option { Destination = 94, Text = "Отказаться от участия и просто посмотреть на соревнование" },
                 }
             },
@@ -1842,6 +1890,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [179] = new Paragraph
             {
+                OpenOption = "PartyClothes",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 93, Text = "Далее" },
