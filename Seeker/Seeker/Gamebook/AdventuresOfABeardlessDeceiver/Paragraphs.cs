@@ -187,6 +187,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [17] = new Paragraph
             {
+                OpenOption = "Note",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 168, Text = "Далее" },
@@ -1000,6 +1002,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [88] = new Paragraph
             {
+                OpenOption = "Note",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 168, Text = "Далее" },
@@ -1742,7 +1746,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     new Option { Destination = 6, Text = "Есть ханский перстень", OnlyIf = "KhansRing" },
                     new Option { Destination = 6, Text = "Если письмо Гулинши-багатура", OnlyIf = "Letter" },
                     new Option { Destination = 6, Text = "Если сообщение из бухарского каравана", OnlyIf = "Message" },
-                    new Option { Destination = 6, Text = "Если записка Джанибека" },
+                    new Option { Destination = 6, Text = "Если записка Джанибека", OnlyIf = "Note" },
                     new Option { Destination = 16, Text = "Если наш герой только что сумел посрамить Темир-батыра или ПОПУЛЯРНОСТЬ Алдара Косе равняется 10 или больше" },
                     new Option { Destination = 34, Text = "Кочевник знает человека по имени Серик" },
                     new Option { Destination = 49, Text = "Посулить денег охране" },
@@ -2002,7 +2006,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     new Option { Destination = 116, Text = "В случае провала" },
                     new Option { Destination = 102, Text = "Если письмо Гулинши-багатура", OnlyIf = "Letter" },
                     new Option { Destination = 102, Text = "Если сообщение из бухарского каравана", OnlyIf = "Message" },
-                    new Option { Destination = 102, Text = "Если записка Джанибека" },
+                    new Option { Destination = 102, Text = "Если записка Джанибека", OnlyIf = "Note" },
                 }
             },
             [188] = new Paragraph
