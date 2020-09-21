@@ -1272,8 +1272,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 145, Text = "Если Лихарев обещал подарить коня" },
-                    new Option { Destination = 175, Text = "Если же нет, то покинуть крепость" },
+                    new Option { Destination = 145, Text = "Лихарев обещал подарить коня", OnlyIf = "GiftPromise" },
+                    new Option { Destination = 175, Text = "Покинуть крепость" },
                 }
             },
             [115] = new Paragraph
@@ -1628,9 +1628,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 118, Text = "Если Алдар Косе получал от Лихарева крупную наградуа" },
-                    new Option { Destination = 145, Text = "Если Лихарев обещал подарить скакуна" },
-                    new Option { Destination = 175, Text = "Если же нет, покинуть крепость" },
+                    new Option { Destination = 118, Text = "Алдар Косе получал от Лихарева крупную наградуа" },
+                    new Option { Destination = 145, Text = "Лихарев обещал подарить скакуна", OnlyIf = "GiftPromise" },
+                    new Option { Destination = 175, Text = "Покинуть крепость" },
                 }
             },
             [148] = new Paragraph
@@ -2128,6 +2128,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [196] = new Paragraph
             {
+                OpenOption = "GiftPromise",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 157, Text = "Далее" },
