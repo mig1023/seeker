@@ -1029,7 +1029,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 {
                     new Option { Destination = 179, Text = "В случае успеха" },
                     new Option { Destination = 167, Text = "В случае провала" },
-                    new Option { Destination = 189, Text = "Алдар Косе знает человека по имени Серик" },
+                    new Option { Destination = 189, Text = "Алдар Косе знает человека по имени Серик", OnlyIf = "Serik" },
                 }
             },
             [88] = new Paragraph
@@ -1795,10 +1795,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     new Option { Destination = 6, Text = "Если письмо Гулинши-багатура", OnlyIf = "Letter" },
                     new Option { Destination = 6, Text = "Если сообщение из бухарского каравана", OnlyIf = "Message" },
                     new Option { Destination = 6, Text = "Если записка Джанибека", OnlyIf = "Note" },
-                    new Option { Destination = 16, Text = "Если наш герой только что сумел посрамить Темир-батыра или ПОПУЛЯРНОСТЬ Алдара Косе равняется 10 или больше" },
-                    new Option { Destination = 34, Text = "Кочевник знает человека по имени Серик" },
+                    new Option { Destination = 16, Text = "Если Темир-батыр был посрамлён или ПОПУЛЯРНОСТЬ Алдара Косе равняется 10 или больше" },
+                    new Option { Destination = 34, Text = "Кочевник знает человека по имени Серик", OnlyIf = "Serik" },
                     new Option { Destination = 49, Text = "Посулить денег охране" },
-                    new Option { Destination = 83, Text = "Ни один из указанных вариантов не подходит" },
+                    new Option { Destination = 83, Text = "Попытаться уговорить" },
                 }
             },
             [162] = new Paragraph
@@ -1817,6 +1817,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [164] = new Paragraph
             {
+                OpenOption = "Serik",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 94, Text = "Далее" },
