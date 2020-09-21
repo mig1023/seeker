@@ -530,7 +530,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 {
                     new Option { Destination = 180, Text = "Вызвать Темир-батыра на курес, казахскую борьбу" },
                     new Option { Destination = 36, Text = "Бросить вызов на музыкальный поединок", OnlyIf = "Dombra" },
-                    new Option { Destination = 192, Text = "Если у нашего героя есть бутыль арака, попытаться хитростью опоить бандита" },
+                    new Option { Destination = 192, Text = "Попытаться хитростью опоить бандита", OnlyIf = "Arak" },
                     new Option { Destination = 161, Text = "Направиться к ханской юрте для выполнения задания" },
                 }
             },
@@ -1628,6 +1628,18 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [147] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить арак",
+                        Text = "АРАК",
+                        Price = 10,
+                        OpenOption = "Arak",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 118, Text = "Алдар Косе получал от Лихарева крупную наградуа", OnlyIf = "LargeSum" },
