@@ -117,6 +117,20 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [9] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 150,
+                    },
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 198, Text = "Далее" },
@@ -170,6 +184,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [13] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 161, Text = "Далее" },
@@ -177,6 +200,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [14] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 150,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 140, Text = "Далее" },
@@ -200,6 +232,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [17] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 OpenOption = "Note",
 
                 Options = new List<Option>
@@ -271,6 +312,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [21] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 93, Text = "Далее" },
@@ -337,6 +387,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [28] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 56, Text = "Далее" },
@@ -344,6 +403,20 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [29] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 215,
+                    },
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае", OnlyIf = "Room" },
@@ -413,6 +486,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [35] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 120, Text = "Далее" },
@@ -484,6 +566,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [39] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 45,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае", OnlyIf = "Room" },
@@ -519,6 +610,20 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [41] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = -10,
+                    },
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 168, Text = "Далее" },
@@ -550,6 +655,20 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [45] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 50,
+                    },
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 120, Text = "Далее" },
@@ -605,7 +724,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 187, Text = "Заплатить требуемую сумму. Тогда Алдара пропустят, предварительно отобрав оружие" },
+                    new Option { Destination = 187, Text = "Заплатить требуемую сумму", OnlyIf = "ТАНЬГА >= 100"  },
                     new Option { Destination = 83, Text = "Если же таких денег нет" },
                 }
             },
@@ -618,6 +737,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [51] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае", OnlyIf = "Room" },
@@ -626,6 +754,20 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [52] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 60,
+                    },
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 198, Text = "Далее" },
@@ -721,6 +863,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [63] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 148, Text = "Далее" },
@@ -728,6 +879,64 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [64] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
+                        Name = "StatBonuses",
+                        Value = 3,
+                    },
+                },
+
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить силы",
+                        Text = "СИЛА",
+                        Stat = "Strength",
+                        Aftertext = "Способность персонажа поднимать и переносить тяжести, бороться, а также общая выносливость.",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить ловкости",
+                        Text = "ЛОВКОСТЬ",
+                        Stat = "Skill",
+                        Aftertext = "Скорость реакции, умение держать равновесие, уворачиваться, прыгать, а также ловкость рук (точные движения кистей и пальцев, включая игру на музыкальных инструментах).",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить мудрости",
+                        Text = "МУДРОСТЬ",
+                        Stat = "Wisdom",
+                        Aftertext = "Общие знания, жизненный опыт, способность к анализу и логическим рассуждениям, умение замечать детали и делать правильные выводы.",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить хитрости",
+                        Text = "ХИТРОСТЬ",
+                        Stat = "Cunning",
+                        Aftertext = "Способность обманывать, жульничать, воровские навыки, а также находчивость и умение быстро находить решения в сложных ситуациях.",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить красноречия",
+                        Text = "КРАСНОРЕЧИЕ",
+                        Stat = "Oratory",
+                        Aftertext = "Способность разговорить собеседника, дар убеждения, умение слагать стихи и песни.\n\nСердечно поблагодарив аксакалов, джигит покидает их юрту. В поисках ночлега Алдар спрашивает совета у охранников на входе, которые указывают ему на шатры для гостей праздника.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 7, Text = "Далее" },
@@ -750,6 +959,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [67] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 8, Text = "Далее" },
@@ -772,6 +990,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [70] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 7, Text = "Далее" },
@@ -832,6 +1059,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [75] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 OpenOption = "TengriSymbol",
 
                 Options = new List<Option>
@@ -915,6 +1151,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [80] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 56, Text = "Далее" },
@@ -998,6 +1243,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [85] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 OpenOption = "DonsHorse",
 
                 Options = new List<Option>
@@ -1034,6 +1288,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [88] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 OpenOption = "Note",
 
                 Options = new List<Option>
@@ -1088,6 +1351,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [92] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 OpenOption = "GreenStone, TipsFromAthanasius",
 
                 Options = new List<Option>
@@ -1111,6 +1383,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [95] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 120, Text = "Далее" },
@@ -1118,6 +1399,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [96] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 174, Text = "Далее" },
@@ -1148,6 +1438,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [100] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 56, Text = "Далее" },
@@ -1155,6 +1454,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [101] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 140, Text = "Далее" },
@@ -1180,6 +1488,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [104] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 8, Text = "Далее" },
@@ -1187,6 +1504,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [105] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 OpenOption = "PartyClothes",
 
                 Options = new List<Option>
@@ -1213,6 +1539,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [108] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 157, Text = "Далее" },
@@ -1230,6 +1565,25 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [110] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 150,
+                    },
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
+                        Name = "Skill",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 99, Text = "Далее" },
@@ -1306,6 +1660,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [117] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 198, Text = "Далее" },
@@ -1408,6 +1771,20 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [127] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 150,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 99, Text = "Далее" },
@@ -1422,6 +1799,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [129] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 174, Text = "Далее" },
@@ -1557,6 +1943,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = -15,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 29, Text = "Если обе проверки удачны" },
@@ -1566,6 +1961,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [139] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = -25,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 19, Text = "Далее" },
@@ -1587,6 +1991,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [142] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 15, Text = "Далее" },
@@ -1611,6 +2024,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [145] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 20,
+                    },
+                },
+
                 OpenOption = "DonsHorse",
 
                 Options = new List<Option>
@@ -1620,6 +2042,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [146] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 56, Text = "Согласиться посетить поселение ойратов и поговорить с их предводителем" },
@@ -1668,6 +2099,20 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [149] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 160,
+                    },
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 19, Text = "Далее" },
@@ -1774,6 +2219,20 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [159] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = -1,
+                    },
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = -10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 19, Text = "Далее" },
@@ -1834,6 +2293,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [166] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 OpenOption = "Message",
 
                 Options = new List<Option>
@@ -1885,6 +2353,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [171] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 161, Text = "Далее" },
@@ -1941,6 +2418,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [176] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 161, Text = "Далее" },
@@ -1955,6 +2441,20 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [178] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 100,
+                    },
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 168, Text = "Далее" },
@@ -2011,6 +2511,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [183] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 56, Text = "Далее" },
@@ -2032,6 +2541,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [186] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 150,
+                    },
+                },
+
                 OpenOption = "LargeSum",
 
                 Options = new List<Option>
@@ -2063,6 +2581,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [188] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 168, Text = "Далее" },
@@ -2098,6 +2625,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [191] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 198, Text = "Далее" },
@@ -2105,6 +2641,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [192] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 161, Text = "Далее" },
@@ -2131,6 +2676,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [194] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 10,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 104, Text = "Далее" },
@@ -2146,6 +2700,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [196] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 1,
+                    },
+                },
+
                 OpenOption = "GiftPromise",
 
                 Options = new List<Option>
@@ -2171,6 +2734,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [199] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Popularity",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 161, Text = "Далее" },
@@ -2185,6 +2757,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [201] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Wisdom",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 99, Text = "Начать сначала" },
