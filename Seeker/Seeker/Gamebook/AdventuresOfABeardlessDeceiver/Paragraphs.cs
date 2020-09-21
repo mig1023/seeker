@@ -224,7 +224,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 {
                     new Option { Destination = 89, Text = "В случае успеха" },
                     new Option { Destination = 129, Text = "В случае провала" },
-                    new Option { Destination = 32, Text = "У Алдара донской рысак" },
+                    new Option { Destination = 32, Text = "У Алдара донской рысак", OnlyIf = "DonsHorse" },
                     new Option { Destination = 54, Text = "Взять немного левее" },
                 }
             },
@@ -998,6 +998,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [85] = new Paragraph
             {
+                OpenOption = "DonsHorse",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 140, Text = "Далее" },
@@ -1607,6 +1609,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [145] = new Paragraph
             {
+                OpenOption = "DonsHorse",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 175, Text = "Далее" },
