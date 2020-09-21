@@ -1628,7 +1628,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 118, Text = "Алдар Косе получал от Лихарева крупную наградуа" },
+                    new Option { Destination = 118, Text = "Алдар Косе получал от Лихарева крупную наградуа", OnlyIf = "LargeSum" },
                     new Option { Destination = 145, Text = "Лихарев обещал подарить скакуна", OnlyIf = "GiftPromise" },
                     new Option { Destination = 175, Text = "Покинуть крепость" },
                 }
@@ -2016,6 +2016,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [186] = new Paragraph
             {
+                OpenOption = "LargeSum",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 157, Text = "Далее" },
