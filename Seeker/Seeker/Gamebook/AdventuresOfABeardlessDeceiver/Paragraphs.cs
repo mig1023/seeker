@@ -1088,6 +1088,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [92] = new Paragraph
             {
+                OpenOption = "GreenStone, TipsFromAthanasius",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 99, Text = "Далее" },
@@ -1442,7 +1444,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 {
                     new Option { Destination = 181, Text = "В случае успеха" },
                     new Option { Destination = 108, Text = "В случае провала" },
-                    new Option { Destination = 43, Text = "Если у Алдара Косе записано «наставление Афанасия»" },
+                    new Option { Destination = 43, Text = "Алдара Косе помнит наставления Афанасия", OnlyIf = "TipsFromAthanasius" },
                     new Option { Destination = 137, Text = "Есть знак Тенгри", OnlyIf = "TengriSymbol" },
                     
                 }
@@ -1812,8 +1814,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 130, Text = "Если у Алдара Косе есть зелёный камень" },
-                    new Option { Destination = 157, Text = "Если же нет" },
+                    new Option { Destination = 130, Text = "Есть зелёный камень", OnlyIf = "GreenStone" },
+                    new Option { Destination = 157, Text = "Далее" },
                 }
             },
             [166] = new Paragraph
