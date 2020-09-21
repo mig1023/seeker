@@ -150,6 +150,19 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [12] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Заплатить за комнату",
+                        Text = "КОМНАТА НА НОЧЬ",
+                        Price = 10,
+                        Aftertext = "Цена очень завышена, учитывая то, что вчера Алдар не выложил ни одной монеты за ночлег. Но в противной случае придётся провести ночь у костра во внутреннем дворе.",
+                        OpenOption = "Room",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 109, Text = "Далее" },
@@ -333,7 +346,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае", OnlyIf = "Room" },
                     new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
@@ -473,7 +486,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае", OnlyIf = "Room" },
                     new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
@@ -544,6 +557,19 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [46] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Заплатить за комнату",
+                        Text = "КОМНАТА НА НОЧЬ",
+                        Price = 25,
+                        Aftertext = "В случае отказа он с лёгкостью продаст комнату любому торговцу, у которых всегда есть деньги. Но тогда нашему герою придётся провести ночь у костра во внутреннем дворе.",
+                        OpenOption = "Room",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 109, Text = "Далее" },
@@ -594,7 +620,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае", OnlyIf = "Room" },
                     new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
@@ -718,7 +744,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае", OnlyIf = "Room" },
                     new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
@@ -1370,7 +1396,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     new Option { Destination = 51, Text = "Бросить в блюдо 5 ТАНЬГА", OnlyIf = "ТАНЬГА >= 5" },
                     new Option { Destination = 195, Text = "Бросить в блюдо 15 ТАНЬГА", OnlyIf = "ТАНЬГА >= 15" },
                     new Option { Destination = 21, Text = "Бросить в блюдо 25 ТАНЬГА", OnlyIf = "ТАНЬГА >= 25" },
-                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае", OnlyIf = "Room" },
                     new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
@@ -1797,7 +1823,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае", OnlyIf = "Room" },
                     new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
@@ -2090,7 +2116,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае" },
+                    new Option { Destination = 163, Text = "Алдару удалось получить комнату в караван-сарае", OnlyIf = "Room" },
                     new Option { Destination = 172, Text = "Он будет спать во внутреннем дворе у костра" },
                 }
             },
