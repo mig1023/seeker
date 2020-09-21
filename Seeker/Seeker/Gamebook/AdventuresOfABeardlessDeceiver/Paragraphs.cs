@@ -832,6 +832,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [75] = new Paragraph
             {
+                OpenOption = "TengriSymbol",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 120, Text = "Далее" },
@@ -1439,7 +1441,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     new Option { Destination = 181, Text = "В случае успеха" },
                     new Option { Destination = 108, Text = "В случае провала" },
                     new Option { Destination = 43, Text = "Если у Алдара Косе записано «наставление Афанасия»" },
-                    new Option { Destination = 137, Text = "Если у Алдара Косе есть знак Тенгри" },
+                    new Option { Destination = 137, Text = "Есть знак Тенгри", OnlyIf = "TengriSymbol" },
                     
                 }
             },
