@@ -125,7 +125,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public List<string> Get()
         {
-            if (Character.Protagonist.StatBonuses >= 0)
+            if ((Price > 0) && (Character.Protagonist.Tanga >= Price))
+                Character.Protagonist.Tanga -= Price;
+            else if (Character.Protagonist.StatBonuses >= 0)
             {
                 int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
 
