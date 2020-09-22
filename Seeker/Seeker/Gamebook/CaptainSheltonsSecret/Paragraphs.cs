@@ -660,7 +660,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 176, Text = "Нагонать корвет" },
+                    new Option { Destination = 176, Text = "Нагнать корвет" },
                     new Option { Destination = 4, Text = "Продолжить путь" },
                 }
             },
@@ -2292,7 +2292,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 405, Text = "Нагоните корабль капитана Шелтона" },
+                    new Option { Destination = 405, Text = "Нагнать корабль капитана Шелтона" },
                     new Option { Destination = 237, Text = "Продолжать свой путь" },
                 }
             },
