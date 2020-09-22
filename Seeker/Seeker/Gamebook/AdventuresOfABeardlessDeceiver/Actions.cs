@@ -37,16 +37,27 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public List<string> Status()
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Сила: {0}", Character.Protagonist.Strength),
-                String.Format("Ловкость: {0}", Character.Protagonist.Skill),
-                String.Format("Мудрость: {0}", Character.Protagonist.Wisdom),
-                String.Format("Хитрость: {0}", Character.Protagonist.Cunning),
-                String.Format("Красноречие: {0}", Character.Protagonist.Oratory),
-                String.Format("Популярность: {0}", Character.Protagonist.Popularity),
-                String.Format("Деньги: {0}", Character.Protagonist.Tanga)
-            };
+            List<string> statusLines = new List<string>();
+
+            if (Character.Protagonist.Strength > 1)
+                statusLines.Add(String.Format("Сила: {0}", Character.Protagonist.Strength));
+
+            if (Character.Protagonist.Skill > 1)
+                statusLines.Add(String.Format("Ловкость: {0}", Character.Protagonist.Skill));
+
+            if (Character.Protagonist.Wisdom > 1)
+                statusLines.Add(String.Format("Мудрость: {0}", Character.Protagonist.Wisdom));
+
+            if (Character.Protagonist.Cunning > 1)
+                statusLines.Add(String.Format("Хитрость: {0}", Character.Protagonist.Cunning));
+
+            if (Character.Protagonist.Oratory > 1)
+                statusLines.Add(String.Format("Красноречие: {0}", Character.Protagonist.Oratory));
+
+            if (Character.Protagonist.Tanga > 0)
+                statusLines.Add(String.Format("Деньги: {0}", Character.Protagonist.Tanga));
+
+            statusLines.Add(String.Format("Популярность: {0}", Character.Protagonist.Popularity));
 
             return statusLines;
         }
