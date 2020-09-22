@@ -67,7 +67,7 @@ namespace Seeker
 
             Game.Option.OpenOption(paragraph.OpenOption);
 
-            if ((paragraph.Modification != null) && (paragraph.Modification.Count > 0))
+            if (!reload && (paragraph.Modification != null) && (paragraph.Modification.Count > 0))
                 foreach(Interfaces.IModification modification in paragraph.Modification)
                     modification.Do();
 
@@ -79,7 +79,7 @@ namespace Seeker
                 {
                     StackLayout actionPlace = Game.Interface.ActionPlace();
 
-                    foreach (Label enemy in Game.Interface.Represent(action.Do(out _, "Representer")))
+                    foreach (View enemy in Game.Interface.Represent(action.Do(out _, "Representer")))
                         actionPlace.Children.Add(enemy);
 
                     Button button = Game.Interface.ActionButton(action.ButtonName, action.IsButtonEnabled());
@@ -164,6 +164,7 @@ namespace Seeker
         private void Action_Click(object sender, EventArgs e)
         {
             Button b = sender as Button;
+
             int actionIndex = Game.Router.FindAction(b.Text);
 
             StackLayout actionPlace = Game.Router.FindActionsPlaces(actionIndex);
