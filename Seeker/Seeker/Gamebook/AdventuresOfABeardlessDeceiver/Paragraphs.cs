@@ -38,7 +38,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 {
                     new Option { Destination = 205, Text = "В путь!" },
                     new Option { Destination = 206, Text = "Правила и инструкции" },
-                    new Option { Destination = 63, Text = "TEST" },
                 }
             },
             [1] = new Paragraph
@@ -1171,9 +1170,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 Options = new List<Option>
                 {
                     new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
-                    new Option { Destination = 119, Text = "В случае успеха", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
-                    new Option { Destination = 141, Text = "В случае провала", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
-                    new Option { Destination = 106, Text = "У Алдара арабский скакун", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
+                    new Option { Destination = 119, Text = "В случае успеха", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0, !ArabianHorse" },
+                    new Option { Destination = 141, Text = "В случае провала", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0, !ArabianHorse" },
+                    new Option { Destination = 106, Text = "У Алдара арабский скакун", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0, ArabianHorse" },
                 }
             },
             [77] = new Paragraph
@@ -1313,6 +1312,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ButtonName = "Купить скакуна",
                         Text = "СКАКУН АРАБСКОЙ ПОРОДЫ",
                         Price = 120,
+                        OpenOption = "ArabianHorse",
                         Aftertext = "Алдару очень нравится этот конь и он сторговывается с кипчаком на 120 ТАНЬГА, если наш герой отдаст своего жеребца торговцу.",
                     },
                 },
@@ -1387,7 +1387,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "Note",
+                OpenOption = "Note, ArabianHorse",
 
                 Options = new List<Option>
                 {
