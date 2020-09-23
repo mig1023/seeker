@@ -88,24 +88,31 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public static bool CheckOnlyIf(string option)
         {
-            if (option.Contains(","))
-            {
-                foreach (string oneOption in option.Split(','))
-                    if (!Game.Data.OpenedOption.Contains(oneOption.Trim()))
-                        return false;
+            string[] options = option.Split(',');
 
-                return true;
+            foreach (string oneOption in options)
+            {
+                if (oneOption.Contains(">") || oneOption.Contains("<"))
+                {
+                    if (oneOption.Contains("ТАНЬГА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Tanga))
+                        return false;
+                    else if (oneOption.Contains("СЛАВА_АКЫНА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.AkynGlory))
+                        return false;
+                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.UnitOfTime))
+                        return false;
+                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.UnitOfTime))
+                        return false;
+                }
+                else if (oneOption.Contains("!"))
+                {
+                    if (Game.Data.OpenedOption.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        return false;
+                }
+                else if (!Game.Data.OpenedOption.Contains(oneOption.Trim()))
+                    return false;
             }
-            else if (option.Contains("ТАНЬГА >="))
-                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Tanga;
-            else if (option.Contains("СЛАВА_АКЫНА >="))
-                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.AkynGlory;
-            else if (option.Contains("ЕДИНИЦЫ_ВРЕМЕНИ >"))
-                return int.Parse(option.Split('>')[1]) < Character.Protagonist.UnitOfTime;
-            else if (option.Contains("ЕДИНИЦЫ_ВРЕМЕНИ <="))
-                return int.Parse(option.Split('=')[1]) >= Character.Protagonist.UnitOfTime;
-            else
-                return Game.Data.OpenedOption.Contains(option);
+
+            return true;
         }
 
         public List<string> Test()

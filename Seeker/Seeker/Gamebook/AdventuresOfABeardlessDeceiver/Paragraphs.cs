@@ -270,10 +270,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 89, Text = "В случае успеха", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
-                    new Option { Destination = 129, Text = "В случае провала", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
-                    new Option { Destination = 32, Text = "У Алдара донской рысак", OnlyIf = "DonsHorse" },
-                    new Option { Destination = 54, Text = "Взять немного левее", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
+                    new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 89, Text = "В случае успеха", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0, !DonsHorse" },
+                    new Option { Destination = 129, Text = "В случае провала", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0, !DonsHorse" },
+                    new Option { Destination = 32, Text = "У Алдара донской рысак", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0, DonsHorse" },
+                    new Option { Destination = 54, Text = "Взять немного левее", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0, !DonsHorse" },
                 }
             },
             [19] = new Paragraph
