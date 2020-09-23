@@ -47,6 +47,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     new Option { Destination = 30, Text = "Поднять золотую монету" },
                     new Option { Destination = 60, Text = "Поднять бронзовый знак Тенгри" },
                     new Option { Destination = 90, Text = "Поднять сверток с одеждой" },
+                     
                 }
             },
             [2] = new Paragraph
@@ -128,6 +129,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     {
                         Name = "Popularity",
                         Value = 3,
+                    },
+                    new Modification
+                    {
+                        Name = "AkynGlory",
+                        Empty = true,
                     },
                 },
 
@@ -648,6 +654,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [44] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "AkynGlory",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 132, Text = "Далее" },
@@ -766,6 +781,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Name = "Popularity",
                         Value = 1,
                     },
+                    new Modification
+                    {
+                        Name = "AkynGlory",
+                        Empty = true,
+                    },
                 },
 
                 Options = new List<Option>
@@ -791,6 +811,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [55] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "AkynGlory",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 132, Text = "Далее" }
@@ -1040,6 +1069,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [74] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "AkynGlory",
+                        Init = true,
+                    },
+                },
+
                 Actions = new List<Actions>
                 {
                     new Actions
@@ -1261,6 +1299,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [86] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "AkynGlory",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 115, Text = "Далее" },
@@ -1415,6 +1462,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [97] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "AkynGlory",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 115, Text = "Далее" },
@@ -1667,6 +1723,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Name = "Popularity",
                         Value = 1,
                     },
+                    new Modification
+                    {
+                        Name = "AkynGlory",
+                        Empty = true,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1847,10 +1908,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 9, Text = "Если СЛАВА АКЫНА равна 6 или больше" },
-                    new Option { Destination = 52, Text = "Если она достигает значения от 3 до 5" },
-                    new Option { Destination = 117, Text = "Если же этот параметр равняется 1 или 2" },
-                    new Option { Destination = 191, Text = "А если СЛАВА АКЫНА осталась на нуле или даже уменьшилась" },
+                    new Option { Destination = 9, Text = "СЛАВА АКЫНА равна 6 или больше", OnlyIf = "СЛАВА_АКЫНА >= 6" },
+                    new Option { Destination = 52, Text = "СЛАВА АКЫНА от 3 до 5", OnlyIf = "СЛАВА_АКЫНА >= 3"  },
+                    new Option { Destination = 117, Text = "СЛАВА АКЫНА равняется 1 или 2", OnlyIf = "СЛАВА_АКЫНА >= 1" },
+                    new Option { Destination = 191, Text = "СЛАВА АКЫНА осталась на нуле или даже уменьшилась" },
                 }
             },
             [133] = new Paragraph
@@ -2632,6 +2693,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Name = "Popularity",
                         Value = -1,
                     },
+                    new Modification
+                    {
+                        Name = "AkynGlory",
+                        Empty = true,
+                    },
                 },
 
                 Options = new List<Option>
@@ -2718,6 +2784,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [197] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "AkynGlory",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 22, Text = "Далее" },

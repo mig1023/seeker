@@ -57,6 +57,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             if (Character.Protagonist.Tanga > 0)
                 statusLines.Add(String.Format("Деньги: {0}", Character.Protagonist.Tanga));
 
+            if (Character.Protagonist.AkynGlory != null)
+                statusLines.Add(String.Format("Слава акына: {0}", Character.Protagonist.AkynGlory));
+
             statusLines.Add(String.Format("Популярность: {0}", Character.Protagonist.Popularity));
 
             return statusLines;
@@ -92,6 +95,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             }
             else if (option.Contains("ТАНЬГА >="))
                 return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Tanga;
+            else if (option.Contains("СЛАВА_АКЫНА >="))
+                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.AkynGlory;
             else
                 return Game.Data.OpenedOption.Contains(option);
         }
