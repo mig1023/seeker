@@ -100,6 +100,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Tanga;
             else if (option.Contains("СЛАВА_АКЫНА >="))
                 return int.Parse(option.Split('=')[1]) <= Character.Protagonist.AkynGlory;
+            else if (option.Contains("ЕДИНИЦЫ_ВРЕМЕНИ >"))
+                return int.Parse(option.Split('>')[1]) <= Character.Protagonist.UnitOfTime;
+            else if (option.Contains("ЕДИНИЦЫ_ВРЕМЕНИ <="))
+                return int.Parse(option.Split('=')[1]) >= Character.Protagonist.UnitOfTime;
             else
                 return Game.Data.OpenedOption.Contains(option);
         }

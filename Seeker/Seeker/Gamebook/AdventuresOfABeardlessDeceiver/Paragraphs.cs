@@ -270,10 +270,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 89, Text = "В случае успеха" },
-                    new Option { Destination = 129, Text = "В случае провала" },
+                    new Option { Destination = 89, Text = "В случае успеха", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
+                    new Option { Destination = 129, Text = "В случае провала", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                     new Option { Destination = 32, Text = "У Алдара донской рысак", OnlyIf = "DonsHorse" },
-                    new Option { Destination = 54, Text = "Взять немного левее" },
+                    new Option { Destination = 54, Text = "Взять немного левее", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [19] = new Paragraph
@@ -471,7 +471,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 76, Text = "Далее" },
+                    new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 76, Text = "Далее", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [33] = new Paragraph
@@ -751,7 +752,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 123, Text = "Далее" },
+                    new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 123, Text = "Далее", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [49] = new Paragraph
@@ -834,7 +836,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 76, Text = "Далее" },
+                    new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 76, Text = "Далее", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [55] = new Paragraph
@@ -871,6 +874,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [58] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "UnitOfTime",
+                        Empty = true,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 174, Text = "Далее" },
@@ -1042,7 +1054,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 123, Text = "Далее" },
+                    new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 123, Text = "Далее", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [70] = new Paragraph
@@ -1156,9 +1169,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 119, Text = "В случае успеха" },
-                    new Option { Destination = 141, Text = "В случае провала" },
-                    new Option { Destination = 106, Text = "У Алдара арабский скакун" },
+                    new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 119, Text = "В случае успеха", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
+                    new Option { Destination = 141, Text = "В случае провала", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
+                    new Option { Destination = 106, Text = "У Алдара арабский скакун", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [77] = new Paragraph
@@ -1392,7 +1406,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 76, Text = "Далее" },
+                    new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 76, Text = "Далее", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [90] = new Paragraph
@@ -1489,6 +1504,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     {
                         Name = "Popularity",
                         Value = 2,
+                    },
+                    new Modification
+                    {
+                        Name = "UnitOfTime",
+                        Empty = true,
                     },
                 },
 
@@ -1626,8 +1646,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 96, Text = "Если ЕДИНИЦЫ ВРЕМЕНИ уменьшились до нуля" },
-                    new Option { Destination = 58, Text = "Если счёт всё ещё больше нуля" },
+                    new Option { Destination = 96, Text = "Если ЕДИНИЦЫ ВРЕМЕНИ уменьшились до нуля", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 58, Text = "Если счёт всё ещё больше нуля", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [107] = new Paragraph
@@ -1801,8 +1821,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 96, Text = "Если ЕДИНИЦЫ ВРЕМЕНИ уменьшились до нуля" },
-                    new Option { Destination = 58, Text = "Если счёт всё ещё больше нуля" },
+                    new Option { Destination = 96, Text = "Если ЕДИНИЦЫ ВРЕМЕНИ уменьшились до нуля", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 58, Text = "Если счёт всё ещё больше нуля", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [120] = new Paragraph
@@ -1843,9 +1863,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 169, Text = "В случае успеха" },
-                    new Option { Destination = 153, Text = "В случае провала" },
-                    new Option { Destination = 182, Text = "Если у Алдара Косе жеребец-ахалтекинец" },
+                    new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 169, Text = "В случае успеха", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
+                    new Option { Destination = 153, Text = "В случае провала", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
+                    new Option { Destination = 182, Text = "Если у Алдара Косе жеребец-ахалтекинец", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [124] = new Paragraph
@@ -1926,7 +1947,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 174, Text = "Далее" },
+                    new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 174, Text = "Далее", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [130] = new Paragraph
@@ -2277,7 +2299,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 18, Text = "Далее" },
+                    new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 18, Text = "Далее", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [154] = new Paragraph
@@ -2472,7 +2495,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 18, Text = "Далее" },
+                    new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 18, Text = "Далее", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [170] = new Paragraph
@@ -2546,6 +2570,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [174] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "UnitOfTime",
+                        Empty = true,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 42, Text = "Если ПОПУЛЯРНОСТЬ Алдара Косе равняется 6 или больше" },
@@ -2658,7 +2691,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 18, Text = "Далее" },
+                    new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
+                    new Option { Destination = 18, Text = "Далее", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
                 }
             },
             [183] = new Paragraph
