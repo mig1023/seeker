@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public int Popularity { get; set; }
         public int Tanga { get; set; }
         public int? AkynGlory { get; set; }
+        public int? UnitOfTime { get; set; }
 
         public int StatBonuses { get; set; }
 
@@ -32,6 +33,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             Tanga = 15;
             StatBonuses = 4;
             AkynGlory = null;
+            UnitOfTime = null;
         }
 
         public Character Clone()
@@ -47,6 +49,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             newCharacter.Tanga = this.Tanga;
             newCharacter.StatBonuses = this.StatBonuses;
             newCharacter.AkynGlory = this.AkynGlory;
+            newCharacter.UnitOfTime = this.UnitOfTime;
 
             return newCharacter;
         }

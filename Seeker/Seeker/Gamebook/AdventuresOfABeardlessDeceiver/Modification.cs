@@ -14,14 +14,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public void Do()
         {
-            if (Name == "AkynGlory")
+            if ((Name == "AkynGlory") || (Name == "UnitOfTime"))
             {
                 int? currentValue = (int?)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
                 if (Empty)
                     currentValue = null;
-                else if (Init)
+                else if (Init && (Name == "AkynGlory"))
                     currentValue = (Game.Data.OpenedOption.Contains("PartyClothes") ? 1 : 0);
+                else if (Init && (Name == "UnitOfTime"))
+                    currentValue = 4;
                 else
                     currentValue += Value;
 

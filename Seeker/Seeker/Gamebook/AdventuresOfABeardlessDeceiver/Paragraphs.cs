@@ -38,6 +38,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 {
                     new Option { Destination = 205, Text = "В путь!" },
                     new Option { Destination = 206, Text = "Правила и инструкции" },
+                    new Option { Destination = 63, Text = "TEST" },
                 }
             },
             [1] = new Paragraph
@@ -459,6 +460,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [32] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "UnitOfTime",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 76, Text = "Далее" },
@@ -730,6 +740,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [48] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "UnitOfTime",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 123, Text = "Далее" },
@@ -804,6 +823,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [54] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "UnitOfTime",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 76, Text = "Далее" },
@@ -1353,6 +1381,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [89] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "UnitOfTime",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 76, Text = "Далее" },
@@ -1578,6 +1615,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [106] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "UnitOfTime",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 96, Text = "Если ЕДИНИЦЫ ВРЕМЕНИ уменьшились до нуля" },
@@ -1744,6 +1790,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [119] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "UnitOfTime",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 96, Text = "Если ЕДИНИЦЫ ВРЕМЕНИ уменьшились до нуля" },
@@ -2152,6 +2207,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "UnitOfTime",
+                        Init = true,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 48, Text = "В случае успеха" },
@@ -2202,6 +2266,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [153] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "UnitOfTime",
+                        Value = +1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 18, Text = "Далее" },
@@ -2388,6 +2461,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [169] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "UnitOfTime",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 18, Text = "Далее" },
@@ -2565,6 +2647,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [182] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "UnitOfTime",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 18, Text = "Далее" },

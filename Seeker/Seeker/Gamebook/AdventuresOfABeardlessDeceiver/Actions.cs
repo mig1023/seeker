@@ -60,6 +60,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             if (Character.Protagonist.AkynGlory != null)
                 statusLines.Add(String.Format("Слава акына: {0}", Character.Protagonist.AkynGlory));
 
+            if (Character.Protagonist.UnitOfTime != null)
+                statusLines.Add(String.Format("Ед.времени: {0}", Character.Protagonist.UnitOfTime));
+
             statusLines.Add(String.Format("Популярность: {0}", Character.Protagonist.Popularity));
 
             return statusLines;
