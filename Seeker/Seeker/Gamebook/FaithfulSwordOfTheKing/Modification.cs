@@ -9,6 +9,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public string Name { get; set; }
         public int Value { get; set; }
         public string ValueString { get; set; }
+        public bool Empty { get; set; }
 
         public void Do()
         {
@@ -16,7 +17,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             currentValue += Value;
 
-            if (currentValue < 0)
+            if (Empty || (currentValue < 0))
                 currentValue = 0;
 
             Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);

@@ -3934,7 +3934,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     new Modification
                     {
                         Name = "Ecu",
-                        Value = -100000,
+                        Empty = true,
                     },
                 },
 
@@ -4677,22 +4677,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     new Modification
                     {
                         Name = "Ecu",
-                        Value = -100000,
+                        Empty = true,
                     },
                     new Modification
                     {
                         Name = "Daggers",
-                        Value = -10,
+                        Empty = true,
                     },
                     new Modification
                     {
                         Name = "Pistols",
-                        Value = -10,
+                        Empty = true,
                     },
                     new Modification
                     {
                         Name = "BulletsAndGubpowder",
-                        Value = -100,
+                        Empty = true,
                     },
                 },
 
