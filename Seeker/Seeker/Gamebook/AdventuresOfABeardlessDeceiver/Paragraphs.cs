@@ -1611,6 +1611,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
+                OpenOption = "AkhalTeke",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 8, Text = "Далее" },
@@ -1865,9 +1867,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 Options = new List<Option>
                 {
                     new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
-                    new Option { Destination = 169, Text = "В случае успеха", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
-                    new Option { Destination = 153, Text = "В случае провала", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
-                    new Option { Destination = 182, Text = "Если у Алдара Косе жеребец-ахалтекинец", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
+                    new Option { Destination = 169, Text = "В случае успеха", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0, !AkhalTeke" },
+                    new Option { Destination = 153, Text = "В случае провала", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0, !AkhalTeke" },
+                    new Option { Destination = 182, Text = "Если у Алдара Косе жеребец-ахалтекинец", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0, AkhalTeke" },
                 }
             },
             [124] = new Paragraph
