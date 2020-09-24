@@ -2759,6 +2759,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
                         Level = 20,
+                        GreatKhanSpecialCheck = true,
                     },
                 },
 

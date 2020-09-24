@@ -16,6 +16,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public string Stat { get; set; }
         public int Level { get; set; }
         public int Price { get; set; }
+        public bool GreatKhanSpecialCheck { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool openOption = false)
         {
@@ -122,6 +123,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
 
+            if (GreatKhanSpecialCheck)
+                Level -= (Character.Protagonist.Popularity + (Game.Data.OpenedOption.Contains("KhansRing") ? 3 : 0));
+
             int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
             bool testIsOk = (firstDice + secondDice) + currentStat >= Level;
 
@@ -138,6 +142,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             List<string> testLines = new List<string> { String.Format(
                 "Проверка {0}: {1} ⚄ + {2} ⚄ + {3} {4} {5}", statNames[Stat], firstDice, secondDice, currentStat, (testIsOk ? ">=" : "<"), Level
             ) };
+
+            if (GreatKhanSpecialCheck)
+            {
+                if (Game.Data.OpenedOption.Contains("KhansRing"))
+                    testLines.Insert(0, "Бонус за ханское кольцо: -3");
+
+                if (Character.Protagonist.Popularity > 0)
+                    testLines.Insert(0, String.Format("Бонус за популярность: -{0}", Character.Protagonist.Popularity));
+            }
 
             testLines.Add(testIsOk ? "BIG|GOOD|АЛДАР СПРАВИЛСЯ :)" : "BIG|BAD|АЛДАР НЕ СПРАВИЛСЯ :(");
 
