@@ -1248,8 +1248,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 151, Text = "Если имя Сауле знакомо Алдару Косе" },
-                    new Option { Destination = 204, Text = "Если оно ни о чём не говорит" },
+                    new Option { Destination = 151, Text = "Имя Сауле знакомо Алдару Косе", OnlyIf = "SauleName" },
+                    new Option { Destination = 204, Text = "Далее" },
                 }
             },
             [82] = new Paragraph
@@ -1511,6 +1511,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Empty = true,
                     },
                 },
+
+                OpenOption = "SauleName",
 
                 Options = new List<Option>
                 {
