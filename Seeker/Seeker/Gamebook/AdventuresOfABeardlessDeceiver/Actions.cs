@@ -98,6 +98,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         return false;
                     else if (oneOption.Contains("СЛАВА_АКЫНА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.AkynGlory))
                         return false;
+                    else if (oneOption.Contains("ПОПУЛЯРНОСТЬ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Popularity))
+                        return false;
                     else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.UnitOfTime))
                         return false;
                     else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.UnitOfTime))

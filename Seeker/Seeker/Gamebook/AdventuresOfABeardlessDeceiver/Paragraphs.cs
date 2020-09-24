@@ -2414,7 +2414,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     new Option { Destination = 6, Text = "Если письмо Гулинши-багатура", OnlyIf = "Letter" },
                     new Option { Destination = 6, Text = "Если сообщение из бухарского каравана", OnlyIf = "Message" },
                     new Option { Destination = 6, Text = "Если записка Джанибека", OnlyIf = "Note" },
-                    new Option { Destination = 16, Text = "Если Темир-батыр был посрамлён или ПОПУЛЯРНОСТЬ Алдара Косе равняется 10 или больше" },
+                    new Option { Destination = 16, Text = "Если Темир-батыр был посрамлён" },
+                    new Option { Destination = 16, Text = "ПОПУЛЯРНОСТЬ Алдара Косе равняется 10 или больше", OnlyIf = "ПОПУЛЯРНОСТЬ > 9" },
                     new Option { Destination = 34, Text = "Кочевник знает человека по имени Серик", OnlyIf = "Serik" },
                     new Option { Destination = 49, Text = "Посулить денег охране" },
                     new Option { Destination = 83, Text = "Попытаться уговорить" },
@@ -2584,8 +2585,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 42, Text = "Если ПОПУЛЯРНОСТЬ Алдара Косе равняется 6 или больше" },
-                    new Option { Destination = 11, Text = "Если же ПОПУЛЯРНОСТЬ меньше 6" },
+                    new Option { Destination = 42, Text = "ПОПУЛЯРНОСТЬ Алдара Косе равняется 6 или больше", OnlyIf = "ПОПУЛЯРНОСТЬ > 5" },
+                    new Option { Destination = 11, Text = "ПОПУЛЯРНОСТЬ Алдара Косе меньше 6", OnlyIf = "ПОПУЛЯРНОСТЬ <= 5" },
                 }
             },
             [175] = new Paragraph
