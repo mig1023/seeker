@@ -14,7 +14,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public void Do()
         {
-            if ((Name == "AkynGlory") || (Name == "UnitOfTime"))
+            if (Name == "PopularityByTime")
+            {
+                if ((Character.Protagonist.UnitOfTime > 2) && (Character.Protagonist.Popularity > 0))
+                    Character.Protagonist.Popularity -= 1;
+                else if (Character.Protagonist.UnitOfTime == 1)
+                    Character.Protagonist.Popularity += 1;
+            }
+            else if ((Name == "AkynGlory") || (Name == "UnitOfTime"))
             {
                 int? currentValue = (int?)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 

@@ -878,8 +878,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 {
                     new Modification
                     {
-                        Name = "UnitOfTime",
-                        Empty = true,
+                        Name = "PopularityByTime",
                     },
                 },
 
@@ -1950,8 +1949,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 96, Text = "Догнал", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ <= 0" },
-                    new Option { Destination = 174, Text = "Далее", OnlyIf = "ЕДИНИЦЫ_ВРЕМЕНИ > 0" },
+                    new Option { Destination = 174, Text = "Далее" },
                 }
             },
             [130] = new Paragraph
