@@ -199,6 +199,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
+                OpenOption = "ShameOfTemir",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 161, Text = "Далее" },
@@ -2414,7 +2416,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     new Option { Destination = 6, Text = "Если письмо Гулинши-багатура", OnlyIf = "Letter" },
                     new Option { Destination = 6, Text = "Если сообщение из бухарского каравана", OnlyIf = "Message" },
                     new Option { Destination = 6, Text = "Если записка Джанибека", OnlyIf = "Note" },
-                    new Option { Destination = 16, Text = "Если Темир-батыр был посрамлён" },
+                    new Option { Destination = 16, Text = "Если Темир-батыр был посрамлён", OnlyIf = "ShameOfTemir" },
                     new Option { Destination = 16, Text = "ПОПУЛЯРНОСТЬ Алдара Косе равняется 10 или больше", OnlyIf = "ПОПУЛЯРНОСТЬ > 9" },
                     new Option { Destination = 34, Text = "Кочевник знает человека по имени Серик", OnlyIf = "Serik" },
                     new Option { Destination = 49, Text = "Посулить денег охране" },
@@ -2845,6 +2847,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
+                OpenOption = "ShameOfTemir",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 161, Text = "Далее" },
@@ -2946,6 +2950,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Value = 3,
                     },
                 },
+
+                OpenOption = "ShameOfTemir",
 
                 Options = new List<Option>
                 {
