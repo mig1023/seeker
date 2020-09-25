@@ -33,7 +33,11 @@ namespace Seeker
             {
                 Description gamebookDescr = List.GetDescription(gamebook);
 
-                Image illustration = new Image { Source = gamebookDescr.Illustration };
+                Image illustration = new Image
+                {
+                    Source = gamebookDescr.Illustration,
+                    Aspect = Aspect.AspectFill
+                };
                 Options.Children.Add(illustration);
 
                 Button button = Game.Interface.GamebookButton(gamebook);
