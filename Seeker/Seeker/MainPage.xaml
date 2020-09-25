@@ -7,7 +7,7 @@
              x:Class="Seeker.MainPage">
 
     <ContentPage.Content>
-        <Grid RowSpacing="0">
+        <Grid x:Name="MainGrid" RowSpacing="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>

@@ -139,13 +139,17 @@ namespace Seeker
             Status.Children.Clear();
 
             if (statuses == null)
+            {
                 Status.IsVisible = false;
+                MainGrid.RowDefinitions[1].Height = 0;
+            }
             else
             {
                 foreach (Label status in Game.Interface.StatusBar(statuses))
                     Status.Children.Add(status);
 
                 Status.IsVisible = true;
+                MainGrid.RowDefinitions[1].Height = 40;
             }           
         }
 
