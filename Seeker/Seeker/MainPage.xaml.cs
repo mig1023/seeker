@@ -20,12 +20,24 @@ namespace Seeker
             Gamebooks();
         }
 
+        private void TextLabel(string text)
+        {
+            Label label = new Label
+            {
+                Margin = 5,
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                Text = text
+            };
+            Text.Children.Add(label);
+        }
+
         public void Gamebooks()
         {
-            this.Text.Text = "Выберите книгу:";
-
+            Text.Children.Clear();
             Game.Router.Clean();
             Options.Children.Clear();
+
+            TextLabel("Выберите книгу:");
 
             Game.Data.Actions = null;
 
@@ -62,8 +74,9 @@ namespace Seeker
         {
             Game.Router.Clean();
 
-            Options.Children.Clear();
+            Text.Children.Clear();
             Action.Children.Clear();
+            Options.Children.Clear();
 
             if (id == 0)
                 Game.Data.Protagonist();
@@ -73,7 +86,7 @@ namespace Seeker
             Game.Data.CurrentParagraph = paragraph;
             Game.Data.CurrentParagraphID = id;
 
-            this.Text.Text = (Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty);
+            TextLabel(Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty);
 
             Game.Option.OpenOption(paragraph.OpenOption);
 
