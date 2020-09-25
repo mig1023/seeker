@@ -21,20 +21,23 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 else if (Character.Protagonist.UnitOfTime == 1)
                     Character.Protagonist.Popularity += 1;
             }
-            else if ((Name == "AkynGlory") || (Name == "UnitOfTime"))
+            else if (Name == "AkynGlory")
             {
-                int? currentValue = (int?)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
-
                 if (Empty)
-                    currentValue = null;
-                else if (Init && (Name == "AkynGlory"))
-                    currentValue = (Game.Data.OpenedOption.Contains("PartyClothes") ? 1 : 0);
-                else if (Init && (Name == "UnitOfTime"))
-                    currentValue = 4;
+                    Character.Protagonist.AkynGlory = null;
+                else if (Init)
+                    Character.Protagonist.AkynGlory = (Game.Data.OpenedOption.Contains("PartyClothes") ? 1 : 0);
                 else
-                    currentValue += Value;
-
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+                    Character.Protagonist.AkynGlory += Value;
+            }
+            else if (Name == "UnitOfTime")
+            {
+                if (Empty)
+                    Character.Protagonist.UnitOfTime = null;
+                else if (Init)
+                    Character.Protagonist.UnitOfTime = 4;
+                else
+                    Character.Protagonist.UnitOfTime += Value;
             }
             else
             {
