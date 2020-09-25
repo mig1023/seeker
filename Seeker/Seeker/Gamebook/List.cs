@@ -18,6 +18,7 @@ namespace Seeker.Gamebook
                 Constants = new BlackCastleDungeon.Constants(),
                 Disclaimer = "Браславский Дмитрий, 1991",
                 BookColor = "#000000",
+                Illustration = "BlackCastleDungeon.jpg",
             },
 
             ["Тайна капитана Шелдона"] = new Description
@@ -30,6 +31,7 @@ namespace Seeker.Gamebook
                 Constants = new CaptainSheltonsSecret.Constants(),
                 Disclaimer = "Браславский Дмитрий, 1992",
                 BookColor = "#4682B4",
+                Illustration = "CaptainSheltonsSecret.jpg",
             },
 
             ["Верная шпага короля"] = new Description
@@ -42,6 +44,7 @@ namespace Seeker.Gamebook
                 Constants = new FaithfulSwordOfTheKing.Constants(),
                 Disclaimer = "Браславский Дмитрий, 1995",
                 BookColor = "#911",
+                Illustration = "FaithfulSwordOfTheKing.jpg",
             },
 	    
 	    ["Приключения безбородого обманщика"] = new Description
@@ -54,6 +57,7 @@ namespace Seeker.Gamebook
                 Constants = new AdventuresOfABeardlessDeceiver.Constants(),
                 Disclaimer = "Сизиков Владимир, 2015",
                 BookColor = "#006600",
+                Illustration = "AdventuresOfABeardlessDeceiver.jpg",
             },
         };
 

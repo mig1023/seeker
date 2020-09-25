@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Android.Content.Res;
+using Seeker.Gamebook;
 
 namespace Seeker
 {
@@ -28,8 +29,13 @@ namespace Seeker
 
             Game.Data.Actions = null;
 
-            foreach (string gamebook in Gamebook.List.GetBooks())
+            foreach (string gamebook in List.GetBooks())
             {
+                Description gamebookDescr = List.GetDescription(gamebook);
+
+                Image illustration = new Image { Source = gamebookDescr.Illustration };
+                Options.Children.Add(illustration);
+
                 Button button = Game.Interface.GamebookButton(gamebook);
                 button.Clicked += Gamebook_Click;
                 Options.Children.Add(button);

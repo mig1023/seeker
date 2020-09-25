@@ -14,6 +14,8 @@ namespace Seeker.Gamebook
 
         public string BookColor;
 
+        public string Illustration;
+
         public ProtagonistInit Protagonist;
 
         public CheckOnlyIfFunc CheckOnlyIf;
