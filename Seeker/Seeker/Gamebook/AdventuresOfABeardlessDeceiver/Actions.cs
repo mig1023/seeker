@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public int Level { get; set; }
         public int Price { get; set; }
         public bool GreatKhanSpecialCheck { get; set; }
+        public bool GuessBonus { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool openOption = false)
         {
@@ -123,6 +124,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
 
+            if (GuessBonus && Game.Data.OpenedOption.Contains("guess"))
+                Level = 7;
+
             if (GreatKhanSpecialCheck)
                 Level -= (Character.Protagonist.Popularity + (Game.Data.OpenedOption.Contains("KhansRing") ? 3 : 0));
 
@@ -142,6 +146,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             List<string> testLines = new List<string> { String.Format(
                 "Проверка {0}: {1} ⚄ + {2} ⚄ + {3} {4} {5}", statNames[Stat], firstDice, secondDice, currentStat, (testIsOk ? ">=" : "<"), Level
             ) };
+
+            if (GuessBonus && Game.Data.OpenedOption.Contains("guess"))
+                testLines.Insert(0, "Бонус за догадку: -4");
 
             if (GreatKhanSpecialCheck)
             {

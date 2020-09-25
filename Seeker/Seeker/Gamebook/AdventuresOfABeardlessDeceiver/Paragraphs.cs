@@ -1966,6 +1966,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
                         Level = 11,
+                        GuessBonus = true,
                     },
                 },
 
@@ -2061,6 +2062,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [137] = new Paragraph
             {
+                OpenOption = "guess",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 130, Text = "Вернуться и пройти проверку ещё раз" },
