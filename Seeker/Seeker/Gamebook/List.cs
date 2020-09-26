@@ -47,7 +47,7 @@ namespace Seeker.Gamebook
                 Illustration = "FaithfulSwordOfTheKing.jpg",
             },
 	    
-	    ["Приключения безбородого обманщика"] = new Description
+	        ["Приключения безбородого обманщика"] = new Description
             {
                 XmlBook = "AdventuresOfABeardlessDeceiver.xml",
                 Protagonist = AdventuresOfABeardlessDeceiver.Character.Protagonist.Init,
@@ -60,7 +60,20 @@ namespace Seeker.Gamebook
                 Illustration = "AdventuresOfABeardlessDeceiver.jpg",
             },
 
-        ["Скала ужаса"] = new Description
+            ["Джунгарское нашествие"] = new Description
+            {
+                XmlBook = "DzungarWar.xml",
+                Protagonist = DzungarWar.Character.Protagonist.Init,
+                CheckOnlyIf = DzungarWar.Actions.CheckOnlyIf,
+                Paragraphs = new DzungarWar.Paragraphs(),
+                Actions = new DzungarWar.Actions(),
+                Constants = new DzungarWar.Constants(),
+                Disclaimer = "Сизиков Владимир, 2016",
+                BookColor = "#4a8026",
+                Illustration = "DzungarWar.jpg",
+            },
+
+            ["Скала ужаса"] = new Description
             {
                 XmlBook = "RockOfTerror.xml",
                 Protagonist = RockOfTerror.Character.Protagonist.Init,
