@@ -17,7 +17,7 @@ namespace Seeker.Gamebook
                 Actions = new BlackCastleDungeon.Actions(),
                 Constants = new BlackCastleDungeon.Constants(),
                 Disclaimer = "Браславский Дмитрий, 1991",
-                BookColor = "#000000",
+                BookColor = "#151515",
                 Illustration = "BlackCastleDungeon.jpg",
             },
 
@@ -56,8 +56,21 @@ namespace Seeker.Gamebook
                 Actions = new AdventuresOfABeardlessDeceiver.Actions(),
                 Constants = new AdventuresOfABeardlessDeceiver.Constants(),
                 Disclaimer = "Сизиков Владимир, 2015",
-                BookColor = "#006600",
+                BookColor = "#5da130",
                 Illustration = "AdventuresOfABeardlessDeceiver.jpg",
+            },
+
+        ["Скала ужаса"] = new Description
+            {
+                XmlBook = "RockOfTerror.xml",
+                Protagonist = RockOfTerror.Character.Protagonist.Init,
+                CheckOnlyIf = RockOfTerror.Actions.CheckOnlyIf,
+                Paragraphs = new RockOfTerror.Paragraphs(),
+                Actions = new RockOfTerror.Actions(),
+                Constants = new RockOfTerror.Constants(),
+                Disclaimer = "Тышевич Дмитрий, 2009",
+                BookColor = "#000000",
+                Illustration = "RockOfTerror.jpg",
             },
         };
 

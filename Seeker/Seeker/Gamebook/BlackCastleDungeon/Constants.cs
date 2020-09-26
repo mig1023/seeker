@@ -10,8 +10,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
     {
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#4682B4",
-            [ButtonTypes.Action] = "#6495ED",
+            [ButtonTypes.Main] = "#151515",
+            [ButtonTypes.Action] = "#3f3f3f",
             [ButtonTypes.Option] = "#696969",
         };
 
@@ -22,7 +22,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public string GetStatusBarColor()
         {
-            return "#0A5C96";
+            return "#2a2a2a";
         }
     }
 }

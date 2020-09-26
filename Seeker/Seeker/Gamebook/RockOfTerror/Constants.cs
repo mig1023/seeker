@@ -4,15 +4,15 @@ using System.Text;
 
 using static Seeker.Game.Buttons;
 
-namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
+namespace Seeker.Gamebook.RockOfTerror
 {
     class Constants : Interfaces.IConstants
     {
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#5da130",
-            [ButtonTypes.Action] = "#339933",
-            [ButtonTypes.Option] = "#696969",
+            [ButtonTypes.Main] = "#000000",
+            [ButtonTypes.Action] = "#2a2a2a",
+            [ButtonTypes.Option] = "#494949",
         };
 
         public string GetButtonsColor(ButtonTypes type)
@@ -22,7 +22,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public string GetStatusBarColor()
         {
-            return "#005100";
+            return "#151515";
         }
     }
 }
