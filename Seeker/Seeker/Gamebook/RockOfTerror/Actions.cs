@@ -45,7 +45,7 @@ namespace Seeker.Gamebook.RockOfTerror
 
         public static bool CheckOnlyIf(string option)
         {
-            return Game.Data.OpenedOption.Contains(option.Trim();
+            return Game.Data.OpenedOption.Contains(option.Trim());
         }
     }
 }
