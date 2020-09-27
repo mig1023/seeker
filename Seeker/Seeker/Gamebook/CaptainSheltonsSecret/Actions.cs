@@ -10,7 +10,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
-        public string OpenOption { get; set; }
+        public string Trigger { get; set; }
 
         // Fight
         public List<Character> Allies { get; set; }
@@ -27,10 +27,10 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public bool Used { get; set; }
         public bool Multiple { get; set; }
 
-        public List<string> Do(out bool reload, string action = "", bool openOption = false)
+        public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
-            if (openOption)
-                Game.Option.OpenOption(OpenOption);
+            if (trigger)
+                Game.Option.Trigger(Trigger);
 
             string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
             List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
@@ -88,7 +88,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             List<string> enemies = new List<string>();
 
             if (ActionName == "Get")
-                return new List<string> { Text };
+            {
+                string countMarker = String.Empty;
+
+                return new List<string> { String.Format("{0}{1}", Text, countMarker) };
+            }
 
             if (Enemies == null)
                 return enemies;

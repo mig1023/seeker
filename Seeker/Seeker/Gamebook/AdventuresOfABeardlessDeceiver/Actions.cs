@@ -10,7 +10,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
-        public string OpenOption { get; set; }
+        public string Trigger { get; set; }
 
         public string Text { get; set; }
         public string Stat { get; set; }
@@ -19,10 +19,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public bool GreatKhanSpecialCheck { get; set; }
         public bool GuessBonus { get; set; }
 
-        public List<string> Do(out bool reload, string action = "", bool openOption = false)
+        public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
-            if (openOption)
-                Game.Option.OpenOption(OpenOption);
+            if (trigger)
+                Game.Option.Trigger(Trigger);
 
             string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
             List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;

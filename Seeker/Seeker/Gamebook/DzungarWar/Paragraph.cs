@@ -12,6 +12,6 @@ namespace Seeker.Gamebook.DzungarWar
 
         public List<Modification> Modification { get; set; }
 
-        public string OpenOption { get; set; }
+        public string Trigger { get; set; }
     }
 }

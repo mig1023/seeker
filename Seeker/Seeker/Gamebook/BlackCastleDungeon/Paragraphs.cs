@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (source.Modification != null)
                 paragraph.Modification = new List<Interfaces.IModification>(source.Modification);
 
-            paragraph.OpenOption = source.OpenOption;
+            paragraph.Trigger = source.Trigger;
 
             return paragraph;
         }
@@ -36,7 +36,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 620, Text = "Начать" },
+                    new Option { Destination = 620, Text = "В путь!" },
                     new Option { Destination = 619, Text = "Правила и инструкции" },
                 }
             },
@@ -164,7 +164,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [8] = new Paragraph
             {
-                OpenOption = "BronzeWhistle",
+                Trigger = "BronzeWhistle",
 
                 Options = new List<Option>
                 {
@@ -197,7 +197,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [11] = new Paragraph
             {
-                OpenOption = "PirateTreasure",
+                Trigger = "PirateTreasure",
 
                 Options = new List<Option>
                 {
@@ -355,7 +355,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [22] = new Paragraph
             {
-                OpenOption = "WhiteArrow",
+                Trigger = "WhiteArrow",
 
                 Options = new List<Option>
                 {
@@ -510,7 +510,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [34] = new Paragraph
             {
-                OpenOption = "Mirror, GoldenWhistle",
+                Trigger = "Mirror, GoldenWhistle",
 
                 Options = new List<Option>
                 {
@@ -630,7 +630,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "BronzeWhistle",
+                Trigger = "BronzeWhistle",
 
                 Options = new List<Option>
                 {
@@ -944,7 +944,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [66] = new Paragraph
             {
-                OpenOption = "StorkFeather",
+                Trigger = "StorkFeather",
 
                 Options = new List<Option>
                 {
@@ -953,7 +953,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [67] = new Paragraph
             {
-                OpenOption = "SecondClue, DragonClaw",
+                Trigger = "SecondClue, DragonClaw",
 
                 Options = new List<Option>
                 {
@@ -1112,7 +1112,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [84] = new Paragraph
             {
-                OpenOption = "BadgeWithAnEagle",
+                Trigger = "BadgeWithAnEagle",
 
                 Options = new List<Option>
                 {
@@ -1255,7 +1255,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [95] = new Paragraph
             {
-                OpenOption = "ThirdClue, Password",
+                Trigger = "ThirdClue, Password",
 
                 Options = new List<Option>
                 {
@@ -1413,7 +1413,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [108] = new Paragraph
             {
-                OpenOption = "GoldAmulet",
+                Trigger = "GoldAmulet",
 
                 Options = new List<Option>
                 {
@@ -1680,7 +1680,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "GreenSword, GreenArmour",
+                Trigger = "GreenSword, GreenArmour",
 
                 Options = new List<Option>
                 {
@@ -1711,7 +1711,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [130] = new Paragraph
             {
-                OpenOption = "GreenArmour",
+                Trigger = "GreenArmour",
 
                 Options = new List<Option>
                 {
@@ -1839,7 +1839,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [144] = new Paragraph
             {
-                OpenOption = "HiddenLadder",
+                Trigger = "HiddenLadder",
 
                 Options = new List<Option>
                 {
@@ -1879,7 +1879,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [149] = new Paragraph
             {
-                OpenOption = "FirstClue",
+                Trigger = "FirstClue",
 
                 Options = new List<Option>
                 {
@@ -1946,7 +1946,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "MoleBelt",
+                Trigger = "MoleBelt",
 
                 Options = new List<Option>
                 {
@@ -2212,7 +2212,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Price = 2,
                         Multiple = true,
 
-                        OpenOption = "Banana",
+                        Trigger = "Banana",
 
                         Benefit = new Modification
                         {
@@ -2413,7 +2413,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "GoldenWhistle, Diamond",
+                Trigger = "GoldenWhistle, Diamond",
 
                 Options = new List<Option>
                 {
@@ -2494,7 +2494,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [196] = new Paragraph
             {
-                OpenOption = "RingWithRuby",
+                Trigger = "RingWithRuby",
 
                 Options = new List<Option>
                 {
@@ -2982,7 +2982,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [239] = new Paragraph
             {
-                OpenOption = "SilverWhistle",
+                Trigger = "SilverWhistle",
 
                 Modification = new List<Modification>
                 {
@@ -3099,7 +3099,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "Pass",
+                Trigger = "Pass",
 
                 Options = new List<Option>
                 {
@@ -3255,7 +3255,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [258] = new Paragraph
             {
-                OpenOption = "RingWithEmerald",
+                Trigger = "RingWithEmerald",
 
                 Options = new List<Option>
                 {
@@ -3508,7 +3508,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [281] = new Paragraph
             {
-                OpenOption = "Beads",
+                Trigger = "Beads",
 
                 Options = new List<Option>
                 {
@@ -3536,7 +3536,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [284] = new Paragraph
             {
-                OpenOption = "GoldNecklace",
+                Trigger = "GoldNecklace",
 
                 Options = new List<Option>
                 {
@@ -3623,7 +3623,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "BronzeWhistle, CopperKey",
+                Trigger = "BronzeWhistle, CopperKey",
 
                 Options = new List<Option>
                 {
@@ -3690,7 +3690,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [296] = new Paragraph
             {
-                OpenOption = "PerfumeBottle",
+                Trigger = "PerfumeBottle",
 
                 Options = new List<Option>
                 {
@@ -4200,7 +4200,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [330] = new Paragraph
             {
-                OpenOption = "GreenArmour",
+                Trigger = "GreenArmour",
 
                 Options = new List<Option>
                 {
@@ -4258,7 +4258,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "StorkFeather",
+                Trigger = "StorkFeather",
 
                 Options = new List<Option>
                 {
@@ -4276,7 +4276,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "GoldenOrange",
+                Trigger = "GoldenOrange",
 
                 Options = new List<Option>
                 {
@@ -4397,7 +4397,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [349] = new Paragraph
             {
-                OpenOption = "Comb",
+                Trigger = "Comb",
 
                 Options = new List<Option>
                 {
@@ -4483,7 +4483,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "GoldRing",
+                Trigger = "GoldRing",
 
                 Modification = new List<Modification>
                 {
@@ -4593,7 +4593,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [367] = new Paragraph
             {
-                OpenOption = "FoxSkin",
+                Trigger = "FoxSkin",
                 
                 Options = new List<Option>
                 {
@@ -5045,7 +5045,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [408] = new Paragraph
             {
-                OpenOption = "Comb",
+                Trigger = "Comb",
 
                 Options = new List<Option>
                 {
@@ -5125,7 +5125,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "PeacockFeather",
+                Trigger = "PeacockFeather",
 
                 Options = new List<Option>
                 {
@@ -5341,7 +5341,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [436] = new Paragraph
             {
-                OpenOption = "PeacockFeather",
+                Trigger = "PeacockFeather",
 
                 Options = new List<Option>
                 {
@@ -5494,7 +5494,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Price = 2,
                         Multiple = true,
 
-                        OpenOption = "Banana",
+                        Trigger = "Banana",
 
                         Benefit = new Modification
                         {
@@ -5520,7 +5520,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         ButtonName = "Купить ключ",
                         Price = 2,
 
-                        OpenOption = "CurlyKey",
+                        Trigger = "CurlyKey",
                     },
 
                     new Actions
@@ -5538,7 +5538,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         ButtonName = "Купить кусок металла",
                         Price = 3,
 
-                        OpenOption = "PieceOfMetal",
+                        Trigger = "PieceOfMetal",
                     },
 
                     new Actions
@@ -5556,7 +5556,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         ButtonName = "Купить браслет",
                         Price = 4,
 
-                        OpenOption = "SilverBracelet",
+                        Trigger = "SilverBracelet",
 
                         Aftertext = "Сделайте необходимые покупки и покиньте деревню по одной из дорог: на юг или на запад.",
                     },
@@ -5610,7 +5610,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [453] = new Paragraph
             {
-                OpenOption = "StorkFeather",
+                Trigger = "StorkFeather",
 
                 Options = new List<Option>
                 {
@@ -5716,7 +5716,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [464] = new Paragraph
             {
-                OpenOption = "DeerSkin",
+                Trigger = "DeerSkin",
 
                 Options = new List<Option>
                 {
@@ -5954,7 +5954,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "BronzeWhistle",
+                Trigger = "BronzeWhistle",
 
                 Options = new List<Option>
                 {
@@ -6113,7 +6113,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [496] = new Paragraph
             {
-                OpenOption = "Candlestick",
+                Trigger = "Candlestick",
 
                 Options = new List<Option>
                 {
@@ -6196,7 +6196,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [503] = new Paragraph
             {
-                OpenOption = "HyenaName",
+                Trigger = "HyenaName",
 
                 Options = new List<Option>
                 {
@@ -6388,7 +6388,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [520] = new Paragraph
             {
-                OpenOption = "Mirror, GoldenWhistle, ThreeFromAvenlo",
+                Trigger = "Mirror, GoldenWhistle, ThreeFromAvenlo",
 
                 Options = new List<Option>
                 {
@@ -6466,7 +6466,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [527] = new Paragraph
             {
-                OpenOption = "GreenArmour",
+                Trigger = "GreenArmour",
 
                 Options = new List<Option>
                 {
@@ -6496,7 +6496,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "Amulet",
+                Trigger = "Amulet",
 
                 Options = new List<Option>
                 {
@@ -6764,7 +6764,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [545] = new Paragraph
             {
-                OpenOption = "SilverVessel",
+                Trigger = "SilverVessel",
 
                 Options = new List<Option>
                 {
@@ -6861,7 +6861,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [555] = new Paragraph
             {
-                OpenOption = "Clew",
+                Trigger = "Clew",
 
                 Options = new List<Option>
                 {
@@ -6974,7 +6974,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "SilverWhistle",
+                Trigger = "SilverWhistle",
 
                 Options = new List<Option>
                 {
@@ -7137,7 +7137,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             },
             [573] = new Paragraph
             {
-                OpenOption = "WhiteArrow, CandleAndFlint",
+                Trigger = "WhiteArrow, CandleAndFlint",
 
                 Options = new List<Option>
                 {
@@ -7255,7 +7255,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     },
                 },
 
-                OpenOption = "BronzeWhistle, CopperKey",
+                Trigger = "BronzeWhistle, CopperKey",
 
                 Options = new List<Option>
                 {
@@ -7677,7 +7677,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 1, Text = "В путь!" },
+                    new Option { Destination = 1, Text = "Далее" },
                 }
             },
         };

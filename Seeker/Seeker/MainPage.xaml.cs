@@ -88,7 +88,7 @@ namespace Seeker
 
             TextLabel(Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty);
 
-            Game.Option.OpenOption(paragraph.OpenOption);
+            Game.Option.Trigger(paragraph.Trigger);
 
             if (!reload && (paragraph.Modification != null) && (paragraph.Modification.Count > 0))
                 foreach(Interfaces.IModification modification in paragraph.Modification)
@@ -198,7 +198,7 @@ namespace Seeker
 
             actionPlace.Children.Clear();
 
-            List<string> actionResult = Game.Data.CurrentParagraph.Actions[actionIndex].Do(out bool reload, openOption: true);
+            List<string> actionResult = Game.Data.CurrentParagraph.Actions[actionIndex].Do(out bool reload, Trigger: true);
 
             if (reload)
                 Paragraph(Game.Data.CurrentParagraphID, reload: true);

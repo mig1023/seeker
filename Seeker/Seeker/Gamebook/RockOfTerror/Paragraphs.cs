@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.RockOfTerror
             if (source.Modification != null)
                 paragraph.Modification = new List<Interfaces.IModification>(source.Modification);
 
-            paragraph.OpenOption = source.OpenOption;
+            paragraph.Trigger = source.Trigger;
 
             return paragraph;
         }

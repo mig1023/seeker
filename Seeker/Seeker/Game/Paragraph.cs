@@ -12,6 +12,6 @@ namespace Seeker.Game
 
         public List<Interfaces.IModification> Modification { get; set; }
 
-        public string OpenOption { get; set; }
+        public string Trigger { get; set; }
     }
 }

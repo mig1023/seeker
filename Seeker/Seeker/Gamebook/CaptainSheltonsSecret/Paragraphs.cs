@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             if (source.Modification != null)
                 paragraph.Modification = new List<Interfaces.IModification>(source.Modification);
 
-            paragraph.OpenOption = source.OpenOption;
+            paragraph.Trigger = source.Trigger;
 
             return paragraph;
         }
@@ -315,7 +315,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [23] = new Paragraph
             {
-                OpenOption = "SilverPlatter",
+                Trigger = "SilverPlatter",
 
                 Options = new List<Option>
                 {
@@ -525,7 +525,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [38] = new Paragraph
             {
-                OpenOption = "Trident",
+                Trigger = "Trident",
 
                 Options = new List<Option>
                 {
@@ -550,7 +550,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     },
                 },
 
-                OpenOption = "HedgehogFish",
+                Trigger = "HedgehogFish",
 
                 Options = new List<Option>
                 {
@@ -640,7 +640,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [50] = new Paragraph
             {
-                OpenOption = "Vulture",
+                Trigger = "Vulture",
 
                 Options = new List<Option>
                 {
@@ -722,7 +722,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [56] = new Paragraph
             {
-                OpenOption = "VulturePictures",
+                Trigger = "VulturePictures",
 
                 Options = new List<Option>
                 {
@@ -1369,7 +1369,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [92] = new Paragraph
             {
-                OpenOption = "Waterknight",
+                Trigger = "Waterknight",
 
                 Options = new List<Option>
                 {
@@ -1418,7 +1418,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [97] = new Paragraph
             {
-                OpenOption = "WingedLion",
+                Trigger = "WingedLion",
 
                 Options = new List<Option>
                 {
@@ -1427,7 +1427,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [98] = new Paragraph
             {
-                OpenOption = "RingWithTrident",
+                Trigger = "RingWithTrident",
 
                 Options = new List<Option>
                 {
@@ -1755,7 +1755,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [127] = new Paragraph
             {
-                OpenOption = "Owl",
+                Trigger = "Owl",
 
                 Options = new List<Option>
                 {
@@ -1764,7 +1764,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [128] = new Paragraph
             {
-                OpenOption = "Trident",
+                Trigger = "Trident",
 
                 Options = new List<Option>
                 {
@@ -1773,7 +1773,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [129] = new Paragraph
             {
-                OpenOption = "Diadem",
+                Trigger = "Diadem",
 
                 Options = new List<Option>
                 {
@@ -1895,7 +1895,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [136] = new Paragraph
             {
-                OpenOption = "PrinceWarrior",
+                Trigger = "PrinceWarrior",
 
                 Options = new List<Option>
                 {
@@ -2691,7 +2691,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [177] = new Paragraph
             {
-                OpenOption = "Captain",
+                Trigger = "Captain",
 
                 Options = new List<Option>
                 {
@@ -2903,7 +2903,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     },
                 },
 
-                OpenOption = "DriedCrab",
+                Trigger = "DriedCrab",
 
                 Options = new List<Option>
                 {
@@ -2972,7 +2972,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [196] = new Paragraph
             {
-                OpenOption = "DolphinFigurine",
+                Trigger = "DolphinFigurine",
 
                 Options = new List<Option>
                 {
@@ -3190,7 +3190,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [213] = new Paragraph
             {
-                OpenOption = "Rhinoceros",
+                Trigger = "Rhinoceros",
 
                 Options = new List<Option>
                 {
@@ -3835,7 +3835,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [254] = new Paragraph
             {
-                OpenOption = "GoldRing",
+                Trigger = "GoldRing",
 
                 Options = new List<Option>
                 {
@@ -3899,7 +3899,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [260] = new Paragraph
             {
-                OpenOption = "GoldenShield",
+                Trigger = "GoldenShield",
 
                 Options = new List<Option>
                 {
@@ -4129,7 +4129,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [281] = new Paragraph
             {
-                OpenOption = "MagicEmeralds",
+                Trigger = "MagicEmeralds",
 
                 Options = new List<Option>
                 {
@@ -4532,7 +4532,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [314] = new Paragraph
             {
-                OpenOption = "Hammerhead",
+                Trigger = "Hammerhead",
 
                 Options = new List<Option>
                 {
@@ -4588,7 +4588,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [320] = new Paragraph
             {
-                OpenOption = "OwlFeather",
+                Trigger = "OwlFeather",
 
                 Options = new List<Option>
                 {
@@ -4861,7 +4861,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [338] = new Paragraph
             {
-                OpenOption = "GoldenBelt",
+                Trigger = "GoldenBelt",
 
                 Options = new List<Option>
                 {
@@ -5196,7 +5196,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [367] = new Paragraph
             {
-                OpenOption = "FigurineOfMan",
+                Trigger = "FigurineOfMan",
 
                 Options = new List<Option>
                 {
@@ -5449,7 +5449,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [391] = new Paragraph
             {
-                OpenOption = "IdentificationMark",
+                Trigger = "IdentificationMark",
 
                 Options = new List<Option>
                 {
@@ -5795,7 +5795,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [417] = new Paragraph
             {
-                OpenOption = "LanguageOfFish",
+                Trigger = "LanguageOfFish",
 
                 Options = new List<Option>
                 {
@@ -5812,7 +5812,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [419] = new Paragraph
             {
-                OpenOption = "DragonScales",
+                Trigger = "DragonScales",
 
                 Options = new List<Option>
                 {
@@ -5862,7 +5862,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [424] = new Paragraph
             {
-                OpenOption = "RustySword",
+                Trigger = "RustySword",
 
                 Options = new List<Option>
                 {
@@ -6325,7 +6325,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     },
                 },
 
-                OpenOption = "Sawfish",
+                Trigger = "Sawfish",
 
                 Options = new List<Option>
                 {
@@ -6387,7 +6387,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [460] = new Paragraph
             {
-                OpenOption = "Seaman",
+                Trigger = "Seaman",
 
                 Options = new List<Option>
                 {
@@ -6436,7 +6436,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     },
                 },
 
-                OpenOption = "Amulet",
+                Trigger = "Amulet",
 
                 Options = new List<Option>
                 {
@@ -6716,7 +6716,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     },
                 },
 
-                OpenOption = "Trident",
+                Trigger = "Trident",
 
                 Options = new List<Option>
                 {
@@ -6854,7 +6854,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [493] = new Paragraph
             {
-                OpenOption = "StolenPearls",
+                Trigger = "StolenPearls",
 
                 Options = new List<Option>
                 {
@@ -7294,7 +7294,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [532] = new Paragraph
             {
-                OpenOption = "Guess",
+                Trigger = "Guess",
 
                 Options = new List<Option>
                 {
@@ -7599,7 +7599,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [551] = new Paragraph
             {
-                OpenOption = "UnicornFishHorn",
+                Trigger = "UnicornFishHorn",
 
                 Options = new List<Option>
                 {
@@ -8072,7 +8072,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [578] = new Paragraph
             {
-                OpenOption = "SmoothStone",
+                Trigger = "SmoothStone",
 
                 Options = new List<Option>
                 {
@@ -8186,7 +8186,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [584] = new Paragraph
             {
-                OpenOption = "SeaShell",
+                Trigger = "SeaShell",
 
                 Options = new List<Option>
                 {
@@ -8320,7 +8320,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [593] = new Paragraph
             {
-                OpenOption = "Officer",
+                Trigger = "Officer",
 
                 Options = new List<Option>
                 {
@@ -8446,7 +8446,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [597] = new Paragraph
             {
-                OpenOption = "CrabClaw",
+                Trigger = "CrabClaw",
 
                 Options = new List<Option>
                 {
@@ -8621,7 +8621,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [605] = new Paragraph
             {
-                OpenOption = "Diadem",
+                Trigger = "Diadem",
 
                 Options = new List<Option>
                 {
@@ -8780,7 +8780,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             },
             [623] = new Paragraph
             {
-                OpenOption = "BigDiamond",
+                Trigger = "BigDiamond",
 
                 Options = new List<Option>
                 {

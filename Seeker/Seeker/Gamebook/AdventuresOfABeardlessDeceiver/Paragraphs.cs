@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             if (source.Modification != null)
                 paragraph.Modification = new List<Interfaces.IModification>(source.Modification);
 
-            paragraph.OpenOption = source.OpenOption;
+            paragraph.Trigger = source.Trigger;
 
             return paragraph;
         }
@@ -52,7 +52,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [2] = new Paragraph
             {
-                OpenOption = "Letter",
+                Trigger = "Letter",
 
                 Options = new List<Option>
                 {
@@ -179,7 +179,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Text = "КОМНАТА НА НОЧЬ",
                         Price = 10,
                         Aftertext = "Цена очень завышена, учитывая то, что вчера Алдар не выложил ни одной монеты за ночлег. Но в противной случае придётся провести ночь у костра во внутреннем дворе.",
-                        OpenOption = "Room",
+                        Trigger = "Room",
                     },
                 },
 
@@ -199,7 +199,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "ShameOfTemir",
+                Trigger = "ShameOfTemir",
 
                 Options = new List<Option>
                 {
@@ -249,7 +249,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "Note",
+                Trigger = "Note",
 
                 Options = new List<Option>
                 {
@@ -356,7 +356,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [23] = new Paragraph
             {
-                OpenOption = "OasisGuardSupport",
+                Trigger = "OasisGuardSupport",
 
                 Options = new List<Option>
                 {
@@ -555,7 +555,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ButtonName = "Купить одежду",
                         Text = "ПРАЗДНИЧНАЯ ОДЕЖДА",
                         Price = 25,
-                        OpenOption = "PartyClothes",
+                        Trigger = "PartyClothes",
                         Aftertext = "Костюм, несомненно, хороший. Но цена на него безбожно задрана. Алдар понимает, что воины состоят в доле с хитрым торговцем, получая хорошую прибыль с путников, которые хотят попасть в ханскую ставку. Придётся либо платить, либо придумывать другой способ.\n\nЕсли нет ни денег ни перстня, придётся полагаться на свои способности.",
                     },
                     new Actions
@@ -713,7 +713,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Text = "КОМНАТА НА НОЧЬ",
                         Price = 25,
                         Aftertext = "В случае отказа он с лёгкостью продаст комнату любому торговцу, у которых всегда есть деньги. Но тогда нашему герою придётся провести ночь у костра во внутреннем дворе.",
-                        OpenOption = "Room",
+                        Trigger = "Room",
                     },
                 },
 
@@ -1148,7 +1148,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "TengriSymbol",
+                Trigger = "TengriSymbol",
 
                 Options = new List<Option>
                 {
@@ -1194,7 +1194,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Text = "ДОМБРА",
                         Price = 10,
                         Aftertext = "Двухструнный музыкальный инструмент.",
-                        OpenOption = "Dombra",
+                        Trigger = "Dombra",
                     },
                     new Actions
                     {
@@ -1203,7 +1203,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Text = "ПРАЗДНИЧНАЯ ОДЕЖДА",
                         Price = 15,
                         Aftertext = "Шелковый халат, шапка из лисьего меха и расшитая нательная рубаха.",
-                        OpenOption = "PartyClothes",
+                        Trigger = "PartyClothes",
                     },
                     new Actions
                     {
@@ -1280,7 +1280,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Text = "ПРАЗДНИЧНАЯ ОДЕЖДА",
                         Price = 20,
                         Aftertext = "Шелковый халат, шапка-малахай из лисьего меха и расшитая нательная рубаха.",
-                        OpenOption = "PartyClothes",
+                        Trigger = "PartyClothes",
                     },
                     new Actions
                     {
@@ -1289,7 +1289,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Text = "ДОМБРА",
                         Price = 15,
                         Aftertext = "Двухструнный музыкальный инструмент.",
-                         OpenOption = "Dombra",
+                         Trigger = "Dombra",
                     },
                     new Actions
                     {
@@ -1313,7 +1313,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ButtonName = "Купить скакуна",
                         Text = "СКАКУН АРАБСКОЙ ПОРОДЫ",
                         Price = 120,
-                        OpenOption = "ArabianHorse",
+                        Trigger = "ArabianHorse",
                         Aftertext = "Алдару очень нравится этот конь и он сторговывается с кипчаком на 120 ТАНЬГА, если наш герой отдаст своего жеребца торговцу.",
                     },
                 },
@@ -1334,7 +1334,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "DonsHorse",
+                Trigger = "DonsHorse",
 
                 Options = new List<Option>
                 {
@@ -1388,7 +1388,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "Note, ArabianHorse",
+                Trigger = "Note, ArabianHorse",
 
                 Options = new List<Option>
                 {
@@ -1461,7 +1461,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "GreenStone, TipsFromAthanasius",
+                Trigger = "GreenStone, TipsFromAthanasius",
 
                 Options = new List<Option>
                 {
@@ -1514,7 +1514,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "SauleName",
+                Trigger = "SauleName",
 
                 Options = new List<Option>
                 {
@@ -1614,7 +1614,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "AkhalTeke",
+                Trigger = "AkhalTeke",
 
                 Options = new List<Option>
                 {
@@ -1632,7 +1632,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "PartyClothes",
+                Trigger = "PartyClothes",
 
                 Options = new List<Option>
                 {
@@ -2024,7 +2024,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Text = "ПРАЗДНИЧНАЯ ОДЕЖДА",
                         Price = 30,
                         Aftertext = "Чистопородных коней на базаре нет. А скакун-полукровка обойдётся в 150 ТАНЬГА с учётом того, что Алдар Косе отдаст своего жеребца торговцу.",
-                        OpenOption = "PartyClothes",
+                        Trigger = "PartyClothes",
                     },
                     new Actions
                     {
@@ -2062,7 +2062,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [137] = new Paragraph
             {
-                OpenOption = "guess",
+                Trigger = "guess",
 
                 Options = new List<Option>
                 {
@@ -2161,7 +2161,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [144] = new Paragraph
             {
-                OpenOption = "KhansRing",
+                Trigger = "KhansRing",
 
                 Options = new List<Option>
                 {
@@ -2179,7 +2179,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "DonsHorse",
+                Trigger = "DonsHorse",
 
                 Options = new List<Option>
                 {
@@ -2213,7 +2213,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ButtonName = "Купить арак",
                         Text = "АРАК",
                         Price = 10,
-                        OpenOption = "Arak",
+                        Trigger = "Arak",
                     },
                 },
 
@@ -2337,7 +2337,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Text = "ДОМБРА",
                         Price = 10,
                         Aftertext = "Домбра необходима, если Алдар решит принять участие в конкурсе акынов, который сейчас начнётся.",
-                        OpenOption = "Dombra",
+                        Trigger = "Dombra",
                     },
                     new Actions
                     {
@@ -2345,7 +2345,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         ButtonName = "Купить одежду",
                         Text = "ПРАЗДНИЧНАЯ ОДЕЖДА",
                         Price = 15,
-                        OpenOption = "PartyClothes",
+                        Trigger = "PartyClothes",
                         Aftertext = "Праздничная одежда, состоящая из расшитого золотистыми узорами халата, шапки с лисьим мехом и нательной рубашки с вышивкой. Ну а нарядная одежда всегда полезна, чтобы произвести хорошее впечатление на хана и его окружение. Не в лохмотьях же, в конце концов, соваться в ханскую ставку?\n\nКупить всё, что нужно и на что хватит денег, и отметить соответствующие изменения на листе персонажа.",
                     },
                 },
@@ -2442,7 +2442,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [164] = new Paragraph
             {
-                OpenOption = "Serik",
+                Trigger = "Serik",
 
                 Options = new List<Option>
                 {
@@ -2468,7 +2468,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "Message",
+                Trigger = "Message",
 
                 Options = new List<Option>
                 {
@@ -2647,7 +2647,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [179] = new Paragraph
             {
-                OpenOption = "PartyClothes",
+                Trigger = "PartyClothes",
 
                 Options = new List<Option>
                 {
@@ -2745,7 +2745,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "LargeSum",
+                Trigger = "LargeSum",
 
                 Options = new List<Option>
                 {
@@ -2793,7 +2793,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [189] = new Paragraph
             {
-                OpenOption = "KhansRing",
+                Trigger = "KhansRing",
 
                 Options = new List<Option>
                 {
@@ -2851,7 +2851,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "ShameOfTemir",
+                Trigger = "ShameOfTemir",
 
                 Options = new List<Option>
                 {
@@ -2912,7 +2912,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "GiftPromise",
+                Trigger = "GiftPromise",
 
                 Options = new List<Option>
                 {
@@ -2955,7 +2955,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     },
                 },
 
-                OpenOption = "ShameOfTemir",
+                Trigger = "ShameOfTemir",
 
                 Options = new List<Option>
                 {

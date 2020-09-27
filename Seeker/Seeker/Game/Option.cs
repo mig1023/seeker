@@ -10,7 +10,7 @@ namespace Seeker.Game
         public string Text { get; set; }
         public string OnlyIf { get; set; }
 
-        public static void OpenOption(string optionLine)
+        public static void Trigger(string optionLine)
         {
             if (String.IsNullOrEmpty(optionLine))
                 return;

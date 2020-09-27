@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             if (source.Modification != null)
                 paragraph.Modification = new List<Interfaces.IModification>(source.Modification);
 
-            paragraph.OpenOption = source.OpenOption;
+            paragraph.Trigger = source.Trigger;
 
             return paragraph;
         }
@@ -482,7 +482,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [34] = new Paragraph
             {
-                OpenOption = "PierreAuxRealStreet",
+                Trigger = "PierreAuxRealStreet",
 
                 Options = new List<Option>
                 {
@@ -2481,7 +2481,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [186] = new Paragraph
             {
-                OpenOption = "LetterToTheDuke",
+                Trigger = "LetterToTheDuke",
 
                 Modification = new List<Modification>
                 {
@@ -2569,7 +2569,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [188] = new Paragraph
             {
-                OpenOption = "DukeName",
+                Trigger = "DukeName",
 
                 Options = new List<Option>
                 {
@@ -3186,7 +3186,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [237] = new Paragraph
             {
-                OpenOption = "LetterOfRecommendationToTheDuke",
+                Trigger = "LetterOfRecommendationToTheDuke",
 
                 Modification = new List<Modification>
                 {
@@ -5886,7 +5886,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [440] = new Paragraph
             {
-                OpenOption = "GreenCamisole",
+                Trigger = "GreenCamisole",
 
                 Options = new List<Option>
                 {
@@ -6296,7 +6296,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [468] = new Paragraph
             {
-                OpenOption = "CountDeNoaille",
+                Trigger = "CountDeNoaille",
 
                 Options = new List<Option>
                 {
@@ -6531,7 +6531,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [490] = new Paragraph
             {
-                OpenOption = "GreenCamisole",
+                Trigger = "GreenCamisole",
 
                 Modification = new List<Modification>
                 {
@@ -6792,7 +6792,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [511] = new Paragraph
             {
-                OpenOption = "StreetIsBlocked",
+                Trigger = "StreetIsBlocked",
 
                 Options = new List<Option>
                 {
@@ -7277,7 +7277,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [544] = new Paragraph
             {
-                OpenOption = "GreenCamisole",
+                Trigger = "GreenCamisole",
 
                 Options = new List<Option>
                 {
@@ -7635,7 +7635,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [571] = new Paragraph
             {
-                OpenOption = "GovernorsLetterOfRecommendation",
+                Trigger = "GovernorsLetterOfRecommendation",
 
                 Options = new List<Option>
                 {
@@ -7875,7 +7875,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [591] = new Paragraph
             {
-                OpenOption = "DukeName",
+                Trigger = "DukeName",
 
                 Options = new List<Option>
                 {
@@ -7923,7 +7923,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [597] = new Paragraph
             {
-                OpenOption = "Incense",
+                Trigger = "Incense",
 
                 Options = new List<Option>
                 {
@@ -7959,7 +7959,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [599] = new Paragraph
             {
-                OpenOption = "VenneraStreet",
+                Trigger = "VenneraStreet",
 
                 Modification = new List<Modification>
                 {
@@ -8303,7 +8303,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [622] = new Paragraph
             {
-                OpenOption = "LetterOfRecommendationToTheDuke",
+                Trigger = "LetterOfRecommendationToTheDuke",
 
                 Modification = new List<Modification>
                 {
@@ -8761,7 +8761,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [653] = new Paragraph
             {
-                OpenOption = "VenneraStreet",
+                Trigger = "VenneraStreet",
 
                 Options = new List<Option>
                 {
@@ -8784,7 +8784,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             },
             [656] = new Paragraph
             {
-                OpenOption = "DukeName",
+                Trigger = "DukeName",
 
                 Options = new List<Option>
                 {
