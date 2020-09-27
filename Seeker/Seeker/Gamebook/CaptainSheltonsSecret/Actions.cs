@@ -62,9 +62,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public bool IsButtonEnabled()
         {
-            bool disabledGetOptions = (Price > 0) && Used;
-
-            return !disabledGetOptions;
+            return true;
         }
 
         public static bool CheckOnlyIf(string option)
