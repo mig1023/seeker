@@ -85,8 +85,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             bool disabledSpellButton = (MeritalArt != null) && (Character.Protagonist.MeritalArt != Character.MeritalArts.Nope);
             bool disabledGetOptions = (Price > 0) && Used;
+            bool disabledByPrice = (Price > 0) && (Character.Protagonist.Ecu < Price);
 
-            return !(disabledSpellButton || disabledGetOptions);
+            return !(disabledSpellButton || disabledGetOptions || disabledByPrice);
         }
 
         public static bool CheckOnlyIf(string option)
