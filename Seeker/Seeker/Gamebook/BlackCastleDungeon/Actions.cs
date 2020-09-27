@@ -63,8 +63,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             bool disabledSpellButton = ThisIsSpell && (Character.Protagonist.SpellSlots <= 0);
             bool disabledGetOptions = (Price > 0) && Used;
+            bool disabledByPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
 
-            return !(disabledSpellButton || disabledGetOptions);
+            return !(disabledSpellButton || disabledGetOptions || disabledByPrice);
         }
 
         public static bool CheckOnlyIf(string option)
