@@ -27,7 +27,9 @@ namespace Seeker.Gamebook.RockOfTerror
 
         public List<string> Status()
         {
-            return new List<string>() { String.Format("Время: {0}", Character.Protagonist.Time)  };
+            TimeSpan time = TimeSpan.FromMinutes(Character.Protagonist.Time);
+
+            return new List<string>() { String.Format("Прошедшее время: {0}:{1}", time.Hours, time.Minutes) };
         }
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
@@ -35,7 +37,7 @@ namespace Seeker.Gamebook.RockOfTerror
             toEndParagraph = 0;
             toEndText = "Время вышло...";
 
-            return (Character.Protagonist.Time >= 12 ? true : false);
+            return (Character.Protagonist.Time >= 720 ? true : false);
         }
 
         public bool IsButtonEnabled()
