@@ -47,7 +47,17 @@ namespace Seeker.Gamebook.RockOfTerror
 
         public static bool CheckOnlyIf(string option)
         {
-            return Game.Data.OpenedOption.Contains(option.Trim());
+            if (option.Contains(">") || oneOption.Contains("<"))
+            {
+                if (oneOption.Contains("ВРЕМЯ >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Time))
+                    return false;
+                else if (oneOption.Contains("ВРЕМЯ <") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Time))
+                    return false;
+                else
+                    return true;
+            }
+            else
+                return Game.Data.OpenedOption.Contains(option.Trim());
         }
     }
 }

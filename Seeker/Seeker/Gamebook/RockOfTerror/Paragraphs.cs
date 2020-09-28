@@ -58,8 +58,8 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 52, Text = "Прошло более 11-ти часов" },
-                    new Option { Destination = 79, Text = "Прошло менее" },
+                    new Option { Destination = 52, Text = "Прошло более 11-ти часов", OnlyIf = "ВРЕМЯ >= 660" },
+                    new Option { Destination = 79, Text = "Прошло менее 11-ти часов", OnlyIf = "ВРЕМЯ < 660" },
                 }
             },
             [4] = new Paragraph
@@ -627,8 +627,8 @@ namespace Seeker.Gamebook.RockOfTerror
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 48, Text = "Постучать в дверь (прошло больше 4 часов)" },
-                    new Option { Destination = 6, Text = "Постучать в дверь (прошло меньше 4 часов)" },
+                    new Option { Destination = 48, Text = "Постучать в дверь (прошло больше 4 часов)", OnlyIf = "ВРЕМЯ >= 240" },
+                    new Option { Destination = 6, Text = "Постучать в дверь (прошло меньше 4 часов)", OnlyIf = "ВРЕМЯ < 240" },
                     new Option { Destination = 43, Text = "Идти дальше" },
                 }
             },
