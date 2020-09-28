@@ -223,6 +223,8 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [20] = new Paragraph
             {
+                Trigger = "MarrelsMirror",
+
                 Modification = new List<Modification>
                 {
                     new Modification
@@ -603,6 +605,7 @@ namespace Seeker.Gamebook.RockOfTerror
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 65, Text = "Воспользоваться зеркалом Маррела", OnlyIf = "MarrelsMirror" },
                     new Option { Destination = 91, Text = "Далее" },
                 }
             },
