@@ -123,6 +123,7 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 28, Text = "Проснуться", OnlyIf = "WakeUp" },
                     new Option { Destination = 0, Text = "Начать сначала" },
                 }
             },
@@ -738,6 +739,8 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [65] = new Paragraph
             {
+                Trigger = "WakeUp",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 17, Text = "Далее" },
