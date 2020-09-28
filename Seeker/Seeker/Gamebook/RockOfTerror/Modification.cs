@@ -16,7 +16,9 @@ namespace Seeker.Gamebook.RockOfTerror
         {
             int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-            currentValue += Value;
+            int injuryModificator = ((Name == "Time") && (Character.Protagonist.Injury > 0) ? 2 : 1);
+
+            currentValue += Value * injuryModificator;
 
             Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
         }

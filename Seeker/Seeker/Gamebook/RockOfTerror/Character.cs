@@ -10,16 +10,22 @@ namespace Seeker.Gamebook.RockOfTerror
 
         public string Name { get; set; }
 
-        public double Time { get; set; }
+        public int Time { get; set; }
+
+        public int Injury { get; set; }
 
         public void Init()
         {
             Time = 0;
+            Injury = 0;
         }
 
         public Character Clone()
         {
-            return new Character() { Time = this.Time };
+            return new Character() {
+                Time = this.Time,
+                Injury = this.Injury,
+            };
         }
     }
 }

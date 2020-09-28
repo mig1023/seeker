@@ -132,6 +132,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [13] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Injury",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 33, Text = "Далее" },
