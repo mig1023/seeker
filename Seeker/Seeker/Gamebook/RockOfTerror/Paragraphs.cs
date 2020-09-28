@@ -154,6 +154,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [16] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 49, Text = "Далее" },
@@ -169,6 +178,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [18] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 97, Text = "Далее" },
@@ -176,6 +194,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [19] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 44, Text = "Далее" },
@@ -183,6 +210,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [20] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 64, Text = "Далее" },
@@ -205,6 +241,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [23] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 77, Text = "Идти по тропинке" },
@@ -243,6 +288,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [28] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 85, Text = "Далее" },
@@ -264,6 +318,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [31] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 56, Text = "Далее" },
@@ -271,6 +334,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [32] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 13, Text = "Сойти с тропы и пойти в направлении, откуда исходил странный писк" },
@@ -279,6 +351,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [33] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 8, Text = "Далее" },
@@ -286,6 +367,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [34] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 57, Text = "Далее" },
@@ -314,6 +404,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [38] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 58, Text = "Далее" },
@@ -321,6 +420,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [39] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 47, Text = "Причалить и сойти на берег" },
@@ -351,6 +459,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [43] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 57, Text = "Далее" },
@@ -358,6 +475,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [44] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 3, Text = "Восточного склона" },
@@ -366,6 +492,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [45] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 56, Text = "Далее" },
@@ -395,6 +530,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [49] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 80, Text = "Далее" },
@@ -409,6 +553,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [51] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 68, Text = "На север" },
@@ -424,6 +577,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [53] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 91, Text = "Далее" },
@@ -431,6 +593,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [54] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 18, Text = "Далее" },
@@ -445,6 +616,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [56] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 48, Text = "Постучать в дверь (прошло больше 4 часов)" },
@@ -461,6 +641,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [58] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 39, Text = "По тропе" },
@@ -477,6 +666,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [60] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 44, Text = "Далее" },
@@ -484,6 +682,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [61] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 43, Text = "Далее" },
@@ -520,6 +727,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [66] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 23, Text = "На северо-запад" },
@@ -543,6 +759,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [69] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 32, Text = "Далее" },
@@ -557,6 +782,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [71] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 180,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 88, Text = "Пойти по следам" },
@@ -573,6 +807,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [73] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 43, Text = "Далее" },
@@ -580,6 +823,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [74] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 71, Text = "Далее" },
@@ -595,6 +847,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [76] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 41, Text = "Идти дальше" },
@@ -603,6 +864,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [77] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 26, Text = "Осмотреть дом" },
@@ -611,6 +881,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [78] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 32, Text = "Далее" },
@@ -626,6 +905,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [80] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 56, Text = "На северо-восток по правой тропе" },
@@ -663,6 +951,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [85] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 8, Text = "Далее" },
@@ -670,6 +967,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [86] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 58, Text = "По тропе на север" },
@@ -693,6 +999,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [89] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 71, Text = "Далее" },
@@ -700,6 +1015,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [90] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 56, Text = "Далее" },
@@ -714,6 +1038,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [92] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 3, Text = "Далее" },
@@ -736,6 +1069,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [95] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 44, Text = "Далее" },
@@ -750,6 +1092,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [97] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 12, Text = "Через поляну со змеями" },
@@ -766,6 +1117,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [99] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 89, Text = "Задержаться и похоронить" },
