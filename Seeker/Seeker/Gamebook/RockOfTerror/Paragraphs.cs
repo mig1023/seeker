@@ -403,6 +403,7 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 25, Text = "Есть бронзовый медальон" },
                     new Option { Destination = 0, Text = "Начать сначала" },
                 }
             },
@@ -624,6 +625,8 @@ namespace Seeker.Gamebook.RockOfTerror
                         Value = 30,
                     },
                 },
+
+                Trigger = "BronzeMedallion",
 
                 Options = new List<Option>
                 {
@@ -974,6 +977,7 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 74, Text = "Есть бронзовый медальон" },
                     new Option { Destination = 0, Text = "Начать сначала" },
                 }
             },
