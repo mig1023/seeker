@@ -591,6 +591,7 @@ namespace Seeker.Gamebook.RockOfTerror
                 Options = new List<Option>
                 {
                     new Option { Destination = 37, Text = "Её имя Августина", OnlyIf = "Augustine" },
+                    new Option { Destination = 82, Text = "Её имя Гринаила", OnlyIf = "Grinael" },
                     new Option { Destination = 30, Text = "Далее" },
                 }
             },
@@ -799,6 +800,7 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 82, Text = "Её имя Гринаила", OnlyIf = "Grinael" },
                     new Option { Destination = 30, Text = "Далее" },
                 }
             },
@@ -1078,6 +1080,8 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [93] = new Paragraph
             {
+                Trigger = "Grinael",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 11, Text = "Далее" },
