@@ -590,6 +590,7 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 37, Text = "Её имя Августина", OnlyIf = "Augustine" },
                     new Option { Destination = 30, Text = "Далее" },
                 }
             },
@@ -1052,6 +1053,8 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [91] = new Paragraph
             {
+                Trigger = "Augustine",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 85, Text = "Далее" },
