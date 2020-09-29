@@ -175,6 +175,11 @@ namespace Seeker.Gamebook.RockOfTerror
                         Name = "Time",
                         Value = 30,
                     },
+                    new Modification
+                    {
+                        Name = "MonksHeart",
+                        Init = true,
+                    },
                 },
 
                 Options = new List<Option>
@@ -214,6 +219,11 @@ namespace Seeker.Gamebook.RockOfTerror
                     {
                         Name = "Time",
                         Value = 60,
+                    },
+                    new Modification
+                    {
+                        Name = "MonksHeart",
+                        Value = 1,
                     },
                 },
 
@@ -330,7 +340,8 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 21, Text = "Далее" },
+                    new Option { Destination = 21, Text = "Сила сердца монаха больше или равна 3", OnlyIf = "СИЛА СЕРДЦА МОНАХА >= 3" },
+                    new Option { Destination = 0, Text = "Начать сначала" },
                 }
             },
             [31] = new Paragraph
@@ -418,7 +429,8 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 21, Text = "Далее" },
+                    new Option { Destination = 21, Text = "Сила сердца монаха больше или равна 3", OnlyIf = "СИЛА СЕРДЦА МОНАХА >= 3" },
+                    new Option { Destination = 0, Text = "Начать сначала" },
                 }
             },
             [38] = new Paragraph
@@ -637,7 +649,8 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 21, Text = "Далее" },
+                    new Option { Destination = 21, Text = "Сила сердца монаха больше или равна 3", OnlyIf = "СИЛА СЕРДЦА МОНАХА >= 3" },
+                    new Option { Destination = 0, Text = "Начать сначала" },
                 }
             },
             [56] = new Paragraph
@@ -772,6 +785,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [67] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "MonksHeart",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 70, Text = "Далее" },
@@ -919,6 +941,11 @@ namespace Seeker.Gamebook.RockOfTerror
                         Name = "Time",
                         Value = 60,
                     },
+                    new Modification
+                    {
+                        Name = "MonksHeart",
+                        Value = 1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -961,6 +988,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [82] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "MonksHeart",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 21, Text = "Далее" },
@@ -1037,6 +1073,11 @@ namespace Seeker.Gamebook.RockOfTerror
                     {
                         Name = "Time",
                         Value = 30,
+                    },
+                    new Modification
+                    {
+                        Name = "MonksHeart",
+                        Value = 1,
                     },
                 },
 

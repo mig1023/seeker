@@ -14,13 +14,24 @@ namespace Seeker.Gamebook.RockOfTerror
 
         public void Do()
         {
-            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+            if (Name == "MonksHeart")
+            {
+                if (Init && (Character.Protagonist.MonksHeart == null))
+                    Character.Protagonist.MonksHeart = 0;
 
-            int injuryModificator = ((Name == "Time") && (Character.Protagonist.Injury > 0) ? 2 : 1);
+                else if (!Init && (Character.Protagonist.MonksHeart != null))
+                    Character.Protagonist.MonksHeart += Value;
+            }
+            else
+            {
+                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-            currentValue += Value * injuryModificator;
+                int injuryModificator = ((Name == "Time") && (Character.Protagonist.Injury > 0) ? 2 : 1);
 
-            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+                currentValue += Value * injuryModificator;
+
+                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+            }
         }
     }
 }

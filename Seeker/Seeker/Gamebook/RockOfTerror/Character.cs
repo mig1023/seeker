@@ -14,10 +14,13 @@ namespace Seeker.Gamebook.RockOfTerror
 
         public int Injury { get; set; }
 
+        public int? MonksHeart { get; set; }
+
         public void Init()
         {
             Time = 0;
             Injury = 0;
+            MonksHeart = null;
         }
 
         public Character Clone()
@@ -25,6 +28,7 @@ namespace Seeker.Gamebook.RockOfTerror
             return new Character() {
                 Time = this.Time,
                 Injury = this.Injury,
+                MonksHeart = this.MonksHeart,
             };
         }
     }
