@@ -21,7 +21,7 @@ namespace Seeker.Gamebook
                 Illustration = "BlackCastleDungeon.jpg",
             },
 
-            ["Тайна капитана Шелдона"] = new Description
+            ["Тайна капитана Шелтона"] = new Description
             {
                 XmlBook = "CaptainSheltonsSecret.xml",
                 Protagonist = CaptainSheltonsSecret.Character.Protagonist.Init,
