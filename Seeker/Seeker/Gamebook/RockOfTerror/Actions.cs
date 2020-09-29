@@ -58,7 +58,7 @@ namespace Seeker.Gamebook.RockOfTerror
                     return false;
                 else if (option.Contains("ВРЕМЯ >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.Time))
                     return false;
-                else if (option.Contains("ВРЕМЯ <") && (int.Parse(option.Split('=')[1]) < Character.Protagonist.Time))
+                else if (option.Contains("ВРЕМЯ <") && (int.Parse(option.Split('<')[1]) < Character.Protagonist.Time))
                     return false;
                 else
                     return true;
