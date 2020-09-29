@@ -29,7 +29,12 @@ namespace Seeker.Gamebook.RockOfTerror
         {
             TimeSpan time = TimeSpan.FromMinutes(Character.Protagonist.Time);
 
-            return new List<string>() { String.Format("Прошедшее время: {0}:{1}", time.Hours, time.Minutes) };
+            List<string> statusLines = new List<string> { String.Format("Прошедшее время: {0}:{1}", time.Hours, time.Minutes) };
+
+            if (Character.Protagonist.MonksHeart != null)
+                statusLines.Add(String.Format("Сила сердца монаха: {0}", Character.Protagonist.MonksHeart));
+
+            return statusLines;
         }
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
