@@ -79,7 +79,7 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [6] = new Paragraph
             {
-                Trigger = "CrazyOldWoman",
+                Trigger = "CrazyOldWoman, Anna",
 
                 Options = new List<Option>
                 {
@@ -298,6 +298,7 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 19, Text = "Расскажете об Анне", OnlyIf = "Anna" },
                     new Option { Destination = 15, Text = "Откажитесь" },
                     new Option { Destination = 95, Text = "Бросите факел в костер" },
                 }
@@ -565,6 +566,7 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 42, Text = "Расскажете об Анне", OnlyIf = "Anna" },
                     new Option { Destination = 60, Text = "Есть распятье с рубином", OnlyIf = "CrucifixWithRuby" },
                     new Option { Destination = 2, Text = "Далее" },
                 }
@@ -839,6 +841,8 @@ namespace Seeker.Gamebook.RockOfTerror
                         Value = 30,
                     },
                 },
+
+                Trigger = "Anna",
 
                 Options = new List<Option>
                 {
