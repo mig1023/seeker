@@ -1083,6 +1083,7 @@ namespace Seeker.Gamebook.RockOfTerror
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 72, Text = "Найти потайную дверь", OnlyIf = "SecretEntrance" },
                     new Option { Destination = 3, Text = "Далее" },
                 }
             },
@@ -1161,6 +1162,8 @@ namespace Seeker.Gamebook.RockOfTerror
                         Value = 30,
                     },
                 },
+
+                Trigger = "SecretEntrance",
 
                 Options = new List<Option>
                 {
