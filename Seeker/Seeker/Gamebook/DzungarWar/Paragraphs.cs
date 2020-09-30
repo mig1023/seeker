@@ -36,7 +36,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 1, Text = "В путь!" },
+                    new Option { Destination = 658, Text = "В путь!" },
                 }
             },
             [1] = new Paragraph
@@ -5123,6 +5123,113 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
+                }
+            },
+	    [658] = new Paragraph
+            {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Выбрать силу",
+                        Text = "СИЛА",
+                        Stat = "Strength",
+                        StatToMax = true,
+                        Aftertext = "Способность персонажа поднимать и переносить тяжести, бороться, а также общая выносливость.",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Выбрать ловкость",
+                        Text = "ЛОВКОСТЬ",
+                        Stat = "Skill",
+                        StatToMax = true,
+                        Aftertext = "Скорость реакции, умение держать равновесие, уворачиваться, прыгать, а также ловкость рук (точные движения кистей и пальцев, включая игру на музыкальных инструментах).",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Выбрать мудрость",
+                        Text = "МУДРОСТЬ",
+                        Stat = "Wisdom",
+                        StatToMax = true,
+                        Aftertext = "Общие знания, жизненный опыт, способность к анализу и логическим рассуждениям, умение замечать детали и делать правильные выводы.",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Выбрать хитрость",
+                        Text = "ХИТРОСТЬ",
+                        Stat = "Cunning",
+                        StatToMax = true,
+                        Aftertext = "Способность обманывать, жульничать, воровские навыки, а также находчивость и умение быстро находить решения в сложных ситуациях.",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Выбрать красноречие",
+                        Text = "КРАСНОРЕЧИЕ",
+                        Stat = "Oratory",
+                        StatToMax = true,
+                        Aftertext = "Способность разговорить собеседника, дар убеждения, умение слагать стихи и песни.",
+                    },
+                },
+
+                Options = new List<Option>
+                {
+                    new Option { Destination = 659, Text = "Далее" },
+                }
+            },
+	    [659] = new Paragraph
+            {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить силы",
+                        Text = "СИЛА",
+                        Stat = "Strength",
+                        Aftertext = "Способность персонажа поднимать и переносить тяжести, бороться, а также общая выносливость.",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить ловкости",
+                        Text = "ЛОВКОСТЬ",
+                        Stat = "Skill",
+                        Aftertext = "Скорость реакции, умение держать равновесие, уворачиваться, прыгать, а также ловкость рук (точные движения кистей и пальцев, включая игру на музыкальных инструментах).",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить мудрости",
+                        Text = "МУДРОСТЬ",
+                        Stat = "Wisdom",
+                        Aftertext = "Общие знания, жизненный опыт, способность к анализу и логическим рассуждениям, умение замечать детали и делать правильные выводы.",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить хитрости",
+                        Text = "ХИТРОСТЬ",
+                        Stat = "Cunning",
+                        Aftertext = "Способность обманывать, жульничать, воровские навыки, а также находчивость и умение быстро находить решения в сложных ситуациях.",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить красноречия",
+                        Text = "КРАСНОРЕЧИЕ",
+                        Stat = "Oratory",
+                        Aftertext = "Способность разговорить собеседника, дар убеждения, умение слагать стихи и песни.\n\nАвтор советует не распылять эти пункты, а определить те качества, которые вы считаете важными. Ведь каждый человек уникален. Каким вы видите народного героя? Кроме того, книга-игра тем и хороша, что приключение можно повторить, выбрав нового персонажа с другими навыками.",
+                    },
+                },
+
+                Options = new List<Option>
+                {
+                    new Option { Destination = 1, Text = "Далее" },
                 }
             },
         };

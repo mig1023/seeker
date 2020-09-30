@@ -21,6 +21,10 @@ namespace Seeker.Gamebook.DzungarWar
             if (Empty || (currentValue < 0))
                 currentValue = 0;
 
+            if ((currentValue > 12) && (Name != Tanga))
+                currentValue = 12;
+
+
             Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
         }
     }

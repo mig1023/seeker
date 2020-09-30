@@ -15,10 +15,11 @@ namespace Seeker.Gamebook.DzungarWar
         public int Wisdom { get; set; }
         public int Cunning { get; set; }
         public int Oratory { get; set; }
-        public int Popularity { get; set; }
+        public int Danger { get; set; }
         public int Tanga { get; set; }
 
         public int StatBonuses { get; set; }
+        public bool MaxBonus { get; set; }
 
         public void Init()
         {
@@ -27,9 +28,10 @@ namespace Seeker.Gamebook.DzungarWar
             Wisdom = 1;
             Cunning = 1;
             Oratory = 1;
-            Popularity = 3;
-            Tanga = 15;
+            Danger = 0;
+            Tanga = 150;
             StatBonuses = 4;
+            MaxBonus = false;
         }
 
         public Character Clone()
@@ -41,9 +43,10 @@ namespace Seeker.Gamebook.DzungarWar
             newCharacter.Wisdom = this.Wisdom;
             newCharacter.Cunning = this.Cunning;
             newCharacter.Oratory = this.Oratory;
-            newCharacter.Popularity = this.Popularity;
+            newCharacter.Danger = this.Danger;
             newCharacter.Tanga = this.Tanga;
             newCharacter.StatBonuses = this.StatBonuses;
+            newCharacter.MaxBonus = this.MaxBonus;
 
             return newCharacter;
         }

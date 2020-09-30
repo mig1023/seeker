@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.DzungarWar
 
         public string Text { get; set; }
         public string Stat { get; set; }
+        public bool StatToMax { get; set; }
         public int Level { get; set; }
         public int Price { get; set; }
 
@@ -57,7 +58,7 @@ namespace Seeker.Gamebook.DzungarWar
             if (Character.Protagonist.Tanga > 0)
                 statusLines.Add(String.Format("Деньги: {0}", Character.Protagonist.Tanga));
 
-            statusLines.Add(String.Format("Популярность: {0}", Character.Protagonist.Popularity));
+            statusLines.Add(String.Format("Опасность: {0}", Character.Protagonist.Danger));
 
             return statusLines;
         }
@@ -65,17 +66,22 @@ namespace Seeker.Gamebook.DzungarWar
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 150;
-            toEndText = "Задуматься о судьбе";
+            toEndText = "Стало слишком опасно";
 
-            return (Character.Protagonist.Popularity <= 0 ? true : false);
+            return (Character.Protagonist.Danger >= 12 ? true : false);
         }
 
         public bool IsButtonEnabled()
         {
             if (Level > 0)
                 return true;
+
+            else if (StatToMax)
+                return Character.Protagonist.MaxBonus;
+
             else if (Price <= 0)
                 return (Character.Protagonist.StatBonuses > 0);
+
             else
                 return (Character.Protagonist.Tanga >= Price);
         }
@@ -89,8 +95,6 @@ namespace Seeker.Gamebook.DzungarWar
                 if (oneOption.Contains(">") || oneOption.Contains("<"))
                 {
                     if (oneOption.Contains("ТАНЬГА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Tanga))
-                        return false;
-                    else if (oneOption.Contains("ПОПУЛЯРНОСТЬ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Popularity))
                         return false;
                 }
                 else if (oneOption.Contains("!"))
@@ -120,7 +124,7 @@ namespace Seeker.Gamebook.DzungarWar
                 ["Wisdom"] = "мудрости",
                 ["Cunning"] = "хитрости",
                 ["Oratory"] = "красноречия",
-                ["Popularity"] = "популярности",
+                ["Danger"] = "опасности",
             };
 
             List<string> testLines = new List<string> { String.Format(
@@ -135,7 +139,15 @@ namespace Seeker.Gamebook.DzungarWar
         public List<string> Get()
         {
             if ((Price > 0) && (Character.Protagonist.Tanga >= Price))
+            {
                 Character.Protagonist.Tanga -= Price;
+            }
+            else if (StatToMax && !Character.Protagonist.MaxBonus)
+            {
+                Character.Protagonist.GetType().GetProperty(Stat).SetValue(Character.Protagonist, 12);
+
+                Character.Protagonist.MaxBonus = true;
+            }
             else if (Character.Protagonist.StatBonuses >= 0)
             {
                 int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
