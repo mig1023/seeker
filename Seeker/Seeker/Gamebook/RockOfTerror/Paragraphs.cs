@@ -56,6 +56,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [3] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 52, Text = "Прошло более 11-ти часов", OnlyIf = "ВРЕМЯ >= 660" },
@@ -64,6 +73,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [4] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 97, Text = "Далее" },
@@ -71,6 +89,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [5] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 34, Text = "На восток" },
@@ -79,6 +106,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [6] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Trigger = "CrazyOldWoman, Anna",
 
                 Options = new List<Option>
@@ -88,6 +124,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [7] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Trigger = "CrucifixWithRuby",
 
                 Options = new List<Option>
@@ -105,6 +150,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [9] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 300,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 44, Text = "Далее" },
@@ -112,6 +166,15 @@ namespace Seeker.Gamebook.RockOfTerror
             },
             [10] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Time",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 45, Text = "На восток" },
