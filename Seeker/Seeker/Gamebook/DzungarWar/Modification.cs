@@ -21,7 +21,7 @@ namespace Seeker.Gamebook.DzungarWar
             if (Empty || (currentValue < 0))
                 currentValue = 0;
 
-            if ((currentValue > 12) && (Name != Tanga))
+            if ((currentValue > 12) && (Name != "Tanga"))
                 currentValue = 12;
 
 
