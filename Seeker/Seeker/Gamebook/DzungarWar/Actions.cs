@@ -77,10 +77,14 @@ namespace Seeker.Gamebook.DzungarWar
                 return true;
 
             else if (StatToMax)
-                return Character.Protagonist.MaxBonus;
+                return !Character.Protagonist.MaxBonus;
 
             else if (Price <= 0)
-                return (Character.Protagonist.StatBonuses > 0);
+            {
+                int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
+
+                return ((Character.Protagonist.StatBonuses > 0) && (currentStat < 12));
+            }
 
             else
                 return (Character.Protagonist.Tanga >= Price);
