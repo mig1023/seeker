@@ -2115,7 +2115,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 746, Text = "Далее" },
+                    new Option { Destination = 146, Text = "Далее" },
                 }
             },
             [204] = new Paragraph
@@ -2355,7 +2355,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 727, Text = "Остаться и продолжить изучение тибетских трактатов" },
+                    new Option { Destination = 127, Text = "Остаться и продолжить изучение тибетских трактатов" },
                     new Option { Destination = 654, Text = "Покинуть монастырь и продолжить свой путь" },
                 }
             },
@@ -2815,7 +2815,7 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 60, Text = "Направиться на юг, в сторону предполагаемого кочевья" },
                     new Option { Destination = 49, Text = "Повернуть на запад, в сторону озера Балхаш и устья реки Аягуз" },
-                    new Option { Destination = 738, Text = "Поехать на восток, к озеру Сассык-Коль" },
+                    new Option { Destination = 138, Text = "Поехать на восток, к озеру Сассык-Коль" },
                 }
             },
             [280] = new Paragraph
@@ -3056,7 +3056,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 728, Text = "Далее" },
+                    new Option { Destination = 128, Text = "Далее" },
                 }
             },
             [306] = new Paragraph
@@ -3581,9 +3581,9 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 754, Text = "Устроить пожар, как предлагает Медведев" },
-                    new Option { Destination = 735, Text = "Последовать совету Дергалюка и учинить драку" },
-                    new Option { Destination = 720, Text = "Предложить что-то своё" },
+                    new Option { Destination = 154, Text = "Устроить пожар, как предлагает Медведев" },
+                    new Option { Destination = 135, Text = "Последовать совету Дергалюка и учинить драку" },
+                    new Option { Destination = 120, Text = "Предложить что-то своё" },
                 }
             },
             [350] = new Paragraph
