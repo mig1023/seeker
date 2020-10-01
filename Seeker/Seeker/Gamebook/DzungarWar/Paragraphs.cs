@@ -5174,6 +5174,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [499] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                        Level = 13,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 140, Text = "В случае успеха" },
@@ -5213,6 +5224,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [504] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                        Level = 13,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 413, Text = "В случае успеха" },
@@ -5240,6 +5262,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [507] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                        Level = 14,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 446, Text = "В случае успеха" },
@@ -5341,6 +5374,24 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [520] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                        Level = 12,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                        Level = 12,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 540, Text = "Если обе проверки успешны" },
@@ -5446,6 +5497,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [534] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                        Level = 12,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 500, Text = "В случае успеха" },
@@ -5454,6 +5516,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [535] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                        Level =  12,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 474, Text = "В случае успеха" },
@@ -5487,6 +5560,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [539] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                        Level = 14,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 506, Text = "Если отмечено ключевое слово «Ерик»" },
@@ -5526,6 +5610,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [544] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                        Level = 11,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 504, Text = "В случае успеха" },
@@ -5619,6 +5714,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [555] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                        Level = 13,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 70, Text = "В случае успеха" },
@@ -5680,6 +5786,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [563] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                        Level = 12,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 550, Text = "В случае успеха" },
@@ -5810,6 +5927,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [580] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                        Level = 12,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 542, Text = "В случае успеха" },
@@ -5859,6 +5987,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [586] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить мудрость",
+                        Stat = "Wisdom",
+                        Level = 14,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 581, Text = "Если отмечено ключевое слово «Серик»" },
@@ -5868,6 +6007,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [587] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить хитрость",
+                        Stat = "Cunning",
+                        Level = 14,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 531, Text = "Если отмечено ключевое слово «Солончак»" },
@@ -5900,6 +6050,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [591] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                        Level = 13,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 559, Text = "В случае успеха" },
@@ -6080,6 +6241,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [615] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить красноречие",
+                        Stat = "Oratory",
+                        Level = 14,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 546, Text = "В случае успеха" },
@@ -6200,6 +6372,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [630] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить силу",
+                        Stat = "Strength",
+                        Level = 13,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 601, Text = "В случае успеха" },
@@ -6229,6 +6412,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [634] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить силу",
+                        Stat = "Strength",
+                        Level = 14,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 641, Text = "Если отмечено ключевое слово «Берик»" },
@@ -6368,13 +6562,24 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [652] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                        Level = 14,
+                    },
+                },
+
                 Options = new List<Option>
                 {
+                    new Option { Destination = 620, Text = "В случае успеха" },
+                    new Option { Destination = 611, Text = "В случае провала" },
                     new Option { Destination = 632, Text = "Если отмечено ключевое слово «Доспех»" },
                     new Option { Destination = 639, Text = "Если нет, но отмечено хотя бы одно из ключевых слов: «Тулпар» или «Скакун»" },
                     new Option { Destination = 593, Text = "Иначе можно просто подстегнуть коня, чтобы побыстрее проскочить мимо зембуреков" },
-                    new Option { Destination = 620, Text = "В случае успеха" },
-                    new Option { Destination = 611, Text = "В случае провала" },
                 }
             },
             [653] = new Paragraph
@@ -6401,6 +6606,24 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [656] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить силу",
+                        Stat = "Strength",
+                        Level = 14,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Test",
+                        ButtonName = "Проверить ловкость",
+                        Stat = "Skill",
+                        Level = 12,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 322, Text = "Вернуться в пещеру отшельника" },
