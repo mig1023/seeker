@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.DzungarWar
 
         public string Text { get; set; }
         public string Stat { get; set; }
+        public int StatStep { get; set; }
         public bool StatToMax { get; set; }
         public int Level { get; set; }
         public int Price { get; set; }
@@ -77,14 +78,10 @@ namespace Seeker.Gamebook.DzungarWar
                 return true;
 
             else if (StatToMax)
-                return !Character.Protagonist.MaxBonus;
+                return Character.Protagonist.MaxBonus > 0;
 
             else if (Price <= 0)
-            {
-                int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
-
-                return ((Character.Protagonist.StatBonuses > 0) && (currentStat < 12));
-            }
+                return (Character.Protagonist.StatBonuses > 0);
 
             else
                 return (Character.Protagonist.Tanga >= Price);
@@ -146,17 +143,17 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Character.Protagonist.Tanga -= Price;
             }
-            else if (StatToMax && !Character.Protagonist.MaxBonus)
+            else if (StatToMax && (Character.Protagonist.MaxBonus > 0))
             {
                 Character.Protagonist.GetType().GetProperty(Stat).SetValue(Character.Protagonist, 12);
 
-                Character.Protagonist.MaxBonus = true;
+                Character.Protagonist.MaxBonus = 0;
             }
             else if (Character.Protagonist.StatBonuses >= 0)
             {
                 int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
 
-                currentStat += 1;
+                currentStat += (StatStep > 1 ? StatStep : 1);
 
                 Character.Protagonist.GetType().GetProperty(Stat).SetValue(Character.Protagonist, currentStat);
 

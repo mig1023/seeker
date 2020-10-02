@@ -1296,6 +1296,59 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [110] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "StatBonuses",
+                        Value = 1,
+                    },
+                },
+
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить силы",
+                        Text = "СИЛА",
+                        Stat = "Strength",
+                        StatStep = 3,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить ловкости",
+                        Text = "ЛОВКОСТЬ",
+                        Stat = "Skill",
+                        StatStep = 3,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить мудрости",
+                        Text = "МУДРОСТЬ",
+                        Stat = "Wisdom",
+                        StatStep = 3,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить хитрости",
+                        Text = "ХИТРОСТЬ",
+                        Stat = "Cunning",
+                        StatStep = 3,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить красноречия",
+                        Text = "КРАСНОРЕЧИЕ",
+                        Stat = "Oratory",
+                        StatStep = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 498, Text = "Далее" },
@@ -1489,6 +1542,59 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [125] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "StatBonuses",
+                        Value = 1,
+                    },
+                },
+
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить силы",
+                        Text = "СИЛА",
+                        Stat = "Strength",
+                        StatStep = 3,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить ловкости",
+                        Text = "ЛОВКОСТЬ",
+                        Stat = "Skill",
+                        StatStep = 3,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить мудрости",
+                        Text = "МУДРОСТЬ",
+                        Stat = "Wisdom",
+                        StatStep = 3,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить хитрости",
+                        Text = "ХИТРОСТЬ",
+                        Stat = "Cunning",
+                        StatStep = 3,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить красноречия",
+                        Text = "КРАСНОРЕЧИЕ",
+                        Stat = "Oratory",
+                        StatStep = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 498, Text = "Далее" },
@@ -1869,6 +1975,59 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [158] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "MaxBonus",
+                        Value = 1,
+                    },
+                },
+
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить силы",
+                        Text = "СИЛА",
+                        Stat = "Strength",
+                        StatToMax = true,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить ловкости",
+                        Text = "ЛОВКОСТЬ",
+                        Stat = "Skill",
+                        StatToMax = true,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить мудрости",
+                        Text = "МУДРОСТЬ",
+                        Stat = "Wisdom",
+                        StatToMax = true,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить хитрости",
+                        Text = "ХИТРОСТЬ",
+                        Stat = "Cunning",
+                        StatToMax = true,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить красноречия",
+                        Text = "КРАСНОРЕЧИЕ",
+                        Stat = "Oratory",
+                        StatToMax = true,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 453, Text = "Далее" },
@@ -3045,6 +3204,59 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [287] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "StatBonuses",
+                        Value = 1,
+                    },
+                },
+
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить силы",
+                        Text = "СИЛА",
+                        Stat = "Strength",
+                        StatStep = 3,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить ловкости",
+                        Text = "ЛОВКОСТЬ",
+                        Stat = "Skill",
+                        StatStep = 3,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить мудрости",
+                        Text = "МУДРОСТЬ",
+                        Stat = "Wisdom",
+                        StatStep = 3,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить хитрости",
+                        Text = "ХИТРОСТЬ",
+                        Stat = "Cunning",
+                        StatStep = 3,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Добавить красноречия",
+                        Text = "КРАСНОРЕЧИЕ",
+                        Stat = "Oratory",
+                        StatStep = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 279, Text = "Далее" },
