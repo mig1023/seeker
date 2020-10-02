@@ -50,8 +50,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 373, Text = "на юг в Кульджу" },
-                    new Option { Destination = 649, Text = "на север в Семиречье" },
+                    new Option { Destination = 373, Text = "На юг в Кульджу" },
+                    new Option { Destination = 649, Text = "На север в Семиречье" },
                 }
             },
             [3] = new Paragraph
@@ -95,7 +95,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 368, Text = "Достать 100 ТАНЬГА из кошеля, если у Алдара есть столько денег (вычеркнуть эту сумму с листа персонажа)" },
+                    new Option { Destination = 368, Text = "Достать 100 ТАНЬГА из кошеля", OnlyIf = "ТАНЬГА >= 100" },
                     new Option { Destination = 350, Text = "Если обе проверки успешны" },
                     new Option { Destination = 316, Text = "В любом другом случае" },
                 }
@@ -113,8 +113,8 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 465, Text = "с полковником Риддером" },
-                    new Option { Destination = 429, Text = "с отцом Ионой" },
+                    new Option { Destination = 465, Text = "С полковником Риддером" },
+                    new Option { Destination = 429, Text = "С отцом Ионой" },
                     new Option { Destination = 514, Text = "Посетить уйгурское поселение и кульджинский базар" },
                     new Option { Destination = 536, Text = "Попроситься на приём к китайскому наместнику" },
                     new Option { Destination = 545, Text = "Покинуть Кульджу и отправиться дальше" },
@@ -152,7 +152,7 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 53, Text = "Напасть на джунгаров" },
                     new Option { Destination = 63, Text = "Попытаться запугать их" },
-                    new Option { Destination = 91, Text = "Заплатить 100 ТАНЬГА, если есть деньги" },
+                    new Option { Destination = 91, Text = "Заплатить 100 ТАНЬГА", OnlyIf = "ТАНЬГА >= 100" },
                     new Option { Destination = 42, Text = "Развернуться и уехать" },
                 }
             },
@@ -253,7 +253,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 183, Text = "Если отмечено ключевое слово «(Рассвет»" },
+                    new Option { Destination = 183, Text = "Если отмечено ключевое слово «Рассвет»" },
                     new Option { Destination = 207, Text = "Если же это слово не отмечено" },
                 }
             },
@@ -364,7 +364,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 368, Text = "Достать 50 ТАНЬГА из кошеля, если у Алдара они есть (вычеркнуть эту сумму с листа персонажа)" },
+                    new Option { Destination = 368, Text = "Достать 50 ТАНЬГА из кошеля", OnlyIf = "ТАНЬГА >= 50" },
                     new Option { Destination = 382, Text = "Если обе проверки успешны" },
                     new Option { Destination = 316, Text = "В любом другом случае" },
                 }
@@ -890,8 +890,8 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 373, Text = "на юг в Кульджу" },
-                    new Option { Destination = 649, Text = "на север в Семиречье" },
+                    new Option { Destination = 373, Text = "На юг в Кульджу" },
+                    new Option { Destination = 649, Text = "На север в Семиречье" },
                 }
             },
             [71] = new Paragraph
@@ -1107,8 +1107,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 373, Text = "на юг, в Кульджу" },
-                    new Option { Destination = 649, Text = "на север, в Семиречье" },
+                    new Option { Destination = 373, Text = "На юг, в Кульджу" },
+                    new Option { Destination = 649, Text = "На север, в Семиречье" },
                 }
             },
             [93] = new Paragraph
@@ -2152,7 +2152,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 142, Text = "Если осталось минимум 150 ТАНЬГА, сделать денежное подношение (определить его размер и вычеркнуть деньги из листа персонажа)" },
+                    new Option { Destination = 142, Text = "Сделать денежное подношение в 150 ТАНЬГА", OnlyIf = "ТАНЬГА >= 150" },
                     new Option { Destination = 76, Text = "Если же денег меньше, или Алдар не хочет их тратить" },
                 }
             },
@@ -2285,8 +2285,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 57, Text = "Заплатить 300 ТАНЬГА (если есть)" },
-                    new Option { Destination = 575, Text = "Извиниться перед Ганжууром, сказав, что таких денег при себе нет. В этом случае придётся покинуть расположение джунгарских войск. Вряд ли другие писари берут меньше" },
+                    new Option { Destination = 57, Text = "Заплатить 300 ТАНЬГА", OnlyIf = "ТАНЬГА >= 300" },
+                    new Option { Destination = 575, Text = "Извиниться перед Ганжууром, сказав, что таких денег при себе нет" },
                 }
             },
             [174] = new Paragraph
@@ -3326,8 +3326,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 373, Text = "на юг, в Кульджу" },
-                    new Option { Destination = 649, Text = "на север, в Семиречье" },
+                    new Option { Destination = 373, Text = "На юг, в Кульджу" },
+                    new Option { Destination = 649, Text = "На север, в Семиречье" },
                 }
             },
             [273] = new Paragraph
@@ -3584,8 +3584,8 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 373, Text = "на юг в Кульджу" },
-                    new Option { Destination = 649, Text = "на север в Семиречье" },
+                    new Option { Destination = 373, Text = "На юг в Кульджу" },
+                    new Option { Destination = 649, Text = "На север в Семиречье" },
                 }
             },
             [291] = new Paragraph
@@ -3835,7 +3835,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 561, Text = "Если есть деньги и желание их потратить, то заплатить 150 ТАНЬГА за изготовление лёгкой упряжи" },
+                    new Option { Destination = 561, Text = "Заплатить 150 ТАНЬГА за изготовление лёгкой упряжи", OnlyIf = "ТАНЬГА >= 150" },
                     new Option { Destination = 337, Text = "Иначе придётся либо попытать счастья в качестве новобранца на стрельбище" },
                     new Option { Destination = 575, Text = "Либо покинуть эти места и продолжить путь" },
                 }
@@ -4365,8 +4365,8 @@ namespace Seeker.Gamebook.DzungarWar
                     new Option { Destination = 514, Text = "Посетить уйгурское поселение и кульджинский базар" },
                     new Option { Destination = 536, Text = "Попроситься на приём к китайскому наместнику" },
                     new Option { Destination = 545, Text = "Покинуть Кульджу и отправиться дальше" },
-                    new Option { Destination = 447, Text = "с купцом Штейном" },
-                    new Option { Destination = 429, Text = "с отцом Ионой" },
+                    new Option { Destination = 447, Text = "С купцом Штейном" },
+                    new Option { Destination = 429, Text = "С отцом Ионой" },
                 }
             },
             [357] = new Paragraph
@@ -4398,8 +4398,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 373, Text = "на юг в Кульджу" },
-                    new Option { Destination = 649, Text = "на север в Семиречье" },
+                    new Option { Destination = 373, Text = "На юг в Кульджу" },
+                    new Option { Destination = 649, Text = "На север в Семиречье" },
                 }
             },
             [360] = new Paragraph
@@ -5077,8 +5077,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 373, Text = "на юг, в Кульджу" },
-                    new Option { Destination = 649, Text = "на север, в Семиречье" },
+                    new Option { Destination = 373, Text = "На юг, в Кульджу" },
+                    new Option { Destination = 649, Text = "На север, в Семиречье" },
                 }
             },
             [417] = new Paragraph
@@ -5454,7 +5454,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 389, Text = "Заплатить 50 ТАНЬГА бухарцу, если есть такие деньги и желание их потратить" },
+                    new Option { Destination = 389, Text = "Заплатить 50 ТАНЬГА бухарцу, если есть желание их потратить", OnlyIf = "ТАНЬГА >= 50" },
                     new Option { Destination = 401, Text = "Иначе можно попытать счастья в качестве новобранца" },
                     new Option { Destination = 575, Text = "Или покинуть эти места" },
                 }
@@ -5715,7 +5715,7 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 116, Text = "Если отмечено слово «Пушкарь», и Алдар хочет воспользоваться советом Алексея Медведева (но тогда придётся рассказать всё о себе)" },
                     new Option { Destination = 144, Text = "Иначе либо раскрыть себя и попросить о помощи" },
-                    new Option { Destination = 181, Text = "либо, сохраняя купеческое обличье, попытаться выведать у полковника что-нибудь интересное" },
+                    new Option { Destination = 181, Text = "Либо, сохраняя купеческое обличье, попытаться выведать у полковника что-нибудь интересное" },
                 }
             },
             [466] = new Paragraph
@@ -5745,7 +5745,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 575, Text = "то наш герой вынужден покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
+                    new Option { Destination = 575, Text = "Покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
                     new Option { Destination = 557, Text = "Иначе у Алдара Косе есть выбор: продолжить сбор сведений о джунгарских войсках в расположении" },
                     new Option { Destination = 575, Text = "Либо отправиться дальше" },
                 }
@@ -5933,7 +5933,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 575, Text = "то наш герой вынужден покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
+                    new Option { Destination = 575, Text = "То наш герой вынужден покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
                     new Option { Destination = 557, Text = "Иначе у Алдара Косе есть выбор: продолжить сбор сведений о джунгарских войсках в расположении" },
                     new Option { Destination = 575, Text = "Либо отправиться дальше" },
                 }
@@ -6092,8 +6092,8 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 465, Text = "с полковником Риддером" },
-                    new Option { Destination = 447, Text = "с купцом Штейном" },
+                    new Option { Destination = 465, Text = "С полковником Риддером" },
+                    new Option { Destination = 447, Text = "С купцом Штейном" },
                     new Option { Destination = 514, Text = "Покинуть это место, чтобы не подвергать себя ещё большей опасности: Посетить уйгурское поселение и кульджинский базар" },
                     new Option { Destination = 536, Text = "Попроситься на приём к китайскому наместнику" },
                 }
@@ -6190,7 +6190,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 575, Text = "то наш герой вынужден покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
+                    new Option { Destination = 575, Text = "Покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
                     new Option { Destination = 557, Text = "Иначе у Алдара Косе есть выбор: продолжить сбор сведений о джунгарских войсках в расположении" },
                     new Option { Destination = 575, Text = "Либо отправиться дальше" },
                 }
@@ -6409,17 +6409,17 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 373, Text = "на юг, в Кульджу" },
-                    new Option { Destination = 649, Text = "на север, в Семиречье" },
+                    new Option { Destination = 373, Text = "На юг, в Кульджу" },
+                    new Option { Destination = 649, Text = "На север, в Семиречье" },
                 }
             },
             [525] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 465, Text = "к полковнику Риддеру" },
-                    new Option { Destination = 447, Text = "к купцу Штейну" },
-                    new Option { Destination = 429, Text = "к отцу Ионе" },
+                    new Option { Destination = 465, Text = "К полковнику Риддеру" },
+                    new Option { Destination = 447, Text = "К купцу Штейну" },
+                    new Option { Destination = 429, Text = "К отцу Ионе" },
                     new Option { Destination = 514, Text = "Посетить уйгурское поселение и кульджинский базар" },
                     new Option { Destination = 536, Text = "Попроситься на приём к китайскому наместнику" },
                 }
@@ -6532,8 +6532,8 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 432, Text = "Решиться на тайный осмотр укреплений" },
                     new Option { Destination = 456, Text = "Поговорить с тысячником" },
-                    new Option { Destination = 373, Text = "на юг, в Кульджу" },
-                    new Option { Destination = 649, Text = "на север, в Семиречье" },
+                    new Option { Destination = 373, Text = "На юг, в Кульджу" },
+                    new Option { Destination = 649, Text = "На север, в Семиречье" },
                 }
             },
             [538] = new Paragraph
@@ -6637,9 +6637,9 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 171, Text = "Если отмечены оба ключевых слова: «Рассвет» и «Пленник»" },
-                    new Option { Destination = 336, Text = "Заплатить 100 ТАНЬГА, как того требуют воины" },
+                    new Option { Destination = 336, Text = "Заплатить 100 ТАНЬГА, как того требуют воины", OnlyIf = "ТАНЬГА >= 100" },
                     new Option { Destination = 363, Text = "Обмануть их, выдав себя за посланника хунтайши" },
-                    new Option { Destination = 385, Text = "Поторговаться с джунгарами, притворившись бедняком, если есть хотя бы 10 ТАНЬГА" },
+                    new Option { Destination = 385, Text = "Поторговаться с джунгарами, притворившись бедняком", OnlyIf = "ТАНЬГА >= 10" },
                     new Option { Destination = 404, Text = "Прорваться силой, если в кошельке Алдара не найти даже и 10 ТАНЬГА, или если джигит не хочет их искать" },
                 }
             },
@@ -6678,8 +6678,8 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 537, Text = "Остаться в крепости на ночлег" },
-                    new Option { Destination = 373, Text = "на юг, в Кульджу" },
-                    new Option { Destination = 649, Text = "на север, в Семиречье" },
+                    new Option { Destination = 373, Text = "На юг, в Кульджу" },
+                    new Option { Destination = 649, Text = "На север, в Семиречье" },
                 }
             },
             [553] = new Paragraph
@@ -6727,7 +6727,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 575, Text = "то наш герой вынужден покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
+                    new Option { Destination = 575, Text = "Покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
                     new Option { Destination = 509, Text = "Если отмечены все три ключевых слова: «Воин», «Лучник» и «Река»" },
                     new Option { Destination = 495, Text = "Если отмечены оба слова: «Воин» и «Лучник»" },
                     new Option { Destination = 606, Text = "Если отмечено только слово «Воин»" },
@@ -6811,8 +6811,8 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 537, Text = "Остаться в крепости ночлег" },
-                    new Option { Destination = 373, Text = "на юг, в Кульджу" },
-                    new Option { Destination = 649, Text = "на север, в Семиречье" },
+                    new Option { Destination = 373, Text = "На юг, в Кульджу" },
+                    new Option { Destination = 649, Text = "На север, в Семиречье" },
                 }
             },
             [565] = new Paragraph
@@ -6988,8 +6988,8 @@ namespace Seeker.Gamebook.DzungarWar
                     new Option { Destination = 637, Text = "Направиться в крепость в обличье джунгарского воина" },
                     new Option { Destination = 644, Text = "Или купца" },
                     new Option { Destination = 649, Text = "Обратно на север, в Семиречье" },
-                    new Option { Destination = 588, Text = "если отмечено ключевое слово «Перевал»" },
-                    new Option { Destination = 578, Text = "если это слово не отмечено" },
+                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал»" },
+                    new Option { Destination = 578, Text = "Если это слово не отмечено" },
                 }
             },
             [583] = new Paragraph
@@ -7364,8 +7364,8 @@ namespace Seeker.Gamebook.DzungarWar
                     new Option { Destination = 637, Text = "Направиться туда в обличье джунгарского воина" },
                     new Option { Destination = 644, Text = "Или купца" },
                     new Option { Destination = 649, Text = "Обратно на север, в Семиречье" },
-                    new Option { Destination = 588, Text = "если отмечено ключевое слово «Перевал»" },
-                    new Option { Destination = 578, Text = "если это слово не отмечено" },
+                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал»" },
+                    new Option { Destination = 578, Text = "Если это слово не отмечено" },
                 }
             },
             [625] = new Paragraph
@@ -7538,10 +7538,10 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 618, Text = "Заплатить 50 ТАНЬГА, если есть деньги и желание это сделать" },
+                    new Option { Destination = 618, Text = "Заплатить 50 ТАНЬГА, если есть желание это сделать", OnlyIf = "ТАНЬГА >= 50" },
                     new Option { Destination = 649, Text = "Обратно на север, в Семиречье" },
-                    new Option { Destination = 588, Text = "если отмечено ключевое слово «Перевал»" },
-                    new Option { Destination = 578, Text = "если это слово не отмечено" },
+                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал»" },
+                    new Option { Destination = 578, Text = "Если это слово не отмечено" },
                 }
             },
             [645] = new Paragraph
