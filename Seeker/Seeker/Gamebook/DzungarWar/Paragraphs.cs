@@ -3735,6 +3735,20 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [306] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 600,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 207, Text = "Далее" },
@@ -3803,6 +3817,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [312] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 279, Text = "Далее" },
@@ -3829,6 +3852,20 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [315] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 50,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 128, Text = "Далее" },
@@ -4070,6 +4107,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [334] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 654, Text = "Далее" },
@@ -4305,6 +4351,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [356] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 514, Text = "Посетить уйгурское поселение и кульджинский базар" },
@@ -4325,6 +4380,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [358] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 406, Text = "Далее" },
@@ -4678,6 +4742,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [391] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 200,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 356, Text = "Далее" },
@@ -4751,6 +4824,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [396] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 58, Text = "Далее" },
@@ -4837,6 +4919,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [403] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 300,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 356, Text = "Далее" },
@@ -4968,6 +5059,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [415] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 42, Text = "Далее" },
@@ -5138,6 +5238,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [426] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 50,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 449, Text = "Далее" },
@@ -5145,6 +5254,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [427] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 654, Text = "Далее" },
@@ -5212,6 +5330,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [434] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 1000,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 212, Text = "Далее" },
@@ -5241,6 +5368,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [438] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 42, Text = "Далее" },
@@ -5472,6 +5608,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [454] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 654, Text = "Далее" },
@@ -5589,6 +5734,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [468] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 575, Text = "то наш герой вынужден покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
@@ -5670,6 +5824,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [474] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Value = 150,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 436, Text = "Далее" },
@@ -5686,6 +5849,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [476] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 545, Text = "Далее" },
@@ -5768,6 +5940,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [485] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 428, Text = "Далее" },
@@ -5857,6 +6038,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [494] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 654, Text = "Далее" },
@@ -5891,6 +6081,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [498] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 465, Text = "с полковником Риддером" },
@@ -5920,6 +6119,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [500] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 654, Text = "Далее" },
@@ -6022,6 +6230,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [510] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 436, Text = "Далее" },
@@ -6029,6 +6246,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [511] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 328, Text = "Присесть к батракам и ремесленникам" },
@@ -6037,6 +6263,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [512] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 545, Text = "Далее" },
@@ -6070,6 +6305,20 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [516] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 2,
+                    },
+                    new Modification
+                    {
+                        Name = "Skill",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 654, Text = "Далее" },
@@ -6135,6 +6384,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [522] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 654, Text = "Далее" },
