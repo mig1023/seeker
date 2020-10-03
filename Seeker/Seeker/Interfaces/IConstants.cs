@@ -8,10 +8,6 @@ namespace Seeker.Interfaces
     {
         string GetButtonsColor(Game.Buttons.ButtonTypes type);
 
-        string GetFontColor();
-
-        string GetBackgroundColor();
-
-        string GetStatusBarColor();
+        string GetColor(Game.Data.ColorTypes type);
     }
 }

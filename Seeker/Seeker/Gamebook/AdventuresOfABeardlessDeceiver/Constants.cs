@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 using static Seeker.Game.Buttons;
+using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 {
@@ -15,24 +16,22 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             [ButtonTypes.Option] = "#696969",
         };
 
+        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
+        {
+            [ColorTypes.Background] = String.Empty,
+            [ColorTypes.Font] = String.Empty,
+            [ColorTypes.ActionBox] = String.Empty,
+            [ColorTypes.StatusBar] = "#005100",
+        };
+
         public string GetButtonsColor(ButtonTypes type)
         {
             return ButtonsColors[type];
         }
 
-        public string GetStatusBarColor()
+        public string GetColor(Game.Data.ColorTypes type)
         {
-            return "#005100";
-        }
-
-        public string GetBackgroundColor()
-        {
-            return String.Empty;
-        }
-
-        public string GetFontColor()
-        {
-            return String.Empty;
+            return Colors[type];
         }
     }
 }

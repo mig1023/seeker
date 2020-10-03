@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 using static Seeker.Game.Buttons;
+using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.DzungarWar
 {
@@ -15,25 +16,22 @@ namespace Seeker.Gamebook.DzungarWar
             [ButtonTypes.Option] = "#696969",
         };
 
+        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
+        {
+            [ColorTypes.Background] = "#c3dcc6",
+            [ColorTypes.Font] = String.Empty,
+            [ColorTypes.ActionBox] = "#7cb281",
+            [ColorTypes.StatusBar] = "#005100",
+        };
+
         public string GetButtonsColor(ButtonTypes type)
         {
             return ButtonsColors[type];
         }
 
-        public string GetStatusBarColor()
+        public string GetColor(Game.Data.ColorTypes type)
         {
-            return "#005100";
-        }
-
-        public string GetBackgroundColor()
-        {
-            return "#c3dcc6";
-            //return String.Empty;
-        }
-
-        public string GetFontColor()
-        {
-            return String.Empty;
+            return Colors[type];
         }
     }
 }

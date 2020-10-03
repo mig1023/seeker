@@ -18,7 +18,7 @@ namespace Seeker.Game
                 label.Text = status;
                 label.FontSize = 12;
                 label.TextColor = Color.White;
-                label.BackgroundColor = Color.FromHex(Game.Data.Constants.GetStatusBarColor());
+                label.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Data.ColorTypes.StatusBar));
 
                 label.HorizontalTextAlignment = TextAlignment.Center;
                 label.VerticalTextAlignment = TextAlignment.Center;
@@ -157,7 +157,7 @@ namespace Seeker.Game
 
         public static StackLayout ActionPlace()
         {
-            return new StackLayout()
+            StackLayout stackLayout = new StackLayout()
             {
                 Orientation = StackOrientation.Vertical,
                 Spacing = 5,
@@ -165,6 +165,11 @@ namespace Seeker.Game
                 Padding = 20,
                 BackgroundColor = Color.LightGray
             };
+
+            if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.ActionBox)))
+                stackLayout.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.ActionBox));
+
+            return stackLayout;
         }
 
         public static List<Label> Actions(List<string> actionsLines)

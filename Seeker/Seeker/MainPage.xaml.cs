@@ -22,11 +22,6 @@ namespace Seeker
 
         private void TextLabel(string text)
         {
-            string fontColor = String.Empty;
-                
-            if (Game.Data.Constants != null)
-                fontColor = Game.Data.Constants.GetFontColor();
-
             Label label = new Label
             {
                 Margin = 5,
@@ -34,8 +29,8 @@ namespace Seeker
                 Text = text,
             };
 
-            if (!String.IsNullOrEmpty(fontColor))
-                label.TextColor = Color.FromHex(fontColor);
+            if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
+                label.TextColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
 
             Text.Children.Add(label);
         }
@@ -180,7 +175,7 @@ namespace Seeker
 
         private void GamepageSettings()
         {
-            string backColor = Game.Data.Constants.GetBackgroundColor();
+            string backColor = Game.Data.Constants.GetColor(Game.Data.ColorTypes.Background);
 
             if (!String.IsNullOrEmpty(backColor))
                 MainScroll.BackgroundColor = Color.FromHex(backColor);

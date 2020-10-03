@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 using static Seeker.Game.Buttons;
+using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.RockOfTerror
 {
@@ -15,24 +16,22 @@ namespace Seeker.Gamebook.RockOfTerror
             [ButtonTypes.Option] = "#494949",
         };
 
+        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
+        {
+            [ColorTypes.Background] = "#000000",
+            [ColorTypes.Font] = "#FFFFFF",
+            [ColorTypes.ActionBox] = String.Empty,
+            [ColorTypes.StatusBar] = "#151515",
+        };
+
         public string GetButtonsColor(ButtonTypes type)
         {
             return ButtonsColors[type];
         }
 
-        public string GetStatusBarColor()
+        public string GetColor(Game.Data.ColorTypes type)
         {
-            return "#151515";
-        }
-
-        public string GetFontColor()
-        {
-            return "#FFFFFF";
-        }
-
-        public string GetBackgroundColor()
-        {
-            return "#000000";
+            return Colors[type];
         }
     }
 }
