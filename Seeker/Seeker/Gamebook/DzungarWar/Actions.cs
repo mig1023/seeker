@@ -19,6 +19,16 @@ namespace Seeker.Gamebook.DzungarWar
         public int Level { get; set; }
         public int Price { get; set; }
 
+        Dictionary<string, string> statNames = new Dictionary<string, string>
+        {
+            ["Strength"] = "силы",
+            ["Skill"] = "ловкости",
+            ["Wisdom"] = "мудрости",
+            ["Cunning"] = "хитрости",
+            ["Oratory"] = "красноречия",
+            ["Danger"] = "опасности",
+        };
+
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
             if (trigger)
@@ -34,7 +44,12 @@ namespace Seeker.Gamebook.DzungarWar
 
         public List<string> Representer()
         {
-            return (String.IsNullOrEmpty(Text) ? new List<string> { } : new List<string> { Text });
+            if (Level > 0)
+                return new List<string> { String.Format("Проверка {0}, уровень {1}", statNames[Stat], Level) };
+            else if (!String.IsNullOrEmpty(Text))
+                return new List<string> { Text };
+            else
+                return new List<string> { };
         }
 
         public List<string> Status()
@@ -81,7 +96,11 @@ namespace Seeker.Gamebook.DzungarWar
                 return Character.Protagonist.MaxBonus > 0;
 
             else if (Price <= 0)
-                return (Character.Protagonist.StatBonuses > 0);
+            {
+                int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
+
+                return ((Character.Protagonist.StatBonuses > 0) && (currentStat < 12));
+            }
 
             else
                 return (Character.Protagonist.Tanga >= Price);
@@ -117,16 +136,6 @@ namespace Seeker.Gamebook.DzungarWar
 
             int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
             bool testIsOk = (firstDice + secondDice) + currentStat >= Level;
-
-            Dictionary<string, string> statNames = new Dictionary<string, string>
-            {
-                ["Strength"] = "силы",
-                ["Skill"] = "ловкости",
-                ["Wisdom"] = "мудрости",
-                ["Cunning"] = "хитрости",
-                ["Oratory"] = "красноречия",
-                ["Danger"] = "опасности",
-            };
 
             List<string> testLines = new List<string> { String.Format(
                 "Проверка {0}: {1} ⚄ + {2} ⚄ + {3} {4} {5}", statNames[Stat], firstDice, secondDice, currentStat, (testIsOk ? ">=" : "<"), Level
