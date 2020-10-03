@@ -24,5 +24,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             return "#2a2a2a";
         }
+
+        public string GetBackgroundColor()
+        {
+            return String.Empty;
+        }
+
+        public string GetFontColor()
+        {
+            return String.Empty;
+        }
     }
 }

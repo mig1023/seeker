@@ -24,5 +24,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         {
             return "#0A5C96";
         }
+
+        public string GetBackgroundColor()
+        {
+            return String.Empty;
+        }
+
+        public string GetFontColor()
+        {
+            return String.Empty;
+        }
     }
 }

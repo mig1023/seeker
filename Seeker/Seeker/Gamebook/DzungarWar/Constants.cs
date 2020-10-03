@@ -24,5 +24,16 @@ namespace Seeker.Gamebook.DzungarWar
         {
             return "#005100";
         }
+
+        public string GetBackgroundColor()
+        {
+            return "#c3dcc6";
+            //return String.Empty;
+        }
+
+        public string GetFontColor()
+        {
+            return String.Empty;
+        }
     }
 }

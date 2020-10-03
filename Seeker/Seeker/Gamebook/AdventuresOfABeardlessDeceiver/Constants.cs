@@ -24,5 +24,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         {
             return "#005100";
         }
+
+        public string GetBackgroundColor()
+        {
+            return String.Empty;
+        }
+
+        public string GetFontColor()
+        {
+            return String.Empty;
+        }
     }
 }

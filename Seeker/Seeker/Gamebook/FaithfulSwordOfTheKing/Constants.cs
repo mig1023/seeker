@@ -24,5 +24,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             return "#870808";
         }
+
+        public string GetBackgroundColor()
+        {
+            return String.Empty;
+        }
+
+        public string GetFontColor()
+        {
+            return String.Empty;
+        }
     }
 }

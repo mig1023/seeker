@@ -22,12 +22,21 @@ namespace Seeker
 
         private void TextLabel(string text)
         {
+            string fontColor = String.Empty;
+                
+            if (Game.Data.Constants != null)
+                fontColor = Game.Data.Constants.GetFontColor();
+
             Label label = new Label
             {
                 Margin = 5,
                 FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                Text = text
+                Text = text,
             };
+
+            if (!String.IsNullOrEmpty(fontColor))
+                label.TextColor = Color.FromHex(fontColor);
+
             Text.Children.Add(label);
         }
 
@@ -66,7 +75,10 @@ namespace Seeker
         private void Gamebook_Click(object sender, EventArgs e)
         {
             Button b = sender as Button;
+
             Game.Data.Load(b.Text);
+            GamepageSettings();
+
             Paragraph(0);
         }
 
@@ -164,6 +176,16 @@ namespace Seeker
                 Status.IsVisible = true;
                 MainGrid.RowDefinitions[1].Height = 40;
             }           
+        }
+
+        private void GamepageSettings()
+        {
+            string backColor = Game.Data.Constants.GetBackgroundColor();
+
+            if (!String.IsNullOrEmpty(backColor))
+                MainScroll.BackgroundColor = Color.FromHex(backColor);
+            else
+                MainScroll.BackgroundColor = Color.White;
         }
 
         private void CheckGameOver()
