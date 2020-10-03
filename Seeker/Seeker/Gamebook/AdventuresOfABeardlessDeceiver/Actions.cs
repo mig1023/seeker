@@ -19,6 +19,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public bool GreatKhanSpecialCheck { get; set; }
         public bool GuessBonus { get; set; }
 
+        Dictionary<string, string> statNames = new Dictionary<string, string>
+        {
+            ["Strength"] = "силы",
+            ["Skill"] = "ловкости",
+            ["Wisdom"] = "мудрости",
+            ["Cunning"] = "хитрости",
+            ["Oratory"] = "красноречия",
+            ["Popularity"] = "популярности",
+        };
+
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
             if (trigger)
@@ -34,7 +44,12 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public List<string> Representer()
         {
-            return (String.IsNullOrEmpty(Text) ? new List<string> { } : new List<string> { Text });
+            if (Level > 0)
+                return new List<string> { String.Format("Проверка {0}, уровень {1}", statNames[Stat], Level) };
+            else if (!String.IsNullOrEmpty(Text))
+                return new List<string> { Text };
+            else
+                return new List<string> { };
         }
 
         public List<string> Status()
@@ -132,16 +147,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
             int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
             bool testIsOk = (firstDice + secondDice) + currentStat >= Level;
-
-            Dictionary<string, string> statNames = new Dictionary<string, string>
-            {
-                ["Strength"] = "силы",
-                ["Skill"] = "ловкости",
-                ["Wisdom"] = "мудрости",
-                ["Cunning"] = "хитрости",
-                ["Oratory"] = "красноречия",
-                ["Popularity"] = "популярности",
-            };
 
             List<string> testLines = new List<string> { String.Format(
                 "Проверка {0}: {1} ⚄ + {2} ⚄ + {3} {4} {5}", statNames[Stat], firstDice, secondDice, currentStat, (testIsOk ? ">=" : "<"), Level
