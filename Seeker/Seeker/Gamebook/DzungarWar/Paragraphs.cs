@@ -4446,6 +4446,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [361] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "TestAll",
+                        ButtonName = "Проверить силу, ловкость, хитрость и мудрость",
+                        Stat = "Strength, Skill, Cunning, Wisdom",
+                        Level = 42,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 238, Text = "Если все четыре проверки успешны" },
@@ -6947,6 +6958,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [574] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "TestAll",
+                        ButtonName = "Проверить силу, ловкость, хитрость и мудрость",
+                        Stat = "Strength, Skill, Cunning, Wisdom",
+                        Level = 42,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 462, Text = "Если все четыре проверки успешны" },
@@ -6986,6 +7008,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [578] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "TestAll",
+                        ButtonName = "Проверить силу, ловкость, хитрость и мудрость",
+                        Stat = "Strength, Skill, Cunning, Wisdom",
+                        Level = 42,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 635, Text = "Если все четыре проверки успешны" },
