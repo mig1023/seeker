@@ -95,9 +95,20 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 368, Text = "Достать 100 ТАНЬГА из кошеля", OnlyIf = "ТАНЬГА >= 100" },
                     new Option { Destination = 350, Text = "Если обе проверки успешны" },
                     new Option { Destination = 316, Text = "В любом другом случае" },
+
+                    new Option {
+                        Destination = 368,
+                        Text = "Достать 100 ТАНЬГА из кошеля",
+                        OnlyIf = "ТАНЬГА >= 100",
+
+                        Do = new Modification
+                        {
+                            Name = "Tanga",
+                            Value = -100,
+                        },
+                    },
                 }
             },
             [5] = new Paragraph
@@ -364,9 +375,20 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 368, Text = "Достать 50 ТАНЬГА из кошеля", OnlyIf = "ТАНЬГА >= 50" },
                     new Option { Destination = 382, Text = "Если обе проверки успешны" },
                     new Option { Destination = 316, Text = "В любом другом случае" },
+
+                    new Option {
+                        Destination = 368,
+                        Text = "Достать 50 ТАНЬГА из кошеля",
+                        OnlyIf = "ТАНЬГА >= 50",
+
+                        Do = new Modification
+                        {
+                            Name = "Tanga",
+                            Value = -50,
+                        },
+                    },
                 }
             },
             [25] = new Paragraph
@@ -5454,7 +5476,18 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 389, Text = "Заплатить 50 ТАНЬГА бухарцу, если есть желание их потратить", OnlyIf = "ТАНЬГА >= 50" },
+                    new Option {
+                        Destination = 389,
+                        Text = "Заплатить 50 ТАНЬГА бухарцу",
+                        OnlyIf = "ТАНЬГА >= 50",
+
+                        Do = new Modification
+                        {
+                            Name = "Tanga",
+                            Value = -50,
+                        },
+                    },
+
                     new Option { Destination = 401, Text = "Иначе можно попытать счастья в качестве новобранца" },
                     new Option { Destination = 575, Text = "Или покинуть эти места" },
                 }
