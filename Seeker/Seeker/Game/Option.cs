@@ -10,6 +10,8 @@ namespace Seeker.Game
         public string Text { get; set; }
         public string OnlyIf { get; set; }
 
+        public Interfaces.IModification Do { get; set; }
+
         public static void Trigger(string optionLine)
         {
             if (String.IsNullOrEmpty(optionLine))

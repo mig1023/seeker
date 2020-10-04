@@ -138,7 +138,7 @@ namespace Seeker
                 if (button == null)
                     continue;
 
-                Game.Router.AddDestination(option.Text, option.Destination);
+                Game.Router.AddDestination(option.Text, option.Destination, option.Do);
 
                 button.Clicked += Option_Click;
 
@@ -232,6 +232,9 @@ namespace Seeker
         private void Option_Click(object sender, EventArgs e)
         {
             Button b = sender as Button;
+
+
+
             Paragraph(Game.Router.FindDestination(b.Text));
         }
     }

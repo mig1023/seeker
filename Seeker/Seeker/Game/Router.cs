@@ -9,6 +9,8 @@ namespace Seeker.Game
     {
         private static Dictionary<string, int> Destinations = new Dictionary<string, int>();
 
+        private static Dictionary<string, Interfaces.IModification> DestinationsAccompanyingActions = new Dictionary<string, Interfaces.IModification>();
+
         private static Dictionary<string, int> Actions = new Dictionary<string, int>();
 
         private static Dictionary<int, StackLayout> ActionsPlaces = new Dictionary<int, StackLayout>();
@@ -16,12 +18,16 @@ namespace Seeker.Game
         public static void Clean()
         {
             Destinations.Clear();
+            DestinationsAccompanyingActions.Clear();
             Actions.Clear();
             ActionsPlaces.Clear();
         }
 
-        public static void AddDestination(string text, int index)
+        public static void AddDestination(string text, int index, Interfaces.IModification modification = null)
         {
+            if (modification != null)
+                DestinationsAccompanyingActions.Add(text, modification);
+
             Destinations.Add(text, index);
         }
 
@@ -39,6 +45,9 @@ namespace Seeker.Game
         {
             if (!Destinations.ContainsKey(text))
                 return 0;
+
+            if (DestinationsAccompanyingActions.ContainsKey(text))
+                DestinationsAccompanyingActions[text].Do();
 
             return Destinations[text];
         }
