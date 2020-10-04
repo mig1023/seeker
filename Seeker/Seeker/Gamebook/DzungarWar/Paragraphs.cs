@@ -2842,6 +2842,17 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [223] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "TestAll",
+                        ButtonName = "Проверить силу, ловкость, хитрость и мудрость",
+                        Stat = "Strength, Skill, Cunning, Wisdom",
+                        Level = 42,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 357, Text = "Если все четыре проверки успешны" },

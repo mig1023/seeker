@@ -44,7 +44,9 @@ namespace Seeker.Gamebook.DzungarWar
 
         public List<string> Representer()
         {
-            if (Level > 0)
+            if (ActionName == "TestAll")
+                return new List<string> { String.Format("Проверить по совокупному уровню {0}", Level) };
+            else if (Level > 0)
                 return new List<string> { String.Format("Проверка {0}, уровень {1}", statNames[Stat], Level) };
             else if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
@@ -129,17 +131,50 @@ namespace Seeker.Gamebook.DzungarWar
             return true;
         }
 
-        public List<string> Test()
+        private void TestParam(string stat, int level, out bool result, out string resultLine)
         {
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
+            int currentStat = (int)Character.Protagonist.GetType().GetProperty(stat).GetValue(Character.Protagonist, null);
 
-            int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
-            bool testIsOk = (firstDice + secondDice) + currentStat >= Level;
+            result = (firstDice + secondDice) + currentStat >= level;
 
-            List<string> testLines = new List<string> { String.Format(
-                "Проверка {0}: {1} ⚄ + {2} ⚄ + {3} {4} {5}", statNames[Stat], firstDice, secondDice, currentStat, (testIsOk ? ">=" : "<"), Level
-            ) };
+            resultLine = String.Format(
+                "Проверка {0}: {1} ⚄ + {2} ⚄ + {3} {4} {5}", statNames[stat], firstDice, secondDice, currentStat, (result ? ">=" : "<"), level
+            );
+        }
+
+        public List<string> Test()
+        {
+            List<string> testLines = new List<string>();
+
+            TestParam(Stat, Level, out bool testIsOk, out string result);
+
+            testLines.Add(result);
+            testLines.Add(testIsOk ? "BIG|GOOD|АЛДАР СПРАВИЛСЯ :)" : "BIG|BAD|АЛДАР НЕ СПРАВИЛСЯ :(");
+
+            return testLines;
+        }
+
+        public List<string> TestAll()
+        {
+            bool testIsOk = true;
+            List<string> testLines = new List<string>();
+
+            string[] tests = Stat.Split(',');
+
+            int level = (int)Math.Ceiling((double)Level / (double)tests.Length); 
+
+            foreach (string test in tests)
+            {
+                TestParam(test.Trim(), level, out bool thisTestIsOk, out string result);
+
+                testLines.Add(result);
+                testLines.Add(thisTestIsOk ? "GOOD|Алдар справился" : "BAD|Алдар не справился");
+
+                if (!thisTestIsOk)
+                    testIsOk = false;
+            }
 
             testLines.Add(testIsOk ? "BIG|GOOD|АЛДАР СПРАВИЛСЯ :)" : "BIG|BAD|АЛДАР НЕ СПРАВИЛСЯ :(");
 
