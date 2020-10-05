@@ -2167,7 +2167,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 128, Text = "Далее" },
                 }
             },
             [161] = new Paragraph
@@ -2741,7 +2741,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 728, Text = "Далее" },
                 }
             },
             [212] = new Paragraph
@@ -2787,7 +2787,8 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 575, Text = "Покинуть эти места" },
+                    new Option { Destination = 557, Text = "Продолжить сбор сведений" },
                 }
             },
             [216] = new Paragraph
@@ -2808,7 +2809,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 297, Text = "Далее" },
                 }
             },
             [219] = new Paragraph
@@ -3251,7 +3252,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 297, Text = "Далее" },
                 }
             },
             [263] = new Paragraph
@@ -4676,7 +4677,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 575, Text = "Покинуть эти места" },
+                    new Option { Destination = 557, Text = "Продолжить сбор сведений" },
                 }
             },
             [380] = new Paragraph
@@ -6823,7 +6825,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 575, Text = "Покинуть эти места" },
+                    new Option { Destination = 557, Text = "Продолжить сбор сведений" },
                 }
             },
             [562] = new Paragraph
@@ -7237,7 +7240,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 645, Text = "Далее" },
                 }
             },
             [600] = new Paragraph
@@ -7541,9 +7544,9 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 641, Text = "Если отмечено ключевое слово «Берик»" },
                     new Option { Destination = 616, Text = "В случае успеха" },
                     new Option { Destination = 597, Text = "В случае провала" },
+                    new Option { Destination = 641, Text = "Если отмечено ключевое слово «Берик»" },
                 }
             },
             [635] = new Paragraph
