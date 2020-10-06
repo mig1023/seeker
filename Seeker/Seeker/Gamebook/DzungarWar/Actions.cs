@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.DzungarWar
         public int Level { get; set; }
         public int Price { get; set; }
 
+
         Dictionary<string, string> statNames = new Dictionary<string, string>
         {
             ["Strength"] = "силы",

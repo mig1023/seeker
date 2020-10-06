@@ -445,7 +445,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 332, Text = "Если записано ключевое слово «Арбалет»" },
+                    new Option { Destination = 332, Text = "Воспользоваться арбалетом", OnlyIf = "Crossbow" },
                     new Option { Destination = 321, Text = "Выстрелить из пистолета" },
                     new Option { Destination = 308, Text = "Достать нож и спрыгнуть с коня, прикрывая его от нападения" },
                     new Option { Destination = 295, Text = "Попробовать задобрить камышового кота" },
@@ -641,7 +641,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 74, Text = "Если отмечено ключевое слово «Арбалет»" },
+                    new Option { Destination = 74, Text = "Воспользоваться арбалетом", OnlyIf = "Crossbow" },
                     new Option { Destination = 59, Text = "Если отмечено хотя бы одно из ключевых слов: «Пленник», «Переписка» или «Святыня» - то Алдар знает, о чём он будет докладывать хунтайши" },
                     new Option { Destination = 66, Text = "Иначе придётся сделать донесение о «казахском лазутчике»" },
                     new Option { Destination = 453, Text = "И конечно, ничто не мешает отступиться от замысла и прямо сейчас покинуть ставку" },
@@ -1013,7 +1013,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 106, Text = "Если отмечено ключевое слово «Арбалет»" },
+                    new Option { Destination = 106, Text = "Воспользоваться арбалетом", OnlyIf = "Crossbow" },
                     new Option { Destination = 114, Text = "Если это слово не отмечено" },
                 }
             },
@@ -3696,9 +3696,11 @@ namespace Seeker.Gamebook.DzungarWar
                     {
                         ActionName = "Get",
                         ButtonName = "Купить арбалет",
-                        Text = "МАЛЕНЬКИЙ АРБАЛЕТ",
+                        Text = "МАЛЕНЬКИЙ АРБАЛЕТ, 100 таньга",
+                        Trigger = "Crossbow",
                         Price = 100,
                         Aftertext = "Маленький арбалет, который можно спрятать под складками одежды. На расстоянии в несколько шагов он легко пробивает кожаный доспех. По словам торговца, именно такими в давние времена пользовались ассасины Хасана ибн-Саббаха, когда нельзя было приблизиться к жертве вплотную. А ещё русский купец, продавший ему вещицу, сказал, что арбалетная стрела называется болт.",
+                        
                     },
                     new Actions
                     {
@@ -3807,6 +3809,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = 600,
                     },
                 },
+
+                Trigger = "Crossbow",
 
                 Options = new List<Option>
                 {
@@ -5518,6 +5522,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 14, Text = "Предпочесть лук" },
+                    new Option { Destination = 14, Text = "Воспользоваться арбалетом", OnlyIf = "Crossbow" },
                     new Option { Destination = 32, Text = "Решиться на использование пистолета" },
                 }
             },
@@ -6262,7 +6267,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 651, Text = "Если отмечено ключевое слово «Арбалет»" },
+                    new Option { Destination = 651, Text = "Воспользоваться арбалетом", OnlyIf = "Crossbow" },
                     new Option { Destination = 411, Text = "Ударить Хуяга по голове" },
                     new Option { Destination = 398, Text = "Пырнуть его ножом" },
                     new Option { Destination = 392, Text = "Выстрелить в ойрата из лука" },
@@ -7033,7 +7038,7 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 590, Text = "Если отмечено ключевое слово «Хубилган»" },
                     new Option { Destination = 603, Text = "Если отмечено ключевое слово «Фарфор»" },
-                    new Option { Destination = 609, Text = "Если отмечено ключевое слово «Арбалет»" },
+                    new Option { Destination = 609, Text = "Воспользоваться арбалетом", OnlyIf = "Crossbow" },
                     new Option { Destination = 615, Text = "При наличии нескольких слов можно посмотреть соответствующие параграфы по очереди. После этого, а также в случае, если ни одно из указанных слов не отмечено" },
                 }
             },
