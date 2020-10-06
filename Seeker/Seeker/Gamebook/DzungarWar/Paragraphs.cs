@@ -2755,6 +2755,8 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Trigger = "Aldan",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 428, Text = "Далее" },
@@ -6104,7 +6106,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 383, Text = "Если отмечено ключевое слово «Алдан»" },
+                    new Option { Destination = 383, Text = "Имя Алдана знакомо Алдару", OnlyIf ="Aldan" },
                     new Option { Destination = 358, Text = "Если Алдар Косе хочет рассказать о казахском лазутчике" },
                     new Option { Destination = 346, Text = "Если наш герой больше полагается на своё красноречие" },
                 }
@@ -7565,7 +7567,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 619, Text = "Если отмечено ключевое слово «Алдан»" },
+                    new Option { Destination = 619, Text = "Имя Алдана знакомо Алдару", OnlyIf ="Aldan" },
                     new Option { Destination = 610, Text = "Если отмечено ключевое слово «Хуяг»" },
                     new Option { Destination = 602, Text = "Если не отмечено ни одно из этих слов" },
                 }
