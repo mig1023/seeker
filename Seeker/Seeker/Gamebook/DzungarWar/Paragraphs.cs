@@ -48,6 +48,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [2] = new Paragraph
             {
+                Trigger = "Pain",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 373, Text = "На юг в Кульджу" },
@@ -2974,7 +2976,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 573, Text = "Если ключевое слово «Боль» уже отмечено" },
+                    new Option { Destination = 573, Text = "Конь уже был ранен раньше", OnlyIf = "Pain" },
                     new Option { Destination = 146, Text = "Впереди брод" },
                 }
             },
@@ -3052,6 +3054,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [242] = new Paragraph
             {
+                Trigger = "Pain",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 575, Text = "Далее" },
@@ -6996,7 +7000,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 573, Text = "Если ключевое слово «Боль» уже отмечено" },
+                    new Option { Destination = 573, Text = "Конь уже был ранен раньше", OnlyIf = "Pain" },
                     new Option { Destination = 319, Text = "В противном случае отметить ключевое слово «Боль» на листе персонажа. Погоня продолжается" },
                 }
             },
@@ -7241,6 +7245,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [588] = new Paragraph
             {
+                Trigger = "Pain",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 502, Text = "Если Алдар ещё не был в расположении джунгарских войск на берегу Или, то на обратном пути можно направиться туда и добыть последние сведения о противнике" },
@@ -7292,7 +7298,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 573, Text = "Если ключевое слово «Боль» уже отмечено" },
+                    new Option { Destination = 573, Text = "Если ключевое слово «Боль» уже отмечено", OnlyIf = "Pain" },
                     new Option { Destination = 587, Text = "В противном случае отметить ключевое слово «Боль» на листе персонажа. Погоня продолжается" },
                 }
             },
@@ -7457,6 +7463,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [614] = new Paragraph
             {
+                Trigger = "Pain",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 582, Text = "Далее" },
@@ -7655,6 +7663,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [635] = new Paragraph
             {
+                Trigger = "Pain",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 517, Text = "Далее" },
