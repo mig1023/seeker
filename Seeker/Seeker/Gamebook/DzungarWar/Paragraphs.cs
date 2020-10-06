@@ -6804,6 +6804,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [548] = new Paragraph
             {
+                Trigger = "Berik",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 634, Text = "Далее" },
@@ -7648,7 +7650,7 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 616, Text = "В случае успеха" },
                     new Option { Destination = 597, Text = "В случае провала" },
-                    new Option { Destination = 641, Text = "Если отмечено ключевое слово «Берик»" },
+                    new Option { Destination = 641, Text = "Имя Берика знакомо Алдару", OnlyIf = "Berik", },
                 }
             },
             [635] = new Paragraph
