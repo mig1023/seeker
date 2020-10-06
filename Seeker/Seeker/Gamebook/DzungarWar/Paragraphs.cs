@@ -2581,7 +2581,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 244, Text = "Если отмечено ключевое слово «Аягуз»" },
+                    new Option { Destination = 244, Text = "Алдар знает о Аягузе", OnlyIf = "Ayaguz" },
                     new Option { Destination = 123, Text = "Если отмечено ключевое слово «Табун»" },
                     new Option { Destination = 155, Text = "Если не отмечено ни одно их этих слов" },
                 }
@@ -2935,6 +2935,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = 1,
                     },
                 },
+
+                Trigger = "Ayaguz",
 
                 Options = new List<Option>
                 {
@@ -3640,6 +3642,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [293] = new Paragraph
             {
+                Trigger = "Ayaguz",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 207, Text = "Несмотря ни на что проследовать в Аягуз" },
