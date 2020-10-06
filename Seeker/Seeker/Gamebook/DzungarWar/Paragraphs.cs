@@ -1103,6 +1103,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [90] = new Paragraph
             {
+                Trigger = "Barymta",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 257, Text = "Завершить путешествие и направиться вместе с Азимханом и офицерами к казахскому ополчению" },
@@ -2520,6 +2522,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [194] = new Paragraph
             {
+                Trigger = "Barymta",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 257, Text = "Завершить путешествие и направиться вместе с Шандором к казахскому ополчению" },
@@ -3596,6 +3600,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [288] = new Paragraph
             {
+                Trigger = "Barymta",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 257, Text = "Завершить путешествие и направиться вместе с Азимханом к казахскому ополчению" },
@@ -5611,9 +5617,9 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 560, Text = "Если отмечено ключевое слово «Барымта»" },
-                    new Option { Destination = 568, Text = "Если отмечено ключевое слово «Святыня»" },
-                    new Option { Destination = 576, Text = "Если отмечено ключевое слово «Взрыв»" },
+                    new Option { Destination = 560, Text = "Рассказать про угон табуна", Trigger = "Barymta" },
+                    new Option { Destination = 568, Text = "Отмечено ключевое слово «Святыня»" },
+                    new Option { Destination = 576, Text = "Отмечено ключевое слово «Взрыв»" },
                     new Option { Destination = 585, Text = "Далее" },
                 }
             },
@@ -7186,7 +7192,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 594, Text = "Если отмечены все три ключевых слова: «Барымта», «Взрыв» и «Святыня»" },
+                    new Option { Destination = 594, Text = "Рассказано было много полезного", Trigger = "Barymta" },
                     new Option { Destination = 540, Text = "Если отмечено хотя бы одно из этих ключевых слов" },
                     new Option { Destination = 520, Text = "Если же ни одного из слов не отмечено, значит, Алдар Косе сообщил Штейну мало полезного" },
                 }
