@@ -2398,6 +2398,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [182] = new Paragraph
             {
+                Trigger = "Buddhist",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 42, Text = "Далее" },
@@ -4583,7 +4585,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 188, Text = "Если отмечено ключевое слово «Буддист»" },
+                    new Option { Destination = 188, Text = "Алдар помнит разговор с торговцем на озере Сассык-Коль", OnlyIf = "Buddhist" },
                     new Option { Destination = 213, Text = "Если обе проверки успешны" },
                     new Option { Destination = 334, Text = "В любом другом случае" },
                 }
