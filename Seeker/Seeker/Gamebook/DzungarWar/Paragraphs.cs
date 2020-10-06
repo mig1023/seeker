@@ -180,6 +180,8 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Trigger = "Explosion",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 453, Text = "Далее" },
@@ -5625,7 +5627,7 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 560, Text = "Рассказать про угон табуна", Trigger = "Barymta" },
                     new Option { Destination = 568, Text = "Отмечено ключевое слово «Святыня»" },
-                    new Option { Destination = 576, Text = "Отмечено ключевое слово «Взрыв»" },
+                    new Option { Destination = 576, Text = "Рассказать про взрыв", Trigger = "Explosion" },
                     new Option { Destination = 585, Text = "Далее" },
                 }
             },
@@ -7200,9 +7202,9 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 594, Text = "Рассказано было много полезного", Trigger = "Barymta" },
-                    new Option { Destination = 540, Text = "Если отмечено хотя бы одно из этих ключевых слов" },
-                    new Option { Destination = 520, Text = "Если же ни одного из слов не отмечено, значит, Алдар Косе сообщил Штейну мало полезного" },
+                    new Option { Destination = 594, Text = "Рассказано было много полезного", Trigger = "Barymta, Explosion" },
+                    new Option { Destination = 540, Text = "Рассказано было нечто полезное", Trigger = "Barymta" },
+                    new Option { Destination = 520, Text = "Алдар Косе сообщил Штейну мало полезного" },
                 }
             },
             [586] = new Paragraph
