@@ -227,8 +227,8 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 262, Text = "Если отмечены оба слова: «Пастух» и «Дружба»" },
-                    new Option { Destination = 241, Text = "Если не отмечено слово «Пастух», но отмечено слово «Дружба»" },
+                    new Option { Destination = 262, Text = "Если отмечены оба слова: «Пастух» и «Дружба»", OnlyIf = "Friendship" },
+                    new Option { Destination = 241, Text = "Если не отмечено слово «Пастух», но отмечено слово «Дружба»", OnlyIf = "Friendship" },
                     new Option { Destination = 218, Text = "В случае успеха" },
                     new Option { Destination = 233, Text = "В случае провала" },
                 }
@@ -1996,7 +1996,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 622, Text = "Если отмечено ключевое слово «Дружба»" },
+                    new Option { Destination = 622, Text = "Если отмечено ключевое слово «Дружба»", OnlyIf = "Friendship" },
                     new Option { Destination = 588, Text = "Если не отмечено слово «Дружба», но отмечено слово «Перевал»" },
                     new Option { Destination = 578, Text = "Иначе" },
                 }
@@ -2977,7 +2977,7 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
-                Trigger = "Ayaguz",
+                Trigger = "Ayaguz, Friendship",
 
                 Options = new List<Option>
                 {
@@ -3808,8 +3808,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 622, Text = "Если отмечено ключевое слово «Дружба»" },
-                    new Option { Destination = 655, Text = "Если слово «Дружба» не отмечено, может быть у нашего героя есть карты? Если отмечено ключевое слово «Тропа», то Алдар Косе может пересечь Джунгарские ворота по тайным тропам, не боясь ветра Эби" },
+                    new Option { Destination = 622, Text = "Если отмечено ключевое слово «Дружба»", OnlyIf = "Friendship" },
+                    new Option { Destination = 655, Text = "Если слово «Дружба» не отмечено, может быть у нашего героя есть карты? Если отмечено ключевое слово «Тропа», то Алдар Косе может пересечь Джунгарские ворота по тайным тропам, не боясь ветра Эби", OnlyIf = "!Friendship" },
                     new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал», то карта Джунгарского Алатау поможет найти удобный проход на север" },
                     new Option { Destination = 578, Text = "Если ничего этого нет, придётся уходить от погони, полагаясь на удачу" },
                 }
@@ -4267,8 +4267,8 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 262, Text = "Если отмечены оба слова «Пастух» и «Дружба»" },
-                    new Option { Destination = 241, Text = "Если не отмечено слово «Пастух», но отмечено слово «Дружба»" },
+                    new Option { Destination = 262, Text = "Если отмечены оба слова «Пастух» и «Дружба»", OnlyIf = "Friendship" },
+                    new Option { Destination = 241, Text = "Если не отмечено слово «Пастух», но отмечено слово «Дружба»", OnlyIf = "Friendship" },
                     new Option { Destination = 218, Text = "В случае успеха" },
                     new Option { Destination = 195, Text = "В случае провала" },
                 }
@@ -6561,7 +6561,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 650, Text = "Если отмечено ключевое слово «Дружба»" },
+                    new Option { Destination = 650, Text = "Если отмечено ключевое слово «Дружба»", OnlyIf = "Friendship" },
                     new Option { Destination = 599, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»" },
                     new Option { Destination = 626, Text = "Если отмечено только слово «Сведения»" },
                     new Option { Destination = 645, Text = "В любом другом случае" },
