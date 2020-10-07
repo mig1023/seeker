@@ -13,5 +13,7 @@ namespace Seeker.Gamebook.DzungarWar
         public List<Modification> Modification { get; set; }
 
         public string Trigger { get; set; }
+
+        public string LateTrigger { get; set; }
     }
 }

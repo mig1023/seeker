@@ -150,6 +150,8 @@ namespace Seeker
 
             UpdateStatus();
             CheckGameOver();
+
+            Game.Option.Trigger(paragraph.LateTrigger);
         }
 
         private void UpdateStatus()
@@ -231,11 +233,7 @@ namespace Seeker
 
         private void Option_Click(object sender, EventArgs e)
         {
-            Button b = sender as Button;
-
-
-
-            Paragraph(Game.Router.FindDestination(b.Text));
+            Paragraph(Game.Router.FindDestination((sender as Button).Text));
         }
     }
 }
