@@ -5110,6 +5110,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [406] = new Paragraph
             {
+                Trigger = "Valley",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 453, Text = "Далее" },
@@ -6343,6 +6345,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [505] = new Paragraph
             {
+                Trigger = "Valley",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 651, Text = "Воспользоваться арбалетом", OnlyIf = "Crossbow" },
