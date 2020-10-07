@@ -96,6 +96,7 @@ namespace Seeker
             TextLabel(Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty);
 
             Game.Option.Trigger(paragraph.Trigger);
+            Game.Option.Trigger(paragraph.RemoveTrigger, remove: true);
 
             if (!reload && (paragraph.Modification != null) && (paragraph.Modification.Count > 0))
                 foreach(Interfaces.IModification modification in paragraph.Modification)

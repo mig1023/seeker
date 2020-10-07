@@ -17,7 +17,7 @@ namespace Seeker.Game
 
         public static Dictionary<int, string> TextOfParagraphs = new Dictionary<int, string>();
 
-        public static List<string> OpenedOption = new List<string>();
+        public static List<string> Triggers = new List<string>();
 
         public static Interfaces.IParagraphs Paragraphs;
         public static Interfaces.IActions Actions;
@@ -29,7 +29,7 @@ namespace Seeker.Game
         public static void Load(string name)
         {
             TextOfParagraphs.Clear();
-            OpenedOption.Clear();
+            Triggers.Clear();
 
             if (String.IsNullOrEmpty(name))
                 return;

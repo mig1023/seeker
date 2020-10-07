@@ -70,7 +70,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             if (option.Contains(","))
             {
                 foreach (string oneOption in option.Split(','))
-                    if (!Game.Data.OpenedOption.Contains(oneOption.Trim()))
+                    if (!Game.Data.Triggers.Contains(oneOption.Trim()))
                         return false;
 
                 return true;
@@ -78,7 +78,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             else if (option.Contains("ЗОЛОТО >="))
                 return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Gold;
             else
-                return Game.Data.OpenedOption.Contains(option);
+                return Game.Data.Triggers.Contains(option);
         }
 
         public List<string> Representer()

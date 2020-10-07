@@ -1229,6 +1229,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [100] = new Paragraph
             {
+                RemoveTrigger = "Pain",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
@@ -6439,6 +6441,7 @@ namespace Seeker.Gamebook.DzungarWar
                         Text = "ЖЕРЕБЕЦ-АХАЛТЕКИНЕЦ",
                         Price = 250,
                         Aftertext = "Джигит заглядывается на породистых жеребцов-ахалтекинцев. Лошадник-туркмен, видя интерес нашего героя, зазывает его купить себе хорошего коня. Но Алдар помимо денег должен отдать ему своего коня в обмен.",
+                        RemoveTrigger = "Pain",
                     },
                     new Actions
                     {
@@ -7555,6 +7558,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [623] = new Paragraph
             {
+                RemoveTrigger = "Pain",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 645, Text = "Далее" },

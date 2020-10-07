@@ -75,7 +75,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             else if (option.Contains("ЗАКЛЯТИЕ"))
                 return Character.Protagonist.Spells.Contains(option);
             else
-                return Game.Data.OpenedOption.Contains(option);
+                return Game.Data.Triggers.Contains(option);
         }
 
         public List<string> Representer()

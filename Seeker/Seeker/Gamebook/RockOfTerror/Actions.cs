@@ -64,7 +64,7 @@ namespace Seeker.Gamebook.RockOfTerror
                     return true;
             }
             else
-                return Game.Data.OpenedOption.Contains(option.Trim());
+                return Game.Data.Triggers.Contains(option.Trim());
         }
     }
 }

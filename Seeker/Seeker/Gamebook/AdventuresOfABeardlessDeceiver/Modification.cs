@@ -26,7 +26,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 if (Empty)
                     Character.Protagonist.AkynGlory = null;
                 else if (Init)
-                    Character.Protagonist.AkynGlory = (Game.Data.OpenedOption.Contains("PartyClothes") ? 1 : 0);
+                    Character.Protagonist.AkynGlory = (Game.Data.Triggers.Contains("PartyClothes") ? 1 : 0);
                 else
                     Character.Protagonist.AkynGlory += Value;
             }

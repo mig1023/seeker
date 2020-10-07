@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.DzungarWar
         public bool StatToMax { get; set; }
         public int Level { get; set; }
         public int Price { get; set; }
+        public string RemoveTrigger { get; set; }
 
 
         Dictionary<string, string> statNames = new Dictionary<string, string>
@@ -122,10 +123,10 @@ namespace Seeker.Gamebook.DzungarWar
                 }
                 else if (oneOption.Contains("!"))
                 {
-                    if (Game.Data.OpenedOption.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                    if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
                         return false;
                 }
-                else if (!Game.Data.OpenedOption.Contains(oneOption.Trim()))
+                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
                     return false;
             }
 
@@ -187,6 +188,8 @@ namespace Seeker.Gamebook.DzungarWar
             if ((Price > 0) && (Character.Protagonist.Tanga >= Price))
             {
                 Character.Protagonist.Tanga -= Price;
+
+                Game.Option.Trigger(RemoveTrigger, remove: true);
             }
             else if (StatToMax && (Character.Protagonist.MaxBonus > 0))
             {

@@ -95,7 +95,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             if (option == Character.Protagonist.MeritalArt.ToString())
                 return true;
             else
-                return Game.Data.OpenedOption.Contains(option);
+                return Game.Data.Triggers.Contains(option);
         }
 
         public List<string> Representer()

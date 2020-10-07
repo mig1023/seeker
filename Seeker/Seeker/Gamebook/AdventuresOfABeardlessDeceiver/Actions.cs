@@ -124,10 +124,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 }
                 else if (oneOption.Contains("!"))
                 {
-                    if (Game.Data.OpenedOption.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                    if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
                         return false;
                 }
-                else if (!Game.Data.OpenedOption.Contains(oneOption.Trim()))
+                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
                     return false;
             }
 
@@ -139,11 +139,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
 
-            if (GuessBonus && Game.Data.OpenedOption.Contains("guess"))
+            if (GuessBonus && Game.Data.Triggers.Contains("guess"))
                 Level = 7;
 
             if (GreatKhanSpecialCheck)
-                Level -= (Character.Protagonist.Popularity + (Game.Data.OpenedOption.Contains("KhansRing") ? 3 : 0));
+                Level -= (Character.Protagonist.Popularity + (Game.Data.Triggers.Contains("KhansRing") ? 3 : 0));
 
             int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
             bool testIsOk = (firstDice + secondDice) + currentStat >= Level;
@@ -152,12 +152,12 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 "Проверка {0}: {1} ⚄ + {2} ⚄ + {3} {4} {5}", statNames[Stat], firstDice, secondDice, currentStat, (testIsOk ? ">=" : "<"), Level
             ) };
 
-            if (GuessBonus && Game.Data.OpenedOption.Contains("guess"))
+            if (GuessBonus && Game.Data.Triggers.Contains("guess"))
                 testLines.Insert(0, "Бонус за догадку: -4");
 
             if (GreatKhanSpecialCheck)
             {
-                if (Game.Data.OpenedOption.Contains("KhansRing"))
+                if (Game.Data.Triggers.Contains("KhansRing"))
                     testLines.Insert(0, "Бонус за ханское кольцо: -3");
 
                 if (Character.Protagonist.Popularity > 0)

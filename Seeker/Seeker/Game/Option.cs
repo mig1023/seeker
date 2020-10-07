@@ -12,15 +12,18 @@ namespace Seeker.Game
 
         public Interfaces.IModification Do { get; set; }
 
-        public static void Trigger(string optionLine)
+        public static void Trigger(string triggers, bool remove = false)
         {
-            if (String.IsNullOrEmpty(optionLine))
+            if (String.IsNullOrEmpty(triggers))
                 return;
 
-            string[] allOption = optionLine.Split(',');
+            string[] triggerList = triggers.Split(',');
 
-            foreach (string option in allOption)
-                Game.Data.OpenedOption.Add(option.Trim());
+            foreach (string trigger in triggerList)
+                if (remove)
+                    Game.Data.Triggers.Remove(trigger.Trim());
+                else
+                    Game.Data.Triggers.Add(trigger.Trim());
         }
     }
 }
