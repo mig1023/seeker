@@ -4454,6 +4454,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [352] = new Paragraph
             {
+                Trigger = "Armour",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
@@ -6489,6 +6491,7 @@ namespace Seeker.Gamebook.DzungarWar
                         Text = "КОЖАНЫЙ ДОСПЕХ",
                         Price = 80,
                         Aftertext = "Старик-уйгур, сидящий чуть поодаль от рядов, показывает нашему герою очень лёгкий доспех конного воина. Он состоит из куртки для всадника и накидки для коня. Старик утверждает, что доспех защитит от случайных стрел и пушечной дроби. А кроме того, если понадобится удирать от погони, накидку можно легко срезать ножом, не вылезая из седла. Уйгур рассказывает, что доспех был изготовлен мастером-оружейником для его сына, который недавно погиб в стычке с бухарскими разбойниками. И вот старик продаёт доспех за ненадобностью. Алдар не хочет торговаться с отцом, потерявшим сына. Тем более, что старик берёт не так уж и дорого.",
+                        Trigger = "Armour",
                     },
                     new Actions
                     {
@@ -7616,6 +7619,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [623] = new Paragraph
             {
+                Trigger = "Armour",
                 RemoveTrigger = "Pain",
 
                 Options = new List<Option>
@@ -7885,7 +7889,7 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 620, Text = "В случае успеха" },
                     new Option { Destination = 611, Text = "В случае провала" },
-                    new Option { Destination = 632, Text = "Если отмечено ключевое слово «Доспех»" },
+                    new Option { Destination = 632, Text = "У Алдара есть доспехи", OnlyIf = "Armour" },
                     new Option { Destination = 639, Text = "Если нет, но отмечено хотя бы одно из ключевых слов: «Тулпар» или «Скакун»" },
                     new Option { Destination = 593, Text = "Иначе можно просто подстегнуть коня, чтобы побыстрее проскочить мимо зембуреков" },
                 }
