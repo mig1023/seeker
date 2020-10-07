@@ -3506,6 +3506,8 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Trigger = "Gelug",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 654, Text = "Далее" },
@@ -5776,6 +5778,8 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Trigger = "Gelug",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 654, Text = "Далее" },
@@ -6286,6 +6290,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = 3,
                     },
                 },
+
+                Trigger = "Gelug",
 
                 Options = new List<Option>
                 {
