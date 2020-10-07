@@ -1052,7 +1052,16 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 257, Text = "Завершить путешествие и направиться вместе с офицерами к казахскому ополчению" },
-                    new Option { Destination = 428, Text = "Попрощаться с ними и продолжить свои поиски в Семиречье (в этом случае +2 ОПАСНОСТИ)" },
+
+                    new Option {
+                        Destination = 428,
+                        Text = "Попрощаться с ними и продолжить свои поиски в Семиречье (в этом случае +2 ОПАСНОСТИ)",
+                        Do = new Modification
+                        {
+                            Name = "Danger",
+                            Value = 2,
+                        },
+                    },
                 }
             },
             [85] = new Paragraph
@@ -1114,7 +1123,16 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 257, Text = "Завершить путешествие и направиться вместе с Азимханом и офицерами к казахскому ополчению" },
-                    new Option { Destination = 428, Text = "Попрощаться со всеми и продолжить свои поиски в Семиречье (в этом случае +4 ОПАСНОСТИ)" },
+
+                    new Option {
+                        Destination = 428,
+                        Text = "Попрощаться со всеми и продолжить свои поиски в Семиречье (в этом случае +4 ОПАСНОСТИ)",
+                        Do = new Modification
+                        {
+                            Name = "Danger",
+                            Value = 4,
+                        },
+                    },
                 }
             },
             [91] = new Paragraph
@@ -2537,7 +2555,16 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 257, Text = "Завершить путешествие и направиться вместе с Шандором к казахскому ополчению" },
-                    new Option { Destination = 428, Text = "Попрощаться с ним и продолжить свои поиски в Семиречье (в этом случае +3 ОПАСНОСТИ)" },
+
+                    new Option {
+                        Destination = 428,
+                        Text = "Попрощаться с ним и продолжить свои поиски в Семиречье (в этом случае +3 ОПАСНОСТИ)",
+                        Do = new Modification
+                        {
+                            Name = "Danger",
+                            Value = 3,
+                        },
+                    },
                 }
             },
             [195] = new Paragraph
@@ -3619,7 +3646,16 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 257, Text = "Завершить путешествие и направиться вместе с Азимханом к казахскому ополчению" },
-                    new Option { Destination = 428, Text = "Попрощаться с Азимханом и продолжить свои поиски в Семиречье (в этом случае +3 ОПАСНОСТИ)" },
+
+                    new Option {
+                        Destination = 428,
+                        Text = "Попрощаться с Азимханом и продолжить свои поиски в Семиречье (в этом случае +3 ОПАСНОСТИ)",
+                        Do = new Modification
+                        {
+                            Name = "Danger",
+                            Value = 3,
+                        },
+                    },
                 }
             },
             [289] = new Paragraph
