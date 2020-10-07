@@ -503,7 +503,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 90, Text = "Если отмечено ключевое слово «Казах»" },
+                    new Option { Destination = 90, Text = "Если отмечено ключевое слово «Казах»", OnlyIf = "Kazakh" },
                     new Option { Destination = 84, Text = "В противном случае" },
                 }
             },
@@ -564,6 +564,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [41] = new Paragraph
             {
+                Trigger = "Cunning",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал»" },
@@ -894,7 +896,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 90, Text = "Если отмечено ключевое слово «Казах»" },
+                    new Option { Destination = 90, Text = "Если отмечено ключевое слово «Казах»", OnlyIf = "Kazakh" },
                     new Option { Destination = 84, Text = "В противном случае" },
                 }
             },
@@ -1266,7 +1268,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 90, Text = "Если отмечено ключевое слово «Казах»" },
+                    new Option { Destination = 90, Text = "Если отмечено ключевое слово «Казах»", OnlyIf = "Kazakh" },
                     new Option { Destination = 84, Text = "В противном случае" },
                 }
             },
@@ -3053,9 +3055,9 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 343, Text = "Если отмечены оба ключевых слова: «Казах» и «Русский»" },
+                    new Option { Destination = 343, Text = "Если отмечены оба ключевых слова: «Казах» и «Русский»", OnlyIf = "Kazakh" },
                     new Option { Destination = 349, Text = "Если отмечено только ключевое слово «Русский»" },
-                    new Option { Destination = 355, Text = "Если отмечено только ключевое слово «Казах»" },
+                    new Option { Destination = 355, Text = "Если отмечено только ключевое слово «Казах»", OnlyIf = "Kazakh" },
                     new Option { Destination = 331, Text = "Если отмечено ключевое слово «Мугати»" },
                 }
             },
@@ -3738,9 +3740,9 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 343, Text = "Если отмечены оба ключевых слова: «Казах» и «Русский»" },
+                    new Option { Destination = 343, Text = "Если отмечены оба ключевых слова: «Казах» и «Русский»", OnlyIf = "Kazakh" },
                     new Option { Destination = 349, Text = "Если отмечено только ключевое слово «Русский»" },
-                    new Option { Destination = 355, Text = "Если отмечено только ключевое слово «Казах»" },
+                    new Option { Destination = 355, Text = "Если отмечено только ключевое слово «Казах»", OnlyIf = "Kazakh" },
                     new Option { Destination = 331, Text = "Если отмечено ключевое слово «Мугати»" },
                 }
             },
@@ -3973,9 +3975,9 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 343, Text = "Если отмечены оба ключевых слова: «Казах» и «Русский»" },
+                    new Option { Destination = 343, Text = "Если отмечены оба ключевых слова: «Казах» и «Русский»", OnlyIf = "Kazakh" },
                     new Option { Destination = 349, Text = "Если отмечено только ключевое слово «Русский»" },
-                    new Option { Destination = 355, Text = "Если отмечено только ключевое слово «Казах»" },
+                    new Option { Destination = 355, Text = "Если отмечено только ключевое слово «Казах»", OnlyIf = "Kazakh" },
                     new Option { Destination = 331, Text = "Если отмечено ключевое слово «Мугати»" },
                 }
             },
@@ -4506,7 +4508,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 417, Text = "Если отмечено ключевое слово «Казах»" },
+                    new Option { Destination = 417, Text = "Если отмечено ключевое слово «Казах»", OnlyIf = "Kazakh" },
                     new Option { Destination = 442, Text = "Поговорить с русскими и помочь им бежать" },
                     new Option { Destination = 455, Text = "Отказаться от этой затеи и продолжить наблюдение за стойбищем" },
                 }
@@ -4768,9 +4770,9 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 343, Text = "Если отмечены оба ключевых слова: «Казах» и «Русский»" },
+                    new Option { Destination = 343, Text = "Если отмечены оба ключевых слова: «Казах» и «Русский»", OnlyIf = "Kazakh" },
                     new Option { Destination = 349, Text = "Если отмечено только ключевое слово «Русский»" },
-                    new Option { Destination = 355, Text = "Если отмечено только ключевое слово «Казах»" },
+                    new Option { Destination = 355, Text = "Если отмечено только ключевое слово «Казах»", OnlyIf = "Kazakh" },
                     new Option { Destination = 331, Text = "Если отмечено ключевое слово «Мугати»" },
                 }
             },
@@ -5105,6 +5107,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [405] = new Paragraph
             {
+                Trigger = "Kazakh",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 357, Text = "Далее" },
@@ -5491,6 +5495,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = 1000,
                     },
                 },
+
+                Trigger = "Cunning",
 
                 Options = new List<Option>
                 {
@@ -6563,7 +6569,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 650, Text = "Если отмечено ключевое слово «Дружба»", OnlyIf = "Friendship" },
-                    new Option { Destination = 599, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»" },
+                    new Option { Destination = 599, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»", OnlyIf = "Cunning" },
                     new Option { Destination = 626, Text = "Если отмечено только слово «Сведения»" },
                     new Option { Destination = 645, Text = "В любом другом случае" },
                 }
@@ -7330,7 +7336,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 599, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»" },
+                    new Option { Destination = 599, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»", OnlyIf = "Cunning" },
                     new Option { Destination = 645, Text = "В любом другом случае" },
                 }
             },
@@ -7461,6 +7467,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [604] = new Paragraph
             {
+                Trigger = "Cunning",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 589, Text = "Далее" },
@@ -7658,7 +7666,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 577, Text = "Если отмечены оба ключевых слова «Сведения» и «Коварство»" },
+                    new Option { Destination = 577, Text = "Если отмечены оба ключевых слова «Сведения» и «Коварство»", OnlyIf = "Cunning" },
                     new Option { Destination = 633, Text = "Если отмечено только слово «Сведения»" },
                     new Option { Destination = 646, Text = "В любом другом случае" },
                 }
@@ -7676,7 +7684,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 643, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»" },
+                    new Option { Destination = 643, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»", OnlyIf = "Cunning" },
                     new Option { Destination = 617, Text = "Если отмечено только слово «Сведения»" },
                     new Option { Destination = 29, Text = "В любом другом случае" },
                 }
@@ -7858,6 +7866,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [650] = new Paragraph
             {
+                Trigger = "Cunning",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
@@ -7867,9 +7877,9 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 343, Text = "Если отмечены оба ключевых слова «Казах» и «Русский»" },
+                    new Option { Destination = 343, Text = "Если отмечены оба ключевых слова «Казах» и «Русский»", OnlyIf = "Kazakh" },
                     new Option { Destination = 349, Text = "Если отмечено только ключевое слово «Русский»" },
-                    new Option { Destination = 355, Text = "Если отмечено только ключевое слово «Казах»" },
+                    new Option { Destination = 355, Text = "Если отмечено только ключевое слово «Казах»", OnlyIf = "Kazakh" },
                     new Option { Destination = 331, Text = "Если отмечено ключевое слово «Мугати»" },
                 }
             },
