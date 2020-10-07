@@ -7870,7 +7870,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 517, Text = "Продолжить путешествие в сторону реки" },
                 }
             },
             [651] = new Paragraph
