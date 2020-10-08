@@ -399,6 +399,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [25] = new Paragraph
             {
+                Trigger = "Крепость",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 5, Text = "Далее" },
@@ -3260,6 +3262,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [259] = new Paragraph
             {
+                Trigger = "Крепость",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 322, Text = "Далее" },
@@ -5229,6 +5233,8 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Trigger = "Крепость",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 42, Text = "Далее" },
@@ -7012,6 +7018,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [559] = new Paragraph
             {
+                Trigger = "Крепость",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 582, Text = "Далее" },
@@ -7402,7 +7410,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [593] = new Paragraph
             {
-                LateTrigger = "Боль",
+                LateTrigger = "Боль, Крепость",
 
                 Options = new List<Option>
                 {
