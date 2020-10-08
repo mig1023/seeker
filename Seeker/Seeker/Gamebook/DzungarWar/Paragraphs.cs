@@ -6864,6 +6864,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [545] = new Paragraph
             {
+                Trigger = "Кульджа",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 624, Text = "Если наш герой ещё не побывал в этих местах, то можно отправиться в урочище Аныракай" },
@@ -7951,7 +7953,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 300, Text = "Если отмечено слово «Кульджа»" },
+                    new Option { Destination = 300, Text = "Если отмечено слово «Кульджа»", OnlyIf = "Кульджа" },
                     new Option { Destination = 373, Text = "Иначе" },
                 }
             },
