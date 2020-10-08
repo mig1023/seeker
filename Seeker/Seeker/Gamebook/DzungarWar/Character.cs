@@ -20,6 +20,7 @@ namespace Seeker.Gamebook.DzungarWar
 
         public int StatBonuses { get; set; }
         public int MaxBonus { get; set; }
+        public int Brother { get; set; }
 
         public void Init()
         {
@@ -32,6 +33,7 @@ namespace Seeker.Gamebook.DzungarWar
             Tanga = 150;
             StatBonuses = 4;
             MaxBonus = 1;
+            Brother = 0;
         }
 
         public Character Clone()
@@ -47,6 +49,7 @@ namespace Seeker.Gamebook.DzungarWar
             newCharacter.Tanga = this.Tanga;
             newCharacter.StatBonuses = this.StatBonuses;
             newCharacter.MaxBonus = this.MaxBonus;
+            newCharacter.Brother = this.Brother;
 
             return newCharacter;
         }

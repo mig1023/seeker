@@ -96,18 +96,23 @@ namespace Seeker.Gamebook.DzungarWar
             if (Level > 0)
                 return true;
 
+            else if (ActionName == "Brother")
+                return Character.Protagonist.Brother <= 0;
+
             else if (StatToMax)
                 return Character.Protagonist.MaxBonus > 0;
 
-            else if (Price <= 0)
+            else if (!String.IsNullOrEmpty(Stat))
             {
                 int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
-
                 return ((Character.Protagonist.StatBonuses > 0) && (currentStat < 12));
             }
 
-            else
+            else if (Price <= 0)
                 return (Character.Protagonist.Tanga >= Price);
+
+            else
+                return true;
         }
 
         public static bool CheckOnlyIf(string option)
@@ -181,6 +186,13 @@ namespace Seeker.Gamebook.DzungarWar
             testLines.Add(testIsOk ? "BIG|GOOD|АЛДАР СПРАВИЛСЯ :)" : "BIG|BAD|АЛДАР НЕ СПРАВИЛСЯ :(");
 
             return testLines;
+        }
+
+        public List<string> Brother()
+        {
+            Character.Protagonist.Brother += 1;
+
+            return new List<string> { "RELOAD" };
         }
 
         public List<string> Get()

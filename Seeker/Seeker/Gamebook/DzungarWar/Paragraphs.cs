@@ -38,7 +38,6 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 658, Text = "В путь!" },
-                    new Option { Destination = 234, Text = "TEST" },
                 }
             },
             [1] = new Paragraph
@@ -6885,7 +6884,30 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [548] = new Paragraph
             {
-                Trigger = "Berik, Erik",
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Brother",
+                        ButtonName = "Серик",
+                        Text = "ВЫБРАТЬ СЕРИКА",
+                        Trigger = "Serik",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Brother",
+                        ButtonName = "Берик",
+                        Text = "ВЫБРАТЬ БЕРИКА",
+                        Trigger = "Berik",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Brother",
+                        ButtonName = "Ерик",
+                        Text = "ВЫБРАТЬ ЕРИКА",
+                        Trigger = "Erik",
+                    },
+                },
 
                 Options = new List<Option>
                 {
