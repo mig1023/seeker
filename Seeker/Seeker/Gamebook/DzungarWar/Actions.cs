@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.DzungarWar
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
+        public string RemoveTrigger { get; set; }
 
         public string Text { get; set; }
         public string Stat { get; set; }
@@ -18,7 +19,7 @@ namespace Seeker.Gamebook.DzungarWar
         public bool StatToMax { get; set; }
         public int Level { get; set; }
         public int Price { get; set; }
-        public string RemoveTrigger { get; set; }
+        public string TriggerTestPenalty { get; set; }
 
 
         Dictionary<string, string> statNames = new Dictionary<string, string>
@@ -44,12 +45,32 @@ namespace Seeker.Gamebook.DzungarWar
             return actionResult;
         }
 
+        private int TestLevelWithPenalty(int level, out string penaltyLine)
+        {
+            penaltyLine = String.Empty;
+
+            if (String.IsNullOrEmpty(TriggerTestPenalty))
+                return level;
+
+            string[] penalty = TriggerTestPenalty.Split(',');
+
+            if (Game.Data.Triggers.Contains(penalty[0].Trim()))
+            {
+                int.TryParse(penalty[1].Trim(), out int penaltyValue);
+                level += penaltyValue;
+
+                penaltyLine = String.Format("Пенальти {0} к уровню проверки за ключевое слово {1}", penalty[1].Trim(), penalty[0].Trim());
+            }
+
+            return level;
+        }
+
         public List<string> Representer()
         {
             if (ActionName == "TestAll")
                 return new List<string> { String.Format("Проверить по совокупному уровню {0}", Level) };
             else if (Level > 0)
-                return new List<string> { String.Format("Проверка {0}, уровень {1}", statNames[Stat], Level) };
+                return new List<string> { String.Format("Проверка {0}, уровень {1}", statNames[Stat], TestLevelWithPenalty(Level, out string _)) };
             else if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
             else
@@ -151,26 +172,35 @@ namespace Seeker.Gamebook.DzungarWar
             }
         }
 
-        private void TestParam(string stat, int level, out bool result, out string resultLine)
+        private void TestParam(string stat, int level, out bool result, out List<string> resultLine)
         {
+            resultLine = new List<string>();
+
+            level = TestLevelWithPenalty(level, out string penalty);
+
+            if (!String.IsNullOrEmpty(penalty))
+                resultLine.Add(penalty);
+
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
             int currentStat = (int)Character.Protagonist.GetType().GetProperty(stat).GetValue(Character.Protagonist, null);
 
             result = (firstDice + secondDice) + currentStat >= level;
 
-            resultLine = String.Format(
+            resultLine.Add( String.Format(
                 "Проверка {0}: {1} ⚄ + {2} ⚄ + {3} {4} {5}", statNames[stat], firstDice, secondDice, currentStat, (result ? ">=" : "<"), level
-            );
+            ) );
         }
 
         public List<string> Test()
         {
             List<string> testLines = new List<string>();
 
-            TestParam(Stat, Level, out bool testIsOk, out string result);
+            TestParam(Stat, Level, out bool testIsOk, out List<string> result);
 
-            testLines.Add(result);
+            foreach (string line in result)
+                testLines.Add(line);
+
             testLines.Add(testIsOk ? "BIG|GOOD|АЛДАР СПРАВИЛСЯ :)" : "BIG|BAD|АЛДАР НЕ СПРАВИЛСЯ :(");
 
             return testLines;
@@ -187,9 +217,11 @@ namespace Seeker.Gamebook.DzungarWar
 
             foreach (string test in tests)
             {
-                TestParam(test.Trim(), level, out bool thisTestIsOk, out string result);
+                TestParam(test.Trim(), level, out bool thisTestIsOk, out List<string> result);
 
-                testLines.Add(result);
+                foreach(string line in result)
+                    testLines.Add(line);
+
                 testLines.Add(thisTestIsOk ? "GOOD|Алдар справился" : "BAD|Алдар не справился");
 
                 if (!thisTestIsOk)

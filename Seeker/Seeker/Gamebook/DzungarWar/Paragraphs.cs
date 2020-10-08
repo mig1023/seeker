@@ -234,6 +234,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [14] = new Paragraph
             {
+                Trigger = "Арбалет",
+
                 Actions = new List<Actions>
                 {
                     new Actions
@@ -242,6 +244,7 @@ namespace Seeker.Gamebook.DzungarWar
                         ButtonName = "Проверить мудрость",
                         Stat = "Wisdom",
                         Level = 12,
+                        TriggerTestPenalty = "Арбалет, -4",
                     },
                 },
 
