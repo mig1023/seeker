@@ -445,7 +445,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 384, Text = "Если отмечено ключевое слово «Логово»" },
+                    new Option { Destination = 384, Text = "Если отмечено ключевое слово «Логово»", OnlyIf = "Логово" },
                     new Option { Destination = 395, Text = "Иначе" },
                 }
             },
@@ -4538,6 +4538,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [359] = new Paragraph
             {
+                Trigger = "Логово",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 373, Text = "На юг в Кульджу" },
@@ -7020,7 +7022,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [559] = new Paragraph
             {
-                Trigger = "Крепость",
+                Trigger = "Крепость, Логово",
 
                 Options = new List<Option>
                 {
@@ -7515,7 +7517,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 16, Text = "Если отмечено ключевое слово «Логово»" },
+                    new Option { Destination = 16, Text = "Если отмечено ключевое слово «Логово»", OnlyIf = "Логово" },
                     new Option { Destination = 629, Text = "В противном случае" },
                 }
             },
