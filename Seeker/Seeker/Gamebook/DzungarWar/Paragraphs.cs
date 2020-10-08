@@ -49,7 +49,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [2] = new Paragraph
             {
-                Trigger = "Pain",
+                Trigger = "Боль",
 
                 Options = new List<Option>
                 {
@@ -181,7 +181,7 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
-                Trigger = "Explosion",
+                Trigger = "Взрыв",
 
                 Options = new List<Option>
                 {
@@ -234,8 +234,6 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [14] = new Paragraph
             {
-                Trigger = "Арбалет",
-
                 Actions = new List<Actions>
                 {
                     new Actions
@@ -453,7 +451,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 332, Text = "Воспользоваться арбалетом", OnlyIf = "Crossbow" },
+                    new Option { Destination = 332, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
                     new Option { Destination = 321, Text = "Выстрелить из пистолета" },
                     new Option { Destination = 308, Text = "Достать нож и спрыгнуть с коня, прикрывая его от нападения" },
                     new Option { Destination = 295, Text = "Попробовать задобрить камышового кота" },
@@ -651,7 +649,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 74, Text = "Воспользоваться арбалетом", OnlyIf = "Crossbow" },
+                    new Option { Destination = 74, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
                     new Option { Destination = 59, Text = "Если отмечено хотя бы одно из ключевых слов: «Пленник», «Переписка» или «Святыня» - то Алдар знает, о чём он будет докладывать хунтайши" },
                     new Option { Destination = 66, Text = "Иначе придётся сделать донесение о «казахском лазутчике»" },
                     new Option { Destination = 453, Text = "И конечно, ничто не мешает отступиться от замысла и прямо сейчас покинуть ставку" },
@@ -1023,7 +1021,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 106, Text = "Воспользоваться арбалетом", OnlyIf = "Crossbow" },
+                    new Option { Destination = 106, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
                     new Option { Destination = 114, Text = "Если это слово не отмечено" },
                 }
             },
@@ -1122,7 +1120,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [90] = new Paragraph
             {
-                Trigger = "Barymta",
+                Trigger = "Барымта",
 
                 Options = new List<Option>
                 {
@@ -1251,7 +1249,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [100] = new Paragraph
             {
-                RemoveTrigger = "Pain",
+                RemoveTrigger = "Боль",
 
                 Options = new List<Option>
                 {
@@ -1955,6 +1953,7 @@ namespace Seeker.Gamebook.DzungarWar
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
                         Level = 14,
+                        TriggerTestPenalty = "Боль, -4",
                     },
                 },
 
@@ -2426,7 +2425,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [182] = new Paragraph
             {
-                Trigger = "Buddhist",
+                Trigger = "Буддист",
 
                 Options = new List<Option>
                 {
@@ -2554,7 +2553,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [194] = new Paragraph
             {
-                Trigger = "Barymta",
+                Trigger = "Барымта",
 
                 Options = new List<Option>
                 {
@@ -2626,7 +2625,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 244, Text = "Алдар знает о Аягузе", OnlyIf = "Ayaguz" },
+                    new Option { Destination = 244, Text = "Алдар знает о Аягузе", OnlyIf = "Аягуз" },
                     new Option { Destination = 123, Text = "Если отмечено ключевое слово «Табун»" },
                     new Option { Destination = 155, Text = "Если не отмечено ни одно их этих слов" },
                 }
@@ -2800,7 +2799,7 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
-                Trigger = "Aldan",
+                Trigger = "Алдан",
 
                 Options = new List<Option>
                 {
@@ -2981,7 +2980,7 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
-                Trigger = "Ayaguz, Friendship",
+                Trigger = "Аягуз, Friendship",
 
                 Options = new List<Option>
                 {
@@ -3013,11 +3012,11 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [234] = new Paragraph
             {
-                LateTrigger = "Pain",
+                LateTrigger = "Боль",
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 573, Text = "Конь уже был ранен раньше", OnlyIf = "Pain" },
+                    new Option { Destination = 573, Text = "Конь уже был ранен раньше", OnlyIf = "Боль" },
                     new Option { Destination = 146, Text = "Впереди брод" },
                 }
             },
@@ -3095,7 +3094,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [242] = new Paragraph
             {
-                Trigger = "Pain",
+                Trigger = "Боль",
 
                 Options = new List<Option>
                 {
@@ -3647,7 +3646,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [288] = new Paragraph
             {
-                Trigger = "Barymta",
+                Trigger = "Барымта",
 
                 Options = new List<Option>
                 {
@@ -3704,7 +3703,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [293] = new Paragraph
             {
-                Trigger = "Ayaguz",
+                Trigger = "Аягуз",
 
                 Options = new List<Option>
                 {
@@ -3765,7 +3764,7 @@ namespace Seeker.Gamebook.DzungarWar
                         ActionName = "Get",
                         ButtonName = "Купить арбалет",
                         Text = "МАЛЕНЬКИЙ АРБАЛЕТ, 100 таньга",
-                        Trigger = "Crossbow",
+                        Trigger = "Арбалет",
                         Price = 100,
                         Aftertext = "Маленький арбалет, который можно спрятать под складками одежды. На расстоянии в несколько шагов он легко пробивает кожаный доспех. По словам торговца, именно такими в давние времена пользовались ассасины Хасана ибн-Саббаха, когда нельзя было приблизиться к жертве вплотную. А ещё русский купец, продавший ему вещицу, сказал, что арбалетная стрела называется болт.",
                         
@@ -3878,7 +3877,7 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
-                Trigger = "Crossbow",
+                Trigger = "Арбалет",
 
                 Options = new List<Option>
                 {
@@ -4021,6 +4020,7 @@ namespace Seeker.Gamebook.DzungarWar
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
                         Level = 12,
+                        TriggerTestPenalty = "Арбалет, -3",
                     },
                     new Actions
                     {
@@ -4028,6 +4028,7 @@ namespace Seeker.Gamebook.DzungarWar
                         ButtonName = "Проверить силу",
                         Stat = "Strength",
                         Level = 12,
+                        TriggerTestPenalty = "Арбалет, -3",
                     },
                 },
 
@@ -4641,7 +4642,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 188, Text = "Алдар помнит разговор с торговцем на озере Сассык-Коль", OnlyIf = "Buddhist" },
+                    new Option { Destination = 188, Text = "Алдар помнит разговор с торговцем на озере Сассык-Коль", OnlyIf = "Буддист" },
                     new Option { Destination = 213, Text = "Если обе проверки успешны" },
                     new Option { Destination = 334, Text = "В любом другом случае" },
                 }
@@ -5142,6 +5143,7 @@ namespace Seeker.Gamebook.DzungarWar
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
                         Level = 12,
+                        TriggerTestPenalty = "Арбалет, -4",
                     },
                 },
 
@@ -5608,7 +5610,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 14, Text = "Предпочесть лук" },
-                    new Option { Destination = 14, Text = "Воспользоваться арбалетом", OnlyIf = "Crossbow" },
+                    new Option { Destination = 14, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
                     new Option { Destination = 32, Text = "Решиться на использование пистолета" },
                 }
             },
@@ -5691,9 +5693,9 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 560, Text = "Рассказать про угон табуна", OnlyIf = "Barymta" },
+                    new Option { Destination = 560, Text = "Рассказать про угон табуна", OnlyIf = "Барымта" },
                     new Option { Destination = 568, Text = "Отмечено ключевое слово «Святыня»" },
-                    new Option { Destination = 576, Text = "Рассказать про взрыв", OnlyIf = "Explosion" },
+                    new Option { Destination = 576, Text = "Рассказать про взрыв", OnlyIf = "Взрыв" },
                     new Option { Destination = 585, Text = "Далее" },
                 }
             },
@@ -6192,7 +6194,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 383, Text = "Имя Алдана знакомо Алдару", OnlyIf ="Aldan" },
+                    new Option { Destination = 383, Text = "Имя Алдана знакомо Алдару", OnlyIf ="Алдан" },
                     new Option { Destination = 358, Text = "Если Алдар Косе хочет рассказать о казахском лазутчике" },
                     new Option { Destination = 346, Text = "Если наш герой больше полагается на своё красноречие" },
                 }
@@ -6359,7 +6361,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 651, Text = "Воспользоваться арбалетом", OnlyIf = "Crossbow" },
+                    new Option { Destination = 651, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
                     new Option { Destination = 411, Text = "Ударить Хуяга по голове" },
                     new Option { Destination = 398, Text = "Пырнуть его ножом" },
                     new Option { Destination = 392, Text = "Выстрелить в ойрата из лука" },
@@ -6508,7 +6510,7 @@ namespace Seeker.Gamebook.DzungarWar
                         Text = "ЖЕРЕБЕЦ-АХАЛТЕКИНЕЦ",
                         Price = 250,
                         Aftertext = "Джигит заглядывается на породистых жеребцов-ахалтекинцев. Лошадник-туркмен, видя интерес нашего героя, зазывает его купить себе хорошего коня. Но Алдар помимо денег должен отдать ему своего коня в обмен.",
-                        RemoveTrigger = "Pain",
+                        RemoveTrigger = "Боль",
                     },
                     new Actions
                     {
@@ -6800,7 +6802,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 506, Text = "Если отмечено ключевое слово «Ерик»", OnlyIf = "Erik" },
+                    new Option { Destination = 506, Text = "Если отмечено ключевое слово «Ерик»", OnlyIf = "Ерик" },
                     new Option { Destination = 484, Text = "В случае успеха" },
                     new Option { Destination = 468, Text = "В случае провала" },
                 }
@@ -6894,21 +6896,21 @@ namespace Seeker.Gamebook.DzungarWar
                         ActionName = "Brother",
                         ButtonName = "Серик",
                         Text = "ВЫБРАТЬ СЕРИКА",
-                        Trigger = "Serik",
+                        Trigger = "Серик",
                     },
                     new Actions
                     {
                         ActionName = "Brother",
                         ButtonName = "Берик",
                         Text = "ВЫБРАТЬ БЕРИКА",
-                        Trigger = "Berik",
+                        Trigger = "Берик",
                     },
                     new Actions
                     {
                         ActionName = "Brother",
                         ButtonName = "Ерик",
                         Text = "ВЫБРАТЬ ЕРИКА",
-                        Trigger = "Erik",
+                        Trigger = "Ерик",
                     },
                 },
 
@@ -7100,11 +7102,11 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [567] = new Paragraph
             {
-                LateTrigger = "Pain",
+                LateTrigger = "Боль",
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 573, Text = "Конь уже был ранен раньше", OnlyIf = "Pain" },
+                    new Option { Destination = 573, Text = "Конь уже был ранен раньше", OnlyIf = "Боль" },
                     new Option { Destination = 319, Text = "В противном случае отметить ключевое слово «Боль» на листе персонажа. Погоня продолжается" },
                 }
             },
@@ -7160,7 +7162,7 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 590, Text = "Если отмечено ключевое слово «Хубилган»" },
                     new Option { Destination = 603, Text = "Если отмечено ключевое слово «Фарфор»" },
-                    new Option { Destination = 609, Text = "Воспользоваться арбалетом", OnlyIf = "Crossbow" },
+                    new Option { Destination = 609, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
                     new Option { Destination = 615, Text = "При наличии нескольких слов можно посмотреть соответствующие параграфы по очереди. После этого, а также в случае, если ни одно из указанных слов не отмечено" },
                 }
             },
@@ -7302,8 +7304,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 594, Text = "Рассказано было много полезного", OnlyIf = "Barymta, Explosion" },
-                    new Option { Destination = 540, Text = "Рассказано было нечто полезное", OnlyIf = "Barymta|Explosion" },
+                    new Option { Destination = 594, Text = "Рассказано было много полезного", OnlyIf = "Барымта, Взрыв" },
+                    new Option { Destination = 540, Text = "Рассказано было нечто полезное", OnlyIf = "Барымта|Взрыв" },
                     new Option { Destination = 520, Text = "Алдар Косе сообщил Штейну мало полезного" },
                 }
             },
@@ -7349,7 +7351,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [588] = new Paragraph
             {
-                Trigger = "Pain",
+                Trigger = "Боль",
 
                 Options = new List<Option>
                 {
@@ -7400,11 +7402,11 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [593] = new Paragraph
             {
-                LateTrigger = "Pain",
+                LateTrigger = "Боль",
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 573, Text = "Если ключевое слово «Боль» уже отмечено", OnlyIf = "Pain" },
+                    new Option { Destination = 573, Text = "Если ключевое слово «Боль» уже отмечено", OnlyIf = "Боль" },
                     new Option { Destination = 587, Text = "В противном случае отметить ключевое слово «Боль» на листе персонажа. Погоня продолжается" },
                 }
             },
@@ -7571,7 +7573,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [614] = new Paragraph
             {
-                Trigger = "Pain",
+                Trigger = "Боль",
 
                 Options = new List<Option>
                 {
@@ -7654,7 +7656,7 @@ namespace Seeker.Gamebook.DzungarWar
             [623] = new Paragraph
             {
                 Trigger = "Armour",
-                RemoveTrigger = "Pain",
+                RemoveTrigger = "Боль",
 
                 Options = new List<Option>
                 {
@@ -7700,7 +7702,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 619, Text = "Имя Алдана знакомо Алдару", OnlyIf ="Aldan" },
+                    new Option { Destination = 619, Text = "Имя Алдана знакомо Алдару", OnlyIf ="Алдан" },
                     new Option { Destination = 610, Text = "Если отмечено ключевое слово «Хуяг»" },
                     new Option { Destination = 602, Text = "Если не отмечено ни одно из этих слов" },
                 }
@@ -7771,12 +7773,12 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 616, Text = "В случае успеха" },
                     new Option { Destination = 597, Text = "В случае провала" },
-                    new Option { Destination = 641, Text = "Имя Берика знакомо Алдару", OnlyIf = "Berik", },
+                    new Option { Destination = 641, Text = "Имя Берика знакомо Алдару", OnlyIf = "Берик", },
                 }
             },
             [635] = new Paragraph
             {
-                Trigger = "Pain",
+                Trigger = "Боль",
 
                 Options = new List<Option>
                 {
