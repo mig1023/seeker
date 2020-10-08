@@ -7300,7 +7300,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 594, Text = "Рассказано было много полезного", OnlyIf = "Barymta, Explosion" },
-                    new Option { Destination = 540, Text = "Рассказано было нечто полезное", OnlyIf = "Barymta" },
+                    new Option { Destination = 540, Text = "Рассказано было нечто полезное", OnlyIf = "Barymta|Explosion" },
                     new Option { Destination = 520, Text = "Алдар Косе сообщил Штейну мало полезного" },
                 }
             },

@@ -117,25 +117,38 @@ namespace Seeker.Gamebook.DzungarWar
 
         public static bool CheckOnlyIf(string option)
         {
-            string[] options = option.Split(',');
-
-            foreach (string oneOption in options)
+            if (option.Contains("|"))
             {
-                if (oneOption.Contains(">") || oneOption.Contains("<"))
-                {
-                    if (oneOption.Contains("ТАНЬГА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Tanga))
-                        return false;
-                }
-                else if (oneOption.Contains("!"))
-                {
-                    if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
-                        return false;
-                }
-                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
-                    return false;
-            }
+                string[] options = option.Split('|');
 
-            return true;
+                foreach (string oneOption in options)
+                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return true;
+
+                return false;
+            }
+            else
+            {
+                string[] options = option.Split(',');
+
+                foreach (string oneOption in options)
+                {
+                    if (oneOption.Contains(">") || oneOption.Contains("<"))
+                    {
+                        if (oneOption.Contains("ТАНЬГА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Tanga))
+                            return false;
+                    }
+                    else if (oneOption.Contains("!"))
+                    {
+                        if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                            return false;
+                    }
+                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return false;
+                }
+
+                return true;
+            }
         }
 
         private void TestParam(string stat, int level, out bool result, out string resultLine)
