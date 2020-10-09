@@ -226,8 +226,8 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 262, Text = "Если отмечены оба слова: «Пастух» и «Дружба»", OnlyIf = "Дружба" },
-                    new Option { Destination = 241, Text = "Если не отмечено слово «Пастух», но отмечено слово «Дружба»", OnlyIf = "Дружба" },
+                    new Option { Destination = 262, Text = "Если отмечены оба слова: «Пастух» и «Дружба»", OnlyIf = "Пастух, Дружба" },
+                    new Option { Destination = 241, Text = "Если не отмечено слово «Пастух», но отмечено слово «Дружба»", OnlyIf = "Дружба, !Пастух" },
                     new Option { Destination = 218, Text = "В случае успеха" },
                     new Option { Destination = 233, Text = "В случае провала" },
                 }
@@ -3201,6 +3201,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [251] = new Paragraph
             {
+                Trigger = "Пастух",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 287, Text = "Далее" },
@@ -4295,8 +4297,8 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 262, Text = "Если отмечены оба слова «Пастух» и «Дружба»", OnlyIf = "Дружба" },
-                    new Option { Destination = 241, Text = "Если не отмечено слово «Пастух», но отмечено слово «Дружба»", OnlyIf = "Дружба" },
+                    new Option { Destination = 262, Text = "Если отмечены оба слова «Пастух» и «Дружба»", OnlyIf = "Пастух, Дружба" },
+                    new Option { Destination = 241, Text = "Если не отмечено слово «Пастух», но отмечено слово «Дружба»", OnlyIf = "Дружба, !Пастух" },
                     new Option { Destination = 218, Text = "В случае успеха" },
                     new Option { Destination = 195, Text = "В случае провала" },
                 }
