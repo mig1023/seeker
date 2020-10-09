@@ -654,7 +654,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 74, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
-                    new Option { Destination = 59, Text = "Если отмечено хотя бы одно из ключевых слов: «Пленник», «Переписка» или «Святыня» - то Алдар знает, о чём он будет докладывать хунтайши", OnlyIf = "Переписка" },
+                    new Option { Destination = 59, Text = "Если отмечено хотя бы одно из ключевых слов: «Пленник», «Переписка» или «Святыня» - то Алдар знает, о чём он будет докладывать хунтайши", OnlyIf = "Пленник|Переписка" },
                     new Option { Destination = 66, Text = "Иначе придётся сделать донесение о «казахском лазутчике»" },
                     new Option { Destination = 453, Text = "И конечно, ничто не мешает отступиться от замысла и прямо сейчас покинуть ставку" },
                 }
@@ -3592,7 +3592,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 270, Text = "Если отмечено ключевое слово «Пленник»" },
+                    new Option { Destination = 270, Text = "Если отмечено ключевое слово «Пленник»", OnlyIf = "Пленник" },
                     new Option { Destination = 254, Text = "Если это слово не отмечено" },
                 }
             },
@@ -3949,6 +3949,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [309] = new Paragraph
             {
+                Trigger = "Пленник",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 283, Text = "Далее" },
@@ -4434,6 +4436,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [345] = new Paragraph
             {
+                Trigger = "Пленник",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 283, Text = "Далее" },
@@ -6936,7 +6940,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 171, Text = "Если отмечены оба ключевых слова: «Рассвет» и «Пленник»" },
+                    new Option { Destination = 171, Text = "Если отмечены оба ключевых слова: «Рассвет» и «Пленник»", OnlyIf = "Пленник" },
                     new Option { Destination = 336, Text = "Заплатить 100 ТАНЬГА, как того требуют воины", OnlyIf = "ТАНЬГА >= 100" },
                     new Option { Destination = 363, Text = "Обмануть их, выдав себя за посланника хунтайши" },
                     new Option { Destination = 385, Text = "Поторговаться с джунгарами, притворившись бедняком", OnlyIf = "ТАНЬГА >= 10" },
