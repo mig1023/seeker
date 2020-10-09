@@ -654,7 +654,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 74, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
-                    new Option { Destination = 59, Text = "Если отмечено хотя бы одно из ключевых слов: «Пленник», «Переписка» или «Святыня» - то Алдар знает, о чём он будет докладывать хунтайши" },
+                    new Option { Destination = 59, Text = "Если отмечено хотя бы одно из ключевых слов: «Пленник», «Переписка» или «Святыня» - то Алдар знает, о чём он будет докладывать хунтайши", OnlyIf = "Переписка" },
                     new Option { Destination = 66, Text = "Иначе придётся сделать донесение о «казахском лазутчике»" },
                     new Option { Destination = 453, Text = "И конечно, ничто не мешает отступиться от замысла и прямо сейчас покинуть ставку" },
                 }
@@ -1498,6 +1498,8 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Trigger = "Переписка",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 130, Text = "Далее" },
@@ -1827,6 +1829,8 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Trigger = "Переписка",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 130, Text = "Далее" },
@@ -1943,6 +1947,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = 1,
                     },
                 },
+
+                Trigger = "Переписка",
 
                 Options = new List<Option>
                 {
@@ -2101,6 +2107,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Level = 12,
                     },
                 },
+
+                Trigger = "Переписка",
 
                 Options = new List<Option>
                 {
@@ -2410,6 +2418,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = 2,
                     },
                 },
+
+                Trigger = "Переписка",
 
                 Options = new List<Option>
                 {
@@ -5151,7 +5161,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [406] = new Paragraph
             {
-                Trigger = "Долина, Перевал",
+                Trigger = "Долина, Перевал, Переписка",
 
                 Options = new List<Option>
                 {
