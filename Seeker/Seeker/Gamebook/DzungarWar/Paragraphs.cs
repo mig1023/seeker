@@ -5972,6 +5972,8 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Trigger = "Подлог",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 575, Text = "Покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
@@ -6160,6 +6162,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [484] = new Paragraph
             {
+                Trigger = "Подлог",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 575, Text = "То наш герой вынужден покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
@@ -6423,6 +6427,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [506] = new Paragraph
             {
+                Trigger = "Подлог",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 575, Text = "Покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
@@ -7875,7 +7881,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 552, Text = "Если отмечено ключевое слово «Подлог»" },
+                    new Option { Destination = 552, Text = "Если отмечено ключевое слово «Подлог»", OnlyIf = "Подлог" },
                     new Option { Destination = 564, Text = "Иначе придётся сослаться на тайное поручение" },
                 }
             },
