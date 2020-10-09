@@ -6206,6 +6206,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [490] = new Paragraph
             {
+                Trigger = "Ойрат",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 386, Text = "Далее" },
@@ -6344,8 +6346,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 628, Text = "Если отмечено ключевое слово «Ойрат»" },
-                    new Option { Destination = 647, Text = "Если это слово не отмечено" },
+                    new Option { Destination = 628, Text = "Отмечено ключевое слово «Ойрат»", OnlyIf = "Ойрат" },
+                    new Option { Destination = 647, Text = "Далее" },
                 }
             },
             [503] = new Paragraph
