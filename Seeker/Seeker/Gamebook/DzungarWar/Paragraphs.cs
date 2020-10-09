@@ -3420,6 +3420,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [272] = new Paragraph
             {
+                Trigger = "Оборона",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 373, Text = "На юг, в Кульджу" },
@@ -3846,6 +3848,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [302] = new Paragraph
             {
+                Trigger = "Оборона",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 453, Text = "Далее" },
@@ -5168,7 +5172,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [408] = new Paragraph
             {
-                Trigger = "Мост",
+                Trigger = "Мост, Оборона",
 
                 Options = new List<Option>
                 {
@@ -6579,6 +6583,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = 2,
                     },
                 },
+
+                Trigger = "Оборона",
 
                 Options = new List<Option>
                 {
