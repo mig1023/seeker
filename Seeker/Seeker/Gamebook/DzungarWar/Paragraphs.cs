@@ -2861,6 +2861,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [218] = new Paragraph
             {
+                Trigger = "Отряд",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 297, Text = "Далее" },
@@ -3095,6 +3097,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [241] = new Paragraph
             {
+                Trigger = "Отряд",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 297, Text = "Далее" },
@@ -3311,6 +3315,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = 1,
                     },
                 },
+
+                Trigger = "Отряд",
 
                 Options = new List<Option>
                 {
@@ -4878,7 +4884,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 338, Text = "Если отмечено ключевое слово «Отряд»" },
+                    new Option { Destination = 338, Text = "Если отмечено ключевое слово «Отряд»", OnlyIf = "Отряд" },
                     new Option { Destination = 357, Text = "Остаться на охране кочевья" },
                     new Option { Destination = 372, Text = "Вызваться на поиски разбойников" },
                 }
