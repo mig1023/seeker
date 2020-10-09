@@ -570,8 +570,8 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал»" },
-                    new Option { Destination = 578, Text = "Иначе" },
+                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал»", OnlyIf = "Перевал" },
+                    new Option { Destination = 578, Text = "Далее" },
                 }
             },
             [42] = new Paragraph
@@ -2004,7 +2004,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 622, Text = "Если отмечено ключевое слово «Дружба»", OnlyIf = "Дружба" },
-                    new Option { Destination = 588, Text = "Если не отмечено слово «Дружба», но отмечено слово «Перевал»" },
+                    new Option { Destination = 588, Text = "Если не отмечено слово «Дружба», но отмечено слово «Перевал»", OnlyIf = "Перевал, !Дружба" },
                     new Option { Destination = 578, Text = "Иначе" },
                 }
             },
@@ -3834,7 +3834,7 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 622, Text = "Если отмечено ключевое слово «Дружба»", OnlyIf = "Дружба" },
                     new Option { Destination = 655, Text = "Если слово «Дружба» не отмечено, может быть у нашего героя есть карты? Если отмечено ключевое слово «Тропа», то Алдар Косе может пересечь Джунгарские ворота по тайным тропам, не боясь ветра Эби", OnlyIf = "!Дружба" },
-                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал», то карта Джунгарского Алатау поможет найти удобный проход на север" },
+                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал», то карта Джунгарского Алатау поможет найти удобный проход на север", OnlyIf = "Перевал" },
                     new Option { Destination = 578, Text = "Если ничего этого нет, придётся уходить от погони, полагаясь на удачу" },
                 }
             },
@@ -5146,7 +5146,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [406] = new Paragraph
             {
-                Trigger = "Долина",
+                Trigger = "Долина, Перевал",
 
                 Options = new List<Option>
                 {
@@ -5219,6 +5219,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Level = 10,
                     },
                 },
+
+                Trigger = "Перевал", 
 
                 Options = new List<Option>
                 {
@@ -6902,7 +6904,7 @@ namespace Seeker.Gamebook.DzungarWar
                     new Option { Destination = 612, Text = "Если отмечено ключевое слово «Север», то проводник через Джунгарский Алатау ожидает нашего героя" },
                     new Option { Destination = 605, Text = "Если отмечено ключевое слово «Запад», то караван через Заилийский Алатау готов двинуться в путь", OnlyIf = "Запад" },
                     new Option { Destination = 596, Text = "Если отмечено ключевое слово «Северо-запад», то полковник Риддер снарядил отряд для сопровождения Алдара Косе обратно к казахскому ополчению" },
-                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал», то наш герой благодаря карте и сам пройдёт через Джунгарский Алатау" },
+                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал», то наш герой благодаря карте и сам пройдёт через Джунгарский Алатау", OnlyIf = "Перевал" },
                     new Option { Destination = 578, Text = "Если же Алдар Косе уже побывал в урочище Аныракай (либо не хочет туда ехать), и не отмечено ни одного из указанных слов, остаётся только самостоятельно искать путь через горы" },
                 }
             },
@@ -6990,6 +6992,19 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [553] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить карту",
+                        Text = "КАРТА ДЖУНГАРСКОГО АЛАТАУ",
+                        Trigger = "Перевал",
+                        Price = 50,
+                        Aftertext = "Если же денег нет, или он не хочет их тратить, то остаётся только извиниться перед полковником Риддером за беспокойство.\n\nВ любом случае Алдару здесь больше делать нечего.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 356, Text = "Далее" },
@@ -7323,7 +7338,7 @@ namespace Seeker.Gamebook.DzungarWar
                     new Option { Destination = 637, Text = "Направиться в крепость в обличье джунгарского воина" },
                     new Option { Destination = 644, Text = "Или купца" },
                     new Option { Destination = 649, Text = "Обратно на север, в Семиречье" },
-                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал»" },
+                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал»", OnlyIf = "Перевал" },
                     new Option { Destination = 578, Text = "Если это слово не отмечено" },
                 }
             },
@@ -7402,6 +7417,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [589] = new Paragraph
             {
+                Trigger = "Перевал",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 599, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»", OnlyIf = "Коварство" },
@@ -7712,7 +7729,7 @@ namespace Seeker.Gamebook.DzungarWar
                     new Option { Destination = 637, Text = "Направиться туда в обличье джунгарского воина" },
                     new Option { Destination = 644, Text = "Или купца" },
                     new Option { Destination = 649, Text = "Обратно на север, в Семиречье" },
-                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал»" },
+                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал»", OnlyIf = "Перевал" },
                     new Option { Destination = 578, Text = "Если это слово не отмечено" },
                 }
             },
@@ -7890,7 +7907,7 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 618, Text = "Заплатить 50 ТАНЬГА, если есть желание это сделать", OnlyIf = "ТАНЬГА >= 50" },
                     new Option { Destination = 649, Text = "Обратно на север, в Семиречье" },
-                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал»" },
+                    new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал»", OnlyIf = "Перевал" },
                     new Option { Destination = 578, Text = "Если это слово не отмечено" },
                 }
             },
@@ -7934,7 +7951,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [650] = new Paragraph
             {
-                Trigger = "Коварство",
+                Trigger = "Коварство, Перевал",
 
                 Options = new List<Option>
                 {
