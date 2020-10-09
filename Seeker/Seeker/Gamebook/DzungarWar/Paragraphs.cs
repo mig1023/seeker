@@ -1788,6 +1788,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [134] = new Paragraph
             {
+                Trigger = "Мост",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 86, Text = "Далее" },
@@ -3762,6 +3764,7 @@ namespace Seeker.Gamebook.DzungarWar
                         ActionName = "Get",
                         ButtonName = "Купить книгу",
                         Text = "КНИГА ПУТЕШЕСТВЕННИКА",
+                        Trigger = "Мост",
                         Price = 120,
                         Aftertext = "Книга путешественника-географа про озёра Сассык-Коль и Алаколь. Торговец говорит, что один арабский учёный исследовал те места, чтобы создать точную карту. К сожалению, он погиб на охоте. А эту книгу торговец купил вместе с другими вещами путешественника. Алдар бегло листает рукопись. Озёра и прилежащая местность действительно описаны очень подробно: с зарисовками, картами и указанием скал, холмов и оврагов.",
                     },
@@ -5163,6 +5166,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [408] = new Paragraph
             {
+                Trigger = "Мост",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 562, Text = "Далее" },
