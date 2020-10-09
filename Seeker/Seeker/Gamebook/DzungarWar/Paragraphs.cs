@@ -327,7 +327,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 458, Text = "Если отмечено ключевое слово «Сведения»" },
-                    new Option { Destination = 470, Text = "Если отмечено ключевое слово «Оружейник»" },
+                    new Option { Destination = 470, Text = "Если отмечено ключевое слово «Оружейник»", OnlyIf = "Оружейник" },
                     new Option { Destination = 483, Text = "Если отмечено ключевое слово «Порох»" },
                     new Option { Destination = 511, Text = "Кроме того, можно наведаться в харчевню, чтобы там разузнать что-нибудь" },
                     new Option { Destination = 497, Text = "Если же Алдар Косе считает, что узнал достаточно" },
@@ -4012,6 +4012,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = 50,
                     },
                 },
+
+                Trigger = "Оружейник",
 
                 Options = new List<Option>
                 {
