@@ -461,6 +461,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [31] = new Paragraph
             {
+                Trigger = "Переговорщик",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 325, Text = "Притворяться и дальше джунгарским воином" },
@@ -643,7 +645,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 67, Text = "Если отмечено ключевое слово «(Сведения»" },
+                    new Option { Destination = 67, Text = "Если отмечено ключевое слово «Сведения»" },
                     new Option { Destination = 79, Text = "Если это слово не отмечено" },
                 }
             },
@@ -1481,8 +1483,8 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 403, Text = "Если отмечено ключевое слово «Переговорщик»" },
-                    new Option { Destination = 503, Text = "В противном случае" },
+                    new Option { Destination = 403, Text = "Если отмечено ключевое слово «Переговорщик»", OnlyIf = "Переговорщик" },
+                    new Option { Destination = 503, Text = "Далее" },
                 }
             },
             [117] = new Paragraph
@@ -1926,7 +1928,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 403, Text = "Если отмечено ключевое слово «(Переговорщик»" },
+                    new Option { Destination = 403, Text = "Если отмечено ключевое слово «Переговорщик»", OnlyIf = "Переговорщик" },
                     new Option { Destination = 503, Text = "В случае успеха" },
                     new Option { Destination = 326, Text = "В случае провала" },
                 }
@@ -2608,6 +2610,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [198] = new Paragraph
             {
+                Trigger = "Переговорщик",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 128, Text = "Далее" },
@@ -4292,6 +4296,7 @@ namespace Seeker.Gamebook.DzungarWar
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
                         Level = 14,
+                        TriggerTestPenalty = "Переговорщик, -7",
                     },
                 },
 
@@ -6792,6 +6797,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Level =  12,
                     },
                 },
+
+                Trigger = "Переговорщик",
 
                 Options = new List<Option>
                 {
