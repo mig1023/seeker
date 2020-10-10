@@ -38,6 +38,8 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 658, Text = "В путь!" },
+
+                    new Option { Destination = 356, Text = "TEST" },
                 }
             },
             [1] = new Paragraph
@@ -989,11 +991,11 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 527, Text = "Десять или выше" },
-                    new Option { Destination = 512, Text = "Восемь или девять" },
-                    new Option { Destination = 566, Text = "Шесть или семь" },
-                    new Option { Destination = 476, Text = "От нуля до пяти" },
-                    new Option { Destination = 583, Text = "Ниже нуля" },
+                    new Option { Destination = 527, Text = "Десять или выше!!!", OnlyIf = "БЛАГОСКЛОННОСТЬ > 9" },
+                    new Option { Destination = 512, Text = "Восемь или девять", OnlyIf = "БЛАГОСКЛОННОСТЬ > 7, БЛАГОСКЛОННОСТЬ <= 9" },
+                    new Option { Destination = 566, Text = "Шесть или семь", OnlyIf = "БЛАГОСКЛОННОСТЬ > 5, БЛАГОСКЛОННОСТЬ <= 7" },
+                    new Option { Destination = 476, Text = "От нуля до пяти", OnlyIf = "БЛАГОСКЛОННОСТЬ > -1, БЛАГОСКЛОННОСТЬ <= 5" },
+                    new Option { Destination = 583, Text = "Ниже нуля", OnlyIf = "БЛАГОСКЛОННОСТЬ <= -1" },
                 }
             },
             [77] = new Paragraph
@@ -1893,6 +1895,50 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [142] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Отдать 150 таньга",
+                        Text = "ПОДНОШЕНИЕ В 150 ТАНЬГА",
+                        Price = 150,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Favour",
+                            Value = 1,
+                        },
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Отдать 300 таньга",
+                        Text = "ПОДНОШЕНИЕ В 300 ТАНЬГА",
+                        Price = 300,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Favour",
+                            Value = 2,
+                        },
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Отдать 500 таньга",
+                        Text = "ПОДНОШЕНИЕ В 500 ТАНЬГА",
+                        Price = 500,
+                        Aftertext = "– Алдар Косе – честный и порядочный человек, – кивает Ли Ю Чжао и прячет деньги в складках одежды, предварительно ощупав кошель.",
+
+                        Benefit = new Modification
+                        {
+                            Name = "Favour",
+                            Value = 3,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 76, Text = "Далее" },
@@ -2221,8 +2267,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 142, Text = "Сделать денежное подношение в 150 ТАНЬГА", OnlyIf = "ТАНЬГА >= 150" },
-                    new Option { Destination = 76, Text = "Если же денег меньше, или Алдар не хочет их тратить" },
+                    new Option { Destination = 142, Text = "Сделать денежное подношение", OnlyIf = "ТАНЬГА >= 150" },
+                    new Option { Destination = 76, Text = "Если же денег мало, или Алдар не хочет их тратить" },
                 }
             },
             [162] = new Paragraph
@@ -2538,6 +2584,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [191] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Favour",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 161, Text = "Далее" },
@@ -3434,6 +3489,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [271] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Favour",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 182, Text = "Если Алдар купил здесь что-нибудь" },
@@ -5645,6 +5709,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [441] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Favour",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 371, Text = "Далее" },
@@ -6259,6 +6332,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [492] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Favour",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 371, Text = "Далее" },
@@ -6828,6 +6910,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [536] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Favour",
+                        Init = true,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 556, Text = "Если отмечено ключевое слово «Цветок»" },
@@ -6937,6 +7028,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [546] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Favour",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 459, Text = "Далее" },
@@ -7066,6 +7166,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [556] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Favour",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 572, Text = "Далее" },
@@ -7454,6 +7563,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [590] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Favour",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
@@ -7572,6 +7690,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [603] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Favour",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 572, Text = "Далее" },
@@ -7621,6 +7748,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [609] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Favour",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },

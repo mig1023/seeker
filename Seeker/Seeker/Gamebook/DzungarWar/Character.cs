@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.DzungarWar
         public int Oratory { get; set; }
         public int Danger { get; set; }
         public int Tanga { get; set; }
+        public int? Favour { get; set; }
 
         public int StatBonuses { get; set; }
         public int MaxBonus { get; set; }
@@ -31,6 +32,7 @@ namespace Seeker.Gamebook.DzungarWar
             Oratory = 1;
             Danger = 0;
             Tanga = 150;
+            Favour = null;
             StatBonuses = 4;
             MaxBonus = 1;
             Brother = 0;
@@ -46,6 +48,7 @@ namespace Seeker.Gamebook.DzungarWar
             newCharacter.Cunning = this.Cunning;
             newCharacter.Oratory = this.Oratory;
             newCharacter.Danger = this.Danger;
+            newCharacter.Favour = this.Favour;
             newCharacter.Tanga = this.Tanga;
             newCharacter.StatBonuses = this.StatBonuses;
             newCharacter.MaxBonus = this.MaxBonus;

@@ -14,18 +14,29 @@ namespace Seeker.Gamebook.DzungarWar
 
         public void Do()
         {
-            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+            if (Name == "Favour")
+            {
+                if (Empty)
+                    Character.Protagonist.Favour = null;
+                else if (Init)
+                    Character.Protagonist.Favour = 0;
+                else
+                    Character.Protagonist.Favour += Value;
+            }
+            else
+            {
+                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-            currentValue += Value;
+                currentValue += Value;
 
-            if (Empty || (currentValue < 0))
-                currentValue = 0;
+                if (Empty || (currentValue < 0))
+                    currentValue = 0;
 
-            if ((currentValue > 12) && (Name != "Tanga"))
-                currentValue = 12;
+                if ((currentValue > 12) && (Name != "Tanga"))
+                    currentValue = 12;
 
-
-            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+            }
         }
     }
 }

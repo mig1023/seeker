@@ -19,7 +19,9 @@ namespace Seeker.Gamebook.DzungarWar
         public bool StatToMax { get; set; }
         public int Level { get; set; }
         public int Price { get; set; }
+
         public string TriggerTestPenalty { get; set; }
+        public Modification Benefit { get; set; }
 
 
         Dictionary<string, string> statNames = new Dictionary<string, string>
@@ -99,6 +101,9 @@ namespace Seeker.Gamebook.DzungarWar
             if (Character.Protagonist.Tanga > 0)
                 statusLines.Add(String.Format("Деньги: {0}", Character.Protagonist.Tanga));
 
+            if (Character.Protagonist.Favour != null)
+                statusLines.Add(String.Format("Благосклонность: {0}", Character.Protagonist.Favour));
+
             statusLines.Add(String.Format("Опасность: {0}", Character.Protagonist.Danger));
 
             return statusLines;
@@ -129,7 +134,7 @@ namespace Seeker.Gamebook.DzungarWar
                 return ((Character.Protagonist.StatBonuses > 0) && (currentStat < 12));
             }
 
-            else if (Price <= 0)
+            else if (Price >= 0)
                 return (Character.Protagonist.Tanga >= Price);
 
             else
@@ -157,6 +162,10 @@ namespace Seeker.Gamebook.DzungarWar
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
                         if (oneOption.Contains("ТАНЬГА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Tanga))
+                            return false;
+                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Favour))
+                            return false;
+                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Favour))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
@@ -247,6 +256,9 @@ namespace Seeker.Gamebook.DzungarWar
                 Character.Protagonist.Tanga -= Price;
 
                 Game.Option.Trigger(RemoveTrigger, remove: true);
+
+                if (Benefit != null)
+                    Benefit.Do();
             }
             else if (StatToMax && (Character.Protagonist.MaxBonus > 0))
             {
