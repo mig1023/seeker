@@ -330,7 +330,7 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 458, Text = "Если отмечено ключевое слово «Сведения»" },
                     new Option { Destination = 470, Text = "Если отмечено ключевое слово «Оружейник»", OnlyIf = "Оружейник" },
-                    new Option { Destination = 483, Text = "Если отмечено ключевое слово «Порох»" },
+                    new Option { Destination = 483, Text = "Если отмечено ключевое слово «Порох»", OnlyIf = "Порох" },
                     new Option { Destination = 511, Text = "Кроме того, можно наведаться в харчевню, чтобы там разузнать что-нибудь" },
                     new Option { Destination = 497, Text = "Если же Алдар Косе считает, что узнал достаточно" },
                 }
@@ -991,7 +991,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 527, Text = "Десять или выше!!!", OnlyIf = "БЛАГОСКЛОННОСТЬ > 9" },
+                    new Option { Destination = 527, Text = "Десять или выше", OnlyIf = "БЛАГОСКЛОННОСТЬ > 9" },
                     new Option { Destination = 512, Text = "Восемь или девять", OnlyIf = "БЛАГОСКЛОННОСТЬ > 7, БЛАГОСКЛОННОСТЬ <= 9" },
                     new Option { Destination = 566, Text = "Шесть или семь", OnlyIf = "БЛАГОСКЛОННОСТЬ > 5, БЛАГОСКЛОННОСТЬ <= 7" },
                     new Option { Destination = 476, Text = "От нуля до пяти", OnlyIf = "БЛАГОСКЛОННОСТЬ > -1, БЛАГОСКЛОННОСТЬ <= 5" },
@@ -3108,6 +3108,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [236] = new Paragraph
             {
+                Trigger = "Порох",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 30, Text = "Исследовать озеро, двигаясь вдоль берегов" },
@@ -4725,6 +4727,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [365] = new Paragraph
             {
+                Trigger = "Порох",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 21, Text = "Далее" },
@@ -4985,6 +4989,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [388] = new Paragraph
             {
+                Trigger = "Порох",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 497, Text = "Далее" },
@@ -5951,6 +5957,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [458] = new Paragraph
             {
+                Trigger = "Порох",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 21, Text = "Далее" },
@@ -6390,7 +6398,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 423, Text = "Если отмечено ключевое слово «Порох», и Алдар Косе хочет взорвать склад в подземельях ставки" },
+                    new Option { Destination = 423, Text = "Если отмечено ключевое слово «Порох», и Алдар Косе хочет взорвать склад в подземельях ставки", OnlyIf = "Порох" },
                     new Option { Destination = 433, Text = "Если отмечено ключевое слово «Сундук», и джигит намерен выкрасть бумаги из юрты Аюк-багатура" },
                     new Option { Destination = 443, Text = "Иначе можно попытаться убить джунгарского хунтайши Галдана Церена" },
                     new Option { Destination = 453, Text = "Либо покинуть ставку, ни во что не ввязываясь" },
