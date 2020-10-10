@@ -199,6 +199,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [11] = new Paragraph
             {
+                Trigger = "Река",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 575, Text = "Далее" },
@@ -750,9 +752,11 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [57] = new Paragraph
             {
+                Trigger = "Река",
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 575, Text = "Далее" },
                 }
             },
             [58] = new Paragraph
@@ -3687,6 +3691,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [286] = new Paragraph
             {
+                Trigger = "Река",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 322, Text = "Далее" },
@@ -6231,7 +6237,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 274, Text = "Если отмечены все три ключевых слова: «Воин», «Лучник» и «Река»", OnlyIf = "Воин, Лучник" },
+                    new Option { Destination = 274, Text = "Если отмечены все три ключевых слова: «Воин», «Лучник» и «Река»", OnlyIf = "Воин, Лучник, Река" },
                     new Option { Destination = 300, Text = "Если отмечены оба ключевых слова: «Воин» и Лучник»", OnlyIf = "Воин, Лучник" },
                     new Option { Destination = 310, Text = "Если отмечено только ключевое слово «Воин»", OnlyIf = "Воин" },
                     new Option { Destination = 344, Text = "Если не отмечено ни одно из этих ключевых слов" },
@@ -7205,7 +7211,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 575, Text = "Покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
-                    new Option { Destination = 509, Text = "Если отмечены все три ключевых слова: «Воин», «Лучник» и «Река»", OnlyIf = "Воин, Лучник" },
+                    new Option { Destination = 509, Text = "Если отмечены все три ключевых слова: «Воин», «Лучник» и «Река»", OnlyIf = "Воин, Лучник, Река" },
                     new Option { Destination = 495, Text = "Если отмечены оба слова: «Воин» и «Лучник»", OnlyIf = "Воин, Лучник" },
                     new Option { Destination = 606, Text = "Если отмечено только слово «Воин»", OnlyIf = "Воин" },
                     new Option { Destination = 638, Text = "Если же ни одно из этих слов не отмечено, то придётся собирать сведения с чистого листа" },
@@ -7865,7 +7871,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [619] = new Paragraph
             {
-                Trigger = "Воин, Лучник",
+                Trigger = "Воин, Лучник, Река",
 
                 Options = new List<Option>
                 {
