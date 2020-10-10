@@ -38,8 +38,6 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 658, Text = "В путь!" },
-
-                    new Option { Destination = 356, Text = "TEST" },
                 }
             },
             [1] = new Paragraph
@@ -5291,7 +5289,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 461, Text = "Если отмечено ключевое слово «Прозрение»" },
+                    new Option { Destination = 461, Text = "Если отмечено ключевое слово «Прозрение»", OnlyIf = "Прозрение" },
                     new Option { Destination = 471, Text = "Иначе можно покинуть комнату через проход" },
                     new Option { Destination = 494, Text = "Либо задержаться здесь, чтобы немного отдохнуть" },
                 }
@@ -5950,6 +5948,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [457] = new Paragraph
             {
+                Trigger = "Прозрение",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 396, Text = "Далее" },
