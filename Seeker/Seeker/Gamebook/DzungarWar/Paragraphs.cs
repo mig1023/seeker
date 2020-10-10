@@ -270,7 +270,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 183, Text = "Если отмечено ключевое слово «Рассвет»" },
+                    new Option { Destination = 183, Text = "Если отмечено ключевое слово «Рассвет»", OnlyIf = "Рассвет" },
                     new Option { Destination = 207, Text = "Если же это слово не отмечено" },
                 }
             },
@@ -965,6 +965,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = -10,
                     },
                 },
+
+                Trigger = "Рассвет",
 
                 Options = new List<Option>
                 {
@@ -2364,6 +2366,8 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Trigger = "Рассвет",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 279, Text = "Переправиться на другой берег и продолжить путешествие" },
@@ -2960,6 +2964,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [222] = new Paragraph
             {
+                Trigger = "Рассвет",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 279, Text = "Переправиться на другой берег и продолжить путешествие" },
@@ -3126,6 +3132,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = -150,
                     },
                 },
+
+                Trigger = "Рассвет",
 
                 Options = new List<Option>
                 {
@@ -4062,6 +4070,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = 2,
                     },
                 },
+
+                Trigger = "Рассвет",
 
                 Options = new List<Option>
                 {
@@ -7056,7 +7066,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 171, Text = "Если отмечены оба ключевых слова: «Рассвет» и «Пленник»", OnlyIf = "Пленник" },
+                    new Option { Destination = 171, Text = "Если отмечены оба ключевых слова: «Рассвет» и «Пленник»", OnlyIf = "Пленник, Рассвет" },
                     new Option { Destination = 336, Text = "Заплатить 100 ТАНЬГА, как того требуют воины", OnlyIf = "ТАНЬГА >= 100" },
                     new Option { Destination = 363, Text = "Обмануть их, выдав себя за посланника хунтайши" },
                     new Option { Destination = 385, Text = "Поторговаться с джунгарами, притворившись бедняком", OnlyIf = "ТАНЬГА >= 10" },
