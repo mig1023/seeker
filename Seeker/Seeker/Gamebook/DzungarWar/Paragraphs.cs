@@ -270,6 +270,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [17] = new Paragraph
             {
+                Trigger = "Сведения",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 183, Text = "Если отмечено ключевое слово «Рассвет»", OnlyIf = "Рассвет" },
@@ -328,7 +330,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 458, Text = "Если отмечено ключевое слово «Сведения»" },
+                    new Option { Destination = 458, Text = "Если отмечено ключевое слово «Сведения»", OnlyIf = "Сведения" },
                     new Option { Destination = 470, Text = "Если отмечено ключевое слово «Оружейник»", OnlyIf = "Оружейник" },
                     new Option { Destination = 483, Text = "Если отмечено ключевое слово «Порох»", OnlyIf = "Порох" },
                     new Option { Destination = 511, Text = "Кроме того, можно наведаться в харчевню, чтобы там разузнать что-нибудь" },
@@ -647,8 +649,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 67, Text = "Если отмечено ключевое слово «Сведения»" },
-                    new Option { Destination = 79, Text = "Если это слово не отмечено" },
+                    new Option { Destination = 67, Text = "Если отмечено ключевое слово «Сведения»", OnlyIf = "Сведения" },
+                    new Option { Destination = 79, Text = "Далее" },
                 }
             },
             [50] = new Paragraph
@@ -3343,7 +3345,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 625, Text = "Если отмечено оба ключевых слова «Сведения» и «Стрелок»" },
+                    new Option { Destination = 625, Text = "Если отмечено оба ключевых слова «Сведения» и «Стрелок»", OnlyIf = "Сведения" },
                     new Option { Destination = 640, Text = "Если не отмечено слово «Сведения», но отмечено слово «Стрелок»" },
                     new Option { Destination = 648, Text = "В любом другом случае" },
                 }
@@ -6088,8 +6090,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 435, Text = "Если отмечено ключевое слово «Сведения»" },
-                    new Option { Destination = 457, Text = "Если же это слово не отмечено" },
+                    new Option { Destination = 435, Text = "Если отмечено ключевое слово «Сведения»", OnlyIf = "Сведения" },
+                    new Option { Destination = 457, Text = "Далее" },
                 }
             },
             [470] = new Paragraph
@@ -6747,8 +6749,8 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 650, Text = "Если отмечено ключевое слово «Дружба»", OnlyIf = "Дружба" },
-                    new Option { Destination = 599, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»", OnlyIf = "Коварство" },
-                    new Option { Destination = 626, Text = "Если отмечено только слово «Сведения»" },
+                    new Option { Destination = 599, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»", OnlyIf = "Сведения, Коварство" },
+                    new Option { Destination = 626, Text = "Если отмечено только слово «Сведения»", OnlyIf = "Сведения" },
                     new Option { Destination = 645, Text = "В любом другом случае" },
                 }
             },
@@ -7587,7 +7589,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 599, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»", OnlyIf = "Коварство" },
+                    new Option { Destination = 599, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»", OnlyIf = "Сведения, Коварство" },
                     new Option { Destination = 645, Text = "В любом другом случае" },
                 }
             },
@@ -7900,8 +7902,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 604, Text = "Если отмечено ключевое слово «Сведения»" },
-                    new Option { Destination = 613, Text = "Если это слово не отмечено" },
+                    new Option { Destination = 604, Text = "Если отмечено ключевое слово «Сведения»", OnlyIf = "Сведения" },
+                    new Option { Destination = 613, Text = "Далее" },
                 }
             },
             [623] = new Paragraph
@@ -7944,8 +7946,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 577, Text = "Если отмечены оба ключевых слова «Сведения» и «Коварство»", OnlyIf = "Коварство" },
-                    new Option { Destination = 633, Text = "Если отмечено только слово «Сведения»" },
+                    new Option { Destination = 577, Text = "Если отмечены оба ключевых слова «Сведения» и «Коварство»", OnlyIf = "Сведения, Коварство" },
+                    new Option { Destination = 633, Text = "Если отмечено только слово «Сведения»", OnlyIf = "Сведения" },
                     new Option { Destination = 646, Text = "В любом другом случае" },
                 }
             },
@@ -7962,8 +7964,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 643, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»", OnlyIf = "Коварство" },
-                    new Option { Destination = 617, Text = "Если отмечено только слово «Сведения»" },
+                    new Option { Destination = 643, Text = "Если отмечены оба ключевых слова: «Сведения» и «Коварство»", OnlyIf = "Сведения, Коварство" },
+                    new Option { Destination = 617, Text = "Если отмечено только слово «Сведения»", OnlyIf = "Сведения" },
                     new Option { Destination = 29, Text = "В любом другом случае" },
                 }
             },
