@@ -1055,6 +1055,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [84] = new Paragraph
             {
+                Trigger = "Пушкарь",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 257, Text = "Завершить путешествие и направиться вместе с офицерами к казахскому ополчению" },
@@ -1124,7 +1126,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [90] = new Paragraph
             {
-                Trigger = "Барымта",
+                Trigger = "Барымта, Пушкарь",
 
                 Options = new List<Option>
                 {
@@ -6023,7 +6025,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 116, Text = "Если отмечено слово «Пушкарь», и Алдар хочет воспользоваться советом Алексея Медведева (но тогда придётся рассказать всё о себе)" },
+                    new Option { Destination = 116, Text = "Если отмечено слово «Пушкарь», и Алдар хочет воспользоваться советом Алексея Медведева (но тогда придётся рассказать всё о себе)", OnlyIf = "Пушкарь" },
                     new Option { Destination = 144, Text = "Иначе либо раскрыть себя и попросить о помощи" },
                     new Option { Destination = 181, Text = "Либо, сохраняя купеческое обличье, попытаться выведать у полковника что-нибудь интересное" },
                 }
