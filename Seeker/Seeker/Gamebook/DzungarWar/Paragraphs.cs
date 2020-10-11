@@ -15,7 +15,7 @@ namespace Seeker.Gamebook.DzungarWar
             Paragraph source = Paragraph[id];
 
             Game.Paragraph paragraph = new Game.Paragraph();
-
+            
             if (source.Options != null)
                 paragraph.Options = new List<Option>(source.Options);
 
@@ -208,6 +208,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [12] = new Paragraph
             {
+                Trigger = "Святыня",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 87, Text = "Далее" },
@@ -658,7 +660,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 74, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
-                    new Option { Destination = 59, Text = "Если отмечено хотя бы одно из ключевых слов: «Пленник», «Переписка» или «Святыня» - то Алдар знает, о чём он будет докладывать хунтайши", OnlyIf = "Пленник|Переписка" },
+                    new Option { Destination = 59, Text = "Если отмечено хотя бы одно из ключевых слов: «Пленник», «Переписка» или «Святыня» - то Алдар знает, о чём он будет докладывать хунтайши", OnlyIf = "Пленник|Переписка|Святыня" },
                     new Option { Destination = 66, Text = "Иначе придётся сделать донесение о «казахском лазутчике»" },
                     new Option { Destination = 453, Text = "И конечно, ничто не мешает отступиться от замысла и прямо сейчас покинуть ставку" },
                 }
@@ -4605,6 +4607,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [354] = new Paragraph
             {
+                Trigger = "Святыня",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 185, Text = "Далее" },
@@ -5584,7 +5588,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 598, Text = "Если отмечено ключевое слово «Святыня»" },
+                    new Option { Destination = 598, Text = "Если отмечено ключевое слово «Святыня»", OnlyIf = "Святыня" },
                     new Option { Destination = 580, Text = "В противном случае придётся либо притвориться последователем христианской веры" },
                     new Option { Destination = 563, Text = "Либо рассказать о себе правду и попросить о помощи" },
                 }
@@ -5847,7 +5851,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 560, Text = "Рассказать про угон табуна", OnlyIf = "Барымта" },
-                    new Option { Destination = 568, Text = "Отмечено ключевое слово «Святыня»" },
+                    new Option { Destination = 568, Text = "Отмечено ключевое слово «Святыня»", OnlyIf = "Святыня" },
                     new Option { Destination = 576, Text = "Рассказать про взрыв", OnlyIf = "Взрыв" },
                     new Option { Destination = 585, Text = "Далее" },
                 }
@@ -7528,7 +7532,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 594, Text = "Рассказано было много полезного", OnlyIf = "Барымта, Взрыв" },
+                    new Option { Destination = 594, Text = "Рассказано было много полезного", OnlyIf = "Барымта, Взрыв, Святыня" },
                     new Option { Destination = 540, Text = "Рассказано было нечто полезное", OnlyIf = "Барымта|Взрыв" },
                     new Option { Destination = 520, Text = "Алдар Косе сообщил Штейну мало полезного" },
                 }
