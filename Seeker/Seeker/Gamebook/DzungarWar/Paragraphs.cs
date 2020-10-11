@@ -6179,6 +6179,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [469] = new Paragraph
             {
+                Trigger = "Солончак",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 435, Text = "Если отмечено ключевое слово «Сведения»", OnlyIf = "Сведения" },
@@ -7669,9 +7671,9 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 531, Text = "Если отмечено ключевое слово «Солончак»" },
                     new Option { Destination = 558, Text = "В случае успеха" },
                     new Option { Destination = 567, Text = "В случае провала" },
+                    new Option { Destination = 531, Text = "Если отмечено ключевое слово «Солончак»", OnlyIf = "Солончак" },
                 }
             },
             [588] = new Paragraph
