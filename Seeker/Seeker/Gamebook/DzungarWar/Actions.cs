@@ -47,21 +47,26 @@ namespace Seeker.Gamebook.DzungarWar
             return actionResult;
         }
 
-        private int TestLevelWithPenalty(int level, out string penaltyLine)
+        private int TestLevelWithPenalty(int level, out List<string> penaltyLine)
         {
-            penaltyLine = String.Empty;
+            penaltyLine = new List<string> { };
 
             if (String.IsNullOrEmpty(TriggerTestPenalty))
                 return level;
 
-            string[] penalty = TriggerTestPenalty.Split(',');
+            string[] penalties = TriggerTestPenalty.Split(';');
 
-            if (Game.Data.Triggers.Contains(penalty[0].Trim()))
+            foreach (string eachPenalty in penalties)
             {
-                int.TryParse(penalty[1].Trim(), out int penaltyValue);
-                level += penaltyValue;
+                string[] penalty = eachPenalty.Split(',');
 
-                penaltyLine = String.Format("Пенальти {0} к уровню проверки за ключевое слово {1}", penalty[1].Trim(), penalty[0].Trim());
+                if (Game.Data.Triggers.Contains(penalty[0].Trim()))
+                {
+                    int.TryParse(penalty[1].Trim(), out int penaltyValue);
+                    level += penaltyValue;
+
+                    penaltyLine.Add(String.Format("Пенальти {0} к уровню проверки за ключевое слово {1}", penalty[1].Trim(), penalty[0].Trim()));
+                }
             }
 
             return level;
@@ -72,7 +77,7 @@ namespace Seeker.Gamebook.DzungarWar
             if (ActionName == "TestAll")
                 return new List<string> { String.Format("Проверить по совокупному уровню {0}", Level) };
             else if (Level > 0)
-                return new List<string> { String.Format("Проверка {0}, уровень {1}", statNames[Stat], TestLevelWithPenalty(Level, out string _)) };
+                return new List<string> { String.Format("Проверка {0}, уровень {1}", statNames[Stat], TestLevelWithPenalty(Level, out List<string> _)) };
             else if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
             else
@@ -185,9 +190,9 @@ namespace Seeker.Gamebook.DzungarWar
         {
             resultLine = new List<string>();
 
-            level = TestLevelWithPenalty(level, out string penalty);
+            level = TestLevelWithPenalty(level, out List<string> penalties);
 
-            if (!String.IsNullOrEmpty(penalty))
+            foreach (string penalty in penalties)
                 resultLine.Add(penalty);
 
             int firstDice = Game.Dice.Roll();

@@ -2116,7 +2116,7 @@ namespace Seeker.Gamebook.DzungarWar
                         ButtonName = "Проверить красноречие",
                         Stat = "Oratory",
                         Level = 14,
-                        TriggerTestPenalty = "Боль, -4",
+                        TriggerTestPenalty = "Боль, 4; Скакун, -5; Тулпар, -10",
                     },
                 },
 
@@ -2364,6 +2364,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = 100,
                     },
                 },
+
+                Trigger = "Тулпар",
 
                 Options = new List<Option>
                 {
@@ -4307,9 +4309,9 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 186, Text = "Если отмечено ключевое слово «Тулпар» (при неотмеченном ключевом слове «Скакун»)", OnlyIf = "!Скакун" },
                     new Option { Destination = 203, Text = "В случае успеха" },
                     new Option { Destination = 234, Text = "В случае провала" },
+                    new Option { Destination = 186, Text = "Если отмечено ключевое слово «Тулпар» (при неотмеченном ключевом слове «Скакун»)", OnlyIf = "Тулпар, !Скакун" },
                 }
             },
             [320] = new Paragraph
@@ -5302,7 +5304,7 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     new Option { Destination = 324, Text = "В случае успеха" },
                     new Option { Destination = 347, Text = "В случае провала" },
-                    new Option { Destination = 379, Text = "Если отмечено ключевое слово «Табун», но не отмечены слова «Скакун» или «Тулпар»", OnlyIf = "Табун, !Скакун" },
+                    new Option { Destination = 379, Text = "Если отмечено ключевое слово «Табун», но не отмечены слова «Скакун» или «Тулпар»", OnlyIf = "Табун, !Скакун, !Тулпар" },
                 }
             },
             [402] = new Paragraph
@@ -5338,6 +5340,7 @@ namespace Seeker.Gamebook.DzungarWar
                         ButtonName = "Проверить ловкость",
                         Stat = "Skill",
                         Level = 12,
+                        TriggerTestPenalty = "Скакун, -5; Тулпар, -5",
                     },
                 },
 
@@ -8300,7 +8303,7 @@ namespace Seeker.Gamebook.DzungarWar
                     new Option { Destination = 620, Text = "В случае успеха" },
                     new Option { Destination = 611, Text = "В случае провала" },
                     new Option { Destination = 632, Text = "У Алдара есть доспехи", OnlyIf = "Доспех" },
-                    new Option { Destination = 639, Text = "Если нет, но отмечено хотя бы одно из ключевых слов: «Тулпар» или «Скакун»", OnlyIf = "Скакун" },
+                    new Option { Destination = 639, Text = "Если нет, но отмечено хотя бы одно из ключевых слов: «Тулпар» или «Скакун»", OnlyIf = "Тулпар|Скакун" },
                     new Option { Destination = 593, Text = "Иначе можно просто подстегнуть коня, чтобы побыстрее проскочить мимо зембуреков" },
                 }
             },
