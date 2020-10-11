@@ -918,6 +918,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [69] = new Paragraph
             {
+                Trigger = "Тумен", 
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 297, Text = "Далее" },
@@ -933,6 +935,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = 50,
                     },
                 },
+
+                Trigger = "Тумен",
 
                 Options = new List<Option>
                 {
@@ -1175,7 +1179,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [92] = new Paragraph
             {
-                Trigger = "Тропа",
+                Trigger = "Тропа, Тумен",
 
                 Options = new List<Option>
                 {
@@ -2683,6 +2687,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [189] = new Paragraph
             {
+                Trigger = "Тумен",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 159, Text = "Далее" },
@@ -3043,7 +3049,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [218] = new Paragraph
             {
-                Trigger = "Отряд",
+                Trigger = "Отряд, Тумен",
 
                 Options = new List<Option>
                 {
@@ -3285,7 +3291,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [241] = new Paragraph
             {
-                Trigger = "Отряд",
+                Trigger = "Отряд, Тумен",
 
                 Options = new List<Option>
                 {
@@ -3462,7 +3468,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [259] = new Paragraph
             {
-                Trigger = "Крепость",
+                Trigger = "Крепость, Тумен",
 
                 Options = new List<Option>
                 {
@@ -4378,6 +4384,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [325] = new Paragraph
             {
+                Trigger = "Тумен",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 297, Text = "Далее" },
@@ -5445,6 +5453,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [412] = new Paragraph
             {
+                Trigger = "Тумен",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 356, Text = "Далее" },
@@ -7077,6 +7087,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [537] = new Paragraph
             {
+                Trigger = "Тумен",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 432, Text = "Решиться на тайный осмотр укреплений" },
@@ -7281,6 +7293,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Aftertext = "Если же денег нет, или он не хочет их тратить, то остаётся только извиниться перед полковником Риддером за беспокойство.\n\nВ любом случае Алдару здесь больше делать нечего.",
                     },
                 },
+
+                Trigger = "Тумен",
 
                 Options = new List<Option>
                 {
@@ -7828,6 +7842,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [601] = new Paragraph
             {
+                Trigger = "Тумен",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 591, Text = "Взобраться ещё выше" },
