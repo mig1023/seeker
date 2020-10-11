@@ -608,6 +608,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [45] = new Paragraph
             {
+                Trigger = "Сундук",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 497, Text = "Далее" },
@@ -4844,7 +4846,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [365] = new Paragraph
             {
-                Trigger = "Порох",
+                Trigger = "Порох, Сундук",
 
                 Options = new List<Option>
                 {
@@ -6078,7 +6080,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [458] = new Paragraph
             {
-                Trigger = "Порох",
+                Trigger = "Порох, Сундук",
 
                 Options = new List<Option>
                 {
@@ -6522,7 +6524,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 423, Text = "Если отмечено ключевое слово «Порох», и Алдар Косе хочет взорвать склад в подземельях ставки", OnlyIf = "Порох" },
-                    new Option { Destination = 433, Text = "Если отмечено ключевое слово «Сундук», и джигит намерен выкрасть бумаги из юрты Аюк-багатура" },
+                    new Option { Destination = 433, Text = "Если отмечено ключевое слово «Сундук», и джигит намерен выкрасть бумаги из юрты Аюк-багатура", OnlyIf = "Сундук" },
                     new Option { Destination = 443, Text = "Иначе можно попытаться убить джунгарского хунтайши Галдана Церена" },
                     new Option { Destination = 453, Text = "Либо покинуть ставку, ни во что не ввязываясь" },
                 }
