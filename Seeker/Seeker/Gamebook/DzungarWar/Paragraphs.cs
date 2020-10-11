@@ -1175,6 +1175,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [92] = new Paragraph
             {
+                Trigger = "Тропа",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 373, Text = "На юг, в Кульджу" },
@@ -4030,7 +4032,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 622, Text = "Если отмечено ключевое слово «Дружба»", OnlyIf = "Дружба" },
-                    new Option { Destination = 655, Text = "Если слово «Дружба» не отмечено, может быть у нашего героя есть карты? Если отмечено ключевое слово «Тропа», то Алдар Косе может пересечь Джунгарские ворота по тайным тропам, не боясь ветра Эби", OnlyIf = "!Дружба" },
+                    new Option { Destination = 655, Text = "Если слово «Дружба» не отмечено, может быть у нашего героя есть карты? Если отмечено ключевое слово «Тропа», то Алдар Косе может пересечь Джунгарские ворота по тайным тропам, не боясь ветра Эби", OnlyIf = "!Дружба, Тропа" },
                     new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал», то карта Джунгарского Алатау поможет найти удобный проход на север", OnlyIf = "Перевал" },
                     new Option { Destination = 578, Text = "Если ничего этого нет, придётся уходить от погони, полагаясь на удачу" },
                 }
@@ -5759,6 +5761,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [436] = new Paragraph
             {
+                Trigger = "Тропа",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 7, Text = "Поехать налево, к монастырю Салхи-Зуун" },
@@ -6517,7 +6521,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 523, Text = "Если отмечено ключевое слово «Тропа»" },
-                    new Option { Destination = 535, Text = "Если слово «Тропа» не отмечено, но отмечено слово «Уйгур»" },
+                    new Option { Destination = 535, Text = "Если слово «Тропа» не отмечено, но отмечено слово «Уйгур»", OnlyIf = "!Тропа" },
                     new Option { Destination = 547, Text = "В любом другом случае" },
                 }
             },
