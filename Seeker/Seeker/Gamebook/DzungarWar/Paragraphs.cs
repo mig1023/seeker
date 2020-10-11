@@ -1420,6 +1420,8 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Trigger = "Стрелок",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 151, Text = "Если уровень ОПАСНОСТИ стал равен 12 или выше" },
@@ -2138,6 +2140,8 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Trigger = "Стрелок",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 453, Text = "Далее" },
@@ -2612,6 +2616,8 @@ namespace Seeker.Gamebook.DzungarWar
                         Value = 10,
                     },
                 },
+
+                Trigger = "Стрелок",
 
                 Options = new List<Option>
                 {
@@ -3434,8 +3440,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 625, Text = "Если отмечено оба ключевых слова «Сведения» и «Стрелок»", OnlyIf = "Сведения" },
-                    new Option { Destination = 640, Text = "Если не отмечено слово «Сведения», но отмечено слово «Стрелок»" },
+                    new Option { Destination = 625, Text = "Если отмечено оба ключевых слова «Сведения» и «Стрелок»", OnlyIf = "Сведения, Стрелок" },
+                    new Option { Destination = 640, Text = "Если не отмечено слово «Сведения», но отмечено слово «Стрелок»", OnlyIf = "!Сведения, Стрелок" },
                     new Option { Destination = 648, Text = "В любом другом случае" },
                 }
             },
