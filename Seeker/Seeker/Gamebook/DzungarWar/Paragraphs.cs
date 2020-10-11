@@ -6858,6 +6858,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [527] = new Paragraph
             {
+                Trigger = "Северо-запад",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 545, Text = "Далее" },
@@ -6879,6 +6881,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [530] = new Paragraph
             {
+                Trigger = "Северо-запад",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 356, Text = "Далее" },
@@ -7058,7 +7062,7 @@ namespace Seeker.Gamebook.DzungarWar
                     new Option { Destination = 653, Text = "Либо в буддийский монастырь Салхи-Зуун" },
                     new Option { Destination = 612, Text = "Если отмечено ключевое слово «Север», то проводник через Джунгарский Алатау ожидает нашего героя", OnlyIf = "Север" },
                     new Option { Destination = 605, Text = "Если отмечено ключевое слово «Запад», то караван через Заилийский Алатау готов двинуться в путь", OnlyIf = "Запад" },
-                    new Option { Destination = 596, Text = "Если отмечено ключевое слово «Северо-запад», то полковник Риддер снарядил отряд для сопровождения Алдара Косе обратно к казахскому ополчению" },
+                    new Option { Destination = 596, Text = "Если отмечено ключевое слово «Северо-запад», то полковник Риддер снарядил отряд для сопровождения Алдара Косе обратно к казахскому ополчению", OnlyIf = "Северо-запад" },
                     new Option { Destination = 588, Text = "Если отмечено ключевое слово «Перевал», то наш герой благодаря карте и сам пройдёт через Джунгарский Алатау", OnlyIf = "Перевал" },
                     new Option { Destination = 578, Text = "Если же Алдар Косе уже побывал в урочище Аныракай (либо не хочет туда ехать), и не отмечено ни одного из указанных слов, остаётся только самостоятельно искать путь через горы" },
                 }
@@ -7324,6 +7328,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [566] = new Paragraph
             {
+                Trigger = "Северо-запад",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 545, Text = "Далее" },
@@ -7652,6 +7658,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [594] = new Paragraph
             {
+                Trigger = "Северо-запад",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 5, Text = "Далее" },
