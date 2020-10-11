@@ -1265,11 +1265,98 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [100] = new Paragraph
             {
-                RemoveTrigger = "Боль",
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить настойку силы",
+                        Text = "НАСТОЙКА СИЛЫ, 50 таньга",
+                        Price = 50,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Strength",
+                            Value = 1,
+                        },
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить настойку ловкости",
+                        Text = "НАСТОЙКА ЛОВКОСТИ, 50 таньга",
+                        Price = 50,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Skill",
+                            Value = 1,
+                        },
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить настойку мудрости",
+                        Text = "НАСТОЙКА МУДРОСТИ, 50 таньга",
+                        Price = 50,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Wisdom",
+                            Value = 1,
+                        },
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить настойку хитрости",
+                        Text = "НАСТОЙКА ХИТРОСТИ, 50 таньга",
+                        Price = 50,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Cunning",
+                            Value = 1,
+                        },
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить настойку красноречия",
+                        Text = "НАСТОЙКА КРАСНОРЕЧИЯ, 50 таньга",
+                        Price = 50,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Oratory",
+                            Value = 1,
+                        },
+
+                        Aftertext = "У торговцев лошадьми Алдар засматривается на серого скакуна, который не стоит на месте, а гарцует и показывает свой отнюдь не кроткий нрав. Несомненно, такой конь пригодится в путешествии, особенно если придётся удирать от врагов верхом. Скакуна можно купить, отдав своего коня и доплатив 200 ТАНЬГА",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить скакуна",
+                        Text = "СКАКУН, 200 таньга",
+                        Trigger = "Скакун",
+                        RemoveTrigger = "Боль",
+                        Price = 200,
+                        Aftertext = "Книга путешественника-географа про озёра Сассык-Коль и Алаколь. Торговец говорит, что один арабский учёный исследовал те места, чтобы создать точную карту. К сожалению, он погиб на охоте. А эту книгу торговец купил вместе с другими вещами путешественника. Алдар бегло листает рукопись. Озёра и прилежащая местность действительно описаны очень подробно: с зарисовками, картами и указанием скал, холмов и оврагов.",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить карту",
+                        Text = "КАРТУ УЩЕЛЬЯ ДЖУНГАРСКИЕ ВОРОТА, 60 таньга",
+                        Trigger = "Тропа",
+                        Price = 60,
+                    },
+                },
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 0, Text = "Начать сначала" },
+                    new Option { Destination = 21, Text = "Далее" },
                 }
             },
             [101] = new Paragraph
@@ -4208,7 +4295,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 186, Text = "Если отмечено ключевое слово «Тулпар» (при неотмеченном ключевом слове «Скакун»)" },
+                    new Option { Destination = 186, Text = "Если отмечено ключевое слово «Тулпар» (при неотмеченном ключевом слове «Скакун»)", OnlyIf = "!Скакун" },
                     new Option { Destination = 203, Text = "В случае успеха" },
                     new Option { Destination = 234, Text = "В случае провала" },
                 }
@@ -5201,7 +5288,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 379, Text = "Если отмечено ключевое слово «Табун», но не отмечены слова «Скакун» или «Тулпар»" },
+                    new Option { Destination = 379, Text = "Если отмечено ключевое слово «Табун», но не отмечены слова «Скакун» или «Тулпар»", OnlyIf = "!Скакун" },
                     new Option { Destination = 324, Text = "В случае успеха" },
                     new Option { Destination = 347, Text = "В случае провала" },
                 }
@@ -6688,6 +6775,7 @@ namespace Seeker.Gamebook.DzungarWar
                         ActionName = "Get",
                         ButtonName = "Купить жеребца",
                         Text = "ЖЕРЕБЕЦ-АХАЛТЕКИНЕЦ",
+                        Trigger = "Скакун",
                         RemoveTrigger = "Боль",
                         Price = 250,
                         Aftertext = "Джигит заглядывается на породистых жеребцов-ахалтекинцев. Лошадник-туркмен, видя интерес нашего героя, зазывает его купить себе хорошего коня. Но Алдар помимо денег должен отдать ему своего коня в обмен.",
@@ -7561,9 +7649,9 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 581, Text = "Если отмечено ключевое слово «Серик»" },
                     new Option { Destination = 551, Text = "В случае успеха" },
                     new Option { Destination = 570, Text = "В случае провала" },
+                    new Option { Destination = 581, Text = "Если отмечено ключевое слово «Серик»", OnlyIf = "Серик" },
                 }
             },
             [587] = new Paragraph
@@ -8196,7 +8284,7 @@ namespace Seeker.Gamebook.DzungarWar
                     new Option { Destination = 620, Text = "В случае успеха" },
                     new Option { Destination = 611, Text = "В случае провала" },
                     new Option { Destination = 632, Text = "У Алдара есть доспехи", OnlyIf = "Доспех" },
-                    new Option { Destination = 639, Text = "Если нет, но отмечено хотя бы одно из ключевых слов: «Тулпар» или «Скакун»" },
+                    new Option { Destination = 639, Text = "Если нет, но отмечено хотя бы одно из ключевых слов: «Тулпар» или «Скакун»", OnlyIf = "Скакун" },
                     new Option { Destination = 593, Text = "Иначе можно просто подстегнуть коня, чтобы побыстрее проскочить мимо зембуреков" },
                 }
             },
