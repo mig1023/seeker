@@ -504,6 +504,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [34] = new Paragraph
             {
+                Trigger = "Табун",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 201, Text = "Далее" },
@@ -2808,7 +2810,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 244, Text = "Алдар знает о Аягузе", OnlyIf = "Аягуз" },
-                    new Option { Destination = 123, Text = "Если отмечено ключевое слово «Табун»" },
+                    new Option { Destination = 123, Text = "Если отмечено ключевое слово «Табун»", OnlyIf = "Табун" },
                     new Option { Destination = 155, Text = "Если не отмечено ни одно их этих слов" },
                 }
             },
@@ -5296,9 +5298,9 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 379, Text = "Если отмечено ключевое слово «Табун», но не отмечены слова «Скакун» или «Тулпар»", OnlyIf = "!Скакун" },
                     new Option { Destination = 324, Text = "В случае успеха" },
                     new Option { Destination = 347, Text = "В случае провала" },
+                    new Option { Destination = 379, Text = "Если отмечено ключевое слово «Табун», но не отмечены слова «Скакун» или «Тулпар»", OnlyIf = "Табун, !Скакун" },
                 }
             },
             [402] = new Paragraph
