@@ -6631,6 +6631,8 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Trigger = "Дракон",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 545, Text = "Далее" },
@@ -6858,7 +6860,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [527] = new Paragraph
             {
-                Trigger = "Северо-запад",
+                Trigger = "Северо-запад, Дракон",
 
                 Options = new List<Option>
                 {
