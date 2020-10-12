@@ -3262,6 +3262,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [238] = new Paragraph
             {
+                Trigger = "Хуяг",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 343, Text = "Если отмечены оба ключевых слова: «Казах» и «Русский»", OnlyIf = "Казах, Русский" },
@@ -4001,6 +4003,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [296] = new Paragraph
             {
+                Trigger = "Хуяг",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 343, Text = "Если отмечены оба ключевых слова: «Казах» и «Русский»", OnlyIf = "Казах, Русский" },
@@ -4243,6 +4247,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [314] = new Paragraph
             {
+                Trigger = "Хуяг",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 343, Text = "Если отмечены оба ключевых слова: «Казах» и «Русский»", OnlyIf = "Казах, Русский" },
@@ -5055,6 +5061,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [378] = new Paragraph
             {
+                Trigger = "Хуяг",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 343, Text = "Если отмечены оба ключевых слова: «Казах» и «Русский»", OnlyIf = "Казах, Русский" },
@@ -8133,7 +8141,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 619, Text = "Имя Алдана знакомо Алдару", OnlyIf ="Алдан" },
-                    new Option { Destination = 610, Text = "Если отмечено ключевое слово «Хуяг»" },
+                    new Option { Destination = 610, Text = "Если отмечено ключевое слово «Хуяг»", OnlyIf = "Хуяг" },
                     new Option { Destination = 602, Text = "Если не отмечено ни одно из этих слов" },
                 }
             },
@@ -8334,6 +8342,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [651] = new Paragraph
             {
+                Trigger = "Хуяг",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 343, Text = "Если отмечены оба ключевых слова «Казах» и «Русский»", OnlyIf = "Казах, Русский" },
