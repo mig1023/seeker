@@ -15,7 +15,7 @@ namespace Seeker.Gamebook.DzungarWar
         public int Wisdom { get; set; }
         public int Cunning { get; set; }
         public int Oratory { get; set; }
-        public int Danger { get; set; }
+        public int? Danger { get; set; }
         public int Tanga { get; set; }
         public int? Favour { get; set; }
 

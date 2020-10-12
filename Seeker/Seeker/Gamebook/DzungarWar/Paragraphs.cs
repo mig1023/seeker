@@ -6908,6 +6908,11 @@ namespace Seeker.Gamebook.DzungarWar
                         Name = "Skill",
                         Value = 2,
                     },
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Empty = true,
+                    },
                 },
 
                 Trigger = "Оборона, Хубилган",

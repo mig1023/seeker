@@ -109,7 +109,8 @@ namespace Seeker.Gamebook.DzungarWar
             if (Character.Protagonist.Favour != null)
                 statusLines.Add(String.Format("Благосклонность: {0}", Character.Protagonist.Favour));
 
-            statusLines.Add(String.Format("Опасность: {0}", Character.Protagonist.Danger));
+            if (Character.Protagonist.Danger != null)
+                statusLines.Add(String.Format("Опасность: {0}", Character.Protagonist.Danger));
 
             return statusLines;
         }

@@ -23,6 +23,13 @@ namespace Seeker.Gamebook.DzungarWar
                 else
                     Character.Protagonist.Favour += Value;
             }
+            else if (Name == "Danger")
+            {
+                if (Empty)
+                    Character.Protagonist.Danger = null;
+                else if (Character.Protagonist.Danger != null)
+                    Character.Protagonist.Danger += Value;
+            }
             else
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
