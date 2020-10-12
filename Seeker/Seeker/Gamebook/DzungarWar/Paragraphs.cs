@@ -621,7 +621,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 33, Text = "Если отмечено ключевое слово «Хищник»" },
+                    new Option { Destination = 33, Text = "Если отмечено ключевое слово «Хищник»", OnlyIf = "Хищник" },
                     new Option { Destination = 4, Text = "Если это слово не отмечено" },
                 }
             },
@@ -3065,6 +3065,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [220] = new Paragraph
             {
+                Trigger = "Хищник",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 284, Text = "Далее" },
@@ -3137,6 +3139,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [228] = new Paragraph
             {
+                Trigger = "Хищник",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 284, Text = "Далее" },
@@ -4504,6 +4508,8 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Trigger = "Хищник",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 221, Text = "Если обе проверки успешны" },
@@ -5015,9 +5021,9 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 99, Text = "Если отмечено ключевое слово «Хищник», то" },
                     new Option { Destination = 134, Text = "В случае успеха" },
                     new Option { Destination = 109, Text = "В случае провала" },
+                    new Option { Destination = 99, Text = "Если отмечено ключевое слово «Хищник»", OnlyIf = "Хищник" },
                 }
             },
             [376] = new Paragraph
