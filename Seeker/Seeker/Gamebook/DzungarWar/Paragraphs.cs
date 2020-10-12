@@ -5776,7 +5776,7 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [436] = new Paragraph
             {
-                Trigger = "Тропа",
+                Trigger = "Тропа, Ущелье",
 
                 Options = new List<Option>
                 {
@@ -7558,7 +7558,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 631, Text = "Если отмечено ключевое слово «Ущелье»" },
+                    new Option { Destination = 631, Text = "Если отмечено ключевое слово «Ущелье»", OnlyIf = "Ущелье" },
                     new Option { Destination = 473, Text = "Если это слово не отмечено" },
                 }
             },
@@ -8280,6 +8280,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [649] = new Paragraph
             {
+                Trigger = "Ущелье",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 502, Text = "Если Алдар ещё не был в расположении джунгарских войск на берегу Или, то можно направиться туда и добыть последние сведения о противнике" },
