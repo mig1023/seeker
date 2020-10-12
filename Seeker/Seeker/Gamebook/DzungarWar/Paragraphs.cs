@@ -6900,7 +6900,7 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
-                Trigger = "Оборона",
+                Trigger = "Оборона, Хубилган",
 
                 Options = new List<Option>
                 {
@@ -7557,7 +7557,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 590, Text = "Если отмечено ключевое слово «Хубилган»" },
+                    new Option { Destination = 590, Text = "Если отмечено ключевое слово «Хубилган»", OnlyIf = "Хубилган" },
                     new Option { Destination = 603, Text = "Если отмечено ключевое слово «Фарфор»", OnlyIf = "Фарфор" },
                     new Option { Destination = 609, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
                     new Option { Destination = 615, Text = "При наличии нескольких слов можно посмотреть соответствующие параграфы по очереди. После этого, а также в случае, если ни одно из указанных слов не отмечено" },
