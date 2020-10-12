@@ -498,7 +498,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 15, Text = "Если отмечено одно из ключевых слов: «Уйгур» или «Цветок»", OnlyIf = "Уйгур" },
+                    new Option { Destination = 15, Text = "Если отмечено одно из ключевых слов: «Уйгур» или «Цветок»", OnlyIf = "Уйгур|Цветок" },
                     new Option { Destination = 24, Text = "Если ни одно из этих слов не отмечено" },
                 }
             },
@@ -3451,6 +3451,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [256] = new Paragraph
             {
+                Trigger = "Цветок",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 475, Text = "Далее" },
@@ -4730,7 +4732,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 15, Text = "Если отмечено одно из ключевых слов: «Уйгур» или «Цветок»", OnlyIf = "Уйгур" },
+                    new Option { Destination = 15, Text = "Если отмечено одно из ключевых слов: «Уйгур» или «Цветок»", OnlyIf = "Уйгур|Цветок" },
                     new Option { Destination = 24, Text = "Если ни одно из этих слов не отмечено" },
                 }
             },
@@ -7128,7 +7130,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 556, Text = "Если отмечено ключевое слово «Цветок»" },
+                    new Option { Destination = 556, Text = "Если отмечено ключевое слово «Цветок»", OnlyIf = "Цветок" },
                     new Option { Destination = 572, Text = "Если это слово не отмечено" },
                 }
             },
