@@ -3614,12 +3614,32 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [271] = new Paragraph
             {
-                Modification = new List<Modification>
+                Actions = new List<Actions>
                 {
-                    new Modification
+                    new Actions
                     {
-                        Name = "Favour",
-                        Value = 3,
+                        ActionName = "Get",
+                        ButtonName = "Купить амулет",
+                        Text = "БУДДИСТСКИЙ АМУЛЕТ, 120 таньга",
+                        Price = 120,
+                        Aftertext = "Фарфоровая фигурка извивающегося дракона, красиво расписанная красным и синим цветами. Китаец не помнит, как она к нему попала, но уверяет, что за неё можно выручить неплохие деньги на любом базаре.",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить фигурку",
+                        Text = "ФАРФОРОВАЯ ФИГУРКА, 50 таньга",
+                        Price = 50,
+                        Trigger = "Фарфор",
+                        Aftertext = "Отвар корня женьшеня, обладающего поразительными целебными свойствами. Женьшень произрастает в горах, и его очень трудно найти. Поэтому корень ценится на вес золота. У торговца осталась лишь маленькая бутыль с отваром, которого хватит на один глоток (стоит 100 ТАНЬГА и добавит сразу 8 пунктов при проверке любой способности; в остальном он используется по тем же правилам, что и настойка Алдара Косе).",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить отвар",
+                        Text = "ОТВАР КОРНЯ ЖЕНЬШЕНЯ, 100 таньга",
+                        Price = 100,
+                        Aftertext = "Купить всё, что нужно, и внести изменения на листе персонажа (в том числе отметить ключевое слово «Фарфор», если Алдар приобретает фигурку дракона).\n\nТем временем наступает ночь. А хозяин с гостем продолжают беседу, попивая зелёный чай из маленьких фарфоровых чашек.",
                     },
                 },
 
@@ -3700,6 +3720,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [277] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Favour",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 161, Text = "Далее" },
@@ -7523,7 +7552,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 590, Text = "Если отмечено ключевое слово «Хубилган»" },
-                    new Option { Destination = 603, Text = "Если отмечено ключевое слово «Фарфор»" },
+                    new Option { Destination = 603, Text = "Если отмечено ключевое слово «Фарфор»", OnlyIf = "Фарфор" },
                     new Option { Destination = 609, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
                     new Option { Destination = 615, Text = "При наличии нескольких слов можно посмотреть соответствующие параграфы по очереди. После этого, а также в случае, если ни одно из указанных слов не отмечено" },
                 }
