@@ -71,6 +71,7 @@ namespace Seeker.Gamebook
                 Disclaimer = "Сизиков Владимир, 2016",
                 BookColor = "#4a8026",
                 Illustration = "DzungarWar.jpg",
+                ShowDisabledOption = true,
             },
 
             ["Скала ужаса"] = new Description

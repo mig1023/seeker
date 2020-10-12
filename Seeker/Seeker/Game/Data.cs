@@ -14,6 +14,7 @@ namespace Seeker.Game
 
         public static Paragraph CurrentParagraph { get; set; }
         public static int CurrentParagraphID { get; set; }
+        public static bool ShowDisabledOption { get; set; }
 
         public static Dictionary<int, string> TextOfParagraphs = new Dictionary<int, string>();
 
@@ -53,6 +54,7 @@ namespace Seeker.Game
             Constants = Gamebook.List.GetDescription(name).Constants;
             Protagonist = Gamebook.List.GetDescription(name).Protagonist;
             CheckOnlyIf = Gamebook.List.GetDescription(name).CheckOnlyIf;
+            ShowDisabledOption = Gamebook.List.GetDescription(name).ShowDisabledOption;
         }
     }
 }

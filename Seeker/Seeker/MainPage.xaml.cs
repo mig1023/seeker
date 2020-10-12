@@ -131,13 +131,16 @@ namespace Seeker
 
             foreach (Game.Option option in paragraph.Options)
             {
-                if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf))
+                if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf) && !Game.Data.ShowDisabledOption)
                     continue;
 
                 Button button = Game.Interface.OptionButton(option);
 
                 if (button == null)
                     continue;
+
+                if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf))
+                    button.IsEnabled = false;
 
                 Game.Router.AddDestination(option.Text, option.Destination, option.Do);
 

@@ -27,5 +27,7 @@ namespace Seeker.Gamebook
         public Interfaces.IConstants Constants;
 
         public string Disclaimer;
+
+        public bool ShowDisabledOption;
     }
 }
