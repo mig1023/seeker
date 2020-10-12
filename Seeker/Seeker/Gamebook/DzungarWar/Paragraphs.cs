@@ -459,7 +459,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 332, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
+                    new Option { Destination = 332, Text = "Если записано ключевое слово «Арбалет»", OnlyIf = "Арбалет" },
                     new Option { Destination = 321, Text = "Выстрелить из пистолета" },
                     new Option { Destination = 308, Text = "Достать нож и спрыгнуть с коня, прикрывая его от нападения" },
                     new Option { Destination = 295, Text = "Попробовать задобрить камышового кота" },
@@ -663,7 +663,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 74, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
+                    new Option { Destination = 74, Text = "Если записано ключевое слово «Арбалет»", OnlyIf = "Арбалет" },
                     new Option { Destination = 59, Text = "Если отмечено хотя бы одно из ключевых слов: «Пленник», «Переписка» или «Святыня» - то Алдар знает, о чём он будет докладывать хунтайши", OnlyIf = "Пленник|Переписка|Святыня" },
                     new Option { Destination = 66, Text = "Иначе придётся сделать донесение о «казахском лазутчике»" },
                     new Option { Destination = 453, Text = "И конечно, ничто не мешает отступиться от замысла и прямо сейчас покинуть ставку" },
@@ -1043,7 +1043,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 106, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
+                    new Option { Destination = 106, Text = "Если записано ключевое слово «Арбалет»", OnlyIf = "Арбалет" },
                     new Option { Destination = 114, Text = "Если это слово не отмечено" },
                 }
             },
@@ -2819,7 +2819,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 244, Text = "Алдар знает о Аягузе", OnlyIf = "Аягуз" },
+                    new Option { Destination = 244, Text = "Если отмечено ключевое слово «Аягуз»", OnlyIf = "Аягуз" },
                     new Option { Destination = 123, Text = "Если отмечено ключевое слово «Табун»", OnlyIf = "Табун" },
                     new Option { Destination = 155, Text = "Если не отмечено ни одно их этих слов" },
                 }
@@ -3220,7 +3220,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 573, Text = "Конь уже был ранен раньше", OnlyIf = "Боль" },
+                    new Option { Destination = 573, Text = "Если ключевое слово «Боль» уже отмечено", OnlyIf = "Боль" },
                     new Option { Destination = 146, Text = "Впереди брод" },
                 }
             },
@@ -4934,7 +4934,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 188, Text = "Алдар помнит разговор с торговцем на озере Сассык-Коль", OnlyIf = "Буддист" },
+                    new Option { Destination = 188, Text = "Если отмечено ключевое слово «Буддист»", OnlyIf = "Буддист" },
                     new Option { Destination = 213, Text = "Если обе проверки успешны" },
                     new Option { Destination = 334, Text = "В любом другом случае" },
                 }
@@ -5029,9 +5029,9 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 99, Text = "Если отмечено ключевое слово «Хищник»", OnlyIf = "Хищник" },
                     new Option { Destination = 134, Text = "В случае успеха" },
                     new Option { Destination = 109, Text = "В случае провала" },
-                    new Option { Destination = 99, Text = "Если отмечено ключевое слово «Хищник»", OnlyIf = "Хищник" },
                 }
             },
             [376] = new Paragraph
@@ -5928,7 +5928,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 14, Text = "Предпочесть лук" },
-                    new Option { Destination = 14, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
+                    new Option { Destination = 14, Text = "Если отмечено ключевое слово «Арбалет»", OnlyIf = "Арбалет" },
                     new Option { Destination = 32, Text = "Решиться на использование пистолета" },
                 }
             },
@@ -6011,9 +6011,9 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 560, Text = "Рассказать про угон табуна", OnlyIf = "Барымта" },
-                    new Option { Destination = 568, Text = "Отмечено ключевое слово «Святыня»", OnlyIf = "Святыня" },
-                    new Option { Destination = 576, Text = "Рассказать про взрыв", OnlyIf = "Взрыв" },
+                    new Option { Destination = 560, Text = "Если отмечено ключевое слово «Барымта»", OnlyIf = "Барымта" },
+                    new Option { Destination = 568, Text = "Если отмечено ключевое слово «Святыня»", OnlyIf = "Святыня" },
+                    new Option { Destination = 576, Text = "Если отмечено ключевое слово «Взрыв»", OnlyIf = "Взрыв" },
                     new Option { Destination = 585, Text = "Далее" },
                 }
             },
@@ -6526,7 +6526,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 383, Text = "Имя Алдана знакомо Алдару", OnlyIf ="Алдан" },
+                    new Option { Destination = 383, Text = "Если отмечено ключевое слово «Алдан»", OnlyIf ="Алдан" },
                     new Option { Destination = 358, Text = "Если Алдар Косе хочет рассказать о казахском лазутчике" },
                     new Option { Destination = 346, Text = "Если наш герой больше полагается на своё красноречие" },
                 }
@@ -6702,7 +6702,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 651, Text = "Воспользоваться арбалетом", OnlyIf = "Арбалет" },
+                    new Option { Destination = 651, Text = "Если отмечено ключевое слово «Арбалет»", OnlyIf = "Арбалет" },
                     new Option { Destination = 411, Text = "Ударить Хуяга по голове" },
                     new Option { Destination = 398, Text = "Пырнуть его ножом" },
                     new Option { Destination = 392, Text = "Выстрелить в ойрата из лука" },
@@ -7518,7 +7518,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 573, Text = "Конь уже был ранен раньше", OnlyIf = "Боль" },
+                    new Option { Destination = 573, Text = "Если ключевое слово «Боль» уже отмечено", OnlyIf = "Боль" },
                     new Option { Destination = 319, Text = "В противном случае отметить ключевое слово «Боль» на листе персонажа. Погоня продолжается" },
                 }
             },
@@ -7716,9 +7716,9 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 594, Text = "Рассказано было много полезного", OnlyIf = "Барымта, Взрыв, Святыня" },
-                    new Option { Destination = 540, Text = "Рассказано было нечто полезное", OnlyIf = "Барымта|Взрыв" },
-                    new Option { Destination = 520, Text = "Алдар Косе сообщил Штейну мало полезного" },
+                    new Option { Destination = 594, Text = "Если отмечены все три ключевых слова: «Барымта», «Взрыв» и «Святыня»", OnlyIf = "Барымта, Взрыв, Святыня" },
+                    new Option { Destination = 540, Text = "Если отмечено хотя бы одно из этих ключевых слов", OnlyIf = "Барымта|Взрыв" },
+                    new Option { Destination = 520, Text = "Если же ни одного из слов не отмечено, значит, Алдар Косе сообщил Штейну мало полезного" },
                 }
             },
             [586] = new Paragraph
@@ -7756,9 +7756,9 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 531, Text = "Если отмечено ключевое слово «Солончак»", OnlyIf = "Солончак" },
                     new Option { Destination = 558, Text = "В случае успеха" },
                     new Option { Destination = 567, Text = "В случае провала" },
-                    new Option { Destination = 531, Text = "Если отмечено ключевое слово «Солончак»", OnlyIf = "Солончак" },
                 }
             },
             [588] = new Paragraph
@@ -8147,7 +8147,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 619, Text = "Имя Алдана знакомо Алдару", OnlyIf ="Алдан" },
+                    new Option { Destination = 619, Text = "Если отмечено ключевое слово «Алдан»", OnlyIf ="Алдан" },
                     new Option { Destination = 610, Text = "Если отмечено ключевое слово «Хуяг»", OnlyIf = "Хуяг" },
                     new Option { Destination = 602, Text = "Если не отмечено ни одно из этих слов" },
                 }
@@ -8216,9 +8216,9 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
+                    new Option { Destination = 641, Text = "Имя Берика знакомо Алдару", OnlyIf = "Берик", },
                     new Option { Destination = 616, Text = "В случае успеха" },
                     new Option { Destination = 597, Text = "В случае провала" },
-                    new Option { Destination = 641, Text = "Имя Берика знакомо Алдару", OnlyIf = "Берик", },
                 }
             },
             [635] = new Paragraph
