@@ -498,7 +498,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 15, Text = "Если отмечено одно из ключевых слов: «Уйгур» или «Цветок»" },
+                    new Option { Destination = 15, Text = "Если отмечено одно из ключевых слов: «Уйгур» или «Цветок»", OnlyIf = "Уйгур" },
                     new Option { Destination = 24, Text = "Если ни одно из этих слов не отмечено" },
                 }
             },
@@ -3916,6 +3916,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [291] = new Paragraph
             {
+                Trigger = "Уйгур",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 475, Text = "Далее" },
@@ -4687,7 +4689,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 15, Text = "Если отмечено одно из ключевых слов: «Уйгур» или «Цветок»" },
+                    new Option { Destination = 15, Text = "Если отмечено одно из ключевых слов: «Уйгур» или «Цветок»", OnlyIf = "Уйгур" },
                     new Option { Destination = 24, Text = "Если ни одно из этих слов не отмечено" },
                 }
             },
@@ -6075,7 +6077,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 505, Text = "Если отмечено хотя бы одно из ключевых слов: «Казах», «Русский» или «Мугати»", OnlyIf = "Казах|Русский|Мугати" },
-                    new Option { Destination = 513, Text = "Если отмечено ключевое слово «Туркмен»" },
+                    new Option { Destination = 513, Text = "Если отмечено ключевое слово «Туркмен»", OnlyIf = "Туркмен" },
                     new Option { Destination = 521, Text = "Остаться здесь и назавтра принять участие в карательном походе" },
                     new Option { Destination = 485, Text = "Не ввязываться в это опасное мероприятие и незаметно покинуть кочевье" },
                 }
@@ -6340,6 +6342,8 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [478] = new Paragraph
             {
+                Trigger = "Туркмен",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 455, Text = "Далее" },
@@ -6534,7 +6538,7 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 523, Text = "Если отмечено ключевое слово «Тропа»" },
-                    new Option { Destination = 535, Text = "Если слово «Тропа» не отмечено, но отмечено слово «Уйгур»", OnlyIf = "!Тропа" },
+                    new Option { Destination = 535, Text = "Если слово «Тропа» не отмечено, но отмечено слово «Уйгур»", OnlyIf = "Уйгур, !Тропа" },
                     new Option { Destination = 547, Text = "В любом другом случае" },
                 }
             },
@@ -6831,7 +6835,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 482, Text = "Если отмечено ключевое слово «Уйгур», и Алдар Косе впервые посещает кульджинский базар" },
+                    new Option { Destination = 482, Text = "Если отмечено ключевое слово «Уйгур», и Алдар Косе впервые посещает кульджинский базар", OnlyIf = "Уйгур" },
                     new Option { Destination = 525, Text = "Навестить русский острог" },
                     new Option { Destination = 536, Text = "Попроситься на приём к китайскому наместнику" },
                     new Option { Destination = 545, Text = "Если Алдар закончил свои дела в Кульдже, можно отправиться дальше" },
