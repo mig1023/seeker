@@ -139,9 +139,6 @@ namespace Seeker
                 if (button == null)
                     continue;
 
-                if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf))
-                    button.IsEnabled = false;
-
                 Game.Router.AddDestination(option.Text, option.Destination, option.Do);
 
                 button.Clicked += Option_Click;

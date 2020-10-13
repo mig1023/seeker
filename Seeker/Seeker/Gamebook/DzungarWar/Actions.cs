@@ -169,6 +169,10 @@ namespace Seeker.Gamebook.DzungarWar
                     {
                         if (oneOption.Contains("ТАНЬГА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Tanga))
                             return false;
+                        else if (oneOption.Contains("ОПАСНОСТЬ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Danger))
+                            return false;
+                        else if (oneOption.Contains("ОПАСНОСТЬ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Danger))
+                            return false;
                         else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Favour))
                             return false;
                         else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Favour))

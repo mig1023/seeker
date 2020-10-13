@@ -129,15 +129,21 @@ namespace Seeker.Game
         {
             bool optionColor = !String.IsNullOrEmpty(option.OnlyIf) && !option.OnlyIf.Contains(">") && !option.OnlyIf.Contains("<");
 
+            if (Game.Data.ShowDisabledOption)
+                optionColor = !String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf);
+
             string color = Game.Data.Constants.GetButtonsColor(
                 optionColor ? Game.Buttons.ButtonTypes.Option : Game.Buttons.ButtonTypes.Main
             );
+
+            bool isEnabled = ((!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf)) ? false : true);
 
             return new Button()
             {
                 Text = option.Text,
                 TextColor = Xamarin.Forms.Color.White,
-                BackgroundColor = Color.FromHex(color)
+                BackgroundColor = Color.FromHex(color),
+                IsEnabled = isEnabled,
             };
         }
 

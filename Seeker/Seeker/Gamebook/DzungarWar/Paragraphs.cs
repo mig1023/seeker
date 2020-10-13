@@ -1434,8 +1434,8 @@ namespace Seeker.Gamebook.DzungarWar
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 151, Text = "Если уровень ОПАСНОСТИ стал равен 12 или выше" },
-                    new Option { Destination = 453, Text = "Если же уровень ОПАСНОСТИ всё ещё меньше 12" },
+                    new Option { Destination = 151, Text = "Если уровень ОПАСНОСТИ стал равен 12 или выше", OnlyIf = "ОПАСНОСТЬ > 11" },
+                    new Option { Destination = 453, Text = "Если же уровень ОПАСНОСТИ всё ещё меньше 12", OnlyIf = "ОПАСНОСТЬ <= 11" },
                 }
             },
             [107] = new Paragraph
@@ -7925,8 +7925,8 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 575, Text = "Если уровень ОПАСНОСТИ равен 9 или выше, придётся сразу же покинуть эти места" },
-                    new Option { Destination = 592, Text = "В противном случае наш герой проникает в расположение войск и осматривается, оставив коня возле харчевни" },
+                    new Option { Destination = 575, Text = "Если уровень ОПАСНОСТИ равен 9 или выше, придётся сразу же покинуть эти места", OnlyIf = "ОПАСНОСТЬ > 8" },
+                    new Option { Destination = 592, Text = "В противном случае наш герой проникает в расположение войск и осматривается, оставив коня возле харчевни", OnlyIf = "ОПАСНОСТЬ <= 8" },
                 }
             },
             [603] = new Paragraph
@@ -8319,9 +8319,9 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 652, Text = "Если ОПАСНОСТЬ равна 9 или больше" },
-                    new Option { Destination = 587, Text = "Если ОПАСНОСТЬ равна 6, 7 или 8" },
-                    new Option { Destination = 319, Text = "Если ОПАСНОСТЬ равна 5 или меньше" },
+                    new Option { Destination = 652, Text = "Если ОПАСНОСТЬ равна 9 или больше", OnlyIf = "ОПАСНОСТЬ > 8" },
+                    new Option { Destination = 587, Text = "Если ОПАСНОСТЬ равна 6, 7 или 8", OnlyIf = "ОПАСНОСТЬ > 5, ОПАСНОСТЬ <= 8" },
+                    new Option { Destination = 319, Text = "Если ОПАСНОСТЬ равна 5 или меньше", OnlyIf = "ОПАСНОСТЬ <= 5" },
                 }
             },
             [646] = new Paragraph
