@@ -6256,8 +6256,8 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 575, Text = "Покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
-                    new Option { Destination = 557, Text = "Иначе у Алдара Косе есть выбор: продолжить сбор сведений о джунгарских войсках в расположении" },
-                    new Option { Destination = 575, Text = "Либо отправиться дальше" },
+                    new Option { Destination = 557, Text = "Иначе у Алдара Косе есть выбор: продолжить сбор сведений о джунгарских войсках в расположении", OnlyIf = "!Хуяг, !Ойрат, ОПАСНОСТЬ <= 9" },
+                    new Option { Destination = 575, Text = "Либо отправиться дальше", OnlyIf = "!Хуяг, !Ойрат, ОПАСНОСТЬ <= 9" },
                 }
             },
             [469] = new Paragraph
@@ -6450,8 +6450,8 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 575, Text = "То наш герой вынужден покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
-                    new Option { Destination = 557, Text = "Иначе у Алдара Косе есть выбор: продолжить сбор сведений о джунгарских войсках в расположении" },
-                    new Option { Destination = 575, Text = "Либо отправиться дальше" },
+                    new Option { Destination = 557, Text = "Иначе у Алдара Косе есть выбор: продолжить сбор сведений о джунгарских войсках в расположении", OnlyIf = "!Хуяг, !Ойрат, ОПАСНОСТЬ <= 9" },
+                    new Option { Destination = 575, Text = "Либо отправиться дальше", OnlyIf = "!Хуяг, !Ойрат, ОПАСНОСТЬ <= 9" },
                 }
             },
             [485] = new Paragraph
@@ -6724,8 +6724,8 @@ namespace Seeker.Gamebook.DzungarWar
                 Options = new List<Option>
                 {
                     new Option { Destination = 575, Text = "Покинуть расположение джунгарских войск, опасаясь мстительного ойрата" },
-                    new Option { Destination = 557, Text = "Иначе у Алдара Косе есть выбор: продолжить сбор сведений о джунгарских войсках в расположении" },
-                    new Option { Destination = 575, Text = "Либо отправиться дальше" },
+                    new Option { Destination = 557, Text = "Иначе у Алдара Косе есть выбор: продолжить сбор сведений о джунгарских войсках в расположении", OnlyIf = "!Хуяг, !Ойрат, ОПАСНОСТЬ <= 9" },
+                    new Option { Destination = 575, Text = "Либо отправиться дальше", OnlyIf = "!Хуяг, !Ойрат, ОПАСНОСТЬ <= 9" },
                 }
             },
             [507] = new Paragraph
