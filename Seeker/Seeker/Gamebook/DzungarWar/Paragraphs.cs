@@ -6878,6 +6878,14 @@ namespace Seeker.Gamebook.DzungarWar
                     },
                 },
 
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "SaleOfPredatorSkins",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 482, Text = "Если отмечено ключевое слово «Уйгур», и Алдар Косе впервые посещает кульджинский базар", OnlyIf = "Уйгур" },
