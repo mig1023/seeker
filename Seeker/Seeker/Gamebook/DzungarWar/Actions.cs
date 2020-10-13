@@ -62,9 +62,7 @@ namespace Seeker.Gamebook.DzungarWar
 
                 if (Game.Data.Triggers.Contains(penalty[0].Trim()))
                 {
-                    int.TryParse(penalty[1].Trim(), out int penaltyValue);
-                    level += penaltyValue;
-
+                    level += int.Parse(penalty[1].Trim());
                     penaltyLine.Add(String.Format("Пенальти {0} к уровню проверки за ключевое слово {1}", penalty[1].Trim(), penalty[0].Trim()));
                 }
             }
@@ -158,6 +156,19 @@ namespace Seeker.Gamebook.DzungarWar
                         return true;
 
                 return false;
+            }
+            else if (option.Contains(";"))
+            {
+                string[] options = option.Split(';');
+
+                int optionMustBe = int.Parse(options[0]);
+                int optionCount = 0;
+
+                foreach (string oneOption in options)
+                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
+                        optionCount += 1;
+
+                return (optionCount >= optionMustBe ? true : false);
             }
             else
             {

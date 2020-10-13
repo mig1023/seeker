@@ -7376,7 +7376,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 657, Text = "Если отмечено четыре или более указанных слова" },
+                    new Option { Destination = 657, Text = "Если отмечено четыре или более указанных слова", OnlyIf = "4; Барымта; Взрыв; Гелугпа; Дракон; Переписка; Подлог; Пушкарь" },
                     new Option { Destination = 543, Text = "Если же отмечено менее четырёх слов" },
                 }
             },
@@ -7907,7 +7907,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 554, Text = "Если отмечено три или более указанных слова" },
+                    new Option { Destination = 554, Text = "Если отмечено три или более указанных слова", OnlyIf = "3; Перевал; Рыба; Мост; Тропа" },
                     new Option { Destination = 569, Text = "Если же отмечено менее трёх слов" },
                 }
             },
@@ -7983,7 +7983,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 600, Text = "Если отмечено четыре или более из указанных слов" },
+                    new Option { Destination = 600, Text = "Если отмечено четыре или более из указанных слов", OnlyIf = "4; Воин; Долина; Крепость; Лучник; Оборона; Река; Тумен" },
                     new Option { Destination = 579, Text = "Если же отмечено меньше четырёх слов" },
                 }
             },
