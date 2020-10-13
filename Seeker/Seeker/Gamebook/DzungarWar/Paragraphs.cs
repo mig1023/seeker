@@ -2166,6 +2166,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [150] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Danger",
+                        Empty = true,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 622, Text = "Если отмечено ключевое слово «Дружба»", OnlyIf = "Дружба" },
