@@ -86,6 +86,19 @@ namespace Seeker.Gamebook
                 BookColor = "#000000",
                 Illustration = "RockOfTerror.jpg",
             },
+
+            ["Болотная лихорадка"] = new Description
+            {
+                XmlBook = "SwampFever.xml",
+                Protagonist = SwampFever.Character.Protagonist.Init,
+                CheckOnlyIf = SwampFever.Actions.CheckOnlyIf,
+                Paragraphs = new SwampFever.Paragraphs(),
+                Actions = new SwampFever.Actions(),
+                Constants = new SwampFever.Constants(),
+                Disclaimer = "Прокошев Пётр, 2017",
+                BookColor = "#698339",
+                Illustration = "SwampFever.jpg",
+            },
         };
 
         public static List<string> GetBooks()

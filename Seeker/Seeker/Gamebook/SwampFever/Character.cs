@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Seeker.Gamebook.SwampFever
+{
+    class Character : Interfaces.ICharacter
+    {
+        public static Character Protagonist = new Gamebook.SwampFever.Character();
+
+        public string Name { get; set; }
+
+        public int Time { get; set; }
+
+        public int Injury { get; set; }
+
+        public int? MonksHeart { get; set; }
+
+        public void Init()
+        {
+            Time = 0;
+            Injury = 0;
+            MonksHeart = null;
+        }
+
+        public Character Clone()
+        {
+            return new Character() {
+                Time = this.Time,
+                Injury = this.Injury,
+                MonksHeart = this.MonksHeart,
+            };
+        }
+    }
+}
