@@ -96,7 +96,7 @@ namespace Seeker.Gamebook
                 Actions = new SwampFever.Actions(),
                 Constants = new SwampFever.Constants(),
                 Disclaimer = "Прокошев Пётр, 2017",
-                BookColor = "#698339",
+                BookColor = "#34411c",
                 Illustration = "SwampFever.jpg",
             },
         };

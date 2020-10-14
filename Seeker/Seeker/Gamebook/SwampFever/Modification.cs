@@ -14,24 +14,11 @@ namespace Seeker.Gamebook.SwampFever
 
         public void Do()
         {
-            if (Name == "MonksHeart")
-            {
-                if (Init && (Character.Protagonist.MonksHeart == null))
-                    Character.Protagonist.MonksHeart = 0;
+            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-                else if (!Init && (Character.Protagonist.MonksHeart != null))
-                    Character.Protagonist.MonksHeart += Value;
-            }
-            else
-            {
-                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+            currentValue += Value;
 
-                int injuryModificator = ((Name == "Time") && (Character.Protagonist.Injury > 0) ? 2 : 1);
-
-                currentValue += Value * injuryModificator;
-
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
-            }
+            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
         }
     }
 }

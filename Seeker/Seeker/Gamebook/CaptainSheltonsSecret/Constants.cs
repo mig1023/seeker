@@ -11,16 +11,16 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
     {
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#4682B4",
-            [ButtonTypes.Action] = "#6495ED",
+            [ButtonTypes.Main] = "#4682b4",
+            [ButtonTypes.Action] = "#6495ed",
             [ButtonTypes.Option] = "#696969",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.Background] = String.Empty,
+            [ColorTypes.Background] = "#b5cde1",
             [ColorTypes.Font] = String.Empty,
-            [ColorTypes.ActionBox] = String.Empty,
+            [ColorTypes.ActionBox] = "#8fb3f2",
             [ColorTypes.StatusBar] = "#0a5c96",
         };
 

@@ -10,25 +10,15 @@ namespace Seeker.Gamebook.SwampFever
 
         public string Name { get; set; }
 
-        public int Time { get; set; }
-
-        public int Injury { get; set; }
-
-        public int? MonksHeart { get; set; }
-
         public void Init()
         {
-            Time = 0;
-            Injury = 0;
-            MonksHeart = null;
+
         }
 
         public Character Clone()
         {
             return new Character() {
-                Time = this.Time,
-                Injury = this.Injury,
-                MonksHeart = this.MonksHeart,
+                Name = this.Name,
             };
         }
     }

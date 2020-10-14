@@ -11,17 +11,17 @@ namespace Seeker.Gamebook.SwampFever
     {
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#191919",
-            [ButtonTypes.Action] = "#2a2a2a",
+            [ButtonTypes.Main] = "#5c6649",
+            [ButtonTypes.Action] = "#242d13",
             [ButtonTypes.Option] = "#494949",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.Background] = "#000000",
-            [ColorTypes.Font] = "#FFFFFF",
-            [ColorTypes.ActionBox] = String.Empty,
-            [ColorTypes.StatusBar] = "#151515",
+            [ColorTypes.Background] = "#34411c",
+            [ColorTypes.Font] = "#eaece8",
+            [ColorTypes.ActionBox] = "#707a60",
+            [ColorTypes.StatusBar] = "#485432",
         };
 
         public string GetButtonsColor(ButtonTypes type)

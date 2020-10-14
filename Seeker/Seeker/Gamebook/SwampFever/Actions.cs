@@ -27,12 +27,7 @@ namespace Seeker.Gamebook.SwampFever
 
         public List<string> Status()
         {
-            TimeSpan time = TimeSpan.FromMinutes(Character.Protagonist.Time);
-
-            List<string> statusLines = new List<string> { String.Format("Прошедшее время: {0:d2}:{1:d2}", time.Hours, time.Minutes) };
-
-            if (Character.Protagonist.MonksHeart != null)
-                statusLines.Add(String.Format("Сила сердца монаха: {0}", Character.Protagonist.MonksHeart));
+            List<string> statusLines = new List<string> { String.Empty };
 
             return statusLines;
         }
@@ -40,9 +35,9 @@ namespace Seeker.Gamebook.SwampFever
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
-            toEndText = "Время вышло...";
+            toEndText = "Начать с начала...";
 
-            return (Character.Protagonist.Time >= 720 ? true : false);
+            return false;
         }
 
         public bool IsButtonEnabled()
@@ -52,19 +47,7 @@ namespace Seeker.Gamebook.SwampFever
 
         public static bool CheckOnlyIf(string option)
         {
-            if (option.Contains(">") || option.Contains("<"))
-            {
-                if (option.Contains("СИЛА СЕРДЦА МОНАХА >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.MonksHeart))
-                    return false;
-                else if (option.Contains("ВРЕМЯ >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.Time))
-                    return false;
-                else if (option.Contains("ВРЕМЯ <") && (int.Parse(option.Split('<')[1]) < Character.Protagonist.Time))
-                    return false;
-                else
-                    return true;
-            }
-            else
-                return Game.Data.Triggers.Contains(option.Trim());
+            return Game.Data.Triggers.Contains(option.Trim());
         }
     }
 }
