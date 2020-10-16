@@ -12,7 +12,7 @@ namespace Seeker.Gamebook.SwampFever
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#5c6649",
-            [ButtonTypes.Action] = "#242d13",
+            [ButtonTypes.Action] = "#485432",
             [ButtonTypes.Option] = "#494949",
         };
 
@@ -23,6 +23,16 @@ namespace Seeker.Gamebook.SwampFever
             [ColorTypes.ActionBox] = "#707a60",
             [ColorTypes.StatusBar] = "#485432",
         };
+
+        public static Dictionary<int, string> GetRangeTypes()
+        {
+            return new Dictionary<int, string>
+            {
+                [6] = "ДАЛЬНЯЯ ДИСТАНЦИЯ",
+                [5] = "СРЕДНЯЯ ДИСТАНЦИЯ",
+                [4] = "БЛИЖНЯЯ ДИСТАНЦИЯ",
+            };
+        }
 
         public string GetButtonsColor(ButtonTypes type)
         {

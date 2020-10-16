@@ -64,25 +64,28 @@ namespace Seeker.Gamebook.SwampFever
         {
             List<string> fight = new List<string>();
 
+            Dictionary<int, string> rangeType = Constants.GetRangeTypes();
+
             List<int> myCombination = new List<int>();
 
             for (int i = 0; i < 6; i++)
                 myCombination.Add(Game.Dice.Roll());
 
-            fight.Add(String.Format("Ваша комбинация: {0}",String.Join("-", myCombination.ToArray())));
+            fight.Add(String.Format("Ваша комбинация: {0} ⚄", String.Join(" ⚄ - ", myCombination.ToArray())));
 
             List<int> enemyCombination = new List<int>();
 
             foreach (string dice in EnemyCombination.Split('-'))
                 enemyCombination.Add(int.Parse(dice));
 
-            fight.Add(String.Format("Его комбинация: {0}", String.Join("-", enemyCombination.ToArray())));
+            fight.Add(String.Format("Его комбинация: {0}", String.Join(" - ", enemyCombination.ToArray())));
 
             while (true)
             {
                 if (myCombination.Contains(1))
                 {
-                    fight.Add("HEAD|МАНЕВРИРОВАНИЕ");
+                    fight.Add(String.Empty);
+                    fight.Add("BOLD|МАНЕВРИРОВАНИЕ");
 
                     int maneuvers = CountInCombination(myCombination, 1);
 
@@ -90,50 +93,63 @@ namespace Seeker.Gamebook.SwampFever
                         for (int i = 0; i < enemyCombination.Count; i++)
                             if ((enemyCombination[i] == dice) && (maneuvers > 0))
                             {
-                                fight.Add(String.Format("Убираем у противника {0}ку", dice));
+                                fight.Add(String.Format("Убираем у противника {0}-ку за ваше маневрирование", dice));
                                 enemyCombination[i] = 0;
                                 maneuvers -= 1;
                             }
                 }
 
-                Dictionary<int, string> rangeType = new Dictionary<int, string>
-                {
-                    [6] = "ДАЛЬНЯЯ ДИСТАНЦИЯ",
-                    [5] = "СРЕДНЯЯ ДИСТАНЦИЯ",
-                    [4] = "БЛИЖНЯЯ ДИСТАНЦИЯ",
-                };
-
                 foreach (int range in new int[] { 6, 5, 4 })
                 {
-                    fight.Add(String.Format("HEAD|{0}", rangeType[range]));
+                    fight.Add(String.Empty);
+                    fight.Add(String.Format("BOLD|{0}", rangeType[range]));
 
                     int roundResult = 0;
 
-                    if (myCombination.Contains(6) && !enemyCombination.Contains(6))
+                    if (!myCombination.Contains(range) && !enemyCombination.Contains(range))
+                    {
+                        fight.Add("Противникам нечего друг другу противопоставить");
+                    }
+                    else if(myCombination.Contains(range) && !enemyCombination.Contains(range))
                     {
                         roundResult = 1;
-                        fight.Add(range == 4 ? "GOOD|Вы идёте на противника тараном" : "GOOD|Вы накрыли противника огнём");
+
+                        if (range == 4)
+                        {
+                            fight.Add("BIG|GOOD|Вы уничтожили противника тараном, оружием героев :)");
+                            return fight;
+                        }
+                        else
+                            fight.Add("GOOD|Вы накрыли противника огнём");
                     }
-                    else if (!myCombination.Contains(6) && enemyCombination.Contains(6))
+                    else if (!myCombination.Contains(range) && enemyCombination.Contains(range))
                     {
                         roundResult = -1;
-                        fight.Add(range == 4 ? "BAD|Противник идёт на вас тараном" : "BAD|Противник накрыл вас огнём");
+
+                        if (range == 4)
+                        {
+                            fight.Add("BIG|BAD|Противник уничтожил вас тараном :(");
+                            Character.Protagonist.Hitpoints = 0;
+                            return fight;
+                        }
+                        else
+                            fight.Add("BAD|Противник накрыл вас огнём");
                     }
                     else
                     {
-                        fight.Add(range == 4 ? "Манёвры:" : "Перестрелка:");
+                        fight.Add(range == 4 ? "Взаимные манёвры:" : "Перестрелка:");
 
                         while (roundResult == 0)
                         {
                             int myDice = Game.Dice.Roll();
                             int myBonus = CountInCombination(myCombination, range);
                             int myAttack = myDice + myBonus;
-                            fight.Add(String.Format("Ваша атака: {0} + {1} за {2}ки, итого {3}", myDice, myBonus, range, myAttack));
+                            fight.Add(String.Format("Ваша атака: {0} ⚄ + {1} за {2}-ки, итого {3}", myDice, myBonus, range, myAttack));
 
                             int enemyDice = Game.Dice.Roll();
                             int enemyBonus = CountInCombination(enemyCombination, range);
                             int enemyAttack = enemyDice + enemyBonus;
-                            fight.Add(String.Format("Атака противника: {0} + {1} за {2}ки, итого {3}", enemyDice, enemyBonus, range, enemyAttack));
+                            fight.Add(String.Format("Атака противника: {0} ⚄ + {1} за {2}-ки, итого {3}", enemyDice, enemyBonus, range, enemyAttack));
 
                             if ((myAttack > enemyAttack) && (range == 4))
                             {
@@ -143,6 +159,7 @@ namespace Seeker.Gamebook.SwampFever
                             else if ((myAttack < enemyAttack) && (range == 4))
                             {
                                 fight.Add("BIG|BAD|Противник уничтожил вас тараном :(");
+                                Character.Protagonist.Hitpoints = 0;
                                 return fight;
                             }
                             else if (myAttack > enemyAttack)
@@ -156,9 +173,7 @@ namespace Seeker.Gamebook.SwampFever
                                 fight.Add("BAD|Противник подавил вас огнём");
                             }
                             else
-                            {
                                 fight.Add("Перестрелка продолжается:");
-                            }
                         }
                     }
                                         
@@ -169,7 +184,7 @@ namespace Seeker.Gamebook.SwampFever
                         int myPenalty = CountInCombination(enemyCombination, 2);
                         int enemyEvasion = myDice + myBonus - myPenalty;
                         fight.Add(String.Format(
-                            "Противник пытется уклониться от попадания: {0} +{1} за ваши 3ки -{2} за его 2ки, итого {3} {4} 2",
+                            "Противник пытется уклониться: {0} ⚄ +{1} за ваши 3-ки -{2} за его 2-ки, итого {3} {4} 2",
                             myDice, myBonus, myPenalty, enemyEvasion, (enemyEvasion > 2 ? ">" : "<=")
                         ));
 
@@ -184,17 +199,18 @@ namespace Seeker.Gamebook.SwampFever
                     else if (roundResult == -1)
                     {
                         int enemyDice = Game.Dice.Roll();
-                        int enemyBonus = CountInCombination(myCombination, 3);
-                        int enemyPenalty = CountInCombination(enemyCombination, 2);
+                        int enemyBonus = CountInCombination(enemyCombination, 3);
+                        int enemyPenalty = CountInCombination(myCombination, 2);
                         int myEvasion = enemyDice + enemyBonus - enemyPenalty;
                         fight.Add(String.Format(
-                            "Вы пытется уклониться от попадания: {0} +{1} за ваши 3ки -{2} за его 2ки, итого {3} {4} 2",
+                            "Вы пытется уклониться: {0} ⚄ +{1} за его 3ки -{2} за ваши 2-ки, итого {3} {4} 2",
                             enemyDice, enemyBonus, enemyPenalty, myEvasion, (myEvasion > 2 ? ">" : "<=")
                         ));
 
                         if (myEvasion > 2)
                         {
                             fight.Add("BIG|BAD|Противник уничтожил вас :(");
+                            Character.Protagonist.Hitpoints = 0;
                             return fight;
                         }
                         else
@@ -202,7 +218,7 @@ namespace Seeker.Gamebook.SwampFever
                     }
                 }
 
-                fight.Add("HEAD|Бой окончился ничьёй");
+                fight.Add("BOLD|Бой окончился ничьёй");
 
                 return fight;
             }
