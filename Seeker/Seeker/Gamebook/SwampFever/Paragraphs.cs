@@ -41,6 +41,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [1] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "ТЕРМИТ",
+                        EnemyCombination = "5-4",
+
+                        Aftertext = "Ментор советует применить тактику 'Снайпера' или 'Диверсанта' (так комбинации '6-3-3' и '4-1-1' принесут стопроцентную победу). Если в схватке с термитом вы одержите верх, то в качестве бонуса компания подарит вам 5 кредов. Иначе придётся начинать странствие без денег.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 4, Text = "Далее" },
@@ -166,6 +180,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [17] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "БЛУДЕНЬ",
+                        EnemyCombination = "6-6-5-5-4-4",
+
+                        Aftertext = "Ничья невозможна, т. к. безумный враг будет постоянно преследовать вас. Деритесь не на жизнь, а на смерть.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 138, Text = "Далее" },
@@ -323,6 +351,18 @@ namespace Seeker.Gamebook.SwampFever
             },
             [37] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "ЗАГРЕБАЛО",
+                        EnemyCombination = "5-4-4-4-4-4-2",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 15, Text = "Если вы избежите участи быть съеденным и одолеете врага" },
@@ -582,10 +622,22 @@ namespace Seeker.Gamebook.SwampFever
             },
             [68] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "МИМИКРОИД",
+                        EnemyCombination = "6-5-4-3-2",
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 130, Text = "При победе перейдите" },
-                    new Option { Destination = 52, Text = "При ничейном исходе у вас появится выбор: продолжить бой или ретироваться" },
+                    new Option { Destination = 130, Text = "При победе" },
+                    new Option { Destination = 52, Text = "При ничейном исходе у вас появится возможность ретироваться" },
                 }
             },
             [69] = new Paragraph
@@ -655,6 +707,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [77] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "ИЗОТРОНОХОД",
+                        EnemyCombination = "6-6-5-5-2",
+
+                        Aftertext = "Ничья с последующим отступлением невозможны, т. к. гидронейская техника превосходит вашу по скорости.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 146, Text = "Далее" },
@@ -669,6 +735,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [79] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "ТОПИГЛОТ",
+                        EnemyCombination = "4-4-4-2-2-2",
+
+                        Aftertext = "В случае поражения вы станете обедом для озёрного монстра.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 108, Text = "Если победа за вами" },
@@ -740,6 +820,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [88] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "СВАРИТЕЛЬ",
+                        EnemyCombination = "5-5-5-4-3-2",
+
+                        Aftertext = "При поражении вы превратитесь в бульон, а ваша машина в дырявую кастрюлю.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 24, Text = "Если вы победите" },
@@ -755,6 +849,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [90] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "БРОНЕТАНК",
+                        EnemyCombination = "6-4-3-3",
+
+                        Aftertext = "Ничья невозможна, т. к. вы раскрыли тайну двуличного шерифа, и он будет драться до последнего. При победе запишите метку N20, вы уничтожаете врага и благополучно достигаете Порта Грёз. При поражении Патс назовёт вас мёртвым грабителем.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 30, Text = "Далее" },
@@ -873,6 +981,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [105] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "ОГНЕПОКЛОННИК",
+                        EnemyCombination = "5-5-2",
+
+                        Aftertext = "Если вы не будете зажарены заживо и победите, то сможете забрать 1 кубометр стигона. Если стычка завершится ничьёй, у вас будет выбор: сбежать или продолжить схватку.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 23, Text = "Далее" },
@@ -889,6 +1011,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [107] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "УТИЛИЗАТОР",
+                        EnemyCombination = "6-5-5-5-4-3",
+
+                        Aftertext = "Если вы не будете зажарены заживо и победите, то сможете забрать 1 кубометр стигона. Если стычка завершится ничьёй, у вас будет выбор: сбежать или продолжить схватку.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 89, Text = "Если бой завершится ничьёй, то вы можете прекратить огонь и подождать дальнейших действий робота" },
@@ -905,6 +1041,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [109] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "МЕРЗЛОБА",
+                        EnemyCombination = "5-5-4-3",
+
+                        Aftertext = "Если победа за вами, то можете забрать 2 кубометра стигона. Если бой завершился ничьёй, то у вас есть выбор: продолжить стычку или ретироваться.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 147, Text = "Далее" },
@@ -1043,10 +1193,23 @@ namespace Seeker.Gamebook.SwampFever
             },
             [126] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "МУТАВОРМ",
+                        EnemyCombination = "5-5-5-5-3-3",
+
+                        Aftertext = "Если вы одержите верх, то получите в награду 100 кредов. После победы запишите метку N14. При ничьей возникнет выбор: продолжить схватку или отступить. При поражении вас уничтожат Резак-Лучи, кроме того, тварь мутирует, и метка N12 станет активной.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 86, Text = "После победы запишите метку № 14" },
-                    new Option { Destination = 100, Text = "При ничьей возникнет выбор: продолжить схватку или отступить" },
                     new Option { Destination = 100, Text = "При ничьей возникнет выбор: продолжить схватку или отступить" },
                 }
             },
@@ -1132,6 +1295,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [137] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "ГРОМЫХАЛО",
+                        EnemyCombination = "6-6-6-6-5-5-5",
+
+                        Aftertext = "При ничейном исходе боя монстр отступит. При поражении ваш мозг взорвётся, не выдержав деструктивного звука.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 47, Text = "Если вы одолеете крикливую тварь" },
@@ -1261,6 +1438,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [154] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "МУТАВОРМ",
+                        EnemyCombination = "6-6-6-6-3-3",
+
+                        Aftertext = "Если вы одолеете врага, то получите в награду 150 кредов. После победы запишите метку N14. При ничьей возникнет выбор: продолжить схватку или ретироваться. При поражении вас взорвут.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 86, Text = "Далее" },
@@ -1285,6 +1476,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [157] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "ОГНЕХВОСТ",
+                        EnemyCombination = "5-5-3-2-2",
+
+                        Aftertext = "При ничейном исходе у вас будет выбор: ретироваться или продолжить схватку. При поражении животное забросает машину огненными шарами.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 175, Text = "Если победа за вами" },
@@ -1414,6 +1619,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [173] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "ГРОЗДЕГЛАВ",
+                        EnemyCombination = "4-4-4-4-1-1",
+
+                        Aftertext = "При победе запишите метку N26. При ничьей произойдёт продолжение боя. Поражение означает гибель в чавкающей пасти.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 183, Text = "Далее" },
@@ -1454,6 +1673,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [178] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "ТЕХНОКРОТ",
+                        EnemyCombination = "5-5-5-2-2-2-2",
+
+                        Aftertext = "Если одержите верх, то в качестве награды получите кубометр стигона. При ничьей можете отступить или продолжить схватку. При поражении ваше безжизненное тело станет объектом инопланетного изучения.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 194, Text = "Далее" },
@@ -1503,6 +1736,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [184] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        EnemyName = "МЕРТВОКРЫЛЫ",
+                        EnemyCombination = "4-4-4-4-4-4",
+
+                        Aftertext = "В отличие от остальных врагов попадание на дистанции не означает победу. Вы убиваете лишь одну птицу. У второй останется комбинация «444». Но если вы точно поразите их и плазмопушкой, и огнемётом, то до ближнего боя дело не дойдёт. Против обеих птиц вблизи деритесь по очереди. При победе или ничейном исходе запишите метку N27. При поражении капсула водителя будет вскрыта, а вы заклёваны до смерти.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },

@@ -37,7 +37,12 @@ namespace Seeker.Gamebook.SwampFever
 
         public List<string> Status()
         {
-            List<string> statusLines = new List<string> { String.Empty };
+            List<string> statusLines = new List<string>
+            {
+                String.Format("Шкала ярости: {0}", Character.Protagonist.Fury),
+                String.Format("Креды: {0}", Character.Protagonist.Creds),
+                String.Format("Котировка: 1:{0}", Character.Protagonist.Rate),
+            };
 
             return statusLines;
         }
