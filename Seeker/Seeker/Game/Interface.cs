@@ -147,18 +147,19 @@ namespace Seeker.Game
             };
         }
 
-        public static Label Aftertext(string text)
+        public static Label Text(string text)
         {
-            Label aftertext = new Label()
+            Label label = new Label
             {
-                Text = text,
                 Margin = 5,
-                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                Text = text,
             };
 
-            aftertext.Text = text.Replace("\n", System.Environment.NewLine);
+            if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
+                label.TextColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
 
-            return aftertext;
+            return label;
         }
 
         public static StackLayout ActionPlace()

@@ -20,28 +20,13 @@ namespace Seeker
             Gamebooks();
         }
 
-        private void TextLabel(string text)
-        {
-            Label label = new Label
-            {
-                Margin = 5,
-                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                Text = text,
-            };
-
-            if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
-                label.TextColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
-
-            Text.Children.Add(label);
-        }
-
         public void Gamebooks()
         {
             Text.Children.Clear();
             Game.Router.Clean();
             Options.Children.Clear();
 
-            TextLabel("Выберите книгу:");
+            Text.Children.Add(Game.Interface.Text("Выберите книгу:"));
 
             Game.Data.Actions = null;
 
@@ -93,7 +78,7 @@ namespace Seeker
             Game.Data.CurrentParagraph = paragraph;
             Game.Data.CurrentParagraphID = id;
 
-            TextLabel(Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty);
+            Text.Children.Add(Game.Interface.Text(Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty));
 
             Game.Option.Trigger(paragraph.Trigger);
             Game.Option.Trigger(paragraph.RemoveTrigger, remove: true);
@@ -125,7 +110,7 @@ namespace Seeker
                     index += 1;
 
                     if (!String.IsNullOrEmpty(action.Aftertext))
-                        Action.Children.Add(Game.Interface.Aftertext(action.Aftertext));
+                        Action.Children.Add(Game.Interface.Text(action.Aftertext));
                 }
             }
 
