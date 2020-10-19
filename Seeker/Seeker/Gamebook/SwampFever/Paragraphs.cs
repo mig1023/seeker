@@ -551,10 +551,10 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 106, Text = "Куда двинетесь дальше? На север - Кристаллесье" },
-                    new Option { Destination = 128, Text = "на запад - Гнилотопь" },
-                    new Option { Destination = 42, Text = "на юг - Порт Грёз" },
-                    new Option { Destination = 91, Text = "на восток - Тернистая Лощина" },
+                    new Option { Destination = 106, Text = "На север - Кристаллесье" },
+                    new Option { Destination = 128, Text = "На запад - Гнилотопь" },
+                    new Option { Destination = 42, Text = "На юг - Порт Грёз" },
+                    new Option { Destination = 91, Text = "На восток - Тернистая Лощина" },
                 }
             },
             [60] = new Paragraph
@@ -600,10 +600,10 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 115, Text = "Куда вы отсюда отправитесь? На север - Органная Пещера" },
-                    new Option { Destination = 150, Text = "на запад - Грибная Чаща" },
-                    new Option { Destination = 6, Text = "на юг - Старый Тракт" },
-                    new Option { Destination = 125, Text = "на восток - Медная Заводь" },
+                    new Option { Destination = 115, Text = "На север - Органная Пещера" },
+                    new Option { Destination = 150, Text = "На запад - Грибная Чаща" },
+                    new Option { Destination = 6, Text = "На юг - Старый Тракт" },
+                    new Option { Destination = 125, Text = "На восток - Медная Заводь" },
                 }
             },
             [66] = new Paragraph
@@ -637,17 +637,17 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 130, Text = "При победе" },
-                    new Option { Destination = 52, Text = "При ничейном исходе у вас появится возможность ретироваться" },
+                    new Option { Destination = 52, Text = "Ретироваться" },
                 }
             },
             [69] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 6, Text = "Куда направитесь дальше? На север - Старый Тракт" },
-                    new Option { Destination = 123, Text = "на запад - Спектральные Кущи" },
-                    new Option { Destination = 145, Text = "на юг -Гремучая Долина" },
-                    new Option { Destination = 39, Text = "на восток - Свалка" },
+                    new Option { Destination = 6, Text = "На север - Старый Тракт" },
+                    new Option { Destination = 123, Text = "На запад - Спектральные Кущи" },
+                    new Option { Destination = 145, Text = "На юг -Гремучая Долина" },
+                    new Option { Destination = 39, Text = "На восток - Свалка" },
                 }
             },
             [70] = new Paragraph
@@ -675,20 +675,20 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 119, Text = "Куда теперь двинетесь? На север - Рыжая Мшара" },
-                    new Option { Destination = 31, Text = "на запад - Чаруса Чудес" },
-                    new Option { Destination = 172, Text = "на юг - Пчелиные Марши" },
-                    new Option { Destination = 46, Text = "северо-восток -Запределье" },
+                    new Option { Destination = 119, Text = "На север - Рыжая Мшара" },
+                    new Option { Destination = 31, Text = "На запад - Чаруса Чудес" },
+                    new Option { Destination = 172, Text = "На юг - Пчелиные Марши" },
+                    new Option { Destination = 46, Text = "На северо-восток - Запределье" },
                 }
             },
             [74] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 143, Text = "Куда направитесь дальше? На север - Биполярный Кочкарник" },
-                    new Option { Destination = 60, Text = "на северо-запад - Мегапровал" },
-                    new Option { Destination = 145, Text = "на юго-восток - Гремучая Долина" },
-                    new Option { Destination = 44, Text = "на восток - Сернистая Падь" },
+                    new Option { Destination = 143, Text = "На север - Биполярный Кочкарник" },
+                    new Option { Destination = 60, Text = "На северо-запад - Мегапровал" },
+                    new Option { Destination = 145, Text = "На юго-восток - Гремучая Долина" },
+                    new Option { Destination = 44, Text = "На восток - Сернистая Падь" },
                 }
             },
             [75] = new Paragraph
@@ -717,7 +717,7 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyName = "ИЗОТРОНОХОД",
                         EnemyCombination = "6-6-5-5-2",
 
-                        Aftertext = "Ничья с последующим отступлением невозможны, т. к. гидронейская техника превосходит вашу по скорости.",
+                        Aftertext = "Ничья с последующим отступлением невозможны, т.к. гидронейская техника превосходит вашу по скорости.",
                     },
                 },
 
@@ -752,7 +752,7 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 108, Text = "Если победа за вами" },
-                    new Option { Destination = 14, Text = "При ничьей вы можете ретироваться" },
+                    new Option { Destination = 14, Text = "Ретироваться" },
                 }
             },
             [80] = new Paragraph
@@ -766,10 +766,10 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 63, Text = "Куда держите путь? На север - Клейкое Озеро" },
-                    new Option { Destination = 119, Text = "на запад - Рыжая Мшара" },
-                    new Option { Destination = 64, Text = "на юго-запад - Тихий Омут" },
-                    new Option { Destination = 131, Text = "на северо-восток - Край Ветров" },
+                    new Option { Destination = 63, Text = "На север - Клейкое Озеро" },
+                    new Option { Destination = 119, Text = "На запад - Рыжая Мшара" },
+                    new Option { Destination = 64, Text = "На юго-запад - Тихий Омут" },
+                    new Option { Destination = 131, Text = "На северо-восток - Край Ветров" },
                 }
             },
             [82] = new Paragraph
@@ -784,7 +784,7 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 67, Text = "Вы можете покинуть поселение" },
-                    new Option { Destination = 122, Text = "или присоединиться к протестующим" },
+                    new Option { Destination = 122, Text = "Присоединиться к протестующим" },
                 }
             },
             [84] = new Paragraph
@@ -805,9 +805,9 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 150, Text = "Куда дальше направитесь? На северо-восток - Грибная Чаща" },
-                    new Option { Destination = 143, Text = "на восток - Биполярный Кочкарник" },
-                    new Option { Destination = 123, Text = "на юго-восток - Спектральные Кущи" },
+                    new Option { Destination = 150, Text = "На северо-восток - Грибная Чаща" },
+                    new Option { Destination = 143, Text = "На восток - Биполярный Кочкарник" },
+                    new Option { Destination = 123, Text = "На юго-восток - Спектральные Кущи" },
                 }
             },
             [87] = new Paragraph
@@ -837,7 +837,7 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 24, Text = "Если вы победите" },
-                    new Option { Destination = 74, Text = "При ничьей можете ретироваться" },
+                    new Option { Destination = 74, Text = "Ретироваться" },
                 }
             },
             [89] = new Paragraph
@@ -859,7 +859,7 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyName = "БРОНЕТАНК",
                         EnemyCombination = "6-4-3-3",
 
-                        Aftertext = "Ничья невозможна, т. к. вы раскрыли тайну двуличного шерифа, и он будет драться до последнего. При победе запишите метку N20, вы уничтожаете врага и благополучно достигаете Порта Грёз. При поражении Патс назовёт вас мёртвым грабителем.",
+                        Aftertext = "Ничья невозможна, т.к. вы раскрыли тайну двуличного шерифа, и он будет драться до последнего. При победе запишите метку N20, вы уничтожаете врага и благополучно достигаете Порта Грёз. При поражении Патс назовёт вас мёртвым грабителем.",
                     },
                 },
 
@@ -887,18 +887,18 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 42, Text = "Куда держите путь? На север - Порт Грёз" },
-                    new Option { Destination = 44, Text = "на запад -Сернистая Падь" },
-                    new Option { Destination = 31, Text = "на юг - Чаруса Чудес" },
-                    new Option { Destination = 119, Text = "на восток - Рыжая Мшара" },
+                    new Option { Destination = 42, Text = "На север - Порт Грёз" },
+                    new Option { Destination = 44, Text = "На запад -Сернистая Падь" },
+                    new Option { Destination = 31, Text = "На юг - Чаруса Чудес" },
+                    new Option { Destination = 119, Text = "На восток - Рыжая Мшара" },
                 }
             },
             [94] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 22, Text = "Попробуете вытащить собственность компании" },
-                    new Option { Destination = 65, Text = "или проедете мимо" },
+                    new Option { Destination = 22, Text = "Вытащить собственность компании" },
+                    new Option { Destination = 65, Text = "Проедете мимо" },
                 }
             },
             [95] = new Paragraph
@@ -913,9 +913,9 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 128, Text = "На север - Гнилотопь" },
-                    new Option { Destination = 143, Text = "на запад - Биполярный Кочкарник" },
-                    new Option { Destination = 44, Text = "на юг - Сернистая Падь" },
-                    new Option { Destination = 42, Text = "на восток - Порт Грёз" },
+                    new Option { Destination = 143, Text = "На запад - Биполярный Кочкарник" },
+                    new Option { Destination = 44, Text = "На юг - Сернистая Падь" },
+                    new Option { Destination = 42, Text = "На восток - Порт Грёз" },
                 }
             },
             [97] = new Paragraph
@@ -950,8 +950,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 43, Text = "Если проверка успешно пройдена, то вам удалось уйти в сторону" },
-                    new Option { Destination = 82, Text = "Корпус харвестера сгорает, а вы, находясь в капсуле водителя, теряете сознание" },
+                    new Option { Destination = 43, Text = "Проверка успешно пройдена, то вам удалось уйти в сторону" },
+                    new Option { Destination = 82, Text = "Иначе корпус харвестера сгорает, а вы, находясь в капсуле водителя, теряете сознание" },
                 }
             },
             [102] = new Paragraph
@@ -965,18 +965,18 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 150, Text = "Где дальше будете месить грязь? На севере - Грибная Чаща" },
-                    new Option { Destination = 60, Text = "на западе - Мегапровал" },
-                    new Option { Destination = 123, Text = "на юге - Спектральные Кущи" },
-                    new Option { Destination = 6, Text = "на востоке - Старый Тракт" },
+                    new Option { Destination = 150, Text = "На севере - Грибная Чаща" },
+                    new Option { Destination = 60, Text = "На западе - Мегапровал" },
+                    new Option { Destination = 123, Text = "На юге - Спектральные Кущи" },
+                    new Option { Destination = 6, Text = "На востоке - Старый Тракт" },
                 }
             },
             [104] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 62, Text = "Вы можете подъехать к тени ближе" },
-                    new Option { Destination = 41, Text = "или ретироваться" },
+                    new Option { Destination = 62, Text = "Подъехать к тени ближе" },
+                    new Option { Destination = 41, Text = "Ретироваться" },
                 }
             },
             [105] = new Paragraph
@@ -1004,7 +1004,7 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 49, Text = "Выберите один из возможных путей для движения: А" },
+                    new Option { Destination = 49, Text = "А" },
                     new Option { Destination = 33, Text = "В" },
                     new Option { Destination = 66, Text = "С" },
                 }
@@ -1027,8 +1027,8 @@ namespace Seeker.Gamebook.SwampFever
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 89, Text = "Если бой завершится ничьёй, то вы можете прекратить огонь и подождать дальнейших действий робота" },
-                    new Option { Destination = 58, Text = "Если победите вы" },
+                    new Option { Destination = 89, Text = "Прекратить огонь и подождать дальнейших действий робота" },
+                    new Option { Destination = 58, Text = "Вы победили" },
                     new Option { Destination = 19, Text = "В противном случае" },
                 }
             },
@@ -1064,8 +1064,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 77, Text = "Рука тянется уничтожить паразита, но из какого оружия? Огнемёт" },
-                    new Option { Destination = 120, Text = "или Плазмопушка" },
+                    new Option { Destination = 77, Text = "Огнемёт" },
+                    new Option { Destination = 120, Text = "Плазмопушка" },
                 }
             },
             [111] = new Paragraph
@@ -1097,10 +1097,10 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 44, Text = "Куда повернёте? На север - Сернистая Падь" },
-                    new Option { Destination = 123, Text = "на северо-запад - Спектральные Кущи" },
-                    new Option { Destination = 167, Text = "на юг - Дикий Зыбун" },
-                    new Option { Destination = 31, Text = "на восток - Чаруса Чудес" },
+                    new Option { Destination = 44, Text = "На север - Сернистая Падь" },
+                    new Option { Destination = 123, Text = "На северо-запад - Спектральные Кущи" },
+                    new Option { Destination = 167, Text = "На юг - Дикий Зыбун" },
+                    new Option { Destination = 31, Text = "На восток - Чаруса Чудес" },
                 }
             },
             [115] = new Paragraph
@@ -1116,7 +1116,7 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 92, Text = "Проверка пройдена" },
-                    new Option { Destination = 78, Text = "Или провалена" },
+                    new Option { Destination = 78, Text = "Проверка провалена" },
                 }
             },
             [117] = new Paragraph
@@ -1124,7 +1124,7 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 26, Text = "Последуете за ними" },
-                    new Option { Destination = 48, Text = "или поедете дальше по тропе" },
+                    new Option { Destination = 48, Text = "Поедете дальше по тропе" },
                 }
             },
             [118] = new Paragraph
@@ -1132,9 +1132,9 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 87, Text = "На север - Чертоги Холода" },
-                    new Option { Destination = 125, Text = "на запад - Медная Заводь" },
-                    new Option { Destination = 56, Text = "на юг -Павший Колосс" },
-                    new Option { Destination = 51, Text = "на восток - Тимение Искупления" },
+                    new Option { Destination = 125, Text = "На запад - Медная Заводь" },
+                    new Option { Destination = 56, Text = "На юг -Павший Колосс" },
+                    new Option { Destination = 51, Text = "На восток - Тимение Искупления" },
                 }
             },
             [119] = new Paragraph
@@ -1179,8 +1179,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 152, Text = "Проверка завершилась успехом" },
-                    new Option { Destination = 71, Text = "или провалом" },
+                    new Option { Destination = 152, Text = "Успехом" },
+                    new Option { Destination = 71, Text = "Провалом" },
                 }
             },
             [125] = new Paragraph
@@ -1210,7 +1210,7 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 86, Text = "После победы запишите метку № 14" },
-                    new Option { Destination = 100, Text = "При ничьей возникнет выбор: продолжить схватку или отступить" },
+                    new Option { Destination = 100, Text = "Отступить" },
                 }
             },
             [127] = new Paragraph
@@ -1218,7 +1218,7 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 80, Text = "Вы можете наблюдать за памятником из-за кустов" },
-                    new Option { Destination = 36, Text = "или подъехать к статуе вплотную, чтобы исследовать ухо" },
+                    new Option { Destination = 36, Text = "Подъехать к статуе вплотную, чтобы исследовать ухо" },
                 }
             },
             [128] = new Paragraph
@@ -1233,8 +1233,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 107, Text = "Начнёте отстреливаться" },
-                    new Option { Destination = 89, Text = "или будете ждать своей участи" },
+                    new Option { Destination = 107, Text = "Отстреливаться" },
+                    new Option { Destination = 89, Text = "Ждать своей участи" },
                 }
             },
             [130] = new Paragraph
@@ -1279,10 +1279,10 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 63, Text = "Где продолжите свои странствия? На севере - Клейкое Озеро" },
-                    new Option { Destination = 119, Text = "на западе - Рыжая Мшара" },
-                    new Option { Destination = 64, Text = "на юго-западе -Тихий Омут" },
-                    new Option { Destination = 131, Text = "на северо-востоке - Край Ветров" },
+                    new Option { Destination = 63, Text = "На севере - Клейкое Озеро" },
+                    new Option { Destination = 119, Text = "На западе - Рыжая Мшара" },
+                    new Option { Destination = 64, Text = "На юго-западе -Тихий Омут" },
+                    new Option { Destination = 131, Text = "На северо-востоке - Край Ветров" },
                 }
             },
             [136] = new Paragraph
@@ -1310,7 +1310,7 @@ namespace Seeker.Gamebook.SwampFever
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 47, Text = "Если вы одолеете крикливую тварь" },
+                    new Option { Destination = 47, Text = "Вы одолели крикливую тварь" },
                     new Option { Destination = 73, Text = "При ничейном исходе боя монстр отступит" },
                 }
             },
@@ -1332,8 +1332,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 72, Text = "Возможно, что изобразив средство контроля над рабами, вы напугаете и заставите дикаря повиноваться" },
-                    new Option { Destination = 99, Text = "Яти любят, когда что-то сияет" },
+                    new Option { Destination = 72, Text = "Круг с отрезками внутри" },
+                    new Option { Destination = 99, Text = "Круг с лучами наружу" },
                 }
             },
             [141] = new Paragraph
@@ -1362,8 +1362,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 69, Text = "Проверка завершилась успехом" },
-                    new Option { Destination = 13, Text = "или провалом" },
+                    new Option { Destination = 69, Text = "Успехом" },
+                    new Option { Destination = 13, Text = "Провалом" },
                 }
             },
             [145] = new Paragraph
@@ -1385,18 +1385,18 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 160, Text = "Куда двинетесь теперь? На север - Разноцветье" },
-                    new Option { Destination = 106, Text = "запад - Кристаллесье" },
-                    new Option { Destination = 91, Text = "на юг - Тернистая Лощина" },
-                    new Option { Destination = 51, Text = "на юго-восток - Тимение Искупления" },
+                    new Option { Destination = 160, Text = "На север - Разноцветье" },
+                    new Option { Destination = 106, Text = "На запад - Кристаллесье" },
+                    new Option { Destination = 91, Text = "На юг - Тернистая Лощина" },
+                    new Option { Destination = 51, Text = "На юго-восток - Тимение Искупления" },
                 }
             },
             [148] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 79, Text = "Вы притормозите" },
-                    new Option { Destination = 153, Text = "или ускоритесь" },
+                    new Option { Destination = 79, Text = "Притормозите" },
+                    new Option { Destination = 153, Text = "Ускоритесь" },
                 }
             },
             [149] = new Paragraph
@@ -1467,8 +1467,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 181, Text = "Рискнёте покинуть харвестер, чтобы тщательнее искать несчастного" },
-                    new Option { Destination = 31, Text = "Или продолжите путь как ни в чём не бывало? При втором варианте решайте, куда именно направитесь? На север - Чаруса Чудес" },
+                    new Option { Destination = 181, Text = "Рискнёте покинуть харвестер" },
+                    new Option { Destination = 31, Text = "На север - Чаруса Чудес" },
                     new Option { Destination = 167, Text = "На запад - Дикий Зыбун" },
                     new Option { Destination = 172, Text = "На восток - Пчелиные Марши" },
                 }
@@ -1484,8 +1484,6 @@ namespace Seeker.Gamebook.SwampFever
 
                         EnemyName = "ОГНЕХВОСТ",
                         EnemyCombination = "5-5-3-2-2",
-
-                        Aftertext = "При ничейном исходе у вас будет выбор: ретироваться или продолжить схватку. При поражении животное забросает машину огненными шарами.",
                     },
                 },
 
