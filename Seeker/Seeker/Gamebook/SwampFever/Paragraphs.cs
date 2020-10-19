@@ -142,6 +142,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [12] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Fury",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 54, Text = "Далее" },
@@ -273,6 +282,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [27] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Fury",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 54, Text = "Далее" },
@@ -322,6 +340,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [33] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Fury",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 151, Text = "Проверка успешно пройдена" },
@@ -337,6 +364,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [35] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Fury",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 53, Text = "Далее" },
@@ -518,6 +554,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [55] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Fury",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 30, Text = "Далее" },
@@ -608,6 +653,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [66] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Fury",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 71, Text = "Далее" },
@@ -789,6 +843,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [84] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Fury",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 23, Text = "Далее" },
@@ -1162,6 +1225,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [122] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Fury",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 30, Text = "Далее" },
@@ -1783,6 +1855,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [189] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Fury",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 170, Text = "Далее" },

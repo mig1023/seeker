@@ -73,7 +73,9 @@ namespace Seeker.Gamebook.SwampFever
 
             List<int> myCombination = new List<int>();
 
-            for (int i = 0; i < 6; i++)
+            int combinationLength = 6 + Character.Protagonist.Fury;
+
+            for (int i = 0; i < combinationLength; i++)
                 myCombination.Add(Game.Dice.Roll());
 
             fight.Add(String.Format("Ваша комбинация: {0} ⚄", String.Join(" ⚄ - ", myCombination.ToArray())));
