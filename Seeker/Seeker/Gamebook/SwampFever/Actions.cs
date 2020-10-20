@@ -16,6 +16,8 @@ namespace Seeker.Gamebook.SwampFever
         public string EnemyName { get; set; }
         public string EnemyCombination { get; set; }
 
+        public int Level { get; set; }
+
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -32,7 +34,10 @@ namespace Seeker.Gamebook.SwampFever
 
         public List<string> Representer()
         {
-            return new List<string> { EnemyName };
+            if (Level > 0)
+                return new List<string> { String.Format("Ментальная проверка, уровень {0}", Level) };
+            else
+                return new List<string> { EnemyName };
         }
 
         public List<string> Status()
@@ -63,6 +68,24 @@ namespace Seeker.Gamebook.SwampFever
         public static bool CheckOnlyIf(string option)
         {
             return Game.Data.Triggers.Contains(option.Trim());
+        }
+
+        public List<string> MentalTest()
+        {
+            int mentalDice = Game.Dice.Roll();
+            int fury = Character.Protagonist.Fury;
+            int mentalAndFury = mentalDice + fury;
+
+            List<string> mentalCheck = new List<string> {
+                String.Format("Ментальная проверка (по уровню {0}):", Level),
+                String.Format("1. На игральной кости выпало: {0} ⚄", mentalDice),
+                String.Format("2. {0}{1} уровень Ярости", (fury < 0 ? "-" : "+"), Math.Abs(fury)),
+                String.Format("3. Итого получаем {0}, что {1}меньше {2} уровня проверки", mentalAndFury, (Level > mentalAndFury ? String.Empty : "не "), Level)
+            };
+
+            mentalCheck.Add(Level > mentalAndFury ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            return mentalCheck;
         }
 
         public List<string> Fight()

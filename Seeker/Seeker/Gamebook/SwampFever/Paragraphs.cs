@@ -58,6 +58,7 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 4, Text = "Далее" },
+                    new Option { Destination = 33, Text = "ТЕСТ" },
                 }
             },
             [2] = new Paragraph
@@ -340,6 +341,16 @@ namespace Seeker.Gamebook.SwampFever
             },
             [33] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "MentalTest",
+                        ButtonName = "Ментальная проверка",
+                        Level = 4,
+                    },
+                },
+
                 Modification = new List<Modification>
                 {
                     new Modification
@@ -653,6 +664,16 @@ namespace Seeker.Gamebook.SwampFever
             },
             [66] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "MentalTest",
+                        ButtonName = "Ментальная проверка",
+                        Level = 4,
+                    },
+                },
+
                 Modification = new List<Modification>
                 {
                     new Modification
@@ -754,6 +775,16 @@ namespace Seeker.Gamebook.SwampFever
             },
             [76] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "MentalTest",
+                        ButtonName = "Ментальная проверка",
+                        Level = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 103, Text = "Далее" },
@@ -1011,6 +1042,16 @@ namespace Seeker.Gamebook.SwampFever
             },
             [101] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "MentalTest",
+                        ButtonName = "Ментальная проверка",
+                        Level = 5,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 43, Text = "Проверка успешно пройдена, то вам удалось уйти в сторону" },
@@ -1142,10 +1183,10 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 91, Text = "Куда направитесь дальше? На север - Тернистая Лощина" },
-                    new Option { Destination = 42, Text = "на запад - Порт Грёз" },
-                    new Option { Destination = 119, Text = "на юг - Рыжая Мшара" },
-                    new Option { Destination = 63, Text = "на восток - Клейкое Озеро" },
+                    new Option { Destination = 91, Text = "На север - Тернистая Лощина" },
+                    new Option { Destination = 42, Text = "На запад - Порт Грёз" },
+                    new Option { Destination = 119, Text = "На юг - Рыжая Мшара" },
+                    new Option { Destination = 63, Text = "На восток - Клейкое Озеро" },
                 }
             },
             [113] = new Paragraph
@@ -1176,6 +1217,16 @@ namespace Seeker.Gamebook.SwampFever
             },
             [116] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "MentalTest",
+                        ButtonName = "Ментальная проверка",
+                        Level = 4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 92, Text = "Проверка пройдена" },
@@ -1249,6 +1300,16 @@ namespace Seeker.Gamebook.SwampFever
             },
             [124] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "MentalTest",
+                        ButtonName = "Ментальная проверка",
+                        Level = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 152, Text = "Успехом" },
@@ -1432,6 +1493,16 @@ namespace Seeker.Gamebook.SwampFever
             },
             [144] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "MentalTest",
+                        ButtonName = "Ментальная проверка",
+                        Level = 5,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 69, Text = "Успехом" },
@@ -1780,6 +1851,16 @@ namespace Seeker.Gamebook.SwampFever
             },
             [181] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "MentalTest",
+                        ButtonName = "Ментальная проверка",
+                        Level = 5,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 191, Text = "Успех" },
