@@ -36,7 +36,7 @@ namespace Seeker.Gamebook.RendezVous
         {
             List<string> statusLines = new List<string>
             {
-                String.Format(String.Empty),
+                String.Format("Осознание: {0}", Character.Protagonist.Awareness),
             };
 
             return statusLines;

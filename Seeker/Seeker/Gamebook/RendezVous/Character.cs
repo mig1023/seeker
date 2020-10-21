@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.RendezVous
         public static Character Protagonist = new Gamebook.RendezVous.Character();
 
         public string Name { get; set; }
-
+        public int Awareness { get; set; }
 
         public void Init()
         {
