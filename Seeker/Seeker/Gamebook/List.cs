@@ -87,6 +87,19 @@ namespace Seeker.Gamebook
                 Illustration = "RockOfTerror.jpg",
             },
 
+            ["Рандеву"] = new Description
+            {
+                XmlBook = "RendezVous.xml",
+                Protagonist = RendezVous.Character.Protagonist.Init,
+                CheckOnlyIf = RendezVous.Actions.CheckOnlyIf,
+                Paragraphs = new RendezVous.Paragraphs(),
+                Actions = new RendezVous.Actions(),
+                Constants = new RendezVous.Constants(),
+                Disclaimer = "Ал Торо, 2020",
+                BookColor = "#282828",
+                Illustration = "RendezVous.jpg",
+            },
+
             ["Болотная лихорадка"] = new Description
             {
                 XmlBook = "SwampFever.xml",
