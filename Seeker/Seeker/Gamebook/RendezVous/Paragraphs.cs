@@ -304,11 +304,13 @@ namespace Seeker.Gamebook.RendezVous
             },
             [31] = new Paragraph
             {
+                LateTrigger = "Alone",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 43, Text = "Затем я обвиняю её во лжи" },
-                    new Option { Destination = 37, Text = "В противном случае, если у вас записан ключ 'один'" },
-                    new Option { Destination = 39, Text = "Если нет, запишите ключ 'один'" },
+                    new Option { Destination = 37, Text = "Вы знаете о том, что были один", OnlyIf = "Alone" },
+                    new Option { Destination = 39, Text = "Задам ей другой вопрос" },
                 }
             },
             [32] = new Paragraph
@@ -338,19 +340,21 @@ namespace Seeker.Gamebook.RendezVous
             },
             [35] = new Paragraph
             {
+                LateTrigger = "Alone",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 43, Text = "Я обвиняю её во лжи" },
-                    new Option { Destination = 37, Text = "В противном случае, если у вас записан ключ 'один'" },
-                    new Option { Destination = 39, Text = "Если нет, запишите ключ 'один'" },
+                    new Option { Destination = 37, Text = "Вы знаете о том, что были один", OnlyIf = "Alone" },
+                    new Option { Destination = 39, Text = "Задам ей другой вопрос" },
                 }
             },
             [36] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 46, Text = "Да" },
-                    new Option { Destination = 56, Text = "Нет" },
+                    new Option { Destination = 46, Text = "Далее", OnlyIf = "Mandela" },
+                    new Option { Destination = 56, Text = "Далее", OnlyIf = "Mandela" },
                 }
             },
             [37] = new Paragraph
@@ -481,10 +485,12 @@ namespace Seeker.Gamebook.RendezVous
             },
             [50] = new Paragraph
             {
+                LateTrigger = "Alone",
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 37, Text = "Если у вас записан ключ 'один'" },
-                    new Option { Destination = 39, Text = "Если нет, запишите ключ 'один'" },
+                    new Option { Destination = 37, Text = "Далее", OnlyIf = "Alone" },
+                    new Option { Destination = 39, Text = "Далее", OnlyIf = "Alone" },
                 }
             },
             [51] = new Paragraph
@@ -518,10 +524,12 @@ namespace Seeker.Gamebook.RendezVous
             },
             [55] = new Paragraph
             {
+                LateTrigger = "Alone",
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 37, Text = "Если у вас записан ключ 'один'" },
-                    new Option { Destination = 39, Text = "Если нет, запишите ключ 'один'" },
+                    new Option { Destination = 37, Text = "Далее", OnlyIf = "Alone" },
+                    new Option { Destination = 39, Text = "Далее", OnlyIf = "Alone" },
                 }
             },
             [56] = new Paragraph
@@ -556,6 +564,8 @@ namespace Seeker.Gamebook.RendezVous
                         Value = 2,
                     },
                 },
+
+                Trigger = "Mandela",
 
                 Options = new List<Option>
                 {
