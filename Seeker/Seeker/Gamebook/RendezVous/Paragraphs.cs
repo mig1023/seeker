@@ -475,8 +475,8 @@ namespace Seeker.Gamebook.RendezVous
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 61, Text = "Если вы набрали хотя бы 4 очка Осознания" },
-                    new Option { Destination = 40, Text = "Если нет" },
+                    new Option { Destination = 61, Text = "Вы набрали 4 очка Осознания и более", OnlyIf = "ОСОЗНАНИЕ > 3" },
+                    new Option { Destination = 40, Text = "Вы набрали меньше 4 очка Осознания", OnlyIf = "ОСОЗНАНИЕ <= 3" },
                 }
             },
             [47] = new Paragraph
@@ -535,8 +535,11 @@ namespace Seeker.Gamebook.RendezVous
             },
             [54] = new Paragraph
             {
+                Trigger = "Paragraph",
+
                 Options = new List<Option>
                 {
+                    new Option { Destination = 48, Text = "Перейти на 42 Параграф", OnlyIf = "Paragraph" },
                     new Option { Destination = 40, Text = "Далее" },
                 }
             },
@@ -554,8 +557,8 @@ namespace Seeker.Gamebook.RendezVous
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 61, Text = "Если вы набрали хотя бы 4 очка Осознания" },
-                    new Option { Destination = 40, Text = "Если нет" },
+                    new Option { Destination = 61, Text = "Вы набрали 4 очка Осознания и более", OnlyIf = "ОСОЗНАНИЕ > 3" },
+                    new Option { Destination = 40, Text = "Вы набрали меньше 4 очка Осознания", OnlyIf = "ОСОЗНАНИЕ <= 3" },
                 }
             },
             [57] = new Paragraph

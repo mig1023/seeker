@@ -14,12 +14,14 @@ namespace Seeker.Gamebook.RendezVous
         public void Init()
         {
             Name = String.Empty;
+            Awareness = 0;
         }
 
         public Character Clone()
         {
             return new Character() {
                 Name = this.Name,
+                Awareness = this.Awareness,
             };
         }
     }

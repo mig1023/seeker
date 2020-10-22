@@ -73,8 +73,13 @@ namespace Seeker.Gamebook.RendezVous
 
                 foreach (string oneOption in options)
                 {
-                    if (oneOption.Contains("ОСОЗНАНИЕ >") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Awareness))
-                        return false;
+                    if (oneOption.Contains(">") || oneOption.Contains("<"))
+                    {
+                        if (oneOption.Contains("ОСОЗНАНИЕ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Awareness))
+                            return false;
+                        else if (oneOption.Contains("ОСОЗНАНИЕ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Awareness))
+                            return false;
+                    }
                     else if (oneOption.Contains("!"))
                     {
                         if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
