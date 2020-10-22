@@ -57,10 +57,12 @@ namespace Seeker.Gamebook.RendezVous
             },
             [3] = new Paragraph
             {
+                LateTrigger = "SecondQuestion",
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 10, Text = "Если это ваш первый вопрос" },
-                    new Option { Destination = 8, Text = "В противном случае" },
+                    new Option { Destination = 10, Text = "Далее", OnlyIf = "!SecondQuestion" },
+                    new Option { Destination = 8, Text = "Далее", OnlyIf = "SecondQuestion" },
                 }
             },
             [4] = new Paragraph
@@ -194,10 +196,12 @@ namespace Seeker.Gamebook.RendezVous
             },
             [19] = new Paragraph
             {
+                LateTrigger = "SecondQuestion",
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 10, Text = "Если это ваш первый вопрос" },
-                    new Option { Destination = 8, Text = "В противном случае" },
+                    new Option { Destination = 10, Text = "Далее", OnlyIf = "!SecondQuestion" },
+                    new Option { Destination = 8, Text = "Далее", OnlyIf = "SecondQuestion" },
                 }
             },
             [20] = new Paragraph
@@ -230,10 +234,12 @@ namespace Seeker.Gamebook.RendezVous
             },
             [24] = new Paragraph
             {
+                LateTrigger = "SecondQuestion",
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 10, Text = "Если это ваш первый вопрос" },
-                    new Option { Destination = 8, Text = "В противном случае" },
+                    new Option { Destination = 10, Text = "Далее", OnlyIf = "!SecondQuestion" },
+                    new Option { Destination = 8, Text = "Далее", OnlyIf = "SecondQuestion" },
                 }
             },
             [25] = new Paragraph
@@ -265,10 +271,12 @@ namespace Seeker.Gamebook.RendezVous
                     },
                 },
 
+                LateTrigger = "SecondQuestion",
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 10, Text = "Если это ваш первый вопрос" },
-                    new Option { Destination = 8, Text = "В противном случае" },
+                    new Option { Destination = 10, Text = "Далее", OnlyIf = "!SecondQuestion" },
+                    new Option { Destination = 8, Text = "Далее", OnlyIf = "SecondQuestion" },
                 }
             },
             [28] = new Paragraph
@@ -296,10 +304,12 @@ namespace Seeker.Gamebook.RendezVous
             },
             [30] = new Paragraph
             {
+                LateTrigger = "SecondQuestion",
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 10, Text = "Если это ваш первый вопрос" },
-                    new Option { Destination = 8, Text = "В противном случае" },
+                    new Option { Destination = 10, Text = "Далее", OnlyIf = "!SecondQuestion" },
+                    new Option { Destination = 8, Text = "Далее", OnlyIf = "SecondQuestion" },
                 }
             },
             [31] = new Paragraph
@@ -331,11 +341,13 @@ namespace Seeker.Gamebook.RendezVous
             },
             [34] = new Paragraph
             {
+                LateTrigger = "SecondQuestion",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 27, Text = "Вы читали записку Милы Отарес", OnlyIf = "Musk" },
-                    new Option { Destination = 10, Text = "Если это ваш первый вопрос" },
-                    new Option { Destination = 8, Text = "Если второй" },
+                    new Option { Destination = 10, Text = "Далее", OnlyIf = "!SecondQuestion" },
+                    new Option { Destination = 8, Text = "Далее", OnlyIf = "SecondQuestion" },
                 }
             },
             [35] = new Paragraph
