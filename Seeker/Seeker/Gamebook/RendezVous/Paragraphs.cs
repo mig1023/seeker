@@ -140,8 +140,11 @@ namespace Seeker.Gamebook.RendezVous
             },
             [13] = new Paragraph
             {
+                Trigger = "Scene",
+
                 Options = new List<Option>
                 {
+                    new Option { Destination = 29, Text = "Постельная сцена", OnlyIf = "Scene" },
                     new Option { Destination = 20, Text = "Далее" },
                 }
             },
