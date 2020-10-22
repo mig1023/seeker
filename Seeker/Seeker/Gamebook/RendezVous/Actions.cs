@@ -57,7 +57,32 @@ namespace Seeker.Gamebook.RendezVous
 
         public static bool CheckOnlyIf(string option)
         {
-            return Game.Data.Triggers.Contains(option.Trim());
+            if (option.Contains("|"))
+            {
+                string[] options = option.Split('|');
+
+                foreach (string oneOption in options)
+                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return true;
+
+                return false;
+            }
+            else
+            {
+                string[] options = option.Split(',');
+
+                foreach (string oneOption in options)
+                {
+                    if (oneOption.Contains("ОСОЗНАНИЕ >") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Awareness))
+                        return false;
+                    else if (oneOption.Contains("!") && Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        return false;
+                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return false;
+                }
+
+                return true;
+            }
         }
     }
 }

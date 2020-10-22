@@ -59,7 +59,7 @@ namespace Seeker.Gamebook.RendezVous
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 10, Text = "Если это ваш первый вопрос, вернитесь на" },
+                    new Option { Destination = 10, Text = "Если это ваш первый вопрос" },
                     new Option { Destination = 8, Text = "В противном случае" },
                 }
             },
@@ -80,6 +80,8 @@ namespace Seeker.Gamebook.RendezVous
             },
             [6] = new Paragraph
             {
+                Trigger = "Medic",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 4, Text = "Далее" },
@@ -89,8 +91,8 @@ namespace Seeker.Gamebook.RendezVous
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 18, Text = "Да" },
-                    new Option { Destination = 5, Text = "Нет" },
+                    new Option { Destination = 18, Text = "Далее", OnlyIf = "Medic" },
+                    new Option { Destination = 5, Text = "Далее", OnlyIf = "!Medic" },
                 }
             },
             [8] = new Paragraph
@@ -174,6 +176,15 @@ namespace Seeker.Gamebook.RendezVous
             },
             [18] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Awareness",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 16, Text = "Далее" },
@@ -183,7 +194,7 @@ namespace Seeker.Gamebook.RendezVous
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 10, Text = "Если это ваш первый вопрос, вернитесь на" },
+                    new Option { Destination = 10, Text = "Если это ваш первый вопрос" },
                     new Option { Destination = 8, Text = "В противном случае" },
                 }
             },
@@ -219,7 +230,7 @@ namespace Seeker.Gamebook.RendezVous
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 10, Text = "Если это ваш первый вопрос, вернитесь на" },
+                    new Option { Destination = 10, Text = "Если это ваш первый вопрос" },
                     new Option { Destination = 8, Text = "В противном случае" },
                 }
             },
@@ -243,6 +254,15 @@ namespace Seeker.Gamebook.RendezVous
             },
             [27] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Awareness",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 10, Text = "Если это ваш первый вопрос" },
@@ -251,6 +271,15 @@ namespace Seeker.Gamebook.RendezVous
             },
             [28] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Awareness",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 38, Text = "Далее" },
@@ -276,7 +305,7 @@ namespace Seeker.Gamebook.RendezVous
                 Options = new List<Option>
                 {
                     new Option { Destination = 43, Text = "Затем я обвиняю её во лжи" },
-                    new Option { Destination = 37, Text = "В противном случае, если у вас записан ключ 'один', перейдите на" },
+                    new Option { Destination = 37, Text = "В противном случае, если у вас записан ключ 'один'" },
                     new Option { Destination = 39, Text = "Если нет, запишите ключ 'один'" },
                 }
             },
@@ -284,8 +313,8 @@ namespace Seeker.Gamebook.RendezVous
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 21, Text = "Да" },
-                    new Option { Destination = 41, Text = "Нет" },
+                    new Option { Destination = 21, Text = "Далее", OnlyIf = "Medic|Musk"  },
+                    new Option { Destination = 41, Text = "Далее", OnlyIf = "!Medic, !Musk"  },
                 }
             },
             [33] = new Paragraph
@@ -358,6 +387,15 @@ namespace Seeker.Gamebook.RendezVous
             },
             [41] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Awareness",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 16, Text = "Далее" },
@@ -379,6 +417,15 @@ namespace Seeker.Gamebook.RendezVous
             },
             [44] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Awareness",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 53, Text = "Далее" },
@@ -386,6 +433,15 @@ namespace Seeker.Gamebook.RendezVous
             },
             [45] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Awareness",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 43, Text = "Далее" },
@@ -448,7 +504,7 @@ namespace Seeker.Gamebook.RendezVous
                 Options = new List<Option>
                 {
                     new Option { Destination = 48, Text = "Если выпало чётное число" },
-                    new Option { Destination = 58, Text = "Если нечётное, перейдите на" },
+                    new Option { Destination = 58, Text = "Если нечётное" },
                 }
             },
             [54] = new Paragraph
@@ -490,6 +546,15 @@ namespace Seeker.Gamebook.RendezVous
             },
             [59] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Awareness",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 53, Text = "Далее" },
@@ -497,6 +562,15 @@ namespace Seeker.Gamebook.RendezVous
             },
             [60] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Awareness",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 39, Text = "Далее" },
@@ -593,6 +667,15 @@ namespace Seeker.Gamebook.RendezVous
             },
             [73] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Awareness",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 49, Text = "Далее" },
