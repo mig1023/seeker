@@ -154,6 +154,8 @@ namespace Seeker.Gamebook.RendezVous
             },
             [15] = new Paragraph
             {
+                Trigger = "Musk",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 4, Text = "Далее" },
@@ -329,8 +331,8 @@ namespace Seeker.Gamebook.RendezVous
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 27, Text = "Если у вас есть ключ 'Маск'" },
-                    new Option { Destination = 10, Text = "В противном случае, если это ваш первый вопрос" },
+                    new Option { Destination = 27, Text = "Вы читали записку Милы Отарес", OnlyIf = "Musk" },
+                    new Option { Destination = 10, Text = "Если это ваш первый вопрос" },
                     new Option { Destination = 8, Text = "Если второй" },
                 }
             },
