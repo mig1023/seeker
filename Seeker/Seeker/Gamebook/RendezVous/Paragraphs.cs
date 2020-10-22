@@ -26,6 +26,7 @@ namespace Seeker.Gamebook.RendezVous
                 paragraph.Modification = new List<Interfaces.IModification>(source.Modification);
 
             paragraph.Trigger = source.Trigger;
+            paragraph.LateTrigger = source.LateTrigger;
 
             return paragraph;
         }
