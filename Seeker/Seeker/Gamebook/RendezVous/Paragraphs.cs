@@ -168,8 +168,8 @@ namespace Seeker.Gamebook.RendezVous
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 33, Text = "Да" },
-                    new Option { Destination = 38, Text = "Нет" },
+                    new Option { Destination = 33, Text = "Далее", OnlyIf = "Rabbit" },
+                    new Option { Destination = 38, Text = "Далее", OnlyIf = "!Rabbit" },
                 }
             },
             [17] = new Paragraph
@@ -207,6 +207,8 @@ namespace Seeker.Gamebook.RendezVous
             },
             [20] = new Paragraph
             {
+                Trigger = "Rabbit",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 14, Text = "Далее" },
