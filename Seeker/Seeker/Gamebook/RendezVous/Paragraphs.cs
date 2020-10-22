@@ -622,6 +622,8 @@ namespace Seeker.Gamebook.RendezVous
             },
             [65] = new Paragraph
             {
+                Trigger = "Gonzalez",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 67, Text = "Далее" },
@@ -721,7 +723,7 @@ namespace Seeker.Gamebook.RendezVous
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 68, Text = "'Гонсалес'" },
+                    new Option { Destination = 68, Text = "Далее", OnlyIf = "Gonzalez" },
                     new Option { Destination = 71, Text = "'Принц'" },
                     new Option { Destination = 79, Text = "Ни один из них" },
                 }
