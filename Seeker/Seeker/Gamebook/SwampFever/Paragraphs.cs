@@ -56,6 +56,15 @@ namespace Seeker.Gamebook.SwampFever
                     },
                 },
 
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Creds",
+                        Value = 5,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 4, Text = "Далее" },
@@ -186,6 +195,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [16] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Creds",
+                        Value = 100,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 30, Text = "Далее" },
@@ -913,6 +931,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [85] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Creds",
+                        Value = 100,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 3, Text = "Далее" },
@@ -1209,6 +1236,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [111] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Creds",
+                        Value = 50,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 65, Text = "Далее" },
@@ -1372,6 +1408,15 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyCombination = "5-5-5-5-3-3",
 
                         Aftertext = "Если вы одержите верх, то получите в награду 100 кредов. При ничьей возникнет выбор: продолжить схватку или отступить. При поражении вас уничтожат Резак-Лучи, кроме того, тварь мутирует.",
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Creds",
+                        Value = 100,
                     },
                 },
 
@@ -1640,6 +1685,15 @@ namespace Seeker.Gamebook.SwampFever
                 },
 
                 Trigger = "14",
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Creds",
+                        Value = 150,
+                    },
+                },
 
                 Options = new List<Option>
                 {
@@ -2037,6 +2091,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [193] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Creds",
+                        Value = 30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 30, Text = "Далее" },
