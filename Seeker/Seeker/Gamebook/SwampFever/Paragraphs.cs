@@ -461,6 +461,122 @@ namespace Seeker.Gamebook.SwampFever
             },
             [40] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "Второй двигатель, 40 кредитов",
+                        ButtonName = "Купить двигатель",
+                        Price = 40,
+
+                        Benefit = new Modification
+                        {
+                            Name = "SecondEngine",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "Стелс-покрытие, 20 кредитов",
+                        ButtonName = "Купить покрытие",
+                        Price = 20,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Stealth",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "Радар, 20 кредитов",
+                        ButtonName = "Купить радар",
+                        Price = 20,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Radar",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "Циркулярная пила, 25 кредитов",
+                        ButtonName = "Купить пилу",
+                        Price = 25,
+
+                        Benefit = new Modification
+                        {
+                            Name = "CircularSaw",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "Реактивный огнемёт, 30 кредитов",
+                        ButtonName = "Купить огнемёт",
+                        Price = 30,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Flamethrower",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "Реактивный огнемёт, 30 кредитов",
+                        ButtonName = "Купить огнемёт",
+                        Price = 30,
+
+                        Benefit = new Modification
+                        {
+                            Name = "Flamethrower",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "Спаренная плазмопушка, 35 кредитов",
+                        ButtonName = "Купить плазмопушку",
+                        Price = 30,
+
+                        Benefit = new Modification
+                        {
+                            Name = "PlasmaCannon",
+                            Value = 1,
+                        },
+                    },
+
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        Text = "Гармонизатор, 50 кредитов",
+                        ButtonName = "Купить гармонизатор",
+                        Price = 50,
+                        Aftertext = "Гармонизатор похож на метроном. При колебании маятника он излучает пси-волны. Данное устройство упрощает ментальные проверки на 1 (+1 к цифре МП)",
+
+                        Benefit = new Modification
+                        {
+                            Name = "Harmonizer",
+                            Value = 1,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 30, Text = "Далее" },

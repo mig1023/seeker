@@ -14,6 +14,13 @@ namespace Seeker.Gamebook.SwampFever
         public int Rate { get; set; }
         public int Hitpoints { get; set; }
 
+        public int SecondEngine { get; set; }
+        public int Stealth { get; set; }
+        public int Radar { get; set; }
+        public int CircularSaw { get; set; }
+        public int Flamethrower { get; set; }
+        public int PlasmaCannon { get; set; }
+        public int Harmonizer { get; set; }
 
         public void Init()
         {
@@ -22,6 +29,13 @@ namespace Seeker.Gamebook.SwampFever
             Creds = 0;
             Rate = 100;
             Hitpoints = 1;
+            SecondEngine = 0;
+            Stealth = 0;
+            Radar = 0;
+            CircularSaw = 0;
+            Flamethrower = 0;
+            PlasmaCannon = 0;
+            Harmonizer = 0;
         }
 
         public Character Clone()
@@ -32,6 +46,13 @@ namespace Seeker.Gamebook.SwampFever
                 Creds = this.Creds,
                 Rate = this.Rate,
                 Hitpoints = this.Hitpoints,
+                SecondEngine = this.SecondEngine,
+                Stealth = this.Stealth,
+                Radar = this.Radar,
+                CircularSaw = this.CircularSaw,
+                Flamethrower = this.Flamethrower,
+                PlasmaCannon = this.PlasmaCannon,
+                Harmonizer = this.Harmonizer,
             };
         }
     }

@@ -10,6 +10,7 @@ namespace Seeker.Gamebook.SwampFever
     {
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
+        public string Text { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
 
@@ -17,6 +18,8 @@ namespace Seeker.Gamebook.SwampFever
         public string EnemyCombination { get; set; }
 
         public int Level { get; set; }
+        public int Price { get; set; }
+        public Modification Benefit { get; set; }
 
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
@@ -34,7 +37,9 @@ namespace Seeker.Gamebook.SwampFever
 
         public List<string> Representer()
         {
-            if (Level > 0)
+            if (Price > 0)
+                return new List<string> { Text };
+            else if (Level > 0)
                 return new List<string> { String.Format("Ментальная проверка, уровень {0}", Level) };
             else
                 return new List<string> { EnemyName };
@@ -99,6 +104,19 @@ namespace Seeker.Gamebook.SwampFever
             mentalCheck.Add(Level > mentalAndFury ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
             return mentalCheck;
+        }
+
+        public List<string> Get()
+        {
+            if ((Price > 0) && (Character.Protagonist.Creds >= Price))
+            {
+                Character.Protagonist.Creds -= Price;
+
+                if (Benefit != null)
+                    Benefit.Do();
+            }
+
+            return new List<string> { "RELOAD" };
         }
 
         public List<string> Fight()
