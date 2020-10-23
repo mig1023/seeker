@@ -67,7 +67,20 @@ namespace Seeker.Gamebook.SwampFever
 
         public static bool CheckOnlyIf(string option)
         {
-            return Game.Data.Triggers.Contains(option.Trim());
+            string[] options = option.Split(',');
+
+            foreach (string oneOption in options)
+            {
+                if (oneOption.Contains("!"))
+                {
+                    if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        return false;
+                }
+                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                    return false;
+            }
+
+            return true;
         }
 
         public List<string> MentalTest()

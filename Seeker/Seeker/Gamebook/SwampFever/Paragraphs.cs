@@ -97,8 +97,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 96, Text = "Если есть метка №2" },
-                    new Option { Destination = 20, Text = "Иначе" },
+                    new Option { Destination = 96, Text = "Далее", OnlyIf = "2" },
+                    new Option { Destination = 20, Text = "Далее", OnlyIf = "!2" },
                 }
             },
             [7] = new Paragraph
@@ -332,8 +332,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 52, Text = "Если есть метка № 19" },
-                    new Option { Destination = 68, Text = "В противном случае" },
+                    new Option { Destination = 52, Text = "Далее", OnlyIf = "19" },
+                    new Option { Destination = 68, Text = "Далее", OnlyIf = "!19" },
                 }
             },
             [32] = new Paragraph
@@ -437,8 +437,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 8, Text = "Если есть метка № 3" },
-                    new Option { Destination = 129, Text = "В противном случае" },
+                    new Option { Destination = 8, Text = "Далее", OnlyIf = "3" },
+                    new Option { Destination = 129, Text = "Далее", OnlyIf = "!3" },
                 }
             },
             [40] = new Paragraph
@@ -462,11 +462,11 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 83, Text = "При наличии метки № 20" },
-                    new Option { Destination = 32, Text = "При наличии метки № 21" },
-                    new Option { Destination = 165, Text = "При наличии метки №22 " },
-                    new Option { Destination = 55, Text = "При наличии метки № 23" },
-                    new Option { Destination = 113, Text = "При отсутствии меток" },
+                    new Option { Destination = 55, Text = "Далее", OnlyIf = "23" },
+                    new Option { Destination = 165, Text = "Далее", OnlyIf = "22, !23" },
+                    new Option { Destination = 32, Text = "Далее", OnlyIf = "21, !23, !22" },
+                    new Option { Destination = 83, Text = "Далее", OnlyIf = "20, !23, !22, !21" },
+                    new Option { Destination = 113, Text = "Далее", OnlyIf = "!20, !23, !22, !21" },
                 }
             },
             [43] = new Paragraph
@@ -546,8 +546,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 5, Text = "Если есть метка № 8" },
-                    new Option { Destination = 104, Text = "Иначе" },
+                    new Option { Destination = 5, Text = "Далее", OnlyIf = "8" },
+                    new Option { Destination = 104, Text = "Далее", OnlyIf = "!8" },
                 }
             },
             [52] = new Paragraph
@@ -596,8 +596,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 127, Text = "Если метка № 1 отсутствует" },
-                    new Option { Destination = 112, Text = "Если метка № 1 активна" },
+                    new Option { Destination = 127, Text = "Далее", OnlyIf = "1" },
+                    new Option { Destination = 112, Text = "Далее", OnlyIf = "!1" },
                 }
             },
             [57] = new Paragraph
@@ -634,8 +634,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 86, Text = "Если есть метка № 14" },
-                    new Option { Destination = 134, Text = "Иначе" },
+                    new Option { Destination = 86, Text = "Далее", OnlyIf = "14" },
+                    new Option { Destination = 134, Text = "Далее", OnlyIf = "!14" },
                 }
             },
             [61] = new Paragraph
@@ -657,16 +657,16 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 14, Text = "Если есть метка № 4" },
-                    new Option { Destination = 148, Text = "Иначе" },
+                    new Option { Destination = 14, Text = "Далее", OnlyIf = "4" },
+                    new Option { Destination = 148, Text = "Далее", OnlyIf = "!4" },
                 }
             },
             [64] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 73, Text = "Если есть метка № 17" },
-                    new Option { Destination = 121, Text = "Иначе" },
+                    new Option { Destination = 73, Text = "Далее", OnlyIf = "17" },
+                    new Option { Destination = 121, Text = "Далее", OnlyIf = "!17" },
                 }
             },
             [65] = new Paragraph
@@ -931,8 +931,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 147, Text = "Если есть метка № 9" },
-                    new Option { Destination = 28, Text = "Иначе" },
+                    new Option { Destination = 147, Text = "Далее", OnlyIf = "9" },
+                    new Option { Destination = 28, Text = "Далее", OnlyIf = "!9" },
                 }
             },
             [88] = new Paragraph
@@ -976,7 +976,7 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyName = "БРОНЕТАНК",
                         EnemyCombination = "6-4-3-3",
 
-                        Aftertext = "Ничья невозможна, т.к. вы раскрыли тайну двуличного шерифа, и он будет драться до последнего. При победе запишите метку N20, вы уничтожаете врага и благополучно достигаете Порта Грёз. При поражении Патс назовёт вас мёртвым грабителем.",
+                        Aftertext = "Ничья невозможна, т.к. вы раскрыли тайну двуличного шерифа, и он будет драться до последнего. При победе вы уничтожаете врага и благополучно достигаете Порта Грёз. При поражении Патс назовёт вас мёртвым грабителем.",
                     },
                 },
 
@@ -991,8 +991,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 118, Text = "Если есть метка № 5" },
-                    new Option { Destination = 11, Text = "Иначе" },
+                    new Option { Destination = 118, Text = "Далее", OnlyIf = "5" },
+                    new Option { Destination = 11, Text = "Далее", OnlyIf = "!5" },
                 }
             },
             [92] = new Paragraph
@@ -1246,8 +1246,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 7, Text = "Если есть метка № 10" },
-                    new Option { Destination = 50, Text = "В противном случае" },
+                    new Option { Destination = 7, Text = "Далее", OnlyIf = "10" },
+                    new Option { Destination = 50, Text = "Далее", OnlyIf = "!10" },
                 }
             },
             [116] = new Paragraph
@@ -1290,8 +1290,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 23, Text = "Если есть метка № 6" },
-                    new Option { Destination = 57, Text = "Иначе" },
+                    new Option { Destination = 23, Text = "Далее", OnlyIf = "6" },
+                    new Option { Destination = 57, Text = "Далее", OnlyIf = "!6" },
                 }
             },
             [120] = new Paragraph
@@ -1329,8 +1329,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 74, Text = "Если есть метка № 15" },
-                    new Option { Destination = 10, Text = "Иначе" },
+                    new Option { Destination = 74, Text = "Далее", OnlyIf = "15" },
+                    new Option { Destination = 10, Text = "Далее", OnlyIf = "!15" },
                 }
             },
             [124] = new Paragraph
@@ -1355,8 +1355,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 17, Text = "При наличии метки № 13" },
-                    new Option { Destination = 59, Text = "Иначе" },
+                    new Option { Destination = 17, Text = "Далее", OnlyIf = "13" },
+                    new Option { Destination = 59, Text = "Далее", OnlyIf = "!13" },
                 }
             },
             [126] = new Paragraph
@@ -1371,7 +1371,7 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyName = "МУТАВОРМ",
                         EnemyCombination = "5-5-5-5-3-3",
 
-                        Aftertext = "Если вы одержите верх, то получите в награду 100 кредов. После победы запишите метку N14. При ничьей возникнет выбор: продолжить схватку или отступить. При поражении вас уничтожат Резак-Лучи, кроме того, тварь мутирует, и метка N12 станет активной.",
+                        Aftertext = "Если вы одержите верх, то получите в награду 100 кредов. При ничьей возникнет выбор: продолжить схватку или отступить. При поражении вас уничтожат Резак-Лучи, кроме того, тварь мутирует.",
                     },
                 },
 
@@ -1379,7 +1379,7 @@ namespace Seeker.Gamebook.SwampFever
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 86, Text = "После победы запишите метку № 14" },
+                    new Option { Destination = 86, Text = "В случае победы" },
                     new Option { Destination = 100, Text = "Отступить" },
                 }
             },
@@ -1397,8 +1397,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 65, Text = "Если есть метка № 7" },
-                    new Option { Destination = 94, Text = "Иначе" },
+                    new Option { Destination = 65, Text = "Далее", OnlyIf = "7" },
+                    new Option { Destination = 94, Text = "Далее", OnlyIf = "!7" },
                 }
             },
             [129] = new Paragraph
@@ -1422,8 +1422,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 53, Text = "Если есть метка № 16" },
-                    new Option { Destination = 35, Text = "Иначе" },
+                    new Option { Destination = 53, Text = "Далее", OnlyIf = "16" },
+                    new Option { Destination = 35, Text = "Далее", OnlyIf = "!16" },
                 }
             },
             [132] = new Paragraph
@@ -1445,8 +1445,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 154, Text = "Если есть метка № 12" },
-                    new Option { Destination = 2, Text = "Если нет" },
+                    new Option { Destination = 154, Text = "Далее", OnlyIf = "12" },
+                    new Option { Destination = 2, Text = "Далее", OnlyIf = "!12" },
                 }
             },
             [135] = new Paragraph
@@ -1530,8 +1530,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 103, Text = "Если есть метка № 11" },
-                    new Option { Destination = 133, Text = "Иначе" },
+                    new Option { Destination = 103, Text = "Далее", OnlyIf = "11" },
+                    new Option { Destination = 133, Text = "Далее", OnlyIf = "!11" },
                 }
             },
             [144] = new Paragraph
@@ -1556,8 +1556,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 114, Text = "Если есть метка № 18" },
-                    new Option { Destination = 38, Text = "Иначе" },
+                    new Option { Destination = 114, Text = "Далее", OnlyIf = "18" },
+                    new Option { Destination = 38, Text = "Далее", OnlyIf = "!18" },
                 }
             },
             [146] = new Paragraph
@@ -1596,8 +1596,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 117, Text = "Если есть метка № 5" },
-                    new Option { Destination = 48, Text = "Иначе" },
+                    new Option { Destination = 117, Text = "Далее", OnlyIf = "5" },
+                    new Option { Destination = 48, Text = "Далее", OnlyIf = "!5" },
                 }
             },
             [151] = new Paragraph
@@ -1635,7 +1635,7 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyName = "МУТАВОРМ",
                         EnemyCombination = "6-6-6-6-3-3",
 
-                        Aftertext = "Если вы одолеете врага, то получите в награду 150 кредов. После победы запишите метку N14. При ничьей возникнет выбор: продолжить схватку или ретироваться. При поражении вас взорвут.",
+                        Aftertext = "Если вы одолеете врага, то получите в награду 150 кредов. При ничьей возникнет выбор: продолжить схватку или ретироваться. При поражении вас взорвут.",
                     },
                 },
 
@@ -1697,16 +1697,16 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 183, Text = "Если есть метка № 26" },
-                    new Option { Destination = 185, Text = "Иначе" },
+                    new Option { Destination = 183, Text = "Далее", OnlyIf = "26" },
+                    new Option { Destination = 185, Text = "Далее", OnlyIf = "!26" },
                 }
             },
             [160] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 170, Text = "Если есть метка № 28" },
-                    new Option { Destination = 196, Text = "Иначе" },
+                    new Option { Destination = 170, Text = "Далее", OnlyIf = "28" },
+                    new Option { Destination = 196, Text = "Далее", OnlyIf = "!28" },
                 }
             },
             [161] = new Paragraph
@@ -1762,8 +1762,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 198, Text = "Если есть метка № 27" },
-                    new Option { Destination = 177, Text = "Иначе" },
+                    new Option { Destination = 198, Text = "Далее", OnlyIf = "27" },
+                    new Option { Destination = 177, Text = "Далее", OnlyIf = "!27" },
                 }
             },
             [168] = new Paragraph
@@ -1806,8 +1806,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 182, Text = "Если есть метка № 30" },
-                    new Option { Destination = 199, Text = "Иначе" },
+                    new Option { Destination = 182, Text = "Далее", OnlyIf = "30" },
+                    new Option { Destination = 199, Text = "Далее", OnlyIf = "!30" },
                 }
             },
             [173] = new Paragraph
@@ -1822,7 +1822,7 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyName = "ГРОЗДЕГЛАВ",
                         EnemyCombination = "4-4-4-4-1-1",
 
-                        Aftertext = "При победе запишите метку N26. При ничьей произойдёт продолжение боя. Поражение означает гибель в чавкающей пасти.",
+                        Aftertext = "При ничьей произойдёт продолжение боя. Поражение означает гибель в чавкающей пасти.",
                     },
                 },
 
@@ -1900,8 +1900,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 194, Text = "Если есть метка № 29" },
-                    new Option { Destination = 168, Text = "Иначе" },
+                    new Option { Destination = 194, Text = "Далее", OnlyIf = "29" },
+                    new Option { Destination = 168, Text = "Далее", OnlyIf = "!29" },
                 }
             },
             [181] = new Paragraph
@@ -1951,7 +1951,7 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyName = "МЕРТВОКРЫЛЫ",
                         EnemyCombination = "4-4-4-4-4-4",
 
-                        Aftertext = "В отличие от остальных врагов попадание на дистанции не означает победу. Вы убиваете лишь одну птицу. У второй останется комбинация «444». Но если вы точно поразите их и плазмопушкой, и огнемётом, то до ближнего боя дело не дойдёт. Против обеих птиц вблизи деритесь по очереди. При победе или ничейном исходе запишите метку N27. При поражении капсула водителя будет вскрыта, а вы заклёваны до смерти.",
+                        Aftertext = "В отличие от остальных врагов попадание на дистанции не означает победу. Вы убиваете лишь одну птицу. У второй останется комбинация «444». Но если вы точно поразите их и плазмопушкой, и огнемётом, то до ближнего боя дело не дойдёт. Против обеих птиц вблизи деритесь по очереди. При поражении капсула водителя будет вскрыта, а вы заклёваны до смерти.",
                     },
                 },
 
