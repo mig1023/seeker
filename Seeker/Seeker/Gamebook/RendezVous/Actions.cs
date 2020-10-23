@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.RendezVous
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
+        public int Dices { get; set; }
 
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
@@ -29,7 +30,7 @@ namespace Seeker.Gamebook.RendezVous
 
         public List<string> Representer()
         {
-            return new List<string> { String.Empty };
+            return new List<string> { };
         }
 
         public List<string> Status()
@@ -91,6 +92,27 @@ namespace Seeker.Gamebook.RendezVous
 
                 return true;
             }
+        }
+
+        public List<string> DiceCheck()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int firstDice = Game.Dice.Roll();
+            int dicesResult = firstDice;
+
+            if (Dices == 1)
+                diceCheck.Add(String.Format("На кубикe выпало: {0} ⚄", firstDice));
+            else
+            {
+                int secondDice = Game.Dice.Roll();
+                dicesResult += secondDice;
+                diceCheck.Add(String.Format("На кубиках выпало: {0} ⚄ + {1} ⚄ = {2}", firstDice, secondDice, (firstDice + secondDice)));
+            }
+
+            diceCheck.Add(dicesResult % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
+
+            return diceCheck;
         }
     }
 }

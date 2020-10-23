@@ -12,7 +12,7 @@ namespace Seeker.Gamebook.RendezVous
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#FFFFFF",
-            [ButtonTypes.Action] = "#666666",
+            [ButtonTypes.Action] = "#FFFFFF",
             [ButtonTypes.Option] = "#FFFFFF",
             [ButtonTypes.Font] = "#000000",
             [ButtonTypes.Border] = "#000000",
@@ -20,7 +20,7 @@ namespace Seeker.Gamebook.RendezVous
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.ActionBox] = "#999999",
+            [ColorTypes.ActionBox] = "#efefef",
             [ColorTypes.StatusBar] = "#FFFFFF",
             [ColorTypes.StatusFont] = "#000000",
         };

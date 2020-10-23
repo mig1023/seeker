@@ -527,6 +527,24 @@ namespace Seeker.Gamebook.RendezVous
             },
             [53] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "DiceCheck",
+                        ButtonName = "Кинуть один кубик",
+                        Dices = 1,
+                        Aftertext = "или",
+                    },
+                    new Actions
+                    {
+                        ActionName = "DiceCheck",
+                        ButtonName = "Кинуть два кубика",
+                        Dices = 2,
+                        Aftertext = "\u00A0",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 48, Text = "Если выпало чётное число" },
