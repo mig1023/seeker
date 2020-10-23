@@ -4764,7 +4764,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     {
                         ActionName = "Get",
                         Text = "АРКЕБУЗА, 1.5 экю",
-                        ButtonName = "Купить шпагу",
+                        ButtonName = "Купить аркебузу",
                         Price = 150,
                         Multiple = true,
                     },
