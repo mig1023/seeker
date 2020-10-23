@@ -26,6 +26,7 @@ namespace Seeker.Gamebook.SwampFever
                 paragraph.Modification = new List<Interfaces.IModification>(source.Modification);
 
             paragraph.Trigger = source.Trigger;
+            paragraph.RemoveTrigger = source.RemoveTrigger;
 
             return paragraph;
         }
@@ -176,6 +177,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [15] = new Paragraph
             {
+                Trigger = "11",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 103, Text = "Далее" },
@@ -260,6 +263,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [24] = new Paragraph
             {
+                Trigger = "15",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 74, Text = "Далее" },
@@ -333,6 +338,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [32] = new Paragraph
             {
+                Trigger = "22",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 16, Text = "Помочь ликвидировать возгорание" },
@@ -383,6 +390,8 @@ namespace Seeker.Gamebook.SwampFever
                         Value = 1,
                     },
                 },
+
+                Trigger = "16",
 
                 Options = new List<Option>
                 {
@@ -495,6 +504,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [47] = new Paragraph
             {
+                Trigger = "17",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 73, Text = "Далее" },
@@ -522,6 +533,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [50] = new Paragraph
             {
+                Trigger = "10",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 139, Text = "Предупредить гидронейца об опасности" },
@@ -589,6 +602,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [57] = new Paragraph
             {
+                Trigger = "6",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 141, Text = "Попытаетесь отговорить жечь ценное растение" },
@@ -598,6 +613,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [58] = new Paragraph
             {
+                Trigger = "3",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 93, Text = "Далее" },
@@ -734,6 +751,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [71] = new Paragraph
             {
+                Trigger = "13",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
@@ -813,6 +832,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [78] = new Paragraph
             {
+                Trigger = "8",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
@@ -866,6 +887,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [83] = new Paragraph
             {
+                Trigger = "21",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 67, Text = "Вы можете покинуть поселение" },
@@ -957,6 +980,8 @@ namespace Seeker.Gamebook.SwampFever
                     },
                 },
 
+                Trigger = "20",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 30, Text = "Далее" },
@@ -989,6 +1014,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [94] = new Paragraph
             {
+                Trigger = "7",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 22, Text = "Вытащить собственность компании" },
@@ -997,6 +1024,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [95] = new Paragraph
             {
+                Trigger = "18",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 114, Text = "Далее" },
@@ -1035,6 +1064,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [100] = new Paragraph
             {
+                Trigger = "12",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 86, Text = "Далее" },
@@ -1138,6 +1169,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [108] = new Paragraph
             {
+                Trigger = "4",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 14, Text = "Далее" },
@@ -1158,6 +1191,8 @@ namespace Seeker.Gamebook.SwampFever
                         Aftertext = "Если победа за вами, то можете забрать 2 кубометра стигона. Если бой завершился ничьёй, то у вас есть выбор: продолжить стычку или ретироваться.",
                     },
                 },
+
+                Trigger = "9",
 
                 Options = new List<Option>
                 {
@@ -1340,6 +1375,8 @@ namespace Seeker.Gamebook.SwampFever
                     },
                 },
 
+                Trigger = "14, 12",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 86, Text = "После победы запишите метку № 14" },
@@ -1348,6 +1385,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [127] = new Paragraph
             {
+                Trigger = "1",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 80, Text = "Вы можете наблюдать за памятником из-за кустов" },
@@ -1372,6 +1411,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [130] = new Paragraph
             {
+                RemoveTrigger = "13",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 52, Text = "Далее" },
@@ -1463,6 +1504,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [140] = new Paragraph
             {
+                Trigger = "2",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 72, Text = "Круг с отрезками внутри" },
@@ -1566,6 +1609,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [152] = new Paragraph
             {
+                Trigger = "5",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 118, Text = "Далее" },
@@ -1594,6 +1639,8 @@ namespace Seeker.Gamebook.SwampFever
                     },
                 },
 
+                Trigger = "14",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 86, Text = "Далее" },
@@ -1601,6 +1648,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [155] = new Paragraph
             {
+                Trigger = "30",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 182, Text = "Далее" },
@@ -1693,6 +1742,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [165] = new Paragraph
             {
+                Trigger = "23",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 176, Text = "Изъявите желание участвовать в состязании" },
@@ -1717,6 +1768,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [168] = new Paragraph
             {
+                Trigger = "29",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 174, Text = "Согласитесь на игру" },
@@ -1772,6 +1825,8 @@ namespace Seeker.Gamebook.SwampFever
                         Aftertext = "При победе запишите метку N26. При ничьей произойдёт продолжение боя. Поражение означает гибель в чавкающей пасти.",
                     },
                 },
+
+                Trigger = "26",
 
                 Options = new List<Option>
                 {
@@ -1900,6 +1955,8 @@ namespace Seeker.Gamebook.SwampFever
                     },
                 },
 
+                Trigger = "27",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
@@ -1945,6 +2002,8 @@ namespace Seeker.Gamebook.SwampFever
                     },
                 },
 
+                Trigger = "28",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 170, Text = "Далее" },
@@ -1959,6 +2018,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [191] = new Paragraph
             {
+                RemoveTrigger = "25",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 31, Text = "На севере - Чаруса Чудес" },
@@ -1991,6 +2052,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [195] = new Paragraph
             {
+                Trigger = "25",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 186, Text = "Далее" },

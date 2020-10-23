@@ -13,5 +13,7 @@ namespace Seeker.Gamebook.SwampFever
         public List<Modification> Modification { get; set; }
 
         public string Trigger { get; set; }
+
+        public string RemoveTrigger { get; set;  }
     }
 }
