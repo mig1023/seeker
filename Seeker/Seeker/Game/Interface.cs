@@ -13,13 +13,15 @@ namespace Seeker.Game
         {
             List<Label> statusLabels = new List<Label>();
 
+            string textColor = Game.Data.Constants.GetColor(Data.ColorTypes.StatusFont);
+
             foreach (string status in statusLines)
             {
                 Label label = new Label();
 
                 label.Text = status;
                 label.FontSize = 12;
-                label.TextColor = Color.White;
+                label.TextColor = (String.IsNullOrEmpty(textColor) ? Color.White : Color.FromHex(textColor));
                 label.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Data.ColorTypes.StatusBar));
 
                 label.HorizontalTextAlignment = TextAlignment.Center;
@@ -61,9 +63,6 @@ namespace Seeker.Game
 
         public static Label GamebookDisclaimer(string gamebook)
         {
-
-
-
             return new Label()
             {
                 Text = String.Format("© {0}", Gamebook.List.GetDescription(gamebook).Disclaimer),

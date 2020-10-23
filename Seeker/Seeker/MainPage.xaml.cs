@@ -148,8 +148,11 @@ namespace Seeker
 
             if (statuses == null)
             {
-                Status.IsVisible = false;
+                StatusBorder.IsVisible = false;
                 MainGrid.RowDefinitions[1].Height = 0;
+
+                Status.IsVisible = false;
+                MainGrid.RowDefinitions[2].Height = 0;
             }
             else
             {
@@ -157,7 +160,14 @@ namespace Seeker
                     Status.Children.Add(status);
 
                 Status.IsVisible = true;
-                MainGrid.RowDefinitions[1].Height = 40;
+                MainGrid.RowDefinitions[2].Height = 40;
+
+                if (!String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusFont)))
+                {
+                    StatusBorder.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusFont));
+                    StatusBorder.IsVisible = true;
+                    MainGrid.RowDefinitions[1].Height = 1;
+                }
             }           
         }
 

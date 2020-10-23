@@ -24,6 +24,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             [ColorTypes.Font] = String.Empty,
             [ColorTypes.ActionBox] = "#8fb3f2",
             [ColorTypes.StatusBar] = "#0a5c96",
+            [ColorTypes.StatusFont] = String.Empty,
         };
 
         public string GetButtonsColor(ButtonTypes type)

@@ -24,6 +24,7 @@ namespace Seeker.Gamebook.RockOfTerror
             [ColorTypes.Font] = "#FFFFFF",
             [ColorTypes.ActionBox] = String.Empty,
             [ColorTypes.StatusBar] = "#151515",
+            [ColorTypes.StatusFont] = String.Empty,
         };
 
         public string GetButtonsColor(ButtonTypes type)

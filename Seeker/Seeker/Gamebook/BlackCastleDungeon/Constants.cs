@@ -24,6 +24,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             [ColorTypes.Font] = String.Empty,
             [ColorTypes.ActionBox] = String.Empty,
             [ColorTypes.StatusBar] = "#2a2a2a",
+            [ColorTypes.StatusFont] = String.Empty,
         };
 
         public string GetButtonsColor(ButtonTypes type)

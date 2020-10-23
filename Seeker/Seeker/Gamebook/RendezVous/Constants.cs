@@ -23,7 +23,8 @@ namespace Seeker.Gamebook.RendezVous
             [ColorTypes.Background] = String.Empty,
             [ColorTypes.Font] = String.Empty,
             [ColorTypes.ActionBox] = "#999999",
-            [ColorTypes.StatusBar] = "#CCCCCC",
+            [ColorTypes.StatusBar] = "#FFFFFF",
+            [ColorTypes.StatusFont] = "#000000",
         };
 
         public string GetButtonsColor(ButtonTypes type)

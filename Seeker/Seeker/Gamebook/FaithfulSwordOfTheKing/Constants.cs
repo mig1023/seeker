@@ -24,6 +24,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             [ColorTypes.Font] = String.Empty,
             [ColorTypes.ActionBox] = String.Empty,
             [ColorTypes.StatusBar] = "#870808",
+            [ColorTypes.StatusFont] = String.Empty,
         };
 
         public string GetButtonsColor(ButtonTypes type)
