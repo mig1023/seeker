@@ -6,6 +6,6 @@ namespace Seeker.Game
 {
     class Buttons
     {
-        public enum ButtonTypes { Main, Action, Option }
+        public enum ButtonTypes { Main, Action, Option, Font, Border }
     }
 }

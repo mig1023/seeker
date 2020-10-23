@@ -14,6 +14,10 @@ namespace Seeker.Gamebook
 
         public string BookColor;
 
+        public string FontColor;
+
+        public string BorderColor;
+
         public string Illustration;
 
         public ProtagonistInit Protagonist;

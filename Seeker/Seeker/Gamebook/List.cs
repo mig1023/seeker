@@ -96,7 +96,9 @@ namespace Seeker.Gamebook
                 Actions = new RendezVous.Actions(),
                 Constants = new RendezVous.Constants(),
                 Disclaimer = "Ал Торо, 2020",
-                BookColor = "#003d3d",
+                BookColor = "#FFFFFF",
+                FontColor = "#000000",
+                BorderColor = "#000000",
                 Illustration = "RendezVous.jpg",
             },
 

@@ -14,6 +14,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             [ButtonTypes.Main] = "#151515",
             [ButtonTypes.Action] = "#3f3f3f",
             [ButtonTypes.Option] = "#696969",
+            [ButtonTypes.Font] = String.Empty,
+            [ButtonTypes.Border] = String.Empty,
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>

@@ -14,6 +14,8 @@ namespace Seeker.Gamebook.SwampFever
             [ButtonTypes.Main] = "#5c6649",
             [ButtonTypes.Action] = "#485432",
             [ButtonTypes.Option] = "#494949",
+            [ButtonTypes.Font] = String.Empty,
+            [ButtonTypes.Border] = String.Empty,
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>

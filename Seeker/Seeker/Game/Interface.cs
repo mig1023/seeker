@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
+using Seeker.Gamebook;
+
 namespace Seeker.Game
 {
     class Interface
@@ -34,16 +36,34 @@ namespace Seeker.Game
 
         public static Button GamebookButton(string gamebook)
         {
-            return new Button()
+            Description description = Gamebook.List.GetDescription(gamebook);
+
+            Button gamebookButton = new Button()
             {
                 Text = gamebook,
-                TextColor = Xamarin.Forms.Color.White,
-                BackgroundColor = Color.FromHex(Gamebook.List.GetDescription(gamebook).BookColor)
+                BackgroundColor = Color.FromHex(description.BookColor)
             };
+
+            if (!String.IsNullOrEmpty(description.BorderColor))
+            {
+                gamebookButton.BorderColor = Color.FromHex(description.BorderColor);
+                gamebookButton.BorderWidth = 1;
+            }
+
+            if (!String.IsNullOrEmpty(description.FontColor))
+                gamebookButton.TextColor = Color.FromHex(description.FontColor);
+            else
+                gamebookButton.TextColor = Xamarin.Forms.Color.White;
+
+
+            return gamebookButton;
         }
 
         public static Label GamebookDisclaimer(string gamebook)
         {
+
+
+
             return new Label()
             {
                 Text = String.Format("© {0}", Gamebook.List.GetDescription(gamebook).Disclaimer),
@@ -116,13 +136,15 @@ namespace Seeker.Game
         {
             string color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Action);
 
-            return new Button()
+            Button actionButton = new Button()
             {
                 Text = actionName,
                 TextColor = Xamarin.Forms.Color.White,
                 IsEnabled = enabled,
                 BackgroundColor = (enabled ? Color.FromHex(color) : Color.Gray)
             };
+
+            return SetBorderAndTextColor(actionButton);
         }
 
         public static Button OptionButton(Game.Option option)
@@ -137,14 +159,31 @@ namespace Seeker.Game
             );
 
             bool isEnabled = ((!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf)) ? false : true);
-
-            return new Button()
+            
+            Button optionButton = new Button()
             {
                 Text = option.Text,
-                TextColor = Xamarin.Forms.Color.White,
                 BackgroundColor = Color.FromHex(color),
                 IsEnabled = isEnabled,
             };
+
+            return SetBorderAndTextColor(optionButton);
+        }
+
+        private static Button SetBorderAndTextColor(Button button)
+        {
+            if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Border)))
+            {
+                button.BorderColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Border));
+                button.BorderWidth = 1;
+            }
+
+            if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Font)))
+                button.TextColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Font));
+            else
+                button.TextColor = Xamarin.Forms.Color.White;
+
+            return button;
         }
 
         public static Label Text(string text)

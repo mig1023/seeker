@@ -11,17 +11,19 @@ namespace Seeker.Gamebook.RendezVous
     {
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#002d2d",
-            [ButtonTypes.Action] = "#003d3d",
-            [ButtonTypes.Option] = "#494949",
+            [ButtonTypes.Main] = "#FFFFFF",
+            [ButtonTypes.Action] = "#666666",
+            [ButtonTypes.Option] = "#FFFFFF",
+            [ButtonTypes.Font] = "#000000",
+            [ButtonTypes.Border] = "#000000",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = String.Empty,
             [ColorTypes.Font] = String.Empty,
-            [ColorTypes.ActionBox] = "#19a3a3",
-            [ColorTypes.StatusBar] = "#003d3d",
+            [ColorTypes.ActionBox] = "#999999",
+            [ColorTypes.StatusBar] = "#CCCCCC",
         };
 
         public string GetButtonsColor(ButtonTypes type)

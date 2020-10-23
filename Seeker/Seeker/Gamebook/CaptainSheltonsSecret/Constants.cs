@@ -14,6 +14,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             [ButtonTypes.Main] = "#4682b4",
             [ButtonTypes.Action] = "#6495ed",
             [ButtonTypes.Option] = "#696969",
+            [ButtonTypes.Font] = String.Empty,
+            [ButtonTypes.Border] = String.Empty,
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>

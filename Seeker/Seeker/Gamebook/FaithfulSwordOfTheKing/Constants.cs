@@ -14,6 +14,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             [ButtonTypes.Main] = "#911",
             [ButtonTypes.Action] = "#ba2020",
             [ButtonTypes.Option] = "#696969",
+            [ButtonTypes.Font] = String.Empty,
+            [ButtonTypes.Border] = String.Empty,
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
