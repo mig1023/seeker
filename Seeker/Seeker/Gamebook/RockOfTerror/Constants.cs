@@ -14,27 +14,23 @@ namespace Seeker.Gamebook.RockOfTerror
             [ButtonTypes.Main] = "#191919",
             [ButtonTypes.Action] = "#2a2a2a",
             [ButtonTypes.Option] = "#494949",
-            [ButtonTypes.Font] = String.Empty,
-            [ButtonTypes.Border] = String.Empty,
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#000000",
             [ColorTypes.Font] = "#FFFFFF",
-            [ColorTypes.ActionBox] = String.Empty,
             [ColorTypes.StatusBar] = "#151515",
-            [ColorTypes.StatusFont] = String.Empty,
         };
 
         public string GetButtonsColor(ButtonTypes type)
         {
-            return ButtonsColors[type];
+            return (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
         }
 
         public string GetColor(Game.Data.ColorTypes type)
         {
-            return Colors[type];
+            return (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
         }
     }
 }

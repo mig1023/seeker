@@ -14,27 +14,21 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             [ButtonTypes.Main] = "#151515",
             [ButtonTypes.Action] = "#3f3f3f",
             [ButtonTypes.Option] = "#696969",
-            [ButtonTypes.Font] = String.Empty,
-            [ButtonTypes.Border] = String.Empty,
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.Background] = String.Empty,
-            [ColorTypes.Font] = String.Empty,
-            [ColorTypes.ActionBox] = String.Empty,
             [ColorTypes.StatusBar] = "#2a2a2a",
-            [ColorTypes.StatusFont] = String.Empty,
         };
 
         public string GetButtonsColor(ButtonTypes type)
         {
-            return ButtonsColors[type];
+            return (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
         }
 
         public string GetColor(Game.Data.ColorTypes type)
         {
-            return Colors[type];
+            return (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
         }
     }
 }

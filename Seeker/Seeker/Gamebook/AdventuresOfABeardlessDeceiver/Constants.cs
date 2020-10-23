@@ -14,27 +14,23 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             [ButtonTypes.Main] = "#5da130",
             [ButtonTypes.Action] = "#339933",
             [ButtonTypes.Option] = "#696969",
-            [ButtonTypes.Font] = String.Empty,
-            [ButtonTypes.Border] = String.Empty,
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.Background] = String.Empty,
-            [ColorTypes.Font] = String.Empty,
-            [ColorTypes.ActionBox] = String.Empty,
+            [ColorTypes.Background] = "#dbeadc",
+            [ColorTypes.ActionBox] = "#7cb281",
             [ColorTypes.StatusBar] = "#005100",
-            [ColorTypes.StatusFont] = String.Empty,
         };
 
         public string GetButtonsColor(ButtonTypes type)
         {
-            return ButtonsColors[type];
+            return (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
         }
 
         public string GetColor(Game.Data.ColorTypes type)
         {
-            return Colors[type];
+            return (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
         }
     }
 }

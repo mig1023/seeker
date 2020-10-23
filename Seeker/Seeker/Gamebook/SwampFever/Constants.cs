@@ -14,8 +14,6 @@ namespace Seeker.Gamebook.SwampFever
             [ButtonTypes.Main] = "#5c6649",
             [ButtonTypes.Action] = "#485432",
             [ButtonTypes.Option] = "#494949",
-            [ButtonTypes.Font] = String.Empty,
-            [ButtonTypes.Border] = String.Empty,
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
@@ -24,7 +22,6 @@ namespace Seeker.Gamebook.SwampFever
             [ColorTypes.Font] = "#eaece8",
             [ColorTypes.ActionBox] = "#707a60",
             [ColorTypes.StatusBar] = "#485432",
-            [ColorTypes.StatusFont] = String.Empty,
         };
 
         public static Dictionary<int, string> GetRangeTypes()
@@ -39,12 +36,12 @@ namespace Seeker.Gamebook.SwampFever
 
         public string GetButtonsColor(ButtonTypes type)
         {
-            return ButtonsColors[type];
+            return (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
         }
 
         public string GetColor(Game.Data.ColorTypes type)
         {
-            return Colors[type];
+            return (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
         }
     }
 }
