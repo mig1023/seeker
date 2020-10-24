@@ -41,8 +41,10 @@ namespace Seeker.Gamebook.SwampFever
                 return new List<string> { Text };
             else if (Level > 0)
                 return new List<string> { String.Format("Ментальная проверка, уровень {0}", Level) };
-            else
+            else if (!String.IsNullOrEmpty(EnemyName))
                 return new List<string> { EnemyName };
+            else
+                return new List<string> { };
         }
 
         public List<string> Status()
@@ -51,6 +53,7 @@ namespace Seeker.Gamebook.SwampFever
             {
                 String.Format("Шкала ярости: {0}", Character.Protagonist.Fury),
                 String.Format("Креды: {0}", Character.Protagonist.Creds),
+                String.Format("Стигон: {0}", Character.Protagonist.Stigon),
                 String.Format("Котировка: 1:{0}", Character.Protagonist.Rate),
             };
 
@@ -144,7 +147,7 @@ namespace Seeker.Gamebook.SwampFever
 
             bool upgradeInAction = false;
 
-            for(int i = 1; i <= Constants.GetUpgrates().Count; i++)
+            for (int i = 1; i <= Constants.GetUpgrates().Count; i++)
             {
                 string tmp = Constants.GetUpgrates()[i]["name"];
                 upgrades += (int)Character.Protagonist.GetType().GetProperty(Constants.GetUpgrates()[i]["name"]).GetValue(Character.Protagonist, null);
@@ -237,7 +240,7 @@ namespace Seeker.Gamebook.SwampFever
                     {
                         fight.Add("Противникам нечего друг другу противопоставить");
                     }
-                    else if(myCombination.Contains(range) && !enemyCombination.Contains(range))
+                    else if (myCombination.Contains(range) && !enemyCombination.Contains(range))
                     {
                         roundResult = 1;
 
@@ -311,7 +314,7 @@ namespace Seeker.Gamebook.SwampFever
                                 fight.Add("Перестрелка продолжается:");
                         }
                     }
-                                        
+
                     if (roundResult == 1)
                     {
                         int myDice = Game.Dice.Roll();
@@ -368,6 +371,39 @@ namespace Seeker.Gamebook.SwampFever
             Dictionary<int, int> counts = combination.GroupBy(x => x).ToDictionary(k => k.Key, v => v.Count());
 
             return (counts.ContainsKey(dice) ? counts[dice] : 0);
+        }
+
+        public List<string> SellStigon()
+        {
+            List<string> accountingReport = new List<string>();
+
+            int soldStigon = Character.Protagonist.Stigon;
+            int earnedCreds = 0;
+
+            accountingReport.Add(String.Format("В вашем грузовом отсеке {0} кубометров стигона", Character.Protagonist.Stigon));
+            accountingReport.Add(String.Format("Курс стигона на начало продажи: 1:{0}", Character.Protagonist.Rate)); 
+
+            while (Character.Protagonist.Stigon > 0)
+            {
+                accountingReport.Add(String.Empty);
+
+                Character.Protagonist.Stigon -= 1;
+                earnedCreds += Character.Protagonist.Rate;
+                accountingReport.Add(String.Format("Продажа кубометра стигона: +{0} кредов", Character.Protagonist.Rate));
+                accountingReport.Add(String.Format("GOOD|Итого к зачислению: {0} кредов", earnedCreds));
+
+                Character.Protagonist.Rate -= 5;
+                accountingReport.Add(String.Format("Курс стигона упал до: {0} кредов", Character.Protagonist.Rate));
+            }
+
+            accountingReport.Add(String.Empty);
+            accountingReport.Add("BIG|ИТОГО:");
+            accountingReport.Add(String.Format("Вы продали: {0} кубометров стигона", soldStigon));
+            accountingReport.Add(String.Format("GOOD|Вы получили по плавающему курсу: {0} кредов", earnedCreds));
+
+            Character.Protagonist.Creds += earnedCreds;
+
+            return accountingReport;
         }
     }
 }

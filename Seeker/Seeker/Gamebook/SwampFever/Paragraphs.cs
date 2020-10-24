@@ -389,6 +389,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [34] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "SellStigon",
+                        ButtonName = "Продать стигон",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 30, Text = "Далее" },

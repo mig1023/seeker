@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.SwampFever
         public string Name { get; set; }
         public int Fury { get; set; }
         public int Creds { get; set; }
+        public int Stigon { get; set; }
         public int Rate { get; set; }
         public int Hitpoints { get; set; }
 
@@ -27,6 +28,7 @@ namespace Seeker.Gamebook.SwampFever
             Name = String.Empty;
             Fury = 0;
             Creds = 0;
+            Stigon = 0;
             Rate = 100;
             Hitpoints = 1;
             SecondEngine = 0;
@@ -44,6 +46,7 @@ namespace Seeker.Gamebook.SwampFever
                 Name = this.Name,
                 Fury = this.Fury,
                 Creds = this.Creds,
+                Stigon = this.Stigon,
                 Rate = this.Rate,
                 Hitpoints = this.Hitpoints,
                 SecondEngine = this.SecondEngine,
