@@ -430,6 +430,11 @@ namespace Seeker.Gamebook.SwampFever
                         Name = "Stigon",
                         Value = 2,
                     },
+                    new Modification
+                    {
+                        Name = "Rate",
+                        Value = 15,
+                    },
                 },
 
                 Options = new List<Option>
@@ -747,6 +752,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [58] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Rate",
+                        Value = -10,
+                    },
+                },
+
                 Trigger = "3",
 
                 Options = new List<Option>
@@ -841,6 +855,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [67] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Rate",
+                        Value = 50,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 45, Text = "Далее" },
@@ -1202,6 +1225,16 @@ namespace Seeker.Gamebook.SwampFever
             },
             [98] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Rate",
+                        Value = 3,
+                        Multiplication = true,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 45, Text = "Далее" },
@@ -1499,6 +1532,11 @@ namespace Seeker.Gamebook.SwampFever
                     {
                         Name = "Fury",
                         Value = 1,
+                    },
+                    new Modification
+                    {
+                        Name = "Rate",
+                        Value = 60,
                     },
                 },
 
@@ -2206,6 +2244,16 @@ namespace Seeker.Gamebook.SwampFever
             },
             [187] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Rate",
+                        Value = 2,
+                        Division = true,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 30, Text = "Далее" },
@@ -2288,6 +2336,11 @@ namespace Seeker.Gamebook.SwampFever
                     {
                         Name = "Creds",
                         Value = 30,
+                    },
+                    new Modification
+                    {
+                        Name = "Rate",
+                        Value = 100,
                     },
                 },
 

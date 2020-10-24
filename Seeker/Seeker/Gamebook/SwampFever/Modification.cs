@@ -8,9 +8,9 @@ namespace Seeker.Gamebook.SwampFever
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public bool Multiplication { get; set; }
+        public bool Division { get; set; }
         public string ValueString { get; set; }
-        public bool Empty { get; set; }
-        public bool Init { get; set; }
 
         public void Do()
         {
@@ -28,7 +28,12 @@ namespace Seeker.Gamebook.SwampFever
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-                currentValue += Value;
+                if (Multiplication)
+                    currentValue *= Value;
+                else if (Division)
+                    currentValue /= Value;
+                else
+                    currentValue += Value;
 
                 if ((Name == "Stigon") && (currentValue > 6))
                     currentValue = 6;
