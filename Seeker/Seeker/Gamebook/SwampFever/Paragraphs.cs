@@ -68,7 +68,6 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 4, Text = "Далее" },
-                    new Option { Destination = 33, Text = "ТЕСТ" },
                 }
             },
             [2] = new Paragraph

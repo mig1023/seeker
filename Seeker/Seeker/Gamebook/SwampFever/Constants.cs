@@ -34,6 +34,43 @@ namespace Seeker.Gamebook.SwampFever
             };
         }
 
+        public static Dictionary<int, Dictionary<string, string>> GetUpgrates()
+        {
+            return new Dictionary<int, Dictionary<string, string>>
+            {
+                [1] = new Dictionary<string, string>
+                {
+                    ["name"] = "SecondEngine",
+                    ["output"] = "Второй двигатель",
+                },
+                [2] = new Dictionary<string, string>
+                {
+                    ["name"] = "Stealth",
+                    ["output"] = "Стелс-покрытие",
+                },
+                [3] = new Dictionary<string, string>
+                {
+                    ["name"] = "Radar",
+                    ["output"] = "Радар",
+                },
+                [4] = new Dictionary<string, string>
+                {
+                    ["name"] = "CircularSaw",
+                    ["output"] = "Циркулярная пила",
+                },
+                [5] = new Dictionary<string, string>
+                {
+                    ["name"] = "Flamethrower",
+                    ["output"] = "Реактивный огнемёт",
+                },
+                [6] = new Dictionary<string, string>
+                {
+                    ["name"] = "PlasmaCannon",
+                    ["output"] = "Спаренная плазмопушка",
+                },
+            };
+        }
+
         public string GetButtonsColor(ButtonTypes type)
         {
             return (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);

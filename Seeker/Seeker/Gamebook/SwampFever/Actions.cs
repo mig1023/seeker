@@ -68,7 +68,9 @@ namespace Seeker.Gamebook.SwampFever
         public bool IsButtonEnabled()
         {
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Creds < Price);
-            bool disabledByUsed = (int)Character.Protagonist.GetType().GetProperty(Benefit.Name).GetValue(Character.Protagonist, null) > 0;
+            bool disabledByUsed = ((Benefit != null) &&
+                ((int)Character.Protagonist.GetType().GetProperty(Benefit.Name).GetValue(Character.Protagonist, null) > 0)
+            );
 
             return (disabledByPrice || disabledByUsed ? false : true);
         }
@@ -99,7 +101,7 @@ namespace Seeker.Gamebook.SwampFever
 
             List<string> mentalCheck = new List<string> {
                 String.Format("Ментальная проверка (по уровню {0}):", Level),
-                String.Format("1. На игральной кости выпало: {0} ⚄", mentalDice),
+                String.Format("1. На кубике выпало: {0} ⚄", mentalDice),
                 String.Format("2. {0}{1} уровень Ярости", (fury < 0 ? "-" : "+"), Math.Abs(fury)),
                 String.Format("3. Итого получаем {0}, что {1}меньше {2} уровня проверки", mentalAndFury, (Level > mentalAndFury ? String.Empty : "не "), Level)
             };
@@ -120,6 +122,50 @@ namespace Seeker.Gamebook.SwampFever
             }
 
             return new List<string> { "RELOAD" };
+        }
+
+        private bool Upgrade(ref List<int> myCombination, ref List<string> fight)
+        {
+            int upgrades = 0;
+
+            bool upgradeInAction = false;
+
+            for(int i = 1; i <= Constants.GetUpgrates().Count; i++)
+            {
+                string tmp = Constants.GetUpgrates()[i]["name"];
+                upgrades += (int)Character.Protagonist.GetType().GetProperty(Constants.GetUpgrates()[i]["name"]).GetValue(Character.Protagonist, null);
+            }
+
+            if (upgrades == 0)
+                return upgradeInAction;
+
+            fight.Add(String.Empty);
+
+            int upgradeDice = Game.Dice.Roll();
+
+            fight.Add(String.Format("Кубик проверки апгрейда: {0} ⚄", upgradeDice));
+
+            for (int i = 1; i <= Constants.GetUpgrates().Count; i++)
+            {
+                if ((int)Character.Protagonist.GetType().GetProperty(Constants.GetUpgrates()[i]["name"]).GetValue(Character.Protagonist, null) == 0)
+                    continue;
+
+                bool inAction = (upgradeDice == i);
+
+                fight.Add(String.Format(
+                    "{0}{1} - {2}", (inAction ? "GOOD|" : String.Empty), Constants.GetUpgrates()[i]["output"], (inAction ? "В ДЕЙСТВИИ!" : "нет")
+                ));
+
+                if (inAction)
+                {
+                    myCombination.Add(upgradeDice);
+                    upgradeInAction = true;
+                }
+            }
+
+            fight.Add(String.Empty);
+
+            return upgradeInAction;
         }
 
         public List<string> Fight()
@@ -143,6 +189,9 @@ namespace Seeker.Gamebook.SwampFever
                 enemyCombination.Add(int.Parse(dice));
 
             fight.Add(String.Format("Его комбинация: {0}", String.Join(" - ", enemyCombination.ToArray())));
+
+            if (Upgrade(ref myCombination, ref fight))
+                fight.Add(String.Format("Теперь ваша комбинация: {0} ⚄", String.Join(" ⚄ - ", myCombination.ToArray())));
 
             while (true)
             {
@@ -208,12 +257,12 @@ namespace Seeker.Gamebook.SwampFever
                             int myDice = Game.Dice.Roll();
                             int myBonus = CountInCombination(myCombination, range);
                             int myAttack = myDice + myBonus;
-                            fight.Add(String.Format("Ваша атака: {0} ⚄ + {1} за {2}-ки, итого {3}", myDice, myBonus, range, myAttack));
+                            fight.Add(String.Format("Ваша атака: {0} ⚄, + {1} за {2}-ки, итого {3}", myDice, myBonus, range, myAttack));
 
                             int enemyDice = Game.Dice.Roll();
                             int enemyBonus = CountInCombination(enemyCombination, range);
                             int enemyAttack = enemyDice + enemyBonus;
-                            fight.Add(String.Format("Атака противника: {0} ⚄ + {1} за {2}-ки, итого {3}", enemyDice, enemyBonus, range, enemyAttack));
+                            fight.Add(String.Format("Атака противника: {0} ⚄, + {1} за {2}-ки, итого {3}", enemyDice, enemyBonus, range, enemyAttack));
 
                             if ((myAttack > enemyAttack) && (range == 4))
                             {
@@ -248,8 +297,8 @@ namespace Seeker.Gamebook.SwampFever
                         int myPenalty = CountInCombination(enemyCombination, 2);
                         int enemyEvasion = myDice + myBonus - myPenalty;
                         fight.Add(String.Format(
-                            "Противник пытется уклониться: {0} ⚄ +{1} за ваши 3-ки -{2} за его 2-ки, итого {3} {4} 2",
-                            myDice, myBonus, myPenalty, enemyEvasion, (enemyEvasion > 2 ? ">" : "<=")
+                            "Противник пытется уклониться: {0} ⚄, +{1} за ваши 3-ки, -{2} за его 2-ки, итого {3} - {4} порогового значения в 2",
+                            myDice, myBonus, myPenalty, enemyEvasion, (enemyEvasion > 2 ? "больше" : "меньше или равно")
                         ));
 
                         if (enemyEvasion > 2)
@@ -267,8 +316,8 @@ namespace Seeker.Gamebook.SwampFever
                         int enemyPenalty = CountInCombination(myCombination, 2);
                         int myEvasion = enemyDice + enemyBonus - enemyPenalty;
                         fight.Add(String.Format(
-                            "Вы пытется уклониться: {0} ⚄ +{1} за его 3ки -{2} за ваши 2-ки, итого {3} {4} 2",
-                            enemyDice, enemyBonus, enemyPenalty, myEvasion, (myEvasion > 2 ? ">" : "<=")
+                            "Вы пытется уклониться: {0} ⚄, +{1} за его 3ки, -{2} за ваши 2-ки, итого {3} - {4} порогового значения 2",
+                            enemyDice, enemyBonus, enemyPenalty, myEvasion, (myEvasion > 2 ? "больше" : "меньше или равно")
                         ));
 
                         if (myEvasion > 2)
