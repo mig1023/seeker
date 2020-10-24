@@ -18,10 +18,10 @@ namespace Seeker.Gamebook.SwampFever
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.Background] = "#34411c",
+            [ColorTypes.Background] = "#485432",
             [ColorTypes.Font] = "#eaece8",
             [ColorTypes.ActionBox] = "#707a60",
-            [ColorTypes.StatusBar] = "#485432",
+            [ColorTypes.StatusBar] = "#34411c",
         };
 
         public static Dictionary<int, string> GetRangeTypes()
