@@ -423,6 +423,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [36] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Stigon",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 112, Text = "Далее" },
@@ -1158,6 +1167,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [95] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Stigon",
+                        Value = 1,
+                    },
+                },
+
                 Trigger = "18",
 
                 Options = new List<Option>
@@ -1191,6 +1209,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [99] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Stigon",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 96, Text = "Далее" },
@@ -1261,6 +1288,12 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyCombination = "5-5-2",
 
                         Aftertext = "Если вы не будете зажарены заживо и победите, то сможете забрать 1 кубометр стигона. Если стычка завершится ничьёй, у вас будет выбор: сбежать или продолжить схватку.",
+
+                        Benefit = new Modification
+                        {
+                            Name = "Stigon",
+                            Value = 1,
+                        },
                     },
                 },
 
@@ -1323,6 +1356,12 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyCombination = "5-5-4-3",
 
                         Aftertext = "Если победа за вами, то можете забрать 2 кубометра стигона. Если бой завершился ничьёй, то у вас есть выбор: продолжить стычку или ретироваться.",
+
+                        Benefit = new Modification
+                        {
+                            Name = "Stigon",
+                            Value = 2,
+                        },
                     },
                 },
 
@@ -1639,6 +1678,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [138] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Stigon",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 59, Text = "Далее" },
@@ -1758,6 +1806,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [152] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Stigon",
+                        Value = 1,
+                    },
+                },
+
                 Trigger = "5",
 
                 Options = new List<Option>
@@ -1803,6 +1860,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [155] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Stigon",
+                        Value = 1,
+                    },
+                },
+
                 Trigger = "30",
 
                 Options = new List<Option>
@@ -2034,6 +2100,12 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyCombination = "5-5-5-2-2-2-2",
 
                         Aftertext = "Если одержите верх, то в качестве награды получите кубометр стигона. При ничьей можете отступить или продолжить схватку. При поражении ваше безжизненное тело станет объектом инопланетного изучения.",
+
+                        Benefit = new Modification
+                        {
+                            Name = "Stigon",
+                            Value = 1,
+                        },
                     },
                 },
 
@@ -2141,6 +2213,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [188] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Stigon",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 194, Text = "Далее" },
@@ -2166,6 +2247,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [190] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Stigon",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 194, Text = "Далее" },

@@ -30,6 +30,9 @@ namespace Seeker.Gamebook.SwampFever
 
                 currentValue += Value;
 
+                if ((Name == "Stigon") && (currentValue > 6))
+                    currentValue = 6;
+
                 Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
             }
         }
