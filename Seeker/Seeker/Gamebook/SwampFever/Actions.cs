@@ -98,15 +98,29 @@ namespace Seeker.Gamebook.SwampFever
             int mentalDice = Game.Dice.Roll();
             int fury = Character.Protagonist.Fury;
             int mentalAndFury = mentalDice + fury;
+            int level = Level;
 
             List<string> mentalCheck = new List<string> {
-                String.Format("Ментальная проверка (по уровню {0}):", Level),
-                String.Format("1. На кубике выпало: {0} ⚄", mentalDice),
-                String.Format("2. {0}{1} уровень Ярости", (fury < 0 ? "-" : "+"), Math.Abs(fury)),
-                String.Format("3. Итого получаем {0}, что {1}меньше {2} уровня проверки", mentalAndFury, (Level > mentalAndFury ? String.Empty : "не "), Level)
+                String.Format("Ментальная проверка (по уровню {0}):", level),
+                String.Format("1. Бросок кубика: {0} ⚄", mentalDice),
+                String.Format("2. {0}{1} к броску за уровень Ярости", (fury < 0 ? "-" : "+"), Math.Abs(fury)),
             };
 
-            mentalCheck.Add(Level > mentalAndFury ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            int ord = 3;
+
+            if (Character.Protagonist.Harmonizer > 0)
+            {
+                level += 1;
+                ord += 1;
+                mentalCheck.Add(String.Format("3. +1 к уровню проверки за Гармонизатор (теперь уровень {0})", level));
+            }
+
+            mentalCheck.Add(String.Format(
+                "{0}. Итого получаем {1}, что {2}меньше {3} уровня проверки",
+                ord, mentalAndFury, (level > mentalAndFury ? String.Empty : "не "), level
+            ));
+
+            mentalCheck.Add(level > mentalAndFury ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
             return mentalCheck;
         }
