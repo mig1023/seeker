@@ -67,7 +67,10 @@ namespace Seeker.Gamebook.SwampFever
 
         public bool IsButtonEnabled()
         {
-            return true;
+            bool disabledByPrice = (Price > 0) && (Character.Protagonist.Creds < Price);
+            bool disabledByUsed = (int)Character.Protagonist.GetType().GetProperty(Benefit.Name).GetValue(Character.Protagonist, null) > 0;
+
+            return (disabledByPrice || disabledByUsed ? false : true);
         }
 
         public static bool CheckOnlyIf(string option)

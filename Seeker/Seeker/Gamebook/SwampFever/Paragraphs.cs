@@ -536,20 +536,6 @@ namespace Seeker.Gamebook.SwampFever
                     new Actions
                     {
                         ActionName = "Get",
-                        Text = "Реактивный огнемёт, 30 кредитов",
-                        ButtonName = "Купить огнемёт",
-                        Price = 30,
-
-                        Benefit = new Modification
-                        {
-                            Name = "Flamethrower",
-                            Value = 1,
-                        },
-                    },
-
-                    new Actions
-                    {
-                        ActionName = "Get",
                         Text = "Спаренная плазмопушка, 35 кредитов",
                         ButtonName = "Купить плазмопушку",
                         Price = 30,
