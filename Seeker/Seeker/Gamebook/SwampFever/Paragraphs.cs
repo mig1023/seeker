@@ -53,15 +53,12 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyCombination = "5-4",
 
                         Aftertext = "Ментор советует применить тактику 'Снайпера' или 'Диверсанта' (так комбинации '6-3-3' и '4-1-1' принесут стопроцентную победу). Если в схватке с термитом вы одержите верх, то в качестве бонуса компания подарит вам 5 кредов. Иначе придётся начинать странствие без денег.",
-                    },
-                },
 
-                Modification = new List<Modification>
-                {
-                    new Modification
-                    {
-                        Name = "Creds",
-                        Value = 5,
+                        Benefit = new Modification
+                        {
+                            Name = "Creds",
+                            Value = 5,
+                        },
                     },
                 },
 
@@ -1509,19 +1506,16 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyCombination = "5-5-5-5-3-3",
 
                         Aftertext = "Если вы одержите верх, то получите в награду 100 кредов. При ничьей возникнет выбор: продолжить схватку или отступить. При поражении вас уничтожат Резак-Лучи, кроме того, тварь мутирует.",
+
+                        Trigger = "14",
+
+                        Benefit = new Modification
+                        {
+                            Name = "Creds",
+                            Value = 100,
+                        },
                     },
                 },
-
-                Modification = new List<Modification>
-                {
-                    new Modification
-                    {
-                        Name = "Creds",
-                        Value = 100,
-                    },
-                },
-
-                Trigger = "14, 12",
 
                 Options = new List<Option>
                 {
@@ -1782,19 +1776,16 @@ namespace Seeker.Gamebook.SwampFever
                         EnemyCombination = "6-6-6-6-3-3",
 
                         Aftertext = "Если вы одолеете врага, то получите в награду 150 кредов. При ничьей возникнет выбор: продолжить схватку или ретироваться. При поражении вас взорвут.",
+
+                        Benefit = new Modification
+                        {
+                            Name = "Creds",
+                            Value = 150,
+                        },
                     },
                 },
 
                 Trigger = "14",
-
-                Modification = new List<Modification>
-                {
-                    new Modification
-                    {
-                        Name = "Creds",
-                        Value = 150,
-                    },
-                },
 
                 Options = new List<Option>
                 {

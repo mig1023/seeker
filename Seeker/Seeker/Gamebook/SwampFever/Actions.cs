@@ -68,7 +68,7 @@ namespace Seeker.Gamebook.SwampFever
         public bool IsButtonEnabled()
         {
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Creds < Price);
-            bool disabledByUsed = ((Benefit != null) &&
+            bool disabledByUsed = (String.IsNullOrEmpty(EnemyName) && (Benefit != null) &&
                 ((int)Character.Protagonist.GetType().GetProperty(Benefit.Name).GetValue(Character.Protagonist, null) > 0)
             );
 
@@ -244,6 +244,10 @@ namespace Seeker.Gamebook.SwampFever
                         if (range == 4)
                         {
                             fight.Add("BIG|GOOD|Вы уничтожили противника тараном, оружием героев :)");
+
+                            if (Benefit != null)
+                                Benefit.Do();
+
                             return fight;
                         }
                         else
@@ -271,16 +275,20 @@ namespace Seeker.Gamebook.SwampFever
                             int myDice = Game.Dice.Roll();
                             int myBonus = CountInCombination(myCombination, range);
                             int myAttack = myDice + myBonus;
-                            fight.Add(String.Format("Ваша атака: {0} ⚄, + {1} за {2}-ки, итого {3}", myDice, myBonus, range, myAttack));
+                            fight.Add(String.Format("Ваша атака: {0} ⚄, +{1} за {2}-ки, итого {3}", myDice, myBonus, range, myAttack));
 
                             int enemyDice = Game.Dice.Roll();
                             int enemyBonus = CountInCombination(enemyCombination, range);
                             int enemyAttack = enemyDice + enemyBonus;
-                            fight.Add(String.Format("Атака противника: {0} ⚄, + {1} за {2}-ки, итого {3}", enemyDice, enemyBonus, range, enemyAttack));
+                            fight.Add(String.Format("Атака противника: {0} ⚄, +{1} за {2}-ки, итого {3}", enemyDice, enemyBonus, range, enemyAttack));
 
                             if ((myAttack > enemyAttack) && (range == 4))
                             {
                                 fight.Add("BIG|GOOD|Вы уничтожили противника тараном, оружием героев :)");
+
+                                if (Benefit != null)
+                                    Benefit.Do();
+
                                 return fight;
                             }
                             else if ((myAttack < enemyAttack) && (range == 4))
@@ -318,6 +326,10 @@ namespace Seeker.Gamebook.SwampFever
                         if (enemyEvasion > 2)
                         {
                             fight.Add("BIG|GOOD|Вы уничтожили противника :)");
+
+                            if (Benefit != null)
+                                Benefit.Do();
+
                             return fight;
                         }
                         else
