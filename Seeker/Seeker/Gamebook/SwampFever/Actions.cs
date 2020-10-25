@@ -405,5 +405,60 @@ namespace Seeker.Gamebook.SwampFever
 
             return accountingReport;
         }
+
+        public List<string> ContinuousTrackPull()
+        {
+            List<string> pullReport = new List<string>();
+
+            int thrust = 0;
+
+            for (int i = 0; i < 4; i++)
+            {
+                int pull = Game.Dice.Roll();
+
+                pullReport.Add(String.Format("Тяга гусениц: {0} ⚄", pull));
+
+                thrust += pull;
+            }
+
+            pullReport.Add(String.Format("Итого, вы развили тягу: {0}", thrust));
+            pullReport.Add(thrust >= 14 ? "BIG|GOOD|Вы вытащили ялик :)" : "BIG|BAD|Трос оборвался и ялик утонул :(");
+
+            return pullReport;
+        }
+
+        public List<string> PropellersPull()
+        {
+            List<string> pullReport = new List<string>();
+
+            int thrust = 0;
+
+            for (int i = 0; i < 4; i++)
+            {
+                int pull = Game.Dice.Roll();
+
+                if (pull > 2)
+                {
+                    pullReport.Add(String.Format("Тяга гребных винтов: {0} ⚄, -2 за винты, итого {1}", pull, (pull - 2)));
+
+                    thrust += (pull - 2);
+                }
+                else
+                {
+                    pullReport.Add(String.Format("Тяга гребных винтов: {0} ⚄, +1 бонусный бросок", pull));
+
+                    thrust += pull;
+                    i -= 1;
+                }
+
+                if (thrust >= 14)
+                    break;
+            }
+
+            pullReport.Add(String.Format("Итого, вы развили тягу: {0}", thrust));
+            pullReport.Add(thrust >= 14 ? "BIG|GOOD|Вы вытащили ялик :)" : "BIG|BAD|Трос оборвался и ялик утонул :(");
+
+            return pullReport;
+        }
     }
 }

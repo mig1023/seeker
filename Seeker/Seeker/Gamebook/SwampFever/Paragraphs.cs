@@ -65,6 +65,7 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 4, Text = "Далее" },
+                    new Option { Destination = 22, Text = "TEST" },
                 }
             },
             [2] = new Paragraph
@@ -259,10 +260,25 @@ namespace Seeker.Gamebook.SwampFever
             },
             [22] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "ContinuousTrackPull",
+                        ButtonName = "Гусеничный режим",
+                        Aftertext = "или",
+                    },
+                    new Actions
+                    {
+                        ActionName = "PropellersPull",
+                        ButtonName = "Режим амфибии",
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 111, Text = "Если вы прошли испытание за 4 броска кубика" },
-                    new Option { Destination = 65, Text = "В противном случае трос обрывается, и ялик скрывается в мутной пучине" },
+                    new Option { Destination = 111, Text = "Вы вытащили ялик" },
+                    new Option { Destination = 65, Text = "Ялик утонул" },
                 }
             },
             [23] = new Paragraph
