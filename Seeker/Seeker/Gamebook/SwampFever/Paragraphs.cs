@@ -65,7 +65,6 @@ namespace Seeker.Gamebook.SwampFever
                 Options = new List<Option>
                 {
                     new Option { Destination = 4, Text = "Далее" },
-                    new Option { Destination = 22, Text = "TEST" },
                 }
             },
             [2] = new Paragraph
@@ -302,6 +301,20 @@ namespace Seeker.Gamebook.SwampFever
             },
             [25] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "SellAcousticMembrane",
+                        ButtonName = "Продать Акустическую Мембрану",
+                    },
+                     new Actions
+                    {
+                        ActionName = "SellLiveMucus",
+                        ButtonName = "Продать Живую Слизь",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 30, Text = "Далее" },
@@ -659,6 +672,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [47] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "AcousticMembrane",
+                        Value = 1,
+                    },
+                },
+
                 Trigger = "17",
 
                 Options = new List<Option>
@@ -673,7 +695,7 @@ namespace Seeker.Gamebook.SwampFever
                     new Option { Destination = 115, Text = "На северо-восток - Органная Пещера" },
                     new Option { Destination = 60, Text = "На юго-запад - Мегапровал" },
                     new Option { Destination = 143, Text = "На юг - Биполярный Кочкарник" },
-                    new Option { Destination = 128, Text = "v восток - Гнилотопь" },
+                    new Option { Destination = 128, Text = "На восток - Гнилотопь" },
                 }
             },
             [49] = new Paragraph
@@ -1653,6 +1675,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [130] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "LiveMucus",
+                        Value = 1,
+                    },
+                },
+
                 RemoveTrigger = "13",
 
                 Options = new List<Option>

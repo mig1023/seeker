@@ -74,8 +74,10 @@ namespace Seeker.Gamebook.SwampFever
             bool disabledByUsed = (String.IsNullOrEmpty(EnemyName) && (Benefit != null) &&
                 ((int)Character.Protagonist.GetType().GetProperty(Benefit.Name).GetValue(Character.Protagonist, null) > 0)
             );
+            bool disabledSellingMembrane = (ActionName == "SellAcousticMembrane") && (Character.Protagonist.AcousticMembrane <= 0);
+            bool disabledSellingMucus = (ActionName == "SellLiveMucus") && (Character.Protagonist.LiveMucus <= 0);
 
-            return (disabledByPrice || disabledByUsed ? false : true);
+            return (disabledByPrice || disabledByUsed || disabledSellingMembrane || disabledSellingMucus ? false : true);
         }
 
         public static bool CheckOnlyIf(string option)
@@ -404,6 +406,22 @@ namespace Seeker.Gamebook.SwampFever
             Character.Protagonist.Creds += earnedCreds;
 
             return accountingReport;
+        }
+
+        public List<string> SellAcousticMembrane()
+        {
+            Character.Protagonist.Creds += 100;
+            Character.Protagonist.AcousticMembrane -= 1;
+
+            return new List<string> { "RELOAD" };
+        }
+
+        public List<string> SellLiveMucus()
+        {
+            Character.Protagonist.Creds += 100;
+            Character.Protagonist.LiveMucus -= 1;
+
+            return new List<string> { "RELOAD" };
         }
 
         public List<string> ContinuousTrackPull()

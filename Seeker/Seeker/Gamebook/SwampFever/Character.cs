@@ -23,6 +23,9 @@ namespace Seeker.Gamebook.SwampFever
         public int PlasmaCannon { get; set; }
         public int Harmonizer { get; set; }
 
+        public int AcousticMembrane { get; set; }
+        public int LiveMucus { get; set; }
+
         public void Init()
         {
             Name = String.Empty;
@@ -38,6 +41,8 @@ namespace Seeker.Gamebook.SwampFever
             Flamethrower = 0;
             PlasmaCannon = 0;
             Harmonizer = 0;
+            AcousticMembrane = 0;
+            LiveMucus = 0;
         }
 
         public Character Clone()
@@ -56,6 +61,8 @@ namespace Seeker.Gamebook.SwampFever
                 Flamethrower = this.Flamethrower,
                 PlasmaCannon = this.PlasmaCannon,
                 Harmonizer = this.Harmonizer,
+                AcousticMembrane = this.AcousticMembrane,
+                LiveMucus = this.LiveMucus,
             };
         }
     }
