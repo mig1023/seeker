@@ -649,6 +649,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [44] = new Paragraph
             {
+                Image = "SwampFever_SulfurCavity.jpg",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 69, Text = "Испытание завершилось победой" },
