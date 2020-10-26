@@ -27,6 +27,7 @@ namespace Seeker.Gamebook.SwampFever
 
             paragraph.Trigger = source.Trigger;
             paragraph.RemoveTrigger = source.RemoveTrigger;
+            paragraph.Image = source.Image;
 
             return paragraph;
         }
@@ -1375,6 +1376,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [106] = new Paragraph
             {
+                Image = "SwampFever_CrystalPath.jpg",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 49, Text = "А" },

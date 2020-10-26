@@ -80,6 +80,16 @@ namespace Seeker
 
             Text.Children.Add(Game.Interface.Text(Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty));
 
+            if (!String.IsNullOrEmpty(paragraph.Image))
+            {
+                Image illustration = new Image
+                {
+                    Source = paragraph.Image,
+                    Aspect = Aspect.AspectFill
+                };
+                Text.Children.Add(illustration);
+            }
+
             Game.Option.Trigger(paragraph.Trigger);
             Game.Option.Trigger(paragraph.RemoveTrigger, remove: true);
 
