@@ -1739,7 +1739,7 @@ namespace Seeker.Gamebook.SwampFever
                 {
                     new Option { Destination = 63, Text = "На севере - Клейкое Озеро" },
                     new Option { Destination = 119, Text = "На западе - Рыжая Мшара" },
-                    new Option { Destination = 64, Text = "На юго-западе -Тихий Омут" },
+                    new Option { Destination = 64, Text = "На юго-западе - Тихий Омут" },
                     new Option { Destination = 131, Text = "На северо-востоке - Край Ветров" },
                 }
             },
@@ -2342,6 +2342,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [189] = new Paragraph
             {
+                Image = "SwampFever_Hunting.jpg",
+
                 Modification = new List<Modification>
                 {
                     new Modification
