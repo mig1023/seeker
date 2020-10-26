@@ -2174,6 +2174,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [176] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "TugOfWar",
+                        ButtonName = "Сразиться",
+                    },
+                },
+
                 Image = "SwampFever_TugOfWar",
 
                 Options = new List<Option>

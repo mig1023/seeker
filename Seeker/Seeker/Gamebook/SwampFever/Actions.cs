@@ -478,5 +478,106 @@ namespace Seeker.Gamebook.SwampFever
 
             return pullReport;
         }
+
+        public List<string> TugOfWar()
+        {
+            List<string> warReport = new List<string>();
+
+            int position = 0;
+            bool battleCry = false; 
+
+            while ((position > -3) && (position < 3))
+            {
+                if (position == 0)
+                    warReport.Add("BOLD|ПОЛОЖЕНИЕ: на исходной точке");
+                else
+                    warReport.Add(String.Format("BOLD|ПОЛОЖЕНИЕ: вы {0} на {1} шаг", (position > 0 ? "побеждаете" : "проигрываете"), Math.Abs(position)));
+
+                bool twoStep = false;
+                int myСhoice = 0;
+
+                int yatiForce = 10 + (Math.Abs(position) * 2);
+
+                warReport.Add(String.Format("Тяга яти: {0}", yatiForce));
+
+                int erikForce = Game.Dice.Roll();
+                int jonyForce = Game.Dice.Roll();
+
+                warReport.Add(String.Format("Тяга Эрика ({0} ⚄) и Джонни ({1} ⚄): {2}", erikForce, jonyForce, (erikForce + jonyForce)));
+
+                int myForce = Game.Dice.Roll();
+                int totalForce = erikForce + jonyForce + jonyForce;
+
+                warReport.Add(String.Format("Ваша тяга: {0} ⚄", myForce));
+
+                if (battleCry)
+                {
+                    totalForce += 1;
+                    warReport.Add(String.Format("+1 к вашей тяге за боевой клич на прошлом этапе, итого тяга равна {0}", myForce));
+                } 
+                   
+                battleCry = false;
+
+                do
+                {
+                    myСhoice = Game.Dice.Roll();
+                }
+                while (myСhoice > 4);
+
+                switch(myСhoice)
+                {
+                    case 1:
+                        warReport.Add("Ваша тактика: «Силовой отход»");
+                        twoStep = true;
+                        break;
+
+                    case 2:
+                        warReport.Add("Ваша тактика: «Боевой клич»");
+                        battleCry = true;
+                        break;
+
+                    case 3:
+                        myForce += 2;
+
+                        warReport.Add("Ваша тактика: «Резкий рывок»");
+                        warReport.Add(String.Format("+2 к вашей тяге за рывок, итого тяга равна {0}", myForce));
+                        break;
+
+                    case 4:
+                        warReport.Add("Ваша тактика: «Синергия»");
+                        
+                        if ((myForce == erikForce) || (myForce == jonyForce))
+                        {
+                            warReport.Add("Значения тяги совпали, общая тяга умножается вдвое!");
+                            totalForce *= 2;
+                        }
+                        else
+                            warReport.Add("Значения тяги не совпали, общая тяга не изменилась...");
+
+                        break;
+                }
+
+                warReport.Add(String.Format("Общая тяга: {0}", totalForce));
+
+                if (totalForce > yatiForce)
+                {
+                    warReport.Add(String.Format("GOOD|Вы пересилили яти! Он шагнул вперёд{0}!", twoStep ? " дважды" : String.Empty));
+                    position += (twoStep ? 2 : 1);
+                }
+                else if (totalForce < yatiForce)
+                {
+                    warReport.Add("BAD|Яти вас пересилил! Вы шагнул вперёд!");
+                    position -= 1;
+                }
+                else
+                    warReport.Add("BOLD|Ничья на этом этапе.");
+
+                warReport.Add(String.Empty);
+            }
+
+            warReport.Add(position > 0 ? "BIG|GOOD|Вы выиграли :)" : "BIG|BAD|Вы проиграли :(");
+
+            return warReport;
+        }
     }
 }
