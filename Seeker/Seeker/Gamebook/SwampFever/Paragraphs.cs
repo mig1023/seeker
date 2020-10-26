@@ -1563,6 +1563,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [121] = new Paragraph
             {
+                Image = "SwampFever_QuietPool.jpg",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 137, Text = "'20-17-15-9-6-10'" },
