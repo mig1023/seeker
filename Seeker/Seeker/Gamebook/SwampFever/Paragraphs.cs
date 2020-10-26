@@ -134,6 +134,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [10] = new Paragraph
             {
+                Image = "SwampFever_SpectralBushes.jpg",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 102, Text = "По первой" },
