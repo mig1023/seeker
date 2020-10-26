@@ -2174,6 +2174,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [176] = new Paragraph
             {
+                Image = "SwampFever_TugOfWar",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 193, Text = "Вы сделали три шага назад и победили" },
