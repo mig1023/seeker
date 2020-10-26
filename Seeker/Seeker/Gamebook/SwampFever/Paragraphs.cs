@@ -1717,6 +1717,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [133] = new Paragraph
             {
+                Image = "SwampFever_BipolarKochkarnik.jpg",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 37, Text = "Первому" },

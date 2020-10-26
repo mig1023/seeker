@@ -165,6 +165,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\SwampFever_QuietPool.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SwampFever_BipolarKochkarnik.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
