@@ -26,6 +26,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 paragraph.Modification = new List<Interfaces.IModification>(source.Modification);
 
             paragraph.Trigger = source.Trigger;
+            paragraph.Image = source.Image;
 
             return paragraph;
         }
@@ -1119,6 +1120,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Init = true,
                     },
                 },
+
+                Image = "AdventuresOfABeardlessDeceiver_Akyn.jpg",
 
                 Actions = new List<Actions>
                 {
