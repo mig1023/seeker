@@ -2028,6 +2028,8 @@ namespace Seeker.Gamebook.SwampFever
             },
             [161] = new Paragraph
             {
+                Image = "SwampFever_LarchThorns.jpg",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 192, Text = "Далее" },
