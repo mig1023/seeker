@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.SwampFever
 
         public int Level { get; set; }
         public int Price { get; set; }
+        public bool Birds { get; set; }
         public Modification Benefit { get; set; }
 
 
@@ -212,6 +213,8 @@ namespace Seeker.Gamebook.SwampFever
             if (Upgrade(ref myCombination, ref fight))
                 fight.Add(String.Format("Теперь ваша комбинация: {0} ⚄", String.Join(" ⚄ - ", myCombination.ToArray())));
 
+            bool birds = Birds;
+
             while (true)
             {
                 if (myCombination.Contains(1))
@@ -330,12 +333,24 @@ namespace Seeker.Gamebook.SwampFever
 
                         if (enemyEvasion > 2)
                         {
-                            fight.Add("BIG|GOOD|Вы уничтожили противника :)");
+                            if (birds)
+                            {
+                                fight.Add("GOOD|Вы уничтожили одну из птиц");
 
-                            if (Benefit != null)
-                                Benefit.Do();
+                                birds = false;
 
-                            return fight;
+                                foreach (int dice in new int[] { 5, 4, 3 })
+                                    enemyCombination.RemoveAt(dice);
+                            }
+                            else
+                            {
+                                fight.Add("BIG|GOOD|Вы уничтожили противника :)");
+
+                                if (Benefit != null)
+                                    Benefit.Do();
+
+                                return fight;
+                            }
                         }
                         else
                             fight.Add("Противник смог уклониться");
