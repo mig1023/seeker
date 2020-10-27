@@ -729,7 +729,37 @@ namespace Seeker.Gamebook.SwampFever
             }
         }
 
-        
+        public int ThinkAboutMovement(int myPosition, int step, List<int> bombs, ref List<string> cavityReport)
+        {
+            int myMovementType = 0;
+
+            if (!bombs.Contains(myPosition + 4) && !bombs.Contains(myPosition + 3) && !bombs.Contains(myPosition + 5))
+            {
+                cavityReport.Add("Думаем: попробуем рвануть на гусеницах");
+                myMovementType = 6;
+            }
+            else if (!bombs.Contains(myPosition + 2) && (!bombs.Contains(myPosition + 1) || !bombs.Contains(myPosition + 3)))
+            {
+                cavityReport.Add("Думаем: попробуем тихонечко, на гребных винтах");
+                myMovementType = 1;
+            }
+            else if ((step > 2))
+            {
+                cavityReport.Add("Думаем: опасно, но нужно срочно прорываться, иначе накроет лава!");
+                myMovementType = 6;
+            }
+            else
+                cavityReport.Add("Думаем: лучше постоим нафиг");
+
+            if (bombs.Contains(myPosition) && (myMovementType == 0))
+            {
+                cavityReport.Add("Думаем: сейчас на вас упадёт вулканическая бомба - нужно рвать когти!");
+                myMovementType = Game.Dice.Roll();
+            }
+
+            return myMovementType;
+        }
+
         public List<string> SulfurCavity()
         {
             List<string> cavityReport = new List<string>();
@@ -747,7 +777,7 @@ namespace Seeker.Gamebook.SwampFever
 
                 cavityReport.Add(String.Format("Вулканические бомбы бьют по клеткам: {0} ⚄, {1} ⚄ и {2} ⚄", bombs[0], bombs[1], bombs[2]));
 
-                int myMovementType = Game.Dice.Roll();
+                int myMovementType = ThinkAboutMovement(myPosition, step, bombs, ref cavityReport);
                 int myMove = 0;
 
                 if (myMovementType > 3)
@@ -755,7 +785,7 @@ namespace Seeker.Gamebook.SwampFever
                     myMove = Game.Dice.Roll();
                     cavityReport.Add(String.Format("Движение на гусеницах, дальность: {0} ⚄", myMove));
                 }
-                else
+                else if (myMovementType > 0)
                 {
                     myMove = Game.Dice.Roll();
 
@@ -767,29 +797,27 @@ namespace Seeker.Gamebook.SwampFever
                     }
                     else
                     {
-                        int trackBonus = Game.Dice.Roll();
+                        int propBonus = Game.Dice.Roll();
+
+                        if (propBonus > 2)
+                            propBonus -= 2;
 
                         cavityReport.Add(String.Format(
-                            "Движение на гребных винтах, дальность: {0} ⚄, +бонусный бросок на гусеницах: {1} ⚄, итого {2}",
-                            myMove, trackBonus, (myMove + trackBonus)
+                            "Движение на гребных винтах, дальность: {0} ⚄, +бонусный бросок: {1} ⚄, итого {2}",
+                            myMove, propBonus, (myMove + propBonus)
                         ));
 
-                        myMove += trackBonus;
+                        myMove += propBonus;
                     }
                 }
 
                 myPosition += myMove;
-                cavityReport.Add(String.Format("Вы останавливаетесь на клетке {0}", myPosition));
+                cavityReport.Add(String.Format("Вы {0} на клетке {1}", (myMovementType == 0 ? "остаётесь" : "останавливаетесь"), myPosition));
 
-                foreach (int bomb in bombs)
+                if (bombs.Contains(myPosition))
                 {
-                    cavityReport.Add(String.Format("Бомба падает на клетку {0}", bomb));
-
-                    if (bomb == myPosition)
-                    {
-                        cavityReport.Add("BIG|BAD|Вы уничтожены вулканической бомбой :(");
-                        return cavityReport;
-                    }
+                    cavityReport.Add("BIG|BAD|Вы уничтожены вулканической бомбой :(");
+                    return cavityReport;
                 }
                     
                 if (myPosition > 6)
