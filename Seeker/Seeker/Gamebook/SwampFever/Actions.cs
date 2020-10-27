@@ -497,23 +497,23 @@ namespace Seeker.Gamebook.SwampFever
                 int myСhoice = 0;
 
                 int yatiForce = 10 + (Math.Abs(position) * 2);
-
-                warReport.Add(String.Format("Тяга яти: {0}", yatiForce));
+                warReport.Add(String.Format("Яти тянет: {0}", yatiForce));
 
                 int erikForce = Game.Dice.Roll();
-                int jonyForce = Game.Dice.Roll();
+                warReport.Add(String.Format("Эрик тянет: {0} ⚄", erikForce));
 
-                warReport.Add(String.Format("Тяга Эрика ({0} ⚄) и Джонни ({1} ⚄): {2}", erikForce, jonyForce, (erikForce + jonyForce)));
+                int jonyForce = Game.Dice.Roll();
+                warReport.Add(String.Format("Джонни тянет: {0} ⚄", jonyForce));
 
                 int myForce = Game.Dice.Roll();
-                int totalForce = erikForce + jonyForce + jonyForce;
+                warReport.Add(String.Format("Вы тянете: {0} ⚄", myForce));
 
-                warReport.Add(String.Format("Ваша тяга: {0} ⚄", myForce));
+                int totalForce = erikForce + jonyForce + jonyForce;
 
                 if (battleCry)
                 {
                     totalForce += 1;
-                    warReport.Add(String.Format("+1 к вашей тяге за боевой клич на прошлом этапе, итого тяга равна {0}", myForce));
+                    warReport.Add(String.Format("+1 к тяге за боевой клич на прошлом этапе, итого тяга: {0}", totalForce));
                 } 
                    
                 battleCry = false;
@@ -540,7 +540,7 @@ namespace Seeker.Gamebook.SwampFever
                         myForce += 2;
 
                         warReport.Add("Ваша тактика: «Резкий рывок»");
-                        warReport.Add(String.Format("+2 к вашей тяге за рывок, итого тяга равна {0}", myForce));
+                        warReport.Add(String.Format("+2 к вашей тяге за рывок, итого тяга: {0}", totalForce));
                         break;
 
                     case 4:
@@ -548,7 +548,9 @@ namespace Seeker.Gamebook.SwampFever
                         
                         if ((myForce == erikForce) || (myForce == jonyForce))
                         {
-                            warReport.Add("Значения тяги совпали, общая тяга умножается вдвое!");
+                            string coincidence = (erikForce == jonyForce ? "у всех разом" : "со значением " + (myForce == erikForce ? "Эрика" : "Джонни"));
+                            warReport.Add(String.Format("Значения тяги совпало {0}, общая тяга умножается вдвое!", coincidence));
+
                             totalForce *= 2;
                         }
                         else
@@ -578,6 +580,66 @@ namespace Seeker.Gamebook.SwampFever
             warReport.Add(position > 0 ? "BIG|GOOD|Вы выиграли :)" : "BIG|BAD|Вы проиграли :(");
 
             return warReport;
+        }
+
+        public List<string> Hunt()
+        {
+            List<string> huntReport = new List<string>();
+
+            int myPosition = 0;
+            int targetPosition = 0;
+            bool skipStepAfterShot = false;
+
+            while ((myPosition < 18) && (targetPosition < 18))
+            {
+                targetPosition += 3;
+                huntReport.Add(String.Format("BOLD|Зверь убежал на клетку {0}", targetPosition));
+
+                if (skipStepAfterShot)
+                    huntReport.Add(String.Format("Вы остаётесь на клетке {0}, т.к. стреляли", myPosition));
+                else if (targetPosition <= myPosition)
+                    huntReport.Add(String.Format("Вы остаётесь на клетке {0}, чтобы подстеречь зверя", myPosition));
+                else
+                {
+                    int forwarding = Game.Dice.Roll();
+                    myPosition += forwarding;
+
+                    huntReport.Add(String.Format("Вы догоняете и проезжаете {0} ⚄ до клетки {1}", forwarding, myPosition));
+                }
+
+                skipStepAfterShot = false;
+
+                int distance = Math.Abs(myPosition - targetPosition);
+
+                if (distance <= 1)
+                {
+                    huntReport.Add("Зверь рядом и вы принимаете решение стрелять.");
+                    huntReport.Add(String.Format("Для попадания необходимо выкинуть {0}", (distance == 0 ? "4, 5 или 6" : "5 или 6")));
+
+                    int shot = Game.Dice.Roll();
+                    huntReport.Add(String.Format("Ваш выстрел: {0} ⚄", shot));
+
+                    if (((distance == 0) && (shot > 3)) || ((distance > 0) && (shot > 4)))
+                    {
+                        if (Character.Protagonist.Stigon < 5)
+                            Character.Protagonist.Stigon += 1;
+
+                        huntReport.Add("BIG|GOOD|Вы подстрелили зверя :)");
+                        return huntReport;
+                    }
+                    else
+                    {
+                        huntReport.Add("BAD|Вы промахнулись");
+                        skipStepAfterShot = true;
+                    }
+                }
+
+                huntReport.Add(String.Empty);
+            }
+
+            huntReport.Add("BIG|BAD|Вы упустили зверя :(");
+
+            return huntReport;
         }
     }
 }

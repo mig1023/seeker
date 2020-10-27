@@ -2351,7 +2351,19 @@ namespace Seeker.Gamebook.SwampFever
             },
             [189] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Hunt",
+                        ButtonName = "Охотиться",
+
+                        Aftertext = "Если охота завершилась удачно, то разрезав горб жертвы, вы получаете 1 кубометр стигона. При провале Стигиносец скрывается в неизвестном направлении (больше не увидите рогатого беглеца).",
+                    },
+                },
+
                 Image = "SwampFever_Hunting.jpg",
+
 
                 Modification = new List<Modification>
                 {
