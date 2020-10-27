@@ -38,7 +38,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 Options = new List<Option>
                 {
                     new Option { Destination = 205, Text = "В путь!" },
-                    new Option { Destination = 206, Text = "Правила и инструкции" },
                 }
             },
             [1] = new Paragraph
@@ -3070,13 +3069,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "Далее" },
-                }
-            },
-            [206] = new Paragraph
-            {
-                Options = new List<Option>
-                {
-                    new Option { Destination = 0, Text = "Далее" },
                 }
             },
         };

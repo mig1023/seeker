@@ -36,8 +36,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 660, Text = "В путь!" },
-                    new Option { Destination = 659, Text = "Правила и инструкции" },
+                    new Option { Destination = 659, Text = "В путь!" },
                 }
             },
             [1] = new Paragraph
@@ -8828,13 +8827,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 }
             },
             [659] = new Paragraph
-            {
-                Options = new List<Option>
-                {
-                    new Option { Destination = 0, Text = "Далее" },
-                }
-            },
-            [660] = new Paragraph
             {
                 Actions = new List<Actions>
                 {

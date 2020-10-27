@@ -36,8 +36,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 620, Text = "В путь!" },
-                    new Option { Destination = 619, Text = "Правила и инструкции" },
+                    new Option { Destination = 619, Text = "В путь!" },
                 }
             },
             [1] = new Paragraph
@@ -7599,13 +7598,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 }
             },
             [619] = new Paragraph
-            {
-                Options = new List<Option>
-                {
-                    new Option { Destination = 0, Text = "Далее" },
-                }
-            },
-            [620] = new Paragraph
             {
                 Actions = new List<Actions>
                 {
