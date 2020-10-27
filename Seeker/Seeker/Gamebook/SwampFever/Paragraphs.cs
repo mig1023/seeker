@@ -266,7 +266,7 @@ namespace Seeker.Gamebook.SwampFever
                 {
                     new Actions
                     {
-                        ActionName = "ContinuousTrackPull",
+                        ActionName = "TrackPull",
                         ButtonName = "Гусеничный режим",
                         Aftertext = "или",
                     },
@@ -650,6 +650,15 @@ namespace Seeker.Gamebook.SwampFever
             },
             [44] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "SulfurCavity",
+                        ButtonName = "Пересечь падь",
+                    },
+                },
+
                 Image = "SwampFever_SulfurCavity.jpg",
 
                 Options = new List<Option>

@@ -424,7 +424,7 @@ namespace Seeker.Gamebook.SwampFever
             return new List<string> { "RELOAD" };
         }
 
-        public List<string> ContinuousTrackPull()
+        public List<string> TrackPull()
         {
             List<string> pullReport = new List<string>();
 
@@ -727,6 +727,82 @@ namespace Seeker.Gamebook.SwampFever
 
                 pursuitReport.Add(String.Empty);
             }
+        }
+
+        
+        public List<string> SulfurCavity()
+        {
+            List<string> cavityReport = new List<string>();
+
+            int myPosition = 0;
+
+            for (int step = 1; step <= 4; step++)
+            {
+                cavityReport.Add(String.Format("BOLD|Ход № {0}", step));
+
+                List<int> bombs = new List<int>();
+
+                for (int bomb = 0; bomb < 3; bomb++)
+                    bombs.Add(Game.Dice.Roll());
+
+                cavityReport.Add(String.Format("Вулканические бомбы бьют по клеткам: {0} ⚄, {1} ⚄ и {2} ⚄", bombs[0], bombs[1], bombs[2]));
+
+                int myMovementType = Game.Dice.Roll();
+                int myMove = 0;
+
+                if (myMovementType > 3)
+                {
+                    myMove = Game.Dice.Roll();
+                    cavityReport.Add(String.Format("Движение на гусеницах, дальность: {0} ⚄", myMove));
+                }
+                else
+                {
+                    myMove = Game.Dice.Roll();
+
+                    if (myMove > 2)
+                    {
+                        cavityReport.Add(String.Format("Движение на гребных винтах, дальность: {0} ⚄, -2 за винты, итого {1}", myMove, (myMove - 2)));
+
+                        myMove -= 2;
+                    }
+                    else
+                    {
+                        int trackBonus = Game.Dice.Roll();
+
+                        cavityReport.Add(String.Format(
+                            "Движение на гребных винтах, дальность: {0} ⚄, +бонусный бросок на гусеницах: {1} ⚄, итого {2}",
+                            myMove, trackBonus, (myMove + trackBonus)
+                        ));
+
+                        myMove += trackBonus;
+                    }
+                }
+
+                myPosition += myMove;
+                cavityReport.Add(String.Format("Вы останавливаетесь на клетке {0}", myPosition));
+
+                foreach (int bomb in bombs)
+                {
+                    cavityReport.Add(String.Format("Бомба падает на клетку {0}", bomb));
+
+                    if (bomb == myPosition)
+                    {
+                        cavityReport.Add("BIG|BAD|Вы уничтожены вулканической бомбой :(");
+                        return cavityReport;
+                    }
+                }
+                    
+                if (myPosition > 6)
+                {
+                    cavityReport.Add("BIG|GOOD|Вы прорвались :)");
+                    return cavityReport;
+                }
+
+                cavityReport.Add(String.Empty);
+            }
+
+            cavityReport.Add("BIG|BAD|Вас накрыло потоком лавы :(");
+            return cavityReport;
         }
     }
 }
