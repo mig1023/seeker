@@ -641,5 +641,92 @@ namespace Seeker.Gamebook.SwampFever
 
             return huntReport;
         }
+
+        private List<string> PursuitWin(List<string> pursuitReport)
+        {
+            if (Character.Protagonist.Stigon < 5)
+                Character.Protagonist.Stigon += 1;
+
+            pursuitReport.Add("BIG|GOOD|Вы настигли шар :)");
+            return pursuitReport;
+        }
+
+        private List<string> PursuitFail(List<string> pursuitReport)
+        {
+            if (Character.Protagonist.Fury < 2)
+                Character.Protagonist.Fury += 1;
+
+            pursuitReport.Add("BIG|BAD|Вы упустили куст :(");
+            return pursuitReport;
+        }
+
+        public List<string> Pursuit()
+        {
+            List<string> pursuitReport = new List<string>();
+
+            while (true)
+            {
+                bool reRoll = false;
+
+                int tumbleweedDirection = Game.Dice.Roll();
+                int tumbleweedSpeed = Game.Dice.Roll();
+                pursuitReport.Add(String.Format("BOLD|Направление движения куста: {0} ⚄, скорость: {1} ⚄", tumbleweedDirection, tumbleweedSpeed));
+
+                int myDirection = Game.Dice.Roll();
+                int mySpeed = Game.Dice.Roll();
+                pursuitReport.Add(String.Format("Ваше направление: {0} ⚄, скорость: {1} ⚄", myDirection, mySpeed));
+
+                if ((myDirection == tumbleweedDirection) && (mySpeed == tumbleweedSpeed))
+                    return PursuitWin(pursuitReport);
+
+                if (myDirection == tumbleweedDirection)
+                {
+                    reRoll = true;
+
+                    mySpeed = Game.Dice.Roll();
+                    pursuitReport.Add(String.Format("Вы почти настигли куст и меняете скорость: {0} ⚄", mySpeed));
+
+                    if (mySpeed == tumbleweedSpeed)
+                        return PursuitWin(pursuitReport);
+                }
+                else if (mySpeed == tumbleweedSpeed)
+                {
+                    reRoll = true;
+
+                    myDirection = Game.Dice.Roll();
+                    pursuitReport.Add(String.Format("Вы почти настигли куст и меняете направление: {0} ⚄", myDirection));
+
+                    if (myDirection == tumbleweedDirection)
+                        return PursuitWin(pursuitReport);
+                }
+
+                pursuitReport.Add("BAD|Настигнуть куст не удалось");
+
+                if ((tumbleweedDirection + tumbleweedSpeed) <= (myDirection + mySpeed))
+                    pursuitReport.Add("Преследование продолжается");
+                else if (reRoll)
+                    return PursuitFail(pursuitReport);
+                else
+                {
+                    if (myDirection > mySpeed)
+                    {
+                        mySpeed = Game.Dice.Roll();
+                        pursuitReport.Add(String.Format("Вы пытаетесь резко ускориться: {0} ⚄", mySpeed));
+                    }
+                    else
+                    {
+                        myDirection = Game.Dice.Roll();
+                        pursuitReport.Add(String.Format("Вы пытаетесь резко сменить курс: {0} ⚄", myDirection));
+                    }
+
+                    if ((tumbleweedDirection + tumbleweedSpeed) <= (myDirection + mySpeed))
+                        pursuitReport.Add("Преследование продолжается");
+                    else
+                        return PursuitFail(pursuitReport);
+                }
+
+                pursuitReport.Add(String.Empty);
+            }
+        }
     }
 }

@@ -437,12 +437,13 @@ namespace Seeker.Gamebook.SwampFever
             },
             [35] = new Paragraph
             {
-                Modification = new List<Modification>
+                Actions = new List<Actions>
                 {
-                    new Modification
+                    new Actions
                     {
-                        Name = "Fury",
-                        Value = 1,
+                        ActionName = "Pursuit",
+                        ButtonName = "В погоню",
+                        Aftertext = "За победу в испытании забирайте 1 кубометр стигона. При проигрыше вы сильно рассердитесь (+ 1 к Ярости).",
                     },
                 },
 
