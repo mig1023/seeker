@@ -96,7 +96,7 @@ namespace Seeker.Gamebook
                 Actions = new RendezVous.Actions(),
                 Constants = new RendezVous.Constants(),
                 Disclaimer = "Ал Торо, 2020",
-                BookColor = "#FFFFFF",
+                BookColor = "#ffffff",
                 FontColor = "#000000",
                 BorderColor = "#000000",
                 Illustration = "RendezVous.jpg",
@@ -111,8 +111,21 @@ namespace Seeker.Gamebook
                 Actions = new SwampFever.Actions(),
                 Constants = new SwampFever.Constants(),
                 Disclaimer = "Прокошев Пётр, 2017",
-                BookColor = "#34411c",
+                BookColor = "#ff557c48",
                 Illustration = "SwampFever.jpg",
+            },
+
+            ["Легенды всегда врут"] = new Description
+            {
+                XmlBook = "LegendsAlwaysLie.xml",
+                Protagonist = LegendsAlwaysLie.Character.Protagonist.Init,
+                CheckOnlyIf = LegendsAlwaysLie.Actions.CheckOnlyIf,
+                Paragraphs = new LegendsAlwaysLie.Paragraphs(),
+                Actions = new LegendsAlwaysLie.Actions(),
+                Constants = new LegendsAlwaysLie.Constants(),
+                Disclaimer = "Островерхов Роман, 2012",
+                BookColor = "#4c0000",
+                Illustration = "LegendsAlwaysLie.jpg",
             },
         };
 
