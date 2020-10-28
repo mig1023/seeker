@@ -2083,8 +2083,8 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 171, Text = "Если есть № 24" },
-                    new Option { Destination = 200, Text = "Иначе" },
+                    new Option { Destination = 171, Text = "Далее", OnlyIf = "24" },
+                    new Option { Destination = 200, Text = "Далее", OnlyIf = "!24" },
                 }
             },
             [167] = new Paragraph
@@ -2127,9 +2127,6 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 156, Text = "Если есть № 25" },
-                    new Option { Destination = 179, Text = "Иначе" },
-
                     new Option { Destination = 156, Text = "Далее", OnlyIf = "25" },
                     new Option { Destination = 179, Text = "Далее", OnlyIf = "!25" },
                 }
