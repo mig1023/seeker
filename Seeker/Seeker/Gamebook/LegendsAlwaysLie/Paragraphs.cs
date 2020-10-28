@@ -5464,7 +5464,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 702, Text = "Далее" },
+                    new Option { Destination = 1, Text = "Далее" },
                 }
             },
         };

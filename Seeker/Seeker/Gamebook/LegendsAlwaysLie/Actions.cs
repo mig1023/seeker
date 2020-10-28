@@ -68,7 +68,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             bool disabledBySpellpoints = Spell && (Character.Protagonist.Spellpoints <= 0);
             bool disabledBySpellRepeat = Spell && Character.Protagonist.Spells.Contains(Text);
 
-            return !(disabledSpecializationButton || disabledByPrice || disabledBySpellpoints || disabledBySpellRepeat);
+            bool disabledBySpecialization = Spell && (Text == "ВЗОР") && (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
+
+            return !(disabledSpecializationButton || disabledByPrice || disabledBySpellpoints || disabledBySpellRepeat || disabledBySpecialization);
         }
 
         public List<string> Get()
