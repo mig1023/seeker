@@ -36,7 +36,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 1, Text = "В путь!" },
+                    new Option { Destination = 701, Text = "В путь!" },
                 }
             },
             [1] = new Paragraph
@@ -5381,6 +5381,39 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
+                }
+            },
+            [701] = new Paragraph
+            {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Стать воином",
+                        Text = "ВОИН",
+                        Specialization = Character.SpecializationType.Warrior,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Стать магом",
+                        Text = "МАГ",
+                        Specialization = Character.SpecializationType.Wizard,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Стать метателем",
+                        Text = "МЕТАТЕЛЬ",
+                        Specialization = Character.SpecializationType.Thrower,
+                        Aftertext = "Учтите, что помимо всего перечисленного, специализация может вам пригодится в самый неожиданный момент. Воин, например, самый сильный из всей троицы, а маг может почувствовать заранее какую-то магическую ловушку.",
+                    },
+                },
+
+                Options = new List<Option>
+                {
+                    new Option { Destination = 1, Text = "Далее" },
                 }
             },
         };

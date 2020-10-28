@@ -12,7 +12,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
+        public int Price { get; set; }
+        public string Text { get; set; }
 
+        public Character.SpecializationType? Specialization { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -29,6 +32,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public List<string> Representer()
         {
+            if (ActionName == "Get")
+                return new List<string> { Text };
+
             return new List<string> { };
         }
 
@@ -36,7 +42,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             List<string> statusLines = new List<string>
             {
-                String.Empty,
+                String.Format("Сила: {0}", Character.Protagonist.Strength),
+                String.Format("Жизни: {0}", Character.Protagonist.Hitpoints),
+                String.Format("Заклинаний: {0}", Character.Protagonist.Magicpoints),
+                String.Format("Золото: {0}", Character.Protagonist.Gold)
             };
 
             return statusLines;
@@ -52,7 +61,35 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public bool IsButtonEnabled()
         {
-            return true;
+            bool disabledSpecializationButton = (Specialization != null) && (Character.Protagonist.Specialization != Character.SpecializationType.Nope);
+            bool disabledByPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
+
+            return !(disabledSpecializationButton || disabledByPrice);
+        }
+
+        public List<string> Get()
+        {
+            if ((Specialization != null) && (Character.Protagonist.Specialization == Character.SpecializationType.Nope))
+            {
+                Character.Protagonist.Specialization = Specialization ?? Character.SpecializationType.Nope;
+
+                if (Specialization == Character.SpecializationType.Warrior)
+                    Character.Protagonist.Strength += 2;
+                else if (Specialization == Character.SpecializationType.Wizard)
+                {
+                    Character.Protagonist.Spellpoints += 3;
+                    Character.Protagonist.Magicpoints += 2;
+                }
+                else
+                {
+                    Character.Protagonist.Strength += 1;
+                    Character.Protagonist.Spellpoints += 2;
+                }
+            }
+            else if ((Price > 0) && (Character.Protagonist.Gold >= Price))
+                Character.Protagonist.Gold -= Price;
+
+            return new List<string> { "RELOAD" };
         }
 
         public static bool CheckOnlyIf(string option)
