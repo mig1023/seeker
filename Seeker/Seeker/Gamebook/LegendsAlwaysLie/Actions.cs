@@ -14,6 +14,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public string Trigger { get; set; }
         public int Price { get; set; }
         public string Text { get; set; }
+        public bool Spell { get; set; }
+
 
         public Character.SpecializationType? Specialization { get; set; }
 
@@ -63,8 +65,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             bool disabledSpecializationButton = (Specialization != null) && (Character.Protagonist.Specialization != Character.SpecializationType.Nope);
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
+            bool disabledBySpellpoints = Spell && (Character.Protagonist.Spellpoints <= 0);
+            bool disabledBySpellRepeat = Spell && Character.Protagonist.Spells.Contains(Text);
 
-            return !(disabledSpecializationButton || disabledByPrice);
+            return !(disabledSpecializationButton || disabledByPrice || disabledBySpellpoints || disabledBySpellRepeat);
         }
 
         public List<string> Get()
@@ -83,8 +87,13 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 else
                 {
                     Character.Protagonist.Strength += 1;
-                    Character.Protagonist.Spellpoints += 2;
+                    Character.Protagonist.Spellpoints += 1;
                 }
+            }
+            else if (Spell && (Character.Protagonist.Spellpoints >= 1))
+            {
+                Character.Protagonist.Spells.Add(Text);
+                Character.Protagonist.Spellpoints -= 1;
             }
             else if ((Price > 0) && (Character.Protagonist.Gold >= Price))
                 Character.Protagonist.Gold -= Price;

@@ -5413,7 +5413,58 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 1, Text = "Далее" },
+                    new Option { Destination = 702, Text = "Далее" },
+                }
+            },
+            [702] = new Paragraph
+            {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Обучиться лечению",
+                        Text = "ЛЕЧЕНИЕ",
+                        Spell = true,
+                        Aftertext = "Заклинание самоисцеления (уменьшительно именуемое всеми ведьмаками ЛЕЧИЛКА), добавляет 8 ЖИЗНЕЙ (кроме как во время боя).",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Обучиться заслону",
+                        Text = "ЗАСЛОН",
+                        Spell = true,
+                        Aftertext = "На несколько секунд создает между вами и противником невидимую магическую преграду.",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Обучиться сгустку",
+                        Text = "СГУСТОК",
+                        Spell = true,
+                        Aftertext = "Удар по противнику небольшим сгустком пламени, отнимающий у него 6 ЖИЗНЕЙ.",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Обучиться взору",
+                        Text = "ВЗОР",
+                        Spell = true,
+                        Aftertext = "Включает т. н. «истинное зрение». Улучшает ориентировку в темноте и дает способность увидеть скрытую магию. Применениев условиях хорошей освещенности может быть болезненным. Недоступно, если вы выберете специализацию «воин».",
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Обучиться броне",
+                        Text = "БРОНЯ",
+                        Spell = true,
+                        Aftertext = "Ваши мышцы каменеют, сосуды сужаются. На время одного боя вы теряете в два раза меньше ЖИЗНИ от ударов противника.",
+                    },
+                },
+
+                Options = new List<Option>
+                {
+                    new Option { Destination = 702, Text = "Далее" },
                 }
             },
         };

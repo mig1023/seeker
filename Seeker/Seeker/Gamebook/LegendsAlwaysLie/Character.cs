@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int Spellpoints { get; set; }
         public int Gold { get; set; }
         public SpecializationType Specialization { get; set; }
+        public List<string> Spells { get; set; }
 
         public void Init()
         {
@@ -27,6 +28,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Spellpoints = 2;
             Gold = 20;
             Specialization = SpecializationType.Nope;
+            Spells = new List<string>();
         }
 
         public Character Clone()
@@ -39,6 +41,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Spellpoints = this.Spellpoints,
                 Gold = this.Gold,
                 Specialization = this.Specialization,
+                Spells = new List<string>(),
             };
         }
     }
