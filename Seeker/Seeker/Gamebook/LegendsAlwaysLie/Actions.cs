@@ -53,6 +53,22 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return statusLines;
         }
 
+        public List<string> Reaction()
+        {
+            List<string> reaction = new List<string>();
+
+            int reactionLevel = (int)Math.Floor((double)Character.Protagonist.Hitpoints / 5);
+            reaction.Add(String.Format("Уровнь реакции: {0} / 5 = {1}", Character.Protagonist.Hitpoints, reactionLevel));
+
+            int reactionDice = Game.Dice.Roll();
+            bool goodReaction = reactionDice <= reactionLevel;
+            reaction.Add(String.Format("Реакция: {0} ⚄ {1} {2}", reactionDice, (goodReaction ? "<=" : ">"), reactionLevel));
+
+            reaction.Add(goodReaction ? "BIG|GOOD|СРЕАГИРОВАЛИ :)" : "BIG|BAD|НЕ СРЕАГИРОВАЛИ :(");
+
+            return reaction;
+        }
+
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
