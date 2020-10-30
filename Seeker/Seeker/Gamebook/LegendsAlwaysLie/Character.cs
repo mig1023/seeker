@@ -23,7 +23,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             Name = String.Empty;
             Strength = 12;
-            Hitpoints = 30;
+            Hitpoints = 13;
             Magicpoints = 1;
             Spellpoints = 2;
             Gold = 20;

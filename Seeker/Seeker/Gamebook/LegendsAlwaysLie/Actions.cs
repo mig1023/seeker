@@ -16,6 +16,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public string Text { get; set; }
         public bool Spell { get; set; }
 
+        public Modification Benefit { get; set; }
+        public Modification Damage { get; set; }
+
 
         public Character.SpecializationType? Specialization { get; set; }
 
@@ -65,6 +68,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             reaction.Add(String.Format("Реакция: {0} ⚄ {1} {2}", reactionDice, (goodReaction ? "<=" : ">"), reactionLevel));
 
             reaction.Add(goodReaction ? "BIG|GOOD|СРЕАГИРОВАЛИ :)" : "BIG|BAD|НЕ СРЕАГИРОВАЛИ :(");
+
+            if (goodReaction && (Benefit != null))
+                Benefit.Do();
+
+            if (!goodReaction && (Damage != null))
+                Damage.Do();
 
             return reaction;
         }
