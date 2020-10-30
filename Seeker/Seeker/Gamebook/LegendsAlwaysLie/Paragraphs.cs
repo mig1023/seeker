@@ -37,6 +37,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 701, Text = "В путь!" },
+                     new Option { Destination = 142, Text = "ТЕСТ" },
+                     new Option { Destination = 247, Text = "ТЕСТ2" },
+                      new Option { Destination = 269, Text = "ТЕСТ-реагир" },
                 }
             },
             [1] = new Paragraph
@@ -1167,6 +1170,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         ActionName = "Reaction",
                         ButtonName = "Реагируйте в третий раз",
+                        Aftertext = "Если хоть раз не удалось, то линия вашей судьбы оборвется здесь, в грязи богом забытого ущелья…",
                     },
                 },
 
@@ -2194,7 +2198,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         ActionName = "Reaction",
                         ButtonName = "Реагируйте",
-                        Aftertext = "Замешкались – теряете 4 ЖИЗНИ.\n\nКоннери играючи отбил предназначенный ему болт. Гном мрачнеет, но поднимает с земли новые боеприпасы и деловито заряжает арбалет. Надо что-то предпринимать, не стоять же, как мишень.",
+                        Aftertext = "(не успеете – он заденет вас, потеряете 2 ЖИЗНИ) и оседает на землю.\n\nВы оборачиваетесь – за вашей спиной поднимается с земли великан. Вам повезло, что у него нет оружия, но и с голыми руками он опасный противник.\n\nВЕЛИКАН СИЛА 11 ЖИЗНЬ 12 (рана – 3 ЖИЗНИ) (СБ 11)\n\nЧерез 5 раундов распутавшийся Коннери приходит вам на помощь. После этого каждый раунд отнимайте у противника 2 ЖИЗНИ. После победы.",
 
                         Damage = new Modification
                         {
@@ -2258,6 +2262,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [276] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Reaction",
+                        ButtonName = "Реагируйте",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 293, Text = "Успели" },
@@ -2531,6 +2544,22 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [312] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Reaction",
+                        ButtonName = "Реагируйте",
+                        Aftertext = "Если промедлите, теряете 4 ЖИЗНИ.\n\nРуки у рыжебородого уже трясутся. Еще бы, с обеих сторон к нему неумолимо надвигаются двое людей в черном. Он судорожно развязывает свой мешок, путаясь в тесемках, и достает небольшой металлический шар.\n\n– Фас! – командует он шарику.\n\nТот внезапно раскладывается в маленького стального паучка. Ведьмачьим острым зрением вы отмечаете поблескивающие маслянистым коготки. Наверняка яд. Паучок очень прытко бросается к вам, но на полпути вдруг с шипением и треском останавливается. Внутри него что-то еле слышно жужжит. Затем он опять окукливается, трансформируясь в металлическую сферу.\n\n– Сломалась твоя игрушка, – ехидно замечает Коннери, подходя к гному. Тот пытается что-то возразить, но получает мощный подзатыльник и кубарем скатывается с ящиков на землю.\n\n– В другой раз, перед расстрелом мирных путников из арбалета, советую хорошенько подумать.\n\nВы проходите мимо свернувшегося в шар паучка. Неясно, опасна эта гадость еще или нет. Если хотите, можете взять его с собой. В таком случае поместите его в мешок и запишите слово сфера.\n\nКоннери в это время допрашивает гнома.\n\n– Расскажи нам, милый друг, что же ты забыл в столь суровом месте, и что у тебя в этих проклятых ящиках?\n\nКоротышка упрямо зыркает глазами поверх бороды и молчит.",
+
+                        Damage = new Modification
+                        {
+                            Name = "Hitpoints",
+                            Value = -4,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 283, Text = "Добавить гному затрещину от себя" },
@@ -2760,6 +2789,55 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [342] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Reaction",
+                        ButtonName = "Реагируйте в первый раз",
+
+                        Damage = new Modification
+                        {
+                            Name = "Hitpoints",
+                            Value = -2,
+                        },
+                    },
+                    new Actions
+                    {
+                        ActionName = "Reaction",
+                        ButtonName = "Реагируйте во второй раз",
+
+                        Damage = new Modification
+                        {
+                            Name = "Hitpoints",
+                            Value = -2,
+                        },
+                    },
+                    new Actions
+                    {
+                        ActionName = "Reaction",
+                        ButtonName = "Реагируйте в третий раз",
+
+                        Damage = new Modification
+                        {
+                            Name = "Hitpoints",
+                            Value = -2,
+                        },
+                    },
+                    new Actions
+                    {
+                        ActionName = "Reaction",
+                        ButtonName = "Реагируйте в четвёртый раз",
+                        Aftertext = "За каждый раз, когда вы промедлите, отнимите у себя 2 ЖИЗНИ.",
+
+                        Damage = new Modification
+                        {
+                            Name = "Hitpoints",
+                            Value = -2,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 292, Text = "Если вы пропустите 3 и более укола, то вынуждены будете остановиться и принять бой" },
@@ -2783,6 +2861,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [345] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Reaction",
+                        ButtonName = "Реагируйте",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 203, Text = "Успели" },
@@ -2861,6 +2948,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [355] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Reaction",
+                        ButtonName = "Реагируйте",
+                        Aftertext = "При хорошем раскладе вам удается удержаться и переправиться на другой берег. При плохом — вы падаете вниз.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 393, Text = "Ушли под воду" },
@@ -2899,6 +2996,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [360] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Reaction",
+                        ButtonName = "Реагируйте",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 325, Text = "Все в порядке" },
@@ -3004,6 +3110,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [373] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Reaction",
+                        ButtonName = "Реагируйте",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 193, Text = "Успели" },
@@ -3095,6 +3210,27 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [385] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Reaction",
+                        ButtonName = "Реагируйте",
+                        Aftertext = "Атака была настолько внезапной, что полностью уйти от поражения у вас не получится при любом раскладе. Если ваши рефлексы были на высоте, то метательный нож лишь оцарапает вам плечо (-2 ЖИЗНИ). Если нет, то нож воткнется вам в руку (–5 ЖИЗНЕЙ).\n\nБуквально через секунду в вашу сторону устремляется еще один, точно такой же снаряд, но теперь вы наготове.",
+
+                        Benefit = new Modification
+                        {
+                            Name = "Hitpoints",
+                            Value = -2,
+                        },
+                        Damage = new Modification
+                        {
+                            Name = "Hitpoints",
+                            Value = -5,
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 361, Text = "Если же ваша специализация – метатель ножей" },
@@ -3208,6 +3344,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [399] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Reaction",
+                        ButtonName = "Реагируйте",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 187, Text = "Успели" },
@@ -3257,6 +3402,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [405] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Reaction",
+                        ButtonName = "Реагируйте",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 558, Text = "Встретить противника ударом меча" },
