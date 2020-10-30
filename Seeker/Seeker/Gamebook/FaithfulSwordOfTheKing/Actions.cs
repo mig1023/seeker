@@ -200,7 +200,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     if (threeTimesInRow >= 3)
                     {
                         pursuit.Add(String.Empty);
-                        pursuit.Add("BAD|Они без труда догнали вас :(");
+                        pursuit.Add("BIG|BAD|Они без труда догнали вас :(");
 
                         return pursuit;
                     }
@@ -210,9 +210,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             pursuit.Add(String.Empty);
 
             if (theyWin > 6)
-                pursuit.Add("BAD|Они догнали вас :(");
+                pursuit.Add("BIG|BAD|Они догнали вас :(");
             else
-                pursuit.Add("GOOD|Они не догнали вас :)");
+                pursuit.Add("BIG|GOOD|Они не догнали вас :)");
 
             return pursuit;
         }

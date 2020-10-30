@@ -5409,7 +5409,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 {
                     new Option { Destination = 292, Text = "Если вас не догнали" },
                     new Option { Destination = 90, Text = "Если догнали" },
-                    new Option { Destination = 159, Text = "Однако если вы проиграли три раза подряд" },
+                    new Option { Destination = 159, Text = "Ели вас нагнали без труда" },
                 }
             },
             [404] = new Paragraph
