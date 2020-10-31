@@ -267,6 +267,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [29] = new Paragraph
             {
+                Trigger = "Tincture",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 90, Text = "Далее" },
@@ -1578,7 +1580,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 161, Text = "Если у вас записано слово настой" },
+                    new Option { Destination = 161, Text = "Если у вас записано слово настой", OnlyIf = "Tincture" },
                     new Option { Destination = 207, Text = "Прихватить пергамент с собой и выбрать направление движения" },
                 }
             },
