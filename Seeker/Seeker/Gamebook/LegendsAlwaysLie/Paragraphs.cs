@@ -37,9 +37,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 701, Text = "В путь!" },
-                     new Option { Destination = 142, Text = "ТЕСТ" },
-                     new Option { Destination = 247, Text = "ТЕСТ2" },
-                      new Option { Destination = 269, Text = "ТЕСТ-реагир" },
                 }
             },
             [1] = new Paragraph
@@ -3772,7 +3769,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 408, Text = "Успели" },
-                    new Option { Destination = 517, Text = "или нет" },
+                    new Option { Destination = 517, Text = "Нет" },
                 }
             },
             [453] = new Paragraph
@@ -3786,16 +3783,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 489, Text = "по отдельности и каждый наступает на свою плиту" },
-                    new Option { Destination = 426, Text = "либо вы оба наступаете на одну" },
+                    new Option { Destination = 489, Text = "По отдельности и каждый наступает на свою плиту" },
+                    new Option { Destination = 426, Text = "Оба наступаете на одну" },
                 }
             },
             [455] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 480, Text = "Если у вас записано слово такт, то идите на" },
-                    new Option { Destination = 513, Text = "Иначе остается лишь испытать скорость своей реакции и попытаться пройти зал манекенов (если хотите, можете заранее наложить заклинание БРОНЯ, в таком случае на следующем параграфе вы потеряете вдвое меньше ЖИЗНЕЙ)" },
+                    new Option { Destination = 480, Text = "Если у вас записано слово такт" },
+                    new Option { Destination = 513, Text = "Испытать скорость своей реакции и попытаться пройти зал манекенов" },
                 }
             },
             [456] = new Paragraph
@@ -3809,17 +3806,17 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 409, Text = "Если ваша специализация маг, то" },
+                    new Option { Destination = 409, Text = "Если ваша специализация маг" },
                     new Option { Destination = 524, Text = "Вы будете настаивать на своем – в этом случае вы возвращаетесь и следуете другим путем" },
-                    new Option { Destination = 506, Text = "или согласитесь идти дальше" },
+                    new Option { Destination = 506, Text = "Согласитесь идти дальше" },
                 }
             },
             [458] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 353, Text = "Войти удастся только в том случае, если у вас есть медный ключ" },
-                    new Option { Destination = 427, Text = "Иначе возвращайтесь на" },
+                    new Option { Destination = 353, Text = "У вас есть медный ключ" },
+                    new Option { Destination = 427, Text = "Возвращайтесь" },
                 }
             },
             [459] = new Paragraph
@@ -3857,7 +3854,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 528, Text = "Успели" },
-                    new Option { Destination = 431, Text = "или нет" },
+                    new Option { Destination = 431, Text = "Нет" },
                 }
             },
             [464] = new Paragraph
@@ -3871,8 +3868,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 575, Text = "Вы не будете сбавлять скорость, и рискнете пробежать по пустому месту" },
-                    new Option { Destination = 589, Text = "Или затормозите и подождете Коннери" },
+                    new Option { Destination = 575, Text = "Вы не будете сбавлять скорость и рискнете пробежать по пустому месту" },
+                    new Option { Destination = 589, Text = "Затормозите и подождете Коннери" },
                 }
             },
             [466] = new Paragraph
@@ -3907,9 +3904,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 435, Text = "Если у вас записано слово схрон, то" },
+                    new Option { Destination = 435, Text = "Если у вас записано слово схрон" },
                     new Option { Destination = 480, Text = "Попробуете взобраться по стене к потолку и проверить, как обстоят дела там" },
-                    new Option { Destination = 493, Text = "Или вернетесь на" },
+                    new Option { Destination = 493, Text = "Попробуете что-то еще" },
                 }
             },
             [471] = new Paragraph
@@ -3925,10 +3922,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 485, Text = "– Идем вдоль правой стены" },
-                    new Option { Destination = 439, Text = "– Идем вдоль левой стены" },
-                    new Option { Destination = 403, Text = "– Идем по центру, повернувшись боком" },
-                    new Option { Destination = 437, Text = "– Садимся и идем на корточках, ни в коем случае не поднимая высоко голову" },
+                    new Option { Destination = 485, Text = "«Идем вдоль правой стены»" },
+                    new Option { Destination = 439, Text = "«Идем вдоль левой стены»" },
+                    new Option { Destination = 403, Text = "«Идем по центру, повернувшись боком»" },
+                    new Option { Destination = 437, Text = "«Садимся и идем на корточках, ни в коем случае не поднимая высоко голову»" },
                 }
             },
             [473] = new Paragraph
@@ -3943,7 +3940,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 434, Text = "Сделаете это" },
-                    new Option { Destination = 484, Text = "или с сожалением повесите его обратно на стену" },
+                    new Option { Destination = 484, Text = "С сожалением повесите его обратно на стену" },
                 }
             },
             [475] = new Paragraph
@@ -3965,8 +3962,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 442, Text = "Вековая тишина с неохотой уступает место звукам ваших шагов(если у вас записано слово корзинка, идите на" },
-                    new Option { Destination = 600, Text = "Сами вы в этом далеко не уверены" },
+                    new Option { Destination = 442, Text = "Если у вас записано слово корзинка" },
+                    new Option { Destination = 600, Text = "Далее" },
                 }
             },
             [478] = new Paragraph
@@ -3987,19 +3984,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 418, Text = "За вашими спинами, шурша истлевшими одеяниями, восстает с пола проклятый когда-то король, чтобы вновь занять свой пост" },
-                    new Option { Destination = 537, Text = "Отсмеявшись свое, вы идете дальше" },
-                    new Option { Destination = 453, Text = "Вы подойдете и попробуете оказать ему помощь" },
-                    new Option { Destination = 537, Text = "Или тихо перейдете мост, пока ловушка обезврежена и проследуете дальше" },
-                    new Option { Destination = 509, Text = "Что ж, между вами и выходом больше, кажется, не осталось никаких преград" },
-                    new Option { Destination = 504, Text = "Переглянувшись с Коннери, вы поворачиваетесь и бросаетесь бежать по коридору, в противоположную от арки сторону" },
-                    new Option { Destination = 583, Text = "Вы явно избежали какой-то ловушки, хоть и непонятно, в чем она заключалась" },
-                    new Option { Destination = 506, Text = "Вы без особых проблем минуете последнюю колонну и покидаете зал" },
-                    new Option { Destination = 571, Text = "Если у вас записано слово железняк, идите на" },
-                    new Option { Destination = 412, Text = "Иначе" },
-                    new Option { Destination = 535, Text = "Надо пробиваться к выходу" },
-                    new Option { Destination = 493, Text = "Вернитесь на" },
-                    new Option { Destination = 441, Text = "Вернитесь на" },
+                    new Option { Destination = 418, Text = "Далее" },
                 }
             },
             [481] = new Paragraph
@@ -4013,8 +3998,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 503, Text = "Если у вас записано слово песок, идите на" },
-                    new Option { Destination = 493, Text = "Вернитесь на" },
+                    new Option { Destination = 503, Text = "Если у вас записано слово песок" },
+                    new Option { Destination = 493, Text = "Решите, чем бы еще вам заняться" },
                 }
             },
             [483] = new Paragraph
@@ -4022,7 +4007,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 461, Text = "Вы ответите напарнику: «Хорошо»" },
-                    new Option { Destination = 576, Text = "молча двинетесь за ним" },
+                    new Option { Destination = 576, Text = "Молча двинетесь за ним" },
                     new Option { Destination = 507, Text = "ВЗОР" },
                 }
             },
@@ -4098,10 +4083,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 547, Text = "– Попробуем сделать подкоп" },
-                    new Option { Destination = 514, Text = "– Изучим песчаные замки, что стоят по углам" },
-                    new Option { Destination = 470, Text = "– Изучим стены комнаты, особенно в месте примыкания барьера" },
-                    new Option { Destination = 441, Text = "– Еще поэкспериментируем с проницаемостью барьера" },
+                    new Option { Destination = 547, Text = "«Попробуем сделать подкоп»" },
+                    new Option { Destination = 514, Text = "«Изучим песчаные замки, что стоят по углам»" },
+                    new Option { Destination = 470, Text = "«Изучим стены комнаты, особенно в месте примыкания барьера»" },
+                    new Option { Destination = 441, Text = "«Еще поэкспериментируем с проницаемостью барьера»" },
                 }
             },
             [494] = new Paragraph
@@ -4123,15 +4108,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 479, Text = "Успели" },
-                    new Option { Destination = 468, Text = "или нет" },
+                    new Option { Destination = 468, Text = "Нет" },
                 }
             },
             [497] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 488, Text = "– Будем крутить ворот" },
-                    new Option { Destination = 530, Text = "или перейдем ручей вброд" },
+                    new Option { Destination = 488, Text = "Будем крутить ворот" },
+                    new Option { Destination = 530, Text = "Перейдем ручей вброд" },
                 }
             },
             [498] = new Paragraph
@@ -4140,7 +4125,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 516, Text = "Красная и оранжевая" },
                     new Option { Destination = 469, Text = "Оранжевая и синяя" },
-                    new Option { Destination = 445, Text = "Красная и синяя –" },
+                    new Option { Destination = 445, Text = "Красная и синяя" },
                 }
             },
             [499] = new Paragraph
@@ -4157,8 +4142,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 456, Text = "Если у вас есть шахтерскаярукавица и вода во фляге, то" },
-                    new Option { Destination = 548, Text = "Если нет, то" },
+                    new Option { Destination = 456, Text = "Если у вас есть шахтерская рукавица и вода во фляге" },
+                    new Option { Destination = 548, Text = "Далее" },
                 }
             },
             [501] = new Paragraph
@@ -4166,32 +4151,32 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 466, Text = "Вы сделаете это" },
-                    new Option { Destination = 414, Text = "или будете, скрепя зубы, наблюдать за дальнейшим ходом поединка" },
+                    new Option { Destination = 414, Text = "Будете, скрепя зубы, наблюдать за дальнейшим ходом поединка" },
                 }
             },
             [502] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 538, Text = "Если ваша специализация метатель, то" },
+                    new Option { Destination = 538, Text = "Если ваша специализация метатель" },
                     new Option { Destination = 532, Text = "СГУСТОК" },
-                    new Option { Destination = 478, Text = "Иначе остается лишь броситься обратно, стараясь ступать по своим следам" },
+                    new Option { Destination = 478, Text = "Броситься обратно, стараясь ступать по своим следам" },
                 }
             },
             [503] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 599, Text = "Если вы хотите рискнуть и побарахтаться в муравейнике, то" },
-                    new Option { Destination = 493, Text = "Иначе вернитесь на" },
+                    new Option { Destination = 599, Text = "Хотите рискнуть и побарахтаться в муравейнике" },
+                    new Option { Destination = 493, Text = "Поразмыслите, что еще можно предпринять." },
                 }
             },
             [504] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 477, Text = "Если вы будете настаивать на своем, то Коннери вынужден будет последовать за вами – разделяться сейчас смерти подобно" },
-                    new Option { Destination = 438, Text = "Если вы послушаете напарника и двинетесь к двери, то идите на" },
+                    new Option { Destination = 477, Text = "Будете настаивать на своем" },
+                    new Option { Destination = 438, Text = "Послушаете напарника и двинетесь к двери" },
                 }
             },
             [505] = new Paragraph
@@ -4205,8 +4190,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 480, Text = "Вы выберете правый, из которого слышен шум воды" },
-                    new Option { Destination = 455, Text = "или ничем не примечательный левый" },
+                    new Option { Destination = 480, Text = "Правый, из которого слышен шум воды" },
+                    new Option { Destination = 455, Text = "Ничем не примечательный левый" },
                 }
             },
             [507] = new Paragraph
@@ -4214,7 +4199,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 545, Text = "Зажмуритесь" },
-                    new Option { Destination = 576, Text = "или шагнете к Коннери, чтобы придержать его" },
+                    new Option { Destination = 576, Text = "Шагнете к Коннери, чтобы придержать его" },
                 }
             },
             [508] = new Paragraph
@@ -4228,16 +4213,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 565, Text = "Вы попробуете протиснуться наружу" },
-                    new Option { Destination = 591, Text = "или последуете за Коннери" },
+                    new Option { Destination = 565, Text = "Попробуете протиснуться наружу" },
+                    new Option { Destination = 591, Text = "Последуете за Коннери" },
                 }
             },
             [510] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 577, Text = "Если вы сегодня убили в бою хоть кого-нибудь, любое существо – идите на" },
-                    new Option { Destination = 537, Text = "Если нет – то ничего не произошло, немедленно вернитесь на" },
+                    new Option { Destination = 577, Text = "Если вы сегодня убили в бою хоть кого-нибудь, любое существо" },
+                    new Option { Destination = 537, Text = "Если нет – то ничего не произошло" },
                 }
             },
             [511] = new Paragraph
@@ -4268,8 +4253,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 533, Text = "Вы согласитесь, и разворошите замок острием меча" },
-                    new Option { Destination = 482, Text = "будете копать руками" },
-                    new Option { Destination = 493, Text = "или предпочтете вернуться на" },
+                    new Option { Destination = 482, Text = "Будете копать руками" },
+                    new Option { Destination = 493, Text = "Предпочтете сделать другой выбор" },
                 }
             },
             [515] = new Paragraph
@@ -4307,8 +4292,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 460, Text = "целиком вложиться в один встречный удар" },
-                    new Option { Destination = 480, Text = "попытаться уйти в сторону" },
+                    new Option { Destination = 460, Text = "Целиком вложиться в один встречный удар" },
+                    new Option { Destination = 480, Text = "Попытаться уйти в сторону" },
                 }
             },
             [520] = new Paragraph
@@ -4336,34 +4321,34 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 474, Text = "Вы подойдете к отделу с оружием гномов" },
-                    new Option { Destination = 542, Text = "полюбуетесь на эльфийские клинки" },
-                    new Option { Destination = 484, Text = "или же ваше чутье велит вам ничего не трогать и побыстрее покинуть комнату" },
+                    new Option { Destination = 474, Text = "Подойдете к отделу с оружием гномов" },
+                    new Option { Destination = 542, Text = "Полюбуетесь на эльфийские клинки" },
+                    new Option { Destination = 484, Text = "Не будет ничего не трогать и побыстрее покинуть комнату" },
                 }
             },
             [524] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 480, Text = "Вы пойдете справа от колонны" },
-                    new Option { Destination = 596, Text = "или слева" },
+                    new Option { Destination = 480, Text = "Справа от колонны" },
+                    new Option { Destination = 596, Text = "Слева от колонны" },
                 }
             },
             [525] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 428, Text = "Если у вас записано слово догадка, то" },
-                    new Option { Destination = 493, Text = "Лучше попробовать что-то другое – вернитесь на" },
+                    new Option { Destination = 428, Text = "Если у вас записано слово догадка" },
+                    new Option { Destination = 493, Text = "Попробовать что-то другое" },
                 }
             },
             [526] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 480, Text = "Далее вы предложите себя на роль поединщика" },
-                    new Option { Destination = 501, Text = "уступите напарнику честь убрать преграду с вашего пути" },
-                    new Option { Destination = 414, Text = "или решите, что проще всего подгнившего короля будет победить вдвоем" },
+                    new Option { Destination = 480, Text = "Предложите себя на роль поединщика" },
+                    new Option { Destination = 501, Text = "Уступите напарнику честь убрать преграду с вашего пути" },
+                    new Option { Destination = 414, Text = "Решите, что проще всего подгнившего короля будет победить вдвоем" },
                 }
             },
             [527] = new Paragraph
@@ -4420,17 +4405,17 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 495, Text = "Если вы расположили вещи так: Быммуным – меч, Берилионидин – цепь, Браккус – череп, то идите на" },
-                    new Option { Destination = 508, Text = "Если вы расположили вещи так: Быммуным – череп, Берилионидин – меч, Браккус – цепь, то идите на" },
-                    new Option { Destination = 572, Text = "Если вы расположили вещи как-то иначе, то идите на" },
+                    new Option { Destination = 495, Text = "Быммуным – меч, Берилионидин – цепь, Браккус – череп" },
+                    new Option { Destination = 508, Text = "Быммуным – череп, Берилионидин – меч, Браккус – цепь" },
+                    new Option { Destination = 572, Text = "Как-то иначе" },
                 }
             },
             [535] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 452, Text = "Если вы справились за 6 раундов или меньше (а если у вас записано слово задержка, то это означает, что времени у вас еще меньше – вам надо справиться за 5 раундов), то" },
-                    new Option { Destination = 512, Text = "Если не успели, то" },
+                    new Option { Destination = 452, Text = "Вы справились за 6 раундов" },
+                    new Option { Destination = 512, Text = "Не успели" },
                 }
             },
             [536] = new Paragraph
@@ -4444,9 +4429,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 561, Text = "Грубо вырезанная богиня с четырьмя руками изогнулась в танце, насмешливый взгляд ее словно говорит – не ошибись в выборе, ведьмак (если у вас записано слово сказка, идите на" },
+                    new Option { Destination = 561, Text = "Если у вас записано слово сказка" },
                     new Option { Destination = 566, Text = "Из правого коридора доносится звук какого-то работающего механизма" },
-                    new Option { Destination = 483, Text = ", левый же подозрительно тих и абсолютно не освещен" },
+                    new Option { Destination = 483, Text = "Левый же подозрительно тих и абсолютно не освещен" },
                 }
             },
             [538] = new Paragraph
@@ -4460,8 +4445,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 433, Text = "Вы подойдете ближе" },
-                    new Option { Destination = 492, Text = "или начнете медленно, осторожно пятиться назад" },
+                    new Option { Destination = 433, Text = "Подойдете ближе" },
+                    new Option { Destination = 492, Text = "Начнете медленно, осторожно пятиться назад" },
                 }
             },
             [540] = new Paragraph
@@ -4520,7 +4505,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 525, Text = "Будете продолжать" },
-                    new Option { Destination = 493, Text = "или бросите свою затею и вернетесь на" },
+                    new Option { Destination = 493, Text = "Бросите свою затею" },
                 }
             },
             [548] = new Paragraph
@@ -4534,7 +4519,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 491, Text = "(Если у вас записано слово пропажа, идите на" },
+                    new Option { Destination = 491, Text = "Если у вас записано слово пропажа" },
                     new Option { Destination = 497, Text = "Прямо" },
                     new Option { Destination = 526, Text = "Направо" },
                     new Option { Destination = 420, Text = "Налево" },
@@ -4551,17 +4536,17 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 574, Text = "Если его уровень его ДОВЕРИЯ меньше 6, то он откажется от такой авантюры – сразу идите на" },
-                    new Option { Destination = 540, Text = "Вернитесь на" },
+                    new Option { Destination = 574, Text = "Если его уровень его ДОВЕРИЯ меньше 6" },
+                    new Option { Destination = 540, Text = "Войдите в понравившуюся дверь" },
                 }
             },
             [552] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 598, Text = "Вы рванете как ветер, чтобы быстрее миновать опасное место" },
+                    new Option { Destination = 581, Text = "Если у вас записано слово шарик" },
+                    new Option { Destination = 598, Text = "Рванете как ветер, чтобы быстрее миновать опасное место" },
                     new Option { Destination = 559, Text = "Пройдете вдоль левой стены, прижавшись к ней спиной, чтобы уменьшить зону поражения" },
-                    new Option { Destination = 581, Text = "Если у вас записано слово шарик, то" },
                 }
             },
             [553] = new Paragraph
@@ -4582,8 +4567,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 592, Text = "Если у вас записано слово оберег, идите на" },
-                    new Option { Destination = 569, Text = "Иначе ступайте на" },
+                    new Option { Destination = 592, Text = "Если у вас записано слово оберег" },
+                    new Option { Destination = 569, Text = "Далее" },
                 }
             },
             [556] = new Paragraph
@@ -4626,7 +4611,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 510, Text = "Если у вас есть 8 золотых, можете попробовать проверить, так ли это" },
-                    new Option { Destination = 537, Text = "Если нет, то вернитесь на" },
+                    new Option { Destination = 537, Text = "Если нет, то выбирайте дальнейший маршрут" },
                 }
             },
             [562] = new Paragraph
@@ -4687,7 +4672,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 584, Text = "Если ваша специализация – маг, то ваш ответ: «Да»" },
-                    new Option { Destination = 520, Text = "иначе вы вынуждены ответить «Нет»" },
+                    new Option { Destination = 520, Text = "Иначе вы вынуждены ответить «Нет»" },
                 }
             },
             [570] = new Paragraph
@@ -4780,8 +4765,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 477, Text = "Вы будете настаивать на том, чтобы бежать дальше по коридору" },
-                    new Option { Destination = 427, Text = "или согласитесь с напарником и подниметесь по лестнице" },
+                    new Option { Destination = 477, Text = "Будете настаивать на том, чтобы бежать дальше по коридору" },
+                    new Option { Destination = 427, Text = "Согласитесь с напарником и подниметесь по лестнице" },
                 }
             },
             [583] = new Paragraph
@@ -4802,9 +4787,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 493, Text = "Если вы сумели набрать необходимый вес, то без проблем покидаете комнату с весами, и идете по коридору до золотистой двери" },
-                    new Option { Destination = 556, Text = "Это будет Коннери" },
-                    new Option { Destination = 521, Text = "или вы сами" },
+                    new Option { Destination = 493, Text = "Вы сумели набрать необходимый вес" },
+                    new Option { Destination = 556, Text = "Рискнёт Коннери" },
+                    new Option { Destination = 521, Text = "Вы сами рискнёте" },
                 }
             },
             [586] = new Paragraph
@@ -4828,7 +4813,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 518, Text = "Успели" },
-                    new Option { Destination = 562, Text = "или нет" },
+                    new Option { Destination = 562, Text = "Нет" },
                 }
             },
             [589] = new Paragraph
@@ -4856,8 +4841,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 578, Text = "Если у вас в вещах есть старый бронзовый наруч , то идите на" },
-                    new Option { Destination = 543, Text = "Иначе" },
+                    new Option { Destination = 578, Text = "Если у вас в вещах есть старый бронзовый наруч" },
+                    new Option { Destination = 543, Text = "Далее" },
                 }
             },
             [593] = new Paragraph
@@ -4878,9 +4863,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 554, Text = "Если у вас записаны все эти слова: один, два, три, четыре, пять, то идите на" },
-                    new Option { Destination = 519, Text = "Если у вас записаны четыре из этих слов, а какого-то одного не хватает, то идите на" },
-                    new Option { Destination = 509, Text = "Если ни одни из вариантов, приведенных выше, не про вас, то ваш спринт был безупречен, и вам прямая дорога на" },
+                    new Option { Destination = 554, Text = "Если у вас записаны все эти слова: один, два, три, четыре, пять" },
+                    new Option { Destination = 519, Text = "Если у вас записаны четыре из этих слов, а какого-то одного не хватает" },
+                    new Option { Destination = 509, Text = "Если ни одни из вариантов, приведенных выше, не про вас, то ваш спринт был безупречен" },
                 }
             },
             [596] = new Paragraph
@@ -4888,7 +4873,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 579, Text = "Успели" },
-                    new Option { Destination = 567, Text = "нет" },
+                    new Option { Destination = 567, Text = "Нет" },
                     new Option { Destination = 546, Text = "ЗАСЛОН" },
                 }
             },
@@ -4938,8 +4923,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 619, Text = "Если у вас записано слово дыхание, идите на" },
-                    new Option { Destination = 628, Text = "Иначе" },
+                    new Option { Destination = 619, Text = "Если у вас записано слово дыхание" },
+                    new Option { Destination = 628, Text = "Далее" },
                 }
             },
             [604] = new Paragraph
@@ -4962,8 +4947,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 661, Text = "Если ваши рефлексы подведут вас, то снаряд достигнет своей цели" },
-                    new Option { Destination = 638, Text = "если у вас в руках орочий яхан, то вам дорога на" },
-                    new Option { Destination = 652, Text = "Если же обычный ведьмачий меч, то" },
+                    new Option { Destination = 638, Text = "Если у вас в руках орочий яхан" },
+                    new Option { Destination = 652, Text = "Если же обычный ведьмачий меч" },
                 }
             },
             [607] = new Paragraph
@@ -5006,16 +4991,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 661, Text = "– Это не моя война, – и останетесь стоять на месте" },
-                    new Option { Destination = 654, Text = "– Тысяча орков, что я делаю? – и окликните инеистого великана, дав понять, что вы еще живы" },
+                    new Option { Destination = 661, Text = "«Это не моя война» – и останетесь стоять на месте" },
+                    new Option { Destination = 654, Text = "«Тысяча орков, что я делаю?» – и окликните инеистого великана, дав понять, что вы еще живы" },
                 }
             },
             [613] = new Paragraph
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 637, Text = "Если у вас записано слово идолы, то идите на" },
-                    new Option { Destination = 620, Text = "Если нет, то" },
+                    new Option { Destination = 637, Text = "Если у вас записано слово идолы" },
+                    new Option { Destination = 620, Text = "Не записано" },
                 }
             },
             [614] = new Paragraph
@@ -5029,8 +5014,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 665, Text = "Если его ДОВЕРИЕ равно 10 или больше, то идите на" },
-                    new Option { Destination = 632, Text = "Если меньше, то" },
+                    new Option { Destination = 665, Text = "Если его ДОВЕРИЕ равно 10 или больше" },
+                    new Option { Destination = 632, Text = "Если его ДОВЕРИЕ меньше 10" },
                 }
             },
             [616] = new Paragraph
@@ -5058,8 +5043,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 618, Text = "Вы предпримете еще одну попытку пробить доспехи" },
-                    new Option { Destination = 684, Text = "Или решите, что тут дело нечисто, и надо действовать как-то по-другому" },
+                    new Option { Destination = 618, Text = "Предпримете еще одну попытку пробить доспехи" },
+                    new Option { Destination = 684, Text = "Решите, что тут дело нечисто, и надо действовать как-то по-другому" },
                 }
             },
             [620] = new Paragraph
@@ -5135,7 +5120,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 605, Text = "деревянные леса" },
                     new Option { Destination = 611, Text = "зеленое облако над расселиной" },
-                    new Option { Destination = 653, Text = "Если вы решите применить СГУСТОК, то" },
+                    new Option { Destination = 653, Text = "Решите применить СГУСТОК" },
                     new Option { Destination = 679, Text = "Если все варианты испробованы, то больше бегать от ледяной смерти у вас уже не получается – вы слишком устали" },
                 }
             },
@@ -5144,7 +5129,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 622, Text = "Вы были быстрее дракона" },
-                    new Option { Destination = 679, Text = "или нет" },
+                    new Option { Destination = 679, Text = "Нет" },
                 }
             },
             [631] = new Paragraph
