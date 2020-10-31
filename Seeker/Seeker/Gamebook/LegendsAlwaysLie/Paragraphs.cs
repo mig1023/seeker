@@ -221,6 +221,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [23] = new Paragraph
             {
+                Trigger = "Scream",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 112, Text = "Далее" },
@@ -758,8 +760,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 4, Text = "Если у вас записано слово крик", OnlyIf = "Scream" },
                     new Option { Destination = 57, Text = "Надо вставать" },
-                    new Option { Destination = 4, Text = "Если у вас записано слово крик" },
                 }
             },
             [94] = new Paragraph
