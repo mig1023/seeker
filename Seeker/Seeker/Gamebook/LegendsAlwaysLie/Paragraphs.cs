@@ -546,6 +546,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [64] = new Paragraph
             {
+                Trigger = "Ogadir",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 90, Text = "Далее" },
@@ -1879,7 +1881,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 320, Text = "Если у вас записано слово Огадар" },
+                    new Option { Destination = 320, Text = "Если у вас записано слово Огадар", OnlyIf = "Ogadir" },
                     new Option { Destination = 174, Text = "Будете блокировать удар" },
                     new Option { Destination = 134, Text = "Попытаетесь откатиться в сторону" },
                     new Option { Destination = 396, Text = "ЗАСЛОН" },
