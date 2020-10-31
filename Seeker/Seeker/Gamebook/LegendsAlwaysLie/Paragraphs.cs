@@ -689,6 +689,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [83] = new Paragraph
             {
+                Trigger = "Time",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 30, Text = "Далее" },
@@ -785,8 +787,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 56, Text = "Если у вас записано слово время", OnlyIf = "Time" },
                     new Option { Destination = 41, Text = "А пока остается лишь ждать да провожать взглядом пушистые донельзя облака" },
-                    new Option { Destination = 56, Text = "Если у вас записано слово время" },
                 }
             },
             [96] = new Paragraph
