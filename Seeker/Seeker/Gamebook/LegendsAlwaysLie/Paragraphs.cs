@@ -56,6 +56,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [3] = new Paragraph
             {
+                Trigger = "Higher",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 35, Text = "Далее" },
@@ -1522,7 +1524,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 304, Text = "Если у вас записано слово высший" },
+                    new Option { Destination = 304, Text = "Если у вас записано слово высший", OnlyIf = "Higher" },
                     new Option { Destination = 377, Text = "Сражаться" },
                     new Option { Destination = 247, Text = "Попытаться выбраться из пещеры" },
                 }
@@ -2293,7 +2295,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 304, Text = "Если у вас записано слово высший" },
+                    new Option { Destination = 304, Text = "Если у вас записано слово высший", OnlyIf = "Higher" },
                     new Option { Destination = 377, Text = "Принять свой, скорее всего – последний, бой" },
                     new Option { Destination = 247, Text = "Попытаться выбежать из пещеры на свет" },
                 }
