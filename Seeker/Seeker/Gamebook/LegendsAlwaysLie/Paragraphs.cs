@@ -65,6 +65,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [4] = new Paragraph
             {
+                Trigger = "Study",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 70, Text = "Далее" },
@@ -2111,7 +2113,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 298, Text = "Если у вас записано слово должок" },
-                    new Option { Destination = 354, Text = "Если у вас записано слово учеба" },
+                    new Option { Destination = 354, Text = "Если у вас записано слово учеба", OnlyIf = "Study" },
                     new Option { Destination = 123, Text = "Принять бой" },
                 }
             },
@@ -5445,11 +5447,11 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
+                    new Option { Destination = 601, Text = "Если у вас записано слово учеба", OnlyIf = "Study" },
                     new Option { Destination = 678, Text = "Стоять на месте" },
                     new Option { Destination = 686, Text = "Двигаться вокруг карды по часовой стрелке, согласно оси ее вращения" },
                     new Option { Destination = 662, Text = "Двигаться против часовой стрелки, и, соответственно, против оси ее вращения" },
                     new Option { Destination = 644, Text = "Двигаться мелкими шажками взад-вперед, изображая из себя маятник" },
-                    new Option { Destination = 601, Text = "Если у вас записано слово учеба" },
                 }
             },
             [636] = new Paragraph
