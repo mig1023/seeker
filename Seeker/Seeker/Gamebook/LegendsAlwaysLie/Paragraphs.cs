@@ -1390,6 +1390,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [167] = new Paragraph
             {
+                Trigger = "Amulet",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 337, Text = "Далее" },
@@ -4772,7 +4774,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 592, Text = "Если у вас записано слово оберег" },
+                    new Option { Destination = 592, Text = "Если у вас записано слово оберег", OnlyIf = "Amulet" },
                     new Option { Destination = 569, Text = "Далее" },
                 }
             },
