@@ -1590,6 +1590,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [193] = new Paragraph
             {
+                Trigger = "Missing",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 214, Text = "Попытаетесь рассмотреть с обрыва, не появится ли Коннери в воде" },
@@ -2951,6 +2953,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [351] = new Paragraph
             {
+                Trigger = "Missing",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 389, Text = "Попробуете славировать и выплыть к расселине на противоположном берегу (задачка сложная, но может выгореть)" },
@@ -3298,6 +3302,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [389] = new Paragraph
             {
+                Trigger = "Missing",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 250, Text = "Далее" },
@@ -4730,7 +4736,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 491, Text = "Если у вас записано слово пропажа" },
+                    new Option { Destination = 491, Text = "Если у вас записано слово пропажа", OnlyIf = "Missing" },
                     new Option { Destination = 497, Text = "Прямо" },
                     new Option { Destination = 526, Text = "Направо" },
                     new Option { Destination = 420, Text = "Налево" },
