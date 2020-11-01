@@ -973,6 +973,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [118] = new Paragraph
             {
+                Trigger = "Nuances",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 6, Text = "Попросите, чтобы напарник заплатил за вас" },
@@ -3568,7 +3570,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 529, Text = "Если у вас записано слово слезы, или водоем, или ярость", OnlyIf = "Tears" },
+                    new Option { Destination = 529, Text = "Если у вас записано слово слезы, или водоем, или ярость", OnlyIf = "Tears|Nuances" },
                     new Option { Destination = 539, Text = "Если у вас записано слово нюансы" },
                 }
             },
