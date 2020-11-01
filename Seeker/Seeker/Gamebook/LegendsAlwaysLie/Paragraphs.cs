@@ -1731,6 +1731,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [209] = new Paragraph
             {
+                Trigger = "Legs",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 108, Text = "Далее" },
@@ -2220,6 +2222,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [268] = new Paragraph
             {
+                Trigger = "Legs",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 205, Text = "Далее" },
@@ -2794,6 +2798,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [338] = new Paragraph
             {
+                Trigger = "Legs",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 250, Text = "Далее" },
@@ -3302,7 +3308,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [389] = new Paragraph
             {
-                Trigger = "Missing",
+                Trigger = "Missing, Legs",
 
                 Options = new List<Option>
                 {
