@@ -1170,6 +1170,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [141] = new Paragraph
             {
+                Trigger = "Cache",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 338, Text = "Далее" },
@@ -4007,7 +4009,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 435, Text = "Если у вас записано слово схрон" },
+                    new Option { Destination = 435, Text = "Если у вас записано слово схрон", OnlyIf = "Cache" },
                     new Option { Destination = 480, Text = "Попробуете взобраться по стене к потолку и проверить, как обстоят дела там" },
                     new Option { Destination = 493, Text = "Попробуете что-то еще" },
                 }
