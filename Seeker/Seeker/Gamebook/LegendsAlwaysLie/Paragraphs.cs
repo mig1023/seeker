@@ -1960,6 +1960,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [237] = new Paragraph
             {
+                Trigger = "Water",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 126, Text = "Далее" },
@@ -3286,7 +3288,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 360, Text = "Если у вас записано слово слезы или водоем", OnlyIf = "Tears" },
+                    new Option { Destination = 360, Text = "Если у вас записано слово слезы или водоем", OnlyIf = "Tears|Water" },
                     new Option { Destination = 352, Text = "Вы спокойно проходите мимо, скорчив отражению забавную рожицу" },
                 }
             },
@@ -3594,8 +3596,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 529, Text = "Если у вас записано слово слезы, или водоем, или ярость", OnlyIf = "Tears|Nuances" },
-                    new Option { Destination = 539, Text = "Если у вас записано слово нюансы" },
+                    new Option { Destination = 529, Text = "Если у вас записано слово слезы, или водоем, или ярость", OnlyIf = "Tears|Water" },
+                    new Option { Destination = 539, Text = "Если у вас записано слово нюансы", OnlyIf = "Nuances" },
                 }
             },
             [419] = new Paragraph
