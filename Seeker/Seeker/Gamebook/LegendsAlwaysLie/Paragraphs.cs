@@ -883,6 +883,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [106] = new Paragraph
             {
+                Trigger = "Panic",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 68, Text = "Немедленно броситься на поиски" },
@@ -2057,7 +2059,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 267, Text = "Если у вас записано слово паника" },
+                    new Option { Destination = 267, Text = "Если у вас записано слово паника", OnlyIf = "Panic" },
                     new Option { Destination = 299, Text = "Прямо по курсу равнина, покрытая длинной, выше колена, травой" },
                     new Option { Destination = 137, Text = "Правее, на северо-востоке, виднеются какие-то руины, истертые временем до абсолютной неузнаваемости" },
                     new Option { Destination = 398, Text = "К северо-западу же от вас стандартные скалы, правда, увитые разнообразной зеленью (все-таки здесь ощутимо теплее, чем на промозглом краю плато)" },
