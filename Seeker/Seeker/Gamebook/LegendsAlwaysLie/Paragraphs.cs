@@ -1344,6 +1344,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [161] = new Paragraph
             {
+                Trigger = "Note",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 207, Text = "Далее" },
@@ -2716,7 +2718,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 141, Text = "Если у вас записано слово записка" },
+                    new Option { Destination = 141, Text = "Если у вас записано слово записка", OnlyIf = "Note" },
                     new Option { Destination = 393, Text = "Решите понырять, чтобы проверить, не ушло ли тело Коннери на глубину (мало ли, вдруг треснулся головой, пока его несло течением)" },
                     new Option { Destination = 379, Text = "Решите форсировать реку, и проверить, нет ли следов напарника на другой стороне" },
                 }
@@ -3112,7 +3114,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 286, Text = "Если у вас записано слово записка" },
+                    new Option { Destination = 286, Text = "Если у вас записано слово записка", OnlyIf = "Note" },
                     new Option { Destination = 393, Text = "Нырнуть, чтобы рассмотреть, нет ли на дне тела Коннери" },
                     new Option { Destination = 338, Text = "Выбраться на берег" },
                 }
