@@ -698,6 +698,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [84] = new Paragraph
             {
+                Trigger = "Money",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 15, Text = "Далее" },
@@ -822,6 +824,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [100] = new Paragraph
             {
+                Trigger = "Tact",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 35, Text = "Далее" },
@@ -831,7 +835,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 118, Text = "Если у вас записано слово деньги" },
+                    new Option { Destination = 118, Text = "Если у вас записано слово деньги", OnlyIf = "Money" },
                     new Option { Destination = 19, Text = "Вы прислушаетесь к своему внутреннему голосу и откажетесь" },
                     new Option { Destination = 90, Text = "Доверитесь выбору Коннери и примете предложение лепрекона (сразу отнимите у себя три золотых)" },
                 }
@@ -3857,7 +3861,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 480, Text = "Если у вас записано слово такт" },
+                    new Option { Destination = 480, Text = "Если у вас записано слово такт", OnlyIf = "Tact" },
                     new Option { Destination = 513, Text = "Испытать скорость своей реакции и попытаться пройти зал манекенов" },
                 }
             },
