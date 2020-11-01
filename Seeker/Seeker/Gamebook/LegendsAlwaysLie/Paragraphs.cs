@@ -1415,6 +1415,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [170] = new Paragraph
             {
+                Trigger = "Debt",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 388, Text = "Далее" },
@@ -2140,7 +2142,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 298, Text = "Если у вас записано слово должок" },
+                    new Option { Destination = 298, Text = "Если у вас записано слово должок", OnlyIf = "Debt" },
                     new Option { Destination = 354, Text = "Если у вас записано слово учеба", OnlyIf = "Study" },
                     new Option { Destination = 123, Text = "Принять бой" },
                 }
