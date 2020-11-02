@@ -2197,6 +2197,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [264] = new Paragraph
             {
+                Trigger = "FairyTale",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 229, Text = "Далее" },
@@ -4656,7 +4658,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 561, Text = "Если у вас записано слово сказка" },
+                    new Option { Destination = 561, Text = "Если у вас записано слово сказка", OnlyIf = "FairyTale" },
                     new Option { Destination = 566, Text = "Из правого коридора доносится звук какого-то работающего механизма" },
                     new Option { Destination = 483, Text = "Левый же подозрительно тих и абсолютно не освещен" },
                 }
