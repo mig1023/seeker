@@ -1543,6 +1543,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [187] = new Paragraph
             {
+                Trigger = "EvilEye",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 157, Text = "Далее" },
@@ -2000,6 +2002,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [242] = new Paragraph
             {
+                Trigger = "EvilEye",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 307, Text = "Далее" },
@@ -2266,7 +2270,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 226, Text = "Если у вас записано слово сглаз" },
+                    new Option { Destination = 226, Text = "Если у вас записано слово сглаз", OnlyIf = "EvilEye" },
                     new Option { Destination = 345, Text = "Вы все же двинетесь по ней" },
                     new Option { Destination = 387, Text = "Воспользовавшись тем, что у вас теперь есть посох, чтобы проверять дорогу, двинетесь по зыбкому торфу, забирая левее от источника жуткого рева" },
                 }
@@ -4985,6 +4989,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [577] = new Paragraph
             {
+                RemoveTrigger = "EvilEye",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 537, Text = "Далее" },
