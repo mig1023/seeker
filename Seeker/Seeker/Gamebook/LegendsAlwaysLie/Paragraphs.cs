@@ -26,6 +26,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 paragraph.Modification = new List<Interfaces.IModification>(source.Modification);
 
             paragraph.Trigger = source.Trigger;
+            paragraph.RemoveTrigger = source.RemoveTrigger;
 
             return paragraph;
         }
@@ -2990,6 +2991,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [353] = new Paragraph
             {
+                Trigger = "Basket",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 397, Text = "Далее" },
@@ -3758,7 +3761,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [438] = new Paragraph
             {
-                Options = new List<Option>
+                RemoveTrigger = "Basket",
+
+,               Options = new List<Option>
                 {
                     new Option { Destination = 477, Text = "Далее" },
                 }
@@ -4100,7 +4105,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 442, Text = "Если у вас записано слово корзинка" },
+                    new Option { Destination = 442, Text = "Если у вас записано слово корзинка", OnlyIf = "Basket" },
                     new Option { Destination = 600, Text = "Далее" },
                 }
             },
