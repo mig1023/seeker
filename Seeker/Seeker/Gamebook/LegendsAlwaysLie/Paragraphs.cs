@@ -3068,6 +3068,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     },
                 },
 
+                Trigger = "Fury",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 325, Text = "Все в порядке" },
@@ -3612,7 +3614,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 529, Text = "Если у вас записано слово слезы, или водоем, или ярость", OnlyIf = "Tears|Water" },
+                    new Option { Destination = 529, Text = "Если у вас записано слово слезы, или водоем, или ярость", OnlyIf = "Tears|Water|Fury" },
                     new Option { Destination = 539, Text = "Если у вас записано слово нюансы", OnlyIf = "Nuances" },
                 }
             },
