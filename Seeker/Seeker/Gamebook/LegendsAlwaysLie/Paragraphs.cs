@@ -3777,7 +3777,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 RemoveTrigger = "Basket",
 
-,               Options = new List<Option>
+                Options = new List<Option>
                 {
                     new Option { Destination = 477, Text = "Далее" },
                 }
@@ -4719,6 +4719,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [541] = new Paragraph
             {
+                Trigger = "Five",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 595, Text = "Далее" },
@@ -4853,6 +4855,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [559] = new Paragraph
             {
+                Trigger = "Three",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 573, Text = "Далее" },
@@ -5028,6 +5032,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [580] = new Paragraph
             {
+                Trigger = "One",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 465, Text = "Далее" },
@@ -5084,6 +5090,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [587] = new Paragraph
             {
+                Trigger = "Four",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 436, Text = "Далее" },
@@ -5108,6 +5116,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [589] = new Paragraph
             {
+                Trigger = "Two",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 552, Text = "Далее" },
@@ -5151,10 +5161,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [595] = new Paragraph
             {
+                Trigger = "one, two, four, five",
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 554, Text = "Если у вас записаны все эти слова: один, два, три, четыре, пять" },
-                    new Option { Destination = 519, Text = "Если у вас записаны четыре из этих слов, а какого-то одного не хватает" },
+                    new Option { Destination = 554, Text = "Если у вас записаны все эти слова: один, два, три, четыре, пять", OnlyIf = "one, two, three, four, five" },
+                    new Option { Destination = 519, Text = "Если у вас записаны четыре из этих слов, а какого-то одного не хватает", OnlyIf = "4; one; two; three; four; five" },
                     new Option { Destination = 509, Text = "Если ни одни из вариантов, приведенных выше, не про вас, то ваш спринт был безупречен" },
                 }
             },

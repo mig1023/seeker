@@ -140,6 +140,19 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 return false;
             }
+            else if (option.Contains(";"))
+            {
+                string[] options = option.Split(';');
+
+                int optionMustBe = int.Parse(options[0]);
+                int optionCount = 0;
+
+                foreach (string oneOption in options)
+                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
+                        optionCount += 1;
+
+                return (optionCount >= optionMustBe ? true : false);
+            }
             else
             {
                 string[] options = option.Split(',');
