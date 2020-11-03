@@ -294,6 +294,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [32] = new Paragraph
             {
+                Trigger = "RustyBlade",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 70, Text = "Далее" },
@@ -1357,7 +1359,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 321, Text = "Если у вас записано слово сфера", OnlyIf = "Sphere" },
-                    new Option { Destination = 230, Text = "Если у вас есть ржавый кинжал" },
+                    new Option { Destination = 230, Text = "Если у вас есть ржавый кинжал", OnlyIf = "RustyBlade" },
                     new Option { Destination = 215, Text = "Предложить ему заточить ваш меч" },
                 }
             },
