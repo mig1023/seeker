@@ -3734,6 +3734,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [433] = new Paragraph
             {
+                Trigger = "Gift",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 467, Text = "Далее" },
@@ -4229,6 +4231,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [492] = new Paragraph
             {
+                Trigger = "Gift",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 467, Text = "Далее" },
