@@ -3661,6 +3661,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [424] = new Paragraph
             {
+                Trigger = "Idols",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 388, Text = "Далее" },
@@ -5346,8 +5348,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 637, Text = "Если у вас записано слово идолы" },
-                    new Option { Destination = 620, Text = "Не записано" },
+                    new Option { Destination = 637, Text = "Если у вас записано слово идолы", OnlyIf = "Idols" },
+                    new Option { Destination = 620, Text = "Далее" },
                 }
             },
             [614] = new Paragraph
