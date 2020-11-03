@@ -1800,7 +1800,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 277, Text = "Если у вас записано слово пружинка" },
+                    new Option { Destination = 277, Text = "Если у вас записано слово пружинка", OnlyIf = "Spring" },
                     new Option { Destination = 174, Text = "Далее" },
                 }
             },
@@ -3127,6 +3127,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [367] = new Paragraph
             {
+                Trigger = "Spring",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 148, Text = "Далее" },
