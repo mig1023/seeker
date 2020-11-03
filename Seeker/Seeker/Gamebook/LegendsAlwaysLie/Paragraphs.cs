@@ -4333,6 +4333,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [503] = new Paragraph
             {
+                Trigger = "Guess",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 599, Text = "Хотите рискнуть и побарахтаться в муравейнике" },
@@ -4567,7 +4569,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 428, Text = "Если у вас записано слово догадка" },
+                    new Option { Destination = 428, Text = "Если у вас записано слово догадка", OnlyIf = "Guess" },
                     new Option { Destination = 493, Text = "Попробовать что-то другое" },
                 }
             },
