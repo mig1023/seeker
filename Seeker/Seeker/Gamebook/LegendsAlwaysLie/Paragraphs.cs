@@ -2429,6 +2429,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [289] = new Paragraph
             {
+                Trigger = "PieceOfMeat",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 310, Text = "Прямо, к узкой вертикальной скале тускло-рыжеватого цвета" },
@@ -3207,7 +3209,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 135, Text = "Если у вас есть кусок мяса, можете попробовать бросить его медведю" },
+                    new Option { Destination = 135, Text = "Если у вас есть кусок мяса, можете попробовать бросить его медведю", OnlyIf = "PieceOfMeat" },
                     new Option { Destination = 227, Text = "Также можно попробовать поднять руки, показывая что вы безоружны, и медленно отходить назад" },
                     new Option { Destination = 323, Text = "Вступить в схватку" },
                 }
