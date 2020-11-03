@@ -2117,6 +2117,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [254] = new Paragraph
             {
+                Trigger = "PieceOfMalachite",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 108, Text = "Далее" },
@@ -2835,7 +2837,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 553, Text = "Если у вас есть кусок малахита, и вы не прочь рискнуть" },
+                    new Option { Destination = 553, Text = "Если у вас есть кусок малахита, и вы не прочь рискнуть", OnlyIf = "PieceOfMalachite" },
                     new Option { Destination = 397, Text = "Если же нет, то остается лишь покинуть комнату" },
                 }
             },
@@ -4584,6 +4586,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [527] = new Paragraph
             {
+                Trigger = "PieceOfMalachite",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 540, Text = "Далее" },
