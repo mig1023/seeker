@@ -4803,7 +4803,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 581, Text = "Если у вас записано слово шарик" },
+                    new Option { Destination = 581, Text = "Если у вас записано слово шарик", OnlyIf = "Ball" },
                     new Option { Destination = 598, Text = "Рванете как ветер, чтобы быстрее миновать опасное место" },
                     new Option { Destination = 559, Text = "Пройдете вдоль левой стены, прижавшись к ней спиной, чтобы уменьшить зону поражения" },
                 }
@@ -5057,6 +5057,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [584] = new Paragraph
             {
+                Trigger = "Ball",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 520, Text = "Далее" },
