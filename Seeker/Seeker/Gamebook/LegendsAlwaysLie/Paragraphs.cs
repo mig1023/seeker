@@ -3545,6 +3545,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [413] = new Paragraph
             {
+                Trigger = "Sand",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 441, Text = "Далее" },
@@ -4149,7 +4151,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 503, Text = "Если у вас записано слово песок" },
+                    new Option { Destination = 503, Text = "Если у вас записано слово песок", OnlyIf = "Sand" },
                     new Option { Destination = 493, Text = "Решите, чем бы еще вам заняться" },
                 }
             },
