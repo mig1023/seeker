@@ -16,6 +16,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int Magicpoints { get; set; }
         public int Spellpoints { get; set; }
         public int Gold { get; set; }
+        public int ConneryHitpoints { get; set; }
+        public int ConneryTrust { get; set; }
         public SpecializationType Specialization { get; set; }
         public List<string> Spells { get; set; }
 
@@ -27,6 +29,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Magicpoints = 1;
             Spellpoints = 2;
             Gold = 20;
+            ConneryHitpoints = 30;
+            ConneryTrust = 5;
             Specialization = SpecializationType.Nope;
             Spells = new List<string>();
         }
@@ -40,6 +44,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Magicpoints = this.Magicpoints,
                 Spellpoints = this.Spellpoints,
                 Gold = this.Gold,
+                ConneryHitpoints = this.ConneryHitpoints,
+                ConneryTrust = this.ConneryTrust,
                 Specialization = this.Specialization,
                 Spells = new List<string>(),
             };
