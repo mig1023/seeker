@@ -19,7 +19,7 @@ namespace Seeker.Game
             {
                 Label label = new Label();
 
-                label.Text = status;
+                label.Text = status + System.Convert.ToChar(160);
                 label.FontSize = 12;
                 label.TextColor = (String.IsNullOrEmpty(textColor) ? Color.White : Color.FromHex(textColor));
                 label.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Data.ColorTypes.StatusBar));

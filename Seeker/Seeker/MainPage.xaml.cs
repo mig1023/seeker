@@ -85,7 +85,7 @@ namespace Seeker
                 Image illustration = new Image
                 {
                     Source = paragraph.Image,
-                    Aspect = Aspect.AspectFill
+                    Aspect = Aspect.AspectFit
                 };
                 Text.Children.Add(illustration);
             }
@@ -166,11 +166,15 @@ namespace Seeker
             }
             else
             {
+                MainGrid.RowDefinitions[2].Height = 40;
+                Status.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar));
+
+                FlexLayout statusPlace = Status;
+
                 foreach (Label status in Game.Interface.StatusBar(statuses))
-                    Status.Children.Add(status);
+                    statusPlace.Children.Add(status);
 
                 Status.IsVisible = true;
-                MainGrid.RowDefinitions[2].Height = 40;
 
                 if (!String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusFont)))
                 {
