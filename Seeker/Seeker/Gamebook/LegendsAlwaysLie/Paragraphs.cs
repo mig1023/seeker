@@ -6089,21 +6089,18 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         ActionName = "Get",
                         ButtonName = "Стать воином",
-                        Text = "ВОИН",
                         Specialization = Character.SpecializationType.Warrior,
                     },
                     new Actions
                     {
                         ActionName = "Get",
                         ButtonName = "Стать магом",
-                        Text = "МАГ",
                         Specialization = Character.SpecializationType.Wizard,
                     },
                     new Actions
                     {
                         ActionName = "Get",
                         ButtonName = "Стать метателем",
-                        Text = "МЕТАТЕЛЬ",
                         Specialization = Character.SpecializationType.Thrower,
                         Aftertext = "Учтите, что помимо всего перечисленного, специализация может вам пригодится в самый неожиданный момент. Воин, например, самый сильный из всей троицы, а маг может почувствовать заранее какую-то магическую ловушку.",
                     },
@@ -6122,7 +6119,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         ActionName = "Get",
                         ButtonName = "Обучиться лечению",
-                        Text = "ЛЕЧЕНИЕ",
+                        Text = "Заклинание 'ЛЕЧЕНИЕ'",
                         Spell = true,
                         Aftertext = "Заклинание самоисцеления (уменьшительно именуемое всеми ведьмаками ЛЕЧИЛКА), добавляет 8 ЖИЗНЕЙ (кроме как во время боя).",
                     },
@@ -6130,7 +6127,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         ActionName = "Get",
                         ButtonName = "Обучиться заслону",
-                        Text = "ЗАСЛОН",
+                        Text = "Заклинание 'ЗАСЛОН'",
                         Spell = true,
                         Aftertext = "На несколько секунд создает между вами и противником невидимую магическую преграду.",
                     },
@@ -6138,7 +6135,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         ActionName = "Get",
                         ButtonName = "Обучиться сгустку",
-                        Text = "СГУСТОК",
+                        Text = "Заклинание 'СГУСТОК'",
                         Spell = true,
                         Aftertext = "Удар по противнику небольшим сгустком пламени, отнимающий у него 6 ЖИЗНЕЙ.",
                     },
@@ -6146,7 +6143,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         ActionName = "Get",
                         ButtonName = "Обучиться взору",
-                        Text = "ВЗОР",
+                        Text = "Заклинание 'ВЗОР'",
                         Spell = true,
                         Aftertext = "Включает т. н. «истинное зрение». Улучшает ориентировку в темноте и дает способность увидеть скрытую магию. Применениев условиях хорошей освещенности может быть болезненным. Недоступно, если вы выберете специализацию «воин».",
                     },
@@ -6154,7 +6151,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         ActionName = "Get",
                         ButtonName = "Обучиться броне",
-                        Text = "БРОНЯ",
+                        Text = "Заклинание 'БРОНЯ'",
                         Spell = true,
                         Aftertext = "Ваши мышцы каменеют, сосуды сужаются. На время одного боя вы теряете в два раза меньше ЖИЗНИ от ударов противника.",
                     },

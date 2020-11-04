@@ -37,7 +37,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public List<string> Representer()
         {
-            if (ActionName == "Get")
+            if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
 
             return new List<string> { };
