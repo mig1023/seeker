@@ -1026,6 +1026,26 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [123] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        RoundsToWin = 5,
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ВЕЛИКАН-КОПЬЕНОСЕЦ",
+                                Strength = 11,
+                                Hitpoints = 10,
+                            },
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 306, Text = "Если вы управились за 5 раундов" },

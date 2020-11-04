@@ -169,10 +169,8 @@ namespace Seeker
                 MainGrid.RowDefinitions[2].Height = 40;
                 Status.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar));
 
-                FlexLayout statusPlace = Status;
-
                 foreach (Label status in Game.Interface.StatusBar(statuses))
-                    statusPlace.Children.Add(status);
+                    Status.Children.Add(status);
 
                 Status.IsVisible = true;
 
