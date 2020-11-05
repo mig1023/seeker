@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
+        public string ConneryAttacks { get; set; }
 
         public Modification Benefit { get; set; }
         public Modification Damage { get; set; }
@@ -209,6 +210,18 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                     fight.Add(String.Format("{0} (жизни: {1})", enemy.Name, enemy.Hitpoints));
 
+                    if (!String.IsNullOrEmpty(ConneryAttacks))
+                    {
+                        string[] bonus = ConneryAttacks.Split(',');
+
+                        if ((bonus.Length < 2) || (round > int.Parse(bonus[1])))
+                        {
+                            int conneryAttack = int.Parse(bonus[0]);
+                            enemy.Hitpoints -= conneryAttack;
+                            fight.Add(String.Format("GOOD|{0} ранен атакой Коннери (дополнительно теряет жизней: {1})", enemy.Name, conneryAttack));
+                        }
+                    }
+
                     int firstHeroRoll = Game.Dice.Roll();
                     int secondHeroRoll = Game.Dice.Roll();
                     int heroHitStrength = firstHeroRoll + secondHeroRoll + Character.Protagonist.Strength;
@@ -234,6 +247,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     if (heroHitStrength > enemyHitStrength)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                        
                         enemy.Hitpoints -= 2;
 
                         if (enemy.Hitpoints <= 0)

@@ -38,6 +38,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 701, Text = "В путь!" },
+                    new Option { Destination = 49, Text = "ТЕСТ" },
                 }
             },
             [1] = new Paragraph
@@ -434,6 +435,26 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [49] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        ConneryAttacks = "5, 3",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ПЕРНАТЫЙ ДЕМОН",
+                                Strength = 11,
+                                Hitpoints = 12,
+                            },
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 23, Text = "Далее" },
