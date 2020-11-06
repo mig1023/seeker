@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
+        public int AttackWounds { get; set; }
         public string ConneryAttacks { get; set; }
 
         public Modification Benefit { get; set; }
@@ -269,7 +270,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
                         
-                        enemy.Hitpoints -= 2;
+                        enemy.Hitpoints -= (AttackWounds > 0 ? AttackWounds : 2);
 
                         if (EnemyLostFight(FightEnemies, ref fight))
                             return fight;

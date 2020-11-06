@@ -1154,6 +1154,29 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [133] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        ConneryAttacks = "2",
+                        AttackWounds = 3,
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ВЕЛИКАН",
+                                Strength = 13,
+                                Hitpoints = 16,
+                            },
+                        },
+
+                        Aftertext = "Несмотря на то, что вас двое, это непростой бой. Уж очень здоровый бугай вам попался. После победы вы осматриваете его, находите 2 золотых, и моток медной проволоки.\n\nБерите все, что захотите, и двигайтесь дальше, пока не появились его сородичи",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 148, Text = "Далее" },
