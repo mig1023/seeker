@@ -38,7 +38,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 701, Text = "В путь!" },
-                    new Option { Destination = 49, Text = "ТЕСТ" },
                 }
             },
             [1] = new Paragraph
@@ -441,7 +440,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         ActionName = "Fight",
                         ButtonName = "Сражаться",
-                        ConneryAttacks = "5, 3",
+                        ConneryAttacks = "3, 3",
 
                         Enemies = new List<Character>
                         {
@@ -452,6 +451,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                                 Hitpoints = 12,
                             },
                         },
+
+                        Aftertext = "Первые три раунда вам придется провести самостоятельно, потом к вам присоединяется Коннери. Начиная с четвертого раунда отнимайте у демона автоматически по три ЖИЗНИ за раунд – ваш напарник мастер наносить неотразимые удары.",
                     },
                 },
 

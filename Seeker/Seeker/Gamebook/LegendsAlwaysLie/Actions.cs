@@ -188,6 +188,24 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             }
         }
 
+        private bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight)
+        {
+            bool enemyLost = true;
+
+            foreach (Character e in FightEnemies)
+                if (e.Hitpoints > 0)
+                    enemyLost = false;
+
+            if (!enemyLost)
+                return false;
+            else
+            {
+                fight.Add(String.Empty);
+                fight.Add("BIG|GOOD|Коннери его добил, вы ПОБЕДИЛИ :)");
+                return true;
+            }
+        } 
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -218,7 +236,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         {
                             int conneryAttack = int.Parse(bonus[0]);
                             enemy.Hitpoints -= conneryAttack;
-                            fight.Add(String.Format("GOOD|{0} ранен атакой Коннери (дополнительно теряет жизней: {1})", enemy.Name, conneryAttack));
+                            fight.Add(String.Format("GOOD|{0} ранен атакой Коннери", enemy.Name, conneryAttack));
+
+                            if (EnemyLostFight(FightEnemies, ref fight))
+                                return fight;
                         }
                     }
 
@@ -250,21 +271,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         
                         enemy.Hitpoints -= 2;
 
-                        if (enemy.Hitpoints <= 0)
-                            enemy.Hitpoints = 0;
-
-                        bool enemyLost = true;
-
-                        foreach (Character e in FightEnemies)
-                            if (e.Hitpoints > 0)
-                                enemyLost = false;
-
-                        if (enemyLost)
-                        {
-                            fight.Add(String.Empty);
-                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                        if (EnemyLostFight(FightEnemies, ref fight))
                             return fight;
-                        }
                     }
                     else if (heroHitStrength < enemyHitStrength)
                     {
