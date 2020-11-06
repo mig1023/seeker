@@ -2271,6 +2271,28 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [254] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        ConneryAttacks = "2, 10",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ВЕЛИКАН НА НОСОРОГЕ",
+                                Strength = 13,
+                                Hitpoints = 14,
+                            },
+                        },
+
+                        Aftertext = "Это будет сложная схватка. Коннери одолеет своего противника за 10 раундов, и если ваш бой затянется дольше – придет вам на помощь – после 10 раунда ваш противник будет терять по 2 ЖИЗНИ за раунд. Победив, вы находите в переметных сумках поверженного великана 2 золотых и кусок малахита, после чего уходите вперед. Вскоре вы видите справа от себя ручей.",
+                    },
+                },
+
                 Trigger = "PieceOfMalachite",
 
                 Options = new List<Option>
@@ -2329,6 +2351,25 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [260] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "КОНДОР",
+                                Strength = 11,
+                                Hitpoints = 7,
+                            },
+                        },
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 164, Text = "Далее" },
@@ -2368,6 +2409,27 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [265] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "СУККУБ",
+                                Strength = 10,
+                                Hitpoints = 12,
+                            },
+                        },
+
+                        Aftertext = "После победы вы помогаете Коннери подняться. Тот морщится, ощупывая огромную шишку на голове (Коннери –4 ЖИЗНИ).\n\n– Что-то ты расслабился, – угрюмо говорите вы. – Как ты до своих преклонных лет дожил, если в такие примитивные засады попадаешься?\n\n– Мне показалось…\n\n– Что тебе показалось?\n\nКажется, что Коннери колеблется, хотя этот бегающий взгляд может быть просто следствием удара головой.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 322, Text = "Если ДОВЕРИЕ напарника равно 7 или больше, то" },
@@ -2405,13 +2467,32 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         ActionName = "Reaction",
                         ButtonName = "Реагируйте",
-                        Aftertext = "(не успеете – он заденет вас, потеряете 2 ЖИЗНИ) и оседает на землю.\n\nВы оборачиваетесь – за вашей спиной поднимается с земли великан. Вам повезло, что у него нет оружия, но и с голыми руками он опасный противник.\n\nВЕЛИКАН СИЛА 11 ЖИЗНЬ 12 (рана – 3 ЖИЗНИ) (СБ 11)\n\nЧерез 5 раундов распутавшийся Коннери приходит вам на помощь. После этого каждый раунд отнимайте у противника 2 ЖИЗНИ. После победы.",
+                        Aftertext = "(не успеете – он заденет вас, потеряете 2 ЖИЗНИ) и оседает на землю.\n\nВы оборачиваетесь – за вашей спиной поднимается с земли великан. Вам повезло, что у него нет оружия, но и с голыми руками он опасный противник.",
 
                         Damage = new Modification
                         {
                             Name = "Hitpoints",
                             Value = -2,
                         },
+                    },
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        ConneryAttacks = "2, 5",
+                        AttackWounds = 3,
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ВЕЛИКАН",
+                                Strength = 11,
+                                Hitpoints = 12,
+                            },
+                        },
+
+                        Aftertext = "Через 5 раундов распутавшийся Коннери приходит вам на помощь. После этого каждый раунд отнимайте у противника 2 ЖИЗНИ. После победы.",
                     },
                 },
 
@@ -2860,6 +2941,27 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [323] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "МЕДВЕДЬ",
+                                Strength = 11,
+                                Hitpoints = 12,
+                            },
+                        },
+
+                        Aftertext = "После победы вы осматриваете берлогу зверя, и в груде костей находите 2 золотых и статуэтку нимфы с обломанной головой. Теперь пора уходить.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 171, Text = "Далее" },
@@ -3063,6 +3165,34 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [343] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        OnlyRounds = 4,
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ТРОЛЛЬ",
+                                Strength = 9,
+                                Hitpoints = 10,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ТРОЛЛЬ",
+                                Strength = 9,
+                                Hitpoints = 10,
+                            },
+                        },
+
+                        Aftertext = "Через 4 раунда на шум во двор выходит великан-кузнец. Оценив обстановку, он поднимает руку и что-то гортанно кричит. В его руке тяжелый молот, и вообще, под его руководством тролли будут куда опаснее.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 175, Text = "Вы проскочите меж неуклюжих троллей и атакуете великана" },

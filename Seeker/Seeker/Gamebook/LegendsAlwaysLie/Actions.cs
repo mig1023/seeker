@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public bool Spell { get; set; }
 
         public List<Character> Enemies { get; set; }
+        public int OnlyRounds { get; set; }
         public int RoundsToWin { get; set; }
         public int AttackWounds { get; set; }
         public string ReactionWounds { get; set; }
@@ -349,6 +350,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             if (EnemyLostFight(FightEnemies, ref fight, connery: true))
                                 return fight;
                         }
+                    }
+
+                    if ((OnlyRounds > 0) && (OnlyRounds <= round))
+                    {
+                        fight.Add(String.Format("BOLD|Отведённые на бой раунды истекли.", RoundsToWin));
+                        return fight;
                     }
 
                     if ((RoundsToWin > 0) && (RoundsToWin <= round))
