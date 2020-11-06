@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
         public int AttackWounds { get; set; }
+        public string ReactionWounds { get; set; }
         public string ConneryAttacks { get; set; }
 
         public Modification Benefit { get; set; }
@@ -73,16 +74,23 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return statusLines;
         }
 
-        public List<string> Reaction()
+        private bool GoodReaction(ref List<string> reaction)
         {
-            List<string> reaction = new List<string>();
-
             int reactionLevel = (int)Math.Floor((double)Character.Protagonist.Hitpoints / 5);
             reaction.Add(String.Format("Уровнь реакции: {0} / 5 = {1}", Character.Protagonist.Hitpoints, reactionLevel));
 
             int reactionDice = Game.Dice.Roll();
             bool goodReaction = reactionDice <= reactionLevel;
             reaction.Add(String.Format("Реакция: {0} ⚄ {1} {2}", reactionDice, (goodReaction ? "<=" : ">"), reactionLevel));
+
+            return goodReaction;
+        }
+
+        public List<string> Reaction()
+        {
+            List<string> reaction = new List<string>();
+
+            bool goodReaction = GoodReaction(ref reaction);
 
             reaction.Add(goodReaction ? "BIG|GOOD|СРЕАГИРОВАЛИ :)" : "BIG|BAD|НЕ СРЕАГИРОВАЛИ :(");
 
@@ -278,7 +286,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     else if (heroHitStrength < enemyHitStrength)
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
-                        Character.Protagonist.Hitpoints -= 2;
+
+                        if (String.IsNullOrEmpty(ReactionWounds))
+                            Character.Protagonist.Hitpoints -= 2;
+                        else
+                        {
+                            string[] wounds = ReactionWounds.Split('-');
+                            int wound = int.Parse(GoodReaction(ref fight) ? wounds[0] : wounds[1]);
+                            Character.Protagonist.Hitpoints -= wound;
+                            fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, wound));
+                        }
 
                         if (Character.Protagonist.Hitpoints < 0)
                             Character.Protagonist.Hitpoints = 0;

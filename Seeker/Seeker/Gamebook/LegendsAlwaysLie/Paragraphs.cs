@@ -1387,6 +1387,28 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [158] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        AttackWounds = 3,
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ВЕЛИКАН",
+                                Strength = 13,
+                                Hitpoints = 14,
+                            },
+                        },
+
+                        Aftertext = "Он очень опасный противник и вы можете предпринять попытку убежать. Если же вы смогли его одолеть, то можете позаимствовать из карманов противника 2 золотых и бронзовый ключ. После уходите.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 174, Text = "Предпринять попытку убежать" },
@@ -1501,6 +1523,27 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [172] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ВЕЛИКАН",
+                                Strength = 12,
+                                Hitpoints = 12,
+                            },
+                        },
+
+                        Aftertext = "Победа откроет вам путь.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 244, Text = "Далее" },
@@ -1873,6 +1916,28 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [218] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        ReactionWounds = "1-3",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ВЕЛИКАН",
+                                Strength = 11,
+                                Hitpoints = 10,
+                            },
+                        },
+
+                        Aftertext = "Удары у великана страшные, но совсем уж медленные. Каждый раз, когда вы проигрываете раунд, реагируйте. Если успеваете, то вы теряете 1 ЖИЗНЬ. Не успеваете – теряете 3 ЖИЗНИ.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 139, Text = "Если бой затянется дольше 10 раундов" },
