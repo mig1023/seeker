@@ -1993,6 +1993,28 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [225] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        GolemFight = true,
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "САБЛЕРУКИЙ ГОЛЕМ",
+                                Strength = 11,
+                                Hitpoints = 2,
+                            },
+                        },
+
+                        Aftertext = "Вам надо выстоять 4 раунда, потом Коннери внезапно кричит:\n\n– Прикрой! – и вам надо успеть СРЕАГИРОВАТЬ, чтобы защитить своего компаньона. Если все проходит удачно, Коннери наносит голему повреждение. Если нет – отнимите у напарника 2 ЖИЗНИ. После продержитесь еще 4 раунда и повторите те же действия. Как только у Коннери получится дважды удачно повредить голема, бой заканчивается.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 288, Text = "Далее" },

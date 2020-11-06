@@ -21,6 +21,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int AttackWounds { get; set; }
         public string ReactionWounds { get; set; }
         public string ConneryAttacks { get; set; }
+        public bool GolemFight { get; set; }
 
         public Modification Benefit { get; set; }
         public Modification Damage { get; set; }
@@ -48,7 +49,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 List<string> enemies = new List<string>();
 
                 foreach (Character enemy in Enemies)
-                    enemies.Add(String.Format("{0}\nсила {1}  жизни {2}", enemy.Name, enemy.Strength, enemy.Hitpoints));
+                    if (enemy.Hitpoints > 0)
+                        enemies.Add(String.Format("{0}\nсила {1}  жизни {2}", enemy.Name, enemy.Strength, enemy.Hitpoints));
+                    else
+                        enemies.Add(String.Format("{0}\nсила {1}", enemy.Name, enemy.Strength));
 
                 return enemies;
             }
@@ -197,7 +201,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             }
         }
 
-        private bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight)
+        private bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight, bool connery = false)
         {
             bool enemyLost = true;
 
@@ -210,16 +214,29 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             else
             {
                 fight.Add(String.Empty);
-                fight.Add("BIG|GOOD|Коннери его добил, вы ПОБЕДИЛИ :)");
+
+                if (connery)
+                    fight.Add("BIG|GOOD|Коннери его добил, вы ПОБЕДИЛИ :)");
+                else
+                    fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+
                 return true;
             }
-        } 
+        }
+
+        private List<string> LostFight(List<string> fight)
+        {
+            fight.Add(String.Empty);
+            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+            return fight;
+        }
 
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
 
             int round = 1;
+            int golemRound = 4;
 
             List<Character> FightEnemies = new List<Character>();
 
@@ -247,7 +264,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             enemy.Hitpoints -= conneryAttack;
                             fight.Add(String.Format("GOOD|{0} ранен атакой Коннери", enemy.Name, conneryAttack));
 
-                            if (EnemyLostFight(FightEnemies, ref fight))
+                            if (EnemyLostFight(FightEnemies, ref fight, connery: true))
                                 return fight;
                         }
                     }
@@ -274,7 +291,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         )
                     );
 
-                    if (heroHitStrength > enemyHitStrength)
+                    if (GolemFight && (heroHitStrength > enemyHitStrength))
+                        fight.Add(String.Format("BOLD|Вы отбили все атаки", enemy.Name));
+                    else if (heroHitStrength > enemyHitStrength)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
                         
@@ -301,21 +320,41 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             Character.Protagonist.Hitpoints = 0;
 
                         if (Character.Protagonist.Hitpoints <= 0)
-                        {
-                            fight.Add(String.Empty);
-                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
-                            return fight;
-                        }
+                            return LostFight(fight);
                     }
                     else
                         fight.Add(String.Format("BOLD|Ничья в раунде"));
 
+                    if (GolemFight && (golemRound > 0))
+                        golemRound -= 1;
+                    else if (GolemFight)
+                    {
+                        golemRound = 4;
+
+                        fight.Add("BOLD|Коннери улучил момент для удара");
+
+                        if (!GoodReaction(ref fight))
+                        {
+                            fight.Add(String.Format("BAD|Вы не смогли прикрыть Коннери и он ранен", enemy.Name));
+                            Character.Protagonist.ConneryHitpoints -= 2;
+
+                            if (Character.Protagonist.ConneryHitpoints <= 0)
+                                return LostFight(fight);
+                        }
+                        else
+                        {
+                            fight.Add(String.Format("GOOD|{0} ранен атакой Коннери", enemy.Name));
+                            enemy.Hitpoints -= 1;
+
+                            if (EnemyLostFight(FightEnemies, ref fight, connery: true))
+                                return fight;
+                        }
+                    }
+
                     if ((RoundsToWin > 0) && (RoundsToWin <= round))
                     {
-                        fight.Add(String.Empty);
                         fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
-                        fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
-                        return fight;
+                        return LostFight(fight);
                     }
 
                     fight.Add(String.Empty);
