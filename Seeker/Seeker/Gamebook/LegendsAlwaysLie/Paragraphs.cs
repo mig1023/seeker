@@ -38,7 +38,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 701, Text = "В путь!" },
-                    new Option { Destination = 572, Text = "ТЕСТ" },
                 }
             },
             [1] = new Paragraph
@@ -6030,6 +6029,27 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [644] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "КАРДА",
+                                Strength = 12,
+                                Hitpoints = 14,
+                            },
+                        },
+
+                        Aftertext = "Победа откроет вам путь.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 612, Text = "Далее" },
@@ -6294,6 +6314,27 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [678] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "КАРДА",
+                                Strength = 15,
+                                Hitpoints = 14,
+                            },
+                        },
+
+                        Aftertext = "Победа над ней откроет вам путь.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 612, Text = "Далее" },
@@ -6352,6 +6393,27 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [686] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "КАРДА",
+                                Strength = 14,
+                                Hitpoints = 14,
+                            },
+                        },
+
+                        Aftertext = "Победа над ней откроет вам путь.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 612, Text = "Далее" },
