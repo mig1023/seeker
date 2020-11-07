@@ -38,6 +38,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 701, Text = "В путь!" },
+                    new Option { Destination = 572, Text = "ТЕСТ" },
                 }
             },
             [1] = new Paragraph
@@ -5341,6 +5342,34 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [572] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        IncrementWounds = true,
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ПЕРВЫЙ ЛАНТАН",
+                                Strength = 13,
+                                Hitpoints = 16,
+                            },
+                            new Character
+                            {
+                                Name = "ВТОРОЙ ЛАНТАН",
+                                Strength = 13,
+                                Hitpoints = 16,
+                            },
+                        },
+
+                        Aftertext = "Покончив с ними, вы смотрите на Коннери. Это была очень трудная схватка для вас обоих. Напарник стоит над тремя мертвыми тварями и покачивается от усталости и ран (Коннери теряет 6 ЖИЗНЕЙ).",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 500, Text = "Далее" },

@@ -22,6 +22,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int RoundsToWin { get; set; }
         public int AttackWounds { get; set; }
         public string ReactionWounds { get; set; }
+        public bool IncrementWounds { get; set; }
         public string ReactionRound { get; set; }
         public string ReactionHit { get; set; }
         public bool GolemFight { get; set; }
@@ -53,10 +54,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 List<string> enemies = new List<string>();
 
                 foreach (Character enemy in Enemies)
-                    if (enemy.Hitpoints > 0)
-                        enemies.Add(String.Format("{0}\nсила {1}  жизни {2}", enemy.Name, enemy.Strength, enemy.Hitpoints));
-                    else
-                        enemies.Add(String.Format("{0}\nсила {1}", enemy.Name, enemy.Strength));
+                    enemies.Add(String.Format("{0}\nсила {1}  жизни {2}", enemy.Name, enemy.Strength, enemy.Hitpoints));
 
                 return enemies;
             }
@@ -241,6 +239,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             int round = 1;
             int golemRound = 4;
+            int incrementWounds = 2;
 
             List<Character> FightEnemies = new List<Character>();
 
@@ -289,7 +288,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         if ((bonus.Length < 2) || (round > int.Parse(bonus[1])))
                         {
                             int conneryAttack = int.Parse(bonus[0]);
+
                             enemy.Hitpoints -= conneryAttack;
+
                             fight.Add(String.Format("GOOD|{0} ранен атакой Коннери", enemy.Name, conneryAttack));
 
                             if (EnemyLostFight(FightEnemies, ref fight, connery: true))
@@ -333,8 +334,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                     if (ZombieFight && (heroHitStrength > enemyHitStrength) && !zombieWound)
                         fight.Add("BOLD|Вы не смогли пробить до кости");
+
                     else if (GolemFight && (heroHitStrength > enemyHitStrength))
                         fight.Add("BOLD|Вы отбили все атаки");
+
                     else if (heroHitStrength > enemyHitStrength)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
@@ -345,7 +348,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         {
                             string[] wounds = ReactionHit.Split('-');
                             int wound = int.Parse(GoodReaction(ref fight) ? wounds[0] : wounds[1]);
+
                             enemy.Hitpoints -= wound;
+
                             fight.Add(String.Format("Вы нанесли урон: {1}", enemy.Name, wound));
                         }
                         
@@ -356,15 +361,25 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
-                        if (String.IsNullOrEmpty(ReactionWounds))
-                            Character.Protagonist.Hitpoints -= 2;
-                        else
+                        if (!String.IsNullOrEmpty(ReactionWounds))
                         {
                             string[] wounds = ReactionWounds.Split('-');
                             int wound = int.Parse(GoodReaction(ref fight) ? wounds[0] : wounds[1]);
+
                             Character.Protagonist.Hitpoints -= wound;
+
                             fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, wound));
                         }
+                        else if (IncrementWounds)
+                        {
+                            fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, incrementWounds));
+
+                            Character.Protagonist.Hitpoints -= incrementWounds;
+
+                            incrementWounds += 1;
+                        }
+                        else
+                            Character.Protagonist.Hitpoints -= 2;
 
                         if (Character.Protagonist.Hitpoints < 0)
                             Character.Protagonist.Hitpoints = 0;
@@ -377,6 +392,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                     if (GolemFight && (golemRound > 0))
                         golemRound -= 1;
+
                     else if (GolemFight)
                     {
                         golemRound = 4;
