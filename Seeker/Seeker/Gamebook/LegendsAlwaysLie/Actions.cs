@@ -21,6 +21,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int RoundsToWin { get; set; }
         public int AttackWounds { get; set; }
         public string ReactionWounds { get; set; }
+        public string ReactionRound { get; set; }
         public string ConneryAttacks { get; set; }
         public bool GolemFight { get; set; }
 
@@ -247,6 +248,30 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             while (true)
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
+
+                if (!String.IsNullOrEmpty(ReactionRound))
+                {
+                    string[] wounds = ReactionRound.Split(',');
+                    fight.Add(String.Format("BOLD|{0} пытаются нанести вам дополнительный урон", wounds[1].TrimStart()));
+
+                    if (!GoodReaction(ref fight))
+                    {
+                        int wound = int.Parse(wounds[0]);
+                        Character.Protagonist.Hitpoints -= wound;
+
+                        if (Character.Protagonist.Hitpoints < 0)
+                            Character.Protagonist.Hitpoints = 0;
+
+                        fight.Add(String.Format("BAD|{0} нанесли дополнительный урон: {1}", wounds[1].TrimStart(), wound));
+
+                        if (Character.Protagonist.Hitpoints <= 0)
+                            return LostFight(fight);
+                    }
+                    else
+                        fight.Add(String.Format("BOLD|{0} не преуспели", wounds[1].TrimStart()));
+
+                    fight.Add(String.Empty);
+                }
 
                 foreach (Character enemy in FightEnemies)
                 {

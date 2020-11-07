@@ -38,6 +38,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 701, Text = "В путь!" },
+                    new Option { Destination = 365, Text = "ТЕСТ" },
                 }
             },
             [1] = new Paragraph
@@ -1173,7 +1174,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             },
                         },
 
-                        Aftertext = "Несмотря на то, что вас двое, это непростой бой. Уж очень здоровый бугай вам попался. После победы вы осматриваете его, находите 2 золотых, и моток медной проволоки.\n\nБерите все, что захотите, и двигайтесь дальше, пока не появились его сородичи",
+                        Aftertext = "Несмотря на то, что вас двое, это непростой бой. Уж очень здоровый бугай вам попался. После победы вы осматриваете его, находите 2 золотых, и моток медной проволоки.\n\nБерите все, что захотите, и двигайтесь дальше, пока не появились его сородичи.",
                     },
                 },
 
@@ -3340,6 +3341,27 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [359] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ГОРНЫЙ ВОЛК",
+                                Strength = 12,
+                                Hitpoints = 16,
+                            },
+                        },
+
+                        Aftertext = "Победа достается вам нелегко. Коннери вообще забрызган кровью с головы до ног, к счастью, большая часть – не его (отнимите у напарника 4 ЖИЗНИ).\n\n– По преданиям великанов, конец света начнется с того, что гигантский волк проглотит луну, – тяжело дыша, говорит Коннери. – Глядя на этих тварей, я даже как-то начинаю в это верить.\n\nОн вкладывает меч в ножны и косится на вас:\n\n– Ты бы слушался меня хоть иногда, что ли. Глядишь, и ненужных драк можно было бы избежать.\n\nС тяжелым сердцем вы движетесь к выходу из ущелья, которое теперь напоминает бойню.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 308, Text = "Далее" },
@@ -3398,6 +3420,34 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [365] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        ReactionRound = "1, Детки",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "КАМЫШОВЫЙ КОТ",
+                                Strength = 10,
+                                Hitpoints = 10,
+                            },
+                            new Character
+                            {
+                                Name = "КАМЫШОВАЯ КОШКА",
+                                Strength = 10,
+                                Hitpoints = 10,
+                            },
+                        },
+
+                        Aftertext = "После победы мелочь быстро разбегается, вы же осторожно выглядываете, чтобы оценить обстановку. Великана и след простыл. То ли не заметил вас, то ли не рискнул разъезжать на носороге по болотистой почве. Выждав еще с пяток минут, вы выходите из укрытия и прикидываете, куда бы направиться дальше.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 334, Text = "Далее" },
