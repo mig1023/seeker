@@ -17,13 +17,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public bool Spell { get; set; }
 
         public List<Character> Enemies { get; set; }
+        public string ConneryAttacks { get; set; }
         public int OnlyRounds { get; set; }
         public int RoundsToWin { get; set; }
         public int AttackWounds { get; set; }
         public string ReactionWounds { get; set; }
         public string ReactionRound { get; set; }
-        public string ConneryAttacks { get; set; }
         public bool GolemFight { get; set; }
+        public bool ZombieFight { get; set; }
 
         public Modification Benefit { get; set; }
         public Modification Damage { get; set; }
@@ -317,8 +318,22 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         )
                     );
 
-                    if (GolemFight && (heroHitStrength > enemyHitStrength))
-                        fight.Add(String.Format("BOLD|Вы отбили все атаки", enemy.Name));
+                    bool zombieWound = false;
+
+                    if (ZombieFight && (heroHitStrength > enemyHitStrength))
+                    {
+                        int dice = Game.Dice.Roll();
+                        zombieWound = dice % 2 == 0;
+                        fight.Add(String.Format("Бросок на пробитие: {0} ⚄ - {1}", dice, (zombieWound ? "чёт" : "нечет")));
+
+                        if (Character.Protagonist.Specialization == Character.SpecializationType.Warrior)
+                            zombieWound = true;
+                    }
+
+                    if (ZombieFight && (heroHitStrength > enemyHitStrength) && !zombieWound)
+                        fight.Add("BOLD|Вы не смогли пробить до кости");
+                    else if (GolemFight && (heroHitStrength > enemyHitStrength))
+                        fight.Add("BOLD|Вы отбили все атаки");
                     else if (heroHitStrength > enemyHitStrength)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
@@ -349,7 +364,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             return LostFight(fight);
                     }
                     else
-                        fight.Add(String.Format("BOLD|Ничья в раунде"));
+                        fight.Add("BOLD|Ничья в раунде");
 
                     if (GolemFight && (golemRound > 0))
                         golemRound -= 1;
@@ -361,7 +376,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                         if (!GoodReaction(ref fight))
                         {
-                            fight.Add(String.Format("BAD|Вы не смогли прикрыть Коннери и он ранен", enemy.Name));
+                            fight.Add("BAD|Вы не смогли прикрыть Коннери и он ранен");
                             Character.Protagonist.ConneryHitpoints -= 2;
 
                             if (Character.Protagonist.ConneryHitpoints <= 0)
@@ -379,13 +394,13 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                     if ((OnlyRounds > 0) && (OnlyRounds <= round))
                     {
-                        fight.Add(String.Format("BOLD|Отведённые на бой раунды истекли.", RoundsToWin));
+                        fight.Add("BOLD|Отведённые на бой раунды истекли.");
                         return fight;
                     }
 
                     if ((RoundsToWin > 0) && (RoundsToWin <= round))
                     {
-                        fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
+                        fight.Add("BAD|Отведённые на победу раунды истекли.");
                         return LostFight(fight);
                     }
 

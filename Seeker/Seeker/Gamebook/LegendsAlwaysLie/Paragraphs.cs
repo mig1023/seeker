@@ -38,7 +38,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 701, Text = "В путь!" },
-                    new Option { Destination = 365, Text = "ТЕСТ" },
+                    new Option { Destination = 480, Text = "ТЕСТ" },
                 }
             },
             [1] = new Paragraph
@@ -3607,6 +3607,29 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [384] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        ConneryAttacks = "2",
+                        RoundsToWin = 5,
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ВОЛЧИЦА",
+                                Strength = 11,
+                                Hitpoints = 17,
+                            },
+                        },
+
+                        Aftertext = "Если вы уложились за пять раундов, то успеваете убежать с поля боя до подхода подкрепления.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 308, Text = "Уложились за пять раундов" },
@@ -4479,6 +4502,29 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [480] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        ZombieFight = true,
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "КОРОЛЬ-ЗОМБИ",
+                                Strength = 12,
+                                Hitpoints = 8,
+                            },
+                        },
+
+                        Aftertext = "После вашей победы Коннери, внимательно следивший за боем, замечает:\n\n– Знаешь, если бы у него было нормальное оружие, а не этот дурацкий скипетр… – напарник не договаривает начатую фразу, потому что груда костей и полусгнивших сухожилий начинает шевелиться.\n\n– Ходу, – бросаете вы, устремляясь к двери. Если есть желание, можете прихватить с черепа неумирающего стража белую корону .\n\nУ самого порога Коннери вдруг оборачивается и говорит с непонятной интонацией:\n\n– Что же такого надо было сотворить в далеком прошлом, чтобы тебя вот так вот прокляли?\n\n– Потом поразмыслишь, – вы чуть ли не силой выталкиваете напарника в дверь. За вашими спинами, шурша истлевшими одеяниями, восстает с пола проклятый когда-то король, чтобы вновь занять свой пост.",
+                    },
+                },
+
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 418, Text = "Далее" },
