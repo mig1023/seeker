@@ -139,6 +139,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [13] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 84, Text = "Бросить джинну любую вещь из своего заплечного мешка" },
@@ -201,6 +210,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [20] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 61, Text = "Далее" },
@@ -420,6 +438,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [47] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 61, Text = "Далее" },
@@ -470,6 +497,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [51] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 30, Text = "Далее" },
@@ -485,6 +521,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [53] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 92, Text = "Далее" },
@@ -509,6 +554,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [56] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 41, Text = "Далее" },
@@ -723,6 +777,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [84] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = -1,
+                    },
+                },
+
                 Trigger = "Money",
 
                 Options = new List<Option>
@@ -740,6 +803,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [86] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 112, Text = "Далее" },
@@ -899,6 +971,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [105] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 25, Text = "Пешкой на h7" },
@@ -1025,6 +1106,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [120] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 88, Text = "Далее" },
@@ -1295,6 +1385,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [146] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 231, Text = "Далее" },
@@ -1434,6 +1533,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [161] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = 1,
+                    },
+                },
+
                 Trigger = "Note",
 
                 Options = new List<Option>
@@ -1616,6 +1724,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [182] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 289, Text = "Далее" },
@@ -2317,6 +2434,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [257] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 129, Text = "Далее" },
@@ -2432,8 +2558,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 322, Text = "Если ДОВЕРИЕ напарника равно 7 или больше, то" },
-                    new Option { Destination = 231, Text = "Если меньше, то" },
+                    new Option { Destination = 322, Text = "Если ДОВЕРИЕ напарника равно 7 или больше", OnlyIf = "ДОВЕРИЕ >= 7" },
+                    new Option { Destination = 231, Text = "Если ДОВЕРИЕ напарника меньше 7", OnlyIf = "ДОВЕРИЕ < 7" },
                 }
             },
             [266] = new Paragraph
@@ -3030,6 +3156,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [332] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 237, Text = "Далее" },
@@ -4007,6 +4142,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [422] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 401, Text = "Далее" },
@@ -4071,6 +4215,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [430] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 527, Text = "Далее" },
@@ -4736,6 +4889,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [505] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryTrust",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 527, Text = "Далее" },
@@ -5184,8 +5346,19 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 574, Text = "Если его уровень его ДОВЕРИЯ меньше 6" },
-                    new Option { Destination = 540, Text = "Войдите в понравившуюся дверь" },
+                    new Option { Destination = 574, Text = "Если его уровень его ДОВЕРИЯ меньше 6", OnlyIf = "ДОВЕРИЕ < 6" },
+
+                    new Option {
+                        Destination = 540,
+                        Text = "Войдите в понравившуюся дверь"
+                        OnlyIf = "ДОВЕРИЕ >= 6",
+
+                        Do = new Modification
+                        {
+                            Name = "ConneryTrust",
+                            Value = 1,
+                        },
+                    },
                 }
             },
             [552] = new Paragraph
@@ -5800,8 +5973,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 665, Text = "Если его ДОВЕРИЕ равно 10 или больше" },
-                    new Option { Destination = 632, Text = "Если его ДОВЕРИЕ меньше 10" },
+                    new Option { Destination = 665, Text = "Если его ДОВЕРИЕ равно 10 или больше", OnlyIf = "ДОВЕРИЕ >= 10" },
+                    new Option { Destination = 632, Text = "Если его ДОВЕРИЕ меньше 10", OnlyIf = "ДОВЕРИЕ < 10" },
                 }
             },
             [616] = new Paragraph
@@ -6023,8 +6196,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 697, Text = "Если его ДОВЕРИЕ 7 или больше" },
-                    new Option { Destination = 647, Text = "Если его ДОВЕРИЕ меньше 7" },
+                    new Option { Destination = 697, Text = "Если его ДОВЕРИЕ 7 или больше", OnlyIf = "ДОВЕРИЕ >= 7" },
+                    new Option { Destination = 647, Text = "Если его ДОВЕРИЕ меньше 7", OnlyIf = "ДОВЕРИЕ < 7" },
                 }
             },
             [644] = new Paragraph

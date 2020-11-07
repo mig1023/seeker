@@ -111,10 +111,20 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            toEndParagraph = 0;
-            toEndText = "Начать с начала...";
+            if ((Character.Protagonist.Hitpoints <= 0) || (Character.Protagonist.ConneryHitpoints <= 0) || (Character.Protagonist.ConneryTrust <= 0))
+            {
+                toEndParagraph = 0;
+                toEndText = "Начать сначала";
 
-            return false;
+                return true;
+            }
+            else
+            {
+                toEndParagraph = 0;
+                toEndText = String.Empty;
+
+                return false;
+            }
         }
 
         public bool IsButtonEnabled()
@@ -190,7 +200,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 foreach (string oneOption in options)
                 {
-                    if (oneOption.Contains("!"))
+                    if (oneOption.Contains(">") || oneOption.Contains("<"))
+                    {
+                        if (oneOption.Contains("ДОВЕРИЕ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.ConneryTrust))
+                            return false;
+                        else if (oneOption.Contains("ДОВЕРИЕ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.ConneryTrust))
+                            return false;
+                    }
+                    else if (oneOption.Contains("!"))
                     {
                         if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
