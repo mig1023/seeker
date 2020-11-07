@@ -23,6 +23,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int AttackWounds { get; set; }
         public string ReactionWounds { get; set; }
         public string ReactionRound { get; set; }
+        public string ReactionHit { get; set; }
         public bool GolemFight { get; set; }
         public bool ZombieFight { get; set; }
 
@@ -337,9 +338,17 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     else if (heroHitStrength > enemyHitStrength)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
-                        
-                        enemy.Hitpoints -= (AttackWounds > 0 ? AttackWounds : 2);
 
+                        if (String.IsNullOrEmpty(ReactionHit))
+                            enemy.Hitpoints -= (AttackWounds > 0 ? AttackWounds : 2);
+                        else
+                        {
+                            string[] wounds = ReactionHit.Split('-');
+                            int wound = int.Parse(GoodReaction(ref fight) ? wounds[0] : wounds[1]);
+                            enemy.Hitpoints -= wound;
+                            fight.Add(String.Format("Вы нанесли урон: {1}", enemy.Name, wound));
+                        }
+                        
                         if (EnemyLostFight(FightEnemies, ref fight))
                             return fight;
                     }

@@ -38,7 +38,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 701, Text = "В путь!" },
-                    new Option { Destination = 480, Text = "ТЕСТ" },
                 }
             },
             [1] = new Paragraph
@@ -6557,6 +6556,28 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [705] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Fight",
+                        ButtonName = "Сражаться",
+                        ReactionHit = "2-1",
+
+                        Enemies = new List<Character>
+                        {
+                            new Character
+                            {
+                                Name = "ПУМА",
+                                Strength = 12,
+                                Hitpoints = 6,
+                            },
+                        },
+
+                        Aftertext = "К счастью, живучесть вашего противника оказывается не такой уж большой, и нескольких точных попаданий достаточно, чтобы превратить черную пантеру в холодный, пригодный лишь для набивки чучела, труп.\n\nСтряхнув с клинка кровь и шерсть, вы оглядываетесь на Коннери. Тот бросился было вам на выручку, но, увидев, что вы и сами быстро справились, остановился на полпути.\n\nЧто ж, между вами и выходом больше, кажется, не осталось никаких преград.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 509, Text = "Далее" },
