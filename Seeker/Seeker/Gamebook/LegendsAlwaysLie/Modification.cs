@@ -16,7 +16,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-            currentValue += Value;
+            if (Empty)
+                currentValue = 0;
+            else
+            {
+                currentValue += Value;
+
+                if (currentValue < 0)
+                    currentValue = 0;
+            }
 
             Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
         }
