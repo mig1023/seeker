@@ -5350,7 +5350,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                     new Option {
                         Destination = 540,
-                        Text = "Войдите в понравившуюся дверь"
+                        Text = "Войдите в понравившуюся дверь",
                         OnlyIf = "ДОВЕРИЕ >= 6",
 
                         Do = new Modification

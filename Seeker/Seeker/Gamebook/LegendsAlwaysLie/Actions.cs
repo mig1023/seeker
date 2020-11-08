@@ -258,6 +258,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             int golemRound = 4;
             int incrementWounds = 2;
 
+            bool warriorFight = Character.Protagonist.Specialization == Character.SpecializationType.Warrior;
+
             List<Character> FightEnemies = new List<Character>();
 
             foreach (Character enemy in Enemies)
@@ -266,6 +268,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             while (true)
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
+
+                if (!GolemFight && (Character.Protagonist.Specialization == Character.SpecializationType.Thrower))
+                {
+                    fight.Add("BOLD|Вы бросаете метательные ножи");
+
+                    FightEnemies[0].Hitpoints -= 3;
+
+                    fight.Add(String.Format("GOOD|{0} ранен метательными ножами и потерял 3 жизни", FightEnemies[0].Name));
+                    fight.Add(String.Empty);
+                }
 
                 if (!String.IsNullOrEmpty(ReactionRound))
                 {
@@ -345,7 +357,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         zombieWound = dice % 2 == 0;
                         fight.Add(String.Format("Бросок на пробитие: {0} ⚄ - {1}", dice, (zombieWound ? "чёт" : "нечет")));
 
-                        if (Character.Protagonist.Specialization == Character.SpecializationType.Warrior)
+                        if (warriorFight)
                             zombieWound = true;
                     }
 
@@ -355,8 +367,20 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     else if (GolemFight && (heroHitStrength > enemyHitStrength))
                         fight.Add("BOLD|Вы отбили все атаки");
 
-                    else if (heroHitStrength > enemyHitStrength)
+                    else if (warriorFight && (firstHeroRoll == secondHeroRoll) && (firstHeroRoll == 6))
                     {
+                        fight.Add("BOLD|Вы сделали 'Крыло ястреба'!");
+
+                        enemy.Hitpoints /= 2;
+
+                        fight.Add(String.Format("GOOD|{0} ранен на половину своих жизней", enemy.Name));
+                    }
+
+                    else if ((heroHitStrength > enemyHitStrength) || (warriorFight && (firstHeroRoll == secondHeroRoll)))
+                    {
+                        if (warriorFight && (firstHeroRoll == secondHeroRoll))
+                            fight.Add("BOLD|Вы сделали 'Молниеносный выпад'!");
+
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
 
                         if (String.IsNullOrEmpty(ReactionHit))
