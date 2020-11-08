@@ -371,9 +371,19 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         fight.Add("BOLD|Вы сделали 'Крыло ястреба'!");
 
-                        enemy.Hitpoints /= 2;
+                        if (enemy.Hitpoints > 6)
+                        {
+                            enemy.Hitpoints /= 2;
+                            fight.Add(String.Format("GOOD|{0} ранен на половину своих жизней", enemy.Name));
+                        }
+                        else
+                        {
+                            enemy.Hitpoints = 0;
+                            fight.Add(String.Format("GOOD|{0} убит наповал", enemy.Name));
 
-                        fight.Add(String.Format("GOOD|{0} ранен на половину своих жизней", enemy.Name));
+                            if (EnemyLostFight(FightEnemies, ref fight))
+                                return fight;
+                        }
                     }
 
                     else if ((heroHitStrength > enemyHitStrength) || (warriorFight && (firstHeroRoll == secondHeroRoll)))
