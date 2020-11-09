@@ -2245,7 +2245,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 116, Text = "Подпрыгнуть" },
                     new Option { Destination = 111, Text = "Присесть" },
-                    new Option { Destination = 170, Text = "если проверка была неудачной" },
+                    new Option { Destination = 170, Text = "Если проверка была неудачной" },
                 }
             },
             [198] = new Paragraph
@@ -2765,6 +2765,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [251] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 294, Text = "Если у вас записано слово милосердие", OnlyIf = "Mercy" },
@@ -2828,6 +2837,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [256] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -6,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 169, Text = "Далее" },
@@ -2964,6 +2982,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     },
                 },
 
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 322, Text = "Если ДОВЕРИЕ напарника равно 7 или больше", OnlyIf = "ДОВЕРИЕ >= 7" },
@@ -2979,6 +3006,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [267] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 250, Text = "Далее" },
@@ -2986,6 +3022,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [268] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -2,
+                    },
+                },
+
                 Trigger = "Legs",
 
                 Options = new List<Option>
@@ -3158,6 +3203,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [284] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 190, Text = "Далее" },
@@ -3235,6 +3289,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [294] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 348, Text = "Далее" },
@@ -3242,6 +3305,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [295] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 261, Text = "Далее" },
@@ -3288,6 +3360,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [301] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 180, Text = "Далее" },
@@ -3295,6 +3376,20 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [302] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -2,
+                    },
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 207, Text = "Далее" },
@@ -3437,6 +3532,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [318] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 297, Text = "Далее" },
@@ -3503,6 +3607,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [324] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 174, Text = "Далее" },
@@ -3510,6 +3623,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [325] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 352, Text = "Далее" },
@@ -3596,6 +3718,20 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [335] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 242, Text = "Далее" },
@@ -3619,6 +3755,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [338] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Trigger = "Legs",
 
                 Options = new List<Option>
@@ -3744,6 +3889,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [344] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 370, Text = "Далее" },
@@ -3777,6 +3931,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [347] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 185, Text = "Далее" },
@@ -3792,6 +3955,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [349] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 307, Text = "Далее" },
@@ -3835,6 +4007,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [354] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 306, Text = "Далее" },
@@ -3904,6 +4085,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     },
                 },
 
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 308, Text = "Далее" },
@@ -3917,6 +4107,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         ActionName = "Reaction",
                         ButtonName = "Реагируйте",
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -3,
                     },
                 },
 
@@ -3955,6 +4154,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [364] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -5,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 388, Text = "Далее" },
@@ -4049,6 +4257,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [372] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 141, Text = "Сделаете это" },
@@ -4066,6 +4283,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     },
                 },
 
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 193, Text = "Успели" },
@@ -4074,6 +4300,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [374] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = 2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 250, Text = "Далее" },
@@ -4120,6 +4355,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [380] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 352, Text = "Далее" },
@@ -4142,6 +4386,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [383] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 148, Text = "Далее" },
@@ -4235,6 +4488,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [389] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -2,
+                    },
+                },
+
                 Trigger = "Missing, Legs",
 
                 Options = new List<Option>
@@ -4252,6 +4514,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [391] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 107, Text = "Если ваша специализация воин, то ваша сила поможет вам справиться с этой непростой задачей" },
@@ -4269,6 +4540,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [393] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 338, Text = "Сделать ли вам несколько гребков и побыстрее очутиться на противоположном берегу" },
@@ -4413,6 +4693,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [408] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 550, Text = "Далее" },
@@ -4457,6 +4746,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [414] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 418, Text = "Далее" },
@@ -4484,6 +4782,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             Name = "Hitpoints",
                             Value = -4,
                         },
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = -5,
                     },
                 },
 
@@ -4527,6 +4834,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [419] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 457, Text = "Левое ответвление поблескивает антрацитовой чернотой стен, сквозь пол пробиваются бледные грибы, намекающие, что этим путем очень редко ходят" },
@@ -4573,6 +4889,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [424] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = 4,
+                    },
+                },
+
                 Trigger = "Idols",
 
                 Options = new List<Option>
@@ -4639,6 +4964,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [431] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 419, Text = "Броситься бегом к спасительной двери, благо она уже неподалеку" },
@@ -4671,6 +5005,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [435] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 470, Text = "Далее" },
@@ -4688,6 +5031,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [437] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 425, Text = "Преодолеть оставшийся отрезок тем же способом" },
@@ -4785,6 +5137,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [449] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 688, Text = "Далее" },
@@ -4825,6 +5186,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [453] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 537, Text = "Далее" },
@@ -4879,6 +5249,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [460] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 509, Text = "Далее" },
@@ -4903,6 +5282,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         ActionName = "Reaction",
                         ButtonName = "Реагируйте в третий раз",
                         Aftertext = "Если все прошло успешно, бросьте кубик и отнимите выпавшее от своей ЖИЗНИ. Если нет – то бросить придется три кубика и после произвести точно такое же вычитание. Коннери также не сумел избежать града сталактитов – отнимите у него 4 ЖИЗНИ.\n\nЕсли вы еще живы, скорее и как можно бесшумнее покиньте зал-ловушку.",
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = -4,
                     },
                 },
 
@@ -4954,6 +5342,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [466] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 414, Text = "Далее" },
@@ -4968,6 +5365,20 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [468] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -5,
+                    },
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 447, Text = "Далее" },
@@ -4982,6 +5393,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [470] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 435, Text = "Если у вас записано слово схрон", OnlyIf = "Cache" },
@@ -5048,6 +5468,21 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [478] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = 0,
+                        WizardWoundsPenalty = -2,
+                    },
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = -4,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 481, Text = "Далее" },
@@ -5055,6 +5490,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [479] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 447, Text = "Далее" },
@@ -5099,6 +5543,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [482] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 503, Text = "Если у вас записано слово песок", OnlyIf = "Sand" },
@@ -5133,6 +5586,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [486] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 402, Text = "Далее" },
@@ -5147,6 +5609,21 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [488] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                        WizardWoundsPenalty = -2,
+                    },
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 418, Text = "Далее" },
@@ -5163,6 +5640,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [490] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 463, Text = "Далее" },
@@ -7213,6 +7699,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [703] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "ConneryHitpoints",
+                        Value = -2,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 537, Text = "Далее" },
@@ -7302,6 +7797,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [712] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 493, Text = "Далее" },

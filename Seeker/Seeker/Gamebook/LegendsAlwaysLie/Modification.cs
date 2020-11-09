@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public string ValueString { get; set; }
         public bool Empty { get; set; }
         public bool Init { get; set; }
+        public int WizardWoundsPenalty { get; set; } 
 
         public void Do()
         {
@@ -21,6 +22,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             else
             {
                 currentValue += Value;
+
+                if ((WizardWoundsPenalty > 0) && (Character.Protagonist.Specialization == Character.SpecializationType.Wizard))
+                    currentValue += WizardWoundsPenalty;
 
                 if (currentValue < 0)
                     currentValue = 0;
