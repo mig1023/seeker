@@ -27,6 +27,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public string ReactionHit { get; set; }
         public bool GolemFight { get; set; }
         public bool ZombieFight { get; set; }
+        public int Dices { get; set; }
 
         public Modification Benefit { get; set; }
         public Modification Damage { get; set; }
@@ -228,6 +229,30 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             
             diceCheck.Add(String.Format("На кубикe выпало: {0} ⚄", dice));
             diceCheck.Add(dice % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
+
+            return diceCheck;
+        }
+
+        public List<string> DiceWounds()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dicesCount = (Dices == 0 ? 1 : Dices);
+            int dices = 0;
+            
+            for (int i = 1; i <= dicesCount; i++)
+            {
+                int dice = Game.Dice.Roll();
+                dices += dice;
+                diceCheck.Add(String.Format("На {0} выпало: {1} ⚄", i, dice));
+            }
+
+            Character.Protagonist.Hitpoints -= dices;
+
+            if (Character.Protagonist.Hitpoints < 0)
+                Character.Protagonist.Hitpoints = 0;
+
+            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
 
             return diceCheck;
         }
