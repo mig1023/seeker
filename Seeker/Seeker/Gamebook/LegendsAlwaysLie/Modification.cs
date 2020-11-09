@@ -11,7 +11,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public string ValueString { get; set; }
         public bool Empty { get; set; }
         public bool Init { get; set; }
-        public int WizardWoundsPenalty { get; set; } 
+        public int WizardWoundsPenalty { get; set; }
+        public int ThrowerWoundsPenalty { get; set; }
 
         public void Do()
         {
@@ -23,8 +24,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 currentValue += Value;
 
-                if ((WizardWoundsPenalty > 0) && (Character.Protagonist.Specialization == Character.SpecializationType.Wizard))
+                if (Init && (Name == "Hitpoints") && (Character.Protagonist.Hitpoints < 30))
+                    currentValue = 30;
+
+                if ((WizardWoundsPenalty != 0) && (Character.Protagonist.Specialization == Character.SpecializationType.Wizard))
                     currentValue += WizardWoundsPenalty;
+
+                if ((ThrowerWoundsPenalty != 0) && (Character.Protagonist.Specialization == Character.SpecializationType.Thrower))
+                    currentValue += ThrowerWoundsPenalty;
 
                 if (currentValue < 0)
                     currentValue = 0;
