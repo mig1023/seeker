@@ -10,7 +10,6 @@ namespace Seeker.Gamebook.SwampFever
         public int Value { get; set; }
         public bool Multiplication { get; set; }
         public bool Division { get; set; }
-        public string ValueString { get; set; }
 
         public void Do()
         {

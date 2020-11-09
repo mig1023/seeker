@@ -8,7 +8,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
     {
         public string Name { get; set; }
         public int Value { get; set; }
-        public string ValueString { get; set; }
 
         public void Do()
         {
