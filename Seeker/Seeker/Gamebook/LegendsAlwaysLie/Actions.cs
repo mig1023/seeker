@@ -27,7 +27,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public string ReactionHit { get; set; }
         public bool GolemFight { get; set; }
         public bool ZombieFight { get; set; }
+
         public int Dices { get; set; }
+        public int DiceBonus { get; set; }
 
         public Modification Benefit { get; set; }
         public Modification Damage { get; set; }
@@ -245,6 +247,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 int dice = Game.Dice.Roll();
                 dices += dice;
                 diceCheck.Add(String.Format("На {0} выпало: {1} ⚄", i, dice));
+            }
+
+            if (DiceBonus != 0)
+            {
+                dices += DiceBonus;
+                diceCheck.Add(String.Format("Добавляем {0} по условию", DiceBonus));
             }
 
             Character.Protagonist.Hitpoints -= dices;
