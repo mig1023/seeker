@@ -220,6 +220,18 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             }
         }
 
+        public List<string> DiceCheck()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dice = Game.Dice.Roll();
+            
+            diceCheck.Add(String.Format("На кубикe выпало: {0} ⚄", dice));
+            diceCheck.Add(dice % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
+
+            return diceCheck;
+        }
+
         private bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight, bool connery = false)
         {
             bool enemyLost = true;

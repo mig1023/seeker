@@ -7678,6 +7678,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [658] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "DiceCheck",
+                        ButtonName = "Кинуть кубик",
+                        Aftertext = "Если ваша специализация маг, смотрите вариант «чет». Иначе все решает не умение, а чистое везение.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 607, Text = "Выпал чет" },
