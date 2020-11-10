@@ -88,6 +88,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             int reactionLevel = (int)Math.Floor((double)Character.Protagonist.Hitpoints / 5);
             reaction.Add(String.Format("Уровнь реакции: {0} / 5 = {1}", Character.Protagonist.Hitpoints, reactionLevel));
 
+            if (Game.Data.Triggers.Contains("EvilEye"))
+            {
+                reactionLevel -= 1;
+                reaction.Add(String.Format("Из-за сглаза уровнь реакции снижается на единицы: {0}", reactionLevel));
+            }
+
             int reactionDice = Game.Dice.Roll();
             bool goodReaction = reactionDice <= reactionLevel;
             reaction.Add(String.Format("Реакция: {0} ⚄ {1} {2}", reactionDice, (goodReaction ? "<=" : ">"), reactionLevel));
@@ -406,6 +412,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             zombieWound = true;
                     }
 
+                    bool lightningLunge = (warriorFight && (firstHeroRoll == secondHeroRoll) && !Game.Data.Triggers.Contains("EvilEye"));
+
                     if (ZombieFight && (heroHitStrength > enemyHitStrength) && !zombieWound)
                         fight.Add("BOLD|Вы не смогли пробить до кости");
 
@@ -431,9 +439,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         }
                     }
 
-                    else if ((heroHitStrength > enemyHitStrength) || (warriorFight && (firstHeroRoll == secondHeroRoll)))
+                    else if ((heroHitStrength > enemyHitStrength) || lightningLunge)
                     {
-                        if (warriorFight && (firstHeroRoll == secondHeroRoll))
+                        if (lightningLunge)
                             fight.Add("BOLD|Вы сделали 'Молниеносный выпад'!");
 
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
