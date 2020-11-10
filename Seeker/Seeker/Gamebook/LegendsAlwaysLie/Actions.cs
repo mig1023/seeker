@@ -241,6 +241,17 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return diceCheck;
         }
 
+        public List<string> MushroomsForConnery()
+        {
+            if (Character.Protagonist.ConneryTrust >= 6)
+            {
+                Character.Protagonist.ConneryHitpoints += 3;
+                return new List<string> { "BIG|GOOD|Коннери хмыкнул и съел :)" };
+            }
+            else
+                return new List<string> { "BIG|BAD|Коннери отказался :(" };
+        }
+
         public List<string> DiceWounds()
         {
             List<string> diceCheck = new List<string> { };

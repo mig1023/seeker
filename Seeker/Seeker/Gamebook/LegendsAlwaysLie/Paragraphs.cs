@@ -4751,6 +4751,25 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [409] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "MushroomsForConnery",
+                        ButtonName = "Предложить гриб Коннери",
+                        Aftertext = "Если ДОВЕРИЕ Коннери 6 или больше, то он хмыкнув, возьмет гриб – добавьте вам обоим по 3 ЖИЗНИ.\n\nЕсли нет, то он вежливо откажется его есть, и 3 ЖИЗНИ получите только вы.",
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Hitpoints",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 457, Text = "Далее" },
