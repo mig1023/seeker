@@ -5159,6 +5159,30 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [442] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "ShareFood",
+                        ButtonName = "Нужнее мне",
+                        FoodSharing = Actions.FoodSharingType.KeepMyself,
+                    },
+                    new Actions
+                    {
+                        ActionName = "ShareFood",
+                        ButtonName = "Нужнее Коннери",
+                        FoodSharing = Actions.FoodSharingType.ToHim,
+                    },
+                    new Actions
+                    {
+                        ActionName = "ShareFood",
+                        ButtonName = "Поделить поровну",
+                        FoodSharing = Actions.FoodSharingType.FiftyFifty,
+
+                        Aftertext = "Всю провизию вы приканчиваете буквально за пару минут.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 477, Text = "Далее" },

@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 {
     class Actions : Interfaces.IActions
     {
+        public enum FoodSharingType { KeepMyself, ToHim, FiftyFifty };
+
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
@@ -30,12 +32,13 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public int Dices { get; set; }
         public int DiceBonus { get; set; }
+        public FoodSharingType FoodSharing { get; set; }
 
         public Modification Benefit { get; set; }
         public Modification Damage { get; set; }
 
-
         public Character.SpecializationType? Specialization { get; set; }
+
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -138,14 +141,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public bool IsButtonEnabled()
         {
-            bool disabledSpecializationButton = (Specialization != null) && (Character.Protagonist.Specialization != Character.SpecializationType.Nope);
-            bool disabledByPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
-            bool disabledBySpellpoints = Spell && (Character.Protagonist.Spellpoints <= 0);
-            bool disabledBySpellRepeat = Spell && Character.Protagonist.Spells.Contains(Text);
+            bool bySpecButton = (Specialization != null) && (Character.Protagonist.Specialization != Character.SpecializationType.Nope);
+            bool byPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
+            bool bySpellpoints = Spell && (Character.Protagonist.Spellpoints <= 0);
+            bool bySpellRepeat = Spell && Character.Protagonist.Spells.Contains(Text);
 
-            bool disabledBySpecialization = Spell && (Text == "ВЗОР") && (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
+            bool bySpecialization = Spell && (Text == "ВЗОР") && (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
+            bool byAlreadyDecided = (FoodSharing != null) && Character.Protagonist.FoodIsDivided;
 
-            return !(disabledSpecializationButton || disabledByPrice || disabledBySpellpoints || disabledBySpellRepeat || disabledBySpecialization);
+            return !(bySpecButton || byPrice || bySpellpoints || bySpellRepeat || bySpecialization || byAlreadyDecided);
         }
 
         public List<string> Get()
@@ -156,6 +160,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 if (Specialization == Character.SpecializationType.Warrior)
                     Character.Protagonist.Strength += 2;
+
                 else if (Specialization == Character.SpecializationType.Wizard)
                 {
                     Character.Protagonist.Spellpoints += 3;
@@ -213,6 +218,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         if (oneOption.Contains("ДОВЕРИЕ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.ConneryTrust))
                             return false;
+
                         else if (oneOption.Contains("ДОВЕРИЕ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.ConneryTrust))
                             return false;
                     }
@@ -250,6 +256,25 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             }
             else
                 return new List<string> { "BIG|BAD|Коннери отказался :(" };
+        }
+
+        public List<string> ShareFood()
+        {
+            Character.Protagonist.FoodIsDivided = true;
+
+            if (FoodSharing == FoodSharingType.KeepMyself)
+                Character.Protagonist.Hitpoints += 5;
+
+            else if (FoodSharing == FoodSharingType.ToHim)
+                Character.Protagonist.ConneryHitpoints += 5;
+
+            else
+            {
+                Character.Protagonist.Hitpoints += 3;
+                Character.Protagonist.ConneryHitpoints += 3;
+            }
+
+            return new List<string> { "RELOAD" };
         }
 
         public List<string> DiceWounds()
