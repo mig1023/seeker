@@ -194,17 +194,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public static bool CheckOnlyIf(string option)
         {
-            if (option.Contains("|"))
-            {
-                string[] options = option.Split('|');
-
-                foreach (string oneOption in options)
-                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
-                        return true;
-
-                return false;
-            }
-            else if (option.Contains(";"))
+            if (option.Contains(";"))
             {
                 string[] options = option.Split(';');
 
@@ -219,12 +209,25 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             }
             else
             {
-                string[] options = option.Split(',');
+                string[] options;
+
+                bool orLogic = false;
+
+                if (option.Contains("|"))
+                {
+                    options = option.Split('|');
+                    orLogic = true;
+                }
+                else
+                    options = option.Split(',');
 
                 foreach (string oneOption in options)
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
+                        if (orLogic && oneOption.Contains("ЗОЛОТО >=") && (int.Parse(oneOption.Split('=')[1]) <= Character.Protagonist.Gold))
+                            return true;
+
                         if (oneOption.Contains("ДОВЕРИЕ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.ConneryTrust))
                             return false;
 
@@ -236,11 +239,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
                     }
-                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                    else if (orLogic && Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return true;
+                    else if (!orLogic && !Game.Data.Triggers.Contains(oneOption.Trim()))
                         return false;
                 }
 
-                return true;
+                if (orLogic)
+                    return false;
+                else
+                    return true;
             }
         }
 

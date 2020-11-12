@@ -2074,6 +2074,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [175] = new Paragraph
             {
+                Trigger = "NecklaceWithEmerald",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 148, Text = "Далее" },
@@ -4606,8 +4608,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 255, Text = "Деньги правому идолу" },
-                    new Option { Destination = 246, Text = "Деньги левому идолу" },
+                    new Option { Destination = 255, Text = "Деньги правому идолу", OnlyIf = "NecklaceWithEmerald|ЗОЛОТО >= 10" },
+                    new Option { Destination = 246, Text = "Деньги левому идолу", OnlyIf = "NecklaceWithEmerald|ЗОЛОТО >= 10" },
                     new Option { Destination = 364, Text = "Броситесь бежать" },
                 }
             },
