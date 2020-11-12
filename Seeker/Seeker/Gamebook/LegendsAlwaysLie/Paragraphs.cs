@@ -170,6 +170,35 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [14] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить кольцо с рубином",
+                        Price = 7,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить кусок малахита",
+                        Trigger = "PieceOfMalachite",
+                        Price = 3,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить стальной прут",
+                        Price = 1,
+                    },
+                    new Actions
+                    {
+                        ActionName = "Get",
+                        ButtonName = "Купить серебряный медвльон",
+                        Price = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 31, Text = "Далее" },
@@ -184,15 +213,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [16] = new Paragraph
             {
-                Actions = new List<Actions>
-                {
-                    new Actions
-                    {
-                        ActionName = "Reaction",
-                        ButtonName = "Реагируйте",
-                    },
-                },
-
                 Options = new List<Option>
                 {
                     new Option { Destination = 33, Text = "Успели" },
