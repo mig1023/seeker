@@ -2556,6 +2556,17 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [230] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "Sell",
+                        ButtonName = "Продать кинжал",
+                        Price = 5,
+                        Aftertext = "Согласитесь вы или откажетесь – решайте сами. Но в любом случае, ледок между вами сломан, и возобновления драки можно не опасаться. Попрощавшись, вы спускаетесь от кузни к дороге.\n\n...Позади слышны звуки смачных подзатыльников – кузнец наказывает своих подмастерьев, возомнивших себя крутыми боевиками.",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 148, Text = "Далее" },

@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int Price { get; set; }
         public string Text { get; set; }
         public bool Spell { get; set; }
+        public bool Disabled { get; set; } 
 
         public List<Character> Enemies { get; set; }
         public string ConneryAttacks { get; set; }
@@ -149,7 +150,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             bool bySpecialization = Spell && (Text == "ВЗОР") && (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
             bool byAlreadyDecided = (FoodSharing != null) && Character.Protagonist.FoodIsDivided;
 
-            return !(bySpecButton || byPrice || bySpellpoints || bySpellRepeat || bySpecialization || byAlreadyDecided);
+            return !(bySpecButton || byPrice || bySpellpoints || bySpellRepeat || bySpecialization || byAlreadyDecided || Disabled);
         }
 
         public List<string> Get()
@@ -179,6 +180,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             }
             else if ((Price > 0) && (Character.Protagonist.Gold >= Price))
                 Character.Protagonist.Gold -= Price;
+
+            return new List<string> { "RELOAD" };
+        }
+
+        public List<string> Sell()
+        {
+            Disabled = true;
+            Character.Protagonist.Gold += Price;             
 
             return new List<string> { "RELOAD" };
         }
