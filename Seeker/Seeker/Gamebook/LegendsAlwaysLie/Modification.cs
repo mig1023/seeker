@@ -15,6 +15,20 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public void Do()
         {
+            if (Name == "Offering")
+            {
+                if (Game.Data.Triggers.Contains("RingWithRuby"))
+                    Game.Option.Trigger("RingWithRuby", remove: true);
+
+                else if (Game.Data.Triggers.Contains("NecklaceWithEmerald"))
+                    Game.Option.Trigger("NecklaceWithEmerald", remove: true);
+
+                else
+                    Character.Protagonist.Gold -= 10;
+
+                return;
+            }
+
             int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
             if (Empty)

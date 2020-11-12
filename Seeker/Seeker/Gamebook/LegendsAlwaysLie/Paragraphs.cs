@@ -176,6 +176,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         ActionName = "Get",
                         ButtonName = "Купить кольцо с рубином",
+                        Trigger = "RingWithRuby",
                         Price = 7,
                     },
                     new Actions
@@ -2731,6 +2732,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [246] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Offering",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 388, Text = "Далее" },
@@ -2880,9 +2889,17 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [255] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Offering",
+                    },
+                },
+
                 Options = new List<Option>
                 {
-                    new Option { Destination = 424, Text = "Принести жертву второму идолу и послушать, что он скажет (если у вас конечно есть еще 10 золотых)" },
+                    new Option { Destination = 424, Text = "Принести жертву второму идолу и послушать, что он скажет (если у вас конечно есть еще 10 золотых)", OnlyIf = "RingWithRuby|NecklaceWithEmerald|ЗОЛОТО >= 10" },
                     new Option { Destination = 388, Text = "Уйти" },
                 }
             },
@@ -4608,8 +4625,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 255, Text = "Деньги правому идолу", OnlyIf = "NecklaceWithEmerald|ЗОЛОТО >= 10" },
-                    new Option { Destination = 246, Text = "Деньги левому идолу", OnlyIf = "NecklaceWithEmerald|ЗОЛОТО >= 10" },
+                    new Option { Destination = 255, Text = "Деньги правому идолу", OnlyIf = "RingWithRuby|NecklaceWithEmerald|ЗОЛОТО >= 10" },
+                    new Option { Destination = 246, Text = "Деньги левому идолу", OnlyIf = "RingWithRuby|NecklaceWithEmerald|ЗОЛОТО >= 10" },
                     new Option { Destination = 364, Text = "Броситесь бежать" },
                 }
             },
@@ -4989,6 +5006,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         Name = "Hitpoints",
                         Value = 4,
+                    },
+                    new Modification
+                    {
+                        Name = "Offering",
                     },
                 },
 
