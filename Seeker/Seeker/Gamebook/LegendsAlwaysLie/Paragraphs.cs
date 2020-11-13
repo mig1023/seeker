@@ -1959,7 +1959,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 174, Text = "Предпринять попытку убежать" },
-                    new Option { Destination = 229, Text = "Вы победили" },
+                    new Option {
+                        Destination = 229,
+                        Text = "Вы победили"
+
+                        Do = new Modification
+                        {
+                            Name = "Gold",
+                            Value = 2,
+                        },
+                    },
                 }
             },
             [159] = new Paragraph
@@ -2121,6 +2130,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [175] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 5,
+                    },
+                },
+
                 Trigger = "NecklaceWithEmerald",
 
                 Options = new List<Option>
@@ -2159,6 +2177,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [180] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 207, Text = "Далее" },
@@ -2204,6 +2231,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [185] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 4,
+                    },
+                },
+
                 Trigger = "Turf",
 
                 Options = new List<Option>
@@ -2944,6 +2980,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     },
                 },
 
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 2,
+                    },
+                },
+
                 Trigger = "PieceOfMalachite",
 
                 Options = new List<Option>
@@ -3302,6 +3347,20 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [278] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -10,
+                    },
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 148, Text = "Далее" },
@@ -3656,7 +3715,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 278, Text = "Отдадите клинок" },
+                    new Option { Destination = 278, Text = "Отдадите клинок", OnlyIf = "ЗОЛОТО >= 20" },
                     new Option { Destination = 383, Text = "Уйдёте" },
                 }
             },
@@ -3713,7 +3772,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 383, Text = "Если у вас нет таких денег" },
-                    new Option { Destination = 367, Text = "Если же есть, то почему-то вы чувствуете, что лучше заплатить" },
+                    new Option { Destination = 367, Text = "Если же есть, то почему-то вы чувствуете, что лучше заплатить", OnlyIf = "ЗОЛОТО >= 5" },
                 }
             },
             [322] = new Paragraph
@@ -3743,6 +3802,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         },
 
                         Aftertext = "После победы вы осматриваете берлогу зверя, и в груде костей находите 2 золотых и статуэтку нимфы с обломанной головой. Теперь пора уходить.",
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 2,
                     },
                 },
 
@@ -4387,6 +4455,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [367] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -5,
+                    },
+                },
+
                 Trigger = "Spring",
 
                 Options = new List<Option>
@@ -4771,6 +4848,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [396] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 3,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 334, Text = "Далее" },
@@ -5313,7 +5399,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     new Option { Destination = 590, Text = "Потрогать барьер рукой" },
                     new Option { Destination = 413, Text = "Бросить сквозь него горсть песка" },
                     new Option { Destination = 464, Text = "Бросить какую-нибудь вещь из вашего рюкзака, если у вас есть подозрения, что именно этот предмет может помочь вам миновать барьер" },
-                    new Option { Destination = 713, Text = "Бросить золотую монету" },
+                    new Option { Destination = 713, Text = "Бросить золотую монету", OnlyIf = "ЗОЛОТО >= 1" },
                     new Option { Destination = 493, Text = "Попробуйте предпринять что-то еще" },
                 }
             },
@@ -8595,6 +8681,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [713] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 441, Text = "Далее" },
