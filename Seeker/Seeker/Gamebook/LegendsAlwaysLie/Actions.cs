@@ -149,8 +149,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             bool bySpecialization = Spell && (Text == "ВЗОР") && (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
             bool byAlreadyDecided = (FoodSharing != null) && Character.Protagonist.FoodIsDivided;
+            bool byFootwraps = ((ActionName == "FootwrapsDeadlyReplacement") || (ActionName == "FootwrapsReplacement")) && Character.Protagonist.Footwraps <= 0;
 
-            return !(bySpecButton || byPrice || bySpellpoints || bySpellRepeat || bySpecialization || byAlreadyDecided || Disabled);
+            return !(bySpecButton || byPrice || bySpellpoints || bySpellRepeat || bySpecialization || byAlreadyDecided || byFootwraps || Disabled);
         }
 
         public List<string> Get()
@@ -273,6 +274,20 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             }
             else
                 return new List<string> { "BIG|BAD|Коннери отказался :(" };
+        }
+
+        public List<string> FootwrapsReplacement()
+        {
+            Game.Option.Trigger("Legs", remove: true);
+
+            return new List<string> { "BIG|GOOD|Вы успешно поменяли портянки :)" };
+        }
+
+        public List<string> FootwrapsDeadlyReplacement()
+        {
+            Character.Protagonist.Hitpoints += (Game.Data.Triggers.Contains("Legs") ? 4 : 2);
+
+            return new List<string> { "BIG|GOOD|Вы успешно поменяли портянки :)" };
         }
 
         public List<string> ShareFood()

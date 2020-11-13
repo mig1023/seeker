@@ -38,6 +38,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 701, Text = "В путь!" },
+                    new Option { Destination = 250, Text = "TEST" },
                 }
             },
             [1] = new Paragraph
@@ -502,6 +503,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [41] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Footwraps",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 5, Text = "Далее" },
@@ -2815,6 +2825,24 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [250] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "FootwrapsDeadlyReplacement",
+                        ButtonName = "Поменять портянки",
+                        Aftertext = "Если у вас записано слово паника, выберите соответсвующий пункт.\n\nКрепкий сон добавит вам 3 ЖИЗНИ (если у вас есть одеяло, то сон будем более комфортным, восстановите еще и одно потраченное заклинание). Если в вашем мешке нет ничего съестного, чтобы поесть утром, отнимите еще 2 ЖИЗНИ.\n\nУтром, выбравшись из-под камня, вы рассматриваете оставшийся отрезок пути. Усеченный конус вулкана заметно приблизился. Полдня пути максимум – и вы у цели. Доведется ли еще увидеться с Коннери – неизвестно. Но уговор есть уговор: потеряемся, встречаемся у храма. Значит надо идти к вулкану, там и прояснится, уцелел напарник или нет.\n\n– Да ладно, старик вполне способен за себя постоять, – говорите вы себе. – Все будет пучком.\n\nВпрочем, какое вам дело до него? Втравил в грабительский поход, поучал периодически, и в довершение ко всему еще и потерялся. И все же…\n\nЕсли он сгинет – вам будет жаль. Легендарный он ведьмак или нет, а попутчиком он был неплохим. Но довольно о грустном. Задача номер один – определить направление движения. Немного непривычно – никто не спросит спокойным, чуть насмешливым голосом:\n\n– Как думаешь, куда стоит идти?",
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "FootwrapsNeedReplacingDeadly",
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 267, Text = "Если у вас записано слово паника", OnlyIf = "Panic" },
@@ -3090,12 +3118,26 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [268] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "FootwrapsReplacement",
+                        ButtonName = "Поменять портянки",
+                        Aftertext = "Если нет, или же вы не хотите этого делать, запишите слово ноги.",
+                    },
+                },
+
                 Modification = new List<Modification>
                 {
                     new Modification
                     {
                         Name = "Hitpoints",
                         Value = -2,
+                    },
+                    new Modification
+                    {
+                        Name = "FootwrapsNeedReplacing",
                     },
                 },
 
@@ -3823,12 +3865,26 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [338] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "FootwrapsReplacement",
+                        ButtonName = "Поменять портянки",
+                        Aftertext = "Если нет — запишите слово ноги. Если оно у вас уже записано, оставьте все как есть.\n\nПокончив с переправой, вы быстро осматриваетесь. По-прежнему никаких следов напарника. Может, стоит вернуться к месту, где вы расстались? Обдумав все как следует, вы решаете, что это плохая идея. Уж кто-то, а непоседа Коннери (если он и остался где-то позади) на месте сидеть не будет. Он пойдет вперед. Значит, и вам нечего тут торчать, пока совсем не окоченели. Небо темнеет, вот-вот начнет смеркаться.\n\nС этими мыслями вы начинаете свой бег, все больше и больше ускоряясь.",
+                    },
+                },
+
                 Modification = new List<Modification>
                 {
                     new Modification
                     {
                         Name = "Hitpoints",
                         Value = -1,
+                    },
+                    new Modification
+                    {
+                        Name = "FootwrapsNeedReplacing",
                     },
                 },
 
@@ -4568,12 +4624,26 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [389] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "FootwrapsReplacement",
+                        ButtonName = "Поменять портянки",
+                        Aftertext = "Если нет — запишите слово ноги. Если оно у вас уже записано, оставьте все как есть.\n\nПокончив с переправой, вы быстро осматриваетесь. По-прежнему никаких следов напарника. Может, стоит вернуться к месту, где вы расстались? Обдумав все как следует, вы решаете, что это плохая идея. Уж кто-то, а непоседа Коннери (если он и остался где-то позади) на месте сидеть не будет. Он пойдет вперед. Значит, и вам нечего тут торчать, пока совсем не окоченели. Небо темнеет, вот-вот начнет смеркаться.\n\nЗапишите слово пропажа. Если оно у вас уже записано, оставьте все как есть.\n\nВы решаете пробежаться, чтобы хорошенько разогреться.",
+                    },
+                },
+
                 Modification = new List<Modification>
                 {
                     new Modification
                     {
                         Name = "Hitpoints",
                         Value = -2,
+                    },
+                    new Modification
+                    {
+                        Name = "FootwrapsNeedReplacing",
                     },
                 },
 

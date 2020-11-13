@@ -11,15 +11,23 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public enum SpecializationType { Warrior, Wizard, Thrower, Nope };
 
         public string Name { get; set; }
+
         public int Strength { get; set; }
         public int Hitpoints { get; set; }
         public int Magicpoints { get; set; }
         public int Spellpoints { get; set; }
         public int Gold { get; set; }
+        public int Footwraps { get; set; }
+
         public int ConneryHitpoints { get; set; }
         public int ConneryTrust { get; set; }
+
         public SpecializationType Specialization { get; set; }
+
         public List<string> Spells { get; set; }
+
+        public bool FoodIsDivided { get; set; }
+
 
         public void Init()
         {
@@ -28,7 +36,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Hitpoints = 30;
             Magicpoints = 1;
             Spellpoints = 2;
+            FoodIsDivided = false;
             Gold = 20;
+            Footwraps = 0;
             ConneryHitpoints = 30;
             ConneryTrust = 5;
             Specialization = SpecializationType.Nope;
@@ -43,7 +53,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Hitpoints = this.Hitpoints,
                 Magicpoints = this.Magicpoints,
                 Spellpoints = this.Spellpoints,
+                FoodIsDivided = this.FoodIsDivided,
                 Gold = this.Gold,
+                Footwraps = this.Footwraps,
                 ConneryHitpoints = this.ConneryHitpoints,
                 ConneryTrust = this.ConneryTrust,
                 Specialization = this.Specialization,

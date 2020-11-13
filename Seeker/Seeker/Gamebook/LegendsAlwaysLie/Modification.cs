@@ -15,7 +15,13 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public void Do()
         {
-            if (Name == "Offering")
+            if (Name == "FootwrapsNeedReplacingDeadly")
+                Character.Protagonist.Hitpoints -= (Game.Data.Triggers.Contains("Legs") ? 4 : 2);
+
+            else if (Name == "FootwrapsNeedReplacing")
+                Game.Option.Trigger("Legs");
+
+            else if (Name == "Offering")
             {
                 if (Game.Data.Triggers.Contains("RingWithRuby"))
                     Game.Option.Trigger("RingWithRuby", remove: true);
@@ -25,32 +31,32 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 else
                     Character.Protagonist.Gold -= 10;
-
-                return;
             }
-
-            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
-
-            if (Empty)
-                currentValue = 0;
             else
             {
-                currentValue += Value;
+                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-                if (Init && (Name == "Hitpoints") && (Character.Protagonist.Hitpoints < 30))
-                    currentValue = 30;
-
-                if ((WizardWoundsPenalty != 0) && (Character.Protagonist.Specialization == Character.SpecializationType.Wizard))
-                    currentValue += WizardWoundsPenalty;
-
-                if ((ThrowerWoundsPenalty != 0) && (Character.Protagonist.Specialization == Character.SpecializationType.Thrower))
-                    currentValue += ThrowerWoundsPenalty;
-
-                if (currentValue < 0)
+                if (Empty)
                     currentValue = 0;
-            }
+                else
+                {
+                    currentValue += Value;
 
-            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+                    if (Init && (Name == "Hitpoints") && (Character.Protagonist.Hitpoints < 30))
+                        currentValue = 30;
+
+                    if ((WizardWoundsPenalty != 0) && (Character.Protagonist.Specialization == Character.SpecializationType.Wizard))
+                        currentValue += WizardWoundsPenalty;
+
+                    if ((ThrowerWoundsPenalty != 0) && (Character.Protagonist.Specialization == Character.SpecializationType.Thrower))
+                        currentValue += ThrowerWoundsPenalty;
+
+                    if (currentValue < 0)
+                        currentValue = 0;
+                }
+
+                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+            }
         }
     }
 }
