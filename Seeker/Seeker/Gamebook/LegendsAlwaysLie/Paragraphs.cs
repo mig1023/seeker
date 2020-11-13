@@ -2343,7 +2343,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 189, Text = "Атакуете" },
                     new Option { Destination = 247, Text = "Будете отступать" },
-                    new Option { Destination = 279, Text = "ВЗОР" },
+                    new Option { Destination = 279, Text = "ВЗОР", OnlyIf = "Заклинание 'ВЗОР'"  },
                 }
             },
             [205] = new Paragraph
@@ -2819,7 +2819,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 206, Text = "Вы вступите с ним в беседу" },
-                    new Option { Destination = 331, Text = "Просканируете окрестности заклинанием ВЗОР" },
+                    new Option { Destination = 331, Text = "Просканируете окрестности заклинанием ВЗОР", OnlyIf = "Заклинание 'ВЗОР'"  },
                 }
             },
             [250] = new Paragraph
@@ -4783,7 +4783,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 429, Text = "ВЗОР" },
+                    new Option { Destination = 429, Text = "ВЗОР", OnlyIf = "Заклинание 'ВЗОР'"  },
                     new Option { Destination = 444, Text = "СГУСТОК (актуально, если вы воин, а хочется, хоть на секунду, разогнать темноту)" },
                     new Option { Destination = 462, Text = "Рискнете двигаться наобум" },
                 }
@@ -4794,7 +4794,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 432, Text = "Согласиться с «теорией радуги»" },
                     new Option { Destination = 454, Text = "Предложить свое решение" },
-                    new Option { Destination = 536, Text = "ВЗОР" },
+                    new Option { Destination = 536, Text = "ВЗОР", OnlyIf = "Заклинание 'ВЗОР'"  },
                 }
             },
             [403] = new Paragraph
@@ -5800,7 +5800,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 461, Text = "Вы ответите напарнику: «Хорошо»" },
                     new Option { Destination = 576, Text = "Молча двинетесь за ним" },
-                    new Option { Destination = 507, Text = "ВЗОР" },
+                    new Option { Destination = 507, Text = "ВЗОР", OnlyIf = "Заклинание 'ВЗОР'"  },
                 }
             },
             [484] = new Paragraph
