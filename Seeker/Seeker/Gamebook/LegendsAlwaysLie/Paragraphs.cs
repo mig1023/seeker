@@ -4752,7 +4752,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 357, Text = "Если у вас есть принт" },
                     new Option { Destination = 376, Text = "Будете щипать себя" },
-                    new Option { Destination = 256, Text = "Шарахнете себе же в ногу СГУСТКОМ" },
+                    new Option { Destination = 256, Text = "Шарахнете себе же в ногу СГУСТКОМ", OnlyIf = "Заклинание 'СГУСТОК'" },
                 }
             },
             [399] = new Paragraph
@@ -4784,7 +4784,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 429, Text = "ВЗОР", OnlyIf = "Заклинание 'ВЗОР'"  },
-                    new Option { Destination = 444, Text = "СГУСТОК (актуально, если вы воин, а хочется, хоть на секунду, разогнать темноту)" },
+                    new Option { Destination = 444, Text = "СГУСТОК (актуально, если вы воин, а хочется, хоть на секунду, разогнать темноту)", OnlyIf = "Заклинание 'СГУСТОК'" },
                     new Option { Destination = 462, Text = "Рискнете двигаться наобум" },
                 }
             },
@@ -4834,7 +4834,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 558, Text = "Встретить противника ударом меча" },
-                    new Option { Destination = 594, Text = "Ударить его СГУСТКОМ" },
+                    new Option { Destination = 594, Text = "Ударить его СГУСТКОМ", OnlyIf = "Заклинание 'СГУСТОК'" },
                     new Option { Destination = 415, Text = "Присесть на месте" },
                 }
             },
@@ -5223,7 +5223,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 570, Text = "Продолжать бежать на жреца, надеясь опередить его и нанести удар до того, как он совершит задуманное" },
                     new Option { Destination = 541, Text = "Резко отпрыгнуть в сторону" },
-                    new Option { Destination = 593, Text = "СГУСТОК" },
+                    new Option { Destination = 593, Text = "СГУСТОК", OnlyIf = "Заклинание 'СГУСТОК'" },
                     new Option { Destination = 557, Text = "Если ваша специализация метатель" },
                 }
             },
@@ -6004,7 +6004,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 538, Text = "Если ваша специализация метатель" },
-                    new Option { Destination = 532, Text = "СГУСТОК" },
+                    new Option { Destination = 532, Text = "СГУСТОК", OnlyIf = "Заклинание 'СГУСТОК'" },
                     new Option { Destination = 478, Text = "Броситься обратно, стараясь ступать по своим следам" },
                 }
             },
@@ -7577,7 +7577,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 605, Text = "деревянные леса" },
                     new Option { Destination = 611, Text = "зеленое облако над расселиной" },
-                    new Option { Destination = 653, Text = "Решите применить СГУСТОК" },
+                    new Option { Destination = 653, Text = "Решите применить СГУСТОК", OnlyIf = "Заклинание 'СГУСТОК'" },
                     new Option { Destination = 679, Text = "Если все варианты испробованы, то больше бегать от ледяной смерти у вас уже не получается – вы слишком устали" },
                 }
             },
