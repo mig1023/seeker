@@ -150,8 +150,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             bool bySpecialization = Spell && (Text == "ВЗОР") && (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
             bool byAlreadyDecided = (FoodSharing != null) && Character.Protagonist.FoodIsDivided;
             bool byFootwraps = ((ActionName == "FootwrapsDeadlyReplacement") || (ActionName == "FootwrapsReplacement")) && Character.Protagonist.Footwraps <= 0;
+            bool byCureSpell = ((ActionName == "CureSprain") && !Character.Protagonist.Spells.Contains("Заклинание 'ЛЕЧЕНИЕ'"));
 
-            return !(bySpecButton || byPrice || bySpellpoints || bySpellRepeat || bySpecialization || byAlreadyDecided || byFootwraps || Disabled);
+            return !(bySpecButton || byPrice || bySpellpoints || bySpellRepeat || bySpecialization || byAlreadyDecided || byFootwraps || byCureSpell || Disabled);
         }
 
         public List<string> Get()
@@ -292,6 +293,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Character.Protagonist.Hitpoints += (Game.Data.Triggers.Contains("Legs") ? 4 : 2);
 
             return new List<string> { "BIG|GOOD|Вы успешно поменяли портянки :)" };
+        }
+
+        public List<string> CureSprain()
+        {
+            Character.Protagonist.Strength += 1;
+            Character.Protagonist.Spells.Remove("Заклинание 'ЛЕЧЕНИЕ'");
+
+            return new List<string> { "BIG|GOOD|Вы успешно вылечили растяжение" };
         }
 
         public List<string> ShareFood()

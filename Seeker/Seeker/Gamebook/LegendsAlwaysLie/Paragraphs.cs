@@ -284,6 +284,24 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [21] = new Paragraph
             {
+                Actions = new List<Actions>
+                {
+                    new Actions
+                    {
+                        ActionName = "CureSprain",
+                        ButtonName = "Вылечить растяжение",
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Strength",
+                        Value = -1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 63, Text = "Далее" },
