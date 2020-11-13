@@ -6207,6 +6207,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [510] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = -8,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 577, Text = "Если вы сегодня убили в бою хоть кого-нибудь, любое существо" },
@@ -6858,7 +6867,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 510, Text = "Если у вас есть 8 золотых, можете попробовать проверить, так ли это" },
+                    new Option { Destination = 510, Text = "Если у вас есть 8 золотых, можете попробовать проверить, так ли это", OnlyIf = "ЗОЛОТО >= 8" },
                     new Option { Destination = 537, Text = "Если нет, то выбирайте дальнейший маршрут" },
                 }
             },
@@ -8075,6 +8084,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [661] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 400,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 0, Text = "Начать сначала" },
