@@ -1177,7 +1177,17 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 118, Text = "Если у вас записано слово деньги", OnlyIf = "Money" },
                     new Option { Destination = 19, Text = "Вы прислушаетесь к своему внутреннему голосу и откажетесь" },
-                    new Option { Destination = 90, Text = "Доверитесь выбору Коннери и примете предложение лепрекона (сразу отнимите у себя три золотых)" },
+                    new Option {
+                        Destination = 90,
+                        Text = "Доверитесь выбору Коннери и примете предложение лепрекона (сразу отнимите у себя три золотых)",
+                        OnlyIf = "ЗОЛОТО >= 3"
+
+                        Do = new Modification
+                        {
+                            Name = "Gold",
+                            Value = -3,
+                        },
+                    },
                 }
             },
             [102] = new Paragraph
@@ -1611,6 +1621,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         },
 
                         Aftertext = "Несмотря на то, что вас двое, это непростой бой. Уж очень здоровый бугай вам попался. После победы вы осматриваете его, находите 2 золотых, и моток медной проволоки.\n\nБерите все, что захотите, и двигайтесь дальше, пока не появились его сородичи.",
+                    },
+                },
+
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Value = 2,
                     },
                 },
 
