@@ -33,7 +33,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public int Dices { get; set; }
         public int DiceBonus { get; set; }
-        public FoodSharingType FoodSharing { get; set; }
+        public FoodSharingType? FoodSharing { get; set; }
 
         public Modification Benefit { get; set; }
         public Modification Damage { get; set; }
