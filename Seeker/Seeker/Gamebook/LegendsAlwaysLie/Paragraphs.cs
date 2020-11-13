@@ -233,7 +233,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 115, Text = "Вы будете ставить ЗАСЛОН, чтобы быть прикрытым остаток пути хоть с одной стороны" },
+                    new Option { Destination = 115, Text = "Вы будете ставить ЗАСЛОН, чтобы быть прикрытым остаток пути хоть с одной стороны", OnlyIf = "Заклинание 'ЗАСЛОН'"  },
                     new Option { Destination = 65, Text = "Прорываться без помощи магии" },
                 }
             },
@@ -529,7 +529,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 71, Text = "Будете прыгать на другой берег без разбега" },
                     new Option { Destination = 24, Text = "Метнете нож (если умеете)" },
-                    new Option { Destination = 87, Text = "ЗАСЛОН" },
+                    new Option { Destination = 87, Text = "ЗАСЛОН", OnlyIf = "Заклинание 'ЗАСЛОН'" },
                 }
             },
             [44] = new Paragraph
@@ -975,7 +975,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 115, Text = "Вы будете ставить ЗАСЛОН, чтобы быть прикрытым остаток пути хоть с одной стороны" },
+                    new Option { Destination = 115, Text = "Вы будете ставить ЗАСЛОН, чтобы быть прикрытым остаток пути хоть с одной стороны", OnlyIf = "Заклинание 'ЗАСЛОН'"  },
                     new Option { Destination = 65, Text = "Прорываться без помощи магии" },
                 }
             },
@@ -2619,7 +2619,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     new Option { Destination = 320, Text = "Если у вас записано слово Огадар", OnlyIf = "Ogadir" },
                     new Option { Destination = 174, Text = "Будете блокировать удар" },
                     new Option { Destination = 134, Text = "Попытаетесь откатиться в сторону" },
-                    new Option { Destination = 396, Text = "ЗАСЛОН" },
+                    new Option { Destination = 396, Text = "ЗАСЛОН", OnlyIf = "Заклинание 'ЗАСЛОН'" },
                 }
             },
             [233] = new Paragraph
@@ -4259,7 +4259,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 325, Text = "Все в порядке" },
-                    new Option { Destination = 380, Text = "Нет, но еще есть крохотный шанс поставить ЗАСЛОН" },
+                    new Option { Destination = 380, Text = "Нет, но еще есть крохотный шанс поставить ЗАСЛОН", OnlyIf = "Заклинание 'ЗАСЛОН'" },
                     new Option { Destination = 314, Text = "Заклинаний в запасе у вас нет, или вы из экономии не хотите этого делать" },
                 }
             },
@@ -7179,7 +7179,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 579, Text = "Успели" },
                     new Option { Destination = 567, Text = "Нет" },
-                    new Option { Destination = 546, Text = "ЗАСЛОН" },
+                    new Option { Destination = 546, Text = "ЗАСЛОН", OnlyIf = "Заклинание 'ЗАСЛОН'"  },
                 }
             },
             [597] = new Paragraph
@@ -7508,7 +7508,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 648, Text = "Попробуете немного сдвинуть близлежащий валун, чтобы преградить им траекторию шипастого шара (но камень выглядит невероятно тяжелым)" },
                     new Option { Destination = 606, Text = "Попытаетесь сбить его в полете ударом меча (но даже если выйдет – разлет осколков будет представлять серьезную угрозу вашему здоровью)" },
-                    new Option { Destination = 449, Text = "ЗАСЛОН" },
+                    new Option { Destination = 449, Text = "ЗАСЛОН", OnlyIf = "Заклинание 'ЗАСЛОН'" },
                 }
             },
             [622] = new Paragraph
