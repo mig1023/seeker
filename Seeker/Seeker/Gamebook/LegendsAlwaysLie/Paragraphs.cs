@@ -38,7 +38,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 701, Text = "В путь!" },
-                    new Option { Destination = 250, Text = "TEST" },
                 }
             },
             [1] = new Paragraph
@@ -1812,7 +1811,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 124, Text = "Ударите в воду СГУСТКОМ" },
+                    new Option { Destination = 124, Text = "Ударите в воду СГУСТКОМ", OnlyIf = "Заклинание 'СГУСТОК'" },
                     new Option { Destination = 178, Text = "Потянетесь к мечу за спиной" },
                     new Option { Destination = 159, Text = "Попытаетесь разжать хватку" },
                 }

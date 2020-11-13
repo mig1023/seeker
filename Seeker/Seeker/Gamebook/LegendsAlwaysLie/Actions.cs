@@ -231,8 +231,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                         if (oneOption.Contains("ДОВЕРИЕ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.ConneryTrust))
                             return false;
-
-                        else if (oneOption.Contains("ДОВЕРИЕ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.ConneryTrust))
+                        
+                        if (oneOption.Contains("ДОВЕРИЕ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.ConneryTrust))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
@@ -240,8 +240,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
                     }
+                    else if (option.Contains("Заклинание"))
+                        return Character.Protagonist.Spells.Contains(option);
+
                     else if (orLogic && Game.Data.Triggers.Contains(oneOption.Trim()))
                         return true;
+
                     else if (!orLogic && !Game.Data.Triggers.Contains(oneOption.Trim()))
                         return false;
                 }
