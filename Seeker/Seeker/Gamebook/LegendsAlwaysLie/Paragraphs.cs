@@ -3750,7 +3750,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 272, Text = "БРОНЯ" },
+                    new Option { Destination = 272, Text = "БРОНЯ", OnlyIf = "Заклинание 'БРОНЯ'" },
                     new Option { Destination = 344, Text = "будете падать как есть, сгруппировавшись и положившись на удачу" },
                 }
             },
