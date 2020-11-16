@@ -32,5 +32,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         {
             return (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
         }
+
+        public string GetFont()
+        {
+            return String.Empty;
+        }
+
+        public double GetLineHeight()
+        {
+            return 0;
+        }
     }
 }

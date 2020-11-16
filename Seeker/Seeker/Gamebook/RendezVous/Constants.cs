@@ -39,5 +39,10 @@ namespace Seeker.Gamebook.RendezVous
         {
             return "RobotoFont";
         }
+
+        public double GetLineHeight()
+        {
+            return 0;
+        }
     }
 }

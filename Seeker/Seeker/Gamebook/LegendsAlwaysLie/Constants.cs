@@ -35,5 +35,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             return "YanoneFont";
         }
+
+        public double GetLineHeight()
+        {
+            return 1.20;
+        }
     }
 }

@@ -195,13 +195,19 @@ namespace Seeker.Game
                 Text = text,
             };
 
-            if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetFont()))
+            if (Game.Data.Constants != null)
             {
-                var OnPlatformDic = (OnPlatform<string>)App.Current.Resources[Game.Data.Constants.GetFont()];
-                var fontFamily = OnPlatformDic.Platforms.FirstOrDefault((arg) => arg.Platform.FirstOrDefault() == Device.RuntimePlatform).Value;
-                label.FontFamily = fontFamily.ToString();
+                if (!String.IsNullOrEmpty(Game.Data.Constants.GetFont()))
+                {
+                    var OnPlatformDic = (OnPlatform<string>)App.Current.Resources[Game.Data.Constants.GetFont()];
+                    var fontFamily = OnPlatformDic.Platforms.FirstOrDefault((arg) => arg.Platform.FirstOrDefault() == Device.RuntimePlatform).Value;
+                    label.FontFamily = fontFamily.ToString();
 
-                label.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
+                    label.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
+                }
+
+                if (Game.Data.Constants.GetLineHeight() > 0)
+                    label.LineHeight = Game.Data.Constants.GetLineHeight();
             }
 
             if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
