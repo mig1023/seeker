@@ -77,7 +77,7 @@ namespace Seeker
 
             Game.Data.CurrentParagraph = paragraph;
             Game.Data.CurrentParagraphID = id;
-
+                        
             Text.Children.Add(Game.Interface.Text(Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty));
 
             if (!String.IsNullOrEmpty(paragraph.Image))

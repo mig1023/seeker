@@ -6,6 +6,11 @@
              mc:Ignorable="d"
              x:Class="Seeker.App">
     <Application.Resources>
-
+        <OnPlatform x:TypeArguments="x:String" x:Key="YanoneFont">
+            <On Platform="Android" Value="Font/YanoneKaffeesatz-Light.ttf#YanoneKaffeesatz-Light" />
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="RobotoFont">
+            <On Platform="Android" Value="Font/Roboto-Thin.ttf#Roboto-Thin" />
+        </OnPlatform>
     </Application.Resources>
 </Application>

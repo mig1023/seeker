@@ -2,5 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SelectedDevice>Samsung SM-J320F</SelectedDevice>
+    <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
+    <DefaultDevice>phone_l-dpi_2_7_pie_9_0_api_28</DefaultDevice>
   </PropertyGroup>
 </Project>

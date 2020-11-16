@@ -4,6 +4,7 @@ using System.Text;
 using Xamarin.Forms;
 
 using Seeker.Gamebook;
+using System.Linq;
 
 namespace Seeker.Game
 {
@@ -193,6 +194,15 @@ namespace Seeker.Game
                 FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                 Text = text,
             };
+
+            if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetFont()))
+            {
+                var OnPlatformDic = (OnPlatform<string>)App.Current.Resources[Game.Data.Constants.GetFont()];
+                var fontFamily = OnPlatformDic.Platforms.FirstOrDefault((arg) => arg.Platform.FirstOrDefault() == Device.RuntimePlatform).Value;
+                label.FontFamily = fontFamily.ToString();
+
+                label.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
+            }
 
             if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
                 label.TextColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));

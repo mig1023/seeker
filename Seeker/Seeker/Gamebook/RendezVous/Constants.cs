@@ -34,5 +34,10 @@ namespace Seeker.Gamebook.RendezVous
         {
             return (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
         }
+
+        public string GetFont()
+        {
+            return "RobotoFont";
+        }
     }
 }

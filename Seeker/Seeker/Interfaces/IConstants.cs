@@ -9,5 +9,9 @@ namespace Seeker.Interfaces
         string GetButtonsColor(Game.Buttons.ButtonTypes type);
 
         string GetColor(Game.Data.ColorTypes type);
+
+        string GetFont();
+
+        double GetLineHeight();
     }
 }
