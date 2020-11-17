@@ -508,7 +508,7 @@ namespace Seeker.Gamebook.RendezVous
                 Options = new List<Option>
                 {
                     new Option { Destination = 37, Text = "Далее", OnlyIf = "Alone" },
-                    new Option { Destination = 39, Text = "Далее", OnlyIf = "Alone" },
+                    new Option { Destination = 39, Text = "Далее", OnlyIf = "!Alone" },
                 }
             },
             [51] = new Paragraph
