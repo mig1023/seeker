@@ -218,12 +218,11 @@ namespace Seeker.Game
                 Margin = 5,
                 FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                 Text = text,
+                FontFamily = TextFontFamily(),
             };
 
             if (Game.Data.Constants != null)
             {
-                label.FontFamily = TextFontFamily();
-
                 if (Game.Data.Constants.GetLineHeight() != null)
                     label.LineHeight = Game.Data.Constants.GetLineHeight() ?? -1;
                 else
@@ -267,9 +266,9 @@ namespace Seeker.Game
                 string text = actionLine;
 
                 if (text.Contains("BIG|"))
-                    actions.FontSize = 22;
+                    actions.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
                 else
-                    actions.FontSize = 10;
+                    actions.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
 
                 if (text.Contains("BAD|"))
                     actions.TextColor = Color.Red;
