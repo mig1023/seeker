@@ -106,6 +106,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [9] = new Paragraph
             {
+                Trigger = "MythologyOfGiants",
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 35, Text = "Далее" },
@@ -1054,7 +1056,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     new Option { Destination = 117, Text = "«Закат эпохи», перевод с эльфийского, магистр Франц" },
                     new Option { Destination = 29, Text = "«Хождение за три моря, в диковинную страну мороза и великанов, писаное купцом Афаннаджей»" },
                     new Option { Destination = 42, Text = "«Памятники дочеловеческих рас: беседы с эльфийскими мудрецами», в авторах числится добрый десяток ученых и переводчиков" },
-                    new Option { Destination = 64, Text = "Этот вариант доступен лишь при условии, что прошлой ночью вы уже начали читать эту книгу" },
+                    new Option { Destination = 64, Text = "Продолжите чтение «Мифологии великанов»", OnlyIf = "MythologyOfGiants"},
                     new Option { Destination = 106, Text = "Когда вы скоротаете время перед сном, откладывайте книгу и придвигайте к себе подушку" },
                 }
             },
