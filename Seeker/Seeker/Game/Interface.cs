@@ -44,7 +44,9 @@ namespace Seeker.Game
             Button gamebookButton = new Button()
             {
                 Text = gamebook,
-                BackgroundColor = Color.FromHex(description.BookColor)
+                BackgroundColor = Color.FromHex(description.BookColor),
+                FontFamily = TextFontFamily(),
+                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Button)),
             };
 
             if (!String.IsNullOrEmpty(description.BorderColor))
@@ -107,10 +109,11 @@ namespace Seeker.Game
 
                     Label enemy = new Label()
                     {
-                        FontSize = 18,
                         FontAttributes = FontAttributes.Bold,
                         Text = enemyParam[0],
-                        HorizontalTextAlignment = TextAlignment.Center
+                        HorizontalTextAlignment = TextAlignment.Center,
+                        FontFamily = TextFontFamily(),
+                        FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                     };
 
                     enemies.Add(enemy);
@@ -121,7 +124,8 @@ namespace Seeker.Game
                         {
                             Text = enemyParam[1],
                             HorizontalTextAlignment = TextAlignment.Center,
-                            Margin = new Thickness(0, -10, 0, 0)
+                            Margin = new Thickness(0, -10, 0, 0),
+                            FontFamily = TextFontFamily(),
                         };
 
                         enemies.Add(param);
@@ -141,7 +145,9 @@ namespace Seeker.Game
                 Text = actionName,
                 TextColor = Xamarin.Forms.Color.White,
                 IsEnabled = enabled,
-                BackgroundColor = (enabled ? Color.FromHex(color) : Color.Gray)
+                BackgroundColor = (enabled ? Color.FromHex(color) : Color.Gray),
+                FontFamily = TextFontFamily(),
+                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Button)),
             };
 
             return SetBorderAndTextColor(actionButton);
@@ -165,6 +171,8 @@ namespace Seeker.Game
                 Text = option.Text,
                 BackgroundColor = Color.FromHex(color),
                 IsEnabled = isEnabled,
+                FontFamily = TextFontFamily(),
+                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
 
             return SetBorderAndTextColor(optionButton);
@@ -186,6 +194,23 @@ namespace Seeker.Game
             return button;
         }
 
+        private static string TextFontFamily()
+        {
+            string defaultFont = "YanoneFont";
+
+            string font = String.Empty;
+
+            if (Game.Data.Constants == null)
+                font = defaultFont;
+            else
+                font = (String.IsNullOrEmpty(Game.Data.Constants.GetFont()) ? defaultFont : Game.Data.Constants.GetFont());
+
+            var OnPlatformDic = (OnPlatform<string>)App.Current.Resources[font];
+            var fontFamily = OnPlatformDic.Platforms.FirstOrDefault((arg) => arg.Platform.FirstOrDefault() == Device.RuntimePlatform).Value;
+
+            return fontFamily.ToString();
+        } 
+
         public static Label Text(string text)
         {
             Label label = new Label
@@ -197,17 +222,15 @@ namespace Seeker.Game
 
             if (Game.Data.Constants != null)
             {
-                if (!String.IsNullOrEmpty(Game.Data.Constants.GetFont()))
-                {
-                    var OnPlatformDic = (OnPlatform<string>)App.Current.Resources[Game.Data.Constants.GetFont()];
-                    var fontFamily = OnPlatformDic.Platforms.FirstOrDefault((arg) => arg.Platform.FirstOrDefault() == Device.RuntimePlatform).Value;
-                    label.FontFamily = fontFamily.ToString();
+                label.FontFamily = TextFontFamily();
 
+                if (Game.Data.Constants.GetLineHeight() != null)
+                    label.LineHeight = Game.Data.Constants.GetLineHeight() ?? -1;
+                else
+                    label.LineHeight = 1.20;
+
+                if (!Game.Data.Constants.GetLtlFont())
                     label.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
-                }
-
-                if (Game.Data.Constants.GetLineHeight() > 0)
-                    label.LineHeight = Game.Data.Constants.GetLineHeight();
             }
 
             if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
@@ -269,6 +292,7 @@ namespace Seeker.Game
                     text = text.Replace(String.Format("{0}|", r), String.Empty);
 
                 actions.Text = text;
+                actions.FontFamily = TextFontFamily();
 
                 actionLabels.Add(actions);
             }

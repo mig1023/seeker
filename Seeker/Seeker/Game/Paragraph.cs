@@ -12,6 +12,8 @@ namespace Seeker.Game
 
         public List<Interfaces.IModification> Modification { get; set; }
 
+        public string Image { get; set; }
+
         public string Trigger { get; set; }
 
         public string LateTrigger { get; set; }

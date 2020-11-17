@@ -21,7 +21,7 @@ namespace Seeker.Game
 
             foreach (string trigger in triggerList)
                 if (remove)
-                    Game.Data.Triggers.Remove(trigger.Trim());
+                    Game.Data.Triggers.RemoveAll(item => item == trigger.Trim());
                 else
                     Game.Data.Triggers.Add(trigger.Trim());
         }

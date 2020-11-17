@@ -12,6 +12,9 @@ namespace Seeker.Interfaces
 
         string GetFont();
 
-        double GetLineHeight();
+        bool GetLtlFont();
+
+        double? GetLineHeight();
+
     }
 }

@@ -31,14 +31,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
         }
 
-        public string GetFont()
-        {
-            return "YanoneFont";
-        }
+        public string GetFont() => "YanoneFont";
 
-        public double GetLineHeight()
-        {
-            return 1.20;
-        }
+        public bool GetLtlFont() => true;
+
+        public double? GetLineHeight() => 1.20;
     }
 }
