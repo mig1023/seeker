@@ -37,7 +37,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 701, Text = "В путь!" },
+                    new Option { Destination = 714, Text = "Далее" },
                 }
             },
             [1] = new Paragraph
@@ -8523,7 +8523,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         ActionName = "Get",
                         ButtonName = "Стать метателем",
                         Specialization = Character.SpecializationType.Thrower,
-                        Aftertext = "Учтите, что помимо всего перечисленного, специализация может вам пригодится в самый неожиданный момент. Воин, например, самый сильный из всей троицы, а маг может почувствовать заранее какую-то магическую ловушку.",
+                        Aftertext = "Учтите, что специализация может вам пригодится в самый неожиданный момент. Воин, например, самый сильный из всей троицы, а маг может почувствовать заранее какую-то магическую ловушку.",
                     },
                 },
 
@@ -8711,6 +8711,20 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 441, Text = "Далее" },
+                }
+            },
+            [714] = new Paragraph
+            {
+                Options = new List<Option>
+                {
+                    new Option { Destination = 715, Text = "Далее" },
+                }
+            },
+            [715] = new Paragraph
+            {
+                Options = new List<Option>
+                {
+                    new Option { Destination = 701, Text = "В путь!" },
                 }
             },
         };
