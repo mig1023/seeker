@@ -3759,7 +3759,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     new Modification
                     {
                         Name = "Ecu",
-                        Value = 100,
+                        Value = -100,
                     },
                 },
 
