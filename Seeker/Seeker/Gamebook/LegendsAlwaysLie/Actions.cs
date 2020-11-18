@@ -230,6 +230,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         if (orLogic && oneOption.Contains("ЗОЛОТО >=") && (int.Parse(oneOption.Split('=')[1]) <= Character.Protagonist.Gold))
                             return true;
 
+                        if (oneOption.Contains("ЗОЛОТО >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Gold))
+                            return false;
+
+                        if (oneOption.Contains("ВРЕМЯ ДЛЯ ЧТЕНИЯ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.TimeForReading))
+                            return false;
+
                         if (oneOption.Contains("ДОВЕРИЕ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.ConneryTrust))
                             return false;
                         
