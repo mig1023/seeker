@@ -91,6 +91,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [7] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "TimeForReading",
+                        Value = -30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 35, Text = "Далее" },
@@ -106,6 +115,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [9] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "TimeForReading",
+                        Value = -30,
+                    },
+                },
+
                 Trigger = "MythologyOfGiants",
 
                 Options = new List<Option>
@@ -162,7 +180,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         Name = "ConneryTrust",
                         Value = -1,
                     },
+                    new Modification
+                    {
+                        Name = "Gold",
+                        Empty = true,
+                    },
                 },
+
+                Trigger = "Money",
 
                 Options = new List<Option>
                 {
@@ -373,6 +398,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [29] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "TimeForReading",
+                        Value = -30,
+                    },
+                },
+
                 Trigger = "Tincture",
 
                 Options = new List<Option>
@@ -452,11 +486,11 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 9, Text = "«Мифология великанов», профессор фон Остерман" },
-                    new Option { Destination = 76, Text = "«География полуострова Штарберген» перевод с гномьего, аббат Линия" },
-                    new Option { Destination = 54, Text = "«Реликты», магистр Аберман Энзанский" },
-                    new Option { Destination = 7, Text = "«Над пропастью во ржи: крестьянский фольклор о проделках маленького народца», издано на средства Лиасского университета" },
-                    new Option { Destination = 100, Text = "«Легенды подгорных кузнецов», авторов аж трое и все вам неизвестны" },
+                    new Option { Destination = 9, Text = "«Мифология великанов», профессор фон Остерман", OnlyIf = "ВРЕМЯ ДЛЯ ЧТЕНИЯ > 0" },
+                    new Option { Destination = 76, Text = "«География полуострова Штарберген» перевод с гномьего, аббат Линия", OnlyIf = "ВРЕМЯ ДЛЯ ЧТЕНИЯ > 0" },
+                    new Option { Destination = 54, Text = "«Реликты», магистр Аберман Энзанский", OnlyIf = "ВРЕМЯ ДЛЯ ЧТЕНИЯ > 0" },
+                    new Option { Destination = 7, Text = "«Над пропастью во ржи: крестьянский фольклор о проделках маленького народца», издано на средства Лиасского университета", OnlyIf = "ВРЕМЯ ДЛЯ ЧТЕНИЯ > 0" },
+                    new Option { Destination = 100, Text = "«Легенды подгорных кузнецов», авторов аж трое и все вам неизвестны", OnlyIf = "ВРЕМЯ ДЛЯ ЧТЕНИЯ > 0" },
                     new Option { Destination = 95, Text = "Когда время выходит, вы благополучно засыпаете, убаюканный рядами букв" },
                 }
             },
@@ -538,6 +572,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [42] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "TimeForReading",
+                        Value = -30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 90, Text = "Далее" },
@@ -683,6 +726,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [54] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "TimeForReading",
+                        Value = -30,
+                    },
+                },
+
                 Trigger = "Verse",
 
                 Options = new List<Option>
@@ -782,6 +834,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [64] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "TimeForReading",
+                        Value = -30,
+                    },
+                },
+
                 Trigger = "Ogadir",
 
                 Options = new List<Option>
@@ -812,6 +873,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [66] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "TimeForReading",
+                        Value = -30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 3, Text = "Расскажите поподробнее, как вы познакомились?" },
@@ -904,6 +974,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [76] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "TimeForReading",
+                        Value = -30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 35, Text = "Далее" },
@@ -974,8 +1053,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         Value = -1,
                     },
                 },
-
-                Trigger = "Money",
 
                 Options = new List<Option>
                 {
@@ -1053,10 +1130,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 117, Text = "«Закат эпохи», перевод с эльфийского, магистр Франц" },
-                    new Option { Destination = 29, Text = "«Хождение за три моря, в диковинную страну мороза и великанов, писаное купцом Афаннаджей»" },
-                    new Option { Destination = 42, Text = "«Памятники дочеловеческих рас: беседы с эльфийскими мудрецами», в авторах числится добрый десяток ученых и переводчиков" },
-                    new Option { Destination = 64, Text = "Продолжите чтение «Мифологии великанов»", OnlyIf = "MythologyOfGiants"},
+                    new Option { Destination = 117, Text = "«Закат эпохи», перевод с эльфийского, магистр Франц", OnlyIf = "ВРЕМЯ ДЛЯ ЧТЕНИЯ > 0" },
+                    new Option { Destination = 29, Text = "«Хождение за три моря, в диковинную страну мороза и великанов, писаное купцом Афаннаджей»", OnlyIf = "ВРЕМЯ ДЛЯ ЧТЕНИЯ > 0" },
+                    new Option { Destination = 42, Text = "«Памятники дочеловеческих рас: беседы с эльфийскими мудрецами», в авторах числится добрый десяток ученых и переводчиков", OnlyIf = "ВРЕМЯ ДЛЯ ЧТЕНИЯ > 0" },
+                    new Option { Destination = 64, Text = "Продолжите чтение «Мифологии великанов»", OnlyIf = "MythologyOfGiants, ВРЕМЯ ДЛЯ ЧТЕНИЯ > 0"},
                     new Option { Destination = 106, Text = "Когда вы скоротаете время перед сном, откладывайте книгу и придвигайте к себе подушку" },
                 }
             },
@@ -1166,6 +1243,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [100] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "TimeForReading",
+                        Value = -30,
+                    },
+                },
+
                 Trigger = "Tact",
 
                 Options = new List<Option>
@@ -1175,6 +1261,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [101] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "TimeForReading",
+                        Value = 60,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 118, Text = "У вас записано слово деньги", OnlyIf = "Money" },
@@ -1182,7 +1277,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     new Option {
                         Destination = 90,
                         Text = "Доверитесь выбору Коннери и примете предложение лепрекона (сразу отнимите у себя три золотых)",
-                        OnlyIf = "ЗОЛОТО >= 3",
+                        OnlyIf = "!Money, ЗОЛОТО >= 3",
 
                         Do = new Modification
                         {
@@ -1381,6 +1476,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [117] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "TimeForReading",
+                        Value = -30,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 90, Text = "Далее" },
