@@ -98,14 +98,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             if ((Allies != null) && GroupFight)
             {
                 foreach (Character ally in Allies)
-                    enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", ally.Name, ally.Mastery, ally.GetEndurance()));
+                    enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", ally.Name, ally.Mastery, ally.GetEndurance()));
 
                 enemies.Add("SPLITTER|против");
             }
                 
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", enemy.Name, enemy.Mastery, enemy.GetEndurance()));
+                enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.GetEndurance()));
 
             return enemies;
         }
