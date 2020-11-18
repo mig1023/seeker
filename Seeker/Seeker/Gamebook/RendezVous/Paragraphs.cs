@@ -372,7 +372,7 @@ namespace Seeker.Gamebook.RendezVous
                 Options = new List<Option>
                 {
                     new Option { Destination = 46, Text = "Далее", OnlyIf = "Mandela" },
-                    new Option { Destination = 56, Text = "Далее", OnlyIf = "Mandela" },
+                    new Option { Destination = 56, Text = "Далее", OnlyIf = "!Mandela" },
                 }
             },
             [37] = new Paragraph
