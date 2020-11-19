@@ -20,7 +20,7 @@ namespace Seeker.Droid
     {
         public string GetFromAssets(string name)
         {
-            AssetManager assets = Forms.Context.Assets;
+            AssetManager assets = Android.App.Application.Context.Assets;
 
             string content;
 
