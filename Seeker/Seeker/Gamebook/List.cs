@@ -10,7 +10,7 @@ namespace Seeker.Gamebook
         {
             ["Подземелья чёрного замка"] = new Description
             {
-                XmlBook = "BlackCastleDungeon.xml",
+                XmlBook = "Gamebooks/BlackCastleDungeon.xml",
                 Protagonist = BlackCastleDungeon.Character.Protagonist.Init,
                 CheckOnlyIf = BlackCastleDungeon.Actions.CheckOnlyIf,
                 Paragraphs = new BlackCastleDungeon.Paragraphs(),
@@ -23,7 +23,7 @@ namespace Seeker.Gamebook
 
             ["Тайна капитана Шелтона"] = new Description
             {
-                XmlBook = "CaptainSheltonsSecret.xml",
+                XmlBook = "Gamebooks/CaptainSheltonsSecret.xml",
                 Protagonist = CaptainSheltonsSecret.Character.Protagonist.Init,
                 CheckOnlyIf = CaptainSheltonsSecret.Actions.CheckOnlyIf,
                 Paragraphs = new CaptainSheltonsSecret.Paragraphs(),
@@ -36,7 +36,7 @@ namespace Seeker.Gamebook
 
             ["Верная шпага короля"] = new Description
             {
-                XmlBook = "FaithfulSwordOfTheKing.xml",
+                XmlBook = "Gamebooks/FaithfulSwordOfTheKing.xml",
                 Protagonist = FaithfulSwordOfTheKing.Character.Protagonist.Init,
                 CheckOnlyIf = FaithfulSwordOfTheKing.Actions.CheckOnlyIf,
                 Paragraphs = new FaithfulSwordOfTheKing.Paragraphs(),
@@ -49,7 +49,7 @@ namespace Seeker.Gamebook
 	    
 	        ["Приключения безбородого обманщика"] = new Description
             {
-                XmlBook = "AdventuresOfABeardlessDeceiver.xml",
+                XmlBook = "Gamebooks/AdventuresOfABeardlessDeceiver.xml",
                 Protagonist = AdventuresOfABeardlessDeceiver.Character.Protagonist.Init,
                 CheckOnlyIf = AdventuresOfABeardlessDeceiver.Actions.CheckOnlyIf,
                 Paragraphs = new AdventuresOfABeardlessDeceiver.Paragraphs(),
@@ -62,7 +62,7 @@ namespace Seeker.Gamebook
 
             ["Джунгарское нашествие"] = new Description
             {
-                XmlBook = "DzungarWar.xml",
+                XmlBook = "Gamebooks/DzungarWar.xml",
                 Protagonist = DzungarWar.Character.Protagonist.Init,
                 CheckOnlyIf = DzungarWar.Actions.CheckOnlyIf,
                 Paragraphs = new DzungarWar.Paragraphs(),
@@ -76,7 +76,7 @@ namespace Seeker.Gamebook
 
             ["Скала ужаса"] = new Description
             {
-                XmlBook = "RockOfTerror.xml",
+                XmlBook = "Gamebooks/RockOfTerror.xml",
                 Protagonist = RockOfTerror.Character.Protagonist.Init,
                 CheckOnlyIf = RockOfTerror.Actions.CheckOnlyIf,
                 Paragraphs = new RockOfTerror.Paragraphs(),
@@ -89,7 +89,7 @@ namespace Seeker.Gamebook
 
             ["Рандеву"] = new Description
             {
-                XmlBook = "RendezVous.xml",
+                XmlBook = "Gamebooks/RendezVous.xml",
                 Protagonist = RendezVous.Character.Protagonist.Init,
                 CheckOnlyIf = RendezVous.Actions.CheckOnlyIf,
                 Paragraphs = new RendezVous.Paragraphs(),
@@ -104,7 +104,7 @@ namespace Seeker.Gamebook
 
             ["Болотная лихорадка"] = new Description
             {
-                XmlBook = "SwampFever.xml",
+                XmlBook = "Gamebooks/SwampFever.xml",
                 Protagonist = SwampFever.Character.Protagonist.Init,
                 CheckOnlyIf = SwampFever.Actions.CheckOnlyIf,
                 Paragraphs = new SwampFever.Paragraphs(),
@@ -117,7 +117,7 @@ namespace Seeker.Gamebook
 
             ["Легенды всегда врут"] = new Description
             {
-                XmlBook = "LegendsAlwaysLie.xml",
+                XmlBook = "Gamebooks/LegendsAlwaysLie.xml",
                 Protagonist = LegendsAlwaysLie.Character.Protagonist.Init,
                 CheckOnlyIf = LegendsAlwaysLie.Actions.CheckOnlyIf,
                 Paragraphs = new LegendsAlwaysLie.Paragraphs(),

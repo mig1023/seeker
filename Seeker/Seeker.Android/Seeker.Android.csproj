@@ -76,8 +76,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Font\Roboto-Thin.ttf" />
-    <AndroidAsset Include="Assets\Font\YanoneKaffeesatz-Light.ttf" />
+    <AndroidAsset Include="Assets\Fonts\Roboto-Thin.ttf" />
+    <AndroidAsset Include="Assets\Fonts\YanoneKaffeesatz-Light.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
@@ -100,7 +100,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\RockOfTerror.xml" />
+    <AndroidAsset Include="Assets\Gamebooks\RockOfTerror.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Seeker\Seeker.csproj">
@@ -109,16 +109,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\BlackCastleDungeon.xml" />
+    <AndroidAsset Include="Assets\Gamebooks\BlackCastleDungeon.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\FaithfulSwordOfTheKing.xml" />
+    <AndroidAsset Include="Assets\Gamebooks\FaithfulSwordOfTheKing.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\CaptainSheltonsSecret.xml" />
+    <AndroidAsset Include="Assets\Gamebooks\CaptainSheltonsSecret.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\AdventuresOfABeardlessDeceiver.xml" />
+    <AndroidAsset Include="Assets\Gamebooks\AdventuresOfABeardlessDeceiver.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver.jpg" />
@@ -136,7 +136,7 @@
     <AndroidResource Include="Resources\drawable\RockOfTerror.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\DzungarWar.xml" />
+    <AndroidAsset Include="Assets\Gamebooks\DzungarWar.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\DzungarWar.jpg" />
@@ -145,10 +145,10 @@
     <AndroidResource Include="Resources\drawable\SwampFever.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\SwampFever.xml" />
+    <AndroidAsset Include="Assets\Gamebooks\SwampFever.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\RendezVous.xml" />
+    <AndroidAsset Include="Assets\Gamebooks\RendezVous.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\RendezVous.jpg" />
@@ -184,7 +184,7 @@
     <AndroidResource Include="Resources\drawable\LegendsAlwaysLie.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\LegendsAlwaysLie.xml" />
+    <AndroidAsset Include="Assets\Gamebooks\LegendsAlwaysLie.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
