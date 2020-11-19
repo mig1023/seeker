@@ -211,17 +211,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             }
             else
             {
-                string[] options;
+                string[] options = option.Split('|', ',');
 
-                bool orLogic = false;
-
-                if (option.Contains("|"))
-                {
-                    options = option.Split('|');
-                    orLogic = true;
-                }
-                else
-                    options = option.Split(',');
+                bool orLogic = (option.Contains("|") ? true : false);
 
                 foreach (string oneOption in options)
                 {
@@ -257,10 +249,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         return false;
                 }
 
-                if (orLogic)
-                    return false;
-                else
-                    return true;
+                return (orLogic ? false : true);
             }
         }
 
