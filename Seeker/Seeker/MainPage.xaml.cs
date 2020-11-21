@@ -26,7 +26,7 @@ namespace Seeker
             Game.Router.Clean();
             Options.Children.Clear();
 
-            Text.Children.Add(Game.Interface.Text("Выберите книгу:"));
+            Text.Children.Add(Game.Interface.Text("Выберите книгу:", defaultParams: true));
 
             Game.Data.Actions = null;
 

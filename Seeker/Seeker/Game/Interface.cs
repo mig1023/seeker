@@ -211,7 +211,7 @@ namespace Seeker.Game
             return fontFamily.ToString();
         } 
 
-        public static Label Text(string text)
+        public static Label Text(string text, bool defaultParams = false)
         {
             Label label = new Label
             {
@@ -220,6 +220,9 @@ namespace Seeker.Game
                 Text = text,
                 FontFamily = TextFontFamily(),
             };
+
+            if (defaultParams)
+                return label;
 
             if (Game.Data.Constants != null)
             {
