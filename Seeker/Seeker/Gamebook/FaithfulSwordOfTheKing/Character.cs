@@ -62,21 +62,62 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             Food = 2;
             HadFoodToday = 0;
             Chainmail = 0;
+            LeftHandPenalty = 0;
         }
 
         public Character Clone()
         {
-            Character newCharacter = new Character();
+            return new Character()
+            {
+                Name = this.Name,
+                Skill = this.Skill,
+                Strength = this.Strength,
+                Honor = this.Honor,
+                Day = this.Day,
+                Ecu = this.Ecu,
+                MeritalArt = this.MeritalArt,
+                Horses = this.Horses,
+                Pistols = this.Pistols,
+                BulletsAndGubpowder = this.BulletsAndGubpowder,
+                Daggers = this.Daggers,
+                Food = this.Food,
+                HadFoodToday = this.HadFoodToday,
+                Chainmail = this.Chainmail,
+                LeftHandPenalty = this.LeftHandPenalty,
 
-            newCharacter.Name = this.Name;
-            newCharacter.Skill = this.Skill;
-            newCharacter.Strength = this.Strength;
-            newCharacter.Honor = this.Honor;
-            newCharacter.Day = this.Day;
-            newCharacter.Ecu = this.Ecu;
-            newCharacter.LeftHandPenalty = this.LeftHandPenalty;
+            };
+        }
 
-            return newCharacter;
+        public string Save()
+        {
+            return String.Format(
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}|{13}",
+                Skill, Strength, Honor, Day, Ecu, MeritalArt,
+                Horses, Pistols, BulletsAndGubpowder, Daggers, Food,
+                HadFoodToday, Chainmail, LeftHandPenalty
+            );
+        }
+
+        public void Load(string saveLine)
+        {
+            string[] save = saveLine.Split('|');
+
+            Skill = int.Parse(save[0]);
+            Strength = int.Parse(save[1]);
+            Honor = int.Parse(save[2]);
+            Day = int.Parse(save[3]);
+            Ecu = int.Parse(save[4]);
+            Horses = int.Parse(save[6]);
+            Pistols = int.Parse(save[7]);
+            BulletsAndGubpowder = int.Parse(save[8]);
+            Daggers = int.Parse(save[9]);
+            Food = int.Parse(save[10]);
+            HadFoodToday = int.Parse(save[11]);
+            Chainmail = int.Parse(save[12]);
+            LeftHandPenalty = int.Parse(save[13]);
+
+            bool success = Enum.TryParse(save[5], out MeritalArts value);
+            MeritalArt = (success ? value : MeritalArts.Nope);
         }
     }
 }
