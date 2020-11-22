@@ -40,21 +40,46 @@ namespace Seeker.Gamebook.DzungarWar
 
         public Character Clone()
         {
-            Character newCharacter = new Character();
+            return new Character()
+            {
+                Strength = this.Strength,
+                Skill = this.Skill,
+                Wisdom = this.Wisdom,
+                Cunning = this.Cunning,
+                Oratory = this.Oratory,
+                Danger = this.Danger,
+                Favour = this.Favour,
+                Tanga = this.Tanga,
+                StatBonuses = this.StatBonuses,
+                MaxBonus = this.MaxBonus,
+                Brother = this.Brother,
+            };
+        }
 
-            newCharacter.Strength = this.Strength;
-            newCharacter.Skill = this.Skill;
-            newCharacter.Wisdom = this.Wisdom;
-            newCharacter.Cunning = this.Cunning;
-            newCharacter.Oratory = this.Oratory;
-            newCharacter.Danger = this.Danger;
-            newCharacter.Favour = this.Favour;
-            newCharacter.Tanga = this.Tanga;
-            newCharacter.StatBonuses = this.StatBonuses;
-            newCharacter.MaxBonus = this.MaxBonus;
-            newCharacter.Brother = this.Brother;
+        public string Save()
+        {
+            return String.Format(
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}",
+                Strength, Skill, Wisdom, Cunning, Oratory, Danger,
+                Favour, Tanga, StatBonuses, MaxBonus, Brother
+            );
+        }
 
-            return newCharacter;
+        public void Load(string saveLine)
+        {
+            string[] save = saveLine.Split('|');
+
+            Strength = int.Parse(save[0]);
+            Skill = int.Parse(save[1]);
+            Wisdom = int.Parse(save[2]);
+            Cunning = int.Parse(save[3]);
+            Oratory = int.Parse(save[4]);
+            Danger = int.Parse(save[5]);
+            Favour = int.Parse(save[6]);
+            Tanga = int.Parse(save[7]);
+            StatBonuses = int.Parse(save[8]);
+            MaxBonus = int.Parse(save[9]);
+            Brother = int.Parse(save[10]);
         }
     }
 }
