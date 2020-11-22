@@ -31,5 +31,23 @@ namespace Seeker.Gamebook.RockOfTerror
                 MonksHeart = this.MonksHeart,
             };
         }
+
+        public string Save()
+        {
+            return String.Format(
+                "{0}|{1}|{2}",
+                Time, Injury, (MonksHeart == null ? -1 : MonksHeart)
+            );
+        }
+
+        public void Load(string saveLine)
+        {
+            string[] save = saveLine.Split('|');
+
+            Time = int.Parse(save[0]);
+            Injury = int.Parse(save[1]);
+            MonksHeart = int.Parse(save[2]);
+            MonksHeart = (MonksHeart < 0 ? null : MonksHeart);
+        }
     }
 }

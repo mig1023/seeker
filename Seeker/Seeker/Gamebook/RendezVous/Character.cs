@@ -24,5 +24,15 @@ namespace Seeker.Gamebook.RendezVous
                 Awareness = this.Awareness,
             };
         }
+
+        public string Save()
+        {
+            return String.Format("{0}", Awareness);
+        }
+
+        public void Load(string saveLine)
+        {
+            Awareness = int.Parse(saveLine);
+        }
     }
 }
