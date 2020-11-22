@@ -7,5 +7,9 @@ namespace Seeker.Interfaces
     interface ICharacter
     {
         void Init();
+
+        string Save();
+
+        void Load(string saveLine);
     }
 }

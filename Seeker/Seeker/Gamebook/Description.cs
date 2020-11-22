@@ -6,9 +6,13 @@ namespace Seeker.Gamebook
 {
     class Description
     {
-        public delegate void ProtagonistInit();
+        public delegate void ProtagonistMethod();
 
-        public delegate bool CheckOnlyIfFunc(string option);
+        public delegate string SaveMethod();
+
+        public delegate void LoadMethod(string saveLine); 
+
+        public delegate bool CheckOnlyIfMethod(string option);
 
         public string XmlBook;
 
@@ -20,9 +24,13 @@ namespace Seeker.Gamebook
 
         public string Illustration;
 
-        public ProtagonistInit Protagonist;
+        public ProtagonistMethod Protagonist;
 
-        public CheckOnlyIfFunc CheckOnlyIf;
+        public SaveMethod Save;
+
+        public LoadMethod Load;
+
+        public CheckOnlyIfMethod CheckOnlyIf;
 
         public Interfaces.IParagraphs Paragraphs;
 

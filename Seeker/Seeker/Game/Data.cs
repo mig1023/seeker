@@ -24,10 +24,12 @@ namespace Seeker.Game
         public static Interfaces.IActions Actions;
         public static Interfaces.IConstants Constants;
 
-        public static Gamebook.Description.ProtagonistInit Protagonist;
-        public static Gamebook.Description.CheckOnlyIfFunc CheckOnlyIf;
+        public static Gamebook.Description.ProtagonistMethod Protagonist;
+        public static Gamebook.Description.CheckOnlyIfMethod CheckOnlyIf;
+        public static Gamebook.Description.SaveMethod Save;
+        public static Gamebook.Description.LoadMethod Load;
 
-        public static void Load(string name)
+        public static void GameLoad(string name)
         {
             TextOfParagraphs.Clear();
             Triggers.Clear();
@@ -55,6 +57,8 @@ namespace Seeker.Game
             Actions = gamebook.Actions;
             Constants = gamebook.Constants;
             Protagonist = gamebook.Protagonist;
+            Save = gamebook.Save;
+            Load = gamebook.Load;
             CheckOnlyIf = gamebook.CheckOnlyIf;
             ShowDisabledOption = gamebook.ShowDisabledOption;
         }

@@ -56,10 +56,16 @@ namespace Seeker
         {
             Button b = sender as Button;
 
-            Game.Data.Load(b.Text);
+            Game.Continue.CurrentGame(b.Text);
+            Game.Data.GameLoad(b.Text);
             GamepageSettings();
 
             Paragraph(0);
+        }
+
+        private void Continue_Click(object sender, EventArgs e)
+        {
+            Paragraph(Game.Continue.Load());
         }
 
         public void Paragraph(int id, bool reload = false)
@@ -141,6 +147,15 @@ namespace Seeker
                 Options.Children.Add(button);
             }
 
+            if ((id == 0) && Game.Continue.IsGameSaved())
+            {
+                Button button = Game.Interface.ContinueButton();
+
+                button.Clicked += Continue_Click;
+
+                Options.Children.Add(button);
+            }
+
             if (!reload)
                 MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
 
@@ -148,6 +163,9 @@ namespace Seeker
             CheckGameOver();
 
             Game.Option.Trigger(paragraph.LateTrigger);
+
+            if (id != 0)
+                Game.Continue.Save();
         }
 
         private void UpdateStatus()
