@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Seeker.Gamebook.CaptainSheltonsSecret
@@ -75,17 +76,16 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public Character Clone()
         {
-            Character newCharacter = new Character();
-
-            newCharacter.Name = this.Name;
-            newCharacter.Mastery = this.Mastery;
-            newCharacter.Endurance = this.Endurance;
-            newCharacter.Gold = this.Gold;
-            newCharacter.ExtendedDamage = this.ExtendedDamage;
-            newCharacter.MasteryDamage = this.MasteryDamage;
-            newCharacter.SeaArmour = this.SeaArmour;
-
-            return newCharacter;
+            return new Character()
+            {
+                Name = this.Name,
+                Mastery = this.Mastery,
+                Endurance = this.Endurance,
+                Gold = this.Gold,
+                ExtendedDamage = this.ExtendedDamage,
+                MasteryDamage = this.MasteryDamage,
+                SeaArmour = this.SeaArmour,
+            };
         }
 
         public Character SetEndurance()
@@ -104,6 +104,37 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int GetEndurance()
         {
             return (EnduranceLoss.ContainsKey(this.Name) ? EnduranceLoss[this.Name] : this.Endurance);
+        }
+
+        public string Save()
+        {
+            List<string> lucks = new List<string>();
+
+            foreach(bool luck in Luck.Values.ToList())
+                lucks.Add(luck ? "1" : "0");
+
+            return String.Format(
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}",
+                Mastery, Endurance, Gold, ExtendedDamage, MasteryDamage,
+                (SeaArmour ? 1 : 0), String.Join(",", lucks)
+            );
+        }
+
+        public void Load(string saveLine)
+        {
+            string[] save = saveLine.Split('|');
+
+            Mastery = int.Parse(save[0]);
+            Endurance = int.Parse(save[1]);
+            Gold = int.Parse(save[2]);
+            ExtendedDamage = int.Parse(save[3]);
+            MasteryDamage = int.Parse(save[4]);
+            SeaArmour = (save[5] == "1" ? true : false);
+
+            string[] lucks = save[6].Split(',');
+
+            for (int i = 0; i < 6; i++)
+                Luck[i+1] = (lucks[i] == "1" ? true : false);
         }
     }
 }
