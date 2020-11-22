@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Seeker.Gamebook.BlackCastleDungeon
@@ -29,17 +30,38 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public Character Clone()
         {
-            Character newCharacter = new Character();
+            return new Character()
+            {
+                Name = this.Name,
+                Mastery = this.Mastery,
+                Endurance = this.Endurance,
+                Luck = this.Luck,
+                Gold = this.Gold,
+                SpellSlots = this.SpellSlots,
+                Spells = new List<string>(),
+            };
+        }
 
-            newCharacter.Name = this.Name;
-            newCharacter.Mastery = this.Mastery;
-            newCharacter.Endurance = this.Endurance;
-            newCharacter.Luck = this.Luck;
-            newCharacter.Gold = this.Gold;
-            newCharacter.SpellSlots = this.SpellSlots;
-            newCharacter.Spells = new List<string>();
+        public string Save()
+        {
+            string spells = String.Join(",", Spells);
 
-            return newCharacter;
+            return String.Format(
+                "{0}|{1}|{2}|{3}|{4}|{5}",
+                Mastery, Endurance, Luck, Gold, SpellSlots, spells
+            );
+        }
+
+        public void Load(string saveLine)
+        {
+            string[] save = saveLine.Split('|');
+
+            Mastery = int.Parse(save[0]);
+            Endurance = int.Parse(save[1]);
+            Luck = int.Parse(save[2]);
+            Gold = int.Parse(save[3]);
+            SpellSlots = int.Parse(save[4]);
+            Spells = save[5].Split(',').ToList();
         }
     }
 }
