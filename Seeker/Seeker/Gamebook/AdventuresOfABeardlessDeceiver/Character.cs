@@ -38,20 +38,49 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public Character Clone()
         {
-            Character newCharacter = new Character();
+            return new Character()
+            {
+                Strength = this.Strength,
+                Skill = this.Skill,
+                Wisdom = this.Wisdom,
+                Cunning = this.Cunning,
+                Oratory = this.Oratory,
+                Popularity = this.Popularity,
+                Tanga = this.Tanga,
+                StatBonuses = this.StatBonuses,
+                AkynGlory = this.AkynGlory,
+                UnitOfTime = this.UnitOfTime,
+            };
+        }
 
-            newCharacter.Strength = this.Strength;
-            newCharacter.Skill = this.Skill;
-            newCharacter.Wisdom = this.Wisdom;
-            newCharacter.Cunning = this.Cunning;
-            newCharacter.Oratory = this.Oratory;
-            newCharacter.Popularity = this.Popularity;
-            newCharacter.Tanga = this.Tanga;
-            newCharacter.StatBonuses = this.StatBonuses;
-            newCharacter.AkynGlory = this.AkynGlory;
-            newCharacter.UnitOfTime = this.UnitOfTime;
 
-            return newCharacter;
+        public string Save()
+        {
+            return String.Format(
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}",
+                Strength, Skill, Wisdom, Cunning, Oratory, Popularity, Tanga, StatBonuses,
+                (AkynGlory == null ? -1 : AkynGlory), (UnitOfTime == null ? -1 : UnitOfTime)
+            );
+        }
+
+        public void Load(string saveLine)
+        {
+            string[] save = saveLine.Split('|');
+
+            Strength = int.Parse(save[0]);
+            Skill = int.Parse(save[1]);
+            Wisdom = int.Parse(save[2]);
+            Cunning = int.Parse(save[3]);
+            Oratory = int.Parse(save[4]);
+            Popularity = int.Parse(save[5]);
+            Tanga = int.Parse(save[6]);
+            StatBonuses = int.Parse(save[7]);
+
+            AkynGlory = int.Parse(save[8]);
+            AkynGlory = (AkynGlory < 0 ? null : AkynGlory);
+
+            UnitOfTime = int.Parse(save[9]);
+            UnitOfTime = (UnitOfTime < 0 ? null : UnitOfTime);
         }
     }
 }
