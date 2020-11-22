@@ -16,6 +16,7 @@ namespace Seeker.Gamebook.RendezVous
             [ButtonTypes.Option] = "#FFFFFF",
             [ButtonTypes.Font] = "#000000",
             [ButtonTypes.Border] = "#000000",
+            [ButtonTypes.Continue] = "#FFFFFF",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>

@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.DzungarWar
             [ButtonTypes.Main] = "#4a8026",
             [ButtonTypes.Action] = "#339933",
             [ButtonTypes.Option] = "#696969",
+            [ButtonTypes.Continue] = "#a8c196",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>

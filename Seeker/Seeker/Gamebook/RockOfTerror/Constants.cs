@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.RockOfTerror
             [ButtonTypes.Main] = "#191919",
             [ButtonTypes.Action] = "#2a2a2a",
             [ButtonTypes.Option] = "#494949",
+            [ButtonTypes.Continue] = "#2f2f2f",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>

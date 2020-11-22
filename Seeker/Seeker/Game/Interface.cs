@@ -180,10 +180,12 @@ namespace Seeker.Game
 
         public static Button ContinueButton()
         {
+            string color = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
+
             Button optionButton = new Button()
             {
                 Text = "ПРОДОЛЖИТЬ РАНЕЕ НАЧАТУЮ ИГРУ",
-                BackgroundColor = Color.LightGray,
+                BackgroundColor = (String.IsNullOrEmpty(color) ? Color.LightGray : Color.FromHex(color)),
                 FontFamily = TextFontFamily(),
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
