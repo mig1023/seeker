@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Seeker.Gamebook.LegendsAlwaysLie
@@ -51,7 +52,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public Character Clone()
         {
-            return new Character() {
+            return new Character()
+            {
                 Name = this.Name,
                 Strength = this.Strength,
                 Hitpoints = this.Hitpoints,
@@ -67,6 +69,39 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Specialization = this.Specialization,
                 Spells = new List<string>(),
             };
+        }
+
+        public string Save()
+        {
+            string spells = String.Join(",", Spells);
+
+            return String.Format(
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}",
+                Strength, Hitpoints, Magicpoints, Spellpoints, (FoodIsDivided ? 1 : 0),
+                PoisonBlade, Gold, Footwraps, TimeForReading, ConneryHitpoints,
+                ConneryTrust, Specialization, spells
+            );
+        }
+
+        public void Load(string saveLine)
+        {
+            string[] save = saveLine.Split('|');
+
+            Strength = int.Parse(save[0]);
+            Hitpoints = int.Parse(save[1]);
+            Magicpoints = int.Parse(save[2]);
+            Spellpoints = int.Parse(save[3]);
+            FoodIsDivided = (save[4] == "1" ? true : false);
+            PoisonBlade = int.Parse(save[5]);
+            Gold = int.Parse(save[6]);
+            Footwraps = int.Parse(save[7]);
+            TimeForReading = int.Parse(save[8]);
+            ConneryHitpoints = int.Parse(save[9]);
+            ConneryTrust = int.Parse(save[10]);
+            Spells = save[12].Split(',').ToList();
+
+            bool success = Enum.TryParse(save[11], out SpecializationType value);
+            Specialization = (success ? value : SpecializationType.Nope);
         }
     }
 }
