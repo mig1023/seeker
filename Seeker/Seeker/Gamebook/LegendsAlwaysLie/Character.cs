@@ -28,6 +28,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public List<string> Spells { get; set; }
 
         public bool FoodIsDivided { get; set; }
+        public int PoisonBlade { get; set; }
 
 
         public void Init()
@@ -38,6 +39,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Magicpoints = 1;
             Spellpoints = 2;
             FoodIsDivided = false;
+            PoisonBlade = 0;
             Gold = 20;
             Footwraps = 0;
             TimeForReading = 60;
@@ -56,6 +58,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Magicpoints = this.Magicpoints,
                 Spellpoints = this.Spellpoints,
                 FoodIsDivided = this.FoodIsDivided,
+                PoisonBlade = this.PoisonBlade,
                 Gold = this.Gold,
                 Footwraps = this.Footwraps,
                 TimeForReading = this.TimeForReading,

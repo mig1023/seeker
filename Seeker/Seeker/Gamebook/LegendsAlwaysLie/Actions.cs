@@ -384,8 +384,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             int round = 1;
             int golemRound = 4;
             int incrementWounds = 2;
-
             bool warriorFight = Character.Protagonist.Specialization == Character.SpecializationType.Warrior;
+            bool poisonBlade = false;
+
+            if (Character.Protagonist.PoisonBlade > 0)
+            {
+                poisonBlade = true;
+                Character.Protagonist.PoisonBlade = 0;
+            }
 
             List<Character> FightEnemies = new List<Character>();
 
@@ -523,7 +529,17 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
 
                         if (String.IsNullOrEmpty(ReactionHit))
-                            enemy.Hitpoints -= (AttackWounds > 0 ? AttackWounds : 2);
+                        {
+                            int wound = (AttackWounds > 0 ? AttackWounds : 2);
+
+                            if (poisonBlade)
+                            {
+                                wound += 2;
+                                fight.Add(String.Format("Вы нанесли урон ядом: {0}", wound));
+                            }
+
+                            enemy.Hitpoints -= wound;
+                        }
                         else
                         {
                             string[] wounds = ReactionHit.Split('-');
@@ -531,7 +547,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                             enemy.Hitpoints -= wound;
 
-                            fight.Add(String.Format("Вы нанесли урон: {1}", enemy.Name, wound));
+                            fight.Add(String.Format("Вы нанесли урон: {0}", wound));
                         }
                         
                         if (EnemyLostFight(FightEnemies, ref fight))

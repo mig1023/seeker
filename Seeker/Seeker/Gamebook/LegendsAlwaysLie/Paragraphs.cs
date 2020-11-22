@@ -1896,6 +1896,11 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         Name = "Hitpoints",
                         Value = -2,
                     },
+                    new Modification
+                    {
+                        Name = "PoisonBlade",
+                        Value = 1,
+                    },
                 },
 
                 Options = new List<Option>
