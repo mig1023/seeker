@@ -115,7 +115,7 @@ namespace Seeker.Gamebook.DzungarWar
 
         public List<string> StaticButtons() => new List<string> { };
 
-        public bool StaticAction() => false;
+        public bool StaticAction(string action) => false;
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {

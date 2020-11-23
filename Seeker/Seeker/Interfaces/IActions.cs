@@ -19,7 +19,7 @@ namespace Seeker.Interfaces
 
         List<string> StaticButtons();
 
-        bool StaticAction();
+        bool StaticAction(string action);
 
         bool GameOver(out int toEndParagraph, out string toEndText);
 

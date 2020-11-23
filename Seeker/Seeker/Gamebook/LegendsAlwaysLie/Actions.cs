@@ -89,7 +89,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public List<string> StaticButtons() => new List<string> { };
 
-        public bool StaticAction() => false;
+        public bool StaticAction(string action) => false;
 
         private bool GoodReaction(ref List<string> reaction)
         {

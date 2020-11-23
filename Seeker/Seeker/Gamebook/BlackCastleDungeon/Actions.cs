@@ -49,9 +49,27 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return statusLines;
         }
 
-        public List<string> StaticButtons() => new List<string> { };
+        public List<string> StaticButtons()
+        {
+            List<string> staticButtons = new List<string> { };
 
-        public bool StaticAction() => false;
+            if (Character.Protagonist.Spells.Contains("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"))
+                staticButtons.Add("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
+
+            return staticButtons;
+        }
+
+        public bool StaticAction(string action)
+        {
+            if (action == "ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ")
+            {
+                Character.Protagonist.Endurance += 8;
+                Character.Protagonist.Spells.Remove("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
+                return true;
+            }
+
+            return false;
+        }
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {

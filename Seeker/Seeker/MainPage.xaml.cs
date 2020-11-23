@@ -150,16 +150,14 @@ namespace Seeker
             if ((id == 0) && Game.Continue.IsGameSaved())
             {
                 Button button = Game.Interface.AdditionalButton("ПРОДОЛЖИТЬ РАНЕЕ НАЧАТУЮ ИГРУ");
-
                 button.Clicked += Continue_Click;
-
                 Options.Children.Add(button);
             }
             else if ((id > 0) && (Game.Data.Actions != null))
                 foreach(string buttonName in Game.Data.Actions.StaticButtons())
                 {
                     Button button = Game.Interface.AdditionalButton(buttonName);
-
+                    button.Clicked += StaticButton_Click;
                     Options.Children.Add(button);
                 }
 
@@ -262,6 +260,16 @@ namespace Seeker
                 UpdateStatus();
                 CheckGameOver();
             }
+        }
+
+        private void StaticButton_Click(object sender, EventArgs e)
+        {
+            Button b = sender as Button;
+
+            bool reload = Game.Data.Actions.StaticAction(b.Text);
+
+            if (reload)
+                Paragraph(Game.Data.CurrentParagraphID, reload: true);
         }
 
         private void Option_Click(object sender, EventArgs e)
