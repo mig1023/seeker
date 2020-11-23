@@ -109,7 +109,7 @@ namespace Seeker.Gamebook
                 Constants = new RendezVous.Constants(),
                 Save = RendezVous.Character.Protagonist.Save,
                 Load = RendezVous.Character.Protagonist.Load,
-                Disclaimer = "Ал Торо, 2020",
+                Disclaimer = "Ал Торо, 2020; перевод Марии Ерошкиной",
                 BookColor = "#ffffff",
                 FontColor = "#000000",
                 BorderColor = "#000000",
