@@ -12,7 +12,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
 
-        // Fight
         public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
@@ -21,7 +20,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int MasteryPenalty { get; set; }
         public bool GroupFight { get; set; }
 
-        // Get
         public string Text { get; set; }
         public int Price { get; set; }
         public bool Used { get; set; }
@@ -51,6 +49,10 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             return statusLines;
         }
+
+        public List<string> StaticButtons() => new List<string> { };
+
+        public bool StaticAction() => false;
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {

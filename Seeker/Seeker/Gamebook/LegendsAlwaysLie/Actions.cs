@@ -87,6 +87,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return statusLines;
         }
 
+        public List<string> StaticButtons() => new List<string> { };
+
+        public bool StaticAction() => false;
+
         private bool GoodReaction(ref List<string> reaction)
         {
             int reactionLevel = (int)Math.Floor((double)Character.Protagonist.Hitpoints / 5);

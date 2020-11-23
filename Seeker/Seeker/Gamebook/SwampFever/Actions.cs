@@ -61,6 +61,10 @@ namespace Seeker.Gamebook.SwampFever
             return statusLines;
         }
 
+        public List<string> StaticButtons() => new List<string> { };
+
+        public bool StaticAction() => false;
+
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;

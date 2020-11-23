@@ -14,13 +14,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
 
-        // Fight
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
         public int SkillPenalty { get; set; }
 
-        // Get
         public string Text { get; set; }
         public int Price { get; set; }
         public bool Used { get; set; }
@@ -54,6 +52,10 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             return statusLines;
         }
+
+        public List<string> StaticButtons() => new List<string> { };
+
+        public bool StaticAction() => false;
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {

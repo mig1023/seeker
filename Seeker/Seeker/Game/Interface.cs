@@ -178,13 +178,13 @@ namespace Seeker.Game
             return SetBorderAndTextColor(optionButton);
         }
 
-        public static Button ContinueButton()
+        public static Button AdditionalButton(string text)
         {
             string color = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
 
             Button optionButton = new Button()
             {
-                Text = "ПРОДОЛЖИТЬ РАНЕЕ НАЧАТУЮ ИГРУ",
+                Text = text,
                 BackgroundColor = (String.IsNullOrEmpty(color) ? Color.LightGray : Color.FromHex(color)),
                 FontFamily = TextFontFamily(),
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),

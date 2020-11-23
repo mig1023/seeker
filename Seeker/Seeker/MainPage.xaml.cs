@@ -149,12 +149,19 @@ namespace Seeker
 
             if ((id == 0) && Game.Continue.IsGameSaved())
             {
-                Button button = Game.Interface.ContinueButton();
+                Button button = Game.Interface.AdditionalButton("ПРОДОЛЖИТЬ РАНЕЕ НАЧАТУЮ ИГРУ");
 
                 button.Clicked += Continue_Click;
 
                 Options.Children.Add(button);
             }
+            else if ((id > 0) && (Game.Data.Actions != null))
+                foreach(string buttonName in Game.Data.Actions.StaticButtons())
+                {
+                    Button button = Game.Interface.AdditionalButton(buttonName);
+
+                    Options.Children.Add(button);
+                }
 
             if (!reload)
                 MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
