@@ -19,6 +19,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public bool GreatKhanSpecialCheck { get; set; }
         public bool GuessBonus { get; set; }
 
+        public static bool NextTestWithKumis = false;
+
         Dictionary<string, string> statNames = new Dictionary<string, string>
         {
             ["Strength"] = "силы",
@@ -80,14 +82,35 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             if (Character.Protagonist.UnitOfTime != null)
                 statusLines.Add(String.Format("Ед.времени: {0}", Character.Protagonist.UnitOfTime));
 
+            if (Character.Protagonist.Kumis > 0)
+                statusLines.Add(String.Format("Кумыс: {0}", Character.Protagonist.Kumis));
+
             statusLines.Add(String.Format("Популярность: {0}", Character.Protagonist.Popularity));
 
             return statusLines;
         }
 
-        public List<string> StaticButtons() => new List<string> { };
+        public List<string> StaticButtons()
+        {
+            List<string> staticButtons = new List<string> { };
 
-        public bool StaticAction(string action) => false;
+            if ((Character.Protagonist.Kumis > 0) && !NextTestWithKumis)
+                staticButtons.Add("ВЫПИТЬ КУМЫСА");
+
+            return staticButtons;
+        }
+
+        public bool StaticAction(string action)
+        {
+            if (action == "ВЫПИТЬ КУМЫСА")
+            {
+                Character.Protagonist.Kumis -= 1;
+                NextTestWithKumis = true;
+                return true;
+            }
+
+            return false;
+        }
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
@@ -149,6 +172,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             if (GreatKhanSpecialCheck)
                 Level -= (Character.Protagonist.Popularity + (Game.Data.Triggers.Contains("KhansRing") ? 3 : 0));
 
+            if (NextTestWithKumis)
+                Level -= 2;
+
             int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
             bool testIsOk = (firstDice + secondDice) + currentStat >= Level;
 
@@ -168,7 +194,12 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     testLines.Insert(0, String.Format("Бонус за популярность: -{0}", Character.Protagonist.Popularity));
             }
 
+            if (NextTestWithKumis)
+                testLines.Insert(0, "Бонус за кумыс: -2");
+
             testLines.Add(testIsOk ? "BIG|GOOD|АЛДАР СПРАВИЛСЯ :)" : "BIG|BAD|АЛДАР НЕ СПРАВИЛСЯ :(");
+
+            NextTestWithKumis = false;
 
             return testLines;
         }
