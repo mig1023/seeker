@@ -182,7 +182,7 @@ namespace Seeker.Game
         {
             string color = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
 
-            Button optionButton = new Button()
+            Button additionButton = new Button()
             {
                 Text = text,
                 BackgroundColor = (String.IsNullOrEmpty(color) ? Color.LightGray : Color.FromHex(color)),
@@ -190,7 +190,23 @@ namespace Seeker.Game
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
 
-            return SetBorderAndTextColor(optionButton);
+            return SetBorderAndTextColor(additionButton);
+        }
+
+        public static Button GameOverButton(string text)
+        {
+            string color = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
+
+            Button gameoverButton = new Button()
+            {
+                Text = text,
+                TextColor = Xamarin.Forms.Color.White,
+                BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option)),
+                FontFamily = TextFontFamily(),
+                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+            };
+
+            return SetBorderAndTextColor(gameoverButton);
         }
 
         private static Button SetBorderAndTextColor(Button button)

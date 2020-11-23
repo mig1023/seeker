@@ -224,12 +224,7 @@ namespace Seeker
             Game.Router.Clean();
             Options.Children.Clear();
 
-            Button button = new Button()
-            {
-                Text = toEndText,
-                TextColor = Xamarin.Forms.Color.White,
-                BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option))
-            };
+            Button button = Game.Interface.GameOverButton(toEndText);
 
             Game.Router.AddDestination(toEndText, toEndParagraph);
 
