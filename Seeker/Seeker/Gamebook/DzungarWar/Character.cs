@@ -18,6 +18,8 @@ namespace Seeker.Gamebook.DzungarWar
         public int? Danger { get; set; }
         public int Tanga { get; set; }
         public int? Favour { get; set; }
+        public int Tincture { get; set; }
+        public int Ginseng { get; set; }
 
         public int StatBonuses { get; set; }
         public int MaxBonus { get; set; }
@@ -33,6 +35,8 @@ namespace Seeker.Gamebook.DzungarWar
             Danger = 0;
             Tanga = 150;
             Favour = null;
+            Tincture = 3;
+            Ginseng = 0;
             StatBonuses = 4;
             MaxBonus = 1;
             Brother = 0;
@@ -49,6 +53,8 @@ namespace Seeker.Gamebook.DzungarWar
                 Oratory = this.Oratory,
                 Danger = this.Danger,
                 Favour = this.Favour,
+                Tincture = this.Tincture,
+                Ginseng = this.Ginseng,
                 Tanga = this.Tanga,
                 StatBonuses = this.StatBonuses,
                 MaxBonus = this.MaxBonus,
@@ -59,9 +65,9 @@ namespace Seeker.Gamebook.DzungarWar
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}",
-                Strength, Skill, Wisdom, Cunning, Oratory, Danger,
-                Favour, Tanga, StatBonuses, MaxBonus, Brother
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}",
+                Strength, Skill, Wisdom, Cunning, Oratory, Danger, Favour,
+                Tanga, StatBonuses, MaxBonus, Brother, Tincture, Ginseng
             );
         }
 
@@ -80,6 +86,8 @@ namespace Seeker.Gamebook.DzungarWar
             StatBonuses = int.Parse(save[8]);
             MaxBonus = int.Parse(save[9]);
             Brother = int.Parse(save[10]);
+            Tincture = int.Parse(save[11]);
+            Ginseng = int.Parse(save[12]);
         }
     }
 }

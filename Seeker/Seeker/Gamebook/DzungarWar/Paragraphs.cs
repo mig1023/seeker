@@ -3134,6 +3134,15 @@ namespace Seeker.Gamebook.DzungarWar
             },
             [226] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Ginseng",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 128, Text = "Далее" },
@@ -3657,6 +3666,12 @@ namespace Seeker.Gamebook.DzungarWar
                         Text = "ОТВАР КОРНЯ ЖЕНЬШЕНЯ, 100 таньга",
                         Price = 100,
                         Aftertext = "Купить всё, что нужно, и внести изменения на листе персонажа (в том числе отметить ключевое слово «Фарфор», если Алдар приобретает фигурку дракона).\n\nТем временем наступает ночь. А хозяин с гостем продолжают беседу, попивая зелёный чай из маленьких фарфоровых чашек.",
+
+                        Benefit = new Modification
+                        {
+                            Name = "Ginseng",
+                            Value = 1,
+                        },
                     },
                 },
 

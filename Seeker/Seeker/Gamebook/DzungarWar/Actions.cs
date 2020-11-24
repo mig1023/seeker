@@ -21,7 +21,11 @@ namespace Seeker.Gamebook.DzungarWar
         public int Price { get; set; }
 
         public string TriggerTestPenalty { get; set; }
+        
         public Modification Benefit { get; set; }
+
+        static bool NextTestWithTincture = false;
+        static bool NextTestWithGinseng = false;
 
 
         Dictionary<string, string> statNames = new Dictionary<string, string>
@@ -51,6 +55,18 @@ namespace Seeker.Gamebook.DzungarWar
         {
             penaltyLine = new List<string> { };
 
+            if (NextTestWithTincture)
+            {
+                level -= 4;
+                penaltyLine.Add("Бонус в -4 к уровню проверки за настойку");
+            }
+            
+            if (NextTestWithGinseng)
+            {
+                level -= 8;
+                penaltyLine.Add("Бонус в -8 к уровню проверки за отвар женьшеня");
+            }
+
             if (String.IsNullOrEmpty(TriggerTestPenalty))
                 return level;
 
@@ -66,6 +82,9 @@ namespace Seeker.Gamebook.DzungarWar
                     penaltyLine.Add(String.Format("Пенальти {0} к уровню проверки за ключевое слово {1}", penalty[1].Trim(), penalty[0].Trim()));
                 }
             }
+
+            if (level < 0)
+                level = 0;
 
             return level;
         }
@@ -104,6 +123,12 @@ namespace Seeker.Gamebook.DzungarWar
             if (Character.Protagonist.Tanga > 0)
                 statusLines.Add(String.Format("Деньги: {0}", Character.Protagonist.Tanga));
 
+            if (Character.Protagonist.Tincture > 0)
+                statusLines.Add(String.Format("Настойка: {0}", Character.Protagonist.Tincture));
+
+            if (Character.Protagonist.Ginseng > 0)
+                statusLines.Add(String.Format("Отвар: {0}", Character.Protagonist.Ginseng));
+
             if (Character.Protagonist.Favour != null)
                 statusLines.Add(String.Format("Благосклонность: {0}", Character.Protagonist.Favour));
 
@@ -113,9 +138,49 @@ namespace Seeker.Gamebook.DzungarWar
             return statusLines;
         }
 
-        public List<string> StaticButtons() => new List<string> { };
+        private static bool ParagraphWithTest()
+        {
+            if (Game.Data.CurrentParagraph.Actions == null)
+                return false;
 
-        public bool StaticAction(string action) => false;
+            foreach (Actions action in Game.Data.CurrentParagraph.Actions)
+                if (action.ActionName.ToUpper().Contains("TEST"))
+                    return true;
+
+            return false;
+        }
+
+        public List<string> StaticButtons()
+        {
+            List<string> staticButtons = new List<string> { };
+
+            if (ParagraphWithTest() && (Character.Protagonist.Tincture > 0) && !NextTestWithTincture)
+                staticButtons.Add("ВЫПИТЬ НАСТОЙКИ");
+
+            if (ParagraphWithTest() && (Character.Protagonist.Ginseng > 0) && !NextTestWithGinseng)
+                staticButtons.Add("ВЫПИТЬ ОТВАР ЖЕНЬШЕНЯ");
+
+            return staticButtons;
+        }
+
+        public bool StaticAction(string action)
+        {
+            if (action == "ВЫПИТЬ НАСТОЙКИ")
+            {
+                Character.Protagonist.Tincture -= 1;
+                NextTestWithTincture = true;
+                return true;
+            }
+
+            if (action == "ВЫПИТЬ ОТВАР ЖЕНЬШЕНЯ")
+            {
+                Character.Protagonist.Ginseng -= 1;
+                NextTestWithGinseng = true;
+                return true;
+            }
+
+            return false;
+        }
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
@@ -211,6 +276,9 @@ namespace Seeker.Gamebook.DzungarWar
             resultLine = new List<string>();
 
             level = TestLevelWithPenalty(level, out List<string> penalties);
+
+            NextTestWithTincture = false;
+            NextTestWithGinseng = false;
 
             foreach (string penalty in penalties)
                 resultLine.Add(penalty);
