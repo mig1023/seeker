@@ -23,9 +23,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public Modification Benefit { get; set; }
         public bool ThisIsSpell { get; set; }
 
-        static bool NextFightWithCopy = false;
-        static bool NextFightWithForce = false;
-        static bool NextFightWithWeakness = false;
+        static Dictionary<string, bool> SpellActivate = new Dictionary<string, bool>
+        {
+            ["ЗАКЛЯТИЕ КОПИИ"] = false,
+            ["ЗАКЛЯТИЕ СИЛЫ"] = false,
+            ["ЗАКЛЯТИЕ СЛАБОСТИ"] = false,
+        };
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -53,10 +56,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return statusLines;
         }
 
-        private static bool ParagraphWithFight()
+        private static bool ParagraphWithFight(string spell)
         {
             if (Game.Data.CurrentParagraph.Actions == null)
                 return false;
+
+            foreach (Game.Option option in Game.Data.CurrentParagraph.Options)
+                if (option.Text.ToUpper().Contains(spell))
+                    return false;
 
             foreach (Actions action in Game.Data.CurrentParagraph.Actions)
                 if (action.Enemies != null)
@@ -72,14 +79,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (Character.Protagonist.Spells.Contains("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"))
                 staticButtons.Add("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
 
-            if (ParagraphWithFight() && Character.Protagonist.Spells.Contains("ЗАКЛЯТИЕ КОПИИ") && !NextFightWithCopy)
-                staticButtons.Add("ЗАКЛЯТИЕ КОПИИ");
-
-            if (ParagraphWithFight() && Character.Protagonist.Spells.Contains("ЗАКЛЯТИЕ СИЛЫ") && !NextFightWithForce)
-                staticButtons.Add("ЗАКЛЯТИЕ СИЛЫ");
-
-            if (ParagraphWithFight() && Character.Protagonist.Spells.Contains("ЗАКЛЯТИЕ СЛАБОСТИ") && !NextFightWithWeakness)
-                staticButtons.Add("ЗАКЛЯТИЕ СЛАБОСТИ");
+            foreach (string spell in new List<string> { "ЗАКЛЯТИЕ КОПИИ", "ЗАКЛЯТИЕ СИЛЫ", "ЗАКЛЯТИЕ СЛАБОСТИ" })
+                if (ParagraphWithFight(spell) && Character.Protagonist.Spells.Contains(spell) && !SpellActivate[spell])
+                    staticButtons.Add(spell);
 
             return staticButtons;
         }
@@ -88,17 +90,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             Character.Protagonist.Spells.Remove(action);
 
-            if (action == "ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ")
+            if (action.Contains("ИСЦЕЛЕНИЯ"))
                 Character.Protagonist.Endurance += 8;
 
-            if (action == "ЗАКЛЯТИЕ КОПИИ")
-                NextFightWithCopy = true;
-
-            if (action == "ЗАКЛЯТИЕ СИЛЫ")
-                NextFightWithForce = true;
-
-            if (action == "ЗАКЛЯТИЕ СЛАБОСТИ")
-                NextFightWithWeakness = true;
+            foreach (string spell in new List<string> { "ЗАКЛЯТИЕ КОПИИ", "ЗАКЛЯТИЕ СИЛЫ", "ЗАКЛЯТИЕ СЛАБОСТИ" })
+                if (action == spell)
+                    SpellActivate[spell] = true;
 
             return true;
         }
@@ -226,13 +223,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                     int firstHeroRoll = Game.Dice.Roll();
                     int secondHeroRoll = Game.Dice.Roll();
-                    int heroHitStrength = firstHeroRoll + secondHeroRoll + Character.Protagonist.Mastery;
+                    int heroHitStrength = firstHeroRoll + secondHeroRoll + hero.Mastery;
 
                     fight.Add(
                         String.Format(
                             "Сила {0}: {1} ⚄ + {2} ⚄ + {3} = {4}",
                             (copyFight ? "удара копии" : "вашего удара"),
-                            firstHeroRoll, secondHeroRoll, Character.Protagonist.Mastery, heroHitStrength
+                            firstHeroRoll, secondHeroRoll, hero.Mastery, heroHitStrength
                         )
                     );
 
@@ -269,12 +266,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     else if (heroHitStrength < enemyHitStrength)
                     {
                         fight.Add(String.Format("BAD|{0} ранил {1}", enemy.Name, (copyFight ? "копию" : "вас")));
-                        Character.Protagonist.Endurance -= 2;
+                        
+                        hero.Endurance -= 2;
 
-                        if (Character.Protagonist.Endurance < 0)
-                            Character.Protagonist.Endurance = 0;
+                        if (hero.Endurance < 0)
+                            hero.Endurance = 0;
 
-                        if (Character.Protagonist.Endurance <= 0)
+                        if (hero.Endurance <= 0)
                             return false;
                     }
                     else
@@ -306,12 +304,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
-            if (NextFightWithWeakness)
+            if (SpellActivate["ЗАКЛЯТИЕ СЛАБОСТИ"])
             {
-                NextFightWithWeakness = false;
+                SpellActivate["ЗАКЛЯТИЕ СЛАБОСТИ"] = false;
 
                 int oldEnemyMastery = FightEnemies[0].Mastery;
-                FightEnemies[0].Mastery /= 2;
+                FightEnemies[0].Mastery -= 2;
 
                 fight.Add(String.Format(
                     "BOLD|Заклятье слабости ослабляет вашего противника: {0} теперь имеет ловкость {1} вместо {2}",
@@ -321,9 +319,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 fight.Add(String.Empty);
             }
 
-            if (NextFightWithCopy)
+            if (SpellActivate["ЗАКЛЯТИЕ КОПИИ"])
             {
-                NextFightWithCopy = false;
+                SpellActivate["ЗАКЛЯТИЕ КОПИИ"] = false;
 
                 Character enemyCopy = FightEnemies[0].Clone();
                 enemyCopy.Name += "-копия";
@@ -346,15 +344,17 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                 else
                     fight.Add("BIG|BAD|Копия проиграла, дальше сражаться придётся вам");
+
+                fight.Add(String.Empty);
             }
 
             int oldMastery = Character.Protagonist.Mastery;
 
-            if (NextFightWithForce)
+            if (SpellActivate["ЗАКЛЯТИЕ СИЛЫ"])
             {
-                NextFightWithForce = false;
+                SpellActivate["ЗАКЛЯТИЕ СИЛЫ"] = false;
 
-                Character.Protagonist.Mastery *= 2;
+                Character.Protagonist.Mastery += 2;
 
                 fight.Add(String.Format(
                     "BOLD|Заклятье Силы увеличивает ваше мастерство: на время этого боя она равна {0}",
