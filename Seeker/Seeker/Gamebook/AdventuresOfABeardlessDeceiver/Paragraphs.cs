@@ -1180,6 +1180,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [77] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Kumis",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 168, Text = "Далее" },
@@ -1309,7 +1318,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Price = 10,
                         Aftertext = "Содержит 2 порции, которые могут применяться по тем же правилам, что и кумыс. Причём для разрешается применить обе порции для одной проверки способностей, увеличивая свой уровень сразу на 4 пунтка, или даже на 6 и более пунктов, если дополнительно используется порция кумыса и/или другого напитка.",
 
-
+                        Benefit = new Modification
+                        {
+                            Name = "Kumis",
+                            Value = 2,
+                        },
                     },
                     new Actions
                     {
@@ -1582,6 +1595,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                         Name = "Tanga",
                         Value = 10,
                     },
+                    new Modification
+                    {
+                        Name = "Kumis",
+                        Value = 1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -1615,6 +1633,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     {
                         Name = "Popularity",
                         Value = 2,
+                    },
+                    new Modification
+                    {
+                        Name = "Kumis",
+                        Value = 1,
                     },
                 },
 
@@ -1758,6 +1781,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [114] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Kumis",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 145, Text = "Лихарев обещал подарить коня", OnlyIf = "GiftPromise" },
@@ -1846,6 +1878,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [121] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Kumis",
+                        Value = 1,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 140, Text = "Далее" },
@@ -2549,6 +2590,20 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [172] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Kumis",
+                        Empty = true,
+                    },
+                    new Modification
+                    {
+                        Name = "Tanga",
+                        Empty = true,
+                    },
+                },
+
                 Options = new List<Option>
                 {
                     new Option { Destination = 93, Text = "Далее" },
@@ -2651,6 +2706,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [179] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Kumis",
+                        Value = 1,
+                    },
+                },
+
                 Trigger = "PartyClothes",
 
                 Options = new List<Option>
@@ -2797,6 +2861,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             },
             [189] = new Paragraph
             {
+                Modification = new List<Modification>
+                {
+                    new Modification
+                    {
+                        Name = "Kumis",
+                        Value = 1,
+                    },
+                },
+
                 Trigger = "KhansRing",
 
                 Options = new List<Option>

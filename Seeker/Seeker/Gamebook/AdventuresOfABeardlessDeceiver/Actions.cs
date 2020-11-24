@@ -19,7 +19,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public bool GreatKhanSpecialCheck { get; set; }
         public bool GuessBonus { get; set; }
 
-        public static bool NextTestWithKumis = false;
+        public Modification Benefit { get; set; }
+
+        static bool NextTestWithKumis = false;
 
         Dictionary<string, string> statNames = new Dictionary<string, string>
         {
@@ -207,7 +209,13 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public List<string> Get()
         {
             if ((Price > 0) && (Character.Protagonist.Tanga >= Price))
+            {
                 Character.Protagonist.Tanga -= Price;
+
+                if (Benefit != null)
+                    Benefit.Do();
+            }
+
             else if (Character.Protagonist.StatBonuses >= 0)
             {
                 int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
