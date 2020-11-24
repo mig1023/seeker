@@ -23,6 +23,10 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public Modification Benefit { get; set; }
         public bool ThisIsSpell { get; set; }
 
+        static bool NextFightWithCopy = false;
+        static bool NextFightWithForce = false;
+        static bool NextFightWithWeakness = false;
+
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
             if (trigger)
@@ -49,6 +53,18 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return statusLines;
         }
 
+        private static bool ParagraphWithFight()
+        {
+            if (Game.Data.CurrentParagraph.Actions == null)
+                return false;
+
+            foreach (Actions action in Game.Data.CurrentParagraph.Actions)
+                if (action.Enemies != null)
+                    return true;
+
+            return false;
+        }
+
         public List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };
@@ -56,19 +72,35 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (Character.Protagonist.Spells.Contains("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"))
                 staticButtons.Add("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
 
+            if (ParagraphWithFight() && Character.Protagonist.Spells.Contains("ЗАКЛЯТИЕ КОПИИ") && !NextFightWithCopy)
+                staticButtons.Add("ЗАКЛЯТИЕ КОПИИ");
+
+            if (ParagraphWithFight() && Character.Protagonist.Spells.Contains("ЗАКЛЯТИЕ СИЛЫ") && !NextFightWithForce)
+                staticButtons.Add("ЗАКЛЯТИЕ СИЛЫ");
+
+            if (ParagraphWithFight() && Character.Protagonist.Spells.Contains("ЗАКЛЯТИЕ СЛАБОСТИ") && !NextFightWithWeakness)
+                staticButtons.Add("ЗАКЛЯТИЕ СЛАБОСТИ");
+
             return staticButtons;
         }
 
         public bool StaticAction(string action)
         {
-            if (action == "ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ")
-            {
-                Character.Protagonist.Endurance += 8;
-                Character.Protagonist.Spells.Remove("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
-                return true;
-            }
+            Character.Protagonist.Spells.Remove(action);
 
-            return false;
+            if (action == "ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ")
+                Character.Protagonist.Endurance += 8;
+
+            if (action == "ЗАКЛЯТИЕ КОПИИ")
+                NextFightWithCopy = true;
+
+            if (action == "ЗАКЛЯТИЕ СИЛЫ")
+                NextFightWithForce = true;
+
+            if (action == "ЗАКЛЯТИЕ СЛАБОСТИ")
+                NextFightWithWeakness = true;
+
+            return true;
         }
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
@@ -169,17 +201,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return new List<string> { "RELOAD" };
         }
 
-        public List<string> Fight()
+        private bool WinInFight(ref List<string> fight, ref int round, ref Character hero, ref List<Character> FightEnemies,
+            ref int enemyWounds, bool copyFight = false)
         {
-            List<string> fight = new List<string>();
-
-            int round = 1;
-            int enemyWounds = 0;
-
-            List<Character> FightEnemies = new List<Character>();
-
-            foreach (Character enemy in Enemies)
-                FightEnemies.Add(enemy.Clone());
+            if (copyFight)
+            {
+                fight.Add(String.Format("BOLD|Вместо вас будет сражаться: {0}", hero.Name));
+                fight.Add(String.Empty);
+            }
 
             while (true)
             {
@@ -192,13 +221,17 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                     fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
 
+                    if (copyFight)
+                        fight.Add(String.Format("{0} (выносливость {1})", hero.Name, hero.Endurance));
+
                     int firstHeroRoll = Game.Dice.Roll();
                     int secondHeroRoll = Game.Dice.Roll();
                     int heroHitStrength = firstHeroRoll + secondHeroRoll + Character.Protagonist.Mastery;
 
                     fight.Add(
                         String.Format(
-                            "Сила вашего удара: {0} ⚄ + {1} ⚄ + {2} = {3}",
+                            "Сила {0}: {1} ⚄ + {2} ⚄ + {3} = {4}",
+                            (copyFight ? "удара копии" : "вашего удара"),
                             firstHeroRoll, secondHeroRoll, Character.Protagonist.Mastery, heroHitStrength
                         )
                     );
@@ -209,7 +242,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                     fight.Add(
                         String.Format(
-                            "Сила его удара: {0} ⚄ + {1} ⚄ + {2} = {3}",
+                            "Сила удара врага: {0} ⚄ + {1} ⚄ + {2} = {3}",
                             firstEnemyRoll, secondEnemyRoll, enemy.Mastery, enemyHitStrength
                         )
                     );
@@ -231,36 +264,27 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                                 enemyLost = false;
 
                         if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
-                        {
-                            fight.Add(String.Empty);
-                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
-                            return fight;
-                        }
+                            return true;
                     }
                     else if (heroHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+                        fight.Add(String.Format("BAD|{0} ранил {1}", enemy.Name, (copyFight ? "копию" : "вас")));
                         Character.Protagonist.Endurance -= 2;
 
                         if (Character.Protagonist.Endurance < 0)
                             Character.Protagonist.Endurance = 0;
 
                         if (Character.Protagonist.Endurance <= 0)
-                        {
-                            fight.Add(String.Empty);
-                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
-                            return fight;
-                        }
+                            return false;
                     }
                     else
-                        fight.Add(String.Format("BOLD|Ничья в раунде"));
+                        fight.Add("BOLD|Ничья в раунде");
 
                     if ((RoundsToWin > 0) && (RoundsToWin <= round))
                     {
                         fight.Add(String.Empty);
-                        fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
-                        fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
-                        return fight;
+                        fight.Add("BAD|Отведённые на победу раунды истекли.");
+                        return false;
                     }
 
                     fight.Add(String.Empty);
@@ -268,6 +292,86 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                 round += 1;
             }
+        }
+
+        public List<string> Fight()
+        {
+            List<string> fight = new List<string>();
+
+            int round = 1;
+            int enemyWounds = 0;
+
+            List<Character> FightEnemies = new List<Character>();
+
+            foreach (Character enemy in Enemies)
+                FightEnemies.Add(enemy.Clone());
+
+            if (NextFightWithWeakness)
+            {
+                NextFightWithWeakness = false;
+
+                int oldEnemyMastery = FightEnemies[0].Mastery;
+                FightEnemies[0].Mastery /= 2;
+
+                fight.Add(String.Format(
+                    "BOLD|Заклятье слабости ослабляет вашего противника: {0} теперь имеет ловкость {1} вместо {2}",
+                    FightEnemies[0].Name, FightEnemies[0].Mastery, oldEnemyMastery
+                ));
+
+                fight.Add(String.Empty);
+            }
+
+            if (NextFightWithCopy)
+            {
+                NextFightWithCopy = false;
+
+                Character enemyCopy = FightEnemies[0].Clone();
+                enemyCopy.Name += "-копия";
+
+                bool copyWin = WinInFight(ref fight, ref round, ref enemyCopy, ref FightEnemies, ref enemyWounds, copyFight: true);
+
+                fight.Add(String.Empty);
+
+                if (copyWin)
+                {
+                    fight.Add("BIG|GOOD|Копия ПОБЕДИЛА :)");
+                    return fight;
+                }
+
+                else if ((RoundsToWin > 0) && (RoundsToWin <= round))
+                {
+                    fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                    return fight;
+                }
+
+                else
+                    fight.Add("BIG|BAD|Копия проиграла, дальше сражаться придётся вам");
+            }
+
+            int oldMastery = Character.Protagonist.Mastery;
+
+            if (NextFightWithForce)
+            {
+                NextFightWithForce = false;
+
+                Character.Protagonist.Mastery *= 2;
+
+                fight.Add(String.Format(
+                    "BOLD|Заклятье Силы увеличивает ваше мастерство: на время этого боя она равна {0}",
+                    Character.Protagonist.Mastery
+                ));
+
+                fight.Add(String.Empty);
+            }
+
+            bool win = WinInFight(ref fight, ref round, ref Character.Protagonist, ref FightEnemies, ref enemyWounds);
+
+            Character.Protagonist.Mastery = oldMastery;
+
+            fight.Add(String.Empty);
+            fight.Add(win ? "BIG|GOOD|Вы ПОБЕДИЛИ :)" : "BIG|BAD|Вы ПРОИГРАЛИ :(");
+
+            return fight;
         }
     }
 }
