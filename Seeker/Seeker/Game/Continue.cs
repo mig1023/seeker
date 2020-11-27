@@ -15,6 +15,14 @@ namespace Seeker.Game
             CurrentGameName = name;
         }
 
+        public static int? IntNullableParse(string line)
+        {
+            if (int.TryParse(line, out int value))
+                return value;
+            else
+                return null;
+        }
+
         public static bool IsGameSaved() => App.Current.Properties.TryGetValue(CurrentGameName, out _);
 
         public static void Save()

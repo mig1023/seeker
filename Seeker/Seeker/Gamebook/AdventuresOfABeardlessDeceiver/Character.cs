@@ -79,12 +79,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             Kumis = int.Parse(save[6]);
             Tanga = int.Parse(save[7]);
             StatBonuses = int.Parse(save[8]);
-
-            AkynGlory = int.Parse(save[9]);
-            AkynGlory = (AkynGlory < 0 ? null : AkynGlory);
-
-            UnitOfTime = int.Parse(save[10]);
-            UnitOfTime = (UnitOfTime < 0 ? null : UnitOfTime);
+            AkynGlory = Game.Continue.IntNullableParse(save[9]);
+            UnitOfTime = Game.Continue.IntNullableParse(save[10]);
         }
     }
 }
