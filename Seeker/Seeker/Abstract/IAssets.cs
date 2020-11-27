@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Seeker.Other
+namespace Seeker.Abstract
 {
     public interface IAssets
     {

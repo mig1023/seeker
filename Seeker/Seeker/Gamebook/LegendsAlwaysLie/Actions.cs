@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Seeker.Gamebook.LegendsAlwaysLie
 {
-    class Actions : Interfaces.IActions
+    class Actions : Abstract.IActions
     {
         public enum FoodSharingType { KeepMyself, ToHim, FiftyFifty };
 

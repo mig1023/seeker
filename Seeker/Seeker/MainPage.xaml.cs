@@ -100,14 +100,14 @@ namespace Seeker
             Game.Option.Trigger(paragraph.RemoveTrigger, remove: true);
 
             if (!reload && (paragraph.Modification != null) && (paragraph.Modification.Count > 0))
-                foreach(Interfaces.IModification modification in paragraph.Modification)
+                foreach(Abstract.IModification modification in paragraph.Modification)
                     modification.Do();
 
             if ((paragraph.Actions != null) && (paragraph.Actions.Count > 0))
             {
                 int index = 0;
 
-                foreach (Interfaces.IActions action in paragraph.Actions)
+                foreach (Abstract.IActions action in paragraph.Actions)
                 {
                     StackLayout actionPlace = Game.Interface.ActionPlace();
 

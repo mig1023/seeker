@@ -10,7 +10,7 @@ namespace Seeker.Game
         public string Text { get; set; }
         public string OnlyIf { get; set; }
 
-        public Interfaces.IModification Do { get; set; }
+        public Abstract.IModification Do { get; set; }
 
         public static void Trigger(string triggers, bool remove = false)
         {

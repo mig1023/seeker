@@ -8,7 +8,7 @@ using Seeker.Game;
 
 namespace Seeker.Gamebook.LegendsAlwaysLie
 {
-    class Paragraphs : Interfaces.IParagraphs
+    class Paragraphs : Abstract.IParagraphs
     {
         public Game.Paragraph Get(int id)
         {
@@ -20,10 +20,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 paragraph.Options = new List<Option>(source.Options);
 
             if (source.Actions != null)
-                paragraph.Actions = new List<Interfaces.IActions>(source.Actions);
+                paragraph.Actions = new List<Abstract.IActions>(source.Actions);
 
             if (source.Modification != null)
-                paragraph.Modification = new List<Interfaces.IModification>(source.Modification);
+                paragraph.Modification = new List<Abstract.IModification>(source.Modification);
 
             paragraph.Trigger = source.Trigger;
             paragraph.RemoveTrigger = source.RemoveTrigger;

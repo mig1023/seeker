@@ -16,7 +16,7 @@ using System.IO;
 [assembly: Dependency(typeof(Seeker.Droid.GetAssets))]
 namespace Seeker.Droid
 {
-    class GetAssets : Other.IAssets
+    class GetAssets : Abstract.IAssets
     {
         public string GetFromAssets(string name)
         {

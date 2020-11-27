@@ -8,9 +8,9 @@ namespace Seeker.Game
     {     
         public List<Option> Options { get; set; }
 
-        public List<Interfaces.IActions> Actions { get; set; }
+        public List<Abstract.IActions> Actions { get; set; }
 
-        public List<Interfaces.IModification> Modification { get; set; }
+        public List<Abstract.IModification> Modification { get; set; }
 
         public string Image { get; set; }
 

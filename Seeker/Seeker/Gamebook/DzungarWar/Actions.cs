@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Seeker.Gamebook.DzungarWar
 {
-    class Actions : Interfaces.IActions
+    class Actions : Abstract.IActions
     {
         public string ActionName { get; set; }
         public string ButtonName { get; set; }

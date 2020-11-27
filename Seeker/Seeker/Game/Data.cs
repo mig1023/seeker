@@ -20,9 +20,9 @@ namespace Seeker.Game
 
         public static List<string> Triggers = new List<string>();
 
-        public static Interfaces.IParagraphs Paragraphs;
-        public static Interfaces.IActions Actions;
-        public static Interfaces.IConstants Constants;
+        public static Abstract.IParagraphs Paragraphs;
+        public static Abstract.IActions Actions;
+        public static Abstract.IConstants Constants;
 
         public static Gamebook.Description.ProtagonistMethod Protagonist;
         public static Gamebook.Description.CheckOnlyIfMethod CheckOnlyIf;
@@ -39,7 +39,7 @@ namespace Seeker.Game
 
             Gamebook.Description gamebook = Gamebook.List.GetDescription(name);
 
-            string content = DependencyService.Get<Other.IAssets>().GetFromAssets(gamebook.XmlBook);
+            string content = DependencyService.Get<Abstract.IAssets>().GetFromAssets(gamebook.XmlBook);
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.LoadXml(content);

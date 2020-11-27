@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Seeker.Gamebook.DzungarWar
 {
-    class Modification : Interfaces.IModification
+    class Modification : Abstract.IModification
     {
         public string Name { get; set; }
         public int Value { get; set; }

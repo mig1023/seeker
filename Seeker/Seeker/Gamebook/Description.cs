@@ -32,11 +32,11 @@ namespace Seeker.Gamebook
 
         public CheckOnlyIfMethod CheckOnlyIf;
 
-        public Interfaces.IParagraphs Paragraphs;
+        public Abstract.IParagraphs Paragraphs;
 
-        public Interfaces.IActions Actions;
+        public Abstract.IActions Actions;
 
-        public Interfaces.IConstants Constants;
+        public Abstract.IConstants Constants;
 
         public string Disclaimer;
 

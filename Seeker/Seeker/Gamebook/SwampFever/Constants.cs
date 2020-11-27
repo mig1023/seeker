@@ -7,7 +7,7 @@ using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.SwampFever
 {
-    class Constants : Interfaces.IConstants
+    class Constants : Abstract.IConstants
     {
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {

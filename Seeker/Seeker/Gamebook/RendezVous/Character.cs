@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Seeker.Gamebook.RendezVous
 {
-    class Character : Interfaces.ICharacter
+    class Character : Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.RendezVous.Character();
 

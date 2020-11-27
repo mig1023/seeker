@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Seeker.Gamebook.RockOfTerror
 {
-    class Character : Interfaces.ICharacter
+    class Character : Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.RockOfTerror.Character();
 

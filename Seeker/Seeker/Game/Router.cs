@@ -9,7 +9,7 @@ namespace Seeker.Game
     {
         private static Dictionary<string, int> Destinations = new Dictionary<string, int>();
 
-        private static Dictionary<string, Interfaces.IModification> DestinationsAccompanyingActions = new Dictionary<string, Interfaces.IModification>();
+        private static Dictionary<string, Abstract.IModification> DestinationsAccompanyingActions = new Dictionary<string, Abstract.IModification>();
 
         private static Dictionary<string, int> Actions = new Dictionary<string, int>();
 
@@ -23,7 +23,7 @@ namespace Seeker.Game
             ActionsPlaces.Clear();
         }
 
-        public static void AddDestination(string text, int index, Interfaces.IModification modification = null)
+        public static void AddDestination(string text, int index, Abstract.IModification modification = null)
         {
             if (modification != null)
                 DestinationsAccompanyingActions.Add(text, modification);
