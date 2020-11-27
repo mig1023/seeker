@@ -15,7 +15,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public void Do()
         {
-            if (Name == "FootwrapsNeedReplacingDeadly")
+            if (Name == "InjuriesBySpells")
+                Actions.InjuriesBySpells();
+
+            else if (Name == "FootwrapsNeedReplacingDeadly")
                 Character.Protagonist.Hitpoints -= (Game.Data.Triggers.Contains("Legs") ? 4 : 2);
 
             else if (Name == "FootwrapsNeedReplacing")

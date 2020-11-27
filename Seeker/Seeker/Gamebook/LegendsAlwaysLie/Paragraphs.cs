@@ -260,7 +260,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 115, Text = "Вы будете ставить ЗАСЛОН, чтобы быть прикрытым остаток пути хоть с одной стороны", OnlyIf = "Заклинание 'ЗАСЛОН'"  },
+                    new Option { Destination = 115, Text = "Вы будете ставить ЗАСЛОН, чтобы быть прикрытым остаток пути хоть с одной стороны", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                     new Option { Destination = 65, Text = "Прорываться без помощи магии" },
                 }
             },
@@ -592,7 +592,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 71, Text = "Будете прыгать на другой берег без разбега" },
                     new Option { Destination = 24, Text = "Метнете нож (если умеете)" },
-                    new Option { Destination = 87, Text = "ЗАСЛОН", OnlyIf = "Заклинание 'ЗАСЛОН'" },
+                    new Option { Destination = 87, Text = "ЗАСЛОН", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                 }
             },
             [44] = new Paragraph
@@ -1072,7 +1072,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 115, Text = "Вы будете ставить ЗАСЛОН, чтобы быть прикрытым остаток пути хоть с одной стороны", OnlyIf = "Заклинание 'ЗАСЛОН'"  },
+                    new Option { Destination = 115, Text = "Вы будете ставить ЗАСЛОН, чтобы быть прикрытым остаток пути хоть с одной стороны", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                     new Option { Destination = 65, Text = "Прорываться без помощи магии" },
                 }
             },
@@ -1959,7 +1959,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 124, Text = "Ударите в воду СГУСТКОМ", OnlyIf = "Заклинание 'СГУСТОК'" },
+                    new Option { Destination = 124, Text = "Ударите в воду СГУСТКОМ", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                     new Option { Destination = 178, Text = "Потянетесь к мечу за спиной" },
                     new Option { Destination = 159, Text = "Попытаетесь разжать хватку" },
                 }
@@ -2527,7 +2527,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 189, Text = "Атакуете" },
                     new Option { Destination = 247, Text = "Будете отступать" },
-                    new Option { Destination = 279, Text = "ВЗОР", OnlyIf = "Заклинание 'ВЗОР'"  },
+                    new Option { Destination = 279, Text = "ВЗОР", OnlyIf = "ЗАКЛЯТИЙ (!воин) > 0" },
                 }
             },
             [205] = new Paragraph
@@ -2803,7 +2803,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     new Option { Destination = 320, Text = "У вас записано слово Огадар", OnlyIf = "Ogadir" },
                     new Option { Destination = 174, Text = "Будете блокировать удар" },
                     new Option { Destination = 134, Text = "Попытаетесь откатиться в сторону" },
-                    new Option { Destination = 396, Text = "ЗАСЛОН", OnlyIf = "Заклинание 'ЗАСЛОН'" },
+                    new Option { Destination = 396, Text = "ЗАСЛОН", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                 }
             },
             [233] = new Paragraph
@@ -3003,7 +3003,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 206, Text = "Вы вступите с ним в беседу" },
-                    new Option { Destination = 331, Text = "Просканируете окрестности заклинанием ВЗОР", OnlyIf = "Заклинание 'ВЗОР'"  },
+                    new Option { Destination = 331, Text = "Просканируете окрестности заклинанием ВЗОР", OnlyIf = "ЗАКЛЯТИЙ (!воин) > 0" },
                 }
             },
             [250] = new Paragraph
@@ -3966,7 +3966,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 272, Text = "БРОНЯ", OnlyIf = "Заклинание 'БРОНЯ'" },
+                    new Option { Destination = 272, Text = "БРОНЯ", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                     new Option { Destination = 344, Text = "будете падать как есть, сгруппировавшись и положившись на удачу" },
                 }
             },
@@ -4475,7 +4475,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 325, Text = "Все в порядке" },
-                    new Option { Destination = 380, Text = "Нет, но еще есть крохотный шанс поставить ЗАСЛОН", OnlyIf = "Заклинание 'ЗАСЛОН'" },
+                    new Option { Destination = 380, Text = "Нет, но еще есть крохотный шанс поставить ЗАСЛОН", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                     new Option { Destination = 314, Text = "Заклинаний в запасе у вас нет, или вы из экономии не хотите этого делать" },
                 }
             },
@@ -4986,7 +4986,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 357, Text = "Есть принт" },
                     new Option { Destination = 376, Text = "Будете щипать себя" },
-                    new Option { Destination = 256, Text = "Шарахнете себе же в ногу СГУСТКОМ", OnlyIf = "Заклинание 'СГУСТОК'" },
+                    new Option { Destination = 256, Text = "Шарахнете себе же в ногу СГУСТКОМ", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                 }
             },
             [399] = new Paragraph
@@ -5017,8 +5017,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Options = new List<Option>
                 {
-                    new Option { Destination = 429, Text = "ВЗОР", OnlyIf = "Заклинание 'ВЗОР'"  },
-                    new Option { Destination = 444, Text = "СГУСТОК (актуально, если вы воин, а хочется, хоть на секунду, разогнать темноту)", OnlyIf = "Заклинание 'СГУСТОК'" },
+                    new Option { Destination = 429, Text = "ВЗОР", OnlyIf = "ЗАКЛЯТИЙ (!воин) > 0" },
+                    new Option { Destination = 444, Text = "СГУСТОК (актуально, если вы воин, а хочется, хоть на секунду, разогнать темноту)", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                     new Option { Destination = 462, Text = "Рискнете двигаться наобум" },
                 }
             },
@@ -5028,7 +5028,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 432, Text = "Согласиться с «теорией радуги»" },
                     new Option { Destination = 454, Text = "Предложить свое решение" },
-                    new Option { Destination = 536, Text = "ВЗОР", OnlyIf = "Заклинание 'ВЗОР'"  },
+                    new Option { Destination = 536, Text = "ВЗОР", OnlyIf = "ЗАКЛЯТИЙ (!воин) > 0" },
                 }
             },
             [403] = new Paragraph
@@ -5068,7 +5068,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 558, Text = "Встретить противника ударом меча" },
-                    new Option { Destination = 594, Text = "Ударить его СГУСТКОМ", OnlyIf = "Заклинание 'СГУСТОК'" },
+                    new Option { Destination = 594, Text = "Ударить его СГУСТКОМ", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                     new Option { Destination = 415, Text = "Присесть на месте" },
                 }
             },
@@ -5457,7 +5457,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 570, Text = "Продолжать бежать на жреца, надеясь опередить его и нанести удар до того, как он совершит задуманное" },
                     new Option { Destination = 541, Text = "Резко отпрыгнуть в сторону" },
-                    new Option { Destination = 593, Text = "СГУСТОК", OnlyIf = "Заклинание 'СГУСТОК'" },
+                    new Option { Destination = 593, Text = "СГУСТОК", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                     new Option { Destination = 557, Text = "Ваша специализация метатель" },
                 }
             },
@@ -6034,7 +6034,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 461, Text = "Вы ответите напарнику: «Хорошо»" },
                     new Option { Destination = 576, Text = "Молча двинетесь за ним" },
-                    new Option { Destination = 507, Text = "ВЗОР", OnlyIf = "Заклинание 'ВЗОР'"  },
+                    new Option { Destination = 507, Text = "ВЗОР", OnlyIf = "ЗАКЛЯТИЙ (!воин) > 0" },
                 }
             },
             [484] = new Paragraph
@@ -6238,7 +6238,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Options = new List<Option>
                 {
                     new Option { Destination = 538, Text = "Ваша специализация метатель" },
-                    new Option { Destination = 532, Text = "СГУСТОК", OnlyIf = "Заклинание 'СГУСТОК'" },
+                    new Option { Destination = 532, Text = "СГУСТОК", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                     new Option { Destination = 478, Text = "Броситься обратно, стараясь ступать по своим следам" },
                 }
             },
@@ -7422,7 +7422,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 579, Text = "Успели" },
                     new Option { Destination = 567, Text = "Нет" },
-                    new Option { Destination = 546, Text = "ЗАСЛОН", OnlyIf = "Заклинание 'ЗАСЛОН'"  },
+                    new Option { Destination = 546, Text = "ЗАСЛОН", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                 }
             },
             [597] = new Paragraph
@@ -7751,7 +7751,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 648, Text = "Попробуете немного сдвинуть близлежащий валун, чтобы преградить им траекторию шипастого шара (но камень выглядит невероятно тяжелым)" },
                     new Option { Destination = 606, Text = "Попытаетесь сбить его в полете ударом меча (но даже если выйдет – разлет осколков будет представлять серьезную угрозу вашему здоровью)" },
-                    new Option { Destination = 449, Text = "ЗАСЛОН", OnlyIf = "Заклинание 'ЗАСЛОН'" },
+                    new Option { Destination = 449, Text = "ЗАСЛОН", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                 }
             },
             [622] = new Paragraph
@@ -7820,7 +7820,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     new Option { Destination = 605, Text = "деревянные леса" },
                     new Option { Destination = 611, Text = "зеленое облако над расселиной" },
-                    new Option { Destination = 653, Text = "Решите применить СГУСТОК", OnlyIf = "Заклинание 'СГУСТОК'" },
+                    new Option { Destination = 653, Text = "Решите применить СГУСТОК", OnlyIf = "ЗАКЛЯТИЙ > 0" },
                     new Option { Destination = 679, Text = "Все варианты испробованы, то больше бегать от ледяной смерти у вас уже не получается – вы слишком устали" },
                 }
             },
@@ -8645,50 +8645,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             },
             [702] = new Paragraph
             {
-                Actions = new List<Actions>
-                {
-                    new Actions
-                    {
-                        ActionName = "Get",
-                        ButtonName = "Обучиться лечению",
-                        Text = "Заклинание 'ЛЕЧЕНИЕ'",
-                        Spell = true,
-                        Aftertext = "Заклинание самоисцеления (уменьшительно именуемое всеми ведьмаками ЛЕЧИЛКА), добавляет 8 ЖИЗНЕЙ (кроме как во время боя).",
-                    },
-                    new Actions
-                    {
-                        ActionName = "Get",
-                        ButtonName = "Обучиться заслону",
-                        Text = "Заклинание 'ЗАСЛОН'",
-                        Spell = true,
-                        Aftertext = "На несколько секунд создает между вами и противником невидимую магическую преграду.",
-                    },
-                    new Actions
-                    {
-                        ActionName = "Get",
-                        ButtonName = "Обучиться сгустку",
-                        Text = "Заклинание 'СГУСТОК'",
-                        Spell = true,
-                        Aftertext = "Удар по противнику небольшим сгустком пламени, отнимающий у него 6 ЖИЗНЕЙ.",
-                    },
-                    new Actions
-                    {
-                        ActionName = "Get",
-                        ButtonName = "Обучиться взору",
-                        Text = "Заклинание 'ВЗОР'",
-                        Spell = true,
-                        Aftertext = "Включает т. н. «истинное зрение». Улучшает ориентировку в темноте и дает способность увидеть скрытую магию. Применениев условиях хорошей освещенности может быть болезненным. Недоступно, если вы выберете специализацию «воин».",
-                    },
-                    new Actions
-                    {
-                        ActionName = "Get",
-                        ButtonName = "Обучиться броне",
-                        Text = "Заклинание 'БРОНЯ'",
-                        Spell = true,
-                        Aftertext = "Ваши мышцы каменеют, сосуды сужаются. На время одного боя вы теряете в два раза меньше ЖИЗНИ от ударов противника.",
-                    },
-                },
-
                 Options = new List<Option>
                 {
                     new Option { Destination = 1, Text = "Далее" },

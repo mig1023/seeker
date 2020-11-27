@@ -16,7 +16,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public string Trigger { get; set; }
         public int Price { get; set; }
         public string Text { get; set; }
-        public bool Spell { get; set; }
         public bool Disabled { get; set; } 
 
         public List<Character> Enemies { get; set; }
@@ -87,9 +86,50 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return statusLines;
         }
 
-        public List<string> StaticButtons() => new List<string> { };
+        public List<string> StaticButtons()
+        {
+            List<string> staticButtons = new List<string> { };
 
-        public bool StaticAction(string action) => false;
+            if (Character.Protagonist.Magicpoints > 0)
+                staticButtons.Add("ЛЕЧИЛКА");
+
+            if ((Character.Protagonist.Magicpoints > 0) && (Character.Protagonist.Hitpoints > 2))
+                staticButtons.Add("ЛЕЧИЛКА ДЛЯ КОННЕРИ");
+
+            return staticButtons;
+        }
+
+        public bool StaticAction(string action)
+        {
+            if (action == "ЛЕЧИЛКА")
+            {
+                Character.Protagonist.Hitpoints += 6;
+                Character.Protagonist.Magicpoints -= 1;
+                
+                return true;
+            }
+            else if (action == "ЛЕЧИЛКА ДЛЯ КОННЕРИ")
+            {
+                Character.Protagonist.ConneryHitpoints += 8;
+                Character.Protagonist.Magicpoints -= 1;
+
+                InjuriesBySpells();
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public static void InjuriesBySpells()
+        {
+            int injures = (Character.Protagonist.Specialization == Character.SpecializationType.Wizard ? 1 : 2);
+
+            Character.Protagonist.Hitpoints -= injures;
+
+            if (Character.Protagonist.Hitpoints < 0)
+                Character.Protagonist.Hitpoints = 0;
+        }
 
         private bool GoodReaction(ref List<string> reaction)
         {
@@ -148,15 +188,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             bool bySpecButton = (Specialization != null) && (Character.Protagonist.Specialization != Character.SpecializationType.Nope);
             bool byPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
-            bool bySpellpoints = Spell && (Character.Protagonist.Spellpoints <= 0);
-            bool bySpellRepeat = Spell && Character.Protagonist.Spells.Contains(Text);
+            bool byCureSprain = (Character.Protagonist.Magicpoints > 0);
 
-            bool bySpecialization = Spell && (Text == "ВЗОР") && (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
             bool byAlreadyDecided = (FoodSharing != null) && Character.Protagonist.FoodIsDivided;
             bool byFootwraps = ((ActionName == "FootwrapsDeadlyReplacement") || (ActionName == "FootwrapsReplacement")) && Character.Protagonist.Footwraps <= 0;
-            bool byCureSpell = ((ActionName == "CureSprain") && !Character.Protagonist.Spells.Contains("Заклинание 'ЛЕЧЕНИЕ'"));
 
-            return !(bySpecButton || byPrice || bySpellpoints || bySpellRepeat || bySpecialization || byAlreadyDecided || byFootwraps || byCureSpell || Disabled);
+            return !(bySpecButton || byPrice || byCureSprain || byAlreadyDecided || byFootwraps || Disabled);
         }
 
         public List<string> Get()
@@ -166,24 +203,21 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Character.Protagonist.Specialization = Specialization ?? Character.SpecializationType.Nope;
 
                 if (Specialization == Character.SpecializationType.Warrior)
+                {
                     Character.Protagonist.Strength += 2;
+                    Character.Protagonist.Magicpoints = 2;
+                }
 
                 else if (Specialization == Character.SpecializationType.Wizard)
-                {
-                    Character.Protagonist.Spellpoints += 3;
-                    Character.Protagonist.Magicpoints += 2;
-                }
+                    Character.Protagonist.Magicpoints = 5;
+
                 else
                 {
                     Character.Protagonist.Strength += 1;
-                    Character.Protagonist.Spellpoints += 1;
+                    Character.Protagonist.Magicpoints = 3;
                 }
             }
-            else if (Spell && (Character.Protagonist.Spellpoints >= 1))
-            {
-                Character.Protagonist.Spells.Add(Text);
-                Character.Protagonist.Spellpoints -= 1;
-            }
+
             else if ((Price > 0) && (Character.Protagonist.Gold >= Price))
                 Character.Protagonist.Gold -= Price;
 
@@ -229,6 +263,13 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         if (oneOption.Contains("ЗОЛОТО >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Gold))
                             return false;
 
+                        if (oneOption.Contains("ЗАКЛЯТИЙ >") && (int.Parse(oneOption.Split('=')[1]) >= Character.Protagonist.Magicpoints))
+                            return false;
+
+                        if (oneOption.Contains("ЗАКЛЯТИЙ (!воин) >") &&
+                            ((int.Parse(oneOption.Split('=')[1]) >= Character.Protagonist.Magicpoints) || (Character.Protagonist.Specialization == Character.SpecializationType.Warrior)))
+                            return false;
+
                         if (oneOption.Contains("ВРЕМЯ ДЛЯ ЧТЕНИЯ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.TimeForReading))
                             return false;
 
@@ -243,8 +284,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
                     }
-                    else if (option.Contains("Заклинание"))
-                        return Character.Protagonist.Spells.Contains(option);
 
                     else if (orLogic && Game.Data.Triggers.Contains(oneOption.Trim()))
                         return true;
@@ -297,7 +336,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public List<string> CureSprain()
         {
             Character.Protagonist.Strength += 1;
-            Character.Protagonist.Spells.Remove("Заклинание 'ЛЕЧЕНИЕ'");
+            Character.Protagonist.Magicpoints -= 1;
 
             return new List<string> { "BIG|GOOD|Вы успешно вылечили растяжение" };
         }
