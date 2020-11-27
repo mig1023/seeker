@@ -6,7 +6,7 @@ using Xamarin.Forms;
 using Seeker.Gamebook;
 using System.Linq;
 
-namespace Seeker.Game
+namespace Seeker.Output
 {
     class Interface
     {
@@ -14,7 +14,7 @@ namespace Seeker.Game
         {
             List<Label> statusLabels = new List<Label>();
 
-            string textColor = Game.Data.Constants.GetColor(Data.ColorTypes.StatusFont);
+            string textColor = Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusFont);
 
             foreach (string status in statusLines)
             {
@@ -23,7 +23,7 @@ namespace Seeker.Game
                 label.Text = status + System.Convert.ToChar(160);
                 label.FontSize = 12;
                 label.TextColor = (String.IsNullOrEmpty(textColor) ? Color.White : Color.FromHex(textColor));
-                label.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Data.ColorTypes.StatusBar));
+                label.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar));
 
                 label.HorizontalTextAlignment = TextAlignment.Center;
                 label.VerticalTextAlignment = TextAlignment.Center;
@@ -136,62 +136,6 @@ namespace Seeker.Game
             return enemies;
         }
 
-        public static Button ActionButton(string actionName, bool enabled = true)
-        {
-            string color = Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Action);
-
-            Button actionButton = new Button()
-            {
-                Text = actionName,
-                TextColor = Xamarin.Forms.Color.White,
-                IsEnabled = enabled,
-                BackgroundColor = (enabled ? Color.FromHex(color) : Color.Gray),
-                FontFamily = TextFontFamily(),
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Button)),
-            };
-
-            return SetBorderAndTextColor(actionButton);
-        }
-
-        public static Button OptionButton(Game.Option option)
-        {
-            bool optionColor = !String.IsNullOrEmpty(option.OnlyIf) && !option.OnlyIf.Contains(">") && !option.OnlyIf.Contains("<");
-
-            if (Game.Data.ShowDisabledOption)
-                optionColor = !String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf);
-
-            string color = Game.Data.Constants.GetButtonsColor(
-                optionColor ? Game.Buttons.ButtonTypes.Option : Game.Buttons.ButtonTypes.Main
-            );
-
-            bool isEnabled = ((!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf)) ? false : true);
-            
-            Button optionButton = new Button()
-            {
-                Text = option.Text,
-                BackgroundColor = Color.FromHex(color),
-                IsEnabled = isEnabled,
-                FontFamily = TextFontFamily(),
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-            };
-
-            return SetBorderAndTextColor(optionButton);
-        }
-
-        public static Button AdditionalButton(string text)
-        {
-            string color = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
-
-            Button additionButton = new Button()
-            {
-                Text = text,
-                BackgroundColor = (String.IsNullOrEmpty(color) ? Color.LightGray : Color.FromHex(color)),
-                FontFamily = TextFontFamily(),
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-            };
-
-            return SetBorderAndTextColor(additionButton);
-        }
 
         public static Button GameOverButton(string text)
         {
@@ -201,7 +145,7 @@ namespace Seeker.Game
             {
                 Text = text,
                 TextColor = Xamarin.Forms.Color.White,
-                BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Option)),
+                BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Option)),
                 FontFamily = TextFontFamily(),
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
@@ -209,23 +153,23 @@ namespace Seeker.Game
             return SetBorderAndTextColor(gameoverButton);
         }
 
-        private static Button SetBorderAndTextColor(Button button)
+        public static Button SetBorderAndTextColor(Button button)
         {
-            if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Border)))
+            if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border)))
             {
-                button.BorderColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Border));
+                button.BorderColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border));
                 button.BorderWidth = 1;
             }
 
-            if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Font)))
-                button.TextColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Game.Buttons.ButtonTypes.Font));
+            if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Font)))
+                button.TextColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Font));
             else
                 button.TextColor = Xamarin.Forms.Color.White;
 
             return button;
         }
 
-        private static string TextFontFamily()
+        public static string TextFontFamily()
         {
             string defaultFont = "YanoneFont";
 

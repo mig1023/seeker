@@ -6,7 +6,7 @@ namespace Seeker.Abstract
 {
     interface IConstants
     {
-        string GetButtonsColor(Game.Buttons.ButtonTypes type);
+        string GetButtonsColor(Output.Buttons.ButtonTypes type);
 
         string GetColor(Game.Data.ColorTypes type);
 

@@ -26,7 +26,7 @@ namespace Seeker
             Game.Router.Clean();
             Options.Children.Clear();
 
-            Text.Children.Add(Game.Interface.Text("Выберите книгу:", defaultParams: true));
+            Text.Children.Add(Output.Interface.Text("Выберите книгу:", defaultParams: true));
 
             Game.Data.Actions = null;
 
@@ -41,11 +41,11 @@ namespace Seeker
                 };
                 Options.Children.Add(illustration);
 
-                Button button = Game.Interface.GamebookButton(gamebook);
+                Button button = Output.Interface.GamebookButton(gamebook);
                 button.Clicked += Gamebook_Click;
                 Options.Children.Add(button);
 
-                Label disclaimer = Game.Interface.GamebookDisclaimer(gamebook);
+                Label disclaimer = Output.Interface.GamebookDisclaimer(gamebook);
                 Options.Children.Add(disclaimer);
             }
 
@@ -84,7 +84,7 @@ namespace Seeker
             Game.Data.CurrentParagraph = paragraph;
             Game.Data.CurrentParagraphID = id;
                         
-            Text.Children.Add(Game.Interface.Text(Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty));
+            Text.Children.Add(Output.Interface.Text(Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty));
 
             if (!String.IsNullOrEmpty(paragraph.Image))
             {
@@ -109,12 +109,12 @@ namespace Seeker
 
                 foreach (Abstract.IActions action in paragraph.Actions)
                 {
-                    StackLayout actionPlace = Game.Interface.ActionPlace();
+                    StackLayout actionPlace = Output.Interface.ActionPlace();
 
-                    foreach (View enemy in Game.Interface.Represent(action.Do(out _, "Representer")))
+                    foreach (View enemy in Output.Interface.Represent(action.Do(out _, "Representer")))
                         actionPlace.Children.Add(enemy);
 
-                    Button button = Game.Interface.ActionButton(action.ButtonName, action.IsButtonEnabled());
+                    Button button = Output.Buttons.Action(action.ButtonName, action.IsButtonEnabled());
                     button.Clicked += Action_Click;
                     actionPlace.Children.Add(button);
 
@@ -126,7 +126,7 @@ namespace Seeker
                     index += 1;
 
                     if (!String.IsNullOrEmpty(action.Aftertext))
-                        Action.Children.Add(Game.Interface.Text(action.Aftertext));
+                        Action.Children.Add(Output.Interface.Text(action.Aftertext));
                 }
             }
 
@@ -135,7 +135,7 @@ namespace Seeker
                 if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf) && !Game.Data.ShowDisabledOption)
                     continue;
 
-                Button button = Game.Interface.OptionButton(option);
+                Button button = Output.Buttons.Option(option);
 
                 if (button == null)
                     continue;
@@ -149,14 +149,14 @@ namespace Seeker
 
             if ((id == 0) && Game.Continue.IsGameSaved())
             {
-                Button button = Game.Interface.AdditionalButton("ПРОДОЛЖИТЬ РАНЕЕ НАЧАТУЮ ИГРУ");
+                Button button = Output.Buttons.Additional("ПРОДОЛЖИТЬ РАНЕЕ НАЧАТУЮ ИГРУ");
                 button.Clicked += Continue_Click;
                 Options.Children.Add(button);
             }
             else if ((id > 0) && (Game.Data.Actions != null))
                 foreach(string buttonName in Game.Data.Actions.StaticButtons())
                 {
-                    Button button = Game.Interface.AdditionalButton(buttonName);
+                    Button button = Output.Buttons.Additional(buttonName);
                     button.Clicked += StaticButton_Click;
                     Options.Children.Add(button);
                 }
@@ -192,7 +192,7 @@ namespace Seeker
                 MainGrid.RowDefinitions[2].Height = 40;
                 Status.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar));
 
-                foreach (Label status in Game.Interface.StatusBar(statuses))
+                foreach (Label status in Output.Interface.StatusBar(statuses))
                     Status.Children.Add(status);
 
                 Status.IsVisible = true;
@@ -224,7 +224,7 @@ namespace Seeker
             Game.Router.Clean();
             Options.Children.Clear();
 
-            Button button = Game.Interface.GameOverButton(toEndText);
+            Button button = Output.Interface.GameOverButton(toEndText);
 
             Game.Router.AddDestination(toEndText, toEndParagraph);
 
@@ -249,7 +249,7 @@ namespace Seeker
                 Paragraph(Game.Data.CurrentParagraphID, reload: true);
             else
             {
-                foreach (Label action in Game.Interface.Actions(actionResult))
+                foreach (Label action in Output.Interface.Actions(actionResult))
                     actionPlace.Children.Add(action);
 
                 UpdateStatus();
