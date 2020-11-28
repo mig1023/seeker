@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int Gold { get; set; }
         public int Footwraps { get; set; }
         public int TimeForReading { get; set; }
+        public int Elixir { get; set; }
 
         public int ConneryHitpoints { get; set; }
         public int ConneryTrust { get; set; }
@@ -27,6 +28,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public bool FoodIsDivided { get; set; }
         public int PoisonBlade { get; set; }
+        public int HealingSpellLost { get; set; }
 
 
         public void Init()
@@ -35,14 +37,17 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Strength = 12;
             Hitpoints = 30;
             Magicpoints = 0;
-            FoodIsDivided = false;
-            PoisonBlade = 0;
             Gold = 20;
             Footwraps = 0;
             TimeForReading = 60;
+            Elixir = 1;
             ConneryHitpoints = 30;
             ConneryTrust = 5;
             Specialization = SpecializationType.Nope;
+
+            FoodIsDivided = false;
+            PoisonBlade = 0;
+            HealingSpellLost = 0;
         }
 
         public Character Clone()
@@ -53,24 +58,27 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Strength = this.Strength,
                 Hitpoints = this.Hitpoints,
                 Magicpoints = this.Magicpoints,
-                FoodIsDivided = this.FoodIsDivided,
-                PoisonBlade = this.PoisonBlade,
                 Gold = this.Gold,
                 Footwraps = this.Footwraps,
                 TimeForReading = this.TimeForReading,
+                Elixir = this.Elixir,
                 ConneryHitpoints = this.ConneryHitpoints,
                 ConneryTrust = this.ConneryTrust,
                 Specialization = this.Specialization,
+
+                FoodIsDivided = this.FoodIsDivided,
+                PoisonBlade = this.PoisonBlade,
+                HealingSpellLost = this.HealingSpellLost,
             };
         }
 
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}",
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}",
                 Strength, Hitpoints, Magicpoints, (FoodIsDivided ? 1 : 0),
                 PoisonBlade, Gold, Footwraps, TimeForReading, ConneryHitpoints,
-                ConneryTrust, Specialization
+                ConneryTrust, Specialization, Elixir, HealingSpellLost
             );
         }
 
@@ -88,6 +96,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             TimeForReading = int.Parse(save[7]);
             ConneryHitpoints = int.Parse(save[8]);
             ConneryTrust = int.Parse(save[9]);
+            Elixir = int.Parse(save[11]);
+            HealingSpellLost = int.Parse(save[12]);
 
             bool success = Enum.TryParse(save[10], out SpecializationType value);
             Specialization = (success ? value : SpecializationType.Nope);

@@ -7046,6 +7046,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         Name = "Hitpoints",
                         Init = true,
                     },
+                    new Modification
+                    {
+                        Name = "Elixir",
+                        Empty = true,
+                    },
+                    new Modification
+                    {
+                        Name = "HealingSpellLost",
+                        Value = 1,
+                    },
                 },
 
                 Options = new List<Option>
@@ -8487,8 +8497,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                 Options = new List<Option>
                 {
-                    new Option { Destination = 568, Text = "У вас еще есть ведьмачий Эликсир" },
-                    new Option { Destination = 699, Text = "Его нет" },
+                    new Option { Destination = 568, Text = "У вас еще есть ведьмачий Эликсир", OnlyIf = "ЭЛИКСИР > 0" },
+                    new Option { Destination = 699, Text = "Далее" },
                 }
             },
             [688] = new Paragraph

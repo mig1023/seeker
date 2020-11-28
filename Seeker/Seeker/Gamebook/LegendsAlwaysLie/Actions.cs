@@ -90,11 +90,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             List<string> staticButtons = new List<string> { };
 
-            if (Character.Protagonist.Magicpoints > 0)
+            if ((Character.Protagonist.Magicpoints > 0) && (Character.Protagonist.HealingSpellLost <= 0))
+            {
                 staticButtons.Add("ЛЕЧИЛКА");
 
-            if ((Character.Protagonist.Magicpoints > 0) && (Character.Protagonist.Hitpoints > 2))
-                staticButtons.Add("ЛЕЧИЛКА ДЛЯ КОННЕРИ");
+                if ((Character.Protagonist.Magicpoints > 0) && (Character.Protagonist.Hitpoints > 2))
+                    staticButtons.Add("ЛЕЧИЛКА ДЛЯ КОННЕРИ");
+            }
+
+            if (Character.Protagonist.Elixir > 0)
+                staticButtons.Add("ЭЛИКСИР");
 
             return staticButtons;
         }
@@ -114,6 +119,13 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 Character.Protagonist.Magicpoints -= 1;
 
                 InjuriesBySpells();
+
+                return true;
+            }
+            else if ((action == "ЭЛИКСИР") && (Character.Protagonist.Hitpoints < 30))
+            {
+                Character.Protagonist.Hitpoints = 30;
+                Character.Protagonist.Elixir -= 1;
 
                 return true;
             }
@@ -263,7 +275,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         if (oneOption.Contains("ЗОЛОТО >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Gold))
                             return false;
 
-                        if (oneOption.Contains("ЗАКЛЯТИЙ >") && (int.Parse(oneOption.Split('=')[1]) >= Character.Protagonist.Magicpoints))
+                        if (oneOption.Contains("ЗАКЛЯТИЙ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Magicpoints))
+                            return false;
+
+                        if (oneOption.Contains("ЭЛИКСИР >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Elixir))
                             return false;
 
                         if (oneOption.Contains("ЗАКЛЯТИЙ (!воин) >") &&
