@@ -138,26 +138,14 @@ namespace Seeker.Gamebook.DzungarWar
             return statusLines;
         }
 
-        private static bool ParagraphWithTest()
-        {
-            if (Game.Data.CurrentParagraph.Actions == null)
-                return false;
-
-            foreach (Actions action in Game.Data.CurrentParagraph.Actions)
-                if (action.ActionName.ToUpper().Contains("TEST"))
-                    return true;
-
-            return false;
-        }
-
         public List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };
 
-            if (ParagraphWithTest() && (Character.Protagonist.Tincture > 0) && !NextTestWithTincture)
+            if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (Character.Protagonist.Tincture > 0) && !NextTestWithTincture)
                 staticButtons.Add("ВЫПИТЬ НАСТОЙКИ");
 
-            if (ParagraphWithTest() && (Character.Protagonist.Ginseng > 0) && !NextTestWithGinseng)
+            if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (Character.Protagonist.Ginseng > 0) && !NextTestWithGinseng)
                 staticButtons.Add("ВЫПИТЬ ОТВАР ЖЕНЬШЕНЯ");
 
             return staticButtons;
