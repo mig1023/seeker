@@ -90,6 +90,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             List<string> staticButtons = new List<string> { };
 
+            if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
+                return staticButtons;
+
             bool healingSpell = (Character.Protagonist.Magicpoints > 0) && (Character.Protagonist.HealingSpellLost <= 0);
 
             if (healingSpell && !Game.Checks.ExistsInParagraph(actionText: "Вылечить"))

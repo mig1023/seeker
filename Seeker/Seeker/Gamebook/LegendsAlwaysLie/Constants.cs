@@ -36,5 +36,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public bool GetLtlFont() => true;
 
         public double? GetLineHeight() => 1.20;
+
+        public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 714, 715, 701, 702 };
     }
 }
