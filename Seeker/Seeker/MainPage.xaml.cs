@@ -130,6 +130,9 @@ namespace Seeker
                 }
             }
 
+            bool gameOver = false;
+            int optionCount = 0;
+
             foreach (Game.Option option in paragraph.Options)
             {
                 if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf) && !Game.Data.ShowDisabledOption)
@@ -142,9 +145,13 @@ namespace Seeker
 
                 Game.Router.AddDestination(option.Text, option.Destination, option.Do);
 
+                gameOver = (option.Destination == 0 ? true : false);
+
                 button.Clicked += Option_Click;
 
                 Options.Children.Add(button);
+
+                optionCount += 1;
             }
 
             if ((id == 0) && Game.Continue.IsGameSaved())
@@ -153,7 +160,7 @@ namespace Seeker
                 button.Clicked += Continue_Click;
                 Options.Children.Add(button);
             }
-            else if ((id > 0) && (Game.Data.Actions != null))
+            else if ((id > 0) && (Game.Data.Actions != null) && !(gameOver && (optionCount == 1)))
                 foreach(string buttonName in Game.Data.Actions.StaticButtons())
                 {
                     Button button = Output.Buttons.Additional(buttonName);
@@ -225,9 +232,7 @@ namespace Seeker
             Options.Children.Clear();
 
             Button button = Output.Interface.GameOverButton(toEndText);
-
             Game.Router.AddDestination(toEndText, toEndParagraph);
-
             button.Clicked += Option_Click;
 
             Options.Children.Add(button);
