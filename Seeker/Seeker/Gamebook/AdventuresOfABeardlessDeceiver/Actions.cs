@@ -96,6 +96,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         {
             List<string> staticButtons = new List<string> { };
 
+            if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
+                return staticButtons;
+
             if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (Character.Protagonist.Kumis > 0) && !NextTestWithKumis)
                 staticButtons.Add("ВЫПИТЬ КУМЫСА");
 

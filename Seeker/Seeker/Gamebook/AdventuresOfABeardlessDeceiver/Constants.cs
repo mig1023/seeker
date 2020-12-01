@@ -38,5 +38,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public bool GetLtlFont() => false;
 
         public double? GetLineHeight() => null;
+
+        public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 30, 60, 90 };
     }
 }
