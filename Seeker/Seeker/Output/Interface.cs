@@ -136,7 +136,6 @@ namespace Seeker.Output
             return enemies;
         }
 
-
         public static Button GameOverButton(string text)
         {
             string color = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
@@ -192,7 +191,7 @@ namespace Seeker.Output
             {
                 Margin = 5,
                 FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                Text = text,
+                Text = System.Text.RegularExpressions.Regex.Unescape(text),
                 FontFamily = TextFontFamily(),
             };
 

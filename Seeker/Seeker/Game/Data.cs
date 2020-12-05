@@ -16,7 +16,7 @@ namespace Seeker.Game
         public static int CurrentParagraphID { get; set; }
         public static bool ShowDisabledOption { get; set; }
 
-        public static Dictionary<int, string> TextOfParagraphs = new Dictionary<int, string>();
+        public static Dictionary<int, XmlNode> XmlParagraphs = new Dictionary<int, XmlNode>();
 
         public static List<string> Triggers = new List<string>();
 
@@ -31,7 +31,7 @@ namespace Seeker.Game
 
         public static void GameLoad(string name)
         {
-            TextOfParagraphs.Clear();
+            XmlParagraphs.Clear();
             Triggers.Clear();
 
             if (String.IsNullOrEmpty(name))
@@ -45,13 +45,7 @@ namespace Seeker.Game
             xmlFile.LoadXml(content);
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("Paragraphs/Paragraph"))
-            {
-                bool success = Int32.TryParse(xmlNode["ID"].InnerText, out int value);
-                int idParagraph = (success ? value : 0);
-                string text = System.Text.RegularExpressions.Regex.Unescape(xmlNode["Text"].InnerText);
-
-                TextOfParagraphs.Add(idParagraph, text);
-            }
+                XmlParagraphs.Add(Game.Xml.IntParse(xmlNode["ID"]), xmlNode);
 
             Paragraphs = gamebook.Paragraphs;
             Actions = gamebook.Actions;
