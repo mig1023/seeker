@@ -237,11 +237,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone().SetEndurance());             
 
-            foreach (Character ally in Allies)
-                if (ally == Character.Protagonist)
-                    FightAllies.Add(ally);
-                else
-                    FightAllies.Add(ally.Clone().SetEndurance());                   
+            if (Allies == null)
+                FightAllies.Add(Character.Protagonist);
+            else
+                foreach (Character ally in Allies)
+                    if (ally == Character.Protagonist)
+                        FightAllies.Add(ally);
+                    else
+                        FightAllies.Add(ally.Clone().SetEndurance());                   
 
             while (true)
             {
