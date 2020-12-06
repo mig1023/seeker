@@ -52,8 +52,8 @@ namespace Seeker.Gamebook
                 BookColor = "#911",
                 Illustration = "FaithfulSwordOfTheKing.jpg",
             },
-	    
-	        ["Приключения безбородого обманщика"] = new Description
+
+            ["Приключения безбородого обманщика"] = new Description
             {
                 XmlBook = "Gamebooks/AdventuresOfABeardlessDeceiver.xml",
                 Protagonist = AdventuresOfABeardlessDeceiver.Character.Protagonist.Init,

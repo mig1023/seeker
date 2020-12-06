@@ -71,9 +71,9 @@ namespace Seeker.Gamebook.DzungarWar
                 paragraph.Modification.Add(modification);
             }
 
-            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Trigger"]);
-            paragraph.LateTrigger = Game.Xml.StringParse(xmlParagraph["LateTrigger"]);
-            paragraph.RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTrigger"]);
+            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
+            paragraph.LateTrigger = Game.Xml.StringParse(xmlParagraph["LateTriggers"]);
+            paragraph.RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTriggers"]);
             paragraph.Image = Game.Xml.StringParse(xmlParagraph["Image"]);
 
             return paragraph;

@@ -93,7 +93,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 paragraph.Modification.Add(modification);
             }
 
-            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Trigger"]);
+            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
             return paragraph;
         }

@@ -100,7 +100,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 paragraph.Modification.Add(modification);
             }
 
-            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Trigger"]);
+            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
             return paragraph;
         }
