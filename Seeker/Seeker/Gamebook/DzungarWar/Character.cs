@@ -32,7 +32,7 @@ namespace Seeker.Gamebook.DzungarWar
             Wisdom = 1;
             Cunning = 1;
             Oratory = 1;
-            Danger = 0;
+            Danger = null;
             Tanga = 150;
             Favour = null;
             Tincture = 3;
