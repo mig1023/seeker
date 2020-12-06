@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Android.Content.Res;
 using Seeker.Gamebook;
+using System.Xml;
 
 namespace Seeker
 {
@@ -65,26 +66,36 @@ namespace Seeker
 
         private void Continue_Click(object sender, EventArgs e)
         {
-            Paragraph(Game.Continue.Load());
+            Paragraph(Game.Continue.Load(), loadGame: true);
         }
 
-        public void Paragraph(int id, bool reload = false)
+        public void Paragraph(int id, bool reload = false, bool loadGame = false)
         {
+            bool startOfGame = (id == 0);
+
             Game.Router.Clean();
 
             Text.Children.Clear();
             Action.Children.Clear();
             Options.Children.Clear();
 
-            if (id == 0)
+            if (startOfGame)
                 Game.Data.Protagonist();
 
-            Game.Paragraph paragraph = Game.Data.Paragraphs.Get(id);
+            Game.Paragraph paragraph = null;
 
-            Game.Data.CurrentParagraph = paragraph;
-            Game.Data.CurrentParagraphID = id;
-                        
-            Text.Children.Add(Output.Interface.Text(Game.Data.TextOfParagraphs.ContainsKey(id) ? Game.Data.TextOfParagraphs[id] : String.Empty));
+            if ((Game.Data.CurrentParagraphID != id) || startOfGame || loadGame)
+            {
+                paragraph = Game.Data.Paragraphs.Get(id, Game.Data.XmlParagraphs[id]);
+
+                Game.Data.CurrentParagraph = paragraph;
+                Game.Data.CurrentParagraphID = id;
+            }
+            else
+                paragraph = Game.Data.CurrentParagraph;
+
+            string text = Game.Data.XmlParagraphs[id]["Text"].InnerText;
+            Text.Children.Add(Output.Interface.Text(text));
 
             if (!String.IsNullOrEmpty(paragraph.Image))
             {
