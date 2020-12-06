@@ -857,6 +857,7 @@
 				<Level>10</Level>
 			</Action>
 		</Actions>
+		<Image>AdventuresOfABeardlessDeceiver_Akyn.jpg</Image>
 		<Modifications>
 			<Modification Name="AkynGlory" Init="true"/>
 		</Modifications>

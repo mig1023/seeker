@@ -70,6 +70,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             }
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Trigger"]);
+            paragraph.Image = Game.Xml.StringParse(xmlParagraph["Image"]);
 
             return paragraph;
         }
