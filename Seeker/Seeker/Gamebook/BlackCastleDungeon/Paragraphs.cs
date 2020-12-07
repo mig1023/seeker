@@ -67,35 +67,36 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     }
                 }
 
-                if (xmlAction["Benefit"] != null)
-                {
-                    Modification modification = new Modification
-                    {
-                        Name = Game.Xml.StringParse(xmlAction["Benefit"].Attributes["Name"]),
-                        Value = Game.Xml.IntParse(xmlAction["Benefit"].Attributes["Value"]),
-                    };
-
-                    action.Benefit = modification;
-                }
+                action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
                 paragraph.Actions.Add(action);
             }
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-            {
-                Modification modification = new Modification
-                {
-                    Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
-                    Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
-                    ValueString = Game.Xml.StringParse(xmlModification.Attributes["ValueString"]),
-                };
-
-                paragraph.Modification.Add(modification);
-            }
+                paragraph.Modification.Add(ModificationParse(xmlModification));
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
             return paragraph;
+        }
+
+        private static Modification ModificationParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return null;
+
+            Modification modification = new Modification
+            {
+                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
+            };
+
+            if (xmlNode.Attributes["Value"] != null)
+                modification.Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]);
+
+            if (xmlNode.Attributes["ValueString"] != null)
+                modification.Value = Game.Xml.IntParse(xmlNode.Attributes["ValueString"]);
+
+            return modification;
         }
     }
 }
