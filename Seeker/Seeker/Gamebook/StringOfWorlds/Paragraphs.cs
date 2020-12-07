@@ -12,6 +12,8 @@ namespace Seeker.Gamebook.StringOfWorlds
 {
     class Paragraphs : Abstract.IParagraphs
     {
+        private Random random = new Random();
+
         public Game.Paragraph Get(int id, XmlNode xmlParagraph)
         {
             Game.Paragraph paragraph = new Game.Paragraph();
@@ -24,10 +26,17 @@ namespace Seeker.Gamebook.StringOfWorlds
             {
                 Option option = new Option
                 {
-                    Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
                     Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
                     OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
                 };
+
+                if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int destination))
+                    option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
+                else
+                {
+                    List<string> destinations = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
+                    option.Destination = int.Parse(destinations[random.Next(destinations.Count())]);
+                }
 
                 paragraph.Options.Add(option);
             }
