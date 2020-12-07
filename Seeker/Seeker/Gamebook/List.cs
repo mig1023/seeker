@@ -157,7 +157,7 @@ namespace Seeker.Gamebook
                 Save = StringOfWorlds.Character.Protagonist.Save,
                 Load = StringOfWorlds.Character.Protagonist.Load,
                 Disclaimer = "Голотвина Ольга, 1995",
-                BookColor = "#4c0000",
+                BookColor = "#990066",
                 Illustration = "StringOfWorlds.jpg",
             },
         };
