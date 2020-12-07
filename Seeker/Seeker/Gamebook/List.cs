@@ -145,6 +145,21 @@ namespace Seeker.Gamebook
                 BookColor = "#4c0000",
                 Illustration = "LegendsAlwaysLie.jpg",
             },
+            
+            ["Вереница миров или выводы из закона Мэрфи"] = new Description
+            {
+                XmlBook = "Gamebooks/StringOfWorlds.xml",
+                Protagonist = StringOfWorlds.Character.Protagonist.Init,
+                CheckOnlyIf = StringOfWorlds.Actions.CheckOnlyIf,
+                Paragraphs = new StringOfWorlds.Paragraphs(),
+                Actions = new StringOfWorlds.Actions(),
+                Constants = new StringOfWorlds.Constants(),
+                Save = StringOfWorlds.Character.Protagonist.Save,
+                Load = StringOfWorlds.Character.Protagonist.Load,
+                Disclaimer = "Голотвина Ольга, 1995",
+                BookColor = "#4c0000",
+                Illustration = "StringOfWorlds.jpg",
+            },
         };
 
         public static List<string> GetBooks()
