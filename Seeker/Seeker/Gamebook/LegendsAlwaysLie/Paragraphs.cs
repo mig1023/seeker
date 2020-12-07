@@ -56,6 +56,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     IncrementWounds = Game.Xml.BoolParse(xmlAction["IncrementWounds"]),
                     GolemFight = Game.Xml.BoolParse(xmlAction["GolemFight"]),
                     ZombieFight = Game.Xml.BoolParse(xmlAction["ZombieFight"]),
+
+                    Benefit = ModificationParse(xmlAction["Benefit"]),
+                    Damage = ModificationParse(xmlAction["Damage"]),
                 };
 
                 if (xmlAction["FoodSharing"] != null)
@@ -81,32 +84,11 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     }
                 }
 
-
                 paragraph.Actions.Add(action);
             }
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-            {
-                Modification modification = new Modification
-                {
-                    Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
-                    Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
-                };
-
-                if (xmlModification.Attributes["Empty"] != null)
-                    modification.Empty = true;
-
-                if (xmlModification.Attributes["Init"] != null)
-                    modification.Init = true;
-                
-                if (xmlModification.Attributes["WizardWoundsPenalty"] != null)
-                    modification.WizardWoundsPenalty = Game.Xml.IntParse(xmlModification.Attributes["WizardWoundsPenalty"]);
-                
-                if (xmlModification.Attributes["ThrowerWoundsPenalty"] != null)
-                    modification.ThrowerWoundsPenalty = Game.Xml.IntParse(xmlModification.Attributes["ThrowerWoundsPenalty"]);
-
-                paragraph.Modification.Add(modification);
-            }
+                paragraph.Modification.Add(ModificationParse(xmlModification));
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
             paragraph.LateTrigger = Game.Xml.StringParse(xmlParagraph["LateTriggers"]);
@@ -134,6 +116,32 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             bool success = Enum.TryParse(xmlNode.InnerText, out Actions.FoodSharingType value);
 
             return (success ? value : Actions.FoodSharingType.KeepMyself);
+        }
+
+        private static Modification ModificationParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return null;
+
+            Modification modification = new Modification
+            {
+                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+            };
+
+            if (xmlNode.Attributes["Empty"] != null)
+                modification.Empty = true;
+
+            if (xmlNode.Attributes["Init"] != null)
+                modification.Init = true;
+
+            if (xmlNode.Attributes["WizardWoundsPenalty"] != null)
+                modification.WizardWoundsPenalty = Game.Xml.IntParse(xmlNode.Attributes["WizardWoundsPenalty"]);
+
+            if (xmlNode.Attributes["ThrowerWoundsPenalty"] != null)
+                modification.ThrowerWoundsPenalty = Game.Xml.IntParse(xmlNode.Attributes["ThrowerWoundsPenalty"]);
+
+            return modification;
         }
     }
 }
