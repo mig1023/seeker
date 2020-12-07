@@ -18,7 +18,7 @@ namespace Seeker.Game
         public static int? IntNullableParse(string line)
         {
             if (int.TryParse(line, out int value))
-                return value;
+                return (value == -1 ? (int?)null : value);
             else
                 return null;
         }
