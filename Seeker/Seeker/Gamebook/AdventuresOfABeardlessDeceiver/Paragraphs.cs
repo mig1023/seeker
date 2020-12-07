@@ -47,32 +47,40 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                     GreatKhanSpecialCheck = Game.Xml.BoolParse(xmlAction["GreatKhanSpecialCheck"]),
                     GuessBonus = Game.Xml.BoolParse(xmlAction["GuessBonus"]),
+
+                    Benefit = ModificationParse(xmlAction["Benefit"]),
                 };
 
                 paragraph.Actions.Add(action);
             }
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-            {
-                Modification modification = new Modification
-                {
-                    Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
-                    Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
-                };
-
-                if (xmlModification.Attributes["Empty"] != null)
-                    modification.Empty = true;
-
-                if (xmlModification.Attributes["Init"] != null)
-                    modification.Init = true;
-
-                paragraph.Modification.Add(modification);
-            }
+                paragraph.Modification.Add(ModificationParse(xmlModification));
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
             paragraph.Image = Game.Xml.StringParse(xmlParagraph["Image"]);
 
             return paragraph;
+        }
+
+        private static Modification ModificationParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return null;
+
+            Modification modification = new Modification
+            {
+                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+            };
+
+            if (xmlNode.Attributes["Empty"] != null)
+                modification.Empty = true;
+
+            if (xmlNode.Attributes["Init"] != null)
+                modification.Init = true;
+
+            return modification;
         }
     }
 }
