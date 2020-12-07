@@ -48,6 +48,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                     MeritalArt = MeritalArtsParse(xmlAction["MeritalArt"]),
                     Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
+
+                    Benefit = ModificationParse(xmlAction["Benefit"]),
                 };
 
                 if (xmlAction["Enemies"] != null)
@@ -71,18 +73,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             }
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-            {
-                Modification modification = new Modification
-                {
-                    Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
-                    Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
-                };
-
-                if (xmlModification.Attributes["Empty"] != null)
-                    modification.Empty = true;
-
-                paragraph.Modification.Add(modification);
-            }
+                paragraph.Modification.Add(ModificationParse(xmlModification));
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
@@ -97,6 +88,23 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             bool success = Enum.TryParse(xmlNode.InnerText, out Character.MeritalArts value);
 
             return (success ? value : Character.MeritalArts.Nope);
+        }
+
+        private static Modification ModificationParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return null;
+
+            Modification modification = new Modification
+            {
+                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+            };
+
+            if (xmlNode.Attributes["Empty"] != null)
+                modification.Empty = true;
+
+            return modification;
         }
     }
 }
