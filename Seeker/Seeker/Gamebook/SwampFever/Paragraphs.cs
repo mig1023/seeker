@@ -47,27 +47,15 @@ namespace Seeker.Gamebook.SwampFever
                     Level = Game.Xml.IntParse(xmlAction["Level"]),
 
                     Birds = Game.Xml.BoolParse(xmlAction["Birds"]),
+
+                    Benefit = ModificationParse(xmlAction["Benefit"]),
                 };
 
                 paragraph.Actions.Add(action);
             }
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-            {
-                Modification modification = new Modification
-                {
-                    Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
-                    Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
-                };
-
-                if (xmlModification.Attributes["Multiplication"] != null)
-                    modification.Multiplication = true;
-
-                if (xmlModification.Attributes["Division"] != null)
-                    modification.Division = true;
-
-                paragraph.Modification.Add(modification);
-            }
+                paragraph.Modification.Add(ModificationParse(xmlModification));
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
             paragraph.LateTrigger = Game.Xml.StringParse(xmlParagraph["LateTriggers"]);
@@ -75,6 +63,26 @@ namespace Seeker.Gamebook.SwampFever
             paragraph.Image = Game.Xml.StringParse(xmlParagraph["Image"]);
 
             return paragraph;
+        }
+
+        private static Modification ModificationParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return null;
+
+            Modification modification = new Modification
+            {
+                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+            };
+
+            if (xmlNode.Attributes["Multiplication"] != null)
+                modification.Multiplication = true;
+
+            if (xmlNode.Attributes["Division"] != null)
+                modification.Division = true;
+
+            return modification;
         }
     }
 }
