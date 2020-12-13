@@ -137,6 +137,31 @@ namespace Seeker.Gamebook.StringOfWorlds
             return luckCheck;
         }
 
+        public List<string> Break()
+        {
+            List<string> breakingDoor = new List<string> { "Ломаете дверь:" };
+
+            bool succesBreaked = false;
+
+            while (!succesBreaked && (Character.Protagonist.Strength > 0))
+            {
+                int firstDice = Game.Dice.Roll();
+                int secondDice = Game.Dice.Roll();
+
+                if (firstDice == secondDice)
+                    succesBreaked = true;
+                else
+                    Character.Protagonist.Strength -= 1;
+
+                string result = (succesBreaked ? "удачный, дверь поддалась!" : "неудачный, -1 сила");
+                breakingDoor.Add(String.Format("Удар: {0} ⚄ + {1} ⚄ - {2}", firstDice, secondDice, result));
+            }
+
+            breakingDoor.Add(succesBreaked ? "BIG|GOOD|ДВЕРЬ ВЗЛОМАНА :)" : "BIG|BAD|ВЫ УБИЛИСЬ ОБ ДВЕРЬ :(");
+
+            return breakingDoor;
+        }
+
         private bool NoMoreEnemies(List<Character> enemies)
         {
             foreach (Character enemy in enemies)
