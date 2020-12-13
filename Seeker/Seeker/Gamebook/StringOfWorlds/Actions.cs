@@ -14,7 +14,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public int RoundsToWin { get; set; }
         public bool HeroWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
-
+        public bool DevastatingAttack { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -233,7 +233,8 @@ namespace Seeker.Gamebook.StringOfWorlds
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
-                        hero.Strength -= 2;
+
+                        hero.Strength -= (DevastatingAttack ? 3 : 2);
 
                         if (hero.Strength < 0)
                             hero.Strength = 0;

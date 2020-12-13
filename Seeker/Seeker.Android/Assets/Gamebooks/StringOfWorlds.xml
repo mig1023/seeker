@@ -2158,6 +2158,7 @@
 				<Enemies>
 					<Enemy Name="РОБОТ" Skill="8" Strength="8"/>
 				</Enemies>
+				<DevastatingAttack/>
 				<Aftertext>Если вы разделались с ним, можете идти дальше.</Aftertext>
 			</Action>
 		</Actions>	
