@@ -12,6 +12,8 @@ namespace Seeker.Gamebook.StringOfWorlds
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
         public int RoundsToWin { get; set; }
+        public bool HeroWoundsLimit { get; set; }
+        public bool EnemyWoundsLimit { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -121,7 +123,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         private bool NoMoreEnemies(List<Character> enemies)
         {
             foreach (Character enemy in enemies)
-                if (enemy.Strength > 0)
+                if (enemy.Strength > (EnemyWoundsLimit ? 2 : 0))
                     return false;
 
             return true;
@@ -194,7 +196,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                         if (hero.Strength < 0)
                             hero.Strength = 0;
 
-                        if (hero.Strength <= 0)
+                        if ((hero.Strength <= 0) || (HeroWoundsLimit && (hero.Strength <= 2)))
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));

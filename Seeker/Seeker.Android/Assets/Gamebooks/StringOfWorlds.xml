@@ -176,6 +176,7 @@
 					<Enemy Name="1-Й МУРАВЕЙ" Skill="8" Strength="10"/>
 					<Enemy Name="2-Й МУРАВЕЙ" Skill="8" Strength="8"/>
 				</Enemies>
+				<HeroWoundsLimit/>
 			</Action>
 		</Actions>	
 		<Options>
@@ -772,6 +773,7 @@
 					<Enemy Name="2-Й МУРАВЕЙ" Skill="9" Strength="8"/>
 					<Enemy Name="3-Й МУРАВЕЙ" Skill="9" Strength="9"/>
 				</Enemies>
+				<HeroWoundsLimit/>
 			</Action>
 		</Actions>	
 		<Options>
@@ -1292,8 +1294,10 @@
 				<ActionName>Fight</ActionName>
 				<ButtonName>Сражаться</ButtonName>
 				<Enemies>
-					<Enemy Name="nПОВАР" Skill="8" Strength="12"/>
+					<Enemy Name="ПОВАР" Skill="8" Strength="12"/>
 				</Enemies>
+				<HeroWoundsLimit/>
+                <EnemyWoundsLimit/>
 				<Aftertext>Если вы снизили его СИЛУ до 2, то ура!\n\nНо если ваша СИЛА снизится до 2, то увы...\n\nРазумеется, пускать в ход бластер нельзя.</Aftertext>
 			</Action>
 		</Actions>	
@@ -1908,7 +1912,7 @@
 				<ActionName>Fight</ActionName>
 				<ButtonName>Сражаться</ButtonName>
 				<Enemies>
-					<Enemy Name="nПАУК" Skill="9" Strength="8"/>
+					<Enemy Name="ПАУК" Skill="9" Strength="8"/>
 				</Enemies>
 				<Aftertext>В любой момент боя вы можете бежать.</Aftertext>
 			</Action>
@@ -2172,6 +2176,8 @@
 				<Enemies>
 					<Enemy Name="ЭЙНАР ЧЕРНЫЙ ЩИТ" Skill="10" Strength="12"/>
 				</Enemies>
+				<HeroWoundsLimit/>
+                <EnemyWoundsLimit/>
 			</Action>
 		</Actions>	
 		<Options>
@@ -3842,8 +3848,9 @@
 				<ActionName>Fight</ActionName>
 				<ButtonName>Сражаться</ButtonName>
 				<Enemies>
-					<Enemy Name="nБЕЗУМЕЦ" Skill="9" Strength="12"/>
+					<Enemy Name="БЕЗУМЕЦ" Skill="9" Strength="12"/>
 				</Enemies>
+				<EnemyWoundsLimit/>
 			</Action>
 		</Actions>
 		<Options>
@@ -4036,6 +4043,8 @@
 				<Enemies>
 					<Enemy Name="ПАЛЕАНДР НЕУКРОТИМЫЙ" Skill="10" Strength="12"/>
 				</Enemies>
+				<HeroWoundsLimit/>
+				<EnemyWoundsLimit/>
 			</Action>
 		</Actions>
 		<Options>
@@ -4739,6 +4748,7 @@
 				<Enemies>
 					<Enemy Name="МУРАВЕЙ" Skill="9" Strength="8"/>
 				</Enemies>
+				<EnemyWoundsLimit/>
 			</Action>
 		</Actions>
 		<Options>

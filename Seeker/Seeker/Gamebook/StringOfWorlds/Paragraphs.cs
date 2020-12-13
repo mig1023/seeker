@@ -52,6 +52,9 @@ namespace Seeker.Gamebook.StringOfWorlds
                     Text = Game.Xml.StringParse(xmlAction["Text"]),
 
                     RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
+
+                    HeroWoundsLimit = Game.Xml.BoolParse(xmlAction["HeroWoundsLimit"]),
+                    EnemyWoundsLimit = Game.Xml.BoolParse(xmlAction["EnemyWoundsLimit"]),
                 };
 
                 if (xmlAction["Enemies"] != null)
