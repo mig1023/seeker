@@ -167,7 +167,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             bool goodLuck = (fisrtDice + secondDice) < Character.Protagonist.Luck;
 
             List<string> luckCheck = new List<string> {
-                        String.Format( "Проверка удачи: {0} ⚄ + {1} ⚄ {2} {3}", fisrtDice, secondDice, (goodLuck ? "<=" : ">"), Character.Protagonist.Luck )
+                String.Format( "Проверка удачи: {0} ⚄ + {1} ⚄ {2} {3}", fisrtDice, secondDice, (goodLuck ? "<=" : ">"), Character.Protagonist.Luck )
             };
 
             Character.Protagonist.Luck -= 1;
