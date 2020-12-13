@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public bool HeroWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
 
+
         public List<Character> Enemies { get; set; }
 
         public string Text { get; set; }
@@ -116,6 +117,22 @@ namespace Seeker.Gamebook.StringOfWorlds
             luckCheck.Add(Character.Protagonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
             Character.Protagonist.Luck[goodLuck] = !Character.Protagonist.Luck[goodLuck];
+
+            return luckCheck;
+        }
+
+        public List<string> Charm()
+        {
+            int fisrtDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            bool goodCharm = (fisrtDice + secondDice) <= Character.Protagonist.Charm;
+
+            List<string> luckCheck = new List<string> {
+                String.Format( "Проверка обаяния: {0} ⚄ + {1} ⚄ {2} {3}", fisrtDice, secondDice, (goodCharm ? "<=" : ">"), Character.Protagonist.Charm )
+            };
+
+            luckCheck.Add(goodCharm ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
             return luckCheck;
         }
