@@ -62,10 +62,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return (Character.Protagonist.Endurance <= 0 ? true : false);
         }
 
-        public bool IsButtonEnabled()
-        {
-            return true;
-        }
+        public bool IsButtonEnabled() => true;
 
         public static bool CheckOnlyIf(string option)
         {
@@ -104,7 +101,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                 enemies.Add("SPLITTER|против");
             }
-                
 
             foreach (Character enemy in Enemies)
                 enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.GetEndurance()));
