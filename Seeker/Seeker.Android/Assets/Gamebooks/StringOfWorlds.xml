@@ -16,6 +16,12 @@
 	<Paragraph>
 		<ID>2</ID>
 		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="454" Text="Повезло"/>
 			<Option Destination="262" Text="Нет"/>
@@ -711,6 +717,12 @@
 	<Paragraph>
 		<ID>96</ID>
 		<Text>Что верно, то верно: кусты колючие. И жесткие, как проволока. Шипы изодрали вам в кровь лицо и руки (вычтите 1 из СИЛЫ).\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="661" Text="Повезло"/>
 			<Option Destination="540" Text="вам или нет"/>
@@ -994,6 +1006,12 @@
 	<Paragraph>
 		<ID>134</ID>
 		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="294" Text="Повезло"/>
 			<Option Destination="590" Text="Нет"/>
@@ -1002,6 +1020,12 @@
 	<Paragraph>
 		<ID>135</ID>
 		<Text>Вы идете дальше по тропинке. Внезапно с неба обрушивается сверкающий поток, словно лавина солнечных зайчиков пляшет вокруг вас. Глаз мгновенно слепнут. Вы падаете наземь и отползаете с тропинки в кусты...\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="539" Text="Повезло"/>
 			<Option Destination="255" Text="Нет"/>
@@ -1355,6 +1379,12 @@
 	<Paragraph>
 		<ID>182</ID>
 		<Text>Вы идете мрачным коридором, прислушиваясь к эху своих шагов... и внезапно останавливаетесь. Показалось вам или нет, что впереди звенит по камням уже не эхо? Кто там?.. Вы замедляете шаги — и вдруг сверху лавиной обрушиваются камни.\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="614" Text="Повезло"/>
 			<Option Destination="234" Text="Нет"/>
@@ -1461,6 +1491,12 @@
 	<Paragraph>
 		<ID>194</ID>
 		<Text>Чем дальше идете, тем глубже и ветвистее становятся трещины на стенах. Вы уже хотите повернуть, но внезапно в толще каменных стен раздается странный гул. Видимо, эхо ваших шагов нарушило хрупкое равновесие — и грянул обвал!\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="278" Text="Повезет"/>
 			<Option Destination="566" Text="Нет"/>
@@ -1476,6 +1512,12 @@
 	<Paragraph>
 		<ID>196</ID>
 		<Text>Вы перешагиваете порог — и тут же где-то на улице тяжело ухает бомба. Взрывная волна врывается в комнату, сметая уцелевшие оконные стекла. Стены содрогаются, и вы видите, как над вашей головой от потолка к косяку начинает змеиться трещина...\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="16" Text="Повезло"/>
 			<Option Destination="600" Text="Нет"/>
@@ -2126,8 +2168,14 @@
 	<Paragraph>
 		<ID>284</ID>
 		<Text>В тоннеле сыро и темно, приходится очень внимательно глядеть под ноги...\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
-			<Option Destination="156" Text="Повезор"/>
+			<Option Destination="156" Text="Повезло"/>
 			<Option Destination="460" Text="Нет"/>
 		</Options>
 	</Paragraph>
@@ -2404,6 +2452,12 @@
 	<Paragraph>
 		<ID>321</ID>
 		<Text>Вы тщательно осматриваете прогалину и кусты вокруг нее...\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="609" Text="Повезло"/>
 			<Option Destination="109" Text="Нет"/>
@@ -2624,6 +2678,12 @@
 	<Paragraph>
 		<ID>350</ID>
 		<Text>Кольцо нагревается на руке — и какая-то сила поднимает вас в воздух. Но летите вы медленно и невысоко, и пираты успевают заметить вас...\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="606" Text="Повезло"/>
 			<Option Destination="54" Text="Нет"/>
@@ -2782,6 +2842,12 @@
 	<Paragraph>
 		<ID>371</ID>
 		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="407" Text="Повезло"/>
 			<Option Destination="175" Text="Нет"/>
@@ -2836,6 +2902,12 @@
 	<Paragraph>
 		<ID>378</ID>
 		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="226" Text="Повезло"/>
 			<Option Destination="574" Text="Нет"/>
@@ -2973,6 +3045,12 @@
 	<Paragraph>
 		<ID>396</ID>
 		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="476" Text="Повезло"/>
 			<Option Destination="136" Text="Нет"/>
@@ -3109,6 +3187,12 @@
 	<Paragraph>
 		<ID>414</ID>
 		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="526" Text="Повезло"/>
 			<Option Destination="266" Text="Нет"/>
@@ -3217,6 +3301,12 @@
 	<Paragraph>
 		<ID>428</ID>
 		<Text>Как же попасть к Воротам? Перепрыгнуть через эту отвратительную черноту? Нет, не хочется: расстояние очень серьезное. Разумнее вернуться и поискать веревку. Вы так и собираетесь поступить, но тут подземная тишина взрывается выстрелами. В тоннелях кипит сражение, оно катится сюда... раздумывать некогда. Разбежавшись, вы прыгаете...\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="264" Text="Повезло"/>
 			<Option Destination="512" Text="Нет"/>
@@ -3312,6 +3402,12 @@
 	<Paragraph>
 		<ID>441</ID>
 		<Text>Когда человечек пробегает под деревом, вы свешиваете руку вниз и, поймав его за шиворот, рывком втаскиваете на ветку. Слабо пискнув, человечек пытается сопротивляться, но тут же затихает, сообразив, в чем дело. Вы оба, затаившись в кроне, наблюдаете сквозь листву за толпой, которая, сгрудившись на пригорке, обозревает окрестности. Из неразборчивых воплей ваш автопереводчик выхватывает слово «колдовство». Да, наверное, так это и выглядит со стороны: человечек взмахнул руками, взмыл вверх и исчез... Интересно, преследователи останутся в заблуждении или наберутся смелости и внимательнее осмотрят место, где свершилось «чудо»?\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="41" Text="Повезло"/>
 			<Option Destination="545" Text="Нет"/>
@@ -3441,6 +3537,12 @@
 	<Paragraph>
 		<ID>458</ID>
 		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="582" Text="Повезло"/>
 			<Option Destination="102" Text="Нет"/>
@@ -3780,6 +3882,12 @@
 	<Paragraph>
 		<ID>503</ID>
 		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="307" Text="Повезло"/>
 			<Option Destination="443" Text="Нет"/>
@@ -4094,6 +4202,12 @@
 	<Paragraph>
 		<ID>546</ID>
 		<Text>Подтянувшись на руках, легко взбираетесь в невысокую, но широкую нишу. Темнотища — хоть глаз выколи! На ощупь изучаете вы холодные камни вокруг...\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="330" Text="Повезло"/>
 			<Option Destination="286" Text="Нет"/>
@@ -4698,6 +4812,12 @@
 	<Paragraph>
 		<ID>628</ID>
 		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="548" Text="Повезло"/>
 			<Option Destination="508" Text="Нет"/>
@@ -4819,6 +4939,12 @@
 	<Paragraph>
 		<ID>644</ID>
 		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="296" Text="Повезло"/>
 			<Option Destination="488" Text="Нет"/>
