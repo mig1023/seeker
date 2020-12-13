@@ -11,24 +11,13 @@ namespace Seeker.Gamebook.StringOfWorlds
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
+        public int RoundsToWin { get; set; }
 
         public List<Character> Enemies { get; set; }
-        public int RoundsToWin { get; set; }
-        public int WoundsToWin { get; set; }
 
         public string Text { get; set; }
-        public int Price { get; set; }
-        public bool Used { get; set; }
-        public bool Multiple { get; set; }
         public Modification Benefit { get; set; }
-        public bool ThisIsSpell { get; set; }
-
-        static Dictionary<string, bool> SpellActivate = new Dictionary<string, bool>
-        {
-            ["ЗАКЛЯТИЕ КОПИИ"] = false,
-            ["ЗАКЛЯТИЕ СИЛЫ"] = false,
-            ["ЗАКЛЯТИЕ СЛАБОСТИ"] = false,
-        };
+ 
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -47,82 +36,32 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Мастерство: {0}", Character.Protagonist.Mastery),
-                String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
-                String.Format("Удача: {0}", Character.Protagonist.Luck),
-                String.Format("Золото: {0}", Character.Protagonist.Gold)
+                String.Format("Ловскость: {0}", Character.Protagonist.Skill),
+                String.Format("Сила: {0}", Character.Protagonist.Strength),
+                String.Format("Обаяние: {0}", Character.Protagonist.Charm),
             };
 
             return statusLines;
         }
 
-        private static bool ParagraphWithFight(string spell)
-        {
-            if (Game.Data.CurrentParagraph.Actions == null)
-                return false;
+        public List<string> StaticButtons() => new List<string> { };
 
-            foreach (Game.Option option in Game.Data.CurrentParagraph.Options)
-                if (option.Text.ToUpper().Contains(spell))
-                    return false;
-
-            foreach (Actions action in Game.Data.CurrentParagraph.Actions)
-                if (action.Enemies != null)
-                    return true;
-
-            return false;
-        }
-
-        public List<string> StaticButtons()
-        {
-            List<string> staticButtons = new List<string> { };
-
-            if (Character.Protagonist.Spells.Contains("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"))
-                staticButtons.Add("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
-
-            foreach (string spell in new List<string> { "ЗАКЛЯТИЕ КОПИИ", "ЗАКЛЯТИЕ СИЛЫ", "ЗАКЛЯТИЕ СЛАБОСТИ" })
-                if (ParagraphWithFight(spell) && Character.Protagonist.Spells.Contains(spell) && !SpellActivate[spell])
-                    staticButtons.Add(spell);
-
-            return staticButtons;
-        }
-
-        public bool StaticAction(string action)
-        {
-            Character.Protagonist.Spells.Remove(action);
-
-            if (action.Contains("ИСЦЕЛЕНИЯ"))
-                Character.Protagonist.Endurance += 8;
-
-            foreach (string spell in new List<string> { "ЗАКЛЯТИЕ КОПИИ", "ЗАКЛЯТИЕ СИЛЫ", "ЗАКЛЯТИЕ СЛАБОСТИ" })
-                if (action == spell)
-                    SpellActivate[spell] = true;
-
-            return true;
-        }
+        public bool StaticAction(string action) => false;
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
             toEndText = "Начать сначала";
 
-            return (Character.Protagonist.Endurance <= 0 ? true : false);
+            return (Character.Protagonist.Strength <= 0 ? true : false);
         }
 
-        public bool IsButtonEnabled()
-        {
-            bool disabledSpellButton = ThisIsSpell && (Character.Protagonist.SpellSlots <= 0);
-            bool disabledGetOptions = (Price > 0) && Used;
-            bool disabledByPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
-
-            return !(disabledSpellButton || disabledGetOptions || disabledByPrice);
-        }
+        public bool IsButtonEnabled() => true;
 
         public static bool CheckOnlyIf(string option)
         {
-            if (option.Contains("ЗОЛОТО >="))
-                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Gold;
-            else if (option.Contains("ЗАКЛЯТИЕ"))
-                return Character.Protagonist.Spells.Contains(option);
+            if (option.Contains("БЛАСТЕР >="))
+                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Blaster;
             else
                 return Game.Data.Triggers.Contains(option);
         }
@@ -131,81 +70,75 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             List<string> enemies = new List<string>();
 
-            if (ActionName == "Get")
-            {
-                string countMarker = String.Empty;
-
-                if (ThisIsSpell)
-                {
-                    int count = 0;
-
-                    foreach (string spell in Character.Protagonist.Spells)
-                        if (spell == Text)
-                            count += 1;
-
-                    if (count > 0)
-                        countMarker = String.Format(" (x{0})", count);
-                }
-
-                return new List<string> { String.Format("{0}{1}", Text, countMarker) };
-            }
-
             if (Enemies == null)
                 return enemies;
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance));
+                enemies.Add(String.Format("{0}\nловкость {1}  сила {2}", enemy.Name, enemy.Skill, enemy.Strength));
 
             return enemies;
         }
 
         public List<string> Luck()
         {
-            int fisrtDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
+            Dictionary<int, string> luckList = new Dictionary<int, string>
+            {
+                [1] = "①",
+                [2] = "②",
+                [3] = "③",
+                [4] = "④",
+                [5] = "⑤",
+                [6] = "⑥",
 
-            bool goodLuck = (fisrtDice + secondDice) < Character.Protagonist.Luck;
-
-            List<string> luckCheck = new List<string> {
-                        String.Format( "Проверка удачи: {0} ⚄ + {1} ⚄ {2} {3}", fisrtDice, secondDice, (goodLuck ? "<=" : ">"), Character.Protagonist.Luck )
+                [11] = "❶",
+                [12] = "❷",
+                [13] = "❸",
+                [14] = "❹",
+                [15] = "❺",
+                [16] = "❻",
             };
 
-            Character.Protagonist.Luck -= 1;
+            List<string> luckCheck = new List<string> { "Цифры удачи:" };
 
-            luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            string luckListShow = String.Empty;
+
+            for (int i = 1; i < 7; i++)
+                luckListShow += (Character.Protagonist.Luck[i] ? luckList[i] : luckList[i + 10]) + " ";
+
+            luckCheck.Add("BIG|" + luckListShow);
+
+            int goodLuck = Game.Dice.Roll();
+
+            luckCheck.Add(String.Format("Проверка удачи: {0} ⚄ - {1}зачёркунтый", goodLuck, (Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty)));
+
+            luckCheck.Add(Character.Protagonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            Character.Protagonist.Luck[goodLuck] = !Character.Protagonist.Luck[goodLuck];
 
             return luckCheck;
         }
 
-        public List<string> Get()
+        private bool NoMoreEnemies(List<Character> enemies)
         {
-            if (ThisIsSpell && (Character.Protagonist.SpellSlots >= 1))
-            {
-                Character.Protagonist.Spells.Add(Text);
-                Character.Protagonist.SpellSlots -= 1;
-            }
-            else if ((Price > 0) && (Character.Protagonist.Gold >= Price))
-            {
-                Character.Protagonist.Gold -= Price;
+            foreach (Character enemy in enemies)
+                if (enemy.Strength > 0)
+                    return false;
 
-                if (!Multiple)
-                    Used = true;
-
-                if (Benefit != null)
-                    Benefit.Do();
-            }
-
-            return new List<string> { "RELOAD" };
+            return true;
         }
 
-        private bool WinInFight(ref List<string> fight, ref int round, ref Character hero, ref List<Character> FightEnemies,
-            ref int enemyWounds, bool copyFight = false)
+        public List<string> Fight()
         {
-            if (copyFight)
-            {
-                fight.Add(String.Format("BOLD|Вместо вас будет сражаться: {0}", hero.Name));
-                fight.Add(String.Empty);
-            }
+            List<string> fight = new List<string>();
+
+            List<Character> FightEnemies = new List<Character>();
+
+            foreach (Character enemy in Enemies)
+                FightEnemies.Add(enemy.Clone());
+
+            int round = 1;
+
+            Character hero = Character.Protagonist;
 
             while (true)
             {
@@ -213,76 +146,70 @@ namespace Seeker.Gamebook.StringOfWorlds
 
                 foreach (Character enemy in FightEnemies)
                 {
-                    if (enemy.Endurance <= 0)
+                    if (enemy.Strength <= 0)
                         continue;
 
-                    fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
+                    Character enemyInFight = enemy;
+                    fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
 
-                    if (copyFight)
-                        fight.Add(String.Format("{0} (выносливость {1})", hero.Name, hero.Endurance));
+                    int protagonistRollFirst = Game.Dice.Roll();
+                    int protagonistRollSecond = Game.Dice.Roll();
+                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + hero.Skill;
 
-                    int firstHeroRoll = Game.Dice.Roll();
-                    int secondHeroRoll = Game.Dice.Roll();
-                    int heroHitStrength = firstHeroRoll + secondHeroRoll + hero.Mastery;
+                    fight.Add(String.Format("Мощность вашего удара: {0} ⚄ + {1} ⚄ + {2} = {3}",
+                        protagonistRollFirst, protagonistRollSecond, hero.Skill, protagonistHitStrength
+                    ));
 
-                    fight.Add(
-                        String.Format(
-                            "Сила {0}: {1} ⚄ + {2} ⚄ + {3} = {4}",
-                            (copyFight ? "удара копии" : "вашего удара"),
-                            firstHeroRoll, secondHeroRoll, hero.Mastery, heroHitStrength
-                        )
-                    );
+                    int enemyRollFirst = Game.Dice.Roll();
+                    int enemyRollSecond = Game.Dice.Roll();
+                    int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
 
-                    int firstEnemyRoll = Game.Dice.Roll();
-                    int secondEnemyRoll = Game.Dice.Roll();
-                    int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Mastery;
+                    fight.Add(String.Format("Мощность его удара: {0} ⚄ + {1} ⚄ + {1} = {2}",
+                        enemyRollFirst, enemyRollSecond, enemy.Skill, enemyHitStrength
+                    ));
 
-                    fight.Add(
-                        String.Format(
-                            "Сила удара врага: {0} ⚄ + {1} ⚄ + {2} = {3}",
-                            firstEnemyRoll, secondEnemyRoll, enemy.Mastery, enemyHitStrength
-                        )
-                    );
-
-                    if (heroHitStrength > enemyHitStrength)
+                    if (protagonistHitStrength > enemyHitStrength)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
-                        enemy.Endurance -= 2;
 
-                        if (enemy.Endurance <= 0)
-                            enemy.Endurance = 0;
+                        enemy.Strength -= 2;
 
-                        enemyWounds += 1;
+                        if (enemy.Strength <= 0)
+                            enemy.Strength = 0;
 
-                        bool enemyLost = true;
+                        bool enemyLost = NoMoreEnemies(FightEnemies);
 
-                        foreach (Character e in FightEnemies)
-                            if (e.Endurance > 0)
-                                enemyLost = false;
-
-                        if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
-                            return true;
+                        if (enemyLost)
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                            return fight;
+                        }
                     }
-                    else if (heroHitStrength < enemyHitStrength)
+                    else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил {1}", enemy.Name, (copyFight ? "копию" : "вас")));
-                        
-                        hero.Endurance -= 2;
+                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+                        hero.Strength -= 2;
 
-                        if (hero.Endurance < 0)
-                            hero.Endurance = 0;
+                        if (hero.Strength < 0)
+                            hero.Strength = 0;
 
-                        if (hero.Endurance <= 0)
-                            return false;
+                        if (hero.Strength <= 0)
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                            return fight;
+                        }
                     }
                     else
-                        fight.Add("BOLD|Ничья в раунде");
+                        fight.Add(String.Format("BOLD|Ничья в раунде"));
 
                     if ((RoundsToWin > 0) && (RoundsToWin <= round))
                     {
                         fight.Add(String.Empty);
-                        fight.Add("BAD|Отведённые на победу раунды истекли.");
-                        return false;
+                        fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
+                        fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                        return fight;
                     }
 
                     fight.Add(String.Empty);
@@ -290,88 +217,6 @@ namespace Seeker.Gamebook.StringOfWorlds
 
                 round += 1;
             }
-        }
-
-        public List<string> Fight()
-        {
-            List<string> fight = new List<string>();
-
-            int round = 1;
-            int enemyWounds = 0;
-
-            List<Character> FightEnemies = new List<Character>();
-
-            foreach (Character enemy in Enemies)
-                FightEnemies.Add(enemy.Clone());
-
-            if (SpellActivate["ЗАКЛЯТИЕ СЛАБОСТИ"])
-            {
-                SpellActivate["ЗАКЛЯТИЕ СЛАБОСТИ"] = false;
-
-                int oldEnemyMastery = FightEnemies[0].Mastery;
-                FightEnemies[0].Mastery -= 2;
-
-                fight.Add(String.Format(
-                    "BOLD|Заклятье слабости ослабляет вашего противника: {0} теперь имеет ловкость {1} вместо {2}",
-                    FightEnemies[0].Name, FightEnemies[0].Mastery, oldEnemyMastery
-                ));
-
-                fight.Add(String.Empty);
-            }
-
-            if (SpellActivate["ЗАКЛЯТИЕ КОПИИ"])
-            {
-                SpellActivate["ЗАКЛЯТИЕ КОПИИ"] = false;
-
-                Character enemyCopy = FightEnemies[0].Clone();
-                enemyCopy.Name += "-копия";
-
-                bool copyWin = WinInFight(ref fight, ref round, ref enemyCopy, ref FightEnemies, ref enemyWounds, copyFight: true);
-
-                fight.Add(String.Empty);
-
-                if (copyWin)
-                {
-                    fight.Add("BIG|GOOD|Копия ПОБЕДИЛА :)");
-                    return fight;
-                }
-
-                else if ((RoundsToWin > 0) && (RoundsToWin <= round))
-                {
-                    fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
-                    return fight;
-                }
-
-                else
-                    fight.Add("BIG|BAD|Копия проиграла, дальше сражаться придётся вам");
-
-                fight.Add(String.Empty);
-            }
-
-            int oldMastery = Character.Protagonist.Mastery;
-
-            if (SpellActivate["ЗАКЛЯТИЕ СИЛЫ"])
-            {
-                SpellActivate["ЗАКЛЯТИЕ СИЛЫ"] = false;
-
-                Character.Protagonist.Mastery += 2;
-
-                fight.Add(String.Format(
-                    "BOLD|Заклятье Силы увеличивает ваше мастерство: на время этого боя она равна {0}",
-                    Character.Protagonist.Mastery
-                ));
-
-                fight.Add(String.Empty);
-            }
-
-            bool win = WinInFight(ref fight, ref round, ref Character.Protagonist, ref FightEnemies, ref enemyWounds);
-
-            Character.Protagonist.Mastery = oldMastery;
-
-            fight.Add(String.Empty);
-            fight.Add(win ? "BIG|GOOD|Вы ПОБЕДИЛИ :)" : "BIG|BAD|Вы ПРОИГРАЛИ :(");
-
-            return fight;
         }
     }
 }

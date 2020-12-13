@@ -12,19 +12,14 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public void Do()
         {
-            if (Name == "RemoveSpell")
-                Character.Protagonist.Spells.RemoveAt(Character.Protagonist.Spells.IndexOf(ValueString));
-            else
-            {
-                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-                currentValue += Value;
+            currentValue += Value;
 
-                if (currentValue < 0)
-                    currentValue = 0;
+            if (currentValue < 0)
+                currentValue = 0;
 
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
-            }
+            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
         }
     }
 }

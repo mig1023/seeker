@@ -52,11 +52,6 @@ namespace Seeker.Gamebook.StringOfWorlds
                     Text = Game.Xml.StringParse(xmlAction["Text"]),
 
                     RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
-                    WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
-                    Price = Game.Xml.IntParse(xmlAction["Price"]),
-
-                    Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
-                    ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]),
                 };
 
                 if (xmlAction["Enemies"] != null)
@@ -68,8 +63,8 @@ namespace Seeker.Gamebook.StringOfWorlds
                         Character enemy = new Character
                         {
                             Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                            Mastery = Game.Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
-                            Endurance = Game.Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
+                            Skill = Game.Xml.IntParse(xmlEnemy.Attributes["Skill"]),
+                            Strength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
                         };
 
                         action.Enemies.Add(enemy);
