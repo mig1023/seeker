@@ -30,7 +30,20 @@ namespace Seeker.Gamebook.StringOfWorlds
                     OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
                 };
 
-                if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int destination))
+                if (xmlOption.Attributes["Destination"].Value == "Gate")
+                {
+                    if (Character.Protagonist.GateCode <= 0)
+                        continue;
+                    else
+                    {
+                        foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
+                            if (xmlModification.Attributes["Name"].Value == "GateCode")
+                                Character.Protagonist.GateCode += Game.Xml.IntParse(xmlModification.Attributes["Value"]);
+                        
+                        option.Destination = Character.Protagonist.GateCode;
+                    }
+                }
+                else if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int destination))
                     option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
                 else
                 {
