@@ -39,7 +39,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Ловскость: {0}", Character.Protagonist.Skill),
+                String.Format("Ловкость: {0}", Character.Protagonist.Skill),
                 String.Format("Сила: {0}", Character.Protagonist.Strength),
                 String.Format("Обаяние: {0}", Character.Protagonist.Charm),
             };
@@ -129,10 +129,26 @@ namespace Seeker.Gamebook.StringOfWorlds
             bool goodCharm = (fisrtDice + secondDice) <= Character.Protagonist.Charm;
 
             List<string> luckCheck = new List<string> {
-                String.Format( "Проверка обаяния: {0} ⚄ + {1} ⚄ {2} {3}", fisrtDice, secondDice, (goodCharm ? "<=" : ">"), Character.Protagonist.Charm )
+                String.Format( "Проверка обаяния: {0} ⚄ + {1} ⚄ {2} {3}", fisrtDice, secondDice, (goodCharm ? "<=" : ">"), Character.Protagonist.Charm)
             };
 
             luckCheck.Add(goodCharm ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            return luckCheck;
+        }
+
+        public List<string> Skill()
+        {
+            int fisrtDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            bool goodSkill = (fisrtDice + secondDice) <= Character.Protagonist.Skill;
+
+            List<string> luckCheck = new List<string> {
+                String.Format( "Проверка ловкости: {0} ⚄ + {1} ⚄ {2} {3}", fisrtDice, secondDice, (goodSkill ? "<=" : ">"), Character.Protagonist.Skill)
+            };
+
+            luckCheck.Add(goodSkill ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
             return luckCheck;
         }
