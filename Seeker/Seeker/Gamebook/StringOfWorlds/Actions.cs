@@ -65,6 +65,8 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             if (option.Contains("БЛАСТЕР >="))
                 return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Blaster;
+            else if (option.Contains("!") && (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim())))
+                return false;
             else
                 return Game.Data.Triggers.Contains(option);
         }
