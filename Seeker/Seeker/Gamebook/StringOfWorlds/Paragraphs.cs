@@ -115,6 +115,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             }
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
+            paragraph.RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTrigger"]);
 
             return paragraph;
         }
