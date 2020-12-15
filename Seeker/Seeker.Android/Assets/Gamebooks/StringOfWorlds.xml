@@ -1076,6 +1076,12 @@
 	<Paragraph>
 		<ID>119</ID>
 		<Text>Что ж, рискните еще раз.</Text>
+		<Actions>
+			<Action>
+				<ActionName>GameOfDice</ActionName>
+				<ButtonName>Кинуть кубики</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="311" Text="Выиграли"/>
 			<Option Destination="439" Text="Проиграли"/>
@@ -4818,6 +4824,12 @@
 	<Paragraph>
 		<ID>543</ID>
 		<Text>Что ж, сыграйте еще партию.</Text>
+		<Actions>
+			<Action>
+				<ActionName>GameOfDice</ActionName>
+				<ButtonName>Кинуть кубики</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="389" Text="Выиграете"/>
 			<Option Destination="413" Text="Проиграете"/>
@@ -5112,6 +5124,12 @@
 	<Paragraph>
 		<ID>579</ID>
 		<Text>Правила игры просты. Бросьте кубик дважды за себя и дважды за своего партнера. Если сумма чисел, выпавших у вас, окажется больше, чем у противника, вы выиграли. Если же ему выпадет больше очков, то выиграл он.</Text>
+		<Actions>
+			<Action>
+				<ActionName>GameOfDice</ActionName>
+				<ButtonName>Кинуть кубики</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="389" Text="Вы выиграли"/>
 			<Option Destination="281" Text="Выиграл он"/>

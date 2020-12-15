@@ -215,6 +215,33 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             return diceCheck;
         }
+        
+        public List<string> GameOfDice()
+        {
+            List<string> diceGame = new List<string> { };
+
+            int myResult, enemyResult;
+
+            do
+            {
+                int firstDice = Game.Dice.Roll();
+                int secondDice = Game.Dice.Roll();
+                myResult = firstDice + secondDice;
+                diceGame.Add(String.Format("Вы бросили: {0} ⚄ + {1} ⚄ = {2}", firstDice, secondDice, myResult));
+
+                int hisFirstDice = Game.Dice.Roll();
+                int hisSecondDice = Game.Dice.Roll();
+                enemyResult = hisFirstDice + hisSecondDice;
+                diceGame.Add(String.Format("Он бросил: {0} ⚄ + {1} ⚄ = {2}", hisFirstDice, hisSecondDice, enemyResult));
+
+                diceGame.Add(String.Empty);
+            }
+            while (myResult == enemyResult);
+
+            diceGame.Add(myResult > enemyResult ? "BIG|GOOD|ВЫИГРАЛИ :)" : "BIG|BAD|ПРОИГРАЛИ :(");
+
+            return diceGame;
+        }
 
         public List<string> Break()
         {
