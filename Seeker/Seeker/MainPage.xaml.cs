@@ -215,9 +215,9 @@ namespace Seeker
 
                 Status.IsVisible = true;
 
-                if (!String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusFont)))
+                if (!String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBorder)))
                 {
-                    StatusBorder.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusFont));
+                    StatusBorder.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBorder));
                     StatusBorder.IsVisible = true;
                     MainGrid.RowDefinitions[1].Height = 1;
                 }
