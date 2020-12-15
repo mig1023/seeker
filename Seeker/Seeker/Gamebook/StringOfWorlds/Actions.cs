@@ -94,6 +94,8 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             if (option.Contains("БЛАСТЕР >="))
                 return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Blaster;
+            else if (option.Contains("БЛАСТЕР <"))
+                return int.Parse(option.Split('<')[1]) > Character.Protagonist.Blaster;
             else if (option.Contains("ОЧКИ"))
                 return Character.Protagonist.Equipment == "Очки";
             else if (option.Contains("ЗАЖИГАЛКА"))
