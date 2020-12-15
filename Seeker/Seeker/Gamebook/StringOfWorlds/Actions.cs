@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public bool HeroWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
         public bool DevastatingAttack { get; set; }
+        public string Equipment { get; set; }
 
         public List<Character> Enemies { get; set; }
 
@@ -47,9 +48,30 @@ namespace Seeker.Gamebook.StringOfWorlds
             return statusLines;
         }
 
-        public List<string> StaticButtons() => new List<string> { };
+        public List<string> StaticButtons()
+        {
+            List<string> staticButtons = new List<string> { };
 
-        public bool StaticAction(string action) => false;
+            if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
+                return staticButtons;
+
+            if (Character.Protagonist.Equipment == "Тюбик")
+                staticButtons.Add("СЪЕСТЬ ПАСТУ");
+
+            return staticButtons;
+        }
+
+        public bool StaticAction(string action)
+        {
+            if ((action == "СЪЕСТЬ ПАСТУ") && (Character.Protagonist.Strength < 24))
+            {
+                Character.Protagonist.Equipment = String.Empty;
+                Character.Protagonist.Strength = 24;
+                return true;
+            }
+
+            return false;
+        }
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
@@ -59,12 +81,22 @@ namespace Seeker.Gamebook.StringOfWorlds
             return (Character.Protagonist.Strength <= 0 ? true : false);
         }
 
-        public bool IsButtonEnabled() => true;
+        public bool IsButtonEnabled()
+        {
+            if (!String.IsNullOrEmpty(Equipment) && !String.IsNullOrEmpty(Character.Protagonist.Equipment))
+                return false;
+            else
+                return true;
+        }
 
         public static bool CheckOnlyIf(string option)
         {
             if (option.Contains("БЛАСТЕР >="))
                 return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Blaster;
+            else if (option.Contains("ОЧКИ"))
+                return Character.Protagonist.Equipment == "Очки";
+            else if (option.Contains("ЗАЖИГАЛКА"))
+                return Character.Protagonist.Equipment == "Зажигалка";
             else if (option.Contains("!") && (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim())))
                 return false;
             else
@@ -74,6 +106,9 @@ namespace Seeker.Gamebook.StringOfWorlds
         public List<string> Representer()
         {
             List<string> enemies = new List<string>();
+
+            if (!String.IsNullOrEmpty(Text))
+                return new List<string> { Text };
 
             if (Enemies == null)
                 return enemies;
@@ -178,6 +213,14 @@ namespace Seeker.Gamebook.StringOfWorlds
             breakingDoor.Add(succesBreaked ? "BIG|GOOD|ДВЕРЬ ВЗЛОМАНА :)" : "BIG|BAD|ВЫ УБИЛИСЬ ОБ ДВЕРЬ :(");
 
             return breakingDoor;
+        }
+
+        public List<string> Get()
+        {
+            if (!String.IsNullOrEmpty(Equipment))
+                Character.Protagonist.Equipment = Equipment;
+
+            return new List<string> { "RELOAD" };
         }
 
         private bool NoMoreEnemies(List<Character> enemies)

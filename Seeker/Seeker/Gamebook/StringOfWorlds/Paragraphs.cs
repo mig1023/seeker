@@ -65,6 +65,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
                     Text = Game.Xml.StringParse(xmlAction["Text"]),
+                    Equipment = Game.Xml.StringParse(xmlAction["Equipment"]),
 
                     RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
 
