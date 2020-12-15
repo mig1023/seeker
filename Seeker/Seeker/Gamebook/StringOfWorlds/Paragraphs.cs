@@ -18,6 +18,8 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             Game.Paragraph paragraph = new Game.Paragraph();
 
+            Constants.RandomColor();
+
             paragraph.Options = new List<Option>();
             paragraph.Actions = new List<Abstract.IActions>();
             paragraph.Modification = new List<Abstract.IModification>();
