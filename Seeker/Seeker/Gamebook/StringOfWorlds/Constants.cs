@@ -10,13 +10,14 @@ namespace Seeker.Gamebook.StringOfWorlds
 {
     class Constants : Abstract.IConstants
     {
-        private static int ColorShiftAmount = 55;
+        private static int ColorShiftAmount = 45;
 
         private static List<int> LastColor = new List<int>();
 
         private static List<int> StatusColor = null;
 
         private static int ShiftFactor = 0;
+        private static bool ShiftDirectionUp = true;
 
         private static Random random = new Random();
 
@@ -32,21 +33,31 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public static void RandomColor()
         {
-            ShiftFactor = random.Next(3);
-
             LastColor.Clear();
 
             for (int i = 0; i < 3; i++)
                 LastColor.Add(random.Next(256));
+
+            ShiftFactor = random.Next(3);
 
             StatusColor = new List<int>(LastColor);
         }
 
         private static string NextColor()
         {
-            LastColor[ShiftFactor] += (ColorShiftAmount * (LastColor[ShiftFactor] <= 200 ? 1 : -1));
+            ShiftDirectionUp = ShiftDirectionCheck();
+
+            LastColor[ShiftFactor] += (ColorShiftAmount * (ShiftDirectionUp ? 1 : -1));
 
             return HexColor(LastColor[0], LastColor[1], LastColor[2]);
+        }
+
+        private static bool ShiftDirectionCheck()
+        {
+            if (ShiftDirectionUp)
+                return LastColor[ShiftFactor] < (255 - ColorShiftAmount);
+            else
+                return LastColor[ShiftFactor] < ColorShiftAmount;
         }
 
         private static string HexColor(int r, int g, int b)
