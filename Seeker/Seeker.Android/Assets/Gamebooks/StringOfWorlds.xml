@@ -492,6 +492,12 @@
 	<Paragraph>
 		<ID>54</ID>
 		<Text>Бросьте кубик дважды. Сумма выпавших цифр покажет, на сколько уменьшат вашу СИЛУ задевшие вас пиратские пули. Если после этого вы живы — значит, вам удалось перелететь пещеру.</Text>
+		<Actions>
+			<Action>
+				<ActionName>DiceWounds</ActionName>
+				<ButtonName>Кинуть кубики</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="202" Text="Далее"/>
 		</Options>

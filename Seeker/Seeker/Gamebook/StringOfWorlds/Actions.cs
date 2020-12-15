@@ -193,6 +193,29 @@ namespace Seeker.Gamebook.StringOfWorlds
             return luckCheck;
         }
 
+        public List<string> DiceWounds()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dices = 0;
+
+            for (int i = 1; i <= 2; i++)
+            {
+                int dice = Game.Dice.Roll();
+                dices += dice;
+                diceCheck.Add(String.Format("На {0} выпало: {1} ⚄", i, dice));
+            }
+
+            Character.Protagonist.Strength -= dices;
+
+            if (Character.Protagonist.Strength < 0)
+                Character.Protagonist.Strength = 0;
+
+            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
+
+            return diceCheck;
+        }
+
         public List<string> Break()
         {
             List<string> breakingDoor = new List<string> { "Ломаете дверь:" };
