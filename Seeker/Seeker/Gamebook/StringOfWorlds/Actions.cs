@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public bool HeroWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
         public bool DevastatingAttack { get; set; }
+        public bool DarknessPenalty { get; set; }
         public string Equipment { get; set; }
 
         public List<Character> Enemies { get; set; }
@@ -243,6 +244,11 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             int round = 1;
 
+            int skillPenalty = 0;
+
+            if (DarknessPenalty && (Character.Protagonist.Equipment != "Очки"))
+                skillPenalty += 1;
+
             Character hero = Character.Protagonist;
 
             while (true)
@@ -259,10 +265,11 @@ namespace Seeker.Gamebook.StringOfWorlds
 
                     int protagonistRollFirst = Game.Dice.Roll();
                     int protagonistRollSecond = Game.Dice.Roll();
-                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + hero.Skill;
+                    int heroSkill = (hero.Skill - skillPenalty);
+                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + heroSkill;
 
                     fight.Add(String.Format("Мощность вашего удара: {0} ⚄ + {1} ⚄ + {2} = {3}",
-                        protagonistRollFirst, protagonistRollSecond, hero.Skill, protagonistHitStrength
+                        protagonistRollFirst, protagonistRollSecond, heroSkill, protagonistHitStrength
                     ));
 
                     int enemyRollFirst = Game.Dice.Roll();
