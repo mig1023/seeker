@@ -12,14 +12,22 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public void Do()
         {
-            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+            if (Name == "StrengthFullRecovery")
+            {
+                if (Character.Protagonist.StrengthAtStart > Character.Protagonist.Strength)
+                    Character.Protagonist.Strength = Character.Protagonist.StrengthAtStart;
+            }
+            else
+            {
+                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-            currentValue += Value;
+                currentValue += Value;
 
-            if (currentValue < 0)
-                currentValue = 0;
+                if (currentValue < 0)
+                    currentValue = 0;
 
-            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+            }
         }
     }
 }

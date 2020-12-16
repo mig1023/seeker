@@ -16,6 +16,8 @@ namespace Seeker.Gamebook.StringOfWorlds
         public int Charm { get; set; }
         public int Blaster { get; set; }
         public int GateCode { get; set; }
+        public string Equipment { get; set; }
+        public int StrengthAtStart { get; set; }
         public Dictionary<int, bool> Luck { get; set; }
 
         public void Init()
@@ -70,9 +72,11 @@ namespace Seeker.Gamebook.StringOfWorlds
             Skill = Skills[dice];
             Strength = Strengths[dice];
             Charm = Charms[dice];
+            StrengthAtStart = Strength;
 
             Blaster = 1;
             GateCode = 0;
+            Equipment = String.Empty;
 
             Luck = new Dictionary<int, bool>
             {
@@ -98,6 +102,8 @@ namespace Seeker.Gamebook.StringOfWorlds
                 Charm = this.Charm,
                 Blaster = this.Blaster,
                 GateCode = this.GateCode,
+                Equipment = this.Equipment,
+                StrengthAtStart = this.StrengthAtStart,
             };
         }
 
@@ -109,8 +115,8 @@ namespace Seeker.Gamebook.StringOfWorlds
                 lucks.Add(luck ? "1" : "0");
 
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}",
-                Skill, Strength, Charm, Blaster, GateCode, String.Join(",", lucks)
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}",
+                Skill, Strength, Charm, Blaster, GateCode, Equipment, StrengthAtStart, String.Join(",", lucks)
             );
         }
 
@@ -123,8 +129,10 @@ namespace Seeker.Gamebook.StringOfWorlds
             Charm = int.Parse(save[2]);
             Blaster = int.Parse(save[3]);
             GateCode = int.Parse(save[4]);
+            Equipment = save[5];
+            StrengthAtStart = int.Parse(save[6]);
 
-            string[] lucks = save[5].Split(',');
+            string[] lucks = save[7].Split(',');
 
             for (int i = 0; i < 6; i++)
                 Luck[i + 1] = (lucks[i] == "1" ? true : false);
