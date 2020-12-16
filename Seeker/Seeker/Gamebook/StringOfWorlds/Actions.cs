@@ -122,7 +122,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             return enemies;
         }
 
-        public List<string> Luck()
+        private string LuckNumbers()
         {
             Dictionary<int, string> luckList = new Dictionary<int, string>
             {
@@ -141,14 +141,21 @@ namespace Seeker.Gamebook.StringOfWorlds
                 [16] = "❻",
             };
 
-            List<string> luckCheck = new List<string> { "Цифры удачи:" };
-
             string luckListShow = String.Empty;
 
             for (int i = 1; i < 7; i++)
                 luckListShow += (Character.Protagonist.Luck[i] ? luckList[i] : luckList[i + 10]) + " ";
 
-            luckCheck.Add("BIG|" + luckListShow);
+            return luckListShow;
+        }
+
+        public List<string> Luck()
+        {
+            List<string> luckCheck = new List<string>
+            {
+                "Цифры удачи:",
+                "BIG|" + LuckNumbers()
+            };
 
             int goodLuck = Game.Dice.Roll();
 
@@ -159,6 +166,31 @@ namespace Seeker.Gamebook.StringOfWorlds
             Character.Protagonist.Luck[goodLuck] = !Character.Protagonist.Luck[goodLuck];
 
             return luckCheck;
+        }
+
+        public List<string> LuckRecovery()
+        {
+            List<string> luckRecovery = new List<string> { "Восстановление удачи:" };
+
+            bool success = false;
+
+            for (int i = 1; i < 7; i++)
+                if (!Character.Protagonist.Luck[i])
+                {
+                    luckRecovery.Add(String.Format("GOOD|Цифра {0} восстановлена!", i));
+                    Character.Protagonist.Luck[i] = true;
+                    success = true;
+
+                    break;
+                }
+
+            if (!success)
+                luckRecovery.Add("BAD|Все цифры и так счастливые!");
+
+            luckRecovery.Add("Цифры удачи теперь:");
+            luckRecovery.Add("BIG|" + LuckNumbers());
+
+            return luckRecovery;
         }
 
         public List<string> Charm()
