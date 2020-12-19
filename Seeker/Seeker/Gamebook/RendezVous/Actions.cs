@@ -28,10 +28,7 @@ namespace Seeker.Gamebook.RendezVous
             return actionResult;
         }
 
-        public List<string> Representer()
-        {
-            return new List<string> { };
-        }
+        public List<string> Representer() => new List<string> { };
 
         public List<string> Status()
         {
@@ -50,15 +47,12 @@ namespace Seeker.Gamebook.RendezVous
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
-            toEndText = "Начать с начала...";
+            toEndText = String.Empty;
 
             return false;
         }
 
-        public bool IsButtonEnabled()
-        {
-            return true;
-        }
+        public bool IsButtonEnabled() => true;
 
         public static bool CheckOnlyIf(string option)
         {

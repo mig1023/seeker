@@ -20,10 +20,7 @@ namespace Seeker.Gamebook.RockOfTerror
             return new List<string> { };
         }
 
-        public List<string> Representer()
-        {
-            return new List<string> { };
-        }
+        public List<string> Representer() => new List<string> { };
 
         public List<string> Status()
         {
@@ -49,10 +46,7 @@ namespace Seeker.Gamebook.RockOfTerror
             return (Character.Protagonist.Time >= 720 ? true : false);
         }
 
-        public bool IsButtonEnabled()
-        {
-            return true;
-        }
+        public bool IsButtonEnabled() => true;
 
         public static bool CheckOnlyIf(string option)
         {

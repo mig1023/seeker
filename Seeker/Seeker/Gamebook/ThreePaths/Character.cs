@@ -10,58 +10,35 @@ namespace Seeker.Gamebook.ThreePaths
         public static Character Protagonist = new Gamebook.ThreePaths.Character();
 
         public string Name { get; set; }
-
-        public int Mastery { get; set; }
-        public int Endurance { get; set; }
-        public int Luck { get; set; }
-        public int Gold { get; set; }
-        public List<string> Spells { get; set; }
-        public int SpellSlots { get; set; }
+        public int? Time { get; set; }
+        public int? Spells { get; set; }
 
         public void Init()
         {
-            Mastery = Game.Dice.Roll() + 6;
-            Endurance = Game.Dice.Roll(dices: 2) + 12;
-            Luck = Game.Dice.Roll() + 6;
-            Gold = 15;
-            SpellSlots = 10;
-            Spells = new List<string>();
+            Time = null;
+            Spells = null;
         }
 
         public Character Clone()
         {
             return new Character()
             {
-                Name = this.Name,
-                Mastery = this.Mastery,
-                Endurance = this.Endurance,
-                Luck = this.Luck,
-                Gold = this.Gold,
-                SpellSlots = this.SpellSlots,
-                Spells = new List<string>(),
+                Time = this.Time,
+                Spells = this.Spells,
             };
         }
 
         public string Save()
         {
-            string spells = String.Join(",", Spells);
-
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}",
-                Mastery, Endurance, Luck, Gold, SpellSlots, spells
-            );
+            return String.Format("{0}|{1}", Time, Spells);
         }
 
         public void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
-            Mastery = int.Parse(save[0]);
-            Endurance = int.Parse(save[1]);
-            Luck = int.Parse(save[2]);
-            Gold = int.Parse(save[3]);
-            SpellSlots = int.Parse(save[4]);
-            Spells = save[5].Split(',').ToList();
+            Time = Game.Continue.IntNullableParse(save[0]);
+            Spells = Game.Continue.IntNullableParse(save[1]);
         }
     }
 }

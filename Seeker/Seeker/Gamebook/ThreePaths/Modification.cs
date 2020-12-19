@@ -8,12 +8,11 @@ namespace Seeker.Gamebook.ThreePaths
     {
         public string Name { get; set; }
         public int Value { get; set; }
-        public string ValueString { get; set; }
 
         public void Do()
         {
-            if (Name == "RemoveSpell")
-                Character.Protagonist.Spells.RemoveAt(Character.Protagonist.Spells.IndexOf(ValueString));
+            if (Name == "Trigger")
+                Game.Option.Trigger(Value.ToString());
             else
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);

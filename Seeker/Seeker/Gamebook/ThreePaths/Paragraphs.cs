@@ -29,6 +29,17 @@ namespace Seeker.Gamebook.ThreePaths
                     OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
                 };
 
+                if (xmlOption.Attributes["Do"] != null)
+                {
+                    Modification modification = new Modification
+                    {
+                        Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]),
+                        Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]),
+                    };
+
+                    option.Do = modification;
+                }
+
                 paragraph.Options.Add(option);
             }
 
@@ -40,34 +51,7 @@ namespace Seeker.Gamebook.ThreePaths
                     ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                    Text = Game.Xml.StringParse(xmlAction["Text"]),
-
-                    RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
-                    WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
-                    Price = Game.Xml.IntParse(xmlAction["Price"]),
-
-                    Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
-                    ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]),
                 };
-
-                if (xmlAction["Enemies"] != null)
-                {
-                    action.Enemies = new List<Character>();
-
-                    foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
-                    {
-                        Character enemy = new Character
-                        {
-                            Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                            Mastery = Game.Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
-                            Endurance = Game.Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
-                        };
-
-                        action.Enemies.Add(enemy);
-                    }
-                }
-
-                action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
                 paragraph.Actions.Add(action);
             }
