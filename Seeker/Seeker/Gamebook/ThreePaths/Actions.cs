@@ -26,11 +26,14 @@ namespace Seeker.Gamebook.ThreePaths
         {
             List<string> statusLines = new List<string>();
 
-            if (Character.Protagonist.Time > 1)
-                String.Format("Время: {0}", Character.Protagonist.Time);
+            if (Character.Protagonist.Time != null)
+                statusLines.Add(String.Format("Время: {0}", Character.Protagonist.Time));
 
-            if (Character.Protagonist.Spells > 1)
-                String.Format("Заклятий: {0}", Character.Protagonist.Spells);
+            if (Character.Protagonist.Spells != null)
+                statusLines.Add(String.Format("Заклятий: {0}", Character.Protagonist.Spells));
+
+            if (statusLines.Count == 0)
+                return null;
 
             return statusLines;
         }
@@ -51,10 +54,25 @@ namespace Seeker.Gamebook.ThreePaths
 
         public static bool CheckOnlyIf(string option)
         {
-            if (option.Contains("!"))
-                return (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()) ? false : true);
-            else
-                return Game.Data.Triggers.Contains(option);
+            string[] options = option.Split(',');
+
+            foreach (string oneOption in options)
+            {
+                if (oneOption.Contains(">") || oneOption.Contains("<"))
+                {
+                    if (oneOption.Contains("ЗАКЛЯТЬЯ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Spells))
+                        return false;
+                }
+                else if (oneOption.Contains("!"))
+                {
+                    if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        return false;
+                }
+                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                    return false;
+            }
+
+            return true;
         }
 
         public List<string> Representer() => new List<string> { };

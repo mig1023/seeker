@@ -8,21 +8,27 @@ namespace Seeker.Gamebook.ThreePaths
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public bool Init { get; set; }
 
         public void Do()
         {
             if (Name == "Trigger")
                 Game.Option.Trigger(Value.ToString());
-            else
+
+            else if (Name == "Time")
             {
-                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+                if (Init)
+                    Character.Protagonist.Time = 0;
+                else
+                    Character.Protagonist.Time += Value;
+            }
 
-                currentValue += Value;
-
-                if (currentValue < 0)
-                    currentValue = 0;
-
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+            else if (Name == "Spells")
+            {
+                if (Init)
+                    Character.Protagonist.Spells = 9;
+                else
+                    Character.Protagonist.Spells += Value;
             }
         }
     }

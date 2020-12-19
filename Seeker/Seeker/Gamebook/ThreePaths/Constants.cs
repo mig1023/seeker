@@ -11,14 +11,13 @@ namespace Seeker.Gamebook.ThreePaths
     {
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#151515",
-            [ButtonTypes.Action] = "#3f3f3f",
-            [ButtonTypes.Option] = "#696969",
+            [ButtonTypes.Main] = "#009999",
+            [ButtonTypes.Option] = "#009999",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.StatusBar] = "#2a2a2a",
+            [ColorTypes.StatusBar] = "#007a7a",
         };
 
         public string GetButtonsColor(ButtonTypes type)
