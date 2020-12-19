@@ -60,7 +60,6 @@ namespace Seeker.Output
             else
                 gamebookButton.TextColor = Xamarin.Forms.Color.White;
 
-
             return gamebookButton;
         }
 

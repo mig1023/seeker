@@ -8,6 +8,7 @@ namespace Seeker.Gamebook.ThreePaths
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public string ValueString { get; set; }
         public bool Init { get; set; }
 
         public void Do()
@@ -23,13 +24,8 @@ namespace Seeker.Gamebook.ThreePaths
                     Character.Protagonist.Time += Value;
             }
 
-            else if (Name == "Spells")
-            {
-                if (Init)
-                    Character.Protagonist.Spells = 9;
-                else
-                    Character.Protagonist.Spells += Value;
-            }
+            else if (Name == "RemoveSpell")
+                Character.Protagonist.Spells.RemoveAt(Character.Protagonist.Spells.IndexOf(ValueString));
         }
     }
 }

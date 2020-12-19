@@ -11,12 +11,14 @@ namespace Seeker.Gamebook.ThreePaths
 
         public string Name { get; set; }
         public int? Time { get; set; }
-        public int? Spells { get; set; }
+        public List<string> Spells { get; set; }
+        public int SpellSlots { get; set; }
 
         public void Init()
         {
             Time = null;
-            Spells = null;
+            SpellSlots = 9;
+            Spells = new List<string>();
         }
 
         public Character Clone()
@@ -24,13 +26,15 @@ namespace Seeker.Gamebook.ThreePaths
             return new Character()
             {
                 Time = this.Time,
-                Spells = this.Spells,
+                Spells = new List<string>(),
             };
         }
 
         public string Save()
         {
-            return String.Format("{0}|{1}", Time, Spells);
+            string spells = String.Join(",", Spells);
+
+            return String.Format("{0}|{1}|{2}", Time, SpellSlots, spells);
         }
 
         public void Load(string saveLine)
@@ -38,7 +42,8 @@ namespace Seeker.Gamebook.ThreePaths
             string[] save = saveLine.Split('|');
 
             Time = Game.Continue.IntNullableParse(save[0]);
-            Spells = Game.Continue.IntNullableParse(save[1]);
+            SpellSlots = int.Parse(save[1]);
+            Spells = save[2].Split(',').ToList();
         }
     }
 }

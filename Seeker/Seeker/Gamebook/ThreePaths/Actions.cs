@@ -10,32 +10,29 @@ namespace Seeker.Gamebook.ThreePaths
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
-        public string Trigger { get; set; } 
+        public string Trigger { get; set; }
+        public bool ThisIsSpell { get; set; }
+        public string Text { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
             if (trigger)
                 Game.Option.Trigger(Trigger);
 
-            reload = false;
+            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
+            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
 
-            return new List<string> { };
+            reload = ((actionResult.Count >= 1) && (actionResult[0] == "RELOAD") ? true : false);
+
+            return actionResult;
         }
 
         public List<string> Status()
         {
-            List<string> statusLines = new List<string>();
-
             if (Character.Protagonist.Time != null)
-                statusLines.Add(String.Format("Время: {0}", Character.Protagonist.Time));
-
-            if (Character.Protagonist.Spells != null)
-                statusLines.Add(String.Format("Заклятий: {0}", Character.Protagonist.Spells));
-
-            if (statusLines.Count == 0)
+                return new List<string> { String.Format("Время: {0}", Character.Protagonist.Time) };
+            else
                 return null;
-
-            return statusLines;
         }
 
         public List<string> StaticButtons() => new List<string> { };
@@ -50,7 +47,15 @@ namespace Seeker.Gamebook.ThreePaths
             return false;
         }
 
-        public bool IsButtonEnabled() => false;
+        public bool IsButtonEnabled() => !(ThisIsSpell && (Character.Protagonist.SpellSlots <= 0));
+
+        public List<string> Get()
+        {
+            Character.Protagonist.Spells.Add(Text);
+            Character.Protagonist.SpellSlots -= 1;
+
+            return new List<string> { "RELOAD" };
+        }
 
         public static bool CheckOnlyIf(string option)
         {
@@ -60,9 +65,11 @@ namespace Seeker.Gamebook.ThreePaths
             {
                 if (oneOption.Contains(">") || oneOption.Contains("<"))
                 {
-                    if (oneOption.Contains("ЗАКЛЯТЬЯ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Spells))
+                    if (oneOption.Contains("ВРЕМЯ <") && (int.Parse(oneOption.Split('>')[1]) <= Character.Protagonist.Time))
                         return false;
                 }
+                else if (oneOption.Contains("ЗАКЛЯТИЕ"))
+                    return Character.Protagonist.Spells.Contains(oneOption.Trim());
                 else if (oneOption.Contains("!"))
                 {
                     if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
@@ -75,6 +82,15 @@ namespace Seeker.Gamebook.ThreePaths
             return true;
         }
 
-        public List<string> Representer() => new List<string> { };
+        public List<string> Representer()
+        {
+            int count = 0;
+
+            foreach (string spell in Character.Protagonist.Spells)
+                if (spell == Text)
+                    count += 1;
+
+            return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" (x{0})", count) : String.Empty)) };
+        }
     }
 }

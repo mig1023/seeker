@@ -172,7 +172,7 @@ namespace Seeker.Gamebook
                 Save = ThreePaths.Character.Protagonist.Save,
                 Load = ThreePaths.Character.Protagonist.Load,
                 Disclaimer = "Бутягин Александр, Чистов Дмитрий, 1999",
-                BookColor = "#990066",
+                BookColor = "#009999",
                 Illustration = "ThreePaths.jpg",
             },
         };

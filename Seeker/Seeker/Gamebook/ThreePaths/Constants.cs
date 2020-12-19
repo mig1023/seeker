@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.ThreePaths
         {
             [ButtonTypes.Main] = "#009999",
             [ButtonTypes.Option] = "#009999",
+            [ButtonTypes.Action] = "#005b5b",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>

@@ -51,6 +51,9 @@ namespace Seeker.Gamebook.ThreePaths
                     ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+                    Text = Game.Xml.StringParse(xmlAction["Text"]),
+
+                    ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]),
                 };
 
                 paragraph.Actions.Add(action);
