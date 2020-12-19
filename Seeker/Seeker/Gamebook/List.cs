@@ -160,6 +160,21 @@ namespace Seeker.Gamebook
                 BookColor = "#990066",
                 Illustration = "StringOfWorlds.jpg",
             },
+            
+            ["Три дороги"] = new Description
+            {
+                XmlBook = "Gamebooks/ThreePaths.xml",
+                Protagonist = ThreePaths.Character.Protagonist.Init,
+                CheckOnlyIf = ThreePaths.Actions.CheckOnlyIf,
+                Paragraphs = new ThreePaths.Paragraphs(),
+                Actions = new ThreePaths.Actions(),
+                Constants = new ThreePaths.Constants(),
+                Save = ThreePaths.Character.Protagonist.Save,
+                Load = ThreePaths.Character.Protagonist.Load,
+                Disclaimer = "Бутягин Александр, Чистов Дмитрий, 1999",
+                BookColor = "#990066",
+                Illustration = "ThreePaths.jpg",
+            },
         };
 
         public static List<string> GetBooks()

@@ -119,10 +119,8 @@ namespace Seeker.Gamebook.ThreePaths
 
         public static bool CheckOnlyIf(string option)
         {
-            if (option.Contains("ЗОЛОТО >="))
-                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Gold;
-            else if (option.Contains("ЗАКЛЯТИЕ"))
-                return Character.Protagonist.Spells.Contains(option);
+            if (option.Contains("!"))
+                return (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()) ? false : true);
             else
                 return Game.Data.Triggers.Contains(option);
         }
