@@ -80,8 +80,14 @@ namespace Seeker.Gamebook.ThreePaths
             if (xmlNode.Attributes["Value"] != null)
                 modification.Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]);
 
+            if (xmlNode.Attributes["ValueString"] != null)
+                modification.ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]);
+
             if (xmlNode.Attributes["Init"] != null)
+            {
                 modification.Init = true;
+                modification.Do();
+            }
 
             return modification;
         }
