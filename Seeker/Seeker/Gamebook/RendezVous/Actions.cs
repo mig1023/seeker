@@ -30,15 +30,7 @@ namespace Seeker.Gamebook.RendezVous
 
         public List<string> Representer() => new List<string> { };
 
-        public List<string> Status()
-        {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Осознание: {0}", Character.Protagonist.Awareness),
-            };
-
-            return statusLines;
-        }
+        public List<string> Status() => new List<string> { String.Format("Осознание: {0}", Character.Protagonist.Awareness) };
 
         public List<string> StaticButtons() => new List<string> { };
 
