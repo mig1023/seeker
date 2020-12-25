@@ -1,0 +1,76 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+
+namespace Seeker.Gamebook.InvisibleFront
+{
+    class Actions : Abstract.IActions
+    {
+        public string ActionName { get; set; }
+        public string ButtonName { get; set; }
+        public string Aftertext { get; set; }
+        public string Trigger { get; set; }
+
+        public List<string> Do(out bool reload, string action = "", bool trigger = false)
+        {
+            if (trigger)
+                Game.Option.Trigger(Trigger);
+
+            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
+            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
+
+            reload = ((actionResult.Count >= 1) && (actionResult[0] == "RELOAD") ? true : false);
+
+            return actionResult;
+        }
+
+        public List<string> Status()
+        {
+            return new List<string> {
+                String.Format("Недовольство резидента: {0}", Character.Protagonist.Dissatisfaction),
+                String.Format("Вербовка: {0}", Character.Protagonist.Recruitment)
+            };
+        }
+
+        public List<string> StaticButtons() => new List<string> { };
+
+        public bool StaticAction(string action) => false;
+
+        public bool GameOver(out int toEndParagraph, out string toEndText)
+        {
+            toEndParagraph = 0;
+            toEndText = String.Empty;
+
+            return false;
+        }
+
+        public bool IsButtonEnabled() => true;
+
+        public static bool CheckOnlyIf(string option)
+        {
+            if (option.Contains(">") || option.Contains("<"))
+            {
+                if (option.Contains("НЕДОВОЛЬСТВО >") && (int.Parse(option.Split('>')[1]) >= Character.Protagonist.Dissatisfaction))
+                    return false;
+                else if (option.Contains("НЕДОВОЛЬСТВО <=") && (int.Parse(option.Split('=')[1]) < Character.Protagonist.Dissatisfaction))
+                    return false;
+                else if (option.Contains("ВЕРБОВКА >") && (int.Parse(option.Split('>')[1]) >= Character.Protagonist.Recruitment))
+                    return false;
+                else if (option.Contains("ВЕРБОВКА <=") && (int.Parse(option.Split('=')[1]) < Character.Protagonist.Recruitment))
+                    return false;
+            }
+            else if (option.Contains("!"))
+            {
+                if (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()))
+                    return false;
+            }
+            else if (!Game.Data.Triggers.Contains(option.Trim()))
+                return false;
+
+            return true;
+        }
+
+        public List<string> Representer() => new List<string> { };
+    }
+}

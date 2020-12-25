@@ -175,6 +175,21 @@ namespace Seeker.Gamebook
                 BookColor = "#009999",
                 Illustration = "ThreePaths.jpg",
             },
+
+            ["На невидимых фронтах"] = new Description
+            {
+                XmlBook = "Gamebooks/InvisibleFront.xml",
+                Protagonist = InvisibleFront.Character.Protagonist.Init,
+                CheckOnlyIf = InvisibleFront.Actions.CheckOnlyIf,
+                Paragraphs = new InvisibleFront.Paragraphs(),
+                Actions = new InvisibleFront.Actions(),
+                Constants = new InvisibleFront.Constants(),
+                Save = InvisibleFront.Character.Protagonist.Save,
+                Load = InvisibleFront.Character.Protagonist.Load,
+                Disclaimer = "mmvvss, 2018",
+                BookColor = "#d52b1e",
+                Illustration = "InvisibleFront.jpg",
+            },
         };
 
         public static List<string> GetBooks()
