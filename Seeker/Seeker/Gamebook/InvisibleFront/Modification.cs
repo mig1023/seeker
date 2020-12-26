@@ -11,11 +11,27 @@ namespace Seeker.Gamebook.InvisibleFront
 
         public void Do()
         {
-            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+            
+            if (Name == "Trigger")
+                Game.Option.Trigger(Value.ToString());
 
-            currentValue += Value;
+            else if (Name == "Meeting")
+                Game.Option.Trigger(Game.Dice.Roll() > 3 ? "предатель" : "не предатель");
 
-            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+            else if (Name == "Apartment")
+            {
+                List<string> apartments = new List<string> { "один", "два", "три", "один", "два", "три" }; 
+                Game.Option.Trigger(apartments[Game.Dice.Roll() - 1]);
+            }
+   
+            else
+            {
+                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+
+                currentValue += Value;
+
+                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+            }
         }
     }
 }

@@ -43,19 +43,6 @@ namespace Seeker.Gamebook.InvisibleFront
                 paragraph.Options.Add(option);
             }
 
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-            {
-                Actions action = new Actions
-                {
-                    ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                    ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                    Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                    Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                };
-
-                paragraph.Actions.Add(action);
-            }
-
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                 paragraph.Modification.Add(ModificationParse(xmlModification));
 
