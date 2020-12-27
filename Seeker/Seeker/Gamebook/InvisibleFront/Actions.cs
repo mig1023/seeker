@@ -49,24 +49,29 @@ namespace Seeker.Gamebook.InvisibleFront
 
         public static bool CheckOnlyIf(string option)
         {
-            if (option.Contains(">") || option.Contains("<"))
+            string[] options = option.Split('|', ',');
+
+            foreach (string oneOption in options)
             {
-                if (option.Contains("НЕДОВОЛЬСТВО >") && (int.Parse(option.Split('>')[1]) >= Character.Protagonist.Dissatisfaction))
-                    return false;
-                else if (option.Contains("НЕДОВОЛЬСТВО <=") && (int.Parse(option.Split('=')[1]) < Character.Protagonist.Dissatisfaction))
-                    return false;
-                else if (option.Contains("ВЕРБОВКА >") && (int.Parse(option.Split('>')[1]) >= Character.Protagonist.Recruitment))
-                    return false;
-                else if (option.Contains("ВЕРБОВКА <=") && (int.Parse(option.Split('=')[1]) < Character.Protagonist.Recruitment))
+                if (oneOption.Contains(">") || oneOption.Contains("<"))
+                {
+                    if (oneOption.Contains("НЕДОВОЛЬСТВО >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Dissatisfaction))
+                        return false;
+                    else if (oneOption.Contains("НЕДОВОЛЬСТВО <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Dissatisfaction))
+                        return false;
+                    else if (oneOption.Contains("ВЕРБОВКА >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Recruitment))
+                        return false;
+                    else if (oneOption.Contains("ВЕРБОВКА <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Recruitment))
+                        return false;
+                }
+                else if (oneOption.Contains("!"))
+                {
+                    if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        return false;
+                }
+                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
                     return false;
             }
-            else if (option.Contains("!"))
-            {
-                if (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()))
-                    return false;
-            }
-            else if (!Game.Data.Triggers.Contains(option.Trim()))
-                return false;
 
             return true;
         }

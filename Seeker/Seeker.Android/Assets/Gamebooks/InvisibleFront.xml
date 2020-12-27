@@ -710,8 +710,8 @@
 		<Text>Стоите на месте и костюм из дефицитной в Союзе ткани по прежнему на вас. В комнате ничего не происходит.\n\n- Разденьтесь догола и подойдите к правой стене, - ни капли не поменяв интонации, снова требует голос.</Text>
 		<Options>
 			<Option Destination="112" Text="Исполнить команду"/>
-			<Option Destination="138" Text="Продолжать стоять" OnlyIf="один"/>
-			<Option Destination="62" Text="Продолжать стоять" OnlyIf="два"/>
+			<Option Destination="138" Text="Продолжать стоять" OnlyIf="один, !два, !три"/>
+			<Option Destination="62" Text="Продолжать стоять" OnlyIf="два, !три"/>
 			<Option Destination="75" Text="Продолжать стоять" OnlyIf="три"/>
 		</Options>
 	</Paragraph>
