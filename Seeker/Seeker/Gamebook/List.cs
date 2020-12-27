@@ -188,6 +188,7 @@ namespace Seeker.Gamebook
                 Load = InvisibleFront.Character.Protagonist.Load,
                 Disclaimer = "mmvvss, 2018",
                 BookColor = "#d52b1e",
+                FontColor = "#eede49",
                 Illustration = "InvisibleFront.jpg",
             },
         };

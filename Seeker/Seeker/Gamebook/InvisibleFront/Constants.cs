@@ -13,11 +13,15 @@ namespace Seeker.Gamebook.InvisibleFront
         {
             [ButtonTypes.Main] = "#d52b1e",
             [ButtonTypes.Option] = "#d52b1e",
+            [ButtonTypes.Continue] = "#e57f78",
+            [ButtonTypes.Font] = "#eede49",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
+            [ColorTypes.Background] = "#ffdadb",
             [ColorTypes.StatusBar] = "#aa2218",
+            [ColorTypes.StatusFont] = "#eede49",
         };
 
         public string GetButtonsColor(ButtonTypes type)
