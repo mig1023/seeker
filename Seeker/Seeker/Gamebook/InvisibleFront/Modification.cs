@@ -8,12 +8,13 @@ namespace Seeker.Gamebook.InvisibleFront
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public string ValueString { get; set; }
 
         public void Do()
         {
             
             if (Name == "Trigger")
-                Game.Option.Trigger(Value.ToString());
+                Game.Option.Trigger(ValueString);
 
             else if (Name == "Meeting")
                 Game.Option.Trigger(Game.Dice.Roll() > 3 ? "предатель" : "не предатель");

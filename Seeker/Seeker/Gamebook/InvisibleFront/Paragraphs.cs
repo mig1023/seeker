@@ -34,8 +34,9 @@ namespace Seeker.Gamebook.InvisibleFront
                     Modification modification = new Modification
                     {
                         Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]),
-                        Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]),
                     };
+
+                    ValueParse(xmlOption, ref modification);
 
                     option.Do = modification;
                 }
@@ -65,6 +66,17 @@ namespace Seeker.Gamebook.InvisibleFront
                 modification.Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]);
 
             return modification;
+        }
+
+        private static void ValueParse(XmlNode xmlOption, ref Modification modification)
+        {
+            if (xmlOption.Attributes["Value"] == null)
+                return;
+
+            if (int.TryParse(xmlOption.Attributes["Value"].Value, out _))
+                modification.Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]);
+            else
+                modification.ValueString = Game.Xml.StringParse(xmlOption.Attributes["Value"]);
         }
     }
 }
