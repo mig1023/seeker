@@ -10,40 +10,26 @@ namespace Seeker.Gamebook.SilentSchool
         public static Character Protagonist = new Gamebook.SilentSchool.Character();
 
         public string Name { get; set; }
-        public int? Time { get; set; }
-        public List<string> Spells { get; set; }
-        public int SpellSlots { get; set; }
+        public int Life { get; set; }
 
         public void Init()
         {
-            Time = null;
-            SpellSlots = 9;
-            Spells = new List<string>();
+            Life = 30;
         }
 
         public Character Clone()
         {
             return new Character()
             {
-                Time = this.Time,
-                Spells = new List<string>(),
+                Life = this.Life,
             };
         }
 
-        public string Save()
-        {
-            string spells = String.Join(",", Spells);
-
-            return String.Format("{0}|{1}|{2}", Time, SpellSlots, spells);
-        }
+        public string Save() => String.Format("{0}", Life);
 
         public void Load(string saveLine)
         {
-            string[] save = saveLine.Split('|');
-
-            Time = Game.Continue.IntNullableParse(save[0]);
-            SpellSlots = int.Parse(save[1]);
-            Spells = save[2].Split(',').ToList();
+            Life = int.Parse(saveLine);
         }
     }
 }

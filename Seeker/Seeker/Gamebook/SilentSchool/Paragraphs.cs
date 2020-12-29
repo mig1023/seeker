@@ -52,8 +52,6 @@ namespace Seeker.Gamebook.SilentSchool
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
                     Text = Game.Xml.StringParse(xmlAction["Text"]),
-
-                    ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]),
                 };
 
                 paragraph.Actions.Add(action);
@@ -79,15 +77,6 @@ namespace Seeker.Gamebook.SilentSchool
 
             if (xmlNode.Attributes["Value"] != null)
                 modification.Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]);
-
-            if (xmlNode.Attributes["ValueString"] != null)
-                modification.ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]);
-
-            if (xmlNode.Attributes["Init"] != null)
-            {
-                modification.Init = true;
-                modification.Do();
-            }
 
             return modification;
         }

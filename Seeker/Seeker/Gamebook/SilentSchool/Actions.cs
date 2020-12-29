@@ -11,7 +11,6 @@ namespace Seeker.Gamebook.SilentSchool
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
-        public bool ThisIsSpell { get; set; }
         public string Text { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
@@ -27,13 +26,7 @@ namespace Seeker.Gamebook.SilentSchool
             return actionResult;
         }
 
-        public List<string> Status()
-        {
-            if (Character.Protagonist.Time != null)
-                return new List<string> { String.Format("Время: {0}", Character.Protagonist.Time) };
-            else
-                return null;
-        }
+        public List<string> Status() => new List<string> { String.Format("Жизнь: {0}", Character.Protagonist.Life) };
 
         public List<string> StaticButtons() => new List<string> { };
 
@@ -42,57 +35,13 @@ namespace Seeker.Gamebook.SilentSchool
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
-            toEndText = String.Empty;
+            toEndText = "Начать сначала";
 
-            return false;
+            return Character.Protagonist.Life <= 0;
         }
 
-        public bool IsButtonEnabled() => !(ThisIsSpell && (Character.Protagonist.SpellSlots <= 0));
+        public bool IsButtonEnabled() => true;
 
-        public List<string> Get()
-        {
-            Character.Protagonist.Spells.Add(Text);
-            Character.Protagonist.SpellSlots -= 1;
-
-            return new List<string> { "RELOAD" };
-        }
-
-        public static bool CheckOnlyIf(string option)
-        {
-            string[] options = option.Split(',');
-
-            foreach (string oneOption in options)
-            {
-                if (oneOption.Contains(">") || oneOption.Contains("<"))
-                {
-                    if (oneOption.Contains("ВРЕМЯ <") && (int.Parse(oneOption.Split('>')[1]) <= Character.Protagonist.Time))
-                        return false;
-                    if (oneOption.Contains("ВРЕМЯ >=") && (int.Parse(oneOption.Split('>')[1]) > Character.Protagonist.Time))
-                        return false;
-                }
-                else if (oneOption.Contains("ЗАКЛЯТИЕ"))
-                    return Character.Protagonist.Spells.Contains(oneOption.Trim());
-                else if (oneOption.Contains("!"))
-                {
-                    if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
-                        return false;
-                }
-                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
-                    return false;
-            }
-
-            return true;
-        }
-
-        public List<string> Representer()
-        {
-            int count = 0;
-
-            foreach (string spell in Character.Protagonist.Spells)
-                if (spell == Text)
-                    count += 1;
-
-            return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" (x{0})", count) : String.Empty)) };
-        }
+        public static bool CheckOnlyIf(string option) => Game.Data.Triggers.Contains(option.Trim());
     }
 }
