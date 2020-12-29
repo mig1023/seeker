@@ -43,7 +43,7 @@ namespace Seeker.Gamebook.RockOfTerror
             toEndParagraph = 0;
             toEndText = "Время вышло...";
 
-            return (Character.Protagonist.Time >= 720 ? true : false);
+            return Character.Protagonist.Time >= 720;
         }
 
         public bool IsButtonEnabled() => true;

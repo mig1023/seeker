@@ -122,7 +122,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             toEndParagraph = 150;
             toEndText = "Задуматься о судьбе";
 
-            return (Character.Protagonist.Popularity <= 0 ? true : false);
+            return Character.Protagonist.Popularity <= 0;
         }
 
         public bool IsButtonEnabled()
@@ -130,9 +130,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             if (Level > 0)
                 return true;
             else if (Price <= 0)
-                return (Character.Protagonist.StatBonuses > 0);
+                return Character.Protagonist.StatBonuses > 0;
             else
-                return (Character.Protagonist.Tanga >= Price);
+                return Character.Protagonist.Tanga >= Price;
         }
 
         public static bool CheckOnlyIf(string option)

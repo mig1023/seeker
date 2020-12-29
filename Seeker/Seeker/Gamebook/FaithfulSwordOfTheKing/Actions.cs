@@ -246,10 +246,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return true;
         }
 
-        private bool LuckyHit(int? roll = null)
-        {
-            return (roll ?? Game.Dice.Roll()) % 2 == 0;
-        }
+        private bool LuckyHit(int? roll = null) => (roll ?? Game.Dice.Roll()) % 2 == 0;
 
         private bool EnemyWound(Character hero, ref Character enemy, List<Character> FightEnemies,
             int roll, int WoundsToWin, ref int enemyWounds, ref List<string> fight, bool dagger = false)

@@ -33,7 +33,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
             List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
 
-            reload = ((actionResult.Count >= 1) && (actionResult[0] == "RELOAD") ? true : false);
+            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
 
             return actionResult;
         }
@@ -59,7 +59,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             toEndParagraph = 0;
             toEndText = "Начать сначала";
 
-            return (Character.Protagonist.Endurance <= 0 ? true : false);
+            return Character.Protagonist.Endurance <= 0;
         }
 
         public bool IsButtonEnabled() => true;
@@ -172,10 +172,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return luckCheck;
         }
         
-        public List<string> RollDice()
-        {
-            return new List<string> { String.Format("BIG|Бросок: {0} ⚄", Game.Dice.Roll()) };
-        }
+        public List<string> RollDice() => new List<string> { String.Format("BIG|Бросок: {0} ⚄", Game.Dice.Roll()) };
 
         public List<string> RollDoubleDices()
         {
@@ -215,10 +212,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return new List<string> { "RELOAD" };
         }
 
-        private bool IsHero(string name)
-        {
-            return (name == "ГЛАВГЕРОЙ" ? true : false);
-        }
+        private bool IsHero(string name) => name == "ГЛАВГЕРОЙ";
 
         public List<string> Fight()
         {

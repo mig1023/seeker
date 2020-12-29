@@ -32,7 +32,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
             List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
 
-            reload = ((actionResult.Count >= 1) && (actionResult[0] == "RELOAD") ? true : false);
+            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
 
             return actionResult;
         }
@@ -79,16 +79,10 @@ namespace Seeker.Gamebook.StringOfWorlds
             toEndParagraph = 0;
             toEndText = "Начать сначала";
 
-            return (Character.Protagonist.Strength <= 0 ? true : false);
+            return Character.Protagonist.Strength <= 0;
         }
 
-        public bool IsButtonEnabled()
-        {
-            if (!String.IsNullOrEmpty(Equipment) && !String.IsNullOrEmpty(Character.Protagonist.Equipment))
-                return false;
-            else
-                return true;
-        }
+        public bool IsButtonEnabled() => !(!String.IsNullOrEmpty(Equipment) && !String.IsNullOrEmpty(Character.Protagonist.Equipment));
 
         public static bool CheckOnlyIf(string option)
         {

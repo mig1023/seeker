@@ -175,7 +175,7 @@ namespace Seeker.Gamebook.DzungarWar
             toEndParagraph = 150;
             toEndText = "Стало слишком опасно";
 
-            return (Character.Protagonist.Danger >= 12 ? true : false);
+            return Character.Protagonist.Danger >= 12;
         }
 
         public bool IsButtonEnabled()
