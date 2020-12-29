@@ -191,6 +191,21 @@ namespace Seeker.Gamebook
                 FontColor = "#eede49",
                 Illustration = "InvisibleFront.jpg",
             },
+
+            ["Silent School"] = new Description
+            {
+                XmlBook = "Gamebooks/SilentSchool.xml",
+                Protagonist = SilentSchool.Character.Protagonist.Init,
+                CheckOnlyIf = SilentSchool.Actions.CheckOnlyIf,
+                Paragraphs = new SilentSchool.Paragraphs(),
+                Actions = new SilentSchool.Actions(),
+                Constants = new SilentSchool.Constants(),
+                Save = SilentSchool.Character.Protagonist.Save,
+                Load = SilentSchool.Character.Protagonist.Load,
+                Disclaimer = "Островерхов Роман, 2013",
+                BookColor = "#151515",
+                Illustration = "SilentSchool.jpg",
+            },
         };
 
         public static List<string> GetBooks()
