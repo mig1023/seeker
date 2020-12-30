@@ -61,6 +61,7 @@ namespace Seeker.Gamebook.SilentSchool
                 paragraph.Modification.Add(ModificationParse(xmlModification));
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
+            paragraph.Image = Game.Xml.StringParse(xmlParagraph["Image"]);
 
             return paragraph;
         }
