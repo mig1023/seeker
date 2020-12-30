@@ -24,10 +24,14 @@ namespace Seeker.Gamebook.SilentSchool
             {
                 Option option = new Option
                 {
-                    Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
                     Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
                     OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
                 };
+
+                if (xmlOption.Attributes["Destination"].Value == "CHANGE")
+                    option.Destination = Character.Protagonist.ChangeDecision;
+                else
+                    option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
 
                 if (xmlOption.Attributes["Do"] != null)
                 {

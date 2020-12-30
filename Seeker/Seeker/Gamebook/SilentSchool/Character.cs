@@ -12,11 +12,13 @@ namespace Seeker.Gamebook.SilentSchool
         public string Name { get; set; }
         public int Life { get; set; }
         public int Grail { get; set; }
-
+        public int ChangeDecision { get; set; }
+        
         public void Init()
         {
             Life = 30;
             Grail = 0;
+            ChangeDecision = 0;
         }
 
         public Character Clone()
@@ -25,10 +27,11 @@ namespace Seeker.Gamebook.SilentSchool
             {
                 Life = this.Life,
                 Grail = this.Grail,
+                ChangeDecision = this.ChangeDecision,
             };
         }
 
-        public string Save() => String.Format("{0}|{1}", Life, Grail);
+        public string Save() => String.Format("{0}|{1}|{2}", Life, Grail, ChangeDecision);
 
         public void Load(string saveLine)
         {
@@ -36,6 +39,7 @@ namespace Seeker.Gamebook.SilentSchool
 
             Life = int.Parse(save[0]);
             Grail = int.Parse(save[1]);
+            ChangeDecision = int.Parse(save[2]);
         }
     }
 }

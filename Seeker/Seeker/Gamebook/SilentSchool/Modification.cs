@@ -11,11 +11,17 @@ namespace Seeker.Gamebook.SilentSchool
 
         public void Do()
         {
-            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+            if (Name == "Change")
+                Character.Protagonist.ChangeDecision = Value;
 
-            currentValue += Value;
+            else
+            {
+                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+                currentValue += Value;
+
+                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+            }
         }
     }
 }
