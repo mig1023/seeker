@@ -26,7 +26,18 @@ namespace Seeker.Gamebook.SilentSchool
             return actionResult;
         }
 
-        public List<string> Status() => new List<string> { String.Format("Жизнь: {0}", Character.Protagonist.Life) };
+        public List<string> Status()
+        {
+            List<string> statusLines = new List<string>
+            {
+                String.Format("Жизнь: {0}", Character.Protagonist.Life),
+            };
+
+            if (Character.Protagonist.Grail > 0)
+                statusLines.Add(String.Format("Грааль: {0}", Character.Protagonist.Grail));
+
+            return statusLines;
+        }
 
         public List<string> StaticButtons() => new List<string> { };
 
@@ -42,6 +53,40 @@ namespace Seeker.Gamebook.SilentSchool
 
         public bool IsButtonEnabled() => true;
 
-        public static bool CheckOnlyIf(string option) => Game.Data.Triggers.Contains(option.Trim());
+        public static bool CheckOnlyIf(string option)
+        {
+            if (option.Contains("|"))
+            {
+                string[] options = option.Split('|');
+
+                foreach (string oneOption in options)
+                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return true;
+
+                return false;
+            }
+            else
+            {
+                string[] options = option.Split(',');
+
+                foreach (string oneOption in options)
+                {
+                    if (oneOption.Contains(">") || oneOption.Contains("<"))
+                    {
+                        if (oneOption.Contains("ГРААЛЬ >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Grail))
+                            return false;
+                    }
+                    else if (oneOption.Contains("!"))
+                    {
+                        if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                            return false;
+                    }
+                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return false;
+                }
+
+                return true;
+            }
+        }
     }
 }
