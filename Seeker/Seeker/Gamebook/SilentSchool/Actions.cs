@@ -83,6 +83,23 @@ namespace Seeker.Gamebook.SilentSchool
 
                 return false;
             }
+            else if (option.Contains(";"))
+            {
+                string[] options = option.Split(';');
+
+                bool not = options[0].Contains("!");
+                int optionMustBe = int.Parse(options[0].Replace("!", String.Empty));
+                int optionCount = 0;
+
+                foreach (string oneOption in options)
+                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
+                        optionCount += 1;
+
+                if (not)
+                    return optionCount < optionMustBe;
+                else
+                    return optionCount >= optionMustBe;
+            }
             else
             {
                 string[] options = option.Split(',');

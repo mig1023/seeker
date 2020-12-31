@@ -225,7 +225,7 @@ namespace Seeker.Gamebook.DzungarWar
                     if (Game.Data.Triggers.Contains(oneOption.Trim()))
                         optionCount += 1;
 
-                return (optionCount >= optionMustBe ? true : false);
+                return optionCount >= optionMustBe;
             }
             else
             {
