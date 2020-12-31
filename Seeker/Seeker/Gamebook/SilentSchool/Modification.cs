@@ -39,6 +39,9 @@ namespace Seeker.Gamebook.SilentSchool
 
             else if (Name == "WoundsByWeapon4")
                 hero.Life -= (hero.Weapon == "Флейта" ? 1 : 4);
+            
+            else if (Name == "WoundsByBody")
+                hero.Life -= (Game.Data.Triggers.Contains("Толстяк") ? 4 : 6);
 
             else
             {
