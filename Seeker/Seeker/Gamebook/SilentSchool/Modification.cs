@@ -8,20 +8,52 @@ namespace Seeker.Gamebook.SilentSchool
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public string ValueString { get; set; }
 
         public void Do()
         {
+            Character hero = Character.Protagonist;
+
             if (Name == "Change")
-                Character.Protagonist.ChangeDecision = Value;
+                hero.ChangeDecision = Value;
+
+            else if (Name == "Weapon")
+                hero.Weapon = ValueString;
+
+            else if (Name == "RemoveWeapon")
+                hero.Weapon = String.Empty;
+
+            else if (Name == "WoundsByWeapon")
+            {
+                if (hero.Weapon == "Черенок от швабры")
+                    hero.Life -= 4;
+                else
+                    hero.Life -= (String.IsNullOrEmpty(hero.Weapon) ? 8 : 6);
+
+                LifeNormalization();
+            }
+
+            else if (Name == "WoundsByWeapon2")
+            {
+                hero.Life -= (String.IsNullOrEmpty(hero.Weapon) ? 4 : 2);
+
+                LifeNormalization();
+            }
 
             else
             {
-                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+                int currentValue = (int)hero.GetType().GetProperty(Name).GetValue(hero, null);
 
                 currentValue += Value;
 
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+                hero.GetType().GetProperty(Name).SetValue(hero, currentValue);
             }
+        }
+
+        private void LifeNormalization()
+        {
+            if (Character.Protagonist.Life < 0)
+                Character.Protagonist.Life = 0;
         }
     }
 }

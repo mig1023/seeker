@@ -36,6 +36,9 @@ namespace Seeker.Gamebook.SilentSchool
             if (Character.Protagonist.Grail > 0)
                 statusLines.Add(String.Format("Грааль: {0}", Character.Protagonist.Grail));
 
+            if (!String.IsNullOrEmpty(Character.Protagonist.Weapon))
+                statusLines.Add(String.Format("Оружие: {0}", Character.Protagonist.Weapon));
+
             return statusLines;
         }
 
@@ -76,6 +79,13 @@ namespace Seeker.Gamebook.SilentSchool
                         if (oneOption.Contains("ГРААЛЬ >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Grail))
                             return false;
                     }
+                    else if (oneOption.Contains("ОРУЖИЕ"))
+                    {
+                        if (oneOption.Contains("!") && (oneOption.Split('=')[1].Trim() == Character.Protagonist.Weapon))
+                            return false;
+                        else if (!oneOption.Contains("!") && (oneOption.Split('=')[1].Trim() != Character.Protagonist.Weapon))
+                            return false;
+                    }
                     else if (oneOption.Contains("!"))
                     {
                         if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
@@ -87,6 +97,15 @@ namespace Seeker.Gamebook.SilentSchool
 
                 return true;
             }
+        }
+
+        public List<string> Representer() => new List<string> { Text.ToUpper() };
+
+        public List<string> Get()
+        {
+            Character.Protagonist.Weapon = Text;
+
+            return new List<string> { "RELOAD" };
         }
     }
 }

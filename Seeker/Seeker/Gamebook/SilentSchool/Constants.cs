@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.SilentSchool
         {
             [ButtonTypes.Main] = "#151515",
             [ButtonTypes.Action] = "#3f3f3f",
-            [ButtonTypes.Option] = "#696969",
+            [ButtonTypes.Option] = "#151515",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
