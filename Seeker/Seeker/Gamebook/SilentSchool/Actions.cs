@@ -42,9 +42,24 @@ namespace Seeker.Gamebook.SilentSchool
             return statusLines;
         }
 
-        public List<string> StaticButtons() => new List<string> { };
+        public List<string> StaticButtons()
+        {
+            List<string> staticButtons = new List<string> { };
 
-        public bool StaticAction(string action) => false;
+            if (Game.Data.Triggers.Contains("Шоколадка"))
+                staticButtons.Add("Съесть шоколадку");
+
+            return staticButtons;
+        }
+
+        public bool StaticAction(string action)
+        {
+            Game.Option.Trigger("Шоколадка", remove: true);
+
+            Character.Protagonist.Life += 3;
+
+            return true;
+        }
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
