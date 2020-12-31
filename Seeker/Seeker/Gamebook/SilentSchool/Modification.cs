@@ -29,16 +29,16 @@ namespace Seeker.Gamebook.SilentSchool
                     hero.Life -= 4;
                 else
                     hero.Life -= (String.IsNullOrEmpty(hero.Weapon) ? 8 : 6);
-
-                LifeNormalization();
             }
 
             else if (Name == "WoundsByWeapon2")
-            {
                 hero.Life -= (String.IsNullOrEmpty(hero.Weapon) ? 4 : 2);
 
-                LifeNormalization();
-            }
+            else if (Name == "WoundsByWeapon3")
+                hero.Life -= (hero.Weapon == "Гантеля" ? 3 : 6);
+
+            else if (Name == "WoundsByWeapon4")
+                hero.Life -= (hero.Weapon == "Флейта" ? 1 : 4);
 
             else
             {
@@ -48,12 +48,9 @@ namespace Seeker.Gamebook.SilentSchool
 
                 hero.GetType().GetProperty(Name).SetValue(hero, currentValue);
             }
-        }
 
-        private void LifeNormalization()
-        {
-            if (Character.Protagonist.Life < 0)
-                Character.Protagonist.Life = 0;
+            if (hero.Life < 0)
+                hero.Life = 0;
         }
     }
 }
