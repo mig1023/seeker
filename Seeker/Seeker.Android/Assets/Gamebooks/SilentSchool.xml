@@ -277,8 +277,8 @@
 		<ID>33</ID>
 		<Text>Схватка будет очень суровой, и победа в ней достанется мне лишь ценой 7 ЖИЗНЕЙ</Text>
 		<Options>
-			<Option Destination="54" Text="Стеклоочиститель"/>
-			<Option Destination="12" Text="Далее" Do="Life" Value="-7"/>
+			<Option Destination="54" Text="Далее" OnlyIf="Стеклоочиститель"/>
+			<Option Destination="12" Text="Далее"  OnlyIf="!Стеклоочиститель" Do="Life" Value="-7"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -691,6 +691,7 @@
 	<Paragraph>
 		<ID>81</ID>
 		<Text>Пока она пытается подняться, я вскакиваю и роняю на нее парту. Зараженная обмякает.\n\nДа на хрен мне не сдалась твоя должность, старая карга! - тяжело дыша, говорю я. Осмотрев класс, я нахожу в столе у Лоры сверло от дрели и бутыль стеклоочистителя. Затем я выхожу обратно в коридор.</Text>
+		<Triggers>Стеклоочиститель</Triggers>
 		<Options>
 			<Option Destination="92" Text="Далее"/>
 		</Options>
