@@ -45,7 +45,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                         option.Destination = Character.Protagonist.GateCode;
                     }
                 }
-                else if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int destination))
+                else if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
                     option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
                 else
                 {

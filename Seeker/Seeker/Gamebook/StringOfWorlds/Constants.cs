@@ -26,7 +26,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             if ((type == ButtonTypes.Border) || (type == ButtonTypes.Continue))
                 return String.Empty;
             else if (type == ButtonTypes.Font)
-                return (((LastColor[0] * 0.299) + (LastColor[1] * 0.587) + (LastColor[2] * 0.114)) > 186 ? "#000000" : "#FFFFFF");
+                return СontrastColor(LastColor);
             else
                 return NextColor();
         }
@@ -72,10 +72,12 @@ namespace Seeker.Gamebook.StringOfWorlds
             if (type == ColorTypes.StatusBar)
                 return HexColor(StatusColor[0], StatusColor[1], StatusColor[2]);
             else if (type == ColorTypes.StatusFont)
-                return (((StatusColor[0] * 0.299) + (StatusColor[1] * 0.587) + (StatusColor[2] * 0.114)) > 186 ? "#000000" : "#FFFFFF");
+                return СontrastColor(StatusColor);
             else
                 return String.Empty;
         }
+
+        private string СontrastColor(List<int> color) => ((color[0] * 0.299) + (color[1] * 0.587) + (color[2] * 0.114)) > 186 ? "#000000" : "#FFFFFF";
 
         public string GetFont() => String.Empty;
 
