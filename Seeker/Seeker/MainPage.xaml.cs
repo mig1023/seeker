@@ -45,9 +45,7 @@ namespace Seeker
                 Button button = Output.Interface.GamebookButton(gamebook);
                 button.Clicked += Gamebook_Click;
                 Options.Children.Add(button);
-
-                Label disclaimer = Output.Interface.GamebookDisclaimer(gamebook);
-                Options.Children.Add(disclaimer);
+                Options.Children.Add(Output.Interface.GamebookDisclaimer(gamebook));
             }
 
             UpdateStatus();

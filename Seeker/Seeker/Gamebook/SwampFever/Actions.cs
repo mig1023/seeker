@@ -70,7 +70,7 @@ namespace Seeker.Gamebook.SwampFever
             toEndParagraph = 0;
             toEndText = "Начать с начала...";
 
-            return Character.Protagonist.Hitpoints > 0;
+            return Character.Protagonist.Hitpoints <= 0;
         }
 
         public bool IsButtonEnabled()
