@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.SilentSchool
         public string Weapon { get; set; }
         public int Grail { get; set; }
         public int ChangeDecision { get; set; }
+        public int HarmSelfAlready { get; set; }
         
         public void Init()
         {
@@ -21,6 +22,7 @@ namespace Seeker.Gamebook.SilentSchool
             Weapon = String.Empty;
             Grail = 0;
             ChangeDecision = 0;
+            HarmSelfAlready = 0;
         }
 
         public Character Clone()
@@ -31,10 +33,11 @@ namespace Seeker.Gamebook.SilentSchool
                 Weapon = this.Weapon,
                 Grail = this.Grail,
                 ChangeDecision = this.ChangeDecision,
+                HarmSelfAlready = this.HarmSelfAlready,
             };
         }
 
-        public string Save() => String.Format("{0}|{1}|{2}|{3}", Life, Weapon,Grail, ChangeDecision);
+        public string Save() => String.Format("{0}|{1}|{2}|{3}|{4}", Life, Weapon,Grail, ChangeDecision, HarmSelfAlready);
 
         public void Load(string saveLine)
         {
@@ -44,6 +47,7 @@ namespace Seeker.Gamebook.SilentSchool
             Weapon = save[1];
             Grail = int.Parse(save[2]);
             ChangeDecision = int.Parse(save[3]);
+            HarmSelfAlready = int.Parse(save[4]);
         }
     }
 }

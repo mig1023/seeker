@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.SilentSchool
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
         public string Text { get; set; }
+        public int HarmedMyself { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -69,7 +70,13 @@ namespace Seeker.Gamebook.SilentSchool
             return Character.Protagonist.Life <= 0;
         }
 
-        public bool IsButtonEnabled() => true;
+        public bool IsButtonEnabled()
+        {
+            if ((HarmedMyself > 0) && ((Character.Protagonist.HarmSelfAlready > 0) || (Character.Protagonist.Life <= HarmedMyself)))
+                return false;
+            else
+                return true;
+        }
 
         public static bool CheckOnlyIf(string option)
         {
@@ -110,6 +117,12 @@ namespace Seeker.Gamebook.SilentSchool
                     {
                         if (oneOption.Contains("ГРААЛЬ >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Grail))
                             return false;
+
+                        if (oneOption.Contains("РАНА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.HarmSelfAlready))
+                            return false;
+
+                        if (oneOption.Contains("РАНА <") && (int.Parse(oneOption.Split('<')[1]) <= Character.Protagonist.HarmSelfAlready))
+                            return false;
                     }
                     else if (oneOption.Contains("ОРУЖИЕ"))
                     {
@@ -131,11 +144,17 @@ namespace Seeker.Gamebook.SilentSchool
             }
         }
 
-        public List<string> Representer() => new List<string> { Text.ToUpper() };
+        public List<string> Representer() => String.IsNullOrEmpty(Text) ? new List<string> { } : new List<string> { Text.ToUpper() };
 
         public List<string> Get()
         {
-            Character.Protagonist.Weapon = Text;
+            if (HarmedMyself > 0)
+            {
+                Character.Protagonist.Life -= HarmedMyself;
+                Character.Protagonist.HarmSelfAlready = HarmedMyself;
+            }
+            else
+                Character.Protagonist.Weapon = Text;
 
             return new List<string> { "RELOAD" };
         }
