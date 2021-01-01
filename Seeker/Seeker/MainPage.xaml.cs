@@ -165,7 +165,7 @@ namespace Seeker
 
             if ((id == 0) && Game.Continue.IsGameSaved())
             {
-                Button button = Output.Buttons.Additional("Продолжить ранее начатую игру");
+                Button button = Output.Buttons.Additional("Продолжить предыдущую игру");
                 button.Clicked += Continue_Click;
                 Options.Children.Add(button);
             }
