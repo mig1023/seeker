@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.SilentSchool
         public string Trigger { get; set; }
         public string Text { get; set; }
         public int HarmedMyself { get; set; }
+        public int Dices { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -157,6 +158,30 @@ namespace Seeker.Gamebook.SilentSchool
                 Character.Protagonist.Weapon = Text;
 
             return new List<string> { "RELOAD" };
+        }
+
+        public List<string> DiceWounds()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dicesCount = (Dices == 0 ? 1 : Dices);
+            int dices = 0;
+
+            for (int i = 1; i <= dicesCount; i++)
+            {
+                int dice = Game.Dice.Roll();
+                dices += dice;
+                diceCheck.Add(String.Format("На {0} выпало: {1} ⚄", i, dice));
+            }
+
+            Character.Protagonist.Life -= dices;
+
+            if (Character.Protagonist.Life < 0)
+                Character.Protagonist.Life = 0;
+
+            diceCheck.Add(String.Format("BIG|BAD|Я потерял жизней: {0}", dices));
+
+            return diceCheck;
         }
     }
 }

@@ -62,6 +62,7 @@ namespace Seeker.Gamebook.SilentSchool
                     Text = Game.Xml.StringParse(xmlAction["Text"]),
 
                     HarmedMyself = Game.Xml.IntParse(xmlAction["HarmedMyself"]),
+                    Dices = Game.Xml.IntParse(xmlAction["Dices"]),
                 };
 
                 paragraph.Actions.Add(action);
