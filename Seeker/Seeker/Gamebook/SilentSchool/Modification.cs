@@ -14,6 +14,8 @@ namespace Seeker.Gamebook.SilentSchool
         {
             Character hero = Character.Protagonist;
 
+            int woundsBonus = (Game.Data.Triggers.Contains("Кайф") ? 2 : 1);
+
             if (Name == "Trigger")
                 Game.Option.Trigger(Value.ToString());
 
@@ -29,28 +31,28 @@ namespace Seeker.Gamebook.SilentSchool
             else if (Name == "WoundsByWeapon")
             {
                 if (hero.Weapon == "Черенок от швабры")
-                    hero.Life -= 4;
+                    hero.Life -= 4 * woundsBonus;
                 else
-                    hero.Life -= (String.IsNullOrEmpty(hero.Weapon) ? 8 : 6);
+                    hero.Life -= (String.IsNullOrEmpty(hero.Weapon) ? 8 : 6) * woundsBonus;
             }
 
             else if (Name == "WoundsByWeapon2")
-                hero.Life -= (String.IsNullOrEmpty(hero.Weapon) ? 4 : 2);
+                hero.Life -= (String.IsNullOrEmpty(hero.Weapon) ? 4 : 2) * woundsBonus;
 
             else if (Name == "WoundsByWeapon3")
-                hero.Life -= (hero.Weapon == "Гантеля" ? 3 : 6);
+                hero.Life -= (hero.Weapon == "Гантеля" ? 3 : 6) * woundsBonus;
 
             else if (Name == "WoundsByWeapon4")
-                hero.Life -= (hero.Weapon == "Флейта" ? 1 : 4);
+                hero.Life -= (hero.Weapon == "Флейта" ? 1 : 4)* woundsBonus;
             
             else if (Name == "WoundsByBody")
-                hero.Life -= (Game.Data.Triggers.Contains("Толстяк") ? 4 : 6);
+                hero.Life -= (Game.Data.Triggers.Contains("Толстяк") ? 4 : 6) * woundsBonus;
 
             else
             {
                 int currentValue = (int)hero.GetType().GetProperty(Name).GetValue(hero, null);
 
-                currentValue += Value;
+                currentValue += Value * ((woundsBonus > 1) && (Value < 1) ? woundsBonus : 1);
 
                 hero.GetType().GetProperty(Name).SetValue(hero, currentValue);
             }
