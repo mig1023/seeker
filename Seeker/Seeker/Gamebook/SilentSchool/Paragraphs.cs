@@ -38,8 +38,12 @@ namespace Seeker.Gamebook.SilentSchool
                     Modification modification = new Modification
                     {
                         Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]),
-                        Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]),
                     };
+
+                    if (int.TryParse(xmlOption.Attributes["Value"].Value, out _))
+                        modification.Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]);
+                    else
+                        modification.ValueString = Game.Xml.StringParse(xmlOption.Attributes["Value"]);
 
                     option.Do = modification;
                 }
@@ -86,8 +90,10 @@ namespace Seeker.Gamebook.SilentSchool
             if (xmlNode.Attributes["Value"] != null)
                 modification.Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]);
 
-            if (xmlNode.Attributes["ValueString"] != null)
-                modification.ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]);
+            if (int.TryParse(xmlNode.Attributes["Value"].Value, out _))
+                modification.Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]);
+            else
+                modification.ValueString = Game.Xml.StringParse(xmlNode.Attributes["Value"]);
 
             return modification;
         }

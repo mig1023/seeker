@@ -14,7 +14,10 @@ namespace Seeker.Gamebook.SilentSchool
         {
             Character hero = Character.Protagonist;
 
-            if (Name == "Change")
+            if (Name == "Trigger")
+                Game.Option.Trigger(Value.ToString());
+
+            else if (Name == "Change")
                 hero.ChangeDecision = Value;
 
             else if (Name == "Weapon")
