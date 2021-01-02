@@ -313,6 +313,7 @@
 		<Modifications>
 			<Modification Name="Change" Value="63"/>
 		</Modifications>
+		<Triggers>Три</Triggers>
 		<Options>
 			<Option Destination="83" Text="Далее"/>
 		</Options>
