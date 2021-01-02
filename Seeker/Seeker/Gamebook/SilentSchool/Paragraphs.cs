@@ -87,8 +87,8 @@ namespace Seeker.Gamebook.SilentSchool
                 Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
             };
 
-            if (xmlNode.Attributes["Value"] != null)
-                modification.Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]);
+            if (xmlNode.Attributes["Value"] == null)
+                return modification;
 
             if (int.TryParse(xmlNode.Attributes["Value"].Value, out _))
                 modification.Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]);
