@@ -206,6 +206,22 @@ namespace Seeker.Gamebook
                 BookColor = "#151515",
                 Illustration = "SilentSchool.jpg",
             },
+            
+            ["Идущие на смерть"] = new Description
+            {
+                XmlBook = "Gamebooks/ThoseWhoAreAboutToDie.xml",
+                Protagonist = ThoseWhoAreAboutToDie.Character.Protagonist.Init,
+                CheckOnlyIf = ThoseWhoAreAboutToDie.Actions.CheckOnlyIf,
+                Paragraphs = new ThoseWhoAreAboutToDie.Paragraphs(),
+                Actions = new ThoseWhoAreAboutToDie.Actions(),
+                Constants = new ThoseWhoAreAboutToDie.Constants(),
+                Save = ThoseWhoAreAboutToDie.Character.Protagonist.Save,
+                Load = ThoseWhoAreAboutToDie.Character.Protagonist.Load,
+                Disclaimer = "Слюта Александр, 2009",
+                BookColor = "#fcdd76",
+                FontColor = "#000000",
+                Illustration = "ThoseWhoAreAboutToDie.jpg",
+            },
         };
 
         public static List<string> GetBooks()

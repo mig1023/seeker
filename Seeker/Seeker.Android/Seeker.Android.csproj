@@ -213,6 +213,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\SilentSchool_Chess.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Gamebooks\ThoseWhoAreAboutToDie.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
