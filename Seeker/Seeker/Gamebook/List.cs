@@ -221,6 +221,7 @@ namespace Seeker.Gamebook
                 BookColor = "#fcdd76",
                 FontColor = "#000000",
                 Illustration = "ThoseWhoAreAboutToDie.jpg",
+                ShowDisabledOption = true,
             },
         };
 

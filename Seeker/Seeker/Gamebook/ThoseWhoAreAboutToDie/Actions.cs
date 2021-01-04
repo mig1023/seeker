@@ -51,7 +51,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             toEndParagraph = 0;
             toEndText = String.Empty;
 
-            return false;
+            return Character.Protagonist.Endurance <= 0;
         }
 
         public bool IsButtonEnabled() => true;
