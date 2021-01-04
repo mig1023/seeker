@@ -30,7 +30,17 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
         public List<string> Representer() => new List<string> { };
 
-        public List<string> Status() => new List<string> { String.Format("Параметр: {0}", Character.Protagonist.Name) };
+        public List<string> Status()
+        {
+            List<string> statusLines = new List<string>
+            {
+                String.Format("Реакция: {0}", Character.Protagonist.Reaction),
+                String.Format("Сила: {0}", Character.Protagonist.Strength),
+                String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
+            };
+
+            return statusLines;
+        }
 
         public List<string> StaticButtons() => new List<string> { };
 
@@ -60,28 +70,40 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             }
             else
             {
-                //string[] options = option.Split(',');
+                string[] options = option.Split(',');
 
-                //foreach (string oneOption in options)
-                //{
-                //    if (oneOption.Contains(">") || oneOption.Contains("<"))
-                //    {
-                //        if (oneOption.Contains("ОСОЗНАНИЕ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Awareness))
-                //            return false;
-                //        else if (oneOption.Contains("ОСОЗНАНИЕ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Awareness))
-                //            return false;
-                //    }
-                //    else if (oneOption.Contains("!"))
-                //    {
-                //        if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
-                //            return false;
-                //    }
-                //    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
-                //        return false;
-                //}
+                foreach (string oneOption in options)
+                {
+                    if (oneOption.Contains(">") || oneOption.Contains("<"))
+                    {
+                        if (ParamFail("СИЛА", oneOption, Character.Protagonist.Strength))
+                            return false;
+                        else if (ParamFail("РЕАКЦИЯ", oneOption, Character.Protagonist.Reaction))
+                            return false;
+                        else if (ParamFail("ВЫНОСЛИВОСТЬ", oneOption, Character.Protagonist.Endurance))
+                            return false;
+                    }
+                    else if (oneOption.Contains("!"))
+                    {
+                        if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                            return false;
+                    }
+                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return false;
+                }
 
                 return true;
             }
+        }
+
+        private static bool ParamFail(string paramName, string option, int param)
+        {
+            if (option.Contains(String.Format("{0} >", paramName)) && (int.Parse(option.Split('>')[1]) >= param))
+                return true;
+            else if (option.Contains(String.Format("{0} <=", paramName)) && (int.Parse(option.Split('=')[1]) < param))
+                return true;
+            else
+                return false;
         }
 
         public List<string> DiceCheck()
