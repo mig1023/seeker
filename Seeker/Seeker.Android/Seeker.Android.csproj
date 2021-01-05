@@ -219,6 +219,15 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\ThoseWhoAreAboutToDie.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_retiarius.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_secutor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_thracians.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

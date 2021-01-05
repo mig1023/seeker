@@ -65,6 +65,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             }
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
+            paragraph.Image = Game.Xml.StringParse(xmlParagraph["Image"]);
 
             return paragraph;
         }
