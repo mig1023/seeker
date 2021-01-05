@@ -63,7 +63,9 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
                 string[] options = option.Split('|');
 
                 foreach (string oneOption in options)
-                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
+                    if (!OneParamFail(oneOption))
+                        return true;
+                    else if (Game.Data.Triggers.Contains(oneOption.Trim()))
                         return true;
 
                 return false;
@@ -76,11 +78,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        if (ParamFail("СИЛА", oneOption, Character.Protagonist.Strength))
-                            return false;
-                        else if (ParamFail("РЕАКЦИЯ", oneOption, Character.Protagonist.Reaction))
-                            return false;
-                        else if (ParamFail("ВЫНОСЛИВОСТЬ", oneOption, Character.Protagonist.Endurance))
+                        if (OneParamFail(oneOption))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
@@ -96,6 +94,18 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             }
         }
 
+        private static bool OneParamFail(string oneOption)
+        {
+            if (ParamFail("СИЛА", oneOption, Character.Protagonist.Strength))
+                return true;
+            else if (ParamFail("РЕАКЦИЯ", oneOption, Character.Protagonist.Reaction))
+                return true;
+            else if (ParamFail("ВЫНОСЛИВОСТЬ", oneOption, Character.Protagonist.Endurance))
+                return true;
+            else
+                return false;
+        }
+
         private static bool ParamFail(string paramName, string option, int param)
         {
             if (option.Contains(String.Format("{0} >", paramName)) && (int.Parse(option.Split('>')[1]) >= param))
@@ -106,25 +116,22 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
                 return false;
         }
 
-        public List<string> DiceCheck()
+        public List<string> TryToWound()
         {
-            List<string> diceCheck = new List<string> { };
+            List<string> report = new List<string>();
 
-            int firstDice = Game.Dice.Roll();
-            int dicesResult = firstDice;
+            int dice = Game.Dice.Roll();
+            report.Add(String.Format("На кубике выпало: {0} ⚄", dice));
 
-            if (Dices == 1)
-                diceCheck.Add(String.Format("На кубикe выпало: {0} ⚄", firstDice));
-            else
+            if (dice > 4)
             {
-                int secondDice = Game.Dice.Roll();
-                dicesResult += secondDice;
-                diceCheck.Add(String.Format("На кубиках выпало: {0} ⚄ + {1} ⚄ = {2}", firstDice, secondDice, (firstDice + secondDice)));
+                Character.Protagonist.Reaction += 3;
+                report.Add("BIG|GOOD|+3 к Реакции! :)");
             }
+            else
+                report.Add("BIG|BAD|Не повезло :(");
 
-            diceCheck.Add(dicesResult % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
-
-            return diceCheck;
+            return report;
         }
     }
 }
