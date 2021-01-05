@@ -1875,7 +1875,7 @@
 		<ID>241</ID>
 		<Text>Зубцы вил рвут твою кожу на рёбрах. Дикая боль пронзает твоё тело, глаза застит пелена тумана.</Text>
 		<Options>
-			<Option Destination="232" Text="Выносливость больше 6" OnlyIf="ВЫНОСЛИВОСТЬ > 6/>
+			<Option Destination="232" Text="Выносливость больше 6" OnlyIf="ВЫНОСЛИВОСТЬ > 6"/>
 			<Option Destination="250" Text="Выносливость 6 или меньше" OnlyIf="ВЫНОСЛИВОСТЬ &lt;= 6"/>
 		</Options>
 	</Paragraph>
