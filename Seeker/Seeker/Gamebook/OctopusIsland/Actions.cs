@@ -30,7 +30,18 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public List<string> Representer() => new List<string> { };
 
-        public List<string> Status() => new List<string> { String.Format("Параметр: {0}", 0) };
+        public List<string> Status()
+        {
+            List<string> statusLines = new List<string>
+            {
+                String.Format("Серж: {0}/{1}", Character.Protagonist.SergeSkill, Character.Protagonist.SergeHitpoint),
+                String.Format("Ксалотл: {0}/{1}", Character.Protagonist.XolotlSkill, Character.Protagonist.XolotlHitpoint),
+                String.Format("Тибо: {0}/{1}", Character.Protagonist.ThibautSkill, Character.Protagonist.ThibautHitpoint),
+                String.Format("Суи: {0}/{1}", Character.Protagonist.SouhiSkill, Character.Protagonist.SouhiHitpoint),
+            };
+
+            return statusLines;
+        }
 
         public List<string> StaticButtons() => new List<string> { };
 
