@@ -228,6 +228,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_thracians.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_essedarius.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
