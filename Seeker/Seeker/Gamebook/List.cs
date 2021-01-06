@@ -223,6 +223,21 @@ namespace Seeker.Gamebook
                 Illustration = "ThoseWhoAreAboutToDie.jpg",
                 ShowDisabledOption = true,
             },
+
+            ["Остров Осьминогов"] = new Description
+            {
+                XmlBook = "Gamebooks/OctopusIsland.xml",
+                Protagonist = OctopusIsland.Character.Protagonist.Init,
+                CheckOnlyIf = OctopusIsland.Actions.CheckOnlyIf,
+                Paragraphs = new OctopusIsland.Paragraphs(),
+                Actions = new OctopusIsland.Actions(),
+                Constants = new OctopusIsland.Constants(),
+                Save = OctopusIsland.Character.Protagonist.Save,
+                Load = OctopusIsland.Character.Protagonist.Load,
+                Disclaimer = "Эбли Филипп, 1992",
+                BookColor = "#c93c20",
+                Illustration = "OctopusIsland.jpg",
+            },
         };
 
         public static List<string> GetBooks()

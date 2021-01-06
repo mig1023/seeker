@@ -231,6 +231,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ThoseWhoAreAboutToDie_essedarius.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Gamebooks\OctopusIsland.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\OctopusIsland.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
