@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             [ButtonTypes.Main] = "#5da130",
             [ButtonTypes.Action] = "#339933",
             [ButtonTypes.Option] = "#696969",
+            [ButtonTypes.Continue] = "#b9cdab",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
