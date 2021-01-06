@@ -20,7 +20,6 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.ActionBox] = "#fdf3d3",
             [ColorTypes.StatusBar] = "#fce391",
             [ColorTypes.StatusFont] = "#000000",
         };
