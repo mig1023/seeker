@@ -19,6 +19,9 @@ namespace Seeker.Gamebook.OctopusIsland
         public int SouhiHitpoint { get; set; }
         public int SouhiSkill { get; set; }
 
+        public int Hitpoint { get; set; }
+        public int Skill { get; set; }
+
         public void Init()
         {
             Name = String.Empty;
@@ -45,6 +48,9 @@ namespace Seeker.Gamebook.OctopusIsland
                 XolotlSkill = this.XolotlSkill,
                 SouhiHitpoint = this.SouhiHitpoint,
                 SouhiSkill = this.SouhiSkill,
+
+                Hitpoint = this.Hitpoint,
+                Skill = this.Skill,
             };
         }
 

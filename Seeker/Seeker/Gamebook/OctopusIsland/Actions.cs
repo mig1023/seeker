@@ -12,8 +12,8 @@ namespace Seeker.Gamebook.OctopusIsland
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
-        public int Dices { get; set; }
 
+        public List<Character> Enemies { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -28,7 +28,18 @@ namespace Seeker.Gamebook.OctopusIsland
             return actionResult;
         }
 
-        public List<string> Representer() => new List<string> { };
+        public List<string> Representer()
+        {
+            List<string> enemies = new List<string>();
+
+            if (Enemies == null)
+                return enemies;
+
+            foreach (Character enemy in Enemies)
+                enemies.Add(String.Format("{0}\nловкость {1}  жизни {2}", enemy.Name, enemy.Skill, enemy.Hitpoint));
+
+            return enemies;
+        }
 
         public List<string> Status()
         {
@@ -85,6 +96,101 @@ namespace Seeker.Gamebook.OctopusIsland
                 }
 
                 return true;
+            }
+        }
+
+        private bool NoMoreEnemies(List<Character> enemies)
+        {
+            foreach (Character enemy in enemies)
+                if (enemy.Hitpoint > 0)
+                    return false;
+
+            return true;
+        }
+
+        public List<string> Fight()
+        {
+            List<string> fight = new List<string>();
+
+            List<Character> FightEnemies = new List<Character>();
+
+            foreach (Character enemy in Enemies)
+                FightEnemies.Add(enemy.Clone());
+
+            int round = 1;
+
+            Character hero = Character.Protagonist;
+
+            while (true)
+            {
+                fight.Add(String.Format("HEAD|Раунд: {0}", round));
+
+                foreach (Character enemy in FightEnemies)
+                {
+                    if (enemy.Hitpoint <= 0)
+                        continue;
+
+                    Character enemyInFight = enemy;
+                    fight.Add(String.Format("{0} (жизнь {1})", enemy.Name, enemy.Hitpoint));
+
+                    int protagonistRollFirst = Game.Dice.Roll();
+                    int protagonistRollSecond = Game.Dice.Roll();
+                    int heroSkill = Character.Protagonist.ThibautSkill;
+                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + heroSkill;
+
+                    fight.Add(String.Format("Мощность вашего удара: {0} ⚄ + {1} ⚄ + {2} = {3}",
+                        protagonistRollFirst, protagonistRollSecond, heroSkill, protagonistHitStrength
+                    ));
+
+                    int enemyRollFirst = Game.Dice.Roll();
+                    int enemyRollSecond = Game.Dice.Roll();
+                    int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
+
+                    fight.Add(String.Format("Мощность его удара: {0} ⚄ + {1} ⚄ + {1} = {2}",
+                        enemyRollFirst, enemyRollSecond, enemy.Skill, enemyHitStrength
+                    ));
+
+                    if (protagonistHitStrength > enemyHitStrength)
+                    {
+                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+
+                        enemy.Hitpoint -= 2;
+
+                        if (enemy.Hitpoint <= 0)
+                            enemy.Hitpoint = 0;
+
+                        bool enemyLost = NoMoreEnemies(FightEnemies);
+
+                        if (enemyLost)
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                            return fight;
+                        }
+                    }
+                    else if (protagonistHitStrength < enemyHitStrength)
+                    {
+                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+
+                        hero.ThibautHitpoint -= 2;
+
+                        if (hero.ThibautHitpoint < 0)
+                            hero.ThibautHitpoint = 0;
+
+                        if (hero.ThibautHitpoint <= 0)
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                            return fight;
+                        }
+                    }
+                    else
+                        fight.Add(String.Format("BOLD|Ничья в раунде"));
+
+                    fight.Add(String.Empty);
+                }
+
+                round += 1;
             }
         }
     }

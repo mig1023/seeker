@@ -51,6 +51,23 @@ namespace Seeker.Gamebook.OctopusIsland
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
                 };
 
+                if (xmlAction["Enemies"] != null)
+                {
+                    action.Enemies = new List<Character>();
+
+                    foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
+                    {
+                        Character enemy = new Character
+                        {
+                            Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
+                            Skill = Game.Xml.IntParse(xmlEnemy.Attributes["Skill"]),
+                            Hitpoint = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoint"]),
+                        };
+
+                        action.Enemies.Add(enemy);
+                    }
+                }
+
                 paragraph.Actions.Add(action);
             }
 
