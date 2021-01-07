@@ -26,7 +26,7 @@
 		<ID>3</ID>
 		<Text>Вы рады, что дорога привела вас к Беглецам, и понимаете, что Черный замок должен быть где-то неподалеку. Напоследок лес делает все, чтобы удержать вас: сучья цепляются за одежду, ветви хлещут по лицу, корни и коряги как будто вылезли из земли погреться и заставляют вас идти медленно и осторожно. Вдруг впереди забрезжил свет. Но как же он отличается от яркого весеннего солнца, которое светило, когда вы только-только входили в Зачарованный лес! Облака плотно закрыли солнце и пропускают лишь неясное и бледное свечение. Однако видно все же достаточно хорошо, и вы с облегчением покидаете негостеприимный лес.</Text>
 		<Options>
-			<Option Destination="211" Text="Далее"/>
+			<Option Destination="211"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -101,7 +101,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="222" Text="Далее"/>
+			<Option Destination="222"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -117,7 +117,7 @@
 		<Text>Вы отстегиваете флягу от пояса и протягиваете ее несчастному. Он делает два больших глотка (отметьте на листке, что фляга пуста, однако вы можете взять ее с собой и при случае наполнить снова) и с облегчением откидывается на землю. Потом просит вас наклониться поближе и из последних сил шепчет: «Спасибо тебе за твою доброту. Попробую отблагодарить тебя. Там, дальше на дороге будет развилка. Иди налево и когда увидишь две березы на холме, копай между ними. Там я спрятал все, что у меня было». Теперь, сделав все, что можно для умирающего разбойника, можете отправляться дальше.</Text>
 		<Triggers>PirateTreasure</Triggers>
 		<Options>
-			<Option Destination="234" Text="Далее"/>
+			<Option Destination="234"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -258,7 +258,7 @@
 		<ID>24</ID>
 		<Text>Если у вас есть еще заклятия Плавания или Левитации, используйте их и достигните другого берега озера. Если же нет, то фруктов вам хватит надолго, и вы еще сможете узнать, кто охраняет золотой апельсин и для чего он нужен. Но это будет еще не скоро…</Text>
 		<Options>
-			<Option Destination="238" Text="Далее"/>
+			<Option Destination="238"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -278,7 +278,7 @@
 			<Modification Name="Endurance" Value="6"/>
 		</Modifications>
 		<Options>
-			<Option Destination="341" Text="Далее"/>
+			<Option Destination="341"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -308,7 +308,7 @@
 		<ID>30</ID>
 		<Text>Вы спускаетесь по лестнице и открываете дверь.</Text>
 		<Options>
-			<Option Destination="10" Text="Далее"/>
+			<Option Destination="10"/>
 			<Option Destination="90" Text="Воспользоваться латами" OnlyIf="GreenArmour"/>
 		</Options>
 	</Paragraph>
@@ -327,7 +327,7 @@
 			<Modification Name="Mastery" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="207" Text="Далее"/>
+			<Option Destination="207"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -360,7 +360,7 @@
 		<Text>Вы так и не узнаете, кто были эти люди, но зато можете подобрать маленькое зеркальце и золотой свисток, оброненные ими во время боя. Скорее всего, это все-таки Беглецы из замка — и тогда вы на правильном пути.</Text>
 		<Triggers>Mirror, GoldenWhistle</Triggers>
 		<Options>
-			<Option Destination="3" Text="Далее"/>
+			<Option Destination="3"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -378,7 +378,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="183" Text="Далее"/>
+			<Option Destination="183"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -437,7 +437,7 @@
 		</Actions>
 		<Triggers>BronzeWhistle</Triggers>
 		<Options>
-			<Option Destination="118" Text="Далее"/>
+			<Option Destination="118"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -456,7 +456,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="454" Text="Далее"/>
+			<Option Destination="454"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -466,14 +466,14 @@
 			<Modification Name="Endurance" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="316" Text="Далее"/>
+			<Option Destination="316"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>43</ID>
 		<Text>Когда вы задаете свой вопрос, один из Орков невозмутимо дергает рычаг под столом, и вы летите куда-то вниз. Вероятно, спросили что-то не то… Когда вы падаете, то от удара теряете сознание (и 2 ВЫНОСЛИВОСТИ)…</Text>
 		<Options>
-			<Option Destination="409" Text="Далее"/>
+			<Option Destination="409"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -605,7 +605,7 @@
 		<ID>57</ID>
 		<Text>Все обходится благополучно, если не считать того, что дорога вскоре кончается и вперед ведет узкая тропинка, почти незаметная среди травы. Но обратно вернуться уже нельзя(не тратить же заклятие Левитации, если даже оно у вас есть), и вы идете до самого ее конца.</Text>
 		<Options>
-			<Option Destination="181" Text="Далее"/>
+			<Option Destination="181"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -615,7 +615,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="40" Text="Далее"/>
+			<Option Destination="40"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -630,7 +630,7 @@
 		<ID>60</ID>
 		<Text>Дорога оказывается недлинной, вскоре вы уже видите ее конец и спешите вперед.</Text>
 		<Options>
-			<Option Destination="181" Text="Далее"/>
+			<Option Destination="181"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -658,7 +658,7 @@
 		<ID>63</ID>
 		<Text>Медный ключик не подходит к отверстию в люке: вам придется уходить.</Text>
 		<Options>
-			<Option Destination="416" Text="Далее"/>
+			<Option Destination="416"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -684,7 +684,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="468" Text="Далее"/>
+			<Option Destination="468"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -692,7 +692,7 @@
 		<Text>«Так вы и в самом деле встречали Гиену?», — удивляются они. Вы снова недоумеваете: что может быть общего у этого животного с разбойниками. Но не спрашивать же их об этом! Тем временем разбойники не только соглашаются отпустить вас, ничего не взяв, но и дарят вам перо аиста, говоря, что в дороге оно может пригодиться. Они говорят, что если вы пойдете от их поляны направо, то как раз выйдете к мосту, а там и до замка недалеко. С этими словами они растворяются в лесу, давая вам возможность поверить их словам или нет.</Text>
 		<Triggers>StorkFeather</Triggers>
 		<Options>
-			<Option Destination="46" Text="Далее"/>
+			<Option Destination="46"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -700,7 +700,7 @@
 		<Text>«Правильно, — одобрительно говорит Домик, — это дракон. Ну что ж, вот тебе коготь дракона. Когда встретишься с ним, покажи ему коготь, и он тебя не тронет». И вправду, не успели вы подумать, как это Домик будет вам что-то давать, как прямо у ваших ног падает драконий коготь, как будто брошенный откуда-то сверху. Вы решаете ничему не удивляться и слушаете вторую загадку. «Легче легкого, проще простого, но чтобы попасть в замок, нет ничего ценнее». Если знаете, что это, то проделайте такое же сложение, если нет, придется уходить.</Text>
 		<Triggers>SecondClue, DragonClaw</Triggers>
 		<Options>
-			<Option Destination="98" Text="Далее"/>
+			<Option Destination="98"/>
 			<Option Destination="95" Text="Это 'Пароль'" OnlyIf="SecondClue"/>
 		</Options>
 	</Paragraph>
@@ -708,7 +708,7 @@
 		<ID>68</ID>
 		<Text>Вдали раздается глухой звон колокола. «Допрос», — говорит один старик другому. Слава Богу, думаете вы, значит все-таки не изваяния. Старик встает, отпирает вашу решетку и, прицепив к поясу кинжал, а за спину закинув ваш заплечный мешок, выводит вас из камеры.</Text>
 		<Options>
-			<Option Destination="160" Text="Далее"/>
+			<Option Destination="160"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -755,7 +755,7 @@
 		<ID>74</ID>
 		<Text>В сердце цитадели ведут большие массивные двери, к которым подвешен дверной молоток в форме боевого топора.</Text>
 		<Options>
-			<Option Destination="257" Text="Далее"/>
+			<Option Destination="257"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -787,7 +787,7 @@
 		<ID>78</ID>
 		<Text>Перо павлина вспыхивает в ваших руках, но тут же чья-то рука накидывает на него черный платок, и оно гаснет.</Text>
 		<Options>
-			<Option Destination="497" Text="Далее"/>
+			<Option Destination="497"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -981,7 +981,7 @@
 		<ID>98</ID>
 		<Text>Судя по всему, дорожка идет в правильном направлении. Вы чувствуете, что вокруг вас сгущаются сумрак и беспокойство, будто вы потревожили какую-то неумолимую силу, которая не замедлит нанести вам ответный удар. Но лес, который доставил столько неприятных встреч, кончается, и вы выходите на странную огромную поляну. Деревья по ее краям повалены и обуглены, но задуматься о причине этого вы не успеваете.</Text>
 		<Options>
-			<Option Destination="412" Text="Далее"/>
+			<Option Destination="412"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1021,7 +1021,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="8" Text="Далее"/>
+			<Option Destination="8"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1031,14 +1031,14 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="424" Text="Далее"/>
+			<Option Destination="424"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>104</ID>
 		<Text>Видя, что вы не хотите причинить им вред, они успокаиваются, а увидев еду, неистово и с благодарностью набрасываются на нее. Потом вы садитесь под деревом поговорить с ними.</Text>
 		<Options>
-			<Option Destination="520" Text="Далее"/>
+			<Option Destination="520"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1076,7 +1076,7 @@
 		<Text>Вы подходите ближе и склоняетесь над блестящей вещицей. Это Золотой амулет, но вы не знаете, кто обронил его. Если это сделал кто-то из слуг волшебника, он может принести вам несчастье, если путник — не исключено, что при случае поможет вам, а то и спасет жизнь. Вы поднимаете его и внимательно рассматриваете, но ничего не происходит. Можете взять его с собой.</Text>
 		<Triggers>GoldAmulet</Triggers>
 		<Options>
-			<Option Destination="407" Text="Далее"/>
+			<Option Destination="407"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1133,7 +1133,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="414" Text="Далее"/>
+			<Option Destination="414"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1162,7 +1162,7 @@
 			<Modification Name="Endurance" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="424" Text="Далее"/>
+			<Option Destination="424"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1221,7 +1221,7 @@
 		<ID>122</ID>
 		<Text>Вы называете пароль, и вас беспрепятственно пропускают в замок.</Text>
 		<Options>
-			<Option Destination="48" Text="Далее"/>
+			<Option Destination="48"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1271,21 +1271,21 @@
 			<Modification Name="Mastery" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="434" Text="Далее"/>
+			<Option Destination="434"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>127</ID>
 		<Text>Вы протягиваете кольцо сквозь решетку, волшебник с радостью принимает его и надевает на палец. Вы ждете, что он разрушит свою темницу и выйдет к вам, но кажется он совсем не собирается этого делать. «Старости не свойственно торопиться, — говорит он. — Сначала я вспомню заклинания, разрушающие злую власть Барлада Дэрта, а потом уже выйду отсюда. Если же вы торопитесь, послушайтесь моего совета. Когда будете будить Принцессу, то подходите к ней только справа и никак иначе. Если же решите сразиться с волшебником, для этого лучше иметь еще одно кольцо, но на этот раз золотое». Вы благодарите старика за совет и идете к соседней клетке.</Text>
 		<Options>
-			<Option Destination="225" Text="Далее"/>
+			<Option Destination="225"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>128</ID>
 		<Text>Вы пробуете красное вино. Оно действительно великолепно. Прибавьте 4 ВЫНОСЛИВОСТИ, поблагодарите Тролля и покиньте погреб через дверь в противоположном конце прохода между полками.</Text>
 		<Options>
-			<Option Destination="207" Text="Далее"/>
+			<Option Destination="207"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1308,7 +1308,7 @@
 		<ID>131</ID>
 		<Text>Вы вознаграждены за свою смелость. Это Микстура выносливости. Можете прибавить 6 ВЫНОСЛИВОСТЕЙ и отправляться дальше.</Text>
 		<Options>
-			<Option Destination="305" Text="Далее"/>
+			<Option Destination="305"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1326,14 +1326,14 @@
 		<ID>133</ID>
 		<Text>Узнав, что кольца у вас нет, старик сразу теряет к вам всякий интерес. Вы же переходите к соседней клетке и вглядываетесь во тьму.</Text>
 		<Options>
-			<Option Destination="225" Text="Далее"/>
+			<Option Destination="225"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>134</ID>
 		<Text>Вы предлагаете коготь дракона. Дракон явно удовлетворен вашим выбором: он поднимается в воздух и улетает.</Text>
 		<Options>
-			<Option Destination="454" Text="Далее"/>
+			<Option Destination="454"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1348,7 +1348,7 @@
 		<ID>136</ID>
 		<Text>Они не очень удивлены вашим вопросом и кивают на дверь в противоположной стене. В самом деле, им-то что — пусть Начальник стражи сам разбирается, имеете ли вы право разгуливать по замку. Менять решение уже поздно, и вы открываете указанную дверь.</Text>
 		<Options>
-			<Option Destination="337" Text="Далее"/>
+			<Option Destination="337"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1383,7 +1383,7 @@
 		<ID>140</ID>
 		<Text>Коридор упирается в дверь, за которой лестница наверх. Она освещена. Вы поднимаетесь по лестнице, проходите один пролет за другим, но выхода нет. Наконец перед вами последний пролет, в начале его дверь, но, несмотря на все старания, она не открывается. Придется подниматься до конца.</Text>
 		<Options>
-			<Option Destination="322" Text="Далее"/>
+			<Option Destination="322"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1393,7 +1393,7 @@
 			<Modification Name="Endurance" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="409" Text="Далее"/>
+			<Option Destination="409"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1408,7 +1408,7 @@
 		<ID>143</ID>
 		<Text>Вы выбегаете с Заставы и бежите по дороге. Сзади слышен шум погони. Вправо от дороги отходит узенькая тропка, и вы сворачиваете на нее, надеясь затеряться в лесу. Замысел удается, шум стихает: преследователи ничего не заметили и побежали по дороге дальше. Вы же переводите дух и идете вперед, пока не выходите на другую тропинку.</Text>
 		<Options>
-			<Option Destination="531" Text="Далее"/>
+			<Option Destination="531"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1416,7 +1416,7 @@
 		<Text>Вы просовываете шкуру оленя сквозь решетку и кидаете ее на пол клетки. Олень ложится на нее и обретает дар речи. Он не расположен рассказывать вам, за что томится, но он ненавидит Барлада Дэрта и говорит, что, насколько ему известно (он слышал разговоры стражников, которые не подозревали, что животное их понимает), в кабинете у волшебника и в зале, где спит Принцесса, стоят одинаковые зеркала. За ними потайные дверцы, которые ведут на лестницу. По ней волшебник приходит к Принцессе: других выходов на лестницу нет. Вы благодарите оленя за помощь и обещаете ему убить ненавистного мага. После этого идете дальше. Если вы когда-нибудь захотите воспользоваться потайной лестницей из кабинета волшебника, подойдите к зеркалу. То же самое можете сделать, если надо будет от Принцессы попасть к магу.</Text>
 		<Triggers>HiddenLadder</Triggers>
 		<Options>
-			<Option Destination="465" Text="Далее"/>
+			<Option Destination="465"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1447,7 +1447,7 @@
 		<ID>148</ID>
 		<Text>Вы говорите, что идете в Черный замок сражаться с Барладом Дэртом. «А чем же он так не угодил вам?» — интересуется старичок. Вы понимаете, что надо идти до конца.</Text>
 		<Options>
-			<Option Destination="464" Text="Далее"/>
+			<Option Destination="464"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1455,7 +1455,7 @@
 		<Text>Вы решаете задержаться и поговорить с Домиком. «Давай поиграем с тобой в загадки, храбрый путешественник, — предлагает Домик. — Если отгадаешь загадку, подарок тебе сделаю, не отгадаешь — не солоно хлебавши уйдешь». Вы соглашаетесь. «А вот моя первая загадка, — говорит Домик. — Для начала самая легкая. По небу летело, даже не шипело; только разозлилось, пламя появилось». Если вы отгадали загадку, то, конечно же, поняли, о чем или о ком идет речь. Сложите между собой порядковые номера всех букв в этом слове и посмотрите параграф с нужным номером. Если же не отгадали, как ни грустно, а придется уходить по дорожке, ведущей от дома.</Text>
 		<Triggers>FirstClue</Triggers>
 		<Options>
-			<Option Destination="98" Text="Далее"/>
+			<Option Destination="98"/>
 			<Option Destination="67" Text="Это 'Дракон'" OnlyIf="FirstClue"/>
 		</Options>
 	</Paragraph>
@@ -1515,7 +1515,7 @@
 			<Modification Name="Luck" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="44" Text="Далее"/>
+			<Option Destination="44"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1529,7 +1529,7 @@
 		<ID>158</ID>
 		<Text>Вы врываетесь в сторожку и застаете там еще одного Гоблина и двух Орков, сидящих вокруг невысокого деревянного стола. Перед ними кружки с какой-то жидкостью, они явно пьяны. Увидев вас, они сразу все понимают и беспрекословно кидают оружие к вашим ногам. Заперев их в погребе, можете осмотреть сторожку.</Text>
 		<Options>
-			<Option Destination="484" Text="Далее"/>
+			<Option Destination="484"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1561,7 +1561,7 @@
 			<Modification Name="Endurance" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="316" Text="Далее"/>
+			<Option Destination="316"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1576,7 +1576,7 @@
 		<ID>163</ID>
 		<Text>«Ты разгадал самую сложную мою загадку, — с радостью говорит Домик. — Ты первый, кто смог ее отгадать. За это я расскажу тебе то, чего не слышал от меня еще никто. Высок и полон тайн Черный замок, но пуще других волшебник бережет самую страшную тайну: где же находится Принцесса. Я открою ее тебе: Принцесса спит на хрустальной кровати в самом глухом подземелье замка, на самом нижнем этаже. Охраняют ее Зеленые рыцари. Когда пойдешь туда, то увидишь пять дверей. Про две из них тебе сразу все станет известно. А три останутся загадкой. Но эту-то загадку я помогу тебе отгадать. Левая дверь — смерть. Средняя дверь — кровь. Иди в правую дверь, а как войдешь, сверни налево — и смерть, и кровь минуют тебя. Только человеку, который знает, что такое Совесть, могу я доверить эту тайну». Вы благодарите Домик и, попрощавшись, идете дальше по дорожке, которая ведет в лес прямо от его дверей.</Text>
 		<Options>
-			<Option Destination="98" Text="Далее"/>
+			<Option Destination="98"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1603,21 +1603,21 @@
 		<ID>166</ID>
 		<Text>Слава Богу, есть чем открыть дверь, и вы быстро делаете это, спасаясь от неминуемой смерти.</Text>
 		<Options>
-			<Option Destination="350" Text="Далее"/>
+			<Option Destination="350"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>167</ID>
 		<Text>Волшебный пояс надет, и крот появляется сразу же, как только вы его зовете. Выяснив, в чем дело, он принимается за работу. Меньше чем за полчаса удобный подземный ход к вашим услугам, после чего благодарите крота и, пройдя под стенами…</Text>
 		<Options>
-			<Option Destination="100" Text="Далее"/>
+			<Option Destination="100"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>168</ID>
 		<Text>Вы показываете рыцарю четки и понимаете, что угадали: они служат пропуском через этот пост. Стражник пропускает вас, и можете идти дальше по коридору, пока путь не преградит дверь.</Text>
 		<Options>
-			<Option Destination="241" Text="Далее"/>
+			<Option Destination="241"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1653,7 +1653,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="347" Text="Далее"/>
+			<Option Destination="347"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1663,7 +1663,7 @@
 			<Modification Name="Endurance" Value="2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="379" Text="Далее"/>
+			<Option Destination="379"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1677,7 +1677,7 @@
 		<ID>175</ID>
 		<Text>Вы поднимаетесь на холм и благополучно обходите опасное место. Затем спускаетесь обратно на дорогу и продолжаете путь.</Text>
 		<Options>
-			<Option Destination="52" Text="Далее"/>
+			<Option Destination="52"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1750,7 +1750,7 @@
 			<Modification Name="Endurance" Value="6"/>
 		</Modifications>
 		<Options>
-			<Option Destination="406" Text="Далее"/>
+			<Option Destination="406"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1765,7 +1765,7 @@
 		<ID>180</ID>
 		<Text>Вскоре тропинка выводит вас на дорогу.</Text>
 		<Options>
-			<Option Destination="400" Text="Далее"/>
+			<Option Destination="400"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1803,7 +1803,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="436" Text="Далее"/>
+			<Option Destination="436"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1841,7 +1841,7 @@
 			<Modification Name="Luck" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="47" Text="Далее"/>
+			<Option Destination="47"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1863,7 +1863,7 @@
 			<Modification Name="Gold" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="19" Text="Далее"/>
+			<Option Destination="19"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1881,7 +1881,7 @@
 		<ID>191</ID>
 		<Text>Вы поднимаетесь по лестнице наверх и останавливаетесь перед закрытой дверью.</Text>
 		<Options>
-			<Option Destination="532" Text="Далее"/>
+			<Option Destination="532"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1898,7 +1898,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="437" Text="Далее"/>
+			<Option Destination="437"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1941,7 +1941,7 @@
 		<ID>197</ID>
 		<Text>По дороге мимо вас вихрем пролетает Зеленый рыцарь: на нем зеленые латы и шлем, в руке — копье. Вы не успеете выйти ему навстречу, даже если захотите, поэтому вылезайте из укрытия и идите дальше.</Text>
 		<Options>
-			<Option Destination="434" Text="Далее"/>
+			<Option Destination="434"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1951,7 +1951,7 @@
 			<Modification Name="Endurance" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="346" Text="Далее"/>
+			<Option Destination="346"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1980,7 +1980,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="192" Text="Далее"/>
+			<Option Destination="192"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2003,7 +2003,7 @@
 		<ID>204</ID>
 		<Text>Вы располагаетесь на ночь под одним из деревьев, и ничто не прерывает ваш сон. Прибавьте себе 3 ВЫНОСЛИВОСТИ и отправляйтесь в путь с первыми лучами солнца. Времени терять нельзя: до цели еще не близко.</Text>
 		<Options>
-			<Option Destination="353" Text="Далее"/>
+			<Option Destination="353"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2014,7 +2014,7 @@
 			<Modification Name="Mastery" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="39" Text="Далее"/>
+			<Option Destination="39"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2028,14 +2028,14 @@
 		<ID>207</ID>
 		<Text>Дверь ведет в коридор, который заканчивается у невысокой двери. Она заперта, но вам без особого труда удается ее выломать. За ней узкая винтовая лестница, ведущая вниз, в подземелье замка. Она освещена, свечи в канделябрах явно недавно меняли, значит, лестницей пользуются. Через несколько пролетов — дверь. Она заперта и открыть ее не удается. Вам приходится продолжать спуск.</Text>
 		<Options>
-			<Option Destination="544" Text="Далее"/>
+			<Option Destination="544"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>208</ID>
 		<Text>Библиотекарь с любопытством смотрит на вас и говорит, что не понимает, о чем идет речь. После этого он обещает найти кое-что интересное и скрывается за стеллажами.</Text>
 		<Options>
-			<Option Destination="141" Text="Далее"/>
+			<Option Destination="141"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2053,14 +2053,14 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="332" Text="Далее"/>
+			<Option Destination="332"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>210</ID>
 		<Text>Вы идете по дороге, пока не смеркается. Переночевав в дупле большого дерева и продолжив путь с рассветом, доходите до перекрестка и поворачиваете налево.</Text>
 		<Options>
-			<Option Destination="462" Text="Далее"/>
+			<Option Destination="462"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2112,14 +2112,14 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="408" Text="Далее"/>
+			<Option Destination="408"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>216</ID>
 		<Text>Благополучно достигли острова и выходите на берег.</Text>
 		<Options>
-			<Option Destination="132" Text="Далее"/>
+			<Option Destination="132"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2162,7 +2162,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="189" Text="Далее"/>
+			<Option Destination="189"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2224,7 +2224,7 @@
 		<ID>226</ID>
 		<Text>Вы пробуете эль. Вкус его неплох, но он, пожалуй, слишком крепок для вас. Неожиданно вы чувствуете, что шатаетесь, и пол уходит из-под ног…</Text>
 		<Options>
-			<Option Destination="409" Text="Далее"/>
+			<Option Destination="409"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2271,14 +2271,14 @@
 			<Modification Name="Endurance" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="406" Text="Далее"/>
+			<Option Destination="406"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>232</ID>
 		<Text>Лесная дорожка вскоре подходит совсем вплотную к стене Черного замка и упирается в нее. Подойдя ближе, вы видите в стене небольшую дверцу. Если знаете, как открыть ее, то сделайте это, иначе придется идти к воротам.</Text>
 		<Options>
-			<Option Destination="319" Text="Далее"/>
+			<Option Destination="319"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2303,7 +2303,7 @@
 			<Modification Name="Endurance" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="102" Text="Далее"/>
+			<Option Destination="102"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2354,14 +2354,14 @@
 		<ID>241</ID>
 		<Text>Вы открываете дверь. Перед вами небольшая зала, в которой жарко и душно от множества горящих свечей, стоящих вдоль стен в тяжелых бронзовых канделябрах на двенадцати золотых столиках. В центре залы на небольшом возвышении — хрустальная кровать. На ней спит прекрасная девушка, ее длинные распущенные волосы отсвечивают золотом. Вы сразу понимаете, что это Принцесса, и сами удивляетесь тому, что узнали ее, хотя лишь раз мельком видели портрет, когда Король напутствовал вас в дорогу. В углу комнаты большое зеркало, в котором вы видите свое отражение.</Text>
 		<Options>
-			<Option Destination="485" Text="Далее"/>
+			<Option Destination="485"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>242</ID>
 		<Text>Вам нечем это доказать, и разбойники не верят. «Какие только байки не рассказывают те, кто попадает к нам в руки!» — смеются они. Так что вам лучше не терять времени и начинать неизбежный бой.</Text>
 		<Options>
-			<Option Destination="123" Text="Далее"/>
+			<Option Destination="123"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2398,7 +2398,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="19" Text="Далее"/>
+			<Option Destination="19"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2440,14 +2440,14 @@
 		<ID>250</ID>
 		<Text>Вы решаете довериться дороге и пойти прямо. Она не обманывает ваших ожиданий и приводит к крепкому бревенчатому дому. Дорога заканчивается у его дверей.</Text>
 		<Options>
-			<Option Destination="33" Text="Далее"/>
+			<Option Destination="33"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>251</ID>
 		<Text>Пока вы будете в замке, вам предоставляется возможность перед каждой дверью решить, откроете вы ее в своей одежде или же в латах (если, конечно, у вас будет возможность переодеться — ведь когда в комнате, из которой вы выходите, кто-то есть, то сделать это невозможно, не вызвав подозрений). Теперь вернитесь и поднимитесь по лестнице.</Text>
 		<Options>
-			<Option Destination="191" Text="Далее"/>
+			<Option Destination="191"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2465,7 +2465,7 @@
 		<ID>253</ID>
 		<Text>Вы берете стеклянный сосуд, но он выскальзывает из рук и со звоном разбивается об пол. На шум вбегает стража — Орки, вооруженные кривыми зазубренными саблями. Вы пытаетесь сопротивляться, но сильный удар по голове (потеряйте 2 ВЫНОСЛИВОСТИ) валит вас на пол, и вы теряете сознание…</Text>
 		<Options>
-			<Option Destination="409" Text="Далее"/>
+			<Option Destination="409"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2475,7 +2475,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="366" Text="Далее"/>
+			<Option Destination="366"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2496,7 +2496,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="316" Text="Далее"/>
+			<Option Destination="316"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2530,7 +2530,7 @@
 		<ID>259</ID>
 		<Text>Стража недоверчиво смотрит, но, судя по всему, вы угадали, и вас впускают внутрь.</Text>
 		<Options>
-			<Option Destination="48" Text="Далее"/>
+			<Option Destination="48"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2593,21 +2593,21 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="125" Text="Далее"/>
+			<Option Destination="125"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>266</ID>
 		<Text>Вы подходите к зеркалу и поворачиваете его. Как и ожидали, за ним виднеется выход на лестницу. Выходите на нее, и дверь бесшумно закрывается. Вы понимаете, что обратно пути нет. Выход только один: сразиться с волшебником и победить его. Лестница идет вверх на много этажей. В конце — дверь. Вы толкаете ее, и она отходит в сторону вместе с зеркалом с другой стороны. Вы же переступаете порог.</Text>
 		<Options>
-			<Option Destination="553" Text="Далее"/>
+			<Option Destination="553"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>267</ID>
 		<Text>Вы достаете перо павлина. Стоит павлину посмотреть в вашу сторону, как перо начинает ярко светиться. Теперь вы овладели секретом и сможете зажигать перо, когда захотите. Мысленно поблагодарив павлина, переходите к следующей клетке.</Text>
 		<Options>
-			<Option Destination="147" Text="Далее"/>
+			<Option Destination="147"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2617,14 +2617,14 @@
 			<Modification Name="Endurance" Value="4"/>
 		</Modifications>
 		<Options>
-			<Option Destination="80" Text="Далее"/>
+			<Option Destination="80"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>269</ID>
 		<Text>Вы идете в полной темноте. Где-то наверху шумит река, но ход идет дальше и заканчивается винтовой лестницей, в конце которой дверь. Вы открываете ее и оказываетесь в каком-то коридоре, а дверь медленно встает на место. Через несколько секунд это уже не дверь, а часть стены, и даже нельзя сказать, где она была.</Text>
 		<Options>
-			<Option Destination="264" Text="Далее"/>
+			<Option Destination="264"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2639,14 +2639,14 @@
 		<ID>271</ID>
 		<Text>«В кости», — отвечаете вы, но Орки даже не знают такой игры. Вы понимаете, что ответ неудачен, и решаете пробиться в замок силой.</Text>
 		<Options>
-			<Option Destination="341" Text="Далее"/>
+			<Option Destination="341"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>272</ID>
 		<Text>Вы машинально показываете крысам пропуск, не надеясь, что это поможет. Но, как ни странно, пропуск действует на крыс успокаивающе, и они, повизгивая, уползают в угол. Можете еще раз похвалить себя за нежадность и предусмотрительность и выйти из комнаты через дверь справа от вас.</Text>
 		<Options>
-			<Option Destination="480" Text="Далее"/>
+			<Option Destination="480"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2709,14 +2709,14 @@
 			<Modification Name="Endurance" Value="-4"/>
 		</Modifications>
 		<Options>
-			<Option Destination="409" Text="Далее"/>
+			<Option Destination="409"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>279</ID>
 		<Text>Вы подходите к зеркалу, но не замечаете ничего необычного. Его обрамляет золотая рама с изображениями сцен из жизни гарпий. Но как следует насладиться прекрасным орнаментом вам не дают.</Text>
 		<Options>
-			<Option Destination="509" Text="Далее"/>
+			<Option Destination="509"/>
 			<Option Destination="266" Text="Открыть тайный проход на лестницу" OnlyIf="HiddenLadder"/>
 		</Options>
 	</Paragraph>
@@ -2724,7 +2724,7 @@
 		<ID>280</ID>
 		<Text>Вы говорите, что идете в замок драться с волшебником. Может быть, это несколько опрометчиво, но лес еще не научил вас осторожности.</Text>
 		<Options>
-			<Option Destination="555" Text="Далее"/>
+			<Option Destination="555"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2768,21 +2768,21 @@
 		<ID>285</ID>
 		<Text>Открываете дверь и делаете несколько шагов вперед. В этот момент замечаете, что попали в не совсем обычное помещение. Это Подземелье мертвых. Бог весть откуда взялось оно в этом замке, лишь недавно возведенном злыми чарами Барлада Дэрта. Но самое страшное в том, что вы стоите прямо на надгробии. На нем надпись: «Кто потревожит мой сон, навсегда ляжет рядом со мной». Холодок пробегает по спине. А вдруг и правда… Но что это? Надгробие откидывается, сбрасывая вас, и из него поднимается высокий скелет в рыцарских латах. Вы цепенеете от ужаса, а он движется прямо на вас, улыбаясь пустым темным оскалом рта.</Text>
 		<Options>
-			<Option Destination="321" Text="Далее"/>
+			<Option Destination="321"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>286</ID>
 		<Text>Лишь только ступили на левую дорогу, как в ту же секунду кажется, будто закружилась голова, лес начинает бешено вращаться, но потом все успокаивается. Вы снова стоите на дороге. Никакой развилки позади нет, да и дорога совсем другая. Но делать нечего, надо идти вперед.</Text>
 		<Options>
-			<Option Destination="129" Text="Далее"/>
+			<Option Destination="129"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>287</ID>
 		<Text>Вы пытаетесь зажечь свечу, но чья-то невидимая рука накидывает на нее черный платок, и свет гаснет.</Text>
 		<Options>
-			<Option Destination="497" Text="Далее"/>
+			<Option Destination="497"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2801,7 +2801,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="487" Text="Далее"/>
+			<Option Destination="487"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2822,7 +2822,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="118" Text="Далее"/>
+			<Option Destination="118"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2856,7 +2856,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="169" Text="Далее"/>
+			<Option Destination="169"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2870,7 +2870,7 @@
 		<ID>295</ID>
 		<Text>Услышав про замок, повар сразу же теряет словоохотливость. Он или не хочет ничего рассказывать, или ему запрещено это делать, а в вас он подозревает шпиона. Однако в конце концов удается разговорить его. Под большим секретом, десять раз взяв с вас обещание, что не проговоритесь, и непрерывно оглядываясь, не подслушивают ли его поварята, он сообщает самую последнюю сплетню, только вчера распространившуюся по замку: волшебник пристрастился к игре в карты. Вы стараетесь не показать вида, что ожидали чего-то большего, спрашиваете его, какие комнаты вы еще не видели на этом этаже и что вообще есть интересного в замке. Но Повар не понимает вашего вопроса. «Какие еще комнаты?— искренне удивляется он.— Кухня наша, да кабинет Мага — вот тебе и все комнаты. Отсюда — он показывает на люк — еду ему наверх подаем. Вот и весь замок». Вы понимаете, что волшебник позаботился о том, чтобы заколдовать своих слуг от ненужных расспросов, и, поблагодарив за беседу, выходите из кухни.</Text>
 		<Options>
-			<Option Destination="379" Text="Далее"/>
+			<Option Destination="379"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2886,7 +2886,7 @@
 		<ID>297</ID>
 		<Text>Вы гладите Пегаса, и он отзывается на ласку радостным ржанием. Значит, завоевали его расположение. Теперь, если придется выбираться из замка, а в комнате будет открытое окно, вы можете позвать его. Но учтите, Пегас может перенести вас только во Дворец, ведь он не раз отвозил туда послов чародея. Поскольку управлять им вы не умеете, то в другое место попасть не удастся. Погладив Пегаса, выходите из конюшни и направляетесь к зданию в центре двора.</Text>
 		<Options>
-			<Option Destination="416" Text="Далее"/>
+			<Option Destination="416"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2896,7 +2896,7 @@
 			<Modification Name="Endurance" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="257" Text="Далее"/>
+			<Option Destination="257"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2906,7 +2906,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="567" Text="Далее"/>
+			<Option Destination="567"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2982,21 +2982,21 @@
 		<ID>305</ID>
 		<Text>Тропинка становится все шире и шире и превращается в большую дорогу. Вы недоумеваете: кому это пришло в голову посреди леса проложить такой путь. Быть может, дорогу просто не достроили? Но это останется одной из загадок Зачарованного леса, которую вам не суждено разгадать. Конец дороги уже виден: она выходит на огромную поляну. Деревья по ее краям повалены и обуглены, кажется, недавно здесь бушевал пожар. На безлюдную поляну выходит еще несколько таких же широких дорог. Вы ступаете на траву у края поляны.</Text>
 		<Options>
-			<Option Destination="412" Text="Далее"/>
+			<Option Destination="412"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>306</ID>
 		<Text>Вам повезло: в последний момент замечаете маленькую пещерку у подножия одного из холмов. Есть ли там обитатели, раздумывать некогда — это единственный шанс. К счастью, в пещерке никого нет, и обвал проносится мимо. Вы выбираетесь и, благословляя счастливую Судьбу, отправляетесь дальше.</Text>
 		<Options>
-			<Option Destination="52" Text="Далее"/>
+			<Option Destination="52"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>307</ID>
 		<Text>Вы наполняете флягу. В будущем можете использовать эту воду так же, как и ту, что была с собой. Потом, внимательно глядя по сторонам, идете дальше по главной улице.</Text>
 		<Options>
-			<Option Destination="261" Text="Далее"/>
+			<Option Destination="261"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3032,7 +3032,7 @@
 		<ID>310</ID>
 		<Text>Старик радостно улыбается и говорит, что хотя он и не надеется дожить до того дня, когда силы Зла будут низвергнуты, но с радостью поможет отважному путешественнику. Он рассказывает, что дорога пойдет мимо гибельных Коричневых топей, поэтому на первой развилке сворачивать с дороги ни в коем случае нельзя: болото не выпускает своих жертв. Кроме этого он предупреждает, что самые страшные и отважные воины среди слуг волшебника — Зеленые рыцари. Они не только смело сражаются, Барлад Дэрт передал им частичку своего мастерства. Они также искусно развеивают многие заклятия врага, но успешнее всего — заклятие Копии. Недоумевая, откуда старик знает про заклятия, вы благодарите его и отправляетесь дальше.</Text>
 		<Options>
-			<Option Destination="179" Text="Далее"/>
+			<Option Destination="179"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3053,7 +3053,7 @@
 			<Modification Name="Endurance" Value="-4"/>
 		</Modifications>
 		<Options>
-			<Option Destination="192" Text="Далее"/>
+			<Option Destination="192"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3063,7 +3063,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="222" Text="Далее"/>
+			<Option Destination="222"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3073,7 +3073,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="183" Text="Далее"/>
+			<Option Destination="183"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3083,7 +3083,7 @@
 			<Modification Name="Endurance" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="409" Text="Далее"/>
+			<Option Destination="409"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3119,7 +3119,7 @@
 		<ID>318</ID>
 		<Text>Без труда откинув крышку ларя, достаете большой металлический ключ. На нем выгравировано: «Все». Этот ключ поможет вам открыть многие запертые двери в замке. Если какая-то дверь не откроется, попробуйте, — вдруг ключ подойдет. Но сейчас вам надо торопиться и уходить.</Text>
 		<Options>
-			<Option Destination="193" Text="Далее"/>
+			<Option Destination="193"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3206,7 +3206,7 @@
 			<Modification Name="Gold" Value="-7"/>
 		</Modifications>
 		<Options>
-			<Option Destination="443" Text="Далее"/>
+			<Option Destination="443"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3232,7 +3232,7 @@
 		<ID>329</ID>
 		<Text>Тропинка спускается на дно неглубокого оврага. Над вами по мосту проходит дорога, но стены оврага слишком круты, чтобы можно было взобраться на нее. Через некоторое время вы подходите к крепкому бревенчатому дому, тропинка заканчивается у его дверей.</Text>
 		<Options>
-			<Option Destination="33" Text="Далее"/>
+			<Option Destination="33"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3240,7 +3240,7 @@
 		<Text>За дверью лестница, по которой поднимаетесь на второй этаж. Теперь можно или снять латы, или оставить их на себе. Подобное решение нужно принимать перед входом в каждую новую комнату, если, конечно, в предыдущей ничто не мешает вам переодеться.</Text>
 		<Triggers>GreenArmour</Triggers>
 		<Options>
-			<Option Destination="532" Text="Далее"/>
+			<Option Destination="532"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3274,7 +3274,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="99" Text="Далее"/>
+			<Option Destination="99"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3285,7 +3285,7 @@
 			<Modification Name="Gold" Value="7"/>
 		</Modifications>
 		<Options>
-			<Option Destination="46" Text="Далее"/>
+			<Option Destination="46"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3296,7 +3296,7 @@
 			<Modification Name="Luck" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="24" Text="Далее"/>
+			<Option Destination="24"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3331,7 +3331,7 @@
 			<Modification Name="Endurance" Value="3"/>
 		</Modifications>
 		<Options>
-			<Option Destination="509" Text="Далее"/>
+			<Option Destination="509"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3351,7 +3351,7 @@
 			<Modification Name="Endurance" Value="-3"/>
 		</Modifications>
 		<Options>
-			<Option Destination="181" Text="Далее"/>
+			<Option Destination="181"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3374,7 +3374,7 @@
 		<ID>345</ID>
 		<Text>Библиотекарь говорит, что попробует найти что-нибудь подходящее, и скрывается за полками.</Text>
 		<Options>
-			<Option Destination="141" Text="Далее"/>
+			<Option Destination="141"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3396,7 +3396,7 @@
 		<ID>348</ID>
 		<Text>Коридор приводит к двери. Она не заперта, и когда вы открываете ее, то видите лестницу, ведущую вниз. Вы спускаетесь по ней.</Text>
 		<Options>
-			<Option Destination="544" Text="Далее"/>
+			<Option Destination="544"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3431,7 +3431,7 @@
 		<ID>352</ID>
 		<Text>Держась за стену, вы доходите до двери. За ней лестница, она освещена, и вам приходится несколько минут постоять, пока глаза привыкнут к свету. Затем поднимаетесь по лестнице, но ни через два, ни через три, ни через четыре пролета не встречаете выхода с нее. Наконец перед вами последний пролет, в начале его дверь, но как вы ни стараетесь, вам не удается открыть ее. Придется подниматься до конца.</Text>
 		<Options>
-			<Option Destination="322" Text="Далее"/>
+			<Option Destination="322"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3481,7 +3481,7 @@
 			<Modification Name="Luck" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="207" Text="Далее"/>
+			<Option Destination="207"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3491,7 +3491,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="316" Text="Далее"/>
+			<Option Destination="316"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3532,28 +3532,28 @@
 		<ID>362</ID>
 		<Text>Вы прикладываете к углублению в двери бляху с золотым орлом, и она словно прилипает к нему, потому что взять ее обратно уже не удается. Дверь медленно раскрывается, и вы вступаете в узкий коридор. Он прекрасно освещен, стены украшены дубовыми панелями с изображением орлов. В конце концов коридор упирается в дверь. Она не заперта.</Text>
 		<Options>
-			<Option Destination="241" Text="Далее"/>
+			<Option Destination="241"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>363</ID>
 		<Text>Неожиданно вы чувствуете, что ваш Оберег ведет себя как-то неспокойно, как будто хочет вырваться наружу. Повинуясь какому-то неосознанному импульсу, вы вынимаете его из-под одежды и показываете рыцарю. К вашему великому удивлению, он низко кланяется и отступает в сторону, чтобы пропустить вас. Вы же идете дальше по коридору, пока он не заканчивается невысокой дверью.</Text>
 		<Options>
-			<Option Destination="241" Text="Далее"/>
+			<Option Destination="241"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>364</ID>
 		<Text>Только мечом Зеленого рыцаря можно победить каменных крыс. Увидев его, они в ужасе разбегаются. Ваш путь свободен. Дверь справа от вас ведет в следующую комнату.</Text>
 		<Options>
-			<Option Destination="480" Text="Далее"/>
+			<Option Destination="480"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>365</ID>
 		<Text>Какое бы заклятие вы ни наложили, барон без труда нейтрализует его. Вычеркните выбранное вами заклятие и надейтесь только на себя.</Text>
 		<Options>
-			<Option Destination="543" Text="Далее"/>
+			<Option Destination="543"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3569,7 +3569,7 @@
 		<Text>Ваш выбор падает на шкуру лисы. Трудно сказать, зачем она вам может пригодиться, но внутренний голос подсказывает, что она сослужит хорошую службу. Теперь пора выбираться из берлоги. Новая дорога уводит вас вглубь леса.</Text>
 		<Triggers>FoxSkin</Triggers>
 		<Options>
-			<Option Destination="44" Text="Далее"/>
+			<Option Destination="44"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3605,7 +3605,7 @@
 		<ID>371</ID>
 		<Text>Бесполезно: старик даже не замечает, что вы на него напали. Колдовство слишком сильно, чтобы вы могли бороться с ним. Придется покорно идти дальше.</Text>
 		<Options>
-			<Option Destination="276" Text="Далее"/>
+			<Option Destination="276"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3615,7 +3615,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="424" Text="Далее"/>
+			<Option Destination="424"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3640,7 +3640,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="34" Text="Далее"/>
+			<Option Destination="34"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3660,7 +3660,7 @@
 			<Modification Name="Gold" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="155" Text="Далее"/>
+			<Option Destination="155"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3683,7 +3683,7 @@
 		<ID>379</ID>
 		<Text>За дверью — коридор, а конце его еще одна дверь, на этот раз гораздо ниже. Она заперта, но вам без особого труда удается ее выломать. Узкая винтовая лестница ведет вниз, в подземелье замка. Через несколько пролетов снова дверь, которую открыть уже не удается. Приходится спускаться до конца.</Text>
 		<Options>
-			<Option Destination="544" Text="Далее"/>
+			<Option Destination="544"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3727,7 +3727,7 @@
 		<ID>384</ID>
 		<Text>Вы говорите, что в Черном замке заточена Принцесса и вы решили ее освободить. Но не слишком ли опрометчив ваш ответ?</Text>
 		<Options>
-			<Option Destination="555" Text="Далее"/>
+			<Option Destination="555"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3737,21 +3737,21 @@
 			<Modification Name="Gold" Value="-4"/>
 		</Modifications>
 		<Options>
-			<Option Destination="502" Text="Далее"/>
+			<Option Destination="502"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>386</ID>
 		<Text>Невидимая рука выхватывает у вас сосуд. «В этом сосуде таится смерть, слышится голос, — и ты посмел предложить его нам!».</Text>
 		<Options>
-			<Option Destination="572" Text="Далее"/>
+			<Option Destination="572"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>387</ID>
 		<Text>Вы показывает рыцарю зеркальце, и, как ни странно, этот маленький изящный предмет действительно оказывается пропуском. Зеленый страж отступает в сторону, и вы быстро устремляетесь вперед по коридору, чтобы он не успел спросить что-нибудь еще. Коридор заканчивается низенькой деревянной дверцей, в замке которой торчит ключ. Вы поворачиваете его.</Text>
 		<Options>
-			<Option Destination="241" Text="Далее"/>
+			<Option Destination="241"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3771,7 +3771,7 @@
 			<Modification Name="Endurance" Value="-3"/>
 		</Modifications>
 		<Options>
-			<Option Destination="300" Text="Далее"/>
+			<Option Destination="300"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3781,14 +3781,14 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="569" Text="Далее"/>
+			<Option Destination="569"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>391</ID>
 		<Text>Счастье изменило вам. Вы укололись настолько больно, что оказались не в силах сдержать крик.</Text>
 		<Options>
-			<Option Destination="502" Text="Далее"/>
+			<Option Destination="502"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3824,14 +3824,14 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="567" Text="Далее"/>
+			<Option Destination="567"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>396</ID>
 		<Text>Вы угадали, волшебник действительно часто играет в карты. Подозрительно оглядев с ног до головы, стража пропускает вас через ворота.</Text>
 		<Options>
-			<Option Destination="100" Text="Далее"/>
+			<Option Destination="100"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3847,7 +3847,7 @@
 		<ID>398</ID>
 		<Text>Вы выходите через правую дверь и попадаете в маленькую проходную комнатку. Она пуста, и из нее ведет только одна дверь — вперед.</Text>
 		<Options>
-			<Option Destination="39" Text="Далее"/>
+			<Option Destination="39"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3934,7 +3934,7 @@
 		<ID>407</ID>
 		<Text>Вскоре тропинка выходит на широкую дорогу. Может быть, это та дорога, которая шла от перекрестка прямо? Не исключено, но возвращаться назад ни к чему, и вы решаете, что такая дорога наверняка должна вести к какому-нибудь жилью, а, быть может, и к самому Черному замку.</Text>
 		<Options>
-			<Option Destination="181" Text="Далее"/>
+			<Option Destination="181"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3963,7 +3963,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="54" Text="Далее"/>
+			<Option Destination="54"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3992,7 +3992,7 @@
 		<ID>413</ID>
 		<Text>Заклятие переносит вас на маленький остров, и вы оглядываетесь по сторонам.</Text>
 		<Options>
-			<Option Destination="132" Text="Далее"/>
+			<Option Destination="132"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4003,7 +4003,7 @@
 			<Modification Name="Gold" Value="10"/>
 		</Modifications>
 		<Options>
-			<Option Destination="338" Text="Далее"/>
+			<Option Destination="338"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4035,14 +4035,14 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="326" Text="Далее"/>
+			<Option Destination="326"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>418</ID>
 		<Text>Вы хотите еще поговорить со стариком, но он явно начинает подозревать в вас одного из шпионов Черного мага. Отчаявшись что-либо узнать, вы покидаете деревню.</Text>
 		<Options>
-			<Option Destination="179" Text="Далее"/>
+			<Option Destination="179"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4109,7 +4109,7 @@
 		<ID>426</ID>
 		<Text>В ответ разбойники только смеются. «Мы и так возьмем все твое золото! Наверно, в твоем мешке есть что-то более ценное, раз ты так легко готов расстаться с ним!» Вы понимаете, что пощады ждать не приходится и решаете драться.</Text>
 		<Options>
-			<Option Destination="123" Text="Далее"/>
+			<Option Destination="123"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4137,7 +4137,7 @@
 		<ID>429</ID>
 		<Text>Вы достаете Золотое ожерелье, и оно начинает мягко мерцать в темноте. «Это то, что мы искали все эти годы», — слышится все тот же голос. Невидимая рука бережно принимает у вас ожерелье, и оно исчезает. Через несколько секунд голос продолжает: «Ты свободен, щедрый рыцарь». Рука освещает вам выход. Дверь оказывается совсем не там, где вы думали, и вы с облегчением открываете ее.</Text>
 		<Options>
-			<Option Destination="301" Text="Далее"/>
+			<Option Destination="301"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4145,7 +4145,7 @@
 		<Text>Клубочек катится прямо. Вернитесь и сделайте самостоятельный выбор, но учтите, если вы свернете, клубочек укатится.</Text>
 		<Options>
 			<Option Destination="35" Text="За клубочком"/>
-			<Option Destination="400" Text="Далее"/>
+			<Option Destination="400"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4191,7 +4191,7 @@
 		<ID>435</ID>
 		<Text>Подойдя к двери, ведущей на лестницу, вы обнаруживаете, что она не заперта, и спускаетесь вниз.</Text>
 		<Options>
-			<Option Destination="544" Text="Далее"/>
+			<Option Destination="544"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4217,7 +4217,7 @@
 		<ID>438</ID>
 		<Text>Торговец желает вам удачной и приятной прогулки, пряча от вас улыбку. Вы понимаете, что он не поверил вам, но теперь не остается ничего другого, кроме как уйти.</Text>
 		<Options>
-			<Option Destination="106" Text="Далее"/>
+			<Option Destination="106"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4243,7 +4243,7 @@
 			<Modification Name="Endurance" Value="-3"/>
 		</Modifications>
 		<Options>
-			<Option Destination="378" Text="Далее"/>
+			<Option Destination="378"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4253,7 +4253,7 @@
 			<Modification Name="Endurance" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="119" Text="Далее"/>
+			<Option Destination="119"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4263,28 +4263,28 @@
 			<Modification Name="Gold" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="106" Text="Далее"/>
+			<Option Destination="106"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>444</ID>
 		<Text>Перстень с изумрудом очень красив, но как он может помочь разбудить Принцессу? Может быть, он и мог бы где-нибудь пригодиться, но сейчас бесполезен. Внезапный шум, который с каждой секундой усиливается, заставляет насторожиться.</Text>
 		<Options>
-			<Option Destination="502" Text="Далее"/>
+			<Option Destination="502"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>445</ID>
 		<Text>Лес светлеет. Кажется, что вы не забираетесь все глубже и глубже в чащу, не приближаетесь к его середине, а выходите к опушке, где снова будет солнце и не будет никаких опасностей. А вдруг и правда дорожки и тропы запутали вас, а лес вас не пустит и выбросит на опушку: ведь это будет значить, что вы не достигли успеха, и все придется начинать сначала. Но внезапно дорога резко поворачивает, и деревья расступаются.</Text>
 		<Options>
-			<Option Destination="102" Text="Далее"/>
+			<Option Destination="102"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>446</ID>
 		<Text>Несколько раз вы дергаете за ручку двери, но безуспешно, и понимаете, что незамеченным пройти не удастся.</Text>
 		<Options>
-			<Option Destination="328" Text="Далее"/>
+			<Option Destination="328"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4389,14 +4389,14 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="454" Text="Далее"/>
+			<Option Destination="454"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>452</ID>
 		<Text>Вы спускаетесь по лестнице. Она заканчивается дверью, которую вы и открываете.</Text>
 		<Options>
-			<Option Destination="10" Text="Далее"/>
+			<Option Destination="10"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4404,7 +4404,7 @@
 		<Text>Разбойники верят вам и соглашаются пропустить не только ничего не взяв, но и подарив перо аиста, которое, по их словам, может пригодиться в дороге. Пока приходите в себя после пережитого, они бесшумно скрываются в лесу. А вам надо решать, куда направиться дальше, ведь вы так растерялись, что забыли спросить их об этом.</Text>
 		<Triggers>StorkFeather</Triggers>
 		<Options>
-			<Option Destination="46" Text="Далее"/>
+			<Option Destination="46"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4419,7 +4419,7 @@
 		<ID>455</ID>
 		<Text>«Трое из Эвенло», — говорите вы старику. Он непонимающе смотрит на вас. «Трое из Эвенло», — повторяете вы. Теперь он, кажется, понимает. «Сейчас я принесу то, что вам нужно», — говорит он и скрывается за стеллажами.</Text>
 		<Options>
-			<Option Destination="141" Text="Далее"/>
+			<Option Destination="141"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4436,7 +4436,7 @@
 		<ID>457</ID>
 		<Text>У вас в руках амулет с медвежьей шерстью. Один раз за все путешествие с его помощью сможете позвать медведицу, чтобы она помогла вам победить врага. Ее МАСТЕРСТВО - 8, а ВЫНОСЛИВОСТЬ - 10. Она будет драться с вашим врагом по тем же правилам, по которым сражается Копия, и, победив его, вернется обратно в берлогу. Амулетом можно воспользоваться в любом бою, но за пределами Черного замка. Там амулет бессилен. Поблагодарив медведицу, вы вылезаете из берлоги и идете дальше по дороге, уходящей с поляны в лес.</Text>
 		<Options>
-			<Option Destination="44" Text="Далее"/>
+			<Option Destination="44"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4505,28 +4505,28 @@
 		<ID>465</ID>
 		<Text>Несколько соседних клеток пусты. Вы быстро проходите мимо них и выходите в узкий коридор.</Text>
 		<Options>
-			<Option Destination="140" Text="Далее"/>
+			<Option Destination="140"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>466</ID>
 		<Text>Вам удается пересечь пустое пространство без потерь, если не считать того, что вы стукаетесь головой о противоположную стенку. Стена продолжается, и вы идете по ней дальше.</Text>
 		<Options>
-			<Option Destination="352" Text="Далее"/>
+			<Option Destination="352"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>467</ID>
 		<Text>Вы попадаете в маленькую проходную комнатку и открываете следующую дверь.</Text>
 		<Options>
-			<Option Destination="182" Text="Далее"/>
+			<Option Destination="182"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>468</ID>
 		<Text>Начальник стражи со стоном падает на пол у ваших ног. Он мертв. Вы же, не дожидаясь, пока стража сообразит, в чем дело, выбегаете в дверь за его столом и плотно прикрываете ее за собой.</Text>
 		<Options>
-			<Option Destination="39" Text="Далее"/>
+			<Option Destination="39"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4536,7 +4536,7 @@
 			<Modification Name="Endurance" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="257" Text="Далее"/>
+			<Option Destination="257"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4551,7 +4551,7 @@
 		<ID>471</ID>
 		<Text>Вы срываете одно из перьев лука, и оно на ваших глазах превращается в черную стрелу. Можете нарвать стрел еще и взять с собой столько, сколько захотите, однако учтите, что каждая будет занимать одно место в вашем заплечном мешке. После этого вы выходите из комнаты-огорода.</Text>
 		<Options>
-			<Option Destination="80" Text="Далее"/>
+			<Option Destination="80"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4572,7 +4572,7 @@
 		<ID>473</ID>
 		<Text>Фигурный ключ, к сожалению, не подходит к отверстию в люке. Вы покидаете домик.</Text>
 		<Options>
-			<Option Destination="416" Text="Далее"/>
+			<Option Destination="416"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4593,7 +4593,7 @@
 		<ID>475</ID>
 		<Text>Вы достаете золотой апельсин и разрезаете его. После этого подносите одну из долек к губам Принцессу, и несколько капель волшебного сока проливается на них. Румянец появляется на ее щеках, она глубоко вздыхает и садится на кровати. Принцесса сразу же вспоминает, что с ней произошло, и спрашивает, жив ли ее мучитель — Барлад Дэрт.</Text>
 		<Options>
-			<Option Destination="617" Text="Далее"/>
+			<Option Destination="617"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4603,7 +4603,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="347" Text="Далее"/>
+			<Option Destination="347"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4614,7 +4614,7 @@
 			<Modification Name="Gold" Value="10"/>
 		</Modifications>
 		<Options>
-			<Option Destination="106" Text="Далее"/>
+			<Option Destination="106"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4651,14 +4651,14 @@
 			<Modification Name="Endurance" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="60" Text="Далее"/>
+			<Option Destination="60"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>482</ID>
 		<Text>Средний коридор не подводит вас. Вскоре он упирается в дверь, на которой вы видите герб Волшебника: Черный замок на белом поле.</Text>
 		<Options>
-			<Option Destination="241" Text="Далее"/>
+			<Option Destination="241"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4681,7 +4681,7 @@
 			<Modification Name="Gold" Value="3"/>
 		</Modifications>
 		<Options>
-			<Option Destination="308" Text="Далее"/>
+			<Option Destination="308"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4724,14 +4724,14 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="100" Text="Далее"/>
+			<Option Destination="100"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>488</ID>
 		<Text>Дракон с удивление смотрит на перо аиста, которое вы достаете. Этот аист был его старым другом и погиб всего несколько недель назад от когтей орла. Дракону дорога память о друге, и он пропускает вас, взлетая с поляны и скрываясь за облаками.</Text>
 		<Options>
-			<Option Destination="454" Text="Далее"/>
+			<Option Destination="454"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4746,7 +4746,7 @@
 		<ID>490</ID>
 		<Text>Вы протягиваете ей Оберег, но хозяйка гарема не знает, для чего он может пригодиться, и с презрением отказывается. Однако понимая, что вы хотели сделать подарок, но незнакомы с местными обычаями, она уходит в свою комнату, а вы можете вернуться и подумать, что делать дальше.</Text>
 		<Options>
-			<Option Destination="255" Text="Далее"/>
+			<Option Destination="255"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4767,7 +4767,7 @@
 		<ID>492</ID>
 		<Text>«Ну, так я помогу тебе выбраться отсюда!» — радостно потирая руки, говорит старичок-лесовичок. И прежде чем вы успеваете отказаться от столь неожиданной «помощи», он делает взмах рукой и — все вокруг исчезает. Потом лес опять возникает, но перед вами уже совсем другое место, да и дороги никакой нет. Вы сидите на муравейнике на краю большой поляны, от которой идет единственная дорога. Вам ничего не остается, как встать, вытряхнуть муравьев из одежды и пойти по ней.</Text>
 		<Options>
-			<Option Destination="151" Text="Далее"/>
+			<Option Destination="151"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4792,7 +4792,7 @@
 			<Modification Name="Gold" Value="-6"/>
 		</Modifications>
 		<Options>
-			<Option Destination="325" Text="Далее"/>
+			<Option Destination="325"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4809,14 +4809,14 @@
 		<ID>497</ID>
 		<Text>«Наивный смельчак, — смеются Духи, — ты хотел разогнать нас тем, что мы ненавидим больше всего — светом. Ты пожалеешь об этом».</Text>
 		<Options>
-			<Option Destination="572" Text="Далее"/>
+			<Option Destination="572"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>498</ID>
 		<Text>Вы выбираете щит. Он поможет вам отражать вражеские удары (прибавьте себе 1 МАСТЕРСТВО, даже если ваше изначальное МАСТЕРСТВО не уменьшалось). Теперь закройте дверь кладовки и снова заприте ее.</Text>
 		<Options>
-			<Option Destination="300" Text="Далее"/>
+			<Option Destination="300"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4836,21 +4836,21 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="48" Text="Далее"/>
+			<Option Destination="48"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>500</ID>
 		<Text>Вы храбро выпиваете жидкость. Это микстура жизни. Прибавьте себе 6 ВЫНОСЛИВОСТЕЙ и уходите из домика.</Text>
 		<Options>
-			<Option Destination="416" Text="Далее"/>
+			<Option Destination="416"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>501</ID>
 		<Text>Дверь без труда открывается. За ней широкая лестница с удобными деревянными перилами, которая ведет вниз.</Text>
 		<Options>
-			<Option Destination="534" Text="Далее"/>
+			<Option Destination="534"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4865,14 +4865,14 @@
 		<Text>Гиена оказывается говорящей. Она настолько соскучилась в лесу без собеседника, что рада случайно поболтать. Потом она просит передать привет разбойникам, если вы их встретите. Но прежде, чем вы успеваете ее спросить, как это сделать, Гиена скрывается в лесу. Ваш путь свободен.</Text>
 		<Triggers>HyenaName</Triggers>
 		<Options>
-			<Option Destination="125" Text="Далее"/>
+			<Option Destination="125"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>504</ID>
 		<Text>Вы бежите из таверны по дороге, которая ведет к лесу. Однако вскоре понимаете, что Водяной вряд ли станет преследовать вас, и переходите на шаг.</Text>
 		<Options>
-			<Option Destination="332" Text="Далее"/>
+			<Option Destination="332"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4891,7 +4891,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="100" Text="Далее"/>
+			<Option Destination="100"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4909,14 +4909,14 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="366" Text="Далее"/>
+			<Option Destination="366"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>509</ID>
 		<Text>Дорога выводит на поляну, которая вдоль и поперек истоптана какими-то крупными животными. Вы решаете пересечь поляну, видя, что с другой ее стороны дорога продолжается.</Text>
 		<Options>
-			<Option Destination="119" Text="Далее"/>
+			<Option Destination="119"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4931,7 +4931,7 @@
 		<ID>511</ID>
 		<Text>Женщины отводят вас на потайную лестницу. Через два пролета дверь, но вам не удается ее открыть, и спускаться приходится до конца.</Text>
 		<Options>
-			<Option Destination="544" Text="Далее"/>
+			<Option Destination="544"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4941,7 +4941,7 @@
 			<Modification Name="Endurance" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="409" Text="Далее"/>
+			<Option Destination="409"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4970,7 +4970,7 @@
 			<Modification Name="Endurance" Value="-8"/>
 		</Modifications>
 		<Options>
-			<Option Destination="98" Text="Далее"/>
+			<Option Destination="98"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5005,7 +5005,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="477" Text="Далее"/>
+			<Option Destination="477"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5022,7 +5022,7 @@
 		<Text>Они рассказывают вам, что некогда жили в деревушке на краю леса. Может быть, вы были в ней? (Если вы там были, можете рассказать им, что стало с деревней). Когда Черный маг захватил лес, они были на охоте и ни о чем не знали. Их схватили воины волшебника и заставили работать на полях неподалеку от замка. Несколько недель назад им удалось бежать, и с тех пор они питались тем, что могли найти в лесу. Беглецы просят прощения за то, что чуть было не напали на вас и дают несколько советов. Самый главный: они случайно узнали из разговоров между надсмотрщиками, что, приближаясь к волшебнику, лучше идти направо, чем налево. Что это значит, они не знают, но надеются, что вы доберетесь до ненавистного чародея, и дарят вам зеркальце и золотой свисток. По слухам, их принесли на поля из замка. Вдруг пригодится! Кроме того, они говорят, что в замке остался их друг, превращенный в старика, но больше о его судьбе ничего неизвестно. Они просят, если вы его встретите, передать ему, что они живы и на свободе, и говорят, что если вам нужна будет его помощь, скажите ему: «Трое из Эвенло» (так называлась их деревенька) — и он вам поможет. Если вы решите, что встретили их друга, то можете попробовать, если захотите, передать ему послание Беглецов. Теперь же отправляйтесь дальше.</Text>
 		<Triggers>Mirror, GoldenWhistle, ThreeFromAvenlo</Triggers>
 		<Options>
-			<Option Destination="3" Text="Далее"/>
+			<Option Destination="3"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5033,7 +5033,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="326" Text="Далее"/>
+			<Option Destination="326"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5051,7 +5051,7 @@
 			<Modification Name="Endurance" Value="-6"/>
 		</Modifications>
 		<Options>
-			<Option Destination="39" Text="Далее"/>
+			<Option Destination="39"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5083,7 +5083,7 @@
 		<Text>Поскольку у вас есть с собой зеленые латы, вы получаете возможность перед входом в каждую новую комнаты решать, надевать их или нет. Конечно, если можете переодеться, не привлекая к себе внимания. Теперь пройдите через маленькую проходную комнату, куда вы попали, и откройте следующую дверь.</Text>
 		<Triggers>GreenArmour</Triggers>
 		<Options>
-			<Option Destination="182" Text="Далее"/>
+			<Option Destination="182"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5101,7 +5101,7 @@
 		</Actions>
 		<Triggers>Amulet</Triggers>
 		<Options>
-			<Option Destination="240" Text="Далее"/>
+			<Option Destination="240"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5118,14 +5118,14 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="44" Text="Далее"/>
+			<Option Destination="44"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>530</ID>
 		<Text>Вы нагибаетесь к цветам и вдыхаете их запах. Он великолепен, но слишком резок. Вы чувствуете, как кружится голова, и теряете сознание…</Text>
 		<Options>
-			<Option Destination="409" Text="Далее"/>
+			<Option Destination="409"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5151,7 +5151,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="323" Text="Далее"/>
+			<Option Destination="323"/>
 			<Option Destination="552" Text="Предъявить пропуск"/>
 			<Option Destination="592" Text="Воспользоваться латами" OnlyIf="GreenArmour"/>
 		</Options>
@@ -5179,7 +5179,7 @@
 		<ID>535</ID>
 		<Text>Вы решаете, что осторожность превыше всего, и говорите, что идете в Черный замок наниматься на службу. Старичок любезен с вами, но не более того. Все ваши вопросы отскакивают от него, как от стенки горох. Он говорит, что очень долго не покидал свой дом и просто не знает, что творится вокруг. «А куда идет тропинка от вашего дома?» — спрашиваете вы. «Какая тропинка? — искренне удивляется старичок. Когда я в последний раз выходил из дому, никакой тропинки не было». Вы понимаете, что ничего не добьетесь от него, и уходите по той самой тропинке, про которую спрашивали.</Text>
 		<Options>
-			<Option Destination="55" Text="Далее"/>
+			<Option Destination="55"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5196,7 +5196,7 @@
 		<ID>537</ID>
 		<Text>Вы возвращаетесь к коридору, из которого пришли, и сворачиваете направо, подальше от темницы.</Text>
 		<Options>
-			<Option Destination="140" Text="Далее"/>
+			<Option Destination="140"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5305,14 +5305,14 @@
 		<ID>546</ID>
 		<Text>Конь изо всех сил старается сбросить нежеланного седока, но вам повезло — в седле удержались. Тогда он пускается вперед. Но скачет не по дороге, а в сторону от нее — по тропинке, которую вы сначала даже не заметили. Как вы ни стараетесь, укротить строптивое животное не удается. Тропинка выходит на другую дорогу, и вы некоторое время скачете по ней, проезжаете под каким-то мостом, потом опять начинаются едва заметные лесные тропы. Через три четверти часа уже начинаете жалеть, что связались с этой лошадью: твердая земля кажется недостижимым раем. В конце концов конь, как бы услышав молитвы седока, сбрасывает вас и со скоростью ветра уносится в лес. Оглянувшись вокруг, пытаетесь понять, куда же вы попали.</Text>
 		<Options>
-			<Option Destination="181" Text="Далее"/>
+			<Option Destination="181"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>547</ID>
 		<Text>Дверь заперта, на ней висит большой замок, который не сбить даже мечом. Если вам есть чем открыть дверь, сделайте это, иначе придется идти в другую дверь.</Text>
 		<Options>
-			<Option Destination="501" Text="Далее"/>
+			<Option Destination="501"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5335,7 +5335,7 @@
 		<ID>550</ID>
 		<Text>Начальник стражи выходит вместе с вами в комнату, где сидят Орки, и личным ключом отпирает дверь справа.</Text>
 		<Options>
-			<Option Destination="607" Text="Далее"/>
+			<Option Destination="607"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5352,7 +5352,7 @@
 		<ID>552</ID>
 		<Text>Предъявляете пропуск, и Гоблины беспрепятственно пропускают вас.</Text>
 		<Options>
-			<Option Destination="323" Text="Далее"/>
+			<Option Destination="323"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5368,14 +5368,14 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="388" Text="Далее"/>
+			<Option Destination="388"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>554</ID>
 		<Text>Вы достаете подсвечник и… «Духам тьмы нравится твой дар, — раздается все тот же голос. — Ты можешь пройти». Теперь невидимая рука освещает выход. Он оказывается совсем не там, где вы его искали. Если хотите поменять одежду, то сделайте это быстро — и выходите, пока духи не передумали.</Text>
 		<Options>
-			<Option Destination="301" Text="Далее"/>
+			<Option Destination="301"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5383,7 +5383,7 @@
 		<Text>Лесовичок рад, что вы открылись ему. «Я покажу тебе дорогу, — говорит он. — На первом перекрестке иди прямо, а потом путь тебе покажет мой верный спутник». И он кидает на дорогу клубочек, который, как нетерпеливый котенок, начинает подпрыгивать и носиться взад и вперед, ожидая пока вы тронетесь в путь. На каждом перекрестке (разумеется, кроме первого) клубочек укажет правильную дорогу. С этим вы прощаетесь с Лесовичком и отправляетесь дальше.</Text>
 		<Triggers>Clew</Triggers>
 		<Options>
-			<Option Destination="450" Text="Далее"/>
+			<Option Destination="450"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5418,7 +5418,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="189" Text="Далее"/>
+			<Option Destination="189"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5442,7 +5442,7 @@
 		<ID>561</ID>
 		<Text>Вы без приключений переплываете озеро, но на берегу ждет еще один сюрприз.</Text>
 		<Options>
-			<Option Destination="192" Text="Далее"/>
+			<Option Destination="192"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5468,7 +5468,7 @@
 		</Actions>
 		<Triggers>SilverWhistle</Triggers>
 		<Options>
-			<Option Destination="450" Text="Далее"/>
+			<Option Destination="450"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5478,7 +5478,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="480" Text="Далее"/>
+			<Option Destination="480"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5524,7 +5524,7 @@
 		<ID>568</ID>
 		<Text>У вас в руках меч, который известен как «Смерть Орков». Если на пути вам встретится Орк, то исход битвы с ним будет предрешен — вы убиваете его прежде, чем он успевает защититься. Однако если врагов будет несколько, то с остальными вам придется драться. Оставьте свой меч в кладовой вместо того, который берете с собой, и заприте дверь.</Text>
 		<Options>
-			<Option Destination="300" Text="Далее"/>
+			<Option Destination="300"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5555,21 +5555,21 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="48" Text="Далее"/>
+			<Option Destination="48"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>570</ID>
 		<Text>Вы спрашиваете, что за сундук стоит в углу, и повар немало удивлен вашим любопытством. «А какое тебе, собственно, дело, — говорит он, — и вообще кто ты такой?». Теперь другого выхода у вас нет: если вы не убьете всех троих, они поднимут тревогу.</Text>
 		<Options>
-			<Option Destination="604" Text="Далее"/>
+			<Option Destination="604"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>571</ID>
 		<Text>Подъемник благополучно спускает вас. Перед вами небольшая дверь, через которую выносят кушанья. Вы изо всех сил налегаете на нее.</Text>
 		<Options>
-			<Option Destination="76" Text="Далее"/>
+			<Option Destination="76"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5602,7 +5602,7 @@
 		<ID>575</ID>
 		<Text>Женщины отводят вас на потайную лестницу. Через несколько пролетов — дверь, но одна из жен мага прикладывает палец к губам, и вы продолжаете подъем. У следующей двери она останавливается, отпирает ее своим ключом и, кивнув, бесшумно спускается обратно. Вы остаетесь в одиночестве.</Text>
 		<Options>
-			<Option Destination="323" Text="Далее"/>
+			<Option Destination="323"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5621,7 +5621,7 @@
 			<Modification Name="Mastery" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="293" Text="Далее"/>
+			<Option Destination="293"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5661,7 +5661,7 @@
 			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="118" Text="Далее"/>
+			<Option Destination="118"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5701,7 +5701,7 @@
 		<ID>585</ID>
 		<Text>«В кости», — отвечаете вы, но стражники даже не знают такой игры. Ответ не слишком удачен: теперь придется пробиваться силой.</Text>
 		<Options>
-			<Option Destination="428" Text="Далее"/>
+			<Option Destination="428"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5727,35 +5727,35 @@
 			<Modification Name="Endurance" Value="-6"/>
 		</Modifications>
 		<Options>
-			<Option Destination="275" Text="Далее"/>
+			<Option Destination="275"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>589</ID>
 		<Text>«К сожалению, да», — отвечаете вы. Принцесса спрашивает, хватит ли у вас решимости сразиться с ним, и вы заверяете ее, что не остановитесь ни перед чем, лишь бы маг был уничтожен. Тогда она показывает вам на зеркало и говорит, что за ним вы найдете все, что нужно для успеха. Вы просите ее подождать и направляетесь к зеркалу.</Text>
 		<Options>
-			<Option Destination="266" Text="Далее"/>
+			<Option Destination="266"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>590</ID>
 		<Text>Вы не доверяете слуге злого волшебника и срываете крышку с сосуда. Зеленоватый газ вырывается из него и устремляется к рыцарю. Через несколько секунд все кончено: стражу не удалось добежать даже до поворота коридора. Газ задушил его. Вам некогда задумываться над тем, что за чудесный сосуд был у вас в руках. За углом коридора вас ожидает прочная дубовая дверь.</Text>
 		<Options>
-			<Option Destination="241" Text="Далее"/>
+			<Option Destination="241"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>591</ID>
 		<Text>Библиотекарь не удивлен: видимо он привык к тому, что его вид мало располагает к себе читателей. Но, кажется, он даже доволен этим. Вы же проходите через библиотеку, тщательно стараясь ничего не задеть, и, открыв дверь, попадаете в следующую комнату.</Text>
 		<Options>
-			<Option Destination="139" Text="Далее"/>
+			<Option Destination="139"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>592</ID>
 		<Text>У входа на этаж стоит охрана: два огромных Гоблина с зазубренными мечами. Однако латы спасают вас, они низко кланяются и отходят в сторону. Вы открываете дверь за их спинами.</Text>
 		<Options>
-			<Option Destination="323" Text="Далее"/>
+			<Option Destination="323"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5765,14 +5765,14 @@
 			<Modification Name="Endurance" Value="-3"/>
 		</Modifications>
 		<Options>
-			<Option Destination="409" Text="Далее"/>
+			<Option Destination="409"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>594</ID>
 		<Text>Небольшая комнатка абсолютно пуста. Ваше внимание привлекает надпись на двери в ее противоположной стене: «Не входить! Личный кабинет Барлада Дэрта. Вход только по специальному разрешению!» Самое любопытное то, что вы не можете понять, чем сделана эта надпись. Судя по всему, и здесь не обошлось без магии: кажется, что буквы живут своей собственной жизнью, ежесекундно переливаясь и меняя цвет. Вы смело подходите к двери, быстро открываете ее и переступаете порог.</Text>
 		<Options>
-			<Option Destination="553" Text="Далее"/>
+			<Option Destination="553"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5788,7 +5788,7 @@
 		<ID>596</ID>
 		<Text>Когда она видит зеркальце, то лицо ее искажается злобой. Изящная вещица летит на пол и разбивается вдребезги. Кажется, вам все же придется сразиться с ней.</Text>
 		<Options>
-			<Option Destination="93" Text="Далее"/>
+			<Option Destination="93"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5804,7 +5804,7 @@
 		<ID>598</ID>
 		<Text>Вы начинаете спускаться по лестнице, но неожиданно ступенька подламывается под вами. Как же так, ведь еще секунду назад лестница казалась такой прочной! Но ловушки Черного замка неистощимы. Если у вас есть в запасе заклятие Левитации, то вы еще сумеете вернуться обратно и попробовать выйти через другую дверь, если же нет, то ваше путешествие так и окончится в гибельном подземелье замка…</Text>
 		<Options>
-			<Option Destination="501" Text="Далее"/>
+			<Option Destination="501"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5818,7 +5818,7 @@
 		<ID>600</ID>
 		<Text>Вычеркните у себя в списке любое заклятие. Старичок же в свою очередь отдает вам перстень, сказав, что это не просто перстень, а ключ, который поможет открыть многие неподатливые двери в замке. Теперь можете поблагодарить старичка, взять шкуру оленя и продолжить свой путь по тропинке, которая начинается у его дома.</Text>
 		<Options>
-			<Option Destination="55" Text="Далее"/>
+			<Option Destination="55"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5828,14 +5828,14 @@
 			<Modification Name="Endurance" Value="-6"/>
 		</Modifications>
 		<Options>
-			<Option Destination="232" Text="Далее"/>
+			<Option Destination="232"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>602</ID>
 		<Text>Вы поворачиваете на пальце Золотое кольцо. Гром потрясает замок до основания. Ваш противник замертво падает со стула.</Text>
 		<Options>
-			<Option Destination="169" Text="Далее"/>
+			<Option Destination="169"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5867,7 +5867,7 @@
 		<ID>605</ID>
 		<Text>Вы дотрагиваетесь до Золотого амулета, внезапно вспомнив о нем. Барлад Дэрт немного привстает со стула, заинтересованный вашим жестом, но в этот момент два тонких острых луча света из амулета пронзают его глаза. Вы так никогда и не узнаете, кто и когда изготовил этот амулет и кто потерял его. Вам придется лишь быть довольным действием волшебного предмета.</Text>
 		<Options>
-			<Option Destination="169" Text="Далее"/>
+			<Option Destination="169"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5882,7 +5882,7 @@
 		<ID>607</ID>
 		<Text>Вы поднимаетесь по лестнице на следующий этаж. Поднявшись, видите еще одну дверь, но на этот раз она оказывается незапертой.</Text>
 		<Options>
-			<Option Destination="323" Text="Далее"/>
+			<Option Destination="323"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5940,14 +5940,14 @@
 		<ID>614</ID>
 		<Text>Вы быстро используете еще одно заклятие и достигаете берега. Но передохнуть вам не удается.</Text>
 		<Options>
-			<Option Destination="192" Text="Далее"/>
+			<Option Destination="192"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>615</ID>
 		<Text>Вы пробираетесь за Обезьяной по лесу, пока она не выводит вас на какую-то дорожку и исчезает в чаще.</Text>
 		<Options>
-			<Option Destination="232" Text="Далее"/>
+			<Option Destination="232"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5968,7 +5968,7 @@
 		<ID>618</ID>
 		<Text>Вы называете пароль, и вас беспрепятственно пропускают в замок.</Text>
 		<Options>
-			<Option Destination="100" Text="Далее"/>
+			<Option Destination="100"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6033,6 +6033,6 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="1" Text="Далее"/>
+			<Option Destination="1"/>
 		</Options>
 	</Paragraph></Paragraphs>
