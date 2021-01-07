@@ -17,10 +17,10 @@ namespace Seeker.Game
             return (success ? value : 0);
         }
 
-        public static string StringParse(XmlNode xmlNode)
+        public static string StringParse(XmlNode xmlNode, string defaultText = "")
         {
             if (xmlNode == null)
-                return String.Empty;
+                return defaultText;
 
             return xmlNode.InnerText;
         }

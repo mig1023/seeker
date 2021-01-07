@@ -24,7 +24,7 @@ namespace Seeker.Gamebook.SilentSchool
             {
                 Option option = new Option
                 {
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
+                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"], defaultText: "Далее"),
                     OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
                 };
 
