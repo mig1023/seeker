@@ -53,7 +53,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="326" Text="Далее"/>
+			<Option Destination="326"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -70,7 +70,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="411" Text="Далее"/>
+			<Option Destination="411"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -104,7 +104,7 @@
 			<Modification Name="Strength" Value="-4"/>
 		</Modifications>
 		<Options>
-			<Option Destination="217" Text="Далее"/>
+			<Option Destination="217"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -123,7 +123,7 @@
 		<ID>12</ID>
 		<Text>Переплыв реку вместе с верным Арбалетом, вы вновь выезжаете на дорогу в полулье от моста и продолжаете путь.</Text>
 		<Options>
-			<Option Destination="105" Text="Далее"/>
+			<Option Destination="105"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -133,14 +133,14 @@
 			<Modification Name="Strength" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="223" Text="Далее"/>
+			<Option Destination="223"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>14</ID>
 		<Text>Собрав всю силу, делаете резкое движение, стряхнув с себя одного из стражей. Но в тот же самый момент чувствуете сильный удар сзади по голове, в глазах темнеет, и вы теряете сознание.</Text>
 		<Options>
-			<Option Destination="352" Text="Далее"/>
+			<Option Destination="352"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -173,7 +173,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="179" Text="Далее"/>
+			<Option Destination="179"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -201,7 +201,7 @@
 			<Modification Name="Ecu" Value="-50"/>
 		</Modifications>
 		<Options>
-			<Option Destination="331" Text="Далее"/>
+			<Option Destination="331"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -212,7 +212,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="592" Text="Далее"/>
+			<Option Destination="592"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -227,7 +227,7 @@
 		<ID>23</ID>
 		<Text>Если у вас есть с собой лишние пистолеты, то каждый удастся сбыть по два с половиной экю, аркебуза потянет на четыре, шпага — на полтора. Отдавайте побыстрее одному из торговцев все, что хотите, получайте деньги и отправляйтесь дальше: .</Text>
 		<Options>
-			<Option Destination="225" Text="Далее"/>
+			<Option Destination="225"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -266,7 +266,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="424" Text="Далее"/>
+			<Option Destination="424"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -290,7 +290,7 @@
 		<ID>29</ID>
 		<Text>К сожалению, вы промахнулись, и пуля только царапнула кабана по спине. Придется орудовать шпагой. Чем-то все это напоминает бой быков, о котором вы некогда слышали от какого-то заезжего путешественника.</Text>
 		<Options>
-			<Option Destination="246" Text="Далее"/>
+			<Option Destination="246"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -309,7 +309,7 @@
 		<ID>31</ID>
 		<Text>Увы, вы промахнулись.</Text>
 		<Options>
-			<Option Destination="92" Text="Далее"/>
+			<Option Destination="92"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -325,7 +325,7 @@
 		<ID>33</ID>
 		<Text>Стараясь целиться зверюге прямо между глаз, не торопясь нажимаете на курок. Звучит выстрел, в кустах слышится жалобное поскуливание, которое вскоре затихает. Вы не решаетесь спать, ожидая нового нападения, но до рассвета все тихо: напуганные внезапной смертью сородича, волки предпочли убраться подальше от опасного места. Утром вы продолжаете путь.</Text>
 		<Options>
-			<Option Destination="4" Text="Далее"/>
+			<Option Destination="4"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -333,7 +333,7 @@
 		<Text>Буржуа подозрительно смотрит на вас, извиняется и разочарованно уходит прочь. В это время за стол садится какой-то нищий калека. Вы уже готовы возмутиться и прогнать его, как вдруг слышите: «Я тот, кого вы ждете. Париж, улица Пьер-о-Реаль, дом 11, шевалье де Перигю. А теперь гоните меня отсюда и погромче». Вы негодующе кричите на весь кабачок: «Грязная свинья! Как ты посмел сесть за мой стол!». Завсегдатаи неодобрительно посматривают на вас, а нищий с озлобленным ворчанием убирается прочь. Теперь хорошо было бы поскорее выбраться из города.</Text>
 		<Triggers>PierreAuxRealStreet</Triggers>
 		<Options>
-			<Option Destination="603" Text="Далее"/>
+			<Option Destination="603"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -350,7 +350,7 @@
 			<Modification Name="Strength" Value="3"/>
 		</Modifications>
 		<Options>
-			<Option Destination="105" Text="Далее"/>
+			<Option Destination="105"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -375,7 +375,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="243" Text="Далее"/>
+			<Option Destination="243"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -420,7 +420,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="612" Text="Далее"/>
+			<Option Destination="612"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -432,7 +432,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="85" Text="Далее"/>
+			<Option Destination="85"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -462,7 +462,7 @@
 		<ID>47</ID>
 		<Text>Да, ну и побоище вы устроили вместо ужина! Что ж, теперь лучше всего побыстрее уйти, пока хозяин не позвал на помощь вечернюю стражу. Может быть, хоть с ночлегом повезет?</Text>
 		<Options>
-			<Option Destination="93" Text="Далее"/>
+			<Option Destination="93"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -474,7 +474,7 @@
 			<Modification Name="Day" Value="3"/>
 		</Modifications>
 		<Options>
-			<Option Destination="428" Text="Далее"/>
+			<Option Destination="428"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -486,7 +486,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="245" Text="Далее"/>
+			<Option Destination="245"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -503,7 +503,7 @@
 			<Modification Name="Ecu" Value="100"/>
 		</Modifications>
 		<Options>
-			<Option Destination="331" Text="Далее"/>
+			<Option Destination="331"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -571,14 +571,14 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="3" Text="Далее"/>
+			<Option Destination="3"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>58</ID>
 		<Text>Буржуа отвечает, что это не имеет существенного значения, он и так сразу же поверил вам.</Text>
 		<Options>
-			<Option Destination="554" Text="Далее"/>
+			<Option Destination="554"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -609,7 +609,7 @@
 		<ID>62</ID>
 		<Text>Когда вы приближаетесь, готовый ко всему, вздох облегчения вырывается из вашей груди. То, что казалось человеком, на самом деле пугало, стоящее недалеко от забора, а головы — глиняные горшки, надетые на него. Да, нервы вас уже подводят.</Text>
 		<Options>
-			<Option Destination="257" Text="Далее"/>
+			<Option Destination="257"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -642,7 +642,7 @@
 			<Modification Name="Ecu" Value="700"/>
 		</Modifications>
 		<Options>
-			<Option Destination="619" Text="Далее"/>
+			<Option Destination="619"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -659,7 +659,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="263" Text="Далее"/>
+			<Option Destination="263"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -684,21 +684,21 @@
 			<Modification Name="Honor" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="257" Text="Далее"/>
+			<Option Destination="257"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>70</ID>
 		<Text>Несколько всадников проносятся мимо, не обращая на вас никакого внимания. Радуясь, что не свернули с дороги, едете дальше.</Text>
 		<Options>
-			<Option Destination="470" Text="Далее"/>
+			<Option Destination="470"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>71</ID>
 		<Text>Если какой-либо другой адрес вам известен, то отправляйтесь туда. В противном случае, остается только поехать к себе домой.</Text>
 		<Options>
-			<Option Destination="562" Text="Далее"/>
+			<Option Destination="562"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -740,7 +740,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="582" Text="Далее"/>
+			<Option Destination="582"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -766,14 +766,14 @@
 		<Text>Ваш противник, истекая кровью, отскакивает в сторону. Если у вас есть ладанка, то пришло время обратиться к ее помощи. Если нет, то он больше не будет тратить на вас свои силы, хотя вы и рветесь продолжить бой.</Text>
 		<Options>
 			<Option Destination="279" Text="Воспользоваться ладанкой" OnlyIf="Incense"/>
-			<Option Destination="624" Text="Далее"/>
+			<Option Destination="624"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>79</ID>
 		<Text>Тюремщик, с которым вы договаривались, сдержал свое слово. Он один охраняет сейчас осужденного и в решающий момент безразлично отворачивается в сторону. К счастью, гугенот не связан — палачи совершенно не ожидали такого нападения в тихом католическом Ангулеме. Вы протягиваете единоверцу руку и говорите, что он свободен.</Text>
 		<Options>
-			<Option Destination="314" Text="Далее"/>
+			<Option Destination="314"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -785,14 +785,14 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="181" Text="Далее"/>
+			<Option Destination="181"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>81</ID>
 		<Text>«Надо же, — удивляется герцог, ухмыляясь в усы, — и как это я мог перепутать!» С этими словами он встает и вновь занимает свое место во главе стола. Слава Богу, вроде бы на все вопросы вы ответили правильно, подозрительный руководитель Лиги успокоился, и наконец-то можно немного отдохнуть. Закончив трапезу, стоит попробовать поискать графа де Дольнея.</Text>
 		<Options>
-			<Option Destination="653" Text="Далее"/>
+			<Option Destination="653"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -839,7 +839,7 @@
 			<Modification Name="Honor" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="24" Text="Далее"/>
+			<Option Destination="24"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -847,7 +847,7 @@
 		<Text>Зайдя в караулку, сразу же чувствуете, как ваши руки с боков оказываются прижатыми к телу железной хваткой двух стражников, вошедших сразу за вами. Лейтенант забирает у вас шпагу и деньги и кладет все это на стол у стены. А из задней комнаты выходит какой-то человек в зеленом камзоле. Если вы знаете его, прибавьте к номеру этого параграфа известное вам число; если же нет.</Text>
 		<Options>
 			<Option Destination="117" Text="Всадник в зелёном камзоле" OnlyIf="GreenCamisole"/>
-			<Option Destination="328" Text="Далее"/>
+			<Option Destination="328"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -859,7 +859,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="163" Text="Далее"/>
+			<Option Destination="163"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -880,7 +880,7 @@
 		<ID>90</ID>
 		<Text>До стен Каора осталось совсем немного, когда стало ясно, что от погони не уйти. Развернув коня, вы готовитесь к схватке.</Text>
 		<Options>
-			<Option Destination="543" Text="Далее"/>
+			<Option Destination="543"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -915,7 +915,7 @@
 		<ID>94</ID>
 		<Text>Искусство, приобретенное долгой тренировкой, не подводит. Один из слуг падает замертво, другой с криком вываливается из окна, выпустив из рук аркебузу, а третий бросает палку и исчезает с такой скоростью, что уже через несколько секунд от него остается только облачко пыли в конце улицы.</Text>
 		<Options>
-			<Option Destination="411" Text="Далее"/>
+			<Option Destination="411"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -925,14 +925,14 @@
 			<Modification Name="Honor" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="323" Text="Далее"/>
+			<Option Destination="323"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>96</ID>
 		<Text>Пистолет бьет без промаха. Один из всадников со стоном сползает с лошади и падает на землю, оставляя за собой кровавый след. Второй разворачивает коня и, ни слова не говоря, уносится прочь. Третий с недоумением смотрит на вас. «Мое имя граф Мортон, — наконец говорит он. — Мы с друзьями путешествовали по Франции, не принося никому вреда. За что вы убили моего спутника, баронета Клеренса?» Его лицо спокойно, а голос полон достоинства. Неужели вы ошиблись и это не враги?.</Text>
 		<Options>
-			<Option Destination="226" Text="Далее"/>
+			<Option Destination="226"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -989,7 +989,7 @@
 		<ID>102</ID>
 		<Text>С рассветом, поежившись от зябкого сентябрьского утра и промокшего от росы плаща, вы пускаетесь в путь. Теперь уже не остается почти никаких сомнений, что кто-то был послан врагами Короля, чтобы предупредить Лигу о вашем поручении и дать приказ любой ценой помешать его выполнению. Может быть, свернув с главной дороги, вы избежали врагов и соглядатаев? Тем лучше, а так это или нет, покажет будущее.</Text>
 		<Options>
-			<Option Destination="351" Text="Далее"/>
+			<Option Destination="351"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1023,14 +1023,14 @@
 		<ID>106</ID>
 		<Text>Заметив поблизости подходящее дерево, вы укрываетесь под ним, стараясь как следует отдохнуть, извлечь пользу даже из этой вынужденной задержки.</Text>
 		<Options>
-			<Option Destination="158" Text="Далее"/>
+			<Option Destination="158"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>107</ID>
 		<Text>Затянув потуже пояс, вы покидаете город, так и оставшись в неведении по поводу ночного происшествия.</Text>
 		<Options>
-			<Option Destination="331" Text="Далее"/>
+			<Option Destination="331"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1046,7 +1046,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="326" Text="Далее"/>
+			<Option Destination="326"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1056,7 +1056,7 @@
 			<Modification Name="Strength" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="7" Text="Далее"/>
+			<Option Destination="7"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1086,7 +1086,7 @@
 		<ID>113</ID>
 		<Text>Карета долго едет по гулким турским улочкам. Вы первый раз в этом городе и поэтому, конечно же, не можете определить, куда вас везут. Но, скорее всего, в тюрьму. Однако карета въезжает во двор, останавливается, вы вылезаете из нее (под столь же бдительным конвоем) и видите прекрасный особняк конца прошлого века, очень уж не похожий на тюрьму. Вполне возможно, это жилище какого-нибудь благородного тюремщика.</Text>
 		<Options>
-			<Option Destination="486" Text="Далее"/>
+			<Option Destination="486"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1103,14 +1103,14 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="51" Text="Далее"/>
+			<Option Destination="51"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>115</ID>
 		<Text>Вы интересуетесь у одного из стражников, не видел ли он дворянина в зеленом камзоле на серой в яблоках лошади. Он смотрит на вас еще более подозрительно и зовет лейтенанта — начальника караула, который просит вас зайти на несколько минут в караулку.</Text>
 		<Options>
-			<Option Destination="153" Text="Далее"/>
+			<Option Destination="153"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1130,7 +1130,7 @@
 		<ID>117</ID>
 		<Text>Да, это тот самый дворянин, которого вы уже видели. Значит, все подозрения не беспочвенны: это действительно враг, который служит Лиге, и именно он предупреждал всех о вашем появлении.</Text>
 		<Options>
-			<Option Destination="328" Text="Далее"/>
+			<Option Destination="328"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1183,7 +1183,7 @@
 		<ID>122</ID>
 		<Text>Вы решаете попытать счастья на улице Августинцев.</Text>
 		<Options>
-			<Option Destination="181" Text="Далее"/>
+			<Option Destination="181"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1225,7 +1225,7 @@
 			<Modification Name="Honor" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="237" Text="Далее"/>
+			<Option Destination="237"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1250,7 +1250,7 @@
 			<Option Destination="454" Text="Улица Пьер-о-Реаль, дом 11" OnlyIf="PierreAuxRealStreet"/>
 			<Option Destination="555" Text="Улица Ваннери, дом 5" OnlyIf="VenneraStreet"/>
 			<Option Destination="181" Text="К графу де Ноайлю" OnlyIf="CountDeNoaille"/>
-			<Option Destination="562" Text="Далее"/>
+			<Option Destination="562"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1298,7 +1298,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="528" Text="Далее"/>
+			<Option Destination="528"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1316,14 +1316,14 @@
 			<Modification Name="Ecu" Value="-150"/>
 		</Modifications>
 		<Options>
-			<Option Destination="2" Text="Далее"/>
+			<Option Destination="2"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>134</ID>
 		<Text>Судьба двух первых охранников решена: с такого расстояния попал бы и ребенок. Врагов осталось меньше, внезапностью нападения вы воспользовались сполна, но ведь это еще не все.</Text>
 		<Options>
-			<Option Destination="126" Text="Далее"/>
+			<Option Destination="126"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1360,7 +1360,7 @@
 		<ID>138</ID>
 		<Text>Вы еще не успеваете удовлетворить свое любопытство, когда раздается выстрел.</Text>
 		<Options>
-			<Option Destination="378" Text="Далее"/>
+			<Option Destination="378"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1378,7 +1378,7 @@
 			<Modification Name="Honor" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="638" Text="Далее"/>
+			<Option Destination="638"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1393,14 +1393,14 @@
 		<ID>142</ID>
 		<Text>Видя, что вы пытаетесь скрыться за деревьями, черные фигуры достают пистолеты и стреляют вам вслед. Одна из пуль попадает Арбалету в голову, вторая — вам в живот. Конец наступит всего через несколько часов. Выход один — попросить Бога о помощи. Если не сделаете это, то остается только достойно встретить смерть…</Text>
 		<Options>
-			<Option Destination="521" Text="Далее"/>
+			<Option Destination="521"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>143</ID>
 		<Text>Пока вы дрались, сержант почел за лучшее унести ноги. Теперь-то уж волей-неволей гостиницу придется покинуть, а лучше бы вообще выехать за стены города, чтобы вас не начали искать. Ну что у вас за судьба такая: куда не пойдете, повсюду оставляете за собой трупы!</Text>
 		<Options>
-			<Option Destination="282" Text="Далее"/>
+			<Option Destination="282"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1475,7 +1475,7 @@
 		<ID>152</ID>
 		<Text>Вы объясняете рыбаку, что не гонитесь за роскошью, и он с некоторым презрением рассказывает, как найти постоялый двор. Уже через четверть часа вы на месте. Хозяин отводит вас в небольшую грязную комнатку на третьем этаже и берет за ночлег полэкю (вычеркните эти деньги с Листка путешественника). Внимательно осмотрев комнатку, не находите ничего подозрительного и решаете спокойно лечь спать.</Text>
 		<Options>
-			<Option Destination="540" Text="Далее"/>
+			<Option Destination="540"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1575,28 +1575,28 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="334" Text="Далее"/>
+			<Option Destination="334"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>159</ID>
 		<Text>Когда видите, что Арбалет начинает спотыкаться от усталости, вы решаете остановиться и принять бой. Развернув коня, готовитесь к схватке: теперь уже сомнения нет — это погоня.</Text>
 		<Options>
-			<Option Destination="543" Text="Далее"/>
+			<Option Destination="543"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>160</ID>
 		<Text>Спрыгнув с лошади, вы кидаетесь в воду и быстро плывете к карете. Дверца легко поддается, но вместо благодарного и растерянного взгляда попавшей в беду дамы, вас встречает горящий ненавистью женский взгляд и лезвие кинжала, который вам без труда удается выбить из ее рук, когда она неловко пытается напасть снизу. Вы уже готовы оставить карету и поплыть обратно, когда пуля, просвистевшая возле самого уха, заставляет изменить решение. Теперь спасение только внутри.</Text>
 		<Options>
-			<Option Destination="7" Text="Далее"/>
+			<Option Destination="7"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>161</ID>
 		<Text>Спрятавшись за деревом и привязав коня за высоким кустарником, с нетерпением ждете, когда покажутся преследователи. Их оказывается больше десяти, все в форме рейтар, во главе с сержантом. Подозрительно оглядывая лес, они уже почти проезжают мимо, когда последний разворачивает на полном скаку коня и что-то кричит остальным. Судя по всему, Арбалет оказался менее терпеливым, чем вы, и, заслышав ржание, высунул морду из-за куста. Одним прыжком вы оказываетесь в седле, метким выстрелом убиваете наповал заметившего вас рейтара и как можно быстрее скачете в глубь леса.</Text>
 		<Options>
-			<Option Destination="330" Text="Далее"/>
+			<Option Destination="330"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1637,7 +1637,7 @@
 		<ID>166</ID>
 		<Text>Каор, быть может, и недалеко, но Арбалету явно требуется отдых. Вы расседлываете его и пускаете отдохнуть. Сами же решаете, что делать дальше. В это время на дороге показывается еще один всадник, летящий во весь опор на сером в яблоках коне. Вы выбегаете на дорогу, но, черт возьми! Забыли перезарядить пистолет. Теперь уже видно, что это дворянин, одетый в темно-зеленый камзол, и он вихрем проносится мимо, не обращая на вас ни малейшего внимания. Вы едва успеваете отскочить в сторону, чтобы он на вас не наехал. Если бы это был сообщник убитых, то скорее всего остановился бы и попытался добить вас. Но почему он не обратил внимания на ваши крики? Так или иначе, все это довольно-таки подозрительно. Если впоследствии вы захотите кого-нибудь спросить, не видел ли он этого незнакомца, прибавьте 30 к номеру параграфа, на котором будете тогда находиться, и, если будет возможность получить ответ, вы его прочитаете. Но вот уже отдых позади, вы снова в седле, и вскоре приближаетесь к воротам Каора.</Text>
 		<Options>
-			<Option Destination="287" Text="Далее"/>
+			<Option Destination="287"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1678,7 +1678,7 @@
 		<ID>171</ID>
 		<Text>Вскинув сразу два пистолета, вы убиваете одного всадника и тяжело раните другого. Третий остается на месте. Брови его ползут вверх от удивления, но голос спокоен и полон благородства: «Мое имя граф Мортон, — говорит он. — Мы с друзьями путешествовали по Франции и, признаться, не знали, что у французов принято палить из пистолетов в первых встречных». С этими словами он слезает с коня и пытается оказать помощь раненому, который испускает дух у него на руках. Неужели произошла страшная ошибка и это не враги?.</Text>
 		<Options>
-			<Option Destination="226" Text="Далее"/>
+			<Option Destination="226"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1751,7 +1751,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="4" Text="Далее"/>
+			<Option Destination="4"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1787,7 +1787,7 @@
 			<Modification Name="Strength" Value="-4"/>
 		</Modifications>
 		<Options>
-			<Option Destination="64" Text="Далее"/>
+			<Option Destination="64"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1808,14 +1808,14 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="4" Text="Далее"/>
+			<Option Destination="4"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>185</ID>
 		<Text>По счастливой случайности вам удается за целый день ни разу не натолкнуться на шпионов Лиги. К вечеру вы направляетесь к Парижским воротам.</Text>
 		<Options>
-			<Option Destination="489" Text="Далее"/>
+			<Option Destination="489"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1855,7 +1855,7 @@
 			<Modification Name="Ecu" Value="550"/>
 		</Modifications>
 		<Options>
-			<Option Destination="362" Text="Далее"/>
+			<Option Destination="362"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1870,7 +1870,7 @@
 		<Text>Теперь вы знаете, как выглядит убийца вашего отца. Теперь остается только распрощаться с Берлье, пообещав ему отомстить за отца и поблагодарив за приют, и покинуть Каор.</Text>
 		<Triggers>DukeName</Triggers>
 		<Options>
-			<Option Destination="141" Text="Далее"/>
+			<Option Destination="141"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1895,7 +1895,7 @@
 		<ID>190</ID>
 		<Text>Дом продолжает хранить молчание. Вы решаете осмотреть его и найти человека, который в нем прячется.</Text>
 		<Options>
-			<Option Destination="75" Text="Далее"/>
+			<Option Destination="75"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1906,7 +1906,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="558" Text="Далее"/>
+			<Option Destination="558"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1918,42 +1918,42 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="653" Text="Далее"/>
+			<Option Destination="653"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>193</ID>
 		<Text>Прохожий, увы, не видел никого подходящего под ваше описание.</Text>
 		<Options>
-			<Option Destination="163" Text="Далее"/>
+			<Option Destination="163"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>194</ID>
 		<Text>Лицо герцога проясняется. «Вы достойны того, чтобы я оказал вам помощь. Спрашивайте». Другого выхода нет, приходится спрашивать напрямую: кто в Париже делает все возможное, чтобы склонить парламент в пользу короля Генриха. Его ответ столь же прост и бесхитростен, сколь и ваш вопрос: «У него много имен, но одна цель. Сегодня вечером вы сможете найти его в доме номер 2 по улице Августинцев». Простившись с Его сиятельством, вы с Жаком возвращаетесь домой и с нетерпением ждете вечера, когда можно будет отправиться (разумеется, одному) по указанному адресу.</Text>
 		<Options>
-			<Option Destination="181" Text="Далее"/>
+			<Option Destination="181"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>195</ID>
 		<Text>Комната пуста. Скорее всего, здесь живут слуги, но сейчас в ней никого нет. Выходите в коридор и идете по нему направо.</Text>
 		<Options>
-			<Option Destination="6" Text="Далее"/>
+			<Option Destination="6"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>196</ID>
 		<Text>Ни одна из змей не успевает вас укусить. Вы быстро выводите Арбалета из пещеры и скачете дальше.</Text>
 		<Options>
-			<Option Destination="204" Text="Далее"/>
+			<Option Destination="204"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>197</ID>
 		<Text>Не подав виду, что удивлен вашей просьбой, маркиз приказывает одному из слуг проводить вас до самой окраины города.</Text>
 		<Options>
-			<Option Destination="105" Text="Далее"/>
+			<Option Destination="105"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1967,21 +1967,21 @@
 		<ID>199</ID>
 		<Text>«Я прекрасно знаю человека, который вас послал, — уверенно говорите вы ей и в доказательство рассказываете, как выглядел дворянин в зеленом. — Но я хочу знать, сколько он заплатил за это». «Два экю», — нерешительно отвечает женщина. Значит, вы были правы — это лигист, причем почему-то решивший сжить вас со свету. Однако и дешево же он ценит вашу жизнь!.</Text>
 		<Options>
-			<Option Destination="169" Text="Далее"/>
+			<Option Destination="169"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>200</ID>
 		<Text>Фехтуя, вы отступаете к двери дома. С последним ударом шпаги, вонзившейся прямо в горло вашему противнику, дверь открывается, впуская вас в дом, и тут же захлопывается перед растерявшимися преследователями. А вам протягивает руку старый друг отца, граф де Шеверни, которого уже много лет все считают погибшим. «Мой мальчик, — говорит он, — правосудие свершилось. Ты покарал герцога де Лавалетта, убийцу твоего отца, ближайшего помощника герцога Майенского и фанатичного католика. А теперь пойдем, нам надо спешить».</Text>
 		<Options>
-			<Option Destination="658" Text="Далее"/>
+			<Option Destination="658"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>201</ID>
 		<Text>Не торопясь, вы переходите через овраг. До Парижа осталось совсем немного.</Text>
 		<Options>
-			<Option Destination="64" Text="Далее"/>
+			<Option Destination="64"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2013,7 +2013,7 @@
 		<ID>205</ID>
 		<Text>Теперь дорога назад закрыта. А вот вперед надо спешить. Лига уже прочно села на хвост, почти что наступает на пятки, хотя иногда продолжает еще держаться в рамках закона. Видимо, ни один из ее руководителей пока не отдал приказ, ждать которого можно с часу на час: «Уничтожить». Такое решение принимается только в самых крайних случаях, когда враг настолько серьезен, что представляет угрозу для самого герцога Майенского и для дела всей организации. Тогда приходит в действие вся машина, начинают крутиться все маховики, и мало кто в такой ситуации имеет шанс остаться в живых. Скажем прямо: пока что это не удавалось никому.</Text>
 		<Options>
-			<Option Destination="320" Text="Далее"/>
+			<Option Destination="320"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2024,7 +2024,7 @@
 			<Modification Name="Strength" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="82" Text="Далее"/>
+			<Option Destination="82"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2049,7 +2049,7 @@
 			<Modification Name="Honor" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="538" Text="Далее"/>
+			<Option Destination="538"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2151,7 +2151,7 @@
 			<Modification Name="Honor" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="93" Text="Далее"/>
+			<Option Destination="93"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2189,7 +2189,7 @@
 		<ID>222</ID>
 		<Text>Вы стучите еще раз, и за дверью раздается такой звук, будто с трудом открывают ржавый засов. Вы уже готовы войти внутрь, когда сильный удар сзади валит вас с ног.</Text>
 		<Options>
-			<Option Destination="172" Text="Далее"/>
+			<Option Destination="172"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2259,7 +2259,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="503" Text="Далее"/>
+			<Option Destination="503"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2277,7 +2277,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="47" Text="Далее"/>
+			<Option Destination="47"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2292,7 +2292,7 @@
 		<ID>231</ID>
 		<Text>Вы достаете кинжал и, держа его наготове, заглядываете в окно, стараясь при этом не выпускать из виду зловещую тень за спиной. Внутри хижина больше всего напоминает разбойничий притон. Несколько человек играют в карты за столом у самого окна. Слава Богу, что не постучали в дверь: добыча сама пришла бы к ним в руки. Теперь сомнений не остается — за вашей спиной часовой. Вы отходите от окна в тень, чтобы свет не падал на лицо, и ждете пока он приблизится. Быстрое движение руки — и разбойник с глухим хрипом начинает кататься по земле, пытаясь выдернуть из горла нож. Еще несколько движений, и все кончено. У него за поясом заткнуты кинжал и пистолет. Если хотите, возьмите их себе, садитесь на коня и поезжайте дальше.</Text>
 		<Options>
-			<Option Destination="504" Text="Далее"/>
+			<Option Destination="504"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2318,7 +2318,7 @@
 			<Modification Name="Strength" Value="-3"/>
 		</Modifications>
 		<Options>
-			<Option Destination="91" Text="Далее"/>
+			<Option Destination="91"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2333,7 +2333,7 @@
 		<ID>236</ID>
 		<Text>Одного удара шпаги достаточно для того, чтобы пригвоздить несчастного к стене. Ну что ж, он сам виноват, надо было лучше выбирать себе хозяев. После этого вы резко открываете дверь, ведущую в следующую комнату.</Text>
 		<Options>
-			<Option Destination="228" Text="Далее"/>
+			<Option Destination="228"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2373,21 +2373,21 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="331" Text="Далее"/>
+			<Option Destination="331"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>241</ID>
 		<Text>Видя, что вы все же собираетесь вернуться обратно, он смягчается: «Ладно уж, пошлю Марту немного прибраться, так и быть».</Text>
 		<Options>
-			<Option Destination="49" Text="Далее"/>
+			<Option Destination="49"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>242</ID>
 		<Text>Описав страже у городских ворот виденного вами дворянина, получаете ответ, что он действительно проезжал здесь. Причём не так давно. Ну что ж, это уже о чем-то говорит.</Text>
 		<Options>
-			<Option Destination="212" Text="Далее"/>
+			<Option Destination="212"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2435,14 +2435,14 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="446" Text="Далее"/>
+			<Option Destination="446"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>247</ID>
 		<Text>Граф Мортон принимает ваши извинения. Можете ехать дальше в Невер.</Text>
 		<Options>
-			<Option Destination="105" Text="Далее"/>
+			<Option Destination="105"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2458,7 +2458,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="408" Text="Далее"/>
+			<Option Destination="408"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2475,7 +2475,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="436" Text="Далее"/>
+			<Option Destination="436"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2493,7 +2493,7 @@
 		<ID>251</ID>
 		<Text>Шпага молнией сверкает в воздухе, и через несколько минут бродяга уже лежит на полу в луже собственной крови. Видя его судьбу, остальная компания не решается к вам подойти. Но вам, пожалуй, лучше побыстрее уйти из трактира, пока хозяин не позвал на помощь отряд вечерней стражи. Может быть, с ночлегом повезет больше?</Text>
 		<Options>
-			<Option Destination="93" Text="Далее"/>
+			<Option Destination="93"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2544,7 +2544,7 @@
 		<ID>257</ID>
 		<Text>Постоялый двор переполнен, поэтому лучше всего было бы доехать до Лиможа и там заночевать. По зрелому размышлению, вы решаете так и сделать.</Text>
 		<Options>
-			<Option Destination="212" Text="Далее"/>
+			<Option Destination="212"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2554,7 +2554,7 @@
 			<Modification Name="Strength" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="4" Text="Далее"/>
+			<Option Destination="4"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2578,7 +2578,7 @@
 		<ID>261</ID>
 		<Text>Если вы знаете какой-нибудь другой адрес, то можете отправиться туда. Если же нет, остается только посмотреть, что стало с вашим домом.</Text>
 		<Options>
-			<Option Destination="562" Text="Далее"/>
+			<Option Destination="562"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2627,7 +2627,7 @@
 		<ID>266</ID>
 		<Text>Увы, уже слишком поздно. На ваших глазах карета ударяется о могучий полувековой дуб и разлетается вдребезги. Освободившиеся от упряжки лошади уносятся прочь. Вы подъезжаете ближе, но… Не стоит описывать, во что превратилась бывшая в экипаже молодая женщина. Вы могли спасти ей жизнь, но Судьба распорядилась иначе. Понурившись, вы отправляетесь дальше. Путь до Шатору проходит без приключений.</Text>
 		<Options>
-			<Option Destination="638" Text="Далее"/>
+			<Option Destination="638"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2688,7 +2688,7 @@
 		<ID>272</ID>
 		<Text>Письмо мэра приходится весьма кстати.</Text>
 		<Options>
-			<Option Destination="302" Text="Далее"/>
+			<Option Destination="302"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2704,7 +2704,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="200" Text="Далее"/>
+			<Option Destination="200"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2754,14 +2754,14 @@
 			<Modification Name="Ecu" Value="-200"/>
 		</Modifications>
 		<Options>
-			<Option Destination="496" Text="Далее"/>
+			<Option Destination="496"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>279</ID>
 		<Text>Сила воли побеждает, вы едете дальше.</Text>
 		<Options>
-			<Option Destination="596" Text="Далее"/>
+			<Option Destination="596"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2779,7 +2779,7 @@
 		<ID>281</ID>
 		<Text>Выстрел попадает в цель. Кучер негромко вскрикивает и, уронив мушкет, неловко падает в воду. Женщина по-прежнему без сознания или, по крайней мере, притворяется. Выбравшись из кареты, видите, что она прочно укреплена на небольшой отмели на самой середине реки. Случайное падение с моста исключается — это очередная ловушка. Но тогда должен кто-то появиться, чтобы вынуть вас из нее. Пожалуй, лучше этого не дожидаться. Быстро добравшись до берега — самостоятельно или с помощью Арбалета — вы садитесь на коня и продолжаете путь, не забыв, впрочем, подобрать кинжальчик, которым пыталась вас убить женщина: при случае может и пригодиться.</Text>
 		<Options>
-			<Option Destination="24" Text="Далее"/>
+			<Option Destination="24"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2846,14 +2846,14 @@
 			<Modification Name="Strength" Value="-4"/>
 		</Modifications>
 		<Options>
-			<Option Destination="352" Text="Далее"/>
+			<Option Destination="352"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>289</ID>
 		<Text>Всадник разворачивает коня и едет вместе с вами обратно в город. По дороге он охотно рассказывает, что занимается торговлей. Много лет все шло хорошо, но один из компаньонов стал разоряться и замыслил его убить, чтобы завладеть всем делом. Сегодня, когда он пришел домой, то у порога был встречен наемными убийцами, от которых только чудом удалось ускакать.</Text>
 		<Options>
-			<Option Destination="510" Text="Далее"/>
+			<Option Destination="510"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2863,14 +2863,14 @@
 			<Modification Name="Ecu" Value="200"/>
 		</Modifications>
 		<Options>
-			<Option Destination="440" Text="Далее"/>
+			<Option Destination="440"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>291</ID>
 		<Text>Недолго побродив по рынку, находите подходящего коня. Расплатившись и держа его в поводу, вы возвращаетесь ближе к десяти часам к тюрьме.</Text>
 		<Options>
-			<Option Destination="100" Text="Далее"/>
+			<Option Destination="100"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2926,7 +2926,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="464" Text="Назвать герцога по имени" OnlyIf="DukeName"/>
-			<Option Destination="78" Text="Далее"/>
+			<Option Destination="78"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2936,7 +2936,7 @@
 			<Modification Name="Chainmail" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="262" Text="Далее"/>
+			<Option Destination="262"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2987,7 +2987,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="589" Text="Далее"/>
+			<Option Destination="589"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2998,7 +2998,7 @@
 			<Modification Name="Strength" Value="2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="653" Text="Далее"/>
+			<Option Destination="653"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3027,7 +3027,7 @@
 		<ID>305</ID>
 		<Text>Человек опускает шпагу, обходит кресло. Ему лет пятьдесят, и одет он в достаточно богатую дворянскую одежду. «Ну что ж, — говорит он, — теперь я вижу, что вас действительно послал Король, и вы встретились с моим курьером. Я — шевалье де Перигю».</Text>
 		<Options>
-			<Option Destination="80" Text="Далее"/>
+			<Option Destination="80"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3042,7 +3042,7 @@
 		<ID>307</ID>
 		<Text>Через пару минут подъезжает черная тюремная карета с зарешеченными окнами, и солдаты запихивают вас в нее.</Text>
 		<Options>
-			<Option Destination="113" Text="Далее"/>
+			<Option Destination="113"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3075,7 +3075,7 @@
 			<Modification Name="Strength" Value="2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="653" Text="Далее"/>
+			<Option Destination="653"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3089,7 +3089,7 @@
 		<ID>312</ID>
 		<Text>Вы решаете попытать счастья на улице Августинцев.</Text>
 		<Options>
-			<Option Destination="181" Text="Далее"/>
+			<Option Destination="181"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3115,35 +3115,35 @@
 		<ID>315</ID>
 		<Text>«Тогда все, что тебе надо — это силы для решающей битвы», — говорит маг. Кольцо разгорается все ярче и ярче, и вы чувствуете, как тело покидает усталость. Можете восстановить свою СИЛУ до изначального уровня. После этого остается только поблагодарить Хэрнока и, не задерживаясь в Шартре, продолжить свой путь.</Text>
 		<Options>
-			<Option Destination="558" Text="Далее"/>
+			<Option Destination="558"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>316</ID>
 		<Text>Решившись, срываете печать и раскрываете письмо. В нем баронесса предупреждает Майена, что, по сведениям герцога де Л., Генрих делает все возможное, чтобы Париж перешел на его сторону, и как раз сейчас отправил с этой целью в столицу гонца. Обратно печать уже не приделать, поэтому остается только сжечь письмо (естественно, лишившись возможности предъявить его потом кому бы то ни было).</Text>
 		<Options>
-			<Option Destination="362" Text="Далее"/>
+			<Option Destination="362"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>317</ID>
 		<Text>Стражники говорят, что дворянин в зеленом камзоле сказал им пароль, известный только высшим магистратам города, и въехал в город совсем недавно. Что ж, это уже интересно.</Text>
 		<Options>
-			<Option Destination="287" Text="Далее"/>
+			<Option Destination="287"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>318</ID>
 		<Text>Сражаясь, вы отступили к самой двери дома, чтобы никто из солдат не мог зайти с тыла. И вот долгожданный последний удар шпаги, положивший конец бою: она вонзается прямо в горло герцогу, который с жутким предсмертным хрипом опускается на землю. В ту же секунду дверь открывается, кто-то втягивает вас внутрь, снова ее захлопывает и задвигает засовы. Это отнюдь не лишняя предосторожность: люди герцога начинают неистово колотить в дверь, изо всех сил стараясь ее выломать. А перед вами старый друг отца, граф де Шеверни, знавший вас едва ли не с самого рождения. Его уже много лет считают погибшим, и радость ваша велика. «Молодец, мой мальчик, — говорит он. — Твой отец отомщен. Наконец-то, его душа сможет найти покой. А теперь пойдем. Нельзя терять ни минуты».</Text>
 		<Options>
-			<Option Destination="658" Text="Далее"/>
+			<Option Destination="658"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>319</ID>
 		<Text>Купец слишком занят своими мыслями, чтобы заинтересоваться дворянином, но отвечает, что вроде бы действительно, когда скакал из города, видел всадника на серой в яблоках лошади.</Text>
 		<Options>
-			<Option Destination="510" Text="Далее"/>
+			<Option Destination="510"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3222,7 +3222,7 @@
 			<Modification Name="Strength" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="542" Text="Далее"/>
+			<Option Destination="542"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3262,14 +3262,14 @@
 		<ID>331</ID>
 		<Text>Без приключений выехав из Капденака и миновав Орийак, вы подъезжаете к Бор-лез-Оргу. Дорога пустынна, и это позволяет вам несколько расслабиться и подумать: стоит ли после этого ехать на Лимож или дальше на Невер и Монтаржи.</Text>
 		<Options>
-			<Option Destination="496" Text="Далее"/>
+			<Option Destination="496"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>332</ID>
 		<Text>Женщина не подает признаков жизни. Оглядевшись, видите тяжелую кожаную подушку, завалившуюся под сиденье. Не высовываясь из кареты, откидываете ее как можно дальше. Кучер резко разворачивается на всплеск, думая, что вы покинули карету и хотите до него доплыть, и, не целясь, от испуга стреляет (хорошо хоть, что на это дело не взяли какого-нибудь головореза с железными нервами). Теперь, пока он будет перезаряжать ружье, вы вполне успеете доплыть до берега. Когда же вы до него добираетесь, призвав на всякий случай на помощь Арбалета, то негодяя-кучера и след простыл. Он понял, что лучше не дожидаться вашего прибытия. Возвращаться обратно в карету за женщиной что-то не хочется — и так все более или менее ясно. Тем более что карета прочно застряла на небольшой отмели посреди реки, и утонуть женщина не может. Сев на коня, вы продолжаете свой путь.</Text>
 		<Options>
-			<Option Destination="24" Text="Далее"/>
+			<Option Destination="24"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3286,14 +3286,14 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="411" Text="Далее"/>
+			<Option Destination="411"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>334</ID>
 		<Text>Миновав Шательро, дорога идет по едва ли не самым красивым и живописным местам, какие вам только приходилось видеть. Местность немного холмистая, вдалеке на зеленом покрывале полей видны редкие небольшие деревеньки. Но что-то внутри мешает вам наслаждаться пейзажем. До цели еще далеко, а враг неутомим и коварен. Кто знает, сумеете ли вы его перехитрить и выполнить приказ Короля. Да, путешествие затеяно отнюдь не для удовольствия: а вдруг от успеха дела на самом деле зависит судьба Франции? Ведь если Генрих станет настоящим Королем, то никто уже больше не посмеет убивать протестантов, жечь их дома и преследовать как диких зверей. Тогда вы снова смогли бы жить в своем собственном парижском доме и никого не бояться. Но все это пока только мечты, а станут ли они реальностью, увы, зависит не от кого иного, как от вас.</Text>
 		<Options>
-			<Option Destination="85" Text="Далее"/>
+			<Option Destination="85"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3366,7 +3366,7 @@
 			<Modification Name="Strength" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="223" Text="Далее"/>
+			<Option Destination="223"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3406,7 +3406,7 @@
 		<ID>346</ID>
 		<Text>Вы благодарите за предложение, но отвечаете, что, к сожалению, у вас нет времени на неторопливую и приятную беседу в пути: приходится торопиться и скакать, как можно быстрее. Де Мишуар резонно возражает, что он торопится не меньше вашего. Но в этих краях нередки разбойники, поэтому вдвоем путешествовать гораздо безопасней. Делать нечего, приходится с ним согласиться.</Text>
 		<Options>
-			<Option Destination="41" Text="Далее"/>
+			<Option Destination="41"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3416,7 +3416,7 @@
 			<Modification Name="Honor" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="105" Text="Далее"/>
+			<Option Destination="105"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3429,7 +3429,7 @@
 			<Modification Name="Day" Value="2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="85" Text="Далее"/>
+			<Option Destination="85"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3515,7 +3515,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="253" Text="Далее"/>
+			<Option Destination="253"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3528,7 +3528,7 @@
 			<Modification Name="Ecu" Value="-150"/>
 		</Modifications>
 		<Options>
-			<Option Destination="445" Text="Далее"/>
+			<Option Destination="445"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3540,7 +3540,7 @@
 			<Modification Name="Honor" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="93" Text="Далее"/>
+			<Option Destination="93"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3558,7 +3558,7 @@
 			<Modification Name="Honor" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="432" Text="Далее"/>
+			<Option Destination="432"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3568,7 +3568,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="351" Text="Далее"/>
+			<Option Destination="351"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3592,7 +3592,7 @@
 			<Modification Name="Ecu" Value="200"/>
 		</Modifications>
 		<Options>
-			<Option Destination="440" Text="Далее"/>
+			<Option Destination="440"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3647,7 +3647,7 @@
 		<ID>367</ID>
 		<Text>Когда вы подъезжаете к воротам, их открывают, чтобы пропустить в город какую-то карету. Арбалет молнией кидается перед ней и, не смотря на крики позади, вы вырываетесь из города.</Text>
 		<Options>
-			<Option Destination="123" Text="Далее"/>
+			<Option Destination="123"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3688,14 +3688,14 @@
 			<Modification Name="Honor" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="24" Text="Далее"/>
+			<Option Destination="24"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>373</ID>
 		<Text>Крестьянин, не останавливаясь, отрицательно качает головой и вы оба едете дальше своей дорогой.</Text>
 		<Options>
-			<Option Destination="563" Text="Далее"/>
+			<Option Destination="563"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3731,7 +3731,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="126" Text="Далее"/>
+			<Option Destination="126"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3757,7 +3757,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="163" Text="Далее"/>
+			<Option Destination="163"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3782,7 +3782,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="243" Text="Далее"/>
+			<Option Destination="243"/>
 			<Option Destination="381" Text="ТЕСТ"/>
 		</Options>
 	</Paragraph>
@@ -3798,7 +3798,7 @@
 		<ID>383</ID>
 		<Text>Вас не преследуют. А через некоторое время Арбалет даже выбирается на какую-то дорогу.</Text>
 		<Options>
-			<Option Destination="324" Text="Далее"/>
+			<Option Destination="324"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3808,7 +3808,7 @@
 			<Modification Name="Ecu" Value="400"/>
 		</Modifications>
 		<Options>
-			<Option Destination="105" Text="Далее"/>
+			<Option Destination="105"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3855,7 +3855,7 @@
 		<ID>389</ID>
 		<Text>Проходит полчаса, час, но постоялец так и не появляется. Махнув рукой, вы отправляетесь на поиски хозяина гостиницы.</Text>
 		<Options>
-			<Option Destination="553" Text="Далее"/>
+			<Option Destination="553"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3878,14 +3878,14 @@
 			<Modification Name="Strength" Value="2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="141" Text="Далее"/>
+			<Option Destination="141"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>392</ID>
 		<Text>Стражник клюет носом и не может толком ответить на ваш вопрос. «Много благородных тут ездит, может и в зеленом камзоле был. А уж серых лошадей, так и просто навалом. Их в Орлеане куда как любят. Вот третьего дня у моего шурина кобыла сдохла, так он тут же…» Но, к его большому разочарованию (наконец-то после долгого скучного дня выдался случай поговорить!), у вас нет времени выслушивать истории про всех его родственников и их лошадей. Понимая, что больше здесь ничего добиться не удастся, вы трогаете поводья и проезжаете через ворота. Теперь решайте, куда стоит сначала направиться в городе.</Text>
 		<Options>
-			<Option Destination="362" Text="Далее"/>
+			<Option Destination="362"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3908,7 +3908,7 @@
 		<ID>395</ID>
 		<Text>Решив попытать счастья в другом месте, направляетесь на улицу Пьер-о-Реаль.</Text>
 		<Options>
-			<Option Destination="454" Text="Далее"/>
+			<Option Destination="454"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3941,14 +3941,14 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="65" Text="Далее"/>
+			<Option Destination="65"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>398</ID>
 		<Text>Убить крестьянина не сложно, и через пару сот метров вы въезжаете в Шалю.</Text>
 		<Options>
-			<Option Destination="257" Text="Далее"/>
+			<Option Destination="257"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4012,7 +4012,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="102" Text="Далее"/>
+			<Option Destination="102"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4022,7 +4022,7 @@
 			<Modification Name="Ecu" Value="-50"/>
 		</Modifications>
 		<Options>
-			<Option Destination="540" Text="Далее"/>
+			<Option Destination="540"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4032,7 +4032,7 @@
 			<Modification Name="Strength" Value="-3"/>
 		</Modifications>
 		<Options>
-			<Option Destination="217" Text="Далее"/>
+			<Option Destination="217"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4051,7 +4051,7 @@
 			<Modification Name="Ecu" Value="500"/>
 		</Modifications>
 		<Options>
-			<Option Destination="137" Text="Далее"/>
+			<Option Destination="137"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4089,7 +4089,7 @@
 		<ID>412</ID>
 		<Text>Ослабевший противник ловким неуловимым движением набрасывает вам на голову свой плащ. Когда удается выпутаться из-под него, видите что дорога пуста. Исчезли даже трупы убитых вами врагов. Мост догорает, но путь дальше свободен.</Text>
 		<Options>
-			<Option Destination="379" Text="Далее"/>
+			<Option Destination="379"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4141,7 +4141,7 @@
 			<Modification Name="Strength" Value="2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="93" Text="Далее"/>
+			<Option Destination="93"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4151,7 +4151,7 @@
 			<Modification Name="Strength" Value="-4"/>
 		</Modifications>
 		<Options>
-			<Option Destination="537" Text="Далее"/>
+			<Option Destination="537"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4161,7 +4161,7 @@
 			<Modification Name="Strength" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="105" Text="Далее"/>
+			<Option Destination="105"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4176,7 +4176,7 @@
 		<ID>421</ID>
 		<Text>Однако оставшаяся в карете женщина встречает вас несколько по-другому. Вместо благодарности вы видите ненавидящий взгляд и кинжал, виднеющийся в широком рукаве. Выбить его не составляет труда, но пуля, просвистевшая мимо самого уха, недвусмысленно указывает на то, что в своей нелюбви к вам женщина не одинока. Остается только один выход: укрыться от пуль внутри кареты.</Text>
 		<Options>
-			<Option Destination="7" Text="Далее"/>
+			<Option Destination="7"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4209,7 +4209,7 @@
 			<Modification Name="Pistols" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="528" Text="Далее"/>
+			<Option Destination="528"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4219,28 +4219,28 @@
 			<Modification Name="Ecu" Value="300"/>
 		</Modifications>
 		<Options>
-			<Option Destination="331" Text="Далее"/>
+			<Option Destination="331"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>426</ID>
 		<Text>Солдаты выводят вас на улицу и сажают в тюремную карету (интересно, откуда она здесь взялась). Окон нет, поэтому о том, куда вас везут можно только догадываться. Слышно только, что мостовая под колесами кончилась (выехали из города?), и экипаж покатился по грунтовой дороге. Примерно через два часа тюремная карета останавливается, и дверца распахивается.</Text>
 		<Options>
-			<Option Destination="129" Text="Далее"/>
+			<Option Destination="129"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>427</ID>
 		<Text>Ваши молитвы услышаны. Нет, Господь не послал молнию покарать разбойников. Он просто взял и перенес вас со всем скарбом и конем обратно на дорогу. Вы благодарите его и продолжаете свой путь, стараясь поскорее забыть о ночном приключении. Но помните: к Богу можно воззвать только один раз, ваш шанс уже использован.</Text>
 		<Options>
-			<Option Destination="351" Text="Далее"/>
+			<Option Destination="351"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>428</ID>
 		<Text>Вот и перекресток, где сходятся дороги из Шартра и из Орлеана. Теперь до Парижа не больше 20 лье.</Text>
 		<Options>
-			<Option Destination="574" Text="Далее"/>
+			<Option Destination="574"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4254,7 +4254,7 @@
 		<ID>430</ID>
 		<Text>Умный Арбалет копытами разбрасывает не ожидавших нападения солдат, в то время как ваша шпага насквозь пронзает сержанта. Путь свободен, однако сзади раздается выстрел.</Text>
 		<Options>
-			<Option Destination="254" Text="Далее"/>
+			<Option Destination="254"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4279,14 +4279,14 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="372" Text="Далее"/>
+			<Option Destination="372"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>433</ID>
 		<Text>Сражение заканчивается, даже не успев перейти в побоище. Ведь у вас не сто рук, к тому же монахи вооружены пистолетами. Последнее, что вы видите — дуло одного из них, нацеленное прямо в грудь. Если хотите и есть возможность попросить Бога о помощи, сделайте это, иначе же ваша миссия останется невыполненной…</Text>
 		<Options>
-			<Option Destination="601" Text="Далее"/>
+			<Option Destination="601"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4296,7 +4296,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="57" Text="Далее"/>
+			<Option Destination="57"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4312,7 +4312,7 @@
 		<ID>436</ID>
 		<Text>Третий всадник вместо того, чтобы атаковать вас, поднимает руку и говорит: «Я англичанин, граф Мортон. Скажите, за что вы, француз, настолько ненавидите меня, что без разговоров убили моего друга и слугу?» Его лицо спокойно, а голос благороден. Неужели вы ошиблись, и это не враги и не лигисты?</Text>
 		<Options>
-			<Option Destination="226" Text="Далее"/>
+			<Option Destination="226"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4337,7 +4337,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="388" Text="Далее"/>
+			<Option Destination="388"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4361,14 +4361,14 @@
 		<ID>441</ID>
 		<Text>Хозяин отвечает, что он ничего не знает. Вроде бы ночью никаких подозрительных людей в гостинице не было. Вот только трое купцов встали на час раньше вас и уже покинули город. Понимая, что от него больше ничего не добиться, вы уезжаете из Капденака.</Text>
 		<Options>
-			<Option Destination="331" Text="Далее"/>
+			<Option Destination="331"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>442</ID>
 		<Text>Всадники отвечают, что они путешественники, англичане, и уже успели привыкнуть к опасностям на французских дорогах. Увидев, как вы несетесь во весь опор, они решили, что у вас может быть к ним какое-нибудь дело или что вы просто разбойник. Поэтому на всякий случай и приготовились к обороне. Недоразумение разрешилось, путь дальше свободен.</Text>
 		<Options>
-			<Option Destination="105" Text="Далее"/>
+			<Option Destination="105"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4391,7 +4391,7 @@
 		<ID>445</ID>
 		<Text>Утром вы отправляетесь дальше и, не задерживаясь в Пуатье, скачете вперед. Примерно полпути позади, так почему бы не поспешить и не добраться до Парижа.</Text>
 		<Options>
-			<Option Destination="3" Text="Далее"/>
+			<Option Destination="3"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4409,7 +4409,7 @@
 		<ID>447</ID>
 		<Text>Меткость вам не изменяет, на дороге остается два трупа.</Text>
 		<Options>
-			<Option Destination="243" Text="Далее"/>
+			<Option Destination="243"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4419,7 +4419,7 @@
 			<Modification Name="Ecu" Value="-600"/>
 		</Modifications>
 		<Options>
-			<Option Destination="18" Text="Далее"/>
+			<Option Destination="18"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4437,7 +4437,7 @@
 		<ID>450</ID>
 		<Text>До Каора вы добираетесь без дальнейших осложнений, надеясь, что теперь шпионы Лиги не узнают о вашем поручении.</Text>
 		<Options>
-			<Option Destination="287" Text="Далее"/>
+			<Option Destination="287"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4454,7 +4454,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="184" Text="Далее"/>
+			<Option Destination="184"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4465,7 +4465,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="652" Text="Далее"/>
+			<Option Destination="652"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4529,7 +4529,7 @@
 			<Modification Name="Ecu" Value="-100"/>
 		</Modifications>
 		<Options>
-			<Option Destination="179" Text="Далее"/>
+			<Option Destination="179"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4552,7 +4552,7 @@
 		<ID>458</ID>
 		<Text>Вы открываете дверь и делаете несколько шагов, когда сильный удар сзади валит вас с ног.</Text>
 		<Options>
-			<Option Destination="206" Text="Далее"/>
+			<Option Destination="206"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4576,7 +4576,7 @@
 		<ID>461</ID>
 		<Text>Пять су — не такие деньги, чтобы хозяин кабачка постоянно присматривал за вами. Поэтому вы незаметно выходите, садитесь на коня и исчезаете в ночи.</Text>
 		<Options>
-			<Option Destination="250" Text="Далее"/>
+			<Option Destination="250"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4618,7 +4618,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="318" Text="Далее"/>
+			<Option Destination="318"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4628,7 +4628,7 @@
 			<Modification Name="Honor" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="597" Text="Далее"/>
+			<Option Destination="597"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4643,7 +4643,7 @@
 		<ID>467</ID>
 		<Text>«Проезжал, проезжал здесь такой, — отвечает крестьянин. — Часа два, пожалуй, тому назад».</Text>
 		<Options>
-			<Option Destination="563" Text="Далее"/>
+			<Option Destination="563"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4651,7 +4651,7 @@
 		<Text>Дворянин делает свите знак не приближаться и говорит: «Я друг законного Короля, а значит и ваш друг. Конечно, никто не знает, что я вот уже три года как обратился в истинную веру и с тех пор помогаю по мере сил и возможностей Генриху Наваррскому. Теперь же я должен передать вам то, что мне вчера сообщили из Парижа. Ни в коем случае нельзя ходить на улицу Ваннери. Поезжайте сразу же на улицу Августинцев, дом номер 2. Граф де Ноайль будет ждать вас там. Вот и все. Прощайте, и да поможет вам Господь!» Он разворачивает лошадь и вместе со свитой скрывается в замке. Вы же едете в Монтаржи.</Text>
 		<Triggers>CountDeNoaille</Triggers>
 		<Options>
-			<Option Destination="598" Text="Далее"/>
+			<Option Destination="598"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4676,7 +4676,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="204" Text="Далее"/>
+			<Option Destination="204"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4698,14 +4698,14 @@
 		<ID>473</ID>
 		<Text>Готовясь к бою, смело несетесь навстречу облаку пыли, которое оказывается… стадом коров. Пастух с удивлением смотрит на дворянина, который летит во весь опор, положив руку на эфес шпаги, как будто готовится сразиться с неведомым опасным врагом. Оставшийся путь до Орлеана проходит без приключений.</Text>
 		<Options>
-			<Option Destination="362" Text="Далее"/>
+			<Option Destination="362"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>474</ID>
 		<Text>Вы не учли того, что Арбалет устал, а у преследователей свежие лошади. Понимая, что от погони не уйти, разворачиваете коня.</Text>
 		<Options>
-			<Option Destination="56" Text="Далее"/>
+			<Option Destination="56"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4728,7 +4728,7 @@
 		<ID>477</ID>
 		<Text>Близость Парижа заставляет вас торопить коня. Почти все большие города уже позади, остается одно: только вперед.</Text>
 		<Options>
-			<Option Destination="320" Text="Далее"/>
+			<Option Destination="320"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4758,7 +4758,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="343" Text="Далее"/>
+			<Option Destination="343"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4776,14 +4776,14 @@
 			<Modification Name="Strength" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="212" Text="Далее"/>
+			<Option Destination="212"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>483</ID>
 		<Text>Странно, кому это пришло в голову так глупо шутить прямо посреди леса. Спешившись, вы подходите поближе.</Text>
 		<Options>
-			<Option Destination="350" Text="Далее"/>
+			<Option Destination="350"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4809,21 +4809,21 @@
 		<ID>486</ID>
 		<Text>Солдаты завязывают вам глаза, ведут по каким-то лестницам и коридорам. Когда повязку снимают, вы оказываетесь в совершенно темной комнате. Выхода из нее нет, поэтому, с трудом нащупав что-то похожее на кровать, ложитесь спать.</Text>
 		<Options>
-			<Option Destination="352" Text="Далее"/>
+			<Option Destination="352"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>487</ID>
 		<Text>Достав шпагу, быстро разворачиваетесь в сторону тени. И в ту же секунду звучит выстрел.</Text>
 		<Options>
-			<Option Destination="378" Text="Далее"/>
+			<Option Destination="378"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>488</ID>
 		<Text>Объехав хижину так, чтобы держаться подальше от непонятной тени, вы продолжаете свой путь.</Text>
 		<Options>
-			<Option Destination="504" Text="Далее"/>
+			<Option Destination="504"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4874,7 +4874,7 @@
 		<ID>493</ID>
 		<Text>Трясущейся рукой достаете перстень и отдаете его таинственному незнакомцу. Фигуры растворяются во мраке ночи.</Text>
 		<Options>
-			<Option Destination="379" Text="Далее"/>
+			<Option Destination="379"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4902,14 +4902,14 @@
 			<Modification Name="Ecu" Value="1000"/>
 		</Modifications>
 		<Options>
-			<Option Destination="137" Text="Далее"/>
+			<Option Destination="137"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>496</ID>
 		<Text>Уже почти в пригороде навстречу вам попадается первый путник. Это крестьянин, задумчиво идущий по дороге со своей котомкой за плечами. Миновав его, вы въезжаете в город.</Text>
 		<Options>
-			<Option Destination="380" Text="Далее"/>
+			<Option Destination="380"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4958,7 +4958,7 @@
 		<ID>501</ID>
 		<Text>Отрицательно покачав головой, пришпориваете коня. До Ножан-ле-Ротру уже недалеко.</Text>
 		<Options>
-			<Option Destination="604" Text="Далее"/>
+			<Option Destination="604"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4982,7 +4982,7 @@
 		<ID>504</ID>
 		<Text>Вскоре вы выбираетесь снова на что-то, отдаленно похожее на дорогу, но решаете, что на сегодня с вас встреч и хижин уже предостаточно. Хорошо бы немного поспать.</Text>
 		<Options>
-			<Option Destination="404" Text="Далее"/>
+			<Option Destination="404"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4997,7 +4997,7 @@
 		<ID>506</ID>
 		<Text>Комната пуста. Скорее всего, здесь живут слуги, но сейчас в ней никого нет. Остается только выйти из нее и отправиться дальше по коридору, уходящему направо.</Text>
 		<Options>
-			<Option Destination="565" Text="Далее"/>
+			<Option Destination="565"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5039,7 +5039,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="40" Text="Далее"/>
+			<Option Destination="40"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5047,21 +5047,21 @@
 		<Text>Конечно, лучше всего было бы найти себе какого-нибудь союзника, да где ж его найдешь? Тут вы замечаете цепь, которой на ночь перегораживают улицу. Если перекрыть ей боковые улицы, то стража не сможет объехать квартал и напасть на вас с тыла. Быстро сделав это, возвращаетесь в начало улицы, поскольку вдали уже слышится приближение повозки с осужденным.</Text>
 		<Triggers>StreetIsBlocked</Triggers>
 		<Options>
-			<Option Destination="443" Text="Далее"/>
+			<Option Destination="443"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>512</ID>
 		<Text>Даже не поблагодарив вас, он не торопясь проходит, гордо подняв голову. Ну и черт с ним, учитывая важность королевской миссии вряд ли стоит тратить время и силы, ввязываясь в ссору с каждым невежей.</Text>
 		<Options>
-			<Option Destination="528" Text="Далее"/>
+			<Option Destination="528"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>513</ID>
 		<Text>Решив не рисковать, вы сворачиваете с дороги и по полю объезжаете опасный участок. Неожиданно дверь одного из домиков распахивается и слышится выстрел.</Text>
 		<Options>
-			<Option Destination="294" Text="Далее"/>
+			<Option Destination="294"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5086,14 +5086,14 @@
 			<Modification Name="Strength" Value="2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="361" Text="Далее"/>
+			<Option Destination="361"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>516</ID>
 		<Text>Выйдя в коридор, находите горничную и просите ее убрать в комнате. Через четверть часа вы возвращаетесь обратно.</Text>
 		<Options>
-			<Option Destination="49" Text="Далее"/>
+			<Option Destination="49"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5110,14 +5110,14 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="143" Text="Далее"/>
+			<Option Destination="143"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>518</ID>
 		<Text>Ну что ж, вы уложились в срок, и Париж перед вами.</Text>
 		<Options>
-			<Option Destination="130" Text="Далее"/>
+			<Option Destination="130"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5136,7 +5136,7 @@
 			<Modification Name="Honor" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="384" Text="Далее"/>
+			<Option Destination="384"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5147,14 +5147,14 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="3" Text="Далее"/>
+			<Option Destination="3"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>521</ID>
 		<Text>Яркая молния освещает ночь. Конь незнакомца встает на дыбы (успеваете лишь разглядеть, что он серый в яблоках), а сам он закрывает лицо плащом. Вы тоже зажмуриваетесь от ослепительного света, а когда открываете глаза, видите, что дорога пуста, мост на месте, а ваши раны, полученные в этом бою, исцелены (добавьте себе столько, сколько потеряли в схватке). Но помните: к Богу можно обратиться лишь однажды. Свой шанс вы уже использовали. Наступает рассвет. Путь дальше свободен.</Text>
 		<Options>
-			<Option Destination="163" Text="Далее"/>
+			<Option Destination="163"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5180,14 +5180,14 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="47" Text="Далее"/>
+			<Option Destination="47"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>524</ID>
 		<Text>Ваша догадка правильна: веревка привязана к самострелу. Если бы вы ее перерезали или задели конем, то, скорее всего, сразу же были бы убиты. Обезвредив смертоносное оружие, продолжаете свой путь.</Text>
 		<Options>
-			<Option Destination="623" Text="Далее"/>
+			<Option Destination="623"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5201,7 +5201,7 @@
 		<ID>526</ID>
 		<Text>Описав крестьянину всадника в зеленом камзоле, спрашиваете, не проезжал ли здесь такой. Он качает головой: нет, не видывал. Может быть, это хорошая новость, означающая, что ваш след потерян?</Text>
 		<Options>
-			<Option Destination="380" Text="Далее"/>
+			<Option Destination="380"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5211,7 +5211,7 @@
 			<Modification Name="Strength" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="416" Text="Далее"/>
+			<Option Destination="416"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5252,7 +5252,7 @@
 			<Modification Name="Strength" Value="2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="374" Text="Далее"/>
+			<Option Destination="374"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5269,7 +5269,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="126" Text="Далее"/>
+			<Option Destination="126"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5285,7 +5285,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="63" Text="Далее"/>
+			<Option Destination="63"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5329,7 +5329,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="326" Text="Далее"/>
+			<Option Destination="326"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5360,7 +5360,7 @@
 		<ID>541</ID>
 		<Text>Наконец-то и всадники обращают на вас внимание. Один из них указывает на вас и что-то оживленно говорит остальным. Теперь выхода нет: враги это или друзья, а надо двигаться к мосту.</Text>
 		<Options>
-			<Option Destination="214" Text="Далее"/>
+			<Option Destination="214"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5396,7 +5396,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="343" Text="Далее"/>
+			<Option Destination="343"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5418,14 +5418,14 @@
 		<ID>548</ID>
 		<Text>Конечно, вы сразу же вспоминаете про веревку, которая не позволила миновать трактир на дороге к Вильнёву. Но тогда не исключено, что ее натянули те же люди. Спешившись, подходите поближе.</Text>
 		<Options>
-			<Option Destination="350" Text="Далее"/>
+			<Option Destination="350"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>549</ID>
 		<Text>Вы слезаете с коня, прижимаетесь поближе к стене, чтобы пропустить священника, снимаете шляпу и креститесь. Он проходит мимо. Конечно, внимания на вас никто не обратил, все обошлось. Но отныне вы теряете право на покровительство Бога. Сколько бы раз в книге не задавался вопрос, хотите ли вы обратиться к Богу за помощью, вы — вероотступник, и вам запрещено смотреть эти параграфы. Теперь отправляйтесь дальше.</Text>
 		<Options>
-			<Option Destination="498" Text="Далее"/>
+			<Option Destination="498"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5440,7 +5440,7 @@
 		<ID>551</ID>
 		<Text>Судя по удивленным лицам этих людей, у них было дело не к вам, а к вашему кошельку.</Text>
 		<Options>
-			<Option Destination="114" Text="Далее"/>
+			<Option Destination="114"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5488,7 +5488,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="363" Text="Далее"/>
+			<Option Destination="363"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5550,7 +5550,7 @@
 		<ID>559</ID>
 		<Text>Мэр что-то бормочет про себя и звонит в колокольчик, стоящий у него на столе.</Text>
 		<Options>
-			<Option Destination="68" Text="Далее"/>
+			<Option Destination="68"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5574,7 +5574,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="591" Text="Всадник в зелёном камзоле" OnlyIf="GreenCamisole"/>
-			<Option Destination="188" Text="Далее"/>
+			<Option Destination="188"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5597,7 +5597,7 @@
 		<ID>564</ID>
 		<Text>Нищий хватает золотой (вычеркните его с Листка путешественника) и быстро прячет в карман. «Ну, что стоишь, проваливай», — говорит он, видя, что вы все еще перед ним. Вас обманули, но делать нечего — не вызывать же его на дуэль. Приходится смириться с потерей и въехать в город.</Text>
 		<Options>
-			<Option Destination="105" Text="Далее"/>
+			<Option Destination="105"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5615,7 +5615,7 @@
 			<Modification Name="Strength"/>
 		</Modifications>
 		<Options>
-			<Option Destination="459" Text="Далее"/>
+			<Option Destination="459"/>
 			<Option Destination="264" Text="Если же выпали одинаковые числа"/>
 		</Options>
 	</Paragraph>
@@ -5660,7 +5660,7 @@
 		<Text>Маркиз де Буа-Верт, оказывается, прекрасно знает губернатора Орлеана графа де Пертюэ и с удовольствием дает вам к нему рекомендательное письмо. А сейчас остается только распрощаться с маркизом, вернуться обратно на дорогу, с которой свернули, чтобы спасти ему жизнь, и продолжить свой путь.</Text>
 		<Triggers>GovernorsLetterOfRecommendation</Triggers>
 		<Options>
-			<Option Destination="4" Text="Далее"/>
+			<Option Destination="4"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5709,21 +5709,21 @@
 			<Modification Name="Strength" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="296" Text="Далее"/>
+			<Option Destination="296"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>576</ID>
 		<Text>Охрана не может зайти с тыла, вы же, прокладывая себе дорогу шпагой, добираетесь до самой повозки.</Text>
 		<Options>
-			<Option Destination="189" Text="Далее"/>
+			<Option Destination="189"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>577</ID>
 		<Text>К счастью, буржуа верит вам, сказав, что это не имеет существенного значения, и скоро вы понимаете, почему.</Text>
 		<Options>
-			<Option Destination="554" Text="Далее"/>
+			<Option Destination="554"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5767,14 +5767,14 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="84" Text="Далее"/>
+			<Option Destination="84"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>582</ID>
 		<Text>К концу боя, видя, что перевес на вашей стороне, слуга бросил канделябр, и исчез в темноте. От свечей вспыхнул ковер, покрывающий лестницу, и вам ничего не остается, кроме как быстро покинуть дом, обреченный сгореть.</Text>
 		<Options>
-			<Option Destination="71" Text="Далее"/>
+			<Option Destination="71"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5790,28 +5790,28 @@
 		<ID>584</ID>
 		<Text>Глаза Майена от удивления лезут на лоб.</Text>
 		<Options>
-			<Option Destination="74" Text="Далее"/>
+			<Option Destination="74"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>585</ID>
 		<Text>Слава Богу, вы помните еще один адрес, полученный от курьера.</Text>
 		<Options>
-			<Option Destination="454" Text="Далее"/>
+			<Option Destination="454"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>586</ID>
 		<Text>Охранник мертв. К счастью, гугенот не связан — тюремщикам и в голову не могло прийти, что в таком спокойном городе, как Ангулем, верном католической вере и Лиге, кто-то попытается его отбить.</Text>
 		<Options>
-			<Option Destination="314" Text="Далее"/>
+			<Option Destination="314"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>587</ID>
 		<Text>Вы оглядываетесь в поисках шевалье де Мишуара, но видите, что он исчез. Значит, подозрения оказались правильными — он был подослан Лигой, чтобы проследить за тем, чтобы вы исправно попали в ловушку. Теперь его задание выполнено. А вы покидаете Вильнёв и отправляетесь дальше.</Text>
 		<Options>
-			<Option Destination="619" Text="Далее"/>
+			<Option Destination="619"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5844,14 +5844,14 @@
 		<Text>«Я знаю этого человека, — вскрикиваете вы. — И видел его совсем недавно. О, если бы тогда мне было открыто, кто он!» Теперь остается только распрощаться со старым слугой, поблагодарив его за приют и пообещав отомстить за отца, и покинуть Каор.</Text>
 		<Triggers>DukeName</Triggers>
 		<Options>
-			<Option Destination="141" Text="Далее"/>
+			<Option Destination="141"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>592</ID>
 		<Text>На полпути к Ле Ману, вы сворачиваете в сторону на проселок. Сколько лет вы уже не видели старого друга отца, барона де Вермея, чей замок, как вы вдруг вспомнили, находится неподалеку! Сам барон уже стар, ему за шестьдесят, но с юношеским проворством он выбегает во двор, чтобы вас встретить. Еще бы, ведь он знает вас с колыбели. Ему можно без страха открыться и рассказать о нелегком поручении, возложенном Королем. Де Вермей согласен с тем, что самая короткая дорога не всегда самая верная, и полностью одобряет выбранный вами путь. Он рассказывает, что его жена еще от прабабки знает секрет замечательного снадобья из трав, залечивающего как душевные, так и телесные раны. Если хотите, выпейте его и восстановите СИЛУ до изначального уровня.</Text>
 		<Options>
-			<Option Destination="180" Text="Далее"/>
+			<Option Destination="180"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5866,14 +5866,14 @@
 		<ID>594</ID>
 		<Text>Пока остальные не успели выскочить из домика, вы проноситесь мимо. До Лиможа уже совсем недалеко.</Text>
 		<Options>
-			<Option Destination="212" Text="Далее"/>
+			<Option Destination="212"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>595</ID>
 		<Text>Увидев перстень, лакей улыбается и пошире распахивает дверь. «Заходите сударь, — говорит он, — господин де Перигю вас сейчас примет». Вы проходите в гостиную и опускаетесь в широкое уютное кресло, стоящее у стены. В комнату входит человек лет пятидесяти, одежда его указывает на привычку к богатству, но не переходит в дешевое щегольство. Он протягивает вам руку со словами: «С приездом, я — шевалье де Перигю».</Text>
 		<Options>
-			<Option Destination="80" Text="Далее"/>
+			<Option Destination="80"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5889,7 +5889,7 @@
 		<Text>Эта ладанка должна помочь вам в самую трудную минуту. А сейчас вы целуете женщине руку и покидаете Брив-ля-Гайард.</Text>
 		<Triggers>Incense</Triggers>
 		<Options>
-			<Option Destination="19" Text="Далее"/>
+			<Option Destination="19"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5915,7 +5915,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="275" Text="Далее"/>
+			<Option Destination="275"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5933,14 +5933,14 @@
 		<ID>601</ID>
 		<Text>Вы возносите к небу горячую молитву, но на первый взгляд ничего не происходит. И только через несколько минут становится ясно, что Бог услышал вас и лишил несчастных разума. Они начинают стрелять и убивать друг друга, видя в каждом вас, то есть врага. И только на настоящего противника руку поднять не смеет никто. Вскоре все кончено. Арбалет брезгливо пробирается по устланному трупами двору и проворно выносит вас на дорогу. Путь свободен.</Text>
 		<Options>
-			<Option Destination="428" Text="Далее"/>
+			<Option Destination="428"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>602</ID>
 		<Text>Тогда остается только вновь проехать мимо ворот и попытаться обогнуть город с другой стороны.</Text>
 		<Options>
-			<Option Destination="370" Text="Далее"/>
+			<Option Destination="370"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6027,7 +6027,7 @@
 			<Modification Name="Ecu" Value="600"/>
 		</Modifications>
 		<Options>
-			<Option Destination="137" Text="Далее"/>
+			<Option Destination="137"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6075,7 +6075,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="306" Text="Далее"/>
+			<Option Destination="306"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6106,14 +6106,14 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="277" Text="Далее"/>
+			<Option Destination="277"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>617</ID>
 		<Text>Мэр что-то бормочет про себя и звонит в колокольчик, стоящий на столе.</Text>
 		<Options>
-			<Option Destination="68" Text="Далее"/>
+			<Option Destination="68"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6155,7 +6155,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="84" Text="Далее"/>
+			<Option Destination="84"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6178,7 +6178,7 @@
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="386" Text="Далее"/>
+			<Option Destination="386"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6195,14 +6195,14 @@
 			<Modification Name="Strength" Value="-6"/>
 		</Modifications>
 		<Options>
-			<Option Destination="74" Text="Далее"/>
+			<Option Destination="74"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>626</ID>
 		<Text>И циркачи иногда могут суметь попасть в упор! Потеряйте 6 СИЛ, и если еще остались живы, то поторопитесь дальше: кто знает, какие еще сюрпризы могут ожидать в этом балагане.</Text>
 		<Options>
-			<Option Destination="64" Text="Далее"/>
+			<Option Destination="64"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6250,7 +6250,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="54" Text="Далее"/>
+			<Option Destination="54"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6275,7 +6275,7 @@
 		<ID>630</ID>
 		<Text>Попрощавшись, вы снова выезжаете на неверскую дорогу и спешите вперед.</Text>
 		<Options>
-			<Option Destination="4" Text="Далее"/>
+			<Option Destination="4"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6291,7 +6291,7 @@
 		<ID>632</ID>
 		<Text>Оставшийся в живых монах в ужасе отскакивает и прижимается к стене дома. Наверно, он вел не слишком праведную жизнь, раз его страшит участь товарища, погибшего за веру, а значит обреченного попасть прямиком в рай.</Text>
 		<Options>
-			<Option Destination="498" Text="Далее"/>
+			<Option Destination="498"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6322,14 +6322,14 @@
 		<ID>636</ID>
 		<Text>Примерно через час впереди показывается нужная дорога, а к полудню вы уже въезжаете в Шартр.</Text>
 		<Options>
-			<Option Destination="52" Text="Далее"/>
+			<Option Destination="52"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>637</ID>
 		<Text>Охрана отвечает, что мелкой сошки тут и без вас достаточно. Придется проглотить оскорбление (затевать драку совсем уж неразумно) и поискать обходные пути.</Text>
 		<Options>
-			<Option Destination="299" Text="Далее"/>
+			<Option Destination="299"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6357,7 +6357,7 @@
 		<ID>640</ID>
 		<Text>Берлье все понимает и, подавив вздох, благословляет вас в дорогу.</Text>
 		<Options>
-			<Option Destination="141" Text="Далее"/>
+			<Option Destination="141"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6371,7 +6371,7 @@
 		<ID>642</ID>
 		<Text>Вы отказываетесь и, не дослушав до конца Мамашу Парку, трогаете коня.</Text>
 		<Options>
-			<Option Destination="259" Text="Далее"/>
+			<Option Destination="259"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6434,7 +6434,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="125" Text="Далее"/>
+			<Option Destination="125"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6448,14 +6448,14 @@
 		<ID>647</ID>
 		<Text>Арбалет без труда преодолевает речку, и вы едете дальше.</Text>
 		<Options>
-			<Option Destination="163" Text="Далее"/>
+			<Option Destination="163"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>648</ID>
 		<Text>Конь с разбега перепрыгивает овраг, и вы скачете дальше.</Text>
 		<Options>
-			<Option Destination="64" Text="Далее"/>
+			<Option Destination="64"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6466,7 +6466,7 @@
 			<Modification Name="Strength" Value="2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="82" Text="Далее"/>
+			<Option Destination="82"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6505,7 +6505,7 @@
 		<Text>Спросив у первого попавшегося гостя, кто здесь граф де Дольней, вы подходите к нему. Дождавшись, когда он закончит беседовать с губернатором Орлеана, просите его отойти в сторону и говорите, что едете из Гаскони, знаете, что он парижанин, и спрашиваете, не может ли он посоветовать, где остановиться в столице. Во взгляде графа мелькает понимаете, и он небрежно говорит: «Я бы порекомендовал дом мельника Жозефа, улица Ваннера, дом 5. Там отлично кормят. При необходимости можете сослаться на меня». Теперь же вы решаете как можно скорее уйти из Ратуши, садитесь на коня и уезжаете из Орлеана. Бал продолжался всю ночь, поэтому когда вы выезжаете из города, небо на востоке уже начинает алеть. Наступает новый день.</Text>
 		<Triggers>VenneraStreet</Triggers>
 		<Options>
-			<Option Destination="275" Text="Далее"/>
+			<Option Destination="275"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6527,7 +6527,7 @@
 		<Text>Свет кольца усиливается, и Хэрнок начинает рассказывать так, как будто его устами говорит какое-то другое, высшее существо. «Твоего отца убил сын герцога де Лавалетта, ныне сам ставший герцогом. Если ты когда-нибудь встретишься с этим преданным слугой Лиги и одним из ее руководителей, правой рукой герцога Майенского, то без труда узнаешь его. С юных лет де Лавалетт предпочитает серых в яблоках лошадей и одевается в зеленое. Я вижу дух твоего отца, он взывает об отмщении». После этого Хэрнок вновь начинает говорить своим голосом. «Трудная твоя задача, о, благородный шевалье. Но я сделал все, что мог». Вам остается только поблагодарить мага, попрощаться с ним и, выехав из Шартра, направиться дальше.</Text>
 		<Triggers>DukeName</Triggers>
 		<Options>
-			<Option Destination="558" Text="Далее"/>
+			<Option Destination="558"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6596,6 +6596,6 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="1" Text="Далее"/>
+			<Option Destination="1"/>
 		</Options>
 	</Paragraph></Paragraphs>
