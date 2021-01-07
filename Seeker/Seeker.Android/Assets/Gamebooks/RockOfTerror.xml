@@ -39,7 +39,7 @@
 			<Modification Name="Time" Value="60"/>
 		</Modifications>
 		<Options>
-			<Option Destination="97" Text="Далее"/>
+			<Option Destination="97"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -61,7 +61,7 @@
 			<Modification Name="Time" Value="30"/>
 		</Modifications>
 		<Options>
-			<Option Destination="43" Text="Далее"/>
+			<Option Destination="43"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -72,7 +72,7 @@
 			<Modification Name="Time" Value="30"/>
 		</Modifications>
 		<Options>
-			<Option Destination="64" Text="Далее"/>
+			<Option Destination="64"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -90,7 +90,7 @@
 			<Modification Name="Time" Value="300"/>
 		</Modifications>
 		<Options>
-			<Option Destination="44" Text="Далее"/>
+			<Option Destination="44"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -128,7 +128,7 @@
 			<Modification Name="Injury" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="33" Text="Далее"/>
+			<Option Destination="33"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -143,7 +143,7 @@
 		<ID>15</ID>
 		<Text>Отбрасываете факел в сторону и тут же сами оказываетесь на земле. Инквизитор вновь обрушивает свой скипетр на вашу голову. «Исчадия ада! Порождения зла! — кричит он. — На костер его!». Полуживого, с разбитой головой, вас подхватывают и привязывают рядом с девушкой.\n\n«Спасибо», — шепчет она. Сквозь кровавую пелену вы видите, как девушка слабо улыбается. Как же она похожа на вашу жену!</Text>
 		<Options>
-			<Option Destination="2" Text="Далее"/>
+			<Option Destination="2"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -154,7 +154,7 @@
 			<Modification Name="MonksHeart" Init="true"/>
 		</Modifications>
 		<Options>
-			<Option Destination="49" Text="Далее"/>
+			<Option Destination="49"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -172,7 +172,7 @@
 			<Modification Name="Time" Value="60"/>
 		</Modifications>
 		<Options>
-			<Option Destination="97" Text="Далее"/>
+			<Option Destination="97"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -183,7 +183,7 @@
 			<Modification Name="MonksHeart" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="44" Text="Далее"/>
+			<Option Destination="44"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -194,7 +194,7 @@
 			<Modification Name="Time" Value="30"/>
 		</Modifications>
 		<Options>
-			<Option Destination="64" Text="Далее"/>
+			<Option Destination="64"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -234,7 +234,7 @@
 		<ID>25</ID>
 		<Text>Болото тянет вас на дно, но какая-то сила, наоборот, словно пытается вытолкнуть вас из воды. Что-то упорно не дает вам утонуть. Вы не совсем понимаете, что происходит, но вам удается сдвинуться с места и, хоть и с большими усилиями, преодолеть опасный участок. Обогнув поляну, вы снова выходите на тропу. Змеи остались позади, и вы устремляетесь по тропинке на северо-восток.</Text>
 		<Options>
-			<Option Destination="58" Text="Далее"/>
+			<Option Destination="58"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -261,14 +261,14 @@
 			<Modification Name="Time" Value="60"/>
 		</Modifications>
 		<Options>
-			<Option Destination="85" Text="Далее"/>
+			<Option Destination="85"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>29</ID>
 		<Text>Вы понимаете, что человека вам не спасти, да и рисковать жизнью — не самая лучшая идея, когда вашего сына вот-вот принесут в жертву. Благополучно минуете мост, за которым тропа продолжает упрямо бежать в направлении горы. Вы устремляетесь по ней.</Text>
 		<Options>
-			<Option Destination="32" Text="Далее"/>
+			<Option Destination="32"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -286,7 +286,7 @@
 			<Modification Name="Time" Value="30"/>
 		</Modifications>
 		<Options>
-			<Option Destination="56" Text="Далее"/>
+			<Option Destination="56"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -308,7 +308,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="8" Text="К сумасшедшей старухе" OnlyIf="CrazyOldWoman"/>
-			<Option Destination="8" Text="Далее"/>
+			<Option Destination="8"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -318,7 +318,7 @@
 			<Modification Name="Time" Value="30"/>
 		</Modifications>
 		<Options>
-			<Option Destination="57" Text="Далее"/>
+			<Option Destination="57"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -351,7 +351,7 @@
 			<Modification Name="Time" Value="60"/>
 		</Modifications>
 		<Options>
-			<Option Destination="58" Text="Далее"/>
+			<Option Destination="58"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -370,21 +370,21 @@
 		<ID>40</ID>
 		<Text>Ждать некогда. Вы закидываете (довольно тяжелую) книгу Теней в заплечный мешок, зажигаете новую свечу и, перекрестив дверь и вооружившись распятием, рывком открываете её…\n\nЗа дверью никого нет. Лишь темнота туннеля впереди.\n\nОтбросив все страхи и суеверия, вы бросаетесь по гулкому проходу вперед, к выходу из пещеры. Сердце замирает, когда снова оказываетесь возле ступеней ведущих вниз, но никаких звуков не слышно и вы спешите к выходу. Впереди видна полуоткрытая дверь, залитая лунным светом, а воздух становится все более свежим. Так долго сдерживаемый вами страх наконец вырывается на свободу. Вы готовы на всё, лишь бы покинуть это место! Опрометью кидаетесь к выходу, уже не боясь загасить свечу. Скорее! Прочь отсюда! Когда до выхода остаются считанные шаги, дверь с оглушительным ударом закрывается. Вы хватаетесь за ручку (благо свеча не погасла, и вы не оказались в темноте), но все ваши попытки открыть дверь тщетны. Сзади раздаются глухие шаги и стук метлы. Вы замираете, книга вываливается из рук, громко ударяясь о плиты пола, и эхо от удара разносится по туннелям.\n\nПоворачиваетесь, на негнущихся ногах, и прислоняетесь к двери спиной.</Text>
 		<Options>
-			<Option Destination="11" Text="Далее"/>
+			<Option Destination="11"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>41</ID>
 		<Text>Вскоре туман окутывает вас непроглядной зеленой дымкой. Голова начинает все больше кружиться, а тело становится каким-то легким и невесомым. Вы словно плывете сквозь тихую, успокаивающую пелену. Так легко и свободно!\n\nКажется, все заботы оставили вас, а сердце наполнилось гармонией и спокойствием. Под ногами мерещится какой-то предмет. Вы уже не можете понять: реально это или нет, и протягиваете руку. Земля уходит из под ног…</Text>
 		<Options>
-			<Option Destination="87" Text="Далее"/>
+			<Option Destination="87"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>42</ID>
 		<Text>Вы быстро и сбивчиво рассказываете, что эта девушка — Анна, дочь местного лесоруба. Однако инквизитор непреклонен: «Не поддамся я на ложь дьявола! Не дрогнет вера моя в праведность дел моих! Лишь священный огонь очистит души падших!»</Text>
 		<Options>
-			<Option Destination="2" Text="Далее"/>
+			<Option Destination="2"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -394,7 +394,7 @@
 			<Modification Name="Time" Value="60"/>
 		</Modifications>
 		<Options>
-			<Option Destination="57" Text="Далее"/>
+			<Option Destination="57"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -415,7 +415,7 @@
 			<Modification Name="Time" Value="60"/>
 		</Modifications>
 		<Options>
-			<Option Destination="56" Text="Далее"/>
+			<Option Destination="56"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -429,7 +429,7 @@
 		<ID>47</ID>
 		<Text>Чувствуете облегчение, спрыгнув на берег. Лодка остается одиноко качаться на волнах, а вы, продираясь сквозь кусты и уходя в сторону от болотной заводи, выходите на еле заметную тропу, бегущую в нужном вам направлении, к Шрекенштейну.</Text>
 		<Options>
-			<Option Destination="5" Text="Далее"/>
+			<Option Destination="5"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -447,7 +447,7 @@
 			<Modification Name="Time" Value="30"/>
 		</Modifications>
 		<Options>
-			<Option Destination="80" Text="Далее"/>
+			<Option Destination="80"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -456,7 +456,7 @@
 		<Options>
 			<Option Destination="42" Text="Расскажете об Анне" OnlyIf="Anna"/>
 			<Option Destination="60" Text="Есть распятье с рубином" OnlyIf="CrucifixWithRuby"/>
-			<Option Destination="2" Text="Далее"/>
+			<Option Destination="2"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -476,7 +476,7 @@
 		<Options>
 			<Option Destination="37" Text="Её имя Августина" OnlyIf="Augustine"/>
 			<Option Destination="82" Text="Её имя Гринаила" OnlyIf="Grinael"/>
-			<Option Destination="30" Text="Далее"/>
+			<Option Destination="30"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -487,7 +487,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="65" Text="Воспользоваться зеркалом Маррела" OnlyIf="MarrelsMirror"/>
-			<Option Destination="91" Text="Далее"/>
+			<Option Destination="91"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -498,7 +498,7 @@
 			<Modification Name="Time" Value="30"/>
 		</Modifications>
 		<Options>
-			<Option Destination="18" Text="Далее"/>
+			<Option Destination="18"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -525,7 +525,7 @@
 		<ID>57</ID>
 		<Text>Мост перед вами. Выглядит он совсем ненадежно, но другого пути, кажется, нет. Время и вода превратили когда-то крепкую конструкцию в шаткое гнилое сооружение. Но вы здесь не один. На середине моста стоит человек. Он держит в руках большой камень, привязанный к шее. Намеренья его вполне очевидны. Вы осторожно ступаете на мост, окликая человека. Он медленно оборачивается. Под взглядом его неестественно зеленых глаз, становиться неуютно. «Прочь, прочь от сюда. Он мой», — низким голосом выкрикивает человек. Вдруг зеленый свет в его глазах на мгновение гаснет. «Нет! Помоги! — сбивчиво лепечет он. — Я не хочу умира…». Договорить он не успевает, и вновь на вас смотрят зеленые глаза: «Хочет! Вы все хотите!». Человек делает шаг к краю моста.</Text>
 		<Options>
-			<Option Destination="14" Text="Далее"/>
+			<Option Destination="14"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -554,7 +554,7 @@
 			<Modification Name="Time" Value="60"/>
 		</Modifications>
 		<Options>
-			<Option Destination="44" Text="Далее"/>
+			<Option Destination="44"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -564,21 +564,21 @@
 			<Modification Name="Time" Value="30"/>
 		</Modifications>
 		<Options>
-			<Option Destination="43" Text="Далее"/>
+			<Option Destination="43"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>62</ID>
 		<Text>Бросаетесь в левый проход. Стук метлы, кажется, уже совсем близко, и вы, позабыв от страха обо всем, кидаетесь со всех ног вперед. Однако пробегаете лишь десяток метров и обнаруживаете перед собой стену. Вы зашли в тупик! Волосы на затылке начинают вставать дыбом. Вы медленно поворачиваетесь лицом к приближающимся шагам.</Text>
 		<Options>
-			<Option Destination="11" Text="Далее"/>
+			<Option Destination="11"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>63</ID>
 		<Text>Благоразумие берет верх над любопытством, и вы понимаете, что хватит терять время, которое сейчас слишком дорого. Вы покидаете одинокий дом.</Text>
 		<Options>
-			<Option Destination="18" Text="Далее"/>
+			<Option Destination="18"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -594,7 +594,7 @@
 		<Text>Вы понимаете, что со старухой что-то не так. Достаете зеркало и направляете его на одержимую. Лицо старухи преображается, становясь подобным звериному. Она издает страшный рык. Зеркало разлетается на сотни осколков в ваших руках (вычеркните его из инвентаря), а старуха словно обмякает, привалившись к стене. Но вот она снова открывает глаза. «Спасибо, — говорит она. — Я сопротивлялась, но демон оказался сильнее. Кто знает, какие ужасы он бы заставил меня сделать. Но кто ты и зачем ты здесь?». Вы рассказываете старухе свою историю. «Думаю я могу помочь тебе, — дослушав ваш рассказ, говорит женщина. — Победить ведьму можно, лишив её силы. Чтобы сделать это, нужно назвать её по имени. Существует Книга Теней, где кровью младенца вписано имя ведьмы, приносящей жертвы темному повелителю. Тебе придется отправиться в мир духов и в темных пещерах Скалы Ужаса найти Книгу Теней. Я на время погружу тебя в сон, и ты окажешься в мире духов. Узнай имя ведьмы любой ценой. Если вдруг смерть настигнет тебя в этих жутких пещерах, то ты проснешься». Что ж, вы готовы на все, если это поможет спасти сына. Старуха дает вам выпить зеленый горький отвар. Голова начинает кружиться, стены дома расплываться и вы проваливаетесь в забытье.</Text>
 		<Triggers>WakeUp</Triggers>
 		<Options>
-			<Option Destination="17" Text="Далее"/>
+			<Option Destination="17"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -615,7 +615,7 @@
 			<Modification Name="MonksHeart" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="70" Text="Далее"/>
+			<Option Destination="70"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -633,7 +633,7 @@
 			<Modification Name="Time" Value="30"/>
 		</Modifications>
 		<Options>
-			<Option Destination="32" Text="Далее"/>
+			<Option Destination="32"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -641,7 +641,7 @@
 		<Text>Обогнув стороной группу сражающихся, и закрывая лицо от жара костров, вы, наконец, оказываетесь в центре поляны.\n\nАлтарь и ваш сын совсем рядом. Однако у алтаря уже стоит сгорбленная старуха с длинным тонким кинжалом в руке.\n\nРедкие седые волосы спадают на черные, словно у ворона, глаза. «Твой сын наш, — мерзким голосом выкрикивает старуха. — Его душа уже обещана повелителю тьмы». Старуха заносит сухую морщинистую руку с кинжалом над алтарем.</Text>
 		<Options>
 			<Option Destination="82" Text="Её имя Гринаила" OnlyIf="Grinael"/>
-			<Option Destination="30" Text="Далее"/>
+			<Option Destination="30"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -671,7 +671,7 @@
 			<Modification Name="Time" Value="30"/>
 		</Modifications>
 		<Options>
-			<Option Destination="43" Text="Далее"/>
+			<Option Destination="43"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -681,7 +681,7 @@
 			<Modification Name="Time" Value="60"/>
 		</Modifications>
 		<Options>
-			<Option Destination="71" Text="Далее"/>
+			<Option Destination="71"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -722,7 +722,7 @@
 			<Modification Name="MonksHeart" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="32" Text="Далее"/>
+			<Option Destination="32"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -759,7 +759,7 @@
 			<Modification Name="MonksHeart" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="21" Text="Далее"/>
+			<Option Destination="21"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -784,7 +784,7 @@
 			<Modification Name="Time" Value="30"/>
 		</Modifications>
 		<Options>
-			<Option Destination="8" Text="Далее"/>
+			<Option Destination="8"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -810,7 +810,7 @@
 		<ID>88</ID>
 		<Text>Вы пробираетесь по лесу. Высокие деревья молча глядят на странника, забредшего ночью в их обитель. Луна временами освещает вам путь блеклым светом, но потом вновь скрывается за тучами. Неожиданно впереди слышится хруст веток и вам кажется, что из темноты на вас глядят два красных звериных глаза. Секунду вы стоите неподвижно, стараясь разглядеть опасность, а потом раздается глухое рычание и, ломая кусты и сухостой, на вас бросается тень. В темноте не удается разобрать, что это за зверь, но размеры его поистине огромны. Нечего и думать сражаться с этим монстром. Надо бежать!</Text>
 		<Options>
-			<Option Destination="75" Text="Далее"/>
+			<Option Destination="75"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -821,7 +821,7 @@
 			<Modification Name="MonksHeart" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="71" Text="Далее"/>
+			<Option Destination="71"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -831,7 +831,7 @@
 			<Modification Name="Time" Value="30"/>
 		</Modifications>
 		<Options>
-			<Option Destination="56" Text="Далее"/>
+			<Option Destination="56"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -839,7 +839,7 @@
 		<Text>«Я знаю, зачем ты здесь, — продолжает все тем же страшным хрипящим голосом старуха, когда вы садитесь у стола. — Ты ищешь ребенка. Своего сына. Ты знаешь, где он.\n\nНо чтобы спасти его, тебе надо знать имя ведьмы, что хочет принести его в жертву. Чтобы лишить ведьму силы надо назвать её по имени». Старуха мерзко улыбается, беззубым ртом. Вам наверняка будет сниться эта улыбка в кошмарах.\n\nСтаруха, как будто с издевкой, продолжает: «Я знаю имя ведьмы. И ты знаешь! Это имя — имя твоей жены! Августина!».\n\nСтаруха начинает истерически хохотать. Хотя скорее этот звук похож на карканье ворона. Все так же смеясь, она указывает вам скрюченным пальцем на дверь. Да вы и сами рады покинуть это убежище сумасшедшей старухи.</Text>
 		<Triggers>Augustine</Triggers>
 		<Options>
-			<Option Destination="85" Text="Далее"/>
+			<Option Destination="85"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -850,7 +850,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="72" Text="Найти потайную дверь" OnlyIf="SecretEntrance"/>
-			<Option Destination="3" Text="Далее"/>
+			<Option Destination="3"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -858,7 +858,7 @@
 		<Text>Еще раз оглянувшись, вы задерживаете дыхание и открываете книгу. Дверь сотрясает оглушительный удар, от которого вас пробирает дрожь. Но вы уже не оборачиваетесь, нужно найти написанное кровью имя. Имя ведьмы, которая занесет нож над вашим ребенком. Дверь начинает ходить ходуном от града тяжелых ударов, а вы быстро, насколько позволяют трясущиеся руки, листаете книгу. Капли пота падают с вашего лба на испещренные неизвестными символами и дьявольскими знаками страницы. Вот оно!\n\nНаписанное кровью слово! «Гринаила» (хорошенько запомните это имя). В этот момент дверь с грохотом слетает с петель. На секунду наступает абсолютная тишина, а зетам снова слышится звук шагов и стук метлы. Вы медленно, как во сне, закрываете книгу, берете свечу, и оборачиваетесь лицом к жуткой темноте дверного проема.</Text>
 		<Triggers>Grinael</Triggers>
 		<Options>
-			<Option Destination="11" Text="Далее"/>
+			<Option Destination="11"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -876,14 +876,14 @@
 			<Modification Name="Time" Value="60"/>
 		</Modifications>
 		<Options>
-			<Option Destination="44" Text="Далее"/>
+			<Option Destination="44"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>96</ID>
 		<Text>Лодка начинает тонуть у самого берега. Вы прыгаете за борт и оказываетесь по пояс в воде. Но уже через минуту выбираетесь на песчаный берег. Что ж, старая посудина не подвела и нужно спешить дальше. Осматриваетесь вокруг. Ни дороги, ни тропинки найти не удается. Скала Ужаса величаво возвышается впереди над верхушками деревьев. Идти до неё осталось недолго. Ветер усиливается, и вода с шумом накатывает на берег. Раз другого пути нет, придется идти через лес.</Text>
 		<Options>
-			<Option Destination="71" Text="Далее"/>
+			<Option Destination="71"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
