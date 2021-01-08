@@ -167,9 +167,9 @@ namespace Seeker.Output
             return button;
         }
 
-        public static string TextFontFamily()
+        public static string TextFontFamily(bool bold = false)
         {
-            string defaultFont = "YanoneFont";
+            string defaultFont = String.Format("{0}{1}", "YanoneFont", (bold ? "Bold" : String.Empty));
 
             string font = String.Empty;
 
@@ -240,6 +240,7 @@ namespace Seeker.Output
                 Label actions = new Label();
 
                 string text = actionLine;
+                bool bold = false;
 
                 if (text.Contains("BIG|"))
                     actions.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
@@ -253,7 +254,7 @@ namespace Seeker.Output
                     actions.TextColor = Color.Green;
 
                 if (text.Contains("BOLD|"))
-                    actions.FontAttributes = FontAttributes.Bold;
+                    bold = true;
 
                 if (text.Contains("HEAD|"))
                 {
@@ -267,7 +268,7 @@ namespace Seeker.Output
                     text = text.Replace(String.Format("{0}|", r), String.Empty);
 
                 actions.Text = text;
-                actions.FontFamily = TextFontFamily();
+                actions.FontFamily = TextFontFamily(bold: bold);
 
                 actionLabels.Add(actions);
             }

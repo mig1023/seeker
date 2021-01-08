@@ -9,6 +9,9 @@
         <OnPlatform x:TypeArguments="x:String" x:Key="YanoneFont">
             <On Platform="Android" Value="Fonts/YanoneKaffeesatz-Light.ttf#YanoneKaffeesatz-Light" />
         </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="YanoneFontBold">
+            <On Platform="Android" Value="Fonts/YanoneKaffeesatz-Bold.ttf#YanoneKaffeesatz-Bold" />
+        </OnPlatform>
         <OnPlatform x:TypeArguments="x:String" x:Key="RobotoFont">
             <On Platform="Android" Value="Fonts/Roboto-Thin.ttf#Roboto-Thin" />
         </OnPlatform>
