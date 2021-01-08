@@ -261,7 +261,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                         fight.Add(
                             String.Format(
-                                "{0} мощность удара : {1} ⚄ + {2} ⚄ + {3} = {4}",
+                                "{0} мощность удара: {1} ⚄ + {2} ⚄ + {3} = {4}",
                                 (IsHero(ally.Name) ? "Ваша" : String.Format("{0} -", ally.Name)), firstHeroRoll, secondHeroRoll, ally.Mastery, allyHitEndurance
                             )
                         );
