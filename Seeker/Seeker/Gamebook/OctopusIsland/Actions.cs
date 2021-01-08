@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public string Trigger { get; set; }
 
         public List<Character> Enemies { get; set; }
+        public int WoundsToWin { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -166,6 +167,9 @@ namespace Seeker.Gamebook.OctopusIsland
 
             fight.Add(String.Format("BOLD|В бой вступает {0}", hero.Name));
 
+            if (fightStart)
+                fight.Add(String.Empty);
+
             return true;
         } 
 
@@ -179,6 +183,7 @@ namespace Seeker.Gamebook.OctopusIsland
                 FightEnemies.Add(enemy.Clone());
 
             int round = 1;
+            int enemyWounds = 0;
 
             SetCurrentWarrior(ref fight, fightStart: true);
 
@@ -217,13 +222,14 @@ namespace Seeker.Gamebook.OctopusIsland
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
 
                         enemy.Hitpoint -= 2;
+                        enemyWounds += 1;
 
                         if (enemy.Hitpoint <= 0)
                             enemy.Hitpoint = 0;
 
                         bool enemyLost = NoMoreEnemies(FightEnemies);
 
-                        if (enemyLost)
+                        if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));

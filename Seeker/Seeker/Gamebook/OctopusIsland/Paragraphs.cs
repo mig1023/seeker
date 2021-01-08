@@ -49,6 +49,8 @@ namespace Seeker.Gamebook.OctopusIsland
                     ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+
+                    WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
                 };
 
                 if (xmlAction["Enemies"] != null)
