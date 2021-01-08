@@ -354,7 +354,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                     int enemyRollSecond = Game.Dice.Roll();
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
 
-                    fight.Add(String.Format("Мощность его удара: {0} ⚄ + {1} ⚄ + {1} = {2}",
+                    fight.Add(String.Format("Мощность его удара: {0} ⚄ + {1} ⚄ + {2} = {3}",
                         enemyRollFirst, enemyRollSecond, enemy.Skill, enemyHitStrength
                     ));
 
