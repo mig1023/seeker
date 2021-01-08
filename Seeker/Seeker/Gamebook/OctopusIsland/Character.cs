@@ -40,6 +40,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public Character Clone()
         {
             return new Character() {
+                
                 ThibautHitpoint = this.ThibautHitpoint,
                 ThibautSkill = this.ThibautSkill,
                 SergeHitpoint = this.SergeHitpoint,
@@ -49,6 +50,7 @@ namespace Seeker.Gamebook.OctopusIsland
                 SouhiHitpoint = this.SouhiHitpoint,
                 SouhiSkill = this.SouhiSkill,
 
+                Name = this.Name,
                 Hitpoint = this.Hitpoint,
                 Skill = this.Skill,
             };

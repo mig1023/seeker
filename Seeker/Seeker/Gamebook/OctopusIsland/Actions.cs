@@ -108,6 +108,67 @@ namespace Seeker.Gamebook.OctopusIsland
             return true;
         }
 
+        private void SaveCurrentWarriorHitPoints()
+        {
+            Character hero = Character.Protagonist;
+
+            if (String.IsNullOrEmpty(hero.Name))
+                return;
+
+            if (hero.Name == "Тибо")
+                hero.ThibautHitpoint = hero.Hitpoint;
+            else if (hero.Name == "Ксолотл")
+                hero.XolotlHitpoint = hero.Hitpoint;
+            else if (hero.Name == "Серж")
+                hero.SergeHitpoint = hero.Hitpoint;
+            else
+                hero.SouhiHitpoint = hero.Hitpoint;
+        }
+
+        private bool SetCurrentWarrior(ref List<string> fight, bool fightStart = false)
+        {
+            Character hero = Character.Protagonist;
+
+            if (hero.Hitpoint > 3)
+                return true;
+
+            SaveCurrentWarriorHitPoints();
+
+            if (hero.ThibautHitpoint > 3)
+            {
+                hero.Name = "Тибо";
+                hero.Skill = hero.ThibautSkill;
+                hero.Hitpoint = hero.ThibautHitpoint;
+            }
+            else if (hero.XolotlHitpoint > 3)
+            {
+                hero.Name = "Ксолотл";
+                hero.Skill = hero.XolotlSkill;
+                hero.Hitpoint = hero.XolotlHitpoint;
+            }
+            else if (hero.SergeHitpoint > 3)
+            {
+                hero.Name = "Серж";
+                hero.Skill = hero.SergeSkill;
+                hero.Hitpoint = hero.SergeHitpoint;
+            }
+            else if (hero.SouhiHitpoint > 3)
+            {
+                hero.Name = "Суи";
+                hero.Skill = hero.SouhiSkill;
+                hero.Hitpoint = hero.SouhiHitpoint;
+            }
+            else
+                return false;
+
+            if (!fightStart)
+                fight.Add(String.Empty);
+
+            fight.Add(String.Format("BOLD|В бой вступает {0}", hero.Name));
+
+            return true;
+        } 
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -118,6 +179,8 @@ namespace Seeker.Gamebook.OctopusIsland
                 FightEnemies.Add(enemy.Clone());
 
             int round = 1;
+
+            SetCurrentWarrior(ref fight, fightStart: true);
 
             Character hero = Character.Protagonist;
 
@@ -135,19 +198,18 @@ namespace Seeker.Gamebook.OctopusIsland
 
                     int protagonistRollFirst = Game.Dice.Roll();
                     int protagonistRollSecond = Game.Dice.Roll();
-                    int heroSkill = Character.Protagonist.ThibautSkill;
-                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + heroSkill;
+                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + hero.Skill;
 
-                    fight.Add(String.Format("Мощность вашего удара: {0} ⚄ + {1} ⚄ + {2} = {3}",
-                        protagonistRollFirst, protagonistRollSecond, heroSkill, protagonistHitStrength
+                    fight.Add(String.Format("{0}: мощность удара: {1} ⚄ + {2} ⚄ + {3} = {4}",
+                        hero.Name, protagonistRollFirst, protagonistRollSecond, hero.Skill, protagonistHitStrength
                     ));
 
                     int enemyRollFirst = Game.Dice.Roll();
                     int enemyRollSecond = Game.Dice.Roll();
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
 
-                    fight.Add(String.Format("Мощность его удара: {0} ⚄ + {1} ⚄ + {1} = {2}",
-                        enemyRollFirst, enemyRollSecond, enemy.Skill, enemyHitStrength
+                    fight.Add(String.Format("{0}: мощность удара: {1} ⚄ + {2} ⚄ + {3} = {4}",
+                        enemy.Name, enemyRollFirst, enemyRollSecond, enemy.Skill, enemyHitStrength
                     ));
 
                     if (protagonistHitStrength > enemyHitStrength)
@@ -165,19 +227,22 @@ namespace Seeker.Gamebook.OctopusIsland
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+
+                            SaveCurrentWarriorHitPoints();
+
                             return fight;
                         }
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+                        fight.Add(String.Format("BAD|{0} ранил {1}", enemy.Name, hero.Name));
 
-                        hero.ThibautHitpoint -= 2;
+                        hero.Hitpoint -= 2;
 
-                        if (hero.ThibautHitpoint < 0)
-                            hero.ThibautHitpoint = 0;
+                        if (hero.Hitpoint < 0)
+                            hero.Hitpoint = 0;
 
-                        if (hero.ThibautHitpoint <= 0)
+                        if (!SetCurrentWarrior(ref fight))
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
