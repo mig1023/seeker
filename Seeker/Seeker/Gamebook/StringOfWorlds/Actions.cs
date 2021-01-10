@@ -49,6 +49,8 @@ namespace Seeker.Gamebook.StringOfWorlds
             return statusLines;
         }
 
+        public List<string> AdditionalStatus() => null;
+
         public List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };

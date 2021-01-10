@@ -32,6 +32,8 @@ namespace Seeker.Gamebook.RendezVous
 
         public List<string> Status() => new List<string> { String.Format("Осознание: {0}", Character.Protagonist.Awareness) };
 
+        public List<string> AdditionalStatus() => null;
+
         public List<string> StaticButtons() => new List<string> { };
 
         public bool StaticAction(string action) => false;

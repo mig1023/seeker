@@ -44,6 +44,8 @@ namespace Seeker.Gamebook.SilentSchool
             return statusLines;
         }
 
+        public List<string> AdditionalStatus() => null;
+
         public List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };

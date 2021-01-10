@@ -43,7 +43,7 @@ namespace Seeker.Droid
 
     public class RotatedTextView : Android.Views.View
     {
-        private int DEFAULT_TEXT_SIZE = 30;
+        private int textSize = 22;
         private string _text;
         private TextPaint _textPaint;
 
@@ -58,7 +58,7 @@ namespace Seeker.Droid
             this._textPaint = new TextPaint();
             this._textPaint.AntiAlias = true;
             this._textPaint.TextAlign = Paint.Align.Center;
-            this._textPaint.TextSize = DEFAULT_TEXT_SIZE;
+            this._textPaint.TextSize = textSize;
             this._textPaint.Color = new Android.Graphics.Color(0, 0, 0);
         }
 
@@ -68,7 +68,7 @@ namespace Seeker.Droid
 
             if (!string.IsNullOrEmpty(this._text))
             {
-                float x = (Width / 2) - DEFAULT_TEXT_SIZE / 3;
+                float x = (Width / 2) - textSize / 3;
                 float y = (Height / 2);
 
                 canvas.Rotate(90);

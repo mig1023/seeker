@@ -37,6 +37,16 @@ namespace Seeker.Output
             return statusLabels;
         }
 
+        public static List<VerticalText> AdditionalStatusBar(List<string> statusLines)
+        {
+            List<VerticalText> statusLabels = new List<VerticalText>();
+
+            foreach (string status in statusLines)
+                statusLabels.Add(new Output.VerticalText { Value = status });
+
+            return statusLabels;
+        }
+
         public static Button GamebookButton(string gamebook)
         {
             Description description = Gamebook.List.GetDescription(gamebook);

@@ -17,6 +17,8 @@ namespace Seeker.Abstract
 
         List<string> Status();
 
+        List<string> AdditionalStatus();
+
         List<string> StaticButtons();
 
         bool StaticAction(string action);

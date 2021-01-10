@@ -53,6 +53,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return statusLines;
         }
 
+        public List<string> AdditionalStatus() => null;
+
         public List<string> StaticButtons() => new List<string> { };
 
         public bool StaticAction(string action) => false;

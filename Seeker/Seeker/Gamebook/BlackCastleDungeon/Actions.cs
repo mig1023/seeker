@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 
@@ -56,7 +57,32 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return statusLines;
         }
 
-        private static bool ParagraphWithFight(string spell)
+        public List<string> AdditionalStatus()
+        {
+            Dictionary<string, int> currentSpells = new Dictionary<string, int>();
+
+            foreach (string spell in Character.Protagonist.Spells)
+            {
+                string shortSpellName = spell.Replace("ЗАКЛЯТИЕ ", String.Empty).ToLower();
+
+                if (currentSpells.ContainsKey(shortSpellName))
+                    currentSpells[shortSpellName] += 1;
+                else
+                    currentSpells.Add(shortSpellName, 1);
+            }
+
+            if (currentSpells.Count <= 0)
+                return null;
+
+            List<string> statusLines = new List<string>();
+
+            foreach (string spell in currentSpells.Keys.ToList().OrderBy(q => q))
+                statusLines.Add(String.Format("{0}: {1}", char.ToUpper(spell[0]) + spell.Substring(1), currentSpells[spell]));
+
+            return statusLines;
+        }
+
+    private static bool ParagraphWithFight(string spell)
         {
             if (Game.Data.CurrentParagraph.Actions == null)
                 return false;

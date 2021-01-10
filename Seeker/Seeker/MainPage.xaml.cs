@@ -194,6 +194,7 @@ namespace Seeker
             List<string> statuses = (Game.Data.Actions == null ? null : Game.Data.Actions.Status());
 
             Status.Children.Clear();
+            AdditionalStatus.Children.Clear();
 
             if (statuses == null)
             {
@@ -202,6 +203,9 @@ namespace Seeker
 
                 Status.IsVisible = false;
                 MainGrid.RowDefinitions[2].Height = 0;
+
+                AdditionalStatus.IsVisible = false;
+                MainGrid.ColumnDefinitions[1].Width = 0;
             }
             else
             {
@@ -219,7 +223,19 @@ namespace Seeker
                     StatusBorder.IsVisible = true;
                     MainGrid.RowDefinitions[1].Height = 1;
                 }
-            }           
+
+                List<string> additionalStatuses = Game.Data.Actions.AdditionalStatus();
+
+                if (additionalStatuses != null)
+                {
+                    MainGrid.ColumnDefinitions[1].Width = 20;
+                    AdditionalStatus.BackgroundColor = Color.LightGray;
+                    AdditionalStatus.IsVisible = true;
+
+                    foreach (Output.VerticalText status in Output.Interface.AdditionalStatusBar(additionalStatuses))
+                        AdditionalStatus.Children.Add(status);
+                }
+            }
         }
 
         private void GamepageSettings()
