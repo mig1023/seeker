@@ -209,7 +209,7 @@ namespace Seeker
             }
             else
             {
-                MainGrid.RowDefinitions[2].Height = 40;
+                MainGrid.RowDefinitions[2].Height = 30;
                 Status.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar));
 
                 foreach (Label status in Output.Interface.StatusBar(statuses))
@@ -228,8 +228,10 @@ namespace Seeker
 
                 if (additionalStatuses != null)
                 {
+                    string backgroundColor = Game.Data.Constants.GetColor(Game.Data.ColorTypes.AdditionalStatus);
+
                     MainGrid.ColumnDefinitions[1].Width = 20;
-                    AdditionalStatus.BackgroundColor = Color.LightGray;
+                    AdditionalStatus.BackgroundColor = (String.IsNullOrEmpty(backgroundColor) ? Color.LightGray : Color.FromHex(backgroundColor));
                     AdditionalStatus.IsVisible = true;
 
                     foreach (Output.VerticalText status in Output.Interface.AdditionalStatusBar(additionalStatuses))
