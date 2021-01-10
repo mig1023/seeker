@@ -79,14 +79,21 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 String.Format("Жизни: {0}", Character.Protagonist.Hitpoints),
                 String.Format("Заклинаний: {0}", Character.Protagonist.Magicpoints),
                 String.Format("Золото: {0}", Character.Protagonist.Gold),
+            };
+
+            return statusLines;
+        }
+
+        public List<string> AdditionalStatus()
+        {
+            List<string> statusLines = new List<string>
+            {
                 String.Format("Жизни Коннери: {0}", Character.Protagonist.ConneryHitpoints),
                 String.Format("Доверие Коннери: {0}", Character.Protagonist.ConneryTrust),
             };
 
             return statusLines;
         }
-
-        public List<string> AdditionalStatus() => null;
 
         public List<string> StaticButtons()
         {
