@@ -60,21 +60,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         {
             List<string> statusLines = new List<string>();
 
-            if (Character.Protagonist.Strength > 1)
-                statusLines.Add(String.Format("Сила: {0}", Character.Protagonist.Strength));
-
-            if (Character.Protagonist.Skill > 1)
-                statusLines.Add(String.Format("Ловкость: {0}", Character.Protagonist.Skill));
-
-            if (Character.Protagonist.Wisdom > 1)
-                statusLines.Add(String.Format("Мудрость: {0}", Character.Protagonist.Wisdom));
-
-            if (Character.Protagonist.Cunning > 1)
-                statusLines.Add(String.Format("Хитрость: {0}", Character.Protagonist.Cunning));
-
-            if (Character.Protagonist.Oratory > 1)
-                statusLines.Add(String.Format("Красноречие: {0}", Character.Protagonist.Oratory));
-
+            
             if (Character.Protagonist.Tanga > 0)
                 statusLines.Add(String.Format("Деньги: {0}", Character.Protagonist.Tanga));
 
@@ -92,7 +78,30 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             return statusLines;
         }
 
-        public List<string> AdditionalStatus() => null;
+        public List<string> AdditionalStatus()
+        {
+            List<string> statusLines = new List<string>();
+
+            if (Character.Protagonist.Strength > 1)
+                statusLines.Add(String.Format("Сила: {0}", Character.Protagonist.Strength));
+
+            if (Character.Protagonist.Skill > 1)
+                statusLines.Add(String.Format("Ловкость: {0}", Character.Protagonist.Skill));
+
+            if (Character.Protagonist.Wisdom > 1)
+                statusLines.Add(String.Format("Мудрость: {0}", Character.Protagonist.Wisdom));
+
+            if (Character.Protagonist.Cunning > 1)
+                statusLines.Add(String.Format("Хитрость: {0}", Character.Protagonist.Cunning));
+
+            if (Character.Protagonist.Oratory > 1)
+                statusLines.Add(String.Format("Красноречие: {0}", Character.Protagonist.Oratory));
+
+            if (statusLines.Count <= 0)
+                return null;
+
+            return statusLines;
+        }
 
         public List<string> StaticButtons()
         {

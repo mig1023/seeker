@@ -22,6 +22,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             [ColorTypes.Background] = "#dbeadc",
             [ColorTypes.ActionBox] = "#7cb281",
             [ColorTypes.StatusBar] = "#005100",
+            [ColorTypes.AdditionalStatus] = "#99b999",
         };
 
         public string GetButtonsColor(ButtonTypes type)
