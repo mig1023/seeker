@@ -22,6 +22,7 @@ namespace Seeker.Gamebook.DzungarWar
             [ColorTypes.Background] = "#c3dcc6",
             [ColorTypes.ActionBox] = "#7cb281",
             [ColorTypes.StatusBar] = "#005100",
+            [ColorTypes.AdditionalStatus] = "#99b999",
         };
 
         public string GetButtonsColor(ButtonTypes type)
