@@ -127,7 +127,10 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     Character.Protagonist.Endurance -= 1;
 
                 string result = (succesBreaked ? "удачный, дверь поддалась!" : "неудачный, -1 сила" );
-                breakingDoor.Add(String.Format("Удар: {0} ⚄ + {1} ⚄ - {2}", firstDice, secondDice, result));
+                breakingDoor.Add(String.Format(
+                    "Удар: {0} + {1} = {2}",
+                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), result
+                ));
             }
 
             breakingDoor.Add(succesBreaked ? "BIG|GOOD|ДВЕРЬ ВЗЛОМАНА :)" : "BIG|BAD|ВЫ УБИЛИСЬ ОБ ДВЕРЬ :(");
@@ -165,7 +168,10 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             int goodLuck = Game.Dice.Roll();
 
-            luckCheck.Add(String.Format("Проверка удачи: {0} ⚄ - {1}зачёркунтый", goodLuck, (Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty)));
+            luckCheck.Add(String.Format(
+                "Проверка удачи: {0} - {1}зачёркунтый",
+                Game.Dice.Symbol(goodLuck), (Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty)
+            ));
 
             luckCheck.Add(Character.Protagonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
             
@@ -174,14 +180,17 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return luckCheck;
         }
         
-        public List<string> RollDice() => new List<string> { String.Format("BIG|Бросок: {0} ⚄", Game.Dice.Roll()) };
+        public List<string> RollDice() => new List<string> { String.Format("BIG|Бросок: {0}", Game.Dice.Symbol(Game.Dice.Roll())) };
 
         public List<string> RollDoubleDices()
         {
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
 
-            return new List<string> { String.Format("BIG|Бросок: {0} ⚄ + {1} ⚄ = {2}", firstDice, secondDice, (firstDice + secondDice)) };
+            return new List<string> { String.Format(
+                "BIG|Бросок: {0} + {1} = {2}",
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (firstDice + secondDice)
+            ) };
         }
 
         public List<string> Mastery()
@@ -192,7 +201,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             bool goodMastery = (firstDice + secondDice) <= Character.Protagonist.Mastery;
 
             List<string> masteryCheck = new List<string> { String.Format(
-                "Проверка мастерства: {0} ⚄ + {1} ⚄ {2} {3} мастерство", firstDice, secondDice, (goodMastery ? "<=" : ">"), Character.Protagonist.Mastery
+                "Проверка мастерства: {0} + {1} {2} {3} мастерство",
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodMastery ? "<=" : ">"), Character.Protagonist.Mastery
             ) };
 
             masteryCheck.Add(goodMastery ? "BIG|GOOD|МАСТЕРСТВА ХВАТИЛО :)" : "BIG|BAD|МАСТЕРСТВА НЕ ХВАТИЛО :(");
@@ -263,8 +273,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                         fight.Add(
                             String.Format(
-                                "{0} мощность удара: {1} ⚄ + {2} ⚄ + {3} = {4}",
-                                (IsHero(ally.Name) ? "Ваша" : String.Format("{0} -", ally.Name)), firstHeroRoll, secondHeroRoll, ally.Mastery, allyHitEndurance
+                                "{0} мощность удара: {1} + {2} + {3} = {4}",
+                                (IsHero(ally.Name) ? "Ваша" : String.Format("{0} -", ally.Name)),
+                                Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll), ally.Mastery, allyHitEndurance
                             )
                         );
 
@@ -274,8 +285,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                         fight.Add(
                             String.Format(
-                                "{0} мощность удара: {1} ⚄ + {2} ⚄ + {3} = {4}",
-                                (GroupFight ? String.Format("{0} -", enemy.Name) : "Его"), firstEnemyRoll, secondEnemyRoll, enemy.Mastery, enemyHitEndurance
+                                "{0} мощность удара: {1} + {2} + {3} = {4}",
+                                (GroupFight ? String.Format("{0} -", enemy.Name) : "Его"),
+                                Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Mastery, enemyHitEndurance
                             )
                         );
 

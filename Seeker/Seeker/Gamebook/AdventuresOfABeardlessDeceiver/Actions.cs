@@ -195,7 +195,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             bool testIsOk = (firstDice + secondDice) + currentStat >= Level;
 
             List<string> testLines = new List<string> { String.Format(
-                "Проверка {0}: {1} ⚄ + {2} ⚄ + {3} {4} {5}", statNames[Stat], firstDice, secondDice, currentStat, (testIsOk ? ">=" : "<"), Level
+                "Проверка {0}: {1} + {2} + {3} {4} {5}",
+                statNames[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), currentStat, (testIsOk ? ">=" : "<"), Level
             ) };
 
             if (GuessBonus && Game.Data.Triggers.Contains("guess"))
