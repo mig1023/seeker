@@ -8,6 +8,16 @@ namespace Seeker.Game
     {
         private static Random rand = new Random();
 
+        private static Dictionary<int, string> dices = new Dictionary<int, string>
+        {
+            [1] = "⚀",
+            [2] = "⚁",
+            [3] = "⚂",
+            [4] = "⚃",
+            [5] = "⚄",
+            [6] = "⚅",
+        };
+
         public static int Roll(int dices = 1)
         {
             int result = 0;
@@ -17,5 +27,7 @@ namespace Seeker.Game
 
             return result;
         }
+
+        public static string Symbol(int dice) => dices[dice];
     }
 }

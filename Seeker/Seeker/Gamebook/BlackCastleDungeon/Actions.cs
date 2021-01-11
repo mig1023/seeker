@@ -193,7 +193,10 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             bool goodLuck = (fisrtDice + secondDice) < Character.Protagonist.Luck;
 
             List<string> luckCheck = new List<string> {
-                String.Format( "Проверка удачи: {0} ⚄ + {1} ⚄ {2} {3}", fisrtDice, secondDice, (goodLuck ? "<=" : ">"), Character.Protagonist.Luck )
+                String.Format(
+                    "Проверка удачи: {0} + {1} {2} {3}",
+                    Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), Character.Protagonist.Luck
+                )
             };
 
             Character.Protagonist.Luck -= 1;
@@ -253,9 +256,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                     fight.Add(
                         String.Format(
-                            "Сила {0}: {1} ⚄ + {2} ⚄ + {3} = {4}",
+                            "Сила {0}: {1} + {2} + {3} = {4}",
                             (copyFight ? "удара копии" : "вашего удара"),
-                            firstHeroRoll, secondHeroRoll, hero.Mastery, heroHitStrength
+                            Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll), hero.Mastery, heroHitStrength
                         )
                     );
 
@@ -265,8 +268,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                     fight.Add(
                         String.Format(
-                            "Сила удара врага: {0} ⚄ + {1} ⚄ + {2} = {3}",
-                            firstEnemyRoll, secondEnemyRoll, enemy.Mastery, enemyHitStrength
+                            "Сила удара врага: {0} + {1} + {2} = {3}",
+                            Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Mastery, enemyHitStrength
                         )
                     );
 
