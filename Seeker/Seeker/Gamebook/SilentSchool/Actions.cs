@@ -173,7 +173,7 @@ namespace Seeker.Gamebook.SilentSchool
             {
                 int dice = Game.Dice.Roll();
                 dices += dice;
-                diceCheck.Add(String.Format("На {0} выпало: {1} ⚄", i, Game.Dice.Symbol(dice)));
+                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
             }
 
             Character.Protagonist.Life -= dices;

@@ -155,7 +155,9 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             int goodLuck = Game.Dice.Roll();
 
-            luckCheck.Add(String.Format("Проверка удачи: {0} ⚄ - {1}зачёркунтый", goodLuck, (Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty)));
+            luckCheck.Add(String.Format("Проверка удачи: {0} - {1}зачёркунтый",
+                Game.Dice.Symbol(goodLuck), (Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty)
+            ));
 
             luckCheck.Add(Character.Protagonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
@@ -196,9 +198,10 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             bool goodCharm = (fisrtDice + secondDice) <= Character.Protagonist.Charm;
 
-            List<string> luckCheck = new List<string> {
-                String.Format( "Проверка обаяния: {0} ⚄ + {1} ⚄ {2} {3}", fisrtDice, secondDice, (goodCharm ? "<=" : ">"), Character.Protagonist.Charm)
-            };
+            List<string> luckCheck = new List<string> { String.Format(
+                "Проверка обаяния: {0} + {1} {2} {3}",
+                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodCharm ? "<=" : ">"), Character.Protagonist.Charm
+            ) };
 
             luckCheck.Add(goodCharm ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
@@ -212,9 +215,10 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             bool goodSkill = (fisrtDice + secondDice) <= Character.Protagonist.Skill;
 
-            List<string> luckCheck = new List<string> {
-                String.Format( "Проверка ловкости: {0} ⚄ + {1} ⚄ {2} {3}", fisrtDice, secondDice, (goodSkill ? "<=" : ">"), Character.Protagonist.Skill)
-            };
+            List<string> luckCheck = new List<string> { String.Format(
+                "Проверка ловкости: {0} + {1} {2} {3}",
+                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), Character.Protagonist.Skill
+            ) };
 
             luckCheck.Add(goodSkill ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
@@ -231,7 +235,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             {
                 int dice = Game.Dice.Roll();
                 dices += dice;
-                diceCheck.Add(String.Format("На {0} выпало: {1} ⚄", i, dice));
+                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
             }
 
             Character.Protagonist.Strength -= dices;
@@ -255,12 +259,20 @@ namespace Seeker.Gamebook.StringOfWorlds
                 int firstDice = Game.Dice.Roll();
                 int secondDice = Game.Dice.Roll();
                 myResult = firstDice + secondDice;
-                diceGame.Add(String.Format("Вы бросили: {0} ⚄ + {1} ⚄ = {2}", firstDice, secondDice, myResult));
+
+                diceGame.Add(String.Format(
+                    "Вы бросили: {0} + {1} = {2}",
+                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), myResult
+                ));
 
                 int hisFirstDice = Game.Dice.Roll();
                 int hisSecondDice = Game.Dice.Roll();
                 enemyResult = hisFirstDice + hisSecondDice;
-                diceGame.Add(String.Format("Он бросил: {0} ⚄ + {1} ⚄ = {2}", hisFirstDice, hisSecondDice, enemyResult));
+
+                diceGame.Add(String.Format(
+                    "Он бросил: {0} + {1} = {2}",
+                    Game.Dice.Symbol(hisFirstDice), Game.Dice.Symbol(hisSecondDice), enemyResult
+                ));
 
                 diceGame.Add(String.Empty);
             }
@@ -288,7 +300,11 @@ namespace Seeker.Gamebook.StringOfWorlds
                     Character.Protagonist.Strength -= 1;
 
                 string result = (succesBreaked ? "удачный, дверь поддалась!" : "неудачный, -1 сила");
-                breakingDoor.Add(String.Format("Удар: {0} ⚄ + {1} ⚄ - {2}", firstDice, secondDice, result));
+
+                breakingDoor.Add(String.Format(
+                    "Удар: {0} + {1} = {2}",
+                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), result
+                ));
             }
 
             breakingDoor.Add(succesBreaked ? "BIG|GOOD|ДВЕРЬ ВЗЛОМАНА :)" : "BIG|BAD|ВЫ УБИЛИСЬ ОБ ДВЕРЬ :(");
@@ -348,16 +364,16 @@ namespace Seeker.Gamebook.StringOfWorlds
                     int heroSkill = (hero.Skill - skillPenalty);
                     int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + heroSkill;
 
-                    fight.Add(String.Format("Мощность вашего удара: {0} ⚄ + {1} ⚄ + {2} = {3}",
-                        protagonistRollFirst, protagonistRollSecond, heroSkill, protagonistHitStrength
+                    fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
+                        Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), heroSkill, protagonistHitStrength
                     ));
 
                     int enemyRollFirst = Game.Dice.Roll();
                     int enemyRollSecond = Game.Dice.Roll();
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
 
-                    fight.Add(String.Format("Мощность его удара: {0} ⚄ + {1} ⚄ + {2} = {3}",
-                        enemyRollFirst, enemyRollSecond, enemy.Skill, enemyHitStrength
+                    fight.Add(String.Format("Мощность его удара: {0} + {1} + {2} = {3}",
+                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Skill, enemyHitStrength
                     ));
 
                     if (protagonistHitStrength > enemyHitStrength)

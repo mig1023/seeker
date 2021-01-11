@@ -123,7 +123,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             List<string> report = new List<string>();
 
             int dice = Game.Dice.Roll();
-            report.Add(String.Format("На кубике выпало: {0} ⚄", dice));
+            report.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
 
             if (dice > 4)
             {

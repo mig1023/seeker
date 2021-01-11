@@ -99,7 +99,7 @@ namespace Seeker.Gamebook.RendezVous
             {
                 int secondDice = Game.Dice.Roll();
                 dicesResult += secondDice;
-                diceCheck.Add(String.Format("На кубиках выпало: {0} ⚄ + {1} ⚄ = {2}",
+                diceCheck.Add(String.Format("На кубиках выпало: {0} + {1} = {2}",
                     Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (firstDice + secondDice)
                 ));
             }

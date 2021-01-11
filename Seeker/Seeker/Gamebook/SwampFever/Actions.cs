@@ -114,7 +114,7 @@ namespace Seeker.Gamebook.SwampFever
 
             List<string> mentalCheck = new List<string> {
                 String.Format("Ментальная проверка (по уровню {0}):", level),
-                String.Format("1. Бросок кубика: {0} ⚄", mentalDice),
+                String.Format("1. Бросок кубика: {0}", Game.Dice.Symbol(mentalDice)),
                 String.Format("2. {0}{1} к броску за уровень Ярости", (fury < 0 ? "-" : "+"), Math.Abs(fury)),
             };
 
@@ -150,7 +150,7 @@ namespace Seeker.Gamebook.SwampFever
             return new List<string> { "RELOAD" };
         }
 
-        private bool Upgrade(ref List<int> myCombination, ref List<string> fight)
+        private bool Upgrade(ref List<int> myCombination, ref List<string> myCombinationLine, ref List<string> fight)
         {
             int upgrades = 0;
 
@@ -169,7 +169,7 @@ namespace Seeker.Gamebook.SwampFever
 
             int upgradeDice = Game.Dice.Roll();
 
-            fight.Add(String.Format("Кубик проверки апгрейда: {0} ⚄", upgradeDice));
+            fight.Add(String.Format("Кубик проверки апгрейда: {0}", Game.Dice.Symbol(upgradeDice)));
 
             for (int i = 1; i <= Constants.GetUpgrates().Count; i++)
             {
@@ -185,6 +185,7 @@ namespace Seeker.Gamebook.SwampFever
                 if (inAction)
                 {
                     myCombination.Add(upgradeDice);
+                    myCombinationLine.Add(Game.Dice.Symbol(upgradeDice));
                     upgradeInAction = true;
                 }
             }
@@ -201,23 +202,32 @@ namespace Seeker.Gamebook.SwampFever
             Dictionary<int, string> rangeType = Constants.GetRangeTypes();
 
             List<int> myCombination = new List<int>();
+            List<string> myCombinationLine = new List<string>();
 
             int combinationLength = 6 + Character.Protagonist.Fury;
 
             for (int i = 0; i < combinationLength; i++)
-                myCombination.Add(Game.Dice.Roll());
+            {
+                int dice = Game.Dice.Roll();
+                myCombination.Add(dice);
+                myCombinationLine.Add(Game.Dice.Symbol(dice));
+            }
 
-            fight.Add(String.Format("Ваша комбинация: {0} ⚄", String.Join(" ⚄ - ", myCombination.ToArray())));
+            fight.Add(String.Format("Ваша комбинация: {0}", String.Join(String.Empty, myCombinationLine.ToArray())));
 
             List<int> enemyCombination = new List<int>();
+            List<string> enemyCombinationLine = new List<string>();
 
             foreach (string dice in EnemyCombination.Split('-'))
+            {
                 enemyCombination.Add(int.Parse(dice));
+                enemyCombinationLine.Add(Game.Dice.Symbol(int.Parse(dice)));
+            }
 
-            fight.Add(String.Format("Его комбинация: {0}", String.Join(" - ", enemyCombination.ToArray())));
+            fight.Add(String.Format("Его комбинация: {0}", String.Join(String.Empty, enemyCombinationLine.ToArray())));
 
-            if (Upgrade(ref myCombination, ref fight))
-                fight.Add(String.Format("Теперь ваша комбинация: {0} ⚄", String.Join(" ⚄ - ", myCombination.ToArray())));
+            if (Upgrade(ref myCombination, ref myCombinationLine, ref fight))
+                fight.Add(String.Format("Теперь ваша комбинация: {0}", String.Join(String.Empty, myCombinationLine.ToArray())));
 
             bool birds = Birds;
 
@@ -289,12 +299,18 @@ namespace Seeker.Gamebook.SwampFever
                             int myDice = Game.Dice.Roll();
                             int myBonus = CountInCombination(myCombination, range);
                             int myAttack = myDice + myBonus;
-                            fight.Add(String.Format("Ваша атака: {0} ⚄, +{1} за {2}-ки, итого {3}", myDice, myBonus, range, myAttack));
+
+                            fight.Add(String.Format("Ваша атака: {0}, +{1} за {2}-ки, итого {3}",
+                                Game.Dice.Symbol(myDice), myBonus, range, myAttack
+                            ));
 
                             int enemyDice = Game.Dice.Roll();
                             int enemyBonus = CountInCombination(enemyCombination, range);
                             int enemyAttack = enemyDice + enemyBonus;
-                            fight.Add(String.Format("Атака противника: {0} ⚄, +{1} за {2}-ки, итого {3}", enemyDice, enemyBonus, range, enemyAttack));
+
+                            fight.Add(String.Format("Атака противника: {0}, +{1} за {2}-ки, итого {3}",
+                                Game.Dice.Symbol(enemyDice), enemyBonus, range, enemyAttack
+                            ));
 
                             if ((myAttack > enemyAttack) && (range == 4))
                             {
@@ -332,9 +348,10 @@ namespace Seeker.Gamebook.SwampFever
                         int myBonus = CountInCombination(myCombination, 3);
                         int myPenalty = CountInCombination(enemyCombination, 2);
                         int enemyEvasion = myDice + myBonus - myPenalty;
+
                         fight.Add(String.Format(
-                            "Противник пытется уклониться: {0} ⚄, +{1} за ваши 3-ки, -{2} за его 2-ки, итого {3} - {4} порогового значения в 2",
-                            myDice, myBonus, myPenalty, enemyEvasion, (enemyEvasion > 2 ? "больше" : "меньше или равно")
+                            "Противник пытется уклониться: {0}, +{1} за ваши 3-ки, -{2} за его 2-ки, итого {3} - {4} порогового значения в 2",
+                            Game.Dice.Symbol(myDice), myBonus, myPenalty, enemyEvasion, (enemyEvasion > 2 ? "больше" : "меньше или равно")
                         ));
 
                         if (enemyEvasion > 2)
@@ -368,8 +385,8 @@ namespace Seeker.Gamebook.SwampFever
                         int enemyPenalty = CountInCombination(myCombination, 2);
                         int myEvasion = enemyDice + enemyBonus - enemyPenalty;
                         fight.Add(String.Format(
-                            "Вы пытется уклониться: {0} ⚄, +{1} за его 3ки, -{2} за ваши 2-ки, итого {3} - {4} порогового значения 2",
-                            enemyDice, enemyBonus, enemyPenalty, myEvasion, (myEvasion > 2 ? "больше" : "меньше или равно")
+                            "Вы пытется уклониться: {0}, +{1} за его 3ки, -{2} за ваши 2-ки, итого {3} - {4} порогового значения 2",
+                            Game.Dice.Symbol(enemyDice), enemyBonus, enemyPenalty, myEvasion, (myEvasion > 2 ? "больше" : "меньше или равно")
                         ));
 
                         if (myEvasion > 2)
@@ -455,7 +472,7 @@ namespace Seeker.Gamebook.SwampFever
             {
                 int pull = Game.Dice.Roll();
 
-                pullReport.Add(String.Format("Тяга гусениц: {0} ⚄", pull));
+                pullReport.Add(String.Format("Тяга гусениц: {0}", Game.Dice.Symbol(pull)));
 
                 thrust += pull;
             }
@@ -478,13 +495,13 @@ namespace Seeker.Gamebook.SwampFever
 
                 if (pull > 2)
                 {
-                    pullReport.Add(String.Format("Тяга гребных винтов: {0} ⚄, -2 за винты, итого {1}", pull, (pull - 2)));
+                    pullReport.Add(String.Format("Тяга гребных винтов: {0}, -2 за винты, итого {1}", Game.Dice.Symbol(pull), (pull - 2)));
 
                     thrust += (pull - 2);
                 }
                 else
                 {
-                    pullReport.Add(String.Format("Тяга гребных винтов: {0} ⚄, +1 бонусный бросок", pull));
+                    pullReport.Add(String.Format("Тяга гребных винтов: {0}, +1 бонусный бросок", Game.Dice.Symbol(pull)));
 
                     thrust += pull;
                     i -= 1;
@@ -521,13 +538,13 @@ namespace Seeker.Gamebook.SwampFever
                 warReport.Add(String.Format("Яти тянет: {0}", yatiForce));
 
                 int erikForce = Game.Dice.Roll();
-                warReport.Add(String.Format("Эрик тянет: {0} ⚄", erikForce));
+                warReport.Add(String.Format("Эрик тянет: {0}", Game.Dice.Symbol(erikForce)));
 
                 int jonyForce = Game.Dice.Roll();
-                warReport.Add(String.Format("Джонни тянет: {0} ⚄", jonyForce));
+                warReport.Add(String.Format("Джонни тянет: {0}", Game.Dice.Symbol(jonyForce)));
 
                 int myForce = Game.Dice.Roll();
-                warReport.Add(String.Format("Вы тянете: {0} ⚄", myForce));
+                warReport.Add(String.Format("Вы тянете: {0}", Game.Dice.Symbol(myForce)));
 
                 int totalForce = erikForce + jonyForce + jonyForce;
 
@@ -625,7 +642,7 @@ namespace Seeker.Gamebook.SwampFever
                     int forwarding = Game.Dice.Roll();
                     myPosition += forwarding;
 
-                    huntReport.Add(String.Format("Вы догоняете и проезжаете {0} ⚄ до клетки {1}", forwarding, myPosition));
+                    huntReport.Add(String.Format("Вы догоняете и проезжаете {0} до клетки {1}", Game.Dice.Symbol(forwarding), myPosition));
                 }
 
                 skipStepAfterShot = false;
@@ -638,7 +655,7 @@ namespace Seeker.Gamebook.SwampFever
                     huntReport.Add(String.Format("Для попадания необходимо выкинуть {0}", (distance == 0 ? "4, 5 или 6" : "5 или 6")));
 
                     int shot = Game.Dice.Roll();
-                    huntReport.Add(String.Format("Ваш выстрел: {0} ⚄", shot));
+                    huntReport.Add(String.Format("Ваш выстрел: {0}", Game.Dice.Symbol(shot)));
 
                     if (((distance == 0) && (shot > 3)) || ((distance > 0) && (shot > 4)))
                     {
@@ -691,11 +708,17 @@ namespace Seeker.Gamebook.SwampFever
 
                 int tumbleweedDirection = Game.Dice.Roll();
                 int tumbleweedSpeed = Game.Dice.Roll();
-                pursuitReport.Add(String.Format("BOLD|Направление движения куста: {0} ⚄, скорость: {1} ⚄", tumbleweedDirection, tumbleweedSpeed));
+
+                pursuitReport.Add(String.Format("BOLD|Направление движения куста: {0}, скорость: {1}",
+                    Game.Dice.Symbol(tumbleweedDirection), Game.Dice.Symbol(tumbleweedSpeed)
+                ));
 
                 int myDirection = Game.Dice.Roll();
                 int mySpeed = Game.Dice.Roll();
-                pursuitReport.Add(String.Format("Ваше направление: {0} ⚄, скорость: {1} ⚄", myDirection, mySpeed));
+
+                pursuitReport.Add(String.Format("Ваше направление: {0}, скорость: {1}",
+                    Game.Dice.Symbol(myDirection), Game.Dice.Symbol(mySpeed)
+                ));
 
                 if ((myDirection == tumbleweedDirection) && (mySpeed == tumbleweedSpeed))
                     return PursuitWin(pursuitReport);
@@ -705,7 +728,7 @@ namespace Seeker.Gamebook.SwampFever
                     reRoll = true;
 
                     mySpeed = Game.Dice.Roll();
-                    pursuitReport.Add(String.Format("Вы почти настигли куст и меняете скорость: {0} ⚄", mySpeed));
+                    pursuitReport.Add(String.Format("Вы почти настигли куст и меняете скорость: {0}", Game.Dice.Symbol(mySpeed)));
 
                     if (mySpeed == tumbleweedSpeed)
                         return PursuitWin(pursuitReport);
@@ -715,7 +738,7 @@ namespace Seeker.Gamebook.SwampFever
                     reRoll = true;
 
                     myDirection = Game.Dice.Roll();
-                    pursuitReport.Add(String.Format("Вы почти настигли куст и меняете направление: {0} ⚄", myDirection));
+                    pursuitReport.Add(String.Format("Вы почти настигли куст и меняете направление: {0}", Game.Dice.Symbol(myDirection)));
 
                     if (myDirection == tumbleweedDirection)
                         return PursuitWin(pursuitReport);
@@ -732,12 +755,12 @@ namespace Seeker.Gamebook.SwampFever
                     if (myDirection > mySpeed)
                     {
                         mySpeed = Game.Dice.Roll();
-                        pursuitReport.Add(String.Format("Вы пытаетесь резко ускориться: {0} ⚄", mySpeed));
+                        pursuitReport.Add(String.Format("Вы пытаетесь резко ускориться: {0}", Game.Dice.Symbol(mySpeed)));
                     }
                     else
                     {
                         myDirection = Game.Dice.Roll();
-                        pursuitReport.Add(String.Format("Вы пытаетесь резко сменить курс: {0} ⚄", myDirection));
+                        pursuitReport.Add(String.Format("Вы пытаетесь резко сменить курс: {0}", Game.Dice.Symbol(myDirection)));
                     }
 
                     if ((tumbleweedDirection + tumbleweedSpeed) <= (myDirection + mySpeed))
@@ -796,7 +819,10 @@ namespace Seeker.Gamebook.SwampFever
                 for (int bomb = 0; bomb < 3; bomb++)
                     bombs.Add(Game.Dice.Roll());
 
-                cavityReport.Add(String.Format("Вулканические бомбы бьют по клеткам: {0} ⚄, {1} ⚄ и {2} ⚄", bombs[0], bombs[1], bombs[2]));
+                cavityReport.Add(String.Format(
+                    "Вулканические бомбы бьют по клеткам: {0}, {1} и {2}",
+                    Game.Dice.Symbol(bombs[0]), Game.Dice.Symbol(bombs[1]), Game.Dice.Symbol(bombs[2])
+                ));
 
                 int myMovementType = ThinkAboutMovement(myPosition, step, bombs, ref cavityReport);
                 int myMove = 0;
@@ -804,7 +830,7 @@ namespace Seeker.Gamebook.SwampFever
                 if (myMovementType > 3)
                 {
                     myMove = Game.Dice.Roll();
-                    cavityReport.Add(String.Format("Движение на гусеницах, дальность: {0} ⚄", myMove));
+                    cavityReport.Add(String.Format("Движение на гусеницах, дальность: {0}", Game.Dice.Symbol(myMove)));
                 }
                 else if (myMovementType > 0)
                 {
@@ -812,7 +838,10 @@ namespace Seeker.Gamebook.SwampFever
 
                     if (myMove > 2)
                     {
-                        cavityReport.Add(String.Format("Движение на гребных винтах, дальность: {0} ⚄, -2 за винты, итого {1}", myMove, (myMove - 2)));
+                        cavityReport.Add(String.Format(
+                            "Движение на гребных винтах, дальность: {0}, -2 за винты, итого {1}",
+                            Game.Dice.Symbol(myMove), (myMove - 2)
+                        ));
 
                         myMove -= 2;
                     }
@@ -824,8 +853,8 @@ namespace Seeker.Gamebook.SwampFever
                             propBonus -= 2;
 
                         cavityReport.Add(String.Format(
-                            "Движение на гребных винтах, дальность: {0} ⚄, +бонусный бросок: {1} ⚄, итого {2}",
-                            myMove, propBonus, (myMove + propBonus)
+                            "Движение на гребных винтах, дальность: {0}, +бонусный бросок: {1}, итого {2}",
+                            Game.Dice.Symbol(myMove), Game.Dice.Symbol(propBonus), (myMove + propBonus)
                         ));
 
                         myMove += propBonus;

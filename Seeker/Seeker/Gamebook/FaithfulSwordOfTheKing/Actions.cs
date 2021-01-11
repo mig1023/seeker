@@ -141,7 +141,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             bool goodSkill = (firstDice + secondDice) <= Character.Protagonist.Skill;
 
             List<string> skillCheck = new List<string> { String.Format(
-                "Проверка ловкости: {0} ⚄ + {1} ⚄ {2} {3} ловкость",
+                "Проверка ловкости: {0} + {1} {2} {3} ловкость",
                 Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), Character.Protagonist.Skill
             ) };
 
@@ -167,7 +167,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 bool fail = firstDice == secondDice;
 
                 doubleCheck.Add(String.Format(
-                    "Бросок: {0} ⚄ и {1} ⚄ - {2}дубль",
+                    "Бросок: {0} и {1} - {2}дубль",
                     Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (fail ? String.Empty : "НЕ ")
                 ));
 
