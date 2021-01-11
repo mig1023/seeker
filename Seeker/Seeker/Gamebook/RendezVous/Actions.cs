@@ -94,12 +94,14 @@ namespace Seeker.Gamebook.RendezVous
             int dicesResult = firstDice;
 
             if (Dices == 1)
-                diceCheck.Add(String.Format("На кубикe выпало: {0} ⚄", firstDice));
+                diceCheck.Add(String.Format("На кубикe выпало: {0}", Game.Dice.Symbol(firstDice)));
             else
             {
                 int secondDice = Game.Dice.Roll();
                 dicesResult += secondDice;
-                diceCheck.Add(String.Format("На кубиках выпало: {0} ⚄ + {1} ⚄ = {2}", firstDice, secondDice, (firstDice + secondDice)));
+                diceCheck.Add(String.Format("На кубиках выпало: {0} ⚄ + {1} ⚄ = {2}",
+                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (firstDice + secondDice)
+                ));
             }
 
             diceCheck.Add(dicesResult % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
