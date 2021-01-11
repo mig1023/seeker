@@ -199,7 +199,16 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
             Character.Protagonist.Luck -= 1;
 
-            luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            if (goodLuck)
+            {
+                luckCheck.Add("BIG|GOOD|УСПЕХ :)");
+                luckCheck.Add("Уровень удачи снижен на единицу");
+            }
+            else
+            {
+                luckCheck.Add("BIG|BAD|НЕУДАЧА :(");
+                luckCheck.Add("Уровень удачи повышен на единицу");
+            }
 
             return luckCheck;
         }
