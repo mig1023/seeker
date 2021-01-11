@@ -15,7 +15,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public List<Character> Enemies { get; set; }
         public int WoundsToWin { get; set; }
-        public bool ThisIsDinner { get; set; }
+        public int DinnerHitpointsBonus { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -71,7 +71,7 @@ namespace Seeker.Gamebook.OctopusIsland
             return false;
         }
 
-        public bool IsButtonEnabled() => (ThisIsDinner && (Character.Protagonist.Food <= 0) ? false : true);
+        public bool IsButtonEnabled() => ((DinnerHitpointsBonus > 0) && (Character.Protagonist.Food <= 0) ? false : true);
 
         public static bool CheckOnlyIf(string option)
         {
@@ -270,25 +270,16 @@ namespace Seeker.Gamebook.OctopusIsland
             }
         }
 
-        public static List<string> Dinner()
+        public List<string> Dinner()
         {
-            Character.Protagonist.SouhiHitpoint = Eat(Character.Protagonist.SouhiHitpoint);
-            Character.Protagonist.SergeHitpoint = Eat(Character.Protagonist.SergeHitpoint);
-            Character.Protagonist.ThibautHitpoint = Eat(Character.Protagonist.ThibautHitpoint);
-            Character.Protagonist.XolotlHitpoint = Eat(Character.Protagonist.XolotlHitpoint);
+            Character.Protagonist.Food -= 1;
+
+            Character.Protagonist.SouhiHitpoint += DinnerHitpointsBonus;
+            Character.Protagonist.SergeHitpoint += DinnerHitpointsBonus;
+            Character.Protagonist.ThibautHitpoint += DinnerHitpointsBonus;
+            Character.Protagonist.XolotlHitpoint += DinnerHitpointsBonus;
 
             return new List<string> { "RELOAD" };
-        }
-
-        private static int Eat(int characterHitpoint)
-        {
-            if (Character.Protagonist.Food > 0)
-            {
-                Character.Protagonist.Food -= 1;
-                characterHitpoint += 5;
-            }
-
-            return characterHitpoint;
         }
     }
 }

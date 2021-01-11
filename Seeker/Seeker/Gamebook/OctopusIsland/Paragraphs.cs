@@ -51,8 +51,7 @@ namespace Seeker.Gamebook.OctopusIsland
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
 
                     WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
-
-                    ThisIsDinner = Game.Xml.BoolParse(xmlAction["Dinner"]),
+                    DinnerHitpointsBonus = Game.Xml.IntParse(xmlAction["Dinner"]),
                 };
 
                 if (xmlAction["Enemies"] != null)
