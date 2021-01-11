@@ -125,7 +125,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             bool goodLuck = luckDice % 2 == 0;
 
             List<string> luckCheck = new List<string> { String.Format(
-                "Проверка удачи: {0} ⚄ - {1}", luckDice, (goodLuck ? "чётное" : "нечётное")
+                "Проверка удачи: {0} - {1}", Game.Dice.Symbol(luckDice), (goodLuck ? "чётное" : "нечётное")
             ) };
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
@@ -141,7 +141,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             bool goodSkill = (firstDice + secondDice) <= Character.Protagonist.Skill;
 
             List<string> skillCheck = new List<string> { String.Format(
-                "Проверка ловкости: {0} ⚄ + {1} ⚄ {2} {3} ловкость", firstDice, secondDice, (goodSkill ? "<=" : ">"), Character.Protagonist.Skill
+                "Проверка ловкости: {0} ⚄ + {1} ⚄ {2} {3} ловкость",
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), Character.Protagonist.Skill
             ) };
 
             skillCheck.Add(goodSkill ? "BIG|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(");
@@ -165,7 +166,10 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 bool fail = firstDice == secondDice;
 
-                doubleCheck.Add(String.Format("Бросок: {0} ⚄ и {1} ⚄ - {2}дубль", firstDice, secondDice, (fail ? String.Empty : "НЕ ") ) );
+                doubleCheck.Add(String.Format(
+                    "Бросок: {0} ⚄ и {1} ⚄ - {2}дубль",
+                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (fail ? String.Empty : "НЕ ")
+                ));
 
                 if (fail)
                     doubleFail = true;
@@ -188,7 +192,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 int heroSpeed = Game.Dice.Roll();
                 int enemiesSpeed = Game.Dice.Roll();
 
-                pursuit.Add(String.Format("Ваша скорость: {0} ⚄  <-->  Их скорость: {1} ⚄", heroSpeed, enemiesSpeed));
+                pursuit.Add(String.Format(
+                    "Ваша скорость: {0}  <-->  Их скорость: {1}", Game.Dice.Symbol(heroSpeed), Game.Dice.Symbol(enemiesSpeed)
+                ));
 
                 if (heroSpeed > enemiesSpeed)
                 {
@@ -225,6 +231,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             if ((MeritalArt != null) && (Character.Protagonist.MeritalArt == Character.MeritalArts.Nope))
                 Character.Protagonist.MeritalArt = MeritalArt ?? Character.MeritalArts.Nope;
+
             else if ((Price > 0) && (Character.Protagonist.Ecu >= Price))
             {
                 Character.Protagonist.Ecu -= Price;
@@ -348,11 +355,17 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     int protagonistRoll = Game.Dice.Roll();
                     int protagonistSkill = hero.Skill - SkillPenalty - (hero.MeritalArt == Character.MeritalArts.LefthandFencing ? 0 : enemy.LeftHandPenalty);
                     int protagonistHitStrength = protagonistRoll + protagonistSkill;
-                    fight.Add(String.Format("Мощность вашего удара: {0} ⚄ x 2 + {1} = {2}", protagonistRoll, protagonistSkill, protagonistHitStrength));
+
+                    fight.Add(String.Format("Мощность вашего удара: {0} x 2 + {1} = {2}",
+                        Game.Dice.Symbol(protagonistRoll), protagonistSkill, protagonistHitStrength
+                    ));
 
                     int enemyRoll = Game.Dice.Roll();
                     int enemyHitStrength = enemyRoll + enemy.Skill;
-                    fight.Add(String.Format("Мощность его удара: {0} ⚄ x 2 + {1} = {2}", enemyRoll, enemy.Skill, enemyHitStrength));
+
+                    fight.Add(String.Format("Мощность его удара: {0} x 2 + {1} = {2}",
+                        Game.Dice.Symbol(enemyRoll), enemy.Skill, enemyHitStrength
+                    ));
 
                     if (protagonistHitStrength > enemyHitStrength)
                     {

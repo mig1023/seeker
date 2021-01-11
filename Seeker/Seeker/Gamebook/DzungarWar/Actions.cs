@@ -288,8 +288,9 @@ namespace Seeker.Gamebook.DzungarWar
             result = (firstDice + secondDice) + currentStat >= level;
 
             resultLine.Add( String.Format(
-                "Проверка {0}: {1} ⚄ + {2} ⚄ + {3} {4} {5}", statNames[stat], firstDice, secondDice, currentStat, (result ? ">=" : "<"), level
-            ) );
+                "Проверка {0}: {1} + {2} + {3} {4} {5}",
+                statNames[stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), currentStat, (result ? ">=" : "<"), level
+            ));
         }
 
         public List<string> Test()
