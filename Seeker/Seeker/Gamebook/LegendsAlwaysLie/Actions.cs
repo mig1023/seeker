@@ -170,7 +170,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             int reactionDice = Game.Dice.Roll();
             bool goodReaction = reactionDice <= reactionLevel;
-            reaction.Add(String.Format("Реакция: {0} ⚄ {1} {2}", reactionDice, (goodReaction ? "<=" : ">"), reactionLevel));
+            reaction.Add(String.Format("Реакция: {0} {1} {2}", Game.Dice.Symbol(reactionDice), (goodReaction ? "<=" : ">"), reactionLevel));
 
             return goodReaction;
         }
@@ -332,7 +332,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             int dice = Game.Dice.Roll();
             
-            diceCheck.Add(String.Format("На кубикe выпало: {0} ⚄", dice));
+            diceCheck.Add(String.Format("На кубикe выпало: {0}", Game.Dice.Symbol(dice)));
             diceCheck.Add(dice % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
 
             return diceCheck;
@@ -401,7 +401,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 int dice = Game.Dice.Roll();
                 dices += dice;
-                diceCheck.Add(String.Format("На {0} выпало: {1} ⚄", i, dice));
+                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
             }
 
             if (DiceBonus != 0)
@@ -539,8 +539,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                     fight.Add(
                         String.Format(
-                            "Ваш удар: {0} ⚄ + {1} ⚄ + {2} = {3}",
-                            firstHeroRoll, secondHeroRoll, Character.Protagonist.Strength, heroHitStrength
+                            "Ваш удар: {0} + {1} + {2} = {3}",
+                            Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll), Character.Protagonist.Strength, heroHitStrength
                         )
                     );
 
@@ -550,8 +550,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                     fight.Add(
                         String.Format(
-                            "Его удар: {0} ⚄ + {1} ⚄ + {2} = {3}",
-                            firstEnemyRoll, secondEnemyRoll, enemy.Strength, enemyHitStrength
+                            "Его удар: {0} + {1} + {2} = {3}",
+                            Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Strength, enemyHitStrength
                         )
                     );
 
@@ -561,7 +561,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         int dice = Game.Dice.Roll();
                         zombieWound = dice % 2 == 0;
-                        fight.Add(String.Format("Бросок на пробитие: {0} ⚄ - {1}", dice, (zombieWound ? "чёт" : "нечет")));
+                        fight.Add(String.Format("Бросок на пробитие: {0} - {1}", Game.Dice.Symbol(dice), (zombieWound ? "чёт" : "нечет")));
 
                         if (warriorFight)
                             zombieWound = true;
