@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public int ThibautSkill { get; set; }
         public int SouhiHitpoint { get; set; }
         public int SouhiSkill { get; set; }
+        public int Food { get; set; }
 
         public int Hitpoint { get; set; }
         public int Skill { get; set; }
@@ -35,12 +36,14 @@ namespace Seeker.Gamebook.OctopusIsland
             SergeSkill = ThibautSkill - 1;
             XolotlSkill = SergeSkill;
             SouhiSkill = XolotlSkill;
+
+            Food = 4;
         }
 
         public Character Clone()
         {
             return new Character() {
-                
+
                 ThibautHitpoint = this.ThibautHitpoint,
                 ThibautSkill = this.ThibautSkill,
                 SergeHitpoint = this.SergeHitpoint,
@@ -53,15 +56,16 @@ namespace Seeker.Gamebook.OctopusIsland
                 Name = this.Name,
                 Hitpoint = this.Hitpoint,
                 Skill = this.Skill,
+                Food = this.Food,
             };
         }
 
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}",
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}",
                 ThibautHitpoint, ThibautSkill, SergeHitpoint, SergeSkill,
-                XolotlHitpoint, XolotlSkill, SouhiHitpoint, SouhiSkill
+                XolotlHitpoint, XolotlSkill, SouhiHitpoint, SouhiSkill, Food
             );
         }
 
@@ -77,6 +81,7 @@ namespace Seeker.Gamebook.OctopusIsland
             XolotlSkill = int.Parse(save[5]);
             SouhiHitpoint = int.Parse(save[6]);
             SouhiSkill = int.Parse(save[7]);
+            Food = int.Parse(save[8]);
         }
     }
 }

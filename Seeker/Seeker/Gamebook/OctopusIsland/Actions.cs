@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public List<Character> Enemies { get; set; }
         public int WoundsToWin { get; set; }
+        public bool ThisIsDinner { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -50,6 +51,7 @@ namespace Seeker.Gamebook.OctopusIsland
                 String.Format("Ксалотл: {0}/{1}", Character.Protagonist.XolotlSkill, Character.Protagonist.XolotlHitpoint),
                 String.Format("Тибо: {0}/{1}", Character.Protagonist.ThibautSkill, Character.Protagonist.ThibautHitpoint),
                 String.Format("Суи: {0}/{1}", Character.Protagonist.SouhiSkill, Character.Protagonist.SouhiHitpoint),
+                String.Format("Обедов: {0}", Character.Protagonist.Food),
             };
 
             return statusLines;
@@ -69,7 +71,7 @@ namespace Seeker.Gamebook.OctopusIsland
             return false;
         }
 
-        public bool IsButtonEnabled() => true;
+        public bool IsButtonEnabled() => (ThisIsDinner && (Character.Protagonist.Food <= 0) ? false : true);
 
         public static bool CheckOnlyIf(string option)
         {
@@ -266,6 +268,27 @@ namespace Seeker.Gamebook.OctopusIsland
 
                 round += 1;
             }
+        }
+
+        public static List<string> Dinner()
+        {
+            Character.Protagonist.SouhiHitpoint = Eat(Character.Protagonist.SouhiHitpoint);
+            Character.Protagonist.SergeHitpoint = Eat(Character.Protagonist.SergeHitpoint);
+            Character.Protagonist.ThibautHitpoint = Eat(Character.Protagonist.ThibautHitpoint);
+            Character.Protagonist.XolotlHitpoint = Eat(Character.Protagonist.XolotlHitpoint);
+
+            return new List<string> { "RELOAD" };
+        }
+
+        private static int Eat(int characterHitpoint)
+        {
+            if (Character.Protagonist.Food > 0)
+            {
+                Character.Protagonist.Food -= 1;
+                characterHitpoint += 5;
+            }
+
+            return characterHitpoint;
         }
     }
 }
