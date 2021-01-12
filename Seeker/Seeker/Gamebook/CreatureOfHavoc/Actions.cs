@@ -30,7 +30,17 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public List<string> Representer() => new List<string> { };
 
-        public List<string> Status() => new List<string> { String.Format("Параметр: {0}", 0) };
+        public List<string> Status()
+        {
+            List<string> statusLines = new List<string>
+            {
+                String.Format("Мастерство: {0}", Character.Protagonist.Mastery),
+                String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
+                String.Format("Удачливость: {0}", Character.Protagonist.Luck),
+            };
+
+            return statusLines;
+        }
 
         public List<string> AdditionalStatus() => null;
 
