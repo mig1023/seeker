@@ -41,6 +41,23 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
                 };
 
+                if (xmlAction["Enemies"] != null)
+                {
+                    action.Enemies = new List<Character>();
+
+                    foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
+                    {
+                        Character enemy = new Character
+                        {
+                            Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
+                            Mastery = Game.Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
+                            Endurance = Game.Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
+                        };
+
+                        action.Enemies.Add(enemy);
+                    }
+                }
+
                 paragraph.Actions.Add(action);
             }
 

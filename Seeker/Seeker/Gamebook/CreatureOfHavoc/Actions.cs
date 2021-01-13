@@ -28,7 +28,18 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             return actionResult;
         }
 
-        public List<string> Representer() => new List<string> { };
+        public List<string> Representer()
+        {
+            List<string> enemies = new List<string>();
+
+            if (Enemies == null)
+                return enemies;
+
+            foreach (Character enemy in Enemies)
+                enemies.Add(String.Format("{0}\nмастерствоь {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance));
+
+            return enemies;
+        }
 
         public List<string> Status()
         {
@@ -51,13 +62,107 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
-            toEndText = String.Empty;
+            toEndText = "Начать сначала";
 
-            return false;
+            return Character.Protagonist.Endurance <= 0;
         }
 
         public bool IsButtonEnabled() => true;
 
         public static bool CheckOnlyIf(string option) => true;
+
+        private bool NoMoreEnemies(List<Character> enemies)
+        {
+            foreach (Character enemy in enemies)
+                if (enemy.Endurance > 0)
+                    return false;
+
+            return true;
+        }
+
+        public List<string> Fight()
+        {
+            List<string> fight = new List<string>();
+
+            List<Character> FightEnemies = new List<Character>();
+
+            foreach (Character enemy in Enemies)
+                FightEnemies.Add(enemy.Clone());
+
+            int round = 1;
+
+            Character hero = Character.Protagonist;
+
+            while (true)
+            {
+                fight.Add(String.Format("HEAD|Раунд: {0}", round));
+
+                foreach (Character enemy in FightEnemies)
+                {
+                    if (enemy.Endurance <= 0)
+                        continue;
+
+                    Character enemyInFight = enemy;
+                    fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
+
+                    int protagonistRollFirst = Game.Dice.Roll();
+                    int protagonistRollSecond = Game.Dice.Roll();
+                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + hero.Mastery;
+
+                    fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
+                        Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), hero.Mastery, protagonistHitStrength
+                    ));
+
+                    int enemyRollFirst = Game.Dice.Roll();
+                    int enemyRollSecond = Game.Dice.Roll();
+                    int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
+
+                    fight.Add(String.Format("Мощность его удара: {0} + {1} + {2} = {3}",
+                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength
+                    ));
+
+                    if (protagonistHitStrength > enemyHitStrength)
+                    {
+                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+
+                        enemy.Endurance -= 2;
+
+                        if (enemy.Endurance <= 0)
+                            enemy.Endurance = 0;
+
+                        bool enemyLost = NoMoreEnemies(FightEnemies);
+
+                        if (enemyLost)
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                            return fight;
+                        }
+                    }
+                    else if (protagonistHitStrength < enemyHitStrength)
+                    {
+                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+
+                        hero.Endurance -= 2;
+
+                        if (hero.Endurance < 0)
+                            hero.Endurance = 0;
+
+                        if (hero.Endurance <= 0)
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                            return fight;
+                        }
+                    }
+                    else
+                        fight.Add(String.Format("BOLD|Ничья в раунде"));
+
+                    fight.Add(String.Empty);
+                }
+
+                round += 1;
+            }
+        }
     }
 }
