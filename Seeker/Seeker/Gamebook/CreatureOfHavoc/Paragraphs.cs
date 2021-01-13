@@ -39,6 +39,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+
+                    WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
+                    RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
                 };
 
                 if (xmlAction["Enemies"] != null)

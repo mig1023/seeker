@@ -12,8 +12,12 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
+
         public List<Character> Enemies { get; set; }
         public Modification Benefit { get; set; }
+
+        public int WoundsToWin { get; set; }
+        public int RoundsToWin { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -90,6 +94,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 FightEnemies.Add(enemy.Clone());
 
             int round = 1;
+            int enemyWounds = 0;
 
             Character hero = Character.Protagonist;
 
@@ -130,9 +135,11 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         if (enemy.Endurance <= 0)
                             enemy.Endurance = 0;
 
+                        enemyWounds += 1;
+
                         bool enemyLost = NoMoreEnemies(FightEnemies);
 
-                        if (enemyLost)
+                        if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
@@ -157,6 +164,14 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     }
                     else
                         fight.Add(String.Format("BOLD|Ничья в раунде"));
+
+                    if ((RoundsToWin > 0) && (RoundsToWin <= round))
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add("BAD|Отведённые на победу раунды истекли.");
+                        fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                        return fight;
+                    }
 
                     fight.Add(String.Empty);
                 }
