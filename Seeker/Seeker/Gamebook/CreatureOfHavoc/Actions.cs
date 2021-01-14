@@ -40,7 +40,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 return enemies;
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nмастерствоь {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance));
+                enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance));
 
             return enemies;
         }
@@ -102,6 +102,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
+                bool attackAlready = false;
+                int protagonistHitStrength = 0;
+
                 foreach (Character enemy in FightEnemies)
                 {
                     if (enemy.Endurance <= 0)
@@ -110,23 +113,26 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     Character enemyInFight = enemy;
                     fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
 
-                    int protagonistRollFirst = Game.Dice.Roll();
-                    int protagonistRollSecond = Game.Dice.Roll();
-                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + hero.Mastery;
+                    if (!attackAlready)
+                    {
+                        int protagonistRollFirst = Game.Dice.Roll();
+                        int protagonistRollSecond = Game.Dice.Roll();
+                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + hero.Mastery;
 
-                    fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), hero.Mastery, protagonistHitStrength
-                    ));
+                        fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
+                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), hero.Mastery, protagonistHitStrength
+                        ));
+                    }
 
                     int enemyRollFirst = Game.Dice.Roll();
                     int enemyRollSecond = Game.Dice.Roll();
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
 
-                    fight.Add(String.Format("Мощность его удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength
+                    fight.Add(String.Format("{0}: мощность удара: {1} + {2} + {3} = {4}",
+                        enemy.Name, Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength
                     ));
 
-                    if (protagonistHitStrength > enemyHitStrength)
+                    if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
 
@@ -145,6 +151,12 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                             fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
                             return fight;
                         }
+
+                        attackAlready = true;
+                    }
+                    else if (protagonistHitStrength > enemyHitStrength)
+                    {
+                        fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
