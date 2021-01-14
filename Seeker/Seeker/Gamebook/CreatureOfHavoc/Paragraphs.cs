@@ -28,6 +28,17 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
                 };
 
+                if (xmlOption.Attributes["Do"] != null)
+                {
+                    Modification modification = new Modification
+                    {
+                        Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]),
+                        Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]),
+                    };
+
+                    option.Do = modification;
+                }
+
                 paragraph.Options.Add(option);
             }
 
