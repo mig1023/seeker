@@ -47,21 +47,79 @@ namespace Seeker.Gamebook.OctopusIsland
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Серж: {0}/{1}", Character.Protagonist.SergeSkill, Character.Protagonist.SergeHitpoint),
-                String.Format("Ксалотл: {0}/{1}", Character.Protagonist.XolotlSkill, Character.Protagonist.XolotlHitpoint),
-                String.Format("Тибо: {0}/{1}", Character.Protagonist.ThibautSkill, Character.Protagonist.ThibautHitpoint),
-                String.Format("Суи: {0}/{1}", Character.Protagonist.SouhiSkill, Character.Protagonist.SouhiHitpoint),
                 String.Format("Обедов: {0}", Character.Protagonist.Food),
+                String.Format("Животворная мазь: {0}", Character.Protagonist.LifeGivingOintment),
             };
 
             return statusLines;
         }
 
-        public List<string> AdditionalStatus() => null;
+        public List<string> AdditionalStatus()
+        {
+            List<string> statusLines = new List<string>
+            {
+                String.Format("Серж: {0}/{1}", Character.Protagonist.SergeSkill, Character.Protagonist.SergeHitpoint),
+                String.Format("Ксалотл: {0}/{1}", Character.Protagonist.XolotlSkill, Character.Protagonist.XolotlHitpoint),
+                String.Format("Тибо: {0}/{1}", Character.Protagonist.ThibautSkill, Character.Protagonist.ThibautHitpoint),
+                String.Format("Суи: {0}/{1}", Character.Protagonist.SouhiSkill, Character.Protagonist.SouhiHitpoint),
+            };
 
-        public List<string> StaticButtons() => new List<string> { };
+            return statusLines;
+        }
 
-        public bool StaticAction(string action) => false;
+        public List<string> StaticButtons()
+        {
+            List<string> staticButtons = new List<string> { };
+
+            if (Character.Protagonist.LifeGivingOintment <= 0)
+                return staticButtons;
+
+            if (Character.Protagonist.SergeHitpoint < 20)
+                staticButtons.Add("ВЫЛЕЧИТЬ СЕРЖА");
+
+            if (Character.Protagonist.XolotlHitpoint < 20)
+                staticButtons.Add("ВЫЛЕЧИТЬ КСАЛОТЛА");
+
+            if (Character.Protagonist.ThibautHitpoint < 20)
+                staticButtons.Add("ВЫЛЕЧИТЬ ТИБО");
+
+            if (Character.Protagonist.SouhiHitpoint < 20)
+                staticButtons.Add("ВЫЛЕЧИТЬ СУИ");
+
+            return staticButtons;
+        }
+
+        private int LifeGivingOintmentFor(int protagonistHitpoint)
+        {
+            while ((Character.Protagonist.LifeGivingOintment > 0) && (protagonistHitpoint < 20))
+            {
+                Character.Protagonist.LifeGivingOintment -= 1;
+                protagonistHitpoint += 1;
+            }
+
+            return protagonistHitpoint;
+        }
+
+        public bool StaticAction(string action)
+        {
+            switch(action)
+            {
+                case "ВЫЛЕЧИТЬ СЕРЖА":
+                    Character.Protagonist.SergeHitpoint = LifeGivingOintmentFor(Character.Protagonist.SergeHitpoint);
+                    return true;
+                case "ВЫЛЕЧИТЬ КСАЛОТЛА":
+                    Character.Protagonist.XolotlHitpoint = LifeGivingOintmentFor(Character.Protagonist.XolotlHitpoint);
+                    return true;
+                case "ВЫЛЕЧИТЬ ТИБО":
+                    Character.Protagonist.ThibautHitpoint = LifeGivingOintmentFor(Character.Protagonist.ThibautHitpoint);
+                    return true;
+                case "ВЫЛЕЧИТЬ СУИ":
+                    Character.Protagonist.SouhiHitpoint = LifeGivingOintmentFor(Character.Protagonist.SouhiHitpoint);
+                    return true;
+            }
+
+            return false;
+        }
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {

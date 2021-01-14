@@ -19,6 +19,8 @@ namespace Seeker.Gamebook.OctopusIsland
         public int SouhiHitpoint { get; set; }
         public int SouhiSkill { get; set; }
         public int Food { get; set; }
+        public int LifeGivingOintment { get; set; }
+
 
         public int Hitpoint { get; set; }
         public int Skill { get; set; }
@@ -38,6 +40,7 @@ namespace Seeker.Gamebook.OctopusIsland
             SouhiSkill = XolotlSkill;
 
             Food = 4;
+            LifeGivingOintment = 40;
         }
 
         public Character Clone()
@@ -57,15 +60,17 @@ namespace Seeker.Gamebook.OctopusIsland
                 Hitpoint = this.Hitpoint,
                 Skill = this.Skill,
                 Food = this.Food,
+                LifeGivingOintment = this.LifeGivingOintment,
             };
         }
 
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}",
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}",
                 ThibautHitpoint, ThibautSkill, SergeHitpoint, SergeSkill,
-                XolotlHitpoint, XolotlSkill, SouhiHitpoint, SouhiSkill, Food
+                XolotlHitpoint, XolotlSkill, SouhiHitpoint, SouhiSkill,
+                Food, LifeGivingOintment
             );
         }
 
@@ -82,6 +87,7 @@ namespace Seeker.Gamebook.OctopusIsland
             SouhiHitpoint = int.Parse(save[6]);
             SouhiSkill = int.Parse(save[7]);
             Food = int.Parse(save[8]);
+            LifeGivingOintment = int.Parse(save[9]);
         }
     }
 }
