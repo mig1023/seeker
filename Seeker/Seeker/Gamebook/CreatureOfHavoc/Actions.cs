@@ -110,6 +110,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     if (enemy.Endurance <= 0)
                         continue;
 
+                    bool immediateDeath = false;
+
                     Character enemyInFight = enemy;
                     fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
 
@@ -122,6 +124,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
                             Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), hero.Mastery, protagonistHitStrength
                         ));
+
+                        immediateDeath = ((protagonistRollFirst == protagonistRollSecond) && (protagonistRollFirst == 6) ? true : false);
                     }
 
                     int enemyRollFirst = Game.Dice.Roll();
@@ -132,14 +136,23 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         enemy.Name, Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength
                     ));
 
-                    if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
+                    if ((immediateDeath || (protagonistHitStrength > enemyHitStrength)) && !attackAlready)
                     {
-                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                        if (immediateDeath)
+                        {
+                            fight.Add(String.Format("GOOD|{0} убит наповал", enemy.Name));
 
-                        enemy.Endurance -= 2;
-
-                        if (enemy.Endurance <= 0)
                             enemy.Endurance = 0;
+                        }
+                        else
+                        {
+                            fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+
+                            enemy.Endurance -= 2;
+
+                            if (enemy.Endurance <= 0)
+                                enemy.Endurance = 0;
+                        }
 
                         enemyWounds += 1;
 
