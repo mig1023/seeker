@@ -260,6 +260,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     if (GroupFight)
                         fight.Add(String.Format("{0} (сила {1})", (IsHero(ally.Name) ? "Вы" : ally.Name), ally.Endurance));
 
+                    bool attackAlready = false;
+                    int allyHitStrength = 0;
+                    int firstAllyRoll = 0;
+                    int secondAllyRoll = 0;
+
                     foreach (Character enemy in FightEnemies)
                     {
                         if (enemy.Endurance <= 0)
@@ -267,33 +272,37 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                         fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Endurance));
 
-                        int firstHeroRoll = Game.Dice.Roll();
-                        int secondHeroRoll = Game.Dice.Roll();
-                        int allyHitEndurance = firstHeroRoll + secondHeroRoll + (ally.Mastery - MasteryPenalty);
+                        if (!attackAlready)
+                        {
+                            firstAllyRoll = Game.Dice.Roll();
+                            secondAllyRoll = Game.Dice.Roll();
+                            allyHitStrength = firstAllyRoll + secondAllyRoll + (ally.Mastery - MasteryPenalty);
 
-                        fight.Add(
-                            String.Format(
-                                "{0} мощность удара: {1} + {2} + {3} = {4}",
-                                (IsHero(ally.Name) ? "Ваша" : String.Format("{0} -", ally.Name)),
-                                Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll), ally.Mastery, allyHitEndurance
-                            )
-                        );
+                            fight.Add(
+                                String.Format(
+                                    "{0} мощность удара: {1} + {2} + {3} = {4}",
+                                    (IsHero(ally.Name) ? "Ваша" : String.Format("{0} -", ally.Name)),
+                                    Game.Dice.Symbol(firstAllyRoll), Game.Dice.Symbol(secondAllyRoll), ally.Mastery, allyHitStrength
+                                )
+                            );
+                        }
+                        
 
                         int firstEnemyRoll = Game.Dice.Roll();
                         int secondEnemyRoll = Game.Dice.Roll();
-                        int enemyHitEndurance = firstEnemyRoll + secondEnemyRoll + enemy.Mastery;
+                        int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Mastery;
 
                         fight.Add(
                             String.Format(
                                 "{0} мощность удара: {1} + {2} + {3} = {4}",
                                 (GroupFight ? String.Format("{0} -", enemy.Name) : "Его"),
-                                Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Mastery, enemyHitEndurance
+                                Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Mastery, enemyHitStrength
                             )
                         );
 
-                        if (allyHitEndurance > enemyHitEndurance)
+                        if ((allyHitStrength > enemyHitStrength) && !attackAlready)
                         {
-                            if (enemy.SeaArmour && (firstHeroRoll == secondHeroRoll))
+                            if (enemy.SeaArmour && (firstAllyRoll == secondAllyRoll))
                                 fight.Add(String.Format("BOLD|Чешуя отразила ваш удар"));
                             else
                             {
@@ -322,7 +331,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 }
                             }
                         }
-                        else if (allyHitEndurance < enemyHitEndurance)
+                        else if (allyHitStrength > enemyHitStrength)
+                        {
+                            fight.Add(String.Format("BOLD|{0} не смог ранить", enemy.Name));
+                        }
+                        else if (allyHitStrength < enemyHitStrength)
                         {
                             fight.Add(GroupFight && !IsHero(ally.Name) ? String.Format("BAD|{0} ранен",  ally.Name) : "BAD|Вы ранены");
                             ally.Endurance -= 2 + enemy.ExtendedDamage;
@@ -348,6 +361,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         }
                         else
                             fight.Add(String.Format("BOLD|Ничья в раунде"));
+
+                        attackAlready = true;
 
                         if ((RoundsToWin > 0) && (RoundsToWin <= round))
                         {
