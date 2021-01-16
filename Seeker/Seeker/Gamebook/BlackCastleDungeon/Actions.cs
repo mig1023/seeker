@@ -247,6 +247,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
+                bool attackAlready = false;
+                int heroHitStrength = 0;
+
                 foreach (Character enemy in FightEnemies)
                 {
                     if (enemy.Endurance <= 0)
@@ -257,15 +260,18 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     if (copyFight)
                         fight.Add(String.Format("{0} (выносливость {1})", hero.Name, hero.Endurance));
 
-                    int firstHeroRoll = Game.Dice.Roll();
-                    int secondHeroRoll = Game.Dice.Roll();
-                    int heroHitStrength = firstHeroRoll + secondHeroRoll + hero.Mastery;
+                    if (!attackAlready)
+                    {
+                        int firstHeroRoll = Game.Dice.Roll();
+                        int secondHeroRoll = Game.Dice.Roll();
+                        heroHitStrength = firstHeroRoll + secondHeroRoll + hero.Mastery;
 
-                    fight.Add(String.Format(
-                            "Сила {0}: {1} + {2} + {3} = {4}",
-                            (copyFight ? "удара копии" : "вашего удара"),
-                            Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll), hero.Mastery, heroHitStrength
-                    ));
+                        fight.Add(String.Format(
+                                "Сила {0}: {1} + {2} + {3} = {4}",
+                                (copyFight ? "удара копии" : "вашего удара"),
+                                Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll), hero.Mastery, heroHitStrength
+                        ));
+                    }
 
                     int firstEnemyRoll = Game.Dice.Roll();
                     int secondEnemyRoll = Game.Dice.Roll();
@@ -276,7 +282,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Mastery, enemyHitStrength
                     ));
 
-                    if (heroHitStrength > enemyHitStrength)
+                    if ((heroHitStrength > enemyHitStrength) && !attackAlready)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
                         enemy.Endurance -= 2;
@@ -295,6 +301,10 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                             return true;
                     }
+                    else if (heroHitStrength > enemyHitStrength)
+                    {
+                        fight.Add(String.Format("BOLD|{0} не смог ранить", enemy.Name));
+                    }
                     else if (heroHitStrength < enemyHitStrength)
                     {
                         fight.Add(String.Format("BAD|{0} ранил {1}", enemy.Name, (copyFight ? "копию" : "вас")));
@@ -309,6 +319,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     }
                     else
                         fight.Add("BOLD|Ничья в раунде");
+
+                    attackAlready = true;
 
                     if ((RoundsToWin > 0) && (RoundsToWin <= round))
                     {
@@ -375,7 +387,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 }
 
                 else
-                    fight.Add("BIG|BAD|Копия проиграла, дальше сражаться придётся вам");
+                    fight.Add("BOLD|BAD|Копия проиграла, дальше сражаться придётся вам");
 
                 fight.Add(String.Empty);
             }
