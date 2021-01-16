@@ -132,8 +132,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     int enemyRollSecond = Game.Dice.Roll();
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
 
-                    fight.Add(String.Format("{0}: мощность удара: {1} + {2} + {3} = {4}",
-                        enemy.Name, Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength
+                    fight.Add(String.Format("Мощность его удара: {0} + {1} + {2} = {3}",
+                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength
                     ));
 
                     if ((immediateDeath || (protagonistHitStrength > enemyHitStrength)) && !attackAlready)
@@ -164,8 +164,6 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                             fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
                             return fight;
                         }
-
-                        attackAlready = true;
                     }
                     else if (protagonistHitStrength > enemyHitStrength)
                     {
@@ -189,6 +187,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     }
                     else
                         fight.Add(String.Format("BOLD|Ничья в раунде"));
+
+                    attackAlready = true;
 
                     if ((RoundsToWin > 0) && (RoundsToWin <= round))
                     {
