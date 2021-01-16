@@ -59,7 +59,7 @@ namespace Seeker.Gamebook.OctopusIsland
             List<string> statusLines = new List<string>
             {
                 String.Format("Серж: {0}/{1}", Character.Protagonist.SergeSkill, Character.Protagonist.SergeHitpoint),
-                String.Format("Ксалотл: {0}/{1}", Character.Protagonist.XolotlSkill, Character.Protagonist.XolotlHitpoint),
+                String.Format("Ксолотл: {0}/{1}", Character.Protagonist.XolotlSkill, Character.Protagonist.XolotlHitpoint),
                 String.Format("Тибо: {0}/{1}", Character.Protagonist.ThibautSkill, Character.Protagonist.ThibautHitpoint),
                 String.Format("Суи: {0}/{1}", Character.Protagonist.SouhiSkill, Character.Protagonist.SouhiHitpoint),
             };
@@ -78,7 +78,7 @@ namespace Seeker.Gamebook.OctopusIsland
                 staticButtons.Add("ВЫЛЕЧИТЬ СЕРЖА");
 
             if (Character.Protagonist.XolotlHitpoint < 20)
-                staticButtons.Add("ВЫЛЕЧИТЬ КСАЛОТЛА");
+                staticButtons.Add("ВЫЛЕЧИТЬ КСОЛОТЛА");
 
             if (Character.Protagonist.ThibautHitpoint < 20)
                 staticButtons.Add("ВЫЛЕЧИТЬ ТИБО");
@@ -107,7 +107,7 @@ namespace Seeker.Gamebook.OctopusIsland
                 case "ВЫЛЕЧИТЬ СЕРЖА":
                     Character.Protagonist.SergeHitpoint = LifeGivingOintmentFor(Character.Protagonist.SergeHitpoint);
                     return true;
-                case "ВЫЛЕЧИТЬ КСАЛОТЛА":
+                case "ВЫЛЕЧИТЬ КСОЛОТЛА":
                     Character.Protagonist.XolotlHitpoint = LifeGivingOintmentFor(Character.Protagonist.XolotlHitpoint);
                     return true;
                 case "ВЫЛЕЧИТЬ ТИБО":
