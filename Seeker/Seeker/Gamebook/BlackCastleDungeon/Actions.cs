@@ -102,6 +102,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             List<string> staticButtons = new List<string> { };
 
+            if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
+                return staticButtons;
+
             if (Character.Protagonist.Spells.Contains("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"))
                 staticButtons.Add("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
 

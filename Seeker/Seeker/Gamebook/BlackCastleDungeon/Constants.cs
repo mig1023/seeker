@@ -36,5 +36,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public bool GetLtlFont() => false;
 
         public double? GetLineHeight() => null;
+
+        public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 619 };
     }
 }
