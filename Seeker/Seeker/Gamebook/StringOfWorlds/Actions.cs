@@ -351,6 +351,9 @@ namespace Seeker.Gamebook.StringOfWorlds
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
+                bool attackAlready = false;
+                int protagonistHitStrength = 0;
+
                 foreach (Character enemy in FightEnemies)
                 {
                     if (enemy.Strength <= 0)
@@ -359,14 +362,17 @@ namespace Seeker.Gamebook.StringOfWorlds
                     Character enemyInFight = enemy;
                     fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
 
-                    int protagonistRollFirst = Game.Dice.Roll();
-                    int protagonistRollSecond = Game.Dice.Roll();
-                    int heroSkill = (hero.Skill - skillPenalty);
-                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + heroSkill;
+                    if (!attackAlready)
+                    {
+                        int protagonistRollFirst = Game.Dice.Roll();
+                        int protagonistRollSecond = Game.Dice.Roll();
+                        int heroSkill = (hero.Skill - skillPenalty);
+                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + heroSkill;
 
-                    fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), heroSkill, protagonistHitStrength
-                    ));
+                        fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
+                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), heroSkill, protagonistHitStrength
+                        ));
+                    }
 
                     int enemyRollFirst = Game.Dice.Roll();
                     int enemyRollSecond = Game.Dice.Roll();
@@ -376,7 +382,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                         Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Skill, enemyHitStrength
                     ));
 
-                    if (protagonistHitStrength > enemyHitStrength)
+                    if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
 
@@ -393,6 +399,10 @@ namespace Seeker.Gamebook.StringOfWorlds
                             fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
                             return fight;
                         }
+                    }
+                    else if (protagonistHitStrength > enemyHitStrength)
+                    {
+                        fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
@@ -412,6 +422,8 @@ namespace Seeker.Gamebook.StringOfWorlds
                     }
                     else
                         fight.Add(String.Format("BOLD|Ничья в раунде"));
+
+                    attackAlready = true;
 
                     if ((RoundsToWin > 0) && (RoundsToWin <= round))
                     {
