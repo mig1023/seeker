@@ -82,7 +82,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return statusLines;
         }
 
-    private static bool ParagraphWithFight(string spell)
+        private static bool ParagraphWithFight(string spell)
         {
             if (Game.Data.CurrentParagraph.Actions == null)
                 return false;
@@ -200,17 +200,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), Character.Protagonist.Luck
             ) };
 
-            Character.Protagonist.Luck -= 1;
+            luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
-            if (goodLuck)
+            if (Character.Protagonist.Luck > 2)
             {
-                luckCheck.Add("BIG|GOOD|УСПЕХ :)");
+                Character.Protagonist.Luck -= 1;
                 luckCheck.Add("Уровень удачи снижен на единицу");
-            }
-            else
-            {
-                luckCheck.Add("BIG|BAD|НЕУДАЧА :(");
-                luckCheck.Add("Уровень удачи повышен на единицу");
             }
 
             return luckCheck;
