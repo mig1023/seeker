@@ -219,12 +219,9 @@ namespace Seeker.Gamebook.SwampFever
             List<string> enemyCombinationLine = new List<string>();
 
             foreach (string dice in EnemyCombination.Split('-'))
-            {
                 enemyCombination.Add(int.Parse(dice));
-                enemyCombinationLine.Add(Game.Dice.Symbol(int.Parse(dice)));
-            }
 
-            fight.Add(String.Format("Его комбинация: {0}", String.Join(String.Empty, enemyCombinationLine.ToArray())));
+            fight.Add(String.Format("Его комбинация: {0}", String.Join(" - ", enemyCombination.ToArray())));
 
             if (Upgrade(ref myCombination, ref myCombinationLine, ref fight))
                 fight.Add(String.Format("Теперь ваша комбинация: {0}", String.Join(String.Empty, myCombinationLine.ToArray())));
