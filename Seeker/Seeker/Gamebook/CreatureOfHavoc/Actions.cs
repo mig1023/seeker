@@ -75,6 +75,29 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public static bool CheckOnlyIf(string option) => true;
 
+        public List<string> Luck()
+        {
+            int fisrtDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            bool goodLuck = (fisrtDice + secondDice) < Character.Protagonist.Luck;
+
+            List<string> luckCheck = new List<string> { String.Format(
+                    "Проверка удачи: {0} + {1} {2} {3}",
+                    Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), Character.Protagonist.Luck
+            ) };
+
+            luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            if (Character.Protagonist.Luck > 2)
+            {
+                Character.Protagonist.Luck -= 1;
+                luckCheck.Add("Уровень удачи снижен на единицу");
+            }
+
+            return luckCheck;
+        }
+
         private bool NoMoreEnemies(List<Character> enemies)
         {
             foreach (Character enemy in enemies)
