@@ -96,7 +96,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
             luckCheck.Add((notInline ? String.Empty : "BIG|") + (goodLuck ? "GOOD|УСПЕХ :)" : "BAD|НЕУДАЧА :("));
 
-            if ((Character.Protagonist.Luck > 2) && notInline)
+            if (Character.Protagonist.Luck > 2)
             {
                 Character.Protagonist.Luck -= 1;
                 luckCheck.Add("Уровень удачи снижен на единицу");
@@ -134,6 +134,37 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 Character.Protagonist.Endurance = 0;
 
             return rocks;
+        }
+        
+        public List<string> Hunt()
+        {
+            List<string> hunt = new List<string>();
+
+            hunt.Add("Пробуете поймать кого-нибудь...");
+
+            hunt.AddRange(Luck(out bool goodLuck));
+
+            List<string> HuntPray = new List<string>
+            {
+                "птичку",
+                "кролика",
+                "зайчика",
+                "кабанчика",
+                "ящерку",
+                "мышку",
+                "фазанчика",
+            };
+
+            if (goodLuck)
+            {
+                Character.Protagonist.Endurance += 2;
+
+                hunt.Add(String.Format("GOOD|Вы поймали {0} и получаете 2 выносливости", HuntPray[Game.Dice.Roll() - 1]));
+            }
+            else
+                hunt.Add("BAD|Вам неудалось никого поймать");
+
+            return hunt;
         }
 
         private bool WoundAndDeath(ref List<string> fight, ref Character hero, string enemy, int wounds = 2)

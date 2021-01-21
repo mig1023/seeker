@@ -3384,7 +3384,32 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>368</ID>
-		<Text>В лесу много разных птиц, есть и кролики. Ты можешь попытаться кого-нибудь поймать, испытав удачу. Если тебе повезет, ты поймаешь зверька или птицу – прибавь 2 к уровню своей ВЫНОСЛИВОСТИ. Если удача отвернется от тебя, у тебя ничего не выйдет. Таким образом ты можешь испытывать удачу сколько угодно раз, но в сумме ты имеешь право восстановить не более 4 пунктов ВЫНОСЛИВОСТИ. Когда ты будешь готов продолжить свое путешествие.</Text>
+		<Text>В лесу много разных птиц, есть и кролики. Ты можешь попытаться кого-нибудь поймать, испытав удачу. Если тебе повезет, ты поймаешь зверька или птицу – прибавь 2 к уровню своей ВЫНОСЛИВОСТИ. Если удача отвернется от тебя, у тебя ничего не выйдет. </Text>
+		<Actions>
+			<Action>
+				<ActionName>Hunt</ActionName>
+				<ButtonName>Попробовать</ButtonName>
+			</Action>
+		</Actions>
+		<Actions>
+			<Action>
+				<ActionName>Hunt</ActionName>
+				<ButtonName>Попробовать ещё разок</ButtonName>
+			</Action>
+		</Actions>
+		<Actions>
+			<Action>
+				<ActionName>Hunt</ActionName>
+				<ButtonName>Попробовать в третий раз</ButtonName>
+			</Action>
+		</Actions>
+		<Actions>
+			<Action>
+				<ActionName>Hunt</ActionName>
+				<ButtonName>Попробовать последний раз</ButtonName>
+				<Aftertext>Когда ты будешь готов - продолжай свое путешествие.</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="229"/>
 		</Options>
