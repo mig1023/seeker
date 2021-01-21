@@ -65,6 +65,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
 
                     Ophidiotaur = Game.Xml.BoolParse(xmlAction["Ophidiotaur"]),
+                    ManicBeast = Game.Xml.BoolParse(xmlAction["ManicBeast"]),
                 };
 
                 if (xmlAction["Enemies"] != null)

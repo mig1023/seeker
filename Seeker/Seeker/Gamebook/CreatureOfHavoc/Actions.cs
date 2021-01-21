@@ -20,6 +20,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public int RoundsToWin { get; set; }
 
         public bool Ophidiotaur { get; set; }
+        public bool ManicBeast { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -141,6 +142,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
             int round = 1;
             int enemyWounds = 0;
+            bool previousRoundWound = false;
 
             Character hero = Character.Protagonist;
 
@@ -185,6 +187,15 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength
                     ));
 
+                    if (previousRoundWound)
+                    {
+                        enemyHitStrength += 2;
+
+                        fight.Add(String.Format("+2 бонус к его удару за ярость, итого {0}", enemyHitStrength));
+
+                        previousRoundWound = false;
+                    }
+
                     if (Ophidiotaur && doubleDice)
                     {
                         fight.Add("Офидиотавр наносит удар ядовитым жалом");
@@ -215,6 +226,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         }
 
                         enemyWounds += 1;
+
+                        previousRoundWound = true;
 
                         bool enemyLost = NoMoreEnemies(FightEnemies);
 
