@@ -105,6 +105,37 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             return luckCheck;
         }
 
+        public List<string> Rocks()
+        {
+            List<string> rocks = new List<string>();
+
+            for (int i = 0; i < 6; i++)
+            {
+                int rock = Game.Dice.Roll();
+
+                string inTarget, bold = String.Empty;
+
+                if (rock == 6)
+                {
+                    Character.Protagonist.Endurance -= 1;
+                    inTarget = " - ПОПАЛИ!";
+                    bold = "BOLD|";
+                }
+                else
+                    inTarget = "- не попали.";
+
+                rocks.Add(String.Format("{0}Бросок камня: {1}{2}", bold, Game.Dice.Symbol(rock), inTarget));
+            }
+
+            Character.Protagonist.Endurance += 3;
+            rocks.Add("+3 выносливости за еду");
+
+            if (Character.Protagonist.Endurance < 0)
+                Character.Protagonist.Endurance = 0;
+
+            return rocks;
+        }
+
         private bool WoundAndDeath(ref List<string> fight, ref Character hero, string enemy, int wounds = 2)
         {
             if (wounds == 2)
