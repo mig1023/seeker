@@ -59,7 +59,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public List<string> Status()
         {
             List<string> statusLines = new List<string>();
-
             
             if (Character.Protagonist.Tanga > 0)
                 statusLines.Add(String.Format("Деньги: {0}", Character.Protagonist.Tanga));

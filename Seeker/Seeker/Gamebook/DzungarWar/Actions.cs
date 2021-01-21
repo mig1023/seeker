@@ -278,8 +278,7 @@ namespace Seeker.Gamebook.DzungarWar
             NextTestWithTincture = false;
             NextTestWithGinseng = false;
 
-            foreach (string penalty in penalties)
-                resultLine.Add(penalty);
+            resultLine.AddRange(penalties);
 
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
@@ -299,9 +298,7 @@ namespace Seeker.Gamebook.DzungarWar
 
             TestParam(Stat, Level, out bool testIsOk, out List<string> result);
 
-            foreach (string line in result)
-                testLines.Add(line);
-
+            testLines.AddRange(result);
             testLines.Add(testIsOk ? "BIG|GOOD|АЛДАР СПРАВИЛСЯ :)" : "BIG|BAD|АЛДАР НЕ СПРАВИЛСЯ :(");
 
             return testLines;
@@ -320,9 +317,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 TestParam(test.Trim(), level, out bool thisTestIsOk, out List<string> result);
 
-                foreach(string line in result)
-                    testLines.Add(line);
-
+                testLines.AddRange(result);
                 testLines.Add(thisTestIsOk ? "GOOD|Алдар справился" : "BAD|Алдар не справился");
 
                 if (!thisTestIsOk)
