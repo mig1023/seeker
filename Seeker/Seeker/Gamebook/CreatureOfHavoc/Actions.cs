@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public int WoundsToWin { get; set; }
         public int RoundsToWin { get; set; }
+        public int RoundsToFight { get; set; }
 
         public bool Ophidiotaur { get; set; }
         public bool ManicBeast { get; set; }
@@ -287,6 +288,13 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         fight.Add(String.Empty);
                         fight.Add("BAD|Отведённые на победу раунды истекли.");
                         fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                        return fight;
+                    }
+
+                    if ((RoundsToFight > 0) && (RoundsToFight <= round))
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add("BOLD|Отведённые на бой раунды истекли.");
                         return fight;
                     }
 

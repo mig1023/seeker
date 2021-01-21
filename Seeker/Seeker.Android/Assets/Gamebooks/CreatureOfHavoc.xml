@@ -3910,6 +3910,8 @@
 				<Enemies>
 					<Enemy Name="ЧЁРНЫЙ ЭЛЬФ" Mastery="7" Endurance="6"/>
 				</Enemies>
+				<RoundsToFight>2</RoundsToFight>
+				<Aftertext>Вы успеете сразиться только в течение двух раундов.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
