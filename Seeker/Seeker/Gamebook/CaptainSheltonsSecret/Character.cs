@@ -129,12 +129,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             Gold = int.Parse(save[2]);
             ExtendedDamage = int.Parse(save[3]);
             MasteryDamage = int.Parse(save[4]);
-            SeaArmour = (save[5] == "1" ? true : false);
+            SeaArmour = (save[5] == "1");
 
             string[] lucks = save[6].Split(',');
 
             for (int i = 0; i < 6; i++)
-                Luck[i+1] = (lucks[i] == "1" ? true : false);
+                Luck[i+1] = (lucks[i] == "1");
         }
     }
 }

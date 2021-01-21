@@ -89,7 +89,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Strength = int.Parse(save[0]);
             Hitpoints = int.Parse(save[1]);
             Magicpoints = int.Parse(save[2]);
-            FoodIsDivided = (save[3] == "1" ? true : false);
+            FoodIsDivided = (save[3] == "1");
             PoisonBlade = int.Parse(save[4]);
             Gold = int.Parse(save[5]);
             Footwraps = int.Parse(save[6]);

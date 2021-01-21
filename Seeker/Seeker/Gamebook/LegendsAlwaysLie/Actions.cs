@@ -48,7 +48,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
             List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
 
-            reload = ((actionResult.Count >= 1) && (actionResult[0] == "RELOAD") ? true : false);
+            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
 
             return actionResult;
         }
@@ -165,7 +165,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             if (Game.Data.Triggers.Contains("EvilEye"))
             {
                 reactionLevel -= 1;
-                reaction.Add(String.Format("Из-за сглаза уровнь реакции снижается на единицы: {0}", reactionLevel));
+                reaction.Add(String.Format("Из-за сглаза уровнь реакции снижается на единицу: {0}", reactionLevel));
             }
 
             int reactionDice = Game.Dice.Roll();
@@ -194,20 +194,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            if ((Character.Protagonist.Hitpoints <= 0) || (Character.Protagonist.ConneryHitpoints <= 0) || (Character.Protagonist.ConneryTrust <= 0))
-            {
-                toEndParagraph = 0;
-                toEndText = "Начать сначала";
+            toEndParagraph = 0;
+            toEndText = "Начать сначала";
 
-                return true;
-            }
-            else
-            {
-                toEndParagraph = 0;
-                toEndText = String.Empty;
-
-                return false;
-            }
+            return (Character.Protagonist.Hitpoints <= 0) || (Character.Protagonist.ConneryHitpoints <= 0) || (Character.Protagonist.ConneryTrust <= 0);
         }
 
         public bool IsButtonEnabled()
@@ -272,13 +262,13 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     if (Game.Data.Triggers.Contains(oneOption.Trim()))
                         optionCount += 1;
 
-                return (optionCount >= optionMustBe ? true : false);
+                return (optionCount >= optionMustBe);
             }
             else
             {
                 string[] options = option.Split('|', ',');
 
-                bool orLogic = (option.Contains("|") ? true : false);
+                bool orLogic = option.Contains("|");
 
                 foreach (string oneOption in options)
                 {

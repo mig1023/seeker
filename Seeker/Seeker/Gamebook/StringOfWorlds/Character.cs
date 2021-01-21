@@ -135,7 +135,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             string[] lucks = save[7].Split(',');
 
             for (int i = 0; i < 6; i++)
-                Luck[i + 1] = (lucks[i] == "1" ? true : false);
+                Luck[i + 1] = (lucks[i] == "1");
         }
     }
 }

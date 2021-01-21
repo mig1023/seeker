@@ -34,7 +34,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
             List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
 
-            reload = ((actionResult.Count >= 1) && (actionResult[0] == "RELOAD") ? true : false);
+            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
 
             return actionResult;
         }
@@ -156,9 +156,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             bool doubleFail = false;
 
-            bool firstDicesDouble = Game.Dice.Roll() == Game.Dice.Roll();
-            bool secondDicesDouble = Game.Dice.Roll() == Game.Dice.Roll();
-
             for (int i = 0; i < 2; i++)
             {
                 int firstDice = Game.Dice.Roll();
@@ -184,8 +181,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             List<string> pursuit = new List<string>();
 
-            int threeTimesInRow = 0;
-            int theyWin = 0;
+            int threeTimesInRow = 0, theyWin = 0;
             
             for (int i = 1; i < 12; i++)
             {
@@ -218,11 +214,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             }
 
             pursuit.Add(String.Empty);
-
-            if (theyWin > 6)
-                pursuit.Add("BIG|BAD|Они догнали вас :(");
-            else
-                pursuit.Add("BIG|GOOD|Они не догнали вас :)");
+            pursuit.Add(theyWin > 6 ? "BIG|BAD|Они догнали вас :(" : "BIG|GOOD|Они не догнали вас :)");
 
             return pursuit;
         }
@@ -288,9 +280,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
-            int round = 1;
-            int enemyWounds = 0;
-            int shoots = 0;
+            int round = 1, enemyWounds = 0, shoots = 0;
 
             Character hero = Character.Protagonist;
 
@@ -345,8 +335,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                         }
 
                 bool attackAlready = false;
-                int protagonistHitStrength = 0;
-                int protagonistRoll = 0;
+                int protagonistHitStrength = 0, protagonistRoll = 0;
 
                 foreach (Character enemy in FightEnemies)
                 {

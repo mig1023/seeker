@@ -31,7 +31,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
             List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
 
-            reload = ((actionResult.Count >= 1) && (actionResult[0] == "RELOAD") ? true : false);
+            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
 
             return actionResult;
         }
