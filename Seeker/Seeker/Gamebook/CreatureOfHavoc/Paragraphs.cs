@@ -66,6 +66,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
                     Ophidiotaur = Game.Xml.BoolParse(xmlAction["Ophidiotaur"]),
                     ManicBeast = Game.Xml.BoolParse(xmlAction["ManicBeast"]),
+                    GiantHornet = Game.Xml.BoolParse(xmlAction["GiantHornet"]),
                 };
 
                 if (xmlAction["Enemies"] != null)

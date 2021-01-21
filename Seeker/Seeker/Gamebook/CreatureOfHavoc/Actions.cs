@@ -21,6 +21,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public bool Ophidiotaur { get; set; }
         public bool ManicBeast { get; set; }
+        public bool GiantHornet { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -103,11 +104,12 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             return luckCheck;
         }
 
-        private bool WoundAndDeath(ref List<string> fight, ref Character hero, string enemy)
+        private bool WoundAndDeath(ref List<string> fight, ref Character hero, string enemy, int wounds = 2)
         {
-            fight.Add(String.Format("BAD|{0} ранил вас", enemy));
+            if (wounds == 2)
+                fight.Add(String.Format("BAD|{0} ранил вас", enemy));
 
-            hero.Endurance -= 2;
+            hero.Endurance -= wounds;
 
             if (hero.Endurance < 0)
                 hero.Endurance = 0;
@@ -158,8 +160,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     if (enemy.Endurance <= 0)
                         continue;
 
-                    bool doubleDice = false;
-                    bool doubleSixes = false;
+                    bool doubleDice = false, doubleSixes = false, doubleDiceEnemy = false;
 
                     Character enemyInFight = enemy;
                     fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
@@ -173,21 +174,22 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
                             Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), hero.Mastery, protagonistHitStrength
                         ));
-                        
-                        doubleSixes = (protagonistRollFirst == protagonistRollSecond) && (protagonistRollFirst == 6);
+
+                        doubleDice = (protagonistRollFirst == protagonistRollSecond);
+                        doubleSixes = doubleDice && (protagonistRollFirst == 6);
                     }
 
                     int enemyRollFirst = Game.Dice.Roll();
                     int enemyRollSecond = Game.Dice.Roll();
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
 
-                    doubleDice = (enemyRollFirst == enemyRollSecond);
+                    doubleDiceEnemy = (enemyRollFirst == enemyRollSecond);
 
                     fight.Add(String.Format("Мощность его удара: {0} + {1} + {2} = {3}",
                         Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength
                     ));
 
-                    if (previousRoundWound)
+                    if (ManicBeast && previousRoundWound)
                     {
                         enemyHitStrength += 2;
 
@@ -196,7 +198,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         previousRoundWound = false;
                     }
 
-                    if (Ophidiotaur && doubleDice)
+                    if (Ophidiotaur && doubleDiceEnemy)
                     {
                         fight.Add("Офидиотавр наносит удар ядовитым жалом");
 
@@ -207,6 +209,34 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         else if (WoundAndDeath(ref fight, ref hero, enemy.Name))
                             return fight;
                     }
+                    else if (GiantHornet && doubleDiceEnemy)
+                    {
+                        fight.Add("Гигантский наносит удар ядовитым жалом");
+
+                        if (doubleDice)
+                        {
+                            fight.Add("GOOD|Вы наносите шершню удар Мгновенной Смерти");
+                            fight.Add("BAD|Но вы теряете 6 пунктов выносливости");
+
+                            if (WoundAndDeath(ref fight, ref hero, enemy.Name, wounds: 6))
+                                return fight;
+                            else
+                            {
+                                fight.Add(String.Empty);
+                                fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                                return fight;
+                            }
+                        }
+                        else
+                        {
+                            hero.Endurance = 0;
+
+                            fight.Add(String.Format("BAD|Вы смертельно ранены шершнем"));
+                            fight.Add(String.Empty);
+                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                            return fight;
+                        }
+                    } 
                     else if ((doubleSixes || (protagonistHitStrength > enemyHitStrength)) && !attackAlready)
                     {
                         if (doubleSixes)
