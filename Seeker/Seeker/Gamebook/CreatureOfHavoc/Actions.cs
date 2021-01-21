@@ -19,6 +19,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public int WoundsToWin { get; set; }
         public int RoundsToWin { get; set; }
 
+        public bool Ophidiotaur { get; set; }
+
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
             if (trigger)
@@ -75,27 +77,48 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public static bool CheckOnlyIf(string option) => true;
 
-        public List<string> Luck()
+        public List<string> Luck() => Luck(out bool _, notInline: true);
+
+        public List<string> Luck(out bool goodLuck, bool notInline = false)
         {
             int fisrtDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
 
-            bool goodLuck = (fisrtDice + secondDice) < Character.Protagonist.Luck;
+            goodLuck = (fisrtDice + secondDice) < Character.Protagonist.Luck;
 
             List<string> luckCheck = new List<string> { String.Format(
                     "Проверка удачи: {0} + {1} {2} {3}",
                     Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), Character.Protagonist.Luck
             ) };
 
-            luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            luckCheck.Add((notInline ? String.Empty : "BIG|") + (goodLuck ? "GOOD|УСПЕХ :)" : "BAD|НЕУДАЧА :("));
 
-            if (Character.Protagonist.Luck > 2)
+            if ((Character.Protagonist.Luck > 2) && notInline)
             {
                 Character.Protagonist.Luck -= 1;
                 luckCheck.Add("Уровень удачи снижен на единицу");
             }
 
             return luckCheck;
+        }
+
+        private bool WoundAndDeath(ref List<string> fight, ref Character hero, string enemy)
+        {
+            fight.Add(String.Format("BAD|{0} ранил вас", enemy));
+
+            hero.Endurance -= 2;
+
+            if (hero.Endurance < 0)
+                hero.Endurance = 0;
+
+            if (hero.Endurance <= 0)
+            {
+                fight.Add(String.Empty);
+                fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                return true;
+            }
+            else
+                return false;
         }
 
         private bool NoMoreEnemies(List<Character> enemies)
@@ -133,7 +156,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     if (enemy.Endurance <= 0)
                         continue;
 
-                    bool immediateDeath = false;
+                    bool doubleDice = false;
+                    bool doubleSixes = false;
 
                     Character enemyInFight = enemy;
                     fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
@@ -147,21 +171,34 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
                             Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), hero.Mastery, protagonistHitStrength
                         ));
-
-                        immediateDeath = ((protagonistRollFirst == protagonistRollSecond) && (protagonistRollFirst == 6) ? true : false);
+                        
+                        doubleSixes = (protagonistRollFirst == protagonistRollSecond) && (protagonistRollFirst == 6);
                     }
 
                     int enemyRollFirst = Game.Dice.Roll();
                     int enemyRollSecond = Game.Dice.Roll();
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
 
+                    doubleDice = (enemyRollFirst == enemyRollSecond);
+
                     fight.Add(String.Format("Мощность его удара: {0} + {1} + {2} = {3}",
                         Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength
                     ));
 
-                    if ((immediateDeath || (protagonistHitStrength > enemyHitStrength)) && !attackAlready)
+                    if (Ophidiotaur && doubleDice)
                     {
-                        if (immediateDeath)
+                        fight.Add("Офидиотавр наносит удар ядовитым жалом");
+
+                        fight.AddRange(Luck(out bool goodLuck));
+
+                        if (goodLuck)
+                            fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
+                        else if (WoundAndDeath(ref fight, ref hero, enemy.Name))
+                            return fight;
+                    }
+                    else if ((doubleSixes || (protagonistHitStrength > enemyHitStrength)) && !attackAlready)
+                    {
+                        if (doubleSixes)
                         {
                             fight.Add(String.Format("GOOD|{0} убит наповал", enemy.Name));
 
@@ -194,19 +231,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
-
-                        hero.Endurance -= 2;
-
-                        if (hero.Endurance < 0)
-                            hero.Endurance = 0;
-
-                        if (hero.Endurance <= 0)
-                        {
-                            fight.Add(String.Empty);
-                            fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                        if (WoundAndDeath(ref fight, ref hero, enemy.Name))
                             return fight;
-                        }
                     }
                     else
                         fight.Add(String.Format("BOLD|Ничья в раунде"));
