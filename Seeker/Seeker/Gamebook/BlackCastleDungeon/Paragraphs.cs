@@ -59,9 +59,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         Character enemy = new Character
                         {
                             Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                            Mastery = Game.Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
-                            Endurance = Game.Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
+                            MaxMastery = Game.Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
+                            MaxEndurance = Game.Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
                         };
+
+                        enemy.Mastery = enemy.MaxMastery;
+                        enemy.Endurance = enemy.MaxEndurance;
 
                         action.Enemies.Add(enemy);
                     }

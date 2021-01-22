@@ -285,9 +285,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
                         enemy.Endurance -= 2;
 
-                        if (enemy.Endurance <= 0)
-                            enemy.Endurance = 0;
-
                         enemyWounds += 1;
 
                         bool enemyLost = true;
@@ -308,9 +305,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         fight.Add(String.Format("BAD|{0} ранил {1}", enemy.Name, (copyFight ? "копию" : "вас")));
                         
                         hero.Endurance -= 2;
-
-                        if (hero.Endurance < 0)
-                            hero.Endurance = 0;
 
                         if (hero.Endurance <= 0)
                             return false;
