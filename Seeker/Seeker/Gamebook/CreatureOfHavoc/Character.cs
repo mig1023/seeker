@@ -9,7 +9,25 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public static Character Protagonist = new Gamebook.CreatureOfHavoc.Character();
 
         public string Name { get; set; }
-        public int Mastery { get; set; }
+
+        private int _mastery;
+        public int MaxMastery { get; set; }
+        public int Mastery
+        {
+            get
+            {
+                return _mastery;
+            }
+            set
+            {
+                if (value > MaxMastery)
+                    _mastery = MaxMastery;
+                else if (value < 0)
+                    _mastery = 0;
+                else
+                    _mastery = value;
+            }
+        }
 
         private int _endurance;
         public int MaxEndurance { get; set; }
@@ -30,24 +48,44 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             }
         }
 
-        public int Luck { get; set; }
+        private int _luck;
+        public int MaxLuck { get; set; }
+        public int Luck
+        {
+            get
+            {
+                return _luck;
+            }
+            set
+            {
+                if (value > MaxLuck)
+                    _luck = MaxLuck;
+                else if (value < 0)
+                    _luck = 0;
+                else
+                    _luck = value;
+            }
+        }
 
         public void Init()
         {
-            Mastery = Game.Dice.Roll() + 6;
-            MaxEndurance = Game.Dice.Roll() + 6;
+            MaxMastery = Game.Dice.Roll() + 6;
+            Mastery = MaxMastery;
+            MaxEndurance = Game.Dice.Roll(dices: 2) + 12;
             Endurance = MaxEndurance;
-            Endurance = Game.Dice.Roll(dices: 2) + 12;
-            Luck = Game.Dice.Roll() + 6;
+            MaxLuck = Game.Dice.Roll() + 6;
+            Luck = MaxLuck;
         }
 
         public Character Clone()
         {
             return new Character() {
                 Name = this.Name,
+                MaxMastery = this.MaxMastery,
                 Mastery = this.Mastery,
-                Endurance = this.Endurance,
                 MaxEndurance = this.MaxEndurance,
+                Endurance = this.Endurance,
+                MaxLuck = this.MaxLuck,
                 Luck = this.Luck,
             };
         }
@@ -55,8 +93,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}",
-                Mastery, Endurance, MaxEndurance, Luck
+                "{0}|{1}|{2}|{3}|{4}|{5}",
+                MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck
             );
         }
 
@@ -64,10 +102,12 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         {
             string[] save = saveLine.Split('|');
 
-            Mastery = int.Parse(save[0]);
-            Endurance = int.Parse(save[1]);
+            MaxMastery = int.Parse(save[0]);
+            Mastery = int.Parse(save[1]);
             MaxEndurance = int.Parse(save[2]);
-            Luck = int.Parse(save[3]);
+            Endurance = int.Parse(save[3]);
+            MaxLuck = int.Parse(save[4]);
+            Luck = int.Parse(save[5]);
         }
     }
 }
