@@ -861,7 +861,7 @@
 			<Modification Name="Endurance" Value="-3"/>
 		</Modifications>
 		<Options>
-			<Option Destination="248" Text="Выбросить все эти мысли из головы и идти дальше, отправляйся на 248"/>
+			<Option Destination="248" Text="Выбросить все эти мысли из головы и идти дальше"/>
 			<Option Destination="218" Text="Спрятать тело"/>
 			<Option Destination="399" Text="Внимательно осмотреть мертвого Гнома"/>
 		</Options>
