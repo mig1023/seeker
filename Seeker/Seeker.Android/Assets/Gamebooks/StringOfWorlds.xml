@@ -183,8 +183,8 @@
 			</Action>
 		</Actions>	
 		<Options>
-			<Option Destination="635" Text="Если они снизили вашу СИЛУ до 2"/>
-			<Option Destination="343" Text="Если вам удалось победить"/>
+			<Option Destination="635" Text="Они снизили вашу СИЛУ до 2"/>
+			<Option Destination="343" Text="Вам удалось победить"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -661,12 +661,12 @@
 				<Enemies>
 					<Enemy Name="РЫЦАРЬ" Skill="10" Strength="12"/>
 				</Enemies>
-				<Aftertext>В любой момент боя вы можете попытаться сбежать.\n\nЕсли вы победили, то ура!</Aftertext>
+				<Aftertext>В любой момент боя вы можете попытаться сбежать.</Aftertext>
 			</Action>
 		</Actions>	
 		<Options>
 			<Option Destination="557" Text="Попытаться сбежать"/>
-			<Option Destination="265" Text="Если вы победили"/>
+			<Option Destination="265" Text="Вы победили"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -826,8 +826,8 @@
 			</Action>
 		</Actions>	
 		<Options>
-			<Option Destination="635" Text="Если противники снизили вашу СИЛУ до 2, то, увы"/>
-			<Option Destination="135" Text="Если вы победили, то ура"/>
+			<Option Destination="635" Text="Противники снизили вашу СИЛУ до 2"/>
+			<Option Destination="135" Text="Вы победили"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1406,9 +1406,9 @@
 				</Enemies>
 				<HeroWoundsLimit/>
                 <EnemyWoundsLimit/>
-				<Aftertext>Если вы снизили его СИЛУ до 2, то ура!\n\nНо если ваша СИЛА снизится до 2, то увы...\n\nРазумеется, пускать в ход бластер нельзя.</Aftertext>
 			</Action>
-		</Actions>	
+		</Actions>
+		<Triggers>MaidProtection</Triggers>
 		<Options>
 			<Option Destination="17" Text="Вы снизили его СИЛУ до 2"/>
 			<Option Destination="373" Text="Ваша СИЛА снизится до 2"/>
@@ -2241,8 +2241,8 @@
 		<ID>245</ID>
 		<Text>Вечером вы хотя бы попытались заступиться за служанку?</Text>
 		<Options>
-			<Option Destination="317" Text="Да"/>
-			<Option Destination="469" Text="Нет"/>
+			<Option Destination="317" Text="Да" OnlyIf="MaidProtection"/>
+			<Option Destination="469" Text="Нет" OnlyIf="!MaidProtection"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
