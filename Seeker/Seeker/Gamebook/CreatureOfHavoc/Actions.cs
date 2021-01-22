@@ -130,9 +130,6 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             Character.Protagonist.Endurance += 3;
             rocks.Add("+3 выносливости за еду");
 
-            if (Character.Protagonist.Endurance < 0)
-                Character.Protagonist.Endurance = 0;
-
             return rocks;
         }
         
@@ -144,27 +141,39 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
             hunt.AddRange(Luck(out bool goodLuck));
 
-            List<string> HuntPray = new List<string>
-            {
-                "птичку",
-                "кролика",
-                "зайчика",
-                "кабанчика",
-                "ящерку",
-                "мышку",
-                "фазанчика",
-            };
+            string[] huntPray = "птичку, кролика, зайчика, кабанчика, ящерку, мышку, фазанчика".Split(',');
 
             if (goodLuck)
             {
                 Character.Protagonist.Endurance += 2;
-
-                hunt.Add(String.Format("GOOD|Вы поймали {0} и получаете 2 выносливости", HuntPray[Game.Dice.Roll() - 1]));
+                hunt.Add(String.Format("GOOD|Вы поймали {0} и получаете 2 выносливости", huntPray[Game.Dice.Roll() - 1].Trim()));
             }
             else
                 hunt.Add("BAD|Вам неудалось никого поймать");
 
             return hunt;
+        }
+
+        public List<string> PoisonOrFood()
+        {
+            List<string> food = new List<string>();
+
+            food.Add("Пробуете всё на вкус...");
+
+            food.AddRange(Luck(out bool goodLuck));
+
+            if (goodLuck)
+            {
+                food.Add("GOOD|Вы плотно и без помех поели и получаете 2 выносливости");
+                Character.Protagonist.Endurance += 4;
+            }
+            else
+            {
+                food.Add("BAD|Вы по незнанию съели горсть ядовитых трав");
+                Character.Protagonist.Endurance -= 3;
+            }
+
+            return food;
         }
 
         private bool WoundAndDeath(ref List<string> fight, ref Character hero, string enemy, int wounds = 2)
@@ -173,9 +182,6 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 fight.Add(String.Format("BAD|{0} ранил вас", enemy));
 
             hero.Endurance -= wounds;
-
-            if (hero.Endurance < 0)
-                hero.Endurance = 0;
 
             if (hero.Endurance <= 0)
             {
@@ -313,9 +319,6 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                             fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
 
                             enemy.Endurance -= 2;
-
-                            if (enemy.Endurance <= 0)
-                                enemy.Endurance = 0;
                         }
 
                         enemyWounds += 1;
