@@ -61,9 +61,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         Character ally = new Character
                         {
                             Name = Game.Xml.StringParse(xmlAlly.Attributes["Name"]),
-                            Mastery = Game.Xml.IntParse(xmlAlly.Attributes["Mastery"]),
-                            Endurance = Game.Xml.IntParse(xmlAlly.Attributes["Endurance"]),
+                            MaxMastery = Game.Xml.IntParse(xmlAlly.Attributes["Mastery"]),
+                            MaxEndurance = Game.Xml.IntParse(xmlAlly.Attributes["Endurance"]),
                         };
+
+                        ally.Mastery = ally.MaxMastery;
+                        ally.Endurance = ally.MaxEndurance;
 
                         action.Allies.Add(ally);
                     }
@@ -78,9 +81,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         Character enemy = new Character
                         {
                             Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                            Mastery = Game.Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
-                            Endurance = Game.Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
+                            MaxMastery = Game.Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
+                            MaxEndurance = Game.Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
                         };
+
+                        enemy.Mastery = enemy.MaxMastery;
+                        enemy.Endurance = enemy.MaxEndurance;
 
                         action.Enemies.Add(enemy);
                     }
