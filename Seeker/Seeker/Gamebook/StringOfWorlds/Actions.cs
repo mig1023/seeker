@@ -58,7 +58,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
 
-            if (Character.Protagonist.Equipment == "Тюбик")
+            if ((Character.Protagonist.Equipment == "Тюбик") && (Character.Protagonist.Strength < Character.Protagonist.MaxStrength))
                 staticButtons.Add("СЪЕСТЬ ПАСТУ");
 
             return staticButtons;
@@ -66,10 +66,10 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public bool StaticAction(string action)
         {
-            if ((action == "СЪЕСТЬ ПАСТУ") && (Character.Protagonist.Strength < 24))
+            if (action == "СЪЕСТЬ ПАСТУ")
             {
                 Character.Protagonist.Equipment = String.Empty;
-                Character.Protagonist.Strength = 24;
+                Character.Protagonist.Strength = Character.Protagonist.MaxStrength;
                 return true;
             }
 
@@ -203,7 +203,23 @@ namespace Seeker.Gamebook.StringOfWorlds
                 Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodCharm ? "<=" : ">"), Character.Protagonist.Charm
             ) };
 
-            luckCheck.Add(goodCharm ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            if (goodCharm)
+            {
+                luckCheck.Add("BIG|GOOD|УСПЕХ :)");
+                luckCheck.Add("Вы увеличили своё обаяние на единицу");
+
+                Character.Protagonist.Charm += 1;
+            }
+            else
+            {
+                luckCheck.Add("BIG|BAD|НЕУДАЧА :(");
+
+                if (Character.Protagonist.Charm > 2)
+                {
+                    luckCheck.Add("Вы уменьшили своё обаяние на единицу");
+                    Character.Protagonist.Charm -= 1;
+                }
+            }
 
             return luckCheck;
         }
@@ -239,9 +255,6 @@ namespace Seeker.Gamebook.StringOfWorlds
             }
 
             Character.Protagonist.Strength -= dices;
-
-            if (Character.Protagonist.Strength < 0)
-                Character.Protagonist.Strength = 0;
 
             diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
 
@@ -388,9 +401,6 @@ namespace Seeker.Gamebook.StringOfWorlds
 
                         enemy.Strength -= 2;
 
-                        if (enemy.Strength <= 0)
-                            enemy.Strength = 0;
-
                         bool enemyLost = NoMoreEnemies(FightEnemies);
 
                         if (enemyLost)
@@ -409,9 +419,6 @@ namespace Seeker.Gamebook.StringOfWorlds
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
                         hero.Strength -= (DevastatingAttack ? 3 : 2);
-
-                        if (hero.Strength < 0)
-                            hero.Strength = 0;
 
                         if ((hero.Strength <= 0) || (HeroWoundsLimit && (hero.Strength <= 2)))
                         {

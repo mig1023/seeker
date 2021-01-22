@@ -11,13 +11,63 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public string Name { get; set; }
 
-        public int Skill { get; set; }
-        public int Strength { get; set; }
-        public int Charm { get; set; }
+        private int _skill;
+        public int MaxSkill { get; set; }
+        public int Skill
+        {
+            get
+            {
+                return _skill;
+            }
+            set
+            {
+                if (value > MaxSkill)
+                    _skill = MaxSkill;
+                else if (value < 0)
+                    _skill = 0;
+                else
+                    _skill = value;
+            }
+        }
+
+        private int _strength;
+        public int MaxStrength { get; set; }
+        public int Strength
+        {
+            get
+            {
+                return _strength;
+            }
+            set
+            {
+                if (value > MaxStrength)
+                    _strength = MaxStrength;
+                else if (value < 0)
+                    _strength = 0;
+                else
+                    _strength = value;
+            }
+        }
+
+        private int _charm;
+        public int Charm
+        {
+            get
+            {
+                return _charm;
+            }
+            set
+            {
+                if (value < 2)
+                    _charm = 2;
+                else
+                    _charm = value;
+            }
+        }
+
         public int Blaster { get; set; }
         public int GateCode { get; set; }
         public string Equipment { get; set; }
-        public int StrengthAtStart { get; set; }
         public Dictionary<int, bool> Luck { get; set; }
 
         public void Init()
@@ -69,10 +119,11 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             int dice = Game.Dice.Roll(dices: 2);
 
-            Skill = Skills[dice];
-            Strength = Strengths[dice];
+            MaxSkill = Skills[dice];
+            Skill = MaxSkill;
+            MaxStrength = Strengths[dice];
+            Strength = MaxStrength;
             Charm = Charms[dice];
-            StrengthAtStart = Strength;
 
             Blaster = 1;
             GateCode = 0;
@@ -97,13 +148,14 @@ namespace Seeker.Gamebook.StringOfWorlds
             return new Character()
             {
                 Name = this.Name,
+                MaxSkill = this.MaxSkill,
                 Skill = this.Skill,
+                MaxStrength = this.MaxStrength,
                 Strength = this.Strength,
                 Charm = this.Charm,
                 Blaster = this.Blaster,
                 GateCode = this.GateCode,
                 Equipment = this.Equipment,
-                StrengthAtStart = this.StrengthAtStart,
             };
         }
 
@@ -115,8 +167,9 @@ namespace Seeker.Gamebook.StringOfWorlds
                 lucks.Add(luck ? "1" : "0");
 
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}",
-                Skill, Strength, Charm, Blaster, GateCode, Equipment, StrengthAtStart, String.Join(",", lucks)
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}",
+                MaxSkill, Skill, MaxStrength, Strength, Charm, Blaster, GateCode,
+                Equipment, String.Join(",", lucks)
             );
         }
 
@@ -124,15 +177,16 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             string[] save = saveLine.Split('|');
 
-            Skill = int.Parse(save[0]);
-            Strength = int.Parse(save[1]);
-            Charm = int.Parse(save[2]);
-            Blaster = int.Parse(save[3]);
-            GateCode = int.Parse(save[4]);
-            Equipment = save[5];
-            StrengthAtStart = int.Parse(save[6]);
+            MaxSkill = int.Parse(save[0]);
+            Skill = int.Parse(save[1]);
+            MaxStrength = int.Parse(save[2]);
+            Strength = int.Parse(save[3]);
+            Charm = int.Parse(save[4]);
+            Blaster = int.Parse(save[5]);
+            GateCode = int.Parse(save[6]);
+            Equipment = save[7];
 
-            string[] lucks = save[7].Split(',');
+            string[] lucks = save[8].Split(',');
 
             for (int i = 0; i < 6; i++)
                 Luck[i + 1] = (lucks[i] == "1");

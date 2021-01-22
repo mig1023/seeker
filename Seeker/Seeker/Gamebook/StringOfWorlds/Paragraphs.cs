@@ -85,9 +85,12 @@ namespace Seeker.Gamebook.StringOfWorlds
                         Character enemy = new Character
                         {
                             Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                            Skill = Game.Xml.IntParse(xmlEnemy.Attributes["Skill"]),
-                            Strength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
+                            MaxSkill = Game.Xml.IntParse(xmlEnemy.Attributes["Skill"]),
+                            MaxStrength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
                         };
+
+                        enemy.Skill = enemy.MaxSkill;
+                        enemy.Strength = enemy.MaxStrength;
 
                         action.Enemies.Add(enemy);
                     }
