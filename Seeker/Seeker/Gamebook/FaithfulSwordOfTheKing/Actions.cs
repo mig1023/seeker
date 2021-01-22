@@ -254,9 +254,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             enemy.Strength -= ((hero.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(roll) && !dagger ? 3 : 2);
 
-            if (enemy.Strength <= 0)
-                enemy.Strength = 0;
-
             enemyWounds += 1;
 
             bool enemyLost = NoMoreEnemies(FightEnemies);
@@ -388,9 +385,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                         {
                             fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
                             hero.Strength -= 2;
-
-                            if (hero.Strength < 0)
-                                hero.Strength = 0;
 
                             if (hero.Strength <= 0)
                             {
