@@ -80,9 +80,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public static bool CheckOnlyIf(string option) => true;
 
-        public List<string> Luck() => Luck(out bool _, notInline: true);
+        public List<string> Luck() => GoodLuck(out bool _, notInline: true);
 
-        public List<string> Luck(out bool goodLuck, bool notInline = false)
+        public List<string> GoodLuck(out bool goodLuck, bool notInline = false)
         {
             int fisrtDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
@@ -139,7 +139,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
             hunt.Add("Пробуете поймать кого-нибудь...");
 
-            hunt.AddRange(Luck(out bool goodLuck));
+            hunt.AddRange(GoodLuck(out bool goodLuck));
 
             string[] huntPray = "птичку, кролика, зайчика, кабанчика, ящерку, мышку, фазанчика".Split(',');
 
@@ -160,7 +160,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
             food.Add("Пробуете всё на вкус...");
 
-            food.AddRange(Luck(out bool goodLuck));
+            food.AddRange(GoodLuck(out bool goodLuck));
 
             if (goodLuck)
             {
@@ -271,7 +271,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     {
                         fight.Add("Офидиотавр наносит удар ядовитым жалом");
 
-                        fight.AddRange(Luck(out bool goodLuck));
+                        fight.AddRange(GoodLuck(out bool goodLuck));
 
                         if (goodLuck)
                             fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
