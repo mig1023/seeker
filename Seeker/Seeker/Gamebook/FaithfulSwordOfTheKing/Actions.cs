@@ -196,6 +196,30 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return diceWound;
         }
 
+        public List<string> FortunetellersAmbush()
+        {
+            List<string> ambush = new List<string>();
+
+            int firstDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            int result = firstDice + secondDice;
+            bool evenNumber = result % 2 == 0;
+
+            ambush.Add(String.Format("Кубики: {0} + {1} = {2}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), result));
+
+            if (firstDice == secondDice)
+                ambush.Add("BIG|BAD|Выпали одинаковые числа :(");
+            
+            else if (evenNumber)
+                ambush.Add("BIG|GOOD|Получилось четное число :)");
+
+            else
+                ambush.Add("BIG|BAD|Получилось нечетное число :(");
+
+            return ambush;
+        }
+
         public List<string> Pursuit()
         {
             List<string> pursuit = new List<string>();
