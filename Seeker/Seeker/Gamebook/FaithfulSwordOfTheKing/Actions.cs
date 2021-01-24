@@ -177,6 +177,25 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return doubleCheck;
         }
 
+        public List<string> DiceWound()
+        {
+            List<string> diceWound = new List<string>();
+
+            int wounds = Game.Dice.Roll();
+
+            diceWound.Add(String.Format("Бросок: {0}", Game.Dice.Symbol(wounds)));
+
+            if (wounds < 6)
+            {
+                Character.Protagonist.Strength -= wounds;
+                diceWound.Add(String.Format("BIG|BAD|Вы потеряли сил: {0}", wounds));
+            }
+            else
+                diceWound.Add("BIG|BAD|Выпала шестёрка :(");
+ 
+            return diceWound;
+        }
+
         public List<string> Pursuit()
         {
             List<string> pursuit = new List<string>();
