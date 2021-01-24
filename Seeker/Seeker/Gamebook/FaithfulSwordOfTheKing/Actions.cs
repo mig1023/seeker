@@ -96,7 +96,18 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public static bool CheckOnlyIf(string option)
         {
-            if (option == Character.Protagonist.MeritalArt.ToString())
+            if (option.Contains("="))
+            {
+                if (option.Contains("ДЕНЬ >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.Day))
+                    return false;
+                else if (option.Contains("ДЕНЬ =") && (int.Parse(option.Split('=')[1]) != Character.Protagonist.Day))
+                    return false;
+                else if (option.Contains("ДЕНЬ <=") && (int.Parse(option.Split('=')[1]) < Character.Protagonist.Day))
+                    return false;
+
+                return true;
+            }
+            else if (option == Character.Protagonist.MeritalArt.ToString())
                 return true;
             else
                 return Game.Data.Triggers.Contains(option);

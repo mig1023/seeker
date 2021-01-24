@@ -635,11 +635,11 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>64</ID>
-		<Text>Вот уже и Париж. Если вы путешествовали 6 дней или меньше, то 518: , если 7 дней, то 431: , а если 8 или больше.</Text>
+		<Text>Вот уже и Париж. Как долго вы путешествовали?</Text>
 		<Options>
-			<Option Destination="518" Text="Путешествовали 6 дней или меньше"/>
-			<Option Destination="431" Text="7 дней"/>
-			<Option Destination="45" Text="8 или больше"/>
+			<Option Destination="518" Text="6 дней или меньше" OnlyIf="ДЕНЬ &lt;= 6"/>
+			<Option Destination="431" Text="7 дней" OnlyIf="ДЕНЬ = 7"/>
+			<Option Destination="45" Text="8 или больше" OnlyIf="ДЕНЬ >= 8"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
