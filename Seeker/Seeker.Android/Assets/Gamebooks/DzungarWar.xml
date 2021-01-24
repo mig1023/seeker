@@ -1157,8 +1157,7 @@
 			<Modification Name="Danger" Value="10"/>
 		</Modifications>
 		<Options>
-			<Option Destination="151" Text="Если уровень ОПАСНОСТИ стал равен 12 или выше" OnlyIf="ОПАСНОСТЬ > 11"/>
-			<Option Destination="453" Text="Если же уровень ОПАСНОСТИ всё ещё меньше 12" OnlyIf="ОПАСНОСТЬ &lt;= 11"/>
+			<Option Destination="453"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>

@@ -182,10 +182,22 @@ namespace Seeker.Gamebook.DzungarWar
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            toEndParagraph = 150;
-            toEndText = "Стало слишком опасно";
+            bool dangerEnd = Character.Protagonist.Danger >= 12;
 
-            return Character.Protagonist.Danger >= 12;
+            if ((Game.Data.CurrentParagraphID == 106) || (Game.Data.CurrentParagraphID == 148))
+            {
+                toEndParagraph = 122;
+                toEndText = "Далее";
+
+                Character.Protagonist.Danger = null;
+            }
+            else
+            {
+                toEndParagraph = 150;
+                toEndText = "Стало слишком опасно";
+            }
+
+            return dangerEnd;
         }
 
         public bool IsButtonEnabled()
