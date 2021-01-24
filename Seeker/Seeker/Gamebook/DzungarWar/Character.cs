@@ -10,12 +10,96 @@ namespace Seeker.Gamebook.DzungarWar
 
         public string Name { get; set; }
 
-        public int Strength { get; set; }
-        public int Skill { get; set; }
-        public int Wisdom { get; set; }
-        public int Cunning { get; set; }
-        public int Oratory { get; set; }
-        public int? Danger { get; set; }
+        private int _strength;
+        public int Strength
+        {
+            get => _strength;
+            set
+            {
+                if (value > 12)
+                    _strength = 12;
+                else if (value < 0)
+                    _strength = 0;
+                else
+                    _strength = value;
+            }
+        }
+
+        private int _skill;
+        public int Skill
+        {
+            get => _skill;
+            set
+            {
+                if (value > 12)
+                    _skill = 12;
+                else if (value < 0)
+                    _skill = 0;
+                else
+                    _skill = value;
+            }
+        }
+
+        private int _wisdom;
+        public int Wisdom
+        {
+            get => _wisdom;
+            set
+            {
+                if (value > 12)
+                    _wisdom = 12;
+                else if (value < 0)
+                    _wisdom = 0;
+                else
+                    _wisdom = value;
+            }
+        }
+
+        private int _cunning;
+        public int Cunning
+        {
+            get => _cunning;
+            set
+            {
+                if (value > 12)
+                    _cunning = 12;
+                else if (value < 0)
+                    _cunning = 0;
+                else
+                    _cunning = value;
+            }
+        }
+
+        private int _oratory;
+        public int Oratory
+        {
+            get => _oratory;
+            set
+            {
+                if (value > 12)
+                    _oratory = 12;
+                else if (value < 0)
+                    _oratory = 0;
+                else
+                    _oratory = value;
+            }
+        }
+
+        private int? _danger;
+        public int? Danger
+        {
+            get => _danger;
+            set
+            {
+                if (value > 12)
+                    _danger = 12;
+                else if (value < 0)
+                    _danger = 0;
+                else
+                    _danger = value;
+            }
+        }
+
         public int Tanga { get; set; }
         public int? Favour { get; set; }
         public int Tincture { get; set; }
