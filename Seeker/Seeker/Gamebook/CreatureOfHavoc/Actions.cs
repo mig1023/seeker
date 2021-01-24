@@ -176,6 +176,23 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             return food;
         }
 
+        public List<string> Mastery()
+        {
+            int firstDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            bool goodSkill = (firstDice + secondDice) <= Character.Protagonist.Mastery;
+
+            List<string> skillCheck = new List<string> { String.Format(
+                "Проверка мастерства: {0} + {1} {2} {3} мастерство",
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), Character.Protagonist.Mastery
+            ) };
+
+            skillCheck.Add(goodSkill ? "BIG|GOOD|МАСТЕРСТВА ХВАТИЛО :)" : "BIG|BAD|МАСТЕРСТВА НЕ ХВАТИЛО :(");
+
+            return skillCheck;
+        }
+
         private bool WoundAndDeath(ref List<string> fight, ref Character hero, string enemy, int wounds = 2)
         {
             if (wounds == 2)
