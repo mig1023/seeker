@@ -78,7 +78,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public bool IsButtonEnabled() => true;
 
-        public static bool CheckOnlyIf(string option) => true;
+        public static bool CheckOnlyIf(string option) => Game.Data.Triggers.Contains(option);
 
         public List<string> Luck() => GoodLuck(out bool _, notInline: true);
 
