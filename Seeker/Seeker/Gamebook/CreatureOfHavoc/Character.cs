@@ -14,10 +14,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public int MaxMastery { get; set; }
         public int Mastery
         {
-            get
-            {
-                return _mastery;
-            }
+            get => _mastery;
             set
             {
                 if (value > MaxMastery)
@@ -33,10 +30,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public int MaxEndurance { get; set; }
         public int Endurance
         {
-            get
-            {
-                return _endurance;
-            }
+            get => _endurance;
             set
             {
                 if (value > MaxEndurance)
@@ -52,10 +46,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public int MaxLuck { get; set; }
         public int Luck
         {
-            get
-            {
-                return _luck;
-            }
+            get => _luck;
             set
             {
                 if (value > MaxLuck)

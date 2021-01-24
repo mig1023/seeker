@@ -15,10 +15,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public int MaxMastery { get; set; }
         public int Mastery
         {
-            get
-            {
-                return _mastery;
-            }
+            get => _mastery;
             set
             {
                 if (value > MaxMastery)
@@ -34,10 +31,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public int MaxEndurance { get; set; }
         public int Endurance
         {
-            get
-            {
-                return _endurance;
-            }
+            get => _endurance;
             set
             {
                 if (value > MaxEndurance)
@@ -53,10 +47,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public int MaxLuck { get; set; }
         public int Luck
         {
-            get
-            {
-                return _luck;
-            }
+            get => _luck;
             set
             {
                 if (value > MaxLuck)
@@ -71,10 +62,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         private int _gold;
         public int Gold
         {
-            get
-            {
-                return _gold;
-            }
+            get => _gold;
             set
             {
                 if (value < 0)

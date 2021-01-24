@@ -16,10 +16,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int MaxSkill { get; set; }
         public int Skill
         {
-            get
-            {
-                return _skill;
-            }
+            get => _skill;
             set
             {
                 if (value > MaxSkill)
@@ -35,10 +32,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int MaxStrength { get; set; }
         public int Strength
         {
-            get
-            {
-                return _strength;
-            }
+            get => _strength;
             set
             {
                 if (value > MaxStrength)
@@ -53,10 +47,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         private int _honor;
         public int Honor
         {
-            get
-            {
-                return _honor;
-            }
+            get => _honor;
             set
             {
                 if (value < 0)

@@ -15,10 +15,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int MaxMastery { get; set; }
         public int Mastery
         {
-            get
-            {
-                return _mastery;
-            }
+            get => _mastery;
             set
             {
                 if (value > MaxMastery)
@@ -34,10 +31,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int MaxEndurance { get; set; }
         public int Endurance
         {
-            get
-            {
-                return _endurance;
-            }
+            get => _endurance;
             set
             {
                 if (value > MaxEndurance)

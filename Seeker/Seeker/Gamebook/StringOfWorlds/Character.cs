@@ -15,10 +15,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public int MaxSkill { get; set; }
         public int Skill
         {
-            get
-            {
-                return _skill;
-            }
+            get => _skill;
             set
             {
                 if (value > MaxSkill)
@@ -34,10 +31,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public int MaxStrength { get; set; }
         public int Strength
         {
-            get
-            {
-                return _strength;
-            }
+            get => _strength;
             set
             {
                 if (value > MaxStrength)
@@ -52,10 +46,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         private int _charm;
         public int Charm
         {
-            get
-            {
-                return _charm;
-            }
+            get => _charm;
             set
             {
                 if (value < 2)
