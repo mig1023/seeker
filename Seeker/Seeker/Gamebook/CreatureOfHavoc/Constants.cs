@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         {
             [ButtonTypes.Main] = "#145334",
             [ButtonTypes.Action] = "#104229",
-            [ButtonTypes.Option] = "#145334",
+            [ButtonTypes.Option] = "#42755c",
             [ButtonTypes.Continue] = "#a8c196",
         };
 
