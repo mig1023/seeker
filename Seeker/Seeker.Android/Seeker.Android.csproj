@@ -245,6 +245,12 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\CreatureOfHavoc.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\BloodfeudOfAltheus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Gamebooks\BloodfeudOfAltheus.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

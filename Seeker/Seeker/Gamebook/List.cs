@@ -253,6 +253,22 @@ namespace Seeker.Gamebook
                 BookColor = "#145334",
                 Illustration = "CreatureOfHavoc.jpg",
             },
+
+            ["Месть Альтея"] = new Description
+            {
+                XmlBook = "Gamebooks/BloodfeudOfAltheus.xml",
+                Protagonist = BloodfeudOfAltheus.Character.Protagonist.Init,
+                CheckOnlyIf = BloodfeudOfAltheus.Actions.CheckOnlyIf,
+                Paragraphs = new BloodfeudOfAltheus.Paragraphs(),
+                Actions = new BloodfeudOfAltheus.Actions(),
+                Constants = new BloodfeudOfAltheus.Constants(),
+                Save = BloodfeudOfAltheus.Character.Protagonist.Save,
+                Load = BloodfeudOfAltheus.Character.Protagonist.Load,
+                Disclaimer = "Джон Баттерфилд и др, 1985; перевод Kadena и др.",
+                BookColor = "#ebd5b3",
+                FontColor = "#000000",
+                Illustration = "BloodfeudOfAltheus.jpg",
+            },
         };
 
         public static List<string> GetBooks()
