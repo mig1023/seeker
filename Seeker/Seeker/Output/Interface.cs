@@ -79,6 +79,7 @@ namespace Seeker.Output
             {
                 Text = String.Format("© {0}", Gamebook.List.GetDescription(gamebook).Disclaimer),
                 HorizontalTextAlignment = TextAlignment.Start,
+                FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
                 Margin = new Thickness(0, 0, 0, 8),
             };
         }
