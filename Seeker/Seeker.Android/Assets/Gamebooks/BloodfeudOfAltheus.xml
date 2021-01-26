@@ -3790,10 +3790,10 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>502</ID>
-		<Text></Text>
+		<Text>У вас больше 14 очков Славы?</Text>
 		<Options>
-			<Option Destination="62" Text="у вас больше 14 очков Славы"/>
-			<Option Destination="312" Text="меньше, следуйте"/>
+			<Option Destination="62" Text="Да"/>
+			<Option Destination="312" Text="Нет"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3995,9 +3995,9 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>530</ID>
-		<Text></Text>
+		<Text>Нащупав свои ножны, вы понимаете, что случайно взяли меч капитана (Сила 2). Неважно: этот негодяй не заслуживает честного боя. Вы срубаете голову с его плеч. На секунду на его лице появляется выражение удивления, а все заливает кровью, бьющей струей из обрубка. Голова и тело падают на землю, а язык свешивается на песок. Получите 5 очков Позора за этот ужасный поступок. Вы возвращаетесь в сторону судна, надеясь, что никто не увидел, что вы сделали.</Text>
 		<Options>
-			<Option Destination="0" Text="Начать сначала"/>
+			<Option Destination="583"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4138,10 +4138,10 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>548</ID>
-		<Text></Text>
+		<Text>У вас есть маленькая серебряная сережка?</Text>
 		<Options>
-			<Option Destination="108" Text="у вас есть маленькая серебряная сережка"/>
-			<Option Destination="102" Text="же нет, получите от 1 до 6 очков Позора (киньте кубик) и отправляйтесь"/>
+			<Option Destination="108" Text="Да"/>
+			<Option Destination="102" Text="Нет, получите от 1 до 6 очков Позора (киньте кубик)"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
