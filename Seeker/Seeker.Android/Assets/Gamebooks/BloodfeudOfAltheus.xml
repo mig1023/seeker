@@ -684,10 +684,10 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>91</ID>
-		<Text></Text>
+		<Text>Вы должны выбрать:</Text>
 		<Options>
-			<Option Destination="405" Text="Вы должны либо потратить 3 очка Славы за помощь Афины и перейти"/>
-			<Option Destination="325" Text="либо потерять 1 очко Славы и следовать"/>
+			<Option Destination="405" Text="потратить 3 очка Славы за помощь Афины"/>
+			<Option Destination="325" Text="потерять 1 очко Славы, но остаться без её помощи"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
