@@ -15,12 +15,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             [ButtonTypes.Action] = "#ebd5b3",
             [ButtonTypes.Option] = "#ebd5b3",
             [ButtonTypes.Continue] = "#f5ead9",
+            [ButtonTypes.Font] = "#000000",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
             [ColorTypes.ActionBox] = "#ebd5b3",
-            [ColorTypes.StatusBar] = "#bcaa8f ",
+            [ColorTypes.StatusBar] = "#bcaa8f",
+            [ColorTypes.StatusFont] = "#000000",
         };
 
         public string GetButtonsColor(ButtonTypes type)
