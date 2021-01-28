@@ -72,9 +72,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
-            toEndText = String.Empty;
-
-            return false;
+            toEndText = "Позор Альтея невыносим, лучше начать сначала";
+            
+            return Character.Protagonist.Shame > Character.Protagonist.Glory;
         }
 
         public bool IsButtonEnabled() => true;
