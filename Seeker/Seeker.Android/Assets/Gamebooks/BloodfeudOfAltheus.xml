@@ -3684,6 +3684,13 @@
 		</Options>
 	</Paragraph>
 	<Paragraph>
+		<ID>480</ID>
+		<Text>Жрец берет ваши деньги с презрительной улыбкой на лице. Он выводит вас из храма во двор.</Text>
+		<Options>
+			<Option Destination="115"/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
 		<ID>481</ID>
 		<Text>Возница равнодушно пожимает плечами. «Этого хватит. Твоя ставка принимается на зеленую колесницу».</Text>
 		<Options>
