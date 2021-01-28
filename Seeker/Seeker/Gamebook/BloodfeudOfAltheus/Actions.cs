@@ -79,6 +79,20 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public bool IsButtonEnabled() => true;
 
-        public static bool CheckOnlyIf(string option) => true;
+        public static bool CheckOnlyIf(string option)
+        {
+            if (option == "selectOnly")
+                return true;
+
+            if (option.Contains("!"))
+            {
+                if (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()))
+                    return false;
+            }
+            else if (!Game.Data.Triggers.Contains(option.Trim()))
+                return false;
+
+            return true;
+        }
     }
 }

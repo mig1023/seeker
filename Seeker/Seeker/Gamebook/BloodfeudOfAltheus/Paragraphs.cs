@@ -32,7 +32,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             }
 
             if (Game.Xml.BoolParse(xmlParagraph["IntuitiveSolution"]))
-                paragraph.Options.Add(GetOption(destination: id + 20, text: "Интуитивное решение", onlyIf: String.Empty));
+                paragraph.Options.Add(GetOption(destination: id + 20, text: "Интуитивное решение", onlyIf: "selectOnly"));
 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
             {
