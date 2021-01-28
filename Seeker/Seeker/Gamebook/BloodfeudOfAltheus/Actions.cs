@@ -34,16 +34,37 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Сила: {0}", 0),
-                String.Format("Защита: {0}", 0),
-                String.Format("Слава: {0}", 0),
-                String.Format("Позор: {0}", 0),
+                String.Format("Сила: {0}", Character.Protagonist.Strength),
+                String.Format("Защита: {0}", Character.Protagonist.Defence),
+                String.Format("Слава: {0}", Character.Protagonist.Glory),
+                String.Format("Позор: {0}", Character.Protagonist.Shame),
             };
 
             return statusLines;
         }
 
-        public List<string> AdditionalStatus() => null;
+
+        public List<string> AdditionalStatus()
+        {
+            List<string> statusLines = new List<string>();
+
+            Dictionary<int, string> healthLine = new Dictionary<int, string>
+            {
+                [0] = "мёртв", 
+                [1] = "тяжело ранен", 
+                [2] = "ранен", 
+                [3] = "здоров", 
+            };
+
+            statusLines.Add(String.Format("Здоровье: {0}", healthLine[Character.Protagonist.Health]));
+            statusLines.Add(String.Format("Оружие: {0}", Character.Protagonist.WeaponName));
+            statusLines.Add(String.Format("Покровитель: {0}", Character.Protagonist.Patron));
+
+            if (statusLines.Count <= 0)
+                return null;
+
+            return statusLines;
+        }
 
         public List<string> StaticButtons() => new List<string> { };
 
