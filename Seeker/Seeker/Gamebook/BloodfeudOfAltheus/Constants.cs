@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             [ButtonTypes.Main] = "#ebd5b3",
             [ButtonTypes.Action] = "#ebd5b3",
-            [ButtonTypes.Option] = "#ebd5b3",
+            [ButtonTypes.Option] = "#f9f2e8",
             [ButtonTypes.Continue] = "#f5ead9",
             [ButtonTypes.Font] = "#000000",
         };
