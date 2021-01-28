@@ -21,15 +21,18 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
-                Option option = new Option
-                {
-                    Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"], defaultText: "Далее"),
-                    OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
-                };
+                Option option = GetOption
+                (
+                    destination: Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
+                    text: Game.Xml.StringParse(xmlOption.Attributes["Text"], defaultText: "Далее"),
+                    onlyIf: Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"])
+                );
 
                 paragraph.Options.Add(option);
             }
+
+            if (Game.Xml.BoolParse(xmlParagraph["IntuitiveSolution"]))
+                paragraph.Options.Add(GetOption(destination: id + 20, text: "Интуитивное решение", onlyIf: String.Empty));
 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
             {
@@ -58,6 +61,16 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
             return paragraph;
+        }
+
+        private static Option GetOption(int destination, string text, string onlyIf)
+        {
+            return new Option
+            {
+                Destination = destination,
+                Text = text,
+                OnlyIf = onlyIf,
+            };
         }
     }
 }

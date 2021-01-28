@@ -43,7 +43,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return statusLines;
         }
 
-
         public List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>();
