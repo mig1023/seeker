@@ -4109,7 +4109,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>462</ID>
-		<Text>Разбойников двое, их Сила 4, Защита 10, они вооружены длинными ножами (Сила 2, Защита 0). Помните про бонус к Силе первого разбойника, поскольку у него есть напарник (таким образом, его Сила равна 7: 4+2+1).</Text>
+		<Text>Разбойников двое, они вооружены длинными ножами:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Первый разбойник" Strength="6" Defence="10"/>
+					<Enemy Name="Второй разбойник" Strength="6" Defence="10"/>
+				</Enemies>
+			</Action>
+		</Actions>	
 		<Options>
 			<Option Destination="600" Text="Они тяжело ранены"/>
 			<Option Destination="374" Text="Хотите сдаться"/>
