@@ -1073,7 +1073,16 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>124</ID>
-		<Text>Амазонка, одетая в леопардовую шкуру: Сила 8, Защита 15</Text>
+		<Text>Амазонка, одетая в леопардовую шкуру:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Амазонка" Strength="8" Defence="15"/>
+				</Enemies>
+			</Action>
+		</Actions>	
 		<Options>
 			<Option Destination="572" Text="Погибли, но были спасены Зевсом"/>
 			<Option Destination="97" Text="Отступили"/>
