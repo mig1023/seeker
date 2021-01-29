@@ -1175,7 +1175,16 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>136</ID>
-		<Text>Сила быка 10, Защита 18.</Text>
+		<Text>Сражайтесь:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Бык" Strength="10" Defence="18"/>
+				</Enemies>
+			</Action>
+		</Actions>	
 		<Options>
 			<Option Destination="282" Text="Удалось его одолеть"/>
 			<Option Destination="515" Text="Отступаете"/>
