@@ -3146,9 +3146,18 @@
 			<Option Destination="2"/>
 		</Options>
 	</Paragraph>
-	<Paragraph>
+		<Paragraph>
 		<ID>353</ID>
-		<Text>Амазонка: Сила 7, Защита 13.</Text>
+		<Text>Сражайтесь:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Амазонка" Strength="7" Defence="13"/>
+				</Enemies>
+			</Action>
+		</Actions>	
 		<Options>
 			<Option Destination="180" Text="Погибли и спасены Зевсом"/>
 			<Option Destination="275" Text="Бежите от боя"/>
