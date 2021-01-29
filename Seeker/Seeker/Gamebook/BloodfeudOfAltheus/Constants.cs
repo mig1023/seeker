@@ -20,7 +20,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.ActionBox] = "#ebd5b3",
+            [ColorTypes.ActionBox] = "#f9f2e8",
             [ColorTypes.StatusBar] = "#bcaa8f",
             [ColorTypes.StatusFont] = "#000000",
         };
