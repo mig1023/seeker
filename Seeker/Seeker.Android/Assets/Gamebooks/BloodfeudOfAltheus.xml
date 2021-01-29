@@ -2600,7 +2600,16 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>291</ID>
-		<Text>Амазонка не сдается. Помните, что ее Сила 7, Защита 13.</Text>
+		<Text>Амазонка не сдается.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Амазонка" Strength="7" Defence="13"/>
+				</Enemies>
+			</Action>
+		</Actions>	
 		<Options>
 			<Option Destination="527" Text="В конечном итоге вы ее убили"/>
 			<Option Destination="275" Text="Бежали с поля боя"/>
