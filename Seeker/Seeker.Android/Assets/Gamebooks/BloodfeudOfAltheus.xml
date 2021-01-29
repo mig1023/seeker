@@ -3985,7 +3985,16 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>448</ID>
-		<Text>Сила чудовища 16, Защита 10.</Text>
+		<Text>Сражайтесь:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Чудовище" Strength="16" Defence="10"/>
+				</Enemies>
+			</Action>
+		</Actions>	
 		<IntuitiveSolution/>
 		<Options>
 			<Option Destination="533" Text="Нападете на него"/>
