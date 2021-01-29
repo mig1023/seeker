@@ -3289,14 +3289,23 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>369</ID>
-		<Text>Заметив вторжение на свою территорию, крысы вызывающе пищат и бросаются на вас. Бейтесь с ними одновременно. Сила стаи 3, Защита 15.\n\nЕсли вы одержали победу и ни разу не были ранены, получите 4 очка Славы.</Text>
+		<Text>Заметив вторжение на свою территорию, крысы вызывающе пищат и бросаются на вас. Бейтесь с ними одновременно.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Стая крыс" Strength="3" Defence="15"/>
+				</Enemies>
+			</Action>
+		</Actions>	
 		<Modifications>
 			<Modification Name="Glory" Value="4"/>
 		</Modifications>
 		<Options>
 			<Option Destination="490" Text="Решите отступить"/>
 			<Option Destination="51" Text="Погибли, но Зевс воскресил вас"/>
-			<Option Destination="213"/>
+			<Option Destination="213" Text="Вы одержали победу и ни разу не были ранены" Do="Glory" Value="4"/>
 			<Option Destination="451" Text="Победили, но крысы успели покусать вас"/>
 		</Options>
 	</Paragraph>
