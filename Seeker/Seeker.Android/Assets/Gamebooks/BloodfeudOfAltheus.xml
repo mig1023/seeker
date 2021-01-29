@@ -2327,7 +2327,16 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>262</ID>
-		<Text>Воительница, облаченная в медвежью шкуру: Сила 7, Защита 14.</Text>
+		<Text>Воительница, облаченная в медвежью шкуру:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Воительница" Strength="7" Defence="14"/>
+				</Enemies>
+			</Action>
+		</Actions>	
 		<Options>
 			<Option Destination="180" Text="Умерли и спасены Зевсом"/>
 			<Option Destination="275" Text="Бежите с поля боя"/>
