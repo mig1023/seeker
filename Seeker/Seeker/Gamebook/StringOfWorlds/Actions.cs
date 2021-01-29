@@ -372,7 +372,6 @@ namespace Seeker.Gamebook.StringOfWorlds
                     if (enemy.Strength <= 0)
                         continue;
 
-                    Character enemyInFight = enemy;
                     fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
 
                     if (!attackAlready)
