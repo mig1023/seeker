@@ -1827,7 +1827,16 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>208</ID>
-		<Text>Сила волка 2, Защита 12.\n\nЖивотное не может сдаться, а отступать уже слишком поздно.</Text>
+		<Text>Животное не может сдаться, а отступать уже слишком поздно:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Волк" Strength="2" Defence="12"/>
+				</Enemies>
+			</Action>
+		</Actions>	
 		<Options>
 			<Option Destination="400" Text="Убили его"/>
 			<Option Destination="277" Text="Умерли, но Зевс воскресил вас"/>
