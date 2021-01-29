@@ -1517,7 +1517,16 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>176</ID>
-		<Text>Вепрь (Сила 12, Защита 6) нападает на вас.</Text>
+		<Text>Вепрь нападает на вас:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Вепрь" Strength="10" Defence="18"/>
+				</Enemies>
+			</Action>
+		</Actions>	
 		<Options>
 			<Option Destination="615" Text="Побеждаете его"/>
 			<Option Destination="493" Text="Удается успешно отступить"/>
