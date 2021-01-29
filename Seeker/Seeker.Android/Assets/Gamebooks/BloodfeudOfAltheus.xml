@@ -2969,7 +2969,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>333</ID>
-		<Text>Сила бандитов 4, Защита 10. Оба вооружены длинными ножами (Сила 2, Защита 0). Доспехов на них нет. Помните, что первый будет сражаться с Силой 7 (4 + 2 за нож + 1 за то, что у него есть помощник). Сила второго составит 6.</Text>
+		<Text>Бандиты вооружены длинными ножами. Доспехов на них нет.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Первый бандит" Strength="6" Defence="10"/>
+					<Enemy Name="Второй бандит" Strength="6" Defence="10"/>
+				</Enemies>
+			</Action>
+		</Actions>	
 		<Options>
 			<Option Destination="171" Text="Они оба тяжело ранены"/>
 			<Option Destination="374" Text="Вы сдались"/>
