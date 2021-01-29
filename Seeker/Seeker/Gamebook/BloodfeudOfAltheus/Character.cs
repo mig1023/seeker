@@ -10,21 +10,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public string Name { get; set; }
 
-        private int _healt;
-        public int Health
-        {
-            get => _healt;
-            set
-            {
-                if (value > 3)
-                    _healt = 3;
-                else if (value < 0)
-                    _healt = 0;
-                else
-                    _healt = value;
-            }
-        }
-
         private int _strength;
         public int Strength
         {
@@ -82,10 +67,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public string WeaponName { get; set; }
         public string Patron { get; set; }
 
+        public int Health { get; set; }
+
         public void Init()
         {
             Name = String.Empty;
-            Health = 3;
             Strength = 4;
             Defence = 10;
             Glory = 7;
@@ -99,8 +85,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public Character Clone()
         {
             return new Character() {
+
                 Name = this.Name,
-                Health = this.Health,
                 Strength = this.Strength,
                 Defence = this.Defence,
                 Glory = this.Glory,
@@ -109,14 +95,16 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 Weapon = this.Weapon,
                 WeaponName = this.WeaponName,
                 Patron = this.Patron,
+
+                Health = 3,
             };
         }
 
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}",
-                Health, Strength, Defence, Glory, Shame, Armour, Weapon, WeaponName, Patron
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}",
+                Strength, Defence, Glory, Shame, Armour, Weapon, WeaponName, Patron
             );
         }
 
@@ -124,15 +112,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             string[] save = saveLine.Split('|');
 
-            Health = int.Parse(save[0]);
-            Strength = int.Parse(save[1]);
-            Defence = int.Parse(save[2]);
-            Glory = int.Parse(save[3]);
-            Shame = int.Parse(save[4]);
-            Armour = int.Parse(save[5]);
-            Weapon = int.Parse(save[6]);
-            WeaponName = save[7];
-            Patron = save[8];
+            Strength = int.Parse(save[0]);
+            Defence = int.Parse(save[1]);
+            Glory = int.Parse(save[2]);
+            Shame = int.Parse(save[3]);
+            Armour = int.Parse(save[4]);
+            Weapon = int.Parse(save[5]);
+            WeaponName = save[6];
+            Patron = save[7];
         }
     }
 }
