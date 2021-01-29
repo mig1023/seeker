@@ -99,12 +99,50 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return true;
         }
 
-        private bool NoMoreEnemies(List<Character> enemies)
+        private int UseGloryInFight(Character enemy, ref List<string> fight)
+        {
+            bool graveInjury = (Character.Protagonist.Health < 2);
+            bool cantFightOtherwise = (Character.Protagonist.Strength + (graveInjury ? 6 : 12) < enemy.Defence);
+
+            int availableGlory = (Character.Protagonist.Glory - Character.Protagonist.Shame);
+
+            if (cantFightOtherwise && (availableGlory < 1))
+            {
+                fight.Add("Кажется, что положение безнадёжно...");
+                return -1;
+            }
+
+            if (!cantFightOtherwise)
+                return 0;
+
+            int needGlory = (enemy.Defence - Character.Protagonist.Strength + (graveInjury ? 6 : 12) + 2);
+
+            if (needGlory > availableGlory)
+            {
+                fight.Add("Не хватит очков Славы, чтобы что-то исправить...");
+                return -1;
+            }
+            else
+            {
+                fight.Add("Вам придётся использовать Славу!");
+
+                Character.Protagonist.Glory -= needGlory;
+                return needGlory;
+            }
+
+        }
+
+        private bool NoMoreEnemies(List<Character> enemies, bool noHealthy = false)
         {
             foreach (Character enemy in enemies)
-                if (enemy.Health > 0)
+            {
+                if (!noHealthy && enemy.Health > 0)
                     return false;
 
+                if (noHealthy && (enemy.Health > 1))
+                    return false;
+            }
+               
             return true;
         }
 
@@ -112,7 +150,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             Dictionary<int, string> healthLine = new Dictionary<int, string>
             {
-                [0] = "мёртв",
+                [0] = "мертв",
                 [1] = "тяжело ранен",
                 [2] = "ранен",
                 [3] = "здоров",
@@ -140,19 +178,33 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     if (enemy.Health <= 0) 
                         continue;
 
-                    fight.Add(String.Format("Вы: {0}, {1}: {2}", healthLine[hero.Health], enemy.Name, healthLine[enemy.Health]));
+                    fight.Add(String.Format("Вы: {0}ы, {1}: {2}", healthLine[hero.Health], enemy.Name, healthLine[enemy.Health]));
 
                     int protagonistRollFirst = Game.Dice.Roll();
-                    int protagonistRollSecond = Game.Dice.Roll();
-                    int heroStrength = Character.Protagonist.Strength;
-                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + heroStrength;
+                    int protagonistRollSecond = 0;
+                    string secondRollLine = String.Empty;
+                    bool autoFail = false;
 
-                    fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), heroStrength, protagonistHitStrength
-                    ));
+                    int useGlory = UseGloryInFight(enemy, ref fight);
+                    string useGloryLine = (useGlory > 0 ? String.Format(" + {0} Славы", useGlory) : String.Empty);
+
+                    if ((hero.Health > 1) || NoMoreEnemies(FightEnemies, noHealthy: true))
+                    {
+                        protagonistRollSecond = Game.Dice.Roll();
+                        secondRollLine = String.Format(" + {0}", Game.Dice.Symbol(protagonistRollSecond));
+                        autoFail = (protagonistRollFirst + protagonistRollSecond) < 4;
+                    }
+                    else
+                        autoFail = (protagonistRollFirst == 1);
 
                     bool autoHit = (protagonistRollFirst + protagonistRollSecond) > 10;
-                    bool autoFail = (protagonistRollFirst + protagonistRollSecond) < 4;
+
+                    int heroStrength = Character.Protagonist.Strength;
+                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + useGlory + heroStrength;
+
+                    fight.Add(String.Format("Мощность вашего удара: {0}{1} + {2}{3} = {4}",
+                        Game.Dice.Symbol(protagonistRollFirst), secondRollLine, heroStrength, useGloryLine, protagonistHitStrength
+                    ));
 
                     if ((autoHit || (protagonistHitStrength > enemy.Defence)) && !autoFail)
                     {
@@ -173,31 +225,46 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         fight.Add(String.Format("BOLD|Вы не смогли ранить противника", enemy.Name));
 
                     int enemyRollFirst = Game.Dice.Roll();
-                    int enemyRollSecond = Game.Dice.Roll();
-                    int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Strength;
+                    int enemyRollSecond = 0;
+                    string ememySecondRollLine = String.Empty;
 
-                    fight.Add(String.Format("Мощность его удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Strength, enemyHitStrength
-                    ));
+                    if ((enemy.Health > 1) || NoMoreEnemies(FightEnemies, noHealthy: true))
+                    {
+                        enemyRollSecond = Game.Dice.Roll();
+                        ememySecondRollLine = String.Format(" + {0}", Game.Dice.Symbol(enemyRollSecond));
+                        autoFail = (enemyRollFirst + enemyRollSecond) < 4;
+                    }
+                    else
+                        autoFail = (enemyRollFirst == 1);
 
                     autoHit = (enemyRollFirst + enemyRollSecond) > 10;
-                    autoFail = (enemyRollFirst + enemyRollSecond) < 4;
 
-                    if ((autoHit || (protagonistHitStrength < enemyHitStrength)) && !autoFail)
+                    int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Strength;
+
+                    fight.Add(String.Format("Мощность его удара: {0}{1} + {2} = {3}",
+                        Game.Dice.Symbol(enemyRollFirst), ememySecondRollLine, enemy.Strength, enemyHitStrength
+                    ));
+
+                    bool enemyWin = false;
+
+                    if ((autoHit || (enemyHitStrength > hero.Defence)) && !autoFail)
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
                         hero.Health -= 1;
 
                         if (hero.Health <= 0)
-                        {
-                            fight.Add(String.Empty);
-                            fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
-                            return fight;
-                        }
+                            enemyWin = true;
                     }
                     else
                         fight.Add(String.Format("BOLD|Противник не смог ранить вас", enemy.Name));
+
+                    if (enemyWin || (useGlory < 0))
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                        return fight;
+                    }
 
                     fight.Add(String.Empty);
                 }
