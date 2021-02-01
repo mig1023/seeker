@@ -64,8 +64,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         }
 
         private List<string> Weapons { get; set; }
+        private List<string> Armour { get; set; } 
 
-        public int Armour { get; set; } 
         public string Patron { get; set; }
 
         public int Health { get; set; }
@@ -77,9 +77,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Defence = 10;
             Glory = 7;
             Shame = 0;
-            Armour = 0;
             Patron = "нет";
 
+            Armour = new List<string>();
             Weapons = new List<string>();
             Weapons.Add("дубинка, 1, 0");
         }
@@ -93,7 +93,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 Defence = this.Defence,
                 Glory = this.Glory,
                 Shame = this.Shame,
-                Armour = this.Armour,
                 Patron = this.Patron,
 
                 Health = 3,
@@ -103,10 +102,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public string Save()
         {
             string weapons = String.Join(":", Weapons);
+            string armours = String.Join(":", Weapons);
 
             return String.Format(
                 "{0}|{1}|{2}|{3}|{4}|{5}|{6}",
-                Strength, Defence, Glory, Shame, Armour, weapons, Patron
+                Strength, Defence, Glory, Shame, armours, weapons, Patron
             );
         }
 
@@ -118,7 +118,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Defence = int.Parse(save[1]);
             Glory = int.Parse(save[2]);
             Shame = int.Parse(save[3]);
-            Armour = int.Parse(save[4]);
+            Armour = save[4].Split(':').ToList();
             Weapons = save[5].Split(':').ToList();
             Patron = save[6];
         }
@@ -142,6 +142,46 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     defence = int.Parse(weaponParams[2]);
                 }
             }
+        }
+
+        public void AddArmour(string armour) => Armour.Add(armour);
+
+        public void GetArmour(out int armourDefence, out string armourLine)
+        {
+            Dictionary<string, int> currentArmour = new Dictionary<string, int>();
+            Dictionary<string, Dictionary<string, int>> allArmour = new Dictionary<string, Dictionary<string, int>>();
+
+            int defence = 0;
+            string defenceLine = String.Empty;
+
+            GetWeapons(out string name, out int strength, out int weaponDefence);
+
+            if (weaponDefence > 0)
+            {
+                defence += weaponDefence;
+                defenceLine += String.Format(" +{0} за {1}", weaponDefence, name);
+            }
+
+            foreach (string armour in Armour)
+            {
+                string[] armourParams = armour.Split(',');
+
+                if (!allArmour.ContainsKey(armourParams[2]))
+                    allArmour[armourParams[2]] = new Dictionary<string, int>();
+
+                allArmour[armourParams[2]].Add(armourParams[0], int.Parse(armourParams[1]));
+            }
+
+            foreach (string armourType in allArmour.Keys)
+            {
+                KeyValuePair<string, int> armour = allArmour[armourType].FirstOrDefault(x => x.Value == allArmour[armourType].Values.Max());
+
+                defence += armour.Value;
+                defenceLine += String.Format(" +{0} за {1}", armour.Value, armour.Key);
+            }
+
+            armourDefence = defence;
+            armourLine = defenceLine;
         }
     }
 }

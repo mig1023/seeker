@@ -19,6 +19,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             else if (!String.IsNullOrEmpty(ValueString) && (Name == "Weapon"))
                 Character.Protagonist.AddWeapons(ValueString);
 
+            else if (!String.IsNullOrEmpty(ValueString) && (Name == "Armour"))
+                Character.Protagonist.AddArmour(ValueString);
+
             else
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);

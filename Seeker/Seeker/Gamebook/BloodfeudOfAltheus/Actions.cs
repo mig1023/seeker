@@ -216,6 +216,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         weaponStrength, useGloryLine, protagonistHitStrength
                     ));
 
+                    fight.Add(String.Format("Его защита: {0}", enemy.Defence));
+
                     if ((autoHit || (protagonistHitStrength > enemy.Defence)) && !autoFail)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
@@ -255,9 +257,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         Game.Dice.Symbol(enemyRollFirst), ememySecondRollLine, enemy.Strength, enemyHitStrength
                     ));
 
+                    Character.Protagonist.GetArmour(out int armourDefence, out string armourLine);
+
+                    fight.Add(String.Format("Ваша защита: {0}{1}", hero.Defence, armourLine));
+
                     bool enemyWin = false;
 
-                    if ((autoHit || (enemyHitStrength > hero.Defence)) && !autoFail)
+                    if ((autoHit || (enemyHitStrength > (hero.Defence + armourDefence))) && !autoFail)
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
