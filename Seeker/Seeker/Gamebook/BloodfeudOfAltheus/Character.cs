@@ -159,7 +159,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (weaponDefence > 0)
             {
                 defence += weaponDefence;
-                defenceLine += String.Format(" +{0} за {1}", weaponDefence, name);
+                defenceLine += String.Format(" + {0} {1}", weaponDefence, name);
             }
 
             foreach (string armour in Armour)
@@ -177,7 +177,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 KeyValuePair<string, int> armour = allArmour[armourType].FirstOrDefault(x => x.Value == allArmour[armourType].Values.Max());
 
                 defence += armour.Value;
-                defenceLine += String.Format(" +{0} за {1}", armour.Value, armour.Key);
+                defenceLine += String.Format(" + {0} {1}", armour.Value, armour.Key);
             }
 
             armourDefence = defence;

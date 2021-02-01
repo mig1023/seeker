@@ -176,7 +176,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             hero.Health = 3;
 
-            Character.Protagonist.GetWeapons(out string _, out int weaponStrength, out int _);
+            Character.Protagonist.GetWeapons(out string weaponName, out int weaponStrength, out int _);
 
             while (true)
             {
@@ -211,16 +211,16 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + weaponStrength +
                         useGlory + Character.Protagonist.Strength;
 
-                    fight.Add(String.Format("Мощность вашего удара: {0}{1} + {2} Силы + {3} Оружие{4} = {5}",
+                    fight.Add(String.Format("Мощность вашего удара: {0}{1} + {2} Силы + {3} {4}{5} = {6}",
                         Game.Dice.Symbol(protagonistRollFirst), secondRollLine, Character.Protagonist.Strength,
-                        weaponStrength, useGloryLine, protagonistHitStrength
+                        weaponStrength, weaponName, useGloryLine, protagonistHitStrength
                     ));
 
                     fight.Add(String.Format("Его защита: {0}", enemy.Defence));
 
                     if ((autoHit || (protagonistHitStrength > enemy.Defence)) && !autoFail)
                     {
-                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                        fight.Add(String.Format("BOLD|GOOD|{0} ранен", enemy.Name));
 
                         enemy.Health -= 1;
 
@@ -259,13 +259,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     Character.Protagonist.GetArmour(out int armourDefence, out string armourLine);
 
-                    fight.Add(String.Format("Ваша защита: {0}{1}", hero.Defence, armourLine));
+                    fight.Add(String.Format("Ваша защита: {0}{1} = {2}", hero.Defence, armourLine, (hero.Defence + armourDefence)));
 
                     bool enemyWin = false;
 
                     if ((autoHit || (enemyHitStrength > (hero.Defence + armourDefence))) && !autoFail)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+                        fight.Add(String.Format("BOLD|BAD|{0} ранил вас", enemy.Name));
 
                         hero.Health -= 1;
 
