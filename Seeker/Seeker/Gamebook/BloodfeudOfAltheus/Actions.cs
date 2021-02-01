@@ -60,9 +60,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             List<string> statusLines = new List<string>();
 
-            Character.Protagonist.GetWeapons(out string name, out int strength, out int _);
+            Character.Protagonist.GetWeapons(out string name, out int strength, out int defence);
 
-            statusLines.Add(String.Format("Оружие: {0} (+{1})", name, strength));
+            statusLines.Add(String.Format("Оружие: {0} (сила {1}, защита {2})", name, strength, defence));
             statusLines.Add(String.Format("Покровитель: {0}", Character.Protagonist.Patron));
 
             if (statusLines.Count <= 0)
@@ -208,7 +208,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     bool autoHit = (protagonistRollFirst + protagonistRollSecond) > 10;
 
-                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + useGlory + Character.Protagonist.Strength;
+                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + weaponStrength +
+                        useGlory + Character.Protagonist.Strength;
 
                     fight.Add(String.Format("Мощность вашего удара: {0}{1} + {2} Силы + {3} Оружие{4} = {5}",
                         Game.Dice.Symbol(protagonistRollFirst), secondRollLine, Character.Protagonist.Strength,
