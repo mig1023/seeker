@@ -3014,7 +3014,7 @@
 		<ID>332</ID>
 		<Text>Получите 1 очко Позора.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="312"/>
@@ -3138,7 +3138,7 @@
 		<ID>345</ID>
 		<Text>Неужели доблестный Альтей испугался тепла и света? Зевс улыбнулся вам, а вы задрожали. Потеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="244"/>
@@ -3251,7 +3251,7 @@
 		<ID>357</ID>
 		<Text>Не следует сомневаться в побуждениях, что движут богами. Получите 1 очко Позора.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="142"/>
@@ -3373,8 +3373,8 @@
 		<ID>370</ID>
 		<Text>Разумеется, вы не должны дрожать от страха при виде собственного отца. Получите 1 очко Позора и потеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="561"/>
@@ -3661,7 +3661,7 @@
 		<ID>402</ID>
 		<Text>Говорят вам, лучше не сопротивляться! Получите 1 очко Позора.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="459"/>
@@ -3818,8 +3818,8 @@
 		<ID>419</ID>
 		<Text>Ничего умного в голову вам не пришло. Добавьте 1 очко Позора и вычтите 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<IntuitiveSolution/>
 		<Options>
@@ -3962,7 +3962,7 @@
 		<ID>436</ID>
 		<Text>Высвободившись из рук жрицы, вы отказываетесь принять участие в церемонии, объясняя, что вы чужеземец. Толпа отшатывается от вас, как от зачумленного. Вы спешно покидаете город под оглушительные крики и вопли. Добавьте 1 очко Позора. Кроме того, вы впали в Немилость у Деметры.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="138"/>
@@ -4176,7 +4176,7 @@
 		<ID>461</ID>
 		<Text>Усталость затуманила ваш разум. В доме отца вам абсолютно нечего бояться. Потеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="1"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="441"/>
@@ -4259,7 +4259,7 @@
 		<ID>468</ID>
 		<Text>Вы возносите молитву своему покровителю Посейдону. Потеряйте 2 очка Славы.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="-2"/>
+			<Modification Name="Glory" Value="-2" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="599" Text="Можете это сделать"/>
@@ -4397,7 +4397,7 @@
 		<ID>485</ID>
 		<Text>Ах, Альтей, ничто и никто не поможет вам в битве за спасение святилища самого Аполлона! Потеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="1"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="465"/>
@@ -4407,7 +4407,7 @@
 		<ID>486</ID>
 		<Text>Многие хотели похитить сокровища бога. Но ни один не преуспел. Получите 1 очко Позора.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="297"/>
@@ -4502,7 +4502,7 @@
 		<ID>496</ID>
 		<Text>Сны много значат для людей в мире древнегреческих мифов. Часто говорят, что они ниспосланы самими богами. Получите 1 очко Позора.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="476"/>
@@ -5011,7 +5011,7 @@
 		<ID>551</ID>
 		<Text>Получите 1 очко Позора за то, что не поверили этому человеку.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="531"/>
@@ -5139,7 +5139,7 @@
 		<ID>567</ID>
 		<Text>Вам не дождаться помощи здесь, в открытом море, под властью бездонных вод Океана. Потеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="547"/>
@@ -5213,8 +5213,8 @@
 		<ID>574</ID>
 		<Text>Легенда о происхождении Дельфийского оракула гласит, что однажды козел и козопас вдохнули испарения из расщелины в склоне и стали пророчествовать. Вскоре в эти места пришел культ Аполлона, и оракул был заменен Пифией. Изначально Пифией становилась юная девушка, но после того, как одну из них ограбил посетитель храма, жрицами стали избирать женщин постарше. Их прорицания толковали жрецы, и как правило, пророчества были изложены гекзаметром, правда, не самой высокой пробы.\n\nПолучите 1 очко Позора и потеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="554"/>
@@ -5477,7 +5477,7 @@
 		<ID>603</ID>
 		<Text>Трон Кносса сделан из алебастра, и на каждом его боку высечено по грифону. Получите 1 очко Позора.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="158"/>
@@ -5524,7 +5524,7 @@
 		<ID>609</ID>
 		<Text>Герой не должен бояться толпы. Неужели один вид гавани вызвал у вас морскую болезнь? Получите 1 очко Позора.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="589"/>
@@ -5626,7 +5626,7 @@
 		<ID>620</ID>
 		<Text>Вы можете вволю дивиться прихотливости человеческих судеб, но не беспокойте богов. Смерти разбойников достаточно. Получите 1 очко Позора.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="216" Text="Начать сначала"/>
