@@ -591,7 +591,7 @@
 		<ID>65</ID>
 		<Text>Пока совершенно нечего опасаться. Никто не обращает на вас внимания, но вы теряете 1 очко Славы из-за своей робости, которая так сильно отличает вас от доблестного героя, каким был ваш брат.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="45"/>
@@ -736,7 +736,7 @@
 		<ID>81</ID>
 		<Text>Не будьте таким алчным! Потеряйте 2 очка Славы.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="-2"/>
+			<Modification Name="Glory" Value="-2" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="263"/>
@@ -764,7 +764,7 @@
 		<ID>84</ID>
 		<Text>Лахеса - одна из трех богинь судьбы (мойр). У нее есть две сестры, Клото и Атропа. Потеряйте 1 очко Славы за то, что не знали этого.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="64"/>
@@ -794,9 +794,9 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>88</ID>
-		<Text>Перед любым морским путешествием следует обратиться с молитвой к Посейдону.</Text>
+		<Text>Перед любым морским путешествием следует обратиться с молитвой к Посейдону. Вы сделаете это?</Text>
 		<Options>
-			<Option Destination="194" Text="Вы сделаете это"/>
+			<Option Destination="194" Text="Да"/>
 			<Option Destination="348" Text="Нет"/>
 		</Options>
 	</Paragraph>
@@ -1000,7 +1000,7 @@
 		<ID>112</ID>
 		<Text>Вы направляетесь к Дельфийскому оракулу. Попробуйте задать все интересующие вас вопросы ему. Получите 1 очко Позора.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="511"/>
@@ -1149,7 +1149,7 @@
 		<ID>129</ID>
 		<Text>Вы боитесь собак? Думаете, какая-то псина дерзнет укусить героя? Потеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="15"/>
@@ -1516,7 +1516,7 @@
 		<ID>172</ID>
 		<Text>Нет нужды спускаться так осторожно! Потеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="211"/>
@@ -1745,8 +1745,8 @@
 		<ID>195</ID>
 		<Text>Неужели Альтей настолько малодушен, что боится совершить самостоятельную вылазку во вражеский лагерь в темноте? Возможно, вас пугают тени. Какова бы ни была причина, получите 1 очко Позора и потеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="222"/>
@@ -1812,9 +1812,9 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>202</ID>
-		<Text>Совсем тихо вы взываете к своему божественному покровителю и слышите, как тихий голос шепчет вам: «Не знаю. Для меня это тайна!» Потеряйте 1 очко Славы</Text>
+		<Text>Совсем тихо вы взываете к своему божественному покровителю и слышите, как тихий голос шепчет вам: «Не знаю. Для меня это тайна!»\n\nПотеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="182"/>
@@ -1840,9 +1840,9 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>205</ID>
-		<Text>Неужели доблестный Альтей страшится темноты и одиночества? Потеряйте 1 очко Славы.</Text>
+		<Text>Неужели доблестный Альтей страшится темноты и одиночества?\n\nПотеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="185"/>
@@ -1947,7 +1947,7 @@
 		<ID>217</ID>
 		<Text>Греческие вина никогда не отличались изысканностью, особенно в ваше время. Потеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="197"/>
@@ -2050,8 +2050,8 @@
 		<ID>229</ID>
 		<Text>Потеряйте 1 очко Славы и получите 1 очко Позора.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="588"/>
@@ -2151,7 +2151,7 @@
 		<ID>239</ID>
 		<Text>Вы можете винить только себя за то, что оказались в таком неприглядном положении. Потеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="5" Text="Хотите провести остаток жизни на рынках Мегары, добывая себе пропитание воровством"/>
@@ -2210,7 +2210,7 @@
 		<ID>245</ID>
 		<Text>После победы вас внезапно поразил страх? Потеряйте 1 очко Славы.</Text>
 		<Modifications>
-			<Modification Name="Glory" Value="1"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="456"/>
@@ -2325,7 +2325,7 @@
 		<ID>256</ID>
 		<Text>Вы разучились говорить? Вам нужна помощь богов, чтобы вспомнить собственное имя? Получите 1 очко Позора.</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="236"/>
@@ -2995,8 +2995,8 @@
 		<ID>330</ID>
 		<Text>Потеряйте 1 очко Славы и получите 1 очко Позора за подглядывание!</Text>
 		<Modifications>
-			<Modification Name="Shame" Value="1"/>
-			<Modification Name="Glory" Value="-1"/>
+			<Modification Name="Shame" Value="1" IntuitiveSolution="true"/>
+			<Modification Name="Glory" Value="-1" IntuitiveSolution="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="134"/>
@@ -5324,7 +5324,6 @@
 				</Enemies>
 			</Action>
 		</Actions>	
-		
 		<IntuitiveSolution/>
 		<Options>
 			<Option Destination="147" Text="Отступаете"/>
