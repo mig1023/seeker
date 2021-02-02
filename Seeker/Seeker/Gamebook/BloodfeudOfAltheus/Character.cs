@@ -67,6 +67,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         private List<string> Armour { get; set; } 
 
         public string Patron { get; set; }
+        public int NoIntuitiveSolutionPenalty { get; set; }
 
         public int Health { get; set; }
 
@@ -78,6 +79,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Glory = 7;
             Shame = 0;
             Patron = "нет";
+            NoIntuitiveSolutionPenalty = 0;
 
             Armour = new List<string>();
             Weapons = new List<string>();
@@ -94,6 +96,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 Glory = this.Glory,
                 Shame = this.Shame,
                 Patron = this.Patron,
+                NoIntuitiveSolutionPenalty = this.NoIntuitiveSolutionPenalty,
 
                 Health = 3,
             };
@@ -105,8 +108,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             string armours = String.Join(":", Weapons);
 
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}",
-                Strength, Defence, Glory, Shame, armours, weapons, Patron
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}",
+                Strength, Defence, Glory, Shame, armours, weapons, Patron, NoIntuitiveSolutionPenalty
             );
         }
 
@@ -121,6 +124,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Armour = save[4].Split(':').ToList();
             Weapons = save[5].Split(':').ToList();
             Patron = save[6];
+            NoIntuitiveSolutionPenalty = int.Parse(save[7]);
         }
 
         public void AddWeapons(string weapon) => Weapons.Add(weapon);
