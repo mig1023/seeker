@@ -251,6 +251,12 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\BloodfeudOfAltheus.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\PensionerSimulator.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Gamebooks\PensionerSimulator.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
