@@ -75,7 +75,7 @@
 			<Modification Name="Glory" Value="5"/>
 		</Modifications>
 		<Options>
-			<Option Destination="25" Text="Теперь отправляйтесь"/>
+			<Option Destination="25"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -188,7 +188,7 @@
 		<IntuitiveSolution/>
 		<Options>
 			<Option Destination="315" Text="Убили его"/>
-			<Option Destination="263" Text="Погибли, но Зевс воскресил вас"/>
+			<Option Destination="263" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1834,7 +1834,7 @@
 		<Options>
 			<Option Destination="225" Text="Победили эту жуткую тварь"/>
 			<Option Destination="515" Text="Убегаете, отказавшись от задания, которое дал вам отец"/>
-			<Option Destination="47" Text="Погибли, но Зевс воскресил вас"/>
+			<Option Destination="47" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1906,7 +1906,7 @@
 		</Actions>	
 		<Options>
 			<Option Destination="400" Text="Убили его"/>
-			<Option Destination="277" Text="Умерли, но Зевс воскресил вас"/>
+			<Option Destination="277" Text="Умерли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2508,7 +2508,7 @@
 		<Options>
 			<Option Destination="21" Text="Удалось тяжело ранить его"/>
 			<Option Destination="571" Text="Сдаетесь"/>
-			<Option Destination="263" Text="Погибли, но Зевс воскресил вас"/>
+			<Option Destination="263" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3396,7 +3396,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="490" Text="Решите отступить"/>
-			<Option Destination="51" Text="Погибли, но Зевс воскресил вас"/>
+			<Option Destination="51" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
 			<Option Destination="213" Text="Вы одержали победу и ни разу не были ранены" Do="Glory" Value="4"/>
 			<Option Destination="451" Text="Победили, но крысы успели покусать вас"/>
 		</Options>
@@ -3501,7 +3501,7 @@
 		<ID>381</ID>
 		<Text>Вам удается сбросить броню, пока она не утянула вас на дно. Теперь вы готовы сражаться с чудищем, которое атакует беззащитный корабль, чтобы разорвать путников и сожрать их живьем. Да принесет возмездие рука Альтея! Отступить вы не сможете.</Text>
 		<Options>
-			<Option Destination="504" Text="Погибли, но Зевс воскресил вас"/>
+			<Option Destination="504" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
 			<Option Destination="498" Text="Удалось тяжело ранить змея"/>
 		</Options>
 	</Paragraph>
@@ -4517,7 +4517,7 @@
 		</Actions>	
 		<Options>
 			<Option Destination="407" Text="Отступаете"/>
-			<Option Destination="230" Text="Погибли, и Зевс воскресил вас, вы оказываетесь"/>
+			<Option Destination="230" Text="Погибли, и Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
 			<Option Destination="556" Text="Сдаетесь"/>
 			<Option Destination="151" Text="Удалось убить троих из них"/>
 		</Options>
@@ -5633,7 +5633,7 @@
 		<Options>
 			<Option Destination="526" Text="Победили"/>
 			<Option Destination="210" Text="Хотите отступить (не забудьте потерять 1 очко Славы, даже если ваша попытка к бегству не увенчалась успехом)" Do="Glory" Value="1"/>
-			<Option Destination="362" Text="Погибли, но Зевс воскресил вас"/>
+			<Option Destination="362" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
