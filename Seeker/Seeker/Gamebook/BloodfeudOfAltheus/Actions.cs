@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public int Dices { get; set; }
 
         public List<Character> Enemies { get; set; }
+        public bool FightToDeath { get; set; }
 
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
@@ -224,7 +225,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                         enemy.Health -= 1;
 
-                        bool enemyLost = NoMoreEnemies(FightEnemies);
+                        bool enemyLost = NoMoreEnemies(FightEnemies, noHealthy: !FightToDeath);
 
                         if (enemyLost)
                         {

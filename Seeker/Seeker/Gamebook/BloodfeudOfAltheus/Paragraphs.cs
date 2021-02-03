@@ -53,6 +53,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+
+                    FightToDeath = Game.Xml.BoolParse(xmlAction["FightToDeath"]),
                 };
 
                 if (xmlAction["Enemies"] != null)
