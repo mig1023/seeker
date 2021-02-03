@@ -96,7 +96,10 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             else if (option.Contains("ПОКРОВИТЕЛЬ"))
                 return Character.Protagonist.Patron == option.Split(' ')[1];
 
-            else if (option.Contains("!"))
+            if (option.Contains("ВОСКРЕШЕНИЕ"))
+                return Character.Protagonist.Resurrection <= 0;
+
+            if (option.Contains("!"))
             {
                 if (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()))
                     return false;
