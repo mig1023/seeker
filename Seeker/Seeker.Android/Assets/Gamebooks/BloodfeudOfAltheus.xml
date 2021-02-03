@@ -175,6 +175,16 @@
 	<Paragraph>
 		<ID>21</ID>
 		<Text>Тяжело раненый Прокруст не сдается, а впадает в ярость. Он отбрасывает свою секиру, и за него теперь надо кидать всего один кубик, но в боевом раже его Сила равна 12, а Защита - 5.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Прокруст" Strength="12" Defence="5"/>
+				</Enemies>
+				<LastWound/>
+			</Action>
+		</Actions>	
 		<IntuitiveSolution/>
 		<Options>
 			<Option Destination="315" Text="Убили его"/>
@@ -438,6 +448,7 @@
 					<Enemy Name="Талос" Strength="14" Defence="18"/>
 				</Enemies>
 				<FightToDeath/>
+				<Aftertext>Вместо сражения вы можете попробовать выдернуть пробку.</Aftertext>
 			</Action>
 		</Actions>	
 		<Options>
