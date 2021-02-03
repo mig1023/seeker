@@ -245,6 +245,7 @@
 					<Enemy Name="Талос" Strength="14" Defence="18"/>
 				</Enemies>
 				<Aftertext>Вы не можете отступить.</Aftertext>
+				<FightToDeath/>
 			</Action>
 		</Actions>	
 		<IntuitiveSolution/>
@@ -436,6 +437,7 @@
 				<Enemies>
 					<Enemy Name="Талос" Strength="14" Defence="18"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>	
 		<Options>
@@ -1212,6 +1214,7 @@
 				<Enemies>
 					<Enemy Name="Бык" Strength="10" Defence="18"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>	
 		<Options>
@@ -1558,6 +1561,7 @@
 				<Enemies>
 					<Enemy Name="Вепрь" Strength="10" Defence="18"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>	
 		<Options>
@@ -1586,6 +1590,7 @@
 				<Enemies>
 					<Enemy Name="Талос" Strength="14" Defence="18"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -1601,9 +1606,19 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>179</ID>
-		<Text>Сила чудовища 22, Защита 14.</Text>
+		<Text>Сражайтесь:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Чудовище" Strength="22" Defence="14"/>
+				</Enemies>
+				<FightToDeath/>
+			</Action>
+		</Actions>	
 		<Options>
-			<Option Destination="533" Text="Атакуете его"/>
+			<Option Destination="533" Text="Победили его"/>
 			<Option Destination="562" Text="Подождете в надежде, что тварь не станет нападать на корабль"/>
 		</Options>
 	</Paragraph>
@@ -1802,6 +1817,7 @@
 				<Enemies>
 					<Enemy Name="Бык" Strength="10" Defence="16"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>	
 		<Options>
@@ -1874,6 +1890,7 @@
 				<Enemies>
 					<Enemy Name="Волк" Strength="2" Defence="12"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>	
 		<Options>
@@ -2255,6 +2272,7 @@
 					<Enemy Name="Четвёртый стражник" Strength="5" Defence="14"/>
 					<Enemy Name="Пятые стражник" Strength="5" Defence="14"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -2654,6 +2672,7 @@
 				<Enemies>
 					<Enemy Name="Амазонка" Strength="7" Defence="13"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>	
 		<Options>
@@ -3357,6 +3376,7 @@
 				<Enemies>
 					<Enemy Name="Стая крыс" Strength="3" Defence="15"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>	
 		<Modifications>
@@ -3532,6 +3552,7 @@
 					<Enemy Name="Первый бандит" Strength="6" Defence="11"/>
 					<Enemy Name="Второй бандит" Strength="6" Defence="11"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>	
 		<Options>
@@ -4068,11 +4089,12 @@
 				<Enemies>
 					<Enemy Name="Чудовище" Strength="16" Defence="10"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>	
 		<IntuitiveSolution/>
 		<Options>
-			<Option Destination="533" Text="Нападете на него"/>
+			<Option Destination="533" Text="Победили его"/>
 			<Option Destination="371" Text="Подождать, надеясь что создание Посейдона не причинит вам вреда"/>
 		</Options>
 	</Paragraph>
@@ -4479,14 +4501,13 @@
 				<Enemies>
 					<Enemy Name="Толпа" Strength="8" Defence="11"/>
 				</Enemies>
-				<Aftertext>Каждый раз, как ваш удар достигает цели, вы убиваете одного из них, и Сила уменьшается на 1.</Aftertext>
 			</Action>
 		</Actions>	
 		<Options>
 			<Option Destination="407" Text="Отступаете"/>
 			<Option Destination="230" Text="Погибли, и Зевс воскресил вас, вы оказываетесь"/>
 			<Option Destination="556" Text="Сдаетесь"/>
-			<Option Destination="151" Text="Удалось убить пятерых из них"/>
+			<Option Destination="151" Text="Удалось убить троих из них"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4966,7 +4987,7 @@
 		</Actions>	
 		<IntuitiveSolution/>
 		<Options>
-			<Option Destination="533" Text="Напасть на это океанское отродье"/>
+			<Option Destination="533" Text="Победили это океанское отродье"/>
 			<Option Destination="562" Text="Хранить молчание и затихнете в надежде, что исполинский змей не заметит корабль"/>
 			<Option Destination="34" Text="Взываете к морскому богу с просьбой о помощи"/>
 		</Options>
@@ -4989,6 +5010,7 @@
 				<Enemies>
 					<Enemy Name="Колосс" Strength="14" Defence="18"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>	
 		<Options>
@@ -5247,7 +5269,7 @@
 			</Action>
 		</Actions>	
 		<Options>
-			<Option Destination="533" Text="Нападете на него"/>
+			<Option Destination="533" Text="Победили его"/>
 			<Option Destination="562" Text="Предпочтете затаиться, надеясь что чудовище не заметит корабль"/>
 		</Options>
 	</Paragraph>
@@ -5322,6 +5344,7 @@
 				<Enemies>
 					<Enemy Name="Пес" Strength="8" Defence="17"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>	
 		<IntuitiveSolution/>
@@ -5592,9 +5615,9 @@
 				<Enemies>
 					<Enemy Name="Медведь" Strength="6" Defence="13"/>
 				</Enemies>
+				<FightToDeath/>
 			</Action>
 		</Actions>	
-		
 		<Options>
 			<Option Destination="526" Text="Победили"/>
 			<Option Destination="210" Text="Хотите отступить (не забудьте потерять 1 очко Славы, даже если ваша попытка к бегству не увенчалась успехом)" Do="Glory" Value="1"/>
