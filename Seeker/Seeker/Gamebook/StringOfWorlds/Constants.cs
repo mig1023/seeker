@@ -81,7 +81,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public string GetFont() => String.Empty;
 
-        public bool GetLtlFont() => false;
+        public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.normal;
 
         public double? GetLineHeight() => null;
 

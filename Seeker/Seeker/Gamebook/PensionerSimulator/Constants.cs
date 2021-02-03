@@ -29,7 +29,7 @@ namespace Seeker.Gamebook.PensionerSimulator
 
         public string GetFont() => String.Empty;
 
-        public bool GetLtlFont() => false;
+        public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
 
         public double? GetLineHeight() => null;
     }

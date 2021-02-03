@@ -268,17 +268,27 @@ namespace Seeker.Gamebook
                 BookColor = "#ebd5b3",
                 FontColor = "#000000",
                 Illustration = "BloodfeudOfAltheus.jpg",
+                ShowDisabledOption = true,
+            },
+
+            ["Симулятор пенсионерки"] = new Description
+            {
+                XmlBook = "Gamebooks/PensionerSimulator.xml",
+                Protagonist = PensionerSimulator.Character.Protagonist.Init,
+                CheckOnlyIf = PensionerSimulator.Actions.CheckOnlyIf,
+                Paragraphs = new PensionerSimulator.Paragraphs(),
+                Actions = new PensionerSimulator.Actions(),
+                Constants = new PensionerSimulator.Constants(),
+                Save = PensionerSimulator.Character.Protagonist.Save,
+                Load = PensionerSimulator.Character.Protagonist.Load,
+                Disclaimer = "Zaratystra, 2018",
+                BookColor = "#030436",
+                Illustration = "PensionerSimulator.jpg",
             },
         };
 
-        public static List<string> GetBooks()
-        {
-            return new List<string>(Books.Keys);
-        }
+        public static List<string> GetBooks() => new List<string>(Books.Keys);
 
-        public static Description GetDescription(string name)
-        {
-            return Books[name];
-        }
+        public static Description GetDescription(string name) => Books[name];
     }
 }

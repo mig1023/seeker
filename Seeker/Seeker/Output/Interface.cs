@@ -10,6 +10,10 @@ namespace Seeker.Output
 {
     class Interface
     {
+        public enum TextFontSize { little, normal, big };
+
+        private static double BIG_FONT = 25;
+
         public static List<Label> StatusBar(List<string> statusLines)
         {
             List<Label> statusLabels = new List<Label>();
@@ -215,8 +219,10 @@ namespace Seeker.Output
                 else
                     label.LineHeight = 1.20;
 
-                if (!Game.Data.Constants.GetLtlFont())
+                if (Game.Data.Constants.GetFontSize() == TextFontSize.normal)
                     label.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
+                else if (Game.Data.Constants.GetFontSize() == TextFontSize.big)
+                    label.FontSize = BIG_FONT;
             }
 
             if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))

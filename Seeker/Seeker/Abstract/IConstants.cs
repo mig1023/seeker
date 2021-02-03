@@ -12,7 +12,7 @@ namespace Seeker.Abstract
 
         string GetFont();
 
-        bool GetLtlFont();
+        Output.Interface.TextFontSize GetFontSize();
 
         double? GetLineHeight();
 
