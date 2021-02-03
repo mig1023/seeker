@@ -108,7 +108,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public string Save()
         {
             string weapons = String.Join(":", Weapons);
-            string armours = String.Join(":", Weapons);
+            string armours = String.Join(":", Armour);
 
             return String.Format(
                 "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}",
