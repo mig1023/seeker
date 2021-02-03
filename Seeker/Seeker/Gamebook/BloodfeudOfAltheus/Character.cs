@@ -86,7 +86,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Weapons.Add("дубинка, 1, 0");
         }
 
-        public Character Clone()
+        public Character Clone(bool lastWound = false)
         {
             return new Character() {
 
@@ -98,7 +98,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 Patron = this.Patron,
                 NoIntuitiveSolutionPenalty = this.NoIntuitiveSolutionPenalty,
 
-                Health = 3,
+                Health = (lastWound ? 1 : 3),
             };
         }
 
