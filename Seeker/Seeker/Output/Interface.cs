@@ -204,7 +204,7 @@ namespace Seeker.Output
             Label label = new Label
             {
                 Margin = 5,
-                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                FontSize = Device.GetNamedSize((defaultParams ? NamedSize.Large : NamedSize.Medium), typeof(Label)),
                 Text = System.Text.RegularExpressions.Regex.Unescape(text),
                 FontFamily = TextFontFamily(),
             };
