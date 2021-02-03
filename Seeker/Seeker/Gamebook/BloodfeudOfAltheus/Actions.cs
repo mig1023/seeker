@@ -154,6 +154,20 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return true;
         }
 
+        private int ComradeBonus(List<Character> enemies, int currentEnemy)
+        {
+            int bonus = 0;
+
+            if ((currentEnemy + 1) == enemies.Count)
+                return bonus;
+
+            for (int i = currentEnemy + 1; i < enemies.Count; i++)
+                if (enemies[i].Health > 1)
+                    bonus += 1;
+
+            return bonus;
+        }
+
         public List<string> Fight()
         {
             Dictionary<int, string> healthLine = new Dictionary<int, string>
@@ -183,8 +197,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
+                int currentEnemy = -1;
+
                 foreach (Character enemy in FightEnemies)
                 {
+                    currentEnemy += 1;
+
                     if (enemy.Health <= 0) 
                         continue;
 
@@ -254,13 +272,24 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Strength;
 
-                    fight.Add(String.Format("Мощность его удара: {0}{1} + {2} = {3}",
-                        Game.Dice.Symbol(enemyRollFirst), ememySecondRollLine, enemy.Strength, enemyHitStrength
+                    int comradesBonus = ComradeBonus(FightEnemies, currentEnemy);
+                    string comradesBonusLine = String.Empty;
+
+                    if (comradesBonus > 0)
+                    {
+                        enemyHitStrength += comradesBonus;
+                        comradesBonusLine = String.Format(" + {0} за товарищей", comradesBonus);
+                    }
+
+                    fight.Add(String.Format("Мощность его удара: {0}{1} + {2}{3} = {4}",
+                        Game.Dice.Symbol(enemyRollFirst), ememySecondRollLine, enemy.Strength, comradesBonusLine, enemyHitStrength
                     ));
 
                     Character.Protagonist.GetArmour(out int armourDefence, out string armourLine);
 
-                    fight.Add(String.Format("Ваша защита: {0}{1} = {2}", hero.Defence, armourLine, (hero.Defence + armourDefence)));
+                    string needTotal = (String.IsNullOrEmpty(armourLine) ? String.Empty : String.Format(" = {0}", (hero.Defence + armourDefence)));
+
+                    fight.Add(String.Format("Ваша защита: {0}{1}{2}", hero.Defence, armourLine, needTotal));
 
                     bool enemyWin = false;
 
