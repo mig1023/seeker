@@ -22,6 +22,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             else if (!String.IsNullOrEmpty(ValueString) && (Name == "Armour"))
                 Character.Protagonist.AddArmour(ValueString);
 
+            else if (Name == "Resurrection")
+            {
+                Character.Protagonist.Resurrection += Value;
+                Character.Protagonist.Glory = 1;
+                Character.Protagonist.Shame = 0;
+            }
+
             else if (!(IntuitiveSolution && (Character.Protagonist.NoIntuitiveSolutionPenalty > 0)))
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
