@@ -259,16 +259,24 @@ namespace Seeker.Output
                 string text = actionLine;
                 bool bold = false;
 
-                if (text.Contains("BIG|"))
-                    actions.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
-                else
-                    actions.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
+                Dictionary<string, Color?> textTypes = new Dictionary<string, Color?>
+                {
+                    ["RED|"] = Color.Red,
+                    ["BLUE|"] = Color.Blue,
+                    ["YELLOW|"] = Color.Yellow,
+                    ["GREEN|"] = Color.Green,
+                    ["BAD|"] = Color.Red,
+                    ["GOOD|"] = Color.Green,
+                    ["BIG|"] = null,
+                    ["BOLD|"] = null,
+                    ["HEAD|"] = null,
+                };
 
-                if (text.Contains("BAD|"))
-                    actions.TextColor = Color.Red;
+                foreach(string color in textTypes.Keys)
+                    if (text.Contains(color))
+                        actions.TextColor = textTypes[color] ?? actions.TextColor;
 
-                if (text.Contains("GOOD|"))
-                    actions.TextColor = Color.Green;
+                actions.FontSize = Device.GetNamedSize(text.Contains("BIG|") ? NamedSize.Large : NamedSize.Medium, typeof(Label));
 
                 if (text.Contains("BOLD|"))
                     bold = true;
@@ -281,8 +289,8 @@ namespace Seeker.Output
                 else
                     actions.HorizontalTextAlignment = TextAlignment.Start;
 
-                foreach (string r in new List<string> { "BIG", "GOOD", "BAD", "HEAD", "BOLD" })
-                    text = text.Replace(String.Format("{0}|", r), String.Empty);
+                foreach (string key in textTypes.Keys)
+                    text = text.Replace(key, String.Empty);
 
                 actions.Text = text;
                 actions.FontFamily = TextFontFamily(bold: bold);
