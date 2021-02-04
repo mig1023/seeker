@@ -56,6 +56,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     FightToDeath = Game.Xml.BoolParse(xmlAction["FightToDeath"]),
                     LastWound = Game.Xml.BoolParse(xmlAction["LastWound"]),
+                    YourRacing = Game.Xml.BoolParse(xmlAction["YourRacing"]),
                 };
 
                 if (xmlAction["Enemies"] != null)

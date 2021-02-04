@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public List<Character> Enemies { get; set; }
         public bool FightToDeath { get; set; }
         public bool LastWound { get; set; }
+        public bool YourRacing { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -118,6 +119,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             string[] teamsColor = { String.Empty, "BLUE|", "RED|", "YELLOW|", "GREEN|" };
             string[] names = { String.Empty, "Cиняя", "Красная", "Жёлтая", "Зелёная" };
 
+            int distance = (YourRacing ? 20 : 10);
+
             while (true)
             {
                 int firstDice = Game.Dice.Roll();
@@ -153,6 +156,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     }
                     else
                         racing.Add("Происшествие было несерьёзным, все колесницы продолжают гонку");
+                }
+                else if (YourRacing && (Character.Protagonist.Patron == "Посейдон") && ((firstDice == 5) || (secondDice == 5)))
+                {
+                    racing.Add("Сам Посейдон помогает вам: Красная команда продвинулась вперёд!");
+                    teams[2] += 1;
                 }
                 else if ((firstDice == 5) || (secondDice == 5) || nobodyCantForward)
                     racing.Add("Никто не смог продвинуться вперёд");
@@ -194,7 +202,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         string path = String.Empty;
 
                         for (int p = 0; p < teams[i]; p++)
-                            path += "░|";
+                            path += "|";
 
                         racing.Add(String.Format("{0}{1}█", teamsColor[i], path));
 
@@ -208,11 +216,17 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         }
                     }
 
-                racing.Add(String.Empty);
-
-                if ((maxSector >= 10) && !doubleMaxSector)
+                if ((maxSector >= distance) && !doubleMaxSector)
                 {
-                    racing.Add(String.Format("BIG|{0}Гонка окончена, {1} команда победила!", teamsColor[winner], names[winner]));
+                    racing.Add(String.Empty);
+
+                    if (YourRacing)
+                        racing.Add(
+                            winner == 2 ? "BIG|RED|Вы ПОБЕДИЛИ, Красная команда пришла первой! :)" :
+                            String.Format("BIG|{0}Вы проиграли, победила {0} команда :(", teamsColor[winner], names[winner])
+                        );
+                    else
+                        racing.Add(String.Format("BIG|{0}Гонка окончена, {1} команда победила!", teamsColor[winner], names[winner]));
                     return racing;
                 }
                 else
