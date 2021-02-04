@@ -110,6 +110,116 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return true;
         }
 
+        public List<string> Racing()
+        {
+            List<string> racing = new List<string> { "ГОНКА НАЧИНАЕТСЯ!" };
+
+            int[] teams = { 0, 0, 0, 0, 0, 0, 0 };
+            string[] teamsColor = { String.Empty, "BLUE|", "RED|", "YELLOW|", "GREEN|" };
+            string[] names = { String.Empty, "Cиняя", "Красная", "Жёлтая", "Зелёная" };
+
+            while (true)
+            {
+                int firstDice = Game.Dice.Roll();
+                int secondDice = Game.Dice.Roll();
+
+                bool diceDouble = (firstDice == secondDice);
+                bool nobodyCantForward = (diceDouble && (teams[firstDice] == -1)) || ((teams[firstDice] == -1) && (teams[secondDice] == -1));
+
+                racing.Add(String.Empty);
+                racing.Add(String.Format(
+                    "BOLD|Следующий бросок: {0} и {1}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice)
+                ));
+
+                if ((firstDice == 6) && diceDouble)
+                {
+                    racing.Add("BAD|Произошло столкновение!");
+
+                    int crashDice = Game.Dice.Roll();
+
+                    racing.Add(String.Format("Кубик столкновения: {0}", Game.Dice.Symbol(crashDice)));
+
+                    if (crashDice < 5)
+                    {
+                        racing.Add(String.Format("BOLD|{0} команда выбывает из гонки!", names[crashDice]));
+                        teams[crashDice] = -1;
+                    }
+                    else if (crashDice == 6)
+                    {
+                        racing.Add(String.Empty);
+                        racing.Add("BIG|BAD|Произошла серьёзная авария, все колесницы выбывают, гонка остановлена :(");
+
+                        return racing;
+                    }
+                    else
+                        racing.Add("Происшествие было несерьёзным, все колесницы продолжают гонку");
+                }
+                else if ((firstDice == 5) || (secondDice == 5) || nobodyCantForward)
+                    racing.Add("Никто не смог продвинуться вперёд");
+
+                else if ((firstDice == 6) || (secondDice == 6))
+                {
+                    racing.Add("Все команды продвинулись вперёд");
+
+                    foreach (int i in new List<int> { 1, 2, 3, 4 })
+                        if (teams[i] >= 0)
+                            teams[i] += 1;
+                }
+                else if (firstDice == secondDice)
+                {
+                    racing.Add(String.Format("{0} команда продвинулась сразу на два сектора!", names[firstDice]));
+                    teams[firstDice] += 2;
+                }
+                else
+                {
+                    foreach (int i in new List<int> { firstDice, secondDice })
+                        if (teams[i] >= 0)
+                        {
+                            racing.Add(String.Format("{0} команда продвинулась вперёд", names[i]));
+                            teams[i] += 1;
+                        }
+                }
+
+                int maxSector = 0;
+                bool doubleMaxSector = false;
+                int winner = 0;
+
+                racing.Add(String.Empty);
+
+                foreach (int i in new List<int> { 1, 2, 3, 4 })
+                    if (teams[i] < 0)
+                        racing.Add(String.Format("{0}{1} команда выбыла из гонки", teamsColor[i], names[i]));
+                    else
+                    {
+                        string path = String.Empty;
+
+                        for (int p = 0; p < teams[i]; p++)
+                            path += "░|";
+
+                        racing.Add(String.Format("{0}{1}█", teamsColor[i], path));
+
+                        if (teams[i] == maxSector)
+                            doubleMaxSector = true;
+                        else if (teams[i] > maxSector)
+                        {
+                            maxSector = teams[i];
+                            doubleMaxSector = false;
+                            winner = i;
+                        }
+                    }
+
+                racing.Add(String.Empty);
+
+                if ((maxSector >= 10) && !doubleMaxSector)
+                {
+                    racing.Add(String.Format("BIG|{0}Гонка окончена, {1} команда победила!", teamsColor[winner], names[winner]));
+                    return racing;
+                }
+                else
+                    racing.Add("Гонка продолжается");
+            }
+        }
+
         private int UseGloryInFight(Character enemy, ref List<string> fight)
         {
             bool graveInjury = (Character.Protagonist.Health < 2);
