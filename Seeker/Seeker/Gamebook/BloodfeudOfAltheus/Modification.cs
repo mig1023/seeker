@@ -22,6 +22,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             else if (!String.IsNullOrEmpty(ValueString) && (Name == "Armour"))
                 Character.Protagonist.AddArmour(ValueString);
 
+            else if (!String.IsNullOrEmpty(ValueString) && (Name == "FellIntoFavor"))
+                Character.Protagonist.FellIntoFavor(ValueString);
+
+            else if (!String.IsNullOrEmpty(ValueString) && (Name == "FellOutOfFavor"))
+                Character.Protagonist.FellIntoFavor(ValueString, fellOut: true);
+
             else if (Name == "Resurrection")
             {
                 Character.Protagonist.Resurrection += Value;

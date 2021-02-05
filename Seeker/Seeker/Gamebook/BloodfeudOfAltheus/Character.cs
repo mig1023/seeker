@@ -65,6 +65,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         private List<string> Weapons { get; set; }
         private List<string> Armour { get; set; } 
+        private List<string> FavorOfTheGods { get; set; }
+        private List<string> DisfavorOfTheGods { get; set; }
 
         public int Resurrection { get; set; }
         public string Patron { get; set; }
@@ -85,6 +87,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             Armour = new List<string>();
             Weapons = new List<string>();
+            FavorOfTheGods = new List<string>();
+            DisfavorOfTheGods = new List<string>();
+
             Weapons.Add("дубинка, 1, 0");
         }
 
@@ -109,10 +114,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             string weapons = String.Join(":", Weapons);
             string armours = String.Join(":", Armour);
+            string favor = String.Join(":", FavorOfTheGods);
+            string disfavor = String.Join(":", DisfavorOfTheGods);
 
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}",
-                Strength, Defence, Glory, Shame, armours, weapons, Patron, NoIntuitiveSolutionPenalty, Resurrection
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}",
+                Strength, Defence, Glory, Shame, armours, weapons, Patron, NoIntuitiveSolutionPenalty, Resurrection, favor, disfavor
             );
         }
 
@@ -129,7 +136,26 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Patron = save[6];
             NoIntuitiveSolutionPenalty = int.Parse(save[7]);
             Resurrection = int.Parse(save[8]);
+            FavorOfTheGods = save[9].Split(':').ToList();
+            DisfavorOfTheGods = save[10].Split(':').ToList();
         }
+
+        public void FellIntoFavor(string godName, bool fellOut = false)
+        {
+            if (fellOut)
+            {
+                DisfavorOfTheGods.Add(godName);
+                FavorOfTheGods.RemoveAll(item => item == godName.Trim());
+            }
+            else
+            {
+                FavorOfTheGods.Add(godName);
+                DisfavorOfTheGods.RemoveAll(item => item == godName.Trim());
+            }
+        }
+
+        public bool IsGodsFavor(string godName) => FavorOfTheGods.Contains(godName);
+        public bool IsGodsDisFavor(string godName) => DisfavorOfTheGods.Contains(godName);
 
         public void AddWeapons(string weapon) => Weapons.Add(weapon);
 
