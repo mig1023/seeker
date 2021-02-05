@@ -111,6 +111,27 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return true;
         }
 
+        public List<string> DiceCheck()
+        {
+            List<string> diceCheck = new List<string>();
+
+            int firstDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+            int sum = firstDice + secondDice;
+
+            diceCheck.Add(String.Format("Кубики: {0} + {1} = {2}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), sum));
+
+            Character hero = Character.Protagonist;
+            int difference = hero.Glory - hero.Shame;
+
+            diceCheck.Add(String.Format("Разница между Славой и Позором: {0} - {1} = {2}", hero.Glory, hero.Shame, difference));
+
+
+            diceCheck.Add(sum > difference ? "BIG|BAD|БОЛЬШЕ или РАВНО :(" : "BIG|GOOD|МЕНЬШЕ :)");
+
+            return diceCheck;
+        }
+
         public List<string> Racing()
         {
             List<string> racing = new List<string> { "ГОНКА НАЧИНАЕТСЯ!" };
