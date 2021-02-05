@@ -85,7 +85,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return Character.Protagonist.Shame > Character.Protagonist.Glory;
         }
 
-        public bool IsButtonEnabled() => true;
+        public bool IsButtonEnabled()
+        {
+            bool disabledByGlory = (ActionName == "DiceSpendGlory") && ((Character.Protagonist.Glory - Character.Protagonist.Shame) < 6);
+
+            return !disabledByGlory;
+        }
 
         public static bool CheckOnlyIf(string option)
         {
@@ -130,6 +135,21 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             diceCheck.Add(sum > difference ? "BIG|BAD|БОЛЬШЕ или РАВНО :(" : "BIG|GOOD|МЕНЬШЕ :)");
 
             return diceCheck;
+        }
+
+        public List<string> DiceSpendGlory()
+        {
+            List<string> spendGlory = new List<string>();
+
+            int dice = Game.Dice.Roll();
+
+            spendGlory.Add(String.Format("Кубики: {0}", Game.Dice.Symbol(dice)));
+
+            Character.Protagonist.Glory -= dice;
+
+            spendGlory.Add(String.Format("BIG|BAD|Вы потратили {0} очков Славы :(", dice));
+
+            return spendGlory;
         }
 
         public List<string> Racing()
