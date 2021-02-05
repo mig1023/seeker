@@ -28,6 +28,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             else if (!String.IsNullOrEmpty(ValueString) && (Name == "FellOutOfFavor"))
                 Character.Protagonist.FellIntoFavor(ValueString, fellOut: true);
 
+            else if (!String.IsNullOrEmpty(ValueString) && (Name == "Indifferent"))
+                Character.Protagonist.FellIntoFavor(ValueString, indifferent: true);
+
             else if (Name == "Resurrection")
             {
                 Character.Protagonist.Resurrection += Value;
