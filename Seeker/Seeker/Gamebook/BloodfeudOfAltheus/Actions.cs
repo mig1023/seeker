@@ -102,10 +102,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             else if (option.Contains("ПОКРОВИТЕЛЬ"))
                 return Character.Protagonist.Patron == option.Split(' ')[1];
 
-            if (option.Contains("БЛАГОСКЛОНЕН"))
+            if (option.Contains("!БЛАГОСКЛОНЕН"))
+                return !Character.Protagonist.IsGodsFavor(option.Split(' ')[1]);
+            else if (option.Contains("БЛАГОСКЛОНЕН"))
                 return Character.Protagonist.IsGodsFavor(option.Split(' ')[1]);
-            
-            if (option.Contains("НЕМИЛОСТИВ"))
+
+            if (option.Contains("!НЕМИЛОСТИВ"))
+                return !Character.Protagonist.IsGodsDisFavor(option.Split(' ')[1]);
+            else if (option.Contains("НЕМИЛОСТИВ"))
                 return Character.Protagonist.IsGodsDisFavor(option.Split(' ')[1]);
 
             if (option.Contains("ВОСКРЕШЕНИЕ"))

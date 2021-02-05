@@ -4216,8 +4216,8 @@
 		<ID>451</ID>
 		<Text>Крысы разносят чуму, и вы подхватили эту ужасную болезнь от зараженного укуса.</Text>
 		<Options>
-			<Option Destination="377" Text="Асклепий безразличен к вам"/>
-			<Option Destination="98" Text="Вы впали у него в Немилость"/>
+			<Option Destination="377" Text="Асклепий безразличен к вам" OnlyIf="!НЕМИЛОСТИВ Асклепий"/>
+			<Option Destination="98" Text="Вы впали у него в Немилость"  OnlyIf="НЕМИЛОСТИВ Асклепий"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
