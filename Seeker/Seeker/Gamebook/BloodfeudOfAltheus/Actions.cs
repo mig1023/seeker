@@ -73,9 +73,46 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return statusLines;
         }
 
-        public List<string> StaticButtons() => new List<string> { };
+        public List<string> StaticButtons()
+        {
+            List<string> staticButtons = new List<string> { };
 
-        public bool StaticAction(string action) => false;
+            if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
+                return staticButtons;
+
+            if (Character.Protagonist.Resurrection > 0)
+                return staticButtons;
+
+            staticButtons.Add("ВОЗЗВАТЬ К ЗЕВСУ ЗА СЛАВОЙ");
+            staticButtons.Add("ВОЗЗВАТЬ К ЗЕВСУ ЗА РАВНОДУШИЕМ");
+
+            return staticButtons;
+        }
+
+        public bool StaticAction(string action)
+        {
+            if (action == "ВОЗЗВАТЬ К ЗЕВСУ ЗА СЛАВОЙ")
+            {
+                Character.Protagonist.Resurrection += 1;
+
+                if (Character.Protagonist.Glory == 0)
+                    Character.Protagonist.Glory = 1;
+                else
+                    Character.Protagonist.Glory += Game.Dice.Roll();
+
+                return true;
+            }
+
+            if (action == "ВОЗЗВАТЬ К ЗЕВСУ ЗА РАВНОДУШИЕМ")
+            {
+                Character.Protagonist.Resurrection += 1;
+                Character.Protagonist.FellIntoFavor(String.Empty, indifferentToAll: true);
+
+                return true;
+            }
+
+            return false;
+        }
 
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {

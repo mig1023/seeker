@@ -40,5 +40,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.normal;
 
         public double? GetLineHeight() => null;
+
+        public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1 };
     }
 }

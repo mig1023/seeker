@@ -140,12 +140,17 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             DisfavorOfTheGods = save[10].Split(':').ToList();
         }
 
-        public void FellIntoFavor(string godName, bool fellOut = false, bool indifferent = false)
+        public void FellIntoFavor(string godName, bool fellOut = false, bool indifferent = false, bool indifferentToAll = false)
         {
             if (fellOut)
             {
                 DisfavorOfTheGods.Add(godName);
                 FavorOfTheGods.RemoveAll(item => item == godName.Trim());
+            }
+            else if (indifferentToAll)
+            {
+                FavorOfTheGods.Clear();
+                DisfavorOfTheGods.Clear();
             }
             else if (indifferent)
             {

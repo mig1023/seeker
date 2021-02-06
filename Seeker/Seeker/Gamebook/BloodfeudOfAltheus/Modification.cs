@@ -31,6 +31,17 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             else if (!String.IsNullOrEmpty(ValueString) && (Name == "Indifferent"))
                 Character.Protagonist.FellIntoFavor(ValueString, indifferent: true);
 
+            else if (Name == "AresFavor")
+            {
+                if (Character.Protagonist.Patron != "Арес")
+                {
+                    Character.Protagonist.FellIntoFavor("Арес");
+                    Character.Protagonist.Glory += 3;
+                }
+                else
+                    Character.Protagonist.Glory += 5;
+            }
+
             else if (Name == "Resurrection")
             {
                 Character.Protagonist.Resurrection += Value;
@@ -41,8 +52,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             else if (!(IntuitiveSolution && (Character.Protagonist.NoIntuitiveSolutionPenalty > 0)))
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
-
-                currentValue += Value;
+                
+                if (!((Name == "Glory") && (Character.Protagonist.Glory <= 0)))
+                    currentValue += Value;
 
                 Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
             }
