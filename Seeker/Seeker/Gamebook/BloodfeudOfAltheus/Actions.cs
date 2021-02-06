@@ -207,7 +207,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             int dice = Game.Dice.Roll();
 
-            spendGlory.Add(String.Format("Кубики: {0}{1}", Game.Dice.Symbol(dice), (addOne ? " + 1" : String.Empty)));
+            spendGlory.Add(String.Format("Кубик: {0}{1}", Game.Dice.Symbol(dice), (addOne ? " + 1" : String.Empty)));
 
             Dictionary<int, int> ltlDices = new Dictionary<int, int> { [1] = 1, [2] = 1, [3] = 2, [4] = 2, [5] = 3, [6] = 3 };
 
@@ -229,7 +229,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             int dice = Game.Dice.Roll();
 
-            lance.Add(String.Format("Кубики: {0}", Game.Dice.Symbol(dice)));
+            lance.Add(String.Format("Кубик: {0}", Game.Dice.Symbol(dice)));
 
             if (dice <= 4)
             {
@@ -242,6 +242,31 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 lance.Add("BIG|GOOD|Бросок достиг цели :)");
 
             return lance;
+        }
+
+        public List<string> WithBareHands()
+        {
+            List<string> bareHands = new List<string>();
+
+            int firstDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+            int sum = firstDice + secondDice;
+            bool success = (sum < Character.Protagonist.Strength);
+
+            bareHands.Add(String.Format("Кубики: {0} + {1} = {2}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), sum));
+            bareHands.Add(String.Format("Ваша Сила: {0} - {1}", Character.Protagonist.Strength, (success ? "больше!" : "меньше или равна...")));
+
+            if (!success)
+            {
+                Character.Protagonist.Shame += 1;
+
+                bareHands.Add("BIG|BAD|Вам не хватило Сил :(");
+                bareHands.Add("Вы получаете одно очко Позора");
+            }
+            else
+                bareHands.Add("BIG|GOOD|Вам хватило Силы :)");
+
+            return bareHands;
         }
 
         public List<string> Racing()
