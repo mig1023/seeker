@@ -13,32 +13,16 @@ namespace Seeker.Gamebook.SwampFever
 
         public void Do()
         {
-            if (Name == "Fury")
-            {
-                Character.Protagonist.Fury += Value;
+            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-                if (Character.Protagonist.Fury > 2)
-                    Character.Protagonist.Fury = 2;
-
-                if (Character.Protagonist.Fury < -2)
-                    Character.Protagonist.Fury = -2;
-            }
+            if (Multiplication)
+                currentValue *= Value;
+            else if (Division)
+                currentValue /= Value;
             else
-            {
-                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+                currentValue += Value;
 
-                if (Multiplication)
-                    currentValue *= Value;
-                else if (Division)
-                    currentValue /= Value;
-                else
-                    currentValue += Value;
-
-                if ((Name == "Stigon") && (currentValue > 6))
-                    currentValue = 6;
-
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
-            }
+            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
         }
     }
 }

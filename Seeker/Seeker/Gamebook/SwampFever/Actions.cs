@@ -429,8 +429,13 @@ namespace Seeker.Gamebook.SwampFever
                 accountingReport.Add(String.Format("Продажа кубометра стигона: +{0} кредов", Character.Protagonist.Rate));
                 accountingReport.Add(String.Format("GOOD|Итого к зачислению: {0} кредов", earnedCreds));
 
-                Character.Protagonist.Rate -= 5;
-                accountingReport.Add(String.Format("Курс стигона упал до: {0} кредов", Character.Protagonist.Rate));
+                if (Character.Protagonist.Rate > 5)
+                {
+                    Character.Protagonist.Rate -= 5;
+                    accountingReport.Add(String.Format("Курс стигона упал до: {0} кредов", Character.Protagonist.Rate));
+                }
+                else
+                    accountingReport.Add("Курсу стигона уже некуда падать...");
             }
 
             accountingReport.Add(String.Empty);
@@ -656,8 +661,7 @@ namespace Seeker.Gamebook.SwampFever
 
                     if (((distance == 0) && (shot > 3)) || ((distance > 0) && (shot > 4)))
                     {
-                        if (Character.Protagonist.Stigon < 5)
-                            Character.Protagonist.Stigon += 1;
+                        Character.Protagonist.Stigon += 1;
 
                         huntReport.Add("BIG|GOOD|Вы подстрелили зверя :)");
                         return huntReport;
@@ -679,8 +683,7 @@ namespace Seeker.Gamebook.SwampFever
 
         private List<string> PursuitWin(List<string> pursuitReport)
         {
-            if (Character.Protagonist.Stigon < 5)
-                Character.Protagonist.Stigon += 1;
+            Character.Protagonist.Stigon += 1;
 
             pursuitReport.Add("BIG|GOOD|Вы настигли шар :)");
             return pursuitReport;
@@ -688,8 +691,7 @@ namespace Seeker.Gamebook.SwampFever
 
         private List<string> PursuitFail(List<string> pursuitReport)
         {
-            if (Character.Protagonist.Fury < 2)
-                Character.Protagonist.Fury += 1;
+            Character.Protagonist.Fury += 1;
 
             pursuitReport.Add("BIG|BAD|Вы упустили куст :(");
             return pursuitReport;

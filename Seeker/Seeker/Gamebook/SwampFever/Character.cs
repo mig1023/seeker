@@ -9,10 +9,63 @@ namespace Seeker.Gamebook.SwampFever
         public static Character Protagonist = new Gamebook.SwampFever.Character();
 
         public string Name { get; set; }
-        public int Fury { get; set; }
-        public int Creds { get; set; }
-        public int Stigon { get; set; }
-        public int Rate { get; set; }
+
+        private int _fury;
+        public int Fury
+        {
+            get => _fury;
+            set
+            {
+                if (value < -2)
+                    _fury = -2;
+                else if (value > 2)
+                    _fury = 2;
+                else
+                    _fury = value;
+            }
+        }
+
+        private int _creds;
+        public int Creds
+        {
+            get => _creds;
+            set
+            {
+                if (value < 0)
+                    _creds = 0;
+                else
+                    _creds = value;
+            }
+        }
+
+        private int _stigon;
+        public int Stigon
+        {
+            get => _stigon;
+            set
+            {
+                if (value < 0)
+                    _stigon = 0;
+                else if (value > 6)
+                    _stigon = 6;
+                else
+                    _stigon = value;
+            }
+        }
+
+        private int _rate;
+        public int Rate
+        {
+            get => _rate;
+            set
+            {
+                if (value < 5)
+                    _rate = 5;
+                else
+                    _rate = value;
+            }
+        }
+
         public int Hitpoints { get; set; }
 
         public int SecondEngine { get; set; }
