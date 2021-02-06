@@ -64,6 +64,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     Character.Protagonist.Glory -= 6;
             }
 
+            else if (Name == "PoseidonDisFavor1")
+            {
+                if (Character.Protagonist.Patron != "Посейдон")
+                    Character.Protagonist.FellIntoFavor("Посейдон", fellOut: true);
+                else
+                    Character.Protagonist.Shame += 1;
+            }
+
             else if (Name == "Resurrection")
             {
                 Character.Protagonist.Resurrection += Value;
