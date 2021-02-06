@@ -3611,10 +3611,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>386</ID>
-		<Text>Вы должны пожертвовать Гере от 2 до 4 очков Славы (киньте кубик, разделите результат на 2, округлите и добавьте единицу).</Text>
+		<Text>Вы должны пожертвовать Гере от 2 до 4 очков Славы:</Text>
+		<Actions>
+			<Action>
+				<ActionName>LtlDiceSpendGlory</ActionName>
+				<ButtonName>Потратить Славу</ButtonName>
+				<Aftertext>(киньте кубик, разделите результат на 2, округлите и добавьте единицу)</Aftertext>
+			</Action>
+		</Actions>	
 		<Options>
-			<Option Destination="373" Text="Решаете сделать это"/>
-			<Option Destination="102" Text="Позволить себе помощь Геры или не хотите этого делать, потеряйте 1 очко Славы и отправляйтесь"/>
+			<Option Destination="373" Text="Cделали это"/>
+			<Option Destination="102" Text="Позволить себе помощь Геры или не хотите этого делать, потеряйте 1 очко Славы" Do="Glory" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4570,7 +4577,7 @@
 		<Text>Вы приближаетесь к толпе. «Друзья, - говорите вы, - это ли то, чего нам следует ожидать от народа Афин, гордого и свободного, но в тоже врямя доброго и мягкого? Почему вы избивате этих чужестранцев? Что плохого они сделали вам?»\n\nУ вас 13 и более очков Позора?</Text>
 		<Options>
 			<Option Destination="214" Text="Да" OnlyIf="ПОЗОР > 12"/>
-			<Option Destination="502" Text="Нет" OnlyIf="ПОЗОР <= 12"/>
+			<Option Destination="502" Text="Нет" OnlyIf="ПОЗОР &lt;= 12"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4691,7 +4698,7 @@
 		<Text>У вас больше 14 очков Славы?</Text>
 		<Options>
 			<Option Destination="62" Text="Да" OnlyIf="СЛАВА > 14"/>
-			<Option Destination="312" Text="Нет" OnlyIf="СЛАВА <= 14"/>
+			<Option Destination="312" Text="Нет" OnlyIf="СЛАВА &lt;= 14"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5118,7 +5125,7 @@
 		<Text>У вас есть маленькая серебряная сережка?</Text>
 		<Options>
 			<Option Destination="108" Text="Да"/>
-			<Option Destination="102" Text="Нет, получите от 1 до 6 очков Позора (киньте кубик)" Do="DiceShame"/>
+			<Option Destination="102" Text="Нет, получите от 1 до 6 очков Позора" Do="DiceShame"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>

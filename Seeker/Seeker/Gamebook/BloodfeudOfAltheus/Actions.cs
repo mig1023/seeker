@@ -199,17 +199,22 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public List<string> LtlDiceSpendGlory() => DiceSpendGlory(ltlDice: true);
 
-        public List<string> DiceSpendGlory(bool ltlDice = false)
+        public List<string> LtlDiceSpendGloryWithOne() => DiceSpendGlory(ltlDice: true, addOne: true);
+
+        public List<string> DiceSpendGlory(bool ltlDice = false, bool addOne = false)
         {
             List<string> spendGlory = new List<string>();
 
             int dice = Game.Dice.Roll();
 
-            spendGlory.Add(String.Format("Кубики: {0}", Game.Dice.Symbol(dice)));
+            spendGlory.Add(String.Format("Кубики: {0}{1}", Game.Dice.Symbol(dice), (addOne ? " + 1" : String.Empty)));
 
             Dictionary<int, int> ltlDices = new Dictionary<int, int> { [1] = 1, [2] = 1, [3] = 2, [4] = 2, [5] = 3, [6] = 3 };
 
             dice = (ltlDice ? ltlDices[dice] : dice);
+
+            if (addOne)
+                dice += 1;
 
             Character.Protagonist.Glory -= dice;
 
