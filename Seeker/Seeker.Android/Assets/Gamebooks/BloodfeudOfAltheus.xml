@@ -3618,11 +3618,11 @@
 		<Text>Вы должны пожертвовать Гере от 2 до 4 очков Славы:</Text>
 		<Actions>
 			<Action>
-				<ActionName>LtlDiceSpendGlory</ActionName>
+				<ActionName>LtlDiceSpendGloryWithOne</ActionName>
 				<ButtonName>Потратить Славу</ButtonName>
 				<Aftertext>(киньте кубик, разделите результат на 2, округлите и добавьте единицу)</Aftertext>
 			</Action>
-		</Actions>	
+		</Actions>
 		<Options>
 			<Option Destination="373" Text="Cделали это"/>
 			<Option Destination="102" Text="Позволить себе помощь Геры или не хотите этого делать, потеряйте 1 очко Славы" Do="Glory" Value="-1"/>
@@ -4594,7 +4594,14 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>491</ID>
-		<Text>Если вы хотите принять помощь Афродиты, белокожей царицы красоты, потратьте от 2 до 4 очков Славы (бросьте один кубик, разделите результат на два, округлите в большую сторону и добавьте единицу)</Text>
+		<Text>Если вы хотите принять помощь Афродиты, белокожей царицы красоты, потратьте от 2 до 4 очков Славы: </Text>
+		<Actions>
+			<Action>
+				<ActionName>LtlDiceSpendGloryWithOne</ActionName>
+				<ButtonName>Потратить Славу</ButtonName>
+				<Aftertext>(бросьте один кубик, разделите результат на два, округлите в большую сторону и добавьте единицу)</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="590" Text="Вы сделали это"/>
 			<Option Destination="54" Text="Вы передумали взывать к богине, потеряйте 1 очко Славы" Do="Glory" Value="-1"/>
