@@ -13,16 +13,90 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public string Name { get; set; }
 
-        public int Strength { get; set; }
-        public int Hitpoints { get; set; }
-        public int Magicpoints { get; set; }
-        public int Gold { get; set; }
+        private int _strength;
+        public int Strength
+        {
+            get => _strength;
+            set
+            {
+                if (value < 0)
+                    _strength = 0;
+                else
+                    _strength = value;
+            }
+        }
+
+        private int _hitpoints;
+        public int Hitpoints
+        {
+            get => _hitpoints;
+            set
+            {
+                if (value < 0)
+                    _hitpoints = 0;
+                else if (value > 30)
+                    _hitpoints = 30;
+                else
+                    _hitpoints = value;
+            }
+        }
+
+        private int _magicpoints;
+        public int Magicpoints
+        {
+            get => _magicpoints;
+            set
+            {
+                if (value < 0)
+                    _magicpoints = 0;
+                else
+                    _magicpoints = value;
+            }
+        }
+
+        private int _gold;
+        public int Gold
+        {
+            get => _gold;
+            set
+            {
+                if (value < 0)
+                    _gold = 0;
+                else
+                    _gold = value;
+            }
+        }
+
         public int Footwraps { get; set; }
         public int TimeForReading { get; set; }
         public int Elixir { get; set; }
 
-        public int ConneryHitpoints { get; set; }
-        public int ConneryTrust { get; set; }
+        private int _conneryHitpoints;
+        public int ConneryHitpoints
+        {
+            get => _conneryHitpoints;
+            set
+            {
+                if (value < 0)
+                    _conneryHitpoints = 0;
+                else if (value > 30)
+                    _conneryHitpoints = 30;
+                else
+                    _conneryHitpoints = value;
+            }
+        }
+        private int _conneryTrust;
+        public int ConneryTrust
+        {
+            get => _conneryTrust;
+            set
+            {
+                if (value < 0)
+                    _conneryTrust = 0;
+                else
+                    _conneryTrust = value;
+            }
+        }
 
         public SpecializationType Specialization { get; set; }
 

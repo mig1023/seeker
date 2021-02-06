@@ -106,13 +106,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             if (healingSpell && !Game.Checks.ExistsInParagraph(actionText: "Вылечить"))
             {
-                staticButtons.Add("ЛЕЧИЛКА");
+                if (Character.Protagonist.Hitpoints < 30)
+                    staticButtons.Add("ЛЕЧИЛКА");
 
-                if ((Character.Protagonist.Magicpoints > 0) && (Character.Protagonist.Hitpoints > 2))
+                if ((Character.Protagonist.ConneryHitpoints < 30) && (Character.Protagonist.Hitpoints > 2))
                     staticButtons.Add("ЛЕЧИЛКА ДЛЯ КОННЕРИ");
             }
 
-            if (Character.Protagonist.Elixir > 0)
+            if ((Character.Protagonist.Elixir > 0) && (Character.Protagonist.Hitpoints < 30))
                 staticButtons.Add("ЭЛИКСИР");
 
             return staticButtons;
@@ -485,9 +486,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         int wound = int.Parse(wounds[0]);
                         Character.Protagonist.Hitpoints -= wound;
 
-                        if (Character.Protagonist.Hitpoints < 0)
-                            Character.Protagonist.Hitpoints = 0;
-
                         fight.Add(String.Format("BAD|{0} нанесли дополнительный урон: {1}", wounds[1].TrimStart(), wound));
 
                         if (Character.Protagonist.Hitpoints <= 0)
@@ -639,9 +637,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         }
                         else
                             Character.Protagonist.Hitpoints -= 2;
-
-                        if (Character.Protagonist.Hitpoints < 0)
-                            Character.Protagonist.Hitpoints = 0;
 
                         if (Character.Protagonist.Hitpoints <= 0)
                             return LostFight(fight);

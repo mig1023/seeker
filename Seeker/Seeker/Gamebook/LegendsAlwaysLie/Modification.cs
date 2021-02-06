@@ -45,7 +45,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     currentValue += Value;
 
-                    if (Init && (Name == "Hitpoints") && (Character.Protagonist.Hitpoints < 30))
+                    if (Init && (Name == "Hitpoints"))
                         currentValue = 30;
 
                     if ((WizardWoundsPenalty != 0) && (Character.Protagonist.Specialization == Character.SpecializationType.Wizard))
@@ -53,9 +53,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                     if ((ThrowerWoundsPenalty != 0) && (Character.Protagonist.Specialization == Character.SpecializationType.Thrower))
                         currentValue += ThrowerWoundsPenalty;
-
-                    if (currentValue < 0)
-                        currentValue = 0;
                 }
 
                 Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
