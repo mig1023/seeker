@@ -31,6 +31,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             else if (!String.IsNullOrEmpty(ValueString) && (Name == "Indifferent"))
                 Character.Protagonist.FellIntoFavor(ValueString, indifferent: true);
 
+            else if (Name == "DiceShame")
+                Character.Protagonist.Shame += Game.Dice.Roll();
+
             else if (Name == "AresFavor")
             {
                 if (Character.Protagonist.Patron != "Арес")

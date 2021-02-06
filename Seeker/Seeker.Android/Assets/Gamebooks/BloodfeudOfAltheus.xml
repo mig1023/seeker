@@ -4569,8 +4569,8 @@
 		<ID>489</ID>
 		<Text>Вы приближаетесь к толпе. «Друзья, - говорите вы, - это ли то, чего нам следует ожидать от народа Афин, гордого и свободного, но в тоже врямя доброго и мягкого? Почему вы избивате этих чужестранцев? Что плохого они сделали вам?»\n\nУ вас 13 и более очков Позора?</Text>
 		<Options>
-			<Option Destination="214" Text="Да"/>
-			<Option Destination="502" Text="Нет"/>
+			<Option Destination="214" Text="Да" OnlyIf="ПОЗОР > 12"/>
+			<Option Destination="502" Text="Нет" OnlyIf="ПОЗОР <= 12"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4690,8 +4690,8 @@
 		<ID>502</ID>
 		<Text>У вас больше 14 очков Славы?</Text>
 		<Options>
-			<Option Destination="62" Text="Да"/>
-			<Option Destination="312" Text="Нет"/>
+			<Option Destination="62" Text="Да" OnlyIf="СЛАВА > 14"/>
+			<Option Destination="312" Text="Нет" OnlyIf="СЛАВА <= 14"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5118,7 +5118,7 @@
 		<Text>У вас есть маленькая серебряная сережка?</Text>
 		<Options>
 			<Option Destination="108" Text="Да"/>
-			<Option Destination="102" Text="Нет, получите от 1 до 6 очков Позора (киньте кубик)"/>
+			<Option Destination="102" Text="Нет, получите от 1 до 6 очков Позора (киньте кубик)" Do="DiceShame"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>

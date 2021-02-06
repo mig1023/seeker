@@ -160,6 +160,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             else if (option.Contains("СЛАВА <="))
                 return int.Parse(option.Split('=')[1]) >= Character.Protagonist.Glory;
 
+            if (option.Contains("ПОЗОР >"))
+                return int.Parse(option.Split('>')[1]) < Character.Protagonist.Shame;
+            else if (option.Contains("ПОЗОР <="))
+                return int.Parse(option.Split('=')[1]) >= Character.Protagonist.Shame;
+
             if (option.Contains("!"))
             {
                 if (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()))
