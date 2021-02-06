@@ -223,8 +223,17 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     teams[2] += 1;
                 }
                 else if ((firstDice == 5) || (secondDice == 5) || nobodyCantForward)
+                {
                     racing.Add("Никто не смог продвинуться вперёд");
+                }
+                else if (YourRacing && Character.Protagonist.IsGodsDisFavor("Посейдон") &&(firstDice == 6) || (secondDice == 6))
+                {
+                    racing.Add("Все команды продвинулись вперёд, кроме вашей - сам Посейдон выказывает вам свою немилость!");
 
+                    foreach (int i in new List<int> { 1, 3, 4 })
+                        if (teams[i] >= 0)
+                            teams[i] += 1;
+                }
                 else if ((firstDice == 6) || (secondDice == 6))
                 {
                     racing.Add("Все команды продвинулись вперёд");
