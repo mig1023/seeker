@@ -222,6 +222,27 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             return spendGlory;
         }
+        
+        public List<string> LanceDice()
+        {
+            List<string> lance = new List<string>();
+
+            int dice = Game.Dice.Roll();
+
+            lance.Add(String.Format("Кубики: {0}", Game.Dice.Symbol(dice)));
+
+            if (dice <= 4)
+            {
+                Character.Protagonist.Shame += 1;
+
+                lance.Add("BIG|BAD|Вы промахнулись :(");
+                lance.Add("Вы получаете одно очко Позора");
+            }
+            else
+                lance.Add("BIG|GOOD|Бросок достиг цели :)");
+
+            return lance;
+        }
 
         public List<string> Racing()
         {
