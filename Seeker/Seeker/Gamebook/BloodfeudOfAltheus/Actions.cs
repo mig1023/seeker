@@ -539,8 +539,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     fight.Add(String.Format("Ваша защита: {0}{1}{2}", hero.Defence, armourLine, needTotal));
 
-                    bool enemyWin = false;
-
                     if ((autoHit || (enemyHitStrength > (hero.Defence + armourDefence))) && !autoFail)
                     {
                         fight.Add(String.Format("BOLD|BAD|{0} ранил вас", enemy.Name));
@@ -548,17 +546,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         hero.Health -= 1;
 
                         if (hero.Health <= 0)
-                            enemyWin = true;
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                            return fight;
+                        }
                     }
                     else
                         fight.Add(String.Format("BOLD|Противник не смог ранить вас", enemy.Name));
-
-                    if (enemyWin || (useGlory < 0))
-                    {
-                        fight.Add(String.Empty);
-                        fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
-                        return fight;
-                    }
 
                     fight.Add(String.Empty);
                 }
