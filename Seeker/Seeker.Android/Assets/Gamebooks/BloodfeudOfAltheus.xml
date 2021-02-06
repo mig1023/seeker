@@ -1141,17 +1141,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>125</ID>
-		<Text>Киньте кубик.</Text>
+		<Text>Вы можете кинуть кубик и потратить выпавшее на нем количество очков Славы на просьбу о помощи Посейдона.</Text>
 		<Actions>
 			<Action>
 				<ActionName>DiceSpendGlory</ActionName>
 				<ButtonName>Потратить Славу</ButtonName>
-				<Aftertext>Вы можете потратить выпавшее на нем количество очков Славы на просьбу о помощи Посейдона.</Aftertext>
+				<Aftertext>Иначе вам предстоит бороздить моря без вмешательства морского бога.</Aftertext>
 			</Action>
 		</Actions>		
 		<Options>
-			<Option Destination="424" Text="Вы сделали это"/>
-			<Option Destination="257" Text="Вам предстоит бороздить моря без вмешательства морского бога"/>
+			<Option Destination="424" Text="Вы попросили помощи у Посейдона"/>
+			<Option Destination="257" Text="Вы не стали этого делать "/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
