@@ -72,6 +72,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public int BroochResurrection { get; set; }
         public string Patron { get; set; }
         public int NoIntuitiveSolutionPenalty { get; set; }
+        public int Ichor { get; set; }
         
         public int Health { get; set; }
 
@@ -86,6 +87,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             BroochResurrection = 0;
             Patron = "нет";
             NoIntuitiveSolutionPenalty = 0;
+            Ichor = 0;
 
             Armour = new List<string>();
             Weapons = new List<string>();
@@ -108,6 +110,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 BroochResurrection = this.Resurrection,
                 Patron = this.Patron,
                 NoIntuitiveSolutionPenalty = this.NoIntuitiveSolutionPenalty,
+                Ichor = this.Ichor,
 
                 Health = (lastWound ? 1 : 3),
             };
@@ -121,9 +124,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             string disfavor = String.Join(":", DisfavorOfTheGods);
 
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}",
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}",
                 Strength, Defence, Glory, Shame, armours, weapons, Patron, NoIntuitiveSolutionPenalty, Resurrection,
-                favor, disfavor, BroochResurrection
+                favor, disfavor, BroochResurrection, Ichor
             );
         }
 
@@ -143,6 +146,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             FavorOfTheGods = save[9].Split(':').ToList();
             DisfavorOfTheGods = save[10].Split(':').ToList();
             BroochResurrection = int.Parse(save[11]);
+            Ichor = int.Parse(save[12]);
         }
 
         public void FellIntoFavor(string godName, bool fellOut = false, bool indifferent = false, bool indifferentToAll = false)

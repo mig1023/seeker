@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public bool FightToDeath { get; set; }
         public bool LastWound { get; set; }
         public bool YourRacing { get; set; }
+        public bool Ichor { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -256,6 +257,26 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 lance.Add("BIG|GOOD|Бросок достиг цели :)");
 
             return lance;
+        }
+
+        public List<string> RollDice()
+        {
+            List<string> roll = new List<string>();
+
+            int dice = Game.Dice.Roll();
+
+            roll.Add(String.Format("Кубик: {0}", Game.Dice.Symbol(dice)));
+
+            if (dice >= 4)
+            {
+                Character.Protagonist.Ichor += 1;
+
+                roll.Add("BIG|GOOD|Вам удалось :)");
+            }
+            else
+                roll.Add("BIG|BAD|Вам не удалось :(");
+
+            return roll;
         }
 
         public List<string> WithBareHands()
@@ -513,6 +534,17 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     if (enemy.Health <= 0) 
                         continue;
+
+                    if (Ichor && (Character.Protagonist.Ichor > 0))
+                    {
+                        enemy.Strength -= 3;
+                        enemy.Defence -= 3;
+
+                        fight.Add(String.Format(
+                            "Противник теряет 3 Силы и 3 Защиты из-за вытекающего ихора! Теперь его Сила равна {0}, а Защита - {1}!",
+                            enemy.Strength, enemy.Defence
+                        ));
+                    }
 
                     fight.Add(String.Format("Вы: {0}ы, {1}: {2}", healthLine[hero.Health], enemy.Name, healthLine[enemy.Health]));
 

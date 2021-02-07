@@ -453,6 +453,7 @@
 					<Enemy Name="Талос" Strength="14" Defence="18"/>
 				</Enemies>
 				<FightToDeath/>
+				<Ichor/>
 				<Aftertext>Вместо сражения вы можете попробовать выдернуть пробку.</Aftertext>
 			</Action>
 		</Actions>	
@@ -3419,9 +3420,15 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>365</ID>
-		<Text>Каждый раз, когда вы пытаетесь подобраться к отверстию для ихора, стремясь лишить тело великана питающей жидкости, вам это удается, если при броске кубика выпадет 4,5 или 6. За каждые 5 очков Славы, потраченные перед броском, добавьте к выпавшему значению 1.</Text>
+		<Text>Вы пытаетесь подобраться к отверстию для ихора, стремясь лишить тело великана питающей жидкости, вам это удается, если при броске кубика выпадет 4, 5 или 6.</Text>
+		<Actions>
+			<Action>
+				<ActionName>RollDice</ActionName>
+				<ButtonName>Бросить кубик</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
-			<Option Destination="48" Text="Терпите неудачу, гигант атакует, а вы должны вернуться"/>
+			<Option Destination="48" Text="Терпите неудачу, гигант атакует"/>
 			<Option Destination="540" Text="Достигаете цели"/>
 		</Options>
 	</Paragraph>
@@ -5050,6 +5057,9 @@
 	<Paragraph>
 		<ID>540</ID>
 		<Text>В каждом последующем раунде перед вашей атакой Талос теряет по 3 Силы и Защиты, поскольку желтый ихор струится в воду, и жизнь покидает его.</Text>
+		<Modifications>
+			<Modification Name="Ichor" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="48"/>
 		</Options>
