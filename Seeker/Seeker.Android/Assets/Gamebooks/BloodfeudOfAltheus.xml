@@ -5572,6 +5572,9 @@
 	<Paragraph>
 		<ID>593</ID>
 		<Text>Как только пожелаете, вы можете пожертвовать 10 очков Славы Зевсу. Тогда он услышит ваши молитвы один дополнительный раз. После этого брошь станет бесполезной, кроме как в качестве подарка, взятки или сувенира.</Text>
+		<Modifications>
+			<Modification Name="BroochResurrection" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="492"/>
 		</Options>

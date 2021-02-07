@@ -74,7 +74,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             else if (Name == "Resurrection")
             {
-                Character.Protagonist.Resurrection += Value;
+                if (Character.Protagonist.Resurrection > 0)
+                    Character.Protagonist.Resurrection += Value;
+
+                else if (Character.Protagonist.BroochResurrection > 0)
+                    Character.Protagonist.BroochResurrection += Value;
+
                 Character.Protagonist.Glory = 1;
                 Character.Protagonist.Shame = 0;
             }

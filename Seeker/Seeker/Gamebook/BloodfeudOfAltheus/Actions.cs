@@ -80,11 +80,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
 
-            if (Character.Protagonist.Resurrection <= 0)
-                return staticButtons;
+            if (IsPosibleResurrection())
+                staticButtons.Add("ВОЗЗВАТЬ К ЗЕВСУ ЗА РАВНОДУШИЕМ");
 
-            staticButtons.Add("ВОЗЗВАТЬ К ЗЕВСУ ЗА СЛАВОЙ");
-            staticButtons.Add("ВОЗЗВАТЬ К ЗЕВСУ ЗА РАВНОДУШИЕМ");
+            if (Character.Protagonist.Resurrection > 0)
+                staticButtons.Add("ВОЗЗВАТЬ К ЗЕВСУ ЗА СЛАВОЙ");
 
             return staticButtons;
         }
@@ -93,7 +93,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             if (action == "ВОЗЗВАТЬ К ЗЕВСУ ЗА СЛАВОЙ")
             {
-                Character.Protagonist.Resurrection -= 1;
+                if ((Character.Protagonist.Resurrection <= 0) && (Character.Protagonist.BroochResurrection > 0))
+                {
+                    Character.Protagonist.BroochResurrection -= 1;
+                    Character.Protagonist.Glory -= 10;
+                }
+                else
+                    Character.Protagonist.Resurrection -= 1;
 
                 if (Character.Protagonist.Glory == 0)
                     Character.Protagonist.Glory = 1;
@@ -129,6 +135,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return !disabledByGlory;
         }
 
+        private static bool IsPosibleResurrection()
+        {
+            bool normal = (Character.Protagonist.Resurrection > 0);
+            bool brooch = (Character.Protagonist.BroochResurrection > 0) && ((Character.Protagonist.Glory - Character.Protagonist.Shame) >= 10);
+
+            return (normal || brooch);
+        }
+
         public static bool CheckOnlyIf(string option)
         {
             if (option == "selectOnly")
@@ -153,7 +167,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 return Character.Protagonist.IsGodsDisFavor(option.Split(' ')[1]);
 
             if (option.Contains("ВОСКРЕШЕНИЕ"))
-                return Character.Protagonist.Resurrection > 0;
+                return IsPosibleResurrection();
 
             if (option.Contains("СЛАВА >"))
                 return int.Parse(option.Split('>')[1]) < Character.Protagonist.Glory;

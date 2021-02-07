@@ -69,9 +69,10 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         private List<string> DisfavorOfTheGods { get; set; }
 
         public int Resurrection { get; set; }
+        public int BroochResurrection { get; set; }
         public string Patron { get; set; }
         public int NoIntuitiveSolutionPenalty { get; set; }
-
+        
         public int Health { get; set; }
 
         public void Init()
@@ -82,6 +83,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Glory = 7;
             Shame = 0;
             Resurrection = 1;
+            BroochResurrection = 0;
             Patron = "нет";
             NoIntuitiveSolutionPenalty = 0;
 
@@ -103,6 +105,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 Glory = this.Glory,
                 Shame = this.Shame,
                 Resurrection = this.Resurrection,
+                BroochResurrection = this.Resurrection,
                 Patron = this.Patron,
                 NoIntuitiveSolutionPenalty = this.NoIntuitiveSolutionPenalty,
 
@@ -118,8 +121,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             string disfavor = String.Join(":", DisfavorOfTheGods);
 
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}",
-                Strength, Defence, Glory, Shame, armours, weapons, Patron, NoIntuitiveSolutionPenalty, Resurrection, favor, disfavor
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}",
+                Strength, Defence, Glory, Shame, armours, weapons, Patron, NoIntuitiveSolutionPenalty, Resurrection,
+                favor, disfavor, BroochResurrection
             );
         }
 
@@ -138,6 +142,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Resurrection = int.Parse(save[8]);
             FavorOfTheGods = save[9].Split(':').ToList();
             DisfavorOfTheGods = save[10].Split(':').ToList();
+            BroochResurrection = int.Parse(save[11]);
         }
 
         public void FellIntoFavor(string godName, bool fellOut = false, bool indifferent = false, bool indifferentToAll = false)
