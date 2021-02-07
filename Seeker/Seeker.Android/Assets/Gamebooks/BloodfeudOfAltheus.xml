@@ -2763,6 +2763,7 @@
 	<Paragraph>
 		<ID>293</ID>
 		<Text>Вы угрожаете убить ее, если она не расскажет о причине нападения амазонок. Воительница задумчиво перебирает пряди своих длинных темных волос, а потом говорит: «Это не секрет. Люди Эгея совершили набег на наши земли, и среди их трофеев - золотая шпилька, посвященная Гере. Для вас она ничего не значит, но это символ власти нашей царицы». Повинуясь минутному порыву, вы подбираете с земли маленькую серебряную сережку.</Text>
+		<Triggers>SilverEarring</Triggers>
 		<Options>
 			<Option Destination="507"/>
 		</Options>
@@ -5140,8 +5141,8 @@
 		<ID>548</ID>
 		<Text>У вас есть маленькая серебряная сережка?</Text>
 		<Options>
-			<Option Destination="108" Text="Да"/>
-			<Option Destination="102" Text="Нет, получите от 1 до 6 очков Позора" Do="DiceShame"/>
+			<Option Destination="108" Text="Да" OnlyIf="SilverEarring"/>
+			<Option Destination="102" Text="Нет, получите от 1 до 6 очков Позора" Do="DiceShame" OnlyIf="!SilverEarring"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
