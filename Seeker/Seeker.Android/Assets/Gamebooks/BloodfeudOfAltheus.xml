@@ -188,7 +188,7 @@
 		<IntuitiveSolution/>
 		<Options>
 			<Option Destination="315" Text="Убили его"/>
-			<Option Destination="263" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="263" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -241,7 +241,7 @@
 		<ID>27</ID>
 		<Text>Вы берете чашу и пытаетесь обрызгать всю толпу. Вода выплескивается на двух высоких горожан, стоящих впереди. Оглушительно закричав от злобы, они бросаются к вам. Остальная часть толпы движется следом с гневными возгласами.\n\nСамый высокий хватает вас за руки, лишая шанса достать оружие, а второй яростно пинает в живот. Согнувшись от боли, вы падаете на землю, удары тяжелых башмаков по голове следуют один за другим.\n\nЕсли вы еще не обращались к Зевсу, теперь самое время сделать это. Иначе мстительная толпа просто разорвет вас на части, хотя далеко не сразу мрачноликий Аид отнимет дух у истерзанной плоти...</Text>
 		<Options>
-			<Option Destination="138" Text="Воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="138" Text="Воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="0" Text="Начать сначала"/>
 		</Options>
 	</Paragraph>
@@ -351,7 +351,7 @@
 		<Options>
 			<Option Destination="301" Text="Оба ваших противника тяжело ранены"/>
 			<Option Destination="450" Text="Сдаетесь"/>
-			<Option Destination="134" Text="Погибли, но Зевс спас вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="134" Text="Погибли, но Зевс спас вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="134" Text="Бежите из таверны и покидаете Фивы"/>
 		</Options>
 	</Paragraph>
@@ -428,7 +428,7 @@
 		<Text>«Альтей, - слышите вы, - это я, твоя покровительница Гера, которую ты отверг так легко». Вы оглядываетесь и видите, что это правда: на берегу реки возвышается бессмертная царица. Вы выбираетесь обратно на берег, и богиня заговаривает снова. «Слишком поздно, - говорит она. - Мой дар в том, что Зевс мой супруг. Когда ты взываешь ко мне, я могу обратить мужа на твою сторону, но поскольку ты оскорбил меня, я не стану слушать тебя, пока ты не принесешь мне жертву». Вы можете быть спасены Зевсом один лишний раз, но только после того, как пожертвуете 6 очков Славы Гере.</Text>
 		<Modifications>
 			<Modification Name="Glory" ValueString="-6"/>
-			<Modification Name="Resurrection" Value="-1"/>
+			<Modification Name="Resurrection" Value="1"/>
 		</Modifications>
 		<Options>
 			<Option Destination="146"/>
@@ -498,7 +498,7 @@
 		<Text>Все тщетно. Теперь вас осталось только двое, и вы отчаянно цепляетесь за плывущее по воде дерево. Ваш спутник ослабляет хватку — и ветка, за которую он держался, выскальзывает из его рук. Он исчезает под водой и уже не появляется вновь. Вы чувствуете, что ваши силы быстро иссякают, и вы уже почти готовы сдаться и препоручить свою душу мрачному Аиду, когда перед вами появляется ваш бог-покровитель и предлагает вам спасение, если вы проявите свою веру. Чтобы спастись, вам придется потерять 4 очка Славы. Если вы не можете себе этого позволить, то вам остается только молиться Зевсу (если вы не делали этого ранее). Иначе ваше тело будет предано волнам непогребенным, а ваша душа отныне будете бесприютным призраком скитаться по берегам Леты...</Text>
 		<Options>
 			<Option Destination="247" Text="Пожертвовать Славу" OnlyIf="СЛАВА > 4" Do="Glory" Value="-4"/>
-			<Option Destination="247" Text="Воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="247" Text="Воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="0" Text="Начать сначала"/>
 		</Options>
 	</Paragraph>
@@ -595,7 +595,7 @@
 		<Options>
 			<Option Destination="438" Text="Удается тяжело ранить его"/>
 			<Option Destination="149" Text="Сдадитесь ему"/>
-			<Option Destination="86" Text="Погибли, но были спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="86" Text="Погибли, но были спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="86" Text="Отступите (вычтите 1 очко Славы за попытку побега)" Do="Glory" Value="-1"/>
 		</Options>
 	</Paragraph>
@@ -673,9 +673,6 @@
 		</Modifications>
 		<Options>
 			<Option Destination="2"/>
-			
-			<Option Destination="521" Text="Да" OnlyIf="ПОКРОВИТЕЛЬ Аполлон"/>
-			<Option Destination="56" Text="Нет" OnlyIf="!ПОКРОВИТЕЛЬ Аполлон"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -880,7 +877,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>95</ID>
-		<Text>Если когда-нибудь в бою вам придется туго, коснитесь рукой прутика, и он превратится могучее копье (Сила 6, Защита 0). Вы сможете швырнуть его в противника, после чего копье снова станет прутиком уже навсегда, и проку от него больше не будет.</Text>
+		<Text>Если когда-нибудь в бою вам придется туго, коснитесь рукой прутика, и он превратится могучее копье (Сила 6, Защита 0).</Text>
 		<Modifications>
 			<Modification Name="Weapon" ValueString="могучее копье, 6, 0"/>
 		</Modifications>
@@ -1048,7 +1045,7 @@
 		<ID>114</ID>
 		<Text>Бегство бессмысленно: вам следует положиться на волю богов. Вы захлебываетесь проклятой жидкостью, и хотя вы еще можете воззвать к Зевсу, он услышит вас только если вы не беспокоили его ранее. В противном случае, Альтею уже не суждено когда-либо вступить в бой с разбойниками!</Text>
 		<Options>
-			<Option Destination="144" Text="Воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="144" Text="Воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="0" Text="Начать сначала"/>
 		</Options>
 	</Paragraph>
@@ -1138,7 +1135,7 @@
 			</Action>
 		</Actions>	
 		<Options>
-			<Option Destination="572" Text="Погибли, но были спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="572" Text="Погибли, но были спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="97" Text="Отступили"/>
 			<Option Destination="376" Text="Сдаетесь"/>
 			<Option Destination="366" Text="Удалось тяжело ранить противницу"/>
@@ -1212,7 +1209,7 @@
 		<ID>132</ID>
 		<Text>Вы залпом осушаете кубок, замечая странное горькое послевкусие. Становится трудно дышать, вы задыхаетесь. Вино отравлено. Вы пытаетесь схватить ртом воздух в последний раз и умираете... Ваше путешествие окончено, и до конца времен вы обречены скитаться жалкой тенью в царстве Аида. Если вы еще можете воззвать к Зевсу - сделайте это, тогда через некоторое время вы придете в себя за столом. Вокруг собралась толпа народа. Царица ушла.</Text>
 		<Options>
-			<Option Destination="170" Text="Воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="170" Text="Воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="0" Text="Начать сначала"/>
 		</Options>
 	</Paragraph>
@@ -1254,7 +1251,7 @@
 		<Options>
 			<Option Destination="282" Text="Удалось его одолеть"/>
 			<Option Destination="515" Text="Отступаете"/>
-			<Option Destination="335" Text="Погибли и были спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="335" Text="Погибли и были спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1615,7 +1612,7 @@
 		<Options>
 			<Option Destination="615" Text="Побеждаете его"/>
 			<Option Destination="493" Text="Удается успешно отступить"/>
-			<Option Destination="378" Text="Погибаете, но Зевс дарует вам спасение" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="378" Text="Погибаете, но Зевс дарует вам спасение" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1788,7 +1785,7 @@
 			<Option Destination="304" Text="Отступите"/>
 			<Option Destination="127" Text="Сдадитесь"/>
 			<Option Destination="401" Text="Противник тяжело ранен"/>
-			<Option Destination="23" Text="Погибли, но Зевс спас вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="23" Text="Погибли, но Зевс спас вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1872,7 +1869,7 @@
 		<Options>
 			<Option Destination="225" Text="Победили эту жуткую тварь"/>
 			<Option Destination="515" Text="Убегаете, отказавшись от задания, которое дал вам отец"/>
-			<Option Destination="47" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="47" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1944,7 +1941,7 @@
 		</Actions>	
 		<Options>
 			<Option Destination="400" Text="Убили его"/>
-			<Option Destination="277" Text="Умерли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="277" Text="Умерли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1994,7 +1991,7 @@
 		<ID>214</ID>
 		<Text>Озлобленная старуха гневно кричит в ответ: «Критяне забрали наших юношей и девушек и пустили их на корм Минотавру! И теперь ты меня спрашиваешь, почему мы вершим за них кровную месть? Может быть, это потому, что ты сам критянин!» С этими словами она поднимает большой камень и неуклюже кидает в тебя. Камень пролетает мимо, но становится сигналом к атаке, и вскоре град камней различных размеров градом обрушивается на вас. Не в состоянии бежать, вы получаете удары один за другим.\n\nОгромный камень попадает вам в голову и проламывает череп, обливаясь кровью, вы падаете на мощеную мостовую. Альтея больше нет, если только вы до сих пор не взывали к Зевсу. Если так, то обретёте жизнь.</Text>
 		<Options>
-			<Option Destination="394" Text="Воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="394" Text="Воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="0" Text="Начать сначала"/>
 		</Options>
 	</Paragraph>
@@ -2154,7 +2151,7 @@
 		<Options>
 			<Option Destination="153" Text="Сдаетесь"/>
 			<Option Destination="520" Text="Спасаетесь бегством"/>
-			<Option Destination="463" Text="Умираете и молите Зевса о спасении" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="463" Text="Умираете и молите Зевса о спасении" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="83" Text="Удается тяжело ранить эринию"/>
 		</Options>
 	</Paragraph>
@@ -2338,7 +2335,7 @@
 		<Options>
 			<Option Destination="267" Text="Побеждаете"/>
 			<Option Destination="472" Text="Отступаете"/>
-			<Option Destination="134" Text="Погибаете, и вас спасет Зевс" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="134" Text="Погибаете, и вас спасет Зевс" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2472,7 +2469,7 @@
 			</Action>
 		</Actions>	
 		<Options>
-			<Option Destination="180" Text="Умерли и спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="180" Text="Умерли и спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="275" Text="Бежите с поля боя"/>
 			<Option Destination="355" Text="Сдаетесь"/>
 			<Option Destination="375" Text="Тяжело ранили ее"/>
@@ -2567,7 +2564,7 @@
 		<Options>
 			<Option Destination="21" Text="Удалось тяжело ранить его"/>
 			<Option Destination="571" Text="Сдаетесь"/>
-			<Option Destination="263" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="263" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2652,7 +2649,7 @@
 			</Action>
 		</Actions>	
 		<Options>
-			<Option Destination="166" Text="Погибаете, но Зевс вас спасает" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="166" Text="Погибаете, но Зевс вас спасает" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="457" Text="Сдаться"/>
 			<Option Destination="289" Text="Отступить"/>
 			<Option Destination="119" Text="Оба мечника тяжело ранены"/>
@@ -2750,7 +2747,7 @@
 			<Option Destination="527" Text="В конечном итоге вы ее убили"/>
 			<Option Destination="275" Text="Бежали с поля боя"/>
 			<Option Destination="355" Text="Сдаетесь"/>
-			<Option Destination="180" Text="Умерли, и Зевс спас вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="180" Text="Умерли, и Зевс спас вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3032,7 +3029,7 @@
 		<ID>322</ID>
 		<Text>Вы чувствуете, что ваши доспехи тянут вас ко дну. Вы пытаетесь скинуть их, но уже слишком поздно. Чудовище поймало вас, и вода станет вам могилой, если только вы не вознесете молитву Зевсу...</Text>
 		<Options>
-			<Option Destination="579" Text="Вознести молитву Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="579" Text="Вознести молитву Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="0" Text="Начать сначала"/>
 		</Options>
 	</Paragraph>
@@ -3139,7 +3136,7 @@
 		<Options>
 			<Option Destination="171" Text="Они оба тяжело ранены"/>
 			<Option Destination="374" Text="Вы сдались"/>
-			<Option Destination="553" Text="Вы убиты, но Зевс спасает вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="553" Text="Вы убиты, но Зевс спасает вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="228" Text="Вам удается сбежать"/>
 		</Options>
 	</Paragraph>
@@ -3322,7 +3319,7 @@
 			</Action>
 		</Actions>	
 		<Options>
-			<Option Destination="180" Text="Погибли и спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="180" Text="Погибли и спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="275" Text="Бежите от боя"/>
 			<Option Destination="355" Text="Сдаетесь"/>
 			<Option Destination="291" Text="Тяжело ранили амазонку"/>
@@ -3439,7 +3436,7 @@
 		<ID>367</ID>
 		<Text>Без всякого оружия вы идете в стан своего врага, гордясь тем, что сможете предотвратить страшное кровопролитие. Вы ступаете между горящими кострами собравшегося войска и тут же чувствуете острую боль в спине. Копье с крепким древком пронзило вас; обильно течет кровь, и недолгий путь Альтея на бренной земле подходит к концу, если только вы не можете воззвать к Зевсу, чтобы он исцелил вас. Если вам это удается, то можете незаметно вернуться назад в Афины и вооружиться для боя.</Text>
 		<Options>
-			<Option Destination="102" Text="Воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="102" Text="Воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="0" Text="Начать сначала"/>
 		</Options>
 	</Paragraph>
@@ -3472,7 +3469,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="490" Text="Решите отступить"/>
-			<Option Destination="51" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="51" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="213" Text="Вы одержали победу и ни разу не были ранены" Do="Glory" Value="4"/>
 			<Option Destination="451" Text="Победили, но крысы успели покусать вас"/>
 		</Options>
@@ -3577,7 +3574,7 @@
 		<ID>381</ID>
 		<Text>Вам удается сбросить броню, пока она не утянула вас на дно. Теперь вы готовы сражаться с чудищем, которое атакует беззащитный корабль, чтобы разорвать путников и сожрать их живьем. Да принесет возмездие рука Альтея! Отступить вы не сможете.</Text>
 		<Options>
-			<Option Destination="504" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="504" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="498" Text="Удалось тяжело ранить змея"/>
 		</Options>
 	</Paragraph>
@@ -3656,7 +3653,7 @@
 		<Options>
 			<Option Destination="422" Text="Сдаетесь"/>
 			<Option Destination="163" Text="Победили их"/>
-			<Option Destination="536" Text="Пали, но были спасены Зевсом, то очнетесь" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="536" Text="Пали, но были спасены Зевсом, то очнетесь" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4226,7 +4223,7 @@
 		<ID>450</ID>
 		<Text>Ваши мольбы о пощаде тщетны. Заговорщики, облаченные в черные плащи, отнимают у вас меч, а затем по самую рукоять вонзают свои кинжалы прямо вам в живот. После недолгой борьбы вы умираете в ужасной агонии...</Text>
 		<Options>
-			<Option Destination="134" Text="Помолиться Зевсу, чтобы спасти себя" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="134" Text="Помолиться Зевсу, чтобы спасти себя" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4336,7 +4333,7 @@
 		<Options>
 			<Option Destination="600" Text="Они тяжело ранены"/>
 			<Option Destination="374" Text="Хотите сдаться"/>
-			<Option Destination="536" Text="Вы умерли и спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="536" Text="Вы умерли и спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="536" Text="Вы хотите отступить"/>
 		</Options>
 	</Paragraph>
@@ -4373,7 +4370,7 @@
 		<IntuitiveSolution/>
 		<Options>
 			<Option Destination="121" Text="Сдаетесь"/>
-			<Option Destination="570" Text="Погибаете, но вас спасает Зевс" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="570" Text="Погибаете, но вас спасает Зевс" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="387" Text="Отступаете"/>
 			<Option Destination="519" Text="Удается тяжело ранить противника"/>
 		</Options>
@@ -4526,7 +4523,7 @@
 		<ID>484</ID>
 		<Text>Чудовище разворачивается к черному кораблю, и на вас обрушивается мощный удар. Солнечные лучи сверкают и пляшут на вашей броне, подобно языкам пламени, и грохот вашего боя, кажется, может обрушить саму небесную твердь.</Text>
 		<Options>
-			<Option Destination="29" Text="Погибли, но были спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="29" Text="Погибли, но были спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="582" Text="Удалось тяжело ранить змея"/>
 			<Option Destination="523" Text="Хотите отступить"/>
 		</Options>
@@ -4638,7 +4635,7 @@
 		</Actions>	
 		<Options>
 			<Option Destination="407" Text="Отступаете"/>
-			<Option Destination="230" Text="Погибли, и Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="230" Text="Погибли, и Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="556" Text="Сдаетесь"/>
 			<Option Destination="151" Text="Удалось убить троих из них"/>
 		</Options>
@@ -4693,7 +4690,7 @@
 		<ID>500</ID>
 		<Text>Придя в себя, вы обнаруживаете, что Прокруст, хозяин постоялого двора, отрубил вам ноги, чтобы подогнать ваше тело под свое ложе. Вы истекаете кровью, и на последнем издыхании пытаетесь вознести мольбу о спасении Зевсу. Если за время своих странствий вы еще не обращались к нему - вы будете спасены. В противном случае, путешествие Альтея заканчивается здесь...</Text>
 		<Options>
-			<Option Destination="118" Text="Вознести мольбу о спасении Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="118" Text="Вознести мольбу о спасении Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="0" Text="Начать сначала"/>
 		</Options>
 	</Paragraph>
@@ -4844,7 +4841,7 @@
 			<Option Destination="550" Text="Сдаетесь"/>
 			<Option Destination="165" Text="Отступить"/>
 			<Option Destination="606" Text="Попытаетесь объяснить, что вы вовсе не шпион, а посланник мира, когда наступит ваша очередь атаковать"/>
-			<Option Destination="165" Text="Вы погибли, и Зевс спас вас, то вы приходите в себя" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="165" Text="Вы погибли, и Зевс спас вас, то вы приходите в себя" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5098,7 +5095,7 @@
 		<Options>
 			<Option Destination="242" Text="Хотите перед боем обратиться к своему божественному покровителю за помощью"/>
 			<Option Destination="320" Text="Отступаете"/>
-			<Option Destination="320" Text="Погибли и спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="320" Text="Погибли и спасены Зевсом" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="431" Text="Сдаетесь"/>
 			<Option Destination="273" Text="Тяжело ранили Амазонку"/>
 		</Options>
@@ -5225,7 +5222,7 @@
 		<ID>556</ID>
 		<Text>Вы падаете на колени и молите о пощаде, пытаясь объяснить, что не сделали ровным счетом ничего. Однако женщина, возглавляющая напавших, не хочет смилостивиться, она велит своим соратникам убить вас. Последнее, что вам суждено увидеть перед тем, как мрачный Аид заберет вашу душу, это острый серп, сверкнувший на солнце перед тем, как опуститься и перерезать вам горло...\n\nРазумеется, вы можете обратиться к Зевсу.</Text>
 		<Options>
-			<Option Destination="230" Text="Обратиться к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="230" Text="Обратиться к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 			<Option Destination="0" Text="Начать сначала"/>
 		</Options>
 	</Paragraph>
@@ -5491,7 +5488,7 @@
 		<Text>«Я отблагодарю тебя, Альтей. Если ты будешь на грани гибели, я смогу убедить Зевса услышать твои мольбы». Добавьте себе 2 очка Славы и помните, что сможете обратиться к Зевсу за спасением дополнительный раз.</Text>
 		<Modifications>
 			<Modification Name="Glory" Value="2"/>
-			<Modification Name="Resurrection" Value="-1"/>
+			<Modification Name="Resurrection" Value="1"/>
 		</Modifications>
 		<Options>
 			<Option Destination="146"/>
@@ -5514,7 +5511,7 @@
 		<Options>
 			<Option Destination="147" Text="Отступаете"/>
 			<Option Destination="558" Text="Удалось победить"/>
-			<Option Destination="512" Text="Погибли, но можете воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="512" Text="Погибли, но можете воззвать к Зевсу" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5784,7 +5781,7 @@
 		<Options>
 			<Option Destination="526" Text="Победили"/>
 			<Option Destination="210" Text="Хотите отступить (не забудьте потерять 1 очко Славы, даже если ваша попытка к бегству не увенчалась успехом)" Do="Glory" Value="1"/>
-			<Option Destination="362" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="1"/>
+			<Option Destination="362" Text="Погибли, но Зевс воскресил вас" OnlyIf="ВОСКРЕШЕНИЕ" Do="Resurrection" Value="-1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>

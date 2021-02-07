@@ -81,7 +81,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Defence = 10;
             Glory = 7;
             Shame = 0;
-            Resurrection = 0;
+            Resurrection = 1;
             Patron = "нет";
             NoIntuitiveSolutionPenalty = 0;
 

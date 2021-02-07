@@ -80,7 +80,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
 
-            if (Character.Protagonist.Resurrection > 0)
+            if (Character.Protagonist.Resurrection <= 0)
                 return staticButtons;
 
             staticButtons.Add("ВОЗЗВАТЬ К ЗЕВСУ ЗА СЛАВОЙ");
@@ -93,7 +93,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             if (action == "ВОЗЗВАТЬ К ЗЕВСУ ЗА СЛАВОЙ")
             {
-                Character.Protagonist.Resurrection += 1;
+                Character.Protagonist.Resurrection -= 1;
 
                 if (Character.Protagonist.Glory == 0)
                     Character.Protagonist.Glory = 1;
@@ -105,7 +105,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             if (action == "ВОЗЗВАТЬ К ЗЕВСУ ЗА РАВНОДУШИЕМ")
             {
-                Character.Protagonist.Resurrection += 1;
+                Character.Protagonist.Resurrection -= 1;
                 Character.Protagonist.FellIntoFavor(String.Empty, indifferentToAll: true);
 
                 return true;
@@ -153,7 +153,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 return Character.Protagonist.IsGodsDisFavor(option.Split(' ')[1]);
 
             if (option.Contains("ВОСКРЕШЕНИЕ"))
-                return Character.Protagonist.Resurrection <= 0;
+                return Character.Protagonist.Resurrection > 0;
 
             if (option.Contains("СЛАВА >"))
                 return int.Parse(option.Split('>')[1]) < Character.Protagonist.Glory;
