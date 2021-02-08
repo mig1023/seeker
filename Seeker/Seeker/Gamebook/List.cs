@@ -285,6 +285,21 @@ namespace Seeker.Gamebook
                 BookColor = "#030436",
                 Illustration = "PensionerSimulator.jpg",
             },
+
+            ["Владыка степей"] = new Description
+            {
+                XmlBook = "Gamebooks/LordOfTheSteppes.xml",
+                Protagonist = LordOfTheSteppes.Character.Protagonist.Init,
+                CheckOnlyIf = LordOfTheSteppes.Actions.CheckOnlyIf,
+                Paragraphs = new LordOfTheSteppes.Paragraphs(),
+                Actions = new LordOfTheSteppes.Actions(),
+                Constants = new LordOfTheSteppes.Constants(),
+                Save = LordOfTheSteppes.Character.Protagonist.Save,
+                Load = LordOfTheSteppes.Character.Protagonist.Load,
+                Disclaimer = "Сергей Ступин, 2009",
+                BookColor = "#831d04",
+                Illustration = "LordOfTheSteppes.jpg",
+            },
         };
 
         public static List<string> GetBooks() => new List<string>(Books.Keys);
