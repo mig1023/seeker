@@ -28,8 +28,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public string GetFont() => String.Empty;
 
-        public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
+        public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
 
-        public double? GetLineHeight() => null;
+        public double? GetLineHeight() => 1.20;
     }
 }
