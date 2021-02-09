@@ -154,7 +154,7 @@ namespace Seeker
 
                 Game.Router.AddDestination(option.Text, option.Destination, option.Do);
 
-                gameOver = (option.Destination == 0 ? true : false);
+                gameOver = (option.Destination == 0);
 
                 button.Clicked += Option_Click;
 
@@ -203,9 +203,6 @@ namespace Seeker
 
                 Status.IsVisible = false;
                 MainGrid.RowDefinitions[2].Height = 0;
-
-                AdditionalStatus.IsVisible = false;
-                MainGrid.ColumnDefinitions[1].Width = 0;
             }
             else
             {
@@ -223,20 +220,25 @@ namespace Seeker
                     StatusBorder.IsVisible = true;
                     MainGrid.RowDefinitions[1].Height = 1;
                 }
+            }
 
-                List<string> additionalStatuses = Game.Data.Actions.AdditionalStatus();
+            List<string> additionalStatuses = (Game.Data.Actions == null ? null : Game.Data.Actions.AdditionalStatus());
 
-                if (additionalStatuses != null)
-                {
-                    string backgroundColor = Game.Data.Constants.GetColor(Game.Data.ColorTypes.AdditionalStatus);
+            if (additionalStatuses != null)
+            {
+                string backgroundColor = Game.Data.Constants.GetColor(Game.Data.ColorTypes.AdditionalStatus);
 
-                    MainGrid.ColumnDefinitions[1].Width = 20;
-                    AdditionalStatus.BackgroundColor = (String.IsNullOrEmpty(backgroundColor) ? Color.LightGray : Color.FromHex(backgroundColor));
-                    AdditionalStatus.IsVisible = true;
+                MainGrid.ColumnDefinitions[1].Width = 20;
+                AdditionalStatus.BackgroundColor = (String.IsNullOrEmpty(backgroundColor) ? Color.LightGray : Color.FromHex(backgroundColor));
+                AdditionalStatus.IsVisible = true;
 
-                    foreach (Output.VerticalText status in Output.Interface.AdditionalStatusBar(additionalStatuses))
-                        AdditionalStatus.Children.Add(status);
-                }
+                foreach (Output.VerticalText status in Output.Interface.AdditionalStatusBar(additionalStatuses))
+                    AdditionalStatus.Children.Add(status);
+            }
+            else
+            {
+                AdditionalStatus.IsVisible = false;
+                MainGrid.ColumnDefinitions[1].Width = 0;
             }
         }
 
