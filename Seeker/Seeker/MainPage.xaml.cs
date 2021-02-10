@@ -92,8 +92,7 @@ namespace Seeker
             else
                 paragraph = Game.Data.CurrentParagraph;
 
-            string text = Game.Data.XmlParagraphs[id]["Text"].InnerText;
-            Text.Children.Add(Output.Interface.Text(text));
+            Text.Children.Add(Output.Interface.Text(Game.Data.XmlParagraphs[id]["Text"].InnerText));
 
             if (!String.IsNullOrEmpty(paragraph.Image))
             {
@@ -159,6 +158,9 @@ namespace Seeker
                 button.Clicked += Option_Click;
 
                 Options.Children.Add(button);
+
+                if (!String.IsNullOrEmpty(option.Aftertext))
+                    Options.Children.Add(Output.Interface.Text(option.Aftertext));
 
                 optionCount += 1;
             }
