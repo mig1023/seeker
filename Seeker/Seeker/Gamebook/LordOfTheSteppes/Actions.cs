@@ -29,7 +29,18 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public List<string> Representer() => new List<string> { };
 
-        public List<string> Status() => null;
+        public List<string> Status()
+        {
+            List<string> statusLines = new List<string>
+            {
+                String.Format("Нападение: {0}", Character.Protagonist.Attack),
+                String.Format("Защита: {0}", Character.Protagonist.Defence),
+                String.Format("Жизнь: {0}", Character.Protagonist.Endurance),
+                String.Format("Инициатива: {0}", Character.Protagonist.Initiative)
+            };
+
+            return statusLines;
+        }
 
         public List<string> AdditionalStatus() => null;
 
