@@ -16,6 +16,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             Game.Paragraph paragraph = new Game.Paragraph();
 
             paragraph.Options = new List<Option>();
+            paragraph.Actions = new List<Abstract.IActions>();
+            paragraph.Modification = new List<Abstract.IModification>();
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
@@ -27,6 +29,23 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 };
 
                 paragraph.Options.Add(option);
+            }
+
+            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
+            {
+                Actions action = new Actions
+                {
+                    ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
+                    ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
+                    Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
+                    Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+                    Text = Game.Xml.StringParse(xmlAction["Text"]),
+                    Stat = Game.Xml.StringParse(xmlAction["Stat"]),
+
+                    StatStep = Game.Xml.IntParse(xmlAction["StatStep"]),
+                };
+
+                paragraph.Actions.Add(action);
             }
 
             return paragraph;

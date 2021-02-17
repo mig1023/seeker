@@ -10,7 +10,6 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public string Name { get; set; }
 
-
         private int _attack;
         public int MaxAttack { get; set; }
         public int Attack
@@ -75,6 +74,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
         }
 
+        public int Bonuses { get; set; }
+
         public void Init()
         {
             Name = String.Empty;
@@ -87,6 +88,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             Endurance = MaxEndurance;
             MaxInitiative = 10;
             Initiative = MaxInitiative;
+
+            Bonuses = 2;
         }
 
         public Character Clone()
@@ -101,14 +104,15 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 Endurance = this.Endurance,
                 MaxInitiative = this.MaxInitiative,
                 Initiative = this.Initiative,
+                Bonuses = this.Bonuses,
             };
         }
 
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}}",
-                MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance, MaxInitiative, Initiative
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}",
+                MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance, MaxInitiative, Initiative, Bonuses
             );
         }
 
@@ -124,6 +128,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             Endurance = int.Parse(save[5]);
             MaxInitiative = int.Parse(save[6]);
             Initiative = int.Parse(save[7]);
+            Bonuses = int.Parse(save[8]);
         }
     }
 }

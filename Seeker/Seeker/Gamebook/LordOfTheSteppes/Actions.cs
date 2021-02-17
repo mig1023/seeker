@@ -12,7 +12,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
-
+        public string Text { get; set; }
+        public string Stat { get; set; }
+        public int StatStep { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -27,7 +29,13 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return actionResult;
         }
 
-        public List<string> Representer() => new List<string> { };
+        public List<string> Representer()
+        {
+            if (!String.IsNullOrEmpty(Text))
+                return new List<string> { Text };
+            else
+                return new List<string> { };
+        }
 
         public List<string> Status()
         {
@@ -56,9 +64,33 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return false;
         }
 
-        public bool IsButtonEnabled() => true;
+        public bool IsButtonEnabled()
+        {
+            if (!String.IsNullOrEmpty(Stat))
+                return Character.Protagonist.Bonuses > 0;
+
+            else
+                return true;
+        }
 
         public static bool CheckOnlyIf(string option) => true;
+
+        public List<string> Get()
+        {
+            if (Character.Protagonist.Bonuses >= 0)
+            {
+                int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
+
+                currentStat += StatStep;
+
+                Character.Protagonist.GetType().GetProperty("Max" + Stat).SetValue(Character.Protagonist, currentStat);
+                Character.Protagonist.GetType().GetProperty(Stat).SetValue(Character.Protagonist, currentStat);
+
+                Character.Protagonist.Bonuses -= 1;
+            }
+
+            return new List<string> { "RELOAD" };
+        }
 
     }
 }
