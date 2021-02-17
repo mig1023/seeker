@@ -9,30 +9,40 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public string Name { get; set; }
         public int Value { get; set; }
         public bool Empty { get; set; }
+        public bool Restore { get; set; }
 
         public void Do()
         {
-            if (Name == "StrengthRestore")
-                Character.Protagonist.Strength = Character.Protagonist.MaxStrength;
+            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+
+            if (Empty)
+                currentValue = 0;
+
+            else if (Restore)
+                currentValue = (int)Character.Protagonist.GetType().GetProperty("Max" + Name).GetValue(Character.Protagonist, null);
 
             else
-            {
-                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
-
                 currentValue += Value;
 
-                if (Empty)
-                    currentValue = 0;
+            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
 
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
-
-                if (Name == "Day")
+            if (Name == "Day")
+            {
+                if (Character.Protagonist.HadFoodToday <= 0)
+                    Character.Protagonist.Strength -= 3;
+                else
+                    Character.Protagonist.HadFoodToday = 0;
+            }
+    
+            if (Name.StartsWith("Max"))
+            {
+                Modification additionalMod = new Modification
                 {
-                    if (Character.Protagonist.HadFoodToday <= 0)
-                        Character.Protagonist.Strength -= 3;
-                    else
-                        Character.Protagonist.HadFoodToday = 0;
-                }
+                    Name = Name.Remove(0, 3),
+                    Value = this.Value,
+                };
+
+                additionalMod.Do();
             }
         }
     }
