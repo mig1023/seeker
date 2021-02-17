@@ -59,9 +59,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
-            toEndText = String.Empty;
+            toEndText = "Начать сначала";
 
-            return false;
+            return (Character.Protagonist.Endurance <= 0);
         }
 
         public bool IsButtonEnabled()
