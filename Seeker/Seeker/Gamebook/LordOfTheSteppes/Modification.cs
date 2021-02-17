@@ -8,12 +8,16 @@ namespace Seeker.Gamebook.LordOfTheSteppes
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public bool Restore { get; set; }
 
         public void Do()
         {
             int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-            currentValue += Value;
+            if (Restore)
+                currentValue = (int)Character.Protagonist.GetType().GetProperty("Max" + Name).GetValue(Character.Protagonist, null);
+            else
+                currentValue += Value;
 
             Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
         }
