@@ -16,10 +16,24 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (Restore)
                 currentValue = (int)Character.Protagonist.GetType().GetProperty("Max" + Name).GetValue(Character.Protagonist, null);
+
+            else if (Name.StartsWith("Max"))
+            {
+                string normalParam = Name.Remove(0, 3);
+
+                int normalValue = (int)Character.Protagonist.GetType().GetProperty(normalParam).GetValue(Character.Protagonist, null);
+
+                if ((normalValue + Value) > currentValue)
+                    Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue + Value);
+
+                Character.Protagonist.GetType().GetProperty(normalParam).SetValue(Character.Protagonist, currentValue + Value);
+            }
             else
+            {
                 currentValue += Value;
 
-            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+            }
         }
     }
 }
