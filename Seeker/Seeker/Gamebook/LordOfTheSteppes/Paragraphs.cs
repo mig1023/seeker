@@ -48,7 +48,26 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 paragraph.Actions.Add(action);
             }
 
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
+                paragraph.Modification.Add(ModificationParse(xmlModification));
+
+            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
+
             return paragraph;
+        }
+
+        private static Modification ModificationParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return null;
+
+            Modification modification = new Modification
+            {
+                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+            };
+
+            return modification;
         }
     }
 }
