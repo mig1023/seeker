@@ -8,26 +8,18 @@ namespace Seeker.Gamebook.CreatureOfHavoc
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public bool Restore { get; set; }
 
         public void Do()
         {
-            if (Name == "EnduranceRestore")
-                Character.Protagonist.Endurance = Character.Protagonist.MaxEndurance;
+            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-            else if (Name == "MasteryRestore")
-                Character.Protagonist.Mastery = Character.Protagonist.MaxMastery;
-
-            else if (Name == "LuckRestore")
-                Character.Protagonist.Luck = Character.Protagonist.MaxLuck;
-
+            if (Restore)
+                currentValue = (int)Character.Protagonist.GetType().GetProperty("Max" + Name).GetValue(Character.Protagonist, null);
             else
-            {
-                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
-
                 currentValue += Value;
 
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
-            }
+            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
         }
     }
 }

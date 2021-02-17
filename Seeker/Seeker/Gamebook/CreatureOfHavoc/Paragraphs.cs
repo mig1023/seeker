@@ -99,6 +99,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 {
                     Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
                     Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
+                    Restore = Game.Xml.BoolParse(xmlModification.Attributes["Restore"]),
                 };
 
                 paragraph.Modification.Add(modification);
