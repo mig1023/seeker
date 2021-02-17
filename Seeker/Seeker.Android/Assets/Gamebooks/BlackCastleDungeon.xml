@@ -4818,7 +4818,6 @@
 		<Text>Вы выбираете щит. Он поможет вам отражать вражеские удары (прибавьте себе 1 МАСТЕРСТВО, даже если ваше изначальное МАСТЕРСТВО не уменьшалось). Теперь закройте дверь кладовки и снова заприте ее.</Text>
 		<Modifications>
 			<Modification Name="MaxMastery" Value="1"/>
-			<Modification Name="Mastery" Value="1"/>
 		</Modifications>
 		<Options>
 			<Option Destination="300"/>
