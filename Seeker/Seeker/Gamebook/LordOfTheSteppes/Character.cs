@@ -8,6 +8,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
     {
         public static Character Protagonist = new Gamebook.LordOfTheSteppes.Character();
 
+        public enum SpecialTechniques { TwoBlades, TotalProtection, FirstStrike, PowerfulStrike, Reaction, Nope };
+
+
         public string Name { get; set; }
 
         private int _attack;
@@ -74,6 +77,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
         }
 
+        public SpecialTechniques SpecialTechnique { get; set; }
+
         public int Bonuses { get; set; }
 
         public void Init()
@@ -89,6 +94,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             MaxInitiative = 10;
             Initiative = MaxInitiative;
 
+            SpecialTechnique = SpecialTechniques.Nope;
             Bonuses = 2;
         }
 
@@ -104,6 +110,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 Endurance = this.Endurance,
                 MaxInitiative = this.MaxInitiative,
                 Initiative = this.Initiative,
+                SpecialTechnique = this.SpecialTechnique,
                 Bonuses = this.Bonuses,
             };
         }
@@ -111,8 +118,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}",
-                MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance, MaxInitiative, Initiative, Bonuses
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}",
+                MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance,
+                MaxInitiative, Initiative, Bonuses, SpecialTechnique
             );
         }
 
@@ -129,6 +137,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             MaxInitiative = int.Parse(save[6]);
             Initiative = int.Parse(save[7]);
             Bonuses = int.Parse(save[8]);
+
+            bool success = Enum.TryParse(save[9], out SpecialTechniques value);
+            SpecialTechnique = (success ? value : SpecialTechniques.Nope);
         }
     }
 }

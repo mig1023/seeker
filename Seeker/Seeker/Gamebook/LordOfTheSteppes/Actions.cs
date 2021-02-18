@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public string Text { get; set; }
         public string Stat { get; set; }
         public int StatStep { get; set; }
+        public Character.SpecialTechniques? SpecialTechnique { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -66,18 +67,22 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public bool IsButtonEnabled()
         {
-            if (!String.IsNullOrEmpty(Stat))
-                return Character.Protagonist.Bonuses > 0;
+            bool disabledSpecialTechniqueButton = (SpecialTechnique != Character.SpecialTechniques.Nope) &&
+                (Character.Protagonist.SpecialTechnique != Character.SpecialTechniques.Nope);
 
-            else
-                return true;
+            bool disabledStatBonuses = (!String.IsNullOrEmpty(Stat)) && (Character.Protagonist.Bonuses <= 0);
+
+            return !(disabledSpecialTechniqueButton || disabledStatBonuses);
         }
 
         public static bool CheckOnlyIf(string option) => true;
 
         public List<string> Get()
         {
-            if (Character.Protagonist.Bonuses >= 0)
+            if ((SpecialTechnique != Character.SpecialTechniques.Nope) && (Character.Protagonist.SpecialTechnique == Character.SpecialTechniques.Nope))
+                Character.Protagonist.SpecialTechnique = SpecialTechnique ?? Character.SpecialTechniques.Nope;
+
+            else if ((StatStep > 0) && (Character.Protagonist.Bonuses >= 0))
             {
                 int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
 

@@ -43,6 +43,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     Stat = Game.Xml.StringParse(xmlAction["Stat"]),
 
                     StatStep = Game.Xml.IntParse(xmlAction["StatStep"]),
+
+                    SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]),
                 };
 
                 paragraph.Actions.Add(action);
@@ -54,6 +56,16 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
             return paragraph;
+        }
+
+        private static Character.SpecialTechniques SpecialTechniquesParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return Character.SpecialTechniques.Nope;
+
+            bool success = Enum.TryParse(xmlNode.InnerText, out Character.SpecialTechniques value);
+
+            return (success ? value : Character.SpecialTechniques.Nope);
         }
 
         private static Modification ModificationParse(XmlNode xmlNode)
