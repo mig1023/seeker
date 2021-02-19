@@ -78,12 +78,13 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         }
 
         public SpecialTechniques SpecialTechnique { get; set; }
-
         public int Bonuses { get; set; }
+        public int ExtendedDamage { get; set; }
+
 
         public void Init()
         {
-            Name = String.Empty;
+            Name = "ГЛАВГЕРОЙ";
 
             MaxAttack = 8;
             Attack = MaxAttack;
@@ -96,6 +97,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             SpecialTechnique = SpecialTechniques.Nope;
             Bonuses = 2;
+            ExtendedDamage = 0;
         }
 
         public Character Clone()
@@ -112,15 +114,16 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 Initiative = this.Initiative,
                 SpecialTechnique = this.SpecialTechnique,
                 Bonuses = this.Bonuses,
+                ExtendedDamage = this.ExtendedDamage,
             };
         }
 
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}",
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}",
                 MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance,
-                MaxInitiative, Initiative, Bonuses, SpecialTechnique
+                MaxInitiative, Initiative, Bonuses, SpecialTechnique, ExtendedDamage
             );
         }
 
@@ -137,6 +140,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             MaxInitiative = int.Parse(save[6]);
             Initiative = int.Parse(save[7]);
             Bonuses = int.Parse(save[8]);
+            ExtendedDamage = int.Parse(save[10]);
 
             bool success = Enum.TryParse(save[9], out SpecialTechniques value);
             SpecialTechnique = (success ? value : SpecialTechniques.Nope);
