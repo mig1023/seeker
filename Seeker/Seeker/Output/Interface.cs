@@ -106,11 +106,16 @@ namespace Seeker.Output
                         Text = param[1],
                     };
 
+                    string background = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
+
+                    if (String.IsNullOrEmpty(background))
+                        background = "#bdbdbd";
+
                     StackLayout splitterForm = new StackLayout()
                     {
                         HorizontalOptions = LayoutOptions.FillAndExpand,
                         HeightRequest = 25,
-                        BackgroundColor = Color.FromHex("#bdbdbd"),
+                        BackgroundColor = Color.FromHex(background),
                     };
 
                     splitterForm.Children.Add(splitter);
