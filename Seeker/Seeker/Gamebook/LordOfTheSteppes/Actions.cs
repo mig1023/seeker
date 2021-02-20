@@ -181,12 +181,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 )
             );
 
-            bool success = attackStrength > defender.Defence;
+            bool defenceBonus = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
+            bool success = attackStrength > (defender.Defence + (defenceBonus ? 1 : 0));
 
             fight.Add(
                 String.Format(
-                    "Защита: {0} {1} {2}",
-                    defender.Defence, (success ? "меньше" : "больше или равна"), attackStrength
+                    "Защита: {0}{1} {2} {3}",
+                    defender.Defence, (defenceBonus ? " + 1 за Веерную защиту (особый приём)" : String.Empty),
+                    (success ? "это меньше" : "это больше или равно"), attackStrength
                 )
             );
 
