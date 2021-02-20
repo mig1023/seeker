@@ -168,7 +168,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return initiative;
         }
 
-        private void Attack(Character attacker, Character defender, ref List<string> fight, List<Character> Allies)
+        private void Attack(Character attacker, Character defender, ref List<string> fight, List<Character> Allies, int? damage = null)
         {
             int firstRoll = Game.Dice.Roll();
             int secondRoll = Game.Dice.Roll();
@@ -192,9 +192,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (success)
             {
-                defender.Endurance -= 2;
+                defender.Endurance -= damage ?? 2;
 
                 string defenderName = (IsHero(defender.Name) ? "Вы ранены" : String.Format("{0} ранен", defender.Name));
+                defenderName += String.Format(" (осталось {0} жизней)", defender.Endurance);
 
                 fight.Add(String.Format("{0}|{1}", (Allies.Contains(defender) ? "BAD" : "GOOD"), defenderName));
             }
@@ -295,8 +296,19 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         continue;
 
                     fight.Add(String.Empty);
-                    fight.Add(String.Format("BOLD|{0} выбрает противника для атаки: {1}", fighter.Name, enemy.Name));
+
+                    if (GroupFight)
+                        fight.Add(String.Format("BOLD|{0} выбрает противника для атаки: {1}", fighter.Name, enemy.Name));
+                    else
+                        fight.Add(String.Format("BOLD|{0} атакует", fighter.Name));
+
                     Attack(fighter, enemy, ref fight, FightAllies);
+
+                    if (fighter.SpecialTechnique.Contains(Character.SpecialTechniques.TwoBlades))
+                    {
+                        fight.Add("Дополнительная атака (особый приём):");
+                        Attack(fighter, enemy, ref fight, FightAllies, damage: 1);
+                    }
                 }
 
                 bool enemyLost = true;
