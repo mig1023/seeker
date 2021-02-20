@@ -154,5 +154,25 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     SpecialTechnique.Add(value);
             }
         }
+
+        public string GetSpecialTechniques()
+        {
+            if (SpecialTechnique.Count == 0)
+                return String.Empty;
+
+            if ((SpecialTechnique.Count == 1) && (SpecialTechnique[0] == SpecialTechniques.Nope))
+                return String.Empty;
+
+            Dictionary<SpecialTechniques, string> TechniquesNames = new Dictionary<SpecialTechniques, string>
+            {
+                [SpecialTechniques.TwoBlades] = "Бой двумя клинками",
+                [SpecialTechniques.TotalProtection] = "Веерная защита",
+                [SpecialTechniques.FirstStrike] = "Первый удар",
+                [SpecialTechniques.PowerfulStrike] = "Мощный выпад",
+                [SpecialTechniques.Reaction] = "Реакция",
+            };
+
+            return String.Format("\n{0}", String.Join(", ", SpecialTechnique.ConvertAll(e => TechniquesNames[e])));
+        }
     }
 }

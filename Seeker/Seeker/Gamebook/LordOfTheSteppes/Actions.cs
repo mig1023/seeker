@@ -51,14 +51,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 foreach (Character ally in Allies)
                     if (ally.Name == Character.Protagonist.Name)
                         enemies.Add(String.Format(
-                            "Вы\nатака {0}  защита {1}  жизнь {2}  инициатива {3}",
-                            Character.Protagonist.Attack, Character.Protagonist.Defence,
-                            Character.Protagonist.Endurance, Character.Protagonist.Initiative
+                            "Вы\nатака {0}  защита {1}  жизнь {2}  инициатива {3}{4}",
+                            Character.Protagonist.Attack, Character.Protagonist.Defence, Character.Protagonist.Endurance,
+                            Character.Protagonist.Initiative, Character.Protagonist.GetSpecialTechniques()
                         ));
                     else
                         enemies.Add(String.Format(
-                            "{0}\nатака {1}  защита {2}  жизнь {3}  инициатива {4}",
-                            ally.Name, ally.Attack, ally.Defence, ally.Endurance, ally.Initiative
+                            "{0}\nатака {1}  защита {2}  жизнь {3}  инициатива {4}{5}",
+                            ally.Name, ally.Attack, ally.Defence, ally.Endurance, ally.Initiative, ally.GetSpecialTechniques()
                         ));
 
                 enemies.Add("SPLITTER|против");
@@ -66,8 +66,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             foreach (Character enemy in Enemies)
                 enemies.Add(String.Format(
-                    "{0}\nатака {1}  защита {2}  жизнь {3}  инициатива {4}",
-                    enemy.Name, enemy.Attack, enemy.Defence, enemy.Endurance, enemy.Initiative
+                    "{0}\nатака {1}  защита {2}  жизнь {3}  инициатива {4}{5}",
+                    enemy.Name, enemy.Attack, enemy.Defence, enemy.Endurance, enemy.Initiative, enemy.GetSpecialTechniques()
                 ));
 
             return enemies;
