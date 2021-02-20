@@ -80,12 +80,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public SpecialTechniques SpecialTechnique { get; set; }
         public int Bonuses { get; set; }
         public int ExtendedDamage { get; set; }
-        public int AttackOrder { get; set; }
-        public bool AttackAlready { get; set; }
 
         public void Init()
         {
-            Name = "ГЛАВГЕРОЙ";
+            Name = "Главный герой";
 
             MaxAttack = 8;
             Attack = MaxAttack;
