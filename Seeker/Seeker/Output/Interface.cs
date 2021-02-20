@@ -126,29 +126,42 @@ namespace Seeker.Output
                 {
                     string[] enemyParam = enemyLine.Split('\n');
 
-                    Label enemy = new Label()
-                    {
-                        FontAttributes = FontAttributes.Bold,
-                        Text = enemyParam[0],
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        FontFamily = TextFontFamily(),
-                        FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-                    };
+                    int index = 0;
 
-                    enemies.Add(enemy);
-
-                    if (enemyParam.Length > 1)
+                    foreach(string line in enemyParam)
                     {
-                        Label param = new Label()
+                        Label enemy = new Label()
                         {
-                            Text = enemyParam[1],
+                            Text = line,
                             HorizontalTextAlignment = TextAlignment.Center,
-                            Margin = new Thickness(0, -10, 0, 0),
                             FontFamily = TextFontFamily(),
                         };
 
-                        enemies.Add(param);
+                        if (index > 0)
+                            enemy.Margin = new Thickness(0, -10, 0, 0);
+                        else
+                        {
+                            enemy.FontAttributes = FontAttributes.Bold;
+                            enemy.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
+                        }
+
+                        enemies.Add(enemy);
+
+                        index += 1;
                     }
+
+                    //if (enemyParam.Length > 1)
+                    //{
+                    //    Label param = new Label()
+                    //    {
+                    //        Text = enemyParam[1],
+                    //        HorizontalTextAlignment = TextAlignment.Center,
+                    //        Margin = new Thickness(0, -10, 0, 0),
+                    //        FontFamily = TextFontFamily(),
+                    //    };
+
+                    //    enemies.Add(param);
+                    //}
                 }
             }
 
