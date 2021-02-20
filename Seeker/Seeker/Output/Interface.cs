@@ -132,16 +132,19 @@ namespace Seeker.Output
                     {
                         Label enemy = new Label()
                         {
-                            Text = line,
                             HorizontalTextAlignment = TextAlignment.Center,
-                            FontFamily = TextFontFamily(),
                         };
 
                         if (index > 0)
+                        {
+                            enemy.Text = line;
                             enemy.Margin = new Thickness(0, -10, 0, 0);
+                            enemy.FontFamily = TextFontFamily();
+                        }
                         else
                         {
-                            enemy.FontAttributes = FontAttributes.Bold;
+                            enemy.Text = line.ToUpper();
+                            enemy.FontFamily = TextFontFamily(bold: true);
                             enemy.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
                         }
 
@@ -149,19 +152,6 @@ namespace Seeker.Output
 
                         index += 1;
                     }
-
-                    //if (enemyParam.Length > 1)
-                    //{
-                    //    Label param = new Label()
-                    //    {
-                    //        Text = enemyParam[1],
-                    //        HorizontalTextAlignment = TextAlignment.Center,
-                    //        Margin = new Thickness(0, -10, 0, 0),
-                    //        FontFamily = TextFontFamily(),
-                    //    };
-
-                    //    enemies.Add(param);
-                    //}
                 }
             }
 
