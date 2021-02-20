@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Seeker.Gamebook.LordOfTheSteppes
@@ -77,7 +78,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
         }
 
-        public SpecialTechniques SpecialTechnique { get; set; }
+        public List<SpecialTechniques> SpecialTechnique { get; set; }
         public int Bonuses { get; set; }
         public int ExtendedDamage { get; set; }
 
@@ -94,7 +95,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             MaxInitiative = 10;
             Initiative = MaxInitiative;
 
-            SpecialTechnique = SpecialTechniques.Nope;
+            SpecialTechnique = new List<SpecialTechniques>();
             Bonuses = 2;
             ExtendedDamage = 0;
         }
@@ -111,7 +112,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 Endurance = this.Endurance,
                 MaxInitiative = this.MaxInitiative,
                 Initiative = this.Initiative,
-                SpecialTechnique = this.SpecialTechnique,
+                SpecialTechnique = new List<SpecialTechniques>(this.SpecialTechnique),
                 Bonuses = this.Bonuses,
                 ExtendedDamage = this.ExtendedDamage,
             };
@@ -119,10 +120,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public string Save()
         {
+            string specialTechniques = String.Join(":", SpecialTechnique.ConvertAll(e => e.ToString()));
+
             return String.Format(
                 "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}",
                 MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance,
-                MaxInitiative, Initiative, Bonuses, SpecialTechnique, ExtendedDamage
+                MaxInitiative, Initiative, Bonuses, specialTechniques, ExtendedDamage
             );
         }
 
@@ -141,8 +144,15 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             Bonuses = int.Parse(save[8]);
             ExtendedDamage = int.Parse(save[10]);
 
-            bool success = Enum.TryParse(save[9], out SpecialTechniques value);
-            SpecialTechnique = (success ? value : SpecialTechniques.Nope);
+            string[] specialTechniques = save[9].Split(':');
+
+            foreach(string specialTechnique in specialTechniques)
+            {
+                bool success = Enum.TryParse(specialTechnique, out SpecialTechniques value);
+
+                if (success)
+                    SpecialTechnique.Add(value);
+            }
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public string Text { get; set; }
         public string Stat { get; set; }
         public int StatStep { get; set; }
-        public Character.SpecialTechniques? SpecialTechnique { get; set; }
+        public Character.SpecialTechniques SpecialTechnique { get; set; }
 
         public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
@@ -103,7 +103,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public bool IsButtonEnabled()
         {
             bool disabledSpecialTechniqueButton = (SpecialTechnique != Character.SpecialTechniques.Nope) &&
-                (Character.Protagonist.SpecialTechnique != Character.SpecialTechniques.Nope);
+                (Character.Protagonist.SpecialTechnique.Count > 0);
 
             bool disabledStatBonuses = (!String.IsNullOrEmpty(Stat)) && (Character.Protagonist.Bonuses <= 0);
 
@@ -114,8 +114,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public List<string> Get()
         {
-            if ((SpecialTechnique != Character.SpecialTechniques.Nope) && (Character.Protagonist.SpecialTechnique == Character.SpecialTechniques.Nope))
-                Character.Protagonist.SpecialTechnique = SpecialTechnique ?? Character.SpecialTechniques.Nope;
+            if ((SpecialTechnique != Character.SpecialTechniques.Nope) && (Character.Protagonist.SpecialTechnique.Count == 0))
+                Character.Protagonist.SpecialTechnique.Add(SpecialTechnique);
 
             else if ((StatStep > 0) && (Character.Protagonist.Bonuses >= 0))
             {

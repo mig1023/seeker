@@ -67,21 +67,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                             };
                         }
                         else
-                        {
-                            ally = new Character
-                            {
-                                Name = Game.Xml.StringParse(xmlAlly.Attributes["Name"]),
-                                MaxAttack = Game.Xml.IntParse(xmlAlly.Attributes["Attack"]),
-                                MaxEndurance = Game.Xml.IntParse(xmlAlly.Attributes["Endurance"]),
-                                MaxDefence = Game.Xml.IntParse(xmlAlly.Attributes["Defence"]),
-                                MaxInitiative = Game.Xml.IntParse(xmlAlly.Attributes["Initiative"]),
-                            };
-
-                            ally.Attack = ally.MaxAttack;
-                            ally.Endurance = ally.MaxEndurance;
-                            ally.Defence = ally.MaxDefence;
-                            ally.Initiative = ally.MaxInitiative;
-                        }
+                            ally = CharacterParse(xmlAlly);
 
                         action.Allies.Add(ally);
                     }
@@ -92,23 +78,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     action.Enemies = new List<Character>();
 
                     foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
-                    {
-                        Character enemy = new Character
-                        {
-                            Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                            MaxAttack = Game.Xml.IntParse(xmlEnemy.Attributes["Attack"]),
-                            MaxEndurance = Game.Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
-                            MaxDefence = Game.Xml.IntParse(xmlEnemy.Attributes["Defence"]),
-                            MaxInitiative = Game.Xml.IntParse(xmlEnemy.Attributes["Initiative"]),
-                        };
-
-                        enemy.Attack = enemy.MaxAttack;
-                        enemy.Endurance = enemy.MaxEndurance;
-                        enemy.Defence = enemy.MaxDefence;
-                        enemy.Initiative = enemy.MaxInitiative;
-
-                        action.Enemies.Add(enemy);
-                    }
+                        action.Enemies.Add(CharacterParse(xmlEnemy));
                 }
 
                 paragraph.Actions.Add(action);
@@ -122,12 +92,42 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return paragraph;
         }
 
+        private static Character CharacterParse(XmlNode xmlNode)
+        {
+            Character character = new Character
+            {
+                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
+                MaxAttack = Game.Xml.IntParse(xmlNode.Attributes["Attack"]),
+                MaxEndurance = Game.Xml.IntParse(xmlNode.Attributes["Endurance"]),
+                MaxDefence = Game.Xml.IntParse(xmlNode.Attributes["Defence"]),
+                MaxInitiative = Game.Xml.IntParse(xmlNode.Attributes["Initiative"]),
+                SpecialTechnique = new List<Character.SpecialTechniques>(),
+            };
+
+            string specialTechniques = Game.Xml.StringParse(xmlNode.Attributes["SpecialTechnique"]);
+
+            foreach (string specialTechnique in specialTechniques.Split(','))
+                character.SpecialTechnique.Add(SpecialTechniquesParse(specialTechnique));
+
+            character.Attack = character.MaxAttack;
+            character.Endurance = character.MaxEndurance;
+            character.Defence = character.MaxDefence;
+            character.Initiative = character.MaxInitiative;
+
+            return character;
+        }
+
         private static Character.SpecialTechniques SpecialTechniquesParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
                 return Character.SpecialTechniques.Nope;
 
-            bool success = Enum.TryParse(xmlNode.InnerText, out Character.SpecialTechniques value);
+            return SpecialTechniquesParse(xmlNode.InnerText);
+        }
+
+        private static Character.SpecialTechniques SpecialTechniquesParse(string xmlLine)
+        {
+            bool success = Enum.TryParse(xmlLine, out Character.SpecialTechniques value);
 
             return (success ? value : Character.SpecialTechniques.Nope);
         }
@@ -141,7 +141,6 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             {
                 Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
                 Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
-
                 Restore = Game.Xml.BoolParse(xmlNode.Attributes["Restore"]),
             };
 
