@@ -168,36 +168,74 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return initiative;
         }
 
-        private void Attack(Character attacker, Character defender, ref List<string> fight, List<Character> Allies, int? damage = null)
+        private void OutputInitiative(ref List<string> fight, List<Character> FightEnemies, List<Character> FightOrder,
+            string iTemplate, string heroLine, string enemyLine, bool reverse = false, bool special = false)
+        {
+            string fisrtTemplate = (special ? "{0} (особый приём Первый удар)" : iTemplate);
+
+            if (!reverse)
+            {
+                fight.Add(String.Format(fisrtTemplate, Character.Protagonist.Name, heroLine));
+                fight.Add(String.Format(iTemplate, FightEnemies[0].Name, enemyLine));
+
+                FightOrder.Add(FightEnemies[0]);
+            }
+            else
+            {
+                fight.Add(String.Format(fisrtTemplate, FightEnemies[0].Name, enemyLine));
+                fight.Add(String.Format(iTemplate, Character.Protagonist.Name, heroLine));
+
+                FightOrder.Insert(0, FightEnemies[0]);
+            }
+        }
+
+        private void Attack(Character attacker, Character defender, ref List<string> fight, List<Character> Allies,
+            int round, int? damage = null)
         {
             int firstRoll = Game.Dice.Roll();
             int secondRoll = Game.Dice.Roll();
             int attackStrength = firstRoll + secondRoll + attacker.Attack;
 
-            fight.Add(
-                String.Format(
-                    "Мощность удара: {0} + {1} + {2} = {3}",
-                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(firstRoll), attacker.Attack, attackStrength
-                )
-            );
+            bool firstStrike = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
+            bool success = false;
 
-            bool defenceBonus = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
-            bool success = attackStrength > (defender.Defence + (defenceBonus ? 1 : 0));
+            if (firstStrike && (round == 1))
+            {
+                fight.Add("Первая атака (особый приём)");
+                success = true;
+            }
+            else
+            {
+                fight.Add(
+                    String.Format(
+                        "Мощность удара: {0} + {1} + {2} = {3}",
+                        Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(firstRoll), attacker.Attack, attackStrength
+                    )
+                );
 
-            fight.Add(
-                String.Format(
-                    "Защита: {0}{1} {2} {3}",
-                    defender.Defence, (defenceBonus ? " + 1 за Веерную защиту (особый приём)" : String.Empty),
-                    (success ? "это меньше" : "это больше или равно"), attackStrength
-                )
-            );
+                bool defenceBonus = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
+                success = attackStrength > (defender.Defence + (defenceBonus ? 1 : 0));
+
+                fight.Add(
+                    String.Format(
+                        "Защита: {0}{1} {2} {3}",
+                        defender.Defence, (defenceBonus ? " + 1 за Веерную защиту (особый приём)" : String.Empty),
+                        (success ? "это меньше" : "это больше или равно"), attackStrength
+                    )
+                );
+            }
 
             if (success)
             {
                 defender.Endurance -= damage ?? 2;
 
+                if (firstStrike && (round == 1))
+                    defender.Endurance -= 2;
+
                 string defenderName = (IsHero(defender.Name) ? "Вы ранены" : String.Format("{0} ранен", defender.Name));
-                defenderName += String.Format(" (осталось {0} жизней)", defender.Endurance);
+
+                if (defender.Endurance > 0)
+                    defenderName += String.Format(" (осталось {0} жизней)", defender.Endurance);
 
                 fight.Add(String.Format("{0}|{1}", (Allies.Contains(defender) ? "BAD" : "GOOD"), defenderName));
             }
@@ -211,6 +249,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             int iHero, iEnemy, round = 1, enemyWounds = 0;
             string heroLine, enemyLine, iTemplate = "{0} (инициатива {1})";
+            bool firstStrike = Character.Protagonist.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
 
             List<Character> FightAllies = new List<Character>();
             List<Character> FightEnemies = new List<Character>();
@@ -265,20 +304,17 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 FightOrder.Add(Character.Protagonist);
 
-                if (iHero > iEnemy)
-                {
-                    fight.Add(String.Format(iTemplate, Character.Protagonist.Name, heroLine));
-                    fight.Add(String.Format(iTemplate, FightEnemies[0].Name, enemyLine));
+                if (firstStrike && !FightEnemies[0].SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike))
+                    OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, heroLine, enemyLine, special: true);
 
-                    FightOrder.Add(FightEnemies[0]);
-                }
+                else if (!firstStrike && FightEnemies[0].SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike))
+                    OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, heroLine, enemyLine, reverse: true, special: true);
+
+                else if (iHero > iEnemy)
+                    OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, heroLine, enemyLine);
+
                 else
-                {
-                    fight.Add(String.Format(iTemplate, FightEnemies[0].Name, enemyLine));
-                    fight.Add(String.Format(iTemplate, Character.Protagonist.Name, heroLine));
-
-                    FightOrder.Insert(0, FightEnemies[0]);
-                }
+                    OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, heroLine, enemyLine, reverse: true);
             }
 
             fight.Add(String.Empty);
@@ -304,12 +340,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     else
                         fight.Add(String.Format("BOLD|{0} атакует", fighter.Name));
 
-                    Attack(fighter, enemy, ref fight, FightAllies);
+                    Attack(fighter, enemy, ref fight, FightAllies, round);
 
                     if (fighter.SpecialTechnique.Contains(Character.SpecialTechniques.TwoBlades))
                     {
                         fight.Add("Дополнительная атака (особый приём):");
-                        Attack(fighter, enemy, ref fight, FightAllies, damage: 1);
+                        Attack(fighter, enemy, ref fight, FightAllies, round, damage: 1);
                     }
                 }
 
