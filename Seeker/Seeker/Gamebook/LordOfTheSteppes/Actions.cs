@@ -197,6 +197,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             int attackStrength = firstRoll + secondRoll + attacker.Attack;
 
             bool firstStrike = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
+            bool powerfulStrike = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.PowerfulStrike);
+
             bool success = false;
 
             if (firstStrike && (round == 1))
@@ -230,17 +232,34 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 defender.Endurance -= damage ?? 2;
 
                 if (firstStrike && (round == 1))
+                {
+                    fight.Add("+2 дополнительный урон от Первого удара (особый приём)");
                     defender.Endurance -= 2;
+                }
+
+                if (powerfulStrike && (round < 3))
+                {
+                    fight.Add("+3 дополнительный урон от Мощного выпада (особый приём)");
+                    defender.Endurance -= 3;
+                }
 
                 string defenderName = (IsHero(defender.Name) ? "Вы ранены" : String.Format("{0} ранен", defender.Name));
 
                 if (defender.Endurance > 0)
-                    defenderName += String.Format(" (осталось {0} жизней)", defender.Endurance);
+                    defenderName += String.Format(" (осталось жизней: {0})", defender.Endurance);
 
                 fight.Add(String.Format("{0}|{1}", (Allies.Contains(defender) ? "BAD" : "GOOD"), defenderName));
             }
             else
+            {
                 fight.Add("Атака отбита");
+
+                if (powerfulStrike && (round < 3))
+                {
+                    fight.Add("Урон всё равно нанесён от Мощного выпада (особый приём)");
+                    defender.Endurance -= 3;
+                }
+            }
         }
 
         public List<string> Fight()
