@@ -198,6 +198,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             bool firstStrike = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
             bool powerfulStrike = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.PowerfulStrike);
+            bool firstStrikeEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike) && (round <= 3);
+
+            if (firstStrikeEnemy)
+                attackStrength -= 1;
 
             bool success = false;
 
@@ -210,8 +214,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             {
                 fight.Add(
                     String.Format(
-                        "Мощность удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(firstRoll), attacker.Attack, attackStrength
+                        "Мощность удара: {0} + {1} + {2}{3} = {4}",
+                        Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), attacker.Attack,
+                        (firstStrikeEnemy ? " - 1 за Первую атаку (особый приём) противника" : String.Empty), attackStrength
                     )
                 );
 
@@ -252,7 +257,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
             else
             {
-                fight.Add("Атака отбита");
+                fight.Add(String.Format("{0}|Атака отбита", (Enemies.Contains(defender) ? "BAD" : "GOOD")));
 
                 if (powerfulStrike && (round < 3))
                 {
@@ -390,7 +395,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 if (allyLost)
                 {
                     fight.Add(String.Empty);
-                    fight.Add("BIG|GOOD|ВЫ ПРОИГРАЛИ :(");
+                    fight.Add("BIG|BAD|ВЫ ПРОИГРАЛИ :(");
                     return fight;
                 }
 
