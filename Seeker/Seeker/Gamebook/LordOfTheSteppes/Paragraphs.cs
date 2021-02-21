@@ -45,6 +45,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     StatStep = Game.Xml.IntParse(xmlAction["StatStep"]),
                     RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
                     WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
+                    Coherence = Game.Xml.IntParse(xmlAction["Coherence"]),
 
                     GroupFight = Game.Xml.BoolParse(xmlAction["GroupFight"]),
 

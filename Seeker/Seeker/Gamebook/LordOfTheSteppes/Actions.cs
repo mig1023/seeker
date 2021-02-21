@@ -22,6 +22,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
         public bool GroupFight { get; set; }
+        public int Coherence { get; set; }
 
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
@@ -190,7 +191,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         }
 
         private void Attack(Character attacker, Character defender, ref List<string> fight, List<Character> Allies,
-            ref Dictionary<string, int> WoundsCount, int round, out bool reactionSuccess, bool supplAttack = false)
+            ref Dictionary<string, int> WoundsCount, int round, int coherenceIndex, out bool reactionSuccess, bool supplAttack = false)
         {
             reactionSuccess = false;
 
@@ -203,9 +204,16 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             bool firstStrikeEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike) && (round <= 3);
             bool reactionEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.Reaction);
+            bool totalProtectionEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
+
+            int coherence = (coherenceIndex * Coherence);
+            bool coherenceBonus = !Allies.Contains(attacker) && (coherenceIndex >= 1) && !totalProtectionEnemy;
 
             if (firstStrikeEnemy)
                 attackStrength -= 1;
+
+            if (coherenceBonus)
+                attackStrength += coherence;
 
             bool success = false;
 
@@ -218,9 +226,11 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             {
                 fight.Add(
                     String.Format(
-                        "Мощность удара: {0} + {1} + {2}{3} = {4}",
+                        "Мощность удара: {0} + {1} + {2}{3}{4} = {5}",
                         Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), attacker.Attack,
-                        (firstStrikeEnemy ? " - 1 за Первую атаку (особый приём) противника" : String.Empty), attackStrength
+                        (firstStrikeEnemy ? " - 1 за Первую атаку (особый приём) противника" : String.Empty), 
+                        (coherenceBonus ? String.Format(" {0} {1} за Слаженность", (coherence > 0 ? "+" : "-"), Math.Abs(coherence)) : String.Empty),
+                        attackStrength
                     )
                 );
 
@@ -245,6 +255,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 {
                     fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (Allies.Contains(defender) ? "GOOD" : "BAD")));
                     reactionSuccess = true;
+                    WoundsCount[defender.Name] = 0;
 
                     return;
                 }
@@ -366,7 +377,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
-                foreach(Character fighter in FightOrder)
+                int coherenceIndex = 0;
+
+                foreach (Character fighter in FightOrder)
                 {
                     if (fighter.Endurance <= 0)
                         continue;
@@ -383,7 +396,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     else
                         fight.Add(String.Format("BOLD|{0} атакует", fighter.Name));
 
-                    Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, round, out bool reactionSuccess);
+                    Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, round, coherenceIndex, out bool reactionSuccess);
 
                     if (fighter.SpecialTechnique.Contains(Character.SpecialTechniques.TwoBlades))
                     {
@@ -392,8 +405,11 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         if (reactionSuccess)
                             fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (FightAllies.Contains(enemy) ? "GOOD" : "BAD")));
                         else
-                            Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, round, out bool _, supplAttack: true);
+                            Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, round, coherenceIndex, out bool _, supplAttack: true);
                     }
+
+                    if (FightEnemies.Contains(fighter))
+                        coherenceIndex += 1;
                 }
 
                 bool enemyLost = true;
