@@ -85,7 +85,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             int dice = Game.Dice.Roll(dices: 2);
 
-            Name = "ГЛАВГЕРОЙ";
+            Name = "Главный герой";
             MaxMastery = Masterys[dice];
             Mastery = MaxMastery;
             MaxEndurance = Endurances[dice];

@@ -224,7 +224,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return new List<string> { "RELOAD" };
         }
 
-        private bool IsHero(string name) => name == "ГЛАВГЕРОЙ";
+        private bool IsHero(string name) => name == Character.Protagonist.Name;
 
         public List<string> Fight()
         {
