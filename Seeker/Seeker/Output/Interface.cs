@@ -273,6 +273,7 @@ namespace Seeker.Output
                     ["BLUE|"] = Color.Blue,
                     ["YELLOW|"] = Color.Yellow,
                     ["GREEN|"] = Color.Green,
+                    ["GRAY|"] = Color.Gray,
                     ["BAD|"] = Color.Red,
                     ["GOOD|"] = Color.Green,
                     ["BIG|"] = null,
