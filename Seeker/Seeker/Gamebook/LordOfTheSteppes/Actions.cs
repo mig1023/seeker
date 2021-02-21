@@ -238,11 +238,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (success)
             {
-                WoundsCount[defender.Name] += 1;
+                if (!supplAttack)
+                    WoundsCount[defender.Name] += 1;
 
                 if (reactionEnemy && (WoundsCount[defender.Name] == 3))
                 {
-                    fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (Enemies.Contains(defender) ? "BAD" : "GOOD")));
+                    fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (Allies.Contains(defender) ? "GOOD" : "BAD")));
                     reactionSuccess = true;
 
                     return;
@@ -271,7 +272,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
             else
             {
-                fight.Add(String.Format("{0}|Атака отбита", (Enemies.Contains(defender) ? "BAD" : "GOOD")));
+                fight.Add(String.Format("{0}|Атака отбита", (Allies.Contains(defender) ? "GOOD" : "BAD")));
 
                 if (powerfulStrike && (round < 3))
                 {
@@ -389,7 +390,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         fight.Add("Дополнительная атака (особый приём):");
 
                         if (reactionSuccess)
-                            fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (Enemies.Contains(enemy) ? "BAD" : "GOOD")));
+                            fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (FightAllies.Contains(enemy) ? "GOOD" : "BAD")));
                         else
                             Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, round, out bool _, supplAttack: true);
                     }
