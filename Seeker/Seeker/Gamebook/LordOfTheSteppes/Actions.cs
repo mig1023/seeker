@@ -264,6 +264,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             bool reactionEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.Reaction);
             bool totalProtectionEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
 
+            bool aggressive = attacker.FightStyle == Character.FightStyles.Aggressive;
+            bool defensive = attacker.FightStyle == Character.FightStyles.Defensive;
+            bool fullback = attacker.FightStyle == Character.FightStyles.Fullback;
+            
+            bool aggressiveEnemy = defender.FightStyle == Character.FightStyles.Aggressive;
+            bool defensiveEnemy = defender.FightStyle == Character.FightStyles.Defensive;
+            bool fullbackEnemy = defender.FightStyle == Character.FightStyles.Fullback;
+
             int coherence = (coherenceIndex * Coherence);
             bool coherenceBonus = !Allies.Contains(attacker) && (coherenceIndex >= 1) && !totalProtectionEnemy;
 
@@ -272,6 +280,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (coherenceBonus)
                 attackStrength += coherence;
+
+            if (aggressive)
+                attackStrength += 1;
+
+            if (defensive || fullback)
+                attackStrength -= 1;
 
             bool success = false;
 
@@ -284,21 +298,27 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             {
                 fight.Add(
                     String.Format(
-                        "Мощность удара: {0} + {1} + {2}{3}{4} = {5}",
+                        "Мощность удара: {0} + {1} + {2}{3}{4}{5}{6}{7} = {8}",
                         Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), attacker.Attack,
-                        (firstStrikeEnemy ? " - 1 за Первую атаку (особый приём) противника" : String.Empty), 
+                        (firstStrikeEnemy ? " - 1 за Первую атаку (особый приём) противника" : String.Empty),
+                        (aggressive ? " + 1 за Агрессивный стиль боя" : String.Empty),
+                        (defensive ? " - 1 за Оборонительный стиль боя" : String.Empty),
+                        (fullback ? " - 1 за Глухую оборону" : String.Empty),
                         (coherenceBonus ? String.Format(" {0} {1} за Слаженность", (coherence > 0 ? "+" : "-"), Math.Abs(coherence)) : String.Empty),
                         attackStrength
                     )
                 );
 
                 bool defenceBonus = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
-                success = attackStrength > (defender.Defence + (defenceBonus ? 1 : 0));
+                success = attackStrength > (defender.Defence + (defenceBonus ? 1 : 0) + (defensiveEnemy ? 1 : 0) + (fullbackEnemy ? 2 : 0) - (aggressiveEnemy ? 1 : 0));
 
                 fight.Add(
                     String.Format(
-                        "Защита: {0}{1} {2} {3}",
+                        "Защита: {0}{1}{2}{3}{4} {5} {6}",
                         defender.Defence, (defenceBonus ? " + 1 за Веерную защиту (особый приём)" : String.Empty),
+                        (aggressiveEnemy ? " - 1 за Агрессивный стиль боя" : String.Empty),
+                        (defensiveEnemy ? " + 1 за Оборонительный стиль боя" : String.Empty),
+                        (fullbackEnemy ? " + 2 за Глухую оборону" : String.Empty),
                         (success ? "это меньше" : "это больше или равно"), attackStrength
                     )
                 );
