@@ -8,6 +8,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 {
     class Actions : Abstract.IActions
     {
+
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
@@ -156,6 +157,66 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 return null;
         }
 
+        private Character.FightStyles ChangeFightStyle(string motivation, ref List<string> fight, string direction, Character.FightStyles newFightStyles)
+        {
+            Dictionary<Character.FightStyles, string> fightStyles = new Dictionary<Character.FightStyles, string>
+            {
+                [Character.FightStyles.Aggressive] = "агрессивный",
+                [Character.FightStyles.Counterattacking] = "контратакующий",
+                [Character.FightStyles.Defensive] = "оборонительный",
+                [Character.FightStyles.Fullback] = "глухую защиту",
+            };
+
+            bool goodDirectionUp = ((direction == "upTo") && ((int)Character.Protagonist.FightStyle < (int)newFightStyles));
+            bool goodDirectionDown = ((direction == "downTo") && ((int)Character.Protagonist.FightStyle > (int)newFightStyles));
+
+            if (goodDirectionUp || goodDirectionDown)
+            {
+                Character.Protagonist.FightStyle = newFightStyles;
+                fight.Add(String.Format("GRAY|{0} Меняем стиль боя на {1}", motivation, fightStyles[newFightStyles]));
+            }
+
+            return newFightStyles;
+        }
+
+        private Character.FightStyles ChooseFightStyle(ref List<string> fight, Dictionary<string, List<int>> AttackStory, List<Character> Enemies)
+        {
+            Character.FightStyles newFightStyles = Character.Protagonist.FightStyle;
+
+            if (Character.Protagonist.Endurance < (Character.Protagonist.MaxEndurance / 2))
+                newFightStyles = ChangeFightStyle("Дело дрянь!", ref fight, "downTo", Character.FightStyles.Fullback);
+
+            int enemyCount = 0;
+
+            foreach (Character enemy in Enemies)
+                if (enemy.Endurance > 0)
+                    enemyCount += 1;
+
+            if (enemyCount > 3)
+                newFightStyles = ChangeFightStyle("Ох, сколько их набежало!", ref fight, "downTo", Character.FightStyles.Fullback);
+            else if (enemyCount > 2)
+                newFightStyles = ChangeFightStyle("Чего-то их много!", ref fight, "downTo", Character.FightStyles.Defensive);
+            else
+                newFightStyles = ChangeFightStyle("Один на один-то я никого не боюсь!", ref fight, "upTo", Character.FightStyles.Counterattacking);
+
+            List<int> story = AttackStory[Character.Protagonist.Name];
+
+            int fightBalance = 0;
+            int storyCount = (story.Count > 3 ? 3 : story.Count);
+
+            for (int i = 1; i <= storyCount; i++)
+                fightBalance += story[story.Count - i];
+
+            if (fightBalance < 0)
+                newFightStyles = ChangeFightStyle("Как-то дела неважно заладились...", ref fight, "downTo", Character.FightStyles.Defensive);
+            else if (fightBalance > 2)
+                newFightStyles = ChangeFightStyle("Нормально, ща он огребать будет!!", ref fight, "downTo", Character.FightStyles.Aggressive);
+            else
+                newFightStyles = ChangeFightStyle("Спокойно его уделаю", ref fight, "downTo", Character.FightStyles.Counterattacking);
+
+            return newFightStyles;
+        }
+
         private int InitiativeAndDices(Character character, out string line)
         {
             int firstRoll = Game.Dice.Roll();
@@ -191,7 +252,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         }
 
         private void Attack(Character attacker, Character defender, ref List<string> fight, List<Character> Allies,
-            ref Dictionary<string, int> WoundsCount, int round, int coherenceIndex, out bool reactionSuccess, bool supplAttack = false)
+            ref Dictionary<string, int> WoundsCount, ref Dictionary<string, List<int>> AttackStory, int round, int coherenceIndex,
+            out bool reactionSuccess, bool supplAttack = false)
         {
             reactionSuccess = false;
 
@@ -280,6 +342,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     defenderName += String.Format(" (осталось жизней: {0})", defender.Endurance);
 
                 fight.Add(String.Format("{0}|{1}", (Allies.Contains(defender) ? "BAD" : "GOOD"), defenderName));
+
+                AttackStory[attacker.Name].Add(2);
+                AttackStory[defender.Name].Add(-2);
             }
             else
             {
@@ -290,6 +355,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     fight.Add("Урон всё равно нанесён от Мощного выпада (особый приём)");
                     defender.Endurance -= 3;
                 }
+
+                AttackStory[attacker.Name].Add(-1);
+                AttackStory[defender.Name].Add(1);
             }
         }
 
@@ -306,6 +374,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             List<Character> FightAll = new List<Character>();
             List<Character> FightOrder = null;
             Dictionary<string, int> WoundsCount = new Dictionary<string, int>();
+            Dictionary<string, List<int>> AttackStory = new Dictionary<string, List<int>>();
 
             foreach (Character enemy in Enemies)
             {
@@ -334,7 +403,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     }
 
             foreach (Character fighter in FightAll)
+            {
                 WoundsCount[fighter.Name] = 0;
+                AttackStory[fighter.Name] = new List<int>();
+            }
 
             fight.Add("ОЧЕРЁДНОСТЬ УДАРОВ:");
 
@@ -386,6 +458,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                     Character enemy = FindEnemy(fighter, FightAllies, FightEnemies);
 
+                    Character.Protagonist.FightStyle = ChooseFightStyle(ref fight, AttackStory, FightEnemies);
+
                     if (enemy == null)
                         continue;
 
@@ -396,7 +470,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     else
                         fight.Add(String.Format("BOLD|{0} атакует", fighter.Name));
 
-                    Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, round, coherenceIndex, out bool reactionSuccess);
+                    Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, ref AttackStory, round, coherenceIndex, out bool reactionSuccess);
 
                     if (fighter.SpecialTechnique.Contains(Character.SpecialTechniques.TwoBlades))
                     {
@@ -405,7 +479,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         if (reactionSuccess)
                             fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (FightAllies.Contains(enemy) ? "GOOD" : "BAD")));
                         else
-                            Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, round, coherenceIndex, out bool _, supplAttack: true);
+                            Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, ref AttackStory, round, coherenceIndex, out bool _, supplAttack: true);
                     }
 
                     if (FightEnemies.Contains(fighter))

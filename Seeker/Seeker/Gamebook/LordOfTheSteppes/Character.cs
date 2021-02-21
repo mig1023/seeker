@@ -10,7 +10,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public static Character Protagonist = new Gamebook.LordOfTheSteppes.Character();
 
         public enum SpecialTechniques { TwoBlades, TotalProtection, FirstStrike, PowerfulStrike, Reaction, Nope };
-
+        public enum FightStyles { Fullback, Defensive, Counterattacking, Aggressive }
 
         public string Name { get; set; }
 
@@ -78,6 +78,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
         }
 
+        public FightStyles FightStyle { get; set; }
         public List<SpecialTechniques> SpecialTechnique { get; set; }
         public int Bonuses { get; set; }
         public int ExtendedDamage { get; set; }
@@ -95,6 +96,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             MaxInitiative = 10;
             Initiative = MaxInitiative;
 
+            FightStyle = FightStyles.Counterattacking;
             SpecialTechnique = new List<SpecialTechniques>();
             Bonuses = 2;
             ExtendedDamage = 0;
@@ -112,6 +114,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 Endurance = this.Endurance,
                 MaxInitiative = this.MaxInitiative,
                 Initiative = this.Initiative,
+                FightStyle = FightStyles.Counterattacking,
                 SpecialTechnique = new List<SpecialTechniques>(this.SpecialTechnique),
                 Bonuses = this.Bonuses,
                 ExtendedDamage = this.ExtendedDamage,
