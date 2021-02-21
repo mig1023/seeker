@@ -190,15 +190,19 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         }
 
         private void Attack(Character attacker, Character defender, ref List<string> fight, List<Character> Allies,
-            int round, int? damage = null)
+            ref Dictionary<string, int> WoundsCount, int round, out bool reactionSuccess, bool supplAttack = false)
         {
+            reactionSuccess = false;
+
             int firstRoll = Game.Dice.Roll();
             int secondRoll = Game.Dice.Roll();
             int attackStrength = firstRoll + secondRoll + attacker.Attack;
 
             bool firstStrike = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
             bool powerfulStrike = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.PowerfulStrike);
+
             bool firstStrikeEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike) && (round <= 3);
+            bool reactionEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.Reaction);
 
             if (firstStrikeEnemy)
                 attackStrength -= 1;
@@ -234,7 +238,17 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (success)
             {
-                defender.Endurance -= damage ?? 2;
+                WoundsCount[defender.Name] += 1;
+
+                if (reactionEnemy && (WoundsCount[defender.Name] == 3))
+                {
+                    fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (Enemies.Contains(defender) ? "BAD" : "GOOD")));
+                    reactionSuccess = true;
+
+                    return;
+                }
+
+                defender.Endurance -= (supplAttack ? 1 : 2);
 
                 if (firstStrike && (round == 1))
                 {
@@ -279,6 +293,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             List<Character> FightEnemies = new List<Character>();
             List<Character> FightAll = new List<Character>();
             List<Character> FightOrder = null;
+            Dictionary<string, int> WoundsCount = new Dictionary<string, int>();
 
             foreach (Character enemy in Enemies)
             {
@@ -305,6 +320,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         FightAllies.Add(allyClone);
                         FightAll.Add(allyClone);
                     }
+
+            foreach (Character fighter in FightAll)
+                WoundsCount[fighter.Name] = 0;
 
             fight.Add("ОЧЕРЁДНОСТЬ УДАРОВ:");
 
@@ -364,12 +382,16 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     else
                         fight.Add(String.Format("BOLD|{0} атакует", fighter.Name));
 
-                    Attack(fighter, enemy, ref fight, FightAllies, round);
+                    Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, round, out bool reactionSuccess);
 
                     if (fighter.SpecialTechnique.Contains(Character.SpecialTechniques.TwoBlades))
                     {
                         fight.Add("Дополнительная атака (особый приём):");
-                        Attack(fighter, enemy, ref fight, FightAllies, round, damage: 1);
+
+                        if (reactionSuccess)
+                            fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (Enemies.Contains(enemy) ? "BAD" : "GOOD")));
+                        else
+                            Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, round, out bool _, supplAttack: true);
                     }
                 }
 
