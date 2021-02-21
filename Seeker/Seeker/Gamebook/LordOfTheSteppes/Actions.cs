@@ -184,7 +184,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             Character.FightStyles newFightStyles = Character.Protagonist.FightStyle;
 
             if (Character.Protagonist.Endurance < (Character.Protagonist.MaxEndurance / 2))
-                newFightStyles = ChangeFightStyle("Дело дрянь!", ref fight, "downTo", Character.FightStyles.Fullback);
+                return ChangeFightStyle("Дело дрянь!", ref fight, "downTo", Character.FightStyles.Fullback);
 
             int enemyCount = 0;
 
@@ -193,11 +193,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     enemyCount += 1;
 
             if (enemyCount > 3)
-                newFightStyles = ChangeFightStyle("Ох, сколько их набежало!", ref fight, "downTo", Character.FightStyles.Fullback);
+                return ChangeFightStyle("Ох, сколько их набежало!", ref fight, "downTo", Character.FightStyles.Fullback);
             else if (enemyCount > 2)
-                newFightStyles = ChangeFightStyle("Чего-то их много!", ref fight, "downTo", Character.FightStyles.Defensive);
-            else
-                newFightStyles = ChangeFightStyle("Один на один-то я никого не боюсь!", ref fight, "upTo", Character.FightStyles.Counterattacking);
+                return ChangeFightStyle("Чего-то их много!", ref fight, "downTo", Character.FightStyles.Defensive);
 
             List<int> story = AttackStory[Character.Protagonist.Name];
 
@@ -208,13 +206,11 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 fightBalance += story[story.Count - i];
 
             if (fightBalance < 0)
-                newFightStyles = ChangeFightStyle("Как-то дела неважно заладились...", ref fight, "downTo", Character.FightStyles.Defensive);
+                return ChangeFightStyle("Как-то дела неважно заладились...", ref fight, "downTo", Character.FightStyles.Defensive);
             else if (fightBalance > 2)
-                newFightStyles = ChangeFightStyle("Нормально, ща он огребать будет!!", ref fight, "downTo", Character.FightStyles.Aggressive);
+                return ChangeFightStyle("Нормально, раздаб люлей!!", ref fight, "upTo", Character.FightStyles.Aggressive);
             else
-                newFightStyles = ChangeFightStyle("Спокойно его уделаю", ref fight, "downTo", Character.FightStyles.Counterattacking);
-
-            return newFightStyles;
+                return ChangeFightStyle("Надо осторожнее, что ли...", ref fight, "upTo", Character.FightStyles.Counterattacking);
         }
 
         private int InitiativeAndDices(Character character, out string line)
@@ -451,14 +447,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 int coherenceIndex = 0;
 
+                Character.Protagonist.FightStyle = ChooseFightStyle(ref fight, AttackStory, FightEnemies);
+
                 foreach (Character fighter in FightOrder)
                 {
                     if (fighter.Endurance <= 0)
                         continue;
 
                     Character enemy = FindEnemy(fighter, FightAllies, FightEnemies);
-
-                    Character.Protagonist.FightStyle = ChooseFightStyle(ref fight, AttackStory, FightEnemies);
 
                     if (enemy == null)
                         continue;
