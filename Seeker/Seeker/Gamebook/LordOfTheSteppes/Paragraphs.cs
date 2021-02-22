@@ -47,14 +47,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
                     Coherence = Game.Xml.IntParse(xmlAction["Coherence"]),
 
-                    GroupFight = Game.Xml.BoolParse(xmlAction["GroupFight"]),
-
                     SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]),
                 };
 
                 if (xmlAction["Allies"] != null)
                 {
                     action.Allies = new List<Character>();
+
+                    action.GroupFight = true;
 
                     foreach (XmlNode xmlAlly in xmlAction.SelectNodes("Allies/Ally"))
                     {
@@ -80,6 +80,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                     foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
                         action.Enemies.Add(CharacterParse(xmlEnemy));
+
+                    if (action.Enemies.Count > 1)
+                        action.GroupFight = true;
                 }
 
                 paragraph.Actions.Add(action);
