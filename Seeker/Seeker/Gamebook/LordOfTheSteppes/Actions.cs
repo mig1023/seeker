@@ -265,6 +265,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             bool firstStrikeEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike) && (round <= 3);
             bool reactionEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.Reaction);
+            bool ignoreReaction = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreReaction);
             bool totalProtectionEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
 
             bool aggressive = attacker.FightStyle == Character.FightStyles.Aggressive;
@@ -336,7 +337,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 if (!supplAttack)
                     WoundsCount[defender.Name] += 1;
 
-                if (reactionEnemy && (WoundsCount[defender.Name] == 3))
+                if (reactionEnemy && !ignoreReaction && (WoundsCount[defender.Name] == 3))
                 {
                     fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (Allies.Contains(defender) ? "GOOD" : "BAD")));
                     reactionSuccess = true;
