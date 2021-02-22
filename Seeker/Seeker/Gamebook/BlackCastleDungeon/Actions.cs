@@ -173,7 +173,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             count += 1;
 
                     if (count > 0)
-                        countMarker = String.Format(" (x{0})", count);
+                        countMarker = String.Format(" ({0} шт)", count);
                 }
 
                 return new List<string> { String.Format("{0}{1}", Text, countMarker) };
