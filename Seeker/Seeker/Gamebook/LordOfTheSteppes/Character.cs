@@ -9,7 +9,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
     {
         public static Character Protagonist = new Gamebook.LordOfTheSteppes.Character();
 
-        public enum SpecialTechniques { TwoBlades, TotalProtection, FirstStrike, PowerfulStrike, Reaction, IgnoreReaction, Nope };
+        public enum SpecialTechniques { TwoBlades, TotalProtection, FirstStrike, PowerfulStrike, Reaction,
+            IgnoreReaction, IgnoreFirstStrike, Nope };
         public enum FightStyles { Fullback, Defensive, Counterattacking, Aggressive }
 
         public string Name { get; set; }
@@ -171,9 +172,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 [SpecialTechniques.TwoBlades] = "Бой двумя клинками",
                 [SpecialTechniques.TotalProtection] = "Веерная защита",
                 [SpecialTechniques.FirstStrike] = "Первый удар",
+                [SpecialTechniques.IgnoreFirstStrike] = "Игнорирует прием Первый удар",
                 [SpecialTechniques.PowerfulStrike] = "Мощный выпад",
-                [SpecialTechniques.IgnoreReaction] = "Игнорирует прием реакции",
                 [SpecialTechniques.Reaction] = "Реакция",
+                [SpecialTechniques.IgnoreReaction] = "Игнорирует прием Реакции",
             };
 
             return String.Format("\n{0}", String.Join(", ", SpecialTechnique.ConvertAll(e => TechniquesNames[e])));

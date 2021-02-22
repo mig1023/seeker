@@ -262,11 +262,22 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             bool firstStrike = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
             bool powerfulStrike = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.PowerfulStrike);
-
-            bool firstStrikeEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike) && (round <= 3);
-            bool reactionEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.Reaction);
             bool ignoreReaction = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreReaction);
-            bool totalProtectionEnemy = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
+            bool ignoreFirstStrike = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
+
+            bool enemyFirstStrike = defender.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike) && (round <= 3);
+            bool enemyIgnoreFirstStrike = defender.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
+            bool enemyReaction = defender.SpecialTechnique.Contains(Character.SpecialTechniques.Reaction);
+            bool enemyTotalProtection = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
+
+            if (ignoreReaction)
+                enemyReaction = false;
+
+            if (ignoreFirstStrike)
+                enemyFirstStrike = false;
+
+            if (enemyIgnoreFirstStrike)
+                firstStrike = false;
 
             bool aggressive = attacker.FightStyle == Character.FightStyles.Aggressive;
             bool defensive = attacker.FightStyle == Character.FightStyles.Defensive;
@@ -277,9 +288,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             bool fullbackEnemy = defender.FightStyle == Character.FightStyles.Fullback;
 
             int coherence = (coherenceIndex * Coherence);
-            bool coherenceBonus = !Allies.Contains(attacker) && (coherenceIndex >= 1) && !totalProtectionEnemy;
+            bool coherenceBonus = !Allies.Contains(attacker) && (coherenceIndex >= 1) && !enemyTotalProtection;
 
-            if (firstStrikeEnemy)
+            if (enemyFirstStrike)
                 attackStrength -= 1;
 
             if (coherenceBonus)
@@ -302,7 +313,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             {
                 string bonuses = String.Empty;
 
-                bonuses += Add(firstStrikeEnemy, " - 1 за Первую атаку (особый приём) противника");
+                bonuses += Add(enemyFirstStrike, " - 1 за Первую атаку (особый приём) противника");
                 bonuses += Add(aggressive, " + 1 за Агрессивный стиль боя");
                 bonuses += Add(defensive, " - 1 за Оборонительный стиль боя");
                 bonuses += Add(fullback, " - 1 за Глухую оборону");
@@ -337,7 +348,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 if (!supplAttack)
                     WoundsCount[defender.Name] += 1;
 
-                if (reactionEnemy && !ignoreReaction && (WoundsCount[defender.Name] == 3))
+                if (enemyReaction && (WoundsCount[defender.Name] == 3))
                 {
                     fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (Allies.Contains(defender) ? "GOOD" : "BAD")));
                     reactionSuccess = true;
@@ -391,7 +402,6 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             int iHero, iEnemy, round = 1, enemyWounds = 0;
             string heroLine, enemyLine, iTemplate = "{0} (инициатива {1})";
-            bool firstStrike = Character.Protagonist.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
 
             List<Character> FightAllies = new List<Character>();
             List<Character> FightEnemies = new List<Character>();
@@ -443,6 +453,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
             else
             {
+                bool firstStrike = Character.Protagonist.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
+                bool enemyFirstStrike = FightEnemies[0].SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
+                bool enemyIgnoreFirstStrike = FightEnemies[0].SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
+
                 FightOrder = new List<Character>();
 
                 do
@@ -454,10 +468,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 FightOrder.Add(Character.Protagonist);
 
-                if (firstStrike && !FightEnemies[0].SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike))
+                if (firstStrike && !enemyFirstStrike && !enemyIgnoreFirstStrike)
                     OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, heroLine, enemyLine, special: true);
 
-                else if (!firstStrike && FightEnemies[0].SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike))
+                else if (!firstStrike && enemyFirstStrike)
                     OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, heroLine, enemyLine, reverse: true, special: true);
 
                 else if (iHero > iEnemy)
