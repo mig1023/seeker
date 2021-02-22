@@ -43,8 +43,28 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         {
             List<string> enemies = new List<string>();
 
-            if (!String.IsNullOrEmpty(Text))
+            if (!String.IsNullOrEmpty(Stat))
+            {
+                int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
+
+                Dictionary<string, int> startValues = new Dictionary<string, int>
+                {
+                    ["Attack"] = 8,
+                    ["Defence"] = 15,
+                    ["Endurance"] = 14,
+                    ["Initiative"] = 10,
+                };
+
+                int diff = (currentStat - startValues[Stat]);
+
+                string diffLine = (diff > 0 ? String.Format(" (+{0})", diff) : String.Empty);
+
+                return new List<string> { String.Format("{0}{1}", Text, diffLine) };
+            }
+
+            else if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
+
             else if (Enemies == null)
                 return enemies;
 
