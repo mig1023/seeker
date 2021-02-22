@@ -173,6 +173,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             if (goodDirectionUp || goodDirectionDown)
             {
                 Character.Protagonist.FightStyle = newFightStyles;
+                fight.Add(String.Empty);
                 fight.Add(String.Format("GRAY|{0} Меняем стиль боя на {1}", motivation, fightStyles[newFightStyles]));
             }
 
@@ -192,10 +193,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 if (enemy.Endurance > 0)
                     enemyCount += 1;
 
-            if (enemyCount > 3)
+            if (enemyCount > 2)
                 return ChangeFightStyle("Ох, сколько их набежало!", ref fight, "downTo", Character.FightStyles.Fullback);
-            else if (enemyCount > 2)
-                return ChangeFightStyle("Чего-то их много!", ref fight, "downTo", Character.FightStyles.Defensive);
+            else if (enemyCount > 1)
+                return ChangeFightStyle("Надо аккуратно быть их по очереди!", ref fight, "downTo", Character.FightStyles.Defensive);
 
             List<int> story = AttackStory[Character.Protagonist.Name];
 
@@ -205,12 +206,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             for (int i = 1; i <= storyCount; i++)
                 fightBalance += story[story.Count - i];
 
-            if (fightBalance < 0)
-                return ChangeFightStyle("Как-то дела неважно заладились...", ref fight, "downTo", Character.FightStyles.Defensive);
-            else if (fightBalance > 2)
-                return ChangeFightStyle("Нормально, раздаб люлей!!", ref fight, "upTo", Character.FightStyles.Aggressive);
+            if (fightBalance < -1)
+                return ChangeFightStyle("Дела неважно заладились...", ref fight, "downTo", Character.FightStyles.Defensive);
+            else if (fightBalance > 3)
+                return ChangeFightStyle("Раздаю люлей!!", ref fight, "upTo", Character.FightStyles.Aggressive);
             else
-                return ChangeFightStyle("Надо осторожнее, что ли...", ref fight, "upTo", Character.FightStyles.Counterattacking);
+                return ChangeFightStyle("Надо потихоньку.", ref fight, "upTo", Character.FightStyles.Counterattacking);
         }
 
         private int InitiativeAndDices(Character character, out string line)
@@ -246,6 +247,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 FightOrder.Insert(0, FightEnemies[0]);
             }
         }
+
+        private string Add(bool condition, string line) => condition ? line : String.Empty;
 
         private void Attack(Character attacker, Character defender, ref List<string> fight, List<Character> Allies,
             ref Dictionary<string, int> WoundsCount, ref Dictionary<string, List<int>> AttackStory, int round, int coherenceIndex,
@@ -296,32 +299,36 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
             else
             {
+                string bonuses = String.Empty;
+
+                bonuses += Add(firstStrikeEnemy, " - 1 за Первую атаку (особый приём) противника");
+                bonuses += Add(aggressive, " + 1 за Агрессивный стиль боя");
+                bonuses += Add(defensive, " - 1 за Оборонительный стиль боя");
+                bonuses += Add(fullback, " - 1 за Глухую оборону");
+
                 fight.Add(
                     String.Format(
-                        "Мощность удара: {0} + {1} + {2}{3}{4}{5}{6}{7} = {8}",
-                        Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), attacker.Attack,
-                        (firstStrikeEnemy ? " - 1 за Первую атаку (особый приём) противника" : String.Empty),
-                        (aggressive ? " + 1 за Агрессивный стиль боя" : String.Empty),
-                        (defensive ? " - 1 за Оборонительный стиль боя" : String.Empty),
-                        (fullback ? " - 1 за Глухую оборону" : String.Empty),
+                        "Мощность удара: {0} + {1} + {2}{3}{4} = {5}",
+                        Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), attacker.Attack, bonuses,
                         (coherenceBonus ? String.Format(" {0} {1} за Слаженность", (coherence > 0 ? "+" : "-"), Math.Abs(coherence)) : String.Empty),
                         attackStrength
                     )
                 );
 
                 bool defenceBonus = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
-                success = attackStrength > (defender.Defence + (defenceBonus ? 1 : 0) + (defensiveEnemy ? 1 : 0) + (fullbackEnemy ? 2 : 0) - (aggressiveEnemy ? 1 : 0));
+                int defence = (defender.Defence + (defenceBonus ? 1 : 0) + (defensiveEnemy ? 1 : 0) + (fullbackEnemy ? 2 : 0) - (aggressiveEnemy ? 1 : 0));
+                success = attackStrength > defence;
 
-                fight.Add(
-                    String.Format(
-                        "Защита: {0}{1}{2}{3}{4} {5} {6}",
-                        defender.Defence, (defenceBonus ? " + 1 за Веерную защиту (особый приём)" : String.Empty),
-                        (aggressiveEnemy ? " - 1 за Агрессивный стиль боя" : String.Empty),
-                        (defensiveEnemy ? " + 1 за Оборонительный стиль боя" : String.Empty),
-                        (fullbackEnemy ? " + 2 за Глухую оборону" : String.Empty),
-                        (success ? "это меньше" : "это больше или равно"), attackStrength
-                    )
-                );
+                bonuses = String.Empty;
+
+                bonuses += Add(defenceBonus, " + 1 за Веерную защиту (особый приём)");
+                bonuses += Add(aggressiveEnemy, " - 1 за Агрессивный стиль боя");
+                bonuses += Add(defensiveEnemy, " + 1 за Оборонительный стиль боя");
+                bonuses += Add(fullbackEnemy, " + 2 за Глухую оборону");
+
+                fight.Add(String.Format(
+                    "Защита: {0}{1} {2} {3}",  defender.Defence, bonuses, (success ? "это меньше" : "это больше или равно"), attackStrength
+                ));
             }
 
             if (success)
@@ -359,8 +366,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 fight.Add(String.Format("{0}|{1}", (Allies.Contains(defender) ? "BAD" : "GOOD"), defenderName));
 
-                AttackStory[attacker.Name].Add(2);
-                AttackStory[defender.Name].Add(-2);
+                AttackStory[attacker.Name].Add(3);
+                AttackStory[defender.Name].Add(-3);
             }
             else
             {
