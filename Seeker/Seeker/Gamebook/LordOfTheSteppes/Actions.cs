@@ -155,6 +155,65 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return new List<string> { "RELOAD" };
         }
 
+        public List<string> FunnyFight()
+        {
+            List<string> fight = new List<string>();
+
+            const int ENEMY_STRENGTH = 6;
+
+            int heroWounds = 0, enemyWounds = 0;
+
+            while (true)
+            {
+                int firstRoll = Game.Dice.Roll();
+                int secondRoll = Game.Dice.Roll();
+                int heroStrength = firstRoll + secondRoll + Character.Protagonist.Attack;
+
+                fight.Add(String.Format(
+                    "Ваша сила удара: {0} + {1} + {2} = {3}",
+                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), Character.Protagonist.Attack, heroStrength
+                ));
+
+                firstRoll = Game.Dice.Roll();
+                secondRoll = Game.Dice.Roll();
+                int enemyStrength = firstRoll + secondRoll + ENEMY_STRENGTH;
+
+                fight.Add(String.Format(
+                    "Cила удара удальца: {0} + {1} + {2} = {3}",
+                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), ENEMY_STRENGTH, enemyStrength
+                ));
+
+                if (heroStrength > enemyStrength)
+                {
+                    fight.Add("GOOD|Вы нанесли ему удар");
+                    fight.Add(String.Empty);
+
+                    enemyWounds += 1;
+
+                    if (enemyWounds >= 3)
+                    {
+                        fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                        return fight;
+                    }
+                }
+                else if (heroStrength < enemyStrength)
+                {
+                    fight.Add("BAD|Он нанёс вам удар");
+                    fight.Add(String.Empty);
+
+                    heroWounds += 1;
+
+                    if (heroWounds >= 4)
+                    {
+                        fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                        return fight;
+                    }
+                }
+                else
+                    fight.Add("Вы парировали удары друг друга");
+            }
+        }
+
         private bool IsHero(string name) => name == Character.Protagonist.Name;
 
         private Character FindEnemyIn(List<Character> Enemies)
