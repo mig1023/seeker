@@ -193,6 +193,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             specialRules["enemyReaction"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.Reaction);
             specialRules["enemyTotalProtection"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
 
+            specialRules["extendedDamage"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.ExtendedDamage);
+
             if (specialRules["ignoreReaction"])
                 specialRules["enemyReaction"] = false;
 
@@ -393,7 +395,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     return 0;
                 }
 
-                defender.Endurance -= (supplAttack ? 1 : 2);
+                if (specialRules["extendedDamage"] && !supplAttack)
+                    defender.Endurance -= 3;
+                else if (supplAttack)
+                    defender.Endurance -= 1;
+                else
+                    defender.Endurance -= 2;
 
                 if (specialRules["firstStrike"] && (round == 1))
                 {
