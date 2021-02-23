@@ -377,6 +377,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         {
             reactionSuccess = false;
 
+            const int SUCCESSFUL_ATTACK = 3, WOUND = -3, SUCCESSFUL_BLOCK = 1, FAIL_ATTACK = -1;
+
             int firstRoll = Game.Dice.Roll();
             int secondRoll = Game.Dice.Roll();
             int attackStrength = firstRoll + secondRoll + attacker.Attack;
@@ -480,8 +482,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 fight.Add(String.Format("{0}|{1}", (Allies.Contains(defender) ? "BAD" : "GOOD"), defenderName));
 
-                AttackStory[attacker.Name].Add(3);
-                AttackStory[defender.Name].Add(-3);
+                AttackStory[attacker.Name].Add(SUCCESSFUL_ATTACK);
+                AttackStory[defender.Name].Add(WOUND);
 
                 return (Allies.Contains(defender) ? 0 : 1);
             }
@@ -495,8 +497,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     defender.Endurance -= 3;
                 }
 
-                AttackStory[attacker.Name].Add(-1);
-                AttackStory[defender.Name].Add(1);
+                AttackStory[attacker.Name].Add(FAIL_ATTACK);
+                AttackStory[defender.Name].Add(SUCCESSFUL_BLOCK);
 
                 return 0;
             }
