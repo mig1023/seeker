@@ -287,6 +287,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             bool enemyFirstStrike = defender.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike) && (round <= 3);
             bool enemyIgnoreFirstStrike = defender.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
+            bool enemyIgnorePowerfulStrike = defender.SpecialTechnique.Contains(Character.SpecialTechniques.IgnorePowerfulStrike);
             bool enemyReaction = defender.SpecialTechnique.Contains(Character.SpecialTechniques.Reaction);
             bool enemyTotalProtection = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
 
@@ -298,6 +299,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (enemyIgnoreFirstStrike)
                 firstStrike = false;
+
+            if (enemyIgnorePowerfulStrike)
+                powerfulStrike = false;
 
             bool aggressive = attacker.FightStyle == Character.FightStyles.Aggressive;
             bool defensive = attacker.FightStyle == Character.FightStyles.Defensive;
