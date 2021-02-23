@@ -47,6 +47,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
                     Coherence = Game.Xml.IntParse(xmlAction["Coherence"]),
 
+                    NotToDeath = Game.Xml.BoolParse(xmlAction["NotToDeath"]),
                     SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]),
                 };
 

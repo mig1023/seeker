@@ -23,6 +23,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
         public bool GroupFight { get; set; }
+        public bool NotToDeath { get; set; }
         public int Coherence { get; set; }
 
 
@@ -416,7 +417,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 AttackStory[attacker.Name].Add(3);
                 AttackStory[defender.Name].Add(-3);
 
-                return 1;
+                return (Allies.Contains(defender) ? 0 : 1);
             }
             else
             {
@@ -568,7 +569,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 bool enemyLost = true;
 
                 foreach (Character e in FightEnemies)
-                    if (e.Endurance > 0)
+                    if ((e.Endurance > 0) || (e.MaxEndurance == 0))
                         enemyLost = false;
 
                 if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
@@ -588,6 +589,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 {
                     fight.Add(String.Empty);
                     fight.Add("BIG|BAD|ВЫ ПРОИГРАЛИ :(");
+
+                    if (NotToDeath)
+                        Character.Protagonist.Endurance += 1;
+
                     return fight;
                 }
 
