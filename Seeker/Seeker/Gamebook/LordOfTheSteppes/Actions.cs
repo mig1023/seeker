@@ -177,6 +177,45 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 return null;
         }
 
+        private Dictionary<string, bool> GetSpecialRules(Character attacker, Character defender, int round)
+        {
+            Dictionary<string, bool> specialRules = new Dictionary<string, bool>();
+
+            specialRules["firstStrike"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
+            specialRules["powerfulStrike"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.PowerfulStrike);
+            specialRules["ignoreReaction"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreReaction);
+            specialRules["ignoreFirstStrike"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
+
+            specialRules["enemyFirstStrike"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike) && (round <= 3);
+            specialRules["enemyIgnoreFirstStrike"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
+            specialRules["enemyIgnorePowerfulStrike"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.IgnorePowerfulStrike);
+            specialRules["enemyReaction"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.Reaction);
+            specialRules["enemyTotalProtection"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
+
+            if (specialRules["ignoreReaction"])
+                specialRules["enemyReaction"] = false;
+
+            if (specialRules["ignoreFirstStrike"])
+                specialRules["enemyFirstStrike"] = false;
+
+            if (specialRules["enemyIgnoreFirstStrike"])
+                specialRules["firstStrike"] = false;
+
+            if (specialRules["enemyIgnorePowerfulStrike"])
+                specialRules["powerfulStrike"] = false;
+
+            specialRules["aggressive"] = attacker.FightStyle == Character.FightStyles.Aggressive;
+            specialRules["defensive"] = attacker.FightStyle == Character.FightStyles.Defensive;
+            specialRules["fullback"] = attacker.FightStyle == Character.FightStyles.Fullback;
+
+
+            specialRules["aggressiveEnemy"] = defender.FightStyle == Character.FightStyles.Aggressive;
+            specialRules["defensiveEnemy"] = defender.FightStyle == Character.FightStyles.Defensive;
+            specialRules["fullbackEnemy"] = defender.FightStyle == Character.FightStyles.Fullback;
+
+            return specialRules;
+        }
+
         private Character.FightStyles ChangeFightStyle(string motivation, ref List<string> fight, string direction, Character.FightStyles newFightStyles)
         {
             Dictionary<Character.FightStyles, string> fightStyles = new Dictionary<Character.FightStyles, string>
@@ -280,55 +319,26 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             int secondRoll = Game.Dice.Roll();
             int attackStrength = firstRoll + secondRoll + attacker.Attack;
 
-            bool firstStrike = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
-            bool powerfulStrike = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.PowerfulStrike);
-            bool ignoreReaction = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreReaction);
-            bool ignoreFirstStrike = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
-
-            bool enemyFirstStrike = defender.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike) && (round <= 3);
-            bool enemyIgnoreFirstStrike = defender.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
-            bool enemyIgnorePowerfulStrike = defender.SpecialTechnique.Contains(Character.SpecialTechniques.IgnorePowerfulStrike);
-            bool enemyReaction = defender.SpecialTechnique.Contains(Character.SpecialTechniques.Reaction);
-            bool enemyTotalProtection = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
-
-            if (ignoreReaction)
-                enemyReaction = false;
-
-            if (ignoreFirstStrike)
-                enemyFirstStrike = false;
-
-            if (enemyIgnoreFirstStrike)
-                firstStrike = false;
-
-            if (enemyIgnorePowerfulStrike)
-                powerfulStrike = false;
-
-            bool aggressive = attacker.FightStyle == Character.FightStyles.Aggressive;
-            bool defensive = attacker.FightStyle == Character.FightStyles.Defensive;
-            bool fullback = attacker.FightStyle == Character.FightStyles.Fullback;
-            
-            bool aggressiveEnemy = defender.FightStyle == Character.FightStyles.Aggressive;
-            bool defensiveEnemy = defender.FightStyle == Character.FightStyles.Defensive;
-            bool fullbackEnemy = defender.FightStyle == Character.FightStyles.Fullback;
+            Dictionary<string, bool> specialRules = GetSpecialRules(attacker, defender, round);
 
             int coherence = (coherenceIndex * Coherence);
-            bool coherenceBonus = !Allies.Contains(attacker) && (coherenceIndex >= 1) && !enemyTotalProtection;
+            bool coherenceBonus = !Allies.Contains(attacker) && (coherenceIndex >= 1) && !specialRules["enemyTotalProtection"];
 
-            if (enemyFirstStrike)
+            if (specialRules["enemyFirstStrike"])
                 attackStrength -= 1;
 
             if (coherenceBonus)
                 attackStrength += coherence;
 
-            if (aggressive)
+            if (specialRules["aggressive"])
                 attackStrength += 1;
 
-            if (defensive || fullback)
+            if (specialRules["defensive"] || specialRules["fullback"])
                 attackStrength -= 1;
 
             bool success = false;
 
-            if (firstStrike && (round == 1))
+            if (specialRules["firstStrike"] && (round == 1))
             {
                 fight.Add("Первая атака (особый приём)");
                 success = true;
@@ -337,10 +347,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             {
                 string bonuses = String.Empty;
 
-                bonuses += Add(enemyFirstStrike, " - 1 за Первую атаку (особый приём) противника");
-                bonuses += Add(aggressive, " + 1 за Агрессивный стиль боя");
-                bonuses += Add(defensive, " - 1 за Оборонительный стиль боя");
-                bonuses += Add(fullback, " - 1 за Глухую оборону");
+                bonuses += Add(specialRules["enemyFirstStrike"], " - 1 за Первую атаку (особый приём) противника");
+                bonuses += Add(specialRules["aggressive"], " + 1 за Агрессивный стиль боя");
+                bonuses += Add(specialRules["defensive"], " - 1 за Оборонительный стиль боя");
+                bonuses += Add(specialRules["fullback"], " - 1 за Глухую оборону");
 
                 fight.Add(
                     String.Format(
@@ -352,15 +362,16 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 );
 
                 bool defenceBonus = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
-                int defence = (defender.Defence + (defenceBonus ? 1 : 0) + (defensiveEnemy ? 1 : 0) + (fullbackEnemy ? 2 : 0) - (aggressiveEnemy ? 1 : 0));
+                int defence = (defender.Defence + (defenceBonus ? 1 : 0) + (specialRules["defensiveEnemy"] ? 1 : 0) + (specialRules["fullbackEnemy"] ? 2 : 0) - (specialRules["aggressiveEnemy"] ? 1 : 0));
+
                 success = attackStrength > defence;
 
                 bonuses = String.Empty;
 
                 bonuses += Add(defenceBonus, " + 1 за Веерную защиту (особый приём)");
-                bonuses += Add(aggressiveEnemy, " - 1 за Агрессивный стиль боя");
-                bonuses += Add(defensiveEnemy, " + 1 за Оборонительный стиль боя");
-                bonuses += Add(fullbackEnemy, " + 2 за Глухую оборону");
+                bonuses += Add(specialRules["aggressiveEnemy"], " - 1 за Агрессивный стиль боя");
+                bonuses += Add(specialRules["defensiveEnemy"], " + 1 за Оборонительный стиль боя");
+                bonuses += Add(specialRules["fullbackEnemy"], " + 2 за Глухую оборону");
 
                 fight.Add(String.Format(
                     "Защита: {0}{1} {2} {3}",  defender.Defence, bonuses, (success ? "это меньше" : "это больше или равно"), attackStrength
@@ -372,7 +383,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 if (!supplAttack)
                     WoundsCount[defender.Name] += 1;
 
-                if (enemyReaction && (WoundsCount[defender.Name] == 3))
+                if (specialRules["enemyReaction"] && (WoundsCount[defender.Name] == 3))
                 {
                     fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (Allies.Contains(defender) ? "GOOD" : "BAD")));
                     reactionSuccess = true;
@@ -383,13 +394,13 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 defender.Endurance -= (supplAttack ? 1 : 2);
 
-                if (firstStrike && (round == 1))
+                if (specialRules["firstStrike"] && (round == 1))
                 {
                     fight.Add("+2 дополнительный урон от Первого удара (особый приём)");
                     defender.Endurance -= 2;
                 }
 
-                if (powerfulStrike && (round < 3))
+                if (specialRules["powerfulStrike"] && (round < 3))
                 {
                     fight.Add("+3 дополнительный урон от Мощного выпада (особый приём)");
                     defender.Endurance -= 3;
@@ -409,7 +420,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             {
                 fight.Add(String.Format("{0}|Атака отбита", (Allies.Contains(defender) ? "GOOD" : "BAD")));
 
-                if (powerfulStrike && (round < 3))
+                if (specialRules["powerfulStrike"] && (round < 3))
                 {
                     fight.Add("Урон всё равно нанесён от Мощного выпада (особый приём)");
                     defender.Endurance -= 3;
