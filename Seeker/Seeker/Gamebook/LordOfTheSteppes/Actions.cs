@@ -309,7 +309,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         private string Add(bool condition, string line) => condition ? line : String.Empty;
 
-        private void Attack(Character attacker, Character defender, ref List<string> fight, List<Character> Allies,
+        private int Attack(Character attacker, Character defender, ref List<string> fight, List<Character> Allies,
             ref Dictionary<string, int> WoundsCount, ref Dictionary<string, List<int>> AttackStory, int round, int coherenceIndex,
             out bool reactionSuccess, bool supplAttack = false)
         {
@@ -389,7 +389,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     reactionSuccess = true;
                     WoundsCount[defender.Name] = 0;
 
-                    return;
+                    return 0;
                 }
 
                 defender.Endurance -= (supplAttack ? 1 : 2);
@@ -415,6 +415,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 AttackStory[attacker.Name].Add(3);
                 AttackStory[defender.Name].Add(-3);
+
+                return 1;
             }
             else
             {
@@ -428,6 +430,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 AttackStory[attacker.Name].Add(-1);
                 AttackStory[defender.Name].Add(1);
+
+                return 0;
             }
         }
 
@@ -543,7 +547,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     else
                         fight.Add(String.Format("BOLD|{0} атакует", fighter.Name));
 
-                    Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, ref AttackStory, round, coherenceIndex, out bool reactionSuccess);
+                    enemyWounds += Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, ref AttackStory, round,
+                        coherenceIndex, out bool reactionSuccess);
 
                     if (fighter.SpecialTechnique.Contains(Character.SpecialTechniques.TwoBlades))
                     {
@@ -552,7 +557,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         if (reactionSuccess)
                             fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (FightAllies.Contains(enemy) ? "GOOD" : "BAD")));
                         else
-                            Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, ref AttackStory, round, coherenceIndex, out bool _, supplAttack: true);
+                            enemyWounds += Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, ref AttackStory, round,
+                                coherenceIndex, out bool _, supplAttack: true);
                     }
 
                     if (FightEnemies.Contains(fighter))
