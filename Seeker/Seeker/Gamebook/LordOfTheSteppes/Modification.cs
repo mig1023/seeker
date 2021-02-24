@@ -12,6 +12,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public void Do()
         {
+            if (Enum.TryParse(Name, out Character.SpecialTechniques value))
+            {
+                Character.Protagonist.SpecialTechnique.Add(value);
+                return;
+            }
+
             int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
             if (Restore)

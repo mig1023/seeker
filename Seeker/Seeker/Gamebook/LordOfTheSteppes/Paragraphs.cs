@@ -49,7 +49,17 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                     NotToDeath = Game.Xml.BoolParse(xmlAction["NotToDeath"]),
                     SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]),
+
+                    Price = Game.Xml.IntParse(xmlAction["Price"]),
                 };
+
+                if (xmlAction["Benefit"] != null)
+                {
+                    action.Benefit = new List<Modification>();
+
+                    foreach (XmlNode bonefit in xmlAction.SelectNodes("Benefit"))
+                        action.Benefit.Add(ModificationParse(bonefit));
+                }
 
                 if (xmlAction["Allies"] != null)
                 {
