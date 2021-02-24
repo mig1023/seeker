@@ -100,21 +100,21 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return enemies;
         }
 
-        public List<string> Status()
+        public List<string> Status() => null;
+
+        public List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Нападение: {0}", Character.Protagonist.Attack),
-                String.Format("Защита: {0}", Character.Protagonist.Defence),
-                String.Format("Жизнь: {0}", Character.Protagonist.Endurance),
-                String.Format("Инициатива: {0}", Character.Protagonist.Initiative),
                 String.Format("Монеты: {0}", Character.Protagonist.Coins),
+                String.Format("Инициатива: {0}", Character.Protagonist.Initiative),
+                String.Format("Жизнь: {0}", Character.Protagonist.Endurance),
+                String.Format("Защита: {0}", Character.Protagonist.Defence),
+                String.Format("Нападение: {0}", Character.Protagonist.Attack),
             };
 
             return statusLines;
         }
-
-        public List<string> AdditionalStatus() => null;
 
         public List<string> StaticButtons() => new List<string> { };
 
