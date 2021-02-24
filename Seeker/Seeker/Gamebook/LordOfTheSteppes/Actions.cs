@@ -140,7 +140,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return !(disabledByChoosed || disabledByBonuses || disabledByPrice || disabledByUsed);
         }
 
-        public static bool CheckOnlyIf(string option) => true;
+        public static bool CheckOnlyIf(string option)
+        {
+            foreach (Character.SpecialTechniques technique in Character.Protagonist.SpecialTechnique)
+                if (option == technique.ToString())
+                    return true;
+
+            return Game.Data.Triggers.Contains(option);
+        }
 
         public List<string> Get()
         {
