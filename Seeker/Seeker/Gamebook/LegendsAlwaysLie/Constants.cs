@@ -19,7 +19,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#870808",
-            [ColorTypes.AdditionalStatus] = "#f8dddd",
+            [ColorTypes.AdditionalStatus] = "#b70b0b",
+            [ColorTypes.AdditionalFont] = "#ffffff",
         };
 
         public string GetButtonsColor(ButtonTypes type)
