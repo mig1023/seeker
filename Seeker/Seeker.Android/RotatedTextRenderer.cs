@@ -36,7 +36,8 @@ namespace Seeker.Droid
             if (e.NewElement is VerticalText)
             {
                 string title = ((VerticalText)e.NewElement).Value;
-                SetNativeControl(new RotatedTextView(_context, title));
+                bool color = ((VerticalText)e.NewElement).WhiteColor;
+                SetNativeControl(new RotatedTextView(_context, title, color));
             }
         }
     }
@@ -45,11 +46,13 @@ namespace Seeker.Droid
     {
         private int textSize = 22;
         private string _text;
+        private bool _white;
         private TextPaint _textPaint;
 
-        public RotatedTextView(Context c, string title) : base(c)
+        public RotatedTextView(Context c, string title, bool white) : base(c)
         {
             _text = title;
+            _white = white;
             initLabelView();
         }
 
@@ -59,7 +62,7 @@ namespace Seeker.Droid
             this._textPaint.AntiAlias = true;
             this._textPaint.TextAlign = Paint.Align.Center;
             this._textPaint.TextSize = textSize;
-            this._textPaint.Color = new Android.Graphics.Color(0, 0, 0);
+            this._textPaint.Color = (this._white ? Android.Graphics.Color.White : Android.Graphics.Color.Black);
         }
 
         public override void Draw(Canvas canvas)

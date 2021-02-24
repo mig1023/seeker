@@ -10,7 +10,8 @@ namespace Seeker.Game
 {
     class Data
     {
-        public enum ColorTypes { Background, Font, ActionBox, StatusBar, StatusFont, StatusBorder, AdditionalStatus }
+        public enum ColorTypes { Background, Font, ActionBox, StatusBar, StatusFont, StatusBorder,
+            AdditionalStatus, AdditionalFont }
 
         public static Paragraph CurrentParagraph { get; set; }
         public static int CurrentParagraphID { get; set; }

@@ -16,5 +16,15 @@ namespace Seeker.Output
             get => (string)GetValue(ValueProperty);
             set => SetValue(ValueProperty, value);
         }
+
+        public static BindableProperty ColorProperty = BindableProperty.Create(
+            nameof(WhiteColor), typeof(bool), typeof(bool), null, BindingMode.TwoWay, null, (bindable, oldValue, newValue) => { }
+        );
+
+        public bool WhiteColor
+        {
+            get => (bool)GetValue(ColorProperty);
+            set => SetValue(ColorProperty, value);
+        }
     }
 }
