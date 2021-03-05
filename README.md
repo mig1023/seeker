@@ -1,3 +1,3 @@
 # seeker
 
-Gamebooks on Xamarin
+Gamebooks on mobile phones
