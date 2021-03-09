@@ -66,5 +66,9 @@ namespace Seeker.Gamebook.RockOfTerror
             else
                 return Game.Data.Triggers.Contains(option.Trim());
         }
+
+        public bool IsHealingEnabled() => false;
+
+        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
     }
 }

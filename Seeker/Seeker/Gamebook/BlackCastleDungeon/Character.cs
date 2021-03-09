@@ -86,6 +86,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             Gold = 15;
             SpellSlots = 10;
             Spells = new List<string>();
+
+            Game.Healing.Add(name: "Поесть", healing: 4, portions: 3);
         }
 
         public Character Clone()

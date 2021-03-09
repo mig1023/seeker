@@ -26,5 +26,9 @@ namespace Seeker.Abstract
         bool GameOver(out int toEndParagraph, out string toEndText);
 
         bool IsButtonEnabled();
+
+        bool IsHealingEnabled();
+
+        void UseHealing(int healingLevel);
     }
 }

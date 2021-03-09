@@ -49,5 +49,8 @@ namespace Seeker.Gamebook.PensionerSimulator
 
         public static bool CheckOnlyIf(string option) => true;
 
+        public bool IsHealingEnabled() => false;
+
+        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
     }
 }

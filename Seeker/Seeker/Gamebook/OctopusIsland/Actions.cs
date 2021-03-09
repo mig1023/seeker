@@ -339,5 +339,9 @@ namespace Seeker.Gamebook.OctopusIsland
 
             return new List<string> { "RELOAD" };
         }
+
+        public bool IsHealingEnabled() => false;
+
+        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
     }
 }

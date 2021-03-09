@@ -409,5 +409,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
             return fight;
         }
+
+        public bool IsHealingEnabled() => Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
+
+        public void UseHealing(int healingLevel) => Character.Protagonist.Endurance += healingLevel;
     }
 }

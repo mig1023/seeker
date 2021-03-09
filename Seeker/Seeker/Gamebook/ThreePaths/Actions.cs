@@ -96,5 +96,9 @@ namespace Seeker.Gamebook.ThreePaths
 
             return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" (x{0})", count) : String.Empty)) };
         }
+
+        public bool IsHealingEnabled() => false;
+
+        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
     }
 }

@@ -29,33 +29,5 @@ namespace Seeker.Game
         public static Gamebook.Description.CheckOnlyIfMethod CheckOnlyIf;
         public static Gamebook.Description.SaveMethod Save;
         public static Gamebook.Description.LoadMethod Load;
-
-        public static void GameLoad(string name)
-        {
-            XmlParagraphs.Clear();
-            Triggers.Clear();
-
-            if (String.IsNullOrEmpty(name))
-                return;
-
-            Gamebook.Description gamebook = Gamebook.List.GetDescription(name);
-
-            string content = DependencyService.Get<Abstract.IAssets>().GetFromAssets(gamebook.XmlBook);
-
-            XmlDocument xmlFile = new XmlDocument();
-            xmlFile.LoadXml(content);
-
-            foreach (XmlNode xmlNode in xmlFile.SelectNodes("Paragraphs/Paragraph"))
-                XmlParagraphs.Add(Game.Xml.IntParse(xmlNode["ID"]), xmlNode);
-
-            Paragraphs = gamebook.Paragraphs;
-            Actions = gamebook.Actions;
-            Constants = gamebook.Constants;
-            Protagonist = gamebook.Protagonist;
-            Save = gamebook.Save;
-            Load = gamebook.Load;
-            CheckOnlyIf = gamebook.CheckOnlyIf;
-            ShowDisabledOption = gamebook.ShowDisabledOption;
-        }
     }
 }

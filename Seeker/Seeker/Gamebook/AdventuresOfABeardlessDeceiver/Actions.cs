@@ -59,7 +59,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public List<string> Status()
         {
             List<string> statusLines = new List<string>();
-            
+
             if (Character.Protagonist.Tanga > 0)
                 statusLines.Add(String.Format("Деньги: {0}", Character.Protagonist.Tanga));
 
@@ -243,5 +243,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
             return new List<string> { "RELOAD" };
         }
+
+        public bool IsHealingEnabled() => false;
+
+        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
     }
 }

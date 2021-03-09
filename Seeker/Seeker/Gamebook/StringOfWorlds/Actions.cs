@@ -445,5 +445,9 @@ namespace Seeker.Gamebook.StringOfWorlds
                 round += 1;
             }
         }
+
+        public bool IsHealingEnabled() => false;
+
+        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
     }
 }

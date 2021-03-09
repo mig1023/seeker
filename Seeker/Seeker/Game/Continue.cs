@@ -28,10 +28,11 @@ namespace Seeker.Game
         public static void Save()
         {
             string triggers = String.Join(",", Game.Data.Triggers);
+            string healing = Healing.Save();
             int paragraph = Game.Data.CurrentParagraphID;
             string character = Game.Data.Save();
 
-            App.Current.Properties[CurrentGameName] = String.Format("{0}@{1}@{2}", paragraph, triggers, character);
+            App.Current.Properties[CurrentGameName] = String.Format("{0}@{1}@{2}@{3}", paragraph, triggers, healing, character);
         }
 
         public static int Load()
@@ -42,6 +43,8 @@ namespace Seeker.Game
 
             Game.Data.CurrentParagraphID = int.Parse(save[0]);
             Game.Data.Triggers = save[1].Split(',').ToList();
+
+            Healing.Load(save[1]);
             Game.Data.Load(save[2]);
 
             return Game.Data.CurrentParagraphID;

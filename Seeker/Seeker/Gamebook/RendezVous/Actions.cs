@@ -108,5 +108,10 @@ namespace Seeker.Gamebook.RendezVous
 
             return diceCheck;
         }
+
+        public bool IsHealingEnabled() => false;
+
+        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
+
     }
 }

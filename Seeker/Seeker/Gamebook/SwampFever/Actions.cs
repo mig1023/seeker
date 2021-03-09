@@ -881,5 +881,9 @@ namespace Seeker.Gamebook.SwampFever
             cavityReport.Add("BIG|BAD|Вас накрыло потоком лавы :(");
             return cavityReport;
         }
+
+        public bool IsHealingEnabled() => false;
+
+        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
     }
 }
