@@ -87,6 +87,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             SpellSlots = 10;
             Spells = new List<string>();
 
+            Game.Healing.Add(name: "Попить", healing: 2, portions: 2);
             Game.Healing.Add(name: "Поесть", healing: 4, portions: 3);
         }
 

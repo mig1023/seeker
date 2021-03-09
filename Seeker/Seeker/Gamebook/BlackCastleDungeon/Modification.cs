@@ -12,8 +12,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public void Do()
         {
-            if (Name == "RemoveSpell")
+            if (Name == "Healing")
+                Game.Healing.Add(ValueString);
+
+            else if (Name == "RemoveSpell")
                 Character.Protagonist.Spells.RemoveAt(Character.Protagonist.Spells.IndexOf(ValueString));
+
             else
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);

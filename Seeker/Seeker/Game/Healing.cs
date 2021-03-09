@@ -13,6 +13,12 @@ namespace Seeker.Game
 
         private static List<Healing> HealingList = new List<Healing>();
 
+        public static void Add(string fullLine)
+        {
+            List<string> healingParams = fullLine.Split(',').ToList();
+            Add(healingParams[0], int.Parse(healingParams[1]), int.Parse(healingParams[2]));
+        }
+
         public static void Add(string name, int healing, int portions)
         {
             foreach(Healing currentHealing in HealingList)
