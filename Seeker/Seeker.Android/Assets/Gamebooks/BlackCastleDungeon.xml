@@ -2064,7 +2064,7 @@
 				<Text>РЫБА, 1 золотой</Text>
 				<Price>1</Price>
 				<Multiple/>
-				<Benefit Name="Endurance" Value="2"/>
+				<Benefit Name="Healing" ValueString="Поесть рыбы,2,1"/>
 				<Aftertext>Вы благодарите радушного хозяина и уходите.</Aftertext>
 			</Action>
 		</Actions>
@@ -4321,7 +4321,7 @@
 				<Text>АНАНАС, 2 золотых</Text>
 				<Price>2</Price>
 				<Multiple/>
-				<Benefit Name="Endurance" Value="3"/>
+				<Benefit Name="Healing" ValueString="Съесть ананас,3,1"/>
 				<Aftertext>добавит 3 ВЫНОСЛИВОСТЬ.</Aftertext>
 			</Action>
 			<Action>
@@ -4331,7 +4331,7 @@
 				<Text>БАНАН, 2 золотых</Text>
 				<Price>2</Price>
 				<Multiple/>
-				<Benefit Name="Endurance" Value="2"/>
+				<Benefit Name="Healing" ValueString="Съесть банан,2,1"/>
 				<Aftertext>добавит 2 ВЫНОСЛИВОСТИ.\n\nНо он притащил еще и кучу вещей, которые, как он считает, могут пригодиться в дороге.</Aftertext>
 			</Action>
 			<Action>
