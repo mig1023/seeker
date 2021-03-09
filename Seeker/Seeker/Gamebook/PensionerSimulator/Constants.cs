@@ -12,7 +12,6 @@ namespace Seeker.Gamebook.PensionerSimulator
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#030436",
-            [ButtonTypes.Continue] = "#85869e",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>();
