@@ -103,10 +103,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             Pistols = 1;
             BulletsAndGubpowder = 5;
             Daggers = 0;
-            Food = 2;
             HadFoodToday = 0;
             Chainmail = 0;
             LeftHandPenalty = 0;
+
+            Game.Healing.Add(name: "Поесть", healing: 2, portions: 2);
         }
 
         public Character Clone()
@@ -126,7 +127,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 Pistols = this.Pistols,
                 BulletsAndGubpowder = this.BulletsAndGubpowder,
                 Daggers = this.Daggers,
-                Food = this.Food,
                 HadFoodToday = this.HadFoodToday,
                 Chainmail = this.Chainmail,
                 LeftHandPenalty = this.LeftHandPenalty,
@@ -137,9 +137,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}|{13}|{14}|{15}",
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}|{13}|{14}",
                 MaxSkill, Skill, MaxStrength, Strength, Honor, Day, Ecu, MeritalArt,
-                Horses, Pistols, BulletsAndGubpowder, Daggers, Food, HadFoodToday,
+                Horses, Pistols, BulletsAndGubpowder, Daggers, HadFoodToday,
                 Chainmail, LeftHandPenalty
             );
         }
@@ -159,10 +159,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             Pistols = int.Parse(save[9]);
             BulletsAndGubpowder = int.Parse(save[10]);
             Daggers = int.Parse(save[11]);
-            Food = int.Parse(save[12]);
-            HadFoodToday = int.Parse(save[13]);
-            Chainmail = int.Parse(save[14]);
-            LeftHandPenalty = int.Parse(save[15]);
+            HadFoodToday = int.Parse(save[12]);
+            Chainmail = int.Parse(save[13]);
+            LeftHandPenalty = int.Parse(save[14]);
 
             bool success = Enum.TryParse(save[7], out MeritalArts value);
             MeritalArt = (success ? value : MeritalArts.Nope);

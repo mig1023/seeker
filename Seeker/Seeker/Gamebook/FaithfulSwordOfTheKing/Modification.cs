@@ -8,6 +8,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public string ValueString { get; set; }
         public bool Empty { get; set; }
         public bool Restore { get; set; }
 
@@ -25,6 +26,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 currentValue += Value;
 
             Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+
+            if (Name == "Healing")
+                Game.Healing.Add(ValueString);
 
             if (Name == "Day")
             {

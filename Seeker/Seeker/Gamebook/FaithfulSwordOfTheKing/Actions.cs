@@ -476,8 +476,12 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             }
         }
 
-        public bool IsHealingEnabled() => false;
+        public bool IsHealingEnabled() => Character.Protagonist.Strength < Character.Protagonist.MaxStrength;
 
-        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
+        public void UseHealing(int healingLevel)
+        {
+            Character.Protagonist.Strength += healingLevel;
+            Character.Protagonist.HadFoodToday += 1;
+        }
     }
 }

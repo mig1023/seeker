@@ -102,6 +102,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
                 Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+                ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
                 Empty = Game.Xml.BoolParse(xmlNode.Attributes["Empty"]),
                 Restore = Game.Xml.BoolParse(xmlNode.Attributes["Restore"]),
             };
