@@ -297,7 +297,7 @@ namespace Seeker.Gamebook
                 Save = LordOfTheSteppes.Character.Protagonist.Save,
                 Load = LordOfTheSteppes.Character.Protagonist.Load,
                 Disclaimer = "Сергей Ступин, 2009",
-                BookColor = "#831d04",
+                BookColor = "#b80f0a",
                 Illustration = "LordOfTheSteppes.jpg",
             },
         };
