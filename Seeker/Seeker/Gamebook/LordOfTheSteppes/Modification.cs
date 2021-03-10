@@ -8,6 +8,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public string ValueString { get; set; }
         public bool Restore { get; set; }
 
         public void Do()
@@ -15,6 +16,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             if (Enum.TryParse(Name, out Character.SpecialTechniques value))
             {
                 Character.Protagonist.SpecialTechnique.Add(value);
+                return;
+            }
+
+            if (Name == "Healing")
+            {
+                Game.Healing.Add(ValueString);
                 return;
             }
 
