@@ -17,8 +17,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.AdditionalStatus] = "#b42806",
-            [ColorTypes.AdditionalFont] = "#ffffff",
+            [ColorTypes.StatusBar] = "#b42806",
+            [ColorTypes.StatusFont] = "#ffffff",
         };
 
         public string GetButtonsColor(ButtonTypes type)
