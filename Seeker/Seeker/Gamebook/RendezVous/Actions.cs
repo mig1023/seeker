@@ -52,9 +52,7 @@ namespace Seeker.Gamebook.RendezVous
         {
             if (option.Contains("|"))
             {
-                string[] options = option.Split('|');
-
-                foreach (string oneOption in options)
+                foreach (string oneOption in option.Split('|'))
                     if (Game.Data.Triggers.Contains(oneOption.Trim()))
                         return true;
 
@@ -62,9 +60,7 @@ namespace Seeker.Gamebook.RendezVous
             }
             else
             {
-                string[] options = option.Split(',');
-
-                foreach (string oneOption in options)
+                foreach (string oneOption in option.Split(','))
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {

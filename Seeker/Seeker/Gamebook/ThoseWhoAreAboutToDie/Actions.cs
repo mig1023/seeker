@@ -62,9 +62,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
         {
             if (option.Contains("|"))
             {
-                string[] options = option.Split('|');
-
-                foreach (string oneOption in options)
+                foreach (string oneOption in option.Split('|'))
                     if (!OneParamFail(oneOption))
                         return true;
                     else if (Game.Data.Triggers.Contains(oneOption.Trim()))
@@ -74,9 +72,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             }
             else
             {
-                string[] options = option.Split(',');
-
-                foreach (string oneOption in options)
+                foreach (string oneOption in option.Split(','))
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {

@@ -146,7 +146,15 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 if (option == technique.ToString())
                     return true;
 
-            return Game.Data.Triggers.Contains(option);
+            if (option.Contains("|"))
+            {
+                foreach (string oneOption in option.Split('|'))
+                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return true;
+
+                return false;
+            }
+                return Game.Data.Triggers.Contains(option);
         }
 
         public List<string> Get()

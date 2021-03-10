@@ -89,9 +89,7 @@ namespace Seeker.Gamebook.SwampFever
 
         public static bool CheckOnlyIf(string option)
         {
-            string[] options = option.Split(',');
-
-            foreach (string oneOption in options)
+            foreach (string oneOption in option.Split(','))
             {
                 if (oneOption.Contains("!"))
                 {
