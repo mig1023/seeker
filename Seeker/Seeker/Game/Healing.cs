@@ -16,7 +16,10 @@ namespace Seeker.Game
         public static void Add(string fullLine)
         {
             List<string> healingParams = fullLine.Split(',').ToList();
-            Add(healingParams[0], int.Parse(healingParams[1]), int.Parse(healingParams[2]));
+
+            int count = (healingParams.Count > 2 ? int.Parse(healingParams[2]) : 1);
+
+            Add(healingParams[0], int.Parse(healingParams[1]), count);
         }
 
         public static void Add(string name, int healing, int portions)
