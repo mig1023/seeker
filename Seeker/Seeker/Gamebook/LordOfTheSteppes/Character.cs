@@ -109,11 +109,15 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             Endurance = MaxEndurance;
             MaxInitiative = 10;
             Initiative = MaxInitiative;
-            Coins = 35;
+            Coins = 40;
 
             FightStyle = FightStyles.Counterattacking;
             SpecialTechnique = new List<SpecialTechniques>();
             Bonuses = 2;
+
+            Game.Healing.Add(name: "Воспользоваться лечебной мазью", healing: 1, portions: 4);
+            Game.Healing.Add(name: "Поесть", healing: 3, portions: 4);
+            Game.Healing.Add(name: "Выпить напиток знахаря", healing: 4, portions: 2);
         }
 
         public Character Clone()
