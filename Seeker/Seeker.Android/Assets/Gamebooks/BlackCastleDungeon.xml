@@ -1691,7 +1691,7 @@
 				<Text>ЯБЛОКО, 1 золотой</Text>
 				<Price>1</Price>
 				<Multiple/>
-				<Benefit Name="Healing" ValueString="Съесть яблоко,1,1"/>
+				<Benefit Name="Healing" ValueString="Съесть яблоко,1"/>
 				<Aftertext>добавит 1 ВЫНОСЛИВОСТЬ</Aftertext>
 			</Action>
 			<Action>
@@ -1700,7 +1700,7 @@
 				<Text>МАНДАРИН, 2 золотых</Text>
 				<Price>2</Price>
 				<Multiple/>
-				<Benefit Name="Healing" ValueString="Съесть мандарин,2,1"/>
+				<Benefit Name="Healing" ValueString="Съесть мандарин,2"/>
 				<Aftertext>добавит 2 ВЫНОСЛИВОСТИ</Aftertext>
 			</Action>
 			<Action>
@@ -1709,7 +1709,7 @@
 				<Text>АПЕЛЬСИН, 1 золотых</Text>
 				<Price>1</Price>
 				<Multiple/>
-				<Benefit Name="Healing" ValueString="Съесть апельсин,1,1"/>
+				<Benefit Name="Healing" ValueString="Съесть апельсин,1"/>
 				<Aftertext>добавит 1 ВЫНОСЛИВОСТЬ</Aftertext>
 			</Action>
 			<Action>
@@ -1719,7 +1719,7 @@
 				<Text>БАНАН, 2 золотых</Text>
 				<Price>2</Price>
 				<Multiple/>
-				<Benefit Name="Healing" ValueString="Съесть банан,2,1"/>
+				<Benefit Name="Healing" ValueString="Съесть банан,2"/>
 				<Aftertext>добавит 2 ВЫНОСЛИВОСТИ</Aftertext>
 			</Action>
 			<Action>
@@ -1735,7 +1735,7 @@
 				<ButtonName>Наполнить флягу целиком</ButtonName>
 				<Text>ВОДА, 4 золотых</Text>
 				<Price>4</Price>
-				<Benefit Name="Healing" ValueString="Попить,2,2"/>
+				<Benefit Name="Healing" ValueString="Попить,2"/>
 				<Aftertext>или за 2 — наполовину:</Aftertext>
 			</Action>
 			<Action>
@@ -1743,7 +1743,7 @@
 				<ButtonName>Наполнить флягу наполовину</ButtonName>
 				<Text>ВОДА, 2 золотых</Text>
 				<Price>2</Price>
-				<Benefit Name="Healing" ValueString="Попить,2,1"/>
+				<Benefit Name="Healing" ValueString="Попить,2"/>
 				<Aftertext>Если вы хотите что-то купить — покупайте. Все, кроме молока и воды (если вам не в чем ее нести), можете съесть сразу же или взять с собой. Если хотите, можете купить еще и заплечный мешок — он стоит 8 золотых, но в него помещается больше, чем в ваш: не 7, а 9 предметов. Однако два заплечных мешка нести неудобно, и если свой у вас еще с собой, вы должны будете оставить его в доме у торговца. Теперь можете либо уходить, либо попробовать поговорить с ним еще.</Aftertext>
 			</Action>
 		</Actions>
@@ -2064,7 +2064,7 @@
 				<Text>РЫБА, 1 золотой</Text>
 				<Price>1</Price>
 				<Multiple/>
-				<Benefit Name="Healing" ValueString="Поесть рыбы,2,1"/>
+				<Benefit Name="Healing" ValueString="Поесть рыбы,2"/>
 				<Aftertext>Вы благодарите радушного хозяина и уходите.</Aftertext>
 			</Action>
 		</Actions>
@@ -4321,7 +4321,7 @@
 				<Text>АНАНАС, 2 золотых</Text>
 				<Price>2</Price>
 				<Multiple/>
-				<Benefit Name="Healing" ValueString="Съесть ананас,3,1"/>
+				<Benefit Name="Healing" ValueString="Съесть ананас,3"/>
 				<Aftertext>добавит 3 ВЫНОСЛИВОСТЬ.</Aftertext>
 			</Action>
 			<Action>
@@ -4331,7 +4331,7 @@
 				<Text>БАНАН, 2 золотых</Text>
 				<Price>2</Price>
 				<Multiple/>
-				<Benefit Name="Healing" ValueString="Съесть банан,2,1"/>
+				<Benefit Name="Healing" ValueString="Съесть банан,2"/>
 				<Aftertext>добавит 2 ВЫНОСЛИВОСТИ.\n\nНо он притащил еще и кучу вещей, которые, как он считает, могут пригодиться в дороге.</Aftertext>
 			</Action>
 			<Action>

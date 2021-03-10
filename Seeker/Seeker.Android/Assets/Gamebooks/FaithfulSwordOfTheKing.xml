@@ -6265,7 +6265,7 @@
 				<Text>ЕДА, 2 экю</Text>
 				<Price>200</Price>
 				<Multiple/>
-				<Benefit Name="Healing" ValueString="Поесть,2,1"/>
+				<Benefit Name="Healing" ValueString="Поесть,2"/>
 			</Action>
 		</Actions>
 		<Options>
