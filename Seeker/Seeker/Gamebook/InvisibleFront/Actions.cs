@@ -49,33 +49,29 @@ namespace Seeker.Gamebook.InvisibleFront
 
         public bool IsButtonEnabled() => true;
 
-        private static bool OptionOk(string oneOption)
-        {
-            if (oneOption.Contains("НЕДОВОЛЬСТВО >"))
-                return Character.Protagonist.Dissatisfaction > int.Parse(oneOption.Split('>')[1]);
-            else if (oneOption.Contains("НЕДОВОЛЬСТВО <="))
-                return Character.Protagonist.Dissatisfaction <= int.Parse(oneOption.Split('=')[1]);
-            else if (oneOption.Contains("ВЕРБОВКА >"))
-                return Character.Protagonist.Recruitment > int.Parse(oneOption.Split('>')[1]);
-            else if (oneOption.Contains("ВЕРБОВКА <="))
-                return Character.Protagonist.Recruitment <= int.Parse(oneOption.Split('=')[1]);
-
-            return true;
-        }
-
         public static bool CheckOnlyIf(string option)
         {
             string[] options = option.Split('|', ',');
 
             foreach (string oneOption in options)
             {
-                if ((oneOption.Contains(">") || oneOption.Contains("<")) && !OptionOk(oneOption))
-                    return false;
-
-                else if (oneOption.Contains("!") && Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
-                    return false;
-               
-                else if (!oneOption.Contains("!") && !Game.Data.Triggers.Contains(oneOption.Trim()))
+                if (oneOption.Contains(">") || oneOption.Contains("<"))
+                {
+                    if (oneOption.Contains("НЕДОВОЛЬСТВО >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Dissatisfaction))
+                        return false;
+                    else if (oneOption.Contains("НЕДОВОЛЬСТВО <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Dissatisfaction))
+                        return false;
+                    else if (oneOption.Contains("ВЕРБОВКА >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Recruitment))
+                        return false;
+                    else if (oneOption.Contains("ВЕРБОВКА <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Recruitment))
+                        return false;
+                }
+                else if (oneOption.Contains("!"))
+                {
+                    if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        return false;
+                }
+                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
                     return false;
             }
 

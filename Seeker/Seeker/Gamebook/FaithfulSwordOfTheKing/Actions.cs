@@ -94,28 +94,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return !(disabledMeritalArtButton || disabledGetOptions || disabledByPrice);
         }
 
-        private static bool OptionOk(string option)
-        {
-            int day = int.Parse(option.Split('=')[1]);
-
-            if (option.Contains("ДЕНЬ >="))
-                return Character.Protagonist.Day >= day;
-            else if (option.Contains("ДЕНЬ ="))
-                return Character.Protagonist.Day == day;
-            else if (option.Contains("ДЕНЬ <="))
-                return Character.Protagonist.Day <= day;
-
-            return true;
-        }
-
         public static bool CheckOnlyIf(string option)
         {
-            if (option.Contains("=") && !OptionOk(option))
-                return false;
+            if (option.Contains("="))
+            {
+                if (option.Contains("ДЕНЬ >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.Day))
+                    return false;
+                else if (option.Contains("ДЕНЬ =") && (int.Parse(option.Split('=')[1]) != Character.Protagonist.Day))
+                    return false;
+                else if (option.Contains("ДЕНЬ <=") && (int.Parse(option.Split('=')[1]) < Character.Protagonist.Day))
+                    return false;
 
+                return true;
+            }
             else if (option == Character.Protagonist.MeritalArt.ToString())
                 return true;
-
             else
                 return Game.Data.Triggers.Contains(option);
         }
