@@ -80,12 +80,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public static bool CheckOnlyIf(string option)
         {
-            if (option.Contains("!"))
-            {
-                if (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()))
-                    return false;
-            }
-            else if (!Game.Data.Triggers.Contains(option.Trim()))
+            if (option.Contains("!") && Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()))
+                return false;
+            else if (!option.Contains("!") && !Game.Data.Triggers.Contains(option.Trim()))
                 return false;
 
             return true;
