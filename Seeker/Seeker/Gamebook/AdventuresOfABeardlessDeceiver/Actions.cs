@@ -145,29 +145,33 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 return Character.Protagonist.Tanga >= Price;
         }
 
+        private static bool OptionOk(string oneOption)
+        {
+            if (oneOption.Contains("ТАНЬГА >="))
+                return Character.Protagonist.Tanga >= int.Parse(oneOption.Split('=')[1]);
+            else if (oneOption.Contains("СЛАВА_АКЫНА >="))
+                return Character.Protagonist.AkynGlory >= int.Parse(oneOption.Split('=')[1]);
+            else if (oneOption.Contains("ПОПУЛЯРНОСТЬ >"))
+                return Character.Protagonist.Popularity > int.Parse(oneOption.Split('>')[1]);
+            else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ >"))
+                return Character.Protagonist.UnitOfTime > int.Parse(oneOption.Split('>')[1]);
+            else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ <="))
+                return Character.Protagonist.UnitOfTime <= int.Parse(oneOption.Split('=')[1]);
+
+            return true;
+        }
+
         public static bool CheckOnlyIf(string option)
         {
             foreach (string oneOption in option.Split(','))
             {
-                if (oneOption.Contains(">") || oneOption.Contains("<"))
-                {
-                    if (oneOption.Contains("ТАНЬГА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Tanga))
-                        return false;
-                    else if (oneOption.Contains("СЛАВА_АКЫНА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.AkynGlory))
-                        return false;
-                    else if (oneOption.Contains("ПОПУЛЯРНОСТЬ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Popularity))
-                        return false;
-                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.UnitOfTime))
-                        return false;
-                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.UnitOfTime))
-                        return false;
-                }
-                else if (oneOption.Contains("!"))
-                {
-                    if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
-                        return false;
-                }
-                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                if ((oneOption.Contains(">") || oneOption.Contains("<")) && !OptionOk(oneOption))
+                    return false;
+
+                else if (oneOption.Contains("!") && Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                    return false;
+
+                else if (!oneOption.Contains("!") && !Game.Data.Triggers.Contains(oneOption.Trim()))
                     return false;
             }
 
