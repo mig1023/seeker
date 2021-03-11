@@ -224,6 +224,26 @@ namespace Seeker.Gamebook.DzungarWar
                 return true;
         }
 
+        private static bool OptionOk(string oneOption)
+        {
+            if (oneOption.Contains("ТАНЬГА >="))
+                return int.Parse(oneOption.Split('=')[1]) <= Character.Protagonist.Tanga;
+
+            else if (oneOption.Contains("ОПАСНОСТЬ >"))
+                return int.Parse(oneOption.Split('>')[1]) < Character.Protagonist.Danger;
+
+            else if (oneOption.Contains("ОПАСНОСТЬ <="))
+                return int.Parse(oneOption.Split('=')[1]) >= Character.Protagonist.Danger;
+
+            else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ >"))
+                return int.Parse(oneOption.Split('>')[1]) < Character.Protagonist.Favour;
+
+            else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ <="))
+                return int.Parse(oneOption.Split('=')[1]) >= Character.Protagonist.Favour;
+
+            return true;
+        }
+
         public static bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
@@ -251,25 +271,13 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 foreach (string oneOption in option.Split(','))
                 {
-                    if (oneOption.Contains(">") || oneOption.Contains("<"))
-                    {
-                        if (oneOption.Contains("ТАНЬГА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Tanga))
-                            return false;
-                        else if (oneOption.Contains("ОПАСНОСТЬ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Danger))
-                            return false;
-                        else if (oneOption.Contains("ОПАСНОСТЬ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Danger))
-                            return false;
-                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Favour))
-                            return false;
-                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Favour))
-                            return false;
-                    }
-                    else if (oneOption.Contains("!"))
-                    {
-                        if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
-                            return false;
-                    }
-                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                    if ((oneOption.Contains(">") || oneOption.Contains("<")) && !OptionOk(oneOption))
+                        return false;
+
+                    else if (oneOption.Contains("!") && Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        return false;
+
+                    else if (!oneOption.Contains("!") && !Game.Data.Triggers.Contains(oneOption.Trim()))
                         return false;
                 }
 
