@@ -161,7 +161,18 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 return false;
             }
-                return Game.Data.Triggers.Contains(option);
+            else
+            {
+                if (option.Contains(">") || option.Contains("<"))
+                {
+                    if (option.Contains("МОНЕТ >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.Coins))
+                        return false;
+
+                    return true;
+                }
+                else
+                    return Game.Data.Triggers.Contains(option);
+            }
         }
 
         public List<string> Get()
