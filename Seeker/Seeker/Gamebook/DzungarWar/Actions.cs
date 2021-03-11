@@ -227,19 +227,19 @@ namespace Seeker.Gamebook.DzungarWar
         private static bool OptionOk(string oneOption)
         {
             if (oneOption.Contains("ТАНЬГА >="))
-                return int.Parse(oneOption.Split('=')[1]) <= Character.Protagonist.Tanga;
+                return Character.Protagonist.Tanga >= int.Parse(oneOption.Split('=')[1]);
 
             else if (oneOption.Contains("ОПАСНОСТЬ >"))
-                return int.Parse(oneOption.Split('>')[1]) < Character.Protagonist.Danger;
+                return Character.Protagonist.Danger > int.Parse(oneOption.Split('>')[1]);
 
             else if (oneOption.Contains("ОПАСНОСТЬ <="))
-                return int.Parse(oneOption.Split('=')[1]) >= Character.Protagonist.Danger;
+                return Character.Protagonist.Danger <= int.Parse(oneOption.Split('=')[1]);
 
             else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ >"))
-                return int.Parse(oneOption.Split('>')[1]) < Character.Protagonist.Favour;
+                return Character.Protagonist.Favour > int.Parse(oneOption.Split('>')[1]);
 
             else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ <="))
-                return int.Parse(oneOption.Split('=')[1]) >= Character.Protagonist.Favour;
+                return Character.Protagonist.Favour <= int.Parse(oneOption.Split('=')[1]);
 
             return true;
         }
