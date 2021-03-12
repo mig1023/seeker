@@ -2672,9 +2672,9 @@
 		<ID>271</ID>
 		<Text>За каждый из советов придется заплатить отдельно, цена та же - одна монета. Гусляр говорит, что может рассказать вам о следующем:</Text>
 		<Options>
-			<Option Destination="494" Text="О селениях степняков"/>
-			<Option Destination="78" Text="О пограничных заставах"/>
-			<Option Destination="534" Text="О дороге до границы"/>
+			<Option Destination="494" Text="О селениях степняков" Do="Coins" Value="-1" OnlyIf="МОНЕТ >= 1"/>
+			<Option Destination="78" Text="О пограничных заставах" Do="Coins" Value="-1" OnlyIf="МОНЕТ >= 1"/>
+			<Option Destination="534" Text="О дороге до границы" Do="Coins" Value="-1" OnlyIf="МОНЕТ >= 1"/>
 			<Option Destination="832" Text="Вы узнали все, что хотите, попрощаетесь с музыкантом и отправиться дальше"/>
 		</Options>
 	</Paragraph>
