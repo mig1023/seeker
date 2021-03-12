@@ -142,7 +142,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             bool disabledByBonuses = (!String.IsNullOrEmpty(Stat)) && (Character.Protagonist.Bonuses <= 0);
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Coins < Price);
-            bool disabledByUsed = (Price > 0) && Used;
+            bool disabledByUsed = ((Price > 0) ||(Price < 0)) && Used;
 
             return !(disabledByChoosed || disabledByBonuses || disabledByPrice || disabledByUsed);
         }
@@ -192,7 +192,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 Character.Protagonist.Bonuses -= 1;
             }
 
-            else if ((Price > 0) && (Character.Protagonist.Coins >= Price))
+            else if (((Price > 0) || (Price < 0)) && (Character.Protagonist.Coins >= Price))
             {
                 Character.Protagonist.Coins -= Price;
 
