@@ -266,6 +266,53 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
         }
 
+        public List<string> GameOfDice()
+        {
+            if (Character.Protagonist.Coins < 5)
+                return new List<string> { "BAD|У вас не достаточно денег, чтобы играть..." };
+
+            List<string> diceGame = new List<string> { };
+
+            int myResult, enemyResult;
+
+            do
+            {
+                int hisFirstDice = Game.Dice.Roll();
+                int hisSecondDice = Game.Dice.Roll();
+                enemyResult = hisFirstDice + hisSecondDice + 4;
+
+                diceGame.Add(String.Format(
+                    "Он бросил: {0} + {1} = {2}",
+                    Game.Dice.Symbol(hisFirstDice), Game.Dice.Symbol(hisSecondDice), enemyResult
+                ));
+
+                int firstDice = Game.Dice.Roll();
+                int secondDice = Game.Dice.Roll();
+                myResult = firstDice + secondDice;
+
+                diceGame.Add(String.Format(
+                    "Вы бросили: {0} + {1} = {2}",
+                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), myResult
+                ));
+
+                diceGame.Add(String.Empty);
+            }
+            while (myResult == enemyResult);
+
+            if (myResult > enemyResult)
+            {
+                diceGame.Add("BIG|GOOD|ВЫ ВЫИГРАЛИ 5 МОНЕТ:)");
+                Character.Protagonist.Coins += 5;
+            }
+            else
+            {
+                diceGame.Add("BIG|BAD|ПРОИГРАЛИ 5 МОНЕТ :(");
+                Character.Protagonist.Coins -= 5;
+            }
+
+            return diceGame;
+        }
+
         private bool IsHero(string name) => name == Character.Protagonist.Name;
 
         private Character FindEnemyIn(List<Character> Enemies)
