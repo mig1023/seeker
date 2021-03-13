@@ -5664,6 +5664,7 @@
 			<Modification Name="Endurance" Value="-10"/>
 		</Modifications>
 		<Options>
+			<Option Destination="655" Text="Есть амулет с перьями" OnlyIf="Амулет с перьями"/>
 			<Option Destination="288" Text="Сделаете это в надежде на помощь"/>
 			<Option Destination="390" Text="Наученные горьким опытом, пойдете в другую сторону"/>
 		</Options>
