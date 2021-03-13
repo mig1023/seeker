@@ -138,19 +138,11 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
                 Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+                WizardWoundsPenalty = Game.Xml.IntParse(xmlNode.Attributes["WizardWoundsPenalty"]),
+                ThrowerWoundsPenalty = Game.Xml.IntParse(xmlNode.Attributes["ThrowerWoundsPenalty"]),
+                Empty = Game.Xml.BoolParse(xmlNode.Attributes["Empty"]),
+                Init = Game.Xml.BoolParse(xmlNode.Attributes["Init"]),
             };
-
-            if (xmlNode.Attributes["Empty"] != null)
-                modification.Empty = true;
-
-            if (xmlNode.Attributes["Init"] != null)
-                modification.Init = true;
-
-            if (xmlNode.Attributes["WizardWoundsPenalty"] != null)
-                modification.WizardWoundsPenalty = Game.Xml.IntParse(xmlNode.Attributes["WizardWoundsPenalty"]);
-
-            if (xmlNode.Attributes["ThrowerWoundsPenalty"] != null)
-                modification.ThrowerWoundsPenalty = Game.Xml.IntParse(xmlNode.Attributes["ThrowerWoundsPenalty"]);
 
             return modification;
         }

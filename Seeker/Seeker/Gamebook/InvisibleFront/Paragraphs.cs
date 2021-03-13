@@ -60,10 +60,8 @@ namespace Seeker.Gamebook.InvisibleFront
             Modification modification = new Modification
             {
                 Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
             };
-
-            if (xmlNode.Attributes["Value"] != null)
-                modification.Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]);
 
             return modification;
         }

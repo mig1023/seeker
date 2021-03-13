@@ -50,10 +50,8 @@ namespace Seeker.Gamebook.RockOfTerror
                 {
                     Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
                     Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
+                    Init = Game.Xml.BoolParse(xmlModification.Attributes["Init"]),
                 };
-
-                if (xmlModification.Attributes["Init"] != null)
-                    modification.Init = true;
 
                 paragraph.Modification.Add(modification);
             }

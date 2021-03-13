@@ -74,13 +74,9 @@ namespace Seeker.Gamebook.SwampFever
             {
                 Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
                 Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+                Multiplication = Game.Xml.BoolParse(xmlNode.Attributes["Multiplication"]),
+                Division = Game.Xml.BoolParse(xmlNode.Attributes["Division"]),
             };
-
-            if (xmlNode.Attributes["Multiplication"] != null)
-                modification.Multiplication = true;
-
-            if (xmlNode.Attributes["Division"] != null)
-                modification.Division = true;
 
             return modification;
         }

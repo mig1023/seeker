@@ -91,13 +91,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             Modification modification = new Modification
             {
                 Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+                ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
             };
-
-            if (xmlNode.Attributes["Value"] != null)
-                modification.Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]);
-
-            if (xmlNode.Attributes["ValueString"] != null)
-                modification.ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]);
 
             return modification;
         }
