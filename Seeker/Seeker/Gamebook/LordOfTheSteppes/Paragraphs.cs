@@ -171,6 +171,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
                 ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
                 Restore = Game.Xml.BoolParse(xmlNode.Attributes["Restore"]),
+                Empty = Game.Xml.BoolParse(xmlNode.Attributes["Empty"]),
             };
 
             return modification;

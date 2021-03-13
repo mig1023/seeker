@@ -10,6 +10,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public int Value { get; set; }
         public string ValueString { get; set; }
         public bool Restore { get; set; }
+        public bool Empty { get; set; }
 
         public void Do()
         {
@@ -22,15 +23,26 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             if (Name == "Healing")
             {
                 Game.Healing.Add(ValueString);
+
+                return;
+            }
+            else if (Restore)
+            {
+                int maxValue = (int)Character.Protagonist.GetType().GetProperty("Max" + Name).GetValue(Character.Protagonist, null);
+                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, maxValue);
+
+                return;
+            }
+            else if (Empty)
+            {
+                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, 0);
+
                 return;
             }
 
             int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
-            if (Restore)
-                currentValue = (int)Character.Protagonist.GetType().GetProperty("Max" + Name).GetValue(Character.Protagonist, null);
-
-            else if (Name.StartsWith("Max"))
+            if (Name.StartsWith("Max"))
             {
                 string normalParam = Name.Remove(0, 3);
 
