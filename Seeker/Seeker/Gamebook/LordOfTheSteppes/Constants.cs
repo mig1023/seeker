@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         {
             [ButtonTypes.Main] = "#b80f0a",
             [ButtonTypes.Action] = "#a92605",
+            [ButtonTypes.Option] = "#878787",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
