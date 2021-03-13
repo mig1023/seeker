@@ -2404,7 +2404,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="48" Text="Предъявить охранную грамоту" OnlyIf="Охранная грамота"/>
-			<Option Destination="363" Text="На поясе висит турсук" OnlyIf="Турсук"/>
+			<Option Destination="438" Text="На поясе висит турсук" OnlyIf="Турсук"/>
 			<Option Destination="363"/>
 		</Options>
 	</Paragraph>
