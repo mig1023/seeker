@@ -344,6 +344,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             specialRules["powerfulStrike"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.PowerfulStrike);
             specialRules["ignoreReaction"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreReaction);
             specialRules["ignoreFirstStrike"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
+            specialRules["poisonBlade"] = attacker.SpecialTechnique.Contains(Character.SpecialTechniques.PoisonBlade);
 
             specialRules["enemyFirstStrike"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike) && (round <= 3);
             specialRules["enemyIgnoreFirstStrike"] = defender.SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
@@ -594,6 +595,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 {
                     fight.Add("Урон всё равно нанесён от Мощного выпада (особый приём)");
                     defender.Endurance -= 3;
+                }
+
+                if (specialRules["poisonBlade"] && (defender.MaxEndurance > defender.Endurance))
+                {
+                    fight.Add("Урон нанесён от яда отравленного клинка");
+                    defender.Endurance -= 1;
                 }
 
                 AttackStory[attacker.Name].Add(FAIL_ATTACK);
