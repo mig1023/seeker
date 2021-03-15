@@ -56,7 +56,7 @@ namespace Seeker
             Button b = sender as Button;
 
             Game.Continue.CurrentGame(b.Text);
-            Game.Data.GameLoad(b.Text);
+            Game.Other.GameLoad(b.Text);
             GamepageSettings();
 
             Paragraph(0);
@@ -143,7 +143,9 @@ namespace Seeker
 
             foreach (Game.Option option in paragraph.Options)
             {
-                if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf) && !Game.Data.ShowDisabledOption)
+                bool mustBeVisible = Game.Data.ShowDisabledOption || !String.IsNullOrEmpty(option.Aftertext);
+
+                if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf) && !mustBeVisible)
                     continue;
 
                 Button button = Output.Buttons.Option(option);
@@ -172,12 +174,13 @@ namespace Seeker
                 Options.Children.Add(button);
             }
             else if ((id > 0) && (Game.Data.Actions != null) && !(gameOver && (optionCount == 1)))
-                foreach(string buttonName in Game.Data.Actions.StaticButtons())
-                {
-                    Button button = Output.Buttons.Additional(buttonName);
-                    button.Clicked += StaticButton_Click;
-                    Options.Children.Add(button);
-                }
+            {
+                foreach (string buttonName in Game.Healing.List())
+                    AddAdditionalButton(buttonName, HealingButton_Click);
+
+                foreach (string buttonName in Game.Data.Actions.StaticButtons())
+                    AddAdditionalButton(buttonName, StaticButton_Click);
+            }
 
             if (!reload)
                 MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
@@ -189,6 +192,13 @@ namespace Seeker
 
             if (id != 0)
                 Game.Continue.Save();
+        }
+
+        private void AddAdditionalButton(string name, EventHandler eventHandler)
+        {
+            Button button = Output.Buttons.Additional(name);
+            button.Clicked += eventHandler;
+            Options.Children.Add(button);
         }
 
         private void UpdateStatus()
@@ -295,12 +305,17 @@ namespace Seeker
 
         private void StaticButton_Click(object sender, EventArgs e)
         {
-            Button b = sender as Button;
-
-            bool reload = Game.Data.Actions.StaticAction(b.Text);
+            bool reload = Game.Data.Actions.StaticAction((sender as Button).Text);
 
             if (reload)
                 Paragraph(Game.Data.CurrentParagraphID, reload: true);
+        }
+        
+        private void HealingButton_Click(object sender, EventArgs e)
+        {
+            Game.Healing.Use((sender as Button).Text);
+
+            Paragraph(Game.Data.CurrentParagraphID, reload: true);
         }
 
         private void Option_Click(object sender, EventArgs e)

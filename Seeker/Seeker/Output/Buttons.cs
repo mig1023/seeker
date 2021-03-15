@@ -31,7 +31,7 @@ namespace Seeker.Output
         {
             bool optionColor = !String.IsNullOrEmpty(option.OnlyIf) && !option.OnlyIf.Contains(">") && !option.OnlyIf.Contains("<");
 
-            if (Game.Data.ShowDisabledOption)
+            if (Game.Data.ShowDisabledOption || !String.IsNullOrEmpty(option.Aftertext))
                 optionColor = !String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf);
 
             string color = Game.Data.Constants.GetButtonsColor(
