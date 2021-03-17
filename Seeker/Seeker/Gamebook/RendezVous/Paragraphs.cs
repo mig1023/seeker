@@ -40,7 +40,7 @@ namespace Seeker.Gamebook.RendezVous
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
 
-                    Dices = Game.Xml.IntParse(xmlAction.Attributes["Dices"]),
+                    Dices = Game.Xml.IntParse(xmlAction["Dices"]),
                 };
 
                 paragraph.Actions.Add(action);
