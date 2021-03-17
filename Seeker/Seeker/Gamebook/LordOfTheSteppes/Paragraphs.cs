@@ -64,6 +64,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
                     NotToDeath = Game.Xml.BoolParse(xmlAction["NotToDeath"]),
                     Odd = Game.Xml.BoolParse(xmlAction["Odd"]),
+                    Initiative = Game.Xml.BoolParse(xmlAction["Initiative"]),
                     
                     SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]),
                 };

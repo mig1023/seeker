@@ -20,6 +20,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public int Dices { get; set; }
         public bool Odd { get; set; }
+        public bool Initiative { get; set; }
 
         public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
@@ -330,9 +331,11 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             else
             {
                 int secondDice = Game.Dice.Roll();
-                dicesResult += secondDice;
-                diceCheck.Add(String.Format("{0}На кубиках выпало: {1} + {2} = {3}",
-                    size, Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (firstDice + secondDice)
+                dicesResult += secondDice + (Initiative ? Character.Protagonist.Initiative : 0);
+                string initLine = (Initiative ? String.Format(" + {0} Инициатива", Character.Protagonist.Initiative) : String.Empty);
+
+                diceCheck.Add(String.Format("{0}На кубиках выпало: {1} + {2}{3} = {4}",
+                    size, Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), initLine, dicesResult
                 ));
             }
 
