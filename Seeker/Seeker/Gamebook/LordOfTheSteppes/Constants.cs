@@ -37,5 +37,13 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
 
         public double? GetLineHeight() => 1.20;
+
+        public static Dictionary<string, int> GetStartValues() => new Dictionary<string, int>
+        {
+            ["Attack"] = 8,
+            ["Defence"] = 15,
+            ["Endurance"] = 14,
+            ["Initiative"] = 10,
+        };
     }
 }

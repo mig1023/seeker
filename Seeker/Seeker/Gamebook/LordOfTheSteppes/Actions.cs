@@ -29,6 +29,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public bool GroupFight { get; set; }
         public bool NotToDeath { get; set; }
         public int Coherence { get; set; }
+        public bool StoneGuard { get; set; }
 
         public int Price { get; set; }
         public bool Used { get; set; }
@@ -56,13 +57,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             {
                 int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
 
-                Dictionary<string, int> startValues = new Dictionary<string, int>
-                {
-                    ["Attack"] = 8,
-                    ["Defence"] = 15,
-                    ["Endurance"] = 14,
-                    ["Initiative"] = 10,
-                };
+                Dictionary<string, int> startValues = Constants.GetStartValues();
 
                 int diff = (currentStat - startValues[Stat]);
 

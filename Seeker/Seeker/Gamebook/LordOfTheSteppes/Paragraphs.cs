@@ -65,6 +65,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     NotToDeath = Game.Xml.BoolParse(xmlAction["NotToDeath"]),
                     Odd = Game.Xml.BoolParse(xmlAction["Odd"]),
                     Initiative = Game.Xml.BoolParse(xmlAction["Initiative"]),
+                    StoneGuard = Game.Xml.BoolParse(xmlAction["StoneGuard"]),
                     
                     SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]),
                 };
@@ -95,7 +96,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                             };
                         }
                         else
-                            ally = CharacterParse(xmlAlly);
+                            ally = CharacterParse(xmlAlly, null);
 
                         action.Allies.Add(ally);
                     }
@@ -106,7 +107,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     action.Enemies = new List<Character>();
 
                     foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
-                        action.Enemies.Add(CharacterParse(xmlEnemy));
+                        action.Enemies.Add(CharacterParse(xmlEnemy, action));
 
                     if (action.Enemies.Count > 1)
                         action.GroupFight = true;
@@ -123,7 +124,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return paragraph;
         }
 
-        private static Character CharacterParse(XmlNode xmlNode)
+        private static Character CharacterParse(XmlNode xmlNode, Actions action)
         {
             Character character = new Character
             {
@@ -134,6 +135,13 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 MaxInitiative = Game.Xml.IntParse(xmlNode.Attributes["Initiative"]),
                 SpecialTechnique = new List<Character.SpecialTechniques>(),
             };
+
+            if ((action != null) && action.StoneGuard)
+            {
+                character.MaxAttack = Character.Protagonist.MaxAttack;
+                character.MaxDefence = Character.Protagonist.MaxDefence;
+                character.MaxInitiative = Character.Protagonist.MaxInitiative;
+            }
 
             string specialTechniques = Game.Xml.StringParse(xmlNode.Attributes["SpecialTechnique"]);
 
