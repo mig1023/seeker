@@ -78,35 +78,20 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         action.Benefit.Add(ModificationParse(bonefit));
                 }
 
-                if (xmlAction["Allies"] != null)
-                {
-                    action.Allies = new List<Character>();
+                bool falaleyHelp = Game.Xml.BoolParse(xmlAction["FalaleyHelp"]) && Game.Data.Triggers.Contains("Фалалей поможет");
 
+                if ((xmlAction["Allies"] != null) || falaleyHelp)
+                {
+                    action.Allies = new List<Character> { new Character { Name = Character.Protagonist.Name } };
                     action.GroupFight = true;
+                }
 
+                if (xmlAction["Allies"] != null)
                     foreach (XmlNode xmlAlly in xmlAction.SelectNodes("Allies/Ally"))
-                    {
-                        Character ally = null;
+                        action.Allies.Add(CharacterParse(xmlAlly, null));
 
-                        if (xmlAlly.Attributes["Hero"] != null)
-                            ally = new Character { Name = Character.Protagonist.Name };
-                        else
-                            ally = CharacterParse(xmlAlly, null);
-
-                        action.Allies.Add(ally);
-                    }
-                }
-
-                if (Game.Xml.BoolParse(xmlAction["FalaleyHelp"]) && Game.Data.Triggers.Contains("Фалалей поможет"))
-                {
-                    if (xmlAction["Allies"] == null)
-                    {
-                        action.Allies = new List<Character>();
-                        action.Allies.Add(new Character { Name = Character.Protagonist.Name });
-                    }
-
+                if (falaleyHelp)
                     action.Allies.Add(Falaley());
-                }
 
                 if (xmlAction["Enemies"] != null)
                 {
