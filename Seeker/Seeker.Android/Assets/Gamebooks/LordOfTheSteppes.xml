@@ -2739,10 +2739,18 @@
 	<Paragraph>
 		<ID>275</ID>
 		<Text>Бросьте два кубика и к результату прибавьте показатель Инициативы.</Text>
+		<Actions>
+			<Action>
+				<ActionName>DiceCheck</ActionName>
+				<ButtonName>Кинуть кубики</ButtonName>
+				<Dices>2</Dices>
+				<Initiative/>
+			</Action>
+		</Actions>
 		<Options>
+			<Option Destination="828" Text="Владеете приемом Реакция" OnlyIf="Reaction"/>
 			<Option Destination="828" Text="Получено значение равно или больше 16"/>
 			<Option Destination="176" Text="Получено значение меньше 16"/>
-			<Option Destination="828" Text="Владеете приемом Реакция"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
