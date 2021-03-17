@@ -4017,6 +4017,14 @@
 	<Paragraph>
 		<ID>415</ID>
 		<Text>Киньте один кубик.</Text>
+		<Actions>
+			<Action>
+				<ActionName>DiceCheck</ActionName>
+				<ButtonName>Кинуть один кубик</ButtonName>
+				<Dices>1</Dices>
+				<Odd/>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="546" Text="Выпало четное"/>
 			<Option Destination="101" Text="Выпало нечетное"/>
