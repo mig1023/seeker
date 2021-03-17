@@ -1851,7 +1851,6 @@
 				<ActionName>Fight</ActionName>
 				<ButtonName>Сражаться</ButtonName>
 				<Allies>
-					<Ally Hero="true"/>
 					<Ally Name="Незнакомец" Attack="10" Defence="15" Endurance="8" Initiative="9"/>
 				</Allies>
 				<Enemies>
@@ -3330,7 +3329,6 @@
 				<ActionName>Fight</ActionName>
 				<ButtonName>Сражаться</ButtonName>
 				<Allies>
-					<Ally Hero="true"/>
 					<Ally Name="Первый незнакомец" Attack="10" Defence="15" Endurance="8" Initiative="9"/>
 					<Ally Name="Второй незнакомец" Attack="9" Defence="14" Endurance="5" Initiative="9"/>
 					<Ally Name="Третий незнакомец" Attack="9" Defence="14" Endurance="8" Initiative="9"/>
@@ -5953,7 +5951,6 @@
 				<ActionName>Fight</ActionName>
 				<ButtonName>Сражаться</ButtonName>
 				<Allies>
-					<Ally Hero="true"/>
 					<Ally Name="Опытный авантюрист" Attack="12" Defence="15" Endurance="10" Initiative="11" SpecialTechnique="Reaction, TwoBlades"/>
 				</Allies>
 				<Enemies>
@@ -6558,7 +6555,6 @@
 				<ActionName>Fight</ActionName>
 				<ButtonName>Сражаться</ButtonName>
 				<Allies>
-					<Ally Hero="true"/>
 					<Ally Name="Воевода" Attack="9" Defence="15" Endurance="12" Initiative="9" SpecialTechnique="PowerfulStrike"/>
 					<Ally Name="Крестьянин" Attack="7" Defence="13" Endurance="10" Initiative="9"/>
 				</Allies>
