@@ -18,6 +18,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public int StatStep { get; set; }
         public Character.SpecialTechniques SpecialTechnique { get; set; }
 
+        public int Dices { get; set; }
+        public bool Odd { get; set; }
+
         public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
@@ -311,6 +314,32 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
 
             return diceGame;
+        }
+
+        public List<string> DiceCheck()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int firstDice = Game.Dice.Roll();
+            int dicesResult = firstDice;
+
+            string size = (Odd ? String.Empty : "BIG|");
+
+            if (Dices == 1)
+                diceCheck.Add(String.Format("{0}На кубикe выпало: {1}", size, Game.Dice.Symbol(firstDice)));
+            else
+            {
+                int secondDice = Game.Dice.Roll();
+                dicesResult += secondDice;
+                diceCheck.Add(String.Format("{0}На кубиках выпало: {1} + {2} = {3}",
+                    size, Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (firstDice + secondDice)
+                ));
+            }
+
+            if (Odd)
+                diceCheck.Add(dicesResult % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
+
+            return diceCheck;
         }
 
         private bool IsHero(string name) => name == Character.Protagonist.Name;

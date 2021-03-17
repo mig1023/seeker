@@ -58,12 +58,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
                     WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
                     Coherence = Game.Xml.IntParse(xmlAction["Coherence"]),
+                    Dices = Game.Xml.IntParse(xmlAction["Dices"]),
+                    Price = Game.Xml.IntParse(xmlAction["Price"]),
 
                     Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
                     NotToDeath = Game.Xml.BoolParse(xmlAction["NotToDeath"]),
+                    Odd = Game.Xml.BoolParse(xmlAction["Odd"]),
+                    
                     SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]),
-
-                    Price = Game.Xml.IntParse(xmlAction["Price"]),
                 };
 
                 if (xmlAction["Benefit"] != null)
