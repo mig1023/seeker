@@ -5302,6 +5302,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="664" Text="Предложить янтарь" OnlyIf="Янтарь"/>
+			<Option Destination="694" Text="Предложить приворотное зелье" OnlyIf="Приворотное зелье"/>
 			<Option Destination="153" Text="Подойти к людям, стоящим за палатками, и посмотреть, за чем они наблюдают"/>
 			<Option Destination="474" Text="Уйти из лагеря"/>
 		</Options>
