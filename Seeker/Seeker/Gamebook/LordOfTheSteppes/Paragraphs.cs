@@ -89,17 +89,23 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         Character ally = null;
 
                         if (xmlAlly.Attributes["Hero"] != null)
-                        {
-                            ally = new Character
-                            {
-                                Name = Character.Protagonist.Name,
-                            };
-                        }
+                            ally = new Character { Name = Character.Protagonist.Name };
                         else
                             ally = CharacterParse(xmlAlly, null);
 
                         action.Allies.Add(ally);
                     }
+                }
+
+                if (Game.Xml.BoolParse(xmlAction["FalaleyHelp"]) && Game.Data.Triggers.Contains("Фалалей поможет"))
+                {
+                    if (xmlAction["Allies"] == null)
+                    {
+                        action.Allies = new List<Character>();
+                        action.Allies.Add(new Character { Name = Character.Protagonist.Name });
+                    }
+
+                    action.Allies.Add(Falaley());
                 }
 
                 if (xmlAction["Enemies"] != null)
@@ -122,6 +128,28 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
             return paragraph;
+        }
+
+        private static Character Falaley()
+        {
+            Character character = new Character
+            {
+                Name = "Фалалей",
+                MaxAttack = 9,
+                MaxEndurance = 14,
+                MaxDefence = 15,
+                MaxInitiative = 10,
+                SpecialTechnique = new List<Character.SpecialTechniques>(),
+            };
+
+            character.Attack = character.MaxAttack;
+            character.Endurance = character.MaxEndurance;
+            character.Defence = character.MaxDefence;
+            character.Initiative = character.MaxInitiative;
+
+            character.SpecialTechnique.Add(Character.SpecialTechniques.PowerfulStrike);
+
+            return character;
         }
 
         private static Character CharacterParse(XmlNode xmlNode, Actions action)
