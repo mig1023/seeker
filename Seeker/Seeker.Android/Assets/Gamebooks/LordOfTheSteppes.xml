@@ -2255,8 +2255,8 @@
 		<Text>Разбойники пока еще не поняли, что вы не собираетесь платить им дань, поэтому не готовы к бою, и у вас есть шанс использовать это обстоятельство. Вы не раздумываете, на кого направить первый удар: главарь стоит прямо перед вами, поразить его легче всего, к тому же его приятели могут дрогнуть, лишившись командира. Но как лучше использовать свое преимущество во времени:</Text>
 		<Options>
 			<Option Destination="202" Text="Быстро выхватите меч и сделаете выпад"/>
-			<Option Destination="17" Text="Используете прием Первый удар"/>
-			<Option Destination="354" Text="Используете прием Мощный выпад"/>
+			<Option Destination="17" Text="Используете прием Первый удар" OnlyIf="FirstStrike"/>
+			<Option Destination="354" Text="Используете прием Мощный выпад" OnlyIf="PowerfulStrike"/>
 			<Option Destination="810" Text="Сделаете вид, что потянулись к кошельку за деньгами, а сами резко метнете в предводителя кинжал"/>
 			<Option Destination="505" Text="Броситесь удирать со всех ног"/>
 			<Option Destination="817" Text="Не станете хитрить и просто достанете меч и встанете в боевую стойку"/>
@@ -2586,7 +2586,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="38" Text="Владеете приемом Первый удар или выиграете право начинать бой по результатам проверки Инициативы"/>
+			<Option Destination="38" Text="Владеете приемом Первый удар" OnlyIf="FirstStrike"/>
 			<Option Destination="813" Text="Вы были ранены хотя бы один раз"/>
 			<Option Destination="594" Text="Не были ранены ни разу"/>
 		</Options>
@@ -3739,10 +3739,17 @@
 	<Paragraph>
 		<ID>382</ID>
 		<Text>Бросьте 1 кубик.</Text>
+		<Actions>
+			<Action>
+				<ActionName>DiceCheck</ActionName>
+				<ButtonName>Кинуть кубик</ButtonName>
+				<Dices>1</Dices>
+			</Action>
+		</Actions>
 		<Options>
+			<Option Destination="886" Text="Владеете навыком Мощный выпад" OnlyIf="PowerfulStrike"/>
 			<Option Destination="886" Text="Выпали 5 или 6"/>
 			<Option Destination="116" Text="Выпали 1, 2, 3 или 4"/>
-			<Option Destination="886" Text="Владеете навыком Мощный выпад"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
