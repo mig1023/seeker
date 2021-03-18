@@ -7578,6 +7578,7 @@
 		</Modifications>
 		<Triggers>Клинок из тайника, Письмо из тайника</Triggers>
 		<Options>
+			<Option Destination="724" Text="Вспомнить о листке с абракадаброй" OnlyIf="Листок с абракадаброй"/>
 			<Option Destination="829"/>
 		</Options>
 	</Paragraph>
