@@ -300,6 +300,21 @@ namespace Seeker.Gamebook
                 BookColor = "#b80f0a",
                 Illustration = "LordOfTheSteppes.jpg",
             },
+
+            ["Вой оборотня"] = new Description
+            {
+                XmlBook = "Gamebooks/HowlOfTheWerewolf.xml",
+                Protagonist = HowlOfTheWerewolf.Character.Protagonist.Init,
+                CheckOnlyIf = HowlOfTheWerewolf.Actions.CheckOnlyIf,
+                Paragraphs = new HowlOfTheWerewolf.Paragraphs(),
+                Actions = new HowlOfTheWerewolf.Actions(),
+                Constants = new HowlOfTheWerewolf.Constants(),
+                Save = HowlOfTheWerewolf.Character.Protagonist.Save,
+                Load = HowlOfTheWerewolf.Character.Protagonist.Load,
+                Disclaimer = "Джонатан Грин, 2007; перевод Rustem, Vo1t",
+                BookColor = "#323232",
+                Illustration = "HowlOfTheWerewolf.jpg",
+            },
         };
 
         public static List<string> GetBooks() => new List<string>(Books.Keys);
