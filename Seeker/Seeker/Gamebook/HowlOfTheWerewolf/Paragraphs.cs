@@ -23,6 +23,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 {
                     Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
                     Text = Game.Xml.StringParse(xmlOption.Attributes["Text"], defaultText: "Далее"),
+                    Aftertext = Game.Xml.StringParse(xmlOption.Attributes["Aftertext"]),
                 };
 
                 paragraph.Options.Add(option);
