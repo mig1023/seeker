@@ -29,7 +29,18 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public List<string> Representer() => new List<string> { };
 
-        public List<string> Status() => null;
+        public List<string> Status()
+        {
+            List<string> statusLines = new List<string>
+            {
+                String.Format("Мастерство: {0}", Character.Protagonist.Mastery),
+                String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
+                String.Format("Удача: {0}", Character.Protagonist.Luck),
+                String.Format("Изменение: {0}", Character.Protagonist.Change)
+            };
+
+            return statusLines;
+        }
 
         public List<string> AdditionalStatus() => null;
 
