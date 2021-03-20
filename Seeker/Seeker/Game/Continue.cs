@@ -44,8 +44,8 @@ namespace Seeker.Game
             Game.Data.CurrentParagraphID = int.Parse(save[0]);
             Game.Data.Triggers = save[1].Split(',').ToList();
 
-            Healing.Load(save[1]);
-            Game.Data.Load(save[2]);
+            Healing.Load(save[2]);
+            Game.Data.Load(save[3]);
 
             return Game.Data.CurrentParagraphID;
         }
