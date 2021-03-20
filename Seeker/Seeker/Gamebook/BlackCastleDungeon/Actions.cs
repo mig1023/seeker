@@ -193,7 +193,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             int fisrtDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
 
-            bool goodLuck = (fisrtDice + secondDice) < Character.Protagonist.Luck;
+            bool goodLuck = (fisrtDice + secondDice) <= Character.Protagonist.Luck;
 
             List<string> luckCheck = new List<string> { String.Format(
                     "Проверка удачи: {0} + {1} {2} {3}",
