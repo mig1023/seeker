@@ -82,6 +82,9 @@ namespace Seeker.Game
         {
             HealingList.Clear();
 
+            if (String.IsNullOrEmpty(saveLine))
+                return;
+
             List<string> allHealing = saveLine.Split('|').ToList();
 
             foreach (string currentHealing in allHealing)
