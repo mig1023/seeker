@@ -216,6 +216,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             foreach (string armour in Armour)
             {
+                if (String.IsNullOrEmpty(armour))
+                    continue;
+
                 string[] armourParams = armour.Split(',');
 
                 if (!allArmour.ContainsKey(armourParams[2]))
