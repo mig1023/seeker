@@ -13,6 +13,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
 
+        public List<Character> Enemies { get; set; }
+
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -77,6 +79,23 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
 
             return luckCheck;
+        }
+
+        public List<string> Transformation()
+        {
+            int fisrtDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            bool changeOk = (fisrtDice + secondDice) > Character.Protagonist.Change;
+
+            List<string> changeCheck = new List<string> { String.Format(
+                    "Проверка удачи: {0} + {1} {2} {3}",
+                    Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (changeOk ? ">" : "<="), Character.Protagonist.Change
+            ) };
+
+            changeCheck.Add(changeOk ? "BIG|GOOD|Победил ЧЕЛОВЕК:)" : "BIG|BAD|Победил ВОЛК :(");
+
+            return changeCheck;
         }
 
         public bool IsButtonEnabled() => true;
