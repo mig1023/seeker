@@ -51,9 +51,32 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
-            toEndText = String.Empty;
+            toEndText = "Начать сначала";
 
-            return false;
+            return Character.Protagonist.Endurance <= 0;
+        }
+
+        public List<string> Luck()
+        {
+            int fisrtDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            bool goodLuck = (fisrtDice + secondDice) <= Character.Protagonist.Luck;
+
+            List<string> luckCheck = new List<string> { String.Format(
+                    "Проверка удачи: {0} + {1} {2} {3}",
+                    Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), Character.Protagonist.Luck
+            ) };
+
+            luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            if (Character.Protagonist.Luck > 2)
+            {
+                Character.Protagonist.Luck -= 1;
+                luckCheck.Add("Уровень удачи снижен на единицу");
+            }
+
+            return luckCheck;
         }
 
         public bool IsButtonEnabled() => true;
