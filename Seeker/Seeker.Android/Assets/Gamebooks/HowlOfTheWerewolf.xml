@@ -181,7 +181,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>18</ID>
-		<Text>Демоническая собака уже долго время нападает на паломников, пытающихся добраться до святыни. Но сегодня этому кошмару будет положен конец.\n\nШак\n\nМастерство 7 Выносливость 7</Text>
+		<Text>Демоническая собака уже долго время нападает на паломников, пытающихся добраться до святыни. Но сегодня этому кошмару будет положен конец.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Шак" Mastery="7" Endurance="7"/>
+				</Enemies>
+				<RoundsToFight>7</RoundsToFight>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="30" Text="Шаку удалось ранить вас три раза подряд"/>
 			<Option Destination="99" Text="После семи Раундов Атаки адская собака еще жива"/>
