@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int RoundsToFight { get; set; }
         public int WoundsToWin { get; set; }
         public int WoundsForTransformation { get; set; }
+        public int HitStrengthBonus { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -147,11 +148,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     {
                         int protagonistRollFirst = Game.Dice.Roll();
                         int protagonistRollSecond = Game.Dice.Roll();
-                        int heroSkill = hero.Mastery;
-                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + heroSkill;
+                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + hero.Mastery + HitStrengthBonus;
 
-                        fight.Add(String.Format("Сила вашего удара: {0} + {1} + {2} = {3}",
-                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), heroSkill, protagonistHitStrength
+                        fight.Add(String.Format("Сила вашего удара: {0} + {1} + {2}{3} = {4}",
+                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), hero.Mastery,
+                            (HitStrengthBonus > 0 ? String.Format(" + {0} бонус", HitStrengthBonus) : String.Empty), protagonistHitStrength
                         ));
                     }
 
