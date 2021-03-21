@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int WoundsToWin { get; set; }
         public int WoundsForTransformation { get; set; }
         public int HitStrengthBonus { get; set; }
+        public bool WitchFight { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -210,7 +211,37 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
-                        hero.Endurance -= 2;
+                        if (WitchFight)
+                        {
+                            int witchAttack = Game.Dice.Roll();
+
+                            fight.Add(String.Format("Кубик атаки: {0}", Game.Dice.Symbol(witchAttack)));
+
+                            if (witchAttack < 3)
+                            {
+                                hero.Endurance -= 2;
+                                fight.Add("Вы потеряли 2 Выносливости");
+                            }
+                            else if ((witchAttack == 3) || (witchAttack == 4))
+                            {
+                                hero.Endurance -= 3;
+                                fight.Add("Вы потеряли 3 Выносливости");
+                            }
+                            else if (witchAttack == 5)
+                            {
+                                hero.Endurance -= 2;
+                                hero.Luck -= 1;
+                                fight.Add("Вы потеряли 2 Выносливости и 1 Удачу");
+                            }
+                            else
+                            {
+                                hero.Endurance -= 2;
+                                hero.Change += 1;
+                                fight.Add(String.Format("Вы потеряли 2 Выносливости и Трансформация продолжилась (Изменение достигло {0})", hero.Change));
+                            }
+                        }
+                        else
+                            hero.Endurance -= 2;
 
                         heroWounds += 1;
 

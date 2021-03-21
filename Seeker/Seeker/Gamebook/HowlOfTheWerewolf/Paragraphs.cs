@@ -45,6 +45,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
                     WoundsForTransformation = Game.Xml.IntParse(xmlAction["WoundsForTransformation"]),
                     HitStrengthBonus = Game.Xml.IntParse(xmlAction["HitStrengthBonus"]),
+
+                    WitchFight = Game.Xml.BoolParse(xmlAction["WitchFight"]),
                 };
 
                 if (xmlAction["Enemies"] != null)
