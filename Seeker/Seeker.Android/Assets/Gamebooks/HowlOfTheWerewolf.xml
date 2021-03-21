@@ -360,6 +360,7 @@
 				<Enemies>
 					<Enemy Name="Медведь" Mastery="8" Endurance="10"/>
 				</Enemies>
+				<WoundsForTransformation>3</WoundsForTransformation>
 				<Aftertext>Если медведь-оборотень нанесет вам больше двух ран, Трансформация продолжится.</Aftertext>
 			</Action>
 		</Actions>

@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int RoundsToWin { get; set; }
         public int RoundsToFight { get; set; }
         public int WoundsToWin { get; set; }
+        public int WoundsForTransformation { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -124,7 +125,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
-            int round = 1, enemyWounds = 0;
+            int round = 1, heroWounds = 0, enemyWounds = 0;
 
             Character hero = Character.Protagonist;
 
@@ -192,6 +193,17 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
                         hero.Endurance -= 2;
+
+                        heroWounds += 1;
+
+                        if (heroWounds == WoundsForTransformation)
+                        {
+                            hero.Change += 1;
+
+                            fight.Add(String.Empty);
+                            fight.Add("BIG|BAD|Трансформация продолжается!");
+                            fight.Add(String.Format("BAD|Изменение увеличилось на единицу и достигло {0}", hero.Change));
+                        }
 
                         if (hero.Endurance <= 0)
                         {
