@@ -61,7 +61,21 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         enemy.Mastery = enemy.MaxMastery;
                         enemy.Endurance = enemy.MaxEndurance;
 
-                        action.Enemies.Add(enemy);
+                        if (Game.Xml.BoolParse(xmlAction["RandomEnemyCount"]))
+                        {
+                            Dictionary<int, string> countLine = Constants.GetCountName();
+
+                            int count = Game.Dice.Roll();
+                            string name = enemy.Name;
+
+                            for (int i = 0; i < count; i++)
+                            {
+                                enemy.Name = countLine[i + 1] + " " + name;
+                                action.Enemies.Add(enemy.Clone());
+                            }
+                        }
+                        else
+                            action.Enemies.Add(enemy);
                     }
                 }
 

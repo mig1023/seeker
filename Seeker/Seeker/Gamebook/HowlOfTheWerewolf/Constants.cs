@@ -37,5 +37,15 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.normal;
 
         public double? GetLineHeight() => null;
+
+        public static Dictionary<int, string> GetCountName() => new Dictionary<int, string>
+        {
+            [1] = "Первый",
+            [2] = "Второй",
+            [3] = "Третий",
+            [4] = "Четвёртый",
+            [5] = "Пятый",
+            [6] = "Шестой",
+        };
     }
 }
