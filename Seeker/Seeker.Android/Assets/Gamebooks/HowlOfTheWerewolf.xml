@@ -1566,7 +1566,20 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>150</ID>
-		<Text>Издав яростный рык, ужасный Князь Оборотней бросается на вас.\n\nГраф Варколак\n\nМастерство 12 Выносливость 16\n\nЕсли он укусит вас хотя бы раз, Трансформация продолжится. Если вам удается снизить Выносливость врага до 6 или продержаться в течение семи Раундов Атаки.</Text>
+		<Text>Издав яростный рык, ужасный Князь Оборотней бросается на вас.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Граф Варколак" Mastery="12" Endurance="16"/>
+				</Enemies>
+				<RoundsToFight>7</RoundsToFight>
+				<WoundsToWin>5</WoundsToWin>
+				<WoundsForTransformation>1</WoundsForTransformation>
+				<Aftertext>Если он укусит вас хотя бы раз, Трансформация продолжится. Если вам удается снизить Выносливость врага до 6 или продержаться в течение семи Раундов Атаки:</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="503"/>
 		</Options>
