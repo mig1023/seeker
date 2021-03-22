@@ -21,6 +21,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int HitStrengthBonus { get; set; }
         public int ExtendedDamage { get; set; }
         public bool WitchFight { get; set; }
+        public bool ElectricDamage { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -243,6 +244,21 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         }
                         else
                             hero.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
+
+                        if (ElectricDamage)
+                        {
+                            int electric = Game.Dice.Roll();
+
+                            fight.Add(String.Format("Кубик электрического разряда: {0}", Game.Dice.Symbol(electric)));
+
+                            if (electric >= 5)
+                            {
+                                hero.Endurance -= 3;
+                                fight.Add("Вы потеряли ещё 3 Выносливость от разряда.");
+                            } 
+                            else
+                                fight.Add("Разряд прошёл мимо.");
+                        }
 
                         heroWounds += 1;
 
