@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int WoundsToWin { get; set; }
         public int WoundsForTransformation { get; set; }
         public int HitStrengthBonus { get; set; }
+        public int ExtendedDamage { get; set; }
         public bool WitchFight { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
@@ -241,7 +242,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                             }
                         }
                         else
-                            hero.Endurance -= 2;
+                            hero.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
 
                         heroWounds += 1;
 
