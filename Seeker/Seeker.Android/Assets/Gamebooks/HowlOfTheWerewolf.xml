@@ -2361,7 +2361,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>223</ID>
-		<Text>Вдруг один из волков совершает неверояный прыжок и оказывается на крыше двуколки. От неожиданности вы еле успеваете схватиться за меч\n\nВолк\n\nМастерство 7 Выносливость 6\n\nЕсли у вас нет способности Скорость, придется уменьшать свою Силу Удара на 1.</Text>
+		<Text>Вдруг один из волков совершает неверояный прыжок и оказывается на крыше двуколки. От неожиданности вы еле успеваете схватиться за меч:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Волк" Mastery="7" Endurance="6"/>
+				</Enemies>
+				<HitStrengthBonus>-1</HitStrengthBonus>		
+				<Aftertext>Если у вас нет способности Скорость, придется уменьшать свою Силу Удара на 1.</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="239"/>
 		</Options>
