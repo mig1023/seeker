@@ -170,9 +170,16 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         int protagonistRollSecond = Game.Dice.Roll();
                         protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + hero.Mastery + HitStrengthBonus;
 
+                        string bonus = String.Empty;
+
+                        if (HitStrengthBonus > 0)
+                            bonus = String.Format(" + {0} бонус", HitStrengthBonus);
+                        else if (HitStrengthBonus < 0)
+                            bonus = String.Format(" - {0} пенальти", HitStrengthBonus);
+
                         fight.Add(String.Format("Сила вашего удара: {0} + {1} + {2}{3} = {4}",
-                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), hero.Mastery,
-                            (HitStrengthBonus > 0 ? String.Format(" + {0} бонус", HitStrengthBonus) : String.Empty), protagonistHitStrength
+                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
+                            hero.Mastery, bonus, protagonistHitStrength
                         ));
                     }
 
