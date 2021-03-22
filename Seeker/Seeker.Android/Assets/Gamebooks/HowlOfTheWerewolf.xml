@@ -2005,7 +2005,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>192</ID>
-		<Text>С нечеловеческой яростью, пронзительно крича, вампирша бросается на вас.\n\nЛеди Маун\n\nМастерство 10 Выносливость 13</Text>
+		<Text>С нечеловеческой яростью, пронзительно крича, вампирша бросается на вас.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Леди Маун" Mastery="10" Endurance="13"/>
+				</Enemies>
+				<WoundsToWin>9</WoundsToWin>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="228" Text="Ей удалось ранить вас два раза подряд"/>
 			<Option Destination="245" Text="Вы смогли снизить Выносливость вампирши до 4"/>
