@@ -2192,7 +2192,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>208</ID>
-		<Text>Восковый Голем\n\nМастерство 8 Выносливость 10. У вас все еще есть время быстро покинуть помещение, захлопнув за собой дверь, а после вернуться в Путеводную Комнату.</Text>
+		<Text>Сражайтесь:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Восковый Голем" Mastery="8" Endurance="10"/>
+				</Enemies>
+				<Aftertext>У вас все еще есть время быстро покинуть помещение, захлопнув за собой дверь, а после вернуться в Путеводную Комнату.</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="321" Text="Покинуть помещение"/>
 			<Option Destination="264" Text="Удалось победить Голема"/>
