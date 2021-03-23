@@ -2923,7 +2923,16 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>276</ID>
-		<Text>В чаше рядом с деревенским храмом была святая вода, и меч, окропленный ей, может ранить даже призраков. Взвыв от боли, волк бросается в бой\n\nПризрачный волк\n\nМастерство 7 Выносливость 8\n\nЕсли вам удалось победить.</Text>
+		<Text>В чаше рядом с деревенским храмом была святая вода, и меч, окропленный ей, может ранить даже призраков. Взвыв от боли, волк бросается в бой.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Призрачный волк" Mastery="7" Endurance="8"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="443"/>
 		</Options>
