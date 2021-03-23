@@ -3380,7 +3380,37 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>320</ID>
-		<Text>Первый зомби        Мастерство	Выносливость\n\nПервый зомби		5		6\n\nВторой зомби		6		5\n\nТретий зомби		5		5\n\nЧетвертый зомби	6		6</Text>
+		<Text>Склеп устроен в самом основании главной башни. Сводчатая крыши поддерживается толстыми колоннами с каменными арками. Между колоннами стоят каменные саркофаги, здесь покоятся все поколения рода Маун. Но саркофаги охраняются. По склепу бродят несколько отвратительных зомби. Их гниющая кожа лишь слегка прикрыта грязными кусками савана. Медленно шаркая, они приближаются к вам. Тревога усиливается. Если не хотите связываться, можно убраться отсюда прямо сейчас. Или же сражайтесь. В тесном склепе они могут нападать на вас только по одному.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Первый зомби" Mastery="5" Endurance="6"/>
+				</Enemies>
+			</Action>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Второй зомби" Mastery="6" Endurance="5"/>
+				</Enemies>
+			</Action>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Третий зомби" Mastery="5" Endurance="5"/>
+				</Enemies>
+			</Action>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Enemies>
+					<Enemy Name="Четвертый зомби" Mastery="6" Endurance="6"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="7" Text="Не хотите связываться и предпочтете убраться отсюда прямо сейчас"/>
 			<Option Destination="333" Text="Удалось разделаться с ожившими мертвецами"/>
