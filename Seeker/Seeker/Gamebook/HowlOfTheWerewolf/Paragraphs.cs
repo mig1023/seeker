@@ -39,6 +39,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+                    Specificity = Game.Xml.StringParse(xmlAction["Specificity"]),
 
                     RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
                     RoundsToFight = Game.Xml.IntParse(xmlAction["RoundsToFight"]),
@@ -46,9 +47,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     WoundsForTransformation = Game.Xml.IntParse(xmlAction["WoundsForTransformation"]),
                     HitStrengthBonus = Game.Xml.IntParse(xmlAction["HitStrengthBonus"]),
                     ExtendedDamage = Game.Xml.IntParse(xmlAction["ExtendedDamage"]),
-
-                    ElectricDamage = Game.Xml.BoolParse(xmlAction["ElectricDamage"]),
-                    WitchFight = Game.Xml.BoolParse(xmlAction["WitchFight"]),
                 };
 
                 if (xmlAction["Enemies"] != null)

@@ -20,8 +20,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int WoundsForTransformation { get; set; }
         public int HitStrengthBonus { get; set; }
         public int ExtendedDamage { get; set; }
-        public bool WitchFight { get; set; }
-        public bool ElectricDamage { get; set; }
+        public string Specificity { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -220,7 +219,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
-                        if (WitchFight)
+                        if (Specificity == "WitchFight")
                         {
                             int witchAttack = Game.Dice.Roll();
 
@@ -252,7 +251,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         else
                             hero.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
 
-                        if (ElectricDamage)
+                        if (Specificity == "ElectricDamage")
                         {
                             int electric = Game.Dice.Roll();
 
