@@ -47,5 +47,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             [5] = "Пятый",
             [6] = "Шестой",
         };
+
+        public static int GetUlrichMastery() => 8;
     }
 }

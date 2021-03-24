@@ -39,7 +39,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                    Specificity = Game.Xml.StringParse(xmlAction["Specificity"]),
 
                     RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
                     RoundsToFight = Game.Xml.IntParse(xmlAction["RoundsToFight"]),
@@ -47,6 +46,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     WoundsForTransformation = Game.Xml.IntParse(xmlAction["WoundsForTransformation"]),
                     HitStrengthBonus = Game.Xml.IntParse(xmlAction["HitStrengthBonus"]),
                     ExtendedDamage = Game.Xml.IntParse(xmlAction["ExtendedDamage"]),
+
+                    Specificity = SpecificsParse(xmlAction["Specificity"]),
                 };
 
                 if (xmlAction["Enemies"] != null)
@@ -92,6 +93,16 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
             return paragraph;
+        }
+
+        private static Actions.Specifics SpecificsParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return Actions.Specifics.Nope;
+
+            bool success = Enum.TryParse(xmlNode.InnerText, out Actions.Specifics value);
+
+            return (success ? value : Actions.Specifics.Nope);
         }
 
         private static Modification ModificationParse(XmlNode xmlNode)

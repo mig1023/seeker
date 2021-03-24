@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 {
     class Actions : Abstract.IActions
     {
+        public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich };
+
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
@@ -20,7 +22,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int WoundsForTransformation { get; set; }
         public int HitStrengthBonus { get; set; }
         public int ExtendedDamage { get; set; }
-        public string Specificity { get; set; }
+        public Specifics Specificity { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -136,6 +138,26 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public static bool CheckOnlyIf(string option) => true;
 
+        private bool EnemyWound(List<Character> FightEnemies, int WoundsToWin, ref int enemyWounds, ref List<string> fight)
+        {
+            enemyWounds += 1;
+
+            bool enemyLost = true;
+
+            foreach (Character e in FightEnemies)
+                if (e.Endurance > 0)
+                    enemyLost = false;
+
+            if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
+            {
+                fight.Add(String.Empty);
+                fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                return true;
+            }
+            else
+                return false;
+        }
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -196,20 +218,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         enemy.Endurance -= 2;
 
-                        enemyWounds += 1;
-
-                        bool enemyLost = true;
-
-                        foreach (Character e in FightEnemies)
-                            if (e.Endurance > 0)
-                                enemyLost = false;
-
-                        if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
-                        {
-                            fight.Add(String.Empty);
-                            fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                        if (EnemyWound(FightEnemies, WoundsToWin, ref enemyWounds, ref fight))
                             return fight;
-                        }
                     }
                     else if (protagonistHitStrength > enemyHitStrength)
                     {
@@ -219,7 +229,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
-                        if (Specificity == "WitchFight")
+                        if (Specificity == Specifics.WitchFight)
                         {
                             int witchAttack = Game.Dice.Roll();
 
@@ -251,7 +261,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         else
                             hero.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
 
-                        if (Specificity == "ElectricDamage")
+                        if (Specificity == Specifics.ElectricDamage)
                         {
                             int electric = Game.Dice.Roll();
 
@@ -288,6 +298,33 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         fight.Add(String.Format("BOLD|Ничья в раунде"));
 
                     attackAlready = true;
+
+                    if (Specificity == Specifics.Ulrich)
+                    {
+                        int ulrichMastery = Constants.GetUlrichMastery();
+
+                        fight.Add(String.Empty);
+
+                        int ulrichRollFirst = Game.Dice.Roll();
+                        int ulrichRollSecond = Game.Dice.Roll();
+                        int ulrichHitStrength = ulrichRollFirst + ulrichRollSecond + ulrichMastery;
+
+                        fight.Add(String.Format("Сила удара Ульриха: {0} + {1} + {2} = {3}",
+                            Game.Dice.Symbol(ulrichRollFirst), Game.Dice.Symbol(ulrichRollSecond), ulrichMastery, ulrichHitStrength
+                        ));
+
+                        if (ulrichHitStrength > enemyHitStrength)
+                        {
+                            fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+
+                            enemy.Endurance -= 2;
+
+                            if (EnemyWound(FightEnemies, WoundsToWin, ref enemyWounds, ref fight))
+                                return fight;
+                        }
+                        else
+                            fight.Add("BOLD|Ульрих не смог ранить врага");
+                    }
 
                     if (((RoundsToWin > 0) && (RoundsToWin <= round)) || ((RoundsToFight > 0) && (RoundsToFight <= round)))
                     {
