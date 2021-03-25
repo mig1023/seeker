@@ -114,6 +114,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             {
                 Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
                 Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+                ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
             };
 
             return modification;
