@@ -20,6 +20,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int RoundsToFight { get; set; }
         public int WoundsToWin { get; set; }
         public int WoundsForTransformation { get; set; }
+        public int WoundsLimit { get; set; }
         public int HitStrengthBonus { get; set; }
         public int ExtendedDamage { get; set; }
         public Specifics Specificity { get; set; }
@@ -228,7 +229,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             bool enemyLost = true;
 
             foreach (Character e in FightEnemies)
-                if (e.Endurance > 0)
+                if (e.Endurance > (WoundsLimit > 0 ? WoundsLimit : 0))
                     enemyLost = false;
 
             if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
