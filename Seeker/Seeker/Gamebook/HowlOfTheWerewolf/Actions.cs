@@ -154,6 +154,37 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return diceCheck;
         }
 
+        public List<string> DicesRestore()
+        {
+            List<string> diceRestore = new List<string> { };
+
+            int dice = Game.Dice.Roll();
+
+            diceRestore.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
+
+            string line = String.Empty;
+
+            if (dice < 3)
+            {
+                Character.Protagonist.Mastery = Character.Protagonist.MaxMastery;
+                line = "о Мастерство";
+            }
+            else if (dice > 4)
+            {
+                Character.Protagonist.Luck = Character.Protagonist.MaxLuck;
+                line = "а Удача";
+            }
+            else
+            {
+                Character.Protagonist.Endurance = Character.Protagonist.MaxEndurance;
+                line = "а Выносливость";
+            }
+
+            diceRestore.Add(String.Format("BIG|GOOD|Восстановлен{0}", line));
+
+            return diceRestore;
+        }
+
         public bool IsButtonEnabled() => true;
 
         public static bool CheckOnlyIf(string option) => true;
