@@ -185,6 +185,21 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return diceRestore;
         }
 
+        public List<string> DiceWounds()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dice = Game.Dice.Roll();
+
+            diceCheck.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
+
+            Character.Protagonist.Endurance -= dice;
+
+            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dice));
+
+            return diceCheck;
+        }
+
         public bool IsButtonEnabled() => true;
 
         public static bool CheckOnlyIf(string option) => true;
