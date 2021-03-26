@@ -129,9 +129,29 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (changeOk ? ">" : "<="), Character.Protagonist.Change
             ) };
 
-            changeCheck.Add(changeOk ? "BIG|GOOD|Победил ЧЕЛОВЕК:)" : "BIG|BAD|Победил ВОЛК :(");
+            changeCheck.Add(changeOk ? "BIG|GOOD|Победил ЧЕЛОВЕК :)" : "BIG|BAD|Победил ВОЛК :(");
 
             return changeCheck;
+        }
+
+        public List<string> DicesEndurance()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int result = 0;
+
+            for (int i = 1; i <= 3; i++)
+            {
+                int dice = Game.Dice.Roll();
+                result += dice;
+                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
+            }
+
+            diceCheck.Add(String.Format("BIG|Сумма на кубиках: {0}", result));
+
+            diceCheck.Add(result < Character.Protagonist.Endurance ? "BIG|GOOD|Меньше! :)" : "BIG|BAD|Больше :(");
+
+            return diceCheck;
         }
 
         public bool IsButtonEnabled() => true;
