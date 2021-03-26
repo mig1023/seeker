@@ -200,6 +200,23 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return diceCheck;
         }
 
+        public List<string> DiceGold()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dice = Game.Dice.Roll();
+
+            diceCheck.Add(String.Format("На кубике выпало: {0} + ещё 12", Game.Dice.Symbol(dice)));
+
+            dice += 12;
+
+            Character.Protagonist.Gold -= dice;
+
+            diceCheck.Add(String.Format("BIG|GOOD|Вы нашли золотых: {0}", dice));
+
+            return diceCheck;
+        }
+
         public bool IsButtonEnabled() => true;
 
         public static bool CheckOnlyIf(string option) => true;
