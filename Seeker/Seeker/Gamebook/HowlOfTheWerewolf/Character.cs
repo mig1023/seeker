@@ -86,6 +86,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
+        public int WayBack { get; set; }
+
         public void Init()
         {
             Name = String.Empty;
@@ -98,6 +100,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Luck = MaxLuck;
             Change = 0;
             Gold = 15;
+            WayBack = 0;
         }
 
         public Character Clone()
@@ -118,8 +121,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}",
-                MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck, Change, Gold
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}",
+                MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck, Change, Gold, WayBack
             );
         }
 
@@ -135,6 +138,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Luck = int.Parse(save[5]);
             Change = int.Parse(save[6]);
             Gold = int.Parse(save[7]);
+            WayBack = int.Parse(save[8]);
         }
     }
 }
