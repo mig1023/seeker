@@ -135,6 +135,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return changeCheck;
         }
 
+        public List<string> Dice() => new List<string> { String.Format("BIG|На кубике выпало: {0}", Game.Dice.Symbol(Game.Dice.Roll())) };
+
         public List<string> DicesEndurance()
         {
             List<string> diceCheck = new List<string> { };
