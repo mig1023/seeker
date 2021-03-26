@@ -776,7 +776,7 @@
 					<Enemy Name="Черный Волк" Mastery="8" Endurance="9"/>
 				</Enemies>
 				<RoundsToFight>2</RoundsToFight>
-				<WoundsToWin>1</WoundsToWin>
+				<WoundsLimit>7</WoundsLimit>
 				<Aftertext>После двух Раундов Атаки или если вы снизили Выносливость вожака волков до 7 или меньше.</Aftertext>
 			</Action>
 		</Actions>
@@ -1634,7 +1634,7 @@
 					<Enemy Name="Черный Волк" Mastery="7" Endurance="8"/>
 				</Enemies>
 				<RoundsToFight>2</RoundsToFight>
-				<WoundsToWin>1</WoundsToWin>
+				<WoundsLimit>7</WoundsLimit>
 				<Aftertext>По завершению двух следующих Раундов Атаки или если вы снизили Выносливость вожака волков до 7 или меньше:</Aftertext>
 			</Action>
 		</Actions>
@@ -1671,7 +1671,7 @@
 					<Enemy Name="Граф Варколак" Mastery="12" Endurance="16"/>
 				</Enemies>
 				<RoundsToFight>7</RoundsToFight>
-				<WoundsToWin>5</WoundsToWin>
+				<WoundsLimit>6</WoundsLimit>
 				<WoundsForTransformation>1</WoundsForTransformation>
 				<Aftertext>Если он укусит вас хотя бы раз, Трансформация продолжится. Если вам удается снизить Выносливость врага до 6 или продержаться в течение семи Раундов Атаки:</Aftertext>
 			</Action>
@@ -2130,7 +2130,7 @@
 				<Enemies>
 					<Enemy Name="Леди Маун" Mastery="10" Endurance="13"/>
 				</Enemies>
-				<WoundsToWin>9</WoundsToWin>
+				<WoundsLimit>4</WoundsLimit>
 			</Action>
 		</Actions>
 		<Options>
@@ -4588,7 +4588,7 @@
 					<Enemy Name="Безумец" Mastery="7" Endurance="9"/>
 				</Enemies>
 				<RoundsToFight>3</RoundsToFight>
-				<WoundsToWin>2</WoundsToWin>
+				<WoundsLimit>6</WoundsLimit>
 				<Aftertext>Вы деретесь с полоумным дикарем на пороге дома. Ни Ульрих ни ведунья не могут вам помочь. После трех Раундов Атаки, или же если вы смогли уменьшить Выносливость врага до 6 или ниже:</Aftertext>
 			</Action>
 		</Actions>
@@ -4672,7 +4672,7 @@
 					<Enemy Name="Стеклянный рыцарь" Mastery="9" Endurance="7"/>
 				</Enemies>
 				<RoundsToFight>2</RoundsToFight>
-				<WoundsToWin>1</WoundsToWin>
+				<WoundsLimit>6</WoundsLimit>
 				<HitStrengthBonus>-1</HitStrengthBonus>		
 				<WoundsForTransformation>1</WoundsForTransformation>
 				<Aftertext>Если вы сражаетесь палицей, то после каждого выигранного Раунда Атаки, киньте кубик, и если выпадет 6, это значит, что вам удалось этим ударом разбить его на куски. Если вам удасться победить стража часовни, то лучше уходить отсюда обратно к лестнице.</Aftertext>
@@ -5377,7 +5377,7 @@
 					<Enemy Name="Безумец" Mastery="7" Endurance="9"/>
 				</Enemies>
 				<RoundsToFight>3</RoundsToFight>
-				<WoundsToWin>2</WoundsToWin>
+				<WoundsLimit>6</WoundsLimit>
 				<Aftertext>После трех Раундов Атаки или если вам удастся снизить его Выносливость до 6 или меньше:</Aftertext>
 			</Action>
 		</Actions>
@@ -5395,7 +5395,7 @@
 				<Enemies>
 					<Enemy Name="Человек-волк" Mastery="8" Endurance="8"/>
 				</Enemies>
-				<WoundsToWin>2</WoundsToWin>
+				<WoundsLimit>4</WoundsLimit>
 				<WoundsForTransformation>3</WoundsForTransformation>
 				<Aftertext>Если Человек-волк укусит вас больше двух раз, Трансформация продолжится.</Aftertext>
 			</Action>
