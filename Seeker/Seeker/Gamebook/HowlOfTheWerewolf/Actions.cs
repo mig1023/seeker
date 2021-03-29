@@ -8,7 +8,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 {
     class Actions : Abstract.IActions
     {
-        public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich };
+        public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow };
 
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
@@ -314,6 +314,48 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
+        private int BlackWidow(ref Character hero, ref List<string> fight)
+        {
+            int witchAttack = Game.Dice.Roll();
+
+            fight.Add(String.Format("Кубик атаки: {0}", Game.Dice.Symbol(witchAttack)));
+
+            if (witchAttack < 3)
+            {
+                hero.Endurance -= 2;
+                fight.Add("Удар когтями: вы потеряли 2 Выносливости");
+            }
+            else if (witchAttack == 3)
+            {
+                hero.Endurance -= 3;
+                fight.Add("Сильный удар: в потеряли 3 Выносливости и в следующий раунд не сможете атаковать пытаясь подняться на ноги");
+
+                return 3;
+            }
+            else if (witchAttack == 4)
+            {
+                fight.Add("Плевок паутиной: вы не ранены, но следующий Раунд Атаки не можете защититься");
+
+                return 4;
+            }
+            else if (witchAttack == 4)
+            {
+                hero.Endurance -=  4;
+                fight.Add("Ядовитый укус: вы потеряли 4 Выносливости");
+            }
+            else
+            {
+                int spiders = Game.Dice.Roll();
+                hero.Endurance -= spiders;
+
+                fight.Add(String.Format("Стая пауков: вы теряете {0}, но и она теряет 2 Выносливости", Game.Dice.Symbol(spiders)));
+
+                return 6;
+            }
+
+            return 0;
+        }
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -324,6 +366,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 FightEnemies.Add(enemy.Clone());
 
             int round = 1, heroWounds = 0, enemyWounds = 0;
+            int blackWidowLastAttack = 0;
 
             Character hero = Character.Protagonist;
 
@@ -341,6 +384,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                     fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
 
+                    if (blackWidowLastAttack == 4)
+                    {
+                        protagonistHitStrength = 0;
+                        attackAlready = true;
+                    }
+                        
                     if (!attackAlready)
                     {
                         int protagonistRollFirst = Game.Dice.Roll();
@@ -351,8 +400,15 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         if (HitStrengthBonus > 0)
                             bonus = String.Format(" + {0} бонус", HitStrengthBonus);
+
                         else if (HitStrengthBonus < 0)
                             bonus = String.Format(" - {0} пенальти", HitStrengthBonus);
+
+                        else if (blackWidowLastAttack == 4)
+                        {
+                            bonus = " - 1 пенальти за паутину";
+                            protagonistHitStrength -= 1;
+                        }
 
                         fight.Add(String.Format("Сила вашего удара: {0} + {1} + {2}{3} = {4}",
                             Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
@@ -368,7 +424,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength
                     ));
 
-                    if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
+                    if ((protagonistHitStrength > enemyHitStrength) && !attackAlready && (blackWidowLastAttack == 4))
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
 
@@ -387,6 +443,19 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         if (Specificity == Specifics.WitchFight)
                             WitchFight(ref hero, ref fight);
+
+                        else if (Specificity == Specifics.BlackWidow)
+                        {
+                            blackWidowLastAttack = BlackWidow(ref hero, ref fight);
+
+                            if (blackWidowLastAttack == 6)
+                            {
+                                enemy.Endurance -= 2;
+
+                                if (EnemyWound(FightEnemies, ref enemyWounds, ref fight))
+                                    return fight;
+                            }
+                        }
                         else
                             hero.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
 
