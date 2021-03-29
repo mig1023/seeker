@@ -8,7 +8,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 {
     class Actions : Abstract.IActions
     {
-        public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable, RandomRoundsToFight };
+        public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable,
+            RandomRoundsToFight, NeedForSpeed };
 
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
@@ -418,6 +419,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         else if (blackWidowLastAttack == 4)
                         {
                             bonus = " - 1 пенальти за паутину";
+                            protagonistHitStrength -= 1;
+                        }
+
+                        else if ((Specificity == Specifics.NeedForSpeed) && !Game.Data.Triggers.Contains("Скорость"))
+                        {
+                            bonus = " - 1 за остутствие Скорости";
                             protagonistHitStrength -= 1;
                         }
 
