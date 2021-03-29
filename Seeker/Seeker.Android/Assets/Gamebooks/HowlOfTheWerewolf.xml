@@ -2305,8 +2305,8 @@
 				<Enemies>
 					<Enemy Name="Оборотень" Mastery="8" Endurance="11"/>
 				</Enemies>
-				<HitStrengthBonus>-1</HitStrengthBonus>
 				<RoundsToFight>6</RoundsToFight>
+				<Specificity>NeedForSpeed</Specificity>
 				<Aftertext>Если у вас нет способности Скорость, придется вычитать 1 из своей Силы Удара. Если Зверю удастся вас ранить, киньте кубик, и, если выпадет 6, то 351. После того, как пройдет 6 Раундов Атаки или вам удастся снизить до 4 его Выносливость.</Aftertext>
 			</Action>
 		</Actions>
@@ -2505,7 +2505,7 @@
 				<Enemies>
 					<Enemy Name="Волк" Mastery="7" Endurance="6"/>
 				</Enemies>
-				<HitStrengthBonus>-1</HitStrengthBonus>		
+				<Specificity>NeedForSpeed</Specificity>	
 				<Aftertext>Если у вас нет способности Скорость, придется уменьшать свою Силу Удара на 1.</Aftertext>
 			</Action>
 		</Actions>
@@ -4330,7 +4330,7 @@
 				<Enemies>
 					<Enemy Name="Дикая корова" Mastery="8" Endurance="9"/>
 				</Enemies>
-				<HitStrengthBonus>-1</HitStrengthBonus>		
+				<Specificity>NeedForSpeed</Specificity>	
 				<Aftertext>Сражаться сложно, ноги увязают в грязи. Если у вас нет способности Скорость, придется уменьшать на 1 свою Силу Удара.</Aftertext>
 			</Action>
 		</Actions>
@@ -5211,6 +5211,7 @@
 		<Modifications>
 			<Modification Name="MaxMastery" Value="1"/>
 		</Modifications>
+		<Triggers>Скорость</Triggers>
 		<Options>
 			<Option Destination="Back"/>
 		</Options>
