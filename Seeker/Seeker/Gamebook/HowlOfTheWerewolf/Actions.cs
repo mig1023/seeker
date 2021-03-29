@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
     class Actions : Abstract.IActions
     {
         public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable,
-            RandomRoundsToFight, NeedForSpeed };
+            RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead };
 
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
@@ -347,7 +347,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
             else if (witchAttack == 4)
             {
-                hero.Endurance -=  4;
+                hero.Endurance -= 4;
                 fight.Add("Ядовитый укус: вы потеряли 4 Выносливости");
             }
             else
@@ -363,6 +363,26 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return 0;
         }
 
+        private bool WerewolfDeadFight(ref Character hero, ref List<string> fight)
+        {
+            int wwerewolfAttack = Game.Dice.Roll();
+
+            fight.Add(String.Format("Кубик атаки: {0}", Game.Dice.Symbol(wwerewolfAttack)));
+
+            if (wwerewolfAttack == 6)
+            {
+                fight.Add(String.Empty);
+                fight.Add("BIG|BAD|Вы ПРОИГРАЛИ, выпала ШЕСТЁРКА :(");
+                fight.Add("BAD|Перейдите на соответствующий пункт...");
+                return true;
+            }
+            else
+            {
+                fight.Add("Обошлось...");
+                return false;
+            }
+        }
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -375,6 +395,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             int round = 1, heroWounds = 0, enemyWounds = 0, blackWidowLastAttack = 0;
 
             bool invulnerable = (Specificity == Specifics.Invulnerable);
+            bool speed = ((Specificity == Specifics.NeedForSpeed) || (Specificity == Specifics.NeedForSpeedAndDead));
 
             Character hero = Character.Protagonist;
 
@@ -425,7 +446,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                             protagonistHitStrength -= 1;
                         }
 
-                        else if ((Specificity == Specifics.NeedForSpeed) && !Game.Data.Triggers.Contains("Скорость"))
+                        else if (speed && !Game.Data.Triggers.Contains("Скорость"))
                         {
                             bonus = " - 1 за остутствие Скорости";
                             protagonistHitStrength -= 1;
@@ -465,6 +486,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         if (Specificity == Specifics.WitchFight)
                             WitchFight(ref hero, ref fight);
 
+                        else if (Specificity == Specifics.NeedForSpeedAndDead)
+                        {
+                            if (WerewolfDeadFight(ref hero, ref fight))
+                                return fight;
+                        }
                         else if (Specificity == Specifics.BlackWidow)
                         {
                             blackWidowLastAttack = BlackWidow(ref hero, ref fight);
@@ -497,7 +523,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         if (hero.Endurance <= 0)
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                             return fight;
                         }
                     }
