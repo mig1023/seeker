@@ -8,7 +8,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 {
     class Actions : Abstract.IActions
     {
-        public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable };
+        public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable, RandomRoundsToFight };
 
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
@@ -373,6 +373,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             bool invulnerable = (Specificity == Specifics.Invulnerable);
 
             Character hero = Character.Protagonist;
+
+            if (Specificity == Specifics.RandomRoundsToFight)
+            {
+                RoundsToFight = 15 - Character.Protagonist.Mastery;
+                fight.Add(String.Format("Вам необходимо продержаться: 15 - {0} = {1} раундов", Character.Protagonist.Mastery, RoundsToFight));
+                fight.Add(String.Empty);
+            }
 
             while (true)
             {
