@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
+        public int Value { get; set; }
 
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
@@ -213,9 +214,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             int dice = Game.Dice.Roll();
 
-            diceCheck.Add(String.Format("На кубике выпало: {0} + ещё 12", Game.Dice.Symbol(dice)));
+            diceCheck.Add(String.Format("На кубике выпало: {0} + ещё {1}", Game.Dice.Symbol(dice), Value));
 
-            dice += 12;
+            dice += Value;
 
             Character.Protagonist.Gold -= dice;
 
