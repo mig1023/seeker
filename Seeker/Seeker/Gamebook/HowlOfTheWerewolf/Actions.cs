@@ -199,11 +199,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             int dice = Game.Dice.Roll();
 
-            diceCheck.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
+            string bonus = (Value > 0 ? String.Format(" + ещё {0}", Value) : String.Empty);
 
-            Character.Protagonist.Endurance -= dice;
+            diceCheck.Add(String.Format("На кубике выпало: {0}{1}", Game.Dice.Symbol(dice), bonus));
 
-            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dice));
+            Character.Protagonist.Endurance -= dice + Value;
+
+            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dice + Value));
 
             return diceCheck;
         }
