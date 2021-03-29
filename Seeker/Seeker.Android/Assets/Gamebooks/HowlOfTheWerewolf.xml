@@ -2306,12 +2306,13 @@
 					<Enemy Name="Оборотень" Mastery="8" Endurance="11"/>
 				</Enemies>
 				<RoundsToFight>6</RoundsToFight>
-				<Specificity>NeedForSpeed</Specificity>
-				<Aftertext>Если у вас нет способности Скорость, придется вычитать 1 из своей Силы Удара. Если Зверю удастся вас ранить, киньте кубик, и, если выпадет 6, то 351. После того, как пройдет 6 Раундов Атаки или вам удастся снизить до 4 его Выносливость.</Aftertext>
+				<Specificity>NeedForSpeedAndDead</Specificity>
+				<Aftertext>Если у вас нет способности Скорость, придется вычитать 1 из своей Силы Удара. Если Зверю удастся вас ранить, киньте кубик, и, если выпадет 6, то участь ваша будет незавидна. После того, как пройдет 6 Раундов Атаки или вам удастся снизить до 4 его Выносливость:</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
 			<Option Destination="480"/>
+			<Option Destination="351" Text="В бою выпала эта треклятая шестёрка"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
