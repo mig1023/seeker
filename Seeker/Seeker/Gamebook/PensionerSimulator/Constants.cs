@@ -31,5 +31,7 @@ namespace Seeker.Gamebook.PensionerSimulator
         public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
 
         public double? GetLineHeight() => null;
+
+        public int GetInitParagraph() => 0;
     }
 }

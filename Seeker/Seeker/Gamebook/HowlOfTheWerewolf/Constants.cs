@@ -49,5 +49,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         };
 
         public static int GetUlrichMastery() => 8;
+
+        public int GetInitParagraph() => 0;
     }
 }

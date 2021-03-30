@@ -39,5 +39,7 @@ namespace Seeker.Gamebook.InvisibleFront
         public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.normal;
 
         public double? GetLineHeight() => null;
+
+        public int GetInitParagraph() => 0;
     }
 }

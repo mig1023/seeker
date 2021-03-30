@@ -86,5 +86,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public double? GetLineHeight() => null;
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1, 665 };
+
+        public int GetInitParagraph() => 0;
     }
 }

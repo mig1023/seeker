@@ -312,7 +312,7 @@ namespace Seeker.Gamebook
                 Save = HowlOfTheWerewolf.Character.Protagonist.Save,
                 Load = HowlOfTheWerewolf.Character.Protagonist.Load,
                 Disclaimer = "Джонатан Грин, 2007; перевод Rustem, Vo1t",
-                BookColor = "#323232",
+                BookColor = "#1b2b09",
                 Illustration = "HowlOfTheWerewolf.jpg",
             },
         };

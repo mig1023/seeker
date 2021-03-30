@@ -69,7 +69,7 @@ namespace Seeker
 
         public void Paragraph(int id, bool reload = false, bool loadGame = false)
         {
-            bool startOfGame = (id == 0);
+            bool startOfGame = false;
 
             Game.Router.Clean();
 
@@ -77,8 +77,17 @@ namespace Seeker
             Action.Children.Clear();
             Options.Children.Clear();
 
-            if (startOfGame)
+            if (Game.Data.Constants.GetInitParagraph() == id)
+            {
+                Game.Data.GameNotStartYet = false;
                 Game.Data.Protagonist();
+                startOfGame = true;
+            }
+            else if (id == 0)
+            {
+                Game.Data.GameNotStartYet = true;
+                startOfGame = true;
+            }
 
             Game.Paragraph paragraph = null;
 
@@ -208,7 +217,7 @@ namespace Seeker
             Status.Children.Clear();
             AdditionalStatus.Children.Clear();
 
-            if (statuses == null)
+            if ((statuses == null) || Game.Data.GameNotStartYet)
             {
                 StatusBorder.IsVisible = false;
                 MainGrid.RowDefinitions[1].Height = 0;
@@ -236,7 +245,12 @@ namespace Seeker
 
             List<string> additionalStatuses = (Game.Data.Actions == null ? null : Game.Data.Actions.AdditionalStatus());
 
-            if (additionalStatuses != null)
+            if ((additionalStatuses == null) || Game.Data.GameNotStartYet)
+            {
+                AdditionalStatus.IsVisible = false;
+                MainGrid.ColumnDefinitions[1].Width = 0;
+            }
+            else
             {
                 string backgroundColor = Game.Data.Constants.GetColor(Game.Data.ColorTypes.AdditionalStatus);
 
@@ -246,11 +260,6 @@ namespace Seeker
 
                 foreach (Output.VerticalText status in Output.Interface.AdditionalStatusBar(additionalStatuses))
                     AdditionalStatus.Children.Add(status);
-            }
-            else
-            {
-                AdditionalStatus.IsVisible = false;
-                MainGrid.ColumnDefinitions[1].Width = 0;
             }
         }
 
@@ -266,6 +275,9 @@ namespace Seeker
 
         private void CheckGameOver()
         {
+            if (Game.Data.GameNotStartYet)
+                return;
+
             if ((Game.Data.Actions == null) || !Game.Data.Actions.GameOver(out int toEndParagraph, out string toEndText))
                 return;
 

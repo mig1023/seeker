@@ -61,6 +61,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             Dictionary<string, int> currentSpells = new Dictionary<string, int>();
 
+            if (Character.Protagonist.Spells == null)
+                return null;
+
             foreach (string spell in Character.Protagonist.Spells)
             {
                 string shortSpellName = spell.Replace("ЗАКЛЯТИЕ ", String.Empty).ToLower();

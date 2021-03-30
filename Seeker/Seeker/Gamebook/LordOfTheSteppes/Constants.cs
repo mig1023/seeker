@@ -45,5 +45,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             ["Endurance"] = 14,
             ["Initiative"] = 10,
         };
+
+        public int GetInitParagraph() => 0;
     }
 }

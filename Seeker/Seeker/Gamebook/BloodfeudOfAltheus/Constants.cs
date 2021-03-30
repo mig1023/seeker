@@ -42,5 +42,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public double? GetLineHeight() => null;
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1 };
+
+        public int GetInitParagraph() => 0;
     }
 }
