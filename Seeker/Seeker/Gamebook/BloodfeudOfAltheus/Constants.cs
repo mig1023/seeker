@@ -43,6 +43,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1 };
 
-        public int GetInitParagraph() => 0;
+        public int GetInitParagraph() => 1;
     }
 }
