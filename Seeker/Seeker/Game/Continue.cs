@@ -47,6 +47,8 @@ namespace Seeker.Game
             Healing.Load(save[2]);
             Game.Data.Load(save[3]);
 
+            Game.Data.GameNotStartYet = false;
+
             return Game.Data.CurrentParagraphID;
         }
     }
