@@ -38,6 +38,6 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public double? GetLineHeight() => null;
 
-        public int GetInitParagraph() => 0;
+        public int GetInitParagraph() => 1;
     }
 }
