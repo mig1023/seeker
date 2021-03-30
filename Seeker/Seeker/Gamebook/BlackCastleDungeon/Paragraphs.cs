@@ -29,6 +29,18 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
                 };
 
+                if (xmlOption.Attributes["Do"] != null)
+                {
+                    Modification modification = new Modification
+                    {
+                        Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]),
+                        Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]),
+                        ValueString = Game.Xml.StringParse(xmlOption.Attributes["ValueString"]),
+                    };
+
+                    option.Do = modification;
+                }
+
                 paragraph.Options.Add(option);
             }
 

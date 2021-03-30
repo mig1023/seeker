@@ -83,7 +83,7 @@ namespace Seeker
                 Game.Data.Protagonist();
                 startOfGame = true;
             }
-            else if (id == 0)
+            else if (id == Game.Data.StartParagraph)
             {
                 Game.Data.GameNotStartYet = true;
                 startOfGame = true;
@@ -176,13 +176,13 @@ namespace Seeker
                 optionCount += 1;
             }
 
-            if ((id == 0) && Game.Continue.IsGameSaved())
+            if ((id == Game.Data.StartParagraph) && Game.Continue.IsGameSaved())
             {
                 Button button = Output.Buttons.Additional("Продолжить предыдущую игру");
                 button.Clicked += Continue_Click;
                 Options.Children.Add(button);
             }
-            else if ((id > 0) && (Game.Data.Actions != null) && !(gameOver && (optionCount == 1)))
+            else if ((id > Game.Data.StartParagraph) && (Game.Data.Actions != null) && !(gameOver && (optionCount == 1)))
             {
                 foreach (string buttonName in Game.Healing.List())
                     AddAdditionalButton(buttonName, HealingButton_Click);
@@ -199,7 +199,7 @@ namespace Seeker
 
             Game.Option.Trigger(paragraph.LateTrigger);
 
-            if (id != 0)
+            if (id != Game.Data.StartParagraph)
                 Game.Continue.Save();
         }
 

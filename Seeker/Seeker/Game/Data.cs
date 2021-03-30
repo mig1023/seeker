@@ -13,6 +13,8 @@ namespace Seeker.Game
         public enum ColorTypes { Background, Font, ActionBox, StatusBar, StatusFont, StatusBorder,
             AdditionalStatus, AdditionalFont }
 
+        public const int StartParagraph = 0;
+
         public static Paragraph CurrentParagraph { get; set; }
         public static int CurrentParagraphID { get; set; }
         public static bool ShowDisabledOption { get; set; }
