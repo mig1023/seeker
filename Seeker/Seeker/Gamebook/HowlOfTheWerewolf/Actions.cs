@@ -162,6 +162,23 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return diceCheck;
         }
 
+        public List<string> DiceAnxiety()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int firstDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            int result = firstDice + secondDice;
+
+            diceCheck.Add(String.Format("На кубиках выпало: {0} + {1} = {2}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(firstDice), result));
+            diceCheck.Add(String.Format("Текущий уровень тревоги: {0}", Character.Protagonist.Anxiety));
+
+            diceCheck.Add(result > Character.Protagonist.Anxiety ? "BIG|GOOD|Больше! :)" : "BIG|BAD|Меньше :(");
+
+            return diceCheck;
+        }
+
         public List<string> DicesRestore()
         {
             List<string> diceRestore = new List<string> { };

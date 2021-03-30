@@ -86,7 +86,21 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
+        private int _anxiety;
+        public int Anxiety
+        {
+            get => _anxiety;
+            set
+            {
+                if (value < 0)
+                    _anxiety = 0;
+                else
+                    _anxiety = value;
+            }
+        }
+
         public int WayBack { get; set; }
+
 
         public void Init()
         {
@@ -99,6 +113,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             MaxLuck = Game.Dice.Roll() + 6;
             Luck = MaxLuck;
             Change = 0;
+            Anxiety = 0;
             Gold = 15;
             WayBack = 0;
         }
@@ -114,6 +129,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 MaxLuck = this.MaxLuck,
                 Luck = this.Luck,
                 Change = this.Change,
+                Anxiety = this.Anxiety,
                 Gold = this.Gold,
             };
         }
@@ -121,8 +137,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}",
-                MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck, Change, Gold, WayBack
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}",
+                MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck, Change, Gold, WayBack, Anxiety
             );
         }
 
@@ -139,6 +155,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Change = int.Parse(save[6]);
             Gold = int.Parse(save[7]);
             WayBack = int.Parse(save[8]);
+            Anxiety = int.Parse(save[9]);
         }
     }
 }
