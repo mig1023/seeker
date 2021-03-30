@@ -37,6 +37,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public double? GetLineHeight() => null;
 
-        public int GetInitParagraph() => 0;
+        public int GetInitParagraph() => 660;
     }
 }
