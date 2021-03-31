@@ -34,17 +34,14 @@
 		<Text>Через несколько минут вы достигаете реки. На другом ее берегу разбиты палатки, горят костры, между которыми снуют Гоблины и Орки. Река подходит к высокому центральному строению и заканчивается у него, как дорога у ворот, но по шуму воды вы понимаете, что она небольшим водопадом стекает куда-то вниз, в подземелье. Теперь вы можете либо вернуться обратно и направиться к зданию в центре двора, либо попытаться перебраться через реку (тогда вам надо решить, каким заклятием вы воспользуетесь: Плавания или Левитации), либо воспользоваться заклятием Плавания и поплыть по течению реки, чтобы проникнуть в подземелье замка.</Text>
 		<Options>
 			<Option Destination="416" Text="Вернуться обратно и направиться к зданию в центре двора"/>
-			<Option Destination="372" Text="Заклятие Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
-			<Option Destination="103" Text="Заклятие Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
-			<Option Destination="311" Text="Заклятием Плавания и поплыть по течению реки" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+			<Option Destination="372" Text="Заклятие Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+			<Option Destination="103" Text="Заклятие Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+			<Option Destination="311" Text="Заклятием Плавания и поплыть по течению реки" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>5</ID>
 		<Text>Куда вы поплывете — к острову или на другой берег?</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="216" Text="К острову"/>
 			<Option Destination="517" Text="На другой берег"/>
@@ -77,12 +74,11 @@
 		<Text>Вы пытаетесь сосредоточиться на заклятии Копии. Но, к вашему ужасу, копия не появляется! Рыцари развеяли заклятие, после чего второй бросает копье, и оно ранит вас на излете. Потеряйте еще 2 ВЫНОСЛИВОСТИ. Теперь вы можете попробовать заклятия Силы, Слабости, Огня или же надеяться только на свой меч и драться.</Text>
 		<Modifications>
 			<Modification Name="Endurance" Value="-2"/>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ КОПИИ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="36" Text="Заклятия Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ"/>
-			<Option Destination="314" Text="Заклятия Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-			<Option Destination="112" Text="Заклятия Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="36" Text="Заклятия Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+			<Option Destination="314" Text="Заклятия Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+			<Option Destination="112" Text="Заклятия Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 			<Option Destination="183" Text="Драться"/>
 		</Options>
 	</Paragraph>
@@ -97,9 +93,6 @@
 	<Paragraph>
 		<ID>9</ID>
 		<Text>Заклятие действует успешно, и вы перелетаете через реку.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="222"/>
 		</Options>
@@ -125,8 +118,8 @@
 		<Text>Вы проходите сквозь небольшую дубовую рощицу и выходите к озеру. Оно огромно — другого берега почти не видно. Вы можете или попробовать построить плот и перебраться через озеро на нем, или использовать заклятия. Что вы сделаете?\nПостроите плот, воспользуетесь заклятием Плавания, воспользуетесь заклятием Левитации?</Text>
 		<Options>
 			<Option Destination="312" Text="Построите плот"/>
-			<Option Destination="201" Text="Воспользуетесь заклятием Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
-			<Option Destination="425" Text="Воспользуетесь заклятием Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+			<Option Destination="201" Text="Воспользуетесь заклятием Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+			<Option Destination="425" Text="Воспользуетесь заклятием Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -156,9 +149,9 @@
 		<ID>15</ID>
 		<Text>Вы подзываете хозяина поближе и, выхватив меч, нападаете на него. Первый удар ваш, Водяной ранен, и ему ничего не остается, как принять бой. Он сражается с вами водорослями, каждый удар которых оставляет острые глубокие порезы. Вы можете воспользоваться заклятиями Силы, Слабости, Огня или драться с ним без помощи магии.</Text>
 		<Options>
-			<Option Destination="417" Text="Заклятие Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ"/>
-			<Option Destination="228" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-			<Option Destination="521" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="417" Text="Заклятие Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+			<Option Destination="228" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+			<Option Destination="521" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 			<Option Destination="326" Text="Драться без помощи магии"/>
 		</Options>
 	</Paragraph>
@@ -181,7 +174,7 @@
 			<Modification Name="Endurance" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="557" Text="Воспользоваться заклятием Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="557" Text="Воспользоваться заклятием Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 			<Option Destination="120" Text="Если вы победите их, осмотреть домик"/>
 			<Option Destination="416" Text="Уйти и направиться к центральному строению"/>
 		</Options>
@@ -374,9 +367,6 @@
 	<Paragraph>
 		<ID>36</ID>
 		<Text>Вы накладываете заклятие Силы, и оно успешно действует. Прибавляйте 2 к своей СИЛЕ УДАРА, когда будете драться.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="183"/>
 		</Options>
@@ -395,10 +385,9 @@
 		</Actions>
 		<Modifications>
 			<Modification Name="Endurance" Value="-2"/>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 		</Modifications>
 		<Options>
-			<Option Destination="451" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="451" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 			<Option Destination="454" Text="Дракон убит"/>
 		</Options>
 	</Paragraph>
@@ -452,9 +441,6 @@
 				</Enemies>
 			</Action>
 		</Actions>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="454"/>
 		</Options>
@@ -581,8 +567,8 @@
 		</Actions>
 		<Options>
 			<Option Destination="558" Text="Если вы удачливы"/>
-			<Option Destination="410" Text="Заклятие Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ"/>
-			<Option Destination="219" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+			<Option Destination="410" Text="Заклятие Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+			<Option Destination="219" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 			<Option Destination="189" Text="Если вы победили"/>
 		</Options>
 	</Paragraph>
@@ -611,9 +597,6 @@
 	<Paragraph>
 		<ID>58</ID>
 		<Text>Заклятие действует, и теперь вы будете сражаться с ними, каждый раз прибавляя 2 к своей СИЛЕ УДАРА.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="40"/>
 		</Options>
@@ -644,9 +627,6 @@
 	<Paragraph>
 		<ID>62</ID>
 		<Text>Вы накладываете заклятие, и медвежонок выздоравливает на ваших глазах. Благодарная медведица тянет вас за собой в угол берлоги. Там на шкуре лисы лежат маленький амулет и красивый пояс. Вы можете взять с собой одну из трех вещей: либо амулет, либо пояс, либо шкуру или отказаться, вылезти из берлоги и уйти по дороге, ведущей с поляны вглубь леса.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="457" Text="Амулет"/>
 			<Option Destination="156" Text="Пояс"/>
@@ -723,7 +703,7 @@
 		<Text>Вы подходите к окну и выглядываете наружу. Все еще стоит ночь, и почти ничего не видно, кроме черных зубцов стены и силуэтов сторожевых башенок на фоне звездного неба. Теперь вы можете или отойти от окна или воспользоваться заклятием Левитации, вылететь наружу и посмотреть, нет ли где-нибудь еще открытых окон.</Text>
 		<Options>
 			<Option Destination="39" Text="Отойти от окна"/>
-			<Option Destination="273" Text="Воспользоваться заклятием Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+			<Option Destination="273" Text="Воспользоваться заклятием Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -847,9 +827,6 @@
 	<Paragraph>
 		<ID>85</ID>
 		<Text>Прибавьте 2 к своей СИЛЕ УДАРА и сражайтесь, заклятие Силы подействовало.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="569" Text="Сражайтесь"/>
 		</Options>
@@ -865,9 +842,6 @@
 	<Paragraph>
 		<ID>87</ID>
 		<Text>Вы произносите заклятие и готовитесь взлететь, но… ничего не выходит. Волшебник надежно защитил свой замок от непрошеных магов. Однако заклятие истрачено (вычеркните его). Теперь отправляйтесь дальше в обход замка.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="331" Text="Дальше в обход"/>
 		</Options>
@@ -957,9 +931,6 @@
 	<Paragraph>
 		<ID>96</ID>
 		<Text>Огненный шар попадает стражу прямо в грудь и прожигает латы. Он мертв, вы же торопитесь дальше по коридору, пока дорогу не преграждает дверь.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="241" Text="Дальше по коридору"/>
 		</Options>
@@ -1027,9 +998,6 @@
 	<Paragraph>
 		<ID>103</ID>
 		<Text>Вы используете заклятие Левитации и благополучно перебираетесь на другой берег реки.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="424"/>
 		</Options>
@@ -1044,9 +1012,6 @@
 	<Paragraph>
 		<ID>105</ID>
 		<Text>Куда вы направитесь, используя заклятие?\nК острову? На другой берег?</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="413" Text="К острову"/>
 			<Option Destination="425" Text="На другой берег"/>
@@ -1106,7 +1071,6 @@
 		<Text>Зеленый рыцарь как раз готовится нанести вам удар, и вы надеетесь, что заклятие Копии защитит вас. Но копия не появляется, и его удар достигает цели (потеряйте 2 ВЫНОСЛИВОСТИ). Другого выхода нет — возвращайтесь и деритесь с ним.</Text>
 		<Modifications>
 			<Modification Name="Endurance" Value="-2"/>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ КОПИИ"/>
 		</Modifications>
 		<Options>
 			<Option Destination="309" Text="Вернуться"/>
@@ -1129,9 +1093,6 @@
 				</Enemies>
 			</Action>
 		</Actions>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="414"/>
 		</Options>
@@ -1148,9 +1109,6 @@
 	<Paragraph>
 		<ID>114</ID>
 		<Text>Вы накладываете заклятие Огня, и огненный шар устремляется к Гоблинам. Они не успевают убежать, шар настигает обоих. Через несколько секунд все кончено, Гоблины мертвы. Но ваши шансы выбраться из клетки нисколько не увеличились, а накладывать заклятие Иллюзии больше не на кого. И когда через пару месяцев кто-нибудь из Орков случайно забредет в эту комнату, он увидит трупы не только охранников, но и скончавшегося от голода узника…</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="0" Text="Начать сначала"/>
 		</Options>
@@ -1487,8 +1445,8 @@
 		<ID>153</ID>
 		<Text>Попробуете наложить заклятие Огня или Иллюзии?</Text>
 		<Options>
-			<Option Destination="538" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
-			<Option Destination="370" Text="Заклятие Иллюзии" OnlyIf="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+			<Option Destination="538" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="370" Text="Заклятие Иллюзии" OnlyIf="ЗАКЛЯТИЕ ИЛЛЮЗИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1583,9 +1541,6 @@
 	<Paragraph>
 		<ID>164</ID>
 		<Text>Заклятие действует немедленно, и вы чувствуете, как наливаются ваши мускулы. Добавьте 2 к вашей СИЛЕ УДАРА и деритесь.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="487" Text="Драться"/>
 		</Options>
@@ -1650,9 +1605,6 @@
 	<Paragraph>
 		<ID>172</ID>
 		<Text>Вы накладываете заклятие, и оно действует, но…</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="347"/>
 		</Options>
@@ -1981,9 +1933,6 @@
 	<Paragraph>
 		<ID>200</ID>
 		<Text>Вы решаете использовать заклятие Иллюзии. Гоблинам начинает казаться, что в клетке не вы, а сам Черный маг. Они в ужасе отпирают ее и выражают готовность подчиняться вашим приказам. Вы приказываете, чтобы они сами зашли в клетку и запираете их там. После этого подходите к столу и собираете все свои вещи в заплечный мешок. Теперь можете либо осмотреть ларь в углу, либо сразу уйти.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="318" Text="Осмотреть ларь в углу"/>
 			<Option Destination="193" Text="Сразу уйти"/>
@@ -1992,9 +1941,6 @@
 	<Paragraph>
 		<ID>201</ID>
 		<Text>Воспользовавшись заклятием Плавания, вы благополучно достигаете противоположного берега, но на этом ваши приключения не заканчиваются.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="192"/>
 		</Options>
@@ -2083,8 +2029,8 @@
 		<ID>211</ID>
 		<Text>Вы оказываетесь на берегу широкой полноводной реки. Течение сильное и быстрое, вброд ее не перейти. По берегу, где вы сейчас стоите, вправо идет узкая тропинка. Можете или пойти по ней, или попробовать перебраться через реку. Вы воспользуетесь заклятием Левитации? Заклятием Плавания? Или пойдете по тропинке?</Text>
 		<Options>
-			<Option Destination="9" Text="Заклятием Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
-			<Option Destination="313" Text="Заклятием Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+			<Option Destination="9" Text="Заклятием Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+			<Option Destination="313" Text="Заклятием Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 			<Option Destination="423" Text="Пойти по тропинке"/>
 		</Options>
 	</Paragraph>
@@ -2092,8 +2038,8 @@
 		<ID>212</ID>
 		<Text>Вы подходите к огромному озеру. Другого берега почти не видно, но неподалеку виднеется небольшой островок. Лодки на берегу нет и придется либо воспользоваться заклятием Плавания, либо заклятием Левитации. Или же можете вернуться и попробовать пройти через кустарник.</Text>
 		<Options>
-			<Option Destination="5" Text="Заклятием Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
-			<Option Destination="105" Text="Заклятием Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+			<Option Destination="5" Text="Заклятием Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+			<Option Destination="105" Text="Заклятием Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 			<Option Destination="177" Text="Вернуться и попробовать пройти через кустарник"/>
 		</Options>
 	</Paragraph>
@@ -2174,9 +2120,6 @@
 				</Enemies>
 			</Action>
 		</Actions>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="189"/>
 		</Options>
@@ -2256,9 +2199,6 @@
 	<Paragraph>
 		<ID>228</ID>
 		<Text>Заклятие действует. Водяной чувствует, что слабеет и, понимая, что ему не победить вас, хватает какой-то ларец и скрывается под водой. В таверне больше нет ничего интересного, но выйдя из нее и зайдя за дом, вы видите, что он стоит на берегу большого озера, а рядом привязана лодка. Так что теперь вы моете либо уйти по дороге, ведущей от таверны в лес, либо сесть в лодку и переплыть озеро.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="332" Text="Уйти по дороге"/>
 			<Option Destination="561" Text="Переплыть озеро"/>
@@ -2327,7 +2267,7 @@
 		<Text>Вероятно, не надо было двигаться в обход Черного замка: ведь если не рискнуть войти в ворота, то вряд ли представится другая возможность преодолеть высокие мрачные стены. Теперь перед вами южная стена, без единой бойницы и без единого просвета. Волшебник явно не боится штурма, только башенки по краям внимательно смотрят в сторону леса.\nПойдете дальше?\n\nИли попробуете перелететь через стену, используя заклятие Левитации?</Text>
 		<Options>
 			<Option Destination="331" Text="Пойти дальше"/>
-			<Option Destination="87" Text="Использовать заклятие Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+			<Option Destination="87" Text="Использовать заклятие Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2470,8 +2410,8 @@
 		<ID>252</ID>
 		<Text>Как только закрылась дверь, из угла комнаты на вас бросаются крысы. Вы с ужасом замечаете, что они не обыкновенные, а каменные. Если хотите, можете показать им пропуск, надеясь, что это поможет, или же можете воспользоваться заклятиями Слабости или Огня. Или просто выньте меч и сразитесь с ними.</Text>
 		<Options>
-			<Option Destination="564" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-			<Option Destination="541" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="564" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+			<Option Destination="541" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 			<Option Destination="494" Text="Сразитесь с ними"/>
 			<Option Destination="364" Text="Если есть меч Зеленого рыцаря"/>
 			<Option Destination="272" Text="Предъявить пропуск" OnlyIf="Pass"/>
@@ -2487,9 +2427,6 @@
 	<Paragraph>
 		<ID>254</ID>
 		<Text>Вы используете заклятие и переплываете через реку.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="366"/>
 		</Options>
@@ -2508,9 +2445,6 @@
 	<Paragraph>
 		<ID>256</ID>
 		<Text>Вы накладываете заклятие Слабости и, так и не узнав, подействовало оно или нет, начинаете бой.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="316"/>
 		</Options>
@@ -2668,9 +2602,6 @@
 	<Paragraph>
 		<ID>273</ID>
 		<Text>Вы накладываете заклятие Левитации и вылетаете в окно. Снаружи замок очень красив. Окон почти не видно, но над своим окном вы замечаете еще два — одно над другим. Вернетесь обратно в то окно, из которого вылетели, попробуете влететь в то окно, которое выше всего, или в то, которое под ним?</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="39" Text="Вернетесь обратно"/>
 			<Option Destination="483" Text="Влететь в то окно, которое выше"/>
@@ -2813,9 +2744,6 @@
 	<Paragraph>
 		<ID>289</ID>
 		<Text>Заклятие действует. Когда вы будете сражаться с Орками, то можете уменьшить на 2 СИЛУ УДАРА любого из них.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="487"/>
 		</Options>
@@ -2834,9 +2762,6 @@
 			</Action>
 		</Actions>
 		<Triggers>BronzeWhistle, CopperKey</Triggers>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="118"/>
 		</Options>
@@ -2918,9 +2843,6 @@
 	<Paragraph>
 		<ID>299</ID>
 		<Text>Вы накладываете заклятие Слабости и… чувствуете, что слабеете. Коварный рыцарь обратил заклятие на вас: теперь придется во время боя вычитать 2 из своей СИЛЫ УДАРА.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="567"/>
 		</Options>
@@ -3040,7 +2962,7 @@
 			<Modification Name="Endurance" Value="-3"/>
 		</Modifications>
 		<Options>
-			<Option Destination="111" Text="Наложить заклятие Копии" OnlyIf="ЗАКЛЯТИЕ КОПИИ"/>
+			<Option Destination="111" Text="Наложить заклятие Копии" OnlyIf="ЗАКЛЯТИЕ КОПИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ КОПИИ"/>
 			<Option Destination="126" Text="Если победили"/>
 		</Options>
 	</Paragraph>
@@ -3056,7 +2978,6 @@
 		<Text>Наложив заклятие Плавания, вступаете в реку. Течение такое быстрое, что уже через несколько секунд вы подплываете к тому месту, где река скрывается под замком. Сначала все идет так, как и ожидалось: после небольшого водопада, который удается миновать, отделавшись только легким ушибом (потеряйте 1 ВЫЕНОСЛИВОСТЬ), река выравнивается и течет в высокой трубе где-то по подземельям замка. Но когда по вашим расчетам вот-вот можно будет попасть в комнату, откуда слуги берут воду, вы внезапно ударяетесь о невидимую решетку и чувствуете, что начинаете тонуть. Барлад Дэрт надежно защитил свой замок от любопытных глаз. Решетка развеяла заклятие, а плавать вы не умеете. Вода начинает прибывать, теперь уже нельзя воспользоваться даже заклятием Левитации: вам не пролететь, не захлебнувшись, по узкому пространству между верхом трубы и водой. Есть только один выход: наложить еще одно заклятие Плавания и попытаться выплыть против течения. Но догадались ли вы запастись еще одним таким заклятием? Если же нет, то решетка пропустит только ваш труп, который послужит хорошей пищей Гоблинам и Оркам…</Text>
 		<Modifications>
 			<Modification Name="Endurance" Value="-1"/>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 		</Modifications>
 		<Options>
 			<Option Destination="115" Text="Да, догадались"/>
@@ -3075,9 +2996,6 @@
 	<Paragraph>
 		<ID>313</ID>
 		<Text>Заклятие действует успешно, и вы без приключений переплываете реку.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="222"/>
 		</Options>
@@ -3085,9 +3003,6 @@
 	<Paragraph>
 		<ID>314</ID>
 		<Text>Накладываете заклятие Слабости — и действительно чувствуете слабость. Вы — а не рыцари! Они попросту отразили заклятие, и оно попало в вас же! Теперь деритесь с ними, но уменьшите на 2 СИЛУ своего УДАРА.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="183"/>
 		</Options>
@@ -3286,9 +3201,6 @@
 	<Paragraph>
 		<ID>334</ID>
 		<Text>Вы проходите через сад, и тропинка, петляя, уходит в лес.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="99"/>
 		</Options>
@@ -3354,9 +3266,9 @@
 		<ID>341</ID>
 		<Text>Вы можете воспользоваться заклятиями Силы, Слабости, Огня или драться мечом.</Text>
 		<Options>
-			<Option Destination="164" Text="Заклятие Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ"/>
-			<Option Destination="289" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-			<Option Destination="506" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="164" Text="Заклятие Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+			<Option Destination="289" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+			<Option Destination="506" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 			<Option Destination="487" Text="Драться"/>
 		</Options>
 	</Paragraph>
@@ -3503,9 +3415,6 @@
 	<Paragraph>
 		<ID>357</ID>
 		<Text>Заклятие действует, и вы можете прибавлять 2 к своей СИЛЕ УДАРА, когда будете сражаться.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="316"/>
 		</Options>
@@ -3609,11 +3518,8 @@
 	<Paragraph>
 		<ID>370</ID>
 		<Text>Заклятие Иллюзии не действует на стариков. Хотите наложить заклятие Огня или наберетесь терпения?</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
-		</Modifications>
 		<Options>
-			<Option Destination="538" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="538" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 			<Option Destination="68" Text="Ждать"/>
 		</Options>
 	</Paragraph>
@@ -3627,9 +3533,6 @@
 	<Paragraph>
 		<ID>372</ID>
 		<Text>Вы используете заклятие Плавания и незамеченным перебираетесь на другой берег реки.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="424"/>
 		</Options>
@@ -3663,8 +3566,8 @@
 		<ID>375</ID>
 		<Text>Вы подходите к реке, но вброд ее не перейти. Вам придется использовать заклятия: либо Плавания, либо Левитации. Если хотите, можете, используя заклятие Плавания, попробовать проплыть по течению под замок, надеясь попасть в подземелье незамеченным. Если же у вас нет ни одного из этих заклятий или вы не хотите их использовать, идите к палаткам.</Text>
 		<Options>
-			<Option Destination="254" Text="Заклятье Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
-			<Option Destination="508" Text="Заклятье Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+			<Option Destination="254" Text="Заклятье Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+			<Option Destination="508" Text="Заклятье Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 			<Option Destination="311" Text="Попробовать проплыть по течению под замок"/>
 			<Option Destination="424" Text="К палаткам"/>
 		</Options>
@@ -3793,9 +3696,6 @@
 	<Paragraph>
 		<ID>390</ID>
 		<Text>Заклятие действует безотказно. Когда будете сражаться со стражей, то можете уменьшить на 2 СИЛУ УДАРА любого из Орков.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="569"/>
 		</Options>
@@ -3836,9 +3736,6 @@
 	<Paragraph>
 		<ID>395</ID>
 		<Text>Вы накладываете заклятие Силы, и сила Зеленого рыцаря возрастает. Он обратил ваше заклятие на себя, и вам придется теперь прибавлять 2 к его СИЛЕ УДАРА.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="567"/>
 		</Options>
@@ -3924,10 +3821,10 @@
 		</Modifications>
 		<Options>
 			<Option Destination="183" Text="Выхватить меч"/>
-			<Option Destination="36" Text="Заклятие Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ"/>
-			<Option Destination="334" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-			<Option Destination="7" Text="Заклятие Копии" OnlyIf="ЗАКЛЯТИЕ КОПИИ"/>
-			<Option Destination="112" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="36" Text="Заклятие Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+			<Option Destination="334" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+			<Option Destination="7" Text="Заклятие Копии" OnlyIf="ЗАКЛЯТИЕ КОПИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ КОПИИ"/>
+			<Option Destination="112" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3967,17 +3864,14 @@
 		<ID>409</ID>
 		<Text>Вы приходите в себя и видите, что лежите на полу в просторной клетке. Клетка стоит у стены в большой комнате с толстыми каменными стенами. По сырости на них вы сразу понимаете, что это должен быть один из подземных этажей замка, но какой? Впрочем, сейчас надо думать о том, как выбраться отсюда. Вы оглядываетесь. Из мебели в комнате только стол, два покосившихся стула да небольшой ларь, стоящий у стены. За столом — два Гоблина. Они увлечены игрой в кости и не обращают на вас никакого внимания. Неудивительно: даже если бы они и знали, что вы пришли в себя, шансов выбраться из клетки у вас все равно нет. Комнату освещает единственная свеча, горящая на столе, и в ее мерцающем свете вы видите, что рядом со столом на полу валяются ваши вещи: игра идет на них. Вам же остается надеяться только на свою магию. Вы попробуете использовать заклятие Иллюзии, Огня или у вас нет ни того, ни другого?</Text>
 		<Options>
-			<Option Destination="200" Text="Заклятие Иллюзии" OnlyIf="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
-			<Option Destination="114" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="200" Text="Заклятие Иллюзии" OnlyIf="ЗАКЛЯТИЕ ИЛЛЮЗИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+			<Option Destination="114" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 			<Option Destination="56" Text="Нет ни того, ни другого"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>410</ID>
 		<Text>Вы накладываете заклятие Силы, и оно успешно действует. Вернитесь и деритесь, но теперь можете не вычитать, а прибавлять 1 к СИЛЕ своего УДАРА.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="54"/>
 		</Options>
@@ -3998,9 +3892,9 @@
 		<Text>Внезапно небо над головой темнеет, и вы видите, как на поляну опускается огромный двухголовый Дракон. Теперь понятно, почему деревья по краям обуглены, но уже слишком поздно. Однако Дракон не торопится нападать. Он опускается на землю и внимательно смотрит в вашу сторону, как будто чего-то ждет. Вы можете либо биться с ним, либо использовать заклятия — Огня, Силы или Слабости. А может быть, лучше предложить миролюбивому Дракону подарок?</Text>
 		<Options>
 			<Option Destination="316" Text="Биться"/>
-			<Option Destination="37" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
-			<Option Destination="357" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ"/>
-			<Option Destination="256" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+			<Option Destination="37" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="357" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+			<Option Destination="256" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 			<Option Destination="516" Text="Предложить подарок"/>
 		</Options>
 	</Paragraph>
@@ -4047,9 +3941,6 @@
 	<Paragraph>
 		<ID>417</ID>
 		<Text>Вы накладываете заклятие Силы и чувствуете, что ваше мастерство увеличивается. Прибавьте 2 к вашей СИЛЕ УДАРА и сражайтесь с Водяным.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="326"/>
 		</Options>
@@ -4096,9 +3987,9 @@
 		<ID>423</ID>
 		<Text>Тропинка петляет вдоль реки, то отдаляясь, то приближаясь к воде. По краям растет высокий густой кустарник, и поначалу вы продвигаетесь вперед осторожно. Один поворот, второй, третий, опасности нет, и вы начинаете идти быстрее. Вскоре тропинка вновь спускается на берег реки, но что это? Вы вышли к мосту, а около него — охрана. Два Гоблина поставлены здесь для того, чтобы никто посторонний не мог перебраться через реку. Ваша одежда ясно показывает им, что вы не служите волшебнику. Скорее решайте, что делать, ведь они атакуют вас. Наложите заклятие Силы, Слабости, Огня или будете драться с ними?</Text>
 		<Options>
-			<Option Destination="58" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ"/>
-			<Option Destination="580" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-			<Option Destination="290" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="58" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+			<Option Destination="580" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+			<Option Destination="290" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 			<Option Destination="40" Text="Драться с ними"/>
 		</Options>
 	</Paragraph>
@@ -4113,9 +4004,6 @@
 	<Paragraph>
 		<ID>425</ID>
 		<Text>Вам удается долететь только до середины озера, когда заклятие перестает действовать. Майлин же предупреждал вас: не переоцените свои силы. Теперь скорее накладывайте еще одно заклятие Левитации или Плавания, иначе упадете в воду.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="614" Text="Наложить еще одно заклятие Левитации или Плавания"/>
 			<Option Destination="581" Text="Упасть в воду"/>
@@ -4143,9 +4031,9 @@
 		<ID>428</ID>
 		<Text>Вы можете воспользоваться заклятиями Огня, Силы, Слабости или же просто сражаться мечом.</Text>
 		<Options>
-			<Option Destination="499" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
-			<Option Destination="85" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ"/>
-			<Option Destination="390" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+			<Option Destination="499" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="85" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+			<Option Destination="390" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 			<Option Destination="569" Text="Сражаться мечом"/>
 		</Options>
 	</Paragraph>
@@ -4307,7 +4195,7 @@
 		<ID>447</ID>
 		<Text>Вы пытаетесь успокоить медведицу, говорите, что не желаете ей зла, но она продолжает двигаться на вас. И тут вы решаете спросить, не надо ли ей чем-нибудь помочь. Зверь с удивлением останавливается, смотрит умными черными глазами и показывает лапой на медвежонка. Вы подходите ближе и понимаете, что он болен. Но ведь вы не лекарь. Есть только один способ помочь медведице: истратить заклятие Исцеления. Если оно у вас есть и вы хотите истратить его на медвежонка, то действуйте. Если же нет или не хотите, то вы обманули надежды медведицы, и вам придется драться с ней.</Text>
 		<Options>
-			<Option Destination="62" Text="Исцелить медвежонка" OnlyIf="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"/>
+			<Option Destination="62" Text="Исцелить медвежонка" OnlyIf="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"/>
 			<Option Destination="529" Text="Драться с медведицей"/>
 		</Options>
 	</Paragraph>
@@ -4401,9 +4289,6 @@
 	<Paragraph>
 		<ID>451</ID>
 		<Text>Вы быстро накладываете еще одно заклятие Огня, и оно поражает вторую голову Дракона. Вам повезло: неутомимый страж мог причинить вам немало неприятностей.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="454"/>
 		</Options>
@@ -4615,9 +4500,6 @@
 	<Paragraph>
 		<ID>476</ID>
 		<Text>Заклятие действует, но…</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="347"/>
 		</Options>
@@ -4680,9 +4562,6 @@
 	<Paragraph>
 		<ID>483</ID>
 		<Text>Вы попадаете в абсолютно пустую комнату. Из нее только одна дверь, но она наглухо закрыта и не поддается, как бы ни старались ее открыть. Если у вас есть еще одно заклятие Левитации, используйте его либо для того, чтобы вернуться обратно, либо для того, чтобы влететь в окно немного ниже. Если же нет более ни одного заклятия Левитации, остается только позвать Пегаса. Если вы и этого не можете сделать, то через несколько часов стены комнаты раскалятся и сдвинутся, а вам придется спокойно смотреть на это и торопить смерть…</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="39" Text="Вернуться обратно"/>
 			<Option Destination="566" Text="В окно немного ниже"/>
@@ -4851,9 +4730,6 @@
 				<Aftertext>Если вы победили стража, можете войти в ворота.</Aftertext>
 			</Action>
 		</Actions>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="48"/>
 		</Options>
@@ -4906,9 +4782,6 @@
 	<Paragraph>
 		<ID>506</ID>
 		<Text>Вы накладываете заклятие Огня. В воздухе возникает огненный шар и испепеляет ближнего к вам Орка. Двое остальных не рискуют принять бой: они в ужасе убегают в лес, побросав оружие. Вы же, не дожидаясь, пока они надумают вернуться, входите в ворота.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="100"/>
 		</Options>
@@ -4924,9 +4797,6 @@
 	<Paragraph>
 		<ID>508</ID>
 		<Text>Вы используете заклятие и перелетаете через реку. Оставшись незамеченным, можете двигаться дальше.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="366"/>
 		</Options>
@@ -4967,9 +4837,9 @@
 		<ID>513</ID>
 		<Text>После двух ударов одна из голов Дракона отлетает. Он отскакивает назад, а у вас появляется время, чтобы, если хотите, успеть наложить заклятие. Воспользуетесь передышкой и наложите заклятие Огня, Силы, Слабости, Копии или будете продолжать драться. Можете, если есть желание, попробовать убежать.</Text>
 		<Options>
-			<Option Destination="41" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
-			<Option Destination="476" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ"/>
-			<Option Destination="172" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+			<Option Destination="41" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="476" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+			<Option Destination="172" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 			<Option Destination="347" Text="Продолжать драться"/>
 			<Option Destination="601" Text="Попробовать убежать"/>
 		</Options>
@@ -5008,7 +4878,7 @@
 		<Text>Вы уже на середине озера, когда внезапно замечаете стаю крупных рыб, плывущую наперерез. Хотите узнать, питаются ли они людьми, или воспользуетесь заклятием Левитации?</Text>
 		<Options>
 			<Option Destination="359" Text="Подождать"/>
-			<Option Destination="105" Text="Заклятье Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+			<Option Destination="105" Text="Заклятье Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5049,7 +4919,6 @@
 		<Text>Вы накладываете заклятие и направляете огненный шар на Водяного, но он скрывается под водой. Шар следует за ним и… гаснет. Водяной же выныривает обратно и наносит ответный удар водорослями (потеряйте 2 ВЫНОСЛИВОСТИ). Теперь вам ничего не остается, как сражаться с ним мечом.</Text>
 		<Modifications>
 			<Modification Name="Endurance" Value="-2"/>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 		</Modifications>
 		<Options>
 			<Option Destination="326"/>
@@ -5221,11 +5090,8 @@
 	<Paragraph>
 		<ID>538</ID>
 		<Text>В воздухе появляется огненный шар и направляется к одному из стариков. К вашему огромному разочарованию, старик щелкает пальцами, и шар исчезает. Теперь можете или попробовать заклятие Иллюзии, или же спокойно ждите, что будет дальше.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-		</Modifications>
 		<Options>
-			<Option Destination="370" Text="Заклятье Иллюзии" OnlyIf="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+			<Option Destination="370" Text="Заклятье Иллюзии" OnlyIf="ЗАКЛЯТИЕ ИЛЛЮЗИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 			<Option Destination="68" Text="Спокойно ждать"/>
 		</Options>
 	</Paragraph>
@@ -5268,9 +5134,6 @@
 	<Paragraph>
 		<ID>541</ID>
 		<Text>Вы накладываете заклятие, но огонь не в силах разрушить камень. Теперь вам придется сражаться с крысами. Есть ли у вас меч Зеленого рыцаря? </Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="364" Text="Есть меч Зеленого рыцаря" OnlyIf="GreenSword"/>
 			<Option Destination="494" Text="Нет меча"/>
@@ -5416,9 +5279,6 @@
 	<Paragraph>
 		<ID>557</ID>
 		<Text>Вы накладываете заклятие Огня, и огненный шар освещает все вокруг. Летучие мыши не переносят света: возмущенно хлопая крыльями, они покидают домик, почти касаясь вашего лица. Теперь можете откинуть каменные ставни и осмотреть домик или уйти, если боитесь, что мыши поднимут тревогу.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="120" Text="Осмотреть домик"/>
 			<Option Destination="416" Text="Уйти"/>
@@ -5493,9 +5353,6 @@
 	<Paragraph>
 		<ID>564</ID>
 		<Text>Вы накладываете заклятие Слабости. Крысы не могут даже пошевелиться: каменное тело стало слишком тяжело для них. Вы быстро проскальзываете между ними и выходите в дверь справа.</Text>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="480"/>
 		</Options>
@@ -5515,7 +5372,7 @@
 		<Options>
 			<Option Destination="556" Text="В правую"/>
 			<Option Destination="277" Text="В ту, что напротив"/>
-			<Option Destination="483" Text="Заклятье Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+			<Option Destination="483" Text="Заклятье Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 			<Option Destination="39" Text="Вернуться в залу"/>
 		</Options>
 	</Paragraph>
@@ -5533,9 +5390,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="395" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ"/>
-			<Option Destination="299" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-			<Option Destination="96" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ"/>
+			<Option Destination="395" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+			<Option Destination="299" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+			<Option Destination="96" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 			<Option Destination="241" Text="Если вы победили врага"/>
 		</Options>
 	</Paragraph>
@@ -5676,9 +5533,6 @@
 			</Action>
 		</Actions>
 		<Triggers>BronzeWhistle, CopperKey</Triggers>
-		<Modifications>
-			<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-		</Modifications>
 		<Options>
 			<Option Destination="118"/>
 		</Options>
