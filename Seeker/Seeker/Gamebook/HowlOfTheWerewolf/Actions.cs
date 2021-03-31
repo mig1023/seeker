@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
+        public int RoundsWinToWin { get; set; }
         public int RoundsToFight { get; set; }
         public int WoundsToWin { get; set; }
         public int WoundsForTransformation { get; set; }
@@ -424,7 +425,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
-            int round = 1, heroWounds = 0, enemyWounds = 0, blackWidowLastAttack = 0;
+            int round = 1, heroWounds = 0, enemyWounds = 0, roundWins = 0;
+            
+            int blackWidowLastAttack = 0;
 
             bool invulnerable = (Specificity == Specifics.Invulnerable);
             bool speed = ((Specificity == Specifics.NeedForSpeed) || (Specificity == Specifics.NeedForSpeedAndDead));
@@ -504,12 +507,16 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         enemy.Endurance -= 2;
 
+                        roundWins += 1;
+
                         if (EnemyWound(FightEnemies, ref enemyWounds, ref fight))
                             return fight;
                     }
                     else if (protagonistHitStrength > enemyHitStrength)
                     {
                         fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
+
+                        roundWins += 1;
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
@@ -575,17 +582,24 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                             return fight;
                     }
 
-                    if (((RoundsToWin > 0) && (RoundsToWin <= round)) || ((RoundsToFight > 0) && (RoundsToFight <= round)))
+                    bool enoughRounds = (RoundsToFight > 0) && (RoundsToFight <= round);
+                    bool notEnoughRounds = (RoundsToWin > 0) && (RoundsToWin <= round);
+                    bool enoughRoundsWin = (RoundsWinToWin > 0) && (RoundsWinToWin <= roundWins);
+
+                    if (notEnoughRounds || notEnoughRounds || enoughRoundsWin)
                     {
                         fight.Add(String.Empty);
 
-                        if (RoundsToWin > 0)
+                        if (notEnoughRounds)
                         {
                             fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                         }
+                        else if (enoughRoundsWin)
+                            fight.Add(String.Format("GOOD|Вы выиграли необходимое количество раундов.", RoundsToFight));
+
                         else
-                            fight.Add(String.Format("GOOD|Отведённые на бой раунды истекли.", RoundsToFight));
+                            fight.Add(String.Format("GOOD|Вы продержались все отведённые на бой раунды.", RoundsToFight));
 
                         return fight;
                     }
