@@ -208,9 +208,7 @@ namespace Seeker
 
             List<string> statuses = (Game.Data.Actions == null ? null : Game.Data.Actions.Status());
 
-            bool without = Game.Data.Constants.GetParagraphsWithoutStatuses().Contains(Game.Data.CurrentParagraphID);
-
-            if ((statuses == null) || without)
+            if ((statuses == null) || Game.Data.Constants.GetParagraphsWithoutStatuses().Contains(Game.Data.CurrentParagraphID))
             {
                 StatusBorder.IsVisible = false;
                 MainGrid.RowDefinitions[1].Height = 0;
@@ -238,7 +236,7 @@ namespace Seeker
 
             List<string> additionalStatuses = (Game.Data.Actions == null ? null : Game.Data.Actions.AdditionalStatus());
 
-            if ((additionalStatuses == null) || without)
+            if ((additionalStatuses == null) || Game.Data.Constants.GetParagraphsWithoutStatuses().Contains(Game.Data.CurrentParagraphID))
             {
                 AdditionalStatus.IsVisible = false;
                 MainGrid.ColumnDefinitions[1].Width = 0;
