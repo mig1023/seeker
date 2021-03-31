@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
     class Actions : Abstract.IActions
     {
         public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable,
-            RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead };
+            RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead, ToadVenom };
 
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
@@ -303,10 +303,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if (electric >= 5)
             {
                 hero.Endurance -= 3;
-                fight.Add("Вы потеряли ещё 3 Выносливость от разряда.");
+                fight.Add("Вы потеряли ещё 3 Выносливость от разряда");
             }
             else
-                fight.Add("Разряд прошёл мимо.");
+                fight.Add("Разряд прошёл мимо");
         }
         private void WitchFight(ref Character hero, ref List<string> fight)
         {
@@ -336,6 +336,21 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 hero.Change += 1;
                 fight.Add(String.Format("Вы потеряли 2 Выносливости и Трансформация продолжилась (Изменение достигло {0})", hero.Change));
             }
+        }
+
+        private void ToadVenomFight(ref Character hero, ref List<string> fight)
+        {
+            int venomAttack = Game.Dice.Roll();
+
+            fight.Add(String.Format("Кубик яда: {0}", Game.Dice.Symbol(venomAttack)));
+
+            if (venomAttack >= 5)
+            {
+                hero.Endurance -= 2;
+                fight.Add("Вы потеряли ещё 2 Выносливости от яда");
+            }
+            else
+                fight.Add("Обошлось...");
         }
 
         private int BlackWidow(ref Character hero, ref List<string> fight)
@@ -525,6 +540,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         if (Specificity == Specifics.ElectricDamage)
                             ElectricDamage(ref hero, ref fight);
+
+                        if (Specificity == Specifics.ToadVenom)
+                            ToadVenomFight(ref hero, ref fight);
 
                         heroWounds += 1;
 
