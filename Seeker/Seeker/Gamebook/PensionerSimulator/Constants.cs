@@ -32,6 +32,6 @@ namespace Seeker.Gamebook.PensionerSimulator
 
         public double? GetLineHeight() => null;
 
-        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
+        public List<int> GetParagraphsWithoutStatuses() => new List<int> { };
     }
 }
