@@ -41,6 +41,6 @@ namespace Seeker.Gamebook.DzungarWar
 
         public double? GetLineHeight() => null;
 
-        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
+        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 660 };
     }
 }
