@@ -43,6 +43,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 30, 60, 90 };
 
-        public int GetInitParagraph() => 205;
+        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
     }
 }

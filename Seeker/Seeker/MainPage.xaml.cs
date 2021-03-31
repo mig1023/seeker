@@ -69,7 +69,7 @@ namespace Seeker
 
         public void Paragraph(int id, bool reload = false, bool loadGame = false)
         {
-            bool startOfGame = false;
+            bool startOfGame = (id == Game.Data.StartParagraph);
 
             Game.Router.Clean();
 
@@ -77,17 +77,8 @@ namespace Seeker
             Action.Children.Clear();
             Options.Children.Clear();
 
-            if (Game.Data.Constants.GetInitParagraph() == id)
-            {
-                Game.Data.GameNotStartYet = false;
+            if (startOfGame)
                 Game.Data.Protagonist();
-                startOfGame = true;
-            }
-            else if (id == Game.Data.StartParagraph)
-            {
-                Game.Data.GameNotStartYet = true;
-                startOfGame = true;
-            }
 
             Game.Paragraph paragraph = null;
 
@@ -212,12 +203,14 @@ namespace Seeker
 
         private void UpdateStatus()
         {
-            List<string> statuses = (Game.Data.Actions == null ? null : Game.Data.Actions.Status());
-
             Status.Children.Clear();
             AdditionalStatus.Children.Clear();
 
-            if ((statuses == null) || Game.Data.GameNotStartYet)
+            List<string> statuses = (Game.Data.Actions == null ? null : Game.Data.Actions.Status());
+
+            bool without = Game.Data.Constants.GetParagraphsWithoutStatuses().Contains(Game.Data.CurrentParagraphID);
+
+            if ((statuses == null) || without)
             {
                 StatusBorder.IsVisible = false;
                 MainGrid.RowDefinitions[1].Height = 0;
@@ -227,13 +220,13 @@ namespace Seeker
             }
             else
             {
+                Status.IsVisible = true;
+
                 MainGrid.RowDefinitions[2].Height = 30;
                 Status.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar));
 
                 foreach (Label status in Output.Interface.StatusBar(statuses))
                     Status.Children.Add(status);
-
-                Status.IsVisible = true;
 
                 if (!String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBorder)))
                 {
@@ -245,7 +238,7 @@ namespace Seeker
 
             List<string> additionalStatuses = (Game.Data.Actions == null ? null : Game.Data.Actions.AdditionalStatus());
 
-            if ((additionalStatuses == null) || Game.Data.GameNotStartYet)
+            if ((additionalStatuses == null) || without)
             {
                 AdditionalStatus.IsVisible = false;
                 MainGrid.ColumnDefinitions[1].Width = 0;
@@ -275,9 +268,6 @@ namespace Seeker
 
         private void CheckGameOver()
         {
-            if (Game.Data.GameNotStartYet)
-                return;
-
             if ((Game.Data.Actions == null) || !Game.Data.Actions.GameOver(out int toEndParagraph, out string toEndText))
                 return;
 

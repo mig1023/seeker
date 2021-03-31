@@ -50,6 +50,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public static int GetUlrichMastery() => 8;
 
-        public int GetInitParagraph() => 1;
+        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
     }
 }

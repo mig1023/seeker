@@ -18,7 +18,6 @@ namespace Seeker.Game
         public static Paragraph CurrentParagraph { get; set; }
         public static int CurrentParagraphID { get; set; }
         public static bool ShowDisabledOption { get; set; }
-        public static bool GameNotStartYet { get; set; }
 
         public static Dictionary<int, XmlNode> XmlParagraphs = new Dictionary<int, XmlNode>();
 

@@ -40,6 +40,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public double? GetLineHeight() => null;
 
-        public int GetInitParagraph() => 1;
+        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
     }
 }

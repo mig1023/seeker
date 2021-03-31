@@ -87,6 +87,6 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1, 665 };
 
-        public int GetInitParagraph() => 0;
+        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
     }
 }

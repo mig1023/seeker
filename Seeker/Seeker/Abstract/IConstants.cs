@@ -16,6 +16,6 @@ namespace Seeker.Abstract
 
         double? GetLineHeight();
 
-        int GetInitParagraph();
+        List<int> GetParagraphsWithoutStatuses();
     }
 }

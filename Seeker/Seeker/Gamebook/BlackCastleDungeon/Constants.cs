@@ -39,6 +39,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 619 };
 
-        public int GetInitParagraph() => 620;
+        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
     }
 }

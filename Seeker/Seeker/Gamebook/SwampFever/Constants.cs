@@ -88,6 +88,6 @@ namespace Seeker.Gamebook.SwampFever
 
         public double? GetLineHeight() => null;
 
-        public int GetInitParagraph() => 0;
+        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
     }
 }

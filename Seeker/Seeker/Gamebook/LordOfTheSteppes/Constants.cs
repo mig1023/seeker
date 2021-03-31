@@ -46,6 +46,6 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             ["Initiative"] = 10,
         };
 
-        public int GetInitParagraph() => 0;
+        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
     }
 }
