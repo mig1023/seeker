@@ -179,6 +179,52 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             return diceCheck;
         }
+        
+        public List<string> Competition()
+        {
+            List<string> competition = new List<string> { };
+
+            int penalty = 0;
+            string penaltyLine = String.Empty;
+            bool inTarget = true;
+
+            for (int i = 1; i <= 3; i++)
+            {
+                int firstDice = Game.Dice.Roll();
+                int secondDice = Game.Dice.Roll();
+                int result = firstDice + secondDice + penalty;
+
+                if (penalty > 0)
+                    penaltyLine = String.Format(" + {0} пенальти", penalty);
+
+                competition.Add(
+                    String.Format("{0} выстрел: {1} + {2}{3} = {4}",
+                    i, Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), penaltyLine, result)
+                );
+
+                if (result > Character.Protagonist.Mastery)
+                {
+                    competition.Add("BAD|Это больше Мастерства: вы промахнулись...");
+                    inTarget = false;
+                }
+                else
+                    competition.Add("GOOD|Это меньше или равно Мастерству: вы попали в цель!");
+
+                competition.Add(String.Empty);
+
+                penalty += 1;
+            }
+
+            if (inTarget)
+            {
+                competition.Add("BIG|GOOD|Вы ВЫИГРАЛИ и получаете выигрышь в 5 золотых! :)");
+                Character.Protagonist.Gold += 5;
+            }
+            else
+                competition.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+
+            return competition;
+        }
 
         public List<string> DicesRestore()
         {
