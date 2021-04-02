@@ -63,14 +63,22 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             {
                 String.Format("Мастерство: {0}", Character.Protagonist.Mastery),
                 String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
-                String.Format("Удача: {0}", Character.Protagonist.Luck),
-                String.Format("Изменение: {0}", Character.Protagonist.Change)
+                String.Format("Удача: {0}", Character.Protagonist.Luck)
             };
 
             return statusLines;
         }
 
-        public List<string> AdditionalStatus() => null;
+        public List<string> AdditionalStatus()
+        {
+            List<string> statusLines = new List<string>
+            {
+                String.Format("Золото: {0}", Character.Protagonist.Gold),
+                String.Format("Изменение: {0}", Character.Protagonist.Change)
+            };
+
+            return statusLines;
+        }
 
         public List<string> StaticButtons() => new List<string> { };
 
