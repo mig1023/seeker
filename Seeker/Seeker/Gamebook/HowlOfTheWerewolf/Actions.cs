@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
     class Actions : Abstract.IActions
     {
         public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable,
-            RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead, ToadVenom };
+            RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead, ToadVenom, IncompleteCorpse };
 
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
@@ -354,6 +354,49 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 fight.Add("Обошлось...");
         }
 
+        private void RandomRoundsToFight(ref List<string> fight)
+        {
+            RoundsToFight = 15 - Character.Protagonist.Mastery;
+            fight.Add(String.Format("Вам необходимо продержаться: 15 - {0} = {1} раундов", Character.Protagonist.Mastery, RoundsToFight));
+            fight.Add(String.Empty);
+        }
+        
+        private void IncompleteCorpse(ref List<Character> fightEnemies, ref List<string> fight)
+        {
+            Character corpse = fightEnemies[0];
+
+            int incomplete = Game.Dice.Roll();
+
+            fight.Add(String.Format("Кубик вскрытия: {0}", Game.Dice.Symbol(incomplete)));
+
+            if (incomplete < 3)
+            {
+                corpse.Mastery -= 1;
+
+                fight.Add(String.Format("Доктор вырезал мозг: Мастерство мертвеца снижается на единицу до {0}", corpse.Mastery));
+            }
+            else if (incomplete == 5)
+            {
+                corpse.Mastery -= 1;
+                corpse.Endurance -= 1;
+
+                fight.Add(String.Format("Доктор вырезал мозг и сердце: Мастерство мертвеца снижается на единицу до {0}," +
+                    "Выносливость мертвеца снижается на единицу до {1},", corpse.Mastery, corpse.Endurance));
+            }
+            else if (incomplete == 6)
+            {
+                fight.Add("Доктор вырезал кишечник: Никакого эффекта, мертвецу он уже не нужен");
+            }
+            else
+            {
+                corpse.Endurance -= 1;
+
+                fight.Add(String.Format("Доктор вырезал сердце: Выносливость мертвеца снижается на единицу до {0}", corpse.Endurance));
+            }
+
+            fight.Add(String.Empty);
+        }
+
         private int BlackWidow(ref Character hero, ref List<string> fight)
         {
             int witchAttack = Game.Dice.Roll();
@@ -435,11 +478,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Character hero = Character.Protagonist;
 
             if (Specificity == Specifics.RandomRoundsToFight)
-            {
-                RoundsToFight = 15 - Character.Protagonist.Mastery;
-                fight.Add(String.Format("Вам необходимо продержаться: 15 - {0} = {1} раундов", Character.Protagonist.Mastery, RoundsToFight));
-                fight.Add(String.Empty);
-            }
+                RandomRoundsToFight(ref fight);
+
+            if (Specificity == Specifics.IncompleteCorpse)
+                IncompleteCorpse(ref FightEnemies, ref fight);
 
             while (true)
             {
