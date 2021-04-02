@@ -543,7 +543,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength
                     ));
 
-                    if ((protagonistHitStrength > enemyHitStrength) && !attackAlready && !invulnerable && (blackWidowLastAttack == 4))
+                    bool webLastAttack = (blackWidowLastAttack == 3);
+
+                    if ((protagonistHitStrength > enemyHitStrength) && !attackAlready && !invulnerable && !webLastAttack)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
 
