@@ -15,7 +15,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
+        public string Text { get; set; }
         public int Value { get; set; }
+        public int Price { get; set; }
+        public bool Used { get; set; }
+        public bool Multiple { get; set; }
+        public List<Modification> Benefit { get; set; }
 
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
@@ -44,6 +49,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public List<string> Representer()
         {
             List<string> enemies = new List<string>();
+
+            if (!String.IsNullOrEmpty(Text) || (ActionName == "Get"))
+                return new List<string> { Text };
 
             if (Enemies == null)
                 return enemies;
@@ -299,7 +307,30 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return diceCheck;
         }
 
-        public bool IsButtonEnabled() => true;
+        public bool IsButtonEnabled()
+        {
+            bool disabledByUsed = (Price > 0) && Used;
+            bool disabledByPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
+
+            return !(disabledByUsed || disabledByPrice);
+        }
+
+        public List<string> Get()
+        {
+            if ((Price > 0) && (Character.Protagonist.Gold >= Price))
+            {
+                Character.Protagonist.Gold -= Price;
+
+                if (!Multiple)
+                    Used = true;
+
+                if (Benefit != null)
+                    foreach (Modification modification in Benefit)
+                        modification.Do();
+            }
+
+            return new List<string> { "RELOAD" };
+        }
 
         public static bool CheckOnlyIf(string option) => true;
 

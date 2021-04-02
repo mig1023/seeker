@@ -53,8 +53,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
                     ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
+                    Text = Game.Xml.StringParse(xmlAction["Text"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
 
+                    Price = Game.Xml.IntParse(xmlAction["Price"]),
                     Value = Game.Xml.IntParse(xmlAction["Value"]),
                     RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
                     RoundsWinToWin = Game.Xml.IntParse(xmlAction["RoundsWinToWin"]),
@@ -65,8 +67,18 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     HitStrengthBonus = Game.Xml.IntParse(xmlAction["HitStrengthBonus"]),
                     ExtendedDamage = Game.Xml.IntParse(xmlAction["ExtendedDamage"]),
 
+                    Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
+
                     Specificity = SpecificsParse(xmlAction["Specificity"]),
                 };
+
+                if (xmlAction["Benefit"] != null)
+                {
+                    action.Benefit = new List<Modification>();
+
+                    foreach (XmlNode bonefit in xmlAction.SelectNodes("Benefit"))
+                        action.Benefit.Add(ModificationParse(bonefit));
+                }
 
                 if (xmlAction["Enemies"] != null)
                 {
