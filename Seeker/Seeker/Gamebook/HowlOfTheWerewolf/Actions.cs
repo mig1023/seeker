@@ -85,6 +85,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 String.Format("Изменение: {0}", Character.Protagonist.Change)
             };
 
+            if (Character.Protagonist.Crossbow > 0)
+                statusLines.Add(String.Format("Арбалет: {0}", Character.Protagonist.Crossbow));
+
+            if (Character.Protagonist.Gun > 0)
+                statusLines.Add(String.Format("Пистолет: {0}", Character.Protagonist.Gun));
+
             return statusLines;
         }
 
