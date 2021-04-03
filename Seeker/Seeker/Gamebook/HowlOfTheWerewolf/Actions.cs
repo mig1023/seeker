@@ -340,15 +340,18 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public static bool CheckOnlyIf(string option)
         {
-            if (option.Contains(">"))
+            foreach (string oneOption in option.Split(','))
             {
-                if (option.Contains("ЗОЛОТО >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.Gold))
+                if (oneOption.Contains(">"))
+                {
+                    if (option.Contains("ЗОЛОТО >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.Gold))
+                        return false;
+                }
+                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
                     return false;
-
-                return true;
             }
-            else
-                return Game.Data.Triggers.Contains(option);
+
+            return true;
         }
 
         private bool EnemyWound(List<Character> FightEnemies, ref int enemyWounds, ref List<string> fight)
