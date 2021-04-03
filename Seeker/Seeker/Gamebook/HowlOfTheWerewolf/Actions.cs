@@ -571,8 +571,57 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if ((Character.Protagonist.Crossbow > 0) && !invulnerable)
             {
                 FightEnemies[0].Endurance -= 2;
+                Character.Protagonist.Crossbow -= 1;
 
                 fight.Add(String.Format("GOOD|Вы стреляете из арбалета: {0} теряет 2 Выносливости", FightEnemies[0].Name));
+                fight.Add(String.Empty);
+            }
+            
+            if ((Character.Protagonist.Gun > 0) && !invulnerable)
+            {
+                int shots = Character.Protagonist.Mastery - FightEnemies[0].Mastery;
+
+                if (shots <= 0)
+                    fight.Add("BAD|Противник так ловок, что вы не успеваете выстрелить из пистолета");
+
+                else
+                {
+                    if (Character.Protagonist.Gun < shots)
+                        shots = Character.Protagonist.Gun;
+
+                    fight.Add(String.Format("Вы успеваете сделать выстрелов: {0} - {1} = {2}",
+                        Character.Protagonist.Mastery, FightEnemies[0].Mastery, shots
+                    ));
+
+                    int enemyIndex = 0;
+
+                    for (int shot = 1; shot <= shots; shot++)
+                    {
+                        int shotRoll = Game.Dice.Roll();
+
+                        fight.Add(String.Format("{0} выстрел по {1}: {2}",
+                            shot, FightEnemies[enemyIndex].Name, Game.Dice.Symbol(shotRoll)
+                        ));
+
+                        if (shotRoll == 6)
+                        {
+                            fight.Add("GOOD|Выстрел убивает врага наповал!");
+                            FightEnemies[enemyIndex].Endurance = 0;
+                        }
+                        else
+                        {
+                            fight.Add("GOOD|Выстрел ранит врага на 2 Выносливости!");
+                            FightEnemies[enemyIndex].Endurance -= 2;
+                        }
+
+                        if (EnemyWound(FightEnemies, ref enemyWounds, ref fight))
+                            return fight;
+
+                        if (FightEnemies[enemyIndex].Endurance <= 0)
+                            enemyIndex += 1;
+                    }
+                }
+
                 fight.Add(String.Empty);
             }
 
