@@ -568,6 +568,14 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if (Specificity == Specifics.IncompleteCorpse)
                 IncompleteCorpse(ref FightEnemies, ref fight);
 
+            if ((Character.Protagonist.Crossbow > 0) && !invulnerable)
+            {
+                FightEnemies[0].Endurance -= 2;
+
+                fight.Add(String.Format("GOOD|Вы стреляете из арбалета: {0} теряет 2 Выносливости", FightEnemies[0].Name));
+                fight.Add(String.Empty);
+            }
+
             while (true)
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));

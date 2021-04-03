@@ -99,6 +99,19 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
+        private int _crossbow;
+        public int Crossbow
+        {
+            get => _crossbow;
+            set
+            {
+                if (value < 0)
+                    _crossbow = 0;
+                else
+                    _crossbow = value;
+            }
+        }
+
         public int WayBack { get; set; }
 
 
@@ -115,6 +128,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Change = 0;
             Anxiety = 0;
             Gold = 15;
+            Crossbow = 0;
             WayBack = 0;
         }
 
@@ -131,14 +145,16 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 Change = this.Change,
                 Anxiety = this.Anxiety,
                 Gold = this.Gold,
+                Crossbow = this.Crossbow,
             };
         }
 
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}",
-                MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck, Change, Gold, WayBack, Anxiety
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}",
+                MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck, Change, Gold,
+                WayBack, Anxiety, Crossbow
             );
         }
 
@@ -156,6 +172,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Gold = int.Parse(save[7]);
             WayBack = int.Parse(save[8]);
             Anxiety = int.Parse(save[9]);
+            Crossbow = int.Parse(save[10]);
         }
     }
 }
