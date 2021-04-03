@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
     class Actions : Abstract.IActions
     {
         public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable,
-            RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead, ToadVenom, IncompleteCorpse };
+            RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead, ToadVenom, IncompleteCorpse, Dehctaw };
 
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
@@ -150,12 +150,22 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             int fisrtDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
+            int result = fisrtDice + secondDice;
 
-            bool changeOk = (fisrtDice + secondDice) > Character.Protagonist.Change;
+            string bonusLine = String.Empty;
+
+            if (Specificity == Specifics.Dehctaw)
+            {
+                result -= 2;
+                bonusLine = " - 2 за Dehctaw";
+            }
+
+            bool changeOk = result > Character.Protagonist.Change;
 
             List<string> changeCheck = new List<string> { String.Format(
-                    "Проверка удачи: {0} + {1} {2} {3}",
-                    Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (changeOk ? ">" : "<="), Character.Protagonist.Change
+                    "Проверка: {0} + {1}{2} {3} {4} изменение",
+                    Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), bonusLine,
+                    (changeOk ? ">" : "<="), Character.Protagonist.Change
             ) };
 
             changeCheck.Add(changeOk ? "BIG|GOOD|Победил ЧЕЛОВЕК :)" : "BIG|BAD|Победил ВОЛК :(");
