@@ -338,7 +338,18 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return new List<string> { "RELOAD" };
         }
 
-        public static bool CheckOnlyIf(string option) => true;
+        public static bool CheckOnlyIf(string option)
+        {
+            if (option.Contains(">"))
+            {
+                if (option.Contains("ЗОЛОТО >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.Gold))
+                    return false;
+
+                return true;
+            }
+            else
+                return Game.Data.Triggers.Contains(option);
+        }
 
         private bool EnemyWound(List<Character> FightEnemies, ref int enemyWounds, ref List<string> fight)
         {
