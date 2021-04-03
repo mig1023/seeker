@@ -3359,6 +3359,7 @@
 		<Modifications>
 			<Modification Name="Anxiety" Value="1"/>
 		</Modifications>
+		<Triggers>Dehctaw</Triggers>
 		<Options>
 			<Option Destination="7"/>
 		</Options>
@@ -4489,6 +4490,7 @@
 	<Paragraph>
 		<ID>394</ID>
 		<Text>Запишите слово “Dehctaw” на Листке Приключения\n\nОткрыв медальон, вы с удивлением смотрите на миниатюрное изображение удивительно красивой женщины с платиновыми волосами. Оно настолько реалистично, что вы не можете не восхититься мастерству художника. Не в силах оторвать взгляд от красивого лица, вы вдруг чувствуете, что и она смотрит на вас. Слегка вздрогнув от неожиданности, вы закрываете медальон и идете обратно к лестнице.</Text>
+		<Triggers>Dehctaw</Triggers>
 		<Options>
 			<Option Destination="7"/>
 		</Options>
@@ -5476,6 +5478,7 @@
 			<Action>
 				<ActionName>Transformation</ActionName>
 				<ButtonName>Узнать</ButtonName>
+				<Specificity>Dehctaw</Specificity>
 			</Action>
 		</Actions>
 		<Options>
