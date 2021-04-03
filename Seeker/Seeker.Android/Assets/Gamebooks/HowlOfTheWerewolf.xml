@@ -1999,6 +1999,7 @@
 				<ButtonName>Купить провизию</ButtonName>
 				<Text>ПРОВИЗИЯ, 3 золотых</Text>
 				<Price>3</Price>
+				<Benefit Name="Healing" ValueString="Поесть,4"/>
 				<Multiple/>
 				<Aftertext>Сделав покупки, решайте, куда отправитесь дальше.</Aftertext>
 			</Action>
