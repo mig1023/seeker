@@ -144,6 +144,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Crossbow = 0;
             Gun = 0;
             WayBack = 0;
+
+            Game.Healing.Add(name: "Поесть", healing: 4, portions: 3);
         }
 
         public Character Clone()
