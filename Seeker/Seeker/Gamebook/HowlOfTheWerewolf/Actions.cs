@@ -724,6 +724,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
+                        bool evenHit = (enemyHitStrength % 2 == 0);
+
                         if (Specificity == Specifics.WitchFight)
                             WitchFight(ref hero, ref fight);
 
@@ -743,6 +745,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                                 if (EnemyWound(FightEnemies, ref enemyWounds, ref fight))
                                     return fight;
                             }
+                        }
+                        else if (Game.Data.Triggers.Contains("Кольчуга") && evenHit)
+                        {
+                            fight.Add("Кольчуга смягчила удар: вы теряете лишь 1 Выносливость");
+                            hero.Endurance -= 1;
                         }
                         else
                             hero.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
