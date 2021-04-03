@@ -3326,7 +3326,7 @@
 		<Options>
 			<Option Destination="509" Text="Человек"/>
 			<Option Destination="3" Text="Волк"/>
-			<Option Destination="418" Text="У вас записано слово Rellik"/>
+			<Option Destination="418" Text="У вас записано слово Rellik" OnlyIf="Rellik"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3454,6 +3454,7 @@
 					<Enemy Name="Силач" Mastery="9" Endurance="8"/>
 					<Enemy Name="Огнеглотатель" Mastery="7" Endurance="6"/>
 				</Enemies>
+				<Trigger>Rellik</Trigger>
 				<Aftertext>Запишите слово “Rellik” на Листке Приключения. Если вам удалось убить всех троих:</Aftertext>
 			</Action>
 		</Actions>
@@ -4392,6 +4393,7 @@
 		<Modifications>
 			<Modification Name="Luck" Value="1"/>
 		</Modifications>
+		<Trigger>Rellik</Trigger>
 		<Options>
 			<Option Destination="29" Text="Немедленно покинете территорию цирка"/>
 			<Option Destination="402" Text="Все же сначала осмотрите палатку"/>
