@@ -3489,7 +3489,7 @@
 		<ID>297</ID>
 		<Text>Вы спускаетесь по ступеням в темноту. Вскоре вы уже не видите ничего и шагаете вниз очень осторожно, ощупывая стены. Ступени закончились, но вы не двигаетесь с места, понимая, что, для того чтобы исследовать склеп, вам необходим свет.</Text>
 		<Options>
-			<Option Destination="320" Text="Если у вас есть лампа (или записано слово Nethcir), то смело продвигайтесь дальше вглубь склепа"/>
+			<Option Destination="320" Text="Если у вас есть лампа (или записано слово Nethcir), то смело продвигайтесь дальше вглубь склепа" OnlyIf="Nethcir"/>
 			<Option Destination="309" Text="Рискнуть и войти в склеп в темноте"/>
 			<Option Destination="7" Text="Делать здесь нечего, лучше покинуть склеп"/>
 		</Options>
@@ -4318,6 +4318,7 @@
 		<Modifications>
 			<Modification Name="WayBack" Value="250"/>
 		</Modifications>
+		<Triggers>Nethcir</Triggers>
 		<Options>
 			<Option Destination="400"/>
 		</Options>
@@ -5148,7 +5149,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="463" Text="У вас записано слово Nethcir"/>
+			<Option Destination="463" Text="У вас записано слово Nethcir" OnlyIf="Nethcir"/>
 			<Option Destination="477" Text="Удалось победить всех трех призраков, они вернутся в свой мир"/>
 		</Options>
 	</Paragraph>
@@ -5482,7 +5483,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="494" Text="У вас записано слово Nethcir"/>
+			<Option Destination="494" Text="У вас записано слово Nethcir" OnlyIf="Nethcir"/>
 			<Option Destination="52" Text="Человек"/>
 			<Option Destination="10" Text="Волк"/>
 		</Options>
