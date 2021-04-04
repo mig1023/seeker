@@ -26,6 +26,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
         public int RoundsWinToWin { get; set; }
+        public int RoundsFailToFail { get; set; }
         public int RoundsToFight { get; set; }
         public int WoundsToWin { get; set; }
         public int WoundsForTransformation { get; set; }
@@ -661,7 +662,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
-            int round = 1, heroWounds = 0, enemyWounds = 0, roundWins = 0;
+            int round = 1, heroWounds = 0, enemyWounds = 0, roundWins = 0, roundFails = 0;
             
             int blackWidowLastAttack = 0;
 
@@ -803,6 +804,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         heroWounds += 1;
 
+                        roundFails += 1;
+
                         if (heroWounds == WoundsForTransformation)
                         {
                             hero.Change += 1;
@@ -835,21 +838,23 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     bool enoughRounds = (RoundsToFight > 0) && (RoundsToFight <= round);
                     bool notEnoughRounds = (RoundsToWin > 0) && (RoundsToWin <= round);
                     bool enoughRoundsWin = (RoundsWinToWin > 0) && (RoundsWinToWin <= roundWins);
+                    bool enoughRoundsFail = (RoundsFailToFail > 0) && (RoundsFailToFail <= roundFails);
 
-                    if (notEnoughRounds || notEnoughRounds || enoughRoundsWin)
+                    if (notEnoughRounds || notEnoughRounds || enoughRoundsWin || enoughRoundsFail)
                     {
                         fight.Add(String.Empty);
 
                         if (notEnoughRounds)
-                        {
-                            fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
-                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
-                        }
+                            fight.Add("BIG|BAD|Отведённые на победу раунды истекли :(");
+
+                        else if (enoughRoundsFail)
+                            fight.Add("BIG|BAD|Вы проиграли слишком много раундов :(");
+
                         else if (enoughRoundsWin)
-                            fight.Add(String.Format("GOOD|Вы выиграли необходимое количество раундов.", RoundsToFight));
+                            fight.Add("BIG|GOOD|Вы выиграли необходимое количество раундов :)");
 
                         else
-                            fight.Add(String.Format("GOOD|Вы продержались все отведённые на бой раунды.", RoundsToFight));
+                            fight.Add("BIG|GOOD|Вы продержались все отведённые на бой раунды :)");
 
                         return fight;
                     }
