@@ -4030,7 +4030,7 @@
 			<Option Destination="381" Text="Медальон" OnlyIf="Медальон"/>
 			<Option Destination="381" Text="Зеркальце" OnlyIf="Зеркальце"/>
 			<Option Destination="381" Text="Ожерелье с амулетами" OnlyIf="Ожирелье"/>
-			<Option Destination="381" Text="Корона"/>
+			<Option Destination="381" Text="Корона" OnlyIf="Корона"/>
 			<Option Destination="306" Text="В вашем заплечном мешке нет ничего, что подойдет в качестве подарка или вы просто не хотите ничего отдават"/>
 		</Options>
 	</Paragraph>
@@ -4170,6 +4170,8 @@
 				<ActionName>DiceGold</ActionName>
 				<ButtonName>Кинуть кубик</ButtonName>
 				<Value>12</Value>
+				<Benefit Name="Luck" Value="1"/>
+				<Trigger>Корона</Trigger>
 				<Aftertext>Кроме того, тут множество дорогих вещей. Вам больше всего нравятся нить жемчуга, серебряная корона, шкатулка с драгоценными камнями (восстановите 1 Удачу). Победив чудовище, вы стали богаты, как король, но что теперь делать со всем этим богатством. В любом случае, надо уходить отсюда.</Aftertext>
 			</Action>
 		</Actions>
