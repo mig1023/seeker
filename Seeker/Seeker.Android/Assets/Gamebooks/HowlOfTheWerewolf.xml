@@ -4026,7 +4026,7 @@
 		<Options>
 			<Option Destination="312" Text="Кольцо с гранатом" OnlyIf="Кольцо с гранатом"/>
 			<Option Destination="312" Text="Позолоченную брошь" OnlyIf="Позолоченная брошь"/>
-			<Option Destination="312" Text="Амулет с лунным камнем"/>
+			<Option Destination="312" Text="Амулет с лунным камнем" OnlyIf="Лунный камень"/>
 			<Option Destination="381" Text="Медальон" OnlyIf="Медальон"/>
 			<Option Destination="381" Text="Зеркальце" OnlyIf="Зеркальце"/>
 			<Option Destination="381" Text="Ожерелье с амулетами" OnlyIf="Ожирелье"/>
@@ -4323,6 +4323,7 @@
 	<Paragraph>
 		<ID>378</ID>
 		<Text>Какая-то цыганка оставила вам на прощание талисман – амулет из лунного камня. Можете взять его с собой, можете и выбросить, если хотите. Не переставая удивляться странному табору, вы отправляетесь дальше.</Text>
+		<Triggers>Лунный камень</Triggers>
 		<Options>
 			<Option Destination="500"/>
 		</Options>
@@ -5797,6 +5798,7 @@
 			<Action>
 				<ActionName>Transformation</ActionName>
 				<ButtonName>Узнать</ButtonName>
+				<Specificity>Moonstone</Specificity>
 			</Action>
 		</Actions>
 		<Options>
