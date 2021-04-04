@@ -9,7 +9,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
     class Actions : Abstract.IActions
     {
         public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable,
-            RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead, ToadVenom, IncompleteCorpse, Dehctaw };
+            RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead, ToadVenom, IncompleteCorpse, Dehctaw,
+            Moonstone };
 
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
@@ -154,10 +155,15 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             string bonusLine = String.Empty;
 
-            if (Specificity == Specifics.Dehctaw)
+            if ((Specificity == Specifics.Dehctaw) && Game.Data.Triggers.Contains("Dehctaw"))
             {
                 result -= 2;
                 bonusLine = " - 2 за Dehctaw";
+            }
+            else if ((Specificity == Specifics.Moonstone) &&  Game.Data.Triggers.Contains("Лунный камень"))
+            {
+                result += 3;
+                bonusLine = " + 3 за Лунный камень";
             }
 
             bool changeOk = result > Character.Protagonist.Change;
