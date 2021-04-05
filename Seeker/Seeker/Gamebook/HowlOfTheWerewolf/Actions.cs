@@ -375,6 +375,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         if (option.Contains("ЗОЛОТО >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.Gold))
                             return false;
                     }
+                    else if (oneOption.Contains("!"))
+                    {
+                        if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                            return false;
+                    }
                     else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
                         return false;
                 }
