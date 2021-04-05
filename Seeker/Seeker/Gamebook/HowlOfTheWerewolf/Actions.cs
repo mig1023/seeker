@@ -29,6 +29,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int RoundsFailToFail { get; set; }
         public int RoundsToFight { get; set; }
         public int WoundsToWin { get; set; }
+        public int WoundsToFail { get; set; }
         public int WoundsForTransformation { get; set; }
         public int WoundsLimit { get; set; }
         public int HitStrengthBonus { get; set; }
@@ -815,7 +816,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                             fight.Add(String.Format("BAD|Изменение увеличилось на единицу и достигло {0}", hero.Change));
                         }
 
-                        if (hero.Endurance <= 0)
+                        if ((hero.Endurance <= 0) || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                         {
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
