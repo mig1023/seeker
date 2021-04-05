@@ -204,6 +204,7 @@
 					<Enemy Name="Шак" Mastery="7" Endurance="7"/>
 				</Enemies>
 				<RoundsToFight>7</RoundsToFight>
+				<WoundsToFail>3</WoundsToFail>
 			</Action>
 		</Actions>
 		<Options>
