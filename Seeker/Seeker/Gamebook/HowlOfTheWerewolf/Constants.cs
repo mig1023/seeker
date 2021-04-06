@@ -49,6 +49,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             [6] = "Шестой",
         };
 
+        public static Dictionary<int, string> GetPassageName() => new Dictionary<int, string>
+        {
+            [1] = "дверь",
+            [2] = "первое окно",
+            [3] = "второе окно",
+        };
+
         public static int GetUlrichMastery() => 8;
 
         public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };

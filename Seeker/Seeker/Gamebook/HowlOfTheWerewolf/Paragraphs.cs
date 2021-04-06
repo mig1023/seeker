@@ -99,18 +99,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         enemy.Endurance = enemy.MaxEndurance;
 
                         if (Game.Xml.BoolParse(xmlAction["RandomEnemyCount"]))
-                        {
-                            Dictionary<int, string> countLine = Constants.GetCountName();
-
-                            int count = Game.Dice.Roll();
-                            string name = enemy.Name;
-
-                            for (int i = 0; i < count; i++)
-                            {
-                                enemy.Name = countLine[i + 1] + " " + name;
-                                action.Enemies.Add(enemy.Clone());
-                            }
-                        }
+                            EnemyMultiplier(Game.Dice.Roll(), ref action, enemy);
                         else
                             action.Enemies.Add(enemy);
                     }
@@ -125,6 +114,19 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
             return paragraph;
+        }
+
+        public static void EnemyMultiplier(int count, ref Actions action, Character enemy)
+        {
+            Dictionary<int, string> countLine = Constants.GetCountName();
+
+            string name = enemy.Name;
+
+            for (int i = 0; i < count; i++)
+            {
+                enemy.Name = countLine[i + 1] + " " + name;
+                action.Enemies.Add(enemy.Clone());
+            }
         }
 
         private static Actions.Specifics SpecificsParse(XmlNode xmlNode)

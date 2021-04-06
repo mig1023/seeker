@@ -56,6 +56,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if (!String.IsNullOrEmpty(Text) || (ActionName == "Get"))
                 return new List<string> { Text };
 
+            if (ActionName == "WolfFight")
+                return new List<string> { "Битва с волками" };
+
             if (Enemies == null)
                 return enemies;
 
@@ -670,6 +673,59 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
+        private void PassageDice(out int dice, out int passage)
+        {
+            dice = Game.Dice.Roll();
+            passage = (int)Math.Ceiling(dice / 2.0);
+        }
+
+        public List<string> WolfFight()
+        {
+            List<string> fight = new List<string>();
+            Character enemy = Enemies[0];
+            Actions action = this;
+
+            PassageDice(out int dice, out int heroPassage);
+
+            fight.Add(String.Format("Вы обороняете: {0} / 2 = {1}, это {2}",
+                Game.Dice.Symbol(dice), heroPassage, Constants.GetPassageName()[heroPassage]));
+
+            fight.Add(String.Empty);
+
+            int woulfCount = 0;
+
+            for (int wolf = 1; wolf <= 8; wolf++)
+            {
+                PassageDice(out int wolfDice, out int wolfPassage);
+
+                fight.Add(String.Format("{0} волк: {1} / 2 = {2}, ломится через {3}",
+                    wolf, Game.Dice.Symbol(wolfDice), wolfPassage, Constants.GetPassageName()[wolfPassage]));
+
+                if (heroPassage == wolfPassage)
+                    woulfCount += 1;
+            }
+
+            fight.Add(String.Empty);
+
+            if (woulfCount <= 0)
+            {
+                fight.Add("GOOD|BIG|Вам повезл: всю работу за вас сделали товарищи :)");
+                return fight;
+            }
+            else
+                fight.Add(String.Format("BOLD|Вам предстоит сразиться с волками в количестве: {0}", woulfCount));
+
+            fight.Add(String.Empty);
+
+            Enemies.Clear();
+
+            Paragraphs.EnemyMultiplier(woulfCount, ref action, enemy);
+
+            fight.AddRange(Fight());
+
+            return fight;
+        }
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -748,8 +804,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         fight.Add(String.Format("Сила вашего удара: {0} + {1} + {2}{3} = {4}",
                             Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
-                            hero.Mastery, bonus, protagonistHitStrength
-                        ));
+                            hero.Mastery, bonus, protagonistHitStrength));
                     }
 
                     int enemyRollFirst = Game.Dice.Roll();
@@ -757,8 +812,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
 
                     fight.Add(String.Format("Сила его удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength
-                    ));
+                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength));
 
                     bool webLastAttack = (blackWidowLastAttack == 3);
 
