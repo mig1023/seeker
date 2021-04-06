@@ -127,6 +127,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public int WayBack { get; set; }
 
+        public int SilverDaggers { get; set; }
 
         public void Init()
         {
@@ -144,6 +145,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Crossbow = 0;
             Gun = 0;
             WayBack = 0;
+            SilverDaggers = 0;
 
             Game.Healing.Add(name: "Поесть", healing: 4, portions: 3);
         }
@@ -163,15 +165,16 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 Gold = this.Gold,
                 Crossbow = this.Crossbow,
                 Gun = this.Gun,
+                SilverDaggers = this.SilverDaggers,
             };
         }
 
         public string Save()
         {
             return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}",
+                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}",
                 MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck, Change, Gold,
-                WayBack, Anxiety, Crossbow, Gun
+                WayBack, Anxiety, Crossbow, Gun, SilverDaggers
             );
         }
 
@@ -191,6 +194,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Anxiety = int.Parse(save[9]);
             Crossbow = int.Parse(save[10]);
             Gun = int.Parse(save[11]);
+            SilverDaggers = int.Parse(save[12]);
         }
     }
 }
