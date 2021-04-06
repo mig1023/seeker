@@ -10,7 +10,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
     {
         public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable,
             RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead, ToadVenom, IncompleteCorpse, Dehctaw,
-            Moonstone };
+            Moonstone, IcyTouch };
 
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
@@ -448,6 +448,22 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
+        private void IcyTouch(ref Character hero, ref List<string> fight)
+        {
+            int touch = Game.Dice.Roll();
+
+            fight.Add(String.Format("Кубик пронизывающего холода: {0}", Game.Dice.Symbol(touch)));
+
+            if (touch >= 5)
+            {
+                HitStrengthBonus -= 1;
+                fight.Add(String.Format("Пронизывающий мистический холод притупил ваши чувства: " +
+                    "теперь из Силы удара нужно будет вычитать {0}", HitStrengthBonus));
+            }
+            else
+                fight.Add("Вы справились с холодом, пока что...");
+        }
+        
         private void ElectricDamage(ref Character hero, ref List<string> fight)
         {
             int electric = Game.Dice.Roll();
@@ -462,6 +478,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             else
                 fight.Add("Разряд прошёл мимо");
         }
+
         private void WitchFight(ref Character hero, ref List<string> fight)
         {
             int witchAttack = Game.Dice.Roll();
@@ -788,7 +805,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                             bonus = String.Format(" + {0} бонус", HitStrengthBonus);
 
                         else if (HitStrengthBonus < 0)
-                            bonus = String.Format(" - {0} пенальти", HitStrengthBonus);
+                            bonus = String.Format(" - {0} пенальти", Math.Abs(HitStrengthBonus));
 
                         else if (blackWidowLastAttack == 4)
                         {
@@ -869,6 +886,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         if (Specificity == Specifics.ElectricDamage)
                             ElectricDamage(ref hero, ref fight);
+                        
+                        if (Specificity == Specifics.IcyTouch)
+                            IcyTouch(ref hero, ref fight);
 
                         if (Specificity == Specifics.ToadVenom)
                             ToadVenomFight(ref hero, ref fight);
