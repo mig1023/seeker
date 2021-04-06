@@ -872,8 +872,21 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
-        public bool IsHealingEnabled() => Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
+        public bool IsHealingEnabled() => true;
 
-        public void UseHealing(int healingLevel) => Character.Protagonist.Endurance += healingLevel;
+        public void UseHealing(int healingLevel)
+        {
+            if (healingLevel == -1)
+                Character.Protagonist.Endurance = Character.Protagonist.MaxEndurance;
+
+            else if (healingLevel == -2)
+                Character.Protagonist.Mastery = Character.Protagonist.MaxMastery;
+
+            else if (healingLevel == -3)
+                Character.Protagonist.Luck = Character.Protagonist.MaxLuck;
+
+            else
+                Character.Protagonist.Endurance += healingLevel;
+        }
     }
 }
