@@ -137,14 +137,19 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             int fisrtDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
 
-            bool masteryOk = (fisrtDice + secondDice) <= Character.Protagonist.Mastery;
+            int mastery = (Value > 0 ? Value : Character.Protagonist.Mastery);
+
+            bool masteryOk = (fisrtDice + secondDice) <= mastery;
 
             List<string> masteryCheck = new List<string> { String.Format(
-                    "Проверка удачи: {0} + {1} {2} {3}",
-                    Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (masteryOk ? "<=" : ">"), Character.Protagonist.Mastery
+                    "Проверка мастерства: {0} + {1} {2} {3}",
+                    Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (masteryOk ? "<=" : ">"), mastery
             ) };
 
-            masteryCheck.Add(masteryOk ? "BIG|GOOD|Мастерства ХВАТИЛО :)" : "BIG|BAD|Мастерства НЕ хватило :(");
+            if (Value > 0)
+                masteryCheck.Add(masteryOk ? "BIG|BAD|Мастерства ХВАТИЛО :(" : "BIG|GOOD|Мастерства НЕ хватило :)");
+            else
+                masteryCheck.Add(masteryOk ? "BIG|GOOD|Мастерства ХВАТИЛО :)" : "BIG|BAD|Мастерства НЕ хватило :(");
 
             return masteryCheck;
         }
