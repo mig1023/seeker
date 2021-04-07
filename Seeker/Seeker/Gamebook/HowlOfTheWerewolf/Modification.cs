@@ -18,6 +18,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             else if (Name == "Back")
                 Character.Protagonist.WayBack = Value;
 
+            else if (Name == "VanRichtenIsDead")
+                Character.Protagonist.VanRichten = 0;
+
             else
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
