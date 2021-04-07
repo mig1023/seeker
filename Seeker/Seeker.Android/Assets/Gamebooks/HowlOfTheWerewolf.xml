@@ -5462,9 +5462,16 @@
 	<Paragraph>
 		<ID>465</ID>
 		<Text>В долю секунды ваш меч вылетает из ножен, но ночной гость был наготове – звук выстрела разносится в ночи. Проверьте Мастерство Охотника на вампиров (оно равно 10):</Text>
+		<Actions>
+			<Action>
+				<ActionName>Mastery</ActionName>
+				<ButtonName>Проверить мастерство Охотника на вампиров</ButtonName>
+				<Value>10</Value>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="376" Text="Он выдержит проверку"/>
-			<Option Destination="398" Text="Нет"/>
+			<Option Destination="398" Text="Не выдержит"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
