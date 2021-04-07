@@ -8,9 +8,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 {
     class Actions : Abstract.IActions
     {
-        public enum Specifics { Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable,
-            RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead, ToadVenom, IncompleteCorpse, Dehctaw,
-            Moonstone, IcyTouch };
+        public enum Specifics
+        {
+            Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable,
+            RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead, ToadVenom, IncompleteCorpse,
+            Dehctaw, Moonstone, IcyTouch, GlassKnight
+        };
 
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
@@ -523,6 +526,27 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             else
                 fight.Add("Обошлось...");
         }
+        
+        private bool GlassKnightFight(ref List<string> fight)
+        {
+            if (!Game.Data.Triggers.Contains("Палица"))
+                return false;
+
+            int clubAttack = Game.Dice.Roll();
+
+            fight.Add(String.Format("Удар палицы: {0}", Game.Dice.Symbol(clubAttack)));
+
+            if (clubAttack == 6)
+            { 
+                fight.Add("GOOD|Точный удар палицы разбивает рыцаря вдребезги!");
+                return true;
+            }
+            else
+            {
+                fight.Add("Удар не так силён, чтобы рыцарь разбился...");
+                return false;
+            }
+        }
 
         private void RandomRoundsToFight(ref List<string> fight)
         {
@@ -892,6 +916,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         if (Specificity == Specifics.ToadVenom)
                             ToadVenomFight(ref hero, ref fight);
+
+                        if ((Specificity == Specifics.GlassKnight) && GlassKnightFight(ref fight))
+                            enemy.Endurance = 0;
 
                         heroWounds += 1;
 
