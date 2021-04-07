@@ -125,6 +125,19 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
+        private int _vanrichten;
+        public int VanRichten
+        {
+            get => _vanrichten;
+            set
+            {
+                if (value < 0)
+                    _vanrichten = 0;
+                else
+                    _vanrichten = value;
+            }
+        }
+
         public int WayBack { get; set; }
 
         public int SilverDaggers { get; set; }

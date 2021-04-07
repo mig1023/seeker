@@ -450,6 +450,34 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 return 0;
             }
         }
+        
+        private int VanRichtenFight(string enemyName, ref List<string> fight, int enemyHitStrength)
+        {
+            int vanRichtenMastery = Constants.GetVanRichtenMastery();
+
+            fight.Add(String.Empty);
+
+            int vanRichtenRollFirst = Game.Dice.Roll();
+            int vanRichtenRollSecond = Game.Dice.Roll();
+            int vanRichtenHitStrength = vanRichtenRollFirst + vanRichtenRollSecond + vanRichtenMastery;
+
+            fight.Add(String.Format("Сила удара Ван Рихтена: {0} + {1} + {2} = {3}",
+                Game.Dice.Symbol(vanRichtenRollFirst), Game.Dice.Symbol(vanRichtenRollSecond), vanRichtenMastery, vanRichtenHitStrength
+            ));
+
+            if (vanRichtenHitStrength > enemyHitStrength)
+            {
+                fight.Add(String.Format("GOOD|{0} ранен", enemyName));
+                return 2;
+            }
+            else
+            {
+                fight.Add("BAD|Ван Рихтен ранен");
+                Character.Protagonist.VanRichten -= 2;
+
+                return 0;
+            }
+        }
 
         private void IcyTouch(ref Character hero, ref List<string> fight)
         {
@@ -948,6 +976,14 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     if (Specificity == Specifics.Ulrich) 
                     {
                         enemy.Endurance -= UlrichFight(enemy.Name, ref fight, enemyHitStrength);
+
+                        if (EnemyWound(FightEnemies, ref enemyWounds, ref fight))
+                            return fight;
+                    }
+                    
+                    if (Character.Protagonist.VanRichten > 0) 
+                    {
+                        enemy.Endurance -= VanRichtenFight(enemy.Name, ref fight, enemyHitStrength);
 
                         if (EnemyWound(FightEnemies, ref enemyWounds, ref fight))
                             return fight;
