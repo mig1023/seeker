@@ -100,6 +100,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if (Character.Protagonist.Gun > 0)
                 statusLines.Add(String.Format("Пистолет: {0}", Character.Protagonist.Gun));
 
+            if (Character.Protagonist.VanRichten > 0)
+                statusLines.Add(String.Format("Выносливость Ван Рихтена: {0}", Character.Protagonist.VanRichten));
+
             return statusLines;
         }
 
@@ -472,8 +475,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
             else
             {
-                fight.Add("BAD|Ван Рихтен ранен");
                 Character.Protagonist.VanRichten -= 2;
+
+                if (Character.Protagonist.VanRichten <= 0)
+                    fight.Add("BIG|BAD|Ван Рихтен погиб, дальше вам придётся одному :(");
+                else
+                    fight.Add("BAD|Ван Рихтен ранен");
 
                 return 0;
             }
