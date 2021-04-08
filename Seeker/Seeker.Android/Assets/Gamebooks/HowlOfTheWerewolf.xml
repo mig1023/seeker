@@ -3272,7 +3272,7 @@
 				<Enemies>
 					<Enemy Name="Летучие мыши" Mastery="5" Endurance="10"/>
 				</Enemies>
-				<Specificity>RandomRoundsToFight</Specificity>
+				<Specificity>Bats</Specificity>
 				<Aftertext>Вычтите из 15 свое Мастерство. Столько Раундов Атаки вам придется провести, прежде, чем удасться добраться до спасительной двери.</Aftertext>
 			</Action>
 		</Actions>
@@ -4537,6 +4537,7 @@
 				<Enemies>
 					<Enemy Name="Водяная Ведьма" Mastery="7" Endurance="7"/>
 				</Enemies>
+				<Specificity>WaterWitch</Specificity>
 				<Aftertext>Воздуха не хватает, если вы не освободитесь от ведьмы за меньшее, чем ваше Мастерство, количество Раундов Атаки, то не освободитесь уже никогда, и станете очередной жертвой хищной твари.</Aftertext>
 			</Action>
 		</Actions>
