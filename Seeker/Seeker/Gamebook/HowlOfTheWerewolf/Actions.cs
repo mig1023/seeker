@@ -12,7 +12,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable,
             RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead, ToadVenom, IncompleteCorpse,
-            Dehctaw, Moonstone, IcyTouch, GlassKnight
+            Dehctaw, Moonstone, IcyTouch, GlassKnight, AcidDamage
         };
 
         public string ActionName { get; set; }
@@ -511,7 +511,22 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if (electric >= 5)
             {
                 hero.Endurance -= 3;
-                fight.Add("Вы потеряли ещё 3 Выносливость от разряда");
+                fight.Add("BAD|Вы потеряли ещё 3 Выносливость от разряда");
+            }
+            else
+                fight.Add("Разряд прошёл мимо");
+        }
+        
+        private void AcidDamage(ref Character hero, ref List<string> fight)
+        {
+            int electric = Game.Dice.Roll();
+
+            fight.Add(String.Format("Кубик ожога кислотой: {0}", Game.Dice.Symbol(electric)));
+
+            if (electric == 6)
+            {
+                hero.Endurance -= 3;
+                fight.Add("BAD|Вы потеряли ещё 3 Выносливость от кислоты");
             }
             else
                 fight.Add("Разряд прошёл мимо");
@@ -526,24 +541,24 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if (witchAttack < 3)
             {
                 hero.Endurance -= 2;
-                fight.Add("Вы потеряли 2 Выносливости");
+                fight.Add("BAD|Вы потеряли 2 Выносливости");
             }
             else if ((witchAttack == 3) || (witchAttack == 4))
             {
                 hero.Endurance -= 3;
-                fight.Add("Вы потеряли 3 Выносливости");
+                fight.Add("BAD|Вы потеряли 3 Выносливости");
             }
             else if (witchAttack == 5)
             {
                 hero.Endurance -= 2;
                 hero.Luck -= 1;
-                fight.Add("Вы потеряли 2 Выносливости и 1 Удачу");
+                fight.Add("BAD|Вы потеряли 2 Выносливости и 1 Удачу");
             }
             else
             {
                 hero.Endurance -= 2;
                 hero.Change += 1;
-                fight.Add(String.Format("Вы потеряли 2 Выносливости и Трансформация продолжилась (Изменение достигло {0})", hero.Change));
+                fight.Add(String.Format("BAD|Вы потеряли 2 Выносливости и Трансформация продолжилась (Изменение достигло {0})", hero.Change));
             }
         }
 
@@ -556,7 +571,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if (venomAttack >= 5)
             {
                 hero.Endurance -= 2;
-                fight.Add("Вы потеряли ещё 2 Выносливости от яда");
+                fight.Add("BAD|Вы потеряли ещё 2 Выносливости от яда");
             }
             else
                 fight.Add("Обошлось...");
@@ -945,6 +960,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         if (Specificity == Specifics.ElectricDamage)
                             ElectricDamage(ref hero, ref fight);
+                        
+                        if (Specificity == Specifics.AcidDamage)
+                            AcidDamage(ref hero, ref fight);
                         
                         if (Specificity == Specifics.IcyTouch)
                             IcyTouch(ref hero, ref fight);
