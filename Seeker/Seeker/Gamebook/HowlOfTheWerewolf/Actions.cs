@@ -10,9 +10,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
     {
         public enum Specifics
         {
-            Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable,
-            RandomRoundsToFight, NeedForSpeed, NeedForSpeedAndDead, ToadVenom, IncompleteCorpse,
-            Dehctaw, Moonstone, IcyTouch, GlassKnight, AcidDamage
+            Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable, Bats, NeedForSpeed,
+            NeedForSpeedAndDead, ToadVenom, IncompleteCorpse, Dehctaw, Moonstone, IcyTouch,
+            GlassKnight, AcidDamage, WaterWitch
         };
 
         public string ActionName { get; set; }
@@ -578,10 +578,17 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
-        private void RandomRoundsToFight(ref List<string> fight)
+        private void MasteryRoundsToFight(ref List<string> fight)
         {
             RoundsToFight = 15 - Character.Protagonist.Mastery;
             fight.Add(String.Format("Вам необходимо продержаться: 15 - {0} = {1} раундов", Character.Protagonist.Mastery, RoundsToFight));
+            fight.Add(String.Empty);
+        }
+        
+        private void MasteryRoundToWin(ref List<string> fight)
+        {
+            RoundsToWin = Character.Protagonist.Mastery - 1;
+            fight.Add(String.Format("Вам необходимо победить за: {0} - 1 = {1} раундов", Character.Protagonist.Mastery, RoundsToWin));
             fight.Add(String.Empty);
         }
         
@@ -815,8 +822,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             Character hero = Character.Protagonist;
 
-            if (Specificity == Specifics.RandomRoundsToFight)
-                RandomRoundsToFight(ref fight);
+            if (Specificity == Specifics.Bats)
+                MasteryRoundsToFight(ref fight);
+
+            if (Specificity == Specifics.WaterWitch)
+                MasteryRoundToWin(ref fight);
 
             if (Specificity == Specifics.IncompleteCorpse)
                 IncompleteCorpse(ref FightEnemies, ref fight);
