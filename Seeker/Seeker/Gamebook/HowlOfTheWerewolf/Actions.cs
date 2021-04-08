@@ -12,7 +12,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable, Bats, NeedForSpeed,
             NeedForSpeedAndDead, ToadVenom, IncompleteCorpse, Dehctaw, Moonstone, IcyTouch,
-            GlassKnight, AcidDamage, WaterWitch
+            GlassKnight, AcidDamage, WaterWitch, SnakeFight
         };
 
         public string ActionName { get; set; }
@@ -527,6 +527,32 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     "Вы потеряли ещё 2 Выносливость от яда", "Обошлось...", wounds: 2);
         }
 
+        private void SnakeFight(ref Character hero, ref List<string> fight, int round)
+        {
+            if (round < 3)
+            {
+                hero.Endurance -= 3;
+                fight.Add("BAD|Удушающие Кольца - теряете 3 Выносливости");
+            }
+            else if (round == 3)
+            {
+                hero.Mastery -= 1;
+                hero.Endurance -= 4;
+                fight.Add("BAD|Поцелуй Кобры - теряете 1 Мастерство и 4 Выносливости");
+            }
+            else if (round == 4)
+            {
+                hero.Endurance -= 2;
+                HitStrengthBonus = -1;
+                fight.Add("BAD|Удар Плетью – теряете 2 Выносливости и в следующий раз Сила Удара уменьшается на 1");
+            }
+            else
+            {
+                hero.Endurance -= 2;
+                fight.Add("BAD|Хищные Когти - теряете 2 Выносливости");
+            }
+        }
+        
         private void WitchFight(ref Character hero, ref List<string> fight)
         {
             int witchAttack = Game.Dice.Roll();
@@ -886,6 +912,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         fight.Add(String.Format("Сила вашего удара: {0} + {1} + {2}{3} = {4}",
                             Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
                             hero.Mastery, bonus, protagonistHitStrength));
+
+                        if ((Specificity == Specifics.SnakeFight) && (round >= 2))
+                            HitStrengthBonus = 0;
                     }
 
                     int enemyRollFirst = Game.Dice.Roll();
@@ -940,6 +969,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                                     return fight;
                             }
                         }
+                        else if (Specificity == Specifics.SnakeFight)
+                            SnakeFight(ref hero, ref fight, round);
+
                         else if (Game.Data.Triggers.Contains("Кольчуга") && evenHit)
                         {
                             fight.Add("Кольчуга смягчила удар: вы теряете лишь 1 Выносливость");
