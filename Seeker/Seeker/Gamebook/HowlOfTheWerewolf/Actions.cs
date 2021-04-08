@@ -176,7 +176,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 result -= 2;
                 bonusLine = " - 2 за Dehctaw";
             }
-            else if ((Specificity == Specifics.Moonstone) &&  Game.Data.Triggers.Contains("Лунный камень"))
+            else if ((Specificity == Specifics.Moonstone) && Game.Data.Triggers.Contains("Лунный камень"))
             {
                 result += 3;
                 bonusLine = " + 3 за Лунный камень";
@@ -233,7 +233,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             return diceCheck;
         }
-        
+
         public List<string> Competition()
         {
             List<string> competition = new List<string> { };
@@ -453,7 +453,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 return 0;
             }
         }
-        
+
         private int VanRichtenFight(string enemyName, ref List<string> fight, int enemyHitStrength)
         {
             int vanRichtenMastery = Constants.GetVanRichtenMastery();
@@ -486,50 +486,45 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
-        private void IcyTouch(ref Character hero, ref List<string> fight)
+        private void AdditionalWounds(ref Character hero, ref List<string> fight, string diceType,
+            List<int> chance, string fail, string win, int wounds = 3, bool hitStrenghtInstead = false)
         {
-            int touch = Game.Dice.Roll();
+            int dice = Game.Dice.Roll();
 
-            fight.Add(String.Format("Кубик пронизывающего холода: {0}", Game.Dice.Symbol(touch)));
+            fight.Add(String.Format("Кубик {0}: {1}", diceType, Game.Dice.Symbol(dice)));
 
-            if (touch >= 5)
+            if (chance.Contains(dice) && hitStrenghtInstead)
             {
                 HitStrengthBonus -= 1;
-                fight.Add(String.Format("Пронизывающий мистический холод притупил ваши чувства: " +
-                    "теперь из Силы удара нужно будет вычитать {0}", HitStrengthBonus));
+                fight.Add(String.Format("BAD|{0} {1}", fail, HitStrengthBonus));
             }
-            else
-                fight.Add("Вы справились с холодом, пока что...");
-        }
-        
-        private void ElectricDamage(ref Character hero, ref List<string> fight)
-        {
-            int electric = Game.Dice.Roll();
-
-            fight.Add(String.Format("Кубик электрического разряда: {0}", Game.Dice.Symbol(electric)));
-
-            if (electric >= 5)
+            else if (chance.Contains(dice))
             {
-                hero.Endurance -= 3;
-                fight.Add("BAD|Вы потеряли ещё 3 Выносливость от разряда");
+                hero.Endurance -= wounds;
+                fight.Add(String.Format("BAD|{0}", fail));
             }
             else
-                fight.Add("Разряд прошёл мимо");
+                fight.Add(win);
         }
-        
-        private void AcidDamage(ref Character hero, ref List<string> fight)
+
+        private void CheckAdditionalWounds(ref Character hero, ref List<string> fight)
         {
-            int electric = Game.Dice.Roll();
+            if (Specificity == Specifics.ElectricDamage)
+                AdditionalWounds(ref hero, ref fight, "электрического разряда", new List<int> { 5, 6 },
+                    "Вы потеряли ещё 3 Выносливость от разряда", "Разряд прошёл мимо");
 
-            fight.Add(String.Format("Кубик ожога кислотой: {0}", Game.Dice.Symbol(electric)));
+            if (Specificity == Specifics.AcidDamage)
+                AdditionalWounds(ref hero, ref fight, "ожога кислотой", new List<int> { 6 },
+                    "Вы потеряли ещё 3 Выносливость от кислоты", "Обошлось...");
 
-            if (electric == 6)
-            {
-                hero.Endurance -= 3;
-                fight.Add("BAD|Вы потеряли ещё 3 Выносливость от кислоты");
-            }
-            else
-                fight.Add("Разряд прошёл мимо");
+            if (Specificity == Specifics.IcyTouch)
+                AdditionalWounds(ref hero, ref fight, "пронизывающего холода", new List<int> { 5, 6 },
+                    "Пронизывающий мистический холод притупил ваши чувства: теперь из Силы удара нужно будет вычитать",
+                    "Вы справились с холодом, пока что...", hitStrenghtInstead: true);
+
+            if (Specificity == Specifics.ToadVenom)
+                AdditionalWounds(ref hero, ref fight, "яда", new List<int> { 5, 6 },
+                    "Вы потеряли ещё 2 Выносливость от яда", "Обошлось...", wounds: 2);
         }
 
         private void WitchFight(ref Character hero, ref List<string> fight)
@@ -560,21 +555,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 hero.Change += 1;
                 fight.Add(String.Format("BAD|Вы потеряли 2 Выносливости и Трансформация продолжилась (Изменение достигло {0})", hero.Change));
             }
-        }
-
-        private void ToadVenomFight(ref Character hero, ref List<string> fight)
-        {
-            int venomAttack = Game.Dice.Roll();
-
-            fight.Add(String.Format("Кубик яда: {0}", Game.Dice.Symbol(venomAttack)));
-
-            if (venomAttack >= 5)
-            {
-                hero.Endurance -= 2;
-                fight.Add("BAD|Вы потеряли ещё 2 Выносливости от яда");
-            }
-            else
-                fight.Add("Обошлось...");
         }
         
         private bool GlassKnightFight(ref List<string> fight)
@@ -958,17 +938,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         else
                             hero.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
 
-                        if (Specificity == Specifics.ElectricDamage)
-                            ElectricDamage(ref hero, ref fight);
-                        
-                        if (Specificity == Specifics.AcidDamage)
-                            AcidDamage(ref hero, ref fight);
-                        
-                        if (Specificity == Specifics.IcyTouch)
-                            IcyTouch(ref hero, ref fight);
-
-                        if (Specificity == Specifics.ToadVenom)
-                            ToadVenomFight(ref hero, ref fight);
+                        CheckAdditionalWounds(ref hero, ref fight);
 
                         if ((Specificity == Specifics.GlassKnight) && GlassKnightFight(ref fight))
                             enemy.Endurance = 0;
