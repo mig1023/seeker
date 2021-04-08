@@ -4995,6 +4995,7 @@
 				<Enemies>
 					<Enemy Name="Настоятель" Mastery="6" Endurance="16"/>
 				</Enemies>
+				<Specificity>AcidDamage</Specificity>
 				<Aftertext>Если личинке удалось достать вас своими челюстями, киньте кубик. Если выпадет 6, то вы получаете еще и ожог кислотой, и 3 Выносливости придется потерять. Если вам удалось расправиться с Настоятелем.</Aftertext>
 			</Action>
 		</Actions>
