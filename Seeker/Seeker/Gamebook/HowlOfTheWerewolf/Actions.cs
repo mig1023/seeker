@@ -564,7 +564,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 hero.Endurance -= 2;
                 fight.Add("BAD|Вы потеряли 2 Выносливости");
             }
-            else if ((witchAttack == 3) || (witchAttack == 4))
+            else if (witchAttack < 5)
             {
                 hero.Endurance -= 3;
                 fight.Add("BAD|Вы потеряли 3 Выносливости");
