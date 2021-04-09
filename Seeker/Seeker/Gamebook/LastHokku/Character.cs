@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Seeker.Gamebook.LastHokku
@@ -8,25 +9,18 @@ namespace Seeker.Gamebook.LastHokku
     {
         public static Character Protagonist = new Gamebook.LastHokku.Character();
 
-        public string Name { get; set; }
-
         public List<string> Hokku { get; set; }
 
         public void Init()
         {
-            Name = String.Empty;
             Hokku = new List<string>();
         }
 
-        public Character Clone()
+        public string Save() => String.Join("|", Hokku);
+
+        public void Load(string saveLine)
         {
-            return new Character() {
-                Name = this.Name,
-            };
+            Hokku = saveLine.Split('|').ToList();
         }
-
-        public string Save() => String.Empty;
-
-        public void Load(string saveLine) { }
     }
 }
