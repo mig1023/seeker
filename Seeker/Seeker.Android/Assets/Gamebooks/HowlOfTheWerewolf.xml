@@ -2786,6 +2786,7 @@
 				<Enemies>
 					<Enemy Name="Каменный Грифон" Mastery="8" Endurance="8"/>
 				</Enemies>
+				<Specificity>StoneGriffin</Specificity>
 				<Aftertext>Статуя сделана из прочного камня, поэтому каждый удачный ваш удар отнимет у него на 1 Выносливость меньше. Победив каменного стража, снова подходите к зеркалу. Проверьте свое Мастерство:</Aftertext>
 			</Action>
 			<Action>
