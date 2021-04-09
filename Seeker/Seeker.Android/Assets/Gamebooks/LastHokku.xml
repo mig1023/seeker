@@ -1,0 +1,130 @@
+<Paragraphs>
+	<Paragraph>
+		<ID>0</ID>
+		<Text>Стихи скажут о себе сами...</Text>
+		<Options>
+			<Option Destination="1" Text="В путь!"/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>1</ID>
+		<Text></Text>
+		<Options>
+			<Option Destination="2" Text="Сверкающее"/>
+			<Option Destination="2" Text="Тёмное"/>
+			<Option Destination="2" Text="Пепельное"/>
+			<Option Destination="2" Text="Кровавое"/>
+			<Option Destination="2" Text="Безмолвное"/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>2</ID>
+		<Text></Text>
+		<Options>
+			<Option Destination="3" Text="солнце"/>
+			<Option Destination="3" Text="облако дыма"/>
+			<Option Destination="3" Text="отражение"/>
+			<Option Destination="3" Text="озеро"/>
+			<Option Destination="3" Text="ничто"/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>3</ID>
+		<Text></Text>
+		<Options>
+			<Option Destination="4" Text="солнце"/>
+			<Option Destination="4" Text="облако дыма"/>
+			<Option Destination="4" Text="отражение"/>
+			<Option Destination="4" Text="озеро"/>
+			<Option Destination="4" Text="ничто"/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>4</ID>
+		<Text></Text>
+		<Options>
+			<Option Destination="5" Text="накрыло"/>
+			<Option Destination="5" Text="впитало"/>
+			<Option Destination="5" Text="растворило"/>
+			<Option Destination="5" Text="высосало"/>
+			<Option Destination="5" Text="изранило"/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>5</ID>
+		<Text></Text>
+		<Options>
+			<Option Destination="6" Text="небо."/>
+			<Option Destination="6" Text="землю."/>
+			<Option Destination="6" Text="звёзды."/>
+			<Option Destination="6" Text="душу."/>
+			<Option Destination="6" Text="весь мир."/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>6</ID>
+		<Text></Text>
+		<Options>
+			<Option Destination="7" Text="Время -"/>
+			<Option Destination="7" Text="Я -"/>
+			<Option Destination="7" Text="Вселенная -"/>
+			<Option Destination="7" Text="Мысль -"/>
+			<Option Destination="7" Text="Жизнь -"/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>7</ID>
+		<Text></Text>
+		<Options>
+			<Option Destination="8" Text="больше чем"/>
+			<Option Destination="8" Text="всего лишь"/>
+			<Option Destination="8" Text="это"/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>8</ID>
+		<Text></Text>
+		<Options>
+			<Option Destination="9" Text="слово..."/>
+			<Option Destination="9" Text="смерть..."/>
+			<Option Destination="9" Text="счастье..."/>
+			<Option Destination="9" Text="боль..."/>
+			<Option Destination="9" Text="мой сон..."/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>9</ID>
+		<Text></Text>
+		<Options>
+			<Option Destination="10" Text="Ты создал это хокку..."/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>10</ID>
+		<Text></Text>
+		<Options>
+			<Option Destination="11" Text="Прочти его ещё раз..."/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>11</ID>
+		<Text></Text>
+		<Options>
+			<Option Destination="12" Text="Обдумай..."/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>12</ID>
+		<Text></Text>
+		<Options>
+			<Option Destination="13" Text="Проникнись..."/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>13</ID>
+		<Text></Text>
+		<Options>
+			<Option Destination="1" Text="И создай ещё лучше..."/>
+		</Options>
+	</Paragraph>
+</Paragraphs>
