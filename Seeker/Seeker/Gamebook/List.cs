@@ -315,6 +315,22 @@ namespace Seeker.Gamebook
                 BookColor = "#1b2b09",
                 Illustration = "HowlOfTheWerewolf.jpg",
             },
+
+            ["Последнее хокку"] = new Description
+            {
+                XmlBook = "Gamebooks/LastHokku.xml",
+                Protagonist = LastHokku.Character.Protagonist.Init,
+                CheckOnlyIf = LastHokku.Actions.CheckOnlyIf,
+                Paragraphs = new LastHokku.Paragraphs(),
+                Actions = new LastHokku.Actions(),
+                Constants = new LastHokku.Constants(),
+                Save = LastHokku.Character.Protagonist.Save,
+                Load = LastHokku.Character.Protagonist.Load,
+                Disclaimer = "Юркий Слон, 2021",
+                BookColor = "#deb887",
+                FontColor = "#000000",
+                Illustration = "LastHokku.jpg",
+            },
         };
 
         public static List<string> GetBooks() => new List<string>(Books.Keys);
