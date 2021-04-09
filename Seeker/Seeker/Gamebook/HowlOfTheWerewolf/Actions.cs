@@ -12,7 +12,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable, Bats, NeedForSpeed,
             NeedForSpeedAndDead, ToadVenom, IncompleteCorpse, Dehctaw, Moonstone, IcyTouch,
-            GlassKnight, AcidDamage, WaterWitch, SnakeFight
+            GlassKnight, AcidDamage, WaterWitch, SnakeFight, Plague
         };
 
         public string ActionName { get; set; }
@@ -408,9 +408,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
-        private bool EnemyWound(List<Character> FightEnemies, ref int enemyWounds, ref List<string> fight)
+        private bool EnemyWound(List<Character> FightEnemies, ref int enemyWounds, ref List<string> fight, bool onlyCheck = false)
         {
-            enemyWounds += 1;
+            if (!onlyCheck)
+                enemyWounds += 1;
 
             bool enemyLost = true;
 
@@ -507,7 +508,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 fight.Add(win);
         }
 
-        private void CheckAdditionalWounds(ref Character hero, ref List<string> fight)
+        private void CheckAdditionalWounds(ref Character hero, ref List<string> fight, int wounds)
         {
             if (Specificity == Specifics.ElectricDamage)
                 AdditionalWounds(ref hero, ref fight, "электрического разряда", new List<int> { 5, 6 },
@@ -525,6 +526,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if (Specificity == Specifics.ToadVenom)
                 AdditionalWounds(ref hero, ref fight, "яда", new List<int> { 5, 6 },
                     "Вы потеряли ещё 2 Выносливость от яда", "Обошлось...", wounds: 2);
+
+            if ((Specificity == Specifics.Plague) && (wounds > 2))
+            {
+                hero.Mastery -= 1;
+                fight.Add("BAD|Ваше мастерство снизилось из-за чумы, которой заражены крысы");
+            }
         }
 
         private void SnakeFight(ref Character hero, ref List<string> fight, int round)
@@ -977,17 +984,17 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         else if (Game.Data.Triggers.Contains("Кольчуга") && evenHit)
                         {
-                            fight.Add("Кольчуга смягчила удар: вы теряете лишь 1 Выносливость");
+                            fight.Add("Кольчуга защитила вас: вы теряете лишь 1 Выносливость");
                             hero.Endurance -= 1;
                         }
                         else
                             hero.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
 
-                        CheckAdditionalWounds(ref hero, ref fight);
+                        roundFails += 1;
 
                         heroWounds += 1;
 
-                        roundFails += 1;
+                        CheckAdditionalWounds(ref hero, ref fight, heroWounds);
 
                         if (heroWounds == WoundsForTransformation)
                         {
@@ -1011,20 +1018,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     attackAlready = true;
 
                     if (Specificity == Specifics.Ulrich) 
-                    {
                         enemy.Endurance -= UlrichFight(enemy.Name, ref fight, enemyHitStrength);
-
-                        if (EnemyWound(FightEnemies, ref enemyWounds, ref fight))
-                            return fight;
-                    }
                     
                     if (Character.Protagonist.VanRichten > 0) 
-                    {
                         enemy.Endurance -= VanRichtenFight(enemy.Name, ref fight, enemyHitStrength);
 
-                        if (EnemyWound(FightEnemies, ref enemyWounds, ref fight))
-                            return fight;
-                    }
+                    if (EnemyWound(FightEnemies, ref enemyWounds, ref fight, onlyCheck: true))
+                        return fight;
 
                     bool enoughRounds = (RoundsToFight > 0) && (RoundsToFight <= round);
                     bool notEnoughRounds = (RoundsToWin > 0) && (RoundsToWin <= round);
