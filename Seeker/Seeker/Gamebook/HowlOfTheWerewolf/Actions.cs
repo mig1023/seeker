@@ -934,6 +934,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                         roundWins += 1;
 
+                        if ((Specificity == Specifics.GlassKnight) && GlassKnightFight(ref fight))
+                            enemy.Endurance = 0;
+
                         if (EnemyWound(FightEnemies, ref enemyWounds, ref fight))
                             return fight;
                     }
@@ -981,9 +984,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                             hero.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
 
                         CheckAdditionalWounds(ref hero, ref fight);
-
-                        if ((Specificity == Specifics.GlassKnight) && GlassKnightFight(ref fight))
-                            enemy.Endurance = 0;
 
                         heroWounds += 1;
 
