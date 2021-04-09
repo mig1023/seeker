@@ -22,7 +22,7 @@
 		<Text></Text>
 		<Options>
 			<Option Destination="3" Text="солнце"/>
-			<Option Destination="3" Text="облако дыма"/>
+			<Option Destination="3" Text="облако"/>
 			<Option Destination="3" Text="отражение"/>
 			<Option Destination="3" Text="озеро"/>
 			<Option Destination="3" Text="ничто"/>
