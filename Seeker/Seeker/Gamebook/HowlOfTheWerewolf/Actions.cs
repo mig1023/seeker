@@ -12,7 +12,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable, Bats, NeedForSpeed,
             NeedForSpeedAndDead, ToadVenom, IncompleteCorpse, Dehctaw, Moonstone, IcyTouch,
-            GlassKnight, AcidDamage, WaterWitch, SnakeFight, Plague
+            GlassKnight, AcidDamage, WaterWitch, SnakeFight, Plague, StoneGriffin
         };
 
         public string ActionName { get; set; }
@@ -937,7 +937,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
 
-                        enemy.Endurance -= 2;
+                        enemy.Endurance -= (Specificity == Specifics.StoneGriffin ? 1 : 2);
 
                         roundWins += 1;
 
