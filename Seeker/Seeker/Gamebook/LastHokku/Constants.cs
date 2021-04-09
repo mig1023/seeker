@@ -11,7 +11,8 @@ namespace Seeker.Gamebook.LastHokku
     {
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#030436",
+            [ButtonTypes.Main] = "#deb887",
+            [ButtonTypes.Font] = "#000000",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>();
@@ -33,5 +34,7 @@ namespace Seeker.Gamebook.LastHokku
         public double? GetLineHeight() => null;
 
         public List<int> GetParagraphsWithoutStatuses() => new List<int> { };
+
+        public static List<int> GetParagraphsWithoutHokkuCreation() => new List<int> { 0, 1, 9, 10, 11, 12 };
     }
 }
