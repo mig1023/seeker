@@ -1073,5 +1073,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             else
                 Character.Protagonist.Endurance += healingLevel;
         }
+
+        public string TextByOptions(string option) => String.Empty;
     }
 }

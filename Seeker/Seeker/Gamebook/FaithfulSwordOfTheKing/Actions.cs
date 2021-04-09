@@ -483,5 +483,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             Character.Protagonist.Strength += healingLevel;
             Character.Protagonist.HadFoodToday += 1;
         }
+
+        public string TextByOptions(string option) => String.Empty;
     }
 }

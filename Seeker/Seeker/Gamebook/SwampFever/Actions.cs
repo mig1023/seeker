@@ -883,5 +883,7 @@ namespace Seeker.Gamebook.SwampFever
         public bool IsHealingEnabled() => false;
 
         public void UseHealing(int healingLevel) => Game.Other.DoNothing();
+
+        public string TextByOptions(string option) => String.Empty;
     }
 }

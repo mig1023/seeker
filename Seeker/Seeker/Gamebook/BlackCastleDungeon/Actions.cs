@@ -416,5 +416,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public bool IsHealingEnabled() => Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
 
         public void UseHealing(int healingLevel) => Character.Protagonist.Endurance += healingLevel;
+
+        public string TextByOptions(string option) => String.Empty;
     }
 }

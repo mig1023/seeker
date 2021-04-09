@@ -30,5 +30,7 @@ namespace Seeker.Abstract
         bool IsHealingEnabled();
 
         void UseHealing(int healingLevel);
+
+        string TextByOptions(string option);
     }
 }
