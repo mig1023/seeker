@@ -120,34 +120,29 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             Game.Healing.Add(name: "Выпить напиток знахаря", healing: 4, portions: 2);
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character() {
-                Name = this.Name,
-                MaxAttack = this.MaxAttack,
-                Attack = this.Attack,
-                MaxDefence = this.MaxDefence,
-                Defence = this.Defence,
-                MaxEndurance = this.MaxEndurance,
-                Endurance = this.Endurance,
-                MaxInitiative = this.MaxInitiative,
-                Initiative = this.Initiative,
-                Coins = this.Coins,
-                FightStyle = FightStyles.Counterattacking,
-                SpecialTechnique = new List<SpecialTechniques>(this.SpecialTechnique),
-                Bonuses = this.Bonuses,
-            };
-        }
+            Name = this.Name,
+            MaxAttack = this.MaxAttack,
+            Attack = this.Attack,
+            MaxDefence = this.MaxDefence,
+            Defence = this.Defence,
+            MaxEndurance = this.MaxEndurance,
+            Endurance = this.Endurance,
+            MaxInitiative = this.MaxInitiative,
+            Initiative = this.Initiative,
+            Coins = this.Coins,
+            FightStyle = FightStyles.Counterattacking,
+            SpecialTechnique = new List<SpecialTechniques>(this.SpecialTechnique),
+            Bonuses = this.Bonuses,
+        };
 
         public string Save()
         {
             string specialTechniques = String.Join(":", SpecialTechnique.ConvertAll(e => e.ToString()));
 
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}",
-                MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance,
-                MaxInitiative, Initiative, Bonuses, specialTechniques, Coins
-            );
+            return String.Format("|", MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance,
+                MaxInitiative, Initiative, Bonuses, specialTechniques, Coins);
         }
 
         public void Load(string saveLine)
@@ -184,21 +179,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             if ((SpecialTechnique.Count == 1) && (SpecialTechnique[0] == SpecialTechniques.Nope))
                 return String.Empty;
 
-            Dictionary<SpecialTechniques, string> TechniquesNames = new Dictionary<SpecialTechniques, string>
-            {
-                [SpecialTechniques.TwoBlades] = "Бой двумя клинками",
-                [SpecialTechniques.TotalProtection] = "Веерная защита",
-                [SpecialTechniques.FirstStrike] = "Первый удар",
-                [SpecialTechniques.PowerfulStrike] = "Мощный выпад",
-                [SpecialTechniques.Reaction] = "Реакция",
-                [SpecialTechniques.IgnoreReaction] = "Игнорирует прием Реакции",
-                [SpecialTechniques.IgnoreFirstStrike] = "Игнорирует прием Первый удар",
-                [SpecialTechniques.IgnorePowerfulStrike] = "Игнорирует прием Мощный выпад",
-                [SpecialTechniques.ExtendedDamage] = "Каждый удар отнимает 3 Жизни",
-                [SpecialTechniques.PoisonBlade] = "Отравленный клинок",
-            };
-
-            return String.Format("\n{0}", String.Join(", ", SpecialTechnique.ConvertAll(e => TechniquesNames[e])));
+            return String.Format("\n{0}", String.Join(", ", SpecialTechnique.ConvertAll(e => Constants.TechniquesNames()[e])));
         }
     }
 }
