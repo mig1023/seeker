@@ -17,18 +17,13 @@ namespace Seeker.Gamebook.RendezVous
             Awareness = 0;
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character() {
-                Name = this.Name,
-                Awareness = this.Awareness,
-            };
-        }
+            Name = this.Name,
+            Awareness = this.Awareness,
+        };
 
-        public string Save()
-        {
-            return String.Format("{0}", Awareness);
-        }
+        public string Save() => Awareness.ToString();
 
         public void Load(string saveLine)
         {
