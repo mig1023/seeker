@@ -4129,8 +4129,8 @@
 			<Modification Name="Ecu" Value="-10"/>
 		</Modifications>
 		<Options>
-			<Option Destination="175" Text="Остановитесь на первом"/>
-			<Option Destination="18" Text="На втором"/>
+			<Option Destination="175" Text="Попытаться подкупить"/>
+			<Option Destination="18" Text="Попробовать отбить"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
