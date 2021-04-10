@@ -43,36 +43,26 @@ namespace Seeker.Gamebook.OctopusIsland
             LifeGivingOintment = 40;
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character() {
+            ThibautHitpoint = this.ThibautHitpoint,
+            ThibautSkill = this.ThibautSkill,
+            SergeHitpoint = this.SergeHitpoint,
+            SergeSkill = this.SergeSkill,
+            XolotlHitpoint = this.XolotlHitpoint,
+            XolotlSkill = this.XolotlSkill,
+            SouhiHitpoint = this.SouhiHitpoint,
+            SouhiSkill = this.SouhiSkill,
 
-                ThibautHitpoint = this.ThibautHitpoint,
-                ThibautSkill = this.ThibautSkill,
-                SergeHitpoint = this.SergeHitpoint,
-                SergeSkill = this.SergeSkill,
-                XolotlHitpoint = this.XolotlHitpoint,
-                XolotlSkill = this.XolotlSkill,
-                SouhiHitpoint = this.SouhiHitpoint,
-                SouhiSkill = this.SouhiSkill,
+            Name = this.Name,
+            Hitpoint = this.Hitpoint,
+            Skill = this.Skill,
+            Food = this.Food,
+            LifeGivingOintment = this.LifeGivingOintment,
+        };
 
-                Name = this.Name,
-                Hitpoint = this.Hitpoint,
-                Skill = this.Skill,
-                Food = this.Food,
-                LifeGivingOintment = this.LifeGivingOintment,
-            };
-        }
-
-        public string Save()
-        {
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}",
-                ThibautHitpoint, ThibautSkill, SergeHitpoint, SergeSkill,
-                XolotlHitpoint, XolotlSkill, SouhiHitpoint, SouhiSkill,
-                Food, LifeGivingOintment
-            );
-        }
+        public string Save() => String.Format("|", ThibautHitpoint, ThibautSkill, SergeHitpoint, SergeSkill,
+            XolotlHitpoint, XolotlSkill, SouhiHitpoint, SouhiSkill, Food, LifeGivingOintment);
 
         public void Load(string saveLine)
         {

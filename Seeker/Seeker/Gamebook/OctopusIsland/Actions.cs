@@ -129,7 +129,7 @@ namespace Seeker.Gamebook.OctopusIsland
             return false;
         }
 
-        public bool IsButtonEnabled() => ((DinnerHitpointsBonus > 0) && (Character.Protagonist.Food <= 0) ? false : true);
+        public bool IsButtonEnabled() => !((DinnerHitpointsBonus > 0) && (Character.Protagonist.Food <= 0));
 
         public static bool CheckOnlyIf(string option)
         {
