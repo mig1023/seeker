@@ -68,26 +68,18 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             Luck = MaxLuck;
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character() {
-                Name = this.Name,
-                MaxMastery = this.MaxMastery,
-                Mastery = this.Mastery,
-                MaxEndurance = this.MaxEndurance,
-                Endurance = this.Endurance,
-                MaxLuck = this.MaxLuck,
-                Luck = this.Luck,
-            };
-        }
+            Name = this.Name,
+            MaxMastery = this.MaxMastery,
+            Mastery = this.Mastery,
+            MaxEndurance = this.MaxEndurance,
+            Endurance = this.Endurance,
+            MaxLuck = this.MaxLuck,
+            Luck = this.Luck,
+        };
 
-        public string Save()
-        {
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}",
-                MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck
-            );
-        }
+        public string Save() => String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck);
 
         public void Load(string saveLine)
         {

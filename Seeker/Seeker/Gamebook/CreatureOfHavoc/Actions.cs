@@ -101,9 +101,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             goodLuck = (fisrtDice + secondDice) < Character.Protagonist.Luck;
 
             List<string> luckCheck = new List<string> { String.Format(
-                    "Проверка удачи: {0} + {1} {2} {3}",
-                    Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), Character.Protagonist.Luck
-            ) };
+                "Проверка удачи: {0} + {1} {2} {3}",
+                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), Character.Protagonist.Luck ) };
 
             luckCheck.Add((notInline ? String.Empty : "BIG|") + (goodLuck ? "GOOD|УСПЕХ :)" : "BAD|НЕУДАЧА :("));
 
@@ -196,8 +195,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
             List<string> skillCheck = new List<string> { String.Format(
                 "Проверка мастерства: {0} + {1} {2} {3} мастерство",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), Character.Protagonist.Mastery
-            ) };
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), Character.Protagonist.Mastery) };
 
             skillCheck.Add(goodSkill ? "BIG|GOOD|МАСТЕРСТВА ХВАТИЛО :)" : "BIG|BAD|МАСТЕРСТВА НЕ ХВАТИЛО :(");
 
@@ -269,8 +267,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + hero.Mastery;
 
                         fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
-                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), hero.Mastery, protagonistHitStrength
-                        ));
+                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
+                            hero.Mastery, protagonistHitStrength));
 
                         doubleDice = (protagonistRollFirst == protagonistRollSecond);
                         doubleSixes = doubleDice && (protagonistRollFirst == 6);
@@ -283,8 +281,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     doubleDiceEnemy = (enemyRollFirst == enemyRollSecond);
 
                     fight.Add(String.Format("Мощность его удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength
-                    ));
+                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength));
 
                     if (ManicBeast && previousRoundWound)
                     {
@@ -339,13 +336,11 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         if (doubleSixes)
                         {
                             fight.Add(String.Format("GOOD|{0} убит наповал", enemy.Name));
-
                             enemy.Endurance = 0;
                         }
                         else
                         {
                             fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
-
                             enemy.Endurance -= 2;
                         }
 
