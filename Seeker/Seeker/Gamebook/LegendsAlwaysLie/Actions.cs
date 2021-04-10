@@ -55,20 +55,18 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public List<string> Representer()
         {
-            if (Enemies != null)
-            {
-                List<string> enemies = new List<string>();
-
-                foreach (Character enemy in Enemies)
-                    enemies.Add(String.Format("{0}\nсила {1}  жизни {2}", enemy.Name, enemy.Strength, enemy.Hitpoints));
-
-                return enemies;
-            }
-
             if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
 
-            return new List<string> { };
+            List<string> enemies = new List<string>();
+
+            if (Enemies == null)
+                return enemies;
+
+            foreach (Character enemy in Enemies)
+                enemies.Add(String.Format("{0}\nсила {1}  жизни {2}", enemy.Name, enemy.Strength, enemy.Hitpoints));
+
+            return enemies;
         }
 
         public List<string> Status()
@@ -150,12 +148,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public static void InjuriesBySpells()
         {
-            int injures = (Character.Protagonist.Specialization == Character.SpecializationType.Wizard ? 1 : 2);
-
-            Character.Protagonist.Hitpoints -= injures;
-
-            if (Character.Protagonist.Hitpoints < 0)
-                Character.Protagonist.Hitpoints = 0;
+            Character.Protagonist.Hitpoints -= (Character.Protagonist.Specialization == Character.SpecializationType.Wizard ? 1 : 2);
         }
 
         private bool GoodReaction(ref List<string> reaction)
@@ -198,7 +191,11 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             toEndParagraph = 0;
             toEndText = "Начать сначала";
 
-            return (Character.Protagonist.Hitpoints <= 0) || (Character.Protagonist.ConneryHitpoints <= 0) || (Character.Protagonist.ConneryTrust <= 0);
+            bool hitpoint = (Character.Protagonist.Hitpoints <= 0);
+            bool conneryHitpoint = (Character.Protagonist.ConneryHitpoints <= 0);
+            bool conneryTrust = (Character.Protagonist.ConneryTrust <= 0);
+
+            return (hitpoint || conneryHitpoint || conneryTrust);
         }
 
         public bool IsButtonEnabled()
@@ -403,9 +400,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             Character.Protagonist.Hitpoints -= dices;
 
-            if (Character.Protagonist.Hitpoints < 0)
-                Character.Protagonist.Hitpoints = 0;
-
             diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
 
             return diceCheck;
@@ -438,6 +432,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             fight.Add(String.Empty);
             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+
             return fight;
         }
 
@@ -445,10 +440,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             List<string> fight = new List<string>();
 
-            int round = 1;
-            int golemRound = 4;
-            int incrementWounds = 2;
-            bool warriorFight = Character.Protagonist.Specialization == Character.SpecializationType.Warrior;
+            int round = 1, golemRound = 4, incrementWounds = 2;
+            bool warriorFight = (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
             bool poisonBlade = false;
 
             if (Character.Protagonist.PoisonBlade > 0)
@@ -525,23 +518,19 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     int secondHeroRoll = Game.Dice.Roll();
                     int heroHitStrength = firstHeroRoll + secondHeroRoll + Character.Protagonist.Strength;
 
-                    fight.Add(
-                        String.Format(
-                            "Ваш удар: {0} + {1} + {2} = {3}",
-                            Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll), Character.Protagonist.Strength, heroHitStrength
-                        )
-                    );
+                    fight.Add(String.Format(
+                        "Ваш удар: {0} + {1} + {2} = {3}",
+                        Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll),
+                        Character.Protagonist.Strength, heroHitStrength));
 
                     int firstEnemyRoll = Game.Dice.Roll();
                     int secondEnemyRoll = Game.Dice.Roll();
                     int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Strength;
 
-                    fight.Add(
-                        String.Format(
+                    fight.Add(String.Format(
                             "Его удар: {0} + {1} + {2} = {3}",
-                            Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Strength, enemyHitStrength
-                        )
-                    );
+                            Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll),
+                            enemy.Strength, enemyHitStrength));
 
                     bool zombieWound = false;
 

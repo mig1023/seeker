@@ -124,37 +124,27 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             HealingSpellLost = 0;
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character()
-            {
-                Name = this.Name,
-                Strength = this.Strength,
-                Hitpoints = this.Hitpoints,
-                Magicpoints = this.Magicpoints,
-                Gold = this.Gold,
-                Footwraps = this.Footwraps,
-                TimeForReading = this.TimeForReading,
-                Elixir = this.Elixir,
-                ConneryHitpoints = this.ConneryHitpoints,
-                ConneryTrust = this.ConneryTrust,
-                Specialization = this.Specialization,
+            Name = this.Name,
+            Strength = this.Strength,
+            Hitpoints = this.Hitpoints,
+            Magicpoints = this.Magicpoints,
+            Gold = this.Gold,
+            Footwraps = this.Footwraps,
+            TimeForReading = this.TimeForReading,
+            Elixir = this.Elixir,
+            ConneryHitpoints = this.ConneryHitpoints,
+            ConneryTrust = this.ConneryTrust,
+            Specialization = this.Specialization,
 
-                FoodIsDivided = this.FoodIsDivided,
-                PoisonBlade = this.PoisonBlade,
-                HealingSpellLost = this.HealingSpellLost,
-            };
-        }
+            FoodIsDivided = this.FoodIsDivided,
+            PoisonBlade = this.PoisonBlade,
+            HealingSpellLost = this.HealingSpellLost,
+        };
 
-        public string Save()
-        {
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}",
-                Strength, Hitpoints, Magicpoints, (FoodIsDivided ? 1 : 0),
-                PoisonBlade, Gold, Footwraps, TimeForReading, ConneryHitpoints,
-                ConneryTrust, Specialization, Elixir, HealingSpellLost
-            );
-        }
+        public string Save() => String.Join("|", Strength, Hitpoints, Magicpoints, (FoodIsDivided ? 1 : 0), PoisonBlade, Gold,
+                Footwraps, TimeForReading, ConneryHitpoints, ConneryTrust, Specialization, Elixir, HealingSpellLost);
 
         public void Load(string saveLine)
         {
