@@ -23,22 +23,14 @@ namespace Seeker.Gamebook.RockOfTerror
             MonksHeart = null;
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character() {
-                Time = this.Time,
-                Injury = this.Injury,
-                MonksHeart = this.MonksHeart,
-            };
-        }
+            Time = this.Time,
+            Injury = this.Injury,
+            MonksHeart = this.MonksHeart,
+        };
 
-        public string Save()
-        {
-            return String.Format(
-                "{0}|{1}|{2}",
-                Time, Injury, (MonksHeart == null ? -1 : MonksHeart)
-            );
-        }
+        public string Save() => String.Join("|", Time, Injury, (MonksHeart == null ? -1 : MonksHeart));
 
         public void Load(string saveLine)
         {
