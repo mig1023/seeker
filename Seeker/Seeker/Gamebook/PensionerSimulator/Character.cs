@@ -15,13 +15,6 @@ namespace Seeker.Gamebook.PensionerSimulator
             Name = String.Empty;
         }
 
-        public Character Clone()
-        {
-            return new Character() {
-                Name = this.Name,
-            };
-        }
-
         public string Save() => String.Empty;
 
         public void Load(string saveLine) { }
