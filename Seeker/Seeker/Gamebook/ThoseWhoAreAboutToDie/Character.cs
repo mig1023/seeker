@@ -63,20 +63,14 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             Endurance = Game.Dice.Roll(dices: 2);
         }
 
-        public Character Clone()
-        {
-            return new Character() {
-                Name = this.Name,
-                Reaction = this.Reaction,
-                Strength = this.Strength,
-                Endurance = this.Endurance,
-            };
-        }
+        public Character Clone() => new Character() {
+            Name = this.Name,
+            Reaction = this.Reaction,
+            Strength = this.Strength,
+            Endurance = this.Endurance,
+        };
 
-        public string Save()
-        {
-            return String.Format("{0}|{1}|{2}", Reaction, Strength, Endurance);
-        }
+        public string Save() => String.Join("|", Reaction, Strength, Endurance);
 
         public void Load(string saveLine)
         {

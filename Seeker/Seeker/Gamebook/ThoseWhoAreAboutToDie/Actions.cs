@@ -96,10 +96,13 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
         {
             if (ParamFail("СИЛА", oneOption, Character.Protagonist.Strength))
                 return true;
+
             else if (ParamFail("РЕАКЦИЯ", oneOption, Character.Protagonist.Reaction))
                 return true;
+
             else if (ParamFail("ВЫНОСЛИВОСТЬ", oneOption, Character.Protagonist.Endurance))
                 return true;
+
             else
                 return false;
         }
@@ -108,8 +111,10 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
         {
             if (option.Contains(String.Format("{0} >", paramName)) && (int.Parse(option.Split('>')[1]) >= param))
                 return true;
+
             else if (option.Contains(String.Format("{0} <=", paramName)) && (int.Parse(option.Split('=')[1]) < param))
                 return true;
+
             else
                 return false;
         }
