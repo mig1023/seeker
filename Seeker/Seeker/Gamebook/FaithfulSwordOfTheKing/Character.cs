@@ -90,43 +90,28 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             Game.Healing.Add(name: "Поесть", healing: 2, portions: 2);
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character()
-            {
-                Name = this.Name,
-                MaxSkill = this.MaxSkill,
-                Skill = this.Skill,
-                MaxStrength = this.MaxStrength,
-                Strength = this.Strength,
-                Honor = this.Honor,
-                Day = this.Day,
-                Ecu = this.Ecu,
-                MeritalArt = this.MeritalArt,
-                Horses = this.Horses,
-                Pistols = this.Pistols,
-                BulletsAndGubpowder = this.BulletsAndGubpowder,
-                Daggers = this.Daggers,
-                HadFoodToday = this.HadFoodToday,
-                Chainmail = this.Chainmail,
-                LeftHandPenalty = this.LeftHandPenalty,
+            Name = this.Name,
+            MaxSkill = this.MaxSkill,
+            Skill = this.Skill,
+            MaxStrength = this.MaxStrength,
+            Strength = this.Strength,
+            Honor = this.Honor,
+            Day = this.Day,
+            Ecu = this.Ecu,
+            MeritalArt = this.MeritalArt,
+            Horses = this.Horses,
+            Pistols = this.Pistols,
+            BulletsAndGubpowder = this.BulletsAndGubpowder,
+            Daggers = this.Daggers,
+            HadFoodToday = this.HadFoodToday,
+            Chainmail = this.Chainmail,
+            LeftHandPenalty = this.LeftHandPenalty,
+        };
 
-            };
-        }
-
-        public string Save()
-        {
-            return String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Honor, Day,
-                Ecu, MeritalArt, Horses, Pistols, BulletsAndGubpowder, Daggers, HadFoodToday,
-                Chainmail, LeftHandPenalty);
-
-            //return String.Format(
-            //    "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}|{13}|{14}",
-            //    MaxSkill, Skill, MaxStrength, Strength, Honor, Day, Ecu, MeritalArt,
-            //    Horses, Pistols, BulletsAndGubpowder, Daggers, HadFoodToday,
-            //    Chainmail, LeftHandPenalty
-            //);
-        }
+        public string Save() => String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Honor, Day, Ecu,
+            MeritalArt, Horses, Pistols, BulletsAndGubpowder, Daggers, HadFoodToday, Chainmail, LeftHandPenalty);
 
         public void Load(string saveLine)
         {

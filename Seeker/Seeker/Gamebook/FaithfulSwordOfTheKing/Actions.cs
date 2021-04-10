@@ -107,8 +107,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 return true;
             }
-            else if (option == Character.Protagonist.MeritalArt.ToString())
-                return true;
+            else if (Enum.TryParse(option, out Character.MeritalArts value))
+                return Character.Protagonist.MeritalArt == value;
             else
                 return Game.Data.Triggers.Contains(option);
         }
