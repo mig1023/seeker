@@ -71,29 +71,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public void Init()
         {
-            Dictionary<int, int> Skills = new Dictionary<int, int>
-            {
-                [1] = 12,
-                [2] = 8,
-                [3] = 10,
-                [4] = 7,
-                [5] = 9,
-                [6] = 11
-            };
-
-            Dictionary<int, int> Strengths = new Dictionary<int, int>
-            {
-                [1] = 22,
-                [2] = 18,
-                [3] = 14,
-                [4] = 24,
-                [5] = 16,
-                [6] = 20
-            };
-
-            MaxSkill = Skills[Game.Dice.Roll()];
+            MaxSkill = Constants.Skills[Game.Dice.Roll()];
             Skill = MaxSkill;
-            MaxStrength = Strengths[Game.Dice.Roll()];
+            MaxStrength = Constants.Strengths[Game.Dice.Roll()];
             Strength = MaxStrength;
             Honor = 3;
             Day = 1;
@@ -136,12 +116,16 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public string Save()
         {
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}|{13}|{14}",
-                MaxSkill, Skill, MaxStrength, Strength, Honor, Day, Ecu, MeritalArt,
-                Horses, Pistols, BulletsAndGubpowder, Daggers, HadFoodToday,
-                Chainmail, LeftHandPenalty
-            );
+            return String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Honor, Day,
+                Ecu, MeritalArt, Horses, Pistols, BulletsAndGubpowder, Daggers, HadFoodToday,
+                Chainmail, LeftHandPenalty);
+
+            //return String.Format(
+            //    "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}|{13}|{14}",
+            //    MaxSkill, Skill, MaxStrength, Strength, Honor, Day, Ecu, MeritalArt,
+            //    Horses, Pistols, BulletsAndGubpowder, Daggers, HadFoodToday,
+            //    Chainmail, LeftHandPenalty
+            //);
         }
 
         public void Load(string saveLine)
