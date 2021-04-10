@@ -44,5 +44,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 30, 60, 90 };
 
         public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
+
+        public static Dictionary<string, string> StatNames = new Dictionary<string, string>
+        {
+            ["Strength"] = "силы",
+            ["Skill"] = "ловкости",
+            ["Wisdom"] = "мудрости",
+            ["Cunning"] = "хитрости",
+            ["Oratory"] = "красноречия",
+            ["Popularity"] = "популярности",
+        };
     }
 }

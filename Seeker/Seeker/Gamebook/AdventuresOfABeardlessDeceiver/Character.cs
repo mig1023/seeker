@@ -122,34 +122,24 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             UnitOfTime = null;
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character()
-            {
-                Strength = this.Strength,
-                Skill = this.Skill,
-                Wisdom = this.Wisdom,
-                Cunning = this.Cunning,
-                Oratory = this.Oratory,
-                Popularity = this.Popularity,
-                Kumis = this.Kumis,
-                Tanga = this.Tanga,
-                StatBonuses = this.StatBonuses,
-                AkynGlory = this.AkynGlory,
-                UnitOfTime = this.UnitOfTime,
-            };
-        }
+            Strength = this.Strength,
+            Skill = this.Skill,
+            Wisdom = this.Wisdom,
+            Cunning = this.Cunning,
+            Oratory = this.Oratory,
+            Popularity = this.Popularity,
+            Kumis = this.Kumis,
+            Tanga = this.Tanga,
+            StatBonuses = this.StatBonuses,
+            AkynGlory = this.AkynGlory,
+            UnitOfTime = this.UnitOfTime,
+        };
 
-
-        public string Save()
-        {
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}",
-                Strength, Skill, Wisdom, Cunning, Oratory, Popularity, Kumis, Tanga, StatBonuses,
-                (AkynGlory == null ? -1 : AkynGlory), (UnitOfTime == null ? -1 : UnitOfTime)
-            );
-        }
-
+        public string Save() => String.Join("|", Strength, Skill, Wisdom, Cunning, Oratory, Popularity, Kumis,
+            Tanga, StatBonuses, (AkynGlory == null ? -1 : AkynGlory), (UnitOfTime == null ? -1 : UnitOfTime));
+ 
         public void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');

@@ -23,16 +23,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         static bool NextTestWithKumis = false;
 
-        Dictionary<string, string> statNames = new Dictionary<string, string>
-        {
-            ["Strength"] = "силы",
-            ["Skill"] = "ловкости",
-            ["Wisdom"] = "мудрости",
-            ["Cunning"] = "хитрости",
-            ["Oratory"] = "красноречия",
-            ["Popularity"] = "популярности",
-        };
-
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
             if (trigger)
@@ -49,7 +39,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public List<string> Representer()
         {
             if (Level > 0)
-                return new List<string> { String.Format("Проверка {0}, уровень {1}", statNames[Stat], Level) };
+                return new List<string> { String.Format("Проверка {0}, уровень {1}", Constants.StatNames[Stat], Level) };
             else if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
             else
@@ -193,8 +183,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
             List<string> testLines = new List<string> { String.Format(
                 "Проверка {0}: {1} + {2} + {3} {4} {5}",
-                statNames[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), currentStat, (testIsOk ? ">=" : "<"), Level
-            ) };
+                Constants.StatNames[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
+                currentStat, (testIsOk ? ">=" : "<"), Level ) };
 
             if (GuessBonus && Game.Data.Triggers.Contains("guess"))
                 testLines.Insert(0, "Бонус за догадку: -4");
