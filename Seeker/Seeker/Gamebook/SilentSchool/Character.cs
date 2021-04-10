@@ -25,19 +25,16 @@ namespace Seeker.Gamebook.SilentSchool
             HarmSelfAlready = 0;
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character()
-            {
-                Life = this.Life,
-                Weapon = this.Weapon,
-                Grail = this.Grail,
-                ChangeDecision = this.ChangeDecision,
-                HarmSelfAlready = this.HarmSelfAlready,
-            };
-        }
+            Life = this.Life,
+            Weapon = this.Weapon,
+            Grail = this.Grail,
+            ChangeDecision = this.ChangeDecision,
+            HarmSelfAlready = this.HarmSelfAlready,
+        };
 
-        public string Save() => String.Format("{0}|{1}|{2}|{3}|{4}", Life, Weapon,Grail, ChangeDecision, HarmSelfAlready);
+        public string Save() => String.Format("|", Life, Weapon,Grail, ChangeDecision, HarmSelfAlready);
 
         public void Load(string saveLine)
         {

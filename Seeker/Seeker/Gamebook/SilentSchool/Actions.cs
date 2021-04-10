@@ -30,10 +30,7 @@ namespace Seeker.Gamebook.SilentSchool
 
         public List<string> Status()
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Жизнь: {0}", Character.Protagonist.Life),
-            };
+            List<string> statusLines = new List<string> { String.Format("Жизнь: {0}", Character.Protagonist.Life) };
 
             if (Character.Protagonist.Grail > 0)
                 statusLines.Add(String.Format("Грааль: {0}", Character.Protagonist.Grail));
@@ -73,13 +70,8 @@ namespace Seeker.Gamebook.SilentSchool
             return Character.Protagonist.Life <= 0;
         }
 
-        public bool IsButtonEnabled()
-        {
-            if ((HarmedMyself > 0) && ((Character.Protagonist.HarmSelfAlready > 0) || (Character.Protagonist.Life <= HarmedMyself)))
-                return false;
-            else
-                return true;
-        }
+        public bool IsButtonEnabled() => !((HarmedMyself > 0) && ((Character.Protagonist.HarmSelfAlready > 0) ||
+            (Character.Protagonist.Life <= HarmedMyself)));
 
         public static bool CheckOnlyIf(string option)
         {
