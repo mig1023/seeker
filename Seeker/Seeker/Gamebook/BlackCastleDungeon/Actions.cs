@@ -111,7 +111,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (Character.Protagonist.Spells.Contains("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ") && (Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance))
                 staticButtons.Add("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
 
-            foreach (string spell in new List<string> { "ЗАКЛЯТИЕ КОПИИ", "ЗАКЛЯТИЕ СИЛЫ", "ЗАКЛЯТИЕ СЛАБОСТИ" })
+            foreach (string spell in Constants.StaticSpells())
                 if (ParagraphWithFight(spell) && Character.Protagonist.Spells.Contains(spell) && !SpellActivate[spell])
                     staticButtons.Add(spell);
 
@@ -125,9 +125,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (action.Contains("ИСЦЕЛЕНИЯ"))
                 Character.Protagonist.Endurance += 8;
 
-            foreach (string spell in new List<string> { "ЗАКЛЯТИЕ КОПИИ", "ЗАКЛЯТИЕ СИЛЫ", "ЗАКЛЯТИЕ СЛАБОСТИ" })
-                if (action == spell)
-                    SpellActivate[spell] = true;
+            if (Constants.StaticSpells().Contains(action))
+                SpellActivate[action] = true;
 
             return true;
         }
@@ -165,21 +164,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
             if (ActionName == "Get")
             {
-                string countMarker = String.Empty;
+                int count = 0;
 
                 if (ThisIsSpell)
-                {
-                    int count = 0;
-
                     foreach (string spell in Character.Protagonist.Spells)
                         if (spell == Text)
                             count += 1;
 
-                    if (count > 0)
-                        countMarker = String.Format(" ({0} шт)", count);
-                }
-
-                return new List<string> { String.Format("{0}{1}", Text, countMarker) };
+                return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
             }
 
             if (Enemies == null)
@@ -268,10 +260,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         heroHitStrength = firstHeroRoll + secondHeroRoll + hero.Mastery;
 
                         fight.Add(String.Format(
-                                "Сила {0}: {1} + {2} + {3} = {4}",
-                                (copyFight ? "удара копии" : "вашего удара"),
-                                Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll), hero.Mastery, heroHitStrength
-                        ));
+                            "Сила {0}: {1} + {2} + {3} = {4}",
+                            (copyFight ? "удара копии" : "вашего удара"),
+                            Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll), hero.Mastery, heroHitStrength));
                     }
 
                     int firstEnemyRoll = Game.Dice.Roll();
@@ -279,9 +270,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Mastery;
 
                     fight.Add(String.Format(
-                            "Сила удара врага: {0} + {1} + {2} = {3}",
-                            Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Mastery, enemyHitStrength
-                    ));
+                        "Сила удара врага: {0} + {1} + {2} = {3}",
+                        Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Mastery, enemyHitStrength));
 
                     if ((heroHitStrength > enemyHitStrength) && !attackAlready)
                     {

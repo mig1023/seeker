@@ -91,32 +91,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             Game.Healing.Add(name: "Поесть", healing: 4, portions: 3);
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character()
-            {
-                Name = this.Name,
-                MaxMastery = this.MaxMastery,
-                Mastery = this.Mastery,
-                MaxEndurance = this.MaxEndurance,
-                Endurance = this.Endurance,
-                MaxLuck = this.MaxLuck,
-                Luck = this.Luck,
-                Gold = this.Gold,
-                SpellSlots = this.SpellSlots,
-                Spells = new List<string>(),
-            };
-        }
+            Name = this.Name,
+            MaxMastery = this.MaxMastery,
+            Mastery = this.Mastery,
+            MaxEndurance = this.MaxEndurance,
+            Endurance = this.Endurance,
+            MaxLuck = this.MaxLuck,
+            Luck = this.Luck,
+            Gold = this.Gold,
+            SpellSlots = this.SpellSlots,
+            Spells = new List<string>(),
+        };
 
-        public string Save()
-        {
-            string spells = String.Join(",", Spells);
-
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}",
-                MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck, Gold, SpellSlots, spells
-            );
-        }
+        public string Save() => String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck,
+            Luck, Gold, SpellSlots, String.Join(",", Spells));
 
         public void Load(string saveLine)
         {
