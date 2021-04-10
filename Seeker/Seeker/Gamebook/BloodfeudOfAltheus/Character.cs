@@ -97,24 +97,21 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Weapons.Add("дубинка, 1, 0");
         }
 
-        public Character Clone(bool lastWound = false)
+        public Character Clone(bool lastWound = false) => new Character()
         {
-            return new Character() {
+            Name = this.Name,
+            Strength = this.Strength,
+            Defence = this.Defence,
+            Glory = this.Glory,
+            Shame = this.Shame,
+            Resurrection = this.Resurrection,
+            BroochResurrection = this.Resurrection,
+            Patron = this.Patron,
+            NoIntuitiveSolutionPenalty = this.NoIntuitiveSolutionPenalty,
+            Ichor = this.Ichor,
 
-                Name = this.Name,
-                Strength = this.Strength,
-                Defence = this.Defence,
-                Glory = this.Glory,
-                Shame = this.Shame,
-                Resurrection = this.Resurrection,
-                BroochResurrection = this.Resurrection,
-                Patron = this.Patron,
-                NoIntuitiveSolutionPenalty = this.NoIntuitiveSolutionPenalty,
-                Ichor = this.Ichor,
-
-                Health = (lastWound ? 1 : 3),
-            };
-        }
+            Health = (lastWound ? 1 : 3),
+        };
 
         public string Save()
         {
@@ -123,11 +120,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             string favor = String.Join(":", FavorOfTheGods);
             string disfavor = String.Join(":", DisfavorOfTheGods);
 
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}",
-                Strength, Defence, Glory, Shame, armours, weapons, Patron, NoIntuitiveSolutionPenalty, Resurrection,
-                favor, disfavor, BroochResurrection, Ichor
-            );
+            return String.Join("|", Strength, Defence, Glory, Shame, armours, weapons, Patron,
+                NoIntuitiveSolutionPenalty, Resurrection, favor, disfavor, BroochResurrection, Ichor);
         }
 
         public void Load(string saveLine)
@@ -173,6 +167,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         }
 
         public bool IsGodsFavor(string godName) => FavorOfTheGods.Contains(godName);
+
         public bool IsGodsDisFavor(string godName) => DisfavorOfTheGods.Contains(godName);
 
         public void AddWeapons(string weapon) => Weapons.Add(weapon);
@@ -187,12 +182,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             {
                 string[] weaponParams = weapon.Split(',');
 
-                if (strength < int.Parse(weaponParams[1]))
-                {
-                    name = weaponParams[0];
-                    strength = int.Parse(weaponParams[1]);
-                    defence = int.Parse(weaponParams[2]);
-                }
+                if (strength >= int.Parse(weaponParams[1]))
+                    continue;
+
+                name = weaponParams[0];
+                strength = int.Parse(weaponParams[1]);
+                defence = int.Parse(weaponParams[2]);
             }
         }
 

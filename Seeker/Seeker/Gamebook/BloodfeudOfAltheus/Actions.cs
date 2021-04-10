@@ -68,10 +68,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             statusLines.Add(String.Format("Оружие: {0} (сила {1}, защита {2})", name, strength, defence));
             statusLines.Add(String.Format("Покровитель: {0}", Character.Protagonist.Patron));
 
-            if (statusLines.Count <= 0)
-                return null;
-
-            return statusLines;
+            return (statusLines.Count > 0 ? statusLines : null);
         }
 
         public List<string> StaticButtons()
@@ -205,8 +202,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             int difference = hero.Glory - hero.Shame;
 
             diceCheck.Add(String.Format("Разница между Славой и Позором: {0} - {1} = {2}", hero.Glory, hero.Shame, difference));
-
-
             diceCheck.Add(sum > difference ? "BIG|BAD|БОЛЬШЕ или РАВНО :(" : "BIG|GOOD|МЕНЬШЕ :)");
 
             return diceCheck;
@@ -270,7 +265,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (dice >= 4)
             {
                 Character.Protagonist.Ichor += 1;
-
                 roll.Add("BIG|GOOD|Вам удалось :)");
             }
             else
@@ -423,12 +417,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     racing.Add(String.Empty);
 
                     if (YourRacing)
-                        racing.Add(
-                            winner == 2 ? "BIG|RED|Вы ПОБЕДИЛИ, Красная команда пришла первой! :)" :
-                            String.Format("BIG|{0}Вы проиграли, победила {0} команда :(", teamsColor[winner], names[winner])
-                        );
+                    {
+                        string other = String.Format("BIG|{0}Вы проиграли, победила {0} команда :(", teamsColor[winner], names[winner]);
+                        racing.Add(winner == 2 ? "BIG|RED|Вы ПОБЕДИЛИ, Красная команда пришла первой! :)" : other);
+                    }
                     else
                         racing.Add(String.Format("BIG|{0}Гонка окончена, {1} команда победила!", teamsColor[winner], names[winner]));
+
                     return racing;
                 }
                 else
@@ -499,14 +494,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public List<string> Fight()
         {
-            Dictionary<int, string> healthLine = new Dictionary<int, string>
-            {
-                [0] = "мертв",
-                [1] = "тяжело ранен",
-                [2] = "ранен",
-                [3] = "здоров",
-            };
-
             List<string> fight = new List<string>();
 
             List<Character> FightEnemies = new List<Character>();
@@ -542,11 +529,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                         fight.Add(String.Format(
                             "Противник теряет 3 Силы и 3 Защиты из-за вытекающего ихора! Теперь его Сила равна {0}, а Защита - {1}!",
-                            enemy.Strength, enemy.Defence
-                        ));
+                            enemy.Strength, enemy.Defence));
                     }
 
-                    fight.Add(String.Format("Вы: {0}ы, {1}: {2}", healthLine[hero.Health], enemy.Name, healthLine[enemy.Health]));
+                    fight.Add(String.Format("Вы: {0}ы, {1}: {2}",
+                        Constants.HealthLine()[hero.Health], enemy.Name, Constants.HealthLine()[enemy.Health]));
 
                     int protagonistRollFirst = Game.Dice.Roll();
                     int protagonistRollSecond = 0;

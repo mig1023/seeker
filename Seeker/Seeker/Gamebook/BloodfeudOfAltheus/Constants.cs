@@ -44,5 +44,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1 };
 
         public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
+
+        public static Dictionary<int, string> HealthLine() => new Dictionary<int, string>
+        {
+            [0] = "мертв",
+            [1] = "тяжело ранен",
+            [2] = "ранен",
+            [3] = "здоров",
+        };
     }
 }
