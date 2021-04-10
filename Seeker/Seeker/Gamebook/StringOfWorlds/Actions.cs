@@ -90,14 +90,19 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             if (option.Contains("БЛАСТЕР >="))
                 return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Blaster;
+
             else if (option.Contains("БЛАСТЕР <"))
                 return int.Parse(option.Split('<')[1]) > Character.Protagonist.Blaster;
+
             else if (option.Contains("ОЧКИ"))
                 return Character.Protagonist.Equipment == "Очки";
+
             else if (option.Contains("ЗАЖИГАЛКА"))
                 return Character.Protagonist.Equipment == "Зажигалка";
+
             else if (option.Contains("!") && (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim())))
                 return false;
+
             else
                 return Game.Data.Triggers.Contains(option);
         }
@@ -120,27 +125,10 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         private string LuckNumbers()
         {
-            Dictionary<int, string> luckList = new Dictionary<int, string>
-            {
-                [1] = "①",
-                [2] = "②",
-                [3] = "③",
-                [4] = "④",
-                [5] = "⑤",
-                [6] = "⑥",
-
-                [11] = "❶",
-                [12] = "❷",
-                [13] = "❸",
-                [14] = "❹",
-                [15] = "❺",
-                [16] = "❻",
-            };
-
             string luckListShow = String.Empty;
 
             for (int i = 1; i < 7; i++)
-                luckListShow += (Character.Protagonist.Luck[i] ? luckList[i] : luckList[i + 10]) + " ";
+                luckListShow += String.Format("{0} ", Character.Protagonist.Luck[i] ? Constants.LuckList()[i] : Constants.LuckList()[i + 10]);
 
             return luckListShow;
         }
@@ -156,8 +144,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             int goodLuck = Game.Dice.Roll();
 
             luckCheck.Add(String.Format("Проверка удачи: {0} - {1}зачёркунтый",
-                Game.Dice.Symbol(goodLuck), (Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty)
-            ));
+                Game.Dice.Symbol(goodLuck), (Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty)));
 
             luckCheck.Add(Character.Protagonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
@@ -200,8 +187,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             List<string> luckCheck = new List<string> { String.Format(
                 "Проверка обаяния: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodCharm ? "<=" : ">"), Character.Protagonist.Charm
-            ) };
+                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodCharm ? "<=" : ">"), Character.Protagonist.Charm) };
 
             if (goodCharm)
             {
@@ -233,8 +219,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             List<string> luckCheck = new List<string> { String.Format(
                 "Проверка ловкости: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), Character.Protagonist.Skill
-            ) };
+                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), Character.Protagonist.Skill) };
 
             luckCheck.Add(goodSkill ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
@@ -316,8 +301,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
                 breakingDoor.Add(String.Format(
                     "Удар: {0} + {1} = {2}",
-                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), result
-                ));
+                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), result));
             }
 
             breakingDoor.Add(succesBreaked ? "BIG|GOOD|ДВЕРЬ ВЗЛОМАНА :)" : "BIG|BAD|ВЫ УБИЛИСЬ ОБ ДВЕРЬ :(");
@@ -351,9 +335,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
-            int round = 1;
-
-            int skillPenalty = 0;
+            int round = 1, skillPenalty = 0;
 
             if (DarknessPenalty && (Character.Protagonist.Equipment != "Очки"))
                 skillPenalty += 1;
@@ -382,8 +364,8 @@ namespace Seeker.Gamebook.StringOfWorlds
                         protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + heroSkill;
 
                         fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
-                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), heroSkill, protagonistHitStrength
-                        ));
+                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
+                            heroSkill, protagonistHitStrength));
                     }
 
                     int enemyRollFirst = Game.Dice.Roll();
@@ -391,8 +373,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
 
                     fight.Add(String.Format("Мощность его удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Skill, enemyHitStrength
-                    ));
+                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Skill, enemyHitStrength));
 
                     if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
                     {

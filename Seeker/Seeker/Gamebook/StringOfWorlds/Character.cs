@@ -63,58 +63,13 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public void Init()
         {
-            Dictionary<int, int> Skills = new Dictionary<int, int>
-            {
-                [2] = 8,
-                [3] = 10,
-                [4] = 12,
-                [5] = 9,
-                [6] = 11,
-                [7] = 9,
-                [8] = 10,
-                [9] = 8,
-                [10] = 9,
-                [11] = 10,
-                [12] = 11
-            };
-
-            Dictionary<int, int> Strengths = new Dictionary<int, int>
-            {
-                [2] = 22,
-                [3] = 20,
-                [4] = 16,
-                [5] = 18,
-                [6] = 20,
-                [7] = 20,
-                [8] = 16,
-                [9] = 24,
-                [10] = 22,
-                [11] = 18,
-                [12] = 20
-            };
-
-            Dictionary<int, int> Charms = new Dictionary<int, int>
-            {
-                [2] = 8,
-                [3] = 6,
-                [4] = 5,
-                [5] = 8,
-                [6] = 6,
-                [7] = 7,
-                [8] = 7,
-                [9] = 7,
-                [10] = 6,
-                [11] = 7,
-                [12] = 5
-            };
-
             int dice = Game.Dice.Roll(dices: 2);
 
-            MaxSkill = Skills[dice];
+            MaxSkill = Constants.Skills()[dice];
             Skill = MaxSkill;
-            MaxStrength = Strengths[dice];
+            MaxStrength = Constants.Strengths()[dice];
             Strength = MaxStrength;
-            Charm = Charms[dice];
+            Charm = Constants.Charms()[dice];
 
             Blaster = 1;
             GateCode = 0;
@@ -134,21 +89,18 @@ namespace Seeker.Gamebook.StringOfWorlds
                 Luck[Game.Dice.Roll()] = false;
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character()
-            {
-                Name = this.Name,
-                MaxSkill = this.MaxSkill,
-                Skill = this.Skill,
-                MaxStrength = this.MaxStrength,
-                Strength = this.Strength,
-                Charm = this.Charm,
-                Blaster = this.Blaster,
-                GateCode = this.GateCode,
-                Equipment = this.Equipment,
-            };
-        }
+            Name = this.Name,
+            MaxSkill = this.MaxSkill,
+            Skill = this.Skill,
+            MaxStrength = this.MaxStrength,
+            Strength = this.Strength,
+            Charm = this.Charm,
+            Blaster = this.Blaster,
+            GateCode = this.GateCode,
+            Equipment = this.Equipment,
+        };
 
         public string Save()
         {
@@ -157,11 +109,8 @@ namespace Seeker.Gamebook.StringOfWorlds
             foreach (bool luck in Luck.Values.ToList())
                 lucks.Add(luck ? "1" : "0");
 
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}",
-                MaxSkill, Skill, MaxStrength, Strength, Charm, Blaster, GateCode,
-                Equipment, String.Join(",", lucks)
-            );
+            return String.Format("|", MaxSkill, Skill, MaxStrength, Strength, Charm,
+                Blaster, GateCode, Equipment, String.Join(",", lucks));
         }
 
         public void Load(string saveLine)
