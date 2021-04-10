@@ -98,36 +98,26 @@ namespace Seeker.Gamebook.SwampFever
             LiveMucus = 0;
         }
 
-        public Character Clone()
-        {
-            return new Character() {
-                Name = this.Name,
-                Fury = this.Fury,
-                Creds = this.Creds,
-                Stigon = this.Stigon,
-                Rate = this.Rate,
-                Hitpoints = this.Hitpoints,
-                SecondEngine = this.SecondEngine,
-                Stealth = this.Stealth,
-                Radar = this.Radar,
-                CircularSaw = this.CircularSaw,
-                Flamethrower = this.Flamethrower,
-                PlasmaCannon = this.PlasmaCannon,
-                Harmonizer = this.Harmonizer,
-                AcousticMembrane = this.AcousticMembrane,
-                LiveMucus = this.LiveMucus,
-            };
-        }
+        public Character Clone() => new Character() {
+            Name = this.Name,
+            Fury = this.Fury,
+            Creds = this.Creds,
+            Stigon = this.Stigon,
+            Rate = this.Rate,
+            Hitpoints = this.Hitpoints,
+            SecondEngine = this.SecondEngine,
+            Stealth = this.Stealth,
+            Radar = this.Radar,
+            CircularSaw = this.CircularSaw,
+            Flamethrower = this.Flamethrower,
+            PlasmaCannon = this.PlasmaCannon,
+            Harmonizer = this.Harmonizer,
+            AcousticMembrane = this.AcousticMembrane,
+            LiveMucus = this.LiveMucus,
+        };
 
-        public string Save()
-        {
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}|{13}",
-                Fury, Creds, Stigon, Rate, Hitpoints, SecondEngine, Stealth,
-                Radar, CircularSaw, Flamethrower, PlasmaCannon, Harmonizer,
-                AcousticMembrane, LiveMucus
-            );
-        }
+        public string Save() => String.Format("|", Fury, Creds, Stigon, Rate, Hitpoints, SecondEngine, Stealth, Radar,
+                CircularSaw, Flamethrower, PlasmaCannon, Harmonizer, AcousticMembrane, LiveMucus);
 
         public void Load(string saveLine)
         {
