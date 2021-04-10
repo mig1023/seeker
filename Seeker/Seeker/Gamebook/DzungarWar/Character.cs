@@ -126,34 +126,25 @@ namespace Seeker.Gamebook.DzungarWar
             Brother = 0;
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character()
-            {
-                Strength = this.Strength,
-                Skill = this.Skill,
-                Wisdom = this.Wisdom,
-                Cunning = this.Cunning,
-                Oratory = this.Oratory,
-                Danger = this.Danger,
-                Favour = this.Favour,
-                Tincture = this.Tincture,
-                Ginseng = this.Ginseng,
-                Tanga = this.Tanga,
-                StatBonuses = this.StatBonuses,
-                MaxBonus = this.MaxBonus,
-                Brother = this.Brother,
-            };
-        }
+            Strength = this.Strength,
+            Skill = this.Skill,
+            Wisdom = this.Wisdom,
+            Cunning = this.Cunning,
+            Oratory = this.Oratory,
+            Danger = this.Danger,
+            Favour = this.Favour,
+            Tincture = this.Tincture,
+            Ginseng = this.Ginseng,
+            Tanga = this.Tanga,
+            StatBonuses = this.StatBonuses,
+            MaxBonus = this.MaxBonus,
+            Brother = this.Brother,
+        };
 
-        public string Save()
-        {
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}",
-                Strength, Skill, Wisdom, Cunning, Oratory, Danger, Favour,
-                Tanga, StatBonuses, MaxBonus, Brother, Tincture, Ginseng
-            );
-        }
+        public string Save() => String.Format("|", Strength, Skill, Wisdom, Cunning, Oratory,
+            Danger, Favour, Tanga, StatBonuses, MaxBonus, Brother, Tincture, Ginseng);
 
         public void Load(string saveLine)
         {

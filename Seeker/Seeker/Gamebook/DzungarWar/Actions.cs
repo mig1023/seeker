@@ -27,17 +27,6 @@ namespace Seeker.Gamebook.DzungarWar
         static bool NextTestWithTincture = false;
         static bool NextTestWithGinseng = false;
 
-
-        Dictionary<string, string> statNames = new Dictionary<string, string>
-        {
-            ["Strength"] = "силы",
-            ["Skill"] = "ловкости",
-            ["Wisdom"] = "мудрости",
-            ["Cunning"] = "хитрости",
-            ["Oratory"] = "красноречия",
-            ["Danger"] = "опасности",
-        };
-
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
             if (trigger)
@@ -93,10 +82,14 @@ namespace Seeker.Gamebook.DzungarWar
         {
             if (ActionName == "TestAll")
                 return new List<string> { String.Format("Проверить по совокупному уровню {0}", Level) };
+
             else if (Level > 0)
-                return new List<string> { String.Format("Проверка {0}, уровень {1}", statNames[Stat], TestLevelWithPenalty(Level, out List<string> _)) };
+                return new List<string> { String.Format("Проверка {0}, уровень {1}",
+                    Constants.StatNames()[Stat], TestLevelWithPenalty(Level, out List<string> _)) };
+
             else if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
+
             else
                 return new List<string> { };
         }
@@ -296,7 +289,8 @@ namespace Seeker.Gamebook.DzungarWar
 
             resultLine.Add( String.Format(
                 "Проверка {0}: {1} + {2} + {3} {4} {5}",
-                statNames[stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), currentStat, (result ? ">=" : "<"), level
+                Constants.StatNames()[stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
+                currentStat, (result ? ">=" : "<"), level
             ));
         }
 

@@ -42,5 +42,15 @@ namespace Seeker.Gamebook.DzungarWar
         public double? GetLineHeight() => null;
 
         public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 660 };
+
+        public static Dictionary<string, string> StatNames() => new Dictionary<string, string>
+        {
+            ["Strength"] = "силы",
+            ["Skill"] = "ловкости",
+            ["Wisdom"] = "мудрости",
+            ["Cunning"] = "хитрости",
+            ["Oratory"] = "красноречия",
+            ["Danger"] = "опасности",
+        };
     }
 }
