@@ -53,42 +53,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public void Init()
         {
-            Dictionary<int, int> Masterys = new Dictionary<int, int>
-            {
-                [2] = 8,
-                [3] = 10,
-                [4] = 12,
-                [5] = 9,
-                [6] = 11,
-                [7] = 9,
-                [8] = 10,
-                [9] = 8,
-                [10] = 9,
-                [11] = 10,
-                [12] = 11
-            };
-
-            Dictionary<int, int> Endurances = new Dictionary<int, int>
-            {
-                [2] = 22,
-                [3] = 20,
-                [4] = 16,
-                [5] = 18,
-                [6] = 20,
-                [7] = 20,
-                [8] = 16,
-                [9] = 24,
-                [10] = 22,
-                [11] = 18,
-                [12] = 20
-            };
-
             int dice = Game.Dice.Roll(dices: 2);
 
             Name = "Главный герой";
-            MaxMastery = Masterys[dice];
+            MaxMastery = Constants.Masterys()[dice];
             Mastery = MaxMastery;
-            MaxEndurance = Endurances[dice];
+            MaxEndurance = Constants.Endurances()[dice];
             Endurance = MaxEndurance;
             Gold = 15;
 
@@ -106,21 +76,18 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 Luck[Game.Dice.Roll()] = false;
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character()
-            {
-                Name = this.Name,
-                MaxMastery = this.MaxMastery,
-                Mastery = this.Mastery,
-                MaxEndurance = this.MaxEndurance,
-                Endurance = this.Endurance,
-                Gold = this.Gold,
-                ExtendedDamage = this.ExtendedDamage,
-                MasteryDamage = this.MasteryDamage,
-                SeaArmour = this.SeaArmour,
-            };
-        }
+            Name = this.Name,
+            MaxMastery = this.MaxMastery,
+            Mastery = this.Mastery,
+            MaxEndurance = this.MaxEndurance,
+            Endurance = this.Endurance,
+            Gold = this.Gold,
+            ExtendedDamage = this.ExtendedDamage,
+            MasteryDamage = this.MasteryDamage,
+            SeaArmour = this.SeaArmour,
+        };
 
         public Character SetEndurance()
         {
@@ -135,10 +102,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             EnduranceLoss[this.Name] = this.Endurance;
         }
 
-        public int GetEndurance()
-        {
-            return (EnduranceLoss.ContainsKey(this.Name) ? EnduranceLoss[this.Name] : this.Endurance);
-        }
+        public int GetEndurance() => (EnduranceLoss.ContainsKey(this.Name) ? EnduranceLoss[this.Name] : this.Endurance);
 
         public string Save()
         {
@@ -147,11 +111,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             foreach(bool luck in Luck.Values.ToList())
                 lucks.Add(luck ? "1" : "0");
 
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}",
-                MaxMastery, Mastery, MaxEndurance, Endurance, Gold, ExtendedDamage, MasteryDamage,
-                (SeaArmour ? 1 : 0), String.Join(",", lucks)
-            );
+            return String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, Gold, ExtendedDamage, MasteryDamage,
+                (SeaArmour ? 1 : 0), String.Join(",", lucks));
         }
 
         public void Load(string saveLine)

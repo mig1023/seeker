@@ -87,11 +87,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             List<string> enemies = new List<string>();
 
             if (ActionName == "Get")
-            {
-                string countMarker = String.Empty;
-
-                return new List<string> { String.Format("{0}{1}", Text, countMarker) };
-            }
+                return new List<string> { Text };
 
             if (Enemies == null)
                 return enemies;
@@ -127,10 +123,10 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     Character.Protagonist.Endurance -= 1;
 
                 string result = (succesBreaked ? "удачный, дверь поддалась!" : "неудачный, -1 сила" );
+
                 breakingDoor.Add(String.Format(
                     "Удар: {0} + {1} = {2}",
-                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), result
-                ));
+                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), result));
             }
 
             breakingDoor.Add(succesBreaked ? "BIG|GOOD|ДВЕРЬ ВЗЛОМАНА :)" : "BIG|BAD|ВЫ УБИЛИСЬ ОБ ДВЕРЬ :(");
@@ -140,29 +136,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public List<string> Luck()
         {
-            Dictionary<int, string> luckList = new Dictionary<int, string>
-            {
-                [1] = "①",
-                [2] = "②",
-                [3] = "③",
-                [4] = "④",
-                [5] = "⑤",
-                [6] = "⑥",
-
-                [11] = "❶",
-                [12] = "❷",
-                [13] = "❸",
-                [14] = "❹",
-                [15] = "❺",
-                [16] = "❻",
-            };
-
             List<string> luckCheck = new List<string> { "Квадраты удачи:" };
 
             string luckListShow = String.Empty;
 
             for (int i = 1; i < 7; i++)
-                luckListShow += (Character.Protagonist.Luck[i] ? luckList[i] : luckList[i + 10]) + " ";
+                luckListShow += String.Format("{0} ", Character.Protagonist.Luck[i] ? Constants.LuckList()[i] : Constants.LuckList()[i + 10]);
 
             luckCheck.Add("BIG|" + luckListShow);
 
@@ -170,8 +149,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             luckCheck.Add(String.Format(
                 "Проверка удачи: {0} - {1}зачёркунтый",
-                Game.Dice.Symbol(goodLuck), (Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty)
-            ));
+                Game.Dice.Symbol(goodLuck), (Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty)));
 
             luckCheck.Add(Character.Protagonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
             
@@ -189,21 +167,18 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             return new List<string> { String.Format(
                 "BIG|Бросок: {0} + {1} = {2}",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (firstDice + secondDice)
-            ) };
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (firstDice + secondDice)) };
         }
 
         public List<string> Mastery()
         {
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
-
             bool goodMastery = (firstDice + secondDice) <= Character.Protagonist.Mastery;
 
             List<string> masteryCheck = new List<string> { String.Format(
                 "Проверка мастерства: {0} + {1} {2} {3} мастерство",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodMastery ? "<=" : ">"), Character.Protagonist.Mastery
-            ) };
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodMastery ? "<=" : ">"), Character.Protagonist.Mastery) };
 
             masteryCheck.Add(goodMastery ? "BIG|GOOD|МАСТЕРСТВА ХВАТИЛО :)" : "BIG|BAD|МАСТЕРСТВА НЕ ХВАТИЛО :(");
 
@@ -278,27 +253,20 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             secondAllyRoll = Game.Dice.Roll();
                             allyHitStrength = firstAllyRoll + secondAllyRoll + (ally.Mastery - MasteryPenalty);
 
-                            fight.Add(
-                                String.Format(
-                                    "{0} мощность удара: {1} + {2} + {3} = {4}",
-                                    (IsHero(ally.Name) ? "Ваша" : String.Format("{0} -", ally.Name)),
-                                    Game.Dice.Symbol(firstAllyRoll), Game.Dice.Symbol(secondAllyRoll), ally.Mastery, allyHitStrength
-                                )
-                            );
+                            fight.Add(String.Format(
+                                "{0} мощность удара: {1} + {2} + {3} = {4}",
+                                (IsHero(ally.Name) ? "Ваша" : String.Format("{0} -", ally.Name)),
+                                Game.Dice.Symbol(firstAllyRoll), Game.Dice.Symbol(secondAllyRoll), ally.Mastery, allyHitStrength));
                         }
-                        
 
                         int firstEnemyRoll = Game.Dice.Roll();
                         int secondEnemyRoll = Game.Dice.Roll();
                         int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Mastery;
 
-                        fight.Add(
-                            String.Format(
-                                "{0} мощность удара: {1} + {2} + {3} = {4}",
-                                (GroupFight ? String.Format("{0} -", enemy.Name) : "Его"),
-                                Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Mastery, enemyHitStrength
-                            )
-                        );
+                        fight.Add(String.Format(
+                            "{0} мощность удара: {1} + {2} + {3} = {4}",
+                            (GroupFight ? String.Format("{0} -", enemy.Name) : "Его"),
+                            Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Mastery, enemyHitStrength));
 
                         if ((allyHitStrength > enemyHitStrength) && !attackAlready)
                         {
@@ -309,9 +277,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 fight.Add(String.Format("GOOD|{0} ранен", (GroupFight ? enemy.Name : "Он")));
                                 enemy.Endurance -= 2 + ally.ExtendedDamage;
                                 enemy.Mastery -= ally.MasteryDamage;
-
-                                if (enemy.Endurance <= 0)
-                                    enemy.Endurance = 0;
 
                                 enemy.SaveEndurance();
 
@@ -326,7 +291,10 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                                 {
                                     fight.Add(String.Empty);
-                                    fight.Add(String.Format("BIG|GOOD|{0} :)", (GroupFight && !IsHero(ally.Name) ? ally.Name + " ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ")));
+
+                                    fight.Add(String.Format("BIG|GOOD|{0} :)",
+                                        (GroupFight && !IsHero(ally.Name) ? ally.Name + " ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ")));
+
                                     return fight;
                                 }
                             }
@@ -341,9 +309,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             ally.Endurance -= 2 + enemy.ExtendedDamage;
                             ally.Mastery -= enemy.MasteryDamage;
 
-                            if (ally.Endurance < 0)
-                                ally.Endurance = 0;
-
                             ally.SaveEndurance();
 
                             bool allyLost = true;
@@ -355,7 +320,10 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             if (allyLost)
                             {
                                 fight.Add(String.Empty);
-                                fight.Add(String.Format("BIG|BAD|{0} :(", (IsHero(ally.Name) ? "ВЫ ПРОИГРАЛИ" : String.Format("{0} ПРОИГРАЛ", ally.Name))));
+
+                                fight.Add(String.Format("BIG|BAD|{0} :(",
+                                    (IsHero(ally.Name) ? "ВЫ ПРОИГРАЛИ" : String.Format("{0} ПРОИГРАЛ", ally.Name))));
+
                                 return fight;
                             }
                         }
