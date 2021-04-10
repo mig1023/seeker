@@ -30,7 +30,7 @@ namespace Seeker.Gamebook.ThreePaths
         public List<string> Status()
         {
             if (Character.Protagonist.Time != null)
-                return new List<string> { String.Format("Время: {0}", Character.Protagonist.Time) };
+                return new List<string> { String.Format("Время: {0:d2}:00", Character.Protagonist.Time) };
             else
                 return null;
         }

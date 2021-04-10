@@ -21,21 +21,13 @@ namespace Seeker.Gamebook.ThreePaths
             Spells = new List<string>();
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character()
-            {
-                Time = this.Time,
-                Spells = new List<string>(),
-            };
-        }
+            Time = this.Time,
+            Spells = new List<string>(),
+        };
 
-        public string Save()
-        {
-            string spells = String.Join(",", Spells);
-
-            return String.Format("{0}|{1}|{2}", Time, SpellSlots, spells);
-        }
+        public string Save() => String.Join("|", Time, SpellSlots, String.Join(",", Spells));
 
         public void Load(string saveLine)
         {
