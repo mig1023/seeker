@@ -163,33 +163,25 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Game.Healing.Add(name: "Поесть", healing: 4, portions: 3);
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character() {
-                Name = this.Name,
-                MaxMastery = this.MaxMastery,
-                Mastery = this.Mastery,
-                MaxEndurance = this.MaxEndurance,
-                Endurance = this.Endurance,
-                MaxLuck = this.MaxLuck,
-                Luck = this.Luck,
-                Change = this.Change,
-                Anxiety = this.Anxiety,
-                Gold = this.Gold,
-                Crossbow = this.Crossbow,
-                Gun = this.Gun,
-                SilverDaggers = this.SilverDaggers,
-            };
-        }
+            Name = this.Name,
+            MaxMastery = this.MaxMastery,
+            Mastery = this.Mastery,
+            MaxEndurance = this.MaxEndurance,
+            Endurance = this.Endurance,
+            MaxLuck = this.MaxLuck,
+            Luck = this.Luck,
+            Change = this.Change,
+            Anxiety = this.Anxiety,
+            Gold = this.Gold,
+            Crossbow = this.Crossbow,
+            Gun = this.Gun,
+            SilverDaggers = this.SilverDaggers,
+        };
 
-        public string Save()
-        {
-            return String.Format(
-                "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}",
-                MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck, Change, Gold,
-                WayBack, Anxiety, Crossbow, Gun, SilverDaggers
-            );
-        }
+        public string Save() => String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck,
+                Change, Gold, WayBack, Anxiety, Crossbow, Gun, SilverDaggers);
 
         public void Load(string saveLine)
         {
