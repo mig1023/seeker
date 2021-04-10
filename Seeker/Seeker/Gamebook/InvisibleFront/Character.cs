@@ -20,19 +20,13 @@ namespace Seeker.Gamebook.InvisibleFront
             Recruitment = 0;
         }
 
-        public Character Clone()
+        public Character Clone() => new Character()
         {
-            return new Character()
-            {
-                Dissatisfaction = this.Dissatisfaction,
-                Recruitment = this.Recruitment,
-            };
-        }
+            Dissatisfaction = this.Dissatisfaction,
+            Recruitment = this.Recruitment,
+        };
 
-        public string Save()
-        {
-            return String.Format("{0}|{1}", Dissatisfaction, Recruitment);
-        }
+        public string Save() => String.Join("|", Dissatisfaction, Recruitment);
 
         public void Load(string saveLine)
         {
