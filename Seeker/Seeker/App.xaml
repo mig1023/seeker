@@ -15,5 +15,8 @@
         <OnPlatform x:TypeArguments="x:String" x:Key="RobotoFont">
             <On Platform="Android" Value="Fonts/Roboto-Thin.ttf#Roboto-Thin" />
         </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="RusMadeInChina">
+            <On Platform="Android" Value="Fonts/RusMadeInChina.ttf#RUSMadeinChina" />
+        </OnPlatform>
     </Application.Resources>
 </Application>

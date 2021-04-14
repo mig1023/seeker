@@ -27,7 +27,10 @@ namespace Seeker.Gamebook.LastHokku
             return (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
         }
 
-        public string GetFont() => String.Empty;
+        public string GetFont()
+        {
+            return (Character.Protagonist.Created >= 1 ? "RusMadeInChina" : String.Empty);
+        }
 
         public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
 
