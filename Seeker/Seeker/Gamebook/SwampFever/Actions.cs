@@ -292,21 +292,28 @@ namespace Seeker.Gamebook.SwampFever
 
                         while (roundResult == 0)
                         {
+                            string bonuses = String.Empty;
+
                             int myDice = Game.Dice.Roll();
                             int myBonus = CountInCombination(myCombination, range);
                             int myAttack = myDice + myBonus;
 
-                            fight.Add(String.Format("Ваша атака: {0}, +{1} за {2}-ки, итого {3}",
-                                Game.Dice.Symbol(myDice), myBonus, range, myAttack
-                            ));
+                            if (myBonus > 0)
+                                bonuses = String.Format(", +{0} за {1}-ки, итого {2}", myBonus, range, myAttack);
+
+                            fight.Add(String.Format("Ваша атака: {0}{1}", Game.Dice.Symbol(myDice), bonuses));
+
+                            bonuses = String.Empty;
 
                             int enemyDice = Game.Dice.Roll();
                             int enemyBonus = CountInCombination(enemyCombination, range);
                             int enemyAttack = enemyDice + enemyBonus;
 
-                            fight.Add(String.Format("Атака противника: {0}, +{1} за {2}-ки, итого {3}",
-                                Game.Dice.Symbol(enemyDice), enemyBonus, range, enemyAttack
-                            ));
+                            if (enemyBonus > 0)
+                                bonuses = String.Format(", +{0} за {1}-ки, итого {2}", enemyBonus, range, enemyAttack);
+
+
+                            fight.Add(String.Format("Атака противника: {0}{1}", Game.Dice.Symbol(enemyDice), bonuses));
 
                             if ((myAttack > enemyAttack) && (range == 4))
                             {
@@ -340,14 +347,22 @@ namespace Seeker.Gamebook.SwampFever
 
                     if (roundResult == 1)
                     {
+                        string bonuses = String.Empty, penalties = String.Empty;
+
                         int myDice = Game.Dice.Roll();
                         int myBonus = CountInCombination(myCombination, 3);
                         int myPenalty = CountInCombination(enemyCombination, 2);
                         int enemyEvasion = myDice + myBonus - myPenalty;
 
+                        if (myBonus > 0)
+                            bonuses = String.Format(", +{0} за ваши 3-ки", myBonus);
+
+                        if (myPenalty > 0)
+                            penalties = String.Format(", -{0} за его 2-ки", myPenalty);
+
                         fight.Add(String.Format(
-                            "Противник пытется уклониться: {0}, +{1} за ваши 3-ки, -{2} за его 2-ки, итого {3} - {4} порогового значения в 2",
-                            Game.Dice.Symbol(myDice), myBonus, myPenalty, enemyEvasion, (enemyEvasion > 2 ? "больше" : "меньше или равно")
+                            "Противник пытется уклониться: {0}{1}{2}, итого {3} - {4} порогового значения в 2",
+                            Game.Dice.Symbol(myDice), bonuses, penalties, enemyEvasion, (enemyEvasion > 2 ? "больше" : "меньше или равно")
                         ));
 
                         if (enemyEvasion > 2)
@@ -376,13 +391,22 @@ namespace Seeker.Gamebook.SwampFever
                     }
                     else if (roundResult == -1)
                     {
+                        string bonuses = String.Empty, penalties = String.Empty;
+
                         int enemyDice = Game.Dice.Roll();
                         int enemyBonus = CountInCombination(enemyCombination, 3);
                         int enemyPenalty = CountInCombination(myCombination, 2);
                         int myEvasion = enemyDice + enemyBonus - enemyPenalty;
+
+                        if (enemyBonus > 0)
+                            bonuses = String.Format(", +{0} за его 3-ки", enemyBonus);
+
+                        if (enemyPenalty > 0)
+                            penalties = String.Format(", -{0} за ваши 2-ки", enemyPenalty);
+
                         fight.Add(String.Format(
-                            "Вы пытется уклониться: {0}, +{1} за его 3ки, -{2} за ваши 2-ки, итого {3} - {4} порогового значения 2",
-                            Game.Dice.Symbol(enemyDice), enemyBonus, enemyPenalty, myEvasion, (myEvasion > 2 ? "больше" : "меньше или равно")
+                            "Вы пытется уклониться: {0}{1}{2}, итого {3} - {4} порогового значения 2",
+                            Game.Dice.Symbol(enemyDice), bonuses, penalties, myEvasion, (myEvasion > 2 ? "больше" : "меньше или равно")
                         ));
 
                         if (myEvasion > 2)
