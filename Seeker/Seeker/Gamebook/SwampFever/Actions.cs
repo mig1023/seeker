@@ -235,6 +235,7 @@ namespace Seeker.Gamebook.SwampFever
                     fight.Add("BOLD|МАНЕВРИРОВАНИЕ");
 
                     int maneuvers = CountInCombination(myCombination, 1);
+                    bool failManeuvers = true;
 
                     foreach (int dice in new int[] { 6, 5, 4 })
                         for (int i = 0; i < enemyCombination.Count; i++)
@@ -243,7 +244,11 @@ namespace Seeker.Gamebook.SwampFever
                                 fight.Add(String.Format("Убираем у противника {0}-ку за ваше маневрирование", dice));
                                 enemyCombination[i] = 0;
                                 maneuvers -= 1;
+                                failManeuvers = false;
                             }
+
+                    if (failManeuvers)
+                        fight.Add("Маневрирование ничего не дало противникам");
                 }
 
                 foreach (int range in new int[] { 6, 5, 4 })
