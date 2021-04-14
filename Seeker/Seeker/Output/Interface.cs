@@ -194,14 +194,12 @@ namespace Seeker.Output
 
         public static string TextFontFamily(bool bold = false)
         {
-            string defaultFont = String.Format("{0}{1}", "YanoneFont", (bold ? "Bold" : String.Empty));
-
             string font = String.Empty;
 
-            if (Game.Data.Constants == null)
-                font = defaultFont;
+            if ((Game.Data.Constants == null) || String.IsNullOrEmpty(Game.Data.Constants.GetFont()))
+                font = (bold ? "YanoneFontBold" : "YanoneFont");
             else
-                font = (String.IsNullOrEmpty(Game.Data.Constants.GetFont()) ? defaultFont : Game.Data.Constants.GetFont());
+                font = String.Format("{0}{1}", Game.Data.Constants.GetFont(), (bold ? "Bold" : String.Empty));
 
             var OnPlatformDic = (OnPlatform<string>)App.Current.Resources[font];
             var fontFamily = OnPlatformDic.Platforms.FirstOrDefault((arg) => arg.Platform.FirstOrDefault() == Device.RuntimePlatform).Value;
