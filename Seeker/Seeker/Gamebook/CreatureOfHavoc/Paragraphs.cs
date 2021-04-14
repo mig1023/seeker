@@ -35,7 +35,6 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 {
                     List<string> destinations = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
                     option.Destination = int.Parse(destinations[random.Next(destinations.Count())]);
-                    option.Text += "  ⚄";
                 }
 
                 if (xmlOption.Attributes["Do"] != null)
