@@ -33,7 +33,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
         }
 
-        public string GetFont() => "YanoneFont";
+        public string GetFont() => String.Empty;
 
         public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
 
