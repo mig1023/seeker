@@ -72,7 +72,6 @@ namespace Seeker.Gamebook.LastHokku
                 };
 
                 Character.Protagonist.Hokku = newHokku;
-                Character.Protagonist.Created += 1;
             }
 
             return String.Join("\n", Character.Protagonist.Hokku);

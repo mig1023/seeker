@@ -80,7 +80,6 @@
     <AndroidAsset Include="Assets\Fonts\Roboto-Thin.ttf" />
     <AndroidAsset Include="Assets\Fonts\YanoneKaffeesatz-Light.ttf" />
     <AndroidAsset Include="Assets\Fonts\YanoneKaffeesatz-Bold.ttf" />
-    <AndroidAsset Include="Assets\Fonts\RusMadeInChina.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
