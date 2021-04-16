@@ -6463,7 +6463,7 @@
 		<ID>634</ID>
 		<Text>Арбалет почти скатывается к реке по крутому склону. Дальше пути нет, но у маленькой пристани привязаны несколько лодок. Если у вас есть 3 экю, киньте их лодочнику и он отвезет вас вниз по Луаре в Орлеан, иначе же выбирайтесь обратно на дорогу.</Text>
 		<Options>
-			<Option Destination="606" Text="Вниз по Луаре в Орлеан"/>
+			<Option Destination="606" Text="Вниз по Луаре в Орлеан" Do="Ecu" Value="-300"/>
 			<Option Destination="56" Text="Обратно на дорогу"/>
 		</Options>
 	</Paragraph>
@@ -6507,7 +6507,7 @@
 		<Options>
 			<Option Destination="85" Text="В Тура"/>
 			<Option Destination="179" Text="В Париж"/>
-			<Option Destination="105" Text="До Невера"/>
+			<Option Destination="105" Text="До Невера" Do="Ecu" Value="-200"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
