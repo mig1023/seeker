@@ -59,9 +59,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                     MeritalArt = MeritalArtsParse(xmlAction["MeritalArt"]),
                     Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
-
-                    Benefit = ModificationParse(xmlAction["Benefit"]),
                 };
+
+                if (xmlAction["Benefit"] != null)
+                {
+                    action.Benefit = new List<Modification>();
+
+                    foreach (XmlNode bonefit in xmlAction.SelectNodes("Benefit"))
+                        action.Benefit.Add(ModificationParse(bonefit));
+                }
 
                 if (xmlAction["Enemies"] != null)
                 {

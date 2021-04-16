@@ -23,7 +23,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int Price { get; set; }
         public bool Used { get; set; }
         public bool Multiple { get; set; }
-        public Modification Benefit { get; set; }
+        public List<Modification> Benefit { get; set; }
         public Character.MeritalArts? MeritalArt { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
@@ -286,7 +286,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     Used = true;
 
                 if (Benefit != null)
-                    Benefit.Do();
+                    foreach (Modification modification in Benefit)
+                        modification.Do();
             }
 
             return new List<string> { "RELOAD" };
