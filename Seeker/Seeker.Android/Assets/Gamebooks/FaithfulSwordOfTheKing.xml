@@ -161,7 +161,7 @@
 			<Modification Name="Honor" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="417" Text="Поужинать в соседний трактир" Do="Ecu" Value="-50"/>
+			<Option Destination="417" Text="Поужинать в соседний трактир" Do="Ecu" Value="-50" OnlyIf="ЭКЮ >= 50"/>
 			<Option Destination="93" Text="Искать место для ночлега"/>
 		</Options>
 	</Paragraph>
@@ -180,7 +180,7 @@
 		<ID>18</ID>
 		<Text>Если у вас есть лишние полэкю, то переночуйте в гостинице, если же нет, то лучше выехать за город и, завернувшись в плащ, постараться уснуть неподалеку от дороги.</Text>
 		<Options>
-			<Option Destination="545" Text="Переночуете в гостинице" Do="Ecu" Value="-50"/>
+			<Option Destination="545" Text="Переночуете в гостинице" Do="Ecu" Value="-50" OnlyIf="ЭКЮ >= 50"/>
 			<Option Destination="480" Text="Постараться уснуть неподалеку от дороги"/>
 		</Options>
 	</Paragraph>
@@ -1664,7 +1664,7 @@
 		<ID>168</ID>
 		<Text>Если у вас есть экю на ужин и ночлег, можете воспользоваться услугами постоялого двора. Если нет, то чем ночевать на улице, лучше уж побыстрее доехать до Тура.</Text>
 		<Options>
-			<Option Destination="43" Text="Воспользоваться услугами постоялого двора" Do="Ecu" Value="-100"/>
+			<Option Destination="43" Text="Воспользоваться услугами постоялого двора" Do="Ecu" Value="-100" OnlyIf="ЭКЮ >= 100"/>
 			<Option Destination="497" Text="Побыстрее доехать до Тура"/>
 		</Options>
 	</Paragraph>
@@ -2017,7 +2017,7 @@
 		<Options>
 			<Option Destination="362" Text="Лезть прямо в пекло"/>
 			<Option Destination="85" Text="Съездить в Тур"/>
-			<Option Destination="105" Text="Подняться по реке почти до самого Невера" Do="Ecu" Value="-200"/>
+			<Option Destination="105" Text="Подняться по реке почти до самого Невера" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2748,7 +2748,7 @@
 		<Options>
 			<Option Destination="179" Text="На Париж"/>
 			<Option Destination="85" Text="Добраться через Блуа до Тура"/>
-			<Option Destination="105" Text="Нанять лодку и подняться по Луаре до Невера" Do="Ecu" Value="-200"/>
+			<Option Destination="105" Text="Нанять лодку и подняться по Луаре до Невера" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3920,7 +3920,7 @@
 		<ID>390</ID>
 		<Text>Когда вы подплываете к Блуа, то видите, что на пристани уже стоит большой отряд солдат, держащих под уздцы взмыленных лошадей. Если вы хотите - можете отдать еще 2 экю, чтобы лодочник доставил вас в Орлеан. Если же у вас нет ни денег, ни желания высаживаться на землю, то остается только убить хозяина лодки и управлять суденышком самому.</Text>
 		<Options>
-			<Option Destination="606" Text="В Орлеан" Do="Ecu" Value="-200"/>
+			<Option Destination="606" Text="В Орлеан" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
 			<Option Destination="144" Text="Пристать к берегу"/>
 			<Option Destination="66" Text="Убить хозяина лодки"/>
 		</Options>
@@ -4378,8 +4378,8 @@
 		<ID>435</ID>
 		<Text>Решив, что все ворота охраняются, вы идете на пристань и спрашиваете у владельцев небольших лодочек, во что обойдется доехать до Блуа или до самого Орлеана. Цены следующие: до Блуа — 2 экю, до Орлеана — 5.</Text>
 		<Options>
-			<Option Destination="390" Text="До Блуа" Do="Ecu" Value="-200"/>
-			<Option Destination="530" Text="До Орлеана" Do="Ecu" Value="-500"/>
+			<Option Destination="390" Text="До Блуа" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
+			<Option Destination="530" Text="До Орлеана" Do="Ecu" Value="-500" OnlyIf="ЭКЮ >= 500"/>
 			<Option Destination="250" Text="Вернуться"/>
 		</Options>
 	</Paragraph>
@@ -4419,7 +4419,7 @@
 		<ID>439</ID>
 		<Text>Вскоре перед вами пристань, откуда можно без труда доплыть до Капденака всего за полтора экю. Так и поступите или нет?</Text>
 		<Options>
-			<Option Destination="133" Text="Так и поступите" Do="Ecu" Value="-150"/>
+			<Option Destination="133" Text="Так и поступите" Do="Ecu" Value="-150" OnlyIf="ЭКЮ >= 150"/>
 			<Option Destination="602" Text="Нет"/>
 		</Options>
 	</Paragraph>
@@ -4644,7 +4644,7 @@
 		<Options>
 			<Option Destination="477" Text="На Шатоден"/>
 			<Option Destination="596" Text="На Орлеан"/>
-			<Option Destination="606" Text="Подняться до Орлеана вверх по Луаре" Do="Ecu" Value="-200"/>
+			<Option Destination="606" Text="Подняться до Орлеана вверх по Луаре" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4766,7 +4766,7 @@
 		<Text>Как ни странно, они видели дворянина, которого вы им описываете, причем не так давно. А это значит, что в Невере могут быть уже предупреждены о вашем приезде. Поедете в город или за 2 экю спуститесь по реке до Вьерзона, а оттуда уже продолжите сухопутное путешествие?</Text>
 		<Options>
 			<Option Destination="105" Text="Поедете в город"/>
-			<Option Destination="204" Text="Спуститесь по реке до Вьерзона" Do="Ecu" Value="-200"/>
+			<Option Destination="204" Text="Спуститесь по реке до Вьерзона" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -6463,7 +6463,7 @@
 		<ID>634</ID>
 		<Text>Арбалет почти скатывается к реке по крутому склону. Дальше пути нет, но у маленькой пристани привязаны несколько лодок. Если у вас есть 3 экю, киньте их лодочнику и он отвезет вас вниз по Луаре в Орлеан, иначе же выбирайтесь обратно на дорогу.</Text>
 		<Options>
-			<Option Destination="606" Text="Вниз по Луаре в Орлеан" Do="Ecu" Value="-300"/>
+			<Option Destination="606" Text="Вниз по Луаре в Орлеан" Do="Ecu" Value="-300" OnlyIf="ЭКЮ >= 300"/>
 			<Option Destination="56" Text="Обратно на дорогу"/>
 		</Options>
 	</Paragraph>
@@ -6507,7 +6507,7 @@
 		<Options>
 			<Option Destination="85" Text="В Тура"/>
 			<Option Destination="179" Text="В Париж"/>
-			<Option Destination="105" Text="До Невера" Do="Ecu" Value="-200"/>
+			<Option Destination="105" Text="До Невера" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200" OnlyIf="ЭКЮ >= 200"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
