@@ -207,6 +207,26 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return diceWound;
         }
 
+        public List<string> DiceDoubleWound()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dices = 0;
+
+            for (int i = 1; i <= 2; i++)
+            {
+                int dice = Game.Dice.Roll();
+                dices += dice;
+                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
+            }
+
+            Character.Protagonist.Strength -= dices;
+
+            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
+
+            return diceCheck;
+        }
+
         public List<string> FortunetellersAmbush()
         {
             List<string> ambush = new List<string>();
