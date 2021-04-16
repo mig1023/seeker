@@ -240,7 +240,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>25</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -964,7 +964,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>98</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -1420,7 +1420,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>145</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -2205,7 +2205,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>223</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -2245,7 +2245,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>227</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -2525,7 +2525,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>254</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -2930,7 +2930,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>294</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -3078,7 +3078,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>308</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -3226,7 +3226,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>325</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -3280,7 +3280,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>330</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -3897,7 +3897,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>388</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -4015,7 +4015,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>399</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -4053,7 +4053,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>403</ID>
-		<Text>Арбалет будто понимает ваше желание избежать встречи со всадниками и делает все, что может. До Каора еще 12 лье. Теперь придется определить, чьи лошади быстрее. Киньте кубик сначала за себя, а потом за преследователей. Выигрывает тот, у кого число, выпавшее на кубике, оказывается больше. Так вам придется сделать 12 раз. </Text>
+		<Text>Арбалет будто понимает ваше желание избежать встречи со всадниками и делает все, что может. До Каора еще 12 лье. Теперь придется определить, чьи лошади быстрее. Киньте кубик сначала за себя, а потом за преследователей. Выигрывает тот, у кого число, выпавшее на кубике, оказывается больше. Так вам придется сделать 12 раз.</Text>
 		<Actions>
 			<Action>
 				<ActionName>Pursuit</ActionName>
@@ -4127,7 +4127,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>410</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -4265,7 +4265,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>423</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -4668,7 +4668,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>463</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -4731,7 +4731,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>469</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -4936,7 +4936,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>492</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -4992,7 +4992,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>497</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -5148,7 +5148,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>514</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -5851,7 +5851,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>580</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
 				<ActionName>Luck</ActionName>
@@ -6245,7 +6245,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>620</ID>
-		<Text>Пистолет в Туре стоит два с половиной экю; порох и пули на каждые пять выстрелов — полтора экю, кинжал — 3, еда в дорогу — 2 экю за каждые 2 СИЛЫ. </Text>
+		<Text>Пистолет в Туре стоит два с половиной экю; порох и пули на каждые пять выстрелов — полтора экю, кинжал — 3, еда в дорогу — 2 экю за каждые 2 СИЛЫ.</Text>
 		<Actions>
 			<Action>
 				<ActionName>Get</ActionName>
