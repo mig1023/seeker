@@ -6288,9 +6288,27 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>621</ID>
-		<Text>Гостиница обойдется в 1 экю (крепкий и спокойный сон прибавит 2 СИЛЫ). Если же добавите еще экю, тогда можете поужинать (ужин восстановит 3 СИЛЫ, но если от него отказаться, ничего в этот день не ев, то столько же придется потерять). Утром вы едете дальше.</Text>
+		<Text>Гостиница обойдется в 1 экю (крепкий и спокойный сон прибавит 2 СИЛЫ).</Text>
+		<Actions>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Переночевать</ButtonName>
+				<Text>Гостиница, 1 экю</Text>
+				<Price>100</Price>
+				<Benefit Name="Strength" Value="2"/>
+				<Aftertext>Если же добавите еще экю, тогда можете поужинать (ужин восстановит 3 СИЛЫ, но если от него отказаться, ничего в этот день не ев, то столько же придется потерять).</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Заказать ужин</ButtonName>
+				<Text>Ужин, 1 экю</Text>
+				<Price>100</Price>
+				<Benefit Name="Strength" Value="3"/>
+				<Benefit Name="HadFoodToday" Value="1"/>
+				<Aftertext>Утром вы едете дальше.</Aftertext>
+			</Action>
+		</Actions>
 		<Modifications>
-			<Modification Name="Strength" Value="2"/>
 			<Modification Name="Day" Value="1"/>
 		</Modifications>
 		<Options>
