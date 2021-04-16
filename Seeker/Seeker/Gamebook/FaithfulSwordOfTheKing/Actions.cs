@@ -275,7 +275,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public List<string> Get()
         {
-            if ((MeritalArt != null) && (Character.Protagonist.MeritalArt == Character.MeritalArts.Nope))
+            if ((MeritalArt != Character.MeritalArts.Nope) && (Character.Protagonist.MeritalArt == Character.MeritalArts.Nope))
                 Character.Protagonist.MeritalArt = MeritalArt ?? Character.MeritalArts.Nope;
 
             else if ((Price > 0) && (Character.Protagonist.Ecu >= Price))
