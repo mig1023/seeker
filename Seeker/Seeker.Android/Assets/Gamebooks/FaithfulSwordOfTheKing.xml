@@ -6245,7 +6245,42 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>620</ID>
-		<Text>Пистолет в Туре стоит два с половиной экю, но пару отдадут за четыре; порох и пули на каждые пять выстрелов — полтора экю, кинжал — 3, еда в дорогу — 2 экю за каждые 2 СИЛЫ. Теперь надо либо выбираться из города, либо ждать вечера и пытаться встретиться с курьером.</Text>
+		<Text>Пистолет в Туре стоит два с половиной экю; порох и пули на каждые пять выстрелов — полтора экю, кинжал — 3, еда в дорогу — 2 экю за каждые 2 СИЛЫ. </Text>
+		<Actions>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить пистолет</ButtonName>
+				<Text>ПИСТОЛЕТ, 2.5 экю</Text>
+				<Price>250</Price>
+				<Multiple/>
+				<Benefit Name="Pistols" Value="1"/>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить пули и порох</ButtonName>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрела, 1.5 экю</Text>
+				<Price>150</Price>
+				<Multiple/>
+				<Benefit Name="BulletsAndGubpowder" Value="5"/>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить кинжал</ButtonName>
+				<Text>КИНЖАЛ, 3 экю</Text>
+				<Price>300</Price>
+				<Multiple/>
+				<Benefit Name="Daggers" Value="1"/>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить еды</ButtonName>
+				<Text>ЕДА В ДОРОГУ, 2 экю</Text>
+				<Price>200</Price>
+				<Multiple/>
+				<Benefit Name="Healing" ValueString="Поесть,2"/>
+				<Aftertext>Теперь надо либо выбираться из города, либо ждать вечера и пытаться встретиться с курьером.</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="250" Text="Выбираться из города"/>
 			<Option Destination="557" Text="Ждать вечера и пытаться встретиться с курьером"/>
