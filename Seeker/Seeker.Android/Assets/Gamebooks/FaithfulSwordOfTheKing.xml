@@ -5298,11 +5298,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>528</ID>
-		<Text>К вечеру вы въезжаете в Перигё. Если хотите, можете заехать на рынок. Иначе же постоялый двор с многообещающим названием «Корона для принца» к вашим услугам. Заплатив полтора экю, получаете сытный ужин (можете восстановить 2 СИЛЫ) и уже готовитесь лечь спать, когда вас привлекает один подозрительный разговор.</Text>
-		<Modifications>
-			<Modification Name="HadFoodToday" Value="1"/>
-			<Modification Name="Strength" Value="2"/>
-		</Modifications>
+		<Text>К вечеру вы въезжаете в Перигё. Если хотите, можете заехать на рынок. Иначе же постоялый двор с многообещающим названием «Корона для принца» к вашим услугам. Заплатив полтора экю, получаете сытный ужин (можете восстановить 2 СИЛЫ):</Text>
+		<Actions>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Поужинать</ButtonName>
+				<Text>Ужин, 1.5 экю</Text>
+				<Price>150</Price>
+				<Benefit Name="Strength" Value="2"/>
+				<Benefit Name="HadFoodToday" Value="1"/>
+				<Aftertext>И уже готовитесь лечь спать, когда вас привлекает один подозрительный разговор.</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="131" Text="Заехать на рынок"/>
 			<Option Destination="387" Text="Прислушаться к подозрительному разговору"/>
