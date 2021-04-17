@@ -146,23 +146,26 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (option == "selectOnly")
                 return true;
 
+            string[] values = option.Split(' ');
+            string value = (values.Length > 1 ? values[1] : "nope");
+
             if (option.Contains("!ПОКРОВИТЕЛЬ"))
-                return Character.Protagonist.Patron != option.Split(' ')[1];
+                return Character.Protagonist.Patron != value;
             else if (option.Contains("ПОКРОВИТЕЛЬ"))
-                return Character.Protagonist.Patron == option.Split(' ')[1];
+                return Character.Protagonist.Patron == value;
 
             if (option.Contains("БЕЗРАЗЛИЧЕН"))
-                return !Character.Protagonist.IsGodsFavor(option.Split(' ')[1]) && !Character.Protagonist.IsGodsDisFavor(option.Split(' ')[1]);
+                return !Character.Protagonist.IsGodsFavor(value) && !Character.Protagonist.IsGodsDisFavor(value);
 
             if (option.Contains("!БЛАГОСКЛОНЕН"))
-                return !Character.Protagonist.IsGodsFavor(option.Split(' ')[1]);
+                return !Character.Protagonist.IsGodsFavor(value);
             else if (option.Contains("БЛАГОСКЛОНЕН"))
-                return Character.Protagonist.IsGodsFavor(option.Split(' ')[1]);
+                return Character.Protagonist.IsGodsFavor(value);
 
             if (option.Contains("!НЕМИЛОСТИВ"))
-                return !Character.Protagonist.IsGodsDisFavor(option.Split(' ')[1]);
+                return !Character.Protagonist.IsGodsDisFavor(value);
             else if (option.Contains("НЕМИЛОСТИВ"))
-                return Character.Protagonist.IsGodsDisFavor(option.Split(' ')[1]);
+                return Character.Protagonist.IsGodsDisFavor(value);
 
             if (option.Contains("ВОСКРЕШЕНИЕ"))
                 return IsPosibleResurrection();
