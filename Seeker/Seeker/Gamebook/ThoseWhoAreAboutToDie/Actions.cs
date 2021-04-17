@@ -109,10 +109,12 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
         private static bool ParamFail(string paramName, string option, int param)
         {
-            if (option.Contains(String.Format("{0} >", paramName)) && (int.Parse(option.Split('>')[1]) >= param))
+            int level = int.Parse(option.Split('>', '=')[1]);
+
+            if (option.Contains(String.Format("{0} >", paramName)) && (level >= param))
                 return true;
 
-            else if (option.Contains(String.Format("{0} <=", paramName)) && (int.Parse(option.Split('=')[1]) < param))
+            else if (option.Contains(String.Format("{0} <=", paramName)) && (level < param))
                 return true;
 
             else
