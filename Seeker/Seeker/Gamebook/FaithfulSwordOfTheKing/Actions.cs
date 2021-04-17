@@ -98,11 +98,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             if (option.Contains("="))
             {
-                if (option.Contains("ДЕНЬ >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.Day))
+                int value = int.Parse(option.Split('=')[1]);
+
+                if (option.Contains("ДЕНЬ >=") && (value > Character.Protagonist.Day))
                     return false;
-                else if (option.Contains("ДЕНЬ =") && (int.Parse(option.Split('=')[1]) != Character.Protagonist.Day))
+                else if (option.Contains("ДЕНЬ =") && (value != Character.Protagonist.Day))
                     return false;
-                else if (option.Contains("ДЕНЬ <=") && (int.Parse(option.Split('=')[1]) < Character.Protagonist.Day))
+                else if (option.Contains("ДЕНЬ <=") && (value < Character.Protagonist.Day))
+                    return false;
+                else if (option.Contains("ЭКЮ >=") && (value > Character.Protagonist.Ecu))
                     return false;
 
                 return true;
