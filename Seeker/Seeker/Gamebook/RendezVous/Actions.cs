@@ -64,9 +64,11 @@ namespace Seeker.Gamebook.RendezVous
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        if (oneOption.Contains("ОСОЗНАНИЕ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Awareness))
+                        int level = int.Parse(oneOption.Split('>', '=')[1]);
+
+                        if (oneOption.Contains("ОСОЗНАНИЕ >") && (level >= Character.Protagonist.Awareness))
                             return false;
-                        else if (oneOption.Contains("ОСОЗНАНИЕ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Awareness))
+                        else if (oneOption.Contains("ОСОЗНАНИЕ <=") && (level < Character.Protagonist.Awareness))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
