@@ -88,11 +88,14 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public static bool CheckOnlyIf(string option)
         {
+            string[] values = option.Split(' ', '<');
+            int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
+
             if (option.Contains("БЛАСТЕР >="))
-                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Blaster;
+                return level <= Character.Protagonist.Blaster;
 
             else if (option.Contains("БЛАСТЕР <"))
-                return int.Parse(option.Split('<')[1]) > Character.Protagonist.Blaster;
+                return level > Character.Protagonist.Blaster;
 
             else if (option.Contains("ОЧКИ"))
                 return Character.Protagonist.Equipment == "Очки";
