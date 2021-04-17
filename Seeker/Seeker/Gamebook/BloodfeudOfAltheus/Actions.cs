@@ -170,15 +170,18 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (option.Contains("ВОСКРЕШЕНИЕ"))
                 return IsPosibleResurrection();
 
+            values = option.Split('>', '=');
+            int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
+
             if (option.Contains("СЛАВА >"))
-                return int.Parse(option.Split('>')[1]) < Character.Protagonist.Glory;
+                return level < Character.Protagonist.Glory;
             else if (option.Contains("СЛАВА <="))
-                return int.Parse(option.Split('=')[1]) >= Character.Protagonist.Glory;
+                return level >= Character.Protagonist.Glory;
 
             if (option.Contains("ПОЗОР >"))
-                return int.Parse(option.Split('>')[1]) < Character.Protagonist.Shame;
+                return level < Character.Protagonist.Shame;
             else if (option.Contains("ПОЗОР <="))
-                return int.Parse(option.Split('=')[1]) >= Character.Protagonist.Shame;
+                return level >= Character.Protagonist.Shame;
 
             if (option.Contains("!"))
             {
