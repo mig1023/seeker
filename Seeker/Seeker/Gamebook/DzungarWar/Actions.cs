@@ -246,15 +246,17 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        if (oneOption.Contains("ТАНЬГА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Tanga))
+                        int level = int.Parse(oneOption.Split('>', '=')[1]);
+
+                        if (oneOption.Contains("ТАНЬГА >=") && (level > Character.Protagonist.Tanga))
                             return false;
-                        else if (oneOption.Contains("ОПАСНОСТЬ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Danger))
+                        else if (oneOption.Contains("ОПАСНОСТЬ >") && (level >= Character.Protagonist.Danger))
                             return false;
-                        else if (oneOption.Contains("ОПАСНОСТЬ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Danger))
+                        else if (oneOption.Contains("ОПАСНОСТЬ <=") && (level < Character.Protagonist.Danger))
                             return false;
-                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Favour))
+                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ >") && (level >= Character.Protagonist.Favour))
                             return false;
-                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Favour))
+                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ <=") && (level < Character.Protagonist.Favour))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
