@@ -106,20 +106,24 @@ namespace Seeker.Gamebook.SilentSchool
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        if (oneOption.Contains("ГРААЛЬ >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Grail))
+                        int level = int.Parse(oneOption.Split('<', '=')[1]);
+
+                        if (oneOption.Contains("ГРААЛЬ >=") && (level > Character.Protagonist.Grail))
                             return false;
 
-                        if (oneOption.Contains("РАНА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.HarmSelfAlready))
+                        if (oneOption.Contains("РАНА >=") && (level > Character.Protagonist.HarmSelfAlready))
                             return false;
 
-                        if (oneOption.Contains("РАНА <") && (int.Parse(oneOption.Split('<')[1]) <= Character.Protagonist.HarmSelfAlready))
+                        if (oneOption.Contains("РАНА <") && (level <= Character.Protagonist.HarmSelfAlready))
                             return false;
                     }
                     else if (oneOption.Contains("ОРУЖИЕ"))
                     {
-                        if (oneOption.Contains("!") && (oneOption.Split('=')[1].Trim() == Character.Protagonist.Weapon))
+                        string value = oneOption.Split('=')[1].Trim();
+
+                        if (oneOption.Contains("!") && (value == Character.Protagonist.Weapon))
                             return false;
-                        else if (!oneOption.Contains("!") && (oneOption.Split('=')[1].Trim() != Character.Protagonist.Weapon))
+                        else if (!oneOption.Contains("!") && (value != Character.Protagonist.Weapon))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
