@@ -65,9 +65,11 @@ namespace Seeker.Gamebook.ThreePaths
             {
                 if (oneOption.Contains(">") || oneOption.Contains("<"))
                 {
-                    if (oneOption.Contains("ВРЕМЯ <") && (int.Parse(oneOption.Split('>')[1]) <= Character.Protagonist.Time))
+                    int level = int.Parse(oneOption.Split('>')[1]);
+
+                    if (oneOption.Contains("ВРЕМЯ <") && (level <= Character.Protagonist.Time))
                         return false;
-                    if (oneOption.Contains("ВРЕМЯ >=") && (int.Parse(oneOption.Split('>')[1]) > Character.Protagonist.Time))
+                    if (oneOption.Contains("ВРЕМЯ >=") && (level > Character.Protagonist.Time))
                         return false;
                 }
                 else if (oneOption.Contains("ЗАКЛЯТИЕ"))
