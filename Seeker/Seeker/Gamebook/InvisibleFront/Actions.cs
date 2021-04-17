@@ -57,13 +57,15 @@ namespace Seeker.Gamebook.InvisibleFront
             {
                 if (oneOption.Contains(">") || oneOption.Contains("<"))
                 {
-                    if (oneOption.Contains("НЕДОВОЛЬСТВО >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Dissatisfaction))
+                    int level = int.Parse(oneOption.Split('>', '=')[1]);
+
+                    if (oneOption.Contains("НЕДОВОЛЬСТВО >") && (level >= Character.Protagonist.Dissatisfaction))
                         return false;
-                    else if (oneOption.Contains("НЕДОВОЛЬСТВО <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Dissatisfaction))
+                    else if (oneOption.Contains("НЕДОВОЛЬСТВО <=") && (level < Character.Protagonist.Dissatisfaction))
                         return false;
-                    else if (oneOption.Contains("ВЕРБОВКА >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Recruitment))
+                    else if (oneOption.Contains("ВЕРБОВКА >") && (level >= Character.Protagonist.Recruitment))
                         return false;
-                    else if (oneOption.Contains("ВЕРБОВКА <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.Recruitment))
+                    else if (oneOption.Contains("ВЕРБОВКА <=") && (level < Character.Protagonist.Recruitment))
                         return false;
                 }
                 else if (oneOption.Contains("!"))
