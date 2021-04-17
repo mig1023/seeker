@@ -54,11 +54,13 @@ namespace Seeker.Gamebook.RockOfTerror
         {
             if (option.Contains(">") || option.Contains("<"))
             {
-                if (option.Contains("СИЛА СЕРДЦА МОНАХА >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.MonksHeart))
+                int level = int.Parse(option.Split('<', '=')[1]);
+
+                if (option.Contains("СИЛА СЕРДЦА МОНАХА >=") && (level > Character.Protagonist.MonksHeart))
                     return false;
-                else if (option.Contains("ВРЕМЯ >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.Time))
+                else if (option.Contains("ВРЕМЯ >=") && (level > Character.Protagonist.Time))
                     return false;
-                else if (option.Contains("ВРЕМЯ <") && (int.Parse(option.Split('<')[1]) < Character.Protagonist.Time))
+                else if (option.Contains("ВРЕМЯ <") && (level < Character.Protagonist.Time))
                     return false;
                 else
                     return true;
