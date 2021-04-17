@@ -272,29 +272,31 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        if (orLogic && oneOption.Contains("ЗОЛОТО >=") && (int.Parse(oneOption.Split('=')[1]) <= Character.Protagonist.Gold))
+                        int level = int.Parse(oneOption.Split('>', '=')[1]);
+
+                        if (orLogic && oneOption.Contains("ЗОЛОТО >=") && (level <= Character.Protagonist.Gold))
                             return true;
 
-                        if (oneOption.Contains("ЗОЛОТО >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Gold))
+                        if (oneOption.Contains("ЗОЛОТО >=") && (level > Character.Protagonist.Gold))
                             return false;
 
-                        if (oneOption.Contains("ЗАКЛЯТИЙ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Magicpoints))
+                        if (oneOption.Contains("ЗАКЛЯТИЙ >") && (level >= Character.Protagonist.Magicpoints))
                             return false;
 
-                        if (oneOption.Contains("ЭЛИКСИР >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.Elixir))
+                        if (oneOption.Contains("ЭЛИКСИР >") && (level >= Character.Protagonist.Elixir))
                             return false;
 
-                        if (oneOption.Contains("ЗАКЛЯТИЙ (!воин) >") &&
-                            ((int.Parse(oneOption.Split('=')[1]) >= Character.Protagonist.Magicpoints) || (Character.Protagonist.Specialization == Character.SpecializationType.Warrior)))
+                        if (oneOption.Contains("ЗАКЛЯТИЙ (!воин) >") && (level >= Character.Protagonist.Magicpoints) ||
+                                (Character.Protagonist.Specialization == Character.SpecializationType.Warrior))
                             return false;
 
-                        if (oneOption.Contains("ВРЕМЯ ДЛЯ ЧТЕНИЯ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.TimeForReading))
+                        if (oneOption.Contains("ВРЕМЯ ДЛЯ ЧТЕНИЯ >") && (level >= Character.Protagonist.TimeForReading))
                             return false;
 
-                        if (oneOption.Contains("ДОВЕРИЕ >") && (int.Parse(oneOption.Split('>')[1]) >= Character.Protagonist.ConneryTrust))
+                        if (oneOption.Contains("ДОВЕРИЕ >") && (level >= Character.Protagonist.ConneryTrust))
                             return false;
                         
-                        if (oneOption.Contains("ДОВЕРИЕ <=") && (int.Parse(oneOption.Split('=')[1]) < Character.Protagonist.ConneryTrust))
+                        if (oneOption.Contains("ДОВЕРИЕ <=") && (level < Character.Protagonist.ConneryTrust))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
