@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 
@@ -21,7 +22,7 @@ namespace Seeker.Gamebook.DzungarWar
         public int Price { get; set; }
 
         public string TriggerTestPenalty { get; set; }
-        
+
         public Modification Benefit { get; set; }
 
         static bool NextTestWithTincture = false;
@@ -49,7 +50,7 @@ namespace Seeker.Gamebook.DzungarWar
                 level -= 4;
                 penaltyLine.Add("Бонус в -4 к уровню проверки за настойку");
             }
-            
+
             if (NextTestWithGinseng)
             {
                 level -= 8;
@@ -289,11 +290,10 @@ namespace Seeker.Gamebook.DzungarWar
 
             result = (firstDice + secondDice) + currentStat >= level;
 
-            resultLine.Add( String.Format(
+            resultLine.Add(String.Format(
                 "Проверка {0}: {1} + {2} + {3} {4} {5}",
                 Constants.StatNames()[stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
-                currentStat, (result ? ">=" : "<"), level
-            ));
+                currentStat, (result ? ">=" : "<"), level));
         }
 
         public List<string> Test()
@@ -313,13 +313,40 @@ namespace Seeker.Gamebook.DzungarWar
             bool testIsOk = true;
             List<string> testLines = new List<string>();
 
-            string[] tests = Stat.Split(',');
+            List<string> tests = Stat.Split(',').Select(x => x.Trim()).ToList();
 
-            int level = (int)Math.Ceiling((double)Level / (double)tests.Length); 
+            Dictionary<string, int> levels = new Dictionary<string, int>();
+
+            testLines.Add("BOLD|Определяем уровни проверок:");
+
+            int allStats = 0;
+
+            foreach (string test in tests)
+                allStats += (int)Character.Protagonist.GetType().GetProperty(test).GetValue(Character.Protagonist, null);
+
+            testLines.Add(String.Format("Сумма всех параметров Алдара: {0}", allStats));
+
+            double approximateStatUnit = (double)Level / (double)allStats;
+
+            testLines.Add(String.Format("Условная средняя единица: {0} / {1} = {2:f2}", Level, allStats, approximateStatUnit));
 
             foreach (string test in tests)
             {
-                TestParam(test.Trim(), level, out bool thisTestIsOk, out List<string> result);
+                int currentStat = (int)Character.Protagonist.GetType().GetProperty(test).GetValue(Character.Protagonist, null);
+                int approximateLevel = (int)Math.Floor(currentStat * approximateStatUnit);
+
+                levels.Add(test, approximateLevel);
+
+                testLines.Add(String.Format("Проверка {0}: {1} x {2:f2} по уровню {3}",
+                    Constants.StatNames()[test], currentStat, approximateStatUnit, approximateLevel));
+            }
+
+            testLines.Add(String.Empty);
+            testLines.Add("BOLD|Проходим проверки:");
+
+            foreach (string test in tests)
+            {
+                TestParam(test, levels[test], out bool thisTestIsOk, out List<string> result);
 
                 testLines.AddRange(result);
                 testLines.Add(thisTestIsOk ? "GOOD|Алдар справился" : "BAD|Алдар не справился");
