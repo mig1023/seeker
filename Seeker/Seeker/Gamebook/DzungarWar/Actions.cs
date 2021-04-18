@@ -312,9 +312,7 @@ namespace Seeker.Gamebook.DzungarWar
         {
             bool testIsOk = true;
             List<string> testLines = new List<string>();
-
             List<string> tests = Stat.Split(',').Select(x => x.Trim()).ToList();
-
             Dictionary<string, int> levels = new Dictionary<string, int>();
 
             testLines.Add("BOLD|Определяем уровни проверок:");
@@ -328,17 +326,31 @@ namespace Seeker.Gamebook.DzungarWar
 
             double approximateStatUnit = (double)Level / (double)allStats;
 
-            testLines.Add(String.Format("Условная средняя единица: {0} / {1} = {2:f2}", Level, allStats, approximateStatUnit));
+            testLines.Add(String.Format("Условная средняя единица: {0} / {1} = {2:f1}", Level, allStats, approximateStatUnit));
 
             foreach (string test in tests)
             {
                 int currentStat = (int)Character.Protagonist.GetType().GetProperty(test).GetValue(Character.Protagonist, null);
                 int approximateLevel = (int)Math.Floor(currentStat * approximateStatUnit);
 
-                levels.Add(test, approximateLevel);
+                int finalLevel = 0;
+                string approximateFix = String.Empty;
 
-                testLines.Add(String.Format("Проверка {0}: {1} x {2:f2} по уровню {3}",
-                    Constants.StatNames()[test], currentStat, approximateStatUnit, approximateLevel));
+                if (currentStat == 12)
+                {
+                    finalLevel = approximateLevel - 6;
+                    approximateFix = "- 6";
+                }
+                else
+                {
+                    finalLevel = approximateLevel + 2;
+                    approximateFix = "+ 2";
+                }
+
+                levels.Add(test, finalLevel);
+
+                testLines.Add(String.Format("Проверка {0}: {1} x {2:f1} = {3} {4} коррекция, итого {5}",
+                    Constants.StatNames()[test], currentStat, approximateStatUnit, approximateLevel, approximateFix, finalLevel));
             }
 
             testLines.Add(String.Empty);
