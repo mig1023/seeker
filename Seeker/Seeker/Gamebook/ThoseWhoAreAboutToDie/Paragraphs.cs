@@ -27,6 +27,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
                 {
                     Text = Game.Xml.StringParse(xmlOption.Attributes["Text"], defaultText: "Далее"),
                     OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
+                    Aftertext = Game.Xml.StringParse(xmlOption.Attributes["Aftertext"]),
                 };
 
                 if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
