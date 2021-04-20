@@ -26,6 +26,7 @@ namespace Seeker.Gamebook.SilentSchool
                 {
                     Text = Game.Xml.StringParse(xmlOption.Attributes["Text"], defaultText: "Далее"),
                     OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
+                    Aftertext = Game.Xml.StringParse(xmlOption.Attributes["Aftertext"]),
                 };
 
                 if (xmlOption.Attributes["Destination"].Value == "CHANGE")
