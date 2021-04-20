@@ -58,7 +58,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     Price = Game.Xml.IntParse(xmlAction["Price"]),
 
                     MeritalArt = MeritalArtsParse(xmlAction["MeritalArt"]),
+
                     Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
+                    WithoutShooting = Game.Xml.BoolParse(xmlAction["WithoutShooting"]),
                 };
 
                 if (xmlAction["Benefit"] != null)

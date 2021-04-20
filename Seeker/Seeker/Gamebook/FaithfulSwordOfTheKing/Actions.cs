@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
         public int SkillPenalty { get; set; }
+        public bool WithoutShooting { get; set; }
 
         public string Text { get; set; }
         public int Price { get; set; }
@@ -360,7 +361,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             Character hero = Character.Protagonist;
 
-            if ((hero.MeritalArt == Character.MeritalArts.TwoPistols) && (hero.Pistols > 1) && (hero.BulletsAndGubpowder > 1))
+            if (WithoutShooting)
+                shoots = 0;
+            else if ((hero.MeritalArt == Character.MeritalArts.TwoPistols) && (hero.Pistols > 1) && (hero.BulletsAndGubpowder > 1))
                 shoots = 2;
             else if ((hero.Pistols > 0) && (hero.BulletsAndGubpowder > 0))
                 shoots = 1;
