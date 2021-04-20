@@ -49,7 +49,7 @@
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="10"/>
 				</Enemies>
-				<Aftertext>Если вы убили его</Aftertext>
+				<WithoutShooting/>
 			</Action>
 		</Actions>
 		<Options>
@@ -67,6 +67,7 @@
 					<Enemy Name="ПЕРВЫЙ СЛУГА" Skill="6" Strength="8"/>
 					<Enemy Name="ВТОРОЙ СЛУГА" Skill="6" Strength="7"/>
 				</Enemies>
+				<WithoutShooting/>
 			</Action>
 		</Actions>
 		<Options>
@@ -262,7 +263,6 @@
 				<Enemies>
 					<Enemy Name="ДВОРЯНИН" Skill="8" Strength="10"/>
 				</Enemies>
-				<Aftertext>Если вы убили его</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -367,7 +367,7 @@
 				<Enemies>
 					<Enemy Name="ЧЁРНАЯ ФИГУРА" Skill="8" Strength="8"/>
 				</Enemies>
-				<Aftertext>Если вы победили своего врага</Aftertext>
+				<WithoutShooting/>
 			</Action>
 		</Actions>
 		<Options>
@@ -412,7 +412,6 @@
 				<Enemies>
 					<Enemy Name="ПРОХОЖИЙ" Skill="8" Strength="10"/>
 				</Enemies>
-				<Aftertext>Если убили его</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -2138,6 +2137,7 @@
 					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="8"/>
 				</Enemies>
 				<RoundsToWin>4</RoundsToWin>
+				<WithoutShooting/>
 			</Action>
 		</Actions>
 		<Options>
@@ -3786,6 +3786,7 @@
 				<Enemies>
 					<Enemy Name="ВТОРОЙ КАВАЛЕРИСТ" Skill="7" Strength="8"/>
 				</Enemies>
+				<WithoutShooting/>
 			</Action>
 		</Actions>
 		<Options>
@@ -3828,7 +3829,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>381</ID>
-		<Text>ПЕРВЫЙ ЧЕЛОВЕК С ТОПОРОМ</Text>
+		<Text></Text>
 		<Actions>
 			<Action>
 				<ActionName>Fight</ActionName>
@@ -3841,7 +3842,6 @@
 		</Actions>
 		<Options>
 			<Option Destination="243"/>
-			<Option Destination="381" Text="ТЕСТ"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3992,7 +3992,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>397</ID>
-		<Text>ШЕВАЛЬЕ ДЕ МИШУАР</Text>
+		<Text></Text>
 		<Actions>
 			<Action>
 				<ActionName>Fight</ActionName>
@@ -4351,6 +4351,7 @@
 					<Enemy Name="ПЕРВЫЙ СОЛДАТ" Skill="6" Strength="6"/>
 					<Enemy Name="ВТОРОЙ СОЛДАТ" Skill="7" Strength="6"/>
 				</Enemies>
+				<WithoutShooting/>
 			</Action>
 		</Actions>
 		<Options>
@@ -5180,7 +5181,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>517</ID>
-		<Text>ПЕРВЫЙ СОЛДАТ</Text>
+		<Text></Text>
 		<Actions>
 			<Action>
 				<ActionName>Fight</ActionName>
@@ -5249,7 +5250,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>523</ID>
-		<Text>Пока вы деретесь, вся остальная компания молча наблюдает за вашей схваткой. Но вот она окончена, и друзья бродяги, собираясь отомстить за товарища, выхватывают кинжалы и приближаются к вам. Если у вас есть еще один или два заряженных пистолета, можете убить любого из них по своему выбору и сражаться с теми, кто останется.</Text>
+		<Text>Пока вы деретесь, вся остальная компания молча наблюдает за вашей схваткой. Но вот она окончена, и друзья бродяги, собираясь отомстить за товарища, выхватывают кинжалы и приближаются к вам.</Text>
 		<Actions>
 			<Action>
 				<ActionName>Fight</ActionName>
@@ -5359,6 +5360,7 @@
 					<Enemy Name="ПЕРВЫЙ КАВАЛЕРИСТ" Skill="7" Strength="9"/>
 					<Enemy Name="ВТОРОЙ КАВАЛЕРИСТ" Skill="7" Strength="8"/>
 				</Enemies>
+				<WithoutShooting/>
 			</Action>
 		</Actions>
 		<Options>
@@ -5419,6 +5421,7 @@
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="10"/>
 				</Enemies>
+				<WithoutShooting/>
 			</Action>
 		</Actions>
 		<Options>
