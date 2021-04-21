@@ -81,14 +81,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public static bool CheckOnlyIf(string option)
         {
             if (option.Contains("!"))
-            {
-                if (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()))
-                    return false;
-            }
-            else if (!Game.Data.Triggers.Contains(option.Trim()))
-                return false;
-
-            return true;
+                return !Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim());
+            else
+                return Game.Data.Triggers.Contains(option);
         }
 
         public List<string> Luck() => GoodLuck(out bool _, notInline: true);
