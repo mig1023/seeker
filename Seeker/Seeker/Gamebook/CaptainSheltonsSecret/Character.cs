@@ -74,6 +74,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             for (int i = 0; i < 2; i++)
                 Luck[Game.Dice.Roll()] = false;
+
+            Game.Healing.Add(name: "Поесть", healing: 4, portions: 3);
         }
 
         public Character Clone() => new Character()

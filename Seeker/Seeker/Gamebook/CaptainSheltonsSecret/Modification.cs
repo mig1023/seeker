@@ -8,9 +8,16 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public string ValueString { get; set; }
 
         public void Do()
         {
+            if (Name == "Healing")
+            {
+                Game.Healing.Add(ValueString);
+                return;
+            }
+
             int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
             if (Name.StartsWith("Max"))

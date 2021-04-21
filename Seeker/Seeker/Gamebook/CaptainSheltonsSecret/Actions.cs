@@ -216,7 +216,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return masteryCheck;
         }
 
-
         public List<string> Get()
         {
             if ((Price > 0) && (Character.Protagonist.Gold >= Price))
@@ -379,9 +378,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             }
         }
 
-        public bool IsHealingEnabled() => false;
+        public bool IsHealingEnabled() => Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
 
-        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
+        public void UseHealing(int healingLevel) => Character.Protagonist.Endurance += healingLevel;
 
         public string TextByOptions(string option) => String.Empty;
     }

@@ -101,6 +101,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 {
                     Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
                     Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
+                    ValueString = Game.Xml.StringParse(xmlModification.Attributes["ValueString"]),
                 };
 
                 paragraph.Modification.Add(modification);
