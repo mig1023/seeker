@@ -184,10 +184,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 return level >= Character.Protagonist.Shame;
 
             if (option.Contains("!"))
-            {
-                if (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()))
-                    return false;
-            }
+                return !Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim());
             else if (!Game.Data.Triggers.Contains(option.Trim()))
                 return false;
 
