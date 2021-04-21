@@ -103,8 +103,8 @@ namespace Seeker.Gamebook.StringOfWorlds
             else if (option.Contains("ЗАЖИГАЛКА"))
                 return Character.Protagonist.Equipment == "Зажигалка";
 
-            else if (option.Contains("!") && (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim())))
-                return false;
+            else if (option.Contains("!"))
+                return !Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim());
 
             else
                 return Game.Data.Triggers.Contains(option);
