@@ -134,21 +134,27 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return breakingDoor;
         }
 
-        public List<string> Luck()
+        private string LuckNumbers()
         {
-            List<string> luckCheck = new List<string> { "Квадраты удачи:" };
-
             string luckListShow = String.Empty;
 
             for (int i = 1; i < 7; i++)
                 luckListShow += String.Format("{0} ", Character.Protagonist.Luck[i] ? Constants.LuckList()[i] : Constants.LuckList()[i + 10]);
 
-            luckCheck.Add("BIG|" + luckListShow);
+            return luckListShow;
+        }
+
+        public List<string> Luck()
+        {
+            List<string> luckCheck = new List<string>
+            {
+                "Квадраты удачи:",
+                "BIG|" + LuckNumbers()
+            };
 
             int goodLuck = Game.Dice.Roll();
 
-            luckCheck.Add(String.Format(
-                "Проверка удачи: {0} - {1}зачёркунтый",
+            luckCheck.Add(String.Format("Проверка удачи: {0} - {1}зачёркунтый",
                 Game.Dice.Symbol(goodLuck), (Character.Protagonist.Luck[goodLuck] ? "не " : String.Empty)));
 
             luckCheck.Add(Character.Protagonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
@@ -157,7 +163,32 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             return luckCheck;
         }
-        
+
+        public List<string> LuckRecovery()
+        {
+            List<string> luckRecovery = new List<string> { "Восстановление удачи:" };
+
+            bool success = false;
+
+            for (int i = 1; i < 7; i++)
+                if (!Character.Protagonist.Luck[i])
+                {
+                    luckRecovery.Add(String.Format("GOOD|Цифра {0} восстановлена!", i));
+                    Character.Protagonist.Luck[i] = true;
+                    success = true;
+
+                    break;
+                }
+
+            if (!success)
+                luckRecovery.Add("BAD|Все цифры и так счастливые!");
+
+            luckRecovery.Add("Цифры удачи теперь:");
+            luckRecovery.Add("BIG|" + LuckNumbers());
+
+            return luckRecovery;
+        }
+
         public List<string> RollDice() => new List<string> { String.Format("BIG|Бросок: {0}", Game.Dice.Symbol(Game.Dice.Roll())) };
 
         public List<string> RollDoubleDices()
