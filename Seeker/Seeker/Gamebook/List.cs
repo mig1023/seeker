@@ -331,6 +331,22 @@ namespace Seeker.Gamebook
                 FontColor = "#000000",
                 Illustration = "LastHokku.jpg",
             },
+
+            ["Сердце льда"] = new Description
+            {
+                XmlBook = "Gamebooks/HeartOfIce.xml",
+                Protagonist = HeartOfIce.Character.Protagonist.Init,
+                CheckOnlyIf = HeartOfIce.Actions.CheckOnlyIf,
+                Paragraphs = new HeartOfIce.Paragraphs(),
+                Actions = new HeartOfIce.Actions(),
+                Constants = new HeartOfIce.Constants(),
+                Save = HeartOfIce.Character.Protagonist.Save,
+                Load = HeartOfIce.Character.Protagonist.Load,
+                Disclaimer = "Дэйв Моррис, 1994; перевод Kadena и др.",
+                BookColor = "#23a2a1",
+                FontColor = "#000000",
+                Illustration = "HeartOfIce.jpg",
+            },
         };
 
         public static List<string> GetBooks() => new List<string>(Books.Keys);
