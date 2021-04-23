@@ -3614,9 +3614,10 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>455</ID>
-		<Text>Вы хотите выбрать персонажа или создать собственного?</Text>
+		<Text>Чтобы начать свое приключение, просто выберите персонажа из списка. Каждый персонаж обладает уникальным набором умений, которые определяют доступные для вас варианты.</Text>
 		<Options>
-			<Option Destination="456" Text="Выбрать"/>
+			<Option Destination="456" Text="Выбрать" Aftertext="Как вариант, вы можете создать собственного персонажа, выбрав любые четыре умения на свой вкус из списка.\n\nВаш персонаж получит весь необходимый набор инвентаря для выбранных умений (например, заряженный бризальный пистолет если выбрал Стрельбу) и начнет с 30 скадами в кармане. Начальное Здоровье персонажа равно 10."/>
+			<Option Destination="457" Text="Создать"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3703,6 +3704,87 @@
 				<Benefit Name="Skill" ValueString="Управление парадоксом"/>
 				<Benefit Name="Skill" ValueString="Воровство"/>
 				<Aftertext>Будучи с рождения одаренным странными способностями, вы не являетесь человеком в полном смысле этого слова. Другие наверняка убьют вас, если узнают ваш секрет.</Aftertext>
+			</Action>
+		</Actions>
+		<Options>
+			<Option Destination="1"/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>457</ID>
+		<Text>Отнеситесь серьезно к выбору умений. Они дают вам особые преимущества и позволяют принимать те или иные решения в течение путешествия. Оказавшись в ситуации, где можно применить более одного умения, вы вольны выбрать любое из них.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать ловкость</ButtonName>
+				<Skill>Ловкость</Skill>
+				<Aftertext>Это умение выделывать акробатичские финты, быстро бегать, преодолевать препятствия, держать равновесие и прыгать. Персонаж, обладающий этим умением, очень проворный и сообразительный.</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать рукопашку</ButtonName>
+				<Skill>Рукопашный Бой</Skill>
+				<Aftertext>Возможность использовать боевые искусства, включающие элементы каратэ, джиу-джитсу и тайд-жи.</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать хитрость</ButtonName>
+				<Skill>Хитрость</Skill>
+				<Aftertext>Умение находить удачное решение в любой сложной ситуации. Всегда пригодится.</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать кибернетику</ButtonName>
+				<Skill>Кибернетика</Skill>
+				<Aftertext>Практически забытая в умирающем мире двадцать третьего столетия наука программирования и управления компьютерами.</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать ПСИ</ButtonName>
+				<Skill>ПСИ</Skill>
+				<Aftertext>Позволяет чувствовать опасность и читать чужие мысли. Вы должны иметь при себе пси-фокусиров-щик для того, чтобы использовать это умение.</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать знания</ButtonName>
+				<Skill>Знания</Skill>
+				<Aftertext>Совокупность легенд, исторических и базовых знаний, которые дают вам хорошее представление о том, с чем вы можете столкнуться.</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать парадокс</ButtonName>
+				<Skill>Управление парадоксом</Skill>
+				<Aftertext>Умение влиять на законы мироздания. Оно медленнее и не такое удобное, как ПСИ, но иногда дает потрясающие результаты. Для использования необходим пси-фокусировщик.</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать пилотирование</ButtonName>
+				<Skill>Пилотирование</Skill>
+				<Aftertext>Позволяет управлять практически любым средством передвижения: от аэрокара до космического шаттла.</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать стрельба</ButtonName>
+				<Skill>Стрельба</Skill>
+				<Aftertext>Умение использовать дальнобойное оружие. Конечно, для его использования необходимо оружие — бризальный пистолет.</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать знание улиц</ButtonName>
+				<Skill>Знание улиц</Skill>
+				<Aftertext>Обладая этим умением, вы никогда не потеряетесь ни в одном городе. Там, где другие видят мешанину домов и лабиринт освещенных неоном улиц, вы чувствуете себя как дома.</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать воровство</ButtonName>
+				<Skill>Воровство</Skill>
+				<Aftertext>Техники воровства и шпионажа: карманни-чество, вскрытие замков, а также возможность скрыться в тени.</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать выживание</ButtonName>
+				<Skill>Выживание</Skill>
+				<Aftertext>Способность, которая избавит вас от проблем в пустынных и необитаемых регионах: лесах, пустынях, болотах и горах.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
