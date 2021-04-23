@@ -95,7 +95,14 @@ namespace Seeker.Gamebook.HeartOfIce
             return !(disbledByChoice || disabledBySkills);
         }
 
-        public static bool CheckOnlyIf(string option) => true;
+        public static bool CheckOnlyIf(string option)
+        {
+            foreach (string skill in Character.Protagonist.Skills)
+                if (option == skill)
+                    return true;
+
+            return Game.Data.Triggers.Contains(option);
+        }
 
         public bool IsHealingEnabled() => false;
 
