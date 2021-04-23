@@ -29,7 +29,16 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public List<string> Representer() => new List<string> { };
 
-        public List<string> Status() => null;
+        public List<string> Status()
+        {
+            List<string> statusLines = new List<string>
+            {
+                String.Format("Здоровье: {0}", Character.Protagonist.Life),
+                String.Format("Деньги: {0}", Character.Protagonist.Money),
+            };
+
+            return statusLines;
+        }
 
         public List<string> AdditionalStatus() => null;
 
