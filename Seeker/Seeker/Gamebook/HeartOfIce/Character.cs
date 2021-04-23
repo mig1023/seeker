@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Seeker.Gamebook.HeartOfIce
@@ -39,6 +40,9 @@ namespace Seeker.Gamebook.HeartOfIce
             }
         }
 
+        public List<string> Skills { get; set; }
+        public int SkillsValue { get; set; }
+
         public void Init()
         {
             Name = String.Empty;
@@ -46,6 +50,9 @@ namespace Seeker.Gamebook.HeartOfIce
             MaxLife = 10;
             Life = MaxLife;
             Money = 30;
+
+            Skills = new List<string>();
+            SkillsValue = 4;
         }
 
         public Character Clone() => new Character()
@@ -54,9 +61,10 @@ namespace Seeker.Gamebook.HeartOfIce
             MaxLife = this.MaxLife,
             Life = this.Life,
             Money = this.Money,
+            SkillsValue = this.SkillsValue,
         };
 
-        public string Save() => String.Join("|", MaxLife, Life, Money);
+        public string Save() => String.Join("|", MaxLife, Life, Money, SkillsValue, String.Join(":", Skills));
 
         public void Load(string saveLine)
         {
@@ -65,6 +73,9 @@ namespace Seeker.Gamebook.HeartOfIce
             MaxLife = int.Parse(save[0]);
             Life = int.Parse(save[1]);
             Money = int.Parse(save[2]);
+            SkillsValue = int.Parse(save[3]);
+
+            Skills = save[4].Split(':').ToList();
         }
     }
 }

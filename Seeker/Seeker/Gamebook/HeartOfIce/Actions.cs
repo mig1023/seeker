@@ -12,7 +12,9 @@ namespace Seeker.Gamebook.HeartOfIce
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
+        public string Skill { get; set; }
 
+        public List<Modification> Benefit { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
@@ -49,12 +51,33 @@ namespace Seeker.Gamebook.HeartOfIce
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
-            toEndText = String.Empty;
+            toEndText = "Начать сначала";
 
-            return false;
+            return Character.Protagonist.Life <= 0;
         }
 
-        public bool IsButtonEnabled() => true;
+        public List<string> Get()
+        {
+            if (!String.IsNullOrEmpty(Skill))
+            {
+                Character.Protagonist.Skills.Add(Skill);
+                Character.Protagonist.SkillsValue -= 1;
+
+                if (Benefit != null)
+                    foreach (Modification modification in Benefit)
+                        modification.Do();
+            }
+                
+            return new List<string> { "RELOAD" };
+        }
+
+        public bool IsButtonEnabled()
+        {
+            bool disabledBySkills = ((Character.Protagonist.SkillsValue <= 0) ||
+                (!String.IsNullOrEmpty(Skill) && Character.Protagonist.Skills.Contains(Skill)));
+
+            return !disabledBySkills;
+        }
 
         public static bool CheckOnlyIf(string option) => true;
 
