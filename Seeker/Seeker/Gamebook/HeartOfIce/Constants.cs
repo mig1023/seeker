@@ -12,11 +12,13 @@ namespace Seeker.Gamebook.HeartOfIce
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#23a2a1",
-            [ButtonTypes.Option] = "#55858b",
+            [ButtonTypes.Option] = "#91d0d0",
+            [ButtonTypes.Continue] = "#bde2e2",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
+            [ColorTypes.Background] = "#d9eeee",
             [ColorTypes.StatusBar] = "#04aed9",
         };
 
