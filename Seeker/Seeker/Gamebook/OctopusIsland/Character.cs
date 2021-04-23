@@ -61,7 +61,7 @@ namespace Seeker.Gamebook.OctopusIsland
             LifeGivingOintment = this.LifeGivingOintment,
         };
 
-        public string Save() => String.Format("|", ThibautHitpoint, ThibautSkill, SergeHitpoint, SergeSkill,
+        public string Save() => String.Join("|", ThibautHitpoint, ThibautSkill, SergeHitpoint, SergeSkill,
             XolotlHitpoint, XolotlSkill, SouhiHitpoint, SouhiSkill, Food, LifeGivingOintment);
 
         public void Load(string saveLine)
