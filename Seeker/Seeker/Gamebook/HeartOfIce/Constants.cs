@@ -19,7 +19,7 @@ namespace Seeker.Gamebook.HeartOfIce
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#d9eeee",
-            [ColorTypes.StatusBar] = "#04aed9",
+            [ColorTypes.StatusBar] = "#1f9190",
         };
 
         public string GetButtonsColor(ButtonTypes type)
@@ -38,6 +38,6 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public double? GetLineHeight() => null;
 
-        public List<int> GetParagraphsWithoutStatuses() => new List<int> { };
+        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 454 };
     }
 }
