@@ -345,6 +345,7 @@ namespace Seeker.Gamebook
                 Disclaimer = "Дэйв Моррис, 1994; перевод Kadena и др.",
                 BookColor = "#23a2a1",
                 Illustration = "HeartOfIce.jpg",
+                ShowDisabledOption = true,
             },
         };
 
