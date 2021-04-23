@@ -34,7 +34,7 @@ namespace Seeker.Gamebook.SilentSchool
             HarmSelfAlready = this.HarmSelfAlready,
         };
 
-        public string Save() => String.Format("|", Life, Weapon,Grail, ChangeDecision, HarmSelfAlready);
+        public string Save() => String.Join("|", Life, Weapon,Grail, ChangeDecision, HarmSelfAlready);
 
         public void Load(string saveLine)
         {
