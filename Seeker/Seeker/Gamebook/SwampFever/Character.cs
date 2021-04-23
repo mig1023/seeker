@@ -116,7 +116,7 @@ namespace Seeker.Gamebook.SwampFever
             LiveMucus = this.LiveMucus,
         };
 
-        public string Save() => String.Format("|", Fury, Creds, Stigon, Rate, Hitpoints, SecondEngine, Stealth, Radar,
+        public string Save() => String.Join("|", Fury, Creds, Stigon, Rate, Hitpoints, SecondEngine, Stealth, Radar,
                 CircularSaw, Flamethrower, PlasmaCannon, Harmonizer, AcousticMembrane, LiveMucus);
 
         public void Load(string saveLine)
