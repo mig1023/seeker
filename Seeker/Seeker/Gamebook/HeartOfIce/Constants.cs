@@ -40,6 +40,6 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public double? GetLineHeight() => null;
 
-        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 454, 455, 456 };
+        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 454, 455, 456, 457 };
     }
 }
