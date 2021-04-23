@@ -16,6 +16,8 @@ namespace Seeker.Gamebook.HeartOfIce
             Game.Paragraph paragraph = new Game.Paragraph();
 
             paragraph.Options = new List<Option>();
+            paragraph.Actions = new List<Abstract.IActions>();
+            paragraph.Modification = new List<Abstract.IModification>();
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
@@ -37,7 +39,10 @@ namespace Seeker.Gamebook.HeartOfIce
                     ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+                    Text = Game.Xml.StringParse(xmlAction["Text"]),
                     Skill = Game.Xml.StringParse(xmlAction["Skill"]),
+
+                    Choice = Game.Xml.BoolParse(xmlAction["Choice"]),
                 };
 
                 if (xmlAction["Benefit"] != null)
@@ -63,6 +68,7 @@ namespace Seeker.Gamebook.HeartOfIce
             {
                 Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
                 Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+                ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
             };
 
             return modification;

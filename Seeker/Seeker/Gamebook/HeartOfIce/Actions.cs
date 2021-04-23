@@ -12,7 +12,9 @@ namespace Seeker.Gamebook.HeartOfIce
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
+        public string Text { get; set; }
         public string Skill { get; set; }
+        public bool Choice { get; set; }
 
         public List<Modification> Benefit { get; set; }
 
@@ -58,25 +60,29 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public List<string> Get()
         {
+            if (Choice)
+                Character.Protagonist.Chosen = true;
+
             if (!String.IsNullOrEmpty(Skill))
             {
                 Character.Protagonist.Skills.Add(Skill);
                 Character.Protagonist.SkillsValue -= 1;
-
-                if (Benefit != null)
-                    foreach (Modification modification in Benefit)
-                        modification.Do();
             }
-                
+
+            if (Benefit != null)
+                foreach (Modification modification in Benefit)
+                    modification.Do();
+
             return new List<string> { "RELOAD" };
         }
 
         public bool IsButtonEnabled()
         {
-            bool disabledBySkills = ((Character.Protagonist.SkillsValue <= 0) ||
-                (!String.IsNullOrEmpty(Skill) && Character.Protagonist.Skills.Contains(Skill)));
+            bool disbledByChoice = (Choice && Character.Protagonist.Chosen);
+            bool disabledBySkills = (!String.IsNullOrEmpty(Skill) &&
+                ((Character.Protagonist.SkillsValue <= 0) || Character.Protagonist.Skills.Contains(Skill)));
 
-            return !disabledBySkills;
+            return !(disbledByChoice || disabledBySkills);
         }
 
         public static bool CheckOnlyIf(string option) => true;
