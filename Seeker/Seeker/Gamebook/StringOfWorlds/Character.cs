@@ -109,7 +109,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             foreach (bool luck in Luck.Values.ToList())
                 lucks.Add(luck ? "1" : "0");
 
-            return String.Format("|", MaxSkill, Skill, MaxStrength, Strength, Charm,
+            return String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Charm,
                 Blaster, GateCode, Equipment, String.Join(",", lucks));
         }
 
