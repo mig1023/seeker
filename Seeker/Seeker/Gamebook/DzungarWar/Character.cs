@@ -143,7 +143,7 @@ namespace Seeker.Gamebook.DzungarWar
             Brother = this.Brother,
         };
 
-        public string Save() => String.Format("|", Strength, Skill, Wisdom, Cunning, Oratory,
+        public string Save() => String.Join("|", Strength, Skill, Wisdom, Cunning, Oratory,
             Danger, Favour, Tanga, StatBonuses, MaxBonus, Brother, Tincture, Ginseng);
 
         public void Load(string saveLine)
