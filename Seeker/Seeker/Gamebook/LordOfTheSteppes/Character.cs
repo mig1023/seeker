@@ -141,7 +141,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         {
             string specialTechniques = String.Join(":", SpecialTechnique.ConvertAll(e => e.ToString()));
 
-            return String.Format("|", MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance,
+            return String.Join("|", MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance,
                 MaxInitiative, Initiative, Bonuses, specialTechniques, Coins);
         }
 
