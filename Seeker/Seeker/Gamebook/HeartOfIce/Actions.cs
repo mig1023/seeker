@@ -31,7 +31,18 @@ namespace Seeker.Gamebook.HeartOfIce
             return actionResult;
         }
 
-        public List<string> Representer() => (String.IsNullOrEmpty(Text) ? new List<string>() : new List<string> { Text });
+        public List<string> Representer()
+        {
+            if (!String.IsNullOrEmpty(Text))
+                return new List<string> { Text };
+
+            else if (!String.IsNullOrEmpty(Skill))
+                return new List<string> { Skill };
+
+            else
+                return new List<string>();
+        }
+
         public List<string> Status()
         {
             List<string> statusLines = new List<string>
