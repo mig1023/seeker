@@ -57,6 +57,9 @@ namespace Seeker.Gamebook.HeartOfIce
                 paragraph.Actions.Add(action);
             }
 
+            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
+            paragraph.RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTriggers"]);
+
             return paragraph;
         }
 
