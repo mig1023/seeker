@@ -12,10 +12,13 @@ namespace Seeker.Gamebook.HeartOfIce
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
+        public string RemoveTrigger { get; set; }
+
         public string Text { get; set; }
         public string Skill { get; set; }
         public bool Choice { get; set; }
         public int Price { get; set; }
+        public bool Sell { get; set; }
         public bool Used { get; set; }
         public bool Multiple { get; set; }
 
@@ -84,7 +87,12 @@ namespace Seeker.Gamebook.HeartOfIce
 
             if ((Price > 0) && (Character.Protagonist.Money >= Price))
             {
-                Character.Protagonist.Money -= Price;
+                if (Sell)
+                    Character.Protagonist.Money += Price;
+                else
+                    Character.Protagonist.Money -= Price;
+
+                Game.Option.Trigger(RemoveTrigger, remove: true);
 
                 if (!Multiple)
                     Used = true;

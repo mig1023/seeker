@@ -42,11 +42,13 @@ namespace Seeker.Gamebook.HeartOfIce
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
                     Text = Game.Xml.StringParse(xmlAction["Text"]),
                     Skill = Game.Xml.StringParse(xmlAction["Skill"]),
+                    RemoveTrigger = Game.Xml.StringParse(xmlAction["RemoveTrigger"]),
 
                     Price = Game.Xml.IntParse(xmlAction["Price"]),
 
                     Choice = Game.Xml.BoolParse(xmlAction["Choice"]),
                     Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
+                    Sell = Game.Xml.BoolParse(xmlAction["Sell"]),
                 };
 
                 if (xmlAction["Benefit"] != null)
