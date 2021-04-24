@@ -97,11 +97,32 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public static bool CheckOnlyIf(string option)
         {
-            foreach (string skill in Character.Protagonist.Skills)
-                if (option == skill)
-                    return true;
+            if (option.Contains("|"))
+            {
+                foreach (string oneOption in option.Split('|'))
+                {
+                    if (Character.Protagonist.Skills.Contains(oneOption.Trim()))
+                        return true;
 
-            return Game.Data.Triggers.Contains(option);
+                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return true;
+                }
+
+                return false;
+            }
+            else
+            {
+                foreach (string oneOption in option.Split(','))
+                {
+                    if (!Character.Protagonist.Skills.Contains(oneOption.Trim()))
+                        return false;
+
+                    if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return false;
+                }
+
+                return true;
+            }
         }
 
         public bool IsHealingEnabled() => false;
