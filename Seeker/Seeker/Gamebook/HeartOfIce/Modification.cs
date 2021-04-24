@@ -15,6 +15,9 @@ namespace Seeker.Gamebook.HeartOfIce
             if (Name == "Skill")
                 Character.Protagonist.Skills.Add(ValueString);
 
+            else if (Name == "RemoveTrigger")
+                Game.Option.Trigger(ValueString, remove: true);
+
             else
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
