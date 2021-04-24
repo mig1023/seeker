@@ -15,6 +15,9 @@ namespace Seeker.Gamebook.HeartOfIce
         public string Text { get; set; }
         public string Skill { get; set; }
         public bool Choice { get; set; }
+        public int Price { get; set; }
+        public bool Used { get; set; }
+        public bool Multiple { get; set; }
 
         public List<Modification> Benefit { get; set; }
 
@@ -79,6 +82,14 @@ namespace Seeker.Gamebook.HeartOfIce
                 Character.Protagonist.SkillsValue -= 1;
             }
 
+            if ((Price > 0) && (Character.Protagonist.Money >= Price))
+            {
+                Character.Protagonist.Money -= Price;
+
+                if (!Multiple)
+                    Used = true;
+            }
+
             if (Benefit != null)
                 foreach (Modification modification in Benefit)
                     modification.Do();
@@ -91,8 +102,9 @@ namespace Seeker.Gamebook.HeartOfIce
             bool disbledByChoice = (Choice && Character.Protagonist.Chosen);
             bool disabledBySkills = (!String.IsNullOrEmpty(Skill) &&
                 ((Character.Protagonist.SkillsValue <= 0) || Character.Protagonist.Skills.Contains(Skill)));
+            bool disabledByPrice = (Price > 0) && (Character.Protagonist.Money < Price);
 
-            return !(disbledByChoice || disabledBySkills);
+            return !(disbledByChoice || disabledBySkills || disabledByPrice || Used);
         }
 
         public static bool CheckOnlyIf(string option)
