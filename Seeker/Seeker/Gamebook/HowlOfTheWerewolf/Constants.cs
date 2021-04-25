@@ -11,16 +11,16 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
     {
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#1b2b09",
-            [ButtonTypes.Action] = "#314021",
+            [ButtonTypes.Main] = "#383e3b",
+            [ButtonTypes.Action] = "#516f72",
             [ButtonTypes.Option] = "#696969",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.StatusBar] = "#2f3b20",
-            [ColorTypes.AdditionalStatus] = "#979d8f",
-            [ColorTypes.ActionBox] = "#bfc3b9",
+            [ColorTypes.StatusBar] = "#253130",
+            [ColorTypes.AdditionalStatus] = "#a8b7b8",
+            [ColorTypes.ActionBox] = "#a8b7b8",
         };
 
         public string GetButtonsColor(ButtonTypes type)
