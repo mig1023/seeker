@@ -18,6 +18,16 @@ namespace Seeker.Gamebook.HeartOfIce
             else if (Name == "RemoveTrigger")
                 Game.Option.Trigger(ValueString, remove: true);
 
+            else if (Name == "ReplaceTrigger")
+            {
+                string[] triggers = ValueString.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
+
+                if (!Game.Data.Triggers.Contains(triggers[0].Trim()))
+                    return;
+
+                Game.Option.Trigger(triggers[0].Trim(), remove: true);
+                Game.Option.Trigger(triggers[1].Trim());
+            }
             else
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
