@@ -343,7 +343,7 @@ namespace Seeker.Gamebook
                 Save = HeartOfIce.Character.Protagonist.Save,
                 Load = HeartOfIce.Character.Protagonist.Load,
                 Disclaimer = "Дэйв Моррис, 1994; перевод Kadena и др.",
-                BookColor = "#23a2a1",
+                BookColor = "#418988",
                 Illustration = "HeartOfIce.jpg",
                 ShowDisabledOption = true,
             },
