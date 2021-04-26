@@ -2948,7 +2948,48 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>359</ID>
-		<Text>Прогуливаясь по базару, вы обнаруживаете следующие предметы, выставленные на продажу:\n\nПротивогаз скадов\n\nФонарик скадов\n\nАптечка скадов\n\nЕда по 2 скада за одну порцию\n\nПоляризационные очки скадов\n\nНейлоновая веревка скада\n\nПокупайте, что хотите, и внесите соответствующие изменения в свой Лист персонажа.</Text>
+		<Text>Прогуливаясь по базару, вы обнаруживаете следующие предметы, выставленные на продажу:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить противогаз</ButtonName>
+				<Text>Противогаз, 15 скадов</Text>
+				<Price>15</Price>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить фонарик</ButtonName>
+				<Text>Фонарик, 8 скадов</Text>
+				<Price>8</Price>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить аптечку</ButtonName>
+				<Text>Аптечка, 8 скадов</Text>
+				<Price>8</Price>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить порцию</ButtonName>
+				<Text>Порция еды, 2 монеты</Text>
+				<Price>2</Price>
+				<Multiple/>
+				<Benefit Name="Healing" ValueString="Поесть,3"/>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить очки</ButtonName>
+				<Text>Поляризационные очки, 6 скадов</Text>
+				<Price>6</Price>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить верёвку</ButtonName>
+				<Text>Нейлоновая веревка, 3 скадов</Text>
+				<Price>3</Price>
+				<Aftertext>Покупайте, что хотите, и внесите соответствующие изменения в свой Лист персонажа.</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="381" Text="Записано ключевое слово «Алмаз»" OnlyIf="Алмаз"/>
 			<Option Destination="402" Text="Нет"/>
