@@ -2975,7 +2975,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить порцию</ButtonName>
-				<Text>Порция еды, 2 монеты</Text>
+				<Text>Порция еды, 2 скада</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Поесть,3"/>
@@ -3276,7 +3276,36 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>394</ID>
-		<Text>Изучив ассортимент товаров, выложенных на рыночных прилавках, вы торгуетесь, пока не удается согласовать следующие цены:\n\nЕда скада за каждую единицу\n\nВеревка скада\n\nЛампа скада\n\nАптечка скадов\n\nПокупайте, что хотите, и внесите соответствующие изменения в Лист персонажа.</Text>
+		<Text>Изучив ассортимент товаров, выложенных на рыночных прилавках, вы торгуетесь, пока не удается согласовать следующие цены:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить порцию</ButtonName>
+				<Text>Порция еды, 2 скада</Text>
+				<Price>2</Price>
+				<Multiple/>
+				<Benefit Name="Healing" ValueString="Поесть,3"/>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить верёвку</ButtonName>
+				<Text>Нейлоновая веревка, 2 скада</Text>
+				<Price>2</Price>	
+			</Action>		
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить лампу</ButtonName>
+				<Text>Лампа, 3 скада</Text>
+				<Price>3</Price>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить аптечку</ButtonName>
+				<Text>Аптечка, 12 скадов</Text>
+				<Price>12</Price>
+				<Aftertext>Покупайте, что хотите, и внесите соответствующие изменения в Лист персонажа.</Aftertext>
+			</Action>
+		</Actions>	
 		<Options>
 			<Option Destination="283" Text="Хотите также купить или продать оружие или другие необычные предметы"/>
 			<Option Destination="434" Text="Хотите заплатить за генетические улучшения" Aftertext="Если вы закончили с покупками:"/>
