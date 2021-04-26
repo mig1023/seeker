@@ -1071,7 +1071,7 @@
 			<Option Destination="302" Text="Обладаете ночным зрением"/>
 			<Option Destination="216" Text="Использовать Воровство" OnlyIf="Воровство"/>
 			<Option Destination="238" Text="Испрльзовать Стрельбу и заряженный бризальный пистолет" OnlyIf="Стрельба"/>
-			<Option Destination="172" Text="Зажечь фонарик или лампу, если они у вас есть" OnlyIf="Фонарик"/>
+			<Option Destination="172" Text="Зажечь фонарик или лампу, если они у вас есть" OnlyIf="Фонарик|Лампа"/>
 			<Option Destination="260" Text="Не владеете ничем из вышеперечисленного"/>
 		</Options>
 	</Paragraph>
@@ -3309,6 +3309,7 @@
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить лампу</ButtonName>
 				<Text>Лампа, 3 скада</Text>
+				<Trigger>Лампа</Trigger>
 				<Price>3</Price>
 			</Action>
 			<Action>
