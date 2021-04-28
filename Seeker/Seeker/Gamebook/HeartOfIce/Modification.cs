@@ -29,17 +29,11 @@ namespace Seeker.Gamebook.HeartOfIce
                 Game.Option.Trigger(triggers[1].Trim());
             }
             else if (Name == "LifeByTrigger")
-            {
-                string[] values = ValueString.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
-                string[] triggers = values[0].Split('|');
+                LifeByTrigger();
 
-                foreach (string trigger in triggers)
-                    if (Game.Data.Triggers.Contains(trigger.Trim()) || Character.Protagonist.Skills.Contains(trigger.Trim()))
-                    {
-                        Character.Protagonist.Life += int.Parse(values[1].Trim());
-                        return;
-                    }
-            }
+            else if (Name == "LifeByNotTrigger")
+                LifeByTrigger(notLogic: true);
+
             else
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
@@ -62,6 +56,21 @@ namespace Seeker.Gamebook.HeartOfIce
                     Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
                 }
             }
+        }
+
+        private void LifeByTrigger(bool notLogic = false)
+        {
+            string[] values = ValueString.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
+            string[] triggers = values[0].Split('|');
+
+            bool isTrigger = false;
+
+            foreach (string trigger in triggers)
+                if (Game.Data.Triggers.Contains(trigger.Trim()) || Character.Protagonist.Skills.Contains(trigger.Trim()))
+                    isTrigger = true;
+
+            if (isTrigger != notLogic)
+                Character.Protagonist.Life += int.Parse(values[1].Trim());
         }
     }
 }
