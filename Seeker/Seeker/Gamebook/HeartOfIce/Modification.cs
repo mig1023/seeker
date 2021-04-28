@@ -30,10 +30,15 @@ namespace Seeker.Gamebook.HeartOfIce
             }
             else if (Name == "LifeByTrigger")
             {
-                string[] values = ValueString.Split(',');
-                bool isTrigger = Game.Data.Triggers.Contains(values[0].Trim());
+                string[] values = ValueString.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] triggers = values[0].Split('|');
 
-                Character.Protagonist.Life += int.Parse(values[ (isTrigger ? 1 : 2) ].Trim());
+                foreach (string trigger in triggers)
+                    if (Game.Data.Triggers.Contains(trigger.Trim()) || Character.Protagonist.Skills.Contains(trigger.Trim()))
+                    {
+                        Character.Protagonist.Life += int.Parse(values[1].Trim());
+                        return;
+                    }
             }
             else
             {
