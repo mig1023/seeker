@@ -28,6 +28,13 @@ namespace Seeker.Gamebook.HeartOfIce
                 Game.Option.Trigger(triggers[0].Trim(), remove: true);
                 Game.Option.Trigger(triggers[1].Trim());
             }
+            else if (Name == "LifeByTrigger")
+            {
+                string[] values = ValueString.Split(',');
+                bool isTrigger = Game.Data.Triggers.Contains(values[0].Trim());
+
+                Character.Protagonist.Life += int.Parse(values[ (isTrigger ? 1 : 2) ].Trim());
+            }
             else
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
