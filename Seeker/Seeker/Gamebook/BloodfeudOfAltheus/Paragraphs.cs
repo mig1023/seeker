@@ -24,7 +24,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 Option option = GetOption
                 (
                     destination: Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
-                    text: Game.Xml.StringParse(xmlOption.Attributes["Text"], defaultText: "Далее"),
+                    text: Game.Xml.StringParse(xmlOption.Attributes["Text"]),
                     onlyIf: Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"])
                 );
 

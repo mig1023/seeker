@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             {
                 Option option = new Option
                 {
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"], defaultText: "Далее"),
+                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
                     OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
                 };
 

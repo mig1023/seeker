@@ -24,7 +24,7 @@ namespace Seeker.Gamebook.SwampFever
                 Option option = new Option
                 {
                     Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"], defaultText: "Далее"),
+                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
                     OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
                 };
 

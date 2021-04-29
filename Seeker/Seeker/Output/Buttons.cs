@@ -38,11 +38,16 @@ namespace Seeker.Output
                 optionColor ? Output.Buttons.ButtonTypes.Option : Output.Buttons.ButtonTypes.Main
             );
 
-            bool isEnabled = ((!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf)) ? false : true);
+            bool isEnabled = (!(!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf)));
+
+            string text = option.Text;
+
+            if (String.IsNullOrEmpty(text))
+                text = "Далее";
 
             Button optionButton = new Button()
             {
-                Text = option.Text,
+                Text = text,
                 BackgroundColor = Color.FromHex(color),
                 IsEnabled = isEnabled,
                 FontFamily = Output.Interface.TextFontFamily(),
