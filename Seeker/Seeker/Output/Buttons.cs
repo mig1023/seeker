@@ -40,14 +40,12 @@ namespace Seeker.Output
 
             bool isEnabled = (!(!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf)));
 
-            string text = option.Text;
-
-            if (String.IsNullOrEmpty(text))
-                text = "Далее";
+            if (String.IsNullOrEmpty(option.Text))
+                option.Text = (option.Destination == 0 ? "Начать сначала" : "Далее");
 
             Button optionButton = new Button()
             {
-                Text = text,
+                Text = option.Text,
                 BackgroundColor = Color.FromHex(color),
                 IsEnabled = isEnabled,
                 FontFamily = Output.Interface.TextFontFamily(),
