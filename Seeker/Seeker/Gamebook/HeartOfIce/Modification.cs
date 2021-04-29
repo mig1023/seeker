@@ -28,10 +28,10 @@ namespace Seeker.Gamebook.HeartOfIce
                 Game.Option.Trigger(triggers[0].Trim(), remove: true);
                 Game.Option.Trigger(triggers[1].Trim());
             }
-            else if (Name == "LifeByTrigger")
+            else if (Name == "ByTrigger")
                 LifeByTrigger();
 
-            else if (Name == "LifeByNotTrigger")
+            else if (Name == "ByNotTrigger")
                 LifeByTrigger(notLogic: true);
 
             else
