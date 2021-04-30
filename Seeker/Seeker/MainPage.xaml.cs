@@ -45,7 +45,44 @@ namespace Seeker
                 Button button = Output.Interface.GamebookButton(gamebook);
                 button.Clicked += Gamebook_Click;
                 Options.Children.Add(button);
-                Options.Children.Add(Output.Interface.GamebookDisclaimer(gamebook));
+
+
+
+                Description description = Gamebook.List.GetDescription(gamebook);
+
+                StackLayout addDisclaimer = new StackLayout();
+                addDisclaimer.Background = Brush.WhiteSmoke;
+                addDisclaimer.Margin = new Thickness(1, 1, 1, 1);
+
+                StackLayout disclaimerBorder = new StackLayout();
+                disclaimerBorder.BackgroundColor = Color.FromHex(description.BookColor);
+                disclaimerBorder.Margin = new Thickness(0, 0, 0, 0);
+                disclaimerBorder.IsVisible = false;
+
+                TapGestureRecognizer close = new TapGestureRecognizer();
+                close.Tapped += (s, e) => disclaimerBorder.IsVisible = false;
+
+                Label addText = new Label();
+                addText.Text = "Дополнительный текст";
+                addText.Margin = new Thickness(5, 5, 5, 5);
+                addText.GestureRecognizers.Add(close);
+
+                addDisclaimer.Children.Add(addText);
+
+                TapGestureRecognizer open = new TapGestureRecognizer();
+                open.Tapped += (s, e) =>
+                {
+                    disclaimerBorder.IsVisible = !disclaimerBorder.IsVisible;
+                    disclaimerBorder.ForceLayout();
+                };
+
+                Label label = Output.Interface.GamebookDisclaimer(gamebook);
+                label.GestureRecognizers.Add(open);
+                Options.Children.Add(label);
+
+
+                disclaimerBorder.Children.Add(addDisclaimer);
+                Options.Children.Add(disclaimerBorder);
             }
 
             UpdateStatus();
@@ -67,7 +104,7 @@ namespace Seeker
             Paragraph(Game.Continue.Load(), loadGame: true);
         }
 
-        public void Paragraph(int id, bool reload = false, bool loadGame = false)
+        public void Paragraph(int id, bool reload = false, bool loadGame = false, string optionName = "")
         {
             bool startOfGame = (id == Game.Data.StartParagraph);
 
@@ -92,7 +129,12 @@ namespace Seeker
             else
                 paragraph = Game.Data.CurrentParagraph;
 
-            Text.Children.Add(Output.Interface.Text(Game.Data.XmlParagraphs[id]["Text"].InnerText));
+            string textByParagraph = Game.Data.XmlParagraphs[id]["Text"].InnerText;
+            string textByOption = Game.Data.Actions.TextByOptions(optionName);
+            string text = (String.IsNullOrEmpty(textByOption) ? textByParagraph : textByOption);
+
+            if (!String.IsNullOrEmpty(text))
+                Text.Children.Add(Output.Interface.Text(text));
 
             if (!String.IsNullOrEmpty(paragraph.Image))
             {
@@ -320,7 +362,7 @@ namespace Seeker
 
         private void Option_Click(object sender, EventArgs e)
         {
-            Paragraph(Game.Router.FindDestination((sender as Button).Text));
+            Paragraph(Game.Router.FindDestination((sender as Button).Text), optionName: (sender as Button).Text);
         }
     }
 }
