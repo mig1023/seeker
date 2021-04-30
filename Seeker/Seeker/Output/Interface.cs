@@ -83,11 +83,49 @@ namespace Seeker.Output
         {
             return new Label()
             {
-                Text = String.Format("© {0}", Gamebook.List.GetDescription(gamebook).Disclaimer),
+                Text = String.Format("© {0}", Gamebook.List.GetDescription(gamebook).SmallDisclaimer),
                 HorizontalTextAlignment = TextAlignment.Start,
                 FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
                 Margin = new Thickness(0, 0, 0, 8),
             };
+        }
+
+        public static void GamebookDisclaimerAdd(string gamebook, ref StackLayout options)
+        {
+            Description description = Gamebook.List.GetDescription(gamebook);
+
+            if (!String.IsNullOrEmpty(description.FullDisclaimer))
+            {
+                Frame disclaimerBorder = new Frame();
+                disclaimerBorder.BorderColor = Color.FromHex(description.BookColor);
+                disclaimerBorder.Margin = new Thickness(0, 0, 0, 8);
+                disclaimerBorder.IsVisible = false;
+
+                TapGestureRecognizer close = new TapGestureRecognizer();
+                close.Tapped += (s, e) => disclaimerBorder.IsVisible = false;
+
+                Label discliamerText = new Label();
+                discliamerText.Text = description.FullDisclaimer;
+                discliamerText.Margin = new Thickness(5, 5, 5, 5);
+                discliamerText.GestureRecognizers.Add(close);
+                disclaimerBorder.GestureRecognizers.Add(close);
+
+                TapGestureRecognizer open = new TapGestureRecognizer();
+                open.Tapped += (s, e) =>
+                {
+                    disclaimerBorder.IsVisible = !disclaimerBorder.IsVisible;
+                    disclaimerBorder.ForceLayout();
+                };
+
+                Label label = Output.Interface.GamebookDisclaimer(gamebook);
+                label.GestureRecognizers.Add(open);
+                options.Children.Add(label);
+
+                disclaimerBorder.Content = discliamerText;
+                options.Children.Add(disclaimerBorder);
+            }
+            else
+                options.Children.Add(Output.Interface.GamebookDisclaimer(gamebook));
         }
 
         public static List<View> Represent(List<string> enemiesLines)

@@ -38,7 +38,9 @@ namespace Seeker.Gamebook
 
         public Abstract.IConstants Constants;
 
-        public string Disclaimer;
+        public string SmallDisclaimer;
+
+        public string FullDisclaimer;
 
         public bool ShowDisabledOption;
     }

@@ -46,43 +46,7 @@ namespace Seeker
                 button.Clicked += Gamebook_Click;
                 Options.Children.Add(button);
 
-
-
-                Description description = Gamebook.List.GetDescription(gamebook);
-
-                StackLayout addDisclaimer = new StackLayout();
-                addDisclaimer.Background = Brush.WhiteSmoke;
-                addDisclaimer.Margin = new Thickness(1, 1, 1, 1);
-
-                StackLayout disclaimerBorder = new StackLayout();
-                disclaimerBorder.BackgroundColor = Color.FromHex(description.BookColor);
-                disclaimerBorder.Margin = new Thickness(0, 0, 0, 0);
-                disclaimerBorder.IsVisible = false;
-
-                TapGestureRecognizer close = new TapGestureRecognizer();
-                close.Tapped += (s, e) => disclaimerBorder.IsVisible = false;
-
-                Label addText = new Label();
-                addText.Text = "Дополнительный текст";
-                addText.Margin = new Thickness(5, 5, 5, 5);
-                addText.GestureRecognizers.Add(close);
-
-                addDisclaimer.Children.Add(addText);
-
-                TapGestureRecognizer open = new TapGestureRecognizer();
-                open.Tapped += (s, e) =>
-                {
-                    disclaimerBorder.IsVisible = !disclaimerBorder.IsVisible;
-                    disclaimerBorder.ForceLayout();
-                };
-
-                Label label = Output.Interface.GamebookDisclaimer(gamebook);
-                label.GestureRecognizers.Add(open);
-                Options.Children.Add(label);
-
-
-                disclaimerBorder.Children.Add(addDisclaimer);
-                Options.Children.Add(disclaimerBorder);
+                Output.Interface.GamebookDisclaimerAdd(gamebook, ref Options);
             }
 
             UpdateStatus();
