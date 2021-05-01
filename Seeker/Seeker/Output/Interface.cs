@@ -141,7 +141,7 @@ namespace Seeker.Output
                 StackLayout textLayout = new StackLayout()
                 {
                     Orientation = StackOrientation.Horizontal,
-                    Margin = new Thickness(0, 0, 0, 8),
+                    Margin = new Thickness(0, 0, 0, 0),
                 };
 
                 Label smallText = GamebookDisclaimer(gamebook);
