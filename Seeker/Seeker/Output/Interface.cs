@@ -79,15 +79,19 @@ namespace Seeker.Output
             return gamebookButton;
         }
 
-        public static Label GamebookDisclaimer(string gamebook)
+        public static Label GamebookDisclaimer(string gamebook, bool withOut = true)
         {
-            return new Label()
+            Label disclaimer = new Label()
             {
                 Text = String.Format("© {0}", Gamebook.List.GetDescription(gamebook).SmallDisclaimer),
                 HorizontalTextAlignment = TextAlignment.Start,
                 FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
-                Margin = new Thickness(0, 0, 0, 8),
             };
+
+            if (withOut)
+                disclaimer.Margin = new Thickness(0, 0, 0, 8);
+
+            return disclaimer;
         }
 
         public static void GamebookDisclaimerAdd(string gamebook, ref StackLayout options)
@@ -117,15 +121,34 @@ namespace Seeker.Output
                     disclaimerBorder.ForceLayout();
                 };
 
-                Label label = Output.Interface.GamebookDisclaimer(gamebook);
-                label.GestureRecognizers.Add(open);
-                options.Children.Add(label);
+                StackLayout textLayout = new StackLayout()
+                {
+                    Orientation = StackOrientation.Horizontal,
+                    Margin = new Thickness(0, 0, 0, 8),
+                };
+
+                Label smallText = GamebookDisclaimer(gamebook);
+                smallText.GestureRecognizers.Add(open);
+                textLayout.Children.Add(smallText);
+
+                Label linkText = new Label()
+                {
+                    Text = "➝ подробнее",
+                    HorizontalTextAlignment = TextAlignment.Start,
+                    FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
+                    TextColor = Color.FromHex(description.BookColor),
+                    FontAttributes = FontAttributes.Bold,
+                };
+                linkText.GestureRecognizers.Add(open);
+                textLayout.Children.Add(linkText);
+
+                options.Children.Add(textLayout);
 
                 disclaimerBorder.Content = discliamerText;
                 options.Children.Add(disclaimerBorder);
             }
             else
-                options.Children.Add(Output.Interface.GamebookDisclaimer(gamebook));
+                options.Children.Add(GamebookDisclaimer(gamebook, withOut: true));
         }
 
         public static List<View> Represent(List<string> enemiesLines)
