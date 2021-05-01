@@ -22,18 +22,18 @@ namespace Seeker.Output
 
             foreach (string status in statusLines)
             {
-                Label label = new Label();
+                Label label = new Label
+                {
+                    Text = status + System.Convert.ToChar(160),
+                    FontSize = 12,
+                    TextColor = (String.IsNullOrEmpty(textColor) ? Color.White : Color.FromHex(textColor)),
+                    BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar)),
 
-                label.Text = status + System.Convert.ToChar(160);
-                label.FontSize = 12;
-                label.TextColor = (String.IsNullOrEmpty(textColor) ? Color.White : Color.FromHex(textColor));
-                label.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar));
-
-                label.HorizontalTextAlignment = TextAlignment.Center;
-                label.VerticalTextAlignment = TextAlignment.Center;
-
-                label.HorizontalOptions = LayoutOptions.FillAndExpand;
-                label.VerticalOptions = LayoutOptions.FillAndExpand;
+                    HorizontalTextAlignment = TextAlignment.Center,
+                    VerticalTextAlignment = TextAlignment.Center,
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
+                    VerticalOptions = LayoutOptions.FillAndExpand,
+                };
 
                 statusLabels.Add(label);
             }
@@ -94,23 +94,40 @@ namespace Seeker.Output
             return disclaimer;
         }
 
+        public static Label LinkDisclaimer(string color)
+        {
+            return new Label()
+            {
+                Text = "➝ подробнее",
+                HorizontalTextAlignment = TextAlignment.Start,
+                FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
+                TextColor = Color.FromHex(color),
+                FontAttributes = FontAttributes.Bold,
+            };
+        }
+
         public static void GamebookDisclaimerAdd(string gamebook, ref StackLayout options)
         {
             Description description = Gamebook.List.GetDescription(gamebook);
 
             if (!String.IsNullOrEmpty(description.FullDisclaimer))
             {
-                Frame disclaimerBorder = new Frame();
-                disclaimerBorder.BorderColor = Color.FromHex(description.BookColor);
-                disclaimerBorder.Margin = new Thickness(0, 0, 0, 8);
-                disclaimerBorder.IsVisible = false;
+                Frame disclaimerBorder = new Frame
+                {
+                    BorderColor = Color.FromHex(description.BookColor),
+                    Margin = new Thickness(0, 0, 0, 8),
+                    IsVisible = false,
+                };
 
                 TapGestureRecognizer close = new TapGestureRecognizer();
                 close.Tapped += (s, e) => disclaimerBorder.IsVisible = false;
 
-                Label discliamerText = new Label();
-                discliamerText.Text = description.FullDisclaimer;
-                discliamerText.Margin = new Thickness(5, 5, 5, 5);
+                Label discliamerText = new Label
+                {
+                    Text = description.FullDisclaimer,
+                    Margin = new Thickness(5, 5, 5, 5),
+                };
+
                 discliamerText.GestureRecognizers.Add(close);
                 disclaimerBorder.GestureRecognizers.Add(close);
 
@@ -131,17 +148,10 @@ namespace Seeker.Output
                 smallText.GestureRecognizers.Add(open);
                 textLayout.Children.Add(smallText);
 
-                Label linkText = new Label()
-                {
-                    Text = "➝ подробнее",
-                    HorizontalTextAlignment = TextAlignment.Start,
-                    FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
-                    TextColor = Color.FromHex(description.BookColor),
-                    FontAttributes = FontAttributes.Bold,
-                };
+                Label linkText = LinkDisclaimer(description.BookColor);
                 linkText.GestureRecognizers.Add(open);
-                textLayout.Children.Add(linkText);
 
+                textLayout.Children.Add(linkText);
                 options.Children.Add(textLayout);
 
                 disclaimerBorder.Content = discliamerText;
