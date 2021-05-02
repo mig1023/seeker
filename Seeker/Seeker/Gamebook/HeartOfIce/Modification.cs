@@ -37,6 +37,9 @@ namespace Seeker.Gamebook.HeartOfIce
             else if (Name == "ByNotTrigger")
                 LifeByTrigger(notLogic: true);
 
+            else if (Name == "ByFood")
+                LifeByFood();
+
             else
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
@@ -74,6 +77,18 @@ namespace Seeker.Gamebook.HeartOfIce
 
             if (isTrigger != notLogic)
                 Character.Protagonist.Life += int.Parse(values[1].Trim());
+        }
+
+        private void LifeByFood()
+        {
+            if (Character.Protagonist.Skills.Contains(ValueString))
+                return;
+
+            else if (Character.Protagonist.Food > 0)
+                Character.Protagonist.Food -= 1;
+
+            else
+                Character.Protagonist.Life -= Value;
         }
     }
 }
