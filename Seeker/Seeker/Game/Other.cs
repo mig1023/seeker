@@ -37,6 +37,18 @@ namespace Seeker.Game
             Game.Data.ShowDisabledOption = gamebook.ShowDisabledOption;
         }
 
+        public static string Сomparison(int a, int b)
+        {
+            if (a > b)
+                return "больше";
+
+            else if (a < b)
+                return "меньше";
+
+            else
+                return "равно";
+        }
+
         public static bool DoNothing() => true;
     }
 }

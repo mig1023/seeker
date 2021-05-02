@@ -218,19 +218,15 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 int secondRoll = Game.Dice.Roll();
                 int heroStrength = firstRoll + secondRoll + Character.Protagonist.Attack;
 
-                fight.Add(String.Format(
-                    "Ваша сила удара: {0} + {1} + {2} = {3}",
-                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), Character.Protagonist.Attack, heroStrength
-                ));
+                fight.Add(String.Format("Ваша сила удара: {0} + {1} + {2} = {3}",
+                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), Character.Protagonist.Attack, heroStrength));
 
                 firstRoll = Game.Dice.Roll();
                 secondRoll = Game.Dice.Roll();
                 int enemyStrength = firstRoll + secondRoll + ENEMY_STRENGTH;
 
-                fight.Add(String.Format(
-                    "Cила удара удальца: {0} + {1} + {2} = {3}",
-                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), ENEMY_STRENGTH, enemyStrength
-                ));
+                fight.Add(String.Format("Cила удара удальца: {0} + {1} + {2} = {3}",
+                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), ENEMY_STRENGTH, enemyStrength));
 
                 if (heroStrength > enemyStrength)
                 {
@@ -278,19 +274,15 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 int hisSecondDice = Game.Dice.Roll();
                 enemyResult = hisFirstDice + hisSecondDice + 4;
 
-                diceGame.Add(String.Format(
-                    "Он бросил: {0} + {1} = {2}",
-                    Game.Dice.Symbol(hisFirstDice), Game.Dice.Symbol(hisSecondDice), enemyResult
-                ));
+                diceGame.Add(String.Format("Он бросил: {0} + {1} = {2}",
+                    Game.Dice.Symbol(hisFirstDice), Game.Dice.Symbol(hisSecondDice), enemyResult));
 
                 int firstDice = Game.Dice.Roll();
                 int secondDice = Game.Dice.Roll();
                 myResult = firstDice + secondDice;
 
-                diceGame.Add(String.Format(
-                    "Вы бросили: {0} + {1} = {2}",
-                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), myResult
-                ));
+                diceGame.Add(String.Format("Вы бросили: {0} + {1} = {2}",
+                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), myResult));
 
                 diceGame.Add(String.Empty);
             }
@@ -532,17 +524,15 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 bonuses += Add(specialRules["defensive"], " - 1 за Оборонительный стиль боя");
                 bonuses += Add(specialRules["fullback"], " - 1 за Глухую оборону");
 
-                fight.Add(
-                    String.Format(
-                        "Мощность удара: {0} + {1} + {2}{3}{4} = {5}",
-                        Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), attacker.Attack, bonuses,
-                        (coherenceBonus ? String.Format(" {0} {1} за Слаженность", (coherence > 0 ? "+" : "-"), Math.Abs(coherence)) : String.Empty),
-                        attackStrength
-                    )
-                );
+                fight.Add(String.Format(
+                    "Мощность удара: {0} + {1} + {2}{3}{4} = {5}",
+                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), attacker.Attack, bonuses,
+                    (coherenceBonus ? String.Format(" {0} {1} за Слаженность", (coherence > 0 ? "+" : "-"), Math.Abs(coherence)) : String.Empty),
+                    attackStrength));
 
                 bool defenceBonus = defender.SpecialTechnique.Contains(Character.SpecialTechniques.TotalProtection);
-                int defence = (defender.Defence + (defenceBonus ? 1 : 0) + (specialRules["defensiveEnemy"] ? 1 : 0) + (specialRules["fullbackEnemy"] ? 2 : 0) - (specialRules["aggressiveEnemy"] ? 1 : 0));
+                int defence = (defender.Defence + (defenceBonus ? 1 : 0) + (specialRules["defensiveEnemy"] ? 1 : 0) +
+                    (specialRules["fullbackEnemy"] ? 2 : 0) - (specialRules["aggressiveEnemy"] ? 1 : 0));
 
                 success = attackStrength > defence;
 
@@ -553,9 +543,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 bonuses += Add(specialRules["defensiveEnemy"], " + 1 за Оборонительный стиль боя");
                 bonuses += Add(specialRules["fullbackEnemy"], " + 2 за Глухую оборону");
 
-                fight.Add(String.Format(
-                    "Защита: {0}{1} {2} {3}",  defender.Defence, bonuses, (success ? "это меньше" : "это больше или равно"), attackStrength
-                ));
+                string comparison = Game.Other.Сomparison(defence, attackStrength);
+
+                fight.Add(String.Format("Защита: {0}{1} — {2} {3}",  defender.Defence, bonuses, comparison, attackStrength));
             }
 
             if (success)
@@ -746,7 +736,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         fight.Add("Дополнительная атака (особый приём):");
 
                         if (reactionSuccess)
-                            fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)", (FightAllies.Contains(enemy) ? "GOOD" : "BAD")));
+                            fight.Add(String.Format("{0}|Уклонение от атаки благодаря Реакции (особый приём)",
+                                (FightAllies.Contains(enemy) ? "GOOD" : "BAD")));
                         else
                             enemyWounds += Attack(fighter, enemy, ref fight, FightAllies, ref WoundsCount, ref AttackStory, round,
                                 coherenceIndex, out bool _, supplAttack: true);
