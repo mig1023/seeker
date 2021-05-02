@@ -62,6 +62,9 @@ namespace Seeker.Gamebook.HeartOfIce
                 paragraph.Actions.Add(action);
             }
 
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
+                paragraph.Modification.Add(ModificationParse(xmlModification));
+
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
             paragraph.RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTriggers"]);
 
