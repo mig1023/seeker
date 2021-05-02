@@ -177,9 +177,8 @@ namespace Seeker.Gamebook.SwampFever
 
                 bool inAction = (upgradeDice == i);
 
-                fight.Add(String.Format(
-                    "{0}{1} - {2}", (inAction ? "GOOD|" : String.Empty), Constants.GetUpgrates()[i]["output"], (inAction ? "В ДЕЙСТВИИ!" : "нет")
-                ));
+                fight.Add(String.Format("{0}{1} - {2}",
+                    (inAction ? "GOOD|" : String.Empty), Constants.GetUpgrates()[i]["output"], (inAction ? "В ДЕЙСТВИИ!" : "нет")));
 
                 if (inAction)
                 {
@@ -365,10 +364,8 @@ namespace Seeker.Gamebook.SwampFever
                         if (myPenalty > 0)
                             penalties = String.Format(", -{0} за его 2-ки", myPenalty);
 
-                        fight.Add(String.Format(
-                            "Противник пытется уклониться: {0}{1}{2}, итого {3} - {4} порогового значения в 2",
-                            Game.Dice.Symbol(myDice), bonuses, penalties, enemyEvasion, (enemyEvasion > 2 ? "больше" : "меньше или равно")
-                        ));
+                        fight.Add(String.Format("Противник пытется уклониться: {0}{1}{2}, итого {3} - {4} (пороговое значение равно двум)",
+                            Game.Dice.Symbol(myDice), bonuses, penalties, enemyEvasion, Game.Other.Сomparison(enemyEvasion, 2)));
 
                         if (enemyEvasion > 2)
                         {
@@ -409,10 +406,8 @@ namespace Seeker.Gamebook.SwampFever
                         if (enemyPenalty > 0)
                             penalties = String.Format(", -{0} за ваши 2-ки", enemyPenalty);
 
-                        fight.Add(String.Format(
-                            "Вы пытется уклониться: {0}{1}{2}, итого {3} - {4} порогового значения 2",
-                            Game.Dice.Symbol(enemyDice), bonuses, penalties, myEvasion, (myEvasion > 2 ? "больше" : "меньше или равно")
-                        ));
+                        fight.Add(String.Format("Вы пытется уклониться: {0}{1}{2}, итого {3} - {4} (пороговое значение равно двум)",
+                            Game.Dice.Symbol(enemyDice), bonuses, penalties, myEvasion, Game.Other.Сomparison(myEvasion, 2)));
 
                         if (myEvasion > 2)
                         {
