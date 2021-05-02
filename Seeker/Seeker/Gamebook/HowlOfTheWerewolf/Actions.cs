@@ -262,7 +262,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     inTarget = false;
                 }
                 else
-                    competition.Add("GOOD|Это меньше или равно Мастерству: вы попали в цель!");
+                    competition.Add("GOOD|Это не превышает Мастерства: вы попали в цель!");
 
                 competition.Add(String.Empty);
 
