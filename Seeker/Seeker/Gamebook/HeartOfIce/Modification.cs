@@ -15,7 +15,7 @@ namespace Seeker.Gamebook.HeartOfIce
             if (Name == "Skill")
                 Character.Protagonist.Skills.Add(ValueString);
 
-            if (Name == "RemoveSkill")
+            else if (Name == "RemoveSkill")
                 Character.Protagonist.Skills.RemoveAll(item => item == ValueString);
 
             else if (Name == "RemoveTrigger")
