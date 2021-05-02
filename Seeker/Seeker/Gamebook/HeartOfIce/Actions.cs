@@ -140,10 +140,7 @@ namespace Seeker.Gamebook.HeartOfIce
                     if (oneOption.Contains("ЕДА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Food))
                         return false;
 
-                    if (!Character.Protagonist.Skills.Contains(oneOption.Trim()))
-                        return false;
-
-                    if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                    if (!Game.Data.Triggers.Contains(oneOption.Trim()) && !Character.Protagonist.Skills.Contains(oneOption.Trim()))
                         return false;
                 }
 
