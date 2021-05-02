@@ -55,6 +55,7 @@ namespace Seeker.Gamebook.HeartOfIce
             {
                 String.Format("Здоровье: {0}", Character.Protagonist.Life),
                 String.Format("Деньги: {0}", Character.Protagonist.Money),
+                String.Format("Еда: {0}", Character.Protagonist.Food),
             };
 
             return statusLines;
