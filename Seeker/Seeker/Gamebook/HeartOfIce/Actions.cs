@@ -137,6 +137,9 @@ namespace Seeker.Gamebook.HeartOfIce
                     if (oneOption.Contains("ДЕНЬГИ >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Money))
                         return false;
 
+                    if (oneOption.Contains("ЕДА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Food))
+                        return false;
+
                     if (!Character.Protagonist.Skills.Contains(oneOption.Trim()))
                         return false;
 
