@@ -3688,7 +3688,7 @@
 		<Options>
 			<Option Destination="423" Text="Свернуть к пирамидам Гизы"/>
 			<Option Destination="393" Text="Направиться прямо через Сахару к Дью-Эну, если вы идете пешком"/>
-			<Option Destination="289" Text="Есть аэрокар «Скат»"/>
+			<Option Destination="289" Text="Есть аэрокар «Скат»" OnlyIf="Аэрокар"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
