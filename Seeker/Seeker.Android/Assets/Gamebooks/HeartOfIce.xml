@@ -4163,6 +4163,7 @@
 				<Benefit Name="Skill" ValueString="Знание улиц"/>
 				<Benefit Name="Skill" ValueString="Стрельба"/>
 				<Benefit Name="Money" Value="10"/>
+				<Benefit Name="Shots" Value="6"/>
 				<Aftertext>Сейчас трудные времена, сильный диктует законы слабым.</Aftertext>
 			</Action>
 			<Action>
@@ -4186,6 +4187,7 @@
 				<Benefit Name="Skill" ValueString="Знание улиц"/>
 				<Benefit Name="Skill" ValueString="Стрельба"/>
 				<Benefit Name="Money" Value="5"/>
+				<Benefit Name="Shots" Value="6"/>
 				<Aftertext>Немногие решаются пересекать ледяные пустоши между городами, поэтому смелый путешественник может получить хорошую прибыль.</Aftertext>
 			</Action>
 			<Action>
@@ -4282,6 +4284,7 @@
 				<ActionName>Get</ActionName>
 				<ButtonName>Выбрать стрельба</ButtonName>
 				<Skill>Стрельба</Skill>
+				<Benefit Name="Shots" Value="6"/>
 				<Aftertext>Умение использовать дальнобойное оружие. Конечно, для его использования необходимо оружие — бризальный пистолет.</Aftertext>
 			</Action>
 			<Action>
