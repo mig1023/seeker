@@ -135,13 +135,15 @@ namespace Seeker.Gamebook.HeartOfIce
             {
                 foreach (string oneOption in option.Split(','))
                 {
-                    if (oneOption.Contains("ДЕНЬГИ >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Money))
-                        return false;
+                    if (oneOption.Contains("="))
+                    {
+                        if (oneOption.Contains("ДЕНЬГИ >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Money))
+                            return false;
 
-                    if (oneOption.Contains("ЕДА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Food))
-                        return false;
-
-                    if (!Game.Data.Triggers.Contains(oneOption.Trim()) && !Character.Protagonist.Skills.Contains(oneOption.Trim()))
+                        else if (oneOption.Contains("ЕДА >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Food))
+                            return false;
+                    }
+                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()) && !Character.Protagonist.Skills.Contains(oneOption.Trim()))
                         return false;
                 }
 
