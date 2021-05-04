@@ -55,8 +55,13 @@ namespace Seeker.Gamebook.HeartOfIce
             {
                 String.Format("Здоровье: {0}", Character.Protagonist.Life),
                 String.Format("Деньги: {0}", Character.Protagonist.Money),
-                String.Format("Еда: {0}", Character.Protagonist.Food),
             };
+
+            if (Character.Protagonist.Food > 0)
+                statusLines.Add(String.Format("Еда: {0}", Character.Protagonist.Food));
+
+            if (Character.Protagonist.Shots > 0)
+                statusLines.Add(String.Format("Выстрелов: {0}", Character.Protagonist.Shots));
 
             return statusLines;
         }
@@ -137,6 +142,9 @@ namespace Seeker.Gamebook.HeartOfIce
                 {
                     if (oneOption.Contains("="))
                     {
+                        if (oneOption.Contains("ВЫСТРЕЛОВ >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Shots))
+                            return false;
+
                         if (oneOption.Contains("ДЕНЬГИ >=") && (int.Parse(oneOption.Split('=')[1]) > Character.Protagonist.Money))
                             return false;
 
