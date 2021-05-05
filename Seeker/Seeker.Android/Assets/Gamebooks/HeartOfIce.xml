@@ -1624,11 +1624,38 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>178</ID>
-		<Text>Среди разбросанных останков жертв горгоны вы находите чью-то ИД-карту, бризальный пистолет (с 6 зарядами), фонарик и поляризационные очки.\n\nБоше берет очки и усмехается: «Вряд ли наш одноглазый приятель часто их надевал». Он предлагает поделить находки поровну, но предоставляет вам право выбирать первому. Можете взять себе любые две вещи, остальное отдать ему.\n\nС комфортом переночевав в пещере, вы отправляетесь в путь с рассветом.</Text>
-		<Modifications>
-			<Modification Name="Shots" Value="6"/>
-		</Modifications>
-		<Trigger>Фонарик, ИД-карта</Trigger>
+		<Text>Среди разбросанных останков жертв горгоны вы находите чью-то ИД-карту, бризальный пистолет (с 6 зарядами), фонарик и поляризационные очки.\n\nБоше берет очки и усмехается: «Вряд ли наш одноглазый приятель часто их надевал». Он предлагает поделить находки поровну, но предоставляет вам право выбирать первому. Можете взять себе любые две вещи, остальное отдать ему.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать карту</ButtonName>
+				<Text>ИД-карта</Text>
+				<Trigger>ИД-карта</Trigger>
+				<Split/>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать пистолет</ButtonName>
+				<Text>Бризальный пистолет</Text>
+				<Benefit Name="Shots" Value="6"/>
+				<Split/>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать фонарик</ButtonName>
+				<Text>Фонарик</Text>
+				<Trigger>Фонарик</Trigger>
+				<Split/>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Выбрать очки</ButtonName>
+				<Text>Поляризационные очки</Text>
+				<Trigger>Поляризационные очки</Trigger>
+				<Split/>
+				<Aftertext>С комфортом переночевав в пещере, вы отправляетесь в путь с рассветом.</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="199"/>
 		</Options>
