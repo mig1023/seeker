@@ -12,9 +12,14 @@ namespace Seeker.Gamebook.Genesis
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#4c687c",
+            [ButtonTypes.Continue] = "#849fb3",
         };
 
-        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>();
+        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
+        {
+            [ColorTypes.Background] = "#293342",
+            [ColorTypes.Font] = "#b6cbd8",
+        };
 
         public string GetButtonsColor(ButtonTypes type)
         {
