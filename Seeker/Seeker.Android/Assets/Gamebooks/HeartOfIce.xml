@@ -2621,7 +2621,48 @@
 				<ButtonName>Купить нож</ButtonName>
 				<Text>Нож, 4 скадов</Text>
 				<Price>4</Price>
-				<Aftertext>«Я также покупаю эти вещи, — говорит вам торговец, — за половину озвученной цены».\n\nЭто означает, что вы можете, например, продать ему бризальный пистолет, если он у вас есть, за 8 скадов. «С чего ты взял, что я захочу что-то продать?» — спрашиваете вы.\n\nЕго губы изгибаются в загадочной полуулыбке. «Я полагаю, ты пришел в Венезию, чтобы отправиться на пароме. Тебе понадобятся деньги на билет».\n\nПокупайте и продавайте, что душе угодно.</Aftertext>
+				<Aftertext>«Я также покупаю эти вещи, — говорит вам торговец, — за половину озвученной цены».\n\nЭто означает, что вы можете, например, продать ему бризальный пистолет, если он у вас есть, за 8 скадов.\n\n«С чего ты взял, что я захочу что-то продать?» — спрашиваете вы.\n\nЕго губы изгибаются в загадочной полуулыбке. «Я полагаю, ты пришел в Венезию, чтобы отправиться на пароме. Тебе понадобятся деньги на билет».</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Продать пистолет</ButtonName>
+				<Text>Бризальный пистолет, 8 скадов</Text>
+				<SellType>Пистолет</SellType>
+				<Price>8</Price>
+				<SellIfAvailable/>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Продать очки</ButtonName>
+				<Text>Поляризационные очки, 4 скадов</Text>
+				<RemoveTrigger>Поляризационные очки</RemoveTrigger>
+				<Price>4</Price>
+				<SellIfAvailable/>
+			</Action>			
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Продать фонарик</ButtonName>
+				<Text>Фонарик, 5 скадов</Text>
+				<RemoveTrigger>Фонарик</RemoveTrigger>
+				<Price>5</Price>
+				<SellIfAvailable/>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Продать противогаз</ButtonName>
+				<Text>Противогаз, 5 скадов</Text>
+				<Price>5</Price>
+				<RemoveTrigger>Противогаз</RemoveTrigger>
+				<SellIfAvailable/>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Продать гранату</ButtonName>
+				<Text>Шумовая граната, 4 скада</Text>
+				<Price>4</Price>
+				<RemoveTrigger>Шумовая граната</RemoveTrigger>
+				<Aftertext>Покупайте и продавайте, что душе угодно.</Aftertext>
+				<SellIfAvailable/>
 			</Action>
 		</Actions>
 		<Options>
