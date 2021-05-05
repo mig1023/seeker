@@ -29,6 +29,8 @@ namespace Seeker.Gamebook.Genesis
                 paragraph.Options.Add(option);
             }
 
+            paragraph.Image = Game.Xml.StringParse(xmlParagraph["Image"]);
+
             return paragraph;
         }
     }
