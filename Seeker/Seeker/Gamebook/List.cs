@@ -351,6 +351,21 @@ namespace Seeker.Gamebook
                 Illustration = "HeartOfIce.jpg",
                 ShowDisabledOption = true,
             },
+
+            ["Генезис"] = new Description
+            {
+                XmlBook = "Gamebooks/Genesis.xml",
+                Protagonist = Genesis.Character.Protagonist.Init,
+                CheckOnlyIf = Genesis.Actions.CheckOnlyIf,
+                Paragraphs = new Genesis.Paragraphs(),
+                Actions = new Genesis.Actions(),
+                Constants = new Genesis.Constants(),
+                Save = Genesis.Character.Protagonist.Save,
+                Load = Genesis.Character.Protagonist.Load,
+                SmallDisclaimer = "Рэй Гард, 2013",
+                BookColor = "#202b41",
+                Illustration = "Genesis.jpg",
+            },
         };
 
         public static List<string> GetBooks() => new List<string>(Books.Keys);

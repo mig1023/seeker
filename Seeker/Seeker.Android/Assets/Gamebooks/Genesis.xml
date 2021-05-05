@@ -1,0 +1,16 @@
+<Paragraphs>
+	<Paragraph>
+		<ID>0</ID>
+		<Text>Start.</Text>
+		<Options>
+			<Option Destination="1" Text="В путь!"/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>1</ID>
+		<Text>End.</Text>
+		<Options>
+			<Option Destination="0"/>
+		</Options>
+	</Paragraph>
+</Paragraphs>
