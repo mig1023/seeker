@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.HeartOfIce
         public bool Choice { get; set; }
         public int Price { get; set; }
         public bool Sell { get; set; }
+        public bool Split { get; set; }
         public bool Used { get; set; }
         public bool Multiple { get; set; }
 
@@ -93,16 +94,15 @@ namespace Seeker.Gamebook.HeartOfIce
 
             if ((Price > 0) && (Character.Protagonist.Money >= Price))
             {
-                if (Sell)
-                    Character.Protagonist.Money += Price;
-                else
-                    Character.Protagonist.Money -= Price;
-
+                Character.Protagonist.Money += (Sell ? Price : (Price * -1));
                 Game.Option.Trigger(RemoveTrigger, remove: true);
-
-                if (!Multiple)
-                    Used = true;
             }
+
+            if (Split)
+                Character.Protagonist.Split += 1;
+
+            if (((Price > 0) || Split) && !Multiple)
+                Used = true;
 
             if (Benefit != null)
                 foreach (Modification modification in Benefit)
@@ -117,8 +117,9 @@ namespace Seeker.Gamebook.HeartOfIce
             bool disabledBySkills = (!String.IsNullOrEmpty(Skill) &&
                 ((Character.Protagonist.SkillsValue <= 0) || Character.Protagonist.Skills.Contains(Skill)));
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Money < Price);
+            bool disabledBySplit = Split && (Character.Protagonist.Split >= 2);
 
-            return !(disbledByChoice || disabledBySkills || disabledByPrice || Used);
+            return !(disbledByChoice || disabledBySkills || disabledByPrice || disabledBySplit || Used);
         }
 
         public static bool CheckOnlyIf(string option)

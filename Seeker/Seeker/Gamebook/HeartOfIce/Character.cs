@@ -69,6 +69,7 @@ namespace Seeker.Gamebook.HeartOfIce
         public List<string> Skills { get; set; }
         public int SkillsValue { get; set; }
         public bool Chosen { get; set; }
+        public int Split { get; set; }
 
         public void Init()
         {
@@ -81,6 +82,7 @@ namespace Seeker.Gamebook.HeartOfIce
             Shots = 0;
             Chosen = false;
             SkillsValue = 4;
+            Split = 0;
 
             Skills = new List<string>();
         }
@@ -94,9 +96,10 @@ namespace Seeker.Gamebook.HeartOfIce
             Food = this.Food,
             Shots = this.Shots,
             SkillsValue = this.SkillsValue,
+            Split = this.Split,
         };
 
-        public string Save() => String.Join("|", MaxLife, Life, Money, Food, Shots, SkillsValue,
+        public string Save() => String.Join("|", MaxLife, Life, Money, Food, Shots, SkillsValue, Split,
             (Chosen ? 1 : 0), String.Join(":", Skills));
 
         public void Load(string saveLine)
@@ -109,9 +112,10 @@ namespace Seeker.Gamebook.HeartOfIce
             Food = int.Parse(save[3]);
             Shots = int.Parse(save[4]);
             SkillsValue = int.Parse(save[5]);
-            Chosen = (int.Parse(save[6]) == 1);
+            Split = int.Parse(save[6]);
+            Chosen = (int.Parse(save[7]) == 1);
 
-            Skills = save[7].Split(':').ToList();
+            Skills = save[8].Split(':').ToList();
         }
     }
 }

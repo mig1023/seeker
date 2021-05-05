@@ -60,6 +60,7 @@ namespace Seeker.Gamebook.HeartOfIce
                     Choice = Game.Xml.BoolParse(xmlAction["Choice"]),
                     Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
                     Sell = Game.Xml.BoolParse(xmlAction["Sell"]),
+                    Split = Game.Xml.BoolParse(xmlAction["Split"]),
                 };
 
                 if (xmlAction["Benefit"] != null)
