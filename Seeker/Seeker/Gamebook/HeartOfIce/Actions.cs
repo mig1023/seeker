@@ -19,6 +19,8 @@ namespace Seeker.Gamebook.HeartOfIce
         public bool Choice { get; set; }
         public int Price { get; set; }
         public bool Sell { get; set; }
+        public bool SellIfAvailable { get; set; }
+        public string SellType { get; set; }
         public bool Split { get; set; }
         public bool Used { get; set; }
         public bool Multiple { get; set; }
@@ -94,8 +96,14 @@ namespace Seeker.Gamebook.HeartOfIce
 
             if ((Price > 0) && (Character.Protagonist.Money >= Price))
             {
-                Character.Protagonist.Money += (Sell ? Price : (Price * -1));
+                Character.Protagonist.Money += ((Sell || SellIfAvailable) ? Price : (Price * -1));
                 Game.Option.Trigger(RemoveTrigger, remove: true);
+
+                if (SellIfAvailable && (SellType == "Пистолет"))
+                    Character.Protagonist.Shots = 0;
+
+                if (SellIfAvailable && (SellType == "Еда"))
+                    Character.Protagonist.Food -= 1;
             }
 
             if (Split)
@@ -118,8 +126,23 @@ namespace Seeker.Gamebook.HeartOfIce
                 ((Character.Protagonist.SkillsValue <= 0) || Character.Protagonist.Skills.Contains(Skill)));
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Money < Price);
             bool disabledBySplit = Split && (Character.Protagonist.Split >= 2);
+            bool disabledByAvailable = SellIfAvailable && !Available();
 
-            return !(disbledByChoice || disabledBySkills || disabledByPrice || disabledBySplit || Used);
+            return !(disbledByChoice || disabledBySkills || disabledByPrice || disabledBySplit || disabledByAvailable || Used);
+        }
+
+        public bool Available()
+        {
+            if (!String.IsNullOrEmpty(RemoveTrigger))
+                return Game.Data.Triggers.Contains(RemoveTrigger);
+
+            else if (SellType == "Пистолет")
+                return Character.Protagonist.Shots > 0;
+
+            else if (SellType == "Еда")
+                return Character.Protagonist.Food > 0;
+
+            return false;
         }
 
         public static bool CheckOnlyIf(string option)
