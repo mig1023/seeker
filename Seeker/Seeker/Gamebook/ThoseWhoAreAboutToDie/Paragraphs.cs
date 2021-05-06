@@ -55,15 +55,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             }
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-            {
-                Modification modification = new Modification
-                {
-                    Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
-                    Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
-                };
-
-                paragraph.Modification.Add(modification);
-            }
+                paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
             paragraph.Image = Game.Xml.StringParse(xmlParagraph["Image"]);

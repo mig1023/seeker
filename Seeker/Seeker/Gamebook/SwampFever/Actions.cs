@@ -20,7 +20,7 @@ namespace Seeker.Gamebook.SwampFever
         public int Level { get; set; }
         public int Price { get; set; }
         public bool Birds { get; set; }
-        public Modification Benefit { get; set; }
+        public Abstract.IModification Benefit { get; set; }
 
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)

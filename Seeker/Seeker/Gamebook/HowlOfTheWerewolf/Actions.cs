@@ -24,7 +24,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int Price { get; set; }
         public bool Used { get; set; }
         public bool Multiple { get; set; }
-        public List<Modification> Benefit { get; set; }
+        public List<Abstract.IModification> Benefit { get; set; }
 
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }

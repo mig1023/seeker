@@ -34,8 +34,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int DiceBonus { get; set; }
         public FoodSharingType? FoodSharing { get; set; }
 
-        public Modification Benefit { get; set; }
-        public Modification Damage { get; set; }
+        public Abstract.IModification Benefit { get; set; }
+        public Abstract.IModification Damage { get; set; }
 
         public Character.SpecializationType? Specialization { get; set; }
 

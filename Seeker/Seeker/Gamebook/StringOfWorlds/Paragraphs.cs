@@ -96,30 +96,13 @@ namespace Seeker.Gamebook.StringOfWorlds
                 }
 
                 if (xmlAction["Benefit"] != null)
-                {
-                    Modification modification = new Modification
-                    {
-                        Name = Game.Xml.StringParse(xmlAction["Benefit"].Attributes["Name"]),
-                        Value = Game.Xml.IntParse(xmlAction["Benefit"].Attributes["Value"]),
-                    };
-
-                    action.Benefit = modification;
-                }
+                    action.Benefit = Game.Xml.ModificationParse(xmlAction["Benefit"], new Modification());
 
                 paragraph.Actions.Add(action);
             }
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-            {
-                Modification modification = new Modification
-                {
-                    Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
-                    Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
-                    ValueString = Game.Xml.StringParse(xmlModification.Attributes["ValueString"]),
-                };
-
-                paragraph.Modification.Add(modification);
-            }
+                paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
             paragraph.RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTrigger"]);

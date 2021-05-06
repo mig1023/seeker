@@ -82,32 +82,17 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     }
                 }
 
-                action.Benefit = ModificationParse(xmlAction["Benefit"]);
+                action.Benefit = Game.Xml.ModificationParse(xmlAction["Benefit"], new Modification());
 
                 paragraph.Actions.Add(action);
             }
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(ModificationParse(xmlModification));
+                paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
             return paragraph;
-        }
-
-        private static Modification ModificationParse(XmlNode xmlNode)
-        {
-            if (xmlNode == null)
-                return null;
-
-            Modification modification = new Modification
-            {
-                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
-                ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
-            };
-
-            return modification;
         }
     }
 }

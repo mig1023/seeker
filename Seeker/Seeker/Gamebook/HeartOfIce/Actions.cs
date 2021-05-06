@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.HeartOfIce
         public bool Used { get; set; }
         public bool Multiple { get; set; }
 
-        public List<Modification> Benefit { get; set; }
+        public List<Abstract.IModification> Benefit { get; set; }
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
         {

@@ -30,15 +30,7 @@ namespace Seeker.Gamebook.DzungarWar
                 };
 
                 if (xmlOption.Attributes["Do"] != null)
-                {
-                    Modification modification = new Modification
-                    {
-                        Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]),
-                        Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]),
-                    };
-
-                    option.Do = modification;
-                }
+                    option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
 
                 paragraph.Options.Add(option);
             }

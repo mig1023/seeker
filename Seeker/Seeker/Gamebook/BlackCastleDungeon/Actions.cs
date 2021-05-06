@@ -21,7 +21,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public int Price { get; set; }
         public bool Used { get; set; }
         public bool Multiple { get; set; }
-        public Modification Benefit { get; set; }
+        public Abstract.IModification Benefit { get; set; }
         public bool ThisIsSpell { get; set; }
 
         static Dictionary<string, bool> SpellActivate = new Dictionary<string, bool>

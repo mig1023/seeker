@@ -21,7 +21,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public List<Character> Enemies { get; set; }
 
         public string Text { get; set; }
-        public Modification Benefit { get; set; }
+        public Abstract.IModification Benefit { get; set; }
  
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)

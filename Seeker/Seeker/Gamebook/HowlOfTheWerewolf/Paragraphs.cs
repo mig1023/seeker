@@ -34,15 +34,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
 
                 if (xmlOption.Attributes["Do"] != null)
-                {
-                    Modification modification = new Modification
-                    {
-                        Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]),
-                        Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]),
-                    };
-
-                    option.Do = modification;
-                }
+                    option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
 
                 paragraph.Options.Add(option);
             }
@@ -77,10 +69,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                 if (xmlAction["Benefit"] != null)
                 {
-                    action.Benefit = new List<Modification>();
+                    action.Benefit = new List<Abstract.IModification>();
 
                     foreach (XmlNode bonefit in xmlAction.SelectNodes("Benefit"))
-                        action.Benefit.Add(ModificationParse(bonefit));
+                        action.Benefit.Add(Game.Xml.ModificationParse(bonefit, new Modification()));
                 }
 
                 if (xmlAction["Enemies"] != null)
@@ -110,7 +102,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(ModificationParse(xmlModification));
+                paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
@@ -138,21 +130,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             bool success = Enum.TryParse(xmlNode.InnerText, out Actions.Specifics value);
 
             return (success ? value : Actions.Specifics.Nope);
-        }
-
-        private static Modification ModificationParse(XmlNode xmlNode)
-        {
-            if (xmlNode == null)
-                return null;
-
-            Modification modification = new Modification
-            {
-                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
-                ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
-            };
-
-            return modification;
         }
     }
 }
