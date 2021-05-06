@@ -35,6 +35,7 @@ namespace Seeker.Gamebook.HeartOfIce
                     {
                         Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]),
                         Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]),
+                        ValueString = Game.Xml.StringParse(xmlOption.Attributes["ValueString"]),
                     };
 
                     option.Do = modification;
