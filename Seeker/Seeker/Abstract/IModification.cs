@@ -8,6 +8,7 @@ namespace Seeker.Abstract
     {
         string Name { get; set; }
         int Value { get; set; }
+        string ValueString { get; set; }
 
         void Do();
     }

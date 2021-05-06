@@ -29,42 +29,19 @@ namespace Seeker.Gamebook.Genesis
                 };
 
                 if (xmlOption.Attributes["Do"] != null)
-                {
-                    Modification modification = new Modification
-                    {
-                        Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]),
-                        Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]),
-                    };
-
-                    option.Do = modification;
-                }
+                    option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
 
                 paragraph.Options.Add(option);
             }
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(ModificationParse(xmlModification));
+                paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
             paragraph.RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTriggers"]);
             paragraph.Image = Game.Xml.StringParse(xmlParagraph["Image"]);
 
             return paragraph;
-        }
-
-        private static Modification ModificationParse(XmlNode xmlNode)
-        {
-            if (xmlNode == null)
-                return null;
-
-            Modification modification = new Modification
-            {
-                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
-                ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
-            };
-
-            return modification;
         }
     }
 }

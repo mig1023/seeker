@@ -8,6 +8,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public string ValueString { get; set; }
         public bool Empty { get; set; }
         public bool Init { get; set; }
         public int WizardWoundsPenalty { get; set; }

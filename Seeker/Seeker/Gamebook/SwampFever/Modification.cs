@@ -8,6 +8,7 @@ namespace Seeker.Gamebook.SwampFever
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public string ValueString { get; set; }
         public bool Multiplication { get; set; }
         public bool Division { get; set; }
 

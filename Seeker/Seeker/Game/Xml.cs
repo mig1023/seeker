@@ -29,5 +29,17 @@ namespace Seeker.Game
         {
             return (xmlNode == null ? false : true);
         }
+
+        public static Abstract.IModification ModificationParse(XmlNode xmlNode, Abstract.IModification modification, string name = "Name")
+        {
+            if (xmlNode == null)
+                return null;
+
+            modification.Name = Game.Xml.StringParse(xmlNode.Attributes[name]);
+            modification.Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]);
+            modification.ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]);
+
+            return modification;
+        }
     }
 }
