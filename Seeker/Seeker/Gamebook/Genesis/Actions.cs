@@ -47,7 +47,25 @@ namespace Seeker.Gamebook.Genesis
 
         public bool IsButtonEnabled() => true;
 
-        public static bool CheckOnlyIf(string option) => true;
+        public static bool CheckOnlyIf(string option)
+        {
+            if (option.Contains("|"))
+            {
+                foreach (string oneOption in option.Split('|'))
+                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return true;
+
+                return false;
+            }
+            else
+            {
+                foreach (string oneOption in option.Split(','))
+                    if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return false;
+
+                return true;
+            }
+        }
 
         public bool IsHealingEnabled() => false;
 
