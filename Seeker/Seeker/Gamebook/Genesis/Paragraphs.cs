@@ -16,6 +16,7 @@ namespace Seeker.Gamebook.Genesis
             Game.Paragraph paragraph = new Game.Paragraph();
 
             paragraph.Options = new List<Option>();
+            paragraph.Modification = new List<Abstract.IModification>();
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
@@ -27,14 +28,43 @@ namespace Seeker.Gamebook.Genesis
                     Aftertext = Game.Xml.StringParse(xmlOption.Attributes["Aftertext"]),
                 };
 
+                if (xmlOption.Attributes["Do"] != null)
+                {
+                    Modification modification = new Modification
+                    {
+                        Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]),
+                        Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]),
+                    };
+
+                    option.Do = modification;
+                }
+
                 paragraph.Options.Add(option);
             }
+
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
+                paragraph.Modification.Add(ModificationParse(xmlModification));
 
             paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
             paragraph.RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTriggers"]);
             paragraph.Image = Game.Xml.StringParse(xmlParagraph["Image"]);
 
             return paragraph;
+        }
+
+        private static Modification ModificationParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return null;
+
+            Modification modification = new Modification
+            {
+                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+                ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
+            };
+
+            return modification;
         }
     }
 }
