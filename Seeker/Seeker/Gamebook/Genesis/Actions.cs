@@ -117,9 +117,9 @@ namespace Seeker.Gamebook.Genesis
             return new List<string> { "RELOAD" };
         }
 
-        public bool IsHealingEnabled() => false;
+        public bool IsHealingEnabled() => Character.Protagonist.Life < Character.Protagonist.MaxLife;
 
-        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
+        public void UseHealing(int healingLevel) => Character.Protagonist.Life += healingLevel;
 
         public string TextByOptions(string option) => String.Empty;
     }
