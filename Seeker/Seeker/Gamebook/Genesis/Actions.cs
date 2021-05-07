@@ -10,6 +10,7 @@ namespace Seeker.Gamebook.Genesis
     {
         public string ActionName { get; set; }
         public string ButtonName { get; set; }
+        public string Text { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
         public string Bonus { get; set; }
@@ -28,7 +29,23 @@ namespace Seeker.Gamebook.Genesis
             return actionResult;
         }
 
-        public List<string> Representer() => new List<string> { };
+        public List<string> Representer()
+        {
+            if (!String.IsNullOrEmpty(Bonus))
+            {
+                int currentStat = (int)Character.Protagonist.GetType().GetProperty(Bonus).GetValue(Character.Protagonist, null);
+
+                Dictionary<string, int> startValues = Constants.GetStartValues();
+
+                int diff = (currentStat - startValues[Bonus]);
+
+                string diffLine = (diff > 0 ? String.Format(" (+{0})", diff) : String.Empty);
+
+                return new List<string> { String.Format("{0}{1}", Text, diffLine) };
+            }
+
+            return new List<string>();
+        }
 
         public List<string> Status()
         {

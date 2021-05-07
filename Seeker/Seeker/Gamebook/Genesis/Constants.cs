@@ -12,7 +12,9 @@ namespace Seeker.Gamebook.Genesis
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#4c687c",
+            [ButtonTypes.Option] = "#6f8696",
             [ButtonTypes.Continue] = "#849fb3",
+            [ButtonTypes.Action] = "#445d6f",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
@@ -20,6 +22,7 @@ namespace Seeker.Gamebook.Genesis
             [ColorTypes.Background] = "#293342",
             [ColorTypes.Font] = "#b6cbd8",
             [ColorTypes.StatusBar] = "#3c5363",
+            [ColorTypes.ActionBox] = "#69707a",
         };
 
         public string GetButtonsColor(ButtonTypes type)
@@ -37,6 +40,13 @@ namespace Seeker.Gamebook.Genesis
         public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.normal;
 
         public double? GetLineHeight() => null;
+
+        public static Dictionary<string, int> GetStartValues() => new Dictionary<string, int>
+        {
+            ["Skill"] = 30,
+            ["Weapon"] = 15,
+            ["Stealth"] = 3,
+        };
 
         public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 201, 202, 203, 204, 205, 206, 207 };
     }

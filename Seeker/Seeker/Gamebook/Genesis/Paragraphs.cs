@@ -42,6 +42,7 @@ namespace Seeker.Gamebook.Genesis
                 {
                     ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
                     ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
+                    Text = Game.Xml.StringParse(xmlAction["Text"]),
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
                     Bonus = Game.Xml.StringParse(xmlAction["Bonus"]),
