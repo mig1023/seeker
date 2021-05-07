@@ -29,7 +29,18 @@ namespace Seeker.Gamebook.Genesis
 
         public List<string> Representer() => new List<string> { };
 
-        public List<string> Status() => null;
+        public List<string> Status()
+        {
+            List<string> statusLines = new List<string>
+            {
+                String.Format("Здоровье: {0}", Character.Protagonist.Life),
+                String.Format("Аура: {0}", Character.Protagonist.Aura),
+                String.Format("Ловкость: {0}", Character.Protagonist.Skill),
+                String.Format("Стелс: {0}", Character.Protagonist.Stealth),
+            };
+
+            return statusLines;
+        }
 
         public List<string> AdditionalStatus() => null;
 
@@ -40,9 +51,9 @@ namespace Seeker.Gamebook.Genesis
         public bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
-            toEndText = String.Empty;
+            toEndText = "Начать сначала";
 
-            return false;
+            return Character.Protagonist.Life <= 0;
         }
 
         public bool IsButtonEnabled() => true;

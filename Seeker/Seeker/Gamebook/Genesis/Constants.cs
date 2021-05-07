@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.Genesis
         {
             [ColorTypes.Background] = "#293342",
             [ColorTypes.Font] = "#b6cbd8",
+            [ColorTypes.StatusBar] = "#3c5363",
         };
 
         public string GetButtonsColor(ButtonTypes type)
@@ -37,6 +38,6 @@ namespace Seeker.Gamebook.Genesis
 
         public double? GetLineHeight() => null;
 
-        public List<int> GetParagraphsWithoutStatuses() => new List<int> { };
+        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 201, 202, 203, 204, 205, 206, 207 };
     }
 }
