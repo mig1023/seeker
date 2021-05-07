@@ -16,6 +16,7 @@ namespace Seeker.Gamebook.Genesis
             Game.Paragraph paragraph = new Game.Paragraph();
 
             paragraph.Options = new List<Option>();
+            paragraph.Actions = new List<Abstract.IActions>();
             paragraph.Modification = new List<Abstract.IModification>();
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
@@ -32,6 +33,21 @@ namespace Seeker.Gamebook.Genesis
                     option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
 
                 paragraph.Options.Add(option);
+            }
+
+
+            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
+            {
+                Actions action = new Actions
+                {
+                    ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
+                    ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
+                    Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
+                    Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+                    Bonus = Game.Xml.StringParse(xmlAction["Bonus"]),
+                };
+
+                paragraph.Actions.Add(action);
             }
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))

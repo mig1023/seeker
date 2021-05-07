@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.Genesis
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
+        public string Bonus { get; set; }
 
 
         public List<string> Do(out bool reload, string action = "", bool trigger = false)
@@ -56,7 +57,12 @@ namespace Seeker.Gamebook.Genesis
             return Character.Protagonist.Life <= 0;
         }
 
-        public bool IsButtonEnabled() => true;
+        public bool IsButtonEnabled()
+        {
+            bool disbledByBonuses = (!String.IsNullOrEmpty(Bonus) && (Character.Protagonist.Bonuses <= 0));
+
+            return !disbledByBonuses;
+        }
 
         public static bool CheckOnlyIf(string option)
         {
@@ -76,6 +82,22 @@ namespace Seeker.Gamebook.Genesis
 
                 return true;
             }
+        }
+
+        public List<string> Get()
+        {
+            if (!String.IsNullOrEmpty(Bonus) && (Character.Protagonist.Bonuses >= 0))
+            {
+                int currentStat = (int)Character.Protagonist.GetType().GetProperty(Bonus).GetValue(Character.Protagonist, null);
+
+                currentStat += 1;
+
+                Character.Protagonist.GetType().GetProperty(Bonus).SetValue(Character.Protagonist, currentStat);
+
+                Character.Protagonist.Bonuses -= 1;
+            }
+
+            return new List<string> { "RELOAD" };
         }
 
         public bool IsHealingEnabled() => false;

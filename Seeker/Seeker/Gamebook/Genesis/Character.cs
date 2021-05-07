@@ -41,16 +41,16 @@ namespace Seeker.Gamebook.Genesis
             }
         }
 
-        private int _steelArms;
-        public int SteelArms
+        private int _weapon;
+        public int Weapon
         {
-            get => _steelArms;
+            get => _weapon;
             set
             {
                 if (value < 0)
-                    _steelArms = 0;
+                    _weapon = 0;
                 else
-                    _steelArms = value;
+                    _weapon = value;
             }
         }
 
@@ -67,6 +67,8 @@ namespace Seeker.Gamebook.Genesis
             }
         }
 
+        public int Bonuses { get; set; }
+
         public void Init()
         {
             Name = String.Empty;
@@ -74,8 +76,9 @@ namespace Seeker.Gamebook.Genesis
             Life = MaxLife;
             Aura = 5;
             Skill = 30;
-            SteelArms = 15;
+            Weapon = 15;
             Stealth = 3;
+            Bonuses = 5;
         }
 
         public Character Clone() => new Character()
@@ -85,11 +88,12 @@ namespace Seeker.Gamebook.Genesis
             Life = this.Life,
             Aura = this.Aura,
             Skill = this.Skill,
-            SteelArms = this.SteelArms,
+            Weapon = this.Weapon,
             Stealth = this.Stealth,
+            Bonuses = this.Bonuses,
         };
 
-        public string Save() => String.Join("|", MaxLife, Life, Aura, Skill, SteelArms, Stealth);
+        public string Save() => String.Join("|", MaxLife, Life, Aura, Skill, Weapon, Stealth, Bonuses);
 
         public void Load(string saveLine)
         {
@@ -99,8 +103,9 @@ namespace Seeker.Gamebook.Genesis
             Life = int.Parse(save[1]);
             Aura = int.Parse(save[2]);
             Skill = int.Parse(save[3]);
-            SteelArms = int.Parse(save[4]);
+            Weapon = int.Parse(save[4]);
             Stealth = int.Parse(save[5]);
+            Bonuses = int.Parse(save[6]);
         }
     }
 }
