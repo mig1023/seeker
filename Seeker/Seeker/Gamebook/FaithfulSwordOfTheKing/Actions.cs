@@ -7,13 +7,8 @@ using System.Text;
 
 namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 {
-    class Actions : Abstract.IActions
+    class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public string ActionName { get; set; }
-        public string ButtonName { get; set; }
-        public string Aftertext { get; set; }
-        public string Trigger { get; set; }
-
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
@@ -27,20 +22,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public List<Modification> Benefit { get; set; }
         public Character.MeritalArts? MeritalArt { get; set; }
 
-        public List<string> Do(out bool reload, string action = "", bool trigger = false)
-        {
-            if (trigger)
-                Game.Option.Trigger(Trigger);
-
-            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
-
-            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
-
-            return actionResult;
-        }
-
-        public List<string> Status()
+        public override List<string> Status()
         {
             List<string> statusLines = new List<string>
             {
@@ -54,13 +36,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return statusLines;
         }
 
-        public List<string> AdditionalStatus() => null;
-
-        public List<string> StaticButtons() => new List<string> { };
-
-        public bool StaticAction(string action) => false;
-
-        public bool GameOver(out int toEndParagraph, out string toEndText)
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             if (Character.Protagonist.Strength <= 0)
             {
@@ -86,9 +62,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 return false;
             }
         }
-        public bool IsButtonEnabled()
+        public override bool IsButtonEnabled()
         {
-            bool disabledMeritalArtButton = (MeritalArt != Character.MeritalArts.Nope) && (Character.Protagonist.MeritalArt != Character.MeritalArts.Nope);
+            bool disabledMeritalArtButton =
+                (MeritalArt != Character.MeritalArts.Nope) && (Character.Protagonist.MeritalArt != Character.MeritalArts.Nope);
+
             bool disabledGetOptions = (Price > 0) && Used;
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Ecu < Price);
 
@@ -118,7 +96,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 return Game.Data.Triggers.Contains(option);
         }
 
-        public List<string> Representer()
+        public override List<string> Representer()
         {
             List<string> enemies = new List<string>();
 
@@ -504,14 +482,12 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             }
         }
 
-        public bool IsHealingEnabled() => Character.Protagonist.Strength < Character.Protagonist.MaxStrength;
+        public override bool IsHealingEnabled() => Character.Protagonist.Strength < Character.Protagonist.MaxStrength;
 
-        public void UseHealing(int healingLevel)
+        public override void UseHealing(int healingLevel)
         {
             Character.Protagonist.Strength += healingLevel;
             Character.Protagonist.HadFoodToday += 1;
         }
-
-        public string TextByOptions(string option) => String.Empty;
     }
 }
