@@ -4,13 +4,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.InvisibleFront
 {
-    class Modification : Abstract.IModification
+    class Modification : Prototypes.Modification, Abstract.IModification
     {
-        public string Name { get; set; }
-        public int Value { get; set; }
-        public string ValueString { get; set; }
-
-        public void Do()
+        public override void Do()
         {
             
             if (Name == "Trigger")
@@ -20,10 +16,7 @@ namespace Seeker.Gamebook.InvisibleFront
                 Game.Option.Trigger(Game.Dice.Roll() > 3 ? "предатель" : "не предатель");
 
             else if (Name == "Apartment")
-            {
-                List<string> apartments = new List<string> { "один", "два", "три", "один", "два", "три" }; 
-                Game.Option.Trigger(apartments[Game.Dice.Roll() - 1]);
-            }
+                Game.Option.Trigger(Constants.GetApartments()[Game.Dice.Roll() - 1]);
    
             else
             {
