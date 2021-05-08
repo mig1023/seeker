@@ -9,26 +9,5 @@ using Seeker.Game;
 
 namespace Seeker.Gamebook.PensionerSimulator
 {
-    class Paragraphs : Abstract.IParagraphs
-    {
-        public Game.Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Game.Paragraph paragraph = new Game.Paragraph();
-
-            paragraph.Options = new List<Option>();
-
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-            {
-                Option option = new Option
-                {
-                    Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
-                };
-
-                paragraph.Options.Add(option);
-            }
-
-            return paragraph;
-        }
-    }
+    class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs { }
 }
