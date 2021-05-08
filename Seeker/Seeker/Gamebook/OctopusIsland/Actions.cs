@@ -257,9 +257,6 @@ namespace Seeker.Gamebook.OctopusIsland
                         enemy.Hitpoint -= 2;
                         enemyWounds += 1;
 
-                        if (enemy.Hitpoint <= 0)
-                            enemy.Hitpoint = 0;
-
                         bool enemyLost = NoMoreEnemies(FightEnemies);
 
                         if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
@@ -277,9 +274,6 @@ namespace Seeker.Gamebook.OctopusIsland
                         fight.Add(String.Format("BAD|{0} ранил {1}", enemy.Name, hero.Name));
 
                         hero.Hitpoint -= 2;
-
-                        if (hero.Hitpoint < 0)
-                            hero.Hitpoint = 0;
 
                         if (!SetCurrentWarrior(ref fight))
                         {

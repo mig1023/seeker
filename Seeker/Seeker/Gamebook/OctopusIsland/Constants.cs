@@ -25,6 +25,6 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public string GetColor(Game.Data.ColorTypes type) => (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
 
-        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
+        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
     }
 }

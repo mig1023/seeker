@@ -10,19 +10,82 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public string Name { get; set; }
 
-        public int SergeHitpoint { get; set; }
+        private int _sergeHitpoint;
+        public int SergeHitpoint
+        {
+            get => _sergeHitpoint;
+            set
+            {
+                if (value < 0)
+                    _sergeHitpoint = 0;
+                else
+                    _sergeHitpoint = value;
+            }
+        }
+
         public int SergeSkill { get; set; }
-        public int XolotlHitpoint { get; set; }
+
+        private int _xolotlHitpoint;
+        public int XolotlHitpoint
+        {
+            get => _xolotlHitpoint;
+            set
+            {
+                if (value < 0)
+                    _xolotlHitpoint = 0;
+                else
+                    _xolotlHitpoint = value;
+            }
+        }
+
         public int XolotlSkill { get; set; }
-        public int ThibautHitpoint { get; set; }
+
+        private int _thibautHitpoint;
+        public int ThibautHitpoint
+        {
+            get => _thibautHitpoint;
+            set
+            {
+                if (value < 0)
+                    _thibautHitpoint = 0;
+                else
+                    _thibautHitpoint = value;
+            }
+        }
+
         public int ThibautSkill { get; set; }
-        public int SouhiHitpoint { get; set; }
+
+        private int _souhiHitpoint;
+        public int SouhiHitpoint
+        {
+            get => _souhiHitpoint;
+            set
+            {
+                if (value < 0)
+                    _souhiHitpoint = 0;
+                else
+                    _souhiHitpoint = value;
+            }
+        }
+
         public int SouhiSkill { get; set; }
+
         public int Food { get; set; }
         public int LifeGivingOintment { get; set; }
 
+        private int _hitpoint;
+        public int Hitpoint
+        {
+            get => _hitpoint;
+            set
+            {
+                if (value < 0)
+                    _hitpoint = 0;
+                else
+                    _hitpoint = value;
+            }
+        }
 
-        public int Hitpoint { get; set; }
         public int Skill { get; set; }
 
         public void Init()
