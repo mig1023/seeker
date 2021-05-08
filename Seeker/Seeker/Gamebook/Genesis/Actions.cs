@@ -72,7 +72,18 @@ namespace Seeker.Gamebook.Genesis
             {
                 foreach (string oneOption in option.Split(','))
                 {
-                    if (oneOption.Contains("="))
+                    if (oneOption.Contains("РАНЕНИЯ"))
+                    {
+                        int woundsCount = 0;
+
+                        foreach (string trigger in Game.Data.Triggers)
+                            if (trigger == "Ранение")
+                                woundsCount += 1;
+
+                        if (woundsCount < 3)
+                            return false;
+                    }
+                    else if (oneOption.Contains("="))
                     {
                         int level = int.Parse(oneOption.Split('=')[1]);
 
