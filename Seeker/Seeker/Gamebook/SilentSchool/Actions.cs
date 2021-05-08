@@ -5,30 +5,13 @@ using System.Text;
 
 namespace Seeker.Gamebook.SilentSchool
 {
-    class Actions : Abstract.IActions
+    class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public string ActionName { get; set; }
-        public string ButtonName { get; set; }
-        public string Aftertext { get; set; }
-        public string Trigger { get; set; }
         public string Text { get; set; }
         public int HarmedMyself { get; set; }
         public int Dices { get; set; }
 
-        public List<string> Do(out bool reload, string action = "", bool trigger = false)
-        {
-            if (trigger)
-                Game.Option.Trigger(Trigger);
-
-            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
-
-            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
-
-            return actionResult;
-        }
-
-        public List<string> Status()
+        public override List<string> Status()
         {
             List<string> statusLines = new List<string> { String.Format("Жизнь: {0}", Character.Protagonist.Life) };
 
@@ -41,9 +24,7 @@ namespace Seeker.Gamebook.SilentSchool
             return statusLines;
         }
 
-        public List<string> AdditionalStatus() => null;
-
-        public List<string> StaticButtons()
+        public override List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };
 
@@ -53,7 +34,7 @@ namespace Seeker.Gamebook.SilentSchool
             return staticButtons;
         }
 
-        public bool StaticAction(string action)
+        public override bool StaticAction(string action)
         {
             Game.Option.Trigger("Шоколадка", remove: true);
 
@@ -62,7 +43,7 @@ namespace Seeker.Gamebook.SilentSchool
             return true;
         }
 
-        public bool GameOver(out int toEndParagraph, out string toEndText)
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
             toEndText = "Начать сначала";
@@ -70,8 +51,8 @@ namespace Seeker.Gamebook.SilentSchool
             return Character.Protagonist.Life <= 0;
         }
 
-        public bool IsButtonEnabled() => !((HarmedMyself > 0) && ((Character.Protagonist.HarmSelfAlready > 0) ||
-            (Character.Protagonist.Life <= HarmedMyself)));
+        public override bool IsButtonEnabled() =>
+            !((HarmedMyself > 0) && ((Character.Protagonist.HarmSelfAlready > 0) || (Character.Protagonist.Life <= HarmedMyself)));
 
         public static bool CheckOnlyIf(string option)
         {
@@ -139,7 +120,7 @@ namespace Seeker.Gamebook.SilentSchool
             }
         }
 
-        public List<string> Representer() => String.IsNullOrEmpty(Text) ? new List<string> { } : new List<string> { Text.ToUpper() };
+        public override List<string> Representer() => String.IsNullOrEmpty(Text) ? new List<string> { } : new List<string> { Text.ToUpper() };
 
         public List<string> Get()
         {
@@ -177,11 +158,5 @@ namespace Seeker.Gamebook.SilentSchool
 
             return diceCheck;
         }
-
-        public bool IsHealingEnabled() => false;
-
-        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
-
-        public string TextByOptions(string option) => String.Empty;
     }
 }
