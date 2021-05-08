@@ -5,13 +5,8 @@ using System.Text;
 
 namespace Seeker.Gamebook.CaptainSheltonsSecret
 {
-    class Actions : Abstract.IActions
+    class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public string ActionName { get; set; }
-        public string ButtonName { get; set; }
-        public string Aftertext { get; set; }
-        public string Trigger { get; set; }
-
         public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
@@ -25,20 +20,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public bool Used { get; set; }
         public bool Multiple { get; set; }
 
-        public List<string> Do(out bool reload, string action = "", bool trigger = false)
-        {
-            if (trigger)
-                Game.Option.Trigger(Trigger);
-
-            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
-
-            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
-
-            return actionResult;
-        }
-
-        public List<string> Status()
+        public override List<string> Status()
         {
             List<string> statusLines = new List<string>
             {
@@ -50,21 +32,13 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return statusLines;
         }
 
-        public List<string> AdditionalStatus() => null;
-
-        public List<string> StaticButtons() => new List<string> { };
-
-        public bool StaticAction(string action) => false;
-
-        public bool GameOver(out int toEndParagraph, out string toEndText)
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
             toEndText = "Начать сначала";
 
             return Character.Protagonist.Endurance <= 0;
         }
-
-        public bool IsButtonEnabled() => true;
 
         public static bool CheckOnlyIf(string option)
         {
@@ -84,7 +58,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 return Game.Data.Triggers.Contains(option);
         }
 
-        public List<string> Representer()
+        public override List<string> Representer()
         {
             List<string> enemies = new List<string>();
 
@@ -380,10 +354,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             }
         }
 
-        public bool IsHealingEnabled() => Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
+        public override bool IsHealingEnabled() => Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
 
-        public void UseHealing(int healingLevel) => Character.Protagonist.Endurance += healingLevel;
-
-        public string TextByOptions(string option) => String.Empty;
+        public override void UseHealing(int healingLevel) => Character.Protagonist.Endurance += healingLevel;
     }
 }
