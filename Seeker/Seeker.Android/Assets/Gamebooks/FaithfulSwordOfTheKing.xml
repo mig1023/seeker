@@ -6510,7 +6510,7 @@
 		<Options>
 			<Option Destination="85" Text="В Тура"/>
 			<Option Destination="179" Text="В Париж"/>
-			<Option Destination="105" Text="До Невера" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200" OnlyIf="ЭКЮ >= 200"/>
+			<Option Destination="105" Text="До Невера" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
