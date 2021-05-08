@@ -6,13 +6,8 @@ using System.Text;
 
 namespace Seeker.Gamebook.BlackCastleDungeon
 {
-    class Actions : Abstract.IActions
+    class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public string ActionName { get; set; }
-        public string ButtonName { get; set; }
-        public string Aftertext { get; set; }
-        public string Trigger { get; set; }
-
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
@@ -31,20 +26,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             ["ЗАКЛЯТИЕ СЛАБОСТИ"] = false,
         };
 
-        public List<string> Do(out bool reload, string action = "", bool trigger = false)
-        {
-            if (trigger)
-                Game.Option.Trigger(Trigger);
-
-            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
-
-            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
-
-            return actionResult;
-        }
-
-        public List<string> Status()
+        public override List<string> Status()
         {
             List<string> statusLines = new List<string>
             {
@@ -57,7 +39,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return statusLines;
         }
 
-        public List<string> AdditionalStatus()
+        public override List<string> AdditionalStatus()
         {
             Dictionary<string, int> currentSpells = new Dictionary<string, int>();
 
@@ -101,7 +83,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return false;
         }
 
-        public List<string> StaticButtons()
+        public override List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };
 
@@ -118,7 +100,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return staticButtons;
         }
 
-        public bool StaticAction(string action)
+        public override bool StaticAction(string action)
         {
             Character.Protagonist.Spells.Remove(action);
 
@@ -131,7 +113,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return true;
         }
 
-        public bool GameOver(out int toEndParagraph, out string toEndText)
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
             toEndText = "Начать сначала";
@@ -139,7 +121,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return Character.Protagonist.Endurance <= 0;
         }
 
-        public bool IsButtonEnabled()
+        public override bool IsButtonEnabled()
         {
             bool disabledSpellButton = ThisIsSpell && (Character.Protagonist.SpellSlots <= 0);
             bool disabledGetOptions = (Price > 0) && Used;
@@ -158,7 +140,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 return Game.Data.Triggers.Contains(option);
         }
 
-        public List<string> Representer()
+        public override List<string> Representer()
         {
             List<string> enemies = new List<string>();
 
@@ -403,10 +385,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return fight;
         }
 
-        public bool IsHealingEnabled() => Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
+        public override bool IsHealingEnabled() => Character.Protagonist.Endurance < Character.Protagonist.MaxEndurance;
 
-        public void UseHealing(int healingLevel) => Character.Protagonist.Endurance += healingLevel;
-
-        public string TextByOptions(string option) => String.Empty;
+        public override void UseHealing(int healingLevel) => Character.Protagonist.Endurance += healingLevel;
     }
 }
