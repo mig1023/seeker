@@ -6,12 +6,8 @@ using System.Text;
 
 namespace Seeker.Gamebook.HeartOfIce
 {
-    class Actions : Abstract.IActions
+    class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public string ActionName { get; set; }
-        public string ButtonName { get; set; }
-        public string Aftertext { get; set; }
-        public string Trigger { get; set; }
         public string RemoveTrigger { get; set; }
 
         public string Text { get; set; }
@@ -27,20 +23,7 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public List<Abstract.IModification> Benefit { get; set; }
 
-        public List<string> Do(out bool reload, string action = "", bool trigger = false)
-        {
-            if (trigger)
-                Game.Option.Trigger(Trigger);
-
-            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
-
-            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
-
-            return actionResult;
-        }
-
-        public List<string> Representer()
+        public override List<string> Representer()
         {
             if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
@@ -52,7 +35,7 @@ namespace Seeker.Gamebook.HeartOfIce
                 return new List<string>();
         }
 
-        public List<string> Status()
+        public override List<string> Status()
         {
             List<string> statusLines = new List<string>
             {
@@ -69,13 +52,7 @@ namespace Seeker.Gamebook.HeartOfIce
             return statusLines;
         }
 
-        public List<string> AdditionalStatus() => null;
-
-        public List<string> StaticButtons() => new List<string> { };
-
-        public bool StaticAction(string action) => false;
-
-        public bool GameOver(out int toEndParagraph, out string toEndText)
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
             toEndText = "Начать сначала";
@@ -119,11 +96,12 @@ namespace Seeker.Gamebook.HeartOfIce
             return new List<string> { "RELOAD" };
         }
 
-        public bool IsButtonEnabled()
+        public override bool IsButtonEnabled()
         {
-            bool disbledByChoice = (Choice && Character.Protagonist.Chosen);
             bool disabledBySkills = (!String.IsNullOrEmpty(Skill) &&
                 ((Character.Protagonist.SkillsValue <= 0) || Character.Protagonist.Skills.Contains(Skill)));
+
+            bool disbledByChoice = (Choice && Character.Protagonist.Chosen);
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Money < Price);
             bool disabledBySplit = Split && (Character.Protagonist.Split >= 2);
             bool disabledByAvailable = SellIfAvailable && !Available();
@@ -182,11 +160,5 @@ namespace Seeker.Gamebook.HeartOfIce
                 return true;
             }
         }
-
-        public bool IsHealingEnabled() => false;
-
-        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
-
-        public string TextByOptions(string option) => String.Empty;
     }
 }
