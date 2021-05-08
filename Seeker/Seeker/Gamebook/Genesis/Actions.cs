@@ -71,8 +71,25 @@ namespace Seeker.Gamebook.Genesis
             else
             {
                 foreach (string oneOption in option.Split(','))
-                    if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                {
+                    if (oneOption.Contains("="))
+                    {
+                        int level = int.Parse(oneOption.Split('=')[1]);
+
+                        if (oneOption.Contains("СТЕЛС") && (level > Character.Protagonist.Stealth))
+                            return false;
+                        else if (oneOption.Contains("ЛОВКОСТЬ") && (level > Character.Protagonist.Skill))
+                            return false;
+                        else if (oneOption.Contains("ХОЛОДНОЕ ОРУЖИЕ") && (level > Character.Protagonist.Weapon))
+                            return false;
+                        else if (oneOption.Contains("АУРА") && (level > Character.Protagonist.Aura))
+                            return false;
+                        else if (oneOption.Contains("ЗДОРОВЬЕ") && (level > Character.Protagonist.Life))
+                            return false;
+                    }
+                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
                         return false;
+                }
 
                 return true;
             }
