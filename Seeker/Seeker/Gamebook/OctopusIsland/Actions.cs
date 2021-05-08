@@ -6,31 +6,13 @@ using System.Text;
 
 namespace Seeker.Gamebook.OctopusIsland
 {
-    class Actions : Abstract.IActions
+    class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public string ActionName { get; set; }
-        public string ButtonName { get; set; }
-        public string Aftertext { get; set; }
-        public string Trigger { get; set; }
-
         public List<Character> Enemies { get; set; }
         public int WoundsToWin { get; set; }
         public int DinnerHitpointsBonus { get; set; }
 
-        public List<string> Do(out bool reload, string action = "", bool trigger = false)
-        {
-            if (trigger)
-                Game.Option.Trigger(Trigger);
-
-            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
-
-            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
-
-            return actionResult;
-        }
-
-        public List<string> Representer()
+        public override List<string> Representer()
         {
             List<string> enemies = new List<string>();
 
@@ -43,7 +25,7 @@ namespace Seeker.Gamebook.OctopusIsland
             return enemies;
         }
 
-        public List<string> Status()
+        public override List<string> Status()
         {
             List<string> statusLines = new List<string>
             {
@@ -54,7 +36,7 @@ namespace Seeker.Gamebook.OctopusIsland
             return statusLines;
         }
 
-        public List<string> AdditionalStatus()
+        public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>
             {
@@ -67,7 +49,7 @@ namespace Seeker.Gamebook.OctopusIsland
             return statusLines;
         }
 
-        public List<string> StaticButtons()
+        public override List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };
 
@@ -100,7 +82,7 @@ namespace Seeker.Gamebook.OctopusIsland
             return protagonistHitpoint;
         }
 
-        public bool StaticAction(string action)
+        public override bool StaticAction(string action)
         {
             switch(action)
             {
@@ -121,15 +103,7 @@ namespace Seeker.Gamebook.OctopusIsland
             return false;
         }
 
-        public bool GameOver(out int toEndParagraph, out string toEndText)
-        {
-            toEndParagraph = 0;
-            toEndText = String.Empty;
-
-            return false;
-        }
-
-        public bool IsButtonEnabled() => !((DinnerHitpointsBonus > 0) && (Character.Protagonist.Food <= 0));
+        public override bool IsButtonEnabled() => !((DinnerHitpointsBonus > 0) && (Character.Protagonist.Food <= 0));
 
         public static bool CheckOnlyIf(string option)
         {
@@ -335,11 +309,5 @@ namespace Seeker.Gamebook.OctopusIsland
 
             return new List<string> { "RELOAD" };
         }
-
-        public bool IsHealingEnabled() => false;
-
-        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
-
-        public string TextByOptions(string option) => String.Empty;
     }
 }
