@@ -18,7 +18,9 @@ namespace Seeker.Prototypes
                 Game.Option.Trigger(Trigger);
 
             string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
+
+            List<string> actionResult = this.GetType().InvokeMember(actionName, System.Reflection.BindingFlags.InvokeMethod,
+                null, this, null) as List<string>;
 
             reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
 
