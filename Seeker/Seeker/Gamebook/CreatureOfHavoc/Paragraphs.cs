@@ -9,11 +9,9 @@ using Seeker.Game;
 
 namespace Seeker.Gamebook.CreatureOfHavoc
 {
-    class Paragraphs : Abstract.IParagraphs
+    class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
-        private Random random = new Random();
-
-        public Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
         {
             Game.Paragraph paragraph = new Game.Paragraph();
 

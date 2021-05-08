@@ -4,14 +4,11 @@ using System.Text;
 
 namespace Seeker.Gamebook.CreatureOfHavoc
 {
-    class Modification : Abstract.IModification
+    class Modification : Prototypes.Modification, Abstract.IModification
     {
-        public string Name { get; set; }
-        public int Value { get; set; }
-        public string ValueString { get; set; }
         public bool Restore { get; set; }
 
-        public void Do()
+        public override void Do()
         {
             int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
 
