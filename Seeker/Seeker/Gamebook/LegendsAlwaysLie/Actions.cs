@@ -6,14 +6,10 @@ using System.Text;
 
 namespace Seeker.Gamebook.LegendsAlwaysLie
 {
-    class Actions : Abstract.IActions
+    class Actions : Prototypes.Actions, Abstract.IActions
     {
         public enum FoodSharingType { KeepMyself, ToHim, FiftyFifty };
 
-        public string ActionName { get; set; }
-        public string ButtonName { get; set; }
-        public string Aftertext { get; set; }
-        public string Trigger { get; set; }
         public int Price { get; set; }
         public string Text { get; set; }
         public bool Disabled { get; set; } 
@@ -40,20 +36,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public Character.SpecializationType? Specialization { get; set; }
 
 
-        public List<string> Do(out bool reload, string action = "", bool trigger = false)
-        {
-            if (trigger)
-                Game.Option.Trigger(Trigger);
-
-            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
-
-            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
-
-            return actionResult;
-        }
-
-        public List<string> Representer()
+        public override List<string> Representer()
         {
             if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
@@ -69,7 +52,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return enemies;
         }
 
-        public List<string> Status()
+        public override List<string> Status()
         {
             List<string> statusLines = new List<string>
             {
@@ -82,7 +65,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return statusLines;
         }
 
-        public List<string> AdditionalStatus()
+        public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>
             {
@@ -93,7 +76,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return statusLines;
         }
 
-        public List<string> StaticButtons()
+        public override List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };
 
@@ -117,7 +100,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return staticButtons;
         }
 
-        public bool StaticAction(string action)
+        public override bool StaticAction(string action)
         {
             if (action == "ЛЕЧИЛКА")
             {
@@ -146,10 +129,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return false;
         }
 
-        public static void InjuriesBySpells()
-        {
+        public static void InjuriesBySpells() =>
             Character.Protagonist.Hitpoints -= (Character.Protagonist.Specialization == Character.SpecializationType.Wizard ? 1 : 2);
-        }
 
         private bool GoodReaction(ref List<string> reaction)
         {
@@ -186,7 +167,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return reaction;
         }
 
-        public bool GameOver(out int toEndParagraph, out string toEndText)
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
             toEndText = "Начать сначала";
@@ -198,7 +179,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return (hitpoint || conneryHitpoint || conneryTrust);
         }
 
-        public bool IsButtonEnabled()
+        public override bool IsButtonEnabled()
         {
             bool bySpecButton = (Specialization != null) && (Character.Protagonist.Specialization != Character.SpecializationType.Nope);
             bool byPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
@@ -680,11 +661,5 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 round += 1;
             }
         }
-
-        public bool IsHealingEnabled() => false;
-
-        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
-
-        public string TextByOptions(string option) => String.Empty;
     }
 }
