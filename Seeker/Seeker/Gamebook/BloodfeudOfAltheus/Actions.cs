@@ -6,12 +6,8 @@ using System.Text;
 
 namespace Seeker.Gamebook.BloodfeudOfAltheus
 {
-    class Actions : Abstract.IActions
+    class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public string ActionName { get; set; }
-        public string ButtonName { get; set; }
-        public string Aftertext { get; set; }
-        public string Trigger { get; set; }
         public int Dices { get; set; }
 
         public List<Character> Enemies { get; set; }
@@ -20,20 +16,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public bool YourRacing { get; set; }
         public bool Ichor { get; set; }
 
-        public List<string> Do(out bool reload, string action = "", bool trigger = false)
-        {
-            if (trigger)
-                Game.Option.Trigger(Trigger);
-
-            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
-
-            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
-
-            return actionResult;
-        }
-
-        public List<string> Representer()
+        public override List<string> Representer()
         {
             List<string> enemies = new List<string>();
 
@@ -46,7 +29,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return enemies;
         }
 
-        public List<string> Status()
+        public override List<string> Status()
         {
             List<string> statusLines = new List<string>
             {
@@ -59,7 +42,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return statusLines;
         }
 
-        public List<string> AdditionalStatus()
+        public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>();
 
@@ -71,7 +54,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return (statusLines.Count > 0 ? statusLines : null);
         }
 
-        public List<string> StaticButtons()
+        public override List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };
 
@@ -87,7 +70,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return staticButtons;
         }
 
-        public bool StaticAction(string action)
+        public override bool StaticAction(string action)
         {
             if (action == "ВОЗЗВАТЬ К ЗЕВСУ ЗА СЛАВОЙ")
             {
@@ -118,7 +101,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return false;
         }
 
-        public bool GameOver(out int toEndParagraph, out string toEndText)
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
             toEndText = "Позор Альтея невыносим, лучше начать сначала";
@@ -126,12 +109,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return Character.Protagonist.Shame > Character.Protagonist.Glory;
         }
 
-        public bool IsButtonEnabled()
-        {
-            bool disabledByGlory = (ActionName == "DiceSpendGlory") && ((Character.Protagonist.Glory - Character.Protagonist.Shame) < 6);
-
-            return !disabledByGlory;
-        }
+        public override bool IsButtonEnabled() =>
+            !((ActionName == "DiceSpendGlory") && ((Character.Protagonist.Glory - Character.Protagonist.Shame) < 6));
 
         private static bool IsPosibleResurrection()
         {
@@ -645,11 +624,5 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 round += 1;
             }
         }
-
-        public bool IsHealingEnabled() => false;
-
-        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
-
-        public string TextByOptions(string option) => String.Empty;
     }
 }

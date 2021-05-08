@@ -4,94 +4,93 @@ using System.Text;
 
 namespace Seeker.Gamebook.BloodfeudOfAltheus
 {
-    class Modification : Abstract.IModification
+    class Modification : Prototypes.Modification, Abstract.IModification
     {
-        public string Name { get; set; }
-        public int Value { get; set; }
-        public string ValueString { get; set; }
         public bool IntuitiveSolution { get; set; }
 
-        public void Do()
+        public override void Do()
         {
+            Character hero = Character.Protagonist;
+
             if (!String.IsNullOrEmpty(ValueString) && (Name == "Patron"))
-                Character.Protagonist.Patron = ValueString;
+                hero.Patron = ValueString;
 
             else if (!String.IsNullOrEmpty(ValueString) && (Name == "Weapon"))
-                Character.Protagonist.AddWeapons(ValueString);
+                hero.AddWeapons(ValueString);
 
             else if (!String.IsNullOrEmpty(ValueString) && (Name == "Armour"))
-                Character.Protagonist.AddArmour(ValueString);
+                hero.AddArmour(ValueString);
 
             else if (!String.IsNullOrEmpty(ValueString) && (Name == "FellIntoFavor"))
-                Character.Protagonist.FellIntoFavor(ValueString);
+                hero.FellIntoFavor(ValueString);
 
             else if (!String.IsNullOrEmpty(ValueString) && (Name == "FellOutOfFavor"))
-                Character.Protagonist.FellIntoFavor(ValueString, fellOut: true);
+                hero.FellIntoFavor(ValueString, fellOut: true);
 
             else if (!String.IsNullOrEmpty(ValueString) && (Name == "Indifferent"))
-                Character.Protagonist.FellIntoFavor(ValueString, indifferent: true);
+                hero.FellIntoFavor(ValueString, indifferent: true);
 
             else if (Name == "DiceShame")
-                Character.Protagonist.Shame += Game.Dice.Roll();
+                hero.Shame += Game.Dice.Roll();
 
             else if (Name == "AresFavor")
             {
-                if (Character.Protagonist.Patron != "Арес")
+                if (hero.Patron != "Арес")
                 {
-                    Character.Protagonist.FellIntoFavor("Арес");
-                    Character.Protagonist.Glory += 3;
+                    hero.FellIntoFavor("Арес");
+                    hero.Glory += 3;
                 }
                 else
-                    Character.Protagonist.Glory += 5;
+                    hero.Glory += 5;
             }
 
             else if (Name == "ApolloDisFavor")
             {
-                if (Character.Protagonist.Patron != "Аполлон")
-                    Character.Protagonist.FellIntoFavor("Аполлон", fellOut: true);
+                if (hero.Patron != "Аполлон")
+                    hero.FellIntoFavor("Аполлон", fellOut: true);
                 else
-                    Character.Protagonist.Glory -= 2;
+                    hero.Glory -= 2;
             }
 
             else if (Name == "PoseidonDisFavor")
             {
-                if (Character.Protagonist.Patron != "Посейдон")
+                if (hero.Patron != "Посейдон")
                 {
-                    Character.Protagonist.FellIntoFavor("Посейдон", fellOut: true);
-                    Character.Protagonist.Shame += 4;
+                    hero.FellIntoFavor("Посейдон", fellOut: true);
+                    hero.Shame += 4;
                 }
                 else
-                    Character.Protagonist.Glory -= 6;
+                    hero.Glory -= 6;
             }
 
             else if (Name == "PoseidonDisFavor2")
             {
-                if (Character.Protagonist.Patron != "Посейдон")
-                    Character.Protagonist.FellIntoFavor("Посейдон", fellOut: true);
+                if (hero.Patron != "Посейдон")
+                    hero.FellIntoFavor("Посейдон", fellOut: true);
                 else
-                    Character.Protagonist.Shame += 1;
+                    hero.Shame += 1;
             }
 
             else if (Name == "Resurrection")
             {
-                if (Character.Protagonist.Resurrection > 0)
-                    Character.Protagonist.Resurrection += Value;
+                if (hero.Resurrection > 0)
+                    hero.Resurrection += Value;
 
-                else if (Character.Protagonist.BroochResurrection > 0)
-                    Character.Protagonist.BroochResurrection += Value;
+                else if (hero.BroochResurrection > 0)
+                    hero.BroochResurrection += Value;
 
-                Character.Protagonist.Glory = 1;
-                Character.Protagonist.Shame = 0;
+                hero.Glory = 1;
+                hero.Shame = 0;
             }
 
-            else if (!(IntuitiveSolution && (Character.Protagonist.NoIntuitiveSolutionPenalty > 0)))
+            else if (!(IntuitiveSolution && (hero.NoIntuitiveSolutionPenalty > 0)))
             {
-                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+                int currentValue = (int)hero.GetType().GetProperty(Name).GetValue(hero, null);
                 
-                if (!((Name == "Glory") && (Character.Protagonist.Glory <= 0)))
+                if (!((Name == "Glory") && (hero.Glory <= 0)))
                     currentValue += Value;
 
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+                hero.GetType().GetProperty(Name).SetValue(hero, currentValue);
             }
         }
     }
