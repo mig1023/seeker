@@ -266,7 +266,8 @@ namespace Seeker.Gamebook
                 Save = BloodfeudOfAltheus.Character.Protagonist.Save,
                 Load = BloodfeudOfAltheus.Character.Protagonist.Load,
                 SmallDisclaimer = "Джон Баттерфилд и др., 1985",
-                FullDisclaimer = "Авторы: Джон Баттерфилд, Дэвид Хонигман и Филип Паркер\n\nПереводчики: Мария Ерошкина, GalinaSol, Xpromt, Johny Lee, fermalion, Тара-сан, Jumangee, Ajenta, Эргистал, Anuta и другие",
+                FullDisclaimer = "Авторы: Джон Баттерфилд, Дэвид Хонигман и Филип Паркер\n\n" +
+                    "Переводчики: Мария Ерошкина, GalinaSol, Xpromt, Johny Lee, fermalion, Тара-сан, Jumangee, Ajenta, Эргистал, Anuta и другие",
                 BookColor = "#ebd5b3",
                 FontColor = "#000000",
                 Illustration = "BloodfeudOfAltheus.jpg",
@@ -319,22 +320,6 @@ namespace Seeker.Gamebook
                 Illustration = "HowlOfTheWerewolf.jpg",
             },
 
-            ["Последнее хокку"] = new Description
-            {
-                XmlBook = "Gamebooks/LastHokku.xml",
-                Protagonist = LastHokku.Character.Protagonist.Init,
-                CheckOnlyIf = LastHokku.Actions.CheckOnlyIf,
-                Paragraphs = new LastHokku.Paragraphs(),
-                Actions = new LastHokku.Actions(),
-                Constants = new LastHokku.Constants(),
-                Save = LastHokku.Character.Protagonist.Save,
-                Load = LastHokku.Character.Protagonist.Load,
-                SmallDisclaimer = "Юркий Слон, 2021",
-                BookColor = "#deb887",
-                FontColor = "#000000",
-                Illustration = "LastHokku.jpg",
-            },
-
             ["Сердце льда"] = new Description
             {
                 XmlBook = "Gamebooks/HeartOfIce.xml",
@@ -350,6 +335,22 @@ namespace Seeker.Gamebook
                 BookColor = "#418988",
                 Illustration = "HeartOfIce.jpg",
                 ShowDisabledOption = true,
+            },
+
+            ["Последнее хокку"] = new Description
+            {
+                XmlBook = "Gamebooks/LastHokku.xml",
+                Protagonist = LastHokku.Character.Protagonist.Init,
+                CheckOnlyIf = LastHokku.Actions.CheckOnlyIf,
+                Paragraphs = new LastHokku.Paragraphs(),
+                Actions = new LastHokku.Actions(),
+                Constants = new LastHokku.Constants(),
+                Save = LastHokku.Character.Protagonist.Save,
+                Load = LastHokku.Character.Protagonist.Load,
+                SmallDisclaimer = "Юркий Слон, 2021",
+                BookColor = "#deb887",
+                FontColor = "#000000",
+                Illustration = "LastHokku.jpg",
             },
 
             ["Генезис"] = new Description
