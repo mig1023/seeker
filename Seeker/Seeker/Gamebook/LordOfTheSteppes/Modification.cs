@@ -4,15 +4,12 @@ using System.Text;
 
 namespace Seeker.Gamebook.LordOfTheSteppes
 {
-    class Modification : Abstract.IModification
+    class Modification : Prototypes.Modification, Abstract.IModification
     {
-        public string Name { get; set; }
-        public int Value { get; set; }
-        public string ValueString { get; set; }
         public bool Restore { get; set; }
         public bool Empty { get; set; }
 
-        public void Do()
+        public override void Do()
         {
             if (Enum.TryParse(Name, out Character.SpecialTechniques value))
             {
