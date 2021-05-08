@@ -5,13 +5,8 @@ using System.Text;
 
 namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 {
-    class Actions : Abstract.IActions
+    class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public string ActionName { get; set; }
-        public string ButtonName { get; set; }
-        public string Aftertext { get; set; }
-        public string Trigger { get; set; }
-
         public string Text { get; set; }
         public string Stat { get; set; }
         public int Level { get; set; }
@@ -23,20 +18,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         static bool NextTestWithKumis = false;
 
-        public List<string> Do(out bool reload, string action = "", bool trigger = false)
-        {
-            if (trigger)
-                Game.Option.Trigger(Trigger);
-
-            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
-
-            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
-
-            return actionResult;
-        }
-
-        public List<string> Representer()
+        public override List<string> Representer()
         {
             if (Level > 0)
                 return new List<string> { String.Format("Проверка {0}, уровень {1}", Constants.StatNames[Stat], Level) };
@@ -46,7 +28,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 return new List<string> { };
         }
 
-        public List<string> Status()
+        public override List<string> Status()
         {
             List<string> statusLines = new List<string>();
 
@@ -67,7 +49,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             return statusLines;
         }
 
-        public List<string> AdditionalStatus()
+        public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>();
 
@@ -92,7 +74,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             return statusLines;
         }
 
-        public List<string> StaticButtons()
+        public override List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };
 
@@ -105,7 +87,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             return staticButtons;
         }
 
-        public bool StaticAction(string action)
+        public override bool StaticAction(string action)
         {
             if (action == "ВЫПИТЬ КУМЫСА")
             {
@@ -117,7 +99,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             return false;
         }
 
-        public bool GameOver(out int toEndParagraph, out string toEndText)
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 150;
             toEndText = "Задуматься о судьбе";
@@ -125,7 +107,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             return Character.Protagonist.Popularity <= 0;
         }
 
-        public bool IsButtonEnabled()
+        public override bool IsButtonEnabled()
         {
             if (Level > 0)
                 return true;
@@ -233,11 +215,5 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
             return new List<string> { "RELOAD" };
         }
-
-        public bool IsHealingEnabled() => false;
-
-        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
-
-        public string TextByOptions(string option) => String.Empty;
     }
 }
