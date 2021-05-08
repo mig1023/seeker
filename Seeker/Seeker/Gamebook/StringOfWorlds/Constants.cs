@@ -8,7 +8,7 @@ using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.StringOfWorlds
 {
-    class Constants : Abstract.IConstants
+    class Constants : Prototypes.Constants, Abstract.IConstants
     {
         private static int ColorShiftAmount = 45;
 
@@ -71,23 +71,19 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             if (type == ColorTypes.StatusBar)
                 return HexColor(StatusColor[0], StatusColor[1], StatusColor[2]);
+
             else if (type == ColorTypes.StatusFont)
                 return СontrastColor(StatusColor);
+
             else
                 return String.Empty;
         }
 
         private string СontrastColor(List<int> color) => ((color[0] * 0.299) + (color[1] * 0.587) + (color[2] * 0.114)) > 186 ? "#000000" : "#FFFFFF";
 
-        public string GetFont() => String.Empty;
-
-        public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.normal;
-
-        public double? GetLineHeight() => null;
-
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1, 665 };
 
-        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
+        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
 
         public static Dictionary<int, int> Skills() => new Dictionary<int, int>
         {

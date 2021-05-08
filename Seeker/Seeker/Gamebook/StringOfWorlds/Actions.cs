@@ -5,12 +5,8 @@ using System.Text;
 
 namespace Seeker.Gamebook.StringOfWorlds
 {
-    class Actions : Abstract.IActions
+    class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public string ActionName { get; set; }
-        public string ButtonName { get; set; }
-        public string Aftertext { get; set; }
-        public string Trigger { get; set; }
         public int RoundsToWin { get; set; }
         public bool HeroWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
@@ -23,21 +19,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public string Text { get; set; }
         public Abstract.IModification Benefit { get; set; }
  
-
-        public List<string> Do(out bool reload, string action = "", bool trigger = false)
-        {
-            if (trigger)
-                Game.Option.Trigger(Trigger);
-
-            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
-
-            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
-
-            return actionResult;
-        }
-
-        public List<string> Status()
+        public override List<string> Status()
         {
             List<string> statusLines = new List<string>
             {
@@ -49,9 +31,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             return statusLines;
         }
 
-        public List<string> AdditionalStatus() => null;
-
-        public List<string> StaticButtons()
+        public override List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };
 
@@ -64,7 +44,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             return staticButtons;
         }
 
-        public bool StaticAction(string action)
+        public override bool StaticAction(string action)
         {
             if (action == "СЪЕСТЬ ПАСТУ")
             {
@@ -76,7 +56,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             return false;
         }
 
-        public bool GameOver(out int toEndParagraph, out string toEndText)
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
             toEndText = "Начать сначала";
@@ -84,7 +64,8 @@ namespace Seeker.Gamebook.StringOfWorlds
             return Character.Protagonist.Strength <= 0;
         }
 
-        public bool IsButtonEnabled() => !(!String.IsNullOrEmpty(Equipment) && !String.IsNullOrEmpty(Character.Protagonist.Equipment));
+        public override bool IsButtonEnabled() =>
+            !(!String.IsNullOrEmpty(Equipment) && !String.IsNullOrEmpty(Character.Protagonist.Equipment));
 
         public static bool CheckOnlyIf(string option)
         {
@@ -110,7 +91,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                 return Game.Data.Triggers.Contains(option);
         }
 
-        public List<string> Representer()
+        public override List<string> Representer()
         {
             List<string> enemies = new List<string>();
 
@@ -429,11 +410,5 @@ namespace Seeker.Gamebook.StringOfWorlds
                 round += 1;
             }
         }
-
-        public bool IsHealingEnabled() => false;
-
-        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
-
-        public string TextByOptions(string option) => String.Empty;
     }
 }
