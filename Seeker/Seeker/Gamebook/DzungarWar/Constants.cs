@@ -7,7 +7,7 @@ using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.DzungarWar
 {
-    class Constants : Abstract.IConstants
+    class Constants : Prototypes.Constants, Abstract.IConstants
     {
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
@@ -25,23 +25,11 @@ namespace Seeker.Gamebook.DzungarWar
             [ColorTypes.AdditionalStatus] = "#99b999",
         };
 
-        public string GetButtonsColor(ButtonTypes type)
-        {
-            return (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
-        }
+        public string GetButtonsColor(ButtonTypes type) => (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
 
-        public string GetColor(Game.Data.ColorTypes type)
-        {
-            return (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
-        }
+        public string GetColor(Game.Data.ColorTypes type) => (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
 
-        public string GetFont() => String.Empty;
-
-        public Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.normal;
-
-        public double? GetLineHeight() => null;
-
-        public List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 660 };
+        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 660 };
 
         public static Dictionary<string, string> StatNames() => new Dictionary<string, string>
         {

@@ -6,12 +6,8 @@ using System.Text;
 
 namespace Seeker.Gamebook.DzungarWar
 {
-    class Actions : Abstract.IActions
+    class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public string ActionName { get; set; }
-        public string ButtonName { get; set; }
-        public string Aftertext { get; set; }
-        public string Trigger { get; set; }
         public string RemoveTrigger { get; set; }
 
         public string Text { get; set; }
@@ -27,19 +23,6 @@ namespace Seeker.Gamebook.DzungarWar
 
         static bool NextTestWithTincture = false;
         static bool NextTestWithGinseng = false;
-
-        public List<string> Do(out bool reload, string action = "", bool trigger = false)
-        {
-            if (trigger)
-                Game.Option.Trigger(Trigger);
-
-            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
-            List<string> actionResult = typeof(Actions).GetMethod(actionName).Invoke(this, new object[] { }) as List<string>;
-
-            reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
-
-            return actionResult;
-        }
 
         private int TestLevelWithPenalty(int level, out List<string> penaltyLine)
         {
@@ -79,7 +62,7 @@ namespace Seeker.Gamebook.DzungarWar
             return level;
         }
 
-        public List<string> Representer()
+        public override List<string> Representer()
         {
             if (ActionName == "TestAll")
                 return new List<string> { String.Format("Проверить по совокупному уровню {0}", Level) };
@@ -95,7 +78,7 @@ namespace Seeker.Gamebook.DzungarWar
                 return new List<string> { };
         }
 
-        public List<string> Status()
+        public override List<string> Status()
         {
             List<string> statusLines = new List<string>();
 
@@ -117,7 +100,7 @@ namespace Seeker.Gamebook.DzungarWar
             return statusLines;
         }
 
-        public List<string> AdditionalStatus()
+        public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>();
 
@@ -142,7 +125,7 @@ namespace Seeker.Gamebook.DzungarWar
             return statusLines;
         }
 
-        public List<string> StaticButtons()
+        public override List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };
 
@@ -155,7 +138,7 @@ namespace Seeker.Gamebook.DzungarWar
             return staticButtons;
         }
 
-        public bool StaticAction(string action)
+        public override bool StaticAction(string action)
         {
             if (action == "ВЫПИТЬ НАСТОЙКИ")
             {
@@ -174,7 +157,7 @@ namespace Seeker.Gamebook.DzungarWar
             return false;
         }
 
-        public bool GameOver(out int toEndParagraph, out string toEndText)
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             bool dangerEnd = Character.Protagonist.Danger >= 12;
 
@@ -194,7 +177,7 @@ namespace Seeker.Gamebook.DzungarWar
             return dangerEnd;
         }
 
-        public bool IsButtonEnabled()
+        public override bool IsButtonEnabled()
         {
             if (Level > 0)
                 return true;
@@ -409,11 +392,5 @@ namespace Seeker.Gamebook.DzungarWar
 
             return new List<string> { "RELOAD" };
         }
-
-        public bool IsHealingEnabled() => false;
-
-        public void UseHealing(int healingLevel) => Game.Other.DoNothing();
-
-        public string TextByOptions(string option) => String.Empty;
     }
 }

@@ -4,41 +4,41 @@ using System.Text;
 
 namespace Seeker.Gamebook.DzungarWar
 {
-    class Modification : Abstract.IModification
+    class Modification : Prototypes.Modification, Abstract.IModification
     {
-        public string Name { get; set; }
-        public int Value { get; set; }
-        public string ValueString { get; set; }
         public bool Empty { get; set; }
         public bool Init { get; set; }
 
-        public void Do()
+        public override void Do()
         {
+            Character hero = Character.Protagonist;
+
             if ((Name == "SaleOfPredatorSkins") && Game.Data.Triggers.Contains("Хищник"))
-                Character.Protagonist.Tanga += 150;
+                hero.Tanga += 150;
             else if (Name == "Favour")
             {
                 if (Empty)
-                    Character.Protagonist.Favour = null;
+                    hero.Favour = null;
                 else if (Init)
-                    Character.Protagonist.Favour = 0;
+                    hero.Favour = 0;
                 else
-                    Character.Protagonist.Favour += Value;
+                    hero.Favour += Value;
             }
             else if (Name == "Danger")
             {
                 if (Empty)
-                    Character.Protagonist.Danger = null;
+                    hero.Danger = null;
+
                 else if (Character.Protagonist.Danger != null)
-                    Character.Protagonist.Danger += Value;
+                    hero.Danger += Value;
             }
             else
             {
-                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+                int currentValue = (int)hero.GetType().GetProperty(Name).GetValue(hero, null);
 
                 currentValue += Value;
 
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+                hero.GetType().GetProperty(Name).SetValue(hero, currentValue);
             }
         }
     }
