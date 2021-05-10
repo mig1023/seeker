@@ -363,9 +363,26 @@ namespace Seeker.Gamebook
                 Constants = new Genesis.Constants(),
                 Save = Genesis.Character.Protagonist.Save,
                 Load = Genesis.Character.Protagonist.Load,
-                SmallDisclaimer = "Рэй Гард, 2013",
+                SmallDisclaimer = "Журавлёв Андрей, 2013",
                 BookColor = "#202b41",
                 Illustration = "Genesis.jpg",
+                ShowDisabledOption = true,
+            },
+            
+            ["Катарсис"] = new Description
+            {
+                XmlBook = "Gamebooks/Catharsis.xml",
+                Protagonist = Catharsis.Character.Protagonist.Init,
+                CheckOnlyIf = Catharsis.Actions.CheckOnlyIf,
+                Paragraphs = new Catharsis.Paragraphs(),
+                Actions = new Catharsis.Actions(),
+                Constants = new Catharsis.Constants(),
+                Save = Catharsis.Character.Protagonist.Save,
+                Load = Catharsis.Character.Protagonist.Load,
+                SmallDisclaimer = "Журавлёв Андрей, 2013",
+                BookColor = "#51514b",
+                Illustration = "Catharsis.jpg",
+                ShowDisabledOption = true,
             },
         };
 
