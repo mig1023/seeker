@@ -30,11 +30,11 @@ namespace Seeker.Gamebook.Catharsis
 
         public static Dictionary<string, int> GetStartValues() => new Dictionary<string, int>
         {
-            ["Skill"] = 30,
-            ["Weapon"] = 15,
+            ["Fight"] = 10,
+            ["Accuracy"] = 10,
             ["Stealth"] = 3,
         };
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
+        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 401, 402 };
     }
 }
