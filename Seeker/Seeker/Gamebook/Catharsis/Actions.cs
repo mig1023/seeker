@@ -30,19 +30,18 @@ namespace Seeker.Gamebook.Catharsis
             return new List<string>();
         }
 
-        public override List<string> Status()
+        public override List<string> Status() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Здоровье: {0}", Character.Protagonist.Life),
-                String.Format("Аура: {0}", Character.Protagonist.Aura),
-                String.Format("Меткость: {0}", Character.Protagonist.Accuracy),
-                String.Format("Рукопашка: {0}", Character.Protagonist.Fight),
-                String.Format("Стелс: {0}", Character.Protagonist.Stealth),
-            };
+            String.Format("Здоровье: {0}", Character.Protagonist.Life),
+            String.Format("Аура: {0}", Character.Protagonist.Aura),
+        };
 
-            return statusLines;
-        }
+        public override List<string> AdditionalStatus() =>  new List<string>
+        {
+            String.Format("Меткость: {0}", Character.Protagonist.Accuracy),
+            String.Format("Рукопашка: {0}", Character.Protagonist.Fight),
+            String.Format("Стелс: {0}", Character.Protagonist.Stealth),
+        };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
