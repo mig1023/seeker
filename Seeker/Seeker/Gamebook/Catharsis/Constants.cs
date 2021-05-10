@@ -14,14 +14,14 @@ namespace Seeker.Gamebook.Catharsis
             [ButtonTypes.Main] = "#51514b",
             [ButtonTypes.Option] = "#858581",
             [ButtonTypes.Continue] = "#a9a9a6",
-            [ButtonTypes.Action] = "#445d6f",
+            [ButtonTypes.Action] = "#939393",
         };
 
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.Background] = "#e4e4e4",
+            [ColorTypes.Background] = "#cdcdcd",
             [ColorTypes.StatusBar] = "#656563",
-            [ColorTypes.ActionBox] = "#6f6f6f",
+            [ColorTypes.ActionBox] = "#b8b8b8",
         };
 
         public string GetButtonsColor(ButtonTypes type) => (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
