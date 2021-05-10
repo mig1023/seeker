@@ -36,7 +36,8 @@ namespace Seeker.Gamebook.Catharsis
             {
                 String.Format("Здоровье: {0}", Character.Protagonist.Life),
                 String.Format("Аура: {0}", Character.Protagonist.Aura),
-                String.Format("Ловкость: {0}", Character.Protagonist.Skill),
+                String.Format("Меткость: {0}", Character.Protagonist.Accuracy),
+                String.Format("Рукопашка: {0}", Character.Protagonist.Fight),
                 String.Format("Стелс: {0}", Character.Protagonist.Stealth),
             };
 
@@ -89,9 +90,9 @@ namespace Seeker.Gamebook.Catharsis
 
                         if (oneOption.Contains("СТЕЛС") && (level > Character.Protagonist.Stealth))
                             return false;
-                        else if (oneOption.Contains("ЛОВКОСТЬ") && (level > Character.Protagonist.Skill))
+                        else if (oneOption.Contains("МЕТКОСТЬ") && (level > Character.Protagonist.Accuracy))
                             return false;
-                        else if (oneOption.Contains("ХОЛОДНОЕ ОРУЖИЕ") && (level > Character.Protagonist.Weapon))
+                        else if (oneOption.Contains("РУКОПАШКА") && (level > Character.Protagonist.Fight))
                             return false;
                         else if (oneOption.Contains("АУРА") && (level > Character.Protagonist.Aura))
                             return false;

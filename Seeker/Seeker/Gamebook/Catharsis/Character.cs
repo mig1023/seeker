@@ -28,29 +28,29 @@ namespace Seeker.Gamebook.Catharsis
 
         public int Aura { get; set; }
 
-        private int _skill;
-        public int Skill
+        private int _fight;
+        public int Fight
         {
-            get => _skill;
+            get => _fight;
             set
             {
                 if (value < 0)
-                    _skill = 0;
+                    _fight = 0;
                 else
-                    _skill = value;
+                    _fight = value;
             }
         }
 
-        private int _weapon;
-        public int Weapon
+        private int _accuracy;
+        public int Accuracy
         {
-            get => _weapon;
+            get => _accuracy;
             set
             {
                 if (value < 0)
-                    _weapon = 0;
+                    _accuracy = 0;
                 else
-                    _weapon = value;
+                    _accuracy = value;
             }
         }
 
@@ -72,13 +72,15 @@ namespace Seeker.Gamebook.Catharsis
         public void Init()
         {
             Name = String.Empty;
-            MaxLife = 40;
+            MaxLife = 100;
             Life = MaxLife;
-            Aura = 5;
-            Skill = 30;
-            Weapon = 15;
+            Aura = 1;
+            Fight = 10;
+            Accuracy = 10;
             Stealth = 3;
             Bonuses = 5;
+
+            Game.Healing.Add(name: "Использовать аптечку", healing: 10, portions: 5);
         }
 
         public Character Clone() => new Character()
@@ -87,13 +89,13 @@ namespace Seeker.Gamebook.Catharsis
             MaxLife = this.MaxLife,
             Life = this.Life,
             Aura = this.Aura,
-            Skill = this.Skill,
-            Weapon = this.Weapon,
+            Fight = this.Fight,
+            Accuracy = this.Accuracy,
             Stealth = this.Stealth,
             Bonuses = this.Bonuses,
         };
 
-        public string Save() => String.Join("|", MaxLife, Life, Aura, Skill, Weapon, Stealth, Bonuses);
+        public string Save() => String.Join("|", MaxLife, Life, Aura, Fight, Accuracy, Stealth, Bonuses);
 
         public void Load(string saveLine)
         {
@@ -102,8 +104,8 @@ namespace Seeker.Gamebook.Catharsis
             MaxLife = int.Parse(save[0]);
             Life = int.Parse(save[1]);
             Aura = int.Parse(save[2]);
-            Skill = int.Parse(save[3]);
-            Weapon = int.Parse(save[4]);
+            Fight = int.Parse(save[3]);
+            Accuracy = int.Parse(save[4]);
             Stealth = int.Parse(save[5]);
             Bonuses = int.Parse(save[6]);
         }
