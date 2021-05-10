@@ -21,6 +21,8 @@ namespace Seeker.Gamebook.Catharsis
         {
             [ColorTypes.Background] = "#cdcdcd",
             [ColorTypes.StatusBar] = "#656563",
+            [ColorTypes.AdditionalStatus] = "#747472",
+            [ColorTypes.AdditionalFont] = "#000000",
             [ColorTypes.ActionBox] = "#b8b8b8",
         };
 
