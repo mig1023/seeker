@@ -85,7 +85,7 @@ namespace Seeker.Gamebook.Catharsis
                     }
                     else if (oneOption.Contains("="))
                     {
-                        int level = int.Parse(oneOption.Split('=')[1]);
+                        int level = int.Parse(oneOption.Split('=', '<')[1]);
 
                         if (oneOption.Contains("СТЕЛС") && (level > Character.Protagonist.Stealth))
                             return false;
@@ -93,7 +93,9 @@ namespace Seeker.Gamebook.Catharsis
                             return false;
                         else if (oneOption.Contains("РУКОПАШКА") && (level > Character.Protagonist.Fight))
                             return false;
-                        else if (oneOption.Contains("АУРА") && (level > Character.Protagonist.Aura))
+                        else if (oneOption.Contains("АУРА <") && (level <= Character.Protagonist.Aura))
+                            return false;
+                        else if (oneOption.Contains("АУРА >") && (level > Character.Protagonist.Aura))
                             return false;
                         else if (oneOption.Contains("ЗДОРОВЬЕ") && (level > Character.Protagonist.Life))
                             return false;
