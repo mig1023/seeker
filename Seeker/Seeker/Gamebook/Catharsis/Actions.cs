@@ -38,9 +38,9 @@ namespace Seeker.Gamebook.Catharsis
 
         public override List<string> AdditionalStatus() =>  new List<string>
         {
-            String.Format("Меткость: {0}", Character.Protagonist.Accuracy),
-            String.Format("Рукопашка: {0}", Character.Protagonist.Fight),
             String.Format("Стелс: {0}", Character.Protagonist.Stealth),
+            String.Format("Рукопашный бой: {0}", Character.Protagonist.Fight),
+            String.Format("Меткость: {0}", Character.Protagonist.Accuracy),
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)

@@ -20,9 +20,9 @@ namespace Seeker.Gamebook.Catharsis
         static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#cdcdcd",
-            [ColorTypes.StatusBar] = "#656563",
-            [ColorTypes.AdditionalStatus] = "#747472",
-            [ColorTypes.AdditionalFont] = "#000000",
+            [ColorTypes.StatusBar] = "#b8b8b8",
+            [ColorTypes.StatusFont] = "#000000",
+            [ColorTypes.AdditionalStatus] = "#bfbfbf",
             [ColorTypes.ActionBox] = "#b8b8b8",
         };
 
