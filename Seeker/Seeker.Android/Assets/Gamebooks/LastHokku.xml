@@ -43,22 +43,22 @@
 		<ID>4</ID>
 		<Text></Text>
 		<Options>
-			<Option Destination="5" Text="небо."/>
-			<Option Destination="5" Text="землю."/>
-			<Option Destination="5" Text="звёзды."/>
-			<Option Destination="5" Text="душу."/>
-			<Option Destination="5" Text="весь мир."/>
+			<Option Destination="5" Text="небо"/>
+			<Option Destination="5" Text="землю"/>
+			<Option Destination="5" Text="звёзды"/>
+			<Option Destination="5" Text="душу"/>
+			<Option Destination="5" Text="весь мир"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>5</ID>
 		<Text></Text>
 		<Options>
-			<Option Destination="6" Text="Время -"/>
-			<Option Destination="6" Text="Я -"/>
-			<Option Destination="6" Text="Вселенная -"/>
-			<Option Destination="6" Text="Мысль -"/>
-			<Option Destination="6" Text="Жизнь -"/>
+			<Option Destination="6" Text="Время"/>
+			<Option Destination="6" Text="Я"/>
+			<Option Destination="6" Text="Вселенная"/>
+			<Option Destination="6" Text="Мысль"/>
+			<Option Destination="6" Text="Жизнь"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -74,11 +74,11 @@
 		<ID>7</ID>
 		<Text></Text>
 		<Options>
-			<Option Destination="8" Text="слово..."/>
-			<Option Destination="8" Text="смерть..."/>
-			<Option Destination="8" Text="счастье..."/>
-			<Option Destination="8" Text="боль..."/>
-			<Option Destination="8" Text="мой сон..."/>
+			<Option Destination="8" Text="слово"/>
+			<Option Destination="8" Text="смерть"/>
+			<Option Destination="8" Text="счастье"/>
+			<Option Destination="8" Text="боль"/>
+			<Option Destination="8" Text="мой сон"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>

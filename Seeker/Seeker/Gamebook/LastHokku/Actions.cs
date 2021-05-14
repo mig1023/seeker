@@ -24,8 +24,8 @@ namespace Seeker.Gamebook.LastHokku
                 List<string> newHokku = new List<string>
                 {
                     String.Format("{0} {1}", oldHokku[0], oldHokku[1]),
-                    String.Format("{0} {1}", oldHokku[2], oldHokku[3]),
-                    String.Format("{0} {1} {2}", oldHokku[4], oldHokku[5], oldHokku[6]),
+                    String.Format("{0} {1}.", oldHokku[2], oldHokku[3]),
+                    String.Format("{0} - {1} {2}...", oldHokku[4], oldHokku[5], oldHokku[6]),
                 };
 
                 Character.Protagonist.Hokku = newHokku;
