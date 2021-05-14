@@ -384,6 +384,22 @@ namespace Seeker.Gamebook
                 Illustration = "Catharsis.jpg",
                 ShowDisabledOption = true,
             },
+            
+            ["Крыса из нержавеющей стали"] = new Description
+            {
+                XmlBook = "Gamebooks/StainlessSteelRat.xml",
+                Protagonist = StainlessSteelRat.Character.Protagonist.Init,
+                CheckOnlyIf = StainlessSteelRat.Actions.CheckOnlyIf,
+                Paragraphs = new StainlessSteelRat.Paragraphs(),
+                Actions = new StainlessSteelRat.Actions(),
+                Constants = new StainlessSteelRat.Constants(),
+                Save = StainlessSteelRat.Character.Protagonist.Save,
+                Load = StainlessSteelRat.Character.Protagonist.Load,
+                SmallDisclaimer = "Гарри Гаррисон, 1985",
+                FullDisclaimer = "Автор: Гарри Гаррисон\n\nПереводчик: Александр Жаворонков",
+                BookColor = "#000000",
+                Illustration = "StainlessSteelRat.jpg",
+            },
         };
 
         public static List<string> GetBooks() => new List<string>(Books.Keys);
