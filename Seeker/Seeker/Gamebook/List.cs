@@ -396,8 +396,8 @@ namespace Seeker.Gamebook
                 Save = LandOfUnwaryBears.Character.Protagonist.Save,
                 Load = LandOfUnwaryBears.Character.Protagonist.Load,
                 SmallDisclaimer = "Геннадий Логинов, 2020",
-                BookColor = "#d52b1e",
-                FontColor = "#eede49",
+                BookColor = "#881b13",
+                FontColor = "#e5ce3c",
                 Illustration = "LandOfUnwaryBears.jpg",
             },
 
