@@ -383,8 +383,24 @@ namespace Seeker.Gamebook
                 BookColor = "#51514b",
                 Illustration = "Catharsis.jpg",
                 ShowDisabledOption = true,
-            },
+            },         
             
+            ["В краю непуганных медведей"] = new Description
+            {
+                XmlBook = "Gamebooks/LandOfUnwaryBears.xml",
+                Protagonist = LandOfUnwaryBears.Character.Protagonist.Init,
+                CheckOnlyIf = LandOfUnwaryBears.Actions.CheckOnlyIf,
+                Paragraphs = new LandOfUnwaryBears.Paragraphs(),
+                Actions = new LandOfUnwaryBears.Actions(),
+                Constants = new LandOfUnwaryBears.Constants(),
+                Save = LandOfUnwaryBears.Character.Protagonist.Save,
+                Load = LandOfUnwaryBears.Character.Protagonist.Load,
+                SmallDisclaimer = "Геннадий Логинов, 2020",
+                BookColor = "#d52b1e",
+                FontColor = "#eede49",
+                Illustration = "LandOfUnwaryBears.jpg",
+            },
+
             ["Крыса из нержавеющей стали"] = new Description
             {
                 XmlBook = "Gamebooks/StainlessSteelRat.xml",
@@ -397,7 +413,7 @@ namespace Seeker.Gamebook
                 Load = StainlessSteelRat.Character.Protagonist.Load,
                 SmallDisclaimer = "Гарри Гаррисон, 1985",
                 FullDisclaimer = "Автор: Гарри Гаррисон\n\nПереводчик: Александр Жаворонков",
-                BookColor = "#000000",
+                BookColor = "#738595",
                 Illustration = "StainlessSteelRat.jpg",
             },
         };
