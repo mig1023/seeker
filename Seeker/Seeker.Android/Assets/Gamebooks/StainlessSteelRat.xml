@@ -1206,10 +1206,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>162</ID>
-		<Text>О, КАКОЙ УЖАС!\n\nМесто, куда тебя занесло, столь чудовищно, что даже не поддается описанию.\n\nБыстрее возвращайся туда, откуда прибыл!</Text>
-		<Options>
-			<Option Destination="0"/>
-		</Options>
+		<Text>[пустой параграф]</Text>
 	</Paragraph>
 	<Paragraph>
 		<ID>163</ID>
@@ -1752,10 +1749,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>236</ID>
-		<Text>ОХ! АХ! КАКОЙ КОШМАР!\n\nБыстрее туда, откуда попал сюда.</Text>
-		<Options>
-			<Option Destination="0"/>
-		</Options>
+		<Text>[пустой параграф]</Text>
 	</Paragraph>
 	<Paragraph>
 		<ID>237</ID>
@@ -2139,10 +2133,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>288</ID>
-		<Text>Тебя, не иначе, занесло в преисподнюю!\n\nБыстрее возвращайся туда, откуда начал путь!</Text>
-		<Options>
-			<Option Destination="0"/>
-		</Options>
+		<Text>[пустой параграф]</Text>
 	</Paragraph>
 	<Paragraph>
 		<ID>289</ID>
@@ -2593,10 +2584,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>349</ID>
-		<Text>Ну и дела!\n\nОдумайся, новобранец!\n\nБыстрее возвращайся туда, откуда явился!</Text>
-		<Options>
-			<Option Destination="0"/>
-		</Options>
+		<Text>[пустой параграф]</Text>
 	</Paragraph>
 	<Paragraph>
 		<ID>350</ID>
