@@ -337,6 +337,22 @@ namespace Seeker.Gamebook
                 ShowDisabledOption = true,
             },
 
+            ["Крыса из нержавеющей стали"] = new Description
+            {
+                XmlBook = "Gamebooks/StainlessSteelRat.xml",
+                Protagonist = StainlessSteelRat.Character.Protagonist.Init,
+                CheckOnlyIf = StainlessSteelRat.Actions.CheckOnlyIf,
+                Paragraphs = new StainlessSteelRat.Paragraphs(),
+                Actions = new StainlessSteelRat.Actions(),
+                Constants = new StainlessSteelRat.Constants(),
+                Save = StainlessSteelRat.Character.Protagonist.Save,
+                Load = StainlessSteelRat.Character.Protagonist.Load,
+                SmallDisclaimer = "Гарри Гаррисон, 1985",
+                FullDisclaimer = "Автор: Гарри Гаррисон\n\nПереводчик: Александр Жаворонков",
+                BookColor = "#738595",
+                Illustration = "StainlessSteelRat.jpg",
+            },
+
             ["Последнее хокку"] = new Description
             {
                 XmlBook = "Gamebooks/LastHokku.xml",
@@ -399,22 +415,6 @@ namespace Seeker.Gamebook
                 BookColor = "#881b13",
                 FontColor = "#e5ce3c",
                 Illustration = "LandOfUnwaryBears.jpg",
-            },
-
-            ["Крыса из нержавеющей стали"] = new Description
-            {
-                XmlBook = "Gamebooks/StainlessSteelRat.xml",
-                Protagonist = StainlessSteelRat.Character.Protagonist.Init,
-                CheckOnlyIf = StainlessSteelRat.Actions.CheckOnlyIf,
-                Paragraphs = new StainlessSteelRat.Paragraphs(),
-                Actions = new StainlessSteelRat.Actions(),
-                Constants = new StainlessSteelRat.Constants(),
-                Save = StainlessSteelRat.Character.Protagonist.Save,
-                Load = StainlessSteelRat.Character.Protagonist.Load,
-                SmallDisclaimer = "Гарри Гаррисон, 1985",
-                FullDisclaimer = "Автор: Гарри Гаррисон\n\nПереводчик: Александр Жаворонков",
-                BookColor = "#738595",
-                Illustration = "StainlessSteelRat.jpg",
             },
         };
 
