@@ -26,6 +26,8 @@ namespace Seeker.Gamebook.LandOfUnwaryBears
 
         public string GetColor(Game.Data.ColorTypes type) => (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
 
-        public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.normal;
+        public override string GetFont() => "CourierFont";
+
+        public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
     }
 }

@@ -15,5 +15,8 @@
         <OnPlatform x:TypeArguments="x:String" x:Key="RobotoFont">
             <On Platform="Android" Value="Fonts/Roboto-Thin.ttf#Roboto-Thin" />
         </OnPlatform>
+		<OnPlatform x:TypeArguments="x:String" x:Key="CourierFont">
+            <On Platform="Android" Value="Fonts/CourierNew.ttf#Courier-New" />
+        </OnPlatform>
     </Application.Resources>
 </Application>
