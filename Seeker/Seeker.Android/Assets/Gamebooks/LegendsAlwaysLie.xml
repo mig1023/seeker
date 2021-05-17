@@ -1591,7 +1591,7 @@
 		<Text>Тонкий слой дерна под ногами мгновенно разъезжается, и вы по ребра проваливаетесь в трясину. Олени проносятся мимо, даже не повернувшись в вашу сторону.</Text>
 		<Options>
 			<Option Destination="143" Text="У вас записано слово «посох»" OnlyIf="Staff" Aftertext="Иначе, выбраться вам не удастся, и зловонная жижа неумолимо засосет вас…"/>
-			<Option Destination="0" Text="Начать с начала" OnlyIf="!Staff"/>
+			<Option Destination="0" OnlyIf="!Staff"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>

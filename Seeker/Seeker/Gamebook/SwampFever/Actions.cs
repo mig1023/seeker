@@ -50,7 +50,7 @@ namespace Seeker.Gamebook.SwampFever
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
-            toEndText = "Начать с начала...";
+            toEndText = "Начать сначала...";
 
             return Character.Protagonist.Hitpoints <= 0;
         }
