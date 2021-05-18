@@ -11,6 +11,9 @@ namespace Seeker.Gamebook.Genesis
             if (Name == "Trigger")
                 Game.Option.Trigger(ValueString);
 
+            else if (Name == "Healing")
+                Game.Healing.Add(ValueString);
+
             else
             {
                 int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
