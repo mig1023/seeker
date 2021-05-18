@@ -21,8 +21,7 @@ namespace Seeker.Gamebook.DzungarWar
 
         public Modification Benefit { get; set; }
 
-        static bool NextTestWithTincture = false;
-        static bool NextTestWithGinseng = false;
+        static bool NextTestWithTincture = false, NextTestWithGinseng = false;
 
         private int TestLevelWithPenalty(int level, out List<string> penaltyLine)
         {
@@ -64,7 +63,16 @@ namespace Seeker.Gamebook.DzungarWar
 
         public override List<string> Representer()
         {
-            if (ActionName == "TestAll")
+            if (!String.IsNullOrEmpty(Stat) && !StatToMax)
+            {
+                int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
+
+                string diffLine = (currentStat > 1 ? String.Format(" (+{0})", (currentStat - 1)) : String.Empty);
+
+                return new List<string> { String.Format("{0}{1}", Text, diffLine) };
+            }
+
+            else if (ActionName == "TestAll")
                 return new List<string> { String.Format("Проверить по совокупному уровню {0}", Level) };
 
             else if (Level > 0)
