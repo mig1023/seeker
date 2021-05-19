@@ -416,6 +416,21 @@ namespace Seeker.Gamebook
                 FontColor = "#e5ce3c",
                 Illustration = "LandOfUnwaryBears.jpg",
             },
+
+            ["По закону прерии"] = new Description
+            {
+                XmlBook = "Gamebooks/PrairieLaw.xml",
+                Protagonist = PrairieLaw.Character.Protagonist.Init,
+                CheckOnlyIf = PrairieLaw.Actions.CheckOnlyIf,
+                Paragraphs = new PrairieLaw.Paragraphs(),
+                Actions = new PrairieLaw.Actions(),
+                Constants = new PrairieLaw.Constants(),
+                Save = PrairieLaw.Character.Protagonist.Save,
+                Load = PrairieLaw.Character.Protagonist.Load,
+                SmallDisclaimer = "Ольга Голотвина, 1995",
+                BookColor = "#b66247",
+                Illustration = "PrairieLaw.jpg",
+            },
         };
 
         public static List<string> GetBooks() => new List<string>(Books.Keys);
