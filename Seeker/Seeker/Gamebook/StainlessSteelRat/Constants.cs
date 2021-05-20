@@ -11,10 +11,15 @@ namespace Seeker.Gamebook.StainlessSteelRat
     {
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#000000",
+            [ButtonTypes.Main] = "#738595",
+            [ButtonTypes.Continue] = "#8f9daa",
         };
 
-        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>();
+
+        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
+        {
+            [ColorTypes.Background] = "#b9c2ca",
+        };
 
         public string GetButtonsColor(ButtonTypes type) => (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
 
