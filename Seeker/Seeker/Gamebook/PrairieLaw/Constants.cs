@@ -19,9 +19,5 @@ namespace Seeker.Gamebook.PrairieLaw
         public string GetButtonsColor(ButtonTypes type) => (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
 
         public string GetColor(Game.Data.ColorTypes type) => (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
-
-        public override string GetFont() => "CourierFont";
-
-        public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
     }
 }
