@@ -401,22 +401,6 @@ namespace Seeker.Gamebook
                 ShowDisabledOption = true,
             },         
             
-            ["В краю непуганных медведей"] = new Description
-            {
-                XmlBook = "Gamebooks/LandOfUnwaryBears.xml",
-                Protagonist = LandOfUnwaryBears.Character.Protagonist.Init,
-                CheckOnlyIf = LandOfUnwaryBears.Actions.CheckOnlyIf,
-                Paragraphs = new LandOfUnwaryBears.Paragraphs(),
-                Actions = new LandOfUnwaryBears.Actions(),
-                Constants = new LandOfUnwaryBears.Constants(),
-                Save = LandOfUnwaryBears.Character.Protagonist.Save,
-                Load = LandOfUnwaryBears.Character.Protagonist.Load,
-                SmallDisclaimer = "Геннадий Логинов, 2020",
-                BookColor = "#881b13",
-                FontColor = "#e5ce3c",
-                Illustration = "LandOfUnwaryBears.jpg",
-            },
-
             ["По закону прерии"] = new Description
             {
                 XmlBook = "Gamebooks/PrairieLaw.xml",
