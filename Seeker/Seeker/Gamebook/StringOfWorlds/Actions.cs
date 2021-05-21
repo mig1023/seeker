@@ -19,17 +19,12 @@ namespace Seeker.Gamebook.StringOfWorlds
         public string Text { get; set; }
         public Abstract.IModification Benefit { get; set; }
  
-        public override List<string> Status()
+        public override List<string> Status() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Ловкость: {0}", Character.Protagonist.Skill),
-                String.Format("Сила: {0}", Character.Protagonist.Strength),
-                String.Format("Обаяние: {0}", Character.Protagonist.Charm),
-            };
-
-            return statusLines;
-        }
+            String.Format("Ловкость: {0}", Character.Protagonist.Skill),
+            String.Format("Сила: {0}", Character.Protagonist.Strength),
+            String.Format("Обаяние: {0}", Character.Protagonist.Charm),
+        };
 
         public override List<string> StaticButtons()
         {
