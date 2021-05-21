@@ -11,17 +11,12 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
         public int Dices { get; set; }
 
 
-        public override List<string> Status()
+        public override List<string> Status() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Реакция: {0}", Character.Protagonist.Reaction),
-                String.Format("Сила: {0}", Character.Protagonist.Strength),
-                String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
-            };
-
-            return statusLines;
-        }
+            String.Format("Реакция: {0}", Character.Protagonist.Reaction),
+            String.Format("Сила: {0}", Character.Protagonist.Strength),
+            String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
+        };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
