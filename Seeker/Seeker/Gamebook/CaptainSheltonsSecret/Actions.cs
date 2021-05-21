@@ -20,17 +20,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public bool Used { get; set; }
         public bool Multiple { get; set; }
 
-        public override List<string> Status()
+        public override List<string> Status() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Мастерство: {0}", Character.Protagonist.Mastery),
-                String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
-                String.Format("Золото: {0}", Character.Protagonist.Gold)
-            };
-
-            return statusLines;
-        }
+            String.Format("Мастерство: {0}", Character.Protagonist.Mastery),
+            String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
+            String.Format("Золото: {0}", Character.Protagonist.Gold)
+        };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
