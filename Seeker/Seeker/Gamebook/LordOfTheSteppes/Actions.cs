@@ -79,28 +79,18 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return enemies;
         }
 
-        public override List<string> Status()
+        public override List<string> Status() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Жизнь: {0}", Character.Protagonist.Endurance),
-                String.Format("Монеты: {0}", Character.Protagonist.Coins),
-            };
+            String.Format("Жизнь: {0}", Character.Protagonist.Endurance),
+            String.Format("Монеты: {0}", Character.Protagonist.Coins),
+        };
 
-            return statusLines;
-        }
-
-        public override List<string> AdditionalStatus()
+        public override List<string> AdditionalStatus() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Инициатива: {0}", Character.Protagonist.Initiative),
-                String.Format("Защита: {0}", Character.Protagonist.Defence),
-                String.Format("Нападение: {0}", Character.Protagonist.Attack),
-            };
-
-            return statusLines;
-        }
+            String.Format("Инициатива: {0}", Character.Protagonist.Initiative),
+            String.Format("Защита: {0}", Character.Protagonist.Defence),
+            String.Format("Нападение: {0}", Character.Protagonist.Attack),
+        };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
