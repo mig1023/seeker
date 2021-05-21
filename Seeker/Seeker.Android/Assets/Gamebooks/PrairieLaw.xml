@@ -125,7 +125,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>16</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="368" Text="Вам повезло"/>
 			<Option Destination="500" Text="Нет"/>
@@ -370,7 +376,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>48</ID>
-		<Text>Оглядев засыпанное обломками гранита дерево, налегаете на толстый сук, как на рычаг. Дерево медленно вздрагивает... подается... и вся каменная груда беспощадной лавиной обрушивается на вас.\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Оглядев засыпанное обломками гранита дерево, налегаете на толстый сук, как на рычаг. Дерево медленно вздрагивает... подается... и вся каменная груда беспощадной лавиной обрушивается на вас.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="278" Text="Повезло"/>
 			<Option Destination="386" Text="Нет"/>
@@ -1548,7 +1560,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>203</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="335" Text="Вам повезло"/>
 			<Option Destination="449" Text="Нет"/>
@@ -2526,7 +2544,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>333</ID>
-		<Text>Вы кладете руку на дверной засов, чтобы войти в конюшню... и тут за спиной раздается выстрел.\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Вы кладете руку на дверной засов, чтобы войти в конюшню... и тут за спиной раздается выстрел.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="68" Text="Вам повезло"/>
 			<Option Destination="94" Text="Нет"/>
@@ -2656,7 +2680,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>351</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="19" Text="Вам повезло"/>
 			<Option Destination="519" Text="Нет"/>
@@ -2977,7 +3007,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>393</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="197" Text="Вам повезло"/>
 			<Option Destination="310" Text="Нет"/>
@@ -3267,7 +3303,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>431</ID>
-		<Text>Хорошо, что Чикита привязана в кустах! Двое спешиваются у колодца, и первые же фразы, которыми обмениваются, заставляют вас стиснуть зубы. Это бандиты из шайки Стервятника Джо! Заметят ли они привязанное к срубу лассо?\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Хорошо, что Чикита привязана в кустах! Двое спешиваются у колодца, и первые же фразы, которыми обмениваются, заставляют вас стиснуть зубы. Это бандиты из шайки Стервятника Джо! Заметят ли они привязанное к срубу лассо?</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="493" Text="Вам повезло"/>
 			<Option Destination="575" Text="Нет"/>
@@ -3638,7 +3680,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>481</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="426" Text="Вам повезет"/>
 			<Option Destination="241" Text="Нет"/>
@@ -3685,7 +3733,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>487</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="534" Text="Вам повезло"/>
 			<Option Destination="366" Text="Нет"/>
@@ -3716,7 +3770,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>491</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="322" Text="Вам повезло"/>
 			<Option Destination="388" Text="Нет"/>
@@ -3724,7 +3784,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>492</ID>
-		<Text>Лассо разрезает воздух и, захлестнув острый обломок скалы, дрожит в руках, как струна. Быстро и ловко вы начинаете взбираться на уступ.\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Лассо разрезает воздух и, захлестнув острый обломок скалы, дрожит в руках, как струна. Быстро и ловко вы начинаете взбираться на уступ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="129" Text="Вам повезло"/>
 			<Option Destination="658" Text="Нет"/>
@@ -4154,7 +4220,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>548</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="268" Text="Вам повезло"/>
 			<Option Destination="346" Text="Нет"/>
@@ -4337,7 +4409,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>572</ID>
-		<Text>Вы знаете этого негодяя – он не из тех, кто сражается в честном поединке. Он вас просто пристрелит, вот и все. Придется рискнуть...\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Вы знаете этого негодяя – он не из тех, кто сражается в честном поединке. Он вас просто пристрелит, вот и все. Придется рискнуть...</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="135" Text="Вам повезло"/>
 			<Option Destination="510" Text="Нет"/>
@@ -4683,7 +4761,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>618</ID>
-		<Text>Женщина, убирающая со столиков посуду, удивленно приподнимает брови. Да, разумеется, она хорошо знает здешнего маршала. Его зовут Дэвид Кленси, он на днях уехал из города, вернется на будущей неделе... Парень, что сидел за этим столом? Бог его ведает, приезжий какой-то...\n\nВ ярости бросаетесь вы к дверям.\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Женщина, убирающая со столиков посуду, удивленно приподнимает брови. Да, разумеется, она хорошо знает здешнего маршала. Его зовут Дэвид Кленси, он на днях уехал из города, вернется на будущей неделе... Парень, что сидел за этим столом? Бог его ведает, приезжий какой-то...\n\nВ ярости бросаетесь вы к дверям.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="540" Text="Вам повезло"/>
 			<Option Destination="462" Text="Нет"/>
@@ -4742,7 +4826,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>626</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="468" Text="Вам повезет"/>
 			<Option Destination="46" Text="Нет"/>
@@ -4817,7 +4907,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>636</ID>
-		<Text>Но вы замешкались. А голоса дружков Эль-Хабали уже близко...\n\nПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Но вы замешкались. А голоса дружков Эль-Хабали уже близко...</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="274" Text="Вам повезло"/>
 			<Option Destination="189" Text="Нет"/>
@@ -4932,7 +5028,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>650</ID>
-		<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+		<Text>Проверьте свою удачу:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Luck</ActionName>
+				<ButtonName>Проверить удачу</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="158" Text="Вам повезло"/>
 			<Option Destination="229" Text="Нет"/>
