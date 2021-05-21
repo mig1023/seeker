@@ -29,18 +29,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return enemies;
         }
 
-        public override List<string> Status()
+        public override List<string> Status() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Сила: {0}", Character.Protagonist.Strength),
-                String.Format("Защита: {0}", Character.Protagonist.Defence),
-                String.Format("Слава: {0}", Character.Protagonist.Glory),
-                String.Format("Позор: {0}", Character.Protagonist.Shame),
-            };
-
-            return statusLines;
-        }
+            String.Format("Сила: {0}", Character.Protagonist.Strength),
+            String.Format("Защита: {0}", Character.Protagonist.Defence),
+            String.Format("Слава: {0}", Character.Protagonist.Glory),
+            String.Format("Позор: {0}", Character.Protagonist.Shame),
+        };
 
         public override List<string> AdditionalStatus()
         {
