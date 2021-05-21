@@ -22,19 +22,14 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public List<Modification> Benefit { get; set; }
         public Character.MeritalArts? MeritalArt { get; set; }
 
-        public override List<string> Status()
+        public override List<string> Status() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Ловкость: {0}", Character.Protagonist.Skill),
-                String.Format("Сила: {0}", Character.Protagonist.Strength),
-                String.Format("Честь: {0}", Character.Protagonist.Honor),
-                String.Format("День: {0}", Character.Protagonist.Day),
-                String.Format("Экю: {0:f2}", (double)Character.Protagonist.Ecu / 100)
-            };
-
-            return statusLines;
-        }
+            String.Format("Ловкость: {0}", Character.Protagonist.Skill),
+            String.Format("Сила: {0}", Character.Protagonist.Strength),
+            String.Format("Честь: {0}", Character.Protagonist.Honor),
+            String.Format("День: {0}", Character.Protagonist.Day),
+            String.Format("Экю: {0:f2}", (double)Character.Protagonist.Ecu / 100)
+        };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
