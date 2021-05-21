@@ -25,29 +25,19 @@ namespace Seeker.Gamebook.OctopusIsland
             return enemies;
         }
 
-        public override List<string> Status()
+        public override List<string> Status() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Обедов: {0}", Character.Protagonist.Food),
-                String.Format("Животворная мазь: {0}", Character.Protagonist.LifeGivingOintment),
-            };
+            String.Format("Обедов: {0}", Character.Protagonist.Food),
+            String.Format("Животворная мазь: {0}", Character.Protagonist.LifeGivingOintment),
+        };
 
-            return statusLines;
-        }
-
-        public override List<string> AdditionalStatus()
+        public override List<string> AdditionalStatus() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Серж: {0}/{1}", Character.Protagonist.SergeSkill, Character.Protagonist.SergeHitpoint),
-                String.Format("Ксолотл: {0}/{1}", Character.Protagonist.XolotlSkill, Character.Protagonist.XolotlHitpoint),
-                String.Format("Тибо: {0}/{1}", Character.Protagonist.ThibautSkill, Character.Protagonist.ThibautHitpoint),
-                String.Format("Суи: {0}/{1}", Character.Protagonist.SouhiSkill, Character.Protagonist.SouhiHitpoint),
-            };
-
-            return statusLines;
-        }
+            String.Format("Серж: {0}/{1}", Character.Protagonist.SergeSkill, Character.Protagonist.SergeHitpoint),
+            String.Format("Ксолотл: {0}/{1}", Character.Protagonist.XolotlSkill, Character.Protagonist.XolotlHitpoint),
+            String.Format("Тибо: {0}/{1}", Character.Protagonist.ThibautSkill, Character.Protagonist.ThibautHitpoint),
+            String.Format("Суи: {0}/{1}", Character.Protagonist.SouhiSkill, Character.Protagonist.SouhiHitpoint),
+        };
 
         public override List<string> StaticButtons()
         {
