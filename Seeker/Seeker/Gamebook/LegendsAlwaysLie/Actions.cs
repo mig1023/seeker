@@ -52,29 +52,19 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return enemies;
         }
 
-        public override List<string> Status()
+        public override List<string> Status() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Сила: {0}", Character.Protagonist.Strength),
-                String.Format("Жизни: {0}", Character.Protagonist.Hitpoints),
-                String.Format("Заклинаний: {0}", Character.Protagonist.Magicpoints),
-                String.Format("Золото: {0}", Character.Protagonist.Gold),
-            };
+            String.Format("Сила: {0}", Character.Protagonist.Strength),
+            String.Format("Жизни: {0}", Character.Protagonist.Hitpoints),
+            String.Format("Заклинаний: {0}", Character.Protagonist.Magicpoints),
+            String.Format("Золото: {0}", Character.Protagonist.Gold),
+        };
 
-            return statusLines;
-        }
-
-        public override List<string> AdditionalStatus()
+        public override List<string> AdditionalStatus() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Жизни Коннери: {0}", Character.Protagonist.ConneryHitpoints),
-                String.Format("Доверие Коннери: {0}", Character.Protagonist.ConneryTrust),
-            };
-
-            return statusLines;
-        }
+            String.Format("Жизни Коннери: {0}", Character.Protagonist.ConneryHitpoints),
+            String.Format("Доверие Коннери: {0}", Character.Protagonist.ConneryTrust),
+        };
 
         public override List<string> StaticButtons()
         {
