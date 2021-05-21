@@ -28,7 +28,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Патронов: {0}", Character.Protagonist.Сartridges),
+            String.Format("Патронов: {0}", Character.Protagonist.Cartridges),
             String.Format("Долларов: {0}", Character.Protagonist.Dollars),
         };
 
@@ -55,7 +55,7 @@ namespace Seeker.Gamebook.PrairieLaw
                 string line = String.Format("{0}\nловкость {1}  сила {2}", enemy.Name, enemy.Skill, enemy.Strength);
 
                 if (Firefight)
-                    line += String.Format("  патроны {0}", enemy.Strength);
+                    line += String.Format("  патроны {0}", enemy.Cartridges);
 
                 enemies.Add(line);
             }
@@ -198,6 +198,24 @@ namespace Seeker.Gamebook.PrairieLaw
             return true;
         }
 
+        private bool FirefightContinue(List<Character> enemies, ref List<string> fight, bool firefight)
+        {
+            if (Character.Protagonist.Cartridges > 0)
+                return true;
+
+            foreach (Character enemy in enemies)
+                if (enemy.Cartridges > 0)
+                    return true;
+
+            if (firefight)
+            {
+                fight.Add("BOLD|У всех закончились патроны, дальше бой продолжится на кулаках");
+                fight.Add(String.Empty);
+            }
+
+            return false;
+        }
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -208,46 +226,70 @@ namespace Seeker.Gamebook.PrairieLaw
                 FightEnemies.Add(enemy.Clone());
 
             int round = 1;
+            bool firefight = Firefight;
 
             Character hero = Character.Protagonist;
 
             while (true)
             {
+                firefight = FirefightContinue(FightEnemies, ref fight, firefight);
+
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
                 bool attackAlready = false;
-                int protagonistHitStrength = 0;
+                int heroHitStrength = 0, enemyHitStrength = 0;
 
                 foreach (Character enemy in FightEnemies)
                 {
                     if (enemy.Strength <= 0)
                         continue;
 
-                    fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
+                    string cartridgesLine = (enemy.Cartridges > 0 ? String.Format(", патронов {0}", enemy.Cartridges) : String.Empty);
+                    fight.Add(String.Format("{0} (сила {1}{2})", enemy.Name, enemy.Strength, cartridgesLine));
 
-                    if (!attackAlready)
+                    bool noCartridges = Character.Protagonist.Cartridges <= 0;
+
+                    if (!attackAlready && (!firefight || !noCartridges))
                     {
-                        int protagonistRollFirst = Game.Dice.Roll();
-                        int protagonistRollSecond = Game.Dice.Roll();
-                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + hero.Skill;
+                        int heroRollFirst = Game.Dice.Roll();
+                        int heroRollSecond = Game.Dice.Roll();
+                        heroHitStrength = heroRollFirst + heroRollSecond + hero.Skill;
 
-                        fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
-                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
-                            hero.Skill, protagonistHitStrength));
+                        string heroHitLine = (firefight ? "Ваш выстрел" : "Мощность вашего удара");
+
+                        fight.Add(String.Format("{0}: {1} + {2} + {3} = {4}",
+                            heroHitLine, Game.Dice.Symbol(heroRollFirst), Game.Dice.Symbol(heroRollSecond), hero.Skill, heroHitStrength));
+
+                        if (firefight)
+                            Character.Protagonist.Cartridges -= 1;
                     }
 
-                    int enemyRollFirst = Game.Dice.Roll();
-                    int enemyRollSecond = Game.Dice.Roll();
-                    int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
+                    if (!firefight || (enemy.Cartridges > 0))
+                    {
+                        int enemyRollFirst = Game.Dice.Roll();
+                        int enemyRollSecond = Game.Dice.Roll();
+                        enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
 
-                    fight.Add(String.Format("Мощность его удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Skill, enemyHitStrength));
+                        string enemyHitLine = (firefight ? "Его выстрел" : "Мощность его удара");
 
-                    if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
+                        fight.Add(String.Format("{0}: {1} + {2} + {3} = {4}",
+                            enemyHitLine, Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Skill, enemyHitStrength));
+
+                        if (firefight)
+                            enemy.Cartridges -= 1;
+                    }
+                    else
+                        enemyHitStrength = 0;
+
+                    if ((heroHitStrength == 0) && (enemyHitStrength == 0))
+                    { 
+                        // nothing to do here
+                    }
+                    else if ((heroHitStrength > enemyHitStrength) && !attackAlready)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
 
-                        enemy.Strength -= 2;
+                        enemy.Strength -= (firefight ? 3 : 2);
 
                         bool enemyLost = NoMoreEnemies(FightEnemies);
 
@@ -258,15 +300,15 @@ namespace Seeker.Gamebook.PrairieLaw
                             return fight;
                         }
                     }
-                    else if (protagonistHitStrength > enemyHitStrength)
+                    else if (heroHitStrength > enemyHitStrength)
                     {
                         fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
                     }
-                    else if (protagonistHitStrength < enemyHitStrength)
+                    else if (heroHitStrength < enemyHitStrength)
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
-                        hero.Strength -= 2;
+                        hero.Strength -= (firefight ? 3 : 2);
 
                         if ((hero.Strength <= 0) || (HeroWoundsLimit && (hero.Strength <= 2)))
                         {

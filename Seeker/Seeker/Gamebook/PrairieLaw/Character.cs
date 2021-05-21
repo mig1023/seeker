@@ -70,7 +70,7 @@ namespace Seeker.Gamebook.PrairieLaw
         }
         
         private int _cartridges;
-        public int Сartridges
+        public int Cartridges
         {
             get => _cartridges;
             set
@@ -95,7 +95,7 @@ namespace Seeker.Gamebook.PrairieLaw
             Charm = Constants.Charms()[dice];
 
             Dollars = 15;
-            Сartridges = 6;
+            Cartridges = 6;
 
             Luck = new Dictionary<int, bool>
             {
@@ -120,7 +120,7 @@ namespace Seeker.Gamebook.PrairieLaw
             Strength = this.Strength,
             Charm = this.Charm,
             Dollars = this.Dollars,
-            Сartridges = this.Сartridges,
+            Cartridges = this.Cartridges,
         };
 
         public string Save()
@@ -130,7 +130,7 @@ namespace Seeker.Gamebook.PrairieLaw
             foreach (bool luck in Luck.Values.ToList())
                 lucks.Add(luck ? "1" : "0");
 
-            return String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Charm, Dollars, Сartridges, String.Join(",", lucks));
+            return String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Charm, Dollars, Cartridges, String.Join(",", lucks));
         }
 
         public void Load(string saveLine)
@@ -143,7 +143,7 @@ namespace Seeker.Gamebook.PrairieLaw
             Strength = int.Parse(save[3]);
             Charm = int.Parse(save[4]);
             Dollars = int.Parse(save[5]);
-            Сartridges = int.Parse(save[6]);
+            Cartridges = int.Parse(save[6]);
 
             string[] lucks = save[7].Split(',');
 

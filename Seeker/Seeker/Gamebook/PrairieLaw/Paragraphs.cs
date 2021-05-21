@@ -60,7 +60,7 @@ namespace Seeker.Gamebook.PrairieLaw
                             Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
                             MaxSkill = Game.Xml.IntParse(xmlEnemy.Attributes["Skill"]),
                             MaxStrength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
-                            Сartridges = Game.Xml.IntParse(xmlEnemy.Attributes["Сartridges"]),
+                            Cartridges = Game.Xml.IntParse(xmlEnemy.Attributes["Сartridges"]),
                         };
 
                         enemy.Skill = enemy.MaxSkill;
