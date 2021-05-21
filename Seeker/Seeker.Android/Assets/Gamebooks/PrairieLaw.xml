@@ -167,7 +167,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>17</ID>
-		<Text>ПЕРЕСТРЕЛКА\n\n1-Й ВСАДНИК     ЛОВКОСТЬ 8     СИЛА 10     4 ПАТРОНА\n\n2-Й ВСАДНИК     ЛОВКОСТЬ 9     СИЛА 9      3 ПАТРОНА</Text>
+		<Text>Перестрелка:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Firefight/>
+				<Enemies>
+					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="10" Сartridges="4"/>
+					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="9" Strength="9" Сartridges="3"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="266"/>
 		</Options>
@@ -290,7 +301,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>33</ID>
-		<Text>ПЕРЕСТРЕЛКА\n\nВОИН     ЛОВКОСТЬ 9     СИЛА 12     4 ПАТРОНА</Text>
+		<Text>Перестрелка:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Firefight/>
+				<Enemies>
+					<Enemy Name="ВОИН" Skill="9" Strength="12" Сartridges="4"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="306"/>
 		</Options>
@@ -832,7 +853,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>99</ID>
-		<Text>ПЕРЕСТРЕЛКА\n\nЭЛЬ-ХАБАЛИ     ЛОВКОСТЬ 11     СИЛА 12     6 ПАТРОНОВ</Text>
+		<Text>Перестрелка:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Firefight/>
+				<Enemies>
+					<Enemy Name="ЭЛЬ-ХАБАЛИ" Skill="11" Strength="12" Сartridges="6"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="477"/>
 		</Options>
@@ -903,7 +934,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>107</ID>
-		<Text>Вам придется вести перестрелку с двумя неизвестными противниками, засевшими в густом ивняке. Вы их не видите, стрелять приходится  на звук и наугад, поэтому на время поединка вычтите 1 из своей ЛОВКОСТИ.\n\nПЕРЕСТРЕЛКА\n\n1-Й ПРОТИВНИК     ЛОВКОСТЬ 9     СИЛА 9     5 ПАТРОНОВ\n\n2-Й ПРОТИВНИК     ЛОВКОСТЬ 8     СИЛА 10    5 ПАТРОНОВ</Text>
+		<Text>Вам придется вести перестрелку с двумя неизвестными противниками, засевшими в густом ивняке. Вы их не видите, стрелять приходится на звук и наугад, поэтому на время поединка вычтите 1 из своей ЛОВКОСТИ.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Firefight/>
+				<Enemies>
+					<Enemy Name="ПЕРВЫЙ ПРОТИВНИК" Skill="9" Strength="9" Сartridges="5"/>
+					<Enemy Name="ВТОРОЙ ПРОТИВНИК" Skill="8" Strength="10" Сartridges="5"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="595"/>
 		</Options>
@@ -1215,7 +1257,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>144</ID>
-		<Text>Вам приходилось слышать, что этот негодяй – прекрасный стрелок. А сегодня вы в этом убеждаетесь...\n\nПЕРЕСТРЕЛКА\n\nСТЕРВЯТНИК ДЖО     ЛОВКОСТЬ 11     СИЛА 12     6 ПАТРОНОВ</Text>
+		<Text>Вам приходилось слышать, что этот негодяй – прекрасный стрелок. А сегодня вы в этом убеждаетесь...</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Firefight/>
+				<Enemies>
+					<Enemy Name="СТЕРВЯТНИК ДЖО" Skill="11" Strength="12" Сartridges="6"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="338"/>
 		</Options>
@@ -1282,7 +1334,19 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>153</ID>
-		<Text>ПЕРЕСТРЕЛКА\n\n1-Й ИНДЕЕЦ     ЛОВКОСТЬ 9     СИЛА 8     3 ПАТРОНА\n\n2-Й ИНДЕЕЦ     ЛОВКОСТЬ 8     СИЛА 10   4 ПАТРОНА\n\n3-Й ИНДЕЕЦ     ЛОВКОСТЬ 8     СИЛА 9     4 ПАТРОНА</Text>
+		<Text>Перестрелка:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Firefight/>
+				<Enemies>
+					<Enemy Name="ПЕРВЫЙ ИНДЕЕЦ" Skill="9" Strength="9" Сartridges="3"/>
+					<Enemy Name="ВТОРОЙ ИНДЕЕЦ" Skill="8" Strength="10" Сartridges="4"/>
+					<Enemy Name="ТРЕТИЙ ИНДЕЕЦ" Skill="8" Strength="9" Сartridges="4"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="302"/>
 		</Options>
@@ -1387,7 +1451,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>166</ID>
-		<Text>ПЕРЕСТРЕЛКА\n\n1-Й ВСАДНИК     ЛОВКОСТЬ 8     СИЛА 10     4 ПАТРОНА\n\n2-Й ВСАДНИК     ЛОВКОСТЬ 8     СИЛА 9      4 ПАТРОНА</Text>
+		<Text>Перестрелка:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Firefight/>
+				<Enemies>
+					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="10" Сartridges="4"/>
+					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="9" Сartridges="4"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="336"/>
 		</Options>
@@ -2054,7 +2129,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>245</ID>
-		<Text>ПЕРЕСТРЕЛКА\n\nФОСТЕР     ЛОВКОСТЬ 12     СИЛА 12     6 ПАТРОНОВ</Text>
+		<Text>Перестрелка:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Firefight/>
+				<Enemies>
+					<Enemy Name="ФОСТЕР" Skill="12" Strength="12" Сartridges="6"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="445"/>
 		</Options>
@@ -2153,7 +2238,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>257</ID>
-		<Text>Распахнув дверь, выскакиваете наружу – и тут же вас настигает пущенная с крыши пуля (вычтите 3 из СИЛЫ). К счастью, кольт уже у вас в руке. Вы готовы принять бой.\n\nПЕРЕСТРЕЛКА\n\nНЕЗНАКОМЕЦ     ЛОВКОСТЬ 9     СИЛА 9     5 ПАТРОНОВ</Text>
+		<Text>Распахнув дверь, выскакиваете наружу – и тут же вас настигает пущенная с крыши пуля (вычтите 3 из СИЛЫ). К счастью, кольт уже у вас в руке. Вы готовы принять бой.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Firefight/>
+				<Enemies>
+					<Enemy Name="НЕЗНАКОМЕЦ" Skill="9" Strength="9" Сartridges="5"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="573"/>
 		</Options>
@@ -2660,7 +2755,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>320</ID>
-		<Text>ПЕРЕСТРЕЛКА\n\n1-Й БАНДИТ     ЛОВКОСТЬ 8     СИЛА 9     3 ПАТРОНА\n\n2-Й БАНДИТ     ЛОВКОСТЬ 8     СИЛА 8     3 ПАТРОНА</Text>
+		<Text>Перестрелка:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Firefight/>
+				<Enemies>
+					<Enemy Name="ПЕРВЫЙ БАНДИТ" Skill="8" Strength="9" Сartridges="3"/>
+					<Enemy Name="ВТОРОЙ БАНДИТ" Skill="9" Strength="8" Сartridges="3"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="152"/>
 		</Options>
