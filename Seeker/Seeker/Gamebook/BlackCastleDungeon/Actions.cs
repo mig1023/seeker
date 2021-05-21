@@ -26,18 +26,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             ["ЗАКЛЯТИЕ СЛАБОСТИ"] = false,
         };
 
-        public override List<string> Status()
+        public override List<string> Status() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Мастерство: {0}", Character.Protagonist.Mastery),
-                String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
-                String.Format("Удача: {0}", Character.Protagonist.Luck),
-                String.Format("Золото: {0}", Character.Protagonist.Gold)
-            };
-
-            return statusLines;
-        }
+            String.Format("Мастерство: {0}", Character.Protagonist.Mastery),
+            String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
+            String.Format("Удача: {0}", Character.Protagonist.Luck),
+            String.Format("Золото: {0}", Character.Protagonist.Gold)
+        };
 
         public override List<string> AdditionalStatus()
         {
