@@ -34,18 +34,13 @@ namespace Seeker.Gamebook.SwampFever
                 return new List<string> { };
         }
 
-        public override List<string> Status()
+        public override List<string> Status() => new List<string>
         {
-            List<string> statusLines = new List<string>
-            {
-                String.Format("Шкала ярости: {0}", Character.Protagonist.Fury),
-                String.Format("Креды: {0}", Character.Protagonist.Creds),
-                String.Format("Стигон: {0}", Character.Protagonist.Stigon),
-                String.Format("Котировка: 1:{0}", Character.Protagonist.Rate),
-            };
-
-            return statusLines;
-        }
+            String.Format("Шкала ярости: {0}", Character.Protagonist.Fury),
+            String.Format("Креды: {0}", Character.Protagonist.Creds),
+            String.Format("Стигон: {0}", Character.Protagonist.Stigon),
+            String.Format("Котировка: 1:{0}", Character.Protagonist.Rate),
+        };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
