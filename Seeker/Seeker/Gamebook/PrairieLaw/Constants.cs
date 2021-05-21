@@ -12,9 +12,14 @@ namespace Seeker.Gamebook.PrairieLaw
         static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#b66247",
+            [ButtonTypes.Action] = "#8f4445",
         };
 
-        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>();
+        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
+        {
+            [ColorTypes.StatusBar] = "#b85d43",
+            [ColorTypes.AdditionalStatus] = "#d69b8b",
+        };
 
         public string GetButtonsColor(ButtonTypes type) => (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
 
