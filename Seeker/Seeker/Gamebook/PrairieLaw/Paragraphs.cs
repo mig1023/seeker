@@ -41,6 +41,8 @@ namespace Seeker.Gamebook.PrairieLaw
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
                     Text = Game.Xml.StringParse(xmlAction["Text"]),
+
+                    Dices = Game.Xml.IntParse(xmlAction["Dices"]),
                 };
 
                 if (xmlAction["Enemies"] != null)

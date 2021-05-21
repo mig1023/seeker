@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public List<Character> Enemies { get; set; }
 
         public string Text { get; set; }
+        public int Dices { get; set; }
         public Abstract.IModification Benefit { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -155,6 +156,27 @@ namespace Seeker.Gamebook.PrairieLaw
             luckCheck.Add(goodSkill ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
             return luckCheck;
+        }
+
+        public List<string> DiceWounds()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dicesCount = (Dices == 0 ? 1 : Dices);
+            int dices = 0;
+
+            for (int i = 1; i <= dicesCount; i++)
+            {
+                int dice = Game.Dice.Roll();
+                dices += dice;
+                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
+            }
+
+            Character.Protagonist.Strength -= dices;
+
+            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
+
+            return diceCheck;
         }
     }
 }
