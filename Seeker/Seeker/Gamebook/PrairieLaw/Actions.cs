@@ -140,5 +140,21 @@ namespace Seeker.Gamebook.PrairieLaw
 
             return luckCheck;
         }
+
+        public List<string> Skill()
+        {
+            int fisrtDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            bool goodSkill = (fisrtDice + secondDice) <= Character.Protagonist.Skill;
+
+            List<string> luckCheck = new List<string> { String.Format(
+                "Проверка ловкости: {0} + {1} {2} {3}",
+                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), Character.Protagonist.Skill) };
+
+            luckCheck.Add(goodSkill ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            return luckCheck;
+        }
     }
 }
