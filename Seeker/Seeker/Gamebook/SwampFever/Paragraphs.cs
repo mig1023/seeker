@@ -9,27 +9,14 @@ using Seeker.Game;
 
 namespace Seeker.Gamebook.SwampFever
 {
-    class Paragraphs : Abstract.IParagraphs
+    class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
-        public Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = new Game.Paragraph();
-
-            paragraph.Options = new List<Option>();
-            paragraph.Actions = new List<Abstract.IActions>();
-            paragraph.Modification = new List<Abstract.IModification>();
+            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-            {
-                Option option = new Option
-                {
-                    Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
-                    OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
-                };
-
-                paragraph.Options.Add(option);
-            }
+                paragraph.Options.Add(OptionsTemplate(xmlOption));
 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
             {
@@ -56,11 +43,6 @@ namespace Seeker.Gamebook.SwampFever
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                 paragraph.Modification.Add(ModificationParse(xmlModification));
-
-            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
-            paragraph.LateTrigger = Game.Xml.StringParse(xmlParagraph["LateTriggers"]);
-            paragraph.RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTriggers"]);
-            paragraph.Image = Game.Xml.StringParse(xmlParagraph["Image"]);
 
             return paragraph;
         }
