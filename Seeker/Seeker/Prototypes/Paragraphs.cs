@@ -29,5 +29,33 @@ namespace Seeker.Prototypes
 
             return paragraph;
         }
+
+        public Game.Paragraph ParagraphTemplate(XmlNode xmlParagraph) => new Game.Paragraph
+        {
+            Options = new List<Option>(),
+            Actions = new List<Abstract.IActions>(),
+            Modification = new List<Abstract.IModification>(),
+
+            Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]),
+            LateTrigger = Game.Xml.StringParse(xmlParagraph["LateTriggers"]),
+            RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTriggers"]),
+            Image = Game.Xml.StringParse(xmlParagraph["Image"]),
+        };
+
+        public Game.Option OptionsTemplateWithoutDestination(XmlNode xmlOption) => new Option()
+        {
+            Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
+            OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
+            Aftertext = Game.Xml.StringParse(xmlOption.Attributes["Aftertext"]),
+        };
+
+        public Game.Option OptionsTemplate(XmlNode xmlOption)
+        {
+            Game.Option option = OptionsTemplateWithoutDestination(xmlOption);
+
+            option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
+
+            return option;
+        }
     }
 }
