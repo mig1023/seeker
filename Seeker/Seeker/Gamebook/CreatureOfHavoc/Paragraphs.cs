@@ -13,19 +13,11 @@ namespace Seeker.Gamebook.CreatureOfHavoc
     {
         public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = new Game.Paragraph();
-
-            paragraph.Options = new List<Option>();
-            paragraph.Actions = new List<Abstract.IActions>();
-            paragraph.Modification = new List<Abstract.IModification>();
+            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
-                Option option = new Option
-                {
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
-                    OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
-                };
+                Option option = OptionsTemplate(xmlOption);
 
                 if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
                     option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
@@ -93,9 +85,6 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
                 paragraph.Modification.Add(modification);
             }
-
-            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
-            paragraph.LateTrigger = Game.Xml.StringParse(xmlParagraph["LateTriggers"]);
 
             return paragraph;
         }
