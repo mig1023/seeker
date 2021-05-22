@@ -16,28 +16,19 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 Character.Protagonist.SpecialTechnique.Add(value);
                 return;
             }
-
-            if (Name == "Healing")
+            else if (Name == "Healing")
             {
                 Game.Healing.Add(ValueString);
-
-                return;
-            }
-            else if (Restore)
-            {
-                int maxValue = (int)Character.Protagonist.GetType().GetProperty("Max" + Name).GetValue(Character.Protagonist, null);
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, maxValue);
-
-                return;
-            }
-            else if (Empty)
-            {
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, 0);
-
                 return;
             }
 
             int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+
+            if (Restore)
+                currentValue = (int)Character.Protagonist.GetType().GetProperty("Max" + Name).GetValue(Character.Protagonist, null);
+
+            else if (Empty)
+                currentValue = 0;
 
             if (Name.StartsWith("Max"))
             {
