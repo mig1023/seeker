@@ -2986,7 +2986,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>348</ID>
-		<Text>ПЕРЕСТРЕЛКА\n\nКОНОКРАД     ЛОВКОСТЬ 8     СИЛА 8     4 ПАТРОНА</Text>
+		<Text>Перестрелка:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Firefight/>
+				<Enemies>
+					<Enemy Name="КОНОКРАД" Skill="8" Strength="8" Сartridges="4"/>
+				</Enemies>
+				<EnemyWoundsLimit/>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="292" Text="Вы снизили его СИЛУ до 2"/>
 		</Options>
@@ -5286,7 +5297,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>625</ID>
-		<Text>ПЕРЕСТРЕЛКА\n\nНЕЗНАКОМЕЦ     ЛОВКОСТЬ 6     СИЛА 8     3 ПАТРОНА</Text>
+		<Text>Перестрелка:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Firefight/>
+				<Enemies>
+					<Enemy Name="НЕЗНАКОМЕЦ" Skill="6" Strength="8" Сartridges="3"/>
+				</Enemies>
+				<EnemyWoundsLimit/>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="293" Text="Вы снизили его СИЛУ до 2"/>
 		</Options>
@@ -5576,7 +5598,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>659</ID>
-		<Text>ПЕРЕСТРЕЛКА\n\n1-Й ГРАБИТЕЛЬ      ЛОВКОСТЬ 9      СИЛА 9      3 ПАТРОНА\n\n2-Й ГРАБИТЕЛЬ      ЛОВКОСТЬ 8      СИЛА 10    4 ПАТРОНА</Text>
+		<Text>Перестрелка:</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Сражаться</ButtonName>
+				<Firefight/>
+				<Enemies>
+					<Enemy Name="ПЕРВЫЙ ГРАБИТЕЛЬ" Skill="9" Strength="9" Сartridges="3"/>
+					<Enemy Name="ВТОРОЙ ГРАБИТЕЛЬ" Skill="8" Strength="10" Сartridges="4"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="236"/>
 		</Options>
