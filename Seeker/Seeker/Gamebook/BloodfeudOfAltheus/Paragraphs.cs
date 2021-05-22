@@ -9,15 +9,11 @@ using Seeker.Game;
 
 namespace Seeker.Gamebook.BloodfeudOfAltheus
 {
-    class Paragraphs : Abstract.IParagraphs
+    class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
-        public Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = new Game.Paragraph();
-
-            paragraph.Options = new List<Option>();
-            paragraph.Actions = new List<Abstract.IActions>();
-            paragraph.Modification = new List<Abstract.IModification>();
+            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
@@ -85,19 +81,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 paragraph.Modification.Add(modification);
             }
 
-            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
-
             return paragraph;
         }
 
-        private static Option GetOption(int destination, string text, string onlyIf)
+        private static Option GetOption(int destination, string text, string onlyIf) =>  new Option
         {
-            return new Option
-            {
-                Destination = destination,
-                Text = text,
-                OnlyIf = onlyIf,
-            };
-        }
+            Destination = destination,
+            Text = text,
+            OnlyIf = onlyIf,
+        };
     }
 }
