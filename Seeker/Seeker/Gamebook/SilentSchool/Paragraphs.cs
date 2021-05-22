@@ -10,24 +10,15 @@ using Seeker.Game;
 
 namespace Seeker.Gamebook.SilentSchool
 {
-    class Paragraphs : Abstract.IParagraphs
+    class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
-        public Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = new Game.Paragraph();
-
-            paragraph.Options = new List<Option>();
-            paragraph.Actions = new List<Abstract.IActions>();
-            paragraph.Modification = new List<Abstract.IModification>();
+            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
-                Option option = new Option
-                {
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
-                    OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
-                    Aftertext = Game.Xml.StringParse(xmlOption.Attributes["Aftertext"]),
-                };
+                Option option = OptionsTemplateWithoutDestination(xmlOption);
 
                 if (xmlOption.Attributes["Destination"].Value == "CHANGE")
                     option.Destination = Character.Protagonist.ChangeDecision;
@@ -36,10 +27,7 @@ namespace Seeker.Gamebook.SilentSchool
 
                 if (xmlOption.Attributes["Do"] != null)
                 {
-                    Modification modification = new Modification
-                    {
-                        Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]),
-                    };
+                    Modification modification = new Modification { Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]) };
 
                     if (int.TryParse(xmlOption.Attributes["Value"].Value, out _))
                         modification.Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]);
@@ -72,10 +60,6 @@ namespace Seeker.Gamebook.SilentSchool
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                 paragraph.Modification.Add(ModificationParse(xmlModification));
 
-            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
-            paragraph.RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTriggers"]);
-            paragraph.Image = Game.Xml.StringParse(xmlParagraph["Image"]);
-
             return paragraph;
         }
 
@@ -84,10 +68,7 @@ namespace Seeker.Gamebook.SilentSchool
             if (xmlNode == null)
                 return null;
 
-            Modification modification = new Modification
-            {
-                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
-            };
+            Modification modification = new Modification { Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]) };
 
             if (xmlNode.Attributes["Value"] == null)
                 return modification;
