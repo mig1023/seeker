@@ -13,19 +13,11 @@ namespace Seeker.Gamebook.OctopusIsland
     {
         public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = new Game.Paragraph();
-
-            paragraph.Options = new List<Option>();
-            paragraph.Actions = new List<Abstract.IActions>();
-            paragraph.Modification = new List<Abstract.IModification>();
+            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
-                Option option = new Option
-                {
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
-                    OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
-                };
+                Option option = OptionsTemplateWithoutDestination(xmlOption);
 
                 if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
                     option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
@@ -73,8 +65,6 @@ namespace Seeker.Gamebook.OctopusIsland
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                 paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
-
-            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
             return paragraph;
         }
