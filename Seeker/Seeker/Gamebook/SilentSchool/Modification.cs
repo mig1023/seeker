@@ -52,9 +52,6 @@ namespace Seeker.Gamebook.SilentSchool
 
                 hero.GetType().GetProperty(Name).SetValue(hero, currentValue);
             }
-
-            if (hero.Life < 0)
-                hero.Life = 0;
         }
     }
 }

@@ -10,7 +10,20 @@ namespace Seeker.Gamebook.SilentSchool
         public static Character Protagonist = new Gamebook.SilentSchool.Character();
 
         public string Name { get; set; }
-        public int Life { get; set; }
+
+        private int _life;
+        public int Life
+    {
+            get => _life;
+            set
+            {
+                if (value < 0)
+                    _life = 0;
+                else
+                    _life = value;
+            }
+        }
+
         public string Weapon { get; set; }
         public int Grail { get; set; }
         public int ChangeDecision { get; set; }

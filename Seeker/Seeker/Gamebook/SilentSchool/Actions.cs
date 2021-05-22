@@ -151,9 +151,6 @@ namespace Seeker.Gamebook.SilentSchool
 
             Character.Protagonist.Life -= dices;
 
-            if (Character.Protagonist.Life < 0)
-                Character.Protagonist.Life = 0;
-
             diceCheck.Add(String.Format("BIG|BAD|Я потерял жизней: {0}", Game.Dice.Symbol(dices)));
 
             return diceCheck;
