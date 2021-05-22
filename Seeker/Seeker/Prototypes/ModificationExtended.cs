@@ -6,6 +6,9 @@ namespace Seeker.Prototypes
 {
     class ModificationExtended : Modification
     {
+        public bool Empty { get; set; }
+        public bool Restore { get; set; }
+
         public void InnerDo(Abstract.ICharacter Character)
         {
             if (Name == "Trigger")
@@ -17,6 +20,12 @@ namespace Seeker.Prototypes
             else
             {
                 int currentValue = (int)Character.GetType().GetProperty(Name).GetValue(Character, null);
+
+                if (Restore)
+                    currentValue = (int)Character.GetType().GetProperty("Max" + Name).GetValue(Character, null);
+
+                else if (Empty)
+                    currentValue = 0;
 
                 if (Name.StartsWith("Max"))
                 {
