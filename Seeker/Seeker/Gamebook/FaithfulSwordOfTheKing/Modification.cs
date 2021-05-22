@@ -11,21 +11,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public override void Do()
         {
-            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
-
-            if (Empty)
-                currentValue = 0;
-
-            else if (Restore)
-                currentValue = (int)Character.Protagonist.GetType().GetProperty("Max" + Name).GetValue(Character.Protagonist, null);
-
-            else
-                currentValue += Value;
-
-            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
-
             if (Name == "Healing")
+            {
                 Game.Healing.Add(ValueString);
+                return;
+            }
 
             if (Name == "Day")
             {
@@ -34,16 +24,31 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 else
                     Character.Protagonist.HadFoodToday = 0;
             }
-    
+
+            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+
+            if (Restore)
+                currentValue = (int)Character.Protagonist.GetType().GetProperty("Max" + Name).GetValue(Character.Protagonist, null);
+
+            else if (Empty)
+                currentValue = 0;
+
             if (Name.StartsWith("Max"))
             {
-                Modification additionalMod = new Modification
-                {
-                    Name = Name.Remove(0, 3),
-                    Value = this.Value,
-                };
+                string normalParam = Name.Remove(0, 3);
 
-                additionalMod.Do();
+                int normalValue = (int)Character.Protagonist.GetType().GetProperty(normalParam).GetValue(Character.Protagonist, null);
+
+                if ((normalValue + Value) > currentValue)
+                    Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue + Value);
+
+                Character.Protagonist.GetType().GetProperty(normalParam).SetValue(Character.Protagonist, currentValue + Value);
+            }
+            else
+            {
+                currentValue += Value;
+
+                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
             }
         }
     }
