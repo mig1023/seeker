@@ -9,27 +9,14 @@ using Seeker.Game;
 
 namespace Seeker.Gamebook.RockOfTerror
 {
-    class Paragraphs : Abstract.IParagraphs
+    class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
-        public Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = new Game.Paragraph();
-
-            paragraph.Options = new List<Option>();
-            paragraph.Actions = new List<Abstract.IActions>();
-            paragraph.Modification = new List<Abstract.IModification>();
+            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-            {
-                Option option = new Option
-                {
-                    Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
-                    OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
-                };
-
-                paragraph.Options.Add(option);
-            }
+                paragraph.Options.Add(OptionsTemplate(xmlOption));
 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
             {
@@ -55,8 +42,6 @@ namespace Seeker.Gamebook.RockOfTerror
 
                 paragraph.Modification.Add(modification);
             }
-
-            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
             return paragraph;
         }
