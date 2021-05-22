@@ -9,24 +9,15 @@ using Seeker.Game;
 
 namespace Seeker.Gamebook.HowlOfTheWerewolf
 {
-    class Paragraphs : Abstract.IParagraphs
+    class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
-        public Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = new Game.Paragraph();
-
-            paragraph.Options = new List<Option>();
-            paragraph.Actions = new List<Abstract.IActions>();
-            paragraph.Modification = new List<Abstract.IModification>();
+            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
-                Option option = new Option
-                {
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
-                    OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
-                    Aftertext = Game.Xml.StringParse(xmlOption.Attributes["Aftertext"]),
-                };
+                Option option = OptionsTemplateWithoutDestination(xmlOption);
 
                 if (xmlOption.Attributes["Destination"].Value == "Back")
                     option.Destination = Character.Protagonist.WayBack;
@@ -103,8 +94,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                 paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
-
-            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
             return paragraph;
         }
