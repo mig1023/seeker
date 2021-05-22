@@ -10,31 +10,19 @@ using Seeker.Game;
 
 namespace Seeker.Gamebook.InvisibleFront
 {
-    class Paragraphs : Abstract.IParagraphs
+    class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
-        public Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = new Game.Paragraph();
-
-            paragraph.Options = new List<Option>();
-            paragraph.Actions = new List<Abstract.IActions>();
-            paragraph.Modification = new List<Abstract.IModification>();
+            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
-                Option option = new Option
-                {
-                    Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
-                    OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
-                };
+                Option option = OptionsTemplate(xmlOption);
 
                 if (xmlOption.Attributes["Do"] != null)
                 {
-                    Modification modification = new Modification
-                    {
-                        Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]),
-                    };
+                    Modification modification = new Modification { Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]) };
 
                     ValueParse(xmlOption, ref modification);
 
@@ -46,8 +34,6 @@ namespace Seeker.Gamebook.InvisibleFront
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                 paragraph.Modification.Add(ModificationParse(xmlModification));
-
-            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
 
             return paragraph;
         }
