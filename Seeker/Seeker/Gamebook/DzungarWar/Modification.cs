@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Seeker.Gamebook.DzungarWar
 {
-    class Modification : Prototypes.Modification, Abstract.IModification
+    class Modification : Prototypes.ModificationExtended, Abstract.IModification
     {
-        public bool Empty { get; set; }
         public bool Init { get; set; }
 
         public override void Do()
@@ -15,12 +14,15 @@ namespace Seeker.Gamebook.DzungarWar
 
             if ((Name == "SaleOfPredatorSkins") && Game.Data.Triggers.Contains("Хищник"))
                 hero.Tanga += 150;
+
             else if (Name == "Favour")
             {
                 if (Empty)
                     hero.Favour = null;
+
                 else if (Init)
                     hero.Favour = 0;
+
                 else
                     hero.Favour += Value;
             }
@@ -33,13 +35,7 @@ namespace Seeker.Gamebook.DzungarWar
                     hero.Danger += Value;
             }
             else
-            {
-                int currentValue = (int)hero.GetType().GetProperty(Name).GetValue(hero, null);
-
-                currentValue += Value;
-
-                hero.GetType().GetProperty(Name).SetValue(hero, currentValue);
-            }
+                InnerDo(Character.Protagonist);
         }
     }
 }
