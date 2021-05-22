@@ -20,7 +20,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public override List<string> Representer()
         {
-            if (!String.IsNullOrEmpty(Stat))
+            if (Level > 0)
+                return new List<string> { String.Format("Проверка {0}, уровень {1}", Constants.StatNames[Stat], Level) };
+
+            else if (!String.IsNullOrEmpty(Stat))
             {
                 int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
 
@@ -28,9 +31,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
             }
-
-            else if (Level > 0)
-                return new List<string> { String.Format("Проверка {0}, уровень {1}", Constants.StatNames[Stat], Level) };
 
             else if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };

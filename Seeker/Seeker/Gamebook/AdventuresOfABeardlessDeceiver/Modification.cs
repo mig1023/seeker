@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 if ((Character.Protagonist.UnitOfTime > 2) && (Character.Protagonist.Popularity > 0))
                     Character.Protagonist.Popularity -= 1;
+
                 else if (Character.Protagonist.UnitOfTime == 1)
                     Character.Protagonist.Popularity += 1;
             }
