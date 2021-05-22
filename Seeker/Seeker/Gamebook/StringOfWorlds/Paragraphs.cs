@@ -14,21 +14,13 @@ namespace Seeker.Gamebook.StringOfWorlds
     {
         public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = new Game.Paragraph();
+            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             Constants.RandomColor();
 
-            paragraph.Options = new List<Option>();
-            paragraph.Actions = new List<Abstract.IActions>();
-            paragraph.Modification = new List<Abstract.IModification>();
-
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
-                Option option = new Option
-                {
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
-                    OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
-                };
+                Option option = OptionsTemplateWithoutDestination(xmlOption);
 
                 if (xmlOption.Attributes["Destination"].Value == "Gate")
                 {
@@ -101,9 +93,6 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                 paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
-
-            paragraph.Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]);
-            paragraph.RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTrigger"]);
 
             return paragraph;
         }
