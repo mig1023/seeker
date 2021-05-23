@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.SwampFever
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
+        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#5c6649",
             [ButtonTypes.Action] = "#5a6546",
@@ -17,7 +17,7 @@ namespace Seeker.Gamebook.SwampFever
             [ButtonTypes.Continue] = "#8c937f",
         };
 
-        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
+        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#485432",
             [ColorTypes.Font] = "#eaece8",
@@ -71,11 +71,5 @@ namespace Seeker.Gamebook.SwampFever
                 },
             };
         }
-
-        public string GetButtonsColor(ButtonTypes type) => (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
-
-        public string GetColor(Game.Data.ColorTypes type) => (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
-
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
     }
 }
