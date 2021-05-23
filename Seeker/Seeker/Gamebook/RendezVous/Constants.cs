@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.RendezVous
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
+        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#FFFFFF",
             [ButtonTypes.Action] = "#FFFFFF",
@@ -19,18 +19,12 @@ namespace Seeker.Gamebook.RendezVous
             [ButtonTypes.Continue] = "#FFFFFF",
         };
 
-        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
+        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.ActionBox] = "#efefef",
             [ColorTypes.StatusBar] = "#FFFFFF",
             [ColorTypes.StatusFont] = "#000000",
             [ColorTypes.StatusBorder] = "#000000",
         };
-
-        public string GetButtonsColor(ButtonTypes type) => (ButtonsColors.ContainsKey(type)? ButtonsColors[type] : String.Empty);
-
-        public string GetColor(Game.Data.ColorTypes type) => (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
-
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
     }
 }
