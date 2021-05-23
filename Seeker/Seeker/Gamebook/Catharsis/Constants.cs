@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.Catharsis
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
+        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#51514b",
             [ButtonTypes.Option] = "#858581",
@@ -17,7 +17,7 @@ namespace Seeker.Gamebook.Catharsis
             [ButtonTypes.Action] = "#939393",
         };
 
-        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
+        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#cdcdcd",
             [ColorTypes.StatusBar] = "#b8b8b8",
@@ -25,10 +25,6 @@ namespace Seeker.Gamebook.Catharsis
             [ColorTypes.AdditionalStatus] = "#bfbfbf",
             [ColorTypes.ActionBox] = "#b8b8b8",
         };
-
-        public string GetButtonsColor(ButtonTypes type) => (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
-
-        public string GetColor(Game.Data.ColorTypes type) => (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
 
         public static Dictionary<string, int> GetStartValues() => new Dictionary<string, int>
         {
