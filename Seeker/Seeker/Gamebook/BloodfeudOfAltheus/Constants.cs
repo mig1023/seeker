@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
+        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#ebd5b3",
             [ButtonTypes.Action] = "#ebd5b3",
@@ -18,20 +18,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             [ButtonTypes.Font] = "#000000",
         };
 
-        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
+        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.ActionBox] = "#f9f2e8",
             [ColorTypes.StatusBar] = "#bcaa8f",
             [ColorTypes.StatusFont] = "#000000",
         };
 
-        public string GetButtonsColor(ButtonTypes type) => (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
-
-        public string GetColor(Game.Data.ColorTypes type) => (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
-
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1 };
-
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
 
         public static Dictionary<int, string> HealthLine() => new Dictionary<int, string>
         {
