@@ -9,12 +9,20 @@ namespace Seeker.Prototypes
 {
     class Constants
     {
+        public virtual Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>();
+
+        public virtual Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>();
+
+        public virtual string GetButtonsColor(ButtonTypes type) => (ButtonsColors().ContainsKey(type) ? ButtonsColors()[type] : String.Empty);
+
+        public virtual string GetColor(Game.Data.ColorTypes type) => (Colors().ContainsKey(type) ? Colors()[type] : String.Empty);
+
         public virtual string GetFont() => String.Empty;
 
         public virtual Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.normal;
 
         public virtual double? GetLineHeight() => null;
 
-        public virtual List<int> GetParagraphsWithoutStatuses() => new List<int> { };
+        public virtual List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
     }
 }
