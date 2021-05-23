@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
+        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#4682b4",
             [ButtonTypes.Action] = "#6495ed",
@@ -17,18 +17,12 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             [ButtonTypes.Continue] = "#90b4d2",
         };
 
-        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>
+        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#b5cde1",
             [ColorTypes.ActionBox] = "#8fb3f2",
             [ColorTypes.StatusBar] = "#0a5c96",
         };
-
-        public string GetButtonsColor(ButtonTypes type) => (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
-
-        public string GetColor(Game.Data.ColorTypes type) => (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
-
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
 
         public static Dictionary<int, int> Masterys() => new Dictionary<int, int>
         {
