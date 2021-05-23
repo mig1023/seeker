@@ -9,16 +9,10 @@ namespace Seeker.Gamebook.PensionerSimulator
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
-        static Dictionary<ButtonTypes, string> ButtonsColors = new Dictionary<ButtonTypes, string>
+        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#030436",
         };
-
-        static Dictionary<ColorTypes, string> Colors = new Dictionary<ColorTypes, string>();
-
-        public string GetButtonsColor(ButtonTypes type) => (ButtonsColors.ContainsKey(type) ? ButtonsColors[type] : String.Empty);
-
-        public string GetColor(Game.Data.ColorTypes type) => (Colors.ContainsKey(type) ? Colors[type] : String.Empty);
 
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
     }
