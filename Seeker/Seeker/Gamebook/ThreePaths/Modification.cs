@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Seeker.Gamebook.ThreePaths
 {
-    class Modification : Prototypes.Modification, Abstract.IModification
+    class Modification : Prototypes.BasicsModification, Abstract.IModification
     {
         public bool Init { get; set; }
 

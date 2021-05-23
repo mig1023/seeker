@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Seeker.Gamebook.SwampFever
 {
-    class Modification : Prototypes.Modification, Abstract.IModification
+    class Modification : Prototypes.BasicsModification, Abstract.IModification
     {
         public bool Multiplication { get; set; }
         public bool Division { get; set; }
