@@ -11,17 +11,14 @@ namespace Seeker.Gamebook.StringOfWorlds
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         private static int ColorShiftAmount = 45;
-
         private static List<int> LastColor = new List<int>();
-
         private static List<int> StatusColor = null;
-
         private static int ShiftFactor = 0;
         private static bool ShiftDirectionUp = true;
 
         private static Random random = new Random();
 
-        public string GetButtonsColor(ButtonTypes type)
+        public override string GetButtonsColor(ButtonTypes type)
         {
             if ((type == ButtonTypes.Border) || (type == ButtonTypes.Continue))
                 return String.Empty;
@@ -67,7 +64,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             return myColor.R.ToString("X2") + myColor.G.ToString("X2") + myColor.B.ToString("X2");
         }
 
-        public string GetColor(Game.Data.ColorTypes type) 
+        public override string GetColor(Game.Data.ColorTypes type) 
         {
             if (type == ColorTypes.StatusBar)
                 return HexColor(StatusColor[0], StatusColor[1], StatusColor[2]);
@@ -82,8 +79,6 @@ namespace Seeker.Gamebook.StringOfWorlds
         private string СontrastColor(List<int> color) => ((color[0] * 0.299) + (color[1] * 0.587) + (color[2] * 0.114)) > 186 ? "#000000" : "#FFFFFF";
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1, 665 };
-
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
 
         public static Dictionary<int, int> Skills() => new Dictionary<int, int>
         {
