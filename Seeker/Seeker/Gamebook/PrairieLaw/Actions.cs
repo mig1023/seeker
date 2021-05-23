@@ -328,5 +328,15 @@ namespace Seeker.Gamebook.PrairieLaw
                 round += 1;
             }
         }
+
+        public override bool IsHealingEnabled() => Character.Protagonist.Strength < Character.Protagonist.MaxStrength;
+
+        public override void UseHealing(int healingLevel)
+        {
+            if (healingLevel == -1)
+                Character.Protagonist.Strength = Character.Protagonist.MaxStrength;
+            else
+                Character.Protagonist.Strength += healingLevel;
+        }
     }
 }
