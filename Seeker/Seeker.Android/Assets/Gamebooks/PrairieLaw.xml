@@ -1218,7 +1218,8 @@
 		<ID>132</ID>
 		<Text>Вот вы и на окраине. По обеим сторонам дороги, как часовые, стоят два гиганта-тополя, давшие городу название. Если у вас есть еще дела в Ту-Попларс, самое время о них вспомнить. Если ж ничто вас не задерживает – в путь!</Text>
 		<Options>
-			<Option Destination="272" Text="Отправиться в дом, где скрывается Фостер" OnlyIf="Дом у двух тополей"/>
+			<Option Destination="272" Text="Отправиться к дому, где скрывается Фостер" OnlyIf="Дом у двух тополей"/>
+			<Option Destination="552" Text="Отправиться к дому Джинкинса" OnlyIf="Дом Джинкинса"/>
 			<Option Destination="294"/>
 		</Options>
 	</Paragraph>
@@ -3054,6 +3055,7 @@
 		<Modifications>
 			<Modification Name="Strength" Value="2"/>
 		</Modifications>
+		<Triggers>Дом Джинкинса</Triggers>
 		<Options>
 			<Option Destination="588"/>
 		</Options>
