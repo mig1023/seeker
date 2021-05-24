@@ -63,7 +63,14 @@ namespace Seeker.Gamebook.PrairieLaw
             return enemies;
         }
 
-        public static bool CheckOnlyIf(string option) => true;
+        public static bool CheckOnlyIf(string option)
+        {
+            if (option.Contains("ДОЛЛАРЫ >="))
+                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Dollars;
+
+            else
+                return Game.Data.Triggers.Contains(option);
+        }
 
         private string LuckNumbers()
         {
