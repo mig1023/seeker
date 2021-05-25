@@ -25,13 +25,13 @@ namespace Seeker.Prototypes
 
             else
             {
-                int currentValue = (int)Character.GetType().GetProperty(Name).GetValue(Character, null);
+                int currentValue = 0;
 
                 if (Restore)
                     currentValue = (int)Character.GetType().GetProperty("Max" + Name).GetValue(Character, null);
 
-                else if (Empty)
-                    currentValue = 0;
+                else if (!Empty)
+                    currentValue = (int)Character.GetType().GetProperty(Name).GetValue(Character, null);
 
                 if (Name.StartsWith("Max"))
                 {
