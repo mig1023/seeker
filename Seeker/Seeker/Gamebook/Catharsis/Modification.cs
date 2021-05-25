@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Seeker.Gamebook.Catharsis
 {
-    class Modification : Prototypes.Modification, Abstract.IModification
+    class Modification : Prototypes.ModificationExtended, Abstract.IModification
     {
         public override void Do() => InnerDo(Character.Protagonist);
     }

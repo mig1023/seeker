@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 {
-    class Modification : Prototypes.BasicsModification, Abstract.IModification
+    class Modification : Prototypes.Modification, Abstract.IModification
     {
         public bool Empty { get; set; }
         public bool Init { get; set; }
