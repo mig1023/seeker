@@ -6,7 +6,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
-        public bool Empty { get; set; }
         public bool Init { get; set; }
         public int WizardWoundsPenalty { get; set; }
         public int ThrowerWoundsPenalty { get; set; }
