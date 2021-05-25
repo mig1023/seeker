@@ -6,7 +6,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
-        public bool Empty { get; set; }
         public bool Init { get; set; }
 
         public override void Do()
