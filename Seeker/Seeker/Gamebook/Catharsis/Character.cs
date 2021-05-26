@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.Catharsis
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.Catharsis.Character();
-
-        public string Name { get; set; }
 
         private int _life;
         public int MaxLife { get; set; }
@@ -69,7 +67,7 @@ namespace Seeker.Gamebook.Catharsis
 
         public int Bonuses { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             Name = String.Empty;
             MaxLife = 100;
@@ -95,9 +93,9 @@ namespace Seeker.Gamebook.Catharsis
             Bonuses = this.Bonuses,
         };
 
-        public string Save() => String.Join("|", MaxLife, Life, Aura, Fight, Accuracy, Stealth, Bonuses);
+        public override string Save() => String.Join("|", MaxLife, Life, Aura, Fight, Accuracy, Stealth, Bonuses);
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
