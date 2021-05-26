@@ -5,11 +5,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.CaptainSheltonsSecret
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.CaptainSheltonsSecret.Character();
-
-        public string Name { get; set; }
 
         private int _mastery;
         public int MaxMastery { get; set; }
@@ -51,7 +49,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         private static Dictionary<string, int> EnduranceLoss = new Dictionary<string, int>();
 
-        public void Init()
+        public override void Init()
         {
             int dice = Game.Dice.Roll(dices: 2);
 
@@ -99,14 +97,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return this;
         }
 
-        public void SaveEndurance()
-        {
-            EnduranceLoss[this.Name] = this.Endurance;
-        }
+        public void SaveEndurance() => EnduranceLoss[this.Name] = this.Endurance;
 
         public int GetEndurance() => (EnduranceLoss.ContainsKey(this.Name) ? EnduranceLoss[this.Name] : this.Endurance);
 
-        public string Save()
+        public override string Save()
         {
             List<string> lucks = new List<string>();
 
@@ -117,7 +112,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 (SeaArmour ? 1 : 0), String.Join(",", lucks));
         }
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
