@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.ThoseWhoAreAboutToDie.Character();
-
-        public string Name { get; set; }
 
         private int _reaction;
         public int Reaction
@@ -55,7 +53,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             }
         }
 
-        public void Init()
+        public override void Init()
         {
             Name = String.Empty;
             Reaction = Game.Dice.Roll(dices: 2);
@@ -70,9 +68,9 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             Endurance = this.Endurance,
         };
 
-        public string Save() => String.Join("|", Reaction, Strength, Endurance);
+        public override string Save() => String.Join("|", Reaction, Strength, Endurance);
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
