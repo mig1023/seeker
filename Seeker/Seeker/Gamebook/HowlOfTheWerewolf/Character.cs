@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.HowlOfTheWerewolf
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.HowlOfTheWerewolf.Character();
-
-        public string Name { get; set; }
 
         private int _mastery;
         public int MaxMastery { get; set; }
@@ -142,7 +140,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public int SilverDaggers { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             Name = String.Empty;
 
@@ -180,10 +178,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             SilverDaggers = this.SilverDaggers,
         };
 
-        public string Save() => String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck,
+        public override string Save() => String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck,
                 Change, Gold, WayBack, Anxiety, Crossbow, Gun, SilverDaggers);
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
