@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Seeker.Gamebook.LordOfTheSteppes
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.LordOfTheSteppes.Character();
 
@@ -13,8 +13,6 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             IgnoreFirstStrike, IgnorePowerfulStrike, IgnoreReaction, ExtendedDamage, PoisonBlade, Nope };
 
         public enum FightStyles { Fullback, Defensive, Counterattacking, Aggressive }
-
-        public string Name { get; set; }
 
         private int _attack;
         public int MaxAttack { get; set; }
@@ -97,7 +95,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public List<SpecialTechniques> SpecialTechnique { get; set; }
         public int Bonuses { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             Name = "Главный герой";
 
@@ -137,7 +135,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             Bonuses = this.Bonuses,
         };
 
-        public string Save()
+        public override string Save()
         {
             string specialTechniques = String.Join(":", SpecialTechnique.ConvertAll(e => e.ToString()));
 
@@ -145,7 +143,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 MaxInitiative, Initiative, Bonuses, specialTechniques, Coins);
         }
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
