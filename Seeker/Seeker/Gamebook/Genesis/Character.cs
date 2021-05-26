@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.Genesis
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.Genesis.Character();
-
-        public string Name { get; set; }
 
         private int _life;
         public int MaxLife { get; set; }
@@ -69,7 +67,7 @@ namespace Seeker.Gamebook.Genesis
 
         public int Bonuses { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             Name = String.Empty;
             MaxLife = 40;
@@ -93,9 +91,9 @@ namespace Seeker.Gamebook.Genesis
             Bonuses = this.Bonuses,
         };
 
-        public string Save() => String.Join("|", MaxLife, Life, Aura, Skill, Weapon, Stealth, Bonuses);
+        public override string Save() => String.Join("|", MaxLife, Life, Aura, Skill, Weapon, Stealth, Bonuses);
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
