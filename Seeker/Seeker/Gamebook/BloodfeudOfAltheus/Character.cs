@@ -5,11 +5,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.BloodfeudOfAltheus
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.BloodfeudOfAltheus.Character();
-
-        public string Name { get; set; }
 
         private int _strength;
         public int Strength
@@ -76,7 +74,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         
         public int Health { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             Name = String.Empty;
             Strength = 4;
@@ -113,7 +111,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Health = (lastWound ? 1 : 3),
         };
 
-        public string Save()
+        public override string Save()
         {
             string weapons = String.Join(":", Weapons);
             string armours = String.Join(":", Armour);
@@ -124,7 +122,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 NoIntuitiveSolutionPenalty, Resurrection, favor, disfavor, BroochResurrection, Ichor);
         }
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
