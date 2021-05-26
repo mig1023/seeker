@@ -5,11 +5,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.SilentSchool
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.SilentSchool.Character();
-
-        public string Name { get; set; }
 
         private int _life;
         public int Life
@@ -29,7 +27,7 @@ namespace Seeker.Gamebook.SilentSchool
         public int ChangeDecision { get; set; }
         public int HarmSelfAlready { get; set; }
         
-        public void Init()
+        public override void Init()
         {
             Life = 30;
             Weapon = String.Empty;
@@ -47,9 +45,9 @@ namespace Seeker.Gamebook.SilentSchool
             HarmSelfAlready = this.HarmSelfAlready,
         };
 
-        public string Save() => String.Join("|", Life, Weapon,Grail, ChangeDecision, HarmSelfAlready);
+        public override string Save() => String.Join("|", Life, Weapon,Grail, ChangeDecision, HarmSelfAlready);
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
