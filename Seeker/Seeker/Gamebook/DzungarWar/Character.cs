@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.DzungarWar
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.DzungarWar.Character();
-
-        public string Name { get; set; }
 
         private int _strength;
         public int Strength
@@ -109,7 +107,7 @@ namespace Seeker.Gamebook.DzungarWar
         public int MaxBonus { get; set; }
         public int Brother { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             Strength = 1;
             Skill = 1;
@@ -143,10 +141,10 @@ namespace Seeker.Gamebook.DzungarWar
             Brother = this.Brother,
         };
 
-        public string Save() => String.Join("|", Strength, Skill, Wisdom, Cunning, Oratory,
+        public override string Save() => String.Join("|", Strength, Skill, Wisdom, Cunning, Oratory,
             Danger, Favour, Tanga, StatBonuses, MaxBonus, Brother, Tincture, Ginseng);
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
