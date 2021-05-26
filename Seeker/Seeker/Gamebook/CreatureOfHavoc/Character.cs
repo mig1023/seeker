@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.CreatureOfHavoc
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.CreatureOfHavoc.Character();
-
-        public string Name { get; set; }
 
         private int _mastery;
         public int MaxMastery { get; set; }
@@ -58,7 +56,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             }
         }
 
-        public void Init()
+        public override void Init()
         {
             MaxMastery = Game.Dice.Roll() + 6;
             Mastery = MaxMastery;
@@ -79,9 +77,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             Luck = this.Luck,
         };
 
-        public string Save() => String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck);
+        public override string Save() => String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck);
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
