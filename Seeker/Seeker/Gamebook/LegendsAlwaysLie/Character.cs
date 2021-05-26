@@ -5,13 +5,11 @@ using System.Text;
 
 namespace Seeker.Gamebook.LegendsAlwaysLie
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.LegendsAlwaysLie.Character();
 
         public enum SpecializationType { Warrior, Wizard, Thrower, Nope };
-
-        public string Name { get; set; }
 
         private int _strength;
         public int Strength
@@ -105,7 +103,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int HealingSpellLost { get; set; }
 
 
-        public void Init()
+        public override void Init()
         {
             Name = String.Empty;
             Strength = 12;
@@ -143,10 +141,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             HealingSpellLost = this.HealingSpellLost,
         };
 
-        public string Save() => String.Join("|", Strength, Hitpoints, Magicpoints, (FoodIsDivided ? 1 : 0), PoisonBlade, Gold,
-                Footwraps, TimeForReading, ConneryHitpoints, ConneryTrust, Specialization, Elixir, HealingSpellLost);
+        public override string Save() => String.Join("|", Strength, Hitpoints, Magicpoints, (FoodIsDivided ? 1 : 0),
+            PoisonBlade, Gold, Footwraps, TimeForReading, ConneryHitpoints, ConneryTrust, Specialization, Elixir, HealingSpellLost);
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
