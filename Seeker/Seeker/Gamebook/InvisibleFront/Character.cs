@@ -5,16 +5,15 @@ using System.Text;
 
 namespace Seeker.Gamebook.InvisibleFront
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.InvisibleFront.Character();
 
-        public string Name { get; set; }
         public int Dissatisfaction { get; set; }
         public int Recruitment { get; set; }
 
 
-        public void Init()
+        public override void Init()
         {
             Dissatisfaction = 0;
             Recruitment = 0;
@@ -26,9 +25,9 @@ namespace Seeker.Gamebook.InvisibleFront
             Recruitment = this.Recruitment,
         };
 
-        public string Save() => String.Join("|", Dissatisfaction, Recruitment);
+        public override string Save() => String.Join("|", Dissatisfaction, Recruitment);
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
