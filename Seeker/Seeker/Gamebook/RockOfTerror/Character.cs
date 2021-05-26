@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.RockOfTerror
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.RockOfTerror.Character();
-
-        public string Name { get; set; }
 
         public int Time { get; set; }
 
@@ -16,7 +14,7 @@ namespace Seeker.Gamebook.RockOfTerror
 
         public int? MonksHeart { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             Time = 0;
             Injury = 0;
@@ -30,9 +28,9 @@ namespace Seeker.Gamebook.RockOfTerror
             MonksHeart = this.MonksHeart,
         };
 
-        public string Save() => String.Join("|", Time, Injury, (MonksHeart == null ? -1 : MonksHeart));
+        public override string Save() => String.Join("|", Time, Injury, (MonksHeart == null ? -1 : MonksHeart));
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
