@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.SwampFever
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.SwampFever.Character();
-
-        public string Name { get; set; }
 
         private int _fury;
         public int Fury
@@ -79,7 +77,7 @@ namespace Seeker.Gamebook.SwampFever
         public int AcousticMembrane { get; set; }
         public int LiveMucus { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             Name = String.Empty;
             Fury = 0;
@@ -116,10 +114,10 @@ namespace Seeker.Gamebook.SwampFever
             LiveMucus = this.LiveMucus,
         };
 
-        public string Save() => String.Join("|", Fury, Creds, Stigon, Rate, Hitpoints, SecondEngine, Stealth, Radar,
+        public override string Save() => String.Join("|", Fury, Creds, Stigon, Rate, Hitpoints, SecondEngine, Stealth, Radar,
                 CircularSaw, Flamethrower, PlasmaCannon, Harmonizer, AcousticMembrane, LiveMucus);
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
