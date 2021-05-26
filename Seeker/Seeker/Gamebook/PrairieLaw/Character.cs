@@ -5,11 +5,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.PrairieLaw
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.PrairieLaw.Character();
-
-        public string Name { get; set; }
 
         private int _skill;
         public int MaxSkill { get; set; }
@@ -84,7 +82,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public Dictionary<int, bool> Luck { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             int dice = Game.Dice.Roll(dices: 2);
 
@@ -123,7 +121,7 @@ namespace Seeker.Gamebook.PrairieLaw
             Cartridges = this.Cartridges,
         };
 
-        public string Save()
+        public override string Save()
         {
             List<string> lucks = new List<string>();
 
@@ -133,7 +131,7 @@ namespace Seeker.Gamebook.PrairieLaw
             return String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Charm, Dollars, Cartridges, String.Join(",", lucks));
         }
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
