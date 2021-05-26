@@ -5,16 +5,15 @@ using System.Text;
 
 namespace Seeker.Gamebook.ThreePaths
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.ThreePaths.Character();
 
-        public string Name { get; set; }
         public int? Time { get; set; }
         public List<string> Spells { get; set; }
         public int SpellSlots { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             Time = null;
             SpellSlots = 9;
@@ -27,9 +26,9 @@ namespace Seeker.Gamebook.ThreePaths
             Spells = new List<string>(),
         };
 
-        public string Save() => String.Join("|", Time, SpellSlots, String.Join(",", Spells));
+        public override string Save() => String.Join("|", Time, SpellSlots, String.Join(",", Spells));
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
