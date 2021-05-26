@@ -4,14 +4,13 @@ using System.Text;
 
 namespace Seeker.Gamebook.RendezVous
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.RendezVous.Character();
 
-        public string Name { get; set; }
         public int Awareness { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             Name = String.Empty;
             Awareness = 0;
@@ -23,11 +22,8 @@ namespace Seeker.Gamebook.RendezVous
             Awareness = this.Awareness,
         };
 
-        public string Save() => Awareness.ToString();
+        public override string Save() => Awareness.ToString();
 
-        public void Load(string saveLine)
-        {
-            Awareness = int.Parse(saveLine);
-        }
+        public override void Load(string saveLine) => Awareness = int.Parse(saveLine);
     }
 }
