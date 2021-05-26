@@ -5,11 +5,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.BlackCastleDungeon
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.BlackCastleDungeon.Character();
-
-        public string Name { get; set; }
 
         private int _mastery;
         public int MaxMastery { get; set; }
@@ -75,7 +73,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public List<string> Spells { get; set; }
         public int SpellSlots { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             MaxMastery = Game.Dice.Roll() + 6;
             Mastery = MaxMastery;
@@ -105,10 +103,10 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             Spells = new List<string>(),
         };
 
-        public string Save() => String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck,
+        public override string Save() => String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck,
             Luck, Gold, SpellSlots, String.Join(",", Spells));
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
