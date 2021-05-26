@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.OctopusIsland
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.OctopusIsland.Character();
-
-        public string Name { get; set; }
 
         private int _sergeHitpoint;
         public int SergeHitpoint
@@ -88,7 +86,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public int Skill { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             Name = String.Empty;
 
@@ -124,10 +122,10 @@ namespace Seeker.Gamebook.OctopusIsland
             LifeGivingOintment = this.LifeGivingOintment,
         };
 
-        public string Save() => String.Join("|", ThibautHitpoint, ThibautSkill, SergeHitpoint, SergeSkill,
+        public override string Save() => String.Join("|", ThibautHitpoint, ThibautSkill, SergeHitpoint, SergeSkill,
             XolotlHitpoint, XolotlSkill, SouhiHitpoint, SouhiSkill, Food, LifeGivingOintment);
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
