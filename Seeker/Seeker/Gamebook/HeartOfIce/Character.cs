@@ -5,11 +5,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.HeartOfIce
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.HeartOfIce.Character();
-
-        public string Name { get; set; }
 
         private int _life;
         public int MaxLife { get; set; }
@@ -71,7 +69,7 @@ namespace Seeker.Gamebook.HeartOfIce
         public bool Chosen { get; set; }
         public int Split { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             Name = String.Empty;
 
@@ -99,10 +97,10 @@ namespace Seeker.Gamebook.HeartOfIce
             Split = this.Split,
         };
 
-        public string Save() => String.Join("|", MaxLife, Life, Money, Food, Shots, SkillsValue, Split,
+        public override string Save() => String.Join("|", MaxLife, Life, Money, Food, Shots, SkillsValue, Split,
             (Chosen ? 1 : 0), String.Join(":", Skills));
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
