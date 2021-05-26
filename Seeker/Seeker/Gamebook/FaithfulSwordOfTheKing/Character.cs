@@ -4,13 +4,11 @@ using System.Text;
 
 namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.FaithfulSwordOfTheKing.Character();
 
         public enum MeritalArts { SecretBlow, SwordAndDagger, TwoPistols, LefthandFencing, Swimming, Nope };
-
-        public string Name { get; set; }
 
         private int _skill;
         public int MaxSkill { get; set; }
@@ -69,7 +67,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int Chainmail { get; set; }
         public int LeftHandPenalty { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             MaxSkill = Constants.Skills[Game.Dice.Roll()];
             Skill = MaxSkill;
@@ -110,10 +108,10 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             LeftHandPenalty = this.LeftHandPenalty,
         };
 
-        public string Save() => String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Honor, Day, Ecu,
+        public override string Save() => String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Honor, Day, Ecu,
             MeritalArt, Horses, Pistols, BulletsAndGubpowder, Daggers, HadFoodToday, Chainmail, LeftHandPenalty);
 
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
