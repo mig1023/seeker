@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 {
-    class Character : Abstract.ICharacter
+    class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Gamebook.AdventuresOfABeardlessDeceiver.Character();
-
-        public string Name { get; set; }
 
         private int _strength;
         public int Strength
@@ -107,7 +105,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public int StatBonuses { get; set; }
 
-        public void Init()
+        public override void Init()
         {
             Strength = 1;
             Skill = 1;
@@ -137,10 +135,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             UnitOfTime = this.UnitOfTime,
         };
 
-        public string Save() => String.Join("|", Strength, Skill, Wisdom, Cunning, Oratory, Popularity, Kumis,
+        public override string Save() => String.Join("|", Strength, Skill, Wisdom, Cunning, Oratory, Popularity, Kumis,
             Tanga, StatBonuses, (AkynGlory == null ? -1 : AkynGlory), (UnitOfTime == null ? -1 : UnitOfTime));
  
-        public void Load(string saveLine)
+        public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
