@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.OctopusIsland
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public List<Character> Enemies { get; set; }
         public int WoundsToWin { get; set; }
         public int DinnerHitpointsBonus { get; set; }
@@ -95,7 +97,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public override bool IsButtonEnabled() => !((DinnerHitpointsBonus > 0) && (Character.Protagonist.Food <= 0));
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
             {
