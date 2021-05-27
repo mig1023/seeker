@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.DzungarWar
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public string RemoveTrigger { get; set; }
 
         public string Text { get; set; }
@@ -209,7 +211,7 @@ namespace Seeker.Gamebook.DzungarWar
                 return true;
         }
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
             {
