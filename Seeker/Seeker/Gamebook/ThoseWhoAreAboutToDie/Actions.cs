@@ -8,8 +8,9 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public int Dices { get; set; }
+        public static Actions StaticInstance = new Actions();
 
+        public int Dices { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -21,7 +22,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
             {
