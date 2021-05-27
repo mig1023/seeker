@@ -108,13 +108,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return true;
         }
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText)
-        {
-            toEndParagraph = 0;
-            toEndText = "Начать сначала";
-
-            return Character.Protagonist.Endurance <= 0;
-        }
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled()
         {
