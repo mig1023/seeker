@@ -9,6 +9,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
@@ -68,7 +70,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return !(disabledMeritalArtButton || disabledGetOptions || disabledByPrice);
         }
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("="))
             {
@@ -88,7 +90,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             else if (Enum.TryParse(option, out Character.MeritalArts value))
                 return Character.Protagonist.MeritalArt == value;
             else
-                return Game.Data.Triggers.Contains(option);
+                return CheckOnlyIfTrigger(option);
         }
 
         public override List<string> Representer()
