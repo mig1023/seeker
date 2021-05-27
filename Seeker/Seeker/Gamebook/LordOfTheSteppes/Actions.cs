@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public string Text { get; set; }
         public string Stat { get; set; }
         public int StatStep { get; set; }
@@ -107,7 +109,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return !(disabledByChoosed || disabledByBonuses || disabledByPrice || disabledByUsed);
         }
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             foreach (Character.SpecialTechniques technique in Character.Protagonist.SpecialTechnique)
                 if (option == technique.ToString())
