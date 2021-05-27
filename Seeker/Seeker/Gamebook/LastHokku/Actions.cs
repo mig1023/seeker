@@ -8,7 +8,7 @@ namespace Seeker.Gamebook.LastHokku
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public static bool CheckOnlyIf(string option) => true;
+        public static Actions StaticInstance = new Actions();
 
         public override string TextByOptions(string option)
         {
