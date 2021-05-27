@@ -7,6 +7,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public string Text { get; set; }
         public string Stat { get; set; }
         public int Level { get; set; }
@@ -128,7 +130,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 return Character.Protagonist.Tanga >= Price;
         }
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             foreach (string oneOption in option.Split(','))
             {
