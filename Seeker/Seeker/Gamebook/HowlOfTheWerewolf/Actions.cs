@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public enum Specifics
         {
             Nope, ElectricDamage, WitchFight, Ulrich, BlackWidow, Invulnerable, Bats, NeedForSpeed,
@@ -339,7 +341,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return new List<string> { "RELOAD" };
         }
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
             {
