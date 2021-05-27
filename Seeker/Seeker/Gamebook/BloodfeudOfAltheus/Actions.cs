@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public int Dices { get; set; }
 
         public List<Character> Enemies { get; set; }
@@ -115,7 +117,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return (normal || brooch);
         }
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option == "selectOnly")
                 return true;
@@ -157,12 +159,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             else if (option.Contains("ПОЗОР <="))
                 return level >= Character.Protagonist.Shame;
 
-            if (option.Contains("!"))
-                return !Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim());
-            else if (!Game.Data.Triggers.Contains(option.Trim()))
-                return false;
-
-            return true;
+            return CheckOnlyIfTrigger(option);
         }
 
         public List<string> DiceCheck()
