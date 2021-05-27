@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
@@ -120,14 +122,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return !(disabledSpellButton || disabledGetOptions || disabledByPrice);
         }
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("ЗОЛОТО >="))
                 return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Gold;
             else if (option.Contains("ЗАКЛЯТИЕ"))
                 return Character.Protagonist.Spells.Contains(option);
             else
-                return Game.Data.Triggers.Contains(option);
+                return CheckOnlyIfTrigger(option);
         }
 
         public override List<string> Representer()
