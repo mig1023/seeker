@@ -7,6 +7,8 @@ namespace Seeker.Gamebook.SilentSchool
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public string Text { get; set; }
         public int HarmedMyself { get; set; }
         public int Dices { get; set; }
@@ -49,7 +51,7 @@ namespace Seeker.Gamebook.SilentSchool
         public override bool IsButtonEnabled() =>
             !((HarmedMyself > 0) && ((Character.Protagonist.HarmSelfAlready > 0) || (Character.Protagonist.Life <= HarmedMyself)));
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
             {
