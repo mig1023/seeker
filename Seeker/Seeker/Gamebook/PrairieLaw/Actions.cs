@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.PrairieLaw
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public List<Character> Enemies { get; set; }
         public bool Firefight { get; set; }
         public bool HeroWoundsLimit { get; set; }
@@ -58,13 +60,13 @@ namespace Seeker.Gamebook.PrairieLaw
             return enemies;
         }
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("ДОЛЛАРЫ >="))
                 return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Dollars;
 
             else
-                return Game.Data.Triggers.Contains(option);
+                return CheckOnlyIfTrigger(option);
         }
 
         private string LuckNumbers()
