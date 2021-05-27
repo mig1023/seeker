@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.HeartOfIce
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public string RemoveTrigger { get; set; }
 
         public string Text { get; set; }
@@ -118,7 +120,7 @@ namespace Seeker.Gamebook.HeartOfIce
             return false;
         }
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
             {
