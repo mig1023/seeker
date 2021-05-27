@@ -45,6 +45,14 @@ namespace Seeker.Prototypes
             return false;
         }
 
+        public virtual bool GameOverBy(int param, out int toEndParagraph, out string toEndText)
+        {
+            toEndParagraph = 0;
+            toEndText = "Начать сначала";
+
+            return param <= 0;
+        }
+
         public virtual bool IsButtonEnabled() => true;
 
         public virtual bool IsHealingEnabled() => false;
