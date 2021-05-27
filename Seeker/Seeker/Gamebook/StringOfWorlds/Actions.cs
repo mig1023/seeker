@@ -51,13 +51,8 @@ namespace Seeker.Gamebook.StringOfWorlds
             return false;
         }
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText)
-        {
-            toEndParagraph = 0;
-            toEndText = "Начать сначала";
-
-            return Character.Protagonist.Strength <= 0;
-        }
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(Character.Protagonist.Strength, out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled() =>
             !(!String.IsNullOrEmpty(Equipment) && !String.IsNullOrEmpty(Character.Protagonist.Equipment));
