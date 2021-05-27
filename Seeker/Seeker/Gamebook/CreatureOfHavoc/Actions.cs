@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public List<Character> Enemies { get; set; }
         public Modification Benefit { get; set; }
 
@@ -42,13 +44,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
-        public static bool CheckOnlyIf(string option)
-        {
-            if (option.Contains("!"))
-                return !Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim());
-            else
-                return Game.Data.Triggers.Contains(option);
-        }
+        public override bool CheckOnlyIf(string option) => CheckOnlyIfTrigger(option);
 
         public List<string> Luck() => GoodLuck(out bool _, notInline: true);
 
