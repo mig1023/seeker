@@ -42,13 +42,8 @@ namespace Seeker.Gamebook.SwampFever
             String.Format("Котировка: 1:{0}", Character.Protagonist.Rate),
         };
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText)
-        {
-            toEndParagraph = 0;
-            toEndText = "Начать сначала...";
-
-            return Character.Protagonist.Hitpoints <= 0;
-        }
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(Character.Protagonist.Hitpoints, out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled()
         {
