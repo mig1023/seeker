@@ -12,7 +12,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/BlackCastleDungeon.xml",
                 Protagonist = BlackCastleDungeon.Character.Protagonist.Init,
-                CheckOnlyIf = BlackCastleDungeon.Actions.CheckOnlyIf,
+                CheckOnlyIf = BlackCastleDungeon.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new BlackCastleDungeon.Paragraphs(),
                 Actions = new BlackCastleDungeon.Actions(),
                 Constants = new BlackCastleDungeon.Constants(),
@@ -27,7 +27,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/CaptainSheltonsSecret.xml",
                 Protagonist = CaptainSheltonsSecret.Character.Protagonist.Init,
-                CheckOnlyIf = CaptainSheltonsSecret.Actions.CheckOnlyIf,
+                CheckOnlyIf = CaptainSheltonsSecret.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new CaptainSheltonsSecret.Paragraphs(),
                 Actions = new CaptainSheltonsSecret.Actions(),
                 Constants = new CaptainSheltonsSecret.Constants(),
@@ -42,7 +42,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/FaithfulSwordOfTheKing.xml",
                 Protagonist = FaithfulSwordOfTheKing.Character.Protagonist.Init,
-                CheckOnlyIf = FaithfulSwordOfTheKing.Actions.CheckOnlyIf,
+                CheckOnlyIf = FaithfulSwordOfTheKing.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new FaithfulSwordOfTheKing.Paragraphs(),
                 Actions = new FaithfulSwordOfTheKing.Actions(),
                 Constants = new FaithfulSwordOfTheKing.Constants(),
@@ -57,7 +57,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/AdventuresOfABeardlessDeceiver.xml",
                 Protagonist = AdventuresOfABeardlessDeceiver.Character.Protagonist.Init,
-                CheckOnlyIf = AdventuresOfABeardlessDeceiver.Actions.CheckOnlyIf,
+                CheckOnlyIf = AdventuresOfABeardlessDeceiver.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new AdventuresOfABeardlessDeceiver.Paragraphs(),
                 Actions = new AdventuresOfABeardlessDeceiver.Actions(),
                 Constants = new AdventuresOfABeardlessDeceiver.Constants(),
@@ -72,7 +72,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/DzungarWar.xml",
                 Protagonist = DzungarWar.Character.Protagonist.Init,
-                CheckOnlyIf = DzungarWar.Actions.CheckOnlyIf,
+                CheckOnlyIf = DzungarWar.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new DzungarWar.Paragraphs(),
                 Actions = new DzungarWar.Actions(),
                 Constants = new DzungarWar.Constants(),
@@ -88,7 +88,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/RockOfTerror.xml",
                 Protagonist = RockOfTerror.Character.Protagonist.Init,
-                CheckOnlyIf = RockOfTerror.Actions.CheckOnlyIf,
+                CheckOnlyIf = RockOfTerror.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new RockOfTerror.Paragraphs(),
                 Actions = new RockOfTerror.Actions(),
                 Constants = new RockOfTerror.Constants(),
@@ -103,7 +103,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/RendezVous.xml",
                 Protagonist = RendezVous.Character.Protagonist.Init,
-                CheckOnlyIf = RendezVous.Actions.CheckOnlyIf,
+                CheckOnlyIf = RendezVous.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new RendezVous.Paragraphs(),
                 Actions = new RendezVous.Actions(),
                 Constants = new RendezVous.Constants(),
@@ -121,7 +121,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/SwampFever.xml",
                 Protagonist = SwampFever.Character.Protagonist.Init,
-                CheckOnlyIf = SwampFever.Actions.CheckOnlyIf,
+                CheckOnlyIf = SwampFever.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new SwampFever.Paragraphs(),
                 Actions = new SwampFever.Actions(),
                 Constants = new SwampFever.Constants(),
@@ -136,7 +136,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/LegendsAlwaysLie.xml",
                 Protagonist = LegendsAlwaysLie.Character.Protagonist.Init,
-                CheckOnlyIf = LegendsAlwaysLie.Actions.CheckOnlyIf,
+                CheckOnlyIf = LegendsAlwaysLie.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new LegendsAlwaysLie.Paragraphs(),
                 Actions = new LegendsAlwaysLie.Actions(),
                 Constants = new LegendsAlwaysLie.Constants(),
@@ -151,7 +151,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/StringOfWorlds.xml",
                 Protagonist = StringOfWorlds.Character.Protagonist.Init,
-                CheckOnlyIf = StringOfWorlds.Actions.CheckOnlyIf,
+                CheckOnlyIf = StringOfWorlds.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new StringOfWorlds.Paragraphs(),
                 Actions = new StringOfWorlds.Actions(),
                 Constants = new StringOfWorlds.Constants(),
@@ -166,7 +166,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/ThreePaths.xml",
                 Protagonist = ThreePaths.Character.Protagonist.Init,
-                CheckOnlyIf = ThreePaths.Actions.CheckOnlyIf,
+                CheckOnlyIf = ThreePaths.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new ThreePaths.Paragraphs(),
                 Actions = new ThreePaths.Actions(),
                 Constants = new ThreePaths.Constants(),
@@ -181,7 +181,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/InvisibleFront.xml",
                 Protagonist = InvisibleFront.Character.Protagonist.Init,
-                CheckOnlyIf = InvisibleFront.Actions.CheckOnlyIf,
+                CheckOnlyIf = InvisibleFront.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new InvisibleFront.Paragraphs(),
                 Actions = new InvisibleFront.Actions(),
                 Constants = new InvisibleFront.Constants(),
@@ -197,7 +197,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/SilentSchool.xml",
                 Protagonist = SilentSchool.Character.Protagonist.Init,
-                CheckOnlyIf = SilentSchool.Actions.CheckOnlyIf,
+                CheckOnlyIf = SilentSchool.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new SilentSchool.Paragraphs(),
                 Actions = new SilentSchool.Actions(),
                 Constants = new SilentSchool.Constants(),
@@ -212,7 +212,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/ThoseWhoAreAboutToDie.xml",
                 Protagonist = ThoseWhoAreAboutToDie.Character.Protagonist.Init,
-                CheckOnlyIf = ThoseWhoAreAboutToDie.Actions.CheckOnlyIf,
+                CheckOnlyIf = ThoseWhoAreAboutToDie.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new ThoseWhoAreAboutToDie.Paragraphs(),
                 Actions = new ThoseWhoAreAboutToDie.Actions(),
                 Constants = new ThoseWhoAreAboutToDie.Constants(),
@@ -229,7 +229,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/OctopusIsland.xml",
                 Protagonist = OctopusIsland.Character.Protagonist.Init,
-                CheckOnlyIf = OctopusIsland.Actions.CheckOnlyIf,
+                CheckOnlyIf = OctopusIsland.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new OctopusIsland.Paragraphs(),
                 Actions = new OctopusIsland.Actions(),
                 Constants = new OctopusIsland.Constants(),
@@ -244,7 +244,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/CreatureOfHavoc.xml",
                 Protagonist = CreatureOfHavoc.Character.Protagonist.Init,
-                CheckOnlyIf = CreatureOfHavoc.Actions.CheckOnlyIf,
+                CheckOnlyIf = CreatureOfHavoc.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new CreatureOfHavoc.Paragraphs(),
                 Actions = new CreatureOfHavoc.Actions(),
                 Constants = new CreatureOfHavoc.Constants(),
@@ -259,7 +259,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/BloodfeudOfAltheus.xml",
                 Protagonist = BloodfeudOfAltheus.Character.Protagonist.Init,
-                CheckOnlyIf = BloodfeudOfAltheus.Actions.CheckOnlyIf,
+                CheckOnlyIf = BloodfeudOfAltheus.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new BloodfeudOfAltheus.Paragraphs(),
                 Actions = new BloodfeudOfAltheus.Actions(),
                 Constants = new BloodfeudOfAltheus.Constants(),
@@ -278,7 +278,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/PensionerSimulator.xml",
                 Protagonist = PensionerSimulator.Character.Protagonist.Init,
-                CheckOnlyIf = PensionerSimulator.Actions.CheckOnlyIf,
+                CheckOnlyIf = PensionerSimulator.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new PensionerSimulator.Paragraphs(),
                 Actions = new PensionerSimulator.Actions(),
                 Constants = new PensionerSimulator.Constants(),
@@ -293,7 +293,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/LordOfTheSteppes.xml",
                 Protagonist = LordOfTheSteppes.Character.Protagonist.Init,
-                CheckOnlyIf = LordOfTheSteppes.Actions.CheckOnlyIf,
+                CheckOnlyIf = LordOfTheSteppes.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new LordOfTheSteppes.Paragraphs(),
                 Actions = new LordOfTheSteppes.Actions(),
                 Constants = new LordOfTheSteppes.Constants(),
@@ -308,7 +308,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/HowlOfTheWerewolf.xml",
                 Protagonist = HowlOfTheWerewolf.Character.Protagonist.Init,
-                CheckOnlyIf = HowlOfTheWerewolf.Actions.CheckOnlyIf,
+                CheckOnlyIf = HowlOfTheWerewolf.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new HowlOfTheWerewolf.Paragraphs(),
                 Actions = new HowlOfTheWerewolf.Actions(),
                 Constants = new HowlOfTheWerewolf.Constants(),
@@ -324,7 +324,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/HeartOfIce.xml",
                 Protagonist = HeartOfIce.Character.Protagonist.Init,
-                CheckOnlyIf = HeartOfIce.Actions.CheckOnlyIf,
+                CheckOnlyIf = HeartOfIce.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new HeartOfIce.Paragraphs(),
                 Actions = new HeartOfIce.Actions(),
                 Constants = new HeartOfIce.Constants(),
@@ -341,7 +341,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/StainlessSteelRat.xml",
                 Protagonist = StainlessSteelRat.Character.Protagonist.Init,
-                CheckOnlyIf = StainlessSteelRat.Actions.CheckOnlyIf,
+                CheckOnlyIf = StainlessSteelRat.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new StainlessSteelRat.Paragraphs(),
                 Actions = new StainlessSteelRat.Actions(),
                 Constants = new StainlessSteelRat.Constants(),
@@ -357,7 +357,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/LastHokku.xml",
                 Protagonist = LastHokku.Character.Protagonist.Init,
-                CheckOnlyIf = LastHokku.Actions.CheckOnlyIf,
+                CheckOnlyIf = LastHokku.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new LastHokku.Paragraphs(),
                 Actions = new LastHokku.Actions(),
                 Constants = new LastHokku.Constants(),
@@ -373,7 +373,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/Genesis.xml",
                 Protagonist = Genesis.Character.Protagonist.Init,
-                CheckOnlyIf = Genesis.Actions.CheckOnlyIf,
+                CheckOnlyIf = Genesis.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new Genesis.Paragraphs(),
                 Actions = new Genesis.Actions(),
                 Constants = new Genesis.Constants(),
@@ -389,7 +389,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/Catharsis.xml",
                 Protagonist = Catharsis.Character.Protagonist.Init,
-                CheckOnlyIf = Catharsis.Actions.CheckOnlyIf,
+                CheckOnlyIf = Catharsis.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new Catharsis.Paragraphs(),
                 Actions = new Catharsis.Actions(),
                 Constants = new Catharsis.Constants(),
@@ -405,7 +405,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/PrairieLaw.xml",
                 Protagonist = PrairieLaw.Character.Protagonist.Init,
-                CheckOnlyIf = PrairieLaw.Actions.CheckOnlyIf,
+                CheckOnlyIf = PrairieLaw.Actions.StaticInstance.CheckOnlyIf,
                 Paragraphs = new PrairieLaw.Paragraphs(),
                 Actions = new PrairieLaw.Actions(),
                 Constants = new PrairieLaw.Constants(),
