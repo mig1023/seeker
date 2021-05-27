@@ -92,13 +92,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             String.Format("Нападение: {0}", Character.Protagonist.Attack),
         };
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText)
-        {
-            toEndParagraph = 0;
-            toEndText = "Начать сначала";
-
-            return (Character.Protagonist.Endurance <= 0);
-        }
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled()
         {
