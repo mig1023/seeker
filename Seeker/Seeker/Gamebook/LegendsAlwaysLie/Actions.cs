@@ -8,6 +8,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public enum FoodSharingType { KeepMyself, ToHim, FiftyFifty };
 
         public int Price { get; set; }
@@ -218,7 +220,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return new List<string> { "RELOAD" };
         }
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains(";"))
             {
