@@ -7,12 +7,14 @@ namespace Seeker.Gamebook.InvisibleFront
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public override List<string> Status() => new List<string> {
             String.Format("Недовольство резидента: {0}", Character.Protagonist.Dissatisfaction),
             String.Format("Вербовка: {0}", Character.Protagonist.Recruitment)
         };
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             string[] options = option.Split('|', ',');
 
