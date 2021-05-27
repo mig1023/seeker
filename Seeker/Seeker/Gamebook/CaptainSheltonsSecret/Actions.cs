@@ -7,6 +7,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
@@ -30,7 +32,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains(","))
             {
@@ -42,10 +44,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             }
             else if (option.Contains("ЗОЛОТО >="))
                 return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Gold;
-            else if (option.Contains("!"))
-                return !Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim());
-            else
-                return Game.Data.Triggers.Contains(option);
+            else 
+                return CheckOnlyIfTrigger(option);
         }
 
         public override List<string> Representer()
