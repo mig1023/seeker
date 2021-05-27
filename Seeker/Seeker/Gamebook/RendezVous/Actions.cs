@@ -8,12 +8,13 @@ namespace Seeker.Gamebook.RendezVous
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public int Dices { get; set; }
+        public static Actions StaticInstance = new Actions();
 
+        public int Dices { get; set; }
 
         public override List<string> Status() => new List<string> { String.Format("Осознание: {0}", Character.Protagonist.Awareness) };
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
             {
