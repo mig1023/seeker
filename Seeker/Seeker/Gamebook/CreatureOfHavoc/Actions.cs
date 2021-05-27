@@ -39,13 +39,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             String.Format("Удачливость: {0}", Character.Protagonist.Luck),
         };
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText)
-        {
-            toEndParagraph = 0;
-            toEndText = "Начать сначала";
-
-            return Character.Protagonist.Endurance <= 0;
-        }
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
         public static bool CheckOnlyIf(string option)
         {
