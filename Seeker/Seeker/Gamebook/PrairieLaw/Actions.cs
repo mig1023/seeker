@@ -32,13 +32,8 @@ namespace Seeker.Gamebook.PrairieLaw
             String.Format("Долларов: {0}", Character.Protagonist.Dollars),
         };
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText)
-        {
-            toEndParagraph = 0;
-            toEndText = "Начать сначала";
-
-            return Character.Protagonist.Strength <= 0;
-        }
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(Character.Protagonist.Strength, out toEndParagraph, out toEndText);
 
         public override List<string> Representer()
         {
