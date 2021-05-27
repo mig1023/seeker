@@ -37,6 +37,16 @@ namespace Seeker.Prototypes
 
         public virtual bool StaticAction(string action) => false;
 
+        public virtual bool CheckOnlyIf(string option) => true;
+
+        public static bool CheckOnlyIfTrigger(string option)
+        {
+            if (option.Contains("!"))
+                return !Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim());
+            else
+                return Game.Data.Triggers.Contains(option);
+        }
+
         public virtual bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
