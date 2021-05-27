@@ -7,12 +7,7 @@ namespace Seeker.Gamebook.RockOfTerror
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public override List<string> Do(out bool reload, string action = "", bool trigger = false)
-        {
-            reload = false;
-
-            return new List<string> { };
-        }
+        public static Actions StaticInstance = new Actions();
 
         public override List<string> Status()
         {
@@ -34,7 +29,7 @@ namespace Seeker.Gamebook.RockOfTerror
             return Character.Protagonist.Time >= 720;
         }
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains(">") || option.Contains("<"))
             {
@@ -50,7 +45,7 @@ namespace Seeker.Gamebook.RockOfTerror
                     return true;
             }
             else
-                return Game.Data.Triggers.Contains(option.Trim());
+                return CheckOnlyIfTrigger(option.Trim());
         }
     }
 }
