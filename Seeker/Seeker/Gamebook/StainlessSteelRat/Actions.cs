@@ -8,6 +8,6 @@ namespace Seeker.Gamebook.StainlessSteelRat
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
-        public static bool CheckOnlyIf(string option) => true;
+        public static Actions StaticInstance = new Actions();
     }
 }
