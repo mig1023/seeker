@@ -7,6 +7,8 @@ namespace Seeker.Gamebook.StringOfWorlds
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public int RoundsToWin { get; set; }
         public bool HeroWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
@@ -57,7 +59,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public override bool IsButtonEnabled() =>
             !(!String.IsNullOrEmpty(Equipment) && !String.IsNullOrEmpty(Character.Protagonist.Equipment));
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             string[] values = option.Split(new string[] { ">=", "<", " " }, StringSplitOptions.RemoveEmptyEntries);
             int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
@@ -74,11 +76,8 @@ namespace Seeker.Gamebook.StringOfWorlds
             else if (option.Contains("ЗАЖИГАЛКА"))
                 return Character.Protagonist.Equipment == "Зажигалка";
 
-            else if (option.Contains("!"))
-                return !Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim());
-
             else
-                return Game.Data.Triggers.Contains(option);
+                return CheckOnlyIfTrigger(option);
         }
 
         public override List<string> Representer()
