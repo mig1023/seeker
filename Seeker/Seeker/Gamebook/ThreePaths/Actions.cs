@@ -7,6 +7,8 @@ namespace Seeker.Gamebook.ThreePaths
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public bool ThisIsSpell { get; set; }
         public string Text { get; set; }
 
@@ -28,7 +30,7 @@ namespace Seeker.Gamebook.ThreePaths
             return new List<string> { "RELOAD" };
         }
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             foreach (string oneOption in option.Split(','))
             {
@@ -38,11 +40,13 @@ namespace Seeker.Gamebook.ThreePaths
 
                     if (oneOption.Contains("ВРЕМЯ <") && (level <= Character.Protagonist.Time))
                         return false;
+
                     if (oneOption.Contains("ВРЕМЯ >=") && (level > Character.Protagonist.Time))
                         return false;
                 }
                 else if (oneOption.Contains("ЗАКЛЯТИЕ"))
                     return Character.Protagonist.Spells.Contains(oneOption.Trim());
+
                 else if (oneOption.Contains("!"))
                 {
                     if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
