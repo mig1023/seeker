@@ -18,13 +18,8 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
         };
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText)
-        {
-            toEndParagraph = 0;
-            toEndText = String.Empty;
-
-            return Character.Protagonist.Endurance <= 0;
-        }
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
 
         public static bool CheckOnlyIf(string option)
         {
