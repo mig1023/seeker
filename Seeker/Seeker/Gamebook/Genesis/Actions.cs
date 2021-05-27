@@ -8,9 +8,10 @@ namespace Seeker.Gamebook.Genesis
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
+        public static Actions StaticInstance = new Actions();
+
         public string Text { get; set; }
         public string Bonus { get; set; }
-
 
         public override List<string> Representer()
         {
@@ -48,7 +49,7 @@ namespace Seeker.Gamebook.Genesis
             return !disbledByBonuses;
         }
 
-        public static bool CheckOnlyIf(string option)
+        public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
             {
