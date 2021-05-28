@@ -12,6 +12,8 @@ namespace Seeker.Gamebook.SilentSchool
 {
     class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
+        public static Paragraphs StaticInstance = new Paragraphs();
+
         public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
         {
             Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
