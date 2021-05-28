@@ -284,7 +284,10 @@ namespace Seeker.Gamebook
                 Constants = new PensionerSimulator.Constants(),
                 Save = PensionerSimulator.Character.Protagonist.Save,
                 Load = PensionerSimulator.Character.Protagonist.Load,
-                SmallDisclaimer = "Zaratystra, 2018",
+                SmallDisclaimer = "Zaratystra, the_arsonist, 2018",
+                FullDisclaimer = "Симулятор пенсионерки:\nАвтор: Zaratystra, 2018\n\n" +
+                    "Симулятор пенсионерки 2, Кровавая Охота:\nАвтор: the_arsonist, 2019\nПеревод: Мария Ерошкина\n" +
+                    "Адаптация перевода: Zaratystra\nРедактор: Wervek",
                 BookColor = "#030436",
                 Illustration = "PensionerSimulator.jpg",
             },

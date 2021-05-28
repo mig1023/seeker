@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.PensionerSimulator
         public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#030436",
+            [ButtonTypes.Option] = "#030436",
         };
 
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
