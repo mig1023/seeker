@@ -10,6 +10,8 @@ namespace Seeker.Gamebook.StringOfWorlds
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
+        public static Constants StaticInstance = new Constants();
+
         private static int ColorShiftAmount = 45;
         private static List<int> LastColor = new List<int>();
         private static List<int> StatusColor = null;
