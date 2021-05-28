@@ -4,5 +4,8 @@ using System.Text;
 
 namespace Seeker.Gamebook.LastHokku
 {
-    class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs { };
+    class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
+    {
+        public static Paragraphs StaticInstance = new Paragraphs();
+    }
 }
