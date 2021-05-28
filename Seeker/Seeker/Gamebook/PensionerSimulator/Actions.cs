@@ -12,16 +12,16 @@ namespace Seeker.Gamebook.PensionerSimulator
 
         public override bool CheckOnlyIf(string option)
         {
-            foreach (string oneOption in option.Split(','))
-            {
-                if (oneOption.Contains("!") && (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim())))
+                foreach (string oneOption in option.Split(','))
+                {
+                    if (oneOption.Contains("!") && (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim())))
+                            return false;
+
+                    else if (!oneOption.Contains("!") && (!Game.Data.Triggers.Contains(oneOption.Trim())))
                         return false;
+                }
 
-                else if (!oneOption.Contains("!") && (!Game.Data.Triggers.Contains(oneOption.Trim())))
-                    return false;
-            }
-
-            return true;
+                return true;
         }
     }
 }
