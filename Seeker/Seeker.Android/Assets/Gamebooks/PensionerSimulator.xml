@@ -2,8 +2,10 @@
 	<Paragraph>
 		<ID>0</ID>
 		<Text>Все совпадения случайны. Всё написанное художественный вымысел. Автор уважает стариков.\n</Text>
+		<Triggers>Продолжение</Triggers>
 		<Options>
 			<Option Destination="1" Text="В путь!"/>
+			<Option Destination="15" Text="Сразу к Кровавой Охоте" OnlyIf="Продолжение"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
