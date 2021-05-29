@@ -17,7 +17,10 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public string Text { get; set; }
         public int Dices { get; set; }
-        
+        public int Price { get; set; }
+        public bool Used { get; set; }
+        public bool Multiple { get; set; }
+
         public Abstract.IModification Benefit { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -27,11 +30,10 @@ namespace Seeker.Gamebook.PrairieLaw
             String.Format("Обаяние: {0}", Character.Protagonist.Charm),
         };
 
-
         public override List<string> AdditionalStatus() => new List<string>
         {
             String.Format("Патронов: {0}", Character.Protagonist.Cartridges),
-            String.Format("Долларов: {0}", Character.Protagonist.Dollars),
+            String.Format("Долларов: {0:f2}", (double)Character.Protagonist.Cents / 100)
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
@@ -62,8 +64,8 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("ДОЛЛАРЫ >="))
-                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Dollars;
+            if (option.Contains("ЦЕНТОВ >="))
+                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Cents;
 
             else
                 return CheckOnlyIfTrigger(option);
@@ -191,6 +193,30 @@ namespace Seeker.Gamebook.PrairieLaw
             diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
 
             return diceCheck;
+        }
+
+        public override bool IsButtonEnabled()
+        {
+            bool disabledByUsed = (Price > 0) && Used;
+            bool disabledByPrice = (Price > 0) && (Character.Protagonist.Cents < Price);
+
+            return !(disabledByUsed || disabledByPrice);
+        }
+
+        public List<string> Get()
+        {
+            if ((Price > 0) && (Character.Protagonist.Cents >= Price))
+            {
+                Character.Protagonist.Cents -= Price;
+
+                if (!Multiple)
+                    Used = true;
+
+                if (Benefit != null)
+                    Benefit.Do();
+            }
+
+            return new List<string> { "RELOAD" };
         }
 
         private bool NoMoreEnemies(List<Character> enemies)
