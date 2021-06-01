@@ -162,13 +162,21 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
-            toEndText = "Начать сначала";
+            toEndText = String.Empty;
 
-            bool hitpoint = (Character.Protagonist.Hitpoints <= 0);
-            bool conneryHitpoint = (Character.Protagonist.ConneryHitpoints <= 0);
-            bool conneryTrust = (Character.Protagonist.ConneryTrust <= 0);
+            if (Character.Protagonist.Hitpoints <= 0)
+                toEndText = "Начать сначала";
 
-            return (hitpoint || conneryHitpoint || conneryTrust);
+            else if (Character.Protagonist.ConneryHitpoints <= 0)
+                toEndText = "Коннери погиб, ваше путешествие окончено";
+
+            else if (Character.Protagonist.ConneryTrust <= 0)
+                toEndText = "Коннери потерял к вам всякое доверие, ваше путешествие окончено";
+
+            else
+                return false;
+
+            return true;
         }
 
         public override bool IsButtonEnabled()
