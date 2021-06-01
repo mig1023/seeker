@@ -76,7 +76,7 @@ namespace Seeker.Gamebook.Genesis
                     }
                     else if (oneOption.Contains("="))
                     {
-                        int level = int.Parse(oneOption.Split('=')[1]);
+                        int level = Game.Other.LevelParse(oneOption);
 
                         if (oneOption.Contains("СТЕЛС") && (level > Character.Protagonist.Stealth))
                             return false;
