@@ -35,29 +35,23 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
+            toEndParagraph = 0;
+            toEndText = String.Empty;
+
             if (Character.Protagonist.Strength <= 0)
-            {
-                toEndParagraph = 0;
                 toEndText = "Начать сначала";
 
-                return true;
-            }
             else if (Character.Protagonist.Honor <= 0)
             {
                 toEndParagraph = 150;
                 toEndText = "Задуматься о чести";
 
                 Character.Protagonist.Strength = 0;
-
-                return true;
             }
             else
-            {
-                toEndParagraph = 0;
-                toEndText = String.Empty;
-
                 return false;
-            }
+
+            return true;
         }
         public override bool IsButtonEnabled()
         {
