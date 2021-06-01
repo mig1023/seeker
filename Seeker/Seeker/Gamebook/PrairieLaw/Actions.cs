@@ -230,6 +230,9 @@ namespace Seeker.Gamebook.PrairieLaw
 
         private bool FirefightContinue(List<Character> enemies, ref List<string> fight, bool firefight)
         {
+            if (!firefight)
+                return false;
+
             if (Character.Protagonist.Cartridges > 0)
                 return true;
 
