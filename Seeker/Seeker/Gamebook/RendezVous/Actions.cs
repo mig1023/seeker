@@ -30,7 +30,7 @@ namespace Seeker.Gamebook.RendezVous
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        int level = int.Parse(oneOption.Split('>', '=')[1]);
+                        int level = Game.Other.LevelParse(oneOption);
 
                         if (oneOption.Contains("ОСОЗНАНИЕ >") && (level >= Character.Protagonist.Awareness))
                             return false;
