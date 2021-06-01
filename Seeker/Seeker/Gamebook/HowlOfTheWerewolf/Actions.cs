@@ -357,7 +357,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        int level = int.Parse(oneOption.Split('>', '=')[1]);
+                        int level = Game.Other.LevelParse(oneOption);
 
                         if (option.Contains("ЗОЛОТО >=") && (level > Character.Protagonist.Gold))
                             return false;
