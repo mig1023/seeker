@@ -233,13 +233,18 @@ namespace Seeker.Output
 
         public static Button GameOverButton(string text)
         {
-            string color = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
+            string colorLine = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
+            
+            Color color = Color.Gray;
+
+            if (!String.IsNullOrEmpty(colorLine))
+                color = Color.FromHex(colorLine);
 
             Button gameoverButton = new Button()
             {
                 Text = text,
                 TextColor = Xamarin.Forms.Color.White,
-                BackgroundColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Option)),
+                BackgroundColor = color,
                 FontFamily = TextFontFamily(),
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
