@@ -22,7 +22,7 @@ namespace Seeker.Gamebook.InvisibleFront
             {
                 if (oneOption.Contains(">") || oneOption.Contains("<"))
                 {
-                    int level = int.Parse(oneOption.Split('>', '=')[1]);
+                    int level = Game.Other.LevelParse(oneOption);
 
                     if (oneOption.Contains("НЕДОВОЛЬСТВО >") && (level >= Character.Protagonist.Dissatisfaction))
                         return false;
