@@ -33,7 +33,7 @@ namespace Seeker.Gamebook.RockOfTerror
         {
             if (option.Contains(">") || option.Contains("<"))
             {
-                int level = int.Parse(option.Split('<', '=')[1]);
+                int level = Game.Other.LevelParse(option);
 
                 if (option.Contains("СИЛА СЕРДЦА МОНАХА >=") && (level > Character.Protagonist.MonksHeart))
                     return false;
