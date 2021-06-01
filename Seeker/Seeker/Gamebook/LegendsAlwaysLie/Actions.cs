@@ -245,7 +245,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        int level = int.Parse(oneOption.Split('>', '=')[1]);
+                        int level = Game.Other.LevelParse(oneOption);
 
                         if (orLogic && oneOption.Contains("ЗОЛОТО >=") && (level <= Character.Protagonist.Gold))
                             return true;
