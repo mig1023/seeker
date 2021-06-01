@@ -240,7 +240,7 @@ namespace Seeker.Gamebook.DzungarWar
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        int level = int.Parse(oneOption.Split('>', '=')[1]);
+                        int level = Game.Other.LevelParse(oneOption);
 
                         if (oneOption.Contains("ТАНЬГА >=") && (level > Character.Protagonist.Tanga))
                             return false;
