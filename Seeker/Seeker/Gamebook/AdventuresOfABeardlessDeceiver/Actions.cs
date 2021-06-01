@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public int Price { get; set; }
         public bool GreatKhanSpecialCheck { get; set; }
         public bool GuessBonus { get; set; }
+        public bool Used { get; set; }
 
         public Modification Benefit { get; set; }
 
@@ -126,6 +127,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 return true;
             else if (Price <= 0)
                 return Character.Protagonist.StatBonuses > 0;
+            else if (Used)
+                return false;
             else
                 return Character.Protagonist.Tanga >= Price;
         }
@@ -210,6 +213,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             if ((Price > 0) && (Character.Protagonist.Tanga >= Price))
             {
                 Character.Protagonist.Tanga -= Price;
+
+                Used = true;
 
                 if (Benefit != null)
                     Benefit.Do();
