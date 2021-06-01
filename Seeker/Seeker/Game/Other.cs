@@ -49,6 +49,8 @@ namespace Seeker.Game
                 return "равно";
         }
 
+        public static int LevelParse(string option) => int.Parse(option.Contains("=") ? option.Split('=')[1] : option.Split('>', '<')[1]);
+
         public static bool DoNothing() => true;
     }
 }
