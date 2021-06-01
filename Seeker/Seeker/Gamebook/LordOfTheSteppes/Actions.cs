@@ -296,14 +296,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         private bool IsHero(string name) => name == Character.Protagonist.Name;
 
-        private Character FindEnemyIn(List<Character> Enemies)
-        {
-            foreach (Character enemy in Enemies)
-                if (enemy.Endurance > 0)
-                    return enemy;
-
-            return null;
-        }
+        private Character FindEnemyIn(List<Character> Enemies) => Enemies.Where(e => e.Endurance > 0).FirstOrDefault();
 
         private Character FindEnemy(Character fighter, List<Character> Allies, List<Character> Enemies)
         {
@@ -376,16 +369,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         private Character.FightStyles ChooseFightStyle(ref List<string> fight, Dictionary<string, List<int>> AttackStory, List<Character> Enemies)
         {
-            Character.FightStyles newFightStyles = Character.Protagonist.FightStyle;
-
             if (Character.Protagonist.Endurance < (Character.Protagonist.MaxEndurance / 2))
                 return ChangeFightStyle("Дело дрянь!", ref fight, "downTo", Character.FightStyles.Fullback);
 
-            int enemyCount = 0;
-
-            foreach (Character enemy in Enemies)
-                if (enemy.Endurance > 0)
-                    enemyCount += 1;
+            int enemyCount = Enemies.Where(e => e.Endurance > 0).Count();
 
             if (enemyCount > 2)
                 return ChangeFightStyle("Ох, сколько их набежало!", ref fight, "downTo", Character.FightStyles.Fullback);
@@ -415,8 +402,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             int initiative = firstRoll + secondRoll + character.Initiative;
 
             line = String.Format("{0} + {1} + {2}, итого {3}",
-                character.Initiative, Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), initiative
-            );
+                character.Initiative, Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), initiative);
 
             return initiative;
         }
