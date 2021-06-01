@@ -533,7 +533,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + weaponStrength +
                         useGlory + Character.Protagonist.Strength;
 
-                    fight.Add(String.Format("Мощность вашего удара: {0}{1} + {2} Силы + {3} {4}{5} = {6}",
+                    fight.Add(String.Format("Мощность вашего удара: {0}{1} + {2} Сила + {3} {4}{5} = {6}",
                         Game.Dice.Symbol(protagonistRollFirst), secondRollLine, Character.Protagonist.Strength,
                         weaponStrength, weaponName, useGloryLine, protagonistHitStrength
                     ));
@@ -584,7 +584,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         comradesBonusLine = String.Format(" + {0} за товарищей", comradesBonus);
                     }
 
-                    fight.Add(String.Format("Мощность его удара: {0}{1} + {2}{3} = {4}",
+                    fight.Add(String.Format("Мощность его удара: {0}{1} + {2} Сила{3} = {4}",
                         Game.Dice.Symbol(enemyRollFirst), ememySecondRollLine, enemy.Strength, comradesBonusLine, enemyHitStrength
                     ));
 
