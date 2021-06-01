@@ -73,7 +73,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
         private static bool ParamFail(string paramName, string option, int param)
         {
-            int level = int.Parse(option.Split('>', '=')[1]);
+            int level = Game.Other.LevelParse(option);
 
             if (option.Contains(String.Format("{0} >", paramName)) && (level >= param))
                 return true;
