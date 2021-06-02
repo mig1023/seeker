@@ -72,10 +72,13 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 if (option.Contains("ДЕНЬ >=") && (value > Character.Protagonist.Day))
                     return false;
+
                 else if (option.Contains("ДЕНЬ =") && (value != Character.Protagonist.Day))
                     return false;
+
                 else if (option.Contains("ДЕНЬ <=") && (value < Character.Protagonist.Day))
                     return false;
+
                 else if (option.Contains("ЭКЮ >=") && (value > Character.Protagonist.Ecu))
                     return false;
 
@@ -109,9 +112,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             bool goodLuck = luckDice % 2 == 0;
 
-            List<string> luckCheck = new List<string> { String.Format(
-                "Проверка удачи: {0} - {1}", Game.Dice.Symbol(luckDice), (goodLuck ? "чётное" : "нечётное")
-            ) };
+            List<string> luckCheck = new List<string> { String.Format("Проверка удачи: {0} - {1}",
+                Game.Dice.Symbol(luckDice), (goodLuck ? "чётное" : "нечётное")) };
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
@@ -125,10 +127,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             bool goodSkill = (firstDice + secondDice) <= Character.Protagonist.Skill;
 
-            List<string> skillCheck = new List<string> { String.Format(
-                "Проверка ловкости: {0} + {1} {2} {3} ловкость",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), Character.Protagonist.Skill
-            ) };
+            List<string> skillCheck = new List<string> { String.Format("Проверка ловкости: {0} + {1} {2} {3} ловкость",
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), Character.Protagonist.Skill) };
 
             skillCheck.Add(goodSkill ? "BIG|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(");
 
@@ -148,10 +148,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 bool fail = firstDice == secondDice;
 
-                doubleCheck.Add(String.Format(
-                    "Бросок: {0} и {1} - {2}дубль",
-                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (fail ? String.Empty : "НЕ ")
-                ));
+                doubleCheck.Add(String.Format("Бросок: {0} и {1} - {2}дубль",
+                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (fail ? String.Empty : "НЕ ")));
 
                 if (fail)
                     doubleFail = true;
@@ -236,9 +234,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 int heroSpeed = Game.Dice.Roll();
                 int enemiesSpeed = Game.Dice.Roll();
 
-                pursuit.Add(String.Format(
-                    "Ваша скорость: {0}  <-->  Их скорость: {1}", Game.Dice.Symbol(heroSpeed), Game.Dice.Symbol(enemiesSpeed)
-                ));
+                pursuit.Add(String.Format("Ваша скорость: {0}  <-->  Их скорость: {1}",
+                    Game.Dice.Symbol(heroSpeed), Game.Dice.Symbol(enemiesSpeed)));
 
                 if (heroSpeed > enemiesSpeed)
                 {
@@ -287,14 +284,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return new List<string> { "RELOAD" };
         }
 
-        private bool NoMoreEnemies(List<Character> enemies)
-        {
-            foreach (Character enemy in enemies)
-                if (enemy.Strength > 0)
-                    return false;
-
-            return true;
-        }
+        private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Strength > 0).Count() == 0;
 
         private bool LuckyHit(int? roll = null) => (roll ?? Game.Dice.Roll()) % 2 == 0;
 
@@ -350,13 +340,12 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 if (hit)
                 {
-                    foreach (Character enemy in FightEnemies)
-                        if (enemy.Strength > 0)
-                        {
-                            fight.Add(String.Format("GOOD|{0} убит", enemy.Name));
-                            enemy.Strength = 0;
-                            break;
-                        }
+                    foreach (Character enemy in FightEnemies.Where(x => x.Strength > 0))
+                    {
+                        fight.Add(String.Format("GOOD|{0} убит", enemy.Name));
+                        enemy.Strength = 0;
+                        break;
+                    }
                 }
             }
 
@@ -371,25 +360,19 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
                 if ((hero.MeritalArt == Character.MeritalArts.SecretBlow) && (round == 1))
-                    foreach (Character enemy in FightEnemies)
-                        if (enemy.Strength > 0)
-                        {
-                            {
-                                enemy.Strength -= 4;
-                                fight.Add(String.Format("Тайный удар шпагой: {0} теряет 4 силы, у него осталось {1}", enemy.Name, enemy.Strength));
-                                fight.Add(String.Empty);
-                                break;
-                            }
-                        }
+                    foreach (Character enemy in FightEnemies.Where(x => x.Strength > 0))
+                    {
+                        enemy.Strength -= 4;
+                        fight.Add(String.Format("Тайный удар шпагой: {0} теряет 4 силы, у него осталось {1}", enemy.Name, enemy.Strength));
+                        fight.Add(String.Empty);
+                        break;
+                    }
 
                 bool attackAlready = false;
                 int protagonistHitStrength = 0, protagonistRoll = 0;
 
-                foreach (Character enemy in FightEnemies)
+                foreach (Character enemy in FightEnemies.Where(x => x.Strength > 0))
                 {
-                    if (enemy.Strength <= 0)
-                        continue;
-
                     Character enemyInFight = enemy;
                     fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
 
