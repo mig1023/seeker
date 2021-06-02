@@ -69,9 +69,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (Game.Data.CurrentParagraph.Actions == null)
                 return false;
 
-            foreach (Game.Option option in Game.Data.CurrentParagraph.Options)
-                if (option.Text.ToUpper().Contains(spell))
-                    return false;
+            if (Game.Data.CurrentParagraph.Options.Where(x => x.Text.ToUpper().Contains(spell)).Count() > 0)
+                return false;
 
             foreach (Actions action in Game.Data.CurrentParagraph.Actions)
                 if (action.Enemies != null)
@@ -138,12 +137,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
             if (ActionName == "Get")
             {
-                int count = 0;
-
-                if (ThisIsSpell)
-                    foreach (string spell in Character.Protagonist.Spells)
-                        if (spell == Text)
-                            count += 1;
+                int count = (ThisIsSpell ? Character.Protagonist.Spells.Where(x => x == Text).Count() : 0);
 
                 return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
             }
@@ -217,11 +211,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 bool attackAlready = false;
                 int heroHitStrength = 0;
 
-                foreach (Character enemy in FightEnemies)
+                foreach (Character enemy in FightEnemies.Where(x => x.Endurance > 0))
                 {
-                    if (enemy.Endurance <= 0)
-                        continue;
-
                     fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
 
                     if (copyFight)
@@ -254,11 +245,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                         enemyWounds += 1;
 
-                        bool enemyLost = true;
-
-                        foreach (Character e in FightEnemies)
-                            if (e.Endurance > 0)
-                                enemyLost = false;
+                        bool enemyLost = FightEnemies.Where(x => x.Endurance > 0).Count() == 0;
 
                         if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                             return true;
