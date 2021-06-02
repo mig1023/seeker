@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 
@@ -35,15 +36,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains(","))
-            {
-                foreach (string oneOption in option.Split(','))
-                    if (!Game.Data.Triggers.Contains(oneOption.Trim()))
-                        return false;
+                return !(option.Split(',').Where(x => !Game.Data.Triggers.Contains(x.Trim())).Count() > 0);
 
-                return true;
-            }
             else if (option.Contains("ЗОЛОТО >="))
                 return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Gold;
+
             else 
                 return CheckOnlyIfTrigger(option);
         }
@@ -223,11 +220,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
-                foreach (Character ally in FightAllies)
+                foreach (Character ally in FightAllies.Where(x => x.Endurance > 0))
                 {
-                    if (ally.Endurance <= 0)
-                        continue;
-
                     if (GroupFight)
                         fight.Add(String.Format("{0} (сила {1})", (IsHero(ally.Name) ? "Вы" : ally.Name), ally.Endurance));
 
@@ -236,11 +230,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     int firstAllyRoll = 0;
                     int secondAllyRoll = 0;
 
-                    foreach (Character enemy in FightEnemies)
+                    foreach (Character enemy in FightEnemies.Where(x => x.Endurance > 0))
                     {
-                        if (enemy.Endurance <= 0)
-                            continue;
-
                         fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Endurance));
 
                         if (!attackAlready)
@@ -278,11 +269,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                                 enemyWounds += 1;
 
-                                bool enemyLost = true;
-
-                                foreach (Character e in FightEnemies)
-                                    if ((e.Endurance > 0) && (e.Endurance > DamageToWin))
-                                        enemyLost = false;
+                                bool enemyLost = FightEnemies.Where(x => ((x.Endurance > 0) && (x.Endurance > DamageToWin))).Count() == 0;
 
                                 if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                                 {
@@ -307,11 +294,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                             ally.SaveEndurance();
 
-                            bool allyLost = true;
-
-                            foreach (Character a in FightAllies)
-                                if (a.Endurance > 0)
-                                    allyLost = false;
+                            bool allyLost = FightAllies.Where(x => x.Endurance > 0).Count() == 0;
 
                             if (allyLost)
                             {
