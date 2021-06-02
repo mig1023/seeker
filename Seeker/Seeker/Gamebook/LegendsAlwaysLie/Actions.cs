@@ -267,8 +267,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         if (oneOption.Contains("ЭЛИКСИР >") && (level >= Character.Protagonist.Elixir))
                             return false;
 
-                        if (oneOption.Contains("ЗАКЛЯТИЙ (!воин) >") && (level >= Character.Protagonist.Magicpoints) ||
-                                (Character.Protagonist.Specialization == Character.SpecializationType.Warrior))
+                        if (oneOption.Contains("ЗАКЛЯТИЙ (!воин) >") && ((level >= Character.Protagonist.Magicpoints) ||
+                                (Character.Protagonist.Specialization == Character.SpecializationType.Warrior)))
                             return false;
 
                         if (oneOption.Contains("ВРЕМЯ ДЛЯ ЧТЕНИЯ >") && (level >= Character.Protagonist.TimeForReading))
