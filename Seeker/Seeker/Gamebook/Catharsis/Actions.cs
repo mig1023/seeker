@@ -47,52 +47,36 @@ namespace Seeker.Gamebook.Catharsis
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(Character.Protagonist.Life, out toEndParagraph, out toEndText);
 
-        public override bool IsButtonEnabled()
-        {
-            bool disbledByBonuses = (!String.IsNullOrEmpty(Bonus) && (Character.Protagonist.Bonuses <= 0));
-
-            return !disbledByBonuses;
-        }
+        public override bool IsButtonEnabled() => !((!String.IsNullOrEmpty(Bonus) && (Character.Protagonist.Bonuses <= 0)));
 
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
-            {
-                foreach (string oneOption in option.Split('|'))
-                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
-                        return true;
+                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
 
-                return false;
-            }
             else
             {
                 foreach (string oneOption in option.Split(','))
                 {
-                    if (oneOption.Contains("РАНЕНИЯ"))
-                    {
-                        int woundsCount = 0;
-
-                        foreach (string trigger in Game.Data.Triggers)
-                            if (trigger == "Ранение")
-                                woundsCount += 1;
-
-                        if (woundsCount < 3)
-                            return false;
-                    }
-                    else if (oneOption.Contains("="))
+                    if (oneOption.Contains("="))
                     {
                         int level = Game.Other.LevelParse(oneOption);
 
                         if (oneOption.Contains("СТЕЛС") && (level > Character.Protagonist.Stealth))
                             return false;
+
                         else if (oneOption.Contains("МЕТКОСТЬ") && (level > Character.Protagonist.Accuracy))
                             return false;
+
                         else if (oneOption.Contains("РУКОПАШКА") && (level > Character.Protagonist.Fight))
                             return false;
+
                         else if (oneOption.Contains("АУРА <") && (level <= Character.Protagonist.Aura))
                             return false;
+
                         else if (oneOption.Contains("АУРА >") && (level > Character.Protagonist.Aura))
                             return false;
+
                         else if (oneOption.Contains("ЗДОРОВЬЕ") && (level > Character.Protagonist.Life))
                             return false;
                     }
