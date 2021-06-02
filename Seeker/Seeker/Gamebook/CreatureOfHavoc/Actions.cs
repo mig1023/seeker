@@ -174,14 +174,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 return false;
         }
 
-        private bool NoMoreEnemies(List<Character> enemies)
-        {
-            foreach (Character enemy in enemies)
-                if (enemy.Endurance > 0)
-                    return false;
-
-            return true;
-        }
+        private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Endurance > 0).Count() == 0;
 
         public List<string> Fight()
         {
@@ -192,8 +185,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
-            int round = 1;
-            int enemyWounds = 0;
+            int round = 1, enemyWounds = 0;
             bool previousRoundWound = false;
 
             Character hero = Character.Protagonist;
@@ -205,11 +197,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 bool attackAlready = false;
                 int protagonistHitStrength = 0;
 
-                foreach (Character enemy in FightEnemies)
+                foreach (Character enemy in FightEnemies.Where(x => x.Endurance > 0))
                 {
-                    if (enemy.Endurance <= 0)
-                        continue;
-
                     bool doubleDice = false, doubleSixes = false, doubleDiceEnemy = false;
 
                     Character enemyInFight = enemy;
@@ -255,6 +244,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
                         if (goodLuck)
                             fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
+
                         else if (WoundAndDeath(ref fight, ref hero, enemy.Name))
                             return fight;
                     }
