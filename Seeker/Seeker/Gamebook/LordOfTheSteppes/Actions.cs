@@ -496,7 +496,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 string comparison = Game.Other.Сomparison(defence, attackStrength);
 
-                fight.Add(String.Format("Защита: {0}{1} — {2} {3}",  defender.Defence, bonuses, comparison, attackStrength));
+                fight.Add(String.Format("Защита: {0}{1} — {2} Мощности удара",  defender.Defence, bonuses, comparison));
             }
 
             if (success)
