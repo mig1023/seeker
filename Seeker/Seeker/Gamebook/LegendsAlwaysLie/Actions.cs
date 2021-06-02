@@ -235,11 +235,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 string[] options = option.Split(';');
 
                 int optionMustBe = int.Parse(options[0]);
-                int optionCount = 0;
-
-                foreach (string oneOption in options)
-                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
-                        optionCount += 1;
+                int optionCount = options.Where(x => Game.Data.Triggers.Contains(x.Trim())).Count();
 
                 return (optionCount >= optionMustBe);
             }
@@ -390,13 +386,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         private bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight, bool connery = false)
         {
-            bool enemyLost = true;
-
-            foreach (Character e in FightEnemies)
-                if (e.Hitpoints > 0)
-                    enemyLost = false;
-
-            if (!enemyLost)
+            if (FightEnemies.Where(x => x.Hitpoints > 0).Count() > 0)
                 return false;
             else
             {
@@ -473,10 +463,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     fight.Add(String.Empty);
                 }
 
-                foreach (Character enemy in FightEnemies)
+                foreach (Character enemy in FightEnemies.Where(x => x.Hitpoints > 0))
                 {
-                    if (enemy.Hitpoints <= 0)
-                        continue;
 
                     fight.Add(String.Format("{0} (жизни: {1})", enemy.Name, enemy.Hitpoints));
 
