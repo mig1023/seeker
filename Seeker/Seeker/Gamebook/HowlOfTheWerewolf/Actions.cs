@@ -97,9 +97,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             bool goodLuck = (fisrtDice + secondDice) <= Character.Protagonist.Luck;
 
             List<string> luckCheck = new List<string> { String.Format(
-                    "Проверка удачи: {0} + {1} {2} {3}",
-                    Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), Character.Protagonist.Luck
-            ) };
+                "Проверка удачи: {0} + {1} {2} {3}",
+                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), Character.Protagonist.Luck) };
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
@@ -118,13 +117,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             int secondDice = Game.Dice.Roll();
 
             int mastery = (Value > 0 ? Value : Character.Protagonist.Mastery);
-
             bool masteryOk = (fisrtDice + secondDice) <= mastery;
 
             List<string> masteryCheck = new List<string> { String.Format(
-                    "Проверка мастерства: {0} + {1} {2} {3}",
-                    Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (masteryOk ? "<=" : ">"), mastery
-            ) };
+                "Проверка мастерства: {0} + {1} {2} {3}",
+                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (masteryOk ? "<=" : ">"), mastery) };
 
             if (Value > 0)
                 masteryCheck.Add(masteryOk ? "BIG|BAD|Мастерства ХВАТИЛО :(" : "BIG|GOOD|Мастерства НЕ хватило :)");
@@ -154,12 +151,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
 
             bool changeOk = result > Character.Protagonist.Change;
+            string cmpLine = Game.Other.Сomparison(result, Character.Protagonist.Change);
 
             List<string> changeCheck = new List<string> { String.Format(
-                    "Проверка: {0} + {1}{2} {3} {4} изменение",
-                    Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), bonusLine,
-                    (changeOk ? ">" : "<="), Character.Protagonist.Change
-            ) };
+                "Проверка: {0} + {1}{2} {3} {4} изменение",
+                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), bonusLine, cmpLine, Character.Protagonist.Change) };
 
             changeCheck.Add(changeOk ? "BIG|GOOD|Победил ЧЕЛОВЕК :)" : "BIG|BAD|Победил ВОЛК :(");
 
@@ -222,10 +218,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 if (penalty > 0)
                     penaltyLine = String.Format(" + {0} пенальти", penalty);
 
-                competition.Add(
-                    String.Format("{0} выстрел: {1} + {2}{3} = {4}",
-                    i, Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), penaltyLine, result)
-                );
+                competition.Add(String.Format("{0} выстрел: {1} + {2}{3} = {4}",
+                    i, Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), penaltyLine, result));
 
                 if (result > Character.Protagonist.Mastery)
                 {
@@ -259,25 +253,25 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             diceRestore.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
 
-            string line = String.Empty;
+            string line = "BIG|GOOD|Восстановлен";
 
             if (dice < 3)
             {
                 Character.Protagonist.Mastery = Character.Protagonist.MaxMastery;
-                line = "о Мастерство";
+                line += "о Мастерство";
             }
             else if (dice > 4)
             {
                 Character.Protagonist.Luck = Character.Protagonist.MaxLuck;
-                line = "а Удача";
+                line += "а Удача";
             }
             else
             {
                 Character.Protagonist.Endurance = Character.Protagonist.MaxEndurance;
-                line = "а Выносливость";
+                line += "а Выносливость";
             }
 
-            diceRestore.Add(String.Format("BIG|GOOD|Восстановлен{0}", line));
+            diceRestore.Add(line);
 
             return diceRestore;
         }
@@ -344,13 +338,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
-            {
-                foreach (string oneOption in option.Split('|'))
-                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
-                        return true;
+                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
 
-                return false;
-            }
             else
             {
                 foreach (string oneOption in option.Split(','))
@@ -386,11 +375,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             if (!onlyCheck)
                 enemyWounds += 1;
 
-            bool enemyLost = true;
-
-            foreach (Character e in FightEnemies)
-                if (e.Endurance > (WoundsLimit > 0 ? WoundsLimit : 0))
-                    enemyLost = false;
+            bool enemyLost = FightEnemies.Where(x => x.Endurance > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() == 0;
 
             if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
             {
@@ -413,8 +398,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             int ulrichHitStrength = ulrichRollFirst + ulrichRollSecond + ulrichMastery;
 
             fight.Add(String.Format("Сила удара Ульриха: {0} + {1} + {2} = {3}",
-                Game.Dice.Symbol(ulrichRollFirst), Game.Dice.Symbol(ulrichRollSecond), ulrichMastery, ulrichHitStrength
-            ));
+                Game.Dice.Symbol(ulrichRollFirst), Game.Dice.Symbol(ulrichRollSecond), ulrichMastery, ulrichHitStrength));
 
             if (ulrichHitStrength > enemyHitStrength)
             {
@@ -439,8 +423,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             int vanRichtenHitStrength = vanRichtenRollFirst + vanRichtenRollSecond + vanRichtenMastery;
 
             fight.Add(String.Format("Сила удара Ван Рихтена: {0} + {1} + {2} = {3}",
-                Game.Dice.Symbol(vanRichtenRollFirst), Game.Dice.Symbol(vanRichtenRollSecond), vanRichtenMastery, vanRichtenHitStrength
-            ));
+                Game.Dice.Symbol(vanRichtenRollFirst), Game.Dice.Symbol(vanRichtenRollSecond), vanRichtenMastery, vanRichtenHitStrength));
 
             if (vanRichtenHitStrength > enemyHitStrength)
             {
@@ -460,19 +443,19 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
-        private void AdditionalWounds(ref Character hero, ref List<string> fight, string diceType,
-            List<int> chance, string fail, string win, int wounds = 3, bool hitStrenghtInstead = false)
+        private void AddWounds(ref Character hero, ref List<string> fight, string diceType,
+            int chance, string fail, string win, int wounds = 3, bool hitStrenghtInstead = false)
         {
             int dice = Game.Dice.Roll();
 
             fight.Add(String.Format("Кубик {0}: {1}", diceType, Game.Dice.Symbol(dice)));
 
-            if (chance.Contains(dice) && hitStrenghtInstead)
+            if ((chance >= dice) && hitStrenghtInstead)
             {
                 HitStrengthBonus -= 1;
                 fight.Add(String.Format("BAD|{0} {1}", fail, HitStrengthBonus));
             }
-            else if (chance.Contains(dice))
+            else if (chance >= dice)
             {
                 hero.Endurance -= wounds;
                 fight.Add(String.Format("BAD|{0}", fail));
@@ -484,21 +467,18 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         private void CheckAdditionalWounds(ref Character hero, ref List<string> fight, int wounds)
         {
             if (Specificity == Specifics.ElectricDamage)
-                AdditionalWounds(ref hero, ref fight, "электрического разряда", new List<int> { 5, 6 },
-                    "Вы потеряли ещё 3 Выносливость от разряда", "Разряд прошёл мимо");
+                AddWounds(ref hero, ref fight, "электрического разряда", 5, "Вы потеряли ещё 3 Выносливость от разряда", "Разряд прошёл мимо");
 
             if (Specificity == Specifics.AcidDamage)
-                AdditionalWounds(ref hero, ref fight, "ожога кислотой", new List<int> { 6 },
-                    "Вы потеряли ещё 3 Выносливость от кислоты", "Обошлось...");
+                AddWounds(ref hero, ref fight, "ожога кислотой", 6, "Вы потеряли ещё 3 Выносливость от кислоты", "Обошлось...");
 
             if (Specificity == Specifics.IcyTouch)
-                AdditionalWounds(ref hero, ref fight, "пронизывающего холода", new List<int> { 5, 6 },
+                AddWounds(ref hero, ref fight, "пронизывающего холода", 5,
                     "Пронизывающий мистический холод притупил ваши чувства: теперь из Силы удара нужно будет вычитать",
                     "Вы справились с холодом, пока что...", hitStrenghtInstead: true);
 
             if (Specificity == Specifics.ToadVenom)
-                AdditionalWounds(ref hero, ref fight, "яда", new List<int> { 5, 6 },
-                    "Вы потеряли ещё 2 Выносливость от яда", "Обошлось...", wounds: 2);
+                AddWounds(ref hero, ref fight, "яда", 5, "Вы потеряли ещё 2 Выносливость от яда", "Обошлось...", wounds: 2);
 
             if ((Specificity == Specifics.Plague) && (wounds > 2))
             {
@@ -647,8 +627,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     shots = Character.Protagonist.Gun;
 
                 fight.Add(String.Format("Вы успеваете сделать выстрелов: {0} - {1} = {2}",
-                    Character.Protagonist.Mastery, fightEnemies[0].Mastery, shots
-                ));
+                    Character.Protagonist.Mastery, fightEnemies[0].Mastery, shots));
 
                 int enemyIndex = 0;
 
@@ -657,8 +636,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     int shotRoll = Game.Dice.Roll();
 
                     fight.Add(String.Format("{0} выстрел по {1}: {2}",
-                        shot, fightEnemies[enemyIndex].Name, Game.Dice.Symbol(shotRoll)
-                    ));
+                        shot, fightEnemies[enemyIndex].Name, Game.Dice.Symbol(shotRoll)));
 
                     if (shotRoll == 6)
                     {
@@ -739,11 +717,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         private bool WerewolfDeadFight(ref Character hero, ref List<string> fight)
         {
-            int wwerewolfAttack = Game.Dice.Roll();
+            int werewolfAttack = Game.Dice.Roll();
 
-            fight.Add(String.Format("Кубик атаки: {0}", Game.Dice.Symbol(wwerewolfAttack)));
+            fight.Add(String.Format("Кубик атаки: {0}", Game.Dice.Symbol(werewolfAttack)));
 
-            if (wwerewolfAttack == 6)
+            if (werewolfAttack == 6)
             {
                 fight.Add(String.Empty);
                 fight.Add("BIG|BAD|Вы ПРОИГРАЛИ, выпала ШЕСТЁРКА :(");
@@ -793,7 +771,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             if (woulfCount <= 0)
             {
-                fight.Add("GOOD|BIG|Вам повезл: всю работу за вас сделали товарищи :)");
+                fight.Add("GOOD|BIG|Вам повезло: всю работу за вас сделали товарищи :)");
                 return fight;
             }
             else
@@ -964,7 +942,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                             hero.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
 
                         roundFails += 1;
-
                         heroWounds += 1;
 
                         CheckAdditionalWounds(ref hero, ref fight, heroWounds);
