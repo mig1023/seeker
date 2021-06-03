@@ -68,7 +68,6 @@ namespace Seeker.Gamebook.DzungarWar
             if (!String.IsNullOrEmpty(Stat) && !StatToMax)
             {
                 int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
-
                 string diffLine = (currentStat > 1 ? String.Format(" (+{0})", (currentStat - 1)) : String.Empty);
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
@@ -154,17 +153,17 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 Character.Protagonist.Tincture -= 1;
                 NextTestWithTincture = true;
-                return true;
             }
 
-            if (action == "ВЫПИТЬ ОТВАР ЖЕНЬШЕНЯ")
+            else if (action == "ВЫПИТЬ ОТВАР ЖЕНЬШЕНЯ")
             {
                 Character.Protagonist.Ginseng -= 1;
                 NextTestWithGinseng = true;
-                return true;
             }
+            else
+                return false;
 
-            return false;
+            return true;
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
@@ -214,23 +213,14 @@ namespace Seeker.Gamebook.DzungarWar
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
-            {
-                foreach (string oneOption in option.Split('|'))
-                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
-                        return true;
+                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
 
-                return false;
-            }
             else if (option.Contains(";"))
             {
                 string[] options = option.Split(';');
 
                 int optionMustBe = int.Parse(options[0]);
-                int optionCount = 0;
-
-                foreach (string oneOption in options)
-                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
-                        optionCount += 1;
+                int optionCount = options.Where(x => Game.Data.Triggers.Contains(x.Trim())).Count();
 
                 return optionCount >= optionMustBe;
             }
@@ -244,12 +234,16 @@ namespace Seeker.Gamebook.DzungarWar
 
                         if (oneOption.Contains("ТАНЬГА >=") && (level > Character.Protagonist.Tanga))
                             return false;
+
                         else if (oneOption.Contains("ОПАСНОСТЬ >") && (level >= Character.Protagonist.Danger))
                             return false;
+
                         else if (oneOption.Contains("ОПАСНОСТЬ <=") && (level < Character.Protagonist.Danger))
                             return false;
+
                         else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ >") && (level >= Character.Protagonist.Favour))
                             return false;
+
                         else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ <=") && (level < Character.Protagonist.Favour))
                             return false;
                     }
@@ -386,7 +380,6 @@ namespace Seeker.Gamebook.DzungarWar
             else if (StatToMax && (Character.Protagonist.MaxBonus > 0))
             {
                 Character.Protagonist.GetType().GetProperty(Stat).SetValue(Character.Protagonist, 12);
-
                 Character.Protagonist.MaxBonus = 0;
             }
             else if (Character.Protagonist.StatBonuses >= 0)
@@ -396,7 +389,6 @@ namespace Seeker.Gamebook.DzungarWar
                 currentStat += (StatStep > 1 ? StatStep : 1);
 
                 Character.Protagonist.GetType().GetProperty(Stat).SetValue(Character.Protagonist, currentStat);
-
                 Character.Protagonist.StatBonuses -= 1;
             }
 
