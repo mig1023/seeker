@@ -124,10 +124,7 @@ namespace Seeker.Gamebook.SwampFever
             bool upgradeInAction = false;
 
             for (int i = 1; i <= Constants.GetUpgrates().Count; i++)
-            {
-                string tmp = Constants.GetUpgrates()[i]["name"];
                 upgrades += (int)Character.Protagonist.GetType().GetProperty(Constants.GetUpgrates()[i]["name"]).GetValue(Character.Protagonist, null);
-            }
 
             if (upgrades == 0)
                 return upgradeInAction;
@@ -226,9 +223,8 @@ namespace Seeker.Gamebook.SwampFever
                     int roundResult = 0;
 
                     if (!myCombination.Contains(range) && !enemyCombination.Contains(range))
-                    {
                         fight.Add("Противникам нечего друг другу противопоставить");
-                    }
+
                     else if (myCombination.Contains(range) && !enemyCombination.Contains(range))
                     {
                         roundResult = 1;
@@ -489,13 +485,11 @@ namespace Seeker.Gamebook.SwampFever
                 if (pull > 2)
                 {
                     pullReport.Add(String.Format("Тяга гребных винтов: {0}, -2 за винты, итого {1}", Game.Dice.Symbol(pull), (pull - 2)));
-
                     thrust += (pull - 2);
                 }
                 else
                 {
                     pullReport.Add(String.Format("Тяга гребных винтов: {0}, +1 бонусный бросок", Game.Dice.Symbol(pull)));
-
                     thrust += pull;
                     i -= 1;
                 }
@@ -519,11 +513,14 @@ namespace Seeker.Gamebook.SwampFever
 
             while ((position > -3) && (position < 3))
             {
-                if (position == 0)
-                    warReport.Add("BOLD|ПОЛОЖЕНИЕ: на исходной точке");
+                if (position != 0)
+                {
+                    string positionType = (position > 0 ? "побеждаете" : "проигрываете");
+                    warReport.Add(String.Format("BOLD|ПОЛОЖЕНИЕ: вы {0} на {1} шаг", positionType, Math.Abs(position)));
+                }
                 else
-                    warReport.Add(String.Format("BOLD|ПОЛОЖЕНИЕ: вы {0} на {1} шаг",
-                        (position > 0 ? "побеждаете" : "проигрываете"), Math.Abs(position)));
+                    warReport.Add("BOLD|ПОЛОЖЕНИЕ: на исходной точке");
+
 
                 bool twoStep = false;
                 int myСhoice = 0;
