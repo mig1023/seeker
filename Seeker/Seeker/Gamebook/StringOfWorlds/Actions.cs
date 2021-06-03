@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 
@@ -231,19 +232,15 @@ namespace Seeker.Gamebook.StringOfWorlds
                 int secondDice = Game.Dice.Roll();
                 myResult = firstDice + secondDice;
 
-                diceGame.Add(String.Format(
-                    "Вы бросили: {0} + {1} = {2}",
-                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), myResult
-                ));
+                diceGame.Add(String.Format("Вы бросили: {0} + {1} = {2}",
+                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), myResult));
 
                 int hisFirstDice = Game.Dice.Roll();
                 int hisSecondDice = Game.Dice.Roll();
                 enemyResult = hisFirstDice + hisSecondDice;
 
-                diceGame.Add(String.Format(
-                    "Он бросил: {0} + {1} = {2}",
-                    Game.Dice.Symbol(hisFirstDice), Game.Dice.Symbol(hisSecondDice), enemyResult
-                ));
+                diceGame.Add(String.Format("Он бросил: {0} + {1} = {2}",
+                    Game.Dice.Symbol(hisFirstDice), Game.Dice.Symbol(hisSecondDice), enemyResult));
 
                 diceGame.Add(String.Empty);
             }
@@ -272,8 +269,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
                 string result = (succesBreaked ? "удачный, дверь поддалась!" : "неудачный, -1 сила");
 
-                breakingDoor.Add(String.Format(
-                    "Удар: {0} + {1} = {2}",
+                breakingDoor.Add(String.Format("Удар: {0} + {1} = {2}",
                     Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), result));
             }
 
@@ -290,14 +286,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             return new List<string> { "RELOAD" };
         }
 
-        private bool NoMoreEnemies(List<Character> enemies)
-        {
-            foreach (Character enemy in enemies)
-                if (enemy.Strength > (EnemyWoundsLimit ? 2 : 0))
-                    return false;
-
-            return true;
-        }
+        private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Strength > (EnemyWoundsLimit ? 2 : 0)).Count() == 0;
 
         public List<string> Fight()
         {
@@ -322,11 +311,8 @@ namespace Seeker.Gamebook.StringOfWorlds
                 bool attackAlready = false;
                 int protagonistHitStrength = 0;
 
-                foreach (Character enemy in FightEnemies)
+                foreach (Character enemy in FightEnemies.Where(x => x.Strength > 0))
                 {
-                    if (enemy.Strength <= 0)
-                        continue;
-
                     fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
 
                     if (!attackAlready)
