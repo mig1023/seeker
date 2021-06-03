@@ -76,23 +76,22 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public override bool StaticAction(string action)
         {
-            switch(action)
-            {
-                case "ВЫЛЕЧИТЬ СЕРЖА":
-                    Character.Protagonist.SergeHitpoint = LifeGivingOintmentFor(Character.Protagonist.SergeHitpoint);
-                    return true;
-                case "ВЫЛЕЧИТЬ КСОЛОТЛА":
-                    Character.Protagonist.XolotlHitpoint = LifeGivingOintmentFor(Character.Protagonist.XolotlHitpoint);
-                    return true;
-                case "ВЫЛЕЧИТЬ ТИБО":
-                    Character.Protagonist.ThibautHitpoint = LifeGivingOintmentFor(Character.Protagonist.ThibautHitpoint);
-                    return true;
-                case "ВЫЛЕЧИТЬ СУИ":
-                    Character.Protagonist.SouhiHitpoint = LifeGivingOintmentFor(Character.Protagonist.SouhiHitpoint);
-                    return true;
-            }
+            if (action.Contains("СЕРЖА"))
+                Character.Protagonist.SergeHitpoint = LifeGivingOintmentFor(Character.Protagonist.SergeHitpoint);
 
-            return false;
+            else if (action.Contains("КСОЛОТЛА"))
+                Character.Protagonist.XolotlHitpoint = LifeGivingOintmentFor(Character.Protagonist.XolotlHitpoint);
+
+            else if (action.Contains("ТИБО"))
+                Character.Protagonist.ThibautHitpoint = LifeGivingOintmentFor(Character.Protagonist.ThibautHitpoint);
+
+            else if (action.Contains("СУИ"))
+                Character.Protagonist.SouhiHitpoint = LifeGivingOintmentFor(Character.Protagonist.SouhiHitpoint);
+
+            else
+                return false;
+
+            return true;
         }
 
         public override bool IsButtonEnabled() => !((DinnerHitpointsBonus > 0) && (Character.Protagonist.Food <= 0));
@@ -100,13 +99,8 @@ namespace Seeker.Gamebook.OctopusIsland
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
-            {
-                foreach (string oneOption in option.Split('|'))
-                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
-                        return true;
+                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
 
-                return false;
-            }
             else
             {
                 foreach (string oneOption in option.Split(','))
@@ -124,14 +118,7 @@ namespace Seeker.Gamebook.OctopusIsland
             }
         }
 
-        private bool NoMoreEnemies(List<Character> enemies)
-        {
-            foreach (Character enemy in enemies)
-                if (enemy.Hitpoint > 0)
-                    return false;
-
-            return true;
-        }
+        private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Hitpoint > 0).Count() == 0;
 
         private void SaveCurrentWarriorHitPoints()
         {
@@ -142,10 +129,13 @@ namespace Seeker.Gamebook.OctopusIsland
 
             if (hero.Name == "Тибо")
                 hero.ThibautHitpoint = hero.Hitpoint;
+
             else if (hero.Name == "Ксолотл")
                 hero.XolotlHitpoint = hero.Hitpoint;
+
             else if (hero.Name == "Серж")
                 hero.SergeHitpoint = hero.Hitpoint;
+
             else
                 hero.SouhiHitpoint = hero.Hitpoint;
         }
@@ -206,8 +196,7 @@ namespace Seeker.Gamebook.OctopusIsland
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
-            int round = 1;
-            int enemyWounds = 0;
+            int round = 1, enemyWounds = 0;
 
             SetCurrentWarrior(ref fight, fightStart: true);
 
@@ -217,11 +206,8 @@ namespace Seeker.Gamebook.OctopusIsland
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
-                foreach (Character enemy in FightEnemies)
+                foreach (Character enemy in FightEnemies.Where(x => x.Hitpoint > 0))
                 {
-                    if (enemy.Hitpoint <= 0)
-                        continue;
-
                     Character enemyInFight = enemy;
                     fight.Add(String.Format("{0} (жизнь {1})", enemy.Name, enemy.Hitpoint));
 
@@ -231,16 +217,14 @@ namespace Seeker.Gamebook.OctopusIsland
 
                     fight.Add(String.Format("{0}: мощность удара: {1} + {2} + {3} = {4}",
                         hero.Name, Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
-                        hero.Skill, protagonistHitStrength
-                    ));
+                        hero.Skill, protagonistHitStrength));
 
                     int enemyRollFirst = Game.Dice.Roll();
                     int enemyRollSecond = Game.Dice.Roll();
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
 
                     fight.Add(String.Format("{0}: мощность удара: {1} + {2} + {3} = {4}",
-                        enemy.Name, Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Skill, enemyHitStrength
-                    ));
+                        enemy.Name, Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Skill, enemyHitStrength));
 
                     if (protagonistHitStrength > enemyHitStrength)
                     {
