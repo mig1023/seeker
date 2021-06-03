@@ -25,15 +25,8 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
-            {
-                foreach (string oneOption in option.Split('|'))
-                    if (!OneParamFail(oneOption))
-                        return true;
-                    else if (Game.Data.Triggers.Contains(oneOption.Trim()))
-                        return true;
+                return option.Split('|').Where(x => !OneParamFail(x) || Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
 
-                return false;
-            }
             else
             {
                 foreach (string oneOption in option.Split(','))
