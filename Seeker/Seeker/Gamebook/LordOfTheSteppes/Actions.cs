@@ -111,27 +111,15 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public override bool CheckOnlyIf(string option)
         {
-            foreach (Character.SpecialTechniques technique in Character.Protagonist.SpecialTechnique)
-                if (option == technique.ToString())
-                    return true;
+            if (Character.Protagonist.SpecialTechnique.Where(x => option == x.ToString()).Count() > 0)
+                return true;
 
             if (option.Contains("|"))
-            {
-                foreach (string oneOption in option.Split('|'))
-                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
-                        return true;
-
-                return false;
-            }
+                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
             else
             {
                 if (option.Contains(">") || option.Contains("<"))
-                {
-                    if (option.Contains("МОНЕТ >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.Coins))
-                        return false;
-
-                    return true;
-                }
+                    return !(option.Contains("МОНЕТ >=") && (int.Parse(option.Split('=')[1]) > Character.Protagonist.Coins));
                 else
                     return Game.Data.Triggers.Contains(option);
             }
@@ -662,11 +650,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 Character.Protagonist.FightStyle = ChooseFightStyle(ref fight, AttackStory, FightEnemies);
 
-                foreach (Character fighter in FightOrder)
+                foreach (Character fighter in FightOrder.Where(x => x.Endurance > 0))
                 {
-                    if (fighter.Endurance <= 0)
-                        continue;
-
                     Character enemy = FindEnemy(fighter, FightAllies, FightEnemies);
 
                     if (enemy == null)
@@ -698,11 +683,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         coherenceIndex += 1;
                 }
 
-                bool enemyLost = true;
-
-                foreach (Character e in FightEnemies)
-                    if ((e.Endurance > 0) || (e.MaxEndurance == 0))
-                        enemyLost = false;
+                bool enemyLost = FightEnemies.Where(x => (x.Endurance > 0) || (x.MaxEndurance == 0)).Count() == 0;
 
                 if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                 {
@@ -711,11 +692,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     return fight;
                 }
 
-                bool allyLost = true;
-
-                foreach (Character a in FightAllies)
-                    if (a.Endurance > 0)
-                        allyLost = false;
+                bool allyLost = FightAllies.Where(x => x.Endurance > 0).Count() == 0;
 
                 if (allyLost)
                 {
