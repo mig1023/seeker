@@ -17,13 +17,8 @@ namespace Seeker.Gamebook.RendezVous
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
-            {
-                foreach (string oneOption in option.Split('|'))
-                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
-                        return true;
+                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
 
-                return false;
-            }
             else
             {
                 foreach (string oneOption in option.Split(','))
@@ -34,6 +29,7 @@ namespace Seeker.Gamebook.RendezVous
 
                         if (oneOption.Contains("ОСОЗНАНИЕ >") && (level >= Character.Protagonist.Awareness))
                             return false;
+
                         else if (oneOption.Contains("ОСОЗНАНИЕ <=") && (level < Character.Protagonist.Awareness))
                             return false;
                     }
@@ -64,8 +60,7 @@ namespace Seeker.Gamebook.RendezVous
                 int secondDice = Game.Dice.Roll();
                 dicesResult += secondDice;
                 diceCheck.Add(String.Format("На кубиках выпало: {0} + {1} = {2}",
-                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (firstDice + secondDice)
-                ));
+                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (firstDice + secondDice)));
             }
 
             diceCheck.Add(dicesResult % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
