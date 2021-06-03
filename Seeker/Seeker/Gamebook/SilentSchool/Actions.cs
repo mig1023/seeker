@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 
@@ -54,24 +55,15 @@ namespace Seeker.Gamebook.SilentSchool
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
-            {
-                foreach (string oneOption in option.Split('|'))
-                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
-                        return true;
+                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
 
-                return false;
-            }
             else if (option.Contains(";"))
             {
                 string[] options = option.Split(';');
 
                 bool not = options[0].Contains("!");
                 int optionMustBe = int.Parse(options[0].Replace("!", String.Empty));
-                int optionCount = 0;
-
-                foreach (string oneOption in options)
-                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
-                        optionCount += 1;
+                int optionCount = options.Where(x => Game.Data.Triggers.Contains(x.Trim())).Count();
 
                 if (not)
                     return optionCount < optionMustBe;
@@ -101,6 +93,7 @@ namespace Seeker.Gamebook.SilentSchool
 
                         if (oneOption.Contains("!") && (value == Character.Protagonist.Weapon))
                             return false;
+
                         else if (!oneOption.Contains("!") && (value != Character.Protagonist.Weapon))
                             return false;
                     }
