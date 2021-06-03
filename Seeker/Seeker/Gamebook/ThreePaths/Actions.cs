@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 
@@ -14,10 +15,10 @@ namespace Seeker.Gamebook.ThreePaths
 
         public override List<string> Status()
         {
-            if (Character.Protagonist.Time != null)
-                return new List<string> { String.Format("Время: {0:d2}:00", Character.Protagonist.Time) };
-            else
+            if (Character.Protagonist.Time == null)
                 return null;
+                
+            return new List<string> { String.Format("Время: {0:d2}:00", Character.Protagonist.Time) };
         }
 
         public override bool IsButtonEnabled() => !(ThisIsSpell && (Character.Protagonist.SpellSlots <= 0));
@@ -61,11 +62,7 @@ namespace Seeker.Gamebook.ThreePaths
 
         public override List<string> Representer()
         {
-            int count = 0;
-
-            foreach (string spell in Character.Protagonist.Spells)
-                if (spell == Text)
-                    count += 1;
+            int count = Character.Protagonist.Spells.Where(x => x == Text).Count();
 
             return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" (x{0})", count) : String.Empty)) };
         }
