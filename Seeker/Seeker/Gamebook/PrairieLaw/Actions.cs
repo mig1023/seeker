@@ -219,14 +219,7 @@ namespace Seeker.Gamebook.PrairieLaw
             return new List<string> { "RELOAD" };
         }
 
-        private bool NoMoreEnemies(List<Character> enemies)
-        {
-            foreach (Character enemy in enemies)
-                if (enemy.Strength > (EnemyWoundsLimit ? 2 : 0))
-                    return false;
-
-            return true;
-        }
+        private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Strength > (EnemyWoundsLimit ? 2 : 0)).Count() == 0;
 
         private bool FirefightContinue(List<Character> enemies, ref List<string> fight, bool firefight)
         {
@@ -236,9 +229,8 @@ namespace Seeker.Gamebook.PrairieLaw
             if (Character.Protagonist.Cartridges > 0)
                 return true;
 
-            foreach (Character enemy in enemies)
-                if (enemy.Cartridges > 0)
-                    return true;
+            if (enemies.Where(x => x.Cartridges > 0).Count() > 0)
+                return true;
 
             if (firefight)
             {
@@ -272,11 +264,8 @@ namespace Seeker.Gamebook.PrairieLaw
                 bool attackAlready = false;
                 int heroHitStrength = 0, enemyHitStrength = 0;
 
-                foreach (Character enemy in FightEnemies)
+                foreach (Character enemy in FightEnemies.Where(x => x.Strength > 0))
                 {
-                    if (enemy.Strength <= 0)
-                        continue;
-
                     string cartridgesLine = (enemy.Cartridges > 0 ? String.Format(", патронов {0}", enemy.Cartridges) : String.Empty);
                     fight.Add(String.Format("{0} (сила {1}{2})", enemy.Name, enemy.Strength, cartridgesLine));
 
