@@ -10,7 +10,6 @@ namespace Seeker.Gamebook.Catharsis
     {
         public static Actions StaticInstance = new Actions();
 
-        public string Text { get; set; }
         public string Bonus { get; set; }
 
         public override List<string> Representer()
