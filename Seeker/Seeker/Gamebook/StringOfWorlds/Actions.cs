@@ -19,9 +19,6 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public List<Character> Enemies { get; set; }
 
-        public string Text { get; set; }
-        public Abstract.IModification Benefit { get; set; }
- 
         public override List<string> Status() => new List<string>
         {
             String.Format("Ловкость: {0}", Character.Protagonist.Skill),
