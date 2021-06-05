@@ -18,9 +18,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int MasteryPenalty { get; set; }
         public bool GroupFight { get; set; }
 
-        public string Text { get; set; }
         public int Price { get; set; }
-        public bool Used { get; set; }
         public bool Multiple { get; set; }
 
         public override List<string> Status() => new List<string>
