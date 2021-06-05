@@ -11,8 +11,6 @@ namespace Seeker.Gamebook.HeartOfIce
         public static Actions StaticInstance = new Actions();
 
         public string RemoveTrigger { get; set; }
-
-        public string Text { get; set; }
         public string Skill { get; set; }
         public bool Choice { get; set; }
         public int Price { get; set; }
@@ -20,10 +18,7 @@ namespace Seeker.Gamebook.HeartOfIce
         public bool SellIfAvailable { get; set; }
         public string SellType { get; set; }
         public bool Split { get; set; }
-        public bool Used { get; set; }
         public bool Multiple { get; set; }
-
-        public List<Abstract.IModification> Benefit { get; set; }
 
         public override List<string> Representer()
         {
@@ -86,8 +81,8 @@ namespace Seeker.Gamebook.HeartOfIce
             if (((Price > 0) || Split) && !Multiple)
                 Used = true;
 
-            if (Benefit != null)
-                foreach (Modification modification in Benefit)
+            if (BenefitList != null)
+                foreach (Modification modification in BenefitList)
                     modification.Do();
 
             return new List<string> { "RELOAD" };
