@@ -62,10 +62,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
                 if (xmlAction["Benefit"] != null)
                 {
-                    action.Benefit = new List<Abstract.IModification>();
+                    action.BenefitList = new List<Abstract.IModification>();
 
                     foreach (XmlNode bonefit in xmlAction.SelectNodes("Benefit"))
-                        action.Benefit.Add(Game.Xml.ModificationParse(bonefit, new Modification()));
+                        action.BenefitList.Add(Game.Xml.ModificationParse(bonefit, new Modification()));
                 }
 
                 if (xmlAction["Enemies"] != null)

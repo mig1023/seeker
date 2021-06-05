@@ -17,12 +17,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             GlassKnight, AcidDamage, WaterWitch, SnakeFight, Plague, StoneGriffin
         };
 
-        public string Text { get; set; }
         public int Value { get; set; }
         public int Price { get; set; }
-        public bool Used { get; set; }
         public bool Multiple { get; set; }
-        public List<Abstract.IModification> Benefit { get; set; }
 
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
@@ -327,8 +324,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 if (!Multiple)
                     Used = true;
 
-                if (Benefit != null)
-                    foreach (Modification modification in Benefit)
+                if (BenefitList != null)
+                    foreach (Modification modification in BenefitList)
                         modification.Do();
             }
 
