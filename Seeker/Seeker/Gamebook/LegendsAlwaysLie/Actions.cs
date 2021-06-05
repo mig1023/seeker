@@ -13,7 +13,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public enum FoodSharingType { KeepMyself, ToHim, FiftyFifty };
 
         public int Price { get; set; }
-        public string Text { get; set; }
         public bool Disabled { get; set; } 
 
         public List<Character> Enemies { get; set; }
@@ -32,7 +31,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int DiceBonus { get; set; }
         public FoodSharingType? FoodSharing { get; set; }
 
-        public Abstract.IModification Benefit { get; set; }
         public Abstract.IModification Damage { get; set; }
 
         public Character.SpecializationType? Specialization { get; set; }
