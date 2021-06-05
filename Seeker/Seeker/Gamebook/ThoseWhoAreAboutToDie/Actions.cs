@@ -10,8 +10,6 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
     {
         public static Actions StaticInstance = new Actions();
 
-        public int Dices { get; set; }
-
         public override List<string> Status() => new List<string>
         {
             String.Format("Реакция: {0}", Character.Protagonist.Reaction),
