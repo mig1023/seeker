@@ -11,7 +11,6 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public static Actions StaticInstance = new Actions();
 
         public List<Character> Enemies { get; set; }
-        public Modification Benefit { get; set; }
 
         public int WoundsToWin { get; set; }
         public int RoundsToWin { get; set; }
