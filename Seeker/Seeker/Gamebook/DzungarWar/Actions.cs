@@ -12,7 +12,6 @@ namespace Seeker.Gamebook.DzungarWar
 
         public string RemoveTrigger { get; set; }
 
-        public string Text { get; set; }
         public string Stat { get; set; }
         public int StatStep { get; set; }
         public bool StatToMax { get; set; }
@@ -20,8 +19,6 @@ namespace Seeker.Gamebook.DzungarWar
         public int Price { get; set; }
 
         public string TriggerTestPenalty { get; set; }
-
-        public Modification Benefit { get; set; }
 
         static bool NextTestWithTincture = false, NextTestWithGinseng = false;
 
