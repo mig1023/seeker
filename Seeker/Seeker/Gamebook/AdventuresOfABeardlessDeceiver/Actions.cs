@@ -9,15 +9,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
     {
         public static Actions StaticInstance = new Actions();
 
-        public string Text { get; set; }
         public string Stat { get; set; }
         public int Level { get; set; }
         public int Price { get; set; }
         public bool GreatKhanSpecialCheck { get; set; }
         public bool GuessBonus { get; set; }
-        public bool Used { get; set; }
-
-        public Modification Benefit { get; set; }
 
         static bool NextTestWithKumis = false;
 
