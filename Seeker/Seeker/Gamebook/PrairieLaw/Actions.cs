@@ -15,13 +15,9 @@ namespace Seeker.Gamebook.PrairieLaw
         public bool HeroWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
 
-        public string Text { get; set; }
         public int Dices { get; set; }
         public int Price { get; set; }
-        public bool Used { get; set; }
         public bool Multiple { get; set; }
-
-        public Abstract.IModification Benefit { get; set; }
 
         public override List<string> Status() => new List<string>
         {
