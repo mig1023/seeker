@@ -62,8 +62,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="151" Text="Сумма выпавших чисел больше вашей ЛОВКОСТИ"/>
-			<Option Destination="243" Text="Меньше или равна"/>
+			<Option Destination="151" Text="Ловкости не хватило"/>
+			<Option Destination="243" Text="Проверка успешно пройдена"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1243,8 +1243,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="649" Text="Сумма выпавших чисел больше вашей ЛОВКОСТИ"/>
-			<Option Destination="455" Text="Меньше или равна ей"/>
+			<Option Destination="649" Text="Ловкости не хватило"/>
+			<Option Destination="455" Text="Проверка успешно пройдена"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1788,8 +1788,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="631" Text="Сумма выпавших чисел больше вашей ЛОВКОСТИ"/>
-			<Option Destination="226" Text="Меньше или равна ей"/>
+			<Option Destination="631" Text="Ловкости не хватило"/>
+			<Option Destination="226" Text="Проверка успешно пройдена"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1810,8 +1810,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="576" Text="Сумма выпавших чисел больше вашей ЛОВКОСТИ"/>
-			<Option Destination="361" Text="Меньше или равна ей"/>
+			<Option Destination="576" Text="Ловкости не хватило"/>
+			<Option Destination="361" Text="Проверка успешно пройдена"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2123,8 +2123,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="71" Text="Сумма выпавших чисел больше вашей ЛОВКОСТИ"/>
-			<Option Destination="543" Text="Меньше или равна ей"/>
+			<Option Destination="71" Text="Ловкости не хватило"/>
+			<Option Destination="543" Text="Проверка успешно пройдена"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2947,8 +2947,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="168" Text="Сумма выпавших чисел меньше вашей ЛОВКОСТИ или равна ей"/>
-			<Option Destination="628" Text="Больше ЛОВКОСТИ"/>
+			<Option Destination="168" Text="Проверка успешно пройдена"/>
+			<Option Destination="628" Text="Ловкости не хватило"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3546,8 +3546,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="231" Text="Сумма выпавших чисел больше вашей ЛОВКОСТИ"/>
-			<Option Destination="443" Text="Меньше или равна ей"/>
+			<Option Destination="231" Text="Ловкости не хватило"/>
+			<Option Destination="443" Text="Проверка успешно пройдена"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3667,8 +3667,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="603" Text="Сумма выпавших чисел больше вашей ЛОВКОСТИ"/>
-			<Option Destination="485" Text="Меньше или равна ей"/>
+			<Option Destination="603" Text="Ловкости не хватило"/>
+			<Option Destination="485" Text="Проверка успешно пройдена"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5160,8 +5160,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="140" Text="Сумма выпавших чисел меньше вашей ЛОВКОСТИ или равна ей"/>
-			<Option Destination="648" Text="Больше ЛОВКОСТИ"/>
+			<Option Destination="140" Text="Проверка успешно пройдена"/>
+			<Option Destination="648" Text="Ловкости не хватило"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
