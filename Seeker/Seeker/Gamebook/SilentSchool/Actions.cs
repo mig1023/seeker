@@ -10,7 +10,6 @@ namespace Seeker.Gamebook.SilentSchool
     {
         public static Actions StaticInstance = new Actions();
 
-        public string Text { get; set; }
         public int HarmedMyself { get; set; }
         public int Dices { get; set; }
 
