@@ -529,7 +529,7 @@
 			</Action>		
 			<Action>
 				<ActionName>Get</ActionName>
-				<ButtonName>Купить труба</ButtonName>
+				<ButtonName>Купить трубу</ButtonName>
 				<Text>Подзорная труба, 9 долларов</Text>
 				<Trigger>Подзорная труба</Trigger>
 				<Price>900</Price>
@@ -4196,7 +4196,7 @@
 		<Text>«Вы вернули мне очень дорогую, памятную вещь, – говорит женщина. – Заходите в дом, будьте моим гостем...»\n\nХозяйка быстро собирает на стол. Готовит она отлично, вкусный и сытный обед увеличивает вашу СИЛУ на 5. А когда вы прощаетесь с мисс Рэй, она протягивает вам сверток с куском бизоньего окорока. Когда проголодаетесь, эта еда прибавит 4 к вашей СИЛЕ.</Text>
 		<Modifications>
 			<Modification Name="Strength" Value="5"/>
-			<Modification Name="Healing" ValueString="Cъесть окорок,4"/>
+			<Modification Name="Healing" ValueString="Съесть окорок,4"/>
 		</Modifications>
 		<Options>
 			<Option Destination="357"/>
@@ -4810,7 +4810,7 @@
 		<Text>Вы облегченно вздыхаете и оглядываетесь. Машинист возится у рычагов (поезд уже ускоряет ход), а кочегар... Кочегара достала пуля, он упал на тендер, лицом в дрова. Может быть, он еще жив?</Text>
 		<Options>
 			<Option Destination="301" Text="Можно попробовать перетащить его под защиту стен кабины"/>
-			<Option Destination="409" Text="Yе хотите рисковать"/>
+			<Option Destination="409" Text="Не хотите рисковать"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
