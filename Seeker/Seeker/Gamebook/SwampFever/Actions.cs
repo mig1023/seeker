@@ -10,15 +10,12 @@ namespace Seeker.Gamebook.SwampFever
     {
         public static Actions StaticInstance = new Actions();
 
-        public string Text { get; set; }
-
         public string EnemyName { get; set; }
         public string EnemyCombination { get; set; }
 
         public int Level { get; set; }
         public int Price { get; set; }
         public bool Birds { get; set; }
-        public Abstract.IModification Benefit { get; set; }
 
         public override List<string> Representer()
         {
