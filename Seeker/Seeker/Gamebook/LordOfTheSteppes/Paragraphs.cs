@@ -56,10 +56,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 if (xmlAction["Benefit"] != null)
                 {
-                    action.Benefit = new List<Modification>();
+                    action.BenefitList = new List<Abstract.IModification>();
 
                     foreach (XmlNode bonefit in xmlAction.SelectNodes("Benefit"))
-                        action.Benefit.Add(ModificationParse(bonefit));
+                        action.BenefitList.Add(ModificationParse(bonefit));
                 }
 
                 bool falaleyHelp = Game.Xml.BoolParse(xmlAction["FalaleyHelp"]) && Game.Data.Triggers.Contains("Фалалей поможет");

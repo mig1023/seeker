@@ -10,7 +10,6 @@ namespace Seeker.Gamebook.LordOfTheSteppes
     {
         public static Actions StaticInstance = new Actions();
 
-        public string Text { get; set; }
         public string Stat { get; set; }
         public int StatStep { get; set; }
         public Character.SpecialTechniques SpecialTechnique { get; set; }
@@ -29,9 +28,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public bool StoneGuard { get; set; }
 
         public int Price { get; set; }
-        public bool Used { get; set; }
         public bool Multiple { get; set; }
-        public List<Modification> Benefit { get; set; }
 
         public override List<string> Representer()
         {
@@ -149,8 +146,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 if (!Multiple)
                     Used = true;
 
-                if (Benefit != null)
-                    foreach (Modification modification in Benefit)
+                if (BenefitList != null)
+                    foreach (Modification modification in BenefitList)
                         modification.Do();
             }
 
