@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.PrairieLaw
         {
             [ButtonTypes.Main] = "#b66247",
             [ButtonTypes.Action] = "#8f4445",
+            [ButtonTypes.Option] = "#a04c4d",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
