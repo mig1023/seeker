@@ -10,7 +10,12 @@ namespace Seeker.Prototypes
         public string ButtonName { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
+        public string Text { get; set; }
 
+        public bool Used { get; set; }
+
+        public Abstract.IModification Benefit { get; set; }
+        public List<Abstract.IModification> BenefitList { get; set; }
 
         public virtual List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
