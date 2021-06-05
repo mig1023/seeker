@@ -11,7 +11,6 @@ namespace Seeker.Gamebook.ThreePaths
         public static Actions StaticInstance = new Actions();
 
         public bool ThisIsSpell { get; set; }
-        public string Text { get; set; }
 
         public override List<string> Status()
         {
