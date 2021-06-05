@@ -509,6 +509,7 @@
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить бусы</ButtonName>
 				<Text>Бусы, полдоллара</Text>
+				<Trigger>Бусы</Trigger>
 				<Price>50</Price>
 			</Action>
 			<Action>
@@ -1127,7 +1128,7 @@
 		<ID>113</ID>
 		<Text>Учтите: просто так, за спасибо, колдунья вам гадать не станет. И денег не возьмет. Что вы ей можете подарить?</Text>
 		<Options>
-			<Option Destination="131" Text="Бусы"/>
+			<Option Destination="131" Text="Бусы" OnlyIf="Бусы"/>
 			<Option Destination="164" Text="Красивый пояс"/>
 			<Option Destination="187" Text="Пулю на металлической цепочке"/>
 			<Option Destination="219" Text="Зеркало"/>
