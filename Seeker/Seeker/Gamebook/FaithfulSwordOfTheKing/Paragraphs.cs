@@ -50,10 +50,10 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 if (xmlAction["Benefit"] != null)
                 {
-                    action.Benefit = new List<Modification>();
+                    action.BenefitList = new List<Abstract.IModification>();
 
                     foreach (XmlNode bonefit in xmlAction.SelectNodes("Benefit"))
-                        action.Benefit.Add(ModificationParse(bonefit));
+                        action.BenefitList.Add(ModificationParse(bonefit));
                 }
 
                 if (xmlAction["Enemies"] != null)

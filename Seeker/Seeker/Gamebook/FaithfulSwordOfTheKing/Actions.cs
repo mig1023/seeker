@@ -17,11 +17,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int SkillPenalty { get; set; }
         public bool WithoutShooting { get; set; }
 
-        public string Text { get; set; }
         public int Price { get; set; }
-        public bool Used { get; set; }
         public bool Multiple { get; set; }
-        public List<Modification> Benefit { get; set; }
         public Character.MeritalArts? MeritalArt { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -276,8 +273,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 if (!Multiple)
                     Used = true;
 
-                if (Benefit != null)
-                    foreach (Modification modification in Benefit)
+                if (BenefitList != null)
+                    foreach (Modification modification in BenefitList)
                         modification.Do();
             }
 
