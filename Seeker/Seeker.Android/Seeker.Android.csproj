@@ -160,9 +160,6 @@
     <AndroidResource Include="Resources\drawable\SwampFever_CrystalPath.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\SwampFever_SpectralBushes.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -307,16 +304,28 @@
     <AndroidResource Include="Resources\drawable\StainlessSteelRat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\LandOfUnwaryBears.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Gamebooks\LandOfUnwaryBears.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\PrairieLaw.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\PrairieLaw.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AdventuresOfABeardlessDeceiver_Akyn_6.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
