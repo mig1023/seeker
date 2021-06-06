@@ -25,10 +25,20 @@ namespace Seeker.Game
             return xmlNode.InnerText;
         }
 
-        public static bool BoolParse(XmlNode xmlNode)
+        public static Dictionary<string, string> ImagesParse(XmlNode xmlNode)
         {
-            return (xmlNode == null ? false : true);
+            Dictionary<string, string> images = new Dictionary<string, string>();
+
+            if (xmlNode == null)
+                return images;
+
+            foreach (XmlNode xmlImage in xmlNode.SelectNodes("Image"))
+                images.Add(StringParse(xmlImage.Attributes["Image"]), StringParse(xmlImage.Attributes["Aftertext"]));
+
+            return images;
         }
+
+        public static bool BoolParse(XmlNode xmlNode) => xmlNode != null;
 
         public static Abstract.IModification ModificationParse(XmlNode xmlNode, Abstract.IModification modification, string name = "Name")
         {

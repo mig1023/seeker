@@ -100,14 +100,20 @@ namespace Seeker
             if (!String.IsNullOrEmpty(text))
                 Text.Children.Add(Output.Interface.Text(text));
 
-            if (!String.IsNullOrEmpty(paragraph.Image))
+            if (paragraph.Images.Count > 0)
             {
-                Image illustration = new Image
+                foreach(string image in paragraph.Images.Keys.ToList())
                 {
-                    Source = paragraph.Image,
-                    Aspect = Aspect.AspectFit
-                };
-                Text.Children.Add(illustration);
+                    Image illustration = new Image
+                    {
+                        Source = image,
+                        Aspect = Aspect.AspectFit
+                    };
+                    Text.Children.Add(illustration);
+
+                    if (!String.IsNullOrEmpty(paragraph.Images[image]))
+                        Text.Children.Add(Output.Interface.Text(paragraph.Images[image]));
+                }
             }
 
             Game.Option.Trigger(paragraph.Trigger);

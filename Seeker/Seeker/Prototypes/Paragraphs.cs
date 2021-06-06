@@ -39,7 +39,8 @@ namespace Seeker.Prototypes
             Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]),
             LateTrigger = Game.Xml.StringParse(xmlParagraph["LateTriggers"]),
             RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTriggers"]),
-            Image = Game.Xml.StringParse(xmlParagraph["Image"]),
+
+            Images = Game.Xml.ImagesParse(xmlParagraph["Images"]),
         };
 
         public Game.Option OptionsTemplateWithoutDestination(XmlNode xmlOption) => new Option()

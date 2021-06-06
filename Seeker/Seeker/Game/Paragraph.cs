@@ -12,7 +12,7 @@ namespace Seeker.Game
 
         public List<Abstract.IModification> Modification { get; set; }
 
-        public string Image { get; set; }
+        public Dictionary<string, string> Images { get; set; }
 
         public string Trigger { get; set; }
 
