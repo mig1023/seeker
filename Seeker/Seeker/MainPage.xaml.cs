@@ -100,7 +100,7 @@ namespace Seeker
             if (!String.IsNullOrEmpty(text))
                 Text.Children.Add(Output.Interface.Text(text));
 
-            if (paragraph.Images.Count > 0)
+            if ((paragraph.Images != null) && (paragraph.Images.Count > 0))
             {
                 foreach(string image in paragraph.Images.Keys.ToList())
                 {
