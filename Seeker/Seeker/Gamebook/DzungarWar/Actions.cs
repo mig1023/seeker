@@ -62,20 +62,20 @@ namespace Seeker.Gamebook.DzungarWar
 
         public override List<string> Representer()
         {
-            if (!String.IsNullOrEmpty(Stat) && !StatToMax)
+            if (ActionName == "TestAll")
+                return new List<string> { String.Format("Проверить по совокупному уровню {0}", Level) };
+
+            else if (Level > 0)
+                return new List<string> { String.Format("Проверка {0}, уровень {1}",
+                    Constants.StatNames()[Stat], TestLevelWithPenalty(Level, out List<string> _)) };
+
+            else if (!String.IsNullOrEmpty(Stat) && !StatToMax)
             {
                 int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
                 string diffLine = (currentStat > 1 ? String.Format(" (+{0})", (currentStat - 1)) : String.Empty);
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
             }
-
-            else if (ActionName == "TestAll")
-                return new List<string> { String.Format("Проверить по совокупному уровню {0}", Level) };
-
-            else if (Level > 0)
-                return new List<string> { String.Format("Проверка {0}, уровень {1}",
-                    Constants.StatNames()[Stat], TestLevelWithPenalty(Level, out List<string> _)) };
 
             else if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
