@@ -482,6 +482,7 @@
 				<ButtonName>Купить нож</ButtonName>
 				<Text>Нож, 1.5 доллара</Text>
 				<Price>150</Price>
+				<Trigger>Нож</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
@@ -1134,7 +1135,7 @@
 			<Option Destination="164" Text="Красивый пояс" OnlyIf="Пояс"/>
 			<Option Destination="187" Text="Пулю на металлической цепочке"/>
 			<Option Destination="219" Text="Зеркало" OnlyIf="Зеркальце"/>
-			<Option Destination="256" Text="Нож"/>
+			<Option Destination="256" Text="Нож" OnlyIf="Нож"/>
 			<Option Destination="285" Text="Томагавк"/>
 			<Option Destination="349" Text="Подзорную трубу" Aftertext="Если ничего этого вы ей дать не можете..."/>
 			<Option Destination="67"/>
@@ -2401,7 +2402,7 @@
 	<Paragraph>
 		<ID>253</ID>
 		<Text>«Глупая затея, – твердо говорит Смит. – Вся эта банда – подлец на подлеце, кому это и знать, как не мне... Впрочем, ты, парень, не маленький, сам должен соображать, что делаешь. И раз ты так решил...\n\nОн снимает с пояса нож в красивых, расшитых оранжевым бисером ножнах.\n\n«Возьми, парень, от меня на память. Да в мешок не убирай, на пояс повесь. Завтра пойдешь на восток, у реки свернешь вниз по течению. Иди, пока тебя не остановят. Скажешь, что ты от Рыжего Джека...»</Text>
-		<Triggers>Ножны</Triggers>
+		<Triggers>Нож, Ножны</Triggers>
 		<Options>
 			<Option Destination="619"/>
 		</Options>
@@ -5195,7 +5196,7 @@
 	<Paragraph>
 		<ID>573</ID>
 		<Text>Убитый – молодой парень, похожий на индейца, но в ковбойской одежде. На поясе у него нож, а в кармане – 2 доллара и непочатая пачка жевательного табаку, на шее – странный амулет: смятая пуля на металлической цепочке. Возьмите себе то, что считаете нужным (если для амулета не найдется места в сумке, можете надеть его на шею). А затем продолжайте путь на север.</Text>
-		<Triggers>Табак</Triggers>
+		<Triggers>Нож, Табак</Triggers>
 		<Options>
 			<Option Destination="381"/>
 		</Options>
@@ -5781,7 +5782,7 @@
 			<Option Destination="246" Text="Томагавк"/>
 			<Option Destination="281" Text="Лассо" OnlyIf="Лассо"/>
 			<Option Destination="228" Text="Любую из добытых вами шкур"/>
-			<Option Destination="184" Text="Нож"/>
+			<Option Destination="184" Text="Нож" OnlyIf="Нож"/>
 			<Option Destination="93" Text="Самородок" Aftertext="Если ничего этого нет:"/>
 			<Option Destination="167" Text="Придется драться"/>
 		</Options>
