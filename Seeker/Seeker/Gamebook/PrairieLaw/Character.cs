@@ -82,6 +82,8 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public Dictionary<int, bool> Luck { get; set; }
 
+        public List<string> AnimalSkins { get; set; }
+
         public override void Init()
         {
             int dice = Game.Dice.Roll(dices: 2);
@@ -94,6 +96,8 @@ namespace Seeker.Gamebook.PrairieLaw
 
             Cents = 1500;
             Cartridges = 6;
+
+            AnimalSkins = new List<string>();
 
             Luck = new Dictionary<int, bool>
             {
@@ -128,7 +132,8 @@ namespace Seeker.Gamebook.PrairieLaw
             foreach (bool luck in Luck.Values.ToList())
                 lucks.Add(luck ? "1" : "0");
 
-            return String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Charm, Cents, Cartridges, String.Join(",", lucks));
+            return String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Charm, Cents, Cartridges,
+                String.Join(",", lucks), String.Join(",", AnimalSkins));
         }
 
         public override void Load(string saveLine)
@@ -147,6 +152,8 @@ namespace Seeker.Gamebook.PrairieLaw
 
             for (int i = 0; i < 6; i++)
                 Luck[i + 1] = (lucks[i] == "1");
+
+            AnimalSkins = save[7].Split(',').ToList();
         }
     }
 }
