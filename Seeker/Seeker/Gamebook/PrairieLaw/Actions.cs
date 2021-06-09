@@ -234,12 +234,16 @@ namespace Seeker.Gamebook.PrairieLaw
                 prices.Add(valuePrice[0].Trim(), int.Parse(valuePrice[1]));
             }
 
-            foreach(string skin in Character.Protagonist.AnimalSkins)
+            bool anySkin = prices.ContainsKey("Любая шкура");
+
+            foreach (string skin in Character.Protagonist.AnimalSkins)
             {
-                if (prices.ContainsKey(skin))
+                if (prices.ContainsKey(skin) || anySkin)
                 {
-                    salesReport.Add(String.Format("{0} - купил за {1:f2}$", skin, ToDollars(prices[skin])));
-                    cents += prices[skin];
+                    int price = (anySkin ? prices["Любая шкура"] : prices[skin]);
+
+                    salesReport.Add(String.Format("{0} - купил за {1:f2}$", skin, ToDollars(price)));
+                    cents += price;
                     saledIndexes.Add(index);
                     sold += 1;
                 }
