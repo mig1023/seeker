@@ -5126,7 +5126,78 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>563</ID>
-		<Text>Лавочник встречает вас по-приятельски и первым делом спрашивает: не хотите ли вы что-нибудь продать. На золото цена прежняя: 20 долларов за самородок. А может быть, вы в своих странствиях удачно поохотились? Шкуру медведя или бизона торговец купит у вас за 10 долларов, пумы – за 7, волка – за 5, рыси – за 3, кролика – за полдоллара...\n\nВы осматриваетесь. В лавке почти ничего не изменилось. Только подзорная труба больше не поблескивает медными боками на прилавке...\n\nА вот цены остались прежними: лассо – 1 доллар, нож – 2 доллара, спички в кожаном кисете – полдоллара, седло – 4 доллара, жевательный табак – полдоллара за плитку, патроны – доллар за полдюжины, подарки для индейцев (бусы, зеркала, яркие пояса) – любая вещь за полдоллара.</Text>
+		<Text>Лавочник встречает вас по-приятельски и первым делом спрашивает: не хотите ли вы что-нибудь продать. На золото цена прежняя: 20 долларов за самородок. А может быть, вы в своих странствиях удачно поохотились? Шкуру медведя или бизона торговец купит у вас за 10 долларов, пумы – за 7, волка – за 5, рыси – за 3, кролика – за полдоллара...</Text>
+		<Actions>
+			<Action>
+				<ActionName>SellSkins</ActionName>
+				<ButtonName>Продать шкуры</ButtonName>
+				<SellPrices>Шкура волка=500, Шкура рыси=300, Шкура пумы=700, Шкура кролика=50, Шкура медведя=1000, Шкура бизона=1000</SellPrices>
+				<Aftertext>Вы осматриваетесь. В лавке почти ничего не изменилось. Только подзорная труба больше не поблескивает медными боками на прилавке...\n\nА вот цены остались прежними: лассо – 1 доллар, нож – 2 доллара, спички в кожаном кисете – полдоллара, седло – 4 доллара, жевательный табак – полдоллара за плитку, патроны – доллар за полдюжины:</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить лассо</ButtonName>
+				<Text>Лассо, 1$</Text>
+				<Price>100</Price>
+				<Trigger>Лассо</Trigger>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить нож</ButtonName>
+				<Text>Нож, 2$</Text>
+				<Price>150</Price>
+				<Trigger>Нож</Trigger>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить спички</ButtonName>
+				<Text>Спички в кожаном кисете, 0.5$</Text>
+				<Price>50</Price>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить седло</ButtonName>
+				<Text>Седло, 4$</Text>
+				<Price>400</Price>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить табак</ButtonName>
+				<Text>Жевательный табак, 0.5$</Text>
+				<Trigger>Табак</Trigger>
+				<Price>50</Price>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить патроны</ButtonName>
+				<Text>Шесть патронов, 1$</Text>
+				<Price>50</Price>
+				<Multiple/>
+				<Benefit Name="Cartridges" Value="6"/>
+				<Aftertext>Подарки для индейцев (бусы, зеркала, яркие пояса) – любая вещь за полдоллара:</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить бусы</ButtonName>
+				<Text>Бусы, 0.5$</Text>
+				<Trigger>Бусы</Trigger>
+				<Price>50</Price>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить пояс</ButtonName>
+				<Text>Яркий пояс, 0.5$</Text>
+				<Trigger>Пояс</Trigger>
+				<Price>50</Price>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить зеркальце</ButtonName>
+				<Text>Зеркальце, 0.5$</Text>
+				<Price>50</Price>
+				<Trigger>Зеркальце</Trigger>
+			</Action>	
+		</Actions>
 		<Options>
 			<Option Destination="325" Text="Купите что-нибудь"/>
 			<Option Destination="434" Text="Ничего не нужно"/>
