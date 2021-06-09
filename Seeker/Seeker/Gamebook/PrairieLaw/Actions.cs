@@ -18,6 +18,9 @@ namespace Seeker.Gamebook.PrairieLaw
         public int Dices { get; set; }
         public int Price { get; set; }
         public bool Multiple { get; set; }
+        public string SellPrices { get; set; }
+
+        private double ToDollars(int cents) => (double)cents / 100;
 
         public override List<string> Status() => new List<string>
         {
@@ -29,7 +32,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public override List<string> AdditionalStatus() => new List<string>
         {
             String.Format("Патронов: {0}", Character.Protagonist.Cartridges),
-            String.Format("Долларов: {0:f2}", (double)Character.Protagonist.Cents / 100)
+            String.Format("Долларов: {0:f2}", ToDollars(Character.Protagonist.Cents))
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
@@ -195,8 +198,9 @@ namespace Seeker.Gamebook.PrairieLaw
         {
             bool disabledByUsed = (Price > 0) && Used;
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Cents < Price);
+            bool disabledBySkins = (ActionName == "SellSkins") && (Character.Protagonist.AnimalSkins.Count == 0);
 
-            return !(disabledByUsed || disabledByPrice);
+            return !(disabledByUsed || disabledByPrice || disabledBySkins);
         }
 
         public List<string> Get()
@@ -213,6 +217,51 @@ namespace Seeker.Gamebook.PrairieLaw
             }
 
             return new List<string> { "RELOAD" };
+        }
+
+        public List<string> SellSkins()
+        {
+            List<string> salesReport = new List<string>();
+
+            int cents = 0, sold = 0, index = 0;
+
+            Dictionary<string, int> prices = new Dictionary<string, int>();
+            List<int> saledIndexes = new List<int>();
+
+            foreach(string price in SellPrices.Split(',').ToList())
+            {
+                string[] valuePrice = price.Split('=');
+                prices.Add(valuePrice[0].Trim(), int.Parse(valuePrice[1]));
+            }
+
+            foreach(string skin in Character.Protagonist.AnimalSkins)
+            {
+                if (prices.ContainsKey(skin))
+                {
+                    salesReport.Add(String.Format("{0} - купил за {1:f2}$", skin, ToDollars(prices[skin])));
+                    cents += prices[skin];
+                    saledIndexes.Add(index);
+                    sold += 1;
+                }
+                else
+                    salesReport.Add(String.Format("{0} - её не купит", skin));
+
+                index += 1;
+            }
+
+            saledIndexes.Reverse();
+
+            foreach (int removeIndex in saledIndexes)
+                Character.Protagonist.AnimalSkins.RemoveAt(removeIndex);
+
+            salesReport.Add(String.Empty);
+            salesReport.Add("BIG|ИТОГО:");
+            salesReport.Add(String.Format("Вы продали шкур: {0}", sold));
+            salesReport.Add(String.Format("GOOD|Вы получили: {0:f2}$", ToDollars(cents)));
+
+            Character.Protagonist.Cents += cents;
+
+            return salesReport;
         }
 
         private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Strength > (EnemyWoundsLimit ? 2 : 0)).Count() == 0;
