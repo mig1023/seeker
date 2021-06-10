@@ -8,15 +8,17 @@ namespace Seeker.Gamebook.HeartOfIce
     {
         public override void Do()
         {
-            if (Name == "Skill")
-                Character.Protagonist.Skills.Add(ValueString);
+            bool skill = ModificationByName("Skill", () => Character.Protagonist.Skills.Add(ValueString));
+            bool rmSkill = ModificationByName("RemoveSkill", () => Character.Protagonist.Skills.RemoveAll(item => item == ValueString));
+            bool rmTrigger = ModificationByName("RemoveTrigger", () => Game.Option.Trigger(ValueString, remove: true));
+            bool byTrigger = ModificationByName("ByTrigger", () => LifeByTrigger());
+            bool byNotTrigger = ModificationByName("ByNotTrigger", () => LifeByTrigger(notLogic: true));
+            bool byFood = ModificationByName("ByFood", () => LifeByFood());
 
-            else if (Name == "RemoveSkill")
-                Character.Protagonist.Skills.RemoveAll(item => item == ValueString);
-
-            else if (Name == "RemoveTrigger")
-                Game.Option.Trigger(ValueString, remove: true);
-
+            if (skill || rmSkill || rmTrigger || byTrigger || byNotTrigger || byFood)
+            {
+                // nothing to do here
+            }
             else if (Name == "ReplaceTrigger")
             {
                 string[] triggers = ValueString.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
@@ -27,15 +29,6 @@ namespace Seeker.Gamebook.HeartOfIce
                 Game.Option.Trigger(triggers[0].Trim(), remove: true);
                 Game.Option.Trigger(triggers[1].Trim());
             }
-            else if (Name == "ByTrigger")
-                LifeByTrigger();
-
-            else if (Name == "ByNotTrigger")
-                LifeByTrigger(notLogic: true);
-
-            else if (Name == "ByFood")
-                LifeByFood();
-
             else
                 InnerDo(Character.Protagonist);
         }

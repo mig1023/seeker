@@ -55,15 +55,15 @@ namespace Seeker.Prototypes
             }
         }
 
-        public void TriggerModification(string trigger, ParamMod doModification, bool not = false)
+        public void ModificationByTrigger(string trigger, ParamMod doModification, bool not = false)
         {
             if ((!not && Game.Data.Triggers.Contains(trigger)) || (not && !Game.Data.Triggers.Contains(trigger)))
                 doModification();
         }
 
-        public bool ValueStringModification(string actualName, ParamMod doModification)
+        public bool ModificationByName(string actualName, ParamMod doModification)
         {
-            if (!String.IsNullOrEmpty(ValueString) && (Name == actualName))
+            if (Name == actualName)
             {
                 doModification();
                 return true;
@@ -71,5 +71,8 @@ namespace Seeker.Prototypes
             else
                 return false;
         }
+
+        public bool ModificationByValueString(string actualName, ParamMod doModification) =>
+            (String.IsNullOrEmpty(ValueString) ? false : ModificationByName(actualName, doModification));
     }
 }
