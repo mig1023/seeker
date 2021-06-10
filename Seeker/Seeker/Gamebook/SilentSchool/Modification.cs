@@ -12,17 +12,19 @@ namespace Seeker.Gamebook.SilentSchool
 
             int woundsBonus = (Game.Data.Triggers.Contains("Кайф") ? 2 : 1);
 
-            if (Name == "Trigger")
-                Game.Option.Trigger(Value.ToString());
+            bool trigger = ModificationByName("Trigger", () => Game.Option.Trigger(Value.ToString()));
+            bool change = ModificationByName("Change", () => hero.ChangeDecision = Value);
+            bool weapon = ModificationByName("Weapon", () => hero.Weapon = ValueString);
+            bool removeWeapon = ModificationByName("RemoveWeapon", () => hero.Weapon = String.Empty);
+            bool woundsByWeapon2 = ModificationByName("WoundsByWeapon2", () => hero.Life -= (String.IsNullOrEmpty(hero.Weapon) ? 4 : 2) * woundsBonus);
+            bool woundsByWeapon3 = ModificationByName("WoundsByWeapon3", () => hero.Life -= (hero.Weapon == "Гантеля" ? 3 : 6) * woundsBonus);
+            bool woundsByWeapon4 = ModificationByName("WoundsByWeapon4", () => hero.Life -= (hero.Weapon == "Флейта" ? 1 : 4) * woundsBonus);
+            bool woundsByBody = ModificationByName("WoundsByBody", () => hero.Life -= (Game.Data.Triggers.Contains("Толстяк") ? 4 : 6) * woundsBonus);
 
-            else if (Name == "Change")
-                hero.ChangeDecision = Value;
-
-            else if (Name == "Weapon")
-                hero.Weapon = ValueString;
-
-            else if (Name == "RemoveWeapon")
-                hero.Weapon = String.Empty;
+            if (trigger || change || weapon || removeWeapon || woundsByWeapon2 || woundsByWeapon3 || woundsByWeapon4 || woundsByBody)
+            {
+                // nothing to do here
+            }
 
             else if (Name == "WoundsByWeapon")
             {
@@ -31,18 +33,6 @@ namespace Seeker.Gamebook.SilentSchool
                 else
                     hero.Life -= (String.IsNullOrEmpty(hero.Weapon) ? 8 : 6) * woundsBonus;
             }
-
-            else if (Name == "WoundsByWeapon2")
-                hero.Life -= (String.IsNullOrEmpty(hero.Weapon) ? 4 : 2) * woundsBonus;
-
-            else if (Name == "WoundsByWeapon3")
-                hero.Life -= (hero.Weapon == "Гантеля" ? 3 : 6) * woundsBonus;
-
-            else if (Name == "WoundsByWeapon4")
-                hero.Life -= (hero.Weapon == "Флейта" ? 1 : 4)* woundsBonus;
-            
-            else if (Name == "WoundsByBody")
-                hero.Life -= (Game.Data.Triggers.Contains("Толстяк") ? 4 : 6) * woundsBonus;
 
             else
             {
