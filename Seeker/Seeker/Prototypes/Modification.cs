@@ -13,6 +13,8 @@ namespace Seeker.Prototypes
         public bool Empty { get; set; }
         public bool Restore { get; set; }
 
+        public delegate void ParamMod();
+
         public virtual void Do() { }
 
         public void InnerDo(Abstract.ICharacter Character)
@@ -51,6 +53,12 @@ namespace Seeker.Prototypes
                     Character.GetType().GetProperty(Name).SetValue(Character, currentValue);
                 }
             }
+        }
+
+        public void TriggerModification(string trigger, ParamMod doModification, bool not = false)
+        {
+            if ((!not && Game.Data.Triggers.Contains(trigger)) || (not && !Game.Data.Triggers.Contains(trigger)))
+                doModification();
         }
     }
 }
