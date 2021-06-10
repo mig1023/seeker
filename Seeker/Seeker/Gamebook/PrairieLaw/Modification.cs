@@ -9,10 +9,10 @@ namespace Seeker.Gamebook.PrairieLaw
         public override void Do()
         {
             if (Name == "StrengthByPoison")
-                TriggerModification("Противоядие", () => Character.Protagonist.Strength -= 10, not: true);
+                ModificationByTrigger("Противоядие", () => Character.Protagonist.Strength -= 10, not: true);
 
             else if (Name == "Skin")
-                TriggerModification("Нож", () => Character.Protagonist.AnimalSkins.Add(ValueString));
+                ModificationByTrigger("Нож", () => Character.Protagonist.AnimalSkins.Add(ValueString));
 
             else
                 InnerDo(Character.Protagonist);

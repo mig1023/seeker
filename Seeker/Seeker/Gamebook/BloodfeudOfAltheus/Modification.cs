@@ -12,12 +12,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             Character hero = Character.Protagonist;
 
-            bool patron = ValueStringModification("Patron", () => hero.Patron = ValueString);
-            bool wepon = ValueStringModification("Weapon", () => hero.AddWeapons(ValueString));
-            bool armour = ValueStringModification("Armour", () => hero.AddArmour(ValueString));
-            bool fellInto = ValueStringModification("FellIntoFavor", () => hero.FellIntoFavor(ValueString));
-            bool fellOut = ValueStringModification("FellOutOfFavor", () => hero.FellIntoFavor(ValueString, fellOut: true));
-            bool indiff = ValueStringModification("Indifferent", () => hero.FellIntoFavor(ValueString, indifferent: true));
+            bool patron = ModificationByValueString("Patron", () => hero.Patron = ValueString);
+            bool wepon = ModificationByValueString("Weapon", () => hero.AddWeapons(ValueString));
+            bool armour = ModificationByValueString("Armour", () => hero.AddArmour(ValueString));
+            bool fellInto = ModificationByValueString("FellIntoFavor", () => hero.FellIntoFavor(ValueString));
+            bool fellOut = ModificationByValueString("FellOutOfFavor", () => hero.FellIntoFavor(ValueString, fellOut: true));
+            bool indiff = ModificationByValueString("Indifferent", () => hero.FellIntoFavor(ValueString, indifferent: true));
 
             if (patron || wepon || armour || fellInto || fellOut || indiff)
             {
