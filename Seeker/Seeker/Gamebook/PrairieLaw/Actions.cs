@@ -69,6 +69,12 @@ namespace Seeker.Gamebook.PrairieLaw
             else if (option.Contains("САМОРОДКОВ >="))
                 return Game.Other.LevelParse(option) <= Character.Protagonist.Nuggets;
 
+            else if (option.Contains("ПАТРОНОВ >="))
+                return Game.Other.LevelParse(option) <= Character.Protagonist.Cartridges;
+
+            else if (option.Contains("ШКУР >="))
+                return Game.Other.LevelParse(option) <= Character.Protagonist.AnimalSkins.Count;
+
             else
                 return CheckOnlyIfTrigger(option);
         }

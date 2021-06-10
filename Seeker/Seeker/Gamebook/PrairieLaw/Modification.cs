@@ -8,7 +8,12 @@ namespace Seeker.Gamebook.PrairieLaw
     {
         public override void Do()
         {
-            if (Name == "Skin")
+            if (Name == "StrengthByPoison")
+            {
+                if (!Game.Data.Triggers.Contains("Противоядие"))
+                    Character.Protagonist.Strength -= 10;
+            }
+            else if (Name == "Skin")
             {
                 if (Game.Data.Triggers.Contains("Нож"))
                     Character.Protagonist.AnimalSkins.Add(ValueString);
