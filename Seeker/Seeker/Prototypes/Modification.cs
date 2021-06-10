@@ -60,5 +60,16 @@ namespace Seeker.Prototypes
             if ((!not && Game.Data.Triggers.Contains(trigger)) || (not && !Game.Data.Triggers.Contains(trigger)))
                 doModification();
         }
+
+        public bool ValueStringModification(string actualName, ParamMod doModification)
+        {
+            if (!String.IsNullOrEmpty(ValueString) && (Name == actualName))
+            {
+                doModification();
+                return true;
+            }
+            else
+                return false;
+        }
     }
 }

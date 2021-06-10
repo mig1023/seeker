@@ -12,24 +12,17 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             Character hero = Character.Protagonist;
 
-            if (!String.IsNullOrEmpty(ValueString) && (Name == "Patron"))
-                hero.Patron = ValueString;
+            bool patron = ValueStringModification("Patron", () => hero.Patron = ValueString);
+            bool wepon = ValueStringModification("Weapon", () => hero.AddWeapons(ValueString));
+            bool armour = ValueStringModification("Armour", () => hero.AddArmour(ValueString));
+            bool fellInto = ValueStringModification("FellIntoFavor", () => hero.FellIntoFavor(ValueString));
+            bool fellOut = ValueStringModification("FellOutOfFavor", () => hero.FellIntoFavor(ValueString, fellOut: true));
+            bool indiff = ValueStringModification("Indifferent", () => hero.FellIntoFavor(ValueString, indifferent: true));
 
-            else if (!String.IsNullOrEmpty(ValueString) && (Name == "Weapon"))
-                hero.AddWeapons(ValueString);
-
-            else if (!String.IsNullOrEmpty(ValueString) && (Name == "Armour"))
-                hero.AddArmour(ValueString);
-
-            else if (!String.IsNullOrEmpty(ValueString) && (Name == "FellIntoFavor"))
-                hero.FellIntoFavor(ValueString);
-
-            else if (!String.IsNullOrEmpty(ValueString) && (Name == "FellOutOfFavor"))
-                hero.FellIntoFavor(ValueString, fellOut: true);
-
-            else if (!String.IsNullOrEmpty(ValueString) && (Name == "Indifferent"))
-                hero.FellIntoFavor(ValueString, indifferent: true);
-
+            if (patron || wepon || armour || fellInto || fellOut || indiff)
+            {
+                // nothing to do here
+            }
             else if (Name == "DiceShame")
                 hero.Shame += Game.Dice.Roll();
 
