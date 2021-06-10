@@ -63,20 +63,29 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("ЦЕНТОВ >="))
-                return Game.Other.LevelParse(option) <= Character.Protagonist.Cents;
-            
-            else if (option.Contains("САМОРОДКОВ >="))
-                return Game.Other.LevelParse(option) <= Character.Protagonist.Nuggets;
+            foreach (string oneOption in option.Split(','))
+            {
+                if (oneOption.Contains("="))
+                {
+                    int level = Game.Other.LevelParse(oneOption);
 
-            else if (option.Contains("ПАТРОНОВ >="))
-                return Game.Other.LevelParse(option) <= Character.Protagonist.Cartridges;
+                    if (option.Contains("ЦЕНТОВ >=") && (level > Character.Protagonist.Cents))
+                        return false;
 
-            else if (option.Contains("ШКУР >="))
-                return Game.Other.LevelParse(option) <= Character.Protagonist.AnimalSkins.Count;
+                    else if (option.Contains("САМОРОДКОВ >=") && (level > Character.Protagonist.Nuggets))
+                        return false;
 
-            else
-                return CheckOnlyIfTrigger(option);
+                    else if (option.Contains("ПАТРОНОВ >=") && (level > Character.Protagonist.Cartridges))
+                        return false;
+
+                    else if (option.Contains("ШКУР >=") && (level > Character.Protagonist.AnimalSkins.Count))
+                        return false;
+                }
+                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                    return false;
+            }
+
+            return true;
         }
 
         private string LuckNumbers()
