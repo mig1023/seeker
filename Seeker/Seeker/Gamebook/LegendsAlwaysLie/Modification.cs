@@ -12,15 +12,17 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override void Do()
         {
-            if (Name == "InjuriesBySpells")
-                Actions.InjuriesBySpells();
+            bool injuries = ModificationByName("InjuriesBySpells", () => Actions.InjuriesBySpells());
 
-            else if (Name == "FootwrapsNeedReplacingDeadly")
-                Character.Protagonist.Hitpoints -= (Game.Data.Triggers.Contains("Legs") ? 4 : 2);
+            bool footwrapsDeadly = ModificationByName("FootwrapsNeedReplacingDeadly",
+                () => Character.Protagonist.Hitpoints -= (Game.Data.Triggers.Contains("Legs") ? 4 : 2));
 
-            else if (Name == "FootwrapsNeedReplacing")
-                Game.Option.Trigger("Legs");
+            bool footwrapsNeed = ModificationByName("FootwrapsNeedReplacing", () => Game.Option.Trigger("Legs"));
 
+            if (injuries || footwrapsDeadly || footwrapsNeed)
+            {
+                // nothing to do here
+            }
             else if (Name == "Offering")
             {
                 if (Game.Data.Triggers.Contains("RingWithRuby"))
