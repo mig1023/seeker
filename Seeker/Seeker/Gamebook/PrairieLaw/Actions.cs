@@ -64,7 +64,10 @@ namespace Seeker.Gamebook.PrairieLaw
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("ЦЕНТОВ >="))
-                return int.Parse(option.Split('=')[1]) <= Character.Protagonist.Cents;
+                return Game.Other.LevelParse(option) <= Character.Protagonist.Cents;
+            
+            else if (option.Contains("САМОРОДКОВ >="))
+                return Game.Other.LevelParse(option) <= Character.Protagonist.Nuggets;
 
             else
                 return CheckOnlyIfTrigger(option);
@@ -199,8 +202,9 @@ namespace Seeker.Gamebook.PrairieLaw
             bool disabledByUsed = (Price > 0) && Used;
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Cents < Price);
             bool disabledBySkins = (ActionName == "SellSkins") && (Character.Protagonist.AnimalSkins.Count == 0);
+            bool disabledByNuggets = (ActionName == "SellNuggets") && (Character.Protagonist.Nuggets == 0);
 
-            return !(disabledByUsed || disabledByPrice || disabledBySkins);
+            return !(disabledByUsed || disabledByPrice || disabledBySkins || disabledByNuggets);
         }
 
         public List<string> Get()
@@ -264,6 +268,23 @@ namespace Seeker.Gamebook.PrairieLaw
             salesReport.Add(String.Format("GOOD|Вы получили: {0:f2}$", ToDollars(cents)));
 
             Character.Protagonist.Cents += cents;
+
+            return salesReport;
+        }
+        
+        public List<string> SellNuggets()
+        {
+            List<string> salesReport = new List<string>();
+
+            int price = int.Parse(SellPrices);
+            int cents = Character.Protagonist.Nuggets * price;
+            Character.Protagonist.Cents += cents;
+
+            salesReport.Add(String.Format("Вы продали самородков: {0}", Character.Protagonist.Nuggets));
+            salesReport.Add(String.Format("Цена за один: {0:f2}$", ToDollars(price)));
+            salesReport.Add(String.Format("GOOD|Вы получили: {0:f2}$", ToDollars(cents)));
+
+            Character.Protagonist.Nuggets = 0;
 
             return salesReport;
         }

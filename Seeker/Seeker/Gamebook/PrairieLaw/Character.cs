@@ -67,6 +67,19 @@ namespace Seeker.Gamebook.PrairieLaw
             }
         }
         
+        private int _nuggets;
+        public int Nuggets
+        {
+            get => _nuggets;
+            set
+            {
+                if (value < 0)
+                    _nuggets = 0;
+                else
+                    _nuggets = value;
+            }
+        }
+        
         private int _cartridges;
         public int Cartridges
         {
@@ -96,6 +109,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
             Cents = 1500;
             Cartridges = 6;
+            Nuggets = 0;
 
             AnimalSkins = new List<string>();
 
@@ -122,6 +136,7 @@ namespace Seeker.Gamebook.PrairieLaw
             Strength = this.Strength,
             Charm = this.Charm,
             Cents = this.Cents,
+            Nuggets = this.Nuggets,
             Cartridges = this.Cartridges,
         };
 
@@ -133,7 +148,7 @@ namespace Seeker.Gamebook.PrairieLaw
                 lucks.Add(luck ? "1" : "0");
 
             return String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Charm, Cents, Cartridges,
-                String.Join(",", lucks), String.Join(",", AnimalSkins));
+                String.Join(",", lucks), String.Join(",", AnimalSkins), Nuggets);
         }
 
         public override void Load(string saveLine)
@@ -153,7 +168,8 @@ namespace Seeker.Gamebook.PrairieLaw
             for (int i = 0; i < 6; i++)
                 Luck[i + 1] = (lucks[i] == "1");
 
-            AnimalSkins = save[7].Split(',').ToList();
+            AnimalSkins = save[8].Split(',').ToList();
+            Cartridges = int.Parse(save[9]);
         }
     }
 }
