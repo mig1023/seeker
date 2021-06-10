@@ -519,7 +519,7 @@
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить патроны</ButtonName>
 				<Text>Шесть патронов, 1$</Text>
-				<Price>50</Price>
+				<Price>100</Price>
 				<Multiple/>
 				<Benefit Name="Cartridges" Value="6"/>
 				<Aftertext>На случай, если судьба забросит вас на индейскую территорию, лавочник советует запастись подарками для индейцев (любая вещь за полдоллара):</Aftertext>
@@ -4468,8 +4468,62 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>472</ID>
-		<Text>После еды разносчик предлагает взглянуть на товары. Вещи те же, что можно купить в любой деревушке, но цены, цены...\n\n«Цены не нравятся? – смеется Уоррен. – Тогда иди в соседнюю лавочку, приятель!»\n\nОн прав. На много миль вокруг вы не встретите другого торговца. Поэтому вы прекращаете возражения и даже, увидев в коробе патроны, не заикаетесь о том, что продавать индейцам оружие запрещено. За патрон Уоррен требует по доллару. Нож он может продать за 3 доллара, лассо за 2... Можно выбрать что-нибудь для подарка индейцам: зеркальце, пачку жевательного табака, бусы, нарядный пояс – любая вещь за доллар. Есть у разносчика даже динамитная шашка – за 8 монет.\n\nЕсли у вас туго с наличными, Уоррен может купить любую из добытых вами шкур – за 2 доллара.</Text>
+		<Text>После еды разносчик предлагает взглянуть на товары. Вещи те же, что можно купить в любой деревушке, но цены, цены...\n\n«Цены не нравятся? – смеется Уоррен. – Тогда иди в соседнюю лавочку, приятель!»\n\nОн прав. На много миль вокруг вы не встретите другого торговца. Поэтому вы прекращаете возражения и даже, увидев в коробе патроны, не заикаетесь о том, что продавать индейцам оружие запрещено. За патрон Уоррен требует по доллару.</Text>
 		<Actions>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить патрон</ButtonName>
+				<Text>Один патрон, 1$</Text>
+				<Price>100</Price>
+				<Multiple/>
+				<Benefit Name="Cartridges" Value="1"/>
+				<Aftertext>Нож он может продать за 3 доллара, лассо за 2...</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить нож</ButtonName>
+				<Text>Нож, 3$</Text>
+				<Price>300</Price>
+				<Trigger>Нож</Trigger>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить лассо</ButtonName>
+				<Text>Лассо, 2$</Text>
+				<Price>200</Price>
+				<Trigger>Лассо</Trigger>
+				<Aftertext>Можно выбрать что-нибудь для подарка индейцам: зеркальце, пачку жевательного табака, бусы, нарядный пояс – любая вещь за доллар.</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить бусы</ButtonName>
+				<Text>Бусы, 1$</Text>
+				<Trigger>Бусы</Trigger>
+				<Price>100</Price>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить табак</ButtonName>
+				<Text>Жевательный табак, 1$</Text>
+				<Trigger>Табак</Trigger>
+				<Price>100</Price>
+			</Action>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить зеркальце</ButtonName>
+				<Text>Зеркальце, 1$</Text>
+				<Price>100</Price>
+				<Trigger>Зеркальце</Trigger>
+				<Aftertext>Есть у разносчика даже динамитная шашка – за 8 монет.</Aftertext>
+			</Action>	
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Купить динамит</ButtonName>
+				<Text>Динамитная шашка, 8$</Text>
+				<Price>800</Price>
+				<Trigger>Динамитная шашка</Trigger>
+				<Aftertext>Если у вас туго с наличными, Уоррен может купить любую из добытых вами шкур – за 2 доллара.</Aftertext>
+			</Action>
 			<Action>
 				<ActionName>SellSkins</ActionName>
 				<ButtonName>Продать шкуры</ButtonName>
@@ -4480,7 +4534,7 @@
 				<ActionName>SellNuggets</ActionName>
 				<ButtonName>Продать самородки</ButtonName>
 				<SellPrices>50</SellPrices>
-				<Aftertext>А если на вас пояс, расшитый речным перламутром, торговец соблазнится красивой вещицей и предложит за нее доллар.\n\nТорговаться бесполезно. Хотите совершить сделку – воля ваша. А затем попрощайтесь с разносчиком, возьмите Чикиту под уздцы и идите дальше на юго-запад.</Aftertext>
+				<Aftertext>Торговаться бесполезно. Хотите совершить сделку – воля ваша. А затем попрощайтесь с разносчиком, возьмите Чикиту под уздцы и идите дальше на юго-запад.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -5294,7 +5348,7 @@
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить нож</ButtonName>
 				<Text>Нож, 2$</Text>
-				<Price>150</Price>
+				<Price>200</Price>
 				<Trigger>Нож</Trigger>
 			</Action>
 			<Action>
@@ -5320,7 +5374,7 @@
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить патроны</ButtonName>
 				<Text>Шесть патронов, 1$</Text>
-				<Price>50</Price>
+				<Price>100</Price>
 				<Multiple/>
 				<Benefit Name="Cartridges" Value="6"/>
 				<Aftertext>Подарки для индейцев (бусы, зеркала, яркие пояса) – любая вещь за полдоллара:</Aftertext>
