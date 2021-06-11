@@ -63,29 +63,36 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public override bool CheckOnlyIf(string option)
         {
-            foreach (string oneOption in option.Split(','))
+            if (option.Contains("|"))
+                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
+
+            else
             {
-                if (oneOption.Contains("="))
+
+                foreach (string oneOption in option.Split(','))
                 {
-                    int level = Game.Other.LevelParse(oneOption);
+                    if (oneOption.Contains("="))
+                    {
+                        int level = Game.Other.LevelParse(oneOption);
 
-                    if (option.Contains("ЦЕНТОВ >=") && (level > Character.Protagonist.Cents))
-                        return false;
+                        if (option.Contains("ЦЕНТОВ >=") && (level > Character.Protagonist.Cents))
+                            return false;
 
-                    else if (option.Contains("САМОРОДКОВ >=") && (level > Character.Protagonist.Nuggets))
-                        return false;
+                        else if (option.Contains("САМОРОДКОВ >=") && (level > Character.Protagonist.Nuggets))
+                            return false;
 
-                    else if (option.Contains("ПАТРОНОВ >=") && (level > Character.Protagonist.Cartridges))
-                        return false;
+                        else if (option.Contains("ПАТРОНОВ >=") && (level > Character.Protagonist.Cartridges))
+                            return false;
 
-                    else if (option.Contains("ШКУР >=") && (level > Character.Protagonist.AnimalSkins.Count))
+                        else if (option.Contains("ШКУР >=") && (level > Character.Protagonist.AnimalSkins.Count))
+                            return false;
+                    }
+                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
                         return false;
                 }
-                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
-                    return false;
-            }
 
-            return true;
+                return true;
+            }
         }
 
         private string LuckNumbers()
