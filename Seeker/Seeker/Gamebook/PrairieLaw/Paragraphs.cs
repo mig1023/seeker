@@ -39,6 +39,7 @@ namespace Seeker.Gamebook.PrairieLaw
                     HeroWoundsLimit = Game.Xml.BoolParse(xmlAction["HeroWoundsLimit"]),
                     EnemyWoundsLimit = Game.Xml.BoolParse(xmlAction["EnemyWoundsLimit"]),
                     Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
+                    Roulette = Game.Xml.BoolParse(xmlAction["Roulette"]),
                 };
 
                 if (xmlAction["Enemies"] != null)

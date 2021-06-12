@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public int Dices { get; set; }
         public int Price { get; set; }
+        public bool Roulette { get; set; }
         public bool Multiple { get; set; }
         public string SellPrices { get; set; }
         public string RemoveTrigger { get; set; }
@@ -226,8 +227,9 @@ namespace Seeker.Gamebook.PrairieLaw
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Cents < Price);
             bool disabledBySkins = (ActionName == "SellSkins") && (Character.Protagonist.AnimalSkins.Count == 0);
             bool disabledByNuggets = (ActionName == "SellNuggets") && (Character.Protagonist.Nuggets == 0);
+            bool disabledByGame = Roulette && (Character.Protagonist.Cents < 100);
 
-            return !(disabledByUsed || disabledByPrice || disabledBySkins || disabledByNuggets);
+            return !(disabledByUsed || disabledByPrice || disabledBySkins || disabledByNuggets || disabledByGame);
         }
 
         public List<string> Get()
@@ -313,6 +315,31 @@ namespace Seeker.Gamebook.PrairieLaw
             Character.Protagonist.Nuggets = 0;
 
             return salesReport;
+        }
+
+        public List<string> RedOrBlackGame()
+        {
+            List<string> gameReport = new List<string>();
+
+            bool red = (Game.Dice.Roll() > 3 ? true : false);
+            int dice = Game.Dice.Roll();
+            bool even = (dice % 2 == 0);
+
+            gameReport.Add(String.Format("Вы поставили на {0}", (red ? "красное (чёт)" : "чёрное (нечет)")));
+            gameReport.Add(String.Format("На рулетке выпало: {0} - {1}", Game.Dice.Symbol(dice), (even ? "красное" : "чёрное")));
+
+            if (red == even)
+            {
+                gameReport.Add("GOOD|Вы ВЫИГРАЛИ и получили 1$ :)");
+                Character.Protagonist.Cents += 100;
+            }
+            else
+            {
+                gameReport.Add("BAD|Вы ПРОИГРАЛИ и потеряли 1$ :(");
+                Character.Protagonist.Cents -= 100;
+            }
+
+            return gameReport;
         }
 
         private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Strength > (EnemyWoundsLimit ? 2 : 0)).Count() == 0;
