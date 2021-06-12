@@ -342,6 +342,29 @@ namespace Seeker.Gamebook.PrairieLaw
             return gameReport;
         }
 
+        public List<string> DoubleGame()
+        {
+            List<string> gameReport = new List<string>();
+
+            int firstDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            gameReport.Add(String.Format("На рулетке выпали: {0} и {1}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice)));
+
+            if (firstDice == secondDice)
+            {
+                gameReport.Add("GOOD|Цифры совпали - вы ВЫИГРАЛИ и получили 5$ :)");
+                Character.Protagonist.Cents += 500;
+            }
+            else
+            {
+                gameReport.Add("BAD|Вы ПРОИГРАЛИ и потеряли 1$ :(");
+                Character.Protagonist.Cents -= 100;
+            }
+
+            return gameReport;
+        }
+
         private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Strength > (EnemyWoundsLimit ? 2 : 0)).Count() == 0;
 
         private bool FirefightContinue(List<Character> enemies, ref List<string> fight, bool firefight)
