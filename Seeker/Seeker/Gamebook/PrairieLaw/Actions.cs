@@ -365,6 +365,29 @@ namespace Seeker.Gamebook.PrairieLaw
             return gameReport;
         }
 
+        public List<string> DiceLtlGame()
+        {
+            List<string> gameReport = new List<string>();
+
+            int dice = Game.Dice.Roll();
+            bool even = (dice % 2 == 0);
+
+            gameReport.Add(String.Format("На кубике выпало: {0} - {1}", Game.Dice.Symbol(dice), (even ? "чётное" : "нечётное")));
+
+            if (even)
+            {
+                gameReport.Add("GOOD|Вы ВЫИГРАЛИ и получаете 1$ :)");
+                Character.Protagonist.Cents += 100;
+            }
+            else
+            {
+                gameReport.Add("BAD|Вы ПРОИГРАЛИ и потеряли 1$ :(");
+                Character.Protagonist.Cents -= 100;
+            }
+
+            return gameReport;
+        }
+
         public List<string> DiceGame()
         {
             List<string> gameReport = new List<string>();
