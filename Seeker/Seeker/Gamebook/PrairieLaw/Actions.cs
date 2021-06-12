@@ -365,6 +365,50 @@ namespace Seeker.Gamebook.PrairieLaw
             return gameReport;
         }
 
+        public List<string> DiceGame()
+        {
+            List<string> gameReport = new List<string>();
+
+            int dice = Game.Dice.Roll();
+            bool even = (dice % 2 == 0);
+            bool nuggetsGame = Game.Data.Triggers.Contains("Игра на самородок");
+
+            gameReport.Add(String.Format("На кубике выпало: {0} - {1}", Game.Dice.Symbol(dice), (even ? "чётное" : "нечётное")));
+
+            if (even)
+            {
+                gameReport.Add("GOOD|Вы ВЫИГРАЛИ :)");
+
+                if (nuggetsGame)
+                {
+                    gameReport.Add("Самородок теперь ваш.");
+                    Character.Protagonist.Nuggets += 1;
+                }
+                else
+                {
+                    gameReport.Add("Вы выиграли 3 доллара.");
+                    Character.Protagonist.Cents += 300;
+                }
+            }
+            else
+            {
+                gameReport.Add("BAD|Вы ПРОИГРАЛИ :(");
+
+                if (nuggetsGame)
+                {
+                    gameReport.Add("Вы потеряли 1$");
+                    Character.Protagonist.Cents -= 100;
+                }
+                else
+                {
+                    gameReport.Add("Вы потеряли 3$");
+                    Character.Protagonist.Cents -= 300;
+                }
+            }
+
+            return gameReport;
+        }
+
         private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Strength > (EnemyWoundsLimit ? 2 : 0)).Count() == 0;
 
         private bool FirefightContinue(List<Character> enemies, ref List<string> fight, bool firefight)
