@@ -28,6 +28,7 @@ namespace Seeker.Gamebook.PrairieLaw
                     ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
                     Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                     Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+                    RemoveTrigger = Game.Xml.StringParse(xmlAction["RemoveTrigger"]),
                     Text = Game.Xml.StringParse(xmlAction["Text"]),
                     SellPrices = Game.Xml.StringParse(xmlAction["SellPrices"]),
 

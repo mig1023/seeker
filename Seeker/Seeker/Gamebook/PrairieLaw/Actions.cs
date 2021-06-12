@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public int Price { get; set; }
         public bool Multiple { get; set; }
         public string SellPrices { get; set; }
+        public string RemoveTrigger { get; set; }
 
         private double ToDollars(int cents) => (double)cents / 100;
 
@@ -231,6 +232,9 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public List<string> Get()
         {
+            if (!String.IsNullOrEmpty(RemoveTrigger))
+                Game.Option.Trigger(RemoveTrigger, remove: true);
+
             if ((Price > 0) && (Character.Protagonist.Cents >= Price))
             {
                 Character.Protagonist.Cents -= Price;
