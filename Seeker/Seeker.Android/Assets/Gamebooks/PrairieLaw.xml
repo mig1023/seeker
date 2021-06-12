@@ -2817,6 +2817,7 @@
 		<Modifications>
 			<Modification Name="Cents" Value="3000"/>
 		</Modifications>
+		<RemoveTriggers>Часы</RemoveTriggers>
 		<Options>
 			<Option Destination="555"/>
 		</Options>
@@ -6087,7 +6088,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>637</ID>
-		<Text>Хозяин теряет интерес к часам и скучным голосом предлагает за них 7 долларов. Соглашаться или нет – дело ваше.\n\nЕсли вы еще не предлагали Перкинсу серебряный медальон или самородки – можете сделать это сейчас</Text>
+		<Text>Хозяин теряет интерес к часам и скучным голосом предлагает за них 7 долларов. Соглашаться или нет – дело ваше.</Text>		
+		<Actions>
+			<Action>
+				<ActionName>Get</ActionName>
+				<ButtonName>Продать</ButtonName>
+				<Text>Золотые часы, 7$</Text>
+				<Benefit Name="Cents" Value="700"/>
+				<RemoveTrigger>Часы</RemoveTrigger>
+				<Aftertext>Если вы еще не предлагали Перкинсу серебряный медальон или самородки – можете сделать это сейчас.</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="171" Text="Предложить серебряный медальон" OnlyIf="Медальон"/>
 			<Option Destination="237" Text="Предложить самородки" OnlyIf="САМОРОДКОВ >= 1" Aftertext="Если вы делать этого не станете:"/>
