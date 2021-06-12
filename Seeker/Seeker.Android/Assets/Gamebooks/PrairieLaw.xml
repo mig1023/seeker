@@ -2863,7 +2863,15 @@
 	<Paragraph>
 		<ID>291</ID>
 		<Text>Кидайте кубик. Выпало четное число – доллар ваш, нечетное – повезло сопернику. Можете играть сколько угодно раз, лишь бы хватило денег.</Text>
+		<Actions>
+			<Action>
+				<ActionName>DiceLtlGame</ActionName>
+				<Roulette/>
+				<ButtonName>Бросить кубик</ButtonName>
+			</Action>
+		</Actions>
 		<Options>
+			<Option Destination="291" Text="Сыграть ещё раз"/>
 			<Option Destination="360" Text="Вам удалось выиграть подряд, без перерыва, три партии" Aftertext="Если захотите остановиться и идти спать – попрощайтесь с противником и располагайтесь в любой палатке:"/>
 			<Option Destination="247"/>
 		</Options>
