@@ -918,14 +918,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить шубу</ButtonName>
-				<Text>Шуба, 5 скадов</Text>
+				<Text>Шуба</Text>
 				<Trigger>Шуба</Trigger>
 				<Aftertext>Вы можете приобрести Еду по цене 4 скада за одну упаковку; в каждой содержится спрессованная смесь сушеной рыбы, масла и зерна, и ее хватит на несколько дней.</Aftertext>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить еду</ButtonName>
-				<Text>Еда, 4 скада</Text>
+				<Text>Еда</Text>
 				<Price>4</Price>
 				<Multiple/>
 				<Benefit Name="Food" Value="1"/>
@@ -1037,7 +1037,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Оплатить</ButtonName>
-				<Text>ИСПРАВЛЕННАЯ КАРТА, 5 скадов</Text>
+				<Text>ИСПРАВЛЕННАЯ КАРТА</Text>
 				<Price>5</Price>
 				<Trigger>Протей</Trigger>
 				<Aftertext>Если вы согласны на его условия, вычеркните 5 скадов и запишите ключевое слово «Протей». При отказе заплатить, он уничтожит ИД-карту, и вам придется вычеркнуть ее из списка вашего имущества.</Aftertext>
@@ -1667,7 +1667,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Рассказать</ButtonName>
-				<Text>РАССКАЖЕТЕ О МЕСТОНАХОЖДЕНИИ БОШЕ, 10 скадов</Text>
+				<Text>РАССКАЖЕТЕ О МЕСТОНАХОЖДЕНИИ БОШЕ</Text>
 				<Price>10</Price>
 				<Sell/>
 				<RemoveTrigger>Алмаз</RemoveTrigger>
@@ -2221,7 +2221,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Оплатить</ButtonName>
-				<Text>ИСПРАВЛЕННАЯ КАРТА, 5 скадов</Text>
+				<Text>ИСПРАВЛЕННАЯ КАРТА</Text>
 				<Price>5</Price>
 				<Trigger>Протей</Trigger>
 				<Aftertext>Если вы согласны на его условия, то вычеркните 5 скадов и запишите ключевое слово «Протей». Если вы откажетесь заплатить, он уничтожит ИД-карту, и вам придется вычеркнуть ее из списка вашего имущества.</Aftertext>
@@ -2410,7 +2410,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить усилитель</ButtonName>
-				<Text>Большой усилитель, 7 скадов</Text>
+				<Text>Большой усилитель</Text>
 				<Price>7</Price>
 				<Benefit Name="MaxLife" Value="5"/>
 				<Benefit Name="RemoveSkill" ValueString="Ловкость"/>
@@ -2419,7 +2419,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить маску</ButtonName>
-				<Text>Маска затмения, 6 скадов</Text>
+				<Text>Маска затмения</Text>
 				<Price>6</Price>
 				<Trigger>Кожа хамелеона</Trigger>
 				<Aftertext>Маска затмения стоит 6 скадов и дает возможность изменять внешность и цвет кожи. Если вы приобретете этот ретровирус, отметьте на Листе персонажа характеристику «кожа хамелеона».</Aftertext>
@@ -2427,7 +2427,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить проницат</ButtonName>
-				<Text>Несравненный проницат, 4 скада</Text>
+				<Text>Несравненный проницат</Text>
 				<Price>4</Price>
 				<Trigger>Ночное зрение</Trigger>
 				<Aftertext>Несравненный проницат стоит 4 скада и придает способность видеть в полной темноте. Если вы купите этот ретровирус, отметьте на Листе персонажа характеристику «ночное зрение»</Aftertext>
@@ -2579,54 +2579,54 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пистолет</ButtonName>
-				<Text>Бризальный пистолет с 6 выстрелами, 16 скадов</Text>
+				<Text>Бризальный пистолет с 6 выстрелами</Text>
 				<Price>16</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить фокусировщик</ButtonName>
-				<Text>Пси-фокусировщик, 18 скадов</Text>
+				<Text>Пси-фокусировщик</Text>
 				<Price>18</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить очки</ButtonName>
-				<Text>Поляризационные очки, 8 скадов</Text>
+				<Text>Поляризационные очки</Text>
 				<Trigger>Поляризационные очки</Trigger>
 				<Price>8</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить фонарик</ButtonName>
-				<Text>Фонарик, 10 скадов</Text>
+				<Text>Фонарик</Text>
 				<Trigger>Фонарик</Trigger>
 				<Price>10</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить противогаз</ButtonName>
-				<Text>Противогаз, 10 скадов</Text>
+				<Text>Противогаз</Text>
 				<Price>10</Price>
 				<Trigger>Противогаз</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить гранату</ButtonName>
-				<Text>Шумовая граната, 8 скадов</Text>
+				<Text>Шумовая граната</Text>
 				<Price>8</Price>
 				<Trigger>Шумовая граната</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить нож</ButtonName>
-				<Text>Нож, 4 скадов</Text>
+				<Text>Нож</Text>
 				<Price>4</Price>
 				<Aftertext>«Я также покупаю эти вещи, — говорит вам торговец, — за половину озвученной цены».\n\nЭто означает, что вы можете, например, продать ему бризальный пистолет, если он у вас есть, за 8 скадов.\n\n«С чего ты взял, что я захочу что-то продать?» — спрашиваете вы.\n\nЕго губы изгибаются в загадочной полуулыбке. «Я полагаю, ты пришел в Венезию, чтобы отправиться на пароме. Тебе понадобятся деньги на билет».</Aftertext>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Продать пистолет</ButtonName>
-				<Text>Бризальный пистолет, 8 скадов</Text>
+				<Text>Бризальный пистолет</Text>
 				<SellType>Пистолет</SellType>
 				<Price>8</Price>
 				<SellIfAvailable/>
@@ -2634,7 +2634,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Продать очки</ButtonName>
-				<Text>Поляризационные очки, 4 скадов</Text>
+				<Text>Поляризационные очки</Text>
 				<RemoveTrigger>Поляризационные очки</RemoveTrigger>
 				<Price>4</Price>
 				<SellIfAvailable/>
@@ -2642,7 +2642,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Продать фонарик</ButtonName>
-				<Text>Фонарик, 5 скадов</Text>
+				<Text>Фонарик</Text>
 				<RemoveTrigger>Фонарик</RemoveTrigger>
 				<Price>5</Price>
 				<SellIfAvailable/>
@@ -2650,7 +2650,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Продать противогаз</ButtonName>
-				<Text>Противогаз, 5 скадов</Text>
+				<Text>Противогаз</Text>
 				<Price>5</Price>
 				<RemoveTrigger>Противогаз</RemoveTrigger>
 				<SellIfAvailable/>
@@ -2658,7 +2658,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Продать гранату</ButtonName>
-				<Text>Шумовая граната, 4 скада</Text>
+				<Text>Шумовая граната</Text>
 				<Price>4</Price>
 				<RemoveTrigger>Шумовая граната</RemoveTrigger>
 				<Aftertext>Покупайте и продавайте, что душе угодно.</Aftertext>
@@ -3113,7 +3113,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить шубу</ButtonName>
-				<Text>Шуба, 3 скада</Text>
+				<Text>Шуба</Text>
 				<Trigger>Шуба</Trigger>
 				<Aftertext>Когда владелец лавки узнает, что вы путешествуете, он настойчиво предлагает проводить вас во внутренний двор, втиснутый между узкими зданиями, где его кузен торгует животными и рабами.</Aftertext>
 			</Action>
@@ -3163,7 +3163,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить животное</ButtonName>
-				<Text>Буррек, 10 скадов</Text>
+				<Text>Буррек</Text>
 				<Price>10</Price>
 				<Trigger>Буррек</Trigger>
 				<Aftertext>Если вы хотите купить буррека за эту сумму, вычтите ее из ваших сбережений и впишите буррека в Лист персонажа. Учтите, что буррек не занимает места в инвентаре — вам не придется нести его. Вместо этого он будет следовать за вами на привязи. Но если у вас есть аэрокар «Скат», то в покупке буррека нет никакого смысла, поскольку он просто не влезет в кабину.</Aftertext>
@@ -3286,7 +3286,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Продать пистолет</ButtonName>
-				<Text>Бризальный пистолет, 5 скадов</Text>
+				<Text>Бризальный пистолет</Text>
 				<SellType>Пистолет</SellType>
 				<Price>5</Price>
 				<SellIfAvailable/>
@@ -3294,7 +3294,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Продать фонарик</ButtonName>
-				<Text>Фонарик, 5 скадов</Text>
+				<Text>Фонарик</Text>
 				<RemoveTrigger>Фонарик</RemoveTrigger>
 				<Price>5</Price>
 				<SellIfAvailable/>
@@ -3302,7 +3302,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Продать аптечку</ButtonName>
-				<Text>Аптечка, 5 скадов</Text>
+				<Text>Аптечка</Text>
 				<RemoveTrigger>Аптечка</RemoveTrigger>
 				<Price>5</Price>
 				<SellIfAvailable/>
@@ -3310,7 +3310,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Продать порцию</ButtonName>
-				<Text>Еда, 1 скад</Text>
+				<Text>Еда</Text>
 				<SellType>Еда</SellType>
 				<Multiple/>
 				<Price>1</Price>
@@ -3319,7 +3319,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Продать карту</ButtonName>
-				<Text>ИД-карта, 10 скадов</Text>
+				<Text>ИД-карта</Text>
 				<RemoveTrigger>ИД-карта</RemoveTrigger>
 				<Price>10</Price>
 				<SellIfAvailable/>
@@ -3393,28 +3393,28 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить противогаз</ButtonName>
-				<Text>Противогаз, 15 скадов</Text>
+				<Text>Противогаз</Text>
 				<Price>15</Price>
 				<Trigger>Противогаз</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить фонарик</ButtonName>
-				<Text>Фонарик, 8 скадов</Text>
+				<Text>Фонарик</Text>
 				<Price>8</Price>
 				<Trigger>Фонарик</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить аптечку</ButtonName>
-				<Text>Аптечка, 8 скадов</Text>
+				<Text>Аптечка</Text>
 				<Price>8</Price>
 				<Trigger>Аптечка</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить порцию</ButtonName>
-				<Text>Порция еды, 2 скада</Text>
+				<Text>Порция еды</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Food" Value="1"/>
@@ -3422,14 +3422,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить очки</ButtonName>
-				<Text>Поляризационные очки, 6 скадов</Text>
+				<Text>Поляризационные очки</Text>
 				<Price>6</Price>
 				<Trigger>Поляризационные очки</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить верёвку</ButtonName>
-				<Text>Нейлоновая веревка, 3 скадов</Text>
+				<Text>Нейлоновая веревка</Text>
 				<Price>3</Price>
 				<Trigger>Веревка</Trigger>
 				<Aftertext>Покупайте, что хотите, и внесите соответствующие изменения в свой Лист персонажа.</Aftertext>
@@ -3750,7 +3750,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить порцию</ButtonName>
-				<Text>Порция еды, 2 скада</Text>
+				<Text>Порция еды</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Food" Value="1"/>
@@ -3758,21 +3758,21 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить верёвку</ButtonName>
-				<Text>Нейлоновая веревка, 2 скада</Text>
+				<Text>Нейлоновая веревка</Text>
 				<Price>2</Price>
 				<Trigger>Веревка</Trigger>
 			</Action>		
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить лампу</ButtonName>
-				<Text>Лампа, 3 скада</Text>
+				<Text>Лампа</Text>
 				<Trigger>Лампа</Trigger>
 				<Price>3</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить аптечку</ButtonName>
-				<Text>Аптечка, 12 скадов</Text>
+				<Text>Аптечка</Text>
 				<Price>12</Price>
 				<Trigger>Аптечка</Trigger>
 				<Aftertext>Покупайте, что хотите, и внесите соответствующие изменения в Лист персонажа.</Aftertext>
