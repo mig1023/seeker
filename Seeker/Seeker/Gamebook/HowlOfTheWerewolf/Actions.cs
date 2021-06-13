@@ -38,6 +38,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             List<string> enemies = new List<string>();
 
+            if (Price > 0)
+            {
+                string gold = Game.Other.CoinsNoun(Price, "золотой", "золотых", "золотых");
+                return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
+            }
+
             if (!String.IsNullOrEmpty(Text) || (ActionName == "Get"))
                 return new List<string> { Text };
 
