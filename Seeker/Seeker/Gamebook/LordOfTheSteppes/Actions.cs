@@ -47,6 +47,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
             }
 
+            else if (Price > 0)
+            {
+                string coins = Game.Other.CoinsNoun(Price, "монета", "монеты", "монет");
+                return new List<string> { String.Format("{0}, {1} {2}", Text, Price, coins) };
+            }
+
             else if (!String.IsNullOrEmpty(Text) || (ActionName == "Get"))
                 return new List<string> { Text };
 
