@@ -23,7 +23,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить соленой рыбы</ButtonName>
-				<Text>СОЛЕНАЯ РЫБА, 3 монеты</Text>
+				<Text>СОЛЕНАЯ РЫБА</Text>
 				<Price>3</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть соленой рыбы,3"/>
@@ -32,7 +32,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить вяленой рыбы</ButtonName>
-				<Text>ВЯЛЕНАЯ РЫБА, 2 монеты</Text>
+				<Text>ВЯЛЕНАЯ РЫБА</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть вяленой рыбы,3"/>
@@ -41,7 +41,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить мед</ButtonName>
-				<Text>МЕД, 2 монеты</Text>
+				<Text>МЕД</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Поесть меда,3"/>
@@ -50,7 +50,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить молоко</ButtonName>
-				<Text>МОЛОКО, 2 монеты</Text>
+				<Text>МОЛОКО</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Попить молока,3"/>
@@ -183,7 +183,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Оплатить обед</ButtonName>
-				<Text>ПРИЛИЧНЫЙ ОБЕД, 4 монеты</Text>
+				<Text>ПРИЛИЧНЫЙ ОБЕД</Text>
 				<Price>4</Price>
 				<Benefit Name="Endurance" Value="4"/>
 				<Aftertext>Кроме еды в трактире, разумеется, имеется отличное пиво - 1 кружка на три глотка стоит 2 монеты и восстановит 3 Жизни:</Aftertext>
@@ -191,7 +191,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать пива</ButtonName>
-				<Text>КРУЖКА ПИВА, 2 монеты</Text>
+				<Text>КРУЖКА ПИВА</Text>
 				<Price>2</Price>
 				<Benefit Name="Endurance" Value="3"/>
 				<Aftertext>Можете сделать заказ или сказать слуге, что еще не надумали, чего вы хотите. Слуга собирается уйти, но вы задерживаете его и расспрашиваете о посетителях. Парень бойко рассказывает о тех, кого он видит в заведении не в первый раз. В углу сидит старик-ростовщик, дом которого, по словам слуги, набит деньгами. Но взаймы он дает только большие суммы и только тем, кто заказывает еды не больше, чем он сам, а он питается очень скромно. «Таким образом, - шепчет слуга, - он определяет, растранжирит ли его деньги заемщик или будет экономить. Вообще он немного не в себе, об этом все знают». За остальными столами сидят купцы, ремесленники, приезжие крестьяне. Многих из них слуга знает, но не советует подсаживаться к их тесным компаниям, которые не принимают чужаков.\n\n- Если хочешь послушать интересную историю, - советует слуга, - подсядь к центральному столу, - после чего убегает к вновь подошедшему посетителю.</Aftertext>
@@ -210,7 +210,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Оплатить ужин</ButtonName>
-				<Text>ПРЕВОСХОДНЫЙ УЖИН, 3 монеты</Text>
+				<Text>ПРЕВОСХОДНЫЙ УЖИН</Text>
 				<Price>3</Price>
 				<Benefit Name="Endurance" Value="3"/>
 				<Aftertext>а также может приготовить еды в дорогу (1 порция стоит 2 монеты, восстановит 3 Жизни):</Aftertext>
@@ -218,7 +218,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить порцию</ButtonName>
-				<Text>ПОРЦИЯ ЕДЫ, 2 монеты</Text>
+				<Text>ПОРЦИЯ ЕДЫ</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Поесть,3"/>
@@ -227,7 +227,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить вина</ButtonName>
-				<Text>ВИНО, 2 монеты</Text>
+				<Text>ВИНО</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить вина,3"/>
@@ -236,7 +236,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пива</ButtonName>
-				<Text>ПИВО, 1 монета</Text>
+				<Text>ПИВО</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить пива,2"/>
@@ -334,7 +334,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать кваса</ButtonName>
-				<Text>ХОЛОДНЫЙ КВАС, 1 монета</Text>
+				<Text>ХОЛОДНЫЙ КВАС</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Endurance" Value="1"/>
@@ -343,7 +343,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать пива</ButtonName>
-				<Text>ПИВО, 2 монеты</Text>
+				<Text>ПИВО</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Endurance" Value="2"/>
@@ -352,7 +352,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Налить во фляжку кваса</ButtonName>
-				<Text>ХОЛОДНЫЙ КВАС, 1 монета</Text>
+				<Text>ХОЛОДНЫЙ КВАС</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить кваса,1"/>
@@ -361,7 +361,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Налить во фляжку пива</ButtonName>
-				<Text>ПИВО, 2 монеты</Text>
+				<Text>ПИВО</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить пива,2"/>
@@ -370,7 +370,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать обед</ButtonName>
-				<Text>ОБЕД, 3 монеты</Text>
+				<Text>ОБЕД</Text>
 				<Price>3</Price>
 				<Benefit Name="Endurance" Value="4"/>
 				<Aftertext>Вы расспрашиваете трактирщика о посетителях. Многих из них он знает: это небогатые купцы, совершающие один из многочисленных переходов, местные крестьяне, ученики ремесленников и другие путешественники, которые стараются не лезть туда, куда не следует. Также трактирщик обращает ваше внимание на одного из крестьян, который уже прилично набрался и заснул прямо за столом. Хозяин не советует разговаривать с ним, так как в последнее время его преследуют неудачи, и он запросто может заразить вас своим невезением. Вы благодарите трактирщика за информацию, и тот уходит.</Aftertext>
@@ -759,7 +759,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить первый меч</ButtonName>
-				<Text>Меч, 30 монет</Text>
+				<Text>Меч</Text>
 				<Price>30</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 				<Aftertext>второй стоимостью 27 монет, наносит урон в 3 Жизни при точном ударе:</Aftertext>
@@ -767,7 +767,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить второй меч</ButtonName>
-				<Text>Меч, 27 монет</Text>
+				<Text>Меч</Text>
 				<Price>27</Price>
 				<Benefit Name="ExtendedDamage"/>
 				<Aftertext>третий стоимостью 38 монет, прибавит 1 к Нападению, 1 к Инициативе и наносит урон в 3 Жизни при каждом точном ударе:</Aftertext>
@@ -775,7 +775,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить третий меч</ButtonName>
-				<Text>Меч, 38 монет</Text>
+				<Text>Меч</Text>
 				<Price>38</Price>	
 				<Benefit Name="ExtendedDamage"/>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -1055,7 +1055,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пропуск</ButtonName>
-				<Text>Пропуск к хану, 10 монет</Text>
+				<Text>Пропуск к хану</Text>
 				<Price>10</Price>
 				<Trigger>Пропуск к хану</Trigger>
 				<Aftertext>Незнакомец подробно объяснил, что за пропуск он предлагает, поэтому вам остается лишь решить - брать его или нет. Если вы купите бумагу с причудливой росписью под текстом и большой печатью внизу, то придется положить ее в вещмешок, заняв целое место.\n\nМожет, вам приглянется еще что-нибудь из того, что есть у незнакомца?</Aftertext>
@@ -1121,7 +1121,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать ужин</ButtonName>
-				<Text>УЖИН, 3 монеты</Text>
+				<Text>УЖИН</Text>
 				<Price>3</Price>
 				<Benefit Name="Endurance" Value="2"/>
 				<Aftertext>Если захотите отведать местного вина или пива, то сделайте это - один глоток стоит 2 монеты и восстановит 2 Жизни:</Aftertext>
@@ -1129,7 +1129,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать пива</ButtonName>
-				<Text>КРУЖКА ПИВА, 2 монеты</Text>
+				<Text>КРУЖКА ПИВА</Text>
 				<Price>2</Price>
 				<Benefit Name="Endurance" Value="2"/>
 				<Aftertext>Хозяин готов наполнить своими хмельными напитками любые емкости, чтобы вы могли насладиться вином или пивом в дороге</Aftertext>
@@ -1137,7 +1137,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Налить пива во флягу</ButtonName>
-				<Text>ВЗЯТЬ С СОБОЙ ПИВА, 2 монеты</Text>
+				<Text>ВЗЯТЬ С СОБОЙ ПИВА</Text>
 				<Price>2</Price>
 				<Benefit Name="Healing" ValueString="Выпить пива,2"/>
 				<Aftertext>Делайте заказ, а пока хозяин не ушел, можете поболтать с ним еще.\n\nТрактирщик сообщает, что большинство посетителей в его заведении - это местные воины, прожигающие свое жалованье за чаркой. Вместе с тем он советует обратить внимание на старика, сидящего в углу. По словам хозяина, этот странник гостит у него уже два дня и рассказывает интересные истории.</Aftertext>
@@ -1163,7 +1163,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заплатить</ButtonName>
-				<Text>ПЕРЕКУСИТЬ, 1 монета</Text>
+				<Text>ПЕРЕКУСИТЬ</Text>
 				<Price>1</Price>
 				<Benefit Name="Endurance" Value="2"/>
 				<Aftertext>Вы сообщаете лавочнику, что продукты интересуют вас в меньшей степени и спрашиваете, какие товары у него сейчас есть. Торговец разводит руками, поясняя, что все, что он заказывал, уже раскупили, так как крестьяне сразу забирают свои заказы после их прибытия. Все же хозяин просит вас подождать и ненадолго выходит в соседнюю комнату. Возвращается он с небольшим мешочком и с пузырьком, наполненным жидкостью, похожей на молоко. Торговец рассказывает, что эти предметы его уговорил купить проезжавший мимо знахарь. Теперь лавочник не знает, зачем он их взял, и готов уступить по той цене, которую заплатил сам. В мешочке - ревень и листья алоэ, за них хозяин просит 2 монеты; в пузырьке - сильное снотворное, стоит оно 3 монеты:</Aftertext>
@@ -1171,7 +1171,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить снотворное</ButtonName>
-				<Text>Снотворное, 3 монеты</Text>
+				<Text>Снотворное</Text>
 				<Price>3</Price>
 				<Trigger>Снотворное</Trigger>
 				<Aftertext>Больше торговцу предложить нечего, поэтому выбирайте из того, что есть.\n\nЗадержавшись, вы расспрашиваете лавочника, как можно пройти дальше на юг. Хозяин сообщает, что без лодки путешествовать будет неудобно, но вы можете просто пойти вдоль реки или перейти ее вброд и поискать тропинку через лес к Старому городу. Только теперь вы замечаете, что кроме вас и хозяина в лавке находится еще один человек. Это бледный длинноволосый мужчина, неспешно потягивающий медовуху из кувшина. Осторожно осведомившись у хозяина, вы узнаете, что вы не единственный путешественник, пришедший сегодня в Мелководье. Странник, сидящий за столом, пришел раньше вас, расспрашивал о чем-то жителей деревни, а затем зашел к нему в лавку и заказал медовухи. Вы решаете переговорить с незнакомцем, но, обернувшись, замечаете, что тот уже опустошил свой кувшин и вышел на улицу. Бросив беглый взгляд на скамью, на которой он сидел, замечаете на ней мокрое пятно. Может, странный незнакомец навел вас на какие-нибудь мысли?</Aftertext>
@@ -1527,7 +1527,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить амулет</ButtonName>
-				<Text>АМУЛЕТ С ПЕРЬЯМИ, 5 монет</Text>
+				<Text>АМУЛЕТ С ПЕРЬЯМИ</Text>
 				<Price>5</Price>
 				<Trigger>Амулет с перьями</Trigger>
 				<Aftertext>Теперь путь впереди свободен, и вы идете дальше. Купец семенит рядом, болтая без умолку. За короткий промежуток времени вы узнаете, какие товары пользуются спросом в Полесье и как правильно разложить их на полке магазина, чтобы привлечь больше покупателей. Все это, конечно, интересно и занимательно, но совершенно вам не нужно, и болтовня словоохотливого попутчика очень быстро надоедает. Поэтому, когда справа появляется широкая тропинка, убегающая в лес, вы всерьез задумываетесь о том, чтобы свернуть на нее. Она ведет на юго-запад и, возможно, соединяет эту дорогу с Купеческим трактом. Но быть в этом абсолютно уверенным нельзя: возможно, она заканчивается в лесу или, сделав петлю, возвращается на ту же дорогу, на которой вы стоите сейчас. Впрочем, перспектива пройтись в прохладной тени деревьев после изматывающего солнцепека кажется заманчивой. Вы интересуетесь у купца, не знает ли он, куда ведет тропинка, но он отрицательно мотает головой, напоминая, что совершенно не знаком с местными лесами. Сам он не собирается сворачивать и пойдет дальше по дороге, даже если вы покинете его. Впрочем, он замечает, что идти ему осталось совсем недолго, и он уверен, что дальше сможет дойти без приключений в одиночестве. Итак:</Aftertext>
@@ -2143,7 +2143,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить короткий меч</ButtonName>
-				<Text>КОРОТКИЙ МЕЧ, 25 монет</Text>
+				<Text>КОРОТКИЙ МЕЧ</Text>
 				<Price>25</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 				<Benefit Name="ExtendedDamage"/>
@@ -2153,7 +2153,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить длинный кинжал</ButtonName>
-				<Text>ДЛИННЫЙ КИНЖАЛ, 28 монет</Text>
+				<Text>ДЛИННЫЙ КИНЖАЛ</Text>
 				<Price>28</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -2163,7 +2163,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить зелье Скорости</ButtonName>
-				<Text>ЗЕЛЬЕ СКОРОСТИ, 5 монет</Text>
+				<Text>ЗЕЛЬЕ СКОРОСТИ</Text>
 				<Price>5</Price>
 				<Benefit Name="MaxInitiative" Value="2"/>
 				<Aftertext>Зелье Выздоровления восстановит 6 Жизней (можно выпить сразу или частями):</Aftertext>
@@ -2171,7 +2171,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить зелье Выздоровления</ButtonName>
-				<Text>ЗЕЛЬЕ ВЫЗДОРОВЛЕНИЯ, 3 монет</Text>
+				<Text>ЗЕЛЬЕ ВЫЗДОРОВЛЕНИЯ</Text>
 				<Price>3</Price>
 				<Benefit Name="Healing" ValueString="Выпить зелье Выздоровления,6"/>
 				<Aftertext>зелье Жизни восстановит здоровье полностью:</Aftertext>
@@ -2179,7 +2179,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить зелье Жизни</ButtonName>
-				<Text>ЗЕЛЬЕ ЖИЗНИ, 5 монет</Text>
+				<Text>ЗЕЛЬЕ ЖИЗНИ</Text>
 				<Price>5</Price>
 				<Benefit Name="Healing" ValueString="Выпить зелье Жизни,-1"/>
 				<Aftertext>Вы спрашиваете у древня насчет свитков, о которых он упоминал, но, оказывается, он заикнулся о них только для того, чтобы вы согласились посмотреть его товары. И все-таки у него есть один пергамент, но и его карлик не хочет продавать за деньги. Вы можете заглянуть в свой мешок и предложить торговцу что-нибудь на обмен, если вас заинтересовал его свиток, предназначение которого он пока рассказывать не хочет.\n\nЗакончив с торговлей, вы можете поговорить с карликом, расспросив его о предстоящем пути или покинуть его лавку. Если вы останетесь, то решите, о чем будете спрашивать:</Aftertext>
@@ -2358,7 +2358,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать медовухи</ButtonName>
-				<Text>МЕДОВУХА, 1 монета</Text>
+				<Text>МЕДОВУХА</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Endurance" Value="2"/>
@@ -2367,7 +2367,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Налить воды во флягу</ButtonName>
-				<Text>ВОДА, 1 монета</Text>
+				<Text>ВОДА</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Попить воды,1"/>
@@ -2376,7 +2376,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать обед</ButtonName>
-				<Text>ЦЕЛЫЙ ОБЕД, 3 монета</Text>
+				<Text>ЦЕЛЫЙ ОБЕД</Text>
 				<Price>3</Price>
 				<Multiple/>
 				<Benefit Name="Endurance" Value="7"/>
@@ -2385,7 +2385,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать жаркое</ButtonName>
-				<Text>ЖАРКОЕ, 2 монета</Text>
+				<Text>ЖАРКОЕ</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Endurance" Value="5"/>
@@ -2555,7 +2555,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить доспех</ButtonName>
-				<Text>ДОСПЕХ, 15 монет</Text>
+				<Text>ДОСПЕХ</Text>
 				<Price>15</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
 				<Benefit Name="MaxEndurance" Value="2"/>
@@ -3028,7 +3028,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Продать бумаги</ButtonName>
-				<Text>БУМАГИ ЛАЗУТЧИКОВ, 3 монеты</Text>
+				<Text>БУМАГИ ЛАЗУТЧИКОВ</Text>
 				<Price>-3</Price>
 				<Aftertext>После того, как примете решение, вернитесь и посмотрите, что еще предлагает вам новый знакомый.</Aftertext>
 			</Action>
@@ -3255,7 +3255,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить еды в дорогу</ButtonName>
-				<Text>ЕДА В ДОРОГУ, 2 монеты</Text>
+				<Text>ЕДА В ДОРОГУ</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть дорожной еды,3"/>
@@ -4318,7 +4318,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Продать кинжал</ButtonName>
-				<Text>КИНЖАЛ ИЗ ТАЙНИКА, 7 монет</Text>
+				<Text>КИНЖАЛ ИЗ ТАЙНИКА</Text>
 				<Price>-7</Price>
 				<Aftertext>После этого странник, сославшись на усталость, покинет вас, поднявшись в свою комнату, вы же спокойно поужинайте, если что-нибудь заказывали, и возвращайтесь на улицу.</Aftertext>
 			</Action>
@@ -4876,7 +4876,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить сыр</ButtonName>
-				<Text>СЫР, 2 монеты</Text>
+				<Text>СЫР</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Trigger>Сыр</Trigger>
@@ -4886,7 +4886,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пива</ButtonName>
-				<Text>ПИВО, 2 монеты</Text>
+				<Text>ПИВО</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить пива,2"/>
@@ -5090,7 +5090,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить первое зелье</ButtonName>
-				<Text>ПЕРВОЕ ЗЕЛЬЕ, 1 монета</Text>
+				<Text>ПЕРВОЕ ЗЕЛЬЕ</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить зелье восстановления по 1 жизни,1"/>
@@ -5098,7 +5098,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить второе зелье</ButtonName>
-				<Text>ВТОРОЕ ЗЕЛЬЕ, 2 монеты</Text>
+				<Text>ВТОРОЕ ЗЕЛЬЕ</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить зелье восстановления по 3 жизни,3"/>
@@ -5106,7 +5106,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить третье зелье</ButtonName>
-				<Text>ТРЕТЬЕ ЗЕЛЬЕ, 3 монеты</Text>
+				<Text>ТРЕТЬЕ ЗЕЛЬЕ</Text>
 				<Price>3</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить зелье восстановления по 5 жизней,5"/>
@@ -5115,7 +5115,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить четвёртое зелье</ButtonName>
-				<Text>ЧЕТВЁРТОЕ ЗЕЛЬЕ, 5 монет</Text>
+				<Text>ЧЕТВЁРТОЕ ЗЕЛЬЕ</Text>
 				<Price>5</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить зелье восстановления по 9 жизней,9"/>
@@ -5123,7 +5123,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пятое зелье</ButtonName>
-				<Text>ПЯТОЕ ЗЕЛЬЕ, 6 монет</Text>
+				<Text>ПЯТОЕ ЗЕЛЬЕ</Text>
 				<Price>6</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить зелье восстановления по 12 жизней,12"/>
@@ -5132,7 +5132,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить зелье Силы Медведя</ButtonName>
-				<Text>ЗЕЛЬЕ СИЛЫ МЕДВЕДЯ, 10 монет</Text>
+				<Text>ЗЕЛЬЕ СИЛЫ МЕДВЕДЯ</Text>
 				<Price>10</Price>
 				<Multiple/>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -5142,7 +5142,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить зелье Ловкости</ButtonName>
-				<Text>ЗЕЛЬЕ ЛОВКОСТИ, 7 монет</Text>
+				<Text>ЗЕЛЬЕ ЛОВКОСТИ</Text>
 				<Price>7</Price>
 				<Multiple/>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -5200,7 +5200,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить первый меч</ButtonName>
-				<Text>МЕЧ, 35 монет</Text>
+				<Text>МЕЧ</Text>
 				<Price>35</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 				<Aftertext>Второй - прибавит 1 к Нападению и 2 к Инициативе:</Aftertext>
@@ -5208,7 +5208,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить второй меч</ButtonName>
-				<Text>МЕЧ, 38 монет</Text>
+				<Text>МЕЧ</Text>
 				<Price>38</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 				<Benefit Name="MaxInitiative" Value="2"/>
@@ -5217,7 +5217,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кольчугу</ButtonName>
-				<Text>КОЛЬЧУГА, 45 монет</Text>
+				<Text>КОЛЬЧУГА</Text>
 				<Price>45</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
 				<Benefit Name="MaxEndurance" Value="1"/>
@@ -5309,7 +5309,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Налить воды во флягу</ButtonName>
-				<Text>ВОДА, 2 монеты</Text>
+				<Text>ВОДА</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Попить воды,1,1"/>
@@ -5318,7 +5318,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить вяленой рыбы</ButtonName>
-				<Text>ВЯЛЕНАЯ РЫБА, 1 монета</Text>
+				<Text>ВЯЛЕНАЯ РЫБА</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть маленькую вяленую рыбу,1"/>
@@ -5327,7 +5327,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить шлем</ButtonName>
-				<Text>ШЛЕМ ИЗ ТОЛСТОЙ КОЖИ, 10 монет</Text>
+				<Text>ШЛЕМ ИЗ ТОЛСТОЙ КОЖИ</Text>
 				<Price>10</Price>
 				<Benefit Name="MaxEndurance" Value="1"/>
 				<Aftertext>Остальные товары, хотя торговец их и нахваливает изо всех сил, - это ненужные вам сейчас безделушки, которые пригодятся разве что в качестве сувениров, так что выбирать придется лишь из перечисленного скудного ассортимента.\n\nЗакончив с делами, вы расспрашиваете торговца, какие дороги на юг наиболее безопасны. Но степняк лишь пожимает плечами: он предпочитает ходить по тракту, и другие пути не знает, а встреченные им военные отряды никогда его не останавливали. Понимая, что этот человек не сможет посоветовать вам ничего дельного, вы прощаетесь и собираетесь уйти из шатра, когда замечаете любопытный мешочек, лежащий между товарами, о котором торговец, как вам помнится, ничего не говорил.\n\n- А что в этом мешочке? - интересуетесь вы.\n\n- О, прошу прощения, я просто забыл убрать его с прилавка, - степняк суетливо прячет замеченную вами вещь. - Этот товар уже куплен.\n\n- А все-таки: что в нем?\n\n- Это редкий сбор трав, найти которые непросто даже знающим людям, - объясняет торговец. - В это время года большинство из них не растет, поэтому такой сбор часто называют сбором весенних трав. Этот я купил у одного следопыта, и я считаю, что мне крупно повезло: даже весной, когда можно найти нужные растения, мало кто согласится продать тебе такой набор трав. Я бы продал тебе эти травы за хорошую цену, но я уже пообещал своему другу алхимику из Стоянки, что порадую его отличным подарком на его сорокалетие, а ничего кроме этого сбора у меня нет.\n\nУговаривать торговца продать вам мешочек со сбором бесполезно. Но можно предложить ему что-нибудь взамен - что-то такое, что будет не менее достойным подарком на юбилей друга. Загляните в мешок - может, там найдется подходящая вещь? Разумеется, это должен быть предмет, который понравится именно алхимику. Если у вас нет ничего на обмен или сбор весенних трав вам попросту не нужен:</Aftertext>
@@ -5355,7 +5355,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Перекусить</ButtonName>
-				<Text>ХЛЕБ и СВЕЖИЕ ОВОЦИ, 1 монета</Text>
+				<Text>ХЛЕБ и СВЕЖИЕ ОВОЦИ</Text>
 				<Price>1</Price>
 				<Benefit Name="Endurance" Value="2"/>
 				<Aftertext>Вы спрашиваете у хозяина, что у него есть в продаже еще, но тот лишь разводит руками и отвечает, что свои заказы крестьяне забирают сразу, да и вряд ли у него есть что-нибудь, что заинтересует вас. Все же он просит вас подождать и ненадолго выходит в соседнюю комнату. Возвращается он с небольшим мешочком и с пузырьком, наполненным жидкостью, похожей на молоко. Торговец рассказывает, что эти предметы его уговорил купить проезжавший мимо знахарь. Теперь лавочник не знает, зачем он их взял, и готов уступить по той цене, которую заплатил сам. В мешочке - ревень и листья алоэ, за них хозяин просит 2 монеты; в пузырьке - сильное снотворное:</Aftertext>
@@ -5363,7 +5363,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить снотворное</ButtonName>
-				<Text>Снотворное, 3 монеты</Text>
+				<Text>Снотворное</Text>
 				<Price>3</Price>
 				<Trigger>Снотворное</Trigger>
 				<Aftertext>Больше торговцу предложить нечего, поэтому выбирайте из того, что есть.\n\nПоболтав с лавочником еще, вы узнаете, что совсем недавно, три дня назад, трое путников, проходивших через Мелководье, купили у него еды в дорогу, после чего уплыли на лодке. После их ухода хозяин обнаружил, что проходимцы расплатились с ним фальшивыми монетами. Направились они по реке в сторону Смолянки, но они вполне могли высадиться, не доезжая до нее. Торговец не потерпел большого убытка, поэтому не стал разыскивать мошенников, однако вам советует быть осторожнее. Как выглядели путники, лавочник не запомнил, заприметив лишь красный кафтан у одного из них.\n\nВы благодарите торговца за совет и выходите из лавки. Больше в деревне делать нечего, поэтому пора покинуть ее.</Aftertext>
@@ -5586,7 +5586,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать хмельного</ButtonName>
-				<Text>ХМЕЛЬНОЙ НАПИТОК, 3 монеты</Text>
+				<Text>ХМЕЛЬНОЙ НАПИТОК</Text>
 				<Price>3</Price>
 				<Benefit Name="Endurance" Value="3"/>
 				<Aftertext>Если желаете утолить голод, хозяин подаст вам превосходный ужин за 4 монеты:</Aftertext>
@@ -5594,7 +5594,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать ужин</ButtonName>
-				<Text>УЖИН, 4 монеты</Text>
+				<Text>УЖИН</Text>
 				<Price>4</Price>
 				<Aftertext>Присев за свободный столик, вы присматриваетесь к посетителям. Многие из них выглядят весьма подозрительно. Вас это, впрочем, не удивляет: Каменка, через которую проходит множество путников, всегда был прибежищем различных жуликов и проходимцев, и власти который год безуспешно пытаются с этим бороться.\n\nПока вы думаете, насколько безопасно обсуждать что-либо в этом месте, за ваш столик подсаживается худощавый мужчина в черной куртке. Краем глаза вы замечаете, что на поясе у него висит удобный короткий меч.\n\n- Не желаешь сыграть в зернь, путник? Ставка - 2 монеты. Согласен? - бойко тарахтит ваш собеседник.\n\nЗернь - это игра в кости, каждая из которых раскрашена всего в два цвета: три грани в белый и три - в черный. Играющие выбирают свой цвет, после чего кидают три кости. Выигрывает тот, чей цвет выпадет хотя бы на двух кубиках.</Aftertext>
 			</Action>
@@ -5644,7 +5644,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать кваса</ButtonName>
-				<Text>ШЕЛКОВАЯ НАКИДКА, 8 монет</Text>
+				<Text>ШЕЛКОВАЯ НАКИДКА</Text>
 				<Price>8</Price>
 				<Trigger>Шелковая накидка</Trigger>
 				<Aftertext>Если вы ее купите, то аккуратно сложите и уберите в вещмешок, чтобы надеть при случае.\n\nДогадавшись, что вы не часто бываете в здешних местах, степняк также сообщает, что готов дать один полезный совет всего за 1 монету. Это небольшая цена за информацию, и вы немного потеряете, даже если она окажется никчемной.\n\nСуровые телохранители торговца не произносят ни слова, но внимательно следят за каждым вашим движениям. Один из них держит в руках заряженный самострел, а другой играет метательным кинжалом. Быстро заметив все это, вы решаете, что не стоит испытывать судьбу и пытаться нападать на этих людей. Решайте:</Aftertext>
@@ -5669,7 +5669,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить охранную грамоту</ButtonName>
-				<Text>Охранная грамота, 5 монет</Text>
+				<Text>Охранная грамота</Text>
 				<Price>5</Price>
 				<Trigger>Охранная грамота</Trigger>
 				<Aftertext>Этот небольшой листок бумаги с корявым текстом на языке степняков и потрескавшейся печатью не слишком велик и, если его сложить, поместится в мешочке для денег. В любом случае можете посмотреть, что еще предлагает ваш собеседник.</Aftertext>
@@ -6081,7 +6081,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить отвар подорожника</ButtonName>
-				<Text>ОТВАР ПОДОРОЖНИКА, 2 монеты</Text>
+				<Text>ОТВАР ПОДОРОЖНИКА</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить отвар подорожника,4"/>
@@ -6090,7 +6090,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить цветочный отвар</ButtonName>
-				<Text>ЦВЕТОЧНЫЙ ОТВАР, 3 монеты</Text>
+				<Text>ЦВЕТОЧНЫЙ ОТВАР</Text>
 				<Price>3</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить цветочный отвар,7"/>
@@ -6099,7 +6099,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пучок подорожника</ButtonName>
-				<Text>ПУЧОК ПОДОРОЖНИКА, 1 монета</Text>
+				<Text>ПУЧОК ПОДОРОЖНИКА</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Приложить подорожник,1"/>
@@ -6108,7 +6108,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить листья лечебного лопуха</ButtonName>
-				<Text>ЛИСТЬЯ ЛЕЧЕБНОГО ЛОПУХА, 2 монеты</Text>
+				<Text>ЛИСТЬЯ ЛЕЧЕБНОГО ЛОПУХА</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Приложить лечебный лопух,2"/>
@@ -6117,7 +6117,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить противоядие</ButtonName>
-				<Text>ПРОТИВОЯДИЕ, 3 монеты</Text>
+				<Text>ПРОТИВОЯДИЕ</Text>
 				<Price>3</Price>
 				<Trigger>Противоядие</Trigger>
 				<Aftertext>Можете взять всего столько, сколько хотите - запасов местного лекаря на вас хватит.  Также всего за 1 монету он залечит все ваши раны, если они есть:</Aftertext>
@@ -6125,7 +6125,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Залечить</ButtonName>
-				<Text>ЗАЛЕЧИТЬ ВСЕ РАНЫ, 1 монета</Text>
+				<Text>ЗАЛЕЧИТЬ ВСЕ РАНЫ</Text>
 				<Price>1</Price>
 				<Benefit Name="Endurance" Restore="true"/>
 				<Aftertext>На вопрос, есть ли у него какая-нибудь тара, знахарь кивает головой и приносит пузырьки из стекла - сравнительно редкого материала в Полесье. Можете взять столько пузырьков, сколько понадобится, у знахаря их предостаточно, ведь он сам делает их, но в пути это не самая удобная тара - вмещает жидкости всего на один глоток, занимает 1 место в мешке, а стоит целую монету. Определившись с покупками, вы интересуетесь у хозяина, а не поделится ли он своими знаниями с вами - за соответственную плату, естественно. Знахарь интересуется, зачем воину возиться с травами. Вы собрались уже рассказать ему давно заученную версию насчет путешествия на пограничную заставу, но, взглянув в испытующие глаза собеседника, заминаетесь. Что-то здесь не так. Показалось или он правда хочет услышать от вас нечто большее, чем ни на что не обязывающий ответ? Если это так, то возникает другой вопрос: кто он, друг или враг? Но читать мысли вы не умеете, поэтому придется действовать наугад, тем более хозяин ждет ответа.</Aftertext>
@@ -6703,14 +6703,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить меч</ButtonName>
-				<Text>МЕЧ, 20 монет</Text>
+				<Text>МЕЧ</Text>
 				<Price>20</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кольчугу</ButtonName>
-				<Text>КОЛЬЧУГА, 30 монет</Text>
+				<Text>КОЛЬЧУГА</Text>
 				<Price>30</Price>
 				<Benefit Name="MaxDefence" Value="2"/>
 				<Benefit Name="MaxAttack" Value="-1"/>
@@ -7225,7 +7225,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить хлебцы</ButtonName>
-				<Text>ХЛЕБЦЫ, 2 монеты</Text>
+				<Text>ХЛЕБЦЫ</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть хлебец,2"/>
@@ -7234,7 +7234,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить сок из ягод</ButtonName>
-				<Text>СОК ИЗ ЯГОД, 1 монета</Text>
+				<Text>СОК ИЗ ЯГОД</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить сок из ягод,2"/>
@@ -7243,7 +7243,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить солонины</ButtonName>
-				<Text>СОЛОНИНА, 3 монеты</Text>
+				<Text>СОЛОНИНА</Text>
 				<Price>3</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть солонины,7"/>
@@ -7252,7 +7252,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить травяной отвар</ButtonName>
-				<Text>ТРАВЯНОЙ ОТВАР, 3 монеты</Text>
+				<Text>ТРАВЯНОЙ ОТВАР</Text>
 				<Price>3</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить травяного отвара,3,5"/>
@@ -7261,7 +7261,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить мазь</ButtonName>
-				<Text>МАЗЬ ЗЕЛЕНОГО ЦВЕТА, 7 монет</Text>
+				<Text>МАЗЬ ЗЕЛЕНОГО ЦВЕТА</Text>
 				<Price>7</Price>
 				<Benefit Name="MaxInitiative" Value="2"/>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -7270,7 +7270,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить жилет</ButtonName>
-				<Text>ЖИЛЕТ, 12 монет</Text>
+				<Text>ЖИЛЕТ</Text>
 				<Price>12</Price>
 				<Benefit Name="MaxEndurance" Value="2"/>
 				<Aftertext>Осмотрев все товары и сделав необходимые покупки, вы пробираетесь к краю торговой площади. Однако когда вы оказываетесь у выхода с рынка, вас кто-то окликает. Обернувшись, вы видите перед собой толстяка добродушного вида, который подходит к вам. Он с трудом несет свой отвисший живот и громко дышит.\n\n- Прости, незнакомец, что отвлекаю тебя. Я торговец, моя лавка находится прямо перед тобой. Мне кажется, что ты сможешь мне помочь. По крайней мере, ты не похож на этих безмозглых крестьян. Скажи, умеешь ли ты складывать и вычитать числа?\n\n- Да, я знаком немного с этой наукой.\n\n- Вот видишь, я не ошибся. Я хорошо разбираюсь в людях. Дело в том, что я столкнулся с задачей, которая мне не под силу. Я не могу посчитать свои собственные деньги. Может, ты поможешь мне это сделать?\n\nСтранное предложение от незнакомого человека. Он что, хочет доверить подсчеты своих доходов случайному прохожему? С другой стороны, звучит это предложение заманчиво: тот, у кого есть, что считать, сможет поделиться небольшой суммой за оказанную помощь.</Aftertext>
@@ -7336,7 +7336,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить алмаз</ButtonName>
-				<Text>АЛМАЗ, 32 монеты</Text>
+				<Text>АЛМАЗ</Text>
 				<Price>32</Price>
 				<Trigger>Алмаз</Trigger>
 				<Aftertext>Если купите алмаз - сразу выберите соответствующий пункт.\n\nКогда вы собираетесь покинуть шатер, в него входит незнакомый молодой человек. Он перекидывается несколькими словами с торговцем, и вы догадываетесь, что это сын хозяина палатки. Юноша уходит, но перед этим бросает на вас короткий взгляд. Одного этого взора хватило, чтобы вас пробрало до души, настолько много в нем грусти и тоски. Когда парень уходит, вы интересуетесь, почему он так печален.\n\n- О, ты, верно, прибыл издалека, если не знаешь о горе моего сына? - торговец тяжело вздыхает. - Больше года назад его прекрасная невеста заснула заколдованным сном, и никто не в силах ее разбудить. Она жива, но мой сын, похоже, навсегда потерял ее. Я не бедный человек и приглашал многих лекарей, шаманов и полесских знахарей, но ни одно снадобье, ни одно заклинание не помогло несчастной. Все, что смогли эти мудрецы - это понять, что девушка отравлена сильным ядом неизвестного происхождения, который не убивает, а усыпляет навечно. Сделал это один из степных разбойников, ее давний поклонник, которому она отказала ради моего сына. Негодяя поймали еще прошлой осенью воины хана, а затем мерзавца казнили в Стоянке, но это не принесло ни облегчения моему сыну, ни освобождения телу его невесты.\n\nТорговец еще раз вздыхает. История действительно очень печальна, и вы с радостью помогли бы юноше и его невесте, если бы знали, как это сделать. Но сейчас лучше не бередить прошлое и покинуть шатер.</Aftertext>
@@ -7369,14 +7369,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать ужин</ButtonName>
-				<Text>УЖИН, 4 монеты</Text>
+				<Text>УЖИН</Text>
 				<Price>4</Price>
 				<Aftertext>Чарка с вином (порция, равная одному глотку) будет стоить 1 монету и восстановит 2 Жизни:</Aftertext>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать вина</ButtonName>
-				<Text>ДЕШЁВОЕ ВИНО, 1 монета</Text>
+				<Text>ДЕШЁВОЕ ВИНО</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Endurance" Value="2"/>
@@ -7385,7 +7385,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Налить вина во флягу</ButtonName>
-				<Text>ДЕШЁВОЕ ВИНО, 1 монеты</Text>
+				<Text>ДЕШЁВОЕ ВИНО</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Выпить дешёвого вина,2"/>
@@ -7404,7 +7404,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить меч</ButtonName>
-				<Text>МЕЧ С ДЛИННОЙ РУКОЯТЬЮ, 35 монет</Text>
+				<Text>МЕЧ С ДЛИННОЙ РУКОЯТЬЮ</Text>
 				<Price>35</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 				<Aftertext>Куртку из толстой кожи с вшитыми в нее металлическими пластинами на подобие той, что надета на вас (прибавит 1 к Защите):</Aftertext>
@@ -7412,7 +7412,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить куртку</ButtonName>
-				<Text>КУРТКА, 36 монет</Text>
+				<Text>КУРТКА</Text>
 				<Price>36</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
 				<Aftertext>Остальное оружие довольно невзрачно и не стоит вашего внимания. Из еды можете взять в дорогу мясные колбаски (восстанавливает 5 Жизней):</Aftertext>
@@ -7420,7 +7420,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить колбаски</ButtonName>
-				<Text>МЯСНЫЕ КОЛБАСКИ, 3 монеты</Text>
+				<Text>МЯСНЫЕ КОЛБАСКИ</Text>
 				<Price>3</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть мясную колбаску,5"/>
@@ -7429,7 +7429,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить хлебцы</ButtonName>
-				<Text>ХЛЕБЦЫ, 2 монеты</Text>
+				<Text>ХЛЕБЦЫ</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть хлебец,2"/>
@@ -7438,7 +7438,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить мед</ButtonName>
-				<Text>МЕД, 2 монеты</Text>
+				<Text>МЕД</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Поесть меда,3"/>
@@ -7447,7 +7447,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить молоко</ButtonName>
-				<Text>МОЛОКО, 2 монеты</Text>
+				<Text>МОЛОКО</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Попить молока,3"/>
@@ -8142,7 +8142,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить яблоки</ButtonName>
-				<Text>ЯБЛОКИ, 1 монета</Text>
+				<Text>ЯБЛОКИ</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть яблоко,1"/>
@@ -8151,7 +8151,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кусок сыра</ButtonName>
-				<Text>СЫР, 2 монеты</Text>
+				<Text>СЫР</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть сыр,2"/>
@@ -8160,7 +8160,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить молоко</ButtonName>
-				<Text>МОЛОКО, 2 монеты</Text>
+				<Text>МОЛОКО</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Попить молока,3"/>
@@ -8169,7 +8169,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить медовухи</ButtonName>
-				<Text>МЕДОВУХА, 2 монеты</Text>
+				<Text>МЕДОВУХА</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Aftertext>Сыта (смесь воды и меда, 1 глоток прибавит 2 Жизни)</Aftertext>
@@ -8177,7 +8177,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить сыту</ButtonName>
-				<Text>СЫТА, 1 монета</Text>
+				<Text>СЫТА</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Попить сыты,2"/>
@@ -8800,7 +8800,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить первый меч</ButtonName>
-				<Text>МЕЧ, 15 монет</Text>
+				<Text>МЕЧ</Text>
 				<Price>15</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 				<Aftertext>Второй меч за 30 монет (прибавит 2 к Нападению):</Aftertext>
@@ -8808,7 +8808,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить второй меч</ButtonName>
-				<Text>МЕЧ, 30 монет</Text>
+				<Text>МЕЧ</Text>
 				<Price>30</Price>
 				<Benefit Name="MaxAttack" Value="2"/>
 				<Aftertext>Сабля за 35 монет (прибавит 1 к Нападению, 1 к Инициативе и 1 к урону):</Aftertext>
@@ -8816,7 +8816,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить саблю</ButtonName>
-				<Text>САБЛЯ, 35 монет</Text>
+				<Text>САБЛЯ</Text>
 				<Price>35</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 				<Benefit Name="MaxInitiative" Value="1"/>
@@ -8826,7 +8826,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить первый доспех</ButtonName>
-				<Text>ДОСПЕХ, 20 монет</Text>
+				<Text>ДОСПЕХ</Text>
 				<Price>20</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
 				<Aftertext>Второй доспех за 30 монет (прибавит 1 к Защите и 1 к максимальному значению Жизни):</Aftertext>
@@ -8834,7 +8834,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить второй доспех</ButtonName>
-				<Text>ДОСПЕХ, 30 монет</Text>
+				<Text>ДОСПЕХ</Text>
 				<Price>30</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
 				<Benefit Name="MaxEndurance" Value="1"/>
@@ -8843,7 +8843,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить третий доспех</ButtonName>
-				<Text>ДОСПЕХ, 45 монет</Text>
+				<Text>ДОСПЕХ</Text>
 				<Price>45</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
 				<Benefit Name="MaxEndurance" Value="2"/>
@@ -8852,7 +8852,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Перекусить</ButtonName>
-				<Text>ПОРЦИЯ ЕДЫ, 2 монета</Text>
+				<Text>ПОРЦИЯ ЕДЫ</Text>
 				<Price>2</Price>
 				<Benefit Name="Endurance" Value="3"/>
 				<Aftertext>А также купить какую-нибудь еду, которая не испортится в дороге - вяленое мясо (стоит 3 монеты, восстанавливает 4 Жизни):</Aftertext>
@@ -8860,7 +8860,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить вяленого мяса</ButtonName>
-				<Text>ВЯЛЕНОЕ МЯСО, 3 монеты</Text>
+				<Text>ВЯЛЕНОЕ МЯСО</Text>
 				<Price>3</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть вяленого мяса,4"/>
@@ -8869,7 +8869,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить лепешку</ButtonName>
-				<Text>ЛЕПЕШКА, 2 монеты</Text>
+				<Text>ЛЕПЕШКА</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть лепешку,2"/>
