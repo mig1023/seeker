@@ -24,11 +24,7 @@ namespace Seeker.Gamebook.HeartOfIce
         {
             if (Price > 0)
             {
-                string money = "ов";
-                
-                if (Price < 5)
-                    money = (Price == 1 ? String.Empty : "а");
-
+                string money = Game.Other.CoinsNoun(Price, "скад", "скада", "скадов");
                 return new List<string> { String.Format("{0}, {1} скад{2}", Text, Price, money) };
             }
             else if (!String.IsNullOrEmpty(Text))
