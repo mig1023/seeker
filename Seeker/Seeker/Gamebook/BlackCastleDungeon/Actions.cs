@@ -132,10 +132,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             List<string> enemies = new List<string>();
 
-            if (ActionName == "Get")
+            if (Price > 0)
+            {
+                string gold = (Price == 1 ? "золотой" : "золотых");
+                return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
+            }
+            else if (ActionName == "Get")
             {
                 int count = (ThisIsSpell ? Character.Protagonist.Spells.Where(x => x == Text).Count() : 0);
-
                 return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
             }
 
