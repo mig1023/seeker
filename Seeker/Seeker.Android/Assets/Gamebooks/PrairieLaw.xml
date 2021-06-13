@@ -232,7 +232,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заплатить</ButtonName>
-				<Text>Сумка, 0.5$</Text>
+				<Text>Сумка</Text>
 				<Price>50</Price>
 				<Aftertext>Если вы этого не сделаете, то не сможете в дороге взять с собой ни одной находки, да и еду хранить будет негде.\n\nА теперь, пожалуй, самое время покинуть этот неприятный городишко.</Aftertext>
 			</Action>
@@ -332,7 +332,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заплатить</ButtonName>
-				<Text>Два патрона, 0.5$</Text>
+				<Text>Два патрона</Text>
 				<Price>50</Price>
 				<Multiple/>
 				<Benefit Name="Cartridges" Value="2"/>
@@ -498,42 +498,42 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить лассо</ButtonName>
-				<Text>Лассо, 1$</Text>
+				<Text>Лассо</Text>
 				<Price>100</Price>
 				<Trigger>Лассо</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить нож</ButtonName>
-				<Text>Нож, 1.5$</Text>
+				<Text>Нож</Text>
 				<Price>150</Price>
 				<Trigger>Нож</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить спички</ButtonName>
-				<Text>Спички в кожаном кисете, 0.5$</Text>
+				<Text>Спички в кожаном кисете</Text>
 				<Price>50</Price>
 				<Trigger>Спички</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить одеяло</ButtonName>
-				<Text>Одеяло, 1$</Text>
+				<Text>Одеяло</Text>
 				<Price>100</Price>
 				<Trigger>Одеяло</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить табак</ButtonName>
-				<Text>Жевательный табак, 0.5$</Text>
+				<Text>Жевательный табак</Text>
 				<Trigger>Табак</Trigger>
 				<Price>50</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить патроны</ButtonName>
-				<Text>Шесть патронов, 1$</Text>
+				<Text>Шесть патронов</Text>
 				<Price>100</Price>
 				<Multiple/>
 				<Benefit Name="Cartridges" Value="6"/>
@@ -542,21 +542,21 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить бусы</ButtonName>
-				<Text>Бусы, 0.5$</Text>
+				<Text>Бусы</Text>
 				<Trigger>Бусы</Trigger>
 				<Price>50</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пояс</ButtonName>
-				<Text>Яркий пояс, 0.5$</Text>
+				<Text>Яркий пояс</Text>
 				<Trigger>Пояс</Trigger>
 				<Price>50</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить зеркальце</ButtonName>
-				<Text>Зеркальце, 0.5$</Text>
+				<Text>Зеркальце</Text>
 				<Price>50</Price>
 				<Trigger>Зеркальце</Trigger>
 				<Aftertext>Напоследок хозяин гордо водружает на прилавок странный предмет. Это медная морская подзорная труба. Бог весть как попала она в эти края... Эта вещь стоит дороже всего – 9 долларов:</Aftertext>
@@ -564,7 +564,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить трубу</ButtonName>
-				<Text>Подзорная труба, 9$</Text>
+				<Text>Подзорная труба</Text>
 				<Trigger>Подзорная труба</Trigger>
 				<Price>900</Price>
 			</Action>
@@ -832,7 +832,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заплатить за обед</ButtonName>
-				<Text>Обед, 2$</Text>
+				<Text>Обед</Text>
 				<Price>200</Price>
 				<Benefit Name="Strength" Value="3"/>
 				<Aftertext>Но когда вы спрашиваете официанта о рулетке, он огорченно отвечает, что городские власти велели это дело прикрыть. Здесь, мол, ежедневно драки, проигравшиеся бедолаги не раз пытались убить и ограбить счастливчиков... да еще ходили слухи о мошенничестве.\n\nПополнить кошелек тут не удастся. Но ведь не корысть привела вас сюда! Где-то бродят убийцы, оставшиеся безнаказанными, а вы здесь преспокойно слушаете оркестр!\n\nС этой мыслью вы покидаете ресторан.</Aftertext>
@@ -1825,7 +1825,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заплатить за обед</ButtonName>
-				<Text>Обед, 2$</Text>
+				<Text>Обед</Text>
 				<Price>200</Price>
 				<Benefit Name="Strength" Value="3"/>
 				<Aftertext>Если сейчас вы не голодны, попросите официанта собрать еду вам в дорогу.\n\nВы уже собираетесь покинуть ресторан, но официант негромко говорит, что на втором этаже – рулетка. Не угодно ли джентльмену слегка развлечься?</Aftertext>
@@ -2002,7 +2002,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заплатить за обед</ButtonName>
-				<Text>Обед, 0.5$</Text>
+				<Text>Обед</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="4"/>
 				<Aftertext>Если не голодны или поистратились в дороге, можете отказаться от еды. А ночлег здесь бесплатный...\n\nЧто вы сделаете потом?</Aftertext>
@@ -3120,7 +3120,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить противоядие</ButtonName>
-				<Text>Противоядие, 1$</Text>
+				<Text>Противоядие</Text>
 				<Trigger>Противоядие</Trigger>
 				<Price>100</Price>
 				<Aftertext>А здесь – бальзам для исцеления ран, полдоллара за бутылку.</Aftertext>
@@ -3128,7 +3128,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить бальзам</ButtonName>
-				<Text>Бальзам для исцеления ран, 0.5$</Text>
+				<Text>Бальзам для исцеления ран</Text>
 				<Benefit Name="Healing" ValueString="Применить бальзам для исцеления ран,5,2"/>
 				<Price>50</Price>
 				<Multiple/>
@@ -3137,7 +3137,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить панацею</ButtonName>
-				<Text>Золотая Панацея, 3$</Text>
+				<Text>Золотая Панацея</Text>
 				<Trigger>Противоядие</Trigger>
 				<Benefit Name="Healing" ValueString="Принять Золотую Панацею,-1"/>
 				<Price>300</Price>
@@ -4519,7 +4519,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить патрон</ButtonName>
-				<Text>Один патрон, 1$</Text>
+				<Text>Один патрон</Text>
 				<Price>100</Price>
 				<Multiple/>
 				<Benefit Name="Cartridges" Value="1"/>
@@ -4528,14 +4528,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить нож</ButtonName>
-				<Text>Нож, 3$</Text>
+				<Text>Нож</Text>
 				<Price>300</Price>
 				<Trigger>Нож</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить лассо</ButtonName>
-				<Text>Лассо, 2$</Text>
+				<Text>Лассо</Text>
 				<Price>200</Price>
 				<Trigger>Лассо</Trigger>
 				<Aftertext>Можно выбрать что-нибудь для подарка индейцам: зеркальце, пачку жевательного табака, бусы, нарядный пояс – любая вещь за доллар.</Aftertext>
@@ -4543,21 +4543,21 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить бусы</ButtonName>
-				<Text>Бусы, 1$</Text>
+				<Text>Бусы</Text>
 				<Trigger>Бусы</Trigger>
 				<Price>100</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить табак</ButtonName>
-				<Text>Жевательный табак, 1$</Text>
+				<Text>Жевательный табак</Text>
 				<Trigger>Табак</Trigger>
 				<Price>100</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить зеркальце</ButtonName>
-				<Text>Зеркальце, 1$</Text>
+				<Text>Зеркальце</Text>
 				<Price>100</Price>
 				<Trigger>Зеркальце</Trigger>
 				<Aftertext>Есть у разносчика даже динамитная шашка – за 8 монет.</Aftertext>
@@ -4565,7 +4565,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить динамит</ButtonName>
-				<Text>Динамитная шашка, 8$</Text>
+				<Text>Динамитная шашка</Text>
 				<Price>800</Price>
 				<Trigger>Динамитная шашка</Trigger>
 				<Aftertext>Если у вас туго с наличными, Уоррен может купить любую из добытых вами шкур – за 2 доллара.</Aftertext>
@@ -5389,41 +5389,41 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить лассо</ButtonName>
-				<Text>Лассо, 1$</Text>
+				<Text>Лассо</Text>
 				<Price>100</Price>
 				<Trigger>Лассо</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить нож</ButtonName>
-				<Text>Нож, 2$</Text>
+				<Text>Нож</Text>
 				<Price>200</Price>
 				<Trigger>Нож</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить спички</ButtonName>
-				<Text>Спички в кожаном кисете, 0.5$</Text>
+				<Text>Спички в кожаном кисете</Text>
 				<Price>50</Price>
 				<Trigger>Спички</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить седло</ButtonName>
-				<Text>Седло, 4$</Text>
+				<Text>Седло</Text>
 				<Price>400</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить табак</ButtonName>
-				<Text>Жевательный табак, 0.5$</Text>
+				<Text>Жевательный табак</Text>
 				<Trigger>Табак</Trigger>
 				<Price>50</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить патроны</ButtonName>
-				<Text>Шесть патронов, 1$</Text>
+				<Text>Шесть патронов</Text>
 				<Price>100</Price>
 				<Multiple/>
 				<Benefit Name="Cartridges" Value="6"/>
@@ -5432,21 +5432,21 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить бусы</ButtonName>
-				<Text>Бусы, 0.5$</Text>
+				<Text>Бусы</Text>
 				<Trigger>Бусы</Trigger>
 				<Price>50</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пояс</ButtonName>
-				<Text>Яркий пояс, 0.5$</Text>
+				<Text>Яркий пояс</Text>
 				<Trigger>Пояс</Trigger>
 				<Price>50</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить зеркальце</ButtonName>
-				<Text>Зеркальце, 0.5$</Text>
+				<Text>Зеркальце</Text>
 				<Price>50</Price>
 				<Trigger>Зеркальце</Trigger>
 			</Action>	
@@ -6125,7 +6125,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Продать</ButtonName>
-				<Text>Золотые часы, 7$</Text>
+				<Text>Золотые часы</Text>
 				<Benefit Name="Cents" Value="700"/>
 				<RemoveTrigger>Часы</RemoveTrigger>
 				<Aftertext>Если вы еще не предлагали Перкинсу серебряный медальон или самородки – можете сделать это сейчас.</Aftertext>
