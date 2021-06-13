@@ -409,49 +409,49 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить двигатель</ButtonName>
-				<Text>Второй двигатель, 40 кредитов</Text>
+				<Text>Второй двигатель</Text>
 				<Price>40</Price>
 				<Benefit Name="SecondEngine" Value="1"/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить покрытие</ButtonName>
-				<Text>Стелс-покрытие, 20 кредитов</Text>
+				<Text>Стелс-покрытие</Text>
 				<Price>20</Price>
 				<Benefit Name="Stealth" Value="1"/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить радар</ButtonName>
-				<Text>Радар, 20 кредитов</Text>
+				<Text>Радар</Text>
 				<Price>20</Price>
 				<Benefit Name="Radar" Value="1"/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пилу</ButtonName>
-				<Text>Циркулярная пила, 25 кредитов</Text>
+				<Text>Циркулярная пила</Text>
 				<Price>25</Price>
 				<Benefit Name="CircularSaw" Value="1"/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить огнемёт</ButtonName>
-				<Text>Реактивный огнемёт, 30 кредитов</Text>
+				<Text>Реактивный огнемёт</Text>
 				<Price>30</Price>
 				<Benefit Name="Flamethrower" Value="1"/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить плазмопушку</ButtonName>
-				<Text>Спаренная плазмопушка, 35 кредитов</Text>
+				<Text>Спаренная плазмопушка</Text>
 				<Price>30</Price>
 				<Benefit Name="PlasmaCannon" Value="1"/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить гармонизатор</ButtonName>
-				<Text>Гармонизатор, 50 кредитов</Text>
+				<Text>Гармонизатор</Text>
 				<Price>50</Price>
 				<Benefit Name="Harmonizer" Value="1"/>
 				<Aftertext>Гармонизатор похож на метроном. При колебании маятника он излучает пси-волны. Данное устройство упрощает ментальные проверки на 1 (+1 к цифре МП)</Aftertext>
