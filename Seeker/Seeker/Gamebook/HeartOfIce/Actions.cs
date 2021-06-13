@@ -22,7 +22,16 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public override List<string> Representer()
         {
-            if (!String.IsNullOrEmpty(Text))
+            if (Price > 0)
+            {
+                string money = "ов";
+                
+                if (Price < 5)
+                    money = (Price == 1 ? String.Empty : "а");
+
+                return new List<string> { String.Format("{0}, {1} скад{2}", Text, Price, money) };
+            }
+            else if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
 
             else if (!String.IsNullOrEmpty(Skill))
