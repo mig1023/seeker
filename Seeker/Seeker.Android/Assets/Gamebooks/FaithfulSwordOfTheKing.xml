@@ -644,7 +644,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Оплатить обед</ButtonName>
-				<Text>Пообедать, 1 экю</Text>
+				<Text>Пообедать</Text>
 				<Price>100</Price>
 				<Benefit Name="Strength" Value="2"/>
 				<Benefit Name="HadFoodToday" Value="1"/>
@@ -1270,7 +1270,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить лошадь</ButtonName>
-				<Text>ЛОШАДЬ, 5 экю</Text>
+				<Text>ЛОШАДЬ</Text>
 				<Price>500</Price>
 				<Multiple/>
 				<Benefit Name="Horses" Value="1"/>
@@ -1278,7 +1278,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пистолет</ButtonName>
-				<Text>ПИСТОЛЕТ, 3 экю</Text>
+				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
@@ -1286,14 +1286,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить шпагу</ButtonName>
-				<Text>ШПАГА, 3 экю</Text>
+				<Text>ШПАГА</Text>
 				<Price>300</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кинжал</ButtonName>
-				<Text>КИНЖАЛ, 3 экю</Text>
+				<Text>КИНЖАЛ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
@@ -1301,7 +1301,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пули и порох</ButtonName>
-				<Text>ПОРОХ И ПУЛИ на 3 выстрела, 2 экю</Text>
+				<Text>ПОРОХ И ПУЛИ на 3 выстрела</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="3"/>
@@ -1524,7 +1524,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пистолет</ButtonName>
-				<Text>ПИСТОЛЕТ, 3 экю</Text>
+				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
@@ -1532,14 +1532,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить шпагу</ButtonName>
-				<Text>ШПАГА, 2 экю</Text>
+				<Text>ШПАГА</Text>
 				<Price>200</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кинжал</ButtonName>
-				<Text>КИНЖАЛ, 3 экю</Text>
+				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
@@ -1547,14 +1547,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить ботфорты</ButtonName>
-				<Text>БОТФОРТЫ, 1 экю</Text>
+				<Text>БОТФОРТЫ</Text>
 				<Price>200</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пули и порох</ButtonName>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела, 1 экю</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>100</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
@@ -1835,7 +1835,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кинжал</ButtonName>
-				<Text>КИНЖАЛ, 2 экю</Text>
+				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
@@ -1843,7 +1843,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пули и порох</ButtonName>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела, 2 экю</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
@@ -1851,7 +1851,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пистолет</ButtonName>
-				<Text>ПИСТОЛЕТ, 3 экю</Text>
+				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
@@ -2702,7 +2702,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Переодеться</ButtonName>
-				<Text>ПЕРЕОДЕТЬСЯ, 7 экю</Text>
+				<Text>ПЕРЕОДЕТЬСЯ</Text>
 				<Price>700</Price>
 			</Action>
 		</Actions>
@@ -3512,7 +3512,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пистолет</ButtonName>
-				<Text>ПИСТОЛЕТ, 3 экю</Text>
+				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
@@ -3520,14 +3520,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить шпагу</ButtonName>
-				<Text>ШПАГА, 2 экю</Text>
+				<Text>ШПАГА</Text>
 				<Price>200</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кинжал</ButtonName>
-				<Text>КИНЖАЛ, 2 экю</Text>
+				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
@@ -3535,7 +3535,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пули и порох</ButtonName>
-				<Text>ПОРОХ И ПУЛИ на 4 выстрела, 1 экю</Text>
+				<Text>ПОРОХ И ПУЛИ на 4 выстрела</Text>
 				<Price>100</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="4"/>
@@ -3559,7 +3559,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Выбрать побогаче</ButtonName>
-				<Text>Гостиница побогаче, 1 экю</Text>
+				<Text>Гостиница побогаче</Text>
 				<Price>100</Price>
 				<Benefit Name="Strength" Value="2"/>
 				<Aftertext>Если выделите только полэкю — придется довольствоваться тем, что похуже и восстановить только 1:</Aftertext>
@@ -3932,7 +3932,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Сытно поесть</ButtonName>
-				<Text>Еда, 1 экю</Text>
+				<Text>Еда</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="2"/>
 				<Benefit Name="HadFoodToday" Value="1"/>
@@ -4551,7 +4551,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пистолет</ButtonName>
-				<Text>ПИСТОЛЕТ, 3 экю</Text>
+				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
@@ -4559,7 +4559,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить лошадь</ButtonName>
-				<Text>ЛОШАДЬ, 5 экю</Text>
+				<Text>ЛОШАДЬ</Text>
 				<Price>500</Price>
 				<Multiple/>
 				<Benefit Name="Horses" Value="1"/>
@@ -4567,7 +4567,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кинжал</ButtonName>
-				<Text>КИНЖАЛ, 2 экю</Text>
+				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
@@ -4575,7 +4575,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пули и порох</ButtonName>
-				<Text>ПОРОХ И ПУЛИ на 4 выстрела, 2 экю</Text>
+				<Text>ПОРОХ И ПУЛИ на 4 выстрела</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="4"/>
@@ -5556,7 +5556,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пистолет</ButtonName>
-				<Text>ПИСТОЛЕТ, 4 экю</Text>
+				<Text>ПИСТОЛЕТ</Text>
 				<Price>400</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
@@ -5564,14 +5564,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить шпагу</ButtonName>
-				<Text>ШПАГА, 3 экю</Text>
+				<Text>ШПАГА</Text>
 				<Price>300</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пули и порох</ButtonName>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела, 3 экю</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
@@ -5579,7 +5579,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кинжал</ButtonName>
-				<Text>КИНЖАЛ, 2 экю</Text>
+				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
@@ -5587,7 +5587,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить лошадь</ButtonName>
-				<Text>ЛОШАДЬ, 6 экю</Text>
+				<Text>ЛОШАДЬ</Text>
 				<Price>600</Price>
 				<Multiple/>
 				<Benefit Name="Horses" Value="1"/>
@@ -6144,7 +6144,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить лошадь</ButtonName>
-				<Text>ЛОШАДЬ, 6 экю</Text>
+				<Text>ЛОШАДЬ</Text>
 				<Price>600</Price>
 				<Multiple/>
 				<Benefit Name="Horses" Value="1"/>
@@ -6152,7 +6152,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пистолет</ButtonName>
-				<Text>ПИСТОЛЕТ, 4 экю</Text>
+				<Text>ПИСТОЛЕТ</Text>
 				<Price>400</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
@@ -6160,14 +6160,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить шпагу</ButtonName>
-				<Text>ШПАГА, 3 экю</Text>
+				<Text>ШПАГА</Text>
 				<Price>300</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кинжал</ButtonName>
-				<Text>КИНЖАЛ, 3 экю</Text>
+				<Text>КИНЖАЛ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
@@ -6175,7 +6175,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пули и порох</ButtonName>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела, 3 экю</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
@@ -6269,7 +6269,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кинжал</ButtonName>
-				<Text>КИНЖАЛ, 3 экю</Text>
+				<Text>КИНЖАЛ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
@@ -6277,7 +6277,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить еды</ButtonName>
-				<Text>ЕДА В ДОРОГУ, 2 экю</Text>
+				<Text>ЕДА В ДОРОГУ</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Поесть,2"/>
@@ -6296,7 +6296,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Переночевать</ButtonName>
-				<Text>Гостиница, 1 экю</Text>
+				<Text>Гостиница</Text>
 				<Price>100</Price>
 				<Benefit Name="Strength" Value="2"/>
 				<Aftertext>Если же добавите еще экю, тогда можете поужинать (ужин восстановит 3 СИЛЫ, но если от него отказаться, ничего в этот день не ев, то столько же придется потерять).</Aftertext>
@@ -6304,7 +6304,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать ужин</ButtonName>
-				<Text>Ужин, 1 экю</Text>
+				<Text>Ужин</Text>
 				<Price>100</Price>
 				<Benefit Name="Strength" Value="3"/>
 				<Benefit Name="HadFoodToday" Value="1"/>
@@ -6372,7 +6372,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пистолет</ButtonName>
-				<Text>ПИСТОЛЕТ, 3 экю</Text>
+				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
@@ -6380,14 +6380,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить шпагу</ButtonName>
-				<Text>ШПАГА, 4 экю</Text>
+				<Text>ШПАГА</Text>
 				<Price>400</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кинжал</ButtonName>
-				<Text>КИНЖАЛ, 4 экю</Text>
+				<Text>КИНЖАЛ</Text>
 				<Price>400</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
@@ -6403,7 +6403,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить еды</ButtonName>
-				<Text>ЕДА, 2 экю</Text>
+				<Text>ЕДА</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Поесть,2"/>
@@ -6556,7 +6556,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пистолет</ButtonName>
-				<Text>ПИСТОЛЕТ, 4 экю</Text>
+				<Text>ПИСТОЛЕТ</Text>
 				<Price>400</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
@@ -6564,14 +6564,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить шпагу</ButtonName>
-				<Text>ШПАГА, 3 экю</Text>
+				<Text>ШПАГА</Text>
 				<Price>300</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пули и порох</ButtonName>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела, 3 экю</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
@@ -6579,7 +6579,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кинжал</ButtonName>
-				<Text>КИНЖАЛ, 2 экю</Text>
+				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
@@ -6587,7 +6587,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить лошадь</ButtonName>
-				<Text>ЛОШАДЬ, 6 экю</Text>
+				<Text>ЛОШАДЬ</Text>
 				<Price>600</Price>
 				<Multiple/>
 				<Benefit Name="Horses" Value="1"/>
