@@ -49,6 +49,29 @@ namespace Seeker.Game
                 return "равно";
         }
 
+        public static string CoinsNoun(int value, string one, string two, string five)
+        {
+            int absValue = Math.Abs(value);
+
+            if (absValue % 10 == 5)
+                return five;
+
+            absValue %= 100;
+
+            if ((absValue >= 5) && (absValue <= 20))
+                return five;
+
+            absValue %= 10;
+
+            if (absValue == 1)
+                return one;
+
+            if ((absValue >= 2) && (absValue <= 5))
+                return two;
+
+            return five;
+        }
+
         public static int LevelParse(string option) => int.Parse(option.Contains("=") ? option.Split('=')[1] : option.Split('>', '<')[1]);
 
         public static bool DoNothing() => true;
