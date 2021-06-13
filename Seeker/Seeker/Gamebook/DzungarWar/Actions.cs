@@ -76,6 +76,8 @@ namespace Seeker.Gamebook.DzungarWar
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
             }
+            else if (Price > 0)
+                return new List<string> { String.Format("{0}, {1} таньга", Text, Price) };
 
             else if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
