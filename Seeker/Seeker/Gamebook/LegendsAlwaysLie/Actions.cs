@@ -38,7 +38,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override List<string> Representer()
         {
-            if (!String.IsNullOrEmpty(Text))
+            if (Price > 0)
+            {
+                string gold = (Price == 1 ? "золотой" : "золотых");
+                return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
+            }
+            else if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
 
             List<string> enemies = new List<string>();
