@@ -635,7 +635,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить зелье Исцеления</ButtonName>
-				<Text>ЗЕЛЬЕ ИСЦЕЛЕНИЯ, 4 золотых</Text>
+				<Text>ЗЕЛЬЕ ИСЦЕЛЕНИЯ</Text>
 				<Price>4</Price>
 				<Benefit Name="Healing" ValueString="Выпить зелье Исцеления,-1"/>
 				<Aftertext>В любой момент, кроме боя, восстановит вашу Выносливость до начального уровня.</Aftertext>
@@ -643,7 +643,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить зелье Ловкости</ButtonName>
-				<Text>ЗЕЛЬЕ ЛОВКОСТИ, 6 золотых</Text>
+				<Text>ЗЕЛЬЕ ЛОВКОСТИ</Text>
 				<Price>6</Price>
 				<Benefit Name="Healing" ValueString="Выпить зелье Ловкости,-2"/>
 				<Aftertext>Выпив это зелье, вы можете восстановить до начального уровня ваше Мастерство.</Aftertext>
@@ -651,7 +651,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить зелье Фортуны</ButtonName>
-				<Text>ЗЕЛЬЕ ФОРТУНЫ, 5 золотых</Text>
+				<Text>ЗЕЛЬЕ ФОРТУНЫ</Text>
 				<Price>5</Price>
 				<Benefit Name="Healing" ValueString="Выпить зелье Фортуны,-3"/>
 				<Aftertext>Если вы выпьете этот напиток, ваша Удача восстановится до начального уровня.</Aftertext>
@@ -659,7 +659,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить cвинцовые пули</ButtonName>
-				<Text>СВИНЦОВЫЕ ПУЛИ, 4 золотых</Text>
+				<Text>СВИНЦОВЫЕ ПУЛИ</Text>
 				<Price>5</Price>
 				<Benefit Name="Gun" Value="6"/>
 				<Aftertext>Если у вас есть кремниевый пистолет, алхимик может выплавить шесть пуль для него за весьма скромную плату.</Aftertext>
@@ -667,7 +667,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить cеребряные пули</ButtonName>
-				<Text>СЕРЕБРЯНЫЕ ПУЛИ, 6 золотых</Text>
+				<Text>СЕРЕБРЯНЫЕ ПУЛИ</Text>
 				<Price>6</Price>
 				<Benefit Name="Gun" Value="6"/>
 				<Aftertext>У хозяина лавки нет серебра, но если в пути вы находили какие-нибудь серебряные вещи, то Гельт может выплавить из каждой по шесть пуль.</Aftertext>
@@ -675,14 +675,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить замок</ButtonName>
-				<Text>ЗАМОК, 5 золотых</Text>
+				<Text>ЗАМОК</Text>
 				<Price>5</Price>
 				<Aftertext>Большой железный замок с торчащим из него ключом.</Aftertext>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить медный ключ</ButtonName>
-				<Text>МЕДНЫЙ КЛЮЧ, 4 золотых</Text>
+				<Text>МЕДНЫЙ КЛЮЧ</Text>
 				<Price>4</Price>
 				<Trigger>Медный ключ</Trigger>
 				<Aftertext>Плюмбус уверяет, что забыл, как к нему попал этот ключ и что он открывает, но изящное изделие с серебряной гравировкой весьма ценно само по себе.\n\nРешайте, будете ли покупать что-нибудь у добродушного ученого, и уходите из лавки.</Aftertext>
@@ -1579,7 +1579,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Оплатить ужин</ButtonName>
-				<Text>УЖИН, 2 золотых</Text>
+				<Text>УЖИН</Text>
 				<Price>4</Price>
 				<Benefit Name="Endurance" Value="4"/>
 				<Aftertext>Если вы предпочтете заплатить лишь за комнату, то вам придется съесть 1 Еду из своих запасов.\n\nНезависимо от того потратите ли вы три золотых или один, потом вы можете:</Aftertext>
@@ -2036,26 +2036,26 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить меч</ButtonName>
-				<Text>МЕЧ, 10 золотых</Text>
+				<Text>МЕЧ</Text>
 				<Price>10</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кинжал</ButtonName>
-				<Text>КИНЖАЛ, 6 золотых</Text>
+				<Text>КИНЖАЛ</Text>
 				<Price>6</Price>
 				<Aftertext>Если в пути вы лишились оружия, можете купить его здесь (кинжалом сражаться не так удобно, как мечом, поэтому придется уменьшать на 1 свою Силу Удара).</Aftertext>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить верёвку</ButtonName>
-				<Text>ВЕРЕВКА С КРЮКОМ, 3 золотых</Text>
+				<Text>ВЕРЕВКА С КРЮКОМ</Text>
 				<Price>3</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить арбалет</ButtonName>
-				<Text>АРБАЛЕТ, 12 золотых</Text>
+				<Text>АРБАЛЕТ</Text>
 				<Price>12</Price>
 				<Trigger>Арбалет</Trigger>
 				<Benefit Name="Crossbow" Value="6"/>
@@ -2064,7 +2064,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кольчугу</ButtonName>
-				<Text>КОЛЬЧУГА, 8 золотых</Text>
+				<Text>КОЛЬЧУГА</Text>
 				<Price>8</Price>
 				<Trigger>Кольчуга</Trigger>
 				<Aftertext>Кольчуга сможет защитить вас в бою – если вашему врагу удалось вас ранить, но за него выпало четное число, то вы потеряете всего 1 Выносливость.</Aftertext>
@@ -2072,14 +2072,14 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить лампу</ButtonName>
-				<Text>МАСЛЯНАЯ ЛАМПА, 3 золотых</Text>
+				<Text>МАСЛЯНАЯ ЛАМПА</Text>
 				<Price>3</Price>
 				<Trigger>Лампа</Trigger>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить провизию</ButtonName>
-				<Text>ПРОВИЗИЯ, 3 золотых</Text>
+				<Text>ПРОВИЗИЯ</Text>
 				<Price>3</Price>
 				<Benefit Name="Healing" ValueString="Поесть,4"/>
 				<Multiple/>
