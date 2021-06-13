@@ -27,8 +27,10 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             String.Format("Сила: {0}", Character.Protagonist.Strength),
             String.Format("Честь: {0}", Character.Protagonist.Honor),
             String.Format("День: {0}", Character.Protagonist.Day),
-            String.Format("Экю: {0:f2}", (double)Character.Protagonist.Ecu / 100)
+            String.Format("Экю: {0:f2}", ToEcu(Character.Protagonist.Ecu))
         };
+
+        private double ToEcu(int ecu) => (double)ecu / 100;
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
@@ -90,6 +92,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public override List<string> Representer()
         {
             List<string> enemies = new List<string>();
+
+            if (Price > 0)
+                return new List<string> { String.Format("{0}, {1:f2} экю", Text, ToEcu(Price)) };
 
             if (ActionName == "Get")
                 return new List<string> { Text };
