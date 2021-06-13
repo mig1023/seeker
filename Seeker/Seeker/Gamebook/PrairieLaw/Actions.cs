@@ -44,7 +44,10 @@ namespace Seeker.Gamebook.PrairieLaw
         {
             List<string> enemies = new List<string>();
 
-            if (!String.IsNullOrEmpty(Text))
+            if (Price > 0)
+                return new List<string> { String.Format("{0}, {1:f2}$", Text, ToDollars(Price)) };
+
+            else if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
 
             if (Enemies == null)
