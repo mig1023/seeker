@@ -1047,35 +1047,35 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить настойку силы</ButtonName>
-				<Text>НАСТОЙКА СИЛЫ, 50 таньга</Text>
+				<Text>НАСТОЙКА СИЛЫ</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="1"/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить настойку ловкости</ButtonName>
-				<Text>НАСТОЙКА ЛОВКОСТИ, 50 таньга</Text>
+				<Text>НАСТОЙКА ЛОВКОСТИ</Text>
 				<Price>50</Price>
 				<Benefit Name="Skill" Value="1"/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить настойку мудрости</ButtonName>
-				<Text>НАСТОЙКА МУДРОСТИ, 50 таньга</Text>
+				<Text>НАСТОЙКА МУДРОСТИ</Text>
 				<Price>50</Price>
 				<Benefit Name="Wisdom" Value="1"/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить настойку хитрости</ButtonName>
-				<Text>НАСТОЙКА ХИТРОСТИ, 50 таньга</Text>
+				<Text>НАСТОЙКА ХИТРОСТИ</Text>
 				<Price>50</Price>
 				<Benefit Name="Cunning" Value="1"/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить настойку красноречия</ButtonName>
-				<Text>НАСТОЙКА КРАСНОРЕЧИЯ, 50 таньга</Text>
+				<Text>НАСТОЙКА КРАСНОРЕЧИЯ</Text>
 				<Price>50</Price>
 				<Benefit Name="Oratory" Value="1"/>
 				<Aftertext>У торговцев лошадьми Алдар засматривается на серого скакуна, который не стоит на месте, а гарцует и показывает свой отнюдь не кроткий нрав. Несомненно, такой конь пригодится в путешествии, особенно если придётся удирать от врагов верхом. Скакуна можно купить, отдав своего коня и доплатив 200 ТАНЬГА</Aftertext>
@@ -1085,7 +1085,7 @@
 				<ButtonName>Купить скакуна</ButtonName>
 				<Trigger>Скакун</Trigger>
 				<RemoveTrigger>Боль</RemoveTrigger>
-				<Text>СКАКУН, 200 таньга</Text>
+				<Text>СКАКУН</Text>
 				<Price>200</Price>
 				<Aftertext>Книга путешественника-географа про озёра Сассык-Коль и Алаколь. Торговец говорит, что один арабский учёный исследовал те места, чтобы создать точную карту. К сожалению, он погиб на охоте. А эту книгу торговец купил вместе с другими вещами путешественника. Алдар бегло листает рукопись. Озёра и прилежащая местность действительно описаны очень подробно: с зарисовками, картами и указанием скал, холмов и оврагов.</Aftertext>
 			</Action>
@@ -1093,7 +1093,7 @@
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить карту</ButtonName>
 				<Trigger>Тропа</Trigger>
-				<Text>КАРТУ УЩЕЛЬЯ ДЖУНГАРСКИЕ ВОРОТА, 60 таньга</Text>
+				<Text>КАРТУ УЩЕЛЬЯ ДЖУНГАРСКИЕ ВОРОТА</Text>
 				<Price>60</Price>
 			</Action>
 		</Actions>
@@ -1624,21 +1624,21 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Отдать 150 таньга</ButtonName>
-				<Text>ПОДНОШЕНИЕ В 150 ТАНЬГА</Text>
+				<Text>ПОДНОШЕНИЕ</Text>
 				<Price>150</Price>
 				<Benefit Name="Favour" Value="1"/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Отдать 300 таньга</ButtonName>
-				<Text>ПОДНОШЕНИЕ В 300 ТАНЬГА</Text>
+				<Text>ПОДНОШЕНИЕ</Text>
 				<Price>300</Price>
 				<Benefit Name="Favour" Value="2"/>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Отдать 500 таньга</ButtonName>
-				<Text>ПОДНОШЕНИЕ В 500 ТАНЬГА</Text>
+				<Text>ПОДНОШЕНИЕ</Text>
 				<Price>500</Price>
 				<Benefit Name="Favour" Value="3"/>
 				<Aftertext>– Алдар Косе – честный и порядочный человек, – кивает Ли Ю Чжао и прячет деньги в складках одежды, предварительно ощупав кошель.</Aftertext>
@@ -2941,7 +2941,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить амулет</ButtonName>
-				<Text>БУДДИСТСКИЙ АМУЛЕТ, 120 таньга</Text>
+				<Text>БУДДИСТСКИЙ АМУЛЕТ</Text>
 				<Price>120</Price>
 				<Aftertext>Фарфоровая фигурка извивающегося дракона, красиво расписанная красным и синим цветами. Китаец не помнит, как она к нему попала, но уверяет, что за неё можно выручить неплохие деньги на любом базаре.</Aftertext>
 			</Action>
@@ -2949,14 +2949,14 @@
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить фигурку</ButtonName>
 				<Trigger>Фарфор</Trigger>
-				<Text>ФАРФОРОВАЯ ФИГУРКА, 50 таньга</Text>
+				<Text>ФАРФОРОВАЯ ФИГУРКА</Text>
 				<Price>50</Price>
 				<Aftertext>Отвар корня женьшеня, обладающего поразительными целебными свойствами. Женьшень произрастает в горах, и его очень трудно найти. Поэтому корень ценится на вес золота. У торговца осталась лишь маленькая бутыль с отваром, которого хватит на один глоток (стоит 100 ТАНЬГА и добавит сразу 8 пунктов при проверке любой способности; в остальном он используется по тем же правилам, что и настойка Алдара Косе).</Aftertext>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить отвар</ButtonName>
-				<Text>ОТВАР КОРНЯ ЖЕНЬШЕНЯ, 100 таньга</Text>
+				<Text>ОТВАР КОРНЯ ЖЕНЬШЕНЯ</Text>
 				<Price>100</Price>
 				<Benefit Name="Ginseng" Value="1"/>
 				<Aftertext>Купить всё, что нужно, и внести изменения на листе персонажа (в том числе отметить ключевое слово «Фарфор», если Алдар приобретает фигурку дракона).\n\nТем временем наступает ночь. А хозяин с гостем продолжают беседу, попивая зелёный чай из маленьких фарфоровых чашек.</Aftertext>
@@ -3278,7 +3278,7 @@
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить арбалет</ButtonName>
 				<Trigger>Арбалет</Trigger>
-				<Text>МАЛЕНЬКИЙ АРБАЛЕТ, 100 таньга</Text>
+				<Text>МАЛЕНЬКИЙ АРБАЛЕТ</Text>
 				<Price>100</Price>
 				<Aftertext>Маленький арбалет, который можно спрятать под складками одежды. На расстоянии в несколько шагов он легко пробивает кожаный доспех. По словам торговца, именно такими в давние времена пользовались ассасины Хасана ибн-Саббаха, когда нельзя было приблизиться к жертве вплотную. А ещё русский купец, продавший ему вещицу, сказал, что арбалетная стрела называется болт.</Aftertext>
 			</Action>
