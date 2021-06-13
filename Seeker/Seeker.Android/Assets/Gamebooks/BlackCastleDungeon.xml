@@ -876,7 +876,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заплатить</ButtonName>
-				<Text>ТАРЕЛКА ЩЕЙ, 2 золотых</Text>
+				<Text>ТАРЕЛКА ЩЕЙ</Text>
 				<Price>2</Price>
 				<Benefit Name="Endurance" Value="2"/>
 				<Aftertext>Восстановите 4 ВЫНОСЛИВОСТИ и уходите.</Aftertext>
@@ -1639,7 +1639,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить яблоко</ButtonName>
-				<Text>ЯБЛОКО, 1 золотой</Text>
+				<Text>ЯБЛОКО</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть яблоко,1"/>
@@ -1648,7 +1648,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить мандарин</ButtonName>
-				<Text>МАНДАРИН, 2 золотых</Text>
+				<Text>МАНДАРИН</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть мандарин,2"/>
@@ -1657,7 +1657,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить апельсин</ButtonName>
-				<Text>АПЕЛЬСИН, 1 золотых</Text>
+				<Text>АПЕЛЬСИН</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть апельсин,1"/>
@@ -1667,7 +1667,7 @@
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить банан</ButtonName>
 				<Trigger>Banana</Trigger>
-				<Text>БАНАН, 2 золотых</Text>
+				<Text>БАНАН</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть банан,2"/>
@@ -1676,7 +1676,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить молоко</ButtonName>
-				<Text>МОЛОКО, 2 золотых</Text>
+				<Text>МОЛОКО</Text>
 				<Price>2</Price>
 				<Benefit Name="Endurance" Value="3"/>
 				<Aftertext>прибавит 3 ВЫНОСЛИВОСТИ.\n\nЗа 4 золотых он предлагает наполнить вашу флягу целиком:</Aftertext>
@@ -1684,7 +1684,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Наполнить флягу целиком</ButtonName>
-				<Text>ВОДА, 4 золотых</Text>
+				<Text>ВОДА</Text>
 				<Price>4</Price>
 				<Benefit Name="Healing" ValueString="Попить,2"/>
 				<Aftertext>или за 2 — наполовину:</Aftertext>
@@ -1692,7 +1692,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Наполнить флягу наполовину</ButtonName>
-				<Text>ВОДА, 2 золотых</Text>
+				<Text>ВОДА</Text>
 				<Price>2</Price>
 				<Benefit Name="Healing" ValueString="Попить,2"/>
 				<Aftertext>Если вы хотите что-то купить — покупайте. Все, кроме молока и воды (если вам не в чем ее нести), можете съесть сразу же или взять с собой. Если хотите, можете купить еще и заплечный мешок — он стоит 8 золотых, но в него помещается больше, чем в ваш: не 7, а 9 предметов. Однако два заплечных мешка нести неудобно, и если свой у вас еще с собой, вы должны будете оставить его в доме у торговца. Теперь можете либо уходить, либо попробовать поговорить с ним еще.</Aftertext>
@@ -2006,7 +2006,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить порцию</ButtonName>
-				<Text>РЫБА, 1 золотой</Text>
+				<Text>РЫБА</Text>
 				<Price>1</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Поесть рыбы,2"/>
@@ -4205,7 +4205,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить ананас</ButtonName>
-				<Text>АНАНАС, 2 золотых</Text>
+				<Text>АНАНАС</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть ананас,3"/>
@@ -4215,7 +4215,7 @@
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить банан</ButtonName>
 				<Trigger>Banana</Trigger>
-				<Text>БАНАН, 2 золотых</Text>
+				<Text>БАНАН</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть банан,2"/>
@@ -4224,40 +4224,40 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кусок дерева</ButtonName>
-				<Text>КРАСИВЫЙ КУСОЧЕК ДЕРЕВА, 1 золотой</Text>
+				<Text>КРАСИВЫЙ КУСОЧЕК ДЕРЕВА</Text>
 				<Price>1</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить ключ</ButtonName>
 				<Trigger>CurlyKey</Trigger>
-				<Text>ФИГУРНЫЙ КЛЮЧ, 2 золотых</Text>
+				<Text>ФИГУРНЫЙ КЛЮЧ</Text>
 				<Price>2</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить попну</ButtonName>
-				<Text>ПОПОНА ДЛЯ ЛОШАДИ, 5 золотых</Text>
+				<Text>ПОПОНА ДЛЯ ЛОШАДИ</Text>
 				<Price>5</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить кусок металла</ButtonName>
 				<Trigger>PieceOfMetal</Trigger>
-				<Text>БЛЕСТЯЩИЙ КУСОК МЕТАЛЛА, 3 золотых</Text>
+				<Text>БЛЕСТЯЩИЙ КУСОК МЕТАЛЛА</Text>
 				<Price>3</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить устрицу</ButtonName>
-				<Text>СДЕЛАННУЮ ИЗ ЗОЛОТА УСТРИЦУ, 8 золотых</Text>
+				<Text>СДЕЛАННУЮ ИЗ ЗОЛОТА УСТРИЦУ</Text>
 				<Price>8</Price>
 			</Action>
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить браслет</ButtonName>
 				<Trigger>SilverBracelet</Trigger>
-				<Text>СЕРЕБРЯНЫЙ БРАСЛЕТ, 4 золотых</Text>
+				<Text>СЕРЕБРЯНЫЙ БРАСЛЕТ</Text>
 				<Price>4</Price>
 				<Aftertext>Сделайте необходимые покупки и покиньте деревню по одной из дорог: на юг или на запад.</Aftertext>
 			</Action>
