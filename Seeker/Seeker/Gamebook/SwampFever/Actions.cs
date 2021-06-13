@@ -20,7 +20,10 @@ namespace Seeker.Gamebook.SwampFever
         public override List<string> Representer()
         {
             if (Price > 0)
-                return new List<string> { Text };
+            {
+                string creds = Game.Other.CoinsNoun(Price, "кредит", "кредита", "кредитов");
+                return new List<string> { String.Format("{0}, {1} {2}", Text, Price, creds) };
+            }
 
             else if (Level > 0)
                 return new List<string> { String.Format("Ментальная проверка, уровень {0}", Level) };
