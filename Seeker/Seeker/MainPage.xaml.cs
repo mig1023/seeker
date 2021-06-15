@@ -162,11 +162,11 @@ namespace Seeker
                         Game.Router.AddAction(action.ButtonName, index);
                         Game.Router.AddActionsPlaces(index, actionPlace);
 
-                        index += 1;
-
                         if (!String.IsNullOrEmpty(action.Aftertext))
                             Action.Children.Add(Output.Interface.Text(action.Aftertext));
                     }
+
+                    index += 1;
                 }
             }
 
