@@ -149,6 +149,14 @@
 		<Text>Алдар рассказывает о своих приключениях Алтынбаю и Азимхану. И чем дальше те слушают, тем большее удивление читается на их лицах. Они не могут поверить в то, что перед ними сидит тот самый Алдар Косе.</Text>
 		<Actions>
 			<Action>
+				<ActionName>Option</ActionName>
+				<Option Destination="262" Text="Отмечены оба слова: «Пастух» и «Дружба»" OnlyIf="Пастух, Дружба"/>
+			</Action>
+			<Action>
+				<ActionName>Option</ActionName>
+				<Option Destination="241" Text="Не отмечено слово «Пастух», но отмечено слово «Дружба»" OnlyIf="Дружба, !Пастух" Aftertext="В любом другом случае:"/>
+			</Action>
+			<Action>
 				<ActionName>Test</ActionName>
 				<ButtonName>Проверить красноречие</ButtonName>
 				<Stat>Oratory</Stat>
@@ -157,9 +165,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="218" Text="В случае успеха"/>
-			<Option Destination="233" Text="В случае провала" Aftertext="Ситуация может быть особой, конечно:"/>
-			<Option Destination="262" Text="Отмечены оба слова: «Пастух» и «Дружба»" OnlyIf="Пастух, Дружба"/>
-			<Option Destination="241" Text="Не отмечено слово «Пастух», но отмечено слово «Дружба»" OnlyIf="Дружба, !Пастух"/>
+			<Option Destination="233" Text="В случае провала"/>
 			
 		</Options>
 	</Paragraph>
