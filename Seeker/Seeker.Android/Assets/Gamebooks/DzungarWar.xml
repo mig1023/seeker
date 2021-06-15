@@ -6515,6 +6515,10 @@
 		<Text>Джунгары на свежих конях сокращают расстояние. И вот наш герой слышит позади лай собак. Погоня принимает вид загонной охоты, где Алдару Косе отводится роль дичи.\n\nВпереди старое русло Или, сверкающее белизной под зимним солнцем. Сама река уже недалеко, но клыкастые противники ещё ближе. Через несколько мгновений гончие псы набросятся на всадника.\n\nИначе:</Text>
 		<Actions>
 			<Action>
+				<ActionName>Option</ActionName>
+				<Option Destination="531" Text="Отмечено ключевое слово «Солончак»" OnlyIf="Солончак" Aftertext="Иначе:"/>
+			</Action>
+			<Action>
 				<ActionName>Test</ActionName>
 				<ButtonName>Проверить хитрость</ButtonName>
 				<Stat>Cunning</Stat>
@@ -6522,7 +6526,6 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="531" Text="Отмечено ключевое слово «Солончак»" OnlyIf="Солончак"/>
 			<Option Destination="558" Text="В случае успеха"/>
 			<Option Destination="567" Text="В случае провала"/>
 		</Options>
