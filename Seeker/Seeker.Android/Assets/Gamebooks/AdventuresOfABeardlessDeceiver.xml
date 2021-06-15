@@ -432,7 +432,15 @@
 				<Trigger>PartyClothes</Trigger>
 				<Text>ПРАЗДНИЧНАЯ ОДЕЖДА</Text>
 				<Price>25</Price>
-				<Aftertext>Костюм, несомненно, хороший. Но цена на него безбожно задрана. Алдар понимает, что воины состоят в доле с хитрым торговцем, получая хорошую прибыль с путников, которые хотят попасть в ханскую ставку. Придётся либо платить, либо придумывать другой способ.\n\nЕсли нет ни денег ни перстня, придётся полагаться на свои способности.</Aftertext>
+				<Aftertext>Костюм, несомненно, хороший. Но цена на него безбожно задрана. Алдар понимает, что воины состоят в доле с хитрым торговцем, получая хорошую прибыль с путников, которые хотят попасть в ханскую ставку. Придётся либо платить, либо придумывать другой способ.</Aftertext>
+			</Action>
+			<Action>
+				<ActionName>Option</ActionName>
+				<Option Destination="24" Text="Переодеться и зайти" OnlyIf="PartyClothes" Aftertext="Если у Алдара есть ханский перстень, показать его воинам. Они обязаны будут пропустить человека несмотря на его вид:"/>
+			</Action>
+			<Action>
+				<ActionName>Option</ActionName>
+				<Option Destination="24" Text="Есть ханский перстень" OnlyIf="KhansRing" Aftertext="Если нет ни денег ни перстня, придётся полагаться на свои способности:"/>
 			</Action>
 			<Action>
 				<ActionName>Test</ActionName>
@@ -441,12 +449,9 @@
 				<Level>12</Level>
 			</Action>
 		</Actions>
-		<Triggers>PartyClothes</Triggers>
 		<Options>
 			<Option Destination="112" Text="В случае успеха"/>
 			<Option Destination="83" Text="В случае провала"/>
-			<Option Destination="24" Text="Переодеться и зайти" OnlyIf="PartyClothes"/>
-			<Option Destination="24" Text="Есть ханский перстень" OnlyIf="KhansRing"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
