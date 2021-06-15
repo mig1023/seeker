@@ -31,15 +31,9 @@ namespace Seeker.Game
             Destinations.Add(text, index);
         }
 
-        public static void AddAction(string text, int index)
-        {
-            Actions.Add(text, index);
-        }
+        public static void AddAction(string text, int index) => Actions.Add(text, index);
 
-        public static void AddActionsPlaces(int index, StackLayout stackLayout)
-        {
-            ActionsPlaces.Add(index, stackLayout);
-        }
+        public static void AddActionsPlaces(int index, StackLayout stackLayout) => ActionsPlaces.Add(index, stackLayout);
 
         public static int FindDestination(string text)
         {
@@ -52,14 +46,8 @@ namespace Seeker.Game
             return Destinations[text];
         }
 
-        public static int FindAction(string text)
-        {
-            return Actions[text];
-        }
+        public static int FindAction(string text) => Actions[text];
 
-        public static StackLayout FindActionsPlaces(int index)
-        {
-            return ActionsPlaces[index];
-        }
+        public static StackLayout FindActionsPlaces(int index) => ActionsPlaces[index];
     }
 }

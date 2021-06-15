@@ -24,12 +24,11 @@ namespace Seeker.Game
 
         public static void Add(string name, int healing, int portions)
         {
-            foreach(Healing currentHealing in HealingList)
-                if (currentHealing.Name == name)
-                {
-                    currentHealing.Portion += portions;
-                    return;
-                }
+            foreach(Healing currentHealing in HealingList.Where(x => x.Name == name))
+            {
+                currentHealing.Portion += portions;
+                return;
+            }
 
             Healing newHealing = new Healing
             {
@@ -45,13 +44,12 @@ namespace Seeker.Game
         {
             List<string> healingName = name.Split('(').ToList();
 
-            foreach (Healing currentHealing in HealingList)
-                if (currentHealing.Name == healingName[0].Trim())
-                {
-                    currentHealing.Portion -= 1;
-                    Game.Data.Actions.UseHealing(currentHealing.Level);
-                    return;
-                }
+            foreach (Healing currentHealing in HealingList.Where(x => x.Name == healingName[0].Trim()))
+            {
+                currentHealing.Portion -= 1;
+                Game.Data.Actions.UseHealing(currentHealing.Level);
+                return;
+            }
         }
 
         public static List<string> List()
@@ -61,9 +59,8 @@ namespace Seeker.Game
             if (!Game.Data.Actions.IsHealingEnabled())
                 return allHealing;
 
-            foreach (Healing currentHealing in HealingList)
-                if (currentHealing.Portion > 0)
-                    allHealing.Add(String.Format("{0} (осталось {1})", currentHealing.Name, currentHealing.Portion));
+            foreach (Healing currentHealing in HealingList.Where(x => x.Portion > 0))
+                allHealing.Add(String.Format("{0} (осталось {1})", currentHealing.Name, currentHealing.Portion));
 
             return allHealing;
         }
