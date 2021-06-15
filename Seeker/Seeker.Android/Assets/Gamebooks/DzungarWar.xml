@@ -6005,6 +6005,10 @@
 		<Text>Откинув полог, Алдар с товарищем сталкиваются со служанкой. Её лицо искажает ужас. Понятно, что в шатре гонца хунтайши не имеют права находиться посторонние. Служанка, скорее всего, хотела прибраться и наткнулась на двух неизвестных воинов.\n\nВ противном случае:</Text>
 		<Actions>
 			<Action>
+				<ActionName>Option</ActionName>
+				<Option Destination="506" Text="Отмечено ключевое слово «Ерик»" OnlyIf="Ерик" Aftertext="В противном случае:"/>
+			</Action>
+			<Action>
 				<ActionName>Test</ActionName>
 				<ButtonName>Проверить красноречие</ButtonName>
 				<Stat>Oratory</Stat>
@@ -6014,7 +6018,6 @@
 		<Options>
 			<Option Destination="484" Text="В случае успеха"/>
 			<Option Destination="468" Text="В случае провала"/>
-			<Option Destination="506" Text="Отмечено ключевое слово «Ерик»" OnlyIf="Ерик"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
