@@ -6495,6 +6495,10 @@
 		<Text>Алдар с напарником быстро обыскивают шатёр, но ничего не обнаруживают, кроме маленького сундука возле лежанки гонца хунтайши. Все бумаги спрятаны именно там. Алдар достаёт нож, чтобы поддеть замок.\n\nВ противном случае:</Text>
 		<Actions>
 			<Action>
+				<ActionName>Option</ActionName>
+				<Option Destination="581" Text="Отмечено ключевое слово «Серик»" OnlyIf="Серик" Aftertext="В противном случае:"/>
+			</Action>
+			<Action>
 				<ActionName>Test</ActionName>
 				<ButtonName>Проверить мудрость</ButtonName>
 				<Stat>Wisdom</Stat>
@@ -6504,7 +6508,6 @@
 		<Options>
 			<Option Destination="551" Text="В случае успеха"/>
 			<Option Destination="570" Text="В случае провала"/>
-			<Option Destination="581" Text="Отмечено ключевое слово «Серик»" OnlyIf="Серик"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
