@@ -11,8 +11,8 @@ namespace Seeker.Prototypes
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
         public string Text { get; set; }
-
         public bool Used { get; set; }
+        public Game.Option Option { get; set; }
 
         public Abstract.IModification Benefit { get; set; }
         public List<Abstract.IModification> BenefitList { get; set; }

@@ -109,6 +109,7 @@ namespace Seeker
                         Source = image,
                         Aspect = Aspect.AspectFit
                     };
+
                     Text.Children.Add(illustration);
 
                     if (!String.IsNullOrEmpty(paragraph.Images[image]))
@@ -123,34 +124,52 @@ namespace Seeker
                 foreach(Abstract.IModification modification in paragraph.Modification)
                     modification.Do();
 
+            bool gameOver = false;
+
             if ((paragraph.Actions != null) && (paragraph.Actions.Count > 0))
             {
                 int index = 0;
 
                 foreach (Abstract.IActions action in paragraph.Actions)
                 {
-                    StackLayout actionPlace = Output.Interface.ActionPlace();
+                    if (action.ActionName == "Option")
+                    {
+                        bool mustBeVisible = Game.Data.ShowDisabledOption || !String.IsNullOrEmpty(action.Option.Aftertext);
 
-                    foreach (View enemy in Output.Interface.Represent(action.Do(out _, "Representer")))
-                        actionPlace.Children.Add(enemy);
+                        if (!String.IsNullOrEmpty(action.Option.OnlyIf) && !Game.Data.CheckOnlyIf(action.Option.OnlyIf) && !mustBeVisible)
+                            continue;
 
-                    Button button = Output.Buttons.Action(action.ButtonName, action.IsButtonEnabled());
-                    button.Clicked += Action_Click;
-                    actionPlace.Children.Add(button);
+                        Button button = AddOptionButton(action.Option, ref gameOver);
 
-                    Action.Children.Add(actionPlace);
+                        Action.Children.Add(button);
 
-                    Game.Router.AddAction(action.ButtonName, index);
-                    Game.Router.AddActionsPlaces(index, actionPlace);
+                        if (!String.IsNullOrEmpty(action.Option.Aftertext))
+                            Action.Children.Add(Output.Interface.Text(action.Option.Aftertext));
+                    } 
+                    else
+                    {
+                        StackLayout actionPlace = Output.Interface.ActionPlace();
 
-                    index += 1;
+                        foreach (View enemy in Output.Interface.Represent(action.Do(out _, "Representer")))
+                            actionPlace.Children.Add(enemy);
 
-                    if (!String.IsNullOrEmpty(action.Aftertext))
-                        Action.Children.Add(Output.Interface.Text(action.Aftertext));
+                        Button button = Output.Buttons.Action(action.ButtonName, action.IsButtonEnabled());
+                        button.Clicked += Action_Click;
+                        actionPlace.Children.Add(button);
+
+                        Action.Children.Add(actionPlace);
+
+                        Game.Router.AddAction(action.ButtonName, index);
+                        Game.Router.AddActionsPlaces(index, actionPlace);
+
+                        index += 1;
+
+                        if (!String.IsNullOrEmpty(action.Aftertext))
+                            Action.Children.Add(Output.Interface.Text(action.Aftertext));
+                    }
                 }
             }
 
-            bool gameOver = false;
             int optionCount = 0;
 
             foreach (Game.Option option in paragraph.Options)
@@ -160,16 +179,7 @@ namespace Seeker
                 if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf) && !mustBeVisible)
                     continue;
 
-                Button button = Output.Buttons.Option(option);
-
-                if (button == null)
-                    continue;
-
-                Game.Router.AddDestination(option.Text, option.Destination, option.Do);
-
-                gameOver = (option.Destination == 0);
-
-                button.Clicked += Option_Click;
+                Button button = AddOptionButton(option, ref gameOver);
 
                 Options.Children.Add(button);
 
@@ -204,6 +214,19 @@ namespace Seeker
 
             if (id != Game.Data.StartParagraph)
                 Game.Continue.Save();
+        }
+
+        private Button AddOptionButton(Game.Option option, ref bool gameOver)
+        {
+            Button button = Output.Buttons.Option(option);
+
+            Game.Router.AddDestination(option.Text, option.Destination, option.Do);
+
+            gameOver = (option.Destination == 0);
+
+            button.Clicked += Option_Click;
+
+            return button;
         }
 
         private void AddAdditionalButton(string name, EventHandler eventHandler)

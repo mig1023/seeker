@@ -18,39 +18,10 @@ namespace Seeker.Gamebook.DzungarWar
             Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-            {
-                Option option = OptionsTemplate(xmlOption);
-
-                if (xmlOption.Attributes["Do"] != null)
-                    option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
-
-                paragraph.Options.Add(option);
-            }
+                paragraph.Options.Add(OptionParse(xmlOption));
 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-            {
-                Actions action = new Actions
-                {
-                    ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                    ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                    Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                    Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                    RemoveTrigger = Game.Xml.StringParse(xmlAction["RemoveTrigger"]),
-                    Text = Game.Xml.StringParse(xmlAction["Text"]),
-                    Stat = Game.Xml.StringParse(xmlAction["Stat"]),
-                    TriggerTestPenalty = Game.Xml.StringParse(xmlAction["TriggerTestPenalty"]),
-
-                    Price = Game.Xml.IntParse(xmlAction["Price"]),
-                    Level = Game.Xml.IntParse(xmlAction["Level"]),
-                    StatStep = Game.Xml.IntParse(xmlAction["StatStep"]),
-
-                    StatToMax = Game.Xml.BoolParse(xmlAction["StatToMax"]),
-
-                    Benefit = ModificationParse(xmlAction["Benefit"]),
-                };
-
-                paragraph.Actions.Add(action);
-            }
+                paragraph.Actions.Add(ActionParse(xmlAction));
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                 paragraph.Modification.Add(ModificationParse(xmlModification));
@@ -58,6 +29,44 @@ namespace Seeker.Gamebook.DzungarWar
             return paragraph;
         }
 
+        private Option OptionParse(XmlNode xmlOption)
+        {
+            Option option = OptionsTemplate(xmlOption);
+
+            if (xmlOption.Attributes["Do"] != null)
+                option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
+
+            return option;
+        }
+
+        private Actions ActionParse(XmlNode xmlAction)
+        {
+            Actions action = new Actions
+            {
+                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
+                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
+                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
+                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+                RemoveTrigger = Game.Xml.StringParse(xmlAction["RemoveTrigger"]),
+                Text = Game.Xml.StringParse(xmlAction["Text"]),
+                Stat = Game.Xml.StringParse(xmlAction["Stat"]),
+                TriggerTestPenalty = Game.Xml.StringParse(xmlAction["TriggerTestPenalty"]),
+
+                Price = Game.Xml.IntParse(xmlAction["Price"]),
+                Level = Game.Xml.IntParse(xmlAction["Level"]),
+                StatStep = Game.Xml.IntParse(xmlAction["StatStep"]),
+
+                StatToMax = Game.Xml.BoolParse(xmlAction["StatToMax"]),
+
+                Benefit = ModificationParse(xmlAction["Benefit"]),
+            };
+
+            if (action.ActionName == "Option")
+                action.Option = OptionParse(xmlAction["Option"]);
+
+            return action;
+        }
+        
         private static Modification ModificationParse(XmlNode xmlNode)
         {
             if (xmlNode == null)

@@ -32,5 +32,7 @@ namespace Seeker.Abstract
         void UseHealing(int healingLevel);
 
         string TextByOptions(string option);
+
+        Game.Option Option { get; set; }
     }
 }
