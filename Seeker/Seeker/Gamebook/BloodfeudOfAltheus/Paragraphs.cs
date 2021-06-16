@@ -32,7 +32,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return paragraph;
         }
 
-        private Actions ActionParse(XmlNode xmlAction)
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = new Actions
             {
@@ -40,7 +40,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
                 Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                 Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-
                 FightToDeath = Game.Xml.BoolParse(xmlAction["FightToDeath"]),
                 LastWound = Game.Xml.BoolParse(xmlAction["LastWound"]),
                 YourRacing = Game.Xml.BoolParse(xmlAction["YourRacing"]),
@@ -58,7 +57,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return action;
         }
 
-        private Option OptionParse(XmlNode xmlOption)
+        public override Option OptionParse(XmlNode xmlOption)
         {
             Option option = new Option
             {
@@ -73,7 +72,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return option;
         }
 
-        private static Modification ModificationParse(XmlNode xmlModification) => new Modification
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) => new Modification
         {
             Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
             Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
