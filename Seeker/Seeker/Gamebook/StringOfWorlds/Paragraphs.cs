@@ -57,7 +57,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             return paragraph;
         }
 
-        private Actions ActionParse(XmlNode xmlAction)
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = new Actions
             {
