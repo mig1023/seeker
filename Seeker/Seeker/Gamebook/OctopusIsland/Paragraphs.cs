@@ -13,23 +13,9 @@ namespace Seeker.Gamebook.OctopusIsland
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplateModXml(xmlParagraph, new Modification());
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-                paragraph.Options.Add(OptionParse(xmlOption));
-
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-                paragraph.Actions.Add(ActionParse(xmlAction));
-
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
-
-            return paragraph;
-        }
-
-        private Actions ActionParse(XmlNode xmlAction)
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = new Actions
             {
@@ -53,7 +39,7 @@ namespace Seeker.Gamebook.OctopusIsland
             return action;
         }
 
-        private Option OptionParse(XmlNode xmlOption)
+        public override Option OptionParse(XmlNode xmlOption)
         {
             Option option = OptionsTemplateWithoutDestination(xmlOption);
 
