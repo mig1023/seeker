@@ -19,50 +19,51 @@ namespace Seeker.Gamebook.SilentSchool
             Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-            {
-                Option option = OptionsTemplateWithoutDestination(xmlOption);
-
-                if (xmlOption.Attributes["Destination"].Value == "CHANGE")
-                    option.Destination = Character.Protagonist.ChangeDecision;
-                else
-                    option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
-
-                if (xmlOption.Attributes["Do"] != null)
-                {
-                    Modification modification = new Modification { Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]) };
-
-                    if (int.TryParse(xmlOption.Attributes["Value"].Value, out _))
-                        modification.Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]);
-                    else
-                        modification.ValueString = Game.Xml.StringParse(xmlOption.Attributes["Value"]);
-
-                    option.Do = modification;
-                }
-
-                paragraph.Options.Add(option);
-            }
+                paragraph.Options.Add(OptionParse(xmlOption));
 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-            {
-                Actions action = new Actions
-                {
-                    ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                    ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                    Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                    Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                    Text = Game.Xml.StringParse(xmlAction["Text"]),
-
-                    HarmedMyself = Game.Xml.IntParse(xmlAction["HarmedMyself"]),
-                    Dices = Game.Xml.IntParse(xmlAction["Dices"]),
-                };
-
-                paragraph.Actions.Add(action);
-            }
+                paragraph.Actions.Add(ActionParse(xmlAction));
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                 paragraph.Modification.Add(ModificationParse(xmlModification));
 
             return paragraph;
+        }
+
+        private Actions ActionParse(XmlNode xmlAction) => new Actions
+        {
+            ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
+            ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
+            Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
+            Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+            Text = Game.Xml.StringParse(xmlAction["Text"]),
+
+            HarmedMyself = Game.Xml.IntParse(xmlAction["HarmedMyself"]),
+            Dices = Game.Xml.IntParse(xmlAction["Dices"]),
+        };
+
+        private Option OptionParse(XmlNode xmlOption)
+        {
+            Option option = OptionsTemplateWithoutDestination(xmlOption);
+
+            if (xmlOption.Attributes["Destination"].Value == "CHANGE")
+                option.Destination = Character.Protagonist.ChangeDecision;
+            else
+                option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
+
+            if (xmlOption.Attributes["Do"] != null)
+            {
+                Modification modification = new Modification { Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]) };
+
+                if (int.TryParse(xmlOption.Attributes["Value"].Value, out _))
+                    modification.Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]);
+                else
+                    modification.ValueString = Game.Xml.StringParse(xmlOption.Attributes["Value"]);
+
+                option.Do = modification;
+            }
+
+            return option;
         }
 
         private static Modification ModificationParse(XmlNode xmlNode)
