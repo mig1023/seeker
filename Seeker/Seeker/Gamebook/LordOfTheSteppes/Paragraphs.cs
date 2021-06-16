@@ -13,23 +13,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-                paragraph.Options.Add(OptionParse(xmlOption));
-
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-                paragraph.Actions.Add(ActionParse(xmlAction));
-
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(ModificationParse(xmlModification));
-
-            return paragraph;
-        }
-
-        private Actions ActionParse(XmlNode xmlAction)
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = new Actions
             {
@@ -39,20 +25,17 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
                 Text = Game.Xml.StringParse(xmlAction["Text"]),
                 Stat = Game.Xml.StringParse(xmlAction["Stat"]),
-
                 StatStep = Game.Xml.IntParse(xmlAction["StatStep"]),
                 RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
                 WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
                 Coherence = Game.Xml.IntParse(xmlAction["Coherence"]),
                 Dices = Game.Xml.IntParse(xmlAction["Dices"]),
                 Price = Game.Xml.IntParse(xmlAction["Price"]),
-
                 Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
                 NotToDeath = Game.Xml.BoolParse(xmlAction["NotToDeath"]),
                 Odd = Game.Xml.BoolParse(xmlAction["Odd"]),
                 Initiative = Game.Xml.BoolParse(xmlAction["Initiative"]),
                 StoneGuard = Game.Xml.BoolParse(xmlAction["StoneGuard"]),
-
                 SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]),
             };
 
@@ -93,7 +76,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return action;
         }
 
-        private Option OptionParse(XmlNode xmlOption)
+        public override Option OptionParse(XmlNode xmlOption)
         {
             Option option = OptionsTemplate(xmlOption);
 
@@ -172,7 +155,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return (success ? value : Character.SpecialTechniques.Nope);
         }
 
-        private static Modification ModificationParse(XmlNode xmlNode)
+        public override Abstract.IModification ModificationParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
                 return null;
