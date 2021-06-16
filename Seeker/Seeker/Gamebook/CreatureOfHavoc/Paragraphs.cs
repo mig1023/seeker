@@ -44,7 +44,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             return paragraph;
         }
 
-        private Actions ActionParse(XmlNode xmlAction)
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = new Actions
             {
@@ -52,11 +52,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
                 Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                 Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-
                 WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
                 RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
                 RoundsToFight = Game.Xml.IntParse(xmlAction["RoundsToFight"]),
-
                 Ophidiotaur = Game.Xml.BoolParse(xmlAction["Ophidiotaur"]),
                 ManicBeast = Game.Xml.BoolParse(xmlAction["ManicBeast"]),
                 GiantHornet = Game.Xml.BoolParse(xmlAction["GiantHornet"]),
@@ -73,7 +71,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             return action;
         }
 
-        private static Modification ModificationParse(XmlNode xmlModification) => new Modification
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) => new Modification
         {
             Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
             Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
