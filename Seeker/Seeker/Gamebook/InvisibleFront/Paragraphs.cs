@@ -19,25 +19,28 @@ namespace Seeker.Gamebook.InvisibleFront
             Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-            {
-                Option option = OptionsTemplate(xmlOption);
-
-                if (xmlOption.Attributes["Do"] != null)
-                {
-                    Modification modification = new Modification { Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]) };
-
-                    ValueParse(xmlOption, ref modification);
-
-                    option.Do = modification;
-                }
-
-                paragraph.Options.Add(option);
-            }
+                paragraph.Options.Add(OptionParse(xmlOption));
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                 paragraph.Modification.Add(ModificationParse(xmlModification));
 
             return paragraph;
+        }
+
+        private Option OptionParse(XmlNode xmlOption)
+        {
+            Option option = OptionsTemplate(xmlOption);
+
+            if (xmlOption.Attributes["Do"] != null)
+            {
+                Modification modification = new Modification { Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]) };
+
+                ValueParse(xmlOption, ref modification);
+
+                option.Do = modification;
+            }
+
+            return option;
         }
 
         private static Modification ModificationParse(XmlNode xmlNode)
