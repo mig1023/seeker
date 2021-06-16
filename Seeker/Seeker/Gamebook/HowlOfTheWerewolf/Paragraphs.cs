@@ -41,7 +41,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return paragraph;
         }
 
-        private Actions ActionParse(XmlNode xmlAction)
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = new Actions
             {
@@ -50,7 +50,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                 Text = Game.Xml.StringParse(xmlAction["Text"]),
                 Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-
                 Price = Game.Xml.IntParse(xmlAction["Price"]),
                 Value = Game.Xml.IntParse(xmlAction["Value"]),
                 RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
@@ -63,9 +62,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 WoundsLimit = Game.Xml.IntParse(xmlAction["WoundsLimit"]),
                 HitStrengthBonus = Game.Xml.IntParse(xmlAction["HitStrengthBonus"]),
                 ExtendedDamage = Game.Xml.IntParse(xmlAction["ExtendedDamage"]),
-
                 Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
-
                 Specificity = SpecificsParse(xmlAction["Specificity"]),
             };
 
