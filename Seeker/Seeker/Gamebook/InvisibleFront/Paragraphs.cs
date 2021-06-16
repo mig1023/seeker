@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.InvisibleFront
             return paragraph;
         }
 
-        private Option OptionParse(XmlNode xmlOption)
+        public override Option OptionParse(XmlNode xmlOption)
         {
             Option option = OptionsTemplate(xmlOption);
 
@@ -43,7 +43,7 @@ namespace Seeker.Gamebook.InvisibleFront
             return option;
         }
 
-        private static Modification ModificationParse(XmlNode xmlNode)
+        public override Abstract.IModification ModificationParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
                 return null;
