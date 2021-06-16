@@ -18,34 +18,35 @@ namespace Seeker.Gamebook.Catharsis
             Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-            {
-                Option option = OptionsTemplate(xmlOption);
-
-                if (xmlOption.Attributes["Do"] != null)
-                    option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
-
-                paragraph.Options.Add(option);
-            }
+                paragraph.Options.Add(OptionParse(xmlOption));
 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-            {
-                Actions action = new Actions
-                {
-                    ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                    ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                    Text = Game.Xml.StringParse(xmlAction["Text"]),
-                    Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                    Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                    Bonus = Game.Xml.StringParse(xmlAction["Bonus"]),
-                };
-
-                paragraph.Actions.Add(action);
-            }
+                paragraph.Actions.Add(ActionParse(xmlAction));
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                 paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
 
             return paragraph;
+        }
+
+        private Actions ActionParse(XmlNode xmlAction) => new Actions
+        {
+            ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
+            ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
+            Text = Game.Xml.StringParse(xmlAction["Text"]),
+            Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
+            Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+            Bonus = Game.Xml.StringParse(xmlAction["Bonus"]),
+        };
+
+        private Option OptionParse(XmlNode xmlOption)
+        {
+            Option option = OptionsTemplate(xmlOption);
+
+            if (xmlOption.Attributes["Do"] != null)
+                option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
+
+            return option;
         }
     }
 }
