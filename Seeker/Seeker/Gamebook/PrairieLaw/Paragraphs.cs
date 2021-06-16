@@ -13,23 +13,9 @@ namespace Seeker.Gamebook.PrairieLaw
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplateModXml(xmlParagraph, new Modification());
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-                paragraph.Options.Add(OptionsTemplate(xmlOption));
-
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-                paragraph.Actions.Add(ActionParse(xmlAction));
-
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
-
-            return paragraph;
-        }
-
-        private Actions ActionParse(XmlNode xmlAction)
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = new Actions
             {
@@ -40,10 +26,8 @@ namespace Seeker.Gamebook.PrairieLaw
                 RemoveTrigger = Game.Xml.StringParse(xmlAction["RemoveTrigger"]),
                 Text = Game.Xml.StringParse(xmlAction["Text"]),
                 SellPrices = Game.Xml.StringParse(xmlAction["SellPrices"]),
-
                 Dices = Game.Xml.IntParse(xmlAction["Dices"]),
                 Price = Game.Xml.IntParse(xmlAction["Price"]),
-
                 Firefight = Game.Xml.BoolParse(xmlAction["Firefight"]),
                 HeroWoundsLimit = Game.Xml.BoolParse(xmlAction["HeroWoundsLimit"]),
                 EnemyWoundsLimit = Game.Xml.BoolParse(xmlAction["EnemyWoundsLimit"]),
