@@ -13,23 +13,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-                paragraph.Options.Add(OptionParse(xmlOption));
-
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-                paragraph.Actions.Add(ActionParse(xmlAction));
-
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(ModificationParse(xmlModification));
-
-            return paragraph;
-        }
-
-        private Actions ActionParse(XmlNode xmlAction)
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = new Actions
             {
@@ -42,19 +28,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 ReactionWounds = Game.Xml.StringParse(xmlAction["ReactionWounds"]),
                 ReactionRound = Game.Xml.StringParse(xmlAction["ReactionRound"]),
                 ReactionHit = Game.Xml.StringParse(xmlAction["ReactionHit"]),
-
                 Dices = Game.Xml.IntParse(xmlAction["Dices"]),
                 DiceBonus = Game.Xml.IntParse(xmlAction["DiceBonus"]),
                 Price = Game.Xml.IntParse(xmlAction["Price"]),
                 OnlyRounds = Game.Xml.IntParse(xmlAction["OnlyRounds"]),
                 RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
                 AttackWounds = Game.Xml.IntParse(xmlAction["AttackWounds"]),
-
                 Disabled = Game.Xml.BoolParse(xmlAction["Disabled"]),
                 IncrementWounds = Game.Xml.BoolParse(xmlAction["IncrementWounds"]),
                 GolemFight = Game.Xml.BoolParse(xmlAction["GolemFight"]),
                 ZombieFight = Game.Xml.BoolParse(xmlAction["ZombieFight"]),
-
                 Benefit = ModificationParse(xmlAction["Benefit"]),
                 Damage = ModificationParse(xmlAction["Damage"]),
             };
@@ -76,7 +59,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return action;
         }
 
-        private Option OptionParse(XmlNode xmlOption)
+        public override Option OptionParse(XmlNode xmlOption)
         {
             Option option = OptionsTemplate(xmlOption);
 
@@ -106,7 +89,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return (success ? value : Actions.FoodSharingType.KeepMyself);
         }
 
-        private static Modification ModificationParse(XmlNode xmlNode)
+        public override Abstract.IModification ModificationParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
                 return null;
