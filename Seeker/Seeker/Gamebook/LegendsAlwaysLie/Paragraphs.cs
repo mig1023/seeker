@@ -18,75 +18,72 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-            {
-                Option option = OptionsTemplate(xmlOption);
-
-                if (xmlOption.Attributes["Do"] != null)
-                    option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
-
-                paragraph.Options.Add(option);
-            }
+                paragraph.Options.Add(OptionParse(xmlOption));
 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-            {
-                Actions action = new Actions
-                {
-                    ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                    ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                    Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                    Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                    Text = Game.Xml.StringParse(xmlAction["Text"]),
-                    ConneryAttacks = Game.Xml.StringParse(xmlAction["ConneryAttacks"]),
-                    ReactionWounds = Game.Xml.StringParse(xmlAction["ReactionWounds"]),
-                    ReactionRound = Game.Xml.StringParse(xmlAction["ReactionRound"]),
-                    ReactionHit = Game.Xml.StringParse(xmlAction["ReactionHit"]),
-
-                    Dices = Game.Xml.IntParse(xmlAction["Dices"]),
-                    DiceBonus = Game.Xml.IntParse(xmlAction["DiceBonus"]),
-                    Price = Game.Xml.IntParse(xmlAction["Price"]),
-                    OnlyRounds = Game.Xml.IntParse(xmlAction["OnlyRounds"]),
-                    RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
-                    AttackWounds = Game.Xml.IntParse(xmlAction["AttackWounds"]),
-
-                    Disabled = Game.Xml.BoolParse(xmlAction["Disabled"]),
-                    IncrementWounds = Game.Xml.BoolParse(xmlAction["IncrementWounds"]),
-                    GolemFight = Game.Xml.BoolParse(xmlAction["GolemFight"]),
-                    ZombieFight = Game.Xml.BoolParse(xmlAction["ZombieFight"]),
-
-                    Benefit = ModificationParse(xmlAction["Benefit"]),
-                    Damage = ModificationParse(xmlAction["Damage"]),
-                };
-
-                if (xmlAction["FoodSharing"] != null)
-                    action.FoodSharing = FoodSharingParse(xmlAction["FoodSharing"]);
-
-                if (xmlAction["Specialization"] != null)
-                    action.Specialization = SpecializationParse(xmlAction["Specialization"]);
-
-                if (xmlAction["Enemies"] != null)
-                {
-                    action.Enemies = new List<Character>();
-
-                    foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
-                    {
-                        Character enemy = new Character
-                        {
-                            Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                            Strength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
-                            Hitpoints = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
-                        };
-
-                        action.Enemies.Add(enemy);
-                    }
-                }
-
-                paragraph.Actions.Add(action);
-            }
+                paragraph.Actions.Add(ActionParse(xmlAction));
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                 paragraph.Modification.Add(ModificationParse(xmlModification));
 
             return paragraph;
+        }
+
+        private Actions ActionParse(XmlNode xmlAction)
+        {
+            Actions action = new Actions
+            {
+                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
+                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
+                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
+                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+                Text = Game.Xml.StringParse(xmlAction["Text"]),
+                ConneryAttacks = Game.Xml.StringParse(xmlAction["ConneryAttacks"]),
+                ReactionWounds = Game.Xml.StringParse(xmlAction["ReactionWounds"]),
+                ReactionRound = Game.Xml.StringParse(xmlAction["ReactionRound"]),
+                ReactionHit = Game.Xml.StringParse(xmlAction["ReactionHit"]),
+
+                Dices = Game.Xml.IntParse(xmlAction["Dices"]),
+                DiceBonus = Game.Xml.IntParse(xmlAction["DiceBonus"]),
+                Price = Game.Xml.IntParse(xmlAction["Price"]),
+                OnlyRounds = Game.Xml.IntParse(xmlAction["OnlyRounds"]),
+                RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
+                AttackWounds = Game.Xml.IntParse(xmlAction["AttackWounds"]),
+
+                Disabled = Game.Xml.BoolParse(xmlAction["Disabled"]),
+                IncrementWounds = Game.Xml.BoolParse(xmlAction["IncrementWounds"]),
+                GolemFight = Game.Xml.BoolParse(xmlAction["GolemFight"]),
+                ZombieFight = Game.Xml.BoolParse(xmlAction["ZombieFight"]),
+
+                Benefit = ModificationParse(xmlAction["Benefit"]),
+                Damage = ModificationParse(xmlAction["Damage"]),
+            };
+
+            if (xmlAction["FoodSharing"] != null)
+                action.FoodSharing = FoodSharingParse(xmlAction["FoodSharing"]);
+
+            if (xmlAction["Specialization"] != null)
+                action.Specialization = SpecializationParse(xmlAction["Specialization"]);
+
+            if (xmlAction["Enemies"] != null)
+            {
+                action.Enemies = new List<Character>();
+
+                foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
+                    action.Enemies.Add(EnemyParse(xmlEnemy));
+            }
+
+            return action;
+        }
+
+        private Option OptionParse(XmlNode xmlOption)
+        {
+            Option option = OptionsTemplate(xmlOption);
+
+            if (xmlOption.Attributes["Do"] != null)
+                option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
+
+            return option;
         }
 
         private static Character.SpecializationType SpecializationParse(XmlNode xmlNode)
@@ -126,5 +123,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             return modification;
         }
+
+        private static Character EnemyParse(XmlNode xmlEnemy) => new Character
+        {
+            Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
+            Strength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
+            Hitpoints = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
+        };
     }
 }
