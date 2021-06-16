@@ -14,23 +14,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplateModXml(xmlParagraph, new Modification());
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-                paragraph.Options.Add(OptionParse(xmlOption));
-
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-                paragraph.Actions.Add(ActionParse(xmlAction));
-
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
-
-            return paragraph;
-        }
-
-        private Actions ActionParse(XmlNode xmlAction)
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = new Actions
             {
@@ -39,11 +25,9 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                 Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
                 Text = Game.Xml.StringParse(xmlAction["Text"]),
-
                 RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
                 WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
                 Price = Game.Xml.IntParse(xmlAction["Price"]),
-
                 Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
                 ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]),
             };
@@ -61,7 +45,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return action;
         }
 
-        private Option OptionParse(XmlNode xmlOption)
+        public override Option OptionParse(XmlNode xmlOption)
         {
             Option option = OptionsTemplate(xmlOption);
 
