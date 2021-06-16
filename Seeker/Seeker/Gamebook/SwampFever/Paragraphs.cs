@@ -13,23 +13,9 @@ namespace Seeker.Gamebook.SwampFever
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-                paragraph.Options.Add(OptionsTemplate(xmlOption));
-
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-                paragraph.Actions.Add(ActionParse(xmlAction));
-
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(ModificationParse(xmlModification));
-
-            return paragraph;
-        }
-
-        private Actions ActionParse(XmlNode xmlAction) => new Actions
+        public override Abstract.IActions ActionParse(XmlNode xmlAction) => new Actions
         {
             ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
             ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
@@ -44,7 +30,7 @@ namespace Seeker.Gamebook.SwampFever
             Benefit = ModificationParse(xmlAction["Benefit"]),
         };
 
-        private static Modification ModificationParse(XmlNode xmlNode)
+        public override Abstract.IModification ModificationParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
                 return null;
