@@ -13,23 +13,9 @@ namespace Seeker.Gamebook.HeartOfIce
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplateModXml(xmlParagraph, new Modification());
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-                paragraph.Options.Add(OptionParse(xmlOption));
-
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-                paragraph.Actions.Add(ActionParse(xmlAction));
-
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
-
-            return paragraph;
-        }
-
-        private Actions ActionParse(XmlNode xmlAction)
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = new Actions
             {
@@ -41,9 +27,7 @@ namespace Seeker.Gamebook.HeartOfIce
                 Skill = Game.Xml.StringParse(xmlAction["Skill"]),
                 RemoveTrigger = Game.Xml.StringParse(xmlAction["RemoveTrigger"]),
                 SellType = Game.Xml.StringParse(xmlAction["SellType"]),
-
                 Price = Game.Xml.IntParse(xmlAction["Price"]),
-
                 Choice = Game.Xml.BoolParse(xmlAction["Choice"]),
                 Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
                 Sell = Game.Xml.BoolParse(xmlAction["Sell"]),
@@ -62,7 +46,7 @@ namespace Seeker.Gamebook.HeartOfIce
             return action;
         }
 
-        private Option OptionParse(XmlNode xmlOption)
+        public override Option OptionParse(XmlNode xmlOption)
         {
             Option option = OptionsTemplate(xmlOption);
 
