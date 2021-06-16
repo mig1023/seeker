@@ -18,83 +18,89 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-            {
-                Option option = OptionsTemplate(xmlOption);
-
-                if (xmlOption.Attributes["Do"] != null)
-                    option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
-
-                paragraph.Options.Add(option);
-            }
+                paragraph.Options.Add(OptionParse(xmlOption));
 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-            {
-                Actions action = new Actions
-                {
-                    ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                    ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                    Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                    Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                    Text = Game.Xml.StringParse(xmlAction["Text"]),
-                    Stat = Game.Xml.StringParse(xmlAction["Stat"]),
-
-                    StatStep = Game.Xml.IntParse(xmlAction["StatStep"]),
-                    RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
-                    WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
-                    Coherence = Game.Xml.IntParse(xmlAction["Coherence"]),
-                    Dices = Game.Xml.IntParse(xmlAction["Dices"]),
-                    Price = Game.Xml.IntParse(xmlAction["Price"]),
-
-                    Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
-                    NotToDeath = Game.Xml.BoolParse(xmlAction["NotToDeath"]),
-                    Odd = Game.Xml.BoolParse(xmlAction["Odd"]),
-                    Initiative = Game.Xml.BoolParse(xmlAction["Initiative"]),
-                    StoneGuard = Game.Xml.BoolParse(xmlAction["StoneGuard"]),
-                    
-                    SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]),
-                };
-
-                if (xmlAction["Benefit"] != null)
-                {
-                    action.BenefitList = new List<Abstract.IModification>();
-
-                    foreach (XmlNode bonefit in xmlAction.SelectNodes("Benefit"))
-                        action.BenefitList.Add(ModificationParse(bonefit));
-                }
-
-                bool falaleyHelp = Game.Xml.BoolParse(xmlAction["FalaleyHelp"]) && Game.Data.Triggers.Contains("Фалалей поможет");
-
-                if ((xmlAction["Allies"] != null) || falaleyHelp)
-                {
-                    action.Allies = new List<Character> { new Character { Name = Character.Protagonist.Name } };
-                    action.GroupFight = true;
-                }
-
-                if (xmlAction["Allies"] != null)
-                    foreach (XmlNode xmlAlly in xmlAction.SelectNodes("Allies/Ally"))
-                        action.Allies.Add(CharacterParse(xmlAlly, null));
-
-                if (falaleyHelp)
-                    action.Allies.Add(Falaley());
-
-                if (xmlAction["Enemies"] != null)
-                {
-                    action.Enemies = new List<Character>();
-
-                    foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
-                        action.Enemies.Add(CharacterParse(xmlEnemy, action));
-
-                    if (action.Enemies.Count > 1)
-                        action.GroupFight = true;
-                }
-
-                paragraph.Actions.Add(action);
-            }
+                paragraph.Actions.Add(ActionParse(xmlAction));
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                 paragraph.Modification.Add(ModificationParse(xmlModification));
 
             return paragraph;
+        }
+
+        private Actions ActionParse(XmlNode xmlAction)
+        {
+            Actions action = new Actions
+            {
+                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
+                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
+                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
+                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+                Text = Game.Xml.StringParse(xmlAction["Text"]),
+                Stat = Game.Xml.StringParse(xmlAction["Stat"]),
+
+                StatStep = Game.Xml.IntParse(xmlAction["StatStep"]),
+                RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
+                WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
+                Coherence = Game.Xml.IntParse(xmlAction["Coherence"]),
+                Dices = Game.Xml.IntParse(xmlAction["Dices"]),
+                Price = Game.Xml.IntParse(xmlAction["Price"]),
+
+                Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
+                NotToDeath = Game.Xml.BoolParse(xmlAction["NotToDeath"]),
+                Odd = Game.Xml.BoolParse(xmlAction["Odd"]),
+                Initiative = Game.Xml.BoolParse(xmlAction["Initiative"]),
+                StoneGuard = Game.Xml.BoolParse(xmlAction["StoneGuard"]),
+
+                SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]),
+            };
+
+            if (xmlAction["Benefit"] != null)
+            {
+                action.BenefitList = new List<Abstract.IModification>();
+
+                foreach (XmlNode bonefit in xmlAction.SelectNodes("Benefit"))
+                    action.BenefitList.Add(ModificationParse(bonefit));
+            }
+
+            bool falaleyHelp = Game.Xml.BoolParse(xmlAction["FalaleyHelp"]) && Game.Data.Triggers.Contains("Фалалей поможет");
+
+            if ((xmlAction["Allies"] != null) || falaleyHelp)
+            {
+                action.Allies = new List<Character> { new Character { Name = Character.Protagonist.Name } };
+                action.GroupFight = true;
+            }
+
+            if (xmlAction["Allies"] != null)
+                foreach (XmlNode xmlAlly in xmlAction.SelectNodes("Allies/Ally"))
+                    action.Allies.Add(CharacterParse(xmlAlly, null));
+
+            if (falaleyHelp)
+                action.Allies.Add(Falaley());
+
+            if (xmlAction["Enemies"] != null)
+            {
+                action.Enemies = new List<Character>();
+
+                foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
+                    action.Enemies.Add(CharacterParse(xmlEnemy, action));
+
+                if (action.Enemies.Count > 1)
+                    action.GroupFight = true;
+            }
+
+            return action;
+        }
+
+        private Option OptionParse(XmlNode xmlOption)
+        {
+            Option option = OptionsTemplate(xmlOption);
+
+            if (xmlOption.Attributes["Do"] != null)
+                option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
+
+            return option;
         }
 
         private static Character Falaley()
