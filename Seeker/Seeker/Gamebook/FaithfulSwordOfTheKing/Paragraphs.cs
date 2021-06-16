@@ -13,23 +13,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-                paragraph.Options.Add(OptionParse(xmlOption));
-
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-                paragraph.Actions.Add(ActionParse(xmlAction));
-
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(ModificationParse(xmlModification));
-
-            return paragraph;
-        }
-
-        private Actions ActionParse(XmlNode xmlAction)
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = new Actions
             {
@@ -38,14 +24,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                 Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
                 Text = Game.Xml.StringParse(xmlAction["Text"]),
-
                 RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
                 WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
                 SkillPenalty = Game.Xml.IntParse(xmlAction["SkillPenalty"]),
                 Price = Game.Xml.IntParse(xmlAction["Price"]),
-
                 MeritalArt = MeritalArtsParse(xmlAction["MeritalArt"]),
-
                 Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
                 WithoutShooting = Game.Xml.BoolParse(xmlAction["WithoutShooting"]),
             };
@@ -69,7 +52,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return action;
         }
 
-        private Option OptionParse(XmlNode xmlOption)
+        public override Option OptionParse(XmlNode xmlOption)
         {
             Option option = OptionsTemplate(xmlOption);
 
@@ -104,7 +87,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return enemy;
         }
 
-        private static Modification ModificationParse(XmlNode xmlNode)
+        public override Abstract.IModification ModificationParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
                 return null;
