@@ -13,23 +13,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-                paragraph.Options.Add(OptionsTemplate(xmlOption));
-
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-                paragraph.Actions.Add(ActionParse(xmlAction));
-
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(ModificationParse(xmlModification));
-
-            return paragraph;
-        }
-
-        private Actions ActionParse(XmlNode xmlAction)
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = new Actions
             {
@@ -39,13 +25,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
                 Text = Game.Xml.StringParse(xmlAction["Text"]),
                 Stat = Game.Xml.StringParse(xmlAction["Stat"]),
-
                 Price = Game.Xml.IntParse(xmlAction["Price"]),
                 Level = Game.Xml.IntParse(xmlAction["Level"]),
-
                 GreatKhanSpecialCheck = Game.Xml.BoolParse(xmlAction["GreatKhanSpecialCheck"]),
                 GuessBonus = Game.Xml.BoolParse(xmlAction["GuessBonus"]),
-
                 Benefit = ModificationParse(xmlAction["Benefit"]),
             };
 
@@ -55,7 +38,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             return action;
         }
 
-        private Option OptionParse(XmlNode xmlOption)
+        public override Option OptionParse(XmlNode xmlOption)
         {
             Option option = OptionsTemplate(xmlOption);
 
@@ -65,7 +48,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             return option;
         }
 
-        private static Modification ModificationParse(XmlNode xmlNode)
+        public override Abstract.IModification ModificationParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
                 return null;
