@@ -134,14 +134,7 @@ namespace Seeker
                 {
                     if (action.ActionName == "Option")
                     {
-                        bool mustBeVisible = Game.Data.ShowDisabledOption || !String.IsNullOrEmpty(action.Option.Aftertext);
-
-                        if (!String.IsNullOrEmpty(action.Option.OnlyIf) && !Game.Data.CheckOnlyIf(action.Option.OnlyIf) && !mustBeVisible)
-                            continue;
-
-                        Button button = AddOptionButton(action.Option, ref gameOver);
-
-                        Action.Children.Add(button);
+                        Action.Children.Add(AddOptionButton(action.Option, ref gameOver));
 
                         if (!String.IsNullOrEmpty(action.Option.Aftertext))
                             Action.Children.Add(Output.Interface.Text(action.Option.Aftertext));
