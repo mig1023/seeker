@@ -14,23 +14,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplateModXml(xmlParagraph, new Modification()); 
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-                paragraph.Options.Add(OptionsTemplate(xmlOption));
-
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
-                paragraph.Actions.Add(ActionParse(xmlAction));
-
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
-
-            return paragraph;
-        }
-
-        private Actions ActionParse(XmlNode xmlAction)
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = new Actions
             {
@@ -39,13 +25,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
                 Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
                 Text = Game.Xml.StringParse(xmlAction["Text"]),
-
                 RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
                 WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
                 DamageToWin = Game.Xml.IntParse(xmlAction["DamageToWin"]),
                 MasteryPenalty = Game.Xml.IntParse(xmlAction["MasteryPenalty"]),
                 Price = Game.Xml.IntParse(xmlAction["Price"]),
-
                 Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
                 GroupFight = Game.Xml.BoolParse(xmlAction["GroupFight"]),
             };
