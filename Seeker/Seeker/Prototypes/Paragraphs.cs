@@ -10,6 +10,10 @@ namespace Seeker.Prototypes
     {
         internal Random random = new Random();
 
+        public virtual Abstract.IActions ActionParse(XmlNode xmlAction) => null;
+        public virtual Game.Option OptionParse(XmlNode xmlOption) => null;
+        public virtual Abstract.IModification ModificationParse(XmlNode xmlxmlModification) => null;
+
         public virtual Game.Paragraph Get(int id, XmlNode xmlParagraph)
         {
             Game.Paragraph paragraph = new Game.Paragraph();
@@ -26,6 +30,39 @@ namespace Seeker.Prototypes
 
                 paragraph.Options.Add(option);
             }
+
+            return paragraph;
+        }
+
+        private Game.Paragraph GetTemplateBase(XmlNode xmlParagraph)
+        {
+            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
+                paragraph.Options.Add(OptionParse(xmlOption));
+
+            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
+                paragraph.Actions.Add(ActionParse(xmlAction));
+
+            return paragraph;
+        }
+
+        public Game.Paragraph GetTemplate(XmlNode xmlParagraph)
+        {
+            Game.Paragraph paragraph = GetTemplateBase(xmlParagraph);
+
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
+                paragraph.Modification.Add(ModificationParse(xmlModification));
+
+            return paragraph;
+        }
+
+        public Game.Paragraph GetTemplateModXml(XmlNode xmlParagraph, Abstract.IModification modification)
+        {
+            Game.Paragraph paragraph = GetTemplateBase(xmlParagraph);
+
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
+                paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, modification));
 
             return paragraph;
         }
