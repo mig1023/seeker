@@ -76,5 +76,15 @@ namespace Seeker.Prototypes
 
             return option;
         }
+
+        public Option OptionParseWithDo(XmlNode xmlOption, Abstract.IModification modification)
+        {
+            Option option = OptionsTemplate(xmlOption);
+
+            if (xmlOption.Attributes["Do"] != null)
+                option.Do = Game.Xml.ModificationParse(xmlOption, modification, name: "Do");
+
+            return option;
+        }
     }
 }
