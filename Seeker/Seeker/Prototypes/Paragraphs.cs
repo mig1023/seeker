@@ -57,7 +57,7 @@ namespace Seeker.Prototypes
             return paragraph;
         }
 
-        public Game.Paragraph GetTemplateModXml(XmlNode xmlParagraph, Abstract.IModification modification)
+        public Game.Paragraph GetTemplateModDefault(XmlNode xmlParagraph, Abstract.IModification modification)
         {
             Game.Paragraph paragraph = GetTemplateBase(xmlParagraph);
 
