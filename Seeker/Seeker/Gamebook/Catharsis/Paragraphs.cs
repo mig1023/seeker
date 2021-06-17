@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.Catharsis
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplateModDefault(xmlParagraph, new Modification());
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction) => new Actions
         {
