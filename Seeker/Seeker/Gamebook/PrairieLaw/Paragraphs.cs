@@ -49,6 +49,8 @@ namespace Seeker.Gamebook.PrairieLaw
             return action;
         }
 
+        public override Option OptionParse(XmlNode xmlOption) => OptionsTemplate(xmlOption);
+
         private static Character EnemyParse(XmlNode xmlEnemy)
         {
             Character enemy = new Character
