@@ -76,15 +76,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return action;
         }
 
-        public override Option OptionParse(XmlNode xmlOption)
-        {
-            Option option = OptionsTemplate(xmlOption);
-
-            if (xmlOption.Attributes["Do"] != null)
-                option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
-
-            return option;
-        }
+        public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
 
         private static Character Falaley()
         {
