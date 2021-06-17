@@ -1963,6 +1963,9 @@
 	<Paragraph>
 		<ID>204</ID>
 		<Text>Вы располагаетесь на ночь под одним из деревьев, и ничто не прерывает ваш сон. Прибавьте себе 3 ВЫНОСЛИВОСТИ и отправляйтесь в путь с первыми лучами солнца. Времени терять нельзя: до цели еще не близко.</Text>
+		<Modifications>
+			<Modification Name="Endurance" Value="3"/>
+		</Modifications>
 		<Options>
 			<Option Destination="353"/>
 		</Options>
@@ -4736,6 +4739,9 @@
 	<Paragraph>
 		<ID>500</ID>
 		<Text>Вы храбро выпиваете жидкость. Это микстура жизни. Прибавьте себе 6 ВЫНОСЛИВОСТЕЙ и уходите из домика.</Text>
+		<Modifications>
+			<Modification Name="Endurance" Value="6"/>
+		</Modifications>
 		<Options>
 			<Option Destination="416"/>
 		</Options>
