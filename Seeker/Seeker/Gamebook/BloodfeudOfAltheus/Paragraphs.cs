@@ -57,20 +57,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return action;
         }
 
-        public override Option OptionParse(XmlNode xmlOption)
-        {
-            Option option = new Option
-            {
-                Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
-                Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
-                OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
-            };
-
-            if (xmlOption.Attributes["Do"] != null)
-                option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
-
-            return option;
-        }
+        public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) => new Modification
         {
