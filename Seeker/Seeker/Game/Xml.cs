@@ -17,13 +17,7 @@ namespace Seeker.Game
             return (success ? value : 0);
         }
 
-        public static string StringParse(XmlNode xmlNode)
-        {
-            if (xmlNode == null)
-                return String.Empty;
-
-            return xmlNode.InnerText;
-        }
+        public static string StringParse(XmlNode xmlNode) => (xmlNode == null ? String.Empty : xmlNode.InnerText);
 
         public static Dictionary<string, string> ImagesParse(XmlNode xmlNode)
         {

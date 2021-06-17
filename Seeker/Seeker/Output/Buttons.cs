@@ -34,9 +34,8 @@ namespace Seeker.Output
             if (Game.Data.ShowDisabledOption || !String.IsNullOrEmpty(option.Aftertext))
                 optionColor = !String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf);
 
-            string color = Game.Data.Constants.GetButtonsColor(
-                optionColor ? Output.Buttons.ButtonTypes.Option : Output.Buttons.ButtonTypes.Main
-            );
+            string color = Game.Data.Constants.GetButtonsColor(optionColor ?
+                Output.Buttons.ButtonTypes.Option : Output.Buttons.ButtonTypes.Main);
 
             bool isEnabled = (!(!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf)));
 

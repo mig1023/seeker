@@ -17,7 +17,6 @@ namespace Seeker
         public MainPage()
         {
             InitializeComponent();
-
             Gamebooks();
         }
 
@@ -63,10 +62,7 @@ namespace Seeker
             Paragraph(0);
         }
 
-        private void Continue_Click(object sender, EventArgs e)
-        {
-            Paragraph(Game.Continue.Load(), loadGame: true);
-        }
+        private void Continue_Click(object sender, EventArgs e) => Paragraph(Game.Continue.Load(), loadGame: true);
 
         public void Paragraph(int id, bool reload = false, bool loadGame = false, string optionName = "")
         {
@@ -346,9 +342,7 @@ namespace Seeker
             Paragraph(Game.Data.CurrentParagraphID, reload: true);
         }
 
-        private void Option_Click(object sender, EventArgs e)
-        {
+        private void Option_Click(object sender, EventArgs e) =>
             Paragraph(Game.Router.FindDestination((sender as Button).Text), optionName: (sender as Button).Text);
-        }
     }
 }

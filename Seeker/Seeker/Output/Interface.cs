@@ -94,17 +94,14 @@ namespace Seeker.Output
             return disclaimer;
         }
 
-        public static Label LinkDisclaimer(string color)
+        public static Label LinkDisclaimer(string color) => new Label()
         {
-            return new Label()
-            {
-                Text = "➝ подробнее",
-                HorizontalTextAlignment = TextAlignment.Start,
-                FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
-                TextColor = Color.FromHex(color),
-                FontAttributes = FontAttributes.Bold,
-            };
-        }
+            Text = "➝ подробнее",
+            HorizontalTextAlignment = TextAlignment.Start,
+            FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
+            TextColor = Color.FromHex(color),
+            FontAttributes = FontAttributes.Bold,
+        };
 
         public static void GamebookDisclaimerAdd(string gamebook, ref StackLayout options)
         {
@@ -203,10 +200,7 @@ namespace Seeker.Output
 
                     foreach(string line in enemyParam)
                     {
-                        Label enemy = new Label()
-                        {
-                            HorizontalTextAlignment = TextAlignment.Center,
-                        };
+                        Label enemy = new Label() { HorizontalTextAlignment = TextAlignment.Center };
 
                         if (index > 0)
                         {
@@ -277,7 +271,7 @@ namespace Seeker.Output
             else
                 font = String.Format("{0}{1}", Game.Data.Constants.GetFont(), (bold ? "Bold" : String.Empty));
 
-            var OnPlatformDic = (OnPlatform<string>)App.Current.Resources[font];
+            OnPlatform<string> OnPlatformDic = (OnPlatform<string>)App.Current.Resources[font];
             var fontFamily = OnPlatformDic.Platforms.FirstOrDefault((arg) => arg.Platform.FirstOrDefault() == Device.RuntimePlatform).Value;
 
             return fontFamily.ToString();
@@ -305,6 +299,7 @@ namespace Seeker.Output
 
                 if (Game.Data.Constants.GetFontSize() == TextFontSize.normal)
                     label.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
+
                 else if (Game.Data.Constants.GetFontSize() == TextFontSize.big)
                     label.FontSize = BIG_FONT;
             }
@@ -357,9 +352,8 @@ namespace Seeker.Output
                     ["HEAD|"] = null,
                 };
 
-                foreach(string color in textTypes.Keys)
-                    if (text.Contains(color))
-                        actions.TextColor = textTypes[color] ?? actions.TextColor;
+                foreach(string color in textTypes.Keys.Where(x => text.Contains(x)))
+                    actions.TextColor = textTypes[color] ?? actions.TextColor;
 
                 actions.FontSize = Device.GetNamedSize(text.Contains("BIG|") ? NamedSize.Large : NamedSize.Medium, typeof(Label));
 

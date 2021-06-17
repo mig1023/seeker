@@ -7,9 +7,8 @@ namespace Seeker.Output
 {
     public class VerticalText : View
     {
-        public static BindableProperty ValueProperty = BindableProperty.Create(
-            nameof(Value), typeof(string), typeof(string), null, BindingMode.TwoWay, null, (bindable, oldValue, newValue) => { }
-        );
+        public static BindableProperty ValueProperty = BindableProperty.Create(nameof(Value), typeof(string), typeof(string),
+            null, BindingMode.TwoWay, null, (bindable, oldValue, newValue) => { });
 
         public string Value
         {
@@ -17,9 +16,8 @@ namespace Seeker.Output
             set => SetValue(ValueProperty, value);
         }
 
-        public static BindableProperty ColorProperty = BindableProperty.Create(
-            nameof(WhiteColor), typeof(bool), typeof(bool), null, BindingMode.TwoWay, null, (bindable, oldValue, newValue) => { }
-        );
+        public static BindableProperty ColorProperty = BindableProperty.Create(nameof(WhiteColor), typeof(bool), typeof(bool),
+            null, BindingMode.TwoWay, null, (bindable, oldValue, newValue) => { });
 
         public bool WhiteColor
         {
