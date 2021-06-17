@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.HeartOfIce
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplateModDefault(xmlParagraph, new Modification());
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
@@ -55,5 +55,8 @@ namespace Seeker.Gamebook.HeartOfIce
 
             return option;
         }
+
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+            Game.Xml.ModificationParse(xmlModification, new Modification());
     }
 }

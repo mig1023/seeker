@@ -29,7 +29,5 @@ namespace Seeker.Gamebook.RockOfTerror
             Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
             Init = Game.Xml.BoolParse(xmlModification.Attributes["Init"]),
         };
-
-        public override Option OptionParse(XmlNode xmlOption) => OptionsTemplate(xmlOption);
     }
 }

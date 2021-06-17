@@ -30,8 +30,6 @@ namespace Seeker.Gamebook.SwampFever
             Benefit = ModificationParse(xmlAction["Benefit"]),
         };
 
-        public override Option OptionParse(XmlNode xmlOption) => OptionsTemplate(xmlOption);
-
         public override Abstract.IModification ModificationParse(XmlNode xmlNode)
         {
             if (xmlNode == null)

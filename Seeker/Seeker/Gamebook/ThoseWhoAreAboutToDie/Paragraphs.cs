@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplateModDefault(xmlParagraph, new Modification());
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction) => new Actions
         {
@@ -37,5 +37,8 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
             return option;
         }
+
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+            Game.Xml.ModificationParse(xmlModification, new Modification());
     }
 }
