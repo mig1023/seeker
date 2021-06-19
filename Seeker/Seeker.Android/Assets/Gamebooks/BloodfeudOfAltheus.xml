@@ -3979,13 +3979,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>421</ID>
-		<Text>Позор вам, Альтей! Вы читаете этот параграф, хотя на него не ведет ни одна ссылка! Получите 15 очков Позора за жульничество и вернитесь туда, откуда пришли.</Text>
-		<Modifications>
-			<Modification Name="Shame" Value="15"/>
-		</Modifications>
-		<Options>
-			<Option Destination="0"/>
-		</Options>
+		<Text>[пустой параграф]</Text>
 	</Paragraph>
 	<Paragraph>
 		<ID>422</ID>
