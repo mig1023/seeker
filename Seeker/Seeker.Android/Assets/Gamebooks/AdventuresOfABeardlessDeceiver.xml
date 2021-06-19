@@ -1553,7 +1553,7 @@
 			</Action>
 			<Action>
 				<ActionName>Option</ActionName>
-				<Option Destination="137" Text="Есть знак Тенгри" OnlyIf="TengriSymbol" OnlyIf="TipsFromAthanasius" Aftertext="Если же нет ни того ни другого:"/>
+				<Option Destination="137" Text="Есть знак Тенгри" OnlyIf="TengriSymbol" Aftertext="Если же нет ни того ни другого:"/>
 			</Action>
 			<Action>
 				<ActionName>Test</ActionName>
