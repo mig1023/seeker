@@ -12,8 +12,6 @@ namespace Seeker.Output
     {
         public enum TextFontSize { little, normal, big };
 
-        private static double BIG_FONT = 25;
-
         public static List<Label> StatusBar(List<string> statusLines)
         {
             List<Label> statusLabels = new List<Label>();
@@ -25,7 +23,7 @@ namespace Seeker.Output
                 Label label = new Label
                 {
                     Text = status + System.Convert.ToChar(160),
-                    FontSize = 12,
+                    FontSize = Constants.STATUSBAR_FONT,
                     TextColor = (String.IsNullOrEmpty(textColor) ? Color.White : Color.FromHex(textColor)),
                     BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar)),
 
@@ -68,7 +66,7 @@ namespace Seeker.Output
             if (!String.IsNullOrEmpty(description.BorderColor))
             {
                 gamebookButton.BorderColor = Color.FromHex(description.BorderColor);
-                gamebookButton.BorderWidth = 1;
+                gamebookButton.BorderWidth = Constants.BORDER_WIDTH;
             }
 
             if (!String.IsNullOrEmpty(description.FontColor))
@@ -89,7 +87,7 @@ namespace Seeker.Output
             };
 
             if (withOut)
-                disclaimer.Margin = new Thickness(0, 0, 0, 8);
+                disclaimer.Margin = new Thickness(0, 0, 0, Constants.DISCLAIMER_BORDER);
 
             return disclaimer;
         }
@@ -112,7 +110,7 @@ namespace Seeker.Output
                 Frame disclaimerBorder = new Frame
                 {
                     BorderColor = Color.FromHex(description.BookColor),
-                    Margin = new Thickness(0, 0, 0, 8),
+                    Margin = new Thickness(0, 0, 0, Constants.DISCLAIMER_BORDER),
                     IsVisible = false,
                 };
 
@@ -184,7 +182,7 @@ namespace Seeker.Output
                     StackLayout splitterForm = new StackLayout()
                     {
                         HorizontalOptions = LayoutOptions.FillAndExpand,
-                        HeightRequest = 25,
+                        HeightRequest = Constants.SPLITTER_HIGHT,
                         BackgroundColor = Color.FromHex(background),
                     };
 
@@ -205,7 +203,7 @@ namespace Seeker.Output
                         if (index > 0)
                         {
                             enemy.Text = line;
-                            enemy.Margin = new Thickness(0, -10, 0, 0);
+                            enemy.Margin = new Thickness(0, Constants.REPRESENT_PADDING, 0, 0);
                             enemy.FontFamily = TextFontFamily();
                         }
                         else
@@ -251,7 +249,7 @@ namespace Seeker.Output
             if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border)))
             {
                 button.BorderColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border));
-                button.BorderWidth = 1;
+                button.BorderWidth = Constants.BORDER_WIDTH;
             }
 
             if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Font)))
@@ -281,7 +279,7 @@ namespace Seeker.Output
         {
             Label label = new Label
             {
-                Margin = 5,
+                Margin = Constants.TEXT_LABEL_MARGIN,
                 FontSize = Device.GetNamedSize((defaultParams ? NamedSize.Large : NamedSize.Medium), typeof(Label)),
                 Text = System.Text.RegularExpressions.Regex.Unescape(text),
                 FontFamily = TextFontFamily(),
@@ -295,13 +293,13 @@ namespace Seeker.Output
                 if (Game.Data.Constants.GetLineHeight() != null)
                     label.LineHeight = Game.Data.Constants.GetLineHeight() ?? -1;
                 else
-                    label.LineHeight = 1.20;
+                    label.LineHeight = Constants.LINE_HEIGHT;
 
                 if (Game.Data.Constants.GetFontSize() == TextFontSize.normal)
                     label.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
 
                 else if (Game.Data.Constants.GetFontSize() == TextFontSize.big)
-                    label.FontSize = BIG_FONT;
+                    label.FontSize = Constants.BIG_FONT;
             }
 
             if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
@@ -315,9 +313,9 @@ namespace Seeker.Output
             StackLayout stackLayout = new StackLayout()
             {
                 Orientation = StackOrientation.Vertical,
-                Spacing = 5,
+                Spacing = Constants.ACTIONPLACE_SPACING,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                Padding = 20,
+                Padding = Constants.ACTIONPLACE_PADDING,
                 BackgroundColor = Color.LightGray
             };
 
