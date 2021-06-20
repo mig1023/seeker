@@ -4956,9 +4956,8 @@
 		<Modifications>
 			<Modification Name="Endurance" Value="3"/>
 		</Modifications>
-		<Triggers>Ответ на первую загадку</Triggers>
 		<Options>
-			<Option Destination="107" Text="Ответ: «смерть»" OnlyIf="Ответ на первую загадку"/>
+			<Option Destination="107" Text="Ответ правильный!" Input="Смерть"/>
 			<Option Destination="179"/>
 		</Options>
 	</Paragraph>
