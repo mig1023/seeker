@@ -15,12 +15,16 @@ namespace Seeker.Game
 
         private static Dictionary<int, StackLayout> ActionsPlaces = new Dictionary<int, StackLayout>();
 
+        public static string InputResponse { get; set; }
+
         public static void Clean()
         {
             Destinations.Clear();
             DestinationsAccompanyingActions.Clear();
             Actions.Clear();
             ActionsPlaces.Clear();
+
+            InputResponse = String.Empty;
         }
 
         public static void AddDestination(string text, int index, Abstract.IModification modification = null)

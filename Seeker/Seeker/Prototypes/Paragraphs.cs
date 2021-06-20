@@ -66,6 +66,7 @@ namespace Seeker.Prototypes
             Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
             OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
             Aftertext = Game.Xml.StringParse(xmlOption.Attributes["Aftertext"]),
+            Input = Game.Xml.StringParse(xmlOption.Attributes["Input"]),
         };
 
         public Game.Option OptionsTemplate(XmlNode xmlOption)

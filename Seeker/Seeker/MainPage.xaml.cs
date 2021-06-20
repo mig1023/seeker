@@ -172,6 +172,9 @@ namespace Seeker
 
                 Options.Children.Add(button);
 
+                if (!String.IsNullOrEmpty(option.Input))
+                    Options.Children.Add(AddInputField(option, button));
+
                 if (!String.IsNullOrEmpty(option.Aftertext))
                     Options.Children.Add(Output.Interface.Text(option.Aftertext));
 
@@ -203,6 +206,34 @@ namespace Seeker
 
             if (id != Game.Data.StartParagraph)
                 Game.Continue.Save();
+        }
+
+        private Entry AddInputField(Game.Option option, object button)
+        {
+            Entry field = new Entry
+            {
+                Placeholder = "Введите свой ответ",
+                BindingContext = button,
+                FontFamily = Output.Interface.TextFontFamily(),
+            };
+
+            field.TextChanged += InputChange;
+
+            Game.Router.InputResponse = option.Input;
+
+            return field;
+        }
+
+        private void InputChange(object sender, EventArgs e)
+        {
+            Entry field = sender as Entry;
+
+            if (field.Text.ToLower() == Game.Router.InputResponse.ToLower())
+            {
+                field.IsVisible = false;
+                Button button = (Button)field.BindingContext;
+                button.IsVisible = true;
+            }
         }
 
         private Button AddOptionButton(Game.Option option, ref bool gameOver)

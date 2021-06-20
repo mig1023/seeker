@@ -49,6 +49,7 @@ namespace Seeker.Output
                 IsEnabled = isEnabled,
                 FontFamily = Output.Interface.TextFontFamily(),
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                IsVisible = String.IsNullOrEmpty(option.Input),
             };
 
             return Output.Interface.SetBorderAndTextColor(optionButton);
