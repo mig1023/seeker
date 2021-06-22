@@ -18,19 +18,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            Actions action = new Actions
-            {
-                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                Text = Game.Xml.StringParse(xmlAction["Text"]),
-                RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
-                WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
-                Price = Game.Xml.IntParse(xmlAction["Price"]),
-                Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
-                ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]),
-            };
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]);
 
             if (xmlAction["Enemies"] != null)
             {

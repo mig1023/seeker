@@ -14,8 +14,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
 
-        public int Price { get; set; }
-        public bool Multiple { get; set; }
         public bool ThisIsSpell { get; set; }
 
         static Dictionary<string, bool> SpellActivate = new Dictionary<string, bool>
