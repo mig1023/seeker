@@ -16,7 +16,6 @@ namespace Seeker.Gamebook.DzungarWar
         public int StatStep { get; set; }
         public bool StatToMax { get; set; }
         public int Level { get; set; }
-        public int Price { get; set; }
 
         public string TriggerTestPenalty { get; set; }
 

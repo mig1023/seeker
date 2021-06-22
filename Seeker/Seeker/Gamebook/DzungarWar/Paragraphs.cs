@@ -17,22 +17,15 @@ namespace Seeker.Gamebook.DzungarWar
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            Actions action = new Actions
-            {
-                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                RemoveTrigger = Game.Xml.StringParse(xmlAction["RemoveTrigger"]),
-                Text = Game.Xml.StringParse(xmlAction["Text"]),
-                Stat = Game.Xml.StringParse(xmlAction["Stat"]),
-                TriggerTestPenalty = Game.Xml.StringParse(xmlAction["TriggerTestPenalty"]),
-                Price = Game.Xml.IntParse(xmlAction["Price"]),
-                Level = Game.Xml.IntParse(xmlAction["Level"]),
-                StatStep = Game.Xml.IntParse(xmlAction["StatStep"]),
-                StatToMax = Game.Xml.BoolParse(xmlAction["StatToMax"]),
-                Benefit = ModificationParse(xmlAction["Benefit"]),
-            };
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            action.RemoveTrigger = Game.Xml.StringParse(xmlAction["RemoveTrigger"]);
+            action.Stat = Game.Xml.StringParse(xmlAction["Stat"]);
+            action.TriggerTestPenalty = Game.Xml.StringParse(xmlAction["TriggerTestPenalty"]);
+            action.Level = Game.Xml.IntParse(xmlAction["Level"]);
+            action.StatStep = Game.Xml.IntParse(xmlAction["StatStep"]);
+            action.StatToMax = Game.Xml.BoolParse(xmlAction["StatToMax"]);
+            action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
             if (action.ActionName == "Option")
                 action.Option = OptionParse(xmlAction["Option"]);
