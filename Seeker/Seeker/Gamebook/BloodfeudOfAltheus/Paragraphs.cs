@@ -34,17 +34,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            Actions action = new Actions
-            {
-                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                FightToDeath = Game.Xml.BoolParse(xmlAction["FightToDeath"]),
-                LastWound = Game.Xml.BoolParse(xmlAction["LastWound"]),
-                YourRacing = Game.Xml.BoolParse(xmlAction["YourRacing"]),
-                Ichor = Game.Xml.BoolParse(xmlAction["Ichor"]),
-            };
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            action.FightToDeath = Game.Xml.BoolParse(xmlAction["FightToDeath"]);
+            action.LastWound = Game.Xml.BoolParse(xmlAction["LastWound"]);
+            action.YourRacing = Game.Xml.BoolParse(xmlAction["YourRacing"]);
+            action.Ichor = Game.Xml.BoolParse(xmlAction["Ichor"]);
 
             if (xmlAction["Enemies"] != null)
             {
