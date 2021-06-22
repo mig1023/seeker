@@ -17,8 +17,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int SkillPenalty { get; set; }
         public bool WithoutShooting { get; set; }
 
-        public int Price { get; set; }
-        public bool Multiple { get; set; }
         public Character.MeritalArts? MeritalArt { get; set; }
 
         public override List<string> Status() => new List<string>
