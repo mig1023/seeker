@@ -18,8 +18,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         };
 
         public int Value { get; set; }
-        public int Price { get; set; }
-        public bool Multiple { get; set; }
 
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }

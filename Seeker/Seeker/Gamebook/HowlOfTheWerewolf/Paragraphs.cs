@@ -43,28 +43,20 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            Actions action = new Actions
-            {
-                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                Text = Game.Xml.StringParse(xmlAction["Text"]),
-                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                Price = Game.Xml.IntParse(xmlAction["Price"]),
-                Value = Game.Xml.IntParse(xmlAction["Value"]),
-                RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
-                RoundsWinToWin = Game.Xml.IntParse(xmlAction["RoundsWinToWin"]),
-                RoundsFailToFail = Game.Xml.IntParse(xmlAction["RoundsFailToFail"]),
-                RoundsToFight = Game.Xml.IntParse(xmlAction["RoundsToFight"]),
-                WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
-                WoundsToFail = Game.Xml.IntParse(xmlAction["WoundsToFail"]),
-                WoundsForTransformation = Game.Xml.IntParse(xmlAction["WoundsForTransformation"]),
-                WoundsLimit = Game.Xml.IntParse(xmlAction["WoundsLimit"]),
-                HitStrengthBonus = Game.Xml.IntParse(xmlAction["HitStrengthBonus"]),
-                ExtendedDamage = Game.Xml.IntParse(xmlAction["ExtendedDamage"]),
-                Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
-                Specificity = SpecificsParse(xmlAction["Specificity"]),
-            };
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            action.Value = Game.Xml.IntParse(xmlAction["Value"]);
+            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.RoundsWinToWin = Game.Xml.IntParse(xmlAction["RoundsWinToWin"]);
+            action.RoundsFailToFail = Game.Xml.IntParse(xmlAction["RoundsFailToFail"]);
+            action.RoundsToFight = Game.Xml.IntParse(xmlAction["RoundsToFight"]);
+            action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.WoundsToFail = Game.Xml.IntParse(xmlAction["WoundsToFail"]);
+            action.WoundsForTransformation = Game.Xml.IntParse(xmlAction["WoundsForTransformation"]);
+            action.WoundsLimit = Game.Xml.IntParse(xmlAction["WoundsLimit"]);
+            action.HitStrengthBonus = Game.Xml.IntParse(xmlAction["HitStrengthBonus"]);
+            action.ExtendedDamage = Game.Xml.IntParse(xmlAction["ExtendedDamage"]);
+            action.Specificity = SpecificsParse(xmlAction["Specificity"]);
 
             if (xmlAction["Benefit"] != null)
             {
