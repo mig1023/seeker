@@ -48,6 +48,19 @@ namespace Seeker.Prototypes
             return paragraph;
         }
 
+        public Abstract.IActions ActionTemplate(XmlNode xmlAction, Abstract.IActions actions)
+        {
+            actions.ActionName = Game.Xml.StringParse(xmlAction["ActionName"]);
+            actions.ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]);
+            actions.Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]);
+            actions.Trigger = Game.Xml.StringParse(xmlAction["Trigger"]);
+            actions.Text = Game.Xml.StringParse(xmlAction["Text"]);
+            actions.Price = Game.Xml.IntParse(xmlAction["Price"]);
+            actions.Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]);
+
+            return actions;
+        }
+
         public Game.Paragraph ParagraphTemplate(XmlNode xmlParagraph) => new Game.Paragraph
         {
             Options = new List<Option>(),

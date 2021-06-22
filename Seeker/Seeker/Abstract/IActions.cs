@@ -8,10 +8,15 @@ namespace Seeker.Abstract
     interface IActions
     {
         string ActionName { get; set; }
-
         string ButtonName { get; set; }
-
         string Aftertext { get; set; }
+        string Trigger { get; set; }
+        string Text { get; set; }
+
+        int Price { get; set; }
+
+        bool Used { get; set; } 
+        bool Multiple { get; set; }
 
         List<string> Do(out bool reload, string action = "", bool Trigger = false);
 

@@ -13,6 +13,8 @@ namespace Seeker.Prototypes
         public string Text { get; set; }
         public bool Used { get; set; }
         public Game.Option Option { get; set; }
+        public int Price { get; set; }
+        public bool Multiple { get; set; }
 
         public Abstract.IModification Benefit { get; set; }
         public List<Abstract.IModification> BenefitList { get; set; }
