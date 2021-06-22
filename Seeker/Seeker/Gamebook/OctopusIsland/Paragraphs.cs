@@ -17,16 +17,10 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            Actions action = new Actions
-            {
-                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-                WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
-                DinnerHitpointsBonus = Game.Xml.IntParse(xmlAction["Dinner"]),
-            };
+            action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.DinnerHitpointsBonus = Game.Xml.IntParse(xmlAction["Dinner"]);
 
             if (xmlAction["Enemies"] != null)
             {
