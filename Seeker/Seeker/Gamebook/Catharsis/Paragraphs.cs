@@ -15,15 +15,13 @@ namespace Seeker.Gamebook.Catharsis
 
         public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
-        public override Abstract.IActions ActionParse(XmlNode xmlAction) => new Actions
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-            ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-            Text = Game.Xml.StringParse(xmlAction["Text"]),
-            Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-            Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-            Bonus = Game.Xml.StringParse(xmlAction["Bonus"]),
-        };
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+            action.Bonus = Game.Xml.StringParse(xmlAction["Bonus"]);
+
+            return action;
+        }
 
         public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
 
