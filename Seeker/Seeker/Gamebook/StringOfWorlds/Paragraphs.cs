@@ -59,22 +59,14 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            Actions action = new Actions
-            {
-                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                Text = Game.Xml.StringParse(xmlAction["Text"]),
-                Equipment = Game.Xml.StringParse(xmlAction["Equipment"]),
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-                RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
-
-                HeroWoundsLimit = Game.Xml.BoolParse(xmlAction["HeroWoundsLimit"]),
-                EnemyWoundsLimit = Game.Xml.BoolParse(xmlAction["EnemyWoundsLimit"]),
-                DevastatingAttack = Game.Xml.BoolParse(xmlAction["DevastatingAttack"]),
-                DarknessPenalty = Game.Xml.BoolParse(xmlAction["DarknessPenalty"]),
-            };
+            action.Equipment = Game.Xml.StringParse(xmlAction["Equipment"]);
+            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.HeroWoundsLimit = Game.Xml.BoolParse(xmlAction["HeroWoundsLimit"]);
+            action.EnemyWoundsLimit = Game.Xml.BoolParse(xmlAction["EnemyWoundsLimit"]);
+            action.DevastatingAttack = Game.Xml.BoolParse(xmlAction["DevastatingAttack"]);
+            action.DarknessPenalty = Game.Xml.BoolParse(xmlAction["DarknessPenalty"]);
 
             if (xmlAction["Enemies"] != null)
             {
