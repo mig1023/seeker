@@ -17,27 +17,19 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            Actions action = new Actions
-            {
-                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                Text = Game.Xml.StringParse(xmlAction["Text"]),
-                Stat = Game.Xml.StringParse(xmlAction["Stat"]),
-                StatStep = Game.Xml.IntParse(xmlAction["StatStep"]),
-                RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
-                WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
-                Coherence = Game.Xml.IntParse(xmlAction["Coherence"]),
-                Dices = Game.Xml.IntParse(xmlAction["Dices"]),
-                Price = Game.Xml.IntParse(xmlAction["Price"]),
-                Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
-                NotToDeath = Game.Xml.BoolParse(xmlAction["NotToDeath"]),
-                Odd = Game.Xml.BoolParse(xmlAction["Odd"]),
-                Initiative = Game.Xml.BoolParse(xmlAction["Initiative"]),
-                StoneGuard = Game.Xml.BoolParse(xmlAction["StoneGuard"]),
-                SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]),
-            };
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            action.Stat = Game.Xml.StringParse(xmlAction["Stat"]);
+            action.StatStep = Game.Xml.IntParse(xmlAction["StatStep"]);
+            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.Coherence = Game.Xml.IntParse(xmlAction["Coherence"]);
+            action.Dices = Game.Xml.IntParse(xmlAction["Dices"]);
+            action.NotToDeath = Game.Xml.BoolParse(xmlAction["NotToDeath"]);
+            action.Odd = Game.Xml.BoolParse(xmlAction["Odd"]);
+            action.Initiative = Game.Xml.BoolParse(xmlAction["Initiative"]);
+            action.StoneGuard = Game.Xml.BoolParse(xmlAction["StoneGuard"]);
+            action.SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]);
 
             if (xmlAction["Benefit"] != null)
             {

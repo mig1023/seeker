@@ -27,9 +27,6 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public int Coherence { get; set; }
         public bool StoneGuard { get; set; }
 
-        public int Price { get; set; }
-        public bool Multiple { get; set; }
-
         public override List<string> Representer()
         {
             List<string> enemies = new List<string>();
