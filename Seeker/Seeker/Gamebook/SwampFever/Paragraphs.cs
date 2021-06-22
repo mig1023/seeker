@@ -15,20 +15,18 @@ namespace Seeker.Gamebook.SwampFever
 
         public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
-        public override Abstract.IActions ActionParse(XmlNode xmlAction) => new Actions
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-            ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-            Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-            Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-            EnemyName = Game.Xml.StringParse(xmlAction["EnemyName"]),
-            EnemyCombination = Game.Xml.StringParse(xmlAction["EnemyCombination"]),
-            Text = Game.Xml.StringParse(xmlAction["Text"]),
-            Price = Game.Xml.IntParse(xmlAction["Price"]),
-            Level = Game.Xml.IntParse(xmlAction["Level"]),
-            Birds = Game.Xml.BoolParse(xmlAction["Birds"]),
-            Benefit = ModificationParse(xmlAction["Benefit"]),
-        };
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            action.EnemyName = Game.Xml.StringParse(xmlAction["EnemyName"]);
+            action.EnemyCombination = Game.Xml.StringParse(xmlAction["EnemyCombination"]);
+            action.Level = Game.Xml.IntParse(xmlAction["Level"]);
+            action.Birds = Game.Xml.BoolParse(xmlAction["Birds"]);
+            action.Benefit = ModificationParse(xmlAction["Benefit"]);
+
+            return action;
+        }
 
         public override Abstract.IModification ModificationParse(XmlNode xmlNode)
         {

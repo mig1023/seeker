@@ -14,7 +14,6 @@ namespace Seeker.Gamebook.SwampFever
         public string EnemyCombination { get; set; }
 
         public int Level { get; set; }
-        public int Price { get; set; }
         public bool Birds { get; set; }
 
         public override List<string> Representer()
