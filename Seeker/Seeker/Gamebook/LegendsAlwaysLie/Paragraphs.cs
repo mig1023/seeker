@@ -17,30 +17,23 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            Actions action = new Actions
-            {
-                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                Text = Game.Xml.StringParse(xmlAction["Text"]),
-                ConneryAttacks = Game.Xml.StringParse(xmlAction["ConneryAttacks"]),
-                ReactionWounds = Game.Xml.StringParse(xmlAction["ReactionWounds"]),
-                ReactionRound = Game.Xml.StringParse(xmlAction["ReactionRound"]),
-                ReactionHit = Game.Xml.StringParse(xmlAction["ReactionHit"]),
-                Dices = Game.Xml.IntParse(xmlAction["Dices"]),
-                DiceBonus = Game.Xml.IntParse(xmlAction["DiceBonus"]),
-                Price = Game.Xml.IntParse(xmlAction["Price"]),
-                OnlyRounds = Game.Xml.IntParse(xmlAction["OnlyRounds"]),
-                RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
-                AttackWounds = Game.Xml.IntParse(xmlAction["AttackWounds"]),
-                Disabled = Game.Xml.BoolParse(xmlAction["Disabled"]),
-                IncrementWounds = Game.Xml.BoolParse(xmlAction["IncrementWounds"]),
-                GolemFight = Game.Xml.BoolParse(xmlAction["GolemFight"]),
-                ZombieFight = Game.Xml.BoolParse(xmlAction["ZombieFight"]),
-                Benefit = ModificationParse(xmlAction["Benefit"]),
-                Damage = ModificationParse(xmlAction["Damage"]),
-            };
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            action.ConneryAttacks = Game.Xml.StringParse(xmlAction["ConneryAttacks"]);
+            action.ReactionWounds = Game.Xml.StringParse(xmlAction["ReactionWounds"]);
+            action.ReactionRound = Game.Xml.StringParse(xmlAction["ReactionRound"]);
+            action.ReactionHit = Game.Xml.StringParse(xmlAction["ReactionHit"]);
+            action.Dices = Game.Xml.IntParse(xmlAction["Dices"]);
+            action.DiceBonus = Game.Xml.IntParse(xmlAction["DiceBonus"]);
+            action.OnlyRounds = Game.Xml.IntParse(xmlAction["OnlyRounds"]);
+            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.AttackWounds = Game.Xml.IntParse(xmlAction["AttackWounds"]);
+            action.Disabled = Game.Xml.BoolParse(xmlAction["Disabled"]);
+            action.IncrementWounds = Game.Xml.BoolParse(xmlAction["IncrementWounds"]);
+            action.GolemFight = Game.Xml.BoolParse(xmlAction["GolemFight"]);
+            action.ZombieFight = Game.Xml.BoolParse(xmlAction["ZombieFight"]);
+            action.Benefit = ModificationParse(xmlAction["Benefit"]);
+            action.Damage = ModificationParse(xmlAction["Damage"]);
 
             if (xmlAction["FoodSharing"] != null)
                 action.FoodSharing = FoodSharingParse(xmlAction["FoodSharing"]);

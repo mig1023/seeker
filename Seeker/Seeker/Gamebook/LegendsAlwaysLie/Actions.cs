@@ -12,7 +12,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public enum FoodSharingType { KeepMyself, ToHim, FiftyFifty };
 
-        public int Price { get; set; }
         public bool Disabled { get; set; } 
 
         public List<Character> Enemies { get; set; }
