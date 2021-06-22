@@ -15,15 +15,13 @@ namespace Seeker.Gamebook.RendezVous
 
         public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
-        public override Abstract.IActions ActionParse(XmlNode xmlAction) => new Actions
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-            ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-            Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-            Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+            action.Dices = Game.Xml.IntParse(xmlAction["Dices"]);
 
-            Dices = Game.Xml.IntParse(xmlAction["Dices"]),
-        };
+            return action;
+        }
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
             Game.Xml.ModificationParse(xmlModification, new Modification());
