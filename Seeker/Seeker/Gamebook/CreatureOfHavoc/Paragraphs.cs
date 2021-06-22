@@ -46,19 +46,14 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            Actions action = new Actions
-            {
-                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
-                RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
-                RoundsToFight = Game.Xml.IntParse(xmlAction["RoundsToFight"]),
-                Ophidiotaur = Game.Xml.BoolParse(xmlAction["Ophidiotaur"]),
-                ManicBeast = Game.Xml.BoolParse(xmlAction["ManicBeast"]),
-                GiantHornet = Game.Xml.BoolParse(xmlAction["GiantHornet"]),
-            };
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.RoundsToFight = Game.Xml.IntParse(xmlAction["RoundsToFight"]);
+            action.Ophidiotaur = Game.Xml.BoolParse(xmlAction["Ophidiotaur"]);
+            action.ManicBeast = Game.Xml.BoolParse(xmlAction["ManicBeast"]);
+            action.GiantHornet = Game.Xml.BoolParse(xmlAction["GiantHornet"]);
 
             if (xmlAction["Enemies"] != null)
             {
