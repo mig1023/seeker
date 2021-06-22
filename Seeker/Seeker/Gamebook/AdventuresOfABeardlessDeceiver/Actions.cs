@@ -11,7 +11,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public string Stat { get; set; }
         public int Level { get; set; }
-        public int Price { get; set; }
         public bool GreatKhanSpecialCheck { get; set; }
         public bool GuessBonus { get; set; }
 

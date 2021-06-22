@@ -17,20 +17,13 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            Actions action = new Actions
-            {
-                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                Text = Game.Xml.StringParse(xmlAction["Text"]),
-                Stat = Game.Xml.StringParse(xmlAction["Stat"]),
-                Price = Game.Xml.IntParse(xmlAction["Price"]),
-                Level = Game.Xml.IntParse(xmlAction["Level"]),
-                GreatKhanSpecialCheck = Game.Xml.BoolParse(xmlAction["GreatKhanSpecialCheck"]),
-                GuessBonus = Game.Xml.BoolParse(xmlAction["GuessBonus"]),
-                Benefit = ModificationParse(xmlAction["Benefit"]),
-            };
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            action.Stat = Game.Xml.StringParse(xmlAction["Stat"]);
+            action.Level = Game.Xml.IntParse(xmlAction["Level"]);
+            action.GreatKhanSpecialCheck = Game.Xml.BoolParse(xmlAction["GreatKhanSpecialCheck"]);
+            action.GuessBonus = Game.Xml.BoolParse(xmlAction["GuessBonus"]);
+            action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
             if (action.ActionName == "Option")
                 action.Option = OptionParse(xmlAction["Option"]);
