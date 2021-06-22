@@ -16,17 +16,15 @@ namespace Seeker.Gamebook.SilentSchool
 
         public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
-        public override Abstract.IActions ActionParse(XmlNode xmlAction) => new Actions
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-            ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-            Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-            Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-            Text = Game.Xml.StringParse(xmlAction["Text"]),
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            HarmedMyself = Game.Xml.IntParse(xmlAction["HarmedMyself"]),
-            Dices = Game.Xml.IntParse(xmlAction["Dices"]),
-        };
+            action.HarmedMyself = Game.Xml.IntParse(xmlAction["HarmedMyself"]);
+            action.Dices = Game.Xml.IntParse(xmlAction["Dices"]);
+
+            return action;
+        }
 
         public override Option OptionParse(XmlNode xmlOption)
         {
