@@ -15,13 +15,7 @@ namespace Seeker.Gamebook.RockOfTerror
 
         public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
-        public override Abstract.IActions ActionParse(XmlNode xmlAction) => new Actions
-        {
-            ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-            ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-            Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-            Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-        };
+        public override Abstract.IActions ActionParse(XmlNode xmlAction) => (Actions)ActionTemplate(xmlAction, new Actions());
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) => new Modification
         {
