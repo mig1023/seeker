@@ -17,23 +17,15 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            Actions action = new Actions
-            {
-                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                RemoveTrigger = Game.Xml.StringParse(xmlAction["RemoveTrigger"]),
-                Text = Game.Xml.StringParse(xmlAction["Text"]),
-                SellPrices = Game.Xml.StringParse(xmlAction["SellPrices"]),
-                Dices = Game.Xml.IntParse(xmlAction["Dices"]),
-                Price = Game.Xml.IntParse(xmlAction["Price"]),
-                Firefight = Game.Xml.BoolParse(xmlAction["Firefight"]),
-                HeroWoundsLimit = Game.Xml.BoolParse(xmlAction["HeroWoundsLimit"]),
-                EnemyWoundsLimit = Game.Xml.BoolParse(xmlAction["EnemyWoundsLimit"]),
-                Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
-                Roulette = Game.Xml.BoolParse(xmlAction["Roulette"]),
-            };
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            action.RemoveTrigger = Game.Xml.StringParse(xmlAction["RemoveTrigger"]);
+            action.SellPrices = Game.Xml.StringParse(xmlAction["SellPrices"]);
+            action.Dices = Game.Xml.IntParse(xmlAction["Dices"]);
+            action.Firefight = Game.Xml.BoolParse(xmlAction["Firefight"]);
+            action.HeroWoundsLimit = Game.Xml.BoolParse(xmlAction["HeroWoundsLimit"]);
+            action.EnemyWoundsLimit = Game.Xml.BoolParse(xmlAction["EnemyWoundsLimit"]);
+            action.Roulette = Game.Xml.BoolParse(xmlAction["Roulette"]);
 
             if (xmlAction["Enemies"] != null)
             {

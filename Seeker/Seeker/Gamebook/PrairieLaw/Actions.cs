@@ -16,9 +16,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public bool EnemyWoundsLimit { get; set; }
 
         public int Dices { get; set; }
-        public int Price { get; set; }
         public bool Roulette { get; set; }
-        public bool Multiple { get; set; }
         public string SellPrices { get; set; }
         public string RemoveTrigger { get; set; }
 
