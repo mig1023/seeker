@@ -17,23 +17,15 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            Actions action = new Actions
-            {
-                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                Text = Game.Xml.StringParse(xmlAction["Text"]),
-                Skill = Game.Xml.StringParse(xmlAction["Skill"]),
-                RemoveTrigger = Game.Xml.StringParse(xmlAction["RemoveTrigger"]),
-                SellType = Game.Xml.StringParse(xmlAction["SellType"]),
-                Price = Game.Xml.IntParse(xmlAction["Price"]),
-                Choice = Game.Xml.BoolParse(xmlAction["Choice"]),
-                Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
-                Sell = Game.Xml.BoolParse(xmlAction["Sell"]),
-                SellIfAvailable = Game.Xml.BoolParse(xmlAction["SellIfAvailable"]),
-                Split = Game.Xml.BoolParse(xmlAction["Split"]),
-            };
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            action.Skill = Game.Xml.StringParse(xmlAction["Skill"]);
+            action.RemoveTrigger = Game.Xml.StringParse(xmlAction["RemoveTrigger"]);
+            action.SellType = Game.Xml.StringParse(xmlAction["SellType"]);
+            action.Choice = Game.Xml.BoolParse(xmlAction["Choice"]);
+            action.Sell = Game.Xml.BoolParse(xmlAction["Sell"]);
+            action.SellIfAvailable = Game.Xml.BoolParse(xmlAction["SellIfAvailable"]);
+            action.Split = Game.Xml.BoolParse(xmlAction["Split"]);
 
             if (xmlAction["Benefit"] != null)
             {

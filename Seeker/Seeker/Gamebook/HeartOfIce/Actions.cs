@@ -13,12 +13,10 @@ namespace Seeker.Gamebook.HeartOfIce
         public string RemoveTrigger { get; set; }
         public string Skill { get; set; }
         public bool Choice { get; set; }
-        public int Price { get; set; }
         public bool Sell { get; set; }
         public bool SellIfAvailable { get; set; }
         public string SellType { get; set; }
         public bool Split { get; set; }
-        public bool Multiple { get; set; }
 
         public override List<string> Representer()
         {
