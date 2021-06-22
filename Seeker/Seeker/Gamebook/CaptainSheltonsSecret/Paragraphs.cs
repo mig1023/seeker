@@ -18,21 +18,13 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
-            Actions action = new Actions
-            {
-                ActionName = Game.Xml.StringParse(xmlAction["ActionName"]),
-                ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]),
-                Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]),
-                Trigger = Game.Xml.StringParse(xmlAction["Trigger"]),
-                Text = Game.Xml.StringParse(xmlAction["Text"]),
-                RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]),
-                WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]),
-                DamageToWin = Game.Xml.IntParse(xmlAction["DamageToWin"]),
-                MasteryPenalty = Game.Xml.IntParse(xmlAction["MasteryPenalty"]),
-                Price = Game.Xml.IntParse(xmlAction["Price"]),
-                Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]),
-                GroupFight = Game.Xml.BoolParse(xmlAction["GroupFight"]),
-            };
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.DamageToWin = Game.Xml.IntParse(xmlAction["DamageToWin"]);
+            action.MasteryPenalty = Game.Xml.IntParse(xmlAction["MasteryPenalty"]);
+            action.GroupFight = Game.Xml.BoolParse(xmlAction["GroupFight"]);
 
             if (xmlAction["Allies"] != null)
             {
