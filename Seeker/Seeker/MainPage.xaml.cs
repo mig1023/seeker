@@ -93,13 +93,7 @@ namespace Seeker
             {
                 foreach(string image in paragraph.Images.Keys.ToList())
                 {
-                    Image illustration = new Image
-                    {
-                        Source = image,
-                        Aspect = Aspect.AspectFit
-                    };
-
-                    Text.Children.Add(illustration);
+                    Text.Children.Add(Output.Interface.IllustrationImage(image));
 
                     if (!String.IsNullOrEmpty(paragraph.Images[image]))
                         Text.Children.Add(Output.Interface.Text(paragraph.Images[image]));

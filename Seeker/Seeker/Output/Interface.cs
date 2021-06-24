@@ -18,7 +18,13 @@ namespace Seeker.Output
             Aspect = Aspect.AspectFill,
         };
 
-        public static List<Label> StatusBar(List<string> statusLines)
+        public static Image IllustrationImage(string image) => new Image
+        {
+            Source = image,
+            Aspect = Aspect.AspectFit,
+        };
+
+		public static List<Label> StatusBar(List<string> statusLines)
         {
             List<Label> statusLabels = new List<Label>();
 
