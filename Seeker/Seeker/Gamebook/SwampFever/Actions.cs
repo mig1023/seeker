@@ -54,7 +54,7 @@ namespace Seeker.Gamebook.SwampFever
             bool disabledSellingMembrane = (ActionName == "SellAcousticMembrane") && (Character.Protagonist.AcousticMembrane <= 0);
             bool disabledSellingMucus = (ActionName == "SellLiveMucus") && (Character.Protagonist.LiveMucus <= 0);
 
-            return (disabledByPrice || disabledByUsed || disabledSellingMembrane || disabledSellingMucus ? false : true);
+            return !(disabledByPrice || disabledByUsed || disabledSellingMembrane || disabledSellingMucus);
         }
 
         public override bool CheckOnlyIf(string option)

@@ -291,7 +291,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         return false;
                 }
 
-                return (orLogic ? false : true);
+                return !orLogic;
             }
         }
 

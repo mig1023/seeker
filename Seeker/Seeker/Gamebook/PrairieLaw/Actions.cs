@@ -322,7 +322,7 @@ namespace Seeker.Gamebook.PrairieLaw
         {
             List<string> gameReport = new List<string>();
 
-            bool red = (Game.Dice.Roll() > 3 ? true : false);
+            bool red = (Game.Dice.Roll() > 3);
             int dice = Game.Dice.Roll();
             bool even = (dice % 2 == 0);
 
