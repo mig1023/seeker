@@ -24,7 +24,14 @@ namespace Seeker.Output
             Aspect = Aspect.AspectFit,
         };
 
-		public static List<Label> StatusBar(List<string> statusLines)
+        public static Entry Field(object binding) => new Entry
+        {
+            Placeholder = "Введите свой ответ",
+            BindingContext = binding,
+            FontFamily = Output.Interface.TextFontFamily(),
+        };
+
+        public static List<Label> StatusBar(List<string> statusLines)
         {
             List<Label> statusLabels = new List<Label>();
 

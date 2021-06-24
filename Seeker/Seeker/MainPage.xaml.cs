@@ -197,12 +197,7 @@ namespace Seeker
 
         private Entry AddInputField(Game.Option option, object button)
         {
-            Entry field = new Entry
-            {
-                Placeholder = "Введите свой ответ",
-                BindingContext = button,
-                FontFamily = Output.Interface.TextFontFamily(),
-            };
+            Entry field = Output.Interface.Field(button);
 
             field.TextChanged += InputChange;
 
@@ -239,7 +234,9 @@ namespace Seeker
         private void AddAdditionalButton(string name, EventHandler eventHandler)
         {
             Button button = Output.Buttons.Additional(name);
+
             button.Clicked += eventHandler;
+
             Options.Children.Add(button);
         }
 
