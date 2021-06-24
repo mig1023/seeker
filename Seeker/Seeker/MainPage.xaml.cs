@@ -32,14 +32,7 @@ namespace Seeker
 
             foreach (string gamebook in List.GetBooks())
             {
-                Description gamebookDescr = List.GetDescription(gamebook);
-
-                Image illustration = new Image
-                {
-                    Source = gamebookDescr.Illustration,
-                    Aspect = Aspect.AspectFill
-                };
-                Options.Children.Add(illustration);
+                Options.Children.Add(Output.Interface.GamebookImage(List.GetDescription(gamebook)));
 
                 Button button = Output.Interface.GamebookButton(gamebook);
                 button.Clicked += Gamebook_Click;

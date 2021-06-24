@@ -12,6 +12,12 @@ namespace Seeker.Output
     {
         public enum TextFontSize { little, normal, big };
 
+        public static Image GamebookImage(Description gamebookDescr) => new Image
+        {
+            Source = gamebookDescr.Illustration,
+            Aspect = Aspect.AspectFill,
+        };
+
         public static List<Label> StatusBar(List<string> statusLines)
         {
             List<Label> statusLabels = new List<Label>();
