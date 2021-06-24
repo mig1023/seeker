@@ -37,24 +37,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return action;
         }
 
-        public override Option OptionParse(XmlNode xmlOption)
-        {
-            Option option = OptionsTemplate(xmlOption);
-
-            if (xmlOption.Attributes["Do"] != null)
-            {
-                Modification modification = new Modification
-                {
-                    Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]),
-                    Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]),
-                    ValueString = Game.Xml.StringParse(xmlOption.Attributes["ValueString"]),
-                };
-
-                option.Do = modification;
-            }
-
-            return option;
-        }
+        public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
             Game.Xml.ModificationParse(xmlModification, new Modification());
