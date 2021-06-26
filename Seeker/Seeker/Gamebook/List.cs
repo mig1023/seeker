@@ -419,6 +419,23 @@ namespace Seeker.Gamebook
                 BookColor = "#b66247",
                 Illustration = "PrairieLaw.jpg",
             },
+
+            ["Оружие возмездия"] = new Description
+            {
+                XmlBook = "Gamebooks/VWeapons.xml",
+                Protagonist = VWeapons.Character.Protagonist.Init,
+                CheckOnlyIf = VWeapons.Actions.StaticInstance.CheckOnlyIf,
+                Paragraphs = VWeapons.Paragraphs.StaticInstance,
+                Actions = VWeapons.Actions.StaticInstance,
+                Constants = VWeapons.Constants.StaticInstance,
+                Save = VWeapons.Character.Protagonist.Save,
+                Load = VWeapons.Character.Protagonist.Load,
+                SmallDisclaimer = "Андрей Тишин, 2013",
+                BookColor = "#ffffff",
+                FontColor = "#000000",
+                BorderColor = "#000000",
+                Illustration = "VWeapons.jpg",
+            },
         };
 
         public static List<string> GetBooks() => Books.Keys.ToList();
