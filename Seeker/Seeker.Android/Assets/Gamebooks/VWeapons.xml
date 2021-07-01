@@ -539,7 +539,19 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>65</ID>
-		<Text>Сергей проплыл мимо часовых и влез на пирс, извлекая из недр водолазного костюма маузер. Когда он вылез на берег, вышло так, что все трое заметили его сразу прямо на него...\n\n8 Перестрелка:\n\n*МАРТИН (Меткость: 3, доровье: 3)\n\n*ЮРГЕН (Меткость: 3, Здоровье: 3) преимущество\n\n*ИТАЛЬЯНЕЦ (Меткость: 2, Здоровье: 3) преимущество</Text>
+		<Text>Сергей проплыл мимо часовых и влез на пирс, извлекая из недр водолазного костюма маузер. Когда он вылез на берег, вышло так, что все трое заметили его сразу прямо на него...</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Перестрелка</ButtonName>
+				<Dogfight/>
+				<Enemies>
+					<Enemy Name="МАРТИН" Hitpoints="3" Accuracy="3"/>
+					<Enemy Name="ЮРГЕН" Hitpoints="3" Accuracy="3" First="true"/>
+					<Enemy Name="ИТАЛЬЯНЕЦ" Hitpoints="3" Accuracy="2" First="true"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="120"/>
 		</Options>
