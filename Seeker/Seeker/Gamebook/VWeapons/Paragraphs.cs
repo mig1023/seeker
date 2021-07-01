@@ -19,6 +19,8 @@ namespace Seeker.Gamebook.VWeapons
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
+            action.Dogfight = Game.Xml.BoolParse(xmlAction["Dogfight"]);
+
             if (xmlAction["Enemies"] != null)
             {
                 action.Enemies = new List<Character>();
@@ -30,7 +32,7 @@ namespace Seeker.Gamebook.VWeapons
                         Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
                         Hitpoints = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
                         Accuracy = Game.Xml.IntParse(xmlEnemy.Attributes["Accuracy"]),
-                        ShootFirst = Game.Xml.BoolParse(xmlEnemy.Attributes["ShootFirst"]),
+                        First = Game.Xml.BoolParse(xmlEnemy.Attributes["First"]),
                         Cartridges = 8,
                     };
 

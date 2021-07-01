@@ -156,7 +156,7 @@ namespace Seeker.Gamebook.VWeapons
             }
         }
 
-        public bool ShootFirst { get; set; }
+        public bool First { get; set; }
         public bool Dead { get; set; }
 
         public override void Init()
@@ -172,7 +172,7 @@ namespace Seeker.Gamebook.VWeapons
             Hands = 4;
             Legs = 4;
 
-            ShootFirst = false;
+            First = false;
             Dead = false;
         }
 
@@ -192,7 +192,7 @@ namespace Seeker.Gamebook.VWeapons
             Legs = this.Legs,
 
             Hitpoints = this.Hitpoints,
-            ShootFirst = this.ShootFirst,
+            First = this.First,
             Dead = this.Dead,
         };
 
