@@ -12,5 +12,33 @@ namespace Seeker.Gamebook.VWeapons
     class Paragraphs : Prototypes.Paragraphs, Abstract.IParagraphs
     {
         public static Paragraphs StaticInstance = new Paragraphs();
+
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
+        {
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            if (xmlAction["Enemies"] != null)
+            {
+                action.Enemies = new List<Character>();
+
+                foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
+                {
+                    Character enemy = new Character
+                    {
+                        Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
+                        Hitpoints = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
+                        Accuracy = Game.Xml.IntParse(xmlEnemy.Attributes["Accuracy"]),
+                        ShootFirst = Game.Xml.BoolParse(xmlEnemy.Attributes["ShootFirst"]),
+                        Cartridges = 8,
+                    };
+
+                    action.Enemies.Add(enemy);
+                }
+            }
+
+            return action;
+        }
     }
 }

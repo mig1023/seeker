@@ -156,6 +156,9 @@ namespace Seeker.Gamebook.VWeapons
             }
         }
 
+        public bool ShootFirst { get; set; }
+        public bool Dead { get; set; }
+
         public override void Init()
         {
             Suspicions = 0;
@@ -168,10 +171,15 @@ namespace Seeker.Gamebook.VWeapons
             Body = 4;
             Hands = 4;
             Legs = 4;
+
+            ShootFirst = false;
+            Dead = false;
         }
 
         public Character Clone() => new Character()
         {
+            Name = this.Name,
+
             Suspicions = this.Suspicions,
             Time = this.Time,
             Accuracy = this.Accuracy,
@@ -184,10 +192,12 @@ namespace Seeker.Gamebook.VWeapons
             Legs = this.Legs,
 
             Hitpoints = this.Hitpoints,
+            ShootFirst = this.ShootFirst,
+            Dead = this.Dead,
         };
 
         public override string Save() =>
-            String.Join("|", Suspicions, Time, Accuracy, Cartridges, Head, ShoulderGirdle, Body, Hands, Legs);
+            String.Join("|", Suspicions, Time, Accuracy, Cartridges, Head, ShoulderGirdle, Body, Hands, Legs, (Dead ? 1 : 0));
 
         public override void Load(string saveLine)
         {
@@ -203,6 +213,7 @@ namespace Seeker.Gamebook.VWeapons
             Body = int.Parse(save[6]);
             Hands = int.Parse(save[7]);
             Legs = int.Parse(save[8]);
+            Dead = (int.Parse(save[9]) == 1);
         }
     }
 }
