@@ -217,7 +217,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>27</ID>
-		<Text>Бандиты вошли в комнату с оружием наготове, уставившись на раскрытый сейф. Сергей ждал их за углом.\n\n8 Перестрелка:\n\n*БАНДИТ 1 (Меткость: 3, здоровье: 3)\n\n*БАНДИТ 2 (Меткость: 3, здоровье: 3)</Text>
+		<Text>Бандиты вошли в комнату с оружием наготове, уставившись на раскрытый сейф. Сергей ждал их за углом.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Перестрелка</ButtonName>
+				<Enemies>
+					<Enemy Name="ПЕРВЫЙ БАНДИТ" Hitpoints="3" Accuracy="3"/>
+					<Enemy Name="ВТОРОЙ БАНДИТ" Hitpoints="3" Accuracy="3"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="24"/>
 		</Options>
