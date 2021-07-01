@@ -2178,7 +2178,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>242</ID>
-		<Text>Сергей продолжил возиться с отмычкой до тех пор, пока за спиной не раздались крики. Молниеносным движением разведчик выхватил маузер.\n\nПерестрелка:\n\n* МАТРОС (Меткость: 3, здоровье: 2)\n\n* МАТРОС (Меткость: 3, Здоровье: 3) преимущество\n\n* МАТРОС (Меткость: 2, Здоровье: 3) преимущество</Text>
+		<Text>Сергей продолжил возиться с отмычкой до тех пор, пока за спиной не раздались крики. Молниеносным движением разведчик выхватил маузер.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Перестрелка</ButtonName>
+				<Enemies>
+					<Enemy Name="ПЕРВЫЙ МАТРОС" Hitpoints="2" Accuracy="3"/>
+					<Enemy Name="ВТОРОЙ МАТРОС" Hitpoints="3" Accuracy="3" First="true"/>
+					<Enemy Name="ТРЕТИЙ МАТРОС" Hitpoints="3" Accuracy="2" First="true"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="243"/>
 		</Options>
