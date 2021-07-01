@@ -985,7 +985,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>120</ID>
-		<Text>На звуки выстрелов на пирс прибежали с окрестных постов ещё двое часовых.\n\n8 Перестрелка:\n\n* ЧАСОВОЙ (Меткость: 3, здоровье: 3)\n\n* ЧАСОВОЙ (Меткость: 2, Здоровье: 3) преимущество</Text>
+		<Text>На звуки выстрелов на пирс прибежали с окрестных постов ещё двое часовых.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Перестрелка</ButtonName>
+				<Enemies>
+					<Enemy Name="ПЕРВЫЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="3"/>
+					<Enemy Name="ВТОРОЙ ЧАСОВОЙ" Hitpoints="2" Accuracy="3" First="true"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="119"/>
 		</Options>
