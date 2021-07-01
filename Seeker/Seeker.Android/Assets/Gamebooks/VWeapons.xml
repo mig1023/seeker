@@ -992,7 +992,7 @@
 				<ButtonName>Перестрелка</ButtonName>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="3"/>
-					<Enemy Name="ВТОРОЙ ЧАСОВОЙ" Hitpoints="2" Accuracy="3" First="true"/>
+					<Enemy Name="ВТОРОЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="2" First="true"/>
 				</Enemies>
 			</Action>
 		</Actions>
@@ -1018,7 +1018,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>122</ID>
-		<Text>Сергей выхватил маузер и, не обращая внимания на Итальянца, выстрелил в сердце Юргену.\n\n8 Перестрелка:\n\n* ИТАЛЬЯНЕЦ (Меткость: 2, доровье: 3) преимущество\n\n*МАРТИН (Меткость: 3, Здоровье: 3) преимущество</Text>
+		<Text>Сергей выхватил маузер и, не обращая внимания на Итальянца, выстрелил в сердце Юргену.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Перестрелка</ButtonName>
+				<Enemies>
+					<Enemy Name="МАРТИН" Hitpoints="3" Accuracy="3" First="true"/>
+					<Enemy Name="ИТАЛЬЯНЕЦ" Hitpoints="3" Accuracy="2"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="120"/>
 		</Options>
