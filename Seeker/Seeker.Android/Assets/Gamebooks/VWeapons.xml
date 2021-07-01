@@ -385,7 +385,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>47</ID>
-		<Text>Огнев и Кляйст посмотрели друг на друга одновременно. Каждый из них уже держал палец на курке.\n\n8 Перестрелка:\n\n*КЛЯЙСТ (Меткость: 3, Здоровье: 3) преимущество</Text>
+		<Text>Огнев и Кляйст посмотрели друг на друга одновременно. Каждый из них уже держал палец на курке.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Перестрелка</ButtonName>
+				<Dogfight/>
+				<Enemies>
+					<Enemy Name="КЛЯЙСТ" Hitpoints="3" Accuracy="3" First="true"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="44"/>
 		</Options>
