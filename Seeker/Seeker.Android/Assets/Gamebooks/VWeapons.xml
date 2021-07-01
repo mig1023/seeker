@@ -1097,7 +1097,16 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>129</ID>
-		<Text>Сергей навёл пистолет женщине прямо в сердце и спустил курок.\n\n8 Перестрелка:\n\n* ГЕСТАПОВКА (Меткость: 2, Здоровье: 3)</Text>
+		<Text>Сергей навёл пистолет женщине прямо в сердце и спустил курок.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Перестрелка</ButtonName>
+				<Enemies>
+					<Enemy Name="ГЕСТАПОВКА" Hitpoints="3" Accuracy="2"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="126"/>
 		</Options>
