@@ -52,38 +52,54 @@ namespace Seeker.Gamebook.VWeapons
 
             if (enemy.Cartridges > 0)
             {
+                enemy.Cartridges -= 1;
                 wound = enemy.Accuracy;
-                fight.Add(String.Format("{0} попал в вас!", enemy.Name));
+                fight.Add(String.Format("{0} стреляет в вас", enemy.Name));
             }
             else
             {
                 wound = 1;
-                fight.Add(String.Format("{0} бьёт вас!", enemy.Name));
+                fight.Add(String.Format("{0} бьёт вас", enemy.Name));
             }
 
             switch (target)
             {
                 case 1:
-                    hero.Legs -= wound;
-                    fight.Add(String.Format("Ранение пришлось в ногу! Вы потеряли {0} единиц здоровья ног, теперь оно равно {1}", wound, hero.Legs));
+                    fight.Add("BAD|Ранение пришлось в ногу!");
 
-                    if (hero.Legs <= 0)
-                        fight.Add("Вы больше не сможете спасаться бегством или прыгать с любой высоты!");
+                    if (hero.Legs > 0)
+                    {
+                        hero.Legs -= wound;
+                        fight.Add(String.Format("BAD|Вы потеряли {0} ед. здоровья ног, теперь оно равно {1}", wound, hero.Legs));
+
+                        if (hero.Legs <= 0)
+                            fight.Add("BOLD|Вы больше не сможете спасаться бегством или прыгать с любой высоты!");
+                    }
 
                     break;
 
                 case 2:
-                    hero.Hands -= wound;
-                    fight.Add(String.Format("Ранение пришлось в руку! Вы потеряли {0} единиц здоровья рук, теперь оно равно {1}", wound, hero.Hands));
-
-                    hero.Accuracy -= 1;
-                    fight.Add(String.Format("Вы также теряете единицу меткости, теперь она равно {0}", hero.Accuracy));
+                    fight.Add("BAD|Ранение пришлось в руку!");
+                    
+                    if (hero.Hands > 0)
+                    {
+                        hero.Hands -= wound;
+                        fight.Add(String.Format("BAD|Вы потеряли {0} ед. здоровья рук, теперь оно равно {1}", wound, hero.Hands));
+                    }
+                    
+                    if (hero.Accuracy > 0)
+                    {
+                        hero.Accuracy -= 1;
+                        fight.Add(String.Format("BAD|Вы также теряете 1 ед. меткости, теперь она равно {0}", hero.Accuracy));
+                    }
 
                     break;
 
                 case 3:
+                    fight.Add("BAD|Ранение пришлось в корпус!");
+
                     hero.Body -= wound;
-                    fight.Add(String.Format("Ранение пришлось в корпус! Вы потеряли {0} единиц здоровья тела, теперь оно равно {1}", wound, hero.Body));
+                    fight.Add(String.Format("BAD|Вы потеряли {0} ед. здоровья тела, теперь оно равно {1}", wound, hero.Body));
 
                     if (hero.Body <= 0)
                         hero.Dead = true;
@@ -91,20 +107,30 @@ namespace Seeker.Gamebook.VWeapons
                     break;
 
                 case 4:
-                    hero.ShoulderGirdle -= wound;
-                    fight.Add(String.Format("Ранение пришлось в плечо! Вы потеряли {0} единиц здоровья плеча, теперь оно равно {1}", wound, hero.ShoulderGirdle));
+                    fight.Add("BAD|Ранение пришлось в плечо!");
 
-                    if (hero.ShoulderGirdle <= 0)
-                        fight.Add("Вы больше не можете наносить ударов и обречены в рукопашной!");
+                    if (hero.ShoulderGirdle > 0)
+                    {
+                        hero.ShoulderGirdle -= wound;
+                        fight.Add(String.Format("Вы потеряли {0} ед. здоровья плеча, теперь оно равно {1}", wound, hero.ShoulderGirdle));
+
+                        if (hero.ShoulderGirdle <= 0)
+                            fight.Add("BOLD|Вы больше не можете наносить ударов и обречены в рукопашной!");
+                    }
 
                     break;
 
                 case 5:
-                    hero.Head -= wound;
-                    fight.Add(String.Format("Ранение пришлось в голову! Вы потеряли {0} единиц здоровья головы, теперь оно равно {1}", wound, hero.Head));
+                    fight.Add("BAD|Ранение пришлось в голову!");
 
-                    hero.Suspicions += 1;
-                    fight.Add("Вы также получаете единицу подозрений, так как скрыть рану не удастся");
+                    hero.Head -= wound;
+                    fight.Add(String.Format("Вы потеряли {0} ед. здоровья головы, теперь оно равно {1}", wound, hero.Head));
+
+                    if (hero.Suspicions < 5)
+                    {
+                        hero.Suspicions += 1;
+                        fight.Add("BOLD|Вы также получаете 1 ед. подозрений, так как скрыть рану не удастся");
+                    }
 
                     if (hero.Head <= 0)
                         hero.Dead = true;
@@ -142,15 +168,16 @@ namespace Seeker.Gamebook.VWeapons
                         continue;
 
                     string cartridgesLine = (enemy.Cartridges > 0 ? String.Format(", патронов {0}", enemy.Cartridges) : String.Empty);
-                    fight.Add(String.Format("{0}{1}", enemy.Name, cartridgesLine));
+                    fight.Add(String.Format("BOLD|{0}{1}", enemy.Name, cartridgesLine));
 
                     if (enemy.ShootFirst && EnemyAttack(hero, enemy, ref fight))
                         return fight;
 
                     if (hero.Cartridges > 0)
                     {
+                        hero.Cartridges -= 1;
                         enemy.Hitpoints -= hero.Accuracy;
-                        fight.Add(String.Format("Вы стреляете в {0} и отнимаете у него {1} единиц здоворья", enemy.Name, hero.Accuracy));
+                        fight.Add(String.Format("GOOD|Вы стреляете в {0} и отнимаете у него {1} ед. здоворья", enemy.Name, hero.Accuracy));
                     }
                     else if (hero.ShoulderGirdle <= 0)
                     {
@@ -165,10 +192,13 @@ namespace Seeker.Gamebook.VWeapons
                     else
                     {
                         enemy.Hitpoints -= 2;
-                        fight.Add(String.Format("Вы бьёте {0} и отнимаете у него 2 единицы здоворья", enemy.Name));
+                        fight.Add(String.Format("GOOD|Вы бьёте {0} и отнимаете у него 2 ед. здоворья", enemy.Name));
                     }
                     
-                    if (!enemy.ShootFirst && (enemy.Hitpoints > 0) && EnemyAttack(hero, enemy, ref fight))
+                    if (enemy.Hitpoints <= 0)
+                        fight.Add(String.Format("GOOD|{0} убит!", enemy.Name));
+
+                    else if (!enemy.ShootFirst && EnemyAttack(hero, enemy, ref fight))
                         return fight;
 
                     if (NoMoreEnemies(FightEnemies))
