@@ -390,7 +390,6 @@
 			<Action>
 				<ActionName>Fight</ActionName>
 				<ButtonName>Перестрелка</ButtonName>
-				<Dogfight/>
 				<Enemies>
 					<Enemy Name="КЛЯЙСТ" Hitpoints="3" Accuracy="3" First="true"/>
 				</Enemies>
@@ -544,7 +543,6 @@
 			<Action>
 				<ActionName>Fight</ActionName>
 				<ButtonName>Перестрелка</ButtonName>
-				<Dogfight/>
 				<Enemies>
 					<Enemy Name="МАРТИН" Hitpoints="3" Accuracy="3"/>
 					<Enemy Name="ЮРГЕН" Hitpoints="3" Accuracy="3" First="true"/>
@@ -963,6 +961,16 @@
 	<Paragraph>
 		<ID>118</ID>
 		<Text>Сергей тихо, но быстро подобрался к Итальянцу и ударил его по голове ручкой маузера, а затем подбежал к Мартину и оглушил его ударом ладони. Юрген развернулся, увидел перед собой дуло маузера, но не растерялся и ловким движением выбил его на пол. Завязался рукопашный бой между Сергеем и Юргеном.\n\n8 Рукопашный бой:\n\n*ЮРГЕН (Сила удара: 1, здоровье: 3)</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Перестрелка</ButtonName>
+				<Dogfight/>
+				<Enemies>
+					<Enemy Name="ЮРГЕН" Accuracy="3" First="true"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="115"/>
 		</Options>
