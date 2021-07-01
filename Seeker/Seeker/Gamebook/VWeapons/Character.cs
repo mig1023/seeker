@@ -158,6 +158,8 @@ namespace Seeker.Gamebook.VWeapons
 
         public bool First { get; set; }
         public bool Dead { get; set; }
+        public bool WithoutCartridges { get; set; }
+        public bool Animal { get; set; }
 
         public override void Init()
         {
@@ -174,6 +176,9 @@ namespace Seeker.Gamebook.VWeapons
 
             First = false;
             Dead = false;
+            WithoutCartridges = false;
+            Animal = false;
+
         }
 
         public Character Clone() => new Character()
@@ -194,6 +199,8 @@ namespace Seeker.Gamebook.VWeapons
             Hitpoints = this.Hitpoints,
             First = this.First,
             Dead = this.Dead,
+            WithoutCartridges = this.WithoutCartridges,
+            Animal = this.Animal,
         };
 
         public override string Save() =>

@@ -70,7 +70,7 @@ namespace Seeker.Gamebook.VWeapons
             else
             {
                 wound = 1;
-                fight.Add(String.Format("{0} бьёт вас.", enemy.Name));
+                fight.Add(String.Format("{0} {1} вас.", enemy.Name, (enemy.Animal ? "кусает" : "бьёт")));
             }
 
             switch (target)
@@ -181,7 +181,7 @@ namespace Seeker.Gamebook.VWeapons
                     if (enemy.Hitpoints <= 0)
                         continue;
 
-                    string cartridgesLine = (dogfight ? String.Empty : String.Format(", патронов {0}", enemy.Cartridges));
+                    string cartridgesLine = (dogfight || enemy.Animal ? String.Empty : String.Format(", патронов {0}", enemy.Cartridges));
                     fight.Add(String.Format("BOLD|{0}, здоровье {1}{2}", enemy.Name, enemy.Hitpoints, cartridgesLine));
 
                     if (enemy.First && EnemyAttack(hero, enemy, ref fight))

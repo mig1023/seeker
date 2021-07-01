@@ -33,8 +33,14 @@ namespace Seeker.Gamebook.VWeapons
                         Hitpoints = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
                         Accuracy = Game.Xml.IntParse(xmlEnemy.Attributes["Accuracy"]),
                         First = Game.Xml.BoolParse(xmlEnemy.Attributes["First"]),
-                        Cartridges = 8,
+                        WithoutCartridges = Game.Xml.BoolParse(xmlEnemy.Attributes["WithoutCartridges"]),
+                        Animal = Game.Xml.BoolParse(xmlEnemy.Attributes["Animal"]),
                     };
+
+                    if (enemy.WithoutCartridges || enemy.Animal)
+                        enemy.Cartridges = 0;
+                    else
+                        enemy.Cartridges = 8;
 
                     action.Enemies.Add(enemy);
                 }
