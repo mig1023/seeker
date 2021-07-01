@@ -69,7 +69,7 @@ namespace Seeker.Gamebook.VWeapons
             }
             else
             {
-                wound = 1;
+                wound = (enemy.Animal ? 2 : 1);
                 fight.Add(String.Format("{0} {1} вас.", enemy.Name, (enemy.Animal ? "кусает" : "бьёт")));
             }
 
