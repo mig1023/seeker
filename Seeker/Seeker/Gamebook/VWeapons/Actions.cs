@@ -29,7 +29,8 @@ namespace Seeker.Gamebook.VWeapons
                 return enemies;
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nметкость {1}  здоровье {2}", enemy.Name, enemy.Accuracy, enemy.Hitpoints));
+                enemies.Add(String.Format("{0}\nметкость {1}  здоровье {2}{3}",
+                    enemy.Name, enemy.Accuracy, enemy.Hitpoints, (enemy.First ? "\nатакует первым" : String.Empty)));
 
             return enemies;
         }
