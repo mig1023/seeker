@@ -1335,7 +1335,7 @@
 				<ActionName>Fight</ActionName>
 				<ButtonName>Перестрелка</ButtonName>
 				<Enemies>
-					<Enemy Name="АВТОМАТЧИК" Hitpoints="3" Accuracy="5"/>
+					<Enemy Name="АВТОМАТЧИК" Hitpoints="3" Accuracy="5" WithoutCartridges="true"/>
 					<Enemy Name="ФОН ГОФ" Hitpoints="2" Accuracy="3" First="true"/>
 				</Enemies>
 			</Action>
@@ -1360,7 +1360,7 @@
 				<ActionName>Fight</ActionName>
 				<ButtonName>Перестрелка</ButtonName>
 				<Enemies>
-					<Enemy Name="АВТОМАТЧИК" Hitpoints="3" Accuracy="5"/>
+					<Enemy Name="АВТОМАТЧИК" Hitpoints="3" Accuracy="5" WithoutCartridges="true"/>
 					<Enemy Name="ГЕСТАПОВЕЦ С РЕВОЛЬВЕРОМ" Hitpoints="3" Accuracy="2" First="true"/>
 				</Enemies>
 			</Action>
@@ -1377,7 +1377,7 @@
 				<ActionName>Fight</ActionName>
 				<ButtonName>Перестрелка</ButtonName>
 				<Enemies>
-					<Enemy Name="АВТОМАТЧИК" Hitpoints="3" Accuracy="5"/>
+					<Enemy Name="АВТОМАТЧИК" Hitpoints="3" Accuracy="5" WithoutCartridges="true"/>
 					<Enemy Name="ГЕСТАПОВЕЦ С РЕВОЛЬВЕРОМ" Hitpoints="3" Accuracy="2"/>
 				</Enemies>
 			</Action>
@@ -1718,7 +1718,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>193</ID>
-		<Text>— Герман, помоги! — закричал Фриц Брёнинг, вынимая из-за спины винтовку и вбегая в медпункт вслед за Сергеем, — Этот человек не Эрвин Шмидт, это вражеский шпион, который выдаёт себя за него!\n\nОгрызок выпал из рук медбрата, и его пухлые пальцы потянулись в стол за оружием. Оружие Сергея было уже наготове, Кайзер сорвался с поводка Фрица и побежал, устремив злобный взгляд на сонную артерию разведчика.\n\n* Перестрелка:\n\n*ФРИЦ БРЁНИНГ (Меткость: 3, доровье: 3)\n\n*КАЙЗЕР (Сила Укуса: 2, доровье: 2)\n\n*ГЕРМАН (Меткость: 2, Здоровье:3) преимущество</Text>
+		<Text>— Герман, помоги! — закричал Фриц Брёнинг, вынимая из-за спины винтовку и вбегая в медпункт вслед за Сергеем, — Этот человек не Эрвин Шмидт, это вражеский шпион, который выдаёт себя за него!\n\nОгрызок выпал из рук медбрата, и его пухлые пальцы потянулись в стол за оружием. Оружие Сергея было уже наготове, Кайзер сорвался с поводка Фрица и побежал, устремив злобный взгляд на сонную артерию разведчика.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Перестрелка</ButtonName>
+				<Enemies>
+					<Enemy Name="ФРИЦ БРЁНИНГ" Hitpoints="3" Accuracy="3"/>
+					<Enemy Name="КАЙЗЕР" Hitpoints="3" Accuracy="3" Animal="true"/>
+					<Enemy Name="ГЕРМАН" Hitpoints="3" Accuracy="2" First="true"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="195"/>
 		</Options>
