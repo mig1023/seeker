@@ -2160,7 +2160,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>241</ID>
-		<Text>Сергей бросил отмычку на пол и достал оружие. К приёму гостей он был готов.\n\n8 Перестрелка:\n\n*МАТРОС (Меткость: 3, здоровье: 2)\n\n*МАТРОС (Меткость: 3, здоровье: 3)\n\n*МАТРОС (Меткость: 2, Здоровье: 3) преимущество</Text>
+		<Text>Сергей бросил отмычку на пол и достал оружие. К приёму гостей он был готов.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Перестрелка</ButtonName>
+				<Enemies>
+					<Enemy Name="ПЕРВЫЙ МАТРОС" Hitpoints="2" Accuracy="3"/>
+					<Enemy Name="ВТОРОЙ МАТРОС" Hitpoints="3" Accuracy="3"/>
+					<Enemy Name="ТРЕТИЙ МАТРОС" Hitpoints="3" Accuracy="2" First="true"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="243"/>
 		</Options>
