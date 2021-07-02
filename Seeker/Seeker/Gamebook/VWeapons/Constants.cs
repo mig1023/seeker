@@ -28,5 +28,7 @@ namespace Seeker.Gamebook.VWeapons
             [ColorTypes.StatusFont] = "#000000",
             [ColorTypes.StatusBorder] = "#000000",
         };
+
+        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 266 };
     }
 }
