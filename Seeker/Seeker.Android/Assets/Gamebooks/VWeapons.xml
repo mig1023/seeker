@@ -545,7 +545,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>62</ID>
-		<Text>Огнев молниеносно выхватил свой маузер, однако и американец успел за это время навести на него ствол.\n\n8 Бой:\n\n*ДЭВИС (Меткость: 3, Здоровье: 3) преимущество</Text>
+		<Text>Огнев молниеносно выхватил свой маузер, однако и американец успел за это время навести на него ствол.</Text>
+		<Actions>
+			<Action>
+				<ActionName>Fight</ActionName>
+				<ButtonName>Перестрелка</ButtonName>
+				<Enemies>
+					<Enemy Name="ДЭВИС" Hitpoints="3" Accuracy="3" First="true"/>
+				</Enemies>
+			</Action>
+		</Actions>
+		
 		<Options>
 			<Option Destination="63"/>
 		</Options>
