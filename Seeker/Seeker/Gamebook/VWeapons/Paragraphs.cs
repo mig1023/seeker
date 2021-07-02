@@ -13,7 +13,15 @@ namespace Seeker.Gamebook.VWeapons
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        {
+            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
+                paragraph.Options.Add(OptionParseWithDo(xmlOption, new Modification()));
+
+            return paragraph;
+        }
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
