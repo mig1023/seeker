@@ -583,9 +583,15 @@
 				<ButtonName>ПОДЛЕЧИТЬСЯ</ButtonName>
 				<Value>2</Value>
 				<Time>-1</Time>
-				<Aftertext>Забрать бомбу из тайника - (время -1, пометка «Б»)\n\nОтправится в оружейный магазин и купить патроны - время -1, патроны=8)</Aftertext>
+				<Aftertext>Забрать бомбу из тайника - (время -1, пометка «Б»)\n\nОтправится в оружейный магазин и купить патроны:</Aftertext>
 			</Action>
-		<Actions>
+			<Action>
+				<ActionName>Cartridges</ActionName>
+				<ButtonName>КУПИТЬ ПАТРОНЫ</ButtonName>
+				<Value>8</Value>
+				<Time>-1</Time>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="51" Text="Отправиться на КПП порта"/>
 			<Option Destination="56" Text="Осмотреть порт с безопасного расстояния на предмет наличия другого входа"/>
