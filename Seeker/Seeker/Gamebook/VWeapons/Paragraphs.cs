@@ -21,6 +21,7 @@ namespace Seeker.Gamebook.VWeapons
 
             action.Dogfight = Game.Xml.BoolParse(xmlAction["Dogfight"]);
             action.Value = Game.Xml.IntParse(xmlAction["Value"]);
+            action.Time = Game.Xml.IntParse(xmlAction["Time"]);
 
             if (xmlAction["Enemies"] != null)
             {

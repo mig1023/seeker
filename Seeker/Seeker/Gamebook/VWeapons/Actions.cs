@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.VWeapons
         public List<Character> Enemies { get; set; }
         public bool Dogfight { get; set; }
         public int Value { get; set; }
+        public int Time { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -57,7 +58,7 @@ namespace Seeker.Gamebook.VWeapons
                     if (hero.Legs > 0)
                     {
                         hero.Legs -= wound;
-                        fight.Add(String.Format("BAD|Вы потеряли {0} ед. здоровья ног, теперь оно равно {1}.", wound, hero.Legs));
+                        fight.Add(String.Format("BAD|Вы потеряли {0} ед. здоровья ног, теперь оно равно {1} из 4.", wound, hero.Legs));
 
                         if (hero.Legs <= 0)
                             fight.Add("BOLD|Вы больше не сможете спасаться бегством или прыгать с любой высоты!");
@@ -71,7 +72,7 @@ namespace Seeker.Gamebook.VWeapons
                     if (hero.Hands > 0)
                     {
                         hero.Hands -= wound;
-                        fight.Add(String.Format("BAD|Вы потеряли {0} ед. здоровья рук, теперь оно равно {1}.", wound, hero.Hands));
+                        fight.Add(String.Format("BAD|Вы потеряли {0} ед. здоровья рук, теперь оно равно {1} из 4.", wound, hero.Hands));
                     }
 
                     if (hero.Accuracy > 0)
@@ -86,7 +87,7 @@ namespace Seeker.Gamebook.VWeapons
                     fight.Add("BAD|Ранение пришлось в корпус!");
 
                     hero.Body -= wound;
-                    fight.Add(String.Format("BAD|Вы потеряли {0} ед. здоровья тела, теперь оно равно {1}.", wound, hero.Body));
+                    fight.Add(String.Format("BAD|Вы потеряли {0} ед. здоровья тела, теперь оно равно {1} из 4.", wound, hero.Body));
 
                     if (hero.Body <= 0)
                         hero.Dead = true;
@@ -99,7 +100,7 @@ namespace Seeker.Gamebook.VWeapons
                     if (hero.ShoulderGirdle > 0)
                     {
                         hero.ShoulderGirdle -= wound;
-                        fight.Add(String.Format("Вы потеряли {0} ед. здоровья плеча, теперь оно равно {1}.", wound, hero.ShoulderGirdle));
+                        fight.Add(String.Format("Вы потеряли {0} ед. здоровья плеча, теперь оно равно {1} из 4.", wound, hero.ShoulderGirdle));
 
                         if (hero.ShoulderGirdle <= 0)
                             fight.Add("BOLD|Вы больше не можете наносить ударов и обречены в рукопашной!");
@@ -111,7 +112,7 @@ namespace Seeker.Gamebook.VWeapons
                     fight.Add("BAD|Ранение пришлось в голову!");
 
                     hero.Head -= wound;
-                    fight.Add(String.Format("Вы потеряли {0} ед. здоровья головы, теперь оно равно {1}.", wound, hero.Head));
+                    fight.Add(String.Format("Вы потеряли {0} ед. здоровья головы, теперь оно равно {1} из 3.", wound, hero.Head));
 
                     if (hero.Head <= 0)
                         hero.Dead = true;
@@ -130,6 +131,9 @@ namespace Seeker.Gamebook.VWeapons
         {
             List<string> damage = new List<string>();
 
+            if (Time != 0)
+                Character.Protagonist.Time += Time;
+
             int target = Game.Dice.Roll();
 
             if (target == 6)
@@ -138,6 +142,54 @@ namespace Seeker.Gamebook.VWeapons
                 HeroWound(Character.Protagonist, ref damage, target, Value);
 
             return damage;
+        }
+
+        private void HealingAction(ref List<string> healing, string partName, ref int healingPoints, string part)
+        {
+            if (healingPoints <= 0)
+                return;
+
+            int currentValue = (int)Character.Protagonist.GetType().GetProperty(part).GetValue(Character.Protagonist, null);
+
+            int maxHealing = (partName == "головы" ? 3 : 4);
+
+            if (currentValue == maxHealing)
+                return;
+
+            int diff = ((maxHealing - currentValue) > healingPoints ? healingPoints : (maxHealing - currentValue));
+
+            healingPoints -= diff;
+            currentValue += diff;
+
+            Character.Protagonist.GetType().GetProperty(part).SetValue(Character.Protagonist, currentValue);
+
+            healing.Add(String.Format("Вы восстановили 1 ед. здоровья {0}, теперь оно равно {1} из {2}.", partName, currentValue, maxHealing));
+        }
+
+        public List<string> Healing()
+        {
+            List<string> healing = new List<string>();
+            Character hero = Character.Protagonist;
+
+            int healingPoints = Value;
+
+            if (Time != 0)
+                Character.Protagonist.Time += Time;
+
+            Dictionary<string, string> healingParts = new Dictionary<string, string>
+            {
+                ["головы"] = "Head",
+                ["плеч"] = "ShoulderGirdle",
+                ["корпуса"] = "Body",
+                ["рук"] = "Hands",
+                ["ног"] = "Legs",
+            };
+
+            while (healingPoints > 0)
+                foreach (string parts in healingParts.Keys.ToList())
+                    HealingAction(ref healing, parts, ref healingPoints, healingParts[parts]);
+
+            return healing;
         }
 
         private bool EnemyAttack(Character hero, Character enemy, ref List<string> fight)
