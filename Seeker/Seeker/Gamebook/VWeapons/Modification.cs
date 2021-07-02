@@ -11,6 +11,9 @@ namespace Seeker.Gamebook.VWeapons
             if (Name == "Diary")
                 ModificationByTrigger("E", () => Character.Protagonist.Suspicions += 1);
 
+            else if (Name == "Shadow")
+                ModificationByTrigger("V", () => Character.Protagonist.Suspicions += 1);
+
             else
                 InnerDo(Character.Protagonist);
         }
