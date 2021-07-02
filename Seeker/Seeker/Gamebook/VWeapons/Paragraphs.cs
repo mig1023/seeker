@@ -13,21 +13,14 @@ namespace Seeker.Gamebook.VWeapons
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
-
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-                paragraph.Options.Add(OptionParseWithDo(xmlOption, new Modification()));
-
-            return paragraph;
-        }
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
             action.Dogfight = Game.Xml.BoolParse(xmlAction["Dogfight"]);
+            action.Value = Game.Xml.IntParse(xmlAction["Value"]);
 
             if (xmlAction["Enemies"] != null)
             {
@@ -56,5 +49,10 @@ namespace Seeker.Gamebook.VWeapons
 
             return action;
         }
+
+        public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
+
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+            Game.Xml.ModificationParse(xmlModification, new Modification());
     }
 }

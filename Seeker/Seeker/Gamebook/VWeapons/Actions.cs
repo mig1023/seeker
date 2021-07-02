@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.VWeapons
 
         public List<Character> Enemies { get; set; }
         public bool Dogfight { get; set; }
+        public int Value { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -46,33 +47,8 @@ namespace Seeker.Gamebook.VWeapons
 
         private bool NoMoreCartridges(List<Character> enemies) => enemies.Where(x => x.Cartridges > 0).Count() == 0;
 
-        private bool EnemyAttack(Character hero, Character enemy, ref List<string> fight)
+        private void HeroWound(Character hero, ref List<string> fight, int target, int wound)
         {
-            int wound = 0;
-            int target = Game.Dice.Roll();
-            bool dogfight = Dogfight || (enemy.Cartridges <= 0);
-
-            if (target == 6)
-            {
-                if (!dogfight)
-                    enemy.Cartridges -= 1;
-
-                fight.Add(String.Format("{0} {1}!", enemy.Name, (dogfight ? "промедлил" : "промахнулся")));
-                return false;
-            }
-
-            if (!dogfight)
-            {
-                enemy.Cartridges -= 1;
-                wound = enemy.Accuracy;
-                fight.Add(String.Format("{0} стреляет в вас.", enemy.Name));
-            }
-            else
-            {
-                wound = (enemy.Animal ? 2 : 1);
-                fight.Add(String.Format("{0} {1} вас.", enemy.Name, (enemy.Animal ? "кусает" : "бьёт")));
-            }
-
             switch (target)
             {
                 case 1:
@@ -91,13 +67,13 @@ namespace Seeker.Gamebook.VWeapons
 
                 case 2:
                     fight.Add("BAD|Ранение пришлось в руку!");
-                    
+
                     if (hero.Hands > 0)
                     {
                         hero.Hands -= wound;
                         fight.Add(String.Format("BAD|Вы потеряли {0} ед. здоровья рук, теперь оно равно {1}.", wound, hero.Hands));
                     }
-                    
+
                     if (hero.Accuracy > 0)
                     {
                         hero.Accuracy -= 1;
@@ -148,11 +124,55 @@ namespace Seeker.Gamebook.VWeapons
 
                     break;
             }
+        }
+
+        public List<string> Damage()
+        {
+            List<string> damage = new List<string>();
+
+            int target = Game.Dice.Roll();
+
+            if (target == 6)
+                damage.Add("BIG|GOOD|Вам повезло и вы отделались лёгким испугом! :)");
+            else
+                HeroWound(Character.Protagonist, ref damage, target, Value);
+
+            return damage;
+        }
+
+        private bool EnemyAttack(Character hero, Character enemy, ref List<string> fight)
+        {
+            int wound = 0;
+            int target = Game.Dice.Roll();
+            bool dogfight = Dogfight || (enemy.Cartridges <= 0);
+
+            if (target == 6)
+            {
+                if (!dogfight)
+                    enemy.Cartridges -= 1;
+
+                fight.Add(String.Format("{0} {1}!", enemy.Name, (dogfight ? "промедлил" : "промахнулся")));
+                return false;
+            }
+
+            if (!dogfight)
+            {
+                enemy.Cartridges -= 1;
+                wound = enemy.Accuracy;
+                fight.Add(String.Format("{0} стреляет в вас.", enemy.Name));
+            }
+            else
+            {
+                wound = (enemy.Animal ? 2 : 1);
+                fight.Add(String.Format("{0} {1} вас.", enemy.Name, (enemy.Animal ? "кусает" : "бьёт")));
+            }
+
+            HeroWound(hero, ref fight, target, wound);
 
             if (hero.Dead)
             {
                 fight.Add(String.Empty);
-                fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
 
                 return true;
             }
@@ -200,7 +220,7 @@ namespace Seeker.Gamebook.VWeapons
                         hero.Dead = true;
 
                         fight.Add(String.Empty);
-                        fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                        fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
 
                         return fight;
                     } 
@@ -220,7 +240,7 @@ namespace Seeker.Gamebook.VWeapons
                     if (NoMoreEnemies(FightEnemies))
                     {
                         fight.Add(String.Empty);
-                        fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                        fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                         return fight;
                     }
 
