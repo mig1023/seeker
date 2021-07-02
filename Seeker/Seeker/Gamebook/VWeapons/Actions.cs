@@ -23,6 +23,15 @@ namespace Seeker.Gamebook.VWeapons
             String.Format("Патроны: {0}", Character.Protagonist.Cartridges),
         };
 
+        public override List<string> AdditionalStatus() => new List<string>
+        {
+            String.Format("Ноги: {0}/4", Character.Protagonist.Legs),
+            String.Format("Руки: {0}/4", Character.Protagonist.Hands),
+            String.Format("Корпус: {0}/4", Character.Protagonist.Body),
+            String.Format("Плечи: {0}/4", Character.Protagonist.ShoulderGirdle),
+            String.Format("Голова: {0}/3", Character.Protagonist.Head),
+        };
+
         public override List<string> Representer()
         {
             List<string> enemies = new List<string>();
