@@ -153,6 +153,20 @@ namespace Seeker.Gamebook.VWeapons
             return damage;
         }
 
+        public List<string> Cartridges()
+        {
+            List<string> damage = new List<string>();
+
+            if (Time != 0)
+                Character.Protagonist.Time += Time;
+
+            Character.Protagonist.Cartridges += Value;
+
+            damage.Add(String.Format("BIG|GOOD|+{0} патронов, их у вас теперь {1}.", Value, Character.Protagonist.Cartridges));
+
+            return damage;
+        }
+
         private void HealingAction(ref List<string> healing, string partName, ref int healingPoints, string part)
         {
             if (healingPoints <= 0)
