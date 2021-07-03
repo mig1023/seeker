@@ -215,8 +215,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
-                foreach (Character ally in FightAllies.Where(x => x.Endurance > 0))
+                foreach (Character ally in FightAllies)
                 {
+                    if (ally.Endurance <= 0)
+                        continue;
+
                     if (GroupFight)
                         fight.Add(String.Format("{0} (сила {1})", (IsHero(ally.Name) ? "Вы" : ally.Name), ally.Endurance));
 
@@ -225,8 +228,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     int firstAllyRoll = 0;
                     int secondAllyRoll = 0;
 
-                    foreach (Character enemy in FightEnemies.Where(x => x.Endurance > 0))
+                    foreach (Character enemy in FightEnemies)
                     {
+                        if (enemy.Endurance <= 0)
+                            continue;
+
                         fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Endurance));
 
                         if (!attackAlready)
