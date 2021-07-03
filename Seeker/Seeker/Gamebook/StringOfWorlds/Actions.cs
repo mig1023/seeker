@@ -308,8 +308,11 @@ namespace Seeker.Gamebook.StringOfWorlds
                 bool attackAlready = false;
                 int protagonistHitStrength = 0;
 
-                foreach (Character enemy in FightEnemies.Where(x => x.Strength > 0))
+                foreach (Character enemy in FightEnemies)
                 {
+                    if (enemy.Strength <= 0)
+                        continue;
+
                     fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
 
                     if (!attackAlready)
