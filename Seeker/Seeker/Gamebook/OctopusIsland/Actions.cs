@@ -206,8 +206,11 @@ namespace Seeker.Gamebook.OctopusIsland
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
-                foreach (Character enemy in FightEnemies.Where(x => x.Hitpoint > 0))
+                foreach (Character enemy in FightEnemies)
                 {
+                    if (enemy.Hitpoint <= 0)
+                        continue;
+
                     Character enemyInFight = enemy;
                     fight.Add(String.Format("{0} (жизнь {1})", enemy.Name, enemy.Hitpoint));
 
