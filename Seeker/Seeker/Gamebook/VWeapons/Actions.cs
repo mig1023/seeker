@@ -53,9 +53,16 @@ namespace Seeker.Gamebook.VWeapons
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy((Character.Protagonist.Dead ? 0 : 1), out toEndParagraph, out toEndText);
 
+        private bool SpecialCheck() =>
+            (Game.Data.Triggers.Contains("Mt") || Game.Data.Triggers.Contains("P")) &&
+            !Game.Data.Triggers.Contains("B") && Character.Protagonist.Suspicions <= 3;
+
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("|"))
+            if (option == "specialCheck")
+                return (option.Contains("!") ? !SpecialCheck() : SpecialCheck());
+
+            else if (option.Contains("|"))
                 return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
 
             else
