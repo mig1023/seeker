@@ -453,8 +453,8 @@
 			<Modification Name="Time" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="49" Text="Если набрано 4 и более очков Подозрения"/>
-			<Option Destination="261" Text="Если набрано менее 4 очков Подозрений"/>
+			<Option Destination="49" Text="4 очка подозрений или больше" OnlyIf="ПОДОЗРЕНИЕ >= 4"/>
+			<Option Destination="261" Text="Меньше 4 очков подозрений" OnlyIf="ПОДОЗРЕНИЕ < 4"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -933,9 +933,9 @@
 		<ID>100</ID>
 		<Text>Фон Гоф позвал гестаповцев, которые ждали всё это время под самой дверью.</Text>
 		<Options>
-			<Option Destination="101" Text="Если у вас от 0 до 1 очков подозрений"/>
-			<Option Destination="102" Text="Если вы набрали от 2 до 3 очков подозрений"/>
-			<Option Destination="103" Text="Если вы набрали 4 и более очков подозрений"/>
+			<Option Destination="101" Text="От 0 до 1 очков подозрений" OnlyIf="ПОДОЗРЕНИЕ >= 0, ПОДОЗРЕНИЕ < 2"/>
+			<Option Destination="102" Text="От 2 до 3 очков подозрений" OnlyIf="ПОДОЗРЕНИЕ >= 2, ПОДОЗРЕНИЕ < 4"/>
+			<Option Destination="103" Text="4 и более очков подозрений" OnlyIf="ПОДОЗРЕНИЕ >= 4"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1908,8 +1908,8 @@
 			<Modification Name="Shadow"/>
 		</Modifications>
 		<Options>
-			<Option Destination="181" Text="Если у вас 3 или менее очков подозрения"/>
-			<Option Destination="193" Text="Если у вас 4 или более очков подозрения"/>
+			<Option Destination="181" Text="3 или менее очков подозрения" OnlyIf="ПОДОЗРЕНИЕ < 4"/>
+			<Option Destination="193" Text="Более 3 очков подозрения" OnlyIf="ПОДОЗРЕНИЕ >= 4"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2652,9 +2652,9 @@
 		<ID>262</ID>
 		<Text>8 МАЯ 1945 г.\n\nНапоминание: если Вы принесли в бункер бомбу, Вы можете взорвать себя вместе с ракетами. Тем не менее, Вы можете уничтожить ракеты и остаться в живых. Каким будет финал - решать Вам.\n\nВойдя в дверь, Сергей оказался в огромном подземном зале. Дальняя стена была сделана не из железобетона, а из какого-то высокопрочного сплава. В стене были ворота, достаточно широкие, чтобы в них могли разъехаться две полуторки, если бы они могли оказаться здесь. Как нетрудно было догадаться, это и был вход в бункер, из которого управляются смертоносные ракеты.</Text>
 		<Options>
-			<Option Destination="253" Text="Если у Вас остались не потраченные очки времени и не более 3 очков подозрений"/>
-			<Option Destination="254" Text="Если у Вас не осталось времени"/>
-			<Option Destination="255" Text="Если у Вас 4 и более очков подозрения и нет пометки «Ф»" OnlyIf="!F"/>
+			<Option Destination="255" OnlyIf="ВРЕМЯ >= 1, specialFCheck"/>
+			<Option Destination="253" OnlyIf="ВРЕМЯ >= 1, !specialFCheck"/>	
+			<Option Destination="254" OnlyIf="ВРЕМЯ < 1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
