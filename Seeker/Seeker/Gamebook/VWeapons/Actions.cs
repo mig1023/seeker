@@ -196,6 +196,16 @@ namespace Seeker.Gamebook.VWeapons
             return damage;
         }
 
+        public List<string> Bomb()
+        {
+            if (Time != 0)
+                Character.Protagonist.Time += Time;
+
+            Game.Option.Trigger("B");
+
+            return new List<string> { "BIG|GOOD|Бомба теперь у вас." }; ;
+        }
+
         private void HealingAction(ref List<string> healing, string partName, ref int healingPoints, string part)
         {
             if (healingPoints <= 0)
