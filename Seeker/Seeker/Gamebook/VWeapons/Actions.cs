@@ -57,10 +57,15 @@ namespace Seeker.Gamebook.VWeapons
             (Game.Data.Triggers.Contains("Mt") || Game.Data.Triggers.Contains("P")) &&
             !Game.Data.Triggers.Contains("B") && Character.Protagonist.Suspicions <= 3;
 
+        private bool SpecialFCheck() => ((Character.Protagonist.Suspicions >= 4) && !Game.Data.Triggers.Contains("F"));
+
         public override bool CheckOnlyIf(string option)
         {
             if (option == "specialCheck")
                 return (option.Contains("!") ? !SpecialCheck() : SpecialCheck());
+            
+            else if (option == "specialFCheck")
+                return (option.Contains("!") ? !SpecialFCheck() : SpecialFCheck());
 
             else if (option.Contains("|"))
                 return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
