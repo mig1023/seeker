@@ -465,8 +465,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     fight.Add(String.Empty);
                 }
 
-                foreach (Character enemy in FightEnemies.Where(x => x.Hitpoints > 0))
+                foreach (Character enemy in FightEnemies)
                 {
+                    if (enemy.Hitpoints <= 0)
+                        continue;
 
                     fight.Add(String.Format("{0} (жизни: {1})", enemy.Name, enemy.Hitpoints));
 
