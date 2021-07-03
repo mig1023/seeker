@@ -360,19 +360,22 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
                 if ((hero.MeritalArt == Character.MeritalArts.SecretBlow) && (round == 1))
-                    foreach (Character enemy in FightEnemies.Where(x => x.Strength > 0))
-                    {
-                        enemy.Strength -= 4;
-                        fight.Add(String.Format("Тайный удар шпагой: {0} теряет 4 силы, у него осталось {1}", enemy.Name, enemy.Strength));
-                        fight.Add(String.Empty);
-                        break;
-                    }
+                {
+                    Character enemy = FightEnemies.Where(x => x.Strength > 0).FirstOrDefault();
+
+                    enemy.Strength -= 4;
+                    fight.Add(String.Format("Тайный удар шпагой: {0} теряет 4 силы, у него осталось {1}", enemy.Name, enemy.Strength));
+                    fight.Add(String.Empty);
+                }
 
                 bool attackAlready = false;
                 int protagonistHitStrength = 0, protagonistRoll = 0;
 
-                foreach (Character enemy in FightEnemies.Where(x => x.Strength > 0))
+                foreach (Character enemy in FightEnemies)
                 {
+                    if (enemy.Strength <= 0)
+                        continue;
+
                     Character enemyInFight = enemy;
                     fight.Add(String.Format("{0} (сила {1})", enemy.Name, enemy.Strength));
 
