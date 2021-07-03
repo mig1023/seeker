@@ -69,11 +69,23 @@ namespace Seeker.Gamebook.VWeapons
             {
                 foreach (string oneOption in option.Split(','))
                 {
-                    if (oneOption.Contains(">"))
+                    if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
                         int level = Game.Other.LevelParse(oneOption);
 
                         if (oneOption.Contains("ПАТРОНЫ >=") && (level > Character.Protagonist.Cartridges))
+                            return false;
+
+                        if (oneOption.Contains("ПОДОЗРЕНИЕ >=") && (level > Character.Protagonist.Suspicions))
+                            return false;
+
+                        if (oneOption.Contains("ПОДОЗРЕНИЕ <") && (level <= Character.Protagonist.Suspicions))
+                            return false;
+
+                        if (oneOption.Contains("ВРЕМЯ >=") && (level > Character.Protagonist.Time))
+                            return false;
+
+                        if (oneOption.Contains("ВРЕМЯ <") && (level <= Character.Protagonist.Time))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
