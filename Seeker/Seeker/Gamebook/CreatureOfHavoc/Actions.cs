@@ -196,8 +196,11 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 bool attackAlready = false;
                 int protagonistHitStrength = 0;
 
-                foreach (Character enemy in FightEnemies.Where(x => x.Endurance > 0))
+                foreach (Character enemy in FightEnemies)
                 {
+                    if (enemy.Endurance <= 0)
+                        continue;
+
                     bool doubleDice = false, doubleSixes = false, doubleDiceEnemy = false;
 
                     Character enemyInFight = enemy;
