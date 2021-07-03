@@ -454,7 +454,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="49" Text="4 очка подозрений или больше" OnlyIf="ПОДОЗРЕНИЕ >= 4"/>
-			<Option Destination="261" Text="Меньше 4 очков подозрений" OnlyIf="ПОДОЗРЕНИЕ < 4"/>
+			<Option Destination="261" Text="Меньше 4 очков подозрений" OnlyIf="ПОДОЗРЕНИЕ &lt; 4"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -933,8 +933,8 @@
 		<ID>100</ID>
 		<Text>Фон Гоф позвал гестаповцев, которые ждали всё это время под самой дверью.</Text>
 		<Options>
-			<Option Destination="101" Text="От 0 до 1 очков подозрений" OnlyIf="ПОДОЗРЕНИЕ >= 0, ПОДОЗРЕНИЕ < 2"/>
-			<Option Destination="102" Text="От 2 до 3 очков подозрений" OnlyIf="ПОДОЗРЕНИЕ >= 2, ПОДОЗРЕНИЕ < 4"/>
+			<Option Destination="101" Text="От 0 до 1 очков подозрений" OnlyIf="ПОДОЗРЕНИЕ >= 0, ПОДОЗРЕНИЕ &lt; 2"/>
+			<Option Destination="102" Text="От 2 до 3 очков подозрений" OnlyIf="ПОДОЗРЕНИЕ >= 2, ПОДОЗРЕНИЕ &lt; 4"/>
 			<Option Destination="103" Text="4 и более очков подозрений" OnlyIf="ПОДОЗРЕНИЕ >= 4"/>
 		</Options>
 	</Paragraph>
@@ -1908,7 +1908,7 @@
 			<Modification Name="Shadow"/>
 		</Modifications>
 		<Options>
-			<Option Destination="181" Text="3 или менее очков подозрения" OnlyIf="ПОДОЗРЕНИЕ < 4"/>
+			<Option Destination="181" Text="3 или менее очков подозрения" OnlyIf="ПОДОЗРЕНИЕ &lt; 4"/>
 			<Option Destination="193" Text="Более 3 очков подозрения" OnlyIf="ПОДОЗРЕНИЕ >= 4"/>
 		</Options>
 	</Paragraph>
@@ -2659,7 +2659,7 @@
 		<Options>
 			<Option Destination="255" OnlyIf="ВРЕМЯ >= 1, specialFCheck"/>
 			<Option Destination="253" OnlyIf="ВРЕМЯ >= 1, !specialFCheck"/>	
-			<Option Destination="254" OnlyIf="ВРЕМЯ < 1"/>
+			<Option Destination="254" OnlyIf="ВРЕМЯ &lt; 1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
