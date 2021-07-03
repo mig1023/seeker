@@ -62,7 +62,14 @@ namespace Seeker.Gamebook.VWeapons
             {
                 foreach (string oneOption in option.Split(','))
                 {
-                    if (oneOption.Contains("!"))
+                    if (oneOption.Contains(">"))
+                    {
+                        int level = Game.Other.LevelParse(oneOption);
+
+                        if (oneOption.Contains("ПАТРОНЫ >=") && (level > Character.Protagonist.Cartridges))
+                            return false;
+                    }
+                    else if (oneOption.Contains("!"))
                     {
                         if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
