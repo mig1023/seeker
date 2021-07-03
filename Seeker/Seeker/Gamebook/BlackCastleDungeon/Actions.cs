@@ -210,8 +210,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 bool attackAlready = false;
                 int heroHitStrength = 0;
 
-                foreach (Character enemy in FightEnemies.Where(x => x.Endurance > 0))
+                foreach (Character enemy in FightEnemies)
                 {
+                    if (enemy.Endurance <= 0)
+                        continue;
+
                     fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
 
                     if (copyFight)
