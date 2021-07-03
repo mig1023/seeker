@@ -650,8 +650,11 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 Character.Protagonist.FightStyle = ChooseFightStyle(ref fight, AttackStory, FightEnemies);
 
-                foreach (Character fighter in FightOrder.Where(x => x.Endurance > 0))
+                foreach (Character fighter in FightOrder)
                 {
+                    if (fighter.Endurance <= 0)
+                        continue;
+
                     Character enemy = FindEnemy(fighter, FightAllies, FightEnemies);
 
                     if (enemy == null)
