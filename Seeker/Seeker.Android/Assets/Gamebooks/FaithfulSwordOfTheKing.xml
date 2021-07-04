@@ -6653,8 +6653,12 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>652</ID>
-		<Text>Недалеко от Вандома вас нагоняет всадник. Он представляется посланцем губернатора Тура и требует, чтобы вы немедленно вернулись в город. Подчинитесь или будете драться с ним?</Text>
+		<Text>Недалеко от Вандома вас нагоняет всадник. Он представляется посланцем губернатора Тура и требует, чтобы вы немедленно вернулись в город.</Text>
 		<Actions>
+			<Action>
+				<ActionName>Option</ActionName>
+				<Option Destination="476" Text="Подчинитесь" Aftertext="Или будете драться с ним?"/>
+			</Action>
 			<Action>
 				<ActionName>Fight</ActionName>
 				<ButtonName>Сражаться</ButtonName>
@@ -6664,8 +6668,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="476" Text="Подчинитесь"/>
-			<Option Destination="205" Text="Если вы убили его"/>
+			<Option Destination="205" Text="Вы убили его"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>

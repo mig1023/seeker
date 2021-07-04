@@ -25,6 +25,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             action.MeritalArt = MeritalArtsParse(xmlAction["MeritalArt"]);
             action.WithoutShooting = Game.Xml.BoolParse(xmlAction["WithoutShooting"]);
 
+            if (action.ActionName == "Option")
+                action.Option = OptionParse(xmlAction["Option"]);
+
             if (xmlAction["Benefit"] != null)
             {
                 action.BenefitList = new List<Abstract.IModification>();
