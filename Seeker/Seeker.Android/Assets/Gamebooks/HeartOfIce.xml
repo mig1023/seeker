@@ -916,15 +916,15 @@
 		<Text>Вы бродите по рынку, но на нем не так уж много товаров. Если вы хотите купить шубу, то она стоит 5 скадов.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить шубу</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить шубу</Button>
 				<Text>Шуба</Text>
 				<Trigger>Шуба</Trigger>
 				<Aftertext>Вы можете приобрести Еду по цене 4 скада за одну упаковку; в каждой содержится спрессованная смесь сушеной рыбы, масла и зерна, и ее хватит на несколько дней.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить еду</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить еду</Button>
 				<Text>Еда</Text>
 				<Price>4</Price>
 				<Multiple/>
@@ -1035,8 +1035,8 @@
 		<Text>Вскоре вы находите человека, который может сделать то, что вам надо: это толстый потный мужик с кучей разнообразных древних инструментов и устройств, загромоздивших его магазин. Включив ручной лазер, он ловко вносит несколько изменений в изображение на карте, пока оно не становится похожим на ваше собственное лицо. «Пять скадов,» — говорит он, протягивая вам карточку. «Пять?» — хмуритесь вы.\n\n«Членство в престижном Обществе компаса стоит обычно намного дороже,» — пожимает он плечами.\n\nВы оцениваете возможность выхватить карту и слинять, но толстяк, видимо, ожидает чего-то подобного и держит ее близко к лазерному лучу, ожидая оплаты.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Оплатить</ButtonName>
+				<Name>Get</Name>
+				<Button>Оплатить</Button>
 				<Text>ИСПРАВЛЕННАЯ КАРТА</Text>
 				<Price>5</Price>
 				<Trigger>Протей</Trigger>
@@ -1627,29 +1627,29 @@
 		<Text>Среди разбросанных останков жертв горгоны вы находите чью-то ИД-карту, бризальный пистолет (с 6 зарядами), фонарик и поляризационные очки.\n\nБоше берет очки и усмехается: «Вряд ли наш одноглазый приятель часто их надевал». Он предлагает поделить находки поровну, но предоставляет вам право выбирать первому. Можете взять себе любые две вещи, остальное отдать ему.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать карту</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать карту</Button>
 				<Text>ИД-карта</Text>
 				<Trigger>ИД-карта</Trigger>
 				<Split/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать пистолет</Button>
 				<Text>Бризальный пистолет</Text>
 				<Benefit Name="Shots" Value="6"/>
 				<Split/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать фонарик</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать фонарик</Button>
 				<Text>Фонарик</Text>
 				<Trigger>Фонарик</Trigger>
 				<Split/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать очки</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать очки</Button>
 				<Text>Поляризационные очки</Text>
 				<Trigger>Поляризационные очки</Trigger>
 				<Split/>
@@ -1665,8 +1665,8 @@
 		<Text>Вы находите ответы на свои вопросы в пивной под Мостом Вздохов. Здесь, в компании, приведенной в состояние дружелюбия и болтливости после распития нескольких бутылок ликера синташ, вам рассказывают все, что надо.\n\n«Кай Боше? — один из них, рассеяно нахмурившись, смотрит на мелкий дождь за стенами пивной. — Я слышал о нем. Путешественник, время от времени торгует».\n\n«Торговец? — фыркает другой, смакуя горячий ликер, и добавляет. — Скорее, паразит! Его основной инстинкт — предательство; его основной талант — спасать свою шкуру».\n\nВы поворачиваетесь к говорившему. «Полагаю, ты лично имел дело с Кайлом Боше?»\n\nОн медленно кивает и щурится, вглядываясь в свои воспоминания через дымку паров синташа. «Мы вместе перевозили контрабандой меха в Даралбад. Это было несколько лет назад. Милиция была предупреждена, и Боше смылся на лодке, оставив меня расхлебывать кашу в одиночку. Там в Даралбаде сплошные свиньи, знаешь ли, так я и потерял эти два пальца, видишь? Потом мне удалось сбежать, и я слышал, что Боше расхаживает везде, рассказывая, как я подставил его. Если бы я узнал, где его найти, я бы в тот же миг пошел и всадил нож в сердце этого проныры!»\n\nТретий человек присоединяется к беседе. «Не могу не согласиться с моим другом, но хочу добавить, что у Боше более сложный характер, чем он думает. Хотя он вероломный и эгоистичный, он не осознает этого, поскольку он на редкость тщеславный человек, который никогда не признает своей вины».\n\nДругой человек только шипит, как рассерженный лебедь, и, наполняя заново свой бокал, повторяет: «Он всего лишь паразит!»\n\nЕсли вы расскажете о местонахождении Боше человеку, которого он предал, он заплатит вам 10 скадов за информацию.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Рассказать</ButtonName>
+				<Name>Get</Name>
+				<Button>Рассказать</Button>
 				<Text>РАССКАЖЕТЕ О МЕСТОНАХОЖДЕНИИ БОШЕ</Text>
 				<Price>10</Price>
 				<Sell/>
@@ -2219,8 +2219,8 @@
 		<Text>Наконец, вы находите человека, который может вам помочь: это толстый потный парень, который разложил множество древних инструментов и устройств рядом со своим магазином. Орудуя ручным лазером, он вносит некоторые искусные изменения в фотографию на карте, доводя ее до сходства с вами. «Пять скадов», — говорит он, протягивая ее вам. «Пять?» — вы сердито смотрите на него.\n\n«Членство в престижном Обществе компаса обычно стоит гораздо дороже», — замечает он, пожимая плечами.\n\nВы намереваетесь забрать карту, но толстяк ловко опережает вас и подносит ее вплотную к лазерному лучу, ожидая оплаты.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Оплатить</ButtonName>
+				<Name>Get</Name>
+				<Button>Оплатить</Button>
 				<Text>ИСПРАВЛЕННАЯ КАРТА</Text>
 				<Price>5</Price>
 				<Trigger>Протей</Trigger>
@@ -2408,8 +2408,8 @@
 		<Text>Вы распознаете все снадобья, детально описывая их действие. Маленгин вытаскивает блокнот и быстро записывает за вами. «Это бесценно!» — восклицает он, настолько довольный, что соглашается продать ретро-вирусы со скидкой.\n\nЛегче всего распознать снадобье, которое он называет Изумрудной тайной. Это антидот, предназначенный для отката нежелательных генетических изменений. К счастью, остальные снадобья куда более полезны:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить усилитель</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить усилитель</Button>
 				<Text>Большой усилитель</Text>
 				<Price>7</Price>
 				<Benefit Name="MaxLife" Value="5"/>
@@ -2417,16 +2417,16 @@
 				<Aftertext>Большой усилитель будет стоить для вас 7 скадов и усилит вашу кожу, добавив 5 единиц Здоровья сверх изначального уровня (таким образом, если вы начали путешествие с 10 единицами, их предельное значение увеличится до 15). Однако ретровирус замедлит ваши рефлексы, поэтому вы потеряете умение Ловкость, если оно у вас было.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить маску</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить маску</Button>
 				<Text>Маска затмения</Text>
 				<Price>6</Price>
 				<Trigger>Кожа хамелеона</Trigger>
 				<Aftertext>Маска затмения стоит 6 скадов и дает возможность изменять внешность и цвет кожи. Если вы приобретете этот ретровирус, отметьте на Листе персонажа характеристику «кожа хамелеона».</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить проницат</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить проницат</Button>
 				<Text>Несравненный проницат</Text>
 				<Price>4</Price>
 				<Trigger>Ночное зрение</Trigger>
@@ -2577,87 +2577,87 @@
 		<Text>Торговец ведет вас к подвалу, соединенному с домом на одной из больших площадей. Пройдя через дверь, охраняемую двумя крепкими людьми с железными палками, вы ждете в коротком коридоре, озаряемом мерцающей световой панелью. Наконец, стальные двери в его дальнем конце открываются, и вы проходите в хранилище торговца. Здесь он показывает вам товар на продажу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пистолет</Button>
 				<Text>Бризальный пистолет с 6 выстрелами</Text>
 				<Price>16</Price>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить фокусировщик</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить фокусировщик</Button>
 				<Text>Пси-фокусировщик</Text>
 				<Price>18</Price>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить очки</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить очки</Button>
 				<Text>Поляризационные очки</Text>
 				<Trigger>Поляризационные очки</Trigger>
 				<Price>8</Price>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить фонарик</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить фонарик</Button>
 				<Text>Фонарик</Text>
 				<Trigger>Фонарик</Trigger>
 				<Price>10</Price>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить противогаз</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить противогаз</Button>
 				<Text>Противогаз</Text>
 				<Price>10</Price>
 				<Trigger>Противогаз</Trigger>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить гранату</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить гранату</Button>
 				<Text>Шумовая граната</Text>
 				<Price>8</Price>
 				<Trigger>Шумовая граната</Trigger>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить нож</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить нож</Button>
 				<Text>Нож</Text>
 				<Price>4</Price>
 				<Aftertext>«Я также покупаю эти вещи, — говорит вам торговец, — за половину озвученной цены».\n\nЭто означает, что вы можете, например, продать ему бризальный пистолет, если он у вас есть, за 8 скадов.\n\n«С чего ты взял, что я захочу что-то продать?» — спрашиваете вы.\n\nЕго губы изгибаются в загадочной полуулыбке. «Я полагаю, ты пришел в Венезию, чтобы отправиться на пароме. Тебе понадобятся деньги на билет».</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Продать пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Продать пистолет</Button>
 				<Text>Бризальный пистолет</Text>
 				<SellType>Пистолет</SellType>
 				<Price>8</Price>
 				<SellIfAvailable/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Продать очки</ButtonName>
+				<Name>Get</Name>
+				<Button>Продать очки</Button>
 				<Text>Поляризационные очки</Text>
 				<RemoveTrigger>Поляризационные очки</RemoveTrigger>
 				<Price>4</Price>
 				<SellIfAvailable/>
 			</Action>			
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Продать фонарик</ButtonName>
+				<Name>Get</Name>
+				<Button>Продать фонарик</Button>
 				<Text>Фонарик</Text>
 				<RemoveTrigger>Фонарик</RemoveTrigger>
 				<Price>5</Price>
 				<SellIfAvailable/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Продать противогаз</ButtonName>
+				<Name>Get</Name>
+				<Button>Продать противогаз</Button>
 				<Text>Противогаз</Text>
 				<Price>5</Price>
 				<RemoveTrigger>Противогаз</RemoveTrigger>
 				<SellIfAvailable/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Продать гранату</ButtonName>
+				<Name>Get</Name>
+				<Button>Продать гранату</Button>
 				<Text>Шумовая граната</Text>
 				<Price>4</Price>
 				<RemoveTrigger>Шумовая граната</RemoveTrigger>
@@ -3111,8 +3111,8 @@
 		<Text>Ранним утром лучи солнца разгоняют клочья тумана, но воздух на узких улицах еще холодный. Даже в это бедное время базар в Кахире сохраняет свой знаменитый причудливый и красочный облик. Проходы между рядами широки ровно настолько, чтобы два человека могли разойтись не в притирку друг к другу. За ставнями темного дерева видны магазины, которые выставляют произведения старых времен: ковры и гобелены, шелка, резные поделки из слоновой кости, филигранные изделия из золота и серебра, амулеты, специи, вина, красители и душистые благовония. Тысячи ароматов смешиваются в туманном утреннем воздухе, поднимаясь от прилавков с едой, где в высоких металлических кофейниках кипит кофе, а на плитах шкворчат оладьи.\n\nВы проходите мимо человека с длинной глиняной трубкой. Несомненно, его скуластые загорелые предки так же выглядывали из этой самой лавки. Ошибочно истолковав вашу задумчивость, он взывает к вам: «Посмотри мои прекрасные товары. У меня есть густые меха, защищающие от мороза».\n\nЕсли вы хотите купить шубу, вычеркните 3 скада и добавьте ее к списку вашего имущества: </Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить шубу</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить шубу</Button>
 				<Text>Шуба</Text>
 				<Trigger>Шуба</Trigger>
 				<Aftertext>Когда владелец лавки узнает, что вы путешествуете, он настойчиво предлагает проводить вас во внутренний двор, втиснутый между узкими зданиями, где его кузен торгует животными и рабами.</Aftertext>
@@ -3161,8 +3161,8 @@
 		<Text>Вам показывают буррека — неповоротливое животное с толстыми лапами, ворсистым белым мехом и печальной мордой. «Кочевники используют таких существ, когда хотят пересечь Ледяные пустоши, — говорит торговец. — Они ложатся возле животного во время снежных бурь, и когда голодны — вскрывают ему вену, чтобы сделать кровяную колбасу».\n\n«Какая отвратительная мысль!»\n\nОн согласно кивает: «Действительно. Но это, вероятно, все же лучше, чем голодная смерть. И если ты намереваешься пересечь Сахару, тебе просто необходим буррек! Это крепкое животное, и я отдаю его практически даром! Всего каких-то 30 скадов!»\n\nПосле непростых переговоров вам удается снизить цену до 10 скадов.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить животное</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить животное</Button>
 				<Text>Буррек</Text>
 				<Price>10</Price>
 				<Trigger>Буррек</Trigger>
@@ -3284,32 +3284,32 @@
 		<Text>Все, что вы можете сделать — продать что-то из своего имущества, чтобы собрать деньги на билет. Вы неохотно отправляетесь искать уличного торговца, зная, что необходимость срочной продажи сильно снизит цену товаров. По крайней мере, вы быстро находите покупателя — или скорее, он находит вас. Человек с буравящим взглядом и копной окрашенных в розовый цвет волос, слоняется у ворот пристани с явным намерением поживиться на людях в ситуации, подобной вашей. «Билет на паром стоит немного больше, чем ты думал, не так ли? — говорит он покровительственным тоном. — Ну, давай посмотрим, что у тебя есть на продажу».\n\nЕсли у вас есть какие-либо из следующих вещей, вы можете продать их по указанной цене:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Продать пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Продать пистолет</Button>
 				<Text>Бризальный пистолет</Text>
 				<SellType>Пистолет</SellType>
 				<Price>5</Price>
 				<SellIfAvailable/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Продать фонарик</ButtonName>
+				<Name>Get</Name>
+				<Button>Продать фонарик</Button>
 				<Text>Фонарик</Text>
 				<RemoveTrigger>Фонарик</RemoveTrigger>
 				<Price>5</Price>
 				<SellIfAvailable/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Продать аптечку</ButtonName>
+				<Name>Get</Name>
+				<Button>Продать аптечку</Button>
 				<Text>Аптечка</Text>
 				<RemoveTrigger>Аптечка</RemoveTrigger>
 				<Price>5</Price>
 				<SellIfAvailable/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Продать порцию</ButtonName>
+				<Name>Get</Name>
+				<Button>Продать порцию</Button>
 				<Text>Еда</Text>
 				<SellType>Еда</SellType>
 				<Multiple/>
@@ -3317,8 +3317,8 @@
 				<SellIfAvailable/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Продать карту</ButtonName>
+				<Name>Get</Name>
+				<Button>Продать карту</Button>
 				<Text>ИД-карта</Text>
 				<RemoveTrigger>ИД-карта</RemoveTrigger>
 				<Price>10</Price>
@@ -3391,44 +3391,44 @@
 		<Text>Прогуливаясь по базару, вы обнаруживаете следующие предметы, выставленные на продажу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить противогаз</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить противогаз</Button>
 				<Text>Противогаз</Text>
 				<Price>15</Price>
 				<Trigger>Противогаз</Trigger>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить фонарик</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить фонарик</Button>
 				<Text>Фонарик</Text>
 				<Price>8</Price>
 				<Trigger>Фонарик</Trigger>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить аптечку</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить аптечку</Button>
 				<Text>Аптечка</Text>
 				<Price>8</Price>
 				<Trigger>Аптечка</Trigger>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить порцию</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить порцию</Button>
 				<Text>Порция еды</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Food" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить очки</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить очки</Button>
 				<Text>Поляризационные очки</Text>
 				<Price>6</Price>
 				<Trigger>Поляризационные очки</Trigger>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить верёвку</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить верёвку</Button>
 				<Text>Нейлоновая веревка</Text>
 				<Price>3</Price>
 				<Trigger>Веревка</Trigger>
@@ -3748,30 +3748,30 @@
 		<Text>Изучив ассортимент товаров, выложенных на рыночных прилавках, вы торгуетесь, пока не удается согласовать следующие цены:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить порцию</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить порцию</Button>
 				<Text>Порция еды</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Food" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить верёвку</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить верёвку</Button>
 				<Text>Нейлоновая веревка</Text>
 				<Price>2</Price>
 				<Trigger>Веревка</Trigger>
 			</Action>		
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить лампу</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить лампу</Button>
 				<Text>Лампа</Text>
 				<Trigger>Лампа</Trigger>
 				<Price>3</Price>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить аптечку</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить аптечку</Button>
 				<Text>Аптечка</Text>
 				<Price>12</Price>
 				<Trigger>Аптечка</Trigger>
@@ -4310,8 +4310,8 @@
 		<Text>Выберите одного из следующих персонажей:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать исследователя</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать исследователя</Button>
 				<Choice/>
 				<Text>Исследователь</Text>
 				<Benefit Name="Skill" ValueString="Рукопашный бой"/>
@@ -4323,8 +4323,8 @@
 				<Aftertext>В то время, как другие, возможно, оплакивают крах цивилизации, вам открываются новые возможности и тайны мира.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать охотника</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать охотника</Button>
 				<Text>Охотник за головами</Text>
 				<Choice/>
 				<Benefit Name="Skill" ValueString="Хитрость"/>
@@ -4336,8 +4336,8 @@
 				<Aftertext>Сейчас трудные времена, сильный диктует законы слабым.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать шпиона</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать шпиона</Button>
 				<Text>Шпион</Text>
 				<Choice/>
 				<Benefit Name="Skill" ValueString="Ловкость"/>
@@ -4347,8 +4347,8 @@
 				<Aftertext>Даже когда мир мучительно умирает, правительства  продолжают делить  остатки  власти и богатства. Вы крадете секреты и продаете их тем, кто больше заплатит.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать торговца</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать торговца</Button>
 				<Text>Торговец</Text>
 				<Choice/>
 				<Benefit Name="Skill" ValueString="ПСИ"/>
@@ -4360,8 +4360,8 @@
 				<Aftertext>Немногие решаются пересекать ледяные пустоши между городами, поэтому смелый путешественник может получить хорошую прибыль.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать провидца</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать провидца</Button>
 				<Text>Провидец</Text>
 				<Choice/>
 				<Benefit Name="Skill" ValueString="ПСИ"/>
@@ -4371,8 +4371,8 @@
 				<Aftertext>Ты одарен особым взглядом, поэтому тебе известно, что человечество обречено, если не предпринять шагов во спасение.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать ученого</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать ученого</Button>
 				<Text>Ученый</Text>
 				<Choice/>
 				<Benefit Name="Skill" ValueString="Кибернетика"/>
@@ -4382,8 +4382,8 @@
 				<Aftertext>Большинство ничего не понимает в машинах, созданных предками, но вы усвоили, что знание — это сила.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать мутанта</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать мутанта</Button>
 				<Text>Мутант</Text>
 				<Choice/>
 				<Benefit Name="Skill" ValueString="Ловкость"/>
@@ -4402,75 +4402,75 @@
 		<Text>Отнеситесь серьезно к выбору умений. Они дают вам особые преимущества и позволяют принимать те или иные решения в течение путешествия. Оказавшись в ситуации, где можно применить более одного умения, вы вольны выбрать любое из них.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать ловкость</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать ловкость</Button>
 				<Skill>Ловкость</Skill>
 				<Aftertext>Это умение выделывать акробатичские финты, быстро бегать, преодолевать препятствия, держать равновесие и прыгать. Персонаж, обладающий этим умением, очень проворный и сообразительный.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать рукопашку</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать рукопашку</Button>
 				<Skill>Рукопашный Бой</Skill>
 				<Aftertext>Возможность использовать боевые искусства, включающие элементы каратэ, джиу-джитсу и тайджи.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать хитрость</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать хитрость</Button>
 				<Skill>Хитрость</Skill>
 				<Aftertext>Умение находить удачное решение в любой сложной ситуации. Всегда пригодится.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать кибернетику</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать кибернетику</Button>
 				<Skill>Кибернетика</Skill>
 				<Aftertext>Практически забытая в умирающем мире двадцать третьего столетия наука программирования и управления компьютерами.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать ПСИ</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать ПСИ</Button>
 				<Skill>ПСИ</Skill>
 				<Aftertext>Позволяет чувствовать опасность и читать чужие мысли. Вы должны иметь при себе пси-фокусировщик для того, чтобы использовать это умение.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать знания</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать знания</Button>
 				<Skill>Знания</Skill>
 				<Aftertext>Совокупность легенд, исторических и базовых знаний, которые дают вам хорошее представление о том, с чем вы можете столкнуться.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать парадокс</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать парадокс</Button>
 				<Skill>Управление парадоксом</Skill>
 				<Aftertext>Умение влиять на законы мироздания. Оно медленнее и не такое удобное, как ПСИ, но иногда дает потрясающие результаты. Для использования необходим пси-фокусировщик.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать пилотирование</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать пилотирование</Button>
 				<Skill>Пилотирование</Skill>
 				<Aftertext>Позволяет управлять практически любым средством передвижения: от аэрокара до космического шаттла.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать стрельба</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать стрельба</Button>
 				<Skill>Стрельба</Skill>
 				<Benefit Name="Shots" Value="6"/>
 				<Aftertext>Умение использовать дальнобойное оружие. Конечно, для его использования необходимо оружие — бризальный пистолет.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать знание улиц</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать знание улиц</Button>
 				<Skill>Знание улиц</Skill>
 				<Aftertext>Обладая этим умением, вы никогда не потеряетесь ни в одном городе. Там, где другие видят мешанину домов и лабиринт освещенных неоном улиц, вы чувствуете себя как дома.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать воровство</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать воровство</Button>
 				<Skill>Воровство</Skill>
 				<Aftertext>Техники воровства и шпионажа: карманничество, вскрытие замков, а также возможность скрыться в тени.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать выживание</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать выживание</Button>
 				<Skill>Выживание</Skill>
 				<Aftertext>Способность, которая избавит вас от проблем в пустынных и необитаемых регионах: лесах, пустынях, болотах и горах.</Aftertext>
 			</Action>
