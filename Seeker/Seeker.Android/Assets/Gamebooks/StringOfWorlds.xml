@@ -18,8 +18,8 @@
 		<Text>Проверьте свою удачу.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -32,8 +32,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КУСТ-ХИЩНИК" Skill="9" Strength="10"/>
 				</Enemies>
@@ -96,8 +96,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЗМЕЯ" Skill="12" Strength="12"/>
 				</Enemies>
@@ -173,8 +173,8 @@
 		<Text>Вам удается освободить левую руку, и вы выхватываете оружие. Но драться левой рукой неудобно, поэтому на время боя вычтите 1 из своей ЛОВКОСТИ.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="1-Й МУРАВЕЙ" Skill="8" Strength="10"/>
 					<Enemy Name="2-Й МУРАВЕЙ" Skill="8" Strength="8"/>
@@ -275,8 +275,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ШАР-ХИЩНИК" Skill="10" Strength="6"/>
 				</Enemies>
@@ -361,8 +361,8 @@
 		<Text>Шлем металлический, он неплохо экранирует излучение. А без своих телепатических штучек враг становится не таким уж и опасным.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СОРОКОНОЖКА" Skill="7" Strength="6"/>
 				</Enemies>
@@ -422,8 +422,8 @@
 		<Text>Вам трудно драться левой рукой (в правую вцепились прочные клейкие листья), поэтому на время боя вычтите 1 из своей ЛОВКОСТИ.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="«РОСЯНКА»" Skill="7" Strength="8"/>
 				</Enemies>
@@ -492,8 +492,8 @@
 		<Text>Бросьте кубик дважды. Сумма выпавших цифр покажет, на сколько уменьшат вашу СИЛУ задевшие вас пиратские пули. Если после этого вы живы — значит, вам удалось перелететь пещеру.</Text>
 		<Actions>
 			<Action>
-				<ActionName>DiceWounds</ActionName>
-				<ButtonName>Кинуть кубики</ButtonName>
+				<Name>DiceWounds</Name>
+				<Button>Кинуть кубики</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -656,8 +656,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="РЫЦАРЬ" Skill="10" Strength="12"/>
 				</Enemies>
@@ -712,8 +712,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЖУК" Skill="9" Strength="9"/>
 				</Enemies>
@@ -815,8 +815,8 @@
 		<Text>Заостренные палки действительно оказываются оружием — и совсем неплохим!</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="1-Й МУРАВЕЙ" Skill="9" Strength="10"/>
 					<Enemy Name="2-Й МУРАВЕЙ" Skill="9" Strength="8"/>
@@ -850,8 +850,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="РАКОСКОРПИОН" Skill="9" Strength="9"/>
 				</Enemies>
@@ -877,8 +877,8 @@
 		<Text>Что верно, то верно: кусты колючие. И жесткие, как проволока. Шипы изодрали вам в кровь лицо и руки (вычтите 1 из СИЛЫ).</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -894,8 +894,8 @@
 		<Text>Вас выволакивают во двор, где ожидают еще несколько стражников с арбалетами, и без объяснений ведут в большой зал, уставленный широкими столами. Похоже, недавно здесь был пир.\n\nВскоре сюда выходит и сам барон — громадный, широкоплечий человек лет сорока. Он морщится спросонья и потирает круглую, лысую, как биллиардный шар, голову.\n\n«Ваша светлость, — почтительно объясняет один из стражников, — только что в ворота постучалась некая юная девица. Она сказала, что в замке под видом путника скрывается сам Грэм Драконья Лапа, атаман шайки разбойников. И в том девица поклялась клинком и эфесом Небесного Меча...»\n\n«Где она? Почему не повторит свои обвинения?»\n\n«Скрылась. Говорит, что боится мести разбойников. А сама девица — пришлая, никто здесь ее не знает. Пригожая такая, кареглазая...»\n\n«Грэм Драконья Лапа, да? — заинтересованно тянет барон. — А ты что скажешь, молодец?»</Text>
 		<Actions>
 			<Action>
-				<ActionName>Charm</ActionName>
-				<ButtonName>Проверить обаяние</ButtonName>
+				<Name>Charm</Name>
+				<Button>Проверить обаяние</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1078,8 +1078,8 @@
 		<Text>Что ж, рискните еще раз.</Text>
 		<Actions>
 			<Action>
-				<ActionName>GameOfDice</ActionName>
-				<ButtonName>Кинуть кубики</ButtonName>
+				<Name>GameOfDice</Name>
+				<Button>Кинуть кубики</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1102,8 +1102,8 @@
 		<Text>Ночь теплая, вам не грозит опасность замерзнуть. Но все же вы сожалеете, что сидите не у огня: меж деревьями сверкают недобрые зеленые глаза, они все ближе... На мгновение разрывается над головой завеса облаков, громадная — больше земной — белая луна заливает светом поляну, и вы можете разглядеть своих противников. Это два зверя, черные, похожие на земных волков, но с тремя парами лап и с длинными гибкими телами.\n\nТьма вновь смыкается над поляной, и звери бросаются в атаку.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="1-Й ЗВЕРЬ" Skill="9" Strength="10"/>
 					<Enemy Name="2-Й ЗВЕРЬ" Skill="9" Strength="8"/>
@@ -1129,8 +1129,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="«КУЗНЕЧИК»" Skill="10" Strength="10"/>
 				</Enemies>
@@ -1225,8 +1225,8 @@
 		<Text>Проверьте свою удачу.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1239,8 +1239,8 @@
 		<Text>Вы идете дальше по тропинке. Внезапно с неба обрушивается сверкающий поток, словно лавина солнечных зайчиков пляшет вокруг вас. Глаз мгновенно слепнут. Вы падаете наземь и отползаете с тропинки в кусты...</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1359,8 +1359,8 @@
 		<Text>Теперь ничто не мешает отворить замшелую, тяжелую дверь...\n\nПеред вашими глазами мягко струится от чаши к чаше столб золотого света. Ворота!</Text>
 		<Actions>
 			<Action>
-				<ActionName>LuckRecovery</ActionName>
-				<ButtonName>Восстановить 1 цифру удачи</ButtonName>
+				<Name>LuckRecovery</Name>
+				<Button>Восстановить 1 цифру удачи</Button>
 				<Aftertext>Над Воротами — кодовый номер: 27. Не забудьте его записать!\n\nЕсли на вас шлем — обязательно снимите его: в других Мирах он может выглядеть нелепо. Можете положить его в рюкзак (вдруг пригодится!) или оставить здесь.\n\nА теперь остается лишь сделать шаг вперед...\n\nЕсли мир, который вы покидаете, был не первым на вашем пути, то сложите кодовые номера, которые удалось записать.</Aftertext>
 			</Action>
 		</Actions>
@@ -1399,8 +1399,8 @@
 		<Text>Повар еще раз замахивается на девушку, но вы перехватываете его руку и заламываете ее за спину. Девчонка моментально исчезает в толпе слуг, которые сгрудились вокруг и глазеют на происходящее. Полагая, что дело кончено, выпускаете руку повара. Но верзила отнюдь не укрощен. С яростным рычанием он хватается за нож и клянется, что сейчас же пустит вас на щепки для растопки печи!\n\nЭтот тип силен как бык, но техника боя у него бедновата.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПОВАР" Skill="8" Strength="12"/>
 				</Enemies>
@@ -1464,8 +1464,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="1-Й ГРАБИТЕЛЬ" Skill="9" Strength="10"/>
 					<Enemy Name="2-Й ГРАБИТЕЛЬ" Skill="9" Strength="11"/>
@@ -1606,8 +1606,8 @@
 		<Text>Дверь оказывается крепче, чем вы думали, придется высаживать ее плечом...\n\nБросайте кубик по два раза до тех пор, пока оба раза не выпадут одинаковые цифры. За каждый двойной бросок вычитайте 1 из своей СИЛЫ. Конечно, в любую минуту вы можете оставить дверь в покое, выйти из подъезда или подняться на второй этаж. Но если все же удастся выломать дверь — войдите в комнату.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Break</ActionName>
-				<ButtonName>Выбить дверь</ButtonName>
+				<Name>Break</Name>
+				<Button>Выбить дверь</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1664,8 +1664,8 @@
 		<Text>Вы идете мрачным коридором, прислушиваясь к эху своих шагов... и внезапно останавливаетесь. Показалось вам или нет, что впереди звенит по камням уже не эхо? Кто там?.. Вы замедляете шаги — и вдруг сверху лавиной обрушиваются камни.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1693,8 +1693,8 @@
 		<Text>Хватает одного заряда, чтобы аккуратным полукругом вырезать засов. Дверь открывается мягко и беззвучно. К счастью, вы прекрасно помните дорогу, по которой вас вели, и быстро выходите к воротам. И тут ваше везение кончается. У ворот дежурит стражник — один из тех, кто отводил вас в темницу. Он хватается за оружие.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СТРАЖНИК" Skill="8" Strength="8"/>
 				</Enemies>
@@ -1744,8 +1744,8 @@
 		<Text>Проверьте свою удачу.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1781,8 +1781,8 @@
 		<Text>Чем дальше идете, тем глубже и ветвистее становятся трещины на стенах. Вы уже хотите повернуть, но внезапно в толще каменных стен раздается странный гул. Видимо, эхо ваших шагов нарушило хрупкое равновесие — и грянул обвал!</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1802,8 +1802,8 @@
 		<Text>Вы перешагиваете порог — и тут же где-то на улице тяжело ухает бомба. Взрывная волна врывается в комнату, сметая уцелевшие оконные стекла. Стены содрогаются, и вы видите, как над вашей головой от потолка к косяку начинает змеиться трещина...</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1858,8 +1858,8 @@
 		<Text>И вот перед вами знакомый золотистый поток струится из чаши в чашу. Вы нашли Ворота!</Text>
 		<Actions>
 			<Action>
-				<ActionName>LuckRecovery</ActionName>
-				<ButtonName>Восстановить 1 цифру удачи</ButtonName>
+				<Name>LuckRecovery</Name>
+				<Button>Восстановить 1 цифру удачи</Button>
 				<Aftertext>Над Воротами в скале выбит кодовый номер: 103. Вы не забыли, что обещали записывать номера всех Ворот?\n\nРазумеется, оставаться здесь опасно, и вы, не колеблясь, шагаете в световой столб.\n\nЕсли мир, который вы покидаете, был не первым на вашем пути, то сложите все кодовые номера, которые вам удалось записать.</Aftertext>
 			</Action>
 		</Actions>
@@ -2087,8 +2087,8 @@
 		<Text>В нескольких шагах от вас стоит странное существо, похожее на грязный мешок с песком, повисший меж мохнатых членистых лап. «Мешок» опоясан полосой вращающихся шаров-глаз. Одна из лап поднята вверх, ею паук — как вы окрестили это существо — крутит над собой белую петлю, как заправский ковбой — лассо.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПАУК" Skill="9" Strength="8"/>
 				</Enemies>
@@ -2154,8 +2154,8 @@
 		<Text>Проверьте свою ловкость.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Skill</ActionName>
-				<ButtonName>Проверить ловкость</ButtonName>
+				<Name>Skill</Name>
+				<Button>Проверить ловкость</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2268,8 +2268,8 @@
 		<Text>Корпус неуклюжего чучела сделан из дрянного пластика, поддающегося вашему ножу. Но дисковая пила — орудие серьезное, каждое ее прикосновение вычтет 3 из СИЛЫ.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="РОБОТ" Skill="8" Strength="8"/>
 				</Enemies>
@@ -2391,8 +2391,8 @@
 		<Text>Вслед за сэром Эйнаром выходите во двор, на ходу оценивая оружие противника. Меч выглядит внушительно, но, пожалуй, он не длиннее вашего ножа. Вы понимаете, конечно, что бластер в ход пускать нельзя.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЭЙНАР ЧЕРНЫЙ ЩИТ" Skill="10" Strength="12"/>
 				</Enemies>
@@ -2462,8 +2462,8 @@
 		<Text>Вскоре вершина муравейника исчезает в колышущейся позади зелени. Вы выходите на широкую лужайку, покрытую мягкой травой. И тут же резкий свист заставляет вас обернуться. Это шумит в воздухе петля, летящая в вашу сторону...</Text>
 		<Actions>
 			<Action>
-				<ActionName>Skill</ActionName>
-				<ButtonName>Проверить ловкость</ButtonName>
+				<Name>Skill</Name>
+				<Button>Проверить ловкость</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2558,8 +2558,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КУСТ-ВАМПИР" Skill="11" Strength="8"/>
 				</Enemies>
@@ -2604,8 +2604,8 @@
 		<Text>В тоннеле сыро и темно, приходится очень внимательно глядеть под ноги...</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2740,8 +2740,8 @@
 		<Text>Свет становится все ярче, и тоннель выводит вас в большой зал. Стены его украшены мозаикой, изображающей резвящихся в волнах русалок. Вдоль стен в нишах — мраморные статуи русалок, плетущих венки из странных растений.\n\nВы так увлечены разглядыванием статуй, что забываете об источнике света. И вдруг обнаруживаете его прямо перед собой. В одной из ниш нет статуи. Вместо нее между металлическими чашами струится знакомый золотистый поток. Ворота!</Text>
 		<Actions>
 			<Action>
-				<ActionName>LuckRecovery</ActionName>
-				<ButtonName>Восстановить 1 цифру удачи</ButtonName>
+				<Name>LuckRecovery</Name>
+				<Button>Восстановить 1 цифру удачи</Button>
 				<Aftertext>На стене — кодовый номер: 215. Вы не забыли, что должны записать его?</Aftertext>
 			</Action>
 		</Actions>
@@ -2870,8 +2870,8 @@
 		<Text>И вот вы рядом с золотистым столбом света, только руку протянуть...</Text>
 		<Actions>
 			<Action>
-				<ActionName>LuckRecovery</ActionName>
-				<ButtonName>Восстановить 1 цифру удачи</ButtonName>
+				<Name>LuckRecovery</Name>
+				<Button>Восстановить 1 цифру удачи</Button>
 				<Aftertext>На скале рядом с Воротами можно, хотя и с трудом, прочесть их кодовый номер: 48. Не забудьте эту цифру!\n\nКоротко вздохнув, вы медленно вплываете в световой поток...\n\nЕсли мир, который вы покидаете, был не первым на вашем пути, то сложите все кодовые номера Ворот, которые удалось записать.</Aftertext>
 			</Action>
 		</Actions>
@@ -2897,8 +2897,8 @@
 		<Text>«Проснись! — звенит над вами испуганный женский голос. — Скорее!»\n\nВас тормошит та самая служанка, из-за которой вечером вы ввязались в драку.\n\n«Уходи! — шепчет она. — Сейчас здесь будут стражники!»\n\nРеакция у вас хорошая, просыпаетесь вы быстро. Девица и договорить не успела, а вы уже на ногах, рюкзак за плечами, оружие наготове. Разбираться будете после, а сейчас тихо спускаетесь с сеновала и идете за девушкой.\n\nУ ворот суматоха: шум, беготня, факелы. Светает, но тень под замковой стеной пока еще надежно укрывает вас.\n\n«К воротам явилась какая-то девица, — торопливо объясняет служанка. — Клянется, будто ты — Грэм Драконья Лапа, атаман разбойничьей шайки...»\n\nСлужанка на миг умолкает, пристально смотрит вам в глаза:\n\n«Это правда? Ты разбойник?»\n\nУдастся доказать, что вас оклеветали, или нет?</Text>
 		<Actions>
 			<Action>
-				<ActionName>Charm</ActionName>
-				<ButtonName>Проверить обаяние</ButtonName>
+				<Name>Charm</Name>
+				<Button>Проверить обаяние</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2933,8 +2933,8 @@
 		<Text>Вы тщательно осматриваете прогалину и кусты вокруг нее...</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3035,8 +3035,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="БЕРТОЛЬД ИЗ СОРГЕЙЛЯ" Skill="10" Strength="10"/>
 				</Enemies>
@@ -3109,8 +3109,8 @@
 		<Text>Баронесса рада, как маленькая девочка, даже в ладоши захлопала. И лютня, как нарочно, в комнате отыскалась! Вы быстро припоминаете песенку попроще (не исполнять же здесь Гимн Космического Патруля)!\n\nУдастся сойти за профессионального певца или нет?</Text>
 		<Actions>
 			<Action>
-				<ActionName>Charm</ActionName>
-				<ButtonName>Проверить обаяние</ButtonName>
+				<Name>Charm</Name>
+				<Button>Проверить обаяние</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3186,8 +3186,8 @@
 		<Text>Кольцо нагревается на руке — и какая-то сила поднимает вас в воздух. Но летите вы медленно и невысоко, и пираты успевают заметить вас...</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<RemoveTrigger>AntiGravityRing</RemoveTrigger>
@@ -3368,8 +3368,8 @@
 		<Text>Проверьте свою удачу.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3431,8 +3431,8 @@
 		<Text>Проверьте свою удачу.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3570,8 +3570,8 @@
 		<Text>Стоит вам дотронуться до ствола, как зверь спрыгивает с дерева. Из пасти выползают кривые клыки, и чудовище бросается в атаку.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ОБЕЗЬЯНОПАУК" Skill="10" Strength="10"/>
 				</Enemies>
@@ -3594,8 +3594,8 @@
 		<Text>Проверьте свою удачу.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3742,8 +3742,8 @@
 		<Text>Проверьте свою удачу.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3864,8 +3864,8 @@
 		<Text>Как же попасть к Воротам? Перепрыгнуть через эту отвратительную черноту? Нет, не хочется: расстояние очень серьезное. Разумнее вернуться и поискать веревку. Вы так и собираетесь поступить, но тут подземная тишина взрывается выстрелами. В тоннелях кипит сражение, оно катится сюда... раздумывать некогда. Разбежавшись, вы прыгаете...</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3924,8 +3924,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПИРАТ" Skill="9" Strength="9"/>
 				</Enemies>
@@ -3988,8 +3988,8 @@
 		<Text>Когда человечек пробегает под деревом, вы свешиваете руку вниз и, поймав его за шиворот, рывком втаскиваете на ветку. Слабо пискнув, человечек пытается сопротивляться, но тут же затихает, сообразив, в чем дело. Вы оба, затаившись в кроне, наблюдаете сквозь листву за толпой, которая, сгрудившись на пригорке, обозревает окрестности. Из неразборчивых воплей ваш автопереводчик выхватывает слово «колдовство». Да, наверное, так это и выглядит со стороны: человечек взмахнул руками, взмыл вверх и исчез... Интересно, преследователи останутся в заблуждении или наберутся смелости и внимательнее осмотрят место, где свершилось «чудо»?</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4130,8 +4130,8 @@
 		<Text>Проверьте свою удачу.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4217,8 +4217,8 @@
 		<Text>Стряхнув со своей спины неизвестного врага, оборачиваетесь. Перед вами худой, оборванный человек с блеском в глазах. Он хрипло кричит что-то бессвязное и замахивается на вас ножом. Сумасшедший!..</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="БЕЗУМЕЦ" Skill="9" Strength="12"/>
 				</Enemies>
@@ -4427,8 +4427,8 @@
 		<Text>Рыцарь упорно требует, чтобы вы назвали имя дамы, во имя которой будете сражаться. С отвращением глядя на него, вы торжественно объявляете, что посвящаете бой красоте, благородству и прочим достоинствам несравненной Клуши Космопатрульной.\n\nКороткий металлический смешок эхом проносится в вашем сознании: Клуша оценила красивый жест.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПАЛЕАНДР НЕУКРОТИМЫЙ" Skill="10" Strength="12"/>
 				</Enemies>
@@ -4486,8 +4486,8 @@
 		<Text>Ловко перепрыгнув через скамью, вы подходите к разговорчивому незнакомцу.\n\n«Как интересно устроен человек, — задумчиво говорите вы. — Тридцать два зуба не могут управиться с одним-единственным языком — прикусить его, когда нужно...»\n\nНезнакомец изгибает бровь.\n\n«Надо же, высокородный господин может заметить кого-то, кроме своей драгоценной персоны! Может, храбрый рыцарь даже драться умеет?»\n\n«Хочешь проверить?» — небрежно откликаетесь вы.\n\n«Конечно! — радостно вскидывается наглец. — Я, правда, не поддерживаю ушами кастрюлю по кличке «шлем», зато на поясе у меня...»\n\nОн откидывает полу плаща. Взглядом опытного воина вы мгновенно оцениваете его оружие. Длинный нож, вроде вашего, только рукоять богаче украшена. Словом, ничего особенного...\n\n(Бластер в ход пускать нельзя. Во-первых, это честный поединок, а во-вторых, за вами во все глаза наблюдает хозяин таверны. Что он подумает — и начнет рассказывать — о вашем оружии?)\n\nСталь ударяет о сталь — и вы тут же понимаете, что перед вами потрясающий противник!</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="НАГЛЕЦ" Skill="11" Strength="10"/>
 				</Enemies>
@@ -4530,8 +4530,8 @@
 		<Text>Проверьте свою удачу.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4544,8 +4544,8 @@
 		<Text>Подъем по скобам не занимает много времени. Аварийный люк второго яруса открыт. Выбираетесь в коридор, поспешно вспоминая все, что знаете об орбитальных станциях. Итак, что здесь может быть? Причальный шлюз, шлюз исследовательского космобота, ремонтная мастерская, лаборатория и... и... и Бронсон.\n\nОн стоит прямо перед вами — мрачный, сутулый верзила с таким же, как у вас, ножом наизготовку. У ног его лежит лиловый рюкзак. Едва взглянув в лицо Бронсону, вы понимаете, что переговоры ни к чему не приведут. В глазах его горит опасный огонь безумия. За свою добычу он будет драться зубами и когтями, ничего не соображая, ни к каким разумным доводам не прислушиваясь...</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="БРОНСОН" Skill="10" Strength="10"/>
 				</Enemies>
@@ -4867,8 +4867,8 @@
 		<Text>Что ж, сыграйте еще партию.</Text>
 		<Actions>
 			<Action>
-				<ActionName>GameOfDice</ActionName>
-				<ButtonName>Кинуть кубики</ButtonName>
+				<Name>GameOfDice</Name>
+				<Button>Кинуть кубики</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4888,8 +4888,8 @@
 		<Text>Закон Мерфи срабатывает с отвратительной точностью: ветка, не выдержав двойного веса, с треском ломается. Вы с незнакомцем шмякаетесь под ноги преследователям.\n\nБедняге, которого вы пытались спасти, тут же связывают руки, а с вами выходит некоторая заминка...\n\nУдастся вам убедить толпу, что вы всего лишь безобидный путник, случайно оказавшийся здесь? Или не удастся?</Text>
 		<Actions>
 			<Action>
-				<ActionName>Charm</ActionName>
-				<ButtonName>Проверить обаяние</ButtonName>
+				<Name>Charm</Name>
+				<Button>Проверить обаяние</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4902,8 +4902,8 @@
 		<Text>Подтянувшись на руках, легко взбираетесь в невысокую, но широкую нишу. Темнотища — хоть глаз выколи! На ощупь изучаете вы холодные камни вокруг...</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5032,8 +5032,8 @@
 		<Text>Проверьте свою ловкость.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Skill</ActionName>
-				<ButtonName>Проверить ловкость</ButtonName>
+				<Name>Skill</Name>
+				<Button>Проверить ловкость</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5170,8 +5170,8 @@
 		<Text>Правила игры просты. Бросьте кубик дважды за себя и дважды за своего партнера. Если сумма чисел, выпавших у вас, окажется больше, чем у противника, вы выиграли. Если же ему выпадет больше очков, то выиграл он.</Text>
 		<Actions>
 			<Action>
-				<ActionName>GameOfDice</ActionName>
-				<ButtonName>Кинуть кубики</ButtonName>
+				<Name>GameOfDice</Name>
+				<Button>Кинуть кубики</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5184,8 +5184,8 @@
 		<Text>Решетка крепче, чем выглядит (вычтите 1 из своей СИЛЫ). Наконец, вы отбрасываете ее в сторону и спрыгиваете в подвал. При виде вас старуха испуганно прижимается к кирпичной стене.\n\nУдастся вам убедить старуху в том, что вы не желаете ей зла, или не удастся?</Text>
 		<Actions>
 			<Action>
-				<ActionName>Charm</ActionName>
-				<ButtonName>Проверить обаяние</ButtonName>
+				<Name>Charm</Name>
+				<Button>Проверить обаяние</Button>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -5215,8 +5215,8 @@
 		<Text>Вы легко догоняете аборигена, но он не намерен с вами разговаривать. Бросив в траву свою ношу, муравей поудобнее перехватывает заостренную палку.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="МУРАВЕЙ" Skill="9" Strength="8"/>
 				</Enemies>
@@ -5414,8 +5414,8 @@
 		<Text>Заросли становятся все реже; ветер доносит до вас запах, который ни с чем нельзя спутать, — запах соленой воды и водорослей. Так пахнет ветер с моря и на вашей родной планете! На миг вы расслабляетесь — и тут же над вашей головой свистит петля...</Text>
 		<Actions>
 			<Action>
-				<ActionName>Skill</ActionName>
-				<ButtonName>Проверить ловкость</ButtonName>
+				<Name>Skill</Name>
+				<Button>Проверить ловкость</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5543,8 +5543,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СЕРЕБРИСТЫЙ ЗВЕРЬ" Skill="9" Strength="10"/>
 				</Enemies>
@@ -5593,8 +5593,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="«БАБОЧКА»" Skill="8" Strength="8"/>
 				</Enemies>
@@ -5611,8 +5611,8 @@
 		<Text>Проверьте свою удачу.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5649,8 +5649,8 @@
 		<Text>Сороконожка сражается передней парой лап с клешнями, причем каждый ее выпад сопровождается волной боли и ужаса, накатывающей на ваш мозг.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СОРОКОНОЖКА" Skill="12" Strength="6"/>
 				</Enemies>
@@ -5754,8 +5754,8 @@
 		<Text>Проверьте свою удачу.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5808,8 +5808,8 @@
 		<Text>В отличие от земных сородичей, шершни не оставляют жало в ране врага и могут наносить противнику несколько ударов.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="1-Й ШЕРШЕНЬ" Skill="8" Strength="8"/>
 					<Enemy Name="2-Й ШЕРШЕНЬ" Skill="8" Strength="6"/>
@@ -5872,8 +5872,8 @@
 		<Text>Придётся драться:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="1-Й РАЗБОЙНИК" Skill="9" Strength="8"/>
 					<Enemy Name="2-Й РАЗБОЙНИК" Skill="9" Strength="9"/>
@@ -5946,20 +5946,20 @@
 		<Text>Инженер, собирающий вас в дорогу, больше всего озабочен тем, чтобы вы взяли с собою как можно меньше вещей. Даже форменную бляху Патруля вам велели снять с пояса — при Переходе важен каждый грамм.\n\n«Это лишь при старте с Земли, — утешает вас инженер. — В следующих Воротах можете тащить за собой хоть тушу мамонта».\n\n«Только мамонта мне и не хватало... А бластер?! Уж не собираетесь ли вы отправить меня в этот космический лабиринт без бластера?»\n\n«Бластер взять можно, он легкий. Но не более одного заряда! Иначе произойдет детонация, и вы прибудете на место в разобранном виде... Впрочем, и это важно лишь при старте с Земли. Если в Веренице Миров вам попадутся заряды — берите хоть сотню...»\n\nВосхитительная перспектива! Добывать заряды для боевого линейного излучателя в Мире Развеселых Тараканов... или как их там — Дружелюбных Тарантулов.\n\nХуже всего с приборами. Оказывается, они не выдерживают Перехода и начинают барахлить. Единственное устройство, которое ученые сумели защитить от пагубного воздействия Ворот, — это наглухо запаянный на руке металлический браслет. Он выполняет три функции. Во-первых, это автопереводчик. Вы сможете общаться с любым разумным существом в Веренице Миров. Во-вторых, с помощью браслета вы будете поддерживать телепатическую связь с Клушей. Достаточно отдать мысленный приказ — и в мозгу зазвучит знакомый хрипловатый голос с въедливыми интонациями... Есть на браслете и маленький черный глазок. Если он замигает красным — значит, где-то поблизости аннигилятор, а при нем, надо полагать, и похититель...\n\nВы скептически оглядываете легкий пластиковый рюкзак темно-синего цвета. В нем могли бы поместиться шесть предметов, но вредные ученые столько взять не позволяют. Вам предлагают на выбор одну из трех вещей, примерно равных по массе:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать очки</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать очки</Button>
 				<Equipment>Очки</Equipment>
 				<Text>Инфракрасные очки «Ночное зрение»</Text>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать зажигалку</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать зажигалку</Button>
 				<Equipment>Зажигалка</Equipment>
 				<Text>Зажигалка</Text>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать тюбик</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать тюбик</Button>
 				<Equipment>Тюбик</Equipment>
 				<Text>Тюбик питательной пасты</Text>
 				<Aftertext>Тюбик питательной пасты в любой момент восстановит ваши силы до первоначального уровня (увы, пасты хватит лишь на один прием). Кроме того, у вашего пояса — обычное оружие исследователей Вереницы Миров: длинный, похожий на палаш, нож, прочный, легкий, с рукоятью из пластиката.\n\n«Хорошо, что не нужен защитный скафандр, — говорит инженер деловито. — На всех планетах атмосфера сходна с земной... кстати, у большинства обитателей Вереницы Миров и метаболизм близок к земному».\n\n«Это означает, что если какая-нибудь местная зверюга сожрет меня, то у нее не будет болеть живот?»\n\n«Вот именно, — невозмутимо отвечает инженер. — Но многих из этих зверюг и вы сможете... э-э... употребить в пищу... Сведения о Мирах будете получать от КЛУ-6. — Инженер оборачивается к лаборанту. — Введены ли данные в память установки?»\n\n«Так точно, введены! — четко отвечает лаборант и вдруг, не выдержав, фыркает: — Послушайте, майор, как вы можете работать с такой занудой? К тому же у нее блок эмоций начисто забивает логические центры!»\n\n«Полегче! — обрывает подчиненного инженер. — Клушу проектировал я сам, еще в молодости...»\n\nВы с трудом сдерживаетесь, чтобы не спросить инженера: а нельзя ли что-нибудь у Клуши развинтить, чтоб не была такой болтливой?..\n\nНаконец сборы окончены — пора стартовать.</Aftertext>
