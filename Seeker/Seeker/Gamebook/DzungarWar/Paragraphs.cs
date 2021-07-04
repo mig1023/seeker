@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.DzungarWar
             action.StatToMax = Game.Xml.BoolParse(xmlAction["StatToMax"]);
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
-            if (action.ActionName == "Option")
+            if (action.Name == "Option")
                 action.Option = OptionParse(xmlAction["Option"]);
 
             return action;

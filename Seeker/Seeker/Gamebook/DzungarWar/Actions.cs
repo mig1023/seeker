@@ -61,7 +61,7 @@ namespace Seeker.Gamebook.DzungarWar
 
         public override List<string> Representer()
         {
-            if (ActionName == "TestAll")
+            if (Name == "TestAll")
                 return new List<string> { String.Format("Проверить по совокупному уровню {0}", Level) };
 
             else if (Level > 0)
@@ -189,7 +189,7 @@ namespace Seeker.Gamebook.DzungarWar
             if (Level > 0)
                 return true;
 
-            else if (ActionName == "Brother")
+            else if (Name == "Brother")
                 return Character.Protagonist.Brother <= 0;
 
             else if (StatToMax)

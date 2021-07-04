@@ -50,8 +50,8 @@ namespace Seeker.Prototypes
 
         public Abstract.IActions ActionTemplate(XmlNode xmlAction, Abstract.IActions actions)
         {
-            actions.ActionName = Game.Xml.StringParse(xmlAction["ActionName"]);
-            actions.ButtonName = Game.Xml.StringParse(xmlAction["ButtonName"]);
+            actions.Name = Game.Xml.StringParse(xmlAction["Name"]);
+            actions.Button = Game.Xml.StringParse(xmlAction["Button"]);
             actions.Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]);
             actions.Trigger = Game.Xml.StringParse(xmlAction["Trigger"]);
             actions.Text = Game.Xml.StringParse(xmlAction["Text"]);

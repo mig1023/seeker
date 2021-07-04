@@ -7,8 +7,8 @@ namespace Seeker.Abstract
 {
     interface IActions
     {
-        string ActionName { get; set; }
-        string ButtonName { get; set; }
+        string Name { get; set; }
+        string Button { get; set; }
         string Aftertext { get; set; }
         string Trigger { get; set; }
         string Text { get; set; }

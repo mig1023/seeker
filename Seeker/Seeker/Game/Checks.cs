@@ -11,10 +11,10 @@ namespace Seeker.Game
             if (Game.Data.CurrentParagraph.Actions != null)
                 foreach (Abstract.IActions action in Game.Data.CurrentParagraph.Actions)
                 {
-                    if (!String.IsNullOrEmpty(actionName) && action.ActionName.ToUpper().Contains(actionName.ToUpper()))
+                    if (!String.IsNullOrEmpty(actionName) && action.Name.ToUpper().Contains(actionName.ToUpper()))
                         return true;
 
-                    if (!String.IsNullOrEmpty(actionText) && action.ButtonName.ToUpper().Contains(actionText.ToUpper()))
+                    if (!String.IsNullOrEmpty(actionText) && action.Button.ToUpper().Contains(actionText.ToUpper()))
                         return true;
                 }
 

@@ -44,7 +44,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         {
             List<string> enemies = new List<string>();
 
-            if (ActionName == "Get")
+            if (Name == "Get")
                 return new List<string> { Text };
 
             if (Enemies == null)

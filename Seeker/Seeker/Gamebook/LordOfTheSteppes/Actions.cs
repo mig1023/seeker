@@ -50,7 +50,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, coins) };
             }
 
-            else if (!String.IsNullOrEmpty(Text) || (ActionName == "Get"))
+            else if (!String.IsNullOrEmpty(Text) || (Name == "Get"))
                 return new List<string> { Text };
 
             else if (Enemies == null)

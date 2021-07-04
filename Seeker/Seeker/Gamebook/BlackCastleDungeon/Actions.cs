@@ -135,7 +135,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 string gold = Game.Other.CoinsNoun(Price, "золотой", "золотых", "золотых");
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
             }
-            else if (ActionName == "Get")
+            else if (Name == "Get")
             {
                 int count = (ThisIsSpell ? Character.Protagonist.Spells.Where(x => x == Text).Count() : 0);
                 return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };

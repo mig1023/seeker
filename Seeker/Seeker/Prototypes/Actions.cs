@@ -6,8 +6,8 @@ namespace Seeker.Prototypes
 {
     class Actions
     {
-        public string ActionName { get; set; }
-        public string ButtonName { get; set; }
+        public string Name { get; set; }
+        public string Button { get; set; }
         public string Aftertext { get; set; }
         public string Trigger { get; set; }
         public string Text { get; set; }
@@ -24,7 +24,7 @@ namespace Seeker.Prototypes
             if (trigger)
                 Game.Option.Trigger(Trigger);
 
-            string actionName = (String.IsNullOrEmpty(action) ? ActionName : action);
+            string actionName = (String.IsNullOrEmpty(action) ? Name : action);
 
             List<string> actionResult = this.GetType().InvokeMember(actionName, System.Reflection.BindingFlags.InvokeMethod,
                 null, this, null) as List<string>;

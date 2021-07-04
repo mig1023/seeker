@@ -226,8 +226,8 @@ namespace Seeker.Gamebook.PrairieLaw
         {
             bool disabledByUsed = (Price > 0) && Used;
             bool disabledByPrice = (Price > 0) && (Character.Protagonist.Cents < Price);
-            bool disabledBySkins = (ActionName == "SellSkins") && (Character.Protagonist.AnimalSkins.Count == 0);
-            bool disabledByNuggets = (ActionName == "SellNuggets") && (Character.Protagonist.Nuggets == 0);
+            bool disabledBySkins = (Name == "SellSkins") && (Character.Protagonist.AnimalSkins.Count == 0);
+            bool disabledByNuggets = (Name == "SellNuggets") && (Character.Protagonist.Nuggets == 0);
             bool disabledByGame = Roulette && (Character.Protagonist.Cents < 100);
 
             return !(disabledByUsed || disabledByPrice || disabledBySkins || disabledByNuggets || disabledByGame);

@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             action.GuessBonus = Game.Xml.BoolParse(xmlAction["GuessBonus"]);
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
-            if (action.ActionName == "Option")
+            if (action.Name == "Option")
                 action.Option = OptionParse(xmlAction["Option"]);
 
             return action;
