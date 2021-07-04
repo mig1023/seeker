@@ -262,18 +262,9 @@ namespace Seeker.Gamebook.VWeapons
             if (Time != 0)
                 Character.Protagonist.Time += Time;
 
-            Dictionary<string, string> healingParts = new Dictionary<string, string>
-            {
-                ["головы"] = "Head",
-                ["плеч"] = "ShoulderGirdle",
-                ["корпуса"] = "Body",
-                ["рук"] = "Hands",
-                ["ног"] = "Legs",
-            };
-
             while (healingPoints > 0)
-                foreach (string parts in healingParts.Keys.ToList())
-                    HealingAction(ref healing, parts, ref healingPoints, healingParts[parts]);
+                foreach (string parts in Constants.healingParts.Keys.ToList())
+                    HealingAction(ref healing, parts, ref healingPoints, Constants.healingParts[parts]);
 
             return healing;
         }

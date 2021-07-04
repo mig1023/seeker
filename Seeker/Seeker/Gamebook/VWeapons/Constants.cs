@@ -30,5 +30,14 @@ namespace Seeker.Gamebook.VWeapons
         };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 266 };
+
+        public static Dictionary<string, string> healingParts = new Dictionary<string, string>
+        {
+            ["головы"] = "Head",
+            ["плеч"] = "ShoulderGirdle",
+            ["корпуса"] = "Body",
+            ["рук"] = "Hands",
+            ["ног"] = "Legs",
+        };
     }
 }
