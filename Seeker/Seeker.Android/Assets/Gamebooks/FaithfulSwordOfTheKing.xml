@@ -2590,7 +2590,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Переночевать и поужинать</ButtonName>
-				<Text>Комната на постоялом двор, 1.5 экю</Text>
+				<Text>Комната на постоялом дворе</Text>
 				<Price>150</Price>
 				<Benefit Name="Strength" Value="4"/>
 				<Benefit Name="HadFoodToday" Value="1"/>
@@ -3551,7 +3551,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить аркебузу</ButtonName>
-				<Text>АРКЕБУЗА, 1.5 экю</Text>
+				<Text>АРКЕБУЗА</Text>
 				<Price>150</Price>
 				<Multiple/>
 			</Action>
@@ -3575,7 +3575,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Выбрать подешевле</ButtonName>
-				<Text>Гостиница похуже, полэкю</Text>
+				<Text>Гостиница похуже</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="1"/>
 				<Aftertext>Кроме того, вспомните, успели ли вы сегодня хотя бы один раз поесть. Если нет, потеряйте 3 СИЛЫ, однако только в том случае, если не удастся найти ничего съедобного. Для этого есть два пути: если осталось еще что-то с собой или если есть полэкю на еду. В последнем случае ужин принесут прямо в номер, и сможете восстановить 2 СИЛЫ:</Aftertext>
@@ -3583,7 +3583,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Заказать еду</ButtonName>
-				<Text>Еда в номер, полэкю</Text>
+				<Text>Еда в номер</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="2"/>
 				<Benefit Name="HadFoodToday" Value="1"/>
@@ -4205,7 +4205,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Позавтракать</ButtonName>
-				<Text>Еда, полэкю</Text>
+				<Text>Еда</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="1"/>
 				<Benefit Name="HadFoodToday" Value="1"/>
@@ -5312,7 +5312,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Поужинать</ButtonName>
-				<Text>Ужин, 1.5 экю</Text>
+				<Text>Ужин</Text>
 				<Price>150</Price>
 				<Benefit Name="Strength" Value="2"/>
 				<Benefit Name="HadFoodToday" Value="1"/>
@@ -5346,7 +5346,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Позавтракать</ButtonName>
-				<Text>Завтра, полэкю</Text>
+				<Text>Завтра</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="2"/>
 				<Benefit Name="HadFoodToday" Value="1"/>
@@ -5499,7 +5499,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Поужинать</ButtonName>
-				<Text>Ужин, полэкю</Text>
+				<Text>Ужин</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="2"/>
 				<Benefit Name="HadFoodToday" Value="1"/>
@@ -6261,7 +6261,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пистолет</ButtonName>
-				<Text>ПИСТОЛЕТ, 2.5 экю</Text>
+				<Text>ПИСТОЛЕТ</Text>
 				<Price>250</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
@@ -6269,7 +6269,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пули и порох</ButtonName>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела, 1.5 экю</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>150</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
@@ -6403,7 +6403,7 @@
 			<Action>
 				<ActionName>Get</ActionName>
 				<ButtonName>Купить пули и порох</ButtonName>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела, 1.5 экю</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>150</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
