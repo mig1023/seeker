@@ -44,8 +44,8 @@
 		<Text>Пуля проносится возле самого уха Арбалета. Вы же, подпустив врага поближе, бьете без промаха. Остается второй, им и придется заняться.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="10"/>
 				</Enemies>
@@ -61,8 +61,8 @@
 		<Text>Быстро выхватив пистолет, нажимаете на курок, и лакей, державший аркебузу, с криком вываливается из окна. Двое других накидываются на вас с палками.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ СЛУГА" Skill="6" Strength="8"/>
 					<Enemy Name="ВТОРОЙ СЛУГА" Skill="6" Strength="7"/>
@@ -244,8 +244,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -258,8 +258,8 @@
 		<Text>Требуете уступить дорогу, он хватается за шпагу. Теперь дуэль неизбежна, но вы не собираетесь переходить на его сторону речки, равно как и пускать его на вашу. Драться приходится прямо на мосту.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ДВОРЯНИН" Skill="8" Strength="10"/>
 				</Enemies>
@@ -362,8 +362,8 @@
 		<Text>Выстрел попадает в цель. Теперь деритесь, у вас остался только один противник.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЧЁРНАЯ ФИГУРА" Skill="8" Strength="8"/>
 				</Enemies>
@@ -407,8 +407,8 @@
 		<Text>Внезапно вы налетаете на ничего не подозревающего прохожего.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПРОХОЖИЙ" Skill="8" Strength="10"/>
 				</Enemies>
@@ -535,8 +535,8 @@
 		<Text>Рывком открыв дверь дома, сталкиваетесь нос к носу с его хозяином. Тот, взревев: «Да как ты, мерзавец, посмел ко мне вломиться», хватается за шпагу. Дуэль неизбежна.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ХОЗЯИН ДОМА" Skill="7" Strength="9"/>
 				</Enemies>
@@ -588,8 +588,8 @@
 		<Text>Ни слова не говоря, натягиваете поводья и бросаете коня в сторону от дороги. Несколько ближайших монахов отскакивают, а остальные выхватывают пистолеты и стреляют вам вслед. Время упущено, но какие-то пули еще могут попасть в цель.</Text> 
 		<Actions>
 			<Action>
-				<ActionName>DiceWound</ActionName>
-				<ButtonName>Стрельба</ButtonName>
+				<Name>DiceWound</Name>
+				<Button>Стрельба</Button>
 				<Aftertext>Если на нем выпало от 1 до 5, вычтите у себя соответствующее количество СИЛ, если 6, то...</Aftertext>
 			</Action>
 		</Actions>
@@ -642,8 +642,8 @@
 		<Text>В карманах убитого находите 2 экю, которые можете взять себе. Кроме того, не выезжая из Вильнёва, вы продаете его лошадь и шпагу еще за 5 экю. Конечно, некоторым это может показаться предрассудительным, но если рассматривать лошадь как военную добычу… Впрочем, до предрассудков ли, когда сам Король столь беден, и выделенных им денег ну никак не может хватить на такое длинное и опасное путешествие. За 1 экю можете пообедать в трактире (и восстановить 2 СИЛЫ):</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Оплатить обед</ButtonName>
+				<Name>Get</Name>
+				<Button>Оплатить обед</Button>
 				<Text>Пообедать</Text>
 				<Price>100</Price>
 				<Benefit Name="Strength" Value="2"/>
@@ -663,8 +663,8 @@
 		<Text>Сражайтесь:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЛОДОЧНИК" Skill="5" Strength="8"/>
 				</Enemies>
@@ -744,8 +744,8 @@
 		<Text>Первый этаж пуст. Лестница, ведущая наверх, скрипит и ступени прогибаются под ногами. Теперь уже ясно, что обитатели дома не могут не знать о том, что вы все же вошли. И в этот момент глаза слепит яркий свет. На верхней площадке появляются два человека со шпагами, а третий, слуга, освещает им дорогу. К счастью, они слишком рано покинули свое укрытие, поэтому вдвоем на узкой лестнице им не развернуться. Они будут нападать на вас по очереди, но если у вас есть заряженный пистолет, стреляйте в первого и деритесь только со вторым. Так и есть, это засада. Но где же тогда друг Короля? Арестован? Казнен? Неужели вы все же не успели? Но как бы то ни было, сначала надо спасти свою собственную жизнь.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ЛИГИСТ" Skill="9" Strength="10"/>
 					<Enemy Name="ВТОРОЙ ЛИГИСТ" Skill="8" Strength="8"/>
@@ -880,8 +880,8 @@
 		<Text>Враги приближаются, и вот уже нервы у первого не выдерживают: он стреляет.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -966,8 +966,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1048,8 +1048,8 @@
 		<Text>Первый противник мертв, а второй, к счастью, еще не успел зарядить свое оружие. Поэтому ему придется сражаться с вами на шпагах, к чему, как кажется, он не слишком привык, да еще и ужасно напуган.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="6" Strength="10"/>
 				</Enemies>
@@ -1104,8 +1104,8 @@
 		<Text>Увидев, что вы проснулись, один из грабителей быстро исчезает. Вам же придется иметь дело с двумя.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ГРАБИТЕЛЬ" Skill="7" Strength="9"/>
 					<Enemy Name="ВТОРОЙ ГРАБИТЕЛЬ" Skill="7" Strength="8"/>
@@ -1176,8 +1176,8 @@
 		<Text>Сражайтесь:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ТЮРЕМЩИК" Skill="9" Strength="6"/>
 				</Enemies>
@@ -1268,39 +1268,39 @@
 		<Text>Если хотите что-нибудь купить или продать, то цены на рынке следующие:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить лошадь</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить лошадь</Button>
 				<Text>ЛОШАДЬ</Text>
 				<Price>500</Price>
 				<Multiple/>
 				<Benefit Name="Horses" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пистолет</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить шпагу</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить шпагу</Button>
 				<Text>ШПАГА</Text>
 				<Price>300</Price>
 				<Multiple/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить кинжал</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить кинжал</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пули и порох</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пули и порох</Button>
 				<Text>ПОРОХ И ПУЛИ на 3 выстрела</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -1422,8 +1422,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1522,38 +1522,38 @@
 		<Text>Торговые ряды предлагают на ваш выбор все, что только душе угодно. Если хотите купить один или несколько пистолетов, то каждый обойдется по 3 экю, шпага или кинжал два, пара прочных ботфорт — одно, пули и порох на 5 выстрелов — столько же.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пистолет</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить шпагу</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить шпагу</Button>
 				<Text>ШПАГА</Text>
 				<Price>200</Price>
 				<Multiple/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить кинжал</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить кинжал</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить ботфорты</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить ботфорты</Button>
 				<Text>БОТФОРТЫ</Text>
 				<Price>200</Price>
 				<Multiple/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пули и порох</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пули и порох</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>100</Price>
 				<Multiple/>
@@ -1718,8 +1718,8 @@
 		<Text>Киньте кубик дважды. Сумма выпавших чисел больше вашей ЛОВКОСТИ?</Text>
 		<Actions>
 			<Action>
-				<ActionName>Skill</ActionName>
-				<ButtonName>Проверить ловкость</ButtonName>
+				<Name>Skill</Name>
+				<Button>Проверить ловкость</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1833,24 +1833,24 @@
 		<Text>«Имя герцога открывает любые двери в нашем городе», — несколько высокопарно говорит мэр и приказывает слугам принести вам шпагу и 7 экю на дорогу. «Да, кстати, не соблаговолите ли вы передать письмо Его сиятельству?» Конечно же, вы соглашаетесь. «В Туре бежал опасный преступник, убийца и гугенот, — продолжает мэр, — поэтому я выпишу вам еще и пропуск». Когда все формальности позади, вы покидаете Ратушу. Если хотите, можете заглянуть на рынок. Кинжал обойдется там в 2 экю, пули и порох на 5 выстрелов во столько же, а пистолет — в 3. За полтора экю вы проводите ночь в одной из лучших гостиниц города (сон и ужин могут восстановить 2 СИЛЫ). Утром покидаете Тур и устремляетесь вперед по Орлеанской дороге. Теперь-то вы знаете, где находится герцог Майенский.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить кинжал</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить кинжал</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пули и порох</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пули и порох</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пистолет</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -1888,8 +1888,8 @@
 		<Text>Если вы о чем-то договаривались с человеком, охраняющим заключенного, то знаете, что надо делать. Иначе же — сражайтесь.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ОХРАННИК" Skill="7" Strength="9"/>
 				</Enemies>
@@ -2131,8 +2131,8 @@
 		<Text>К счастью, с вами съезжается только один всадник: другой в это время перезаряжает пистолет.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="8"/>
 				</Enemies>
@@ -2170,8 +2170,8 @@
 		<Text>Вы собираетесь быстро выхватить шпагу и пригвоздить де Мишуара к дереву, но сделать это быстро не получается — больной бок сковывает движения. Шевалье успевает достать свою шпагу и приготовиться к обороне. Во время боя вам придется уменьшать на 1 свою ЛОВКОСТЬ: недавнее падение дает о себе знать.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ШЕВАЛЬЕ ДО МИШУАР" Skill="9" Strength="8"/>
 				</Enemies>
@@ -2208,8 +2208,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2248,8 +2248,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2262,8 +2262,8 @@
 		<Text>За дверью вас встречает сам хозяин дома. Лицо его перекошено от страха, но в руке шпага — он готов драться.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ХОЗЯИН ДОМА" Skill="8" Strength="10"/>
 				</Enemies>
@@ -2278,8 +2278,8 @@
 		<Text>Вы стреляете, и головорез медленно оседает на пол. Компания, оживленно болтавшая за столом, выхватывает кинжалы и приближается к вам. Теперь придется драться со всеми одновременно. Если у вас есть второй пистолет, можете убить любого из них по своему выбору и сражаться с оставшимися.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ БРОДЯГА" Skill="6" Strength="8"/>
 					<Enemy Name="ВТОРОЙ БРОДЯГА" Skill="7" Strength="8"/>
@@ -2406,8 +2406,8 @@
 		<Text>Видя, что его помощники мертвы, тот, кто с вами разговаривал, обнажает шпагу, вскакивая на неизвестно откуда появившегося коня. У него твердая рука, вам давно не приходилось встречать столь серьезного противника.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="НЕИЗВЕСТНЫЙ" Skill="11" Strength="12"/>
 				</Enemies>
@@ -2438,8 +2438,8 @@
 		<Text>Достав шпагу, вы атакуете дикого вепря.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВЕПРЬ" Skill="10" Strength="12"/>
 				</Enemies>
@@ -2461,8 +2461,8 @@
 		<Text>В ответ вы обнажаете шпагу, и мужчина без лишних слов делает то же самое. Женщина же отступает в сторону и с ужасом следит за поединком.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ДВОРЯНИН" Skill="9" Strength="10"/>
 				</Enemies>
@@ -2477,8 +2477,8 @@
 		<Text>Увидев, что вы нападаете, двое выезжают навстречу.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="9"/>
 					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="8"/>
@@ -2528,8 +2528,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2573,8 +2573,8 @@
 		<Text>Женщина быстро выкрикивает какую-то команду, и из последней повозки выглядывает человек с двумя пистолетами в руках. Звучат выстрелы. Киньте кубик два раза и сложите выпавшие числа.</Text>
 		<Actions>
 			<Action>
-				<ActionName>FortunetellersAmbush</ActionName>
-				<ButtonName>Кинуть кубики</ButtonName>
+				<Name>FortunetellersAmbush</Name>
+				<Button>Кинуть кубики</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2588,8 +2588,8 @@
 		<Text>Все оказывается очень дешево: комната на постоялом дворе и ужин обходятся в полтора экю (если же у вас нет таких денег, то лучше все же ехать дальше).</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Переночевать и поужинать</ButtonName>
+				<Name>Get</Name>
+				<Button>Переночевать и поужинать</Button>
 				<Text>Комната на постоялом дворе</Text>
 				<Price>150</Price>
 				<Benefit Name="Strength" Value="4"/>
@@ -2637,12 +2637,12 @@
 		<Text>Он отвечает, что знает, что такое честь. Правда, он держит шпагу в левой руке, поэтому, если не умеете фехтовать левой рукой, придется уменьшить на 1 вашу ЛОВКОСТЬ. Готовясь к поединку, дворянин сбрасывает плащ и остается в зеленом камзоле. Если вам это о чем-то говорит:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Option</ActionName>
+				<Name>Option</Name>
 				<Option Destination="295" Text="Всадник в зелёном камзоле" OnlyIf="GreenCamisole" Aftertext="...если нет, — деритесь:"/>
 			</Action>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЛЕГИСТ" Skill="12" Strength="14"/>
 				</Enemies>
@@ -2703,8 +2703,8 @@
 		<Text>Вам нельзя попадаться на глаза патрулю. Если деньги при вас, то можете потратить 7 экю на то, чтобы полностью переодеться и вечером отправиться к Парижским воротам неузнанным. Если же нет, то избежать солдат губернатора вам не удастся. Вы уже побывали в тюрьме?</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Переодеться</ButtonName>
+				<Name>Get</Name>
+				<Button>Переодеться</Button>
 				<Text>ПЕРЕОДЕТЬСЯ</Text>
 				<Price>700</Price>
 			</Action>
@@ -2727,8 +2727,8 @@
 		<Text>В ладанке оказываются заключены сразу две силы — Бога и благодарной женщины. Противостоять одной из них можно, но вот двум сразу не под силу даже вашему противнику. Ощущая за вашей спиной такую поддержку, он впервые чувствует страх, понимая, что один из вас в этой битве погибнет. Его движения становятся все менее уверенными, удары запаздывают, а вы атакуете с новыми силами.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЛЕГИСТ" Skill="7" Strength="8"/>
 				</Enemies>
@@ -2936,8 +2936,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2950,12 +2950,12 @@
 		<Text>Вы узнаете того самого дворянина, которого уже встречали, быть может, даже не один раз. Если вы знаете его имя:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Option</ActionName>
+				<Name>Option</Name>
 				<Option Destination="464" Text="Назвать герцога по имени" OnlyIf="DukeName" Aftertext="...если нет, — деритесь. Однако перед боем противник быстро перекладывает шпагу в левую руку, и если вы не владеете аналогичным искусством фехтования, придется на время поединка вычитать у себя 1 ЛОВКОСТЬ."/>
 			</Action>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЛЕГИСТ" Skill="12" Strength="14"/>
 				</Enemies>
@@ -3018,8 +3018,8 @@
 		<Text>Вы уже столько раз попадали в ловушки, расставленные Лигой, что на этот раз гнев одерживает победу над здравым смыслом.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ШЕВАЛЬЕ ДЕ БУАЗО" Skill="8" Strength="8"/>
 				</Enemies>
@@ -3045,8 +3045,8 @@
 		<Text>Выхватив шпагу, перерубаете пополам змею, обвившую ногу Арбалета. Остаются еще две. Киньте за каждую из них кубик два раза и проверьте не выпали ли одинаковые числа.</Text>
 		<Actions>
 			<Action>
-				<ActionName>DicesDoubles</ActionName>
-				<ButtonName>Проверить на дубли</ButtonName>
+				<Name>DicesDoubles</Name>
+				<Button>Проверить на дубли</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3089,8 +3089,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3237,8 +3237,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3291,8 +3291,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3319,8 +3319,8 @@
 		<Text>Подняв коня на дыбы, выхватываете аркебузу из рук лакея прежде, чем он успевает понять, что произошло. Двое других накидываются на вас с палками.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ СЛУГА" Skill="6" Strength="8"/>
 					<Enemy Name="ВТОРОЙ СЛУГА" Skill="6" Strength="7"/>
@@ -3424,8 +3424,8 @@
 		<Text>Обнажив шпагу, резко делаете первый выпад; головорез рычит от боли и кидается вперед.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="БРОДЯГА" Skill="8" Strength="6"/>
 				</Enemies>
@@ -3518,39 +3518,39 @@
 		<Text>До Люберсака, стоящего на реке Везер, все обходится без приключений. В этом городке есть небольшой рынок, где вы можете пополнить свои запасы или, наоборот, что-то продать, если нужны деньги. Пистолет стоит 3 экю, шпага или кинжал — 2, пули и порох на 4 выстрела — одно, аркебуза — полтора. После этого стоит побыстрее отправиться дальше, чтобы засветло добраться до Лиможа.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пистолет</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить шпагу</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить шпагу</Button>
 				<Text>ШПАГА</Text>
 				<Price>200</Price>
 				<Multiple/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить кинжал</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить кинжал</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пули и порох</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пули и порох</Button>
 				<Text>ПОРОХ И ПУЛИ на 4 выстрела</Text>
 				<Price>100</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="4"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить аркебузу</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить аркебузу</Button>
 				<Text>АРКЕБУЗА</Text>
 				<Price>150</Price>
 				<Multiple/>
@@ -3565,24 +3565,24 @@
 		<Text>В Люзиньяне все тихо и спокойно, нападать на вас никто не собирается. Если можете потратить на ночлег экю, выберите гостиницу побогаче и восстановите 2 СИЛЫ:</Text>	
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать побогаче</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать побогаче</Button>
 				<Text>Гостиница побогаче</Text>
 				<Price>100</Price>
 				<Benefit Name="Strength" Value="2"/>
 				<Aftertext>Если выделите только полэкю — придется довольствоваться тем, что похуже и восстановить только 1:</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Выбрать подешевле</ButtonName>
+				<Name>Get</Name>
+				<Button>Выбрать подешевле</Button>
 				<Text>Гостиница похуже</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="1"/>
 				<Aftertext>Кроме того, вспомните, успели ли вы сегодня хотя бы один раз поесть. Если нет, потеряйте 3 СИЛЫ, однако только в том случае, если не удастся найти ничего съедобного. Для этого есть два пути: если осталось еще что-то с собой или если есть полэкю на еду. В последнем случае ужин принесут прямо в номер, и сможете восстановить 2 СИЛЫ:</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Заказать еду</ButtonName>
+				<Name>Get</Name>
+				<Button>Заказать еду</Button>
 				<Text>Еда в номер</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="2"/>
@@ -3641,8 +3641,8 @@
 		<Text>Нет такого охотника, который не знал бы, что вепрю надо обязательно попасть в глаз. Туда-то вы и целитесь. Киньте кубик два раза и сравните сумму выпавших на нем чисел со своей ЛОВКОСТЬЮ:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Skill</ActionName>
-				<ButtonName>Проверить ловкость</ButtonName>
+				<Name>Skill</Name>
+				<Button>Проверить ловкость</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3789,8 +3789,8 @@
 		<Text>Выстрел попадает в цель, вы же скрещиваете шпаги со вторым.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ КАВАЛЕРИСТ" Skill="7" Strength="8"/>
 				</Enemies>
@@ -3840,8 +3840,8 @@
 		<Text></Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ЧЕЛОВЕК С ТОПОРОМ" Skill="8" Strength="8"/>
 					<Enemy Name="ВТОРОЙ ЧЕЛОВЕК С ТОПОРОМ" Skill="7" Strength="6"/>
@@ -3908,8 +3908,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3938,8 +3938,8 @@
 		<Text>Всего за одно экю вас сытно накормят в трактире «Молодой король».</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Сытно поесть</ButtonName>
+				<Name>Get</Name>
+				<Button>Сытно поесть</Button>
 				<Text>Еда</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="2"/>
@@ -3986,8 +3986,8 @@
 		<Text>Вот и застава. Около небольшого домика стоит одинокий часовой. Увидев вас, он решительно выходит на середину дороги, делая знак остановиться. Узнали вас или нет, лучше всего это не выяснять, а нападать первым. Вы обнажаете шпагу.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЧАСОВОЙ" Skill="7" Strength="8"/>
 				</Enemies>
@@ -4003,8 +4003,8 @@
 		<Text></Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ШЕВАЛЬЕ ДЕ МИШУАР" Skill="9" Strength="8"/>
 				</Enemies>
@@ -4026,8 +4026,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4064,8 +4064,8 @@
 		<Text>Арбалет будто понимает ваше желание избежать встречи со всадниками и делает все, что может. До Каора еще 12 лье. Теперь придется определить, чьи лошади быстрее. Киньте кубик сначала за себя, а потом за преследователей. Выигрывает тот, у кого число, выпавшее на кубике, оказывается больше. Так вам придется сделать 12 раз.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Pursuit</ActionName>
-				<ButtonName>Погоня</ButtonName>
+				<Name>Pursuit</Name>
+				<Button>Погоня</Button>
 				<Aftertext>В итоге если большее количество раз выиграли вы, то вас не догнали, если они, то наоборот. Однако если вы проиграли три раза подряд, то всадникам без труда удается нагнать вас.</Aftertext>
 			</Action>
 		</Actions>
@@ -4138,8 +4138,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4203,8 +4203,8 @@
 		<Text>Если у вас есть полэкю, то можете позавтракать (если нет, то придется уехать на голодный желудок).</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Позавтракать</ButtonName>
+				<Name>Get</Name>
+				<Button>Позавтракать</Button>
 				<Text>Еда</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="1"/>
@@ -4276,8 +4276,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4353,8 +4353,8 @@
 		<Text>На помощь приходит старый трюк. Насадив шляпу на кончик шпаги, высовываете ее из дверцы. Солдаты только этого и ждут. Три выстрела — и их мушкеты разряжены. Быстро доплыв до берега (один или с помощью Арбалета), видите лежащий прямо у воды пистолет (наверно, его обронил кучер), стреляете из него в упор в ближайшего же солдата и кидаетесь в бой.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ СОЛДАТ" Skill="6" Strength="6"/>
 					<Enemy Name="ВТОРОЙ СОЛДАТ" Skill="7" Strength="6"/>
@@ -4412,8 +4412,8 @@
 		<Text>Из-под ряс появляются шпаги и кинжалы. Если у вас с собой кинжала нет, во время боя придется вычитать у себя 1 ЛОВКОСТЬ. И лучше было бы спешиться: хотя у всадника есть много преимуществ, монахи могут пропороть брюхо коню, и результат будет примерно тот же.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ МОНАХ" Skill="7" Strength="8"/>
 					<Enemy Name="ВТОРОЙ МОНАХ" Skill="7" Strength="7"/>
@@ -4529,8 +4529,8 @@
 		<Text>Волки атакуют, не давая вам времени передумать.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВОЛК" Skill="7" Strength="10"/>
 					<Enemy Name="ВОЛЧИЦА" Skill="6" Strength="8"/>
@@ -4557,32 +4557,32 @@
 		<Text>Если хотите купить пистолет, то он обойдется вам в 3 экю, лошадь — в 5, кинжал или пули и порох на 4 выстрела — в 2. Покупайте все, что хотите, после чего можете либо заглянуть в трактир и подкрепиться, либо покинуть город.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пистолет</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить лошадь</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить лошадь</Button>
 				<Text>ЛОШАДЬ</Text>
 				<Price>500</Price>
 				<Multiple/>
 				<Benefit Name="Horses" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить кинжал</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить кинжал</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пули и порох</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пули и порох</Button>
 				<Text>ПОРОХ И ПУЛИ на 4 выстрела</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -4680,8 +4680,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4694,8 +4694,8 @@
 		<Text>Неожиданно для самого себя, слышите свой голос раньше, чем успеваете понять, что происходит. «Герцог де Лавалетт, убийца моего отца, я вызываю тебя на поединок». Герцог отшатывается как от удара, опускает шпагу, но, понимая, что пощады не будет, вновь поднимает ее и идет вперед. Он дерется механически, как бы сам не сознавая, что делает, и вы без труда парируете неуверенные удары.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГЕРЦОГ ДЕ ЛАВЕЛЕТТ" Skill="6" Strength="14"/>
 				</Enemies>
@@ -4743,8 +4743,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4948,8 +4948,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4969,8 +4969,8 @@
 		<Text>Итак, дуэль. Вы отходите в сторону от дороги и встаете в позицию. Граф, наверняка, достаточно сильный противник, но ведь вы сами виноваты в том, что произошло.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГРАФ МОРТОН" Skill="10" Strength="12"/>
 				</Enemies>
@@ -5004,8 +5004,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5026,8 +5026,8 @@
 		<Text>Вам повезло: остались живы и, в конце концов, скрыться удалось. Ну, в самом деле, кто же всего за 2 экю будет рисковать своим местом? Гораздо проще тут же пойти к начальнику тюрьмы и получить втрое больше за раскрытие подготовленного побега. Если у вас с собой две лошади, то вторую все равно не спасти: в неразберихе она убегает прочь и, наверно, достанется более удачливому хозяину. А теперь давайте посчитаем, во что вам обошлась попытка принять бой. Киньте кубик дважды и вычтите сумму выпавших чисел из своей СИЛЫ. Именно столько крови потеряно от ран, полученных в бою.</Text>
 		<Actions>
 			<Action>
-				<ActionName>DiceDoubleWound</ActionName>
-				<ButtonName>Кинуть кубики</ButtonName>
+				<Name>DiceDoubleWound</Name>
+				<Button>Кинуть кубики</Button>
 				<Aftertext>Если ваша СИЛА стала равна нулю или даже еще меньше, то вы от них и скончались, если же жизнь еще теплится в вашем теле, то поторопитесь покинуть Ангулем: трудно представить себе, чтобы вас не искали. Или хотите все же попробовать освободить своего единоверца на следующий день?</Aftertext>
 			</Action>
 		</Actions>
@@ -5121,8 +5121,8 @@
 		<Text>«Вот они! Вот они!» — кричит он, когда на дороге появляются двое мужчин самого зловещего вида, несущиеся верхом во весь опор. Делать нечего, придется принимать бой.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ УБИЙЦА" Skill="9" Strength="8"/>
 					<Enemy Name="ВТОРОЙ УБИЙЦА" Skill="8" Strength="7"/>
@@ -5160,8 +5160,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5192,8 +5192,8 @@
 		<Text></Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ СОЛДАТ" Skill="7" Strength="8"/>
 					<Enemy Name="ВТОРОЙ СОЛДАТ" Skill="6" Strength="8"/>
@@ -5216,8 +5216,8 @@
 		<Text>«Проклятый шпион», — рычите вы, выхватывая шпагу. Граф удивлен, но готов защищаться.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГРАФ МОРТОН" Skill="10" Strength="12"/>
 				</Enemies>
@@ -5261,8 +5261,8 @@
 		<Text>Пока вы деретесь, вся остальная компания молча наблюдает за вашей схваткой. Но вот она окончена, и друзья бродяги, собираясь отомстить за товарища, выхватывают кинжалы и приближаются к вам.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ОБОРВАНЕЦ" Skill="6" Strength="8"/>
 					<Enemy Name="ВТОРОЙ ОБОРВАНЕЦ" Skill="7" Strength="8"/>
@@ -5310,8 +5310,8 @@
 		<Text>К вечеру вы въезжаете в Перигё. Если хотите, можете заехать на рынок. Иначе же постоялый двор с многообещающим названием «Корона для принца» к вашим услугам. Заплатив полтора экю, получаете сытный ужин (можете восстановить 2 СИЛЫ):</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Поужинать</ButtonName>
+				<Name>Get</Name>
+				<Button>Поужинать</Button>
 				<Text>Ужин</Text>
 				<Price>150</Price>
 				<Benefit Name="Strength" Value="2"/>
@@ -5344,8 +5344,8 @@
 		<Text>Решив, что все равно потеряно много и времени, и сил, решаете вернуться в трактир, чтобы по крайней мере сегодня не думать больше о еде. За полэкю вам подают прекрасный завтрак (можете восстановить 2 СИЛЫ).</Text>	
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Позавтракать</ButtonName>
+				<Name>Get</Name>
+				<Button>Позавтракать</Button>
 				<Text>Завтра</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="2"/>
@@ -5362,8 +5362,8 @@
 		<Text></Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ КАВАЛЕРИСТ" Skill="7" Strength="9"/>
 					<Enemy Name="ВТОРОЙ КАВАЛЕРИСТ" Skill="7" Strength="8"/>
@@ -5380,8 +5380,8 @@
 		<Text>Ранним утром, размышляя о том, как бы раздобыть денег и шпагу, совершенно случайно сталкиваетесь нос к носу с солдатом ночной стражи, возвращающимся домой после дежурства. Вы уже настолько голодны и разъярены, что не раздумывая бросаетесь на него с голыми руками.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СОЛДАТ" Skill="7" Strength="8"/>
 				</Enemies>
@@ -5424,8 +5424,8 @@
 		<Text>Пуля попадает прямо в грудь первому из них, и он на всем скаку валится на землю. Остается второй.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="10"/>
 				</Enemies>
@@ -5497,8 +5497,8 @@
 		<Text>Если вы сегодня еще ничего не ели, то подумайте об этом. Если есть что-то с собой, — поужинайте, если вместо этого есть еще полэкю — попросите принести еду в номер и восстановите 2 СИЛЫ.</Text>	
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Поужинать</ButtonName>
+				<Name>Get</Name>
+				<Button>Поужинать</Button>
 				<Text>Ужин</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="2"/>
@@ -5562,39 +5562,39 @@
 		<Text>Если хотите купить пистолет, то он стоит 4 экю, шпага — 3, пули и порох на пять выстрелов — тоже 3, кинжал — 2, лошадь — 6. Де Мишуар советует купить хороший кинжал и пистолет — вещи в дороге необходимые. Последуете его совету или нет, делайте необходимые покупки и торопитесь дальше.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пистолет</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>400</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить шпагу</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить шпагу</Button>
 				<Text>ШПАГА</Text>
 				<Price>300</Price>
 				<Multiple/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пули и порох</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пули и порох</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить кинжал</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить кинжал</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить лошадь</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить лошадь</Button>
 				<Text>ЛОШАДЬ</Text>
 				<Price>600</Price>
 				<Multiple/>
@@ -5643,8 +5643,8 @@
 		<Text>Вы забыли только об одном: вас ищут, и в городе оставаться небезопасно.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5812,8 +5812,8 @@
 		<Text>Быстро взбежав по лестнице на второй этаж, ожидаете увидеть нерадивую служанку, но вместо этого вас встречает пистолетный выстрел. Едва увернувшись (пуля все же задевает левую руку — потеряйте 2 СИЛЫ), врываетесь в комнату, полную порохового дыма и видите улыбающегося молодого дворянина в легкой кольчуге, который поджидает вас со шпагой в руках. Так и есть: Лига! Во время боя если за вас на кубике выпадает тройка, то вам не удается благодаря кольчуге ранить противника, даже если ваша Сила удара и получится выше.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="МОЛОДОЙ ДВОРЯНИН" Skill="8" Strength="8"/>
 				</Enemies>
@@ -5865,8 +5865,8 @@
 		<Text>Проверьте свою удачу:</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -6150,39 +6150,39 @@
 		<Text>Шартрский рынок поражает как изобилием товара, так и ценами. Лошадь здесь стоит 6 экю, пистолет — 4, шпага — 3, столько же кинжал, а также пули и порох на пять выстрелов. После того, как купили все, что нужно, вы возвращаетесь на площадь.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить лошадь</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить лошадь</Button>
 				<Text>ЛОШАДЬ</Text>
 				<Price>600</Price>
 				<Multiple/>
 				<Benefit Name="Horses" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пистолет</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>400</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить шпагу</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить шпагу</Button>
 				<Text>ШПАГА</Text>
 				<Price>300</Price>
 				<Multiple/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить кинжал</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить кинжал</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пули и порох</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пули и порох</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -6213,8 +6213,8 @@
 		<Text>Развернув Арбалета, бросаетесь в бой.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГОНЕЦ" Skill="7" Strength="8"/>
 				</Enemies>
@@ -6236,8 +6236,8 @@
 		<Text>Вместе с Арбалетом забираетесь в пещерку и слышите, как стук копыт усиливается, кони проносятся мимо, и их ржание стихает вдали. Можно выбираться, но тут вы замечаете, что в пещере есть еще несколько живых существ, причем, скорее всего, это ее хозяева. На полу шевелятся растревоженные вашим появлением змеи, отдыхающие после ночной охоты. Одна из них уже обвилась вокруг копыта Арбалета и ползет вверх по ноге, а две готовятся напасть на вас.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Luck</ActionName>
-				<ButtonName>Проверить удачу</ButtonName>
+				<Name>Luck</Name>
+				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -6259,32 +6259,32 @@
 		<Text>Пистолет в Туре стоит два с половиной экю; порох и пули на каждые пять выстрелов — полтора экю, кинжал — 3, еда в дорогу — 2 экю за каждые 2 СИЛЫ.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пистолет</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>250</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пули и порох</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пули и порох</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>150</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить кинжал</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить кинжал</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить еды</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить еды</Button>
 				<Text>ЕДА В ДОРОГУ</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -6302,16 +6302,16 @@
 		<Text>Гостиница обойдется в 1 экю (крепкий и спокойный сон прибавит 2 СИЛЫ).</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Переночевать</ButtonName>
+				<Name>Get</Name>
+				<Button>Переночевать</Button>
 				<Text>Гостиница</Text>
 				<Price>100</Price>
 				<Benefit Name="Strength" Value="2"/>
 				<Aftertext>Если же добавите еще экю, тогда можете поужинать (ужин восстановит 3 СИЛЫ, но если от него отказаться, ничего в этот день не ев, то столько же придется потерять).</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Заказать ужин</ButtonName>
+				<Name>Get</Name>
+				<Button>Заказать ужин</Button>
 				<Text>Ужин</Text>
 				<Price>100</Price>
 				<Benefit Name="Strength" Value="3"/>
@@ -6378,39 +6378,39 @@
 		<Text>Если хотите что-нибудь купить или продать, то цены в Орлеане следующие: пистолет — 3 экю, шпага или кинжал — 4, пули и порох на пять выстрелов — полтора, еда 2 экю (каждая порция восстановит впоследствии 2 СИЛЫ). После этого вы направляетесь к центру города.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пистолет</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить шпагу</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить шпагу</Button>
 				<Text>ШПАГА</Text>
 				<Price>400</Price>
 				<Multiple/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить кинжал</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить кинжал</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>400</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пули и порох</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пули и порох</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>150</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить еды</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить еды</Button>
 				<Text>ЕДА</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -6562,39 +6562,39 @@
 		<Text>Пистолет здесь обойдется вам в 4 экю, шпага — в 3, во столько же пули и порох на пять выстрелов, кинжал — в 2, лошадь — в 6. После этого вы едете дальше.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пистолет</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пистолет</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>400</Price>
 				<Multiple/>
 				<Benefit Name="Pistols" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить шпагу</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить шпагу</Button>
 				<Text>ШПАГА</Text>
 				<Price>300</Price>
 				<Multiple/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить пули и порох</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить пули и порох</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить кинжал</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить кинжал</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="Daggers" Value="1"/>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Купить лошадь</ButtonName>
+				<Name>Get</Name>
+				<Button>Купить лошадь</Button>
 				<Text>ЛОШАДЬ</Text>
 				<Price>600</Price>
 				<Multiple/>
@@ -6656,12 +6656,12 @@
 		<Text>Недалеко от Вандома вас нагоняет всадник. Он представляется посланцем губернатора Тура и требует, чтобы вы немедленно вернулись в город.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Option</ActionName>
+				<Name>Option</Name>
 				<Option Destination="476" Text="Подчинитесь" Aftertext="Или будете драться с ним?"/>
 			</Action>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПОСЛАНЕЦ ГУБЕРНАТОРА" Skill="9" Strength="8"/>
 				</Enemies>
@@ -6706,8 +6706,8 @@
 		<Text>Только углубились в чащу, как новое препятствие: голодный медведь, не нагулявший еще перед зимней спячкой достаточно жира, хочет прибавить вас к числу своих припасов. Попытаетесь убежать, вернувшись на дорогу, или примете бой?</Text>
 		<Actions>
 			<Action>
-				<ActionName>Fight</ActionName>
-				<ButtonName>Сражаться</ButtonName>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="МЕДВЕДЬ" Skill="1" Strength="8"/>
 				</Enemies>
@@ -6731,36 +6731,36 @@
 		<Text>Прежде чем прибыть ко двору и предстать перед королем, вы могли обучиться одному из следующих искусств. Помните: времени было мало, поэтому вы успели овладеть только ОДНИМ искусством. Конечно, первый раз выбор придется делать, полагаясь только на интуицию, но ведь никто не мешает в следующий раз попробовать научиться чему-нибудь другому.</Text>
 		<Actions>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Обучиться тайному удару</ButtonName>
+				<Name>Get</Name>
+				<Button>Обучиться тайному удару</Button>
 				<MeritalArt>SecretBlow</MeritalArt>
 				<Text>ТАЙНЫЙ УДАР ШПАГОЙ</Text>
 				<Aftertext>Среди фехтовальщиков и дуэлянтов всегда ходили легенды о существовании ударов, которые невозможно отразить. Они приносили настоящему мастеру верную победу в поединке. Одним из таких ударов можете овладеть вы. Вы сможете сразу вычесть у своего противника 4 СИЛЫ. Но сделать это во время схватки можно только один раз. Ведь после этого враг узнает о вашем секрете и сможет парировать выпад.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Обучиться бою со шпагой и кинжалом</ButtonName>
+				<Name>Get</Name>
+				<Button>Обучиться бою со шпагой и кинжалом</Button>
 				<MeritalArt>SwordAndDagger</MeritalArt>
 				<Text>БОЙ СО ШПАГОЙ И КИНЖАЛОМ</Text>
 				<Aftertext>Овладев этим искусством, вы сможете во время поединка взять в левую руку кинжал и наносить им удары по не владеющему подобным умением противнику. Конечно, для честной дуэли это не слишком-то подходит, но в бою может не раз сохранить вам жизнь. Каждый раз, когда у вас на кубике выпадет четное число, считайте, что вы сумели воспользоваться кинжалом. В этом случае, если раунд атаки вы выиграли, вычтите у противника не 2, а 3 СИЛЫ; если же проиграли, то вычитаете 2 СИЛЫ не только у себя, но и у противника.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Обучиться стрельбе с двух рук</ButtonName>
+				<Name>Get</Name>
+				<Button>Обучиться стрельбе с двух рук</Button>
 				<MeritalArt>TwoPistols</MeritalArt>
 				<Text>СТРЕЛЬБА ИЗ ДВУХ ПИСТОЛЕТОВ</Text>
 				<Aftertext>Выстрелить из пистолета в XVI веке было делом непростым. Тем более, одновременно прицельно выстрелить из двух пистолетов. Однако вы можете научиться и этому искусству. При этом сможете направить оружие как на разных врагов, так и на одного. В последнем случае, конечно, убить одного человека два раза невозможно, но если один из пистолетов промахнётся, то у вас будет ещё один шанс. Обратите внимание: в том случае, если вы не владеете этим искусством, но у вас есть два пистолета, то будет возможность выстрелить из них только по очереди. Причем вряд ли такой случай представится, ведь после первого же выстрела придется скрестить шпаги со своими врагами, и времени поменять пистолет уже не будет.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Обучиться фехтованию левой рукой</ButtonName>
+				<Name>Get</Name>
+				<Button>Обучиться фехтованию левой рукой</Button>
 				<MeritalArt>LefthandFencing</MeritalArt>
 				<Text>ФЕХТОВАНИЕ ЛЕВОЙ РУКОЙ</Text>
 				<Aftertext>Если вас ранили в правую руку, то волей-неволей лучше взять шпагу в левую. Если вы не овладели этим искусством, то придется до тех пор, пока рана не заживет, уменьшать свою ЛОВКОСТЬ, а это может быть весьма опасно для жизни. Те же правила будут действовать, когда ваш противник — левша. Неподготовленному человеку в таких случаях приходится нелегко: ведь удары приходится парировать совсем по-другому.</Aftertext>
 			</Action>
 			<Action>
-				<ActionName>Get</ActionName>
-				<ButtonName>Обучиться плаванию</ButtonName>
+				<Name>Get</Name>
+				<Button>Обучиться плаванию</Button>
 				<MeritalArt>Swimming</MeritalArt>
 				<Text>ПЛАВАНИЕ</Text>
 				<Aftertext>В небольшом имении, где вы выросли, не было ни пруда, ни реки, поэтому плавать вы так и не научились. Но никогда не поздно наверстать упущенное. Конечно, реку можно переплыть и держась за лошадь, а того проще перейти по мосту, но кто знает, какие приключения ждут впереди.</Aftertext>
