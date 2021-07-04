@@ -84,7 +84,7 @@
 		<Options>
 			<Option Destination="34" Text="Оглушить дежурного, пока он не успел набрать номер"/>
 			<Option Destination="4" Text="Дождаться конца телефонного разговора"/>
-			<Option Destination="37" Text="Предъявить мандат" OnlyIf="Идти на КПП"/>
+			<Option Destination="37" Text="Предъявить мандат" OnlyIf="Mt"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
