@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.VWeapons
         public bool Dogfight { get; set; }
         public int Value { get; set; }
         public int Time { get; set; }
+        public bool DamagedWeapon { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -319,9 +320,9 @@ namespace Seeker.Gamebook.VWeapons
                 FightEnemies.Add(enemy.Clone());
 
             Character hero = Character.Protagonist;
-
-            bool dogFightHero = Dogfight || (hero.Cartridges <= 0) || (hero.Accuracy <= 0);
-            bool dogfight = Dogfight || (NoMoreCartridges(FightEnemies) && hero.Cartridges <= 0);
+            
+            bool dogFightHero, dogfight = Dogfight || (NoMoreCartridges(FightEnemies) && hero.Cartridges <= 0);
+            int damagedWeapon = 2;
 
             while (true)
             {
@@ -336,10 +337,20 @@ namespace Seeker.Gamebook.VWeapons
                     if (enemy.First && EnemyAttack(hero, enemy, ref fight))
                         return fight;
 
+                    if (DamagedWeapon)
+                        dogFightHero = (damagedWeapon <= 0);
+                    else
+                        dogFightHero = Dogfight || (hero.Cartridges <= 0) || (hero.Accuracy <= 0);
+
                     if (!dogFightHero)
                     {
-                        fight.Add("Вы стреляете.");
-                        hero.Cartridges -= 1;
+                        fight.Add(String.Format("Вы стреляете{0}.", DamagedWeapon ? " трижды" : String.Empty));
+
+                        if (DamagedWeapon)
+                            damagedWeapon -= 1;
+                        else
+                            hero.Cartridges -= 1;
+
                         enemy.Hitpoints -= hero.Accuracy;
                         fight.Add(String.Format("GOOD|Ваш выстрел отнимает у него {0} ед. здоворья.", hero.Accuracy));
                     }
