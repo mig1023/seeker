@@ -1554,7 +1554,7 @@
 			<Action>
 				<Name>Get</Name>
 				<Button>Купить пули и порох</Button>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>100</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
@@ -1843,7 +1843,7 @@
 			<Action>
 				<Name>Get</Name>
 				<Button>Купить пули и порох</Button>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>200</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
@@ -5579,7 +5579,7 @@
 			<Action>
 				<Name>Get</Name>
 				<Button>Купить пули и порох</Button>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
@@ -6183,7 +6183,7 @@
 			<Action>
 				<Name>Get</Name>
 				<Button>Купить пули и порох</Button>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
@@ -6269,7 +6269,7 @@
 			<Action>
 				<Name>Get</Name>
 				<Button>Купить пули и порох</Button>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>150</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
@@ -6403,7 +6403,7 @@
 			<Action>
 				<Name>Get</Name>
 				<Button>Купить пули и порох</Button>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>150</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
@@ -6579,7 +6579,7 @@
 			<Action>
 				<Name>Get</Name>
 				<Button>Купить пули и порох</Button>
-				<Text>ПОРОХ И ПУЛИ на 5 выстрела</Text>
+				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>300</Price>
 				<Multiple/>
 				<Benefit Name="BulletsAndGubpowder" Value="5"/>
