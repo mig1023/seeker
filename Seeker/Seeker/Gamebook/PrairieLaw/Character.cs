@@ -147,8 +147,10 @@ namespace Seeker.Gamebook.PrairieLaw
             foreach (bool luck in Luck.Values.ToList())
                 lucks.Add(luck ? "1" : "0");
 
+            string skins = (Character.Protagonist.AnimalSkins.Count == 0 ? String.Empty : String.Join(",", AnimalSkins));
+
             return String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Charm, Cents, Cartridges,
-                String.Join(",", lucks), String.Join(",", AnimalSkins), Nuggets);
+                String.Join(",", lucks), skins, Nuggets);
         }
 
         public override void Load(string saveLine)

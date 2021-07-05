@@ -71,7 +71,6 @@ namespace Seeker.Gamebook.PrairieLaw
 
             else
             {
-
                 foreach (string oneOption in option.Split(','))
                 {
                     if (oneOption.Contains("="))
