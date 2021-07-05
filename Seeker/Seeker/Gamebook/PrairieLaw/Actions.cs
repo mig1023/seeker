@@ -20,7 +20,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public string SellPrices { get; set; }
         public string RemoveTrigger { get; set; }
 
-        private double ToDollars(int cents) => (double)cents / 100;
+        private string ToDollars(int cents) => String.Format("{0:f2}", (double)cents / 100).TrimEnd('0').TrimEnd(',').Replace(',', '.');
 
         public override List<string> Status() => new List<string>
         {
