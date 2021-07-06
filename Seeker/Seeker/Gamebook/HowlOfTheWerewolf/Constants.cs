@@ -15,11 +15,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             [ButtonTypes.Main] = "#383e3b",
             [ButtonTypes.Action] = "#516f72",
-            [ButtonTypes.Option] = "#696969",
+            [ButtonTypes.Option] = "#738b8e",
+            [ButtonTypes.Continue] = "#738b8e",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
+            [ColorTypes.Background] = "#c2cccd",
             [ColorTypes.StatusBar] = "#253130",
             [ColorTypes.AdditionalStatus] = "#a8b7b8",
             [ColorTypes.ActionBox] = "#a8b7b8",
