@@ -21,9 +21,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.ActionBox] = "#f9f2e8",
+            [ColorTypes.Background] = "#f9f2e8",
+            [ColorTypes.ActionBox] = "#f3e5d1",
             [ColorTypes.StatusBar] = "#bcaa8f",
             [ColorTypes.StatusFont] = "#000000",
+            [ColorTypes.AdditionalStatus] = "#d0c3b0",
         };
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1 };
