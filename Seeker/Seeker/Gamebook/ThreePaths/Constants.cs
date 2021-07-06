@@ -15,11 +15,15 @@ namespace Seeker.Gamebook.ThreePaths
         {
             [ButtonTypes.Main] = "#009999",
             [ButtonTypes.Option] = "#009999",
-            [ButtonTypes.Action] = "#005b5b",
+            [ButtonTypes.Action] = "#004848",
+            [ButtonTypes.Continue] = "#7fcccc",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
+            [ColorTypes.Font] = "#ccdddd",
+            [ColorTypes.Background] = "#007b7b",
+            [ColorTypes.ActionBox] = "#6f9f9f",
             [ColorTypes.StatusBar] = "#007a7a",
         };
     }
