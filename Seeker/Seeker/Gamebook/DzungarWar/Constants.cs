@@ -13,18 +13,18 @@ namespace Seeker.Gamebook.DzungarWar
 
         public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#4a8026",
-            [ButtonTypes.Action] = "#339933",
-            [ButtonTypes.Option] = "#696969",
-            [ButtonTypes.Continue] = "#a8c196",
+            [ButtonTypes.Main] = "#93684f",
+            [ButtonTypes.Action] = "#8c7254",
+            [ButtonTypes.Option] = "#a88672",
+            [ButtonTypes.Continue] = "#b99e8e",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.Background] = "#c3dcc6",
-            [ColorTypes.ActionBox] = "#7cb281",
-            [ColorTypes.StatusBar] = "#005100",
-            [ColorTypes.AdditionalStatus] = "#99b999",
+            [ColorTypes.Background] = "#f1e6d1",
+            [ColorTypes.ActionBox] = "#af8f69",
+            [ColorTypes.StatusBar] = "#dcc18c",
+            [ColorTypes.AdditionalStatus] = "#e3cda3",
         };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 660 };

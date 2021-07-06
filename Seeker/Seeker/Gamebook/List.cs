@@ -80,7 +80,7 @@ namespace Seeker.Gamebook
                 Save = DzungarWar.Character.Protagonist.Save,
                 Load = DzungarWar.Character.Protagonist.Load,
                 SmallDisclaimer = "Владимир Сизиков, 2016",
-                BookColor = "#4a8026",
+                BookColor = "#533818",
                 Illustration = "DzungarWar.jpg",
                 ShowDisabledOption = true,
             },
