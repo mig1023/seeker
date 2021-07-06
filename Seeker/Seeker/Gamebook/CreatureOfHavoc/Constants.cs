@@ -21,6 +21,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
+            [ColorTypes.Background] = "#c9d7d0",
             [ColorTypes.StatusBar] = "#0e3b24",
         };
     }
