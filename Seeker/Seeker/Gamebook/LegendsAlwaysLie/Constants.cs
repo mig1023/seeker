@@ -15,11 +15,13 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             [ButtonTypes.Main] = "#911",
             [ButtonTypes.Action] = "#ba2020",
-            [ButtonTypes.Option] = "#696969",
+            [ButtonTypes.Option] = "#cc8888",
+            [ButtonTypes.Continue] = "#cc8888",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
+            [ColorTypes.Background] = "#f5e7e5",
             [ColorTypes.StatusBar] = "#870808",
             [ColorTypes.AdditionalStatus] = "#b70b0b",
             [ColorTypes.AdditionalFont] = "#ffffff",
