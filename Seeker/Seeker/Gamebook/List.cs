@@ -133,6 +133,21 @@ namespace Seeker.Gamebook
                 Illustration = "SwampFever.jpg",
             },
 
+            ["Наставники всегда правы"] = new Description
+            {
+                XmlBook = "Gamebooks/MentorsAreAlwaysRight.xml",
+                Protagonist = MentorsAreAlwaysRight.Character.Protagonist.Init,
+                CheckOnlyIf = MentorsAreAlwaysRight.Actions.StaticInstance.CheckOnlyIf,
+                Paragraphs = MentorsAreAlwaysRight.Paragraphs.StaticInstance,
+                Actions = MentorsAreAlwaysRight.Actions.StaticInstance,
+                Constants = MentorsAreAlwaysRight.Constants.StaticInstance,
+                Save = MentorsAreAlwaysRight.Character.Protagonist.Save,
+                Load = MentorsAreAlwaysRight.Character.Protagonist.Load,
+                SmallDisclaimer = "Роман Островерхов, 2011",
+                BookColor = "#3662ae",
+                Illustration = "MentorsAreAlwaysRight.jpg",
+            },
+
             ["Легенды всегда врут"] = new Description
             {
                 XmlBook = "Gamebooks/LegendsAlwaysLie.xml",
