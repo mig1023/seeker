@@ -337,10 +337,10 @@
     <AndroidResource Include="Resources\drawable\VWeapons_Plan.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Gamebooks\MentorsAreAlwaysRight.xml" />
+    <AndroidAsset Include="Assets\Gamebooks\MentorsAlwaysRight.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\MentorsAreAlwaysRight.jpg" />
+    <AndroidResource Include="Resources\drawable\MentorsAlwaysRight.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

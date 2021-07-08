@@ -135,17 +135,17 @@ namespace Seeker.Gamebook
 
             ["Наставники всегда правы"] = new Description
             {
-                XmlBook = "Gamebooks/MentorsAreAlwaysRight.xml",
-                Protagonist = MentorsAreAlwaysRight.Character.Protagonist.Init,
-                CheckOnlyIf = MentorsAreAlwaysRight.Actions.StaticInstance.CheckOnlyIf,
-                Paragraphs = MentorsAreAlwaysRight.Paragraphs.StaticInstance,
-                Actions = MentorsAreAlwaysRight.Actions.StaticInstance,
-                Constants = MentorsAreAlwaysRight.Constants.StaticInstance,
-                Save = MentorsAreAlwaysRight.Character.Protagonist.Save,
-                Load = MentorsAreAlwaysRight.Character.Protagonist.Load,
+                XmlBook = "Gamebooks/MentorsAlwaysRight.xml",
+                Protagonist = MentorsAlwaysRight.Character.Protagonist.Init,
+                CheckOnlyIf = MentorsAlwaysRight.Actions.StaticInstance.CheckOnlyIf,
+                Paragraphs = MentorsAlwaysRight.Paragraphs.StaticInstance,
+                Actions = MentorsAlwaysRight.Actions.StaticInstance,
+                Constants = MentorsAlwaysRight.Constants.StaticInstance,
+                Save = MentorsAlwaysRight.Character.Protagonist.Save,
+                Load = MentorsAlwaysRight.Character.Protagonist.Load,
                 SmallDisclaimer = "Роман Островерхов, 2011",
                 BookColor = "#3662ae",
-                Illustration = "MentorsAreAlwaysRight.jpg",
+                Illustration = "MentorsAlwaysRight.jpg",
             },
 
             ["Легенды всегда врут"] = new Description

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 
-namespace Seeker.Gamebook.MentorsAreAlwaysRight
+namespace Seeker.Gamebook.MentorsAlwaysRight
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {

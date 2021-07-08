@@ -5,7 +5,7 @@ using System.Text;
 using static Seeker.Output.Buttons;
 using static Seeker.Game.Data;
 
-namespace Seeker.Gamebook.MentorsAreAlwaysRight
+namespace Seeker.Gamebook.MentorsAlwaysRight
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {

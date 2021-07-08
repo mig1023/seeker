@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Seeker.Gamebook.MentorsAreAlwaysRight
+namespace Seeker.Gamebook.MentorsAlwaysRight
 {
     class Modification : Prototypes.Modification, Abstract.IModification { }
 }
