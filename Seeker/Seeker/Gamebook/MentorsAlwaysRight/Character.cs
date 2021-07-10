@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Seeker.Gamebook.MentorsAlwaysRight
@@ -77,6 +78,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             }
         }
 
+        public List<string> Spells { get; set; }
+
         public int Elixir { get; set; }
 
         public SpecializationType Specialization { get; set; }
@@ -91,6 +94,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             Gold = 15;
             Elixir = 1;
             Specialization = SpecializationType.Nope;
+            Spells = new List<string>();
         }
 
         public Character Clone() => new Character()
@@ -105,7 +109,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             Specialization = this.Specialization,
         };
 
-        public override string Save() => String.Join("|", Strength, Hitpoints, Magicpoints, Transformation, Gold, Specialization, Elixir);
+        public override string Save() => String.Join("|", Strength, Hitpoints, Magicpoints, Transformation, Gold,
+            Elixir, Specialization, String.Join(",", Spells));
 
         public override void Load(string saveLine)
         {
@@ -116,10 +121,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             Magicpoints = int.Parse(save[2]);
             Transformation = int.Parse(save[3]);
             Gold = int.Parse(save[4]);
-            Elixir = int.Parse(save[6]);
+            Elixir = int.Parse(save[5]);
 
-            bool success = Enum.TryParse(save[5], out SpecializationType value);
+            bool success = Enum.TryParse(save[6], out SpecializationType value);
             Specialization = (success ? value : SpecializationType.Nope);
+
+            Spells = save[7].Split(',').ToList();
         }
     }
 }

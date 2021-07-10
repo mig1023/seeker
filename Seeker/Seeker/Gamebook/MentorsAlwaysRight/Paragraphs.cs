@@ -20,6 +20,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
+            action.ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]);
 
             if (xmlAction["Specialization"] != null)
                 action.Specialization = SpecializationParse(xmlAction["Specialization"]);

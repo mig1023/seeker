@@ -25,6 +25,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             [ColorTypes.ActionBox] = "#7988a4",
             [ColorTypes.StatusBar] = "#364d77",
             [ColorTypes.AdditionalStatus] = "#5e7092",
+            [ColorTypes.AdditionalFont] = "#ced4de",
         };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 556, 557 };
