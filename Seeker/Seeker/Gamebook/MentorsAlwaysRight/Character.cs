@@ -38,6 +38,19 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             }
         }
 
+        private int _magicpoints;
+        public int Magicpoints
+        {
+            get => _magicpoints;
+            set
+            {
+                if (value < 0)
+                    _magicpoints = 0;
+                else
+                    _magicpoints = value;
+            }
+        }
+
         private int _transformation;
         public int Transformation
         {
@@ -73,6 +86,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             Name = String.Empty;
             Strength = 12;
             Hitpoints = 30;
+            Magicpoints = 1;
             Transformation = 1;
             Gold = 15;
             Elixir = 1;
@@ -84,13 +98,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             Name = this.Name,
             Strength = this.Strength,
             Hitpoints = this.Hitpoints,
+            Magicpoints = this.Magicpoints,
             Transformation = this.Transformation,
             Gold = this.Gold,
             Elixir = this.Elixir,
             Specialization = this.Specialization,
         };
 
-        public override string Save() => String.Join("|", Strength, Hitpoints, Transformation, Gold, Specialization, Elixir);
+        public override string Save() => String.Join("|", Strength, Hitpoints, Magicpoints, Transformation, Gold, Specialization, Elixir);
 
         public override void Load(string saveLine)
         {
@@ -98,11 +113,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             Strength = int.Parse(save[0]);
             Hitpoints = int.Parse(save[1]);
-            Transformation = int.Parse(save[2]);
-            Gold = int.Parse(save[3]);
-            Elixir = int.Parse(save[5]);
+            Magicpoints = int.Parse(save[2]);
+            Transformation = int.Parse(save[3]);
+            Gold = int.Parse(save[4]);
+            Elixir = int.Parse(save[6]);
 
-            bool success = Enum.TryParse(save[4], out SpecializationType value);
+            bool success = Enum.TryParse(save[5], out SpecializationType value);
             Specialization = (success ? value : SpecializationType.Nope);
         }
     }
