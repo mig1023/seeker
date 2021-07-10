@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#3662ae",
+            [ButtonTypes.Action] = "#203a68",
             [ButtonTypes.Option] = "#9ab0d6",
             [ButtonTypes.Continue] = "#9ab0d6",
         };
@@ -21,6 +22,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#e0e7f2",
+            [ColorTypes.ActionBox] = "#7988a4",
+            [ColorTypes.StatusBar] = "#364d77",
+            [ColorTypes.AdditionalStatus] = "#5e7092",
         };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 556, 557 };

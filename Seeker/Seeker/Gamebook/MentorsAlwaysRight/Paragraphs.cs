@@ -14,5 +14,44 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public static Paragraphs StaticInstance = new Paragraphs();
 
         public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
+        {
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            action.Benefit = ModificationParse(xmlAction["Benefit"]);
+
+            if (xmlAction["Specialization"] != null)
+                action.Specialization = SpecializationParse(xmlAction["Specialization"]);
+
+            if (xmlAction["Enemies"] != null)
+            {
+                action.Enemies = new List<Character>();
+
+                foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
+                    action.Enemies.Add(EnemyParse(xmlEnemy));
+            }
+
+            return action;
+        }
+
+        public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
+
+        private static Character.SpecializationType SpecializationParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return Character.SpecializationType.Nope;
+
+            bool success = Enum.TryParse(xmlNode.InnerText, out Character.SpecializationType value);
+
+            return (success ? value : Character.SpecializationType.Nope);
+        }
+
+        private static Character EnemyParse(XmlNode xmlEnemy) => new Character
+        {
+            Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
+            Strength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
+            Hitpoints = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
+        };
     }
 }

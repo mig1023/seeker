@@ -10,6 +10,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
     {
         public static Actions StaticInstance = new Actions();
 
+        public List<Character> Enemies { get; set; }
+
         public Character.SpecializationType? Specialization { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -19,6 +21,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             String.Format("Обращений: {0}", Character.Protagonist.Transformation),
             String.Format("Золото: {0}", Character.Protagonist.Gold),
         };
+
+        public override bool IsButtonEnabled()
+        {
+            bool bySpecButton = (Specialization != null) && (Character.Protagonist.Specialization != Character.SpecializationType.Nope);
+            bool byPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
+
+            return !(bySpecButton || byPrice);
+        }
 
         public List<string> Get()
         {
