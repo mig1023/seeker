@@ -28,6 +28,6 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             [ColorTypes.AdditionalFont] = "#ced4de",
         };
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 556, 557 };
+        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 556, 557, 558, 559 };
     }
 }
