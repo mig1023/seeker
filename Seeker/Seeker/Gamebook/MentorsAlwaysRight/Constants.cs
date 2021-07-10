@@ -22,5 +22,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             [ColorTypes.Background] = "#e0e7f2",
         };
+
+        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 556, 557 };
     }
 }
