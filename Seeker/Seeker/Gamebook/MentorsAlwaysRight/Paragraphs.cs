@@ -19,8 +19,11 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
+            action.OnlyRounds = Game.Xml.IntParse(xmlAction["OnlyRounds"]);
+            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
             action.ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]);
+            action.Regeneration = Game.Xml.BoolParse(xmlAction["Regeneration"]);
 
             if (xmlAction["Specialization"] != null)
                 action.Specialization = SpecializationParse(xmlAction["Specialization"]);

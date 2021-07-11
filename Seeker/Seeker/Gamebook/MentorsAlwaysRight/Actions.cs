@@ -12,6 +12,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public List<Character> Enemies { get; set; }
         public bool ThisIsSpell { get; set; }
+        public int OnlyRounds { get; set; }
+        public int RoundsToWin { get; set; }
+        public bool Regeneration { get; set; }
 
         public Character.SpecializationType? Specialization { get; set; }
 
@@ -110,6 +113,143 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 Character.Protagonist.Gold -= Price;
 
             return new List<string> { "RELOAD" };
+        }
+
+        private bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight)
+        {
+            if (FightEnemies.Where(x => x.Hitpoints > 0).Count() > 0)
+                return false;
+            else
+            {
+                fight.Add(String.Empty);
+                fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+
+                if (Regeneration)
+                {
+                    int hitpointsBonus = Game.Dice.Roll();
+
+                    Character.Protagonist.Hitpoints += hitpointsBonus;
+
+                    fight.Add(String.Empty);
+                    fight.Add(String.Format("GOOD|Благодаря крови, попавшей на вас, вы восстановили {0} жизни", hitpointsBonus));
+                }
+
+                return true;
+            }
+        }
+
+        private List<string> LostFight(List<string> fight)
+        {
+            fight.Add(String.Empty);
+            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+
+            return fight;
+        }
+
+        public List<string> Fight()
+        {
+            List<string> fight = new List<string>();
+
+            int round = 1;
+            bool warriorFight = (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
+
+            List<Character> FightEnemies = new List<Character>();
+
+            foreach (Character enemy in Enemies)
+                FightEnemies.Add(enemy.Clone());
+
+            while (true)
+            {
+                fight.Add(String.Format("HEAD|Раунд: {0}", round));
+
+                if ((Character.Protagonist.Specialization == Character.SpecializationType.Thrower) && (round == 1))
+                {
+                    fight.Add("BOLD|Вы бросаете метательные ножи");
+
+                    FightEnemies[0].Hitpoints -= 3;
+
+                    fight.Add(String.Format("GOOD|{0} ранен метательными ножами и потерял 3 жизни", FightEnemies[0].Name));
+                    fight.Add(String.Empty);
+
+                    if (EnemyLostFight(FightEnemies, ref fight))
+                        return fight;
+                }
+
+                foreach (Character enemy in FightEnemies)
+                {
+                    if (enemy.Hitpoints <= 0)
+                        continue;
+
+                    if (Regeneration && (round % 4 == 0) && (enemy.Hitpoints < Enemies.Where(x => x.Name == enemy.Name).FirstOrDefault().Hitpoints))
+                    {
+                        enemy.Hitpoints += 1;
+                        fight.Add(String.Format("BOLD|{0} восстановил 1 жизнь", enemy.Name));
+                    }
+
+                    fight.Add(String.Format("{0} (жизни: {1})", enemy.Name, enemy.Hitpoints));
+
+                    int firstHeroRoll = Game.Dice.Roll();
+                    int secondHeroRoll = Game.Dice.Roll();
+                    int heroHitStrength = firstHeroRoll + secondHeroRoll + Character.Protagonist.Strength;
+
+                    fight.Add(String.Format(
+                        "Ваш удар: {0} + {1} + {2} = {3}",
+                        Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll),
+                        Character.Protagonist.Strength, heroHitStrength));
+
+                    int firstEnemyRoll = Game.Dice.Roll();
+                    int secondEnemyRoll = Game.Dice.Roll();
+                    int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Strength;
+
+                    fight.Add(String.Format(
+                        "Его удар: {0} + {1} + {2} = {3}",
+                        Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll),
+                        enemy.Strength, enemyHitStrength));
+
+                    if (warriorFight && (firstHeroRoll == secondHeroRoll) && (firstHeroRoll == 6))
+                    {
+                        fight.Add("BOLD|Вы сделали 'Крыло ястреба'!");
+                        enemy.Hitpoints /= 2;
+                        fight.Add(String.Format("GOOD|{0} ранен на половину своих жизней", enemy.Name));
+                    }
+
+                    else if (heroHitStrength > enemyHitStrength)
+                    {
+                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                        enemy.Hitpoints -= 2;
+
+                        if (EnemyLostFight(FightEnemies, ref fight))
+                            return fight;
+                    }
+                    else if (heroHitStrength < enemyHitStrength)
+                    {
+                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+
+                        Character.Protagonist.Hitpoints -= 2;
+
+                        if (Character.Protagonist.Hitpoints <= 0)
+                            return LostFight(fight);
+                    }
+                    else
+                        fight.Add("BOLD|Ничья в раунде");
+
+                    if ((OnlyRounds > 0) && (OnlyRounds <= round))
+                    {
+                        fight.Add("BOLD|Отведённые на бой раунды истекли.");
+                        return fight;
+                    }
+
+                    if ((RoundsToWin > 0) && (RoundsToWin <= round))
+                    {
+                        fight.Add("BAD|Отведённые на победу раунды истекли.");
+                        return LostFight(fight);
+                    }
+
+                    fight.Add(String.Empty);
+                }
+
+                round += 1;
+            }
         }
     }
 }
