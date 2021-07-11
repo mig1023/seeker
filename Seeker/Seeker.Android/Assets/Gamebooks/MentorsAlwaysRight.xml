@@ -1420,7 +1420,21 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>171</ID>
-		<Text>Степняк уже выбил оружие из рук своего противника, но тут вы подходите ближе и он разворачивает коня на вас.\n\nОБОРОТЕНЬ 198\n\nИначе - деритесь: ХАЗРАТ сила 10 жизнь 9\n\nЕсли вы победили, то:</Text>
+		<Text>Степняк уже выбил оружие из рук своего противника, но тут вы подходите ближе и он разворачивает коня на вас.</Text>
+		<Actions>
+			<Action>
+				<Name>Option</Name>
+				<Option Destination="198" Text="ОБОРОТЕНЬ" Aftertext="Иначе - деритесь:"/>
+			</Action>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="9"/>
+				</Enemies>
+				<Aftertext>Если вы победили, то:</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="487"/>
 		</Options>
