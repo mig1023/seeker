@@ -1519,11 +1519,22 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>181</ID>
-		<Text>Надежда, что этот степной падальщик струсит, пропадает, поскольку из-за туши поднимается еще одна гиена. Бой неизбежен:\n\n1 ГИЕНА сила 9 жизнь 11\n\n2 ГИЕНА сила 9 жизнь 10\n\nПобедив, вы размышляете над выбором маршрута:</Text>
+		<Text>Надежда, что этот степной падальщик струсит, пропадает, поскольку из-за туши поднимается еще одна гиена. Бой неизбежен:</Text>
+		<Actions>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="ПЕРВАЯ ГИЕНА" Strength="9" Hitpoints="11"/>
+					<Enemy Name="ВТОРАЯ ГИЕНА" Strength="9" Hitpoints="10"/>
+				</Enemies>
+				<Aftertext>Победив, вы размышляете над выбором маршрута. Слева по-прежнему виднеется дорога:</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
-			<Option Destination="211" Text="Слева по-прежнему виднеется дорога, но если вы не хотите пройтись к ней на запад"/>
-			<Option Destination="256" Text="Двигаться на северо-запад"/>
-			<Option Destination="55" Text="Двигаться на север"/>
+			<Option Destination="211" Text="По ней на запад"/>
+			<Option Destination="256" Text="По ней на северо-запад" Aftertext="Но если вы не хотите пройтись по ней, то можете двигаться на север:"/>
+			<Option Destination="55"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
