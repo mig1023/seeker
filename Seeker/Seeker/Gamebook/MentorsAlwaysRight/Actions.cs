@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public int OnlyRounds { get; set; }
         public int RoundsToWin { get; set; }
         public bool Regeneration { get; set; }
+        public int Wound { get; set; }
         public bool EvenWound { get; set; }
 
         public Character.SpecializationType? Specialization { get; set; }
@@ -251,7 +252,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
-                        Character.Protagonist.Hitpoints -= 2;
+                        Character.Protagonist.Hitpoints -= (Wound > 0 ? Wound : 2);
 
                         if (Character.Protagonist.Hitpoints <= 0)
                             return LostFight(fight);
