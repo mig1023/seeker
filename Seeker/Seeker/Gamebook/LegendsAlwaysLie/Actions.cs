@@ -434,7 +434,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
-                if (!GolemFight && (Character.Protagonist.Specialization == Character.SpecializationType.Thrower))
+                if (!GolemFight && (Character.Protagonist.Specialization == Character.SpecializationType.Thrower) && (round == 1))
                 {
                     fight.Add("BOLD|Вы бросаете метательные ножи");
 
@@ -442,6 +442,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                     fight.Add(String.Format("GOOD|{0} ранен метательными ножами и потерял 3 жизни", FightEnemies[0].Name));
                     fight.Add(String.Empty);
+
+                    if (EnemyLostFight(FightEnemies, ref fight))
+                        return fight;
                 }
 
                 if (!String.IsNullOrEmpty(ReactionRound))
@@ -503,9 +506,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Strength;
 
                     fight.Add(String.Format(
-                            "Его удар: {0} + {1} + {2} = {3}",
-                            Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll),
-                            enemy.Strength, enemyHitStrength));
+                        "Его удар: {0} + {1} + {2} = {3}",
+                        Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll),
+                        enemy.Strength, enemyHitStrength));
 
                     bool zombieWound = false;
 
