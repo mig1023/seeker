@@ -24,6 +24,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
             action.ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]);
             action.Regeneration = Game.Xml.BoolParse(xmlAction["Regeneration"]);
+            action.EvenWound = Game.Xml.BoolParse(xmlAction["EvenWound"]);
 
             if (xmlAction["Specialization"] != null)
                 action.Specialization = SpecializationParse(xmlAction["Specialization"]);

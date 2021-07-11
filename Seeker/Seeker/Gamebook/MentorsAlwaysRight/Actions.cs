@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public int OnlyRounds { get; set; }
         public int RoundsToWin { get; set; }
         public bool Regeneration { get; set; }
+        public bool EvenWound { get; set; }
 
         public Character.SpecializationType? Specialization { get; set; }
 
@@ -165,7 +166,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
-                if ((Character.Protagonist.Specialization == Character.SpecializationType.Thrower) && (round == 1))
+                bool block = EvenWound;
+
+                if ((Character.Protagonist.Specialization == Character.SpecializationType.Thrower) && (round == 1) && !block)
                 {
                     fight.Add("BOLD|Вы бросаете метательные ножи");
 
@@ -218,8 +221,28 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
                     else if (heroHitStrength > enemyHitStrength)
                     {
-                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
-                        enemy.Hitpoints -= 2;
+                        if (EvenWound)
+                        {
+                            int woundDice = Game.Dice.Roll();
+
+                            if (woundDice % 2 == 0)
+                            {
+                                enemy.Hitpoints -= 2;
+
+                                fight.Add(String.Format("Бросок на пробитие: {0} - чётное", Game.Dice.Symbol(woundDice)));
+                                fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                            }
+                            else
+                            {
+                                fight.Add(String.Format("Бросок на пробитие: {0} - нечётное", Game.Dice.Symbol(woundDice)));
+                                fight.Add(String.Format("BAD|Вы не смогли пробить защиту {0}", enemy.Name));
+                            }
+                        }
+                        else
+                        {
+                            fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+                            enemy.Hitpoints -= 2;
+                        }
 
                         if (EnemyLostFight(FightEnemies, ref fight))
                             return fight;
