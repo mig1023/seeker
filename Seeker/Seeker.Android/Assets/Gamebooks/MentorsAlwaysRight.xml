@@ -1387,7 +1387,19 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>168</ID>
-		<Text>Атакуют вас они вполне профессионально, со всех сторон. Несмотря на свои небольшие размеры, они довольно опасные противники - стая побольше вас бы просто разорвала.\n\n1ый ВОЛК сила 10 жизнь 9\n\n2ой ВОЛК сила 9 жизнь 8\n\n3ий ВОЛК сила 9 жизнь 7\n\nПосле победы:</Text>
+		<Text>Атакуют вас они вполне профессионально, со всех сторон. Несмотря на свои небольшие размеры, они довольно опасные противники - стая побольше вас бы просто разорвала.</Text>
+		<Actions>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="ПЕРВЫЙ ВОЛК" Strength="10" Hitpoints="9"/>
+					<Enemy Name="ВТОРОЙ ВОЛК" Strength="9" Hitpoints="8"/>
+					<Enemy Name="ТРЕТИЙ ВОЛК" Strength="9" Hitpoints="7"/>
+				</Enemies>
+				<Aftertext>После победы:</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="447"/>
 		</Options>
