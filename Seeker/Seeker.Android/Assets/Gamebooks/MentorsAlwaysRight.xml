@@ -237,7 +237,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>28</ID>
-		<Text>Отличный удар снизу вверх. Разрезанный кочевник падает, но второй достает вас кистенем (-1 ЖИЗНЬ). Сражайтесь.\n\nКОЧЕВНИК-ХАЗРАТ сила 10 жизнь 10\n\nЕсли победа за вами:</Text>
+		<Text>Отличный удар снизу вверх. Разрезанный кочевник падает, но второй достает вас кистенем (-1 ЖИЗНЬ). Сражайтесь:</Text>
+		<Actions>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="КОЧЕВНИК-ХАЗРАТ" Strength="10" Hitpoints="10"/>
+				</Enemies>
+				<Aftertext>Если победа за вами:</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="115"/>
 		</Options>
