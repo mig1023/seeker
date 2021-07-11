@@ -85,6 +85,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return !(bySpell || bySpecButton || byPrice);
         }
 
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(Character.Protagonist.Hitpoints, out toEndParagraph, out toEndText);
+
         public List<string> Get()
         {
             if (ThisIsSpell && (Character.Protagonist.Magicpoints >= 1))
