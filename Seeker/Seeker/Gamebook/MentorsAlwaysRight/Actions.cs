@@ -12,11 +12,13 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public List<Character> Enemies { get; set; }
         public bool ThisIsSpell { get; set; }
+        public bool Regeneration { get; set; }
+        public bool EvenWound { get; set; }
         public int OnlyRounds { get; set; }
         public int RoundsToWin { get; set; }
-        public bool Regeneration { get; set; }
+        public int WoundsLimit { get; set; }
         public int Wound { get; set; }
-        public bool EvenWound { get; set; }
+        
 
         public Character.SpecializationType? Specialization { get; set; }
 
@@ -122,7 +124,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         private bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight)
         {
-            if (FightEnemies.Where(x => x.Hitpoints > 0).Count() > 0)
+            if (FightEnemies.Where(x => x.Hitpoints > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() > 0)
                 return false;
             else
             {
