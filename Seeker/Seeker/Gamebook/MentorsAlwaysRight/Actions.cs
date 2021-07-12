@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public bool Regeneration { get; set; }
         public bool EvenWound { get; set; }
         public bool ReactionFight { get; set; }
+        public bool TailAttack { get; set; }
         public int OnlyRounds { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsLimit { get; set; }
@@ -235,13 +236,22 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     if (ReactionFight)
                         reactionFail = !GoodReaction(ref fight, showResult: true);
 
-                    if (warriorFight && (firstHeroRoll == secondHeroRoll) && (firstHeroRoll == 6) && (!ReactionFight || !reactionFail))
+                    if (TailAttack && (firstEnemyRoll == secondEnemyRoll))
+                    {
+                        fight.Add("BAD|Аллигатор ударил хвостом! Вы теряете 5 жизней!");
+
+                        Character.Protagonist.Hitpoints -= 5;
+                        TailAttack = false;
+
+                        if (Character.Protagonist.Hitpoints <= 0)
+                            return LostFight(fight);
+                    }
+                    else if (warriorFight && (firstHeroRoll == secondHeroRoll) && (firstHeroRoll == 6) && (!ReactionFight || !reactionFail))
                     {
                         fight.Add("BOLD|Вы сделали 'Крыло ястреба'!");
                         enemy.Hitpoints /= 2;
                         fight.Add(String.Format("GOOD|{0} ранен на половину своих жизней", enemy.Name));
                     }
-
                     else if ((heroHitStrength > enemyHitStrength) && (!ReactionFight || !reactionFail))
                     {
                         if (EvenWound)
