@@ -18,7 +18,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public int RoundsToWin { get; set; }
         public int WoundsLimit { get; set; }
         public int Wound { get; set; }
-        
+        public string ReactionWounds { get; set; }
+
 
         public Character.SpecializationType? Specialization { get; set; }
 
@@ -120,6 +121,18 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 Character.Protagonist.Gold -= Price;
 
             return new List<string> { "RELOAD" };
+        }
+
+        private bool GoodReaction(ref List<string> reaction)
+        {
+            int reactionLevel = (int)Math.Floor((double)Character.Protagonist.Hitpoints / 5);
+            reaction.Add(String.Format("Уровнь реакции: {0} / 5 = {1}", Character.Protagonist.Hitpoints, reactionLevel));
+
+            int reactionDice = Game.Dice.Roll();
+            bool goodReaction = reactionDice <= reactionLevel;
+            reaction.Add(String.Format("Реакция: {0} {1} {2}", Game.Dice.Symbol(reactionDice), (goodReaction ? "<=" : ">"), reactionLevel));
+
+            return goodReaction;
         }
 
         private bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight)
@@ -254,7 +267,20 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
-                        Character.Protagonist.Hitpoints -= (Wound > 0 ? Wound : 2);
+                        if (!String.IsNullOrEmpty(ReactionWounds))
+                        {
+                            string[] wounds = ReactionWounds.Split('-');
+                            int wound = int.Parse(GoodReaction(ref fight) ? wounds[0] : wounds[1]);
+
+                            Character.Protagonist.Hitpoints -= wound;
+
+                            if (wound > 0)
+                                fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, wound));
+                            else
+                                fight.Add(String.Format("GOOD|{0} не нанёс вам урона", enemy.Name));
+                        }
+                        else
+                            Character.Protagonist.Hitpoints -= (Wound > 0 ? Wound : 2);
 
                         if (Character.Protagonist.Hitpoints <= 0)
                             return LostFight(fight);

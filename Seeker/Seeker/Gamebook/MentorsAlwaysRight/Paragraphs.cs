@@ -27,6 +27,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             action.Wound = Game.Xml.IntParse(xmlAction["Wound"]);
             action.EvenWound = Game.Xml.BoolParse(xmlAction["EvenWound"]);
             action.WoundsLimit = Game.Xml.IntParse(xmlAction["WoundsLimit"]);
+            action.ReactionWounds = Game.Xml.StringParse(xmlAction["ReactionWounds"]);
 
             if (xmlAction["Specialization"] != null)
                 action.Specialization = SpecializationParse(xmlAction["Specialization"]);
