@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public int OnlyRounds { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsLimit { get; set; }
+        public int DeathLimith { get; set; }
         public int Wound { get; set; }
         public string ReactionWounds { get; set; }
 
@@ -170,7 +171,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             List<string> fight = new List<string>();
 
-            int round = 1;
+            int round = 1, death = 0;
             bool warriorFight = (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
 
             List<Character> FightEnemies = new List<Character>();
@@ -260,6 +261,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                             enemy.Hitpoints -= 2;
                         }
 
+                        if (enemy.Hitpoints <= 0)
+                            death += 1;
+
                         if (EnemyLostFight(FightEnemies, ref fight))
                             return fight;
                     }
@@ -298,6 +302,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     {
                         fight.Add("BAD|Отведённые на победу раунды истекли.");
                         return LostFight(fight);
+                    }
+
+                    if (death >= DeathLimith)
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add("BOLD|Вы убили установленное количество противников.");
+
+                        return fight;
                     }
 
                     fight.Add(String.Empty);
