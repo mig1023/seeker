@@ -2965,7 +2965,7 @@
 					<Enemy Name="ВТОРАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 					<Enemy Name="ТРЕТЬЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 				</Enemies>
-				<DeathLimith>2</DeathLimith>
+				<DeathLimit>2</DeathLimit>
 				<Aftertext>Когда вы убьете двух из них:</Aftertext>
 			</Action>
 		</Actions>
@@ -3485,7 +3485,7 @@
 					<Enemy Name="ВТОРАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 					<Enemy Name="ТРЕТЬЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 				</Enemies>
-				<DeathLimith>1</DeathLimith>
+				<DeathLimit>1</DeathLimit>
 				<Aftertext>Стоит вам убить всего одну, как...</Aftertext>
 			</Action>
 		</Actions>
@@ -4410,7 +4410,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>508</ID>
-		<Text>При виде медведя глаза рыцаря лезут на лоб, а его лошадь встает на дыбы и сбрасывает всадника. Впрочем, доспехи - не латы, и он успевает вскочить на ноги.\n\n- Ты меня своими сатанинскими штучками не возьмешь! - с этими словами рыцарь принимает бой.\n\nРЫЦАРЬ-ХРАМОВНИК сила 11 жизнь 10\n\nЕсли когти медведя оказались сильнее стали:</Text>
+		<Text>При виде медведя глаза рыцаря лезут на лоб, а его лошадь встает на дыбы и сбрасывает всадника. Впрочем, доспехи - не латы, и он успевает вскочить на ноги.\n\n- Ты меня своими сатанинскими штучками не возьмешь! - с этими словами рыцарь принимает бой.</Text>
+		<Actions>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="РЫЦАРЬ-ХРАМОВНИК" Strength="11" Hitpoints="10"/>
+				</Enemies>
+				<Aftertext>Если когти медведя оказались сильнее стали:</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="104"/>
 		</Options>
