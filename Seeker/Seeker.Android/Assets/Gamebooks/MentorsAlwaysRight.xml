@@ -2535,7 +2535,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>298</ID>
-		<Text>Арбалет отлетает в угол и с щелчком разряжается. Гориллоид хватается за нож и схватка начинается:\n\nОБЕЗЬЯНОЧЕЛОВЕК сила 11 жизнь 15\n\nПосле победы:</Text>
+		<Text>Арбалет отлетает в угол и с щелчком разряжается. Гориллоид хватается за нож и схватка начинается:</Text>
+		<Actions>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="ОБЕЗЬЯНОЧЕЛОВЕК" Strength="11" Hitpoints="15"/>
+				</Enemies>
+				<Aftertext>После победы:</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="503"/>
 		</Options>
