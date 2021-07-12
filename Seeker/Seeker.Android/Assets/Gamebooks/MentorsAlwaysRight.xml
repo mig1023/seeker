@@ -2357,7 +2357,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>278</ID>
-		<Text>Останки гада падают на землю, а вы уже сталкиваетесь со вторым: БОГОМОЛ сила 9 жизнь 12 (рана-3 ЖИЗНИ) Победив, переводите дух.</Text>
+		<Text>Останки гада падают на землю, а вы уже сталкиваетесь со вторым:</Text>
+		<Actions>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="БОГОМОЛ" Strength="9" Hitpoints="12"/>
+				</Enemies>
+				<Wound>3</Wound>
+				<Aftertext>Каждая нанесённая им рана будет отнимать 3 ЖИЗНИ. Победив, переводите дух.</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="384"/>
 		</Options>
