@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public bool ThisIsSpell { get; set; }
         public bool Regeneration { get; set; }
         public bool EvenWound { get; set; }
+        public bool ReactionFight { get; set; }
         public int OnlyRounds { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsLimit { get; set; }
@@ -124,7 +125,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return new List<string> { "RELOAD" };
         }
 
-        private bool GoodReaction(ref List<string> reaction)
+        private bool GoodReaction(ref List<string> reaction, bool showResult = false)
         {
             int reactionLevel = (int)Math.Floor((double)Character.Protagonist.Hitpoints / 5);
             reaction.Add(String.Format("Уровнь реакции: {0} / 5 = {1}", Character.Protagonist.Hitpoints, reactionLevel));
@@ -132,6 +133,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             int reactionDice = Game.Dice.Roll();
             bool goodReaction = reactionDice <= reactionLevel;
             reaction.Add(String.Format("Реакция: {0} {1} {2}", Game.Dice.Symbol(reactionDice), (goodReaction ? "<=" : ">"), reactionLevel));
+            reaction.Add(goodReaction ? "BOLD|Реакции хватило" : "BOLD|Реакция подвела");
 
             return goodReaction;
         }
@@ -173,7 +175,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             int round = 1, death = 0;
             bool warriorFight = (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
-
+            
             List<Character> FightEnemies = new List<Character>();
 
             foreach (Character enemy in Enemies)
@@ -183,7 +185,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
-                bool block = EvenWound;
+                bool block = EvenWound || ReactionFight;
+                bool reactionFail = false;
 
                 if ((Character.Protagonist.Specialization == Character.SpecializationType.Thrower) && (round == 1) && !block)
                 {
@@ -229,14 +232,17 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll),
                         enemy.Strength, enemyHitStrength));
 
-                    if (warriorFight && (firstHeroRoll == secondHeroRoll) && (firstHeroRoll == 6))
+                    if (ReactionFight)
+                        reactionFail = !GoodReaction(ref fight, showResult: true);
+
+                    if (warriorFight && (firstHeroRoll == secondHeroRoll) && (firstHeroRoll == 6) && (!ReactionFight || !reactionFail))
                     {
                         fight.Add("BOLD|Вы сделали 'Крыло ястреба'!");
                         enemy.Hitpoints /= 2;
                         fight.Add(String.Format("GOOD|{0} ранен на половину своих жизней", enemy.Name));
                     }
 
-                    else if (heroHitStrength > enemyHitStrength)
+                    else if ((heroHitStrength > enemyHitStrength) && (!ReactionFight || !reactionFail))
                     {
                         if (EvenWound)
                         {
@@ -267,14 +273,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         if (EnemyLostFight(FightEnemies, ref fight))
                             return fight;
                     }
-                    else if (heroHitStrength < enemyHitStrength)
+                    else if ((heroHitStrength < enemyHitStrength) || reactionFail)
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
                         if (!String.IsNullOrEmpty(ReactionWounds))
                         {
                             string[] wounds = ReactionWounds.Split('-');
-                            int wound = int.Parse(GoodReaction(ref fight) ? wounds[0] : wounds[1]);
+                            int wound = int.Parse(GoodReaction(ref fight, showResult: true) ? wounds[0] : wounds[1]);
 
                             Character.Protagonist.Hitpoints -= wound;
 
@@ -304,7 +310,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         return LostFight(fight);
                     }
 
-                    if (death >= DeathLimith)
+                    if ((DeathLimith > 0) && (death >= DeathLimith))
                     {
                         fight.Add(String.Empty);
                         fight.Add("BOLD|Вы убили установленное количество противников.");
