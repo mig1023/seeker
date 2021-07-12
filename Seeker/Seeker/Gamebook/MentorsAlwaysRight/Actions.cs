@@ -16,6 +16,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public bool EvenWound { get; set; }
         public bool ReactionFight { get; set; }
         public bool TailAttack { get; set; }
+        public bool IncrementWounds { get; set; }
         public int OnlyRounds { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsLimit { get; set; }
@@ -174,7 +175,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             List<string> fight = new List<string>();
 
-            int round = 1, death = 0;
+            int round = 1, death = 0, incrementWounds = 2;
             bool warriorFight = (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
             
             List<Character> FightEnemies = new List<Character>();
@@ -298,6 +299,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                                 fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, wound));
                             else
                                 fight.Add(String.Format("GOOD|{0} не нанёс вам урона", enemy.Name));
+                        }
+                        else if (IncrementWounds)
+                        {
+                            fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, incrementWounds));
+
+                            Character.Protagonist.Hitpoints -= incrementWounds;
+
+                            incrementWounds *= 2;
                         }
                         else
                             Character.Protagonist.Hitpoints -= (Wound > 0 ? Wound : 2);
