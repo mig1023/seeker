@@ -3361,7 +3361,17 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>393</ID>
-		<Text>Монстр, рыча надвигается на вас. Вы принимаете бой:\n\nМУМИЯ сила 10 жизнь 14\n\nОдолев его, вы можете:</Text>
+		<Text>Монстр, рыча надвигается на вас. Вы принимаете бой:</Text>
+		<Actions>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="МУМИЯ" Strength="10" Hitpoints="14"/>
+				</Enemies>
+				<Aftertext>Одолев его, вы можете:</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="327" Text="Попытаться забрать пирамидку-летунью"/>
 			<Option Destination="64" Text="Покинуть склеп"/>
