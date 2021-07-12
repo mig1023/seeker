@@ -3566,7 +3566,19 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>412</ID>
-		<Text>Ваш меч со свистом вылетает из ножен. Три голодранца? Раз плюнуть!\n\n1-ЫЙ РАЗБОЙНИК сила 8 жизнь 8\n\n2-ОЙ РАЗБОЙНИК сила 8 жизнь 8\n\n3-ИЙ РАЗБОЙНИК сила 9 жизнь 8</Text>
+		<Text>Ваш меч со свистом вылетает из ножен. Три голодранца? Раз плюнуть!</Text>
+		<Actions>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="ПЕРВЫЙ РАЗБОЙНИК" Strength="8" Hitpoints="8"/>
+					<Enemy Name="ВТОРОЙ РАЗБОЙНИК" Strength="8" Hitpoints="8"/>
+					<Enemy Name="ТРЕТИЙ РАЗБОЙНИК" Strength="9" Hitpoints="8"/>
+				</Enemies>
+				<Aftertext>После победы:</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="267"/>
 		</Options>
