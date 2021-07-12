@@ -2955,7 +2955,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>345</ID>
-		<Text>Гарпии атакуют вас по двое 1-АЯ ГАРПИЯ сила 11 жизнь 10 2-АЯ ГАРПИЯ сила 11 жизнь 10\n\nКогда вы убьете одну из них, то присоединится и третья:\n\n3-Я ГАРПИЯ сила 11 жизнь 10\n\nКогда же вы убьете еще одну:</Text>
+		<Text>Гарпии атакуют вас:</Text>
+		<Actions>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="ПЕРВАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
+					<Enemy Name="ВТОРАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
+				</Enemies>
+				<Aftertext>Когда вы убьете их:</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="82"/>
 		</Options>
