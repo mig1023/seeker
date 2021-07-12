@@ -3637,7 +3637,18 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>420</ID>
-		<Text>- Айя! - пронзительный клич хазратов сопровождает их атаку:\n\n1-ЫЙ ХАЗРАТ сила 11 жизнь 10\n\n2-ОЙ ХАЗРАТ сила 10 жизнь 10\n\nЕсли вы вышли победителем:</Text>
+		<Text>- Айя! - пронзительный клич хазратов сопровождает их атаку:</Text>
+		<Actions>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="ПЕРВЫЙ ХАЗРАТ" Strength="11" Hitpoints="10"/>
+					<Enemy Name="ВТОРОЙ ХАЗРАТ" Strength="10" Hitpoints="10"/>
+				</Enemies>
+				<Aftertext>Если вы вышли победителем:</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="115"/>
 		</Options>
