@@ -17,10 +17,11 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public bool ReactionFight { get; set; }
         public bool TailAttack { get; set; }
         public bool IncrementWounds { get; set; }
+        public bool Poison { get; set; }
         public int OnlyRounds { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsLimit { get; set; }
-        public int DeathLimith { get; set; }
+        public int DeathLimit { get; set; }
         public int Wound { get; set; }
         public string ReactionWounds { get; set; }
 
@@ -140,7 +141,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return goodReaction;
         }
 
-        private bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight)
+        private bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight, int wounded = 0)
         {
             if (FightEnemies.Where(x => x.Hitpoints > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() > 0)
                 return false;
@@ -149,7 +150,29 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 fight.Add(String.Empty);
                 fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
 
-                if (Regeneration)
+                if (IsPoisonedBlade())
+                    Game.Option.Trigger("PoisonedBlade", remove: true);
+
+                if (Poison)
+                {
+                    if (wounded > 3)
+                    {
+                        Character.Protagonist.Hitpoints /= 2;
+
+                        fight.Add(String.Empty);
+                        fight.Add("BAD|Из-за яда вы теряете половину оставшихся жизней...");
+                    }
+
+                    fight.Add(String.Empty);
+
+                    if (Character.Protagonist.Specialization == Character.SpecializationType.Thrower)
+                        fight.Add("BOLD|Вы смазали ядом свои метательные ножи, теперь они будут отнимать у противника не 3, а 4 жизни");
+                    else
+                        fight.Add("BOLD|Вы смазали ядом свой меч, в следующем бою он будет отнимать у противника по 5 жизней");
+
+                    Game.Option.Trigger("PoisonedBlade");
+                }
+                else if (Regeneration)
                 {
                     int hitpointsBonus = Game.Dice.Roll();
 
@@ -171,11 +194,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return fight;
         }
 
+        private bool IsPoisonedBlade() => (Game.Data.Triggers.Contains("PoisonedBlade") &&
+            (Character.Protagonist.Specialization != Character.SpecializationType.Thrower));
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
 
-            int round = 1, death = 0, incrementWounds = 2;
+            int round = 1, wounded = 0, death = 0, incrementWounds = 2;
             bool warriorFight = (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
             
             List<Character> FightEnemies = new List<Character>();
@@ -194,9 +220,11 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 {
                     fight.Add("BOLD|Вы бросаете метательные ножи");
 
-                    FightEnemies[0].Hitpoints -= 3;
+                    int wound = (Game.Data.Triggers.Contains("PoisonedBlade") ? 4 : 3);
 
-                    fight.Add(String.Format("GOOD|{0} ранен метательными ножами и потерял 3 жизни", FightEnemies[0].Name));
+                    FightEnemies[0].Hitpoints -= wound;
+
+                    fight.Add(String.Format("GOOD|{0} ранен метательными ножами и потерял {1} жизни", FightEnemies[0].Name, wound));
                     fight.Add(String.Empty);
 
                     if (EnemyLostFight(FightEnemies, ref fight))
@@ -275,7 +303,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         else
                         {
                             fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
-                            enemy.Hitpoints -= 2;
+
+                            if (IsPoisonedBlade())
+                            {
+                                enemy.Hitpoints -= 5;
+                                fight.Add(String.Format("BOLD|Из-за яда, рана отнимает у {0} сразу 5 жизней", enemy.Name));
+                            }
+                            else
+                                enemy.Hitpoints -= 2;
                         }
 
                         if (enemy.Hitpoints <= 0)
@@ -287,6 +322,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     else if ((heroHitStrength < enemyHitStrength) || reactionFail)
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+
+                        wounded += 1;
 
                         if (!String.IsNullOrEmpty(ReactionWounds))
                         {
@@ -329,7 +366,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         return LostFight(fight);
                     }
 
-                    if ((DeathLimith > 0) && (death >= DeathLimith))
+                    if ((DeathLimit > 0) && (death >= DeathLimit))
                     {
                         fight.Add(String.Empty);
                         fight.Add("BOLD|Вы убили установленное количество противников.");
