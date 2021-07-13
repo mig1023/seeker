@@ -4745,7 +4745,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>529</ID>
-		<Text>В ответ доносится эльфийское ругательство: «Shat humans!» И с ним - щелчок спускаемой тетивы. РЕАГИРУЙТЕ.</Text>
+		<Text>В ответ доносится эльфийское ругательство: «Shat humans!» И с ним - щелчок спускаемой тетивы!</Text>
+		<Actions>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте</Button>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="476" Text="Ваша скорость на высоте" Aftertext="Если же ваша реакция запаздывает, то, увы, эльфийская стрела положит конец вашему походу..."/>
 			<Option Destination="0"/>
