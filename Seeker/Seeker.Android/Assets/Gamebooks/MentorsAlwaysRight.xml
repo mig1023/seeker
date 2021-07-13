@@ -86,6 +86,9 @@
 				<Aftertext>Если вы не успеет увернуться, то теряете 3 ЖИЗНИ.</Aftertext>
 			</Action>
 		</Actions>
+		<Modifications>
+			<Modification Name="Hitpoints" Value="-4"/>
+		</Modifications>
 		<Options>
 			<Option Destination="511" Text="Успели"/>
 			<Option Destination="215" Text="Нет"/>
@@ -94,6 +97,9 @@
 	<Paragraph>
 		<ID>10</ID>
 		<Text>Превратившись в соляной столб, вы так и стоите некоторое время. Жарища, пот льет градом (-1 ЖИЗНЬ), но внезапно грифон... попросту тает в воздухе!</Text>
+		<Modifications>
+			<Modification Name="Hitpoints" Value="-1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="441"/>
 		</Options>
@@ -142,7 +148,15 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>16</ID>
-		<Text>Ноги ваши слабеют, и, когда вы вновь достигаете живой, покрытой травой, земли, мутная пелена застилает вам глаза. Бросьте 2 кубика и отнимите выпавшее число от своей ЖИЗНИ. Неизвестно, что это было, но надо двигаться дальше...</Text>
+		<Text>Ноги ваши слабеют, и, когда вы вновь достигаете живой, покрытой травой, земли, мутная пелена застилает вам глаза. Бросьте 2 кубика и отнимите выпавшее число от своей ЖИЗНИ:</Text>
+		<Actions>
+			<Action>
+				<Name>DiceWounds</Name>
+				<Button>Кинуть кубик</Button>
+				<Dices>2</Dices>
+				<Aftertext>Неизвестно, что это было, но надо двигаться дальше...</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="458"/>
 		</Options>
