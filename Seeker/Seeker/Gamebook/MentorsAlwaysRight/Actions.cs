@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public bool ReactionFight { get; set; }
         public bool TailAttack { get; set; }
         public bool IncrementWounds { get; set; }
+        public bool ThreeWoundLimit { get; set; }
         public bool Poison { get; set; }
         public int OnlyRounds { get; set; }
         public int RoundsToWin { get; set; }
@@ -201,7 +202,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             List<string> fight = new List<string>();
 
-            int round = 1, wounded = 0, death = 0, incrementWounds = 2;
+            int round = 1, woundLine = 0, wounded = 0, death = 0, incrementWounds = 2;
             bool warriorFight = (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
             
             List<Character> FightEnemies = new List<Character>();
@@ -272,13 +273,18 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         Character.Protagonist.Hitpoints -= 5;
                         TailAttack = false;
 
+                        woundLine = 0;
+
                         if (Character.Protagonist.Hitpoints <= 0)
                             return LostFight(fight);
                     }
                     else if (warriorFight && (firstHeroRoll == secondHeroRoll) && (firstHeroRoll == 6) && (!ReactionFight || !reactionFail))
                     {
                         fight.Add("BOLD|Вы сделали 'Крыло ястреба'!");
+
                         enemy.Hitpoints /= 2;
+                        woundLine += 1;
+
                         fight.Add(String.Format("GOOD|{0} ранен на половину своих жизней", enemy.Name));
                     }
                     else if ((heroHitStrength > enemyHitStrength) && (!ReactionFight || !reactionFail))
@@ -290,6 +296,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                             if (woundDice % 2 == 0)
                             {
                                 enemy.Hitpoints -= 2;
+                                woundLine += 1;
 
                                 fight.Add(String.Format("Бросок на пробитие: {0} - чётное", Game.Dice.Symbol(woundDice)));
                                 fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
@@ -303,6 +310,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         else
                         {
                             fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+
+                            woundLine += 1;
 
                             if (IsPoisonedBlade())
                             {
@@ -324,6 +333,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
                         wounded += 1;
+                        woundLine = 0;
 
                         if (!String.IsNullOrEmpty(ReactionWounds))
                         {
@@ -352,7 +362,11 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                             return LostFight(fight);
                     }
                     else
+                    {
+                        woundLine = 0;
                         fight.Add("BOLD|Ничья в раунде");
+                    }
+                        
 
                     if ((OnlyRounds > 0) && (OnlyRounds <= round))
                     {
@@ -370,6 +384,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     {
                         fight.Add(String.Empty);
                         fight.Add("BOLD|Вы убили установленное количество противников.");
+
+                        return fight;
+                    }
+
+                    if (ThreeWoundLimit && (woundLine > 2))
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add("BOLD|Вы ранили его три раза подряд!");
 
                         return fight;
                     }
