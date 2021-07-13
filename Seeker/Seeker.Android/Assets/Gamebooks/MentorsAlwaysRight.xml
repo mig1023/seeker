@@ -2734,7 +2734,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>312</ID>
-		<Text>Кости явно человеческие, лежат тут давно... Краем глаза вы улавливаете в траве какое-то движение. РЕАГИРУЙТЕ.</Text>
+		<Text>Кости явно человеческие, лежат тут давно... Краем глаза вы улавливаете в траве какое-то движение.</Text>
+		<Actions>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте</Button>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="12" Text="Успели"/>
 			<Option Destination="102" Text="Нет"/>
