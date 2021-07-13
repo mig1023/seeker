@@ -26,6 +26,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public int Wound { get; set; }
         public string ReactionWounds { get; set; }
 
+        public Abstract.IModification Damage { get; set; }
 
         public Character.SpecializationType? Specialization { get; set; }
 
@@ -129,6 +130,23 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return new List<string> { "RELOAD" };
         }
 
+        public List<string> Reaction()
+        {
+            List<string> reaction = new List<string>();
+
+            bool goodReaction = GoodReaction(ref reaction);
+
+            reaction.Add(goodReaction ? "BIG|GOOD|СРЕАГИРОВАЛИ :)" : "BIG|BAD|НЕ СРЕАГИРОВАЛИ :(");
+
+            if (goodReaction && (Benefit != null))
+                Benefit.Do();
+
+            if (!goodReaction && (Damage != null))
+                Damage.Do();
+
+            return reaction;
+        }
+
         private bool GoodReaction(ref List<string> reaction, bool showResult = false)
         {
             int reactionLevel = (int)Math.Floor((double)Character.Protagonist.Hitpoints / 5);
@@ -137,7 +155,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             int reactionDice = Game.Dice.Roll();
             bool goodReaction = reactionDice <= reactionLevel;
             reaction.Add(String.Format("Реакция: {0} {1} {2}", Game.Dice.Symbol(reactionDice), (goodReaction ? "<=" : ">"), reactionLevel));
-            reaction.Add(goodReaction ? "BOLD|Реакции хватило" : "BOLD|Реакция подвела");
+
+            if (showResult)
+                reaction.Add(goodReaction ? "BOLD|Реакции хватило" : "BOLD|Реакция подвела");
 
             return goodReaction;
         }
