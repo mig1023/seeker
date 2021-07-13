@@ -620,7 +620,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>70</ID>
-		<Text>Шорох. Какая-то тварь вылетает из кустов, целясь в вас. РЕАГИРУЙТЕ.</Text>
+		<Text>Шорох. Какая-то тварь вылетает из кустов, целясь в вас:</Text>
+		<Actions>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте</Button>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="271" Text="Все в порядке"/>
 			<Option Destination="112" Text="Чуть притормозили"/>
