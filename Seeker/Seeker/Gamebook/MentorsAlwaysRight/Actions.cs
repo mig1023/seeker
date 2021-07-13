@@ -24,6 +24,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public int WoundsLimit { get; set; }
         public int DeathLimit { get; set; }
         public int Wound { get; set; }
+        public int Dices { get; set; }
         public string ReactionWounds { get; set; }
 
         public Abstract.IModification Damage { get; set; }
@@ -160,6 +161,27 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 reaction.Add(goodReaction ? "BOLD|Реакции хватило" : "BOLD|Реакция подвела");
 
             return goodReaction;
+        }
+
+        public List<string> DiceWounds()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dicesCount = (Dices == 0 ? 1 : Dices);
+            int dices = 0;
+
+            for (int i = 1; i <= dicesCount; i++)
+            {
+                int dice = Game.Dice.Roll();
+                dices += dice;
+                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
+            }
+
+            Character.Protagonist.Hitpoints -= dices;
+
+            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
+
+            return diceCheck;
         }
 
         private bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight, int wounded = 0)

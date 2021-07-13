@@ -29,6 +29,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             action.IncrementWounds = Game.Xml.BoolParse(xmlAction["IncrementWounds"]);
             action.ThreeWoundLimit = Game.Xml.BoolParse(xmlAction["ThreeWoundLimit"]);
             action.Wound = Game.Xml.IntParse(xmlAction["Wound"]);
+            action.Dices = Game.Xml.IntParse(xmlAction["Dices"]);
             action.EvenWound = Game.Xml.BoolParse(xmlAction["EvenWound"]);
             action.WoundsLimit = Game.Xml.IntParse(xmlAction["WoundsLimit"]);
             action.DeathLimit = Game.Xml.IntParse(xmlAction["DeathLimit"]);
