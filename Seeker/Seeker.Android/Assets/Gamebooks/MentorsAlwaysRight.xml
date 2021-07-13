@@ -4710,7 +4710,15 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>541</ID>
-		<Text>Не успев сделать и несколько шагов, вы слышите звук рассекающего воздух камня. РЕАГИРУЙТЕ. Если вы не успеет увернуться, то теряете 3 ЖИЗНИ.</Text>
+		<Text>Не успев сделать и несколько шагов, вы слышите звук рассекающего воздух камня.</Text>
+		<Actions>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте</Button>
+				<Damage Name="Hitpoints" Value="-3"/>
+				<Aftertext>Если вы не успеет увернуться, то теряете 3 ЖИЗНИ.</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="196"/>
 		</Options>
