@@ -3392,7 +3392,35 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>385</ID>
-		<Text>Одновременно с вашим первым шагом из стены с щелчком вылетает стрела. РЕАГИРУЙТЕ. Если вы не успеете увернуться, то получите серьезную рану (-4 ЖИЗНИ). Ту же операцию придется проделывать на каждой из оставшихся четырех белых ступенек.</Text>
+		<Text>Одновременно с вашим первым шагом из стены с щелчком вылетает стрела.</Text>
+		<Actions>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте на первой ступеньке</Button>
+				<Damage Name="Hitpoints" Value="-4"/>
+				<Aftertext>Если вы не успеете увернуться, то получите серьезную рану (-4 ЖИЗНИ). Ту же операцию придется проделывать на каждой из оставшихся четырех белых ступенек:</Aftertext>
+			</Action>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте на второй ступеньке</Button>
+				<Damage Name="Hitpoints" Value="-4"/>
+			</Action>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте на третьей ступеньке</Button>
+				<Damage Name="Hitpoints" Value="-4"/>
+			</Action>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте на четвёртой ступеньке</Button>
+				<Damage Name="Hitpoints" Value="-4"/>
+			</Action>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте на пятой ступеньке</Button>
+				<Damage Name="Hitpoints" Value="-4"/>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="323" Text="Вам это удалось" Aftertext="Если же вы сочтете белые ступеньки слишком опасными, то можете попробовать:"/>
 			<Option Destination="290" Text="Ступить на черную"/>
