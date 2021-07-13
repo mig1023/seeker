@@ -2627,7 +2627,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>302</ID>
-		<Text>Насколько вы быстры? РЕАГИРУЙТЕ.</Text>
+		<Text>Насколько вы быстры?</Text>
+		<Actions>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте</Button>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="225" Text="Успели"/>
 			<Option Destination="530" Text="Нет"/>
