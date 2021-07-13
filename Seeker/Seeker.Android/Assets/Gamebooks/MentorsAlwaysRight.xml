@@ -3261,7 +3261,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>372</ID>
-		<Text>Вокруг мечутся крысюки, а один из них (наверное, самый наглый), высовывается из-за колонны и бросает в вас дротик. РЕАГИРУЙТЕ.</Text>
+		<Text>Вокруг мечутся крысюки, а один из них (наверное, самый наглый), высовывается из-за колонны и бросает в вас дротик...</Text>
+		<Actions>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте</Button>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="512" Text="Успели"/>
 			<Option Destination="100" Text="Нет"/>
