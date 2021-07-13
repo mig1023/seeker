@@ -4811,7 +4811,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>535</ID>
-		<Text>По обостренному слуху бьет щелчок спускаемой тетивы. РЕАГИРУЙТЕ.</Text>
+		<Text>По обостренному слуху бьет щелчок спускаемой тетивы.</Text>
+		<Actions>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте</Button>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="329" Text="Успешно"/>
 			<Option Destination="433" Text="Нет"/>
