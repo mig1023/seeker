@@ -4355,10 +4355,16 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>485</ID>
-		<Text>- Жаль, - говорит наемник и его рука делает неуловимое движение. Вы были к этому готовы и шутя уворачиваетесь от брошенного ножа, но он бросает и второй! РЕАГИРУЙТЕ.</Text>
+		<Text>- Жаль, - говорит наемник и его рука делает неуловимое движение. Вы были к этому готовы и шутя уворачиваетесь от брошенного ножа, но он бросает и второй!</Text>
+		<Actions>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте</Button>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="546" Text="Успели"/>
-			<Option Destination="245" Text="Иначе теряете 3 ЖИЗНИ и принимаете бой"/>
+			<Option Destination="245" Text="Иначе теряете 3 ЖИЗНИ и принимаете бой" Do="Hitpoints" Value="-3"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
