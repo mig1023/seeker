@@ -2686,7 +2686,13 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>309</ID>
-		<Text>Однако, стоит вам подойти ближе, как со спины парня на вас прыгает какая-то тварь. РЕАГИРУЙТЕ.</Text>
+		<Text>Однако, стоит вам подойти ближе, как со спины парня на вас прыгает какая-то тварь.</Text>
+		<Actions>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте</Button>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="249" Text="Успели"/>
 			<Option Destination="117" Text="Нет"/>
