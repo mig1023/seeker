@@ -4399,9 +4399,19 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>489</ID>
-		<Text>Одновременно с прыжком вам надо успеть СРЕАГИРОВАТЬ, либо поставить ЗАСЛОН:</Text>
+		<Text>Одновременно с прыжком вам надо успеть поставить ЗАСЛОН:</Text>
+		<Actions>
+			<Action>
+				<Name>Option</Name>
+				<Option Destination="548" Text="Заслон" Aftertext="...либо СРЕАГИРОВАТЬ:"/>
+			</Action>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте</Button>
+			</Action>
+		</Actions>
 		<Options>
-			<Option Destination="548" Text="Успешно" Aftertext="Если ни то, ни другое у вас не выйдет, то два арбалетных болта прервут ваш полет самым неприятным образом..."/>
+			<Option Destination="548" Text="Успешно среагировали" Aftertext="Если ни то, ни другое у вас не выйдет, то два арбалетных болта прервут ваш полет самым неприятным образом..."/>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
