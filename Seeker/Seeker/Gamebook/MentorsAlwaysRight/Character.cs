@@ -25,6 +25,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         }
 
         private int _hitpoints;
+        public int MaxHitpoints { get; set; }
         public int Hitpoints
         {
             get => _hitpoints;
@@ -32,8 +33,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             {
                 if (value < 0)
                     _hitpoints = 0;
-                else if (value > 30)
-                    _hitpoints = 30;
+                else if (value > MaxHitpoints)
+                    _hitpoints = MaxHitpoints;
                 else
                     _hitpoints = value;
             }
@@ -88,7 +89,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             Name = String.Empty;
             Strength = 12;
-            Hitpoints = 30;
+            MaxHitpoints = 30;
+            Hitpoints = MaxHitpoints;
             Magicpoints = 1;
             Transformation = 1;
             Gold = 15;
@@ -101,6 +103,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             Name = this.Name,
             Strength = this.Strength,
+            MaxHitpoints = this.MaxHitpoints,
             Hitpoints = this.Hitpoints,
             Magicpoints = this.Magicpoints,
             Transformation = this.Transformation,
@@ -109,24 +112,25 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             Specialization = this.Specialization,
         };
 
-        public override string Save() => String.Join("|", Strength, Hitpoints, Magicpoints, Transformation, Gold,
-            Elixir, Specialization, String.Join(",", Spells));
+        public override string Save() => String.Join("|", Strength, MaxHitpoints, Hitpoints, Magicpoints, Transformation,
+            Gold, Elixir, Specialization, String.Join(",", Spells));
 
         public override void Load(string saveLine)
         {
             string[] save = saveLine.Split('|');
 
             Strength = int.Parse(save[0]);
-            Hitpoints = int.Parse(save[1]);
-            Magicpoints = int.Parse(save[2]);
-            Transformation = int.Parse(save[3]);
-            Gold = int.Parse(save[4]);
-            Elixir = int.Parse(save[5]);
+            MaxHitpoints = int.Parse(save[1]);
+            Hitpoints = int.Parse(save[2]);
+            Magicpoints = int.Parse(save[3]);
+            Transformation = int.Parse(save[4]);
+            Gold = int.Parse(save[5]);
+            Elixir = int.Parse(save[6]);
 
-            bool success = Enum.TryParse(save[6], out SpecializationType value);
+            bool success = Enum.TryParse(save[7], out SpecializationType value);
             Specialization = (success ? value : SpecializationType.Nope);
 
-            Spells = save[7].Split(',').ToList();
+            Spells = save[8].Split(',').ToList();
         }
     }
 }

@@ -71,6 +71,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
             Strength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
+            MaxHitpoints = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
             Hitpoints = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
         };
 

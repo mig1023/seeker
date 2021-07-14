@@ -184,6 +184,22 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return diceCheck;
         }
 
+        public List<string> CureRabies()
+        {
+            if (!Character.Protagonist.Spells.Contains("ЛЕЧЕНИЕ"))
+                return new List<string> { "BIG|BAD|У вас нет ЛЕЧИЛКИ :(" };
+
+            List<string> cure = new List<string> { };
+
+            Game.Option.Trigger("Rabies", remove: true);
+            cure.Add("BIG|GOOD|Вы успешно вылечили болезнь!");
+
+            Character.Protagonist.Hitpoints += 3;
+            cure.Add("BOLD|Вы дополнительно получили +3 жизни.");
+
+            return cure;
+        }
+
         private bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight, int wounded = 0)
         {
             if (FightEnemies.Where(x => x.Hitpoints > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() > 0)
@@ -223,6 +239,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
                     fight.Add(String.Empty);
                     fight.Add(String.Format("GOOD|Благодаря крови, попавшей на вас, вы восстановили {0} жизни", hitpointsBonus));
+                }
+
+                if (Game.Data.Triggers.Contains("Rabies"))
+                {
+                    Character.Protagonist.Strength -= 1;
+
+                    fight.Add(String.Empty);
+                    fight.Add("BAD|Вы дополнительно теряете 1 Силу за невылеченную болезнь...");
                 }
 
                 return true;
