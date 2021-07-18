@@ -16,6 +16,8 @@ namespace Seeker.Gamebook.OctopusIsland
             {
                 if (value < 0)
                     _sergeHitpoint = 0;
+                else if (value > 20)
+                    _sergeHitpoint = 20;
                 else
                     _sergeHitpoint = value;
             }
@@ -31,6 +33,8 @@ namespace Seeker.Gamebook.OctopusIsland
             {
                 if (value < 0)
                     _xolotlHitpoint = 0;
+                else if (value > 20)
+                    _xolotlHitpoint = 20;
                 else
                     _xolotlHitpoint = value;
             }
@@ -46,6 +50,8 @@ namespace Seeker.Gamebook.OctopusIsland
             {
                 if (value < 0)
                     _thibautHitpoint = 0;
+                else if (value > 20)
+                    _thibautHitpoint = 20;
                 else
                     _thibautHitpoint = value;
             }
@@ -61,6 +67,8 @@ namespace Seeker.Gamebook.OctopusIsland
             {
                 if (value < 0)
                     _souhiHitpoint = 0;
+                else if (value > 20)
+                    _souhiHitpoint = 20;
                 else
                     _souhiHitpoint = value;
             }
