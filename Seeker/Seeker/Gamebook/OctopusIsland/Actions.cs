@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public List<Character> Enemies { get; set; }
         public int WoundsToWin { get; set; }
         public int DinnerHitpointsBonus { get; set; }
+        public bool DinnerAlready { get; set; }
 
         public override List<string> Representer()
         {
@@ -94,7 +95,7 @@ namespace Seeker.Gamebook.OctopusIsland
             return true;
         }
 
-        public override bool IsButtonEnabled() => !((DinnerHitpointsBonus > 0) && (Character.Protagonist.Food <= 0));
+        public override bool IsButtonEnabled() => !((DinnerHitpointsBonus > 0) && ((Character.Protagonist.Food <= 0) || DinnerAlready));
 
         public override bool CheckOnlyIf(string option)
         {
@@ -279,6 +280,8 @@ namespace Seeker.Gamebook.OctopusIsland
             Character.Protagonist.SergeHitpoint += DinnerHitpointsBonus;
             Character.Protagonist.ThibautHitpoint += DinnerHitpointsBonus;
             Character.Protagonist.XolotlHitpoint += DinnerHitpointsBonus;
+
+            DinnerAlready = true;
 
             return new List<string> { "RELOAD" };
         }
