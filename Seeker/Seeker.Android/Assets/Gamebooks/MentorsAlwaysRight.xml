@@ -1043,7 +1043,7 @@
 			<Modification Name="Hitpoints" Value="-5"/>
 		</Modifications>
 		<Options>
-			<Option Destination="437" Text="Использовать ЛЕЧИЛКУ" Aftertext="Иначе вы тут же отдадите концы от потери крови и болевого шока..."/>
+			<Option Destination="437" Text="Использовать ЛЕЧИЛКУ" Do="Spell" ValueString="ЛЕЧЕНИЕ" OnlyIf="ЛЕЧЕНИЕ" Aftertext="Иначе вы тут же отдадите концы от потери крови и болевого шока..."/>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
@@ -1097,7 +1097,7 @@
 		<ID>117</ID>
 		<Text>Вы успеваете сбросить с себя противную тварь, но она ужалила вас. Ведьмачьи чувства говорят, что подавляющая волю отрава уже растекается по телу. Вас спасет только ЛЕЧИЛКА (не добавляя ЖИЗНЕЙ):</Text>
 		<Options>
-			<Option Destination="249" Text="Использовать ЛЕЧИЛКУ" Aftertext="Иначе ноги ваши подкашиваются и паразит забирается на вас, получая нового наездника..."/>
+			<Option Destination="249" Text="Использовать ЛЕЧИЛКУ" Do="Spell" ValueString="ЛЕЧЕНИЕ" OnlyIf="ЛЕЧЕНИЕ" Aftertext="Иначе ноги ваши подкашиваются и паразит забирается на вас, получая нового наездника..."/>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
