@@ -186,6 +186,19 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             return goodReaction;
         }
+        
+        public List<string> DicesGame()
+        {
+            List<string> game = new List<string> { };
+
+            int firstDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            game.Add(String.Format("На кубиках выпало: {0} и {1}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice)));
+            game.Add(String.Format("BIG|BOLD|Итого выпало: {0}", firstDice + secondDice));
+
+            return game;
+        }
 
         public List<string> DiceWounds()
         {
