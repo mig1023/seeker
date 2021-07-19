@@ -20,6 +20,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public bool ThreeWoundLimit { get; set; }
         public bool Poison { get; set; }
         public bool Invincible { get; set; }
+        public bool OnlyOne { get; set; }
         public int OnlyRounds { get; set; }
         public int RoundsToWin { get; set; }
         public int RoundsWinToWin { get; set; }
@@ -99,8 +100,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             bool bySpell = ThisIsSpell && (Character.Protagonist.Magicpoints <= 0);
             bool bySpecButton = (Specialization != null) && (Character.Protagonist.Specialization != Character.SpecializationType.Nope);
             bool byPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
+            bool byTrigger = OnlyOne && Game.Data.Triggers.Contains("AlreadyChose");
 
-            return !(bySpell || bySpecButton || byPrice || Used);
+            return !(bySpell || bySpecButton || byPrice || byTrigger || Used);
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
@@ -133,6 +135,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             else if ((Price > 0) && (Character.Protagonist.Gold >= Price))
                 Character.Protagonist.Gold -= Price;
+
+            if (Benefit != null)
+                Benefit.Do();
 
             return new List<string> { "RELOAD" };
         }
@@ -186,7 +191,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             return goodReaction;
         }
-        
+
         public List<string> DicesGame()
         {
             List<string> game = new List<string> { };
