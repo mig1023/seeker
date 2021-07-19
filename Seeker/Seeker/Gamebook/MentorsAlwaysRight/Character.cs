@@ -80,6 +80,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         }
 
         public List<string> Spells { get; set; }
+        public List<string> SpellsReplica { get; set; }
 
         public int Elixir { get; set; }
 
@@ -97,6 +98,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             Elixir = 1;
             Specialization = SpecializationType.Nope;
             Spells = new List<string>();
+            SpellsReplica = new List<string>();
         }
 
         public Character Clone() => new Character()
@@ -113,7 +115,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         };
 
         public override string Save() => String.Join("|", Strength, MaxHitpoints, Hitpoints, Magicpoints, Transformation,
-            Gold, Elixir, Specialization, String.Join(",", Spells));
+            Gold, Elixir, Specialization, String.Join(",", Spells), String.Join(",", SpellsReplica));
 
         public override void Load(string saveLine)
         {
@@ -131,6 +133,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             Specialization = (success ? value : SpecializationType.Nope);
 
             Spells = save[8].Split(',').ToList();
+            SpellsReplica = save[9].Split(',').ToList();
         }
     }
 }

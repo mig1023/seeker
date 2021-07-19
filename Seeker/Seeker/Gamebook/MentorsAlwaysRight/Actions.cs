@@ -95,7 +95,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             bool bySpecButton = (Specialization != null) && (Character.Protagonist.Specialization != Character.SpecializationType.Nope);
             bool byPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
 
-            return !(bySpell || bySpecButton || byPrice);
+            return !(bySpell || bySpecButton || byPrice || Used);
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
@@ -106,6 +106,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             if (ThisIsSpell && (Character.Protagonist.Magicpoints >= 1))
             {
                 Character.Protagonist.Spells.Add(Text);
+                Character.Protagonist.SpellsReplica.Add(Text);
                 Character.Protagonist.Magicpoints -= 1;
             }
             else if ((Specialization != null) && (Character.Protagonist.Specialization == Character.SpecializationType.Nope))
@@ -146,6 +147,16 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 Damage.Do();
 
             return reaction;
+        }
+
+        public List<string> RestoreSpells()
+        {
+            Character.Protagonist.Spells = Character.Protagonist.Spells.Where(x => x == "ЛЕЧЕНИЕ").ToList();
+            Character.Protagonist.Spells.AddRange(Character.Protagonist.SpellsReplica.Where(x => x != "ЛЕЧЕНИЕ").ToList());
+
+            Character.Protagonist.Gold -= 5;
+
+            return new List<string> { "BIG|GOOD|Вы восстановили заклинания :)", "Лечилка не восстанавливается, как и было сказано" };
         }
 
         private bool GoodReaction(ref List<string> reaction, bool showResult = false)
