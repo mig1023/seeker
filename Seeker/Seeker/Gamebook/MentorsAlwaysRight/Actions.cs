@@ -224,6 +224,31 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return cure;
         }
 
+        public override bool CheckOnlyIf(string option)
+        {
+            if (option.Contains(">") || option.Contains("<"))
+            {
+                int level = Game.Other.LevelParse(option);
+
+                if (option.Contains("ЗОЛОТО >=") && (level > Character.Protagonist.Gold))
+                    return false;
+            }
+
+            else if (Character.Protagonist.Spells.Contains(option))
+                return true;
+
+            else if (option.Contains("!"))
+            {
+                if (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()))
+                    return false;
+            }
+
+            else if (!Game.Data.Triggers.Contains(option.Trim()))
+                return false;
+            
+            return true;
+        }
+
         private void WinFightEnding(ref List<string> fight, int wounded)
         {
             if (IsPoisonedBlade())
