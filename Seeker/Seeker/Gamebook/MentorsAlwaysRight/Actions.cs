@@ -39,7 +39,6 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             String.Format("Сила: {0}", Character.Protagonist.Strength),
             String.Format("Жизни: {0}", Character.Protagonist.Hitpoints),
             String.Format("Обращений: {0}", Character.Protagonist.Transformation),
-            String.Format("Золото: {0}", Character.Protagonist.Gold),
         };
 
         public override List<string> AdditionalStatus()
@@ -57,13 +56,10 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     currentSpells.Add(spell.ToLower(), 1);
             }
 
-            if (currentSpells.Count <= 0)
-                return null;
-
-            List<string> statusLines = new List<string>();
+            List<string> statusLines = new List<string> { String.Format("Золото: {0}", Character.Protagonist.Gold) };
 
             foreach (string spell in currentSpells.Keys.ToList().OrderBy(x => x))
-                statusLines.Add(String.Format("{0}: {1}", spell.ToUpper(), currentSpells[spell]));
+                statusLines.Insert(0, String.Format("Заклятье {0} - {1} шт", char.ToUpper(spell[0]) + spell.Substring(1), currentSpells[spell]));
 
             return statusLines;
         }
