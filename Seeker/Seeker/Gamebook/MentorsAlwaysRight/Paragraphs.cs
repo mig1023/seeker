@@ -77,7 +77,20 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             Hitpoints = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
         };
 
-        public override Abstract.IModification ModificationParse(XmlNode xmlNode) =>
-            Game.Xml.ModificationParse(xmlNode, new Modification());
+        public override Abstract.IModification ModificationParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return null;
+
+            Modification modification = new Modification
+            {
+                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+                ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
+                Empty = Game.Xml.BoolParse(xmlNode.Attributes["Empty"]),
+            };
+
+            return modification;
+        }
     }
 }
