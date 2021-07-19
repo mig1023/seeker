@@ -242,6 +242,45 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return cure;
         }
 
+        public override List<string> StaticButtons()
+        {
+            List<string> staticButtons = new List<string> { };
+
+            if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
+                return staticButtons;
+
+            bool wounded = (Character.Protagonist.Hitpoints < Character.Protagonist.MaxHitpoints);
+            bool healingSpell = Character.Protagonist.Spells.Contains("ЛЕЧЕНИЕ");
+
+            if (wounded && healingSpell && !Game.Checks.ExistsInParagraph(actionText: "ЛЕЧИЛК", optionText: "ЛЕЧИЛК"))
+                staticButtons.Add("ЛЕЧИЛКА");
+
+            if (wounded && (Character.Protagonist.Elixir > 0))
+                staticButtons.Add("ЭЛИКСИР");
+
+            return staticButtons;
+        }
+
+        public override bool StaticAction(string action)
+        {
+            if (action == "ЛЕЧИЛКА")
+            {
+                Character.Protagonist.Hitpoints += 6;
+                Character.Protagonist.Spells.Remove(action);
+
+                return true;
+            }
+            else if (action == "ЭЛИКСИР")
+            {
+                Character.Protagonist.Hitpoints = Character.Protagonist.MaxHitpoints;
+                Character.Protagonist.Elixir -= 1;
+
+                return true;
+            }
+
+            return false;
+        }
+
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains(">") || option.Contains("<"))
