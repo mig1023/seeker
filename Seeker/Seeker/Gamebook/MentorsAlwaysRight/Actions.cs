@@ -158,6 +158,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             return new List<string> { "BIG|GOOD|Вы восстановили заклинания :)", "Лечилка не восстанавливается, как и было сказано" };
         }
+        
+        public List<string> GetMagicBlade()
+        {
+            Game.Option.Trigger("MagicSword");
+            Character.Protagonist.Gold -= 5;
+
+            return new List<string> { "BIG|GOOD|Ваш меч теперь заколдован :)" };
+        }
 
         private bool GoodReaction(ref List<string> reaction, bool showResult = false)
         {
@@ -275,6 +283,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         private bool IsPoisonedBlade() => (Game.Data.Triggers.Contains("PoisonedBlade") &&
             (Character.Protagonist.Specialization != Character.SpecializationType.Thrower));
 
+        private bool IsMagicBlade() => Game.Data.Triggers.Contains("MagicSword");
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -366,13 +376,15 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     }
                     else if ((heroHitStrength > enemyHitStrength) && (!ReactionFight || !reactionFail))
                     {
+                        int woundLevel = (IsMagicBlade() ? 3 : 2);
+
                         if (EvenWound)
                         {
                             int woundDice = Game.Dice.Roll();
 
                             if (woundDice % 2 == 0)
                             {
-                                enemy.Hitpoints -= 2;
+                                enemy.Hitpoints -= woundLevel;
                                 woundLine += 1;
 
                                 fight.Add(String.Format("Бросок на пробитие: {0} - чётное", Game.Dice.Symbol(woundDice)));
@@ -396,7 +408,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                                 fight.Add(String.Format("BOLD|Из-за яда, рана отнимает у {0} сразу 5 жизней", enemy.Name));
                             }
                             else
-                                enemy.Hitpoints -= 2;
+                                enemy.Hitpoints -= woundLevel;
                         }
 
                         if (enemy.Hitpoints <= 0)
