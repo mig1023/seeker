@@ -491,7 +491,7 @@
 		<ID>50</ID>
 		<Text>Удар точен, но в предсмертной судороге обезьян спускает курок. Если вы не поставите ЗАСЛОН, стрела прошьет ваше бедро, и придется отнять у себя 5 ЖИЗНЕЙ:</Text>
 		<Options>
-			<Option Destination="503" Text="ЗАСЛОН"/>
+			<Option Destination="503" Text="ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН"/>
 			<Option Destination="503" Do="Hitpoints" Value="-5"/>
 		</Options>
 	</Paragraph>
@@ -1236,7 +1236,7 @@
 			<Option Destination="550" Text="Присесть"/>
 			<Option Destination="349" Text="Подпрыгнуть"/>
 			<Option Destination="161" Text="Встретить гада рубящим ударом снизу"/>
-			<Option Destination="500" Text="ЗАСЛОН"/>
+			<Option Destination="500" Text="ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1923,7 +1923,7 @@
 		<Options>
 			<Option Destination="341" Text="ВОЛК"/>
 			<Option Destination="354" Text="Принять бой"/>
-			<Option Destination="414" Text="Поставить ЗАСЛОН"/>
+			<Option Destination="414" Text="Поставить ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2037,7 +2037,7 @@
 		<Text>Подъем проходит безболезненно, но едва вы ставите ногу на площадку третьего этажа, буквально из ниоткуда в вас ударяет струя пламени. Времени у вас хватает только для того, чтобы:</Text>
 		<Options>
 			<Option Destination="258" Text="Упасть навзничь"/>
-			<Option Destination="542" Text="Поставить ЗАСЛОН"/>
+			<Option Destination="542" Text="Поставить ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН"/>
 			<Option Destination="305" Text="Прижаться к стене"/>
 		</Options>
 	</Paragraph>
@@ -2045,7 +2045,7 @@
 		<ID>215</ID>
 		<Text>В таком случае вас спасет лишь ЗАСЛОН, если вы догадались им запастись:</Text>
 		<Options>
-			<Option Destination="375" Text="Воспользоваться ЗАСЛОНОМ" Aftertext="Иначе новый удар повергнет вас наземь, а там уже вся крона обрушится на вас шквалом ударов..."/>
+			<Option Destination="375" Text="Воспользоваться ЗАСЛОНОМ" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН" Aftertext="Иначе новый удар повергнет вас наземь, а там уже вся крона обрушится на вас шквалом ударов..."/>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
@@ -3115,7 +3115,7 @@
 		<ID>326</ID>
 		<Text>Разрубив в воздухе брошенный в вас аркан, вы понимаете, что теряете драгоценные секунды. Слишком слаженно атакуют трое хазратов. Через пару секунд вас просто собьют с ног и затопчут копытами...</Text>
 		<Options>
-			<Option Destination="448" Text="Успели поставить ЗАСЛОН" Aftertext="Иначе, максимум, что вы успеете - прихватить с собой одного кочевника..."/>
+			<Option Destination="448" Text="Успели поставить ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН" Aftertext="Иначе, максимум, что вы успеете - прихватить с собой одного кочевника..."/>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
@@ -3946,7 +3946,7 @@
 			<Option Destination="2" Text="Привстать и рубануть ее мечом"/>
 			<Option Destination="302" Text="Кувырнуться вперед"/>
 			<Option Destination="443" Text="Кувырнуться назад (с этой стороны ее конец вроде бы поближе)"/>
-			<Option Destination="499" Text="ЗАСЛОН"/>
+			<Option Destination="499" Text="ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4258,7 +4258,7 @@
 		<Text>Хлопок! Еще одна дымка раскрывается в воздухе и начинает опускаться на вас. Теперь не успеть ни назад, ни вперед.</Text>
 		<Options>
 			<Option Destination="2" Text="Рубанете ее мечом"/>
-			<Option Destination="499" Text="ЗАСЛОН"/>
+			<Option Destination="499" Text="ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4656,7 +4656,7 @@
 		<ID>484</ID>
 		<Text>Выпрыгнув из-за своего укрытия, бросаете песок в хазратов и сбиваете прицел лучнику. Стрела уходит мимо, но вы понимаете, что запорошив глаза кочевникам вы не остановили их скакунов...</Text>
 		<Options>
-			<Option Destination="448" Text="Использовать ЗАСЛОН" Aftertext="Иначе вас попросту стопчут через пару секунд..."/>
+			<Option Destination="448" Text="Использовать ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН" Aftertext="Иначе вас попросту стопчут через пару секунд..."/>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
@@ -4710,7 +4710,7 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="548" Text="Заслон" Aftertext="...либо СРЕАГИРОВАТЬ:"/>
+				<Option Destination="548" Text="Заслон" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН" Aftertext="...либо СРЕАГИРОВАТЬ:"/>
 			</Action>
 			<Action>
 				<Name>Reaction</Name>
@@ -5312,7 +5312,7 @@
 		<ID>550</ID>
 		<Text>Но прыжок левого богомола имеет очень невысокую, хотя и невероятно длинную траекторию. Вот, оказывается, что это такое - оказаться меж двух огней.\n\nМысль эта - последнее, что вы успеваете подумать, пытаясь заслониться мечом в своем неудобном положении и прекрасно понимая, что вы не успеваете...</Text>
 		<Options>
-			<Option Destination="500" Text="Поставить ЗАСЛОН" Aftertext="Если сделать этого вы не можете:"/>
+			<Option Destination="500" Text="Поставить ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН" Aftertext="Если сделать этого вы не можете:"/>
 			<Option Destination="286"/>
 		</Options>
 	</Paragraph>
