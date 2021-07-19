@@ -21,6 +21,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             action.OnlyRounds = Game.Xml.IntParse(xmlAction["OnlyRounds"]);
             action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.RoundsWinToWin = Game.Xml.IntParse(xmlAction["RoundsWinToWin"]);
             action.ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]);
             action.Regeneration = Game.Xml.BoolParse(xmlAction["Regeneration"]);
             action.ReactionFight = Game.Xml.BoolParse(xmlAction["ReactionFight"]);
@@ -28,6 +29,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             action.TailAttack = Game.Xml.BoolParse(xmlAction["TailAttack"]);
             action.IncrementWounds = Game.Xml.BoolParse(xmlAction["IncrementWounds"]);
             action.ThreeWoundLimit = Game.Xml.BoolParse(xmlAction["ThreeWoundLimit"]);
+            action.Invincible = Game.Xml.BoolParse(xmlAction["Invincible"]);
             action.Wound = Game.Xml.IntParse(xmlAction["Wound"]);
             action.Dices = Game.Xml.IntParse(xmlAction["Dices"]);
             action.EvenWound = Game.Xml.BoolParse(xmlAction["EvenWound"]);
