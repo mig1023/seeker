@@ -173,6 +173,26 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return new List<string> { "BIG|GOOD|Ваш меч теперь заколдован :)" };
         }
 
+        public List<string> LeechFight()
+        {
+            List<string> fight = new List<string> { };
+
+            int dice = Game.Dice.Roll();
+
+            fight.Add(String.Format("На кубиках выпало: {0}", Game.Dice.Symbol(dice)));
+
+            if (dice > 2)
+                fight.Add("BIG|GOOD|Вы раздавили пиявку :)");
+            else
+            {
+                Character.Protagonist.Hitpoints -= 2;
+                fight.Add("BIG|BAD|Она прокусила сапог :(");
+                fight.Add("BAD|Вы потеряли 2 жизни...");
+            }
+
+            return fight;
+        }
+
         private bool GoodReaction(ref List<string> reaction, bool showResult = false)
         {
             int reactionLevel = (int)Math.Floor((double)Character.Protagonist.Hitpoints / 5);
