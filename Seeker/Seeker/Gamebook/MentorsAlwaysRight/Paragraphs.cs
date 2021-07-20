@@ -89,6 +89,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
                 ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
                 Empty = Game.Xml.BoolParse(xmlNode.Attributes["Empty"]),
+                Restore = Game.Xml.BoolParse(xmlNode.Attributes["Restore"]),
             };
 
             return modification;
