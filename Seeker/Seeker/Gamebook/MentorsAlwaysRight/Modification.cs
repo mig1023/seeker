@@ -11,6 +11,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             if (Name == "Spell")
                 Character.Protagonist.Spells.Remove(ValueString);
 
+            else if (Name == "RestoreSpells")
+                Character.Protagonist.Spells = new List<string>(Character.Protagonist.SpellsReplica);
+
             else
                 InnerDo(Character.Protagonist);
         }
