@@ -99,8 +99,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public SpecializationType Specialization { get; set; }
 
         public int PoisonBlade { get; set; }
-        public int HealingSpellLost { get; set; }
-
 
         public override void Init()
         {
@@ -117,7 +115,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Specialization = SpecializationType.Nope;
 
             PoisonBlade = 0;
-            HealingSpellLost = 0;
         }
 
         public Character Clone() => new Character()
@@ -135,11 +132,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Specialization = this.Specialization,
 
             PoisonBlade = this.PoisonBlade,
-            HealingSpellLost = this.HealingSpellLost,
         };
 
         public override string Save() => String.Join("|", Strength, Hitpoints, Magicpoints, PoisonBlade,
-            Gold, Footwraps, TimeForReading, ConneryHitpoints, ConneryTrust, Specialization, Elixir, HealingSpellLost);
+            Gold, Footwraps, TimeForReading, ConneryHitpoints, ConneryTrust, Specialization, Elixir);
 
         public override void Load(string saveLine)
         {
@@ -155,7 +151,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             ConneryHitpoints = int.Parse(save[7]);
             ConneryTrust = int.Parse(save[8]);
             Elixir = int.Parse(save[10]);
-            HealingSpellLost = int.Parse(save[11]);
 
             bool success = Enum.TryParse(save[9], out SpecializationType value);
             Specialization = (success ? value : SpecializationType.Nope);
