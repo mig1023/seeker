@@ -344,6 +344,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     return false;
             }
 
+            else if (option == "ОБОРОТЕНЬ")
+                return Character.Protagonist.Transformation > 0;
+
             else if (Character.Protagonist.Spells.Contains(option))
                 return true;
 
