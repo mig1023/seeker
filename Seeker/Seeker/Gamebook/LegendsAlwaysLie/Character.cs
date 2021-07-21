@@ -98,7 +98,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public SpecializationType Specialization { get; set; }
 
-        public bool FoodIsDivided { get; set; }
         public int PoisonBlade { get; set; }
         public int HealingSpellLost { get; set; }
 
@@ -117,7 +116,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             ConneryTrust = 5;
             Specialization = SpecializationType.Nope;
 
-            FoodIsDivided = false;
             PoisonBlade = 0;
             HealingSpellLost = 0;
         }
@@ -136,13 +134,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             ConneryTrust = this.ConneryTrust,
             Specialization = this.Specialization,
 
-            FoodIsDivided = this.FoodIsDivided,
             PoisonBlade = this.PoisonBlade,
             HealingSpellLost = this.HealingSpellLost,
         };
 
-        public override string Save() => String.Join("|", Strength, Hitpoints, Magicpoints, (FoodIsDivided ? 1 : 0),
-            PoisonBlade, Gold, Footwraps, TimeForReading, ConneryHitpoints, ConneryTrust, Specialization, Elixir, HealingSpellLost);
+        public override string Save() => String.Join("|", Strength, Hitpoints, Magicpoints, PoisonBlade,
+            Gold, Footwraps, TimeForReading, ConneryHitpoints, ConneryTrust, Specialization, Elixir, HealingSpellLost);
 
         public override void Load(string saveLine)
         {
@@ -151,17 +148,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Strength = int.Parse(save[0]);
             Hitpoints = int.Parse(save[1]);
             Magicpoints = int.Parse(save[2]);
-            FoodIsDivided = (save[3] == "1");
-            PoisonBlade = int.Parse(save[4]);
-            Gold = int.Parse(save[5]);
-            Footwraps = int.Parse(save[6]);
-            TimeForReading = int.Parse(save[7]);
-            ConneryHitpoints = int.Parse(save[8]);
-            ConneryTrust = int.Parse(save[9]);
-            Elixir = int.Parse(save[11]);
-            HealingSpellLost = int.Parse(save[12]);
+            PoisonBlade = int.Parse(save[3]);
+            Gold = int.Parse(save[4]);
+            Footwraps = int.Parse(save[5]);
+            TimeForReading = int.Parse(save[6]);
+            ConneryHitpoints = int.Parse(save[7]);
+            ConneryTrust = int.Parse(save[8]);
+            Elixir = int.Parse(save[10]);
+            HealingSpellLost = int.Parse(save[11]);
 
-            bool success = Enum.TryParse(save[10], out SpecializationType value);
+            bool success = Enum.TryParse(save[9], out SpecializationType value);
             Specialization = (success ? value : SpecializationType.Nope);
         }
     }

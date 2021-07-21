@@ -187,7 +187,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             bool byPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
             bool byCureSprain = (Name == "CureSprain") && (Character.Protagonist.Magicpoints <= 0);
 
-            bool byAlreadyDecided = (FoodSharing != null) && Character.Protagonist.FoodIsDivided;
+            bool byAlreadyDecided = (FoodSharing != null) && Game.Data.Triggers.Contains("FoodSharing");
             bool byFootwraps = ((Name == "FootwrapsDeadlyReplacement") ||
                 (Name == "FootwrapsReplacement")) && Character.Protagonist.Footwraps <= 0;
 
@@ -342,7 +342,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public List<string> ShareFood()
         {
-            Character.Protagonist.FoodIsDivided = true;
+            Game.Option.Trigger("FoodIsDivided");
 
             if (FoodSharing == FoodSharingType.KeepMyself)
                 Character.Protagonist.Hitpoints += 5;
