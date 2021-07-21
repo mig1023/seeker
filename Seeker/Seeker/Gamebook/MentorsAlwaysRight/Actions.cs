@@ -91,14 +91,17 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return enemies;
         }
 
+        private int CureSpellCount() => Character.Protagonist.Spells.Where(x => x.Contains("ЛЕЧЕНИЕ")).Count();
+
         public override bool IsButtonEnabled()
         {
             bool bySpell = ThisIsSpell && (Character.Protagonist.Magicpoints <= 0);
+            bool byCureSpell = (Name == "CureFracture") && (CureSpellCount() < Wound);
             bool bySpecButton = (Specialization != null) && (Character.Protagonist.Specialization != Character.SpecializationType.Nope);
             bool byPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
             bool byTrigger = Game.Data.Triggers.Contains(OnlyOne);
 
-            return !(bySpell || bySpecButton || byPrice || byTrigger || Used);
+            return !(bySpell || byCureSpell || bySpecButton || byPrice || byTrigger || Used);
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
@@ -247,10 +250,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public List<string> CureRabies()
         {
-            if (!Character.Protagonist.Spells.Contains("ЛЕЧЕНИЕ"))
+            if (CureSpellCount() < 1)
                 return new List<string> { "BIG|BAD|У вас нет ЛЕЧИЛКИ :(" };
 
             List<string> cure = new List<string> { };
+
+            Character.Protagonist.Spells.Remove("ЛЕЧЕНИЕ");
 
             Game.Option.Trigger("Rabies", remove: true);
             cure.Add("BIG|GOOD|Вы успешно вылечили болезнь!");
@@ -263,11 +268,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public List<string> CureFracture()
         {
-            int spells = Character.Protagonist.Spells.Where(x => x.Contains("ЛЕЧЕНИЕ")).Count();
-
             if (Wound > 1)
             {
-                if (spells < 2)
+                if (CureSpellCount() < 2)
                     return new List<string> { "BIG|BAD|У вас нет двух ЛЕЧИЛОК :(" };
 
                 for (int i = 0; i <= 1; i++)
@@ -277,7 +280,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             }    
             else
             {
-                if (spells < 1)
+                if (CureSpellCount() < 1)
                     return new List<string> { "BIG|BAD|У вас нет ЛЕЧИЛКИ :(" };
 
                 Character.Protagonist.Spells.Remove("ЛЕЧЕНИЕ");
@@ -297,9 +300,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 return staticButtons;
 
             bool wounded = (Character.Protagonist.Hitpoints < Character.Protagonist.MaxHitpoints);
-            bool healingSpell = Character.Protagonist.Spells.Contains("ЛЕЧЕНИЕ");
+            bool inOption = Game.Checks.ExistsInParagraph(actionText: "ЛЕЧИЛК", optionText: "ЛЕЧИЛК");
 
-            if (wounded && healingSpell && !Game.Checks.ExistsInParagraph(actionText: "ЛЕЧИЛК", optionText: "ЛЕЧИЛК"))
+            if (wounded && (CureSpellCount() > 0) && !inOption)
                 staticButtons.Add("ЛЕЧИЛКА");
 
             if (wounded && (Character.Protagonist.Elixir > 0))
