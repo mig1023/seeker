@@ -228,6 +228,21 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return new List<string> { String.Format("BIG|На кубике выпало: {0} - {1}", Game.Dice.Symbol(dice), (dice % 2 == 0 ? "чёт" : "нечет")) };
         }
 
+        public List<string> StoneThrow()
+        {
+            if (Character.Protagonist.Specialization == Character.SpecializationType.Thrower)
+                return new List<string> { "BIG|GOOD|Ваша специализациея является метание ножей - и вы не промахнулись :)" };
+
+            int dice = Game.Dice.Roll();
+
+            List<string> stoneThrow = new List<string> { };
+
+            stoneThrow.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
+            stoneThrow.Add(dice > 4 ? "BIG|GOOD|Вы попали :)" : "BIG|BAD|Вы промахнулись :(");
+
+            return stoneThrow;
+        }
+
         public List<string> DicesGame()
         {
             List<string> game = new List<string> { };
