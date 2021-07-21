@@ -339,6 +339,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
                 if (option.Contains("ЗОЛОТО >=") && (level > Character.Protagonist.Gold))
                     return false;
+
+                if (option.Contains("СИЛА >=") && (level > Character.Protagonist.Strength))
+                    return false;
             }
 
             else if (Character.Protagonist.Spells.Contains(option))
