@@ -261,6 +261,34 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return cure;
         }
 
+        public List<string> CureFracture()
+        {
+            int spells = Character.Protagonist.Spells.Where(x => x.Contains("ЛЕЧЕНИЕ")).Count();
+
+            if (Wound > 1)
+            {
+                if (spells < 2)
+                    return new List<string> { "BIG|BAD|У вас нет двух ЛЕЧИЛОК :(" };
+
+                for (int i = 0; i <= 1; i++)
+                    Character.Protagonist.Spells.Remove("ЛЕЧЕНИЕ");
+
+                Character.Protagonist.Hitpoints += 4;
+            }    
+            else
+            {
+                if (spells < 1)
+                    return new List<string> { "BIG|BAD|У вас нет ЛЕЧИЛКИ :(" };
+
+                Character.Protagonist.Spells.Remove("ЛЕЧЕНИЕ");
+                Character.Protagonist.Strength -= 1;
+            }
+
+            Game.Option.Trigger(OnlyOne);
+
+            return new List<string> { "RELOAD" };
+        }
+
         public override List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };
