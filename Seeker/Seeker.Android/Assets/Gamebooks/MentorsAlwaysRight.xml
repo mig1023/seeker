@@ -385,15 +385,13 @@
 				<Name>Get</Name>
 				<Button>Выбрать деньги</Button>
 				<Benefit Name="Gold" Value="20"/>
-				<OnlyOne/>
-				<Trigger>AlreadyChose</Trigger>
+				<OnlyOne>WizardPay</OnlyOne>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Выбрать благодать</Button>
 				<Benefit Name="MaxHitpoints" Value="10"/>
-				<OnlyOne/>
-				<Trigger>AlreadyChose</Trigger>
+				<OnlyOne>WizardPay</OnlyOne>
 				<Aftertext>Совершив приглянувшийся обмен, вы прощаетесь.</Aftertext>
 			</Action>
 		</Actions>
