@@ -2366,6 +2366,7 @@
 		<ID>248</ID>
 		<Text>Хазраты! Обернувшись, видите, что в круг на всем скаку влетают четверо кочевников. Трое воинов и один в наброшенной на плечи волчьей шкуре, с посохом - явно шаман. Если у вас нечего им продемонстрировать, то можете действовать:</Text>
 		<Options>
+			<Option Destination="348" Text="Показать оберег Субэдая" OnlyIf="Amulet"/>
 			<Option Destination="326" Text="Выхватывать меч и сражаться"/>
 			<Option Destination="268" Text="Поднять руки и попробовать вступить в переговоры"/>
 			<Option Destination="49" Text="Нырнуть в проход между валунами"/>
@@ -2785,6 +2786,7 @@
 			<Modification Name="Gold" Value="4"/>
 			<Modification Name="Spell" Value="ЛЕЧЕНИЕ"/>
 		</Modifications>
+		<Triggers>Amulet</Triggers>
 		<Options>
 			<Option Destination="283"/>
 		</Options>
