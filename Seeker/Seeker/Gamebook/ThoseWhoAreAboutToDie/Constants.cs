@@ -22,7 +22,6 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.Background] = "#fef4d5",
             [ColorTypes.StatusBar] = "#fce391",
             [ColorTypes.StatusFont] = "#000000",
         };
