@@ -5462,8 +5462,8 @@
 		<Modifications>
 			<Modification Name="Hitpoints" Init="true"/>
 			<Modification Name="Elixir" Empty="true"/>
-			<Modification Name="HealingSpellLost" Value="1"/>
 		</Modifications>
+		<Triggers>HealingSpellLost</Triggers>
 		<Options>
 			<Option Destination="607"/>
 		</Options>
