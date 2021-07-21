@@ -189,6 +189,9 @@ namespace Seeker.Gamebook.DzungarWar
             if (Level > 0)
                 return true;
 
+            else if (Used)
+                return false;
+
             else if (Name == "Brother")
                 return Character.Protagonist.Brother <= 0;
 
@@ -360,6 +363,16 @@ namespace Seeker.Gamebook.DzungarWar
         public List<string> Brother()
         {
             Character.Protagonist.Brother += 1;
+
+            return new List<string> { "RELOAD" };
+        }
+
+        public List<string> GetSomething()
+        {
+            if (Benefit != null)
+                Benefit.Do();
+
+            Used = true;
 
             return new List<string> { "RELOAD" };
         }
