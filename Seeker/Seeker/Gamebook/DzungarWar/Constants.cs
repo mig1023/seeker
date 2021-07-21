@@ -24,6 +24,7 @@ namespace Seeker.Gamebook.DzungarWar
             [ColorTypes.Background] = "#f1e6d1",
             [ColorTypes.ActionBox] = "#af8f69",
             [ColorTypes.StatusBar] = "#dcc18c",
+            [ColorTypes.StatusFont] = "#000000",
             [ColorTypes.AdditionalStatus] = "#e3cda3",
         };
 
