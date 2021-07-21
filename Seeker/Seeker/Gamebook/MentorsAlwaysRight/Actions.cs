@@ -91,6 +91,13 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return enemies;
         }
 
+        public List<string> Camouflage()
+        {
+            Game.Option.Trigger("Camouflage");
+
+            return new List<string> { "Вы успешно себя закамуфлировали грязью :)" };
+        }
+
         private int CureSpellCount() => Character.Protagonist.Spells.Where(x => x.Contains("ЛЕЧЕНИЕ")).Count();
 
         public override bool IsButtonEnabled()
@@ -115,6 +122,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 Character.Protagonist.SpellsReplica.Add(Text);
                 Character.Protagonist.Magicpoints -= 1;
             }
+
             else if ((Specialization != null) && (Character.Protagonist.Specialization == Character.SpecializationType.Nope))
             {
                 Character.Protagonist.Specialization = Specialization ?? Character.SpecializationType.Nope;
@@ -212,6 +220,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 reaction.Add(goodReaction ? "BOLD|Реакции хватило" : "BOLD|Реакция подвела");
 
             return goodReaction;
+        }
+
+        public List<string> Dice()
+        {
+            int dice = Game.Dice.Roll();
+            return new List<string> { String.Format("BIG|На кубике выпало: {0} - {1}", Game.Dice.Symbol(dice), (dice % 2 == 0 ? "чёт" : "нечет")) };
         }
 
         public List<string> DicesGame()
