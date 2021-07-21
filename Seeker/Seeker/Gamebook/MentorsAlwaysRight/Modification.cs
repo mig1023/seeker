@@ -13,6 +13,13 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             else if (Name == "RestoreSpells")
                 Character.Protagonist.Spells = new List<string>(Character.Protagonist.SpellsReplica);
+            
+            else if (Name == "Transformation")
+            {
+                Character.Protagonist.Transformation -= 1;
+                Character.Protagonist.Hitpoints -= 2;
+            }
+                
 
             else
                 InnerDo(Character.Protagonist);
