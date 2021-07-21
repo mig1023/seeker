@@ -1091,8 +1091,8 @@
 		<ID>115</ID>
 		<Text>Осиротевшие кони уносятся прочь, а вы быстро осматриваете убитых. Добыча невелика: пара кожаных перчаток, полупустой бурдюк с водой (+3 ЖИЗНИ) да один золотой.</Text>
 		<Modifications>
-			<Modification Name="Hitpoints" Value="3"/>
 			<Modification Name="Gold" Value="1"/>
+			<Modification Name="Healing" ValueString="Выпить воды из бурдюка,3"/>
 		</Modifications>
 		<Options>
 			<Option Destination="75"/>
