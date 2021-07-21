@@ -505,7 +505,7 @@
 		<Text>Чахлая растительность на склонах возвышенностей, которые и холмами-то трудно назвать, наводит изрядную тоску. Но внезапно раздавшееся сбоку рычание заставляет насторожиться. К вам приближаются сразу три приземистых степных волка. Трусливые твари, они нападают только имея численный перевес, и то не всегда, если дичь опасна. Но эти, похоже, настроены серьезно.</Text>
 		<Options>
 			<Option Destination="168" Text="Обнажите меч"/>
-			<Option Destination="387" Text="ВОЛК"/>
+			<Option Destination="387" Text="ВОЛК" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -535,7 +535,7 @@
 		<Text>Потрескавшаяся каменистая земля по мере вашего продвижения постепенно меняет облик. Невысокая, выжженая солнцем трава, чуть поодаль какой-то валун... Прерывая ваши наблюдения, этот самый валун начинает медленно подниматься, расправляя свои крылья и по-кошачьи прогибаясь. Кровь холодеет у вас в жилах. Это грифон! Крылья и голова орла на массивном львином теле - крайне смертоносная нечисть, в случае схватки у вас от силы один шанс из десяти. Вот орлиная голова медленно поворачивается в вашу сторону.</Text>
 		<Options>
 			<Option Destination="10" Text="Замереть"/>
-			<Option Destination="87" Text="Если ОБОРОТЕНЬ"/>
+			<Option Destination="87" Text="Если ОБОРОТЕНЬ" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
 			<Option Destination="328" Text="Начать медленно отходить к дороге"/>
 			<Option Destination="551" Text="Обнажить меч, решив, что сегодня неплохой день для смерти"/>
 		</Options>
@@ -659,7 +659,7 @@
 		<Text>Через некоторое время ваше чутье подсказывает, что с воздухом что-то не то...</Text>
 		<Options>
 			<Option Destination="177" Text="Есть расшитый золотом пояс"/>
-			<Option Destination="35" Text="ВОЛК"/>
+			<Option Destination="35" Text="ВОЛК" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
 			<Option Destination="16" Text="Будете бегом пересекать странное место"/>
 		</Options>
 	</Paragraph>
@@ -830,7 +830,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>87</ID>
-		<Text>Однако звериное чутье сразу подсказывает: грифон ненастоящий. И точно -его массивная фигура начинает таять в воздухе. Оборотень потрачен зря...</Text>
+		<Text>Однако звериное чутье сразу подсказывает: грифон ненастоящий. И точно - его массивная фигура начинает таять в воздухе. Оборотень потрачен зря...</Text>
 		<Options>
 			<Option Destination="441"/>
 		</Options>
@@ -1477,7 +1477,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="352" Text="Попробуете разомкнуть их самостоятельно"/>
-			<Option Destination="233" Text="МЕДВЕДЬ"/>		
+			<Option Destination="233" Text="МЕДВЕДЬ" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>		
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1534,8 +1534,8 @@
 			<Option Destination="143" Text="Что-нибудь сказать демону, чтобы втянуть его в разговор"/>
 			<Option Destination="92" Text="Ударить его СГУСТКОМ" Do="Spell" ValueString="СГУСТОК" OnlyIf="СГУСТОК"/>
 			<Option Destination="331" Text="Попытаться прорваться к столику за спиной демона"/>
-			<Option Destination="213" Text="ВОЛК"/>
-			<Option Destination="8" Text="МЕДВЕДЬ"/>
+			<Option Destination="213" Text="ВОЛК" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
+			<Option Destination="8" Text="МЕДВЕДЬ" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
 			<Option Destination="362" Text="У вас есть эльфийская стрела"/>
 		</Options>
 	</Paragraph>
@@ -1629,7 +1629,7 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="198" Text="ОБОРОТЕНЬ" Aftertext="Иначе - деритесь:"/>
+				<Option Destination="198" Text="ОБОРОТЕНЬ" OnlyIf="ОБОРОТЕНЬ" Do="Transformation" Aftertext="Иначе - деритесь:"/>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
@@ -1659,8 +1659,8 @@
 			<Option Destination="294" Text="Рассказать все, как есть, без утайки - про здание наставников и кучу встретившихся вам в пути опасностей и странностей"/>
 			<Option Destination="370" Text="Спросить - с кем у храмовников был бой"/>
 			<Option Destination="242" Text="Соврать, сказав, что проходите обряд посвящения ведьмаков - вам надо убить какую-нибудь нечисть и принести в Академию трофей" Aftertext="Попытаться бежать. Это возможно лишь в том случае, если вы прибегнете к помощи:"/>
-			<Option Destination="536" Text="МЕДВЕДЯ"/>
-			<Option Destination="439" Text="ВОЛКА"/>
+			<Option Destination="536" Text="МЕДВЕДЯ" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
+			<Option Destination="439" Text="ВОЛКА" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1941,7 +1941,7 @@
 		<ID>201</ID>
 		<Text>До леса, казалось бы, рукой подать, но, судя по нарастающему свисту сзади, тварь вас настигает.</Text>
 		<Options>
-			<Option Destination="341" Text="ВОЛК"/>
+			<Option Destination="341" Text="ВОЛК" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
 			<Option Destination="354" Text="Принять бой"/>
 			<Option Destination="414" Text="Поставить ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН"/>
 		</Options>
@@ -2000,7 +2000,7 @@
 		<Options>
 			<Option Destination="17" Text="Упасть на землю"/>
 			<Option Destination="495" Text="Поднять голову и посмотреть в чем дело"/>
-			<Option Destination="251" Text="ВОЛК"/>
+			<Option Destination="251" Text="ВОЛК" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2371,8 +2371,8 @@
 			<Option Destination="268" Text="Поднять руки и попробовать вступить в переговоры"/>
 			<Option Destination="49" Text="Нырнуть в проход между валунами"/>
 			<Option Destination="492" Text="Отступить к идолу"/>
-			<Option Destination="205" Text="ВОЛК"/>
-			<Option Destination="297" Text="МЕДВЕДЬ"/>
+			<Option Destination="205" Text="ВОЛК" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
+			<Option Destination="297" Text="МЕДВЕДЬ" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2725,7 +2725,7 @@
 		<Text>Из сидячего положения вывернуться невероятно сложно, а вампир уже склоняется над вашей шеей. Разомкнуть смертельные объятья вы сможете лишь только если:</Text>
 		<Options>
 			<Option Destination="509" Text="Ваша СИЛА не меньше 13" OnlyIf="СИЛА >= 13"/>
-			<Option Destination="509" Text="С помощью МЕДВЕДЯ" Aftertext="Иначе - быть вам выпитым досуха..."/>
+			<Option Destination="509" Text="С помощью МЕДВЕДЯ" OnlyIf="ОБОРОТЕНЬ" Do="Transformation" Aftertext="Иначе - быть вам выпитым досуха..."/>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
@@ -2812,8 +2812,8 @@
 		<Options>
 			<Option Destination="488" Text="Вы стоите сейчас лицом к руслу, быть может, рвануть к нему"/>
 			<Option Destination="133" Text="Предпочтете обороняться, не сходя с места"/>
-			<Option Destination="36" Text="ВОЛК"/>
-			<Option Destination="472" Text="МЕДВЕДЬ"/>
+			<Option Destination="36" Text="ВОЛК" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
+			<Option Destination="472" Text="МЕДВЕДЬ" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3065,7 +3065,7 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="508" Text="МЕДВЕДЬ" Aftertext="Иначе - сражайтесь:"/>
+				<Option Destination="508" Text="МЕДВЕДЬ" OnlyIf="ОБОРОТЕНЬ" Do="Transformation" Aftertext="Иначе - сражайтесь:"/>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
@@ -3619,7 +3619,7 @@
 			<Option Destination="497" Text="Согласиться на кости"/>
 			<Option Destination="525" Text="На абсолютно неизвестный вам 'отбой'"/>
 			<Option Destination="231" Text="Атаковать нахала"/>
-			<Option Destination="304" Text="ОБОРОТЕНЬ"/>
+			<Option Destination="304" Text="ОБОРОТЕНЬ" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3650,7 +3650,7 @@
 		<Text>Ваша попытка увенчается успехом только в том случае, если ваша СИЛА не меньше 13. Тогда у вас получится разжать челюсти этой ловушке:</Text>
 		<Options>
 			<Option Destination="528" Text="Силы достаточно" OnlyIf="СИЛА >= 13"/>
-			<Option Destination="528" Text="МЕДВЕДЬ" Aftertext="Иначе, потеряв с хлещущей кровью еще 2 ЖИЗНИ, остается лишь рубануть по барельефу мечом:"/>
+			<Option Destination="528" Text="МЕДВЕДЬ" OnlyIf="ОБОРОТЕНЬ" Do="Transformation" Aftertext="Иначе, потеряв с хлещущей кровью еще 2 ЖИЗНИ, остается лишь рубануть по барельефу мечом:"/>
 			<Option Destination="449" Do="Hitpoints" Value="-2"/>
 		</Options>
 	</Paragraph>
@@ -3737,7 +3737,7 @@
 		<ID>388</ID>
 		<Text>Ничего подобного вам в Академии не преподавали. Больше всего эта тварь напоминает гигантского, в два ваших роста, пса, с которого содрали почти всю плоть. По идее, подобный монстр вообще не может быть живым. Но его глаза горят мрачным багровым огнем, и, поскрипывая оставшимися сухожилиями, он бросается на вас. Ваши действия:</Text>
 		<Options>
-			<Option Destination="361" Text="ВОЛК"/>
+			<Option Destination="361" Text="ВОЛК" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
 			<Option Destination="496" Text="СГУСТОК" Do="Spell" ValueString="СГУСТОК" OnlyIf="СГУСТОК"/>
 			<Option Destination="445" Text="Старый добрый меч"/>
 		</Options>
@@ -4462,7 +4462,7 @@
 		<ID>460</ID>
 		<Text>Подло брошенный аркан застает вас врасплох и тугая петля захлестывает ваше туловище, прижимая руки к телу. Хазрат пришпоривает коня...</Text>
 		<Options>
-			<Option Destination="149" Text="Попытаться освободиться при помощи МЕДВЕДЯ" Aftertext="В противном случае:"/>
+			<Option Destination="149" Text="Попытаться освободиться при помощи МЕДВЕДЯ" OnlyIf="ОБОРОТЕНЬ" Do="Transformation" Aftertext="В противном случае:"/>
 			<Option Destination="505"/>
 		</Options>
 	</Paragraph>
@@ -4504,7 +4504,7 @@
 		<ID>464</ID>
 		<Text>Не уйти!</Text>
 		<Options>
-			<Option Destination="193" Text="Возможно спасет ВОЛК"/>
+			<Option Destination="193" Text="Возможно спасет ВОЛК" OnlyIf="ОБОРОТЕНЬ" Do="Transformation"/>
 			<Option Destination="102" Text="Принять неравный бой"/>
 		</Options>
 	</Paragraph>
