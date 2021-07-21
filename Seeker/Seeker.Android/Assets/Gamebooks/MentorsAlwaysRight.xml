@@ -1990,7 +1990,7 @@
 			<Modification Name="Hitpoints" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="144" Text="Отодвинуть камень (только если ваша СИЛА не меньше 13-ти)"/>
+			<Option Destination="144" Text="Отодвинуть камень (только если ваша СИЛА не меньше 13-ти)" OnlyIf="СИЛА >= 13"/>
 			<Option Destination="415" Text="Такая тяжесть вам не по зубам"/>
 		</Options>
 	</Paragraph>
@@ -2724,7 +2724,7 @@
 		<ID>287</ID>
 		<Text>Из сидячего положения вывернуться невероятно сложно, а вампир уже склоняется над вашей шеей. Разомкнуть смертельные объятья вы сможете лишь только если:</Text>
 		<Options>
-			<Option Destination="509" Text="Ваша СИЛА не меньше 13"/>
+			<Option Destination="509" Text="Ваша СИЛА не меньше 13" OnlyIf="СИЛА >= 13"/>
 			<Option Destination="509" Text="С помощью МЕДВЕДЯ" Aftertext="Иначе - быть вам выпитым досуха..."/>
 			<Option Destination="0"/>
 		</Options>
@@ -3011,10 +3011,11 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>313</ID>
-		<Text>Еще раз бросьте кубик.</Text>
+		<Text>Еще раз бросьте кубик. Вам удается снести гоблина с ног, если:</Text>
 		<Options>
-			<Option Destination="454" Text="Выпало 5 или 6, а также в том случае, если ваша СИЛА не меньше 13, то вам удается снести гоблина с ног"/>
-			<Option Destination="108" Text="Удар у вас вышел слабее"/>
+			<Option Destination="454" Text="Выпало 5 или 6"/>
+			<Option Destination="454" Text="Ваша СИЛА не меньше 13" OnlyIf="СИЛА >= 13" Aftertext="Иначе удар у вас вышел слабее:"/>
+			<Option Destination="108"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3648,7 +3649,7 @@
 		<ID>381</ID>
 		<Text>Ваша попытка увенчается успехом только в том случае, если ваша СИЛА не меньше 13. Тогда у вас получится разжать челюсти этой ловушке:</Text>
 		<Options>
-			<Option Destination="528" Text="Силы достаточно"/>
+			<Option Destination="528" Text="Силы достаточно" OnlyIf="СИЛА >= 13"/>
 			<Option Destination="528" Text="МЕДВЕДЬ" Aftertext="Иначе, потеряв с хлещущей кровью еще 2 ЖИЗНИ, остается лишь рубануть по барельефу мечом:"/>
 			<Option Destination="449" Do="Hitpoints" Value="-2"/>
 		</Options>
