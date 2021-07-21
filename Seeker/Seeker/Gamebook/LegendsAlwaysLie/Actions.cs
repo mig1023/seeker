@@ -419,10 +419,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             bool warriorFight = (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
             bool poisonBlade = false;
 
-            if (Character.Protagonist.PoisonBlade > 0)
+            if (Game.Data.Triggers.Contains("PoisonBlade"))
             {
                 poisonBlade = true;
-                Character.Protagonist.PoisonBlade = 0;
+                Game.Option.Trigger("PoisonBlade", remove: true);
             }
 
             List<Character> FightEnemies = new List<Character>();

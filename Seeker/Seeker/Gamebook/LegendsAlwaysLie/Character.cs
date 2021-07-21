@@ -98,8 +98,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public SpecializationType Specialization { get; set; }
 
-        public int PoisonBlade { get; set; }
-
         public override void Init()
         {
             Name = String.Empty;
@@ -113,8 +111,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             ConneryHitpoints = 30;
             ConneryTrust = 5;
             Specialization = SpecializationType.Nope;
-
-            PoisonBlade = 0;
         }
 
         public Character Clone() => new Character()
@@ -130,11 +126,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             ConneryHitpoints = this.ConneryHitpoints,
             ConneryTrust = this.ConneryTrust,
             Specialization = this.Specialization,
-
-            PoisonBlade = this.PoisonBlade,
         };
 
-        public override string Save() => String.Join("|", Strength, Hitpoints, Magicpoints, PoisonBlade,
+        public override string Save() => String.Join("|", Strength, Hitpoints, Magicpoints,
             Gold, Footwraps, TimeForReading, ConneryHitpoints, ConneryTrust, Specialization, Elixir);
 
         public override void Load(string saveLine)
@@ -144,15 +138,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Strength = int.Parse(save[0]);
             Hitpoints = int.Parse(save[1]);
             Magicpoints = int.Parse(save[2]);
-            PoisonBlade = int.Parse(save[3]);
-            Gold = int.Parse(save[4]);
-            Footwraps = int.Parse(save[5]);
-            TimeForReading = int.Parse(save[6]);
-            ConneryHitpoints = int.Parse(save[7]);
-            ConneryTrust = int.Parse(save[8]);
-            Elixir = int.Parse(save[10]);
+            Gold = int.Parse(save[3]);
+            Footwraps = int.Parse(save[4]);
+            TimeForReading = int.Parse(save[5]);
+            ConneryHitpoints = int.Parse(save[6]);
+            ConneryTrust = int.Parse(save[7]);
+            Elixir = int.Parse(save[9]);
 
-            bool success = Enum.TryParse(save[9], out SpecializationType value);
+            bool success = Enum.TryParse(save[8], out SpecializationType value);
             Specialization = (success ? value : SpecializationType.Nope);
         }
     }
