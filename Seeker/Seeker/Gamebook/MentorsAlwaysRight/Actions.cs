@@ -373,8 +373,11 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     return false;
             }
 
-            else if (option == "ОБОРОТЕНЬ")
+            else if (option == "ВОЛК")
                 return Character.Protagonist.Transformation > 0;
+
+            else if (option == "МАДВЕДЬ")
+                return (Character.Protagonist.Transformation > 0) && !Game.Data.Triggers.Contains("Taboo");
 
             else if (Character.Protagonist.Spells.Contains(option))
                 return true;
