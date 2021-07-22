@@ -907,7 +907,14 @@
 				<Button>Купить бурдюк</Button>
 				<Text>Бурдюк с водой (добавит 3 ЖИЗНИ)</Text>
 				<Price>4</Price>
-				<Aftertext>Если у вас есть серебряный подсвечник, торговец может купить его у вас за три золотых.\n\nПосле уходите.</Aftertext>
+				<Aftertext>Если у вас есть серебряный подсвечник, торговец может купить его у вас за три золотых:</Aftertext>
+			</Action>
+			<Action>
+				<Name>Sell</Name>
+				<Button>Продать подсвечник</Button>
+				<Trigger>SilverCandlestick</Trigger>
+				<Price>3</Price>
+				<Aftertext>После уходите.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -2609,7 +2616,7 @@
 		<Modifications>
 			<Modification Name="Gold" Value="5"/>
 		</Modifications>
-		<Triggers>Vessel</Triggers>
+		<Triggers>Vessel, SilverCandlestick</Triggers>
 		<Options>
 			<Option Destination="545"/>
 		</Options>
