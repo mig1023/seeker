@@ -2507,6 +2507,9 @@
 	<Paragraph>
 		<ID>261</ID>
 		<Text>Итак, теперь у вас есть ВОЛЧИЙ ОБЕРЕГ. Он дает вам возможность двух дополнительных ОБРАЩЕНИЙ. Теперь возвращайтесь.</Text>
+		<Modifications>
+			<Modification Name="Transformation" Value="2"/>
+		</Modifications>
 		<Options>
 			<Option Destination="279"/>
 		</Options>
