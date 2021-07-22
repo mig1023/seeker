@@ -670,7 +670,7 @@
 		<ID>68</ID>
 		<Text>Через некоторое время ваше чутье подсказывает, что с воздухом что-то не то...</Text>
 		<Options>
-			<Option Destination="177" Text="Есть расшитый золотом пояс"/>
+			<Option Destination="177" Text="Есть расшитый золотом пояс" OnlyIf="GoldEmbroideredBelt"/>
 			<Option Destination="35" Text="ВОЛК" OnlyIf="ВОЛК" Do="Transformation"/>
 			<Option Destination="16" Text="Будете бегом пересекать странное место"/>
 		</Options>
@@ -885,6 +885,7 @@
 				<Name>Get</Name>
 				<Button>Купить пояс</Button>
 				<Text>Расшитый золотыми нитями пояс</Text>
+				<Trigger>GoldEmbroideredBelt</Trigger>
 				<Price>5</Price>
 			</Action>
 			<Action>
