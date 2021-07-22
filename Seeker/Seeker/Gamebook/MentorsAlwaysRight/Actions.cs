@@ -104,11 +104,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             bool bySpell = ThisIsSpell && (Character.Protagonist.Magicpoints <= 0);
             bool byCureSpell = (Name == "CureFracture") && (CureSpellCount() < Wound);
+            bool bySell = (Name == "Sell") && !Game.Data.Triggers.Contains(Trigger);
             bool bySpecButton = (Specialization != null) && (Character.Protagonist.Specialization != Character.SpecializationType.Nope);
             bool byPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
             bool byTrigger = Game.Data.Triggers.Contains(OnlyOne);
 
-            return !(bySpell || byCureSpell || bySpecButton || byPrice || byTrigger || Used);
+            return !(bySpell || byCureSpell || bySell || bySpecButton || byPrice || byTrigger || Used);
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
@@ -148,6 +149,15 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             if (Benefit != null)
                 Benefit.Do();
+
+            return new List<string> { "RELOAD" };
+        }
+
+        public List<string> Sell()
+        {
+            Used = true;
+            Game.Option.Trigger(Trigger, remove: true);
+            Character.Protagonist.Gold += Price;
 
             return new List<string> { "RELOAD" };
         }
