@@ -385,6 +385,15 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             else if (option == "!ВОИН")
                 return Character.Protagonist.Specialization != Character.SpecializationType.Warrior;
 
+            else if (option.Contains("|"))
+            {
+                foreach (string opt in option.Split('|'))
+                    if (Game.Data.Triggers.Contains(opt.Trim()))
+                        return true;
+
+                return false;
+            }
+
             else if (!Game.Data.Triggers.Contains(option.Trim()))
                 return false;
             
