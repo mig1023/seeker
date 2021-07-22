@@ -331,7 +331,7 @@
 			<Modification Name="Hitpoints" Value="2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="72" Text="Что-то из этого есть" Aftertext="А если нет, то, увы, калиостр бесполезен, хотя на всякий случай можете прихватить его с собой. Теперь пора уходить..."/>
+			<Option Destination="72" Text="Что-то из этого есть" OnlyIf="Vessel" Aftertext="А если нет, то, увы, калиостр бесполезен, хотя на всякий случай можете прихватить его с собой. Теперь пора уходить..."/>
 			<Option Destination="357"/>
 		</Options>
 	</Paragraph>
@@ -879,6 +879,7 @@
 				<Name>Get</Name>
 				<Button>Купить чашу</Button>
 				<Text>Фигурная серебряная чаша</Text>
+				<Triggers>Vessel</Triggers>
 				<Price>3</Price>
 			</Action>
 			<Action>
@@ -2607,6 +2608,7 @@
 		<Modifications>
 			<Modification Name="Gold" Value="5"/>
 		</Modifications>
+		<Triggers>Vessel</Triggers>
 		<Options>
 			<Option Destination="545"/>
 		</Options>
@@ -3559,6 +3561,7 @@
 	<Paragraph>
 		<ID>364</ID>
 		<Text>Изнутри хижина обставлена крайне убого, по пыльной обстановке ясно, что брошена она уже довольно давно. На колченогом столе посреди комнаты стоит медный котелок. Можете взять его и уходите.</Text>
+		<Triggers>Vessel</Triggers>
 		<Options>
 			<Option Destination="208"/>
 		</Options>
