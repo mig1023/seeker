@@ -394,6 +394,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 return false;
             }
 
+            else if (option.Contains("!"))
+            {
+                if (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()))
+                    return false;
+            }
+
             else if (!Game.Data.Triggers.Contains(option.Trim()))
                 return false;
             
