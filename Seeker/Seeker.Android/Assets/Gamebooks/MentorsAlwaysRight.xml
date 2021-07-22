@@ -912,6 +912,7 @@
 			<Action>
 				<Name>Sell</Name>
 				<Button>Продать подсвечник</Button>
+				<Text>Серебряный подсвечник</Text>
 				<Trigger>SilverCandlestick</Trigger>
 				<Price>3</Price>
 				<Aftertext>После уходите.</Aftertext>
