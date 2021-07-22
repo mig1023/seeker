@@ -17,7 +17,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             else if (Name == "Transformation")
             {
                 Character.Protagonist.Transformation -= 1;
-                Character.Protagonist.Hitpoints -= 2;
+                Character.Protagonist.Hitpoints -= (Game.Data.Triggers.Contains("PainfulTransformation") ? 3 : 2);
             }
 
             else if (Name == "NoMoreMagic")
