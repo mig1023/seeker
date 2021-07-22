@@ -142,7 +142,10 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             }
 
             else if ((Price > 0) && (Character.Protagonist.Gold >= Price))
+            {
                 Character.Protagonist.Gold -= Price;
+                Used = true;
+            }
 
             if (!String.IsNullOrEmpty(OnlyOne))
                 Game.Option.Trigger(OnlyOne);
