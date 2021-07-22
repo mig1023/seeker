@@ -989,6 +989,7 @@
 	<Paragraph>
 		<ID>104</ID>
 		<Text>К сожалению, конь рыцаря убегает прочь со всем снаряжением. Обыскав труп, вы находите лишь массивный золотой браслет. Боевой топор храмовника - хорошее добротное оружие, но вы все же больше привыкли к своему мечу.</Text>
+		<Triggers>GoldBracelet</Triggers>
 		<Options>
 			<Option Destination="204"/>
 		</Options>
@@ -1573,8 +1574,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="369" Text="Есть золотой браслет"/>
-			<Option Destination="173" Text="Нет"/>
+			<Option Destination="369" Text="Есть золотой браслет" OnlyIf="GoldBracelet"/>
+			<Option Destination="173"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4228,6 +4229,7 @@
 		<Text>- Гони восемь монет, - безапелляционно заявляет леший. Если вы согласны (и в состоянии) заплатить, то он вас пропустит. Также вместо денег его устроит золотой браслет.</Text>
 		<Options>
 			<Option Destination="128" Text="Вы платежеспособны" OnlyIf="ЗОЛОТО >= 8"/>
+			<Option Destination="128" Text="Расплатитесь браслетом" OnlyIf="GoldBracelet"/>
 			<Option Destination="521" Text="Бой"/>
 		</Options>
 	</Paragraph>
@@ -5234,8 +5236,8 @@
 			<Modification Name="Hitpoints" Value="-4"/>
 		</Modifications>
 		<Options>
-			<Option Destination="369" Text="Есть золотой браслет"/>
-			<Option Destination="173" Text="Нет"/>
+			<Option Destination="369" Text="Есть золотой браслет" OnlyIf="GoldBracelet"/>
+			<Option Destination="173"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
