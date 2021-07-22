@@ -2488,10 +2488,16 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>259</ID>
-		<Text>Бросьте кубик.</Text>
+		<Text>Бросьте кубик:</Text>
+		<Actions>
+			<Action>
+				<Name>Dice</Name>
+				<Button>Кинуть кубик</Button>
+			</Action>
+		</Actions>
 		<Options>
-			<Option Destination="180" Text="Выпал чет"/>
-			<Option Destination="197" Text="Если же нечет, то, увы, свой маневр вы начали слишком поздно"/>
+			<Option Destination="180" Text="Выпал чет" Aftertext="Если же нечет, то, увы, свой маневр вы начали слишком поздно:"/>
+			<Option Destination="197" Text="Выпал нечет"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
