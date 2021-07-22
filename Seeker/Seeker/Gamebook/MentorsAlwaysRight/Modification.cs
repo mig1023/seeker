@@ -19,7 +19,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 Character.Protagonist.Transformation -= 1;
                 Character.Protagonist.Hitpoints -= 2;
             }
-                
+
+            else if (Name == "NoMoreMagic")
+            {
+                Character.Protagonist.Spells.Clear();
+                Character.Protagonist.Transformation = 0;
+            }
 
             else
                 InnerDo(Character.Protagonist);
