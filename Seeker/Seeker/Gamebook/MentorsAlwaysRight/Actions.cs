@@ -376,17 +376,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             else if (option == "ВОЛК")
                 return Character.Protagonist.Transformation > 0;
 
-            else if (option == "МАДВЕДЬ")
+            else if (option == "МЕДВЕДЬ")
                 return (Character.Protagonist.Transformation > 0) && !Game.Data.Triggers.Contains("Taboo");
 
             else if (Character.Protagonist.Spells.Contains(option))
                 return true;
 
-            else if (option.Contains("!"))
-            {
-                if (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()))
-                    return false;
-            }
+            else if (option == "!ВОИН")
+                return Character.Protagonist.Specialization != Character.SpecializationType.Warrior;
 
             else if (!Game.Data.Triggers.Contains(option.Trim()))
                 return false;
