@@ -292,7 +292,17 @@ namespace Seeker.Output
             var fontFamily = OnPlatformDic.Platforms.FirstOrDefault((arg) => arg.Platform.FirstOrDefault() == Device.RuntimePlatform).Value;
 
             return fontFamily.ToString();
-        } 
+        }
+
+        public static Label Text(Output.Text text)
+        {
+            Label label = Text(text.Content);
+
+            if (text.Bold)
+                label.FontFamily = TextFontFamily(bold: true);
+
+            return label;
+        }
 
         public static Label Text(string text, bool defaultParams = false)
         {

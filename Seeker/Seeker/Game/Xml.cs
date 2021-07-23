@@ -39,11 +39,33 @@ namespace Seeker.Game
             if (xmlNode == null)
                 return null;
 
-            modification.Name = Game.Xml.StringParse(xmlNode.Attributes[name]);
-            modification.Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]);
-            modification.ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]);
+            modification.Name = StringParse(xmlNode.Attributes[name]);
+            modification.Value = IntParse(xmlNode.Attributes["Value"]);
+            modification.ValueString = StringParse(xmlNode.Attributes["ValueString"]);
 
             return modification;
+        }
+
+        public static string TextParse(int id, string optionName)
+        {
+            string textByParagraph = String.Empty;
+
+            if (Game.Data.XmlParagraphs[id]["Text"] != null)
+                textByParagraph = Game.Data.XmlParagraphs[id]["Text"].InnerText;
+
+            string textByOption = Game.Data.Actions.TextByOptions(optionName);
+
+            return (String.IsNullOrEmpty(textByOption) ? textByParagraph : textByOption);
+        }
+
+        public static List<Output.Text> TextsParse(XmlNode xmlNode)
+        {
+            List<Output.Text> texts = new List<Output.Text>();
+
+            foreach (XmlNode text in xmlNode.SelectNodes("Texts/Text"))
+                texts.Add(new Output.Text { Content = text.InnerText, Bold = BoolParse(text.Attributes["Bold"]) });
+
+            return texts;
         }
     }
 }

@@ -82,16 +82,17 @@ namespace Seeker
             else
                 paragraph = Game.Data.CurrentParagraph;
 
-            string textByParagraph = Game.Data.XmlParagraphs[id]["Text"].InnerText;
-            string textByOption = Game.Data.Actions.TextByOptions(optionName);
-            string text = (String.IsNullOrEmpty(textByOption) ? textByParagraph : textByOption);
+            string text = Game.Xml.TextParse(id, optionName);
 
             if (!String.IsNullOrEmpty(text))
                 Text.Children.Add(Output.Interface.Text(text));
 
+            foreach (Output.Text texts in Game.Xml.TextsParse(Game.Data.XmlParagraphs[id]))
+                Text.Children.Add(Output.Interface.Text(texts));
+
             if ((paragraph.Images != null) && (paragraph.Images.Count > 0))
             {
-                foreach(string image in paragraph.Images.Keys.ToList())
+                foreach (string image in paragraph.Images.Keys.ToList())
                 {
                     Text.Children.Add(Output.Interface.IllustrationImage(image));
 
@@ -115,7 +116,7 @@ namespace Seeker
 
                 foreach (Abstract.IActions action in paragraph.Actions)
                 {
-                    if (action.ActionName == "Option")
+                    if (action.Name == "Option")
                     {
                         Action.Children.Add(AddOptionButton(action.Option, ref gameOver));
 
@@ -129,13 +130,13 @@ namespace Seeker
                         foreach (View enemy in Output.Interface.Represent(action.Do(out _, "Representer")))
                             actionPlace.Children.Add(enemy);
 
-                        Button button = Output.Buttons.Action(action.ButtonName, action.IsButtonEnabled());
+                        Button button = Output.Buttons.Action(action.Button, action.IsButtonEnabled());
                         button.Clicked += Action_Click;
                         actionPlace.Children.Add(button);
 
                         Action.Children.Add(actionPlace);
 
-                        Game.Router.AddAction(action.ButtonName, index);
+                        Game.Router.AddAction(action.Button, index);
                         Game.Router.AddActionsPlaces(index, actionPlace);
 
                         if (!String.IsNullOrEmpty(action.Aftertext))
