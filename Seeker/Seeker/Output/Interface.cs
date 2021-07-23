@@ -279,7 +279,7 @@ namespace Seeker.Output
             return button;
         }
 
-        public static string TextFontFamily(bool bold = false)
+        public static string TextFontFamily(bool bold = false, bool italic = false)
         {
             string font = String.Empty;
 
@@ -287,6 +287,9 @@ namespace Seeker.Output
                 font = (bold ? "YanoneFontBold" : "YanoneFont");
             else
                 font = String.Format("{0}{1}", Game.Data.Constants.GetFont(), (bold ? "Bold" : String.Empty));
+
+            if (italic)
+                font = "RobotoFontItalic";
 
             OnPlatform<string> OnPlatformDic = (OnPlatform<string>)App.Current.Resources[font];
             var fontFamily = OnPlatformDic.Platforms.FirstOrDefault((arg) => arg.Platform.FirstOrDefault() == Device.RuntimePlatform).Value;
@@ -300,6 +303,8 @@ namespace Seeker.Output
 
             if (text.Bold)
                 label.FontFamily = TextFontFamily(bold: true);
+            else if (text.Italic)
+                label.FontFamily = TextFontFamily(italic: true);
 
             return label;
         }

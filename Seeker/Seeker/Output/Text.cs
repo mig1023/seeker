@@ -9,5 +9,6 @@ namespace Seeker.Output
         public string Content { get; set; }
 
         public bool Bold { get; set; }
+        public bool Italic { get; set; }
     }
 }
