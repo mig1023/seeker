@@ -297,6 +297,18 @@ namespace Seeker.Output
             return fontFamily.ToString();
         }
 
+        private static double FontSize(TextFontSize size)
+        {
+            if (size == TextFontSize.normal)
+                return Device.GetNamedSize(NamedSize.Large, typeof(Label));
+
+            else if (size == TextFontSize.big)
+                return Constants.BIG_FONT;
+
+            else
+                return Device.GetNamedSize(NamedSize.Medium, typeof(Label));
+        }
+
         public static Label Text(Output.Text text)
         {
             Label label = Text(text.Content);
@@ -304,7 +316,10 @@ namespace Seeker.Output
             if (text.Bold)
                 label.FontFamily = TextFontFamily(bold: true);
             else if (text.Italic)
+            {
                 label.FontFamily = TextFontFamily(italic: true);
+                label.FontSize = FontSize(TextFontSize.little);
+            }
 
             return label;
         }
@@ -329,11 +344,7 @@ namespace Seeker.Output
                 else
                     label.LineHeight = Constants.LINE_HEIGHT;
 
-                if (Game.Data.Constants.GetFontSize() == TextFontSize.normal)
-                    label.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
-
-                else if (Game.Data.Constants.GetFontSize() == TextFontSize.big)
-                    label.FontSize = Constants.BIG_FONT;
+                label.FontSize = FontSize(Game.Data.Constants.GetFontSize());
             }
 
             if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
