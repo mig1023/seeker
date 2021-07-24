@@ -3172,12 +3172,13 @@
 					<Enemy Name="ПЕРВЫЙ ОРК" Mastery="8" Endurance="5"/>
 					<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="7"/>
 				</Enemies>
+				<RoundsToWin>8</RoundsToWin>
 				<Aftertext>Убиты ли оба врага за 8 раундов?</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="505" Text="Если убили обоих врагов"/>
-			<Option Destination="248" Text="Если они живы"/>
+			<Option Destination="505" Text="Убили обоих врагов"/>
+			<Option Destination="248" Text="Они живы"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
