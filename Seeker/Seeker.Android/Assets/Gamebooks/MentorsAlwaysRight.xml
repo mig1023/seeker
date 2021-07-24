@@ -720,7 +720,25 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>73</ID>
-		<Text>Чтобы вырваться из развалин, вам потребуется вся ваша скорость. Уворачиваясь от тянущихся к вам лап, вы должны СРЕАГИРОВАТЬ четыре раза подряд.</Text>
+		<Text>Чтобы вырваться из развалин, вам потребуется вся ваша скорость. Уворачиваясь от тянущихся к вам лап, вы должны СРЕАГИРОВАТЬ четыре раза подряд:</Text>
+		<Actions>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте первый раз</Button>
+			</Action>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте второй раз</Button>
+			</Action>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте третий раз</Button>
+			</Action>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте четвёртый раз</Button>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="193" Text="Вырвались из обители гулов"/>
 			<Option Destination="464" Text="Одна из тварей ухватила-таки вас за плечо"/>
