@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
+        public int StrengthPenlty { get; set; }
 
         public bool ThisIsSpell { get; set; }
 
@@ -226,10 +227,18 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         int secondHeroRoll = Game.Dice.Roll();
                         heroHitStrength = firstHeroRoll + secondHeroRoll + hero.Mastery;
 
+                        string penalty = String.Empty;
+
+                        if (StrengthPenlty > 0)
+                        {
+                            heroHitStrength -= StrengthPenlty;
+                            penalty = String.Format(" - {0} по обстоятельствам", StrengthPenlty);
+                        }
+
                         fight.Add(String.Format(
-                            "Сила {0}: {1} + {2} + {3} = {4}",
-                            (copyFight ? "удара копии" : "вашего удара"),
-                            Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll), hero.Mastery, heroHitStrength));
+                            "Сила {0}: {1} + {2} + {3}{4} = {5}",
+                            (copyFight ? "удара копии" : "вашего удара"), Game.Dice.Symbol(firstHeroRoll),
+                            Game.Dice.Symbol(secondHeroRoll), hero.Mastery, penalty, heroHitStrength));
                     }
 
                     int firstEnemyRoll = Game.Dice.Roll();

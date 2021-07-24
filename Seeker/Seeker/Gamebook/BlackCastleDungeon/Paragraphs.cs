@@ -22,6 +22,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
             action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
             action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.StrengthPenlty = Game.Xml.IntParse(xmlAction["StrengthPenlty"]);
             action.ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]);
 
             if (xmlAction["Enemies"] != null)
