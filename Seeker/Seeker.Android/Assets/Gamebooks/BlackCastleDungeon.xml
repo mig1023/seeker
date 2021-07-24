@@ -571,7 +571,7 @@
 		<Options>
 			<Option Destination="410" Text="Заклятие Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
 			<Option Destination="219" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-			<Option Destination="189" Text="Если вы победили"/>
+			<Option Destination="189"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -911,7 +911,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="301" Text="Выйти в дверь"/>
+			<Option Destination="301"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2458,19 +2458,23 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>257</ID>
-		<Text>Вы стучите молотком по двери, и выходит привратник — огромный лев, закованный в латы. Если вы не знаете пароль, то придется пробиваться с помощью своего меча. Убив льва, вы можете перешагнуть через него и войти.</Text>
+		<Text>Вы стучите молотком по двери, и выходит привратник — огромный лев, закованный в латы. </Text>
 		<Actions>
+			<Action>
+				<Name>Option</Name>
+				<Option Destination="565" Text="Знаете пароль" Aftertext="Если вы не знаете пароль, то придется пробиваться с помощью своего меча."/>
+			</Action>
 			<Action>
 				<Name>Fight</Name>
 				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЛЕВ" Mastery="9" Endurance="15"/>
 				</Enemies>
+				<Aftertext>Убив льва, вы можете перешагнуть через него и войти.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="565" Text="Знаете пароль"/>
-			<Option Destination="264" Text="Если лев мёртв"/>
+			<Option Destination="264"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -3129,8 +3133,12 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>326</ID>
-		<Text>Если хотите, во время боя можете покинуть таверну и бежать. Воспользоваться же заклятием Копии вам не удастся: Водяной этого не допустит.</Text>
+		<Text>Если хотите, во время боя можете покинуть таверну и бежать.</Text>
 		<Actions>
+			<Action>
+				<Name>Option</Name>
+				<Option Destination="504" Text="Покинуть таверну и бежать" Aftertext="Воспользоваться же заклятием Копии вам не удастся: Водяной этого не допустит."/>
+			</Action>
 			<Action>
 				<Name>Fight</Name>
 				<Button>Сражаться</Button>
@@ -3140,8 +3148,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="573" Text="Если вы победили"/>
-			<Option Destination="504" Text="Покинуть таверну и бежать"/>
+			<Option Destination="573"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5377,7 +5384,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>565</ID>
-		<Text>Каков же пароль? Щит тьмы? Демоны и сила? Меч и верность?</Text>
+		<Text>Каков же пароль?</Text>
 		<Options>
 			<Option Destination="94" Text="Щит тьмы"/>
 			<Option Destination="469" Text="Демоны и сила"/>
@@ -5411,7 +5418,7 @@
 			<Option Destination="395" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
 			<Option Destination="299" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 			<Option Destination="96" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-			<Option Destination="241" Text="Если вы победили врага"/>
+			<Option Destination="241"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
