@@ -565,6 +565,7 @@
 				<Enemies>
 					<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="8" Endurance="8"/>
 				</Enemies>
+				<StrengthPenlty>1</StrengthPenlty>
 			</Action>
 		</Actions>
 		<Options>
@@ -1769,6 +1770,7 @@
 					<Enemy Name="ПЕРВЫЙ ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 					<Enemy Name="ВТОРОЙ ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 				</Enemies>
+				<StrengthPenlty>1</StrengthPenlty>
 			</Action>
 		</Actions>
 		<Options>
@@ -2122,6 +2124,7 @@
 				<Enemies>
 					<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="5" Endurance="8"/>
 				</Enemies>
+				<StrengthPenlty>1</StrengthPenlty>
 			</Action>
 		</Actions>
 		<Options>
@@ -2966,6 +2969,7 @@
 				<Enemies>
 					<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 				</Enemies>
+				<StrengthPenlty>1</StrengthPenlty>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -5307,6 +5311,7 @@
 				<Enemies>
 					<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="8" Endurance="8"/>
 				</Enemies>
+				<StrengthPenlty>1</StrengthPenlty>
 			</Action>
 		</Actions>
 		<Options>
