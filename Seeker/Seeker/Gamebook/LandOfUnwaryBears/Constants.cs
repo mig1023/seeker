@@ -25,5 +25,7 @@ namespace Seeker.Gamebook.LandOfUnwaryBears
             [ColorTypes.StatusBar] = "#aa2218",
             [ColorTypes.StatusFont] = "#eede49",
         };
+
+        public override string GetFont() => "RobotoFont";
     }
 }
