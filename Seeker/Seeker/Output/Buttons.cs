@@ -20,7 +20,7 @@ namespace Seeker.Output
                 TextColor = Xamarin.Forms.Color.White,
                 IsEnabled = enabled,
                 BackgroundColor = (enabled ? Color.FromHex(color) : Color.Gray),
-                FontFamily = Output.Interface.TextFontFamily(),
+                FontFamily = Output.Interface.TextFontFamily(standart: true),
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Button)),
             };
 
@@ -47,7 +47,7 @@ namespace Seeker.Output
                 Text = option.Text,
                 BackgroundColor = Color.FromHex(color),
                 IsEnabled = isEnabled,
-                FontFamily = Output.Interface.TextFontFamily(),
+                FontFamily = Output.Interface.TextFontFamily(standart: true),
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                 IsVisible = String.IsNullOrEmpty(option.Input),
             };
@@ -63,7 +63,7 @@ namespace Seeker.Output
             {
                 Text = text,
                 BackgroundColor = (String.IsNullOrEmpty(color) ? Color.LightGray : Color.FromHex(color)),
-                FontFamily = Output.Interface.TextFontFamily(),
+                FontFamily = Output.Interface.TextFontFamily(standart: true),
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
 

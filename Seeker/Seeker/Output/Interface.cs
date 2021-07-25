@@ -279,11 +279,11 @@ namespace Seeker.Output
             return button;
         }
 
-        public static string TextFontFamily(bool bold = false, bool italic = false)
+        public static string TextFontFamily(bool bold = false, bool italic = false, bool standart = false)
         {
             string font = String.Empty;
 
-            if ((Game.Data.Constants == null) || String.IsNullOrEmpty(Game.Data.Constants.GetFont()))
+            if (standart || (Game.Data.Constants == null) || String.IsNullOrEmpty(Game.Data.Constants.GetFont()))
                 font = (bold ? "YanoneFontBold" : "YanoneFont");
             else
                 font = String.Format("{0}{1}", Game.Data.Constants.GetFont(), (bold ? "Bold" : String.Empty));
