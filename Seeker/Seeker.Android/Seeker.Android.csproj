@@ -81,6 +81,7 @@
     <AndroidAsset Include="Assets\Fonts\YanoneKaffeesatz-Light.ttf" />
     <AndroidAsset Include="Assets\Fonts\YanoneKaffeesatz-Bold.ttf" />
     <AndroidAsset Include="Assets\Fonts\CourierNew.ttf" />
+    <AndroidAsset Include="Assets\Fonts\Roboto-Italic.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
@@ -341,6 +342,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\MentorsAlwaysRight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Gamebooks\LandOfUnwaryBears.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\LandOfUnwaryBears.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

@@ -451,6 +451,21 @@ namespace Seeker.Gamebook
                 BorderColor = "#000000",
                 Illustration = "VWeapons.jpg",
             },
+
+            ["В краю непуганных медведей"] = new Description
+            {
+                XmlBook = "Gamebooks/LandOfUnwaryBears.xml",
+                Protagonist = LandOfUnwaryBears.Character.Protagonist.Init,
+                CheckOnlyIf = LandOfUnwaryBears.Actions.StaticInstance.CheckOnlyIf,
+                Paragraphs = LandOfUnwaryBears.Paragraphs.StaticInstance,
+                Actions = LandOfUnwaryBears.Actions.StaticInstance,
+                Constants = LandOfUnwaryBears.Constants.StaticInstance,
+                Save = LandOfUnwaryBears.Character.Protagonist.Save,
+                Load = LandOfUnwaryBears.Character.Protagonist.Load,
+                SmallDisclaimer = "Геннадий Логинов, 2020",
+                BookColor = "#d52b1e",
+                Illustration = "LandOfUnwaryBears.jpg",
+            },
         };
 
         public static List<string> GetBooks() => Books.Keys.ToList();
