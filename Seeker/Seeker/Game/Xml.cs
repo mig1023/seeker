@@ -63,11 +63,10 @@ namespace Seeker.Game
             List<Output.Text> texts = new List<Output.Text>();
 
             foreach (XmlNode text in xmlNode.SelectNodes("Texts/Text"))
-                texts.Add(new Output.Text {
-                    Content = text.InnerText,
-                    Bold = BoolParse(text.Attributes["Bold"]),
-                    Italic = BoolParse(text.Attributes["Italic"])
-                });
+            {
+                string font = StringParse(text.Attributes["Font"]);
+                texts.Add(new Output.Text { Content = text.InnerText, Bold = (font == "Bold"), Italic = (font == "Italic") });
+            }
 
             return texts;
         }
