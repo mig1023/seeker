@@ -13,19 +13,11 @@ namespace Seeker.Gamebook.LandOfUnwaryBears
 
         public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#d52b1e",
-            [ButtonTypes.Option] = "#d52b1e",
-            [ButtonTypes.Continue] = "#e57f78",
-            [ButtonTypes.Font] = "#eede49",
-        };
-
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.Background] = "#ffdadb",
-            [ColorTypes.StatusBar] = "#aa2218",
-            [ColorTypes.StatusFont] = "#eede49",
+            [ButtonTypes.Main] = "#9e003a",
         };
 
         public override string GetFont() => "RobotoFont";
+
+        public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
     }
 }
