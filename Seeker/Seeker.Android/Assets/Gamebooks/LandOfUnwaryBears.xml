@@ -537,7 +537,14 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>31</ID>
-		<Text>Человек в камуфляже: "Гет аутхир! Зис ар май бушес!"\n\nАгент Смит (ошарашенно): "Вотс комненон хир?!"\n\nГолос за кадром: "Занято!"</Text>
+		<Texts>
+			<Text Font="Bold">Человек в камуфляже:</Text>
+			<Text>«Гет аутхир! Зис ар май бушес!»</Text>
+			<Text Font="Bold">Агент Смит (ошарашенно):</Text>
+			<Text>«Вотс комненон хир?!»</Text>
+			<Text Font="Bold">Голос за кадром:</Text>
+			<Text>«Занято!»</Text>
+		</Texts>
 		<Options>
 			<Option Destination="45" Text="Спрятаться в дупло"/>
 			<Option Destination="49" Text="Зарыться в снег"/>
