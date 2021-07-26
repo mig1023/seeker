@@ -8304,139 +8304,238 @@ namespace Seeker.Droid
 			public const int AdventuresOfABeardlessDeceiver = 2131165274;
 			
 			// aapt resource value: 0x7F07005B
-			public const int AdventuresOfABeardlessDeceiver_Akyn = 2131165275;
+			public const int AdventuresOfABeardlessDeceiver_Akyn_1 = 2131165275;
 			
 			// aapt resource value: 0x7F07005C
-			public const int avd_hide_password = 2131165276;
+			public const int AdventuresOfABeardlessDeceiver_Akyn_2 = 2131165276;
 			
 			// aapt resource value: 0x7F07005D
-			public const int avd_show_password = 2131165277;
+			public const int AdventuresOfABeardlessDeceiver_Akyn_3 = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
-			public const int BlackCastleDungeon = 2131165278;
+			public const int AdventuresOfABeardlessDeceiver_Akyn_4 = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int CaptainSheltonsSecret = 2131165279;
+			public const int AdventuresOfABeardlessDeceiver_Akyn_5 = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int design_bottom_navigation_item_background = 2131165280;
+			public const int AdventuresOfABeardlessDeceiver_Akyn_6 = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int design_fab_background = 2131165281;
+			public const int avd_hide_password = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int design_ic_visibility = 2131165282;
+			public const int avd_show_password = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int design_ic_visibility_off = 2131165283;
+			public const int BlackCastleDungeon = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int design_password_eye = 2131165284;
+			public const int BloodfeudOfAltheus = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int design_snackbar_background = 2131165285;
+			public const int CaptainSheltonsSecret = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int DzungarWar = 2131165286;
+			public const int Catharsis = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int FaithfulSwordOfTheKing = 2131165287;
+			public const int CreatureOfHavoc = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int ic_mtrl_chip_checked_black = 2131165288;
+			public const int design_bottom_navigation_item_background = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int ic_mtrl_chip_checked_circle = 2131165289;
+			public const int design_fab_background = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int ic_mtrl_chip_close_circle = 2131165290;
+			public const int design_ic_visibility = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int LegendsAlwaysLie = 2131165291;
+			public const int design_ic_visibility_off = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int mtrl_snackbar_background = 2131165292;
+			public const int design_password_eye = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int mtrl_tabs_default_indicator = 2131165293;
+			public const int design_snackbar_background = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int navigation_empty_icon = 2131165294;
+			public const int DzungarWar = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int notification_action_background = 2131165295;
+			public const int FaithfulSwordOfTheKing = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int notification_bg = 2131165296;
+			public const int Genesis = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int notification_bg_low = 2131165297;
+			public const int Genesis_plan1 = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int notification_bg_low_normal = 2131165298;
+			public const int Genesis_plan2 = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int notification_bg_low_pressed = 2131165299;
+			public const int HeartOfIce = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int notification_bg_normal = 2131165300;
+			public const int HowlOfTheWerewolf = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int notification_bg_normal_pressed = 2131165301;
+			public const int ic_mtrl_chip_checked_black = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int notification_icon_background = 2131165302;
+			public const int ic_mtrl_chip_checked_circle = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int notification_template_icon_bg = 2131165303;
+			public const int ic_mtrl_chip_close_circle = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int notification_template_icon_low_bg = 2131165304;
+			public const int InvisibleFront = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int notification_tile_bg = 2131165305;
+			public const int LandOfUnwaryBears = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int notify_panel_notification_icon_bg = 2131165306;
+			public const int LastHokku = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int RendezVous = 2131165307;
+			public const int LegendsAlwaysLie = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int RockOfTerror = 2131165308;
+			public const int LordOfTheSteppes = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int SwampFever = 2131165309;
+			public const int MentorsAlwaysRight = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int SwampFever_BipolarKochkarnik = 2131165310;
+			public const int mtrl_snackbar_background = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int SwampFever_CrystalPath = 2131165311;
+			public const int mtrl_tabs_default_indicator = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int SwampFever_Hunting = 2131165312;
+			public const int navigation_empty_icon = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int SwampFever_LarchThorns = 2131165313;
+			public const int notification_action_background = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int SwampFever_QuietPool = 2131165314;
+			public const int notification_bg = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int SwampFever_SpectralBushes = 2131165315;
+			public const int notification_bg_low = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int SwampFever_SulfurCavity = 2131165316;
+			public const int notification_bg_low_normal = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int SwampFever_TugOfWar = 2131165317;
+			public const int notification_bg_low_pressed = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int tooltip_frame_dark = 2131165318;
+			public const int notification_bg_normal = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int tooltip_frame_light = 2131165319;
+			public const int notification_bg_normal_pressed = 2131165319;
+			
+			// aapt resource value: 0x7F070088
+			public const int notification_icon_background = 2131165320;
+			
+			// aapt resource value: 0x7F070089
+			public const int notification_template_icon_bg = 2131165321;
+			
+			// aapt resource value: 0x7F07008A
+			public const int notification_template_icon_low_bg = 2131165322;
+			
+			// aapt resource value: 0x7F07008B
+			public const int notification_tile_bg = 2131165323;
+			
+			// aapt resource value: 0x7F07008C
+			public const int notify_panel_notification_icon_bg = 2131165324;
+			
+			// aapt resource value: 0x7F07008D
+			public const int OctopusIsland = 2131165325;
+			
+			// aapt resource value: 0x7F07008E
+			public const int PensionerSimulator = 2131165326;
+			
+			// aapt resource value: 0x7F07008F
+			public const int PrairieLaw = 2131165327;
+			
+			// aapt resource value: 0x7F070090
+			public const int RendezVous = 2131165328;
+			
+			// aapt resource value: 0x7F070091
+			public const int RockOfTerror = 2131165329;
+			
+			// aapt resource value: 0x7F070092
+			public const int SilentSchool = 2131165330;
+			
+			// aapt resource value: 0x7F070093
+			public const int SilentSchool_Chess = 2131165331;
+			
+			// aapt resource value: 0x7F070094
+			public const int StainlessSteelRat = 2131165332;
+			
+			// aapt resource value: 0x7F070095
+			public const int StringOfWorlds = 2131165333;
+			
+			// aapt resource value: 0x7F070096
+			public const int SwampFever = 2131165334;
+			
+			// aapt resource value: 0x7F070097
+			public const int SwampFever_BipolarKochkarnik = 2131165335;
+			
+			// aapt resource value: 0x7F070098
+			public const int SwampFever_CrystalPath = 2131165336;
+			
+			// aapt resource value: 0x7F070099
+			public const int SwampFever_Hunting = 2131165337;
+			
+			// aapt resource value: 0x7F07009A
+			public const int SwampFever_LarchThorns = 2131165338;
+			
+			// aapt resource value: 0x7F07009B
+			public const int SwampFever_QuietPool = 2131165339;
+			
+			// aapt resource value: 0x7F07009C
+			public const int SwampFever_SpectralBushes = 2131165340;
+			
+			// aapt resource value: 0x7F07009D
+			public const int SwampFever_SulfurCavity = 2131165341;
+			
+			// aapt resource value: 0x7F07009E
+			public const int SwampFever_TugOfWar = 2131165342;
+			
+			// aapt resource value: 0x7F07009F
+			public const int ThoseWhoAreAboutToDie = 2131165343;
+			
+			// aapt resource value: 0x7F0700A0
+			public const int ThoseWhoAreAboutToDie_essedarius = 2131165344;
+			
+			// aapt resource value: 0x7F0700A1
+			public const int ThoseWhoAreAboutToDie_retiarius = 2131165345;
+			
+			// aapt resource value: 0x7F0700A2
+			public const int ThoseWhoAreAboutToDie_secutor = 2131165346;
+			
+			// aapt resource value: 0x7F0700A3
+			public const int ThoseWhoAreAboutToDie_thracians = 2131165347;
+			
+			// aapt resource value: 0x7F0700A4
+			public const int ThreePaths = 2131165348;
+			
+			// aapt resource value: 0x7F0700A5
+			public const int tooltip_frame_dark = 2131165349;
+			
+			// aapt resource value: 0x7F0700A6
+			public const int tooltip_frame_light = 2131165350;
+			
+			// aapt resource value: 0x7F0700A7
+			public const int VWeapons = 2131165351;
+			
+			// aapt resource value: 0x7F0700A8
+			public const int VWeapons_Plan = 2131165352;
 			
 			static Drawable()
 			{
