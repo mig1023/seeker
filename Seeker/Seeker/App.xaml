@@ -16,7 +16,7 @@
             <On Platform="Android" Value="Fonts/Roboto-Thin.ttf#Roboto-Thin" />
         </OnPlatform>
         <OnPlatform x:TypeArguments="x:String" x:Key="RobotoFont">
-            <On Platform="Android" Value="Fonts/Roboto-Regular.ttf#Roboto-Regular" />
+            <On Platform="Android" Value="Fonts/Roboto-Light.ttf#Roboto-Light" />
         </OnPlatform>
         <OnPlatform x:TypeArguments="x:String" x:Key="RobotoFontItalic">
             <On Platform="Android" Value="Fonts/Roboto-Italic.ttf#Roboto-Italic" />
