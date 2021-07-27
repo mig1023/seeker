@@ -53,7 +53,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>6</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="301" Text="Если ваш параметр МЕТКОСТЬ равен 14 или больше, стреляете в винт вертобота, его самое уязвимое место" OnlyIf="МЕТКОСТЬ >= 14" Aftertext="Если меньше - в корпус. В этом случае постараетесь попасть:"/>
 			<Option Destination="69" Text="Постараетесь попасть в боковой стабилизатор машины"/>
@@ -218,7 +217,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>26</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="37" Text="Параметр МЕТКОСТЬ равен 12 или больше" OnlyIf="МЕТКОСТЬ >= 12"/>
 			<Option Destination="70" Text="Меньше"/>
@@ -612,7 +610,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>74</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="3" Text="Вы не допрашивали агентов"/>
 			<Option Destination="121" Text="Допросили"/>
@@ -763,7 +760,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>92</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="144" Text="Параметр СТЕЛС 7 и выше" OnlyIf="СТЕЛС >= 7"/>
 			<Option Destination="247" Text="Меньше"/>
@@ -1117,7 +1113,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>133</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="117" Text="Параметр РУКОПАШНОГО БОЯ 13 или больше" OnlyIf="РУКОПАШКА >= 13"/>
 			<Option Destination="181" Text="Меньше"/>
@@ -1764,7 +1759,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>211</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="285" Text="Параметр СТЕЛС 5 или больше" OnlyIf="СТЕЛС >= 5"/>
 			<Option Destination="191" Text="Меньше"/>
@@ -2272,7 +2266,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>273</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="146" Text="Параметр СТЕЛС 6 или выше" OnlyIf="СТЕЛС >= 6"/>
 			<Option Destination="258" Text="Меньше"/>
@@ -2312,7 +2305,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>278</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="384" Text="Параметр МЕТКОСТЬ 14 или больше" OnlyIf="МЕТКОСТЬ >= 14"/>
 			<Option Destination="72" Text="Меньше"/>
@@ -3107,7 +3099,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>378</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="365" Text="Параметр РУКОПАШНЫЙ БОЙ 14 или больше" OnlyIf="РУКОПАШКА >= 14"/>
 			<Option Destination="321" Text="Меньше"/>
@@ -3217,7 +3208,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>392</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="210" Text="Параметр РУКОПАШНЫЙ БОЙ 14 или больше" OnlyIf="РУКОПАШКА >= 14"/>
 			<Option Destination="41" Text="Меньше"/>
