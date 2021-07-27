@@ -22,8 +22,9 @@ namespace Seeker
 
         public void Gamebooks()
         {
+            Game.Data.Clean();
+
             Text.Children.Clear();
-            Game.Router.Clean();
             Options.Children.Clear();
 
             Text.Children.Add(Output.Interface.Text("Выберите книгу:", defaultParams: true));

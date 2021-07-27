@@ -40,5 +40,19 @@ namespace Seeker.Game
         public static Gamebook.Description.CheckOnlyIfMethod CheckOnlyIf;
         public static Gamebook.Description.SaveMethod Save;
         public static Gamebook.Description.LoadMethod Load;
+
+        public static void Clean()
+        {
+            Game.Router.Clean();
+            Triggers.Clear();
+
+            Paragraphs = null;
+            Actions = null;
+            Constants = null;
+            Protagonist = null;
+            CheckOnlyIf = null;
+
+            ShowDisabledOption = false;
+        }
     }
 }
