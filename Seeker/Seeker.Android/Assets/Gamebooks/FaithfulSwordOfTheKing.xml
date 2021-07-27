@@ -1887,8 +1887,12 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>189</ID>
-		<Text>Если вы о чем-то договаривались с человеком, охраняющим заключенного, то знаете, что надо делать. Иначе же — сражайтесь.</Text>
+		<Text>Если вы о чем-то договаривались с человеком, охраняющим заключенного, то знаете, что надо делать:</Text>
 		<Actions>
+			<Action>
+				<Name>Option</Name>
+				<Option Destination="79" Text="Стражник подкуплен" OnlyIf="CorruptGuard" Aftertext="Иначе же — сражайтесь:"/>
+			</Action>
 			<Action>
 				<Name>Fight</Name>
 				<Button>Сражаться</Button>
@@ -1899,8 +1903,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="586" Text="Если вы убили его за 5 раундов атаки"/>
-			<Option Destination="651" Text="Если нет"/>
+			<Option Destination="586" Text="Вы убили его за 5 раундов атаки"/>
+			<Option Destination="651" Text="Не успели"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4499,10 +4503,11 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>448</ID>
-		<Text>Вы платите деньги и расстаетесь со стражником. Завтра, когда начнется бой, не забудьте вычесть 110 из номера параграфа, на котором будете тогда находиться, и узнаете, сдержал ли тюремщик свое слово.</Text>
+		<Text>Вы платите деньги и расстаетесь со стражником. Завтра, когда начнется бой, узнаете, сдержал ли тюремщик свое слово.</Text>
 		<Modifications>
 			<Modification Name="Ecu" Value="-600"/>
 		</Modifications>
+		<Triggers>CorruptGuard</Triggers>
 		<Options>
 			<Option Destination="18"/>
 		</Options>
