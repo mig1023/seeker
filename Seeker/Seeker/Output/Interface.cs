@@ -10,7 +10,7 @@ namespace Seeker.Output
 {
     class Interface
     {
-        public enum TextFontSize { little, normal, big };
+        public enum TextFontSize { micro, small, little, normal, big };
 
         public static Image GamebookImage(Description gamebookDescr) => new Image
         {
@@ -74,12 +74,12 @@ namespace Seeker.Output
         {
             Description description = Gamebook.List.GetDescription(gamebook);
 
-            Button gamebookButton = new Button()
+            Button gamebookButton = new Button
             {
                 Text = gamebook,
                 BackgroundColor = Color.FromHex(description.BookColor),
                 FontFamily = TextFontFamily(),
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Button)),
+                FontSize = FontSize(TextFontSize.normal),
             };
 
             if (!String.IsNullOrEmpty(description.BorderColor))
@@ -229,7 +229,7 @@ namespace Seeker.Output
                         {
                             enemy.Text = line.ToUpper();
                             enemy.FontFamily = TextFontFamily(bold: true);
-                            enemy.FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label));
+                            enemy.FontSize = FontSize(TextFontSize.normal);
                         }
 
                         enemies.Add(enemy);
@@ -257,7 +257,7 @@ namespace Seeker.Output
                 TextColor = Xamarin.Forms.Color.White,
                 BackgroundColor = color,
                 FontFamily = TextFontFamily(),
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                FontSize = FontSize(TextFontSize.normal),
             };
 
             return SetBorderAndTextColor(gameoverButton);
@@ -299,14 +299,23 @@ namespace Seeker.Output
 
         private static double FontSize(TextFontSize size)
         {
-            if (size == TextFontSize.normal)
-                return Device.GetNamedSize(NamedSize.Large, typeof(Label));
+            switch (size)
+            {
+                case TextFontSize.normal:
+                    return Device.GetNamedSize(NamedSize.Large, typeof(Label));
 
-            else if (size == TextFontSize.big)
-                return Constants.BIG_FONT;
+                case TextFontSize.small:
+                    return Device.GetNamedSize(NamedSize.Small, typeof(Label));
 
-            else
-                return Device.GetNamedSize(NamedSize.Medium, typeof(Label));
+                case TextFontSize.micro:
+                    return Device.GetNamedSize(NamedSize.Micro, typeof(Label));
+
+                case TextFontSize.big:
+                    return Constants.BIG_FONT;
+
+                default:
+                    return Device.GetNamedSize(NamedSize.Medium, typeof(Label));
+            }
         }
 
         public static Label Text(Output.Text text)
@@ -329,7 +338,7 @@ namespace Seeker.Output
             Label label = new Label
             {
                 Margin = Constants.TEXT_LABEL_MARGIN,
-                FontSize = Device.GetNamedSize((defaultParams ? NamedSize.Large : NamedSize.Medium), typeof(Label)),
+                FontSize = FontSize(defaultParams ? TextFontSize.normal : TextFontSize.little),
                 Text = System.Text.RegularExpressions.Regex.Unescape(text),
                 FontFamily = TextFontFamily(),
             };
@@ -398,7 +407,7 @@ namespace Seeker.Output
                 foreach(string color in textTypes.Keys.Where(x => text.Contains(x)))
                     actions.TextColor = textTypes[color] ?? actions.TextColor;
 
-                actions.FontSize = Device.GetNamedSize(text.Contains("BIG|") ? NamedSize.Large : NamedSize.Medium, typeof(Label));
+                actions.FontSize = FontSize(text.Contains("BIG|") ? TextFontSize.normal : TextFontSize.little);
 
                 if (text.Contains("BOLD|"))
                     bold = true;
