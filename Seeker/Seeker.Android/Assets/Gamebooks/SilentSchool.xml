@@ -1330,7 +1330,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>147</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="91" Text="Радиатор" OnlyIf = "Радиатор" Aftertext="Портфель точно шевелится. Мой выбор:"/>
 			<Option Destination="24" Text="Открыть портфель" OnlyIf = "!Радиатор"/>
