@@ -69,7 +69,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public int Resurrection { get; set; }
         public int BroochResurrection { get; set; }
         public string Patron { get; set; }
-        public int NoIntuitiveSolutionPenalty { get; set; }
         public int Ichor { get; set; }
         
         public int Health { get; set; }
@@ -84,7 +83,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Resurrection = 1;
             BroochResurrection = 0;
             Patron = "нет";
-            NoIntuitiveSolutionPenalty = 0;
             Ichor = 0;
 
             Armour = new List<string>();
@@ -105,7 +103,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Resurrection = this.Resurrection,
             BroochResurrection = this.Resurrection,
             Patron = this.Patron,
-            NoIntuitiveSolutionPenalty = this.NoIntuitiveSolutionPenalty,
             Ichor = this.Ichor,
 
             Health = (lastWound ? 1 : 3),
@@ -119,7 +116,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             string disfavor = String.Join(":", DisfavorOfTheGods);
 
             return String.Join("|", Strength, Defence, Glory, Shame, armours, weapons, Patron,
-                NoIntuitiveSolutionPenalty, Resurrection, favor, disfavor, BroochResurrection, Ichor);
+                Resurrection, favor, disfavor, BroochResurrection, Ichor);
         }
 
         public override void Load(string saveLine)
@@ -133,12 +130,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Armour = save[4].Split(':').ToList();
             Weapons = save[5].Split(':').ToList();
             Patron = save[6];
-            NoIntuitiveSolutionPenalty = int.Parse(save[7]);
-            Resurrection = int.Parse(save[8]);
-            FavorOfTheGods = save[9].Split(':').ToList();
-            DisfavorOfTheGods = save[10].Split(':').ToList();
-            BroochResurrection = int.Parse(save[11]);
-            Ichor = int.Parse(save[12]);
+            Resurrection = int.Parse(save[7]);
+            FavorOfTheGods = save[8].Split(':').ToList();
+            DisfavorOfTheGods = save[9].Split(':').ToList();
+            BroochResurrection = int.Parse(save[10]);
+            Ichor = int.Parse(save[11]);
         }
 
         public void FellIntoFavor(string godName, bool fellOut = false, bool indifferent = false, bool indifferentToAll = false)
