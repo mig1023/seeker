@@ -609,7 +609,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     {
                         fight.Add(String.Format("BOLD|BAD|{0} ранил вас", enemy.Name));
 
-                        hero.Health -= 1;
+                        if (Game.Data.Triggers.Contains("FirstWoundProtection"))
+                        {
+                            fight.Add("GOOD|Асклепий защитил вас от этого удара!");
+                            Game.Option.Trigger("FirstWoundProtection", remove: true);
+                        }
+                        else
+                            hero.Health -= 1;
 
                         if (hero.Health <= 0)
                         {
