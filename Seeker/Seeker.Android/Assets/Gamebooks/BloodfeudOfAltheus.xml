@@ -1522,6 +1522,7 @@
 			<Modification Name="Patron" ValueString="Афина"/>
 			<Modification Name="Defence" Value="1"/>
 		</Modifications>
+		<Triggers>NoGloryPenaltyByIntuitiveSolution</Triggers>
 		<Options>
 			<Option Destination="2"/>
 		</Options>
@@ -3302,8 +3303,8 @@
 		<Text>Озаренный сияющей славой, рядом с вами появляется сам Аполлон. «Альтей. Ну что же, я польщен. Храни себя: препятствий много на пути своем ты встретишь. Я должен отправляться на охоту с Артемидой, но сила моя пребудет с тобой». Он плюет вам в глаза? и вы чувствуете, как дар предсказания снисходит на вас. Затем бог исчезает так же быстро, как и появился. Вы же направляетесь в Афины, где царствует ваш отец. Всякий раз, как вы принимаете интуитивное решение, можете игнорировать штрафы за неверную догадку. Теперь в путь.</Text>
 		<Modifications>
 			<Modification Name="Patron" ValueString="Аполлон"/>
-			<Modification Name="NoIntuitiveSolutionPenalty" Value="1"/>
 		</Modifications>
+		<Triggers>NoPenaltyByIntuitiveSolution</Triggers>
 		<Options>
 			<Option Destination="2"/>
 		</Options>
