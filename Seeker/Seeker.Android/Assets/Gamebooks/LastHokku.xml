@@ -8,7 +8,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>1</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="2" Text="Сверкающее"/>
 			<Option Destination="2" Text="Тёмное"/>
@@ -19,7 +18,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>2</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="3" Text="солнце"/>
 			<Option Destination="3" Text="облако"/>
@@ -30,7 +28,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>3</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="4" Text="накрыло"/>
 			<Option Destination="4" Text="впитало"/>
@@ -41,7 +38,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>4</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="5" Text="небо"/>
 			<Option Destination="5" Text="землю"/>
@@ -52,7 +48,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>5</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="6" Text="Время"/>
 			<Option Destination="6" Text="Я"/>
@@ -63,7 +58,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>6</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="7" Text="больше чем"/>
 			<Option Destination="7" Text="всего лишь"/>
@@ -72,7 +66,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>7</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="8" Text="слово"/>
 			<Option Destination="8" Text="смерть"/>
@@ -83,35 +76,30 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>8</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="9" Text="Ты создал это хокку..."/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>9</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="10" Text="Прочти его ещё раз..."/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>10</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="11" Text="Обдумай..."/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>11</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="12" Text="Проникнись..."/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>12</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="0" Text="И создай ещё лучше..."/>
 		</Options>
