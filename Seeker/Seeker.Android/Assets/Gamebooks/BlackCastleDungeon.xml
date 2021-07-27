@@ -133,7 +133,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>14</ID>
-		<Text></Text>
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
@@ -1049,7 +1048,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>109</ID>
-		<Text></Text>
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
@@ -3804,7 +3802,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>401</ID>
-		<Text></Text>
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
@@ -3940,7 +3937,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>415</ID>
-		<Text></Text>
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
@@ -4668,7 +4664,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>491</ID>
-		<Text></Text>
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
