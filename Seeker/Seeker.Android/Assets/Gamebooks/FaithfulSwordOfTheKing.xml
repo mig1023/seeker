@@ -434,7 +434,7 @@
 		<ID>44</ID>
 		<Text>Наступает утро. Деньги уже разошлись по карманам разбойников, им пора отправляться «на работу». «Ладно, благородный, — говорит один из них, — пожил, погулял и хватит. Готовься к смерти». Хотите попросить о помощи Бога или попробуете обойтись своими силами?</Text>
 		<Options>
-			<Option Destination="427" Text="Попросить о помощи Бога"/>
+			<Option Destination="427" Text="Попросить о помощи Бога" OnlyIf="!DivineIntervention" Do="Trigger" Value="DivineIntervention"/>
 			<Option Destination="244" Text="Попробуете обойтись своими силами"/>
 		</Options>
 	</Paragraph>
@@ -937,6 +937,7 @@
 		<Modifications>
 			<Modification Name="Honor" Value="-1"/>
 		</Modifications>
+		<Triggers>DivineIntervention</Triggers>
 		<Options>
 			<Option Destination="323"/>
 		</Options>
@@ -1398,9 +1399,10 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>142</ID>
-		<Text>Видя, что вы пытаетесь скрыться за деревьями, черные фигуры достают пистолеты и стреляют вам вслед. Одна из пуль попадает Арбалету в голову, вторая — вам в живот. Конец наступит всего через несколько часов. Выход один — попросить Бога о помощи. Если не сделаете это, то остается только достойно встретить смерть…</Text>
+		<Text>Видя, что вы пытаетесь скрыться за деревьями, черные фигуры достают пистолеты и стреляют вам вслед. Одна из пуль попадает Арбалету в голову, вторая — вам в живот. Конец наступит всего через несколько часов. Выход один — попросить Бога о помощи:</Text>
 		<Options>
-			<Option Destination="521"/>
+			<Option Destination="521" OnlyIf="!DivineIntervention" Do="Trigger" Value="DivineIntervention" Aftertext="Если не сделаете это, то остается только достойно встретить смерть…"/>
+			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -2414,8 +2416,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="412" Text="Если вы победили"/>
-			<Option Destination="521" Text="Если он, то можете воззвать к Богу"/>
+			<Option Destination="412" Text="Вы победили"/>
+			<Option Destination="521" Text="Вы проиграли и взываете к Богу" OnlyIf="!DivineIntervention" Do="Trigger" Value="DivineIntervention"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4366,9 +4368,10 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>433</ID>
-		<Text>Сражение заканчивается, даже не успев перейти в побоище. Ведь у вас не сто рук, к тому же монахи вооружены пистолетами. Последнее, что вы видите — дуло одного из них, нацеленное прямо в грудь. Если хотите и есть возможность попросить Бога о помощи, сделайте это, иначе же ваша миссия останется невыполненной…</Text>
+		<Text>Сражение заканчивается, даже не успев перейти в побоище. Ведь у вас не сто рук, к тому же монахи вооружены пистолетами. Последнее, что вы видите — дуло одного из них, нацеленное прямо в грудь. Если хотите и есть возможность попросить Бога о помощи, сделайте это:</Text>
 		<Options>
-			<Option Destination="601"/>
+			<Option Destination="601" OnlyIf="!DivineIntervention" Do="Trigger" Value="DivineIntervention" Aftertext="Иначе же ваша миссия останется невыполненной…"/>
+			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -5534,6 +5537,7 @@
 	<Paragraph>
 		<ID>549</ID>
 		<Text>Вы слезаете с коня, прижимаетесь поближе к стене, чтобы пропустить священника, снимаете шляпу и креститесь. Он проходит мимо. Конечно, внимания на вас никто не обратил, все обошлось. Но отныне вы теряете право на покровительство Бога. Сколько бы раз в книге не задавался вопрос, хотите ли вы обратиться к Богу за помощью, вы — вероотступник, и вам запрещено смотреть эти параграфы. Теперь отправляйтесь дальше.</Text>
+		<Triggers>DivineIntervention</Triggers>
 		<Options>
 			<Option Destination="498"/>
 		</Options>
@@ -5844,7 +5848,7 @@
 			<Modification Name="Strength" Value="-4"/>
 		</Modifications>
 		<Options>
-			<Option Destination="313" Text="Обратиться к помощи Бога"/>
+			<Option Destination="313" Text="Обратиться к помощи Бога" OnlyIf="!DivineIntervention" Do="Trigger" Value="DivineIntervention"/>
 			<Option Destination="256" Text="Рассказать все, как есть"/>
 		</Options>
 	</Paragraph>
