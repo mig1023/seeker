@@ -486,7 +486,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             Character hero = Character.Protagonist;
 
-            hero.Health = 3;
+            if (Game.Data.Triggers.Contains("Wounded"))
+            {
+                hero.Health = 2;
+                Game.Option.Trigger("Wounded", remove: true);
+            }
+            else
+                hero.Health = 3;
 
             Character.Protagonist.GetWeapons(out string weaponName, out int weaponStrength, out int _);
 
