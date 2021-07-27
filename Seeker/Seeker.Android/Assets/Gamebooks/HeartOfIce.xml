@@ -181,7 +181,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>21</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="109" Text="Выстрелить в Голгота"/>
 			<Option Destination="87" Text="Выстрелить в Боше"/>
@@ -273,7 +272,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>32</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="76" Text="Будете драться с ними, используя Рукопашный бой" OnlyIf="Рукопашный Бой"/>
 			<Option Destination="98" Text="Направите на них пистолет" OnlyIf="Стрельба"/>
@@ -535,7 +533,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>61</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="344" Text="Владеете ПСИ, и у вас есть пси-фокусировщик" OnlyIf="ПСИ"/>
 			<Option Destination="365" Text="Владеете Воровством" OnlyIf="Воровство"/>
@@ -565,7 +562,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>64</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="130" Text="Владеете ПСИ и у вас есть пси-фокусировщик" OnlyIf="ПСИ"/>
 			<Option Destination="240" Text="Нет"/>
@@ -632,7 +628,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>71</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="115" Text="Владеете Пилотированием" OnlyIf="Пилотирование"/>
 			<Option Destination="137" Text="Нет"/>
@@ -776,7 +771,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>86</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="65" Text="Владеете ПСИ и у Вас есть пси-фокусировщик" OnlyIf="ПСИ"/>
 			<Option Destination="240" Text="Нет"/>
@@ -853,7 +847,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>95</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="353" Text="Есть ИД-карта, и вы хотите использовать ее" OnlyIf="ИД-карта" Aftertext="В противном случае, если вы еще этого не делали, вы можете попытаться разузнать что-нибудь:"/>
 			<Option Destination="401" Text="О Бароне Сириазисе"/>
@@ -983,7 +976,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>107</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="195" Text="Записано ключевое слово «Молоток»" OnlyIf="Молоток"/>
 			<Option Destination="217" Text="Нет"/>
@@ -1516,7 +1508,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>165</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="187" Text="Владеете Знанием улиц" OnlyIf="Знание улиц" Aftertext="Расположиться на ночь:"/>
 			<Option Destination="209" Text="В парке"/>
@@ -1690,7 +1681,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>181</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="203" Text="Разыскать Кайла Боше и рассказать ему, что добыли аэрокар"/>
 			<Option Destination="159" Text="Если нет, то вычеркните ключевое слово «Алмаз»" Do="RemoveTrigger" ValueString="Алмаз"/>
@@ -3190,7 +3180,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>341</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="362" Text="Есть нож или короткий меч, которыми ее можно разделать" OnlyIf="Короткий меч"/>
 			<Option Destination="384" Text="Обладаете Хитростью" OnlyIf="Хитрость"/>
@@ -3344,7 +3333,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>354</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="7" Text="Владеете Воровством" OnlyIf="Воровство"/>
 			<Option Destination="29" Text="Обладаете Управлением парадоксом, и у вас есть пси-фокусировщик" OnlyIf="Управление парадоксом, ПСИ"/>
@@ -3474,7 +3462,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>364</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="407" Text="Используете ПСИ и пси-фокусировщик, чтобы проникнуть в разум барона" OnlyIf="ПСИ"/>
 			<Option Destination="428" Text="Подкрадетесь поближе, используя способность Воровства или кожу хамелеона" OnlyIf="Воровство|Кожа хамелеона"/>
@@ -3805,7 +3792,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>397</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="196" Text="Владеете Ловкостью" OnlyIf="Ловкость"/>
 			<Option Destination="173" Text="Не владеете"/>
@@ -3880,7 +3866,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>405</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="58" Text="Владеете Выживанием" OnlyIf="Выживание"/>
 			<Option Destination="81" Text="Записано ключевое слово «Гильгамеш»"/>
@@ -3983,7 +3968,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>418</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="218" Text="Вы владеете Пилотированием, вам удается завести двигатели и вы поднимаетесь со взлетной площадки в ореоле белого огня, рвущегося из сопла" OnlyIf="Пилотирование"/>
 			<Option Destination="437" Text="Вы не обладаете этим умением и вам не удастся взлететь вовремя, до того как фиджиец схватит вас"/>
@@ -4090,7 +4074,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>431</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="219" Text="Есть заряженный бризальный пистолет" OnlyIf="Стрельба"/>
 			<Option Destination="241" Text="Нет"/>
@@ -4105,7 +4088,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>433</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="68" Text="Есть заряженный бризальный пистолет и умение Стрельба" OnlyIf="Стрельба"/>
 			<Option Destination="24" Text="Использовать Воровство" OnlyIf="Воровство"/>
