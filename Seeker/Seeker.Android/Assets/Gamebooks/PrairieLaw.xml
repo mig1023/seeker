@@ -97,7 +97,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>10</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="204" Text="Вы впервые на этом постоялом дворе"/>
 			<Option Destination="154" Text="Вам хоть раз уже довелось здесь побывать"/>
@@ -650,7 +649,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>56</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="31" Text="Вы еще не были в аптеке и хотите зайти туда" Aftertext="Если не хотите – что ж, пора в дорогу:"/>
 			<Option Destination="132"/>
@@ -1202,7 +1200,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>115</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="504" Text="Хотите заглянуть на конюшню и проверить, хорошо ли устроена Чикита"/>
 			<Option Destination="72" Text="Боитесь, что хозяин расценит это как недоверие и отправитесь спать"/>
@@ -1967,7 +1964,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>196</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="439" Text="Примете бой"/>
 			<Option Destination="633" Text="Попытаете предложить индейцам подарки"/>
@@ -2518,7 +2514,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>251</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="451" Text="Вам еще не довелось заглянуть в этот салун"/>
 			<Option Destination="629" Text="Приходилось раньше здесь бывать"/>
@@ -3010,7 +3005,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>307</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="181" Text="Ни разу не были в ресторане «Двери рая»"/>
 			<Option Destination="75" Text="В свой прошлый приезд в Ту-Попларс вы сюда уже заглядывали"/>
@@ -4339,7 +4333,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>452</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="87" Text="Вы можете ехать дальше по дороге"/>
 			<Option Destination="305" Text="Свернув с нее, двинуться на восток"/>
@@ -4805,7 +4798,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>496</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="12" Text="Вы уже бывали на индейской территории, потому дорога вам хорошо знакома"/>
 			<Option Destination="88" Text="Отправляетесь туда впервые"/>
@@ -4968,7 +4960,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>517</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="660" Text="Если все трое бандитских вожаков мертвы" Aftertext="Если жив хоть один из них – ваш путь не окончен. И прежде всего надо добраться до города, чтобы запастись патронами и боеприпасами:"/>
 			<Option Destination="411"/>
@@ -5824,7 +5815,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>605</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="563" Text="Вам уже довелось побывать в этой лавке"/>
 			<Option Destination="47" Text="Вы здесь впервые"/>
@@ -6051,7 +6041,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>630</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="408" Text="Вам уже приходилось бывать в этих местах и вы едете по прерии на север второй раз"/>
 			<Option Destination="350" Text="Вы здесь впервые"/>
