@@ -98,7 +98,7 @@ namespace Seeker.Output
 
         public static Label GamebookDisclaimer(string gamebook, bool withOut = true)
         {
-            Label disclaimer = new Label()
+            Label disclaimer = new Label
             {
                 Text = String.Format("© {0}", Gamebook.List.GetDescription(gamebook).SmallDisclaimer),
                 HorizontalTextAlignment = TextAlignment.Start,
@@ -152,7 +152,7 @@ namespace Seeker.Output
                     disclaimerBorder.ForceLayout();
                 };
 
-                StackLayout textLayout = new StackLayout()
+                StackLayout textLayout = new StackLayout
                 {
                     Orientation = StackOrientation.Horizontal,
                     Margin = new Thickness(0, 0, 0, 0),
@@ -185,7 +185,7 @@ namespace Seeker.Output
                 {
                     string[] param = enemyLine.Split('|');
 
-                    Label splitter = new Label()
+                    Label splitter = new Label
                     {
                         VerticalOptions = LayoutOptions.FillAndExpand,
                         VerticalTextAlignment = TextAlignment.Center,
@@ -198,7 +198,7 @@ namespace Seeker.Output
                     if (String.IsNullOrEmpty(background))
                         background = "#bdbdbd";
 
-                    StackLayout splitterForm = new StackLayout()
+                    StackLayout splitterForm = new StackLayout
                     {
                         HorizontalOptions = LayoutOptions.FillAndExpand,
                         HeightRequest = Constants.SPLITTER_HIGHT,
@@ -217,7 +217,7 @@ namespace Seeker.Output
 
                     foreach(string line in enemyParam)
                     {
-                        Label enemy = new Label() { HorizontalTextAlignment = TextAlignment.Center };
+                        Label enemy = new Label { HorizontalTextAlignment = TextAlignment.Center };
 
                         if (index > 0)
                         {
@@ -251,7 +251,7 @@ namespace Seeker.Output
             if (!String.IsNullOrEmpty(colorLine))
                 color = Color.FromHex(colorLine);
 
-            Button gameoverButton = new Button()
+            Button gameoverButton = new Button
             {
                 Text = text,
                 TextColor = Xamarin.Forms.Color.White,
@@ -364,7 +364,7 @@ namespace Seeker.Output
 
         public static StackLayout ActionPlace()
         {
-            StackLayout stackLayout = new StackLayout()
+            StackLayout stackLayout = new StackLayout
             {
                 Orientation = StackOrientation.Vertical,
                 Spacing = Constants.ACTIONPLACE_SPACING,

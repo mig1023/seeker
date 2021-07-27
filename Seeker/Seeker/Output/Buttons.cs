@@ -14,7 +14,7 @@ namespace Seeker.Output
         {
             string color = Game.Data.Constants.GetButtonsColor(ButtonTypes.Action);
 
-            Button actionButton = new Button()
+            Button actionButton = new Button
             {
                 Text = actionName,
                 TextColor = Xamarin.Forms.Color.White,
@@ -42,7 +42,7 @@ namespace Seeker.Output
             if (String.IsNullOrEmpty(option.Text))
                 option.Text = (option.Destination == 0 ? "Начать сначала" : "Далее");
 
-            Button optionButton = new Button()
+            Button optionButton = new Button
             {
                 Text = option.Text,
                 BackgroundColor = Color.FromHex(color),
@@ -59,7 +59,7 @@ namespace Seeker.Output
         {
             string color = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
 
-            Button additionButton = new Button()
+            Button additionButton = new Button
             {
                 Text = text,
                 BackgroundColor = (String.IsNullOrEmpty(color) ? Color.LightGray : Color.FromHex(color)),
