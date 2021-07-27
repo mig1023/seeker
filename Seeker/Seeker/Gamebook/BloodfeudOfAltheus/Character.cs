@@ -187,7 +187,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public void AddArmour(string armour) => Armour.Add(armour);
 
-        public void GetArmour(out int armourDefence, out string armourLine)
+        public void GetArmour(out int armourDefence, out string armourLine, bool status = false)
         {
             Dictionary<string, int> currentArmour = new Dictionary<string, int>();
             Dictionary<string, Dictionary<string, int>> allArmour = new Dictionary<string, Dictionary<string, int>>();
@@ -195,12 +195,15 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             int defence = 0;
             string defenceLine = String.Empty;
 
-            GetWeapons(out string name, out int strength, out int weaponDefence);
-
-            if (weaponDefence > 0)
+            if (!status)
             {
-                defence += weaponDefence;
-                defenceLine += String.Format(" + {0} {1}", weaponDefence, name);
+                GetWeapons(out string name, out int _, out int weaponDefence);
+
+                if (weaponDefence > 0)
+                {
+                    defence += weaponDefence;
+                    defenceLine += String.Format(" + {0} {1}", weaponDefence, name);
+                }
             }
 
             foreach (string armour in Armour)
@@ -221,11 +224,15 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 KeyValuePair<string, int> armour = allArmour[armourType].FirstOrDefault(x => x.Value == allArmour[armourType].Values.Max());
 
                 defence += armour.Value;
-                defenceLine += String.Format(" + {0} {1}", armour.Value, armour.Key);
+
+                if (status)
+                    defenceLine += String.Format("{0}, ", armour.Key);
+                else
+                    defenceLine += String.Format(" + {0} {1}", armour.Value, armour.Key);
             }
 
             armourDefence = defence;
-            armourLine = defenceLine;
+            armourLine = defenceLine.TrimEnd(new char[] {' ', ','});
         }
     }
 }

@@ -43,9 +43,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             List<string> statusLines = new List<string>();
 
-            Character.Protagonist.GetWeapons(out string name, out int strength, out int defence);
+            Character.Protagonist.GetArmour(out int armour, out string armourLine, status: true);
+            
+            if (armour > 0)
+                statusLines.Add(String.Format("Броня: {0} (защита {1})", armourLine, armour));
 
+            Character.Protagonist.GetWeapons(out string name, out int strength, out int defence);
             statusLines.Add(String.Format("Оружие: {0} (сила {1}, защита {2})", name, strength, defence));
+
             statusLines.Add(String.Format("Покровитель: {0}", Character.Protagonist.Patron));
 
             return (statusLines.Count > 0 ? statusLines : null);
