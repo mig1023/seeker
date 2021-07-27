@@ -8,7 +8,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>1</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="229" Text="Если ты сказал, что сестренка чудища отравилась серной кислотой"/>
 			<Option Destination="347" Text="Если ты сказал что-нибудь другое"/>
@@ -2207,7 +2206,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>298</ID>
-		<Text></Text>
 		<Options>
 			<Option Destination="229" Text="Если ты ответил, что в 1492 году от рождества Христова Колумб открыл Америку" Aftertext="Если нет, считай себя уволенным и выбирайся как знаешь:"/>
 			<Option Destination="0"/>
