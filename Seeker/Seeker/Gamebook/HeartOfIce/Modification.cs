@@ -16,9 +16,8 @@ namespace Seeker.Gamebook.HeartOfIce
             bool byFood = ModificationByName("ByFood", () => LifeByFood());
 
             if (skill || rmSkill || rmTrigger || byTrigger || byNotTrigger || byFood)
-            {
-                // nothing to do here
-            }
+                return;
+
             else if (Name == "ReplaceTrigger")
             {
                 string[] triggers = ValueString.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);

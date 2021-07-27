@@ -20,9 +20,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             bool indiff = ModificationByValueString("Indifferent", () => hero.FellIntoFavor(ValueString, indifferent: true));
 
             if (patron || wepon || armour || fellInto || fellOut || indiff)
-            {
-                // nothing to do here
-            }
+                return;
+
             else if (Name == "DiceShame")
                 hero.Shame += Game.Dice.Roll();
 
@@ -79,7 +78,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             else if (!(IntuitiveSolution && (hero.NoIntuitiveSolutionPenalty > 0)))
             {
                 int currentValue = (int)hero.GetType().GetProperty(Name).GetValue(hero, null);
-                
+
                 if (!((Name == "Glory") && (hero.Glory <= 0)))
                     currentValue += Value;
 

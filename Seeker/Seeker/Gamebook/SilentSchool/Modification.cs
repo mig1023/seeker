@@ -22,9 +22,7 @@ namespace Seeker.Gamebook.SilentSchool
             bool woundsByBody = ModificationByName("WoundsByBody", () => hero.Life -= (Game.Data.Triggers.Contains("Толстяк") ? 4 : 6) * woundsBonus);
 
             if (trigger || change || weapon || removeWeapon || woundsByWeapon2 || woundsByWeapon3 || woundsByWeapon4 || woundsByBody)
-            {
-                // nothing to do here
-            }
+                return;
 
             else if (Name == "WoundsByWeapon")
             {

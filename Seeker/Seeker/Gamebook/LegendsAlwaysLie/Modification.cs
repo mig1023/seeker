@@ -20,9 +20,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             bool footwrapsNeed = ModificationByName("FootwrapsNeedReplacing", () => Game.Option.Trigger("Legs"));
 
             if (injuries || footwrapsDeadly || footwrapsNeed)
-            {
-                // nothing to do here
-            }
+                return;
+
             else if (Name == "Offering")
             {
                 if (Game.Data.Triggers.Contains("RingWithRuby"))
