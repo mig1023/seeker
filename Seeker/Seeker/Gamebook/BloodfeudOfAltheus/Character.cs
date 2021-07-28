@@ -110,10 +110,10 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public override string Save()
         {
-            string weapons = String.Join(":", Weapons);
-            string armours = String.Join(":", Armour);
-            string favor = String.Join(":", FavorOfTheGods);
-            string disfavor = String.Join(":", DisfavorOfTheGods);
+            string weapons = String.Join(":", Weapons).TrimEnd(':');
+            string armours = String.Join(":", Armour).TrimEnd(':');
+            string favor = String.Join(":", FavorOfTheGods).TrimEnd(':');
+            string disfavor = String.Join(":", DisfavorOfTheGods).TrimEnd(':');
 
             return String.Join("|", Strength, Defence, Glory, Shame, armours, weapons, Patron,
                 Resurrection, favor, disfavor, BroochResurrection, Ichor);
