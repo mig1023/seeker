@@ -1178,6 +1178,7 @@
 			<Modification Name="Gold" Value="1"/>
 			<Modification Name="Healing" ValueString="Выпить воды из бурдюка,3"/>
 		</Modifications>
+		<Triggers>Vessel</Triggers>
 		<Options>
 			<Option Destination="75"/>
 		</Options>
@@ -2110,6 +2111,7 @@
 		<Modifications>
 			<Modification Name="Gold" Value="2"/>
 		</Modifications>
+		<Triggers>BlackCrystal</Triggers>
 		<Options>
 			<Option Destination="174"/>
 		</Options>
@@ -2859,8 +2861,8 @@
 		<ID>290</ID>
 		<Text>Есть ли у вас черный кристалл?</Text>
 		<Options>
-			<Option Destination="185" Text="Да"/>
-			<Option Destination="320" Text="Нет"/>
+			<Option Destination="185" Text="Да" OnlyIf="BlackCrystal"/>
+			<Option Destination="320" Text="Нет" OnlyIf="!BlackCrystal"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
