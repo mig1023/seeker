@@ -26,7 +26,7 @@ namespace Seeker.Gamebook.ThreePaths
             Spells = new List<string>(),
         };
 
-        public override string Save() => String.Join("|", Time, SpellSlots, String.Join(",", Spells));
+        public override string Save() => String.Join("|", Time, SpellSlots, String.Join(",", Spells).TrimEnd(','));
 
         public override void Load(string saveLine)
         {
