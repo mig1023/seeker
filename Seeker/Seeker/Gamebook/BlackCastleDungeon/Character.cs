@@ -104,7 +104,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         };
 
         public override string Save() => String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck,
-            Luck, Gold, SpellSlots, String.Join(",", Spells));
+            Luck, Gold, SpellSlots, String.Join(",", Spells).TrimEnd(','));
 
         public override void Load(string saveLine)
         {
