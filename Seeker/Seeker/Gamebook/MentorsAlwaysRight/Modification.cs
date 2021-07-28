@@ -14,6 +14,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             else if (Name == "RestoreSpells")
                 Character.Protagonist.Spells = new List<string>(Character.Protagonist.SpellsReplica);
             
+            else if (Name == "HealingByVessel")
+                Game.Healing.Add("Выпить отвар из бурдюка,8");
+
             else if (Name == "Transformation")
             {
                 Character.Protagonist.Transformation -= 1;
