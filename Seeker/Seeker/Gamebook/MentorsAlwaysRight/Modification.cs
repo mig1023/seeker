@@ -9,7 +9,10 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public override void Do()
         {
             if (Name == "Spell")
+            {
                 Character.Protagonist.Spells.Remove(ValueString);
+                Character.Protagonist.Hitpoints -= 2;
+            }
 
             else if (Name == "RestoreSpells")
                 Character.Protagonist.Spells = new List<string>(Character.Protagonist.SpellsReplica);
