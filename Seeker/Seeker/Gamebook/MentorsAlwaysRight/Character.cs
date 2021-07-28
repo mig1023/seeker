@@ -115,7 +115,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         };
 
         public override string Save() => String.Join("|", Strength, MaxHitpoints, Hitpoints, Magicpoints, Transformation,
-            Gold, Elixir, Specialization, String.Join(",", Spells), String.Join(",", SpellsReplica));
+            Gold, Elixir, Specialization, String.Join(",", Spells).TrimEnd(','), String.Join(",", SpellsReplica).TrimEnd(','));
 
         public override void Load(string saveLine)
         {
