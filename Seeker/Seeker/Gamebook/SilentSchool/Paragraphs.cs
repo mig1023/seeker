@@ -14,14 +14,14 @@ namespace Seeker.Gamebook.SilentSchool
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.HarmedMyself = Game.Xml.IntParse(xmlAction["HarmedMyself"]);
-            action.Dices = Game.Xml.IntParse(xmlAction["Dices"]);
+            action.HarmedMyself = Xml.IntParse(xmlAction["HarmedMyself"]);
+            action.Dices = Xml.IntParse(xmlAction["Dices"]);
 
             return action;
         }
@@ -33,16 +33,16 @@ namespace Seeker.Gamebook.SilentSchool
             if (xmlOption.Attributes["Destination"].Value == "CHANGE")
                 option.Destination = Character.Protagonist.ChangeDecision;
             else
-                option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
+                option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
 
             if (xmlOption.Attributes["Do"] != null)
             {
-                Modification modification = new Modification { Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]) };
+                Modification modification = new Modification { Name = Xml.StringParse(xmlOption.Attributes["Do"]) };
 
                 if (int.TryParse(xmlOption.Attributes["Value"].Value, out _))
-                    modification.Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]);
+                    modification.Value = Xml.IntParse(xmlOption.Attributes["Value"]);
                 else
-                    modification.ValueString = Game.Xml.StringParse(xmlOption.Attributes["Value"]);
+                    modification.ValueString = Xml.StringParse(xmlOption.Attributes["Value"]);
 
                 option.Do = modification;
             }
@@ -55,15 +55,15 @@ namespace Seeker.Gamebook.SilentSchool
             if (xmlNode == null)
                 return null;
 
-            Modification modification = new Modification { Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]) };
+            Modification modification = new Modification { Name = Xml.StringParse(xmlNode.Attributes["Name"]) };
 
             if (xmlNode.Attributes["Value"] == null)
                 return modification;
 
             if (int.TryParse(xmlNode.Attributes["Value"].Value, out _))
-                modification.Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]);
+                modification.Value = Xml.IntParse(xmlNode.Attributes["Value"]);
             else
-                modification.ValueString = Game.Xml.StringParse(xmlNode.Attributes["Value"]);
+                modification.ValueString = Xml.StringParse(xmlNode.Attributes["Value"]);
 
             return modification;
         }
