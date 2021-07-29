@@ -13,19 +13,19 @@ namespace Seeker.Gamebook.PrairieLaw
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.RemoveTrigger = Game.Xml.StringParse(xmlAction["RemoveTrigger"]);
-            action.SellPrices = Game.Xml.StringParse(xmlAction["SellPrices"]);
-            action.Dices = Game.Xml.IntParse(xmlAction["Dices"]);
-            action.Firefight = Game.Xml.BoolParse(xmlAction["Firefight"]);
-            action.HeroWoundsLimit = Game.Xml.BoolParse(xmlAction["HeroWoundsLimit"]);
-            action.EnemyWoundsLimit = Game.Xml.BoolParse(xmlAction["EnemyWoundsLimit"]);
-            action.Roulette = Game.Xml.BoolParse(xmlAction["Roulette"]);
+            action.RemoveTrigger = Xml.StringParse(xmlAction["RemoveTrigger"]);
+            action.SellPrices = Xml.StringParse(xmlAction["SellPrices"]);
+            action.Dices = Xml.IntParse(xmlAction["Dices"]);
+            action.Firefight = Xml.BoolParse(xmlAction["Firefight"]);
+            action.HeroWoundsLimit = Xml.BoolParse(xmlAction["HeroWoundsLimit"]);
+            action.EnemyWoundsLimit = Xml.BoolParse(xmlAction["EnemyWoundsLimit"]);
+            action.Roulette = Xml.BoolParse(xmlAction["Roulette"]);
 
             if (xmlAction["Enemies"] != null)
             {
@@ -36,22 +36,22 @@ namespace Seeker.Gamebook.PrairieLaw
             }
 
             if (xmlAction["Benefit"] != null)
-                action.Benefit = Game.Xml.ModificationParse(xmlAction["Benefit"], new Modification());
+                action.Benefit = Xml.ModificationParse(xmlAction["Benefit"], new Modification());
 
             return action;
         }
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
-            Game.Xml.ModificationParse(xmlModification, new Modification());
+            Xml.ModificationParse(xmlModification, new Modification());
 
         private static Character EnemyParse(XmlNode xmlEnemy)
         {
             Character enemy = new Character
             {
-                Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                MaxSkill = Game.Xml.IntParse(xmlEnemy.Attributes["Skill"]),
-                MaxStrength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
-                Cartridges = Game.Xml.IntParse(xmlEnemy.Attributes["Сartridges"]),
+                Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
+                MaxSkill = Xml.IntParse(xmlEnemy.Attributes["Skill"]),
+                MaxStrength = Xml.IntParse(xmlEnemy.Attributes["Strength"]),
+                Cartridges = Xml.IntParse(xmlEnemy.Attributes["Сartridges"]),
             };
 
             enemy.Skill = enemy.MaxSkill;
