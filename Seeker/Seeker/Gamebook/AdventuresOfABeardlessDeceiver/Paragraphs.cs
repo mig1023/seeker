@@ -13,16 +13,16 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.Stat = Game.Xml.StringParse(xmlAction["Stat"]);
-            action.Level = Game.Xml.IntParse(xmlAction["Level"]);
-            action.GreatKhanSpecialCheck = Game.Xml.BoolParse(xmlAction["GreatKhanSpecialCheck"]);
-            action.GuessBonus = Game.Xml.BoolParse(xmlAction["GuessBonus"]);
+            action.Stat = Xml.StringParse(xmlAction["Stat"]);
+            action.Level = Xml.IntParse(xmlAction["Level"]);
+            action.GreatKhanSpecialCheck = Xml.BoolParse(xmlAction["GreatKhanSpecialCheck"]);
+            action.GuessBonus = Xml.BoolParse(xmlAction["GuessBonus"]);
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
             if (action.Name == "Option")
@@ -40,10 +40,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
             Modification modification = new Modification
             {
-                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
-                Empty = Game.Xml.BoolParse(xmlNode.Attributes["Empty"]),
-                Init = Game.Xml.BoolParse(xmlNode.Attributes["Init"]),
+                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
+                Empty = Xml.BoolParse(xmlNode.Attributes["Empty"]),
+                Init = Xml.BoolParse(xmlNode.Attributes["Init"]),
             };
 
             return modification;
