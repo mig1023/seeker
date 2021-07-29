@@ -13,14 +13,14 @@ namespace Seeker.Gamebook.OctopusIsland
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
-            action.DinnerHitpointsBonus = Game.Xml.IntParse(xmlAction["Dinner"]);
+            action.WoundsToWin = Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.DinnerHitpointsBonus = Xml.IntParse(xmlAction["Dinner"]);
 
             if (xmlAction["Enemies"] != null)
             {
@@ -38,7 +38,7 @@ namespace Seeker.Gamebook.OctopusIsland
             Option option = OptionsTemplateWithoutDestination(xmlOption);
 
             if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
-                option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
+                option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
             else
             {
                 List<string> destinations = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
@@ -50,12 +50,12 @@ namespace Seeker.Gamebook.OctopusIsland
 
         private static Character EnemyParse(XmlNode xmlEnemy) => new Character
         {
-            Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-            Skill = Game.Xml.IntParse(xmlEnemy.Attributes["Skill"]),
-            Hitpoint = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoint"]),
+            Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
+            Skill = Xml.IntParse(xmlEnemy.Attributes["Skill"]),
+            Hitpoint = Xml.IntParse(xmlEnemy.Attributes["Hitpoint"]),
         };
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
-            Game.Xml.ModificationParse(xmlModification, new Modification());
+            Xml.ModificationParse(xmlModification, new Modification());
     }
 }
