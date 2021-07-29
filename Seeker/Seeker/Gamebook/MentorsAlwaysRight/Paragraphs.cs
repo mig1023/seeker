@@ -19,24 +19,24 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.OnlyRounds = Game.Xml.IntParse(xmlAction["OnlyRounds"]);
-            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.RoundsWinToWin = Game.Xml.IntParse(xmlAction["RoundsWinToWin"]);
-            action.ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]);
-            action.Regeneration = Game.Xml.BoolParse(xmlAction["Regeneration"]);
-            action.ReactionFight = Game.Xml.BoolParse(xmlAction["ReactionFight"]);
-            action.Poison = Game.Xml.BoolParse(xmlAction["Poison"]);
-            action.OnlyOne = Game.Xml.StringParse(xmlAction["OnlyOne"]);
-            action.TailAttack = Game.Xml.BoolParse(xmlAction["TailAttack"]);
-            action.IncrementWounds = Game.Xml.BoolParse(xmlAction["IncrementWounds"]);
-            action.ThreeWoundLimit = Game.Xml.BoolParse(xmlAction["ThreeWoundLimit"]);
-            action.Invincible = Game.Xml.BoolParse(xmlAction["Invincible"]);
-            action.Wound = Game.Xml.IntParse(xmlAction["Wound"]);
-            action.Dices = Game.Xml.IntParse(xmlAction["Dices"]);
-            action.EvenWound = Game.Xml.BoolParse(xmlAction["EvenWound"]);
-            action.WoundsLimit = Game.Xml.IntParse(xmlAction["WoundsLimit"]);
-            action.DeathLimit = Game.Xml.IntParse(xmlAction["DeathLimit"]);
-            action.ReactionWounds = Game.Xml.StringParse(xmlAction["ReactionWounds"]);
+            action.OnlyRounds = Xml.IntParse(xmlAction["OnlyRounds"]);
+            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.RoundsWinToWin = Xml.IntParse(xmlAction["RoundsWinToWin"]);
+            action.ThisIsSpell = Xml.BoolParse(xmlAction["ThisIsSpell"]);
+            action.Regeneration = Xml.BoolParse(xmlAction["Regeneration"]);
+            action.ReactionFight = Xml.BoolParse(xmlAction["ReactionFight"]);
+            action.Poison = Xml.BoolParse(xmlAction["Poison"]);
+            action.OnlyOne = Xml.StringParse(xmlAction["OnlyOne"]);
+            action.TailAttack = Xml.BoolParse(xmlAction["TailAttack"]);
+            action.IncrementWounds = Xml.BoolParse(xmlAction["IncrementWounds"]);
+            action.ThreeWoundLimit = Xml.BoolParse(xmlAction["ThreeWoundLimit"]);
+            action.Invincible = Xml.BoolParse(xmlAction["Invincible"]);
+            action.Wound = Xml.IntParse(xmlAction["Wound"]);
+            action.Dices = Xml.IntParse(xmlAction["Dices"]);
+            action.EvenWound = Xml.BoolParse(xmlAction["EvenWound"]);
+            action.WoundsLimit = Xml.IntParse(xmlAction["WoundsLimit"]);
+            action.DeathLimit = Xml.IntParse(xmlAction["DeathLimit"]);
+            action.ReactionWounds = Xml.StringParse(xmlAction["ReactionWounds"]);
 
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
             action.Damage = ModificationParse(xmlAction["Damage"]);
@@ -72,10 +72,10 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         private static Character EnemyParse(XmlNode xmlEnemy) => new Character
         {
-            Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-            Strength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
-            MaxHitpoints = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
-            Hitpoints = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
+            Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
+            Strength = Xml.IntParse(xmlEnemy.Attributes["Strength"]),
+            MaxHitpoints = Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
+            Hitpoints = Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
         };
 
         public override Abstract.IModification ModificationParse(XmlNode xmlNode)
@@ -85,11 +85,11 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             Modification modification = new Modification
             {
-                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
-                ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
-                Empty = Game.Xml.BoolParse(xmlNode.Attributes["Empty"]),
-                Restore = Game.Xml.BoolParse(xmlNode.Attributes["Restore"]),
+                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
+                ValueString = Xml.StringParse(xmlNode.Attributes["ValueString"]),
+                Empty = Xml.BoolParse(xmlNode.Attributes["Empty"]),
+                Restore = Xml.BoolParse(xmlNode.Attributes["Restore"]),
             };
 
             return modification;
