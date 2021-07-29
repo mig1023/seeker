@@ -13,14 +13,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
                 paragraph.Options.Add(OptionParse(xmlOption));
 
-            if (Game.Xml.BoolParse(xmlParagraph["IntuitiveSolution"]))
+            if (Xml.BoolParse(xmlParagraph["IntuitiveSolution"]))
                 paragraph.Options.Add(GetOption(destination: id + 20, text: "Интуитивное решение", onlyIf: "selectOnly"));
 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
@@ -36,10 +36,10 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.FightToDeath = Game.Xml.BoolParse(xmlAction["FightToDeath"]);
-            action.LastWound = Game.Xml.BoolParse(xmlAction["LastWound"]);
-            action.YourRacing = Game.Xml.BoolParse(xmlAction["YourRacing"]);
-            action.Ichor = Game.Xml.BoolParse(xmlAction["Ichor"]);
+            action.FightToDeath = Xml.BoolParse(xmlAction["FightToDeath"]);
+            action.LastWound = Xml.BoolParse(xmlAction["LastWound"]);
+            action.YourRacing = Xml.BoolParse(xmlAction["YourRacing"]);
+            action.Ichor = Xml.BoolParse(xmlAction["Ichor"]);
 
             if (xmlAction["Enemies"] != null)
             {
@@ -56,17 +56,17 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) => new Modification
         {
-            Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
-            Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
-            ValueString = Game.Xml.StringParse(xmlModification.Attributes["ValueString"]),
-            IntuitiveSolution = Game.Xml.BoolParse(xmlModification.Attributes["IntuitiveSolution"]),
+            Name = Xml.StringParse(xmlModification.Attributes["Name"]),
+            Value = Xml.IntParse(xmlModification.Attributes["Value"]),
+            ValueString = Xml.StringParse(xmlModification.Attributes["ValueString"]),
+            IntuitiveSolution = Xml.BoolParse(xmlModification.Attributes["IntuitiveSolution"]),
         };
 
         private static Character EnemyParse(XmlNode xmlEnemy) => new Character
         {
-            Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-            Strength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
-            Defence = Game.Xml.IntParse(xmlEnemy.Attributes["Defence"]),
+            Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
+            Strength = Xml.IntParse(xmlEnemy.Attributes["Strength"]),
+            Defence = Xml.IntParse(xmlEnemy.Attributes["Defence"]),
         };
 
         private static Option GetOption(int destination, string text, string onlyIf) => new Option
