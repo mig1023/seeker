@@ -13,17 +13,17 @@ namespace Seeker.Gamebook.RendezVous
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
-            action.Dices = Game.Xml.IntParse(xmlAction["Dices"]);
+            action.Dices = Xml.IntParse(xmlAction["Dices"]);
 
             return action;
         }
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
-            Game.Xml.ModificationParse(xmlModification, new Modification());
+            Xml.ModificationParse(xmlModification, new Modification());
     }
 }
