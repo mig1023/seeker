@@ -13,22 +13,22 @@ namespace Seeker.Gamebook.LordOfTheSteppes
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.Stat = Game.Xml.StringParse(xmlAction["Stat"]);
-            action.StatStep = Game.Xml.IntParse(xmlAction["StatStep"]);
-            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
-            action.Coherence = Game.Xml.IntParse(xmlAction["Coherence"]);
-            action.Dices = Game.Xml.IntParse(xmlAction["Dices"]);
-            action.NotToDeath = Game.Xml.BoolParse(xmlAction["NotToDeath"]);
-            action.Odd = Game.Xml.BoolParse(xmlAction["Odd"]);
-            action.Initiative = Game.Xml.BoolParse(xmlAction["Initiative"]);
-            action.StoneGuard = Game.Xml.BoolParse(xmlAction["StoneGuard"]);
+            action.Stat = Xml.StringParse(xmlAction["Stat"]);
+            action.StatStep = Xml.IntParse(xmlAction["StatStep"]);
+            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.WoundsToWin = Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.Coherence = Xml.IntParse(xmlAction["Coherence"]);
+            action.Dices = Xml.IntParse(xmlAction["Dices"]);
+            action.NotToDeath = Xml.BoolParse(xmlAction["NotToDeath"]);
+            action.Odd = Xml.BoolParse(xmlAction["Odd"]);
+            action.Initiative = Xml.BoolParse(xmlAction["Initiative"]);
+            action.StoneGuard = Xml.BoolParse(xmlAction["StoneGuard"]);
             action.SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]);
 
             if (xmlAction["Benefit"] != null)
@@ -39,7 +39,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     action.BenefitList.Add(ModificationParse(bonefit));
             }
 
-            bool falaleyHelp = Game.Xml.BoolParse(xmlAction["FalaleyHelp"]) && Game.Data.Triggers.Contains("Фалалей поможет");
+            bool falaleyHelp = Xml.BoolParse(xmlAction["FalaleyHelp"]) && Data.Triggers.Contains("Фалалей поможет");
 
             if ((xmlAction["Allies"] != null) || falaleyHelp)
             {
@@ -96,11 +96,11 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         {
             Character character = new Character
             {
-                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
-                MaxAttack = Game.Xml.IntParse(xmlNode.Attributes["Attack"]),
-                MaxEndurance = Game.Xml.IntParse(xmlNode.Attributes["Endurance"]),
-                MaxDefence = Game.Xml.IntParse(xmlNode.Attributes["Defence"]),
-                MaxInitiative = Game.Xml.IntParse(xmlNode.Attributes["Initiative"]),
+                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
+                MaxAttack = Xml.IntParse(xmlNode.Attributes["Attack"]),
+                MaxEndurance = Xml.IntParse(xmlNode.Attributes["Endurance"]),
+                MaxDefence = Xml.IntParse(xmlNode.Attributes["Defence"]),
+                MaxInitiative = Xml.IntParse(xmlNode.Attributes["Initiative"]),
                 SpecialTechnique = new List<Character.SpecialTechniques>(),
             };
 
@@ -111,7 +111,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 character.MaxInitiative = Character.Protagonist.MaxInitiative;
             }
 
-            string specialTechniques = Game.Xml.StringParse(xmlNode.Attributes["SpecialTechnique"]);
+            string specialTechniques = Xml.StringParse(xmlNode.Attributes["SpecialTechnique"]);
 
             foreach (string specialTechnique in specialTechniques.Split(','))
                 character.SpecialTechnique.Add(SpecialTechniquesParse(specialTechnique));
@@ -146,11 +146,11 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             Modification modification = new Modification
             {
-                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
-                ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
-                Restore = Game.Xml.BoolParse(xmlNode.Attributes["Restore"]),
-                Empty = Game.Xml.BoolParse(xmlNode.Attributes["Empty"]),
+                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
+                ValueString = Xml.StringParse(xmlNode.Attributes["ValueString"]),
+                Restore = Xml.BoolParse(xmlNode.Attributes["Restore"]),
+                Empty = Xml.BoolParse(xmlNode.Attributes["Empty"]),
             };
 
             return modification;
