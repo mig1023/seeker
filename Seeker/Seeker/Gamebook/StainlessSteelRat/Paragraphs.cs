@@ -13,16 +13,16 @@ namespace Seeker.Gamebook.StainlessSteelRat
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
                 Option option = OptionsTemplateWithoutDestination(xmlOption);
 
                 if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
-                    option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
+                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
                 else
                 {
                     List<string> destinations = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
