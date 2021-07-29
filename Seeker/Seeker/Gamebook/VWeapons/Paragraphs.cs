@@ -13,16 +13,16 @@ namespace Seeker.Gamebook.VWeapons
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.Dogfight = Game.Xml.BoolParse(xmlAction["Dogfight"]);
-            action.DamagedWeapon = Game.Xml.BoolParse(xmlAction["DamagedWeapon"]);
-            action.Value = Game.Xml.IntParse(xmlAction["Value"]);
-            action.Time = Game.Xml.IntParse(xmlAction["Time"]);
+            action.Dogfight = Xml.BoolParse(xmlAction["Dogfight"]);
+            action.DamagedWeapon = Xml.BoolParse(xmlAction["DamagedWeapon"]);
+            action.Value = Xml.IntParse(xmlAction["Value"]);
+            action.Time = Xml.IntParse(xmlAction["Time"]);
 
             if (xmlAction["Enemies"] != null)
             {
@@ -32,12 +32,12 @@ namespace Seeker.Gamebook.VWeapons
                 {
                     Character enemy = new Character
                     {
-                        Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                        Hitpoints = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
-                        Accuracy = Game.Xml.IntParse(xmlEnemy.Attributes["Accuracy"]),
-                        First = Game.Xml.BoolParse(xmlEnemy.Attributes["First"]),
-                        WithoutCartridges = Game.Xml.BoolParse(xmlEnemy.Attributes["WithoutCartridges"]),
-                        Animal = Game.Xml.BoolParse(xmlEnemy.Attributes["Animal"]),
+                        Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
+                        Hitpoints = Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
+                        Accuracy = Xml.IntParse(xmlEnemy.Attributes["Accuracy"]),
+                        First = Xml.BoolParse(xmlEnemy.Attributes["First"]),
+                        WithoutCartridges = Xml.BoolParse(xmlEnemy.Attributes["WithoutCartridges"]),
+                        Animal = Xml.BoolParse(xmlEnemy.Attributes["Animal"]),
                     };
 
                     if (enemy.WithoutCartridges || enemy.Animal)
@@ -55,6 +55,6 @@ namespace Seeker.Gamebook.VWeapons
         public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
-            Game.Xml.ModificationParse(xmlModification, new Modification());
+            Xml.ModificationParse(xmlModification, new Modification());
     }
 }
