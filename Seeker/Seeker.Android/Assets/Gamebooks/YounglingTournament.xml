@@ -1,0 +1,16 @@
+<Paragraphs>
+	<Paragraph>
+		<ID>0</ID>
+		<Text>START</Text>
+		<Options>
+			<Option Destination="1"/>
+		</Options>
+	</Paragraph>
+	<Paragraph>
+		<ID>1</ID>
+		<Text>END</Text>
+		<Options>
+			<Option Destination="0"/>
+		</Options>
+	</Paragraph>
+</Paragraphs>

@@ -466,6 +466,21 @@ namespace Seeker.Gamebook
                 BookColor = "#9e003a",
                 Illustration = "LandOfUnwaryBears.jpg",
             },
+
+            ["Турнир юнлингов"] = new Description
+            {
+                XmlBook = "Gamebooks/YounglingTournament.xml",
+                Protagonist = YounglingTournament.Character.Protagonist.Init,
+                CheckOnlyIf = YounglingTournament.Actions.StaticInstance.CheckOnlyIf,
+                Paragraphs = YounglingTournament.Paragraphs.StaticInstance,
+                Actions = YounglingTournament.Actions.StaticInstance,
+                Constants = YounglingTournament.Constants.StaticInstance,
+                Save = YounglingTournament.Character.Protagonist.Save,
+                Load = YounglingTournament.Character.Protagonist.Load,
+                SmallDisclaimer = "Александр Андросенко, 2018",
+                BookColor = "#cabd66",
+                Illustration = "YounglingTournament.jpg",
+            },
         };
 
         public static List<string> GetBooks() => Books.Keys.ToList();
