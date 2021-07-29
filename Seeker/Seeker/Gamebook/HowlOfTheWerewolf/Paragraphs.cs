@@ -13,9 +13,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
@@ -24,10 +24,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 if (xmlOption.Attributes["Destination"].Value == "Back")
                     option.Destination = Character.Protagonist.WayBack;
                 else
-                    option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
+                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
 
                 if (xmlOption.Attributes["Do"] != null)
-                    option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
+                    option.Do = Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
 
                 paragraph.Options.Add(option);
             }
@@ -36,7 +36,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 paragraph.Actions.Add(ActionParse(xmlAction));
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
+                paragraph.Modification.Add(Xml.ModificationParse(xmlModification, new Modification()));
 
             return paragraph;
         }
@@ -45,17 +45,17 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.Value = Game.Xml.IntParse(xmlAction["Value"]);
-            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.RoundsWinToWin = Game.Xml.IntParse(xmlAction["RoundsWinToWin"]);
-            action.RoundsFailToFail = Game.Xml.IntParse(xmlAction["RoundsFailToFail"]);
-            action.RoundsToFight = Game.Xml.IntParse(xmlAction["RoundsToFight"]);
-            action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
-            action.WoundsToFail = Game.Xml.IntParse(xmlAction["WoundsToFail"]);
-            action.WoundsForTransformation = Game.Xml.IntParse(xmlAction["WoundsForTransformation"]);
-            action.WoundsLimit = Game.Xml.IntParse(xmlAction["WoundsLimit"]);
-            action.HitStrengthBonus = Game.Xml.IntParse(xmlAction["HitStrengthBonus"]);
-            action.ExtendedDamage = Game.Xml.IntParse(xmlAction["ExtendedDamage"]);
+            action.Value = Xml.IntParse(xmlAction["Value"]);
+            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.RoundsWinToWin = Xml.IntParse(xmlAction["RoundsWinToWin"]);
+            action.RoundsFailToFail = Xml.IntParse(xmlAction["RoundsFailToFail"]);
+            action.RoundsToFight = Xml.IntParse(xmlAction["RoundsToFight"]);
+            action.WoundsToWin = Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.WoundsToFail = Xml.IntParse(xmlAction["WoundsToFail"]);
+            action.WoundsForTransformation = Xml.IntParse(xmlAction["WoundsForTransformation"]);
+            action.WoundsLimit = Xml.IntParse(xmlAction["WoundsLimit"]);
+            action.HitStrengthBonus = Xml.IntParse(xmlAction["HitStrengthBonus"]);
+            action.ExtendedDamage = Xml.IntParse(xmlAction["ExtendedDamage"]);
             action.Specificity = SpecificsParse(xmlAction["Specificity"]);
 
             if (xmlAction["Benefit"] != null)
@@ -63,7 +63,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 action.BenefitList = new List<Abstract.IModification>();
 
                 foreach (XmlNode bonefit in xmlAction.SelectNodes("Benefit"))
-                    action.BenefitList.Add(Game.Xml.ModificationParse(bonefit, new Modification()));
+                    action.BenefitList.Add(Xml.ModificationParse(bonefit, new Modification()));
             }
 
             if (xmlAction["Enemies"] != null)
@@ -74,8 +74,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 {
                     Character enemy = EnemyParse(xmlEnemy);
 
-                    if (Game.Xml.BoolParse(xmlAction["RandomEnemyCount"]))
-                        EnemyMultiplier(Game.Dice.Roll(), ref action, enemy);
+                    if (Xml.BoolParse(xmlAction["RandomEnemyCount"]))
+                        EnemyMultiplier(Dice.Roll(), ref action, enemy);
                     else
                         action.Enemies.Add(enemy);
                 }
@@ -88,9 +88,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             Character enemy = new Character
             {
-                Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                MaxMastery = Game.Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
-                MaxEndurance = Game.Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
+                Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
+                MaxMastery = Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
+                MaxEndurance = Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
             };
 
             enemy.Mastery = enemy.MaxMastery;
