@@ -14,9 +14,9 @@ namespace Seeker.Gamebook.StringOfWorlds
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             Constants.RandomColor();
 
@@ -32,13 +32,13 @@ namespace Seeker.Gamebook.StringOfWorlds
                     {
                         foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
                             if (xmlModification.Attributes["Name"].Value == "GateCode")
-                                Character.Protagonist.GateCode += Game.Xml.IntParse(xmlModification.Attributes["Value"]);
+                                Character.Protagonist.GateCode += Xml.IntParse(xmlModification.Attributes["Value"]);
                         
                         option.Destination = Character.Protagonist.GateCode;
                     }
                 }
                 else if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
-                    option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
+                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
                 else
                 {
                     List<string> destinations = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
@@ -52,7 +52,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                 paragraph.Actions.Add(ActionParse(xmlAction));
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(Game.Xml.ModificationParse(xmlModification, new Modification()));
+                paragraph.Modification.Add(Xml.ModificationParse(xmlModification, new Modification()));
 
             return paragraph;
         }
@@ -61,12 +61,12 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.Equipment = Game.Xml.StringParse(xmlAction["Equipment"]);
-            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.HeroWoundsLimit = Game.Xml.BoolParse(xmlAction["HeroWoundsLimit"]);
-            action.EnemyWoundsLimit = Game.Xml.BoolParse(xmlAction["EnemyWoundsLimit"]);
-            action.DevastatingAttack = Game.Xml.BoolParse(xmlAction["DevastatingAttack"]);
-            action.DarknessPenalty = Game.Xml.BoolParse(xmlAction["DarknessPenalty"]);
+            action.Equipment = Xml.StringParse(xmlAction["Equipment"]);
+            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.HeroWoundsLimit = Xml.BoolParse(xmlAction["HeroWoundsLimit"]);
+            action.EnemyWoundsLimit = Xml.BoolParse(xmlAction["EnemyWoundsLimit"]);
+            action.DevastatingAttack = Xml.BoolParse(xmlAction["DevastatingAttack"]);
+            action.DarknessPenalty = Xml.BoolParse(xmlAction["DarknessPenalty"]);
 
             if (xmlAction["Enemies"] != null)
             {
@@ -76,9 +76,9 @@ namespace Seeker.Gamebook.StringOfWorlds
                 {
                     Character enemy = new Character
                     {
-                        Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                        MaxSkill = Game.Xml.IntParse(xmlEnemy.Attributes["Skill"]),
-                        MaxStrength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
+                        Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
+                        MaxSkill = Xml.IntParse(xmlEnemy.Attributes["Skill"]),
+                        MaxStrength = Xml.IntParse(xmlEnemy.Attributes["Strength"]),
                     };
 
                     enemy.Skill = enemy.MaxSkill;
@@ -89,7 +89,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             }
 
             if (xmlAction["Benefit"] != null)
-                action.Benefit = Game.Xml.ModificationParse(xmlAction["Benefit"], new Modification());
+                action.Benefit = Xml.ModificationParse(xmlAction["Benefit"], new Modification());
 
             return action;
         }
