@@ -14,12 +14,12 @@ namespace Seeker.Gamebook.ThreePaths
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
-            action.ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]);
+            action.ThisIsSpell = Xml.BoolParse(xmlAction["ThisIsSpell"]);
 
             return action;
         }
@@ -33,9 +33,9 @@ namespace Seeker.Gamebook.ThreePaths
 
             Modification modification = new Modification
             {
-                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
-                ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
+                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
+                ValueString = Xml.StringParse(xmlNode.Attributes["ValueString"]),
             };
 
             if (xmlNode.Attributes["Init"] != null)
