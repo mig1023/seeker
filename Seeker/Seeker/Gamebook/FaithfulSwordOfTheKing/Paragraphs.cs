@@ -13,17 +13,17 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
-            action.SkillPenalty = Game.Xml.IntParse(xmlAction["SkillPenalty"]);
+            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.WoundsToWin = Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.SkillPenalty = Xml.IntParse(xmlAction["SkillPenalty"]);
             action.MeritalArt = MeritalArtsParse(xmlAction["MeritalArt"]);
-            action.WithoutShooting = Game.Xml.BoolParse(xmlAction["WithoutShooting"]);
+            action.WithoutShooting = Xml.BoolParse(xmlAction["WithoutShooting"]);
 
             if (action.Name == "Option")
                 action.Option = OptionParse(xmlAction["Option"]);
@@ -63,9 +63,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             Character enemy = new Character
             {
-                Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                MaxSkill = Game.Xml.IntParse(xmlEnemy.Attributes["Skill"]),
-                MaxStrength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
+                Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
+                MaxSkill = Xml.IntParse(xmlEnemy.Attributes["Skill"]),
+                MaxStrength = Xml.IntParse(xmlEnemy.Attributes["Strength"]),
             };
 
             enemy.Skill = enemy.MaxSkill;
@@ -81,11 +81,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             Modification modification = new Modification
             {
-                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
-                ValueString = Game.Xml.StringParse(xmlNode.Attributes["ValueString"]),
-                Empty = Game.Xml.BoolParse(xmlNode.Attributes["Empty"]),
-                Restore = Game.Xml.BoolParse(xmlNode.Attributes["Restore"]),
+                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
+                ValueString = Xml.StringParse(xmlNode.Attributes["ValueString"]),
+                Empty = Xml.BoolParse(xmlNode.Attributes["Empty"]),
+                Restore = Xml.BoolParse(xmlNode.Attributes["Restore"]),
             };
 
             return modification;
