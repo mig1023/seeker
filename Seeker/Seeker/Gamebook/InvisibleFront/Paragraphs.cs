@@ -14,9 +14,9 @@ namespace Seeker.Gamebook.InvisibleFront
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
                 paragraph.Options.Add(OptionParse(xmlOption));
@@ -33,7 +33,7 @@ namespace Seeker.Gamebook.InvisibleFront
 
             if (xmlOption.Attributes["Do"] != null)
             {
-                Modification modification = new Modification { Name = Game.Xml.StringParse(xmlOption.Attributes["Do"]) };
+                Modification modification = new Modification { Name = Xml.StringParse(xmlOption.Attributes["Do"]) };
 
                 ValueParse(xmlOption, ref modification);
 
@@ -50,8 +50,8 @@ namespace Seeker.Gamebook.InvisibleFront
 
             Modification modification = new Modification
             {
-                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
+                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
             };
 
             return modification;
@@ -63,9 +63,9 @@ namespace Seeker.Gamebook.InvisibleFront
                 return;
 
             if (int.TryParse(xmlOption.Attributes["Value"].Value, out _))
-                modification.Value = Game.Xml.IntParse(xmlOption.Attributes["Value"]);
+                modification.Value = Xml.IntParse(xmlOption.Attributes["Value"]);
             else
-                modification.ValueString = Game.Xml.StringParse(xmlOption.Attributes["Value"]);
+                modification.ValueString = Xml.StringParse(xmlOption.Attributes["Value"]);
         }
     }
 }
