@@ -14,16 +14,16 @@ namespace Seeker.Gamebook.BlackCastleDungeon
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
-            action.StrengthPenlty = Game.Xml.IntParse(xmlAction["StrengthPenlty"]);
-            action.ThisIsSpell = Game.Xml.BoolParse(xmlAction["ThisIsSpell"]);
+            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.WoundsToWin = Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.StrengthPenlty = Xml.IntParse(xmlAction["StrengthPenlty"]);
+            action.ThisIsSpell = Xml.BoolParse(xmlAction["ThisIsSpell"]);
 
             if (xmlAction["Enemies"] != null)
             {
@@ -37,7 +37,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (action.Name == "Option")
                 action.Option = OptionParse(xmlAction["Option"]);
 
-            action.Benefit = Game.Xml.ModificationParse(xmlAction["Benefit"], new Modification());
+            action.Benefit = Xml.ModificationParse(xmlAction["Benefit"], new Modification());
 
             return action;
         }
@@ -45,15 +45,15 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
-            Game.Xml.ModificationParse(xmlModification, new Modification());
+            Xml.ModificationParse(xmlModification, new Modification());
 
         private static Character EnemyParse(XmlNode xmlEnemy)
         {
             Character enemy = new Character
             {
-                Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                MaxMastery = Game.Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
-                MaxEndurance = Game.Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
+                Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
+                MaxMastery = Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
+                MaxEndurance = Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
             };
 
             enemy.Mastery = enemy.MaxMastery;
