@@ -13,12 +13,12 @@ namespace Seeker.Gamebook.Genesis
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
-            action.Bonus = Game.Xml.StringParse(xmlAction["Bonus"]);
+            action.Bonus = Xml.StringParse(xmlAction["Bonus"]);
 
             return action;
         }
