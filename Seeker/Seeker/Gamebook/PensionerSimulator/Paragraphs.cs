@@ -13,9 +13,9 @@ namespace Seeker.Gamebook.PensionerSimulator
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
                 paragraph.Options.Add(OptionParseWithDo(xmlOption, new Modification()));
