@@ -13,25 +13,25 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.ConneryAttacks = Game.Xml.StringParse(xmlAction["ConneryAttacks"]);
-            action.ReactionWounds = Game.Xml.StringParse(xmlAction["ReactionWounds"]);
-            action.ReactionRound = Game.Xml.StringParse(xmlAction["ReactionRound"]);
-            action.ReactionHit = Game.Xml.StringParse(xmlAction["ReactionHit"]);
-            action.Dices = Game.Xml.IntParse(xmlAction["Dices"]);
-            action.DiceBonus = Game.Xml.IntParse(xmlAction["DiceBonus"]);
-            action.OnlyRounds = Game.Xml.IntParse(xmlAction["OnlyRounds"]);
-            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.AttackWounds = Game.Xml.IntParse(xmlAction["AttackWounds"]);
-            action.Disabled = Game.Xml.BoolParse(xmlAction["Disabled"]);
-            action.IncrementWounds = Game.Xml.BoolParse(xmlAction["IncrementWounds"]);
-            action.GolemFight = Game.Xml.BoolParse(xmlAction["GolemFight"]);
-            action.ZombieFight = Game.Xml.BoolParse(xmlAction["ZombieFight"]);
+            action.ConneryAttacks = Xml.StringParse(xmlAction["ConneryAttacks"]);
+            action.ReactionWounds = Xml.StringParse(xmlAction["ReactionWounds"]);
+            action.ReactionRound = Xml.StringParse(xmlAction["ReactionRound"]);
+            action.ReactionHit = Xml.StringParse(xmlAction["ReactionHit"]);
+            action.Dices = Xml.IntParse(xmlAction["Dices"]);
+            action.DiceBonus = Xml.IntParse(xmlAction["DiceBonus"]);
+            action.OnlyRounds = Xml.IntParse(xmlAction["OnlyRounds"]);
+            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.AttackWounds = Xml.IntParse(xmlAction["AttackWounds"]);
+            action.Disabled = Xml.BoolParse(xmlAction["Disabled"]);
+            action.IncrementWounds = Xml.BoolParse(xmlAction["IncrementWounds"]);
+            action.GolemFight = Xml.BoolParse(xmlAction["GolemFight"]);
+            action.ZombieFight = Xml.BoolParse(xmlAction["ZombieFight"]);
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
             action.Damage = ModificationParse(xmlAction["Damage"]);
 
@@ -84,12 +84,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             Modification modification = new Modification
             {
-                Name = Game.Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Game.Xml.IntParse(xmlNode.Attributes["Value"]),
-                WizardWoundsPenalty = Game.Xml.IntParse(xmlNode.Attributes["WizardWoundsPenalty"]),
-                ThrowerWoundsPenalty = Game.Xml.IntParse(xmlNode.Attributes["ThrowerWoundsPenalty"]),
-                Empty = Game.Xml.BoolParse(xmlNode.Attributes["Empty"]),
-                Init = Game.Xml.BoolParse(xmlNode.Attributes["Init"]),
+                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
+                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
+                WizardWoundsPenalty = Xml.IntParse(xmlNode.Attributes["WizardWoundsPenalty"]),
+                ThrowerWoundsPenalty = Xml.IntParse(xmlNode.Attributes["ThrowerWoundsPenalty"]),
+                Empty = Xml.BoolParse(xmlNode.Attributes["Empty"]),
+                Init = Xml.BoolParse(xmlNode.Attributes["Init"]),
             };
 
             return modification;
@@ -97,9 +97,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         private static Character EnemyParse(XmlNode xmlEnemy) => new Character
         {
-            Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-            Strength = Game.Xml.IntParse(xmlEnemy.Attributes["Strength"]),
-            Hitpoints = Game.Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
+            Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
+            Strength = Xml.IntParse(xmlEnemy.Attributes["Strength"]),
+            Hitpoints = Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
         };
     }
 }
