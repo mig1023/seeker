@@ -13,16 +13,16 @@ namespace Seeker.Gamebook.CreatureOfHavoc
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public override Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
                 Option option = OptionsTemplate(xmlOption);
 
                 if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
-                    option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
+                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
                 else
                 {
                     List<string> destinations = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
@@ -30,7 +30,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 }
 
                 if (xmlOption.Attributes["Do"] != null)
-                    option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
+                    option.Do = Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
 
                 paragraph.Options.Add(option);
             }
@@ -48,12 +48,12 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
-            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.RoundsToFight = Game.Xml.IntParse(xmlAction["RoundsToFight"]);
-            action.Ophidiotaur = Game.Xml.BoolParse(xmlAction["Ophidiotaur"]);
-            action.ManicBeast = Game.Xml.BoolParse(xmlAction["ManicBeast"]);
-            action.GiantHornet = Game.Xml.BoolParse(xmlAction["GiantHornet"]);
+            action.WoundsToWin = Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.RoundsToFight = Xml.IntParse(xmlAction["RoundsToFight"]);
+            action.Ophidiotaur = Xml.BoolParse(xmlAction["Ophidiotaur"]);
+            action.ManicBeast = Xml.BoolParse(xmlAction["ManicBeast"]);
+            action.GiantHornet = Xml.BoolParse(xmlAction["GiantHornet"]);
 
             if (xmlAction["Enemies"] != null)
             {
@@ -68,18 +68,18 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) => new Modification
         {
-            Name = Game.Xml.StringParse(xmlModification.Attributes["Name"]),
-            Value = Game.Xml.IntParse(xmlModification.Attributes["Value"]),
-            Restore = Game.Xml.BoolParse(xmlModification.Attributes["Restore"]),
+            Name = Xml.StringParse(xmlModification.Attributes["Name"]),
+            Value = Xml.IntParse(xmlModification.Attributes["Value"]),
+            Restore = Xml.BoolParse(xmlModification.Attributes["Restore"]),
         };
 
         private static Character EnemyParse(XmlNode xmlEnemy)
         {
             Character enemy = new Character
             {
-                Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                MaxMastery = Game.Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
-                MaxEndurance = Game.Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
+                Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
+                MaxMastery = Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
+                MaxEndurance = Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
             };
 
             enemy.Mastery = enemy.MaxMastery;
