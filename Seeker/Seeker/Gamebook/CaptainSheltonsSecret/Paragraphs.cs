@@ -14,17 +14,17 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph); 
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph); 
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.RoundsToWin = Game.Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.WoundsToWin = Game.Xml.IntParse(xmlAction["WoundsToWin"]);
-            action.DamageToWin = Game.Xml.IntParse(xmlAction["DamageToWin"]);
-            action.MasteryPenalty = Game.Xml.IntParse(xmlAction["MasteryPenalty"]);
-            action.GroupFight = Game.Xml.BoolParse(xmlAction["GroupFight"]);
+            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
+            action.WoundsToWin = Xml.IntParse(xmlAction["WoundsToWin"]);
+            action.DamageToWin = Xml.IntParse(xmlAction["DamageToWin"]);
+            action.MasteryPenalty = Xml.IntParse(xmlAction["MasteryPenalty"]);
+            action.GroupFight = Xml.BoolParse(xmlAction["GroupFight"]);
 
             if (xmlAction["Allies"] != null)
             {
@@ -46,15 +46,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         }
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
-            Game.Xml.ModificationParse(xmlModification, new Modification());
+            Xml.ModificationParse(xmlModification, new Modification());
 
         private static Character EnemyParse(XmlNode xmlEnemy)
         {
             Character enemy = new Character
             {
-                Name = Game.Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                MaxMastery = Game.Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
-                MaxEndurance = Game.Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
+                Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
+                MaxMastery = Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
+                MaxEndurance = Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
             };
 
             enemy.Mastery = enemy.MaxMastery;
