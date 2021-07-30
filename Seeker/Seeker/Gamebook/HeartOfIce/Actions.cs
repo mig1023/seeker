@@ -6,6 +6,7 @@ namespace Seeker.Gamebook.HeartOfIce
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
+        private static Character protogonist = Character.Protagonist;
 
         public string RemoveTrigger { get; set; }
         public string Skill { get; set; }
@@ -34,53 +35,49 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public override List<string> Status()
         {
-            Character hero = Character.Protagonist;
-
             List<string> statusLines = new List<string>
             {
-                String.Format("Здоровье: {0}", hero),
-                String.Format("Деньги: {0}", hero),
+                String.Format("Здоровье: {0}", protogonist),
+                String.Format("Деньги: {0}", protogonist),
             };
 
-            if (hero.Food > 0)
-                statusLines.Add(String.Format("Еда: {0}", hero.Food));
+            if (protogonist.Food > 0)
+                statusLines.Add(String.Format("Еда: {0}", protogonist.Food));
 
-            if (hero.Shots > 0)
-                statusLines.Add(String.Format("Выстрелов: {0}", hero.Shots));
+            if (protogonist.Shots > 0)
+                statusLines.Add(String.Format("Выстрелов: {0}", protogonist.Shots));
 
             return statusLines;
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(Character.Protagonist.Life, out toEndParagraph, out toEndText);
+            GameOverBy(protogonist.Life, out toEndParagraph, out toEndText);
 
         public List<string> Get()
         {
-            Character hero = Character.Protagonist;
-
             if (Choice)
-                hero.Chosen = true;
+                protogonist.Chosen = true;
 
             if (!String.IsNullOrEmpty(Skill))
             {
-                hero.Skills.Add(Skill);
-                hero.SkillsValue -= 1;
+                protogonist.Skills.Add(Skill);
+                protogonist.SkillsValue -= 1;
             }
 
-            if ((Price > 0) && (hero.Money >= Price))
+            if ((Price > 0) && (protogonist.Money >= Price))
             {
-                hero.Money += ((Sell || SellIfAvailable) ? Price : (Price * -1));
+                protogonist.Money += ((Sell || SellIfAvailable) ? Price : (Price * -1));
                 Game.Option.Trigger(RemoveTrigger, remove: true);
 
                 if (SellIfAvailable && (SellType == "Пистолет"))
-                    hero.Shots = 0;
+                    protogonist.Shots = 0;
 
                 if (SellIfAvailable && (SellType == "Еда"))
-                    hero.Food -= 1;
+                    protogonist.Food -= 1;
             }
 
             if (Split)
-                hero.Split += 1;
+                protogonist.Split += 1;
 
             if (((Price > 0) || Split) && !Multiple)
                 Used = true;
@@ -94,14 +91,12 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public override bool IsButtonEnabled()
         {
-            Character hero = Character.Protagonist;
-
             bool disabledBySkills = (!String.IsNullOrEmpty(Skill) &&
-                ((hero.SkillsValue <= 0) || hero.Skills.Contains(Skill)));
+                ((protogonist.SkillsValue <= 0) || protogonist.Skills.Contains(Skill)));
 
-            bool disbledByChoice = (Choice && hero.Chosen);
-            bool disabledByPrice = (Price > 0) && (hero.Money < Price);
-            bool disabledBySplit = Split && (hero.Split >= 2);
+            bool disbledByChoice = (Choice && protogonist.Chosen);
+            bool disabledByPrice = (Price > 0) && (protogonist.Money < Price);
+            bool disabledBySplit = Split && (protogonist.Split >= 2);
             bool disabledByAvailable = SellIfAvailable && !Available();
 
             return !(disbledByChoice || disabledBySkills || disabledByPrice || disabledBySplit || disabledByAvailable || Used);
@@ -113,23 +108,21 @@ namespace Seeker.Gamebook.HeartOfIce
                 return Game.Data.Triggers.Contains(RemoveTrigger);
 
             else if (SellType == "Пистолет")
-                return Character.Protagonist.Shots > 0;
+                return protogonist.Shots > 0;
 
             else if (SellType == "Еда")
-                return Character.Protagonist.Food > 0;
+                return protogonist.Food > 0;
 
             return false;
         }
 
         public override bool CheckOnlyIf(string option)
         {
-            Character hero = Character.Protagonist;
-
             if (option.Contains("|"))
             {
                 foreach (string oneOption in option.Split('|'))
                 {
-                    if (hero.Skills.Contains(oneOption.Trim()))
+                    if (protogonist.Skills.Contains(oneOption.Trim()))
                         return true;
 
                     if (Game.Data.Triggers.Contains(oneOption.Trim()))
@@ -144,16 +137,16 @@ namespace Seeker.Gamebook.HeartOfIce
                 {
                     if (oneOption.Contains("="))
                     {
-                        if (oneOption.Contains("ВЫСТРЕЛОВ >=") && (int.Parse(oneOption.Split('=')[1]) > hero.Shots))
+                        if (oneOption.Contains("ВЫСТРЕЛОВ >=") && (int.Parse(oneOption.Split('=')[1]) > protogonist.Shots))
                             return false;
 
-                        if (oneOption.Contains("ДЕНЬГИ >=") && (int.Parse(oneOption.Split('=')[1]) > hero.Money))
+                        if (oneOption.Contains("ДЕНЬГИ >=") && (int.Parse(oneOption.Split('=')[1]) > protogonist.Money))
                             return false;
 
-                        else if (oneOption.Contains("ЕДА >=") && (int.Parse(oneOption.Split('=')[1]) > hero.Food))
+                        else if (oneOption.Contains("ЕДА >=") && (int.Parse(oneOption.Split('=')[1]) > protogonist.Food))
                             return false;
                     }
-                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()) && !hero.Skills.Contains(oneOption.Trim()))
+                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()) && !protogonist.Skills.Contains(oneOption.Trim()))
                         return false;
                 }
 
