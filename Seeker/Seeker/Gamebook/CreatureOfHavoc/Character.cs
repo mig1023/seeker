@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.CreatureOfHavoc
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.CreatureOfHavoc.Character();
+        public static Character Protagonist = new Character();
 
         private int _mastery;
         public int MaxMastery { get; set; }
@@ -77,7 +75,14 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             Luck = this.Luck,
         };
 
-        public override string Save() => String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck);
+        public override string Save() => String.Join("|",
+            MaxMastery,
+            Mastery,
+            MaxEndurance,
+            Endurance,
+            MaxLuck,
+            Luck
+        );
 
         public override void Load(string saveLine)
         {
