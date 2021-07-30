@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 
 namespace Seeker.Gamebook.HowlOfTheWerewolf
 {
@@ -69,20 +67,22 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public override List<string> AdditionalStatus()
         {
+            Character hero = Character.Protagonist;
+
             List<string> statusLines = new List<string>
             {
-                String.Format("Золото: {0}", Character.Protagonist.Gold),
-                String.Format("Изменение: {0}", Character.Protagonist.Change)
+                String.Format("Золото: {0}", hero.Gold),
+                String.Format("Изменение: {0}", hero.Change)
             };
 
-            if (Character.Protagonist.Crossbow > 0)
-                statusLines.Add(String.Format("Арбалет: {0}", Character.Protagonist.Crossbow));
+            if (hero.Crossbow > 0)
+                statusLines.Add(String.Format("Арбалет: {0}", hero.Crossbow));
 
-            if (Character.Protagonist.Gun > 0)
-                statusLines.Add(String.Format("Пистолет: {0}", Character.Protagonist.Gun));
+            if (hero.Gun > 0)
+                statusLines.Add(String.Format("Пистолет: {0}", hero.Gun));
 
-            if (Character.Protagonist.VanRichten > 0)
-                statusLines.Add(String.Format("Выносливость Ван Рихтена: {0}", Character.Protagonist.VanRichten));
+            if (hero.VanRichten > 0)
+                statusLines.Add(String.Format("Выносливость Ван Рихтена: {0}", hero.VanRichten));
 
             return statusLines;
         }
