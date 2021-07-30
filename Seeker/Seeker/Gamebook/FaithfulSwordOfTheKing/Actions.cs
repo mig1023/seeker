@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
+        private static Character protogonist = Character.Protagonist;
 
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }
@@ -18,11 +19,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Ловкость: {0}", Character.Protagonist.Skill),
-            String.Format("Сила: {0}", Character.Protagonist.Strength),
-            String.Format("Честь: {0}", Character.Protagonist.Honor),
-            String.Format("День: {0}", Character.Protagonist.Day),
-            String.Format("Экю: {0}", ToEcu(Character.Protagonist.Ecu))
+            String.Format("Ловкость: {0}", protogonist.Skill),
+            String.Format("Сила: {0}", protogonist.Strength),
+            String.Format("Честь: {0}", protogonist.Honor),
+            String.Format("День: {0}", protogonist.Day),
+            String.Format("Экю: {0}", ToEcu(protogonist.Ecu))
         };
 
         private string ToEcu(int ecu) => String.Format("{0:f2}", (double)ecu / 100).TrimEnd('0').TrimEnd(',').Replace(',', '.');
@@ -32,15 +33,15 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             toEndParagraph = 0;
             toEndText = String.Empty;
 
-            if (Character.Protagonist.Strength <= 0)
+            if (protogonist.Strength <= 0)
                 toEndText = "Начать сначала";
 
-            else if (Character.Protagonist.Honor <= 0)
+            else if (protogonist.Honor <= 0)
             {
                 toEndParagraph = 150;
                 toEndText = "Задуматься о чести";
 
-                Character.Protagonist.Strength = 0;
+                protogonist.Strength = 0;
             }
             else
                 return false;
@@ -50,38 +51,36 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public override bool IsButtonEnabled()
         {
             bool disabledMeritalArtButton =
-                (MeritalArt != Character.MeritalArts.Nope) && (Character.Protagonist.MeritalArt != Character.MeritalArts.Nope);
+                (MeritalArt != Character.MeritalArts.Nope) && (protogonist.MeritalArt != Character.MeritalArts.Nope);
 
             bool disabledGetOptions = (Price > 0) && Used;
-            bool disabledByPrice = (Price > 0) && (Character.Protagonist.Ecu < Price);
+            bool disabledByPrice = (Price > 0) && (protogonist.Ecu < Price);
 
             return !(disabledMeritalArtButton || disabledGetOptions || disabledByPrice);
         }
 
         public override bool CheckOnlyIf(string option)
         {
-            Character hero = Character.Protagonist;
-
             if (option.Contains("="))
             {
                 int value = int.Parse(option.Split('=')[1]);
 
-                if (option.Contains("ДЕНЬ >=") && (value > hero.Day))
+                if (option.Contains("ДЕНЬ >=") && (value > protogonist.Day))
                     return false;
 
-                else if (option.Contains("ДЕНЬ =") && (value != hero.Day))
+                else if (option.Contains("ДЕНЬ =") && (value != protogonist.Day))
                     return false;
 
-                else if (option.Contains("ДЕНЬ <=") && (value < hero.Day))
+                else if (option.Contains("ДЕНЬ <=") && (value < protogonist.Day))
                     return false;
 
-                else if (option.Contains("ЭКЮ >=") && (value > hero.Ecu))
+                else if (option.Contains("ЭКЮ >=") && (value > protogonist.Ecu))
                     return false;
 
                 return true;
             }
             else if (Enum.TryParse(option, out Character.MeritalArts value))
-                return hero.MeritalArt == value;
+                return protogonist.MeritalArt == value;
             else
                 return CheckOnlyIfTrigger(option);
         }
@@ -124,10 +123,10 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
 
-            bool goodSkill = (firstDice + secondDice) <= Character.Protagonist.Skill;
+            bool goodSkill = (firstDice + secondDice) <= protogonist.Skill;
 
             List<string> skillCheck = new List<string> { String.Format("Проверка ловкости: {0} + {1} {2} {3} ловкость",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), Character.Protagonist.Skill) };
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), protogonist.Skill) };
 
             skillCheck.Add(goodSkill ? "BIG|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(");
 
@@ -169,7 +168,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             if (wounds < 6)
             {
-                Character.Protagonist.Strength -= wounds;
+                protogonist.Strength -= wounds;
                 diceWound.Add(String.Format("BIG|BAD|Вы потеряли сил: {0}", wounds));
             }
             else
@@ -191,7 +190,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
             }
 
-            Character.Protagonist.Strength -= dices;
+            protogonist.Strength -= dices;
 
             diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
 
@@ -265,14 +264,12 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public List<string> Get()
         {
-            Character hero = Character.Protagonist;
+            if ((MeritalArt != Character.MeritalArts.Nope) && (protogonist.MeritalArt == Character.MeritalArts.Nope))
+                protogonist.MeritalArt = MeritalArt ?? Character.MeritalArts.Nope;
 
-            if ((MeritalArt != Character.MeritalArts.Nope) && (hero.MeritalArt == Character.MeritalArts.Nope))
-                hero.MeritalArt = MeritalArt ?? Character.MeritalArts.Nope;
-
-            else if ((Price > 0) && (hero.Ecu >= Price))
+            else if ((Price > 0) && (protogonist.Ecu >= Price))
             {
-                hero.Ecu -= Price;
+                protogonist.Ecu -= Price;
 
                 if (!Multiple)
                     Used = true;
@@ -321,13 +318,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             int round = 1, enemyWounds = 0, shoots = 0;
 
-            Character hero = Character.Protagonist;
-
             if (WithoutShooting)
                 shoots = 0;
-            else if ((hero.MeritalArt == Character.MeritalArts.TwoPistols) && (hero.Pistols > 1) && (hero.BulletsAndGubpowder > 1))
+            else if ((protogonist.MeritalArt == Character.MeritalArts.TwoPistols) && (protogonist.Pistols > 1) && (protogonist.BulletsAndGubpowder > 1))
                 shoots = 2;
-            else if ((hero.Pistols > 0) && (hero.BulletsAndGubpowder > 0))
+            else if ((protogonist.Pistols > 0) && (protogonist.BulletsAndGubpowder > 0))
                 shoots = 1;
 
             for (int pistol = 1; pistol <= shoots; pistol++)
@@ -337,7 +332,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                 bool hit = LuckyHit();
 
-                hero.BulletsAndGubpowder -= 1;
+                protogonist.BulletsAndGubpowder -= 1;
 
                 fight.Add(String.Format("Выстрел из {0}пистолета: {1}", (shoots > 1 ? String.Format("{0} ", pistol) : ""), (hit ? "попал" : "промах")));
 
@@ -362,7 +357,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
-                if ((hero.MeritalArt == Character.MeritalArts.SecretBlow) && (round == 1))
+                if ((protogonist.MeritalArt == Character.MeritalArts.SecretBlow) && (round == 1))
                 {
                     Character enemy = FightEnemies.Where(x => x.Strength > 0).FirstOrDefault();
 
@@ -385,7 +380,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     if (!attackAlready)
                     {
                         protagonistRoll = Game.Dice.Roll();
-                        int protagonistSkill = hero.Skill - SkillPenalty - (hero.MeritalArt == Character.MeritalArts.LefthandFencing ? 0 : enemy.LeftHandPenalty);
+                        int protagonistSkill = protogonist.Skill - SkillPenalty - (protogonist.MeritalArt == Character.MeritalArts.LefthandFencing ? 0 : enemy.LeftHandPenalty);
                         protagonistHitStrength = (protagonistRoll * 2) + protagonistSkill;
 
                         fight.Add(String.Format("Мощность вашего удара: {0} x 2 + {1} = {2}",
@@ -408,7 +403,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                         {
                             fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
 
-                            if (EnemyWound(hero, ref enemyInFight, FightEnemies, protagonistRoll, WoundsToWin, ref enemyWounds, ref fight))
+                            if (EnemyWound(protogonist, ref enemyInFight, FightEnemies, protagonistRoll, WoundsToWin, ref enemyWounds, ref fight))
                                 return fight;
                         }
 
@@ -419,25 +414,25 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        if ((hero.Chainmail > 0) && (enemyRoll == 6))
+                        if ((protogonist.Chainmail > 0) && (enemyRoll == 6))
                             fight.Add(String.Format("BOLD|Кольчуга отразила удар!"));
                         else
                         {
                             fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
-                            hero.Strength -= 2;
+                            protogonist.Strength -= 2;
 
-                            if (hero.Strength <= 0)
+                            if (protogonist.Strength <= 0)
                             {
                                 fight.Add(String.Empty);
                                 fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
                                 return fight;
                             }
 
-                            if ((hero.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(protagonistRoll))
+                            if ((protogonist.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(protagonistRoll))
                             {
                                 fight.Add(String.Format("GOOD|{0} ранен вашим кинжалом", enemy.Name));
 
-                                if (EnemyWound(hero, ref enemyInFight, FightEnemies, protagonistRoll, WoundsToWin, ref enemyWounds, ref fight, dagger: true))
+                                if (EnemyWound(protogonist, ref enemyInFight, FightEnemies, protagonistRoll, WoundsToWin, ref enemyWounds, ref fight, dagger: true))
                                     return fight;
                             }
                         }
@@ -462,12 +457,12 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             }
         }
 
-        public override bool IsHealingEnabled() => Character.Protagonist.Strength < Character.Protagonist.MaxStrength;
+        public override bool IsHealingEnabled() => protogonist.Strength < protogonist.MaxStrength;
 
         public override void UseHealing(int healingLevel)
         {
-            Character.Protagonist.Strength += healingLevel;
-            Character.Protagonist.HadFoodToday += 1;
+            protogonist.Strength += healingLevel;
+            protogonist.HadFoodToday += 1;
         }
     }
 }
