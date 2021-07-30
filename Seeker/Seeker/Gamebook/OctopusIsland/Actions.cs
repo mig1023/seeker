@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 
 namespace Seeker.Gamebook.OctopusIsland
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
+        private static Character protogonist = Character.Protagonist;
 
         public List<Character> Enemies { get; set; }
         public int WoundsToWin { get; set; }
@@ -30,35 +29,35 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Обедов: {0}", Character.Protagonist.Food),
-            String.Format("Животворная мазь: {0}", Character.Protagonist.LifeGivingOintment),
+            String.Format("Обедов: {0}", protogonist.Food),
+            String.Format("Животворная мазь: {0}", protogonist.LifeGivingOintment),
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Серж: {0}/{1}", Character.Protagonist.SergeSkill, Character.Protagonist.SergeHitpoint),
-            String.Format("Ксолотл: {0}/{1}", Character.Protagonist.XolotlSkill, Character.Protagonist.XolotlHitpoint),
-            String.Format("Тибо: {0}/{1}", Character.Protagonist.ThibautSkill, Character.Protagonist.ThibautHitpoint),
-            String.Format("Суи: {0}/{1}", Character.Protagonist.SouhiSkill, Character.Protagonist.SouhiHitpoint),
+            String.Format("Серж: {0}/{1}", protogonist.SergeSkill, protogonist.SergeHitpoint),
+            String.Format("Ксолотл: {0}/{1}", protogonist.XolotlSkill, protogonist.XolotlHitpoint),
+            String.Format("Тибо: {0}/{1}", protogonist.ThibautSkill, protogonist.ThibautHitpoint),
+            String.Format("Суи: {0}/{1}", protogonist.SouhiSkill, protogonist.SouhiHitpoint),
         };
 
         public override List<string> StaticButtons()
         {
             List<string> staticButtons = new List<string> { };
 
-            if (Character.Protagonist.LifeGivingOintment <= 0)
+            if (protogonist.LifeGivingOintment <= 0)
                 return staticButtons;
 
-            if (Character.Protagonist.SergeHitpoint < 20)
+            if (protogonist.SergeHitpoint < 20)
                 staticButtons.Add("ВЫЛЕЧИТЬ СЕРЖА");
 
-            if (Character.Protagonist.XolotlHitpoint < 20)
+            if (protogonist.XolotlHitpoint < 20)
                 staticButtons.Add("ВЫЛЕЧИТЬ КСОЛОТЛА");
 
-            if (Character.Protagonist.ThibautHitpoint < 20)
+            if (protogonist.ThibautHitpoint < 20)
                 staticButtons.Add("ВЫЛЕЧИТЬ ТИБО");
 
-            if (Character.Protagonist.SouhiHitpoint < 20)
+            if (protogonist.SouhiHitpoint < 20)
                 staticButtons.Add("ВЫЛЕЧИТЬ СУИ");
 
             return staticButtons;
@@ -66,9 +65,9 @@ namespace Seeker.Gamebook.OctopusIsland
 
         private int LifeGivingOintmentFor(int protagonistHitpoint)
         {
-            while ((Character.Protagonist.LifeGivingOintment > 0) && (protagonistHitpoint < 20))
+            while ((protogonist.LifeGivingOintment > 0) && (protagonistHitpoint < 20))
             {
-                Character.Protagonist.LifeGivingOintment -= 1;
+                protogonist.LifeGivingOintment -= 1;
                 protagonistHitpoint += 1;
             }
 
@@ -78,16 +77,16 @@ namespace Seeker.Gamebook.OctopusIsland
         public override bool StaticAction(string action)
         {
             if (action.Contains("СЕРЖА"))
-                Character.Protagonist.SergeHitpoint = LifeGivingOintmentFor(Character.Protagonist.SergeHitpoint);
+                protogonist.SergeHitpoint = LifeGivingOintmentFor(protogonist.SergeHitpoint);
 
             else if (action.Contains("КСОЛОТЛА"))
-                Character.Protagonist.XolotlHitpoint = LifeGivingOintmentFor(Character.Protagonist.XolotlHitpoint);
+                protogonist.XolotlHitpoint = LifeGivingOintmentFor(protogonist.XolotlHitpoint);
 
             else if (action.Contains("ТИБО"))
-                Character.Protagonist.ThibautHitpoint = LifeGivingOintmentFor(Character.Protagonist.ThibautHitpoint);
+                protogonist.ThibautHitpoint = LifeGivingOintmentFor(protogonist.ThibautHitpoint);
 
             else if (action.Contains("СУИ"))
-                Character.Protagonist.SouhiHitpoint = LifeGivingOintmentFor(Character.Protagonist.SouhiHitpoint);
+                protogonist.SouhiHitpoint = LifeGivingOintmentFor(protogonist.SouhiHitpoint);
 
             else
                 return false;
@@ -95,7 +94,7 @@ namespace Seeker.Gamebook.OctopusIsland
             return true;
         }
 
-        public override bool IsButtonEnabled() => !((DinnerHitpointsBonus > 0) && ((Character.Protagonist.Food <= 0) || DinnerAlready));
+        public override bool IsButtonEnabled() => !((DinnerHitpointsBonus > 0) && ((protogonist.Food <= 0) || DinnerAlready));
 
         public override bool CheckOnlyIf(string option)
         {
@@ -123,7 +122,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
         private void SaveCurrentWarriorHitPoints()
         {
-            Character hero = Character.Protagonist;
+            Character hero = protogonist;
 
             if (String.IsNullOrEmpty(hero.Name))
                 return;
@@ -143,7 +142,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
         private bool SetCurrentWarrior(ref List<string> fight, bool fightStart = false)
         {
-            Character hero = Character.Protagonist;
+            Character hero = protogonist;
 
             if (hero.Hitpoint > 3)
                 return true;
@@ -201,7 +200,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
             SetCurrentWarrior(ref fight, fightStart: true);
 
-            Character hero = Character.Protagonist;
+            Character hero = protogonist;
 
             while (true)
             {
@@ -274,12 +273,12 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public List<string> Dinner()
         {
-            Character.Protagonist.Food -= 1;
+            protogonist.Food -= 1;
 
-            Character.Protagonist.SouhiHitpoint += DinnerHitpointsBonus;
-            Character.Protagonist.SergeHitpoint += DinnerHitpointsBonus;
-            Character.Protagonist.ThibautHitpoint += DinnerHitpointsBonus;
-            Character.Protagonist.XolotlHitpoint += DinnerHitpointsBonus;
+            protogonist.SouhiHitpoint += DinnerHitpointsBonus;
+            protogonist.SergeHitpoint += DinnerHitpointsBonus;
+            protogonist.ThibautHitpoint += DinnerHitpointsBonus;
+            protogonist.XolotlHitpoint += DinnerHitpointsBonus;
 
             DinnerAlready = true;
 

@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.OctopusIsland
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.OctopusIsland.Character();
+        public static Character Protagonist = new Character();
 
         private int _sergeHitpoint;
         public int SergeHitpoint
@@ -130,8 +128,18 @@ namespace Seeker.Gamebook.OctopusIsland
             LifeGivingOintment = this.LifeGivingOintment,
         };
 
-        public override string Save() => String.Join("|", ThibautHitpoint, ThibautSkill, SergeHitpoint, SergeSkill,
-            XolotlHitpoint, XolotlSkill, SouhiHitpoint, SouhiSkill, Food, LifeGivingOintment);
+        public override string Save() => String.Join("|",
+            ThibautHitpoint,
+            ThibautSkill,
+            SergeHitpoint,
+            SergeSkill,
+            XolotlHitpoint,
+            XolotlSkill,
+            SouhiHitpoint,
+            SouhiSkill,
+            Food,
+            LifeGivingOintment
+        );
 
         public override void Load(string saveLine)
         {
