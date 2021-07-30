@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.DzungarWar
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
+        private static Character protogonist = Character.Protagonist;
 
         public string RemoveTrigger { get; set; }
 
@@ -68,7 +69,7 @@ namespace Seeker.Gamebook.DzungarWar
 
             else if (!String.IsNullOrEmpty(Stat) && !StatToMax)
             {
-                int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
+                int currentStat = (int)protogonist.GetType().GetProperty(Stat).GetValue(protogonist, null);
                 string diffLine = (currentStat > 1 ? String.Format(" (+{0})", (currentStat - 1)) : String.Empty);
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
@@ -86,22 +87,21 @@ namespace Seeker.Gamebook.DzungarWar
         public override List<string> Status()
         {
             List<string> statusLines = new List<string>();
-            Character hero = Character.Protagonist;
 
-            if (hero.Tanga > 0)
-                statusLines.Add(String.Format("Деньги: {0}", hero.Tanga));
+            if (protogonist.Tanga > 0)
+                statusLines.Add(String.Format("Деньги: {0}", protogonist.Tanga));
 
-            if (hero.Tincture > 0)
-                statusLines.Add(String.Format("Настойка: {0}", hero.Tincture));
+            if (protogonist.Tincture > 0)
+                statusLines.Add(String.Format("Настойка: {0}", protogonist.Tincture));
 
-            if (hero.Ginseng > 0)
-                statusLines.Add(String.Format("Отвар: {0}", hero.Ginseng));
+            if (protogonist.Ginseng > 0)
+                statusLines.Add(String.Format("Отвар: {0}", protogonist.Ginseng));
 
-            if (hero.Favour != null)
-                statusLines.Add(String.Format("Благосклонность: {0}", hero.Favour));
+            if (protogonist.Favour != null)
+                statusLines.Add(String.Format("Благосклонность: {0}", protogonist.Favour));
 
-            if (hero.Danger != null)
-                statusLines.Add(String.Format("Опасность: {0}", hero.Danger));
+            if (protogonist.Danger != null)
+                statusLines.Add(String.Format("Опасность: {0}", protogonist.Danger));
 
             return statusLines;
         }
@@ -109,22 +109,21 @@ namespace Seeker.Gamebook.DzungarWar
         public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>();
-            Character hero = Character.Protagonist;
 
-            if (hero.Strength > 1)
-                statusLines.Add(String.Format("Сила: {0}", hero.Strength));
+            if (protogonist.Strength > 1)
+                statusLines.Add(String.Format("Сила: {0}", protogonist.Strength));
 
-            if (hero.Skill > 1)
-                statusLines.Add(String.Format("Ловкость: {0}", hero.Skill));
+            if (protogonist.Skill > 1)
+                statusLines.Add(String.Format("Ловкость: {0}", protogonist.Skill));
 
-            if (hero.Wisdom > 1)
-                statusLines.Add(String.Format("Мудрость: {0}", hero.Wisdom));
+            if (protogonist.Wisdom > 1)
+                statusLines.Add(String.Format("Мудрость: {0}", protogonist.Wisdom));
 
-            if (hero.Cunning > 1)
-                statusLines.Add(String.Format("Хитрость: {0}", hero.Cunning));
+            if (protogonist.Cunning > 1)
+                statusLines.Add(String.Format("Хитрость: {0}", protogonist.Cunning));
 
-            if (hero.Oratory > 1)
-                statusLines.Add(String.Format("Красноречие: {0}", hero.Oratory));
+            if (protogonist.Oratory > 1)
+                statusLines.Add(String.Format("Красноречие: {0}", protogonist.Oratory));
 
             if (statusLines.Count <= 0)
                 return null;
@@ -136,10 +135,10 @@ namespace Seeker.Gamebook.DzungarWar
         {
             List<string> staticButtons = new List<string> { };
 
-            if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (Character.Protagonist.Tincture > 0) && !NextTestWithTincture)
+            if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (protogonist.Tincture > 0) && !NextTestWithTincture)
                 staticButtons.Add("ВЫПИТЬ НАСТОЙКИ");
 
-            if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (Character.Protagonist.Ginseng > 0) && !NextTestWithGinseng)
+            if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (protogonist.Ginseng > 0) && !NextTestWithGinseng)
                 staticButtons.Add("ВЫПИТЬ ОТВАР ЖЕНЬШЕНЯ");
 
             return staticButtons;
@@ -149,13 +148,13 @@ namespace Seeker.Gamebook.DzungarWar
         {
             if (action == "ВЫПИТЬ НАСТОЙКИ")
             {
-                Character.Protagonist.Tincture -= 1;
+                protogonist.Tincture -= 1;
                 NextTestWithTincture = true;
             }
 
             else if (action == "ВЫПИТЬ ОТВАР ЖЕНЬШЕНЯ")
             {
-                Character.Protagonist.Ginseng -= 1;
+                protogonist.Ginseng -= 1;
                 NextTestWithGinseng = true;
             }
             else
@@ -166,14 +165,14 @@ namespace Seeker.Gamebook.DzungarWar
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            bool dangerEnd = Character.Protagonist.Danger >= 12;
+            bool dangerEnd = protogonist.Danger >= 12;
 
             if ((Game.Data.CurrentParagraphID == 106) || (Game.Data.CurrentParagraphID == 148))
             {
                 toEndParagraph = 122;
                 toEndText = "Далее";
 
-                Character.Protagonist.Danger = null;
+                protogonist.Danger = null;
             }
             else
             {
@@ -193,19 +192,19 @@ namespace Seeker.Gamebook.DzungarWar
                 return false;
 
             else if (Name == "Brother")
-                return Character.Protagonist.Brother <= 0;
+                return protogonist.Brother <= 0;
 
             else if (StatToMax)
-                return Character.Protagonist.MaxBonus > 0;
+                return protogonist.MaxBonus > 0;
 
             else if (!String.IsNullOrEmpty(Stat))
             {
-                int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
-                return ((Character.Protagonist.StatBonuses > 0) && (currentStat < 12));
+                int currentStat = (int)protogonist.GetType().GetProperty(Stat).GetValue(protogonist, null);
+                return ((protogonist.StatBonuses > 0) && (currentStat < 12));
             }
 
             else if (Price >= 0)
-                return (Character.Protagonist.Tanga >= Price);
+                return (protogonist.Tanga >= Price);
 
             else
                 return true;
@@ -227,27 +226,25 @@ namespace Seeker.Gamebook.DzungarWar
             }
             else
             {
-                Character hero = Character.Protagonist;
-
                 foreach (string oneOption in option.Split(','))
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
                         int level = Game.Other.LevelParse(oneOption);
 
-                        if (oneOption.Contains("ТАНЬГА >=") && (level > hero.Tanga))
+                        if (oneOption.Contains("ТАНЬГА >=") && (level > protogonist.Tanga))
                             return false;
 
-                        else if (oneOption.Contains("ОПАСНОСТЬ >") && (level >= hero.Danger))
+                        else if (oneOption.Contains("ОПАСНОСТЬ >") && (level >= protogonist.Danger))
                             return false;
 
-                        else if (oneOption.Contains("ОПАСНОСТЬ <=") && (level < hero.Danger))
+                        else if (oneOption.Contains("ОПАСНОСТЬ <=") && (level < protogonist.Danger))
                             return false;
 
-                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ >") && (level >= hero.Favour))
+                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ >") && (level >= protogonist.Favour))
                             return false;
 
-                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ <=") && (level < hero.Favour))
+                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ <=") && (level < protogonist.Favour))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
@@ -276,7 +273,7 @@ namespace Seeker.Gamebook.DzungarWar
 
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
-            int currentStat = (int)Character.Protagonist.GetType().GetProperty(stat).GetValue(Character.Protagonist, null);
+            int currentStat = (int)protogonist.GetType().GetProperty(stat).GetValue(protogonist, null);
 
             result = (firstDice + secondDice) + currentStat >= level;
 
@@ -310,7 +307,7 @@ namespace Seeker.Gamebook.DzungarWar
             int allStats = 0;
 
             foreach (string test in tests)
-                allStats += (int)Character.Protagonist.GetType().GetProperty(test).GetValue(Character.Protagonist, null);
+                allStats += (int)protogonist.GetType().GetProperty(test).GetValue(protogonist, null);
 
             testLines.Add(String.Format("Сумма всех параметров Алдара: {0}", allStats));
 
@@ -320,7 +317,7 @@ namespace Seeker.Gamebook.DzungarWar
 
             foreach (string test in tests)
             {
-                int currentStat = (int)Character.Protagonist.GetType().GetProperty(test).GetValue(Character.Protagonist, null);
+                int currentStat = (int)protogonist.GetType().GetProperty(test).GetValue(protogonist, null);
                 int approximateLevel = (int)Math.Floor(currentStat * approximateStatUnit);
 
                 int finalLevel = 0;
@@ -364,7 +361,7 @@ namespace Seeker.Gamebook.DzungarWar
 
         public List<string> Brother()
         {
-            Character.Protagonist.Brother += 1;
+            protogonist.Brother += 1;
 
             return new List<string> { "RELOAD" };
         }
@@ -381,28 +378,28 @@ namespace Seeker.Gamebook.DzungarWar
 
         public List<string> Get()
         {
-            if ((Price > 0) && (Character.Protagonist.Tanga >= Price))
+            if ((Price > 0) && (protogonist.Tanga >= Price))
             {
-                Character.Protagonist.Tanga -= Price;
+                protogonist.Tanga -= Price;
 
                 Game.Option.Trigger(RemoveTrigger, remove: true);
 
                 if (Benefit != null)
                     Benefit.Do();
             }
-            else if (StatToMax && (Character.Protagonist.MaxBonus > 0))
+            else if (StatToMax && (protogonist.MaxBonus > 0))
             {
-                Character.Protagonist.GetType().GetProperty(Stat).SetValue(Character.Protagonist, 12);
-                Character.Protagonist.MaxBonus = 0;
+                protogonist.GetType().GetProperty(Stat).SetValue(protogonist, 12);
+                protogonist.MaxBonus = 0;
             }
-            else if (Character.Protagonist.StatBonuses >= 0)
+            else if (protogonist.StatBonuses >= 0)
             {
-                int currentStat = (int)Character.Protagonist.GetType().GetProperty(Stat).GetValue(Character.Protagonist, null);
+                int currentStat = (int)protogonist.GetType().GetProperty(Stat).GetValue(protogonist, null);
 
                 currentStat += (StatStep > 1 ? StatStep : 1);
 
-                Character.Protagonist.GetType().GetProperty(Stat).SetValue(Character.Protagonist, currentStat);
-                Character.Protagonist.StatBonuses -= 1;
+                protogonist.GetType().GetProperty(Stat).SetValue(protogonist, currentStat);
+                protogonist.StatBonuses -= 1;
             }
 
             return new List<string> { "RELOAD" };
