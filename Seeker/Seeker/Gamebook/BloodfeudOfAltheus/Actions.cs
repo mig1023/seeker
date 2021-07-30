@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 
 namespace Seeker.Gamebook.BloodfeudOfAltheus
 {
@@ -74,28 +71,30 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public override bool StaticAction(string action)
         {
+            Character hero = Character.Protagonist;
+
             if (action == "ВОЗЗВАТЬ К ЗЕВСУ ЗА СЛАВОЙ")
             {
-                if ((Character.Protagonist.Resurrection <= 0) && (Character.Protagonist.BroochResurrection > 0))
+                if ((hero.Resurrection <= 0) && (hero.BroochResurrection > 0))
                 {
-                    Character.Protagonist.BroochResurrection -= 1;
-                    Character.Protagonist.Glory -= 10;
+                    hero.BroochResurrection -= 1;
+                    hero.Glory -= 10;
                 }
                 else
-                    Character.Protagonist.Resurrection -= 1;
+                    hero.Resurrection -= 1;
 
-                if (Character.Protagonist.Glory == 0)
-                    Character.Protagonist.Glory = 1;
+                if (hero.Glory == 0)
+                    hero.Glory = 1;
                 else
-                    Character.Protagonist.Glory += Game.Dice.Roll();
+                    hero.Glory += Game.Dice.Roll();
 
                 return true;
             }
 
             if (action == "ВОЗЗВАТЬ К ЗЕВСУ ЗА РАВНОДУШИЕМ")
             {
-                Character.Protagonist.Resurrection -= 1;
-                Character.Protagonist.FellIntoFavor(String.Empty, indifferentToAll: true);
+                hero.Resurrection -= 1;
+                hero.FellIntoFavor(String.Empty, indifferentToAll: true);
 
                 return true;
             }
@@ -127,26 +126,28 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (option == "selectOnly")
                 return true;
 
+            Character hero = Character.Protagonist;
+
             string[] values = option.Split(' ');
             string value = (values.Length > 1 ? values[1] : "nope");
 
             if (option.Contains("!ПОКРОВИТЕЛЬ"))
-                return Character.Protagonist.Patron != value;
+                return hero.Patron != value;
             else if (option.Contains("ПОКРОВИТЕЛЬ"))
-                return Character.Protagonist.Patron == value;
+                return hero.Patron == value;
 
             if (option.Contains("БЕЗРАЗЛИЧЕН"))
-                return !Character.Protagonist.IsGodsFavor(value) && !Character.Protagonist.IsGodsDisFavor(value);
+                return !hero.IsGodsFavor(value) && !hero.IsGodsDisFavor(value);
 
             if (option.Contains("!БЛАГОСКЛОНЕН"))
-                return !Character.Protagonist.IsGodsFavor(value);
+                return !hero.IsGodsFavor(value);
             else if (option.Contains("БЛАГОСКЛОНЕН"))
-                return Character.Protagonist.IsGodsFavor(value);
+                return hero.IsGodsFavor(value);
 
             if (option.Contains("!НЕМИЛОСТИВ"))
-                return !Character.Protagonist.IsGodsDisFavor(value);
+                return !hero.IsGodsDisFavor(value);
             else if (option.Contains("НЕМИЛОСТИВ"))
-                return Character.Protagonist.IsGodsDisFavor(value);
+                return hero.IsGodsDisFavor(value);
 
             if (option.Contains("ВОСКРЕШЕНИЕ"))
                 return IsPosibleResurrection();
@@ -155,14 +156,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
 
             if (option.Contains("СЛАВА >"))
-                return level < Character.Protagonist.Glory;
+                return level < hero.Glory;
             else if (option.Contains("СЛАВА <="))
-                return level >= Character.Protagonist.Glory;
+                return level >= hero.Glory;
 
             if (option.Contains("ПОЗОР >"))
-                return level < Character.Protagonist.Shame;
+                return level < hero.Shame;
             else if (option.Contains("ПОЗОР <="))
-                return level >= Character.Protagonist.Shame;
+                return level >= hero.Shame;
 
             return CheckOnlyIfTrigger(option);
         }

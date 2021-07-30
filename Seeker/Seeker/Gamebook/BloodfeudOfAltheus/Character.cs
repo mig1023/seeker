@@ -7,7 +7,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.BloodfeudOfAltheus.Character();
+        public static Character Protagonist = new Character();
 
         private int _strength;
         public int Strength
@@ -115,8 +115,20 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             string favor = String.Join(":", FavorOfTheGods).TrimEnd(':');
             string disfavor = String.Join(":", DisfavorOfTheGods).TrimEnd(':');
 
-            return String.Join("|", Strength, Defence, Glory, Shame, armours, weapons, Patron,
-                Resurrection, favor, disfavor, BroochResurrection, Ichor);
+            return String.Join("|",
+                Strength,
+                Defence,
+                Glory,
+                Shame,
+                armours,
+                weapons,
+                Patron,
+                Resurrection,
+                favor,
+                disfavor,
+                BroochResurrection,
+                Ichor
+            );
         }
 
         public override void Load(string saveLine)
