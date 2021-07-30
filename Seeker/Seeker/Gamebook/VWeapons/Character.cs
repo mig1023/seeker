@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.VWeapons
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.VWeapons.Character();
+        public static Character Protagonist = new Character();
 
         private int _suspicions;
         public int Suspicions
@@ -203,8 +201,18 @@ namespace Seeker.Gamebook.VWeapons
             Animal = this.Animal,
         };
 
-        public override string Save() =>
-            String.Join("|", Suspicions, Time, Accuracy, Cartridges, Head, ShoulderGirdle, Body, Hands, Legs, (Dead ? 1 : 0));
+        public override string Save() => String.Join("|",
+            Suspicions,
+            Time,
+            Accuracy,
+            Cartridges,
+            Head,
+            ShoulderGirdle,
+            Body,
+            Hands,
+            Legs,
+            (Dead ? 1 : 0)
+        );
 
         public override void Load(string saveLine)
         {

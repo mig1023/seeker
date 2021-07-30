@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 
 namespace Seeker.Gamebook.VWeapons
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
+        private static Character protogonist = Character.Protagonist;
 
         public List<Character> Enemies { get; set; }
         public bool Dogfight { get; set; }
@@ -18,19 +17,19 @@ namespace Seeker.Gamebook.VWeapons
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Подозрение: {0}/5", Character.Protagonist.Suspicions),
-            String.Format("Время: {0}/12", Character.Protagonist.Time),
-            String.Format("Меткость: {0}/5", Character.Protagonist.Accuracy),
-            String.Format("Патроны: {0}", Character.Protagonist.Cartridges),
+            String.Format("Подозрение: {0}/5", protogonist.Suspicions),
+            String.Format("Время: {0}/12", protogonist.Time),
+            String.Format("Меткость: {0}/5", protogonist.Accuracy),
+            String.Format("Патроны: {0}", protogonist.Cartridges),
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Ноги: {0}/4", Character.Protagonist.Legs),
-            String.Format("Руки: {0}/4", Character.Protagonist.Hands),
-            String.Format("Корпус: {0}/4", Character.Protagonist.Body),
-            String.Format("Плечи: {0}/4", Character.Protagonist.ShoulderGirdle),
-            String.Format("Голова: {0}/3", Character.Protagonist.Head),
+            String.Format("Ноги: {0}/4", protogonist.Legs),
+            String.Format("Руки: {0}/4", protogonist.Hands),
+            String.Format("Корпус: {0}/4", protogonist.Body),
+            String.Format("Плечи: {0}/4", protogonist.ShoulderGirdle),
+            String.Format("Голова: {0}/3", protogonist.Head),
         };
 
         public override List<string> Representer()
@@ -52,13 +51,13 @@ namespace Seeker.Gamebook.VWeapons
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy((Character.Protagonist.Dead ? 0 : 1), out toEndParagraph, out toEndText);
+            GameOverBy((protogonist.Dead ? 0 : 1), out toEndParagraph, out toEndText);
 
         private bool SpecialCheck() =>
             (Game.Data.Triggers.Contains("Mt") || Game.Data.Triggers.Contains("P")) &&
-            !Game.Data.Triggers.Contains("B") && Character.Protagonist.Suspicions <= 3;
+            !Game.Data.Triggers.Contains("B") && protogonist.Suspicions <= 3;
 
-        private bool SpecialFCheck() => ((Character.Protagonist.Suspicions >= 4) && !Game.Data.Triggers.Contains("F"));
+        private bool SpecialFCheck() => ((protogonist.Suspicions >= 4) && !Game.Data.Triggers.Contains("F"));
 
         public override bool CheckOnlyIf(string option)
         {
@@ -79,19 +78,19 @@ namespace Seeker.Gamebook.VWeapons
                     {
                         int level = Game.Other.LevelParse(oneOption);
 
-                        if (oneOption.Contains("ПАТРОНЫ >=") && (level > Character.Protagonist.Cartridges))
+                        if (oneOption.Contains("ПАТРОНЫ >=") && (level > protogonist.Cartridges))
                             return false;
 
-                        if (oneOption.Contains("ПОДОЗРЕНИЕ >=") && (level > Character.Protagonist.Suspicions))
+                        if (oneOption.Contains("ПОДОЗРЕНИЕ >=") && (level > protogonist.Suspicions))
                             return false;
 
-                        if (oneOption.Contains("ПОДОЗРЕНИЕ <") && (level <= Character.Protagonist.Suspicions))
+                        if (oneOption.Contains("ПОДОЗРЕНИЕ <") && (level <= protogonist.Suspicions))
                             return false;
 
-                        if (oneOption.Contains("ВРЕМЯ >=") && (level > Character.Protagonist.Time))
+                        if (oneOption.Contains("ВРЕМЯ >=") && (level > protogonist.Time))
                             return false;
 
-                        if (oneOption.Contains("ВРЕМЯ <") && (level <= Character.Protagonist.Time))
+                        if (oneOption.Contains("ВРЕМЯ <") && (level <= protogonist.Time))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
@@ -195,14 +194,14 @@ namespace Seeker.Gamebook.VWeapons
             List<string> damage = new List<string>();
 
             if (Time != 0)
-                Character.Protagonist.Time += Time;
+                protogonist.Time += Time;
 
             int target = Game.Dice.Roll();
 
             if (target == 6)
                 damage.Add("BIG|GOOD|Вам повезло и вы отделались лёгким испугом! :)");
             else
-                HeroWound(Character.Protagonist, ref damage, target, Value);
+                HeroWound(protogonist, ref damage, target, Value);
 
             return damage;
         }
@@ -212,11 +211,11 @@ namespace Seeker.Gamebook.VWeapons
             List<string> damage = new List<string>();
 
             if (Time != 0)
-                Character.Protagonist.Time += Time;
+                protogonist.Time += Time;
 
-            Character.Protagonist.Cartridges += Value;
+            protogonist.Cartridges += Value;
 
-            damage.Add(String.Format("BIG|GOOD|+{0} патронов, их у вас теперь {1}.", Value, Character.Protagonist.Cartridges));
+            damage.Add(String.Format("BIG|GOOD|+{0} патронов, их у вас теперь {1}.", Value, protogonist.Cartridges));
 
             return damage;
         }
@@ -224,7 +223,7 @@ namespace Seeker.Gamebook.VWeapons
         public List<string> Bomb()
         {
             if (Time != 0)
-                Character.Protagonist.Time += Time;
+                protogonist.Time += Time;
 
             Game.Option.Trigger("B");
 
@@ -236,7 +235,7 @@ namespace Seeker.Gamebook.VWeapons
             if (healingPoints <= 0)
                 return;
 
-            int currentValue = (int)Character.Protagonist.GetType().GetProperty(part).GetValue(Character.Protagonist, null);
+            int currentValue = (int)protogonist.GetType().GetProperty(part).GetValue(protogonist, null);
 
             int maxHealing = (partName == "головы" ? 3 : 4);
 
@@ -248,7 +247,7 @@ namespace Seeker.Gamebook.VWeapons
             healingPoints -= diff;
             currentValue += diff;
 
-            Character.Protagonist.GetType().GetProperty(part).SetValue(Character.Protagonist, currentValue);
+            protogonist.GetType().GetProperty(part).SetValue(protogonist, currentValue);
 
             healing.Add(String.Format("Вы восстановили 1 ед. здоровья {0}, теперь оно равно {1} из {2}.", partName, currentValue, maxHealing));
         }
@@ -256,12 +255,12 @@ namespace Seeker.Gamebook.VWeapons
         public List<string> Healing()
         {
             List<string> healing = new List<string>();
-            Character hero = Character.Protagonist;
+            Character hero = protogonist;
 
             int healingPoints = Value;
 
             if (Time != 0)
-                Character.Protagonist.Time += Time;
+                protogonist.Time += Time;
 
             while (healingPoints > 0)
                 foreach (string parts in Constants.healingParts.Keys.ToList())
@@ -319,7 +318,7 @@ namespace Seeker.Gamebook.VWeapons
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
-            Character hero = Character.Protagonist;
+            Character hero = protogonist;
             
             bool dogFightHero, dogfight = Dogfight || (NoMoreCartridges(FightEnemies) && hero.Cartridges <= 0);
             int damagedWeapon = 2;
