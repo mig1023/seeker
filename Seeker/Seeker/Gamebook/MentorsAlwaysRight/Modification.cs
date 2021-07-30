@@ -1,39 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Seeker.Gamebook.MentorsAlwaysRight
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
+        private static Character protogonist = Character.Protagonist;
+
         public override void Do()
         {
             if (Name == "Spell")
             {
-                Character.Protagonist.Spells.Remove(ValueString);
-                Character.Protagonist.Hitpoints -= 2;
+                protogonist.Spells.Remove(ValueString);
+                protogonist.Hitpoints -= 2;
             }
 
             else if (Name == "RestoreSpells")
-                Character.Protagonist.Spells = new List<string>(Character.Protagonist.SpellsReplica);
+                protogonist.Spells = new List<string>(protogonist.SpellsReplica);
             
             else if (Name == "HealingByVessel")
                 Game.Healing.Add("Выпить отвар из бурдюка,8");
 
             else if (Name == "Transformation")
             {
-                Character.Protagonist.Transformation -= 1;
-                Character.Protagonist.Hitpoints -= (Game.Data.Triggers.Contains("PainfulTransformation") ? 3 : 2);
+                protogonist.Transformation -= 1;
+                protogonist.Hitpoints -= (Game.Data.Triggers.Contains("PainfulTransformation") ? 3 : 2);
             }
 
             else if (Name == "NoMoreMagic")
             {
-                Character.Protagonist.Spells.Clear();
-                Character.Protagonist.Transformation = 0;
+                protogonist.Spells.Clear();
+                protogonist.Transformation = 0;
             }
 
             else
-                InnerDo(Character.Protagonist);
+                InnerDo(protogonist);
         }
     }
 }

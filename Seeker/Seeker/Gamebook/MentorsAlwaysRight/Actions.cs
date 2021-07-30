@@ -9,6 +9,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
+        private static Character protogonist = Character.Protagonist;
 
         public List<Character> Enemies { get; set; }
         public bool ThisIsSpell { get; set; }
@@ -36,19 +37,19 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Сила: {0}", Character.Protagonist.Strength),
-            String.Format("Жизни: {0}", Character.Protagonist.Hitpoints),
-            String.Format("Обращений: {0}", Character.Protagonist.Transformation),
+            String.Format("Сила: {0}", protogonist.Strength),
+            String.Format("Жизни: {0}", protogonist.Hitpoints),
+            String.Format("Обращений: {0}", protogonist.Transformation),
         };
 
         public override List<string> AdditionalStatus()
         {
             Dictionary<string, int> currentSpells = new Dictionary<string, int>();
 
-            if (Character.Protagonist.Spells == null)
+            if (protogonist.Spells == null)
                 return null;
 
-            foreach (string spell in Character.Protagonist.Spells)
+            foreach (string spell in protogonist.Spells)
             {
                 if (currentSpells.ContainsKey(spell.ToLower()))
                     currentSpells[spell.ToLower()] += 1;
@@ -56,7 +57,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     currentSpells.Add(spell.ToLower(), 1);
             }
 
-            List<string> statusLines = new List<string> { String.Format("Золото: {0}", Character.Protagonist.Gold) };
+            List<string> statusLines = new List<string> { String.Format("Золото: {0}", protogonist.Gold) };
 
             foreach (string spell in currentSpells.Keys.ToList().OrderBy(x => x))
                 statusLines.Insert(0, String.Format("Заклятье {0} - {1} шт", char.ToUpper(spell[0]) + spell.Substring(1), currentSpells[spell]));
@@ -75,7 +76,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             }
             else if ((Name == "Get") && ThisIsSpell)
             {
-                int count = Character.Protagonist.Spells.Where(x => x == Text).Count();
+                int count = protogonist.Spells.Where(x => x == Text).Count();
                 return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
             }
 
@@ -98,52 +99,52 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return new List<string> { "Вы успешно себя закамуфлировали грязью :)" };
         }
 
-        private int CureSpellCount() => Character.Protagonist.Spells.Where(x => x.Contains("ЛЕЧЕНИЕ")).Count();
+        private int CureSpellCount() => protogonist.Spells.Where(x => x.Contains("ЛЕЧЕНИЕ")).Count();
 
         public override bool IsButtonEnabled()
         {
-            bool bySpell = ThisIsSpell && (Character.Protagonist.Magicpoints <= 0);
+            bool bySpell = ThisIsSpell && (protogonist.Magicpoints <= 0);
             bool byCureSpell = (Name == "CureFracture") && (CureSpellCount() < Wound);
             bool bySell = (Name == "Sell") && !Game.Data.Triggers.Contains(Trigger);
-            bool bySpecButton = (Specialization != null) && (Character.Protagonist.Specialization != Character.SpecializationType.Nope);
-            bool byPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
+            bool bySpecButton = (Specialization != null) && (protogonist.Specialization != Character.SpecializationType.Nope);
+            bool byPrice = (Price > 0) && (protogonist.Gold < Price);
             bool byTrigger = Game.Data.Triggers.Contains(OnlyOne);
 
             return !(bySpell || byCureSpell || bySell || bySpecButton || byPrice || byTrigger || Used);
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(Character.Protagonist.Hitpoints, out toEndParagraph, out toEndText);
+            GameOverBy(protogonist.Hitpoints, out toEndParagraph, out toEndText);
 
         public List<string> Get()
         {
-            if (ThisIsSpell && (Character.Protagonist.Magicpoints >= 1))
+            if (ThisIsSpell && (protogonist.Magicpoints >= 1))
             {
-                Character.Protagonist.Spells.Add(Text);
-                Character.Protagonist.SpellsReplica.Add(Text);
-                Character.Protagonist.Magicpoints -= 1;
+                protogonist.Spells.Add(Text);
+                protogonist.SpellsReplica.Add(Text);
+                protogonist.Magicpoints -= 1;
             }
 
-            else if ((Specialization != null) && (Character.Protagonist.Specialization == Character.SpecializationType.Nope))
+            else if ((Specialization != null) && (protogonist.Specialization == Character.SpecializationType.Nope))
             {
-                Character.Protagonist.Specialization = Specialization ?? Character.SpecializationType.Nope;
+                protogonist.Specialization = Specialization ?? Character.SpecializationType.Nope;
 
                 if (Specialization == Character.SpecializationType.Warrior)
-                    Character.Protagonist.Strength += 1;
+                    protogonist.Strength += 1;
 
                 else if (Specialization == Character.SpecializationType.Thrower)
-                    Character.Protagonist.Magicpoints += 1;
+                    protogonist.Magicpoints += 1;
 
                 else
                 {
-                    Character.Protagonist.Magicpoints += 2;
-                    Character.Protagonist.Transformation += 2;
+                    protogonist.Magicpoints += 2;
+                    protogonist.Transformation += 2;
                 }
             }
 
-            else if ((Price > 0) && (Character.Protagonist.Gold >= Price))
+            else if ((Price > 0) && (protogonist.Gold >= Price))
             {
-                Character.Protagonist.Gold -= Price;
+                protogonist.Gold -= Price;
                 Used = true;
             }
 
@@ -160,7 +161,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             Used = true;
             Game.Option.Trigger(Trigger, remove: true);
-            Character.Protagonist.Gold += Price;
+            protogonist.Gold += Price;
 
             return new List<string> { "RELOAD" };
         }
@@ -184,10 +185,10 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public List<string> RestoreSpells()
         {
-            Character.Protagonist.Spells = Character.Protagonist.Spells.Where(x => x == "ЛЕЧЕНИЕ").ToList();
-            Character.Protagonist.Spells.AddRange(Character.Protagonist.SpellsReplica.Where(x => x != "ЛЕЧЕНИЕ").ToList());
+            protogonist.Spells = protogonist.Spells.Where(x => x == "ЛЕЧЕНИЕ").ToList();
+            protogonist.Spells.AddRange(protogonist.SpellsReplica.Where(x => x != "ЛЕЧЕНИЕ").ToList());
 
-            Character.Protagonist.Gold -= 5;
+            protogonist.Gold -= 5;
 
             return new List<string> { "BIG|GOOD|Вы восстановили заклинания :)", "Лечилка не восстанавливается, как и было сказано" };
         }
@@ -195,7 +196,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public List<string> GetMagicBlade()
         {
             Game.Option.Trigger("MagicSword");
-            Character.Protagonist.Gold -= 5;
+            protogonist.Gold -= 5;
 
             return new List<string> { "BIG|GOOD|Ваш меч теперь заколдован :)" };
         }
@@ -212,7 +213,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 fight.Add("BIG|GOOD|Вы раздавили пиявку :)");
             else
             {
-                Character.Protagonist.Hitpoints -= 2;
+                protogonist.Hitpoints -= 2;
                 fight.Add("BIG|BAD|Она прокусила сапог :(");
                 fight.Add("BAD|Вы потеряли 2 жизни...");
             }
@@ -222,8 +223,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         private bool GoodReaction(ref List<string> reaction, bool showResult = false)
         {
-            int reactionLevel = (int)Math.Floor((double)Character.Protagonist.Hitpoints / 5);
-            reaction.Add(String.Format("Уровнь реакции: {0} / 5 = {1}", Character.Protagonist.Hitpoints, reactionLevel));
+            int reactionLevel = (int)Math.Floor((double)protogonist.Hitpoints / 5);
+            reaction.Add(String.Format("Уровнь реакции: {0} / 5 = {1}", protogonist.Hitpoints, reactionLevel));
 
             int reactionDice = Game.Dice.Roll();
             bool goodReaction = reactionDice <= reactionLevel;
@@ -243,7 +244,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public List<string> StoneThrow()
         {
-            if (Character.Protagonist.Specialization == Character.SpecializationType.Thrower)
+            if (protogonist.Specialization == Character.SpecializationType.Thrower)
                 return new List<string> { "BIG|GOOD|Ваша специализациея является метание ножей - и вы не промахнулись :)" };
 
             int dice = Game.Dice.Roll();
@@ -283,7 +284,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
             }
 
-            Character.Protagonist.Hitpoints -= dices;
+            protogonist.Hitpoints -= dices;
 
             diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
 
@@ -297,12 +298,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             List<string> cure = new List<string> { };
 
-            Character.Protagonist.Spells.Remove("ЛЕЧЕНИЕ");
+            protogonist.Spells.Remove("ЛЕЧЕНИЕ");
 
             Game.Option.Trigger("Rabies", remove: true);
             cure.Add("BIG|GOOD|Вы успешно вылечили болезнь!");
 
-            Character.Protagonist.Hitpoints += 3;
+            protogonist.Hitpoints += 3;
             cure.Add("BOLD|Вы дополнительно получили +3 жизни.");
 
             return cure;
@@ -316,17 +317,17 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     return new List<string> { "BIG|BAD|У вас нет двух ЛЕЧИЛОК :(" };
 
                 for (int i = 0; i <= 1; i++)
-                    Character.Protagonist.Spells.Remove("ЛЕЧЕНИЕ");
+                    protogonist.Spells.Remove("ЛЕЧЕНИЕ");
 
-                Character.Protagonist.Hitpoints += 4;
+                protogonist.Hitpoints += 4;
             }    
             else
             {
                 if (CureSpellCount() < 1)
                     return new List<string> { "BIG|BAD|У вас нет ЛЕЧИЛКИ :(" };
 
-                Character.Protagonist.Spells.Remove("ЛЕЧЕНИЕ");
-                Character.Protagonist.Strength -= 1;
+                protogonist.Spells.Remove("ЛЕЧЕНИЕ");
+                protogonist.Strength -= 1;
             }
 
             Game.Option.Trigger(OnlyOne);
@@ -341,13 +342,13 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
 
-            bool wounded = (Character.Protagonist.Hitpoints < Character.Protagonist.MaxHitpoints);
+            bool wounded = (protogonist.Hitpoints < protogonist.MaxHitpoints);
             bool inOption = Game.Checks.ExistsInParagraph(actionText: "ЛЕЧИЛК", optionText: "ЛЕЧИЛК");
 
             if (wounded && (CureSpellCount() > 0) && !inOption)
                 staticButtons.Add("ЛЕЧИЛКА");
 
-            if (wounded && (Character.Protagonist.Elixir > 0))
+            if (wounded && (protogonist.Elixir > 0))
                 staticButtons.Add("ЭЛИКСИР");
 
             return staticButtons;
@@ -357,15 +358,15 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             if (action == "ЛЕЧИЛКА")
             {
-                Character.Protagonist.Hitpoints += 6;
-                Character.Protagonist.Spells.Remove(action);
+                protogonist.Hitpoints += 6;
+                protogonist.Spells.Remove(action);
 
                 return true;
             }
             else if (action == "ЭЛИКСИР")
             {
-                Character.Protagonist.Hitpoints = Character.Protagonist.MaxHitpoints;
-                Character.Protagonist.Elixir -= 1;
+                protogonist.Hitpoints = protogonist.MaxHitpoints;
+                protogonist.Elixir -= 1;
 
                 return true;
             }
@@ -379,24 +380,24 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             {
                 int level = Game.Other.LevelParse(option);
 
-                if (option.Contains("ЗОЛОТО >=") && (level > Character.Protagonist.Gold))
+                if (option.Contains("ЗОЛОТО >=") && (level > protogonist.Gold))
                     return false;
 
-                if (option.Contains("СИЛА >=") && (level > Character.Protagonist.Strength))
+                if (option.Contains("СИЛА >=") && (level > protogonist.Strength))
                     return false;
             }
 
             else if (option == "ВОЛК")
-                return Character.Protagonist.Transformation > 0;
+                return protogonist.Transformation > 0;
 
             else if (option == "МЕДВЕДЬ")
-                return (Character.Protagonist.Transformation > 0) && !Game.Data.Triggers.Contains("Taboo");
+                return (protogonist.Transformation > 0) && !Game.Data.Triggers.Contains("Taboo");
 
-            else if (Character.Protagonist.Spells.Contains(option))
+            else if (protogonist.Spells.Contains(option))
                 return true;
 
             else if (option == "!ВОИН")
-                return Character.Protagonist.Specialization != Character.SpecializationType.Warrior;
+                return protogonist.Specialization != Character.SpecializationType.Warrior;
 
             else if (option.Contains("|"))
             {
@@ -437,7 +438,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             {
                 if (wounded > 3)
                 {
-                    Character.Protagonist.Hitpoints /= 2;
+                    protogonist.Hitpoints /= 2;
 
                     fight.Add(String.Empty);
                     fight.Add("BAD|Из-за яда вы теряете половину оставшихся жизней...");
@@ -445,7 +446,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
                 fight.Add(String.Empty);
 
-                if (Character.Protagonist.Specialization == Character.SpecializationType.Thrower)
+                if (protogonist.Specialization == Character.SpecializationType.Thrower)
                     fight.Add("BOLD|Вы смазали ядом свои метательные ножи, теперь они будут отнимать у противника не 3, а 4 жизни");
                 else
                     fight.Add("BOLD|Вы смазали ядом свой меч, в следующем бою он будет отнимать у противника по 5 жизней");
@@ -456,7 +457,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             {
                 int hitpointsBonus = Game.Dice.Roll();
 
-                Character.Protagonist.Hitpoints += hitpointsBonus;
+                protogonist.Hitpoints += hitpointsBonus;
 
                 fight.Add(String.Empty);
                 fight.Add(String.Format("GOOD|Благодаря крови, попавшей на вас, вы восстановили {0} жизни", hitpointsBonus));
@@ -464,7 +465,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             if (Game.Data.Triggers.Contains("Rabies"))
             {
-                Character.Protagonist.Strength -= 1;
+                protogonist.Strength -= 1;
 
                 fight.Add(String.Empty);
                 fight.Add("BAD|Вы дополнительно теряете 1 Силу за невылеченную болезнь...");
@@ -500,7 +501,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         }
 
         private bool IsPoisonedBlade() => (Game.Data.Triggers.Contains("PoisonedBlade") &&
-            (Character.Protagonist.Specialization != Character.SpecializationType.Thrower));
+            (protogonist.Specialization != Character.SpecializationType.Thrower));
 
         private bool IsMagicBlade() => Game.Data.Triggers.Contains("MagicSword");
 
@@ -509,7 +510,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             List<string> fight = new List<string>();
 
             int round = 1, woundLine = 0, wounded = 0, death = 0, roundsWin = 0, incrementWounds = 2;
-            bool warriorFight = (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
+            bool warriorFight = (protogonist.Specialization == Character.SpecializationType.Warrior);
 
             List<Character> FightEnemies = new List<Character>();
 
@@ -523,7 +524,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 bool block = EvenWound || ReactionFight;
                 bool reactionFail = false;
 
-                if ((Character.Protagonist.Specialization == Character.SpecializationType.Thrower) && (round == 1) && !block)
+                if ((protogonist.Specialization == Character.SpecializationType.Thrower) && (round == 1) && !block)
                 {
                     fight.Add("BOLD|Вы бросаете метательные ножи");
 
@@ -554,12 +555,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
                     int firstHeroRoll = Game.Dice.Roll();
                     int secondHeroRoll = Game.Dice.Roll();
-                    int heroHitStrength = firstHeroRoll + secondHeroRoll + Character.Protagonist.Strength;
+                    int heroHitStrength = firstHeroRoll + secondHeroRoll + protogonist.Strength;
 
                     fight.Add(String.Format(
                         "Ваш удар: {0} + {1} + {2} = {3}",
                         Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll),
-                        Character.Protagonist.Strength, heroHitStrength));
+                        protogonist.Strength, heroHitStrength));
 
                     int firstEnemyRoll = Game.Dice.Roll();
                     int secondEnemyRoll = Game.Dice.Roll();
@@ -577,12 +578,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     {
                         fight.Add("BAD|Аллигатор ударил хвостом! Вы теряете 5 жизней!");
 
-                        Character.Protagonist.Hitpoints -= 5;
+                        protogonist.Hitpoints -= 5;
                         TailAttack = false;
 
                         woundLine = 0;
 
-                        if (Character.Protagonist.Hitpoints <= 0)
+                        if (protogonist.Hitpoints <= 0)
                             return LostFight(fight);
                     }
                     else if (warriorFight && (firstHeroRoll == secondHeroRoll) && (firstHeroRoll == 6) && (!ReactionFight || !reactionFail))
@@ -650,7 +651,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                             string[] wounds = ReactionWounds.Split('-');
                             int wound = int.Parse(GoodReaction(ref fight, showResult: true) ? wounds[0] : wounds[1]);
 
-                            Character.Protagonist.Hitpoints -= wound;
+                            protogonist.Hitpoints -= wound;
 
                             if (wound > 0)
                                 fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, wound));
@@ -661,14 +662,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         {
                             fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, incrementWounds));
 
-                            Character.Protagonist.Hitpoints -= incrementWounds;
+                            protogonist.Hitpoints -= incrementWounds;
 
                             incrementWounds *= 2;
                         }
                         else
-                            Character.Protagonist.Hitpoints -= (Wound > 0 ? Wound : 2);
+                            protogonist.Hitpoints -= (Wound > 0 ? Wound : 2);
 
-                        if (Character.Protagonist.Hitpoints <= 0)
+                        if (protogonist.Hitpoints <= 0)
                             return LostFight(fight);
                     }
                     else

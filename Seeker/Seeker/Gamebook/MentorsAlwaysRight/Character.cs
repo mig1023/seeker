@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Seeker.Gamebook.MentorsAlwaysRight
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.MentorsAlwaysRight.Character();
+        public static Character Protagonist = new Character();
 
         public enum SpecializationType { Warrior, Wizard, Thrower, Nope };
 
@@ -114,8 +113,18 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             Specialization = this.Specialization,
         };
 
-        public override string Save() => String.Join("|", Strength, MaxHitpoints, Hitpoints, Magicpoints, Transformation,
-            Gold, Elixir, Specialization, String.Join(",", Spells).TrimEnd(','), String.Join(",", SpellsReplica).TrimEnd(','));
+        public override string Save() => String.Join("|",
+            Strength,
+            MaxHitpoints,
+            Hitpoints,
+            Magicpoints,
+            Transformation,
+            Gold,
+            Elixir,
+            Specialization,
+            String.Join(",", Spells).TrimEnd(','),
+            String.Join(",", SpellsReplica).TrimEnd(',')
+        );
 
         public override void Load(string saveLine)
         {
