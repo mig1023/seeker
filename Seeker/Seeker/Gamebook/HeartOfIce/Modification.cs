@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.HeartOfIce
 {
@@ -49,14 +47,16 @@ namespace Seeker.Gamebook.HeartOfIce
 
         private void LifeByFood()
         {
-            if (Character.Protagonist.Skills.Contains(ValueString))
+            Character hero = Character.Protagonist;
+
+            if (hero.Skills.Contains(ValueString))
                 return;
 
-            else if (Character.Protagonist.Food > 0)
-                Character.Protagonist.Food -= 1;
+            else if (hero.Food > 0)
+                hero.Food -= 1;
 
             else
-                Character.Protagonist.Life -= Value;
+                hero.Life -= Value;
         }
     }
 }

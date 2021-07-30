@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Seeker.Gamebook.HeartOfIce
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.HeartOfIce.Character();
+        public static Character Protagonist = new Character();
 
         private int _life;
         public int MaxLife { get; set; }
@@ -97,8 +96,17 @@ namespace Seeker.Gamebook.HeartOfIce
             Split = this.Split,
         };
 
-        public override string Save() => String.Join("|", MaxLife, Life, Money, Food, Shots, SkillsValue, Split,
-            (Chosen ? 1 : 0), String.Join(":", Skills).TrimEnd(':'));
+        public override string Save() => String.Join("|",
+            MaxLife,
+            Life,
+            Money,
+            Food,
+            Shots,
+            SkillsValue,
+            Split,
+            (Chosen ? 1 : 0),
+            String.Join(":", Skills).TrimEnd(':')
+        );
 
         public override void Load(string saveLine)
         {
