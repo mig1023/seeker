@@ -7,6 +7,7 @@ namespace Seeker.Gamebook.Genesis
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
+        private static Character protogonist = Character.Protagonist;
 
         public string Bonus { get; set; }
 
@@ -14,7 +15,7 @@ namespace Seeker.Gamebook.Genesis
         {
             if (!String.IsNullOrEmpty(Bonus))
             {
-                int currentStat = (int)Character.Protagonist.GetType().GetProperty(Bonus).GetValue(Character.Protagonist, null);
+                int currentStat = (int)protogonist.GetType().GetProperty(Bonus).GetValue(protogonist, null);
 
                 Dictionary<string, int> startValues = Constants.GetStartValues();
 
@@ -30,16 +31,16 @@ namespace Seeker.Gamebook.Genesis
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Здоровье: {0}", Character.Protagonist.Life),
-            String.Format("Аура: {0}", Character.Protagonist.Aura),
-            String.Format("Ловкость: {0}", Character.Protagonist.Skill),
-            String.Format("Стелс: {0}", Character.Protagonist.Stealth),
+            String.Format("Здоровье: {0}", protogonist.Life),
+            String.Format("Аура: {0}", protogonist.Aura),
+            String.Format("Ловкость: {0}", protogonist.Skill),
+            String.Format("Стелс: {0}", protogonist.Stealth),
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(Character.Protagonist.Life, out toEndParagraph, out toEndText);
+            GameOverBy(protogonist.Life, out toEndParagraph, out toEndText);
 
-        public override bool IsButtonEnabled() => !(!String.IsNullOrEmpty(Bonus) && (Character.Protagonist.Bonuses <= 0));
+        public override bool IsButtonEnabled() => !(!String.IsNullOrEmpty(Bonus) && (protogonist.Bonuses <= 0));
 
         public override bool CheckOnlyIf(string option)
         {
@@ -48,7 +49,7 @@ namespace Seeker.Gamebook.Genesis
 
             else
             {
-                Character hero = Character.Protagonist;
+                Character hero = protogonist;
 
                 foreach (string oneOption in option.Split(','))
                 {
@@ -84,22 +85,22 @@ namespace Seeker.Gamebook.Genesis
 
         public List<string> Get()
         {
-            if (!String.IsNullOrEmpty(Bonus) && (Character.Protagonist.Bonuses >= 0))
+            if (!String.IsNullOrEmpty(Bonus) && (protogonist.Bonuses >= 0))
             {
-                int currentStat = (int)Character.Protagonist.GetType().GetProperty(Bonus).GetValue(Character.Protagonist, null);
+                int currentStat = (int)protogonist.GetType().GetProperty(Bonus).GetValue(protogonist, null);
 
                 currentStat += 1;
 
-                Character.Protagonist.GetType().GetProperty(Bonus).SetValue(Character.Protagonist, currentStat);
+                protogonist.GetType().GetProperty(Bonus).SetValue(protogonist, currentStat);
 
-                Character.Protagonist.Bonuses -= 1;
+                protogonist.Bonuses -= 1;
             }
 
             return new List<string> { "RELOAD" };
         }
 
-        public override bool IsHealingEnabled() => Character.Protagonist.Life < Character.Protagonist.MaxLife;
+        public override bool IsHealingEnabled() => protogonist.Life < protogonist.MaxLife;
 
-        public override void UseHealing(int healingLevel) => Character.Protagonist.Life += healingLevel;
+        public override void UseHealing(int healingLevel) => protogonist.Life += healingLevel;
     }
 }
