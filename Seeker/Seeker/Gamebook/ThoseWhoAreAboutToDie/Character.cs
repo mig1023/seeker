@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.ThoseWhoAreAboutToDie.Character();
+        public static Character Protagonist = new Character();
 
         private int _reaction;
         public int Reaction
@@ -68,7 +66,11 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             Endurance = this.Endurance,
         };
 
-        public override string Save() => String.Join("|", Reaction, Strength, Endurance);
+        public override string Save() => String.Join("|",
+            Reaction,
+            Strength,
+            Endurance
+        );
 
         public override void Load(string saveLine)
         {

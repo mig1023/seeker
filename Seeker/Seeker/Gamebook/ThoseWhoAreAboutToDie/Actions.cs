@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 
 namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
+        private static Character protogonist = Character.Protagonist;
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Реакция: {0}", Character.Protagonist.Reaction),
-            String.Format("Сила: {0}", Character.Protagonist.Strength),
-            String.Format("Выносливость: {0}", Character.Protagonist.Endurance),
+            String.Format("Реакция: {0}", protogonist.Reaction),
+            String.Format("Сила: {0}", protogonist.Strength),
+            String.Format("Выносливость: {0}", protogonist.Endurance),
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(Character.Protagonist.Endurance, out toEndParagraph, out toEndText);
+            GameOverBy(protogonist.Endurance, out toEndParagraph, out toEndText);
 
         public override bool CheckOnlyIf(string option)
         {
@@ -49,13 +48,13 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
         private static bool OneParamFail(string oneOption)
         {
-            if (ParamFail("СИЛА", oneOption, Character.Protagonist.Strength))
+            if (ParamFail("СИЛА", oneOption, protogonist.Strength))
                 return true;
 
-            else if (ParamFail("РЕАКЦИЯ", oneOption, Character.Protagonist.Reaction))
+            else if (ParamFail("РЕАКЦИЯ", oneOption, protogonist.Reaction))
                 return true;
 
-            else if (ParamFail("ВЫНОСЛИВОСТЬ", oneOption, Character.Protagonist.Endurance))
+            else if (ParamFail("ВЫНОСЛИВОСТЬ", oneOption, protogonist.Endurance))
                 return true;
 
             else
@@ -85,7 +84,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
             if (dice > 4)
             {
-                Character.Protagonist.Reaction += 3;
+                protogonist.Reaction += 3;
                 report.Add("BIG|GOOD|+3 к Реакции! :)");
             }
             else
