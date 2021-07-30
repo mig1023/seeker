@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.Genesis
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.Genesis.Character();
+        public static Character Protagonist = new Character();
 
         private int _life;
         public int MaxLife { get; set; }
@@ -91,7 +89,15 @@ namespace Seeker.Gamebook.Genesis
             Bonuses = this.Bonuses,
         };
 
-        public override string Save() => String.Join("|", MaxLife, Life, Aura, Skill, Weapon, Stealth, Bonuses);
+        public override string Save() => String.Join("|",
+            MaxLife,
+            Life,
+            Aura,
+            Skill,
+            Weapon,
+            Stealth,
+            Bonuses
+        );
 
         public override void Load(string saveLine)
         {

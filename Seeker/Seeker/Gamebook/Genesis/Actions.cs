@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 
 namespace Seeker.Gamebook.Genesis
 {
@@ -50,6 +48,8 @@ namespace Seeker.Gamebook.Genesis
 
             else
             {
+                Character hero = Character.Protagonist;
+
                 foreach (string oneOption in option.Split(','))
                 {
                     if (oneOption.Contains("РАНЕНИЯ"))
@@ -63,15 +63,15 @@ namespace Seeker.Gamebook.Genesis
                     {
                         int level = Game.Other.LevelParse(oneOption);
 
-                        if (oneOption.Contains("СТЕЛС") && (level > Character.Protagonist.Stealth))
+                        if (oneOption.Contains("СТЕЛС") && (level > hero.Stealth))
                             return false;
-                        else if (oneOption.Contains("ЛОВКОСТЬ") && (level > Character.Protagonist.Skill))
+                        else if (oneOption.Contains("ЛОВКОСТЬ") && (level > hero.Skill))
                             return false;
-                        else if (oneOption.Contains("ХОЛОДНОЕ ОРУЖИЕ") && (level > Character.Protagonist.Weapon))
+                        else if (oneOption.Contains("ХОЛОДНОЕ ОРУЖИЕ") && (level > hero.Weapon))
                             return false;
-                        else if (oneOption.Contains("АУРА") && (level > Character.Protagonist.Aura))
+                        else if (oneOption.Contains("АУРА") && (level > hero.Aura))
                             return false;
-                        else if (oneOption.Contains("ЗДОРОВЬЕ") && (level > Character.Protagonist.Life))
+                        else if (oneOption.Contains("ЗДОРОВЬЕ") && (level > hero.Life))
                             return false;
                     }
                     else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
