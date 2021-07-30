@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Seeker.Gamebook.ThreePaths
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.ThreePaths.Character();
+        public static Character Protagonist = new Character();
 
         public int? Time { get; set; }
         public List<string> Spells { get; set; }
@@ -26,7 +25,11 @@ namespace Seeker.Gamebook.ThreePaths
             Spells = new List<string>(),
         };
 
-        public override string Save() => String.Join("|", Time, SpellSlots, String.Join(",", Spells).TrimEnd(','));
+        public override string Save() => String.Join("|",
+            Time,
+            SpellSlots,
+            String.Join(",", Spells).TrimEnd(',')
+        );
 
         public override void Load(string saveLine)
         {

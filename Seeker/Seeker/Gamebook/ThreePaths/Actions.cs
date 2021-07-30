@@ -1,31 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 
 namespace Seeker.Gamebook.ThreePaths
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
+        private static Character protogonist = Character.Protagonist;
 
         public bool ThisIsSpell { get; set; }
 
         public override List<string> Status()
         {
-            if (Character.Protagonist.Time == null)
+            if (protogonist.Time == null)
                 return null;
                 
-            return new List<string> { String.Format("Время: {0:d2}:00", Character.Protagonist.Time) };
+            return new List<string> { String.Format("Время: {0:d2}:00", protogonist.Time) };
         }
 
-        public override bool IsButtonEnabled() => !(ThisIsSpell && (Character.Protagonist.SpellSlots <= 0));
+        public override bool IsButtonEnabled() => !(ThisIsSpell && (protogonist.SpellSlots <= 0));
 
         public List<string> Get()
         {
-            Character.Protagonist.Spells.Add(Text);
-            Character.Protagonist.SpellSlots -= 1;
+            protogonist.Spells.Add(Text);
+            protogonist.SpellSlots -= 1;
 
             return new List<string> { "RELOAD" };
         }
@@ -38,14 +37,14 @@ namespace Seeker.Gamebook.ThreePaths
                 {
                     int level = Game.Other.LevelParse(option);
 
-                    if (oneOption.Contains("ВРЕМЯ <") && (level <= Character.Protagonist.Time))
+                    if (oneOption.Contains("ВРЕМЯ <") && (level <= protogonist.Time))
                         return false;
 
-                    if (oneOption.Contains("ВРЕМЯ >=") && (level > Character.Protagonist.Time))
+                    if (oneOption.Contains("ВРЕМЯ >=") && (level > protogonist.Time))
                         return false;
                 }
                 else if (oneOption.Contains("ЗАКЛЯТИЕ"))
-                    return Character.Protagonist.Spells.Contains(oneOption.Trim());
+                    return protogonist.Spells.Contains(oneOption.Trim());
 
                 else if (oneOption.Contains("!"))
                 {
@@ -61,7 +60,7 @@ namespace Seeker.Gamebook.ThreePaths
 
         public override List<string> Representer()
         {
-            int count = Character.Protagonist.Spells.Where(x => x == Text).Count();
+            int count = protogonist.Spells.Where(x => x == Text).Count();
 
             return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" (x{0})", count) : String.Empty)) };
         }
