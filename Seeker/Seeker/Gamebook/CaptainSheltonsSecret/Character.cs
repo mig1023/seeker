@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Seeker.Gamebook.CaptainSheltonsSecret
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.CaptainSheltonsSecret.Character();
+        public static Character Protagonist = new Character();
 
         private int _mastery;
         public int MaxMastery { get; set; }
@@ -108,8 +107,17 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             foreach(bool luck in Luck.Values.ToList())
                 lucks.Add(luck ? "1" : "0");
 
-            return String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, Gold, ExtendedDamage, MasteryDamage,
-                (SeaArmour ? 1 : 0), String.Join(",", lucks));
+            return String.Join("|",
+                MaxMastery,
+                Mastery,
+                MaxEndurance,
+                Endurance,
+                Gold,
+                ExtendedDamage,
+                MasteryDamage,
+                (SeaArmour ? 1 : 0),
+                String.Join(",", lucks)
+            );
         }
 
         public override void Load(string saveLine)

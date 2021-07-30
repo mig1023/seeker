@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 
 namespace Seeker.Gamebook.CaptainSheltonsSecret
 {
@@ -129,6 +127,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             bool success = false;
 
             for (int i = 1; i < 7; i++)
+            {
                 if (!Character.Protagonist.Luck[i])
                 {
                     luckRecovery.Add(String.Format("GOOD|Цифра {0} восстановлена!", i));
@@ -137,6 +136,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                     break;
                 }
+            }                
 
             if (!success)
                 luckRecovery.Add("BAD|Все цифры и так счастливые!");
