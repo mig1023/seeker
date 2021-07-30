@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 {
@@ -8,15 +6,17 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
     {
         public override void Do()
         {
+            Character hero = Character.Protagonist;
+
             if (Name == "Day")
             {
-                if (Character.Protagonist.HadFoodToday <= 0)
-                    Character.Protagonist.Strength -= 3;
+                if (hero.HadFoodToday <= 0)
+                    hero.Strength -= 3;
                 else
-                    Character.Protagonist.HadFoodToday = 0;
+                    hero.HadFoodToday = 0;
             }
 
-            InnerDo(Character.Protagonist);
+            InnerDo(hero);
         }
     }
 }

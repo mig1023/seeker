@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.FaithfulSwordOfTheKing.Character();
+        public static Character Protagonist = new Character();
 
         public enum MeritalArts { SecretBlow, SwordAndDagger, TwoPistols, LefthandFencing, Swimming, Nope };
 
@@ -108,8 +106,23 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             LeftHandPenalty = this.LeftHandPenalty,
         };
 
-        public override string Save() => String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Honor, Day, Ecu,
-            MeritalArt, Horses, Pistols, BulletsAndGubpowder, Daggers, HadFoodToday, Chainmail, LeftHandPenalty);
+        public override string Save() => String.Join("|",
+            MaxSkill,
+            Skill,
+            MaxStrength,
+            Strength,
+            Honor,
+            Day,
+            Ecu,
+            MeritalArt,
+            Horses,
+            Pistols,
+            BulletsAndGubpowder,
+            Daggers,
+            HadFoodToday,
+            Chainmail,
+            LeftHandPenalty
+        );
 
         public override void Load(string saveLine)
         {

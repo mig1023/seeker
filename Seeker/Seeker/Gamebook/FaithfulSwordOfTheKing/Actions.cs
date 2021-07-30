@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
-
 
 namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 {
@@ -63,26 +60,28 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public override bool CheckOnlyIf(string option)
         {
+            Character hero = Character.Protagonist;
+
             if (option.Contains("="))
             {
                 int value = int.Parse(option.Split('=')[1]);
 
-                if (option.Contains("ДЕНЬ >=") && (value > Character.Protagonist.Day))
+                if (option.Contains("ДЕНЬ >=") && (value > hero.Day))
                     return false;
 
-                else if (option.Contains("ДЕНЬ =") && (value != Character.Protagonist.Day))
+                else if (option.Contains("ДЕНЬ =") && (value != hero.Day))
                     return false;
 
-                else if (option.Contains("ДЕНЬ <=") && (value < Character.Protagonist.Day))
+                else if (option.Contains("ДЕНЬ <=") && (value < hero.Day))
                     return false;
 
-                else if (option.Contains("ЭКЮ >=") && (value > Character.Protagonist.Ecu))
+                else if (option.Contains("ЭКЮ >=") && (value > hero.Ecu))
                     return false;
 
                 return true;
             }
             else if (Enum.TryParse(option, out Character.MeritalArts value))
-                return Character.Protagonist.MeritalArt == value;
+                return hero.MeritalArt == value;
             else
                 return CheckOnlyIfTrigger(option);
         }
@@ -266,19 +265,23 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public List<string> Get()
         {
-            if ((MeritalArt != Character.MeritalArts.Nope) && (Character.Protagonist.MeritalArt == Character.MeritalArts.Nope))
-                Character.Protagonist.MeritalArt = MeritalArt ?? Character.MeritalArts.Nope;
+            Character hero = Character.Protagonist;
 
-            else if ((Price > 0) && (Character.Protagonist.Ecu >= Price))
+            if ((MeritalArt != Character.MeritalArts.Nope) && (hero.MeritalArt == Character.MeritalArts.Nope))
+                hero.MeritalArt = MeritalArt ?? Character.MeritalArts.Nope;
+
+            else if ((Price > 0) && (hero.Ecu >= Price))
             {
-                Character.Protagonist.Ecu -= Price;
+                hero.Ecu -= Price;
 
                 if (!Multiple)
                     Used = true;
 
                 if (BenefitList != null)
+                {
                     foreach (Modification modification in BenefitList)
                         modification.Do();
+                }
             }
 
             return new List<string> { "RELOAD" };
