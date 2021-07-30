@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Seeker.Gamebook.InvisibleFront
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.InvisibleFront.Character();
+        public static Character Protagonist = new Character();
 
         public int Dissatisfaction { get; set; }
         public int Recruitment { get; set; }

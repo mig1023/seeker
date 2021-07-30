@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-
 
 namespace Seeker.Gamebook.InvisibleFront
 {
@@ -17,6 +15,7 @@ namespace Seeker.Gamebook.InvisibleFront
         public override bool CheckOnlyIf(string option)
         {
             string[] options = option.Split('|', ',');
+            Character hero = Character.Protagonist;
 
             foreach (string oneOption in options)
             {
@@ -24,13 +23,13 @@ namespace Seeker.Gamebook.InvisibleFront
                 {
                     int level = Game.Other.LevelParse(oneOption);
 
-                    if (oneOption.Contains("НЕДОВОЛЬСТВО >") && (level >= Character.Protagonist.Dissatisfaction))
+                    if (oneOption.Contains("НЕДОВОЛЬСТВО >") && (level >= hero.Dissatisfaction))
                         return false;
-                    else if (oneOption.Contains("НЕДОВОЛЬСТВО <=") && (level < Character.Protagonist.Dissatisfaction))
+                    else if (oneOption.Contains("НЕДОВОЛЬСТВО <=") && (level < hero.Dissatisfaction))
                         return false;
-                    else if (oneOption.Contains("ВЕРБОВКА >") && (level >= Character.Protagonist.Recruitment))
+                    else if (oneOption.Contains("ВЕРБОВКА >") && (level >= hero.Recruitment))
                         return false;
-                    else if (oneOption.Contains("ВЕРБОВКА <=") && (level < Character.Protagonist.Recruitment))
+                    else if (oneOption.Contains("ВЕРБОВКА <=") && (level < hero.Recruitment))
                         return false;
                 }
                 else if (oneOption.Contains("!"))
