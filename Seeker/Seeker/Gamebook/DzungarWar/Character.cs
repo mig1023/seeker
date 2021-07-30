@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.DzungarWar
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.DzungarWar.Character();
+        public static Character Protagonist = new Character();
 
         private int _strength;
         public int Strength
@@ -141,8 +139,21 @@ namespace Seeker.Gamebook.DzungarWar
             Brother = this.Brother,
         };
 
-        public override string Save() => String.Join("|", Strength, Skill, Wisdom, Cunning, Oratory,
-            Danger, Favour, Tanga, StatBonuses, MaxBonus, Brother, Tincture, Ginseng);
+        public override string Save() => String.Join("|",
+            Strength,
+            Skill,
+            Wisdom,
+            Cunning,
+            Oratory,
+            Danger,
+            Favour,
+            Tanga,
+            StatBonuses,
+            MaxBonus,
+            Brother,
+            Tincture,
+            Ginseng
+        );
 
         public override void Load(string saveLine)
         {

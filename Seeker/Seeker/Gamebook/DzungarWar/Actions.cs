@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 
 namespace Seeker.Gamebook.DzungarWar
 {
@@ -88,21 +86,22 @@ namespace Seeker.Gamebook.DzungarWar
         public override List<string> Status()
         {
             List<string> statusLines = new List<string>();
+            Character hero = Character.Protagonist;
 
-            if (Character.Protagonist.Tanga > 0)
-                statusLines.Add(String.Format("Деньги: {0}", Character.Protagonist.Tanga));
+            if (hero.Tanga > 0)
+                statusLines.Add(String.Format("Деньги: {0}", hero.Tanga));
 
-            if (Character.Protagonist.Tincture > 0)
-                statusLines.Add(String.Format("Настойка: {0}", Character.Protagonist.Tincture));
+            if (hero.Tincture > 0)
+                statusLines.Add(String.Format("Настойка: {0}", hero.Tincture));
 
-            if (Character.Protagonist.Ginseng > 0)
-                statusLines.Add(String.Format("Отвар: {0}", Character.Protagonist.Ginseng));
+            if (hero.Ginseng > 0)
+                statusLines.Add(String.Format("Отвар: {0}", hero.Ginseng));
 
-            if (Character.Protagonist.Favour != null)
-                statusLines.Add(String.Format("Благосклонность: {0}", Character.Protagonist.Favour));
+            if (hero.Favour != null)
+                statusLines.Add(String.Format("Благосклонность: {0}", hero.Favour));
 
-            if (Character.Protagonist.Danger != null)
-                statusLines.Add(String.Format("Опасность: {0}", Character.Protagonist.Danger));
+            if (hero.Danger != null)
+                statusLines.Add(String.Format("Опасность: {0}", hero.Danger));
 
             return statusLines;
         }
@@ -110,21 +109,22 @@ namespace Seeker.Gamebook.DzungarWar
         public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>();
+            Character hero = Character.Protagonist;
 
-            if (Character.Protagonist.Strength > 1)
-                statusLines.Add(String.Format("Сила: {0}", Character.Protagonist.Strength));
+            if (hero.Strength > 1)
+                statusLines.Add(String.Format("Сила: {0}", hero.Strength));
 
-            if (Character.Protagonist.Skill > 1)
-                statusLines.Add(String.Format("Ловкость: {0}", Character.Protagonist.Skill));
+            if (hero.Skill > 1)
+                statusLines.Add(String.Format("Ловкость: {0}", hero.Skill));
 
-            if (Character.Protagonist.Wisdom > 1)
-                statusLines.Add(String.Format("Мудрость: {0}", Character.Protagonist.Wisdom));
+            if (hero.Wisdom > 1)
+                statusLines.Add(String.Format("Мудрость: {0}", hero.Wisdom));
 
-            if (Character.Protagonist.Cunning > 1)
-                statusLines.Add(String.Format("Хитрость: {0}", Character.Protagonist.Cunning));
+            if (hero.Cunning > 1)
+                statusLines.Add(String.Format("Хитрость: {0}", hero.Cunning));
 
-            if (Character.Protagonist.Oratory > 1)
-                statusLines.Add(String.Format("Красноречие: {0}", Character.Protagonist.Oratory));
+            if (hero.Oratory > 1)
+                statusLines.Add(String.Format("Красноречие: {0}", hero.Oratory));
 
             if (statusLines.Count <= 0)
                 return null;
@@ -227,25 +227,27 @@ namespace Seeker.Gamebook.DzungarWar
             }
             else
             {
+                Character hero = Character.Protagonist;
+
                 foreach (string oneOption in option.Split(','))
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
                         int level = Game.Other.LevelParse(oneOption);
 
-                        if (oneOption.Contains("ТАНЬГА >=") && (level > Character.Protagonist.Tanga))
+                        if (oneOption.Contains("ТАНЬГА >=") && (level > hero.Tanga))
                             return false;
 
-                        else if (oneOption.Contains("ОПАСНОСТЬ >") && (level >= Character.Protagonist.Danger))
+                        else if (oneOption.Contains("ОПАСНОСТЬ >") && (level >= hero.Danger))
                             return false;
 
-                        else if (oneOption.Contains("ОПАСНОСТЬ <=") && (level < Character.Protagonist.Danger))
+                        else if (oneOption.Contains("ОПАСНОСТЬ <=") && (level < hero.Danger))
                             return false;
 
-                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ >") && (level >= Character.Protagonist.Favour))
+                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ >") && (level >= hero.Favour))
                             return false;
 
-                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ <=") && (level < Character.Protagonist.Favour))
+                        else if (oneOption.Contains("БЛАГОСКЛОННОСТЬ <=") && (level < hero.Favour))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
