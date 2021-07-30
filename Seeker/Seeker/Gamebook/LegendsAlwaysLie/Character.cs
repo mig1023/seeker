@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Seeker.Gamebook.LegendsAlwaysLie
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.LegendsAlwaysLie.Character();
+        public static Character Protagonist = new Character();
 
         public enum SpecializationType { Warrior, Wizard, Thrower, Nope };
 
@@ -128,8 +125,18 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Specialization = this.Specialization,
         };
 
-        public override string Save() => String.Join("|", Strength, Hitpoints, Magicpoints,
-            Gold, Footwraps, TimeForReading, ConneryHitpoints, ConneryTrust, Specialization, Elixir);
+        public override string Save() => String.Join("|",
+            Strength,
+            Hitpoints,
+            Magicpoints,
+            Gold,
+            Footwraps,
+            TimeForReading,
+            ConneryHitpoints,
+            ConneryTrust,
+            Specialization,
+            Elixir
+        );
 
         public override void Load(string saveLine)
         {

@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 
 namespace Seeker.Gamebook.LegendsAlwaysLie
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
+        private static Character protogonist = Character.Protagonist;
 
         public enum FoodSharingType { KeepMyself, ToHim, FiftyFifty };
 
@@ -58,16 +57,16 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Сила: {0}", Character.Protagonist.Strength),
-            String.Format("Жизни: {0}", Character.Protagonist.Hitpoints),
-            String.Format("Заклинаний: {0}", Character.Protagonist.Magicpoints),
-            String.Format("Золото: {0}", Character.Protagonist.Gold),
+            String.Format("Сила: {0}", protogonist.Strength),
+            String.Format("Жизни: {0}", protogonist.Hitpoints),
+            String.Format("Заклинаний: {0}", protogonist.Magicpoints),
+            String.Format("Золото: {0}", protogonist.Gold),
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Жизни Коннери: {0}", Character.Protagonist.ConneryHitpoints),
-            String.Format("Доверие Коннери: {0}", Character.Protagonist.ConneryTrust),
+            String.Format("Жизни Коннери: {0}", protogonist.ConneryHitpoints),
+            String.Format("Доверие Коннери: {0}", protogonist.ConneryTrust),
         };
 
         public override List<string> StaticButtons()
@@ -77,18 +76,18 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
 
-            bool healingSpell = (Character.Protagonist.Magicpoints > 0) && !Game.Data.Triggers.Contains("HealingSpellLost");
+            bool healingSpell = (protogonist.Magicpoints > 0) && !Game.Data.Triggers.Contains("HealingSpellLost");
 
             if (healingSpell && !Game.Checks.ExistsInParagraph(actionText: "Вылечить"))
             {
-                if (Character.Protagonist.Hitpoints < 30)
+                if (protogonist.Hitpoints < 30)
                     staticButtons.Add("ЛЕЧИЛКА");
 
-                if ((Character.Protagonist.ConneryHitpoints < 30) && (Character.Protagonist.Hitpoints > 2))
+                if ((protogonist.ConneryHitpoints < 30) && (protogonist.Hitpoints > 2))
                     staticButtons.Add("ЛЕЧИЛКА ДЛЯ КОННЕРИ");
             }
 
-            if ((Character.Protagonist.Elixir > 0) && (Character.Protagonist.Hitpoints < 30))
+            if ((protogonist.Elixir > 0) && (protogonist.Hitpoints < 30))
                 staticButtons.Add("ЭЛИКСИР");
 
             return staticButtons;
@@ -98,24 +97,24 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             if (action == "ЛЕЧИЛКА")
             {
-                Character.Protagonist.Hitpoints += 6;
-                Character.Protagonist.Magicpoints -= 1;
+                protogonist.Hitpoints += 6;
+                protogonist.Magicpoints -= 1;
                 
                 return true;
             }
             else if (action == "ЛЕЧИЛКА ДЛЯ КОННЕРИ")
             {
-                Character.Protagonist.ConneryHitpoints += 8;
-                Character.Protagonist.Magicpoints -= 1;
+                protogonist.ConneryHitpoints += 8;
+                protogonist.Magicpoints -= 1;
 
                 InjuriesBySpells();
 
                 return true;
             }
-            else if ((action == "ЭЛИКСИР") && (Character.Protagonist.Hitpoints < 30))
+            else if ((action == "ЭЛИКСИР") && (protogonist.Hitpoints < 30))
             {
-                Character.Protagonist.Hitpoints = 30;
-                Character.Protagonist.Elixir -= 1;
+                protogonist.Hitpoints = 30;
+                protogonist.Elixir -= 1;
 
                 return true;
             }
@@ -124,12 +123,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         }
 
         public static void InjuriesBySpells() =>
-            Character.Protagonist.Hitpoints -= (Character.Protagonist.Specialization == Character.SpecializationType.Wizard ? 1 : 2);
+            protogonist.Hitpoints -= (protogonist.Specialization == Character.SpecializationType.Wizard ? 1 : 2);
 
         private bool GoodReaction(ref List<string> reaction)
         {
-            int reactionLevel = (int)Math.Floor((double)Character.Protagonist.Hitpoints / 5);
-            reaction.Add(String.Format("Уровнь реакции: {0} / 5 = {1}", Character.Protagonist.Hitpoints, reactionLevel));
+            int reactionLevel = (int)Math.Floor((double)protogonist.Hitpoints / 5);
+            reaction.Add(String.Format("Уровнь реакции: {0} / 5 = {1}", protogonist.Hitpoints, reactionLevel));
 
             if (Game.Data.Triggers.Contains("EvilEye"))
             {
@@ -166,13 +165,13 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             toEndParagraph = 0;
             toEndText = String.Empty;
 
-            if (Character.Protagonist.Hitpoints <= 0)
+            if (protogonist.Hitpoints <= 0)
                 toEndText = "Начать сначала";
 
-            else if (Character.Protagonist.ConneryHitpoints <= 0)
+            else if (protogonist.ConneryHitpoints <= 0)
                 toEndText = "Коннери погиб, ваше путешествие окончено";
 
-            else if (Character.Protagonist.ConneryTrust <= 0)
+            else if (protogonist.ConneryTrust <= 0)
                 toEndText = "Коннери потерял к вам всякое доверие, ваше путешествие окончено";
 
             else
@@ -183,41 +182,41 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override bool IsButtonEnabled()
         {
-            bool bySpecButton = (Specialization != null) && (Character.Protagonist.Specialization != Character.SpecializationType.Nope);
-            bool byPrice = (Price > 0) && (Character.Protagonist.Gold < Price);
-            bool byCureSprain = (Name == "CureSprain") && (Character.Protagonist.Magicpoints <= 0);
+            bool bySpecButton = (Specialization != null) && (protogonist.Specialization != Character.SpecializationType.Nope);
+            bool byPrice = (Price > 0) && (protogonist.Gold < Price);
+            bool byCureSprain = (Name == "CureSprain") && (protogonist.Magicpoints <= 0);
 
             bool byAlreadyDecided = (FoodSharing != null) && Game.Data.Triggers.Contains("FoodSharing");
             bool byFootwraps = ((Name == "FootwrapsDeadlyReplacement") ||
-                (Name == "FootwrapsReplacement")) && Character.Protagonist.Footwraps <= 0;
+                (Name == "FootwrapsReplacement")) && protogonist.Footwraps <= 0;
 
             return !(bySpecButton || byPrice || byCureSprain || byAlreadyDecided || byFootwraps || Disabled);
         }
 
         public List<string> Get()
         {
-            if ((Specialization != null) && (Character.Protagonist.Specialization == Character.SpecializationType.Nope))
+            if ((Specialization != null) && (protogonist.Specialization == Character.SpecializationType.Nope))
             {
-                Character.Protagonist.Specialization = Specialization ?? Character.SpecializationType.Nope;
+                protogonist.Specialization = Specialization ?? Character.SpecializationType.Nope;
 
                 if (Specialization == Character.SpecializationType.Warrior)
                 {
-                    Character.Protagonist.Strength += 2;
-                    Character.Protagonist.Magicpoints = 2;
+                    protogonist.Strength += 2;
+                    protogonist.Magicpoints = 2;
                 }
 
                 else if (Specialization == Character.SpecializationType.Wizard)
-                    Character.Protagonist.Magicpoints = 5;
+                    protogonist.Magicpoints = 5;
 
                 else
                 {
-                    Character.Protagonist.Strength += 1;
-                    Character.Protagonist.Magicpoints = 3;
+                    protogonist.Strength += 1;
+                    protogonist.Magicpoints = 3;
                 }
             }
 
-            else if ((Price > 0) && (Character.Protagonist.Gold >= Price))
-                Character.Protagonist.Gold -= Price;
+            else if ((Price > 0) && (protogonist.Gold >= Price))
+                protogonist.Gold -= Price;
 
             return new List<string> { "RELOAD" };
         }
@@ -225,7 +224,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public List<string> Sell()
         {
             Disabled = true;
-            Character.Protagonist.Gold += Price;             
+            protogonist.Gold += Price;             
 
             return new List<string> { "RELOAD" };
         }
@@ -253,29 +252,29 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     {
                         int level = Game.Other.LevelParse(oneOption);
 
-                        if (orLogic && oneOption.Contains("ЗОЛОТО >=") && (level <= Character.Protagonist.Gold))
+                        if (orLogic && oneOption.Contains("ЗОЛОТО >=") && (level <= protogonist.Gold))
                             return true;
 
-                        if (oneOption.Contains("ЗОЛОТО >=") && (level > Character.Protagonist.Gold))
+                        if (oneOption.Contains("ЗОЛОТО >=") && (level > protogonist.Gold))
                             return false;
 
-                        if (oneOption.Contains("ЗАКЛЯТИЙ >") && (level >= Character.Protagonist.Magicpoints))
+                        if (oneOption.Contains("ЗАКЛЯТИЙ >") && (level >= protogonist.Magicpoints))
                             return false;
 
-                        if (oneOption.Contains("ЭЛИКСИР >") && (level >= Character.Protagonist.Elixir))
+                        if (oneOption.Contains("ЭЛИКСИР >") && (level >= protogonist.Elixir))
                             return false;
 
-                        if (oneOption.Contains("ЗАКЛЯТИЙ (!воин) >") && ((level >= Character.Protagonist.Magicpoints) ||
-                                (Character.Protagonist.Specialization == Character.SpecializationType.Warrior)))
+                        if (oneOption.Contains("ЗАКЛЯТИЙ (!воин) >") && ((level >= protogonist.Magicpoints) ||
+                                (protogonist.Specialization == Character.SpecializationType.Warrior)))
                             return false;
 
-                        if (oneOption.Contains("ВРЕМЯ ДЛЯ ЧТЕНИЯ >") && (level >= Character.Protagonist.TimeForReading))
+                        if (oneOption.Contains("ВРЕМЯ ДЛЯ ЧТЕНИЯ >") && (level >= protogonist.TimeForReading))
                             return false;
 
-                        if (oneOption.Contains("ДОВЕРИЕ >") && (level >= Character.Protagonist.ConneryTrust))
+                        if (oneOption.Contains("ДОВЕРИЕ >") && (level >= protogonist.ConneryTrust))
                             return false;
                         
-                        if (oneOption.Contains("ДОВЕРИЕ <=") && (level < Character.Protagonist.ConneryTrust))
+                        if (oneOption.Contains("ДОВЕРИЕ <=") && (level < protogonist.ConneryTrust))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
@@ -309,9 +308,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public List<string> MushroomsForConnery()
         {
-            if (Character.Protagonist.ConneryTrust >= 6)
+            if (protogonist.ConneryTrust >= 6)
             {
-                Character.Protagonist.ConneryHitpoints += 3;
+                protogonist.ConneryHitpoints += 3;
                 return new List<string> { "BIG|GOOD|Коннери хмыкнул и съел :)" };
             }
             else
@@ -327,15 +326,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public List<string> FootwrapsDeadlyReplacement()
         {
-            Character.Protagonist.Hitpoints += (Game.Data.Triggers.Contains("Legs") ? 4 : 2);
+            protogonist.Hitpoints += (Game.Data.Triggers.Contains("Legs") ? 4 : 2);
 
             return new List<string> { "BIG|GOOD|Вы успешно поменяли портянки :)" };
         }
 
         public List<string> CureSprain()
         {
-            Character.Protagonist.Strength += 1;
-            Character.Protagonist.Magicpoints -= 1;
+            protogonist.Strength += 1;
+            protogonist.Magicpoints -= 1;
 
             return new List<string> { "BIG|GOOD|Вы успешно вылечили растяжение" };
         }
@@ -345,15 +344,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Game.Option.Trigger("FoodIsDivided");
 
             if (FoodSharing == FoodSharingType.KeepMyself)
-                Character.Protagonist.Hitpoints += 5;
+                protogonist.Hitpoints += 5;
 
             else if (FoodSharing == FoodSharingType.ToHim)
-                Character.Protagonist.ConneryHitpoints += 5;
+                protogonist.ConneryHitpoints += 5;
 
             else
             {
-                Character.Protagonist.Hitpoints += 3;
-                Character.Protagonist.ConneryHitpoints += 3;
+                protogonist.Hitpoints += 3;
+                protogonist.ConneryHitpoints += 3;
             }
 
             return new List<string> { "RELOAD" };
@@ -379,7 +378,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 diceCheck.Add(String.Format("Добавляем {0} по условию", DiceBonus));
             }
 
-            Character.Protagonist.Hitpoints -= dices;
+            protogonist.Hitpoints -= dices;
 
             diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
 
@@ -416,7 +415,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             List<string> fight = new List<string>();
 
             int round = 1, golemRound = 4, incrementWounds = 2;
-            bool warriorFight = (Character.Protagonist.Specialization == Character.SpecializationType.Warrior);
+            bool warriorFight = (protogonist.Specialization == Character.SpecializationType.Warrior);
             bool poisonBlade = false;
 
             if (Game.Data.Triggers.Contains("PoisonBlade"))
@@ -434,7 +433,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             {
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
-                if (!GolemFight && (Character.Protagonist.Specialization == Character.SpecializationType.Thrower) && (round == 1))
+                if (!GolemFight && (protogonist.Specialization == Character.SpecializationType.Thrower) && (round == 1))
                 {
                     fight.Add("BOLD|Вы бросаете метательные ножи");
 
@@ -455,11 +454,11 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     if (!GoodReaction(ref fight))
                     {
                         int wound = int.Parse(wounds[0]);
-                        Character.Protagonist.Hitpoints -= wound;
+                        protogonist.Hitpoints -= wound;
 
                         fight.Add(String.Format("BAD|{0} нанесли дополнительный урон: {1}", wounds[1].TrimStart(), wound));
 
-                        if (Character.Protagonist.Hitpoints <= 0)
+                        if (protogonist.Hitpoints <= 0)
                             return LostFight(fight);
                     }
                     else
@@ -494,12 +493,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                     int firstHeroRoll = Game.Dice.Roll();
                     int secondHeroRoll = Game.Dice.Roll();
-                    int heroHitStrength = firstHeroRoll + secondHeroRoll + Character.Protagonist.Strength;
+                    int heroHitStrength = firstHeroRoll + secondHeroRoll + protogonist.Strength;
 
                     fight.Add(String.Format(
                         "Ваш удар: {0} + {1} + {2} = {3}",
                         Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll),
-                        Character.Protagonist.Strength, heroHitStrength));
+                        protogonist.Strength, heroHitStrength));
 
                     int firstEnemyRoll = Game.Dice.Roll();
                     int secondEnemyRoll = Game.Dice.Roll();
@@ -590,7 +589,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             string[] wounds = ReactionWounds.Split('-');
                             int wound = int.Parse(GoodReaction(ref fight) ? wounds[0] : wounds[1]);
 
-                            Character.Protagonist.Hitpoints -= wound;
+                            protogonist.Hitpoints -= wound;
 
                             fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, wound));
                         }
@@ -598,14 +597,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         {
                             fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, incrementWounds));
 
-                            Character.Protagonist.Hitpoints -= incrementWounds;
+                            protogonist.Hitpoints -= incrementWounds;
 
                             incrementWounds += 1;
                         }
                         else
-                            Character.Protagonist.Hitpoints -= 2;
+                            protogonist.Hitpoints -= 2;
 
-                        if (Character.Protagonist.Hitpoints <= 0)
+                        if (protogonist.Hitpoints <= 0)
                             return LostFight(fight);
                     }
                     else
@@ -623,9 +622,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         if (!GoodReaction(ref fight))
                         {
                             fight.Add("BAD|Вы не смогли прикрыть Коннери и он ранен");
-                            Character.Protagonist.ConneryHitpoints -= 2;
+                            protogonist.ConneryHitpoints -= 2;
 
-                            if (Character.Protagonist.ConneryHitpoints <= 0)
+                            if (protogonist.ConneryHitpoints <= 0)
                                 return LostFight(fight);
                         }
                         else
