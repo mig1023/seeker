@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Drawing;
-
 using static Seeker.Output.Buttons;
 using static Seeker.Game.Data;
 

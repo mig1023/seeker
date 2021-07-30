@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Seeker.Gamebook.StringOfWorlds
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.StringOfWorlds.Character();
+        public static Character Protagonist = new Character();
 
         private int _skill;
         public int MaxSkill { get; set; }
@@ -107,8 +106,17 @@ namespace Seeker.Gamebook.StringOfWorlds
             foreach (bool luck in Luck.Values.ToList())
                 lucks.Add(luck ? "1" : "0");
 
-            return String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Charm,
-                Blaster, GateCode, Equipment, String.Join(",", lucks));
+            return String.Join("|",
+                MaxSkill,
+                Skill,
+                MaxStrength,
+                Strength,
+                Charm,
+                Blaster,
+                GateCode,
+                Equipment,
+                String.Join(",", lucks)
+            );
         }
 
         public override void Load(string saveLine)
