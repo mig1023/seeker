@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Seeker.Gamebook.LordOfTheSteppes
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.LordOfTheSteppes.Character();
+        public static Character Protagonist = new Character();
 
         public enum SpecialTechniques { TwoBlades, TotalProtection, FirstStrike, PowerfulStrike, Reaction,
             IgnoreFirstStrike, IgnorePowerfulStrike, IgnoreReaction, ExtendedDamage, PoisonBlade, Nope };
@@ -135,13 +133,19 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             Bonuses = this.Bonuses,
         };
 
-        public override string Save()
-        {
-            string specialTechniques = String.Join(":", SpecialTechnique.ConvertAll(e => e.ToString())).TrimEnd(':');
-
-            return String.Join("|", MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance,
-                MaxInitiative, Initiative, Bonuses, specialTechniques, Coins);
-        }
+        public override string Save() => String.Join("|",
+            MaxAttack,
+            Attack,
+            MaxDefence,
+            Defence,
+            MaxEndurance,
+            Endurance,
+            MaxInitiative,
+            Initiative,
+            Bonuses,
+            String.Join(":", SpecialTechnique.ConvertAll(e => e.ToString())).TrimEnd(':'),
+            Coins
+        );
 
         public override void Load(string saveLine)
         {
