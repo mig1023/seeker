@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿using System.Collections.Generic;
 using static Seeker.Output.Buttons;
 using static Seeker.Game.Data;
 
@@ -18,6 +15,6 @@ namespace Seeker.Gamebook.LandOfUnwaryBears
 
         public override string GetFont() => "RobotoFont";
 
-        public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
+        public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.small;
     }
 }
