@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.AdventuresOfABeardlessDeceiver.Character();
+        public static Character Protagonist = new Character();
 
         private int _strength;
         public int Strength
@@ -135,8 +133,19 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             UnitOfTime = this.UnitOfTime,
         };
 
-        public override string Save() => String.Join("|", Strength, Skill, Wisdom, Cunning, Oratory, Popularity, Kumis,
-            Tanga, StatBonuses, (AkynGlory == null ? -1 : AkynGlory), (UnitOfTime == null ? -1 : UnitOfTime));
+        public override string Save() => String.Join("|",
+            Strength,
+            Skill,
+            Wisdom,
+            Cunning,
+            Oratory,
+            Popularity,
+            Kumis,
+            Tanga,
+            StatBonuses,
+            (AkynGlory == null ? -1 : AkynGlory),
+            (UnitOfTime == null ? -1 : UnitOfTime)
+        );
  
         public override void Load(string saveLine)
         {

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-
 
 namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 {
@@ -106,8 +104,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 NextTestWithKumis = true;
                 return true;
             }
-
-            return false;
+            else
+                return false;
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
@@ -122,10 +120,13 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         {
             if (Level > 0)
                 return true;
+
             else if (Price <= 0)
                 return Character.Protagonist.StatBonuses > 0;
+
             else if (Used)
                 return false;
+
             else
                 return Character.Protagonist.Tanga >= Price;
         }
@@ -137,16 +138,21 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 if (oneOption.Contains(">") || oneOption.Contains("<"))
                 {
                     int level = Game.Other.LevelParse(oneOption);
+                    Character hero = Character.Protagonist;
 
-                    if (oneOption.Contains("ТАНЬГА >=") && (level > Character.Protagonist.Tanga))
+                    if (oneOption.Contains("ТАНЬГА >=") && (level > hero.Tanga))
                         return false;
-                    else if (oneOption.Contains("СЛАВА_АКЫНА >=") && (level > Character.Protagonist.AkynGlory))
+
+                    else if (oneOption.Contains("СЛАВА_АКЫНА >=") && (level > hero.AkynGlory))
                         return false;
-                    else if (oneOption.Contains("ПОПУЛЯРНОСТЬ >") && (level >= Character.Protagonist.Popularity))
+
+                    else if (oneOption.Contains("ПОПУЛЯРНОСТЬ >") && (level >= hero.Popularity))
                         return false;
-                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ >") && (level >= Character.Protagonist.UnitOfTime))
+
+                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ >") && (level >= hero.UnitOfTime))
                         return false;
-                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ <=") && (level < Character.Protagonist.UnitOfTime))
+
+                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ <=") && (level < hero.UnitOfTime))
                         return false;
                 }
                 else if (oneOption.Contains("!"))
