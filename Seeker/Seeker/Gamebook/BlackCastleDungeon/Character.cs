@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Seeker.Gamebook.BlackCastleDungeon
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.BlackCastleDungeon.Character();
+        public static Character Protagonist = new Character();
 
         private int _mastery;
         public int MaxMastery { get; set; }
@@ -103,8 +102,17 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             Spells = new List<string>(),
         };
 
-        public override string Save() => String.Join("|", MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck,
-            Luck, Gold, SpellSlots, String.Join(",", Spells).TrimEnd(','));
+        public override string Save() => String.Join("|",
+            MaxMastery,
+            Mastery,
+            MaxEndurance,
+            Endurance,
+            MaxLuck,
+            Luck,
+            Gold,
+            SpellSlots,
+            String.Join(",", Spells).TrimEnd(',')
+        );
 
         public override void Load(string saveLine)
         {
