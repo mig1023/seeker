@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Seeker.Gamebook.PrairieLaw
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.PrairieLaw.Character();
+        public static Character Protagonist = new Character();
 
         private int _skill;
         public int MaxSkill { get; set; }
@@ -147,8 +146,17 @@ namespace Seeker.Gamebook.PrairieLaw
             foreach (bool luck in Luck.Values.ToList())
                 lucks.Add(luck ? "1" : "0");
 
-            return String.Join("|", MaxSkill, Skill, MaxStrength, Strength, Charm, Cents, Cartridges,
-                String.Join(",", lucks), String.Join(",", AnimalSkins).TrimEnd(','), Nuggets);
+            return String.Join("|",
+                MaxSkill,
+                Skill,
+                MaxStrength,
+                Strength,
+                Charm,
+                Cents,
+                Cartridges,
+                String.Join(",", lucks),
+                String.Join(",", AnimalSkins).TrimEnd(','), Nuggets
+            );
         }
 
         public override void Load(string saveLine)
