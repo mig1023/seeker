@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-
 
 namespace Seeker.Gamebook.RockOfTerror
 {
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
+        private static Character protogonist = Character.Protagonist;
 
         public override List<string> Status()
         {
-            TimeSpan time = TimeSpan.FromMinutes(Character.Protagonist.Time);
+            TimeSpan time = TimeSpan.FromMinutes(protogonist.Time);
 
             List<string> statusLines = new List<string> { String.Format("Прошедшее время: {0:d2}:{1:d2}", time.Hours, time.Minutes) };
 
-            if (Character.Protagonist.MonksHeart != null)
-                statusLines.Add(String.Format("Сила сердца монаха: {0}", Character.Protagonist.MonksHeart));
+            if (protogonist.MonksHeart != null)
+                statusLines.Add(String.Format("Сила сердца монаха: {0}", protogonist.MonksHeart));
 
             return statusLines;
         }
@@ -26,7 +25,7 @@ namespace Seeker.Gamebook.RockOfTerror
             toEndParagraph = 0;
             toEndText = "Время вышло...";
 
-            return Character.Protagonist.Time >= 720;
+            return protogonist.Time >= 720;
         }
 
         public override bool CheckOnlyIf(string option)
@@ -35,11 +34,11 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 int level = Game.Other.LevelParse(option);
 
-                if (option.Contains("СИЛА СЕРДЦА МОНАХА >=") && (level > Character.Protagonist.MonksHeart))
+                if (option.Contains("СИЛА СЕРДЦА МОНАХА >=") && (level > protogonist.MonksHeart))
                     return false;
-                else if (option.Contains("ВРЕМЯ >=") && (level > Character.Protagonist.Time))
+                else if (option.Contains("ВРЕМЯ >=") && (level > protogonist.Time))
                     return false;
-                else if (option.Contains("ВРЕМЯ <") && (level < Character.Protagonist.Time))
+                else if (option.Contains("ВРЕМЯ <") && (level < protogonist.Time))
                     return false;
                 else
                     return true;

@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.RockOfTerror
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.RockOfTerror.Character();
+        public static Character Protagonist = new Character();
 
         public int Time { get; set; }
 
@@ -28,7 +26,11 @@ namespace Seeker.Gamebook.RockOfTerror
             MonksHeart = this.MonksHeart,
         };
 
-        public override string Save() => String.Join("|", Time, Injury, (MonksHeart == null ? -1 : MonksHeart));
+        public override string Save() => String.Join("|",
+            Time,
+            Injury,
+            (MonksHeart == null ? -1 : MonksHeart)
+        );
 
         public override void Load(string saveLine)
         {

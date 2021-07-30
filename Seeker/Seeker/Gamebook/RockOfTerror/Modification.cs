@@ -1,32 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.RockOfTerror
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
+        private static Character protogonist = Character.Protagonist;
         public bool Init { get; set; }
 
         public override void Do()
         {
             if (Name == "MonksHeart")
             {
-                if (Init && (Character.Protagonist.MonksHeart == null))
-                    Character.Protagonist.MonksHeart = 0;
+                if (Init && (protogonist.MonksHeart == null))
+                    protogonist.MonksHeart = 0;
 
-                else if (!Init && (Character.Protagonist.MonksHeart != null))
-                    Character.Protagonist.MonksHeart += Value;
+                else if (!Init && (protogonist.MonksHeart != null))
+                    protogonist.MonksHeart += Value;
             }
             else
             {
-                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+                int currentValue = (int)protogonist.GetType().GetProperty(Name).GetValue(protogonist, null);
 
-                int injuryModificator = ((Name == "Time") && (Character.Protagonist.Injury > 0) ? 2 : 1);
+                int injuryModificator = ((Name == "Time") && (protogonist.Injury > 0) ? 2 : 1);
 
                 currentValue += Value * injuryModificator;
 
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+                protogonist.GetType().GetProperty(Name).SetValue(protogonist, currentValue);
             }
         }
     }
