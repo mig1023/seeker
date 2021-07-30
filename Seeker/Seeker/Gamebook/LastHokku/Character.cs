@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Seeker.Gamebook.LastHokku
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.LastHokku.Character();
+        public static Character Protagonist = new Character();
 
         public List<string> Hokku { get; set; }
 
