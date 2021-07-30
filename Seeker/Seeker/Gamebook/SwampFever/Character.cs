@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.SwampFever
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.SwampFever.Character();
+        public static Character Protagonist = new Character();
 
         private int _fury;
         public int Fury
@@ -114,8 +112,22 @@ namespace Seeker.Gamebook.SwampFever
             LiveMucus = this.LiveMucus,
         };
 
-        public override string Save() => String.Join("|", Fury, Creds, Stigon, Rate, Hitpoints, SecondEngine, Stealth, Radar,
-                CircularSaw, Flamethrower, PlasmaCannon, Harmonizer, AcousticMembrane, LiveMucus);
+        public override string Save() => String.Join("|",
+            Fury,
+            Creds,
+            Stigon,
+            Rate,
+            Hitpoints,
+            SecondEngine,
+            Stealth,
+            Radar,
+            CircularSaw,
+            Flamethrower,
+            PlasmaCannon,
+            Harmonizer,
+            AcousticMembrane,
+            LiveMucus
+        );
 
         public override void Load(string saveLine)
         {
