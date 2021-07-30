@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Seeker.Gamebook.SilentSchool
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
-        public static Character Protagonist = new Gamebook.SilentSchool.Character();
+        public static Character Protagonist = new Character();
 
         private int _life;
         public int Life
@@ -45,7 +42,13 @@ namespace Seeker.Gamebook.SilentSchool
             HarmSelfAlready = this.HarmSelfAlready,
         };
 
-        public override string Save() => String.Join("|", Life, Weapon,Grail, ChangeDecision, HarmSelfAlready);
+        public override string Save() => String.Join("|",
+            Life,
+            Weapon,
+            Grail,
+            ChangeDecision,
+            HarmSelfAlready
+        );
 
         public override void Load(string saveLine)
         {
