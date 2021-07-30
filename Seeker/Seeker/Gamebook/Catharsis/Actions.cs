@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 
 namespace Seeker.Gamebook.Catharsis
 {
@@ -55,28 +53,30 @@ namespace Seeker.Gamebook.Catharsis
 
             else
             {
+                Character hero = Character.Protagonist;
+
                 foreach (string oneOption in option.Split(','))
                 {
                     if (oneOption.Contains("="))
                     {
                         int level = Game.Other.LevelParse(oneOption);
 
-                        if (oneOption.Contains("СТЕЛС") && (level > Character.Protagonist.Stealth))
+                        if (oneOption.Contains("СТЕЛС") && (level > hero.Stealth))
                             return false;
 
-                        else if (oneOption.Contains("МЕТКОСТЬ") && (level > Character.Protagonist.Accuracy))
+                        else if (oneOption.Contains("МЕТКОСТЬ") && (level > hero.Accuracy))
                             return false;
 
-                        else if (oneOption.Contains("РУКОПАШКА") && (level > Character.Protagonist.Fight))
+                        else if (oneOption.Contains("РУКОПАШКА") && (level > hero.Fight))
                             return false;
 
-                        else if (oneOption.Contains("АУРА <") && (level <= Character.Protagonist.Aura))
+                        else if (oneOption.Contains("АУРА <") && (level <= hero.Aura))
                             return false;
 
-                        else if (oneOption.Contains("АУРА >") && (level > Character.Protagonist.Aura))
+                        else if (oneOption.Contains("АУРА >") && (level > hero.Aura))
                             return false;
 
-                        else if (oneOption.Contains("ЗДОРОВЬЕ") && (level > Character.Protagonist.Life))
+                        else if (oneOption.Contains("ЗДОРОВЬЕ") && (level > hero.Life))
                             return false;
                     }
                     else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
