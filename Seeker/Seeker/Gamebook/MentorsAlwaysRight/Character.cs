@@ -14,13 +14,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public int Strength
         {
             get => _strength;
-            set
-            {
-                if (value < 0)
-                    _strength = 0;
-                else
-                    _strength = value;
-            }
+            set => _strength = Game.Param.Setter(value);
         }
 
         private int _hitpoints;
@@ -28,54 +22,28 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public int Hitpoints
         {
             get => _hitpoints;
-            set
-            {
-                if (value < 0)
-                    _hitpoints = 0;
-                else if (value > MaxHitpoints)
-                    _hitpoints = MaxHitpoints;
-                else
-                    _hitpoints = value;
-            }
+            set => _hitpoints = Game.Param.Setter(value, max: MaxHitpoints);
         }
 
         private int _magicpoints;
         public int Magicpoints
         {
             get => _magicpoints;
-            set
-            {
-                if (value < 0)
-                    _magicpoints = 0;
-                else
-                    _magicpoints = value;
-            }
+            set => _magicpoints = Game.Param.Setter(value);
         }
 
         private int _transformation;
         public int Transformation
         {
             get => _transformation;
-            set
-            {
-                if (value < 0)
-                    _transformation = 0;
-                else
-                    _transformation = value;
-            }
+            set => _transformation = Game.Param.Setter(value);
         }
 
         private int _gold;
         public int Gold
         {
             get => _gold;
-            set
-            {
-                if (value < 0)
-                    _gold = 0;
-                else
-                    _gold = value;
-            }
+            set => _gold = Game.Param.Setter(value);
         }
 
         public List<string> Spells { get; set; }
