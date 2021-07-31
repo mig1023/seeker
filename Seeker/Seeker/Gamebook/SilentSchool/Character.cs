@@ -8,15 +8,9 @@ namespace Seeker.Gamebook.SilentSchool
 
         private int _life;
         public int Life
-    {
+        {
             get => _life;
-            set
-            {
-                if (value < 0)
-                    _life = 0;
-                else
-                    _life = value;
-            }
+            set => _life = Game.Param.Setter(value);
         }
 
         public string Weapon { get; set; }
