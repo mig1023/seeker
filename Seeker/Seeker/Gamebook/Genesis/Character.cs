@@ -11,15 +11,7 @@ namespace Seeker.Gamebook.Genesis
         public int Life
         {
             get => _life;
-            set
-            {
-                if (value > MaxLife)
-                    _life = MaxLife;
-                else if (value < 0)
-                    _life = 0;
-                else
-                    _life = value;
-            }
+            set => _life = Game.Param.Setter(value, max: MaxLife);
         }
 
         public int Aura { get; set; }
@@ -28,39 +20,21 @@ namespace Seeker.Gamebook.Genesis
         public int Skill
         {
             get => _skill;
-            set
-            {
-                if (value < 0)
-                    _skill = 0;
-                else
-                    _skill = value;
-            }
+            set => _skill = Game.Param.Setter(value);
         }
 
         private int _weapon;
         public int Weapon
         {
             get => _weapon;
-            set
-            {
-                if (value < 0)
-                    _weapon = 0;
-                else
-                    _weapon = value;
-            }
+            set => _weapon = Game.Param.Setter(value);
         }
 
         private int _stealth;
         public int Stealth
         {
             get => _stealth;
-            set
-            {
-                if (value < 0)
-                    _stealth = 0;
-                else
-                    _stealth = value;
-            }
+            set => _stealth = Game.Param.Setter(value);
         }
 
         public int Bonuses { get; set; }
