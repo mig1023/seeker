@@ -13,15 +13,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int Mastery
         {
             get => _mastery;
-            set
-            {
-                if (value > MaxMastery)
-                    _mastery = MaxMastery;
-                else if (value < 0)
-                    _mastery = 0;
-                else
-                    _mastery = value;
-            }
+            set => _mastery = Game.Param.Setter(value, max: MaxMastery);
         }
 
         private int _endurance;
@@ -29,15 +21,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int Endurance
         {
             get => _endurance;
-            set
-            {
-                if (value > MaxEndurance)
-                    _endurance = MaxEndurance;
-                else if (value < 0)
-                    _endurance = 0;
-                else
-                    _endurance = value;
-            }
+            set => _endurance = Game.Param.Setter(value, max: MaxEndurance);
         }
 
         public int Gold { get; set; }
