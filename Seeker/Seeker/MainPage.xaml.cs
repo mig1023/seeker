@@ -102,12 +102,15 @@ namespace Seeker
                 }
             }
 
-            Game.Option.Trigger(paragraph.Trigger);
-            Game.Option.Trigger(paragraph.RemoveTrigger, remove: true);
+            if (!loadGame && !reload)
+            {
+                Game.Option.Trigger(paragraph.Trigger);
+                Game.Option.Trigger(paragraph.RemoveTrigger, remove: true);
 
-            if (!reload && (paragraph.Modification != null) && (paragraph.Modification.Count > 0))
-                foreach(Abstract.IModification modification in paragraph.Modification)
-                    modification.Do();
+                if ((paragraph.Modification != null) && (paragraph.Modification.Count > 0))
+                    foreach (Abstract.IModification modification in paragraph.Modification)
+                        modification.Do();
+            }
 
             bool gameOver = false;
 
