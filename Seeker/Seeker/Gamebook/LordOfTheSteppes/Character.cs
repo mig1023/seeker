@@ -17,15 +17,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public int Attack
         {
             get => _attack;
-            set
-            {
-                if (value > MaxAttack)
-                    _attack = MaxAttack;
-                else if (value < 0)
-                    _attack = 0;
-                else
-                    _attack = value;
-            }
+            set => _attack = Game.Param.Setter(value, max: MaxAttack);
         }
 
         private int _defence;
@@ -33,15 +25,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public int Defence
         {
             get => _defence;
-            set
-            {
-                if (value > MaxDefence)
-                    _defence = MaxDefence;
-                else if (value < 0)
-                    _defence = 0;
-                else
-                    _defence = value;
-            }
+            set => _defence = Game.Param.Setter(value, max: MaxDefence);
         }
 
         private int _endurance;
@@ -49,15 +33,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public int Endurance
         {
             get => _endurance;
-            set
-            {
-                if (value > MaxEndurance)
-                    _endurance = MaxEndurance;
-                else if (value < 0)
-                    _endurance = 0;
-                else
-                    _endurance = value;
-            }
+            set => _endurance = Game.Param.Setter(value, max: MaxEndurance);
         }
 
         private int _initiative;
@@ -65,28 +41,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public int Initiative
         {
             get => _initiative;
-            set
-            {
-                if (value > MaxInitiative)
-                    _initiative = MaxInitiative;
-                else if (value < 0)
-                    _initiative = 0;
-                else
-                    _initiative = value;
-            }
+            set => _initiative = Game.Param.Setter(value, max: MaxInitiative);
         }
 
         private int _coins;
         public int Coins
         {
             get => _coins;
-            set
-            {
-                if (value < 0)
-                    _coins = 0;
-                else
-                    _coins = value;
-            }
+            set => _coins = Game.Param.Setter(value);
         }
 
         public FightStyles FightStyle { get; set; }
