@@ -13,15 +13,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public int Skill
         {
             get => _skill;
-            set
-            {
-                if (value > MaxSkill)
-                    _skill = MaxSkill;
-                else if (value < 0)
-                    _skill = 0;
-                else
-                    _skill = value;
-            }
+            set => _skill = Game.Param.Setter(value, max: MaxSkill);
         }
 
         private int _strength;
@@ -29,15 +21,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public int Strength
         {
             get => _strength;
-            set
-            {
-                if (value > MaxStrength)
-                    _strength = MaxStrength;
-                else if (value < 0)
-                    _strength = 0;
-                else
-                    _strength = value;
-            }
+            set => _strength = Game.Param.Setter(value, max: MaxStrength);
         }
 
         private int _charm;
@@ -57,39 +41,21 @@ namespace Seeker.Gamebook.PrairieLaw
         public int Cents
         {
             get => _cents;
-            set
-            {
-                if (value < 0)
-                    _cents = 0;
-                else
-                    _cents = value;
-            }
+            set => _cents = Game.Param.Setter(value);
         }
-        
+
         private int _nuggets;
         public int Nuggets
         {
             get => _nuggets;
-            set
-            {
-                if (value < 0)
-                    _nuggets = 0;
-                else
-                    _nuggets = value;
-            }
+            set => _nuggets = Game.Param.Setter(value);
         }
-        
+
         private int _cartridges;
         public int Cartridges
         {
             get => _cartridges;
-            set
-            {
-                if (value < 0)
-                    _cartridges = 0;
-                else
-                    _cartridges = value;
-            }
+            set => _cartridges = Game.Param.Setter(value);
         }
 
         public Dictionary<int, bool> Luck { get; set; }
