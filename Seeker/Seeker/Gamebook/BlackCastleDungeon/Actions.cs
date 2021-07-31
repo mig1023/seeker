@@ -7,7 +7,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
-        private static Character protogonist = protogonist;
+        private static Character protogonist = Character.Protagonist;
 
         public List<Character> Enemies { get; set; }
         public int RoundsToWin { get; set; }

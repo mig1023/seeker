@@ -7,7 +7,7 @@ namespace Seeker.Gamebook.SwampFever
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
-        private static Character protogonist = protogonist;
+        private static Character protogonist = Character.Protagonist;
 
         public string EnemyName { get; set; }
         public string EnemyCombination { get; set; }
