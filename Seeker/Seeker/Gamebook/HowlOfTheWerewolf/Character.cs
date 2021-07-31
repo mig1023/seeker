@@ -11,15 +11,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int Mastery
         {
             get => _mastery;
-            set
-            {
-                if (value > MaxMastery)
-                    _mastery = MaxMastery;
-                else if (value < 0)
-                    _mastery = 0;
-                else
-                    _mastery = value;
-            }
+            set => _mastery = Game.Param.Setter(value, max: MaxMastery);
         }
 
         private int _endurance;
@@ -27,15 +19,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int Endurance
         {
             get => _endurance;
-            set
-            {
-                if (value > MaxEndurance)
-                    _endurance = MaxEndurance;
-                else if (value < 0)
-                    _endurance = 0;
-                else
-                    _endurance = value;
-            }
+            set => _endurance = Game.Param.Setter(value, max: MaxEndurance);
         }
 
         private int _luck;
@@ -43,15 +27,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int Luck
         {
             get => _luck;
-            set
-            {
-                if (value > MaxLuck)
-                    _luck = MaxLuck;
-                else if (value < 0)
-                    _luck = 0;
-                else
-                    _luck = value;
-            }
+            set => _luck = Game.Param.Setter(value, max: MaxLuck);
         }
 
         private int _change;
@@ -73,65 +49,35 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int Gold
         {
             get => _gold;
-            set
-            {
-                if (value < 0)
-                    _gold = 0;
-                else
-                    _gold = value;
-            }
+            set => _gold = Game.Param.Setter(value);
         }
 
         private int _anxiety;
         public int Anxiety
         {
             get => _anxiety;
-            set
-            {
-                if (value < 0)
-                    _anxiety = 0;
-                else
-                    _anxiety = value;
-            }
+            set => _anxiety = Game.Param.Setter(value);
         }
 
         private int _crossbow;
         public int Crossbow
         {
             get => _crossbow;
-            set
-            {
-                if (value < 0)
-                    _crossbow = 0;
-                else
-                    _crossbow = value;
-            }
+            set => _crossbow = Game.Param.Setter(value);
         }
-        
+
         private int _gun;
         public int Gun
         {
             get => _gun;
-            set
-            {
-                if (value < 0)
-                    _gun = 0;
-                else
-                    _gun = value;
-            }
+            set => _gun = Game.Param.Setter(value);
         }
 
         private int _vanrichten;
         public int VanRichten
         {
             get => _vanrichten;
-            set
-            {
-                if (value < 0)
-                    _vanrichten = 0;
-                else
-                    _vanrichten = value;
-            }
+            set => _vanrichten = Game.Param.Setter(value);
         }
 
         public int WayBack { get; set; }
