@@ -10,90 +10,42 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public int Strength
         {
             get => _strength;
-            set
-            {
-                if (value > 12)
-                    _strength = 12;
-                else if (value < 0)
-                    _strength = 0;
-                else
-                    _strength = value;
-            }
+            set => _strength = Game.Param.Setter(value, max: 12);
         }
 
         private int _skill;
         public int Skill
         {
             get => _skill;
-            set
-            {
-                if (value > 12)
-                    _skill = 12;
-                else if (value < 0)
-                    _skill = 0;
-                else
-                    _skill = value;
-            }
+            set => _skill = Game.Param.Setter(value, max: 12);
         }
 
         private int _wisdom;
         public int Wisdom
         {
             get => _wisdom;
-            set
-            {
-                if (value > 12)
-                    _wisdom = 12;
-                else if (value < 0)
-                    _wisdom = 0;
-                else
-                    _wisdom = value;
-            }
+            set => _wisdom = Game.Param.Setter(value, max: 12);
         }
 
         private int _cunning;
         public int Cunning
         {
             get => _cunning;
-            set
-            {
-                if (value > 12)
-                    _cunning = 12;
-                else if (value < 0)
-                    _cunning = 0;
-                else
-                    _cunning = value;
-            }
+            set => _cunning = Game.Param.Setter(value, max: 12);
         }
 
         private int _oratory;
         public int Oratory
         {
             get => _oratory;
-            set
-            {
-                if (value > 12)
-                    _oratory = 12;
-                else if (value < 0)
-                    _oratory = 0;
-                else
-                    _oratory = value;
-            }
+            set => _oratory = Game.Param.Setter(value, max: 12);
         }
 
         private int _popularity;
         public int Popularity
         {
             get => _popularity;
-            set
-            {
-                if (value > 12)
-                    _popularity = 12;
-                else if (value < 0)
-                    _popularity = 0;
-                else
-                    _popularity = value;
-            }
+            set => _popularity = Game.Param.Setter(value, max: 12);
         }
 
         public int Kumis { get; set; }
