@@ -25,28 +25,14 @@ namespace Seeker.Gamebook.SwampFever
         public int Creds
         {
             get => _creds;
-            set
-            {
-                if (value < 0)
-                    _creds = 0;
-                else
-                    _creds = value;
-            }
+            set => _creds = Game.Param.Setter(value);
         }
 
         private int _stigon;
         public int Stigon
         {
             get => _stigon;
-            set
-            {
-                if (value < 0)
-                    _stigon = 0;
-                else if (value > 6)
-                    _stigon = 6;
-                else
-                    _stigon = value;
-            }
+            set => _stigon = Game.Param.Setter(value, max: 6);
         }
 
         private int _rate;
