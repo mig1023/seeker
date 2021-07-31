@@ -10,148 +10,70 @@ namespace Seeker.Gamebook.VWeapons
         public int Suspicions
         {
             get => _suspicions;
-            set
-            {
-                if (value > 5)
-                    _suspicions = 5;
-                else if (value < 0)
-                    _suspicions = 0;
-                else
-                    _suspicions = value;
-            }
+            set => _suspicions = Game.Param.Setter(value, max: 5);
         }
 
         private int _time;
         public int Time
         {
             get => _time;
-            set
-            {
-                if (value > 12)
-                    _time = 12;
-                else if (value < 0)
-                    _time = 0;
-                else
-                    _time = value;
-            }
+            set => _time = Game.Param.Setter(value, max: 12);
         }
 
         private int _accuracy;
         public int Accuracy
         {
             get => _accuracy;
-            set
-            {
-                if (value > 5)
-                    _accuracy = 5;
-                else if (value < 0)
-                    _accuracy = 0;
-                else
-                    _accuracy = value;
-            }
+            set => _accuracy = Game.Param.Setter(value, max: 5);
         }
 
         private int _cartridges;
         public int Cartridges
         {
             get => _cartridges;
-            set
-            {
-                if (value > 8)
-                    _cartridges = 8;
-                else if (value < 0)
-                    _cartridges = 0;
-                else
-                    _cartridges = value;
-            }
+            set => _cartridges = Game.Param.Setter(value, max: 8);
         }
 
         private int _head;
         public int Head
         {
             get => _head;
-            set
-            {
-                if (value > 3)
-                    _head = 3;
-                else if (value < 0)
-                    _head = 0;
-                else
-                    _head = value;
-            }
+            set => _head = Game.Param.Setter(value, max: 3);
         }
 
         private int _shoulderGirdle;
-        public int ShoulderGirdle 
+        public int ShoulderGirdle
         {
             get => _shoulderGirdle;
-            set
-            {
-                if (value > 4)
-                    _shoulderGirdle = 4;
-                else if (value < 0)
-                    _shoulderGirdle = 0;
-                else
-                    _shoulderGirdle = value;
-            }
+            set => _shoulderGirdle = Game.Param.Setter(value, max: 4);
         }
 
         private int _body;
         public int Body
         {
             get => _body;
-            set
-            {
-                if (value > 4)
-                    _body = 4;
-                else if (value < 0)
-                    _body = 0;
-                else
-                    _body = value;
-            }
+            set => _body = Game.Param.Setter(value, max: 4);
         }
 
         private int _hands;
         public int Hands
         {
             get => _hands;
-            set
-            {
-                if (value > 4)
-                    _hands = 4;
-                else if (value < 0)
-                    _hands = 0;
-                else
-                    _hands = value;
-            }
+            set => _hands = Game.Param.Setter(value, max: 4);
         }
 
         private int _legs;
         public int Legs
         {
             get => _legs;
-            set
-            {
-                if (value > 4)
-                    _legs = 4;
-                else if (value < 0)
-                    _legs = 0;
-                else
-                    _legs = value;
-            }
+            set => _legs = Game.Param.Setter(value, max: 4);
         }
 
         private int _hitpoints;
         public int Hitpoints
         {
             get => _hitpoints;
-            set
-            {
-                if (value < 0)
-                    _hitpoints = 0;
-                else
-                    _hitpoints = value;
-            }
+            set => _hitpoints = Game.Param.Setter(value);
         }
 
         public bool First { get; set; }
