@@ -12,54 +12,28 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int Strength
         {
             get => _strength;
-            set
-            {
-                if (value < 0)
-                    _strength = 0;
-                else
-                    _strength = value;
-            }
+            set => _strength = Game.Param.Setter(value);
         }
 
         private int _hitpoints;
         public int Hitpoints
         {
             get => _hitpoints;
-            set
-            {
-                if (value < 0)
-                    _hitpoints = 0;
-                else if (value > 30)
-                    _hitpoints = 30;
-                else
-                    _hitpoints = value;
-            }
+            set => _hitpoints = Game.Param.Setter(value, max: 30);
         }
 
         private int _magicpoints;
         public int Magicpoints
         {
             get => _magicpoints;
-            set
-            {
-                if (value < 0)
-                    _magicpoints = 0;
-                else
-                    _magicpoints = value;
-            }
+            set => _magicpoints = Game.Param.Setter(value);
         }
 
         private int _gold;
         public int Gold
         {
             get => _gold;
-            set
-            {
-                if (value < 0)
-                    _gold = 0;
-                else
-                    _gold = value;
-            }
+            set => _gold = Game.Param.Setter(value);
         }
 
         public int Footwraps { get; set; }
@@ -70,27 +44,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int ConneryHitpoints
         {
             get => _conneryHitpoints;
-            set
-            {
-                if (value < 0)
-                    _conneryHitpoints = 0;
-                else if (value > 30)
-                    _conneryHitpoints = 30;
-                else
-                    _conneryHitpoints = value;
-            }
+            set => _conneryHitpoints = Game.Param.Setter(value, max: 30);
         }
+
         private int _conneryTrust;
         public int ConneryTrust
         {
             get => _conneryTrust;
-            set
-            {
-                if (value < 0)
-                    _conneryTrust = 0;
-                else
-                    _conneryTrust = value;
-            }
+            set => _conneryTrust = Game.Param.Setter(value);
         }
 
         public SpecializationType Specialization { get; set; }
