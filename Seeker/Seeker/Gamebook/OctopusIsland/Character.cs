@@ -10,15 +10,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public int SergeHitpoint
         {
             get => _sergeHitpoint;
-            set
-            {
-                if (value < 0)
-                    _sergeHitpoint = 0;
-                else if (value > 20)
-                    _sergeHitpoint = 20;
-                else
-                    _sergeHitpoint = value;
-            }
+            set => _sergeHitpoint = Game.Param.Setter(value, max: 20);
         }
 
         public int SergeSkill { get; set; }
@@ -27,15 +19,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public int XolotlHitpoint
         {
             get => _xolotlHitpoint;
-            set
-            {
-                if (value < 0)
-                    _xolotlHitpoint = 0;
-                else if (value > 20)
-                    _xolotlHitpoint = 20;
-                else
-                    _xolotlHitpoint = value;
-            }
+            set => _xolotlHitpoint = Game.Param.Setter(value, max: 20);
         }
 
         public int XolotlSkill { get; set; }
@@ -44,15 +28,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public int ThibautHitpoint
         {
             get => _thibautHitpoint;
-            set
-            {
-                if (value < 0)
-                    _thibautHitpoint = 0;
-                else if (value > 20)
-                    _thibautHitpoint = 20;
-                else
-                    _thibautHitpoint = value;
-            }
+            set => _thibautHitpoint = Game.Param.Setter(value, max: 20);
         }
 
         public int ThibautSkill { get; set; }
@@ -61,15 +37,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public int SouhiHitpoint
         {
             get => _souhiHitpoint;
-            set
-            {
-                if (value < 0)
-                    _souhiHitpoint = 0;
-                else if (value > 20)
-                    _souhiHitpoint = 20;
-                else
-                    _souhiHitpoint = value;
-            }
+            set => _souhiHitpoint = Game.Param.Setter(value, max: 20);
         }
 
         public int SouhiSkill { get; set; }
@@ -81,13 +49,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public int Hitpoint
         {
             get => _hitpoint;
-            set
-            {
-                if (value < 0)
-                    _hitpoint = 0;
-                else
-                    _hitpoint = value;
-            }
+            set => _hitpoint = Game.Param.Setter(value);
         }
 
         public int Skill { get; set; }
