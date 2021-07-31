@@ -13,15 +13,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public int Skill
         {
             get => _skill;
-            set
-            {
-                if (value > MaxSkill)
-                    _skill = MaxSkill;
-                else if (value < 0)
-                    _skill = 0;
-                else
-                    _skill = value;
-            }
+            set => _skill = Game.Param.Setter(value, max: MaxSkill);
         }
 
         private int _strength;
@@ -29,15 +21,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public int Strength
         {
             get => _strength;
-            set
-            {
-                if (value > MaxStrength)
-                    _strength = MaxStrength;
-                else if (value < 0)
-                    _strength = 0;
-                else
-                    _strength = value;
-            }
+            set => _strength = Game.Param.Setter(value, max: MaxStrength);
         }
 
         private int _charm;
