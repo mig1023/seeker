@@ -33,5 +33,7 @@ namespace Seeker.Gamebook.Catharsis
         };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 401, 402 };
+
+        public override bool ShowDisabledOption() => true;
     }
 }
