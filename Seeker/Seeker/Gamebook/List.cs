@@ -480,6 +480,7 @@ namespace Seeker.Gamebook
                 SmallDisclaimer = "Александр Андросенко, 2018",
                 BookColor = "#cabd66",
                 Illustration = "YounglingTournament.jpg",
+                ShowDisabledOption = true,
             },
         };
 
