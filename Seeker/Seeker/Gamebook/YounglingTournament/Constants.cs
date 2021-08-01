@@ -15,5 +15,7 @@ namespace Seeker.Gamebook.YounglingTournament
         {
             [ButtonTypes.Main] = "#cabd66",
         };
+
+        public override bool ShowDisabledOption() => true;
     }
 }
