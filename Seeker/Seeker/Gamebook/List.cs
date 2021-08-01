@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Seeker.Gamebook
 {
@@ -82,7 +80,6 @@ namespace Seeker.Gamebook
                 SmallDisclaimer = "Владимир Сизиков, 2016",
                 BookColor = "#533818",
                 Illustration = "DzungarWar.jpg",
-                ShowDisabledOption = true,
             },
 
             ["Скала ужаса"] = new Description
@@ -238,7 +235,6 @@ namespace Seeker.Gamebook
                 BookColor = "#fcdd76",
                 FontColor = "#000000",
                 Illustration = "ThoseWhoAreAboutToDie.jpg",
-                ShowDisabledOption = true,
             },
 
             ["Остров Осьминогов"] = new Description
@@ -287,7 +283,6 @@ namespace Seeker.Gamebook
                 BookColor = "#ebd5b3",
                 FontColor = "#000000",
                 Illustration = "BloodfeudOfAltheus.jpg",
-                ShowDisabledOption = true,
             },
 
             ["Симулятор пенсионерки"] = new Description
@@ -353,7 +348,6 @@ namespace Seeker.Gamebook
                 FullDisclaimer = "Авторы: Дэйв Моррис\n\nПереводчики: Мария Ерошкина, Ageres, Jumangee, Vo1t, Fermalion, Johny Lee и другие",
                 BookColor = "#418988",
                 Illustration = "HeartOfIce.jpg",
-                ShowDisabledOption = true,
             },
 
             ["Крыса из нержавеющей стали"] = new Description
@@ -401,7 +395,6 @@ namespace Seeker.Gamebook
                 SmallDisclaimer = "Андрей Журавлёв, 2013",
                 BookColor = "#202b41",
                 Illustration = "Genesis.jpg",
-                ShowDisabledOption = true,
             },
             
             ["Катарсис"] = new Description
@@ -417,7 +410,6 @@ namespace Seeker.Gamebook
                 SmallDisclaimer = "Андрей Журавлёв, 2013",
                 BookColor = "#51514b",
                 Illustration = "Catharsis.jpg",
-                ShowDisabledOption = true,
             },         
             
             ["По закону прерии"] = new Description
@@ -480,7 +472,6 @@ namespace Seeker.Gamebook
                 SmallDisclaimer = "Александр Андросенко, 2018",
                 BookColor = "#cabd66",
                 Illustration = "YounglingTournament.jpg",
-                ShowDisabledOption = true,
             },
         };
 
