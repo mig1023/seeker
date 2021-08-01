@@ -22,5 +22,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             [ColorTypes.StatusBar] = "#fce391",
             [ColorTypes.StatusFont] = "#000000",
         };
+
+        public override bool ShowDisabledOption() => true;
     }
 }
