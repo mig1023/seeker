@@ -36,5 +36,7 @@ namespace Seeker.Gamebook.DzungarWar
             ["Oratory"] = "красноречия",
             ["Danger"] = "опасности",
         };
+
+        public override bool ShowDisabledOption() => true;
     }
 }
