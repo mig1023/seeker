@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml;
 using Xamarin.Forms;
 
@@ -34,7 +32,6 @@ namespace Seeker.Game
             Game.Data.Save = gamebook.Save;
             Game.Data.Load = gamebook.Load;
             Game.Data.CheckOnlyIf = gamebook.CheckOnlyIf;
-            Game.Data.ShowDisabledOption = gamebook.ShowDisabledOption;
         }
 
         public static string Сomparison(int a, int b)

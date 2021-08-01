@@ -1,10 +1,5 @@
-﻿using Android.Content.Res;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Xml;
-using Xamarin.Forms;
 
 namespace Seeker.Game
 {
@@ -26,7 +21,6 @@ namespace Seeker.Game
 
         public static Paragraph CurrentParagraph { get; set; }
         public static int CurrentParagraphID { get; set; }
-        public static bool ShowDisabledOption { get; set; }
 
         public static Dictionary<int, XmlNode> XmlParagraphs = new Dictionary<int, XmlNode>();
 
@@ -51,8 +45,6 @@ namespace Seeker.Game
             Constants = null;
             Protagonist = null;
             CheckOnlyIf = null;
-
-            ShowDisabledOption = false;
         }
     }
 }

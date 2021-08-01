@@ -17,5 +17,7 @@ namespace Seeker.Abstract
         double? GetLineHeight();
 
         List<int> GetParagraphsWithoutStatuses();
+
+        bool ShowDisabledOption();
     }
 }

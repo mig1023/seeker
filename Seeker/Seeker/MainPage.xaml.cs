@@ -155,7 +155,7 @@ namespace Seeker
 
             foreach (Game.Option option in paragraph.Options)
             {
-                bool mustBeVisible = Game.Data.ShowDisabledOption || !String.IsNullOrEmpty(option.Aftertext);
+                bool mustBeVisible = Game.Data.Constants.ShowDisabledOption() || !String.IsNullOrEmpty(option.Aftertext);
 
                 if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf) && !mustBeVisible)
                     continue;

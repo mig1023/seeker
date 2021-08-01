@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-
 using static Seeker.Output.Buttons;
 using static Seeker.Game.Data;
 
@@ -24,5 +22,7 @@ namespace Seeker.Prototypes
         public virtual double? GetLineHeight() => null;
 
         public virtual List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
+
+        public virtual bool ShowDisabledOption() => false;
     }
 }
