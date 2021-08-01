@@ -37,5 +37,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             [2] = "ранен",
             [3] = "здоров",
         };
+
+        public override bool ShowDisabledOption() => true;
     }
 }
