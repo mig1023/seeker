@@ -19,5 +19,16 @@ namespace Seeker.Gamebook.OctopusIsland
         {
             [ColorTypes.StatusBar] = "#ce4f36",
         };
+
+        public static Links GetLinks() => new Links
+        {
+            Protagonist = Character.Protagonist.Init,
+            CheckOnlyIf = Actions.StaticInstance.CheckOnlyIf,
+            Paragraphs = Paragraphs.StaticInstance,
+            Actions = Actions.StaticInstance,
+            Constants = StaticInstance,
+            Save = Character.Protagonist.Save,
+            Load = Character.Protagonist.Load,
+        };
     }
 }
