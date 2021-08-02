@@ -28,5 +28,16 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 556, 557, 558, 559 };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 556, 557, 558, 559 };
+
+        public static Links GetLinks() => new Links
+        {
+            Protagonist = Character.Protagonist.Init,
+            CheckOnlyIf = Actions.StaticInstance.CheckOnlyIf,
+            Paragraphs = Paragraphs.StaticInstance,
+            Actions = Actions.StaticInstance,
+            Constants = StaticInstance,
+            Save = Character.Protagonist.Save,
+            Load = Character.Protagonist.Load,
+        };
     }
 }
