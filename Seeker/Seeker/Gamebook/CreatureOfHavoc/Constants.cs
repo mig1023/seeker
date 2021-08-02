@@ -21,5 +21,16 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             [ColorTypes.Background] = "#c9d7d0",
             [ColorTypes.StatusBar] = "#0e3b24",
         };
+
+        public static Links GetLinks() => new Links
+        {
+            Protagonist = Character.Protagonist.Init,
+            CheckOnlyIf = Actions.StaticInstance.CheckOnlyIf,
+            Paragraphs = Paragraphs.StaticInstance,
+            Actions = Actions.StaticInstance,
+            Constants = StaticInstance,
+            Save = Character.Protagonist.Save,
+            Load = Character.Protagonist.Load,
+        };
     }
 }
