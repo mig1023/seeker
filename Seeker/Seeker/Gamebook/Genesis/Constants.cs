@@ -34,5 +34,16 @@ namespace Seeker.Gamebook.Genesis
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 201, 202, 203, 204, 205, 206, 207 };
 
         public override bool ShowDisabledOption() => true;
+
+        public static Links GetLinks() => new Links
+        {
+            Protagonist = Character.Protagonist.Init,
+            CheckOnlyIf = Actions.StaticInstance.CheckOnlyIf,
+            Paragraphs = Paragraphs.StaticInstance,
+            Actions = Actions.StaticInstance,
+            Constants = StaticInstance,
+            Save = Character.Protagonist.Save,
+            Load = Character.Protagonist.Load,
+        };
     }
 }
