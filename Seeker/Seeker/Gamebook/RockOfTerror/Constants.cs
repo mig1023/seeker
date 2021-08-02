@@ -22,5 +22,16 @@ namespace Seeker.Gamebook.RockOfTerror
             [ColorTypes.Font] = "#FFFFFF",
             [ColorTypes.StatusBar] = "#151515",
         };
+
+        public static Links GetLinks() => new Links
+        {
+            Protagonist = Character.Protagonist.Init,
+            CheckOnlyIf = Actions.StaticInstance.CheckOnlyIf,
+            Paragraphs = Paragraphs.StaticInstance,
+            Actions = Actions.StaticInstance,
+            Constants = StaticInstance,
+            Save = Character.Protagonist.Save,
+            Load = Character.Protagonist.Load,
+        };
     }
 }
