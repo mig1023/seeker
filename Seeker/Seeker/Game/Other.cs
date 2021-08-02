@@ -25,13 +25,13 @@ namespace Seeker.Game
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("Paragraphs/Paragraph"))
                 Game.Data.XmlParagraphs.Add(Game.Xml.IntParse(xmlNode["ID"]), xmlNode);
 
-            Game.Data.Paragraphs = gamebook.Paragraphs;
-            Game.Data.Actions = gamebook.Actions;
-            Game.Data.Constants = gamebook.Constants;
-            Game.Data.Protagonist = gamebook.Protagonist;
-            Game.Data.Save = gamebook.Save;
-            Game.Data.Load = gamebook.Load;
-            Game.Data.CheckOnlyIf = gamebook.CheckOnlyIf;
+            Game.Data.Paragraphs = gamebook.Links.Paragraphs;
+            Game.Data.Actions = gamebook.Links.Actions;
+            Game.Data.Constants = gamebook.Links.Constants;
+            Game.Data.Protagonist = gamebook.Links.Protagonist;
+            Game.Data.Save = gamebook.Links.Save;
+            Game.Data.Load = gamebook.Links.Load;
+            Game.Data.CheckOnlyIf = gamebook.Links.CheckOnlyIf;
         }
 
         public static string Сomparison(int a, int b)

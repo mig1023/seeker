@@ -30,10 +30,10 @@ namespace Seeker.Game
         public static Abstract.IActions Actions;
         public static Abstract.IConstants Constants;
 
-        public static Gamebook.Description.ProtagonistMethod Protagonist;
-        public static Gamebook.Description.CheckOnlyIfMethod CheckOnlyIf;
-        public static Gamebook.Description.SaveMethod Save;
-        public static Gamebook.Description.LoadMethod Load;
+        public static Gamebook.Links.ProtagonistMethod Protagonist;
+        public static Gamebook.Links.CheckOnlyIfMethod CheckOnlyIf;
+        public static Gamebook.Links.SaveMethod Save;
+        public static Gamebook.Links.LoadMethod Load;
 
         public static void Clean()
         {
