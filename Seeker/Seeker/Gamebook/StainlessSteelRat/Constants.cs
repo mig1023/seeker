@@ -20,5 +20,16 @@ namespace Seeker.Gamebook.StainlessSteelRat
         };
 
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
+
+        public static Links GetLinks() => new Links
+        {
+            Protagonist = Character.Protagonist.Init,
+            CheckOnlyIf = Actions.StaticInstance.CheckOnlyIf,
+            Paragraphs = Paragraphs.StaticInstance,
+            Actions = Actions.StaticInstance,
+            Constants = StaticInstance,
+            Save = Character.Protagonist.Save,
+            Load = Character.Protagonist.Load,
+        };
     }
 }
