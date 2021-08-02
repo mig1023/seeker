@@ -24,5 +24,16 @@ namespace Seeker.Gamebook.InvisibleFront
         };
 
         public static List<string> GetApartments() => new List<string> { "один", "два", "три", "один", "два", "три" };
+
+        public static Links GetLinks() => new Links
+        {
+            Protagonist = Character.Protagonist.Init,
+            CheckOnlyIf = Actions.StaticInstance.CheckOnlyIf,
+            Paragraphs = Paragraphs.StaticInstance,
+            Actions = Actions.StaticInstance,
+            Constants = StaticInstance,
+            Save = Character.Protagonist.Save,
+            Load = Character.Protagonist.Load,
+        };
     }
 }
