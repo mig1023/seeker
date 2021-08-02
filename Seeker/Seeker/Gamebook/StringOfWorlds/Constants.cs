@@ -22,8 +22,10 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             if ((type == ButtonTypes.Border) || (type == ButtonTypes.Continue))
                 return String.Empty;
+
             else if (type == ButtonTypes.Font)
                 return СontrastColor(LastColor);
+
             else
                 return NextColor();
         }
@@ -140,6 +142,17 @@ namespace Seeker.Gamebook.StringOfWorlds
             [14] = "❹",
             [15] = "❺",
             [16] = "❻",
+        };
+
+        public static Links GetLinks() => new Links
+        {
+            Protagonist = Character.Protagonist.Init,
+            CheckOnlyIf = Actions.StaticInstance.CheckOnlyIf,
+            Paragraphs = Paragraphs.StaticInstance,
+            Actions = Actions.StaticInstance,
+            Constants = StaticInstance,
+            Save = Character.Protagonist.Save,
+            Load = Character.Protagonist.Load,
         };
     }
 }
