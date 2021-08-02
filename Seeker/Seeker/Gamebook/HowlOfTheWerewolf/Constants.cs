@@ -44,5 +44,16 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public static int GetUlrichMastery() => 8;
 
         public static int GetVanRichtenMastery() => 10;
+
+        public static Links GetLinks() => new Links
+        {
+            Protagonist = Character.Protagonist.Init,
+            CheckOnlyIf = Actions.StaticInstance.CheckOnlyIf,
+            Paragraphs = Paragraphs.StaticInstance,
+            Actions = Actions.StaticInstance,
+            Constants = StaticInstance,
+            Save = Character.Protagonist.Save,
+            Load = Character.Protagonist.Load,
+        };
     }
 }
