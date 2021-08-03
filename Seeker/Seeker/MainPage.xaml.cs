@@ -123,9 +123,7 @@ namespace Seeker
                     if (action.Name == "Option")
                     {
                         Action.Children.Add(AddOptionButton(action.Option, ref gameOver));
-
-                        if (!String.IsNullOrEmpty(action.Option.Aftertext))
-                            Action.Children.Add(Output.Interface.Text(action.Option.Aftertext));
+                        AddAftertext(ref Action, action.Option.Aftertext);
                     } 
                     else
                     {
@@ -143,8 +141,7 @@ namespace Seeker
                         Game.Router.AddAction(action.Button, index);
                         Game.Router.AddActionsPlaces(index, actionPlace);
 
-                        if (!String.IsNullOrEmpty(action.Aftertext))
-                            Action.Children.Add(Output.Interface.Text(action.Aftertext));
+                        AddAftertext(ref Action, action.Aftertext);
                     }
 
                     index += 1;
@@ -167,8 +164,7 @@ namespace Seeker
                 if (!String.IsNullOrEmpty(option.Input))
                     Options.Children.Add(AddInputField(option, button));
 
-                if (!String.IsNullOrEmpty(option.Aftertext))
-                    Options.Children.Add(Output.Interface.Text(option.Aftertext));
+                AddAftertext(ref Options, option.Aftertext);
 
                 optionCount += 1;
             }
@@ -198,6 +194,12 @@ namespace Seeker
 
             if (id != Game.Data.StartParagraph)
                 Game.Continue.Save();
+        }
+
+        private void AddAftertext(ref StackLayout layout, string text)
+        {
+            if (!String.IsNullOrEmpty(text))
+                layout.Children.Add(Output.Interface.Text(text));
         }
 
         private Entry AddInputField(Game.Option option, object button)
