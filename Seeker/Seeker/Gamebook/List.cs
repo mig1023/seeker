@@ -290,7 +290,7 @@ namespace Seeker.Gamebook
                 XmlBook = "Gamebooks/YounglingTournament.xml",
                 Links = YounglingTournament.Constants.GetLinks(),
                 SmallDisclaimer = "Александр Андросенко, 2018",
-                BookColor = "#cabd66",
+                BookColor = "#d6c078",
                 Illustration = "YounglingTournament.jpg",
             },
         };

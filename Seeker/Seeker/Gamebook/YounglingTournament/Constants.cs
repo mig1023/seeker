@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using static Seeker.Output.Buttons;
+using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.YounglingTournament
 {
@@ -9,7 +10,13 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#cabd66",
+            [ButtonTypes.Main] = "#d6c078",
+        };
+
+        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
+        {
+            [ColorTypes.StatusBar] = "#e8d17e",
+            [ColorTypes.StatusFont] = "#000000",
         };
 
         public override bool ShowDisabledOption() => true;
