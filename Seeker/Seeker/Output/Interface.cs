@@ -316,9 +316,9 @@ namespace Seeker.Output
             }
         }
 
-        public static Label Text(Text text)
+        public static ExtendedLabel Text(Text text)
         {
-            Label label = Text(text.Content);
+            ExtendedLabel label = Text(text.Content);
 
             if (text.Bold)
                 label.FontFamily = TextFontFamily(bold: true);
@@ -334,14 +334,17 @@ namespace Seeker.Output
             return label;
         }
 
-        public static Label Text(string text, bool defaultParams = false)
+        public static ExtendedLabel Text(string text, bool defaultParams = false)
         {
-            Label label = new Label
+            bool justyfy = (defaultParams ? false : Game.Data.Constants.JustifyText());
+
+            ExtendedLabel label = new ExtendedLabel
             {
                 Margin = Constants.TEXT_LABEL_MARGIN,
                 FontSize = FontSize(defaultParams ? TextFontSize.normal : TextFontSize.little),
                 Text = System.Text.RegularExpressions.Regex.Unescape(text),
                 FontFamily = TextFontFamily(),
+                JustifyText = justyfy,
             };
 
             if (defaultParams)
