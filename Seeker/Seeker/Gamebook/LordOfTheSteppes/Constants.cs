@@ -25,6 +25,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public override double? GetLineHeight() => 1.20;
 
+        public override bool JustifyText() => true;
+
         public static Dictionary<string, int> GetStartValues() => new Dictionary<string, int>
         {
             ["Attack"] = 8,
