@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace Seeker.Game
 {
-    class Other
+    public class Other
     {
         public static void GameLoad(string name)
         {

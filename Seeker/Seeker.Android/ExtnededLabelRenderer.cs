@@ -1,31 +1,22 @@
 ﻿using Android.Content;
 using Seeker.Output;
+using Seeker.Game;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer(typeof(ExtendedLabel), typeof(Saplin.CPDT.Droid.ExtnededLabelRenderer))]
-namespace Saplin.CPDT.Droid
+[assembly: ExportRenderer(typeof(ExtendedLabel), typeof(Seeker.Droid.ExtnededLabelRenderer))]
+namespace Seeker.Droid
 {
-    public class ExtnededLabelRenderer : Xamarin.Forms.Platform.Android.LabelRenderer
+    public class ExtnededLabelRenderer : LabelRenderer
     {
-        public ExtnededLabelRenderer(Context context) : base(context)
-        {
-        }
+        public ExtnededLabelRenderer(Context context) : base(context) => Other.DoNothing();
 
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
         {
             base.OnElementChanged(e);
 
-            var el = (Element as ExtendedLabel);
-
-            if (el != null && el.JustifyText)
-            {
-                if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.O)
-                {
-                    Control.JustificationMode = Android.Text.JustificationMode.InterWord;
-                }
-
-            }
+            if ((Element != null) && (Element as ExtendedLabel).JustifyText && (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.O))
+                Control.JustificationMode = Android.Text.JustificationMode.InterWord;
         }
     }
 }

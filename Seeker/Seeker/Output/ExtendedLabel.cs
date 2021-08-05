@@ -5,19 +5,13 @@ namespace Seeker.Output
 {
     public class ExtendedLabel : Label
     {
-        public static readonly BindableProperty JustifyTextProperty =
-            BindableProperty.Create(
-                propertyName: nameof(JustifyText),
-                returnType: typeof(Boolean),
-                declaringType: typeof(ExtendedLabel),
-                defaultValue: false,
-                defaultBindingMode: BindingMode.OneWay
-            );
+        public static BindableProperty JustifyTextProperty =
+            BindableProperty.Create(nameof(JustifyText), typeof(Boolean), typeof(ExtendedLabel), false, BindingMode.OneWay);
 
         public bool JustifyText
         {
-            get { return (Boolean)GetValue(JustifyTextProperty); }
-            set { SetValue(JustifyTextProperty, value); }
+            get => (Boolean)GetValue(JustifyTextProperty);
+            set => SetValue(JustifyTextProperty, value);
         }
     }
 }
