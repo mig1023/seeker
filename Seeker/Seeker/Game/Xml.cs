@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Xml;
+using Seeker.Output;
 
 namespace Seeker.Game
 {
@@ -58,14 +58,23 @@ namespace Seeker.Game
             return (String.IsNullOrEmpty(textByOption) ? textByParagraph : textByOption);
         }
 
-        public static List<Output.Text> TextsParse(XmlNode xmlNode)
+        public static List<Text> TextsParse(XmlNode xmlNode)
         {
-            List<Output.Text> texts = new List<Output.Text>();
+            List<Text> texts = new List<Text>();
 
             foreach (XmlNode text in xmlNode.SelectNodes("Texts/Text"))
             {
                 string font = StringParse(text.Attributes["Font"]);
-                texts.Add(new Output.Text { Content = text.InnerText, Bold = (font == "Bold"), Italic = (font == "Italic") });
+
+                Text outputText = new Text
+                {
+                    Content = text.InnerText,
+                    Bold = (font == "Bold"),
+                    Italic = (font == "Italic"),
+                    Alignment = StringParse(text.Attributes["Alignment"]),
+                };
+
+                texts.Add(outputText);
             }
 
             return texts;

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using Xamarin.Forms;
-
 using Seeker.Gamebook;
 using System.Linq;
 
@@ -318,7 +316,7 @@ namespace Seeker.Output
             }
         }
 
-        public static Label Text(Output.Text text)
+        public static Label Text(Text text)
         {
             Label label = Text(text.Content);
 
@@ -329,6 +327,9 @@ namespace Seeker.Output
                 label.FontFamily = TextFontFamily(italic: true);
                 label.FontSize = FontSize(TextFontSize.little);
             }
+
+            if (text.Alignment == "Center")
+                label.HorizontalTextAlignment = TextAlignment.Center;
 
             return label;
         }
