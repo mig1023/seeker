@@ -13,6 +13,8 @@ namespace Seeker.Gamebook.InvisibleFront
             [ButtonTypes.Main] = "#d52b1e",
             [ButtonTypes.Option] = "#d52b1e",
             [ButtonTypes.Continue] = "#e57f78",
+            [ButtonTypes.Continue] = "#e57f78",
+            [ButtonTypes.System] = "#eca5a0",
             [ButtonTypes.Font] = "#eede49",
         };
 
@@ -21,6 +23,7 @@ namespace Seeker.Gamebook.InvisibleFront
             [ColorTypes.Background] = "#ffdadb",
             [ColorTypes.StatusBar] = "#aa2218",
             [ColorTypes.StatusFont] = "#eede49",
+            [ColorTypes.SystemFont] = "#f7f1b6",
         };
 
         public static List<string> GetApartments() => new List<string> { "один", "два", "три", "один", "два", "три" };
