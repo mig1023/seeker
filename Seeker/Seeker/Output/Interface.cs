@@ -89,7 +89,7 @@ namespace Seeker.Output
             if (!String.IsNullOrEmpty(description.FontColor))
                 gamebookButton.TextColor = Color.FromHex(description.FontColor);
             else
-                gamebookButton.TextColor = Xamarin.Forms.Color.White;
+                gamebookButton.TextColor = Color.White;
 
             return gamebookButton;
         }
@@ -269,8 +269,16 @@ namespace Seeker.Output
                 button.BorderWidth = Constants.BORDER_WIDTH;
             }
 
-            string font = Game.Data.Constants.GetColor(system ? Game.Data.ColorTypes.SystemFont : Game.Data.ColorTypes.Font);
-            button.TextColor = (String.IsNullOrEmpty(font) ? Color.White : Color.FromHex(font));
+            if (system)
+            {
+                string systemFont = Game.Data.Constants.GetColor(Game.Data.ColorTypes.SystemFont);
+                button.TextColor = (String.IsNullOrEmpty(systemFont) ? Color.Black : Color.FromHex(systemFont));
+            }
+            else
+            {
+                string font = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Font);
+                button.TextColor = (String.IsNullOrEmpty(font) ? Color.White : Color.FromHex(font));
+            }
 
             return button;
         }
