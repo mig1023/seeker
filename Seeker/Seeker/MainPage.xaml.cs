@@ -19,7 +19,9 @@ namespace Seeker
         public void Gamebooks()
         {
             Game.Data.Clean();
+
             Text.Children.Clear();
+            Action.Children.Clear();
             Options.Children.Clear();
 
             MainScroll.BackgroundColor = Output.Constants.BACKGROUND;
