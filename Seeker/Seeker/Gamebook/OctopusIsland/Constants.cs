@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.OctopusIsland
             [ButtonTypes.Main] = "#c93c20",
             [ButtonTypes.Action] = "#c93c20",
             [ButtonTypes.Option] = "#c93c20",
+            [ButtonTypes.System] = "#eeeeee",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
