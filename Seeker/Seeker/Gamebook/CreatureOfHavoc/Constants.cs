@@ -13,7 +13,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             [ButtonTypes.Main] = "#145334",
             [ButtonTypes.Action] = "#104229",
             [ButtonTypes.Option] = "#42755c",
-            [ButtonTypes.Continue] = "#a8c196",
+            [ButtonTypes.Continue] = "#7d9188",
+            [ButtonTypes.System] = "#9db6aa",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
