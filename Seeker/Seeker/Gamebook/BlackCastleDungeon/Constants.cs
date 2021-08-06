@@ -13,11 +13,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             [ButtonTypes.Main] = "#151515",
             [ButtonTypes.Action] = "#3f3f3f",
             [ButtonTypes.Option] = "#696969",
+            [ButtonTypes.System] = "#f9f9f9",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#2a2a2a",
+            [ColorTypes.SystemFont] = "#000000",
         };
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 619 };

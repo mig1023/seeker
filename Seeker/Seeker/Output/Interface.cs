@@ -261,7 +261,7 @@ namespace Seeker.Output
             return SetBorderAndTextColor(gameoverButton);
         }
 
-        public static Button SetBorderAndTextColor(Button button)
+        public static Button SetBorderAndTextColor(Button button, bool system = false)
         {
             if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border)))
             {
@@ -269,10 +269,8 @@ namespace Seeker.Output
                 button.BorderWidth = Constants.BORDER_WIDTH;
             }
 
-            if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Font)))
-                button.TextColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Font));
-            else
-                button.TextColor = Xamarin.Forms.Color.White;
+            string font = Game.Data.Constants.GetColor(system ? Game.Data.ColorTypes.SystemFont : Game.Data.ColorTypes.Font);
+            button.TextColor = (String.IsNullOrEmpty(font) ? Color.White : Color.FromHex(font));
 
             return button;
         }
