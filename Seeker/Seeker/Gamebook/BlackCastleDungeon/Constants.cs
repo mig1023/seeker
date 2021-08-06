@@ -19,7 +19,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#2a2a2a",
-            [ColorTypes.SystemFont] = "#000000",
         };
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 619 };
