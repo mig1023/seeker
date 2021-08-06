@@ -1,14 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Xamarin.Forms;
 using Android.Content.Res;
 using System.IO;
@@ -22,12 +12,10 @@ namespace Seeker.Droid
         {
             AssetManager assets = Android.App.Application.Context.Assets;
 
-            string content;
+            string content = String.Empty;
 
             using (StreamReader sr = new StreamReader(assets.Open(name)))
-            {
                 content = sr.ReadToEnd();
-            }
 
             return content;
         }

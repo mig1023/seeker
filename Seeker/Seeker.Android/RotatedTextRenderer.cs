@@ -1,19 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
+﻿using Android.Content;
 using Android.Graphics;
-using Android.OS;
-using Android.Runtime;
 using Android.Text;
-using Android.Views;
-using Android.Widget;
-using Seeker;
 using Seeker.Droid;
 using Seeker.Output;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
@@ -22,11 +12,11 @@ namespace Seeker.Droid
 {
     public class RotatedTextRenderer : ViewRenderer
     {
-        private Context _context;
+        private Context context;
 
         public RotatedTextRenderer(Context c) : base(c)
         {
-            _context = c;
+            context = c;
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.View> e)
@@ -37,45 +27,46 @@ namespace Seeker.Droid
             {
                 string title = ((VerticalText)e.NewElement).Value;
                 bool color = ((VerticalText)e.NewElement).WhiteColor;
-                SetNativeControl(new RotatedTextView(_context, title, color));
+                SetNativeControl(new RotatedTextView(context, title, color));
             }
         }
     }
 
     public class RotatedTextView : Android.Views.View
     {
-        private int textSize = 22;
-        private string _text;
-        private bool _white;
-        private TextPaint _textPaint;
+        int textSize = 22;
+        string text = String.Empty;
+        bool white;
+
+        TextPaint textPaint = null;
 
         public RotatedTextView(Context c, string title, bool white) : base(c)
         {
-            _text = title;
-            _white = white;
-            initLabelView();
+            text = title;
+            white = this.white;
+
+            InitLabelView();
         }
 
-        private void initLabelView()
+        private void InitLabelView() => this.textPaint = new TextPaint
         {
-            this._textPaint = new TextPaint();
-            this._textPaint.AntiAlias = true;
-            this._textPaint.TextAlign = Paint.Align.Center;
-            this._textPaint.TextSize = textSize;
-            this._textPaint.Color = (this._white ? Android.Graphics.Color.White : Android.Graphics.Color.Black);
-        }
+            AntiAlias = true,
+            TextAlign = Paint.Align.Center,
+            TextSize = textSize,
+            Color = (this.white ? Android.Graphics.Color.White : Android.Graphics.Color.Black),
+        };
 
         public override void Draw(Canvas canvas)
         {
             base.Draw(canvas);
 
-            if (!string.IsNullOrEmpty(this._text))
+            if (!string.IsNullOrEmpty(this.text))
             {
                 float x = (Width / 2) - textSize / 3;
                 float y = (Height / 2);
 
                 canvas.Rotate(90);
-                canvas.DrawText(this._text, y, -x, this._textPaint);
+                canvas.DrawText(this.text, y, -x, this.textPaint);
             }
         }
     }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Forms;
 
 namespace Seeker.Output
@@ -9,7 +7,6 @@ namespace Seeker.Output
     {
         public enum ButtonTypes { Main, Action, Option, Font, Border, Continue }
 
-
         public static Button Action(string actionName, bool enabled = true)
         {
             string color = Game.Data.Constants.GetButtonsColor(ButtonTypes.Action);
@@ -17,14 +14,14 @@ namespace Seeker.Output
             Button actionButton = new Button
             {
                 Text = actionName,
-                TextColor = Xamarin.Forms.Color.White,
+                TextColor = Color.White,
                 IsEnabled = enabled,
                 BackgroundColor = (enabled ? Color.FromHex(color) : Color.Gray),
-                FontFamily = Output.Interface.TextFontFamily(standart: true),
+                FontFamily = Interface.TextFontFamily(standart: true),
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Button)),
             };
 
-            return Output.Interface.SetBorderAndTextColor(actionButton);
+            return Interface.SetBorderAndTextColor(actionButton);
         }
 
         public static Button Option(Game.Option option)
@@ -35,9 +32,9 @@ namespace Seeker.Output
                 optionColor = !String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf);
 
             string color = Game.Data.Constants.GetButtonsColor(optionColor ?
-                Output.Buttons.ButtonTypes.Option : Output.Buttons.ButtonTypes.Main);
+                Buttons.ButtonTypes.Option : Buttons.ButtonTypes.Main);
 
-            bool isEnabled = (!(!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf)));
+            bool isEnabled = !(!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf));
 
             if (String.IsNullOrEmpty(option.Text))
                 option.Text = (option.Destination == 0 ? "Начать сначала" : "Далее");
@@ -47,12 +44,12 @@ namespace Seeker.Output
                 Text = option.Text,
                 BackgroundColor = Color.FromHex(color),
                 IsEnabled = isEnabled,
-                FontFamily = Output.Interface.TextFontFamily(standart: true),
+                FontFamily = Interface.TextFontFamily(standart: true),
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                 IsVisible = String.IsNullOrEmpty(option.Input),
             };
 
-            return Output.Interface.SetBorderAndTextColor(optionButton);
+            return Interface.SetBorderAndTextColor(optionButton);
         }
 
         public static Button Additional(string text)
@@ -63,11 +60,11 @@ namespace Seeker.Output
             {
                 Text = text,
                 BackgroundColor = (String.IsNullOrEmpty(color) ? Color.LightGray : Color.FromHex(color)),
-                FontFamily = Output.Interface.TextFontFamily(standart: true),
+                FontFamily = Interface.TextFontFamily(standart: true),
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
 
-            return Output.Interface.SetBorderAndTextColor(additionButton);
+            return Interface.SetBorderAndTextColor(additionButton);
         }
     }
 }

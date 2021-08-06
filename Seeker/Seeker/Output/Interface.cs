@@ -63,7 +63,7 @@ namespace Seeker.Output
             bool whiteColor = !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.AdditionalFont));
 
             foreach (string status in statusLines)
-                statusLabels.Add(new Output.VerticalText { Value = status, WhiteColor = whiteColor });
+                statusLabels.Add(new VerticalText { Value = status, WhiteColor = whiteColor });
 
             return statusLabels;
         }
