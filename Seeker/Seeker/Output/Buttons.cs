@@ -66,5 +66,22 @@ namespace Seeker.Output
 
             return Interface.SetBorderAndTextColor(additionButton);
         }
+
+        public static Button System(string text)
+        {
+            string color = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
+
+            Button systemButton = new Button
+            {
+                Text = text,
+                BackgroundColor = (String.IsNullOrEmpty(color) ? Color.LightGray : Color.FromHex(color)),
+                FontFamily = Interface.TextFontFamily(standart: true),
+                FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
+                Padding = 0,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+            };
+
+            return Interface.SetBorderAndTextColor(systemButton);
+        }
     }
 }

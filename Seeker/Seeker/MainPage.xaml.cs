@@ -218,19 +218,16 @@ namespace Seeker
             {
                 Orientation = StackOrientation.Horizontal,
                 Spacing = 8,
+                HeightRequest = 25,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
             };
 
-            Button exit = Output.Buttons.Additional("Выйти");
+            Button exit = Output.Buttons.System("Выйти");
             exit.Clicked += Exit_Click;
-            exit.FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label));
-            exit.HorizontalOptions = LayoutOptions.FillAndExpand;
             systemLayout.Children.Add(exit);
 
-            Button main = Output.Buttons.Additional("На главную");
+            Button main = Output.Buttons.System("На главную");
             main.Clicked += ToMain_Click;
-            main.FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label));
-            main.HorizontalOptions = LayoutOptions.FillAndExpand;
             systemLayout.Children.Add(main);
 
             return systemLayout;
