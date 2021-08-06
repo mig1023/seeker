@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Xamarin.Forms;
 
 namespace Seeker.Output
 {
     class Constants
     {
+        public static Color BACKGROUND = Color.FromHex("#f7f7f7");
+
         public static double BIG_FONT = 25;
         public static double STATUSBAR_FONT = 12;
         public static double LINE_HEIGHT = 1.20;

@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
-using Android.Content.Res;
 using Seeker.Gamebook;
-using System.Xml;
 
 namespace Seeker
 {
@@ -23,9 +19,10 @@ namespace Seeker
         public void Gamebooks()
         {
             Game.Data.Clean();
-
             Text.Children.Clear();
             Options.Children.Clear();
+
+            MainScroll.BackgroundColor = Output.Constants.BACKGROUND;
 
             Text.Children.Add(Output.Interface.Text("Выберите книгу:", defaultParams: true));
 
@@ -184,6 +181,8 @@ namespace Seeker
                     AddAdditionalButton(buttonName, StaticButton_Click);
             }
 
+            Options.Children.Add(SystemMenu());
+
             if (!reload)
                 MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
 
@@ -212,6 +211,34 @@ namespace Seeker
 
             return field;
         }
+
+        public StackLayout SystemMenu()
+        {
+            StackLayout systemLayout = new StackLayout()
+            {
+                Orientation = StackOrientation.Horizontal,
+                Spacing = 8,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+            };
+
+            Button exit = Output.Buttons.Additional("Выйти");
+            exit.Clicked += Exit_Click;
+            exit.FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label));
+            exit.HorizontalOptions = LayoutOptions.FillAndExpand;
+            systemLayout.Children.Add(exit);
+
+            Button main = Output.Buttons.Additional("На главную");
+            main.Clicked += ToMain_Click;
+            main.FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label));
+            main.HorizontalOptions = LayoutOptions.FillAndExpand;
+            systemLayout.Children.Add(main);
+
+            return systemLayout;
+        }
+
+        private void Exit_Click(object sender, EventArgs e) => System.Diagnostics.Process.GetCurrentProcess().Kill();
+
+        private void ToMain_Click(object sender, EventArgs e) => this.Gamebooks();
 
         private void InputChange(object sender, EventArgs e)
         {
