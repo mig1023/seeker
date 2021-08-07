@@ -12,14 +12,13 @@ namespace Seeker.Gamebook.StainlessSteelRat
         {
             [ButtonTypes.Main] = "#738595",
             [ButtonTypes.Continue] = "#8f9daa",
+            [ButtonTypes.System] = "#a5b0bb",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#b9c2ca",
         };
-
-        public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
 
         public static Links GetLinks() => new Links
         {
