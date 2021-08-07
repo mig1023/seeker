@@ -8,69 +8,69 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public override void Do()
         {
-            Character hero = Character.Protagonist;
+            Character protagonist = Character.Protagonist;
 
-            bool patron = ModificationByValueString("Patron", () => hero.Patron = ValueString);
-            bool wepon = ModificationByValueString("Weapon", () => hero.AddWeapons(ValueString));
-            bool armour = ModificationByValueString("Armour", () => hero.AddArmour(ValueString));
-            bool fellInto = ModificationByValueString("FellIntoFavor", () => hero.FellIntoFavor(ValueString));
-            bool fellOut = ModificationByValueString("FellOutOfFavor", () => hero.FellIntoFavor(ValueString, fellOut: true));
-            bool indiff = ModificationByValueString("Indifferent", () => hero.FellIntoFavor(ValueString, indifferent: true));
+            bool patron = DoByValueString("Patron", () => protagonist.Patron = ValueString);
+            bool wepon = DoByValueString("Weapon", () => protagonist.AddWeapons(ValueString));
+            bool armour = DoByValueString("Armour", () => protagonist.AddArmour(ValueString));
+            bool fellInto = DoByValueString("FellIntoFavor", () => protagonist.FellIntoFavor(ValueString));
+            bool fellOut = DoByValueString("FellOutOfFavor", () => protagonist.FellIntoFavor(ValueString, fellOut: true));
+            bool indiff = DoByValueString("Indifferent", () => protagonist.FellIntoFavor(ValueString, indifferent: true));
 
             if (patron || wepon || armour || fellInto || fellOut || indiff)
                 return;
 
             else if (Name == "DiceShame")
-                hero.Shame += Game.Dice.Roll();
+                protagonist.Shame += Game.Dice.Roll();
 
             else if (Name == "AresFavor")
             {
-                if (hero.Patron != "Арес")
+                if (protagonist.Patron != "Арес")
                 {
-                    hero.FellIntoFavor("Арес");
-                    hero.Glory += 3;
+                    protagonist.FellIntoFavor("Арес");
+                    protagonist.Glory += 3;
                 }
                 else
-                    hero.Glory += 5;
+                    protagonist.Glory += 5;
             }
 
             else if (Name == "ApolloDisFavor")
             {
-                if (hero.Patron != "Аполлон")
-                    hero.FellIntoFavor("Аполлон", fellOut: true);
+                if (protagonist.Patron != "Аполлон")
+                    protagonist.FellIntoFavor("Аполлон", fellOut: true);
                 else
-                    hero.Glory -= 2;
+                    protagonist.Glory -= 2;
             }
 
             else if (Name == "PoseidonDisFavor")
             {
-                if (hero.Patron != "Посейдон")
+                if (protagonist.Patron != "Посейдон")
                 {
-                    hero.FellIntoFavor("Посейдон", fellOut: true);
-                    hero.Shame += 4;
+                    protagonist.FellIntoFavor("Посейдон", fellOut: true);
+                    protagonist.Shame += 4;
                 }
                 else
-                    hero.Glory -= 6;
+                    protagonist.Glory -= 6;
             }
 
             else if (Name == "PoseidonDisFavor2")
             {
-                if (hero.Patron != "Посейдон")
-                    hero.FellIntoFavor("Посейдон", fellOut: true);
+                if (protagonist.Patron != "Посейдон")
+                    protagonist.FellIntoFavor("Посейдон", fellOut: true);
                 else
-                    hero.Shame += 1;
+                    protagonist.Shame += 1;
             }
 
             else if (Name == "Resurrection")
             {
-                if (hero.Resurrection > 0)
-                    hero.Resurrection += Value;
+                if (protagonist.Resurrection > 0)
+                    protagonist.Resurrection += Value;
 
-                else if (hero.BroochResurrection > 0)
-                    hero.BroochResurrection += Value;
+                else if (protagonist.BroochResurrection > 0)
+                    protagonist.BroochResurrection += Value;
 
-                hero.Glory = 1;
-                hero.Shame = 0;
+                protagonist.Glory = 1;
+                protagonist.Shame = 0;
             }
 
             else
@@ -81,12 +81,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 if (IntuitiveSolution && (Value < 0) && (Name == "Glory") && Game.Data.Triggers.Contains("NoGloryPenaltyByIntuitiveSolution"))
                     return;
 
-                int currentValue = (int)hero.GetType().GetProperty(Name).GetValue(hero, null);
+                int currentValue = GetProperty(protagonist, Name);
 
-                if ((Name != "Glory") || (hero.Glory > 0))
+                if ((Name != "Glory") || (protagonist.Glory > 0))
                     currentValue += Value;
 
-                hero.GetType().GetProperty(Name).SetValue(hero, currentValue);
+                SetProperty(protagonist, Name, currentValue);
             }
         }
     }
