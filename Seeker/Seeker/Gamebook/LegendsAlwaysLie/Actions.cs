@@ -491,14 +491,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         }
                     }
 
-                    int firstHeroRoll = Game.Dice.Roll();
-                    int secondHeroRoll = Game.Dice.Roll();
-                    int heroHitStrength = firstHeroRoll + secondHeroRoll + protogonist.Strength;
+                    int firstprotagonistRoll = Game.Dice.Roll();
+                    int secondprotagonistRoll = Game.Dice.Roll();
+                    int protagonistHitStrength = firstprotagonistRoll + secondprotagonistRoll + protogonist.Strength;
 
                     fight.Add(String.Format(
                         "Ваш удар: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll),
-                        protogonist.Strength, heroHitStrength));
+                        Game.Dice.Symbol(firstprotagonistRoll), Game.Dice.Symbol(secondprotagonistRoll),
+                        protogonist.Strength, protagonistHitStrength));
 
                     int firstEnemyRoll = Game.Dice.Roll();
                     int secondEnemyRoll = Game.Dice.Roll();
@@ -511,7 +511,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
                     bool zombieWound = false;
 
-                    if (ZombieFight && (heroHitStrength > enemyHitStrength))
+                    if (ZombieFight && (protagonistHitStrength > enemyHitStrength))
                     {
                         int dice = Game.Dice.Roll();
                         zombieWound = dice % 2 == 0;
@@ -521,15 +521,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             zombieWound = true;
                     }
 
-                    bool lightningLunge = (warriorFight && (firstHeroRoll == secondHeroRoll) && !Game.Data.Triggers.Contains("EvilEye"));
+                    bool lightningLunge = (warriorFight && (firstprotagonistRoll == secondprotagonistRoll) && !Game.Data.Triggers.Contains("EvilEye"));
 
-                    if (ZombieFight && (heroHitStrength > enemyHitStrength) && !zombieWound)
+                    if (ZombieFight && (protagonistHitStrength > enemyHitStrength) && !zombieWound)
                         fight.Add("BOLD|Вы не смогли пробить до кости");
 
-                    else if (GolemFight && (heroHitStrength > enemyHitStrength))
+                    else if (GolemFight && (protagonistHitStrength > enemyHitStrength))
                         fight.Add("BOLD|Вы отбили все атаки");
 
-                    else if (warriorFight && (firstHeroRoll == secondHeroRoll) && (firstHeroRoll == 6))
+                    else if (warriorFight && (firstprotagonistRoll == secondprotagonistRoll) && (firstprotagonistRoll == 6))
                     {
                         fight.Add("BOLD|Вы сделали 'Крыло ястреба'!");
 
@@ -548,7 +548,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         }
                     }
 
-                    else if ((heroHitStrength > enemyHitStrength) || lightningLunge)
+                    else if ((protagonistHitStrength > enemyHitStrength) || lightningLunge)
                     {
                         if (lightningLunge)
                             fight.Add("BOLD|Вы сделали 'Молниеносный выпад'!");
@@ -580,7 +580,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         if (EnemyLostFight(FightEnemies, ref fight))
                             return fight;
                     }
-                    else if (heroHitStrength < enemyHitStrength)
+                    else if (protagonistHitStrength < enemyHitStrength)
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 

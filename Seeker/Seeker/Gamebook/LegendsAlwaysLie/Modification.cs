@@ -10,12 +10,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override void Do()
         {
-            bool injuries = ModificationByName("InjuriesBySpells", () => Actions.InjuriesBySpells());
+            bool injuries = DoByName("InjuriesBySpells", () => Actions.InjuriesBySpells());
 
-            bool footwrapsDeadly = ModificationByName("FootwrapsNeedReplacingDeadly",
+            bool footwrapsDeadly = DoByName("FootwrapsNeedReplacingDeadly",
                 () => Character.Protagonist.Hitpoints -= (Game.Data.Triggers.Contains("Legs") ? 4 : 2));
 
-            bool footwrapsNeed = ModificationByName("FootwrapsNeedReplacing", () => Game.Option.Trigger("Legs"));
+            bool footwrapsNeed = DoByName("FootwrapsNeedReplacing", () => Game.Option.Trigger("Legs"));
 
             if (injuries || footwrapsDeadly || footwrapsNeed)
                 return;
@@ -33,7 +33,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             }
             else
             {
-                int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+                int currentValue = GetProperty(Character.Protagonist, Name);
 
                 if (Empty)
                     currentValue = 0;
@@ -51,7 +51,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         currentValue += ThrowerWoundsPenalty;
                 }
 
-                Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+                SetProperty(Character.Protagonist, Name, currentValue);
             }
         }
     }
