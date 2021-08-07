@@ -188,7 +188,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return new List<string> { "RELOAD" };
         }
 
-        private bool IsHero(string name) => name == protogonist.Name;
+        private bool Isprotagonist(string name) => name == protogonist.Name;
 
         public List<string> Fight()
         {
@@ -222,7 +222,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         continue;
 
                     if (GroupFight)
-                        fight.Add(String.Format("{0} (сила {1})", (IsHero(ally.Name) ? "Вы" : ally.Name), ally.Endurance));
+                        fight.Add(String.Format("{0} (сила {1})", (Isprotagonist(ally.Name) ? "Вы" : ally.Name), ally.Endurance));
 
                     bool attackAlready = false;
                     int allyHitStrength = 0;
@@ -244,7 +244,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                             fight.Add(String.Format(
                                 "{0} мощность удара: {1} + {2} + {3} = {4}",
-                                (IsHero(ally.Name) ? "Ваша" : String.Format("{0} -", ally.Name)),
+                                (Isprotagonist(ally.Name) ? "Ваша" : String.Format("{0} -", ally.Name)),
                                 Game.Dice.Symbol(firstAllyRoll), Game.Dice.Symbol(secondAllyRoll), ally.Mastery, allyHitStrength));
                         }
 
@@ -278,7 +278,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                     fight.Add(String.Empty);
 
                                     fight.Add(String.Format("BIG|GOOD|{0} :)",
-                                        (GroupFight && !IsHero(ally.Name) ? ally.Name + " ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ")));
+                                        (GroupFight && !Isprotagonist(ally.Name) ? ally.Name + " ПОБЕДИЛ" : "ВЫ ПОБЕДИЛИ")));
 
                                     return fight;
                                 }
@@ -290,7 +290,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         }
                         else if (allyHitStrength < enemyHitStrength)
                         {
-                            fight.Add(GroupFight && !IsHero(ally.Name) ? String.Format("BAD|{0} ранен",  ally.Name) : "BAD|Вы ранены");
+                            fight.Add(GroupFight && !Isprotagonist(ally.Name) ? String.Format("BAD|{0} ранен",  ally.Name) : "BAD|Вы ранены");
                             ally.Endurance -= 2 + enemy.ExtendedDamage;
                             ally.Mastery -= enemy.MasteryDamage;
 
@@ -303,7 +303,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 fight.Add(String.Empty);
 
                                 fight.Add(String.Format("BIG|BAD|{0} :(",
-                                    (IsHero(ally.Name) ? "ВЫ ПРОИГРАЛИ" : String.Format("{0} ПРОИГРАЛ", ally.Name))));
+                                    (Isprotagonist(ally.Name) ? "ВЫ ПРОИГРАЛИ" : String.Format("{0} ПРОИГРАЛ", ally.Name))));
 
                                 return fight;
                             }
@@ -317,7 +317,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
-                            fight.Add(String.Format("BIG|BAD|{0} :(", (IsHero(ally.Name) ? "ВЫ ПРОИГРАЛИ" : String.Format("{0} ПРОИГРАЛ", ally.Name))));
+                            fight.Add(String.Format("BIG|BAD|{0} :(", (Isprotagonist(ally.Name) ? "ВЫ ПРОИГРАЛИ" : String.Format("{0} ПРОИГРАЛ", ally.Name))));
                             return fight;
                         }
 
