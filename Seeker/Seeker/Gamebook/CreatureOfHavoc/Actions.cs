@@ -155,14 +155,14 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             return skillCheck;
         }
 
-        private bool WoundAndDeath(ref List<string> fight, ref Character hero, string enemy, int wounds = 2)
+        private bool WoundAndDeath(ref List<string> fight, ref Character protagonist, string enemy, int wounds = 2)
         {
             if (wounds == 2)
                 fight.Add(String.Format("BAD|{0} ранил вас", enemy));
 
-            hero.Endurance -= wounds;
+            protagonist.Endurance -= wounds;
 
-            if (hero.Endurance <= 0)
+            if (protagonist.Endurance <= 0)
             {
                 fight.Add(String.Empty);
                 fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
