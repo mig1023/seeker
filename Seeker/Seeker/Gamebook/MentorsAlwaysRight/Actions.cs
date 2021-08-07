@@ -553,14 +553,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     if (!Invincible)
                         fight.Add(String.Format("{0} (жизни: {1})", enemy.Name, enemy.Hitpoints));
 
-                    int firstHeroRoll = Game.Dice.Roll();
-                    int secondHeroRoll = Game.Dice.Roll();
-                    int heroHitStrength = firstHeroRoll + secondHeroRoll + protogonist.Strength;
+                    int firstprotagonistRoll = Game.Dice.Roll();
+                    int secondprotagonistRoll = Game.Dice.Roll();
+                    int protagonistHitStrength = firstprotagonistRoll + secondprotagonistRoll + protogonist.Strength;
 
                     fight.Add(String.Format(
                         "Ваш удар: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(firstHeroRoll), Game.Dice.Symbol(secondHeroRoll),
-                        protogonist.Strength, heroHitStrength));
+                        Game.Dice.Symbol(firstprotagonistRoll), Game.Dice.Symbol(secondprotagonistRoll),
+                        protogonist.Strength, protagonistHitStrength));
 
                     int firstEnemyRoll = Game.Dice.Roll();
                     int secondEnemyRoll = Game.Dice.Roll();
@@ -586,7 +586,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         if (protogonist.Hitpoints <= 0)
                             return LostFight(fight);
                     }
-                    else if (warriorFight && (firstHeroRoll == secondHeroRoll) && (firstHeroRoll == 6) && (!ReactionFight || !reactionFail))
+                    else if (warriorFight && (firstprotagonistRoll == secondprotagonistRoll) && (firstprotagonistRoll == 6) && (!ReactionFight || !reactionFail))
                     {
                         fight.Add("BOLD|Вы сделали 'Крыло ястреба'!");
 
@@ -595,7 +595,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
                         fight.Add(String.Format("GOOD|{0} ранен на половину своих жизней", enemy.Name));
                     }
-                    else if ((heroHitStrength > enemyHitStrength) && (!ReactionFight || !reactionFail))
+                    else if ((protagonistHitStrength > enemyHitStrength) && (!ReactionFight || !reactionFail))
                     {
                         int woundLevel = (IsMagicBlade() ? 3 : 2);
 
@@ -639,7 +639,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         if (EnemyLostFight(FightEnemies, ref fight))
                             return fight;
                     }
-                    else if ((heroHitStrength < enemyHitStrength) || reactionFail)
+                    else if ((protagonistHitStrength < enemyHitStrength) || reactionFail)
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 

@@ -33,7 +33,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             }
 
             else
-                InnerDo(protogonist);
+                base.Do(protogonist);
         }
     }
 }
