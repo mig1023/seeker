@@ -8,44 +8,44 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public override void Do()
         {
-            Character hero = Character.Protagonist;
+            Character protagonist = Character.Protagonist;
 
             if (Name == "PopularityByTime")
             {
-                if ((hero.UnitOfTime > 2) && (hero.Popularity > 0))
-                    hero.Popularity -= 1;
+                if ((protagonist.UnitOfTime > 2) && (protagonist.Popularity > 0))
+                    protagonist.Popularity -= 1;
 
-                else if (hero.UnitOfTime == 1)
-                    hero.Popularity += 1;
+                else if (protagonist.UnitOfTime == 1)
+                    protagonist.Popularity += 1;
             }
             else if (Name == "AkynGlory")
             {
                 if (Empty)
-                    hero.AkynGlory = null;
+                    protagonist.AkynGlory = null;
                 else if (Init)
-                    hero.AkynGlory = (Game.Data.Triggers.Contains("PartyClothes") ? 1 : 0);
+                    protagonist.AkynGlory = (Game.Data.Triggers.Contains("PartyClothes") ? 1 : 0);
                 else
-                    hero.AkynGlory += Value;
+                    protagonist.AkynGlory += Value;
             }
             else if (Name == "UnitOfTime")
             {
                 if (Empty)
-                    hero.UnitOfTime = null;
+                    protagonist.UnitOfTime = null;
                 else if (Init)
-                    hero.UnitOfTime = 4;
+                    protagonist.UnitOfTime = 4;
                 else
-                    hero.UnitOfTime += Value;
+                    protagonist.UnitOfTime += Value;
             }
             else
             {
-                int currentValue = (int)hero.GetType().GetProperty(Name).GetValue(hero, null);
+                int currentValue = GetProperty(protagonist, Name);
 
                 currentValue += Value;
 
                 if (Empty || (currentValue < 0))
                     currentValue = 0;
 
-                hero.GetType().GetProperty(Name).SetValue(hero, currentValue);
+                SetProperty(protagonist, Name, currentValue);
             }
         }
     }
