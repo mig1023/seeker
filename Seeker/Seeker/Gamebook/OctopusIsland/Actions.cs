@@ -122,56 +122,56 @@ namespace Seeker.Gamebook.OctopusIsland
 
         private void SaveCurrentWarriorHitPoints()
         {
-            Character hero = protogonist;
+            Character protagonist = protogonist;
 
-            if (String.IsNullOrEmpty(hero.Name))
+            if (String.IsNullOrEmpty(protagonist.Name))
                 return;
 
-            if (hero.Name == "Тибо")
-                hero.ThibautHitpoint = hero.Hitpoint;
+            if (protagonist.Name == "Тибо")
+                protagonist.ThibautHitpoint = protagonist.Hitpoint;
 
-            else if (hero.Name == "Ксолотл")
-                hero.XolotlHitpoint = hero.Hitpoint;
+            else if (protagonist.Name == "Ксолотл")
+                protagonist.XolotlHitpoint = protagonist.Hitpoint;
 
-            else if (hero.Name == "Серж")
-                hero.SergeHitpoint = hero.Hitpoint;
+            else if (protagonist.Name == "Серж")
+                protagonist.SergeHitpoint = protagonist.Hitpoint;
 
             else
-                hero.SouhiHitpoint = hero.Hitpoint;
+                protagonist.SouhiHitpoint = protagonist.Hitpoint;
         }
 
         private bool SetCurrentWarrior(ref List<string> fight, bool fightStart = false)
         {
-            Character hero = protogonist;
+            Character protagonist = protogonist;
 
-            if (hero.Hitpoint > 3)
+            if (protagonist.Hitpoint > 3)
                 return true;
 
             SaveCurrentWarriorHitPoints();
 
-            if (hero.ThibautHitpoint > 3)
+            if (protagonist.ThibautHitpoint > 3)
             {
-                hero.Name = "Тибо";
-                hero.Skill = hero.ThibautSkill;
-                hero.Hitpoint = hero.ThibautHitpoint;
+                protagonist.Name = "Тибо";
+                protagonist.Skill = protagonist.ThibautSkill;
+                protagonist.Hitpoint = protagonist.ThibautHitpoint;
             }
-            else if (hero.XolotlHitpoint > 3)
+            else if (protagonist.XolotlHitpoint > 3)
             {
-                hero.Name = "Ксолотл";
-                hero.Skill = hero.XolotlSkill;
-                hero.Hitpoint = hero.XolotlHitpoint;
+                protagonist.Name = "Ксолотл";
+                protagonist.Skill = protagonist.XolotlSkill;
+                protagonist.Hitpoint = protagonist.XolotlHitpoint;
             }
-            else if (hero.SergeHitpoint > 3)
+            else if (protagonist.SergeHitpoint > 3)
             {
-                hero.Name = "Серж";
-                hero.Skill = hero.SergeSkill;
-                hero.Hitpoint = hero.SergeHitpoint;
+                protagonist.Name = "Серж";
+                protagonist.Skill = protagonist.SergeSkill;
+                protagonist.Hitpoint = protagonist.SergeHitpoint;
             }
-            else if (hero.SouhiHitpoint > 3)
+            else if (protagonist.SouhiHitpoint > 3)
             {
-                hero.Name = "Суи";
-                hero.Skill = hero.SouhiSkill;
-                hero.Hitpoint = hero.SouhiHitpoint;
+                protagonist.Name = "Суи";
+                protagonist.Skill = protagonist.SouhiSkill;
+                protagonist.Hitpoint = protagonist.SouhiHitpoint;
             }
             else
                 return false;
@@ -179,7 +179,7 @@ namespace Seeker.Gamebook.OctopusIsland
             if (!fightStart)
                 fight.Add(String.Empty);
 
-            fight.Add(String.Format("BOLD|В бой вступает {0}", hero.Name));
+            fight.Add(String.Format("BOLD|В бой вступает {0}", protagonist.Name));
 
             if (fightStart)
                 fight.Add(String.Empty);
@@ -200,7 +200,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
             SetCurrentWarrior(ref fight, fightStart: true);
 
-            Character hero = protogonist;
+            Character protagonist = protogonist;
 
             while (true)
             {
@@ -216,11 +216,11 @@ namespace Seeker.Gamebook.OctopusIsland
 
                     int protagonistRollFirst = Game.Dice.Roll();
                     int protagonistRollSecond = Game.Dice.Roll();
-                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + hero.Skill;
+                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Skill;
 
                     fight.Add(String.Format("{0}: мощность удара: {1} + {2} + {3} = {4}",
-                        hero.Name, Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
-                        hero.Skill, protagonistHitStrength));
+                        protagonist.Name, Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
+                        protagonist.Skill, protagonistHitStrength));
 
                     int enemyRollFirst = Game.Dice.Roll();
                     int enemyRollSecond = Game.Dice.Roll();
@@ -250,9 +250,9 @@ namespace Seeker.Gamebook.OctopusIsland
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        fight.Add(String.Format("BAD|{0} ранил {1}", enemy.Name, hero.Name));
+                        fight.Add(String.Format("BAD|{0} ранил {1}", enemy.Name, protagonist.Name));
 
-                        hero.Hitpoint -= 2;
+                        protagonist.Hitpoint -= 2;
 
                         if (!SetCurrentWarrior(ref fight))
                         {
