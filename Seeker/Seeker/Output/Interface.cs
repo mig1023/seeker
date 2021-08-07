@@ -173,6 +173,14 @@ namespace Seeker.Output
                 options.Children.Add(GamebookDisclaimer(gamebook, withOut: true));
         }
 
+        public static StackLayout SystemMenu() => new StackLayout()
+        {
+            Orientation = StackOrientation.Horizontal,
+            Spacing = Constants.SYS_MENU_SPACING,
+            HeightRequest = Constants.SYS_MENU_HIGHT,
+            HorizontalOptions = LayoutOptions.FillAndExpand,
+        };
+
         public static List<View> Represent(List<string> enemiesLines)
         {
             List<View> enemies = new List<View>();

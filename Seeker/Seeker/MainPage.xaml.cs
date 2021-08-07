@@ -58,8 +58,6 @@ namespace Seeker
             Paragraph(0);
         }
 
-        private void Continue_Click(object sender, EventArgs e) => Paragraph(Game.Continue.Load(), loadGame: true);
-
         public void Paragraph(int id, bool reload = false, bool loadGame = false, string optionName = "")
         {
             bool startOfGame = (id == Game.Data.StartParagraph);
@@ -174,7 +172,7 @@ namespace Seeker
             if ((id == Game.Data.StartParagraph) && Game.Continue.IsGameSaved())
             {
                 Button button = Output.Buttons.Additional("Продолжить предыдущую игру");
-                button.Clicked += Continue_Click;
+                button.Clicked += (object sender, EventArgs e) => Paragraph(Game.Continue.Load(), loadGame: true);
                 Options.Children.Add(button);
             }
             else if ((id > Game.Data.StartParagraph) && (Game.Data.Actions != null) && !(gameOver && (optionCount == 1)))
@@ -219,28 +217,18 @@ namespace Seeker
 
         public StackLayout SystemMenu()
         {
-            StackLayout systemLayout = new StackLayout()
-            {
-                Orientation = StackOrientation.Horizontal,
-                Spacing = 8,
-                HeightRequest = 25,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
+            StackLayout systemLayout = Output.Interface.SystemMenu();
 
             Button exit = Output.Buttons.System("Выйти");
-            exit.Clicked += Exit_Click;
+            exit.Clicked += (object sender, EventArgs e) => System.Diagnostics.Process.GetCurrentProcess().Kill();
             systemLayout.Children.Add(exit);
 
             Button main = Output.Buttons.System("На главную");
-            main.Clicked += ToMain_Click;
+            main.Clicked += (object sender, EventArgs e) => this.Gamebooks(toMain: true);
             systemLayout.Children.Add(main);
 
             return systemLayout;
         }
-
-        private void Exit_Click(object sender, EventArgs e) => System.Diagnostics.Process.GetCurrentProcess().Kill();
-
-        private void ToMain_Click(object sender, EventArgs e) => this.Gamebooks(toMain: true);
 
         private void InputChange(object sender, EventArgs e)
         {
