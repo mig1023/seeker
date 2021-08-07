@@ -6,12 +6,12 @@ namespace Seeker.Gamebook.HeartOfIce
     {
         public override void Do()
         {
-            bool skill = ModificationByName("Skill", () => Character.Protagonist.Skills.Add(ValueString));
-            bool rmSkill = ModificationByName("RemoveSkill", () => Character.Protagonist.Skills.RemoveAll(item => item == ValueString));
-            bool rmTrigger = ModificationByName("RemoveTrigger", () => Game.Option.Trigger(ValueString, remove: true));
-            bool byTrigger = ModificationByName("ByTrigger", () => LifeByTrigger());
-            bool byNotTrigger = ModificationByName("ByNotTrigger", () => LifeByTrigger(notLogic: true));
-            bool byFood = ModificationByName("ByFood", () => LifeByFood());
+            bool skill = DoByName("Skill", () => Character.Protagonist.Skills.Add(ValueString));
+            bool rmSkill = DoByName("RemoveSkill", () => Character.Protagonist.Skills.RemoveAll(item => item == ValueString));
+            bool rmTrigger = DoByName("RemoveTrigger", () => Game.Option.Trigger(ValueString, remove: true));
+            bool byTrigger = DoByName("ByTrigger", () => LifeByTrigger());
+            bool byNotTrigger = DoByName("ByNotTrigger", () => LifeByTrigger(notLogic: true));
+            bool byFood = DoByName("ByFood", () => LifeByFood());
 
             if (skill || rmSkill || rmTrigger || byTrigger || byNotTrigger || byFood)
                 return;
@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.HeartOfIce
                 Game.Option.Trigger(triggers[1].Trim());
             }
             else
-                InnerDo(Character.Protagonist);
+                base.Do(Character.Protagonist);
         }
 
         private void LifeByTrigger(bool notLogic = false)
@@ -47,16 +47,16 @@ namespace Seeker.Gamebook.HeartOfIce
 
         private void LifeByFood()
         {
-            Character hero = Character.Protagonist;
+            Character protagonist = Character.Protagonist;
 
-            if (hero.Skills.Contains(ValueString))
+            if (protagonist.Skills.Contains(ValueString))
                 return;
 
-            else if (hero.Food > 0)
-                hero.Food -= 1;
+            else if (protagonist.Food > 0)
+                protagonist.Food -= 1;
 
             else
-                hero.Life -= Value;
+                protagonist.Life -= Value;
         }
     }
 }
