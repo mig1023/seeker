@@ -194,12 +194,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return new List<string> { "RELOAD" };
         }
 
-        private bool WinInFight(ref List<string> fight, ref int round, ref Character hero, ref List<Character> FightEnemies,
+        private bool WinInFight(ref List<string> fight, ref int round, ref Character protagonist, ref List<Character> FightEnemies,
             ref int enemyWounds, bool copyFight = false)
         {
             if (copyFight)
             {
-                fight.Add(String.Format("BOLD|Вместо вас будет сражаться: {0}", hero.Name));
+                fight.Add(String.Format("BOLD|Вместо вас будет сражаться: {0}", protagonist.Name));
                 fight.Add(String.Empty);
             }
 
@@ -208,7 +208,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
                 bool attackAlready = false;
-                int heroHitStrength = 0;
+                int protagonistHitStrength = 0;
 
                 foreach (Character enemy in FightEnemies)
                 {
@@ -218,26 +218,26 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
 
                     if (copyFight)
-                        fight.Add(String.Format("{0} (выносливость {1})", hero.Name, hero.Endurance));
+                        fight.Add(String.Format("{0} (выносливость {1})", protagonist.Name, protagonist.Endurance));
 
                     if (!attackAlready)
                     {
-                        int firstHeroRoll = Game.Dice.Roll();
-                        int secondHeroRoll = Game.Dice.Roll();
-                        heroHitStrength = firstHeroRoll + secondHeroRoll + hero.Mastery;
+                        int firstprotagonistRoll = Game.Dice.Roll();
+                        int secondprotagonistRoll = Game.Dice.Roll();
+                        protagonistHitStrength = firstprotagonistRoll + secondprotagonistRoll + protagonist.Mastery;
 
                         string penalty = String.Empty;
 
                         if (StrengthPenlty > 0)
                         {
-                            heroHitStrength -= StrengthPenlty;
+                            protagonistHitStrength -= StrengthPenlty;
                             penalty = String.Format(" - {0} по обстоятельствам", StrengthPenlty);
                         }
 
                         fight.Add(String.Format(
                             "Сила {0}: {1} + {2} + {3}{4} = {5}",
-                            (copyFight ? "удара копии" : "вашего удара"), Game.Dice.Symbol(firstHeroRoll),
-                            Game.Dice.Symbol(secondHeroRoll), hero.Mastery, penalty, heroHitStrength));
+                            (copyFight ? "удара копии" : "вашего удара"), Game.Dice.Symbol(firstprotagonistRoll),
+                            Game.Dice.Symbol(secondprotagonistRoll), protagonist.Mastery, penalty, protagonistHitStrength));
                     }
 
                     int firstEnemyRoll = Game.Dice.Roll();
@@ -248,7 +248,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         "Сила удара врага: {0} + {1} + {2} = {3}",
                         Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll), enemy.Mastery, enemyHitStrength));
 
-                    if ((heroHitStrength > enemyHitStrength) && !attackAlready)
+                    if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
                         enemy.Endurance -= 2;
@@ -260,17 +260,17 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                         if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                             return true;
                     }
-                    else if (heroHitStrength > enemyHitStrength)
+                    else if (protagonistHitStrength > enemyHitStrength)
                     {
                         fight.Add(String.Format("BOLD|{0} не смог ранить", enemy.Name));
                     }
-                    else if (heroHitStrength < enemyHitStrength)
+                    else if (protagonistHitStrength < enemyHitStrength)
                     {
                         fight.Add(String.Format("BAD|{0} ранил {1}", enemy.Name, (copyFight ? "копию" : "вас")));
                         
-                        hero.Endurance -= 2;
+                        protagonist.Endurance -= 2;
 
-                        if (hero.Endurance <= 0)
+                        if (protagonist.Endurance <= 0)
                             return false;
                     }
                     else

@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (Name == "RemoveSpell")
                 Character.Protagonist.Spells.RemoveAt(Character.Protagonist.Spells.IndexOf(ValueString));
             else
-                InnerDo(Character.Protagonist);
+                base.Do(Character.Protagonist);
         }
     }
 }
