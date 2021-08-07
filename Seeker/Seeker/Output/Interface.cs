@@ -263,7 +263,7 @@ namespace Seeker.Output
 
         public static Button SetBorderAndTextColor(Button button, bool system = false)
         {
-            if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border)))
+            if (!system && !String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border)))
             {
                 button.BorderColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border));
                 button.BorderWidth = Constants.BORDER_WIDTH;
