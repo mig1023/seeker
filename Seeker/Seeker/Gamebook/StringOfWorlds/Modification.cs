@@ -10,7 +10,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                 Character.Protagonist.Strength = Character.Protagonist.MaxStrength;
 
             else
-                InnerDo(Character.Protagonist);
+                base.Do(Character.Protagonist);
         }
     }
 }
