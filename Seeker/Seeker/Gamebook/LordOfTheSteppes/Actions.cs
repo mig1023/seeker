@@ -162,16 +162,16 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             const int ENEMY_STRENGTH = 6;
 
-            int heroWounds = 0, enemyWounds = 0;
+            int protagonistWounds = 0, enemyWounds = 0;
 
             while (true)
             {
                 int firstRoll = Game.Dice.Roll();
                 int secondRoll = Game.Dice.Roll();
-                int heroStrength = firstRoll + secondRoll + protogonist.Attack;
+                int protagonistStrength = firstRoll + secondRoll + protogonist.Attack;
 
                 fight.Add(String.Format("Ваша сила удара: {0} + {1} + {2} = {3}",
-                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), protogonist.Attack, heroStrength));
+                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), protogonist.Attack, protagonistStrength));
 
                 firstRoll = Game.Dice.Roll();
                 secondRoll = Game.Dice.Roll();
@@ -180,7 +180,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 fight.Add(String.Format("Cила удара удальца: {0} + {1} + {2} = {3}",
                     Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), ENEMY_STRENGTH, enemyStrength));
 
-                if (heroStrength > enemyStrength)
+                if (protagonistStrength > enemyStrength)
                 {
                     fight.Add("GOOD|Вы нанесли ему удар");
                     fight.Add(String.Empty);
@@ -193,14 +193,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         return fight;
                     }
                 }
-                else if (heroStrength < enemyStrength)
+                else if (protagonistStrength < enemyStrength)
                 {
                     fight.Add("BAD|Он нанёс вам удар");
                     fight.Add(String.Empty);
 
-                    heroWounds += 1;
+                    protagonistWounds += 1;
 
-                    if (heroWounds >= 4)
+                    if (protagonistWounds >= 4)
                     {
                         fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                         return fight;
@@ -281,7 +281,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return diceCheck;
         }
 
-        private bool IsHero(string name) => name == protogonist.Name;
+        private bool Isprotagonist(string name) => name == protogonist.Name;
 
         private Character FindEnemyIn(List<Character> Enemies) => Enemies.Where(e => e.Endurance > 0).FirstOrDefault();
 
@@ -395,13 +395,13 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         }
 
         private void OutputInitiative(ref List<string> fight, List<Character> FightEnemies, List<Character> FightOrder,
-            string iTemplate, string heroLine, string enemyLine, bool reverse = false, bool special = false)
+            string iTemplate, string protagonistLine, string enemyLine, bool reverse = false, bool special = false)
         {
             string fisrtTemplate = (special ? "{0} (особый приём Первый удар)" : iTemplate);
 
             if (!reverse)
             {
-                fight.Add(String.Format(fisrtTemplate, protogonist.Name, heroLine));
+                fight.Add(String.Format(fisrtTemplate, protogonist.Name, protagonistLine));
                 fight.Add(String.Format(iTemplate, FightEnemies[0].Name, enemyLine));
 
                 FightOrder.Add(FightEnemies[0]);
@@ -409,7 +409,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             else
             {
                 fight.Add(String.Format(fisrtTemplate, FightEnemies[0].Name, enemyLine));
-                fight.Add(String.Format(iTemplate, protogonist.Name, heroLine));
+                fight.Add(String.Format(iTemplate, protogonist.Name, protagonistLine));
 
                 FightOrder.Insert(0, FightEnemies[0]);
             }
@@ -519,7 +519,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     defender.Endurance -= 3;
                 }
 
-                string defenderName = (IsHero(defender.Name) ? "Вы ранены" : String.Format("{0} ранен", defender.Name));
+                string defenderName = (Isprotagonist(defender.Name) ? "Вы ранены" : String.Format("{0} ранен", defender.Name));
 
                 if (defender.Endurance > 0)
                     defenderName += String.Format(" (осталось жизней: {0})", defender.Endurance);
@@ -558,8 +558,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         {
             List<string> fight = new List<string>();
 
-            int iHero, iEnemy, round = 1, enemyWounds = 0;
-            string heroLine, enemyLine, iTemplate = "{0} (инициатива {1})";
+            int iprotagonist, iEnemy, round = 1, enemyWounds = 0;
+            string protagonistLine, enemyLine, iTemplate = "{0} (инициатива {1})";
 
             List<Character> FightAllies = new List<Character>();
             List<Character> FightEnemies = new List<Character>();
@@ -619,24 +619,24 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 do
                 {
-                    iHero = InitiativeAndDices(protogonist, out heroLine);
+                    iprotagonist = InitiativeAndDices(protogonist, out protagonistLine);
                     iEnemy = InitiativeAndDices(FightEnemies[0], out enemyLine);
                 }
-                while (iHero == iEnemy);
+                while (iprotagonist == iEnemy);
 
                 FightOrder.Add(protogonist);
 
                 if (firstStrike && !enemyFirstStrike && !enemyIgnoreFirstStrike)
-                    OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, heroLine, enemyLine, special: true);
+                    OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, protagonistLine, enemyLine, special: true);
 
                 else if (!firstStrike && enemyFirstStrike)
-                    OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, heroLine, enemyLine, reverse: true, special: true);
+                    OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, protagonistLine, enemyLine, reverse: true, special: true);
 
-                else if (iHero > iEnemy)
-                    OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, heroLine, enemyLine);
+                else if (iprotagonist > iEnemy)
+                    OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, protagonistLine, enemyLine);
 
                 else
-                    OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, heroLine, enemyLine, reverse: true);
+                    OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, protagonistLine, enemyLine, reverse: true);
             }
 
             fight.Add(String.Empty);
