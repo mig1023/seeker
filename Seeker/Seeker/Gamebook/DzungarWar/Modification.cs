@@ -8,32 +8,32 @@ namespace Seeker.Gamebook.DzungarWar
 
         public override void Do()
         {
-            Character hero = Character.Protagonist;
+            Character protagonist = Character.Protagonist;
 
             if ((Name == "SaleOfPredatorSkins") && Game.Data.Triggers.Contains("Хищник"))
-                hero.Tanga += 150;
+                protagonist.Tanga += 150;
 
             else if (Name == "Favour")
             {
                 if (Empty)
-                    hero.Favour = null;
+                    protagonist.Favour = null;
 
                 else if (Init)
-                    hero.Favour = 0;
+                    protagonist.Favour = 0;
 
                 else
-                    hero.Favour += Value;
+                    protagonist.Favour += Value;
             }
             else if (Name == "Danger")
             {
                 if (Empty)
-                    hero.Danger = null;
+                    protagonist.Danger = null;
 
                 else if (Character.Protagonist.Danger != null)
-                    hero.Danger += Value;
+                    protagonist.Danger += Value;
             }
             else
-                InnerDo(Character.Protagonist);
+                base.Do(Character.Protagonist);
         }
     }
 }
