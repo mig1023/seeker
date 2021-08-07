@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.SwampFever
 
         public override void Do()
         {
-            int currentValue = (int)Character.Protagonist.GetType().GetProperty(Name).GetValue(Character.Protagonist, null);
+            int currentValue = GetProperty(Character.Protagonist, Name);
 
             if (Multiplication)
                 currentValue *= Value;
@@ -18,7 +18,7 @@ namespace Seeker.Gamebook.SwampFever
             else
                 currentValue += Value;
 
-            Character.Protagonist.GetType().GetProperty(Name).SetValue(Character.Protagonist, currentValue);
+            SetProperty(Character.Protagonist, Name, currentValue);
         }
     }
 }
