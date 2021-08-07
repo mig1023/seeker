@@ -18,7 +18,7 @@ namespace Seeker.Gamebook.PrairieLaw
             action.SellPrices = Xml.StringParse(xmlAction["SellPrices"]);
             action.Dices = Xml.IntParse(xmlAction["Dices"]);
             action.Firefight = Xml.BoolParse(xmlAction["Firefight"]);
-            action.HeroWoundsLimit = Xml.BoolParse(xmlAction["HeroWoundsLimit"]);
+            action.protagonistWoundsLimit = Xml.BoolParse(xmlAction["protagonistWoundsLimit"]);
             action.EnemyWoundsLimit = Xml.BoolParse(xmlAction["EnemyWoundsLimit"]);
             action.Roulette = Xml.BoolParse(xmlAction["Roulette"]);
 

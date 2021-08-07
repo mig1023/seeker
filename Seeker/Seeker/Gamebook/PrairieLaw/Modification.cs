@@ -7,7 +7,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public override void Do()
         {
             if (Name == "StrengthByPoison")
-                ModificationByTrigger("Противоядие", () => Character.Protagonist.Strength -= 10, not: true);
+                DoByTrigger("Противоядие", () => Character.Protagonist.Strength -= 10, not: true);
 
             else if (Name == "StrengthByBlanket")
                 Character.Protagonist.Strength += (Game.Data.Triggers.Contains("Одеяло") ? 1 : -1);
@@ -19,10 +19,10 @@ namespace Seeker.Gamebook.PrairieLaw
             }
 
             else if (Name == "Skin")
-                ModificationByTrigger("Нож", () => Character.Protagonist.AnimalSkins.Add(ValueString));
+                DoByTrigger("Нож", () => Character.Protagonist.AnimalSkins.Add(ValueString));
 
             else
-                InnerDo(Character.Protagonist);
+                base.Do(Character.Protagonist);
         }
     }
 }

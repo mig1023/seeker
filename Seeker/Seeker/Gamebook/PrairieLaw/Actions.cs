@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public List<Character> Enemies { get; set; }
         public bool Firefight { get; set; }
-        public bool HeroWoundsLimit { get; set; }
+        public bool protagonistWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
 
         public int Dices { get; set; }
@@ -465,7 +465,7 @@ namespace Seeker.Gamebook.PrairieLaw
             int round = 1;
             bool firefight = Firefight;
 
-            Character hero = protogonist;
+            Character protagonist = protogonist;
 
             while (true)
             {
@@ -474,7 +474,7 @@ namespace Seeker.Gamebook.PrairieLaw
                 fight.Add(String.Format("HEAD|Раунд: {0}", round));
 
                 bool attackAlready = false;
-                int heroHitStrength = 0, enemyHitStrength = 0;
+                int protagonistHitStrength = 0, enemyHitStrength = 0;
 
                 foreach (Character enemy in FightEnemies)
                 {
@@ -488,14 +488,14 @@ namespace Seeker.Gamebook.PrairieLaw
 
                     if (!attackAlready && (!firefight || !noCartridges))
                     {
-                        int heroRollFirst = Game.Dice.Roll();
-                        int heroRollSecond = Game.Dice.Roll();
-                        heroHitStrength = heroRollFirst + heroRollSecond + hero.Skill;
+                        int protagonistRollFirst = Game.Dice.Roll();
+                        int protagonistRollSecond = Game.Dice.Roll();
+                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Skill;
 
-                        string heroHitLine = (firefight ? "Ваш выстрел" : "Мощность вашего удара");
+                        string protagonistHitLine = (firefight ? "Ваш выстрел" : "Мощность вашего удара");
 
                         fight.Add(String.Format("{0}: {1} + {2} + {3} = {4}",
-                            heroHitLine, Game.Dice.Symbol(heroRollFirst), Game.Dice.Symbol(heroRollSecond), hero.Skill, heroHitStrength));
+                            protagonistHitLine, Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), protagonist.Skill, protagonistHitStrength));
 
                         if (firefight)
                             protogonist.Cartridges -= 1;
@@ -518,11 +518,11 @@ namespace Seeker.Gamebook.PrairieLaw
                     else
                         enemyHitStrength = 0;
 
-                    if ((heroHitStrength == 0) && (enemyHitStrength == 0))
+                    if ((protagonistHitStrength == 0) && (enemyHitStrength == 0))
                     { 
                         // nothing to do here
                     }
-                    else if ((heroHitStrength > enemyHitStrength) && !attackAlready)
+                    else if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
                     {
                         fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
 
@@ -537,17 +537,17 @@ namespace Seeker.Gamebook.PrairieLaw
                             return fight;
                         }
                     }
-                    else if (heroHitStrength > enemyHitStrength)
+                    else if (protagonistHitStrength > enemyHitStrength)
                     {
                         fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
                     }
-                    else if (heroHitStrength < enemyHitStrength)
+                    else if (protagonistHitStrength < enemyHitStrength)
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
-                        hero.Strength -= (firefight ? 3 : 2);
+                        protagonist.Strength -= (firefight ? 3 : 2);
 
-                        if ((hero.Strength <= 0) || (HeroWoundsLimit && (hero.Strength <= 2)))
+                        if ((protagonist.Strength <= 0) || (protagonistWoundsLimit && (protagonist.Strength <= 2)))
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
