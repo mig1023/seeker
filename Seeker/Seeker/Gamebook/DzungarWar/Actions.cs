@@ -292,6 +292,9 @@ namespace Seeker.Gamebook.DzungarWar
             testLines.AddRange(result);
             testLines.Add(testIsOk ? "BIG|GOOD|АЛДАР СПРАВИЛСЯ :)" : "BIG|BAD|АЛДАР НЕ СПРАВИЛСЯ :(");
 
+            if ((Benefit != null) && testIsOk)
+                Benefit.Do();
+
             return testLines;
         }
 
