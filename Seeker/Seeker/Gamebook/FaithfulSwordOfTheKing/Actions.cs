@@ -229,13 +229,13 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             
             for (int i = 1; i < 12; i++)
             {
-                int heroSpeed = Game.Dice.Roll();
+                int protagonistSpeed = Game.Dice.Roll();
                 int enemiesSpeed = Game.Dice.Roll();
 
                 pursuit.Add(String.Format("Ваша скорость: {0}  <-->  Их скорость: {1}",
-                    Game.Dice.Symbol(heroSpeed), Game.Dice.Symbol(enemiesSpeed)));
+                    Game.Dice.Symbol(protagonistSpeed), Game.Dice.Symbol(enemiesSpeed)));
 
-                if (heroSpeed > enemiesSpeed)
+                if (protagonistSpeed > enemiesSpeed)
                 {
                     pursuit.Add("GOOD|Вы быстрее");
                     threeTimesInRow = 0;
@@ -288,10 +288,10 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         private bool LuckyHit(int? roll = null) => (roll ?? Game.Dice.Roll()) % 2 == 0;
 
-        private bool EnemyWound(Character hero, ref Character enemy, List<Character> FightEnemies,
+        private bool EnemyWound(Character protagonist, ref Character enemy, List<Character> FightEnemies,
             int roll, int WoundsToWin, ref int enemyWounds, ref List<string> fight, bool dagger = false)
         {
-            enemy.Strength -= ((hero.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(roll) && !dagger ? 3 : 2);
+            enemy.Strength -= ((protagonist.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(roll) && !dagger ? 3 : 2);
 
             enemyWounds += 1;
 

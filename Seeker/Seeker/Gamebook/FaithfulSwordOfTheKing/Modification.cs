@@ -6,17 +6,17 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
     {
         public override void Do()
         {
-            Character hero = Character.Protagonist;
+            Character protagonist = Character.Protagonist;
 
             if (Name == "Day")
             {
-                if (hero.HadFoodToday <= 0)
-                    hero.Strength -= 3;
+                if (protagonist.HadFoodToday <= 0)
+                    protagonist.Strength -= 3;
                 else
-                    hero.HadFoodToday = 0;
+                    protagonist.HadFoodToday = 0;
             }
 
-            InnerDo(hero);
+            base.Do(protagonist);
         }
     }
 }
