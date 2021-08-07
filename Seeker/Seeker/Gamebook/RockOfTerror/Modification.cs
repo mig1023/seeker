@@ -4,9 +4,10 @@ namespace Seeker.Gamebook.RockOfTerror
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
-        private static Character protogonist = Character.Protagonist;
         public bool Init { get; set; }
 
+        private static Character protogonist = Character.Protagonist;
+        
         public override void Do()
         {
             if (Name == "MonksHeart")
@@ -19,13 +20,13 @@ namespace Seeker.Gamebook.RockOfTerror
             }
             else
             {
-                int currentValue = (int)protogonist.GetType().GetProperty(Name).GetValue(protogonist, null);
+                int currentValue = GetProperty(protogonist, Name);
 
                 int injuryModificator = ((Name == "Time") && (protogonist.Injury > 0) ? 2 : 1);
 
                 currentValue += Value * injuryModificator;
 
-                protogonist.GetType().GetProperty(Name).SetValue(protogonist, currentValue);
+                SetProperty(protogonist, Name, currentValue);
             }
         }
     }
