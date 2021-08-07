@@ -16,7 +16,7 @@ namespace Seeker
             Gamebooks();
         }
 
-        public void Gamebooks()
+        public void Gamebooks(bool toMain = false)
         {
             Game.Data.Clean();
 
@@ -42,6 +42,9 @@ namespace Seeker
             }
 
             UpdateStatus();
+
+            if (toMain)
+                MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
         }
 
         private void Gamebook_Click(object sender, EventArgs e)
@@ -237,7 +240,7 @@ namespace Seeker
 
         private void Exit_Click(object sender, EventArgs e) => System.Diagnostics.Process.GetCurrentProcess().Kill();
 
-        private void ToMain_Click(object sender, EventArgs e) => this.Gamebooks();
+        private void ToMain_Click(object sender, EventArgs e) => this.Gamebooks(toMain: true);
 
         private void InputChange(object sender, EventArgs e)
         {
