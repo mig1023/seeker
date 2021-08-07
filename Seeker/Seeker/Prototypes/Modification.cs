@@ -13,9 +13,9 @@ namespace Seeker.Prototypes
 
         public delegate void ParamMod();
 
-        public virtual void Do() { }
+        public virtual void Do() => Game.Other.DoNothing();
 
-        public void InnerDo(Abstract.ICharacter Character)
+        public virtual void Do(Abstract.ICharacter Character)
         {
             if (Name == "Trigger")
                 Game.Option.Trigger(ValueString);
@@ -28,38 +28,43 @@ namespace Seeker.Prototypes
                 int currentValue = 0;
 
                 if (Restore)
-                    currentValue = (int)Character.GetType().GetProperty("Max" + Name).GetValue(Character, null);
+                    currentValue = GetProperty(Character, "Max" + Name);
 
                 else if (!Empty)
-                    currentValue = (int)Character.GetType().GetProperty(Name).GetValue(Character, null);
+                    currentValue = GetProperty(Character, Name);
 
                 if (Name.StartsWith("Max"))
                 {
                     string normalParam = Name.Remove(0, 3);
 
-                    int normalValue = (int)Character.GetType().GetProperty(normalParam).GetValue(Character, null);
+                    int normalValue = GetProperty(Character, normalParam);
 
                     if ((normalValue + Value) > currentValue)
-                        Character.GetType().GetProperty(Name).SetValue(Character, currentValue + Value);
+                        SetProperty(Character, Name, currentValue + Value);
 
-                    Character.GetType().GetProperty(normalParam).SetValue(Character, currentValue + Value);
+                    SetProperty(Character, normalParam, currentValue + Value);
                 }
                 else
                 {
                     currentValue += Value;
-
-                    Character.GetType().GetProperty(Name).SetValue(Character, currentValue);
+                    SetProperty(Character, Name, currentValue);
                 }
             }
         }
 
-        public void ModificationByTrigger(string trigger, ParamMod doModification, bool not = false)
+        public int GetProperty(Abstract.ICharacter Character, string property) =>
+            (int)Character.GetType().GetProperty(property).GetValue(Character, null);
+
+        public void SetProperty(Abstract.ICharacter Character, string property, int value) =>
+            Character.GetType().GetProperty(property).SetValue(Character, value);
+
+        public void DoByTrigger(string trigger, ParamMod doModification, bool not = false)
         {
             if ((!not && Game.Data.Triggers.Contains(trigger)) || (not && !Game.Data.Triggers.Contains(trigger)))
                 doModification();
         }
 
-        public bool ModificationByName(string actualName, ParamMod doModification)
+        public bool DoByName(string actualName, ParamMod doModification)
         {
             if (Name == actualName)
             {
@@ -70,7 +75,7 @@ namespace Seeker.Prototypes
                 return false;
         }
 
-        public bool ModificationByValueString(string actualName, ParamMod doModification) =>
-            (String.IsNullOrEmpty(ValueString) ? false : ModificationByName(actualName, doModification));
+        public bool DoByValueString(string actualName, ParamMod doModification) =>
+            (String.IsNullOrEmpty(ValueString) ? false : DoByName(actualName, doModification));
     }
 }

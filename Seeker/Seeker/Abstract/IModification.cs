@@ -9,5 +9,7 @@ namespace Seeker.Abstract
         string ValueString { get; set; }
 
         void Do();
+
+        void Do(Abstract.ICharacter Character);
     }
 }
