@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 Character.Protagonist.VanRichten = 0;
 
             else
-                InnerDo(Character.Protagonist);
+                base.Do(Character.Protagonist);
         }
     }
 }

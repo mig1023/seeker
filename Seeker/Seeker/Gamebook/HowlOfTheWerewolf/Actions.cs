@@ -443,7 +443,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
-        private void AddWounds(ref Character hero, ref List<string> fight, string diceType,
+        private void AddWounds(ref Character protagonist, ref List<string> fight, string diceType,
             int chance, string fail, string win, int wounds = 3, bool hitStrenghtInstead = false)
         {
             int dice = Game.Dice.Roll();
@@ -457,63 +457,63 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
             else if (chance >= dice)
             {
-                hero.Endurance -= wounds;
+                protagonist.Endurance -= wounds;
                 fight.Add(String.Format("BAD|{0}", fail));
             }
             else
                 fight.Add(win);
         }
 
-        private void CheckAdditionalWounds(ref Character hero, ref List<string> fight, int wounds)
+        private void CheckAdditionalWounds(ref Character protagonist, ref List<string> fight, int wounds)
         {
             if (Specificity == Specifics.ElectricDamage)
-                AddWounds(ref hero, ref fight, "электрического разряда", 5, "Вы потеряли ещё 3 Выносливость от разряда", "Разряд прошёл мимо");
+                AddWounds(ref protagonist, ref fight, "электрического разряда", 5, "Вы потеряли ещё 3 Выносливость от разряда", "Разряд прошёл мимо");
 
             if (Specificity == Specifics.AcidDamage)
-                AddWounds(ref hero, ref fight, "ожога кислотой", 6, "Вы потеряли ещё 3 Выносливость от кислоты", "Обошлось...");
+                AddWounds(ref protagonist, ref fight, "ожога кислотой", 6, "Вы потеряли ещё 3 Выносливость от кислоты", "Обошлось...");
 
             if (Specificity == Specifics.IcyTouch)
-                AddWounds(ref hero, ref fight, "пронизывающего холода", 5,
+                AddWounds(ref protagonist, ref fight, "пронизывающего холода", 5,
                     "Пронизывающий мистический холод притупил ваши чувства: теперь из Силы удара нужно будет вычитать",
                     "Вы справились с холодом, пока что...", hitStrenghtInstead: true);
 
             if (Specificity == Specifics.ToadVenom)
-                AddWounds(ref hero, ref fight, "яда", 5, "Вы потеряли ещё 2 Выносливость от яда", "Обошлось...", wounds: 2);
+                AddWounds(ref protagonist, ref fight, "яда", 5, "Вы потеряли ещё 2 Выносливость от яда", "Обошлось...", wounds: 2);
 
             if ((Specificity == Specifics.Plague) && (wounds > 2))
             {
-                hero.Mastery -= 1;
+                protagonist.Mastery -= 1;
                 fight.Add("BAD|Ваше мастерство снизилось из-за чумы, которой заражены крысы");
             }
         }
 
-        private void SnakeFight(ref Character hero, ref List<string> fight, int round)
+        private void SnakeFight(ref Character protagonist, ref List<string> fight, int round)
         {
             if (round < 3)
             {
-                hero.Endurance -= 3;
+                protagonist.Endurance -= 3;
                 fight.Add("BAD|Удушающие Кольца - теряете 3 Выносливости");
             }
             else if (round == 3)
             {
-                hero.Mastery -= 1;
-                hero.Endurance -= 4;
+                protagonist.Mastery -= 1;
+                protagonist.Endurance -= 4;
                 fight.Add("BAD|Поцелуй Кобры - теряете 1 Мастерство и 4 Выносливости");
             }
             else if (round == 4)
             {
-                hero.Endurance -= 2;
+                protagonist.Endurance -= 2;
                 HitStrengthBonus = -1;
                 fight.Add("BAD|Удар Плетью – теряете 2 Выносливости и в следующий раз Сила Удара уменьшается на 1");
             }
             else
             {
-                hero.Endurance -= 2;
+                protagonist.Endurance -= 2;
                 fight.Add("BAD|Хищные Когти - теряете 2 Выносливости");
             }
         }
         
-        private void WitchFight(ref Character hero, ref List<string> fight)
+        private void WitchFight(ref Character protagonist, ref List<string> fight)
         {
             int witchAttack = Game.Dice.Roll();
 
@@ -521,25 +521,25 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             if (witchAttack < 3)
             {
-                hero.Endurance -= 2;
+                protagonist.Endurance -= 2;
                 fight.Add("BAD|Вы потеряли 2 Выносливости");
             }
             else if (witchAttack < 5)
             {
-                hero.Endurance -= 3;
+                protagonist.Endurance -= 3;
                 fight.Add("BAD|Вы потеряли 3 Выносливости");
             }
             else if (witchAttack == 5)
             {
-                hero.Endurance -= 2;
-                hero.Luck -= 1;
+                protagonist.Endurance -= 2;
+                protagonist.Luck -= 1;
                 fight.Add("BAD|Вы потеряли 2 Выносливости и 1 Удачу");
             }
             else
             {
-                hero.Endurance -= 2;
-                hero.Change += 1;
-                fight.Add(String.Format("BAD|Вы потеряли 2 Выносливости и Трансформация продолжилась (Изменение достигло {0})", hero.Change));
+                protagonist.Endurance -= 2;
+                protagonist.Change += 1;
+                fight.Add(String.Format("BAD|Вы потеряли 2 Выносливости и Трансформация продолжилась (Изменение достигло {0})", protagonist.Change));
             }
         }
         
@@ -673,7 +673,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             fight.Add(String.Empty);
         }
 
-        private int BlackWidow(ref Character hero, ref List<string> fight)
+        private int BlackWidow(ref Character protagonist, ref List<string> fight)
         {
             int witchAttack = Game.Dice.Roll();
 
@@ -681,12 +681,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             if (witchAttack < 3)
             {
-                hero.Endurance -= 2;
+                protagonist.Endurance -= 2;
                 fight.Add("Удар когтями: вы потеряли 2 Выносливости");
             }
             else if (witchAttack == 3)
             {
-                hero.Endurance -= 3;
+                protagonist.Endurance -= 3;
                 fight.Add("Сильный удар: вы потеряли 3 Выносливости и в следующий раунд не сможете атаковать пытаясь подняться на ноги");
 
                 return 3;
@@ -699,13 +699,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
             else if (witchAttack == 4)
             {
-                hero.Endurance -= 4;
+                protagonist.Endurance -= 4;
                 fight.Add("Ядовитый укус: вы потеряли 4 Выносливости");
             }
             else
             {
                 int spiders = Game.Dice.Roll();
-                hero.Endurance -= spiders;
+                protagonist.Endurance -= spiders;
 
                 fight.Add(String.Format("Стая пауков: вы теряете {0}, но и она теряет 2 Выносливости", Game.Dice.Symbol(spiders)));
 
@@ -715,7 +715,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return 0;
         }
 
-        private bool WerewolfDeadFight(ref Character hero, ref List<string> fight)
+        private bool WerewolfDeadFight(ref Character protagonist, ref List<string> fight)
         {
             int werewolfAttack = Game.Dice.Roll();
 
@@ -747,10 +747,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Character enemy = Enemies[0];
             Actions action = this;
 
-            PassageDice(out int dice, out int heroPassage);
+            PassageDice(out int dice, out int protagonistPassage);
 
             fight.Add(String.Format("Вы обороняете: {0} / 2 = {1}, это {2}",
-                Game.Dice.Symbol(dice), heroPassage, Constants.GetPassageName()[heroPassage]));
+                Game.Dice.Symbol(dice), protagonistPassage, Constants.GetPassageName()[protagonistPassage]));
 
             fight.Add(String.Empty);
 
@@ -763,7 +763,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 fight.Add(String.Format("{0} волк: {1} / 2 = {2}, ломится через {3}",
                     wolf, Game.Dice.Symbol(wolfDice), wolfPassage, Constants.GetPassageName()[wolfPassage]));
 
-                if (heroPassage == wolfPassage)
+                if (protagonistPassage == wolfPassage)
                     woulfCount += 1;
             }
 
@@ -797,7 +797,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
-            int round = 1, heroWounds = 0, enemyWounds = 0, roundWins = 0, roundFails = 0;
+            int round = 1, protagonistWounds = 0, enemyWounds = 0, roundWins = 0, roundFails = 0;
             
             int blackWidowLastAttack = 0;
 
@@ -940,11 +940,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                             protogonist.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
 
                         roundFails += 1;
-                        heroWounds += 1;
+                        protagonistWounds += 1;
 
-                        CheckAdditionalWounds(ref protogonist, ref fight, heroWounds);
+                        CheckAdditionalWounds(ref protogonist, ref fight, protagonistWounds);
 
-                        if (heroWounds == WoundsForTransformation)
+                        if (protagonistWounds == WoundsForTransformation)
                         {
                             protogonist.Change += 1;
 
