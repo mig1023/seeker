@@ -49,7 +49,7 @@ namespace Seeker.Gamebook.Genesis
 
             else
             {
-                Character hero = protogonist;
+                Character protagonist = protogonist;
 
                 foreach (string oneOption in option.Split(','))
                 {
@@ -64,15 +64,15 @@ namespace Seeker.Gamebook.Genesis
                     {
                         int level = Game.Other.LevelParse(oneOption);
 
-                        if (oneOption.Contains("СТЕЛС") && (level > hero.Stealth))
+                        if (oneOption.Contains("СТЕЛС") && (level > protagonist.Stealth))
                             return false;
-                        else if (oneOption.Contains("ЛОВКОСТЬ") && (level > hero.Skill))
+                        else if (oneOption.Contains("ЛОВКОСТЬ") && (level > protagonist.Skill))
                             return false;
-                        else if (oneOption.Contains("ХОЛОДНОЕ ОРУЖИЕ") && (level > hero.Weapon))
+                        else if (oneOption.Contains("ХОЛОДНОЕ ОРУЖИЕ") && (level > protagonist.Weapon))
                             return false;
-                        else if (oneOption.Contains("АУРА") && (level > hero.Aura))
+                        else if (oneOption.Contains("АУРА") && (level > protagonist.Aura))
                             return false;
-                        else if (oneOption.Contains("ЗДОРОВЬЕ") && (level > hero.Life))
+                        else if (oneOption.Contains("ЗДОРОВЬЕ") && (level > protagonist.Life))
                             return false;
                     }
                     else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
