@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.InvisibleFront
                 Game.Option.Trigger(Constants.GetApartments()[Game.Dice.Roll() - 1]);
 
             else
-                InnerDo(Character.Protagonist);
+                base.Do(Character.Protagonist);
         }
     }
 }
