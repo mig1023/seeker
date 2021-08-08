@@ -14,10 +14,7 @@ namespace Seeker.Droid
     {
         private Context context;
 
-        public RotatedTextRenderer(Context c) : base(c)
-        {
-            context = c;
-        }
+        public RotatedTextRenderer(Context c) : base(c) => context = c;
 
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.View> e)
         {
@@ -36,14 +33,14 @@ namespace Seeker.Droid
     {
         int textSize = 22;
         string text = String.Empty;
-        bool white;
+        bool whiteText = false;
 
         TextPaint textPaint = null;
 
         public RotatedTextView(Context c, string title, bool white) : base(c)
         {
             text = title;
-            white = this.white;
+            whiteText = white;
 
             InitLabelView();
         }
@@ -53,7 +50,7 @@ namespace Seeker.Droid
             AntiAlias = true,
             TextAlign = Paint.Align.Center,
             TextSize = textSize,
-            Color = (this.white ? Android.Graphics.Color.White : Android.Graphics.Color.Black),
+            Color = (this.whiteText ? Android.Graphics.Color.White : Android.Graphics.Color.Black),
         };
 
         public override void Draw(Canvas canvas)
