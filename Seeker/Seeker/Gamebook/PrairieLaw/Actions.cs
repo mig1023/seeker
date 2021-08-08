@@ -7,11 +7,11 @@ namespace Seeker.Gamebook.PrairieLaw
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
-        private static Character protogonist = Character.Protagonist;
+        private static Character protagonist = Character.Protagonist;
 
         public List<Character> Enemies { get; set; }
         public bool Firefight { get; set; }
-        public bool protagonistWoundsLimit { get; set; }
+        public bool ProtagonistWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
 
         public int Dices { get; set; }
@@ -23,19 +23,19 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Ловкость: {0}", protogonist.Skill),
-            String.Format("Сила: {0}", protogonist.Strength),
-            String.Format("Обаяние: {0}", protogonist.Charm),
+            String.Format("Ловкость: {0}", protagonist.Skill),
+            String.Format("Сила: {0}", protagonist.Strength),
+            String.Format("Обаяние: {0}", protagonist.Charm),
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Патронов: {0}", protogonist.Cartridges),
-            String.Format("Долларов: {0:f2}", ToDollars(protogonist.Cents))
+            String.Format("Патронов: {0}", protagonist.Cartridges),
+            String.Format("Долларов: {0:f2}", ToDollars(protagonist.Cents))
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protogonist.Strength, out toEndParagraph, out toEndText);
+            GameOverBy(protagonist.Strength, out toEndParagraph, out toEndText);
 
         public override List<string> Representer()
         {
@@ -76,16 +76,16 @@ namespace Seeker.Gamebook.PrairieLaw
                     {
                         int level = Game.Other.LevelParse(oneOption);
 
-                        if (option.Contains("ЦЕНТОВ >=") && (level > protogonist.Cents))
+                        if (option.Contains("ЦЕНТОВ >=") && (level > protagonist.Cents))
                             return false;
 
-                        else if (option.Contains("САМОРОДКОВ >=") && (level > protogonist.Nuggets))
+                        else if (option.Contains("САМОРОДКОВ >=") && (level > protagonist.Nuggets))
                             return false;
 
-                        else if (option.Contains("ПАТРОНОВ >=") && (level > protogonist.Cartridges))
+                        else if (option.Contains("ПАТРОНОВ >=") && (level > protagonist.Cartridges))
                             return false;
 
-                        else if (option.Contains("ШКУР >=") && (level > protogonist.AnimalSkins.Count))
+                        else if (option.Contains("ШКУР >=") && (level > protagonist.AnimalSkins.Count))
                             return false;
                     }
                     else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
@@ -101,7 +101,7 @@ namespace Seeker.Gamebook.PrairieLaw
             string luckListShow = String.Empty;
 
             for (int i = 1; i < 7; i++)
-                luckListShow += String.Format("{0} ", protogonist.Luck[i] ? Constants.LuckList()[i] : Constants.LuckList()[i + 10]);
+                luckListShow += String.Format("{0} ", protagonist.Luck[i] ? Constants.LuckList()[i] : Constants.LuckList()[i + 10]);
 
             return luckListShow;
         }
@@ -117,11 +117,11 @@ namespace Seeker.Gamebook.PrairieLaw
             int goodLuck = Game.Dice.Roll();
 
             luckCheck.Add(String.Format("Проверка удачи: {0} - {1}зачёркунтый",
-                Game.Dice.Symbol(goodLuck), (protogonist.Luck[goodLuck] ? "не " : String.Empty)));
+                Game.Dice.Symbol(goodLuck), (protagonist.Luck[goodLuck] ? "не " : String.Empty)));
 
-            luckCheck.Add(protogonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            luckCheck.Add(protagonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
-            protogonist.Luck[goodLuck] = !protogonist.Luck[goodLuck];
+            protagonist.Luck[goodLuck] = !protagonist.Luck[goodLuck];
 
             return luckCheck;
         }
@@ -133,10 +133,10 @@ namespace Seeker.Gamebook.PrairieLaw
             bool success = false;
 
             for (int i = 1; i < 7; i++)
-                if (!protogonist.Luck[i])
+                if (!protagonist.Luck[i])
                 {
                     luckRecovery.Add(String.Format("GOOD|Цифра {0} восстановлена!", i));
-                    protogonist.Luck[i] = true;
+                    protagonist.Luck[i] = true;
                     success = true;
 
                     break;
@@ -156,27 +156,27 @@ namespace Seeker.Gamebook.PrairieLaw
             int fisrtDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
 
-            bool goodCharm = (fisrtDice + secondDice) <= protogonist.Charm;
+            bool goodCharm = (fisrtDice + secondDice) <= protagonist.Charm;
 
             List<string> luckCheck = new List<string> { String.Format(
                 "Проверка обаяния: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodCharm ? "<=" : ">"), protogonist.Charm) };
+                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodCharm ? "<=" : ">"), protagonist.Charm) };
 
             if (goodCharm)
             {
                 luckCheck.Add("BIG|GOOD|УСПЕХ :)");
                 luckCheck.Add("Вы увеличили своё обаяние на единицу");
 
-                protogonist.Charm += 1;
+                protagonist.Charm += 1;
             }
             else
             {
                 luckCheck.Add("BIG|BAD|НЕУДАЧА :(");
 
-                if (protogonist.Charm > 2)
+                if (protagonist.Charm > 2)
                 {
                     luckCheck.Add("Вы уменьшили своё обаяние на единицу");
-                    protogonist.Charm -= 1;
+                    protagonist.Charm -= 1;
                 }
             }
 
@@ -188,11 +188,11 @@ namespace Seeker.Gamebook.PrairieLaw
             int fisrtDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
 
-            bool goodSkill = (fisrtDice + secondDice) <= protogonist.Skill;
+            bool goodSkill = (fisrtDice + secondDice) <= protagonist.Skill;
 
             List<string> luckCheck = new List<string> { String.Format(
                 "Проверка ловкости: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), protogonist.Skill) };
+                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), protagonist.Skill) };
 
             luckCheck.Add(goodSkill ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
@@ -213,7 +213,7 @@ namespace Seeker.Gamebook.PrairieLaw
                 diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
             }
 
-            protogonist.Strength -= dices;
+            protagonist.Strength -= dices;
 
             diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dices));
 
@@ -223,10 +223,10 @@ namespace Seeker.Gamebook.PrairieLaw
         public override bool IsButtonEnabled()
         {
             bool disabledByUsed = (Price > 0) && Used;
-            bool disabledByPrice = (Price > 0) && (protogonist.Cents < Price);
-            bool disabledBySkins = (Name == "SellSkins") && (protogonist.AnimalSkins.Count == 0);
-            bool disabledByNuggets = (Name == "SellNuggets") && (protogonist.Nuggets == 0);
-            bool disabledByGame = Roulette && (protogonist.Cents < 100);
+            bool disabledByPrice = (Price > 0) && (protagonist.Cents < Price);
+            bool disabledBySkins = (Name == "SellSkins") && (protagonist.AnimalSkins.Count == 0);
+            bool disabledByNuggets = (Name == "SellNuggets") && (protagonist.Nuggets == 0);
+            bool disabledByGame = Roulette && (protagonist.Cents < 100);
 
             return !(disabledByUsed || disabledByPrice || disabledBySkins || disabledByNuggets || disabledByGame);
         }
@@ -236,9 +236,9 @@ namespace Seeker.Gamebook.PrairieLaw
             if (!String.IsNullOrEmpty(RemoveTrigger))
                 Game.Option.Trigger(RemoveTrigger, remove: true);
 
-            if ((Price > 0) && (protogonist.Cents >= Price))
+            if ((Price > 0) && (protagonist.Cents >= Price))
             {
-                protogonist.Cents -= Price;
+                protagonist.Cents -= Price;
 
                 if (!Multiple)
                     Used = true;
@@ -267,7 +267,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
             bool anySkin = prices.ContainsKey("Любая шкура");
 
-            foreach (string skin in protogonist.AnimalSkins)
+            foreach (string skin in protagonist.AnimalSkins)
             {
                 if (prices.ContainsKey(skin) || anySkin)
                 {
@@ -287,14 +287,14 @@ namespace Seeker.Gamebook.PrairieLaw
             saledIndexes.Reverse();
 
             foreach (int removeIndex in saledIndexes)
-                protogonist.AnimalSkins.RemoveAt(removeIndex);
+                protagonist.AnimalSkins.RemoveAt(removeIndex);
 
             salesReport.Add(String.Empty);
             salesReport.Add("BIG|ИТОГО:");
             salesReport.Add(String.Format("Вы продали шкур: {0}", sold));
             salesReport.Add(String.Format("GOOD|Вы получили: {0:f2}$", ToDollars(cents)));
 
-            protogonist.Cents += cents;
+            protagonist.Cents += cents;
 
             return salesReport;
         }
@@ -304,14 +304,14 @@ namespace Seeker.Gamebook.PrairieLaw
             List<string> salesReport = new List<string>();
 
             int price = int.Parse(SellPrices);
-            int cents = protogonist.Nuggets * price;
-            protogonist.Cents += cents;
+            int cents = protagonist.Nuggets * price;
+            protagonist.Cents += cents;
 
-            salesReport.Add(String.Format("Вы продали самородков: {0}", protogonist.Nuggets));
+            salesReport.Add(String.Format("Вы продали самородков: {0}", protagonist.Nuggets));
             salesReport.Add(String.Format("Цена за один: {0:f2}$", ToDollars(price)));
             salesReport.Add(String.Format("GOOD|Вы получили: {0:f2}$", ToDollars(cents)));
 
-            protogonist.Nuggets = 0;
+            protagonist.Nuggets = 0;
 
             return salesReport;
         }
@@ -330,12 +330,12 @@ namespace Seeker.Gamebook.PrairieLaw
             if (red == even)
             {
                 gameReport.Add("GOOD|Вы ВЫИГРАЛИ и получили 1$ :)");
-                protogonist.Cents += 100;
+                protagonist.Cents += 100;
             }
             else
             {
                 gameReport.Add("BAD|Вы ПРОИГРАЛИ и потеряли 1$ :(");
-                protogonist.Cents -= 100;
+                protagonist.Cents -= 100;
             }
 
             return gameReport;
@@ -353,12 +353,12 @@ namespace Seeker.Gamebook.PrairieLaw
             if (firstDice == secondDice)
             {
                 gameReport.Add("GOOD|Цифры совпали - вы ВЫИГРАЛИ и получили 5$ :)");
-                protogonist.Cents += 500;
+                protagonist.Cents += 500;
             }
             else
             {
                 gameReport.Add("BAD|Вы ПРОИГРАЛИ и потеряли 1$ :(");
-                protogonist.Cents -= 100;
+                protagonist.Cents -= 100;
             }
 
             return gameReport;
@@ -376,12 +376,12 @@ namespace Seeker.Gamebook.PrairieLaw
             if (even)
             {
                 gameReport.Add("GOOD|Вы ВЫИГРАЛИ и получаете 1$ :)");
-                protogonist.Cents += 100;
+                protagonist.Cents += 100;
             }
             else
             {
                 gameReport.Add("BAD|Вы ПРОИГРАЛИ и потеряли 1$ :(");
-                protogonist.Cents -= 100;
+                protagonist.Cents -= 100;
             }
 
             return gameReport;
@@ -404,12 +404,12 @@ namespace Seeker.Gamebook.PrairieLaw
                 if (nuggetsGame)
                 {
                     gameReport.Add("Самородок теперь ваш.");
-                    protogonist.Nuggets += 1;
+                    protagonist.Nuggets += 1;
                 }
                 else
                 {
                     gameReport.Add("Вы выиграли 3 доллара.");
-                    protogonist.Cents += 300;
+                    protagonist.Cents += 300;
                 }
             }
             else
@@ -419,12 +419,12 @@ namespace Seeker.Gamebook.PrairieLaw
                 if (nuggetsGame)
                 {
                     gameReport.Add("Вы потеряли 1$");
-                    protogonist.Cents -= 100;
+                    protagonist.Cents -= 100;
                 }
                 else
                 {
                     gameReport.Add("Вы потеряли 3$");
-                    protogonist.Cents -= 300;
+                    protagonist.Cents -= 300;
                 }
             }
 
@@ -438,7 +438,7 @@ namespace Seeker.Gamebook.PrairieLaw
             if (!firefight)
                 return false;
 
-            if (protogonist.Cartridges > 0)
+            if (protagonist.Cartridges > 0)
                 return true;
 
             if (enemies.Where(x => x.Cartridges > 0).Count() > 0)
@@ -465,8 +465,6 @@ namespace Seeker.Gamebook.PrairieLaw
             int round = 1;
             bool firefight = Firefight;
 
-            Character protagonist = protogonist;
-
             while (true)
             {
                 firefight = FirefightContinue(FightEnemies, ref fight, firefight);
@@ -484,7 +482,7 @@ namespace Seeker.Gamebook.PrairieLaw
                     string cartridgesLine = (enemy.Cartridges > 0 ? String.Format(", патронов {0}", enemy.Cartridges) : String.Empty);
                     fight.Add(String.Format("{0} (сила {1}{2})", enemy.Name, enemy.Strength, cartridgesLine));
 
-                    bool noCartridges = protogonist.Cartridges <= 0;
+                    bool noCartridges = protagonist.Cartridges <= 0;
 
                     if (!attackAlready && (!firefight || !noCartridges))
                     {
@@ -498,7 +496,7 @@ namespace Seeker.Gamebook.PrairieLaw
                             protagonistHitLine, Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond), protagonist.Skill, protagonistHitStrength));
 
                         if (firefight)
-                            protogonist.Cartridges -= 1;
+                            protagonist.Cartridges -= 1;
                     }
 
                     if (!firefight || (enemy.Cartridges > 0))
@@ -547,7 +545,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
                         protagonist.Strength -= (firefight ? 3 : 2);
 
-                        if ((protagonist.Strength <= 0) || (protagonistWoundsLimit && (protagonist.Strength <= 2)))
+                        if ((protagonist.Strength <= 0) || (ProtagonistWoundsLimit && (protagonist.Strength <= 2)))
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
@@ -566,14 +564,14 @@ namespace Seeker.Gamebook.PrairieLaw
             }
         }
 
-        public override bool IsHealingEnabled() => protogonist.Strength < protogonist.MaxStrength;
+        public override bool IsHealingEnabled() => protagonist.Strength < protagonist.MaxStrength;
 
         public override void UseHealing(int healingLevel)
         {
             if (healingLevel == -1)
-                protogonist.Strength = protogonist.MaxStrength;
+                protagonist.Strength = protagonist.MaxStrength;
             else
-                protogonist.Strength += healingLevel;
+                protagonist.Strength += healingLevel;
         }
     }
 }
