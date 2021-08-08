@@ -7,17 +7,17 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
-        private static Character protogonist = Character.Protagonist;
+        private static Character protagonist = Character.Protagonist;
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Реакция: {0}", protogonist.Reaction),
-            String.Format("Сила: {0}", protogonist.Strength),
-            String.Format("Выносливость: {0}", protogonist.Endurance),
+            String.Format("Реакция: {0}", protagonist.Reaction),
+            String.Format("Сила: {0}", protagonist.Strength),
+            String.Format("Выносливость: {0}", protagonist.Endurance),
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protogonist.Endurance, out toEndParagraph, out toEndText);
+            GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
 
         public override bool CheckOnlyIf(string option)
         {
@@ -48,13 +48,13 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
         private static bool OneParamFail(string oneOption)
         {
-            if (ParamFail("СИЛА", oneOption, protogonist.Strength))
+            if (ParamFail("СИЛА", oneOption, protagonist.Strength))
                 return true;
 
-            else if (ParamFail("РЕАКЦИЯ", oneOption, protogonist.Reaction))
+            else if (ParamFail("РЕАКЦИЯ", oneOption, protagonist.Reaction))
                 return true;
 
-            else if (ParamFail("ВЫНОСЛИВОСТЬ", oneOption, protogonist.Endurance))
+            else if (ParamFail("ВЫНОСЛИВОСТЬ", oneOption, protagonist.Endurance))
                 return true;
 
             else
@@ -84,7 +84,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
             if (dice > 4)
             {
-                protogonist.Reaction += 3;
+                protagonist.Reaction += 3;
                 report.Add("BIG|GOOD|+3 к Реакции! :)");
             }
             else
