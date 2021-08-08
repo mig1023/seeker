@@ -59,7 +59,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             action.Equipment = Xml.StringParse(xmlAction["Equipment"]);
             action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.protagonistWoundsLimit = Xml.BoolParse(xmlAction["protagonistWoundsLimit"]);
+            action.ProtagonistWoundsLimit = Xml.BoolParse(xmlAction["HeroWoundsLimit"]);
             action.EnemyWoundsLimit = Xml.BoolParse(xmlAction["EnemyWoundsLimit"]);
             action.DevastatingAttack = Xml.BoolParse(xmlAction["DevastatingAttack"]);
             action.DarknessPenalty = Xml.BoolParse(xmlAction["DarknessPenalty"]);
