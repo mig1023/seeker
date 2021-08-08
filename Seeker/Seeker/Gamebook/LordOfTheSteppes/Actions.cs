@@ -7,7 +7,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
-        private static Character protogonist = Character.Protagonist;
+        private static Character protagonist = Character.Protagonist;
 
         public string Stat { get; set; }
         public int StatStep { get; set; }
@@ -32,7 +32,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (!String.IsNullOrEmpty(Stat))
             {
-                int currentStat = (int)protogonist.GetType().GetProperty(Stat).GetValue(protogonist, null);
+                int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
 
                 Dictionary<string, int> startValues = Constants.GetStartValues();
 
@@ -58,11 +58,11 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             if ((Allies != null) && GroupFight)
             {
                 foreach (Character ally in Allies)
-                    if (ally.Name == protogonist.Name)
+                    if (ally.Name == protagonist.Name)
                     {
                         enemies.Add(String.Format("Вы\nнападение {0}  защита {1}  жизнь {2}  инициатива {3}{4}",
-                            protogonist.Attack, protogonist.Defence, protogonist.Endurance,
-                            protogonist.Initiative, protogonist.GetSpecialTechniques()));
+                            protagonist.Attack, protagonist.Defence, protagonist.Endurance,
+                            protagonist.Initiative, protagonist.GetSpecialTechniques()));
                     }
                     else
                     {
@@ -82,27 +82,27 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Жизнь: {0}", protogonist.Endurance),
-            String.Format("Монеты: {0}", protogonist.Coins),
+            String.Format("Жизнь: {0}", protagonist.Endurance),
+            String.Format("Монеты: {0}", protagonist.Coins),
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Инициатива: {0}", protogonist.Initiative),
-            String.Format("Защита: {0}", protogonist.Defence),
-            String.Format("Нападение: {0}", protogonist.Attack),
+            String.Format("Инициатива: {0}", protagonist.Initiative),
+            String.Format("Защита: {0}", protagonist.Defence),
+            String.Format("Нападение: {0}", protagonist.Attack),
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protogonist.Endurance, out toEndParagraph, out toEndText);
+            GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled()
         {
             bool disabledByChoosed = (SpecialTechnique != Character.SpecialTechniques.Nope) &&
-                (protogonist.SpecialTechnique.Count > 0);
+                (protagonist.SpecialTechnique.Count > 0);
 
-            bool disabledByBonuses = (!String.IsNullOrEmpty(Stat)) && (protogonist.Bonuses <= 0);
-            bool disabledByPrice = (Price > 0) && (protogonist.Coins < Price);
+            bool disabledByBonuses = (!String.IsNullOrEmpty(Stat)) && (protagonist.Bonuses <= 0);
+            bool disabledByPrice = (Price > 0) && (protagonist.Coins < Price);
             bool disabledByUsed = ((Price > 0) ||(Price < 0)) && Used;
 
             return !(disabledByChoosed || disabledByBonuses || disabledByPrice || disabledByUsed);
@@ -110,7 +110,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public override bool CheckOnlyIf(string option)
         {
-            if (protogonist.SpecialTechnique.Where(x => option == x.ToString()).Count() > 0)
+            if (protagonist.SpecialTechnique.Where(x => option == x.ToString()).Count() > 0)
                 return true;
 
             if (option.Contains("|"))
@@ -118,7 +118,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             else
             {
                 if (option.Contains(">") || option.Contains("<"))
-                    return !(option.Contains("МОНЕТ >=") && (int.Parse(option.Split('=')[1]) > protogonist.Coins));
+                    return !(option.Contains("МОНЕТ >=") && (int.Parse(option.Split('=')[1]) > protagonist.Coins));
                 else
                     return Game.Data.Triggers.Contains(option);
             }
@@ -126,24 +126,24 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public List<string> Get()
         {
-            if ((SpecialTechnique != Character.SpecialTechniques.Nope) && (protogonist.SpecialTechnique.Count == 0))
-                protogonist.SpecialTechnique.Add(SpecialTechnique);
+            if ((SpecialTechnique != Character.SpecialTechniques.Nope) && (protagonist.SpecialTechnique.Count == 0))
+                protagonist.SpecialTechnique.Add(SpecialTechnique);
 
-            else if ((StatStep > 0) && (protogonist.Bonuses >= 0))
+            else if ((StatStep > 0) && (protagonist.Bonuses >= 0))
             {
-                int currentStat = (int)protogonist.GetType().GetProperty(Stat).GetValue(protogonist, null);
+                int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
 
                 currentStat += StatStep;
 
-                protogonist.GetType().GetProperty("Max" + Stat).SetValue(protogonist, currentStat);
-                protogonist.GetType().GetProperty(Stat).SetValue(protogonist, currentStat);
+                protagonist.GetType().GetProperty("Max" + Stat).SetValue(protagonist, currentStat);
+                protagonist.GetType().GetProperty(Stat).SetValue(protagonist, currentStat);
 
-                protogonist.Bonuses -= 1;
+                protagonist.Bonuses -= 1;
             }
 
-            else if (((Price > 0) || (Price < 0)) && (protogonist.Coins >= Price))
+            else if (((Price > 0) || (Price < 0)) && (protagonist.Coins >= Price))
             {
-                protogonist.Coins -= Price;
+                protagonist.Coins -= Price;
 
                 if (!Multiple)
                     Used = true;
@@ -168,10 +168,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             {
                 int firstRoll = Game.Dice.Roll();
                 int secondRoll = Game.Dice.Roll();
-                int protagonistStrength = firstRoll + secondRoll + protogonist.Attack;
+                int protagonistStrength = firstRoll + secondRoll + protagonist.Attack;
 
                 fight.Add(String.Format("Ваша сила удара: {0} + {1} + {2} = {3}",
-                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), protogonist.Attack, protagonistStrength));
+                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), protagonist.Attack, protagonistStrength));
 
                 firstRoll = Game.Dice.Roll();
                 secondRoll = Game.Dice.Roll();
@@ -213,7 +213,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public List<string> GameOfDice()
         {
-            if (protogonist.Coins < 5)
+            if (protagonist.Coins < 5)
                 return new List<string> { "BAD|У вас не достаточно денег, чтобы играть..." };
 
             List<string> diceGame = new List<string> { };
@@ -243,12 +243,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             if (myResult > enemyResult)
             {
                 diceGame.Add("BIG|GOOD|ВЫ ВЫИГРАЛИ 5 МОНЕТ:)");
-                protogonist.Coins += 5;
+                protagonist.Coins += 5;
             }
             else
             {
                 diceGame.Add("BIG|BAD|ПРОИГРАЛИ 5 МОНЕТ :(");
-                protogonist.Coins -= 5;
+                protagonist.Coins -= 5;
             }
 
             return diceGame;
@@ -268,8 +268,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             else
             {
                 int secondDice = Game.Dice.Roll();
-                dicesResult += secondDice + (Initiative ? protogonist.Initiative : 0);
-                string initLine = (Initiative ? String.Format(" + {0} Инициатива", protogonist.Initiative) : String.Empty);
+                dicesResult += secondDice + (Initiative ? protagonist.Initiative : 0);
+                string initLine = (Initiative ? String.Format(" + {0} Инициатива", protagonist.Initiative) : String.Empty);
 
                 diceCheck.Add(String.Format("{0}На кубиках выпало: {1} + {2}{3} = {4}",
                     size, Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), initLine, dicesResult));
@@ -281,7 +281,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return diceCheck;
         }
 
-        private bool Isprotagonist(string name) => name == protogonist.Name;
+        private bool IsProtagonist(string name) => name == protagonist.Name;
 
         private Character FindEnemyIn(List<Character> Enemies) => Enemies.Where(e => e.Endurance > 0).FirstOrDefault();
 
@@ -341,12 +341,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         private Character.FightStyles ChangeFightStyle(string motivation, ref List<string> fight, string direction, Character.FightStyles newFightStyles)
         {
-            bool goodDirectionUp = ((direction == "upTo") && ((int)protogonist.FightStyle < (int)newFightStyles));
-            bool goodDirectionDown = ((direction == "downTo") && ((int)protogonist.FightStyle > (int)newFightStyles));
+            bool goodDirectionUp = ((direction == "upTo") && ((int)protagonist.FightStyle < (int)newFightStyles));
+            bool goodDirectionDown = ((direction == "downTo") && ((int)protagonist.FightStyle > (int)newFightStyles));
 
             if (goodDirectionUp || goodDirectionDown)
             {
-                protogonist.FightStyle = newFightStyles;
+                protagonist.FightStyle = newFightStyles;
                 fight.Add(String.Empty);
                 fight.Add(String.Format("GRAY|{0} Меняем стиль боя на {1}", motivation, Constants.FightStyles()[newFightStyles]));
             }
@@ -356,7 +356,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         private Character.FightStyles ChooseFightStyle(ref List<string> fight, Dictionary<string, List<int>> AttackStory, List<Character> Enemies)
         {
-            if (protogonist.Endurance < (protogonist.MaxEndurance / 2))
+            if (protagonist.Endurance < (protagonist.MaxEndurance / 2))
                 return ChangeFightStyle("Дело дрянь!", ref fight, "downTo", Character.FightStyles.Fullback);
 
             int enemyCount = Enemies.Where(e => e.Endurance > 0).Count();
@@ -366,7 +366,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             else if (enemyCount > 1)
                 return ChangeFightStyle("Надо аккуратно быть их по очереди!", ref fight, "downTo", Character.FightStyles.Defensive);
 
-            List<int> story = AttackStory[protogonist.Name];
+            List<int> story = AttackStory[protagonist.Name];
 
             int fightBalance = 0;
             int storyCount = (story.Count > 3 ? 3 : story.Count);
@@ -401,7 +401,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (!reverse)
             {
-                fight.Add(String.Format(fisrtTemplate, protogonist.Name, protagonistLine));
+                fight.Add(String.Format(fisrtTemplate, protagonist.Name, protagonistLine));
                 fight.Add(String.Format(iTemplate, FightEnemies[0].Name, enemyLine));
 
                 FightOrder.Add(FightEnemies[0]);
@@ -409,7 +409,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             else
             {
                 fight.Add(String.Format(fisrtTemplate, FightEnemies[0].Name, enemyLine));
-                fight.Add(String.Format(iTemplate, protogonist.Name, protagonistLine));
+                fight.Add(String.Format(iTemplate, protagonist.Name, protagonistLine));
 
                 FightOrder.Insert(0, FightEnemies[0]);
             }
@@ -519,7 +519,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     defender.Endurance -= 3;
                 }
 
-                string defenderName = (Isprotagonist(defender.Name) ? "Вы ранены" : String.Format("{0} ранен", defender.Name));
+                string defenderName = (IsProtagonist(defender.Name) ? "Вы ранены" : String.Format("{0} ранен", defender.Name));
 
                 if (defender.Endurance > 0)
                     defenderName += String.Format(" (осталось жизней: {0})", defender.Endurance);
@@ -558,7 +558,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         {
             List<string> fight = new List<string>();
 
-            int iprotagonist, iEnemy, round = 1, enemyWounds = 0;
+            int iProtagonist, iEnemy, round = 1, enemyWounds = 0;
             string protagonistLine, enemyLine, iTemplate = "{0} (инициатива {1})";
 
             List<Character> FightAllies = new List<Character>();
@@ -577,15 +577,15 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (Allies == null)
             {
-                FightAllies.Add(protogonist);
-                FightAll.Add(protogonist);
+                FightAllies.Add(protagonist);
+                FightAll.Add(protagonist);
             }
             else
                 foreach (Character ally in Allies)
-                    if (ally.Name == protogonist.Name)
+                    if (ally.Name == protagonist.Name)
                     {
-                        FightAllies.Add(protogonist);
-                        FightAll.Add(protogonist);
+                        FightAllies.Add(protagonist);
+                        FightAll.Add(protagonist);
                     }
                     else
                     {
@@ -611,7 +611,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
             else
             {
-                bool firstStrike = protogonist.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
+                bool firstStrike = protagonist.SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
                 bool enemyFirstStrike = FightEnemies[0].SpecialTechnique.Contains(Character.SpecialTechniques.FirstStrike);
                 bool enemyIgnoreFirstStrike = FightEnemies[0].SpecialTechnique.Contains(Character.SpecialTechniques.IgnoreFirstStrike);
 
@@ -619,12 +619,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 do
                 {
-                    iprotagonist = InitiativeAndDices(protogonist, out protagonistLine);
+                    iProtagonist = InitiativeAndDices(protagonist, out protagonistLine);
                     iEnemy = InitiativeAndDices(FightEnemies[0], out enemyLine);
                 }
-                while (iprotagonist == iEnemy);
+                while (iProtagonist == iEnemy);
 
-                FightOrder.Add(protogonist);
+                FightOrder.Add(protagonist);
 
                 if (firstStrike && !enemyFirstStrike && !enemyIgnoreFirstStrike)
                     OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, protagonistLine, enemyLine, special: true);
@@ -632,7 +632,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 else if (!firstStrike && enemyFirstStrike)
                     OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, protagonistLine, enemyLine, reverse: true, special: true);
 
-                else if (iprotagonist > iEnemy)
+                else if (iProtagonist > iEnemy)
                     OutputInitiative(ref fight, FightEnemies, FightOrder, iTemplate, protagonistLine, enemyLine);
 
                 else
@@ -647,7 +647,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 int coherenceIndex = 0;
 
-                protogonist.FightStyle = ChooseFightStyle(ref fight, AttackStory, FightEnemies);
+                protagonist.FightStyle = ChooseFightStyle(ref fight, AttackStory, FightEnemies);
 
                 foreach (Character fighter in FightOrder)
                 {
@@ -702,7 +702,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                     fight.Add("BIG|BAD|ВЫ ПРОИГРАЛИ :(");
 
                     if (NotToDeath)
-                        protogonist.Endurance += 1;
+                        protagonist.Endurance += 1;
 
                     return fight;
                 }
@@ -721,14 +721,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
         }
 
-        public override bool IsHealingEnabled() => protogonist.Endurance < protogonist.MaxEndurance;
+        public override bool IsHealingEnabled() => protagonist.Endurance < protagonist.MaxEndurance;
 
         public override void UseHealing(int healingLevel)
         {
             if (healingLevel == -1)
-                protogonist.Endurance = protogonist.MaxEndurance;
+                protagonist.Endurance = protagonist.MaxEndurance;
             else
-                protogonist.Endurance += healingLevel;
+                protagonist.Endurance += healingLevel;
         }
     }
 }
