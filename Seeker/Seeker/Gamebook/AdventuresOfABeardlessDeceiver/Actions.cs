@@ -6,7 +6,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
-        private static Character protogonist = Character.Protagonist;
+        private static Character protagonist = Character.Protagonist;
 
         public string Stat { get; set; }
         public int Level { get; set; }
@@ -22,7 +22,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
             else if (!String.IsNullOrEmpty(Stat))
             {
-                int currentStat = (int)protogonist.GetType().GetProperty(Stat).GetValue(protogonist, null);
+                int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
 
                 string diffLine = (currentStat > 1 ? String.Format(" (+{0})", (currentStat - 1)) : String.Empty);
 
@@ -42,19 +42,19 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         {
             List<string> statusLines = new List<string>();
 
-            if (protogonist.Tanga > 0)
-                statusLines.Add(String.Format("Деньги: {0}", protogonist.Tanga));
+            if (protagonist.Tanga > 0)
+                statusLines.Add(String.Format("Деньги: {0}", protagonist.Tanga));
 
-            if (protogonist.AkynGlory != null)
-                statusLines.Add(String.Format("Слава акына: {0}", protogonist.AkynGlory));
+            if (protagonist.AkynGlory != null)
+                statusLines.Add(String.Format("Слава акына: {0}", protagonist.AkynGlory));
 
-            if (protogonist.UnitOfTime != null)
-                statusLines.Add(String.Format("Ед.времени: {0}", protogonist.UnitOfTime));
+            if (protagonist.UnitOfTime != null)
+                statusLines.Add(String.Format("Ед.времени: {0}", protagonist.UnitOfTime));
 
-            if (protogonist.Kumis > 0)
-                statusLines.Add(String.Format("Кумыс: {0}", protogonist.Kumis));
+            if (protagonist.Kumis > 0)
+                statusLines.Add(String.Format("Кумыс: {0}", protagonist.Kumis));
 
-            statusLines.Add(String.Format("Популярность: {0}", protogonist.Popularity));
+            statusLines.Add(String.Format("Популярность: {0}", protagonist.Popularity));
 
             return statusLines;
         }
@@ -63,20 +63,20 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         {
             List<string> statusLines = new List<string>();
 
-            if (protogonist.Strength > 1)
-                statusLines.Add(String.Format("Сила: {0}", protogonist.Strength));
+            if (protagonist.Strength > 1)
+                statusLines.Add(String.Format("Сила: {0}", protagonist.Strength));
 
-            if (protogonist.Skill > 1)
-                statusLines.Add(String.Format("Ловкость: {0}", protogonist.Skill));
+            if (protagonist.Skill > 1)
+                statusLines.Add(String.Format("Ловкость: {0}", protagonist.Skill));
 
-            if (protogonist.Wisdom > 1)
-                statusLines.Add(String.Format("Мудрость: {0}", protogonist.Wisdom));
+            if (protagonist.Wisdom > 1)
+                statusLines.Add(String.Format("Мудрость: {0}", protagonist.Wisdom));
 
-            if (protogonist.Cunning > 1)
-                statusLines.Add(String.Format("Хитрость: {0}", protogonist.Cunning));
+            if (protagonist.Cunning > 1)
+                statusLines.Add(String.Format("Хитрость: {0}", protagonist.Cunning));
 
-            if (protogonist.Oratory > 1)
-                statusLines.Add(String.Format("Красноречие: {0}", protogonist.Oratory));
+            if (protagonist.Oratory > 1)
+                statusLines.Add(String.Format("Красноречие: {0}", protagonist.Oratory));
 
             if (statusLines.Count <= 0)
                 return null;
@@ -91,7 +91,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
 
-            if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (protogonist.Kumis > 0) && !NextTestWithKumis)
+            if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (protagonist.Kumis > 0) && !NextTestWithKumis)
                 staticButtons.Add("ВЫПИТЬ КУМЫСА");
 
             return staticButtons;
@@ -101,7 +101,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         {
             if (action == "ВЫПИТЬ КУМЫСА")
             {
-                protogonist.Kumis -= 1;
+                protagonist.Kumis -= 1;
                 NextTestWithKumis = true;
                 return true;
             }
@@ -114,7 +114,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             toEndParagraph = 150;
             toEndText = "Задуматься о судьбе";
 
-            return protogonist.Popularity <= 0;
+            return protagonist.Popularity <= 0;
         }
 
         public override bool IsButtonEnabled()
@@ -123,13 +123,13 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 return true;
 
             else if (Price <= 0)
-                return protogonist.StatBonuses > 0;
+                return protagonist.StatBonuses > 0;
 
             else if (Used)
                 return false;
 
             else
-                return protogonist.Tanga >= Price;
+                return protagonist.Tanga >= Price;
         }
 
         public override bool CheckOnlyIf(string option)
@@ -140,19 +140,19 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 {
                     int level = Game.Other.LevelParse(oneOption);
 
-                    if (oneOption.Contains("ТАНЬГА >=") && (level > protogonist.Tanga))
+                    if (oneOption.Contains("ТАНЬГА >=") && (level > protagonist.Tanga))
                         return false;
 
-                    else if (oneOption.Contains("СЛАВА_АКЫНА >=") && (level > protogonist.AkynGlory))
+                    else if (oneOption.Contains("СЛАВА_АКЫНА >=") && (level > protagonist.AkynGlory))
                         return false;
 
-                    else if (oneOption.Contains("ПОПУЛЯРНОСТЬ >") && (level >= protogonist.Popularity))
+                    else if (oneOption.Contains("ПОПУЛЯРНОСТЬ >") && (level >= protagonist.Popularity))
                         return false;
 
-                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ >") && (level >= protogonist.UnitOfTime))
+                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ >") && (level >= protagonist.UnitOfTime))
                         return false;
 
-                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ <=") && (level < protogonist.UnitOfTime))
+                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ <=") && (level < protagonist.UnitOfTime))
                         return false;
                 }
                 else if (oneOption.Contains("!"))
@@ -176,12 +176,12 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 Level = 7;
 
             if (GreatKhanSpecialCheck)
-                Level -= (protogonist.Popularity + (Game.Data.Triggers.Contains("KhansRing") ? 3 : 0));
+                Level -= (protagonist.Popularity + (Game.Data.Triggers.Contains("KhansRing") ? 3 : 0));
 
             if (NextTestWithKumis)
                 Level -= 2;
 
-            int currentStat = (int)protogonist.GetType().GetProperty(Stat).GetValue(protogonist, null);
+            int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
             bool testIsOk = (firstDice + secondDice) + currentStat >= Level;
 
             List<string> testLines = new List<string> { String.Format(
@@ -197,8 +197,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 if (Game.Data.Triggers.Contains("KhansRing"))
                     testLines.Insert(0, "Бонус за ханское кольцо: -3");
 
-                if (protogonist.Popularity > 0)
-                    testLines.Insert(0, String.Format("Бонус за популярность: -{0}", protogonist.Popularity));
+                if (protagonist.Popularity > 0)
+                    testLines.Insert(0, String.Format("Бонус за популярность: -{0}", protagonist.Popularity));
             }
 
             if (NextTestWithKumis)
@@ -213,9 +213,9 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public List<string> Get()
         {
-            if ((Price > 0) && (protogonist.Tanga >= Price))
+            if ((Price > 0) && (protagonist.Tanga >= Price))
             {
-                protogonist.Tanga -= Price;
+                protagonist.Tanga -= Price;
 
                 Used = true;
 
@@ -223,15 +223,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     Benefit.Do();
             }
 
-            else if (protogonist.StatBonuses >= 0)
+            else if (protagonist.StatBonuses >= 0)
             {
-                int currentStat = (int)protogonist.GetType().GetProperty(Stat).GetValue(protogonist, null);
+                int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
 
                 currentStat += 1;
 
-                protogonist.GetType().GetProperty(Stat).SetValue(protogonist, currentStat);
+                protagonist.GetType().GetProperty(Stat).SetValue(protagonist, currentStat);
 
-                protogonist.StatBonuses -= 1;
+                protagonist.StatBonuses -= 1;
             }
 
             return new List<string> { "RELOAD" };
