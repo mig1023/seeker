@@ -6,16 +6,16 @@ namespace Seeker.Gamebook.RockOfTerror
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
-        private static Character protogonist = Character.Protagonist;
+        private static Character protagonist = Character.Protagonist;
 
         public override List<string> Status()
         {
-            TimeSpan time = TimeSpan.FromMinutes(protogonist.Time);
+            TimeSpan time = TimeSpan.FromMinutes(protagonist.Time);
 
             List<string> statusLines = new List<string> { String.Format("Прошедшее время: {0:d2}:{1:d2}", time.Hours, time.Minutes) };
 
-            if (protogonist.MonksHeart != null)
-                statusLines.Add(String.Format("Сила сердца монаха: {0}", protogonist.MonksHeart));
+            if (protagonist.MonksHeart != null)
+                statusLines.Add(String.Format("Сила сердца монаха: {0}", protagonist.MonksHeart));
 
             return statusLines;
         }
@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.RockOfTerror
             toEndParagraph = 0;
             toEndText = "Время вышло...";
 
-            return protogonist.Time >= 720;
+            return protagonist.Time >= 720;
         }
 
         public override bool CheckOnlyIf(string option)
@@ -34,11 +34,11 @@ namespace Seeker.Gamebook.RockOfTerror
             {
                 int level = Game.Other.LevelParse(option);
 
-                if (option.Contains("СИЛА СЕРДЦА МОНАХА >=") && (level > protogonist.MonksHeart))
+                if (option.Contains("СИЛА СЕРДЦА МОНАХА >=") && (level > protagonist.MonksHeart))
                     return false;
-                else if (option.Contains("ВРЕМЯ >=") && (level > protogonist.Time))
+                else if (option.Contains("ВРЕМЯ >=") && (level > protagonist.Time))
                     return false;
-                else if (option.Contains("ВРЕМЯ <") && (level < protogonist.Time))
+                else if (option.Contains("ВРЕМЯ <") && (level < protagonist.Time))
                     return false;
                 else
                     return true;
