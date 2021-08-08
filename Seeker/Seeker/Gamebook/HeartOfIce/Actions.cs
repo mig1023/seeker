@@ -6,7 +6,7 @@ namespace Seeker.Gamebook.HeartOfIce
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
-        private static Character protogonist = Character.Protagonist;
+        private static Character protagonist = Character.Protagonist;
 
         public string RemoveTrigger { get; set; }
         public string Skill { get; set; }
@@ -37,47 +37,47 @@ namespace Seeker.Gamebook.HeartOfIce
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Здоровье: {0}", protogonist),
-                String.Format("Деньги: {0}", protogonist),
+                String.Format("Здоровье: {0}", protagonist),
+                String.Format("Деньги: {0}", protagonist),
             };
 
-            if (protogonist.Food > 0)
-                statusLines.Add(String.Format("Еда: {0}", protogonist.Food));
+            if (protagonist.Food > 0)
+                statusLines.Add(String.Format("Еда: {0}", protagonist.Food));
 
-            if (protogonist.Shots > 0)
-                statusLines.Add(String.Format("Выстрелов: {0}", protogonist.Shots));
+            if (protagonist.Shots > 0)
+                statusLines.Add(String.Format("Выстрелов: {0}", protagonist.Shots));
 
             return statusLines;
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protogonist.Life, out toEndParagraph, out toEndText);
+            GameOverBy(protagonist.Life, out toEndParagraph, out toEndText);
 
         public List<string> Get()
         {
             if (Choice)
-                protogonist.Chosen = true;
+                protagonist.Chosen = true;
 
             if (!String.IsNullOrEmpty(Skill))
             {
-                protogonist.Skills.Add(Skill);
-                protogonist.SkillsValue -= 1;
+                protagonist.Skills.Add(Skill);
+                protagonist.SkillsValue -= 1;
             }
 
-            if ((Price > 0) && (protogonist.Money >= Price))
+            if ((Price > 0) && (protagonist.Money >= Price))
             {
-                protogonist.Money += ((Sell || SellIfAvailable) ? Price : (Price * -1));
+                protagonist.Money += ((Sell || SellIfAvailable) ? Price : (Price * -1));
                 Game.Option.Trigger(RemoveTrigger, remove: true);
 
                 if (SellIfAvailable && (SellType == "Пистолет"))
-                    protogonist.Shots = 0;
+                    protagonist.Shots = 0;
 
                 if (SellIfAvailable && (SellType == "Еда"))
-                    protogonist.Food -= 1;
+                    protagonist.Food -= 1;
             }
 
             if (Split)
-                protogonist.Split += 1;
+                protagonist.Split += 1;
 
             if (((Price > 0) || Split) && !Multiple)
                 Used = true;
@@ -92,11 +92,11 @@ namespace Seeker.Gamebook.HeartOfIce
         public override bool IsButtonEnabled()
         {
             bool disabledBySkills = (!String.IsNullOrEmpty(Skill) &&
-                ((protogonist.SkillsValue <= 0) || protogonist.Skills.Contains(Skill)));
+                ((protagonist.SkillsValue <= 0) || protagonist.Skills.Contains(Skill)));
 
-            bool disbledByChoice = (Choice && protogonist.Chosen);
-            bool disabledByPrice = (Price > 0) && (protogonist.Money < Price);
-            bool disabledBySplit = Split && (protogonist.Split >= 2);
+            bool disbledByChoice = (Choice && protagonist.Chosen);
+            bool disabledByPrice = (Price > 0) && (protagonist.Money < Price);
+            bool disabledBySplit = Split && (protagonist.Split >= 2);
             bool disabledByAvailable = SellIfAvailable && !Available();
 
             return !(disbledByChoice || disabledBySkills || disabledByPrice || disabledBySplit || disabledByAvailable || Used);
@@ -108,10 +108,10 @@ namespace Seeker.Gamebook.HeartOfIce
                 return Game.Data.Triggers.Contains(RemoveTrigger);
 
             else if (SellType == "Пистолет")
-                return protogonist.Shots > 0;
+                return protagonist.Shots > 0;
 
             else if (SellType == "Еда")
-                return protogonist.Food > 0;
+                return protagonist.Food > 0;
 
             return false;
         }
@@ -122,7 +122,7 @@ namespace Seeker.Gamebook.HeartOfIce
             {
                 foreach (string oneOption in option.Split('|'))
                 {
-                    if (protogonist.Skills.Contains(oneOption.Trim()))
+                    if (protagonist.Skills.Contains(oneOption.Trim()))
                         return true;
 
                     if (Game.Data.Triggers.Contains(oneOption.Trim()))
@@ -137,16 +137,16 @@ namespace Seeker.Gamebook.HeartOfIce
                 {
                     if (oneOption.Contains("="))
                     {
-                        if (oneOption.Contains("ВЫСТРЕЛОВ >=") && (int.Parse(oneOption.Split('=')[1]) > protogonist.Shots))
+                        if (oneOption.Contains("ВЫСТРЕЛОВ >=") && (int.Parse(oneOption.Split('=')[1]) > protagonist.Shots))
                             return false;
 
-                        if (oneOption.Contains("ДЕНЬГИ >=") && (int.Parse(oneOption.Split('=')[1]) > protogonist.Money))
+                        if (oneOption.Contains("ДЕНЬГИ >=") && (int.Parse(oneOption.Split('=')[1]) > protagonist.Money))
                             return false;
 
-                        else if (oneOption.Contains("ЕДА >=") && (int.Parse(oneOption.Split('=')[1]) > protogonist.Food))
+                        else if (oneOption.Contains("ЕДА >=") && (int.Parse(oneOption.Split('=')[1]) > protagonist.Food))
                             return false;
                     }
-                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()) && !protogonist.Skills.Contains(oneOption.Trim()))
+                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()) && !protagonist.Skills.Contains(oneOption.Trim()))
                         return false;
                 }
 
