@@ -7,11 +7,11 @@ namespace Seeker.Gamebook.RendezVous
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
-        private static Character protogonist = Character.Protagonist;
+        private static Character protagonist = Character.Protagonist;
 
         public int Dices { get; set; }
 
-        public override List<string> Status() => new List<string> { String.Format("Осознание: {0}", protogonist.Awareness) };
+        public override List<string> Status() => new List<string> { String.Format("Осознание: {0}", protagonist.Awareness) };
 
         public override bool CheckOnlyIf(string option)
         {
@@ -26,10 +26,10 @@ namespace Seeker.Gamebook.RendezVous
                     {
                         int level = Game.Other.LevelParse(oneOption);
 
-                        if (oneOption.Contains("ОСОЗНАНИЕ >") && (level >= protogonist.Awareness))
+                        if (oneOption.Contains("ОСОЗНАНИЕ >") && (level >= protagonist.Awareness))
                             return false;
 
-                        else if (oneOption.Contains("ОСОЗНАНИЕ <=") && (level < protogonist.Awareness))
+                        else if (oneOption.Contains("ОСОЗНАНИЕ <=") && (level < protagonist.Awareness))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
