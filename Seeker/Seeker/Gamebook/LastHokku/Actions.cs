@@ -6,16 +6,16 @@ namespace Seeker.Gamebook.LastHokku
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
-        private static Character protogonist = Character.Protagonist;
+        private static Character protagonist = Character.Protagonist;
 
         public override string TextByOptions(string option)
         {
             if (!Constants.GetParagraphsWithoutHokkuCreation().Contains(Game.Data.CurrentParagraphID) && !String.IsNullOrEmpty(option))
-                protogonist.Hokku.Add(option);
+                protagonist.Hokku.Add(option);
 
-            if (protogonist.Hokku.Count >= 7)
+            if (protagonist.Hokku.Count >= 7)
             {
-                List<string> oldHokku = protogonist.Hokku;
+                List<string> oldHokku = protagonist.Hokku;
 
                 oldHokku[2] = new System.Globalization.CultureInfo("ru-RU", false).TextInfo.ToTitleCase(oldHokku[2]);
 
@@ -26,10 +26,10 @@ namespace Seeker.Gamebook.LastHokku
                     String.Format("{0} - {1} {2}...", oldHokku[4], oldHokku[5], oldHokku[6]),
                 };
 
-                protogonist.Hokku = newHokku;
+                protagonist.Hokku = newHokku;
             }
 
-            return String.Join("\n", protogonist.Hokku);
+            return String.Join("\n", protagonist.Hokku);
         }
     }
 }
