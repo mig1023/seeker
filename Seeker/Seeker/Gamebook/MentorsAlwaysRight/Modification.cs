@@ -4,36 +4,36 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
-        private static Character protogonist = Character.Protagonist;
+        private static Character protagonist = Character.Protagonist;
 
         public override void Do()
         {
             if (Name == "Spell")
             {
-                protogonist.Spells.Remove(ValueString);
-                protogonist.Hitpoints -= 2;
+                protagonist.Spells.Remove(ValueString);
+                protagonist.Hitpoints -= 2;
             }
 
             else if (Name == "RestoreSpells")
-                protogonist.Spells = new List<string>(protogonist.SpellsReplica);
+                protagonist.Spells = new List<string>(protagonist.SpellsReplica);
             
             else if (Name == "HealingByVessel")
                 Game.Healing.Add("Выпить отвар из бурдюка,8");
 
             else if (Name == "Transformation")
             {
-                protogonist.Transformation -= 1;
-                protogonist.Hitpoints -= (Game.Data.Triggers.Contains("PainfulTransformation") ? 3 : 2);
+                protagonist.Transformation -= 1;
+                protagonist.Hitpoints -= (Game.Data.Triggers.Contains("PainfulTransformation") ? 3 : 2);
             }
 
             else if (Name == "NoMoreMagic")
             {
-                protogonist.Spells.Clear();
-                protogonist.Transformation = 0;
+                protagonist.Spells.Clear();
+                protagonist.Transformation = 0;
             }
 
             else
-                base.Do(protogonist);
+                base.Do(protagonist);
         }
     }
 }
