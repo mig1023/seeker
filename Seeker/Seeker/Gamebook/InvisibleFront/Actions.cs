@@ -6,11 +6,11 @@ namespace Seeker.Gamebook.InvisibleFront
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
-        private static Character protogonist = Character.Protagonist;
+        private static Character protagonist = Character.Protagonist;
 
         public override List<string> Status() => new List<string> {
-            String.Format("Недовольство резидента: {0}", protogonist.Dissatisfaction),
-            String.Format("Вербовка: {0}", protogonist.Recruitment)
+            String.Format("Недовольство резидента: {0}", protagonist.Dissatisfaction),
+            String.Format("Вербовка: {0}", protagonist.Recruitment)
         };
 
         public override bool CheckOnlyIf(string option)
@@ -23,13 +23,13 @@ namespace Seeker.Gamebook.InvisibleFront
                 {
                     int level = Game.Other.LevelParse(oneOption);
 
-                    if (oneOption.Contains("НЕДОВОЛЬСТВО >") && (level >= protogonist.Dissatisfaction))
+                    if (oneOption.Contains("НЕДОВОЛЬСТВО >") && (level >= protagonist.Dissatisfaction))
                         return false;
-                    else if (oneOption.Contains("НЕДОВОЛЬСТВО <=") && (level < protogonist.Dissatisfaction))
+                    else if (oneOption.Contains("НЕДОВОЛЬСТВО <=") && (level < protagonist.Dissatisfaction))
                         return false;
-                    else if (oneOption.Contains("ВЕРБОВКА >") && (level >= protogonist.Recruitment))
+                    else if (oneOption.Contains("ВЕРБОВКА >") && (level >= protagonist.Recruitment))
                         return false;
-                    else if (oneOption.Contains("ВЕРБОВКА <=") && (level < protogonist.Recruitment))
+                    else if (oneOption.Contains("ВЕРБОВКА <=") && (level < protagonist.Recruitment))
                         return false;
                 }
                 else if (oneOption.Contains("!"))
