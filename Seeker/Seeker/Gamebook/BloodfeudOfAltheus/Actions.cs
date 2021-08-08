@@ -6,7 +6,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
     class Actions : Prototypes.Actions, Abstract.IActions
     {
         public static Actions StaticInstance = new Actions();
-        private static Character protogonist = Character.Protagonist;
+        private static Character protagonist = Character.Protagonist;
 
         public int Dices { get; set; }
 
@@ -31,25 +31,25 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Сила: {0}", protogonist.Strength),
-            String.Format("Защита: {0}", protogonist.Defence),
-            String.Format("Слава: {0}", protogonist.Glory),
-            String.Format("Позор: {0}", protogonist.Shame),
+            String.Format("Сила: {0}", protagonist.Strength),
+            String.Format("Защита: {0}", protagonist.Defence),
+            String.Format("Слава: {0}", protagonist.Glory),
+            String.Format("Позор: {0}", protagonist.Shame),
         };
 
         public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>();
 
-            protogonist.GetArmour(out int armour, out string armourLine, status: true);
+            protagonist.GetArmour(out int armour, out string armourLine, status: true);
             
             if (armour > 0)
                 statusLines.Add(String.Format("Броня: {0} (защита {1})", armourLine, armour));
 
-            protogonist.GetWeapons(out string name, out int strength, out int defence);
+            protagonist.GetWeapons(out string name, out int strength, out int defence);
             statusLines.Add(String.Format("Оружие: {0} (сила {1}, защита {2})", name, strength, defence));
 
-            statusLines.Add(String.Format("Покровитель: {0}", protogonist.Patron));
+            statusLines.Add(String.Format("Покровитель: {0}", protagonist.Patron));
 
             return (statusLines.Count > 0 ? statusLines : null);
         }
@@ -64,7 +64,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (IsPosibleResurrection())
                 staticButtons.Add("ВОЗЗВАТЬ К ЗЕВСУ ЗА РАВНОДУШИЕМ");
 
-            if (protogonist.Resurrection > 0)
+            if (protagonist.Resurrection > 0)
                 staticButtons.Add("ВОЗЗВАТЬ К ЗЕВСУ ЗА СЛАВОЙ");
 
             return staticButtons;
@@ -74,26 +74,26 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             if (action == "ВОЗЗВАТЬ К ЗЕВСУ ЗА СЛАВОЙ")
             {
-                if ((protogonist.Resurrection <= 0) && (protogonist.BroochResurrection > 0))
+                if ((protagonist.Resurrection <= 0) && (protagonist.BroochResurrection > 0))
                 {
-                    protogonist.BroochResurrection -= 1;
-                    protogonist.Glory -= 10;
+                    protagonist.BroochResurrection -= 1;
+                    protagonist.Glory -= 10;
                 }
                 else
-                    protogonist.Resurrection -= 1;
+                    protagonist.Resurrection -= 1;
 
-                if (protogonist.Glory == 0)
-                    protogonist.Glory = 1;
+                if (protagonist.Glory == 0)
+                    protagonist.Glory = 1;
                 else
-                    protogonist.Glory += Game.Dice.Roll();
+                    protagonist.Glory += Game.Dice.Roll();
 
                 return true;
             }
 
             if (action == "ВОЗЗВАТЬ К ЗЕВСУ ЗА РАВНОДУШИЕМ")
             {
-                protogonist.Resurrection -= 1;
-                protogonist.FellIntoFavor(String.Empty, indifferentToAll: true);
+                protagonist.Resurrection -= 1;
+                protagonist.FellIntoFavor(String.Empty, indifferentToAll: true);
 
                 return true;
             }
@@ -106,16 +106,16 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             toEndParagraph = 0;
             toEndText = "Позор Альтея невыносим, лучше начать сначала";
             
-            return protogonist.Shame > protogonist.Glory;
+            return protagonist.Shame > protagonist.Glory;
         }
 
         public override bool IsButtonEnabled() =>
-            !((Name == "DiceSpendGlory") && ((protogonist.Glory - protogonist.Shame) < 6));
+            !((Name == "DiceSpendGlory") && ((protagonist.Glory - protagonist.Shame) < 6));
 
         private static bool IsPosibleResurrection()
         {
-            bool normal = (protogonist.Resurrection > 0);
-            bool brooch = (protogonist.BroochResurrection > 0) && ((protogonist.Glory - protogonist.Shame) >= 10);
+            bool normal = (protagonist.Resurrection > 0);
+            bool brooch = (protagonist.BroochResurrection > 0) && ((protagonist.Glory - protagonist.Shame) >= 10);
 
             return (normal || brooch);
         }
@@ -129,22 +129,22 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             string value = (values.Length > 1 ? values[1] : "nope");
 
             if (option.Contains("!ПОКРОВИТЕЛЬ"))
-                return protogonist.Patron != value;
+                return protagonist.Patron != value;
             else if (option.Contains("ПОКРОВИТЕЛЬ"))
-                return protogonist.Patron == value;
+                return protagonist.Patron == value;
 
             if (option.Contains("БЕЗРАЗЛИЧЕН"))
-                return !protogonist.IsGodsFavor(value) && !protogonist.IsGodsDisFavor(value);
+                return !protagonist.IsGodsFavor(value) && !protagonist.IsGodsDisFavor(value);
 
             if (option.Contains("!БЛАГОСКЛОНЕН"))
-                return !protogonist.IsGodsFavor(value);
+                return !protagonist.IsGodsFavor(value);
             else if (option.Contains("БЛАГОСКЛОНЕН"))
-                return protogonist.IsGodsFavor(value);
+                return protagonist.IsGodsFavor(value);
 
             if (option.Contains("!НЕМИЛОСТИВ"))
-                return !protogonist.IsGodsDisFavor(value);
+                return !protagonist.IsGodsDisFavor(value);
             else if (option.Contains("НЕМИЛОСТИВ"))
-                return protogonist.IsGodsDisFavor(value);
+                return protagonist.IsGodsDisFavor(value);
 
             if (option.Contains("ВОСКРЕШЕНИЕ"))
                 return IsPosibleResurrection();
@@ -153,14 +153,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
 
             if (option.Contains("СЛАВА >"))
-                return level < protogonist.Glory;
+                return level < protagonist.Glory;
             else if (option.Contains("СЛАВА <="))
-                return level >= protogonist.Glory;
+                return level >= protagonist.Glory;
 
             if (option.Contains("ПОЗОР >"))
-                return level < protogonist.Shame;
+                return level < protagonist.Shame;
             else if (option.Contains("ПОЗОР <="))
-                return level >= protogonist.Shame;
+                return level >= protagonist.Shame;
 
             return CheckOnlyIfTrigger(option);
         }
@@ -175,11 +175,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             diceCheck.Add(String.Format("Кубики: {0} + {1} = {2}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), sum));
 
-            int difference = protogonist.Glory - protogonist.Shame;
+            int difference = protagonist.Glory - protagonist.Shame;
 
             string comparison = Game.Other.Сomparison(sum, difference);
 
-            diceCheck.Add(String.Format("Разница между Славой и Позором: {0} - {1} = {2}", protogonist.Glory, protogonist.Shame, difference));
+            diceCheck.Add(String.Format("Разница между Славой и Позором: {0} - {1} = {2}", protagonist.Glory, protagonist.Shame, difference));
             diceCheck.Add(sum > difference ? String.Format("BIG|BAD|{0} :(", comparison.ToUpper()) : "BIG|GOOD|МЕНЬШЕ :)");
 
             return diceCheck;
@@ -204,7 +204,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (addOne)
                 dice += 1;
 
-            protogonist.Glory -= dice;
+            protagonist.Glory -= dice;
 
             spendGlory.Add(String.Format("BIG|BAD|Вы потратили очков Славы: {0} :(", dice));
 
@@ -221,7 +221,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             if (dice <= 4)
             {
-                protogonist.Shame += 1;
+                protagonist.Shame += 1;
 
                 lance.Add("BIG|BAD|Вы промахнулись :(");
                 lance.Add("Вы получаете одно очко Позора");
@@ -242,7 +242,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             if (dice >= 4)
             {
-                protogonist.Ichor += 1;
+                protagonist.Ichor += 1;
                 roll.Add("BIG|GOOD|Вам удалось :)");
             }
             else
@@ -258,14 +258,14 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
             int sum = firstDice + secondDice;
-            bool success = (sum < protogonist.Strength);
+            bool success = (sum < protagonist.Strength);
 
             bareHands.Add(String.Format("Кубики: {0} + {1} = {2}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), sum));
-            bareHands.Add(String.Format("Ваша Сила: {0} - {1}", protogonist.Strength, (success ? "больше!" : "меньше или равна...")));
+            bareHands.Add(String.Format("Ваша Сила: {0} - {1}", protagonist.Strength, (success ? "больше!" : "меньше или равна...")));
 
             if (!success)
             {
-                protogonist.Shame += 1;
+                protagonist.Shame += 1;
 
                 bareHands.Add("BIG|BAD|Вам не хватило Сил :(");
                 bareHands.Add("Вы получаете одно очко Позора");
@@ -322,7 +322,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     else
                         racing.Add("Происшествие было несерьёзным, все колесницы продолжают гонку");
                 }
-                else if (YourRacing && (protogonist.Patron == "Посейдон") && ((firstDice == 5) || (secondDice == 5)))
+                else if (YourRacing && (protagonist.Patron == "Посейдон") && ((firstDice == 5) || (secondDice == 5)))
                 {
                     racing.Add("Сам Посейдон помогает вам: Красная команда продвинулась вперёд!");
                     teams[2] += 1;
@@ -331,7 +331,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 {
                     racing.Add("Никто не смог продвинуться вперёд");
                 }
-                else if (YourRacing && protogonist.IsGodsDisFavor("Посейдон") &&(firstDice == 6) || (secondDice == 6))
+                else if (YourRacing && protagonist.IsGodsDisFavor("Посейдон") &&(firstDice == 6) || (secondDice == 6))
                 {
                     racing.Add("Все команды продвинулись вперёд, кроме вашей - сам Посейдон выказывает вам свою немилость!");
 
@@ -411,10 +411,10 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         private int UseGloryInFight(Character enemy, ref List<string> fight)
         {
-            bool graveInjury = (protogonist.Health < 2);
-            bool cantFightOtherwise = (protogonist.Strength + (graveInjury ? 6 : 12) < enemy.Defence);
+            bool graveInjury = (protagonist.Health < 2);
+            bool cantFightOtherwise = (protagonist.Strength + (graveInjury ? 6 : 12) < enemy.Defence);
 
-            int availableGlory = (protogonist.Glory - protogonist.Shame);
+            int availableGlory = (protagonist.Glory - protagonist.Shame);
 
             if (cantFightOtherwise && (availableGlory < 1))
             {
@@ -425,7 +425,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (!cantFightOtherwise)
                 return 0;
 
-            int needGlory = (enemy.Defence - protogonist.Strength + (graveInjury ? 6 : 12) + 2);
+            int needGlory = (enemy.Defence - protagonist.Strength + (graveInjury ? 6 : 12) + 2);
 
             if (needGlory > availableGlory)
             {
@@ -436,7 +436,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             {
                 fight.Add("Вам придётся использовать Славу!");
 
-                protogonist.Glory -= needGlory;
+                protagonist.Glory -= needGlory;
                 return needGlory;
             }
 
@@ -483,13 +483,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             if (Game.Data.Triggers.Contains("Wounded"))
             {
-                protogonist.Health = 2;
+                protagonist.Health = 2;
                 Game.Option.Trigger("Wounded", remove: true);
             }
             else
-                protogonist.Health = 3;
+                protagonist.Health = 3;
 
-            protogonist.GetWeapons(out string weaponName, out int weaponStrength, out int _);
+            protagonist.GetWeapons(out string weaponName, out int weaponStrength, out int _);
 
             while (true)
             {
@@ -504,7 +504,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     if (enemy.Health <= 0) 
                         continue;
 
-                    if (Ichor && (protogonist.Ichor > 0))
+                    if (Ichor && (protagonist.Ichor > 0))
                     {
                         enemy.Strength -= 3;
                         enemy.Defence -= 3;
@@ -515,7 +515,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     }
 
                     fight.Add(String.Format("Вы: {0}ы, {1}: {2}",
-                        Constants.HealthLine()[protogonist.Health], enemy.Name, Constants.HealthLine()[enemy.Health]));
+                        Constants.HealthLine()[protagonist.Health], enemy.Name, Constants.HealthLine()[enemy.Health]));
 
                     int protagonistRollFirst = Game.Dice.Roll();
                     int protagonistRollSecond = 0;
@@ -525,7 +525,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     int useGlory = UseGloryInFight(enemy, ref fight);
                     string useGloryLine = (useGlory > 0 ? String.Format(" + {0} Славы", useGlory) : String.Empty);
 
-                    if ((protogonist.Health > 1) || NoMoreEnemies(FightEnemies, noHealthy: true))
+                    if ((protagonist.Health > 1) || NoMoreEnemies(FightEnemies, noHealthy: true))
                     {
                         protagonistRollSecond = Game.Dice.Roll();
                         secondRollLine = String.Format(" + {0}", Game.Dice.Symbol(protagonistRollSecond));
@@ -537,10 +537,10 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     bool autoHit = (protagonistRollFirst + protagonistRollSecond) > 10;
 
                     int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + weaponStrength +
-                        useGlory + protogonist.Strength;
+                        useGlory + protagonist.Strength;
 
                     fight.Add(String.Format("Мощность вашего удара: {0}{1} + {2} Сила + {3} {4}{5} = {6}",
-                        Game.Dice.Symbol(protagonistRollFirst), secondRollLine, protogonist.Strength,
+                        Game.Dice.Symbol(protagonistRollFirst), secondRollLine, protagonist.Strength,
                         weaponStrength, weaponName, useGloryLine, protagonistHitStrength
                     ));
 
@@ -594,13 +594,13 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         Game.Dice.Symbol(enemyRollFirst), ememySecondRollLine, enemy.Strength, comradesBonusLine, enemyHitStrength
                     ));
 
-                    protogonist.GetArmour(out int armourDefence, out string armourLine);
+                    protagonist.GetArmour(out int armourDefence, out string armourLine);
 
-                    string needTotal = (String.IsNullOrEmpty(armourLine) ? String.Empty : String.Format(" = {0}", (protogonist.Defence + armourDefence)));
+                    string needTotal = (String.IsNullOrEmpty(armourLine) ? String.Empty : String.Format(" = {0}", (protagonist.Defence + armourDefence)));
 
-                    fight.Add(String.Format("Ваша защита: {0}{1}{2}", protogonist.Defence, armourLine, needTotal));
+                    fight.Add(String.Format("Ваша защита: {0}{1}{2}", protagonist.Defence, armourLine, needTotal));
 
-                    if ((autoHit || (enemyHitStrength > (protogonist.Defence + armourDefence))) && !autoFail)
+                    if ((autoHit || (enemyHitStrength > (protagonist.Defence + armourDefence))) && !autoFail)
                     {
                         fight.Add(String.Format("BOLD|BAD|{0} ранил вас", enemy.Name));
 
@@ -610,9 +610,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                             Game.Option.Trigger("FirstWoundProtection", remove: true);
                         }
                         else
-                            protogonist.Health -= 1;
+                            protagonist.Health -= 1;
 
-                        if (protogonist.Health <= 0)
+                        if (protagonist.Health <= 0)
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
