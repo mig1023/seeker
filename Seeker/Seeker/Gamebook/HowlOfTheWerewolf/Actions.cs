@@ -1005,7 +1005,14 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
         }
 
-        public override bool IsHealingEnabled() => true;
+        public override bool IsHealingEnabled()
+        {
+            bool enduranceDamage = protagonist.Endurance < protagonist.MaxEndurance;
+            bool masteryDamage = protagonist.Mastery < protagonist.MaxMastery;
+            bool luckDamage = protagonist.Luck < protagonist.MaxLuck;
+
+            return (enduranceDamage || masteryDamage || luckDamage);
+        }
 
         public override void UseHealing(int healingLevel)
         {
