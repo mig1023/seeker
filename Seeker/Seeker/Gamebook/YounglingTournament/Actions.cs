@@ -24,5 +24,35 @@ namespace Seeker.Gamebook.YounglingTournament
             String.Format("Меткость: {0}", protagonist.Accuracy),
             String.Format("Выносливость: {0}", protagonist.Hitpoints),
         };
+
+        public override bool CheckOnlyIf(string option)
+        {
+            if (option.Contains("|"))
+                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
+
+            else
+            {
+                foreach (string oneOption in option.Split(','))
+                {
+                    if (oneOption.Contains(">") || oneOption.Contains("<"))
+                    {
+                        int level = Game.Other.LevelParse(option);
+
+                        if (oneOption.Contains("ПИЛОТ >") && (level <= protagonist.Pilot))
+                            return false;
+                    }
+
+                    else if (oneOption.Contains("!"))
+                    {
+                        if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                            return false;
+                    }
+                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                        return false;
+                }
+
+                return true;
+            }
+        }
     }
 }
