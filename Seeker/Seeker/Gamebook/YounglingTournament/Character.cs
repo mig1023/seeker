@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Seeker.Gamebook.YounglingTournament
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
+
+        public enum Techniques { Speed, Push, Attraction, Jump, Foresight, Conceal, Sight }
 
         private int _lightSide;
         public int LightSide
@@ -30,6 +31,13 @@ namespace Seeker.Gamebook.YounglingTournament
             set => _hitpoints = Game.Param.Setter(value, max: MaxHitpoints);
         }
 
+        private int _accuracy;
+        public int Accuracy
+        {
+            get => _accuracy;
+            set => _accuracy = Game.Param.Setter(value);
+        }
+
         private int _pilot;
         public int Pilot
         {
@@ -51,6 +59,8 @@ namespace Seeker.Gamebook.YounglingTournament
             set => _hacking = Game.Param.Setter(value);
         }
 
+        public SortedDictionary<Techniques, int> ForceTechniques { get; set; }
+
         public override void Init()
         {
             Name = String.Empty;
@@ -58,9 +68,21 @@ namespace Seeker.Gamebook.YounglingTournament
             DarkSide = 0;
             MaxHitpoints = 30;
             Hitpoints = MaxHitpoints;
+            Accuracy = 10;
             Pilot = 1;
             Stealth = 1;
             Hacking = 1;
+
+            ForceTechniques = new SortedDictionary<Techniques, int>
+            {
+                [Techniques.Speed] = 1,
+                [Techniques.Push] = 1,
+                [Techniques.Attraction] = 1,
+                [Techniques.Jump] = 1,
+                [Techniques.Foresight] = 1,
+                [Techniques.Conceal] = 1,
+                [Techniques.Sight] = 1,
+            };
         }
 
         public Character Clone() => new Character()
@@ -70,6 +92,7 @@ namespace Seeker.Gamebook.YounglingTournament
             DarkSide = this.DarkSide,
             MaxHitpoints = this.MaxHitpoints,
             Hitpoints = this.Hitpoints,
+            Accuracy = this.Accuracy,
             Pilot = this.Pilot,
             Stealth = this.Stealth,
             Hacking = this.Hacking,
@@ -80,9 +103,11 @@ namespace Seeker.Gamebook.YounglingTournament
             DarkSide,
             MaxHitpoints,
             Hitpoints,
+            Accuracy,
             Pilot,
             Stealth,
-            Hacking
+            Hacking,
+            String.Join(",", ForceTechniques.Values)
         );
 
         public override void Load(string saveLine)
@@ -93,9 +118,23 @@ namespace Seeker.Gamebook.YounglingTournament
             DarkSide = int.Parse(save[1]);
             MaxHitpoints = int.Parse(save[2]);
             Hitpoints = int.Parse(save[3]);
-            Pilot = int.Parse(save[4]);
-            Stealth = int.Parse(save[5]);
-            Hacking = int.Parse(save[6]);
+            Accuracy = int.Parse(save[4]);
+            Pilot = int.Parse(save[5]);
+            Stealth = int.Parse(save[6]);
+            Hacking = int.Parse(save[7]);
+
+            string [] forces = save[8].Split(',');
+
+            ForceTechniques = new SortedDictionary<Techniques, int>
+            {
+                [Techniques.Speed] = int.Parse(forces[0]),
+                [Techniques.Push] = int.Parse(forces[1]),
+                [Techniques.Attraction] = int.Parse(forces[2]),
+                [Techniques.Jump] = int.Parse(forces[3]),
+                [Techniques.Foresight] = int.Parse(forces[4]),
+                [Techniques.Conceal] = int.Parse(forces[5]),
+                [Techniques.Sight] = int.Parse(forces[6]),
+            };
         }
     }
 }

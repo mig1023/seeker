@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.YounglingTournament
 {
@@ -16,9 +17,12 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public override List<string> AdditionalStatus() => new List<string>
         {
+            String.Format("Понимание Силы: {0}", protagonist.ForceTechniques.Values.Sum()),
             String.Format("Взлом: {0}", protagonist.Hacking),
             String.Format("Скрытность: {0}", protagonist.Stealth),
             String.Format("Пилот: {0}", protagonist.Pilot),
+            String.Format("Меткость: {0}", protagonist.Accuracy),
+            String.Format("Выносливость: {0}", protagonist.Hitpoints),
         };
     }
 }
