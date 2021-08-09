@@ -783,6 +783,9 @@
 	<Paragraph>
 		<ID>97</ID>
 		<Text>+1 к рангу техники Сокрытие Силы.\n\nПроводник обучает вас тонкостям техники Сокрытие Силы.\n\n— Не только сохранить в тайне от врагов может эта техника, но и насторожить друзей, — напутствует он вас, когда урок завершается.</Text>
+		<Modifications>
+			<Modification Name="Conceal" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="108"/>
 		</Options>
