@@ -799,6 +799,9 @@
 	<Paragraph>
 		<ID>101</ID>
 		<Text>+1 к рангу техники Прыжок Силы.\n\nПроводник обучает вас тонкостям техники Прыжок Силы.</Text>
+		<Modifications>
+			<Modification Name="Jump" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="108"/>
 		</Options>
@@ -2453,6 +2456,9 @@
 	<Paragraph>
 		<ID>309</ID>
 		<Text>Повысьте Технику Прыжок Силы на 1 ранг.\n\nДо самого вечера вы тренируетесь с Ливией, и только перед самым сном, вымотанные донельзя, прощаетесь, расходясь по комнатам.</Text>
+		<Modifications>
+			<Modification Name="Jump" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="301"/>
 		</Options>
