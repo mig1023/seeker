@@ -7,6 +7,8 @@ namespace Seeker.Output
         public string Content { get; set; }
         public string Alignment { get; set; }
 
+        public Interface.TextFontSize Size { get; set; }
+
         public bool Bold { get; set; }
         public bool Italic { get; set; }
     }

@@ -8,7 +8,7 @@ namespace Seeker.Output
 {
     class Interface
     {
-        public enum TextFontSize { micro, small, little, normal, big };
+        public enum TextFontSize { micro, small, little, normal, big, nope };
 
         public static Image GamebookImage(Description gamebookDescr) => new Image
         {
@@ -325,6 +325,7 @@ namespace Seeker.Output
                 case TextFontSize.big:
                     return Constants.BIG_FONT;
 
+                case TextFontSize.little:
                 default:
                     return Device.GetNamedSize(NamedSize.Medium, typeof(Label));
             }
@@ -344,6 +345,9 @@ namespace Seeker.Output
 
             if (text.Alignment == "Center")
                 label.HorizontalTextAlignment = TextAlignment.Center;
+
+            if (text.Size != TextFontSize.nope)
+                label.FontSize = FontSize(text.Size);
 
             return label;
         }

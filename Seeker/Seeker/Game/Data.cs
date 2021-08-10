@@ -14,7 +14,8 @@ namespace Seeker.Game
             StatusFont,
             StatusBorder,
             AdditionalStatus,
-            AdditionalFont
+            AdditionalFont,
+            SystemFont,
         }
 
         public const int StartParagraph = 0;

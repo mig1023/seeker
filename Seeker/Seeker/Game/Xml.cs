@@ -71,8 +71,16 @@ namespace Seeker.Game
                     Content = text.InnerText,
                     Bold = (font == "Bold"),
                     Italic = (font == "Italic"),
-                    Alignment = StringParse(text.Attributes["Alignment"]),
+                    Alignment = StringParse(text.Attributes["Alignment"])
                 };
+
+                if (text.Attributes["Size"] != null)
+                {
+                    Enum.TryParse(StringParse(text.Attributes["Size"]), out Interface.TextFontSize size);
+                    outputText.Size = size;
+                }
+                else
+                    outputText.Size = Interface.TextFontSize.nope;
 
                 texts.Add(outputText);
             }
