@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Xml;
+﻿using System.Xml;
 using Seeker.Game;
 
 namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
@@ -14,8 +13,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            foreach (KeyValuePair<string, string> paramName in Constants.GetActionParams())
-                SetProperty(action, paramName.Key, paramName.Value, xmlAction);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
 
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
