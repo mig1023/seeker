@@ -13,12 +13,9 @@ namespace Seeker.Gamebook.DzungarWar
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.RemoveTrigger = Xml.StringParse(xmlAction["RemoveTrigger"]);
-            action.Stat = Xml.StringParse(xmlAction["Stat"]);
-            action.TriggerTestPenalty = Xml.StringParse(xmlAction["TriggerTestPenalty"]);
-            action.Level = Xml.IntParse(xmlAction["Level"]);
-            action.StatStep = Xml.IntParse(xmlAction["StatStep"]);
-            action.StatToMax = Xml.BoolParse(xmlAction["StatToMax"]);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
+            
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
             bool bargain = Xml.BoolParse(xmlAction["Bargain"]);
