@@ -9,25 +9,15 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => base.Get(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.ConneryAttacks = Xml.StringParse(xmlAction["ConneryAttacks"]);
-            action.ReactionWounds = Xml.StringParse(xmlAction["ReactionWounds"]);
-            action.ReactionRound = Xml.StringParse(xmlAction["ReactionRound"]);
-            action.ReactionHit = Xml.StringParse(xmlAction["ReactionHit"]);
-            action.Dices = Xml.IntParse(xmlAction["Dices"]);
-            action.DiceBonus = Xml.IntParse(xmlAction["DiceBonus"]);
-            action.OnlyRounds = Xml.IntParse(xmlAction["OnlyRounds"]);
-            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.AttackWounds = Xml.IntParse(xmlAction["AttackWounds"]);
-            action.Disabled = Xml.BoolParse(xmlAction["Disabled"]);
-            action.IncrementWounds = Xml.BoolParse(xmlAction["IncrementWounds"]);
-            action.GolemFight = Xml.BoolParse(xmlAction["GolemFight"]);
-            action.ZombieFight = Xml.BoolParse(xmlAction["ZombieFight"]);
+            foreach (KeyValuePair<string, string> paramName in Constants.GetActionParams())
+                SetProperty(action, paramName.Key, paramName.Value, xmlAction);
+
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
             action.Damage = ModificationParse(xmlAction["Damage"]);
 
