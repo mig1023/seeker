@@ -15,16 +15,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.Stat = Xml.StringParse(xmlAction["Stat"]);
-            action.StatStep = Xml.IntParse(xmlAction["StatStep"]);
-            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.WoundsToWin = Xml.IntParse(xmlAction["WoundsToWin"]);
-            action.Coherence = Xml.IntParse(xmlAction["Coherence"]);
-            action.Dices = Xml.IntParse(xmlAction["Dices"]);
-            action.NotToDeath = Xml.BoolParse(xmlAction["NotToDeath"]);
-            action.Odd = Xml.BoolParse(xmlAction["Odd"]);
-            action.Initiative = Xml.BoolParse(xmlAction["Initiative"]);
-            action.StoneGuard = Xml.BoolParse(xmlAction["StoneGuard"]);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
+
             action.SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]);
 
             if (xmlAction["Benefit"] != null)

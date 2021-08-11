@@ -61,6 +61,11 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             [Character.FightStyles.Fullback] = "глухую защиту",
         };
 
+        public static List<string> GetActionParams() => new List<string> {
+            "Stat", "StatStep", "RoundsToWin", "WoundsToWin", "Coherence",
+            "Dices", "NotToDeath", "Odd", "Initiative", "StoneGuard"
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
