@@ -32,10 +32,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.FightToDeath = Xml.BoolParse(xmlAction["FightToDeath"]);
-            action.LastWound = Xml.BoolParse(xmlAction["LastWound"]);
-            action.YourRacing = Xml.BoolParse(xmlAction["YourRacing"]);
-            action.Ichor = Xml.BoolParse(xmlAction["Ichor"]);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
 
             if (xmlAction["Enemies"] != null)
             {
