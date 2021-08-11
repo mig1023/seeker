@@ -15,24 +15,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.OnlyRounds = Xml.IntParse(xmlAction["OnlyRounds"]);
-            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.RoundsWinToWin = Xml.IntParse(xmlAction["RoundsWinToWin"]);
-            action.ThisIsSpell = Xml.BoolParse(xmlAction["ThisIsSpell"]);
-            action.Regeneration = Xml.BoolParse(xmlAction["Regeneration"]);
-            action.ReactionFight = Xml.BoolParse(xmlAction["ReactionFight"]);
-            action.Poison = Xml.BoolParse(xmlAction["Poison"]);
-            action.OnlyOne = Xml.StringParse(xmlAction["OnlyOne"]);
-            action.TailAttack = Xml.BoolParse(xmlAction["TailAttack"]);
-            action.IncrementWounds = Xml.BoolParse(xmlAction["IncrementWounds"]);
-            action.ThreeWoundLimit = Xml.BoolParse(xmlAction["ThreeWoundLimit"]);
-            action.Invincible = Xml.BoolParse(xmlAction["Invincible"]);
-            action.Wound = Xml.IntParse(xmlAction["Wound"]);
-            action.Dices = Xml.IntParse(xmlAction["Dices"]);
-            action.EvenWound = Xml.BoolParse(xmlAction["EvenWound"]);
-            action.WoundsLimit = Xml.IntParse(xmlAction["WoundsLimit"]);
-            action.DeathLimit = Xml.IntParse(xmlAction["DeathLimit"]);
-            action.ReactionWounds = Xml.StringParse(xmlAction["ReactionWounds"]);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
 
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
             action.Damage = ModificationParse(xmlAction["Damage"]);
