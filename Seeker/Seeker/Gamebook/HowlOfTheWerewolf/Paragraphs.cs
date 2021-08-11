@@ -45,17 +45,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.Value = Xml.IntParse(xmlAction["Value"]);
-            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.RoundsWinToWin = Xml.IntParse(xmlAction["RoundsWinToWin"]);
-            action.RoundsFailToFail = Xml.IntParse(xmlAction["RoundsFailToFail"]);
-            action.RoundsToFight = Xml.IntParse(xmlAction["RoundsToFight"]);
-            action.WoundsToWin = Xml.IntParse(xmlAction["WoundsToWin"]);
-            action.WoundsToFail = Xml.IntParse(xmlAction["WoundsToFail"]);
-            action.WoundsForTransformation = Xml.IntParse(xmlAction["WoundsForTransformation"]);
-            action.WoundsLimit = Xml.IntParse(xmlAction["WoundsLimit"]);
-            action.HitStrengthBonus = Xml.IntParse(xmlAction["HitStrengthBonus"]);
-            action.ExtendedDamage = Xml.IntParse(xmlAction["ExtendedDamage"]);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
+
             action.Specificity = SpecificsParse(xmlAction["Specificity"]);
 
             if (xmlAction["Benefit"] != null)

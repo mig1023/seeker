@@ -46,6 +46,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public static int GetVanRichtenMastery() => 10;
 
+        public static List<string> GetActionParams() => new List<string> {
+            "Value", "RoundsToWin", "RoundsWinToWin", "RoundsFailToFail", "RoundsToFight", "WoundsToWin",
+            "WoundsToFail", "WoundsForTransformation", "WoundsLimit", "HitStrengthBonus", "ExtendedDamage"
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
