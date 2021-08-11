@@ -13,10 +13,9 @@ namespace Seeker.Gamebook.SwampFever
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.EnemyName = Xml.StringParse(xmlAction["EnemyName"]);
-            action.EnemyCombination = Xml.StringParse(xmlAction["EnemyCombination"]);
-            action.Level = Xml.IntParse(xmlAction["Level"]);
-            action.Birds = Xml.BoolParse(xmlAction["Birds"]);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
+
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
             return action;

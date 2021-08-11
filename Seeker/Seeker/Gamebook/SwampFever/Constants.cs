@@ -71,6 +71,8 @@ namespace Seeker.Gamebook.SwampFever
             };
         }
 
+        public static List<string> GetActionParams() => new List<string> { "EnemyName", "EnemyCombination", "Level", "Birds" };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
