@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Xml;
 using Seeker.Game;
 
@@ -100,23 +101,21 @@ namespace Seeker.Prototypes
             return option;
         }
 
-        private object PropertyType(XmlNode value, string paramName, string paramType)
+        private object PropertyType(object action, XmlNode value, string paramName)
         {
-            switch (paramType)
-            {
-                case "bool":
-                    return Xml.BoolParse(value[paramName]);
+            PropertyInfo param = action.GetType().GetProperty(paramName);
 
-                case "int":
-                    return Xml.IntParse(value[paramName]);
+            if (param.PropertyType == typeof(bool))
+                return Xml.BoolParse(value[paramName]);
 
-                case "string":
-                default:
-                    return Xml.StringParse(value[paramName]);
-            }
+            else if (param.PropertyType == typeof(bool))
+                return Xml.IntParse(value[paramName]);
+
+            else
+                return Xml.StringParse(value[paramName]);
         }
 
-        public void SetProperty(object character, string paramName, string paramType, XmlNode value) =>
-            character.GetType().GetProperty(paramName).SetValue(character, PropertyType(value, paramName, paramType));
+        public void SetProperty(object action, string param, XmlNode value) =>
+            action.GetType().GetProperty(param).SetValue(action, PropertyType(action, value, param));
     }
 }
