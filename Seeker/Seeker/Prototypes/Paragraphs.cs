@@ -31,7 +31,7 @@ namespace Seeker.Prototypes
             return paragraph;
         }
 
-        public Game.Paragraph GetTemplate(XmlNode xmlParagraph)
+        public Game.Paragraph Get(XmlNode xmlParagraph)
         {
             Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
@@ -99,5 +99,24 @@ namespace Seeker.Prototypes
 
             return option;
         }
+
+        private object PropertyType(XmlNode value, string paramName, string paramType)
+        {
+            switch (paramType)
+            {
+                case "bool":
+                    return Xml.BoolParse(value[paramName]);
+
+                case "int":
+                    return Xml.IntParse(value[paramName]);
+
+                case "string":
+                default:
+                    return Xml.StringParse(value[paramName]);
+            }
+        }
+
+        public void SetProperty(object character, string paramName, string paramType, XmlNode value) =>
+            character.GetType().GetProperty(paramName).SetValue(character, PropertyType(value, paramName, paramType));
     }
 }
