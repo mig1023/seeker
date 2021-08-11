@@ -14,13 +14,8 @@ namespace Seeker.Gamebook.PrairieLaw
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.RemoveTrigger = Xml.StringParse(xmlAction["RemoveTrigger"]);
-            action.SellPrices = Xml.StringParse(xmlAction["SellPrices"]);
-            action.Dices = Xml.IntParse(xmlAction["Dices"]);
-            action.Firefight = Xml.BoolParse(xmlAction["Firefight"]);
-            action.ProtagonistWoundsLimit = Xml.BoolParse(xmlAction["HeroWoundsLimit"]);
-            action.EnemyWoundsLimit = Xml.BoolParse(xmlAction["EnemyWoundsLimit"]);
-            action.Roulette = Xml.BoolParse(xmlAction["Roulette"]);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
 
             if (xmlAction["Enemies"] != null)
             {
