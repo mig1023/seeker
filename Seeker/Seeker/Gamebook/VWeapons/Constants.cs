@@ -38,6 +38,8 @@ namespace Seeker.Gamebook.VWeapons
             ["ног"] = "Legs",
         };
 
+        public static List<string> GetActionParams() => new List<string> { "Dogfight", "DamagedWeapon", "Value", "Time" };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

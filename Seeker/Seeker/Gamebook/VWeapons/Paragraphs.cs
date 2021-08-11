@@ -14,10 +14,8 @@ namespace Seeker.Gamebook.VWeapons
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.Dogfight = Xml.BoolParse(xmlAction["Dogfight"]);
-            action.DamagedWeapon = Xml.BoolParse(xmlAction["DamagedWeapon"]);
-            action.Value = Xml.IntParse(xmlAction["Value"]);
-            action.Time = Xml.IntParse(xmlAction["Time"]);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
 
             if (xmlAction["Enemies"] != null)
             {
