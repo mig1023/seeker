@@ -33,21 +33,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 714, 715, 716 };
 
-        public static Dictionary<string, string> GetActionParams() => new Dictionary<string, string>
-        {
-            ["ConneryAttacks"] = "string",
-            ["ReactionWounds"] = "string",
-            ["ReactionRound"] = "string",
-            ["ReactionHit"] = "string",
-            ["Dices"] = "int",
-            ["DiceBonus"] = "int",
-            ["OnlyRounds"] = "int",
-            ["RoundsToWin"] = "int",
-            ["AttackWounds"] = "int",
-            ["Disabled"] = "bool",
-            ["IncrementWounds"] = "bool",
-            ["GolemFight"] = "bool",
-            ["ZombieFight"] = "bool",
+        public static List<string> GetActionParams() => new List<string> {
+            "ConneryAttacks", "ReactionWounds", "ReactionRound", "ReactionHit", "Dices", "DiceBonus", "OnlyRounds",
+            "RoundsToWin", "AttackWounds", "Disabled", "IncrementWounds", "GolemFight", "GolemFight"
         };
 
         public static Links GetLinks() => new Links

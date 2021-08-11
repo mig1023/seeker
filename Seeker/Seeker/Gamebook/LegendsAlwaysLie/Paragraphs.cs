@@ -15,8 +15,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            foreach (KeyValuePair<string, string> paramName in Constants.GetActionParams())
-                SetProperty(action, paramName.Key, paramName.Value, xmlAction);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
 
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
             action.Damage = ModificationParse(xmlAction["Damage"]);
