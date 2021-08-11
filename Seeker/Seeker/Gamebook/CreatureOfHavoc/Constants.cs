@@ -23,6 +23,10 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             [ColorTypes.StatusBar] = "#0e3b24",
         };
 
+        public static List<string> GetActionParams() => new List<string> {
+            "WoundsToWin", "RoundsToWin", "RoundsToFight", "Ophidiotaur", "ManicBeast", "GiantHornet"
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

@@ -44,12 +44,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.WoundsToWin = Xml.IntParse(xmlAction["WoundsToWin"]);
-            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.RoundsToFight = Xml.IntParse(xmlAction["RoundsToFight"]);
-            action.Ophidiotaur = Xml.BoolParse(xmlAction["Ophidiotaur"]);
-            action.ManicBeast = Xml.BoolParse(xmlAction["ManicBeast"]);
-            action.GiantHornet = Xml.BoolParse(xmlAction["GiantHornet"]);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
 
             if (xmlAction["Enemies"] != null)
             {
