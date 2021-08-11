@@ -57,12 +57,8 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.Equipment = Xml.StringParse(xmlAction["Equipment"]);
-            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.ProtagonistWoundsLimit = Xml.BoolParse(xmlAction["HeroWoundsLimit"]);
-            action.EnemyWoundsLimit = Xml.BoolParse(xmlAction["EnemyWoundsLimit"]);
-            action.DevastatingAttack = Xml.BoolParse(xmlAction["DevastatingAttack"]);
-            action.DarknessPenalty = Xml.BoolParse(xmlAction["DarknessPenalty"]);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
 
             if (xmlAction["Enemies"] != null)
             {

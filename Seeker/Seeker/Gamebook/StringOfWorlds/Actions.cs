@@ -10,7 +10,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         private static Character protagonist = Character.Protagonist;
 
         public int RoundsToWin { get; set; }
-        public bool ProtagonistWoundsLimit { get; set; }
+        public bool HeroWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
         public bool DevastatingAttack { get; set; }
         public bool DarknessPenalty { get; set; }
@@ -356,7 +356,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
                         protagonist.Strength -= (DevastatingAttack ? 3 : 2);
 
-                        if ((protagonist.Strength <= 0) || (ProtagonistWoundsLimit && (protagonist.Strength <= 2)))
+                        if ((protagonist.Strength <= 0) || (HeroWoundsLimit && (protagonist.Strength <= 2)))
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));

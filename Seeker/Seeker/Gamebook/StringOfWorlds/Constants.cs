@@ -144,6 +144,10 @@ namespace Seeker.Gamebook.StringOfWorlds
             [16] = "❻",
         };
 
+        public static List<string> GetActionParams() => new List<string> {
+            "Equipment", "RoundsToWin", "HeroWoundsLimit", "EnemyWoundsLimit", "DevastatingAttack", "DarknessPenalty"
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
