@@ -15,11 +15,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.WoundsToWin = Xml.IntParse(xmlAction["WoundsToWin"]);
-            action.DamageToWin = Xml.IntParse(xmlAction["DamageToWin"]);
-            action.MasteryPenalty = Xml.IntParse(xmlAction["MasteryPenalty"]);
-            action.GroupFight = Xml.BoolParse(xmlAction["GroupFight"]);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
 
             if (xmlAction["Allies"] != null)
             {

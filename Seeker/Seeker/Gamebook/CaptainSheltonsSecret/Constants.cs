@@ -70,6 +70,10 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             [16] = "❻",
         };
 
+        public static List<string> GetActionParams() => new List<string> {
+            "RoundsToWin", "WoundsToWin", "DamageToWin", "MasteryPenalty", "GroupFight"
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
