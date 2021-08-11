@@ -15,11 +15,10 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.WoundsToWin = Xml.IntParse(xmlAction["WoundsToWin"]);
-            action.SkillPenalty = Xml.IntParse(xmlAction["SkillPenalty"]);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
+
             action.MeritalArt = MeritalArtsParse(xmlAction["MeritalArt"]);
-            action.WithoutShooting = Xml.BoolParse(xmlAction["WithoutShooting"]);
 
             if (action.Name == "Option")
                 action.Option = OptionParse(xmlAction["Option"]);
