@@ -14,13 +14,8 @@ namespace Seeker.Gamebook.HeartOfIce
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.Skill = Xml.StringParse(xmlAction["Skill"]);
-            action.RemoveTrigger = Xml.StringParse(xmlAction["RemoveTrigger"]);
-            action.SellType = Xml.StringParse(xmlAction["SellType"]);
-            action.Choice = Xml.BoolParse(xmlAction["Choice"]);
-            action.Sell = Xml.BoolParse(xmlAction["Sell"]);
-            action.SellIfAvailable = Xml.BoolParse(xmlAction["SellIfAvailable"]);
-            action.Split = Xml.BoolParse(xmlAction["Split"]);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
 
             if (xmlAction["Benefit"] != null)
             {
