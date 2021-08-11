@@ -15,8 +15,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            foreach (KeyValuePair<string, string> paramName in Constants.GetActionParams())
-                SetProperty(action, paramName.Key, paramName.Value, xmlAction);
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
 
             if (xmlAction["Enemies"] != null)
             {
