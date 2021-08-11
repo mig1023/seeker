@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System.Collections.Generic;
+using System.Xml;
 using Seeker.Game;
 
 namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
@@ -7,16 +8,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => base.Get(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.Stat = Xml.StringParse(xmlAction["Stat"]);
-            action.Level = Xml.IntParse(xmlAction["Level"]);
-            action.GreatKhanSpecialCheck = Xml.BoolParse(xmlAction["GreatKhanSpecialCheck"]);
-            action.GuessBonus = Xml.BoolParse(xmlAction["GuessBonus"]);
+            foreach (KeyValuePair<string, string> paramName in Constants.GetActionParams())
+                SetProperty(action, paramName.Key, paramName.Value, xmlAction);
+
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
             if (action.Name == "Option")
