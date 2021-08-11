@@ -9,16 +9,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Paragraph Get(int id, XmlNode xmlParagraph) => GetTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => base.Get(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            action.RoundsToWin = Xml.IntParse(xmlAction["RoundsToWin"]);
-            action.WoundsToWin = Xml.IntParse(xmlAction["WoundsToWin"]);
-            action.StrengthPenlty = Xml.IntParse(xmlAction["StrengthPenlty"]);
-            action.ThisIsSpell = Xml.BoolParse(xmlAction["ThisIsSpell"]);
+            foreach (KeyValuePair<string, string> paramName in Constants.GetActionParams())
+                SetProperty(action, paramName.Key, paramName.Value, xmlAction);
 
             if (xmlAction["Enemies"] != null)
             {
