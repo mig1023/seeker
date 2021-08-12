@@ -24,10 +24,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 660 };
 
-        public static List<string> GetActionParams() => new List<string> {
-            "RoundsToWin", "WoundsToWin", "SkillPenalty", "WithoutShooting"
-        };
-
         public static Dictionary<int, int> Skills = new Dictionary<int, int>
         {
             [1] = 12,
@@ -46,6 +42,21 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             [4] = 24,
             [5] = 16,
             [6] = 20
+        };
+
+        public static List<string> GetActionParams() => new List<string>
+        {
+            "RoundsToWin", "WoundsToWin", "SkillPenalty", "WithoutShooting"
+        };
+
+        public static List<string> GetEnemyParams() => new List<string>
+        {
+            "Name", "MaxSkill", "MaxStrength"
+        };
+
+        public static List<string> GetModsParams() => new List<string>
+        {
+            "Name", "Value", "ValueString", "Empty", "Restore"
         };
 
         public static Links GetLinks() => new Links

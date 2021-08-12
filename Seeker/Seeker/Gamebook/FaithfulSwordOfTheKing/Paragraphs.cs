@@ -54,14 +54,12 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return (success ? value : Character.MeritalArts.Nope);
         }
 
-        private static Character EnemyParse(XmlNode xmlEnemy)
+        private Character EnemyParse(XmlNode xmlEnemy)
         {
-            Character enemy = new Character
-            {
-                Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                MaxSkill = Xml.IntParse(xmlEnemy.Attributes["Skill"]),
-                MaxStrength = Xml.IntParse(xmlEnemy.Attributes["Strength"]),
-            };
+            Character enemy = new Character();
+
+            foreach (string param in Constants.GetEnemyParams())
+                SetPropertyByAttr(enemy, param, xmlEnemy);
 
             enemy.Skill = enemy.MaxSkill;
             enemy.Strength = enemy.MaxStrength;
@@ -74,14 +72,10 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             if (xmlNode == null)
                 return null;
 
-            Modification modification = new Modification
-            {
-                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
-                ValueString = Xml.StringParse(xmlNode.Attributes["ValueString"]),
-                Empty = Xml.BoolParse(xmlNode.Attributes["Empty"]),
-                Restore = Xml.BoolParse(xmlNode.Attributes["Restore"]),
-            };
+            Modification modification = new Modification();
+
+            foreach (string param in Constants.GetModsParams())
+                SetPropertyByAttr(modification, param, xmlNode, maxPrefix: true);
 
             return modification;
         }
