@@ -34,15 +34,12 @@ namespace Seeker.Gamebook.PrairieLaw
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
             Xml.ModificationParse(xmlModification, new Modification());
 
-        private static Character EnemyParse(XmlNode xmlEnemy)
+        private Character EnemyParse(XmlNode xmlEnemy)
         {
-            Character enemy = new Character
-            {
-                Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                MaxSkill = Xml.IntParse(xmlEnemy.Attributes["Skill"]),
-                MaxStrength = Xml.IntParse(xmlEnemy.Attributes["Strength"]),
-                Cartridges = Xml.IntParse(xmlEnemy.Attributes["Сartridges"]),
-            };
+            Character enemy = new Character();
+
+            foreach (string param in Constants.GetEnemyParams())
+                SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
 
             enemy.Skill = enemy.MaxSkill;
             enemy.Strength = enemy.MaxStrength;

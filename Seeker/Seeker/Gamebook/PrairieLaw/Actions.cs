@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public List<Character> Enemies { get; set; }
         public bool Firefight { get; set; }
-        public bool ProtagonistWoundsLimit { get; set; }
+        public bool HeroWoundsLimit { get; set; }
         public bool EnemyWoundsLimit { get; set; }
 
         public int Dices { get; set; }
@@ -545,7 +545,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
                         protagonist.Strength -= (firefight ? 3 : 2);
 
-                        if ((protagonist.Strength <= 0) || (ProtagonistWoundsLimit && (protagonist.Strength <= 2)))
+                        if ((protagonist.Strength <= 0) || (HeroWoundsLimit && (protagonist.Strength <= 2)))
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
