@@ -38,7 +38,15 @@ namespace Seeker.Gamebook.VWeapons
             ["ног"] = "Legs",
         };
 
-        public static List<string> GetActionParams() => new List<string> { "Dogfight", "DamagedWeapon", "Value", "Time" };
+        public static List<string> GetActionParams() => new List<string>
+        {
+            "Dogfight", "DamagedWeapon", "Value", "Time"
+        };
+
+        public static List<string> GetEnemyParams() => new List<string>
+        {
+            "Name", "Hitpoints", "Accuracy", "First", "WithoutCartridges", "Animal"
+        };
 
         public static Links GetLinks() => new Links
         {

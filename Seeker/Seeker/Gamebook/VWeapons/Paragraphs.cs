@@ -23,15 +23,10 @@ namespace Seeker.Gamebook.VWeapons
 
                 foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
                 {
-                    Character enemy = new Character
-                    {
-                        Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                        Hitpoints = Xml.IntParse(xmlEnemy.Attributes["Hitpoints"]),
-                        Accuracy = Xml.IntParse(xmlEnemy.Attributes["Accuracy"]),
-                        First = Xml.BoolParse(xmlEnemy.Attributes["First"]),
-                        WithoutCartridges = Xml.BoolParse(xmlEnemy.Attributes["WithoutCartridges"]),
-                        Animal = Xml.BoolParse(xmlEnemy.Attributes["Animal"]),
-                    };
+                    Character enemy = new Character();
+
+                    foreach (string param in Constants.GetEnemyParams())
+                        SetPropertyByAttr(enemy, param, xmlEnemy);
 
                     if (enemy.WithoutCartridges || enemy.Animal)
                         enemy.Cartridges = 0;
