@@ -23,9 +23,20 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 619 };
 
-        public static List<string> StaticSpells() => new List<string> { "ЗАКЛЯТИЕ КОПИИ", "ЗАКЛЯТИЕ СИЛЫ", "ЗАКЛЯТИЕ СЛАБОСТИ" };
+        public static List<string> StaticSpells() => new List<string>
+        {
+            "ЗАКЛЯТИЕ КОПИИ", "ЗАКЛЯТИЕ СИЛЫ", "ЗАКЛЯТИЕ СЛАБОСТИ"
+        };
 
-        public static List<string> GetActionParams() => new List<string> { "RoundsToWin", "WoundsToWin", "StrengthPenlty", "ThisIsSpell" };
+        public static List<string> GetActionParams() => new List<string>
+        {
+            "RoundsToWin", "WoundsToWin", "StrengthPenlty", "ThisIsSpell"
+        };
+
+        public static List<string> GetEnemyParams() => new List<string>
+        {
+            "Name", "MaxMastery", "MaxEndurance"
+        };
 
         public static Links GetLinks() => new Links
         {

@@ -26,7 +26,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     action.Enemies.Add(EnemyParse(xmlEnemy));
             }
 
-
             if (action.Name == "Option")
                 action.Option = OptionParse(xmlAction["Option"]);
 
@@ -40,14 +39,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
             Xml.ModificationParse(xmlModification, new Modification());
 
-        private static Character EnemyParse(XmlNode xmlEnemy)
+        private Character EnemyParse(XmlNode xmlEnemy)
         {
-            Character enemy = new Character
-            {
-                Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                MaxMastery = Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
-                MaxEndurance = Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
-            };
+            Character enemy = new Character();
+
+            foreach (string param in Constants.GetEnemyParams())
+                SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
 
             enemy.Mastery = enemy.MaxMastery;
             enemy.Endurance = enemy.MaxEndurance;
