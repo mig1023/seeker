@@ -68,15 +68,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             if (xmlNode == null)
                 return null;
 
-            Modification modification = new Modification
-            {
-                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
-                WizardWoundsPenalty = Xml.IntParse(xmlNode.Attributes["WizardWoundsPenalty"]),
-                ThrowerWoundsPenalty = Xml.IntParse(xmlNode.Attributes["ThrowerWoundsPenalty"]),
-                Empty = Xml.BoolParse(xmlNode.Attributes["Empty"]),
-                Init = Xml.BoolParse(xmlNode.Attributes["Init"]),
-            };
+            Modification modification = new Modification();
+
+            foreach (string param in Constants.GetModsParams())
+                SetPropertyByAttr(modification, param, xmlNode);
 
             return modification;
         }
