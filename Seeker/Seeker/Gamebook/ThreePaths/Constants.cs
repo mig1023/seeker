@@ -22,6 +22,11 @@ namespace Seeker.Gamebook.ThreePaths
             [ColorTypes.StatusBar] = "#007a7a",
         };
 
+        public static List<string> GetModsParams() => new List<string> 
+        {
+            "Name", "Value", "ValueString"
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

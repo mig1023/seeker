@@ -25,12 +25,10 @@ namespace Seeker.Gamebook.ThreePaths
             if (xmlNode == null)
                 return null;
 
-            Modification modification = new Modification
-            {
-                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
-                ValueString = Xml.StringParse(xmlNode.Attributes["ValueString"]),
-            };
+            Modification modification = new Modification();
+
+            foreach (string param in Constants.GetModsParams())
+                SetPropertyByAttr(modification, param, xmlNode);
 
             if (xmlNode.Attributes["Init"] != null)
             {
