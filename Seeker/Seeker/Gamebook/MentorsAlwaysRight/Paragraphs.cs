@@ -63,14 +63,10 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             if (xmlNode == null)
                 return null;
 
-            Modification modification = new Modification
-            {
-                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
-                ValueString = Xml.StringParse(xmlNode.Attributes["ValueString"]),
-                Empty = Xml.BoolParse(xmlNode.Attributes["Empty"]),
-                Restore = Xml.BoolParse(xmlNode.Attributes["Restore"]),
-            };
+            Modification modification = new Modification();
+
+            foreach (string param in Constants.GetModsParams())
+                SetPropertyByAttr(modification, param, xmlNode);
 
             return modification;
         }
