@@ -26,13 +26,10 @@ namespace Seeker.Gamebook.SwampFever
             if (xmlNode == null)
                 return null;
 
-            Modification modification = new Modification
-            {
-                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
-                Multiplication = Xml.BoolParse(xmlNode.Attributes["Multiplication"]),
-                Division = Xml.BoolParse(xmlNode.Attributes["Division"]),
-            };
+            Modification modification = new Modification();
+
+            foreach (string param in Constants.GetModsParams())
+                SetPropertyByAttr(modification, param, xmlNode);
 
             return modification;
         }

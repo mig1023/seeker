@@ -71,7 +71,15 @@ namespace Seeker.Gamebook.SwampFever
             };
         }
 
-        public static List<string> GetActionParams() => new List<string> { "EnemyName", "EnemyCombination", "Level", "Birds" };
+        public static List<string> GetActionParams() => new List<string>
+        {
+            "EnemyName", "EnemyCombination", "Level", "Birds"
+        };
+
+        public static List<string> GetModsParams() => new List<string>
+        {
+            "Name", "Value", "Multiplication", "Division"
+        };
 
         public static Links GetLinks() => new Links
         {
