@@ -28,8 +28,14 @@ namespace Seeker.Gamebook.DzungarWar
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 660 };
 
-        public static List<string> GetActionParams() => new List<string> {
+        public static List<string> GetActionParams() => new List<string>
+        {
             "RemoveTrigger", "Stat", "TriggerTestPenalty", "Level", "StatStep", "StatToMax"
+        };
+
+        public static List<string> GetModsParams() => new List<string>
+        {
+            "Name", "Value", "Empty", "Init"
         };
 
         public static Dictionary<string, string> StatNames() => new Dictionary<string, string>

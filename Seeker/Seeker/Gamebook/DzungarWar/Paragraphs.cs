@@ -36,13 +36,10 @@ namespace Seeker.Gamebook.DzungarWar
             if (xmlNode == null)
                 return null;
 
-            Modification modification = new Modification
-            {
-                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
-                Empty = Xml.BoolParse(xmlNode.Attributes["Empty"]),
-                Init = Xml.BoolParse(xmlNode.Attributes["Init"]),
-            };
+            Modification modification = new Modification();
+
+            foreach (string param in Constants.GetModsParams())
+                SetPropertyByAttr(modification, param, xmlNode);
 
             return modification;
         }
