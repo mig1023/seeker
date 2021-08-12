@@ -81,17 +81,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return character;
         }
 
-        private static Character CharacterParse(XmlNode xmlNode, Actions action)
+        private Character CharacterParse(XmlNode xmlNode, Actions action)
         {
-            Character character = new Character
-            {
-                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
-                MaxAttack = Xml.IntParse(xmlNode.Attributes["Attack"]),
-                MaxEndurance = Xml.IntParse(xmlNode.Attributes["Endurance"]),
-                MaxDefence = Xml.IntParse(xmlNode.Attributes["Defence"]),
-                MaxInitiative = Xml.IntParse(xmlNode.Attributes["Initiative"]),
-                SpecialTechnique = new List<Character.SpecialTechniques>(),
-            };
+            Character character = new Character();
+
+            foreach (string param in Constants.GetCharacterParams())
+                SetPropertyByAttr(character, param, xmlNode, maxPrefix: true);
+
+            character.SpecialTechnique = new List<Character.SpecialTechniques>();
 
             if ((action != null) && action.StoneGuard)
             {
@@ -133,14 +130,10 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             if (xmlNode == null)
                 return null;
 
-            Modification modification = new Modification
-            {
-                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
-                ValueString = Xml.StringParse(xmlNode.Attributes["ValueString"]),
-                Restore = Xml.BoolParse(xmlNode.Attributes["Restore"]),
-                Empty = Xml.BoolParse(xmlNode.Attributes["Empty"]),
-            };
+            Modification modification = new Modification();
+
+            foreach (string param in Constants.GetModsParams())
+                SetPropertyByAttr(modification, param, xmlNode);
 
             return modification;
         }
