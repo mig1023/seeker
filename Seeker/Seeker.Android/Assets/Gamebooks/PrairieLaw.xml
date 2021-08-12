@@ -177,8 +177,8 @@
 				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
-					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="10" Сartridges="4"/>
-					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="9" Strength="9" Сartridges="3"/>
+					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="10" Cartridges="4"/>
+					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="9" Strength="9" Cartridges="3"/>
 				</Enemies>
 			</Action>
 		</Actions>
@@ -354,7 +354,7 @@
 				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
-					<Enemy Name="ВОИН" Skill="9" Strength="12" Сartridges="4"/>
+					<Enemy Name="ВОИН" Skill="9" Strength="12" Cartridges="4"/>
 				</Enemies>
 			</Action>
 		</Actions>
@@ -1046,7 +1046,7 @@
 				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
-					<Enemy Name="ЭЛЬ-ХАБАЛИ" Skill="11" Strength="12" Сartridges="6"/>
+					<Enemy Name="ЭЛЬ-ХАБАЛИ" Skill="11" Strength="12" Cartridges="6"/>
 				</Enemies>
 			</Action>
 		</Actions>
@@ -1128,8 +1128,8 @@
 				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
-					<Enemy Name="ПЕРВЫЙ ПРОТИВНИК" Skill="9" Strength="9" Сartridges="5"/>
-					<Enemy Name="ВТОРОЙ ПРОТИВНИК" Skill="8" Strength="10" Сartridges="5"/>
+					<Enemy Name="ПЕРВЫЙ ПРОТИВНИК" Skill="9" Strength="9" Cartridges="5"/>
+					<Enemy Name="ВТОРОЙ ПРОТИВНИК" Skill="8" Strength="10" Cartridges="5"/>
 				</Enemies>
 			</Action>
 		</Actions>
@@ -1492,7 +1492,7 @@
 				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
-					<Enemy Name="СТЕРВЯТНИК ДЖО" Skill="11" Strength="12" Сartridges="6"/>
+					<Enemy Name="СТЕРВЯТНИК ДЖО" Skill="11" Strength="12" Cartridges="6"/>
 				</Enemies>
 			</Action>
 		</Actions>
@@ -1573,9 +1573,9 @@
 				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
-					<Enemy Name="ПЕРВЫЙ ИНДЕЕЦ" Skill="9" Strength="9" Сartridges="3"/>
-					<Enemy Name="ВТОРОЙ ИНДЕЕЦ" Skill="8" Strength="10" Сartridges="4"/>
-					<Enemy Name="ТРЕТИЙ ИНДЕЕЦ" Skill="8" Strength="9" Сartridges="4"/>
+					<Enemy Name="ПЕРВЫЙ ИНДЕЕЦ" Skill="9" Strength="9" Cartridges="3"/>
+					<Enemy Name="ВТОРОЙ ИНДЕЕЦ" Skill="8" Strength="10" Cartridges="4"/>
+					<Enemy Name="ТРЕТИЙ ИНДЕЕЦ" Skill="8" Strength="9" Cartridges="4"/>
 				</Enemies>
 			</Action>
 		</Actions>
@@ -1691,8 +1691,8 @@
 				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
-					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="10" Сartridges="4"/>
-					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="9" Сartridges="4"/>
+					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="10" Cartridges="4"/>
+					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="9" Cartridges="4"/>
 				</Enemies>
 			</Action>
 		</Actions>
@@ -2458,7 +2458,7 @@
 				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
-					<Enemy Name="ФОСТЕР" Skill="12" Strength="12" Сartridges="6"/>
+					<Enemy Name="ФОСТЕР" Skill="12" Strength="12" Cartridges="6"/>
 				</Enemies>
 			</Action>
 		</Actions>
@@ -2568,7 +2568,7 @@
 				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
-					<Enemy Name="НЕЗНАКОМЕЦ" Skill="9" Strength="9" Сartridges="5"/>
+					<Enemy Name="НЕЗНАКОМЕЦ" Skill="9" Strength="9" Cartridges="5"/>
 				</Enemies>
 			</Action>
 		</Actions>
@@ -3166,8 +3166,8 @@
 				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
-					<Enemy Name="ПЕРВЫЙ БАНДИТ" Skill="8" Strength="9" Сartridges="3"/>
-					<Enemy Name="ВТОРОЙ БАНДИТ" Skill="9" Strength="8" Сartridges="3"/>
+					<Enemy Name="ПЕРВЫЙ БАНДИТ" Skill="8" Strength="9" Cartridges="3"/>
+					<Enemy Name="ВТОРОЙ БАНДИТ" Skill="9" Strength="8" Cartridges="3"/>
 				</Enemies>
 			</Action>
 		</Actions>
@@ -3409,7 +3409,7 @@
 				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
-					<Enemy Name="КОНОКРАД" Skill="8" Strength="8" Сartridges="4"/>
+					<Enemy Name="КОНОКРАД" Skill="8" Strength="8" Cartridges="4"/>
 				</Enemies>
 				<EnemyWoundsLimit/>
 			</Action>
@@ -5994,7 +5994,7 @@
 				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
-					<Enemy Name="НЕЗНАКОМЕЦ" Skill="6" Strength="8" Сartridges="3"/>
+					<Enemy Name="НЕЗНАКОМЕЦ" Skill="6" Strength="8" Cartridges="3"/>
 				</Enemies>
 				<EnemyWoundsLimit/>
 			</Action>
@@ -6330,8 +6330,8 @@
 				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
-					<Enemy Name="ПЕРВЫЙ ГРАБИТЕЛЬ" Skill="9" Strength="9" Сartridges="3"/>
-					<Enemy Name="ВТОРОЙ ГРАБИТЕЛЬ" Skill="8" Strength="10" Сartridges="4"/>
+					<Enemy Name="ПЕРВЫЙ ГРАБИТЕЛЬ" Skill="9" Strength="9" Cartridges="3"/>
+					<Enemy Name="ВТОРОЙ ГРАБИТЕЛЬ" Skill="8" Strength="10" Cartridges="4"/>
 				</Enemies>
 			</Action>
 		</Actions>
