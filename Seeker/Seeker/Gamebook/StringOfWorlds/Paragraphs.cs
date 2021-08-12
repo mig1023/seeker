@@ -66,12 +66,10 @@ namespace Seeker.Gamebook.StringOfWorlds
 
                 foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
                 {
-                    Character enemy = new Character
-                    {
-                        Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                        MaxSkill = Xml.IntParse(xmlEnemy.Attributes["Skill"]),
-                        MaxStrength = Xml.IntParse(xmlEnemy.Attributes["Strength"]),
-                    };
+                    Character enemy = new Character();
+
+                    foreach (string param in Constants.GetEnemyParams())
+                        SetPropertyByAttr(enemy, param, xmlEnemy);
 
                     enemy.Skill = enemy.MaxSkill;
                     enemy.Strength = enemy.MaxStrength;
