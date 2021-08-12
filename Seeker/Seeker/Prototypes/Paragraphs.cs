@@ -106,16 +106,22 @@ namespace Seeker.Prototypes
             PropertyInfo param = action.GetType().GetProperty(paramName);
 
             if (param.PropertyType == typeof(bool))
-                return Xml.BoolParse(value[paramName]);
+                return Xml.BoolParse(value);
 
-            else if (param.PropertyType == typeof(bool))
-                return Xml.IntParse(value[paramName]);
+            else if (param.PropertyType == typeof(int))
+                return Xml.IntParse(value);
 
             else
-                return Xml.StringParse(value[paramName]);
+                return Xml.StringParse(value);
         }
 
         public void SetProperty(object action, string param, XmlNode value) =>
-            action.GetType().GetProperty(param).SetValue(action, PropertyType(action, value, param));
+            action.GetType().GetProperty(param).SetValue(action, PropertyType(action, value[param], param));
+
+        public void SetPropertyByAttr(object action, string param, XmlNode value, bool maxPrefix = false)
+        {
+            string xmlField = (maxPrefix && param.StartsWith("Max")) ? param.Substring(3) : param;
+            action.GetType().GetProperty(param).SetValue(action, PropertyType(action, value.Attributes[xmlField], param));
+        }
     }
 }
