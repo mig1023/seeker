@@ -26,7 +26,10 @@ namespace Seeker.Gamebook.InvisibleFront
             [ColorTypes.SystemFont] = "#f7f1b6",
         };
 
-        public static List<string> GetApartments() => new List<string> { "один", "два", "три", "один", "два", "три" };
+        public static List<string> GetApartments() => new List<string>
+        {
+            "один", "два", "три", "один", "два", "три"
+        };
 
         public static Links GetLinks() => new Links
         {
