@@ -37,7 +37,15 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             ["Popularity"] = "популярности",
         };
 
-        public static List<string> GetActionParams() => new List<string> { "Stat", "Level", "GreatKhanSpecialCheck", "GuessBonus" };
+        public static List<string> GetActionParams() => new List<string>
+        {
+            "Stat", "Level", "GreatKhanSpecialCheck", "GuessBonus"
+        };
+
+        public static List<string> GetModsParams() => new List<string>
+        {
+            "Name", "Value", "Empty", "Init"
+        };
 
         public static Links GetLinks() => new Links
         {
