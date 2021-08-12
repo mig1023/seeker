@@ -76,14 +76,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return action;
         }
 
-        private static Character EnemyParse(XmlNode xmlEnemy)
+        private Character EnemyParse(XmlNode xmlEnemy)
         {
-            Character enemy = new Character
-            {
-                Name = Xml.StringParse(xmlEnemy.Attributes["Name"]),
-                MaxMastery = Xml.IntParse(xmlEnemy.Attributes["Mastery"]),
-                MaxEndurance = Xml.IntParse(xmlEnemy.Attributes["Endurance"]),
-            };
+            Character enemy = new Character();
+
+            foreach (string param in Constants.GetEnemyParams())
+                SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
 
             enemy.Mastery = enemy.MaxMastery;
             enemy.Endurance = enemy.MaxEndurance;
