@@ -26,7 +26,8 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 454, 455, 456, 457 };
 
-        public static List<string> GetActionParams() => new List<string> {
+        public static List<string> GetActionParams() => new List<string>
+        {
             "Skill", "RemoveTrigger", "SellType", "Choice", "Sell", "SellIfAvailable", "Split"
         };
 
