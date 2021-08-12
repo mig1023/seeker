@@ -48,13 +48,15 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
 
-        public override Abstract.IModification ModificationParse(XmlNode xmlModification) => new Modification
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification)
         {
-            Name = Xml.StringParse(xmlModification.Attributes["Name"]),
-            Value = Xml.IntParse(xmlModification.Attributes["Value"]),
-            ValueString = Xml.StringParse(xmlModification.Attributes["ValueString"]),
-            IntuitiveSolution = Xml.BoolParse(xmlModification.Attributes["IntuitiveSolution"]),
-        };
+            Modification modification = new Modification();
+
+            foreach (string param in Constants.GetModsParams())
+                SetPropertyByAttr(modification, param, xmlModification);
+
+            return modification;
+        }
 
         private static Character EnemyParse(XmlNode xmlEnemy) => new Character
         {
