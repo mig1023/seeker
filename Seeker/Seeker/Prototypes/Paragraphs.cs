@@ -61,6 +61,21 @@ namespace Seeker.Prototypes
             return actions;
         }
 
+        public Abstract.IActions ActionParse(XmlNode xmlAction, Abstract.IActions actions, List<string> paramsList, Abstract.IModification modification)
+        {
+            Abstract.IActions action = ActionTemplate(xmlAction, actions);
+
+            foreach (string param in paramsList)
+                SetProperty(action, param, xmlAction);
+
+            action.Benefit = ModificationParse(xmlAction["Benefit"]);
+
+            if (action.Name == "Option")
+                action.Option = OptionParse(xmlAction["Option"]);
+
+            return action;
+        }
+
         public Game.Paragraph ParagraphTemplate(XmlNode xmlParagraph) => new Game.Paragraph
         {
             Options = new List<Option>(),
