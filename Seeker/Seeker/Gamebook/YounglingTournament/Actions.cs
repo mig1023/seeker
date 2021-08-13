@@ -9,6 +9,8 @@ namespace Seeker.Gamebook.YounglingTournament
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
 
+        public int Level { get; set; }
+
         public override List<string> Status() => new List<string>
         {
             String.Format("Cветлая сторона: {0}", protagonist.LightSide),
@@ -53,6 +55,31 @@ namespace Seeker.Gamebook.YounglingTournament
 
                 return true;
             }
+        }
+
+        public override List<string> Representer()
+        {
+            if (Level > 0)
+                return new List<string> { String.Format("Пройдите проверку Понимания Силы, сложностью {0}", Level) };
+
+            else
+                return new List<string> { };
+        }
+
+        public List<string> ForceTest()
+        {
+            List<string> test = new List<string>();
+
+            int testDice = Game.Dice.Roll();
+            int forceLevel = protagonist.ForceTechniques.Values.Sum();
+            bool testPassed = testDice + forceLevel >= Level;
+
+            test.Add(String.Format("Проверка Понимания: {0} + {1} {2} {3}",
+                Game.Dice.Symbol(testDice), forceLevel, (testPassed ? ">=" : "<"), Level));
+
+            test.Add(testPassed ? "BIG|GOOD|ПРОВЕРКА ПРОЙДЕНА :)" : "BIG|BAD|ПРОВЕРКА ПРОВАЛЕНА :(");
+
+            return test;
         }
     }
 }

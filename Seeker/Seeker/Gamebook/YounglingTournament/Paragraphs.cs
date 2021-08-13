@@ -12,7 +12,10 @@ namespace Seeker.Gamebook.YounglingTournament
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
-        
+
+            foreach (string param in Constants.GetActionParams())
+                SetProperty(action, param, xmlAction);
+
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
             if (action.Name == "Option")

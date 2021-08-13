@@ -13,15 +13,22 @@ namespace Seeker.Gamebook.YounglingTournament
             [ButtonTypes.Main] = "#c0ac6c",
             [ButtonTypes.Continue] = "#d6c078",
             [ButtonTypes.System] = "#f9f9f9",
+            [ButtonTypes.Action] = "#c0a23b",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#e8d17e",
             [ColorTypes.StatusFont] = "#000000",
+            [ColorTypes.ActionBox] = "#e6d9ae",
         };
 
         public override bool ShowDisabledOption() => true;
+
+        public static List<string> GetActionParams() => new List<string>
+        {
+            "Level"
+        };
 
         public static Links GetLinks() => new Links
         {
