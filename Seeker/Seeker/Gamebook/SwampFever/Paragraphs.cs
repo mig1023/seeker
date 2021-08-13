@@ -9,17 +9,8 @@ namespace Seeker.Gamebook.SwampFever
 
         public override Paragraph Get(int id, XmlNode xmlParagraph) => base.Get(xmlParagraph);
 
-        public override Abstract.IActions ActionParse(XmlNode xmlAction)
-        {
-            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
-
-            foreach (string param in Constants.GetActionParams())
-                SetProperty(action, param, xmlAction);
-
-            action.Benefit = ModificationParse(xmlAction["Benefit"]);
-
-            return action;
-        }
+        public override Abstract.IActions ActionParse(XmlNode xmlAction) =>
+            base.ActionParse(xmlAction, new Actions(), Constants.GetActionParams(), new Modification());
 
         public override Abstract.IModification ModificationParse(XmlNode xmlNode)
         {
