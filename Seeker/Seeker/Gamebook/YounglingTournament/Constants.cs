@@ -30,6 +30,11 @@ namespace Seeker.Gamebook.YounglingTournament
             "Level"
         };
 
+        public static List<string> GetEnemyParams() => new List<string>
+        {
+            "Name", "MaxHitpoints", "Accuracy"
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

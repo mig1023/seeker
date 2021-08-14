@@ -9,6 +9,8 @@ namespace Seeker.Gamebook.YounglingTournament
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
 
+        public List<Character> Enemies { get; set; }
+
         public int Level { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -62,8 +64,15 @@ namespace Seeker.Gamebook.YounglingTournament
             if (Level > 0)
                 return new List<string> { String.Format("Пройдите проверку Понимания Силы, сложностью {0}", Level) };
 
-            else
-                return new List<string> { };
+            List<string> enemies = new List<string>();
+
+            if (Enemies == null)
+                return enemies;
+
+            foreach (Character enemy in Enemies)
+                enemies.Add(String.Format("{0}\nметкость {1}  выносливость {2}", enemy.Name, enemy.Accuracy, enemy.Hitpoints));
+
+            return enemies;
         }
 
         public List<string> ForceTest()
@@ -80,6 +89,91 @@ namespace Seeker.Gamebook.YounglingTournament
             test.Add(testPassed ? "BIG|GOOD|ПРОВЕРКА ПРОЙДЕНА :)" : "BIG|BAD|ПРОВЕРКА ПРОВАЛЕНА :(");
 
             return test;
+        }
+
+        public List<string> FireFight()
+        {
+            List<string> fight = new List<string>();
+
+            Dictionary<Character, int> FightEnemies = new Dictionary<Character, int>();
+            List<Character> EnemiesList = new List<Character>();
+
+            foreach (Character enemy in Enemies)
+            {
+                Character newEnemy = enemy.Clone();
+                FightEnemies.Add(newEnemy, 0);
+                EnemiesList.Add(newEnemy);
+            }
+                
+            int round = 1;
+
+            while (true)
+            {
+                fight.Add(String.Format("HEAD|Раунд: {0}", round));
+
+                int protagonistFirstDice = Game.Dice.Roll();
+                int protagonistSecondDice = Game.Dice.Roll();
+                int shotAccuracy = protagonist.Accuracy + protagonistFirstDice + protagonistSecondDice;
+
+                fight.Add(String.Format("Ваш выстрел: {0} + {1} + {2} = {3}",
+                    protagonist.Accuracy, Game.Dice.Symbol(protagonistFirstDice),
+                    Game.Dice.Symbol(protagonistSecondDice), shotAccuracy));
+
+                foreach (Character enemy in EnemiesList)
+                {
+                    if (enemy.Hitpoints <= 0)
+                        FightEnemies[enemy] = -1;
+
+                    else
+                    {
+                        int enemyFirstDice = Game.Dice.Roll();
+                        int enemySecondDice = Game.Dice.Roll();
+                        FightEnemies[enemy] = protagonist.Accuracy + enemyFirstDice + enemySecondDice;
+
+                        fight.Add(String.Format("{0} стреляет: {1} + {2} + {3} = {4}",
+                            enemy.Name, protagonist.Accuracy, Game.Dice.Symbol(enemyFirstDice),
+                            Game.Dice.Symbol(enemySecondDice), FightEnemies[enemy]));
+                    }
+                }
+
+                bool protaganistMakeShoot = false;
+
+                foreach (KeyValuePair<Character, int> shooter in FightEnemies.OrderBy(x => x.Value))
+                {
+                    if (shooter.Value <= 0)
+                        continue;
+
+                    else if ((shooter.Value < shotAccuracy) && !protaganistMakeShoot)
+                    {
+                        protaganistMakeShoot = true;
+                        shooter.Key.Hitpoints -= 5;
+                        fight.Add(String.Format("GOOD|Вы подстрелили {0}, он потерял 5 единиц выносливости", shooter.Key.Name));
+                    }
+
+                    else if (shooter.Value > shotAccuracy)
+                    {
+                        protagonist.Hitpoints -= 5;
+                        fight.Add(String.Format("BAD|{0} подстрелил вас, вы потерял 5 единиц выносливости (осталось {1})",
+                            shooter.Key.Name, protagonist.Hitpoints));
+                    }
+                }
+
+                fight.Add(String.Empty);
+
+                if (protagonist.Hitpoints <= 0)
+                {
+                    fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                    return fight;
+                }
+
+                if (FightEnemies.Keys.Where(x => x.Hitpoints > 0).Count() == 0)
+                {
+                    fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                    return fight;
+                }
+
+                round += 1;
+            }
         }
     }
 }
