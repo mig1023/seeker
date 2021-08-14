@@ -146,8 +146,27 @@ namespace Seeker.Gamebook.YounglingTournament
                     else if ((shooter.Value < shotAccuracy) && !protaganistMakeShoot)
                     {
                         protaganistMakeShoot = true;
-                        shooter.Key.Hitpoints -= 5;
-                        fight.Add(String.Format("GOOD|Вы подстрелили {0}, он потерял 5 единиц выносливости", shooter.Key.Name));
+
+                        if (shooter.Key.Shield > 0)
+                        {
+                            int damage = (5 - shooter.Key.Shield);
+                            shooter.Key.Hitpoints -= damage;
+
+                            if (damage < 1)
+                                fight.Add(String.Format("BAD|Вы подстрелили {0}, но его энергощит поглотил удар", shooter.Key.Name));
+                            else
+                            {
+                                fight.Add(String.Format("BAD|Вы подстрелили {0}, его энергощит поглотил {1} ед.урона, " +
+                                    "в результате он потерял {2} ед.выносливости", shooter.Key.Name, shooter.Key.Shield, damage));
+                            }
+
+                            shooter.Key.Shield -= (5 - damage);
+                        }
+                        else
+                        {
+                            shooter.Key.Hitpoints -= 5;
+                            fight.Add(String.Format("GOOD|Вы подстрелили {0}, он потерял 5 единиц выносливости", shooter.Key.Name));
+                        }
                     }
 
                     else if (shooter.Value > shotAccuracy)

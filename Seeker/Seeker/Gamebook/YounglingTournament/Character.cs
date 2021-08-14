@@ -59,6 +59,13 @@ namespace Seeker.Gamebook.YounglingTournament
             set => _hacking = Game.Param.Setter(value);
         }
 
+        private int _shield;
+        public int Shield
+        {
+            get => _shield;
+            set => _shield = Game.Param.Setter(value);
+        }
+
         public SortedDictionary<Techniques, int> ForceTechniques { get; set; }
 
         public override void Init()
@@ -72,6 +79,7 @@ namespace Seeker.Gamebook.YounglingTournament
             Pilot = 1;
             Stealth = 1;
             Hacking = 1;
+            Shield = 0;
 
             ForceTechniques = new SortedDictionary<Techniques, int>
             {
@@ -96,6 +104,7 @@ namespace Seeker.Gamebook.YounglingTournament
             Pilot = this.Pilot,
             Stealth = this.Stealth,
             Hacking = this.Hacking,
+            Shield = this.Shield,
         };
 
         public override string Save() => String.Join("|",
