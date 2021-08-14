@@ -111,6 +111,7 @@
 					<Enemy Name="Первый Дроид" Accuracy="7" Hitpoints="10" Shield="15" Firepower="10"/>
 					<Enemy Name="Второй Дроид" Accuracy="7" Hitpoints="10" Shield="15" Firepower="10"/>
 				</Enemies>
+				<AccuracyBonus>2</AccuracyBonus>
 			</Action>
 		</Actions>
 		<Options>
