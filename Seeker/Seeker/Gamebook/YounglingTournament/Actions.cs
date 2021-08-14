@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public List<Character> Enemies { get; set; }
 
+        public int AccuracyBonus { get; set; }
         public int Level { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -119,10 +120,12 @@ namespace Seeker.Gamebook.YounglingTournament
 
                 int protagonistFirstDice = Game.Dice.Roll();
                 int protagonistSecondDice = Game.Dice.Roll();
-                int shotAccuracy = protagonist.Accuracy + protagonistFirstDice + protagonistSecondDice;
+                int shotAccuracy = protagonist.Accuracy + protagonistFirstDice + protagonistSecondDice + AccuracyBonus;
 
-                fight.Add(String.Format("Ваш выстрел: {0} + {1} + {2} = {3}",
-                    protagonist.Accuracy, Game.Dice.Symbol(protagonistFirstDice),
+                string bonus = (AccuracyBonus > 0 ? String.Format(" + {0} бонус", AccuracyBonus) : String.Empty);
+
+                fight.Add(String.Format("Ваш выстрел: {0} меткость{1} + {2} + {3} = {4}",
+                    protagonist.Accuracy, bonus, Game.Dice.Symbol(protagonistFirstDice),
                     Game.Dice.Symbol(protagonistSecondDice), shotAccuracy));
 
                 foreach (Character enemy in EnemiesList)
