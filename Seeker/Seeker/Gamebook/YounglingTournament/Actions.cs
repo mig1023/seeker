@@ -70,7 +70,13 @@ namespace Seeker.Gamebook.YounglingTournament
                 return enemies;
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nметкость {1}  выносливость {2}", enemy.Name, enemy.Accuracy, enemy.Hitpoints));
+            {
+                string firepower = (enemy.Firepower > 5 ? String.Format("  сила выстрела {0}", enemy.Firepower) : String.Empty);
+                string shield = (enemy.Shield > 0 ? String.Format("  энергощит {0}", enemy.Shield) : String.Empty);
+
+                enemies.Add(String.Format("{0}\nметкость {1}  выносливость {2}{3}{4}",
+                    enemy.Name, enemy.Accuracy, enemy.Hitpoints, firepower, shield));
+            }
 
             return enemies;
         }
@@ -149,31 +155,36 @@ namespace Seeker.Gamebook.YounglingTournament
 
                         if (shooter.Key.Shield > 0)
                         {
-                            int damage = (5 - shooter.Key.Shield);
-                            shooter.Key.Hitpoints -= damage;
+                            int damage = (protagonist.Firepower - shooter.Key.Shield);
 
-                            if (damage < 1)
-                                fight.Add(String.Format("BAD|Вы подстрелили {0}, но его энергощит поглотил удар", shooter.Key.Name));
+                            if (damage <= 0)
+                            {
+                                fight.Add(String.Format("BAD|Вы подстрелили {0}, но его энергощит полностью поглотил урон", shooter.Key.Name));
+
+                                shooter.Key.Shield -= protagonist.Firepower;
+                            }
                             else
                             {
                                 fight.Add(String.Format("BAD|Вы подстрелили {0}, его энергощит поглотил {1} ед.урона, " +
                                     "в результате он потерял {2} ед.выносливости", shooter.Key.Name, shooter.Key.Shield, damage));
-                            }
 
-                            shooter.Key.Shield -= (5 - damage);
+                                shooter.Key.Hitpoints -= damage;
+                                shooter.Key.Shield = 0;
+                            }
                         }
                         else
                         {
-                            shooter.Key.Hitpoints -= 5;
-                            fight.Add(String.Format("GOOD|Вы подстрелили {0}, он потерял 5 единиц выносливости", shooter.Key.Name));
+                            shooter.Key.Hitpoints -= protagonist.Firepower;
+                            fight.Add(String.Format("GOOD|Вы подстрелили {0}, он потерял {1} ед.выносливости",
+                                shooter.Key.Name, protagonist.Firepower));
                         }
                     }
 
                     else if (shooter.Value > shotAccuracy)
                     {
-                        protagonist.Hitpoints -= 5;
-                        fight.Add(String.Format("BAD|{0} подстрелил вас, вы потерял 5 единиц выносливости (осталось {1})",
-                            shooter.Key.Name, protagonist.Hitpoints));
+                        protagonist.Hitpoints -= shooter.Key.Firepower;
+                        fight.Add(String.Format("BAD|{0} подстрелил вас, вы потерял {1} единиц выносливости (осталось {2})",
+                            shooter.Key.Name, shooter.Key.Firepower, protagonist.Hitpoints));
                     }
                 }
 
