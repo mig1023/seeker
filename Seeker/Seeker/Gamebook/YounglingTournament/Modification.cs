@@ -11,6 +11,13 @@ namespace Seeker.Gamebook.YounglingTournament
                 Enum.TryParse(Name, out Character.ForcesTypes technique);
                 Character.Protagonist.ForceTechniques[technique] += Value;
             }
+
+            else if (Enum.IsDefined(typeof(Character.SwordTypes), Name))
+            {
+                Enum.TryParse(Name, out Character.SwordTypes technique);
+                Character.Protagonist.SwordTechniques[technique] += Value;
+            }
+
             else
                 base.Do(Character.Protagonist);
         }
