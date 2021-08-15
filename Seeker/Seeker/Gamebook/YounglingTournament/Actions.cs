@@ -222,7 +222,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 if (protagonist.SwordTechniques[swordType] <= 0)
                     continue;
 
-                int swordResult = SwordSkills(swordType);
+                int swordResult = SwordSkills(swordType, out string _);
 
                 if (swordResult > max)
                 {
@@ -234,34 +234,44 @@ namespace Seeker.Gamebook.YounglingTournament
             return swordTechniques;
         }
 
-        private static int SwordSkills(Character.SwordTypes skill)
+        private static int SwordSkills(Character.SwordTypes skill, out string detail)
         {
+            int rang = protagonist.SwordTechniques[skill];
+
             switch (skill)
             {
                 case Character.SwordTypes.Elasticity:
-                    return 4 + protagonist.SwordTechniques[skill];
+                    detail = String.Format("4 + {0}", rang);
+                    return 4 + rang;
 
                 case Character.SwordTypes.Rivalry:
-                    return 4 + (2 * protagonist.SwordTechniques[skill]);
+                    detail = String.Format("4 + (2 x {0})", rang);
+                    return 4 + (2 * rang);
 
                 case Character.SwordTypes.Perseverance:
-                    return 8 + protagonist.SwordTechniques[skill];
+                    detail = String.Format("8 + {0}", rang);
+                    return 8 + rang;
 
                 case Character.SwordTypes.Aggressiveness:
-                    return 12 + (2 * protagonist.SwordTechniques[skill]);
+                    detail = String.Format("12 + (2 x {0})", rang);
+                    return 12 + (2 * rang);
 
                 case Character.SwordTypes.Confidence:
-                    return 12 + (3 * protagonist.SwordTechniques[skill]);
+                    detail = String.Format("12 + (3 x {0})", rang);
+                    return 12 + (3 * rang);
 
                 case Character.SwordTypes.Vaapad:
-                    return 12 + (4 * protagonist.SwordTechniques[skill]);
+                    detail = String.Format("12 + (4 x {0})", rang);
+                    return 12 + (4 * rang);
                 
                 case Character.SwordTypes.JarKai:
-                    return 12 + (3 * protagonist.SwordTechniques[skill]);
+                    detail = String.Format("12 + (3 x {0})", rang);
+                    return 12 + (3 * rang);
 
                 default:
                 case Character.SwordTypes.Decisiveness:
-                    return protagonist.SwordTechniques[skill];
+                    detail = String.Format("1 x {0}", rang);
+                    return rang;
             }
         }
 
@@ -280,10 +290,11 @@ namespace Seeker.Gamebook.YounglingTournament
             }
 
             Character.SwordTypes currectSwordTechniques = GetSwordType();
-            fight.Add(String.Format("Вы вбрали для боя Форму {0}", Constants.SwordSkillsNames()[currectSwordTechniques]));
+            fight.Add(String.Format("Вы выбрали для боя Форму {0} ({1} ранг)",
+                Constants.SwordSkillsNames()[currectSwordTechniques], protagonist.SwordTechniques[currectSwordTechniques]));
 
-            int skill = SwordSkills(currectSwordTechniques);
-            fight.Add(String.Format("Ваша Ловкость в этом бою: {0}", skill));
+            int skill = SwordSkills(currectSwordTechniques, out string detail);
+            fight.Add(String.Format("Ваша Ловкость в этом бою: {0} (по формуле: {1})", skill, detail));
 
             fight.Add(String.Empty);
 
