@@ -8,7 +8,33 @@ namespace Seeker.Gamebook.YounglingTournament
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Paragraph Get(int id, XmlNode xmlParagraph) => base.Get(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph)
+        {
+            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
+            {
+                Option option = OptionsTemplateWithoutDestination(xmlOption);
+
+                if (xmlOption.Attributes["Destination"].Value == "Back")
+                    option.Destination = Character.Protagonist.WayBack;
+                else
+                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+
+                if (xmlOption.Attributes["Do"] != null)
+                    option.Do = Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
+
+                paragraph.Options.Add(option);
+            }
+
+            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
+                paragraph.Actions.Add(ActionParse(xmlAction));
+
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
+                paragraph.Modification.Add(Xml.ModificationParse(xmlModification, new Modification()));
+
+            return paragraph;
+        }
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
@@ -39,8 +65,6 @@ namespace Seeker.Gamebook.YounglingTournament
 
             return action;
         }
-
-        public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
             Xml.ModificationParse(xmlModification, new Modification());

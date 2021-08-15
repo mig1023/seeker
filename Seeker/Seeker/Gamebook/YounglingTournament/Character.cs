@@ -88,6 +88,8 @@ namespace Seeker.Gamebook.YounglingTournament
             set => _rang = Game.Param.Setter(value);
         }
 
+        public int WayBack { get; set; }
+
         public SortedDictionary<ForcesTypes, int> ForceTechniques { get; set; }
         public SortedDictionary<SwordTypes, int> SwordTechniques { get; set; }
 
@@ -104,6 +106,7 @@ namespace Seeker.Gamebook.YounglingTournament
             Hacking = 1;
             Shield = 0;
             Firepower = 5;
+            WayBack = 0;
 
             ForceTechniques = new SortedDictionary<ForcesTypes, int>
             {
@@ -156,6 +159,7 @@ namespace Seeker.Gamebook.YounglingTournament
             Stealth,
             Hacking,
             Firepower,
+            WayBack,
             String.Join(",", ForceTechniques.Values),
             String.Join(",", SwordTechniques.Values)
         );
@@ -173,8 +177,9 @@ namespace Seeker.Gamebook.YounglingTournament
             Stealth = int.Parse(save[6]);
             Hacking = int.Parse(save[7]);
             Firepower = int.Parse(save[8]);
+            WayBack = int.Parse(save[9]);
 
-            string [] forces = save[9].Split(',');
+            string [] forces = save[10].Split(',');
 
             ForceTechniques = new SortedDictionary<ForcesTypes, int>
             {
@@ -187,7 +192,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 [ForcesTypes.Sight] = int.Parse(forces[6]),
             };
 
-            string[] sword = save[10].Split(',');
+            string[] sword = save[11].Split(',');
 
             SwordTechniques = new SortedDictionary<SwordTypes, int>
             {

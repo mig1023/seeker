@@ -6,7 +6,10 @@ namespace Seeker.Gamebook.YounglingTournament
     {
         public override void Do()
         {
-            if (Enum.IsDefined(typeof(Character.ForcesTypes), Name))
+            if (Name == "Back")
+                Character.Protagonist.WayBack = Value;
+
+            else if (Enum.IsDefined(typeof(Character.ForcesTypes), Name))
             {
                 Enum.TryParse(Name, out Character.ForcesTypes technique);
                 Character.Protagonist.ForceTechniques[technique] += Value;
