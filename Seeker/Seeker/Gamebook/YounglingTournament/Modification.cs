@@ -6,9 +6,9 @@ namespace Seeker.Gamebook.YounglingTournament
     {
         public override void Do()
         {
-            if (Enum.IsDefined(typeof(Character.Techniques), Name))
+            if (Enum.IsDefined(typeof(Character.ForcesTypes), Name))
             {
-                Enum.TryParse(Name, out Character.Techniques technique);
+                Enum.TryParse(Name, out Character.ForcesTypes technique);
                 Character.Protagonist.ForceTechniques[technique] += Value;
             }
             else

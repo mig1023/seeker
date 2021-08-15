@@ -7,7 +7,8 @@ namespace Seeker.Gamebook.YounglingTournament
     {
         public static Character Protagonist = new Character();
 
-        public enum Techniques { Speed, Push, Attraction, Jump, Foresight, Conceal, Sight }
+        public enum ForcesTypes { Speed, Push, Attraction, Jump, Foresight, Conceal, Sight }
+        public enum SwordTypes { Decisiveness, Elasticity, Rivalry, Perseverance, Aggressiveness, Confidence, Vaapad, JarKai }
 
         private int _lightSide;
         public int LightSide
@@ -73,7 +74,22 @@ namespace Seeker.Gamebook.YounglingTournament
             set => _firepower = Game.Param.Setter(value);
         }
 
-        public SortedDictionary<Techniques, int> ForceTechniques { get; set; }
+        private int _skill;
+        public int Skill
+        {
+            get => _skill;
+            set => _skill = Game.Param.Setter(value);
+        }
+
+        private int _rang;
+        public int Rang
+        {
+            get => _rang;
+            set => _rang = Game.Param.Setter(value);
+        }
+
+        public SortedDictionary<ForcesTypes, int> ForceTechniques { get; set; }
+        public SortedDictionary<SwordTypes, int> SwordTechniques { get; set; }
 
         public override void Init()
         {
@@ -89,15 +105,27 @@ namespace Seeker.Gamebook.YounglingTournament
             Shield = 0;
             Firepower = 5;
 
-            ForceTechniques = new SortedDictionary<Techniques, int>
+            ForceTechniques = new SortedDictionary<ForcesTypes, int>
             {
-                [Techniques.Speed] = 1,
-                [Techniques.Push] = 1,
-                [Techniques.Attraction] = 1,
-                [Techniques.Jump] = 1,
-                [Techniques.Foresight] = 1,
-                [Techniques.Conceal] = 1,
-                [Techniques.Sight] = 1,
+                [ForcesTypes.Speed] = 1,
+                [ForcesTypes.Push] = 1,
+                [ForcesTypes.Attraction] = 1,
+                [ForcesTypes.Jump] = 1,
+                [ForcesTypes.Foresight] = 1,
+                [ForcesTypes.Conceal] = 1,
+                [ForcesTypes.Sight] = 1,
+            };
+
+            SwordTechniques = new SortedDictionary<SwordTypes, int>
+            {
+                [SwordTypes.Decisiveness] = 4,
+                [SwordTypes.Elasticity] = 1,
+                [SwordTypes.Rivalry] = 1,
+                [SwordTypes.Perseverance] = 0,
+                [SwordTypes.Aggressiveness] = 0,
+                [SwordTypes.Confidence] = 0,
+                [SwordTypes.Vaapad] = 0,
+                [SwordTypes.JarKai] = 0,
             };
         }
 
@@ -114,6 +142,8 @@ namespace Seeker.Gamebook.YounglingTournament
             Hacking = this.Hacking,
             Shield = this.Shield,
             Firepower = this.Firepower,
+            Skill = this.Skill,
+            Rang = this.Rang,
         };
 
         public override string Save() => String.Join("|",
@@ -126,7 +156,8 @@ namespace Seeker.Gamebook.YounglingTournament
             Stealth,
             Hacking,
             Firepower,
-            String.Join(",", ForceTechniques.Values)
+            String.Join(",", ForceTechniques.Values),
+            String.Join(",", SwordTechniques.Values)
         );
 
         public override void Load(string saveLine)
@@ -145,15 +176,29 @@ namespace Seeker.Gamebook.YounglingTournament
 
             string [] forces = save[9].Split(',');
 
-            ForceTechniques = new SortedDictionary<Techniques, int>
+            ForceTechniques = new SortedDictionary<ForcesTypes, int>
             {
-                [Techniques.Speed] = int.Parse(forces[0]),
-                [Techniques.Push] = int.Parse(forces[1]),
-                [Techniques.Attraction] = int.Parse(forces[2]),
-                [Techniques.Jump] = int.Parse(forces[3]),
-                [Techniques.Foresight] = int.Parse(forces[4]),
-                [Techniques.Conceal] = int.Parse(forces[5]),
-                [Techniques.Sight] = int.Parse(forces[6]),
+                [ForcesTypes.Speed] = int.Parse(forces[0]),
+                [ForcesTypes.Push] = int.Parse(forces[1]),
+                [ForcesTypes.Attraction] = int.Parse(forces[2]),
+                [ForcesTypes.Jump] = int.Parse(forces[3]),
+                [ForcesTypes.Foresight] = int.Parse(forces[4]),
+                [ForcesTypes.Conceal] = int.Parse(forces[5]),
+                [ForcesTypes.Sight] = int.Parse(forces[6]),
+            };
+
+            string[] sword = save[10].Split(',');
+
+            SwordTechniques = new SortedDictionary<SwordTypes, int>
+            {
+                [SwordTypes.Decisiveness] = int.Parse(sword[0]),
+                [SwordTypes.Elasticity] = int.Parse(sword[1]),
+                [SwordTypes.Rivalry] = int.Parse(sword[2]),
+                [SwordTypes.Perseverance] = int.Parse(sword[3]),
+                [SwordTypes.Aggressiveness] = int.Parse(sword[4]),
+                [SwordTypes.Confidence] = int.Parse(sword[5]),
+                [SwordTypes.Vaapad] = int.Parse(sword[6]),
+                [SwordTypes.JarKai] = int.Parse(sword[7]),
             };
         }
     }
