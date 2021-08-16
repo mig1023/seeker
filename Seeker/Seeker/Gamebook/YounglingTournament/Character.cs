@@ -7,7 +7,7 @@ namespace Seeker.Gamebook.YounglingTournament
     {
         public static Character Protagonist = new Character();
 
-        public enum ForcesTypes { Speed, Push, Attraction, Jump, Foresight, Conceal, Sight, StrengtheningTheBody }
+        public enum ForcesTypes { Speed, Push, Attraction, Jump, Foresight, Conceal, Sight, StrengtheningTheBody, Healing }
         public enum SwordTypes { Decisiveness, Elasticity, Rivalry, Perseverance, Aggressiveness, Confidence, Vaapad, JarKai }
 
         private int _lightSide;
@@ -118,6 +118,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 [ForcesTypes.Conceal] = 1,
                 [ForcesTypes.Sight] = 1,
                 [ForcesTypes.StrengtheningTheBody] = 0,
+                [ForcesTypes.Healing] = 0,
             };
 
             SwordTechniques = new SortedDictionary<SwordTypes, int>
@@ -192,6 +193,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 [ForcesTypes.Conceal] = int.Parse(forces[5]),
                 [ForcesTypes.Sight] = int.Parse(forces[6]),
                 [ForcesTypes.StrengtheningTheBody] = int.Parse(forces[7]),
+                [ForcesTypes.Healing] = int.Parse(forces[8]),
             };
 
             string[] sword = save[11].Split(',');
