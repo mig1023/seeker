@@ -5,16 +5,7 @@ namespace Seeker.Output
 {
     class Buttons
     {
-        public enum ButtonTypes
-        {
-            Main,
-            Action,
-            Option,
-            Font,
-            Border,
-            Continue,
-            System
-        }
+        public enum ButtonTypes { Main, Action, Option, Font, Border, Continue, System }
 
         public static Button Action(string actionName, bool enabled = true)
         {
@@ -80,9 +71,7 @@ namespace Seeker.Output
         {
             string defaultColor = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
             string systemColor = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.System);
-            string color = (String.IsNullOrEmpty(systemColor) ? defaultColor : systemColor);
-
-            
+            string color = (String.IsNullOrEmpty(systemColor) ? defaultColor : systemColor);           
 
             Button systemButton = new Button
             {
