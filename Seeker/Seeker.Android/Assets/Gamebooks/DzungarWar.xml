@@ -1178,8 +1178,6 @@
 				<Price>60</Price>
 			</Action>
 		</Actions>
-		<Triggers>Тропа</Triggers>
-		<RemoveTriggers>Боль</RemoveTriggers>
 		<Options>
 			<Option Destination="21"/>
 		</Options>
@@ -1922,7 +1920,6 @@
 				<Level>12</Level>
 			</Action>
 		</Actions>
-		<Triggers>Переписка</Triggers>
 		<Options>
 			<Option Destination="11" Text="В случае успеха"/>
 			<Option Destination="36" Text="В случае провала"/>
@@ -3174,7 +3171,6 @@
 				<Aftertext>Купить всё, что нужно, и внести изменения на листе персонажа (в том числе отметить ключевое слово «Фарфор», если Алдар приобретает фигурку дракона).\n\nТем временем наступает ночь. А хозяин с гостем продолжают беседу, попивая зелёный чай из маленьких фарфоровых чашек.</Aftertext>
 			</Action>
 		</Actions>
-		<Triggers>Фарфор</Triggers>
 		<Options>
 			<Option Destination="182" Text="Алдар купил здесь что-нибудь"/>
 			<Option Destination="169" Text="Он ничего не покупал"/>
@@ -4973,7 +4969,6 @@
 				<Level>10</Level>
 			</Action>
 		</Actions>
-		<Triggers>Перевал</Triggers>
 		<Options>
 			<Option Destination="378" Text="В случае успеха"/>
 			<Option Destination="367" Text="В случае провала"/>
@@ -6159,8 +6154,6 @@
 				<Aftertext>Также наш герой желает сразу попасть в казахские земли в обход войск неприятеля. Проводники жалуются, что бухарские горцы промышляют разбоями в тех местах, поэтому и за проход берут дороже, ведя по горам не путников-одиночек, а хорошо вооружённые караваны. Деньги Алдар должен заплатить вперёд. А когда он закончит свои дела в Кульдже, то встретится с проводником либо присоединится к каравану, чтобы совершить путешествие через горы.\n\nНа шумном базаре день проходит незаметно, и над Кульджой сгущаются сумерки. Благодаря гостеприимству уйгуров Алдар Косе ночует в одном из саманных домиков. А утром, встав пораньше, он раздумывает, с чего же начать этот день.\n\nПомните, что Алдар Косе может посещать базар и русский острог неоднократно.</Aftertext>
 			</Action>
 		</Actions>
-		<Triggers>Запад</Triggers>
-		<RemoveTriggers>Боль</RemoveTriggers>
 		<Modifications>
 			<Modification Name="SaleOfPredatorSkins"/>
 		</Modifications>
@@ -6377,7 +6370,6 @@
 				<Stat>Wisdom</Stat>
 			</Action>
 		</Actions>
-		<Triggers>Переговорщик</Triggers>
 		<Options>
 			<Option Destination="474" Text="В случае успеха"/>
 			<Option Destination="451" Text="В случае провала"/>
@@ -6543,7 +6535,6 @@
 				<Text>ВЫБРАТЬ ЕРИКА</Text>
 			</Action>
 		</Actions>
-		<Triggers>Ерик</Triggers>
 		<Options>
 			<Option Destination="634"/>
 		</Options>
@@ -6597,7 +6588,6 @@
 				<Aftertext>Если же денег нет, или он не хочет их тратить, то остаётся только извиниться перед полковником Риддером за беспокойство.\n\nВ любом случае Алдару здесь больше делать нечего.</Aftertext>
 			</Action>
 		</Actions>
-		<Triggers>Тумен</Triggers>
 		<Options>
 			<Option Destination="356"/>
 		</Options>
@@ -7612,7 +7602,6 @@
 				<Level>12</Level>
 			</Action>
 		</Actions>
-		<Triggers>Лучник</Triggers>
 		<Options>		
 			<Option Destination="286" Text="В случае успеха" Aftertext="В случае провала: если это была первая проверка способностей в мире теней?"/>
 			<Option Destination="322" Text="Первая"/>
