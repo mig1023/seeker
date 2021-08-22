@@ -52,6 +52,7 @@ namespace Seeker.Gamebook.DzungarWar
         public int? Favour { get; set; }
         public int Tincture { get; set; }
         public int Ginseng { get; set; }
+        public int Airag { get; set; }
 
         public int StatBonuses { get; set; }
         public int MaxBonus { get; set; }
@@ -69,6 +70,7 @@ namespace Seeker.Gamebook.DzungarWar
             Favour = null;
             Tincture = 3;
             Ginseng = 0;
+            Airag = 0;
             StatBonuses = 4;
             MaxBonus = 1;
             Brother = 0;
@@ -85,6 +87,7 @@ namespace Seeker.Gamebook.DzungarWar
             Favour = this.Favour,
             Tincture = this.Tincture,
             Ginseng = this.Ginseng,
+            Airag = this.Airag,
             Tanga = this.Tanga,
             StatBonuses = this.StatBonuses,
             MaxBonus = this.MaxBonus,
@@ -92,19 +95,8 @@ namespace Seeker.Gamebook.DzungarWar
         };
 
         public override string Save() => String.Join("|",
-            Strength,
-            Skill,
-            Wisdom,
-            Cunning,
-            Oratory,
-            Danger,
-            Favour,
-            Tanga,
-            StatBonuses,
-            MaxBonus,
-            Brother,
-            Tincture,
-            Ginseng
+            Strength, Skill, Wisdom, Cunning, Oratory, Danger, Favour, Tanga, StatBonuses, MaxBonus,
+            Brother, Tincture, Ginseng, Airag
         );
 
         public override void Load(string saveLine)
@@ -124,6 +116,7 @@ namespace Seeker.Gamebook.DzungarWar
             Brother = int.Parse(save[10]);
             Tincture = int.Parse(save[11]);
             Ginseng = int.Parse(save[12]);
+            Airag = int.Parse(save[13]);
         }
     }
 }

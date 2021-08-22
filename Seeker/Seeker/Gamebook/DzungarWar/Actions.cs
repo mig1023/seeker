@@ -18,7 +18,7 @@ namespace Seeker.Gamebook.DzungarWar
 
         public string TriggerTestPenalty { get; set; }
 
-        static bool NextTestWithTincture = false, NextTestWithGinseng = false;
+        static bool NextTestWithTincture = false, NextTestWithGinseng = false, NextTestWithAirag = false;
 
         private int TestLevelWithPenalty(int level, out List<string> penaltyLine)
         {
@@ -34,6 +34,12 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 level -= 8;
                 penaltyLine.Add("Бонус в -8 к уровню проверки за отвар женьшеня");
+            }
+
+            if (NextTestWithAirag)
+            {
+                level -= 2;
+                penaltyLine.Add("Бонус в -2 к уровню проверки за айраг");
             }
 
             if (String.IsNullOrEmpty(TriggerTestPenalty))
@@ -151,6 +157,9 @@ namespace Seeker.Gamebook.DzungarWar
             if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (protagonist.Ginseng > 0) && !NextTestWithGinseng)
                 staticButtons.Add("ВЫПИТЬ ОТВАР ЖЕНЬШЕНЯ");
 
+            if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (protagonist.Airag > 0) && !NextTestWithAirag)
+                staticButtons.Add("ВЫПИТЬ АЙРАГА");
+
             return staticButtons;
         }
 
@@ -167,6 +176,13 @@ namespace Seeker.Gamebook.DzungarWar
                 protagonist.Ginseng -= 1;
                 NextTestWithGinseng = true;
             }
+
+            else if (action == "ВЫПИТЬ АЙРАГА")
+            {
+                protagonist.Airag -= 1;
+                NextTestWithAirag = true;
+            }
+
             else
                 return false;
 
@@ -278,6 +294,7 @@ namespace Seeker.Gamebook.DzungarWar
 
             NextTestWithTincture = false;
             NextTestWithGinseng = false;
+            NextTestWithAirag = false;
 
             resultLine.AddRange(penalties);
 
