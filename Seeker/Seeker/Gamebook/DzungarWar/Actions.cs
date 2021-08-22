@@ -45,7 +45,17 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 string[] penalty = eachPenalty.Split(',');
 
-                if (Game.Data.Triggers.Contains(penalty[0].Trim()))
+                if (penalty[0].Trim() == "Вино")
+                {
+                    int bottles = Game.Data.Triggers.Where(x => x == "Кувшин вина").Count();
+
+                    if (bottles > 0)
+                    {
+                        level += (bottles * -1);
+                        penaltyLine.Add(String.Format("Пенальти -{0} за покупку {0} кувшинов", bottles));
+                    }
+                }
+                else if (Game.Data.Triggers.Contains(penalty[0].Trim()))
                 {
                     level += int.Parse(penalty[1].Trim());
                     penaltyLine.Add(String.Format("Пенальти {0} к уровню проверки за ключевое слово {1}", penalty[1].Trim(), penalty[0].Trim()));
