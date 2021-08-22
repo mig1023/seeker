@@ -23,10 +23,10 @@ namespace Seeker.Gamebook.DzungarWar
             [ColorTypes.ActionBox] = "#af8f69",
             [ColorTypes.StatusBar] = "#dcc18c",
             [ColorTypes.StatusFont] = "#000000",
-            [ColorTypes.AdditionalStatus] = "#e3cda3",
+            [ColorTypes.AdditionalStatus] = "#ebdcbe",
         };
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 660 };
+        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 658, 659, 660 };
 
         public static List<string> GetActionParams() => new List<string>
         {

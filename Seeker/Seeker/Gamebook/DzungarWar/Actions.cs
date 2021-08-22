@@ -107,15 +107,6 @@ namespace Seeker.Gamebook.DzungarWar
             if (protagonist.Tanga > 0)
                 statusLines.Add(String.Format("Деньги: {0}", protagonist.Tanga));
 
-            if (protagonist.Tincture > 0)
-                statusLines.Add(String.Format("Настойка: {0}", protagonist.Tincture));
-
-            if (protagonist.Ginseng > 0)
-                statusLines.Add(String.Format("Отвар: {0}", protagonist.Ginseng));
-
-            if (protagonist.Favour != null)
-                statusLines.Add(String.Format("Благосклонность: {0}", protagonist.Favour));
-
             if (protagonist.Danger != null)
                 statusLines.Add(String.Format("Опасность: {0}", protagonist.Danger));
 
@@ -140,6 +131,15 @@ namespace Seeker.Gamebook.DzungarWar
 
             if (protagonist.Oratory > 1)
                 statusLines.Add(String.Format("Красноречие: {0}", protagonist.Oratory));
+
+            if (protagonist.Tincture > 0)
+                statusLines.Add(String.Format("Настойка: {0}", protagonist.Tincture));
+
+            if (protagonist.Ginseng > 0)
+                statusLines.Add(String.Format("Отвар: {0}", protagonist.Ginseng));
+
+            if (protagonist.Favour != null)
+                statusLines.Add(String.Format("Благосклонность: {0}", protagonist.Favour));
 
             if (statusLines.Count <= 0)
                 return null;
