@@ -15,7 +15,6 @@ namespace Seeker.Gamebook.DzungarWar
         public int StatStep { get; set; }
         public bool StatToMax { get; set; }
         public int Level { get; set; }
-
         public string TriggerTestPenalty { get; set; }
 
         static bool NextTestWithTincture = false, NextTestWithGinseng = false, NextTestWithAirag = false;
@@ -117,26 +116,26 @@ namespace Seeker.Gamebook.DzungarWar
         {
             List<string> statusLines = new List<string>();
 
-            if (protagonist.Strength > 1)
-                statusLines.Add(String.Format("Сила: {0}", protagonist.Strength));
-
-            if (protagonist.Skill > 1)
-                statusLines.Add(String.Format("Ловкость: {0}", protagonist.Skill));
-
-            if (protagonist.Wisdom > 1)
-                statusLines.Add(String.Format("Мудрость: {0}", protagonist.Wisdom));
-
-            if (protagonist.Cunning > 1)
-                statusLines.Add(String.Format("Хитрость: {0}", protagonist.Cunning));
-
-            if (protagonist.Oratory > 1)
-                statusLines.Add(String.Format("Красноречие: {0}", protagonist.Oratory));
-
             if (protagonist.Tincture > 0)
                 statusLines.Add(String.Format("Настойка: {0}", protagonist.Tincture));
 
             if (protagonist.Ginseng > 0)
                 statusLines.Add(String.Format("Отвар: {0}", protagonist.Ginseng));
+
+            if (protagonist.Oratory > 1)
+                statusLines.Add(String.Format("Красноречие: {0}", protagonist.Oratory));
+
+            if (protagonist.Cunning > 1)
+                statusLines.Add(String.Format("Хитрость: {0}", protagonist.Cunning));
+
+            if (protagonist.Wisdom > 1)
+                statusLines.Add(String.Format("Мудрость: {0}", protagonist.Wisdom));
+
+            if (protagonist.Skill > 1)
+                statusLines.Add(String.Format("Ловкость: {0}", protagonist.Skill));
+
+            if (protagonist.Strength > 1)
+                statusLines.Add(String.Format("Сила: {0}", protagonist.Strength));
 
             if (protagonist.Favour != null)
                 statusLines.Add(String.Format("Благосклонность: {0}", protagonist.Favour));
@@ -151,13 +150,16 @@ namespace Seeker.Gamebook.DzungarWar
         {
             List<string> staticButtons = new List<string> { };
 
-            if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (protagonist.Tincture > 0) && !NextTestWithTincture)
+            if (!Game.Checks.ExistsInParagraph(actionName: "TEST"))
+                return staticButtons;
+
+            if ((protagonist.Tincture > 0) && !NextTestWithTincture)
                 staticButtons.Add("ВЫПИТЬ НАСТОЙКИ");
 
-            if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (protagonist.Ginseng > 0) && !NextTestWithGinseng)
+            if ((protagonist.Ginseng > 0) && !NextTestWithGinseng)
                 staticButtons.Add("ВЫПИТЬ ОТВАР ЖЕНЬШЕНЯ");
 
-            if (Game.Checks.ExistsInParagraph(actionName: "TEST") && (protagonist.Airag > 0) && !NextTestWithAirag)
+            if ((protagonist.Airag > 0) && !NextTestWithAirag)
                 staticButtons.Add("ВЫПИТЬ АЙРАГА");
 
             return staticButtons;
