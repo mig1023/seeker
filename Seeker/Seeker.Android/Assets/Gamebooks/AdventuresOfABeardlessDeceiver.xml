@@ -524,12 +524,14 @@
 				<Button>Проверить мудрость</Button>
 				<Stat>Wisdom</Stat>
 				<Level>11</Level>
+				<TablesGame/>
 			</Action>
 			<Action>
 				<Name>Test</Name>
 				<Button>Проверить хитрость</Button>
 				<Stat>Cunning</Stat>
 				<Level>11</Level>
+				<TablesGame/>
 			</Action>
 		</Actions>
 		<Options>
@@ -1061,7 +1063,7 @@
 		<Triggers>PartyClothes</Triggers>
 		<Options>
 			<Option Destination="40" Text="Если у Алдара есть такие деньги и желание, то можно сделать ставку и сыграть в нарды"/>
-			<Option Destination="128" Text="Или можно просто посмотреть, как другие играют"/>
+			<Option Destination="128" Text="Просто посмотреть, как другие играют"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1886,12 +1888,14 @@
 				<Button>Проверить мудрость</Button>
 				<Stat>Wisdom</Stat>
 				<Level>12</Level>
+				<TablesGame/>
 			</Action>
 			<Action>
 				<Name>Test</Name>
 				<Button>Проверить хитрость</Button>
 				<Stat>Cunning</Stat>
 				<Level>12</Level>
+				<TablesGame/>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -2091,6 +2095,7 @@
 			<Text Size="small">Отметить на листе персонажа, что Алдар Косе владеет мастерством игры в нарды. Если впоследствии придётся применить это умение, то проверки МУДРОСТИ и ХИТРОСТИ при игре автоматически зачитываются, как успешные.</Text>
 			<Text>Поблагодарив за ужин и полезный урок, Алдар Косе сердечно попрощается с белобородым хитрецом и устраивается на ночлег у догорающего костра погонщиков.</Text>
 		</Texts>
+		<Triggers>Tables</Triggers>
 		<Options>
 			<Option Destination="62"/>
 		</Options>
