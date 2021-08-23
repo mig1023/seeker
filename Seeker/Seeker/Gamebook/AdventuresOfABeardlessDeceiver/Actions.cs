@@ -38,48 +38,38 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 return new List<string> { };
         }
 
-        public override List<string> Status()
+        public override List<string> Status() => new List<string>
         {
-            List<string> statusLines = new List<string>();
-
-            if (protagonist.Tanga > 0)
-                statusLines.Add(String.Format("Деньги: {0}", protagonist.Tanga));
-
-            if (protagonist.AkynGlory != null)
-                statusLines.Add(String.Format("Слава акына: {0}", protagonist.AkynGlory));
-
-            if (protagonist.UnitOfTime != null)
-                statusLines.Add(String.Format("Ед.времени: {0}", protagonist.UnitOfTime));
-
-            if (protagonist.Kumis > 0)
-                statusLines.Add(String.Format("Кумыс: {0}", protagonist.Kumis));
-
-            statusLines.Add(String.Format("Популярность: {0}", protagonist.Popularity));
-
-            return statusLines;
-        }
+            String.Format("Деньги: {0}", protagonist.Tanga),
+            String.Format("Кумыс: {0}", protagonist.Kumis),
+        };
 
         public override List<string> AdditionalStatus()
         {
             List<string> statusLines = new List<string>();
 
-            if (protagonist.Strength > 1)
-                statusLines.Add(String.Format("Сила: {0}", protagonist.Strength));
-
-            if (protagonist.Skill > 1)
-                statusLines.Add(String.Format("Ловкость: {0}", protagonist.Skill));
-
-            if (protagonist.Wisdom > 1)
-                statusLines.Add(String.Format("Мудрость: {0}", protagonist.Wisdom));
+            if (protagonist.Oratory > 1)
+                statusLines.Add(String.Format("Красноречие: {0}", protagonist.Oratory));
 
             if (protagonist.Cunning > 1)
                 statusLines.Add(String.Format("Хитрость: {0}", protagonist.Cunning));
 
-            if (protagonist.Oratory > 1)
-                statusLines.Add(String.Format("Красноречие: {0}", protagonist.Oratory));
+            if (protagonist.Wisdom > 1)
+                statusLines.Add(String.Format("Мудрость: {0}", protagonist.Wisdom));
 
-            if (statusLines.Count <= 0)
-                return null;
+            if (protagonist.Skill > 1)
+                statusLines.Add(String.Format("Ловкость: {0}", protagonist.Skill));
+
+            if (protagonist.Strength > 1)
+                statusLines.Add(String.Format("Сила: {0}", protagonist.Strength));
+
+            if (protagonist.UnitOfTime != null)
+                statusLines.Add(String.Format("Ед.времени: {0}", protagonist.UnitOfTime));
+
+            if (protagonist.AkynGlory != null)
+                statusLines.Add(String.Format("Слава акына: {0}", protagonist.AkynGlory));
+
+            statusLines.Add(String.Format("Популярность: {0}", protagonist.Popularity));
 
             return statusLines;
         }
