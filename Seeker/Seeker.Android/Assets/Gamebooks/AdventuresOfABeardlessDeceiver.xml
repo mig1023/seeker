@@ -1692,7 +1692,7 @@
 		<Texts>
 			<Text>Джигит принимается за дело, с трудом сдвигая с места тяжёлые осколки скалы. Особенно нелегко дается огромная глыба, лежащая прямо на отверстии колодца. Но вот место расчищено и доступ к колодцу открыт.\n\n- Вот спасибо, добрый молодец, бойко сладил дело. Вода в этом колодце из святого источника Беловодья, который имеет особые целебные свойства. Так испей же из колодца - это и есть твоя награда для пути нелёгкого.\n\nОдин из мальчиков приносит ведро с верёвкой, и Алдар Косе зачерпывает из колодца.\n\nА на дне ведра он замечает прозрачный голубоватый камень, который ярко сверкает на солнце. Афанасий крестится и удивлённо кричит:\n\n- Ох не зря я в тебе хорошего человека разглядел, Алдар Косе! Дело, которые ты пытаешь, нравится господу нашему. Вот и святой источник наградил тебя не только силами духовными, но и богатствами мирскими.\n\nАлдар кладёт в сумку драгоценный камень, за который любой торговец отвалит кучу денег.</Text>			
 			<Text Size="small">+150 ТАНЬГА.\n+1 ПОПУЛЯРНОСТЬ.</Text>
-			<Text>Попив воды, он действительно чувствует небывалую свежесть, прилив сил и ясность мыслей Увеличить значение любой способности на 2 пункта:</Text>
+			<Text>Попив воды, он действительно чувствует небывалую свежесть, прилив сил и ясность мыслей. Увеличить значение любой способности на 2 пункта:</Text>
 		</Texts>
 		<Actions>
 			<Action>
@@ -1700,37 +1700,42 @@
 				<Button>Добавить силы</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
+				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Добавить ловкости</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
+				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Добавить мудрости</Button>
 				<Text>МУДРОСТЬ</Text>
 				<Stat>Wisdom</Stat>
+				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Добавить хитрости</Button>
 				<Text>ХИТРОСТЬ</Text>
 				<Stat>Cunning</Stat>
+				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Добавить красноречия</Button>
 				<Text>КРАСНОРЕЧИЕ</Text>
 				<Stat>Oratory</Stat>
+				<StatStep>2</StatStep>
 				<Aftertext>Новое значение сохраняется до конца путешествия.\n\nПопрощавшись с Афанасием и ребятишками, кочевник отправляется дальше вниз по течению реки.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
 			<Modification Name="Popularity" Value="1"/>
 			<Modification Name="Tanga" Value="150"/>
-			<Modification Name="StatBonuses" Value="2"/>
+			<Modification Name="StatBonuses" Value="1"/>
 		</Modifications>
 		<Options>
 			<Option Destination="99"/>
@@ -2614,35 +2619,40 @@
 				<Button>Добавить силы</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
+				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Добавить ловкости</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
+				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Добавить мудрости</Button>
 				<Text>МУДРОСТЬ</Text>
 				<Stat>Wisdom</Stat>
+				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Добавить хитрости</Button>
 				<Text>ХИТРОСТЬ</Text>
 				<Stat>Cunning</Stat>
+				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Добавить красноречия</Button>
 				<Text>КРАСНОРЕЧИЕ</Text>
 				<Stat>Oratory</Stat>
+				<StatStep>2</StatStep>
 				<Aftertext>Шум развлечений во дворе потихоньку затихает - народ расходится по своим комнатам, чтобы назавтра спозаранку продолжить свой путь. Кочевник тоже идёт спать.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
-			<Modification Name="StatBonuses" Value="2"/>
+			<Modification Name="StatBonuses" Value="1"/>
 		</Modifications>
 		<Options>
 			<Option Destination="163" Text="Алдару удалось получить комнату в караван-сарае" OnlyIf="Room"/>
