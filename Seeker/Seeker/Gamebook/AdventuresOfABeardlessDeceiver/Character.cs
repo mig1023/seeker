@@ -48,8 +48,20 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             set => _popularity = Game.Param.Setter(value, max: 12);
         }
 
-        public int Kumis { get; set; }
-        public int Tanga { get; set; }
+        private int _kumis;
+        public int Kumis
+        {
+            get => _kumis;
+            set => _kumis = Game.Param.Setter(value, max: 1);
+        }
+
+        private int _tanga;
+        public int Tanga
+        {
+            get => _tanga;
+            set => _tanga = Game.Param.Setter(value);
+        }
+
         public int? AkynGlory { get; set; }
         public int? UnitOfTime { get; set; }
 
