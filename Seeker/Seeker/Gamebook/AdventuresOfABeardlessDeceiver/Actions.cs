@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public int Level { get; set; }
         public bool GreatKhanSpecialCheck { get; set; }
         public bool GuessBonus { get; set; }
+        public bool TablesGame { get; set; }
 
         static bool NextTestWithKumis = false;
 
@@ -175,25 +176,35 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
             bool testIsOk = (firstDice + secondDice) + currentStat >= Level;
 
-            List<string> testLines = new List<string> { String.Format(
-                "Проверка {0}: {1} + {2} + {3} {4} {5}",
-                Constants.StatNames[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
-                currentStat, (testIsOk ? ">=" : "<"), Level ) };
+            List<string> testLines = new List<string>();
 
-            if (GuessBonus && Game.Data.Triggers.Contains("guess"))
-                testLines.Insert(0, "Бонус за догадку: -4");
-
-            if (GreatKhanSpecialCheck)
+            if (TablesGame && Game.Data.Triggers.Contains("Tables"))
             {
-                if (Game.Data.Triggers.Contains("KhansRing"))
-                    testLines.Insert(0, "Бонус за ханское кольцо: -3");
-
-                if (protagonist.Popularity > 0)
-                    testLines.Insert(0, String.Format("Бонус за популярность: -{0}", protagonist.Popularity));
+                testLines.Add("Алдар владеет игрой в нарды в совершенстве!");
+                testIsOk = true;
             }
+            else
+            {
+                testLines.Add(String.Format(
+                    "Проверка {0}: {1} + {2} + {3} {4} {5}",
+                    Constants.StatNames[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
+                    currentStat, (testIsOk ? ">=" : "<"), Level));
 
-            if (NextTestWithKumis)
-                testLines.Insert(0, "Бонус за кумыс: -2");
+                if (GuessBonus && Game.Data.Triggers.Contains("guess"))
+                    testLines.Insert(0, "Бонус за догадку: -4");
+
+                if (GreatKhanSpecialCheck)
+                {
+                    if (Game.Data.Triggers.Contains("KhansRing"))
+                        testLines.Insert(0, "Бонус за ханское кольцо: -3");
+
+                    if (protagonist.Popularity > 0)
+                        testLines.Insert(0, String.Format("Бонус за популярность: -{0}", protagonist.Popularity));
+                }
+
+                if (NextTestWithKumis)
+                    testLines.Insert(0, "Бонус за кумыс: -2");
+            }
 
             testLines.Add(testIsOk ? "BIG|GOOD|АЛДАР СПРАВИЛСЯ :)" : "BIG|BAD|АЛДАР НЕ СПРАВИЛСЯ :(");
 
