@@ -9,6 +9,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         private static Character protagonist = Character.Protagonist;
 
         public string Stat { get; set; }
+        public int StatStep { get; set; }
         public int Level { get; set; }
         public bool GreatKhanSpecialCheck { get; set; }
         public bool GuessBonus { get; set; }
@@ -217,7 +218,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             {
                 int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
 
-                currentStat += 1;
+                currentStat += (StatStep > 1 ? StatStep : 1);
 
                 protagonist.GetType().GetProperty(Stat).SetValue(protagonist, currentStat);
 

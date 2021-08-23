@@ -41,7 +41,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public static List<string> GetActionParams() => new List<string>
         {
-            "Stat", "Level", "GreatKhanSpecialCheck", "GuessBonus"
+            "Stat", "StatStep", "Level", "GreatKhanSpecialCheck", "GuessBonus"
         };
 
         public static List<string> GetModsParams() => new List<string>
