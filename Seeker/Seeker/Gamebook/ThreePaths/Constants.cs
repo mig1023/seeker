@@ -14,7 +14,6 @@ namespace Seeker.Gamebook.ThreePaths
             [ButtonTypes.Option] = "#009999",
             [ButtonTypes.Action] = "#005b5b",
             [ButtonTypes.Continue] = "#6fc5c5",
-            [ButtonTypes.System] = "#c9e9e9",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
