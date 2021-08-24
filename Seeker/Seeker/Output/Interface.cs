@@ -173,14 +173,6 @@ namespace Seeker.Output
                 options.Children.Add(GamebookDisclaimer(gamebook, withOut: true));
         }
 
-        public static StackLayout SystemMenu() => new StackLayout()
-        {
-            Orientation = StackOrientation.Horizontal,
-            Spacing = Constants.SYS_MENU_SPACING,
-            HeightRequest = Constants.SYS_MENU_HIGHT,
-            HorizontalOptions = LayoutOptions.FillAndExpand,
-        };
-
         public static List<View> Represent(List<string> enemiesLines)
         {
             List<View> enemies = new List<View>();
@@ -269,29 +261,18 @@ namespace Seeker.Output
             return SetBorderAndTextColor(gameoverButton);
         }
 
-        public static Button SetBorderAndTextColor(Button button, bool system = false)
+        public static Button SetBorderAndTextColor(Button button)
         {
-            if (!system)
+            if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border)))
             {
-                if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border)))
-                {
-                    button.BorderColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border));
-                    button.BorderWidth = Constants.BORDER_WIDTH;
-                }
-                else
-                    button.BorderWidth = 0;
-            }
-
-            if (system)
-            {
-                string systemFont = Game.Data.Constants.GetColor(Game.Data.ColorTypes.SystemFont);
-                button.TextColor = (String.IsNullOrEmpty(systemFont) ? Color.Black : Color.FromHex(systemFont));
+                button.BorderColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border));
+                button.BorderWidth = Constants.BORDER_WIDTH;
             }
             else
-            {
-                string font = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Font);
-                button.TextColor = (String.IsNullOrEmpty(font) ? Color.White : Color.FromHex(font));
-            }
+                button.BorderWidth = 0;
+
+            string font = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Font);
+            button.TextColor = (String.IsNullOrEmpty(font) ? Color.White : Color.FromHex(font));
 
             return button;
         }

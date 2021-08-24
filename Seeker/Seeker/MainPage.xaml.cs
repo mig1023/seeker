@@ -16,7 +16,7 @@ namespace Seeker
             Gamebooks();
         }
 
-        public void Gamebooks(bool toMain = false)
+        public void Gamebooks()
         {
             Game.Data.Clean();
 
@@ -42,9 +42,6 @@ namespace Seeker
             }
 
             UpdateStatus();
-
-            if (toMain)
-                MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
         }
 
         private void Gamebook_Click(object sender, EventArgs e)
@@ -184,8 +181,6 @@ namespace Seeker
                     AddAdditionalButton(buttonName, StaticButton_Click);
             }
 
-            Options.Children.Add(SystemMenu());
-
             if (!reload)
                 MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
 
@@ -213,21 +208,6 @@ namespace Seeker
             Game.Router.InputResponse = option.Input;
 
             return field;
-        }
-
-        public StackLayout SystemMenu()
-        {
-            StackLayout systemLayout = Output.Interface.SystemMenu();
-
-            Button exit = Output.Buttons.System("Выйти");
-            exit.Clicked += (object sender, EventArgs e) => System.Diagnostics.Process.GetCurrentProcess().Kill();
-            systemLayout.Children.Add(exit);
-
-            Button main = Output.Buttons.System("На главную");
-            main.Clicked += (object sender, EventArgs e) => this.Gamebooks(toMain: true);
-            systemLayout.Children.Add(main);
-
-            return systemLayout;
         }
 
         private void InputChange(object sender, EventArgs e)

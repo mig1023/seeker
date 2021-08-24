@@ -16,7 +16,5 @@ namespace Seeker.Output
         public static double REPRESENT_PADDING = -10;
         public static double SPLITTER_HIGHT = 250;
         public static double DISCLAIMER_BORDER = 8;
-        public static double SYS_MENU_SPACING = 4;
-        public static double SYS_MENU_HIGHT = 25;
     }
 }

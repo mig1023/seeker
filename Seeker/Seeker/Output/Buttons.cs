@@ -5,7 +5,7 @@ namespace Seeker.Output
 {
     class Buttons
     {
-        public enum ButtonTypes { Main, Action, Option, Font, Border, Continue, System }
+        public enum ButtonTypes { Main, Action, Option, Font, Border, Continue }
 
         public static Button Action(string actionName, bool enabled = true)
         {
@@ -65,25 +65,6 @@ namespace Seeker.Output
             };
 
             return Interface.SetBorderAndTextColor(additionButton);
-        }
-
-        public static Button System(string text)
-        {
-            string defaultColor = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
-            string systemColor = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.System);
-            string color = (String.IsNullOrEmpty(systemColor) ? defaultColor : systemColor);           
-
-            Button systemButton = new Button
-            {
-                Text = text,
-                BackgroundColor = (String.IsNullOrEmpty(color) ? Color.LightGray : Color.FromHex(color)),
-                FontFamily = Interface.TextFontFamily(standart: true),
-                FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
-                Padding = 0,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
-
-            return Interface.SetBorderAndTextColor(systemButton, system: true);
         }
     }
 }
