@@ -13,7 +13,6 @@ namespace Seeker.Gamebook.SilentSchool
             [ButtonTypes.Main] = "#434343",
             [ButtonTypes.Action] = "#555555",
             [ButtonTypes.Option] = "#686868",
-            [ButtonTypes.System] = "#eeeeee",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
