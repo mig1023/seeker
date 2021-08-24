@@ -14,7 +14,6 @@ namespace Seeker.Gamebook.HeartOfIce
             [ButtonTypes.Option] = "#91d0d0",
             [ButtonTypes.Action] = "#256366",
             [ButtonTypes.Continue] = "#bbdbdb",
-            [ButtonTypes.System] = "#cfe5e5",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
