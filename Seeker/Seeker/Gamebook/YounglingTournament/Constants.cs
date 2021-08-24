@@ -12,7 +12,6 @@ namespace Seeker.Gamebook.YounglingTournament
         {
             [ButtonTypes.Main] = "#c0ac6c",
             [ButtonTypes.Continue] = "#d6c078",
-            [ButtonTypes.System] = "#f9f9f9",
             [ButtonTypes.Action] = "#c0a23b",
         };
 
