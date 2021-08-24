@@ -16,7 +16,6 @@ namespace Seeker.Gamebook.VWeapons
             [ButtonTypes.Font] = "#000000",
             [ButtonTypes.Border] = "#000000",
             [ButtonTypes.Continue] = "#FFFFFF",
-            [ButtonTypes.System] = "#f4f4f4",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
