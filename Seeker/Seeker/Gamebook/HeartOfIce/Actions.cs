@@ -37,8 +37,8 @@ namespace Seeker.Gamebook.HeartOfIce
         {
             List<string> statusLines = new List<string>
             {
-                String.Format("Здоровье: {0}", protagonist),
-                String.Format("Деньги: {0}", protagonist),
+                String.Format("Здоровье: {0}", protagonist.Life),
+                String.Format("Деньги: {0}", protagonist.Money),
             };
 
             if (protagonist.Food > 0)
