@@ -14,7 +14,6 @@ namespace Seeker.Gamebook.Catharsis
             [ButtonTypes.Option] = "#858581",
             [ButtonTypes.Action] = "#939393",
             [ButtonTypes.Continue] = "#a9a9a6",
-            [ButtonTypes.System] = "#b8b8b8",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
