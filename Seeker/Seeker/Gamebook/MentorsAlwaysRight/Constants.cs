@@ -14,7 +14,6 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             [ButtonTypes.Action] = "#203a68",
             [ButtonTypes.Option] = "#9ab0d6",
             [ButtonTypes.Continue] = "#9ab0d6",
-            [ButtonTypes.System] = "#ccd7ea",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
