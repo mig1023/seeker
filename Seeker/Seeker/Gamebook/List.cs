@@ -208,16 +208,6 @@ namespace Seeker.Gamebook
                 Illustration = "HowlOfTheWerewolf.jpg",
             },
 
-            ["Сердце льда"] = new Description
-            {
-                XmlBook = "Gamebooks/HeartOfIce.xml",
-                Links = HeartOfIce.Constants.GetLinks(),
-                SmallDisclaimer = "Дэйв Моррис, 1994",
-                FullDisclaimer = "Авторы: Дэйв Моррис\n\nПереводчики: Мария Ерошкина, Ageres, Jumangee, Vo1t, Fermalion, Johny Lee и другие",
-                BookColor = "#418988",
-                Illustration = "HeartOfIce.jpg",
-            },
-
             ["Крыса из нержавеющей стали"] = new Description
             {
                 XmlBook = "Gamebooks/StainlessSteelRat.xml",
@@ -254,7 +244,7 @@ namespace Seeker.Gamebook
                 SmallDisclaimer = "Андрей Журавлёв, 2013",
                 BookColor = "#51514b",
                 Illustration = "Catharsis.jpg",
-            },         
+            },
             
             ["По закону прерии"] = new Description
             {
@@ -263,6 +253,16 @@ namespace Seeker.Gamebook
                 SmallDisclaimer = "Ольга Голотвина, 1995",
                 BookColor = "#b66247",
                 Illustration = "PrairieLaw.jpg",
+            },
+
+            ["Сердце льда"] = new Description
+            {
+                XmlBook = "Gamebooks/HeartOfIce.xml",
+                Links = HeartOfIce.Constants.GetLinks(),
+                SmallDisclaimer = "Дэйв Моррис, 1994",
+                FullDisclaimer = "Авторы: Дэйв Моррис\n\nПереводчики: Мария Ерошкина, Ageres, Jumangee, Vo1t, Fermalion, Johny Lee и другие",
+                BookColor = "#4a6e9c",
+                Illustration = "HeartOfIce.jpg",
             },
 
             ["Оружие возмездия"] = new Description
@@ -290,7 +290,7 @@ namespace Seeker.Gamebook
                 XmlBook = "Gamebooks/YounglingTournament.xml",
                 Links = YounglingTournament.Constants.GetLinks(),
                 SmallDisclaimer = "Александр Андросенко, 2018",
-                BookColor = "#d6c078",
+                BookColor = "#c0ac6c",
                 Illustration = "YounglingTournament.jpg",
             },
         };

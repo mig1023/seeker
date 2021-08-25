@@ -10,17 +10,18 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#418988",
-            [ButtonTypes.Option] = "#91d0d0",
-            [ButtonTypes.Action] = "#256366",
-            [ButtonTypes.Continue] = "#bbdbdb",
+            [ButtonTypes.Main] = "#4a6e9c",
+            [ButtonTypes.Option] = "#6e8baf",
+            [ButtonTypes.Action] = "#6e8baf",
+            [ButtonTypes.Continue] = "#99adc7",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.Background] = "#d9eeee",
-            [ColorTypes.ActionBox] = "#78b7b8",
-            [ColorTypes.StatusBar] = "#93c5c6",
+            [ColorTypes.Background] = "#b6c5d7",
+            [ColorTypes.Font] = "#2c425d",
+            [ColorTypes.ActionBox] = "#a5b6cd",
+            [ColorTypes.StatusBar] = "#5c7ca5",
         };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 454, 455, 456, 457 };
