@@ -87,16 +87,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         };
 
         public override string Save() => String.Join("|",
-            Strength,
-            Hitpoints,
-            Magicpoints,
-            Gold,
-            Footwraps,
-            TimeForReading,
-            ConneryHitpoints,
-            ConneryTrust,
-            Specialization,
-            Elixir
+            Strength, Hitpoints, Magicpoints, Gold, Footwraps, TimeForReading,
+            ConneryHitpoints, ConneryTrust, Specialization, Elixir
         );
 
         public override void Load(string saveLine)

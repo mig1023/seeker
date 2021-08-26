@@ -71,15 +71,8 @@ namespace Seeker.Gamebook.HeartOfIce
         };
 
         public override string Save() => String.Join("|",
-            MaxLife,
-            Life,
-            Money,
-            Food,
-            Shots,
-            SkillsValue,
-            Split,
-            (Chosen ? 1 : 0),
-            String.Join(":", Skills).TrimEnd(':')
+            MaxLife, Life, Money, Food, Shots, SkillsValue, Split,
+            (Chosen ? 1 : 0), String.Join(":", Skills).TrimEnd(':')
         );
 
         public override void Load(string saveLine)

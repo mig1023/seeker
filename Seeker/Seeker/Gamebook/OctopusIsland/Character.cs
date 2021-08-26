@@ -91,16 +91,8 @@ namespace Seeker.Gamebook.OctopusIsland
         };
 
         public override string Save() => String.Join("|",
-            ThibautHitpoint,
-            ThibautSkill,
-            SergeHitpoint,
-            SergeSkill,
-            XolotlHitpoint,
-            XolotlSkill,
-            SouhiHitpoint,
-            SouhiSkill,
-            Food,
-            LifeGivingOintment
+            ThibautHitpoint, ThibautSkill, SergeHitpoint, SergeSkill, XolotlHitpoint,
+            XolotlSkill, SouhiHitpoint, SouhiSkill, Food, LifeGivingOintment
         );
 
         public override void Load(string saveLine)

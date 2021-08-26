@@ -85,21 +85,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         };
 
         public override string Save() => String.Join("|",
-            MaxSkill,
-            Skill,
-            MaxStrength,
-            Strength,
-            Honor,
-            Day,
-            Ecu,
-            MeritalArt,
-            Horses,
-            Pistols,
-            BulletsAndGubpowder,
-            Daggers,
-            HadFoodToday,
-            Chainmail,
-            LeftHandPenalty
+            MaxSkill, Skill, MaxStrength, Strength, Honor, Day, Ecu, MeritalArt, Horses,
+            Pistols, BulletsAndGubpowder, Daggers, HadFoodToday, Chainmail, LeftHandPenalty
         );
 
         public override void Load(string saveLine)

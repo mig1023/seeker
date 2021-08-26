@@ -123,19 +123,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         };
 
         public override string Save() => String.Join("|",
-            MaxMastery,
-            Mastery,
-            MaxEndurance,
-            Endurance,
-            MaxLuck,
-            Luck,
-            Change,
-            Gold,
-            WayBack,
-            Anxiety,
-            Crossbow,
-            Gun,
-            SilverDaggers
+            MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck, Change,
+            Gold, WayBack, Anxiety, Crossbow, Gun, SilverDaggers
         );
 
         public override void Load(string saveLine)

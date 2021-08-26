@@ -153,18 +153,8 @@ namespace Seeker.Gamebook.YounglingTournament
         };
 
         public override string Save() => String.Join("|",
-            LightSide,
-            DarkSide,
-            MaxHitpoints,
-            Hitpoints,
-            Accuracy,
-            Pilot,
-            Stealth,
-            Hacking,
-            Firepower,
-            WayBack,
-            String.Join(",", ForceTechniques.Values),
-            String.Join(",", SwordTechniques.Values)
+            LightSide, DarkSide, MaxHitpoints, Hitpoints, Accuracy, Pilot, Stealth, Hacking, Firepower, WayBack,
+            String.Join(",", ForceTechniques.Values), String.Join(",", SwordTechniques.Values)
         );
 
         public override void Load(string saveLine)

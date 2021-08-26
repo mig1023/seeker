@@ -7,8 +7,11 @@ namespace Seeker.Gamebook.LordOfTheSteppes
     {
         public static Character Protagonist = new Character();
 
-        public enum SpecialTechniques { TwoBlades, TotalProtection, FirstStrike, PowerfulStrike, Reaction,
-            IgnoreFirstStrike, IgnorePowerfulStrike, IgnoreReaction, ExtendedDamage, PoisonBlade, Nope };
+        public enum SpecialTechniques
+        {
+            TwoBlades, TotalProtection, FirstStrike, PowerfulStrike, Reaction, IgnoreFirstStrike,
+            IgnorePowerfulStrike, IgnoreReaction, ExtendedDamage, PoisonBlade, Nope
+        };
 
         public enum FightStyles { Fullback, Defensive, Counterattacking, Aggressive }
 
@@ -96,17 +99,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         };
 
         public override string Save() => String.Join("|",
-            MaxAttack,
-            Attack,
-            MaxDefence,
-            Defence,
-            MaxEndurance,
-            Endurance,
-            MaxInitiative,
-            Initiative,
-            Bonuses,
-            String.Join(":", SpecialTechnique.ConvertAll(e => e.ToString())).TrimEnd(':'),
-            Coins
+            MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance, MaxInitiative, Initiative, Bonuses,
+            String.Join(":", SpecialTechnique.ConvertAll(e => e.ToString())).TrimEnd(':'), Coins
         );
 
         public override void Load(string saveLine)

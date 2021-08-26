@@ -124,16 +124,8 @@ namespace Seeker.Gamebook.VWeapons
         };
 
         public override string Save() => String.Join("|",
-            Suspicions,
-            Time,
-            Accuracy,
-            Cartridges,
-            Head,
-            ShoulderGirdle,
-            Body,
-            Hands,
-            Legs,
-            (Dead ? 1 : 0)
+            Suspicions, Time, Accuracy, Cartridges, Head, ShoulderGirdle,
+            Body, Hands, Legs, (Dead ? 1 : 0)
         );
 
         public override void Load(string saveLine)

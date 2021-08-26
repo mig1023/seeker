@@ -66,13 +66,7 @@ namespace Seeker.Gamebook.Catharsis
         };
 
         public override string Save() => String.Join("|",
-            MaxLife,
-            Life,
-            Aura,
-            Fight,
-            Accuracy,
-            Stealth,
-            Bonuses
+            MaxLife, Life, Aura, Fight, Accuracy, Stealth, Bonuses
         );
 
         public override void Load(string saveLine)

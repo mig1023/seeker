@@ -92,18 +92,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             string disfavor = String.Join(":", DisfavorOfTheGods).TrimEnd(':');
 
             return String.Join("|",
-                Strength,
-                Defence,
-                Glory,
-                Shame,
-                armours,
-                weapons,
-                Patron,
-                Resurrection,
-                favor,
-                disfavor,
-                BroochResurrection,
-                Ichor
+                Strength, Defence, Glory, Shame, armours, weapons, Patron, Resurrection,
+                favor, disfavor, BroochResurrection, Ichor
             );
         }
 

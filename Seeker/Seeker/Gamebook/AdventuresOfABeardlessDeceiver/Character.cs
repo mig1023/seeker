@@ -98,17 +98,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         };
 
         public override string Save() => String.Join("|",
-            Strength,
-            Skill,
-            Wisdom,
-            Cunning,
-            Oratory,
-            Popularity,
-            Kumis,
-            Tanga,
-            StatBonuses,
-            (AkynGlory == null ? -1 : AkynGlory),
-            (UnitOfTime == null ? -1 : UnitOfTime)
+            Strength, Skill, Wisdom, Cunning, Oratory, Popularity, Kumis, Tanga, StatBonuses,
+            (AkynGlory == null ? -1 : AkynGlory), (UnitOfTime == null ? -1 : UnitOfTime)
         );
  
         public override void Load(string saveLine)
