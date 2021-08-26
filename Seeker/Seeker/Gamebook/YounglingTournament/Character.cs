@@ -93,6 +93,8 @@ namespace Seeker.Gamebook.YounglingTournament
         public SortedDictionary<ForcesTypes, int> ForceTechniques { get; set; }
         public SortedDictionary<SwordTypes, int> SwordTechniques { get; set; }
 
+        private static Dictionary<string, int> HitpointsLoss = new Dictionary<string, int>();
+
         public override void Init()
         {
             Name = String.Empty;
@@ -133,6 +135,8 @@ namespace Seeker.Gamebook.YounglingTournament
                 [SwordTypes.Vaapad] = 0,
                 [SwordTypes.JarKai] = 0,
             };
+
+            HitpointsLoss.Clear();
         }
 
         public Character Clone() => new Character()
@@ -151,6 +155,18 @@ namespace Seeker.Gamebook.YounglingTournament
             Skill = this.Skill,
             Rang = this.Rang,
         };
+
+        public Character SetHitpoints()
+        {
+            if (HitpointsLoss.ContainsKey(this.Name))
+                this.Hitpoints = HitpointsLoss[this.Name];
+
+            return this;
+        }
+
+        public void SaveHitpoints() => HitpointsLoss[this.Name] = this.Hitpoints;
+
+        public int GetHitpoints() => (HitpointsLoss.ContainsKey(this.Name) ? HitpointsLoss[this.Name] : this.Hitpoints);
 
         public override string Save() => String.Join("|",
             LightSide, DarkSide, MaxHitpoints, Hitpoints, Accuracy, Pilot, Stealth, Hacking, Firepower, WayBack,

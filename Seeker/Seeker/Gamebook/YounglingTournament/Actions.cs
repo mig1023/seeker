@@ -83,7 +83,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 string rang = (enemy.Rang > 0 ? String.Format("  ранг {0}", enemy.Rang) : String.Empty);
 
                 enemies.Add(String.Format("{0}\n{1}выносливость {2}{3}{4}{5}{6}",
-                    enemy.Name, accuracy, enemy.Hitpoints, firepower, shield, skill, rang));
+                    enemy.Name, accuracy, enemy.GetHitpoints(), firepower, shield, skill, rang));
             }
 
             return enemies;
@@ -288,7 +288,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
             foreach (Character enemy in Enemies)
             {
-                Character newEnemy = enemy.Clone();
+                Character newEnemy = enemy.Clone().SetHitpoints();
                 FightEnemies.Add(newEnemy, 0);
                 EnemiesList.Add(newEnemy);
             }
@@ -347,7 +347,10 @@ namespace Seeker.Gamebook.YounglingTournament
                         enemy.Key.Hitpoints -= 3;
                         heroRoundWin += 1;
 
-                        fight.Add(String.Format("GOOD|Вы ранили {0}, он потерял 3 ед.выносливости", enemy.Key.Name));
+                        enemy.Key.SaveHitpoints();
+
+                        fight.Add(String.Format("GOOD|Вы ранили {0}, он потерял 3 ед.выносливости (осталось {1})",
+                            enemy.Key.Name, enemy.Key.Hitpoints));
                     }
 
                     else if (enemy.Value > hitSkill)
