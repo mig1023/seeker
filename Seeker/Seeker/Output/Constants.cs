@@ -14,7 +14,7 @@ namespace Seeker.Output
         public static double TEXT_LABEL_MARGIN = 5;
         public static double BORDER_WIDTH = 1;
         public static double REPRESENT_PADDING = -10;
-        public static double SPLITTER_HIGHT = 250;
+        public static double SPLITTER_HIGHT = 25;
         public static double DISCLAIMER_BORDER = 8;
     }
 }
