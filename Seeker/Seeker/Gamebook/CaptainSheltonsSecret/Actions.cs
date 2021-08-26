@@ -121,6 +121,26 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return luckCheck;
         }
 
+        public List<string> DiceWounds()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dices = 0;
+
+            for (int i = 1; i <= 2; i++)
+            {
+                int dice = Game.Dice.Roll();
+                dices += dice;
+                diceCheck.Add(String.Format("На {0} выпало: {1}", i, Game.Dice.Symbol(dice)));
+            }
+
+            protagonist.Endurance -= dices;
+
+            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли выносливости: {0}", dices));
+
+            return diceCheck;
+        }
+
         public List<string> LuckRecovery()
         {
             List<string> luckRecovery = new List<string> { "Восстановление удачи:" };
