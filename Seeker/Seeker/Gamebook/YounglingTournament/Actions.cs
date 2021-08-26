@@ -10,6 +10,8 @@ namespace Seeker.Gamebook.YounglingTournament
         private static Character protagonist = Character.Protagonist;
 
         public List<Character> Enemies { get; set; }
+        public int HeroHitpointsLimith { get; set; }
+        public int EnemyHitpointsLimith { get; set; }
 
         public int AccuracyBonus { get; set; }
         public int Level { get; set; }
@@ -359,13 +361,17 @@ namespace Seeker.Gamebook.YounglingTournament
 
                 fight.Add(String.Empty);
 
-                if (protagonist.Hitpoints <= 0)
+                int hitpointsLimit = (HeroHitpointsLimith > 0 ? HeroHitpointsLimith : 0);
+
+                if (protagonist.Hitpoints <= hitpointsLimit)
                 {
                     fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
                     return fight;
                 }
 
-                if (FightEnemies.Keys.Where(x => x.Hitpoints > 0).Count() == 0)
+                hitpointsLimit = (EnemyHitpointsLimith > 0 ? EnemyHitpointsLimith : 0);
+
+                if (FightEnemies.Keys.Where(x => x.Hitpoints > hitpointsLimit).Count() == 0)
                 {
                     fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
                     return fight;
