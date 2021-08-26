@@ -40,7 +40,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public int Blaster { get; set; }
         public int GateCode { get; set; }
         public string Equipment { get; set; }
-        public Dictionary<int, bool> Luck { get; set; }
+        public List<bool> Luck { get; set; }
 
         public override void Init()
         {
@@ -56,15 +56,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             GateCode = 0;
             Equipment = String.Empty;
 
-            Luck = new Dictionary<int, bool>
-            {
-                [1] = true,
-                [2] = true,
-                [3] = true,
-                [4] = true,
-                [5] = true,
-                [6] = true,
-            };
+            Luck = new List<bool> { false, true, true, true, true, true, true };
 
             for (int i = 0; i < 2; i++)
                 Luck[Game.Dice.Roll()] = false;
@@ -83,25 +75,10 @@ namespace Seeker.Gamebook.StringOfWorlds
             Equipment = this.Equipment,
         };
 
-        public override string Save()
-        {
-            List<string> lucks = new List<string>();
-
-            foreach (bool luck in Luck.Values.ToList())
-                lucks.Add(luck ? "1" : "0");
-
-            return String.Join("|",
-                MaxSkill,
-                Skill,
-                MaxStrength,
-                Strength,
-                Charm,
-                Blaster,
-                GateCode,
-                Equipment,
-                String.Join(",", lucks)
-            );
-        }
+        public override string Save() => String.Join("|",
+            MaxSkill, Skill, MaxStrength, Strength, Charm, Blaster, GateCode, Equipment,
+            String.Join(",", Luck.Select(x => x ? "1" : "0"))
+        );
 
         public override void Load(string saveLine)
         {
@@ -116,10 +93,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             GateCode = int.Parse(save[6]);
             Equipment = save[7];
 
-            string[] lucks = save[8].Split(',');
-
-            for (int i = 0; i < 6; i++)
-                Luck[i + 1] = (lucks[i] == "1");
+            Luck = save[8].Split(',').Select(x => x == "1").ToList();
         }
     }
 }

@@ -28,7 +28,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int ExtendedDamage { get; set; }
         public int MasteryDamage { get; set; }
         public bool SeaArmour { get; set; }
-        public Dictionary<int, bool> Luck { get; set; }
+        public List<bool> Luck { get; set; }
 
         private static Dictionary<string, int> EnduranceLoss = new Dictionary<string, int>();
 
@@ -42,21 +42,14 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             MaxEndurance = Constants.Endurances()[dice];
             Endurance = MaxEndurance;
             Gold = 15;
-
-            Luck = new Dictionary<int, bool>
-            {
-                [1] = true,
-                [2] = true,
-                [3] = true,
-                [4] = true,
-                [5] = true,
-                [6] = true,
-            };
+            Luck = new List<bool> { false, true, true, true, true, true, true };
 
             for (int i = 0; i < 2; i++)
                 Luck[Game.Dice.Roll()] = false;
 
             Game.Healing.Add(name: "Поесть", healing: 4, portions: 3);
+
+            EnduranceLoss.Clear();
         }
 
         public Character Clone() => new Character()
@@ -84,25 +77,10 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public int GetEndurance() => (EnduranceLoss.ContainsKey(this.Name) ? EnduranceLoss[this.Name] : this.Endurance);
 
-        public override string Save()
-        {
-            List<string> lucks = new List<string>();
-
-            foreach(bool luck in Luck.Values.ToList())
-                lucks.Add(luck ? "1" : "0");
-
-            return String.Join("|",
-                MaxMastery,
-                Mastery,
-                MaxEndurance,
-                Endurance,
-                Gold,
-                ExtendedDamage,
-                MasteryDamage,
-                (SeaArmour ? 1 : 0),
-                String.Join(",", lucks)
-            );
-        }
+        public override string Save() => String.Join("|",
+            MaxMastery, Mastery, MaxEndurance, Endurance, Gold, ExtendedDamage, MasteryDamage,
+            (SeaArmour ? 1 : 0), String.Join(",", Luck.Select(x => x ? "1" : "0"))
+        );
 
         public override void Load(string saveLine)
         {
@@ -117,10 +95,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             MasteryDamage = int.Parse(save[6]);
             SeaArmour = (save[7] == "1");
 
-            string[] lucks = save[8].Split(',');
-
-            for (int i = 0; i < 6; i++)
-                Luck[i+1] = (lucks[i] == "1");
+            Luck = save[8].Split(',').Select(x => x == "1").ToList();
         }
     }
 }

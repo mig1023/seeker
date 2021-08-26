@@ -58,7 +58,7 @@ namespace Seeker.Gamebook.PrairieLaw
             set => _cartridges = Game.Param.Setter(value);
         }
 
-        public Dictionary<int, bool> Luck { get; set; }
+        public List<bool> Luck { get; set; }
 
         public List<string> AnimalSkins { get; set; }
 
@@ -78,15 +78,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
             AnimalSkins = new List<string>();
 
-            Luck = new Dictionary<int, bool>
-            {
-                [1] = true,
-                [2] = true,
-                [3] = true,
-                [4] = true,
-                [5] = true,
-                [6] = true,
-            };
+            Luck = new List<bool> { false, true, true, true, true, true, true };
 
             for (int i = 0; i < 2; i++)
                 Luck[Game.Dice.Roll()] = false;
@@ -105,25 +97,11 @@ namespace Seeker.Gamebook.PrairieLaw
             Cartridges = this.Cartridges,
         };
 
-        public override string Save()
-        {
-            List<string> lucks = new List<string>();
-
-            foreach (bool luck in Luck.Values.ToList())
-                lucks.Add(luck ? "1" : "0");
-
-            return String.Join("|",
-                MaxSkill,
-                Skill,
-                MaxStrength,
-                Strength,
-                Charm,
-                Cents,
-                Cartridges,
-                String.Join(",", lucks),
-                String.Join(",", AnimalSkins).TrimEnd(','), Nuggets
-            );
-        }
+        public override string Save() => String.Join("|",
+            MaxSkill, Skill, MaxStrength, Strength, Charm, Cents, Cartridges,
+            String.Join(",", Luck.Select(x => x ? "1" : "0")),
+            String.Join(",", AnimalSkins).TrimEnd(','), Nuggets
+        );
 
         public override void Load(string saveLine)
         {
@@ -137,12 +115,9 @@ namespace Seeker.Gamebook.PrairieLaw
             Cents = int.Parse(save[5]);
             Cartridges = int.Parse(save[6]);
 
-            string[] lucks = save[7].Split(',');
-
-            for (int i = 0; i < 6; i++)
-                Luck[i + 1] = (lucks[i] == "1");
-
+            Luck = save[7].Split(',').Select(x => x == "1").ToList();
             AnimalSkins = save[8].Split(',').ToList();
+
             Cartridges = int.Parse(save[9]);
         }
     }
