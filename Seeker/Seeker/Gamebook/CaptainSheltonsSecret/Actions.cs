@@ -168,6 +168,33 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return luckRecovery;
         }
 
+        public List<string> LuckLose()
+        {
+            List<string> luckLose = new List<string> { "Потеря удачи:" };
+
+            bool success = true;
+
+            for (int i = 1; i < 7; i++)
+            {
+                if (protagonist.Luck[i])
+                {
+                    luckLose.Add(String.Format("BAD|Цифра {0} стала несчастливой...", i));
+                    protagonist.Luck[i] = false;
+                    success = false;
+
+                    break;
+                }
+            }
+
+            if (success)
+                luckLose.Add("GOOD|Все цифры и так несчастливые!\nВам повезло хоть в чём-то!");
+
+            luckLose.Add("Цифры удачи теперь:");
+            luckLose.Add("BIG|" + LuckNumbers());
+
+            return luckLose;
+        }
+
         public List<string> RollDice() => new List<string> { String.Format("BIG|Бросок: {0}", Game.Dice.Symbol(Game.Dice.Roll())) };
 
         public List<string> RollDoubleDices()
