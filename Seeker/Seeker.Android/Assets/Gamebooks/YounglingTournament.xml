@@ -3352,7 +3352,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>318</ID>
-		<Text>Начинается дуэль на световых мечах.\n\nКирк Драгус выбирает для дуэли Форму Соперничества 3 ранга.\n\nВы можете выбрать любую из изученных техник боя.\n\nБой идет до трех уколов.</Text>	
+		<Text>Начинается дуэль на световых мечах.\n\nКирк Драгус выбирает для дуэли Форму Соперничества 3 ранга.</Text>	
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
@@ -3362,6 +3362,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>20</EnemyHitpointsLimith>
+				<EnemyRoundWin>4</EnemyRoundWin>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nБой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>

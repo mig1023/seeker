@@ -26,7 +26,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public static List<string> GetActionParams() => new List<string>
         {
-            "Level", "AccuracyBonus", "HeroHitpointsLimith", "EnemyHitpointsLimith"
+            "Level", "AccuracyBonus", "HeroHitpointsLimith", "EnemyHitpointsLimith", "HeroRoundWin", "EnemyRoundWin"
         };
 
         public static List<string> GetEnemyParams() => new List<string>

@@ -12,6 +12,8 @@ namespace Seeker.Gamebook.YounglingTournament
         public List<Character> Enemies { get; set; }
         public int HeroHitpointsLimith { get; set; }
         public int EnemyHitpointsLimith { get; set; }
+        public int HeroRoundWin { get; set; }
+        public int EnemyRoundWin { get; set; }
 
         public int AccuracyBonus { get; set; }
         public int Level { get; set; }
@@ -200,13 +202,13 @@ namespace Seeker.Gamebook.YounglingTournament
 
                 if (protagonist.Hitpoints <= 0)
                 {
-                    fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                    fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                     return fight;
                 }
 
                 if (FightEnemies.Keys.Where(x => x.Hitpoints > 0).Count() == 0)
                 {
-                    fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                    fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                     return fight;
                 }
 
@@ -300,7 +302,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
             fight.Add(String.Empty);
 
-            int round = 1;
+            int round = 1, heroRoundWin = 0, enemyRoundWin = 0;
 
             while (true)
             {
@@ -343,6 +345,7 @@ namespace Seeker.Gamebook.YounglingTournament
                         protaganistMakeHit = true;
 
                         enemy.Key.Hitpoints -= 3;
+                        heroRoundWin += 1;
 
                         fight.Add(String.Format("GOOD|Вы ранили {0}, он потерял 3 ед.выносливости", enemy.Key.Name));
                     }
@@ -350,6 +353,7 @@ namespace Seeker.Gamebook.YounglingTournament
                     else if (enemy.Value > hitSkill)
                     {
                         protagonist.Hitpoints -= 3;
+                        enemyRoundWin += 1;
 
                         fight.Add(String.Format("BAD|{0} ранил вас, вы потеряли 3 единиц выносливости (осталось {1})",
                             enemy.Key.Name, protagonist.Hitpoints));
@@ -361,19 +365,27 @@ namespace Seeker.Gamebook.YounglingTournament
 
                 fight.Add(String.Empty);
 
+                bool enemyRound = (EnemyRoundWin > 0) && (enemyRoundWin >= EnemyRoundWin);
                 int hitpointsLimit = (HeroHitpointsLimith > 0 ? HeroHitpointsLimith : 0);
 
-                if (protagonist.Hitpoints <= hitpointsLimit)
+                if ((protagonist.Hitpoints <= hitpointsLimit) || enemyRound)
                 {
-                    fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                    if (enemyRound)
+                        fight.Add(String.Format("BAD|Вы проиграли {0} раунда...", enemyRoundWin));
+
+                    fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                     return fight;
                 }
 
+                bool heroRound = (HeroRoundWin > 0) && (heroRoundWin >= HeroRoundWin);
                 hitpointsLimit = (EnemyHitpointsLimith > 0 ? EnemyHitpointsLimith : 0);
 
-                if (FightEnemies.Keys.Where(x => x.Hitpoints > hitpointsLimit).Count() == 0)
+                if ((FightEnemies.Keys.Where(x => x.Hitpoints > hitpointsLimit).Count() == 0) || heroRound)
                 {
-                    fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                    if (heroRound)
+                        fight.Add(String.Format("GOOD|Вы выиграли {0} раундов...", heroRoundWin));
+
+                    fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                     return fight;
                 }
 
