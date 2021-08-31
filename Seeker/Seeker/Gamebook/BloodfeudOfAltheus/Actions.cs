@@ -295,9 +295,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 bool nobodyCantForward = (diceDouble && (teams[firstDice] == -1)) || ((teams[firstDice] == -1) && (teams[secondDice] == -1));
 
                 racing.Add(String.Empty);
-                racing.Add(String.Format(
-                    "BOLD|Следующий бросок: {0} и {1}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice)
-                ));
+                racing.Add(String.Format("BOLD|Следующий бросок: {0} и {1}",
+                    Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice)));
 
                 if ((firstDice == 6) && diceDouble)
                 {
@@ -331,7 +330,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 {
                     racing.Add("Никто не смог продвинуться вперёд");
                 }
-                else if (YourRacing && protagonist.IsGodsDisFavor("Посейдон") &&(firstDice == 6) || (secondDice == 6))
+                else if (YourRacing && protagonist.IsGodsDisFavor("Посейдон") && ((firstDice == 6) || (secondDice == 6)))
                 {
                     racing.Add("Все команды продвинулись вперёд, кроме вашей - сам Посейдон выказывает вам свою немилость!");
 
@@ -404,8 +403,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     return racing;
                 }
-                else
-                    racing.Add("Гонка продолжается");
             }
         }
 
