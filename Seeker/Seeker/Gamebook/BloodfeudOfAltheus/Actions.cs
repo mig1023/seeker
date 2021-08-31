@@ -395,7 +395,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     if (YourRacing)
                     {
-                        string other = String.Format("BIG|{0}Вы проиграли, победила {0} команда :(", teamsColor[winner], names[winner]);
+                        string other = String.Format("BIG|{0}Вы проиграли, победила {1} команда :(", teamsColor[winner], names[winner]);
                         racing.Add(winner == 2 ? "BIG|RED|Вы ПОБЕДИЛИ, Красная команда пришла первой! :)" : other);
                     }
                     else
