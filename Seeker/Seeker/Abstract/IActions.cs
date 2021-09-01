@@ -7,6 +7,7 @@ namespace Seeker.Abstract
         string Name { get; set; }
         string Button { get; set; }
         string Aftertext { get; set; }
+        List<Output.Text> Aftertexts { get; set; }
         string Trigger { get; set; }
         string Text { get; set; }
 
@@ -14,6 +15,8 @@ namespace Seeker.Abstract
 
         bool Used { get; set; } 
         bool Multiple { get; set; }
+
+        Abstract.IModification Benefit { get; set; }
 
         List<string> Do(out bool reload, string action = "", bool Trigger = false);
 

@@ -53,6 +53,7 @@ namespace Seeker.Prototypes
             actions.Name = Game.Xml.StringParse(xmlAction["Name"]);
             actions.Button = Game.Xml.StringParse(xmlAction["Button"]);
             actions.Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]);
+            actions.Aftertexts = Game.Xml.TextsParse(xmlAction, aftertext: true);
             actions.Trigger = Game.Xml.StringParse(xmlAction["Trigger"]);
             actions.Text = Game.Xml.StringParse(xmlAction["Text"]);
             actions.Price = Game.Xml.IntParse(xmlAction["Price"]);
@@ -94,6 +95,7 @@ namespace Seeker.Prototypes
             Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
             OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
             Aftertext = Game.Xml.StringParse(xmlOption.Attributes["Aftertext"]),
+            Aftertexts = Game.Xml.TextsParse(xmlOption, aftertext: true),
             Input = Game.Xml.StringParse(xmlOption.Attributes["Input"]),
         };
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Seeker.Game
 {
@@ -8,6 +9,7 @@ namespace Seeker.Game
         public string Text { get; set; }
         public string OnlyIf { get; set; }
         public string Aftertext { get; set; }
+        public List<Output.Text> Aftertexts { get; set; }
         public string Input { get; set; }
 
         public Abstract.IModification Do { get; set; }

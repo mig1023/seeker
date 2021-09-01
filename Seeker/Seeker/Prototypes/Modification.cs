@@ -33,21 +33,12 @@ namespace Seeker.Prototypes
                 else if (!Empty)
                     currentValue = GetProperty(Character, Name);
 
+                SetProperty(Character, Name, currentValue + Value);
+
                 if (Name.StartsWith("Max"))
                 {
                     string normalParam = Name.Remove(0, 3);
-
-                    int normalValue = GetProperty(Character, normalParam);
-
-                    if ((normalValue + Value) > currentValue)
-                        SetProperty(Character, Name, currentValue + Value);
-
-                    SetProperty(Character, normalParam, currentValue + Value);
-                }
-                else
-                {
-                    currentValue += Value;
-                    SetProperty(Character, Name, currentValue);
+                    SetProperty(Character, normalParam, GetProperty(Character, normalParam) + Value);
                 }
             }
         }
