@@ -18,6 +18,8 @@ namespace Seeker.Gamebook
 
         public string FullDisclaimer;
 
+        public string Text;
+
         public Links Links;
     }
 }

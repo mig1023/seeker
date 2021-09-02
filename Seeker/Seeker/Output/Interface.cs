@@ -118,11 +118,28 @@ namespace Seeker.Output
             FontAttributes = FontAttributes.Bold,
         };
 
+        private static Label DisclaimerElement(string text, TapGestureRecognizer click, bool bold = false)
+        {
+            Label discliamerText = new Label
+            {
+                Text = text,
+                Margin = new Thickness(5, 5, 5, 5),
+            };
+
+            if (bold)
+                discliamerText.FontAttributes = FontAttributes.Bold;
+
+            discliamerText.GestureRecognizers.Add(click);
+
+            return discliamerText;
+        }
+
         public static void GamebookDisclaimerAdd(string gamebook, ref StackLayout options)
         {
             Description description = Gamebook.List.GetDescription(gamebook);
+            description.Text = description.Links.Constants.GetDescription();
 
-            if (!String.IsNullOrEmpty(description.FullDisclaimer))
+            if (!String.IsNullOrEmpty(description.FullDisclaimer) || !String.IsNullOrEmpty(description.Text))
             {
                 Frame disclaimerBorder = new Frame
                 {
@@ -134,13 +151,17 @@ namespace Seeker.Output
                 TapGestureRecognizer close = new TapGestureRecognizer();
                 close.Tapped += (s, e) => disclaimerBorder.IsVisible = false;
 
-                Label discliamerText = new Label
-                {
-                    Text = description.FullDisclaimer,
-                    Margin = new Thickness(5, 5, 5, 5),
-                };
+                StackLayout disclaimer = new StackLayout();
 
-                discliamerText.GestureRecognizers.Add(close);
+                if (!String.IsNullOrEmpty(description.FullDisclaimer))
+                    disclaimer.Children.Add(DisclaimerElement(description.FullDisclaimer, close));
+
+                if (!String.IsNullOrEmpty(description.Text))
+                {
+                    disclaimer.Children.Add(DisclaimerElement("Описание:", close, bold: true));
+                    disclaimer.Children.Add(DisclaimerElement(description.Text, close));
+                }
+
                 disclaimerBorder.GestureRecognizers.Add(close);
 
                 TapGestureRecognizer open = new TapGestureRecognizer();
@@ -166,7 +187,7 @@ namespace Seeker.Output
                 textLayout.Children.Add(linkText);
                 options.Children.Add(textLayout);
 
-                disclaimerBorder.Content = discliamerText;
+                disclaimerBorder.Content = disclaimer;
                 options.Children.Add(disclaimerBorder);
             }
             else

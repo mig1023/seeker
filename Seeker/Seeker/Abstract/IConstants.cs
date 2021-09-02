@@ -16,6 +16,8 @@ namespace Seeker.Abstract
 
         List<int> GetParagraphsWithoutStatuses();
 
+        string GetDescription();
+
         bool ShowDisabledOption();
 
         bool JustifyText();
