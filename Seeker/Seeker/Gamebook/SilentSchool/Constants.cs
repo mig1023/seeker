@@ -20,6 +20,8 @@ namespace Seeker.Gamebook.SilentSchool
             [ColorTypes.StatusBar] = "#2a2a2a",
         };
 
+        public override string GetDescription() => "В тексте содержатся сцены насилия (в том числе и над детьми), множество околоцензурных выражений и прочая чернуха. Если вы поклонник ювенальной юстиции, радетель за чистоту русского языка или просто считаете себя «человеком высокой культуры среди всего этого быдла» – лучше не читайте. Я предупредил.";
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
