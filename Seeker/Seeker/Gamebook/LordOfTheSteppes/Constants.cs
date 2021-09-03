@@ -20,6 +20,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         {
             [ColorTypes.StatusBar] = "#b42806",
             [ColorTypes.StatusFont] = "#ffffff",
+            [ColorTypes.BookColor] = "#b80f0a",
         };
 
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
