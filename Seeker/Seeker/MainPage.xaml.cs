@@ -34,7 +34,7 @@ namespace Seeker
             {
                 Options.Children.Add(Output.Interface.GamebookImage(List.GetDescription(gamebook)));
 
-                Button button = Output.Interface.GamebookButton(gamebook);
+                Button button = Output.Buttons.GamebookButton(gamebook);
                 button.Clicked += Gamebook_Click;
                 Options.Children.Add(button);
 
@@ -318,7 +318,7 @@ namespace Seeker
             Game.Router.Clean();
             Options.Children.Clear();
 
-            Button button = Output.Interface.GameOverButton(toEndText);
+            Button button = Output.Buttons.GameOver(toEndText);
             Game.Router.AddDestination(toEndText, toEndParagraph);
             button.Clicked += Option_Click;
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using Seeker.Gamebook;
 
 namespace Seeker.Output
 {
@@ -21,7 +22,7 @@ namespace Seeker.Output
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Button)),
             };
 
-            return Interface.SetBorderAndTextColor(actionButton);
+            return SetBorderAndTextColor(actionButton);
         }
 
         public static Button Option(Game.Option option)
@@ -49,7 +50,7 @@ namespace Seeker.Output
                 IsVisible = String.IsNullOrEmpty(option.Input),
             };
 
-            return Interface.SetBorderAndTextColor(optionButton);
+            return SetBorderAndTextColor(optionButton);
         }
 
         public static Button Additional(string text)
@@ -64,7 +65,70 @@ namespace Seeker.Output
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             };
 
-            return Interface.SetBorderAndTextColor(additionButton);
+            return SetBorderAndTextColor(additionButton);
+        }
+
+        public static Button GamebookButton(string gamebook)
+        {
+            Description description = Gamebook.List.GetDescription(gamebook);
+
+            Button gamebookButton = new Button
+            {
+                Text = gamebook,
+                BackgroundColor = Color.FromHex(description.BookColor),
+                FontFamily = Interface.TextFontFamily(),
+                FontSize = Interface.FontSize(Interface.TextFontSize.normal),
+            };
+
+            if (!String.IsNullOrEmpty(description.BorderColor))
+            {
+                gamebookButton.BorderColor = Color.FromHex(description.BorderColor);
+                gamebookButton.BorderWidth = Constants.BORDER_WIDTH;
+            }
+
+            if (!String.IsNullOrEmpty(description.FontColor))
+                gamebookButton.TextColor = Color.FromHex(description.FontColor);
+            else
+                gamebookButton.TextColor = Color.White;
+
+            return gamebookButton;
+        }
+
+        public static Button GameOver(string text)
+        {
+            string colorLine = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
+
+            Color color = Color.Gray;
+
+            if (!String.IsNullOrEmpty(colorLine))
+                color = Color.FromHex(colorLine);
+
+            Button gameoverButton = new Button
+            {
+                Text = text,
+                TextColor = Xamarin.Forms.Color.White,
+                BackgroundColor = color,
+                FontFamily = Interface.TextFontFamily(),
+                FontSize = Interface.FontSize(Interface.TextFontSize.normal),
+            };
+
+            return SetBorderAndTextColor(gameoverButton);
+        }
+
+        public static Button SetBorderAndTextColor(Button button)
+        {
+            if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border)))
+            {
+                button.BorderColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border));
+                button.BorderWidth = Constants.BORDER_WIDTH;
+            }
+            else
+                button.BorderWidth = 0;
+
+            string font = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Font);
+            button.TextColor = (String.IsNullOrEmpty(font) ? Color.White : Color.FromHex(font));
+
+            return button;
         }
     }
 }

@@ -297,6 +297,19 @@ namespace Seeker.Gamebook
 
         public static List<string> GetBooks() => Books.Keys.ToList();
 
-        public static Description GetDescription(string name) => Books[name];
+        public static Description GetDescription(string name)
+        {
+            Description book = Books[name];
+
+            book.Text = book.Links.Constants.GetDescription();
+
+            Abstract.IConstants data = book.Links.Constants;
+
+            book.BookColor = data.GetColor(Game.Data.ColorTypes.BookColor);
+            book.FontColor = data.GetColor(Game.Data.ColorTypes.BookFontColor);
+            book.BorderColor = data.GetColor(Game.Data.ColorTypes.BookBorderColor);
+
+            return book;
+        }
     }
 }

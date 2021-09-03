@@ -68,32 +68,6 @@ namespace Seeker.Output
             return statusLabels;
         }
 
-        public static Button GamebookButton(string gamebook)
-        {
-            Description description = Gamebook.List.GetDescription(gamebook);
-
-            Button gamebookButton = new Button
-            {
-                Text = gamebook,
-                BackgroundColor = Color.FromHex(description.BookColor),
-                FontFamily = TextFontFamily(),
-                FontSize = FontSize(TextFontSize.normal),
-            };
-
-            if (!String.IsNullOrEmpty(description.BorderColor))
-            {
-                gamebookButton.BorderColor = Color.FromHex(description.BorderColor);
-                gamebookButton.BorderWidth = Constants.BORDER_WIDTH;
-            }
-
-            if (!String.IsNullOrEmpty(description.FontColor))
-                gamebookButton.TextColor = Color.FromHex(description.FontColor);
-            else
-                gamebookButton.TextColor = Color.White;
-
-            return gamebookButton;
-        }
-
         public static Label GamebookDisclaimer(string gamebook, bool withOut = true)
         {
             Label disclaimer = new Label
@@ -137,46 +111,46 @@ namespace Seeker.Output
             if (bold)
                 discliamerText.FontAttributes = FontAttributes.Bold;
 
-            discliamerText.GestureRecognizers.Add(click);
+            return LinkedDisclaimerElement(discliamerText, click);
+        }
 
-            return discliamerText;
+        private static Label LinkedDisclaimerElement(Label element, TapGestureRecognizer click)
+        {
+            element.GestureRecognizers.Add(click);
+            return element;
+        }
+
+        private static TapGestureRecognizer OpenTapped(Frame disclaimer)
+        {
+            TapGestureRecognizer open = new TapGestureRecognizer();
+            open.Tapped += (s, e) =>
+            {
+                disclaimer.IsVisible = !disclaimer.IsVisible;
+                disclaimer.ForceLayout();
+            };
+
+            return open;
+        }
+
+        private static TapGestureRecognizer CloseTapped(Frame disclaimer)
+        {
+            TapGestureRecognizer close = new TapGestureRecognizer();
+            close.Tapped += (s, e) => disclaimer.IsVisible = false;
+
+            return close;
         }
 
         public static void GamebookDisclaimerAdd(string gamebook, ref StackLayout options)
         {
-            Description description = Gamebook.List.GetDescription(gamebook);
-            description.Text = description.Links.Constants.GetDescription();
+            Description description = List.GetDescription(gamebook);
 
             if (!String.IsNullOrEmpty(description.FullDisclaimer) || !String.IsNullOrEmpty(description.Text))
             {
-                Frame disclaimerBorder = new Frame
+                Frame border = new Frame
                 {
                     BorderColor = Color.FromHex(description.BookColor),
                     Margin = new Thickness(0, 0, 0, Constants.DISCLAIMER_BORDER),
                     IsVisible = false,
-                };
-
-                TapGestureRecognizer close = new TapGestureRecognizer();
-                close.Tapped += (s, e) => disclaimerBorder.IsVisible = false;
-
-                StackLayout disclaimer = new StackLayout();
-
-                if (!String.IsNullOrEmpty(description.FullDisclaimer))
-                    disclaimer.Children.Add(DisclaimerElement(description.FullDisclaimer, close));
-
-                if (!String.IsNullOrEmpty(description.Text))
-                {
-                    disclaimer.Children.Add(DisclaimerElement("Описание:", close, bold: true));
-                    disclaimer.Children.Add(DisclaimerElement(description.Text, close));
-                }
-
-                disclaimerBorder.GestureRecognizers.Add(close);
-
-                TapGestureRecognizer open = new TapGestureRecognizer();
-                open.Tapped += (s, e) =>
-                {
-                    disclaimerBorder.IsVisible = !disclaimerBorder.IsVisible;
-                    disclaimerBorder.ForceLayout();
                 };
 
                 StackLayout textLayout = new StackLayout
@@ -185,18 +159,26 @@ namespace Seeker.Output
                     Margin = new Thickness(0, 0, 0, 0),
                 };
 
-                Label smallText = GamebookDisclaimer(gamebook);
-                smallText.GestureRecognizers.Add(open);
-                textLayout.Children.Add(smallText);
+                textLayout.Children.Add(LinkedDisclaimerElement(GamebookDisclaimer(gamebook), OpenTapped(border)));
+                textLayout.Children.Add(LinkedDisclaimerElement(LinkDisclaimer(description.BookColor), OpenTapped(border)));
 
-                Label linkText = LinkDisclaimer(description.BookColor);
-                linkText.GestureRecognizers.Add(open);
-
-                textLayout.Children.Add(linkText);
                 options.Children.Add(textLayout);
 
-                disclaimerBorder.Content = disclaimer;
-                options.Children.Add(disclaimerBorder);
+                StackLayout disclaimer = new StackLayout();
+
+                if (!String.IsNullOrEmpty(description.FullDisclaimer))
+                    disclaimer.Children.Add(DisclaimerElement(description.FullDisclaimer, CloseTapped(border)));
+
+                if (!String.IsNullOrEmpty(description.Text))
+                {
+                    disclaimer.Children.Add(DisclaimerElement("Описание:", CloseTapped(border), bold: true));
+                    disclaimer.Children.Add(DisclaimerElement(description.Text, CloseTapped(border)));
+                }
+
+                border.GestureRecognizers.Add(CloseTapped(border));
+
+                border.Content = disclaimer;
+                options.Children.Add(border);
             }
             else
                 options.Children.Add(GamebookDisclaimer(gamebook, withOut: true));
@@ -222,14 +204,11 @@ namespace Seeker.Output
 
                     string background = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
 
-                    if (String.IsNullOrEmpty(background))
-                        background = "#bdbdbd";
-
                     StackLayout splitterForm = new StackLayout
                     {
                         HorizontalOptions = LayoutOptions.FillAndExpand,
                         HeightRequest = Constants.SPLITTER_HIGHT,
-                        BackgroundColor = Color.FromHex(background),
+                        BackgroundColor = (String.IsNullOrEmpty(background) ? Constants.SPLITTER_COLOR_DEFAULT : Color.FromHex(background)),
                     };
 
                     splitterForm.Children.Add(splitter);
@@ -269,43 +248,6 @@ namespace Seeker.Output
             return enemies;
         }
 
-        public static Button GameOverButton(string text)
-        {
-            string colorLine = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
-            
-            Color color = Color.Gray;
-
-            if (!String.IsNullOrEmpty(colorLine))
-                color = Color.FromHex(colorLine);
-
-            Button gameoverButton = new Button
-            {
-                Text = text,
-                TextColor = Xamarin.Forms.Color.White,
-                BackgroundColor = color,
-                FontFamily = TextFontFamily(),
-                FontSize = FontSize(TextFontSize.normal),
-            };
-
-            return SetBorderAndTextColor(gameoverButton);
-        }
-
-        public static Button SetBorderAndTextColor(Button button)
-        {
-            if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border)))
-            {
-                button.BorderColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border));
-                button.BorderWidth = Constants.BORDER_WIDTH;
-            }
-            else
-                button.BorderWidth = 0;
-
-            string font = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Font);
-            button.TextColor = (String.IsNullOrEmpty(font) ? Color.White : Color.FromHex(font));
-
-            return button;
-        }
-
         public static string TextFontFamily(bool bold = false, bool italic = false, bool standart = false)
         {
             string font = String.Empty;
@@ -324,7 +266,7 @@ namespace Seeker.Output
             return fontFamily.ToString();
         }
 
-        private static double FontSize(TextFontSize size)
+        public static double FontSize(TextFontSize size)
         {
             switch (size)
             {
@@ -352,6 +294,7 @@ namespace Seeker.Output
 
             if (text.Bold)
                 label.FontFamily = TextFontFamily(bold: true);
+
             else if (text.Italic)
             {
                 label.FontFamily = TextFontFamily(italic: true);

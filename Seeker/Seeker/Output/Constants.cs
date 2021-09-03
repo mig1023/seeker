@@ -8,6 +8,7 @@ namespace Seeker.Output
 
         public static Color BACKGROUND = Color.FromHex("#f7f7f7");
         public static Color LINK_COLOR_DEFAULT = Color.Black;
+        public static Color SPLITTER_COLOR_DEFAULT = Color.FromHex("#bdbdbd");
 
         public static double BIG_FONT = 25;
         public static double STATUSBAR_FONT = 12;
