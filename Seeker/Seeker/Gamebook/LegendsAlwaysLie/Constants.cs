@@ -22,6 +22,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             [ColorTypes.StatusBar] = "#870808",
             [ColorTypes.AdditionalStatus] = "#b70b0b",
             [ColorTypes.AdditionalFont] = "#ffffff",
+            [ColorTypes.BookColor] = "#4c0000",
         };
 
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
