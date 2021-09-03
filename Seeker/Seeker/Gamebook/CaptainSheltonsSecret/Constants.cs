@@ -21,6 +21,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             [ColorTypes.Background] = "#b5cde1",
             [ColorTypes.ActionBox] = "#8fb3f2",
             [ColorTypes.StatusBar] = "#0a5c96",
+            [ColorTypes.BookColor] = "#4682B4",
         };
 
         public static Dictionary<int, int> Masterys() => new Dictionary<int, int>
