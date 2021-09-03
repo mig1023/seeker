@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using static Seeker.Output.Buttons;
+using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.PensionerSimulator
 {
@@ -11,6 +12,11 @@ namespace Seeker.Gamebook.PensionerSimulator
         {
             [ButtonTypes.Main] = "#030436",
             [ButtonTypes.Option] = "#35365e",
+        };
+
+        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
+        {
+            [ColorTypes.BookColor] = "#030436",
         };
 
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
