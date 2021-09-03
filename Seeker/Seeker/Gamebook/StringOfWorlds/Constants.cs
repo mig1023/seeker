@@ -68,6 +68,9 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public override string GetColor(Game.Data.ColorTypes type) 
         {
+            if (type == ColorTypes.BookColor)
+                return "#990066";
+
             if (type == ColorTypes.StatusBar)
                 return HexColor(StatusColor[0], StatusColor[1], StatusColor[2]);
 
