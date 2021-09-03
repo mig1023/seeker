@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using static Seeker.Output.Buttons;
+using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.LastHokku
 {
@@ -11,6 +12,12 @@ namespace Seeker.Gamebook.LastHokku
         {
             [ButtonTypes.Main] = "#deb887",
             [ButtonTypes.Font] = "#000000",
+        };
+
+        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
+        {
+            [ColorTypes.BookColor] = "#deb887",
+            [ColorTypes.BookFontColor] = "#000000",
         };
 
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
