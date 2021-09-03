@@ -109,15 +109,23 @@ namespace Seeker.Output
             return disclaimer;
         }
 
-        public static Label LinkDisclaimer(string color) => new Label()
+        public static Label LinkDisclaimer(string color)
         {
-            Text = "➝ подробнее",
-            HorizontalTextAlignment = TextAlignment.Start,
-            FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
-            TextColor = Color.FromHex(color),
-            FontAttributes = FontAttributes.Bold,
-        };
+            Label link = new Label()
+            {
+                Text = Constants.DISCLAIMER_LINK,
+                HorizontalTextAlignment = TextAlignment.Start,
+                FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
+                TextColor = Color.FromHex(color),
+                FontAttributes = FontAttributes.Bold,
+            };
 
+            if (link.TextColor == Color.White)
+                link.TextColor = Constants.LINK_COLOR_DEFAULT;
+
+            return link;
+        }
+            
         private static Label DisclaimerElement(string text, TapGestureRecognizer click, bool bold = false)
         {
             Label discliamerText = new Label

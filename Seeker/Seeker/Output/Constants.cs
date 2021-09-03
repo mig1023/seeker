@@ -4,7 +4,10 @@ namespace Seeker.Output
 {
     class Constants
     {
+        public static string DISCLAIMER_LINK = "➝ подробнее";
+
         public static Color BACKGROUND = Color.FromHex("#f7f7f7");
+        public static Color LINK_COLOR_DEFAULT = Color.Black;
 
         public static double BIG_FONT = 25;
         public static double STATUSBAR_FONT = 12;
