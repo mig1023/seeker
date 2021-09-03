@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.SilentSchool
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#2a2a2a",
+            [ColorTypes.BookColor] = "#151515",
         };
 
         public override string GetDescription() => "В тексте содержатся сцены насилия (в том числе и над детьми), множество околоцензурных выражений и прочая чернуха. Если вы поклонник ювенальной юстиции, радетель за чистоту русского языка или просто считаете себя «человеком высокой культуры среди всего этого быдла» – лучше не читайте. Я предупредил.";
