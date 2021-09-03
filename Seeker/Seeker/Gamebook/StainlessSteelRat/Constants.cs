@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.StainlessSteelRat
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#b9c2ca",
+            [ColorTypes.BookColor] = "#738595",
         };
 
         public override string GetDescription() => "Читатель в роли новобранца Специального Корпуса должен отправиться на планету Скралдеспенд и найти и захватить там профессора Гейстескранка. Читатель сам выбирает линию своего поведения, которая приведёт его к цели.";
