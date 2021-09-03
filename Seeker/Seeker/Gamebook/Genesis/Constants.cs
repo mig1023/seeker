@@ -22,6 +22,7 @@ namespace Seeker.Gamebook.Genesis
             [ColorTypes.Font] = "#b6cbd8",
             [ColorTypes.StatusBar] = "#3c5363",
             [ColorTypes.ActionBox] = "#69707a",
+            [ColorTypes.BookColor] = "#202b41",
         };
 
         public static Dictionary<string, int> GetStartValues() => new Dictionary<string, int>
