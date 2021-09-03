@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using static Seeker.Output.Buttons;
+using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.LandOfUnwaryBears
 {
@@ -11,6 +12,12 @@ namespace Seeker.Gamebook.LandOfUnwaryBears
         {
             [ButtonTypes.Main] = "#9e003a",
         };
+
+        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
+        {
+            [ColorTypes.BookColor] = "#9e003a",
+        };
+
 
         public override string GetFont() => "RobotoFont";
 
