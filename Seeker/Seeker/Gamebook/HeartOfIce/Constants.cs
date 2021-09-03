@@ -22,6 +22,7 @@ namespace Seeker.Gamebook.HeartOfIce
             [ColorTypes.Font] = "#2c425d",
             [ColorTypes.ActionBox] = "#a5b6cd",
             [ColorTypes.StatusBar] = "#5c7ca5",
+            [ColorTypes.BookColor] = "#4a6e9c",
         };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 454, 455, 456, 457 };
