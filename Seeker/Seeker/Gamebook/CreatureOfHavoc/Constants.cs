@@ -20,6 +20,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         {
             [ColorTypes.Background] = "#c9d7d0",
             [ColorTypes.StatusBar] = "#0e3b24",
+            [ColorTypes.BookColor] = "#145334",
         };
 
         public static List<string> GetActionParams() => new List<string>
