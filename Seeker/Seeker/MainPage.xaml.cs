@@ -198,6 +198,9 @@ namespace Seeker
             if (!String.IsNullOrEmpty(text))
                 layout.Children.Add(Output.Interface.Text(text));
 
+            if (texts == null)
+                return;
+
             foreach (Output.Text aftertext in texts)
                 layout.Children.Add(Output.Interface.Text(aftertext));
         }
