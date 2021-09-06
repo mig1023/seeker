@@ -434,7 +434,7 @@
 		<ID>44</ID>
 		<Text>Наступает утро. Деньги уже разошлись по карманам разбойников, им пора отправляться «на работу». «Ладно, благородный, — говорит один из них, — пожил, погулял и хватит. Готовься к смерти». Хотите попросить о помощи Бога или попробуете обойтись своими силами?</Text>
 		<Options>
-			<Option Destination="427" Text="Попросить о помощи Бога" OnlyIf="!DivineIntervention" Do="Trigger" Value="DivineIntervention"/>
+			<Option Destination="427" Text="Попросить о помощи Бога" OnlyIf="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention"/>
 			<Option Destination="244" Text="Попробуете обойтись своими силами"/>
 		</Options>
 	</Paragraph>
@@ -1401,7 +1401,7 @@
 		<ID>142</ID>
 		<Text>Видя, что вы пытаетесь скрыться за деревьями, черные фигуры достают пистолеты и стреляют вам вслед. Одна из пуль попадает Арбалету в голову, вторая — вам в живот. Конец наступит всего через несколько часов. Выход один — попросить Бога о помощи:</Text>
 		<Options>
-			<Option Destination="521" OnlyIf="!DivineIntervention" Do="Trigger" Value="DivineIntervention" Aftertext="Если не сделаете это, то остается только достойно встретить смерть…"/>
+			<Option Destination="521" OnlyIf="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention" Aftertext="Если не сделаете это, то остается только достойно встретить смерть…"/>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
@@ -2417,11 +2417,14 @@
 				<Enemies>
 					<Enemy Name="НЕИЗВЕСТНЫЙ" Skill="11" Strength="12"/>
 				</Enemies>
+				<HeroWoundsLimit/>
+				<EnemyWoundsLimit/>
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="412" Text="Вы победили"/>
-			<Option Destination="521" Text="Вы проиграли и взываете к Богу" OnlyIf="!DivineIntervention" Do="Trigger" Value="DivineIntervention"/>
+			<Option Destination="412" Text="Вы уменьшили его СИЛУ до 2"/>
+			<Option Destination="521" Text="Он уменьшил вашу СИЛУ до 2 и вы хотите воззвать к Богу" OnlyIf="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention"/>
+			<Option Destination="0" Text="Вы погибли: придётся начинать сначала..." OnlyIf="DivineIntervention"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4374,7 +4377,7 @@
 		<ID>433</ID>
 		<Text>Сражение заканчивается, даже не успев перейти в побоище. Ведь у вас не сто рук, к тому же монахи вооружены пистолетами. Последнее, что вы видите — дуло одного из них, нацеленное прямо в грудь. Если хотите и есть возможность попросить Бога о помощи, сделайте это:</Text>
 		<Options>
-			<Option Destination="601" OnlyIf="!DivineIntervention" Do="Trigger" Value="DivineIntervention" Aftertext="Иначе же ваша миссия останется невыполненной…"/>
+			<Option Destination="601" OnlyIf="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention" Aftertext="Иначе же ваша миссия останется невыполненной…"/>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
@@ -5853,7 +5856,7 @@
 			<Modification Name="Strength" Value="-4"/>
 		</Modifications>
 		<Options>
-			<Option Destination="313" Text="Обратиться к помощи Бога" OnlyIf="!DivineIntervention" Do="Trigger" Value="DivineIntervention"/>
+			<Option Destination="313" Text="Обратиться к помощи Бога" OnlyIf="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention"/>
 			<Option Destination="256" Text="Рассказать все, как есть"/>
 		</Options>
 	</Paragraph>
