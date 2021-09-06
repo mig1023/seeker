@@ -69,7 +69,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                     Character enemy = new Character();
 
                     foreach (string param in Constants.GetEnemyParams())
-                        SetPropertyByAttr(enemy, param, xmlEnemy);
+                        SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
 
                     enemy.Skill = enemy.MaxSkill;
                     enemy.Strength = enemy.MaxStrength;
