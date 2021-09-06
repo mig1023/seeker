@@ -46,7 +46,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public static List<string> GetActionParams() => new List<string>
         {
-            "RoundsToWin", "WoundsToWin", "SkillPenalty", "WithoutShooting"
+            "RoundsToWin", "WoundsToWin", "SkillPenalty", "WithoutShooting", "HeroWoundsLimit", "EnemyWoundsLimit",
         };
 
         public static List<string> GetEnemyParams() => new List<string>

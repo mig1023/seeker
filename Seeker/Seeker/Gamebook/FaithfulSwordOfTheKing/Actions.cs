@@ -14,6 +14,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int WoundsToWin { get; set; }
         public int SkillPenalty { get; set; }
         public bool WithoutShooting { get; set; }
+        public bool HeroWoundsLimit { get; set; }
+        public bool EnemyWoundsLimit { get; set; }
 
         public Character.MeritalArts? MeritalArt { get; set; }
 
@@ -284,7 +286,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return new List<string> { "RELOAD" };
         }
 
-        private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Strength > 0).Count() == 0;
+        private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Strength > (EnemyWoundsLimit ? 2 : 0)).Count() == 0;
 
         private bool LuckyHit(int? roll = null) => (roll ?? Game.Dice.Roll()) % 2 == 0;
 
@@ -421,7 +423,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                             fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
                             protagonist.Strength -= 2;
 
-                            if (protagonist.Strength <= 0)
+                            if ((protagonist.Strength <= 0) || (HeroWoundsLimit && (protagonist.Strength <= 2)))
                             {
                                 fight.Add(String.Empty);
                                 fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
