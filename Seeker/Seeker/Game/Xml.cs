@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Xml;
 using Seeker.Output;
+using Xamarin.Forms;
 
 namespace Seeker.Game
 {
@@ -56,6 +57,17 @@ namespace Seeker.Game
             string textByOption = Game.Data.Actions.TextByOptions(optionName);
 
             return (String.IsNullOrEmpty(textByOption) ? textByParagraph : textByOption);
+        }
+
+        public static void AllTextParse(ref StackLayout textPlace, int id, string optionName)
+        {
+            string text = Game.Xml.TextParse(id, optionName);
+
+            if (!String.IsNullOrEmpty(text))
+                textPlace.Children.Add(Output.Interface.Text(text));
+
+            foreach (Output.Text texts in Game.Xml.TextsParse(Game.Data.XmlParagraphs[id]))
+                textPlace.Children.Add(Output.Interface.Text(texts));
         }
 
         public static List<Text> TextsParse(XmlNode xmlNode, bool aftertext = false)

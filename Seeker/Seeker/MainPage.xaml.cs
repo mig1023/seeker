@@ -80,13 +80,7 @@ namespace Seeker
             else
                 paragraph = Game.Data.CurrentParagraph;
 
-            string text = Game.Xml.TextParse(id, optionName);
-
-            if (!String.IsNullOrEmpty(text))
-                Text.Children.Add(Output.Interface.Text(text));
-
-            foreach (Output.Text texts in Game.Xml.TextsParse(Game.Data.XmlParagraphs[id]))
-                Text.Children.Add(Output.Interface.Text(texts));
+            Game.Xml.AllTextParse(ref Text, id, optionName);
 
             if ((paragraph.Images != null) && (paragraph.Images.Count > 0))
             {
