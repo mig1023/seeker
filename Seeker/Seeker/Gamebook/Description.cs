@@ -14,6 +14,14 @@ namespace Seeker.Gamebook
 
         public string Illustration;
 
+        public string Author;
+
+        public string Authors;
+
+        public string Translator;
+
+        public string Translators;
+
         public string SmallDisclaimer;
 
         public string FullDisclaimer;

@@ -12,6 +12,7 @@ namespace Seeker.Gamebook
                 XmlBook = "Gamebooks/BlackCastleDungeon.xml",
                 Links = BlackCastleDungeon.Constants.GetLinks(),
                 SmallDisclaimer = "Дмитрий Браславский, 1991",
+                Author = "Дмитрий Браславский",
                 Illustration = "BlackCastleDungeon.jpg",
             },
 

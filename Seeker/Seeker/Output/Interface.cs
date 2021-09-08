@@ -100,6 +100,12 @@ namespace Seeker.Output
             return link;
         }
             
+        private static void AddDisclaimerElement(string head, string body, ref StackLayout disclaimer, Frame border)
+        {
+            disclaimer.Children.Add(DisclaimerElement(head, CloseTapped(border), bold: true));
+            disclaimer.Children.Add(DisclaimerElement(body, CloseTapped(border)));
+        }
+
         private static Label DisclaimerElement(string text, TapGestureRecognizer click, bool bold = false)
         {
             Label discliamerText = new Label
@@ -166,14 +172,18 @@ namespace Seeker.Output
 
                 StackLayout disclaimer = new StackLayout();
 
-                if (!String.IsNullOrEmpty(description.FullDisclaimer))
-                    disclaimer.Children.Add(DisclaimerElement(description.FullDisclaimer, CloseTapped(border)));
+                if (!String.IsNullOrEmpty(description.Authors))
+                    AddDisclaimerElement(head: "Авторы:", body: description.Authors, ref disclaimer, border);
+                else
+                    AddDisclaimerElement(head: "Автор:", body: description.Author, ref disclaimer, border);
+
+                if (!String.IsNullOrEmpty(description.Translators))
+                    AddDisclaimerElement(head: "Переводчики:", body: description.Translators, ref disclaimer, border);
+                else if (!String.IsNullOrEmpty(description.Translator))
+                    AddDisclaimerElement(head: "Переводчик:", body: description.Translator, ref disclaimer, border);
 
                 if (!String.IsNullOrEmpty(description.Text))
-                {
-                    disclaimer.Children.Add(DisclaimerElement("Описание:", CloseTapped(border), bold: true));
-                    disclaimer.Children.Add(DisclaimerElement(description.Text, CloseTapped(border)));
-                }
+                    AddDisclaimerElement(head: "Описание:", body: description.Text, ref disclaimer, border);
 
                 border.GestureRecognizers.Add(CloseTapped(border));
 
