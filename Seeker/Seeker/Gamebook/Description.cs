@@ -18,11 +18,11 @@ namespace Seeker.Gamebook
 
         public string Authors;
 
+        public int Year;
+
         public string Translator;
 
         public string Translators;
-
-        public string Disclaimer;
 
         public string Text;
 

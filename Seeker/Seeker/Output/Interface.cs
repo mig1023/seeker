@@ -68,17 +68,17 @@ namespace Seeker.Output
             return statusLabels;
         }
 
-        public static Label GamebookDisclaimer(string gamebook, bool withOut = true)
+        public static Label GamebookDisclaimer(Description gamebook)
         {
+            string text = (!String.IsNullOrEmpty(gamebook.Authors) ? gamebook.Authors.Split(',', '-')[0] + " и др." : gamebook.Author);
+            string disclaimerText = String.Format("© {0}, {1}", text.Trim(), gamebook.Year);
+
             Label disclaimer = new Label
             {
-                Text = String.Format("© {0}", Gamebook.List.GetDescription(gamebook).SmallDisclaimer),
+                Text = disclaimerText,
                 HorizontalTextAlignment = TextAlignment.Start,
                 FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
             };
-
-            if (withOut)
-                disclaimer.Margin = new Thickness(0, 0, 0, Constants.DISCLAIMER_BORDER);
 
             return disclaimer;
         }
@@ -150,48 +150,43 @@ namespace Seeker.Output
         {
             Description description = List.GetDescription(gamebook);
 
-            if (!String.IsNullOrEmpty(description.FullDisclaimer) || !String.IsNullOrEmpty(description.Text))
+            Frame border = new Frame
             {
-                Frame border = new Frame
-                {
-                    BorderColor = Color.FromHex(description.BookColor),
-                    Margin = new Thickness(0, 0, 0, Constants.DISCLAIMER_BORDER),
-                    IsVisible = false,
-                };
+                BorderColor = Color.FromHex(description.BookColor),
+                Margin = new Thickness(0, 0, 0, Constants.DISCLAIMER_BORDER),
+                IsVisible = false,
+            };
 
-                StackLayout textLayout = new StackLayout
-                {
-                    Orientation = StackOrientation.Horizontal,
-                    Margin = new Thickness(0, 0, 0, 0),
-                };
+            StackLayout textLayout = new StackLayout
+            {
+                Orientation = StackOrientation.Horizontal,
+                Margin = new Thickness(0, 0, 0, 5),
+            };
 
-                textLayout.Children.Add(LinkedDisclaimerElement(GamebookDisclaimer(gamebook), OpenTapped(border)));
-                textLayout.Children.Add(LinkedDisclaimerElement(LinkDisclaimer(description.BookColor), OpenTapped(border)));
+            textLayout.Children.Add(LinkedDisclaimerElement(GamebookDisclaimer(description), OpenTapped(border)));
+            textLayout.Children.Add(LinkedDisclaimerElement(LinkDisclaimer(description.BookColor), OpenTapped(border)));
 
-                options.Children.Add(textLayout);
+            options.Children.Add(textLayout);
 
-                StackLayout disclaimer = new StackLayout();
+            StackLayout disclaimer = new StackLayout();
 
-                if (!String.IsNullOrEmpty(description.Authors))
-                    AddDisclaimerElement(head: "Авторы:", body: description.Authors, ref disclaimer, border);
-                else
-                    AddDisclaimerElement(head: "Автор:", body: description.Author, ref disclaimer, border);
-
-                if (!String.IsNullOrEmpty(description.Translators))
-                    AddDisclaimerElement(head: "Переводчики:", body: description.Translators, ref disclaimer, border);
-                else if (!String.IsNullOrEmpty(description.Translator))
-                    AddDisclaimerElement(head: "Переводчик:", body: description.Translator, ref disclaimer, border);
-
-                if (!String.IsNullOrEmpty(description.Text))
-                    AddDisclaimerElement(head: "Описание:", body: description.Text, ref disclaimer, border);
-
-                border.GestureRecognizers.Add(CloseTapped(border));
-
-                border.Content = disclaimer;
-                options.Children.Add(border);
-            }
+            if (!String.IsNullOrEmpty(description.Authors))
+                AddDisclaimerElement(head: "Авторы:", body: description.Authors, ref disclaimer, border);
             else
-                options.Children.Add(GamebookDisclaimer(gamebook, withOut: true));
+                AddDisclaimerElement(head: "Автор:", body: description.Author, ref disclaimer, border);
+
+            if (!String.IsNullOrEmpty(description.Translators))
+                AddDisclaimerElement(head: "Переводчики:", body: description.Translators, ref disclaimer, border);
+            else if (!String.IsNullOrEmpty(description.Translator))
+                AddDisclaimerElement(head: "Переводчик:", body: description.Translator, ref disclaimer, border);
+
+            if (!String.IsNullOrEmpty(description.Text))
+                AddDisclaimerElement(head: "Описание:", body: description.Text, ref disclaimer, border);
+
+            border.GestureRecognizers.Add(CloseTapped(border));
+
+            border.Content = disclaimer;
+            options.Children.Add(border);
         }
 
         public static List<View> Represent(List<string> enemiesLines)
