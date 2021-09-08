@@ -11,7 +11,7 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/BlackCastleDungeon.xml",
                 Links = BlackCastleDungeon.Constants.GetLinks(),
-                SmallDisclaimer = "Дмитрий Браславский, 1991",
+                Disclaimer = "Дмитрий Браславский, 1991",
                 Author = "Дмитрий Браславский",
                 Illustration = "BlackCastleDungeon.jpg",
             },
@@ -20,7 +20,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/CaptainSheltonsSecret.xml",
                 Links = CaptainSheltonsSecret.Constants.GetLinks(),
-                SmallDisclaimer = "Дмитрий Браславский, 1992",
+                Disclaimer = "Дмитрий Браславский, 1992",
+                Author = "Дмитрий Браславский",
                 Illustration = "CaptainSheltonsSecret.jpg",
             },
 
@@ -28,7 +29,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/FaithfulSwordOfTheKing.xml",
                 Links = FaithfulSwordOfTheKing.Constants.GetLinks(),
-                SmallDisclaimer = "Дмитрий Браславский, 1995",
+                Disclaimer = "Дмитрий Браславский, 1995",
+                Author = "Дмитрий Браславский",
                 Illustration = "FaithfulSwordOfTheKing.jpg",
             },
 
@@ -36,7 +38,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/AdventuresOfABeardlessDeceiver.xml",
                 Links = AdventuresOfABeardlessDeceiver.Constants.GetLinks(),
-                SmallDisclaimer = "Владимир Сизиков, 2015",
+                Disclaimer = "Владимир Сизиков, 2015",
+                Author = "Владимир Сизиков",
                 Illustration = "AdventuresOfABeardlessDeceiver.jpg",
             },
 
@@ -44,7 +47,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/DzungarWar.xml",
                 Links = DzungarWar.Constants.GetLinks(),
-                SmallDisclaimer = "Владимир Сизиков, 2016",
+                Disclaimer = "Владимир Сизиков, 2016",
+                Author = "Владимир Сизиков",
                 Illustration = "DzungarWar.jpg",
             },
 
@@ -52,7 +56,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/RockOfTerror.xml",
                 Links = RockOfTerror.Constants.GetLinks(),
-                SmallDisclaimer = "Дмитрий Тышевич, 2009",
+                Disclaimer = "Дмитрий Тышевич, 2009",
+                Author = "Дмитрий Тышевич",
                 Illustration = "RockOfTerror.jpg",
             },
 
@@ -60,8 +65,9 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/RendezVous.xml",
                 Links = RendezVous.Constants.GetLinks(),
-                SmallDisclaimer = "Ал Торо, 2020",
-                FullDisclaimer = "Автор: Ал Торо\n\nПереводчик: Мария Ерошкина",
+                Disclaimer = "Ал Торо, 2020",
+                Author = "Ал Торо",
+                Translator = "Мария Ерошкина",
                 Illustration = "RendezVous.jpg",
             },
 
@@ -69,7 +75,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/SwampFever.xml",
                 Links = SwampFever.Constants.GetLinks(),
-                SmallDisclaimer = "Пётр Прокошев, 2017",
+                Disclaimer = "Пётр Прокошев, 2017",
+                Author = "Пётр Прокошев",
                 Illustration = "SwampFever.jpg",
             },
 
@@ -77,7 +84,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/MentorsAlwaysRight.xml",
                 Links = MentorsAlwaysRight.Constants.GetLinks(),
-                SmallDisclaimer = "Роман Островерхов, 2011",
+                Disclaimer = "Роман Островерхов, 2011",
+                Author = "Роман Островерхов",
                 Illustration = "MentorsAlwaysRight.jpg",
             },
 
@@ -85,7 +93,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/LegendsAlwaysLie.xml",
                 Links = LegendsAlwaysLie.Constants.GetLinks(),
-                SmallDisclaimer = "Роман Островерхов, 2012",
+                Disclaimer = "Роман Островерхов, 2012",
+                Author = "Роман Островерхов",
                 Illustration = "LegendsAlwaysLie.jpg",
             },
             
@@ -93,7 +102,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/StringOfWorlds.xml",
                 Links = StringOfWorlds.Constants.GetLinks(),
-                SmallDisclaimer = "Ольга Голотвина, 1995",
+                Disclaimer = "Ольга Голотвина, 1995",
+                Author = "Ольга Голотвина",
                 Illustration = "StringOfWorlds.jpg",
             },
             
@@ -101,7 +111,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/ThreePaths.xml",
                 Links = ThreePaths.Constants.GetLinks(),
-                SmallDisclaimer = "Александр Бутягин, Дмитрий Чистов, 1999",
+                Disclaimer = "Александр Бутягин, Дмитрий Чистов, 1999",
+                Authors = "Александр Бутягин, Дмитрий Чистов",
                 Illustration = "ThreePaths.jpg",
             },
 
@@ -109,7 +120,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/InvisibleFront.xml",
                 Links = InvisibleFront.Constants.GetLinks(),
-                SmallDisclaimer = "mmvvss, 2018",
+                Disclaimer = "mmvvss, 2018",
+                Author = "mmvvss",
                 Illustration = "InvisibleFront.jpg",
             },
 
@@ -117,7 +129,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/SilentSchool.xml",
                 Links = SilentSchool.Constants.GetLinks(),
-                SmallDisclaimer = "Роман Островерхов, 2013",
+                Disclaimer = "Роман Островерхов, 2013",
+                Author = "Роман Островерхов",
                 Illustration = "SilentSchool.jpg",
             },
             
@@ -125,7 +138,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/ThoseWhoAreAboutToDie.xml",
                 Links = ThoseWhoAreAboutToDie.Constants.GetLinks(),
-                SmallDisclaimer = "Александр Слюта, 2009",
+                Disclaimer = "Александр Слюта, 2009",
+                Author = "Александр Слюта",
                 Illustration = "ThoseWhoAreAboutToDie.jpg",
             },
 
@@ -133,7 +147,9 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/OctopusIsland.xml",
                 Links = OctopusIsland.Constants.GetLinks(),
-                SmallDisclaimer = "Филипп Эбли, 1992",
+                Disclaimer = "Филипп Эбли, 1992",
+                Author = "Филипп Эбли",
+                Translator = "Неизвестен",
                 Illustration = "OctopusIsland.jpg",
             },
 
@@ -141,7 +157,9 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/CreatureOfHavoc.xml",
                 Links = CreatureOfHavoc.Constants.GetLinks(),
-                SmallDisclaimer = "Стив Джексон, 1986",
+                Disclaimer = "Стив Джексон, 1986",
+                Author = "Стив Джексон",
+                Translator = "Неизвестен",
                 Illustration = "CreatureOfHavoc.jpg",
             },
 
@@ -149,9 +167,9 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/BloodfeudOfAltheus.xml",
                 Links = BloodfeudOfAltheus.Constants.GetLinks(),
-                SmallDisclaimer = "Джон Баттерфилд и др., 1985",
-                FullDisclaimer = "Авторы: Джон Баттерфилд, Дэвид Хонигман и Филип Паркер\n\n" +
-                    "Переводчики: Мария Ерошкина, GalinaSol, Xpromt, Johny Lee, fermalion, Тара-сан, Jumangee, Ajenta, Эргистал, Anuta и другие",
+                Disclaimer = "Джон Баттерфилд и др., 1985",
+                Authors = "Джон Баттерфилд, Дэвид Хонигман и Филип Паркер",
+                Translators = "Мария Ерошкина, GalinaSol, Xpromt, Johny Lee, fermalion, Тара-сан, Jumangee, Ajenta, Эргистал, Anuta и другие",
                 Illustration = "BloodfeudOfAltheus.jpg",
             },
 
@@ -159,10 +177,9 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/PensionerSimulator.xml",
                 Links = PensionerSimulator.Constants.GetLinks(),
-                SmallDisclaimer = "Zaratystra, the_arsonist, 2018",
-                FullDisclaimer = "Симулятор пенсионерки:\nАвтор: Zaratystra, 2018\n\n" +
-                    "Симулятор пенсионерки 2, Кровавая Охота:\nАвтор: the_arsonist, 2019\nПеревод: Мария Ерошкина\n" +
-                    "Адаптация перевода: Zaratystra\nРедактор: Wervek",
+                Disclaimer = "Zaratystra, the_arsonist, 2018",
+                Authors = "Оригинальная история: Zaratystra\nКровавая Охота:\nthe_arsonist",
+                Translators = "Перевод: Мария Ерошкина\nАдаптация перевода: Zaratystra\nРедактор: Wervek",
                 Illustration = "PensionerSimulator.jpg",
             },
 
@@ -170,7 +187,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/LordOfTheSteppes.xml",
                 Links = LordOfTheSteppes.Constants.GetLinks(),
-                SmallDisclaimer = "Сергей Ступин, 2009",
+                Disclaimer = "Сергей Ступин, 2009",
+                Author = "Сергей Ступин",
                 Illustration = "LordOfTheSteppes.jpg",
             },
 
@@ -178,8 +196,9 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/HowlOfTheWerewolf.xml",
                 Links = HowlOfTheWerewolf.Constants.GetLinks(),
-                SmallDisclaimer = "Джонатан Грин, 2007",
-                FullDisclaimer = "Автор: Джонатан Грин\n\nПереводчики: Rustem, Vo1t",
+                Disclaimer = "Джонатан Грин, 2007",
+                Author = "Джонатан Грин",
+                Translators = "Rustem, Vo1t",
                 Illustration = "HowlOfTheWerewolf.jpg",
             },
 
@@ -187,8 +206,9 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/StainlessSteelRat.xml",
                 Links = StainlessSteelRat.Constants.GetLinks(),
-                SmallDisclaimer = "Гарри Гаррисон, 1985",
-                FullDisclaimer = "Автор: Гарри Гаррисон\n\nПереводчик: Александр Жаворонков",
+                Disclaimer = "Гарри Гаррисон, 1985",
+                Author = "Гарри Гаррисон",
+                Translator = "Александр Жаворонков",
                 Illustration = "StainlessSteelRat.jpg",
             },
 
@@ -196,7 +216,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/LastHokku.xml",
                 Links = LastHokku.Constants.GetLinks(),
-                SmallDisclaimer = "Юркий Слон, 2021",
+                Disclaimer = "Юркий Слон, 2021",
+                Author = "Юркий Слон",
                 Illustration = "LastHokku.jpg",
             },
 
@@ -204,7 +225,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/Genesis.xml",
                 Links = Genesis.Constants.GetLinks(),
-                SmallDisclaimer = "Андрей Журавлёв, 2013",
+                Disclaimer = "Андрей Журавлёв, 2013",
+                Author = "Андрей Журавлёв",
                 Illustration = "Genesis.jpg",
             },
             
@@ -212,7 +234,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/Catharsis.xml",
                 Links = Catharsis.Constants.GetLinks(),
-                SmallDisclaimer = "Андрей Журавлёв, 2013",
+                Disclaimer = "Андрей Журавлёв, 2013",
+                Author = "Андрей Журавлёв",
                 Illustration = "Catharsis.jpg",
             },
             
@@ -220,7 +243,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/PrairieLaw.xml",
                 Links = PrairieLaw.Constants.GetLinks(),
-                SmallDisclaimer = "Ольга Голотвина, 1995",
+                Disclaimer = "Ольга Голотвина, 1995",
+                Author = "Ольга Голотвина",
                 Illustration = "PrairieLaw.jpg",
             },
 
@@ -228,8 +252,9 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/HeartOfIce.xml",
                 Links = HeartOfIce.Constants.GetLinks(),
-                SmallDisclaimer = "Дэйв Моррис, 1994",
-                FullDisclaimer = "Авторы: Дэйв Моррис\n\nПереводчики: Мария Ерошкина, Ageres, Jumangee, Vo1t, Fermalion, Johny Lee и другие",
+                Disclaimer = "Дэйв Моррис, 1994",
+                Author = "Дэйв Моррис",
+                Translators = "Мария Ерошкина, Ageres, Jumangee, Vo1t, Fermalion, Johny Lee и другие",
                 Illustration = "HeartOfIce.jpg",
             },
 
@@ -237,7 +262,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/VWeapons.xml",
                 Links = VWeapons.Constants.GetLinks(),
-                SmallDisclaimer = "Андрей Тишин, 2013",
+                Disclaimer = "Андрей Тишин, 2013",
+                Author = "Андрей Тишин",
                 Illustration = "VWeapons.jpg",
             },
 
@@ -245,7 +271,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/LandOfUnwaryBears.xml",
                 Links = LandOfUnwaryBears.Constants.GetLinks(),
-                SmallDisclaimer = "Геннадий Логинов, 2020",
+                Disclaimer = "Геннадий Логинов, 2020",
+                Author = "Геннадий Логинов",
                 Illustration = "LandOfUnwaryBears.jpg",
             },
 
@@ -253,7 +280,8 @@ namespace Seeker.Gamebook
             {
                 XmlBook = "Gamebooks/YounglingTournament.xml",
                 Links = YounglingTournament.Constants.GetLinks(),
-                SmallDisclaimer = "Александр Андросенко, 2018",
+                Disclaimer = "Александр Андросенко, 2018",
+                Author = "Александр Андросенко",
                 Illustration = "YounglingTournament.jpg",
             },
         };

@@ -22,9 +22,7 @@ namespace Seeker.Gamebook
 
         public string Translators;
 
-        public string SmallDisclaimer;
-
-        public string FullDisclaimer;
+        public string Disclaimer;
 
         public string Text;
 
