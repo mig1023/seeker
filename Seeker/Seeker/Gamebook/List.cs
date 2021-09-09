@@ -13,7 +13,6 @@ namespace Seeker.Gamebook
                 Links = BlackCastleDungeon.Constants.GetLinks(),
                 Author = "Дмитрий Браславский",
                 Year = 1991,
-                Illustration = "BlackCastleDungeon.jpg",
             },
 
             ["Тайна капитана Шелтона"] = new Description
@@ -22,7 +21,6 @@ namespace Seeker.Gamebook
                 Links = CaptainSheltonsSecret.Constants.GetLinks(),
                 Author = "Дмитрий Браславский",
                 Year = 1992,
-                Illustration = "CaptainSheltonsSecret.jpg",
             },
 
             ["Верная шпага короля"] = new Description
@@ -31,7 +29,6 @@ namespace Seeker.Gamebook
                 Links = FaithfulSwordOfTheKing.Constants.GetLinks(),
                 Author = "Дмитрий Браславский",
                 Year = 1995,
-                Illustration = "FaithfulSwordOfTheKing.jpg",
             },
 
             ["Приключения безбородого обманщика"] = new Description
@@ -40,7 +37,6 @@ namespace Seeker.Gamebook
                 Links = AdventuresOfABeardlessDeceiver.Constants.GetLinks(),
                 Author = "Владимир Сизиков",
                 Year = 2015,
-                Illustration = "AdventuresOfABeardlessDeceiver.jpg",
             },
 
             ["Джунгарское нашествие"] = new Description
@@ -49,7 +45,6 @@ namespace Seeker.Gamebook
                 Links = DzungarWar.Constants.GetLinks(),
                 Author = "Владимир Сизиков",
                 Year = 2016,
-                Illustration = "DzungarWar.jpg",
             },
 
             ["Скала ужаса"] = new Description
@@ -58,7 +53,6 @@ namespace Seeker.Gamebook
                 Links = RockOfTerror.Constants.GetLinks(),
                 Author = "Дмитрий Тышевич",
                 Year = 2009,
-                Illustration = "RockOfTerror.jpg",
             },
 
             ["Рандеву"] = new Description
@@ -68,7 +62,6 @@ namespace Seeker.Gamebook
                 Author = "Ал Торо",
                 Year = 2020,
                 Translator = "Мария Ерошкина",
-                Illustration = "RendezVous.jpg",
             },
 
             ["Болотная лихорадка"] = new Description
@@ -77,7 +70,6 @@ namespace Seeker.Gamebook
                 Links = SwampFever.Constants.GetLinks(),
                 Author = "Пётр Прокошев",
                 Year = 2017,
-                Illustration = "SwampFever.jpg",
             },
 
             ["Наставники всегда правы"] = new Description
@@ -86,7 +78,6 @@ namespace Seeker.Gamebook
                 Links = MentorsAlwaysRight.Constants.GetLinks(),
                 Author = "Роман Островерхов",
                 Year = 2011,
-                Illustration = "MentorsAlwaysRight.jpg",
             },
 
             ["Легенды всегда врут"] = new Description
@@ -95,7 +86,6 @@ namespace Seeker.Gamebook
                 Links = LegendsAlwaysLie.Constants.GetLinks(),
                 Author = "Роман Островерхов",
                 Year = 2012,
-                Illustration = "LegendsAlwaysLie.jpg",
             },
             
             ["Вереница миров или выводы из закона Мэрфи"] = new Description
@@ -104,7 +94,6 @@ namespace Seeker.Gamebook
                 Links = StringOfWorlds.Constants.GetLinks(),
                 Author = "Ольга Голотвина",
                 Year = 1995,
-                Illustration = "StringOfWorlds.jpg",
             },
             
             ["Три дороги"] = new Description
@@ -113,7 +102,6 @@ namespace Seeker.Gamebook
                 Links = ThreePaths.Constants.GetLinks(),
                 Authors = "Александр Бутягин, Дмитрий Чистов",
                 Year = 1999,
-                Illustration = "ThreePaths.jpg",
             },
 
             ["На невидимых фронтах"] = new Description
@@ -122,7 +110,6 @@ namespace Seeker.Gamebook
                 Links = InvisibleFront.Constants.GetLinks(),
                 Author = "mmvvss",
                 Year = 2018,
-                Illustration = "InvisibleFront.jpg",
             },
 
             ["Silent School"] = new Description
@@ -131,7 +118,6 @@ namespace Seeker.Gamebook
                 Links = SilentSchool.Constants.GetLinks(),
                 Author = "Роман Островерхов",
                 Year = 2013,
-                Illustration = "SilentSchool.jpg",
             },
             
             ["Идущие на смерть"] = new Description
@@ -140,7 +126,6 @@ namespace Seeker.Gamebook
                 Links = ThoseWhoAreAboutToDie.Constants.GetLinks(),
                 Author = "Александр Слюта",
                 Year = 2009,
-                Illustration = "ThoseWhoAreAboutToDie.jpg",
             },
 
             ["Остров Осьминогов"] = new Description
@@ -150,7 +135,6 @@ namespace Seeker.Gamebook
                 Author = "Филипп Эбли",
                 Year = 1992,
                 Translator = "Неизвестен",
-                Illustration = "OctopusIsland.jpg",
             },
 
             ["Разрушитель"] = new Description
@@ -160,7 +144,6 @@ namespace Seeker.Gamebook
                 Author = "Стив Джексон",
                 Year = 1986,
                 Translator = "Неизвестен",
-                Illustration = "CreatureOfHavoc.jpg",
             },
 
             ["Месть Альтея"] = new Description
@@ -170,7 +153,6 @@ namespace Seeker.Gamebook
                 Authors = "Джон Баттерфилд, Дэвид Хонигман и Филип Паркер",
                 Year = 1985,
                 Translators = "Мария Ерошкина, GalinaSol, Xpromt, Johny Lee, fermalion, Тара-сан, Jumangee, Ajenta, Эргистал, Anuta и другие",
-                Illustration = "BloodfeudOfAltheus.jpg",
             },
 
             ["Симулятор пенсионерки"] = new Description
@@ -180,7 +162,6 @@ namespace Seeker.Gamebook
                 Authors = "Zaratystra - оригинальная история,\nthe_arsonist - Кровавая охота",
                 Year = 2018,
                 Translators = "Перевод: Мария Ерошкина\nАдаптация перевода: Zaratystra\nРедактор: Wervek",
-                Illustration = "PensionerSimulator.jpg",
             },
 
             ["Владыка степей"] = new Description
@@ -189,7 +170,6 @@ namespace Seeker.Gamebook
                 Links = LordOfTheSteppes.Constants.GetLinks(),
                 Author = "Сергей Ступин",
                 Year = 2009,
-                Illustration = "LordOfTheSteppes.jpg",
             },
 
             ["Вой оборотня"] = new Description
@@ -199,7 +179,6 @@ namespace Seeker.Gamebook
                 Author = "Джонатан Грин",
                 Year = 2007,
                 Translators = "Rustem, Vo1t",
-                Illustration = "HowlOfTheWerewolf.jpg",
             },
 
             ["Крыса из нержавеющей стали"] = new Description
@@ -209,7 +188,6 @@ namespace Seeker.Gamebook
                 Author = "Гарри Гаррисон",
                 Year = 1985,
                 Translator = "Александр Жаворонков",
-                Illustration = "StainlessSteelRat.jpg",
             },
 
             ["Последнее хокку"] = new Description
@@ -218,7 +196,6 @@ namespace Seeker.Gamebook
                 Links = LastHokku.Constants.GetLinks(),
                 Author = "Юркий Слон",
                 Year = 2021,
-                Illustration = "LastHokku.jpg",
             },
 
             ["Генезис"] = new Description
@@ -227,7 +204,6 @@ namespace Seeker.Gamebook
                 Links = Genesis.Constants.GetLinks(),
                 Author = "Андрей Журавлёв",
                 Year = 2013,
-                Illustration = "Genesis.jpg",
             },
             
             ["Катарсис"] = new Description
@@ -236,7 +212,6 @@ namespace Seeker.Gamebook
                 Links = Catharsis.Constants.GetLinks(),
                 Author = "Андрей Журавлёв",
                 Year = 2013,
-                Illustration = "Catharsis.jpg",
             },
             
             ["По закону прерии"] = new Description
@@ -245,7 +220,6 @@ namespace Seeker.Gamebook
                 Links = PrairieLaw.Constants.GetLinks(),
                 Author = "Ольга Голотвина",
                 Year = 1995,
-                Illustration = "PrairieLaw.jpg",
             },
 
             ["Сердце льда"] = new Description
@@ -255,7 +229,6 @@ namespace Seeker.Gamebook
                 Author = "Дэйв Моррис",
                 Year = 1994,
                 Translators = "Мария Ерошкина, Ageres, Jumangee, Vo1t, Fermalion, Johny Lee и другие",
-                Illustration = "HeartOfIce.jpg",
             },
 
             ["Оружие возмездия"] = new Description
@@ -264,7 +237,6 @@ namespace Seeker.Gamebook
                 Links = VWeapons.Constants.GetLinks(),
                 Author = "Андрей Тишин",
                 Year = 2013,
-                Illustration = "VWeapons.jpg",
             },
 
             ["В краю непуганных медведей"] = new Description
@@ -273,7 +245,6 @@ namespace Seeker.Gamebook
                 Links = LandOfUnwaryBears.Constants.GetLinks(),
                 Author = "Геннадий Логинов",
                 Year = 2020,
-                Illustration = "LandOfUnwaryBears.jpg",
             },
 
             ["Турнир юнлингов"] = new Description
@@ -282,7 +253,6 @@ namespace Seeker.Gamebook
                 Links = YounglingTournament.Constants.GetLinks(),
                 Author = "Александр Андросенко",
                 Year = 2018,
-                Illustration = "YounglingTournament.jpg",
             },
         };
 
@@ -293,8 +263,9 @@ namespace Seeker.Gamebook
             Description book = Books[name];
 
             book.Text = book.Links.Constants.GetDescription();
+            book.Illustration = string.Format("{0}.jpg", book.XmlBook);
             book.XmlBook = string.Format("Gamebooks/{0}.xml", book.XmlBook);
-
+           
             Abstract.IConstants data = book.Links.Constants;
 
             book.BookColor = data.GetColor(Game.Data.ColorTypes.BookColor);
