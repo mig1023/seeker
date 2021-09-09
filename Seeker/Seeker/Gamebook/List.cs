@@ -9,7 +9,7 @@ namespace Seeker.Gamebook
         {
             ["Подземелья чёрного замка"] = new Description
             {
-                XmlBook = "Gamebooks/BlackCastleDungeon.xml",
+                XmlBook = "BlackCastleDungeon",
                 Links = BlackCastleDungeon.Constants.GetLinks(),
                 Author = "Дмитрий Браславский",
                 Year = 1991,
@@ -18,7 +18,7 @@ namespace Seeker.Gamebook
 
             ["Тайна капитана Шелтона"] = new Description
             {
-                XmlBook = "Gamebooks/CaptainSheltonsSecret.xml",
+                XmlBook = "CaptainSheltonsSecret",
                 Links = CaptainSheltonsSecret.Constants.GetLinks(),
                 Author = "Дмитрий Браславский",
                 Year = 1992,
@@ -27,7 +27,7 @@ namespace Seeker.Gamebook
 
             ["Верная шпага короля"] = new Description
             {
-                XmlBook = "Gamebooks/FaithfulSwordOfTheKing.xml",
+                XmlBook = "FaithfulSwordOfTheKing",
                 Links = FaithfulSwordOfTheKing.Constants.GetLinks(),
                 Author = "Дмитрий Браславский",
                 Year = 1995,
@@ -36,7 +36,7 @@ namespace Seeker.Gamebook
 
             ["Приключения безбородого обманщика"] = new Description
             {
-                XmlBook = "Gamebooks/AdventuresOfABeardlessDeceiver.xml",
+                XmlBook = "AdventuresOfABeardlessDeceiver",
                 Links = AdventuresOfABeardlessDeceiver.Constants.GetLinks(),
                 Author = "Владимир Сизиков",
                 Year = 2015,
@@ -45,7 +45,7 @@ namespace Seeker.Gamebook
 
             ["Джунгарское нашествие"] = new Description
             {
-                XmlBook = "Gamebooks/DzungarWar.xml",
+                XmlBook = "DzungarWar",
                 Links = DzungarWar.Constants.GetLinks(),
                 Author = "Владимир Сизиков",
                 Year = 2016,
@@ -54,7 +54,7 @@ namespace Seeker.Gamebook
 
             ["Скала ужаса"] = new Description
             {
-                XmlBook = "Gamebooks/RockOfTerror.xml",
+                XmlBook = "RockOfTerror",
                 Links = RockOfTerror.Constants.GetLinks(),
                 Author = "Дмитрий Тышевич",
                 Year = 2009,
@@ -63,7 +63,7 @@ namespace Seeker.Gamebook
 
             ["Рандеву"] = new Description
             {
-                XmlBook = "Gamebooks/RendezVous.xml",
+                XmlBook = "RendezVous",
                 Links = RendezVous.Constants.GetLinks(),
                 Author = "Ал Торо",
                 Year = 2020,
@@ -73,7 +73,7 @@ namespace Seeker.Gamebook
 
             ["Болотная лихорадка"] = new Description
             {
-                XmlBook = "Gamebooks/SwampFever.xml",
+                XmlBook = "SwampFever",
                 Links = SwampFever.Constants.GetLinks(),
                 Author = "Пётр Прокошев",
                 Year = 2017,
@@ -82,7 +82,7 @@ namespace Seeker.Gamebook
 
             ["Наставники всегда правы"] = new Description
             {
-                XmlBook = "Gamebooks/MentorsAlwaysRight.xml",
+                XmlBook = "MentorsAlwaysRight",
                 Links = MentorsAlwaysRight.Constants.GetLinks(),
                 Author = "Роман Островерхов",
                 Year = 2011,
@@ -91,7 +91,7 @@ namespace Seeker.Gamebook
 
             ["Легенды всегда врут"] = new Description
             {
-                XmlBook = "Gamebooks/LegendsAlwaysLie.xml",
+                XmlBook = "LegendsAlwaysLie",
                 Links = LegendsAlwaysLie.Constants.GetLinks(),
                 Author = "Роман Островерхов",
                 Year = 2012,
@@ -100,7 +100,7 @@ namespace Seeker.Gamebook
             
             ["Вереница миров или выводы из закона Мэрфи"] = new Description
             {
-                XmlBook = "Gamebooks/StringOfWorlds.xml",
+                XmlBook = "StringOfWorlds",
                 Links = StringOfWorlds.Constants.GetLinks(),
                 Author = "Ольга Голотвина",
                 Year = 1995,
@@ -109,7 +109,7 @@ namespace Seeker.Gamebook
             
             ["Три дороги"] = new Description
             {
-                XmlBook = "Gamebooks/ThreePaths.xml",
+                XmlBook = "ThreePaths",
                 Links = ThreePaths.Constants.GetLinks(),
                 Authors = "Александр Бутягин, Дмитрий Чистов",
                 Year = 1999,
@@ -118,7 +118,7 @@ namespace Seeker.Gamebook
 
             ["На невидимых фронтах"] = new Description
             {
-                XmlBook = "Gamebooks/InvisibleFront.xml",
+                XmlBook = "InvisibleFront",
                 Links = InvisibleFront.Constants.GetLinks(),
                 Author = "mmvvss",
                 Year = 2018,
@@ -127,7 +127,7 @@ namespace Seeker.Gamebook
 
             ["Silent School"] = new Description
             {
-                XmlBook = "Gamebooks/SilentSchool.xml",
+                XmlBook = "SilentSchool",
                 Links = SilentSchool.Constants.GetLinks(),
                 Author = "Роман Островерхов",
                 Year = 2013,
@@ -136,7 +136,7 @@ namespace Seeker.Gamebook
             
             ["Идущие на смерть"] = new Description
             {
-                XmlBook = "Gamebooks/ThoseWhoAreAboutToDie.xml",
+                XmlBook = "ThoseWhoAreAboutToDie",
                 Links = ThoseWhoAreAboutToDie.Constants.GetLinks(),
                 Author = "Александр Слюта",
                 Year = 2009,
@@ -145,7 +145,7 @@ namespace Seeker.Gamebook
 
             ["Остров Осьминогов"] = new Description
             {
-                XmlBook = "Gamebooks/OctopusIsland.xml",
+                XmlBook = "OctopusIsland",
                 Links = OctopusIsland.Constants.GetLinks(),
                 Author = "Филипп Эбли",
                 Year = 1992,
@@ -155,7 +155,7 @@ namespace Seeker.Gamebook
 
             ["Разрушитель"] = new Description
             {
-                XmlBook = "Gamebooks/CreatureOfHavoc.xml",
+                XmlBook = "CreatureOfHavoc",
                 Links = CreatureOfHavoc.Constants.GetLinks(),
                 Author = "Стив Джексон",
                 Year = 1986,
@@ -165,7 +165,7 @@ namespace Seeker.Gamebook
 
             ["Месть Альтея"] = new Description
             {
-                XmlBook = "Gamebooks/BloodfeudOfAltheus.xml",
+                XmlBook = "BloodfeudOfAltheus",
                 Links = BloodfeudOfAltheus.Constants.GetLinks(),
                 Authors = "Джон Баттерфилд, Дэвид Хонигман и Филип Паркер",
                 Year = 1985,
@@ -175,7 +175,7 @@ namespace Seeker.Gamebook
 
             ["Симулятор пенсионерки"] = new Description
             {
-                XmlBook = "Gamebooks/PensionerSimulator.xml",
+                XmlBook = "PensionerSimulator",
                 Links = PensionerSimulator.Constants.GetLinks(),              
                 Authors = "Zaratystra - оригинальная история,\nthe_arsonist - Кровавая охота",
                 Year = 2018,
@@ -185,7 +185,7 @@ namespace Seeker.Gamebook
 
             ["Владыка степей"] = new Description
             {
-                XmlBook = "Gamebooks/LordOfTheSteppes.xml",
+                XmlBook = "LordOfTheSteppes",
                 Links = LordOfTheSteppes.Constants.GetLinks(),
                 Author = "Сергей Ступин",
                 Year = 2009,
@@ -194,7 +194,7 @@ namespace Seeker.Gamebook
 
             ["Вой оборотня"] = new Description
             {
-                XmlBook = "Gamebooks/HowlOfTheWerewolf.xml",
+                XmlBook = "HowlOfTheWerewolf",
                 Links = HowlOfTheWerewolf.Constants.GetLinks(),
                 Author = "Джонатан Грин",
                 Year = 2007,
@@ -204,7 +204,7 @@ namespace Seeker.Gamebook
 
             ["Крыса из нержавеющей стали"] = new Description
             {
-                XmlBook = "Gamebooks/StainlessSteelRat.xml",
+                XmlBook = "StainlessSteelRat",
                 Links = StainlessSteelRat.Constants.GetLinks(),
                 Author = "Гарри Гаррисон",
                 Year = 1985,
@@ -214,7 +214,7 @@ namespace Seeker.Gamebook
 
             ["Последнее хокку"] = new Description
             {
-                XmlBook = "Gamebooks/LastHokku.xml",
+                XmlBook = "LastHokku",
                 Links = LastHokku.Constants.GetLinks(),
                 Author = "Юркий Слон",
                 Year = 2021,
@@ -223,7 +223,7 @@ namespace Seeker.Gamebook
 
             ["Генезис"] = new Description
             {
-                XmlBook = "Gamebooks/Genesis.xml",
+                XmlBook = "Genesis",
                 Links = Genesis.Constants.GetLinks(),
                 Author = "Андрей Журавлёв",
                 Year = 2013,
@@ -232,7 +232,7 @@ namespace Seeker.Gamebook
             
             ["Катарсис"] = new Description
             {
-                XmlBook = "Gamebooks/Catharsis.xml",
+                XmlBook = "Catharsis",
                 Links = Catharsis.Constants.GetLinks(),
                 Author = "Андрей Журавлёв",
                 Year = 2013,
@@ -241,7 +241,7 @@ namespace Seeker.Gamebook
             
             ["По закону прерии"] = new Description
             {
-                XmlBook = "Gamebooks/PrairieLaw.xml",
+                XmlBook = "PrairieLaw",
                 Links = PrairieLaw.Constants.GetLinks(),
                 Author = "Ольга Голотвина",
                 Year = 1995,
@@ -250,7 +250,7 @@ namespace Seeker.Gamebook
 
             ["Сердце льда"] = new Description
             {
-                XmlBook = "Gamebooks/HeartOfIce.xml",
+                XmlBook = "HeartOfIce",
                 Links = HeartOfIce.Constants.GetLinks(),
                 Author = "Дэйв Моррис",
                 Year = 1994,
@@ -260,7 +260,7 @@ namespace Seeker.Gamebook
 
             ["Оружие возмездия"] = new Description
             {
-                XmlBook = "Gamebooks/VWeapons.xml",
+                XmlBook = "VWeapons",
                 Links = VWeapons.Constants.GetLinks(),
                 Author = "Андрей Тишин",
                 Year = 2013,
@@ -269,7 +269,7 @@ namespace Seeker.Gamebook
 
             ["В краю непуганных медведей"] = new Description
             {
-                XmlBook = "Gamebooks/LandOfUnwaryBears.xml",
+                XmlBook = "LandOfUnwaryBears",
                 Links = LandOfUnwaryBears.Constants.GetLinks(),
                 Author = "Геннадий Логинов",
                 Year = 2020,
@@ -278,7 +278,7 @@ namespace Seeker.Gamebook
 
             ["Турнир юнлингов"] = new Description
             {
-                XmlBook = "Gamebooks/YounglingTournament.xml",
+                XmlBook = "YounglingTournament",
                 Links = YounglingTournament.Constants.GetLinks(),
                 Author = "Александр Андросенко",
                 Year = 2018,
@@ -293,6 +293,7 @@ namespace Seeker.Gamebook
             Description book = Books[name];
 
             book.Text = book.Links.Constants.GetDescription();
+            book.XmlBook = string.Format("Gamebooks/{0}.xml", book.XmlBook);
 
             Abstract.IConstants data = book.Links.Constants;
 
