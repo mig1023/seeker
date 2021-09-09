@@ -111,7 +111,7 @@ namespace Seeker.Output
             Label discliamerText = new Label
             {
                 Text = text,
-                Margin = new Thickness(5, 5, 5, 5),
+                Margin = (bold ? new Thickness(5, 5, 5, 0) : new Thickness(5, 0, 5, 5)),
             };
 
             if (bold)
