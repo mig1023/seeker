@@ -4,6 +4,8 @@ namespace Seeker.Gamebook
 {
     class Description
     {
+        public string Book;
+
         public string XmlBook;
 
         public string BookColor;
