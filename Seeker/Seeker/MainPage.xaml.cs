@@ -30,9 +30,11 @@ namespace Seeker
 
             Game.Data.Actions = null;
 
-            foreach (string gamebook in List.GetBooks())
+            foreach (string game in List.GetBooks())
             {
-                Options.Children.Add(Output.Interface.GamebookImage(List.GetDescription(gamebook)));
+                Description gamebook = List.GetDescription(game);
+
+                Options.Children.Add(Output.Interface.GamebookImage(gamebook));
 
                 Button button = Output.Buttons.GamebookButton(gamebook);
                 button.Clicked += Gamebook_Click;
@@ -46,10 +48,12 @@ namespace Seeker
 
         private void Gamebook_Click(object sender, EventArgs e)
         {
-            Button b = sender as Button;
+            Button button = sender as Button;
 
-            Game.Continue.CurrentGame(b.Text);
-            Game.Xml.GameLoad(b.Text);
+            string gamebook = List.GetBooksNameByTitle(button.Text);
+
+            Game.Continue.CurrentGame(gamebook);
+            Game.Xml.GameLoad(gamebook);
             GamepageSettings();
 
             Paragraph(0);
