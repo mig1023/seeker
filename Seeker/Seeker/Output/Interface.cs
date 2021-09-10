@@ -101,13 +101,14 @@ namespace Seeker.Output
             return link;
         }
             
-        private static void AddDisclaimerElement(string head, string body, ref StackLayout disclaimer, Frame border)
+        private static void AddDisclaimerElement(string head, string body,
+            ref StackLayout disclaimer, Frame border, bool little = false)
         {
             disclaimer.Children.Add(DisclaimerElement(head, CloseTapped(border), bold: true));
-            disclaimer.Children.Add(DisclaimerElement(body, CloseTapped(border)));
+            disclaimer.Children.Add(DisclaimerElement(body, CloseTapped(border), little: little));
         }
 
-        private static Label DisclaimerElement(string text, TapGestureRecognizer click, bool bold = false)
+        private static Label DisclaimerElement(string text, TapGestureRecognizer click, bool bold = false, bool little = false)
         {
             Label discliamerText = new Label
             {
@@ -117,6 +118,9 @@ namespace Seeker.Output
 
             if (bold)
                 discliamerText.FontAttributes = FontAttributes.Bold;
+
+            if (little)
+                discliamerText.FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label));
 
             return LinkedDisclaimerElement(discliamerText, click);
         }
@@ -180,7 +184,7 @@ namespace Seeker.Output
                 AddDisclaimerElement(head: "Переводчик:", body: gamebook.Translator, ref disclaimer, border);
 
             if (!String.IsNullOrEmpty(gamebook.Text))
-                AddDisclaimerElement(head: "Описание:", body: Regex.Unescape(gamebook.Text), ref disclaimer, border);
+                AddDisclaimerElement(head: "Описание:", body: Regex.Unescape(gamebook.Text), ref disclaimer, border, little: true);
 
             border.GestureRecognizers.Add(CloseTapped(border));
 
