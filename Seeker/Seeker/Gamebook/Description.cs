@@ -6,6 +6,8 @@ namespace Seeker.Gamebook
     {
         public string Book;
 
+        public string Title;
+
         public string XmlBook;
 
         public string BookColor;

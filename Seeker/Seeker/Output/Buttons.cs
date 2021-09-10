@@ -68,26 +68,24 @@ namespace Seeker.Output
             return SetBorderAndTextColor(additionButton);
         }
 
-        public static Button GamebookButton(string gamebook)
+        public static Button GamebookButton(Description gamebook)
         {
-            Description description = Gamebook.List.GetDescription(gamebook);
-
             Button gamebookButton = new Button
             {
-                Text = gamebook,
-                BackgroundColor = Color.FromHex(description.BookColor),
+                Text = gamebook.Title,
+                BackgroundColor = Color.FromHex(gamebook.BookColor),
                 FontFamily = Interface.TextFontFamily(),
                 FontSize = Interface.FontSize(Interface.TextFontSize.normal),
             };
 
-            if (!String.IsNullOrEmpty(description.BorderColor))
+            if (!String.IsNullOrEmpty(gamebook.BorderColor))
             {
-                gamebookButton.BorderColor = Color.FromHex(description.BorderColor);
+                gamebookButton.BorderColor = Color.FromHex(gamebook.BorderColor);
                 gamebookButton.BorderWidth = Constants.BORDER_WIDTH;
             }
 
-            if (!String.IsNullOrEmpty(description.FontColor))
-                gamebookButton.TextColor = Color.FromHex(description.FontColor);
+            if (!String.IsNullOrEmpty(gamebook.FontColor))
+                gamebookButton.TextColor = Color.FromHex(gamebook.FontColor);
             else
                 gamebookButton.TextColor = Color.White;
 

@@ -147,13 +147,11 @@ namespace Seeker.Output
             return close;
         }
 
-        public static void GamebookDisclaimerAdd(string gamebook, ref StackLayout options)
+        public static void GamebookDisclaimerAdd(Description gamebook, ref StackLayout options)
         {
-            Description description = List.GetDescription(gamebook);
-
             Frame border = new Frame
             {
-                BorderColor = Color.FromHex(description.BookColor),
+                BorderColor = Color.FromHex(gamebook.BookColor),
                 Margin = new Thickness(0, 0, 0, Constants.DISCLAIMER_BORDER),
                 IsVisible = false,
             };
@@ -164,25 +162,25 @@ namespace Seeker.Output
                 Margin = new Thickness(0, 0, 0, 5),
             };
 
-            textLayout.Children.Add(LinkedDisclaimerElement(GamebookDisclaimer(description), OpenTapped(border)));
-            textLayout.Children.Add(LinkedDisclaimerElement(LinkDisclaimer(description.BookColor), OpenTapped(border)));
+            textLayout.Children.Add(LinkedDisclaimerElement(GamebookDisclaimer(gamebook), OpenTapped(border)));
+            textLayout.Children.Add(LinkedDisclaimerElement(LinkDisclaimer(gamebook.BookColor), OpenTapped(border)));
 
             options.Children.Add(textLayout);
 
             StackLayout disclaimer = new StackLayout();
 
-            if (!String.IsNullOrEmpty(description.Authors))
-                AddDisclaimerElement(head: "Авторы:", body: Regex.Unescape(description.Authors), ref disclaimer, border);
+            if (!String.IsNullOrEmpty(gamebook.Authors))
+                AddDisclaimerElement(head: "Авторы:", body: Regex.Unescape(gamebook.Authors), ref disclaimer, border);
             else
-                AddDisclaimerElement(head: "Автор:", body: description.Author, ref disclaimer, border);
+                AddDisclaimerElement(head: "Автор:", body: gamebook.Author, ref disclaimer, border);
 
-            if (!String.IsNullOrEmpty(description.Translators))
-                AddDisclaimerElement(head: "Переводчики:", body: Regex.Unescape(description.Translators), ref disclaimer, border);
-            else if (!String.IsNullOrEmpty(description.Translator))
-                AddDisclaimerElement(head: "Переводчик:", body: description.Translator, ref disclaimer, border);
+            if (!String.IsNullOrEmpty(gamebook.Translators))
+                AddDisclaimerElement(head: "Переводчики:", body: Regex.Unescape(gamebook.Translators), ref disclaimer, border);
+            else if (!String.IsNullOrEmpty(gamebook.Translator))
+                AddDisclaimerElement(head: "Переводчик:", body: gamebook.Translator, ref disclaimer, border);
 
-            if (!String.IsNullOrEmpty(description.Text))
-                AddDisclaimerElement(head: "Описание:", body: Regex.Unescape(description.Text), ref disclaimer, border);
+            if (!String.IsNullOrEmpty(gamebook.Text))
+                AddDisclaimerElement(head: "Описание:", body: Regex.Unescape(gamebook.Text), ref disclaimer, border);
 
             border.GestureRecognizers.Add(CloseTapped(border));
 
