@@ -137,8 +137,14 @@ namespace Seeker.Game
             if (!Descriptions.ContainsKey(description.Book))
                 return;
 
-            description.Text = Descriptions[description.Book]["Text"].InnerText;
-            description.Year = IntParse(Descriptions[description.Book]["Year"]);
+            XmlNode data = Descriptions[description.Book];
+
+            description.Author = StringParse(data["Author"]);
+            description.Authors = StringParse(data["Authors"]);
+            description.Translator = StringParse(data["Translator"]);
+            description.Translators = StringParse(data["Translators"]);
+            description.Year = IntParse(data["Year"]);
+            description.Text = StringParse(data["Text"]);
         }
 
         private static void DescriptionLoad()
