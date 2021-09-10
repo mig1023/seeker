@@ -359,7 +359,7 @@
     <AndroidAsset Include="Assets\Gamebooks\YounglingTournament.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\BookDescriptions.xml" />
+    <AndroidAsset Include="Assets\Descriptions.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
