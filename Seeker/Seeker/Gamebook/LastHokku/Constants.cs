@@ -24,8 +24,6 @@ namespace Seeker.Gamebook.LastHokku
 
         public static List<int> GetParagraphsWithoutHokkuCreation() => new List<int> { 0, 1, 9, 10, 11, 12 };
 
-        public override string GetDescription() => "Стихи скажут о себе сами.";
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
