@@ -47,12 +47,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             [3] = "здоров",
         };
 
-        public override string GetDescription() => "В этой книге вам предстоит стать А" +
-            "льтеем – греческим героем, которому выпала удивительная миссия. Для дости" +
-            "жения цели вам придется сразиться с множеством противников, как с людьми," +
-            " так и нет, да и еще попутно добиваться расположения богов. Путешествие б" +
-            "удет трудным, но только вы определяете свою судьбу.";
-
         public override bool ShowDisabledOption() => true;
 
         public static Links GetLinks() => new Links
