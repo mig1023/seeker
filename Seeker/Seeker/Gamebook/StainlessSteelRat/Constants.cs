@@ -20,11 +20,6 @@ namespace Seeker.Gamebook.StainlessSteelRat
             [ColorTypes.BookColor] = "#738595",
         };
 
-        public override string GetDescription() => "Читатель в роли новобранца Специал" +
-            "ьного Корпуса должен отправиться на планету Скралдеспенд и найти и захват" +
-            "ить там профессора Гейстескранка. Читатель сам выбирает линию своего пове" +
-            "дения, которая приведёт его к цели.";
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
