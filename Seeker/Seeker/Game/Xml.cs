@@ -8,6 +8,8 @@ namespace Seeker.Game
 {
     class Xml
     {
+        private static Dictionary<string, string> Descriptions { get; set; }
+
         public static int IntParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
@@ -98,6 +100,54 @@ namespace Seeker.Game
             }
 
             return texts;
+        }
+
+        public static void GameLoad(string name)
+        {
+            Game.Data.XmlParagraphs.Clear();
+            Game.Data.Triggers.Clear();
+            Healing.Clear();
+
+            if (String.IsNullOrEmpty(name))
+                return;
+
+            Gamebook.Description gamebook = Gamebook.List.GetDescription(name);
+
+            XmlDocument xmlFile = new XmlDocument();
+            xmlFile.LoadXml(DependencyService.Get<Abstract.IAssets>().GetFromAssets(gamebook.XmlBook));
+
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes("Gamebook/Paragraphs/Paragraph"))
+                Game.Data.XmlParagraphs.Add(Game.Xml.IntParse(xmlNode["ID"]), xmlNode);
+
+            Game.Data.Paragraphs = gamebook.Links.Paragraphs;
+            Game.Data.Actions = gamebook.Links.Actions;
+            Game.Data.Constants = gamebook.Links.Constants;
+            Game.Data.Protagonist = gamebook.Links.Protagonist;
+            Game.Data.Save = gamebook.Links.Save;
+            Game.Data.Load = gamebook.Links.Load;
+            Game.Data.CheckOnlyIf = gamebook.Links.CheckOnlyIf;
+        }
+
+        public static string GetDescription(string name)
+        {
+            if (Descriptions == null)
+                DescriptionLoad();
+
+            if (Descriptions.ContainsKey(name))
+                return Descriptions[name];
+            else
+                return String.Empty;
+        }
+
+        private static void DescriptionLoad()
+        {
+            Descriptions = new Dictionary<string, string>();
+
+            XmlDocument xmlFile = new XmlDocument();
+            xmlFile.LoadXml(DependencyService.Get<Abstract.IAssets>().GetFromAssets(Game.Data.DescriptionXml));
+
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes("Gamebooks/Description"))
+                Descriptions.Add(xmlNode["Name"].InnerText, xmlNode["Text"].InnerText);
         }
     }
 }

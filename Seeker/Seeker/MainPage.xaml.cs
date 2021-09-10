@@ -49,7 +49,7 @@ namespace Seeker
             Button b = sender as Button;
 
             Game.Continue.CurrentGame(b.Text);
-            Game.Other.GameLoad(b.Text);
+            Game.Xml.GameLoad(b.Text);
             GamepageSettings();
 
             Paragraph(0);
