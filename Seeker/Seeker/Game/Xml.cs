@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml;
+using Seeker.Gamebook;
 using Seeker.Output;
 using Xamarin.Forms;
 
@@ -8,7 +9,7 @@ namespace Seeker.Game
 {
     class Xml
     {
-        private static Dictionary<string, string> Descriptions { get; set; }
+        private static Dictionary<string, XmlNode> Descriptions { get; set; }
 
         public static int IntParse(XmlNode xmlNode)
         {
@@ -128,26 +129,27 @@ namespace Seeker.Game
             Game.Data.CheckOnlyIf = gamebook.Links.CheckOnlyIf;
         }
 
-        public static string GetDescription(string name)
+        public static void GetXmlDescriptionData(ref Description description)
         {
             if (Descriptions == null)
                 DescriptionLoad();
 
-            if (Descriptions.ContainsKey(name))
-                return Descriptions[name];
-            else
-                return String.Empty;
+            if (!Descriptions.ContainsKey(description.Book))
+                return;
+
+            description.Text = Descriptions[description.Book]["Text"].InnerText;
+            description.Year = IntParse(Descriptions[description.Book]["Year"]);
         }
 
         private static void DescriptionLoad()
         {
-            Descriptions = new Dictionary<string, string>();
+            Descriptions = new Dictionary<string, XmlNode>();
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.LoadXml(DependencyService.Get<Abstract.IAssets>().GetFromAssets(Game.Data.DescriptionXml));
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("Gamebooks/Description"))
-                Descriptions.Add(xmlNode["Name"].InnerText, xmlNode["Text"].InnerText);
+                Descriptions.Add(xmlNode["Name"].InnerText, xmlNode);
         }
     }
 }
