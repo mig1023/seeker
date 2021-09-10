@@ -172,12 +172,12 @@ namespace Seeker.Output
             StackLayout disclaimer = new StackLayout();
 
             if (!String.IsNullOrEmpty(description.Authors))
-                AddDisclaimerElement(head: "Авторы:", body: description.Authors, ref disclaimer, border);
+                AddDisclaimerElement(head: "Авторы:", body: Regex.Unescape(description.Authors), ref disclaimer, border);
             else
                 AddDisclaimerElement(head: "Автор:", body: description.Author, ref disclaimer, border);
 
             if (!String.IsNullOrEmpty(description.Translators))
-                AddDisclaimerElement(head: "Переводчики:", body: description.Translators, ref disclaimer, border);
+                AddDisclaimerElement(head: "Переводчики:", body: Regex.Unescape(description.Translators), ref disclaimer, border);
             else if (!String.IsNullOrEmpty(description.Translator))
                 AddDisclaimerElement(head: "Переводчик:", body: description.Translator, ref disclaimer, border);
 
@@ -324,7 +324,7 @@ namespace Seeker.Output
             {
                 Margin = Constants.TEXT_LABEL_MARGIN,
                 FontSize = FontSize(defaultParams ? TextFontSize.normal : TextFontSize.little),
-                Text = System.Text.RegularExpressions.Regex.Unescape(text),
+                Text = Regex.Unescape(text),
                 FontFamily = TextFontFamily(),
                 JustifyText = justyfy,
             };
