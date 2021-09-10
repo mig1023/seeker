@@ -30,10 +30,6 @@ namespace Seeker.Gamebook.InvisibleFront
             "один", "два", "три", "один", "два", "три"
         };
 
-        public override string GetDescription() => "Вам предстоит влезть в шкуру сотру" +
-            "дника всесильной советской разведки и попробовать внести свою лепту в бор" +
-            "ьбу с акулами империализма.";
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
