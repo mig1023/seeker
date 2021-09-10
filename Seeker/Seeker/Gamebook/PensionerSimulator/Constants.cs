@@ -21,9 +21,6 @@ namespace Seeker.Gamebook.PensionerSimulator
 
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
 
-        public override string GetDescription() => "Все совпадения случайны. Всё напис" +
-            "анное художественный вымысел. Автор уважает стариков.";
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
