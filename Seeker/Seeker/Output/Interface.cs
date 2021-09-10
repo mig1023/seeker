@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using Seeker.Gamebook;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Seeker.Output
 {
@@ -181,7 +182,7 @@ namespace Seeker.Output
                 AddDisclaimerElement(head: "Переводчик:", body: description.Translator, ref disclaimer, border);
 
             if (!String.IsNullOrEmpty(description.Text))
-                AddDisclaimerElement(head: "Описание:", body: description.Text, ref disclaimer, border);
+                AddDisclaimerElement(head: "Описание:", body: Regex.Unescape(description.Text), ref disclaimer, border);
 
             border.GestureRecognizers.Add(CloseTapped(border));
 
