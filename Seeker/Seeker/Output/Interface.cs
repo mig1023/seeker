@@ -344,7 +344,7 @@ namespace Seeker.Output
 
         public static ExtendedLabel Text(string text, bool defaultParams = false)
         {
-            bool justyfy = (defaultParams ? false : Game.Data.Constants.JustifyText());
+            bool justyfy = (defaultParams ? false : (Game.Settings.GetValue("Justyfy") == 1));
 
             ExtendedLabel label = new ExtendedLabel
             {
