@@ -4,6 +4,7 @@ namespace Seeker.Output
 {
     class Constants
     {
+        public static string BACK_LINK = "НАЗАД";
         public static string DISCLAIMER_LINK = "➝ подробнее";
 
         public static Color BACKGROUND = Color.FromHex("#f7f7f7");

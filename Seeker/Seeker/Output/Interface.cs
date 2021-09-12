@@ -151,7 +151,7 @@ namespace Seeker.Output
             return close;
         }
 
-        public static void FloorAdd(ref StackLayout floor, EventHandler settingsHandler)
+        public static void Floor(ref StackLayout floor, EventHandler settingsHandler)
         {
             StackLayout floorLayout = new StackLayout
             {
@@ -173,17 +173,6 @@ namespace Seeker.Output
             floorLayout.Children.Add(settings);
 
             floor.Children.Add(floorLayout);
-        }
-
-        public static void SettingsAdd(ref StackLayout settings)
-        {
-            Label dummy = new Label
-            {
-                Text = "Настройки",
-                Margin = new Thickness(30, 15, 15, 15),
-            };
-
-            settings.Children.Add(dummy);
         }
 
         public static void GamebookDisclaimerAdd(Description gamebook, ref StackLayout options)

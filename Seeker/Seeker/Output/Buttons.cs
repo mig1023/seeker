@@ -96,7 +96,7 @@ namespace Seeker.Output
         {
             Button gamebookButton = new Button
             {
-                Text = "ВЕРНУТЬСЯ НАЗАД",
+                Text = Constants.BACK_LINK,
                 BackgroundColor = Color.Gainsboro,
                 FontFamily = Interface.TextFontFamily(),
                 FontSize = Interface.FontSize(Interface.TextFontSize.normal),

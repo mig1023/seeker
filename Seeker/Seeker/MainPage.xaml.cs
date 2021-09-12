@@ -40,7 +40,7 @@ namespace Seeker
                 Output.Interface.GamebookDisclaimerAdd(gamebook, ref Options);
             }
 
-            Output.Interface.FloorAdd(ref Floor, Settings_Click);
+            Output.Interface.Floor(ref Floor, Settings_Click);
 
             UpdateStatus();
         }
@@ -62,7 +62,7 @@ namespace Seeker
         {
             PageClean();
 
-            Output.Interface.SettingsAdd(ref Action);
+            Output.Settings.Add(ref Action);
 
             Button button = Output.Buttons.CloseSettings();
             button.Clicked += Settings_Return;
