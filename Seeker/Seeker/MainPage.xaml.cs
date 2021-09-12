@@ -19,10 +19,7 @@ namespace Seeker
         public void Gamebooks()
         {
             Game.Data.Clean();
-
-            Text.Children.Clear();
-            Action.Children.Clear();
-            Options.Children.Clear();
+            PageClean();
 
             MainScroll.BackgroundColor = Output.Constants.BACKGROUND;
 
@@ -43,6 +40,8 @@ namespace Seeker
                 Output.Interface.GamebookDisclaimerAdd(gamebook, ref Options);
             }
 
+            Output.Interface.FloorAdd(ref Floor, Settings_Click);
+
             UpdateStatus();
         }
 
@@ -59,15 +58,25 @@ namespace Seeker
             Paragraph(0);
         }
 
+        private void Settings_Click(object sender, EventArgs e)
+        {
+            PageClean();
+
+            Output.Interface.SettingsAdd(ref Action);
+
+            Button button = Output.Buttons.CloseSettings();
+            button.Clicked += Settings_Return;
+            Options.Children.Add(button);
+        }
+
+        private void Settings_Return(object sender, EventArgs e) => Gamebooks();
+
         public void Paragraph(int id, bool reload = false, bool loadGame = false, string optionName = "")
         {
             bool startOfGame = (id == Game.Data.StartParagraph);
 
             Game.Router.Clean();
-
-            Text.Children.Clear();
-            Action.Children.Clear();
-            Options.Children.Clear();
+            PageClean();
 
             if (startOfGame)
                 Game.Data.Protagonist();
@@ -367,5 +376,13 @@ namespace Seeker
 
         private void Option_Click(object sender, EventArgs e) =>
             Paragraph(Game.Router.FindDestination((sender as Button).Text), optionName: (sender as Button).Text);
+
+        private void PageClean()
+        {
+            Text.Children.Clear();
+            Action.Children.Clear();
+            Options.Children.Clear();
+            Floor.Children.Clear();
+        }
     }
 }

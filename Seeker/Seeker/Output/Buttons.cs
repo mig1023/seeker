@@ -92,6 +92,19 @@ namespace Seeker.Output
             return gamebookButton;
         }
 
+        public static Button CloseSettings()
+        {
+            Button gamebookButton = new Button
+            {
+                Text = "ВЕРНУТЬСЯ НАЗАД",
+                BackgroundColor = Color.Gainsboro,
+                FontFamily = Interface.TextFontFamily(),
+                FontSize = Interface.FontSize(Interface.TextFontSize.normal),
+            };
+
+            return gamebookButton;
+        }
+
         public static Button GameOver(string text)
         {
             string colorLine = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);

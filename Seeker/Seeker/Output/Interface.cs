@@ -151,6 +151,41 @@ namespace Seeker.Output
             return close;
         }
 
+        public static void FloorAdd(ref StackLayout floor, EventHandler settingsHandler)
+        {
+            StackLayout floorLayout = new StackLayout
+            {
+                Orientation = StackOrientation.Vertical,
+                BackgroundColor = Color.Gainsboro,
+                Padding = new Thickness(5),
+            };
+
+            Label settings = new Label
+            {
+                Text = "Изменить настройки",
+                Margin = new Thickness(30, 15, 15, 15),
+            };
+
+            TapGestureRecognizer settingsClick = new TapGestureRecognizer();
+            settingsClick.Tapped += settingsHandler;
+            settings.GestureRecognizers.Add(settingsClick);
+
+            floorLayout.Children.Add(settings);
+
+            floor.Children.Add(floorLayout);
+        }
+
+        public static void SettingsAdd(ref StackLayout settings)
+        {
+            Label dummy = new Label
+            {
+                Text = "Настройки",
+                Margin = new Thickness(30, 15, 15, 15),
+            };
+
+            settings.Children.Add(dummy);
+        }
+
         public static void GamebookDisclaimerAdd(Description gamebook, ref StackLayout options)
         {
             Frame border = new Frame

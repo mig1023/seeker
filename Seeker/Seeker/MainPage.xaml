@@ -19,10 +19,13 @@
             </Grid.RowDefinitions>
 
             <ScrollView x:Name="MainScroll" Grid.Column="0" Grid.Row="0">
-                <StackLayout Padding="30">
-                    <StackLayout x:Name="Text" Orientation="Vertical" HorizontalOptions="FillAndExpand"/>
-                    <StackLayout x:Name="Action" Orientation="Vertical" HorizontalOptions="FillAndExpand"/>
-                    <StackLayout x:Name="Options" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" />
+                <StackLayout>
+                    <StackLayout Padding="30">
+                        <StackLayout x:Name="Text" Orientation="Vertical" HorizontalOptions="FillAndExpand"/>
+                        <StackLayout x:Name="Action" Orientation="Vertical" HorizontalOptions="FillAndExpand"/>
+                        <StackLayout x:Name="Options" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                    <StackLayout x:Name="Floor" Orientation="Vertical" HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
             </ScrollView>
 
