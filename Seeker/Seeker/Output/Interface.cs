@@ -320,22 +320,6 @@ namespace Seeker.Output
             }
         }
 
-        public static double FontSizeBySettings(int value)
-        {
-            switch (value)
-            {
-                case 1:
-                    return Device.GetNamedSize(NamedSize.Small, typeof(Label));
-
-                case 2:
-                default:
-                    return Device.GetNamedSize(NamedSize.Medium, typeof(Label));
-
-                case 3:
-                    return Device.GetNamedSize(NamedSize.Large, typeof(Label));
-            }
-        }
-
         public static ExtendedLabel Text(Text text)
         {
             ExtendedLabel label = Text(text.Content);
@@ -385,7 +369,7 @@ namespace Seeker.Output
             int fontSize = Game.Settings.GetValue("FontSize");
 
             if (fontSize > 0)
-                label.FontSize = FontSizeBySettings(fontSize);
+                label.FontSize = Constants.FONT_SIZE_VALUES[fontSize];
             else if(Game.Data.Constants != null)
                 label.FontSize = FontSize(Game.Data.Constants.GetFontSize());
 

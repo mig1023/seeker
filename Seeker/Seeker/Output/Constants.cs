@@ -26,9 +26,18 @@ namespace Seeker.Output
         public static List<string> FONT_SIZE_SETTING = new List<string>
         {
             "В зависимости от игры",
+            "Очень мелкий",
             "Мелкий",
             "Нормальный",
-            "Крупный"
+            "Крупный",
+        };
+
+        public static Dictionary<int, double> FONT_SIZE_VALUES = new Dictionary<int, double>
+        {
+            [1] = Device.GetNamedSize(NamedSize.Small, typeof(Label)),
+            [2] = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+            [3] = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+            [4] = Constants.BIG_FONT,
         };
     }
 }

@@ -26,14 +26,14 @@ namespace Seeker.Output
             foreach (string option in Constants.FONT_SIZE_SETTING)
                 fontPicker.Items.Add(option);
 
+            fontPicker.HorizontalOptions = LayoutOptions.FillAndExpand;
             fontPicker.SelectedIndex = Game.Settings.GetValue("FontSize");
+            fontPicker.SelectedIndexChanged += fontPicker_SelectedIndexChanged;
 
             fontLayout.Children.Add(fontTitle);
             fontLayout.Children.Add(fontPicker);
 
             settings.Children.Add(fontLayout);
-
-            fontPicker.SelectedIndexChanged += fontPicker_SelectedIndexChanged;
         }
 
         private static void fontPicker_SelectedIndexChanged(object sender, EventArgs e) =>
