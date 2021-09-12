@@ -98,6 +98,7 @@ namespace Seeker.Output
             BackgroundColor = Color.Gainsboro,
             FontFamily = Interface.TextFontFamily(),
             FontSize = Interface.FontSize(Interface.TextFontSize.normal),
+            Margin = new Thickness(0, 15),
         };
 
         public static Button GameOver(string text)
