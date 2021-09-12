@@ -60,13 +60,8 @@ namespace Seeker
             PageClean();
 
             Output.Settings.Add(ref Action);
-
-            Button button = Output.Buttons.CloseSettings();
-            button.Clicked += Settings_Return;
-            Options.Children.Add(button);
+            Options.Children.Add(Output.Buttons.CloseSettings((s, args) => Gamebooks()));
         }
-
-        private void Settings_Return(object sender, EventArgs e) => Gamebooks();
 
         public void Paragraph(int id, bool reload = false, bool loadGame = false, string optionName = "")
         {

@@ -94,14 +94,21 @@ namespace Seeker.Output
             return gamebookButton;
         }
 
-        public static Button CloseSettings() => new Button
+        public static Button CloseSettings(EventHandler onClick)
         {
-            Text = Constants.BACK_LINK,
-            BackgroundColor = Color.Gainsboro,
-            FontFamily = Interface.TextFontFamily(),
-            FontSize = Interface.FontSize(Interface.TextFontSize.normal),
-            Margin = new Thickness(0, 15),
-        };
+            Button button = new Button
+            {
+                Text = Constants.BACK_LINK,
+                BackgroundColor = Color.Gainsboro,
+                FontFamily = Interface.TextFontFamily(),
+                FontSize = Interface.FontSize(Interface.TextFontSize.normal),
+                Margin = new Thickness(0, 15),
+            };
+
+            button.Clicked += onClick;
+
+            return button;
+        }
 
         public static Button GameOver(string text)
         {
