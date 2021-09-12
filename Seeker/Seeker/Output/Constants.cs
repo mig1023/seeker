@@ -39,5 +39,11 @@ namespace Seeker.Output
             [3] = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             [4] = Constants.BIG_FONT,
         };
+
+        public static List<string> JUSTYFY_SETTING = new List<string>
+        {
+            "Выкл",
+            "Вкл",
+        };
     }
 }

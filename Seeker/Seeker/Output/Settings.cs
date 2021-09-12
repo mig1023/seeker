@@ -9,45 +9,17 @@ namespace Seeker.Output
     {
         public static void Add(ref StackLayout settings)
         {
-            StackLayout fontLayout = SettingLayout("Размер шрифта");
-
-            Picker fontPicker = new Picker();
-
-            foreach (string option in Constants.FONT_SIZE_SETTING)
-                fontPicker.Items.Add(option);
-
-            fontPicker.HorizontalOptions = LayoutOptions.FillAndExpand;
-            fontPicker.SelectedIndex = Game.Settings.GetValue("FontSize");
-            fontPicker.SelectedIndexChanged += fontPicker_SelectedIndexChanged;
-
-            fontLayout.Children.Add(fontPicker);
-            settings.Children.Add(fontLayout);
-
-            StackLayout justyfyLayout = SettingLayout("Текст по ширине");
-
-            bool justyfyValue = (Game.Settings.GetValue("Justyfy") == 1);
-
-            Switch justyfy = new Switch
-            {
-                IsToggled = justyfyValue,
-                HorizontalOptions = LayoutOptions.EndAndExpand,
-                VerticalOptions = LayoutOptions.Center,
-                ThumbColor = Color.DarkGray,
-                OnColor = Color.Gray,
-            };
-            justyfy.Toggled += justyfy_Toggled;
-
-            justyfyLayout.Children.Add(justyfy);
-            settings.Children.Add(justyfyLayout);
+            settings.Children.Add(SettingLayout("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING, fontChanged));
+            settings.Children.Add(SettingLayout("Текст по ширине", "Justyfy", Constants.JUSTYFY_SETTING, justyfyChanged));
         }
 
-        private static StackLayout SettingLayout(string settingName)
+        private static StackLayout SettingLayout(string settingName, string settingType, List<string> options, EventHandler onClick)
         {
             StackLayout settingLayout = new StackLayout
             {
                 Orientation = StackOrientation.Horizontal,
-                Padding = new Thickness(5),
-                HorizontalOptions = LayoutOptions.FillAndExpand,
+                Padding = new Thickness(5, 0),
+                HorizontalOptions = LayoutOptions.StartAndExpand,
             };
 
             Label settingTitle = new Label
@@ -58,13 +30,24 @@ namespace Seeker.Output
 
             settingLayout.Children.Add(settingTitle);
 
+            Picker settingPicker = new Picker();
+
+            foreach (string option in options)
+                settingPicker.Items.Add(option);
+
+            settingPicker.HorizontalOptions = LayoutOptions.End;
+            settingPicker.SelectedIndex = Game.Settings.GetValue(settingType);
+            settingPicker.SelectedIndexChanged += onClick;
+
+            settingLayout.Children.Add(settingPicker);
+
             return settingLayout;
         }
 
-        private static void fontPicker_SelectedIndexChanged(object sender, EventArgs e) =>
+        private static void fontChanged(object sender, EventArgs e) =>
             Game.Settings.SetValue("FontSize", (sender as Picker).SelectedIndex);
 
-        private static void justyfy_Toggled(object sender, ToggledEventArgs e) =>
-            Game.Settings.SetValue("Justyfy", (e.Value ? 1 : 0));
+        private static void justyfyChanged(object sender, EventArgs e) =>
+            Game.Settings.SetValue("Justyfy", (sender as Picker).SelectedIndex);
     }
 }
