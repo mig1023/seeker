@@ -32,10 +32,7 @@ namespace Seeker
                 Description gamebook = List.GetDescription(game);
 
                 Options.Children.Add(Output.Interface.GamebookImage(gamebook));
-
-                Button button = Output.Buttons.GamebookButton(gamebook);
-                button.Clicked += Gamebook_Click;
-                Options.Children.Add(button);
+                Options.Children.Add(Output.Buttons.GamebookButton(gamebook, Gamebook_Click));
 
                 Output.Interface.GamebookDisclaimerAdd(gamebook, ref Options);
             }

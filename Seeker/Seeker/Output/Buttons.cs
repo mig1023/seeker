@@ -68,7 +68,7 @@ namespace Seeker.Output
             return SetBorderAndTextColor(additionButton);
         }
 
-        public static Button GamebookButton(Description gamebook)
+        public static Button GamebookButton(Description gamebook, EventHandler onClick)
         {
             Button gamebookButton = new Button
             {
@@ -77,6 +77,8 @@ namespace Seeker.Output
                 FontFamily = Interface.TextFontFamily(),
                 FontSize = Interface.FontSize(Interface.TextFontSize.normal),
             };
+
+            gamebookButton.Clicked += onClick;
 
             if (!String.IsNullOrEmpty(gamebook.BorderColor))
             {
