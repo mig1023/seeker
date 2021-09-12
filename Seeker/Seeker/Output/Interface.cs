@@ -320,6 +320,22 @@ namespace Seeker.Output
             }
         }
 
+        public static double FontSizeBySettings(int value)
+        {
+            switch (value)
+            {
+                case 1:
+                    return Device.GetNamedSize(NamedSize.Small, typeof(Label));
+
+                case 2:
+                default:
+                    return Device.GetNamedSize(NamedSize.Medium, typeof(Label));
+
+                case 3:
+                    return Device.GetNamedSize(NamedSize.Large, typeof(Label));
+            }
+        }
+
         public static ExtendedLabel Text(Text text)
         {
             ExtendedLabel label = Text(text.Content);
@@ -364,9 +380,14 @@ namespace Seeker.Output
                     label.LineHeight = Game.Data.Constants.GetLineHeight() ?? -1;
                 else
                     label.LineHeight = Constants.LINE_HEIGHT;
-
-                label.FontSize = FontSize(Game.Data.Constants.GetFontSize());
             }
+
+            int fontSize = Game.Settings.GetValue("FontSize");
+
+            if (fontSize > 0)
+                label.FontSize = FontSizeBySettings(fontSize);
+            else if(Game.Data.Constants != null)
+                label.FontSize = FontSize(Game.Data.Constants.GetFontSize());
 
             if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
                 label.TextColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));

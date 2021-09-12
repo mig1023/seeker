@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace Seeker.Output
 {
@@ -21,5 +22,13 @@ namespace Seeker.Output
         public static double REPRESENT_PADDING = -10;
         public static double SPLITTER_HIGHT = 25;
         public static double DISCLAIMER_BORDER = 8;
+
+        public static List<string> FONT_SIZE_SETTING = new List<string>
+        {
+            "В зависимости от игры",
+            "Мелкий",
+            "Нормальный",
+            "Крупный"
+        };
     }
 }

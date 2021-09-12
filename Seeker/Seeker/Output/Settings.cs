@@ -23,10 +23,8 @@ namespace Seeker.Output
 
             Picker fontPicker = new Picker();
 
-            fontPicker.Items.Add("По-умолчанию");
-            fontPicker.Items.Add("Мелкий");
-            fontPicker.Items.Add("Нормальный");
-            fontPicker.Items.Add("Крупный");
+            foreach (string option in Constants.FONT_SIZE_SETTING)
+                fontPicker.Items.Add(option);
 
             fontPicker.SelectedIndex = Game.Settings.GetValue("FontSize");
 
