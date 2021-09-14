@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             [ButtonTypes.Action] = "#a92605",
             [ButtonTypes.Option] = "#878787",
             [ButtonTypes.Continue] = "#db8784",
+            [ButtonTypes.System] = "#f2f2f2",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
