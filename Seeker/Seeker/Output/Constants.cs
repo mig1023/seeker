@@ -42,6 +42,18 @@ namespace Seeker.Output
             [TextFontSize.big] = Font(NamedSize.Large),
         };
 
+        public static List<string> FONT_TYPE_SETTING = new List<string>
+        {
+            "Yanone",
+            "Roboto",
+        };
+
+        public static Dictionary<int, string> FONT_TYPE_VALUES = new Dictionary<int, string>
+        {
+            [0] = "YanoneFont",
+            [1] = "RobotoFont",
+        };
+
         public static List<string> FONT_SIZE_SETTING = new List<string>
         {
             "Настройки игры",

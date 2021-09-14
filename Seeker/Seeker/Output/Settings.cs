@@ -18,6 +18,7 @@ namespace Seeker.Output
                 }
             };
 
+            SettingRow("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING, fontTypeChanged, ref settingGrid);
             SettingRow("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING, fontChanged, ref settingGrid);
             SettingRow("Текст по ширине", "Justyfy", Constants.JUSTYFY_SETTING, justyfyChanged, ref settingGrid);
             SettingRow("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING, optionChanged, ref settingGrid);
@@ -57,6 +58,9 @@ namespace Seeker.Output
 
             settingGrid.Children.Add(settingPicker, 1, currentRow);
         }
+
+        private static void fontTypeChanged(object sender, EventArgs e) =>
+            Game.Settings.SetValue("FontType", (sender as Picker).SelectedIndex);
 
         private static void fontChanged(object sender, EventArgs e) =>
             Game.Settings.SetValue("FontSize", (sender as Picker).SelectedIndex);

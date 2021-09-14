@@ -290,8 +290,11 @@ namespace Seeker.Output
         public static string TextFontFamily(bool bold = false, bool italic = false, bool standart = false)
         {
             string font = String.Empty;
+            int fontSetting = Game.Settings.GetValue("FontType");
 
-            if (standart || (Game.Data.Constants == null) || String.IsNullOrEmpty(Game.Data.Constants.GetFont()))
+            if (fontSetting > 0)
+                font = String.Format("{0}{1}", Constants.FONT_TYPE_VALUES[fontSetting], (bold ? "Bold" : String.Empty));
+            else if (standart || (Game.Data.Constants == null) || String.IsNullOrEmpty(Game.Data.Constants.GetFont()))
                 font = (bold ? "YanoneFontBold" : "YanoneFont");
             else
                 font = String.Format("{0}{1}", Game.Data.Constants.GetFont(), (bold ? "Bold" : String.Empty));
@@ -307,6 +310,9 @@ namespace Seeker.Output
 
         public static double FontSize(TextFontSize size, bool italic = false)
         {
+            if (Game.Settings.GetValue("FontType") == 1)
+                italic = false;
+
             if (italic && Constants.FontSizeItalic.ContainsKey(size))
                 return Constants.FontSizeItalic[size];
             else if (!italic && Constants.FontSize.ContainsKey(size))
@@ -315,7 +321,17 @@ namespace Seeker.Output
                 return Font(NamedSize.Medium);
         }
 
-        public static double Font(NamedSize namedSize) => Device.GetNamedSize(namedSize, typeof(Label));
+        public static double Font(NamedSize namedSize)
+        {
+            if (namedSize == NamedSize.Default)
+            {
+                bool robotoFont = (Game.Settings.GetValue("FontType") == 1);
+                NamedSize size = (robotoFont ? NamedSize.Medium : NamedSize.Large);
+                return Device.GetNamedSize(size, typeof(Label));
+            }
+            else
+                return Device.GetNamedSize(namedSize, typeof(Label));
+        }
 
         public static ExtendedLabel Text(Text text)
         {

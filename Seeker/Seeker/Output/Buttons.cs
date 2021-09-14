@@ -19,7 +19,7 @@ namespace Seeker.Output
                 IsEnabled = enabled,
                 BackgroundColor = (enabled ? Color.FromHex(color) : Color.Gray),
                 FontFamily = Interface.TextFontFamily(standart: true),
-                FontSize = Interface.Font(NamedSize.Large),
+                FontSize = Interface.Font(NamedSize.Default),
             };
 
             actionButton.Clicked += onClick;
@@ -51,7 +51,7 @@ namespace Seeker.Output
                 BackgroundColor = Color.FromHex(color),
                 IsEnabled = isEnabled,
                 FontFamily = Interface.TextFontFamily(standart: true),
-                FontSize = Interface.Font(NamedSize.Large),
+                FontSize = Interface.Font(NamedSize.Default),
                 IsVisible = String.IsNullOrEmpty(option.Input),
             };
 
@@ -69,7 +69,7 @@ namespace Seeker.Output
                 Text = text,
                 BackgroundColor = (String.IsNullOrEmpty(color) ? Color.LightGray : Color.FromHex(color)),
                 FontFamily = Interface.TextFontFamily(standart: true),
-                FontSize = Interface.Font(NamedSize.Large),
+                FontSize = Interface.Font(NamedSize.Default),
             };
 
             additionButton.Clicked += onClick;
@@ -84,7 +84,7 @@ namespace Seeker.Output
                 Text = gamebook.Title,
                 BackgroundColor = Color.FromHex(gamebook.BookColor),
                 FontFamily = Interface.TextFontFamily(),
-                FontSize = Interface.FontSize(Interface.TextFontSize.normal),
+                FontSize = Interface.Font(NamedSize.Default),
             };
 
             gamebookButton.Clicked += onClick;
@@ -110,7 +110,7 @@ namespace Seeker.Output
                 Text = Constants.BACK_LINK,
                 BackgroundColor = Color.Gainsboro,
                 FontFamily = Interface.TextFontFamily(),
-                FontSize = Interface.FontSize(Interface.TextFontSize.normal),
+                FontSize = Interface.Font(NamedSize.Default),
                 Margin = new Thickness(0, 15),
             };
 
@@ -134,7 +134,7 @@ namespace Seeker.Output
                 TextColor = Xamarin.Forms.Color.White,
                 BackgroundColor = color,
                 FontFamily = Interface.TextFontFamily(),
-                FontSize = Interface.FontSize(Interface.TextFontSize.normal),
+                FontSize = Interface.Font(NamedSize.Default),
             };
 
             gameoverButton.Clicked += onClick;
