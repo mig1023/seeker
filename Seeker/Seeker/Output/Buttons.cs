@@ -8,7 +8,7 @@ namespace Seeker.Output
     {
         public enum ButtonTypes { Main, Action, Option, Font, Border, Continue }
 
-        public static Button Action(string actionName, bool enabled = true)
+        public static Button Action(string actionName, EventHandler onClick, bool enabled = true)
         {
             string color = Game.Data.Constants.GetButtonsColor(ButtonTypes.Action);
 
@@ -21,6 +21,8 @@ namespace Seeker.Output
                 FontFamily = Interface.TextFontFamily(standart: true),
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Button)),
             };
+
+            actionButton.Clicked += onClick;
 
             return SetBorderAndTextColor(actionButton);
         }

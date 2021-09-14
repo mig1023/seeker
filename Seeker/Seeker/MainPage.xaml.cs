@@ -128,9 +128,7 @@ namespace Seeker
                         foreach (View enemy in Output.Interface.Represent(action.Do(out _, "Representer")))
                             actionPlace.Children.Add(enemy);
 
-                        Button button = Output.Buttons.Action(action.Button, action.IsButtonEnabled());
-                        button.Clicked += Action_Click;
-                        actionPlace.Children.Add(button);
+                        actionPlace.Children.Add(Output.Buttons.Action(action.Button, Action_Click, action.IsButtonEnabled()));
 
                         Action.Children.Add(actionPlace);
 
