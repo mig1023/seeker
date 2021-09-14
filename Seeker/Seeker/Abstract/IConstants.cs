@@ -12,8 +12,6 @@ namespace Seeker.Abstract
 
         Output.Interface.TextFontSize GetFontSize();
 
-        double? GetLineHeight();
-
         List<int> GetParagraphsWithoutStatuses();
 
         bool ShowDisabledOption();

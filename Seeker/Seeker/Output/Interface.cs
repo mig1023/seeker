@@ -362,18 +362,11 @@ namespace Seeker.Output
                 Text = Regex.Unescape(text),
                 FontFamily = TextFontFamily(),
                 JustifyText = justyfy,
+                LineHeight = Constants.LINE_HEIGHT,
             };
 
             if (defaultParams)
                 return label;
-
-            if (Game.Data.Constants != null)
-            {
-                if (Game.Data.Constants.GetLineHeight() != null)
-                    label.LineHeight = Game.Data.Constants.GetLineHeight() ?? -1;
-                else
-                    label.LineHeight = Constants.LINE_HEIGHT;
-            }
 
             int fontSize = Game.Settings.GetValue("FontSize");
 

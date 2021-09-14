@@ -19,8 +19,6 @@ namespace Seeker.Prototypes
 
         public virtual Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.normal;
 
-        public virtual double? GetLineHeight() => null;
-
         public virtual List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
 
         public virtual bool ShowDisabledOption() => false;
