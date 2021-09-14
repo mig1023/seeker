@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Xamarin.Forms;
+using static Seeker.Output.Interface;
 
 namespace Seeker.Output
 {
@@ -22,6 +23,24 @@ namespace Seeker.Output
         public static double REPRESENT_PADDING = -10;
         public static double SPLITTER_HIGHT = 25;
         public static double DISCLAIMER_BORDER = 8;
+
+        public static Dictionary<TextFontSize, double> FontSize = new Dictionary<TextFontSize, double>
+        {
+            [TextFontSize.micro] = Font(NamedSize.Micro),
+            [TextFontSize.small] = Font(NamedSize.Small),
+            [TextFontSize.little] = Font(NamedSize.Medium),
+            [TextFontSize.normal] = Font(NamedSize.Large),
+            [TextFontSize.big] = BIG_FONT,
+        };
+
+        public static Dictionary<TextFontSize, double> FontSizeItalic = new Dictionary<TextFontSize, double>
+        {
+            [TextFontSize.micro] = Font(NamedSize.Micro),
+            [TextFontSize.small] = Font(NamedSize.Micro),
+            [TextFontSize.little] = Font(NamedSize.Small),
+            [TextFontSize.normal] = Font(NamedSize.Medium),
+            [TextFontSize.big] = Font(NamedSize.Large),
+        };
 
         public static List<string> FONT_SIZE_SETTING = new List<string>
         {

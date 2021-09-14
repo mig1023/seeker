@@ -305,26 +305,14 @@ namespace Seeker.Output
             return fontFamily.ToString();
         }
 
-        public static double FontSize(TextFontSize size)
+        public static double FontSize(TextFontSize size, bool italic = false)
         {
-            switch (size)
-            {
-                case TextFontSize.normal:
-                    return Font(NamedSize.Large);
-
-                case TextFontSize.small:
-                    return Font(NamedSize.Small);
-
-                case TextFontSize.micro:
-                    return Font(NamedSize.Micro);
-
-                case TextFontSize.big:
-                    return Constants.BIG_FONT;
-
-                case TextFontSize.little:
-                default:
-                    return Font(NamedSize.Medium);
-            }
+            if (italic && Constants.FontSizeItalic.ContainsKey(size))
+                return Constants.FontSizeItalic[size];
+            else if (!italic && Constants.FontSize.ContainsKey(size))
+                return Constants.FontSize[size];
+            else
+                return Font(NamedSize.Medium);
         }
 
         public static double Font(NamedSize namedSize) => Device.GetNamedSize(namedSize, typeof(Label));
@@ -332,21 +320,13 @@ namespace Seeker.Output
         public static ExtendedLabel Text(Text text)
         {
             ExtendedLabel label = Text(text.Content);
-
-            if (text.Bold)
-                label.FontFamily = TextFontFamily(bold: true);
-
-            else if (text.Italic)
-            {
-                label.FontFamily = TextFontFamily(italic: true);
-                label.FontSize = FontSize(TextFontSize.little);
-            }
+            label.FontFamily = TextFontFamily(bold: text.Bold, italic: text.Italic);
 
             if (text.Alignment == "Center")
                 label.HorizontalTextAlignment = TextAlignment.Center;
 
             if (text.Size != TextFontSize.nope)
-                label.FontSize = FontSize(text.Size);
+                label.FontSize = FontSize(text.Size, italic: text.Italic);
 
             return label;
         }
