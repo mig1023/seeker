@@ -9,40 +9,53 @@ namespace Seeker.Output
     {
         public static void Add(ref StackLayout settings)
         {
-            settings.Children.Add(SettingLayout("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING, fontChanged));
-            settings.Children.Add(SettingLayout("Текст по ширине", "Justyfy", Constants.JUSTYFY_SETTING, justyfyChanged));
-            settings.Children.Add(SettingLayout("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING, optionChanged));
+            Grid settingGrid = new Grid
+            {
+                ColumnDefinitions =
+                {
+                    new ColumnDefinition(),
+                    new ColumnDefinition(),
+                }
+            };
+
+            SettingRow("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING, fontChanged, ref settingGrid);
+            SettingRow("Текст по ширине", "Justyfy", Constants.JUSTYFY_SETTING, justyfyChanged, ref settingGrid);
+            SettingRow("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING, optionChanged, ref settingGrid);
+
+            settings.Children.Add(settingGrid);
         }
 
-        private static StackLayout SettingLayout(string settingName, string settingType, List<string> options, EventHandler onClick)
+        private static void SettingRow(string settingName, string settingType, List<string> options,
+            EventHandler onClick, ref Grid settingGrid)
         {
-            StackLayout settingLayout = new StackLayout
-            {
-                Orientation = StackOrientation.Horizontal,
-                Padding = new Thickness(5, 0),
-                HorizontalOptions = LayoutOptions.StartAndExpand,
-            };
+            settingGrid.RowDefinitions.Add(new RowDefinition());
+
+            int currentRow = settingGrid.RowDefinitions.Count - 1;
 
             Label settingTitle = new Label
             {
-                Text = settingName,
-                VerticalTextAlignment = TextAlignment.Center,
+                Text = String.Format("{0}:", settingName),
+                VerticalOptions = LayoutOptions.Center,
+                FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)),
             };
 
-            settingLayout.Children.Add(settingTitle);
+            settingGrid.Children.Add(settingTitle, 0, currentRow);
 
-            Picker settingPicker = new Picker();
+            Picker settingPicker = new Picker
+            {
+                HorizontalOptions = LayoutOptions.End,
+                VerticalOptions = LayoutOptions.Center,
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+            };
+            
+            settingPicker.SelectedIndexChanged += onClick;
 
             foreach (string option in options)
                 settingPicker.Items.Add(option);
 
-            settingPicker.HorizontalOptions = LayoutOptions.End;
             settingPicker.SelectedIndex = Game.Settings.GetValue(settingType);
-            settingPicker.SelectedIndexChanged += onClick;
 
-            settingLayout.Children.Add(settingPicker);
-
-            return settingLayout;
+            settingGrid.Children.Add(settingPicker, 1, currentRow);
         }
 
         private static void fontChanged(object sender, EventArgs e) =>

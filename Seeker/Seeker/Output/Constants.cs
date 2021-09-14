@@ -25,7 +25,7 @@ namespace Seeker.Output
 
         public static List<string> FONT_SIZE_SETTING = new List<string>
         {
-            "В зависимости от игры",
+            "Настройки игры",
             "Очень мелкий",
             "Мелкий",
             "Нормальный",
@@ -48,9 +48,9 @@ namespace Seeker.Output
 
         public static List<string> OPTION_SETTING = new List<string>
         {
-            "В зависимости от игры",
-            "Всегда отображать",
-            "Всегда скрывать",
+            "Настройки игры",
+            "Отображать",
+            "Скрывать",
         };
     }
 }
