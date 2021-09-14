@@ -22,6 +22,7 @@ namespace Seeker.Gamebook.RockOfTerror
             [ColorTypes.Font] = "#FFFFFF",
             [ColorTypes.StatusBar] = "#151515",
             [ColorTypes.BookColor] = "#000000",
+            [ColorTypes.SystemFont] = "#b2b2b2",
         };
 
         public static Links GetLinks() => new Links
