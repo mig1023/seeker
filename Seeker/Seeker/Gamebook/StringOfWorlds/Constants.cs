@@ -20,7 +20,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public override string GetButtonsColor(ButtonTypes type)
         {
-            if ((type == ButtonTypes.Border) || (type == ButtonTypes.Continue))
+            if ((type == ButtonTypes.Border) || (type == ButtonTypes.Continue) || (type == ButtonTypes.System))
                 return String.Empty;
 
             else if (type == ButtonTypes.Font)
