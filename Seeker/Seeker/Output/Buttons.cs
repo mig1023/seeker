@@ -27,6 +27,12 @@ namespace Seeker.Output
             return SetBorderAndTextColor(actionButton);
         }
 
+        public static void EmptyOptionTextFuse(Game.Option option)
+        {
+            if (String.IsNullOrEmpty(option.Text))
+                option.Text = (option.Destination == 0 ? "Начать сначала" : "Далее");
+        }
+
         public static Button Option(Game.Option option, EventHandler onClick)
         {
             bool optionColor = !String.IsNullOrEmpty(option.OnlyIf) && !option.OnlyIf.Contains(">") && !option.OnlyIf.Contains("<");
@@ -38,9 +44,6 @@ namespace Seeker.Output
                 Buttons.ButtonTypes.Option : Buttons.ButtonTypes.Main);
 
             bool isEnabled = !(!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf));
-
-            if (String.IsNullOrEmpty(option.Text))
-                option.Text = (option.Destination == 0 ? "Начать сначала" : "Далее");
 
             Button optionButton = new Button
             {

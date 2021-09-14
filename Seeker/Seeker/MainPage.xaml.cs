@@ -233,6 +233,8 @@ namespace Seeker
 
         private Button AddOptionButton(Game.Option option, ref bool gameOver)
         {
+            Output.Buttons.EmptyOptionTextFuse(option);
+
             Game.Router.AddDestination(option.Text, option.Destination, option.Do);
             gameOver = (option.Destination == 0);
 
