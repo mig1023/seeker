@@ -25,7 +25,7 @@
                         <StackLayout x:Name="Action" Orientation="Vertical" HorizontalOptions="FillAndExpand"/>
                         <StackLayout x:Name="Options" Orientation="Vertical" Spacing="5" HorizontalOptions="FillAndExpand" />
                     </StackLayout>
-                    <StackLayout x:Name="Floor" Orientation="Vertical" HorizontalOptions="FillAndExpand"/>
+                    <StackLayout x:Name="Footer" Orientation="Vertical" HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
             </ScrollView>
 

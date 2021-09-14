@@ -37,7 +37,7 @@ namespace Seeker
                 Output.Interface.GamebookDisclaimerAdd(gamebook, ref Options);
             }
 
-            Output.Interface.Floor(ref Floor, Settings_Click);
+            Output.Interface.Footer(ref Footer, Settings_Click);
 
             UpdateStatus();
         }
@@ -374,7 +374,7 @@ namespace Seeker
             Text.Children.Clear();
             Action.Children.Clear();
             Options.Children.Clear();
-            Floor.Children.Clear();
+            Footer.Children.Clear();
         }
     }
 }

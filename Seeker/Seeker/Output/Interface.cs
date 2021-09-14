@@ -151,9 +151,9 @@ namespace Seeker.Output
             return close;
         }
 
-        public static void Floor(ref StackLayout floor, EventHandler settingsHandler)
+        public static void Footer(ref StackLayout footer, EventHandler settingsHandler)
         {
-            StackLayout floorLayout = new StackLayout
+            StackLayout footerLayout = new StackLayout
             {
                 Orientation = StackOrientation.Vertical,
                 BackgroundColor = Color.Gainsboro,
@@ -170,9 +170,9 @@ namespace Seeker.Output
             settingsClick.Tapped += settingsHandler;
             settings.GestureRecognizers.Add(settingsClick);
 
-            floorLayout.Children.Add(settings);
+            footerLayout.Children.Add(settings);
 
-            floor.Children.Add(floorLayout);
+            footer.Children.Add(footerLayout);
         }
 
         public static void GamebookDisclaimerAdd(Description gamebook, ref StackLayout options)
