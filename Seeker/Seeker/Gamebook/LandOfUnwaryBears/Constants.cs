@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.LandOfUnwaryBears
         public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#9e003a",
+            [ButtonTypes.System] = "#f9f9f9",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
