@@ -220,15 +220,10 @@ namespace Seeker
 
         private Button AddOptionButton(Game.Option option, ref bool gameOver)
         {
-            Button button = Output.Buttons.Option(option);
-
             Game.Router.AddDestination(option.Text, option.Destination, option.Do);
-
             gameOver = (option.Destination == 0);
 
-            button.Clicked += Option_Click;
-
-            return button;
+            return Output.Buttons.Option(option, Option_Click);
         }
 
         private void AddAdditionalButton(string name, EventHandler eventHandler) =>

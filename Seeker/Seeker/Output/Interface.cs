@@ -37,8 +37,6 @@ namespace Seeker.Output
             return field;
         }
             
-
-
         public static List<Label> StatusBar(List<string> statusLines)
         {
             List<Label> statusLabels = new List<Label>();

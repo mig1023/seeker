@@ -27,7 +27,7 @@ namespace Seeker.Output
             return SetBorderAndTextColor(actionButton);
         }
 
-        public static Button Option(Game.Option option)
+        public static Button Option(Game.Option option, EventHandler onClick)
         {
             bool optionColor = !String.IsNullOrEmpty(option.OnlyIf) && !option.OnlyIf.Contains(">") && !option.OnlyIf.Contains("<");
 
@@ -51,6 +51,8 @@ namespace Seeker.Output
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                 IsVisible = String.IsNullOrEmpty(option.Input),
             };
+
+            optionButton.Clicked += onClick;
 
             return SetBorderAndTextColor(optionButton);
         }
