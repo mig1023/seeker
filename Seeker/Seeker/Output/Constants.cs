@@ -34,9 +34,9 @@ namespace Seeker.Output
 
         public static Dictionary<int, double> FONT_SIZE_VALUES = new Dictionary<int, double>
         {
-            [1] = Device.GetNamedSize(NamedSize.Small, typeof(Label)),
-            [2] = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-            [3] = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+            [1] = Interface.Font(NamedSize.Small),
+            [2] = Interface.Font(NamedSize.Medium),
+            [3] = Interface.Font(NamedSize.Large),
             [4] = Constants.BIG_FONT,
         };
 

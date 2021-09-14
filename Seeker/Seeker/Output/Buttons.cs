@@ -19,7 +19,7 @@ namespace Seeker.Output
                 IsEnabled = enabled,
                 BackgroundColor = (enabled ? Color.FromHex(color) : Color.Gray),
                 FontFamily = Interface.TextFontFamily(standart: true),
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Button)),
+                FontSize = Interface.Font(NamedSize.Large),
             };
 
             actionButton.Clicked += onClick;
@@ -48,7 +48,7 @@ namespace Seeker.Output
                 BackgroundColor = Color.FromHex(color),
                 IsEnabled = isEnabled,
                 FontFamily = Interface.TextFontFamily(standart: true),
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                FontSize = Interface.Font(NamedSize.Large),
                 IsVisible = String.IsNullOrEmpty(option.Input),
             };
 
@@ -66,7 +66,7 @@ namespace Seeker.Output
                 Text = text,
                 BackgroundColor = (String.IsNullOrEmpty(color) ? Color.LightGray : Color.FromHex(color)),
                 FontFamily = Interface.TextFontFamily(standart: true),
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                FontSize = Interface.Font(NamedSize.Large),
             };
 
             additionButton.Clicked += onClick;

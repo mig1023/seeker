@@ -36,7 +36,7 @@ namespace Seeker.Output
             {
                 Text = String.Format("{0}:", settingName),
                 VerticalOptions = LayoutOptions.Center,
-                FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)),
+                FontSize = Interface.Font(NamedSize.Small),
             };
 
             settingGrid.Children.Add(settingTitle, 0, currentRow);
@@ -45,7 +45,7 @@ namespace Seeker.Output
             {
                 HorizontalOptions = LayoutOptions.End,
                 VerticalOptions = LayoutOptions.Center,
-                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                FontSize = Interface.Font(NamedSize.Medium),
             };
             
             settingPicker.SelectedIndexChanged += onClick;

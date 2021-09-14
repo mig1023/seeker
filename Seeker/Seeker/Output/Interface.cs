@@ -85,7 +85,7 @@ namespace Seeker.Output
             {
                 Text = disclaimerText,
                 HorizontalTextAlignment = TextAlignment.Start,
-                FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
+                FontSize = Font(NamedSize.Micro),
             };
 
             return disclaimer;
@@ -97,7 +97,7 @@ namespace Seeker.Output
             {
                 Text = Constants.DISCLAIMER_LINK,
                 HorizontalTextAlignment = TextAlignment.Start,
-                FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
+                FontSize = Font(NamedSize.Micro),
                 TextColor = Color.FromHex(color),
                 FontAttributes = FontAttributes.Bold,
             };
@@ -127,7 +127,7 @@ namespace Seeker.Output
                 discliamerText.FontAttributes = FontAttributes.Bold;
 
             if (little)
-                discliamerText.FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label));
+                discliamerText.FontSize = Font(NamedSize.Micro);
 
             return LinkedDisclaimerElement(discliamerText, click);
         }
@@ -310,22 +310,24 @@ namespace Seeker.Output
             switch (size)
             {
                 case TextFontSize.normal:
-                    return Device.GetNamedSize(NamedSize.Large, typeof(Label));
+                    return Font(NamedSize.Large);
 
                 case TextFontSize.small:
-                    return Device.GetNamedSize(NamedSize.Small, typeof(Label));
+                    return Font(NamedSize.Small);
 
                 case TextFontSize.micro:
-                    return Device.GetNamedSize(NamedSize.Micro, typeof(Label));
+                    return Font(NamedSize.Micro);
 
                 case TextFontSize.big:
                     return Constants.BIG_FONT;
 
                 case TextFontSize.little:
                 default:
-                    return Device.GetNamedSize(NamedSize.Medium, typeof(Label));
+                    return Font(NamedSize.Medium);
             }
         }
+
+        public static double Font(NamedSize namedSize) => Device.GetNamedSize(namedSize, typeof(Label));
 
         public static ExtendedLabel Text(Text text)
         {
