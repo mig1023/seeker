@@ -27,8 +27,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
 
-        public override double? GetLineHeight() => 1.20;
-
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 687, 714, 715, 701, 702 };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 714, 715, 716 };
