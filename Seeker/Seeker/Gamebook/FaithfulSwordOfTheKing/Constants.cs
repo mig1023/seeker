@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             [ButtonTypes.Action] = "#ba2020",
             [ButtonTypes.Option] = "#dbabab",
             [ButtonTypes.Continue] = "#dbabab",
+            [ButtonTypes.System] = "#f0dddd",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
