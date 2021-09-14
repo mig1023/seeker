@@ -164,11 +164,8 @@ namespace Seeker
             }
 
             if ((id == Game.Data.StartParagraph) && Game.Continue.IsGameSaved())
-            {
-                Button button = Output.Buttons.Additional("Продолжить предыдущую игру");
-                button.Clicked += (object sender, EventArgs e) => Paragraph(Game.Continue.Load(), loadGame: true);
-                Options.Children.Add(button);
-            }
+                Options.Children.Add(Output.Buttons.Additional("Продолжить предыдущую игру", Continue_Click));
+
             else if ((id > Game.Data.StartParagraph) && (Game.Data.Actions != null) && !(gameOver && (optionCount == 1)))
             {
                 foreach (string buttonName in Game.Healing.List())
@@ -238,14 +235,8 @@ namespace Seeker
             return button;
         }
 
-        private void AddAdditionalButton(string name, EventHandler eventHandler)
-        {
-            Button button = Output.Buttons.Additional(name);
-
-            button.Clicked += eventHandler;
-
-            Options.Children.Add(button);
-        }
+        private void AddAdditionalButton(string name, EventHandler eventHandler) =>
+            Options.Children.Add(Output.Buttons.Additional(name, eventHandler));
 
         private void UpdateStatus()
         {
@@ -366,6 +357,8 @@ namespace Seeker
 
         private void Option_Click(object sender, EventArgs e) =>
             Paragraph(Game.Router.FindDestination((sender as Button).Text), optionName: (sender as Button).Text);
+
+        private void Continue_Click(object sender, EventArgs e) => Paragraph(Game.Continue.Load(), loadGame: true);
 
         private void PageClean()
         {
