@@ -23,12 +23,21 @@ namespace Seeker.Output
             Aspect = Aspect.AspectFit,
         };
 
-        public static Entry Field(object binding) => new Entry
+        public static Entry Field(object binding, EventHandler<TextChangedEventArgs> changed)
         {
-            Placeholder = "Введите свой ответ",
-            BindingContext = binding,
-            FontFamily = Output.Interface.TextFontFamily(),
-        };
+            Entry field = new Entry
+            {
+                Placeholder = "Введите свой ответ",
+                BindingContext = binding,
+                FontFamily = Output.Interface.TextFontFamily(),
+            };
+
+            field.TextChanged += changed;
+
+            return field;
+        }
+            
+
 
         public static List<Label> StatusBar(List<string> statusLines)
         {

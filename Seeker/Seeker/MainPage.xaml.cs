@@ -201,13 +201,9 @@ namespace Seeker
 
         private Entry AddInputField(Game.Option option, object button)
         {
-            Entry field = Output.Interface.Field(button);
-
-            field.TextChanged += InputChange;
-
             Game.Router.InputResponse = option.Input;
 
-            return field;
+            return Output.Interface.Field(button, InputChange);
         }
 
         private void InputChange(object sender, EventArgs e)
