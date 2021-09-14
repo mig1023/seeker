@@ -23,6 +23,8 @@ namespace Seeker.Output
         public static double REPRESENT_PADDING = -10;
         public static double SPLITTER_HIGHT = 25;
         public static double DISCLAIMER_BORDER = 8;
+        public static double SYS_MENU_SPACING = 4;
+        public static double SYS_MENU_HIGHT = 25;
 
         public static Dictionary<TextFontSize, double> FontSize = new Dictionary<TextFontSize, double>
         {
@@ -82,6 +84,12 @@ namespace Seeker.Output
             "Настройки игры",
             "Отображать",
             "Скрывать",
+        };
+
+        public static List<string> MENU_SETTING = new List<string>
+        {
+            "Выкл",
+            "Вкл",
         };
     }
 }

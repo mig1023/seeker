@@ -7,8 +7,8 @@ namespace Seeker.Game
     {
         public enum ColorTypes
         {
-            Background, Font, ActionBox, StatusBar, StatusFont, StatusBorder,
-            AdditionalStatus, AdditionalFont, BookColor, BookFontColor, BookBorderColor,
+            Background, Font, ActionBox, StatusBar, StatusFont, StatusBorder, AdditionalStatus,
+            AdditionalFont, BookColor, BookFontColor, BookBorderColor, SystemFont,
         }
 
         public const int StartParagraph = 0;

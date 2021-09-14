@@ -6,7 +6,7 @@ namespace Seeker.Output
 {
     class Buttons
     {
-        public enum ButtonTypes { Main, Action, Option, Font, Border, Continue }
+        public enum ButtonTypes { Main, Action, Option, Font, Border, Continue, System }
 
         public static Button Action(string actionName, EventHandler onClick, bool enabled = true)
         {
@@ -77,6 +77,27 @@ namespace Seeker.Output
             return SetBorderAndTextColor(additionButton);
         }
 
+        public static Button System(string text, EventHandler onClick)
+        {
+            string defaultColor = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
+            string systemColor = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.System);
+            string color = (String.IsNullOrEmpty(systemColor) ? defaultColor : systemColor);
+
+            Button systemButton = new Button
+            {
+                Text = text,
+                BackgroundColor = (String.IsNullOrEmpty(color) ? Color.LightGray : Color.FromHex(color)),
+                FontFamily = Interface.TextFontFamily(standart: true),
+                FontSize = Device.GetNamedSize(NamedSize.Micro, typeof(Label)),
+                Padding = 0,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+            };
+
+            systemButton.Clicked += onClick;
+
+            return SetBorderAndTextColor(systemButton, system: true);
+        }
+
         public static Button GamebookButton(Description gamebook, EventHandler onClick)
         {
             Button gamebookButton = new Button
@@ -142,18 +163,29 @@ namespace Seeker.Output
             return SetBorderAndTextColor(gameoverButton);
         }
 
-        public static Button SetBorderAndTextColor(Button button)
+        public static Button SetBorderAndTextColor(Button button, bool system = false)
         {
-            if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border)))
+            if (!system)
             {
-                button.BorderColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border));
-                button.BorderWidth = Constants.BORDER_WIDTH;
+                if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border)))
+                {
+                    button.BorderColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border));
+                    button.BorderWidth = Constants.BORDER_WIDTH;
+                }
+                else
+                    button.BorderWidth = 0;
+            }
+          
+            if (system)
+            {
+                string systemFont = Game.Data.Constants.GetColor(Game.Data.ColorTypes.SystemFont);
+                button.TextColor = (String.IsNullOrEmpty(systemFont) ? Color.Black : Color.FromHex(systemFont));
             }
             else
-                button.BorderWidth = 0;
-
-            string font = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Font);
-            button.TextColor = (String.IsNullOrEmpty(font) ? Color.White : Color.FromHex(font));
+            {
+                string font = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Font);
+                button.TextColor = (String.IsNullOrEmpty(font) ? Color.White : Color.FromHex(font));
+            }
 
             return button;
         }

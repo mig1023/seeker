@@ -16,7 +16,7 @@ namespace Seeker
             Gamebooks();
         }
 
-        public void Gamebooks()
+        public void Gamebooks(bool toMain = false)
         {
             Game.Data.Clean();
             PageClean();
@@ -40,6 +40,9 @@ namespace Seeker
             Output.Interface.Footer(ref Footer, Settings_Click);
 
             UpdateStatus();
+
+            if (toMain)
+                MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
         }
 
         private void Gamebook_Click(object sender, EventArgs e)
@@ -60,7 +63,7 @@ namespace Seeker
             PageClean();
 
             Output.Settings.Add(ref Action);
-            Options.Children.Add(Output.Buttons.CloseSettings((s, args) => Gamebooks()));
+            Options.Children.Add(Output.Buttons.CloseSettings((s, args) => Gamebooks(toMain: true)));
         }
 
         public void Paragraph(int id, bool reload = false, bool loadGame = false, string optionName = "")
@@ -175,6 +178,9 @@ namespace Seeker
                     AddAdditionalButton(buttonName, StaticButton_Click);
             }
 
+            if (Game.Settings.GetValue("SystemMenu") > 0)
+                Options.Children.Add(SystemMenu());
+
             if (!reload)
                 MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
 
@@ -217,6 +223,19 @@ namespace Seeker
             Game.Router.InputResponse = option.Input;
 
             return Output.Interface.Field(button, InputChange);
+        }
+
+        public StackLayout SystemMenu()
+        {
+            StackLayout systemLayout = Output.Interface.SystemMenu();
+
+            systemLayout.Children.Add(Output.Buttons.System("Выйти",
+                (object sender, EventArgs e) => System.Diagnostics.Process.GetCurrentProcess().Kill()));
+
+            systemLayout.Children.Add(Output.Buttons.System("На главную",
+                (object sender, EventArgs e) => this.Gamebooks(toMain: true)));
+
+            return systemLayout;
         }
 
         private void InputChange(object sender, EventArgs e)

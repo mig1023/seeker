@@ -18,10 +18,11 @@ namespace Seeker.Output
                 }
             };
 
-            SettingRow("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING, fontTypeChanged, ref settingGrid);
-            SettingRow("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING, fontChanged, ref settingGrid);
-            SettingRow("Текст по ширине", "Justyfy", Constants.JUSTYFY_SETTING, justyfyChanged, ref settingGrid);
-            SettingRow("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING, optionChanged, ref settingGrid);
+            SettingRow("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING, FontTypeChanged, ref settingGrid);
+            SettingRow("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING, FontChanged, ref settingGrid);
+            SettingRow("Текст по ширине", "Justyfy", Constants.JUSTYFY_SETTING, JustyfyChanged, ref settingGrid);
+            SettingRow("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING, OptionChanged, ref settingGrid);
+            SettingRow("Отображать меню", "SystemMenu", Constants.MENU_SETTING, MenuChanged, ref settingGrid);
 
             settings.Children.Add(settingGrid);
         }
@@ -59,16 +60,19 @@ namespace Seeker.Output
             settingGrid.Children.Add(settingPicker, 1, currentRow);
         }
 
-        private static void fontTypeChanged(object sender, EventArgs e) =>
+        private static void FontTypeChanged(object sender, EventArgs e) =>
             Game.Settings.SetValue("FontType", (sender as Picker).SelectedIndex);
 
-        private static void fontChanged(object sender, EventArgs e) =>
+        private static void FontChanged(object sender, EventArgs e) =>
             Game.Settings.SetValue("FontSize", (sender as Picker).SelectedIndex);
 
-        private static void justyfyChanged(object sender, EventArgs e) =>
+        private static void JustyfyChanged(object sender, EventArgs e) =>
             Game.Settings.SetValue("Justyfy", (sender as Picker).SelectedIndex);
 
-        private static void optionChanged(object sender, EventArgs e) =>
+        private static void OptionChanged(object sender, EventArgs e) =>
             Game.Settings.SetValue("DisabledOption", (sender as Picker).SelectedIndex);
+
+        private static void MenuChanged(object sender, EventArgs e) =>
+            Game.Settings.SetValue("SystemMenu", (sender as Picker).SelectedIndex);
     }
 }
