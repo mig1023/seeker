@@ -14,6 +14,8 @@ namespace Seeker.Gamebook.InvisibleFront
             [ButtonTypes.Option] = "#d52b1e",
             [ButtonTypes.Continue] = "#e57f78",
             [ButtonTypes.Font] = "#eede49",
+            [ButtonTypes.Continue] = "#e57f78",
+            [ButtonTypes.System] = "#eca5a0",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
@@ -23,6 +25,7 @@ namespace Seeker.Gamebook.InvisibleFront
             [ColorTypes.StatusFont] = "#eede49",
             [ColorTypes.BookColor] = "#d52b1e",
             [ColorTypes.BookFontColor] = "#eede49",
+            [ColorTypes.SystemFont] = "#f7f1b6",
         };
 
         public static List<string> GetApartments() => new List<string>
