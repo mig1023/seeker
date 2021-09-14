@@ -116,7 +116,7 @@ namespace Seeker.Output
             return button;
         }
 
-        public static Button GameOver(string text)
+        public static Button GameOver(string text, EventHandler onClick)
         {
             string colorLine = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
 
@@ -133,6 +133,8 @@ namespace Seeker.Output
                 FontFamily = Interface.TextFontFamily(),
                 FontSize = Interface.FontSize(Interface.TextFontSize.normal),
             };
+
+            gameoverButton.Clicked += onClick;
 
             return SetBorderAndTextColor(gameoverButton);
         }

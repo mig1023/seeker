@@ -45,5 +45,12 @@ namespace Seeker.Output
             "Выкл",
             "Вкл",
         };
+
+        public static List<string> OPTION_SETTING = new List<string>
+        {
+            "В зависимости от игры",
+            "Всегда отображать",
+            "Всегда скрывать",
+        };
     }
 }

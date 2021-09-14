@@ -11,6 +11,7 @@ namespace Seeker.Output
         {
             settings.Children.Add(SettingLayout("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING, fontChanged));
             settings.Children.Add(SettingLayout("Текст по ширине", "Justyfy", Constants.JUSTYFY_SETTING, justyfyChanged));
+            settings.Children.Add(SettingLayout("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING, optionChanged));
         }
 
         private static StackLayout SettingLayout(string settingName, string settingType, List<string> options, EventHandler onClick)
@@ -49,5 +50,8 @@ namespace Seeker.Output
 
         private static void justyfyChanged(object sender, EventArgs e) =>
             Game.Settings.SetValue("Justyfy", (sender as Picker).SelectedIndex);
+
+        private static void optionChanged(object sender, EventArgs e) =>
+            Game.Settings.SetValue("DisabledOption", (sender as Picker).SelectedIndex);
     }
 }

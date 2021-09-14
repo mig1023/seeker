@@ -146,7 +146,7 @@ namespace Seeker
 
             foreach (Game.Option option in paragraph.Options)
             {
-                bool mustBeVisible = Game.Data.Constants.ShowDisabledOption() || !String.IsNullOrEmpty(option.Aftertext);
+                bool mustBeVisible = OptionVisibility(option.Aftertext);
 
                 if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf) && !mustBeVisible)
                     continue;
@@ -185,6 +185,19 @@ namespace Seeker
 
             if (id != Game.Data.StartParagraph)
                 Game.Continue.Save();
+        }
+
+        private bool OptionVisibility(string Aftertext)
+        {
+            if (!String.IsNullOrEmpty(Aftertext))
+                return true;
+
+            int bySetting = Game.Settings.GetValue("DisabledOption");
+
+            if (bySetting > 0)
+                return (bySetting == 1);
+
+            return Game.Data.Constants.ShowDisabledOption();
         }
 
         private void AddAftertext(ref StackLayout layout, string text, List<Output.Text> texts)
@@ -300,11 +313,9 @@ namespace Seeker
             Game.Router.Clean();
             Options.Children.Clear();
 
-            Button button = Output.Buttons.GameOver(toEndText);
             Game.Router.AddDestination(toEndText, toEndParagraph);
-            button.Clicked += Option_Click;
 
-            Options.Children.Add(button);
+            Options.Children.Add(Output.Buttons.GameOver(toEndText, Option_Click));
         }
                
         private void Action_Click(object sender, EventArgs e)
