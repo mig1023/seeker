@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.Genesis
             [ButtonTypes.Option] = "#6f8696",
             [ButtonTypes.Action] = "#445d6f",
             [ButtonTypes.Continue] = "#849fb3",
+            [ButtonTypes.System] = "#3c5363",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
@@ -23,6 +24,7 @@ namespace Seeker.Gamebook.Genesis
             [ColorTypes.StatusBar] = "#3c5363",
             [ColorTypes.ActionBox] = "#69707a",
             [ColorTypes.BookColor] = "#202b41",
+            [ColorTypes.SystemFont] = "#b1b5ba",
         };
 
         public static Dictionary<string, int> GetStartValues() => new Dictionary<string, int>
