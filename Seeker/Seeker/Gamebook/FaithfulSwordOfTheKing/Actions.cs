@@ -357,7 +357,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|Раунд: {0}", round));
+                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
 
                 if ((protagonist.MeritalArt == Character.MeritalArts.SecretBlow) && (round == 1))
                 {
