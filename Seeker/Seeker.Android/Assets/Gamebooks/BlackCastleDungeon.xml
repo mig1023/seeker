@@ -334,6 +334,10 @@
 				<Aftertext>Если вы убили его, то сделали это как раз вовремя: из погреба с бутылкой вина поднимается Гоблин. Увидев вас, он бросает бутылку и хватается за боевой топор.</Aftertext>
 			</Action>
 			<Action>
+				<Name>Option</Name>
+				<Option Destination="143" Text="Попробовать убежать"/>
+			</Action>
+			<Action>
 				<Name>Fight</Name>
 				<Button>Сражаться c гоблином</Button>
 				<Enemies>
@@ -342,8 +346,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="143" Text="Попробовать убежать"/>
-			<Option Destination="239" Text="Гоблин убит"/>
+			<Option Destination="239"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4855,12 +4858,12 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>513</ID>
-		<Text>После двух ударов одна из голов Дракона отлетает. Он отскакивает назад, а у вас появляется время, чтобы, если хотите, успеть наложить заклятие. Воспользуетесь передышкой и наложите заклятие Огня, Силы, Слабости, Копии или будете продолжать драться. Можете, если есть желание, попробовать убежать.</Text>
+		<Text>После двух ударов одна из голов Дракона отлетает. Он отскакивает назад, а у вас появляется время, чтобы, если хотите, успеть наложить заклятие. Воспользуетесь передышкой и наложите заклятие?</Text>
 		<Options>
 			<Option Destination="41" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 			<Option Destination="476" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
 			<Option Destination="172" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-			<Option Destination="347" Text="Продолжать драться"/>
+			<Option Destination="347" Text="Продолжать драться" Aftertext="Можете, если есть желание, попробовать убежать:"/>
 			<Option Destination="601" Text="Попробовать убежать"/>
 		</Options>
 	</Paragraph>
