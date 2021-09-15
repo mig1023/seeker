@@ -123,7 +123,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|Раунд: {0}", round));
+                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
 
                 int protagonistFirstDice = Game.Dice.Roll();
                 int protagonistSecondDice = Game.Dice.Roll();
@@ -306,7 +306,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|Раунд: {0}", round));
+                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
 
                 int protagonistFirstDice = Game.Dice.Roll();
                 int protagonistSecondDice = Game.Dice.Roll();
