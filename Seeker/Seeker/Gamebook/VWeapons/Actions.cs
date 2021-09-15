@@ -20,7 +20,7 @@ namespace Seeker.Gamebook.VWeapons
             String.Format("Подозрение: {0}/5", protagonist.Suspicions),
             String.Format("Время: {0}/12", protagonist.Time),
             String.Format("Меткость: {0}/5", protagonist.Accuracy),
-            String.Format("Патроны: {0}", protagonist.Cartridges),
+            String.Format("Патроны: {0}/8", protagonist.Cartridges),
         };
 
         public override List<string> AdditionalStatus() => new List<string>
