@@ -277,6 +277,7 @@ namespace Seeker.Output
                             enemy.Text = line;
                             enemy.Margin = new Thickness(0, Constants.REPRESENT_PADDING, 0, 0);
                             enemy.FontFamily = TextFontFamily();
+                            enemy.FontSize = FontSize(TextFontSize.small);
                         }
                         else
                         {
