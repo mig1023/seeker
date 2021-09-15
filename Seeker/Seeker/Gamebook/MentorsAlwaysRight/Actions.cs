@@ -519,7 +519,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|Раунд: {0}", round));
+                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
 
                 bool block = EvenWound || ReactionFight;
                 bool reactionFail = false;
