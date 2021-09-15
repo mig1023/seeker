@@ -431,7 +431,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|Раунд: {0}", round));
+                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
 
                 if (!GolemFight && (protagonist.Specialization == Character.SpecializationType.Thrower) && (round == 1))
                 {
