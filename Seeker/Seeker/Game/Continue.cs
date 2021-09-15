@@ -47,5 +47,11 @@ namespace Seeker.Game
 
             return Game.Data.CurrentParagraphID;
         }
+
+        public static void Clean()
+        {
+            foreach (string gamebook in Gamebook.List.GetBooks())
+                App.Current.Properties.Remove(gamebook);
+        }
     }
 }

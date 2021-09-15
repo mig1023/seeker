@@ -132,7 +132,7 @@ namespace Seeker.Output
                 BackgroundColor = Color.Gainsboro,
                 FontFamily = Interface.TextFontFamily(),
                 FontSize = Interface.Font(NamedSize.Default),
-                Margin = new Thickness(0, 15),
+                Margin = new Thickness(0, 30),
             };
 
             button.Clicked += onClick;
