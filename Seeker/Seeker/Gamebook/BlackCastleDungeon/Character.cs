@@ -89,7 +89,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             Luck = int.Parse(save[5]);
             Gold = int.Parse(save[6]);
             SpellSlots = int.Parse(save[7]);
-            Spells = save[8].Split(',').ToList();
+            Spells = save[8].Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).ToList();
         }
     }
 }

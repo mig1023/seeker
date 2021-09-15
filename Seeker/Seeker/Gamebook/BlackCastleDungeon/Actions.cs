@@ -205,7 +205,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|Раунд: {0}", round));
+                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
 
                 bool attackAlready = false;
                 int protagonistHitStrength = 0;
