@@ -7,11 +7,12 @@ namespace Seeker.Output
 {
     class Settings
     {
-        private static Grid settingGrid;
+        private static Grid SettingGrid;
+        private delegate void SettingMethod();
 
         public static void Add(ref StackLayout settings)
         {
-            settingGrid = new Grid
+            SettingGrid = new Grid
             {
                 ColumnDefinitions =
                 {
@@ -26,14 +27,15 @@ namespace Seeker.Output
             SettingOption("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING);
             SettingOption("Отображать меню", "SystemMenu", Constants.MENU_SETTING);
 
-            SettingButton("Сбросить сохранённые игры", SaveClean, spacer: true);
+            SettingButton("Сбросить сохранённые игры", () => Game.Continue.Clean(), spacer: true);
+            SettingButton("Сбросить все настройки", () => Game.Settings.Clean());
 
-            settings.Children.Add(settingGrid);
+            settings.Children.Add(SettingGrid);
         }
 
-        private static void SettingButton(string settingName, EventHandler onClick, bool spacer = false)
+        private static void SettingButton(string settingName, SettingMethod Click, bool spacer = false)
         {
-            int currentRow = AddNewRow(ref settingGrid);
+            int currentRow = AddNewRow(ref SettingGrid);
 
             Label settingButton = new Label
             {
@@ -48,16 +50,16 @@ namespace Seeker.Output
                 settingButton.Margin = new Thickness(0, 15, 0, 0);
 
             TapGestureRecognizer click = new TapGestureRecognizer();
-            click.Tapped += onClick;
+            click.Tapped += (sender, e) => SettingClick(sender, Click);
             settingButton.GestureRecognizers.Add(click);
 
-            settingGrid.Children.Add(settingButton, 0, currentRow);
+            SettingGrid.Children.Add(settingButton, 0, currentRow);
             Grid.SetColumnSpan(settingButton, 2);
         }
 
         private static void SettingOption(string settingName, string settingType, List<string> options)
         {
-            int currentRow = AddNewRow(ref settingGrid);
+            int currentRow = AddNewRow(ref SettingGrid);
 
             Label settingTitle = new Label
             {
@@ -66,7 +68,7 @@ namespace Seeker.Output
                 FontSize = Interface.Font(NamedSize.Small),
             };
 
-            settingGrid.Children.Add(settingTitle, 0, currentRow);
+            SettingGrid.Children.Add(settingTitle, 0, currentRow);
 
             Picker settingPicker = new Picker
             {
@@ -82,7 +84,7 @@ namespace Seeker.Output
 
             settingPicker.SelectedIndex = Game.Settings.GetValue(settingType);
 
-            settingGrid.Children.Add(settingPicker, 1, currentRow);
+            SettingGrid.Children.Add(settingPicker, 1, currentRow);
         }
 
         private static int AddNewRow(ref Grid settingGrid)
@@ -94,10 +96,10 @@ namespace Seeker.Output
         private static void SettingChanged(object sender, string setting) =>
             Game.Settings.SetValue(setting, (sender as Picker).SelectedIndex);
 
-        private static void SaveClean(object sender, EventArgs e)
+        private static void SettingClick(object sender, SettingMethod method)
         {
             (sender as Label).TextColor = Color.LightGray;
-            Game.Continue.Clean();
+            method();
         }
     }
 }

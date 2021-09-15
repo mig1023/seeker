@@ -40,6 +40,12 @@ namespace Seeker.Game
             }
         }
 
+        public static void Clean()
+        {
+            App.Current.Properties.Remove("Settings");
+            Load();
+        }
+
         private static void Save() =>
             App.Current.Properties["Settings"] = string.Join(",", Values.Select(x => x.Key + "=" + x.Value).ToArray());
 
