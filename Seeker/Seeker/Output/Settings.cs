@@ -7,9 +7,11 @@ namespace Seeker.Output
 {
     class Settings
     {
+        private static Grid settingGrid;
+
         public static void Add(ref StackLayout settings)
         {
-            Grid settingGrid = new Grid
+            settingGrid = new Grid
             {
                 ColumnDefinitions =
                 {
@@ -18,18 +20,18 @@ namespace Seeker.Output
                 }
             };
 
-            SettingOption("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING, FontTypeChanged, ref settingGrid);
-            SettingOption("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING, FontChanged, ref settingGrid);
-            SettingOption("Текст по ширине", "Justyfy", Constants.JUSTYFY_SETTING, JustyfyChanged, ref settingGrid);
-            SettingOption("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING, OptionChanged, ref settingGrid);
-            SettingOption("Отображать меню", "SystemMenu", Constants.MENU_SETTING, MenuChanged, ref settingGrid);
+            SettingOption("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING);
+            SettingOption("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING);
+            SettingOption("Текст по ширине", "Justyfy", Constants.JUSTYFY_SETTING);
+            SettingOption("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING);
+            SettingOption("Отображать меню", "SystemMenu", Constants.MENU_SETTING);
 
-            SettingButton("Сбросить сохранённые игры", SaveClean, ref settingGrid, spacer: true);
+            SettingButton("Сбросить сохранённые игры", SaveClean, spacer: true);
 
             settings.Children.Add(settingGrid);
         }
 
-        private static void SettingButton(string settingName, EventHandler onClick, ref Grid settingGrid, bool spacer = false)
+        private static void SettingButton(string settingName, EventHandler onClick, bool spacer = false)
         {
             int currentRow = AddNewRow(ref settingGrid);
 
@@ -53,8 +55,7 @@ namespace Seeker.Output
             Grid.SetColumnSpan(settingButton, 2);
         }
 
-        private static void SettingOption(string settingName, string settingType, List<string> options,
-            EventHandler onClick, ref Grid settingGrid)
+        private static void SettingOption(string settingName, string settingType, List<string> options)
         {
             int currentRow = AddNewRow(ref settingGrid);
 
@@ -74,7 +75,7 @@ namespace Seeker.Output
                 FontSize = Interface.Font(NamedSize.Medium),
             };
             
-            settingPicker.SelectedIndexChanged += onClick;
+            settingPicker.SelectedIndexChanged += (sender, e) => SettingChanged(sender, settingType);
 
             foreach (string option in options)
                 settingPicker.Items.Add(option);
@@ -90,20 +91,8 @@ namespace Seeker.Output
             return settingGrid.RowDefinitions.Count - 1;
         }
 
-        private static void FontTypeChanged(object sender, EventArgs e) =>
-            Game.Settings.SetValue("FontType", (sender as Picker).SelectedIndex);
-
-        private static void FontChanged(object sender, EventArgs e) =>
-            Game.Settings.SetValue("FontSize", (sender as Picker).SelectedIndex);
-
-        private static void JustyfyChanged(object sender, EventArgs e) =>
-            Game.Settings.SetValue("Justyfy", (sender as Picker).SelectedIndex);
-
-        private static void OptionChanged(object sender, EventArgs e) =>
-            Game.Settings.SetValue("DisabledOption", (sender as Picker).SelectedIndex);
-
-        private static void MenuChanged(object sender, EventArgs e) =>
-            Game.Settings.SetValue("SystemMenu", (sender as Picker).SelectedIndex);
+        private static void SettingChanged(object sender, string setting) =>
+            Game.Settings.SetValue(setting, (sender as Picker).SelectedIndex);
 
         private static void SaveClean(object sender, EventArgs e)
         {
