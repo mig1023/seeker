@@ -81,10 +81,9 @@ namespace Seeker.Gamebook.YounglingTournament
                 string firepower = (enemy.Firepower > 5 ? String.Format("  сила выстрела {0}", enemy.Firepower) : String.Empty);
                 string shield = (enemy.Shield > 0 ? String.Format("  энергощит {0}", enemy.Shield) : String.Empty);
                 string skill = (enemy.Skill > 0 ? String.Format("  ловкость {0}", enemy.Skill) : String.Empty);
-                string rang = (enemy.Rang > 0 ? String.Format("  ранг {0}", enemy.Rang) : String.Empty);
 
-                enemies.Add(String.Format("{0}\n{1}выносливость {2}{3}{4}{5}{6}",
-                    enemy.Name, accuracy, enemy.GetHitpoints(), firepower, shield, skill, rang));
+                enemies.Add(String.Format("{0}\n{1}выносливость {2}{3}{4}{5}",
+                    enemy.Name, accuracy, enemy.GetHitpoints(), firepower, shield, skill));
             }
 
             return enemies;
