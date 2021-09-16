@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using static Seeker.Gamebook.YounglingTournament.Character;
 
 namespace Seeker.Gamebook.YounglingTournament
 {
@@ -279,6 +280,44 @@ namespace Seeker.Gamebook.YounglingTournament
             }
         }
 
+        private void SpeedFightHitpointsLoss(ref List<string> fight, Character character)
+        {
+            int technique = (character == protagonist ? character.ForceTechniques[ForcesTypes.Speed] : character.Speed);
+            int wound = (5 - technique);
+            character.Hitpoints -= wound;
+
+            if (character == protagonist)
+                fight.Add(String.Format("BAD|Из-за применения Скорости Силы вы теряете {0} ед.выносливости (осталось {1})",
+                    wound, protagonist.Hitpoints));
+            else
+                fight.Add(String.Format("GOOD|Из-за применения Скорости Силы {0} теряет {1} ед.выносливости (осталось {2})",
+                    character.Name, wound, protagonist.Hitpoints));
+        }
+
+        private bool UseForcesСhance() => Game.Dice.Roll() > 4;
+
+        private void UseForcesInFight(ref List<string> fight, ref bool speedActivate)
+        {
+            if (speedActivate)
+                return;
+
+            if (!UseForcesСhance())
+                return;
+
+            int forceTechniques = Game.Dice.Roll();
+
+            switch (forceTechniques)
+            {
+                case 1:
+                    fight.Add("BOLD|Вы применяете Скорость Силы!");
+                    speedActivate = true;
+                    return;
+
+                default:
+                    return;
+            }
+        }
+
         public List<string> SwordFight()
         {
             List<string> fight = new List<string>();
@@ -303,10 +342,13 @@ namespace Seeker.Gamebook.YounglingTournament
             fight.Add(String.Empty);
 
             int round = 1, heroRoundWin = 0, enemyRoundWin = 0;
+            bool speedActivate = false;
 
             while (true)
             {
                 fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+
+                UseForcesInFight(ref fight, ref speedActivate);
 
                 int protagonistFirstDice = Game.Dice.Roll();
                 int protagonistSecondDice = Game.Dice.Roll();
@@ -358,12 +400,20 @@ namespace Seeker.Gamebook.YounglingTournament
                         protagonist.Hitpoints -= 3;
                         enemyRoundWin += 1;
 
-                        fight.Add(String.Format("BAD|{0} ранил вас, вы потеряли 3 единиц выносливости (осталось {1})",
+                        fight.Add(String.Format("BAD|{0} ранил вас, вы потеряли 3 ед.выносливости (осталось {1})",
                             enemy.Key.Name, protagonist.Hitpoints));
                     }
 
                     else
                         fight.Add("BOLD|Вы парировали удары друг друга");
+                }
+
+                if (speedActivate)
+                {
+                    SpeedFightHitpointsLoss(ref fight, protagonist);
+
+                    foreach (Character enemy in EnemiesList.Where(x => x.Hitpoints > 0))
+                        SpeedFightHitpointsLoss(ref fight, enemy);
                 }
 
                 fight.Add(String.Empty);

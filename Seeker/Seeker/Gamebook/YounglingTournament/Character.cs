@@ -88,6 +88,13 @@ namespace Seeker.Gamebook.YounglingTournament
             set => _rang = Game.Param.Setter(value);
         }
 
+        private int _speed;
+        public int Speed
+        {
+            get => _speed;
+            set => _speed = Game.Param.Setter(value);
+        }
+
         public int WayBack { get; set; }
 
         public SortedDictionary<ForcesTypes, int> ForceTechniques { get; set; }
@@ -154,6 +161,7 @@ namespace Seeker.Gamebook.YounglingTournament
             Firepower = this.Firepower,
             Skill = this.Skill,
             Rang = this.Rang,
+            Speed = this.Speed,
         };
 
         public Character SetHitpoints()

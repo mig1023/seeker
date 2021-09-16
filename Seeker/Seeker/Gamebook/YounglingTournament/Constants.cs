@@ -33,7 +33,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public static List<string> GetEnemyParams() => new List<string>
         {
-            "Name", "MaxHitpoints", "Accuracy", "Shield", "Firepower", "Skill", "Rang"
+            "Name", "MaxHitpoints", "Accuracy", "Shield", "Firepower", "Skill", "Rang", "Speed"
         };
 
         public static Dictionary<Character.SwordTypes, string> SwordSkillsNames() => new Dictionary<Character.SwordTypes, string>
