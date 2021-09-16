@@ -347,11 +347,14 @@ namespace Seeker.Gamebook.YounglingTournament
                         Game.Dice.Symbol(jump), technique, Game.Other.Сomparison(jump + technique, 6),
                         (success ? "прыжок удался!" : "прыжок не получился...")));
 
-                    Character jumpEnemy = CurrentEnemy(EnemiesList);
-                    jumpEnemy.Hitpoints -= jump;
+                    if (success)
+                    {
+                        Character jumpEnemy = CurrentEnemy(EnemiesList);
+                        jumpEnemy.Hitpoints -= jump;
 
-                    fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
-                        jumpEnemy.Name, jump, jumpEnemy.Hitpoints));
+                        fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
+                            jumpEnemy.Name, jump, jumpEnemy.Hitpoints));
+                    }
 
                     return true;
 
