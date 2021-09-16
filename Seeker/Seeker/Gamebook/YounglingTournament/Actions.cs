@@ -328,7 +328,7 @@ namespace Seeker.Gamebook.YounglingTournament
                         enemy.Hitpoints -= wound;
 
                         fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
-                            enemy.Name, wound, enemy.Hitpoints));
+                            enemy.Name, Game.Dice.Symbol(wound), enemy.Hitpoints));
 
                         break;
                     }
