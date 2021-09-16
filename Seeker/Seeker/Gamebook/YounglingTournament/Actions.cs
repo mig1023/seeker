@@ -19,6 +19,8 @@ namespace Seeker.Gamebook.YounglingTournament
         public int AccuracyBonus { get; set; }
         public int Level { get; set; }
 
+        private static List<int> ForceTechniquesAlreadyUsed { get; set; }
+
         public override List<string> Status() => new List<string>
         {
             String.Format("Cветлая сторона: {0}", protagonist.LightSide),
@@ -295,7 +297,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
         private bool UseForcesСhance() => Game.Dice.Roll() > 4;
 
-        private void UseForcesInFight(ref List<string> fight, ref bool speedActivate)
+        private void UseForcesInFight(ref List<string> fight, ref bool speedActivate, List<Character> EnemiesList)
         {
             if (speedActivate)
                 return;
@@ -305,11 +307,32 @@ namespace Seeker.Gamebook.YounglingTournament
 
             int forceTechniques = Game.Dice.Roll();
 
+            if (ForceTechniquesAlreadyUsed.Contains(forceTechniques))
+                return;
+            else
+                ForceTechniquesAlreadyUsed.Add(forceTechniques);
+
             switch (forceTechniques)
             {
                 case 1:
                     fight.Add("BOLD|Вы применяете Скорость Силы!");
                     speedActivate = true;
+                    return;
+
+                case 2:
+                    fight.Add("BOLD|Вы применяете Толчок Силы!");
+                    int wound = Game.Dice.Roll();
+
+                    foreach (Character enemy in EnemiesList.Where(x => x.Hitpoints > 0))
+                    {
+                        enemy.Hitpoints -= wound;
+
+                        fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
+                            enemy.Name, wound, enemy.Hitpoints));
+
+                        break;
+                    }
+
                     return;
 
                 default:
@@ -323,6 +346,8 @@ namespace Seeker.Gamebook.YounglingTournament
 
             Dictionary<Character, int> FightEnemies = new Dictionary<Character, int>();
             List<Character> EnemiesList = new List<Character>();
+
+            ForceTechniquesAlreadyUsed = new List<int>();
 
             foreach (Character enemy in Enemies)
             {
@@ -347,7 +372,7 @@ namespace Seeker.Gamebook.YounglingTournament
             {
                 fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
 
-                UseForcesInFight(ref fight, ref speedActivate);
+                UseForcesInFight(ref fight, ref speedActivate, EnemiesList);
 
                 int protagonistFirstDice = Game.Dice.Roll();
                 int protagonistSecondDice = Game.Dice.Roll();
