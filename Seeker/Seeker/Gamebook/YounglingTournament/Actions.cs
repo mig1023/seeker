@@ -292,25 +292,25 @@ namespace Seeker.Gamebook.YounglingTournament
                     wound, protagonist.Hitpoints));
             else
                 fight.Add(String.Format("GOOD|Из-за применения Скорости Силы {0} теряет {1} ед.выносливости (осталось {2})",
-                    character.Name, wound, protagonist.Hitpoints));
+                    character.Name, wound, character.Hitpoints));
         }
 
-        private bool UseForcesСhance() => Game.Dice.Roll() > 4;
+        private bool UseForcesСhance() => Game.Dice.Roll() % 2 == 0;
 
         private Character CurrentEnemy(List<Character> EnemiesList) => EnemiesList.Where(x => x.Hitpoints > 0).FirstOrDefault();
 
-        private void UseForcesInFight(ref List<string> fight, ref bool speedActivate, List<Character> EnemiesList)
+        private bool UseForcesInFight(ref List<string> fight, ref bool speedActivate, List<Character> EnemiesList)
         {
             if (speedActivate)
-                return;
+                return false;
 
             if (!UseForcesСhance())
-                return;
+                return false;
 
             int forceTechniques = Game.Dice.Roll();
 
             if (ForceTechniquesAlreadyUsed.Contains(forceTechniques))
-                return;
+                return false;
             else
                 ForceTechniquesAlreadyUsed.Add(forceTechniques);
 
@@ -321,20 +321,20 @@ namespace Seeker.Gamebook.YounglingTournament
 
                     speedActivate = true;
 
-                    return;
+                    return false;
 
                 case 2:
                     fight.Add("BOLD|Вы применяете Толчок Силы!");
 
-                    int wound = Game.Dice.Roll();
+                    int pushWound = Game.Dice.Roll();
 
                     Character pushEnemy = CurrentEnemy(EnemiesList);
-                    pushEnemy.Hitpoints -= wound;
+                    pushEnemy.Hitpoints -= pushWound;
 
                     fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
-                        pushEnemy.Name, Game.Dice.Symbol(wound), pushEnemy.Hitpoints));
+                        pushEnemy.Name, Game.Dice.Symbol(pushWound), pushEnemy.Hitpoints));
 
-                    return;
+                    return true;
 
                 case 3:
                     fight.Add("BOLD|Вы применяете Прыжок Силы!");
@@ -353,10 +353,30 @@ namespace Seeker.Gamebook.YounglingTournament
                     fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
                         jumpEnemy.Name, jump, jumpEnemy.Hitpoints));
 
-                    return;
+                    return true;
+
+                case 4:
+                    if (protagonist.ForceTechniques[ForcesTypes.Suffocation] == 0)
+                        return false;
+
+                    fight.Add("BOLD|Вы применяете Удушение Силы!");
+
+                    protagonist.DarkSide += 50;
+                    Game.Option.Trigger("Темная сторона");
+                    fight.Add("Вы получаете +50 к очкам Тёмной стороны и ключевое слово 'Тёмная сторона'.");
+
+                    int suffWound = Game.Dice.Roll();
+
+                    Character suffEnemy = CurrentEnemy(EnemiesList);
+                    suffEnemy.Hitpoints -= suffWound;
+
+                    fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
+                        suffEnemy.Name, Game.Dice.Symbol(suffWound), suffEnemy.Hitpoints));
+
+                    return true;
 
                 default:
-                    return;
+                    return false;
             }
         }
 
@@ -392,7 +412,18 @@ namespace Seeker.Gamebook.YounglingTournament
             {
                 fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
 
-                UseForcesInFight(ref fight, ref speedActivate, EnemiesList);
+                if (UseForcesInFight(ref fight, ref speedActivate, EnemiesList))
+                {
+                    int enemyLimit = (EnemyHitpointsLimith > 0 ? EnemyHitpointsLimith : 0);
+
+                    if ((FightEnemies.Keys.Where(x => x.Hitpoints > enemyLimit).Count() == 0))
+                    {
+                        fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                        return fight;
+                    }
+                    else
+                        continue;
+                }
 
                 int protagonistFirstDice = Game.Dice.Roll();
                 int protagonistSecondDice = Game.Dice.Roll();
