@@ -283,7 +283,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
         private void SpeedFightHitpointsLoss(ref List<string> fight, Character character)
         {
-            int technique = (character == protagonist ? character.ForceTechniques[ForcesTypes.Speed] : character.Speed);
+            int technique = (character == protagonist ? protagonist.ForceTechniques[ForcesTypes.Speed] : character.Speed);
             int wound = (5 - technique);
             character.Hitpoints -= wound;
 
@@ -296,6 +296,8 @@ namespace Seeker.Gamebook.YounglingTournament
         }
 
         private bool UseForcesСhance() => Game.Dice.Roll() > 4;
+
+        private Character CurrentEnemy(List<Character> EnemiesList) => EnemiesList.Where(x => x.Hitpoints > 0).FirstOrDefault();
 
         private void UseForcesInFight(ref List<string> fight, ref bool speedActivate, List<Character> EnemiesList)
         {
@@ -316,22 +318,40 @@ namespace Seeker.Gamebook.YounglingTournament
             {
                 case 1:
                     fight.Add("BOLD|Вы применяете Скорость Силы!");
+
                     speedActivate = true;
+
                     return;
 
                 case 2:
                     fight.Add("BOLD|Вы применяете Толчок Силы!");
+
                     int wound = Game.Dice.Roll();
 
-                    foreach (Character enemy in EnemiesList.Where(x => x.Hitpoints > 0))
-                    {
-                        enemy.Hitpoints -= wound;
+                    Character pushEnemy = CurrentEnemy(EnemiesList);
+                    pushEnemy.Hitpoints -= wound;
 
-                        fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
-                            enemy.Name, Game.Dice.Symbol(wound), enemy.Hitpoints));
+                    fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
+                        pushEnemy.Name, Game.Dice.Symbol(wound), pushEnemy.Hitpoints));
 
-                        break;
-                    }
+                    return;
+
+                case 3:
+                    fight.Add("BOLD|Вы применяете Прыжок Силы!");
+
+                    int jump = Game.Dice.Roll();
+                    int technique = protagonist.ForceTechniques[ForcesTypes.Jump];
+                    bool success = (jump + technique) > 6;
+
+                    fight.Add(String.Format("Прыжок: {0} + {1} {2} 6 - {3}",
+                        Game.Dice.Symbol(jump), technique, Game.Other.Сomparison(jump + technique, 6),
+                        (success ? "прыжок удался!" : "прыжок не получился...")));
+
+                    Character jumpEnemy = CurrentEnemy(EnemiesList);
+                    jumpEnemy.Hitpoints -= jump;
+
+                    fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
+                        jumpEnemy.Name, jump, jumpEnemy.Hitpoints));
 
                     return;
 
