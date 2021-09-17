@@ -6449,7 +6449,7 @@
 		<ID>609</ID>
 		<Text>Вы даже не успеваете пожалеть, что не смотрели бои Ливии до того, как столкнуться с ней — это могло бы здорово пригодиться, как стальные невидимые руки сжимаются у вас на горле, поднимая в воздух.</Text>
 		<Options>
-			<Option Destination="610" Text="У вас есть Техника Укрепление Тела Силой"/>
+			<Option Destination="610" Text="У вас есть Техника Укрепление Тела Силой" OnlyIf="StrengtheningTheBody"/>
 			<Option Destination="611" Text="В ином случае"/>
 		</Options>
 	</Paragraph>
@@ -6471,8 +6471,8 @@
 		</Modifications>
 		<Options>
 			<Option Destination="615" Text="Если ваша Выносливость упала до 0"/>
-			<Option Destination="596" Text="если суммарно в финале вы получили 3 укола"/>
-			<Option Destination="613" Text="иначе же"/>
+			<Option Destination="596" Text="Если суммарно в финале вы получили 3 укола"/>
+			<Option Destination="613" Text="В любом другом случае"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
