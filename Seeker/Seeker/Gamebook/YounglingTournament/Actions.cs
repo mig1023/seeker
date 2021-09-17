@@ -390,10 +390,11 @@ namespace Seeker.Gamebook.YounglingTournament
                     fight.Add("BOLD|Вы применяете Толчок Силы!");
 
                     int pushWound = Game.Dice.Roll();
-                    target.Hitpoints -= pushWound;
+                    target.Hitpoints -= (pushWound + protagonist.ForceTechniques[ForcesTypes.Push]);
 
-                    fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
-                        target.Name, Game.Dice.Symbol(pushWound), target.Hitpoints));
+                    fight.Add(String.Format("GOOD|{0} теряет {1} + {2} (за ранг техники) ед.выносливости (осталось {3})",
+                        target.Name, Game.Dice.Symbol(pushWound),
+                        protagonist.ForceTechniques[ForcesTypes.Push], target.Hitpoints));
 
                     return true;
 
