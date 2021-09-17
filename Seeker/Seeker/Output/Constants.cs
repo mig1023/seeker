@@ -32,6 +32,7 @@ namespace Seeker.Output
             [TextFontSize.small] = Font(NamedSize.Small),
             [TextFontSize.little] = Font(NamedSize.Medium),
             [TextFontSize.normal] = Font(NamedSize.Large),
+            [TextFontSize.nope] = Font(NamedSize.Large),
             [TextFontSize.big] = BIG_FONT,
         };
 
@@ -40,7 +41,8 @@ namespace Seeker.Output
             [TextFontSize.micro] = Font(NamedSize.Micro),
             [TextFontSize.small] = Font(NamedSize.Micro),
             [TextFontSize.little] = Font(NamedSize.Small),
-            [TextFontSize.normal] = Font(NamedSize.Medium),
+            [TextFontSize.normal] = Font(NamedSize.Small),
+            [TextFontSize.nope] = Font(NamedSize.Small),
             [TextFontSize.big] = Font(NamedSize.Large),
         };
 

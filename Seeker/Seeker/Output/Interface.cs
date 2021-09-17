@@ -346,12 +346,10 @@ namespace Seeker.Output
         {
             ExtendedLabel label = Text(text.Content);
             label.FontFamily = TextFontFamily(bold: text.Bold, italic: text.Italic);
+            label.FontSize = FontSize(text.Size, italic: text.Italic);
 
             if (text.Alignment == "Center")
                 label.HorizontalTextAlignment = TextAlignment.Center;
-
-            if (text.Size != TextFontSize.nope)
-                label.FontSize = FontSize(text.Size, italic: text.Italic);
 
             return label;
         }
