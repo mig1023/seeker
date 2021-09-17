@@ -51,7 +51,12 @@ namespace Seeker.Gamebook.YounglingTournament
             {
                 foreach (string oneOption in option.Split(','))
                 {
-                    if (oneOption.Contains(">") || oneOption.Contains("<"))
+                    bool thisIsTechnique = Enum.TryParse(oneOption, out Character.ForcesTypes techniqueType);
+
+                    if (thisIsTechnique && (protagonist.ForceTechniques[techniqueType] == 0))
+                        return false;
+
+                    else if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
                         int level = Game.Other.LevelParse(option);
 
@@ -121,9 +126,9 @@ namespace Seeker.Gamebook.YounglingTournament
             string bonusLine = String.Empty;
             string[] enemy = Enemy.Split(',');
 
-            bool success = Enum.TryParse(BonusTechnique, out Character.ForcesTypes techniqueType);
+            bool withBonus = Enum.TryParse(BonusTechnique, out Character.ForcesTypes techniqueType);
             
-            if (success)
+            if (withBonus)
             {
                 bonus = protagonist.ForceTechniques[techniqueType];
                 bonusLine = String.Format(" + {0} за ранг", bonus);
