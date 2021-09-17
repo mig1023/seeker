@@ -283,24 +283,30 @@ namespace Seeker.Gamebook.YounglingTournament
 
         private void SpeedFightHitpointsLoss(ref List<string> fight, Character character)
         {
-            int technique = (character == protagonist ? protagonist.ForceTechniques[ForcesTypes.Speed] : character.Speed);
+            bool isProtagonist = (character == protagonist);
+
+            int technique = (isProtagonist ? protagonist.ForceTechniques[ForcesTypes.Speed] : character.Speed);
             int wound = (5 - technique);
             character.Hitpoints -= wound;
 
-            if (character == protagonist)
+            if (isProtagonist)
                 fight.Add(String.Format("BAD|Из-за применения Скорости Силы вы теряете {0} ед.выносливости (осталось {1})",
                     wound, protagonist.Hitpoints));
             else
                 fight.Add(String.Format("GOOD|Из-за применения Скорости Силы {0} теряет {1} ед.выносливости (осталось {2})",
                     character.Name, wound, character.Hitpoints));
+
+            if (!isProtagonist)
+                character.SaveHitpoints();
         }
 
         private bool UseForcesСhance() => Game.Dice.Roll() % 2 == 0;
 
-        private Character CurrentEnemy(List<Character> EnemiesList) => EnemiesList.Where(x => x.Hitpoints > 0).FirstOrDefault();
-
-        private bool UseForcesInFight(ref List<string> fight, ref bool speedActivate, List<Character> EnemiesList)
+        private bool UseForcesInFight(ref List<string> fight, ref bool speedActivate,
+            List<Character> EnemiesList, out Character target)
         {
+            target = EnemiesList.Where(x => x.Hitpoints > 0).FirstOrDefault();
+
             if (speedActivate)
                 return false;
 
@@ -327,12 +333,10 @@ namespace Seeker.Gamebook.YounglingTournament
                     fight.Add("BOLD|Вы применяете Толчок Силы!");
 
                     int pushWound = Game.Dice.Roll();
-
-                    Character pushEnemy = CurrentEnemy(EnemiesList);
-                    pushEnemy.Hitpoints -= pushWound;
+                    target.Hitpoints -= pushWound;
 
                     fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
-                        pushEnemy.Name, Game.Dice.Symbol(pushWound), pushEnemy.Hitpoints));
+                        target.Name, Game.Dice.Symbol(pushWound), target.Hitpoints));
 
                     return true;
 
@@ -349,11 +353,10 @@ namespace Seeker.Gamebook.YounglingTournament
 
                     if (success)
                     {
-                        Character jumpEnemy = CurrentEnemy(EnemiesList);
-                        jumpEnemy.Hitpoints -= jump;
+                        target.Hitpoints -= jump;
 
                         fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
-                            jumpEnemy.Name, jump, jumpEnemy.Hitpoints));
+                            target.Name, jump, target.Hitpoints));
                     }
 
                     return true;
@@ -369,12 +372,10 @@ namespace Seeker.Gamebook.YounglingTournament
                     fight.Add("Вы получаете +50 к очкам Тёмной стороны и ключевое слово 'Тёмная сторона'.");
 
                     int suffWound = Game.Dice.Roll();
-
-                    Character suffEnemy = CurrentEnemy(EnemiesList);
-                    suffEnemy.Hitpoints -= suffWound;
+                    target.Hitpoints -= suffWound;
 
                     fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
-                        suffEnemy.Name, Game.Dice.Symbol(suffWound), suffEnemy.Hitpoints));
+                        target.Name, Game.Dice.Symbol(suffWound), target.Hitpoints));
 
                     return true;
 
@@ -415,8 +416,11 @@ namespace Seeker.Gamebook.YounglingTournament
             {
                 fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
 
-                if (UseForcesInFight(ref fight, ref speedActivate, EnemiesList))
+                if (UseForcesInFight(ref fight, ref speedActivate, EnemiesList, out Character target))
                 {
+                    target.SaveHitpoints();
+                    round += 1;
+
                     int enemyLimit = (EnemyHitpointsLimith > 0 ? EnemyHitpointsLimith : 0);
 
                     if ((FightEnemies.Keys.Where(x => x.Hitpoints > enemyLimit).Count() == 0))
