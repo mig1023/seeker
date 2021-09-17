@@ -167,9 +167,22 @@ namespace Seeker.Gamebook.YounglingTournament
         public Character SetHitpoints(int hitpointsPenalty = 0)
         {
             if (HitpointsLoss.ContainsKey(this.Name))
-                this.Hitpoints = (HitpointsLoss[this.Name] - hitpointsPenalty);
+            {
+                if (hitpointsPenalty > 0)
+                    HitpointsLoss[this.Name] -= hitpointsPenalty;
+
+                this.Hitpoints = HitpointsLoss[this.Name];
+            }
 
             return this;
+        }
+
+        public static void SetHitpointsMod(string name, int value, int defaultInitValue)
+        {
+            if (HitpointsLoss.ContainsKey(name))
+                HitpointsLoss[name] -= value;
+            else
+                HitpointsLoss.Add(name, (defaultInitValue - value));
         }
 
         public void SaveHitpoints() => HitpointsLoss[this.Name] = this.Hitpoints;

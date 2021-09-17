@@ -11,12 +11,14 @@ namespace Seeker.Gamebook.YounglingTournament
         private static Character protagonist = Character.Protagonist;
 
         public List<Character> Enemies { get; set; }
+        public string Enemy { get; set; }
         public int HeroHitpointsLimith { get; set; }
         public int EnemyHitpointsLimith { get; set; }
         public int HeroRoundWin { get; set; }
         public int EnemyRoundWin { get; set; }
         public bool SpeedActivate { get; set; }
         public int EnemyHitpointsPenalty { get; set; }
+        public string BonusTechnique { get; set; }
 
         public int AccuracyBonus { get; set; }
         public int Level { get; set; }
@@ -105,6 +107,35 @@ namespace Seeker.Gamebook.YounglingTournament
             protagonist.Hitpoints -= dice;
 
             diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dice));
+
+            return diceCheck;
+        }
+
+        public List<string> EnemyDiceWounds()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dice = Game.Dice.Roll();
+
+            int bonus = 0;
+            string bonusLine = String.Empty;
+            string[] enemy = Enemy.Split(',');
+
+            bool success = Enum.TryParse(BonusTechnique, out Character.ForcesTypes techniqueType);
+            
+            if (success)
+            {
+                bonus = protagonist.ForceTechniques[techniqueType];
+                bonusLine = String.Format(" + {0} за ранг", bonus);
+            }
+
+            diceCheck.Add(String.Format("На кубике выпало: {0}{1}", Game.Dice.Symbol(dice), bonusLine));
+
+            dice += bonus;
+
+            Character.SetHitpointsMod(enemy[0], dice, int.Parse(enemy[1]));
+
+            diceCheck.Add(String.Format("BIG|GOOD|{0} потерял жизней: {1}", enemy[0], dice));
 
             return diceCheck;
         }
