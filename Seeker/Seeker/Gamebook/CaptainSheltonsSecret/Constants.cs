@@ -78,7 +78,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public static List<string> GetEnemyParams() => new List<string>
         {
-            "Name", "MaxMastery", "MaxEndurance"
+            "Name", "MaxMastery", "MaxEndurance", "SeaArmour"
         };
 
         public static Links GetLinks() => new Links
