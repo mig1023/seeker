@@ -317,10 +317,13 @@ namespace Seeker.Output
             return fontFamily.ToString();
         }
 
-        public static double FontSize(TextFontSize size, bool italic = false)
+        public static double FontSize(TextFontSize size, bool italic = false, double defaultReturn = 0)
         {
             if (Game.Settings.GetValue("FontType") == 1)
                 italic = false;
+
+            if ((Game.Settings.GetValue("FontSize") > 0) && (defaultReturn > 0))
+                return defaultReturn;
 
             if (italic && Constants.FontSizeItalic.ContainsKey(size))
                 return Constants.FontSizeItalic[size];
@@ -346,7 +349,7 @@ namespace Seeker.Output
         {
             ExtendedLabel label = Text(text.Content);
             label.FontFamily = TextFontFamily(bold: text.Bold, italic: text.Italic);
-            label.FontSize = FontSize(text.Size, italic: text.Italic);
+            label.FontSize = FontSize(text.Size, italic: text.Italic, defaultReturn: label.FontSize);
 
             if (text.Alignment == "Center")
                 label.HorizontalTextAlignment = TextAlignment.Center;
