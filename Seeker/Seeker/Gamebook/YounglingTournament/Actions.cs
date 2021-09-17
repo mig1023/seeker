@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public int AccuracyBonus { get; set; }
         public int Level { get; set; }
+        public bool SpeedActivate { get; set; }
 
         private static List<int> ForceTechniquesAlreadyUsed { get; set; }
 
@@ -302,10 +303,22 @@ namespace Seeker.Gamebook.YounglingTournament
 
         private bool UseForcesСhance() => Game.Dice.Roll() % 2 == 0;
 
+        private bool SpeedActivation(ref List<string> fight, ref bool speedActivate)
+        {
+            fight.Add("BOLD|Вы применяете Скорость Силы!");
+
+            speedActivate = true;
+
+            return false;
+        }
+
         private bool UseForcesInFight(ref List<string> fight, ref bool speedActivate,
             List<Character> EnemiesList, out Character target)
         {
             target = EnemiesList.Where(x => x.Hitpoints > 0).FirstOrDefault();
+
+            if (SpeedActivate && !speedActivate)
+                return SpeedActivation(ref fight, ref speedActivate);
 
             if (speedActivate)
                 return false;
@@ -323,11 +336,7 @@ namespace Seeker.Gamebook.YounglingTournament
             switch (forceTechniques)
             {
                 case 1:
-                    fight.Add("BOLD|Вы применяете Скорость Силы!");
-
-                    speedActivate = true;
-
-                    return false;
+                    return SpeedActivation(ref fight, ref speedActivate);
 
                 case 2:
                     fight.Add("BOLD|Вы применяете Толчок Силы!");
