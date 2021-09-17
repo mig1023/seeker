@@ -92,6 +92,21 @@ namespace Seeker.Gamebook.YounglingTournament
             return enemies;
         }
 
+        public List<string> DiceWounds()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dice = Game.Dice.Roll();
+
+            diceCheck.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
+
+            protagonist.Hitpoints -= dice;
+
+            diceCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dice));
+
+            return diceCheck;
+        }
+
         public List<string> ForceTest()
         {
             List<string> test = new List<string>();
