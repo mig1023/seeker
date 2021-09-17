@@ -248,36 +248,36 @@ namespace Seeker.Gamebook.YounglingTournament
             switch (skill)
             {
                 case Character.SwordTypes.Elasticity:
-                    detail = String.Format("4 + {0}", rang);
+                    detail = String.Format("4 + {0} ранг", rang);
                     return 4 + rang;
 
                 case Character.SwordTypes.Rivalry:
-                    detail = String.Format("4 + (2 x {0})", rang);
+                    detail = String.Format("4 + (2 x {0} ранг)", rang);
                     return 4 + (2 * rang);
 
                 case Character.SwordTypes.Perseverance:
-                    detail = String.Format("8 + {0}", rang);
+                    detail = String.Format("8 + {0} ранг", rang);
                     return 8 + rang;
 
                 case Character.SwordTypes.Aggressiveness:
-                    detail = String.Format("12 + (2 x {0})", rang);
+                    detail = String.Format("12 + (2 x {0} ранг)", rang);
                     return 12 + (2 * rang);
 
                 case Character.SwordTypes.Confidence:
-                    detail = String.Format("12 + (3 x {0})", rang);
+                    detail = String.Format("12 + (3 x {0} ранг)", rang);
                     return 12 + (3 * rang);
 
                 case Character.SwordTypes.Vaapad:
-                    detail = String.Format("12 + (4 x {0})", rang);
+                    detail = String.Format("12 + (4 x {0} ранг)", rang);
                     return 12 + (4 * rang);
                 
                 case Character.SwordTypes.JarKai:
-                    detail = String.Format("12 + (3 x {0})", rang);
+                    detail = String.Format("12 + (3 x {0} ранг)", rang);
                     return 12 + (3 * rang);
 
                 default:
                 case Character.SwordTypes.Decisiveness:
-                    detail = String.Format("1 x {0}", rang);
+                    detail = String.Format("1 x {0} ранг", rang);
                     return rang;
             }
         }
