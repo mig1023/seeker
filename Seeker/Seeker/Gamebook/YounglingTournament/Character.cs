@@ -164,17 +164,18 @@ namespace Seeker.Gamebook.YounglingTournament
             Speed = this.Speed,
         };
 
-        public Character SetHitpoints()
+        public Character SetHitpoints(int hitpointsPenalty = 0)
         {
             if (HitpointsLoss.ContainsKey(this.Name))
-                this.Hitpoints = HitpointsLoss[this.Name];
+                this.Hitpoints = (HitpointsLoss[this.Name] - hitpointsPenalty);
 
             return this;
         }
 
         public void SaveHitpoints() => HitpointsLoss[this.Name] = this.Hitpoints;
 
-        public int GetHitpoints() => (HitpointsLoss.ContainsKey(this.Name) ? HitpointsLoss[this.Name] : this.Hitpoints);
+        public int GetHitpoints(int hitpointsPenalty = 0) =>
+            (HitpointsLoss.ContainsKey(this.Name) ? HitpointsLoss[this.Name] : this.Hitpoints) - hitpointsPenalty;
 
         public override string Save() => String.Join("|",
             LightSide, DarkSide, MaxHitpoints, Hitpoints, Accuracy, Pilot, Stealth, Hacking, Firepower, WayBack,

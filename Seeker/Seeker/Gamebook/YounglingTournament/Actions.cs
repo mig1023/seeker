@@ -15,10 +15,12 @@ namespace Seeker.Gamebook.YounglingTournament
         public int EnemyHitpointsLimith { get; set; }
         public int HeroRoundWin { get; set; }
         public int EnemyRoundWin { get; set; }
+        public bool SpeedActivate { get; set; }
+        public int EnemyHitpointsPenalty { get; set; }
 
         public int AccuracyBonus { get; set; }
         public int Level { get; set; }
-        public bool SpeedActivate { get; set; }
+
 
         private static List<int> ForceTechniquesAlreadyUsed { get; set; }
 
@@ -86,7 +88,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 string skill = (enemy.Skill > 0 ? String.Format("  ловкость {0}", enemy.Skill) : String.Empty);
 
                 enemies.Add(String.Format("{0}\n{1}выносливость {2}{3}{4}{5}",
-                    enemy.Name, accuracy, enemy.GetHitpoints(), firepower, shield, skill));
+                    enemy.Name, accuracy, enemy.GetHitpoints(EnemyHitpointsPenalty), firepower, shield, skill));
             }
 
             return enemies;
@@ -419,7 +421,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
             foreach (Character enemy in Enemies)
             {
-                Character newEnemy = enemy.Clone().SetHitpoints();
+                Character newEnemy = enemy.Clone().SetHitpoints(EnemyHitpointsPenalty);
                 FightEnemies.Add(newEnemy, 0);
                 EnemiesList.Add(newEnemy);
             }
