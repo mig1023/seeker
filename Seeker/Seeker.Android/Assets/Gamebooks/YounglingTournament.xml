@@ -6246,9 +6246,22 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>534</ID>
-		<Text>Начинается дуэль на световых мечах.\n\nМарика Затт выбирает для дуэли Форму Соперничества ранга. Вы можете выбрать любую из изученных техник боя.\n\nМарика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов. X Марика Затт\n\nЛовкость: 12       Выносливость: 25</Text>
+		<Text>Начинается дуэль на световых мечах.\n\nМарика Затт выбирает для дуэли Форму Соперничества 4 ранга. Вы можете выбрать любую из изученных техник боя.</Text>
+		<Actions>
+			<Action>
+				<Name>SwordFight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
+				</Enemies>
+				<HeroHitpointsLimith>5</HeroHitpointsLimith>
+				<EnemyHitpointsLimith>20</EnemyHitpointsLimith>
+				<HeroRoundWin>3</HeroRoundWin>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Марика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
-			<Option Destination="535" Text="Способности Силы можно применить в любой момент боя"/>
+			<Option Destination="570" Text="Если у вас есть Корпускула Комы, и вы хотите ее использовать" OnlyIf="Корпускула Комы"/>
 			<Option Destination="536" Text="Если вам удалось отбавить Выносливость противника до 20"/>
 			<Option Destination="538" Text="Если вы нанесли ей два укола"/>
 			<Option Destination="537" Text="Вы выиграли 3 раунда подряд"/>
@@ -6257,14 +6270,7 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>535</ID>
-		<Text>Что хотите применить?</Text>
-		<Options>
-			<Option Destination="568" Text="Скорость Силы"/>
-			<Option Destination="569" Text="Толчок Силы"/>
-			<Option Destination="539" Text="Прыжок Силы"/>
-			<Option Destination="540" Text="Удушение Силы"/>
-			<Option Destination="570" Text="Если у вас есть Корпускула Комы, и вы хотите ее использовать" OnlyIf="Корпускула Комы"/>
-		</Options>
+		<Text>[не используется]</Text>
 	</Paragraph>
 	<Paragraph>
 		<ID>536</ID>
