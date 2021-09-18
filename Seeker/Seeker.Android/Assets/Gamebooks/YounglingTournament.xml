@@ -5889,6 +5889,7 @@
 		<Triggers>Темная сторона</Triggers>
 		<Modifications>
 			<Modification Name="DarkSide" Value="50"/>
+			<Modification Name="Back" Value="501"/>
 		</Modifications>
 		<Options>
 			<Option Destination="600" Text="Вы отбавили Выносливость обоих противников до нуля"/>
@@ -5915,6 +5916,7 @@
 		</Actions>
 		<Modifications>
 			<Modification Name="DarkSide" Value="50"/>
+			<Modification Name="Back" Value="502"/>
 		</Modifications>
 		<RemoveTriggers>Корпускула Комы</RemoveTriggers>
 		<Triggers>Темная сторона</Triggers>
@@ -5943,6 +5945,7 @@
 		</Actions>
 		<Modifications>
 			<Modification Name="DarkSide" Value="50"/>
+			<Modification Name="Back" Value="503"/>
 		</Modifications>
 		<RemoveTriggers>Корпускула Комы</RemoveTriggers>
 		<Triggers>Темная сторона</Triggers>
@@ -5978,6 +5981,10 @@
 				<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Aftertext>
 			</Action>
 		</Actions>
+		<Modifications>
+			<Modification Name="DarkSide" Value="50"/>
+			<Modification Name="Back" Value="505"/>
+		</Modifications>
 		<Options>
 			<Option Destination="600" Text="Вы отбавили Выносливость всех противников до нуля"/>
 			<Option Destination="508" Text="Они отбавили вашу до нуля"/>
@@ -6023,7 +6030,7 @@
 		</Modifications>
 		<RemoveTriggers>Концентрация</RemoveTriggers>
 		<Options>
-			<Option Destination="0"/>
+			<Option Destination="Back"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
