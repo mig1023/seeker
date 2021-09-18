@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.YounglingTournament
         public int HeroRoundWin { get; set; }
         public int EnemyRoundWin { get; set; }
         public bool SpeedActivate { get; set; }
+        public bool WithoutTechnique { get; set; }
         public int EnemyHitpointsPenalty { get; set; }
         public string BonusTechnique { get; set; }
 
@@ -100,6 +101,8 @@ namespace Seeker.Gamebook.YounglingTournament
 
             return enemies;
         }
+
+        public List<string> SimpleDice() => new List<string> { String.Format("BIG|Кубик: {0}", Game.Dice.Symbol(Game.Dice.Roll())) };
 
         public List<string> DiceWounds()
         {
@@ -373,10 +376,7 @@ namespace Seeker.Gamebook.YounglingTournament
             if (SpeedActivate && !speedActivate)
                 return SpeedActivation(ref fight, ref speedActivate);
 
-            if (speedActivate)
-                return false;
-
-            if (!UseForcesСhance())
+            if (WithoutTechnique || speedActivate || !UseForcesСhance())
                 return false;
 
             int forceTechniques = Game.Dice.Roll();
