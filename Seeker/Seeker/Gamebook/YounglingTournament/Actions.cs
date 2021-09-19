@@ -191,9 +191,13 @@ namespace Seeker.Gamebook.YounglingTournament
 
             attackCheck.Add(String.Format("Результат: 90 выстрел / {0} отражение = {1}", deflecting, result));
 
-            protagonist.Hitpoints -= result;
-
-            attackCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", result));
+            if (result > 0)
+            {
+                protagonist.Hitpoints -= result;
+                attackCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", result));
+            }
+            else
+                attackCheck.Add("BIG|GOOD|Вам удалось отразить выстрел противника в него самого!");
 
             return attackCheck;
         }
