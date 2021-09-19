@@ -176,6 +176,28 @@ namespace Seeker.Gamebook.YounglingTournament
             return test;
         }
 
+        public List<string> MixedFightAttack()
+        {
+            List<string> attackCheck = new List<string> { };
+
+            int deflecting = 4 + protagonist.SwordTechniques[SwordTypes.Rivalry];
+
+            attackCheck.Add("Выстрел: 10 (сила выстрела) x 9 (меткость) = 90");
+
+            attackCheck.Add(String.Format("Отражение: 4 + {0} ранг = {1}",
+                protagonist.SwordTechniques[SwordTypes.Rivalry], deflecting));
+
+            int result = 90 / deflecting;
+
+            attackCheck.Add(String.Format("Результат: 90 выстрел / {0} отражение = {1}", deflecting, result));
+
+            protagonist.Hitpoints -= result;
+
+            attackCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", result));
+
+            return attackCheck;
+        }
+
         public List<string> FireFight()
         {
             List<string> fight = new List<string>();
