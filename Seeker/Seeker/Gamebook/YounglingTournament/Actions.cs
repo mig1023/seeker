@@ -94,9 +94,21 @@ namespace Seeker.Gamebook.YounglingTournament
                 string firepower = (enemy.Firepower > 5 ? String.Format("  сила выстрела {0}", enemy.Firepower) : String.Empty);
                 string shield = (enemy.Shield > 0 ? String.Format("  энергощит {0}", enemy.Shield) : String.Empty);
                 string skill = (enemy.Skill > 0 ? String.Format("  ловкость {0}", enemy.Skill) : String.Empty);
+                string technique = String.Empty;
 
-                enemies.Add(String.Format("{0}\n{1}выносливость {2}{3}{4}{5}",
-                    enemy.Name, accuracy, enemy.GetHitpoints(EnemyHitpointsPenalty), firepower, shield, skill));
+                if (enemy.Rang > 0)
+                {
+                    bool anotherTechnique = Enum.TryParse(enemy.SwordTechnique, out SwordTypes currectSwordTechniques);
+
+                    if (!anotherTechnique)
+                        currectSwordTechniques = SwordTypes.Rivalry;
+
+                    technique = String.Format("\nиспользует Форму {0} - {1} ранга",
+                        Constants.SwordSkillsNames()[currectSwordTechniques], enemy.Rang);
+                }
+                
+                enemies.Add(String.Format("{0}\n{1}выносливость {2}{3}{4}{5}{6}",
+                    enemy.Name, accuracy, enemy.GetHitpoints(EnemyHitpointsPenalty), firepower, shield, skill, technique));
             }
 
             return enemies;
@@ -463,7 +475,8 @@ namespace Seeker.Gamebook.YounglingTournament
                 EnemiesList.Add(newEnemy);
             }
 
-            Character.SwordTypes currectSwordTechniques = GetSwordType();
+            SwordTypes currectSwordTechniques = GetSwordType();
+
             fight.Add(String.Format("Вы выбрали для боя Форму {0} ({1} ранг)",
                 Constants.SwordSkillsNames()[currectSwordTechniques], protagonist.SwordTechniques[currectSwordTechniques]));
 

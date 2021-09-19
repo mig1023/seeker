@@ -96,6 +96,7 @@ namespace Seeker.Gamebook.YounglingTournament
         }
 
         public int WayBack { get; set; }
+        public string SwordTechnique { get; set; }
 
         public SortedDictionary<ForcesTypes, int> ForceTechniques { get; set; }
         public SortedDictionary<SwordTypes, int> SwordTechniques { get; set; }
@@ -162,6 +163,7 @@ namespace Seeker.Gamebook.YounglingTournament
             Skill = this.Skill,
             Rang = this.Rang,
             Speed = this.Speed,
+            SwordTechnique = this.SwordTechnique,
         };
 
         public Character SetHitpoints(int hitpointsPenalty = 0)
