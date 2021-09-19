@@ -198,6 +198,35 @@ namespace Seeker.Gamebook.YounglingTournament
             return attackCheck;
         }
 
+        public List<string> MixedFightDefence()
+        {
+            List<string> defenseCheck = new List<string> { };
+
+            int deflecting = 4 + protagonist.SwordTechniques[SwordTypes.Rivalry];
+
+            int firestDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+
+            int shoot = firestDice + secondDice + 19;
+
+            defenseCheck.Add(String.Format("Выстрел: {0} + {1} + 10 (сила выстрела) + 9 (меткость) = {2}",
+                Game.Dice.Symbol(firestDice), Game.Dice.Symbol(secondDice), shoot));
+
+            defenseCheck.Add(String.Format("Отражение: 4 + {0} ранг = {1}",
+                protagonist.SwordTechniques[SwordTypes.Rivalry], deflecting));
+
+            int result = shoot / deflecting;
+
+            defenseCheck.Add(String.Format("Результат: {0} выстрел / {1} отражение = {1}",
+                shoot, deflecting, result));
+
+            protagonist.Hitpoints -= result;
+
+            defenseCheck.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", result));
+
+            return defenseCheck;
+        }
+
         public List<string> FireFight()
         {
             List<string> fight = new List<string>();
