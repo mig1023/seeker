@@ -215,7 +215,7 @@ namespace Seeker.Gamebook.YounglingTournament
                     {
                         int enemyFirstDice = Game.Dice.Roll();
                         int enemySecondDice = Game.Dice.Roll();
-                        FightEnemies[enemy] = protagonist.Accuracy + enemyFirstDice + enemySecondDice;
+                        FightEnemies[enemy] = enemy.Accuracy + enemyFirstDice + enemySecondDice;
 
                         fight.Add(String.Format("{0} стреляет: {1} + {2} + {3} = {4}",
                             enemy.Name, enemy.Accuracy, Game.Dice.Symbol(enemyFirstDice),
@@ -240,13 +240,13 @@ namespace Seeker.Gamebook.YounglingTournament
 
                             if (damage <= 0)
                             {
-                                fight.Add(String.Format("BAD|Вы подстрелили {0}, но его энергощит полностью поглотил урон", shooter.Key.Name));
+                                fight.Add(String.Format("GOOD|Вы подстрелили {0}, но его энергощит полностью поглотил урон", shooter.Key.Name));
 
                                 shooter.Key.Shield -= protagonist.Firepower;
                             }
                             else
                             {
-                                fight.Add(String.Format("BAD|Вы подстрелили {0}, его энергощит поглотил {1} ед.урона, " +
+                                fight.Add(String.Format("GOOD|Вы подстрелили {0}, его энергощит поглотил {1} ед.урона, " +
                                     "в результате он потерял {2} ед.выносливости", shooter.Key.Name, shooter.Key.Shield, damage));
 
                                 shooter.Key.Hitpoints -= damage;
