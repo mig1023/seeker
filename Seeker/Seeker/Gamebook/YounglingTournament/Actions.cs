@@ -371,9 +371,13 @@ namespace Seeker.Gamebook.YounglingTournament
 
         private bool UseForcesСhance() => Game.Dice.Roll() % 2 == 0;
 
-        private bool SpeedActivation(ref List<string> fight, ref bool speedActivate)
+        private bool SpeedActivation(ref List<string> fight, ref bool speedActivate, List<Character> EnemiesList)
         {
-            fight.Add("BOLD|Вы применяете Скорость Силы!");
+            fight.Add(String.Format("BOLD|Вы активируете Скорость Силы {0} ранга!",
+                protagonist.ForceTechniques[ForcesTypes.Speed]));
+
+            foreach (Character enemy in EnemiesList)
+                fight.Add(String.Format("{0} активирует Скорость Силы {1} ранга.", enemy.Name, enemy.Speed));
 
             speedActivate = true;
 
@@ -386,7 +390,7 @@ namespace Seeker.Gamebook.YounglingTournament
             target = EnemiesList.Where(x => x.Hitpoints > 0).FirstOrDefault();
 
             if (SpeedActivate && !speedActivate)
-                return SpeedActivation(ref fight, ref speedActivate);
+                return SpeedActivation(ref fight, ref speedActivate, EnemiesList);
 
             if (WithoutTechnique || speedActivate || !UseForcesСhance())
                 return false;
@@ -401,7 +405,7 @@ namespace Seeker.Gamebook.YounglingTournament
             switch (forceTechniques)
             {
                 case 1:
-                    return SpeedActivation(ref fight, ref speedActivate);
+                    return SpeedActivation(ref fight, ref speedActivate, EnemiesList);
 
                 case 2:
                     fight.Add("BOLD|Вы применяете Толчок Силы!");
