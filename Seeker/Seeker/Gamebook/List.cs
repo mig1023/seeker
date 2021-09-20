@@ -39,6 +39,7 @@ namespace Seeker.Gamebook
             ["VWeapons"] = VWeapons.Constants.GetLinks(),
             ["LandOfUnwaryBears"] = LandOfUnwaryBears.Constants.GetLinks(),
             ["YounglingTournament"] = YounglingTournament.Constants.GetLinks(),
+            ["GoingToLaughter"] = GoingToLaughter.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() => Books.Keys.ToList();
