@@ -317,13 +317,10 @@ namespace Seeker.Output
             return fontFamily.ToString();
         }
 
-        public static double FontSize(TextFontSize size, bool italic = false, double defaultReturn = 0)
+        public static double FontSize(TextFontSize size, bool italic = false)
         {
             if (Game.Settings.GetValue("FontType") == 1)
                 italic = false;
-
-            if ((Game.Settings.GetValue("FontSize") > 0) && (defaultReturn > 0))
-                return defaultReturn;
 
             if (italic && Constants.FontSizeItalic.ContainsKey(size))
                 return Constants.FontSizeItalic[size];
@@ -347,9 +344,8 @@ namespace Seeker.Output
 
         public static ExtendedLabel Text(Text text)
         {
-            ExtendedLabel label = Text(text.Content);
+            ExtendedLabel label = Text(text.Content, italic: text.Italic);
             label.FontFamily = TextFontFamily(bold: text.Bold, italic: text.Italic);
-            label.FontSize = FontSize(text.Size, italic: text.Italic, defaultReturn: label.FontSize);
 
             if (text.Alignment == "Center")
                 label.HorizontalTextAlignment = TextAlignment.Center;
@@ -357,7 +353,7 @@ namespace Seeker.Output
             return label;
         }
 
-        public static ExtendedLabel Text(string text, bool defaultParams = false)
+        public static ExtendedLabel Text(string text, bool defaultParams = false, bool italic = false)
         {
             bool justyfy = (defaultParams ? false : (Game.Settings.GetValue("Justyfy") == 1));
 
@@ -379,7 +375,7 @@ namespace Seeker.Output
             if (fontSize > 0)
                 label.FontSize = Constants.FONT_SIZE_VALUES[fontSize];
             else if(Game.Data.Constants != null)
-                label.FontSize = FontSize(Game.Data.Constants.GetFontSize());
+                label.FontSize = FontSize(Game.Data.Constants.GetFontSize(), italic: italic);
 
             if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
                 label.TextColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
