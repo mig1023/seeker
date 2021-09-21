@@ -17,13 +17,10 @@ namespace Seeker.Gamebook.GoingToLaughter
             {
                 Option option = OptionsTemplateWithoutDestination(xmlOption);
 
-                if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
-                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+                if (xmlOption.Attributes["Destination"].Value == "Random")
+                    option.Destination = id + 1 + random.Next(6);
                 else
-                {
-                    List<string> destinations = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
-                    option.Destination = int.Parse(destinations[random.Next(destinations.Count())]);
-                }
+                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
 
                 paragraph.Options.Add(option);
             }
