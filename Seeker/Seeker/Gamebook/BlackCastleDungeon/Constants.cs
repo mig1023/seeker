@@ -31,16 +31,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             "ЗАКЛЯТИЕ КОПИИ", "ЗАКЛЯТИЕ СИЛЫ", "ЗАКЛЯТИЕ СЛАБОСТИ"
         };
 
-        public static List<string> GetActionParams() => new List<string>
-        {
-            "RoundsToWin", "WoundsToWin", "StrengthPenlty", "ThisIsSpell"
-        };
-
-        public static List<string> GetEnemyParams() => new List<string>
-        {
-            "Name", "MaxMastery", "MaxEndurance"
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

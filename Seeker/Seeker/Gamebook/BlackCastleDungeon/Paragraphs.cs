@@ -15,7 +15,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            foreach (string param in Constants.GetActionParams())
+            foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
             if (xmlAction["Enemies"] != null)
@@ -43,7 +43,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         {
             Character enemy = new Character();
 
-            foreach (string param in Constants.GetEnemyParams())
+            foreach (string param in GetProperties(enemy))
                 SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
 
             enemy.Mastery = enemy.MaxMastery;
