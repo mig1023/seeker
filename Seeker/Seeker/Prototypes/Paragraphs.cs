@@ -81,7 +81,7 @@ namespace Seeker.Prototypes
         public virtual object ModificationParse(XmlNode xmlModification, object modification)
         {
             if (xmlModification == null)
-                return modification;
+                return null;
 
             foreach (string param in GetProperties(modification))
                 SetPropertyByAttr(modification, param, xmlModification);
