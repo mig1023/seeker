@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Xml;
 using Seeker.Game;
@@ -77,6 +78,17 @@ namespace Seeker.Prototypes
             return action;
         }
 
+        public virtual object ModificationParse(XmlNode xmlModification, object modification)
+        {
+            if (xmlModification == null)
+                return modification;
+
+            foreach (string param in GetProperties(modification))
+                SetPropertyByAttr(modification, param, xmlModification);
+
+            return modification;
+        }
+
         public Game.Paragraph ParagraphTemplate(XmlNode xmlParagraph) => new Game.Paragraph
         {
             Options = new List<Option>(),
@@ -118,8 +130,11 @@ namespace Seeker.Prototypes
             return option;
         }
 
-        private object PropertyType(object action, XmlNode value, string paramName)
+        private object PropertyByType(object action, XmlNode value, string paramName)
         {
+            if (value == null)
+                return null;
+
             PropertyInfo param = action.GetType().GetProperty(paramName);
 
             if (param.PropertyType == typeof(bool))
@@ -128,17 +143,31 @@ namespace Seeker.Prototypes
             else if (param.PropertyType == typeof(int))
                 return Xml.IntParse(value);
 
-            else
+            else if (param.PropertyType == typeof(string))
                 return Xml.StringParse(value);
+
+            else
+                return null;
         }
 
-        public void SetProperty(object action, string param, XmlNode value) =>
-            action.GetType().GetProperty(param).SetValue(action, PropertyType(action, value[param], param));
+        public List<string> GetProperties(object action) => action.GetType().GetProperties().Select(x => x.Name).ToList();
+
+        public void SetProperty(object action, string param, XmlNode value)
+        {
+            object propetyValue = PropertyByType(action, value[param], param);
+
+            if (propetyValue != null)
+                action.GetType().GetProperty(param).SetValue(action, propetyValue);
+        }
 
         public void SetPropertyByAttr(object action, string param, XmlNode value, bool maxPrefix = false)
         {
             string xmlField = (maxPrefix && param.StartsWith("Max")) ? param.Substring(3) : param;
-            action.GetType().GetProperty(param).SetValue(action, PropertyType(action, value.Attributes[xmlField], param));
+
+            object propetyValue = PropertyByType(action, value.Attributes[xmlField], param);
+
+            if (propetyValue != null)
+                action.GetType().GetProperty(param).SetValue(action, propetyValue);
         }
     }
 }
