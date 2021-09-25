@@ -26,19 +26,6 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public override bool ShowDisabledOption() => true;
 
-        public static List<string> GetActionParams() => new List<string>
-        {
-            "Level", "AccuracyBonus", "HeroHitpointsLimith", "EnemyHitpointsLimith",
-            "HeroRoundWin", "EnemyRoundWin", "SpeedActivate", "EnemyHitpointsPenalty",
-            "Enemy", "BonusTechnique", "WithoutTechnique",
-        };
-
-        public static List<string> GetEnemyParams() => new List<string>
-        {
-            "Name", "MaxHitpoints", "Accuracy", "Shield", "Firepower", "Skill", "Rang",
-            "Speed", "SwordTechnique"
-        };
-
         public static int GetMaxTechniqueValue() => 4;
 
         public static Dictionary<Character.SwordTypes, string> SwordSkillsNames() => new Dictionary<Character.SwordTypes, string>

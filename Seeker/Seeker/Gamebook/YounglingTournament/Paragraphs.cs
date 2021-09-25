@@ -40,7 +40,7 @@ namespace Seeker.Gamebook.YounglingTournament
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            foreach (string param in Constants.GetActionParams())
+            foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
             if (xmlAction["Enemies"] != null)
@@ -51,7 +51,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 {
                     Character enemy = new Character();
 
-                    foreach (string param in Constants.GetEnemyParams())
+                    foreach (string param in GetProperties(enemy))
                         SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
 
                     enemy.Hitpoints = enemy.MaxHitpoints;
