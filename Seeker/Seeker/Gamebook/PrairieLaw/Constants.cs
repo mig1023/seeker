@@ -84,16 +84,6 @@ namespace Seeker.Gamebook.PrairieLaw
             [16] = "❻",
         };
 
-        public static List<string> GetActionParams() => new List<string>
-        {
-            "RemoveTrigger", "SellPrices", "Dices", "Firefight", "HeroWoundsLimit", "EnemyWoundsLimit", "Roulette"
-        };
-
-        public static List<string> GetEnemyParams() => new List<string>
-        {
-            "Name", "MaxSkill", "MaxStrength", "Cartridges"
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
