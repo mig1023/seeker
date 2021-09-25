@@ -15,7 +15,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            foreach (string param in Constants.GetActionParams())
+            foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
             action.SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]);
@@ -85,7 +85,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         {
             Character character = new Character();
 
-            foreach (string param in Constants.GetCharacterParams())
+            foreach (string param in GetProperties(character))
                 SetPropertyByAttr(character, param, xmlNode, maxPrefix: true);
 
             character.SpecialTechnique = new List<Character.SpecialTechniques>();
@@ -125,17 +125,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return (success ? value : Character.SpecialTechniques.Nope);
         }
 
-        public override Abstract.IModification ModificationParse(XmlNode xmlNode)
-        {
-            if (xmlNode == null)
-                return null;
-
-            Modification modification = new Modification();
-
-            foreach (string param in Constants.GetModsParams())
-                SetPropertyByAttr(modification, param, xmlNode);
-
-            return modification;
-        }
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+           (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
     }
 }
