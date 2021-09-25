@@ -29,16 +29,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1 };
 
-        public static List<string> GetActionParams() => new List<string>
-        {
-            "FightToDeath", "LastWound", "YourRacing", "Ichor"
-        };
-
-        public static List<string> GetModsParams() => new List<string>
-        {
-            "Name", "Value", "ValueString", "IntuitiveSolution"
-        };
-
         public static Dictionary<int, string> HealthLine() => new Dictionary<int, string>
         {
             [0] = "мертв",

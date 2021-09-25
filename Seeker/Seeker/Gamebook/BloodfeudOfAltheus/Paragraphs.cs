@@ -32,7 +32,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            foreach (string param in Constants.GetActionParams())
+            foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
             if (xmlAction["Enemies"] != null)
@@ -48,15 +48,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
 
-        public override Abstract.IModification ModificationParse(XmlNode xmlModification)
-        {
-            Modification modification = new Modification();
-
-            foreach (string param in Constants.GetModsParams())
-                SetPropertyByAttr(modification, param, xmlModification);
-
-            return modification;
-        }
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+            (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
 
         private static Character EnemyParse(XmlNode xmlEnemy) => new Character
         {
