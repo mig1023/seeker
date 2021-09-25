@@ -22,11 +22,6 @@ namespace Seeker.Gamebook.ThreePaths
             [ColorTypes.BookColor] = "#009999",
         };
 
-        public static List<string> GetModsParams() => new List<string> 
-        {
-            "Name", "Value", "ValueString"
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

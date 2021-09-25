@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.ThreePaths
 
             Modification modification = new Modification();
 
-            foreach (string param in Constants.GetModsParams())
+            foreach (string param in GetProperties(modification))
                 SetPropertyByAttr(modification, param, xmlNode);
 
             if (xmlNode.Attributes["Init"] != null)
