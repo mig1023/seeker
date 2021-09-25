@@ -14,7 +14,7 @@ namespace Seeker.Gamebook.HeartOfIce
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            foreach (string param in Constants.GetActionParams())
+            foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
             if (xmlAction["Benefit"] != null)
