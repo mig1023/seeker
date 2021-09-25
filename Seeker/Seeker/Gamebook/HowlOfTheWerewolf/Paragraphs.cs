@@ -45,7 +45,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            foreach (string param in Constants.GetActionParams())
+            foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
             action.Specificity = SpecificsParse(xmlAction["Specificity"]);
@@ -80,7 +80,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             Character enemy = new Character();
 
-            foreach (string param in Constants.GetEnemyParams())
+            foreach (string param in GetProperties(enemy))
                 SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
 
             enemy.Mastery = enemy.MaxMastery;
