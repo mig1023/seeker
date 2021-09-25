@@ -32,17 +32,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 714, 715, 716 };
 
-        public static List<string> GetActionParams() => new List<string>
-        {
-            "ConneryAttacks", "ReactionWounds", "ReactionRound", "ReactionHit", "Dices", "DiceBonus", "OnlyRounds",
-            "RoundsToWin", "AttackWounds", "Disabled", "IncrementWounds", "GolemFight", "GolemFight"
-        };
-
-        public static List<string> GetModsParams() => new List<string>
-        {
-            "Name", "Value", "WizardWoundsPenalty", "ThrowerWoundsPenalty", "Empty", "Init"
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
