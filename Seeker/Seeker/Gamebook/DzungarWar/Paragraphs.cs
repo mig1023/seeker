@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.DzungarWar
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            foreach (string param in Constants.GetActionParams())
+            foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
             
             action.Benefit = ModificationParse(xmlAction["Benefit"]);
@@ -31,17 +31,7 @@ namespace Seeker.Gamebook.DzungarWar
 
         public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
 
-        public override Abstract.IModification ModificationParse(XmlNode xmlNode)
-        {
-            if (xmlNode == null)
-                return null;
-
-            Modification modification = new Modification();
-
-            foreach (string param in Constants.GetModsParams())
-                SetPropertyByAttr(modification, param, xmlNode);
-
-            return modification;
-        }
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+           (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
     }
 }
