@@ -45,21 +45,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             [6] = 20
         };
 
-        public static List<string> GetActionParams() => new List<string>
-        {
-            "RoundsToWin", "WoundsToWin", "SkillPenalty", "WithoutShooting", "HeroWoundsLimit", "EnemyWoundsLimit",
-        };
-
-        public static List<string> GetEnemyParams() => new List<string>
-        {
-            "Name", "MaxSkill", "MaxStrength"
-        };
-
-        public static List<string> GetModsParams() => new List<string>
-        {
-            "Name", "Value", "ValueString", "Empty", "Restore"
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

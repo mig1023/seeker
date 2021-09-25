@@ -15,7 +15,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
 
-            foreach (string param in Constants.GetActionParams())
+            foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
             action.MeritalArt = MeritalArtsParse(xmlAction["MeritalArt"]);
@@ -58,7 +58,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             Character enemy = new Character();
 
-            foreach (string param in Constants.GetEnemyParams())
+            foreach (string param in GetProperties(enemy))
                 SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
 
             enemy.Skill = enemy.MaxSkill;
@@ -67,17 +67,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return enemy;
         }
 
-        public override Abstract.IModification ModificationParse(XmlNode xmlNode)
-        {
-            if (xmlNode == null)
-                return null;
-
-            Modification modification = new Modification();
-
-            foreach (string param in Constants.GetModsParams())
-                SetPropertyByAttr(modification, param, xmlNode, maxPrefix: true);
-
-            return modification;
-        }
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+           (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
     }
 }
