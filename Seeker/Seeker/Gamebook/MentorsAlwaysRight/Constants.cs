@@ -31,18 +31,6 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 556, 557, 558, 559 };
 
-        public static List<string> GetActionParams() => new List<string>
-        {
-            "OnlyRounds", "RoundsToWin", "RoundsWinToWin", "ThisIsSpell", "Regeneration", "ReactionFight",
-            "Poison", "OnlyOne", "TailAttack", "IncrementWounds", "ThreeWoundLimit", "Invincible", "Wound",
-            "Dices", "EvenWound", "WoundsLimit", "DeathLimit", "ReactionWounds"
-        };
-
-        public static List<string> GetModsParams() => new List<string>
-        {
-            "Name", "Value", "ValueString", "Empty", "Restore"
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
