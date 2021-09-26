@@ -64,7 +64,14 @@ namespace Seeker.Gamebook.GoingToLaughter
         {
             foreach (string oneOption in option.Split(','))
             {
-                if (option.Contains("!"))
+                if (oneOption.Contains(">") || oneOption.Contains("<"))
+                {
+                    int level = Game.Other.LevelParse(oneOption);
+
+                    if (oneOption.Contains("БАЛАНС <=") && (level < protagonist.Balance))
+                        return false;
+                }
+                else if (option.Contains("!"))
                 {
                     if (protagonist.Disadvantages.Contains(oneOption.Replace("!", String.Empty).Trim()))
                         return false;
