@@ -48,12 +48,14 @@ namespace Seeker.Output
             Button optionButton = new Button
             {
                 Text = option.Text,
-                BackgroundColor = Color.FromHex(color),
                 IsEnabled = isEnabled,
                 FontFamily = Interface.TextFontFamily(standart: true),
                 FontSize = Interface.Font(NamedSize.Default),
                 IsVisible = String.IsNullOrEmpty(option.Input),
             };
+
+            if (optionButton.IsEnabled)
+                optionButton.BackgroundColor = Color.FromHex(color);
 
             optionButton.Clicked += onClick;
 
