@@ -25,7 +25,28 @@ namespace Seeker.Gamebook.GoingToLaughter
                 paragraph.Options.Add(option);
             }
 
+            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
+                paragraph.Actions.Add(ActionParse(xmlAction));
+
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
+                paragraph.Modification.Add(ModificationParse(xmlModification));
+
             return paragraph;
         }
+
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
+        {
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            foreach (string param in GetProperties(action))
+                SetProperty(action, param, xmlAction);
+
+            return action;
+        }
+
+        public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
+
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+            (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
     }
 }

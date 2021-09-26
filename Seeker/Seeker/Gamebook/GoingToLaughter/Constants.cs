@@ -11,7 +11,9 @@ namespace Seeker.Gamebook.GoingToLaughter
         public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#441012",
+            [ButtonTypes.Option] = "#441012",
             [ButtonTypes.Continue] = "#814548",
+            [ButtonTypes.Action] = "#693f41",
             [ButtonTypes.System] = "#f3f0f0",
         };
 
@@ -19,6 +21,8 @@ namespace Seeker.Gamebook.GoingToLaughter
         {
             [ColorTypes.BookColor] = "#441012",
         };
+
+        public override bool ShowDisabledOption() => true;
 
         public static Links GetLinks() => new Links
         {
