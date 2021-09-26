@@ -146,12 +146,15 @@ namespace Seeker
             }
 
             int optionCount = 0;
+            Button singleton = null;
 
             foreach (Game.Option option in paragraph.Options)
             {
                 bool mustBeVisible = OptionVisibility(option.Aftertext);
+                bool onlyIf = Game.Data.CheckOnlyIf(option.OnlyIf);
+                bool singleIf = Game.Data.CheckOnlyIf(option.Singleton);
 
-                if (!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf) && !mustBeVisible)
+                if (!String.IsNullOrEmpty(option.OnlyIf) && !onlyIf && !singleIf && !mustBeVisible)
                     continue;
 
                 Button button = AddOptionButton(option, ref gameOver);
@@ -163,7 +166,22 @@ namespace Seeker
 
                 AddAftertext(ref Options, option.Aftertext, option.Aftertexts);
 
+                if (singleIf)
+                    singleton = button;
+
                 optionCount += 1;
+            }
+
+            if (singleton != null)
+            {
+                foreach (Button button in Options.Children)
+                {
+                    if (button != singleton)
+                    {
+                        button.IsEnabled = false;
+                        button.BackgroundColor = Color.Default;
+                    }
+                }
             }
 
             if ((id == Game.Data.StartParagraph) && Game.Continue.IsGameSaved())
