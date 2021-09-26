@@ -28,12 +28,29 @@ namespace Seeker.Gamebook.GoingToLaughter
             return new List<string> { "RELOAD" };
         }
 
+        private bool Incompatible(string disadvantage)
+        {
+            if (!Constants.IncompatiblesDisadvantages.ContainsKey(disadvantage))
+                return false;
+
+            string incompatibles = Constants.IncompatiblesDisadvantages[disadvantage];
+
+            foreach (string incompatible in incompatibles.Split(','))
+                if (protagonist.Advantages.Contains(incompatible.Trim()) || protagonist.Disadvantages.Contains(incompatible.Trim()))
+                    return true;
+
+            return false;
+        }
+            
         public override bool IsButtonEnabled()
         {
             if (Advantage && protagonist.Advantages.Contains(this.Button))
                 return false;
 
             else if (Disadvantage && (protagonist.Balance == 0))
+                return false;
+
+            else if (Disadvantage && Incompatible(this.Button))
                 return false;
 
             else if (Disadvantage && protagonist.Disadvantages.Contains(this.Button))

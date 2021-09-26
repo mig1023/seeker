@@ -22,6 +22,20 @@ namespace Seeker.Gamebook.GoingToLaughter
             [ColorTypes.BookColor] = "#441012",
         };
 
+        public static Dictionary<string, string> IncompatiblesDisadvantages => new Dictionary<string, string>
+        {
+            ["Пьянство"] = "Набожность",
+            ["Алчность"] = "Набожность",
+            ["Суеверие"] = "Набожность",
+            ["Похоть"] = "Набожность",
+            ["Жестокосердие"] = "Набожность",
+            ["Азартность"] = "Набожность",
+            ["Невезение"] = "Везение",
+            ["Рассеянность"] = "Наблюдательность",
+            ["Обжорство"] = "Эквилибристика, Акробатика",
+            ["Малодушие"] = "Вспыльчивость",
+        };
+        
         public override bool ShowDisabledOption() => true;
 
         public static Links GetLinks() => new Links
