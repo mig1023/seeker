@@ -949,32 +949,31 @@
 			<Option Destination="233" Text="Пойдёте в таверну и попытаетесь поднять народ на восстание"/>
 			<Option Destination="179" Text="Направитесь к казармам и попробуете подбить солдатню на мятеж"/>
 			<Option Destination="215" Text="Пойдёте в церковь в поисках убежища"/>
-			<Option Destination="207" Text="Попробуете проявить смекалку и выбраться из города"/>
+			<Option Destination="207" Text="Попробуете проявить смекалку и выбраться из города" OnlyIf="Смекалка"/>
 			<Option Destination="143" Text="Пойдёте на городскую площадь, придумывая план действий по ходу дела"/>
 			<Option Destination="124" Text="Постараетесь найти тихое и укромное место, чтобы временно отсидеться"/>
 			<Option Destination="107" Text="Рискнёте направиться в порт"/>
-			<Option Destination="85" Text="А если Вы предусмотрительный"/>
+			<Option Destination="85" Text="Если Вы предусмотрительный" OnlyIf="Предусмотрительность"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>112</ID>
 		<Text>Решив, что во время бега под обстрелом Вам просто жизненно необходима алебарда, с которой потом довольно затруднительно будет разгуливать по городу не привлекая внимания, Вы начинаете описывать зигзаги.</Text>
 		<Options>
-			<Option Destination="245" Text="Если Вы везучий"/>
-			<Option Destination="48" Text="Если нет"/>
+			<Option Destination="245" Text="Вы везучий" OnlyIf="Везение"/>
+			<Option Destination="48" Text="Нет"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>113</ID>
-		<Text></Text>
 		<Options>
-			<Option Destination="114" Text=""/>
-			<Option Destination="43" Text="Если Вы способны ходить по канату"/>
-			<Option Destination="68" Text="Если Вы владеете акробатическими трюками"/>
-			<Option Destination="93" Text="Если Вы можете показывать фокусы"/>
-			<Option Destination="260" Text="Если Вы профессионально музицируете (и есть на чём сыграть)"/>
-			<Option Destination="684" Text="Если в Вас заложен талант выдающегося артиста"/>
-			<Option Destination="234" Text="Если Вы являетесь красноречивым сказителем"/>
+			<Option Destination="114" Text="Если у Вас есть стеклянные шарики, то можете жонглировать ими" OnlyIf="Жонглирование" Aftertext="Если же нет – под руками нет ничего подходящего, и лучше придумать что-то ещё:"/>
+			<Option Destination="43" Text="Если Вы способны ходить по канату" OnlyIf="Эквилибристика"/>
+			<Option Destination="68" Text="Если Вы владеете акробатическими трюками" OnlyIf="Акробатика"/>
+			<Option Destination="93" Text="Если Вы можете показывать фокусы" OnlyIf="Фокусы"/>
+			<Option Destination="260" Text="Если Вы профессионально музицируете (и есть на чём сыграть)" OnlyIf="Музицирование"/>
+			<Option Destination="684" Text="Если в Вас заложен талант выдающегося артиста" OnlyIf="Артистизм"/>
+			<Option Destination="234" Text="Если Вы являетесь красноречивым сказителем" OnlyIf="Красноречие"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
