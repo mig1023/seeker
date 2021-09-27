@@ -62,25 +62,38 @@ namespace Seeker.Gamebook.GoingToLaughter
 
         public override bool CheckOnlyIf(string option)
         {
-            foreach (string oneOption in option.Split(','))
+            if (option.Contains("|"))
             {
-                if (oneOption.Contains(">") || oneOption.Contains("<"))
+                foreach (string oneOption in option.Split('|'))
                 {
-                    int level = Game.Other.LevelParse(oneOption);
-
-                    if (oneOption.Contains("БАЛАНС <=") && (level < protagonist.Balance))
-                        return false;
+                    if (protagonist.Disadvantages.Contains(oneOption.Trim()))
+                        return true;
                 }
-                else if (option.Contains("!"))
+
+                return false;
+            }
+            else
+            {
+                foreach (string oneOption in option.Split(','))
                 {
-                    if (protagonist.Disadvantages.Contains(oneOption.Replace("!", String.Empty).Trim()))
-                        return false;
-                }
-                else if (!protagonist.Advantages.Contains(option) && !protagonist.Disadvantages.Contains(option))
-                    return false;
-            };
+                    if (oneOption.Contains(">") || oneOption.Contains("<"))
+                    {
+                        int level = Game.Other.LevelParse(oneOption);
 
-            return true;
+                        if (oneOption.Contains("БАЛАНС <=") && (level < protagonist.Balance))
+                            return false;
+                    }
+                    else if (option.Contains("!"))
+                    {
+                        if (protagonist.Disadvantages.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                            return false;
+                    }
+                    else if (!protagonist.Advantages.Contains(option) && !protagonist.Disadvantages.Contains(option))
+                        return false;
+                };
+
+                return true;
+            }
         }
     }
 }
