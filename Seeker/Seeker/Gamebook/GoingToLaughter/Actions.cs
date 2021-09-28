@@ -36,6 +36,24 @@ namespace Seeker.Gamebook.GoingToLaughter
             String.Format("Вдохновение: {0}", protagonist.Inspiration)
         };
 
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
+        {
+            if (protagonist.Buffoonery <= 0)
+            {
+                toEndParagraph = 1392;
+                toEndText = "Это уже другая история...";
+
+                return true;
+            }
+            else
+            {
+                toEndParagraph = 0;
+                toEndText = String.Empty;
+
+                return false;
+            }
+        }
+
         private bool Incompatible(string disadvantage)
         {
             if (!Constants.IncompatiblesDisadvantages.ContainsKey(disadvantage))
