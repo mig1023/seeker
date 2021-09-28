@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.GoingToLaughter
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
+            [ColorTypes.StatusBar] = "#2f0b0c",
             [ColorTypes.BookColor] = "#441012",
         };
 
@@ -37,6 +38,8 @@ namespace Seeker.Gamebook.GoingToLaughter
         };
         
         public override bool ShowDisabledOption() => true;
+
+        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 1393, 1394 };
 
         public static Links GetLinks() => new Links
         {

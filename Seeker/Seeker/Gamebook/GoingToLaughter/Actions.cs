@@ -28,6 +28,14 @@ namespace Seeker.Gamebook.GoingToLaughter
             return new List<string> { "RELOAD" };
         }
 
+        public override List<string> Status() => new List<string>
+        {
+            String.Format("Героизм: {0}", protagonist.Heroism),
+            String.Format("Злодеяние: {0}", protagonist.Villainy),
+            String.Format("Шутовство: {0}", protagonist.Buffoonery),
+            String.Format("Вдохновение: {0}", protagonist.Inspiration)
+        };
+
         private bool Incompatible(string disadvantage)
         {
             if (!Constants.IncompatiblesDisadvantages.ContainsKey(disadvantage))
