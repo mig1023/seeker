@@ -344,16 +344,19 @@ namespace Seeker.Output
 
         public static ExtendedLabel Text(Text text)
         {
-            ExtendedLabel label = Text(text.Content, italic: text.Italic);
+            ExtendedLabel label = Text(text.Content, italic: text.Italic, size: text.Size);
             label.FontFamily = TextFontFamily(bold: text.Bold, italic: text.Italic);
 
             if (text.Alignment == "Center")
                 label.HorizontalTextAlignment = TextAlignment.Center;
 
+
+
             return label;
         }
 
-        public static ExtendedLabel Text(string text, bool defaultParams = false, bool italic = false)
+        public static ExtendedLabel Text(string text, bool defaultParams = false, bool italic = false,
+            TextFontSize size = TextFontSize.nope)
         {
             bool justyfy = (defaultParams ? false : (Game.Settings.GetValue("Justyfy") == 1));
 
@@ -374,6 +377,8 @@ namespace Seeker.Output
 
             if (fontSize > 0)
                 label.FontSize = Constants.FONT_SIZE_VALUES[fontSize];
+            else if (size != TextFontSize.nope)
+                label.FontSize = FontSize(size);
             else if(Game.Data.Constants != null)
                 label.FontSize = FontSize(Game.Data.Constants.GetFontSize(), italic: italic);
 
