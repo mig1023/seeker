@@ -4223,9 +4223,9 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>509</ID>
-		<Text></Text>
+		<Text>Точно-точно?</Text>
 		<Options>
-			<Option Destination="149" Text="Ну да, сказал ведь уже! (Если Вы жестокосердный и не выдержали проверку - выбираете этот вариант)"/>
+			<Option Destination="149" Text="Ну да, сказал ведь уже!" Singleton="Жестокосердие"/>
 			<Option Destination="45" Text="Нет, всё-таки, нет"/>
 		</Options>
 	</Paragraph>
