@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.GoingToLaughter
         public string Target { get; set; }
         public int Dices { get; set; }
         public int DiceBonus { get; set; }
+        public int ResultBonus { get; set; }
         public bool DiceOfDice { get; set; }
 
         public List<string> Get()
@@ -150,10 +151,16 @@ namespace Seeker.Gamebook.GoingToLaughter
                 if (DiceBonus > 0)
                 {
                     dicesResult += DiceBonus;
-                    bonus = String.Format(" + {0}", DiceBonus);
+                    bonus = String.Format(" + {0} по условию", DiceBonus);
                 }
 
                 diceValues.Add(String.Format("На {0} выпало: {1}{2}", i, Game.Dice.Symbol(dice), bonus));
+            }
+
+            if (ResultBonus > 0)
+            {
+                dicesResult += ResultBonus;
+                diceValues.Add(String.Format(" +{0} по условию", ResultBonus));
             }
 
             int currentValue = (int)protagonist.GetType().GetProperty(Target).GetValue(protagonist, null);
