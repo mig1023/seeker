@@ -11,6 +11,11 @@ namespace Seeker.Gamebook.GoingToLaughter
         public bool Advantage { get; set; }
         public bool Disadvantage { get; set; }
 
+        public string Target { get; set; }
+        public int Dices { get; set; }
+        public int DiceBonus { get; set; }
+        public bool DiceOfDice { get; set; }
+
         public List<string> Get()
         {
             if (Advantage)
@@ -120,6 +125,44 @@ namespace Seeker.Gamebook.GoingToLaughter
 
                 return true;
             }
+        }
+
+        public List<string> DiceValues()
+        {
+            List<string> diceValues = new List<string> { };
+
+            int dicesResult = 0;
+            int dicesCount = (Dices > 0 ? Dices : 1);
+
+            if (DiceOfDice)
+            {
+                dicesCount = Game.Dice.Roll();
+                diceValues.Add(String.Format("Количество кубиков: {0}", Game.Dice.Symbol(dicesCount)));
+                diceValues.Add(String.Empty);
+            }
+
+            for (int i = 1; i <= dicesCount; i++)
+            {
+                string bonus = String.Empty;
+                int dice = Game.Dice.Roll();
+                dicesResult += dice;
+
+                if (DiceBonus > 0)
+                {
+                    dicesResult += DiceBonus;
+                    bonus = String.Format(" + {0}", DiceBonus);
+                }
+
+                diceValues.Add(String.Format("На {0} выпало: {1}{2}", i, Game.Dice.Symbol(dice), bonus));
+            }
+
+            int currentValue = (int)protagonist.GetType().GetProperty(Target).GetValue(protagonist, null);
+            protagonist.GetType().GetProperty(Target).SetValue(protagonist, (currentValue + dicesResult));
+
+            diceValues.Add(String.Format("BIG|BOLD|Вы добавили +{0} к {1}",
+                dicesResult, Constants.ParamNames()[Target]));
+
+            return diceValues;
         }
     }
 }

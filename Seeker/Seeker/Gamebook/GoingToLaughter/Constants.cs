@@ -36,7 +36,15 @@ namespace Seeker.Gamebook.GoingToLaughter
             ["Обжорство"] = "Эквилибристика, Акробатика",
             ["Малодушие"] = "Вспыльчивость",
         };
-        
+
+        public static Dictionary<string, string> ParamNames() => new Dictionary<string, string>
+        {
+            ["Heroism"] = "Героизма",
+            ["Villainy"] = "Злодейства",
+            ["Buffoonery"] = "Шутовства",
+            ["Inspiration"] = "Вдохновения",
+        };
+
         public override bool ShowDisabledOption() => true;
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 1393, 1394 };
