@@ -39,10 +39,10 @@ namespace Seeker.Gamebook.GoingToLaughter
 
         public static Dictionary<string, string> ParamNames() => new Dictionary<string, string>
         {
-            ["Heroism"] = "Героизма",
-            ["Villainy"] = "Злодейства",
-            ["Buffoonery"] = "Шутовства",
-            ["Inspiration"] = "Вдохновения",
+            ["Heroism"] = "Героизму",
+            ["Villainy"] = "Злодейству",
+            ["Buffoonery"] = "Шутовству",
+            ["Inspiration"] = "Вдохновению",
         };
 
         public override bool ShowDisabledOption() => true;
