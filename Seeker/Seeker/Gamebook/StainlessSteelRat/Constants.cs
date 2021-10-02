@@ -10,15 +10,17 @@ namespace Seeker.Gamebook.StainlessSteelRat
 
         public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#738595",
-            [ButtonTypes.Continue] = "#8f9daa",
-            [ButtonTypes.System] = "#a5b0bb",
+            [ButtonTypes.Main] = "#333f4b",
+            [ButtonTypes.Continue] = "#47525d",
+            [ButtonTypes.System] = "#425161",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.Background] = "#b9c2ca",
-            [ColorTypes.BookColor] = "#738595",
+            [ColorTypes.Background] = "#4a5b6c",
+            [ColorTypes.Font] = "#c3c6c8",
+            [ColorTypes.SystemFont] = "#ffffff",
+            [ColorTypes.BookColor] = "#333f4b",
         };
 
         public static Links GetLinks() => new Links
