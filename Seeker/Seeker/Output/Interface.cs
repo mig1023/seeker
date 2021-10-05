@@ -175,7 +175,7 @@ namespace Seeker.Output
 
             TapGestureRecognizer settingsClick = new TapGestureRecognizer();
             settingsClick.Tapped += settingsHandler;
-            settings.GestureRecognizers.Add(settingsClick);
+            footerLayout.GestureRecognizers.Add(settingsClick);
 
             footerLayout.Children.Add(settings);
 

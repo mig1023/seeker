@@ -152,7 +152,7 @@ namespace Seeker
             {
                 bool mustBeVisible = OptionVisibility(option.Aftertext);
                 bool onlyIf = Game.Data.CheckOnlyIf(option.OnlyIf);
-                bool singleIf = Game.Data.CheckOnlyIf(option.Singleton);
+                bool singleIf = Game.Data.CheckOnlyIf(option.Singleton) && !String.IsNullOrEmpty(option.Singleton);
 
                 if (!String.IsNullOrEmpty(option.OnlyIf) && !onlyIf && !singleIf && !mustBeVisible)
                     continue;
