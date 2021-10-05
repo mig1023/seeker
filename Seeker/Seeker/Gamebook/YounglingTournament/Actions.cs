@@ -410,6 +410,22 @@ namespace Seeker.Gamebook.YounglingTournament
             }
         }
 
+        private bool AdditionalAttack(ref List<string> fight, Character enemy, string head, string body)
+        {
+            fight.Add(String.Format("BOLD|{0}", head));
+
+            int strikeWound = Game.Dice.Roll();
+
+            fight.Add(String.Format("{0}: {1}", body, Game.Dice.Symbol(strikeWound)));
+
+            enemy.Hitpoints -= strikeWound;
+
+            fight.Add(String.Format("GOOD|Вы ранили {0}, он потерял {1} ед.выносливости (осталось {2})",
+                enemy.Name, strikeWound, enemy.Hitpoints));
+
+            return true;
+        }
+
         private void SpeedFightHitpointsLoss(ref List<string> fight, Character character)
         {
             bool isProtagonist = (character == protagonist);
@@ -547,7 +563,7 @@ namespace Seeker.Gamebook.YounglingTournament
             fight.Add(String.Empty);
 
             int round = 1, heroRoundWin = 0, enemyRoundWin = 0;
-            bool speedActivate = false;
+            bool speedActivate = false, irresistibleAttack = false;
             bool strikeBack = NoStrikeBack;
 
             while (true)
@@ -610,6 +626,9 @@ namespace Seeker.Gamebook.YounglingTournament
 
                         fight.Add(String.Format("GOOD|Вы ранили {0}, он потерял 3 ед.выносливости (осталось {1})",
                             enemy.Key.Name, enemy.Key.Hitpoints));
+
+                        if ((heroRoundWin >= 3) && !irresistibleAttack && Game.Data.Triggers.Contains("Неотразимая атака"))
+                            irresistibleAttack = AdditionalAttack(ref fight, enemy.Key, "Вы проводите Неотразимую атаку!", "Урон от атаки");
                     }
 
                     else if (enemy.Value > hitSkill)
@@ -621,20 +640,7 @@ namespace Seeker.Gamebook.YounglingTournament
                             enemy.Key.Name, protagonist.Hitpoints));
 
                         if ((enemyRoundWin >= 3) && !strikeBack && Game.Data.Triggers.Contains("Встречный удар"))
-                        {
-                            fight.Add("BOLD|Вы проводите Встречный удар!");
-
-                            int strikeWound = Game.Dice.Roll();
-
-                            fight.Add(String.Format("Урон от удара: {0}", Game.Dice.Symbol(strikeWound)));
-
-                            enemy.Key.Hitpoints -= strikeWound;
-
-                            fight.Add(String.Format("GOOD|Вы ранили {0}, он потерял {1} ед.выносливости (осталось {2})",
-                                enemy.Key.Name, strikeWound, enemy.Key.Hitpoints));
-
-                            strikeBack = true;
-                        }
+                            strikeBack = AdditionalAttack(ref fight, enemy.Key, "Вы проводите Встречный удар!", "Урон от удара");
                     }
 
                     else
