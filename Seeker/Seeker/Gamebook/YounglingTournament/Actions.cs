@@ -545,7 +545,7 @@ namespace Seeker.Gamebook.YounglingTournament
             fight.Add(String.Empty);
 
             int round = 1, heroRoundWin = 0, enemyRoundWin = 0;
-            bool speedActivate = false;
+            bool speedActivate = false, strikeBack = false;
 
             while (true)
             {
@@ -619,6 +619,22 @@ namespace Seeker.Gamebook.YounglingTournament
 
                         fight.Add(String.Format("BAD|{0} ранил вас, вы потеряли 3 ед.выносливости (осталось {1})",
                             enemy.Key.Name, protagonist.Hitpoints));
+
+                        if ((enemyRoundWin >= 3) && !strikeBack && Game.Data.Triggers.Contains("Встречный удар"))
+                        {
+                            fight.Add("BOLD|Вы проводите Встречный удар!");
+
+                            int strikeWound = Game.Dice.Roll();
+
+                            fight.Add(String.Format("Урон от удара: {0}", Game.Dice.Symbol(strikeWound)));
+
+                            enemy.Key.Hitpoints -= strikeWound;
+
+                            fight.Add(String.Format("GOOD|Вы ранили {0}, он потерял {1} ед.выносливости (осталось {2})",
+                                enemy.Key.Name, strikeWound, enemy.Key.Hitpoints));
+
+                            strikeBack = true;
+                        }
                     }
 
                     else
