@@ -125,7 +125,6 @@ namespace Seeker.Gamebook.YounglingTournament
             Shield = 0;
             Firepower = 5;
             WayBack = 0;
-            HitpointAutosave = false;
 
             ForceTechniques = new SortedDictionary<ForcesTypes, int>
             {
@@ -154,6 +153,7 @@ namespace Seeker.Gamebook.YounglingTournament
             };
 
             HitpointsLoss.Clear();
+            HitpointAutosave = false;
         }
 
         public Character Clone() => new Character()

@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.YounglingTournament
         public int EnemyRoundWin { get; set; }
         public bool SpeedActivate { get; set; }
         public bool WithoutTechnique { get; set; }
+        public bool NoStrikeBack { get; set; }
         public int EnemyHitpointsPenalty { get; set; }
         public string BonusTechnique { get; set; }
 
@@ -94,7 +95,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 string firepower = (enemy.Firepower > 5 ? String.Format("  сила выстрела {0}", enemy.Firepower) : String.Empty);
                 string shield = (enemy.Shield > 0 ? String.Format("  энергощит {0}", enemy.Shield) : String.Empty);
                 string skill = (enemy.Skill > 0 ? String.Format("  ловкость {0}", enemy.Skill) : String.Empty);
-                string technique = String.Empty;
+                string technique = String.Empty, noStrikeBack = String.Empty;
 
                 if (enemy.Rang > 0)
                 {
@@ -106,9 +107,13 @@ namespace Seeker.Gamebook.YounglingTournament
                     technique = String.Format("\nиспользует Форму {0} - {1} ранга",
                         Constants.SwordSkillsNames()[currectSwordTechniques], enemy.Rang);
                 }
-                
-                enemies.Add(String.Format("{0}\n{1}выносливость {2}{3}{4}{5}{6}",
-                    enemy.Name, accuracy, enemy.GetHitpoints(EnemyHitpointsPenalty), firepower, shield, skill, technique));
+
+                if (NoStrikeBack)
+                    noStrikeBack = "\nзнает защиту от Встречного удара";
+
+                enemies.Add(String.Format("{0}\n{1}выносливость {2}{3}{4}{5}{6}{7}",
+                    enemy.Name, accuracy, enemy.GetHitpoints(EnemyHitpointsPenalty),
+                    firepower, shield, skill, technique, noStrikeBack));
             }
 
             return enemies;
@@ -542,7 +547,8 @@ namespace Seeker.Gamebook.YounglingTournament
             fight.Add(String.Empty);
 
             int round = 1, heroRoundWin = 0, enemyRoundWin = 0;
-            bool speedActivate = false, strikeBack = false;
+            bool speedActivate = false;
+            bool strikeBack = NoStrikeBack;
 
             while (true)
             {
