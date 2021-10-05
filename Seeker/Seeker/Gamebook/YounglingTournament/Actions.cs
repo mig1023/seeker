@@ -153,7 +153,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
             dice += bonus;
 
-            Character.SetHitpointsMod(enemy[0], dice, int.Parse(enemy[1]));
+            Character.SetHitpoints(enemy[0], dice, int.Parse(enemy[1]));
 
             diceCheck.Add(String.Format("BIG|GOOD|{0} потерял жизней: {1}", enemy[0], dice));
 

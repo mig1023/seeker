@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.YounglingTournament
 {
@@ -179,7 +180,7 @@ namespace Seeker.Gamebook.YounglingTournament
             return this;
         }
 
-        public static void SetHitpointsMod(string name, int value, int defaultInitValue)
+        public static void SetHitpoints(string name, int value, int defaultInitValue)
         {
             if (HitpointsLoss.ContainsKey(name))
                 HitpointsLoss[name] -= value;
@@ -187,14 +188,15 @@ namespace Seeker.Gamebook.YounglingTournament
                 HitpointsLoss.Add(name, (defaultInitValue - value));
         }
 
-        public void SaveHitpoints() => HitpointsLoss[this.Name] = this.Hitpoints;
-
         public int GetHitpoints(int hitpointsPenalty = 0) =>
             (HitpointsLoss.ContainsKey(this.Name) ? HitpointsLoss[this.Name] : this.Hitpoints) - hitpointsPenalty;
 
+        public void SaveHitpoints() => HitpointsLoss[this.Name] = this.Hitpoints;
+
         public override string Save() => String.Join("|",
             LightSide, DarkSide, MaxHitpoints, Hitpoints, Accuracy, Pilot, Stealth, Hacking, Firepower, WayBack,
-            String.Join(",", ForceTechniques.Values), String.Join(",", SwordTechniques.Values)
+            String.Join(",", ForceTechniques.Values), String.Join(",", SwordTechniques.Values),
+            String.Join(",", HitpointsLoss.Select(x => x.Key + "=" + x.Value).ToArray())
         );
 
         public override void Load(string saveLine)
@@ -241,6 +243,16 @@ namespace Seeker.Gamebook.YounglingTournament
                 [SwordTypes.Vaapad] = int.Parse(sword[6]),
                 [SwordTypes.JarKai] = int.Parse(sword[7]),
             };
+
+            HitpointsLoss.Clear();
+
+            string[] hitpoints = save[12].Split(',');
+
+            foreach (string hitpointLine in hitpoints)
+            {
+                string[] hitpoint = hitpointLine.Split('=');
+                HitpointsLoss.Add(hitpoint[0], int.Parse(hitpoint[1]));
+            }
         }
     }
 }
