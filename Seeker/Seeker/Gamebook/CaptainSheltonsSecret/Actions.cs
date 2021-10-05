@@ -314,8 +314,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 enemy.Endurance -= 2 + ally.ExtendedDamage;
                                 enemy.Mastery -= ally.MasteryDamage;
 
-                                enemy.SaveEndurance();
-
                                 enemyWounds += 1;
 
                                 bool enemyLost = FightEnemies.Where(x => ((x.Endurance > 0) && (x.Endurance > DamageToWin))).Count() == 0;
@@ -340,8 +338,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                             fight.Add(GroupFight && !IsProtagonist(ally.Name) ? String.Format("BAD|{0} ранен",  ally.Name) : "BAD|Вы ранены");
                             ally.Endurance -= 2 + enemy.ExtendedDamage;
                             ally.Mastery -= enemy.MasteryDamage;
-
-                            ally.SaveEndurance();
 
                             bool allyLost = FightAllies.Where(x => x.Endurance > 0).Count() == 0;
 

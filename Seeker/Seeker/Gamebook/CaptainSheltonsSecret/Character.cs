@@ -21,8 +21,15 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int Endurance
         {
             get => _endurance;
-            set => _endurance = Game.Param.Setter(value, max: MaxEndurance);
+            set
+            {
+                _endurance = Game.Param.Setter(value, max: MaxEndurance);
+
+                if (EnduranceAutosave)
+                    EnduranceLoss[this.Name] = _endurance;
+            }
         }
+        private bool EnduranceAutosave { get; set; }
 
         public int Gold { get; set; }
         public int ExtendedDamage { get; set; }
@@ -50,6 +57,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             Game.Healing.Add(name: "Поесть", healing: 4, portions: 3);
 
             EnduranceLoss.Clear();
+            EnduranceAutosave = false;
         }
 
         public Character Clone() => new Character()
@@ -63,6 +71,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             ExtendedDamage = this.ExtendedDamage,
             MasteryDamage = this.MasteryDamage,
             SeaArmour = this.SeaArmour,
+            EnduranceAutosave = true,
         };
 
         public Character SetEndurance()
@@ -72,8 +81,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             return this;
         }
-
-        public void SaveEndurance() => EnduranceLoss[this.Name] = this.Endurance;
 
         public int GetEndurance() => (EnduranceLoss.ContainsKey(this.Name) ? EnduranceLoss[this.Name] : this.Endurance);
 
