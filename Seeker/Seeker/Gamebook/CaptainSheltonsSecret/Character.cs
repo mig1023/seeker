@@ -79,7 +79,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public override string Save() => String.Join("|",
             MaxMastery, Mastery, MaxEndurance, Endurance, Gold, ExtendedDamage, MasteryDamage,
-            (SeaArmour ? 1 : 0), String.Join(",", Luck.Select(x => x ? "1" : "0"))
+            (SeaArmour ? 1 : 0), String.Join(",", Luck.Select(x => x ? "1" : "0")),
+            String.Join(",", EnduranceLoss.Select(x => x.Key + "=" + x.Value).ToArray())
         );
 
         public override void Load(string saveLine)
@@ -96,6 +97,16 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             SeaArmour = (save[7] == "1");
 
             Luck = save[8].Split(',').Select(x => x == "1").ToList();
+
+            EnduranceLoss.Clear();
+
+            string[] endurances = save[9].Split(',');
+
+            foreach (string enduranceLine in endurances)
+            {
+                string[] endurance = enduranceLine.Split('=');
+                EnduranceLoss.Add(endurance[0], int.Parse(endurance[1]));
+            }
         }
     }
 }
