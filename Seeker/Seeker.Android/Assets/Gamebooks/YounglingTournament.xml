@@ -2535,7 +2535,7 @@
 			<Modification Name="Speed" Value="1"/>
 			<Modification Name="MaxHitpoints" Value="1"/>
 		</Modifications>
-		<Triggers>Уайт</Triggers>
+		<Triggers>Уайт, Встречный удар</Triggers>
 		<Options>
 			<Option Destination="264"/>
 		</Options>
@@ -2665,7 +2665,7 @@
 		<Modifications>
 			<Modification Name="MaxHitpoints" Value="1"/>
 		</Modifications>
-		<Triggers>Ливия</Triggers>
+		<Triggers>Ливия, Встречный удар</Triggers>
 		<Options>
 			<Option Destination="264"/>
 		</Options>
@@ -2880,6 +2880,7 @@
 			<Text Size="small">Запишите прием «Встречный удар».</Text>
 			<Text>«Встречный удар». Когда противник выигрывает два раунда боя подряд, вы можете, уходя с линии удара, нанести ему легкое ранение. Успешность Встречного удара в реальном бою оценивается броском кубика (сколько выпало, столько Выносливости у противника и отнимаете) и он не приводит к потере боеспособности — разве что в случае, когда после него Выносливость противника падает до нуля. Ценность же этого приема в Турнире весьма велика — бой идет до трех ранений, и Встречный удар засчитывается как одно из этих ранений. Провести его больше, чем один раз за бой не получится.</Text>
 		</Texts>
+		<Triggers>Встречный удар</Triggers>
 		<Options>
 			<Option Destination="267"/>
 		</Options>
@@ -2888,7 +2889,9 @@
 		<ID>272</ID>
 		<Texts>
 			<Text Size="small">Запишите прием «Защита от Встречного удаар».</Text>
-			<Text>«Защита от Встречного Удара». Когда противник пытается провести «Встречный удар», вы бьете его в руку с мечом. Успешность Защиты от Встречного удара оценивается броском кубика:\n\n1—3 — противник получает ранение в плечо (вычтите у него 5 Выносливости).\n\n4—5 — противник получает ранение в предплечье (вычтите у него 8 Выносливости)\n\n6 — вам удается отрубить руку с мечом, что может привести к потере противником боеспособности.\n\nВо время турнира Защита от Встречного удара засчитывается как одно из ранений, вне зависимости от успешности.</Text>
+			<Text>«Защита от Встречного Удара». Когда противник пытается провести «Встречный удар», вы бьете его в руку с мечом.</Text>
+			<Text Size="small">Успешность Защиты от Встречного удара оценивается броском кубика:\n1—3 — противник получает ранение в плечо (вычтите у него 5 Выносливости).\n4—5 — противник получает ранение в предплечье (вычтите у него 8 Выносливости)\n6 — вам удается отрубить руку с мечом, что может привести к потере противником боеспособности.<Text>
+			<Text>Во время турнира Защита от Встречного удара засчитывается как одно из ранений, вне зависимости от успешности.</Text>
 		</Texts>
 		<Options>
 			<Option Destination="267"/>
@@ -3350,7 +3353,9 @@
 		<ID>314</ID>
 		<Texts>
 			<Text Size="small">Запишите прием «Защита от Встречного удар».</Text>
-			<Text>«Защита от Встречного Удара». Когда противник пытается провести «Встречный удар», вы бьете его в руку с мечом. Успешность Защиты от Встречного удара оценивается броском кубика:\n\n1—3 — противник получает ранение в плечо (вычтите у него 5 Выносливости).\n\n4—5 — противник получает ранение в предплечье (вычтите у него 8 Выносливости)\n\n6 — вам удается отрубить руку с мечом, что может привести к потере противником боеспособности.\n\nВо время турнира Защита от Встречного удара засчитывается как одно из ранений, вне зависимости от успешности.</Text>
+			<Text>«Защита от Встречного Удара». Когда противник пытается провести «Встречный удар», вы бьете его в руку с мечом.</Text>
+			<Text Size="small">Успешность Защиты от Встречного удара оценивается броском кубика:\n\n1—3 — противник получает ранение в плечо (вычтите у него 5 Выносливости).\n\n4—5 — противник получает ранение в предплечье (вычтите у него 8 Выносливости)\n\n6 — вам удается отрубить руку с мечом, что может привести к потере противником боеспособности.</Text>
+			<Text>Во время турнира Защита от Встречного удара засчитывается как одно из ранений, вне зависимости от успешности.</Text>
 		</Texts>
 		<Options>
 			<Option Destination="311"/>
@@ -4226,7 +4231,8 @@
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>20</EnemyHitpointsLimith>
 				<EnemyRoundWin>1</EnemyRoundWin>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -4286,7 +4292,8 @@
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
 				<SpeedActivate/>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -4361,7 +4368,8 @@
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 				<EnemyHitpointsPenalty>3</EnemyHitpointsPenalty>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -4385,7 +4393,8 @@
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
 				<SpeedActivate/>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -4405,7 +4414,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -4445,7 +4455,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -4495,7 +4506,8 @@
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -4519,6 +4531,7 @@
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
+				<NoStrikeBack/>
 				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
@@ -4604,7 +4617,8 @@
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -4639,7 +4653,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -4686,7 +4701,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -4711,7 +4727,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -4737,7 +4754,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -4760,7 +4778,8 @@
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
 				<SpeedActivate/>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -4844,7 +4863,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -4871,7 +4891,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -4898,7 +4919,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -6311,7 +6333,8 @@
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>20</EnemyHitpointsLimith>
 				<HeroRoundWin>3</HeroRoundWin>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Марика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -6360,7 +6383,8 @@
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
 				<SpeedActivate/>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nМарика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -6409,7 +6433,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Марика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -6430,7 +6455,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Марика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -6464,7 +6490,8 @@
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 				<EnemyHitpointsPenalty>3</EnemyHitpointsPenalty>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Марика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -6489,7 +6516,8 @@
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
 				<SpeedActivate/>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nМарика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -6509,7 +6537,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nМарика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -6549,7 +6578,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nМарика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -6599,7 +6629,8 @@
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nМарика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -6623,7 +6654,8 @@
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nМарика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -6708,7 +6740,8 @@
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Марика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -6743,7 +6776,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Марика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -6790,7 +6824,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Марика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -6814,7 +6849,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Марика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		
@@ -6841,7 +6877,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Марика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -6864,7 +6901,8 @@
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
 				<SpeedActivate/>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nМарика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
@@ -6944,7 +6982,8 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-				<Aftertext>Вы можете выбрать любую из изученных техник боя. Марика Затт знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+				<NoStrikeBack/>
+				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
 		<Options>
