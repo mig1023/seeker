@@ -419,9 +419,6 @@ namespace Seeker.Gamebook.YounglingTournament
             else
                 fight.Add(String.Format("GOOD|Из-за применения Скорости Силы {0} теряет {1} ед.выносливости (осталось {2})",
                     character.Name, wound, character.Hitpoints));
-
-            if (!isProtagonist)
-                character.SaveHitpoints();
         }
 
         private bool UseForcesСhance() => Game.Dice.Roll() % 2 == 0;
@@ -553,7 +550,6 @@ namespace Seeker.Gamebook.YounglingTournament
 
                 if (UseForcesInFight(ref fight, ref speedActivate, EnemiesList, out Character target))
                 {
-                    target.SaveHitpoints();
                     round += 1;
 
                     int enemyLimit = (EnemyHitpointsLimith > 0 ? EnemyHitpointsLimith : 0);
@@ -605,8 +601,6 @@ namespace Seeker.Gamebook.YounglingTournament
 
                         enemy.Key.Hitpoints -= 3;
                         heroRoundWin += 1;
-
-                        enemy.Key.SaveHitpoints();
 
                         fight.Add(String.Format("GOOD|Вы ранили {0}, он потерял 3 ед.выносливости (осталось {1})",
                             enemy.Key.Name, enemy.Key.Hitpoints));

@@ -30,7 +30,13 @@ namespace Seeker.Gamebook.YounglingTournament
         public int Hitpoints
         {
             get => _hitpoints;
-            set => _hitpoints = Game.Param.Setter(value, max: MaxHitpoints);
+            set
+            {
+                _hitpoints = Game.Param.Setter(value, max: MaxHitpoints);
+
+                if (HitpointAutosave)
+                    HitpointsLoss[this.Name] = _hitpoints;
+            }
         }
 
         private int _accuracy;
@@ -98,6 +104,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public int WayBack { get; set; }
         public string SwordTechnique { get; set; }
+        private bool HitpointAutosave { get; set; } 
 
         public SortedDictionary<ForcesTypes, int> ForceTechniques { get; set; }
         public SortedDictionary<SwordTypes, int> SwordTechniques { get; set; }
@@ -118,6 +125,7 @@ namespace Seeker.Gamebook.YounglingTournament
             Shield = 0;
             Firepower = 5;
             WayBack = 0;
+            HitpointAutosave = false;
 
             ForceTechniques = new SortedDictionary<ForcesTypes, int>
             {
@@ -165,6 +173,7 @@ namespace Seeker.Gamebook.YounglingTournament
             Rang = this.Rang,
             Speed = this.Speed,
             SwordTechnique = this.SwordTechnique,
+            HitpointAutosave = true,
         };
 
         public Character SetHitpoints(int hitpointsPenalty = 0)
@@ -190,8 +199,6 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public int GetHitpoints(int hitpointsPenalty = 0) =>
             (HitpointsLoss.ContainsKey(this.Name) ? HitpointsLoss[this.Name] : this.Hitpoints) - hitpointsPenalty;
-
-        public void SaveHitpoints() => HitpointsLoss[this.Name] = this.Hitpoints;
 
         public override string Save() => String.Join("|",
             LightSide, DarkSide, MaxHitpoints, Hitpoints, Accuracy, Pilot, Stealth, Hacking, Firepower, WayBack,

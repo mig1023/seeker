@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.YounglingTournament
         public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#c0ac6c",
-            [ButtonTypes.Continue] = "#d6c078",
+            [ButtonTypes.Continue] = "#e6d9ae",
             [ButtonTypes.Action] = "#c0a23b",
             [ButtonTypes.System] = "#f9f9f9",
         };
