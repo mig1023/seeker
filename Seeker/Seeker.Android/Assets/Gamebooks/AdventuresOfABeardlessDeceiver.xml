@@ -474,7 +474,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить одежду</Button>
+				<Button>Купить</Button>
 				<Trigger>PartyClothes</Trigger>
 				<Text>ПРАЗДНИЧНАЯ ОДЕЖДА</Text>
 				<Price>25</Price>
@@ -833,31 +833,31 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить силы</Button>
+				<Button>Добавить</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить ловкости</Button>
+				<Button>Добавить</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить мудрости</Button>
+				<Button>Добавить</Button>
 				<Text>МУДРОСТЬ</Text>
 				<Stat>Wisdom</Stat>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить хитрости</Button>
+				<Button>Добавить</Button>
 				<Text>ХИТРОСТЬ</Text>
 				<Stat>Cunning</Stat>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить красноречия</Button>
+				<Button>Добавить</Button>
 				<Text>КРАСНОРЕЧИЕ</Text>
 				<Stat>Oratory</Stat>
 				<Aftertext>Сердечно поблагодарив аксакалов, джигит покидает их юрту. В поисках ночлега Алдар спрашивает совета у охранников на входе, которые указывают ему на шатры для гостей праздника.</Aftertext>
@@ -1046,7 +1046,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить домбру</Button>
+				<Button>Купить</Button>
 				<Trigger>Dombra</Trigger>
 				<Text>ДОМБРА</Text>
 				<Price>10</Price>
@@ -1054,7 +1054,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить одежду</Button>
+				<Button>Купить</Button>
 				<Trigger>PartyClothes</Trigger>
 				<Text>ПРАЗДНИЧНАЯ ОДЕЖДА</Text>
 				<Price>15</Price>
@@ -1062,7 +1062,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пузырёк</Button>
+				<Button>Купить</Button>
 				<Text>ПУЗЫРЁК НАСТОЙКИ ИЗ ТРАВ</Text>
 				<Price>20</Price>
 				<Aftertext>К сожалению, у торговца есть только один пузырёк на продажу. Выпив настойку перед проверкой способности, Алдар Косе сможет увеличить уровень своей способности при данной проверке сразу на 4 пункта. В пузырьке две порции, которые можно использовать по отдельности или вместе, увеличив уровень способности сразу на 8 пунктов.\n\nАлдар проводит много времени прицениваясь к товарам. И вот базарный народ начинает сворачивать торговлю, собираясь на обед.\n\nКупить всё, что нужно, и на что хватит денег, и внести соответствующие изменения на лист персонажа.\n\nВ тени пальм уже установили деревянные топчаны для дастархана, покрыв их огромной скатертью, а по краям положив стёганые подушки для гостей. Как принято на караванных стоянках, каждый кладёт свою долю еды на скатерть. Обедают все вместе, без различия общественного положения, будь ты глава каравана или слуга. А хозяева разносят привычный в таких случаях зелёный чай. Ведь каждый знает, что в жаркое время нет ничего лучше горячего чая, чтобы утолить жажду.\n\nНаравне со всеми Алдар выкладывает свою часть провизии из сумки: сухофрукты, вяленое мясо, несколько лепёшек, козий сыр. Перебрасываясь шутками путешественники приступают к обильному обеду, во время которого обмениваются свежими новостями.\n\nКогда обед заканчивается, торговцы выражают желание сыграть в нарды, настольную игру на специальной доске, разделённой на две половины. Цель игры - бросая кости и передвигая шашки в соответствии с выпавшими очками, пройти шашками полный круг по доске. А чтобы было интересней играть, назначают ставку в 10 ТАНЬГА. В нардах важна не столько удача при броске кубиков, сколько умение анализировать ситуацию и делать неожиданные для соперника ходы.</Aftertext>
@@ -1126,7 +1126,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить одежду</Button>
+				<Button>Купить</Button>
 				<Trigger>PartyClothes</Trigger>
 				<Text>ПРАЗДНИЧНАЯ ОДЕЖДА</Text>
 				<Price>20</Price>
@@ -1134,7 +1134,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить домбру</Button>
+				<Button>Купить</Button>
 				<Trigger>Dombra</Trigger>
 				<Text>ДОМБРА</Text>
 				<Price>15</Price>
@@ -1142,14 +1142,14 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить доспех</Button>
+				<Button>Купить</Button>
 				<Text>ЛЁГКИЙ КОЖАНЫЙ ДОСПЕХ</Text>
 				<Price>20</Price>
 				<Aftertext>Лёгкий кожаный доспех, который одевается на тело под рубаху. Не заметен и не сковывает движений, но смягчает удары и захваты противника (во время рукопашной схватки ЛОВКОСТЬ И СИЛА увеличиваются на 2 пункта).</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить вина</Button>
+				<Button>Купить</Button>
 				<Text>БУТЫЛЬ ВИНА</Text>
 				<Price>10</Price>
 				<Benefit Name="Kumis" Value="2"/>
@@ -1157,7 +1157,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить скакуна</Button>
+				<Button>Купить</Button>
 				<Trigger>ArabianHorse</Trigger>
 				<Text>СКАКУН АРАБСКОЙ ПОРОДЫ</Text>
 				<Price>120</Price>
@@ -1707,35 +1707,35 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить силы</Button>
+				<Button>Добавить</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
 				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить ловкости</Button>
+				<Button>Добавить</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
 				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить мудрости</Button>
+				<Button>Добавить</Button>
 				<Text>МУДРОСТЬ</Text>
 				<Stat>Wisdom</Stat>
 				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить хитрости</Button>
+				<Button>Добавить</Button>
 				<Text>ХИТРОСТЬ</Text>
 				<Stat>Cunning</Stat>
 				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить красноречия</Button>
+				<Button>Добавить</Button>
 				<Text>КРАСНОРЕЧИЕ</Text>
 				<Stat>Oratory</Stat>
 				<StatStep>2</StatStep>
@@ -1837,7 +1837,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить одежду</Button>
+				<Button>Купить</Button>
 				<Trigger>PartyClothes</Trigger>
 				<Text>ПРАЗДНИЧНАЯ ОДЕЖДА</Text>
 				<Price>30</Price>
@@ -1845,7 +1845,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить скакуна</Button>
+				<Button>Купить</Button>
 				<Text>СКАКУН-ПОЛУКРОВКА</Text>
 				<Price>150</Price>
 			</Action>
@@ -2013,7 +2013,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить арак</Button>
+				<Button>Купить</Button>
 				<Trigger>Arak</Trigger>
 				<Text>АРАК</Text>
 				<Price>10</Price>
@@ -2122,7 +2122,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить домбру</Button>
+				<Button>Купить</Button>
 				<Trigger>Dombra</Trigger>
 				<Text>ДОМБРА</Text>
 				<Price>10</Price>
@@ -2130,7 +2130,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить одежду</Button>
+				<Button>Купить</Button>
 				<Trigger>PartyClothes</Trigger>
 				<Text>ПРАЗДНИЧНАЯ ОДЕЖДА</Text>
 				<Price>15</Price>
@@ -2629,35 +2629,35 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить силы</Button>
+				<Button>Добавить</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
 				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить ловкости</Button>
+				<Button>Добавить</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
 				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить мудрости</Button>
+				<Button>Добавить</Button>
 				<Text>МУДРОСТЬ</Text>
 				<Stat>Wisdom</Stat>
 				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить хитрости</Button>
+				<Button>Добавить</Button>
 				<Text>ХИТРОСТЬ</Text>
 				<Stat>Cunning</Stat>
 				<StatStep>2</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить красноречия</Button>
+				<Button>Добавить</Button>
 				<Text>КРАСНОРЕЧИЕ</Text>
 				<Stat>Oratory</Stat>
 				<StatStep>2</StatStep>
@@ -2782,35 +2782,35 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить силы</Button>
+				<Button>Добавить</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
 				<Aftertext>Способность персонажа поднимать и переносить тяжести, бороться, а также общая выносливость.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить ловкости</Button>
+				<Button>Добавить</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
 				<Aftertext>Скорость реакции, умение держать равновесие, уворачиваться, прыгать, а также ловкость рук (точные движения кистей и пальцев, включая игру на музыкальных инструментах).</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить мудрости</Button>
+				<Button>Добавить</Button>
 				<Text>МУДРОСТЬ</Text>
 				<Stat>Wisdom</Stat>
 				<Aftertext>Общие знания, жизненный опыт, способность к анализу и логическим рассуждениям, умение замечать детали и делать правильные выводы.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить хитрости</Button>
+				<Button>Добавить</Button>
 				<Text>ХИТРОСТЬ</Text>
 				<Stat>Cunning</Stat>
 				<Aftertext>Способность обманывать, жульничать, воровские навыки, а также находчивость и умение быстро находить решения в сложных ситуациях.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить красноречия</Button>
+				<Button>Добавить</Button>
 				<Text>КРАСНОРЕЧИЕ</Text>
 				<Stat>Oratory</Stat>
 				<Aftertext>Способность разговорить собеседника, дар убеждения, умение слагать стихи и песни.\n\nАвтор советует не распылять эти пункты, а определить те качества, которые вы считаете важными. Ведь каждый человек уникален. Каким вы видите народного героя? Кроме того, книга-игра тем и хороша, что приключение можно повторить, выбрав нового персонажа с другими навыками.</Aftertext>
