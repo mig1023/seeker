@@ -410,49 +410,49 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить двигатель</Button>
+				<Button>Купить</Button>
 				<Text>Второй двигатель</Text>
 				<Price>40</Price>
 				<Benefit Name="SecondEngine" Value="1"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить покрытие</Button>
+				<Button>Купить</Button>
 				<Text>Стелс-покрытие</Text>
 				<Price>20</Price>
 				<Benefit Name="Stealth" Value="1"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить радар</Button>
+				<Button>Купить</Button>
 				<Text>Радар</Text>
 				<Price>20</Price>
 				<Benefit Name="Radar" Value="1"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пилу</Button>
+				<Button>Купить</Button>
 				<Text>Циркулярная пила</Text>
 				<Price>25</Price>
 				<Benefit Name="CircularSaw" Value="1"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить огнемёт</Button>
+				<Button>Купить</Button>
 				<Text>Реактивный огнемёт</Text>
 				<Price>30</Price>
 				<Benefit Name="Flamethrower" Value="1"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить плазмопушку</Button>
+				<Button>Купить</Button>
 				<Text>Спаренная плазмопушка</Text>
 				<Price>30</Price>
 				<Benefit Name="PlasmaCannon" Value="1"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить гармонизатор</Button>
+				<Button>Купить</Button>
 				<Text>Гармонизатор</Text>
 				<Price>50</Price>
 				<Benefit Name="Harmonizer" Value="1"/>
