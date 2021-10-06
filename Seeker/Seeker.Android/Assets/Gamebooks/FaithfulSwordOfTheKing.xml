@@ -1270,7 +1270,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить лошадь</Button>
+				<Button>Купить</Button>
 				<Text>ЛОШАДЬ</Text>
 				<Price>500</Price>
 				<Multiple/>
@@ -1278,7 +1278,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пистолет</Button>
+				<Button>Купить</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -1286,14 +1286,14 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить шпагу</Button>
+				<Button>Купить</Button>
 				<Text>ШПАГА</Text>
 				<Price>300</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кинжал</Button>
+				<Button>Купить</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -1301,7 +1301,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пули и порох</Button>
+				<Button>Купить</Button>
 				<Text>ПОРОХ И ПУЛИ на 3 выстрела</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -1525,7 +1525,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пистолет</Button>
+				<Button>Купить</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -1533,14 +1533,14 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить шпагу</Button>
+				<Button>Купить</Button>
 				<Text>ШПАГА</Text>
 				<Price>200</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кинжал</Button>
+				<Button>Купить</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -1548,14 +1548,14 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить ботфорты</Button>
+				<Button>Купить</Button>
 				<Text>БОТФОРТЫ</Text>
 				<Price>200</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пули и порох</Button>
+				<Button>Купить</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>100</Price>
 				<Multiple/>
@@ -1836,7 +1836,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кинжал</Button>
+				<Button>Купить</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -1844,7 +1844,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пули и порох</Button>
+				<Button>Купить</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -1852,7 +1852,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пистолет</Button>
+				<Button>Купить</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -3528,7 +3528,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пистолет</Button>
+				<Button>Купить</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -3536,14 +3536,14 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить шпагу</Button>
+				<Button>Купить</Button>
 				<Text>ШПАГА</Text>
 				<Price>200</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кинжал</Button>
+				<Button>Купить</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -3551,7 +3551,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пули и порох</Button>
+				<Button>Купить</Button>
 				<Text>ПОРОХ И ПУЛИ на 4 выстрела</Text>
 				<Price>100</Price>
 				<Multiple/>
@@ -3559,7 +3559,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить аркебузу</Button>
+				<Button>Купить</Button>
 				<Text>АРКЕБУЗА</Text>
 				<Price>150</Price>
 				<Multiple/>
@@ -3575,7 +3575,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать побогаче</Button>
+				<Button>Выбрать</Button>
 				<Text>Гостиница побогаче</Text>
 				<Price>100</Price>
 				<Benefit Name="Strength" Value="2"/>
@@ -3583,7 +3583,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать подешевле</Button>
+				<Button>Выбрать</Button>
 				<Text>Гостиница похуже</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="1"/>
@@ -3591,7 +3591,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать еду</Button>
+				<Button>Заказать</Button>
 				<Text>Еда в номер</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="2"/>
@@ -4567,7 +4567,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пистолет</Button>
+				<Button>Купить</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -4575,7 +4575,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить лошадь</Button>
+				<Button>Купить</Button>
 				<Text>ЛОШАДЬ</Text>
 				<Price>500</Price>
 				<Multiple/>
@@ -4583,7 +4583,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кинжал</Button>
+				<Button>Купить</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -4591,7 +4591,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пули и порох</Button>
+				<Button>Купить</Button>
 				<Text>ПОРОХ И ПУЛИ на 4 выстрела</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -5571,7 +5571,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пистолет</Button>
+				<Button>Купить</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>400</Price>
 				<Multiple/>
@@ -5579,14 +5579,14 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить шпагу</Button>
+				<Button>Купить</Button>
 				<Text>ШПАГА</Text>
 				<Price>300</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пули и порох</Button>
+				<Button>Купить</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -5594,7 +5594,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кинжал</Button>
+				<Button>Купить</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -5602,7 +5602,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить лошадь</Button>
+				<Button>Купить</Button>
 				<Text>ЛОШАДЬ</Text>
 				<Price>600</Price>
 				<Multiple/>
@@ -6159,7 +6159,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить лошадь</Button>
+				<Button>Купить</Button>
 				<Text>ЛОШАДЬ</Text>
 				<Price>600</Price>
 				<Multiple/>
@@ -6167,7 +6167,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пистолет</Button>
+				<Button>Купить</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>400</Price>
 				<Multiple/>
@@ -6175,14 +6175,14 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить шпагу</Button>
+				<Button>Купить</Button>
 				<Text>ШПАГА</Text>
 				<Price>300</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кинжал</Button>
+				<Button>Купить</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -6190,7 +6190,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пули и порох</Button>
+				<Button>Купить</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -6268,7 +6268,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пистолет</Button>
+				<Button>Купить</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>250</Price>
 				<Multiple/>
@@ -6276,7 +6276,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пули и порох</Button>
+				<Button>Купить</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>150</Price>
 				<Multiple/>
@@ -6284,7 +6284,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кинжал</Button>
+				<Button>Купить</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -6292,7 +6292,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить еды</Button>
+				<Button>Купить</Button>
 				<Text>ЕДА В ДОРОГУ</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -6387,7 +6387,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пистолет</Button>
+				<Button>Купить</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -6395,14 +6395,14 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить шпагу</Button>
+				<Button>Купить</Button>
 				<Text>ШПАГА</Text>
 				<Price>400</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кинжал</Button>
+				<Button>Купить</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>400</Price>
 				<Multiple/>
@@ -6410,7 +6410,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пули и порох</Button>
+				<Button>Купить</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>150</Price>
 				<Multiple/>
@@ -6418,7 +6418,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить еды</Button>
+				<Button>Купить</Button>
 				<Text>ЕДА</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -6571,7 +6571,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пистолет</Button>
+				<Button>Купить</Button>
 				<Text>ПИСТОЛЕТ</Text>
 				<Price>400</Price>
 				<Multiple/>
@@ -6579,14 +6579,14 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить шпагу</Button>
+				<Button>Купить</Button>
 				<Text>ШПАГА</Text>
 				<Price>300</Price>
 				<Multiple/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пули и порох</Button>
+				<Button>Купить</Button>
 				<Text>ПОРОХ И ПУЛИ на 5 выстрелов</Text>
 				<Price>300</Price>
 				<Multiple/>
@@ -6594,7 +6594,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кинжал</Button>
+				<Button>Купить</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>200</Price>
 				<Multiple/>
@@ -6602,7 +6602,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить лошадь</Button>
+				<Button>Купить</Button>
 				<Text>ЛОШАДЬ</Text>
 				<Price>600</Price>
 				<Multiple/>
@@ -6740,35 +6740,35 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Обучиться тайному удару</Button>
+				<Button>Обучиться</Button>
 				<MeritalArt>SecretBlow</MeritalArt>
 				<Text>ТАЙНЫЙ УДАР ШПАГОЙ</Text>
 				<Aftertext>Среди фехтовальщиков и дуэлянтов всегда ходили легенды о существовании ударов, которые невозможно отразить. Они приносили настоящему мастеру верную победу в поединке. Одним из таких ударов можете овладеть вы. Вы сможете сразу вычесть у своего противника 4 СИЛЫ. Но сделать это во время схватки можно только один раз. Ведь после этого враг узнает о вашем секрете и сможет парировать выпад.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Обучиться бою со шпагой и кинжалом</Button>
+				<Button>Обучиться</Button>
 				<MeritalArt>SwordAndDagger</MeritalArt>
 				<Text>БОЙ СО ШПАГОЙ И КИНЖАЛОМ</Text>
 				<Aftertext>Овладев этим искусством, вы сможете во время поединка взять в левую руку кинжал и наносить им удары по не владеющему подобным умением противнику. Конечно, для честной дуэли это не слишком-то подходит, но в бою может не раз сохранить вам жизнь. Каждый раз, когда у вас на кубике выпадет четное число, считайте, что вы сумели воспользоваться кинжалом. В этом случае, если раунд атаки вы выиграли, вычтите у противника не 2, а 3 СИЛЫ; если же проиграли, то вычитаете 2 СИЛЫ не только у себя, но и у противника.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Обучиться стрельбе с двух рук</Button>
+				<Button>Обучиться</Button>
 				<MeritalArt>TwoPistols</MeritalArt>
 				<Text>СТРЕЛЬБА ИЗ ДВУХ ПИСТОЛЕТОВ</Text>
 				<Aftertext>Выстрелить из пистолета в XVI веке было делом непростым. Тем более, одновременно прицельно выстрелить из двух пистолетов. Однако вы можете научиться и этому искусству. При этом сможете направить оружие как на разных врагов, так и на одного. В последнем случае, конечно, убить одного человека два раза невозможно, но если один из пистолетов промахнётся, то у вас будет ещё один шанс. Обратите внимание: в том случае, если вы не владеете этим искусством, но у вас есть два пистолета, то будет возможность выстрелить из них только по очереди. Причем вряд ли такой случай представится, ведь после первого же выстрела придется скрестить шпаги со своими врагами, и времени поменять пистолет уже не будет.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Обучиться фехтованию левой рукой</Button>
+				<Button>Обучиться</Button>
 				<MeritalArt>LefthandFencing</MeritalArt>
 				<Text>ФЕХТОВАНИЕ ЛЕВОЙ РУКОЙ</Text>
 				<Aftertext>Если вас ранили в правую руку, то волей-неволей лучше взять шпагу в левую. Если вы не овладели этим искусством, то придется до тех пор, пока рана не заживет, уменьшать свою ЛОВКОСТЬ, а это может быть весьма опасно для жизни. Те же правила будут действовать, когда ваш противник — левша. Неподготовленному человеку в таких случаях приходится нелегко: ведь удары приходится парировать совсем по-другому.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Обучиться плаванию</Button>
+				<Button>Обучиться</Button>
 				<MeritalArt>Swimming</MeritalArt>
 				<Text>ПЛАВАНИЕ</Text>
 				<Aftertext>В небольшом имении, где вы выросли, не было ни пруда, ни реки, поэтому плавать вы так и не научились. Но никогда не поздно наверстать упущенное. Конечно, реку можно переплыть и держась за лошадь, а того проще перейти по мосту, но кто знает, какие приключения ждут впереди.</Aftertext>
