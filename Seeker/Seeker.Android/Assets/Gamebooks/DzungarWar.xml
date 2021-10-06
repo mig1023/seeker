@@ -1127,35 +1127,35 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить настойку силы</Button>
+				<Button>Купить</Button>
 				<Text>НАСТОЙКА СИЛЫ</Text>
 				<Price>50</Price>
 				<Benefit Name="Strength" Value="1"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить настойку ловкости</Button>
+				<Button>Купить</Button>
 				<Text>НАСТОЙКА ЛОВКОСТИ</Text>
 				<Price>50</Price>
 				<Benefit Name="Skill" Value="1"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить настойку мудрости</Button>
+				<Button>Купить</Button>
 				<Text>НАСТОЙКА МУДРОСТИ</Text>
 				<Price>50</Price>
 				<Benefit Name="Wisdom" Value="1"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить настойку хитрости</Button>
+				<Button>Купить</Button>
 				<Text>НАСТОЙКА ХИТРОСТИ</Text>
 				<Price>50</Price>
 				<Benefit Name="Cunning" Value="1"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить настойку красноречия</Button>
+				<Button>Купить</Button>
 				<Text>НАСТОЙКА КРАСНОРЕЧИЯ</Text>
 				<Price>50</Price>
 				<Benefit Name="Oratory" Value="1"/>
@@ -1163,7 +1163,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить скакуна</Button>
+				<Button>Купить</Button>
 				<Trigger>Скакун</Trigger>
 				<RemoveTrigger>Боль</RemoveTrigger>
 				<Text>СКАКУН</Text>
@@ -1172,9 +1172,9 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить карту</Button>
+				<Button>Купить</Button>
 				<Trigger>Тропа</Trigger>
-				<Text>КАРТУ УЩЕЛЬЯ ДЖУНГАРСКИЕ ВОРОТА</Text>
+				<Text>КАРТА УЩЕЛЬЯ ДЖУНГАРСКИЕ ВОРОТА</Text>
 				<Price>60</Price>
 			</Action>
 		</Actions>
@@ -1272,35 +1272,35 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить силы</Button>
+				<Button>Добавить</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
 				<StatStep>3</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить ловкости</Button>
+				<Button>Добавить</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
 				<StatStep>3</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить мудрости</Button>
+				<Button>Добавить</Button>
 				<Text>МУДРОСТЬ</Text>
 				<Stat>Wisdom</Stat>
 				<StatStep>3</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить хитрости</Button>
+				<Button>Добавить</Button>
 				<Text>ХИТРОСТЬ</Text>
 				<Stat>Cunning</Stat>
 				<StatStep>3</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить красноречия</Button>
+				<Button>Добавить</Button>
 				<Text>КРАСНОРЕЧИЕ</Text>
 				<Stat>Oratory</Stat>
 				<StatStep>3</StatStep>
@@ -1480,35 +1480,35 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить силы</Button>
+				<Button>Добавить</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
 				<StatStep>3</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить ловкости</Button>
+				<Button>Добавить</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
 				<StatStep>3</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить мудрости</Button>
+				<Button>Добавить</Button>
 				<Text>МУДРОСТЬ</Text>
 				<Stat>Wisdom</Stat>
 				<StatStep>3</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить хитрости</Button>
+				<Button>Добавить</Button>
 				<Text>ХИТРОСТЬ</Text>
 				<Stat>Cunning</Stat>
 				<StatStep>3</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить красноречия</Button>
+				<Button>Добавить</Button>
 				<Text>КРАСНОРЕЧИЕ</Text>
 				<Stat>Oratory</Stat>
 				<StatStep>3</StatStep>
@@ -1718,22 +1718,22 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Отдать 150 таньга</Button>
-				<Text>ПОДНОШЕНИЕ</Text>
+				<Button>Отдать</Button>
+				<Text>ПОДНОШЕНИЕ 150 таньга</Text>
 				<Price>150</Price>
 				<Benefit Name="Favour" Value="1"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Отдать 300 таньга</Button>
-				<Text>ПОДНОШЕНИЕ</Text>
+				<Button>Отдать</Button>
+				<Text>ПОДНОШЕНИЕ 300 таньга</Text>
 				<Price>300</Price>
 				<Benefit Name="Favour" Value="2"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Отдать 500 таньга</Button>
-				<Text>ПОДНОШЕНИЕ</Text>
+				<Button>Отдать</Button>
+				<Text>ПОДНОШЕНИЕ 500 таньга</Text>
 				<Price>500</Price>
 				<Benefit Name="Favour" Value="3"/>
 				<Aftertext>– Алдар Косе – честный и порядочный человек, – кивает Ли Ю Чжао и прячет деньги в складках одежды, предварительно ощупав кошель.</Aftertext>
@@ -1946,35 +1946,35 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить силы</Button>
+				<Button>Добавить</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
 				<StatToMax/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить ловкости</Button>
+				<Button>Добавить</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
 				<StatToMax/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить мудрости</Button>
+				<Button>Добавить</Button>
 				<Text>МУДРОСТЬ</Text>
 				<Stat>Wisdom</Stat>
 				<StatToMax/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить хитрости</Button>
+				<Button>Добавить</Button>
 				<Text>ХИТРОСТЬ</Text>
 				<Stat>Cunning</Stat>
 				<StatToMax/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить красноречия</Button>
+				<Button>Добавить</Button>
 				<Text>КРАСНОРЕЧИЕ</Text>
 				<Stat>Oratory</Stat>
 				<StatToMax/>
@@ -3159,14 +3159,14 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить амулет</Button>
+				<Button>Купить</Button>
 				<Text>БУДДИСТСКИЙ АМУЛЕТ</Text>
 				<Price>120</Price>
 				<Aftertext>Фарфоровая фигурка извивающегося дракона, красиво расписанная красным и синим цветами. Китаец не помнит, как она к нему попала, но уверяет, что за неё можно выручить неплохие деньги на любом базаре.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить фигурку</Button>
+				<Button>Купить</Button>
 				<Trigger>Фарфор</Trigger>
 				<Text>ФАРФОРОВАЯ ФИГУРКА</Text>
 				<Price>50</Price>
@@ -3174,7 +3174,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить отвар</Button>
+				<Button>Купить</Button>
 				<Text>ОТВАР КОРНЯ ЖЕНЬШЕНЯ</Text>
 				<Price>100</Price>
 				<Benefit Name="Ginseng" Value="1"/>
@@ -3374,35 +3374,35 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить силы</Button>
+				<Button>Добавить</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
 				<StatStep>3</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить ловкости</Button>
+				<Button>Добавить</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
 				<StatStep>3</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить мудрости</Button>
+				<Button>Добавить</Button>
 				<Text>МУДРОСТЬ</Text>
 				<Stat>Wisdom</Stat>
 				<StatStep>3</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить хитрости</Button>
+				<Button>Добавить</Button>
 				<Text>ХИТРОСТЬ</Text>
 				<Stat>Cunning</Stat>
 				<StatStep>3</StatStep>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить красноречия</Button>
+				<Button>Добавить</Button>
 				<Text>КРАСНОРЕЧИЕ</Text>
 				<Stat>Oratory</Stat>
 				<StatStep>3</StatStep>
@@ -3527,7 +3527,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить книгу</Button>
+				<Button>Купить</Button>
 				<Trigger>Мост, Рыба</Trigger>
 				<Text>КНИГА ПУТЕШЕСТВЕННИКА</Text>
 				<Price>120</Price>
@@ -3536,7 +3536,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить арбалет</Button>
+				<Button>Купить</Button>
 				<Trigger>Арбалет</Trigger>
 				<Text>МАЛЕНЬКИЙ АРБАЛЕТ</Text>
 				<Price>100</Price>
@@ -3545,7 +3545,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить настойку</Button>
+				<Button>Купить</Button>
 				<Text>ТРАВЯНАЯ НАСТОЙКА</Text>
 				<Price>50</Price>
 				<Bargain/>
@@ -4907,14 +4907,14 @@
 		<Actions>
 			<Action>
 				<Name>GetSomething</Name>
-				<Button>Взять переписку</Button>
+				<Button>Взять</Button>
 				<Trigger>Переписка</Trigger>
 				<Benefit Name="Danger" Value="2"/>
 				<Aftertext>Подробная карта хребта Джунгарский Алатау с обозначением рек, ручьёв, ущелий и перевалов, ведущих сквозь горы. В случае наступления казахских войск бои будут проходить именно в этих местах. Абулхаир-хану очень пригодится эта карта. Всех подробностей Алдар ни за что не запомнит, поэтому надо решить, брать ли её с собой (ключевое слово «Перевал», +1 ОПАСНОСТЬ).</Aftertext>
 			</Action>
 			<Action>
 				<Name>GetSomething</Name>
-				<Button>Взять карту</Button>
+				<Button>Взять</Button>
 				<Trigger>Перевал</Trigger>
 				<Benefit Name="Danger" Value="1"/>
 				<Aftertext>Взять всё, что нужно, отметив соответствующие ключевые слова и соответственно повысив уровень опасности.\n\nПокинуть шатёр Аюк-багатура и выбраться из цитадели оказывается проще, чем попасть внутрь. Алдар отвязывает своего коня, вскакивает в седло и отправляется прочь отсюда.</Aftertext>
@@ -5141,14 +5141,14 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить силы</Button>
+				<Button>Добавить</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
 				<StatToMax/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить ловкости</Button>
+				<Button>Добавить</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
 				<StatToMax/>
@@ -6671,21 +6671,21 @@
 		<Actions>
 			<Action>
 				<Name>Brother</Name>
-				<Button>Серик</Button>
+				<Button>Выбрать</Button>
 				<Trigger>Серик</Trigger>
-				<Text>ВЫБРАТЬ СЕРИКА</Text>
+				<Text>Серик</Text>
 			</Action>
 			<Action>
 				<Name>Brother</Name>
-				<Button>Берик</Button>
+				<Button>Выбрать</Button>
 				<Trigger>Берик</Trigger>
-				<Text>ВЫБРАТЬ БЕРИКА</Text>
+				<Text>Берик</Text>
 			</Action>
 			<Action>
 				<Name>Brother</Name>
-				<Button>Ерик</Button>
+				<Button>Выбрать</Button>
 				<Trigger>Ерик</Trigger>
-				<Text>ВЫБРАТЬ ЕРИКА</Text>
+				<Text>Ерик</Text>
 			</Action>
 		</Actions>
 		<Options>
@@ -6738,7 +6738,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить карту</Button>
+				<Button>Купить</Button>
 				<Trigger>Тумен</Trigger>
 				<Text>КАРТА ДЖУНГАРСКОГО АЛАТАУ</Text>
 				<Price>50</Price>
@@ -7870,7 +7870,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать силу</Button>
+				<Button>Выбрать</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
 				<StatToMax/>
@@ -7878,7 +7878,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать ловкость</Button>
+				<Button>Выбрать</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
 				<StatToMax/>
@@ -7886,7 +7886,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать мудрость</Button>
+				<Button>Выбрать</Button>
 				<Text>МУДРОСТЬ</Text>
 				<Stat>Wisdom</Stat>
 				<StatToMax/>
@@ -7894,7 +7894,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать хитрость</Button>
+				<Button>Выбрать</Button>
 				<Text>ХИТРОСТЬ</Text>
 				<Stat>Cunning</Stat>
 				<StatToMax/>
@@ -7902,7 +7902,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать красноречие</Button>
+				<Button>Выбрать</Button>
 				<Text>КРАСНОРЕЧИЕ</Text>
 				<Stat>Oratory</Stat>
 				<StatToMax/>
@@ -7922,35 +7922,35 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить силы</Button>
+				<Button>Добавить</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
 				<Aftertext>Способность персонажа поднимать и переносить тяжести, бороться, а также общая выносливость.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить ловкости</Button>
+				<Button>Добавить</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
 				<Aftertext>Скорость реакции, умение держать равновесие, уворачиваться, прыгать, а также ловкость рук (точные движения кистей и пальцев, включая игру на музыкальных инструментах).</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить мудрости</Button>
+				<Button>Добавить</Button>
 				<Text>МУДРОСТЬ</Text>
 				<Stat>Wisdom</Stat>
 				<Aftertext>Общие знания, жизненный опыт, способность к анализу и логическим рассуждениям, умение замечать детали и делать правильные выводы.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить хитрости</Button>
+				<Button>Добавить</Button>
 				<Text>ХИТРОСТЬ</Text>
 				<Stat>Cunning</Stat>
 				<Aftertext>Способность обманывать, жульничать, воровские навыки, а также находчивость и умение быстро находить решения в сложных ситуациях.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Добавить красноречия</Button>
+				<Button>Добавить</Button>
 				<Text>КРАСНОРЕЧИЕ</Text>
 				<Stat>Oratory</Stat>
 				<Aftertext>Способность разговорить собеседника, дар убеждения, умение слагать стихи и песни.</Aftertext>
