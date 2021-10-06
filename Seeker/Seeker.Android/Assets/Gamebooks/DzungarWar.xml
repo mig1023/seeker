@@ -32,7 +32,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>9</Level>
 			</Action>
@@ -52,13 +52,13 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>12</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>12</Level>
 			</Action>
@@ -173,7 +173,7 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>10</Level>
 			</Action>
@@ -189,7 +189,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<TriggerTestPenalty>Арбалет, -4</TriggerTestPenalty>
 				<Level>12</Level>
@@ -232,7 +232,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>11</Level>
 			</Action>
@@ -258,7 +258,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>10</Level>
 			</Action>
@@ -292,7 +292,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>5</Level>
 			</Action>
@@ -312,13 +312,13 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>12</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>12</Level>
 			</Action>
@@ -355,7 +355,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>10</Level>
 			</Action>
@@ -409,7 +409,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>13</Level>
 			</Action>
@@ -558,7 +558,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>12</Level>
 			</Action>
@@ -603,7 +603,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>12</Level>
 			</Action>
@@ -619,7 +619,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>10</Level>
 			</Action>
@@ -650,7 +650,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>11</Level>
 			</Action>
@@ -712,7 +712,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>12</Level>
 			</Action>
@@ -728,7 +728,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>10</Level>
 			</Action>
@@ -763,7 +763,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>14</Level>
 			</Action>
@@ -779,7 +779,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>10</Level>
 			</Action>
@@ -839,7 +839,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>11</Level>
 			</Action>
@@ -1058,7 +1058,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>11</Level>
 			</Action>
@@ -1074,7 +1074,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>8</Level>
 			</Action>
@@ -1097,7 +1097,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>10</Level>
 			</Action>
@@ -1219,7 +1219,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>10</Level>
 			</Action>
@@ -1320,7 +1320,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>13</Level>
 			</Action>
@@ -1350,7 +1350,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>13</Level>
 			</Action>
@@ -1409,13 +1409,13 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>13</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>13</Level>
 			</Action>
@@ -1432,7 +1432,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>11</Level>
 			</Action>
@@ -1527,7 +1527,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>11</Level>
 			</Action>
@@ -1571,13 +1571,13 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>10</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>10</Level>
 			</Action>
@@ -1593,7 +1593,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>13</Level>
 			</Action>
@@ -1616,7 +1616,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>13</Level>
 			</Action>
@@ -1644,7 +1644,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>11</Level>
 			</Action>
@@ -1749,7 +1749,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>8</Level>
 			</Action>
@@ -1765,7 +1765,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>14</Level>
 			</Action>
@@ -1797,7 +1797,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<TriggerTestPenalty>Боль, 4; Скакун, -5; Тулпар, -10</TriggerTestPenalty>
 				<Level>14</Level>
@@ -1856,7 +1856,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>8</Level>
 			</Action>
@@ -1891,7 +1891,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>11</Level>
 			</Action>
@@ -1915,7 +1915,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Trigger>Переписка</Trigger>
 				<Stat>Cunning</Stat>
 				<Level>12</Level>
@@ -2064,7 +2064,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>13</Level>
 			</Action>
@@ -2087,7 +2087,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>11</Level>
 			</Action>
@@ -2122,7 +2122,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>8</Level>
 			</Action>
@@ -2266,13 +2266,13 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>13</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>13</Level>
 			</Action>
@@ -2324,7 +2324,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>12</Level>
 			</Action>
@@ -2436,7 +2436,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>10</Level>
 			</Action>
@@ -2452,7 +2452,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>12</Level>
 			</Action>
@@ -2478,7 +2478,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>10</Level>
 			</Action>
@@ -2508,13 +2508,13 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>8</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>8</Level>
 			</Action>
@@ -2648,7 +2648,7 @@
 		<Actions>
 			<Action>
 				<Name>TestAll</Name>
-				<Button>Проверить силу, ловкость, хитрость и мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength, Skill, Cunning, Wisdom</Stat>
 				<Level>42</Level>
 			</Action>
@@ -2964,7 +2964,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>10</Level>
 			</Action>
@@ -3042,7 +3042,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>10</Level>
 			</Action>
@@ -3089,7 +3089,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>9</Level>
 			</Action>
@@ -3113,7 +3113,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>10</Level>
 			</Action>
@@ -3136,7 +3136,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>11</Level>
 			</Action>
@@ -3212,13 +3212,13 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>8</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>11</Level>
 			</Action>
@@ -3241,7 +3241,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>13</Level>
 			</Action>
@@ -3302,7 +3302,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>9</Level>
 			</Action>
@@ -3318,7 +3318,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>13</Level>
 			</Action>
@@ -3496,7 +3496,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>10</Level>
 			</Action>
@@ -3657,7 +3657,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>12</Level>
 			</Action>
@@ -3689,7 +3689,7 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>11</Level>
 			</Action>
@@ -3779,14 +3779,14 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<TriggerTestPenalty>Арбалет, -3</TriggerTestPenalty>
 				<Level>12</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<TriggerTestPenalty>Арбалет, -3</TriggerTestPenalty>
 				<Level>12</Level>
@@ -3803,13 +3803,13 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>10</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>12</Level>
 			</Action>
@@ -3829,7 +3829,7 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>14</Level>
 			</Action>
@@ -3845,7 +3845,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>8</Level>
 			</Action>
@@ -3861,7 +3861,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>11</Level>
 			</Action>
@@ -3949,7 +3949,7 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>14</Level>
 				<TriggerTestPenalty>Вино</TriggerTestPenalty>
@@ -4000,13 +4000,13 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>11</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Trigger>Хищник</Trigger>
 				<Stat>Cunning</Stat>
 				<Level>11</Level>
@@ -4046,7 +4046,7 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<TriggerTestPenalty>Переговорщик, -7</TriggerTestPenalty>
 				<Level>14</Level>
@@ -4070,7 +4070,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>12</Level>
 			</Action>
@@ -4116,7 +4116,7 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>14</Level>
 			</Action>
@@ -4132,7 +4132,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>13</Level>
 			</Action>
@@ -4157,7 +4157,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>7</Level>
 			</Action>
@@ -4185,7 +4185,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>13</Level>
 			</Action>
@@ -4352,7 +4352,7 @@
 		<Actions>
 			<Action>
 				<Name>TestAll</Name>
-				<Button>Проверить силу, ловкость, хитрость и мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength, Skill, Cunning, Wisdom</Stat>
 				<Level>42</Level>
 			</Action>
@@ -4368,7 +4368,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>10</Level>
 			</Action>
@@ -4384,7 +4384,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>12</Level>
 			</Action>
@@ -4423,13 +4423,13 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>14</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>14</Level>
 			</Action>
@@ -4477,7 +4477,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>14</Level>
 			</Action>
@@ -4528,7 +4528,7 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>11</Level>
 			</Action>
@@ -4544,7 +4544,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>13</Level>
 			</Action>
@@ -4596,7 +4596,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>10</Level>
 			</Action>
@@ -4640,7 +4640,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>12</Level>
 			</Action>
@@ -4718,7 +4718,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>10</Level>
 			</Action>
@@ -4734,7 +4734,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>12</Level>
 			</Action>
@@ -4750,7 +4750,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>13</Level>
 			</Action>
@@ -4796,7 +4796,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>10</Level>
 			</Action>
@@ -4812,7 +4812,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>14</Level>
 			</Action>
@@ -4839,7 +4839,7 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>12</Level>
 			</Action>
@@ -4875,7 +4875,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<TriggerTestPenalty>Скакун, -5; Тулпар, -5</TriggerTestPenalty>
 				<Level>12</Level>
@@ -4931,13 +4931,13 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>12</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<TriggerTestPenalty>Арбалет, -4</TriggerTestPenalty>
 				<Level>12</Level>
@@ -4983,7 +4983,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Trigger>Перевал</Trigger>
 				<Stat>Strength</Stat>
 				<Level>10</Level>
@@ -5059,7 +5059,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>11</Level>
 			</Action>
@@ -5075,7 +5075,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>11</Level>
 			</Action>
@@ -5125,7 +5125,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>13</Level>
 			</Action>
@@ -5248,7 +5248,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>13</Level>
 			</Action>
@@ -5333,7 +5333,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>13</Level>
 			</Action>
@@ -5349,13 +5349,13 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>8</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>8</Level>
 			</Action>
@@ -5422,31 +5422,31 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>14</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>14</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>14</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>14</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>14</Level>
 			</Action>
@@ -5480,7 +5480,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>13</Level>
 			</Action>
@@ -5496,7 +5496,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>10</Level>
 			</Action>
@@ -5512,7 +5512,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>10</Level>
 			</Action>
@@ -5608,7 +5608,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>14</Level>
 			</Action>
@@ -5726,13 +5726,13 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>14</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>14</Level>
 			</Action>
@@ -5749,7 +5749,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>13</Level>
 			</Action>
@@ -5812,7 +5812,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>13</Level>
 			</Action>
@@ -5914,7 +5914,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>9</Level>
 			</Action>
@@ -5937,7 +5937,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>13</Level>
 			</Action>
@@ -6044,7 +6044,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>13</Level>
 			</Action>
@@ -6099,7 +6099,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>13</Level>
 			</Action>
@@ -6139,7 +6139,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>14</Level>
 			</Action>
@@ -6222,7 +6222,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>14</Level>
 				<Aftertext>Если проверка будет успешной, то товар достанется нашему герою по меньшей цене.</Aftertext>
@@ -6343,13 +6343,13 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>12</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>12</Level>
 			</Action>
@@ -6485,7 +6485,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>12</Level>
 			</Action>
@@ -6505,7 +6505,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Trigger>Переговорщик</Trigger>
 				<Stat>Wisdom</Stat>
 			</Action>
@@ -6558,7 +6558,7 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>14</Level>
 			</Action>
@@ -6614,7 +6614,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>11</Level>
 			</Action>
@@ -6766,7 +6766,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>13</Level>
 			</Action>
@@ -6865,7 +6865,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>12</Level>
 			</Action>
@@ -6986,7 +6986,7 @@
 		<Actions>
 			<Action>
 				<Name>TestAll</Name>
-				<Button>Проверить силу, ловкость, хитрость и мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength, Skill, Cunning, Wisdom</Stat>
 				<Level>42</Level>
 			</Action>
@@ -7030,7 +7030,7 @@
 		<Actions>
 			<Action>
 				<Name>TestAll</Name>
-				<Button>Проверить силу, ловкость, хитрость и мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength, Skill, Cunning, Wisdom</Stat>
 				<Level>42</Level>
 			</Action>
@@ -7056,7 +7056,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>12</Level>
 			</Action>
@@ -7117,7 +7117,7 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить мудрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>14</Level>
 			</Action>
@@ -7137,7 +7137,7 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить хитрость</Button>
+				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>14</Level>
 			</Action>
@@ -7193,7 +7193,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>13</Level>
 			</Action>
@@ -7429,7 +7429,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>14</Level>
 			</Action>
@@ -7573,7 +7573,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>13</Level>
 			</Action>
@@ -7614,7 +7614,7 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>14</Level>
 			</Action>
@@ -7794,7 +7794,7 @@
 			</Action>	
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>14</Level>
 			</Action>
@@ -7836,13 +7836,13 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить силу</Button>
+				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>14</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить ловкость</Button>
+				<Button>Проверить</Button>
 				<Trigger>Лучник</Trigger>
 				<Stat>Skill</Stat>
 				<Level>12</Level>
@@ -7976,7 +7976,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить красноречие</Button>
+				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>12</Level>
 				<Benefit Name="Bargain"/>
