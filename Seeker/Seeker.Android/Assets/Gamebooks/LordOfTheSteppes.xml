@@ -25,7 +25,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить соленой рыбы</Button>
+				<Button>Купить</Button>
 				<Text>СОЛЕНАЯ РЫБА</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -34,7 +34,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить вяленой рыбы</Button>
+				<Button>Купить</Button>
 				<Text>ВЯЛЕНАЯ РЫБА</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -43,7 +43,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить мед</Button>
+				<Button>Купить</Button>
 				<Text>МЕД</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -52,7 +52,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить молоко</Button>
+				<Button>Купить</Button>
 				<Text>МОЛОКО</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -185,7 +185,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Оплатить обед</Button>
+				<Button>Оплатить</Button>
 				<Text>ПРИЛИЧНЫЙ ОБЕД</Text>
 				<Price>4</Price>
 				<Benefit Name="Endurance" Value="4"/>
@@ -193,7 +193,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать пива</Button>
+				<Button>Заказать</Button>
 				<Text>КРУЖКА ПИВА</Text>
 				<Price>2</Price>
 				<Benefit Name="Endurance" Value="3"/>
@@ -212,7 +212,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Оплатить ужин</Button>
+				<Button>Оплатить</Button>
 				<Text>ПРЕВОСХОДНЫЙ УЖИН</Text>
 				<Price>3</Price>
 				<Benefit Name="Endurance" Value="3"/>
@@ -229,7 +229,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить вина</Button>
+				<Button>Купить</Button>
 				<Text>ВИНО</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -238,7 +238,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пива</Button>
+				<Button>Купить</Button>
 				<Text>ПИВО</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -336,7 +336,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать кваса</Button>
+				<Button>Заказать</Button>
 				<Text>ХОЛОДНЫЙ КВАС</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -345,7 +345,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать пива</Button>
+				<Button>Заказать</Button>
 				<Text>ПИВО</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -354,7 +354,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Налить во фляжку кваса</Button>
+				<Button>Налить во фляжку</Button>
 				<Text>ХОЛОДНЫЙ КВАС</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -363,7 +363,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Налить во фляжку пива</Button>
+				<Button>Налить во фляжку</Button>
 				<Text>ПИВО</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -372,7 +372,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать обед</Button>
+				<Button>Заказать</Button>
 				<Text>ОБЕД</Text>
 				<Price>3</Price>
 				<Benefit Name="Endurance" Value="4"/>
@@ -761,24 +761,24 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить первый меч</Button>
-				<Text>Меч</Text>
+				<Button>Купить</Button>
+				<Text>Первый меч</Text>
 				<Price>30</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 				<Aftertext>второй стоимостью 27 монет, наносит урон в 3 Жизни при точном ударе:</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить второй меч</Button>
-				<Text>Меч</Text>
+				<Button>Купить</Button>
+				<Text>Второй меч</Text>
 				<Price>27</Price>
 				<Benefit Name="ExtendedDamage"/>
 				<Aftertext>третий стоимостью 38 монет, прибавит 1 к Нападению, 1 к Инициативе и наносит урон в 3 Жизни при каждом точном ударе:</Aftertext>
 			</Action>			
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить третий меч</Button>
-				<Text>Меч</Text>
+				<Button>Купить</Button>
+				<Text>Третий меч</Text>
 				<Price>38</Price>	
 				<Benefit Name="ExtendedDamage"/>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -1056,7 +1056,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пропуск</Button>
+				<Button>Купить</Button>
 				<Text>Пропуск к хану</Text>
 				<Price>10</Price>
 				<Trigger>Пропуск к хану</Trigger>
@@ -1121,7 +1121,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать ужин</Button>
+				<Button>Заказать</Button>
 				<Text>УЖИН</Text>
 				<Price>3</Price>
 				<Benefit Name="Endurance" Value="2"/>
@@ -1129,7 +1129,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать пива</Button>
+				<Button>Заказать</Button>
 				<Text>КРУЖКА ПИВА</Text>
 				<Price>2</Price>
 				<Benefit Name="Endurance" Value="2"/>
@@ -1137,7 +1137,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Налить пива во флягу</Button>
+				<Button>Налить во флягу</Button>
 				<Text>ВЗЯТЬ С СОБОЙ ПИВА</Text>
 				<Price>2</Price>
 				<Benefit Name="Healing" ValueString="Выпить пива,2"/>
@@ -2143,7 +2143,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить короткий меч</Button>
+				<Button>Купить</Button>
 				<Text>КОРОТКИЙ МЕЧ</Text>
 				<Price>25</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -2153,7 +2153,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить длинный кинжал</Button>
+				<Button>Купить</Button>
 				<Text>ДЛИННЫЙ КИНЖАЛ</Text>
 				<Price>28</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -2357,7 +2357,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать медовухи</Button>
+				<Button>Заказать</Button>
 				<Text>МЕДОВУХА</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -2366,7 +2366,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Налить воды во флягу</Button>
+				<Button>Налить воды</Button>
 				<Text>ВОДА</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -2375,7 +2375,7 @@
 			</Action>			
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать обед</Button>
+				<Button>Заказать</Button>
 				<Text>ЦЕЛЫЙ ОБЕД</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -2554,7 +2554,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить доспех</Button>
+				<Button>Купить</Button>
 				<Text>ДОСПЕХ</Text>
 				<Price>15</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -3254,7 +3254,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить еды в дорогу</Button>
+				<Button>Купить</Button>
 				<Text>ЕДА В ДОРОГУ</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -4317,7 +4317,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Продать кинжал</Button>
+				<Button>Продать</Button>
 				<Text>КИНЖАЛ ИЗ ТАЙНИКА</Text>
 				<Price>-7</Price>
 				<Aftertext>После этого странник, сославшись на усталость, покинет вас, поднявшись в свою комнату, вы же спокойно поужинайте, если что-нибудь заказывали, и возвращайтесь на улицу.</Aftertext>
@@ -4875,7 +4875,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить сыр</Button>
+				<Button>Купить</Button>
 				<Text>СЫР</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -4885,7 +4885,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пива</Button>
+				<Button>Купить</Button>
 				<Text>ПИВО</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -5088,7 +5088,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить первое зелье</Button>
+				<Button>Купить</Button>
 				<Text>ПЕРВОЕ ЗЕЛЬЕ</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -5096,7 +5096,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить второе зелье</Button>
+				<Button>Купить</Button>
 				<Text>ВТОРОЕ ЗЕЛЬЕ</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -5104,7 +5104,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить третье зелье</Button>
+				<Button>Купить</Button>
 				<Text>ТРЕТЬЕ ЗЕЛЬЕ</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -5113,7 +5113,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить четвёртое зелье</Button>
+				<Button>Купить</Button>
 				<Text>ЧЕТВЁРТОЕ ЗЕЛЬЕ</Text>
 				<Price>5</Price>
 				<Multiple/>
@@ -5121,7 +5121,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пятое зелье</Button>
+				<Button>Купить</Button>
 				<Text>ПЯТОЕ ЗЕЛЬЕ</Text>
 				<Price>6</Price>
 				<Multiple/>
@@ -5130,7 +5130,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить зелье Силы Медведя</Button>
+				<Button>Купить</Button>
 				<Text>ЗЕЛЬЕ СИЛЫ МЕДВЕДЯ</Text>
 				<Price>10</Price>
 				<Multiple/>
@@ -5140,7 +5140,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить зелье Ловкости</Button>
+				<Button>Купить</Button>
 				<Text>ЗЕЛЬЕ ЛОВКОСТИ</Text>
 				<Price>7</Price>
 				<Multiple/>
@@ -5198,16 +5198,16 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить первый меч</Button>
-				<Text>МЕЧ</Text>
+				<Button>Купить</Button>
+				<Text>ПЕРВЫЙ МЕЧ</Text>
 				<Price>35</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 				<Aftertext>Второй - прибавит 1 к Нападению и 2 к Инициативе:</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить второй меч</Button>
-				<Text>МЕЧ</Text>
+				<Button>Купить</Button>
+				<Text>ВТОРОЙ МЕЧ</Text>
 				<Price>38</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 				<Benefit Name="MaxInitiative" Value="2"/>
@@ -5215,7 +5215,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кольчугу</Button>
+				<Button>Купить</Button>
 				<Text>КОЛЬЧУГА</Text>
 				<Price>45</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -5306,7 +5306,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Налить воды во флягу</Button>
+				<Button>Налить во флягу</Button>
 				<Text>ВОДА</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -5315,7 +5315,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить вяленой рыбы</Button>
+				<Button>Купить</Button>
 				<Text>ВЯЛЕНАЯ РЫБА</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -5324,7 +5324,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить шлем</Button>
+				<Button>Купить</Button>
 				<Text>ШЛЕМ ИЗ ТОЛСТОЙ КОЖИ</Text>
 				<Price>10</Price>
 				<Benefit Name="MaxEndurance" Value="1"/>
@@ -5360,7 +5360,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить снотворное</Button>
+				<Button>Купить</Button>
 				<Text>Снотворное</Text>
 				<Price>3</Price>
 				<Trigger>Снотворное</Trigger>
@@ -5583,7 +5583,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать хмельного</Button>
+				<Button>Заказать</Button>
 				<Text>ХМЕЛЬНОЙ НАПИТОК</Text>
 				<Price>3</Price>
 				<Benefit Name="Endurance" Value="3"/>
@@ -5591,7 +5591,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать ужин</Button>
+				<Button>Заказать</Button>
 				<Text>УЖИН</Text>
 				<Price>4</Price>
 				<Aftertext>Присев за свободный столик, вы присматриваетесь к посетителям. Многие из них выглядят весьма подозрительно. Вас это, впрочем, не удивляет: Каменка, через которую проходит множество путников, всегда был прибежищем различных жуликов и проходимцев, и власти который год безуспешно пытаются с этим бороться.\n\nПока вы думаете, насколько безопасно обсуждать что-либо в этом месте, за ваш столик подсаживается худощавый мужчина в черной куртке. Краем глаза вы замечаете, что на поясе у него висит удобный короткий меч.\n\n- Не желаешь сыграть в зернь, путник? Ставка - 2 монеты. Согласен? - бойко тарахтит ваш собеседник.\n\nЗернь - это игра в кости, каждая из которых раскрашена всего в два цвета: три грани в белый и три - в черный. Играющие выбирают свой цвет, после чего кидают три кости. Выигрывает тот, чей цвет выпадет хотя бы на двух кубиках.</Aftertext>
@@ -5641,7 +5641,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать кваса</Button>
+				<Button>Купить</Button>
 				<Text>ШЕЛКОВАЯ НАКИДКА</Text>
 				<Price>8</Price>
 				<Trigger>Шелковая накидка</Trigger>
@@ -5666,7 +5666,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить охранную грамоту</Button>
+				<Button>Купить</Button>
 				<Text>Охранная грамота</Text>
 				<Price>5</Price>
 				<Trigger>Охранная грамота</Trigger>
@@ -5902,7 +5902,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Налить воды во флягу</Button>
+				<Button>Налить во флягу</Button>
 				<Text>ВОДА</Text>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Попить воды,1,1"/>
@@ -6078,7 +6078,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить отвар подорожника</Button>
+				<Button>Купить</Button>
 				<Text>ОТВАР ПОДОРОЖНИКА</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -6087,7 +6087,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить цветочный отвар</Button>
+				<Button>Купить</Button>
 				<Text>ЦВЕТОЧНЫЙ ОТВАР</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -6096,7 +6096,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пучок подорожника</Button>
+				<Button>Купить</Button>
 				<Text>ПУЧОК ПОДОРОЖНИКА</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -6105,7 +6105,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить листья лечебного лопуха</Button>
+				<Button>Купить</Button>
 				<Text>ЛИСТЬЯ ЛЕЧЕБНОГО ЛОПУХА</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -6114,7 +6114,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить противоядие</Button>
+				<Button>Купить</Button>
 				<Text>ПРОТИВОЯДИЕ</Text>
 				<Price>3</Price>
 				<Trigger>Противоядие</Trigger>
@@ -6505,7 +6505,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Налить воды во флягу</Button>
+				<Button>Налить во флягу</Button>
 				<Text>ВОДА</Text>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Попить воды,1,1"/>
@@ -6700,14 +6700,14 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить меч</Button>
+				<Button>Купить</Button>
 				<Text>МЕЧ</Text>
 				<Price>20</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кольчугу</Button>
+				<Button>Купить</Button>
 				<Text>КОЛЬЧУГА</Text>
 				<Price>30</Price>
 				<Benefit Name="MaxDefence" Value="2"/>
@@ -7005,7 +7005,7 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться c воинами</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый воин" Attack="8" Defence="14" Endurance="10" Initiative="9"/>
 					<Enemy Name="Второй воин" Attack="8" Defence="14" Endurance="10" Initiative="9"/>
@@ -7014,7 +7014,7 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться со степняками</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кешиктен" Attack="12" Defence="16" Endurance="12" Initiative="11" SpecialTechnique="PowerfulStrike"/>
 					<Enemy Name="Багатур" Attack="12" Defence="17" Endurance="14" Initiative="11" SpecialTechnique="Reaction"/>
@@ -7222,7 +7222,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить хлебцы</Button>
+				<Button>Купить</Button>
 				<Text>ХЛЕБЦЫ</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -7231,7 +7231,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить сок из ягод</Button>
+				<Button>Купить</Button>
 				<Text>СОК ИЗ ЯГОД</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -7240,7 +7240,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить солонины</Button>
+				<Button>Купить</Button>
 				<Text>СОЛОНИНА</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -7249,7 +7249,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить травяной отвар</Button>
+				<Button>Купить</Button>
 				<Text>ТРАВЯНОЙ ОТВАР</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -7258,7 +7258,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить мазь</Button>
+				<Button>Купить</Button>
 				<Text>МАЗЬ ЗЕЛЕНОГО ЦВЕТА</Text>
 				<Price>7</Price>
 				<Benefit Name="MaxInitiative" Value="2"/>
@@ -7267,7 +7267,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить жилет</Button>
+				<Button>Купить</Button>
 				<Text>ЖИЛЕТ</Text>
 				<Price>12</Price>
 				<Benefit Name="MaxEndurance" Value="2"/>
@@ -7333,7 +7333,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить алмаз</Button>
+				<Button>Купить</Button>
 				<Text>АЛМАЗ</Text>
 				<Price>32</Price>
 				<Trigger>Алмаз</Trigger>
@@ -7366,14 +7366,14 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать ужин</Button>
+				<Button>Заказать</Button>
 				<Text>УЖИН</Text>
 				<Price>4</Price>
 				<Aftertext>Чарка с вином (порция, равная одному глотку) будет стоить 1 монету и восстановит 2 Жизни:</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Заказать вина</Button>
+				<Button>Заказать</Button>
 				<Text>ДЕШЁВОЕ ВИНО</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -7382,7 +7382,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Налить вина во флягу</Button>
+				<Button>Налить во флягу</Button>
 				<Text>ДЕШЁВОЕ ВИНО</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -7401,7 +7401,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить меч</Button>
+				<Button>Купить</Button>
 				<Text>МЕЧ С ДЛИННОЙ РУКОЯТЬЮ</Text>
 				<Price>35</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -7409,7 +7409,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить куртку</Button>
+				<Button>Купить</Button>
 				<Text>КУРТКА</Text>
 				<Price>36</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -7417,7 +7417,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить колбаски</Button>
+				<Button>Купить</Button>
 				<Text>МЯСНЫЕ КОЛБАСКИ</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -7426,7 +7426,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить хлебцы</Button>
+				<Button>Купить</Button>
 				<Text>ХЛЕБЦЫ</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -7435,7 +7435,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить мед</Button>
+				<Button>Купить</Button>
 				<Text>МЕД</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -7444,7 +7444,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить молоко</Button>
+				<Button>Купить</Button>
 				<Text>МОЛОКО</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -8138,7 +8138,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить яблоки</Button>
+				<Button>Купить</Button>
 				<Text>ЯБЛОКИ</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -8147,8 +8147,8 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кусок сыра</Button>
-				<Text>СЫР</Text>
+				<Button>Купить</Button>
+				<Text>КУСОК СЫРА</Text>
 				<Price>2</Price>
 				<Multiple/>
 				<Benefit Name="Healing" ValueString="Съесть сыр,2"/>
@@ -8156,7 +8156,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить молоко</Button>
+				<Button>Купить</Button>
 				<Text>МОЛОКО</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -8165,7 +8165,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить медовухи</Button>
+				<Button>Купить</Button>
 				<Text>МЕДОВУХА</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -8173,7 +8173,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить сыту</Button>
+				<Button>Купить</Button>
 				<Text>СЫТА</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -8795,23 +8795,23 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить первый меч</Button>
-				<Text>МЕЧ</Text>
+				<Button>Купить</Button>
+				<Text>ПЕРВЫЙ МЕЧ</Text>
 				<Price>15</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 				<Aftertext>Второй меч за 30 монет (прибавит 2 к Нападению):</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить второй меч</Button>
-				<Text>МЕЧ</Text>
+				<Button>Купить</Button>
+				<Text>ВТОРОЙ МЕЧ</Text>
 				<Price>30</Price>
 				<Benefit Name="MaxAttack" Value="2"/>
 				<Aftertext>Сабля за 35 монет (прибавит 1 к Нападению, 1 к Инициативе и 1 к урону):</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить саблю</Button>
+				<Button>Купить</Button>
 				<Text>САБЛЯ</Text>
 				<Price>35</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -8821,7 +8821,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить первый доспех</Button>
+				<Button>Купить</Button>
 				<Text>ДОСПЕХ</Text>
 				<Price>20</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -8829,7 +8829,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить второй доспех</Button>
+				<Button>Купить</Button>
 				<Text>ДОСПЕХ</Text>
 				<Price>30</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -8838,7 +8838,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить третий доспех</Button>
+				<Button>Купить</Button>
 				<Text>ДОСПЕХ</Text>
 				<Price>45</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -8855,7 +8855,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить вяленого мяса</Button>
+				<Button>Купить</Button>
 				<Text>ВЯЛЕНОЕ МЯСО</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -8864,7 +8864,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить лепешку</Button>
+				<Button>Купить</Button>
 				<Text>ЛЕПЕШКА</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -9017,7 +9017,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать нападение</Button>
+				<Button>Выбрать</Button>
 				<Text>НАПАДЕНИЕ</Text>
 				<Stat>Attack</Stat>
 				<StatStep>1</StatStep>
@@ -9025,7 +9025,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать защиту</Button>
+				<Button>Выбрать</Button>
 				<Text>ЗАЩИТА</Text>
 				<Stat>Defence</Stat>
 				<StatStep>1</StatStep>
@@ -9033,7 +9033,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать жизнь</Button>
+				<Button>Выбрать</Button>
 				<Text>ЖИЗНЬ</Text>
 				<Stat>Endurance</Stat>
 				<StatStep>2</StatStep>
@@ -9041,7 +9041,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать инициативу</Button>
+				<Button>Выбрать</Button>
 				<Text>ИНИЦИАТИВА</Text>
 				<Stat>Initiative</Stat>
 				<StatStep>2</StatStep>
@@ -9058,35 +9058,35 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать два клинка</Button>
+				<Button>Выбрать</Button>
 				<Text>БОЙ ДВУМЯ КЛИНКАМИ</Text>
 				<SpecialTechnique>TwoBlades</SpecialTechnique>
 				<Aftertext>Если есть вторая рука, значит, она может взять еще один клинок. Но вот достаточно ловко орудовать им может не каждый. Жаль только, что нет третьей руки для щита... Прием позволяет действовать двумя любыми клинками одновременно. Это дает вам возможность провести дополнительную атаку каждый раунд, однако в случае успеха при дополнительной атаке вы отнимете у врага на 1 Жизнь меньше, чем нормальный урон применяемого во второй руке оружия (то есть обычный меч отнимет не 2, а 1 Жизнь). К сожалению, ваши оборонительные возможности второй клинок не повысит, так как сдержать мощные удары второй рукой все-таки непросто.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать защиту</Button>
+				<Button>Выбрать</Button>
 				<Text>ВЕЕРНАЯ ЗАЩИТА</Text>
 				<SpecialTechnique>TotalProtection</SpecialTechnique>
 				<Aftertext>Воины, владеющие этим приемом, не считают, что при хорошем нападении умение правильно защищаться - ненужная роскошь. По их мнению, лучше хорошей защиты - отличная защита. Этот прием позволяет, во-первых, применить «веерную защиту» (быстрые движения мечом, отражающие любые удары; со стороны создается впечатление, что у вас в руках блестящий веер); во-вторых, в совершенстве владеть приемами блокировки. Знание Веерной защиты при применении оборонительного стиля прибавляет к Защите дополнительный 1 балл. Также при бое с несколькими противниками их Слаженность (если она не является отрицательной) будет всегда равна нулю.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать первый удар</Button>
+				<Button>Выбрать</Button>
 				<Text>ПЕРВЫЙ УДАР</Text>
 				<SpecialTechnique>FirstStrike</SpecialTechnique>
 				<Aftertext>За вами всегда остается право первой атаки, настолько быстры ваши движения. Причем первый удар всегда настолько быстр и точен, что вы наносите немного больше ущерба, чем обычно: не успел противник вытащить меч, а вы уже сделали коварный выпад. Таким образом, данный прием обеспечивает вам победу в первом раунде боя, при этом у противника отнимается на 2 Жизни больше, чем при обычном точном ударе. В следующих раундах вы начинаете атаковать первым. К тому же у противника, ошеломленного вашими активными действиями, первые 3 раунда на 1 снижается Сила удара, после чего он приходит в себя (при применении глухой защиты - первые два раунда). Однако когда противник обладает таким же приемом, Первый удар становится бесполезен, и бой ведется по обычным правилам. Так что стирать параметр Инициатива не спешите.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать мощный выпад</Button>
+				<Button>Выбрать</Button>
 				<Text>МОЩНЫЙ ВЫПАД</Text>
 				<SpecialTechnique>PowerfulStrike</SpecialTechnique>
 				<Aftertext>Опытный воин может нанести такой удар, что противник сразу свалится с ног если не мертвый, то оглушенный (а этого бывает достаточно). Такие удары пробивают любой блок, и от них можно только уклониться. Этот прием позволит вам во время боя провести две особо мощные атаки - далее противник раскусит вашу тактику и приноровится уходить от таких ударов. Делать или нет мощный выпад, вы решаете перед началом атаки. Если атака оказалась удачной, вы нанесете противнику урон на 3 больше обычного. Если атака прошла неудачно, вы все равно нанесете удар, который отнимет 1 Жизнь у врага. Если этим приемом владеет ваш противник, в тексте будет оговорено, в какие раунды он применит свои выпады. Кроме того, противник может владеть этим приемом немного лучше или хуже, чем вы, и уметь производить не две, а одну или даже три мощные атаки. В этом случае в тексте будет указано, сколько именно мощных ударов применит противник. Нельзя использовать мощный выпад на третий раунд во время применения глухой защиты, так как в этот раунд вы не предпринимаете атакующих действий.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать реакцию</Button>
+				<Button>Выбрать</Button>
 				<Text>РЕАКЦИЯ</Text>
 				<SpecialTechnique>Reaction</SpecialTechnique>
 				<Aftertext>Ваш конек - это уклонения и уходы в сторону. Противник будет обескуражен тем, что его быстрый клинок только рассек воздух, хотя уйти от удара было практически невозможно. Невозможно для других, но не для вас. Конечно, сложно уклониться от всех ударов, но натренированные рефлексы позволяют уйти от некоторых атак в последний момент. Владея этим приемом, вы можете игнорировать каждый третий точный удар врага, не отнимая у себя Жизнь.\nЕсли вы владеете приемом «Реакция», и вам нанесли два точных удара, а на очередной раунд боя приходится применение приема «Мощный выпад», то вы уклонитесь от этой опасной атаки без потерь. Это будет считаться уклонением от точного удара независимо от того, пробил противник вашу защиту или нет (то есть в этот раунд можно даже не бросать кубики за противника, так как его мощный выпад в любом случае будет использован впустую).\n\nОсобым приемом быстро не овладеешь, к тому же потом его надо постоянно оттачивать. Поэтому вы можете выбрать только один из приемов, который, как вы считаете, наиболее подойдет к вашей манере боя. Этим приемом вы будете владеть с начала игры и до конца путешествия.</Aftertext>
