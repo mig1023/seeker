@@ -448,7 +448,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Взять флейту</Button>
+				<Button>Взять</Button>
 				<Text>Флейта</Text>
 				<Aftertexts>
 					<Aftertext>Из будки тем временем доносится серия щелчков - неведомый зверь добрался до диджейского пульта и каскадом обрушил все тумблеры. Внезапно оживает школьная радиостанция. Знакомая мелодия, но я не сразу узнаю исполнителя.</Aftertext>
@@ -725,17 +725,17 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать гантелю</Button>
+				<Button>Выбрать</Button>
 				<Text>Гантеля</Text>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать черенок</Button>
+				<Button>Выбрать</Button>
 				<Text>Черенок от швабры</Text>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать мяч</Button>
+				<Button>Выбрать</Button>
 				<Text>Баскетбольный мяч</Text>
 				<Aftertext>Теперь это будет мое оружие.\n\nСтрашно, очень страшно, но надо двигаться. Гирей я высаживаю дверь и выбегаю спортзал.</Aftertext>
 			</Action>
@@ -805,7 +805,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Взять линейку</Button>
+				<Button>Взять</Button>
 				<Text>Линейка</Text>
 				<Aftertext>В столе нахожу шоколадный батончик. Больше в классе ничего интересного нет, и я выхожу обратно в коридор.</Aftertext>
 			</Action>
@@ -1586,7 +1586,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать монтировку</Button>
+				<Button>Выбрать</Button>
 				<Text>Монтировка</Text>
 			</Action>
 		</Actions>
