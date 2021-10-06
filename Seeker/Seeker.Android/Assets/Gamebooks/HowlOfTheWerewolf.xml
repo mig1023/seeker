@@ -634,7 +634,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить зелье Исцеления</Button>
+				<Button>Купить зелье</Button>
 				<Text>ЗЕЛЬЕ ИСЦЕЛЕНИЯ</Text>
 				<Price>4</Price>
 				<Benefit Name="Healing" ValueString="Выпить зелье Исцеления,-1"/>
@@ -642,7 +642,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить зелье Ловкости</Button>
+				<Button>Купить зелье</Button>
 				<Text>ЗЕЛЬЕ ЛОВКОСТИ</Text>
 				<Price>6</Price>
 				<Benefit Name="Healing" ValueString="Выпить зелье Ловкости,-2"/>
@@ -650,7 +650,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить зелье Фортуны</Button>
+				<Button>Купить зелье</Button>
 				<Text>ЗЕЛЬЕ ФОРТУНЫ</Text>
 				<Price>5</Price>
 				<Benefit Name="Healing" ValueString="Выпить зелье Фортуны,-3"/>
@@ -658,7 +658,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить cвинцовые пули</Button>
+				<Button>Купить</Button>
 				<Text>СВИНЦОВЫЕ ПУЛИ</Text>
 				<Price>5</Price>
 				<Benefit Name="Gun" Value="6"/>
@@ -666,7 +666,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить cеребряные пули</Button>
+				<Button>Купить</Button>
 				<Text>СЕРЕБРЯНЫЕ ПУЛИ</Text>
 				<Price>6</Price>
 				<Benefit Name="Gun" Value="6"/>
@@ -674,14 +674,14 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить замок</Button>
+				<Button>Купить</Button>
 				<Text>ЗАМОК</Text>
 				<Price>5</Price>
 				<Aftertext>Большой железный замок с торчащим из него ключом.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить медный ключ</Button>
+				<Button>Купить</Button>
 				<Text>МЕДНЫЙ КЛЮЧ</Text>
 				<Price>4</Price>
 				<Trigger>Медный ключ</Trigger>
@@ -1578,7 +1578,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Оплатить ужин</Button>
+				<Button>Оплатить</Button>
 				<Text>УЖИН</Text>
 				<Price>4</Price>
 				<Benefit Name="Endurance" Value="4"/>
@@ -2035,26 +2035,26 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить меч</Button>
+				<Button>Купить</Button>
 				<Text>МЕЧ</Text>
 				<Price>10</Price>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кинжал</Button>
+				<Button>Купить</Button>
 				<Text>КИНЖАЛ</Text>
 				<Price>6</Price>
 				<Aftertext>Если в пути вы лишились оружия, можете купить его здесь (кинжалом сражаться не так удобно, как мечом, поэтому придется уменьшать на 1 свою Силу Удара).</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить верёвку</Button>
+				<Button>Купить</Button>
 				<Text>ВЕРЕВКА С КРЮКОМ</Text>
 				<Price>3</Price>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить арбалет</Button>
+				<Button>Купить</Button>
 				<Text>АРБАЛЕТ</Text>
 				<Price>12</Price>
 				<Trigger>Арбалет</Trigger>
@@ -2063,7 +2063,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кольчугу</Button>
+				<Button>Купить</Button>
 				<Text>КОЛЬЧУГА</Text>
 				<Price>8</Price>
 				<Trigger>Кольчуга</Trigger>
@@ -2071,14 +2071,14 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить лампу</Button>
+				<Button>Купить</Button>
 				<Text>МАСЛЯНАЯ ЛАМПА</Text>
 				<Price>3</Price>
 				<Trigger>Лампа</Trigger>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить провизию</Button>
+				<Button>Купить</Button>
 				<Text>ПРОВИЗИЯ</Text>
 				<Price>3</Price>
 				<Benefit Name="Healing" ValueString="Поесть,4"/>
