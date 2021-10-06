@@ -327,7 +327,7 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться c орком</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ОРК" Mastery="6" Endurance="8"/>
 				</Enemies>
@@ -339,7 +339,7 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться c гоблином</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГОБЛИН" Mastery="7" Endurance="5"/>
 				</Enemies>
@@ -1642,7 +1642,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить яблоко</Button>
+				<Button>Купить</Button>
 				<Text>ЯБЛОКО</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -1651,7 +1651,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить мандарин</Button>
+				<Button>Купить</Button>
 				<Text>МАНДАРИН</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -1660,7 +1660,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить апельсин</Button>
+				<Button>Купить</Button>
 				<Text>АПЕЛЬСИН</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -1669,7 +1669,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить банан</Button>
+				<Button>Купить</Button>
 				<Trigger>Banana</Trigger>
 				<Text>БАНАН</Text>
 				<Price>2</Price>
@@ -1679,7 +1679,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить молоко</Button>
+				<Button>Купить</Button>
 				<Text>МОЛОКО</Text>
 				<Price>2</Price>
 				<Benefit Name="Endurance" Value="3"/>
@@ -2354,7 +2354,7 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться с пауком</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПАУК" Mastery="8" Endurance="8"/>
 				</Enemies>
@@ -2881,7 +2881,7 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться c двумя рыцарями</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 					<Enemy Name="ВТОРОЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
@@ -2890,7 +2890,7 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться c третьим рыцарем</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ТРЕТИЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 				</Enemies>
@@ -2898,7 +2898,7 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться c капитаном</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КАПИТАН РЫЦАРЕЙ" Mastery="12" Endurance="12"/>
 				</Enemies>
@@ -4226,7 +4226,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить ананас</Button>
+				<Button>Купить</Button>
 				<Text>АНАНАС</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -4235,7 +4235,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить банан</Button>
+				<Button>Купить</Button>
 				<Trigger>Banana</Trigger>
 				<Text>БАНАН</Text>
 				<Price>2</Price>
@@ -4245,39 +4245,39 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кусок дерева</Button>
+				<Button>Купить</Button>
 				<Text>КРАСИВЫЙ КУСОЧЕК ДЕРЕВА</Text>
 				<Price>1</Price>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить ключ</Button>
+				<Button>Купить</Button>
 				<Trigger>CurlyKey</Trigger>
 				<Text>ФИГУРНЫЙ КЛЮЧ</Text>
 				<Price>2</Price>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить попну</Button>
+				<Button>Купить</Button>
 				<Text>ПОПОНА ДЛЯ ЛОШАДИ</Text>
 				<Price>5</Price>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить кусок металла</Button>
+				<Button>Купить</Button>
 				<Trigger>PieceOfMetal</Trigger>
 				<Text>БЛЕСТЯЩИЙ КУСОК МЕТАЛЛА</Text>
 				<Price>3</Price>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить устрицу</Button>
+				<Button>Купить</Button>
 				<Text>СДЕЛАННУЮ ИЗ ЗОЛОТА УСТРИЦУ</Text>
 				<Price>8</Price>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить браслет</Button>
+				<Button>Купить</Button>
 				<Trigger>SilverBracelet</Trigger>
 				<Text>СЕРЕБРЯНЫЙ БРАСЛЕТ</Text>
 				<Price>4</Price>
@@ -4623,7 +4623,7 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться c первым орком</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ОРК" Mastery="10" Endurance="6"/>
 				</Enemies>
@@ -4631,7 +4631,7 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться с двумя другими</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="7"/>
 					<Enemy Name="ТРЕТИЙ ОРК" Mastery="7" Endurance="7"/>
@@ -5124,7 +5124,7 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться c гоблином</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГОБЛИН" Mastery="4" Endurance="7"/>
 				</Enemies>
@@ -5132,7 +5132,7 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться со вторым</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ГОБЛИН" Mastery="8" Endurance="9"/>
 				</Enemies>
@@ -5433,7 +5433,7 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться c орком</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ОРК" Mastery="10" Endurance="6"/>
 				</Enemies>
@@ -5446,7 +5446,7 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться с остальными</Button>
+				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="7"/>
 					<Enemy Name="ТРЕТИЙ ОРК" Mastery="7" Endurance="7"/>
@@ -5874,56 +5874,56 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать левитацию</Button>
+				<Button>Выбрать</Button>
 				<Text>ЗАКЛЯТИЕ ЛЕВИТАЦИИ</Text>
 				<ThisIsSpell/>
 				<Aftertext>С его помощью вы сможете подняться в воздух и перелететь то препятствие, которое вам встретится. Но будьте осторожны: заклятие действует не слишком долго, и если вы не рассчитаете свои силы, то можете опуститься на землю раньше, чем препятствие или опасность будут позади.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать огонь</Button>
+				<Button>Выбрать</Button>
 				<Text>ЗАКЛЯТИЕ ОГНЯ</Text>
 				<ThisIsSpell/>
 				<Aftertext>Поможет вам в нужный момент создать в воздухе огненный шар и направить его на врагов. Но в закрытых помещениях им надо пользоваться осмотрительно, чтобы не устроить пожар.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать иллюзию</Button>
+				<Button>Выбрать</Button>
 				<Text>ЗАКЛЯТИЕ ИЛЛЮЗИИ</Text>
 				<ThisIsSpell/>
 				<Aftertext>Вы создадите у вашего врага необходимую иллюзию и сможете спастись в тех ситуациях, из которых другого выхода не будет. Но заклятие иллюзии — опасное колдовство: ведь иллюзия рассеивается, и враг понимает, что его одурачили.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать силу</Button>
+				<Button>Выбрать</Button>
 				<Text>ЗАКЛЯТИЕ СИЛЫ</Text>
 				<ThisIsSpell/>
 				<Aftertext>Прибавит вам силу и увеличит вашу СИЛУ УДАРА.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать слабость</Button>
+				<Button>Выбрать</Button>
 				<Text>ЗАКЛЯТИЕ СЛАБОСТИ</Text>
 				<ThisIsSpell/>
 				<Aftertext>Сделает вашего врага неуклюжим и неповоротливым, ослабит СИЛУ его УДАРА.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать копию</Button>
+				<Button>Выбрать</Button>
 				<Text>ЗАКЛЯТИЕ КОПИИ</Text>
 				<ThisIsSpell/>
 				<Aftertext>С его помощью вы сможете при случае создать точную Копию вашего противника, которую вы будете контролировать. Тогда прежде чем добраться до вас, ему придется драться с собственной Копией, МАСТЕРСТВО и ВЫНОСЛИВОСТЬ которой будут равны его МАСТЕРСТВУ и ВЫНОСЛИВОСТИ. Если ваш враг победит свою Копию, то с ним придется драться вам самим. Если же Копия сразит противника, то заклятие теряет силу и Копия исчезает, а вы продолжаете свой путь. Но если противников было несколько, а Копию вы смогли или захотели создать только одну, то придется драться и с остальными.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать исцеление</Button>
+				<Button>Выбрать</Button>
 				<Text>ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ</Text>
 				<ThisIsSpell/>
 				<Aftertext>В любой момент (но не во время сражения) добавит вам 8 ВЫНОСЛИВОСТЕЙ.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать плавание</Button>
+				<Button>Выбрать</Button>
 				<Text>ЗАКЛЯТИЕ ПЛАВАНИЯ</Text>
 				<ThisIsSpell/>
 				<Aftertext>Вы никогда не видели ни реки, ни озера, а в дороге может случиться всякое. У вас уже нет времени учиться плавать. Но с помощью этого заклятия вы сможете переплыть любую водную преграду, которая вам встретится.\n\nАстролог предупредил: уровень вашего мастерства позволяет вам воспользоваться заклятиями только 10 раз. Поэтому вы можете выбрать любые заклятия и в любом количестве, но всего их должно быть не более десяти. После беседы с астрологом вы вновь предстаете перед Королем. Никто не знает, что вам может понадобиться на пути к успеху, поэтому из дворца вы берете с собой только самое необходимое: меч, флягу, заплечный мешок и 15 золотых.\n\nКороль приказывает одному из герольдов проводить вас до границ Зачарованного леса, чтобы в пути вы не испытывали нужды ни в еде, ни в питье. По дороге вы спрашиваете герольда, кто такие Гоблины и Орки, о которых вы много слышали во дворце. Он рассказывает, что Гоблины — это страшные и отвратительные злые духи ростом примерно с человека, которые верой и правдой служат волшебнику. Их мало кто видел. И совсем уж никто и никогда не видел Орков. Говорят только, что они повыше и посильнее. Но и с теми и с другими лучше не встречаться.\n\nВ пути вы еще раз обдумываете последний совет Майлина: Барлад Дэрт достаточно могущественный волшебник, чтобы даже малой частицы его мастерства, переданной особо преданным воинам, хватило не только на то, чтобы противостоять вашим заклятиям, но и наложить на вас свои, не менее быстрые и сильные. Будьте осмотрительны.\n\nНо вот королевским владениям приходит конец. Здесь надо спешиться: лес заколдован и не пускает всадника. Герольд прощается с вами, и вскоре лишь далекий стук копыт напоминает, что вы были не один. Черный, таинственный и неподвижный, Зачарованный лес ждет вас.</Aftertext>
