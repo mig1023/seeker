@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Xml;
 
 namespace Seeker.Game
@@ -31,9 +32,12 @@ namespace Seeker.Game
         public static Gamebook.Links.SaveMethod Save;
         public static Gamebook.Links.LoadMethod Load;
 
+        public static string InputResponse { get; set; }
+
         public static void Clean()
         {
-            Game.Router.Clean();
+            InputResponse = String.Empty;
+
             Triggers.Clear();
 
             Paragraphs = null;

@@ -70,7 +70,6 @@ namespace Seeker
         {
             bool startOfGame = (id == Game.Data.StartParagraph);
 
-            Game.Router.Clean();
             PageClean();
 
             if (startOfGame)
@@ -131,12 +130,10 @@ namespace Seeker
                         foreach (View enemy in Output.Interface.Represent(action.Do(out _, "Representer")))
                             actionPlace.Children.Add(enemy);
 
-                        actionPlace.Children.Add(Output.Buttons.Action(action.Button, Action_Click, action.IsButtonEnabled()));
+                        EventHandler actionClick = (object sender, EventArgs e) => Action_Click(action, actionPlace);
+                        actionPlace.Children.Add(Output.Buttons.Action(action.Button, actionClick, action.IsButtonEnabled()));
 
                         Action.Children.Add(actionPlace);
-
-                        Game.Router.AddAction(action.Button, index);
-                        Game.Router.AddActionsPlaces(index, actionPlace);
 
                         AddAftertext(ref Action, action.Aftertext, action.Aftertexts);
                     }
@@ -238,7 +235,7 @@ namespace Seeker
 
         private Entry AddInputField(Game.Option option, object button)
         {
-            Game.Router.InputResponse = option.Input;
+            Game.Data.InputResponse = option.Input;
 
             return Output.Interface.Field(button, InputChange);
         }
@@ -260,7 +257,7 @@ namespace Seeker
         {
             Entry field = sender as Entry;
 
-            if (field.Text.ToLower() == Game.Router.InputResponse.ToLower())
+            if (field.Text.ToLower() == Game.Data.InputResponse.ToLower())
             {
                 field.IsVisible = false;
                 Button button = (Button)field.BindingContext;
@@ -272,10 +269,12 @@ namespace Seeker
         {
             Output.Buttons.EmptyOptionTextFuse(option);
 
-            Game.Router.AddDestination(option.Text, option.Destination, option.Do);
             gameOver = (option.Destination == 0);
 
-            return Output.Buttons.Option(option, Option_Click);
+            EventHandler optionClick = (object sender, EventArgs e) =>
+                Paragraph(option.Destination, optionName: option.Text);
+
+            return Output.Buttons.Option(option, optionClick);
         }
 
         private void AddAdditionalButton(string name, EventHandler eventHandler) =>
@@ -349,32 +348,26 @@ namespace Seeker
             if ((Game.Data.Actions == null) || !Game.Data.Actions.GameOver(out int toEndParagraph, out string toEndText))
                 return;
 
-            Game.Router.Clean();
             Options.Children.Clear();
 
-            Game.Router.AddDestination(toEndText, toEndParagraph);
+            EventHandler gameoverClick = (object sender, EventArgs e) =>
+                Paragraph(toEndParagraph, optionName: toEndText);
 
-            Options.Children.Add(Output.Buttons.GameOver(toEndText, Option_Click));
+            Options.Children.Add(Output.Buttons.GameOver(toEndText, gameoverClick));
         }
                
-        private void Action_Click(object sender, EventArgs e)
+        private void Action_Click(Abstract.IActions action, StackLayout actionPlace)
         {
-            Button b = sender as Button;
-
-            int actionIndex = Game.Router.FindAction(b.Text);
-
-            StackLayout actionPlace = Game.Router.FindActionsPlaces(actionIndex);
-
             actionPlace.Children.Clear();
 
-            List<string> actionResult = Game.Data.CurrentParagraph.Actions[actionIndex].Do(out bool reload, Trigger: true);
+            List<string> actionResult = action.Do(out bool reload, Trigger: true);
 
             if (reload)
                 Paragraph(Game.Data.CurrentParagraphID, reload: true);
             else
             {
-                foreach (Label action in Output.Interface.Actions(actionResult))
-                    actionPlace.Children.Add(action);
+                foreach (Label actionLine in Output.Interface.Actions(actionResult))
+                    actionPlace.Children.Add(actionLine);
 
                 UpdateStatus();
                 CheckGameOver();
@@ -396,13 +389,12 @@ namespace Seeker
             Paragraph(Game.Data.CurrentParagraphID, reload: true);
         }
 
-        private void Option_Click(object sender, EventArgs e) =>
-            Paragraph(Game.Router.FindDestination((sender as Button).Text), optionName: (sender as Button).Text);
-
         private void Continue_Click(object sender, EventArgs e) => Paragraph(Game.Continue.Load(), loadGame: true);
 
         private void PageClean()
         {
+            Game.Data.InputResponse = String.Empty;
+
             Text.Children.Clear();
             Action.Children.Clear();
             Options.Children.Clear();
