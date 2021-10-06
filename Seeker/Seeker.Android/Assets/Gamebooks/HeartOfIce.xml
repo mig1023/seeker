@@ -994,14 +994,14 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить шубу</Button>
+				<Button>Купить</Button>
 				<Text>Шуба</Text>
 				<Trigger>Шуба</Trigger>
 				<Aftertext>Вы можете приобрести Еду по цене 4 скада за одну упаковку; в каждой содержится спрессованная смесь сушеной рыбы, масла и зерна, и ее хватит на несколько дней.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить еду</Button>
+				<Button>Купить</Button>
 				<Text>Еда</Text>
 				<Price>4</Price>
 				<Multiple/>
@@ -1801,28 +1801,28 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать карту</Button>
+				<Button>Выбрать</Button>
 				<Text>ИД-карта</Text>
 				<Trigger>ИД-карта</Trigger>
 				<Split/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать пистолет</Button>
+				<Button>Выбрать</Button>
 				<Text>Бризальный пистолет</Text>
 				<Benefit Name="Shots" Value="6"/>
 				<Split/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать фонарик</Button>
+				<Button>Выбрать</Button>
 				<Text>Фонарик</Text>
 				<Trigger>Фонарик</Trigger>
 				<Split/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать очки</Button>
+				<Button>Выбрать</Button>
 				<Text>Поляризационные очки</Text>
 				<Trigger>Поляризационные очки</Trigger>
 				<Split/>
@@ -2665,7 +2665,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить усилитель</Button>
+				<Button>Купить</Button>
 				<Text>Большой усилитель</Text>
 				<Price>7</Price>
 				<Benefit Name="MaxLife" Value="5"/>
@@ -2674,7 +2674,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить маску</Button>
+				<Button>Купить</Button>
 				<Text>Маска затмения</Text>
 				<Price>6</Price>
 				<Trigger>Кожа хамелеона</Trigger>
@@ -2682,7 +2682,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить проницат</Button>
+				<Button>Купить</Button>
 				<Text>Несравненный проницат</Text>
 				<Price>4</Price>
 				<Trigger>Ночное зрение</Trigger>
@@ -2851,54 +2851,54 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить пистолет</Button>
+				<Button>Купить</Button>
 				<Text>Бризальный пистолет с 6 выстрелами</Text>
 				<Price>16</Price>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить фокусировщик</Button>
+				<Button>Купить</Button>
 				<Text>Пси-фокусировщик</Text>
 				<Price>18</Price>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить очки</Button>
+				<Button>Купить</Button>
 				<Text>Поляризационные очки</Text>
 				<Trigger>Поляризационные очки</Trigger>
 				<Price>8</Price>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить фонарик</Button>
+				<Button>Купить</Button>
 				<Text>Фонарик</Text>
 				<Trigger>Фонарик</Trigger>
 				<Price>10</Price>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить противогаз</Button>
+				<Button>Купить</Button>
 				<Text>Противогаз</Text>
 				<Price>10</Price>
 				<Trigger>Противогаз</Trigger>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить гранату</Button>
+				<Button>Купить</Button>
 				<Text>Шумовая граната</Text>
 				<Price>8</Price>
 				<Trigger>Шумовая граната</Trigger>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить нож</Button>
+				<Button>Купить</Button>
 				<Text>Нож</Text>
 				<Price>4</Price>
 				<Aftertext>«Я также покупаю эти вещи, — говорит вам торговец, — за половину озвученной цены».\n\nЭто означает, что вы можете, например, продать ему бризальный пистолет, если он у вас есть, за 8 скадов.\n\n«С чего ты взял, что я захочу что-то продать?» — спрашиваете вы.\n\nЕго губы изгибаются в загадочной полуулыбке. «Я полагаю, ты пришел в Венезию, чтобы отправиться на пароме. Тебе понадобятся деньги на билет».</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Продать пистолет</Button>
+				<Button>Продать</Button>
 				<Text>Бризальный пистолет</Text>
 				<SellType>Пистолет</SellType>
 				<Price>8</Price>
@@ -2906,7 +2906,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Продать очки</Button>
+				<Button>Продать</Button>
 				<Text>Поляризационные очки</Text>
 				<RemoveTrigger>Поляризационные очки</RemoveTrigger>
 				<Price>4</Price>
@@ -2914,7 +2914,7 @@
 			</Action>			
 			<Action>
 				<Name>Get</Name>
-				<Button>Продать фонарик</Button>
+				<Button>Продать</Button>
 				<Text>Фонарик</Text>
 				<RemoveTrigger>Фонарик</RemoveTrigger>
 				<Price>5</Price>
@@ -2922,7 +2922,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Продать противогаз</Button>
+				<Button>Продать</Button>
 				<Text>Противогаз</Text>
 				<Price>5</Price>
 				<RemoveTrigger>Противогаз</RemoveTrigger>
@@ -2930,7 +2930,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Продать гранату</Button>
+				<Button>Продать</Button>
 				<Text>Шумовая граната</Text>
 				<Price>4</Price>
 				<RemoveTrigger>Шумовая граната</RemoveTrigger>
@@ -3432,7 +3432,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить шубу</Button>
+				<Button>Купить</Button>
 				<Text>Шуба</Text>
 				<Trigger>Шуба</Trigger>
 				<Aftertext>Когда владелец лавки узнает, что вы путешествуете, он настойчиво предлагает проводить вас во внутренний двор, втиснутый между узкими зданиями, где его кузен торгует животными и рабами.</Aftertext>
@@ -3485,7 +3485,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить животное</Button>
+				<Button>Купить</Button>
 				<Text>Буррек</Text>
 				<Price>10</Price>
 				<Trigger>Буррек</Trigger>
@@ -3616,7 +3616,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Продать пистолет</Button>
+				<Button>Продать</Button>
 				<Text>Бризальный пистолет</Text>
 				<SellType>Пистолет</SellType>
 				<Price>5</Price>
@@ -3624,7 +3624,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Продать фонарик</Button>
+				<Button>Продать</Button>
 				<Text>Фонарик</Text>
 				<RemoveTrigger>Фонарик</RemoveTrigger>
 				<Price>5</Price>
@@ -3632,7 +3632,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Продать аптечку</Button>
+				<Button>Продать</Button>
 				<Text>Аптечка</Text>
 				<RemoveTrigger>Аптечка</RemoveTrigger>
 				<Price>5</Price>
@@ -3649,7 +3649,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Продать карту</Button>
+				<Button>Продать</Button>
 				<Text>ИД-карта</Text>
 				<RemoveTrigger>ИД-карта</RemoveTrigger>
 				<Price>10</Price>
@@ -3722,28 +3722,28 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить противогаз</Button>
+				<Button>Купить</Button>
 				<Text>Противогаз</Text>
 				<Price>15</Price>
 				<Trigger>Противогаз</Trigger>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить фонарик</Button>
+				<Button>Купить</Button>
 				<Text>Фонарик</Text>
 				<Price>8</Price>
 				<Trigger>Фонарик</Trigger>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить аптечку</Button>
+				<Button>Купить</Button>
 				<Text>Аптечка</Text>
 				<Price>8</Price>
 				<Trigger>Аптечка</Trigger>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить порцию</Button>
+				<Button>Купить</Button>
 				<Text>Порция еды</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -3751,14 +3751,14 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить очки</Button>
+				<Button>Купить</Button>
 				<Text>Поляризационные очки</Text>
 				<Price>6</Price>
 				<Trigger>Поляризационные очки</Trigger>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить верёвку</Button>
+				<Button>Купить</Button>
 				<Text>Нейлоновая веревка</Text>
 				<Price>3</Price>
 				<Trigger>Веревка</Trigger>
@@ -4102,7 +4102,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить порцию</Button>
+				<Button>Купить</Button>
 				<Text>Порция еды</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -4110,21 +4110,21 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить верёвку</Button>
+				<Button>Купить</Button>
 				<Text>Нейлоновая веревка</Text>
 				<Price>2</Price>
 				<Trigger>Веревка</Trigger>
 			</Action>		
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить лампу</Button>
+				<Button>Купить</Button>
 				<Text>Лампа</Text>
 				<Trigger>Лампа</Trigger>
 				<Price>3</Price>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить аптечку</Button>
+				<Button>Купить</Button>
 				<Text>Аптечка</Text>
 				<Price>12</Price>
 				<Trigger>Аптечка</Trigger>
@@ -4696,7 +4696,7 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать исследователя</Button>
+				<Button>Выбрать</Button>
 				<Choice/>
 				<Text>Исследователь</Text>
 				<Benefit Name="Skill" ValueString="Рукопашный бой"/>
@@ -4709,7 +4709,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать охотника</Button>
+				<Button>Выбрать</Button>
 				<Text>Охотник за головами</Text>
 				<Choice/>
 				<Benefit Name="Skill" ValueString="Хитрость"/>
@@ -4722,7 +4722,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать шпиона</Button>
+				<Button>Выбрать</Button>
 				<Text>Шпион</Text>
 				<Choice/>
 				<Benefit Name="Skill" ValueString="Ловкость"/>
@@ -4733,7 +4733,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать торговца</Button>
+				<Button>Выбрать</Button>
 				<Text>Торговец</Text>
 				<Choice/>
 				<Benefit Name="Skill" ValueString="ПСИ"/>
@@ -4746,7 +4746,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать провидца</Button>
+				<Button>Выбрать</Button>
 				<Text>Провидец</Text>
 				<Choice/>
 				<Benefit Name="Skill" ValueString="ПСИ"/>
@@ -4757,7 +4757,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать ученого</Button>
+				<Button>Выбрать</Button>
 				<Text>Ученый</Text>
 				<Choice/>
 				<Benefit Name="Skill" ValueString="Кибернетика"/>
@@ -4768,7 +4768,7 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать мутанта</Button>
+				<Button>Выбрать</Button>
 				<Text>Мутант</Text>
 				<Choice/>
 				<Benefit Name="Skill" ValueString="Ловкость"/>
@@ -4788,74 +4788,74 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать ловкость</Button>
+				<Button>Выбрать</Button>
 				<Skill>Ловкость</Skill>
 				<Aftertext>Это умение выделывать акробатичские финты, быстро бегать, преодолевать препятствия, держать равновесие и прыгать. Персонаж, обладающий этим умением, очень проворный и сообразительный.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать рукопашку</Button>
+				<Button>Выбрать</Button>
 				<Skill>Рукопашный Бой</Skill>
 				<Aftertext>Возможность использовать боевые искусства, включающие элементы каратэ, джиу-джитсу и тайджи.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать хитрость</Button>
+				<Button>Выбрать</Button>
 				<Skill>Хитрость</Skill>
 				<Aftertext>Умение находить удачное решение в любой сложной ситуации. Всегда пригодится.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать кибернетику</Button>
+				<Button>Выбрать</Button>
 				<Skill>Кибернетика</Skill>
 				<Aftertext>Практически забытая в умирающем мире двадцать третьего столетия наука программирования и управления компьютерами.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать ПСИ</Button>
+				<Button>Выбрать</Button>
 				<Skill>ПСИ</Skill>
 				<Aftertext>Позволяет чувствовать опасность и читать чужие мысли. Вы должны иметь при себе пси-фокусировщик для того, чтобы использовать это умение.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать знания</Button>
+				<Button>Выбрать</Button>
 				<Skill>Знания</Skill>
 				<Aftertext>Совокупность легенд, исторических и базовых знаний, которые дают вам хорошее представление о том, с чем вы можете столкнуться.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать парадокс</Button>
+				<Button>Выбрать</Button>
 				<Skill>Управление парадоксом</Skill>
 				<Aftertext>Умение влиять на законы мироздания. Оно медленнее и не такое удобное, как ПСИ, но иногда дает потрясающие результаты. Для использования необходим пси-фокусировщик.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать пилотирование</Button>
+				<Button>Выбрать</Button>
 				<Skill>Пилотирование</Skill>
 				<Aftertext>Позволяет управлять практически любым средством передвижения: от аэрокара до космического шаттла.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать стрельба</Button>
+				<Button>Выбрать</Button>
 				<Skill>Стрельба</Skill>
 				<Benefit Name="Shots" Value="6"/>
 				<Aftertext>Умение использовать дальнобойное оружие. Конечно, для его использования необходимо оружие — бризальный пистолет.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать знание улиц</Button>
+				<Button>Выбрать</Button>
 				<Skill>Знание улиц</Skill>
 				<Aftertext>Обладая этим умением, вы никогда не потеряетесь ни в одном городе. Там, где другие видят мешанину домов и лабиринт освещенных неоном улиц, вы чувствуете себя как дома.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать воровство</Button>
+				<Button>Выбрать</Button>
 				<Skill>Воровство</Skill>
 				<Aftertext>Техники воровства и шпионажа: карманничество, вскрытие замков, а также возможность скрыться в тени.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Выбрать выживание</Button>
+				<Button>Выбрать</Button>
 				<Skill>Выживание</Skill>
 				<Aftertext>Способность, которая избавит вас от проблем в пустынных и необитаемых регионах: лесах, пустынях, болотах и горах.</Aftertext>
 			</Action>
