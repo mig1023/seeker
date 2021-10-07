@@ -2792,7 +2792,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="52" Text="Предложить Дэвису изложить его план"/>
-			<Option Destination="53" Text="Заявить, что Дэвис ошибся, и потребовать, тобы он остановил машину"/>
+			<Option Destination="53" Text="Заявить, что Дэвис ошибся, и потребовать, чтобы он остановил машину"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
