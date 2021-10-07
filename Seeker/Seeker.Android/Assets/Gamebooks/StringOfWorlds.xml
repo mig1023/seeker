@@ -179,8 +179,8 @@
 				<Name>Fight</Name>
 				<Button>Сражаться</Button>
 				<Enemies>
-					<Enemy Name="1-Й МУРАВЕЙ" Skill="8" Strength="10"/>
-					<Enemy Name="2-Й МУРАВЕЙ" Skill="8" Strength="8"/>
+					<Enemy Name="ПЕРВЫЙ МУРАВЕЙ" Skill="8" Strength="10"/>
+					<Enemy Name="ВТОРОЙ МУРАВЕЙ" Skill="8" Strength="8"/>
 				</Enemies>
 				<HeroWoundsLimit/>
 			</Action>
@@ -821,9 +821,9 @@
 				<Name>Fight</Name>
 				<Button>Сражаться</Button>
 				<Enemies>
-					<Enemy Name="1-Й МУРАВЕЙ" Skill="9" Strength="10"/>
-					<Enemy Name="2-Й МУРАВЕЙ" Skill="9" Strength="8"/>
-					<Enemy Name="3-Й МУРАВЕЙ" Skill="9" Strength="9"/>
+					<Enemy Name="ПЕРВЫЙ МУРАВЕЙ" Skill="9" Strength="10"/>
+					<Enemy Name="ВТОРОЙ МУРАВЕЙ" Skill="9" Strength="8"/>
+					<Enemy Name="ТРЕТИЙ МУРАВЕЙ" Skill="9" Strength="9"/>
 				</Enemies>
 				<HeroWoundsLimit/>
 			</Action>
@@ -1108,8 +1108,8 @@
 				<Name>Fight</Name>
 				<Button>Сражаться</Button>
 				<Enemies>
-					<Enemy Name="1-Й ЗВЕРЬ" Skill="9" Strength="10"/>
-					<Enemy Name="2-Й ЗВЕРЬ" Skill="9" Strength="8"/>
+					<Enemy Name="ПЕРВЫЙ ЗВЕРЬ" Skill="9" Strength="10"/>
+					<Enemy Name="ВТОРОЙ ЗВЕРЬ" Skill="9" Strength="8"/>
 				</Enemies>
 				<DarknessPenalty/>
 				<Aftertext>Они прекрасно видят темноте, чего не скажешь о вас. Поэтому во время боя придется вычесть 1 из вашей ЛОВКОСТИ. Впрочем, если у вас есть очки «Ночное зрение», наденьте их — и ЛОВКОСТЬ не снизится.\n\nВы победили хищников?</Aftertext>
@@ -1470,9 +1470,9 @@
 				<Name>Fight</Name>
 				<Button>Сражаться</Button>
 				<Enemies>
-					<Enemy Name="1-Й ГРАБИТЕЛЬ" Skill="9" Strength="10"/>
-					<Enemy Name="2-Й ГРАБИТЕЛЬ" Skill="9" Strength="11"/>
-					<Enemy Name="3-Й ГРАБИТЕЛЬ" Skill="8" Strength="12"/>
+					<Enemy Name="ПЕРВЫЙ ГРАБИТЕЛЬ" Skill="9" Strength="10"/>
+					<Enemy Name="ВТОРОЙ ГРАБИТЕЛЬ" Skill="9" Strength="11"/>
+					<Enemy Name="ТРЕТИЙ ГРАБИТЕЛЬ" Skill="8" Strength="12"/>
 				</Enemies>
 				<Aftertext>Удалось ли вам победить?</Aftertext>
 			</Action>
@@ -5814,8 +5814,8 @@
 				<Name>Fight</Name>
 				<Button>Сражаться</Button>
 				<Enemies>
-					<Enemy Name="1-Й ШЕРШЕНЬ" Skill="8" Strength="8"/>
-					<Enemy Name="2-Й ШЕРШЕНЬ" Skill="8" Strength="6"/>
+					<Enemy Name="ПЕРВЫЙ ШЕРШЕНЬ" Skill="8" Strength="8"/>
+					<Enemy Name="ВТОРОЙ ШЕРШЕНЬ" Skill="8" Strength="6"/>
 				</Enemies>
 				<Aftertext>Удалось ли вам победить? Тогда продолжайте путь.</Aftertext>
 			</Action>
@@ -5878,9 +5878,9 @@
 				<Name>Fight</Name>
 				<Button>Сражаться</Button>
 				<Enemies>
-					<Enemy Name="1-Й РАЗБОЙНИК" Skill="9" Strength="8"/>
-					<Enemy Name="2-Й РАЗБОЙНИК" Skill="9" Strength="9"/>
-					<Enemy Name="3-Й РАЗБОЙНИК" Skill="8" Strength="10"/>
+					<Enemy Name="ПЕРВЫЙ РАЗБОЙНИК" Skill="9" Strength="8"/>
+					<Enemy Name="ВТОРОЙ РАЗБОЙНИК" Skill="9" Strength="9"/>
+					<Enemy Name="ТРЕТИЙ РАЗБОЙНИК" Skill="8" Strength="10"/>
 				</Enemies>
 				<Aftertext>Удалось ли вам победить врагов?</Aftertext>
 			</Action>
