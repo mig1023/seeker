@@ -125,6 +125,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (option == "selectOnly")
                 return true;
 
+            if ((option == null) || String.IsNullOrEmpty(option))
+                return true;
+
             string[] values = option.Split(' ');
             string value = (values.Length > 1 ? values[1] : "nope");
 
