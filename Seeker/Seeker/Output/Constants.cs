@@ -75,7 +75,7 @@ namespace Seeker.Output
             [4] = Constants.BIG_FONT,
         };
 
-        public static List<string> JUSTYFY_SETTING = new List<string>
+        public static List<string> ON_OFF_SETTING = new List<string>
         {
             "Выкл",
             "Вкл",
@@ -86,12 +86,6 @@ namespace Seeker.Output
             "Настройки игры",
             "Отображать",
             "Скрывать",
-        };
-
-        public static List<string> MENU_SETTING = new List<string>
-        {
-            "Выкл",
-            "Вкл",
         };
     }
 }

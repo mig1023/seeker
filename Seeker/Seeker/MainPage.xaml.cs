@@ -196,6 +196,9 @@ namespace Seeker
             if (Game.Settings.GetValue("SystemMenu") > 0)
                 Options.Children.Add(SystemMenu());
 
+            if (Game.Settings.GetValue("Debug") > 0)
+                Options.Children.Add(Output.Interface.DebugInformation(id));
+
             if (!reload)
                 MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
 

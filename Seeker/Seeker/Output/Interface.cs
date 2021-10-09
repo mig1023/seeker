@@ -231,6 +231,24 @@ namespace Seeker.Output
             HorizontalOptions = LayoutOptions.FillAndExpand,
         };
 
+        public static StackLayout DebugInformation(int id)
+        {
+            StackLayout info = new StackLayout
+            {
+                Orientation = StackOrientation.Vertical,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                Spacing = 3,
+            };
+
+            info.Children.Add(Line("Текущий параграф: {0}", id));
+            info.Children.Add(Line("Триггеры: {0}", String.Join(", ", Game.Data.Triggers))); 
+
+            return info;
+        }
+
+        private static Label Line(string line, params object[] prms) =>
+            new Label { Text = String.Format(line, prms), FontSize = FontSize(TextFontSize.micro) };
+
         public static List<View> Represent(List<string> enemiesLines)
         {
             List<View> enemies = new List<View>();

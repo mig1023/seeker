@@ -23,9 +23,10 @@ namespace Seeker.Output
 
             SettingOption("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING);
             SettingOption("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING);
-            SettingOption("Текст по ширине", "Justyfy", Constants.JUSTYFY_SETTING);
+            SettingOption("Текст по ширине", "Justyfy", Constants.ON_OFF_SETTING);
             SettingOption("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING);
-            SettingOption("Отображать меню", "SystemMenu", Constants.MENU_SETTING);
+            SettingOption("Отображать меню", "SystemMenu", Constants.ON_OFF_SETTING);
+            SettingOption("Отладка", "Debug", Constants.ON_OFF_SETTING);
 
             SettingButton("Сбросить сохранённые игры", () => Game.Continue.Clean(), spacer: true);
             SettingButton("Сбросить все настройки", () => Game.Settings.Clean());
