@@ -248,8 +248,16 @@ namespace Seeker.Output
 
             info.Children.Add(Line(fontColor, "Текущий параграф: {0}", id));
 
+            if (Game.Data.Path.Count > 1)
+                info.Children.Add(Line(fontColor, "Путь: {0}", String.Join(" -> ", Game.Data.Path)));
+
             if (Game.Data.Triggers.Count > 0)
                 info.Children.Add(Line(fontColor, "Триггеры: {0}", String.Join(", ", Game.Data.Triggers)));
+
+            string debug = Game.Data.Debug();
+
+            if (!String.IsNullOrEmpty(debug))
+                info.Children.Add(Line(fontColor, "{0}", debug));
 
             return info;
         }

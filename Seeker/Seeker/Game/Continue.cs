@@ -29,8 +29,10 @@ namespace Seeker.Game
             string healing = Healing.Save();
             int paragraph = Game.Data.CurrentParagraphID;
             string character = Game.Data.Save();
+            string path = String.Join(",", Game.Data.Path);
 
-            App.Current.Properties[CurrentGameName] = String.Format("{0}@{1}@{2}@{3}", paragraph, triggers, healing, character);
+            App.Current.Properties[CurrentGameName] =
+                String.Format("{0}@{1}@{2}@{3}@{4}", paragraph, triggers, healing, character, path);
         }
 
         public static int Load()
@@ -44,6 +46,8 @@ namespace Seeker.Game
 
             Healing.Load(save[2]);
             Game.Data.Load(save[3]);
+
+            Game.Data.Path = save[4].Split(',').ToList();
 
             return Game.Data.CurrentParagraphID;
         }

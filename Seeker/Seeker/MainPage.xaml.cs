@@ -108,6 +108,8 @@ namespace Seeker
                 if ((paragraph.Modification != null) && (paragraph.Modification.Count > 0))
                     foreach (Abstract.IModification modification in paragraph.Modification)
                         modification.Do();
+
+                Game.Data.Path.Add(id.ToString());
             }
 
             bool gameOver = false;

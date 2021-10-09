@@ -23,14 +23,17 @@ namespace Seeker.Game
 
         public static List<string> Triggers = new List<string>();
 
+        public static List<string> Path = new List<string>();
+
         public static Abstract.IParagraphs Paragraphs;
         public static Abstract.IActions Actions;
         public static Abstract.IConstants Constants;
 
         public static Gamebook.Links.ProtagonistMethod Protagonist;
         public static Gamebook.Links.CheckOnlyIfMethod CheckOnlyIf;
-        public static Gamebook.Links.SaveMethod Save;
+        public static Gamebook.Links.StringMethod Save;
         public static Gamebook.Links.LoadMethod Load;
+        public static Gamebook.Links.StringMethod Debug;
 
         public static string InputResponse { get; set; }
 
@@ -39,6 +42,7 @@ namespace Seeker.Game
             InputResponse = String.Empty;
 
             Triggers.Clear();
+            Path.Clear();
 
             Paragraphs = null;
             Actions = null;

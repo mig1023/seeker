@@ -126,6 +126,7 @@ namespace Seeker.Game
             Game.Data.Protagonist = gamebook.Links.Protagonist;
             Game.Data.Save = gamebook.Links.Save;
             Game.Data.Load = gamebook.Links.Load;
+            Game.Data.Debug = gamebook.Links.Debug;
             Game.Data.CheckOnlyIf = gamebook.Links.CheckOnlyIf;
         }
 

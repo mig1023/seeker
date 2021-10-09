@@ -11,5 +11,7 @@ namespace Seeker.Prototypes
         public virtual string Save() => String.Empty;
 
         public virtual void Load(string saveLine) => Game.Other.DoNothing();
+
+        public virtual string Debug() => String.Empty;
     }
 }
