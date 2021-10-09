@@ -6,7 +6,7 @@ namespace Seeker.Gamebook
     {
         public delegate void ProtagonistMethod();
 
-        public delegate string SaveMethod();
+        public delegate string StringMethod();
 
         public delegate void LoadMethod(string saveLine);
 
@@ -14,9 +14,11 @@ namespace Seeker.Gamebook
 
         public ProtagonistMethod Protagonist;
 
-        public SaveMethod Save;
+        public StringMethod Save;
 
         public LoadMethod Load;
+
+        public StringMethod Debug;
 
         public CheckOnlyIfMethod CheckOnlyIf;
 
