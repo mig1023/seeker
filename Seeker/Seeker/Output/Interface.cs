@@ -238,16 +238,24 @@ namespace Seeker.Output
                 Orientation = StackOrientation.Vertical,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 Spacing = 3,
+                Margin = new Thickness(0, 10, 0, 0),
             };
 
-            info.Children.Add(Line("Текущий параграф: {0}", id));
-            info.Children.Add(Line("Триггеры: {0}", String.Join(", ", Game.Data.Triggers))); 
+            Color fontColor = Color.Gray;
+
+            if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
+                fontColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
+
+            info.Children.Add(Line(fontColor, "Текущий параграф: {0}", id));
+
+            if (Game.Data.Triggers.Count > 0)
+                info.Children.Add(Line(fontColor, "Триггеры: {0}", String.Join(", ", Game.Data.Triggers)));
 
             return info;
         }
 
-        private static Label Line(string line, params object[] prms) =>
-            new Label { Text = String.Format(line, prms), FontSize = FontSize(TextFontSize.micro) };
+        private static Label Line(Color color, string line, params object[] prms) =>
+            new Label { Text = String.Format(line, prms), FontSize = FontSize(TextFontSize.micro), TextColor = color };
 
         public static List<View> Represent(List<string> enemiesLines)
         {
