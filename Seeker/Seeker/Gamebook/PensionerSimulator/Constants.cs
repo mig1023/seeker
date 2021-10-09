@@ -30,6 +30,7 @@ namespace Seeker.Gamebook.PensionerSimulator
             Constants = StaticInstance,
             Save = Character.Protagonist.Save,
             Load = Character.Protagonist.Load,
+            Debug = Character.Protagonist.Debug,
         };
     }
 }
