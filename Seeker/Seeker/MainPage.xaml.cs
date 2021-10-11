@@ -73,7 +73,10 @@ namespace Seeker
             PageClean();
 
             if (startOfGame)
+            {
                 Game.Data.Protagonist();
+                Game.Data.Path.Clear();
+            }
 
             Game.Paragraph paragraph = null;
 
