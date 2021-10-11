@@ -20,6 +20,8 @@ namespace Seeker.Gamebook.WildDeath
             [ColorTypes.BookColor] = "#86964f",
         };
 
+        public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
