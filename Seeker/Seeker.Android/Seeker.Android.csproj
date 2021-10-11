@@ -373,6 +373,9 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\WildDeath.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\WildDeath_Choice.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
