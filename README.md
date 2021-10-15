@@ -1,3 +1,3 @@
 # seeker
 
-Gamebooks on mobile phones
+Mobile platform for gamebooks 
