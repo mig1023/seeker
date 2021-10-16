@@ -770,6 +770,7 @@
 		<Modifications>
 			<Modification Name="Endurance" Value="3"/>
 		</Modifications>
+		<Triggers>Бани</Triggers>
 		<Options>
 			<Option Destination="100"/>
 		</Options>
@@ -780,6 +781,7 @@
 		<Modifications>
 			<Modification Name="Strength" Value="2"/>
 		</Modifications>
+		<Triggers>Обед</Triggers>
 		<Options>
 			<Option Destination="100"/>
 		</Options>
@@ -790,6 +792,7 @@
 		<Modifications>
 			<Modification Name="Reaction" Value="2"/>
 		</Modifications>
+		<Triggers>Сон, Бани, Массаж</Triggers>
 		<Options>
 			<Option Destination="100"/>
 		</Options>
@@ -802,6 +805,7 @@
 			<Modification Name="Endurance" Value="1"/>
 			<Modification Name="Reaction" Value="1"/>
 		</Modifications>
+		<Triggers>Массаж</Triggers>
 		<Options>
 			<Option Destination="100"/>
 		</Options>
@@ -833,11 +837,11 @@
 		<ID>100</ID>
 		<Text>Ну что же. Сегодняшний день опять за тобой, злому року не удалось отправить тебя потоками Леты. Чем теперь займётся победитель?</Text>
 		<Options>
-			<Option Destination="93" Text="Сходит в бани"/>
-			<Option Destination="94" Text="Поест"/>
-			<Option Destination="95" Text="Пойдёт спать"/>
-			<Option Destination="96" Text="Сходит в массажную комнату"/>
-			<Option Destination="73" Text="Если ты уже побывал везде, где хотел (не более одного раза в каждом месте)"/>
+			<Option Destination="93" Text="Сходит в бани" OnlyIf="!Бани"/>
+			<Option Destination="94" Text="Поест" OnlyIf="!Обед"/>
+			<Option Destination="95" Text="Пойдёт спать" OnlyIf="!Сон"/>
+			<Option Destination="96" Text="Сходит в массажную комнату" OnlyIf="!Массаж"/>
+			<Option Destination="73" Text="Если ты уже побывал везде, где хотел"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
