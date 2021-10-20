@@ -2345,14 +2345,14 @@
 		<ID>222</ID>
 		<Text>Ну что ж, дерзайте! Это, конечно, очень сложно, но при должной сноровке - возможно. Хотя мастерство мастерством, а везение бы тут не помешало, как и умение танцевать.</Text>
 		<Options>
-			<Option Destination="129" Text="Если они у Вас имеются" OnlyIf="Танец"/>
+			<Option Destination="129" Text="Если они у Вас имеются" OnlyIf="Танец|Везение"/>
 			<Option Destination="147" Text="Если нет"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<ID>223</ID>
 		<Options>
-			<Option Destination="699" Text="Если Вы обучены сражаться" OnlyIf="Сражение"	/>
+			<Option Destination="699" Text="Если Вы обучены сражаться" OnlyIf="Сражение"/>
 			<Option Destination="692" Text="Если нет"/>
 		</Options>
 	</Paragraph>
