@@ -259,6 +259,11 @@ namespace Seeker.Output
             if (!String.IsNullOrEmpty(debug))
                 info.Children.Add(Line(fontColor, "{0}", debug));
 
+            List<string> healings = Game.Healing.Debug();
+
+            if (healings.Count > 0)
+                info.Children.Add(Line(fontColor, "Снаряжение:\n{0}", String.Join("\n", healings)));
+
             return info;
         }
 

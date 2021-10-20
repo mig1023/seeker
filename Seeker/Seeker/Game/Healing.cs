@@ -64,6 +64,17 @@ namespace Seeker.Game
             return allHealing;
         }
 
+        public static List<string> Debug()
+        {
+            List<string> allHealing = new List<string>();
+
+            foreach (Healing currentHealing in HealingList)
+                allHealing.Add(String.Format("{0} (восстанавливает {1}, осталось {2})",
+                    currentHealing.Name, currentHealing.Level, currentHealing.Portion));
+
+            return allHealing;
+        }
+
         public static string Save()
         {
             List<string> allHealing = new List<string>();
