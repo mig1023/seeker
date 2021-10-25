@@ -44,35 +44,40 @@ namespace Seeker.Gamebook.GoingToLaughter
                 protagonist.Heroism += AdvantagesBonus("Популярность, Пение, Танец, Красноречие," +
                     "Везение, Смекалка, Чревовещание, Наблюдательность, Интуиция, Эрудиция", 5);
             }
-            else if (name == "MusicalPerformance")
+            else if (name == "Musical1Performance")
             {
                 protagonist.Heroism += 10 * lutnaBonus;
                 protagonist.Inspiration += 2 * lutnaBonus;
                 protagonist.Buffoonery += 5 * lutnaBonus;
             }
-            else if (name == "MusicalPerformance2")
+            else if (name == "Musical2Performance")
             {
                 protagonist.Buffoonery += 1 * lutnaBonus;
             }
-            else if (name == "MusicalPerformance3")
+            else if (name == "Musical3Performance")
             {
                 protagonist.Heroism += 6 * lutnaBonus;
                 protagonist.Inspiration += 2 * lutnaBonus;
                 protagonist.Buffoonery += 6 * lutnaBonus;
             }
-            else if (name == "MusicalPerformance4")
+            else if (name == "Musical4Performance")
             {
                 protagonist.Heroism += 5 * lutnaBonus;
                 protagonist.Inspiration += 2 * lutnaBonus;
                 protagonist.Buffoonery += 5 * lutnaBonus;
             }
-            else if (name == "MusicalPerformance5")
+            else if (name == "Musical5Performance")
             {
                 protagonist.Heroism += 2 * lutnaBonus;
             }
-            else if (name == "MusicalPerformance6")
+            else if (name == "Musical6Performance")
             {
                 protagonist.Heroism += 3 * lutnaBonus;
+            }
+            else if (name == "Musical7Performance")
+            {
+                protagonist.Heroism += 2 * lutnaBonus;
+                protagonist.Buffoonery += 2 * lutnaBonus;
             }
             else
                 return false;
