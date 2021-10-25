@@ -60,6 +60,12 @@ namespace Seeker.Gamebook.GoingToLaughter
                 protagonist.Inspiration += 2 * lutnaBonus;
                 protagonist.Buffoonery += 6 * lutnaBonus;
             }
+            else if (name == "MusicalPerformance4")
+            {
+                protagonist.Heroism += 5 * lutnaBonus;
+                protagonist.Inspiration += 2 * lutnaBonus;
+                protagonist.Buffoonery += 5 * lutnaBonus;
+            }
             else
                 return false;
 
