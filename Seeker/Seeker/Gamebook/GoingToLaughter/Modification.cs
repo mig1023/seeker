@@ -43,6 +43,14 @@ namespace Seeker.Gamebook.GoingToLaughter
                 protagonist.Heroism += AdvantagesBonus("Популярность, Пение, Танец, Красноречие," +
                     "Везение, Смекалка, Чревовещание, Наблюдательность, Интуиция, Эрудиция", 5);
             }
+            else if (name == "MusicalPerformance")
+            {
+                int lutnaBonus = (Game.Data.Triggers.Contains("Лютня") ? 2 : 1);
+
+                protagonist.Heroism += 10 * lutnaBonus;
+                protagonist.Inspiration += 2 * lutnaBonus;
+                protagonist.Buffoonery += 5 * lutnaBonus;
+            }
             else
                 return false;
 
