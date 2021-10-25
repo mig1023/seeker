@@ -128,6 +128,30 @@ namespace Seeker.Gamebook.GoingToLaughter
             }
         }
 
+        public List<string> HeroismCheck()
+        {
+            List<string> luckCheck = new List<string> { String.Format("Уровень героизма: {0}.", protagonist.Heroism) };
+
+            if (protagonist.Heroism >= 5)
+            {
+                luckCheck.Add("В броске даже нет необходимости!");
+                luckCheck.Add("BIG|GOOD|УСПЕХ :)");
+
+                return luckCheck;
+            }
+            else
+            {
+                int level = 6 - protagonist.Heroism;
+                int dice = Game.Dice.Roll();
+
+                luckCheck.Add(String.Format("Для прохождения проверки нужно выбросить {0} или больше.", level));
+                luckCheck.Add(String.Format("Бросок: {0}", Game.Dice.Symbol(dice)));
+                luckCheck.Add(dice >= level ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+                return luckCheck;
+            }
+        }
+
         public List<string> DiceValues()
         {
             List<string> diceValues = new List<string> { };
