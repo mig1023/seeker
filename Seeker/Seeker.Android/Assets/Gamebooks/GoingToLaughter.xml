@@ -2954,9 +2954,7 @@
 			<Text>- Это было просто замечательно! - одобрительно похлопал Вас по плечу главный голодранец. - Определённо, ты будешь одним из нас. Но сперва это должен одобрить наш атаман. Я, конечно же, замолвлю за тебя словечко, а дальше - смотри сам.\n\nПоблагодарив его, вы следуете за ним.</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="Heroism" Value="5"/>
-			<Modification Name="Inspiration" Value="2"/>
-			<Modification Name="Buffoonery" Value="5"/>
+			<Modification Name="MusicalPerformance4"/>
 		</Modifications>
 		<Options>
 			<Option Destination="13"/>
