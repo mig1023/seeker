@@ -70,6 +70,10 @@ namespace Seeker.Gamebook.GoingToLaughter
             {
                 protagonist.Heroism += 2 * lutnaBonus;
             }
+            else if (name == "MusicalPerformance6")
+            {
+                protagonist.Heroism += 3 * lutnaBonus;
+            }
             else
                 return false;
 
