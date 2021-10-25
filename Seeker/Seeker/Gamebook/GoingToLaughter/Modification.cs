@@ -21,11 +21,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             }
             else if (name == "RevoltInspiration")
             {
-                string[] advantagesList = { "Красноречие", "Артистизм", "Верховая езда", "Предусмотрительность", "Сражение" };
-
-                foreach(string advantage in advantagesList)
-                    if (Advantage(advantage))
-                        protagonist.Heroism += 1;
+                protagonist.Heroism += AdvantagesBonus("Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение", 1);
 
                 if (Advantage("Популярность"))
                     protagonist.Heroism += 10;
@@ -41,6 +37,11 @@ namespace Seeker.Gamebook.GoingToLaughter
 
                 if (Advantage("Жестокосердие"))
                     protagonist.Heroism -= 10;
+            }
+            else if (name == "SuccessInspiration")
+            {
+                protagonist.Heroism += AdvantagesBonus("Популярность, Пение, Танец, Красноречие," +
+                    "Везение, Смекалка, Чревовещание, Наблюдательность, Интуиция, Эрудиция", 5);
             }
             else
                 return false;
@@ -74,6 +75,19 @@ namespace Seeker.Gamebook.GoingToLaughter
             }
             else
                 return protagonist.Advantages.Contains(advantages);
-        } 
+        }
+
+        private int AdvantagesBonus(string advantages, int bonus)
+        {
+            string[] advantagesList = advantages.Split(',');
+
+            int total = 0;
+
+            foreach (string advantage in advantagesList)
+                if (Advantage(advantage))
+                    total += bonus;
+
+            return total;
+        }
     }
 }
