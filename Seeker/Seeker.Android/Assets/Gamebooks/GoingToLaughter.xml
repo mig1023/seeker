@@ -2897,7 +2897,7 @@
 			<Text>- Ладно, попели и будет. Пошли, познакомлю тебя с одним человеком, - торопит Вас косматый босяк. Вы пожимаете плечами и следуете за ним.</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="Buffoonery" Value="1"/>
+			<Modification Name="MusicalPerformance2"/>
 		</Modifications>
 		<Options>
 			<Option Destination="13"/>
