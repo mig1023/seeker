@@ -2940,9 +2940,7 @@
 			<Text>- Потрясающе! Нужно будет запомнить! Пошли, обязательно потом споёшь её нашему атаману! - похлопав Вас по спине, заявил главарь. Кивнув, Вы направились следом за оборванцами</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="Heroism" Value="6"/>
-			<Modification Name="Inspiration" Value="2"/>
-			<Modification Name="Buffoonery" Value="6"/>
+			<Modification Name="MusicalPerformance3"/>
 		</Modifications>
 		<Options>
 			<Option Destination="13"/>
