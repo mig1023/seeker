@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.GoingToLaughter
         private bool ModBySpecificName(string name)
         {
             Character protagonist = Character.Protagonist;
+            int lutnaBonus = (Game.Data.Triggers.Contains("Лютня") ? 2 : 1);
 
             if ((name == "CrazyDance") && Advantage("Пение, Танец"))
             {
@@ -45,11 +46,13 @@ namespace Seeker.Gamebook.GoingToLaughter
             }
             else if (name == "MusicalPerformance")
             {
-                int lutnaBonus = (Game.Data.Triggers.Contains("Лютня") ? 2 : 1);
-
                 protagonist.Heroism += 10 * lutnaBonus;
                 protagonist.Inspiration += 2 * lutnaBonus;
                 protagonist.Buffoonery += 5 * lutnaBonus;
+            }
+            else if (name == "MusicalPerformance2")
+            {
+                protagonist.Buffoonery += 1 * lutnaBonus;
             }
             else
                 return false;
