@@ -2349,7 +2349,7 @@
 			<Text>- Братан! - крепко и душевно обняв Вас, главарь голодранцев расчувствовался: - Крыси... Тьфу!\n\nПоняв, что чуть не ляпнул что-то не то, он тотчас же осёкся и, покосившись на стражников, засеменил прочь, увлекая Вас следом.\n\nДелать нечего, и Вы поспешили за ним. В конце концов, Вы сами решили связаться с этими ребятами, вот сами теперь и разбирайтесь...</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="MusicalPerformance"/>
+			<Modification Name="Musical1Performance"/>
 		</Modifications>
 		<Options>
 			<Option Destination="13"/>
@@ -2897,7 +2897,7 @@
 			<Text>- Ладно, попели и будет. Пошли, познакомлю тебя с одним человеком, - торопит Вас косматый босяк. Вы пожимаете плечами и следуете за ним.</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="MusicalPerformance2"/>
+			<Modification Name="Musical2Performance"/>
 		</Modifications>
 		<Options>
 			<Option Destination="13"/>
@@ -2940,7 +2940,7 @@
 			<Text>- Потрясающе! Нужно будет запомнить! Пошли, обязательно потом споёшь её нашему атаману! - похлопав Вас по спине, заявил главарь. Кивнув, Вы направились следом за оборванцами</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="MusicalPerformance3"/>
+			<Modification Name="Musical3Performance"/>
 		</Modifications>
 		<Options>
 			<Option Destination="13"/>
@@ -2954,7 +2954,7 @@
 			<Text>- Это было просто замечательно! - одобрительно похлопал Вас по плечу главный голодранец. - Определённо, ты будешь одним из нас. Но сперва это должен одобрить наш атаман. Я, конечно же, замолвлю за тебя словечко, а дальше - смотри сам.\n\nПоблагодарив его, вы следуете за ним.</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="MusicalPerformance4"/>
+			<Modification Name="Musical4Performance"/>
 		</Modifications>
 		<Options>
 			<Option Destination="13"/>
@@ -2968,7 +2968,7 @@
 			<Text>- Сойдёт, - кивает главарь босяков. - Хорошо. Из тебя, скорее всего, выйдет толк. Но пока нужно присмотреться. И тебя ещё должен одобрить тот, кому подчиняюсь я.\n\n- Погоди, так ты что, получается, тут не самый главный? - интересуетесь Вы.\n\n- Хех, чудной ты, отец! Конечно же! У нас всё как в любом уважающем себя королевстве - есть и свой король, и свои вельможи. Пошли, скоро тебя ему представят, - подмигнув, обещает космач. Вам остаётся только идти за ним следом и готовиться к встрече с королём бродяг.</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="MusicalPerformance5"/>
+			<Modification Name="Musical5Performance"/>
 		</Modifications>
 		<Options>
 			<Option Destination="13"/>
@@ -2996,7 +2996,7 @@
 			<Text>- Ну, ладно, отец. Поёшь ты хорошо, спору нет. Думаю, у нас найдётся для тебя работёнка. Нужно только обсудить один вопрос кое с кем. Пошли, дружище, - похлопав Вас по плечу.</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="MusicalPerformance6"/>
+			<Modification Name="Musical6Performance"/>
 		</Modifications>
 		<Options>
 			<Option Destination="13"/>
@@ -3032,8 +3032,7 @@
 			<Text>- Сразу видно - наш человек! - не без уважения отмечает главный босяк. - Пошли, познакомлю тебя с одним моим хорошим другом!</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="Heroism" Value="2"/>
-			<Modification Name="Inspiration" Value="2"/>
+			<Modification Name="Musical7Performance"/>
 		</Modifications>
 		<Options>
 			<Option Destination="13"/>
