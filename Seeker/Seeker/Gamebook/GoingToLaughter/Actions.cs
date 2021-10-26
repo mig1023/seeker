@@ -114,6 +114,9 @@ namespace Seeker.Gamebook.GoingToLaughter
 
                         if (oneOption.Contains("БАЛАНС <=") && (level < protagonist.Balance))
                             return false;
+
+                        if (oneOption.Contains("ГЕРОИЗМ >=") && (level > protagonist.Heroism))
+                            return false;
                     }
                     else if (option.Contains("!"))
                     {
