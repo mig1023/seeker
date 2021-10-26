@@ -44,65 +44,13 @@ namespace Seeker.Gamebook.GoingToLaughter
                 protagonist.Heroism += AdvantagesBonus("Популярность, Пение, Танец, Красноречие," +
                     "Везение, Смекалка, Чревовещание, Наблюдательность, Интуиция, Эрудиция", 5);
             }
-            else if (name == "Musical1Performance")
+            else if (name == "MusicalPerformance")
             {
-                protagonist.Heroism += 10 * lutnaBonus;
-                protagonist.Inspiration += 2 * lutnaBonus;
-                protagonist.Buffoonery += 5 * lutnaBonus;
-            }
-            else if (name == "Musical2Performance")
-            {
-                protagonist.Buffoonery += 1 * lutnaBonus;
-            }
-            else if (name == "Musical3Performance")
-            {
-                protagonist.Heroism += 6 * lutnaBonus;
-                protagonist.Inspiration += 2 * lutnaBonus;
-                protagonist.Buffoonery += 6 * lutnaBonus;
-            }
-            else if (name == "Musical4Performance")
-            {
-                protagonist.Heroism += 5 * lutnaBonus;
-                protagonist.Inspiration += 2 * lutnaBonus;
-                protagonist.Buffoonery += 5 * lutnaBonus;
-            }
-            else if (name == "Musical5Performance")
-            {
-                protagonist.Heroism += 2 * lutnaBonus;
-            }
-            else if (name == "Musical6Performance")
-            {
-                protagonist.Heroism += 3 * lutnaBonus;
-            }
-            else if (name == "Musical7Performance")
-            {
-                protagonist.Heroism += 2 * lutnaBonus;
-                protagonist.Buffoonery += 2 * lutnaBonus;
-            }
-            else if (name == "Musical8Performance")
-            {
-                protagonist.Heroism += 4 * lutnaBonus;
-            }
-            else if (name == "Musical9Performance")
-            {
-                protagonist.Heroism += 12 * lutnaBonus;
-                protagonist.Inspiration += 2 * lutnaBonus;
-            }
-            else if (name == "Musical10Performance")
-            {
-                protagonist.Heroism += 5 * lutnaBonus;
-                protagonist.Inspiration += 1 * lutnaBonus;
-            }
-            else if (name == "Musical11Performance")
-            {
-                protagonist.Heroism += 2 * lutnaBonus;
-                protagonist.Inspiration += 1 * lutnaBonus;
-                protagonist.Buffoonery += 1 * lutnaBonus;
-            }
-            else if (name == "Musical12Performance")
-            {
-                protagonist.Heroism += 4 * lutnaBonus;
-                protagonist.Buffoonery += 1 * lutnaBonus;
+                string[] values = ValueString.Split(',');
+
+                protagonist.Heroism += int.Parse(values[0]) * lutnaBonus;
+                protagonist.Inspiration += int.Parse(values[1]) * lutnaBonus;
+                protagonist.Buffoonery += int.Parse(values[2]) * lutnaBonus;
             }
             else
                 return false;
