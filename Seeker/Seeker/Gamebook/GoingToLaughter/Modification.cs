@@ -15,7 +15,15 @@ namespace Seeker.Gamebook.GoingToLaughter
             Character protagonist = Character.Protagonist;
             int lutnaBonus = ((Game.Data.Triggers.Contains("Лютня") && Advantage("Музицирование")) ? 2 : 1);
 
-            if ((name == "CrazyDance") && Advantage("Пение, Танец"))
+            if (name == "Advantage")
+            {
+                protagonist.Advantages.Add(ValueString);
+            }
+            else if (name == "Disadvantage")
+            {
+                protagonist.Disadvantages.Add(ValueString);
+            }
+            else if ((name == "CrazyDance") && Advantage("Пение, Танец"))
             {
                 protagonist.Heroism += 6;
                 protagonist.Inspiration += 6;
