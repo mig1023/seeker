@@ -41,6 +41,7 @@ namespace Seeker.Gamebook
             ["YounglingTournament"] = YounglingTournament.Constants.GetLinks(),
             ["GoingToLaughter"] = GoingToLaughter.Constants.GetLinks(),
             ["WildDeath"] = WildDeath.Constants.GetLinks(),
+            ["ByTheWillOfRome"] = ByTheWillOfRome.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() => Books.Keys.ToList();
