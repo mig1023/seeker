@@ -2,7 +2,7 @@
 
 namespace Seeker.Abstract
 {
-    interface ICharacter
+    public interface ICharacter
     {
         void Init();
 

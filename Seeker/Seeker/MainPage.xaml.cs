@@ -66,8 +66,12 @@ namespace Seeker
             Options.Children.Add(Output.Buttons.CloseSettings((s, args) => Gamebooks(toMain: true)));
         }
 
-        public void Paragraph(int id, bool reload = false, bool loadGame = false, string optionName = "")
+        public void Paragraph(int id, bool reload = false, bool loadGame = false,
+            string optionName = "", Abstract.IModification optionModification = null)
         {
+            if (optionModification != null)
+                optionModification.Do();
+
             bool startOfGame = (id == Game.Data.StartParagraph);
 
             PageClean();
@@ -280,7 +284,7 @@ namespace Seeker
             gameOver = (option.Destination == 0);
 
             EventHandler optionClick = (object sender, EventArgs e) =>
-                Paragraph(option.Destination, optionName: option.Text);
+                Paragraph(option.Destination, optionName: option.Text, optionModification: option.Do);
 
             return Output.Buttons.Option(option, optionClick);
         }
