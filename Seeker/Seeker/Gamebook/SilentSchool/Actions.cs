@@ -139,7 +139,7 @@ namespace Seeker.Gamebook.SilentSchool
 
             protagonist.Life -= dices;
 
-            diceCheck.Add(String.Format("BIG|BAD|Я потерял жизней: {0}", Game.Dice.Symbol(dices)));
+            diceCheck.Add(String.Format("BIG|BAD|Я потерял жизней: {0}", dices));
 
             return diceCheck;
         }
