@@ -3417,6 +3417,10 @@
 				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
+		<Modifications>
+			<Modification Name="Thrust" Empty="true"/>
+			<Modification Name="EnemyThrust" Empty="true"/>
+		</Modifications>
 		<Options>
 			<Option Destination="354" Text="Если у вас есть Корпускула Комы, и вы хотите ее использовать" OnlyIf="Корпускула Комы"/>
 			<Option Destination="320" Text="Если вам удалось отбавить Выносливость противника до 20"/>
@@ -4241,6 +4245,10 @@
 				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
+		<Modifications>
+			<Modification Name="Thrust" Empty="true"/>
+			<Modification Name="EnemyThrust" Empty="true"/>
+		</Modifications>
 		<Options>
 			<Option Destination="414" Text="Если у вас есть Корпускула Комы, и вы хотите ее использовать" OnlyIf="Корпускула Комы"/>
 			<Option Destination="380" Text="Если вам удалось отбавить Выносливость противника до 20"/>
@@ -5098,6 +5106,10 @@
 				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
+		<Modifications>
+			<Modification Name="Thrust" Empty="true"/>
+			<Modification Name="EnemyThrust" Empty="true"/>
+		</Modifications>
 		<Options>
 			<Option Destination="471" Text="Если у вас есть Корпускула Комы, и вы хотите ее использовать" OnlyIf="Корпускула Комы"/>
 			<Option Destination="437" Text="Если вам удалось отбавить Выносливость противника до 20"/>
