@@ -180,7 +180,11 @@ namespace Seeker.Gamebook.SwampFever
             List<string> enemyCombinationLine = new List<string>();
 
             foreach (string dice in EnemyCombination.Split('-'))
-                enemyCombinationLine.Add(Game.Dice.Symbol(int.Parse(dice)));
+            {
+                int enemyNumber = int.Parse(dice);
+                enemyCombination.Add(enemyNumber);
+                enemyCombinationLine.Add(Game.Dice.Symbol(enemyNumber));
+            }             
 
             fight.Add(String.Format("Его комбинация: {0}", String.Join(String.Empty, enemyCombinationLine.ToArray())));
 
