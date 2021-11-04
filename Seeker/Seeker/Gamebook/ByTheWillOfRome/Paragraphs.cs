@@ -28,7 +28,13 @@ namespace Seeker.Gamebook.ByTheWillOfRome
                 paragraph.Options.Add(option);
             }
 
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
+                paragraph.Modification.Add(ModificationParse(xmlModification));
+
             return paragraph;
         }
+
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+           Game.Xml.ModificationParse(xmlModification, new Modification());
     }
 }
