@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.BookColor] = "#670b0c",
+            [ColorTypes.StatusBar] = "#520809",
         };
 
         public static Links GetLinks() => new Links
