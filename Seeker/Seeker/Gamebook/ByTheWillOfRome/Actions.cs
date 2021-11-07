@@ -14,6 +14,31 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             String.Format("Честь: {0}", protagonist.Honor),
         };
 
+        public override List<string> AdditionalStatus()
+        {
+            if (protagonist.Legionaries > 0)
+            {
+                string legionaries = new string('♙', protagonist.Legionaries);
+
+                return new List<string>
+                {
+                    String.Format("Дисциплина: {0}", protagonist.Discipline),
+                    String.Format("Легионеров: {0}", legionaries),
+                };
+            }
+            else if (protagonist.Horsemen > 0)
+            {
+                string horsemen = new string('♘', protagonist.Horsemen);
+                return new List<string>
+                {
+                    String.Format("Навыки рукопашного боя: {0}", 2),
+                    String.Format("Всадников: {0}", horsemen),
+                };
+            }
+            else
+                return null;
+        }
+            
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
