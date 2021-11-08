@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Xml;
+﻿using System.Xml;
 using Seeker.Game;
 
 namespace Seeker.Gamebook.ByTheWillOfRome
@@ -9,35 +7,14 @@ namespace Seeker.Gamebook.ByTheWillOfRome
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) => base.Get(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-            {
-                Option option = OptionsTemplateWithoutDestination(xmlOption);
+        public override Abstract.IActions ActionParse(XmlNode xmlAction) =>
+            base.ActionParse(xmlAction, new Actions(), GetProperties(new Actions()), new Modification());
 
-                if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
-                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
-                else
-                {
-                    List<string> destinations = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
-                    option.Destination = int.Parse(destinations[random.Next(destinations.Count())]);
-                }
-
-                if (xmlOption.Attributes["Do"] != null)
-                    option.Do = Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
-
-                paragraph.Options.Add(option);
-            }
-
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                paragraph.Modification.Add(ModificationParse(xmlModification));
-
-            return paragraph;
-        }
+        public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
-           Game.Xml.ModificationParse(xmlModification, new Modification());
+           (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
     }
 }
