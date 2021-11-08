@@ -25,6 +25,9 @@ namespace Seeker.Gamebook.ByTheWillOfRome
                     option.Destination = int.Parse(destinations[random.Next(destinations.Count())]);
                 }
 
+                if (xmlOption.Attributes["Do"] != null)
+                    option.Do = Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
+
                 paragraph.Options.Add(option);
             }
 
