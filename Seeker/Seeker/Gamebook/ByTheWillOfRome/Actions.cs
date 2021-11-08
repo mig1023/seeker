@@ -46,5 +46,23 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
             return protagonist.Honor <= 0;
         }
+
+        public override bool CheckOnlyIf(string option)
+        {
+            string[] options = option.Split('|', ',');
+
+            foreach (string oneOption in options)
+            {
+                if (oneOption.Contains("!"))
+                {
+                    if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        return false;
+                }
+                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                    return false;
+            }
+
+            return true;
+        }
     }
 }
