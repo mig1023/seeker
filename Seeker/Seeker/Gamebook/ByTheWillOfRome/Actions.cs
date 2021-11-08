@@ -64,11 +64,19 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
         public override bool CheckOnlyIf(string option)
         {
-            string[] options = option.Split('|', ',');
+            string[] options = option.Split(',');
 
             foreach (string oneOption in options)
             {
-                if (oneOption.Contains("!"))
+
+                if (oneOption.Contains(">") || oneOption.Contains("<"))
+                {
+                    int level = Game.Other.LevelParse(oneOption);
+
+                    if (oneOption.Contains("СЕСТЕРЦИЕВ >=") && (level <= protagonist.Sestertius))
+                        return true;
+                }
+                else if (oneOption.Contains("!"))
                 {
                     if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
                         return false;
