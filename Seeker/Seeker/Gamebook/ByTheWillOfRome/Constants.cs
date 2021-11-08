@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
         public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#670b0c",
+            [ButtonTypes.Option] = "#670b0c",
             [ButtonTypes.Continue] = "#b38585",
             [ButtonTypes.System] = "#d1b5b5",
         };
