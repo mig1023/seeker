@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             [ButtonTypes.Main] = "#670b0c",
             [ButtonTypes.Option] = "#670b0c",
             [ButtonTypes.Continue] = "#b38585",
+            [ButtonTypes.Action] = "#6d0101",
             [ButtonTypes.System] = "#d1b5b5",
         };
 
