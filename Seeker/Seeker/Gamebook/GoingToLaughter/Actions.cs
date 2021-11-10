@@ -98,7 +98,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             {
                 foreach (string oneOption in option.Split('|'))
                 {
-                    if (protagonist.Disadvantages.Contains(oneOption.Trim()))
+                    if (protagonist.Advantages.Contains(oneOption.Trim()) || protagonist.Disadvantages.Contains(oneOption.Trim()))
                         return true;
                 }
 
