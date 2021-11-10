@@ -60,6 +60,20 @@ namespace Seeker.Gamebook.GoingToLaughter
                 protagonist.Inspiration += int.Parse(values[1]) * lutnaBonus;
                 protagonist.Buffoonery += int.Parse(values[2]) * lutnaBonus;
             }
+            else if (name == "StaticBonuses")
+            {
+                foreach (string param in ValueString.Split(','))
+                {
+                    if (param.Contains("="))
+                    {
+                        string[] keyValue = param.Split('=');
+                        int currentValue = GetProperty(protagonist, keyValue[0].Trim());
+                        SetProperty(protagonist, keyValue[0].Trim(), currentValue + int.Parse(keyValue[1].Trim()));
+                    }
+                    else
+                        Game.Option.Trigger(param.Trim());
+                }
+            }
             else
                 return false;
 

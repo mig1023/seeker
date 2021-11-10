@@ -22,6 +22,9 @@ namespace Seeker.Gamebook.GoingToLaughter
                 else
                     option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
 
+                if (xmlOption.Attributes["Do"] != null)
+                    option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
+
                 paragraph.Options.Add(option);
             }
 
@@ -43,8 +46,6 @@ namespace Seeker.Gamebook.GoingToLaughter
 
             return action;
         }
-
-        public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
             (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
