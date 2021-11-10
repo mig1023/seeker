@@ -41,7 +41,18 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             else
                 return null;
         }
-            
+
+        public override List<string> Representer()
+        {
+            if (Price > 0)
+            {
+                string gold = Game.Other.CoinsNoun(Price, "сестерций", "сестерция", "сестерциев");
+                return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
+            }
+            else
+                return new List<string> { };
+        }
+
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             toEndParagraph = 0;
@@ -52,12 +63,19 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
         public override bool IsButtonEnabled()
         {
-            if (!String.IsNullOrEmpty(Group))
+            if (Price > 0)
+            {
+                return !(Used || (protagonist.Sestertius < Price));
+            }
+
+            else if (!String.IsNullOrEmpty(Group))
+            {
                 foreach (string group in Group.Split(','))
                 {
                     if (Game.Data.Triggers.Contains(group.Trim()))
                         return false;
                 }
+            }
 
             return true;
         }
@@ -82,8 +100,11 @@ namespace Seeker.Gamebook.ByTheWillOfRome
                         return false;
                 }
                 else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                {
                     return false;
+                }
             }
+                   
 
             return true;
         }
@@ -91,6 +112,15 @@ namespace Seeker.Gamebook.ByTheWillOfRome
         public List<string> TriggerAction()
         {
             Game.Option.Trigger(Group, remove: Remove);
+
+            return new List<string> { "RELOAD" };
+        }
+
+        public List<string> Get()
+        {
+            protagonist.Sestertius -= Price;
+
+            Used = true;
 
             return new List<string> { "RELOAD" };
         }
