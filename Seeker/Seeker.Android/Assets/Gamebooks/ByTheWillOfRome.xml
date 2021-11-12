@@ -3190,7 +3190,7 @@
 	<Paragraph>
 		<ID>366</ID>
 		<Options>
-			<Option Destination="336" Text="Если Дисциплина вашего отряда больше 2-х"/>
+			<Option Destination="336" Text="Если Дисциплина вашего отряда больше 2-х" OnlyIf="ДИСЦИПЛИНА >= 2"/>
 			<Option Destination="369" Text="Если нет"/>
 		</Options>
 	</Paragraph>
