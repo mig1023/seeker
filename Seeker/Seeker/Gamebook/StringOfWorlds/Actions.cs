@@ -116,7 +116,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             luckCheck.Add(String.Format("Проверка удачи: {0} - {1}зачёркунтый",
                 Game.Dice.Symbol(goodLuck), (protagonist.Luck[goodLuck] ? "не " : String.Empty)));
 
-            luckCheck.Add(protagonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            luckCheck.Add(Result(protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
 
             protagonist.Luck[goodLuck] = !protagonist.Luck[goodLuck];
 
@@ -242,7 +242,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             }
             while (myResult == enemyResult);
 
-            diceGame.Add(myResult > enemyResult ? "BIG|GOOD|ВЫИГРАЛИ :)" : "BIG|BAD|ПРОИГРАЛИ :(");
+            diceGame.Add(Result(myResult > enemyResult, "ВЫИГРАЛИ|ПРОИГРАЛИ"));
 
             return diceGame;
         }
@@ -269,7 +269,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                     Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), result));
             }
 
-            breakingDoor.Add(succesBreaked ? "BIG|GOOD|ДВЕРЬ ВЗЛОМАНА :)" : "BIG|BAD|ВЫ УБИЛИСЬ ОБ ДВЕРЬ :(");
+            breakingDoor.Add(Result(succesBreaked, "ДВЕРЬ ВЗЛОМАНА|ВЫ УБИЛИСЬ ОБ ДВЕРЬ"));
 
             return breakingDoor;
         }
