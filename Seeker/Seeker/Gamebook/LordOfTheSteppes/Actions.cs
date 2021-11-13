@@ -32,12 +32,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (!String.IsNullOrEmpty(Stat))
             {
-                int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
-
                 Dictionary<string, int> startValues = Constants.GetStartValues();
 
-                int diff = (currentStat - startValues[Stat]);
-
+                int diff = (GetProperty(protagonist, Stat) - startValues[Stat]);
                 string diffLine = (diff > 0 ? String.Format(" (+{0})", diff) : String.Empty);
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
@@ -135,8 +132,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 currentStat += StatStep;
 
-                protagonist.GetType().GetProperty("Max" + Stat).SetValue(protagonist, currentStat);
-                protagonist.GetType().GetProperty(Stat).SetValue(protagonist, currentStat);
+                SetProperty(protagonist, "Max" + Stat, currentStat);
+                SetProperty(protagonist, Stat, currentStat);
 
                 protagonist.Bonuses -= 1;
             }
