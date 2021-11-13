@@ -155,7 +155,7 @@ namespace Seeker.Gamebook.GoingToLaughter
 
                 luckCheck.Add(String.Format("Для прохождения проверки нужно выбросить {0} или больше.", level));
                 luckCheck.Add(String.Format("Бросок: {0}", Game.Dice.Symbol(dice)));
-                luckCheck.Add(dice >= level ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+                luckCheck.Add(Result(dice >= level, "УСПЕХ|НЕУДАЧА"));
 
                 return luckCheck;
             }
