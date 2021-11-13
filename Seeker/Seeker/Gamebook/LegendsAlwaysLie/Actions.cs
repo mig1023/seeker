@@ -149,7 +149,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             bool goodReaction = GoodReaction(ref reaction);
 
-            reaction.Add(goodReaction ? "BIG|GOOD|СРЕАГИРОВАЛИ :)" : "BIG|BAD|НЕ СРЕАГИРОВАЛИ :(");
+            reaction.Add(Result(goodReaction, "СРЕАГИРОВАЛИ|НЕ СРЕАГИРОВАЛИ"));
 
             if (goodReaction && (Benefit != null))
                 Benefit.Do();
