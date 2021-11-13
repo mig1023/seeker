@@ -182,7 +182,7 @@ namespace Seeker.Gamebook.YounglingTournament
             test.Add(String.Format("Проверка Понимания: {0} + {1} {2} {3}",
                 Game.Dice.Symbol(testDice), forceLevel, (testPassed ? ">=" : "<"), Level));
 
-            test.Add(testPassed ? "BIG|GOOD|ПРОВЕРКА ПРОЙДЕНА :)" : "BIG|BAD|ПРОВЕРКА ПРОВАЛЕНА :(");
+            test.Add(Result(testPassed, "ПРОВЕРКА ПРОЙДЕНА|ПРОВЕРКА ПРОВАЛЕНА"));
 
             return test;
         }
