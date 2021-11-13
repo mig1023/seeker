@@ -115,7 +115,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             List<string> luckCheck = new List<string> { String.Format("Проверка удачи: {0} - {1}",
                 Game.Dice.Symbol(luckDice), (goodLuck ? "чётное" : "нечётное")) };
 
-            luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            luckCheck.Add(Result(goodLuck, "УСПЕХ|НЕУДАЧА"));
 
             return luckCheck;
         }
@@ -130,7 +130,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             List<string> skillCheck = new List<string> { String.Format("Проверка ловкости: {0} + {1} {2} {3} ловкость",
                 Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), protagonist.Skill) };
 
-            skillCheck.Add(goodSkill ? "BIG|GOOD|ЛОВКОСТИ ХВАТИЛО :)" : "BIG|BAD|ЛОВКОСТИ НЕ ХВАТИЛО :(");
+            skillCheck.Add(Result(goodSkill, "ЛОВКОСТИ ХВАТИЛО|ЛОВКОСТИ НЕ ХВАТИЛО"));
 
             return skillCheck;
         }
@@ -155,7 +155,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     doubleFail = true;
             }
 
-            doubleCheck.Add(doubleFail ? "BIG|BAD|ВЫПАЛИ :(" : "BIG|GOOD|НЕ ВЫПАЛИ :)");
+            doubleCheck.Add(Result(doubleFail, "ВЫПАЛИ|НЕ ВЫПАЛИ"));
 
             return doubleCheck;
         }
@@ -259,7 +259,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             }
 
             pursuit.Add(String.Empty);
-            pursuit.Add(theyWin > 6 ? "BIG|BAD|Они догнали вас :(" : "BIG|GOOD|Они не догнали вас :)");
+            pursuit.Add(Result(theyWin <= 6, "Они не догнали вас|Они догнали вас"));
 
             return pursuit;
         }
