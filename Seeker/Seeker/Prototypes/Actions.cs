@@ -83,5 +83,8 @@ namespace Seeker.Prototypes
 
         public void SetProperty(object protagonist, string property, int value) =>
             protagonist.GetType().GetProperty(property).SetValue(protagonist, value);
+
+        public string Result(bool resultOk, string options) =>
+            (resultOk ? String.Format("BIG|GOOD|{0} :)", options.Split('|')[0]) : String.Format("BIG|BAD|{0} :(", options.Split('|')[1]));
     }
 }
