@@ -196,8 +196,7 @@ namespace Seeker.Gamebook.GoingToLaughter
                 diceValues.Add(String.Format(" +{0} по условию", ResultBonus));
             }
 
-            int currentValue = (int)protagonist.GetType().GetProperty(Target).GetValue(protagonist, null);
-            protagonist.GetType().GetProperty(Target).SetValue(protagonist, (currentValue + dicesResult));
+            SetProperty(protagonist, Target, (GetProperty(protagonist, Target) + dicesResult));
 
             diceValues.Add(String.Format("BIG|BOLD|Вы добавили +{0} к {1}",
                 dicesResult, Constants.ParamNames()[Target]));
