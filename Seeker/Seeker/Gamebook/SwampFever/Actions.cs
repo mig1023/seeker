@@ -47,9 +47,7 @@ namespace Seeker.Gamebook.SwampFever
         public override bool IsButtonEnabled()
         {
             bool disabledByPrice = (Price > 0) && (protagonist.Creds < Price);
-            bool disabledByUsed = (String.IsNullOrEmpty(EnemyName) && (Benefit != null) &&
-                ((int)protagonist.GetType().GetProperty(Benefit.Name).GetValue(protagonist, null) > 0));
-
+            bool disabledByUsed = (String.IsNullOrEmpty(EnemyName) && (Benefit != null) && (GetProperty(protagonist, Benefit.Name) > 0));
             bool disabledSellingMembrane = (Name == "SellAcousticMembrane") && (protagonist.AcousticMembrane <= 0);
             bool disabledSellingMucus = (Name == "SellLiveMucus") && (protagonist.LiveMucus <= 0);
 
@@ -122,7 +120,7 @@ namespace Seeker.Gamebook.SwampFever
             bool upgradeInAction = false;
 
             for (int i = 1; i <= Constants.GetUpgrates().Count; i++)
-                upgrades += (int)protagonist.GetType().GetProperty(Constants.GetUpgrates()[i]["name"]).GetValue(protagonist, null);
+                upgrades += GetProperty(protagonist, Constants.GetUpgrates()[i]["name"]);
 
             if (upgrades == 0)
                 return upgradeInAction;
@@ -135,7 +133,7 @@ namespace Seeker.Gamebook.SwampFever
 
             for (int i = 1; i <= Constants.GetUpgrates().Count; i++)
             {
-                if ((int)protagonist.GetType().GetProperty(Constants.GetUpgrates()[i]["name"]).GetValue(protagonist, null) == 0)
+                if (GetProperty(protagonist, Constants.GetUpgrates()[i]["name"]) == 0)
                     continue;
 
                 bool inAction = (upgradeDice == i);
