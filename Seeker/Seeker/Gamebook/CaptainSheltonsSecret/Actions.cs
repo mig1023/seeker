@@ -86,7 +86,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), result));
             }
 
-            breakingDoor.Add(succesBreaked ? "BIG|GOOD|ДВЕРЬ ВЗЛОМАНА :)" : "BIG|BAD|ВЫ УБИЛИСЬ ОБ ДВЕРЬ :(");
+            breakingDoor.Add(Result(succesBreaked, "ДВЕРЬ ВЗЛОМАНА|ВЫ УБИЛИСЬ ОБ ДВЕРЬ"));
 
             return breakingDoor;
         }
@@ -114,7 +114,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             luckCheck.Add(String.Format("Проверка удачи: {0} - {1}зачёркунтый",
                 Game.Dice.Symbol(goodLuck), (protagonist.Luck[goodLuck] ? "не " : String.Empty)));
 
-            luckCheck.Add(protagonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            luckCheck.Add(Result(protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
             
             protagonist.Luck[goodLuck] = !protagonist.Luck[goodLuck];
 
@@ -217,7 +217,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 "Проверка мастерства: {0} + {1} {2} {3} мастерство",
                 Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodMastery ? "<=" : ">"), protagonist.Mastery) };
 
-            masteryCheck.Add(goodMastery ? "BIG|GOOD|МАСТЕРСТВА ХВАТИЛО :)" : "BIG|BAD|МАСТЕРСТВА НЕ ХВАТИЛО :(");
+            masteryCheck.Add(Result(goodMastery, "МАСТЕРСТВА ХВАТИЛО|МАСТЕРСТВА НЕ ХВАТИЛО"));
 
             return masteryCheck;
         }
