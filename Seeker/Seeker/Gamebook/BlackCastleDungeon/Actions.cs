@@ -158,8 +158,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             bool goodLuck = (fisrtDice + secondDice) <= protagonist.Luck;
 
             List<string> luckCheck = new List<string> { String.Format(
-                    "Проверка удачи: {0} + {1} {2} {3}",
-                    Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck
+                "Проверка удачи: {0} + {1} {2} {3}",
+                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck
             ) };
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
@@ -369,7 +369,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             protagonist.Mastery = oldMastery;
 
             fight.Add(String.Empty);
-            fight.Add(win ? "BIG|GOOD|Вы ПОБЕДИЛИ :)" : "BIG|BAD|Вы ПРОИГРАЛИ :(");
+            fight.Add(Result(win, "Вы ПОБЕДИЛИ|Вы ПРОИГРАЛИ("));
 
             return fight;
         }
