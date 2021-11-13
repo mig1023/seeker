@@ -95,7 +95,7 @@ namespace Seeker.Gamebook.SwampFever
             mentalCheck.Add(String.Format("{0}. Итого получаем {1}, что {2}меньше {3} уровня проверки",
                 ord, mentalAndFury, (level > mentalAndFury ? String.Empty : "не "), level));
 
-            mentalCheck.Add(level > mentalAndFury ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            mentalCheck.Add(Result(level > mentalAndFury, "УСПЕХ|НЕУДАЧА"));
 
             return mentalCheck;
         }
@@ -467,7 +467,7 @@ namespace Seeker.Gamebook.SwampFever
             }
 
             pullReport.Add(String.Format("Итого, вы развили тягу: {0}", thrust));
-            pullReport.Add(thrust >= 14 ? "BIG|GOOD|Вы вытащили ялик :)" : "BIG|BAD|Трос оборвался и ялик утонул :(");
+            pullReport.Add(Result(thrust >= 14, "Вы вытащили ялик|Трос оборвался и ялик утонул"));
 
             return pullReport;
         }
@@ -499,7 +499,7 @@ namespace Seeker.Gamebook.SwampFever
             }
 
             pullReport.Add(String.Format("Итого, вы развили тягу: {0}", thrust));
-            pullReport.Add(thrust >= 14 ? "BIG|GOOD|Вы вытащили ялик :)" : "BIG|BAD|Трос оборвался и ялик утонул :(");
+            pullReport.Add(Result(thrust >= 14, "Вы вытащили ялик|Трос оборвался и ялик утонул"));
 
             return pullReport;
         }
@@ -606,7 +606,7 @@ namespace Seeker.Gamebook.SwampFever
                 warReport.Add(String.Empty);
             }
 
-            warReport.Add(position > 0 ? "BIG|GOOD|Вы выиграли :)" : "BIG|BAD|Вы проиграли :(");
+            warReport.Add(Result(position > 0, "Вы выиграли|Вы проиграли"));
 
             return warReport;
         }
