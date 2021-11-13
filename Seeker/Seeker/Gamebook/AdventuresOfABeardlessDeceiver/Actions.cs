@@ -205,7 +205,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     testLines.Insert(0, "Бонус за кумыс: -2");
             }
 
-            testLines.Add(testIsOk ? "BIG|GOOD|АЛДАР СПРАВИЛСЯ :)" : "BIG|BAD|АЛДАР НЕ СПРАВИЛСЯ :(");
+            testLines.Add(Result(testIsOk, "АЛДАР СПРАВИЛСЯ|АЛДАР НЕ СПРАВИЛСЯ"));
 
             NextTestWithKumis = false;
 
