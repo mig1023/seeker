@@ -24,8 +24,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
             else if (!String.IsNullOrEmpty(Stat))
             {
-                int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
-
+                int currentStat = GetProperty(protagonist, Stat);
                 string diffLine = (currentStat > 1 ? String.Format(" (+{0})", (currentStat - 1)) : String.Empty);
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
@@ -173,7 +172,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             if (NextTestWithKumis)
                 Level -= 2;
 
-            int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
+            int currentStat = GetProperty(protagonist, Stat);
             bool testIsOk = (firstDice + secondDice) + currentStat >= Level;
 
             List<string> testLines = new List<string>();
@@ -227,7 +226,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
             else if (protagonist.StatBonuses >= 0)
             {
-                int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
+                int currentStat = GetProperty(protagonist, Stat);
 
                 currentStat += (StatStep > 1 ? StatStep : 1);
 
