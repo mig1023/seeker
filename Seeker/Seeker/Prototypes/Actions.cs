@@ -77,5 +77,11 @@ namespace Seeker.Prototypes
         public virtual void UseHealing(int healingLevel) => Game.Other.DoNothing();
 
         public virtual string TextByOptions(string option) => String.Empty;
+
+        public int GetProperty(object protagonist, string property) =>
+            (int)protagonist.GetType().GetProperty(property).GetValue(protagonist, null);
+
+        public void SetProperty(object protagonist, string property, int value) =>
+            protagonist.GetType().GetProperty(property).SetValue(protagonist, value);
     }
 }
