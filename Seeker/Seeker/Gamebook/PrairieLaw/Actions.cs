@@ -119,7 +119,7 @@ namespace Seeker.Gamebook.PrairieLaw
             luckCheck.Add(String.Format("Проверка удачи: {0} - {1}зачёркунтый",
                 Game.Dice.Symbol(goodLuck), (protagonist.Luck[goodLuck] ? "не " : String.Empty)));
 
-            luckCheck.Add(protagonist.Luck[goodLuck] ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            luckCheck.Add(Result(protagonist.Luck[goodLuck], "УСПЕХ|НЕУДАЧА"));
 
             protagonist.Luck[goodLuck] = !protagonist.Luck[goodLuck];
 
@@ -194,7 +194,7 @@ namespace Seeker.Gamebook.PrairieLaw
                 "Проверка ловкости: {0} + {1} {2} {3}",
                 Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), protagonist.Skill) };
 
-            luckCheck.Add(goodSkill ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            luckCheck.Add(Result(goodSkill, "УСПЕХ|НЕУДАЧА"));
 
             return luckCheck;
         }
