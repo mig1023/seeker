@@ -333,7 +333,7 @@ namespace Seeker.Gamebook.DzungarWar
             TestParam(Stat, Level, out bool testIsOk, out List<string> result);
 
             testLines.AddRange(result);
-            testLines.Add(testIsOk ? "BIG|GOOD|АЛДАР СПРАВИЛСЯ :)" : "BIG|BAD|АЛДАР НЕ СПРАВИЛСЯ :(");
+            testLines.Add(Result(testIsOk, "АЛДАР СПРАВИЛСЯ|АЛДАР НЕ СПРАВИЛСЯ"));
 
             if ((Benefit != null) && testIsOk)
                 Benefit.Do();
@@ -400,7 +400,7 @@ namespace Seeker.Gamebook.DzungarWar
                     testIsOk = false;
             }
 
-            testLines.Add(testIsOk ? "BIG|GOOD|АЛДАР СПРАВИЛСЯ :)" : "BIG|BAD|АЛДАР НЕ СПРАВИЛСЯ :(");
+            testLines.Add(Result(testIsOk, "АЛДАР СПРАВИЛСЯ|АЛДАР НЕ СПРАВИЛСЯ"));
 
             return testLines;
         }
