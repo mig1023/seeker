@@ -100,7 +100,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 "Проверка удачи: {0} + {1} {2} {3}",
                 Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck) };
 
-            luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+            luckCheck.Add(Result(goodLuck, "УСПЕХ|НЕУДАЧА"));
 
             if (protagonist.Luck > 2)
             {
@@ -124,9 +124,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (masteryOk ? "<=" : ">"), mastery) };
 
             if (Value > 0)
-                masteryCheck.Add(masteryOk ? "BIG|BAD|Мастерства ХВАТИЛО :(" : "BIG|GOOD|Мастерства НЕ хватило :)");
+                masteryCheck.Add(Result(!masteryOk, "Мастерства НЕ хватило|Мастерства ХВАТИЛО"));
             else
-                masteryCheck.Add(masteryOk ? "BIG|GOOD|Мастерства ХВАТИЛО :)" : "BIG|BAD|Мастерства НЕ хватило :(");
+                masteryCheck.Add(Result(masteryOk, "Мастерства ХВАТИЛО|Мастерства НЕ хватило"));
 
             return masteryCheck;
         }
@@ -157,7 +157,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 "Проверка: {0} + {1}{2} {3} {4} изменение",
                 Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), bonusLine, cmpLine, protagonist.Change) };
 
-            changeCheck.Add(changeOk ? "BIG|GOOD|Победил ЧЕЛОВЕК :)" : "BIG|BAD|Победил ВОЛК :(");
+            changeCheck.Add(Result(changeOk, "Победил ЧЕЛОВЕК|Победил ВОЛК"));
 
             return changeCheck;
         }
@@ -179,7 +179,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             diceCheck.Add(String.Format("BIG|Сумма на кубиках: {0}", result));
 
-            diceCheck.Add(result < protagonist.Endurance ? "BIG|GOOD|Меньше! :)" : "BIG|BAD|Больше :(");
+            diceCheck.Add(Result(result < protagonist.Endurance, "Меньше!|Больше"));
 
             return diceCheck;
         }
@@ -196,7 +196,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             diceCheck.Add(String.Format("На кубиках выпало: {0} + {1} = {2}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(firstDice), result));
             diceCheck.Add(String.Format("Текущий уровень тревоги: {0}", protagonist.Anxiety));
 
-            diceCheck.Add(result > protagonist.Anxiety ? "BIG|GOOD|Больше! :)" : "BIG|BAD|Меньше :(");
+            diceCheck.Add(Result(result > protagonist.Anxiety, "Больше!|Меньше"));
 
             return diceCheck;
         }
