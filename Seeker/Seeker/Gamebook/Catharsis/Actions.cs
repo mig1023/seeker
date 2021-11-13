@@ -15,11 +15,9 @@ namespace Seeker.Gamebook.Catharsis
         {
             if (!String.IsNullOrEmpty(Bonus))
             {
-                int currentStat = (int)protagonist.GetType().GetProperty(Bonus).GetValue(protagonist, null);
-
                 Dictionary<string, int> startValues = Constants.GetStartValues();
 
-                int diff = (currentStat - startValues[Bonus]);
+                int diff = (GetProperty(protagonist, Bonus) - startValues[Bonus]);
 
                 string diffLine = (diff > 0 ? String.Format(" (+{0})", diff) : String.Empty);
 
@@ -90,12 +88,7 @@ namespace Seeker.Gamebook.Catharsis
         {
             if (!String.IsNullOrEmpty(Bonus) && (protagonist.Bonuses >= 0))
             {
-                int currentStat = (int)protagonist.GetType().GetProperty(Bonus).GetValue(protagonist, null);
-
-                currentStat += 1;
-
-                protagonist.GetType().GetProperty(Bonus).SetValue(protagonist, currentStat);
-
+                SetProperty(protagonist, Bonus, GetProperty(protagonist, Bonus) + 1);
                 protagonist.Bonuses -= 1;
             }
 
