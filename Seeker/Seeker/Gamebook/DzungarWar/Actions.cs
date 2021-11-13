@@ -68,7 +68,9 @@ namespace Seeker.Gamebook.DzungarWar
             }
 
             if (level < 0)
+            {
                 level = 0;
+            }
 
             return level;
         }
@@ -76,27 +78,33 @@ namespace Seeker.Gamebook.DzungarWar
         public override List<string> Representer()
         {
             if (Name == "TestAll")
+            {
                 return new List<string> { String.Format("Проверить по совокупному уровню {0}", Level) };
-
+            }
             else if (Level > 0)
+            {
                 return new List<string> { String.Format("Проверка {0}, уровень {1}",
                     Constants.StatNames()[Stat], TestLevelWithPenalty(Level, out List<string> _)) };
-
+            }
             else if (!String.IsNullOrEmpty(Stat) && !StatToMax)
             {
-                int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
+                int currentStat = GetProperty(protagonist, Stat);
                 string diffLine = (currentStat > 1 ? String.Format(" (+{0})", (currentStat - 1)) : String.Empty);
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
             }
             else if (Price > 0)
+            {
                 return new List<string> { String.Format("{0}, {1} таньга", Text, Price) };
-
+            }
             else if (!String.IsNullOrEmpty(Text))
+            {
                 return new List<string> { Text };
-
+            }
             else
+            {
                 return new List<string> { };
+            }
         }
 
         public override List<string> Status()
@@ -214,35 +222,41 @@ namespace Seeker.Gamebook.DzungarWar
         public override bool IsButtonEnabled()
         {
             if (Level > 0)
+            {
                 return true;
-
+            }
             else if (Used)
+            {
                 return false;
-
+            }
             else if (Name == "Brother")
+            {
                 return protagonist.Brother <= 0;
-
+            }
             else if (StatToMax)
+            {
                 return protagonist.MaxBonus > 0;
-
+            }
             else if (!String.IsNullOrEmpty(Stat))
             {
-                int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
-                return ((protagonist.StatBonuses > 0) && (currentStat < 12));
+                return ((protagonist.StatBonuses > 0) && (GetProperty(protagonist, Stat) < 12));
             }
-
             else if (Price >= 0)
+            {
                 return (protagonist.Tanga >= Price);
-
+            }
             else
+            {
                 return true;
+            }
         }
 
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
+            {
                 return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
-
+            }
             else if (option.Contains(";"))
             {
                 string[] options = option.Split(';');
@@ -302,7 +316,7 @@ namespace Seeker.Gamebook.DzungarWar
 
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
-            int currentStat = (int)protagonist.GetType().GetProperty(stat).GetValue(protagonist, null);
+            int currentStat = GetProperty(protagonist, stat);
 
             result = (firstDice + secondDice) + currentStat >= level;
 
@@ -339,7 +353,7 @@ namespace Seeker.Gamebook.DzungarWar
             int allStats = 0;
 
             foreach (string test in tests)
-                allStats += (int)protagonist.GetType().GetProperty(test).GetValue(protagonist, null);
+                allStats += GetProperty(protagonist, test);
 
             testLines.Add(String.Format("Сумма всех параметров Алдара: {0}", allStats));
 
@@ -349,7 +363,7 @@ namespace Seeker.Gamebook.DzungarWar
 
             foreach (string test in tests)
             {
-                int currentStat = (int)protagonist.GetType().GetProperty(test).GetValue(protagonist, null);
+                int currentStat = GetProperty(protagonist, test);
                 int approximateLevel = (int)Math.Floor(currentStat * approximateStatUnit);
 
                 int finalLevel = 0;
@@ -421,12 +435,12 @@ namespace Seeker.Gamebook.DzungarWar
             }
             else if (StatToMax && (protagonist.MaxBonus > 0))
             {
-                protagonist.GetType().GetProperty(Stat).SetValue(protagonist, 12);
+                SetProperty(protagonist, Stat, 12);
                 protagonist.MaxBonus = 0;
             }
             else if (protagonist.StatBonuses >= 0)
             {
-                int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
+                int currentStat = GetProperty(protagonist, Stat);
 
                 currentStat += (StatStep > 1 ? StatStep : 1);
 
