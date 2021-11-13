@@ -2703,7 +2703,24 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>275</ID>
-		<Text>Пока вы заняты, предприимчивый "фартук" на другом берегу начинает бросать в вас камнями. За то время, что вам понадобится для того, чтобы полностью вытянуть мост, вам придется три раза СРЕАГИРОВАТЬ. За каждую неудачу вы теряете 2 ЖИЗНИ.</Text>
+		<Text>Пока вы заняты, предприимчивый "фартук" на другом берегу начинает бросать в вас камнями. За то время, что вам понадобится для того, чтобы полностью вытянуть мост, вам придется три раза СРЕАГИРОВАТЬ. За каждую неудачу вы теряете 2 ЖИЗНИ:</Text>
+		<Actions>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте в первый раз</Button>
+				<Damage Name="Hitpoints" Value="-2"/>
+			</Action>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте во второй раз</Button>
+				<Damage Name="Hitpoints" Value="-2"/>
+			</Action>
+			<Action>
+				<Name>Reaction</Name>
+				<Button>Реагируйте в третий раз</Button>
+				<Damage Name="Hitpoints" Value="-2"/>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="411"/>
 		</Options>
