@@ -235,7 +235,7 @@ namespace Seeker.Gamebook.VWeapons
             if (healingPoints <= 0)
                 return;
 
-            int currentValue = (int)protagonist.GetType().GetProperty(part).GetValue(protagonist, null);
+            int currentValue = GetProperty(protagonist, part);
 
             int maxHealing = (partName == "головы" ? 3 : 4);
 
@@ -247,7 +247,7 @@ namespace Seeker.Gamebook.VWeapons
             healingPoints -= diff;
             currentValue += diff;
 
-            protagonist.GetType().GetProperty(part).SetValue(protagonist, currentValue);
+            SetProperty(protagonist, part, currentValue);
 
             healing.Add(String.Format("Вы восстановили 1 ед. здоровья {0}, теперь оно равно {1} из {2}.", partName, currentValue, maxHealing));
         }
