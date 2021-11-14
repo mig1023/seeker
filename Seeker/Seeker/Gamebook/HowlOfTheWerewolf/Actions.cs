@@ -139,12 +139,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             string bonusLine = String.Empty;
 
-            if ((Specificity == Specifics.Dehctaw) && Game.Data.Triggers.Contains("Dehctaw"))
+            if ((Specificity == Specifics.Dehctaw) && Game.Option.IsTriggered("Dehctaw"))
             {
                 result -= 2;
                 bonusLine = " - 2 за Dehctaw";
             }
-            else if ((Specificity == Specifics.Moonstone) && Game.Data.Triggers.Contains("Лунный камень"))
+            else if ((Specificity == Specifics.Moonstone) && Game.Option.IsTriggered("Лунный камень"))
             {
                 result += 3;
                 bonusLine = " + 3 за Лунный камень";
@@ -338,7 +338,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
-                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
+                return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
 
             else
             {
@@ -359,10 +359,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     }
                     else if (oneOption.Contains("!"))
                     {
-                        if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
                     }
-                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()))
                         return false;
                 }
 
@@ -545,7 +545,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         
         private bool GlassKnightFight(ref List<string> fight)
         {
-            if (!Game.Data.Triggers.Contains("Палица"))
+            if (!Game.Option.IsTriggered("Палица"))
                 return false;
 
             int clubAttack = Game.Dice.Roll();
@@ -859,7 +859,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                             protagonistHitStrength -= 1;
                         }
 
-                        else if (speed && !Game.Data.Triggers.Contains("Скорость"))
+                        else if (speed && !Game.Option.IsTriggered("Скорость"))
                         {
                             bonus = " - 1 за остутствие Скорости";
                             protagonistHitStrength -= 1;
@@ -931,7 +931,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         else if (Specificity == Specifics.SnakeFight)
                             SnakeFight(ref protagonist, ref fight, round);
 
-                        else if (Game.Data.Triggers.Contains("Кольчуга") && evenHit)
+                        else if (Game.Option.IsTriggered("Кольчуга") && evenHit)
                         {
                             fight.Add("Кольчуга защитила вас: вы теряете лишь 1 Выносливость");
                             protagonist.Endurance -= 1;
