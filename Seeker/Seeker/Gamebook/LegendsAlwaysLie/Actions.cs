@@ -76,7 +76,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
 
-            bool healingSpell = (protagonist.Magicpoints > 0) && !Game.Data.Triggers.Contains("HealingSpellLost");
+            bool healingSpell = (protagonist.Magicpoints > 0) && !Game.Option.IsTriggered("HealingSpellLost");
 
             if (healingSpell && !Game.Checks.ExistsInParagraph(actionText: "Вылечить"))
             {
@@ -130,7 +130,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             int reactionLevel = (int)Math.Floor((double)protagonist.Hitpoints / 5);
             reaction.Add(String.Format("Уровнь реакции: {0} / 5 = {1}", protagonist.Hitpoints, reactionLevel));
 
-            if (Game.Data.Triggers.Contains("EvilEye"))
+            if (Game.Option.IsTriggered("EvilEye"))
             {
                 reactionLevel -= 1;
                 reaction.Add(String.Format("Из-за сглаза уровнь реакции снижается на единицу: {0}", reactionLevel));
@@ -149,7 +149,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             bool goodReaction = GoodReaction(ref reaction);
 
-            if (!goodReaction && Game.Data.Triggers.Contains("WardSave"))
+            if (!goodReaction && Game.Option.IsTriggered("WardSave"))
             {
                 reaction.Add("GOOD|Вы не смогли среагировать, но духи земли и камня не забывают добра: они помогли вам!");
                 goodReaction = true;
@@ -193,7 +193,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             bool byPrice = (Price > 0) && (protagonist.Gold < Price);
             bool byCureSprain = (Name == "CureSprain") && (protagonist.Magicpoints <= 0);
 
-            bool byAlreadyDecided = (FoodSharing != null) && Game.Data.Triggers.Contains("FoodSharing");
+            bool byAlreadyDecided = (FoodSharing != null) && Game.Option.IsTriggered("FoodSharing");
             bool byFootwraps = ((Name == "FootwrapsDeadlyReplacement") ||
                 (Name == "FootwrapsReplacement")) && protagonist.Footwraps <= 0;
 
@@ -243,7 +243,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 string[] options = option.Split(';');
 
                 int optionMustBe = int.Parse(options[0]);
-                int optionCount = options.Where(x => Game.Data.Triggers.Contains(x.Trim())).Count();
+                int optionCount = options.Where(x => Game.Option.IsTriggered(x.Trim())).Count();
 
                 return (optionCount >= optionMustBe);
             }
@@ -286,14 +286,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     }
                     else if (oneOption.Contains("!"))
                     {
-                        if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
                     }
 
-                    else if (orLogic && Game.Data.Triggers.Contains(oneOption.Trim()))
+                    else if (orLogic && Game.Option.IsTriggered(oneOption.Trim()))
                         return true;
 
-                    else if (!orLogic && !Game.Data.Triggers.Contains(oneOption.Trim()))
+                    else if (!orLogic && !Game.Option.IsTriggered(oneOption.Trim()))
                         return false;
                 }
 
@@ -333,7 +333,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public List<string> FootwrapsDeadlyReplacement()
         {
-            protagonist.Hitpoints += (Game.Data.Triggers.Contains("Legs") ? 4 : 2);
+            protagonist.Hitpoints += (Game.Option.IsTriggered("Legs") ? 4 : 2);
 
             return new List<string> { "BIG|GOOD|Вы успешно поменяли портянки :)" };
         }
@@ -425,7 +425,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             bool warriorFight = (protagonist.Specialization == Character.SpecializationType.Warrior);
             bool poisonBlade = false;
 
-            if (Game.Data.Triggers.Contains("PoisonBlade"))
+            if (Game.Option.IsTriggered("PoisonBlade"))
             {
                 poisonBlade = true;
                 Game.Option.Trigger("PoisonBlade", remove: true);
@@ -528,7 +528,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                             zombieWound = true;
                     }
 
-                    bool lightningLunge = (warriorFight && (firstProtagonistRoll == secondProtagonistRoll) && !Game.Data.Triggers.Contains("EvilEye"));
+                    bool lightningLunge = (warriorFight &&
+                        (firstProtagonistRoll == secondProtagonistRoll) && !Game.Option.IsTriggered("EvilEye"));
 
                     if (ZombieFight && (protagonistHitStrength > enemyHitStrength) && !zombieWound)
                         fight.Add("BOLD|Вы не смогли пробить до кости");

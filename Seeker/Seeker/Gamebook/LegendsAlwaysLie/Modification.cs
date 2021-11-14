@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             bool injuries = DoByName("InjuriesBySpells", () => Actions.InjuriesBySpells());
 
             bool footwrapsDeadly = DoByName("FootwrapsNeedReplacingDeadly",
-                () => Character.Protagonist.Hitpoints -= (Game.Data.Triggers.Contains("Legs") ? 4 : 2));
+                () => Character.Protagonist.Hitpoints -= (Game.Option.IsTriggered("Legs") ? 4 : 2));
 
             bool footwrapsNeed = DoByName("FootwrapsNeedReplacing", () => Game.Option.Trigger("Legs"));
 
@@ -22,10 +22,10 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             else if (Name == "Offering")
             {
-                if (Game.Data.Triggers.Contains("RingWithRuby"))
+                if (Game.Option.IsTriggered("RingWithRuby"))
                     Game.Option.Trigger("RingWithRuby", remove: true);
 
-                else if (Game.Data.Triggers.Contains("NecklaceWithEmerald"))
+                else if (Game.Option.IsTriggered("NecklaceWithEmerald"))
                     Game.Option.Trigger("NecklaceWithEmerald", remove: true);
 
                 else
