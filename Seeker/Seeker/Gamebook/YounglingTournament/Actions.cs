@@ -47,7 +47,7 @@ namespace Seeker.Gamebook.YounglingTournament
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
-                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
+                return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
 
             else
             {
@@ -74,10 +74,10 @@ namespace Seeker.Gamebook.YounglingTournament
 
                     else if (oneOption.Contains("!"))
                     {
-                        if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
                     }
-                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()))
                         return false;
                 }
 
@@ -633,7 +633,7 @@ namespace Seeker.Gamebook.YounglingTournament
                         fight.Add(String.Format("GOOD|Вы ранили {0}, он потерял 3 ед.выносливости (осталось {1})",
                             enemy.Key.Name, enemy.Key.Hitpoints));
 
-                        if ((heroRoundWin >= 3) && !irresistibleAttack && Game.Data.Triggers.Contains("Неотразимая атака"))
+                        if ((heroRoundWin >= 3) && !irresistibleAttack && Game.Option.IsTriggered("Неотразимая атака"))
                             irresistibleAttack = AdditionalAttack(ref fight, enemy.Key, "Вы проводите Неотразимую атаку!", "Урон от атаки");
                     }
 
@@ -645,7 +645,7 @@ namespace Seeker.Gamebook.YounglingTournament
                         fight.Add(String.Format("BAD|{0} ранил вас, вы потеряли 3 ед.выносливости (осталось {1})",
                             enemy.Key.Name, protagonist.Hitpoints));
 
-                        if ((enemyRoundWin >= 3) && !strikeBack && Game.Data.Triggers.Contains("Встречный удар"))
+                        if ((enemyRoundWin >= 3) && !strikeBack && Game.Option.IsTriggered("Встречный удар"))
                             strikeBack = AdditionalAttack(ref fight, enemy.Key, "Вы проводите Встречный удар!", "Урон от удара");
                     }
 
