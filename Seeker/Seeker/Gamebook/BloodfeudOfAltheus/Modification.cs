@@ -75,10 +75,10 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             else
             {
-                if (IntuitiveSolution && (Value < 0) && Game.Data.Triggers.Contains("NoPenaltyByIntuitiveSolution"))
+                if (IntuitiveSolution && (Value < 0) && Game.Option.IsTriggered("NoPenaltyByIntuitiveSolution"))
                     return;
 
-                if (IntuitiveSolution && (Value < 0) && (Name == "Glory") && Game.Data.Triggers.Contains("NoGloryPenaltyByIntuitiveSolution"))
+                if (IntuitiveSolution && (Value < 0) && (Name == "Glory") && Game.Option.IsTriggered("NoGloryPenaltyByIntuitiveSolution"))
                     return;
 
                 int currentValue = GetProperty(protagonist, Name);

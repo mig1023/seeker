@@ -483,7 +483,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             int round = 1;
 
-            if (Game.Data.Triggers.Contains("Wounded"))
+            if (Game.Option.IsTriggered("Wounded"))
             {
                 protagonist.Health = 2;
                 Game.Option.Trigger("Wounded", remove: true);
@@ -606,7 +606,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     {
                         fight.Add(String.Format("BOLD|BAD|{0} ранил вас", enemy.Name));
 
-                        if (Game.Data.Triggers.Contains("FirstWoundProtection"))
+                        if (Game.Option.IsTriggered("FirstWoundProtection"))
                         {
                             fight.Add("GOOD|Асклепий защитил вас от этого удара!");
                             Game.Option.Trigger("FirstWoundProtection", remove: true);
