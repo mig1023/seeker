@@ -8,7 +8,7 @@ namespace Seeker.Gamebook.SilentSchool
 
         public override void Do()
         {
-            int woundsBonus = (Game.Data.Triggers.Contains("Кайф") ? 2 : 1);
+            int woundsBonus = (Game.Option.IsTriggered("Кайф") ? 2 : 1);
 
             bool trigger = DoByName("Trigger", () => Game.Option.Trigger(ValueString));
             bool change = DoByName("Change", () => protagonist.ChangeDecision = Value);
@@ -22,7 +22,7 @@ namespace Seeker.Gamebook.SilentSchool
             bool woundsByWeapon4 = DoByName("WoundsByWeapon4",
                 () => protagonist.Life -= (protagonist.Weapon == "Флейта" ? 1 : 4) * woundsBonus);
             bool woundsByBody = DoByName("WoundsByBody",
-                () => protagonist.Life -= (Game.Data.Triggers.Contains("Толстяк") ? 4 : 6) * woundsBonus);
+                () => protagonist.Life -= (Game.Option.IsTriggered("Толстяк") ? 4 : 6) * woundsBonus);
 
             if (trigger || change || weapon || removeWeapon || woundsByWeapon2 || woundsByWeapon3 || woundsByWeapon4 || woundsByBody)
                 return;
