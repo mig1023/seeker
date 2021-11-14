@@ -54,10 +54,10 @@ namespace Seeker.Gamebook.VWeapons
             GameOverBy((protagonist.Dead ? 0 : 1), out toEndParagraph, out toEndText);
 
         private bool SpecialCheck() =>
-            (Game.Data.Triggers.Contains("Mt") || Game.Data.Triggers.Contains("P")) &&
-            !Game.Data.Triggers.Contains("B") && protagonist.Suspicions <= 3;
+            (Game.Option.IsTriggered("Mt") || Game.Option.IsTriggered("P")) &&
+            !Game.Option.IsTriggered("B") && protagonist.Suspicions <= 3;
 
-        private bool SpecialFCheck() => ((protagonist.Suspicions >= 4) && !Game.Data.Triggers.Contains("F"));
+        private bool SpecialFCheck() => ((protagonist.Suspicions >= 4) && !Game.Option.IsTriggered("F"));
 
         public override bool CheckOnlyIf(string option)
         {
@@ -68,7 +68,7 @@ namespace Seeker.Gamebook.VWeapons
                 return (option.Contains("!") ? !SpecialFCheck() : SpecialFCheck());
 
             else if (option.Contains("|"))
-                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
+                return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
 
             else
             {
@@ -95,10 +95,10 @@ namespace Seeker.Gamebook.VWeapons
                     }
                     else if (oneOption.Contains("!"))
                     {
-                        if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
                     }
-                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()))
                         return false;
                 }
 
