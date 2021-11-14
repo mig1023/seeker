@@ -149,6 +149,13 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             bool goodReaction = GoodReaction(ref reaction);
 
+            if (!goodReaction && Game.Data.Triggers.Contains("WardSave"))
+            {
+                reaction.Add("GOOD|Вы не смогли среагировать, но духи земли и камня не забывают добра: они помогли вам!");
+                goodReaction = true;
+                Game.Option.Trigger("WardSave", remove: true);
+            }
+
             reaction.Add(Result(goodReaction, "СРЕАГИРОВАЛИ|НЕ СРЕАГИРОВАЛИ"));
 
             if (goodReaction && (Benefit != null))

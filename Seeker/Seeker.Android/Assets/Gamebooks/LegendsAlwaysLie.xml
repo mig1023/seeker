@@ -2355,6 +2355,7 @@
 			<Modification Name="Offering"/>
 			<Modification Name="Hitpoints" Value="2"/>
 		</Modifications>
+		<Triggers>WardSave</Triggers>
 		<Options>
 			<Option Destination="388"/>
 		</Options>
@@ -4190,7 +4191,7 @@
 	<Paragraph>
 		<ID>424</ID>
 		<Text>– Сславный малый, – вновь слышите вы голос. – И уважжительный, обряды тебе нашши ведомы, хоть и не месстный. Духи зземли и камня благоссловляют тебя.\n\nВы чувствуете прилив сил (+4 ЖИЗНИ). Вдобавок, если в будущем при проверке реакции вам не повезет, вы имеете право один раз за игру изменить результат на положительный – благословление духов спасет вас от неприятностей.\n\nЗапишите слово «идолы», и ступайте дальше.</Text>
-		<Triggers>Idols</Triggers>
+		<Triggers>Idols, WardSave</Triggers>
 		<Modifications>
 			<Modification Name="Hitpoints" Value="4"/>
 			<Modification Name="Offering"/>
