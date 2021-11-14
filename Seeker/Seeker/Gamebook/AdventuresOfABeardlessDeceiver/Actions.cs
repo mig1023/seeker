@@ -148,10 +148,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 }
                 else if (oneOption.Contains("!"))
                 {
-                    if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                    if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                         return false;
                 }
-                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                else if (!Game.Option.IsTriggered(oneOption.Trim()))
                     return false;
             }
 
@@ -163,11 +163,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             int firstDice = Game.Dice.Roll();
             int secondDice = Game.Dice.Roll();
 
-            if (GuessBonus && Game.Data.Triggers.Contains("guess"))
+            if (GuessBonus && Game.Option.IsTriggered("guess"))
                 Level = 7;
 
             if (GreatKhanSpecialCheck)
-                Level -= (protagonist.Popularity + (Game.Data.Triggers.Contains("KhansRing") ? 3 : 0));
+                Level -= (protagonist.Popularity + (Game.Option.IsTriggered("KhansRing") ? 3 : 0));
 
             if (NextTestWithKumis)
                 Level -= 2;
@@ -177,7 +177,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
             List<string> testLines = new List<string>();
 
-            if (TablesGame && Game.Data.Triggers.Contains("Tables"))
+            if (TablesGame && Game.Option.IsTriggered("Tables"))
             {
                 testLines.Add("Алдар владеет игрой в нарды в совершенстве!");
                 testIsOk = true;
@@ -189,12 +189,12 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     Constants.StatNames[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
                     currentStat, (testIsOk ? ">=" : "<"), Level));
 
-                if (GuessBonus && Game.Data.Triggers.Contains("guess"))
+                if (GuessBonus && Game.Option.IsTriggered("guess"))
                     testLines.Insert(0, "Бонус за догадку: -4");
 
                 if (GreatKhanSpecialCheck)
                 {
-                    if (Game.Data.Triggers.Contains("KhansRing"))
+                    if (Game.Option.IsTriggered("KhansRing"))
                         testLines.Insert(0, "Бонус за ханское кольцо: -3");
 
                     if (protagonist.Popularity > 0)
