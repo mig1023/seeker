@@ -99,7 +99,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
-                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
+                return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
 
             else
             {
@@ -107,10 +107,10 @@ namespace Seeker.Gamebook.OctopusIsland
                 {
                     if (oneOption.Contains("!"))
                     {
-                        if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
                     }
-                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()))
                         return false;
                 }
 
