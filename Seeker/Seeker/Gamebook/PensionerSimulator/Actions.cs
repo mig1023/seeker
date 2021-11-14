@@ -10,10 +10,10 @@ namespace Seeker.Gamebook.PensionerSimulator
         {
             foreach (string oneOption in option.Split(','))
             {
-                if (oneOption.Contains("!") && (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim())))
+                if (oneOption.Contains("!") && (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim())))
                         return false;
 
-                else if (!oneOption.Contains("!") && (!Game.Data.Triggers.Contains(oneOption.Trim())))
+                else if (!oneOption.Contains("!") && (!Game.Option.IsTriggered(oneOption.Trim())))
                     return false;
             }
 
