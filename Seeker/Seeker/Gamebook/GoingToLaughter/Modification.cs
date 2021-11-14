@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.GoingToLaughter
         private bool ModBySpecificName(string name)
         {
             Character protagonist = Character.Protagonist;
-            int lutnaBonus = ((Game.Data.Triggers.Contains("Лютня") && Advantage("Музицирование")) ? 2 : 1);
+            int lutnaBonus = ((Game.Option.IsTriggered("Лютня") && Advantage("Музицирование")) ? 2 : 1);
 
             if (name == "Advantage")
             {
