@@ -66,7 +66,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public override bool CheckOnlyIf(string option)
         {
             if (option.Contains("|"))
-                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
+                return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
 
             else
             {
@@ -88,7 +88,7 @@ namespace Seeker.Gamebook.PrairieLaw
                         else if (option.Contains("ШКУР >=") && (level > protagonist.AnimalSkins.Count))
                             return false;
                     }
-                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()))
                         return false;
                 }
 
@@ -393,7 +393,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
             int dice = Game.Dice.Roll();
             bool even = (dice % 2 == 0);
-            bool nuggetsGame = Game.Data.Triggers.Contains("Игра на самородок");
+            bool nuggetsGame = Game.Option.IsTriggered("Игра на самородок");
 
             gameReport.Add(String.Format("На кубике выпало: {0} - {1}", Game.Dice.Symbol(dice), (even ? "чётное" : "нечётное")));
 
