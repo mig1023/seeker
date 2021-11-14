@@ -60,7 +60,7 @@ namespace Seeker.Gamebook.DzungarWar
                         penaltyLine.Add(String.Format("Пенальти -{0} за покупку {0} кувшинов", bottles));
                     }
                 }
-                else if (Game.Data.Triggers.Contains(penalty[0].Trim()))
+                else if (Game.Option.IsTriggered(penalty[0].Trim()))
                 {
                     level += int.Parse(penalty[1].Trim());
                     penaltyLine.Add(String.Format("Пенальти {0} к уровню проверки за ключевое слово {1}", penalty[1].Trim(), penalty[0].Trim()));
@@ -255,14 +255,14 @@ namespace Seeker.Gamebook.DzungarWar
         {
             if (option.Contains("|"))
             {
-                return option.Split('|').Where(x => Game.Data.Triggers.Contains(x.Trim())).Count() > 0;
+                return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
             }
             else if (option.Contains(";"))
             {
                 string[] options = option.Split(';');
 
                 int optionMustBe = int.Parse(options[0]);
-                int optionCount = options.Where(x => Game.Data.Triggers.Contains(x.Trim())).Count();
+                int optionCount = options.Where(x => Game.Option.IsTriggered(x.Trim())).Count();
 
                 return optionCount >= optionMustBe;
             }
@@ -291,10 +291,10 @@ namespace Seeker.Gamebook.DzungarWar
                     }
                     else if (oneOption.Contains("!"))
                     {
-                        if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                             return false;
                     }
-                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()))
                         return false;
                 }
 

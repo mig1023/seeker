@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.DzungarWar
             if (Name == "Bargain")
                 Game.Option.Trigger("Bargain");
 
-            else if ((Name == "SaleOfPredatorSkins") && Game.Data.Triggers.Contains("Хищник"))
+            else if ((Name == "SaleOfPredatorSkins") && Game.Option.IsTriggered("Хищник"))
                 protagonist.Tanga += 150;
 
             else if (Name == "Favour")

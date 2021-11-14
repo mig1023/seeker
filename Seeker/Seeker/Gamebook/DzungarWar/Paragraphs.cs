@@ -20,7 +20,7 @@ namespace Seeker.Gamebook.DzungarWar
 
             bool bargain = Xml.BoolParse(xmlAction["Bargain"]);
 
-            if (bargain && Game.Data.Triggers.Contains("Bargain"))
+            if (bargain && Game.Option.IsTriggered("Bargain"))
                 action.Price /= 2;
 
             if (action.Name == "Option")
