@@ -105,7 +105,7 @@ namespace Seeker.Gamebook.HeartOfIce
         public bool Available()
         {
             if (!String.IsNullOrEmpty(RemoveTrigger))
-                return Game.Data.Triggers.Contains(RemoveTrigger);
+                return Game.Option.IsTriggered(RemoveTrigger);
 
             else if (SellType == "Пистолет")
                 return protagonist.Shots > 0;
@@ -125,7 +125,7 @@ namespace Seeker.Gamebook.HeartOfIce
                     if (protagonist.Skills.Contains(oneOption.Trim()))
                         return true;
 
-                    if (Game.Data.Triggers.Contains(oneOption.Trim()))
+                    if (Game.Option.IsTriggered(oneOption.Trim()))
                         return true;
                 }
 
@@ -146,7 +146,7 @@ namespace Seeker.Gamebook.HeartOfIce
                         else if (oneOption.Contains("ЕДА >=") && (int.Parse(oneOption.Split('=')[1]) > protagonist.Food))
                             return false;
                     }
-                    else if (!Game.Data.Triggers.Contains(oneOption.Trim()) && !protagonist.Skills.Contains(oneOption.Trim()))
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()) && !protagonist.Skills.Contains(oneOption.Trim()))
                         return false;
                 }
 

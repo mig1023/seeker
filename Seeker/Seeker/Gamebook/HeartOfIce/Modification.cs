@@ -20,7 +20,7 @@ namespace Seeker.Gamebook.HeartOfIce
             {
                 string[] triggers = ValueString.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
 
-                if (!Game.Data.Triggers.Contains(triggers[0].Trim()))
+                if (!Game.Option.IsTriggered(triggers[0].Trim()))
                     return;
 
                 Game.Option.Trigger(triggers[0].Trim(), remove: true);
@@ -38,7 +38,7 @@ namespace Seeker.Gamebook.HeartOfIce
             bool isTrigger = false;
 
             foreach (string trigger in triggers)
-                if (Game.Data.Triggers.Contains(trigger.Trim()) || Character.Protagonist.Skills.Contains(trigger.Trim()))
+                if (Game.Option.IsTriggered(trigger.Trim()) || Character.Protagonist.Skills.Contains(trigger.Trim()))
                     isTrigger = true;
 
             if (isTrigger != notLogic)
