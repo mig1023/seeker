@@ -70,7 +70,13 @@ namespace Seeker.Game
                 textPlace.Children.Add(Output.Interface.Text(text));
 
             foreach (Output.Text texts in Game.Xml.TextsParse(Game.Data.XmlParagraphs[id]))
-                textPlace.Children.Add(Output.Interface.Text(texts));
+            {
+                if (texts.Selected)
+                    textPlace.Children.Add(Output.Interface.Text(texts, selected: true));
+                else
+                    textPlace.Children.Add(Output.Interface.Text(texts));
+            }
+                
         }
 
         public static List<Text> TextsParse(XmlNode xmlNode, bool aftertext = false)
@@ -86,7 +92,8 @@ namespace Seeker.Game
                     Content = text.InnerText,
                     Bold = (font == "Bold"),
                     Italic = (font == "Italic"),
-                    Alignment = StringParse(text.Attributes["Alignment"])
+                    Alignment = StringParse(text.Attributes["Alignment"]),
+                    Selected = BoolParse(text.Attributes["Selected"]),
                 };
 
                 if (text.Attributes["Size"] != null)

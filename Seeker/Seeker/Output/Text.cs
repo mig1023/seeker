@@ -6,6 +6,7 @@ namespace Seeker.Output
     {
         public string Content { get; set; }
         public string Alignment { get; set; }
+        public bool Selected { get; set; }
 
         public Interface.TextFontSize Size { get; set; }
 

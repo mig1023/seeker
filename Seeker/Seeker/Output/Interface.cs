@@ -389,9 +389,29 @@ namespace Seeker.Output
             if (text.Alignment == "Center")
                 label.HorizontalTextAlignment = TextAlignment.Center;
 
-
-
             return label;
+        }
+
+        public static Grid Text(Text text, bool selected)
+        {
+            Grid grid = new Grid
+            {
+                RowDefinitions =
+                {
+                    new RowDefinition()
+                },
+                ColumnDefinitions =
+                {
+                    new ColumnDefinition { Width = new GridLength(2) },
+                    new ColumnDefinition { }
+                },
+                Margin = Constants.TEXT_LABEL_MARGIN,
+            };
+
+            grid.Children.Add(new BoxView { Color = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar)) }, 0, 0);
+            grid.Children.Add(Text(text), 1, 0);
+
+            return grid;
         }
 
         public static ExtendedLabel Text(string text, bool defaultParams = false, bool italic = false,
@@ -415,7 +435,7 @@ namespace Seeker.Output
             int fontSize = Game.Settings.GetValue("FontSize");
 
             if (fontSize > 0)
-                label.FontSize = Constants.FONT_SIZE_VALUES[fontSize];
+                label.FontSize = Constants.FONT_SIZE_VALUES[fontSize]; // здесь нужны ступени
             else if (size != TextFontSize.nope)
                 label.FontSize = FontSize(size);
             else if(Game.Data.Constants != null)
