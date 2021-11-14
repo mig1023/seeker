@@ -105,10 +105,10 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             bool bySpell = ThisIsSpell && (protagonist.Magicpoints <= 0);
             bool byCureSpell = (Name == "CureFracture") && (CureSpellCount() < Wound);
-            bool bySell = (Name == "Sell") && !Game.Data.Triggers.Contains(Trigger);
+            bool bySell = (Name == "Sell") && !Game.Option.IsTriggered(Trigger);
             bool bySpecButton = (Specialization != null) && (protagonist.Specialization != Character.SpecializationType.Nope);
             bool byPrice = (Price > 0) && (protagonist.Gold < Price);
-            bool byTrigger = Game.Data.Triggers.Contains(OnlyOne);
+            bool byTrigger = Game.Option.IsTriggered(OnlyOne);
 
             return !(bySpell || byCureSpell || bySell || bySpecButton || byPrice || byTrigger || Used);
         }
@@ -391,7 +391,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 return protagonist.Transformation > 0;
 
             else if (option == "МЕДВЕДЬ")
-                return (protagonist.Transformation > 0) && !Game.Data.Triggers.Contains("Taboo");
+                return (protagonist.Transformation > 0) && !Game.Option.IsTriggered("Taboo");
 
             else if (protagonist.Spells.Contains(option))
                 return true;
@@ -402,7 +402,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             else if (option.Contains("|"))
             {
                 foreach (string opt in option.Split('|'))
-                    if (Game.Data.Triggers.Contains(opt.Trim()))
+                    if (Game.Option.IsTriggered(opt.Trim()))
                         return true;
 
                 return false;
@@ -411,7 +411,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             else if (option.Contains(","))
             {
                 foreach (string opt in option.Split(','))
-                    if (Game.Data.Triggers.Contains(opt.Trim()))
+                    if (Game.Option.IsTriggered(opt.Trim()))
                         return false;
 
                 return true;
@@ -419,11 +419,11 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             else if (option.Contains("!"))
             {
-                if (Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim()))
+                if (Game.Option.IsTriggered(option.Replace("!", String.Empty).Trim()))
                     return false;
             }
 
-            else if (!Game.Data.Triggers.Contains(option.Trim()))
+            else if (!Game.Option.IsTriggered(option.Trim()))
                 return false;
             
             return true;
@@ -463,7 +463,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 fight.Add(String.Format("GOOD|Благодаря крови, попавшей на вас, вы восстановили {0} жизни", hitpointsBonus));
             }
 
-            if (Game.Data.Triggers.Contains("Rabies"))
+            if (Game.Option.IsTriggered("Rabies"))
             {
                 protagonist.Strength -= 1;
 
@@ -500,10 +500,10 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return fight;
         }
 
-        private bool IsPoisonedBlade() => (Game.Data.Triggers.Contains("PoisonedBlade") &&
+        private bool IsPoisonedBlade() => (Game.Option.IsTriggered("PoisonedBlade") &&
             (protagonist.Specialization != Character.SpecializationType.Thrower));
 
-        private bool IsMagicBlade() => Game.Data.Triggers.Contains("MagicSword");
+        private bool IsMagicBlade() => Game.Option.IsTriggered("MagicSword");
 
         public List<string> Fight()
         {
@@ -528,7 +528,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 {
                     fight.Add("BOLD|Вы бросаете метательные ножи");
 
-                    int wound = (Game.Data.Triggers.Contains("PoisonedBlade") ? 4 : 3);
+                    int wound = (Game.Option.IsTriggered("PoisonedBlade") ? 4 : 3);
 
                     FightEnemies[0].Hitpoints -= wound;
 
