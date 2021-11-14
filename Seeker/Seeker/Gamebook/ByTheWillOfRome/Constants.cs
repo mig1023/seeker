@@ -23,6 +23,8 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             [ColorTypes.StatusBar] = "#520809",
         };
 
+        public override bool ShowDisabledOption() => true;
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

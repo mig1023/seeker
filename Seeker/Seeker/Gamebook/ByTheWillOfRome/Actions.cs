@@ -72,7 +72,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             {
                 foreach (string group in Group.Split(','))
                 {
-                    if (Game.Data.Triggers.Contains(group.Trim()))
+                    if (Game.Option.IsTriggered(group.Trim()))
                         return false;
                 }
             }
@@ -86,25 +86,26 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
             foreach (string oneOption in options)
             {
-
                 if (oneOption.Contains(">") || oneOption.Contains("<"))
                 {
                     int level = Game.Other.LevelParse(oneOption);
 
                     if (oneOption.Contains("СЕСТЕРЦИЕВ >=") && (level <= protagonist.Sestertius))
                         return true;
+
+                    if (oneOption.Contains("ДИСЦИПЛИНА >=") && (level <= protagonist.Discipline))
+                        return true;
                 }
                 else if (oneOption.Contains("!"))
                 {
-                    if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                    if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                         return false;
                 }
-                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                else if (!Game.Option.IsTriggered(oneOption.Trim()))
                 {
                     return false;
                 }
             }
-                   
 
             return true;
         }
