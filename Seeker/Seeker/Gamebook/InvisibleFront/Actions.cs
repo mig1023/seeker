@@ -34,10 +34,10 @@ namespace Seeker.Gamebook.InvisibleFront
                 }
                 else if (oneOption.Contains("!"))
                 {
-                    if (Game.Data.Triggers.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                    if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
                         return false;
                 }
-                else if (!Game.Data.Triggers.Contains(oneOption.Trim()))
+                else if (!Game.Option.IsTriggered(oneOption.Trim()))
                     return false;
             }
 
