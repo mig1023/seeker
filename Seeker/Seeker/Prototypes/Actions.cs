@@ -49,9 +49,9 @@ namespace Seeker.Prototypes
         public static bool CheckOnlyIfTrigger(string option)
         {
             if (option.Contains("!"))
-                return !Game.Data.Triggers.Contains(option.Replace("!", String.Empty).Trim());
+                return !Game.Option.IsTriggered(option.Replace("!", String.Empty).Trim());
             else
-                return Game.Data.Triggers.Contains(option);
+                return Game.Option.IsTriggered(option);
         }
 
         public virtual bool GameOver(out int toEndParagraph, out string toEndText)

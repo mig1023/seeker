@@ -28,5 +28,7 @@ namespace Seeker.Game
                 else
                     Game.Data.Triggers.Add(trigger.Trim());
         }
+
+        public static bool IsTriggered(string trigger) => Game.Data.Triggers.Contains(trigger);
     }
 }

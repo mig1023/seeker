@@ -51,7 +51,7 @@ namespace Seeker.Prototypes
 
         public void DoByTrigger(string trigger, ParamMod doModification, bool not = false)
         {
-            if ((!not && Game.Data.Triggers.Contains(trigger)) || (not && !Game.Data.Triggers.Contains(trigger)))
+            if ((!not && Game.Option.IsTriggered(trigger)) || (not && !Game.Option.IsTriggered(trigger)))
                 doModification();
         }
 
