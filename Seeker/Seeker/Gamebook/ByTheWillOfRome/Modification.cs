@@ -19,6 +19,11 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
                 Game.Option.Trigger("Еда №2", remove: true);
             }
+            else if (Name == "DisciplineFood")
+            {
+                if (!Game.Option.IsTriggered("Еда №1") && !Game.Option.IsTriggered("Еда №2") && !Game.Option.IsTriggered("Еда №3"))
+                    Character.Protagonist.Discipline -= 1;
+            }
             else
             {
                 base.Do(Character.Protagonist);
