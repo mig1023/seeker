@@ -8,9 +8,6 @@ namespace Seeker.Gamebook.ByTheWillOfRome
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
 
-        public string Group { get; set; }
-        public bool Remove { get; set; }
-
         public override List<string> Status() => new List<string>
         {
             String.Format("Сестерциев: {0}", protagonist.Sestertius),
@@ -61,24 +58,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             return protagonist.Honor <= 0;
         }
 
-        public override bool IsButtonEnabled()
-        {
-            if (Price > 0)
-            {
-                return !(Used || (protagonist.Sestertius < Price));
-            }
-
-            else if (!String.IsNullOrEmpty(Group))
-            {
-                foreach (string group in Group.Split(','))
-                {
-                    if (Game.Option.IsTriggered(group.Trim()))
-                        return false;
-                }
-            }
-
-            return true;
-        }
+        public override bool IsButtonEnabled() => !(Used || ((Price > 0) && (protagonist.Sestertius < Price)));
 
         public override bool CheckOnlyIf(string option)
         {
@@ -108,13 +88,6 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             }
 
             return true;
-        }
-
-        public List<string> TriggerAction()
-        {
-            Game.Option.Trigger(Group, remove: Remove);
-
-            return new List<string> { "RELOAD" };
         }
 
         public List<string> Get()
