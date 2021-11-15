@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Xml;
-using Xamarin.Forms;
 
 namespace Seeker.Game
 {
@@ -42,7 +39,11 @@ namespace Seeker.Game
             return five;
         }
 
-        public static int LevelParse(string option) => int.Parse(option.Contains("=") ? option.Split('=')[1] : option.Split('>', '<')[1]);
+        public static string NegativeMeaning(int value) =>
+            value < 0 ? String.Format("минус {0}", Math.Abs(value)) : value.ToString(); 
+
+        public static int LevelParse(string option) =>
+            int.Parse(option.Contains("=") ? option.Split('=')[1] : option.Split('>', '<')[1]);
 
         public static bool DoNothing() => true;
     }

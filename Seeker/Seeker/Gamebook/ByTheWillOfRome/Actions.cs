@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
                 return new List<string>
                 {
-                    String.Format("Дисциплина: {0}", protagonist.Discipline),
+                    String.Format("Дисциплина: {0}", Game.Other.NegativeMeaning(protagonist.Discipline)),
                     String.Format("Легионеров: {0}", legionaries),
                 };
             }
