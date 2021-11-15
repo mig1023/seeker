@@ -378,6 +378,7 @@
 		<Modifications>
 			<Modification Name="Legionaries" Value="-1"/>
 		</Modifications>
+		<Triggers>Еда №1</Triggers>
 		<Options>
 			<Option Destination="47"/>
 		</Options>
@@ -413,7 +414,7 @@
 			<Text>Через пару дней в лагерь вернулся ваш отряд во главе с центурионом Секстом Плавтом. Солдаты привезли на повозках довольно много мешков еды - горох, ячмень, солонину, и даже живых курей.\n\nОднако, вы заметили, что у многих легионеров нет пилумов. Секст Плавт объяснил вам, что он вынужден был рассчитываться с варварами за полученную еду железом. Пришлось отдать дакам несколько десятков длинных железных наконечников от пилумов.</Text>
 			<Text Size="small">Запишите слова «еда №3» и «пилумы».</Text>
 		</Texts>
-		<Triggers>Пилумы</Triggers>
+		<Triggers>Пилумы, Еда №3</Triggers>
 		<Options>
 			<Option Destination="49" Text="Пожертвуете для храма кур для ритуала гадания" OnlyIf="Куры"/>
 			<Option Destination="47"/>
@@ -846,7 +847,7 @@
 	<Paragraph>
 		<ID>88</ID>
 		<Options>
-			<Option Destination="116" Text="Если у вас записано слово «еда №1» или «еда №2»"/>
+			<Option Destination="116" Text="Если у вас записано слово «еда №1» или «еда №2»" OnlyIf="Еда №1|Еда №2"/>
 			<Option Destination="137" Text="Если нет этих слов"/>
 		</Options>
 	</Paragraph>
@@ -991,7 +992,7 @@
 	<Paragraph>
 		<ID>104</ID>
 		<Options>
-			<Option Destination="106" Text="Если у вас записано слово «еда №1» или «еда №2»"/>
+			<Option Destination="106" Text="Если у вас записано слово «еда №1» или «еда №2»" OnlyIf="Еда №1|Еда №2"/>
 			<Option Destination="137" Text="Если нет этих слов"/>
 		</Options>
 	</Paragraph>
@@ -1034,9 +1035,9 @@
 		<ID>108</ID>
 		<Text>На следующее утро на плацу были выстроены почти все легионеры вашей когорты. Перед строем понурив головы, стояло 30 провинившихся за разные проступки солдат.\n\nСколько ударов палкой вы назначите этим солдатам?</Text>
 		<Options>
-			<Option Destination="97" Text="По десять"/>
-			<Option Destination="111" Text="По двадцать"/>
-			<Option Destination="101" Text="По тридцать"/>
+			<Option Destination="97" Text="По десять (не больно, но поучительно)"/>
+			<Option Destination="111" Text="По двадцать (день проваляются в лазарете, но запомнят надолго)"/>
+			<Option Destination="101" Text="По тридцать (недельку проваляются в лазарете, но зато другие солдаты хорошо это запомнят)"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1275,7 +1276,16 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>134</ID>
-		<Text>- Обратитесь с этим вопросом к квестору - ответил легат.\n\nКогда вы пришли к квестору Флавию, то на вашу просьбу снабдить вашу когорту провизией, он лишь развел руками.\n\n- У нас все пайки расписаны на месяц вперед. Лишних запасов у нас нет - заявил он - Но вы можете купить еду у местных торговцев за свои личные средства. Квестор тут же предложил вам свои услуги по закупке всего необходимого.\n\nЕсли у вас есть 50 сестерциев, то квестор купит вашему отряду провизию (запишите слово «еда №3»).\n\nЕсли нет денег или вы не хотите тратить свои деньги.</Text>
+		<Text>- Обратитесь с этим вопросом к квестору - ответил легат.\n\nКогда вы пришли к квестору Флавию, то на вашу просьбу снабдить вашу когорту провизией, он лишь развел руками.\n\n- У нас все пайки расписаны на месяц вперед. Лишних запасов у нас нет - заявил он - Но вы можете купить еду у местных торговцев за свои личные средства. Квестор тут же предложил вам свои услуги по закупке всего необходимого.\n\nЕсли у вас есть 50 сестерциев, то квестор купит вашему отряду провизию:</Text>
+		<Actions>
+			<Action>
+				<Name>Get</Name>
+				<Button>Купить</Button>
+				<Text>Провизия</Text>
+				<Trigger>Еда №3</Trigger>
+				<Price>50</Price>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="145"/>
 		</Options>
@@ -1283,33 +1293,12 @@
 	<Paragraph>
 		<ID>135</ID>
 		<Text>На этом легат закончил задавать свои каверзные вопросы.\n\n- Ну что ж вы можете отправляться со своей когортой сегодня же - объявил легат, - У вас есть какие-либо просьбы ко мне?</Text>
-		<Actions>
-			<Action>
-				<Name>Option</Name>
-				<Option Destination="134" Text="Попросить у него снабдить вашу когорту едой" OnlyIf="!Помощь легата"/>
-			</Action>
-			<Action>
-				<Name>TriggerAction</Name>
-				<Button>Попросить снабдить вас инструментами</Button>
-				<Trigger>Инструменты</Trigger>
-				<Group>Помощь легата</Group>
-			</Action>
-			<Action>
-				<Name>TriggerAction</Name>
-				<Button>Попросить дать вам две баллисты</Button>
-				<Trigger>Баллисты</Trigger>
-				<Group>Помощь легата</Group>
-			</Action>
-			<Action>
-				<Name>TriggerAction</Name>
-				<Button>Попросить у легата взять из арсенала нужное вам количество тяжелых дротиков</Button>
-				<Trigger>Пилумы</Trigger>
-				<Group>Помощь легата, Пилумы</Group>
-				<Remove/>
-			</Action>
-		</Actions>
 		<Options>
-			<Option Destination="145" Text="Итак, в путь"/>
+			<Option Destination="134" Text="Попросить у него снабдить вашу когорту едой" OnlyIf="!Помощь легата"/>
+			<Option Destination="145" Text="Попросить снабдить вас инструментами" Do="Trigger" ValueString="Инструменты"/>
+			<Option Destination="145" Text="Попросить дать вам две баллисты" Do="Trigger" ValueString="Баллисты"/>
+			<Option Destination="145" Text="Попросить у легата взять из арсенала нужное вам количество тяжелых дротиков" OnlyIf="Пилумы" Do="RemoveTrigger" ValueString="Пилумы"/>
+			<Option Destination="145" Text="Не будете ни о чём просить"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -1685,33 +1674,12 @@
 	<Paragraph>
 		<ID>180</ID>
 		<Text>Вас вызвал к себе легат:\n\n- Ну что ж, вы можете отправляться со своей когортой сегодня же - объявил он - У вас есть какие-либо просьбы ко мне?\n\nВыберите что-то одно:</Text>
-		<Actions>
-			<Action>
-				<Name>Option</Name>
-				<Option Destination="134" Text="Попросить у него снабдить вашу когорту едой" OnlyIf="!Помощь легата"/>
-			</Action>
-			<Action>
-				<Name>TriggerAction</Name>
-				<Button>Попросить снабдить вас инструментами</Button>
-				<Trigger>Инструменты</Trigger>
-				<Group>Помощь легата</Group>
-			</Action>
-			<Action>
-				<Name>TriggerAction</Name>
-				<Button>Попросить дать вам две баллисты</Button>
-				<Trigger>Баллисты</Trigger>
-				<Group>Помощь легата</Group>
-			</Action>
-			<Action>
-				<Name>TriggerAction</Name>
-				<Button>Попросить у легата взять из арсенала нужное вам количество тяжелых дротиков</Button>
-				<Trigger>Пилумы</Trigger>
-				<Group>Помощь легата, Пилумы</Group>
-				<Remove/>
-			</Action>
-		</Actions>
 		<Options>
-			<Option Destination="145" Text="Итак, пора приготовится к походу"/>
+			<Option Destination="134" Text="Попросить у него снабдить вашу когорту едой" OnlyIf="!Помощь легата"/>
+			<Option Destination="145" Text="Попросить снабдить вас инструментами" Do="Trigger" ValueString="Инструменты"/>
+			<Option Destination="145" Text="Попросить дать вам две баллисты" Do="Trigger" ValueString="Баллисты"/>
+			<Option Destination="145" Text="Попросить у легата взять из арсенала нужное вам количество тяжелых дротиков" OnlyIf="Пилумы" Do="RemoveTrigger" ValueString="Пилумы"/>
+			<Option Destination="145" Text="Не будете ни о чём просить"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
