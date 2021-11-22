@@ -4353,6 +4353,7 @@
 		</Texts>
 		<Modifications>
 			<Modification Name="DarkSide" Value="50"/>
+			<Modification Name="Thrust" Value="1"/>
 		</Modifications>
 		<Triggers>Темная сторона</Triggers>
 		<Options>
@@ -4530,6 +4531,7 @@
 		</Actions>
 		<Modifications>
 			<Modification Name="Hitpoints" Value="-5"/>
+			<Modification Name="EnemyThrust" Value="1"/>
 		</Modifications>
 		<Options>
 			<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -4646,6 +4648,9 @@
 			<Text Size="small">+1 укол</Text>
 			<Text>Противник делает характерное движение, готовясь нанести Удар с разворота, а вы применяете защиту. Бросьте кубик, и определите эффективность защитного приема, а также прибавьте себе еще один укол.</Text>
 		</Texts>
+		<Modifications>
+			<Modification Name="Thrust" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="406" Text="Вы нанесли 3 укола" OnlyIf="УКОЛОВ > 2"/>
 			<Option Destination="405" Text="В ином случае"/>
@@ -4664,6 +4669,9 @@
 				<Aftertext>А Жюлю засчитайте еще один укол.</Aftertext>
 			</Action>
 		</Actions>
+		<Modifications>
+			<Modification Name="EnemyThrust" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="404" Text="Он нанес 3 укола" Singleton="УКОЛОВ У ВРАГА > 2"/>
 			<Option Destination="405" Text="В ином случае"/>
@@ -4774,6 +4782,9 @@
 				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
+		<Modifications>
+			<Modification Name="EnemyThrust" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="379" Text="Способности Силы можно применить в любой момент боя"/>
 			<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -4800,6 +4811,9 @@
 				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
+		<Modifications>
+			<Modification Name="Thrust" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="380" Text="Если вам удалось отбавить Выносливость противника до 15"/>
 			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
@@ -4829,6 +4843,7 @@
 		</Actions>
 		<Modifications>
 			<Modification Name="Hitpoints" Value="-4"/>
+			<Modification Name="EnemyThrust" Value="1"/>
 		</Modifications>
 		<Options>
 			<Option Destination="380" Text="Если вам удалось отбавить Выносливость противника до 15"/>
@@ -4884,6 +4899,9 @@
 			<Text Size="small">+1 укол</Text>
 			<Text>Жюль не успевает развернуть достаточно быстро, и вы успеваете нанести ему укол в плечо.\n\nКоротко вскрикнув от боли (отнимите у него из Выносливости выпавшее в предыдущем параграфе число), он атакует вас еще яростнее.\n\nВернитесь в параграф дуэли, где вы решили применить Технику Силы.\n\nПрименение Прыжка Силы больше не даст вам преимущества в этой дуэли — противник понял, как вы готовитесь к нему.</Text>
 		</Texts>
+		<Modifications>
+			<Modification Name="Thrust" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="0"/>
 		</Options>
@@ -4966,6 +4984,7 @@
 		</Actions>
 		<Modifications>
 			<Modification Name="Hitpoints" Value="-6"/>
+			<Modification Name="EnemyThrust" Value="1"/>
 		</Modifications>
 		<Options>
 			<Option Destination="380" Text="Если вам удалось отбавить Выносливость противника до 15"/>
@@ -4994,6 +5013,7 @@
 		</Actions>
 		<Modifications>
 			<Modification Name="Hitpoints" Value="-10"/>
+			<Modification Name="EnemyThrust" Value="2"/>
 		</Modifications>
 		<Options>
 			<Option Destination="380" Text="Если вам удалось отбавить Выносливость противника до 15"/>
@@ -5187,6 +5207,9 @@
 				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
+		<Modifications>
+			<Modification Name="Thrust" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="437" Text="Если вам удалось отбавить Выносливость противника до 15"/>
 			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
@@ -5228,6 +5251,7 @@
 		</Texts>
 		<Modifications>
 			<Modification Name="DarkSide" Value="50"/>
+			<Modification Name="Thrust" Value="1"/>
 		</Modifications>
 		<Triggers>Темная сторона</Triggers>
 		<Options>
