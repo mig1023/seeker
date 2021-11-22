@@ -46,9 +46,14 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("|"))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("|"))
+            {
                 return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
-
+            }
             else
             {
                 foreach (string oneOption in option.Split(','))
@@ -62,13 +67,13 @@ namespace Seeker.Gamebook.YounglingTournament
                     {
                         int level = Game.Other.LevelParse(option);
 
-                        if (oneOption.Contains("ПИЛОТ >") && (level <= protagonist.Pilot))
+                        if (oneOption.Contains("ПИЛОТ >") && (level >= protagonist.Pilot))
                             return false;
 
-                        if (oneOption.Contains("УКОЛОВ >") && (level <= protagonist.Thrust))
+                        if (oneOption.Contains("УКОЛОВ >") && (level >= protagonist.Thrust))
                             return false;
 
-                        if (oneOption.Contains("УКОЛОВ У ВРАГА >") && (level <= protagonist.EnemyThrust))
+                        if (oneOption.Contains("УКОЛОВ У ВРАГА >") && (level >= protagonist.EnemyThrust))
                             return false;
                     }
 
@@ -448,7 +453,7 @@ namespace Seeker.Gamebook.YounglingTournament
                     character.Name, wound, character.Hitpoints));
         }
 
-        private bool UseForcesСhance() => Game.Dice.Roll() % 2 == 0;
+        private bool UseForcesСhance() => true; // Game.Dice.Roll() % 2 == 0;
 
         private bool SpeedActivation(ref List<string> fight, ref bool speedActivate, List<Character> EnemiesList)
         {
@@ -499,6 +504,7 @@ namespace Seeker.Gamebook.YounglingTournament
                     return true;
 
                 case 3:
+                case 5:
                     fight.Add("BOLD|Вы применяете Прыжок Силы!");
 
                     int jump = Game.Dice.Roll();
@@ -524,6 +530,7 @@ namespace Seeker.Gamebook.YounglingTournament
                     return true;
 
                 case 4:
+                case 6:
                     if (protagonist.ForceTechniques[ForcesTypes.Suffocation] == 0)
                         return false;
 
