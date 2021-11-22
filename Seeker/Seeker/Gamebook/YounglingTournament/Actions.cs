@@ -515,6 +515,10 @@ namespace Seeker.Gamebook.YounglingTournament
 
                         fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
                             target.Name, jump, target.Hitpoints));
+
+                        protagonist.Thrust += 1;
+
+                        fight.Add("GOOD|Вы наносите укол противнику!");
                     }
 
                     return true;
@@ -534,6 +538,10 @@ namespace Seeker.Gamebook.YounglingTournament
 
                     fight.Add(String.Format("GOOD|{0} теряет {1} ед.выносливости (осталось {2})",
                         target.Name, Game.Dice.Symbol(suffWound), target.Hitpoints));
+
+                    protagonist.Thrust += 1;
+
+                    fight.Add("GOOD|Вы наносите укол противнику!");
 
                     return true;
 
