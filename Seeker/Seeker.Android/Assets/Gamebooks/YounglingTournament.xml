@@ -3396,6 +3396,8 @@
 		</Texts>
 		<Modifications>
 			<Modification Name="Hitpoints" Restore="true"/>
+			<Modification Name="Thrust" Empty="true"/>
+			<Modification Name="EnemyThrust" Empty="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="318"/>
@@ -4124,6 +4126,8 @@
 		</Texts>
 		<Modifications>
 			<Modification Name="Hitpoints" Value="10"/>
+			<Modification Name="Thrust" Empty="true"/>
+			<Modification Name="EnemyThrust" Empty="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="378"/>
@@ -5085,6 +5089,8 @@
 		</Texts>
 		<Modifications>
 			<Modification Name="Hitpoints" Value="5"/>
+			<Modification Name="Thrust" Empty="true"/>
+			<Modification Name="EnemyThrust" Empty="true"/>
 		</Modifications>
 		<Options>
 			<Option Destination="435"/>
@@ -5899,6 +5905,10 @@
 	<Paragraph>
 		<ID>492</ID>
 		<Text>Судья провозглашает:\n\n— Финальный бой! Винс Гирт, Кай Орест, Марика Затт и Эван Макгил! Бой произойдет на арене!\n\nВы тяжело вздыхаете и выходите на бой. Это будет невероятно трудно, вся троица соперников — из одного клана.\n\nПротивники сразу расходятся широким фронтом. Прямо перед вами — Марика, Эван заходит слева, а Винс справа.</Text>
+		<Modifications>
+			<Modification Name="Thrust" Empty="true"/>
+			<Modification Name="EnemyThrust" Empty="true"/>
+		</Modifications>
 		<Options>
 			<Option Destination="499" Text="Если у вас есть Корпускула Комы, то самое время применить ее" OnlyIf="Корпускула Комы"/>
 			<Option Destination="500"/>
@@ -7162,6 +7172,10 @@
 	<Paragraph>
 		<ID>588</ID>
 		<Text>— Марика Затт выбывает из финального боя! — провозглашает судья.\n\nВы коротко кланяетесь юнлингу, благодаря ее за бой, и она, с трудом встав, отвечает тем же.\n\nВы оглядываетесь в поисках Ливии — закончила ли она свой бой.\n\nОна тут как тут, и уже покончила со своим противником:\n\n— Я так и знала, что именно тебя надо будет завалить, чтобы стать джедаем, — шепчет она. — Чертов недоумок.</Text>
+		<Modifications>
+			<Modification Name="Thrust" Empty="true"/>
+			<Modification Name="EnemyThrust" Empty="true"/>
+		</Modifications>
 		<Options>
 			<Option Destination="603"/>
 		</Options>
@@ -7979,6 +7993,10 @@
 	<Paragraph>
 		<ID>672</ID>
 		<Text>Сложно работать с двумя потоками Силы, но вы справляетесь: резко дернув Даммара Ви в сторону, тащите меч на себя. Как вы и ожидали, Арладо Ураки бросает ученика, опасаясь, что вы попробуете зацепить мечом ее, а бывший соклан не успевает ничего сделать и бьется головой о камень, теряя сознание. С воплем ярости, повелительница ситхов атакует вас.</Text>
+		<Modifications>
+			<Modification Name="Thrust" Empty="true"/>
+			<Modification Name="EnemyThrust" Empty="true"/>
+		</Modifications>
 		<Options>
 			<Option Destination="674"/>
 		</Options>
