@@ -5378,8 +5378,7 @@
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
-		</Actions>
-		
+		</Actions>	
 		<Options>
 			<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
 			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
@@ -5420,6 +5419,7 @@
 		</Actions>
 		<Modifications>
 			<Modification Name="Hitpoints" Value="-5"/>
+			<Modification Name="EnemyThrust" Value="1"/>
 		</Modifications>
 		<Options>
 			<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -5534,6 +5534,9 @@
 			<Text Size="small">+1 укол</Text>
 			<Text>Противник делает характерное движение, готовясь нанести Удар с разворота, а вы применяете защиту. Бросьте кубик, и определите эффективность защитного приема, а также прибавьте себе еще один укол.</Text>
 		</Texts>
+		<Modifications>
+			<Modification Name="Thrust" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="463" Text="Вы нанесли 3 укола" OnlyIf="УКОЛОВ > 2"/>
 			<Option Destination="462" Text="В ином случае"/>
@@ -5545,6 +5548,9 @@
 			<Text Size="small">+1 укол Артхт Тархтхтх</Text>
 			<Text>Противник неожиданно наносит Удар с разворота. Бросьте кубик и вычтите у себя выпавшее количество Выносливости:</Text>
 		</Texts>
+		<Modifications>
+			<Modification Name="EnemyThrust" Value="1"/>
+		</Modifications>
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
@@ -5660,6 +5666,7 @@
 		</Actions>
 		<Modifications>
 			<Modification Name="Hitpoints" Value="-5"/>
+			<Modification Name="EnemyThrust" Value="1"/>
 		</Modifications>
 		<Options>
 			<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -5685,6 +5692,9 @@
 				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
 		</Actions>
+		<Modifications>
+			<Modification Name="Thrust" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="437" Text="Если вам удалось отбавить Выносливость противника до 15"/>
 			<Option Destination="439" Text="если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
@@ -5711,6 +5721,7 @@
 		</Actions>
 		<Modifications>
 			<Modification Name="Hitpoints" Value="-4"/>
+			<Modification Name="EnemyThrust" Value="1"/>
 		</Modifications>
 		<Options>
 			<Option Destination="437" Text="Если вам удалось отбавить Выносливость противника до 15"/>
@@ -5765,6 +5776,9 @@
 			<Text Size="small">+1 укол</Text>
 			<Text>Артхт Тархтхтх не успевает развернуть достаточно быстро, и вы наносите ему укол в плечо.\n\nКоротко вскрикнув от боли (отнимите у него из Выносливости выпавшее в предыдущем параграфе число), он атакует вас еще яростнее.\n\nВернитесь в параграф дуэли, где вы решили применить Технику Силы.\n\nПрименение Прыжка Силы больше не даст вам преимущества в этой дуэли — противник понял, как вы готовитесь к нему.</Text>
 		</Texts>
+		<Modifications>
+			<Modification Name="Thrust" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="0"/>
 		</Options>
@@ -6138,6 +6152,9 @@
 			<Text Size="small">+2 укола противникам</Text>
 			<Text>Отбрасывая соперника, вы не успели отразить атаки остальных, и они наносят вам по уколу.</Text>
 		</Texts>
+		<Modifications>
+			<Modification Name="EnemyThrust" Value="2"/>
+		</Modifications>	
 		<Options>
 			<Option Destination="602" Text="У противников 3 и больше уколов"/>
 			<Option Destination="510" Text="Еще нет"/>
@@ -6174,6 +6191,9 @@
 			<Text Size="small">+1 укол противникам</Text>
 			<Text>Благодаря прыжку избежав атаки, и отбив удар Марики, вы пропускаете укол от атаки третьего соперника.</Text>
 		</Texts>
+		<Modifications>
+			<Modification Name="EnemyThrust" Value="1"/>
+		</Modifications>
 		<Options>
 			<Option Destination="602" Text="У противников 3 и больше уколов"/>
 			<Option Destination="510" Text="Еще нет"/>
@@ -6185,6 +6205,9 @@
 			<Text Size="small">+2 укола противникам</Text>
 			<Text>Вы поднимаете противника, применяя удушение, но тут же пропускаете два укола от атак противников.\n\nОтпустив его, отходите назад.</Text>
 		</Texts>
+		<Modifications>
+			<Modification Name="EnemyThrust" Value="2"/>
+		</Modifications>
 		<Options>
 			<Option Destination="602" Text="У противников 3 и больше уколов"/>
 			<Option Destination="510" Text="Еще нет"/>
