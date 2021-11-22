@@ -26,7 +26,7 @@ namespace Seeker.Gamebook.YounglingTournament
         public int Level { get; set; }
 
 
-        private static List<int> ForceTechniquesUsed { get; set; }
+        private static List<int> ForceTechniquesOrder { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -453,7 +453,24 @@ namespace Seeker.Gamebook.YounglingTournament
                     character.Name, wound, character.Hitpoints));
         }
 
-        private bool UseForcesСhance() => true; // Game.Dice.Roll() % 2 == 0;
+        private List<int> NewForceTechniquesOrder()
+        {
+            List<int> forceTechniquesOrder = new List<int> { 1, 2 };
+
+            if (protagonist.ForceTechniques[ForcesTypes.Suffocation] > 0)
+                forceTechniquesOrder.Add(3);
+
+            for (int i = 0; i < forceTechniquesOrder.Count; i++)
+            {
+                int newPosition = Game.Dice.Roll(size: forceTechniquesOrder.Count) - 1;
+
+                int replace = forceTechniquesOrder[newPosition];
+                forceTechniquesOrder[newPosition] = forceTechniquesOrder[i];
+                forceTechniquesOrder[i] = replace;
+            }
+
+            return forceTechniquesOrder;
+        }
 
         private bool SpeedActivation(ref List<string> fight, ref bool speedActivate, List<Character> EnemiesList)
         {
@@ -476,32 +493,19 @@ namespace Seeker.Gamebook.YounglingTournament
             if (SpeedActivate && !speedActivate)
                 return SpeedActivation(ref fight, ref speedActivate, EnemiesList);
 
-            if (WithoutTechnique || speedActivate || !UseForcesСhance())
+            if (WithoutTechnique || speedActivate)
                 return false;
-
-            //int forceTechniques = Game.Dice.Roll();
-
-            //if (forceTechniques > 3)
-            //    forceTechniques -= 3;
-
-            //if (ForceTechniquesAlreadyUsed.Contains(forceTechniques))
-            //    return false;
-            //else
-            //    ForceTechniquesAlreadyUsed.Add(forceTechniques);
-
-            //if ((forceTechniques == 3) && (protagonist.ForceTechniques[ForcesTypes.Suffocation] == 0) && )
-            //{
-            //    if (ForceTechniquesAlreadyUsed.Count >= 3)
-            //}
 
             int forceTechniques = 0;
 
-            for (int i = 0; i < ForceTechniquesUsed.Count; i++)
+            for (int i = 0; i < ForceTechniquesOrder.Count; i++)
             {
-                if (ForceTechniquesUsed[i] != 0)
+                if (ForceTechniquesOrder[i] != 0)
                 {
-                    forceTechniques = ForceTechniquesUsed[i];
-                    ForceTechniquesUsed[i] = 0;
+                    forceTechniques = ForceTechniquesOrder[i];
+                    ForceTechniquesOrder[i] = 0;
+
+                    break;
                 }
             }
 
@@ -571,6 +575,7 @@ namespace Seeker.Gamebook.YounglingTournament
             }
         }
 
+
         public List<string> SwordFight()
         {
             List<string> fight = new List<string>();
@@ -578,19 +583,7 @@ namespace Seeker.Gamebook.YounglingTournament
             Dictionary<Character, int> FightEnemies = new Dictionary<Character, int>();
             List<Character> EnemiesList = new List<Character>();
 
-            ForceTechniquesUsed = new List<int> { 1, 2 };
-
-            if (protagonist.ForceTechniques[ForcesTypes.Suffocation] > 0)
-                ForceTechniquesUsed.Add(3);
-
-            for (int i = 0; i < ForceTechniquesUsed.Count; i++)
-            {
-                int newPosition = Game.Dice.Roll(size: ForceTechniquesUsed.Count) - 1;
-
-                int replace = ForceTechniquesUsed[newPosition];
-                ForceTechniquesUsed[newPosition] = ForceTechniquesUsed[i];
-                ForceTechniquesUsed[i] = replace;
-            }
+            ForceTechniquesOrder = NewForceTechniquesOrder();
 
             foreach (Character enemy in Enemies)
             {
