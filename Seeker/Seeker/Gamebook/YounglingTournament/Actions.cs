@@ -26,7 +26,7 @@ namespace Seeker.Gamebook.YounglingTournament
         public int Level { get; set; }
 
 
-        private static List<int> ForceTechniquesAlreadyUsed { get; set; }
+        private static List<int> ForceTechniquesUsed { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -479,19 +479,38 @@ namespace Seeker.Gamebook.YounglingTournament
             if (WithoutTechnique || speedActivate || !UseForcesСhance())
                 return false;
 
-            int forceTechniques = Game.Dice.Roll();
+            //int forceTechniques = Game.Dice.Roll();
 
-            if (ForceTechniquesAlreadyUsed.Contains(forceTechniques))
-                return false;
-            else
-                ForceTechniquesAlreadyUsed.Add(forceTechniques);
+            //if (forceTechniques > 3)
+            //    forceTechniques -= 3;
+
+            //if (ForceTechniquesAlreadyUsed.Contains(forceTechniques))
+            //    return false;
+            //else
+            //    ForceTechniquesAlreadyUsed.Add(forceTechniques);
+
+            //if ((forceTechniques == 3) && (protagonist.ForceTechniques[ForcesTypes.Suffocation] == 0) && )
+            //{
+            //    if (ForceTechniquesAlreadyUsed.Count >= 3)
+            //}
+
+            int forceTechniques = 0;
+
+            for (int i = 0; i < ForceTechniquesUsed.Count; i++)
+            {
+                if (ForceTechniquesUsed[i] != 0)
+                {
+                    forceTechniques = ForceTechniquesUsed[i];
+                    ForceTechniquesUsed[i] = 0;
+                }
+            }
+
+            if (forceTechniques == 0)
+                return SpeedActivation(ref fight, ref speedActivate, EnemiesList);
 
             switch (forceTechniques)
             {
                 case 1:
-                    return SpeedActivation(ref fight, ref speedActivate, EnemiesList);
-
-                case 2:
                     fight.Add("BOLD|Вы применяете Толчок Силы!");
 
                     int pushWound = Game.Dice.Roll();
@@ -503,8 +522,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
                     return true;
 
-                case 3:
-                case 5:
+                case 2:
                     fight.Add("BOLD|Вы применяете Прыжок Силы!");
 
                     int jump = Game.Dice.Roll();
@@ -529,11 +547,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
                     return true;
 
-                case 4:
-                case 6:
-                    if (protagonist.ForceTechniques[ForcesTypes.Suffocation] == 0)
-                        return false;
-
+                case 3:
                     fight.Add("BOLD|Вы применяете Удушение Силы!");
 
                     protagonist.DarkSide += 50;
@@ -564,7 +578,19 @@ namespace Seeker.Gamebook.YounglingTournament
             Dictionary<Character, int> FightEnemies = new Dictionary<Character, int>();
             List<Character> EnemiesList = new List<Character>();
 
-            ForceTechniquesAlreadyUsed = new List<int>();
+            ForceTechniquesUsed = new List<int> { 1, 2 };
+
+            if (protagonist.ForceTechniques[ForcesTypes.Suffocation] > 0)
+                ForceTechniquesUsed.Add(3);
+
+            for (int i = 0; i < ForceTechniquesUsed.Count; i++)
+            {
+                int newPosition = Game.Dice.Roll(size: ForceTechniquesUsed.Count) - 1;
+
+                int replace = ForceTechniquesUsed[newPosition];
+                ForceTechniquesUsed[newPosition] = ForceTechniquesUsed[i];
+                ForceTechniquesUsed[i] = replace;
+            }
 
             foreach (Character enemy in Enemies)
             {
