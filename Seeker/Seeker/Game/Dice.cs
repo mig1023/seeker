@@ -17,12 +17,12 @@ namespace Seeker.Game
             [6] = "⚅",
         };
 
-        public static int Roll(int dices = 1)
+        public static int Roll(int dices = 1, int size = 6)
         {
             int result = 0;
 
             for (int i = 0; i < dices; i++)
-                result += rand.Next(6) + 1;
+                result += rand.Next(size) + 1;
 
             return result;
         }
