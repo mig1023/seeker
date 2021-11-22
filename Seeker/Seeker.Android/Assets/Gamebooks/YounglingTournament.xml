@@ -3426,7 +3426,7 @@
 		<Options>
 			<Option Destination="354" Text="Если у вас есть Корпускула Комы, и вы хотите ее использовать" OnlyIf="Корпускула Комы"/>
 			<Option Destination="320" Text="Если вам удалось отбавить Выносливость противника до 20"/>
-			<Option Destination="322" Text="Если вы нанесли ему два укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему два укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="321" Text="Если он выиграл любые 4 раунда"/>
 			<Option Destination="331" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
@@ -3479,7 +3479,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="320" Text="Если вам удалось отбавить Выносливость противника до 15"/>
-			<Option Destination="322" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="331" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -3548,7 +3548,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="322" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="331" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -3569,7 +3569,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="322" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="331" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -3609,7 +3609,7 @@
 		<Triggers>Темная сторона</Triggers>
 		<Options>
 			<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="322" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="331" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -3648,7 +3648,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="322" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="331" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -3691,7 +3691,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="322" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="331" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -3742,7 +3742,7 @@
 		<RemoveTriggers>Концентрация</RemoveTriggers>
 		<Options>
 			<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="322" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="338" Text="Если ваша Выносливость упала до 0"/>
 		</Options>
 	</Paragraph>
@@ -3762,7 +3762,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="322" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="338" Text="Если ваша Выносливость упала до 0"/>
 		</Options>
 	</Paragraph>
@@ -3821,7 +3821,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="344" Text="Он нанес 3 укола"/>
+			<Option Destination="344" Text="Он нанес 3 укола" Singleton="УКОЛОВ У ВРАГА > 2"/>
 			<Option Destination="345" Text="В ином случае"/>
 		</Options>
 	</Paragraph>
@@ -3847,9 +3847,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="319" Text="Способности Силы можно применить в любой момент боя"/>
 			<Option Destination="341" Text="Если вам удалось отбавить Выносливость противника до 0"/>
-			<Option Destination="322" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="331" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -3884,7 +3883,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="322" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="331" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -3934,7 +3933,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="322" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="331" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -3958,7 +3957,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="320" Text="Если вам удалось отбавить Выносливость противника до 15"/>
-			<Option Destination="322" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="331" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -3986,7 +3985,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="320" Text="Если вам удалось отбавить Выносливость противника до 15"/>
-			<Option Destination="322" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="322" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="331" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -4256,7 +4255,7 @@
 		<Options>
 			<Option Destination="414" Text="Если у вас есть Корпускула Комы, и вы хотите ее использовать" OnlyIf="Корпускула Комы"/>
 			<Option Destination="380" Text="Если вам удалось отбавить Выносливость противника до 20"/>
-			<Option Destination="382" Text="Если вы нанесли ему два укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему два укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="381" Text="Если он выиграл 1 раунд"/>
 			<Option Destination="391" Text="Ваша Выносливость упала до 5"/>
 		</Options>
@@ -4367,7 +4366,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="391" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -4390,7 +4389,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="391" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -4429,7 +4428,7 @@
 		<Triggers>Темная сторона</Triggers>
 		<Options>
 			<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="391" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -4471,7 +4470,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="391" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -4515,7 +4514,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="391" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -4567,7 +4566,7 @@
 		<RemoveTriggers>Концентрация</RemoveTriggers>
 		<Options>
 			<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="398" Text="Если ваша Выносливость упала до 0"/>
 		</Options>
 	</Paragraph>
@@ -4588,7 +4587,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="398" Text="Если ваша Выносливость упала до 0"/>
 		</Options>
 	</Paragraph>
@@ -4629,7 +4628,7 @@
 			<Text>Противник делает характерное движение, готовясь нанести Удар с разворота, а вы применяете защиту. Бросьте кубик, и определите эффективность защитного приема, а также прибавьте себе еще один укол.</Text>
 		</Texts>
 		<Options>
-			<Option Destination="406" Text="Вы нанесли 3 укола"/>
+			<Option Destination="406" Text="Вы нанесли 3 укола" OnlyIf="УКОЛОВ > 2"/>
 			<Option Destination="405" Text="В ином случае"/>
 		</Options>
 	</Paragraph>
@@ -4647,7 +4646,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="404" Text="Он нанес 3 укола"/>
+			<Option Destination="404" Text="Он нанес 3 укола" Singleton="УКОЛОВ У ВРАГА > 2"/>
 			<Option Destination="405" Text="В ином случае"/>
 		</Options>
 	</Paragraph>
@@ -4674,7 +4673,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="401" Text="Если вам удалось отбавить Выносливость противника до 0"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="398" Text="Если ваша Выносливость упала до 0"/>
 		</Options>
 	</Paragraph>
@@ -4710,7 +4709,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="391" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -4759,7 +4758,7 @@
 		<Options>
 			<Option Destination="379" Text="Способности Силы можно применить в любой момент боя"/>
 			<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="391" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -4784,7 +4783,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="380" Text="Если вам удалось отбавить Выносливость противника до 15"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="391" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -4814,7 +4813,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="380" Text="Если вам удалось отбавить Выносливость противника до 15"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="391" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -4923,7 +4922,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="380" Text="Если вам удалось отбавить Выносливость противника до 15"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="391" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -4951,7 +4950,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="380" Text="Если вам удалось отбавить Выносливость противника до 15"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="391" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -4979,7 +4978,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="380" Text="Если вам удалось отбавить Выносливость противника до 15"/>
-			<Option Destination="382" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="382" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="391" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -5119,7 +5118,7 @@
 		<Options>
 			<Option Destination="471" Text="Если у вас есть Корпускула Комы, и вы хотите ее использовать" OnlyIf="Корпускула Комы"/>
 			<Option Destination="437" Text="Если вам удалось отбавить Выносливость противника до 20"/>
-			<Option Destination="439" Text="Если вы нанесли ему два укола"/>
+			<Option Destination="439" Text="Если вы нанесли ему два укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="438" Text="Если он выиграл любые 4 раунда"/>
 			<Option Destination="448" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
@@ -5171,7 +5170,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="437" Text="Если вам удалось отбавить Выносливость противника до 15"/>
-			<Option Destination="439" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="448" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -5240,7 +5239,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="439" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="448" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -5261,7 +5260,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="439" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="448" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -5299,7 +5298,7 @@
 		<Triggers>Темная сторона</Triggers>
 		<Options>
 			<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="439" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="448" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -5340,7 +5339,7 @@
 		
 		<Options>
 			<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="439" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="448" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -5380,9 +5379,8 @@
 			<Modification Name="Hitpoints" Value="-5"/>
 		</Modifications>
 		<Options>
-			<Option Destination="436" Text="Способности Силы можно применить в любой момент боя"/>
 			<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="439" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="448" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -5433,7 +5431,7 @@
 		<RemoveTriggers>Концентрация</RemoveTriggers>
 		<Options>
 			<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="439" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="455" Text="Если ваша Выносливость упала до 0"/>
 		</Options>
 	</Paragraph>
@@ -5453,7 +5451,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="439" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="455" Text="Если ваша Выносливость упала до 0"/>
 		</Options>
 	</Paragraph>
@@ -5494,7 +5492,7 @@
 			<Text>Противник делает характерное движение, готовясь нанести Удар с разворота, а вы применяете защиту. Бросьте кубик, и определите эффективность защитного приема, а также прибавьте себе еще один укол.</Text>
 		</Texts>
 		<Options>
-			<Option Destination="463" Text="Вы нанесли 3 укола"/>
+			<Option Destination="463" Text="Вы нанесли 3 укола" OnlyIf="УКОЛОВ > 2"/>
 			<Option Destination="462" Text="В ином случае"/>
 		</Options>
 	</Paragraph>
@@ -5512,7 +5510,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="461" Text="Он нанес 3 укола"/>
+			<Option Destination="461" Text="Он нанес 3 укола" Singleton="УКОЛОВ У ВРАГА > 2"/>
 			<Option Destination="462" Text="В ином случае"/>
 		</Options>
 	</Paragraph>
@@ -5539,7 +5537,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="458" Text="Если вам удалось отбавить Выносливость противника до 0"/>
-			<Option Destination="439" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="448" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -5574,7 +5572,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="439" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="448" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -5622,7 +5620,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
-			<Option Destination="439" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="448" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -5646,7 +5644,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="437" Text="Если вам удалось отбавить Выносливость противника до 15"/>
-			<Option Destination="439" Text="если вы нанесли ему 2 укола"/>
+			<Option Destination="439" Text="если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="448" Text="если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -5673,7 +5671,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="437" Text="Если вам удалось отбавить Выносливость противника до 15"/>
-			<Option Destination="439" Text="Если вы нанесли ему 2 укола"/>
+			<Option Destination="439" Text="Если вы нанесли ему 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="448" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -6401,7 +6399,7 @@
 		<Options>
 			<Option Destination="570" Text="Если у вас есть Корпускула Комы, и вы хотите ее использовать" OnlyIf="Корпускула Комы"/>
 			<Option Destination="536" Text="Если вам удалось отбавить Выносливость противника до 20"/>
-			<Option Destination="538" Text="Если вы нанесли ей два укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей два укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="537" Text="Вы выиграли 3 раунда подряд"/>
 			<Option Destination="547" Text="Ваша Выносливость упала до 5"/>
 		</Options>
@@ -6500,7 +6498,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
-			<Option Destination="538" Text="Если вы нанесли ей 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="547" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -6522,7 +6520,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
-			<Option Destination="538" Text="Если вы нанесли ей 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="547" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -6562,7 +6560,7 @@
 		<Options>
 			<Option Destination="535" Text="Способности Силы можно применить в любой момент боя"/>
 			<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
-			<Option Destination="538" Text="Если вы нанесли ее 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ее 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="547" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -6604,7 +6602,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
-			<Option Destination="538" Text="Если вы нанесли ей 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="547" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -6648,7 +6646,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
-			<Option Destination="538" Text="Если вы нанесли ей 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="547" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -6700,7 +6698,7 @@
 		<RemoveTriggers>Концентрация</RemoveTriggers>
 		<Options>
 			<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
-			<Option Destination="538" Text="Если вы нанесли ей 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="554" Text="Если ваша Выносливость упала до 0"/>
 		</Options>
 	</Paragraph>
@@ -6721,7 +6719,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
-			<Option Destination="538" Text="Если вы нанесли ей 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="554" Text="Если ваша Выносливость упала до 0"/>
 		</Options>
 	</Paragraph>
@@ -6762,7 +6760,7 @@
 			<Text>Противница делает характерное движение, готовясь нанести Удар с разворота, а вы применяете защиту. Бросьте кубик, и определите эффективность защитного приема, а также прибавьте себе еще один укол.</Text>
 		</Texts>
 		<Options>
-			<Option Destination="562" Text="Вы нанесли 3 укола"/>
+			<Option Destination="562" Text="Вы нанесли 3 укола" OnlyIf="УКОЛОВ > 2"/>
 			<Option Destination="561" Text="В ином случае"/>
 		</Options>
 	</Paragraph>
@@ -6779,7 +6777,7 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="560" Text="Если она нанесли 3 укола"/>
+			<Option Destination="560" Text="Если она нанесли 3 укола" Singleton="УКОЛОВ У ВРАГА > 2"/>
 			<Option Destination="561" Text="Иначе же"/>
 		</Options>
 	</Paragraph>
@@ -6807,7 +6805,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="557" Text="Если вам удалось отбавить Выносливость противницы до 0"/>
-			<Option Destination="538" Text="Если вы нанесли ей 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="547" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -6843,7 +6841,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
-			<Option Destination="538" Text="Если вы нанесли ей 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="547" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -6891,7 +6889,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
-			<Option Destination="538" Text="Если вы нанесли ей 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="547" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -6917,7 +6915,7 @@
 		
 		<Options>
 			<Option Destination="536" Text="Если вам удалось отбавить Выносливость противницы до 15"/>
-			<Option Destination="538" Text="Если вы нанесли ей 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="547" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -6947,7 +6945,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="536" Text="Если вам удалось отбавить Выносливость противницы до 15"/>
-			<Option Destination="538" Text="Если вы нанесли ей 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="547" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -7049,7 +7047,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="536" Text="Если вам удалось отбавить Выносливость противницы до 15"/>
-			<Option Destination="538" Text="Если вы нанесли ей 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="547" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -7078,7 +7076,7 @@
 		</Actions>
 		<Options>
 			<Option Destination="536" Text="Если вам удалось отбавить Выносливость противницы до 15"/>
-			<Option Destination="538" Text="Если вы нанесли ей 2 укола"/>
+			<Option Destination="538" Text="Если вы нанесли ей 2 укола" OnlyIf="УКОЛОВ > 1"/>
 			<Option Destination="547" Text="Если ваша Выносливость упала до 5"/>
 		</Options>
 	</Paragraph>
@@ -7388,7 +7386,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="615" Text="Ваша Выносливость упала до 0"/>
-			<Option Destination="596" Text="Суммарно в финале вы получили 3 укола"/>
+			<Option Destination="596" Text="Суммарно в финале вы получили 3 укола" Singleton="УКОЛОВ У ВРАГА > 2"/>
 			<Option Destination="609"/>
 		</Options>
 	</Paragraph>
@@ -7425,7 +7423,7 @@
 		</Modifications>
 		<Options>
 			<Option Destination="615" Text="Если ваша Выносливость упала до 0"/>
-			<Option Destination="596" Text="Если суммарно в финале вы получили 3 укола"/>
+			<Option Destination="596" Text="Если суммарно в финале вы получили 3 укола" Singleton="УКОЛОВ У ВРАГА > 2"/>
 			<Option Destination="613" Text="В любом другом случае"/>
 		</Options>
 	</Paragraph>
