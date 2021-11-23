@@ -125,37 +125,44 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public override bool CheckOnlyIf(string option)
         {
-            foreach (string oneOption in option.Split(','))
+            if (String.IsNullOrEmpty(option))
             {
-                if (oneOption.Contains(">") || oneOption.Contains("<"))
-                {
-                    int level = Game.Other.LevelParse(oneOption);
-
-                    if (oneOption.Contains("ТАНЬГА >=") && (level > protagonist.Tanga))
-                        return false;
-
-                    else if (oneOption.Contains("СЛАВА_АКЫНА >=") && (level > protagonist.AkynGlory))
-                        return false;
-
-                    else if (oneOption.Contains("ПОПУЛЯРНОСТЬ >") && (level >= protagonist.Popularity))
-                        return false;
-
-                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ >") && (level >= protagonist.UnitOfTime))
-                        return false;
-
-                    else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ <=") && (level < protagonist.UnitOfTime))
-                        return false;
-                }
-                else if (oneOption.Contains("!"))
-                {
-                    if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
-                        return false;
-                }
-                else if (!Game.Option.IsTriggered(oneOption.Trim()))
-                    return false;
+                return true;
             }
+            else
+            {
+                foreach (string oneOption in option.Split(','))
+                {
+                    if (oneOption.Contains(">") || oneOption.Contains("<"))
+                    {
+                        int level = Game.Other.LevelParse(oneOption);
 
-            return true;
+                        if (oneOption.Contains("ТАНЬГА >=") && (level > protagonist.Tanga))
+                            return false;
+
+                        else if (oneOption.Contains("СЛАВА_АКЫНА >=") && (level > protagonist.AkynGlory))
+                            return false;
+
+                        else if (oneOption.Contains("ПОПУЛЯРНОСТЬ >") && (level >= protagonist.Popularity))
+                            return false;
+
+                        else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ >") && (level >= protagonist.UnitOfTime))
+                            return false;
+
+                        else if (oneOption.Contains("ЕДИНИЦЫ_ВРЕМЕНИ <=") && (level < protagonist.UnitOfTime))
+                            return false;
+                    }
+                    else if (oneOption.Contains("!"))
+                    {
+                        if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
+                            return false;
+                    }
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                        return false;
+                }
+
+                return true;
+            }
         }
 
         public List<string> Test()
