@@ -337,9 +337,14 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("|"))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("|"))
+            {
                 return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
-
+            }
             else
             {
                 foreach (string oneOption in option.Split(','))
@@ -373,7 +378,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         private bool EnemyWound(List<Character> FightEnemies, ref int enemyWounds, ref List<string> fight, bool onlyCheck = false)
         {
             if (!onlyCheck)
+            {
                 enemyWounds += 1;
+            }
 
             bool enemyLost = FightEnemies.Where(x => x.Endurance > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() == 0;
 
@@ -384,7 +391,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 return true;
             }
             else
+            {
                 return false;
+            }
         }
 
         private int UlrichFight(string enemyName, ref List<string> fight, int enemyHitStrength)
@@ -461,24 +470,36 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 fight.Add(String.Format("BAD|{0}", fail));
             }
             else
+            {
                 fight.Add(win);
+            }
         }
 
         private void CheckAdditionalWounds(ref Character protagonist, ref List<string> fight, int wounds)
         {
             if (Specificity == Specifics.ElectricDamage)
-                AddWounds(ref protagonist, ref fight, "электрического разряда", 5, "Вы потеряли ещё 3 Выносливость от разряда", "Разряд прошёл мимо");
+            {
+                AddWounds(ref protagonist, ref fight, "электрического разряда", 5,
+                    "Вы потеряли ещё 3 Выносливость от разряда", "Разряд прошёл мимо");
+            }
 
             if (Specificity == Specifics.AcidDamage)
-                AddWounds(ref protagonist, ref fight, "ожога кислотой", 6, "Вы потеряли ещё 3 Выносливость от кислоты", "Обошлось...");
+            {
+                AddWounds(ref protagonist, ref fight, "ожога кислотой", 6,
+                    "Вы потеряли ещё 3 Выносливость от кислоты", "Обошлось...");
+            }
 
             if (Specificity == Specifics.IcyTouch)
+            {
                 AddWounds(ref protagonist, ref fight, "пронизывающего холода", 5,
                     "Пронизывающий мистический холод притупил ваши чувства: теперь из Силы удара нужно будет вычитать",
                     "Вы справились с холодом, пока что...", hitStrenghtInstead: true);
+            }
 
             if (Specificity == Specifics.ToadVenom)
+            {
                 AddWounds(ref protagonist, ref fight, "яда", 5, "Вы потеряли ещё 2 Выносливость от яда", "Обошлось...", wounds: 2);
+            }
 
             if ((Specificity == Specifics.Plague) && (wounds > 2))
             {
