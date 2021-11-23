@@ -107,11 +107,18 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public override bool CheckOnlyIf(string option)
         {
-            if (protagonist.SpecialTechnique.Where(x => option == x.ToString()).Count() > 0)
+            if (String.IsNullOrEmpty(option))
+            {
                 return true;
-
-            if (option.Contains("|"))
+            }
+            else if (protagonist.SpecialTechnique.Where(x => option == x.ToString()).Count() > 0)
+            {
+                return true;
+            }
+            else if (option.Contains("|"))
+            {
                 return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
+            }
             else
             {
                 if (option.Contains(">") || option.Contains("<"))
@@ -124,8 +131,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public List<string> Get()
         {
             if ((SpecialTechnique != Character.SpecialTechniques.Nope) && (protagonist.SpecialTechnique.Count == 0))
+            {
                 protagonist.SpecialTechnique.Add(SpecialTechnique);
-
+            }
             else if ((StatStep > 0) && (protagonist.Bonuses >= 0))
             {
                 int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
@@ -137,17 +145,20 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 protagonist.Bonuses -= 1;
             }
-
             else if (((Price > 0) || (Price < 0)) && (protagonist.Coins >= Price))
             {
                 protagonist.Coins -= Price;
 
                 if (!Multiple)
+                {
                     Used = true;
+                }
 
                 if (BenefitList != null)
+                {
                     foreach (Modification modification in BenefitList)
                         modification.Do();
+                }
             }
 
             return new List<string> { "RELOAD" };
