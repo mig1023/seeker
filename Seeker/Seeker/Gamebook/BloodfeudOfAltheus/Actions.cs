@@ -122,50 +122,75 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option == "selectOnly")
+            if (String.IsNullOrEmpty(option) || (option == "selectOnly") || (option == null) || String.IsNullOrEmpty(option))
+            {
                 return true;
+            }
+            else
+            {
+                string[] values = option.Split(' ');
+                string value = (values.Length > 1 ? values[1] : "nope");
 
-            if ((option == null) || String.IsNullOrEmpty(option))
-                return true;
+                if (option.Contains("!ПОКРОВИТЕЛЬ"))
+                {
+                    return protagonist.Patron != value;
+                }
+                else if (option.Contains("ПОКРОВИТЕЛЬ"))
+                {
+                    return protagonist.Patron == value;
+                }
 
-            string[] values = option.Split(' ');
-            string value = (values.Length > 1 ? values[1] : "nope");
+                if (option.Contains("БЕЗРАЗЛИЧЕН"))
+                {
+                    return !protagonist.IsGodsFavor(value) && !protagonist.IsGodsDisFavor(value);
+                }
 
-            if (option.Contains("!ПОКРОВИТЕЛЬ"))
-                return protagonist.Patron != value;
-            else if (option.Contains("ПОКРОВИТЕЛЬ"))
-                return protagonist.Patron == value;
+                if (option.Contains("!БЛАГОСКЛОНЕН"))
+                {
+                    return !protagonist.IsGodsFavor(value);
+                }
+                else if (option.Contains("БЛАГОСКЛОНЕН"))
+                {
+                    return protagonist.IsGodsFavor(value);
+                }
 
-            if (option.Contains("БЕЗРАЗЛИЧЕН"))
-                return !protagonist.IsGodsFavor(value) && !protagonist.IsGodsDisFavor(value);
+                if (option.Contains("!НЕМИЛОСТИВ"))
+                {
+                    return !protagonist.IsGodsDisFavor(value);
+                }
+                else if (option.Contains("НЕМИЛОСТИВ"))
+                {
+                    return protagonist.IsGodsDisFavor(value);
+                }
+                    
+                if (option.Contains("ВОСКРЕШЕНИЕ"))
+                {
+                    return IsPosibleResurrection();
+                }
 
-            if (option.Contains("!БЛАГОСКЛОНЕН"))
-                return !protagonist.IsGodsFavor(value);
-            else if (option.Contains("БЛАГОСКЛОНЕН"))
-                return protagonist.IsGodsFavor(value);
+                values = option.Split('>', '=');
+                int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
 
-            if (option.Contains("!НЕМИЛОСТИВ"))
-                return !protagonist.IsGodsDisFavor(value);
-            else if (option.Contains("НЕМИЛОСТИВ"))
-                return protagonist.IsGodsDisFavor(value);
+                if (option.Contains("СЛАВА >"))
+                {
+                    return level < protagonist.Glory;
+                }
+                else if (option.Contains("СЛАВА <="))
+                {
+                    return level >= protagonist.Glory;
+                }
 
-            if (option.Contains("ВОСКРЕШЕНИЕ"))
-                return IsPosibleResurrection();
+                if (option.Contains("ПОЗОР >"))
+                {
+                    return level < protagonist.Shame;
+                }
+                else if (option.Contains("ПОЗОР <="))
+                {
+                    return level >= protagonist.Shame;
+                }
 
-            values = option.Split('>', '=');
-            int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
-
-            if (option.Contains("СЛАВА >"))
-                return level < protagonist.Glory;
-            else if (option.Contains("СЛАВА <="))
-                return level >= protagonist.Glory;
-
-            if (option.Contains("ПОЗОР >"))
-                return level < protagonist.Shame;
-            else if (option.Contains("ПОЗОР <="))
-                return level >= protagonist.Shame;
-
-            return CheckOnlyIfTrigger(option);
+                return CheckOnlyIfTrigger(option);
+            }
         }
 
         public List<string> DiceCheck()
