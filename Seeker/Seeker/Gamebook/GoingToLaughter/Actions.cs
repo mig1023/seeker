@@ -94,7 +94,11 @@ namespace Seeker.Gamebook.GoingToLaughter
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("|"))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("|"))
             {
                 foreach (string oneOption in option.Split('|'))
                 {
