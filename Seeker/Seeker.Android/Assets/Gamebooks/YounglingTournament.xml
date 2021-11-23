@@ -3145,7 +3145,7 @@
 			<Modification Name="Speed" Value="1"/>
 			<Modification Name="MaxHitpoints" Value="1"/>
 		</Modifications>
-		<Triggers>Игнор, Тарра</Triggers>
+		<Triggers>Игнор, Тарра, Скоростная атака</Triggers>
 		<Options>
 			<Option Destination="301"/>
 		</Options>

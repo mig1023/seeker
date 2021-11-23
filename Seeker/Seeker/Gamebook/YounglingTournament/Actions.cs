@@ -490,9 +490,9 @@ namespace Seeker.Gamebook.YounglingTournament
         }
 
         private bool UseForcesInFight(ref List<string> fight, ref bool speedActivate,
-            List<Character> EnemiesList, out Character target)
+            List<Character> EnemiesList)
         {
-            target = EnemiesList.Where(x => x.Hitpoints > 0).FirstOrDefault();
+            Character target = EnemiesList.Where(x => x.Hitpoints > 0).FirstOrDefault();
 
             if (SpeedActivate && !speedActivate)
                 return SpeedActivation(ref fight, ref speedActivate, EnemiesList);
@@ -607,14 +607,14 @@ namespace Seeker.Gamebook.YounglingTournament
             fight.Add(String.Empty);
 
             int round = 1, heroRoundWin = 0, enemyRoundWin = 0;
-            bool speedActivate = false, irresistibleAttack = false;
+            bool speedActivate = false, irresistibleAttack = false, rapidAttack = false;
             bool strikeBack = NoStrikeBack;
 
             while (true)
             {
                 fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
 
-                if (UseForcesInFight(ref fight, ref speedActivate, EnemiesList, out Character target))
+                if (UseForcesInFight(ref fight, ref speedActivate, EnemiesList))
                 {
                     round += 1;
 
@@ -628,6 +628,12 @@ namespace Seeker.Gamebook.YounglingTournament
                     else
                         continue;
                 }
+
+                if (!rapidAttack && Game.Option.IsTriggered("Скоростная атака"))
+                {
+                    Character target = EnemiesList.Where(x => x.Hitpoints > 0).FirstOrDefault();
+                    irresistibleAttack = AdditionalAttack(ref fight, target, "Вы проводите Скоростную атаку!", "Урон от атаки");
+                }                  
 
                 int protagonistFirstDice = Game.Dice.Roll();
                 int protagonistSecondDice = Game.Dice.Roll();
