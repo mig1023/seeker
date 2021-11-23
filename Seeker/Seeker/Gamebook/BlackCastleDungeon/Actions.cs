@@ -118,12 +118,22 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("ЗОЛОТО >="))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("ЗОЛОТО >="))
+            {
                 return int.Parse(option.Split('=')[1]) <= protagonist.Gold;
+            }
             else if (option.Contains("ЗАКЛЯТИЕ"))
+            {
                 return protagonist.Spells.Contains(option);
+            }
             else
+            {
                 return CheckOnlyIfTrigger(option);
+            }
         }
 
         public override List<string> Representer()
