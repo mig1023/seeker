@@ -34,15 +34,33 @@ namespace Seeker.Gamebook.YounglingTournament
             String.Format("Тёмная сторона: {0}", protagonist.DarkSide),
         };
 
-        public override List<string> AdditionalStatus() => new List<string>
+        public override List<string> AdditionalStatus()
         {
-            String.Format("Понимание Силы: {0}", protagonist.ForceTechniques.Values.Sum()),
-            String.Format("Взлом: {0}", protagonist.Hacking),
-            String.Format("Пилот: {0}", protagonist.Pilot),
-            String.Format("Меткость: {0}", protagonist.Accuracy),
-            String.Format("Выносливость: {0}", protagonist.Hitpoints),
-        };
+            List<string> newStatuses = new List<string>();
 
+            if (protagonist.SecondPart == 0)
+            {
+                newStatuses.Add(String.Format("Меткость: {0}", protagonist.Accuracy));
+                newStatuses.Add(String.Format("Пилот: {0}", protagonist.Pilot));
+                newStatuses.Add(String.Format("Взлом: {0}", protagonist.Hacking));
+            }
+            else
+            {
+                newStatuses.Add(String.Format("Форма {0}", GetSwordSkillName(GetSwordType())));
+                newStatuses.Add(String.Format("Понимание Силы: {0}", protagonist.ForceTechniques.Values.Sum()));
+
+                if (protagonist.Thrust > 0)
+                    newStatuses.Add(String.Format("Уколов нанесено: {0}", protagonist.Thrust));
+
+                if (protagonist.EnemyThrust > 0)
+                    newStatuses.Add(String.Format("Уколов противника: {0}", protagonist.EnemyThrust));
+            }
+
+            newStatuses.Add(String.Format("Выносливость: {0}", protagonist.Hitpoints));
+
+            return newStatuses;
+        }
+            
         public override bool CheckOnlyIf(string option)
         {
             if (String.IsNullOrEmpty(option))
@@ -117,8 +135,7 @@ namespace Seeker.Gamebook.YounglingTournament
                     if (!anotherTechnique)
                         currectSwordTechniques = SwordTypes.Rivalry;
 
-                    technique = String.Format("\nиспользует Форму {0} - {1} ранга",
-                        Constants.SwordSkillsNames()[currectSwordTechniques], enemy.Rang);
+                    technique = String.Format("\nиспользует Форму {0}", GetSwordSkillName(currectSwordTechniques, rang: enemy.Rang));
                 }
 
                 if (NoStrikeBack)
@@ -581,6 +598,15 @@ namespace Seeker.Gamebook.YounglingTournament
             }
         }
 
+        private string GetSwordSkillName(SwordTypes swordTechniques, int? rang = null)
+        {
+            SwordTypes currectSwordTechniques = GetSwordType();
+
+            string skillName = Constants.SwordSkillsNames()[currectSwordTechniques];
+            int skillRang = rang ?? protagonist.SwordTechniques[currectSwordTechniques];
+
+            return String.Format("{0} ({1} ранг)", skillName, skillRang);
+        }
 
         public List<string> SwordFight()
         {
@@ -599,9 +625,7 @@ namespace Seeker.Gamebook.YounglingTournament
             }
 
             SwordTypes currectSwordTechniques = GetSwordType();
-
-            fight.Add(String.Format("Вы выбрали для боя Форму {0} ({1} ранг)",
-                Constants.SwordSkillsNames()[currectSwordTechniques], protagonist.SwordTechniques[currectSwordTechniques]));
+            fight.Add(String.Format("Вы выбрали для боя Форму {0}", GetSwordSkillName(currectSwordTechniques)));
 
             int skill = SwordSkills(currectSwordTechniques, out string detail);
             fight.Add(String.Format("Ваша Ловкость в этом бою: {0} (по формуле: {1})", skill, detail));
