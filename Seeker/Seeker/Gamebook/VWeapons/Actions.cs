@@ -37,7 +37,9 @@ namespace Seeker.Gamebook.VWeapons
             List<string> enemies = new List<string>();
 
             if (Enemies == null)
+            {
                 return enemies;
+            }
 
             foreach (Character enemy in Enemies)
             {
@@ -61,15 +63,22 @@ namespace Seeker.Gamebook.VWeapons
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option == "specialCheck")
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option == "specialCheck")
+            {
                 return (option.Contains("!") ? !SpecialCheck() : SpecialCheck());
-            
+            }
             else if (option == "specialFCheck")
+            {
                 return (option.Contains("!") ? !SpecialFCheck() : SpecialFCheck());
-
+            }
             else if (option.Contains("|"))
+            {
                 return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
-
+            }
             else
             {
                 foreach (string oneOption in option.Split(','))
