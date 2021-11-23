@@ -24,13 +24,17 @@ namespace Seeker.Gamebook.HeartOfIce
                 return new List<string> { String.Format("{0}, {1} скад{2}", Text, Price, money) };
             }
             else if (!String.IsNullOrEmpty(Text))
+            {
                 return new List<string> { Text };
-
+            }
             else if (!String.IsNullOrEmpty(Skill))
+            {
                 return new List<string> { Skill };
-
+            }
             else
+            {
                 return new List<string>();
+            }
         }
 
         public override List<string> Status()
@@ -56,7 +60,9 @@ namespace Seeker.Gamebook.HeartOfIce
         public List<string> Get()
         {
             if (Choice)
+            {
                 protagonist.Chosen = true;
+            }
 
             if (!String.IsNullOrEmpty(Skill))
             {
@@ -77,14 +83,22 @@ namespace Seeker.Gamebook.HeartOfIce
             }
 
             if (Split)
+            {
                 protagonist.Split += 1;
+            }
 
             if (((Price > 0) || Split) && !Multiple)
+            {
                 Used = true;
+            }
 
             if (BenefitList != null)
+            {
                 foreach (Modification modification in BenefitList)
+                {
                     modification.Do();
+                }
+            }
 
             return new List<string> { "RELOAD" };
         }
@@ -118,7 +132,11 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("|"))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("|"))
             {
                 foreach (string oneOption in option.Split('|'))
                 {
