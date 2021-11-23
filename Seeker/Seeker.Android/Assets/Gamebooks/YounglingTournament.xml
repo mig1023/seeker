@@ -4385,7 +4385,6 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<EnemyRoundWin>1</EnemyRoundWin>
 				<NoStrikeBack/>
 				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
@@ -4408,7 +4407,6 @@
 				</Enemies>
 				<HeroHitpointsLimith>5</HeroHitpointsLimith>
 				<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-				<EnemyRoundWin>1</EnemyRoundWin>
 				<NoStrikeBack/>
 				<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
 			</Action>
