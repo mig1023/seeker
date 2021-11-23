@@ -38,7 +38,6 @@ namespace Seeker.Gamebook.YounglingTournament
         {
             String.Format("Понимание Силы: {0}", protagonist.ForceTechniques.Values.Sum()),
             String.Format("Взлом: {0}", protagonist.Hacking),
-            String.Format("Скрытность: {0}", protagonist.Stealth),
             String.Format("Пилот: {0}", protagonist.Pilot),
             String.Format("Меткость: {0}", protagonist.Accuracy),
             String.Format("Выносливость: {0}", protagonist.Hitpoints),
