@@ -17,10 +17,14 @@ namespace Seeker.Gamebook.SilentSchool
             List<string> statusLines = new List<string> { String.Format("Жизнь: {0}", protagonist.Life) };
 
             if (protagonist.Grail > 0)
+            {
                 statusLines.Add(String.Format("Грааль: {0}", protagonist.Grail));
+            }
 
             if (!String.IsNullOrEmpty(protagonist.Weapon))
+            {
                 statusLines.Add(String.Format("Оружие: {0}", protagonist.Weapon));
+            }
 
             return statusLines;
         }
@@ -30,7 +34,9 @@ namespace Seeker.Gamebook.SilentSchool
             List<string> staticButtons = new List<string> { };
 
             if (Game.Option.IsTriggered("Шоколадка"))
+            {
                 staticButtons.Add("Съесть шоколадку");
+            }
 
             return staticButtons;
         }
@@ -52,9 +58,14 @@ namespace Seeker.Gamebook.SilentSchool
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("|"))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("|"))
+            {
                 return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
-
+            }
             else if (option.Contains(";"))
             {
                 string[] options = option.Split(';');
@@ -108,7 +119,8 @@ namespace Seeker.Gamebook.SilentSchool
             }
         }
 
-        public override List<string> Representer() => String.IsNullOrEmpty(Text) ? new List<string> { } : new List<string> { Text.ToUpper() };
+        public override List<string> Representer() =>
+            String.IsNullOrEmpty(Text) ? new List<string> { } : new List<string> { Text.ToUpper() };
 
         public List<string> Get()
         {
