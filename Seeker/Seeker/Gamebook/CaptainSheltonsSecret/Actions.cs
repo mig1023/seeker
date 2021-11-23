@@ -29,14 +29,22 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains(","))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains(","))
+            {
                 return !(option.Split(',').Where(x => !Game.Option.IsTriggered(x.Trim())).Count() > 0);
-
+            }
             else if (option.Contains("ЗОЛОТО >="))
+            {
                 return int.Parse(option.Split('=')[1]) <= protagonist.Gold;
-
-            else 
+            }
+            else
+            {
                 return CheckOnlyIfTrigger(option);
+            }
         }
 
         public override List<string> Representer()
