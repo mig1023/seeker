@@ -31,31 +31,41 @@ namespace Seeker.Gamebook.ThreePaths
 
         public override bool CheckOnlyIf(string option)
         {
-            foreach (string oneOption in option.Split(','))
+            if (String.IsNullOrEmpty(option))
             {
-                if (oneOption.Contains(">") || oneOption.Contains("<"))
-                {
-                    int level = Game.Other.LevelParse(option);
-
-                    if (oneOption.Contains("ВРЕМЯ <") && (level <= protagonist.Time))
-                        return false;
-
-                    if (oneOption.Contains("ВРЕМЯ >=") && (level > protagonist.Time))
-                        return false;
-                }
-                else if (oneOption.Contains("ЗАКЛЯТИЕ"))
-                    return protagonist.Spells.Contains(oneOption.Trim());
-
-                else if (oneOption.Contains("!"))
-                {
-                    if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
-                        return false;
-                }
-                else if (!Game.Option.IsTriggered(oneOption.Trim()))
-                    return false;
+                return true;
             }
+            else
+            {
+                foreach (string oneOption in option.Split(','))
+                {
+                    if (oneOption.Contains(">") || oneOption.Contains("<"))
+                    {
+                        int level = Game.Other.LevelParse(option);
 
-            return true;
+                        if (oneOption.Contains("ВРЕМЯ <") && (level <= protagonist.Time))
+                            return false;
+
+                        if (oneOption.Contains("ВРЕМЯ >=") && (level > protagonist.Time))
+                            return false;
+                    }
+                    else if (oneOption.Contains("ЗАКЛЯТИЕ"))
+                    {
+                        return protagonist.Spells.Contains(oneOption.Trim());
+                    }
+                    else if (oneOption.Contains("!"))
+                    {
+                        if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
+                            return false;
+                    }
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
         }
 
         public override List<string> Representer()
