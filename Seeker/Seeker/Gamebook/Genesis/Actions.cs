@@ -41,9 +41,14 @@ namespace Seeker.Gamebook.Genesis
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("|"))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("|"))
+            {
                 return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
-
+            }
             else
             {
                 foreach (string oneOption in option.Split(','))
