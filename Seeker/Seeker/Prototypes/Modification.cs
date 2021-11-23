@@ -18,20 +18,25 @@ namespace Seeker.Prototypes
         public virtual void Do(Abstract.ICharacter Character)
         {
             if (Name == "Trigger")
+            {
                 Game.Option.Trigger(ValueString);
-
+            }
             else if (Name == "Healing")
+            {
                 Game.Healing.Add(ValueString);
-
+            }
             else
             {
                 int currentValue = 0;
 
                 if (Restore)
+                {
                     currentValue = GetProperty(Character, "Max" + Name);
-
+                }
                 else if (!Empty)
+                {
                     currentValue = GetProperty(Character, Name);
+                }
 
                 SetProperty(Character, Name, currentValue + Value);
 
@@ -63,7 +68,9 @@ namespace Seeker.Prototypes
                 return true;
             }
             else
+            {
                 return false;
+            }
         }
 
         public bool DoByValueString(string actualName, ParamMod doModification) =>
