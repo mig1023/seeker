@@ -69,6 +69,9 @@ namespace Seeker.Gamebook.YounglingTournament
                         if (oneOption.Contains("ПИЛОТ >") && (level >= protagonist.Pilot))
                             return false;
 
+                        if (oneOption.Contains("БИБЛИОТЕКА <=") && (level < protagonist.Reading))
+                            return false;
+
                         if (oneOption.Contains("УКОЛОВ >") && (level >= protagonist.Thrust))
                             return false;
 

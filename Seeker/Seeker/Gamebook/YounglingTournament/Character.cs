@@ -103,6 +103,7 @@ namespace Seeker.Gamebook.YounglingTournament
         }
 
         public int WayBack { get; set; }
+        public int Reading { get; set; }
         public string SwordTechnique { get; set; }
         private bool HitpointAutosave { get; set; } 
 
@@ -130,6 +131,7 @@ namespace Seeker.Gamebook.YounglingTournament
             WayBack = 0;
             Thrust = 0;
             EnemyThrust = 0;
+            Reading = 0;
 
             ForceTechniques = new SortedDictionary<ForcesTypes, int>
             {
@@ -179,6 +181,7 @@ namespace Seeker.Gamebook.YounglingTournament
             Speed = this.Speed,
             SwordTechnique = this.SwordTechnique,
             HitpointAutosave = true,
+            Reading = this.Reading,
         };
 
         public Character SetHitpoints(int hitpointsPenalty = 0)
@@ -208,7 +211,7 @@ namespace Seeker.Gamebook.YounglingTournament
         public override string Save() => String.Join("|",
             LightSide, DarkSide, MaxHitpoints, Hitpoints, Accuracy, Pilot, Stealth, Hacking, Firepower, WayBack,
             String.Join(",", ForceTechniques.Values), String.Join(",", SwordTechniques.Values),
-            String.Join(",", HitpointsLoss.Select(x => x.Key + "=" + x.Value).ToArray()), Thrust, EnemyThrust
+            String.Join(",", HitpointsLoss.Select(x => x.Key + "=" + x.Value).ToArray()), Thrust, EnemyThrust, Reading
         );
 
         public override void Load(string saveLine)
@@ -268,6 +271,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
             Thrust = int.Parse(save[13]);
             EnemyThrust = int.Parse(save[14]);
+            Reading = int.Parse(save[15]);
         }
     }
 }
