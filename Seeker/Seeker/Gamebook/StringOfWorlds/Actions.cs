@@ -30,10 +30,14 @@ namespace Seeker.Gamebook.StringOfWorlds
             List<string> staticButtons = new List<string> { };
 
             if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
+            {
                 return staticButtons;
+            }
 
             if ((protagonist.Equipment == "Тюбик") && (protagonist.Strength < protagonist.MaxStrength))
+            {
                 staticButtons.Add("СЪЕСТЬ ПАСТУ");
+            }
 
             return staticButtons;
         }
@@ -44,6 +48,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             {
                 protagonist.Equipment = String.Empty;
                 protagonist.Strength = protagonist.MaxStrength;
+
                 return true;
             }
 
@@ -58,23 +63,36 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public override bool CheckOnlyIf(string option)
         {
-            string[] values = option.Split(new string[] { ">=", "<", " " }, StringSplitOptions.RemoveEmptyEntries);
-            int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
-
-            if (option.Contains("БЛАСТЕР >="))
-                return level <= protagonist.Blaster;
-
-            else if (option.Contains("БЛАСТЕР <"))
-                return level > protagonist.Blaster;
-
-            else if (option.Contains("ОЧКИ"))
-                return protagonist.Equipment == "Очки";
-
-            else if (option.Contains("ЗАЖИГАЛКА"))
-                return protagonist.Equipment == "Зажигалка";
-
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
             else
-                return CheckOnlyIfTrigger(option);
+            {
+                string[] values = option.Split(new string[] { ">=", "<", " " }, StringSplitOptions.RemoveEmptyEntries);
+                int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
+
+                if (option.Contains("БЛАСТЕР >="))
+                {
+                    return level <= protagonist.Blaster;
+                }
+                else if (option.Contains("БЛАСТЕР <"))
+                {
+                    return level > protagonist.Blaster;
+                }
+                else if (option.Contains("ОЧКИ"))
+                {
+                    return protagonist.Equipment == "Очки";
+                }
+                else if (option.Contains("ЗАЖИГАЛКА"))
+                {
+                    return protagonist.Equipment == "Зажигалка";
+                }
+                else
+                {
+                    return CheckOnlyIfTrigger(option);
+                }
+            }
         }
 
         public override List<string> Representer()
