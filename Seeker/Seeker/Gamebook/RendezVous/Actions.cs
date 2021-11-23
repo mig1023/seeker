@@ -15,9 +15,14 @@ namespace Seeker.Gamebook.RendezVous
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("|"))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("|"))
+            {
                 return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
-
+            }
             else
             {
                 foreach (string oneOption in option.Split(','))
@@ -27,10 +32,13 @@ namespace Seeker.Gamebook.RendezVous
                         int level = Game.Other.LevelParse(oneOption);
 
                         if (oneOption.Contains("ОСОЗНАНИЕ >") && (level >= protagonist.Awareness))
+                        {
                             return false;
-
+                        }
                         else if (oneOption.Contains("ОСОЗНАНИЕ <=") && (level < protagonist.Awareness))
+                        {
                             return false;
+                        }
                     }
                     else if (oneOption.Contains("!"))
                     {
@@ -38,7 +46,9 @@ namespace Seeker.Gamebook.RendezVous
                             return false;
                     }
                     else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
                         return false;
+                    }
                 }
 
                 return true;
@@ -53,7 +63,9 @@ namespace Seeker.Gamebook.RendezVous
             int dicesResult = firstDice;
 
             if (Dices == 1)
+            {
                 diceCheck.Add(String.Format("На кубикe выпало: {0}", Game.Dice.Symbol(firstDice)));
+            }
             else
             {
                 int secondDice = Game.Dice.Roll();
