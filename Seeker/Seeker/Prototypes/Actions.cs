@@ -22,7 +22,9 @@ namespace Seeker.Prototypes
         public virtual List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
             if (trigger)
+            {
                 Game.Option.Trigger(Trigger);
+            }
 
             string actionName = (String.IsNullOrEmpty(action) ? Name : action);
 
@@ -48,10 +50,18 @@ namespace Seeker.Prototypes
 
         public static bool CheckOnlyIfTrigger(string option)
         {
-            if (option.Contains("!"))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("!"))
+            {
                 return !Game.Option.IsTriggered(option.Replace("!", String.Empty).Trim());
+            }
             else
+            {
                 return Game.Option.IsTriggered(option);
+            }
         }
 
         public virtual bool GameOver(out int toEndParagraph, out string toEndText)
