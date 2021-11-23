@@ -376,7 +376,11 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains(">") || option.Contains("<"))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains(">") || option.Contains("<"))
             {
                 int level = Game.Other.LevelParse(option);
 
@@ -386,19 +390,22 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 if (option.Contains("СИЛА >=") && (level > protagonist.Strength))
                     return false;
             }
-
             else if (option == "ВОЛК")
+            {
                 return protagonist.Transformation > 0;
-
+            }
             else if (option == "МЕДВЕДЬ")
+            {
                 return (protagonist.Transformation > 0) && !Game.Option.IsTriggered("Taboo");
-
+            }
             else if (protagonist.Spells.Contains(option))
+            {
                 return true;
-
+            }
             else if (option == "!ВОИН")
+            {
                 return protagonist.Specialization != Character.SpecializationType.Warrior;
-
+            }
             else if (option.Contains("|"))
             {
                 foreach (string opt in option.Split('|'))
@@ -407,24 +414,25 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
                 return false;
             }
-
             else if (option.Contains(","))
             {
                 foreach (string opt in option.Split(','))
+                {
                     if (Game.Option.IsTriggered(opt.Trim()))
                         return false;
+                }
 
                 return true;
             }
-
             else if (option.Contains("!"))
             {
                 if (Game.Option.IsTriggered(option.Replace("!", String.Empty).Trim()))
                     return false;
             }
-
             else if (!Game.Option.IsTriggered(option.Trim()))
+            {
                 return false;
+            }
             
             return true;
         }
@@ -432,7 +440,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         private void WinFightEnding(ref List<string> fight, int wounded)
         {
             if (IsPoisonedBlade())
+            {
                 Game.Option.Trigger("PoisonedBlade", remove: true);
+            }
 
             if (Poison)
             {
@@ -447,9 +457,13 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 fight.Add(String.Empty);
 
                 if (protagonist.Specialization == Character.SpecializationType.Thrower)
+                {
                     fight.Add("BOLD|Вы смазали ядом свои метательные ножи, теперь они будут отнимать у противника не 3, а 4 жизни");
+                }
                 else
+                {
                     fight.Add("BOLD|Вы смазали ядом свой меч, в следующем бою он будет отнимать у противника по 5 жизней");
+                }
 
                 Game.Option.Trigger("PoisonedBlade");
             }
@@ -476,11 +490,13 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
 
             if (FightEnemies.Where(x => x.Hitpoints > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() > 0)
+            {
                 return false;
-
+            }
             else if (Invincible)
+            {
                 return false;
-
+            }
             else
             {
                 fight.Add(String.Empty);
@@ -514,7 +530,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             List<Character> FightEnemies = new List<Character>();
 
-            foreach (Character enemy in Enemies)
+            foreach (Character enemy in Enemies) { }
                 FightEnemies.Add(enemy.Clone());
 
             while (true)
