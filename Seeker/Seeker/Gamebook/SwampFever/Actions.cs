@@ -22,15 +22,18 @@ namespace Seeker.Gamebook.SwampFever
                 string creds = Game.Other.CoinsNoun(Price, "кредит", "кредита", "кредитов");
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, creds) };
             }
-
             else if (Level > 0)
+            {
                 return new List<string> { String.Format("Ментальная проверка, уровень {0}", Level) };
-
+            }
             else if (!String.IsNullOrEmpty(EnemyName))
+            {
                 return new List<string> { EnemyName };
-
+            }
             else
+            {
                 return new List<string> { };
+            }
         }
 
         public override List<string> Status() => new List<string>
@@ -56,18 +59,27 @@ namespace Seeker.Gamebook.SwampFever
 
         public override bool CheckOnlyIf(string option)
         {
-            foreach (string oneOption in option.Split(','))
+            if (String.IsNullOrEmpty(option))
             {
-                if (oneOption.Contains("!"))
-                {
-                    if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
-                        return false;
-                }
-                else if (!Game.Option.IsTriggered(oneOption.Trim()))
-                    return false;
+                return true;
             }
+            else
+            {
+                foreach (string oneOption in option.Split(','))
+                {
+                    if (oneOption.Contains("!"))
+                    {
+                        if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
+                            return false;
+                    }
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
+                        return false;
+                    }
+                }
 
-            return true;
+                return true;
+            }
         }
 
         public List<string> MentalTest()
@@ -77,7 +89,8 @@ namespace Seeker.Gamebook.SwampFever
             int mentalAndFury = mentalDice + fury;
             int level = Level;
 
-            List<string> mentalCheck = new List<string> {
+            List<string> mentalCheck = new List<string>
+            {
                 String.Format("Ментальная проверка (по уровню {0}):", level),
                 String.Format("1. Бросок кубика: {0}", Game.Dice.Symbol(mentalDice)),
                 String.Format("2. {0}{1} к броску за уровень Ярости", (fury < 0 ? "-" : "+"), Math.Abs(fury)),
@@ -202,7 +215,9 @@ namespace Seeker.Gamebook.SwampFever
                     bool failManeuvers = true;
 
                     foreach (int dice in new int[] { 6, 5, 4 })
+                    {
                         for (int i = 0; i < enemyCombination.Count; i++)
+                        {
                             if ((enemyCombination[i] == dice) && (maneuvers > 0))
                             {
                                 fight.Add(String.Format("Убираем у противника {0}-ку за ваше маневрирование", dice));
@@ -210,9 +225,13 @@ namespace Seeker.Gamebook.SwampFever
                                 maneuvers -= 1;
                                 failManeuvers = false;
                             }
+                        }
+                    }
 
                     if (failManeuvers)
+                    {
                         fight.Add("Маневрирование ничего не дало противникам");
+                    }
                 }
 
                 foreach (int range in new int[] { 6, 5, 4 })
@@ -223,8 +242,9 @@ namespace Seeker.Gamebook.SwampFever
                     int roundResult = 0;
 
                     if (!myCombination.Contains(range) && !enemyCombination.Contains(range))
+                    {
                         fight.Add("Противникам нечего друг другу противопоставить");
-
+                    }
                     else if (myCombination.Contains(range) && !enemyCombination.Contains(range))
                     {
                         roundResult = 1;
@@ -239,7 +259,10 @@ namespace Seeker.Gamebook.SwampFever
                             return fight;
                         }
                         else
+                        {
                             fight.Add("GOOD|Вы накрыли противника огнём");
+                        }
+                           
                     }
                     else if (!myCombination.Contains(range) && enemyCombination.Contains(range))
                     {
@@ -252,7 +275,9 @@ namespace Seeker.Gamebook.SwampFever
                             return fight;
                         }
                         else
+                        {
                             fight.Add("BAD|Противник накрыл вас огнём");
+                        }
                     }
                     else
                     {
@@ -309,7 +334,9 @@ namespace Seeker.Gamebook.SwampFever
                                 fight.Add("BAD|Противник подавил вас огнём");
                             }
                             else
+                            {
                                 fight.Add("Перестрелка продолжается:");
+                            }
                         }
                     }
 
