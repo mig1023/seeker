@@ -63,7 +63,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("="))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("="))
             {
                 int value = int.Parse(option.Split('=')[1]);
 
@@ -82,9 +86,13 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 return true;
             }
             else if (Enum.TryParse(option, out Character.MeritalArts value))
+            {
                 return protagonist.MeritalArt == value;
+            }
             else
+            {
                 return CheckOnlyIfTrigger(option);
+            }
         }
 
         public override List<string> Representer()
