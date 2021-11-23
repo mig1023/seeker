@@ -238,7 +238,11 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains(";"))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains(";"))
             {
                 string[] options = option.Split(';');
 
