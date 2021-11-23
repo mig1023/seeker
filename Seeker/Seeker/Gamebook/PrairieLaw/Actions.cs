@@ -65,9 +65,14 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("|"))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("|"))
+            {
                 return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
-
+            }
             else
             {
                 foreach (string oneOption in option.Split(','))
@@ -77,19 +82,26 @@ namespace Seeker.Gamebook.PrairieLaw
                         int level = Game.Other.LevelParse(oneOption);
 
                         if (option.Contains("ЦЕНТОВ >=") && (level > protagonist.Cents))
+                        {
                             return false;
-
+                        }
                         else if (option.Contains("САМОРОДКОВ >=") && (level > protagonist.Nuggets))
+                        {
                             return false;
-
+                        }
                         else if (option.Contains("ПАТРОНОВ >=") && (level > protagonist.Cartridges))
+                        {
                             return false;
-
+                        }
                         else if (option.Contains("ШКУР >=") && (level > protagonist.AnimalSkins.Count))
+                        {
                             return false;
+                        }
                     }
                     else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
                         return false;
+                    }
                 }
 
                 return true;
@@ -133,6 +145,7 @@ namespace Seeker.Gamebook.PrairieLaw
             bool success = false;
 
             for (int i = 1; i < 7; i++)
+            {
                 if (!protagonist.Luck[i])
                 {
                     luckRecovery.Add(String.Format("GOOD|Цифра {0} восстановлена!", i));
@@ -141,9 +154,12 @@ namespace Seeker.Gamebook.PrairieLaw
 
                     break;
                 }
+            }
 
             if (!success)
+            {
                 luckRecovery.Add("BAD|Все цифры и так счастливые!");
+            }
 
             luckRecovery.Add("Цифры удачи теперь:");
             luckRecovery.Add("BIG|" + LuckNumbers());
