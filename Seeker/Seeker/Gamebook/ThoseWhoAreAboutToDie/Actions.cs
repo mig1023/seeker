@@ -21,9 +21,14 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
         public override bool CheckOnlyIf(string option)
         {
-            if (option.Contains("|"))
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("|"))
+            {
                 return option.Split('|').Where(x => !OneParamFail(x) || Game.Option.IsTriggered(x.Trim())).Count() > 0;
-
+            }
             else
             {
                 foreach (string oneOption in option.Split(','))
@@ -39,7 +44,9 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
                             return false;
                     }
                     else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                    {
                         return false;
+                    }
                 }
 
                 return true;
@@ -49,16 +56,21 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
         private static bool OneParamFail(string oneOption)
         {
             if (ParamFail("СИЛА", oneOption, protagonist.Strength))
+            {
                 return true;
-
+            }
             else if (ParamFail("РЕАКЦИЯ", oneOption, protagonist.Reaction))
+            {
                 return true;
-
+            }
             else if (ParamFail("ВЫНОСЛИВОСТЬ", oneOption, protagonist.Endurance))
+            {
                 return true;
-
+            }
             else
+            {
                 return false;
+            }
         }
 
         private static bool ParamFail(string paramName, string option, int param)
@@ -66,13 +78,17 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             int level = Game.Other.LevelParse(option);
 
             if (option.Contains(String.Format("{0} >", paramName)) && (level >= param))
+            {
                 return true;
-
+            }
             else if (option.Contains(String.Format("{0} <=", paramName)) && (level < param))
+            {
                 return true;
-
+            }
             else
+            {
                 return false;
+            }
         }
 
         public List<string> TryToWound()
@@ -88,7 +104,9 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
                 report.Add("BIG|GOOD|+3 к Реакции! :)");
             }
             else
+            {
                 report.Add("BIG|BAD|Не повезло :(");
+            }
 
             return report;
         }
