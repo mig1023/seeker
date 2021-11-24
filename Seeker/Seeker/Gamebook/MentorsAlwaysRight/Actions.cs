@@ -530,7 +530,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             List<Character> FightEnemies = new List<Character>();
 
-            foreach (Character enemy in Enemies) { }
+            foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
 
             while (true)
