@@ -383,7 +383,7 @@ namespace Seeker.Output
 
         public static ExtendedLabel Text(Text text)
         {
-            ExtendedLabel label = Text(text.Content, italic: text.Italic, size: text.Size);
+            ExtendedLabel label = Text(text.Content, italic: text.Italic, size: text.Size, selected: text.Selected);
             label.FontFamily = TextFontFamily(bold: text.Bold, italic: text.Italic);
 
             if (text.Alignment == "Center")
@@ -415,13 +415,12 @@ namespace Seeker.Output
         }
 
         public static ExtendedLabel Text(string text, bool defaultParams = false, bool italic = false,
-            TextFontSize size = TextFontSize.nope)
+            TextFontSize size = TextFontSize.nope, bool selected = false)
         {
             bool justyfy = (defaultParams ? false : (Game.Settings.GetValue("Justyfy") == 1));
 
             ExtendedLabel label = new ExtendedLabel
             {
-                Margin = Constants.TEXT_LABEL_MARGIN,
                 FontSize = FontSize(defaultParams ? TextFontSize.normal : TextFontSize.little),
                 Text = Regex.Unescape(text),
                 FontFamily = TextFontFamily(),
@@ -429,20 +428,31 @@ namespace Seeker.Output
                 LineHeight = Constants.LINE_HEIGHT,
             };
 
+            if (!selected)
+                label.Margin = Constants.TEXT_LABEL_MARGIN;
+
             if (defaultParams)
                 return label;
 
             int fontSize = Game.Settings.GetValue("FontSize");
 
             if (fontSize > 0)
-                label.FontSize = Constants.FONT_SIZE_VALUES[fontSize]; // здесь нужны ступени
+            {
+                label.FontSize = Constants.FONT_SIZE_VALUES[fontSize];
+            }
             else if (size != TextFontSize.nope)
+            {
                 label.FontSize = FontSize(size);
+            }
             else if(Game.Data.Constants != null)
+            {
                 label.FontSize = FontSize(Game.Data.Constants.GetFontSize(), italic: italic);
+            }
 
             if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
+            {
                 label.TextColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
+            }
 
             return label;
         }
