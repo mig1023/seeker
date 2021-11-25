@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public int WoundsToWin { get; set; }
         public int DinnerHitpointsBonus { get; set; }
         public bool DinnerAlready { get; set; }
+        public bool ReturnedStuffs { get; set; }
 
         public override List<string> Representer()
         {
@@ -182,7 +183,7 @@ namespace Seeker.Gamebook.OctopusIsland
             if (!fightStart)
                 fight.Add(String.Empty);
 
-            fight.Add(String.Format("BOLD|В бой вступает {0}", protagonist.Name));
+            fight.Add(String.Format("BOLD|В БОЙ ВСТУПАЕТ {0}", protagonist.Name.ToUpper()));
 
             if (fightStart)
                 fight.Add(String.Empty);
@@ -243,6 +244,12 @@ namespace Seeker.Gamebook.OctopusIsland
                         {
                             fight.Add(String.Empty);
                             fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+
+                            if (ReturnedStuffs)
+                            {
+                                fight.Add(String.Format("GOOD|Вы вернули украденные у вас рюкзаки!"));
+                                protagonist.StolenStuffs = 0;
+                            }
 
                             SaveCurrentWarriorHitPoints();
 

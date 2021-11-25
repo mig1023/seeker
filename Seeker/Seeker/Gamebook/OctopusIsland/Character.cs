@@ -42,8 +42,20 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public int SouhiSkill { get; set; }
 
-        public int Food { get; set; }
-        public int LifeGivingOintment { get; set; }
+        private int _food;
+        public int Food
+        {
+            get => (StolenStuffs == 0 ? _food : 0);
+            set => _food = Game.Param.Setter(value);
+        }
+
+        private int _lifeGivingOintment;
+        public int LifeGivingOintment
+        {
+            get => (StolenStuffs == 0 ? _lifeGivingOintment : 0);
+            set => _lifeGivingOintment = Game.Param.Setter(value);
+        }
+        public int StolenStuffs { get; set; }
 
         private int _hitpoint;
         public int Hitpoint
@@ -70,6 +82,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
             Food = 4;
             LifeGivingOintment = 40;
+            StolenStuffs = 0;
         }
 
         public Character Clone() => new Character()
@@ -88,11 +101,12 @@ namespace Seeker.Gamebook.OctopusIsland
             Skill = this.Skill,
             Food = this.Food,
             LifeGivingOintment = this.LifeGivingOintment,
+            StolenStuffs = this.StolenStuffs,
         };
 
         public override string Save() => String.Join("|",
             ThibautHitpoint, ThibautSkill, SergeHitpoint, SergeSkill, XolotlHitpoint,
-            XolotlSkill, SouhiHitpoint, SouhiSkill, Food, LifeGivingOintment
+            XolotlSkill, SouhiHitpoint, SouhiSkill, Food, LifeGivingOintment, StolenStuffs
         );
 
         public override void Load(string saveLine)
@@ -109,6 +123,7 @@ namespace Seeker.Gamebook.OctopusIsland
             SouhiSkill = int.Parse(save[7]);
             Food = int.Parse(save[8]);
             LifeGivingOintment = int.Parse(save[9]);
+            StolenStuffs = int.Parse(save[10]);
         }
     }
 }
