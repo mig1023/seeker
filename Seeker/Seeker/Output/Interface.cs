@@ -341,14 +341,22 @@ namespace Seeker.Output
             int fontSetting = Game.Settings.GetValue("FontType");
 
             if (fontSetting > 0)
+            {
                 font = String.Format("{0}{1}", Constants.FONT_TYPE_VALUES[fontSetting], (bold ? "Bold" : String.Empty));
+            }
             else if (standart || (Game.Data.Constants == null) || String.IsNullOrEmpty(Game.Data.Constants.GetFont()))
+            {
                 font = (bold ? "YanoneFontBold" : "YanoneFont");
+            }
             else
+            {
                 font = String.Format("{0}{1}", Game.Data.Constants.GetFont(), (bold ? "Bold" : String.Empty));
-
+            }
+                
             if (italic)
+            {
                 font = "RobotoFontItalic";
+            }
 
             OnPlatform<string> OnPlatformDic = (OnPlatform<string>)App.Current.Resources[font];
             var fontFamily = OnPlatformDic.Platforms.FirstOrDefault((arg) => arg.Platform.FirstOrDefault() == Device.RuntimePlatform).Value;
@@ -359,14 +367,22 @@ namespace Seeker.Output
         public static double FontSize(TextFontSize size, bool italic = false)
         {
             if (Game.Settings.GetValue("FontType") == 1)
+            {
                 italic = false;
+            }
 
             if (italic && Constants.FontSizeItalic.ContainsKey(size))
+            {
                 return Constants.FontSizeItalic[size];
+            }
             else if (!italic && Constants.FontSize.ContainsKey(size))
+            {
                 return Constants.FontSize[size];
+            }
             else
+            {
                 return Font(NamedSize.Medium);
+            }
         }
 
         public static double Font(NamedSize namedSize)
@@ -378,7 +394,9 @@ namespace Seeker.Output
                 return Device.GetNamedSize(size, typeof(Label));
             }
             else
+            {
                 return Device.GetNamedSize(namedSize, typeof(Label));
+            }
         }
 
         public static ExtendedLabel Text(Text text)
@@ -387,7 +405,9 @@ namespace Seeker.Output
             label.FontFamily = TextFontFamily(bold: text.Bold, italic: text.Italic);
 
             if (text.Alignment == "Center")
+            {
                 label.HorizontalTextAlignment = TextAlignment.Center;
+            }
 
             return label;
         }

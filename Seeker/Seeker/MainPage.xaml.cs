@@ -59,7 +59,7 @@ namespace Seeker
             }
             catch (Exception ex)
             {
-                Error(String.Format("Ошибка XML-кода книги:\n\n{0}", ex.Message));
+                Error("Ошибка XML-кода книги:", ex.Message);
                 return;
             }
             
@@ -75,11 +75,16 @@ namespace Seeker
             Options.Children.Add(Output.Buttons.CloseSettings((s, args) => Gamebooks(toMain: true)));
         }
 
-        public void Error(string message)
+        public void Error(string errorType, string message)
         {
             PageClean();
 
-            Text.Children.Add(Output.Interface.Text(message, defaultParams: true, size: Output.Interface.TextFontSize.big));
+            Text.Children.Add(Output.Interface.Text(
+                new Output.Text { Content = errorType, Bold = true, Size = Output.Interface.TextFontSize.big }));
+
+            Text.Children.Add(Output.Interface.Text(
+                new Output.Text { Content = message, Size = Output.Interface.TextFontSize.big }));
+
             Options.Children.Add(Output.Buttons.CloseSettings((s, arg) => Gamebooks(toMain: true)));
         }
 
@@ -208,8 +213,9 @@ namespace Seeker
             }
 
             if ((id == Game.Data.StartParagraph) && Game.Continue.IsGameSaved())
+            {
                 Options.Children.Add(Output.Buttons.Additional("Продолжить предыдущую игру", Continue_Click));
-
+            }
             else if ((id > Game.Data.StartParagraph) && (Game.Data.Actions != null) && !(gameOver && (optionCount == 1)))
             {
                 foreach (string buttonName in Game.Healing.List())
@@ -220,13 +226,19 @@ namespace Seeker
             }
 
             if (Game.Settings.GetValue("SystemMenu") > 0)
+            {
                 Options.Children.Add(SystemMenu());
+            }
 
             if (Game.Settings.GetValue("Debug") > 0)
+            {
                 Options.Children.Add(Output.Interface.DebugInformation(id));
+            }
 
             if (!reload)
+            {
                 MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
+            }
 
             UpdateStatus();
             CheckGameOver();
@@ -234,7 +246,9 @@ namespace Seeker
             Game.Option.Trigger(paragraph.LateTrigger);
 
             if (id != Game.Data.StartParagraph)
+            {
                 Game.Continue.Save();
+            }
         }
 
         private bool OptionVisibility(string Aftertext)
@@ -418,7 +432,22 @@ namespace Seeker
             Paragraph(Game.Data.CurrentParagraphID, reload: true);
         }
 
-        private void Continue_Click(object sender, EventArgs e) => Paragraph(Game.Continue.Load(), loadGame: true);
+        private void Continue_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+
+            try
+            {
+                id = Game.Continue.Load();
+            }
+            catch (Exception ex)
+            {
+                Error("Ошибка продолжения игры:", ex.Message);
+                return;
+            }
+
+            Paragraph(id, loadGame: true);
+        }
 
         private void PageClean()
         {
