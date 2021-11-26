@@ -267,10 +267,16 @@ namespace Seeker.Gamebook.YounglingTournament
 
             string[] hitpoints = save[12].Split(',');
 
-            foreach (string hitpointLine in hitpoints)
+            if (hitpoints.Length > 0)
             {
-                string[] hitpoint = hitpointLine.Split('=');
-                HitpointsLoss.Add(hitpoint[0], int.Parse(hitpoint[1]));
+                foreach (string hitpointLine in hitpoints)
+                {
+                    if (String.IsNullOrEmpty(hitpointLine))
+                        continue;
+
+                    string[] hitpoint = hitpointLine.Split('=');
+                    HitpointsLoss.Add(hitpoint[0], int.Parse(hitpoint[1]));
+                }
             }
 
             Thrust = int.Parse(save[13]);
