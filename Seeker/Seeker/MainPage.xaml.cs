@@ -52,9 +52,18 @@ namespace Seeker
             string gamebook = List.GetBooksNameByTitle(button.Text);
 
             Game.Continue.CurrentGame(gamebook);
-            Game.Xml.GameLoad(gamebook);
-            GamepageSettings();
 
+            try
+            {
+                Game.Xml.GameLoad(gamebook);
+            }
+            catch (Exception ex)
+            {
+                Error(String.Format("Ошибка XML-кода книги:\n\n{0}", ex.Message));
+                return;
+            }
+            
+            GamepageSettings();
             Paragraph(0);
         }
 
@@ -64,6 +73,14 @@ namespace Seeker
 
             Output.Settings.Add(ref Action);
             Options.Children.Add(Output.Buttons.CloseSettings((s, args) => Gamebooks(toMain: true)));
+        }
+
+        public void Error(string message)
+        {
+            PageClean();
+
+            Text.Children.Add(Output.Interface.Text(message, defaultParams: true, size: Output.Interface.TextFontSize.big));
+            Options.Children.Add(Output.Buttons.CloseSettings((s, arg) => Gamebooks(toMain: true)));
         }
 
         public void Paragraph(int id, bool reload = false, bool loadGame = false,

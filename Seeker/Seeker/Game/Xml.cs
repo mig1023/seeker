@@ -117,7 +117,7 @@ namespace Seeker.Game
             Healing.Clear();
 
             if (String.IsNullOrEmpty(name))
-                return;
+                throw new Exception("Gamebook name not found");
 
             Gamebook.Description gamebook = Gamebook.List.GetDescription(name);
 
