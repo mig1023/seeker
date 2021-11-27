@@ -21,6 +21,8 @@ namespace Seeker.Prototypes
 
         public virtual List<string> Do(out bool reload, string action = "", bool trigger = false)
         {
+            List<string> actionResult = new List<string>();
+
             if (trigger)
             {
                 Game.Option.Trigger(Trigger);
@@ -28,8 +30,15 @@ namespace Seeker.Prototypes
 
             string actionName = (String.IsNullOrEmpty(action) ? Name : action);
 
-            List<string> actionResult = this.GetType().InvokeMember(actionName, System.Reflection.BindingFlags.InvokeMethod,
-                null, this, null) as List<string>;
+            try
+            {
+                actionResult = this.GetType().InvokeMember(
+                    actionName, System.Reflection.BindingFlags.InvokeMethod, null, this, null) as List<string>;
+            }
+            catch (Exception ex)
+            {
+                actionResult = new List<string> { "BIG|BOLD|Ошибка action-кода книги:", String.Format("BIG|{0}", ex.Message) };
+            }
 
             reload = (actionResult.Count >= 1) && (actionResult[0] == "RELOAD");
 
