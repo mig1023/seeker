@@ -655,7 +655,7 @@ namespace Seeker.Gamebook.YounglingTournament
                         continue;
                 }
 
-                if (!rapidAttack && Game.Option.IsTriggered("Скоростная атака"))
+                if (Game.Option.IsTriggered("Скоростная атака") && (round > 3) && !rapidAttack)
                 {
                     Character target = EnemiesList.Where(x => x.Hitpoints > 0).FirstOrDefault();
                     irresistibleAttack = AdditionalAttack(ref fight, target, "Вы проводите Скоростную атаку!", "Урон от атаки");
