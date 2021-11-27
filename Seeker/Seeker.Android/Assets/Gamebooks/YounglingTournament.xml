@@ -2840,11 +2840,11 @@
 		<ID>267</ID>
 		<Text>Список приемов для изучения громаден, но большинство из них до автоматизма отработать можно только за несколько дней, а то и недель. Вам подойдут самые простейшие, причем большая часть из них — защитные:</Text>
 		<Options>
-			<Option Destination="270" Text="«Неотразимая атака»" OnlyIf="БИБЛИОТЕКА &lt;= 2"/>
-			<Option Destination="271" Text="«Встречный удар»" OnlyIf="БИБЛИОТЕКА &lt;= 2"/>
-			<Option Destination="272" Text="«Защита от встречного удара»" OnlyIf="БИБЛИОТЕКА &lt;= 2"/>
-			<Option Destination="273" Text="«Защита от Подсечки»" OnlyIf="БИБЛИОТЕКА &lt;= 2"/>
-			<Option Destination="274" Text="«Защита от Удара с разворота»" OnlyIf="БИБЛИОТЕКА &lt;= 2" Aftertext="Вы можете выбрать только два приема, их изучение займет все время до обеда."/>
+			<Option Destination="270" Text="«Неотразимая атака»" OnlyIf="БИБЛИОТЕКА &lt;= 1"/>
+			<Option Destination="271" Text="«Встречный удар»" OnlyIf="БИБЛИОТЕКА &lt;= 1"/>
+			<Option Destination="272" Text="«Защита от встречного удара»" OnlyIf="БИБЛИОТЕКА &lt;= 1"/>
+			<Option Destination="273" Text="«Защита от Подсечки»" OnlyIf="БИБЛИОТЕКА &lt;= 1"/>
+			<Option Destination="274" Text="«Защита от Удара с разворота»" OnlyIf="БИБЛИОТЕКА &lt;= 1" Aftertext="Вы можете выбрать только два приема, их изучение займет все время до обеда."/>
 			<Option Destination="264" Text="После окончания обучения отправляетесь в столовую"/>
 		</Options>
 	</Paragraph>
@@ -3355,11 +3355,11 @@
 		<ID>311</ID>
 		<Text>Вам подойдут самые простейшие, причем большая часть из них — защитные:</Text>
 		<Options>
-			<Option Destination="312" Text="«Неотразимая атака»" OnlyIf="БИБЛИОТЕКА &lt;= 2"/>
-			<Option Destination="313" Text="«Встречный удар»" OnlyIf="БИБЛИОТЕКА &lt;= 2"/>
-			<Option Destination="314" Text="«Защита от встречного удара»" OnlyIf="БИБЛИОТЕКА &lt;= 2"/>
-			<Option Destination="315" Text="«Защита от Подсечки»" OnlyIf="БИБЛИОТЕКА &lt;= 2"/>
-			<Option Destination="316" Text="«Защита от Удара с разворота»" OnlyIf="БИБЛИОТЕКА &lt;= 2" Aftertext="Вы можете выбрать только два приема, их изучение займет все время до сна."/>
+			<Option Destination="312" Text="«Неотразимая атака»" OnlyIf="БИБЛИОТЕКА &lt;= 1"/>
+			<Option Destination="313" Text="«Встречный удар»" OnlyIf="БИБЛИОТЕКА &lt;= 1"/>
+			<Option Destination="314" Text="«Защита от встречного удара»" OnlyIf="БИБЛИОТЕКА &lt;= 1"/>
+			<Option Destination="315" Text="«Защита от Подсечки»" OnlyIf="БИБЛИОТЕКА &lt;= 1"/>
+			<Option Destination="316" Text="«Защита от Удара с разворота»" OnlyIf="БИБЛИОТЕКА &lt;= 1" Aftertext="Вы можете выбрать только два приема, их изучение займет все время до сна."/>
 			<Option Destination="301" Text="После окончания обучения отправляетесь в комнату"/>
 		</Options>
 	</Paragraph>
