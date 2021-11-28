@@ -12,11 +12,7 @@ namespace Seeker.Gamebook.SwampFever
             get => _fury;
             set
             {
-                if (value < -2)
-                    _fury = -2;
-                else if (value > 2)
-                    _fury = 2;
-                else
+                if (Math.Abs(value) <= 2)
                     _fury = value;
             }
         }
