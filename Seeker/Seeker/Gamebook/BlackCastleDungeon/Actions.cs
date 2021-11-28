@@ -26,7 +26,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public override List<string> Status() => new List<string>
         {
             String.Format("Мастерство: {0}", protagonist.Mastery),
-            String.Format("Выносливость: {0}", protagonist.Endurance),
+            String.Format("Выносливость: {0}/{1}", protagonist.Endurance, protagonist.MaxEndurance),
             String.Format("Удача: {0}", protagonist.Luck),
             String.Format("Золото: {0}", protagonist.Gold)
         };
