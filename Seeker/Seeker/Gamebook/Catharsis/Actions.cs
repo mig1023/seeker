@@ -29,7 +29,7 @@ namespace Seeker.Gamebook.Catharsis
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Здоровье: {0}", protagonist.Life),
+            String.Format("Здоровье: {0}/{1}", protagonist.Life, protagonist.MaxLife),
             String.Format("Аура: {0}", protagonist.Aura),
         };
 
