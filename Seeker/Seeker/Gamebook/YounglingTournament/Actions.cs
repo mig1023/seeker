@@ -56,7 +56,7 @@ namespace Seeker.Gamebook.YounglingTournament
                     newStatuses.Add(String.Format("Уколов противника: {0}", protagonist.EnemyThrust));
             }
 
-            newStatuses.Add(String.Format("Выносливость: {0}", protagonist.Hitpoints));
+            newStatuses.Add(String.Format("Выносливость: {0}/{1}", protagonist.Hitpoints, protagonist.MaxHitpoints));
 
             return newStatuses;
         }
