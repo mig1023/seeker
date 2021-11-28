@@ -28,7 +28,7 @@ namespace Seeker.Gamebook.Genesis
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Здоровье: {0}", protagonist.Life),
+            String.Format("Здоровье: {0}/{1}", protagonist.Life, protagonist.MaxLife),
             String.Format("Аура: {0}", protagonist.Aura),
             String.Format("Ловкость: {0}", protagonist.Skill),
             String.Format("Стелс: {0}", protagonist.Stealth),
