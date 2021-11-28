@@ -38,7 +38,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public override List<string> Status() => new List<string>
         {
             String.Format("Сила: {0}", protagonist.Strength),
-            String.Format("Жизни: {0}", protagonist.Hitpoints),
+            String.Format("Жизни: {0}/{1}", protagonist.Hitpoints, protagonist.MaxHitpoints),
             String.Format("Обращений: {0}", protagonist.Transformation),
         };
 
