@@ -21,7 +21,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public override List<string> Status() => new List<string>
         {
             String.Format("Ловкость: {0}", protagonist.Skill),
-            String.Format("Сила: {0}", protagonist.Strength),
+            String.Format("Сила: {0}/{1}", protagonist.Strength, protagonist.MaxStrength),
             String.Format("Обаяние: {0}", protagonist.Charm),
         };
 
