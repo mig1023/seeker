@@ -11,9 +11,9 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Реакция: {0}", protagonist.Reaction),
-            String.Format("Сила: {0}", protagonist.Strength),
-            String.Format("Выносливость: {0}", protagonist.Endurance),
+            String.Format("Реакция: {0}/12", protagonist.Reaction),
+            String.Format("Сила: {0}/12", protagonist.Strength),
+            String.Format("Выносливость: {0}/12", protagonist.Endurance),
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
