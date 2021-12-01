@@ -619,8 +619,6 @@ namespace Seeker.Gamebook.YounglingTournament
 
                 if (UseForcesInFight(ref fight, ref speedActivate, EnemiesList))
                 {
-                    round += 1;
-
                     int enemyLimit = (EnemyHitpointsLimith > 0 ? EnemyHitpointsLimith : 0);
 
                     if ((FightEnemies.Keys.Where(x => x.Hitpoints > enemyLimit).Count() == 0))
@@ -628,8 +626,6 @@ namespace Seeker.Gamebook.YounglingTournament
                         fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                         return fight;
                     }
-                    else
-                        continue;
                 }
 
                 if (Game.Option.IsTriggered("Скоростная атака") && (round > 3) && !rapidAttack)
