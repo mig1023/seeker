@@ -47,11 +47,8 @@ namespace Seeker.Gamebook.YounglingTournament
                 newStatuses.Add(String.Format("Форма {0}", GetSwordSkillName(GetSwordType())));
                 newStatuses.Add(String.Format("Понимание Силы: {0}", protagonist.ForceTechniques.Values.Sum()));
 
-                if (protagonist.Thrust > 0)
-                    newStatuses.Add(String.Format("Уколов нанесено: {0}", protagonist.Thrust));
-
-                if (protagonist.EnemyThrust > 0)
-                    newStatuses.Add(String.Format("Уколов противника: {0}", protagonist.EnemyThrust));
+                if ((protagonist.Thrust > 0) || (protagonist.EnemyThrust > 0))
+                    newStatuses.Add(String.Format("Уколов: {0} vs {1}", protagonist.Thrust, protagonist.EnemyThrust));
             }
 
             newStatuses.Add(String.Format("Выносливость: {0}/{1}", protagonist.Hitpoints, protagonist.MaxHitpoints));
