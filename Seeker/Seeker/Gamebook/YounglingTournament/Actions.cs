@@ -24,9 +24,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public int AccuracyBonus { get; set; }
         public int Level { get; set; }
-
-
-        private static List<int> ForceTechniquesOrder { get; set; }
+        
 
         public override List<string> Status() => new List<string>
         {
@@ -476,25 +474,6 @@ namespace Seeker.Gamebook.YounglingTournament
                     character.Name, wound, character.Hitpoints));
         }
 
-        private List<int> NewForceTechniquesOrder()
-        {
-            List<int> forceTechniquesOrder = new List<int> { 1, 2 };
-
-            if (protagonist.ForceTechniques[ForcesTypes.Suffocation] > 0)
-                forceTechniquesOrder.Add(3);
-
-            for (int i = 0; i < forceTechniquesOrder.Count; i++)
-            {
-                int newPosition = Game.Dice.Roll(size: forceTechniquesOrder.Count) - 1;
-
-                int replace = forceTechniquesOrder[newPosition];
-                forceTechniquesOrder[newPosition] = forceTechniquesOrder[i];
-                forceTechniquesOrder[i] = replace;
-            }
-
-            return forceTechniquesOrder;
-        }
-
         private bool SpeedActivation(ref List<string> fight, ref bool speedActivate, List<Character> EnemiesList)
         {
             fight.Add(String.Format("BOLD|Вы активируете Скорость Силы {0} ранга!",
@@ -521,12 +500,12 @@ namespace Seeker.Gamebook.YounglingTournament
 
             int forceTechniques = 0;
 
-            for (int i = 0; i < ForceTechniquesOrder.Count; i++)
+            for (int i = 0; i < protagonist.ForceTechniquesOrder.Count; i++)
             {
-                if (ForceTechniquesOrder[i] != 0)
+                if (protagonist.ForceTechniquesOrder[i] != 0)
                 {
-                    forceTechniques = ForceTechniquesOrder[i];
-                    ForceTechniquesOrder[i] = 0;
+                    forceTechniques = protagonist.ForceTechniquesOrder[i];
+                    protagonist.ForceTechniquesOrder[i] = 0;
 
                     break;
                 }
@@ -614,8 +593,6 @@ namespace Seeker.Gamebook.YounglingTournament
 
             Dictionary<Character, int> FightEnemies = new Dictionary<Character, int>();
             List<Character> EnemiesList = new List<Character>();
-
-            ForceTechniquesOrder = NewForceTechniquesOrder();
 
             foreach (Character enemy in Enemies)
             {

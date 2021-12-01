@@ -113,8 +113,10 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public SortedDictionary<ForcesTypes, int> ForceTechniques { get; set; }
         public SortedDictionary<SwordTypes, int> SwordTechniques { get; set; }
+        public List<int> ForceTechniquesOrder { get; set; }
 
         private static Dictionary<string, int> HitpointsLoss = new Dictionary<string, int>();
+        
 
         public override void Init()
         {
