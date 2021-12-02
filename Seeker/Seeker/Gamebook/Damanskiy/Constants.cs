@@ -10,16 +10,17 @@ namespace Seeker.Gamebook.Damanskiy
 
         public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
-            [ButtonTypes.Main] = "#cfcfcf",
+            [ButtonTypes.Main] = "#d8d8d8",
             [ButtonTypes.Continue] = "#e7e7e7",
-            [ButtonTypes.System] = "#e7e7e7",
+            [ButtonTypes.System] = "#efefef",
+            [ButtonTypes.Font] = "#000000",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
-            [ColorTypes.Font] = "#000000",
             [ColorTypes.SystemFont] = "#000000",
-            [ColorTypes.BookColor] = "#cfcfcf",
+            [ColorTypes.BookColor] = "#d8d8d8",
+            [ColorTypes.BookFontColor] = "#000000",
         };
 
         public static Links GetLinks() => new Links
