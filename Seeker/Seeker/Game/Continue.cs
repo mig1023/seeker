@@ -52,6 +52,8 @@ namespace Seeker.Game
             return Game.Data.CurrentParagraphID;
         }
 
+        public static void Remove() => App.Current.Properties.Remove(CurrentGameName);
+
         public static void Clean()
         {
             foreach (string gamebook in Gamebook.List.GetBooks())
