@@ -155,6 +155,7 @@ namespace Seeker.Game
             description.Translator = StringParse(data["Translator"]);
             description.Translators = StringParse(data["Translators"]);
             description.Year = IntParse(data["Year"]);
+            description.Size = IntParse(data["Size"]);
             description.Text = StringParse(data["Text"]);
 
             List.SaveBookTitle(description.Book, description.Title);
