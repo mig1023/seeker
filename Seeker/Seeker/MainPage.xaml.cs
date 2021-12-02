@@ -212,11 +212,11 @@ namespace Seeker
                 }
             }
 
-            if ((id == Game.Data.StartParagraph) && Game.Continue.IsGameSaved())
+            if (startOfGame && Game.Continue.IsGameSaved())
             {
                 Options.Children.Add(Output.Buttons.Additional("Продолжить предыдущую игру", Continue_Click));
             }
-            else if ((id > Game.Data.StartParagraph) && (Game.Data.Actions != null) && !(gameOver && (optionCount == 1)))
+            else if (!startOfGame && (Game.Data.Actions != null) && !(gameOver && (optionCount == 1)))
             {
                 foreach (string buttonName in Game.Healing.List())
                     AddAdditionalButton(buttonName, HealingButton_Click);
@@ -226,26 +226,24 @@ namespace Seeker
             }
 
             if (Game.Settings.GetValue("SystemMenu") > 0)
-            {
                 Options.Children.Add(SystemMenu());
-            }
 
             if (Game.Settings.GetValue("Debug") > 0)
-            {
                 Options.Children.Add(Output.Interface.DebugInformation(id));
-            }
 
             if (!reload)
-            {
                 MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
-            }
 
             UpdateStatus();
             CheckGameOver();
 
             Game.Option.Trigger(paragraph.LateTrigger);
 
-            if (id != Game.Data.StartParagraph)
+            if (!startOfGame && gameOver && (optionCount == 1))
+            {
+                Game.Continue.Remove();
+            }
+            else if (!startOfGame)
             {
                 Game.Continue.Save();
             }
