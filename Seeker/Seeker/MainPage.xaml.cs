@@ -27,10 +27,8 @@ namespace Seeker
 
             Game.Data.Actions = null;
 
-            foreach (string game in List.GetBooks())
+            foreach (Description gamebook in List.GetSortedBooks())
             {
-                Description gamebook = List.GetDescription(game);
-
                 Options.Children.Add(Output.Interface.GamebookImage(gamebook));
                 Options.Children.Add(Output.Buttons.GamebookButton(gamebook, Gamebook_Click));
 

@@ -27,6 +27,7 @@ namespace Seeker.Output
             SettingOption("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING);
             SettingOption("Отображать меню", "SystemMenu", Constants.ON_OFF_SETTING);
             SettingOption("Отладка", "Debug", Constants.ON_OFF_SETTING);
+            SettingOption("Сортировка", "Sort", Constants.SORT_SETTING);
 
             SettingButton("Сбросить сохранённые игры", () => Game.Continue.Clean(), spacer: true);
             SettingButton("Сбросить все настройки", () => Game.Settings.Clean());

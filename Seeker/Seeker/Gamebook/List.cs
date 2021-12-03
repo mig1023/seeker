@@ -47,6 +47,19 @@ namespace Seeker.Gamebook
 
         public static List<string> GetBooks() => Books.Keys.ToList();
 
+        public static List<Description> GetSortedBooks()
+        {
+            List<Description> list = new List<Description>();
+
+            foreach (string game in List.GetBooks())
+                list.Add(List.GetDescription(game));
+
+            if (Game.Settings.GetValue("Sort") == 1)
+                return list.OrderByDescending(x => x.Size).ToList();
+            else
+                return list;
+        }
+
         public static Description GetDescription(string name)
         {
             Description book = new Description();

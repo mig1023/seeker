@@ -87,5 +87,11 @@ namespace Seeker.Output
             "Отображать",
             "Скрывать",
         };
+
+        public static List<string> SORT_SETTING = new List<string>
+        {
+            "По умолчанию",
+            "По размеру",
+        };
     }
 }
