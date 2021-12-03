@@ -55,9 +55,21 @@ namespace Seeker.Gamebook
                 list.Add(List.GetDescription(game));
 
             if (Game.Settings.GetValue("Sort") == 1)
+            {
+                return list.OrderBy(x => x.Title).ToList();
+            }
+            else if (Game.Settings.GetValue("Sort") == 2)
+            {
+                return list.OrderBy(x => x.Author + x.Authors).ToList();
+            }
+            else if (Game.Settings.GetValue("Sort") == 3)
+            {
                 return list.OrderByDescending(x => x.Size).ToList();
+            }
             else
+            {
                 return list;
+            }
         }
 
         public static Description GetDescription(string name)

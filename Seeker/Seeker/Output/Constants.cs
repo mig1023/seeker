@@ -91,6 +91,8 @@ namespace Seeker.Output
         public static List<string> SORT_SETTING = new List<string>
         {
             "По умолчанию",
+            "По названию",
+            "По автору",
             "По размеру",
         };
     }
