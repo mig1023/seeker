@@ -5,8 +5,6 @@ namespace Seeker.Gamebook
 {
     class List
     {
-        private static Dictionary<string, string> BookTitles = new Dictionary<string, string>();
-
         private static Dictionary<string, Links> Books = new Dictionary<string, Links>
         {
             ["BlackCastleDungeon"] = BlackCastleDungeon.Constants.GetLinks(),
@@ -91,9 +89,5 @@ namespace Seeker.Gamebook
 
             return book;
         }
-
-        public static string GetBooksNameByTitle(string title) => BookTitles[title];
-
-        public static void SaveBookTitle(string name, string title) => BookTitles[title] = name;
     }
 }

@@ -30,7 +30,7 @@ namespace Seeker
             foreach (Description gamebook in List.GetSortedBooks())
             {
                 Options.Children.Add(Output.Interface.GamebookImage(gamebook));
-                Options.Children.Add(Output.Buttons.GamebookButton(gamebook, Gamebook_Click));
+                Options.Children.Add(Output.Buttons.GamebookButton(gamebook, (sender, e) => Gamebook_Click(gamebook.Book)));
 
                 Output.Interface.GamebookDisclaimerAdd(gamebook, ref Options);
             }
@@ -43,12 +43,8 @@ namespace Seeker
                 MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
         }
 
-        private void Gamebook_Click(object sender, EventArgs e)
+        private void Gamebook_Click(string gamebook)
         {
-            Button button = sender as Button;
-
-            string gamebook = List.GetBooksNameByTitle(button.Text);
-
             Game.Continue.CurrentGame(gamebook);
 
             try
