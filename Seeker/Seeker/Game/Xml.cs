@@ -156,8 +156,6 @@ namespace Seeker.Game
             description.Year = IntParse(data["Year"]);
             description.Text = StringParse(data["Text"]);
             description.Size = StringParse(data["Size"]);
-
-            List.SaveBookTitle(description.Book, description.Title);
         }
 
         private static void DescriptionLoad()
