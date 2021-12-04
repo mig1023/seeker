@@ -54,21 +54,21 @@ namespace Seeker.Gamebook
             foreach (string game in List.GetBooks())
                 list.Add(List.GetDescription(game));
 
-            if (Game.Settings.GetValue("Sort") == 1)
+            int sort = Game.Settings.GetValue("Sort");
+
+            switch (sort)
             {
-                return list.OrderBy(x => x.Title).ToList();
-            }
-            else if (Game.Settings.GetValue("Sort") == 2)
-            {
-                return list.OrderBy(x => x.Author + x.Authors).ToList();
-            }
-            else if (Game.Settings.GetValue("Sort") == 3)
-            {
-                return list.OrderByDescending(x => x.Size).ToList();
-            }
-            else
-            {
-                return list;
+                case 1:
+                    return list.OrderBy(x => x.Title).ToList();
+
+                case 2:
+                    return list.OrderBy(x => x.Author + x.Authors).ToList();
+
+                case 3:
+                    return list.OrderByDescending(x => x.Size).ToList();
+
+                default:
+                    return list;
             }
         }
 
