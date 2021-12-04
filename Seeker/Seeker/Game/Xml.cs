@@ -11,15 +11,14 @@ namespace Seeker.Game
     {
         private static Dictionary<string, XmlNode> Descriptions { get; set; }
 
-        public static int IntParse(XmlNode xmlNode)
+        public static int IntParse(string text)
         {
-            if (xmlNode == null)
-                return 0;
-
-            bool success = int.TryParse(xmlNode.InnerText, out int value);
+            bool success = int.TryParse(text, out int value);
 
             return (success ? value : 0);
         }
+
+        public static int IntParse(XmlNode xmlNode) => (xmlNode == null ? 0 : IntParse(xmlNode.InnerText));
 
         public static string StringParse(XmlNode xmlNode) => (xmlNode == null ? String.Empty : xmlNode.InnerText);
 
@@ -155,8 +154,15 @@ namespace Seeker.Game
             description.Translator = StringParse(data["Translator"]);
             description.Translators = StringParse(data["Translators"]);
             description.Year = IntParse(data["Year"]);
-            description.Size = IntParse(data["Size"]);
             description.Text = StringParse(data["Text"]);
+
+            if (data["Size"].InnerText.Contains("("))
+            {
+                string size = data["Size"].InnerText.Substring(0, data["Size"].InnerText.IndexOf(" "));
+                description.Size = IntParse(size);
+            }
+            else
+                description.Size = IntParse(data["Size"]);
 
             List.SaveBookTitle(description.Book, description.Title);
         }
