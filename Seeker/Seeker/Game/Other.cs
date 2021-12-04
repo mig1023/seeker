@@ -46,5 +46,16 @@ namespace Seeker.Game
             int.Parse(option.Contains("=") ? option.Split('=')[1] : option.Split('>', '<')[1]);
 
         public static bool DoNothing() => true;
+
+        public static int SizeParse(string size)
+        {
+            if (size.Contains("("))
+            {
+                string subSize = size.Substring(0, size.IndexOf(" "));
+                return Xml.IntParse(subSize);
+            }
+            else
+                return Xml.IntParse(size);
+        }
     }
 }
