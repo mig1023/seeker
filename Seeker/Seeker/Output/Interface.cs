@@ -416,6 +416,10 @@ namespace Seeker.Output
             {
                 label.HorizontalTextAlignment = TextAlignment.Center;
             }
+            else if (text.Alignment == "Right")
+            {
+                label.HorizontalTextAlignment = TextAlignment.End;
+            }
 
             return label;
         }
