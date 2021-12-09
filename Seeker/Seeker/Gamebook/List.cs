@@ -41,6 +41,7 @@ namespace Seeker.Gamebook
             ["WildDeath"] = WildDeath.Constants.GetLinks(),
             ["ByTheWillOfRome"] = ByTheWillOfRome.Constants.GetLinks(),
             ["Damanskiy"] = Damanskiy.Constants.GetLinks(),
+            ["OrcsDay"] = OrcsDay.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() => Books.Keys.ToList();
