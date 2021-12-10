@@ -25,6 +25,7 @@ namespace Seeker.Prototypes
                 {
                     Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
                     Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
+                    Aftertext = Game.Xml.StringParse(xmlOption.Attributes["Aftertext"]),
                 };
 
                 paragraph.Options.Add(option);
