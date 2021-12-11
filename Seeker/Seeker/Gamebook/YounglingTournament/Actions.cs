@@ -144,8 +144,6 @@ namespace Seeker.Gamebook.YounglingTournament
             return enemies;
         }
 
-        public List<string> SimpleDice() => new List<string> { String.Format("BIG|Кубик: {0}", Game.Dice.Symbol(Game.Dice.Roll())) };
-
         public List<string> DiceWounds()
         {
             List<string> diceCheck = new List<string> { };

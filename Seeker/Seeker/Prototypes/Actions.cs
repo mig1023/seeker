@@ -97,6 +97,8 @@ namespace Seeker.Prototypes
 
         public virtual string TextByOptions(string option) => String.Empty;
 
+        public List<string> SimpleDice() => new List<string> { String.Format("BIG|Кубик: {0}", Game.Dice.Symbol(Game.Dice.Roll())) };
+
         public int GetProperty(object protagonist, string property) =>
             (int)protagonist.GetType().GetProperty(property).GetValue(protagonist, null);
 
