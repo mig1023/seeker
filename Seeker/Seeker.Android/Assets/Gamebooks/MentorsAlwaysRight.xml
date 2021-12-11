@@ -3114,7 +3114,6 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>313</ID>
-		<Text></Text>
 		<Actions>
 			<Action>
 				<Name>Option</Name>
@@ -3757,7 +3756,7 @@
 		<Text>Но куда же направиться:</Text>
 		<Options>
 			<Option Destination="59" Text="Дальше, на север"/>
-			<Option Destination="211" Text="Свернуть на северо-восток, к дороге"/>
+			<Option Destination="211" Text="Свернуть на северо-запад, к дороге"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -4327,7 +4326,7 @@
 		<Text>Вскоре становится понятно, что дорога, которая была слева от вас, забирает все восточнее и попросту заканчивается у двухэтажного деревянного строения. То ли карта врет, то ли вы забрели куда-то не туда.\n\nЧто предпримете:</Text>
 		<Options>
 			<Option Destination="22" Text="Двинетесь на север, к деревянному строению"/>
-			<Option Destination="399" Text="Попробуете пересечь дорогу, направившись на северо-восток"/>
+			<Option Destination="399" Text="Попробуете пересечь дорогу, направившись на северо-запад"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
