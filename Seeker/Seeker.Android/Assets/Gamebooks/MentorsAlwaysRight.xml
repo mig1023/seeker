@@ -3114,11 +3114,20 @@
 	</Paragraph>
 	<Paragraph>
 		<ID>313</ID>
-		<Text>Еще раз бросьте кубик. Вам удается снести гоблина с ног, если:</Text>
+		<Text></Text>
+		<Actions>
+			<Action>
+				<Name>Option</Name>
+				<Option Destination="108" Text="Ваша СИЛА не меньше 13" OnlyIf="СИЛА >= 13" Aftertext="Если она меньше, то еще раз бросьте кубик:"/>
+			</Action>
+			<Action>
+				<Name>SimpleDice</Name>
+				<Button>Кинуть кубики</Button>
+			</Action>
+		</Actions>
 		<Options>
-			<Option Destination="454" Text="Выпало 5 или 6"/>
-			<Option Destination="454" Text="Ваша СИЛА не меньше 13" OnlyIf="СИЛА >= 13" Aftertext="Иначе удар у вас вышел слабее:"/>
-			<Option Destination="108"/>
+			<Option Destination="108" Text="Выпало 5 или 6"/>
+			<Option Destination="155" Text="Выпали другие цифры"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
