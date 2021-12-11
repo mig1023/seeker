@@ -257,6 +257,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return stoneThrow;
         }
 
+        public List<string> SimpleDice() => new List<string> { String.Format("BIG|Кубик: {0}", Game.Dice.Symbol(Game.Dice.Roll())) };
+
         public List<string> DicesGame()
         {
             List<string> game = new List<string> { };
