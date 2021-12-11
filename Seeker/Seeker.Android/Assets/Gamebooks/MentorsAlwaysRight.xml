@@ -1405,10 +1405,10 @@
 			<Modification Name="Hitpoints" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="164" Text="Дальше на северо-восток"/>
+			<Option Destination="164" Text="На северо-запад"/>
 			<Option Destination="31" Text="На север"/>
 			<Option Destination="426" Text="На восток"/>
-			<Option Destination="316" Text="На северо-восток"/>
+			<Option Destination="316" Text="Дальше на северо-восток"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
