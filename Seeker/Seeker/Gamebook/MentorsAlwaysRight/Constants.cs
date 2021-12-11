@@ -31,6 +31,16 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 556, 557, 558, 559 };
 
+        public static Dictionary<string, Character.SpecializationType> GetSpecializationType()
+        {
+            return new Dictionary<string, Character.SpecializationType>
+            {
+                ["ВОИН"] = Character.SpecializationType.Warrior,
+                ["МАГ"] = Character.SpecializationType.Wizard,
+                ["МЕТАТЕЛЬ"] = Character.SpecializationType.Thrower,
+            };
+        }
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

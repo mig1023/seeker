@@ -402,9 +402,10 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             {
                 return true;
             }
-            else if (option == "!ВОИН")
+            else if (option.Contains("ВОИН") || option.Contains("МАГ") || option.Contains("МЕТАТЕЛЬ"))
             {
-                return protagonist.Specialization != Character.SpecializationType.Warrior;
+                Character.SpecializationType spec = Constants.GetSpecializationType()[option.Replace("!", String.Empty)];
+                return (option.Contains("!") ? (protagonist.Specialization != spec) : (protagonist.Specialization == spec));
             }
             else if (option.Contains("|"))
             {
