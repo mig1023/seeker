@@ -359,7 +359,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             if (action == "ЛЕЧИЛКА")
             {
                 protagonist.Hitpoints += 6;
-                protagonist.Spells.Remove(action);
+                protagonist.Spells.Remove("ЛЕЧЕНИЕ");
 
                 return true;
             }
