@@ -3108,8 +3108,8 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="12" Text="Успели"/>
-			<Option Destination="102" Text="Нет"/>
+			<Option Destination="15" Text="Успели"/>
+			<Option Destination="502" Text="Нет"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
