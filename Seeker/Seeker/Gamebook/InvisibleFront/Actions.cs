@@ -30,21 +30,16 @@ namespace Seeker.Gamebook.InvisibleFront
                         int level = Game.Other.LevelParse(oneOption);
 
                         if (oneOption.Contains("НЕДОВОЛЬСТВО >") && (level >= protagonist.Dissatisfaction))
-                        {
                             return false;
-                        }
+
                         else if (oneOption.Contains("НЕДОВОЛЬСТВО <=") && (level < protagonist.Dissatisfaction))
-                        {
                             return false;
-                        }
+
                         else if (oneOption.Contains("ВЕРБОВКА >") && (level >= protagonist.Recruitment))
-                        {
                             return false;
-                        }
+
                         else if (oneOption.Contains("ВЕРБОВКА <=") && (level < protagonist.Recruitment))
-                        {
                             return false;
-                        }
                     }
                     else if (oneOption.Contains("!"))
                     {
