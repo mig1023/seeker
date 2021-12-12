@@ -28,6 +28,8 @@ namespace Seeker.Gamebook.OrcsDay
             [ColorTypes.BookFontColor] = "#000000",
         };
 
+        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 102, 103 };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
