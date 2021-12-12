@@ -60,9 +60,7 @@ namespace Seeker.Gamebook.HeartOfIce
         public List<string> Get()
         {
             if (Choice)
-            {
                 protagonist.Chosen = true;
-            }
 
             if (!String.IsNullOrEmpty(Skill))
             {
@@ -83,27 +81,21 @@ namespace Seeker.Gamebook.HeartOfIce
             }
 
             if (Split)
-            {
                 protagonist.Split += 1;
-            }
 
             if (((Price > 0) || Split) && !Multiple)
-            {
                 Used = true;
-            }
 
             if (BenefitList != null)
             {
                 foreach (Modification modification in BenefitList)
-                {
                     modification.Do();
-                }
             }
 
             return new List<string> { "RELOAD" };
         }
 
-        public override bool IsButtonEnabled()
+        public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool disabledBySkills = (!String.IsNullOrEmpty(Skill) &&
                 ((protagonist.SkillsValue <= 0) || protagonist.Skills.Contains(Skill)));
