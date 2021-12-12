@@ -139,8 +139,6 @@ namespace Seeker
 
             if ((paragraph.Actions != null) && (paragraph.Actions.Count > 0))
             {
-                int index = 0;
-
                 foreach (Abstract.IActions action in paragraph.Actions)
                 {
                     if (action.Name == "Option")
@@ -155,15 +153,43 @@ namespace Seeker
                         foreach (View enemy in Output.Interface.Represent(action.Do(out _, "Representer")))
                             actionPlace.Children.Add(enemy);
 
-                        EventHandler actionClick = (object sender, EventArgs e) => Action_Click(action, actionPlace);
-                        actionPlace.Children.Add(Output.Buttons.Action(action.Button, actionClick, action.IsButtonEnabled()));
+                        if (action.Name.Contains(","))
+                        {
+                            string[] actions = action.Name.Split(',');
+                            string[] buttons = action.Button.Split(',');
+
+                            int buttonIndex = 0;
+
+                            StackLayout buttonPlace = new StackLayout
+                            {
+                                Orientation = StackOrientation.Horizontal,
+                                Spacing = 5,
+                                HorizontalOptions = LayoutOptions.FillAndExpand,
+                            };
+
+                            foreach (string act in actions)
+                            {
+                                EventHandler actionClick = (object sender, EventArgs e) => Action_Click(action, actionPlace, anotherAction: act.Trim());
+                                Button button = Output.Buttons.Action(buttons[buttonIndex], actionClick, action.IsButtonEnabled(buttonIndex > 0));
+                                button.HorizontalOptions = LayoutOptions.FillAndExpand;
+
+                                buttonPlace.Children.Add(button);
+
+                                buttonIndex += 1;
+                            }
+
+                            actionPlace.Children.Add(buttonPlace);
+                        }
+                        else
+                        {
+                            EventHandler actionClick = (object sender, EventArgs e) => Action_Click(action, actionPlace);
+                            actionPlace.Children.Add(Output.Buttons.Action(action.Button, actionClick, action.IsButtonEnabled()));
+                        }
 
                         Action.Children.Add(actionPlace);
 
                         AddAftertext(ref Action, action.Aftertext, action.Aftertexts);
                     }
-
-                    index += 1;
                 }
             }
 
@@ -174,7 +200,7 @@ namespace Seeker
             {
                 bool mustBeVisible = OptionVisibility(option.Aftertext);
                 bool onlyIf = Game.Data.CheckOnlyIf(option.OnlyIf);
-                bool singleIf = Game.Data.CheckOnlyIf(option.Singleton) && !String.IsNullOrEmpty(option.Singleton);
+                bool singleIf = !String.IsNullOrEmpty(option.Singleton) && Game.Data.CheckOnlyIf(option.Singleton);
 
                 if (!String.IsNullOrEmpty(option.OnlyIf) && !onlyIf && !singleIf && !mustBeVisible)
                     continue;
@@ -196,13 +222,10 @@ namespace Seeker
 
             if (singleton != null)
             {
-                foreach (Button button in Options.Children)
+                foreach (Button button in Options.Children.Where(x => x != singleton))
                 {
-                    if (button != singleton)
-                    {
-                        button.IsEnabled = false;
-                        button.BackgroundColor = Color.Default;
-                    }
+                    button.IsEnabled = false;
+                    button.BackgroundColor = Color.Default;
                 }
             }
 
@@ -391,11 +414,11 @@ namespace Seeker
             Options.Children.Add(Output.Buttons.GameOver(toEndText, gameoverClick));
         }
                
-        private void Action_Click(Abstract.IActions action, StackLayout actionPlace)
+        private void Action_Click(Abstract.IActions action, StackLayout actionPlace, string anotherAction = "")
         {
             actionPlace.Children.Clear();
 
-            List<string> actionResult = action.Do(out bool reload, Trigger: true);
+            List<string> actionResult = action.Do(out bool reload, Trigger: true, action: anotherAction);
 
             if (reload)
                 Paragraph(Game.Data.CurrentParagraphID, reload: true);

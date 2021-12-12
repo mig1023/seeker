@@ -15,6 +15,7 @@ namespace Seeker.Prototypes
         public Game.Option Option { get; set; }
         public int Price { get; set; }
         public bool Multiple { get; set; }
+        public bool Decrement { get; set; }
 
         public Abstract.IModification Benefit { get; set; }
         public List<Abstract.IModification> BenefitList { get; set; }
@@ -89,7 +90,7 @@ namespace Seeker.Prototypes
             return param <= 0;
         }
 
-        public virtual bool IsButtonEnabled() => true;
+        public virtual bool IsButtonEnabled(bool secondButton = false) => true;
 
         public virtual bool IsHealingEnabled() => false;
 

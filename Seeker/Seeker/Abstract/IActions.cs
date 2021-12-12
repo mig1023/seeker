@@ -30,7 +30,7 @@ namespace Seeker.Abstract
 
         bool GameOver(out int toEndParagraph, out string toEndText);
 
-        bool IsButtonEnabled();
+        bool IsButtonEnabled(bool secondButton = false);
 
         bool IsHealingEnabled();
 
