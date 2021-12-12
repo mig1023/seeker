@@ -58,7 +58,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Strength, out toEndParagraph, out toEndText);
 
-        public override bool IsButtonEnabled() =>
+        public override bool IsButtonEnabled(bool secondButton = false) =>
             !(!String.IsNullOrEmpty(Equipment) && !String.IsNullOrEmpty(protagonist.Equipment));
 
         public override bool CheckOnlyIf(string option)
@@ -73,25 +73,19 @@ namespace Seeker.Gamebook.StringOfWorlds
                 int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
 
                 if (option.Contains("БЛАСТЕР >="))
-                {
                     return level <= protagonist.Blaster;
-                }
+
                 else if (option.Contains("БЛАСТЕР <"))
-                {
                     return level > protagonist.Blaster;
-                }
+
                 else if (option.Contains("ОЧКИ"))
-                {
                     return protagonist.Equipment == "Очки";
-                }
+
                 else if (option.Contains("ЗАЖИГАЛКА"))
-                {
                     return protagonist.Equipment == "Зажигалка";
-                }
+
                 else
-                {
                     return CheckOnlyIfTrigger(option);
-                }
             }
         }
 
@@ -148,6 +142,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             bool success = false;
 
             for (int i = 1; i < 7; i++)
+            {
                 if (!protagonist.Luck[i])
                 {
                     luckRecovery.Add(String.Format("GOOD|Цифра {0} восстановлена!", i));
@@ -156,6 +151,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
                     break;
                 }
+            }
 
             if (!success)
                 luckRecovery.Add("BAD|Все цифры и так счастливые!");
