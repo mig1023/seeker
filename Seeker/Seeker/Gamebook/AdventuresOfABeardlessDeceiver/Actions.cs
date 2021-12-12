@@ -108,7 +108,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             return protagonist.Popularity <= 0;
         }
 
-        public override bool IsButtonEnabled()
+        public override bool IsButtonEnabled(bool secondButton = false)
         {
             if (Level > 0)
                 return true;
