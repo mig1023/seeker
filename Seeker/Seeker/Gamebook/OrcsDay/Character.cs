@@ -6,17 +6,17 @@ namespace Seeker.Gamebook.OrcsDay
     {
         public static Character Protagonist = new Character();
 
-        public int Muscle;
-        public int Wits;
-        public int Courage;
-        public int Luck;
+        public int Muscle { get; set; }
+        public int Wits { get; set; }
+        public int Courage { get; set; }
+        public int Luck { get; set; }
 
-        public int Attack;
-        public int Defense;
-        public int Health;
+        public int Attack { get; set; }
+        public int Defense { get; set; }
+        public int Health { get; set; }
 
-        public int Orcishness;
-
+        public int Orcishness { get; set; }
+        
         private int _hitpoints;
         public int Hitpoints
         {
@@ -31,6 +31,9 @@ namespace Seeker.Gamebook.OrcsDay
             set => _money = Game.Param.Setter(value);
         }
 
+        public int StatBonuses { get; set; }
+
+
         public override void Init()
         {
             Name = String.Empty;
@@ -41,6 +44,7 @@ namespace Seeker.Gamebook.OrcsDay
             Hitpoints = 5;
             Money = 20;
             Orcishness = 6;
+            StatBonuses = 10;
         }
 
         public Character Clone() => new Character()
@@ -56,10 +60,11 @@ namespace Seeker.Gamebook.OrcsDay
             Attack = this.Attack,
             Defense = this.Defense,
             Health = this.Health,
+            StatBonuses = this.StatBonuses,
         };
 
         public override string Save() => String.Join("|",
-            Name, Muscle, Wits, Courage, Luck, Hitpoints, Money, Orcishness
+            Name, Muscle, Wits, Courage, Luck, Hitpoints, Money, Orcishness, StatBonuses
         );
 
         public override void Load(string saveLine)
@@ -74,6 +79,7 @@ namespace Seeker.Gamebook.OrcsDay
             Hitpoints = int.Parse(save[5]);
             Money = int.Parse(save[6]);
             Orcishness = int.Parse(save[7]);
+            StatBonuses = int.Parse(save[8]);
         }
     }
 }
