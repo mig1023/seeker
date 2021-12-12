@@ -82,21 +82,16 @@ namespace Seeker.Gamebook.PrairieLaw
                         int level = Game.Other.LevelParse(oneOption);
 
                         if (option.Contains("ЦЕНТОВ >=") && (level > protagonist.Cents))
-                        {
                             return false;
-                        }
+
                         else if (option.Contains("САМОРОДКОВ >=") && (level > protagonist.Nuggets))
-                        {
                             return false;
-                        }
+
                         else if (option.Contains("ПАТРОНОВ >=") && (level > protagonist.Cartridges))
-                        {
                             return false;
-                        }
+
                         else if (option.Contains("ШКУР >=") && (level > protagonist.AnimalSkins.Count))
-                        {
                             return false;
-                        }
                     }
                     else if (!Game.Option.IsTriggered(oneOption.Trim()))
                     {
@@ -236,7 +231,7 @@ namespace Seeker.Gamebook.PrairieLaw
             return diceCheck;
         }
 
-        public override bool IsButtonEnabled()
+        public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool disabledByUsed = (Price > 0) && Used;
             bool disabledByPrice = (Price > 0) && (protagonist.Cents < Price);
