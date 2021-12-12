@@ -56,21 +56,16 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
         private static bool OneParamFail(string oneOption)
         {
             if (ParamFail("СИЛА", oneOption, protagonist.Strength))
-            {
                 return true;
-            }
+
             else if (ParamFail("РЕАКЦИЯ", oneOption, protagonist.Reaction))
-            {
                 return true;
-            }
+
             else if (ParamFail("ВЫНОСЛИВОСТЬ", oneOption, protagonist.Endurance))
-            {
                 return true;
-            }
+
             else
-            {
                 return false;
-            }
         }
 
         private static bool ParamFail(string paramName, string option, int param)
@@ -78,17 +73,13 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             int level = Game.Other.LevelParse(option);
 
             if (option.Contains(String.Format("{0} >", paramName)) && (level >= param))
-            {
                 return true;
-            }
+
             else if (option.Contains(String.Format("{0} <=", paramName)) && (level < param))
-            {
                 return true;
-            }
+
             else
-            {
                 return false;
-            }
         }
 
         public List<string> TryToWound()
