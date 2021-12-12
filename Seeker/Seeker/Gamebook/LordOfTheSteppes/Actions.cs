@@ -39,18 +39,19 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
             }
-
             else if (Price > 0)
             {
                 string coins = Game.Other.CoinsNoun(Price, "монета", "монеты", "монет");
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, coins) };
             }
-
             else if (!String.IsNullOrEmpty(Text) || (Name == "Get"))
+            {
                 return new List<string> { Text };
-
+            }
             else if (Enemies == null)
+            {
                 return enemies;
+            }
 
             if ((Allies != null) && GroupFight)
             {
@@ -93,7 +94,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
 
-        public override bool IsButtonEnabled()
+        public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool disabledByChoosed = (SpecialTechnique != Character.SpecialTechniques.Nope) &&
                 (protagonist.SpecialTechnique.Count > 0);
@@ -150,9 +151,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 protagonist.Coins -= Price;
 
                 if (!Multiple)
-                {
                     Used = true;
-                }
 
                 if (BenefitList != null)
                 {
@@ -272,7 +271,9 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             string size = (Odd ? String.Empty : "BIG|");
 
             if (Dices == 1)
+            {
                 diceCheck.Add(String.Format("{0}На кубикe выпало: {1}", size, Game.Dice.Symbol(firstDice)));
+            }
             else
             {
                 int secondDice = Game.Dice.Roll();
