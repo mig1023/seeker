@@ -15,9 +15,7 @@ namespace Seeker.Gamebook.RockOfTerror
             List<string> statusLines = new List<string> { String.Format("Прошедшее время: {0:d2}:{1:d2}", time.Hours, time.Minutes) };
 
             if (protagonist.MonksHeart != null)
-            {
                 statusLines.Add(String.Format("Сила сердца монаха: {0}", protagonist.MonksHeart));
-            }
 
             return statusLines;
         }
@@ -41,21 +39,16 @@ namespace Seeker.Gamebook.RockOfTerror
                 int level = Game.Other.LevelParse(option);
 
                 if (option.Contains("СИЛА СЕРДЦА МОНАХА >=") && (level > protagonist.MonksHeart))
-                {
                     return false;
-                }
+
                 else if (option.Contains("ВРЕМЯ >=") && (level > protagonist.Time))
-                {
                     return false;
-                }
+
                 else if (option.Contains("ВРЕМЯ <") && (level < protagonist.Time))
-                {
                     return false;
-                }
+
                 else
-                {
                     return true;
-                }
             }
             else
             {
