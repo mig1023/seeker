@@ -47,7 +47,7 @@ namespace Seeker.Gamebook.SwampFever
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Hitpoints, out toEndParagraph, out toEndText);
 
-        public override bool IsButtonEnabled()
+        public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool disabledByPrice = (Price > 0) && (protagonist.Creds < Price);
             bool disabledByUsed = (String.IsNullOrEmpty(EnemyName) && (Benefit != null) && (GetProperty(protagonist, Benefit.Name) > 0));
