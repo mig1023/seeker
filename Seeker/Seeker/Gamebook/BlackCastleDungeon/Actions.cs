@@ -107,7 +107,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
 
-        public override bool IsButtonEnabled()
+        public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool disabledSpellButton = ThisIsSpell && (protagonist.SpellSlots <= 0);
             bool disabledGetOptions = (Price > 0) && Used;
