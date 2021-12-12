@@ -58,7 +58,8 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             return protagonist.Honor <= 0;
         }
 
-        public override bool IsButtonEnabled() => !(Used || ((Price > 0) && (protagonist.Sestertius < Price)));
+        public override bool IsButtonEnabled(bool secondButton = false) =>
+            !(Used || ((Price > 0) && (protagonist.Sestertius < Price)));
 
         public override bool CheckOnlyIf(string option)
         {
