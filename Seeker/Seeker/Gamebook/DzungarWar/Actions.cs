@@ -219,36 +219,28 @@ namespace Seeker.Gamebook.DzungarWar
             return dangerEnd;
         }
 
-        public override bool IsButtonEnabled()
+        public override bool IsButtonEnabled(bool secondButton = false)
         {
             if (Level > 0)
-            {
                 return true;
-            }
+
             else if (Used)
-            {
                 return false;
-            }
+
             else if (Name == "Brother")
-            {
                 return protagonist.Brother <= 0;
-            }
+
             else if (StatToMax)
-            {
                 return protagonist.MaxBonus > 0;
-            }
+
             else if (!String.IsNullOrEmpty(Stat))
-            {
                 return ((protagonist.StatBonuses > 0) && (GetProperty(protagonist, Stat) < 12));
-            }
+
             else if (Price >= 0)
-            {
                 return (protagonist.Tanga >= Price);
-            }
+
             else
-            {
                 return true;
-            }
         }
 
         public override bool CheckOnlyIf(string option)
