@@ -17,14 +17,10 @@ namespace Seeker.Gamebook.SilentSchool
             List<string> statusLines = new List<string> { String.Format("Жизнь: {0}", protagonist.Life) };
 
             if (protagonist.Grail > 0)
-            {
                 statusLines.Add(String.Format("Грааль: {0}", protagonist.Grail));
-            }
 
             if (!String.IsNullOrEmpty(protagonist.Weapon))
-            {
                 statusLines.Add(String.Format("Оружие: {0}", protagonist.Weapon));
-            }
 
             return statusLines;
         }
@@ -34,9 +30,7 @@ namespace Seeker.Gamebook.SilentSchool
             List<string> staticButtons = new List<string> { };
 
             if (Game.Option.IsTriggered("Шоколадка"))
-            {
                 staticButtons.Add("Съесть шоколадку");
-            }
 
             return staticButtons;
         }
@@ -53,7 +47,7 @@ namespace Seeker.Gamebook.SilentSchool
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Life, out toEndParagraph, out toEndText);
 
-        public override bool IsButtonEnabled() =>
+        public override bool IsButtonEnabled(bool secondButton = false) =>
             !((HarmedMyself > 0) && ((protagonist.HarmSelfAlready > 0) || (protagonist.Life <= HarmedMyself)));
 
         public override bool CheckOnlyIf(string option)
