@@ -21,6 +21,8 @@ namespace Seeker.Gamebook.OrcsDay
             [ColorTypes.Font] = "#000000",
             [ColorTypes.SystemFont] = "#000000",
             [ColorTypes.BookColor] = "#a4be84",
+            [ColorTypes.StatusBar] = "#72855c",
+            [ColorTypes.AdditionalStatus] = "#c8d8b5",
             [ColorTypes.BookFontColor] = "#000000",
         };
 
