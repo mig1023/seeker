@@ -101,7 +101,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         private int CureSpellCount() => protagonist.Spells.Where(x => x.Contains("ЛЕЧЕНИЕ")).Count();
 
-        public override bool IsButtonEnabled()
+        public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool bySpell = ThisIsSpell && (protagonist.Magicpoints <= 0);
             bool byCureSpell = (Name == "CureFracture") && (CureSpellCount() < Wound);
@@ -458,13 +458,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 fight.Add(String.Empty);
 
                 if (protagonist.Specialization == Character.SpecializationType.Thrower)
-                {
                     fight.Add("BOLD|Вы смазали ядом свои метательные ножи, теперь они будут отнимать у противника не 3, а 4 жизни");
-                }
                 else
-                {
                     fight.Add("BOLD|Вы смазали ядом свой меч, в следующем бою он будет отнимать у противника по 5 жизней");
-                }
 
                 Game.Option.Trigger("PoisonedBlade");
             }
