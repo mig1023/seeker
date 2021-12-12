@@ -39,8 +39,8 @@ namespace Seeker.Gamebook
             ["YounglingTournament"] = YounglingTournament.Constants.GetLinks(),
             ["GoingToLaughter"] = GoingToLaughter.Constants.GetLinks(),
             ["WildDeath"] = WildDeath.Constants.GetLinks(),
-            ["ByTheWillOfRome"] = ByTheWillOfRome.Constants.GetLinks(),
             ["Damanskiy"] = Damanskiy.Constants.GetLinks(),
+            ["ByTheWillOfRome"] = ByTheWillOfRome.Constants.GetLinks(),
             ["OrcsDay"] = OrcsDay.Constants.GetLinks(),
         };
 
