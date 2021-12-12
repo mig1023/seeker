@@ -109,7 +109,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return protagonist.Shame > protagonist.Glory;
         }
 
-        public override bool IsButtonEnabled() =>
+        public override bool IsButtonEnabled(bool secondButton = false) =>
             !((Name == "DiceSpendGlory") && ((protagonist.Glory - protagonist.Shame) < 6));
 
         private static bool IsPosibleResurrection()
