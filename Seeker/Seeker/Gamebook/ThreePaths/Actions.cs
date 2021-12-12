@@ -19,7 +19,8 @@ namespace Seeker.Gamebook.ThreePaths
             return new List<string> { String.Format("Время: {0:d2}:00", protagonist.Time) };
         }
 
-        public override bool IsButtonEnabled() => !(ThisIsSpell && (protagonist.SpellSlots <= 0));
+        public override bool IsButtonEnabled(bool secondButton = false) =>
+            !(ThisIsSpell && (protagonist.SpellSlots <= 0));
 
         public List<string> Get()
         {
