@@ -506,6 +506,13 @@ namespace Seeker.Output
             return stackLayout;
         }
 
+        public static StackLayout MultipleButtonsPlace() => new StackLayout
+        {
+            Orientation = StackOrientation.Horizontal,
+            Spacing = Constants.ACTIONPLACE_SPACING,
+            HorizontalOptions = LayoutOptions.FillAndExpand,
+        };
+
         public static List<Label> Actions(List<string> actionsLines)
         {
             List<Label> actionLabels = new List<Label>();

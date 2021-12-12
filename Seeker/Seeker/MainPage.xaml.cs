@@ -155,21 +155,16 @@ namespace Seeker
 
                         if (action.Name.Contains(","))
                         {
-                            string[] actions = action.Name.Split(',');
                             string[] buttons = action.Button.Split(',');
-
                             int buttonIndex = 0;
 
-                            StackLayout buttonPlace = new StackLayout
-                            {
-                                Orientation = StackOrientation.Horizontal,
-                                Spacing = 5,
-                                HorizontalOptions = LayoutOptions.FillAndExpand,
-                            };
+                            StackLayout buttonPlace = Output.Interface.MultipleButtonsPlace();
 
-                            foreach (string act in actions)
+                            foreach (string act in action.Name.Split(','))
                             {
-                                EventHandler actionClick = (object sender, EventArgs e) => Action_Click(action, actionPlace, anotherAction: act.Trim());
+                                EventHandler actionClick = (object sender, EventArgs e) =>
+                                    Action_Click(action, actionPlace, anotherAction: act.Trim());
+
                                 Button button = Output.Buttons.Action(buttons[buttonIndex], actionClick, action.IsButtonEnabled(buttonIndex > 0));
                                 button.HorizontalOptions = LayoutOptions.FillAndExpand;
 
