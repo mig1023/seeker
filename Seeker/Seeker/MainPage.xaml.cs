@@ -165,7 +165,9 @@ namespace Seeker
                                 EventHandler actionClick = (object sender, EventArgs e) =>
                                     Action_Click(action, actionPlace, anotherAction: act.Trim());
 
-                                Button button = Output.Buttons.Action(buttons[buttonIndex], actionClick, action.IsButtonEnabled(buttonIndex > 0));
+                                Button button = Output.Buttons.Action(buttons[buttonIndex], actionClick,
+                                    action.IsButtonEnabled(buttonIndex > 0));
+
                                 button.HorizontalOptions = LayoutOptions.FillAndExpand;
 
                                 buttonPlace.Children.Add(button);

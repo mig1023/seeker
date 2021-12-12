@@ -15,7 +15,6 @@ namespace Seeker.Prototypes
         public Game.Option Option { get; set; }
         public int Price { get; set; }
         public bool Multiple { get; set; }
-        public bool Decrement { get; set; }
 
         public Abstract.IModification Benefit { get; set; }
         public List<Abstract.IModification> BenefitList { get; set; }

@@ -12,24 +12,24 @@ namespace Seeker.Gamebook.OrcsDay
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Оркишность: {0}", protagonist.Orcishness),
+            String.Format("Оркишность: {0}", Game.Other.NegativeMeaning(protagonist.Orcishness)),
             String.Format("Здоровье: {0}", protagonist.Hitpoints),
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
             String.Format("Деньги: {0}", protagonist.Money),
-            String.Format("Удача: {0}", protagonist.Luck),
-            String.Format("Смелость: {0}", protagonist.Courage),
-            String.Format("Мозги: {0}", protagonist.Wits),
-            String.Format("Мышцы: {0}", protagonist.Muscle),
+            String.Format("Удача: {0}", Game.Other.NegativeMeaning(protagonist.Luck)),
+            String.Format("Смелость: {0}", Game.Other.NegativeMeaning(protagonist.Courage)),
+            String.Format("Мозги: {0}", Game.Other.NegativeMeaning(protagonist.Wits)),
+            String.Format("Мышцы: {0}", Game.Other.NegativeMeaning(protagonist.Muscle)),
         };
 
         public override List<string> Representer()
         {
             List<string> enemies = new List<string>();
 
-            if ((Name == "Get") && !String.IsNullOrEmpty(Stat) && !Decrement)
+            if (!String.IsNullOrEmpty(Stat))
             {
                 return new List<string> { String.Format("{0}\n(текущее значение: {1})",
                     Text, Game.Other.NegativeMeaning(GetProperty(protagonist, Stat))) };
@@ -47,11 +47,11 @@ namespace Seeker.Gamebook.OrcsDay
             {
                 int currentStat = GetProperty(protagonist, Stat);
 
-                currentStat += (Decrement ? -1 : 1);
+                currentStat += 1;
 
                 protagonist.GetType().GetProperty(Stat).SetValue(protagonist, currentStat);
 
-                protagonist.StatBonuses += (Decrement ? 1 : -1);
+                protagonist.StatBonuses -= 1;
             }
 
             return new List<string> { "RELOAD" };
@@ -59,16 +59,13 @@ namespace Seeker.Gamebook.OrcsDay
 
         public List<string> Decrease()
         {
-            if (!String.IsNullOrEmpty(Stat))
-            {
-                int currentStat = GetProperty(protagonist, Stat);
+            int currentStat = GetProperty(protagonist, Stat);
 
-                currentStat -= 1;
+            currentStat -= 1;
 
-                protagonist.GetType().GetProperty(Stat).SetValue(protagonist, currentStat);
+            protagonist.GetType().GetProperty(Stat).SetValue(protagonist, currentStat);
 
-                protagonist.StatBonuses += 1;
-            }
+            protagonist.StatBonuses += 1;
 
             return new List<string> { "RELOAD" };
         }
