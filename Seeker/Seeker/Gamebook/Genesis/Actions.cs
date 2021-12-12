@@ -37,7 +37,8 @@ namespace Seeker.Gamebook.Genesis
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Life, out toEndParagraph, out toEndText);
 
-        public override bool IsButtonEnabled() => !(!String.IsNullOrEmpty(Bonus) && (protagonist.Bonuses <= 0));
+        public override bool IsButtonEnabled(bool secondButton = false) =>
+            !(!String.IsNullOrEmpty(Bonus) && (protagonist.Bonuses <= 0));
 
         public override bool CheckOnlyIf(string option)
         {
@@ -66,12 +67,16 @@ namespace Seeker.Gamebook.Genesis
 
                         if (oneOption.Contains("СТЕЛС") && (level > protagonist.Stealth))
                             return false;
+
                         else if (oneOption.Contains("ЛОВКОСТЬ") && (level > protagonist.Skill))
                             return false;
+
                         else if (oneOption.Contains("ХОЛОДНОЕ ОРУЖИЕ") && (level > protagonist.Weapon))
                             return false;
+
                         else if (oneOption.Contains("АУРА") && (level > protagonist.Aura))
                             return false;
+
                         else if (oneOption.Contains("ЗДОРОВЬЕ") && (level > protagonist.Life))
                             return false;
                     }
