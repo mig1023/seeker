@@ -69,5 +69,54 @@ namespace Seeker.Gamebook.OrcsDay
 
             return new List<string> { "RELOAD" };
         }
+
+        public List<string> OrcishnessInit()
+        {
+            Character orc = protagonist;
+
+            orc.Orcishness = 6;
+
+            List<string> orcishness = new List<string> { "BOLD|Изначальное значение: 6" };
+
+            if ((orc.Muscle < 0) || (orc.Wits < 0) || (orc.Courage < 0) || (orc.Luck < 0))
+            {
+                orcishness.Add("-1 Оркишность за отрицательный параметр");
+                orc.Orcishness -= 1;
+            }
+
+            if (orc.Wits > orc.Muscle)
+            {
+                orcishness.Add("-1 Оркишность за то, что Мозги круче Мускулов");
+                orc.Orcishness -= 1;
+            }
+
+            if (orc.Luck > 0)
+            {
+                orcishness.Add("-1 Оркишность за Удачу");
+                orc.Orcishness -= 1;
+            }
+                
+            if ((orc.Muscle > orc.Wits) && (orc.Muscle > orc.Courage) || (orc.Muscle > orc.Luck))
+            {
+                orcishness.Add("+1 Оркишность за то, что Мышцы самое крутое");
+                orc.Orcishness += 1;
+            }
+
+            if (orc.Courage > orc.Wits)
+            {
+                orcishness.Add("+1 Оркишность за то, что Смелости больше, чем Мозгов");
+                orc.Orcishness += 1;
+            }
+            if (orc.Courage > 2)
+            {
+                orcishness.Add("-1 Оркишность за то, что Смелости слишком много");
+                orc.Orcishness -= 1;
+            }
+
+            orcishness.Add(String.Format("BIG|BOLD|Итоговая Оркишность: {0}", orc.Orcishness));
+
+            return orcishness;
+
+        }
     }
 }
