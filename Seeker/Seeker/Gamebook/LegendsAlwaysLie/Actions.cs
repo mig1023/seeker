@@ -42,7 +42,9 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
             }
             else if (!String.IsNullOrEmpty(Text))
+            {
                 return new List<string> { Text };
+            }
 
             List<string> enemies = new List<string>();
 
@@ -187,7 +189,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return true;
         }
 
-        public override bool IsButtonEnabled()
+        public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool bySpecButton = (Specialization != null) && (protagonist.Specialization != Character.SpecializationType.Nope);
             bool byPrice = (Price > 0) && (protagonist.Gold < Price);
@@ -211,19 +213,20 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     protagonist.Strength += 2;
                     protagonist.Magicpoints = 2;
                 }
-
                 else if (Specialization == Character.SpecializationType.Wizard)
+                {
                     protagonist.Magicpoints = 5;
-
+                }
                 else
                 {
                     protagonist.Strength += 1;
                     protagonist.Magicpoints = 3;
                 }
             }
-
             else if ((Price > 0) && (protagonist.Gold >= Price))
+            {
                 protagonist.Gold -= Price;
+            }
 
             return new List<string> { "RELOAD" };
         }
@@ -355,11 +358,13 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             Game.Option.Trigger("FoodIsDivided");
 
             if (FoodSharing == FoodSharingType.KeepMyself)
+            {
                 protagonist.Hitpoints += 5;
-
+            }
             else if (FoodSharing == FoodSharingType.ToHim)
+            {
                 protagonist.ConneryHitpoints += 5;
-
+            }
             else
             {
                 protagonist.Hitpoints += 3;
