@@ -50,7 +50,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             return true;
         }
-        public override bool IsButtonEnabled()
+        public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool disabledMeritalArtButton =
                 (MeritalArt != Character.MeritalArts.Nope) && (protagonist.MeritalArt != Character.MeritalArts.Nope);
