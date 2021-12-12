@@ -74,7 +74,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             return false;
         }
             
-        public override bool IsButtonEnabled()
+        public override bool IsButtonEnabled(bool secondButton = false)
         {
             if (Advantage && protagonist.Advantages.Contains(this.Button))
                 return false;
