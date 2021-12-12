@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.OrcsDay
         {
             [ButtonTypes.Main] = "#a4be84",
             [ButtonTypes.Continue] = "#cad9b7",
+            [ButtonTypes.Action] = "#72855c",
             [ButtonTypes.System] = "#cad9b7",
             [ButtonTypes.Font] = "#000000",
         };
@@ -20,6 +21,7 @@ namespace Seeker.Gamebook.OrcsDay
         {
             [ColorTypes.Font] = "#000000",
             [ColorTypes.SystemFont] = "#000000",
+            [ColorTypes.ActionBox] = "#c8d8b5",
             [ColorTypes.BookColor] = "#a4be84",
             [ColorTypes.StatusBar] = "#72855c",
             [ColorTypes.AdditionalStatus] = "#c8d8b5",
