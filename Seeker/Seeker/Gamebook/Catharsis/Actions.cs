@@ -43,7 +43,8 @@ namespace Seeker.Gamebook.Catharsis
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Life, out toEndParagraph, out toEndText);
 
-        public override bool IsButtonEnabled() => !((!String.IsNullOrEmpty(Bonus) && (protagonist.Bonuses <= 0)));
+        public override bool IsButtonEnabled(bool secondButton = false) =>
+            !((!String.IsNullOrEmpty(Bonus) && (protagonist.Bonuses <= 0)));
 
         public override bool CheckOnlyIf(string option)
         {
