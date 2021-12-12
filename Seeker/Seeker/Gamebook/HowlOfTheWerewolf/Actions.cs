@@ -51,10 +51,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 return enemies;
 
             foreach (Character enemy in Enemies)
+            {
                 if (enemy.Endurance > 0)
                     enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance));
                 else
                     enemies.Add(String.Format("{0}\nмастерство {1} ", enemy.Name, enemy.Mastery));
+            }
 
             return enemies;
         }
@@ -310,7 +312,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return diceCheck;
         }
 
-        public override bool IsButtonEnabled()
+        public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool disabledByUsed = (Price > 0) && Used;
             bool disabledByPrice = (Price > 0) && (protagonist.Gold < Price);
@@ -328,8 +330,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     Used = true;
 
                 if (BenefitList != null)
+                {
                     foreach (Modification modification in BenefitList)
                         modification.Do();
+                }
             }
 
             return new List<string> { "RELOAD" };
