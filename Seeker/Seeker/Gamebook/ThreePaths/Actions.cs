@@ -19,13 +19,26 @@ namespace Seeker.Gamebook.ThreePaths
             return new List<string> { String.Format("Время: {0:d2}:00", protagonist.Time) };
         }
 
-        public override bool IsButtonEnabled(bool secondButton = false) =>
-            !(ThisIsSpell && (protagonist.SpellSlots <= 0));
+        public override bool IsButtonEnabled(bool secondButton = false)
+        {
+            bool bySpellAdd = ThisIsSpell && (protagonist.SpellSlots <= 0) && !secondButton;
+            bool bySpellRemove = ThisIsSpell && !protagonist.Spells.Contains(Text) && secondButton;
+
+            return !(bySpellAdd || bySpellRemove);
+        }
 
         public List<string> Get()
         {
             protagonist.Spells.Add(Text);
             protagonist.SpellSlots -= 1;
+
+            return new List<string> { "RELOAD" };
+        }
+
+        public List<string> Decrease()
+        {
+            protagonist.Spells.Remove(Text);
+            protagonist.SpellSlots += 1;
 
             return new List<string> { "RELOAD" };
         }
@@ -73,7 +86,7 @@ namespace Seeker.Gamebook.ThreePaths
         {
             int count = protagonist.Spells.Where(x => x == Text).Count();
 
-            return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" (x{0})", count) : String.Empty)) };
+            return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
         }
     }
 }
