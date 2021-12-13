@@ -89,6 +89,17 @@ namespace Seeker.Prototypes
             return param <= 0;
         }
 
+        public virtual List<string> ChangeProtagonistParam(string stat,
+            Character protagonist, string limithName, bool decrease = false)
+        {
+            SetProperty(protagonist, stat, GetProperty(protagonist, stat) + (decrease ? -1 : 1));
+
+            if (!String.IsNullOrEmpty(limithName))
+                SetProperty(protagonist, limithName, GetProperty(protagonist, limithName) + (decrease ? 1 : -1));
+
+            return new List<string> { "RELOAD" };
+        }
+
         public virtual bool IsButtonEnabled(bool secondButton = false) => true;
 
         public virtual bool IsHealingEnabled() => false;

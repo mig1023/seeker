@@ -44,31 +44,12 @@ namespace Seeker.Gamebook.OrcsDay
         public List<string> Get()
         {
             if (!String.IsNullOrEmpty(Stat))
-            {
-                int currentStat = GetProperty(protagonist, Stat);
-
-                currentStat += 1;
-
-                protagonist.GetType().GetProperty(Stat).SetValue(protagonist, currentStat);
-
-                protagonist.StatBonuses -= 1;
-            }
+                ChangeProtagonistParam(Stat, protagonist, "StatBonuses");
 
             return new List<string> { "RELOAD" };
         }
 
-        public List<string> Decrease()
-        {
-            int currentStat = GetProperty(protagonist, Stat);
-
-            currentStat -= 1;
-
-            protagonist.GetType().GetProperty(Stat).SetValue(protagonist, currentStat);
-
-            protagonist.StatBonuses += 1;
-
-            return new List<string> { "RELOAD" };
-        }
+        public List<string> Decrease() => ChangeProtagonistParam(Stat, protagonist, "StatBonuses", decrease: true);
 
         public List<string> OrcishnessInit()
         {
