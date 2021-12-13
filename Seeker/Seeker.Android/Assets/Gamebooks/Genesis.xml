@@ -1971,22 +1971,22 @@
 		</Texts>
 		<Actions>
 			<Action>
-				<Name>Get</Name>
-				<Button>Добавить</Button>
+				<Name>Get, Decrease</Name>
+				<Button>Увеличить, Уменьшить</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Bonus>Skill</Bonus>
 				<Aftertext>Это умение двигаться, преодолевать препятствия, общая подвижность. Чем она выше, тем вы быстрее.</Aftertext>
 			</Action>
 			<Action>
-				<Name>Get</Name>
-				<Button>Добавить</Button>
+				<Name>Get, Decrease</Name>
+				<Button>Увеличить, Уменьшить</Button>
 				<Text>ХОЛОДНОЕ ОРУЖИЕ</Text>
 				<Bonus>Weapon</Bonus>
 				<Aftertext>Параметр, показывающий умение владеть холодным оружием. Тут все просто: чем он выше, тем вы более тренированный боец.</Aftertext>
 			</Action>
 			<Action>
-				<Name>Get</Name>
-				<Button>Добавить</Button>
+				<Name>Get, Decrease</Name>
+				<Button>Увеличить, Уменьшить</Button>
 				<Text>СТЕЛС</Text>
 				<Bonus>Stealth</Bonus>
 				<Aftertext>Параметр, показывающий способности к маскировке, умение замечать важные детали, находить нестандартные решения в опасных ситуациях, креативность.</Aftertext>
