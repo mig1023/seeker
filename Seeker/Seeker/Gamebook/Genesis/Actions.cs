@@ -15,9 +15,7 @@ namespace Seeker.Gamebook.Genesis
         {
             if (!String.IsNullOrEmpty(Bonus))
             {
-                Dictionary<string, int> startValues = Constants.GetStartValues();
-
-                int diff = (GetProperty(protagonist, Bonus) - startValues[Bonus]);
+                int diff = (GetProperty(protagonist, Bonus) - Constants.GetStartValues()[Bonus]);
                 string diffLine = (diff > 0 ? String.Format(" (+{0})", diff) : String.Empty);
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
@@ -37,8 +35,16 @@ namespace Seeker.Gamebook.Genesis
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Life, out toEndParagraph, out toEndText);
 
-        public override bool IsButtonEnabled(bool secondButton = false) =>
-            !(!String.IsNullOrEmpty(Bonus) && (protagonist.Bonuses <= 0));
+        public override bool IsButtonEnabled(bool secondButton = false)
+        {
+            bool disabledByBonusesRemove = !String.IsNullOrEmpty(Bonus) &&
+                ((GetProperty(protagonist, Bonus) - Constants.GetStartValues()[Bonus]) <= 0) && secondButton;
+
+            bool disabledByBonusesAdd = (!String.IsNullOrEmpty(Bonus)) && (protagonist.Bonuses <= 0) && !secondButton;
+
+            return !(disabledByBonusesRemove || disabledByBonusesAdd);
+        }
+
 
         public override bool CheckOnlyIf(string option)
         {
@@ -91,13 +97,12 @@ namespace Seeker.Gamebook.Genesis
         public List<string> Get()
         {
             if (!String.IsNullOrEmpty(Bonus) && (protagonist.Bonuses >= 0))
-            {
-                SetProperty(protagonist, Bonus, GetProperty(protagonist, Bonus) + 1);
-                protagonist.Bonuses -= 1;
-            }
+                ChangeProtagonistParam(Bonus, protagonist, "Bonuses");
 
             return new List<string> { "RELOAD" };
         }
+
+        public List<string> Decrease() => ChangeProtagonistParam(Bonus, protagonist, "Bonuses", decrease: true);
 
         public override bool IsHealingEnabled() => protagonist.Life < protagonist.MaxLife;
 
