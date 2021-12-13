@@ -113,7 +113,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             if (Level > 0)
                 return true;
 
-            else if (Price <= 0)
+            else if ((Price <= 0) && secondButton)
+                return GetProperty(protagonist, Stat) > 1;
+
+            else if ((Price <= 0) && !secondButton)
                 return protagonist.StatBonuses > 0;
 
             else if (Used)
@@ -231,18 +234,12 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                     Benefit.Do();
             }
 
-            else if (protagonist.StatBonuses >= 0)
-            {
-                int currentStat = GetProperty(protagonist, Stat);
-
-                currentStat += (StatStep > 1 ? StatStep : 1);
-
-                protagonist.GetType().GetProperty(Stat).SetValue(protagonist, currentStat);
-
-                protagonist.StatBonuses -= 1;
-            }
+            else if(!String.IsNullOrEmpty(Stat))
+                ChangeProtagonistParam(Stat, protagonist, "StatBonuses");
 
             return new List<string> { "RELOAD" };
         }
+
+        public List<string> Decrease() => ChangeProtagonistParam(Stat, protagonist, "StatBonuses", decrease: true);
     }
 }
