@@ -68,9 +68,7 @@ namespace Seeker.Gamebook.DzungarWar
             }
 
             if (level < 0)
-            {
                 level = 0;
-            }
 
             return level;
         }
@@ -89,7 +87,13 @@ namespace Seeker.Gamebook.DzungarWar
             else if (!String.IsNullOrEmpty(Stat) && !StatToMax)
             {
                 int currentStat = GetProperty(protagonist, Stat);
-                string diffLine = (currentStat > 1 ? String.Format(" (+{0})", (currentStat - 1)) : String.Empty);
+                string diffLine = String.Empty;
+
+                if (currentStat > 11)
+                    diffLine = " (максимум)";
+
+                else if (currentStat > 1)
+                    diffLine = String.Format(" (+{0})", (currentStat - 1));
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
             }
@@ -234,7 +238,14 @@ namespace Seeker.Gamebook.DzungarWar
                 return protagonist.MaxBonus > 0;
 
             else if (!String.IsNullOrEmpty(Stat))
-                return ((protagonist.StatBonuses > 0) && (GetProperty(protagonist, Stat) < 12));
+            {
+                int stat = GetProperty(protagonist, Stat);
+
+                if (secondButton)
+                    return (stat > 1) && (stat < 12);
+                else 
+                    return ((protagonist.StatBonuses > 0) && (stat < 12));
+            }
 
             else if (Price >= 0)
                 return (protagonist.Tanga >= Price);
@@ -436,15 +447,15 @@ namespace Seeker.Gamebook.DzungarWar
             }
             else if (protagonist.StatBonuses >= 0)
             {
-                int currentStat = GetProperty(protagonist, Stat);
+                protagonist.GetType().GetProperty(Stat).SetValue(protagonist,
+                    GetProperty(protagonist, Stat) + (StatStep > 1 ? StatStep : 1));
 
-                currentStat += (StatStep > 1 ? StatStep : 1);
-
-                protagonist.GetType().GetProperty(Stat).SetValue(protagonist, currentStat);
                 protagonist.StatBonuses -= 1;
             }
 
             return new List<string> { "RELOAD" };
         }
+
+        public List<string> Decrease() => ChangeProtagonistParam(Stat, protagonist, "StatBonuses", decrease: true);
     }
 }
