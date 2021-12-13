@@ -74,7 +74,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 string gold = Game.Other.CoinsNoun(Price, "золотой", "золотых", "золотых");
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
             }
-            else if ((Name == "Get") && ThisIsSpell)
+            else if (ThisIsSpell)
             {
                 int count = protagonist.Spells.Where(x => x == Text).Count();
                 return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
@@ -84,10 +84,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                 return enemies;
 
             foreach (Character enemy in Enemies)
+            {
                 if (enemy.Hitpoints > 0)
                     enemies.Add(String.Format("{0}\nсила {1}  жизни {2}", enemy.Name, enemy.Strength, enemy.Hitpoints));
                 else
                     enemies.Add(String.Format("{0}\nсила {1}", enemy.Name, enemy.Strength));
+            }
 
             return enemies;
         }
@@ -103,14 +105,15 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            bool bySpell = ThisIsSpell && (protagonist.Magicpoints <= 0);
+            bool bySpellAdd = ThisIsSpell && (protagonist.Magicpoints <= 0) && !secondButton;
+            bool bySpellRemove = ThisIsSpell && !protagonist.Spells.Contains(Text) && secondButton;
             bool byCureSpell = (Name == "CureFracture") && (CureSpellCount() < Wound);
             bool bySell = (Name == "Sell") && !Game.Option.IsTriggered(Trigger);
             bool bySpecButton = (Specialization != null) && (protagonist.Specialization != Character.SpecializationType.Nope);
             bool byPrice = (Price > 0) && (protagonist.Gold < Price);
             bool byTrigger = Game.Option.IsTriggered(OnlyOne);
 
-            return !(bySpell || byCureSpell || bySell || bySpecButton || byPrice || byTrigger || Used);
+            return !(bySpellAdd || bySpellRemove || byCureSpell || bySell || bySpecButton || byPrice || byTrigger || Used);
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
@@ -153,6 +156,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             if (Benefit != null)
                 Benefit.Do();
+
+            return new List<string> { "RELOAD" };
+        }
+
+        public List<string> Decrease()
+        {
+            protagonist.Spells.Remove(Text);
+            protagonist.Magicpoints += 1;
 
             return new List<string> { "RELOAD" };
         }
