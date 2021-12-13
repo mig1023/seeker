@@ -32,9 +32,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (!String.IsNullOrEmpty(Stat))
             {
-                Dictionary<string, int> startValues = Constants.GetStartValues();
-
-                int diff = (GetProperty(protagonist, Stat) - startValues[Stat]);
+                int diff = (GetProperty(protagonist, Stat) - Constants.GetStartValues()[Stat]);
                 string diffLine = (diff > 0 ? String.Format(" (+{0})", diff) : String.Empty);
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
@@ -56,6 +54,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             if ((Allies != null) && GroupFight)
             {
                 foreach (Character ally in Allies)
+                {
                     if (ally.Name == protagonist.Name)
                     {
                         enemies.Add(String.Format("Вы\nнападение {0}  защита {1}  жизнь {2}  инициатива {3}{4}",
@@ -67,6 +66,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         enemies.Add(String.Format("{0}\nнападение {1}  защита {2}  жизнь {3}  инициатива {4}{5}",
                             ally.Name, ally.Attack, ally.Defence, ally.Endurance, ally.Initiative, ally.GetSpecialTechniques()));
                     }
+                }
 
                 enemies.Add("SPLITTER|против");
             }
@@ -99,11 +99,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             bool disabledByChoosed = (SpecialTechnique != Character.SpecialTechniques.Nope) &&
                 (protagonist.SpecialTechnique.Count > 0);
 
-            bool disabledByBonuses = (!String.IsNullOrEmpty(Stat)) && (protagonist.Bonuses <= 0);
+            bool disabledByBonusesRemove = !String.IsNullOrEmpty(Stat) &&
+                ((GetProperty(protagonist, Stat) - Constants.GetStartValues()[Stat]) <= 0) && secondButton;
+
+            bool disabledByBonusesAdd = (!String.IsNullOrEmpty(Stat)) && (protagonist.Bonuses <= 0) && !secondButton;
             bool disabledByPrice = (Price > 0) && (protagonist.Coins < Price);
             bool disabledByUsed = ((Price > 0) ||(Price < 0)) && Used;
 
-            return !(disabledByChoosed || disabledByBonuses || disabledByPrice || disabledByUsed);
+            return !(disabledByChoosed || disabledByBonusesAdd || disabledByBonusesRemove || disabledByPrice || disabledByUsed);
         }
 
         public override bool CheckOnlyIf(string option)
@@ -137,14 +140,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
             else if ((StatStep > 0) && (protagonist.Bonuses >= 0))
             {
-                int currentStat = (int)protagonist.GetType().GetProperty(Stat).GetValue(protagonist, null);
-
-                currentStat += StatStep;
-
-                SetProperty(protagonist, "Max" + Stat, currentStat);
-                SetProperty(protagonist, Stat, currentStat);
-
-                protagonist.Bonuses -= 1;
+                ParamChange();
             }
             else if (((Price > 0) || (Price < 0)) && (protagonist.Coins >= Price))
             {
@@ -159,6 +155,22 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                         modification.Do();
                 }
             }
+
+            return new List<string> { "RELOAD" };
+        }
+
+        public List<string> Decrease() => ParamChange(decrease: true);
+
+        private List<string> ParamChange(bool decrease = false)
+        {
+            int currentStat = GetProperty(protagonist, Stat);
+
+            currentStat += StatStep * (decrease ? -1 : 1);
+
+            SetProperty(protagonist, "Max" + Stat, currentStat);
+            SetProperty(protagonist, Stat, currentStat);
+
+            protagonist.Bonuses += (decrease ? 1 : -1);
 
             return new List<string> { "RELOAD" };
         }
