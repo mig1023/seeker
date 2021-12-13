@@ -109,31 +109,27 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            bool disabledSpellButton = ThisIsSpell && (protagonist.SpellSlots <= 0);
+            bool disabledSpellAdd = ThisIsSpell && (protagonist.SpellSlots <= 0) && !secondButton;
+            bool disabledSpellRemove = ThisIsSpell && !protagonist.Spells.Contains(Text) && secondButton;
             bool disabledGetOptions = (Price > 0) && Used;
             bool disabledByPrice = (Price > 0) && (protagonist.Gold < Price);
 
-            return !(disabledSpellButton || disabledGetOptions || disabledByPrice);
+            return !(disabledSpellAdd || disabledSpellRemove || disabledGetOptions || disabledByPrice);
         }
 
         public override bool CheckOnlyIf(string option)
         {
             if (String.IsNullOrEmpty(option))
-            {
                 return true;
-            }
+
             else if (option.Contains("ЗОЛОТО >="))
-            {
                 return int.Parse(option.Split('=')[1]) <= protagonist.Gold;
-            }
+
             else if (option.Contains("ЗАКЛЯТИЕ"))
-            {
                 return protagonist.Spells.Contains(option);
-            }
+
             else
-            {
                 return CheckOnlyIfTrigger(option);
-            }
         }
 
         public override List<string> Representer()
@@ -145,7 +141,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 string gold = Game.Other.CoinsNoun(Price, "золотой", "золотых", "золотых");
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
             }
-            else if (Name == "Get")
+            else if (ThisIsSpell)
             {
                 int count = (ThisIsSpell ? protagonist.Spells.Where(x => x == Text).Count() : 0);
                 return new List<string> { String.Format("{0}{1}", Text, (count > 0 ? String.Format(" ({0} шт)", count) : String.Empty)) };
@@ -200,6 +196,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 if (Benefit != null)
                     Benefit.Do();
             }
+
+            return new List<string> { "RELOAD" };
+        }
+
+        public List<string> Decrease()
+        {
+            protagonist.Spells.Remove(Text);
+            protagonist.SpellSlots += 1;
 
             return new List<string> { "RELOAD" };
         }
