@@ -447,9 +447,7 @@ namespace Seeker.Gamebook.DzungarWar
             }
             else if (protagonist.StatBonuses >= 0)
             {
-                protagonist.GetType().GetProperty(Stat).SetValue(protagonist,
-                    GetProperty(protagonist, Stat) + (StatStep > 1 ? StatStep : 1));
-
+                SetProperty(protagonist, Stat, GetProperty(protagonist, Stat) + (StatStep > 1 ? StatStep : 1));
                 protagonist.StatBonuses -= 1;
             }
 
