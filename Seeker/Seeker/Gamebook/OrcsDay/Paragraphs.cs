@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System.Collections.Generic;
+using System.Xml;
 using Seeker.Game;
 
 namespace Seeker.Gamebook.OrcsDay
@@ -9,10 +10,35 @@ namespace Seeker.Gamebook.OrcsDay
 
         public override Paragraph Get(int id, XmlNode xmlParagraph) => base.Get(xmlParagraph);
 
-        public override Abstract.IActions ActionParse(XmlNode xmlAction) =>
-            base.ActionParse(xmlAction, new Actions(), GetProperties(new Actions()), new Modification());
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
+        {
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            foreach (string param in GetProperties(action))
+                SetProperty(action, param, xmlAction);
+
+            if (xmlAction["Enemies"] != null)
+            {
+                action.Enemies = new List<Character>();
+
+                foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
+                    action.Enemies.Add(EnemyParse(xmlEnemy));
+            }
+
+            return action;
+        }
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
            (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
+
+        private Character EnemyParse(XmlNode xmlEnemy)
+        {
+            Character enemy = new Character();
+
+            foreach (string param in GetProperties(enemy))
+                SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
+
+            return enemy;
+        }
     }
 }

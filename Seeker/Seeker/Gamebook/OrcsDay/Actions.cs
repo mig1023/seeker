@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.OrcsDay
 {
@@ -8,7 +9,11 @@ namespace Seeker.Gamebook.OrcsDay
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
 
-        public string Stat { get; set; }      
+        public List<Character> Enemies { get; set; }
+
+        public string Stat { get; set; }
+        public int Level { get; set; }
+        public bool OrcishnessTest { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -29,7 +34,22 @@ namespace Seeker.Gamebook.OrcsDay
         {
             List<string> enemies = new List<string>();
 
-            if (!String.IsNullOrEmpty(Stat))
+            if (OrcishnessTest && (Level > 0))
+            {
+                return new List<string> { String.Format("Проверка {0}\nуровень Оркишность ({1}) + {2}",
+                    Constants.StatNames()[Stat], protagonist.Orcishness, Level) };
+            }
+            else if (OrcishnessTest)
+            {
+                return new List<string> { String.Format("Проверка {0}\nпо уровню Оркишности",
+                    Constants.StatNames()[Stat]) };
+            }
+            else if (Level > 0)
+            {
+                return new List<string> { String.Format("Проверка {0}, уровень {1}",
+                    Constants.StatNames()[Stat], Level) };
+            }
+            else if (!String.IsNullOrEmpty(Stat))
             {
                 return new List<string> { String.Format("{0}\n(текущее значение: {1})",
                     Text, Game.Other.NegativeMeaning(GetProperty(protagonist, Stat))) };
@@ -98,6 +118,124 @@ namespace Seeker.Gamebook.OrcsDay
 
             return orcishness;
 
+        }
+
+        public List<string> Test()
+        {
+            List<string> testLines = new List<string>();
+
+            int firstDice = Game.Dice.Roll();
+            int secondDice = Game.Dice.Roll();
+            int currentStat = GetProperty(protagonist, Stat);
+
+            bool okResult = false;
+
+            if (OrcishnessTest)
+            {
+                okResult = (firstDice + secondDice) + currentStat >= protagonist.Orcishness + Level;
+
+                testLines.Add(String.Format("Проверка на {0}: {1} + {2} + {3} {4} {5}{6}",
+                    Constants.StatNames()[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
+                    currentStat, (okResult ? ">=" : "<"), protagonist.Orcishness, 
+                    (Level > 0 ? String.Format(" + {0}", Level) : String.Empty)));
+            }
+            else
+            {
+                okResult = (firstDice + secondDice) + currentStat >= Level;
+
+                testLines.Add(String.Format("Проверка на {0}: {1} + {2} + {3} {4} {5}",
+                    Constants.StatNames()[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
+                    currentStat, (okResult ? ">=" : "<"), Level));
+            }
+
+            testLines.Add(Result(okResult, "УСПЕШНО|НЕУДАЧНО"));
+
+            return testLines;
+        }
+
+        private int Protection(ref List<string> fight)
+        {
+            if (protagonist.Wits > protagonist.Luck)
+            {
+                fight.Add("Используем мозги, т.к. их больше, чем удачи");
+                return protagonist.Wits;
+            }
+            else
+            {
+                fight.Add("Полагаемся на удачу, т.к. на неё больше надежды, чем на мозги");
+                return protagonist.Luck;
+            }
+        }
+
+        public List<string> Fight()
+        {
+            List<string> fight = new List<string>();
+            Character enemy = Enemies[0];
+
+            int round = 1;
+
+            while (true)
+            {
+                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+
+                fight.Add(String.Format("BOLD|{0} нападает:", enemy.Name));
+
+                int enemyRollFirst = Game.Dice.Roll();
+                int enemyRollSecond = Game.Dice.Roll();
+                int protection = Protection(ref fight);
+
+                bool enemyAttackFail = (enemyRollFirst + enemyRollSecond) + protection >= enemy.Attack;
+
+                fight.Add(String.Format("Удар {0}: {1} + {2} + {3} {4}",
+                    Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond),
+                    protection, (enemyAttackFail ? ">=" : "<"), enemy.Attack));
+
+                if (!enemyAttackFail)
+                {
+                    protagonist.Hitpoints -= 1;
+                    fight.Add(String.Format("BAD|{0} ранил тебя", enemy.Name));
+                }
+                else
+                    fight.Add("GOOD|Ты отбил удар!");
+
+                if (protagonist.Hitpoints <= 0)
+                {
+                    fight.Add(String.Empty);
+                    fight.Add(String.Format("BIG|BAD|Ты ПРОИГРАЛ :("));
+                    return fight;
+                }
+
+                fight.Add(String.Empty);
+                fight.Add("BOLD|Ты нападаешь:");
+
+                int protagonistRollFirst = Game.Dice.Roll();
+                int protagonistRollSecond = Game.Dice.Roll();
+
+                bool protagonistAttackWin = (protagonistRollFirst + protagonistRollSecond) + protagonist.Muscle >= enemy.Defense;
+
+                fight.Add(String.Format("Удар {0}: {1} + {2} + {3} {4}",
+                    Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
+                    protagonist.Muscle, (enemyAttackFail ? ">=" : "<"), enemy.Defense));
+
+                if (protagonistAttackWin)
+                {
+                    enemy.Hitpoints -= 1;
+                    fight.Add("GOOD|Ты ранил противника!");
+                }
+                else
+                    fight.Add(String.Format("BAD|Противник отбил твой удар"));
+
+                if (enemy.Hitpoints <= 0)
+                {
+                    fight.Add(String.Empty);
+                    fight.Add(String.Format("BIG|GOOD|Ты ПОБЕДИЛ :)"));
+                    return fight;
+                }
+
+                 fight.Add(String.Empty);
+
+                round += 1;
+            }
         }
     }
 }

@@ -28,6 +28,15 @@ namespace Seeker.Gamebook.OrcsDay
             [ColorTypes.BookFontColor] = "#000000",
         };
 
+        public static Dictionary<string, string> StatNames() => new Dictionary<string, string>
+        {
+            ["Muscle"] = "мышцы",
+            ["Wits"] = "мозги",
+            ["Courage"] = "смелость",
+            ["Luck"] = "удачу",
+            ["Orcishness"] = "оркишность",
+        };
+
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 102, 103 };
 
         public static Links GetLinks() => new Links
