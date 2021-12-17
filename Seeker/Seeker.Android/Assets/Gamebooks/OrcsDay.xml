@@ -844,7 +844,14 @@
 			</Action>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="31" Text="Вернись обратно и выбери другой вариант" Aftertext="В случае провала ты атакуешь. Другие орки: Атака 8, Защита 5, Здоровье 5."/>
+				<Option Destination="31" Text="Вернись обратно и выбери другой вариант" Aftertext="В случае провала ты атакуешь:"/>
+			</Action>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="Другие орки" Attack="8" Defense="5" Hitpoints="5"/>
+				</Enemies>
 			</Action>
 		</Actions>
 		<Options>
