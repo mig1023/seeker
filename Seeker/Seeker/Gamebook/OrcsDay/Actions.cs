@@ -54,6 +54,12 @@ namespace Seeker.Gamebook.OrcsDay
                 return new List<string> { String.Format("{0}\n(текущее значение: {1})",
                     Text, Game.Other.NegativeMeaning(GetProperty(protagonist, Stat))) };
             }
+            else if (Enemies == null)
+                return enemies;
+
+            foreach (Character enemy in Enemies)
+                enemies.Add(String.Format("{0}\nатака {1}  защита {2}  здоровье {3}",
+                    enemy.Name, enemy.Attack, enemy.Defense, enemy.Hitpoints));
 
             return enemies;
         }
@@ -193,10 +199,10 @@ namespace Seeker.Gamebook.OrcsDay
                 if (!enemyAttackFail)
                 {
                     protagonist.Hitpoints -= 1;
-                    fight.Add(String.Format("BAD|{0} ранил тебя", enemy.Name));
+                    fight.Add(String.Format("BAD|BOLD|{0} ранил тебя", enemy.Name));
                 }
                 else
-                    fight.Add("GOOD|Ты отбил удар!");
+                    fight.Add("Ты отбил удар!");
 
                 if (protagonist.Hitpoints <= 0)
                 {
@@ -220,10 +226,10 @@ namespace Seeker.Gamebook.OrcsDay
                 if (protagonistAttackWin)
                 {
                     enemy.Hitpoints -= 1;
-                    fight.Add("GOOD|Ты ранил противника!");
+                    fight.Add("GOOD|BOLD|Ты ранил противника!");
                 }
                 else
-                    fight.Add(String.Format("BAD|Противник отбил твой удар"));
+                    fight.Add(String.Format("Противник отбил твой удар"));
 
                 if (enemy.Hitpoints <= 0)
                 {

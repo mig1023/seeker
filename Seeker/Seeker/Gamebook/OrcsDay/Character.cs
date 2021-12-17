@@ -13,7 +13,6 @@ namespace Seeker.Gamebook.OrcsDay
 
         public int Attack { get; set; }
         public int Defense { get; set; }
-        public int Health { get; set; }
 
         public int Orcishness { get; set; }
         
@@ -59,7 +58,6 @@ namespace Seeker.Gamebook.OrcsDay
             Orcishness = this.Orcishness,
             Attack = this.Attack,
             Defense = this.Defense,
-            Health = this.Health,
             StatBonuses = this.StatBonuses,
         };
 
