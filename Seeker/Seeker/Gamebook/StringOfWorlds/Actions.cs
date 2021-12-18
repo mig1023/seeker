@@ -164,14 +164,12 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public List<string> Charm()
         {
-            int fisrtDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
-            bool goodCharm = (fisrtDice + secondDice) <= protagonist.Charm;
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+            bool goodCharm = (firstDice + secondDice) <= protagonist.Charm;
 
             List<string> luckCheck = new List<string> { String.Format(
                 "Проверка обаяния: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodCharm ? "<=" : ">"), protagonist.Charm) };
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodCharm ? "<=" : ">"), protagonist.Charm) };
 
             if (goodCharm)
             {
@@ -196,14 +194,12 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public List<string> Skill()
         {
-            int fisrtDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
-            bool goodSkill = (fisrtDice + secondDice) <= protagonist.Skill;
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+            bool goodSkill = (firstDice + secondDice) <= protagonist.Skill;
 
             List<string> luckCheck = new List<string> { String.Format(
                 "Проверка ловкости: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), protagonist.Skill) };
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), protagonist.Skill) };
 
             luckCheck.Add(goodSkill ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
 
@@ -238,15 +234,13 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             do
             {
-                int firstDice = Game.Dice.Roll();
-                int secondDice = Game.Dice.Roll();
+                Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
                 myResult = firstDice + secondDice;
 
                 diceGame.Add(String.Format("Вы бросили: {0} + {1} = {2}",
                     Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), myResult));
 
-                int hisFirstDice = Game.Dice.Roll();
-                int hisSecondDice = Game.Dice.Roll();
+                Game.Dice.DoubleRoll(out int hisFirstDice, out int hisSecondDice);
                 enemyResult = hisFirstDice + hisSecondDice;
 
                 diceGame.Add(String.Format("Он бросил: {0} + {1} = {2}",
@@ -269,8 +263,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             while (!succesBreaked && (protagonist.Strength > 0))
             {
-                int firstDice = Game.Dice.Roll();
-                int secondDice = Game.Dice.Roll();
+                Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
                 if (firstDice == secondDice)
                     succesBreaked = true;
@@ -328,8 +321,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
                     if (!attackAlready)
                     {
-                        int protagonistRollFirst = Game.Dice.Roll();
-                        int protagonistRollSecond = Game.Dice.Roll();
+                        Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
                         int protagonistSkill = (protagonist.Skill - skillPenalty);
                         protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonistSkill;
 
@@ -338,8 +330,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                             protagonistSkill, protagonistHitStrength));
                     }
 
-                    int enemyRollFirst = Game.Dice.Roll();
-                    int enemyRollSecond = Game.Dice.Roll();
+                    Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
 
                     fight.Add(String.Format("Мощность его удара: {0} + {1} + {2} = {3}",
