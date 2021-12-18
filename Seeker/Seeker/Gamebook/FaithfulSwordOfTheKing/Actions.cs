@@ -130,9 +130,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public List<string> Skill()
         {
-            int firstDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             bool goodSkill = (firstDice + secondDice) <= protagonist.Skill;
 
             List<string> skillCheck = new List<string> { String.Format("Проверка ловкости: {0} + {1} {2} {3} ловкость",
@@ -151,9 +149,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             for (int i = 0; i < 2; i++)
             {
-                int firstDice = Game.Dice.Roll();
-                int secondDice = Game.Dice.Roll();
-
+                Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
                 bool fail = firstDice == secondDice;
 
                 doubleCheck.Add(String.Format("Бросок: {0} и {1} - {2}дубль",
@@ -211,9 +207,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         {
             List<string> ambush = new List<string>();
 
-            int firstDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int result = firstDice + secondDice;
             bool evenNumber = result % 2 == 0;
 
@@ -239,8 +233,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             
             for (int i = 1; i < 12; i++)
             {
-                int protagonistSpeed = Game.Dice.Roll();
-                int enemiesSpeed = Game.Dice.Roll();
+                Game.Dice.DoubleRoll(out int protagonistSpeed, out int enemiesSpeed);
 
                 pursuit.Add(String.Format("Ваша скорость: {0}  <-->  Их скорость: {1}",
                     Game.Dice.Symbol(protagonistSpeed), Game.Dice.Symbol(enemiesSpeed)));
