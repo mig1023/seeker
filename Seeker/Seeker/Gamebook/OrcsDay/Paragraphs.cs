@@ -13,11 +13,23 @@ namespace Seeker.Gamebook.OrcsDay
             Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
-                paragraph.Options.Add(OptionParse(xmlOption));
+            {
+                Option option = OptionsTemplateWithoutDestination(xmlOption);
+
+                if (xmlOption.Attributes["Destination"].Value == "Back")
+                    option.Destination = Character.Protagonist.WayBack;
+                else
+                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+
+                paragraph.Options.Add(option);
+            }
 
             if (Game.Option.IsTriggered("Имя") && (Character.Protagonist.Orcishness <= 0))
+            {
+                Character.Protagonist.WayBack = id;
                 paragraph.Options.Add(GetOption(destination: 33, text: "Получить имя", onlyIf: "selectOnly"));
-
+            }
+                
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
                 paragraph.Actions.Add(ActionParse(xmlAction));
 
