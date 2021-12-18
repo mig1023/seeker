@@ -722,8 +722,7 @@ namespace Seeker.Gamebook.SwampFever
             {
                 bool reRoll = false;
 
-                int tumbleweedDirection = Game.Dice.Roll();
-                int tumbleweedSpeed = Game.Dice.Roll();
+                Game.Dice.DoubleRoll(out int tumbleweedDirection, out int tumbleweedSpeed);
 
                 pursuitReport.Add(String.Format("BOLD|Направление движения куста: {0}, скорость: {1}",
                     Game.Dice.Symbol(tumbleweedDirection), Game.Dice.Symbol(tumbleweedSpeed)));
