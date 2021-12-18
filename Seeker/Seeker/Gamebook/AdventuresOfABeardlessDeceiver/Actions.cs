@@ -170,8 +170,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public List<string> Test()
         {
-            int firstDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
             if (GuessBonus && Game.Option.IsTriggered("guess"))
                 Level = 7;
