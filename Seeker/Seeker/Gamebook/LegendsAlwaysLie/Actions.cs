@@ -507,21 +507,17 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         }
                     }
 
-                    int firstProtagonistRoll = Game.Dice.Roll();
-                    int secondProtagonistRoll = Game.Dice.Roll();
+                    Game.Dice.DoubleRoll(out int firstProtagonistRoll, out int secondProtagonistRoll);
                     int protagonistHitStrength = firstProtagonistRoll + secondProtagonistRoll + protagonist.Strength;
 
-                    fight.Add(String.Format(
-                        "Ваш удар: {0} + {1} + {2} = {3}",
+                    fight.Add(String.Format("Ваш удар: {0} + {1} + {2} = {3}",
                         Game.Dice.Symbol(firstProtagonistRoll), Game.Dice.Symbol(secondProtagonistRoll),
                         protagonist.Strength, protagonistHitStrength));
 
-                    int firstEnemyRoll = Game.Dice.Roll();
-                    int secondEnemyRoll = Game.Dice.Roll();
+                    Game.Dice.DoubleRoll(out int firstEnemyRoll, out int secondEnemyRoll);
                     int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Strength;
 
-                    fight.Add(String.Format(
-                        "Его удар: {0} + {1} + {2} = {3}",
+                    fight.Add(String.Format("Его удар: {0} + {1} + {2} = {3}",
                         Game.Dice.Symbol(firstEnemyRoll), Game.Dice.Symbol(secondEnemyRoll),
                         enemy.Strength, enemyHitStrength));
 
