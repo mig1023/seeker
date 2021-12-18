@@ -321,8 +321,7 @@ namespace Seeker.Gamebook.DzungarWar
 
             resultLine.AddRange(penalties);
 
-            int firstDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int currentStat = GetProperty(protagonist, stat);
 
             result = (firstDice + secondDice) + currentStat >= level;
