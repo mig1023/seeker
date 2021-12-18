@@ -158,14 +158,13 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public List<string> Luck()
         {
-            int fisrtDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
-            bool goodLuck = (fisrtDice + secondDice) <= protagonist.Luck;
+            bool goodLuck = (firstDice + secondDice) <= protagonist.Luck;
 
             List<string> luckCheck = new List<string> { String.Format(
                 "Проверка удачи: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck
             ) };
 
             luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
@@ -236,8 +235,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
                     if (!attackAlready)
                     {
-                        int firstprotagonistRoll = Game.Dice.Roll();
-                        int secondprotagonistRoll = Game.Dice.Roll();
+                        Game.Dice.DoubleRoll(out int firstprotagonistRoll, out int secondprotagonistRoll);
                         protagonistHitStrength = firstprotagonistRoll + secondprotagonistRoll + protagonist.Mastery;
 
                         string penalty = String.Empty;
@@ -254,8 +252,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                             Game.Dice.Symbol(secondprotagonistRoll), protagonist.Mastery, penalty, protagonistHitStrength));
                     }
 
-                    int firstEnemyRoll = Game.Dice.Roll();
-                    int secondEnemyRoll = Game.Dice.Roll();
+                    Game.Dice.DoubleRoll(out int firstEnemyRoll, out int secondEnemyRoll);
                     int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Mastery;
 
                     fight.Add(String.Format(
