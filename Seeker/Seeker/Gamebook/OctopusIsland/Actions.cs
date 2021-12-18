@@ -217,16 +217,14 @@ namespace Seeker.Gamebook.OctopusIsland
                     Character enemyInFight = enemy;
                     fight.Add(String.Format("{0} (жизнь {1})", enemy.Name, enemy.Hitpoint));
 
-                    int protagonistRollFirst = Game.Dice.Roll();
-                    int protagonistRollSecond = Game.Dice.Roll();
+                    Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
                     int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Skill;
 
                     fight.Add(String.Format("{0}: мощность удара: {1} + {2} + {3} = {4}",
                         protagonist.Name, Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
                         protagonist.Skill, protagonistHitStrength));
 
-                    int enemyRollFirst = Game.Dice.Roll();
-                    int enemyRollSecond = Game.Dice.Roll();
+                    Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
 
                     fight.Add(String.Format("{0}: мощность удара: {1} + {2} + {3} = {4}",
