@@ -27,6 +27,12 @@ namespace Seeker.Game
             return result;
         }
 
+        public static void DoubleRoll(out int firstDice, out int secondDice)
+        {
+            firstDice = Game.Dice.Roll();
+            secondDice = Game.Dice.Roll();
+        }
+
         public static string Symbol(int dice) => dices[dice];
     }
 }
