@@ -79,8 +79,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             while (!succesBreaked && (protagonist.Endurance > 0))
             {
-                int firstDice = Game.Dice.Roll();
-                int secondDice = Game.Dice.Roll();
+                Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
                 if (((firstDice == 1) || (firstDice == 6)) && (firstDice == secondDice))
                     succesBreaked = true;
@@ -207,8 +206,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public List<string> RollDoubleDices()
         {
-            int firstDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
             return new List<string> { String.Format(
                 "BIG|Бросок: {0} + {1} = {2}",
@@ -293,8 +291,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
                         if (!attackAlready)
                         {
-                            firstAllyRoll = Game.Dice.Roll();
-                            secondAllyRoll = Game.Dice.Roll();
+                            Game.Dice.DoubleRoll(out firstAllyRoll, out secondAllyRoll);
                             allyHitStrength = firstAllyRoll + secondAllyRoll + (ally.Mastery - MasteryPenalty);
 
                             fight.Add(String.Format(
@@ -303,8 +300,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                                 Game.Dice.Symbol(firstAllyRoll), Game.Dice.Symbol(secondAllyRoll), ally.Mastery, allyHitStrength));
                         }
 
-                        int firstEnemyRoll = Game.Dice.Roll();
-                        int secondEnemyRoll = Game.Dice.Roll();
+                        Game.Dice.DoubleRoll(out int firstEnemyRoll, out int secondEnemyRoll);
                         int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Mastery;
 
                         fight.Add(String.Format(
