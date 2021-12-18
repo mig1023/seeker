@@ -114,6 +114,7 @@ namespace Seeker.Gamebook.OrcsDay
                 orcishness.Add("+1 Оркишность за то, что Смелости больше, чем Мозгов");
                 orc.Orcishness += 1;
             }
+
             if (orc.Courage > 2)
             {
                 orcishness.Add("-1 Оркишность за то, что Смелости слишком много");
@@ -130,8 +131,7 @@ namespace Seeker.Gamebook.OrcsDay
         {
             List<string> testLines = new List<string>();
 
-            int firstDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int currentStat = GetProperty(protagonist, Stat);
 
             bool okResult = false;
@@ -186,8 +186,7 @@ namespace Seeker.Gamebook.OrcsDay
 
                 fight.Add(String.Format("BOLD|{0} нападает:", enemy.Name));
 
-                int enemyRollFirst = Game.Dice.Roll();
-                int enemyRollSecond = Game.Dice.Roll();
+                Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
                 int protection = Protection(ref fight);
 
                 bool enemyAttackFail = (enemyRollFirst + enemyRollSecond) + protection >= enemy.Attack;
@@ -214,9 +213,7 @@ namespace Seeker.Gamebook.OrcsDay
                 fight.Add(String.Empty);
                 fight.Add("BOLD|Ты нападаешь:");
 
-                int protagonistRollFirst = Game.Dice.Roll();
-                int protagonistRollSecond = Game.Dice.Roll();
-
+                Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
                 bool protagonistAttackWin = (protagonistRollFirst + protagonistRollSecond) + protagonist.Muscle >= enemy.Defense;
 
                 fight.Add(String.Format("Удар {0}: {1} + {2} + {3} {4}",
