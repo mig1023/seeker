@@ -185,15 +185,13 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             while (true)
             {
-                int firstRoll = Game.Dice.Roll();
-                int secondRoll = Game.Dice.Roll();
+                Game.Dice.DoubleRoll(out int firstRoll, out int secondRoll);
                 int protagonistStrength = firstRoll + secondRoll + protagonist.Attack;
 
                 fight.Add(String.Format("Ваша сила удара: {0} + {1} + {2} = {3}",
                     Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), protagonist.Attack, protagonistStrength));
 
-                firstRoll = Game.Dice.Roll();
-                secondRoll = Game.Dice.Roll();
+                Game.Dice.DoubleRoll(out firstRoll, out secondRoll);
                 int enemyStrength = firstRoll + secondRoll + ENEMY_STRENGTH;
 
                 fight.Add(String.Format("Cила удара удальца: {0} + {1} + {2} = {3}",
@@ -241,15 +239,13 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             do
             {
-                int hisFirstDice = Game.Dice.Roll();
-                int hisSecondDice = Game.Dice.Roll();
+                Game.Dice.DoubleRoll(out int hisFirstDice, out int hisSecondDice);
                 enemyResult = hisFirstDice + hisSecondDice + 4;
 
                 diceGame.Add(String.Format("Он бросил: {0} + {1} = {2}",
                     Game.Dice.Symbol(hisFirstDice), Game.Dice.Symbol(hisSecondDice), enemyResult));
 
-                int firstDice = Game.Dice.Roll();
-                int secondDice = Game.Dice.Roll();
+                Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
                 myResult = firstDice + secondDice;
 
                 diceGame.Add(String.Format("Вы бросили: {0} + {1} = {2}",
@@ -405,8 +401,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         private int InitiativeAndDices(Character character, out string line)
         {
-            int firstRoll = Game.Dice.Roll();
-            int secondRoll = Game.Dice.Roll();
+            Game.Dice.DoubleRoll(out int firstRoll, out int secondRoll);
             int initiative = firstRoll + secondRoll + character.Initiative;
 
             line = String.Format("{0} + {1} + {2}, итого {3}",
@@ -446,8 +441,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             const int SUCCESSFUL_ATTACK = 3, WOUND = -3, SUCCESSFUL_BLOCK = 1, FAIL_ATTACK = -1;
 
-            int firstRoll = Game.Dice.Roll();
-            int secondRoll = Game.Dice.Roll();
+            Game.Dice.DoubleRoll(out int firstRoll, out int secondRoll);
             int attackStrength = firstRoll + secondRoll + attacker.Attack;
 
             Dictionary<string, bool> specialRules = GetSpecialRules(attacker, defender, round);
