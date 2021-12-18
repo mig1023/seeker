@@ -48,14 +48,12 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public List<string> GoodLuck(out bool goodLuck, bool notInline = false)
         {
-            int fisrtDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
-            goodLuck = (fisrtDice + secondDice) < protagonist.Luck;
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+            goodLuck = (firstDice + secondDice) < protagonist.Luck;
 
             List<string> luckCheck = new List<string> { String.Format(
                 "Проверка удачи: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck ) };
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck ) };
 
             luckCheck.Add((notInline ? String.Empty : "BIG|") + (goodLuck ? "GOOD|УСПЕХ :)" : "BAD|НЕУДАЧА :("));
 
@@ -141,9 +139,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public List<string> Mastery()
         {
-            int firstDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             bool goodSkill = (firstDice + secondDice) <= protagonist.Mastery;
 
             List<string> skillCheck = new List<string> { String.Format(
@@ -205,8 +201,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
                     if (!attackAlready)
                     {
-                        int protagonistRollFirst = Game.Dice.Roll();
-                        int protagonistRollSecond = Game.Dice.Roll();
+                        Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
                         protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Mastery;
 
                         fight.Add(String.Format("Мощность вашего удара: {0} + {1} + {2} = {3}",
@@ -217,8 +212,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         doubleSixes = doubleDice && (protagonistRollFirst == 6);
                     }
 
-                    int enemyRollFirst = Game.Dice.Roll();
-                    int enemyRollSecond = Game.Dice.Roll();
+                    Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
 
                     doubleDiceEnemy = (enemyRollFirst == enemyRollSecond);
