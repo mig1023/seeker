@@ -197,8 +197,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             List<string> diceCheck = new List<string>();
 
-            int firstDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int sum = firstDice + secondDice;
 
             diceCheck.Add(String.Format("Кубики: {0} + {1} = {2}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), sum));
@@ -283,8 +282,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             List<string> bareHands = new List<string>();
 
-            int firstDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int sum = firstDice + secondDice;
             bool success = (sum < protagonist.Strength);
 
@@ -316,9 +314,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             while (true)
             {
-                int firstDice = Game.Dice.Roll();
-                int secondDice = Game.Dice.Roll();
-
+                Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
                 bool diceDouble = (firstDice == secondDice);
                 bool nobodyCantForward = (diceDouble && (teams[firstDice] == -1)) || ((teams[firstDice] == -1) && (teams[secondDice] == -1));
 
