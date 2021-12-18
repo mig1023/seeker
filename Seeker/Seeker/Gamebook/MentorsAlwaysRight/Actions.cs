@@ -272,8 +272,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             List<string> game = new List<string> { };
 
-            int firstDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
             game.Add(String.Format("На кубиках выпало: {0} и {1}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice)));
             game.Add(String.Format("BIG|BOLD|Итого выпало: {0}", firstDice + secondDice));
@@ -577,8 +576,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     if (!Invincible)
                         fight.Add(String.Format("{0} (жизни: {1})", enemy.Name, enemy.Hitpoints));
 
-                    int firstProtagonistRoll = Game.Dice.Roll();
-                    int secondProtagonistRoll = Game.Dice.Roll();
+                    Game.Dice.DoubleRoll(out int firstProtagonistRoll, out int secondProtagonistRoll);
                     int protagonistHitStrength = firstProtagonistRoll + secondProtagonistRoll + protagonist.Strength;
 
                     fight.Add(String.Format(
@@ -586,8 +584,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         Game.Dice.Symbol(firstProtagonistRoll), Game.Dice.Symbol(secondProtagonistRoll),
                         protagonist.Strength, protagonistHitStrength));
 
-                    int firstEnemyRoll = Game.Dice.Roll();
-                    int secondEnemyRoll = Game.Dice.Roll();
+                    Game.Dice.DoubleRoll(out int firstEnemyRoll, out int secondEnemyRoll);
                     int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Strength;
 
                     fight.Add(String.Format(
