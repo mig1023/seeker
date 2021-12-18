@@ -93,14 +93,12 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public List<string> Luck()
         {
-            int fisrtDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
-            bool goodLuck = (fisrtDice + secondDice) <= protagonist.Luck;
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+            bool goodLuck = (firstDice + secondDice) <= protagonist.Luck;
 
             List<string> luckCheck = new List<string> { String.Format(
                 "Проверка удачи: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck) };
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck) };
 
             luckCheck.Add(Result(goodLuck, "УСПЕХ|НЕУДАЧА"));
 
@@ -115,15 +113,13 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public List<string> Mastery()
         {
-            int fisrtDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int mastery = (Value > 0 ? Value : protagonist.Mastery);
-            bool masteryOk = (fisrtDice + secondDice) <= mastery;
+            bool masteryOk = (firstDice + secondDice) <= mastery;
 
             List<string> masteryCheck = new List<string> { String.Format(
                 "Проверка мастерства: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (masteryOk ? "<=" : ">"), mastery) };
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (masteryOk ? "<=" : ">"), mastery) };
 
             if (Value > 0)
                 masteryCheck.Add(Result(!masteryOk, "Мастерства НЕ хватило|Мастерства ХВАТИЛО"));
@@ -135,9 +131,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public List<string> Transformation()
         {
-            int fisrtDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-            int result = fisrtDice + secondDice;
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+            int result = firstDice + secondDice;
 
             string bonusLine = String.Empty;
 
@@ -157,7 +152,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             List<string> changeCheck = new List<string> { String.Format(
                 "Проверка: {0} + {1}{2} {3} {4} изменение",
-                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), bonusLine, cmpLine, protagonist.Change) };
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), bonusLine, cmpLine, protagonist.Change) };
 
             changeCheck.Add(Result(changeOk, "Победил ЧЕЛОВЕК|Победил ВОЛК"));
 
@@ -190,9 +185,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         {
             List<string> diceCheck = new List<string> { };
 
-            int firstDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             int result = firstDice + secondDice;
 
             diceCheck.Add(String.Format("На кубиках выпало: {0} + {1} = {2}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(firstDice), result));
@@ -213,8 +206,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             for (int i = 1; i <= 3; i++)
             {
-                int firstDice = Game.Dice.Roll();
-                int secondDice = Game.Dice.Roll();
+                Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
                 int result = firstDice + secondDice + penalty;
 
                 if (penalty > 0)
@@ -406,8 +398,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             fight.Add(String.Empty);
 
-            int ulrichRollFirst = Game.Dice.Roll();
-            int ulrichRollSecond = Game.Dice.Roll();
+            Game.Dice.DoubleRoll(out int ulrichRollFirst, out int ulrichRollSecond);
             int ulrichHitStrength = ulrichRollFirst + ulrichRollSecond + ulrichMastery;
 
             fight.Add(String.Format("Сила удара Ульриха: {0} + {1} + {2} = {3}",
@@ -431,8 +422,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             fight.Add(String.Empty);
 
-            int vanRichtenRollFirst = Game.Dice.Roll();
-            int vanRichtenRollSecond = Game.Dice.Roll();
+            Game.Dice.DoubleRoll(out int vanRichtenRollFirst, out int vanRichtenRollSecond);
             int vanRichtenHitStrength = vanRichtenRollFirst + vanRichtenRollSecond + vanRichtenMastery;
 
             fight.Add(String.Format("Сила удара Ван Рихтена: {0} + {1} + {2} = {3}",
@@ -866,8 +856,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                         
                     if (!attackAlready)
                     {
-                        int protagonistRollFirst = Game.Dice.Roll();
-                        int protagonistRollSecond = Game.Dice.Roll();
+                        Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
                         protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Mastery + HitStrengthBonus;
 
                         string bonus = String.Empty;
@@ -898,8 +887,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                             HitStrengthBonus = 0;
                     }
 
-                    int enemyRollFirst = Game.Dice.Roll();
-                    int enemyRollSecond = Game.Dice.Roll();
+                    Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
 
                     fight.Add(String.Format("Сила его удара: {0} + {1} + {2} = {3}",
