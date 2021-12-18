@@ -236,13 +236,11 @@ namespace Seeker.Gamebook.YounglingTournament
 
             int deflecting = 4 + protagonist.SwordTechniques[SwordTypes.Rivalry];
 
-            int firestDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
-            int shoot = firestDice + secondDice + 19;
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+            int shoot = firstDice + secondDice + 19;
 
             defenseCheck.Add(String.Format("Выстрел: {0} + {1} + 10 (сила выстрела) + 9 (меткость) = {2}",
-                Game.Dice.Symbol(firestDice), Game.Dice.Symbol(secondDice), shoot));
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), shoot));
 
             defenseCheck.Add(String.Format("Отражение: 4 + {0} ранг = {1}",
                 protagonist.SwordTechniques[SwordTypes.Rivalry], deflecting));
@@ -279,8 +277,7 @@ namespace Seeker.Gamebook.YounglingTournament
             {
                 fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
 
-                int protagonistFirstDice = Game.Dice.Roll();
-                int protagonistSecondDice = Game.Dice.Roll();
+                Game.Dice.DoubleRoll(out int protagonistFirstDice, out int protagonistSecondDice);
                 int shotAccuracy = protagonist.Accuracy + protagonistFirstDice + protagonistSecondDice + AccuracyBonus;
 
                 string bonus = (AccuracyBonus > 0 ? String.Format(" + {0} бонус", AccuracyBonus) : String.Empty);
@@ -296,8 +293,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
                     else
                     {
-                        int enemyFirstDice = Game.Dice.Roll();
-                        int enemySecondDice = Game.Dice.Roll();
+                        Game.Dice.DoubleRoll(out int enemyFirstDice, out int enemySecondDice);
                         FightEnemies[enemy] = enemy.Accuracy + enemyFirstDice + enemySecondDice;
 
                         fight.Add(String.Format("{0} стреляет: {1} + {2} + {3} = {4}",
@@ -644,8 +640,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
                     else
                     {
-                        int enemyFirstDice = Game.Dice.Roll();
-                        int enemySecondDice = Game.Dice.Roll();
+                        Game.Dice.DoubleRoll(out int enemyFirstDice, out int enemySecondDice);
                         FightEnemies[enemy] = enemy.Skill + enemy.Rang + enemyFirstDice + enemySecondDice;
 
                         fight.Add(String.Format("Скорость удара {0}: {1} ловкость + {2} ранг + {3} + {4} = {5}",
