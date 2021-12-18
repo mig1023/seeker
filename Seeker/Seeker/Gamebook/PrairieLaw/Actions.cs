@@ -164,14 +164,12 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public List<string> Charm()
         {
-            int fisrtDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
-            bool goodCharm = (fisrtDice + secondDice) <= protagonist.Charm;
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+            bool goodCharm = (firstDice + secondDice) <= protagonist.Charm;
 
             List<string> luckCheck = new List<string> { String.Format(
                 "Проверка обаяния: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodCharm ? "<=" : ">"), protagonist.Charm) };
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodCharm ? "<=" : ">"), protagonist.Charm) };
 
             if (goodCharm)
             {
@@ -196,14 +194,12 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public List<string> Skill()
         {
-            int fisrtDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
-            bool goodSkill = (fisrtDice + secondDice) <= protagonist.Skill;
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+            bool goodSkill = (firstDice + secondDice) <= protagonist.Skill;
 
             List<string> luckCheck = new List<string> { String.Format(
                 "Проверка ловкости: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(fisrtDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), protagonist.Skill) };
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodSkill ? "<=" : ">"), protagonist.Skill) };
 
             luckCheck.Add(Result(goodSkill, "УСПЕХ|НЕУДАЧА"));
 
@@ -356,9 +352,7 @@ namespace Seeker.Gamebook.PrairieLaw
         {
             List<string> gameReport = new List<string>();
 
-            int firstDice = Game.Dice.Roll();
-            int secondDice = Game.Dice.Roll();
-
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
             gameReport.Add(String.Format("На рулетке выпали: {0} и {1}", Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice)));
 
             if (firstDice == secondDice)
@@ -497,8 +491,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
                     if (!attackAlready && (!firefight || !noCartridges))
                     {
-                        int protagonistRollFirst = Game.Dice.Roll();
-                        int protagonistRollSecond = Game.Dice.Roll();
+                        Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
                         protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Skill;
 
                         string protagonistHitLine = (firefight ? "Ваш выстрел" : "Мощность вашего удара");
@@ -512,8 +505,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
                     if (!firefight || (enemy.Cartridges > 0))
                     {
-                        int enemyRollFirst = Game.Dice.Roll();
-                        int enemyRollSecond = Game.Dice.Roll();
+                        Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
                         enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Skill;
 
                         string enemyHitLine = (firefight ? "Его выстрел" : "Мощность его удара");
