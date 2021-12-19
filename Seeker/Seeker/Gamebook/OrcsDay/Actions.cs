@@ -18,7 +18,7 @@ namespace Seeker.Gamebook.OrcsDay
         public override List<string> Status() => new List<string>
         {
             String.Format("Оркишность: {0}", Game.Other.NegativeMeaning(protagonist.Orcishness)),
-            String.Format("Здоровье: {0}", protagonist.Hitpoints),
+            String.Format("Здоровье: {0}/5", protagonist.Hitpoints),
         };
 
         public override List<string> AdditionalStatus() => new List<string>
@@ -158,6 +158,8 @@ namespace Seeker.Gamebook.OrcsDay
 
             return testLines;
         }
+
+        public override bool CheckOnlyIf(string option) => CheckOnlyIfTrigger(option);
 
         private int Protection(ref List<string> fight)
         {
