@@ -155,6 +155,7 @@ namespace Seeker.Game
             description.Translators = StringParse(data["Translators"]);
             description.Year = IntParse(data["Year"]);
             description.Text = StringParse(data["Text"]);
+            description.Paragraphs = StringParse(data["Paragraphs"]);
             description.Size = StringParse(data["Size"]);
         }
 

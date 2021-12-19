@@ -217,14 +217,11 @@ namespace Seeker.Output
             if (!String.IsNullOrEmpty(gamebook.Text))
                 AddDisclaimerElement(head: "Описание:", body: Regex.Unescape(gamebook.Text), ref disclaimer, border, little: true);
 
-            int paragraphs = Game.Other.SizeParse(gamebook.Paragraphs);
+            int paragraphs = Game.Other.ParagraphSizeParse(gamebook.Paragraphs);
             string pLine = Game.Other.CoinsNoun(paragraphs, "параграф", "параграфа", "параграфов");
 
-            int size = Game.Xml.IntParse(gamebook.Size);
-            string sLine = Game.Other.CoinsNoun(size, "слово", "слова", "слов");
-
-            AddDisclaimerElement(head: "Обьём:", body: String.Format("{0} {1} / {2} {3}",
-                gamebook.Paragraphs, pLine, size, sLine), ref disclaimer, border);            
+            AddDisclaimerElement(head: "Обьём:", body: String.Format("{0} {1} / {2}",
+                gamebook.Paragraphs, pLine, Game.Other.SizeParse(gamebook.Size)), ref disclaimer, border);            
 
             border.GestureRecognizers.Add(CloseTapped(border));
 

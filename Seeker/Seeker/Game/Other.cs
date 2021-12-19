@@ -47,7 +47,20 @@ namespace Seeker.Game
 
         public static bool DoNothing() => true;
 
-        public static int SizeParse(string size)
+        public static string SizeParse(string size)
+        {
+            int fullSize = int.Parse(size);
+
+            if (fullSize < 1000)
+            {
+                string line = Game.Other.CoinsNoun(fullSize, "слово", "слова", "слов");
+                return String.Format("{0} {1}", fullSize, line);
+            }
+            else
+                return String.Format("{0} тыс. слов", (fullSize / 1000));
+        }
+
+        public static int ParagraphSizeParse(string size)
         {
             if (size.Contains("("))
             {
