@@ -24,6 +24,8 @@ namespace Seeker.Gamebook
 
         public int Year;
 
+        public string Paragraphs;
+
         public string Size;
 
         public string Translator;
