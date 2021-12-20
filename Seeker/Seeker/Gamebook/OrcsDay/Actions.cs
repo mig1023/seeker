@@ -205,7 +205,7 @@ namespace Seeker.Gamebook.OrcsDay
 
                 bool enemyAttackFail = (enemyRollFirst + enemyRollSecond) + protection >= enemy.Attack;
 
-                fight.Add(String.Format("Удар {0}: {1} + {2} + {3} {4}",
+                fight.Add(String.Format("Удар врага: {0} + {1} + {2} {3} {4}",
                     Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond),
                     protection, (enemyAttackFail ? ">=" : "<"), enemy.Attack));
 
@@ -262,7 +262,7 @@ namespace Seeker.Gamebook.OrcsDay
                 Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
                 bool protagonistAttackWin = (protagonistRollFirst + protagonistRollSecond) + protagonist.Muscle >= enemy.Defense;
 
-                fight.Add(String.Format("Удар {0}: {1} + {2} + {3} {4}",
+                fight.Add(String.Format("Твой удар {0} + {1} + {2} {3} {4}",
                     Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
                     protagonist.Muscle, (enemyAttackFail ? ">=" : "<"), enemy.Defense));
 
