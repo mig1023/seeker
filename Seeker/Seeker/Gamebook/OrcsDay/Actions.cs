@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.OrcsDay
         public string Stat { get; set; }
         public int Level { get; set; }
         public bool OrcishnessTest { get; set; }
+        public bool MortimerFight { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -180,6 +181,17 @@ namespace Seeker.Gamebook.OrcsDay
             List<string> fight = new List<string>();
             Character enemy = Enemies[0];
 
+            bool otherOrcs = Game.Option.IsTriggered("Много орков помогают");
+            int otherOrcsHitpoints = 3;
+
+            if (MortimerFight && (otherOrcs || Game.Option.IsTriggered("Несколько орков помогают")));
+            {
+                fight.Add("-2 к Атаке и Защите Мортимера из-за помощи других орков\n");
+
+                enemy.Attack -= 2;
+                enemy.Defense -= 2;
+            }
+
             int round = 1;
 
             while (true)
@@ -197,13 +209,45 @@ namespace Seeker.Gamebook.OrcsDay
                     Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond),
                     protection, (enemyAttackFail ? ">=" : "<"), enemy.Attack));
 
-                if (!enemyAttackFail)
+                bool otherOrcsUnderAttack = false;
+
+                if (MortimerFight && otherOrcs)
+                {
+                    int whoUnderAttack = Game.Dice.Roll();
+                    otherOrcsUnderAttack = whoUnderAttack < 3;
+
+                    fight.Add(String.Format("Кого атакует Мортимер: {0}", Game.Dice.Symbol(whoUnderAttack)));
+
+                    if (!otherOrcsUnderAttack)
+                        fight.Add("BOLD|Он атакует тебя");
+                }
+
+                if (otherOrcsUnderAttack)
+                {
+                    otherOrcsHitpoints -= 1;
+
+                    fight.Add(String.Format("BOLD|Он атакует других орков!\n" +
+                        "Они теряют 1 Здоровье, осталось {0}.", otherOrcsHitpoints));
+
+                    if (otherOrcsHitpoints <= 0)
+                    {
+                        fight.Add("BAD|\nМортимер победил остальных орков и ты теряешь их помощь");
+                        fight.Add("BOLD|Дальше драться придётся тебе одному\n");
+
+                        otherOrcs = false;
+                        enemy.Attack += 2;
+                        enemy.Defense += 2;
+                    }
+                }
+                else if (enemyAttackFail)
+                {
+                    fight.Add("Ты отбил удар!");
+                }
+                else
                 {
                     protagonist.Hitpoints -= 1;
                     fight.Add(String.Format("BAD|BOLD|{0} ранил тебя", enemy.Name));
                 }
-                else
-                    fight.Add("Ты отбил удар!");
 
                 if (protagonist.Hitpoints <= 0)
                 {
