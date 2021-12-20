@@ -66,7 +66,7 @@ namespace Seeker.Gamebook.OrcsDay
         }
 
         public override bool IsButtonEnabled(bool secondButton = false) =>
-            String.IsNullOrEmpty(Stat) || (protagonist.StatBonuses > 0) || secondButton;
+            String.IsNullOrEmpty(Stat) || (protagonist.StatBonuses > 0) || (Level > 0) || secondButton;
 
         public List<string> Get()
         {
