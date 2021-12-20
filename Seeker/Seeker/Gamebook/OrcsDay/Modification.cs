@@ -8,6 +8,10 @@ namespace Seeker.Gamebook.OrcsDay
         {
             if (Name == "Back")
                 Character.Protagonist.WayBack = Value;
+
+            else if (Name == "RestoreHitpoints")
+                Character.Protagonist.Hitpoints = 5;
+
             else
                 base.Do(Character.Protagonist);
         }
