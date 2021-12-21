@@ -38,6 +38,8 @@ namespace Seeker.Gamebook.OrcsDay
             set => _money = Game.Param.Setter(value);
         }
 
+        public int Bet { get; set; } 
+
         public int StatBonuses { get; set; }
 
         public int WayBack { get; set; }
@@ -54,6 +56,7 @@ namespace Seeker.Gamebook.OrcsDay
             Orcishness = 6;
             StatBonuses = 10;
             WayBack = 0;
+            Bet = 1;
         }
 
         public Character Clone() => new Character()
@@ -69,10 +72,11 @@ namespace Seeker.Gamebook.OrcsDay
             Attack = this.Attack,
             Defense = this.Defense,
             StatBonuses = this.StatBonuses,
+            Bet = this.Bet,
         };
 
         public override string Save() => String.Join("|",
-            Name, Muscle, Wits, Courage, Luck, Hitpoints, Money, Orcishness, StatBonuses, WayBack
+            Name, Muscle, Wits, Courage, Luck, Hitpoints, Money, Orcishness, StatBonuses, WayBack, Bet
         );
 
         public override void Load(string saveLine)
@@ -89,6 +93,7 @@ namespace Seeker.Gamebook.OrcsDay
             Orcishness = int.Parse(save[7]);
             StatBonuses = int.Parse(save[8]);
             WayBack = int.Parse(save[9]);
+            Bet = int.Parse(save[10]);
         }
 
         public override string Debug() => String.Format("Бонусов: {0}\nWayBack: {1}", StatBonuses, WayBack);

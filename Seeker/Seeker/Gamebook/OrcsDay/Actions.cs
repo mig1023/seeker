@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.OrcsDay
         public bool OrcishnessTest { get; set; }
         public bool MortimerFight { get; set; }
         public bool LateHelp { get; set; }
+        public bool Bet { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -65,8 +66,19 @@ namespace Seeker.Gamebook.OrcsDay
             return enemies;
         }
 
-        public override bool IsButtonEnabled(bool secondButton = false) =>
-            String.IsNullOrEmpty(Stat) || (protagonist.StatBonuses > 0) || (Level > 0) || secondButton;
+        public override bool IsButtonEnabled(bool secondButton = false)
+        {
+            if (Bet)
+            {
+                if (secondButton)
+                    return protagonist.Bet > 1;
+                else
+                    return protagonist.Bet < 5;
+            }
+            else
+                return String.IsNullOrEmpty(Stat) || (protagonist.StatBonuses > 0) || (Level > 0) || secondButton;
+        }
+            
 
         public List<string> Get()
         {
@@ -158,6 +170,33 @@ namespace Seeker.Gamebook.OrcsDay
             testLines.Add(Result(okResult, "УСПЕШНО|НЕУДАЧНО"));
 
             return testLines;
+        }
+
+        public List<string> CardGames()
+        {
+            List<string> gameLines = new List<string>();
+
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+
+            int gameResult = (firstDice + secondDice) + protagonist.Luck;
+
+            gameLines.Add(String.Format("Выпавшие карты: {0} + {1} + {2}",
+                   Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), protagonist.Luck));
+
+            if (gameResult > 15)
+            {
+                protagonist.Money += protagonist.Bet;
+                gameLines.Add("GOOD|BIG|Получилось! Ты не только вернул ставку, но и выиграл столько же!");
+            }
+            else if (gameResult < 12)
+            {
+                protagonist.Money -= protagonist.Bet;
+                gameLines.Add("BAD|BIG|Провал! Ты потерял свою ставку!");
+            }
+            else
+                gameLines.Add("BIG|Выиграть не получилось, но ставка осталась при тебе!");
+
+            return gameLines;
         }
 
         public override bool CheckOnlyIf(string option) => CheckOnlyIfTrigger(option);
