@@ -54,6 +54,8 @@ namespace Seeker.Gamebook.OrcsDay
                     action.Enemies.Add(EnemyParse(xmlEnemy));
             }
 
+            action.Benefit = Xml.ModificationParse(xmlAction["Benefit"], new Modification());
+
             return action;
         }
 

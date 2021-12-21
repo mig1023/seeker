@@ -10,6 +10,7 @@ namespace Seeker.Gamebook.OrcsDay
         public int Wits { get; set; }
         public int Courage { get; set; }
         public int Luck { get; set; }
+        public int Weapon { get; set; }
 
         public int Attack { get; set; }
         public int Defense { get; set; }
@@ -51,6 +52,7 @@ namespace Seeker.Gamebook.OrcsDay
             Wits = 0;
             Courage = 0;
             Luck = 0;
+            Weapon = 0;
             Hitpoints = 5;
             Money = 20;
             Orcishness = 6;
@@ -66,6 +68,7 @@ namespace Seeker.Gamebook.OrcsDay
             Wits = this.Wits,
             Courage = this.Courage,
             Luck = this.Luck,
+            Weapon = this.Weapon,
             Hitpoints = this.Hitpoints,
             Money = this.Money,
             Orcishness = this.Orcishness,
@@ -76,7 +79,8 @@ namespace Seeker.Gamebook.OrcsDay
         };
 
         public override string Save() => String.Join("|",
-            Name, Muscle, Wits, Courage, Luck, Hitpoints, Money, Orcishness, StatBonuses, WayBack, Bet
+            Name, Muscle, Wits, Courage, Luck, Hitpoints, Money, Orcishness,
+            StatBonuses, WayBack, Bet, Weapon
         );
 
         public override void Load(string saveLine)
@@ -94,8 +98,10 @@ namespace Seeker.Gamebook.OrcsDay
             StatBonuses = int.Parse(save[8]);
             WayBack = int.Parse(save[9]);
             Bet = int.Parse(save[10]);
+            Weapon = int.Parse(save[11]);
         }
 
-        public override string Debug() => String.Format("Бонусов: {0}\nWayBack: {1}", StatBonuses, WayBack);
+        public override string Debug() => String.Format(
+            "Бонусов: {0}\nWayBack: {1}\nWeapon: {2}", StatBonuses, WayBack, Weapon);
     }
 }

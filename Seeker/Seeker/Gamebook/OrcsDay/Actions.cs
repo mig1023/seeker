@@ -56,8 +56,14 @@ namespace Seeker.Gamebook.OrcsDay
                 return new List<string> { String.Format("{0}\n(текущее значение: {1})",
                     Text, Game.Other.NegativeMeaning(GetProperty(protagonist, Stat))) };
             }
+            else if (Price > 0)
+            {
+                return new List<string> { Text };
+            }
             else if (Enemies == null)
+            {
                 return enemies;
+            }
 
             foreach (Character enemy in Enemies)
                 enemies.Add(String.Format("{0}\nатака {1}  защита {2}  здоровье {3}",
@@ -68,7 +74,11 @@ namespace Seeker.Gamebook.OrcsDay
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            if (Stat == "Bet")
+            if (Used)
+            {
+                return false;
+            }
+            else if (Stat == "Bet")
             {
                 if (secondButton)
                     return protagonist.Bet > 1;
@@ -77,14 +87,21 @@ namespace Seeker.Gamebook.OrcsDay
                     return protagonist.Bet < 5;
             }
             else
+            {
                 return String.IsNullOrEmpty(Stat) || (protagonist.StatBonuses > 0) || (Level > 0) || secondButton;
+            }
         }
-            
 
         public List<string> Get()
         {
             if (!String.IsNullOrEmpty(Stat))
                 ChangeProtagonistParam(Stat, protagonist, "StatBonuses");
+
+            if (Benefit != null)
+                Benefit.Do();
+
+            if (Price > 0)
+                Used = true;
 
             return new List<string> { "RELOAD" };
         }
@@ -309,12 +326,14 @@ namespace Seeker.Gamebook.OrcsDay
                 fight.Add(String.Empty);
                 fight.Add("BOLD|Ты нападаешь:");
 
-                Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
-                bool protagonistAttackWin = (protagonistRollFirst + protagonistRollSecond) + protagonist.Muscle >= enemy.Defense;
+                Game.Dice.DoubleRoll(out int protRollFirst, out int protRollSecond);
+                int protagonistAttack = (protRollFirst + protRollSecond) + protagonist.Muscle + protagonist.Weapon;
+                bool protagonistAttackWin = protagonistAttack >= enemy.Defense;
 
-                fight.Add(String.Format("Твой удар: {0} + {1} + {2} {3} {4}",
-                    Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
-                    protagonist.Muscle, (protagonistAttackWin ? ">=" : "<"), enemy.Defense));
+                fight.Add(String.Format("Твой удар: {0} + {1} + {2}{3} {4} {5}",
+                    Game.Dice.Symbol(protRollFirst), Game.Dice.Symbol(protRollSecond),
+                    protagonist.Muscle, (protagonist.Weapon > 0 ? String.Format(" + {0} меч", protagonist.Weapon) : String.Empty),
+                    (protagonistAttackWin ? ">=" : "<"), enemy.Defense));
 
                 if (protagonistAttackWin)
                 {
@@ -337,5 +356,9 @@ namespace Seeker.Gamebook.OrcsDay
                 round += 1;
             }
         }
+
+        public override bool IsHealingEnabled() => protagonist.Hitpoints < 5;
+
+        public override void UseHealing(int healingLevel) => protagonist.Hitpoints += healingLevel;
     }
 }
