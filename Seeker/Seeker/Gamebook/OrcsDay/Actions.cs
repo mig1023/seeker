@@ -15,7 +15,7 @@ namespace Seeker.Gamebook.OrcsDay
         public bool OrcishnessTest { get; set; }
         public bool MortimerFight { get; set; }
         public bool LateHelp { get; set; }
-        public bool Bet { get; set; }
+        public bool SecondGame { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -68,10 +68,11 @@ namespace Seeker.Gamebook.OrcsDay
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            if (Bet)
+            if (Stat == "Bet")
             {
                 if (secondButton)
                     return protagonist.Bet > 1;
+
                 else
                     return protagonist.Bet < 5;
             }
@@ -180,15 +181,15 @@ namespace Seeker.Gamebook.OrcsDay
 
             int gameResult = (firstDice + secondDice) + protagonist.Luck;
 
-            gameLines.Add(String.Format("Выпавшие карты: {0} + {1} + {2}",
-                   Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), protagonist.Luck));
+            gameLines.Add(String.Format("Выпавшие карты: {0} + {1} + {2} = {3}",
+                   Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), protagonist.Luck, gameResult));
 
-            if (gameResult > 15)
+            if (gameResult >= 15)
             {
                 protagonist.Money += protagonist.Bet;
                 gameLines.Add("GOOD|BIG|Получилось! Ты не только вернул ставку, но и выиграл столько же!");
             }
-            else if (gameResult < 12)
+            else if (((gameResult < 12) && !SecondGame) || ((gameResult < 10) && SecondGame))
             {
                 protagonist.Money -= protagonist.Bet;
                 gameLines.Add("BAD|BIG|Провал! Ты потерял свою ставку!");
