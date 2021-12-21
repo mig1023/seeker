@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Seeker.Gamebook.OrcsDay
 {
@@ -15,6 +14,7 @@ namespace Seeker.Gamebook.OrcsDay
         public int Level { get; set; }
         public bool OrcishnessTest { get; set; }
         public bool MortimerFight { get; set; }
+        public bool LateHelp { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -176,6 +176,12 @@ namespace Seeker.Gamebook.OrcsDay
             }
         }
 
+        private void FightBonus(Character enemy, bool sub = false)
+        {
+            enemy.Attack += (sub ? -2 : 2);
+            enemy.Defense += (sub ? -2 : 2);
+        }
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -184,12 +190,10 @@ namespace Seeker.Gamebook.OrcsDay
             bool otherOrcs = Game.Option.IsTriggered("Много орков помогают");
             int otherOrcsHitpoints = 3;
 
-            if (MortimerFight && (otherOrcs || Game.Option.IsTriggered("Несколько орков помогают")));
+            if (MortimerFight && (otherOrcs || Game.Option.IsTriggered("Несколько орков помогают")))
             {
-                fight.Add("-2 к Атаке и Защите Мортимера из-за помощи других орков\n");
-
-                enemy.Attack -= 2;
-                enemy.Defense -= 2;
+                fight.Add("BOLD|-2 к Атаке и Защите Мортимера из-за помощи других орков\n");
+                FightBonus(enemy, sub: true);
             }
 
             int round = 1;
@@ -227,7 +231,7 @@ namespace Seeker.Gamebook.OrcsDay
                     otherOrcsHitpoints -= 1;
 
                     fight.Add(String.Format("BOLD|Он атакует других орков!\n" +
-                        "Они теряют 1 Здоровье, осталось {0}.", otherOrcsHitpoints));
+                        "Они теряют 1 Здоровье, осталось {0}", otherOrcsHitpoints));
 
                     if (otherOrcsHitpoints <= 0)
                     {
@@ -235,8 +239,7 @@ namespace Seeker.Gamebook.OrcsDay
                         fight.Add("BOLD|Дальше драться придётся тебе одному\n");
 
                         otherOrcs = false;
-                        enemy.Attack += 2;
-                        enemy.Defense += 2;
+                        FightBonus(enemy);
                     }
                 }
                 else if (enemyAttackFail)
@@ -247,6 +250,13 @@ namespace Seeker.Gamebook.OrcsDay
                 {
                     protagonist.Hitpoints -= 1;
                     fight.Add(String.Format("BAD|BOLD|{0} ранил тебя", enemy.Name));
+                    fight.Add(String.Format("Твоё здоровье стало равно {0}", protagonist.Hitpoints));
+
+                    if ((protagonist.Hitpoints == 2) && LateHelp)
+                    {
+                        fight.Add("BOLD|Другие орки присоединяются к бою!\n-2 к Атаке и Защите противника!");
+                        FightBonus(enemy, sub: true);
+                    }
                 }
 
                 if (protagonist.Hitpoints <= 0)
@@ -262,14 +272,15 @@ namespace Seeker.Gamebook.OrcsDay
                 Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
                 bool protagonistAttackWin = (protagonistRollFirst + protagonistRollSecond) + protagonist.Muscle >= enemy.Defense;
 
-                fight.Add(String.Format("Твой удар {0} + {1} + {2} {3} {4}",
+                fight.Add(String.Format("Твой удар: {0} + {1} + {2} {3} {4}",
                     Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
-                    protagonist.Muscle, (enemyAttackFail ? ">=" : "<"), enemy.Defense));
+                    protagonist.Muscle, (protagonistAttackWin ? ">=" : "<"), enemy.Defense));
 
                 if (protagonistAttackWin)
                 {
                     enemy.Hitpoints -= 1;
                     fight.Add("GOOD|BOLD|Ты ранил противника!");
+                    fight.Add(String.Format("Его здоровье стало равно {0}", enemy.Hitpoints));
                 }
                 else
                     fight.Add(String.Format("Противник отбил твой удар"));
