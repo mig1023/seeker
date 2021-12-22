@@ -4,6 +4,8 @@ namespace Seeker.Gamebook.GoingToLaughter
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
+        private static Character protagonist = Character.Protagonist;
+
         public override void Do()
         {
             if (!ModBySpecificName(Name))
@@ -12,7 +14,6 @@ namespace Seeker.Gamebook.GoingToLaughter
 
         private bool ModBySpecificName(string name)
         {
-            Character protagonist = Character.Protagonist;
             int lutnaBonus = ((Game.Option.IsTriggered("Лютня") && Advantage("Музицирование")) ? 2 : 1);
 
             if (name == "Advantage")
@@ -60,16 +61,16 @@ namespace Seeker.Gamebook.GoingToLaughter
                 protagonist.Inspiration += int.Parse(values[1]) * lutnaBonus;
                 protagonist.Buffoonery += int.Parse(values[2]) * lutnaBonus;
             }
+            else if (name == "DynamicBonuses")
+            {
+                DynamicBonuses(ValueString);
+            }
             else if (name == "StaticBonuses")
             {
                 foreach (string param in ValueString.Split(','))
                 {
                     if (param.Contains("="))
-                    {
-                        string[] keyValue = param.Split('=');
-                        int currentValue = GetProperty(protagonist, keyValue[0].Trim());
-                        SetProperty(protagonist, keyValue[0].Trim(), currentValue + int.Parse(keyValue[1].Trim()));
-                    }
+                        SetPropertyByLine(param);
                     else
                         Game.Option.Trigger(param.Trim());
                 }
@@ -80,15 +81,40 @@ namespace Seeker.Gamebook.GoingToLaughter
             return true;
         }
 
+        private void SetPropertyByLine(string line)
+        {
+            string[] keyValue = line.Split('=');
+            int currentValue = GetProperty(protagonist, keyValue[0].Trim());
+            SetProperty(protagonist, keyValue[0].Trim(), currentValue + int.Parse(keyValue[1].Trim()));
+        }
+
+        private void DynamicBonuses(string bonuses)
+        {
+            string[] bonus = bonuses.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
+
+            if ((bonus[0] == "Advantage") && protagonist.Advantages.Contains(bonus[1]))
+            {
+                SetPropertyByLine(bonus[2]);
+            }
+            else if ((bonus[0] == "Disadvantage") && protagonist.Disadvantages.Contains(bonus[1]))
+            {
+                SetPropertyByLine(bonus[2]);
+            }
+            else if (bonus[0] == "Param")
+            {
+                int currentValue = GetProperty(protagonist, bonus[1]);
+                int division = int.Parse(bonus[2]);
+
+                for (int i = 0; i < (currentValue/division); i++)
+                    SetPropertyByLine(bonus[3]);
+            }
+        }
+
         private bool Advantage(string advantages)
         {
-            Character protagonist = Character.Protagonist;
-
             if (advantages.Contains(","))
             {
-                string[] advantagesList = advantages.Split(',');
-
-                foreach (string advantage in advantagesList)
+                foreach (string advantage in advantages.Split(','))
                     if (!protagonist.Advantages.Contains(advantage.Trim()))
                         return false;
 
@@ -96,9 +122,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             }
             else if (advantages.Contains("|"))
             {
-                string[] advantagesList = advantages.Split('|');
-
-                foreach (string advantage in advantagesList)
+                foreach (string advantage in advantages.Split('|'))
                     if (protagonist.Advantages.Contains(advantage.Trim()))
                         return true;
 
@@ -110,11 +134,9 @@ namespace Seeker.Gamebook.GoingToLaughter
 
         private int AdvantagesBonus(string advantages, int bonus)
         {
-            string[] advantagesList = advantages.Split(',');
-
             int total = 0;
 
-            foreach (string advantage in advantagesList)
+            foreach (string advantage in advantages.Split(','))
                 if (Advantage(advantage))
                     total += bonus;
 
