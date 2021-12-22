@@ -2234,7 +2234,7 @@
 		<Modifications>
 			<Modification Name="Buffoonery" Value="2"/>
 			<Modification Name="Heroism" Value="10"/>
-			<Modification Name="SuccessInspiration"/>
+			<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность, Пение, Танец, Красноречие, Везение, Смекалка, Чревовещание, Наблюдательность, Интуиция, Эрудиция->Heroism=10"/>
 		</Modifications>
 		<Options>
 			<Option Destination="606" Text="Воспользоваться случаем и выступить перед народом с речью о необходимости свергнуть монарха"/>
