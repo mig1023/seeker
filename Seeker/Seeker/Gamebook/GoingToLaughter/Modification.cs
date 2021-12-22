@@ -108,6 +108,14 @@ namespace Seeker.Gamebook.GoingToLaughter
                 for (int i = 0; i < (currentValue/division); i++)
                     SetPropertyByLine(bonus[3]);
             }
+            else if ((bonus[0] == "Trigger") && Game.Option.IsTriggered(bonus[1]))
+            {
+                string[] triggers = bonus[1].Split(',');
+
+                foreach(string trigger in triggers)
+                    if (Game.Option.IsTriggered(trigger.Trim()))
+                        SetPropertyByLine(bonus[2]);
+            }
         }
 
         private bool Advantage(string advantages)
