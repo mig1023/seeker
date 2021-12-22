@@ -29,11 +29,6 @@ namespace Seeker.Gamebook.GoingToLaughter
                 protagonist.Heroism += 6;
                 protagonist.Inspiration += 6;
             }
-            else if (name == "SuccessInspiration")
-            {
-                protagonist.Heroism += AdvantagesBonus("Популярность, Пение, Танец, Красноречие," +
-                    "Везение, Смекалка, Чревовещание, Наблюдательность, Интуиция, Эрудиция", 5);
-            }
             else if (name == "MusicalPerformance")
             {
                 string[] values = ValueString.Split(',');
@@ -75,7 +70,9 @@ namespace Seeker.Gamebook.GoingToLaughter
 
             if ((bonus[0] == "Advantage") && protagonist.Advantages.Contains(bonus[1]))
             {
-                SetPropertyByLine(bonus[2]);
+                foreach (string advantage in bonus[1].Split(','))
+                    if (protagonist.Advantages.Contains(advantage.Trim()))
+                        SetPropertyByLine(bonus[2]);
             }
             else if ((bonus[0] == "Disadvantage") && protagonist.Disadvantages.Contains(bonus[1]))
             {
@@ -91,9 +88,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             }
             else if ((bonus[0] == "Trigger") && Game.Option.IsTriggered(bonus[1]))
             {
-                string[] triggers = bonus[1].Split(',');
-
-                foreach(string trigger in triggers)
+                foreach(string trigger in bonus[1].Split(','))
                     if (Game.Option.IsTriggered(trigger.Trim()))
                         SetPropertyByLine(bonus[2]);
             }
