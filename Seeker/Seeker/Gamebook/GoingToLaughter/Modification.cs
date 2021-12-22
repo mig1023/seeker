@@ -81,9 +81,11 @@ namespace Seeker.Gamebook.GoingToLaughter
                             SetPropertyByLine(bonus[2]);
                 }
             }
-            else if ((bonus[0] == "Disadvantage") && protagonist.Disadvantages.Contains(bonus[1]))
+            else if (bonus[0] == "Disadvantage")
             {
-                SetPropertyByLine(bonus[2]);
+                foreach (string disadvantage in bonus[1].Split(','))
+                    if (protagonist.Disadvantages.Contains(disadvantage.Trim()))
+                        SetPropertyByLine(bonus[2]);
             }
             else if (bonus[0] == "Param")
             {
