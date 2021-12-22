@@ -29,25 +29,6 @@ namespace Seeker.Gamebook.GoingToLaughter
                 protagonist.Heroism += 6;
                 protagonist.Inspiration += 6;
             }
-            else if (name == "RevoltInspiration")
-            {
-                protagonist.Heroism += AdvantagesBonus("Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение", 1);
-
-                if (Advantage("Популярность"))
-                    protagonist.Heroism += 10;
-
-                for(int i = 0; i < protagonist.Buffoonery; i++)
-                    protagonist.Heroism += 10;
-
-                for (int i = 0; i < protagonist.Inspiration; i++)
-                    protagonist.Heroism += 5;
-
-                for (int i = 0; i < (protagonist.Villainy / 6); i++)
-                    protagonist.Heroism -= 10;
-
-                if (Advantage("Жестокосердие"))
-                    protagonist.Heroism -= 10;
-            }
             else if (name == "SuccessInspiration")
             {
                 protagonist.Heroism += AdvantagesBonus("Популярность, Пение, Танец, Красноречие," +
