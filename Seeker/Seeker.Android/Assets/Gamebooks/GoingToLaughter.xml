@@ -1970,7 +1970,17 @@
 			<Text Size="small">Если у Вас имеются такие достоинства как «Красноречие», «Артистизм», «Верховая езда», «Предусмотрительность» и «Сражение» — добавьте по пункту Героизма за каждое.\nЕсли у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма.\nЗа каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="RevoltInspiration"/>
+			<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Heroism=1"/>
+			<Modification Name="DynamicBonuses" ValueString="Advantage->Артистизм->Heroism=1"/>
+			<Modification Name="DynamicBonuses" ValueString="Advantage->Верховая езда->Heroism=1"/>
+			<Modification Name="DynamicBonuses" ValueString="Advantage->Предусмотрительность->Heroism=1"/>
+			<Modification Name="DynamicBonuses" ValueString="Advantage->Сражение->Heroism=1"/>
+			<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
+			<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
+			<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
+			<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
+			<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Heroism=-10"/>
+			<Modification Name="DynamicBonuses" ValueString="Trigger->Жестокосердие->Heroism=-10"/>
 		</Modifications>
 		<Options>
 			<Option Destination="640" Text="Если у Вас набралось 100 пунктов Героизма" OnlyIf="ГЕРОИЗМ >= 100"/>
