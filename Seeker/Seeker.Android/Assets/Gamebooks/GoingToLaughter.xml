@@ -1970,11 +1970,7 @@
 			<Text Size="small">Если у Вас имеются такие достоинства как «Красноречие», «Артистизм», «Верховая езда», «Предусмотрительность» и «Сражение» — добавьте по пункту Героизма за каждое.\nЕсли у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма.\nЗа каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Артистизм->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Верховая езда->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Предусмотрительность->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Сражение->Heroism=1"/>
+			<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
 			<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
 			<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
 			<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
@@ -5911,11 +5907,7 @@
 			<Text Size="small">Если у Вас имеются такие достоинства как «Красноречие», «Артистизм», «Верховая езда», «Предусмотрительность» и «Сражение» — добавьте по пункту Героизма за каждое. Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Артистизм->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Верховая езда->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Предусмотрительность->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Сражение->Heroism=1"/>
+			<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
 			<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
 			<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
 			<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
@@ -6383,11 +6375,7 @@
 			<Text Size="small">Если у Вас имеются такие достоинства как «Красноречие», «Артистизм», «Верховая езда», «Предусмотрительность» и «Сражение» — добавьте по пункту Героизма за каждое. Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Артистизм->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Верховая езда->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Предусмотрительность->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Сражение->Heroism=1"/>
+			<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
 			<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
 			<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
 			<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
@@ -10514,11 +10502,7 @@
 			<Text Size="small">Если у Вас имеются такие достоинства как «Красноречие», «Артистизм», «Верховая езда», «Предусмотрительность» и «Сражение» — добавьте по пункту Героизма за каждое. Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 		</Texts>
 		<Modifications>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Артистизм->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Верховая езда->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Предусмотрительность->Heroism=1"/>
-			<Modification Name="DynamicBonuses" ValueString="Advantage->Сражение->Heroism=1"/>
+			<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
 			<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
 			<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
 			<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
