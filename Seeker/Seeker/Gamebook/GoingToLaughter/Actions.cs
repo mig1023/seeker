@@ -128,12 +128,12 @@ namespace Seeker.Gamebook.GoingToLaughter
                         if (oneOption.Contains("ЗЛОДЕЙСТВО <") && (level <= protagonist.Villainy))
                             return false;
                     }
-                    else if (option.Contains("!"))
+                    else if (oneOption.Contains("!"))
                     {
-                        if (protagonist.Disadvantages.Contains(oneOption.Replace("!", String.Empty).Trim()))
+                        if (protagonist.Disadvantages.Contains(oneOption.Trim().Replace("!", String.Empty).Trim()))
                             return false;
                     }
-                    else if (!protagonist.Advantages.Contains(option) && !protagonist.Disadvantages.Contains(option))
+                    else if (!protagonist.Advantages.Contains(oneOption.Trim()) && !protagonist.Disadvantages.Contains(oneOption.Trim()))
                         return false;
                 };
 
