@@ -118,13 +118,5 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             AkynGlory = Game.Continue.IntNullableParse(save[9]);
             UnitOfTime = Game.Continue.IntNullableParse(save[10]);
         }
-
-        public override string Debug() => String.Format(
-            "Сила: {0}/12\nЛовкость: {1}/12\nМудрость: {2}/12\nХитрость: {3}/12\n" +
-            "Красноречие: {4}/12\nПопулярность: {5}\nКумыс: {6}/1\nТаньга: {7}\n" +
-            "Бонусы параметров: {8}\nСлава акына: {9}\nЕдиницы времени: {10}",
-            Strength, Skill, Wisdom, Cunning, Oratory, Popularity, Kumis, Tanga, StatBonuses,
-            AkynGlory, UnitOfTime
-        );
     }
 }
