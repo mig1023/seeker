@@ -115,12 +115,5 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 EnduranceLoss.Add(endurance[0], int.Parse(endurance[1]));
             }
         }
-
-        public override string Debug() => String.Format(
-            "Мастерство: {0}/{1}\nВыносливость: {2}/{3}\nУдача: {4}\nЗолото: {5}\n" +
-            "Чешуйчатая броня: {6}\n\nСохранённые параметры противников: {7}",
-            Mastery, MaxMastery, Endurance, MaxEndurance, String.Join(",", Luck.Select(x => x ? "1" : "0")),
-            Gold, SeaArmour, String.Join("\n", EnduranceLoss.Select(x => x.Key + " = " + x.Value).ToArray())
-        );
     }
 }
