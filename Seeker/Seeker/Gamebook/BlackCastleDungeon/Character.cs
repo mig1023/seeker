@@ -91,10 +91,5 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             SpellSlots = int.Parse(save[7]);
             Spells = save[8].Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).ToList();
         }
-
-        public override string Debug() => String.Format(
-            "Мастерство: {0}/{1}\nВыносливость: {2}/{3}\nУдача: {4}/{5}\nЗолото: {6}\nСлотов волшебства: {7}",
-            Mastery, MaxMastery, Endurance, MaxEndurance, Luck, MaxLuck, Gold, SpellSlots
-        );
     }
 }
