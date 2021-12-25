@@ -118,14 +118,5 @@ namespace Seeker.Gamebook.DzungarWar
             Ginseng = int.Parse(save[12]);
             Airag = int.Parse(save[13]);
         }
-
-        public override string Debug() => String.Format(
-            "Сила: {0}/12\nЛовкость: {1}/12\nМудрость: {2}/12\nХитрость: {3}/12\n" +
-            "Красноречие: {4}/12\nОпасность: {5}\nБлагосклонность: {6}/1\nТаньга: {7}\n" +
-            "Бонусы параметров: {8}\nMax.параметров: {9}\nБрат: {10}\nНастойка: {11}\n" +
-            "Женьшень: {12}",
-            Strength, Skill, Wisdom, Cunning, Oratory, Danger, Favour, Tanga, StatBonuses,
-            MaxBonus, Brother, Tincture, Ginseng
-        );
     }
 }
