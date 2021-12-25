@@ -212,17 +212,5 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             armourDefence = defence;
             armourLine = defenceLine.TrimEnd(new char[] {' ', ','});
         }
-
-        public override string Debug()
-        {
-            string weapons = String.Join("=", Weapons);
-            string armours = String.Join("=", Armour);
-            string favor = String.Join(", ", FavorOfTheGods);
-            string disfavor = String.Join(", ", DisfavorOfTheGods);
-
-            return String.Format("Доспехи: {0}\nОружие: {1}\nПокровитель: {2}\n" +
-                "Благосклонность: {3}\nНемилость: {4}\nОбращение к Зевсу: {5}\nБрошь: {6}\nИхор: {7}",
-                armours, weapons, Patron, favor, disfavor, Resurrection, BroochResurrection, Ichor);
-        }
     }
 }
