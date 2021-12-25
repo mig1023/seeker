@@ -22,17 +22,30 @@ namespace Seeker.Prototypes
             {
                 object value = this.GetType().GetProperty(proterty).GetValue(this);
 
-                if (value is List<string>)
+                if (value is Dictionary<string, string>)
                 {
-                    propertiesList += String.Format("{0}: {1}\n", proterty, String.Join(",", (value as List<string>).ToArray()));
+                    propertiesList += String.Format("{0}: {1}\n",
+                        (value as Dictionary<string, string>).Select(x => x.Key + " = " + x.Value).ToArray());
+                }
+                else if (value is Dictionary<string, int>)
+                {
+                    propertiesList += String.Format("{0}: {1}\n",
+                        (value as Dictionary<string, int>).Select(x => x.Key + " = " + x.Value).ToArray());
+                }
+                else if (value is List<string>)
+                {
+                    propertiesList += String.Format("{0}: {1}\n",
+                        proterty, String.Join(",", (value as List<string>).ToArray()));
                 }
                 else if (value is List<bool>)
                 {
-                    propertiesList += String.Format("{0}: {1}\n", proterty, String.Join(",", (value as List<bool>).ToArray()));
+                    propertiesList += String.Format("{0}: {1}\n",
+                        proterty, String.Join(",", (value as List<bool>).ToArray()));
                 }
                 else
                 {
-                    propertiesList += String.Format("{0}: {1}\n", proterty, value);
+                    propertiesList += String.Format("{0}: {1}\n",
+                        proterty, value);
                 }
             }
 
