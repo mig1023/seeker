@@ -100,8 +100,5 @@ namespace Seeker.Gamebook.OrcsDay
             Bet = int.Parse(save[10]);
             Weapon = int.Parse(save[11]);
         }
-
-        public override string Debug() => String.Format(
-            "Бонусов: {0}\nWayBack: {1}\nWeapon: {2}", StatBonuses, WayBack, Weapon);
     }
 }
