@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Prototypes
 {
@@ -12,6 +14,29 @@ namespace Seeker.Prototypes
 
         public virtual void Load(string saveLine) => Game.Other.DoNothing();
 
-        public virtual string Debug() => String.Empty;
+        public virtual string Debug()
+        {
+            string propertiesList = String.Empty;
+
+            foreach (string proterty in this.GetType().GetProperties().Select(x => x.Name).ToList())
+            {
+                object value = this.GetType().GetProperty(proterty).GetValue(this);
+
+                if (value is List<string>)
+                {
+                    propertiesList += String.Format("{0}: {1}\n", proterty, String.Join(",", (value as List<string>).ToArray()));
+                }
+                else if (value is List<bool>)
+                {
+                    propertiesList += String.Format("{0}: {1}\n", proterty, String.Join(",", (value as List<bool>).ToArray()));
+                }
+                else
+                {
+                    propertiesList += String.Format("{0}: {1}\n", proterty, value);
+                }
+            }
+
+            return propertiesList;
+        }
     }
 }
