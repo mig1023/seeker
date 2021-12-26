@@ -71,7 +71,7 @@ namespace Seeker.Game
                 size = Xml.IntParse(line);
 
             string paragraphs = Game.Other.CoinsNoun(size, "параграф", "параграфа", "параграфов");
-            return String.Format("{0} {1}", size, paragraphs);
+            return String.Format("{0} {1}", line, paragraphs);
         }
 
         public static int ParagraphOrder(string line)
