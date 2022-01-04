@@ -125,7 +125,7 @@ namespace Seeker.Game
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.LoadXml(DependencyService.Get<Abstract.IAssets>().GetFromAssets(gamebook.XmlBook));
 
-            foreach (XmlNode xmlNode in xmlFile.SelectNodes("Paragraphs/Paragraph"))
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes("Gamebook/Paragraphs/Paragraph"))
                 Game.Data.XmlParagraphs.Add(Game.Xml.IntParse(xmlNode["Id"]), xmlNode);
 
             Game.Data.Paragraphs = gamebook.Links.Paragraphs;
