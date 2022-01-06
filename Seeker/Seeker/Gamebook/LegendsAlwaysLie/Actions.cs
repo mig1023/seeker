@@ -38,7 +38,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             if (Price > 0)
             {
-                string gold = Game.Other.CoinsNoun(Price, "золотой", "золотых", "золотых");
+                string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
             }
             else if (!String.IsNullOrEmpty(Text))
@@ -264,7 +264,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        int level = Game.Other.LevelParse(oneOption);
+                        int level = Game.Services.LevelParse(oneOption);
 
                         if (orLogic && oneOption.Contains("ЗОЛОТО >=") && (level <= protagonist.Gold))
                             return true;

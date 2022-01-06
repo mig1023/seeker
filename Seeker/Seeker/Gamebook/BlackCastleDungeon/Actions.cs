@@ -138,7 +138,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
             if (Price > 0)
             {
-                string gold = Game.Other.CoinsNoun(Price, "золотой", "золотых", "золотых");
+                string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
             }
             else if (ThisIsSpell)

@@ -13,7 +13,7 @@ namespace Seeker.Prototypes
 
         public delegate void ParamMod();
 
-        public virtual void Do() => Game.Other.DoNothing();
+        public virtual void Do() => Game.Services.DoNothing();
 
         public virtual void Do(Abstract.ICharacter Character)
         {

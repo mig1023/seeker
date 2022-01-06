@@ -19,7 +19,7 @@ namespace Seeker.Gamebook.SwampFever
         {
             if (Price > 0)
             {
-                string creds = Game.Other.CoinsNoun(Price, "кредит", "кредита", "кредитов");
+                string creds = Game.Services.CoinsNoun(Price, "кредит", "кредита", "кредитов");
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, creds) };
             }
             else if (Level > 0)
@@ -38,7 +38,7 @@ namespace Seeker.Gamebook.SwampFever
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Ярость: {0}", Game.Other.NegativeMeaning(protagonist.Fury)),
+            String.Format("Ярость: {0}", Game.Services.NegativeMeaning(protagonist.Fury)),
             String.Format("Креды: {0}", protagonist.Creds),
             String.Format("Стигон: {0}/6", protagonist.Stigon),
             String.Format("Котировка: 1:{0}", protagonist.Rate),
@@ -356,7 +356,7 @@ namespace Seeker.Gamebook.SwampFever
                             penalties = String.Format(", -{0} за его 2-ки", myPenalty);
 
                         fight.Add(String.Format("Противник пытется уклониться: {0}{1}{2}, итого {3} - это {4} порогового значения '2'",
-                            Game.Dice.Symbol(myDice), bonuses, penalties, enemyEvasion, Game.Other.Сomparison(enemyEvasion, 2)));
+                            Game.Dice.Symbol(myDice), bonuses, penalties, enemyEvasion, Game.Services.Сomparison(enemyEvasion, 2)));
 
                         if (enemyEvasion > 2)
                         {
@@ -398,7 +398,7 @@ namespace Seeker.Gamebook.SwampFever
                             penalties = String.Format(", -{0} за ваши 2-ки", enemyPenalty);
 
                         fight.Add(String.Format("Вы пытется уклониться: {0}{1}{2}, итого {3} - это {4} порогового значения '2'",
-                            Game.Dice.Symbol(enemyDice), bonuses, penalties, myEvasion, Game.Other.Сomparison(myEvasion, 2)));
+                            Game.Dice.Symbol(enemyDice), bonuses, penalties, myEvasion, Game.Services.Сomparison(myEvasion, 2)));
 
                         if (myEvasion > 2)
                         {

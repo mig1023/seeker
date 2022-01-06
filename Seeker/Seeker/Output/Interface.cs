@@ -218,7 +218,7 @@ namespace Seeker.Output
                 AddDisclaimerElement(head: "Описание:", body: Regex.Unescape(gamebook.Text), ref disclaimer, border, little: true);
 
             AddDisclaimerElement(head: "Обьём:", body: String.Format("{0} / {1}",
-                Game.Other.ParagraphSize(gamebook.Paragraphs, out int _), Game.Other.SizeParse(gamebook.Size)),
+                Game.Services.ParagraphSize(gamebook.Paragraphs, out int _), Game.Services.SizeParse(gamebook.Size)),
                 ref disclaimer, border);            
 
             border.GestureRecognizers.Add(CloseTapped(border));

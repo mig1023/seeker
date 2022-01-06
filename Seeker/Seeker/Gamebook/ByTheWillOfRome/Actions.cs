@@ -22,7 +22,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
                 return new List<string>
                 {
-                    String.Format("Дисциплина: {0}", Game.Other.NegativeMeaning(protagonist.Discipline)),
+                    String.Format("Дисциплина: {0}", Game.Services.NegativeMeaning(protagonist.Discipline)),
                     String.Format("Легионеров: {0}", legionaries),
                 };
             }
@@ -43,7 +43,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
         {
             if (Price > 0)
             {
-                string gold = Game.Other.CoinsNoun(Price, "сестерций", "сестерция", "сестерциев");
+                string gold = Game.Services.CoinsNoun(Price, "сестерций", "сестерция", "сестерциев");
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
             }
             else
@@ -75,7 +75,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        int level = Game.Other.LevelParse(oneOption);
+                        int level = Game.Services.LevelParse(oneOption);
 
                         if (oneOption.Contains("СЕСТЕРЦИЕВ >=") && (level <= protagonist.Sestertius))
                             return true;

@@ -64,7 +64,7 @@ namespace Seeker.Gamebook
                     return list.OrderBy(x => x.Author + x.Authors).ToList();
 
                 case 3:
-                    return list.OrderByDescending(x => Game.Other.ParagraphOrder(x.Size)).ToList();
+                    return list.OrderByDescending(x => Game.Services.ParagraphOrder(x.Size)).ToList();
 
                 default:
                     return list;

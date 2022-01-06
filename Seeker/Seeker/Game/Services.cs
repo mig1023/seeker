@@ -2,7 +2,7 @@
 
 namespace Seeker.Game
 {
-    public class Other
+    public class Services
     {
         public static string Сomparison(int a, int b)
         {
@@ -53,7 +53,7 @@ namespace Seeker.Game
 
             if (fullSize < 1000)
             {
-                string line = Game.Other.CoinsNoun(fullSize, "слово", "слова", "слов");
+                string line = CoinsNoun(fullSize, "слово", "слова", "слов");
                 return String.Format("{0} {1}", fullSize, line);
             }
             else
@@ -70,7 +70,7 @@ namespace Seeker.Game
             else
                 size = Xml.IntParse(line);
 
-            string paragraphs = Game.Other.CoinsNoun(size, "параграф", "параграфа", "параграфов");
+            string paragraphs = CoinsNoun(size, "параграф", "параграфа", "параграфов");
             return String.Format("{0} {1}", line, paragraphs);
         }
 

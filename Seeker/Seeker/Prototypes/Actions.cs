@@ -98,7 +98,7 @@ namespace Seeker.Prototypes
 
         public virtual bool IsHealingEnabled() => false;
 
-        public virtual void UseHealing(int healingLevel) => Game.Other.DoNothing();
+        public virtual void UseHealing(int healingLevel) => Game.Services.DoNothing();
 
         public virtual string TextByOptions(string option) => String.Empty;
 

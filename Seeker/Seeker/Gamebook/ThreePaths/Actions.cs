@@ -55,7 +55,7 @@ namespace Seeker.Gamebook.ThreePaths
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        int level = Game.Other.LevelParse(option);
+                        int level = Game.Services.LevelParse(option);
 
                         if (oneOption.Contains("ВРЕМЯ <") && (level <= protagonist.Time))
                             return false;

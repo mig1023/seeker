@@ -37,7 +37,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             if (Price > 0)
             {
-                string gold = Game.Other.CoinsNoun(Price, "золотой", "золотых", "золотых");
+                string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
             }
 
@@ -148,7 +148,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             }
 
             bool changeOk = result > protagonist.Change;
-            string cmpLine = Game.Other.Сomparison(result, protagonist.Change);
+            string cmpLine = Game.Services.Сomparison(result, protagonist.Change);
 
             List<string> changeCheck = new List<string> { String.Format(
                 "Проверка: {0} + {1}{2} {3} {4} изменение",
@@ -347,7 +347,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        int level = Game.Other.LevelParse(oneOption);
+                        int level = Game.Services.LevelParse(oneOption);
 
                         if (option.Contains("ЗОЛОТО >=") && (level > protagonist.Gold))
                             return false;

@@ -114,7 +114,7 @@ namespace Seeker.Gamebook.GoingToLaughter
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        int level = Game.Other.LevelParse(oneOption);
+                        int level = Game.Services.LevelParse(oneOption);
 
                         if (oneOption.Contains("БАЛАНС <=") && (level < protagonist.Balance))
                             return false;

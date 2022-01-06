@@ -79,7 +79,7 @@ namespace Seeker.Gamebook.SilentSchool
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        int level = Game.Other.LevelParse(option);
+                        int level = Game.Services.LevelParse(option);
 
                         if (oneOption.Contains("ГРААЛЬ >=") && (level > protagonist.Grail))
                             return false;

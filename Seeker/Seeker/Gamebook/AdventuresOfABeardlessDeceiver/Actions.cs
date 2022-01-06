@@ -138,7 +138,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        int level = Game.Other.LevelParse(oneOption);
+                        int level = Game.Services.LevelParse(oneOption);
 
                         if (oneOption.Contains("ТАНЬГА >=") && (level > protagonist.Tanga))
                             return false;

@@ -39,7 +39,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
             else if (Price > 0)
             {
-                string coins = Game.Other.CoinsNoun(Price, "монета", "монеты", "монет");
+                string coins = Game.Services.CoinsNoun(Price, "монета", "монеты", "монет");
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, coins) };
             }
             else if (!String.IsNullOrEmpty(Text) || (Name == "Get"))
@@ -496,7 +496,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 bonuses += Add(specialRules["defensiveEnemy"], " + 1 за Оборонительный стиль боя");
                 bonuses += Add(specialRules["fullbackEnemy"], " + 2 за Глухую оборону");
 
-                string comparison = Game.Other.Сomparison(defence, attackStrength);
+                string comparison = Game.Services.Сomparison(defence, attackStrength);
 
                 fight.Add(String.Format("Защита: {0}{1} — {2} Мощности удара",  defender.Defence, bonuses, comparison));
             }

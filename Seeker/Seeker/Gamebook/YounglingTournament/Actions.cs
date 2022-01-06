@@ -77,7 +77,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
                     else if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        int level = Game.Other.LevelParse(option);
+                        int level = Game.Services.LevelParse(option);
 
                         if (oneOption.Contains("ПИЛОТ >") && (level >= protagonist.Pilot))
                             return false;
@@ -527,7 +527,7 @@ namespace Seeker.Gamebook.YounglingTournament
                     bool success = (jump + technique) > 6;
 
                     fight.Add(String.Format("Прыжок: {0} + {1} {2} 6 - {3}",
-                        Game.Dice.Symbol(jump), technique, Game.Other.Сomparison(jump + technique, 6),
+                        Game.Dice.Symbol(jump), technique, Game.Services.Сomparison(jump + technique, 6),
                         (success ? "прыжок удался!" : "прыжок не получился...")));
 
                     if (success)

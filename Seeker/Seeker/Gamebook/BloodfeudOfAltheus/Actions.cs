@@ -204,7 +204,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
             int difference = protagonist.Glory - protagonist.Shame;
 
-            string comparison = Game.Other.Сomparison(sum, difference);
+            string comparison = Game.Services.Сomparison(sum, difference);
 
             diceCheck.Add(String.Format("Разница между Славой и Позором: {0} - {1} = {2}", protagonist.Glory, protagonist.Shame, difference));
             diceCheck.Add(sum > difference ? String.Format("BIG|BAD|{0} :(", comparison.ToUpper()) : "BIG|GOOD|МЕНЬШЕ :)");

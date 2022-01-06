@@ -19,17 +19,17 @@ namespace Seeker.Gamebook.OrcsDay
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Оркишность: {0}", Game.Other.NegativeMeaning(protagonist.Orcishness)),
+            String.Format("Оркишность: {0}", Game.Services.NegativeMeaning(protagonist.Orcishness)),
             String.Format("Здоровье: {0}/5", protagonist.Hitpoints),
         };
 
         public override List<string> AdditionalStatus() => new List<string>
         {
             String.Format("Деньги: {0}", protagonist.Money),
-            String.Format("Удача: {0}", Game.Other.NegativeMeaning(protagonist.Luck)),
-            String.Format("Смелость: {0}", Game.Other.NegativeMeaning(protagonist.Courage)),
-            String.Format("Мозги: {0}", Game.Other.NegativeMeaning(protagonist.Wits)),
-            String.Format("Мышцы: {0}", Game.Other.NegativeMeaning(protagonist.Muscle)),
+            String.Format("Удача: {0}", Game.Services.NegativeMeaning(protagonist.Luck)),
+            String.Format("Смелость: {0}", Game.Services.NegativeMeaning(protagonist.Courage)),
+            String.Format("Мозги: {0}", Game.Services.NegativeMeaning(protagonist.Wits)),
+            String.Format("Мышцы: {0}", Game.Services.NegativeMeaning(protagonist.Muscle)),
         };
 
         public override List<string> Representer()
@@ -54,7 +54,7 @@ namespace Seeker.Gamebook.OrcsDay
             else if (!String.IsNullOrEmpty(Stat))
             {
                 return new List<string> { String.Format("{0}\n(текущее значение: {1})",
-                    Text, Game.Other.NegativeMeaning(GetProperty(protagonist, Stat))) };
+                    Text, Game.Services.NegativeMeaning(GetProperty(protagonist, Stat))) };
             }
             else if (Price > 0)
             {
