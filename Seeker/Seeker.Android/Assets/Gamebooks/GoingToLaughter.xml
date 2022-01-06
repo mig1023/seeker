@@ -664,8 +664,8 @@
 			<Modifications>
 				<Modification Name="Heroism" Value="5"/>
 				<Modification Name="Inspiration" Value="1"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Пение->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Пение->Inspiration=5"/>
+				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение->Heroism=5"/>
+				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="40"/>
@@ -967,10 +967,10 @@
 			<Modifications>
 				<Modification Name="DynamicBonuses" ValueString="Advantage->Набожность->Inspiration=10"/>
 				<Modification Name="DynamicBonuses" ValueString="Advantage->Набожность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Суеверие->Inspiration=3"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Пьянство->Inspiration=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Забывчивость->Buffoonery=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Сумасшествие->Inspiration=1"/>
+				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Суеверие->Inspiration=3"/>
+				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Пьянство->Inspiration=1"/>
+				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Забывчивость->Buffoonery=1"/>
+				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Сумасшествие->Inspiration=1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="519"/>
@@ -1025,8 +1025,8 @@
 				<Modification Name="Heroism" Value="1"/>
 				<Modification Name="Buffoonery" Value="1"/>
 				<Modification Name="Inspiration" Value="1"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Танец->Heroism=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Танец->Buffoonery=1"/>
+				<Modification Name="DynamicBonuses" ValueString="Advantage->Танец->Heroism=1"/>
+				<Modification Name="DynamicBonuses" ValueString="Advantage->Танец->Buffoonery=1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="464"/>
@@ -7658,7 +7658,7 @@
 			<Modifications>
 				<Modification Name="Heroism" Value="10"/>
 				<Modification Name="Inspiration" Value="10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Пение->Heroism=10"/>
+				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение->Heroism=10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="751"/>
@@ -8584,12 +8584,12 @@
 				<Modification Name="Heroism" Value="5"/>
 				<Modification Name="Inspiration" Value="5"/>
 				<Modification Name="Buffoonery" Value="1"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Пение->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Пение->Inspiration=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Пение->Buffoonery=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Музицирование->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Музицирование->Inspiration=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Музицирование->Buffoonery=1"/>
+				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение->Heroism=5"/>
+				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение->Inspiration=5"/>
+				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение->Buffoonery=1"/>
+				<Modification Name="DynamicBonuses" ValueString="Advantage->Музицирование->Heroism=5"/>
+				<Modification Name="DynamicBonuses" ValueString="Advantage->Музицирование->Inspiration=5"/>
+				<Modification Name="DynamicBonuses" ValueString="Advantage->Музицирование->Buffoonery=1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="501"/>
