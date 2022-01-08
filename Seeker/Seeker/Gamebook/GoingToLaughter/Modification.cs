@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.GoingToLaughter
 {
@@ -47,8 +49,14 @@ namespace Seeker.Gamebook.GoingToLaughter
                 protagonist.Inspiration += int.Parse(values[1]) * lutnaBonus;
                 protagonist.Buffoonery += int.Parse(values[2]) * lutnaBonus;
             }
+            else if (name == "SleepCleansing")
+            {
+                Game.Data.Triggers = Game.Data.Triggers.Intersect(Constants.SleepCleaningSurvive()).ToList();
+            }
             else
+            {
                 return false;
+            }
 
             return true;
         }

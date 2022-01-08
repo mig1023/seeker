@@ -45,6 +45,12 @@ namespace Seeker.Gamebook.GoingToLaughter
             ["Inspiration"] = "Вдохновению",
         };
 
+        public static List<string> SleepCleaningSurvive() => new List<string>
+        {
+            "Дежа вю", "Се ля ви", "Шерше ля фам",
+            "Триумфатор", "Лютня", "Записная книжка", "Бревиарий",
+        };
+
         public override bool ShowDisabledOption() => true;
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 1393, 1394 };
