@@ -258,7 +258,8 @@ namespace Seeker.Gamebook.VWeapons
 
             SetProperty(protagonist, part, currentValue);
 
-            healing.Add(String.Format("Вы восстановили 1 ед. здоровья {0}, теперь оно равно {1} из {2}.", partName, currentValue, maxHealing));
+            healing.Add(String.Format("Вы восстановили {0} ед. здоровья {1}, теперь оно равно {2} из {3}.",
+                diff, partName, currentValue, maxHealing));
         }
 
         public List<string> Healing()
@@ -270,9 +271,8 @@ namespace Seeker.Gamebook.VWeapons
             if (Time != 0)
                 protagonist.Time += Time;
 
-            while (healingPoints > 0)
-                foreach (string parts in Constants.healingParts.Keys.ToList())
-                    HealingAction(ref healing, parts, ref healingPoints, Constants.healingParts[parts]);
+            foreach (string parts in Constants.healingParts.Keys.ToList())
+                HealingAction(ref healing, parts, ref healingPoints, Constants.healingParts[parts]);
 
             return healing;
         }
