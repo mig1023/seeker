@@ -449,8 +449,8 @@ namespace Seeker.Gamebook.SwampFever
 
                 protagonist.Stigon -= 1;
                 earnedCreds += protagonist.Rate;
-                accountingReport.Add(String.Format("Продажа кубометра стигона: +{0} кредов", protagonist.Rate));
-                accountingReport.Add(String.Format("GOOD|Итого к зачислению: {0} кредов", earnedCreds));
+                accountingReport.Add(String.Format("BOLD|Продажа кубометра стигона: +{0} кредов", protagonist.Rate));
+                accountingReport.Add(String.Format("Итого к зачислению: {0} кредов", earnedCreds));
 
                 if (protagonist.Rate > 5)
                 {
@@ -464,7 +464,7 @@ namespace Seeker.Gamebook.SwampFever
             accountingReport.Add(String.Empty);
             accountingReport.Add("BIG|ИТОГО:");
             accountingReport.Add(String.Format("Вы продали: {0} кубометров стигона", soldStigon));
-            accountingReport.Add(String.Format("GOOD|Вы получили по плавающему курсу: {0} кредов", earnedCreds));
+            accountingReport.Add(String.Format("BOLD|GOOD|Вы получили по плавающему курсу: {0} кредов", earnedCreds));
 
             protagonist.Creds += earnedCreds;
 
