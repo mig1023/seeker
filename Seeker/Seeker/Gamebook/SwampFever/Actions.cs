@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.SwampFever
 
         public int Level { get; set; }
         public bool Birds { get; set; }
+        public bool DeathTest { get; set; }
 
         public override List<string> Representer()
         {
@@ -105,10 +106,18 @@ namespace Seeker.Gamebook.SwampFever
                 mentalCheck.Add(String.Format("3. +1 к уровню проверки за Гармонизатор (теперь уровень {0})", level));
             }
 
-            mentalCheck.Add(String.Format("{0}. Итого получаем {1}, что {2}меньше {3} уровня проверки",
-                ord, mentalAndFury, (level > mentalAndFury ? String.Empty : "не "), level));
+            bool success = (level > mentalAndFury);
 
-            mentalCheck.Add(Result(level > mentalAndFury, "УСПЕХ|НЕУДАЧА"));
+            mentalCheck.Add(String.Format("{0}. Итого получаем {1}, что {2}меньше {3} уровня проверки",
+                ord, mentalAndFury, (success ? String.Empty : "не "), level));
+
+            mentalCheck.Add(Result(success, "УСПЕХ|НЕУДАЧА"));
+
+            if (DeathTest && !success)
+            {
+                mentalCheck.Add("\nBOLD|Ваш харвестер подбит и уничтожен :(");
+                protagonist.Hitpoints = 0;
+            }
 
             return mentalCheck;
         }
