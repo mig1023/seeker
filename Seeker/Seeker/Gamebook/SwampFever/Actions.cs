@@ -135,6 +135,8 @@ namespace Seeker.Gamebook.SwampFever
             return new List<string> { "RELOAD" };
         }
 
+        private string GetUpgratesValues(int index, int part) => Constants.GetUpgrates()[index].Split('|')[part - 1];
+
         private bool Upgrade(ref List<int> myCombination, ref List<string> myCombinationLine, ref List<string> fight)
         {
             int upgrades = 0;
@@ -142,7 +144,7 @@ namespace Seeker.Gamebook.SwampFever
             bool upgradeInAction = false;
 
             for (int i = 1; i <= Constants.GetUpgrates().Count; i++)
-                upgrades += GetProperty(protagonist, Constants.GetUpgrates()[i]["name"]);
+                upgrades += GetProperty(protagonist, GetUpgratesValues(i, part: 1));
 
             if (upgrades == 0)
                 return upgradeInAction;
@@ -155,13 +157,13 @@ namespace Seeker.Gamebook.SwampFever
 
             for (int i = 1; i <= Constants.GetUpgrates().Count; i++)
             {
-                if (GetProperty(protagonist, Constants.GetUpgrates()[i]["name"]) == 0)
+                if (GetProperty(protagonist, GetUpgratesValues(i, part: 1)) == 0)
                     continue;
 
                 bool inAction = (upgradeDice == i);
 
                 fight.Add(String.Format("{0}{1} - {2}",
-                    (inAction ? "GOOD|" : String.Empty), Constants.GetUpgrates()[i]["output"], (inAction ? "В ДЕЙСТВИИ!" : "нет")));
+                    (inAction ? "GOOD|" : String.Empty), GetUpgratesValues(i, part: 2), (inAction ? "В ДЕЙСТВИИ!" : "нет")));
 
                 if (inAction)
                 {

@@ -33,39 +33,14 @@ namespace Seeker.Gamebook.SwampFever
             [4] = "БЛИЖНЯЯ ДИСТАНЦИЯ",
         };
 
-        public static Dictionary<int, Dictionary<string, string>> GetUpgrates() =>
-            new Dictionary<int, Dictionary<string, string>>
+        public static Dictionary<int, string> GetUpgrates() => new Dictionary<int, string>
         {
-            [1] = new Dictionary<string, string>
-            {
-                ["name"] = "SecondEngine",
-                ["output"] = "Второй двигатель",
-            },
-            [2] = new Dictionary<string, string>
-            {
-                ["name"] = "Stealth",
-                ["output"] = "Стелс-покрытие",
-            },
-            [3] = new Dictionary<string, string>
-            {
-                ["name"] = "Radar",
-                ["output"] = "Радар",
-            },
-            [4] = new Dictionary<string, string>
-            {
-                ["name"] = "CircularSaw",
-                ["output"] = "Циркулярная пила",
-            },
-            [5] = new Dictionary<string, string>
-            {
-                ["name"] = "Flamethrower",
-                ["output"] = "Реактивный огнемёт",
-            },
-            [6] = new Dictionary<string, string>
-            {
-                ["name"] = "PlasmaCannon",
-                ["output"] = "Спаренная плазмопушка",
-            },
+            [1] = "SecondEngine|Второй двигатель",
+            [2] = "Stealth|Стелс-покрытие",
+            [3] = "Radar|Радар",
+            [4] = "CircularSaw|Циркулярная пила",
+            [5] = "Flamethrower|Реактивный огнемёт",
+            [6] = "PlasmaCannon|Спаренная плазмопушка",
         };
 
         public static Dictionary<string, int> GetPurchases() => new Dictionary<string, int>
