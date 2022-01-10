@@ -471,6 +471,36 @@ namespace Seeker.Gamebook.SwampFever
             return accountingReport;
         }
 
+        private void PurchasesHeads(ref List<string> purchasesReport, bool affordable, bool? prevAffordable)
+        {
+            if (affordable && (prevAffordable == null))
+                purchasesReport.Add("BOLD|ВАМ ДОСТУПНО:");
+
+            else if (prevAffordable != affordable)
+                purchasesReport.Add("\nBOLD|ВАМ ПОКА ЕЩЁ НЕ ДОСТУПНО:");
+        }
+
+        public List<string> VariousPurchases()
+        {
+            List<string> purchasesReport = new List<string>();
+
+            bool affordable = false;
+            bool? prevAffordable = null;
+
+            foreach (KeyValuePair<string, int> purchase in Constants.GetPurchases().OrderBy(x => x.Value))
+            {
+                affordable = (purchase.Value <= protagonist.Creds);
+                string affLine = (affordable ? "GOOD|BOLD|" : String.Empty);
+
+                PurchasesHeads(ref purchasesReport, affordable, prevAffordable);
+                purchasesReport.Add(String.Format("{0}{1} — {2} кредов.", affLine, purchase.Key, purchase.Value));
+
+                prevAffordable = affordable;
+            }
+
+            return purchasesReport;
+        }
+
         public List<string> SellAcousticMembrane()
         {
             protagonist.Creds += 100;
