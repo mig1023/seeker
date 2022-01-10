@@ -321,7 +321,7 @@
 			<Actions>
 				<Action>
 					<Name>MentalTest</Name>
-					<Button>Ментальная проверка</Button>
+					<Button>Проверка</Button>
 					<Level>4</Level>
 				</Action>
 			</Actions>
@@ -707,7 +707,7 @@
 			<Actions>
 				<Action>
 					<Name>MentalTest</Name>
-					<Button>Ментальная проверка</Button>
+					<Button>Проверка</Button>
 					<Level>4</Level>
 				</Action>
 			</Actions>
@@ -802,7 +802,7 @@
 			<Actions>
 				<Action>
 					<Name>MentalTest</Name>
-					<Button>Ментальная проверка</Button>
+					<Button>Проверка</Button>
 					<Level>3</Level>
 					<DeathTest/>
 					<Aftertext>Прозвучал выстрел. Патс подло стреляет сзади. Если проверка пройдена, то вы успели увернуться. Предстоит бой с "оборотнем в погонах"! В противном случае харвестер подбит и ограблен. Ваше приключение тут обрывается. Впоследствии Патс объявит вас мёртвым грабителем.</Aftertext>
@@ -818,7 +818,7 @@
 			<Actions>
 				<Action>
 					<Name>MentalTest</Name>
-					<Button>Ментальная проверка</Button>
+					<Button>Проверка</Button>
 					<Level>3</Level>
 				</Action>
 			</Actions>
@@ -1075,7 +1075,7 @@
 			<Actions>
 				<Action>
 					<Name>MentalTest</Name>
-					<Button>Ментальная проверка</Button>
+					<Button>Проверка</Button>
 					<Level>5</Level>
 				</Action>
 			</Actions>
@@ -1242,7 +1242,7 @@
 			<Actions>
 				<Action>
 					<Name>MentalTest</Name>
-					<Button>Ментальная проверка</Button>
+					<Button>Проверка</Button>
 					<Level>4</Level>
 				</Action>
 			</Actions>
@@ -1320,7 +1320,7 @@
 			<Actions>
 				<Action>
 					<Name>MentalTest</Name>
-					<Button>Ментальная проверка</Button>
+					<Button>Проверка</Button>
 					<Level>3</Level>
 				</Action>
 			</Actions>
@@ -1515,7 +1515,7 @@
 			<Actions>
 				<Action>
 					<Name>MentalTest</Name>
-					<Button>Ментальная проверка</Button>
+					<Button>Проверка</Button>
 					<Level>5</Level>
 				</Action>
 			</Actions>
@@ -1878,7 +1878,7 @@
 			<Actions>
 				<Action>
 					<Name>MentalTest</Name>
-					<Button>Ментальная проверка</Button>
+					<Button>Проверка</Button>
 					<Level>5</Level>
 				</Action>
 			</Actions>
