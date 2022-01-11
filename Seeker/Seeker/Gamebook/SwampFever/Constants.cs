@@ -59,6 +59,15 @@ namespace Seeker.Gamebook.SwampFever
             ["Колонизация нового планетоида"] = 1500,
         };
 
+        public static Dictionary<int, string> GetFuryLevel() => new Dictionary<int, string>
+        {
+            [-2] = "Монах",
+            [-1] = "Пацифист",
+            [0] = "Путник",
+            [1] = "Милитарист",
+            [2] = "Берсерк",
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

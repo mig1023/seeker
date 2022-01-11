@@ -39,7 +39,7 @@ namespace Seeker.Gamebook.SwampFever
 
         public override List<string> Status() => new List<string>
         {
-            String.Format("Ярость: {0}", Game.Services.NegativeMeaning(protagonist.Fury)),
+            String.Format("Ярость: {0}", Constants.GetFuryLevel()[protagonist.Fury]),
             String.Format("Креды: {0}", protagonist.Creds),
             String.Format("Стигон: {0}/6", protagonist.Stigon),
             String.Format("Котировка: 1:{0}", protagonist.Rate),
