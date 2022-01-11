@@ -53,7 +53,7 @@ namespace Seeker.Gamebook.VWeapons
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy((protagonist.Dead ? 0 : 1), out toEndParagraph, out toEndText);
+            GameOverBy(protagonist.Dead, out toEndParagraph, out toEndText);
 
         private bool SpecialCheck() =>
             (Game.Option.IsTriggered("Mt") || Game.Option.IsTriggered("P")) &&
