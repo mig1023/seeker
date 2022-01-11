@@ -37,16 +37,16 @@ namespace Seeker.Gamebook.SwampFever
             }
         }
 
-        public override List<string> Status() => new List<string>
+        public override List<string> AdditionalStatus() => new List<string>
         {
-            String.Format("Ярость: {0}", Constants.GetFuryLevel()[protagonist.Fury]),
-            String.Format("Креды: {0}", protagonist.Creds),
-            String.Format("Стигон: {0}/6", protagonist.Stigon),
             String.Format("Котировка: 1:{0}", protagonist.Rate),
+            String.Format("Стигон: {0}/6", protagonist.Stigon),
+            String.Format("Креды: {0}", protagonist.Creds),
+            String.Format("Ярость: {0}", Constants.GetFuryLevel()[protagonist.Fury]),
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Hitpoints, out toEndParagraph, out toEndText);
+            GameOverBy(protagonist.HarversterDestroyed, out toEndParagraph, out toEndText);
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
@@ -116,7 +116,7 @@ namespace Seeker.Gamebook.SwampFever
             if (DeathTest && !success)
             {
                 mentalCheck.Add("\nBOLD|Ваш харвестер подбит и уничтожен :(");
-                protagonist.Hitpoints = 0;
+                protagonist.HarversterDestroyed = true;
             }
 
             return mentalCheck;
@@ -282,7 +282,7 @@ namespace Seeker.Gamebook.SwampFever
                         if (range == 4)
                         {
                             fight.Add("BIG|BAD|Противник уничтожил вас тараном :(");
-                            protagonist.Hitpoints = 0;
+                            protagonist.HarversterDestroyed = true;
                             return fight;
                         }
                         else
@@ -331,7 +331,7 @@ namespace Seeker.Gamebook.SwampFever
                             else if ((myAttack < enemyAttack) && (range == 4))
                             {
                                 fight.Add("BIG|BAD|Противник уничтожил вас тараном :(");
-                                protagonist.Hitpoints = 0;
+                                protagonist.HarversterDestroyed = true;
                                 return fight;
                             }
                             else if (myAttack > enemyAttack)
@@ -414,7 +414,7 @@ namespace Seeker.Gamebook.SwampFever
                         if (myEvasion > 2)
                         {
                             fight.Add("BIG|BAD|Противник уничтожил вас :(");
-                            protagonist.Hitpoints = 0;
+                            protagonist.HarversterDestroyed = true;
                             return fight;
                         }
                         else

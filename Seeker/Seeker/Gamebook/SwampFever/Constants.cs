@@ -22,7 +22,8 @@ namespace Seeker.Gamebook.SwampFever
             [ColorTypes.Background] = "#485432",
             [ColorTypes.Font] = "#eaece8",
             [ColorTypes.ActionBox] = "#707a60",
-            [ColorTypes.StatusBar] = "#34411c",
+            [ColorTypes.AdditionalStatus] = "#34411c",
+            [ColorTypes.AdditionalFont] = "#ffffff",
             [ColorTypes.BookColor] = "#ff557c48",
         };
 

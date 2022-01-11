@@ -44,7 +44,7 @@ namespace Seeker.Gamebook.SwampFever
             }
         }
 
-        public int Hitpoints { get; set; }
+        public bool HarversterDestroyed { get; set; }
 
         public int SecondEngine { get; set; }
         public int Stealth { get; set; }
@@ -64,7 +64,7 @@ namespace Seeker.Gamebook.SwampFever
             Creds = 0;
             Stigon = 0;
             Rate = 100;
-            Hitpoints = 1;
+            HarversterDestroyed = false;
             SecondEngine = 0;
             Stealth = 0;
             Radar = 0;
@@ -82,7 +82,7 @@ namespace Seeker.Gamebook.SwampFever
             Creds = this.Creds,
             Stigon = this.Stigon,
             Rate = this.Rate,
-            Hitpoints = this.Hitpoints,
+            HarversterDestroyed = this.HarversterDestroyed,
             SecondEngine = this.SecondEngine,
             Stealth = this.Stealth,
             Radar = this.Radar,
@@ -95,8 +95,9 @@ namespace Seeker.Gamebook.SwampFever
         };
 
         public override string Save() => String.Join("|",
-            Fury, Creds, Stigon, Rate, Hitpoints, SecondEngine, Stealth, Radar, CircularSaw,
-            Flamethrower, PlasmaCannon, Harmonizer, AcousticMembrane, LiveMucus
+            Fury, Creds, Stigon, Rate, (HarversterDestroyed ? "1" : "0"),
+            SecondEngine, Stealth, Radar, CircularSaw, Flamethrower,
+            PlasmaCannon, Harmonizer, AcousticMembrane, LiveMucus
         );
 
         public override void Load(string saveLine)
@@ -107,7 +108,7 @@ namespace Seeker.Gamebook.SwampFever
             Creds = int.Parse(save[1]);
             Stigon = int.Parse(save[2]);
             Rate = int.Parse(save[3]);
-            Hitpoints = int.Parse(save[4]);
+            HarversterDestroyed = (int.Parse(save[4]) == 1);
             SecondEngine = int.Parse(save[5]);
             Stealth = int.Parse(save[6]);
             Radar = int.Parse(save[7]);

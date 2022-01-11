@@ -83,6 +83,14 @@ namespace Seeker.Prototypes
             return param <= 0;
         }
 
+        public virtual bool GameOverBy(bool param, out int toEndParagraph, out string toEndText)
+        {
+            toEndParagraph = 0;
+            toEndText = "Начать сначала";
+
+            return param;
+        }
+
         public virtual List<string> ChangeProtagonistParam(string stat,
             Character protagonist, string limithName, bool decrease = false)
         {
