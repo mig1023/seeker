@@ -24,10 +24,10 @@ namespace Seeker.Gamebook.OrcsDay
                 paragraph.Options.Add(option);
             }
 
-            if (Game.Option.IsTriggered("Имя") && (Character.Protagonist.Orcishness <= 0))
+            if (Game.Option.IsTriggered("Имя") && (Character.Protagonist.Orcishness <= 0) && (id != 33))
             {
                 Character.Protagonist.WayBack = id;
-                paragraph.Options.Add(GetOption(destination: 33, text: "Получить имя", onlyIf: "selectOnly"));
+                paragraph.Options.Insert(0, GetOption(destination: 33, text: "Получить имя"));
             }
                 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
@@ -75,11 +75,10 @@ namespace Seeker.Gamebook.OrcsDay
             return enemy;
         }
 
-        private static Option GetOption(int destination, string text, string onlyIf) => new Option
+        private static Option GetOption(int destination, string text) => new Option
         {
             Destination = destination,
             Text = text,
-            OnlyIf = onlyIf,
         };
     }
 }
