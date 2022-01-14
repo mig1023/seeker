@@ -240,8 +240,10 @@ namespace Seeker.Gamebook.OrcsDay
 
         private void FightWinTriggers(string enemyName)
         {
-            if (enemyName == "Галрос Бессмертный")
-                Game.Option.Trigger("Галрос");
+            List<string> enemies = new List<string> { "Галрос Бессмертный", "Мортимер Нечихающий" };
+
+            if (enemies.Contains(enemyName))
+                Game.Option.Trigger(enemyName);
         }
 
         public List<string> Fight()
