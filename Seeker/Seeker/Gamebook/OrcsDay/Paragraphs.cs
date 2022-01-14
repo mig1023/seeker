@@ -21,6 +21,9 @@ namespace Seeker.Gamebook.OrcsDay
                 else
                     option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
 
+                if (xmlOption.Attributes["Do"] != null)
+                    option.Do = Game.Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
+
                 paragraph.Options.Add(option);
             }
 
