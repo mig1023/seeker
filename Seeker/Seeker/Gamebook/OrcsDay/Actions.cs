@@ -362,25 +362,28 @@ namespace Seeker.Gamebook.OrcsDay
 
             int result = 0;
 
-            if (!Game.Option.IsTriggered("Гибель"))
+            if (Character.Protagonist.Orcishness <= 0)
             {
-                results.Add("GOOD|BOLD|+1 за то, что ты ещё жив");
+                results.Add("GOOD|+1 твоя Оркишность упала до нуля или ниже")
                 result += 1;
             }
 
-            if (Game.Option.IsTriggered("Уже есть"))
+            foreach (KeyValuePair<string, string> trigger in Constants.ResultCalculation())
             {
-                results.Add("GOOD|BOLD|+1 за то, что обрёл имя");
-                result += 1;
+                bool mustBeFalse = trigger.Key.Contains("!");
+                bool isTriggered = Game.Option.IsTriggered(trigger.Key.Replace("!", String.Empty));
+                bool add = trigger.Value.Contains("+");
+
+                string color = (add ? "GOOD" : "BAD");
+
+                if (mustBeFalse != isTriggered)
+                {
+                    results.Add(String.Format("{0}|{1}", color, trigger.Value));
+                    result += (add ? 1 : -1);
+                }
             }
 
-            if (Game.Option.IsTriggered("Ограблен"))
-            {
-                results.Add("BAD|BOLD|-1 за то, что был ограблен");
-                result += 1;
-            }
-
-            results.Add(String.Format("BIG|BOLD|ИТОГО: {0}", result));
+            results.Add(String.Format("BIG|BOLD|ИТОГО: {0}",  Game.Services.NegativeMeaning(result)));
 
             return results;
         }

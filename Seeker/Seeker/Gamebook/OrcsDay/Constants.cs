@@ -37,6 +37,13 @@ namespace Seeker.Gamebook.OrcsDay
             ["Orcishness"] = "оркишность",
         };
 
+        public static Dictionary<string, string> ResultCalculation() => new Dictionary<string, string>
+        {
+            ["!Гибель"] = "+1 за то, что ты ещё жив",
+            ["Уже есть"] = "+1 за то, что обрёл имя",
+            ["Ограблен"] = "-1 за то, что был ограблен",
+        };
+
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 102, 103 };
 
         public static Links GetLinks() => new Links
