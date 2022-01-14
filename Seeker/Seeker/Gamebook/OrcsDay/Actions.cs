@@ -238,6 +238,12 @@ namespace Seeker.Gamebook.OrcsDay
             enemy.Defense += (sub ? -2 : 2);
         }
 
+        private void FightWinTriggers(string enemyName)
+        {
+            if (enemyName == "Галрос Бессмертный")
+                Game.Option.Trigger("Галрос");
+        }
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -345,11 +351,12 @@ namespace Seeker.Gamebook.OrcsDay
 
                 if (enemy.Hitpoints <= 0)
                 {
+                    FightWinTriggers(enemy.Name);
+
                     fight.Add(String.Empty);
                     fight.Add(String.Format("BIG|GOOD|Ты ПОБЕДИЛ :)"));
                     return fight;
                 }
-
                  fight.Add(String.Empty);
 
                 round += 1;
