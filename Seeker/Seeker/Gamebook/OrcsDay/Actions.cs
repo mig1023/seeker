@@ -364,7 +364,7 @@ namespace Seeker.Gamebook.OrcsDay
 
             if (Character.Protagonist.Orcishness <= 0)
             {
-                results.Add("GOOD|+1 твоя Оркишность упала до нуля или ниже")
+                results.Add("GOOD|+1 твоя Оркишность упала до нуля или ниже");
                 result += 1;
             }
 
