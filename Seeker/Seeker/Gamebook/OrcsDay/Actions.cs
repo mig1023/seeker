@@ -155,7 +155,6 @@ namespace Seeker.Gamebook.OrcsDay
             orcishness.Add(String.Format("BIG|BOLD|Итоговая Оркишность: {0}", orc.Orcishness));
 
             return orcishness;
-
         }
 
         public List<string> Test()
@@ -355,6 +354,35 @@ namespace Seeker.Gamebook.OrcsDay
 
                 round += 1;
             }
+        }
+
+        public List<string> Calculation()
+        {
+            List<string> results = new List<string> { "BOLD|CЧИТАЕМ:" };
+
+            int result = 0;
+
+            if (!Game.Option.IsTriggered("Гибель"))
+            {
+                results.Add("GOOD|BOLD|+1 за то, что ты ещё жив");
+                result += 1;
+            }
+
+            if (Game.Option.IsTriggered("Уже есть"))
+            {
+                results.Add("GOOD|BOLD|+1 за то, что обрёл имя");
+                result += 1;
+            }
+
+            if (Game.Option.IsTriggered("Ограблен"))
+            {
+                results.Add("BAD|BOLD|-1 за то, что был ограблен");
+                result += 1;
+            }
+
+            results.Add(String.Format("BIG|BOLD|ИТОГО: {0}", result));
+
+            return results;
         }
 
         public override bool IsHealingEnabled() => protagonist.Hitpoints < 5;
