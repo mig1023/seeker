@@ -179,8 +179,8 @@
 				</Action>
 			</Actions>
 			<Options>
-				<Option Destination="38" Text="Повезло"/>
-				<Option Destination="56" Text="В обратном случае в тебе ещё слишком много от орка, чтобы восстать против закона"/>
+				<Option Destination="38" Text="Повезло" Aftertext="В обратном случае в тебе ещё слишком много от орка, чтобы восстать против закона..."/>
+				<Option Destination="56"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
