@@ -7,7 +7,7 @@ namespace Seeker.Gamebook.YounglingTournament
     {
         public override void Do()
         {
-            if (Name == "Back")
+            if (Name == "WayBack")
             {
                 Character.Protagonist.WayBack = Value;
             }
