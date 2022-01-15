@@ -990,7 +990,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="LightSide" Value="20"/>
-				<Modification Name="Back" Value="90"/>
+				<Modification Name="WayBack" Value="90"/>
 			</Modifications>
 			<Triggers>Недоверие</Triggers>
 			<Options>
@@ -1012,7 +1012,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="LightSide" Value="10"/>
-				<Modification Name="Back" Value="91"/>
+				<Modification Name="WayBack" Value="91"/>
 			</Modifications>
 			<Triggers>Недоверие</Triggers>
 			<Options>
@@ -1052,7 +1052,7 @@
 			<Id>94</Id>
 			<Text>Оставшись один, вы обращаетесь к Проводнику, и вскоре он появляется из тумана, окружающего вас.\n\n— Чему хочешь обучиться ты, юный падаван? — спрашивает он, сложив руки на груди и глядя на вас с изрядной долей скептиса.\n\nВы прикидываете, какую из техник желаете изучить:</Text>
 			<Modifications>
-				<Modification Name="Back" Value="94"/>
+				<Modification Name="WayBack" Value="94"/>
 			</Modifications>
 			<Options>
 				<Option Destination="96" Text="Скорость Силы"/>
@@ -1188,7 +1188,7 @@
 				<Text>Вы рассказываете Ливии о собственном Предвидении, и она вздрагивает:\n\n— Великая Сила, что же это творится? Нас ждут темные времена! — она снова в смятении, но тут встревает Проводник.\n\n— Вам следует довериться Предвидениям, юнлинги, но не забывать о том, что бывают они и ложными. Единственное, в чем нет сомнений — то, что случится или случилось именно то, что вы видели в видениях своих. Вам следует принять это.\n\n— Спокойно ждать, пока Кая убьют?! — возмутилась девушка. — Это предложение мудрого наставника?\n\n— Не видел никто из вас, что убили Кая. Юноша видел беседу, а ты — сражение. Нет смерти в ваших Предвидениях, лишь борьба, — терпеливо объясняет Проводник, после чего меняет тон. — А теперь, юнлинги, продолжим обучение.\n\nЛивия крепко сжимает вашу руку на прощание, вздыхает, и выбирает Предвидение Силы.\n\nА какую из техник желаете изучить:</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Back" Value="105"/>
+				<Modification Name="WayBack" Value="105"/>
 			</Modifications>
 			<Triggers>Доверие</Triggers>
 			<Options>
@@ -1209,7 +1209,7 @@
 				<Text>Вы обнимаете девушку, и она с готовностью прижимается лицом к вашей груди.\n\n— Ничего не бойся, Ливия. Ты всегда можешь рассчитывать на мою помощь. Я никому не позволю тебя обидеть.\n\nДевушка улыбается:\n\n— Спасибо, Кай... Надеюсь, мне никогда не придется обращаться к тебе по поводу обид, а вот помощью — загружу точно, — она поднимает взгляд на вас.\n\nВы слышите, как бьется ее сердце, и на какой-то момент кажется, что сейчас между вами произойдет что-то важное. Во всяком случае, девушка пытается привстать на цыпочки, чтобы поцеловать вас, и вы начинаете наклоняться.\n\n— Кхм... — напоминает о себе Наставник, и вы резко отстраняетесь друг от друга. — Давайте вернемся к обучению, юнлинги. Я понимаю: совместные переживания, яркие впечатления, молодость, гомоны... Но мы ведь здесь для другого! Какую из техник Силы вы хотели бы усовершенствовать?\n\nЛивия, не выпуская вашей руки, пылко заявляет:\n\n— Я буду дальше изучать Предвидение Силы. Наставники говорят, возможно, я смогу стать джедаем с самым сильным даром Предвидения в истории!\n\n— Тогда отпустите юношу, и приступим к тренировке, — мягким приглашающим жестом предлагает отойти ей в сторону Проводник.\n\nБросив на меня сожалеющий взгляд, Ливия исчезает в тумане, а к вам тут же обращается Проводник, но уже с другой стороны:\n\n— А что хочешь изучить ты?\n\nКакую из техник желаете изучить:</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Back" Value="106"/>
+				<Modification Name="WayBack" Value="106"/>
 			</Modifications>
 			<Triggers>Клятва</Triggers>
 			<Options>
@@ -6136,7 +6136,7 @@
 			<Triggers>Темная сторона</Triggers>
 			<Modifications>
 				<Modification Name="DarkSide" Value="50"/>
-				<Modification Name="Back" Value="501"/>
+				<Modification Name="WayBack" Value="501"/>
 			</Modifications>
 			<Options>
 				<Option Destination="600" Text="Вы отбавили Выносливость обоих противников до нуля"/>
@@ -6163,7 +6163,7 @@
 			</Actions>
 			<Modifications>
 				<Modification Name="DarkSide" Value="50"/>
-				<Modification Name="Back" Value="502"/>
+				<Modification Name="WayBack" Value="502"/>
 			</Modifications>
 			<RemoveTriggers>Корпускула Комы</RemoveTriggers>
 			<Triggers>Темная сторона</Triggers>
@@ -6192,7 +6192,7 @@
 			</Actions>
 			<Modifications>
 				<Modification Name="DarkSide" Value="50"/>
-				<Modification Name="Back" Value="503"/>
+				<Modification Name="WayBack" Value="503"/>
 			</Modifications>
 			<RemoveTriggers>Корпускула Комы</RemoveTriggers>
 			<Triggers>Темная сторона</Triggers>
@@ -6233,7 +6233,7 @@
 			</Actions>
 			<Modifications>
 				<Modification Name="DarkSide" Value="50"/>
-				<Modification Name="Back" Value="505"/>
+				<Modification Name="WayBack" Value="505"/>
 			</Modifications>
 			<Options>
 				<Option Destination="600" Text="Вы отбавили Выносливость всех противников до нуля"/>
