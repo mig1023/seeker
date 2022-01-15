@@ -416,9 +416,13 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>30</Id>
-			<Text>Приключенцы с радостью принимают тебя в свою группу и интересуются, как тебя зовут. У тебя есть имя?</Text>
+			<Text>Приключенцы с радостью принимают тебя в свою группу и интересуются, как тебя зовут. У тебя есть имя?</Text>		
+			<Modifications>
+				<Modification Name="WayBack" Value="30"/>
+			</Modifications>
 			<Options>
-				<Option Destination="66" Text="Если есть" Aftertext="Иначе тебе необходимо перебороть свою Оркишнсть. Перейди на 55 и следуй инструкциям в этом параграфе."/>
+				<Option Destination="66" Text="Если есть" OnlyIf="Уже есть" Aftertext="Иначе тебе необходимо перебороть свою Оркишнсть:"/>
+				<Option Destination="55" Text="Предпринять попытку противостоять своей природе" Aftertext="Если в итоге ты смог одолеть:"/>				
 				<Option Destination="66" Text="Если у тебя получилось" Aftertext="Иначе приключенцы понимают, что ты орк, и убивают тебя..."/>
 				<Option Destination="101" Text="Переходи к Подсчёту результатов" Do="Trigger" ValueString="Гибель"/>
 			</Options>
