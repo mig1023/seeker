@@ -17,19 +17,24 @@ namespace Seeker.Gamebook.SilentSchool
 
             bool woundsByWeapon2 = DoByName("WoundsByWeapon2",
                 () => protagonist.Life -= (String.IsNullOrEmpty(protagonist.Weapon) ? 4 : 2) * woundsBonus);
+
             bool woundsByWeapon3 = DoByName("WoundsByWeapon3",
                 () => protagonist.Life -= (protagonist.Weapon == "Гантеля" ? 3 : 6) * woundsBonus);
+
             bool woundsByWeapon4 = DoByName("WoundsByWeapon4",
                 () => protagonist.Life -= (protagonist.Weapon == "Флейта" ? 1 : 4) * woundsBonus);
+
             bool woundsByBody = DoByName("WoundsByBody",
                 () => protagonist.Life -= (Game.Option.IsTriggered("Толстяк") ? 4 : 6) * woundsBonus);
 
             if (trigger || change || weapon || removeWeapon || woundsByWeapon2 || woundsByWeapon3 || woundsByWeapon4 || woundsByBody)
+            {
                 return;
-
-            else if (Name == "Back")
+            }
+            else if (Name == "WayBack")
+            {
                 Character.Protagonist.WayBack = Value;
-
+            }
             else if (Name == "WoundsByWeapon")
             {
                 if (protagonist.Weapon == "Черенок от швабры")
@@ -37,7 +42,6 @@ namespace Seeker.Gamebook.SilentSchool
                 else
                     protagonist.Life -= (String.IsNullOrEmpty(protagonist.Weapon) ? 8 : 6) * woundsBonus;
             }
-
             else
             {
                 int currentValue = GetProperty(protagonist, Name);
