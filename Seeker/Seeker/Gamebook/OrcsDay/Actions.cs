@@ -375,6 +375,12 @@ namespace Seeker.Gamebook.OrcsDay
             {
                 results.Add("GOOD|+1 твоя Оркишность упала до нуля или ниже");
                 result += 1;
+
+                if (Game.Option.IsTriggered("Кандидат в Властелины") && !Game.Option.IsTriggered("Тёмный Властелин"))
+                {
+                    results.Add("GOOD|+1 за то, что стал новым Темным Властелином");
+                    result += 1;
+                }
             }
 
             foreach (KeyValuePair<string, string> trigger in Constants.ResultCalculation())
@@ -430,6 +436,13 @@ namespace Seeker.Gamebook.OrcsDay
                         overcome.Add("Ты получаешь за это дополнительно 3 единицы Смелости!");
 
                         protagonist.Courage += 3;
+
+                        if (Game.Option.IsTriggered("Кандидат в Властелины"))
+                        {
+                            overcome.Add("\nBOLD|Ты стал Тёмным Властелином!");
+                            Game.Option.Trigger("Тёмный Властелин");
+                        }
+
                         return overcome;
                     }
                 }
