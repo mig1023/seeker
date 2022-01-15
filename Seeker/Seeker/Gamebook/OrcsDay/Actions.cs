@@ -397,6 +397,58 @@ namespace Seeker.Gamebook.OrcsDay
             return results;
         }
 
+        public List<string> OvercomeOrcishness()
+        {
+            List<string> overcome = new List<string> { "BOLD|CЧИТАЕМ:" };
+
+            while (true)
+            {
+                int sense = protagonist.Courage + protagonist.Wits;
+                int orcishness = protagonist.Muscle + protagonist.Orcishness + 5;
+
+                overcome.Add("BOLD|Борьба:");
+
+                overcome.Add(String.Format("С обной стороны: {0} (смелость) + {1} (мозги) = {2}",
+                    protagonist.Courage, protagonist.Wits, sense));
+
+                overcome.Add(String.Format("С другой: {0} (мышцы) + {1} (оркишность) + 5 = {2}",
+                    protagonist.Muscle, protagonist.Orcishness, orcishness));
+
+                overcome.Add(String.Format("В результате: {0} {1} {2}",
+                    sense, Game.Services.Сomparison(sense, orcishness), orcishness));
+
+                if (sense >= orcishness)
+                {
+                    overcome.Add("BOLD|GOOD|Ты выиграл!");
+                    overcome.Add("Оркишность снизилась на единицу!");
+
+                    protagonist.Orcishness -= 1;
+
+                    if (protagonist.Orcishness <= 0)
+                    {
+                        overcome.Add("BIG|GOOD|Ты освободился от своей Оркской природы! :)");
+                        overcome.Add("Ты получаешь за это дополнительно 3 единицы Смелости!");
+
+                        protagonist.Courage += 3;
+                        return overcome;
+                    }
+                }
+                else
+                {
+                    overcome.Add("BOLD|BAD|Ты проиграл!");
+                    overcome.Add("Смелость снизилась на единицу!");
+
+                    protagonist.Courage -= 1;
+
+                    if (protagonist.Courage <= 0)
+                    {
+                        overcome.Add("BIG|BAD|Ты остался рабом своей Оркской природы :(");
+                        return overcome;
+                    }
+                }
+            }
+        }
+
         public override bool IsHealingEnabled() => protagonist.Hitpoints < 5;
 
         public override void UseHealing(int healingLevel) => protagonist.Hitpoints += healingLevel;
