@@ -6,7 +6,7 @@ namespace Seeker.Gamebook.OrcsDay
     {
         public override void Do()
         {
-            if (Name == "Back")
+            if (Name == "WayBack")
                 Character.Protagonist.WayBack = Value;
 
             else if (Name == "RestoreHitpoints")
