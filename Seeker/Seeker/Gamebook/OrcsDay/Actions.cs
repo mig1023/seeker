@@ -15,6 +15,7 @@ namespace Seeker.Gamebook.OrcsDay
         public bool OrcishnessTest { get; set; }
         public bool MortimerFight { get; set; }
         public bool LateHelp { get; set; }
+        public bool GirlHelp { get; set; }
         public bool SecondGame { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -244,6 +245,9 @@ namespace Seeker.Gamebook.OrcsDay
 
             if (enemies.Contains(enemyName))
                 Game.Option.Trigger(enemyName);
+
+            if (GirlHelp && !Game.Option.IsTriggered("Девушка погибла"))
+                Game.Option.Trigger("Вместе с ней");
         }
 
         public List<string> Fight()
@@ -252,7 +256,8 @@ namespace Seeker.Gamebook.OrcsDay
             Character enemy = Enemies[0];
 
             bool otherOrcs = Game.Option.IsTriggered("Много орков помогают");
-            int otherOrcsHitpoints = 3;
+            int otherOrcsHitpoints = 3, girlWounds = 3;
+            bool magicPotion = GirlHelp;
 
             if (MortimerFight && (otherOrcs || Game.Option.IsTriggered("Несколько орков помогают")))
             {
@@ -277,7 +282,7 @@ namespace Seeker.Gamebook.OrcsDay
                     Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond),
                     protection, (enemyAttackFail ? ">=" : "<"), enemy.Attack));
 
-                bool otherOrcsUnderAttack = false;
+                bool otherOrcsUnderAttack = false, girlUnderAttack = false;
 
                 if (MortimerFight && otherOrcs)
                 {
@@ -289,8 +294,43 @@ namespace Seeker.Gamebook.OrcsDay
                     if (!otherOrcsUnderAttack)
                         fight.Add("BOLD|Он атакует тебя");
                 }
+                else if (GirlHelp)
+                {
+                    int whoUnderAttack = Game.Dice.Roll();
+                    girlUnderAttack = whoUnderAttack < 4;
 
-                if (otherOrcsUnderAttack)
+                    fight.Add(String.Format("Кого атакует Мортимер: {0}", Game.Dice.Symbol(whoUnderAttack)));
+
+                    if (!girlUnderAttack)
+                        fight.Add("BOLD|Он атакует тебя");
+                }
+
+                if (girlUnderAttack)
+                {
+                    girlWounds -= 1;
+
+                    fight.Add(String.Format("BOLD|Он атакует девушку!\n" +
+                        "Она теряет 1 Здоровье, осталось {0}", girlWounds));
+
+                    if (girlWounds <= 0)
+                    {
+                        fight.Add("BAD|\nМортимер убил девушку!");
+
+                        if (magicPotion)
+                        {
+                            fight.Add("GOOD|Ты использовал целительное снадобье и её здоровье восстановлено!\n");
+                            girlWounds = 3;
+                            magicPotion = false;
+                        }
+                        else
+                        {
+                            fight.Add("BOLD|Дальше драться придётся тебе одному\n");
+                            GirlHelp = false;
+                            Game.Option.Trigger("Девушка погибла");
+                        }
+                    }
+                }
+                else if (otherOrcsUnderAttack)
                 {
                     otherOrcsHitpoints -= 1;
 
@@ -325,9 +365,18 @@ namespace Seeker.Gamebook.OrcsDay
 
                 if (protagonist.Hitpoints <= 0)
                 {
-                    fight.Add(String.Empty);
-                    fight.Add(String.Format("BIG|BAD|Ты ПРОИГРАЛ :("));
-                    return fight;
+                    if (magicPotion)
+                    {
+                        fight.Add("GOOD|Ты использовал целительное снадобье и получаешь +3 к здоровью!\n");
+                        protagonist.Hitpoints += 3;
+                        magicPotion = false;
+                    }
+                    else
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add(String.Format("BIG|BAD|Ты ПРОИГРАЛ :("));
+                        return fight;
+                    }
                 }
 
                 fight.Add(String.Empty);
@@ -373,7 +422,7 @@ namespace Seeker.Gamebook.OrcsDay
 
             if (Character.Protagonist.Orcishness <= 0)
             {
-                results.Add("GOOD|+1 твоя Оркишность упала до нуля или ниже");
+                results.Add("GOOD|+1 за то, что твоя Оркишность упала до нуля или ниже");
                 result += 1;
 
                 if (Game.Option.IsTriggered("Кандидат в Властелины") && !Game.Option.IsTriggered("Тёмный Властелин"))
@@ -385,22 +434,35 @@ namespace Seeker.Gamebook.OrcsDay
 
             foreach (KeyValuePair<string, string> trigger in Constants.ResultCalculation())
             {
-                bool mustBeFalse = trigger.Key.Contains("!");
-                bool isTriggered = Game.Option.IsTriggered(trigger.Key.Replace("!", String.Empty));
                 bool add = trigger.Value.Contains("+");
-
                 string color = (add ? "GOOD" : "BAD");
 
-                if (mustBeFalse != isTriggered)
-                {
-                    results.Add(String.Format("{0}|{1}", color, trigger.Value));
-                    result += (add ? 1 : -1);
-                }
+                if (!CalculationCondition(trigger.Key))
+                    continue;
+
+                results.Add(String.Format("{0}|{1}", color, trigger.Value));
+                result += (add ? 1 : -1);
             }
 
             results.Add(String.Format("BIG|BOLD|ИТОГО: {0}",  Game.Services.NegativeMeaning(result)));
 
             return results;
+        }
+
+        private bool CalculationCondition(string conditionParam)
+        {
+            string[] conditions = conditionParam.Split(',');
+
+            foreach(string condition in conditions)
+            {
+                bool mustBeFalse = condition.Contains("!");
+                bool isTriggered = Game.Option.IsTriggered(condition.Replace("!", String.Empty).Trim());
+
+                if (mustBeFalse == isTriggered)
+                    return false;
+            }
+
+            return true;
         }
 
         public List<string> OvercomeOrcishness()
