@@ -270,19 +270,9 @@ namespace Seeker.Gamebook.OrcsDay
             while (true)
             {
                 fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
-
                 fight.Add(String.Format("BOLD|{0} нападает:", enemy.Name));
 
-                Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
-                int protection = Protection(ref fight);
-
-                bool enemyAttackFail = (enemyRollFirst + enemyRollSecond) + protection >= enemy.Attack;
-
-                fight.Add(String.Format("Удар врага: {0} + {1} + {2} {3} {4}",
-                    Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond),
-                    protection, (enemyAttackFail ? ">=" : "<"), enemy.Attack));
-
-                bool otherOrcsUnderAttack = false, girlUnderAttack = false;
+                bool otherOrcsUnderAttack = false, girlUnderAttack = false, enemyAttackFail = false;
 
                 if (MortimerFight && otherOrcs)
                 {
@@ -299,10 +289,22 @@ namespace Seeker.Gamebook.OrcsDay
                     int whoUnderAttack = Game.Dice.Roll();
                     girlUnderAttack = whoUnderAttack < 4;
 
-                    fight.Add(String.Format("Кого атакует Мортимер: {0}", Game.Dice.Symbol(whoUnderAttack)));
+                    fight.Add(String.Format("Кого атакует Галрос: {0}", Game.Dice.Symbol(whoUnderAttack)));
 
                     if (!girlUnderAttack)
                         fight.Add("BOLD|Он атакует тебя");
+                }
+
+                if (!otherOrcsUnderAttack && !girlUnderAttack)
+                {
+                    Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
+                    int protection = Protection(ref fight);
+
+                    enemyAttackFail = (enemyRollFirst + enemyRollSecond) + protection >= enemy.Attack;
+
+                    fight.Add(String.Format("Удар врага: {0} + {1} + {2} {3} {4}",
+                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond),
+                        protection, (enemyAttackFail ? ">=" : "<"), enemy.Attack));
                 }
 
                 if (girlUnderAttack)
@@ -314,17 +316,17 @@ namespace Seeker.Gamebook.OrcsDay
 
                     if (girlWounds <= 0)
                     {
-                        fight.Add("BAD|\nМортимер убил девушку!");
+                        fight.Add("BAD|\nГалрос убил девушку!");
 
                         if (magicPotion)
                         {
-                            fight.Add("GOOD|Ты использовал целительное снадобье и её здоровье восстановлено!\n");
+                            fight.Add("GOOD|BOLD|Ты использовал целительное снадобье и её здоровье восстановлено!");
                             girlWounds = 3;
                             magicPotion = false;
                         }
                         else
                         {
-                            fight.Add("BOLD|Дальше драться придётся тебе одному\n");
+                            fight.Add("BOLD|Дальше драться придётся тебе одному!");
                             GirlHelp = false;
                             Game.Option.Trigger("Девушка погибла");
                         }
