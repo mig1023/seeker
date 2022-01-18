@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.OrcsDay
 
         public string Stat { get; set; }
         public int Level { get; set; }
+        public bool LevelNull { get; set; }
         public bool OrcishnessTest { get; set; }
         public bool MortimerFight { get; set; }
         public bool LateHelp { get; set; }
@@ -89,7 +90,7 @@ namespace Seeker.Gamebook.OrcsDay
             }
             else
             {
-                return String.IsNullOrEmpty(Stat) || (protagonist.StatBonuses > 0) || (Level > 0) || secondButton;
+                return String.IsNullOrEmpty(Stat) || (protagonist.StatBonuses > 0) || (Level > 0) || LevelNull || secondButton;
             }
         }
 
