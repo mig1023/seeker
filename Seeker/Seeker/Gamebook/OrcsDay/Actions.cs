@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.OrcsDay
         public int Level { get; set; }
         public bool LevelNull { get; set; }
         public bool OrcishnessTest { get; set; }
+        public bool ZombiePotionTest { get; set; }
         public bool MortimerFight { get; set; }
         public bool LateHelp { get; set; }
         public bool GirlHelp { get; set; }
@@ -76,7 +77,11 @@ namespace Seeker.Gamebook.OrcsDay
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            if (Used)
+            if (ZombiePotionTest && !Game.Option.IsTriggered("Зелье управление зомби"))
+            {
+                return false;
+            }
+            else if (Used)
             {
                 return false;
             }
@@ -188,6 +193,12 @@ namespace Seeker.Gamebook.OrcsDay
 
             testLines.Add(Result(okResult, "УСПЕШНО|НЕУДАЧНО"));
 
+            if (ZombiePotionTest && okResult)
+            {
+                testLines.Add("Теперь ты контролируешь Зомби-тролля!");
+                Game.Option.Trigger("Зомби-тролль");
+            }
+
             return testLines;
         }
 
@@ -234,10 +245,10 @@ namespace Seeker.Gamebook.OrcsDay
             }
         }
 
-        private void FightBonus(Character enemy, bool sub = false)
+        private void FightBonus(Character enemy, bool sub = false, int bonusLevel = 2)
         {
-            enemy.Attack += (sub ? -2 : 2);
-            enemy.Defense += (sub ? -2 : 2);
+            enemy.Attack += bonusLevel * (sub ? -1 : 1);
+            enemy.Defense += bonusLevel * (sub ? -1 : 1);
         }
 
         private void FightWinTriggers(string enemyName)
@@ -262,8 +273,14 @@ namespace Seeker.Gamebook.OrcsDay
 
             if (MortimerFight && (otherOrcs || Game.Option.IsTriggered("Несколько орков помогают")))
             {
-                fight.Add("BOLD|-2 к Атаке и Защите Мортимера из-за помощи других орков\n");
+                fight.Add("BOLD|-2 к Атаке и Защите противника из-за помощи других орков\n");
                 FightBonus(enemy, sub: true);
+            }
+            
+            if (Game.Option.IsTriggered("Зомби-тролль"))
+            {
+                fight.Add("BOLD|-3 к Атаке и Защите противника из-за помощи Зомби-тролля\n");
+                FightBonus(enemy, sub: true, bonusLevel: 3);
             }
 
             int round = 1;
