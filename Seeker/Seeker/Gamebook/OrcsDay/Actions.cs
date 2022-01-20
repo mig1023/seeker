@@ -263,6 +263,8 @@ namespace Seeker.Gamebook.OrcsDay
                 Game.Option.Trigger("Вместе с ней");
         }
 
+        private bool FightVsAdvanturer(string name) => name == "Приключенцы";
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -270,7 +272,7 @@ namespace Seeker.Gamebook.OrcsDay
 
             bool otherOrcs = false;
             int otherOrcsHitpoints = 3, girlWounds = 3;
-            bool magicPotion = GirlHelp;
+            bool magicPotion = GirlHelp && !FightVsAdvanturer(enemy.Name);
 
             if (OrcsHelp || Game.Option.IsTriggered("Много орков помогают"))
             {
@@ -318,7 +320,7 @@ namespace Seeker.Gamebook.OrcsDay
                     else
                         otherOrcsUnderAttack = whoUnderAttack < 4;
 
-                    fight.Add(String.Format("Кого атакует Галрос: {0}", Game.Dice.Symbol(whoUnderAttack)));
+                    fight.Add(String.Format("Кого атакует противник: {0}", Game.Dice.Symbol(whoUnderAttack)));
 
                     if (!girlUnderAttack && !otherOrcsUnderAttack)
                         fight.Add("BOLD|Он атакует тебя");
@@ -340,12 +342,12 @@ namespace Seeker.Gamebook.OrcsDay
                 {
                     girlWounds -= 1;
 
-                    fight.Add(String.Format("BOLD|Он атакует девушку!\n" +
+                    fight.Add(String.Format("BOLD|Противник атакует девушку!\n" +
                         "Она теряет 1 Здоровье, осталось {0}", girlWounds));
 
                     if (girlWounds <= 0)
                     {
-                        fight.Add("BAD|\nГалрос убил девушку!");
+                        fight.Add("BAD|\nПротивник убил девушку!");
 
                         if (magicPotion)
                         {
@@ -358,6 +360,12 @@ namespace Seeker.Gamebook.OrcsDay
                             fight.Add("BOLD|Дальше драться придётся тебе одному!");
                             GirlHelp = false;
                             Game.Option.Trigger("Девушка погибла");
+
+                            if (FightVsAdvanturer(enemy.Name))
+                            {
+                                fight.Add("Приключенцы получают бонус к Атаке и Защите");
+                                FightBonus(enemy);
+                            }
                         }
                     }
                 }
