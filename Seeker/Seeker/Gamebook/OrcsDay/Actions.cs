@@ -18,6 +18,7 @@ namespace Seeker.Gamebook.OrcsDay
         public bool MortimerFight { get; set; }
         public bool LateHelp { get; set; }
         public bool GirlHelp { get; set; }
+        public bool OrcsHelp { get; set; }
         public bool SecondGame { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -267,9 +268,15 @@ namespace Seeker.Gamebook.OrcsDay
             List<string> fight = new List<string>();
             Character enemy = Enemies[0];
 
-            bool otherOrcs = Game.Option.IsTriggered("Много орков помогают");
+            bool otherOrcs = false;
             int otherOrcsHitpoints = 3, girlWounds = 3;
             bool magicPotion = GirlHelp;
+
+            if (OrcsHelp || Game.Option.IsTriggered("Много орков помогают"))
+            {
+                otherOrcs = true;
+                otherOrcsHitpoints = (OrcsHelp ? 5 : 3);
+            }
 
             if (MortimerFight && (otherOrcs || Game.Option.IsTriggered("Несколько орков помогают")))
             {
@@ -302,14 +309,18 @@ namespace Seeker.Gamebook.OrcsDay
                     if (!otherOrcsUnderAttack)
                         fight.Add("BOLD|Он атакует тебя");
                 }
-                else if (GirlHelp)
+                else if (GirlHelp || OrcsHelp)
                 {
                     int whoUnderAttack = Game.Dice.Roll();
-                    girlUnderAttack = whoUnderAttack < 4;
+
+                    if (GirlHelp)
+                        girlUnderAttack = whoUnderAttack < 4;
+                    else
+                        otherOrcsUnderAttack = whoUnderAttack < 4;
 
                     fight.Add(String.Format("Кого атакует Галрос: {0}", Game.Dice.Symbol(whoUnderAttack)));
 
-                    if (!girlUnderAttack)
+                    if (!girlUnderAttack && !otherOrcsUnderAttack)
                         fight.Add("BOLD|Он атакует тебя");
                 }
 
@@ -359,9 +370,10 @@ namespace Seeker.Gamebook.OrcsDay
 
                     if (otherOrcsHitpoints <= 0)
                     {
-                        fight.Add("BAD|\nМортимер победил остальных орков и ты теряешь их помощь");
+                        fight.Add("BAD|\nПротивник победил остальных орков и ты теряешь их помощь");
                         fight.Add("BOLD|Дальше драться придётся тебе одному\n");
 
+                        OrcsHelp = false;
                         otherOrcs = false;
                         FightBonus(enemy);
                     }
