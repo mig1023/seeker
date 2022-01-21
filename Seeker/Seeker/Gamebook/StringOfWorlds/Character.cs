@@ -41,6 +41,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public int GateCode { get; set; }
         public string Equipment { get; set; }
         public List<bool> Luck { get; set; }
+        public int Coins { get; set; }
 
         public override void Init()
         {
@@ -55,6 +56,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             Blaster = 1;
             GateCode = 0;
             Equipment = String.Empty;
+            Coins = 0;
 
             Luck = new List<bool> { false, true, true, true, true, true, true };
 
@@ -73,10 +75,11 @@ namespace Seeker.Gamebook.StringOfWorlds
             Blaster = this.Blaster,
             GateCode = this.GateCode,
             Equipment = this.Equipment,
+            Coins = this.Coins,
         };
 
         public override string Save() => String.Join("|",
-            MaxSkill, Skill, MaxStrength, Strength, Charm, Blaster, GateCode, Equipment,
+            MaxSkill, Skill, MaxStrength, Strength, Charm, Blaster, GateCode, Equipment, Coins,
             String.Join(",", Luck.Select(x => x ? "1" : "0"))
         );
 
@@ -92,8 +95,9 @@ namespace Seeker.Gamebook.StringOfWorlds
             Blaster = int.Parse(save[5]);
             GateCode = int.Parse(save[6]);
             Equipment = save[7];
+            Coins = int.Parse(save[8]);
 
-            Luck = save[8].Split(',').Select(x => x == "1").ToList();
+            Luck = save[9].Split(',').Select(x => x == "1").ToList();
         }
     }
 }

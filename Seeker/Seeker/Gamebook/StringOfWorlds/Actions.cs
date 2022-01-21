@@ -75,6 +75,9 @@ namespace Seeker.Gamebook.StringOfWorlds
                 if (option.Contains("БЛАСТЕР >="))
                     return level <= protagonist.Blaster;
 
+                else if (option.Contains("МОНЕТ >="))
+                    return level <= protagonist.Coins;
+
                 else if (option.Contains("БЛАСТЕР <"))
                     return level > protagonist.Blaster;
 
@@ -279,6 +282,32 @@ namespace Seeker.Gamebook.StringOfWorlds
             breakingDoor.Add(Result(succesBreaked, "ДВЕРЬ ВЗЛОМАНА|ВЫ УБИЛИСЬ ОБ ДВЕРЬ"));
 
             return breakingDoor;
+        }
+
+        public List<string> Bargain()
+        {
+            List<string> bargain = new List<string>();
+
+            int numberOfDeals = 0;
+
+            foreach (string thing in new List<string> { "Веер", "Полоска ароматической смолы", "Мягкая серебристая шкура" })
+                if (Game.Option.IsTriggered(thing))
+                {
+                    bargain.Add(String.Format("{0} - графиня покупает за монету", thing));
+                    numberOfDeals += 1;
+                }
+
+            if (numberOfDeals > 0)
+            {
+                string coins = Game.Services.CoinsNoun(numberOfDeals, "монету", "монеты", "монеты");
+                bargain.Add(String.Format("BIG|ИТОГО: вы получили {0} {1}", numberOfDeals, coins));
+            }
+            else
+                bargain.Add("BIG|Вам нечего предложить графини :(");
+
+            protagonist.Coins += numberOfDeals;
+
+            return bargain;
         }
 
         public List<string> Get()
