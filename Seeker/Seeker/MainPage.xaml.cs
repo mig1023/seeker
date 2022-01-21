@@ -123,7 +123,9 @@ namespace Seeker
                 }
             }
 
-            if (!loadGame && !reload)
+            bool walkingInCircles = Game.Data.Path.Contains(id.ToString());
+
+            if (!loadGame && !reload && !walkingInCircles)
             {
                 Game.Option.Trigger(paragraph.Trigger);
                 Game.Option.Trigger(paragraph.RemoveTrigger, remove: true);
@@ -131,9 +133,10 @@ namespace Seeker
                 if ((paragraph.Modification != null) && (paragraph.Modification.Count > 0))
                     foreach (Abstract.IModification modification in paragraph.Modification)
                         modification.Do();
-
-                Game.Data.Path.Add(id.ToString());
             }
+
+            if (!loadGame && !reload)
+                Game.Data.Path.Add(id.ToString());
 
             bool gameOver = false;
 
@@ -153,35 +156,13 @@ namespace Seeker
                         foreach (View enemy in Output.Interface.Represent(action.Do(out _, "Representer")))
                             actionPlace.Children.Add(enemy);
 
-                        if (action.Name.Contains(","))
-                        {
-                            string[] buttons = action.Button.Split(',');
-                            int buttonIndex = 0;
-
-                            StackLayout buttonPlace = Output.Interface.MultipleButtonsPlace();
-
-                            foreach (string act in action.Name.Split(','))
-                            {
-                                EventHandler actionClick = (object sender, EventArgs e) =>
-                                    Action_Click(action, actionPlace, anotherAction: act.Trim());
-
-                                Button button = Output.Buttons.Action(buttons[buttonIndex], actionClick,
-                                    action.IsButtonEnabled(buttonIndex > 0));
-
-                                button.HorizontalOptions = LayoutOptions.FillAndExpand;
-
-                                buttonPlace.Children.Add(button);
-
-                                buttonIndex += 1;
-                            }
-
-                            actionPlace.Children.Add(buttonPlace);
-                        }
-                        else
+                        if (!action.Name.Contains(","))
                         {
                             EventHandler actionClick = (object sender, EventArgs e) => Action_Click(action, actionPlace);
                             actionPlace.Children.Add(Output.Buttons.Action(action.Button, actionClick, action.IsButtonEnabled()));
                         }
+                        else
+                            actionPlace.Children.Add(MultipleButtonsPlace(action, actionPlace));
 
                         Action.Children.Add(actionPlace);
 
@@ -261,6 +242,31 @@ namespace Seeker
             {
                 Game.Continue.Save();
             }
+        }
+
+        private StackLayout MultipleButtonsPlace(Abstract.IActions action, StackLayout actionPlace)
+        {
+            string[] buttons = action.Button.Split(',');
+            int buttonIndex = 0;
+
+            StackLayout buttonPlace = Output.Interface.MultipleButtonsPlace();
+
+            foreach (string act in action.Name.Split(','))
+            {
+                EventHandler actionClick = (object sender, EventArgs e) =>
+                    Action_Click(action, actionPlace, anotherAction: act.Trim());
+
+                Button button = Output.Buttons.Action(buttons[buttonIndex], actionClick,
+                    action.IsButtonEnabled(buttonIndex > 0));
+
+                button.HorizontalOptions = LayoutOptions.FillAndExpand;
+
+                buttonPlace.Children.Add(button);
+
+                buttonIndex += 1;
+            }
+
+            return buttonPlace;
         }
 
         private bool OptionVisibility(string Aftertext)
