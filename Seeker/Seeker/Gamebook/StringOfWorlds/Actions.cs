@@ -387,5 +387,9 @@ namespace Seeker.Gamebook.StringOfWorlds
                 round += 1;
             }
         }
+
+        public override bool IsHealingEnabled() => protagonist.Strength < protagonist.MaxStrength;
+
+        public override void UseHealing(int healingLevel) => protagonist.Strength += healingLevel;
     }
 }
