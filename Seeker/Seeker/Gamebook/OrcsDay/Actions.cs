@@ -203,6 +203,20 @@ namespace Seeker.Gamebook.OrcsDay
             return testLines;
         }
 
+        public List<string> CourageTest()
+        {
+            List<string> testLines = new List<string>();
+
+            bool okResult = protagonist.Courage >= protagonist.Orcishness + protagonist.Wits;
+
+            testLines.Add(String.Format("Проверка: {0} Смелость {1} {2} Оркишность + {3} Мозги",
+                protagonist.Courage, (okResult ? ">=" : "<"), protagonist.Orcishness, protagonist.Wits));
+
+            testLines.Add(Result(okResult, "УСПЕШНО|НЕУДАЧНО"));
+
+            return testLines;
+        }
+
         public List<string> CardGames()
         {
             List<string> gameLines = new List<string>();
