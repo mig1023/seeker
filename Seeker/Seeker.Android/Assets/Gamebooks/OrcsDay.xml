@@ -1253,7 +1253,15 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>87</Id>
-			<Text>Сравни свою Смелости с суммой "Оркишность + Мозги". Вне зависимости от результата вычти единицу из своей Оркишности за попытку перечить ему.</Text>
+			<Text>Сравни свою Смелости с суммой "Оркишность + Мозги":</Text>
+			<Actions>
+				<Action>
+					<Name>CourageTest</Name>
+					<Button>Сравнить</Button>
+					<LevelNull/>
+					<Aftertext>Вне зависимости от результата вычти единицу из своей Оркишности за попытку перечить ему.</Aftertext>
+				</Action>
+			</Actions>
 			<Modifications>
 				<Modification Name="Orcishness" Value="-1"/>
 			</Modifications>
