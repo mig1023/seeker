@@ -143,7 +143,7 @@
 			<Id>14</Id>
 			<Text>На вас серый плащ с капюшоном?</Text>
 			<Options>
-				<Option Destination="402" Text="Да"/>
+				<Option Destination="402" Text="Да" OnlyIf="Плащ"/>
 				<Option Destination="166" Text="Нет"/>
 			</Options>
 		</Paragraph>
@@ -2635,6 +2635,7 @@
 			<Modifications>
 				<Modification Name="Coins" Value="-1"/>
 			</Modifications>
+			<Triggers>Плащ</Triggers>
 			<Options>
 				<Option Destination="305" Text="Есть" OnlyIf="МОНЕТ >= 1"/>
 				<Option Destination="525" Text="Нету"/>
@@ -3645,7 +3646,7 @@
 			<Id>382</Id>
 			<Text>Надет на вас плащ с капюшоном или нет? Если плащ лежит в рюкзаке, то, конечно, доставать и надевать его некогда.</Text>
 			<Options>
-				<Option Destination="238" Text="Надет"/>
+				<Option Destination="238" Text="Надет" OnlyIf="Плащ"/>
 				<Option Destination="414" Text="Нет"/>
 			</Options>
 		</Paragraph>
@@ -4007,7 +4008,7 @@
 			<Id>423</Id>
 			<Text>Когда вы выходите к морю, солнце опускается за скалы по левую руку от вас. Глупо и неосторожно сидеть в потемках, об этом вам и Клуша напоминает. Можно устроиться и на ночлег среди скал, но, увы, здесь не развести костер (даже если бы вы могли добыть огонь)... Есть у вас плащ с капюшоном или нет?</Text>
 			<Options>
-				<Option Destination="59" Text="Есть"/>
+				<Option Destination="59" Text="Есть" OnlyIf="Плащ"/>
 				<Option Destination="615" Text="Нет"/>
 			</Options>
 		</Paragraph>
@@ -4304,7 +4305,13 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>455</Id>
-			<Text>Валуны защищают от ветра, но не спасают от холода. Если на вас теплый плащ, можете выспаться спокойно (и прибавить 1 к своей СИЛЕ). Если плаща нет, придется всю ночь лязгать зубами (и СИЛА уменьшится на 1).</Text>
+			<Texts>
+				<Text>Валуны защищают от ветра, но не спасают от холода.</Text>
+				<Text Size="small">Если на вас теплый плащ, можете выспаться спокойно (и прибавить 1 к своей СИЛЕ). Если плаща нет, придется всю ночь лязгать зубами (и СИЛА уменьшится на 1).</Text>
+			</Texts>
+			<Modifications>
+				<Modification Name="CapeProtect"/>
+			</Modifications>
 			<Options>
 				<Option Destination="571"/>
 			</Options>
