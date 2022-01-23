@@ -362,7 +362,12 @@ namespace Seeker.Output
                 font = "RobotoFontItalic";
             }
 
-            OnPlatform<string> OnPlatformDic = (OnPlatform<string>)App.Current.Resources[font];
+            return TextFontFamily(font);
+        }
+
+        public static string TextFontFamily(string fontName)
+        {
+            OnPlatform<string> OnPlatformDic = (OnPlatform<string>)App.Current.Resources[fontName];
             var fontFamily = OnPlatformDic.Platforms.FirstOrDefault((arg) => arg.Platform.FirstOrDefault() == Device.RuntimePlatform).Value;
 
             return fontFamily.ToString();

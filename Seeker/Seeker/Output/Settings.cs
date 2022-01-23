@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 
@@ -14,12 +15,10 @@ namespace Seeker.Output
         {
             SettingGrid = new Grid
             {
-                ColumnSpacing = 0,
-                RowSpacing = 0,
-
                 ColumnDefinitions =
                 {
                     new ColumnDefinition { Width = 20 },
+                    new ColumnDefinition { Width = 12 },
                     new ColumnDefinition(),
                     new ColumnDefinition(),
                 },
@@ -55,6 +54,18 @@ namespace Seeker.Output
             SettingGrid.Children.Add(settingTitle, 0, currentRow);
             Grid.SetRowSpan(settingTitle, 2);
 
+            Label brace = new Label
+            {
+                Text = "{",
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                FontSize = 50,
+                FontFamily = Interface.TextFontFamily("RobotoFontThin"),
+                Margin = new Thickness(-5, -10, 0, 0),
+            };
+
+            SettingGrid.Children.Add(brace, 1, currentRow);
+            Grid.SetRowSpan(brace, 2);
+
             SettingOption("Кнопка 'Назад'", "CheatingBack", Constants.ON_OFF_SETTING, row: currentRow);
 
             currentRow = AddNewRow(ref SettingGrid);
@@ -83,7 +94,7 @@ namespace Seeker.Output
             settingButton.GestureRecognizers.Add(click);
 
             SettingGrid.Children.Add(settingButton, 0, currentRow);
-            Grid.SetColumnSpan(settingButton, 3);
+            Grid.SetColumnSpan(settingButton, 4);
         }
 
         private static void SettingOption(string settingName, string settingType, List<string> options, int? row = null)
@@ -100,10 +111,10 @@ namespace Seeker.Output
             if (row == null)
             {
                 SettingGrid.Children.Add(settingTitle, 0, currentRow);
-                Grid.SetColumnSpan(settingTitle, 2);
+                Grid.SetColumnSpan(settingTitle, 3);
             }
             else
-                SettingGrid.Children.Add(WithGrayLayout(settingTitle), 1, currentRow);
+                SettingGrid.Children.Add(settingTitle, 2, currentRow);
                 
             Picker settingPicker = new Picker
             {
@@ -119,24 +130,7 @@ namespace Seeker.Output
 
             settingPicker.SelectedIndex = Game.Settings.GetValue(settingType);
 
-            if (row == null)
-                SettingGrid.Children.Add(settingPicker, 2, currentRow);   
-            else
-                SettingGrid.Children.Add(WithGrayLayout(settingPicker), 2, currentRow);
-        }
-
-        private static View WithGrayLayout(View element)
-        {
-            StackLayout place = new StackLayout
-            {
-                BackgroundColor = Color.LightGray,
-                VerticalOptions = LayoutOptions.FillAndExpand,
-                HorizontalOptions = LayoutOptions.FillAndExpand
-            };
-
-            place.Children.Add(element);
-
-            return place;
+            SettingGrid.Children.Add(settingPicker, 3, currentRow);   
         }
 
         private static int AddNewRow(ref Grid settingGrid)
