@@ -227,6 +227,9 @@ namespace Seeker
                     AddAdditionalButton(buttonName, StaticButton_Click);
             }
 
+            if ((Game.Settings.GetValue("CheatingBack") > 0) && (Game.Data.Path.Count > 1))
+                Options.Children.Add(Output.Buttons.Additional("Читерство: Назад", Back_Click));
+
             if (Game.Settings.GetValue("SystemMenu") > 0)
                 Options.Children.Add(SystemMenu());
 
@@ -474,6 +477,16 @@ namespace Seeker
             Game.Healing.Use((sender as Button).Text);
 
             Paragraph(Game.Data.CurrentParagraphID, reload: true);
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            int lastStep = Game.Data.Path.Count() - 1;
+            Game.Data.Path.RemoveAt(lastStep);
+
+            int returnId = int.Parse(Game.Data.Path[lastStep - 1]);
+
+            Paragraph(returnId, reload: true);
         }
 
         private void Continue_Click(object sender, EventArgs e)
