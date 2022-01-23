@@ -9,7 +9,7 @@ namespace Seeker.Droid
 {
     public class ExtnededLabelRenderer : LabelRenderer
     {
-        public ExtnededLabelRenderer(Context context) : base(context) => Other.DoNothing();
+        public ExtnededLabelRenderer(Context context) : base(context) => Services.DoNothing();
 
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
         {

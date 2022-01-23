@@ -24,7 +24,8 @@ namespace Seeker.Droid
             {
                 string title = ((VerticalText)e.NewElement).Value;
                 bool color = ((VerticalText)e.NewElement).WhiteColor;
-                SetNativeControl(new RotatedTextView(context, title, color));
+                bool left = ((VerticalText)e.NewElement).LeftRotate;
+                SetNativeControl(new RotatedTextView(context, title, color, left));
             }
         }
     }
@@ -34,13 +35,15 @@ namespace Seeker.Droid
         int textSize = 22;
         string text = String.Empty;
         bool whiteText = false;
+        bool leftRotate = false;
 
         TextPaint textPaint = null;
 
-        public RotatedTextView(Context c, string title, bool white) : base(c)
+        public RotatedTextView(Context c, string title, bool white, bool left) : base(c)
         {
             text = title;
             whiteText = white;
+            leftRotate = left;
 
             InitLabelView();
         }
@@ -62,8 +65,16 @@ namespace Seeker.Droid
                 float x = (Width / 2) - textSize / 3;
                 float y = (Height / 2);
 
-                canvas.Rotate(90);
-                canvas.DrawText(this.text, y, -x, this.textPaint);
+                if (leftRotate)
+                {
+                    canvas.Rotate(-90);
+                    canvas.DrawText(this.text, -y, x + 2, this.textPaint);
+                }
+                else
+                {
+                    canvas.Rotate(90);
+                    canvas.DrawText(this.text, y, -x, this.textPaint);
+                }
             }
         }
     }
