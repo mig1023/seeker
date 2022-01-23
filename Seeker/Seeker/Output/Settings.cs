@@ -14,11 +14,15 @@ namespace Seeker.Output
         {
             SettingGrid = new Grid
             {
+                ColumnSpacing = 0,
+                RowSpacing = 0,
+
                 ColumnDefinitions =
                 {
+                    new ColumnDefinition { Width = 20 },
                     new ColumnDefinition(),
                     new ColumnDefinition(),
-                }
+                },
             };
 
             SettingOption("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING);
@@ -29,11 +33,34 @@ namespace Seeker.Output
             SettingOption("Отладка", "Debug", Constants.ON_OFF_SETTING);
             SettingOption("Сортировка", "Sort", Constants.SORT_SETTING);
 
+            SettingCheatingBlock();
+
             SettingButton("Сбросить сохранённые игры", () => Game.Continue.Clean(), spacer: true);
             SettingButton("Сбросить все настройки", () => Game.Settings.Clean());
 
             settings.Children.Add(SettingGrid);
         }
+
+        private static void SettingCheatingBlock()
+        {
+            int currentRow = AddNewRow(ref SettingGrid);
+
+            VerticalText settingTitle = new VerticalText
+            {
+                Value = "Читерство",
+                VerticalOptions = LayoutOptions.Center,
+                LeftRotate = true,
+            };
+
+            SettingGrid.Children.Add(settingTitle, 0, currentRow);
+            Grid.SetRowSpan(settingTitle, 2);
+
+            SettingOption("Кнопка 'Назад'", "CheatingBack", Constants.ON_OFF_SETTING, row: currentRow);
+
+            currentRow = AddNewRow(ref SettingGrid);
+
+            SettingOption("God mode", "CheatingGodmode", Constants.ON_OFF_SETTING, row: currentRow);
+        }     
 
         private static void SettingButton(string settingName, SettingMethod Click, bool spacer = false)
         {
@@ -56,22 +83,28 @@ namespace Seeker.Output
             settingButton.GestureRecognizers.Add(click);
 
             SettingGrid.Children.Add(settingButton, 0, currentRow);
-            Grid.SetColumnSpan(settingButton, 2);
+            Grid.SetColumnSpan(settingButton, 3);
         }
 
-        private static void SettingOption(string settingName, string settingType, List<string> options)
+        private static void SettingOption(string settingName, string settingType, List<string> options, int? row = null)
         {
-            int currentRow = AddNewRow(ref SettingGrid);
+            int currentRow = row ?? AddNewRow(ref SettingGrid);
 
             Label settingTitle = new Label
             {
                 Text = String.Format("{0}:", settingName),
-                VerticalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.CenterAndExpand,
                 FontSize = Interface.Font(NamedSize.Small),
             };
 
-            SettingGrid.Children.Add(settingTitle, 0, currentRow);
-
+            if (row == null)
+            {
+                SettingGrid.Children.Add(settingTitle, 0, currentRow);
+                Grid.SetColumnSpan(settingTitle, 2);
+            }
+            else
+                SettingGrid.Children.Add(WithGrayLayout(settingTitle), 1, currentRow);
+                
             Picker settingPicker = new Picker
             {
                 HorizontalOptions = LayoutOptions.End,
@@ -86,7 +119,24 @@ namespace Seeker.Output
 
             settingPicker.SelectedIndex = Game.Settings.GetValue(settingType);
 
-            SettingGrid.Children.Add(settingPicker, 1, currentRow);
+            if (row == null)
+                SettingGrid.Children.Add(settingPicker, 2, currentRow);   
+            else
+                SettingGrid.Children.Add(WithGrayLayout(settingPicker), 2, currentRow);
+        }
+
+        private static View WithGrayLayout(View element)
+        {
+            StackLayout place = new StackLayout
+            {
+                BackgroundColor = Color.LightGray,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                HorizontalOptions = LayoutOptions.FillAndExpand
+            };
+
+            place.Children.Add(element);
+
+            return place;
         }
 
         private static int AddNewRow(ref Grid settingGrid)
