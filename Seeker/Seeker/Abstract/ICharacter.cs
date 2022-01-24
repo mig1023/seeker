@@ -9,5 +9,7 @@ namespace Seeker.Abstract
         string Save();
 
         void Load(string saveLine);
+
+        string GetName();
     }
 }

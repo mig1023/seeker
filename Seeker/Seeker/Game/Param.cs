@@ -6,9 +6,12 @@ namespace Seeker.Game
     {
         public static int Setter(int value) => (value < 0 ? 0 : value);
 
-        public static int Setter(int value, int current)
+        public static int Setter(int value, int current, object character)
         {
-            if ((value < current) && (Game.Settings.GetValue("Godmode") > 0))
+            bool thisIsHero = String.IsNullOrEmpty((character as Abstract.ICharacter).GetName());
+            bool cheat = Game.Settings.GetValue("Godmode") > 0;
+
+            if ((value < current) && cheat && thisIsHero)
                 return current;
 
             else if (value < 0)
@@ -18,13 +21,13 @@ namespace Seeker.Game
                 return value;
         }
 
-        public static int Setter(int value, int max, bool noCheating) =>
+        public static int Setter(int value, int max) =>
             (value > max ? max : Setter(value));
 
-        public static int Setter(int value, int max, int current) =>
-            (value > max ? max : Setter(value, current));
+        public static int Setter(int value, int max, int current, object character) =>
+            (value > max ? max : Setter(value, current, character));
 
-        public static int? Setter(int? value, int max, int? current) =>
-            (value.HasValue ? Setter((int)value, max, current) : (int?)null);
+        public static int? Setter(int? value, int max, int? current, object character) =>
+            (value.HasValue ? Setter((int)value, max, current, character) : (int?)null);
     }
 }

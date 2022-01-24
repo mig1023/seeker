@@ -8,6 +8,8 @@ namespace Seeker.Prototypes
     {
         public string Name { get; set; }
 
+        public virtual string GetName() => Name;
+
         public virtual void Init() => Name = String.Empty;
 
         public virtual string Save() => String.Empty;
