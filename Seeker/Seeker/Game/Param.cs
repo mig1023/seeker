@@ -4,6 +4,8 @@ namespace Seeker.Game
 {
     class Param
     {
+        public static int Setter(int value) => (value < 0 ? 0 : value);
+
         public static int Setter(int value, int current)
         {
             if ((value < current) && (Game.Settings.GetValue("Godmode") > 0))
@@ -14,12 +16,15 @@ namespace Seeker.Game
 
             else
                 return value;
-        }        
+        }
+
+        public static int Setter(int value, int max, bool noCheating) =>
+            (value > max ? max : Setter(value));
 
         public static int Setter(int value, int max, int current) =>
             (value > max ? max : Setter(value, current));
 
-        public static int? Setter(int? value, int max, int current) =>
+        public static int? Setter(int? value, int max, int? current) =>
             (value.HasValue ? Setter((int)value, max, current) : (int?)null);
     }
 }
