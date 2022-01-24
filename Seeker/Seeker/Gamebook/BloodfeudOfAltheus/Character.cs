@@ -13,28 +13,28 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public int Strength
         {
             get => _strength;
-            set => _strength = Game.Param.Setter(value);
+            set => _strength = Game.Param.Setter(value, _strength);
         }
 
         private int _defence;
         public int Defence
         {
             get => _defence;
-            set => _defence = Game.Param.Setter(value);
+            set => _defence = Game.Param.Setter(value, _defence);
         }
 
         private int _glory;
         public int Glory
         {
             get => _glory;
-            set => _glory = Game.Param.Setter(value);
+            set => _glory = Game.Param.Setter(value, _glory);
         }
         
         private int _shame;
         public int Shame
         {
             get => _shame;
-            set => _shame = Game.Param.Setter(value);
+            set => _shame = Game.Param.Setter(value, _shame);
         }
 
         private List<string> Weapons { get; set; }
