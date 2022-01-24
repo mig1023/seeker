@@ -21,7 +21,7 @@ namespace Seeker.Gamebook.OrcsDay
         public int Hitpoints
         {
             get => _hitpoints;
-            set => _hitpoints = Game.Param.Setter(value, max: 5, _hitpoints);
+            set => _hitpoints = Game.Param.Setter(value, max: 5, _hitpoints, this);
         }
 
         private int _money;

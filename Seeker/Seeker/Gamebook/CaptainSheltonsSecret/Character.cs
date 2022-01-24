@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int Mastery
         {
             get => _mastery;
-            set => _mastery = Game.Param.Setter(value, max: MaxMastery, _mastery);
+            set => _mastery = Game.Param.Setter(value, max: MaxMastery, _mastery, this);
         }
 
         private int _endurance;
@@ -23,7 +23,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             get => _endurance;
             set
             {
-                _endurance = Game.Param.Setter(value, max: MaxEndurance, _endurance);
+                _endurance = Game.Param.Setter(value, max: MaxEndurance, _endurance, this);
 
                 if (EnduranceAutosave)
                     EnduranceLoss[this.Name] = _endurance;
@@ -35,7 +35,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public int Gold
         {
             get => _gold;
-            set => _gold = Game.Param.Setter(value, _gold);
+            set => _gold = Game.Param.Setter(value, _gold, this);
         }
 
         public int ExtendedDamage { get; set; }

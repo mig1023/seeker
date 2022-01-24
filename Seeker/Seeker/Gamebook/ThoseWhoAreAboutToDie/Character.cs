@@ -10,21 +10,21 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
         public int Reaction
         {
             get => _reaction;
-            set => _reaction = Game.Param.Setter(value, max: 12, _reaction);
+            set => _reaction = Game.Param.Setter(value, max: 12, _reaction, this);
         }
 
         private int _strength;
         public int Strength
         {
             get => _strength;
-            set => _strength = Game.Param.Setter(value, max: 12, _strength);
+            set => _strength = Game.Param.Setter(value, max: 12, _strength, this);
         }
 
         private int _endurance;
         public int Endurance
         {
             get => _endurance;
-            set => _endurance = Game.Param.Setter(value, max: 12, _endurance);
+            set => _endurance = Game.Param.Setter(value, max: 12, _endurance, this);
         }
 
         public override void Init()

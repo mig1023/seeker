@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public int Skill
         {
             get => _skill;
-            set => _skill = Game.Param.Setter(value, max: MaxSkill, _skill);
+            set => _skill = Game.Param.Setter(value, max: MaxSkill, _skill, this);
         }
 
         private int _strength;
@@ -21,7 +21,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public int Strength
         {
             get => _strength;
-            set => _strength = Game.Param.Setter(value, max: MaxStrength, _strength);
+            set => _strength = Game.Param.Setter(value, max: MaxStrength, _strength, this);
         }
 
         private int _charm;
@@ -41,7 +41,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public int Cents
         {
             get => _cents;
-            set => _cents = Game.Param.Setter(value, _cents);
+            set => _cents = Game.Param.Setter(value, _cents, this);
         }
 
         private int _nuggets;
@@ -55,7 +55,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public int Cartridges
         {
             get => _cartridges;
-            set => _cartridges = Game.Param.Setter(value, _cartridges);
+            set => _cartridges = Game.Param.Setter(value, _cartridges, this);
         }
 
         public List<bool> Luck { get; set; }

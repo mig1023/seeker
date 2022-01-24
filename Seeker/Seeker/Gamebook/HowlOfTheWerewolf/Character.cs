@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int Mastery
         {
             get => _mastery;
-            set => _mastery = Game.Param.Setter(value, max: MaxMastery, _mastery);
+            set => _mastery = Game.Param.Setter(value, max: MaxMastery, _mastery, this);
         }
 
         private int _endurance;
@@ -19,7 +19,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int Endurance
         {
             get => _endurance;
-            set => _endurance = Game.Param.Setter(value, max: MaxEndurance, _endurance);
+            set => _endurance = Game.Param.Setter(value, max: MaxEndurance, _endurance, this);
         }
 
         private int _luck;
@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
         public int Luck
         {
             get => _luck;
-            set => _luck = Game.Param.Setter(value, max: MaxLuck, _luck);
+            set => _luck = Game.Param.Setter(value, max: MaxLuck, _luck, this);
         }
 
         private int _change;

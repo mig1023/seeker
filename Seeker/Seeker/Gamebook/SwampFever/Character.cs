@@ -28,7 +28,7 @@ namespace Seeker.Gamebook.SwampFever
         public int Stigon
         {
             get => _stigon;
-            set => _stigon = Game.Param.Setter(value, max: 6, noCheating: true);
+            set => _stigon = Game.Param.Setter(value, max: 6);
         }
 
         private int _rate;

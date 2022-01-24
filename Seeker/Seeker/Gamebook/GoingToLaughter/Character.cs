@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.GoingToLaughter
         public int Heroism
         {
             get => _heroism;
-            set => _heroism = Game.Param.Setter(value, _heroism);
+            set => _heroism = Game.Param.Setter(value, _heroism, this);
         }
 
         private int _villainy;
@@ -25,14 +25,14 @@ namespace Seeker.Gamebook.GoingToLaughter
         public int Buffoonery
         {
             get => _buffoonery;
-            set => _buffoonery = Game.Param.Setter(value, _buffoonery);
+            set => _buffoonery = Game.Param.Setter(value, _buffoonery, this);
         }
 
         private int _inspiration;
         public int Inspiration
         {
             get => _inspiration;
-            set => _inspiration = Game.Param.Setter(value, _inspiration);
+            set => _inspiration = Game.Param.Setter(value, _inspiration, this);
         }
 
         public List<string> Advantages { get; set; }

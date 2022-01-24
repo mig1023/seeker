@@ -20,7 +20,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public int Attack
         {
             get => _attack;
-            set => _attack = Game.Param.Setter(value, max: MaxAttack, _attack);
+            set => _attack = Game.Param.Setter(value, max: MaxAttack, _attack, this);
         }
 
         private int _defence;
@@ -28,7 +28,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public int Defence
         {
             get => _defence;
-            set => _defence = Game.Param.Setter(value, max: MaxDefence, _defence);
+            set => _defence = Game.Param.Setter(value, max: MaxDefence, _defence, this);
         }
 
         private int _endurance;
@@ -36,7 +36,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public int Endurance
         {
             get => _endurance;
-            set => _endurance = Game.Param.Setter(value, max: MaxEndurance, _endurance);
+            set => _endurance = Game.Param.Setter(value, max: MaxEndurance, _endurance, this);
         }
 
         private int _initiative;
@@ -44,14 +44,14 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public int Initiative
         {
             get => _initiative;
-            set => _initiative = Game.Param.Setter(value, max: MaxInitiative, _initiative);
+            set => _initiative = Game.Param.Setter(value, max: MaxInitiative, _initiative, this);
         }
 
         private int _coins;
         public int Coins
         {
             get => _coins;
-            set => _coins = Game.Param.Setter(value, _coins);
+            set => _coins = Game.Param.Setter(value, _coins, this);
         }
 
         public FightStyles FightStyle { get; set; }

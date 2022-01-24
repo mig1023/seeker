@@ -12,28 +12,28 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int Strength
         {
             get => _strength;
-            set => _strength = Game.Param.Setter(value, _strength);
+            set => _strength = Game.Param.Setter(value, _strength, this);
         }
 
         private int _hitpoints;
         public int Hitpoints
         {
             get => _hitpoints;
-            set => _hitpoints = Game.Param.Setter(value, max: 30, _hitpoints);
+            set => _hitpoints = Game.Param.Setter(value, max: 30, _hitpoints, this);
         }
 
         private int _magicpoints;
         public int Magicpoints
         {
             get => _magicpoints;
-            set => _magicpoints = Game.Param.Setter(value, _magicpoints);
+            set => _magicpoints = Game.Param.Setter(value, _magicpoints, this);
         }
 
         private int _gold;
         public int Gold
         {
             get => _gold;
-            set => _gold = Game.Param.Setter(value, _gold);
+            set => _gold = Game.Param.Setter(value, _gold, this);
         }
 
         public int Footwraps { get; set; }
@@ -44,14 +44,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         public int ConneryHitpoints
         {
             get => _conneryHitpoints;
-            set => _conneryHitpoints = Game.Param.Setter(value, max: 30, _conneryHitpoints);
+            set => _conneryHitpoints = Game.Param.Setter(value, max: 30, _conneryHitpoints, this);
         }
 
         private int _conneryTrust;
         public int ConneryTrust
         {
             get => _conneryTrust;
-            set => _conneryTrust = Game.Param.Setter(value, _conneryTrust);
+            set => _conneryTrust = Game.Param.Setter(value, _conneryTrust, this);
         }
 
         public SpecializationType Specialization { get; set; }

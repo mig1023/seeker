@@ -14,7 +14,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public int Strength
         {
             get => _strength;
-            set => _strength = Game.Param.Setter(value, _strength);
+            set => _strength = Game.Param.Setter(value, _strength, this);
         }
 
         private int _hitpoints;
@@ -22,28 +22,28 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public int Hitpoints
         {
             get => _hitpoints;
-            set => _hitpoints = Game.Param.Setter(value, max: MaxHitpoints, _hitpoints);
+            set => _hitpoints = Game.Param.Setter(value, max: MaxHitpoints, _hitpoints, this);
         }
 
         private int _magicpoints;
         public int Magicpoints
         {
             get => _magicpoints;
-            set => _magicpoints = Game.Param.Setter(value, _magicpoints);
+            set => _magicpoints = Game.Param.Setter(value, _magicpoints, this);
         }
 
         private int _transformation;
         public int Transformation
         {
             get => _transformation;
-            set => _transformation = Game.Param.Setter(value, _transformation);
+            set => _transformation = Game.Param.Setter(value, _transformation, this);
         }
 
         private int _gold;
         public int Gold
         {
             get => _gold;
-            set => _gold = Game.Param.Setter(value, _gold);
+            set => _gold = Game.Param.Setter(value, _gold, this);
         }
 
         public List<string> Spells { get; set; }

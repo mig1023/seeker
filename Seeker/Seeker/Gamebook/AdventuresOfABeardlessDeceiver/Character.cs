@@ -10,56 +10,56 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
         public int Strength
         {
             get => _strength;
-            set => _strength = Game.Param.Setter(value, max: 12, _strength);
+            set => _strength = Game.Param.Setter(value, max: 12, _strength, this);
         }
 
         private int _skill;
         public int Skill
         {
             get => _skill;
-            set => _skill = Game.Param.Setter(value, max: 12, _skill);
+            set => _skill = Game.Param.Setter(value, max: 12, _skill, this);
         }
 
         private int _wisdom;
         public int Wisdom
         {
             get => _wisdom;
-            set => _wisdom = Game.Param.Setter(value, max: 12, _wisdom);
+            set => _wisdom = Game.Param.Setter(value, max: 12, _wisdom, this);
         }
 
         private int _cunning;
         public int Cunning
         {
             get => _cunning;
-            set => _cunning = Game.Param.Setter(value, max: 12, _cunning);
+            set => _cunning = Game.Param.Setter(value, max: 12, _cunning, this);
         }
 
         private int _oratory;
         public int Oratory
         {
             get => _oratory;
-            set => _oratory = Game.Param.Setter(value, max: 12, _oratory);
+            set => _oratory = Game.Param.Setter(value, max: 12, _oratory, this);
         }
 
         private int _popularity;
         public int Popularity
         {
             get => _popularity;
-            set => _popularity = Game.Param.Setter(value, _popularity);
+            set => _popularity = Game.Param.Setter(value, _popularity, this);
         }
 
         private int _kumis;
         public int Kumis
         {
             get => _kumis;
-            set => _kumis = Game.Param.Setter(value, max: 1, _kumis);
+            set => _kumis = Game.Param.Setter(value, max: 1, _kumis, this);
         }
 
         private int _tanga;
         public int Tanga
         {
             get => _tanga;
-            set => _tanga = Game.Param.Setter(value, _tanga);
+            set => _tanga = Game.Param.Setter(value, _tanga, this);
         }
 
         public int? AkynGlory { get; set; }

@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.Catharsis
         public int Life
         {
             get => _life;
-            set => _life = Game.Param.Setter(value, max: MaxLife, _life);
+            set => _life = Game.Param.Setter(value, max: MaxLife, _life, this);
         }
 
         public int Aura { get; set; }
@@ -20,21 +20,21 @@ namespace Seeker.Gamebook.Catharsis
         public int Fight
         {
             get => _fight;
-            set => _fight = Game.Param.Setter(value, _fight);
+            set => _fight = Game.Param.Setter(value, _fight, this);
         }
 
         private int _accuracy;
         public int Accuracy
         {
             get => _accuracy;
-            set => _accuracy = Game.Param.Setter(value, _accuracy);
+            set => _accuracy = Game.Param.Setter(value, _accuracy, this);
         }
 
         private int _stealth;
         public int Stealth
         {
             get => _stealth;
-            set => _stealth = Game.Param.Setter(value, _stealth);
+            set => _stealth = Game.Param.Setter(value, _stealth, this);
         }
 
         public int Bonuses { get; set; }

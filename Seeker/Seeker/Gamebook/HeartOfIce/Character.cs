@@ -13,28 +13,28 @@ namespace Seeker.Gamebook.HeartOfIce
         public int Life
         {
             get => _life;
-            set => _life = Game.Param.Setter(value, max: MaxLife, _life);
+            set => _life = Game.Param.Setter(value, max: MaxLife, _life, this);
         }
 
         private int _money;
         public int Money
         {
             get => _money;
-            set => _money = Game.Param.Setter(value, _money);
+            set => _money = Game.Param.Setter(value, _money, this);
         }
 
         private int _food;
         public int Food
         {
             get => _food;
-            set => _food = Game.Param.Setter(value, _food);
+            set => _food = Game.Param.Setter(value, _food, this);
         }
 
         private int _shots;
         public int Shots
         {
             get => _shots;
-            set => _shots = Game.Param.Setter(value, _shots);
+            set => _shots = Game.Param.Setter(value, _shots, this);
         }
 
         public List<string> Skills { get; set; }

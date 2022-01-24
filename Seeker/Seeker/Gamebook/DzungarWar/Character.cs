@@ -10,42 +10,42 @@ namespace Seeker.Gamebook.DzungarWar
         public int Strength
         {
             get => _strength;
-            set => _strength = Game.Param.Setter(value, max: 12, _strength);
+            set => _strength = Game.Param.Setter(value, max: 12, _strength, this);
         }
 
         private int _skill;
         public int Skill
         {
             get => _skill;
-            set => _skill = Game.Param.Setter(value, max: 12, _skill);
+            set => _skill = Game.Param.Setter(value, max: 12, _skill, this);
         }
 
         private int _wisdom;
         public int Wisdom
         {
             get => _wisdom;
-            set => _wisdom = Game.Param.Setter(value, max: 12, _wisdom);
+            set => _wisdom = Game.Param.Setter(value, max: 12, _wisdom, this);
         }
 
         private int _cunning;
         public int Cunning
         {
             get => _cunning;
-            set => _cunning = Game.Param.Setter(value, max: 12, _cunning);
+            set => _cunning = Game.Param.Setter(value, max: 12, _cunning, this);
         }
 
         private int _oratory;
         public int Oratory
         {
             get => _oratory;
-            set => _oratory = Game.Param.Setter(value, max: 12, _oratory);
+            set => _oratory = Game.Param.Setter(value, max: 12, _oratory, this);
         }
 
         private int? _danger;
         public int? Danger
         {
             get => _danger;
-            set => _danger = Game.Param.Setter(value, max: 12, _danger);
+            set => _danger = Game.Param.Setter(value, max: 12, _danger, this);
         }
 
         public int Tanga { get; set; }

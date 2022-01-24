@@ -10,63 +10,63 @@ namespace Seeker.Gamebook.VWeapons
         public int Suspicions
         {
             get => _suspicions;
-            set => _suspicions = Game.Param.Setter(value, max: 5, noCheating: true);
+            set => _suspicions = Game.Param.Setter(value, max: 5);
         }
 
         private int _time;
         public int Time
         {
             get => _time;
-            set => _time = Game.Param.Setter(value, max: 12, noCheating: true);
+            set => _time = Game.Param.Setter(value, max: 12);
         }
 
         private int _accuracy;
         public int Accuracy
         {
             get => _accuracy;
-            set => _accuracy = Game.Param.Setter(value, max: 5, _accuracy);
+            set => _accuracy = Game.Param.Setter(value, max: 5, _accuracy, this);
         }
 
         private int _cartridges;
         public int Cartridges
         {
             get => _cartridges;
-            set => _cartridges = Game.Param.Setter(value, max: 8, _cartridges);
+            set => _cartridges = Game.Param.Setter(value, max: 8, _cartridges, this);
         }
 
         private int _head;
         public int Head
         {
             get => _head;
-            set => _head = Game.Param.Setter(value, max: 3, _head);
+            set => _head = Game.Param.Setter(value, max: 3, _head, this);
         }
 
         private int _shoulderGirdle;
         public int ShoulderGirdle
         {
             get => _shoulderGirdle;
-            set => _shoulderGirdle = Game.Param.Setter(value, max: 4, _shoulderGirdle);
+            set => _shoulderGirdle = Game.Param.Setter(value, max: 4, _shoulderGirdle, this);
         }
 
         private int _body;
         public int Body
         {
             get => _body;
-            set => _body = Game.Param.Setter(value, max: 4, _body);
+            set => _body = Game.Param.Setter(value, max: 4, _body, this);
         }
 
         private int _hands;
         public int Hands
         {
             get => _hands;
-            set => _hands = Game.Param.Setter(value, max: 4, _hands);
+            set => _hands = Game.Param.Setter(value, max: 4, _hands, this);
         }
 
         private int _legs;
         public int Legs
         {
             get => _legs;
-            set => _legs = Game.Param.Setter(value, max: 4, _legs);
+            set => _legs = Game.Param.Setter(value, max: 4, _legs, this);
         }
 
         private int _hitpoints;

@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public int Mastery
         {
             get => _mastery;
-            set => _mastery = Game.Param.Setter(value, max: MaxMastery, _mastery);
+            set => _mastery = Game.Param.Setter(value, max: MaxMastery, _mastery, this);
         }
 
         private int _endurance;
@@ -21,7 +21,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public int Endurance
         {
             get => _endurance;
-            set => _endurance = Game.Param.Setter(value, max: MaxEndurance, _endurance);
+            set => _endurance = Game.Param.Setter(value, max: MaxEndurance, _endurance, this);
         }
 
         private int _luck;
@@ -29,14 +29,14 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public int Luck
         {
             get => _luck;
-            set => _luck = Game.Param.Setter(value, max: MaxLuck, _luck);
+            set => _luck = Game.Param.Setter(value, max: MaxLuck, _luck, this);
         }
 
         private int _gold;
         public int Gold
         {
             get => _gold;
-            set => _gold = Game.Param.Setter(value, _gold);
+            set => _gold = Game.Param.Setter(value, _gold, this);
         }
 
         public List<string> Spells { get; set; }
