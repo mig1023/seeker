@@ -32,7 +32,7 @@ namespace Seeker.Gamebook.YounglingTournament
             get => _hitpoints;
             set
             {
-                _hitpoints = Game.Param.Setter(value, max: MaxHitpoints);
+                _hitpoints = Game.Param.Setter(value, max: MaxHitpoints, _hitpoints);
 
                 if (HitpointAutosave)
                     HitpointsLoss[this.Name] = _hitpoints;
