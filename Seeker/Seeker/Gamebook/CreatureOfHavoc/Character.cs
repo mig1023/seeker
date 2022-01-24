@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public int Mastery
         {
             get => _mastery;
-            set => _mastery = Game.Param.Setter(value, max: MaxMastery);
+            set => _mastery = Game.Param.Setter(value, max: MaxMastery, _mastery);
         }
 
         private int _endurance;
@@ -19,7 +19,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public int Endurance
         {
             get => _endurance;
-            set => _endurance = Game.Param.Setter(value, max: MaxEndurance);
+            set => _endurance = Game.Param.Setter(value, max: MaxEndurance, _endurance);
         }
 
         private int _luck;
@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public int Luck
         {
             get => _luck;
-            set => _luck = Game.Param.Setter(value, max: MaxLuck);
+            set => _luck = Game.Param.Setter(value, max: MaxLuck, _luck);
         }
 
         public override void Init()
