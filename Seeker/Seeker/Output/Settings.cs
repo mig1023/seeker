@@ -70,7 +70,7 @@ namespace Seeker.Output
 
             currentRow = AddNewRow(ref SettingGrid);
 
-            SettingOption("God mode", "CheatingGodmode", Constants.ON_OFF_SETTING, row: currentRow);
+            SettingOption("God mode", "Godmode", Constants.ON_OFF_SETTING, row: currentRow);
         }     
 
         private static void SettingButton(string settingName, SettingMethod Click, bool spacer = false)
