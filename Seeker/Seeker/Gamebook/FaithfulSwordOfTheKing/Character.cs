@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int Skill
         {
             get => _skill;
-            set => _skill = Game.Param.Setter(value, max: MaxSkill);
+            set => _skill = Game.Param.Setter(value, max: MaxSkill, _skill);
         }
 
         private int _strength;
@@ -21,22 +21,34 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public int Strength
         {
             get => _strength;
-            set => _strength = Game.Param.Setter(value, max: MaxStrength);
+            set => _strength = Game.Param.Setter(value, max: MaxStrength, _strength);
         }
 
         private int _honor;
         public int Honor
         {
             get => _honor;
-            set => _honor = Game.Param.Setter(value);
+            set => _honor = Game.Param.Setter(value, _honor);
+        }
+
+        private int _ecu;
+        public int Ecu
+        {
+            get => _ecu;
+            set => _ecu = Game.Param.Setter(value, _ecu);
+        }
+
+        private int _bullets;
+        public int BulletsAndGubpowder
+        {
+            get => _bullets;
+            set => _bullets = Game.Param.Setter(value, _bullets);
         }
 
         public int Day { get; set; }
-        public int Ecu { get; set; }
         public MeritalArts MeritalArt { get; set; }
         public int Horses { get; set; }
         public int Pistols { get; set; }
-        public int BulletsAndGubpowder { get; set; }
         public int Daggers { get; set; }
         public int Food { get; set; }
         public int HadFoodToday { get; set; }
