@@ -10,7 +10,7 @@ namespace Seeker.Gamebook.SilentSchool
         public int Life
         {
             get => _life;
-            set => _life = Game.Param.Setter(value);
+            set => _life = Game.Param.Setter(value, _life);
         }
 
         public string Weapon { get; set; }
