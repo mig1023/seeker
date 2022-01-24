@@ -10,14 +10,14 @@ namespace Seeker.Gamebook.ByTheWillOfRome
         public int Sestertius
         {
             get => _sestertius;
-            set => _sestertius = Game.Param.Setter(value);
+            set => _sestertius = Game.Param.Setter(value, _sestertius);
         }
 
         private int _honor;
         public int Honor
         {
             get => _honor;
-            set => _honor = Game.Param.Setter(value);
+            set => _honor = Game.Param.Setter(value, _honor);
         }
 
         private int _legionaries;
