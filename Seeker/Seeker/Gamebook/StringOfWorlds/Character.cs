@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public int Skill
         {
             get => _skill;
-            set => _skill = Game.Param.Setter(value, max: MaxSkill);
+            set => _skill = Game.Param.Setter(value, max: MaxSkill, _skill);
         }
 
         private int _strength;
@@ -21,7 +21,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public int Strength
         {
             get => _strength;
-            set => _strength = Game.Param.Setter(value, max: MaxStrength);
+            set => _strength = Game.Param.Setter(value, max: MaxStrength, _strength);
         }
 
         private int _charm;
@@ -37,7 +37,13 @@ namespace Seeker.Gamebook.StringOfWorlds
             }
         }
 
-        public int Blaster { get; set; }
+        private int _blaster;
+        public int Blaster
+        {
+            get => _blaster;
+            set => _blaster = Game.Param.Setter(value, _blaster);
+        }
+
         public int GateCode { get; set; }
         public string Equipment { get; set; }
         public List<bool> Luck { get; set; }
