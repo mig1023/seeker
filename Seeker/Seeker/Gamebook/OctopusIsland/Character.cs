@@ -10,7 +10,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public int SergeHitpoint
         {
             get => _sergeHitpoint;
-            set => _sergeHitpoint = Game.Param.Setter(value, max: 20);
+            set => _sergeHitpoint = Game.Param.Setter(value, max: 20, _sergeHitpoint);
         }
 
         public int SergeSkill { get; set; }
@@ -19,7 +19,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public int XolotlHitpoint
         {
             get => _xolotlHitpoint;
-            set => _xolotlHitpoint = Game.Param.Setter(value, max: 20);
+            set => _xolotlHitpoint = Game.Param.Setter(value, max: 20, _xolotlHitpoint);
         }
 
         public int XolotlSkill { get; set; }
@@ -28,7 +28,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public int ThibautHitpoint
         {
             get => _thibautHitpoint;
-            set => _thibautHitpoint = Game.Param.Setter(value, max: 20);
+            set => _thibautHitpoint = Game.Param.Setter(value, max: 20, _thibautHitpoint);
         }
 
         public int ThibautSkill { get; set; }
@@ -37,7 +37,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public int SouhiHitpoint
         {
             get => _souhiHitpoint;
-            set => _souhiHitpoint = Game.Param.Setter(value, max: 20);
+            set => _souhiHitpoint = Game.Param.Setter(value, max: 20, _souhiHitpoint);
         }
 
         public int SouhiSkill { get; set; }
@@ -46,14 +46,14 @@ namespace Seeker.Gamebook.OctopusIsland
         public int Food
         {
             get => (StolenStuffs == 0 ? _food : 0);
-            set => _food = Game.Param.Setter(value);
+            set => _food = Game.Param.Setter(value, _food);
         }
 
         private int _lifeGivingOintment;
         public int LifeGivingOintment
         {
             get => (StolenStuffs == 0 ? _lifeGivingOintment : 0);
-            set => _lifeGivingOintment = Game.Param.Setter(value);
+            set => _lifeGivingOintment = Game.Param.Setter(value, _lifeGivingOintment);
         }
         public int StolenStuffs { get; set; }
 
