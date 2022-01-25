@@ -86,7 +86,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public override void Init()
         {
-            Name = String.Empty;
+            base.Init();
 
             MaxMastery = (int)Math.Ceiling(Game.Dice.Roll() / 2.0) + 7;
             Mastery = MaxMastery;
@@ -107,6 +107,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             MaxMastery = this.MaxMastery,
             Mastery = this.Mastery,
@@ -144,6 +145,8 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             Crossbow = int.Parse(save[10]);
             Gun = int.Parse(save[11]);
             SilverDaggers = int.Parse(save[12]);
+
+            IsProtagonist = true;
         }
     }
 }
