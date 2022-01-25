@@ -44,6 +44,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public override void Init()
         {
+            base.Init();
+
             MaxMastery = Game.Dice.Roll() + 6;
             Mastery = MaxMastery;
             MaxEndurance = Game.Dice.Roll(dices: 2) + 12;
@@ -60,6 +62,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             MaxMastery = this.MaxMastery,
             Mastery = this.Mastery,
@@ -90,6 +93,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             Gold = int.Parse(save[6]);
             SpellSlots = int.Parse(save[7]);
             Spells = save[8].Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+
+            IsProtagonist = true;
         }
     }
 }
