@@ -12,12 +12,15 @@ namespace Seeker.Gamebook.InvisibleFront
 
         public override void Init()
         {
+            base.Init();
+
             Dissatisfaction = 0;
             Recruitment = 0;
         }
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Dissatisfaction = this.Dissatisfaction,
             Recruitment = this.Recruitment,
         };
@@ -30,6 +33,8 @@ namespace Seeker.Gamebook.InvisibleFront
 
             Dissatisfaction = int.Parse(save[0]);
             Recruitment = int.Parse(save[1]);
+
+            IsProtagonist = true;
         }
     }
 }
