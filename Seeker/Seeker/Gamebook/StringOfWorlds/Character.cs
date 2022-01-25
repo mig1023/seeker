@@ -51,6 +51,8 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public override void Init()
         {
+            base.Init();
+
             int dice = Game.Dice.Roll(dices: 2);
 
             MaxSkill = Constants.Skills()[dice];
@@ -72,6 +74,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             MaxSkill = this.MaxSkill,
             Skill = this.Skill,
@@ -104,6 +107,8 @@ namespace Seeker.Gamebook.StringOfWorlds
             Coins = int.Parse(save[8]);
 
             Luck = save[9].Split(',').Select(x => x == "1").ToList();
+
+            IsProtagonist = true;
         }
     }
 }
