@@ -8,10 +8,16 @@ namespace Seeker.Prototypes
     {
         public string Name { get; set; }
 
-        public virtual string GetName() => Name;
+        public bool IsProtagonist { get; set; }
 
-        public virtual void Init() => Name = String.Empty;
+        public virtual bool ThisIsProtagonist() => IsProtagonist;
 
+        public virtual void Init()
+        {
+            Name = String.Empty;
+            IsProtagonist = true;
+        }
+            
         public virtual string Save() => String.Empty;
 
         public virtual void Load(string saveLine) => Game.Services.DoNothing();

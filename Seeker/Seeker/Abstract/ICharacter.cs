@@ -10,6 +10,6 @@ namespace Seeker.Abstract
 
         void Load(string saveLine);
 
-        string GetName();
+        bool ThisIsProtagonist();
     }
 }
