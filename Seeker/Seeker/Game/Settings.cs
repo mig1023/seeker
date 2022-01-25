@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Seeker.Game
 {
     class Settings
     {
         private static Dictionary<string, int> Values { get; set; }
+
+        public static bool IsEnabled(string name) => GetValue(name) > 0;
 
         public static int GetValue(string name)
         {

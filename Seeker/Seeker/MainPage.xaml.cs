@@ -220,13 +220,13 @@ namespace Seeker
                     AddAdditionalButton(buttonName, StaticButton_Click);
             }
 
-            if ((Game.Settings.GetValue("CheatingBack") > 0) && (Game.Data.Path.Count > 1))
+            if (Game.Settings.IsEnabled("CheatingBack") && (Game.Data.Path.Count > 1))
                 Options.Children.Add(Output.Buttons.Additional("Читерство: Назад", Back_Click));
 
-            if (Game.Settings.GetValue("SystemMenu") > 0)
+            if (Game.Settings.IsEnabled("SystemMenu"))
                 Options.Children.Add(SystemMenu());
 
-            if (Game.Settings.GetValue("Debug") > 0)
+            if (Game.Settings.IsEnabled("Debug"))
                 Options.Children.Add(Output.Interface.DebugInformation(id));
 
             if (!reload)

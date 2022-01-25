@@ -8,9 +8,7 @@ namespace Seeker.Game
 
         public static int Setter(int value, int current, Abstract.ICharacter character)
         {
-            bool cheat = Game.Settings.GetValue("Godmode") > 0;
-
-            if (cheat && character.ThisIsProtagonist() && (value < current))
+            if (Settings.IsEnabled("Godmode") && character.ThisIsProtagonist() && (value < current))
                 return current;
 
             else if (value < 0)
