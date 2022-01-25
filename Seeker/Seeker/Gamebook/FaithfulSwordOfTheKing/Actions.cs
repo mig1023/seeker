@@ -289,12 +289,16 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Strength > (EnemyWoundsLimit ? 2 : 0)).Count() == 0;
 
-        private bool LuckyHit(int? roll = null) => (roll ?? Game.Dice.Roll()) % 2 == 0;
+        private bool LuckyHit(out int dice, int? roll = null)
+        {
+            dice = Game.Dice.Roll();
+            return (roll ?? dice) % 2 == 0;
+        }
 
         private bool EnemyWound(Character protagonist, ref Character enemy, List<Character> FightEnemies,
             int roll, int WoundsToWin, ref int enemyWounds, ref List<string> fight, bool dagger = false)
         {
-            enemy.Strength -= ((protagonist.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(roll) && !dagger ? 3 : 2);
+            enemy.Strength -= ((protagonist.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(out _, roll) && !dagger ? 3 : 2);
 
             enemyWounds += 1;
 
@@ -333,11 +337,13 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 if (NoMoreEnemies(FightEnemies))
                     continue;
 
-                bool hit = LuckyHit();
+                bool hit = LuckyHit(out int shootDice);
 
                 protagonist.BulletsAndGubpowder -= 1;
 
-                fight.Add(String.Format("Выстрел из {0}пистолета: {1}", (shoots > 1 ? String.Format("{0} ", pistol) : ""), (hit ? "попал" : "промах")));
+                fight.Add(String.Format("Выстрел из {0}пистолета: {1} - {2}",
+                    (shoots > 1 ? String.Format("{0} ", pistol) : String.Empty),
+                    Game.Dice.Symbol(shootDice), (hit ? "попал" : "промах")));
 
                 if (hit)
                 {
@@ -431,11 +437,14 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                                 return fight;
                             }
 
-                            if ((protagonist.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(protagonistRoll))
+                            if ((protagonist.MeritalArt == Character.MeritalArts.SwordAndDagger) && LuckyHit(out _, protagonistRoll))
                             {
                                 fight.Add(String.Format("GOOD|{0} ранен вашим кинжалом", enemy.Name));
 
-                                if (EnemyWound(protagonist, ref enemyInFight, FightEnemies, protagonistRoll, WoundsToWin, ref enemyWounds, ref fight, dagger: true))
+                                bool wound = EnemyWound(protagonist, ref enemyInFight, FightEnemies,
+                                    protagonistRoll, WoundsToWin, ref enemyWounds, ref fight, dagger: true);
+
+                                if (wound)
                                     return fight;
                             }
                         }
