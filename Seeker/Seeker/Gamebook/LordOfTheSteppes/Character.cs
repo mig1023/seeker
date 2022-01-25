@@ -60,6 +60,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public override void Init()
         {
+            base.Init();
+
             Name = "Главный герой";
 
             MaxAttack = 8;
@@ -83,6 +85,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             MaxAttack = this.MaxAttack,
             Attack = this.Attack,
@@ -127,6 +130,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 if (success)
                     SpecialTechnique.Add(value);
             }
+
+            IsProtagonist = true;
         }
 
         public string GetSpecialTechniques()
