@@ -32,6 +32,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public override void Init()
         {
+            base.Init();
+
             MaxMastery = Game.Dice.Roll() + 6;
             Mastery = MaxMastery;
             MaxEndurance = Game.Dice.Roll(dices: 2) + 12;
@@ -42,6 +44,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             MaxMastery = this.MaxMastery,
             Mastery = this.Mastery,
@@ -65,6 +68,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             Endurance = int.Parse(save[3]);
             MaxLuck = int.Parse(save[4]);
             Luck = int.Parse(save[5]);
+
+            IsProtagonist = true;
         }
     }
 }
