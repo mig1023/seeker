@@ -29,13 +29,16 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
         public override void Init()
         {
-            Name = String.Empty;
+            base.Init();
+
             Reaction = Game.Dice.Roll(dices: 2);
             Strength = Game.Dice.Roll(dices: 2);
             Endurance = Game.Dice.Roll(dices: 2);
         }
 
-        public Character Clone() => new Character() {
+        public Character Clone() => new Character()
+        {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             Reaction = this.Reaction,
             Strength = this.Strength,
@@ -53,6 +56,8 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             Reaction = int.Parse(save[0]);
             Strength = int.Parse(save[1]);
             Endurance = int.Parse(save[2]);
+
+            IsProtagonist = true;
         }
     }
 }
