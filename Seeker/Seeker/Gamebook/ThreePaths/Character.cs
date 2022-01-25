@@ -14,6 +14,8 @@ namespace Seeker.Gamebook.ThreePaths
 
         public override void Init()
         {
+            base.Init();
+
             Time = null;
             SpellSlots = 9;
             Spells = new List<string>();
@@ -21,6 +23,7 @@ namespace Seeker.Gamebook.ThreePaths
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Time = this.Time,
             Spells = new List<string>(),
         };
@@ -36,6 +39,8 @@ namespace Seeker.Gamebook.ThreePaths
             Time = Game.Continue.IntNullableParse(save[0]);
             SpellSlots = int.Parse(save[1]);
             Spells = save[2].Split(',').ToList();
+
+            IsProtagonist = true;
         }
     }
 }
