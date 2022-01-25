@@ -68,7 +68,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public override void Init()
         {
-            Name = String.Empty;
+            base.Init();
 
             ThibautHitpoint = 20;
             SergeHitpoint = 20;
@@ -87,6 +87,8 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
+
             ThibautHitpoint = this.ThibautHitpoint,
             ThibautSkill = this.ThibautSkill,
             SergeHitpoint = this.SergeHitpoint,
@@ -124,6 +126,8 @@ namespace Seeker.Gamebook.OctopusIsland
             Food = int.Parse(save[8]);
             LifeGivingOintment = int.Parse(save[9]);
             StolenStuffs = int.Parse(save[10]);
+
+            IsProtagonist = true;
         }
     }
 }
