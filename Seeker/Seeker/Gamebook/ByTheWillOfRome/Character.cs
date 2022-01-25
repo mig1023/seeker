@@ -38,7 +38,8 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
         public override void Init()
         {
-            Name = String.Empty;
+            base.Init();
+
             Sestertius = 100;
             Honor = 3;
             Legionaries = 0;
@@ -48,6 +49,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             Sestertius = this.Sestertius,
             Honor = this.Honor,
@@ -67,6 +69,8 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             Legionaries = int.Parse(save[2]);
             Horsemen = int.Parse(save[3]);
             Discipline = int.Parse(save[4]);
+
+            IsProtagonist = true;
         }
     }
 }
