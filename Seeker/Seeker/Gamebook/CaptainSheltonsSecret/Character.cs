@@ -47,6 +47,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public override void Init()
         {
+            base.Init();
+
             int dice = Game.Dice.Roll(dices: 2);
 
             Name = "Главный герой";
@@ -68,6 +70,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             MaxMastery = this.MaxMastery,
             Mastery = this.Mastery,
@@ -120,6 +123,8 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                 string[] endurance = enduranceLine.Split('=');
                 EnduranceLoss.Add(endurance[0], int.Parse(endurance[1]));
             }
+
+            IsProtagonist = true;
         }
     }
 }
