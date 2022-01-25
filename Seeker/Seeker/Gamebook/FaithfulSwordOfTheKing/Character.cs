@@ -57,6 +57,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public override void Init()
         {
+            base.Init();
+
             MaxSkill = Constants.Skills[Game.Dice.Roll()];
             Skill = MaxSkill;
             MaxStrength = Constants.Strengths[Game.Dice.Roll()];
@@ -78,6 +80,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             MaxSkill = this.MaxSkill,
             Skill = this.Skill,
@@ -122,6 +125,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             bool success = Enum.TryParse(save[7], out MeritalArts value);
             MeritalArt = (success ? value : MeritalArts.Nope);
+
+            IsProtagonist = true;
         }
     }
 }
