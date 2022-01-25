@@ -64,6 +64,8 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public override void Init()
         {
+            base.Init();
+
             int dice = Game.Dice.Roll(dices: 2);
 
             MaxSkill = Constants.Skills()[dice];
@@ -86,6 +88,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             MaxSkill = this.MaxSkill,
             Skill = this.Skill,
@@ -119,6 +122,7 @@ namespace Seeker.Gamebook.PrairieLaw
             AnimalSkins = save[8].Split(',').ToList();
 
             Cartridges = int.Parse(save[9]);
+            IsProtagonist = true;
         }
     }
 }
