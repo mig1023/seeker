@@ -83,6 +83,8 @@ namespace Seeker.Gamebook.VWeapons
 
         public override void Init()
         {
+            base.Init();
+
             Suspicions = 0;
             Time = 12;
             Accuracy = 3;
@@ -103,6 +105,7 @@ namespace Seeker.Gamebook.VWeapons
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
 
             Suspicions = this.Suspicions,
@@ -143,6 +146,8 @@ namespace Seeker.Gamebook.VWeapons
             Hands = int.Parse(save[7]);
             Legs = int.Parse(save[8]);
             Dead = (int.Parse(save[9]) == 1);
+
+            IsProtagonist = true;
         }
     }
 }
