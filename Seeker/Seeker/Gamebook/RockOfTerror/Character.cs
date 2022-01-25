@@ -14,6 +14,8 @@ namespace Seeker.Gamebook.RockOfTerror
 
         public override void Init()
         {
+            base.Init();
+
             Time = 0;
             Injury = 0;
             MonksHeart = null;
@@ -21,6 +23,7 @@ namespace Seeker.Gamebook.RockOfTerror
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Time = this.Time,
             Injury = this.Injury,
             MonksHeart = this.MonksHeart,
@@ -38,6 +41,8 @@ namespace Seeker.Gamebook.RockOfTerror
             Injury = int.Parse(save[1]);
             MonksHeart = int.Parse(save[2]);
             MonksHeart = (MonksHeart < 0 ? null : MonksHeart);
+
+            IsProtagonist = true;
         }
     }
 }
