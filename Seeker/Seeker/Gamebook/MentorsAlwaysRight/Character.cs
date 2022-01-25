@@ -55,7 +55,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public override void Init()
         {
-            Name = String.Empty;
+            base.Init();
+
             Strength = 12;
             MaxHitpoints = 30;
             Hitpoints = MaxHitpoints;
@@ -70,6 +71,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             Strength = this.Strength,
             MaxHitpoints = this.MaxHitpoints,
@@ -103,6 +105,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             Spells = save[8].Split(',').ToList();
             SpellsReplica = save[9].Split(',').ToList();
+
+            IsProtagonist = true;
         }
     }
 }
