@@ -60,6 +60,8 @@ namespace Seeker.Gamebook.DzungarWar
 
         public override void Init()
         {
+            base.Init();
+
             Strength = 1;
             Skill = 1;
             Wisdom = 1;
@@ -78,6 +80,7 @@ namespace Seeker.Gamebook.DzungarWar
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Strength = this.Strength,
             Skill = this.Skill,
             Wisdom = this.Wisdom,
@@ -117,6 +120,8 @@ namespace Seeker.Gamebook.DzungarWar
             Tincture = int.Parse(save[11]);
             Ginseng = int.Parse(save[12]);
             Airag = int.Parse(save[13]);
+
+            IsProtagonist = true;
         }
     }
 }
