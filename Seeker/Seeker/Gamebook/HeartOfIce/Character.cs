@@ -44,7 +44,7 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public override void Init()
         {
-            Name = String.Empty;
+            base.Init();
 
             MaxLife = 10;
             Life = MaxLife;
@@ -60,6 +60,7 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             MaxLife = this.MaxLife,
             Life = this.Life,
@@ -89,6 +90,8 @@ namespace Seeker.Gamebook.HeartOfIce
             Chosen = (int.Parse(save[7]) == 1);
 
             Skills = save[8].Split(':').ToList();
+
+            IsProtagonist = true;
         }
     }
 }
