@@ -21,6 +21,8 @@ namespace Seeker.Gamebook.SilentSchool
 
         public override void Init()
         {
+            base.Init();
+
             Life = 30;
             Weapon = String.Empty;
             Grail = 0;
@@ -31,6 +33,7 @@ namespace Seeker.Gamebook.SilentSchool
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Life = this.Life,
             Weapon = this.Weapon,
             Grail = this.Grail,
@@ -52,6 +55,8 @@ namespace Seeker.Gamebook.SilentSchool
             ChangeDecision = int.Parse(save[3]);
             HarmSelfAlready = int.Parse(save[4]);
             WayBack = int.Parse(save[5]);
+
+            IsProtagonist = true;
         }
     }
 }
