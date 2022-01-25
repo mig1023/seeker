@@ -58,7 +58,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override void Init()
         {
-            Name = String.Empty;
+            base.Init();
+
             Strength = 12;
             Hitpoints = 30;
             Magicpoints = 0;
@@ -73,6 +74,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             Strength = this.Strength,
             Hitpoints = this.Hitpoints,
@@ -107,6 +109,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
             bool success = Enum.TryParse(save[8], out SpecializationType value);
             Specialization = (success ? value : SpecializationType.Nope);
+
+            IsProtagonist = true;
         }
     }
 }
