@@ -51,7 +51,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public override void Init()
         {
-            Name = String.Empty;
+            base.Init();
+
             Strength = 4;
             Defence = 10;
             Glory = 7;
@@ -71,6 +72,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public Character Clone(bool lastWound = false) => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             Strength = this.Strength,
             Defence = this.Defence,
@@ -113,6 +115,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             DisfavorOfTheGods = save[9].Split(':').ToList();
             BroochResurrection = int.Parse(save[10]);
             Ichor = int.Parse(save[11]);
+
+            IsProtagonist = true;
         }
 
         public void FellIntoFavor(string godName, bool fellOut = false, bool indifferent = false, bool indifferentToAll = false)
