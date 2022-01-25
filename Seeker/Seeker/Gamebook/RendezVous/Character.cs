@@ -10,18 +10,24 @@ namespace Seeker.Gamebook.RendezVous
 
         public override void Init()
         {
-            Name = String.Empty;
+            base.Init();
+
             Awareness = 0;
         }
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             Awareness = this.Awareness,
         };
 
         public override string Save() => Awareness.ToString();
 
-        public override void Load(string saveLine) => Awareness = int.Parse(saveLine);
+        public override void Load(string saveLine)
+        {
+            Awareness = int.Parse(saveLine);
+            IsProtagonist = true;
+        }
     }
 }
