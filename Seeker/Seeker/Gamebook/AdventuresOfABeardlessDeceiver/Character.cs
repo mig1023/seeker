@@ -69,6 +69,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public override void Init()
         {
+            base.Init();
+
             Strength = 1;
             Skill = 1;
             Wisdom = 1;
@@ -84,6 +86,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Strength = this.Strength,
             Skill = this.Skill,
             Wisdom = this.Wisdom,
@@ -117,6 +120,8 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             StatBonuses = int.Parse(save[8]);
             AkynGlory = Game.Continue.IntNullableParse(save[9]);
             UnitOfTime = Game.Continue.IntNullableParse(save[10]);
+
+            IsProtagonist = true;
         }
     }
 }
