@@ -120,7 +120,8 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public override void Init()
         {
-            Name = String.Empty;
+            base.Init();
+
             LightSide = 100;
             DarkSide = 0;
             MaxHitpoints = 30;
@@ -169,6 +170,7 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             LightSide = this.LightSide,
             DarkSide = this.DarkSide,
@@ -285,6 +287,8 @@ namespace Seeker.Gamebook.YounglingTournament
             EnemyThrust = int.Parse(save[14]);
             Reading = int.Parse(save[15]);
             SecondPart = int.Parse(save[16]);
+
+            IsProtagonist = true;
         }
     }
 }
