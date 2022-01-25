@@ -142,11 +142,6 @@ namespace Seeker
 
             if ((paragraph.Actions != null) && (paragraph.Actions.Count > 0))
             {
-                bool verticalMultiple = OnlyButtonsActions(paragraph);
-                Action.Spacing = (verticalMultiple ? 0 : 6);
-
-                bool firstButton = true;
-
                 foreach (Abstract.IActions action in paragraph.Actions)
                 {
                     if (action.Name == "Option")
@@ -156,7 +151,7 @@ namespace Seeker
                     }
                     else
                     {
-                        StackLayout actionPlace = Output.Interface.ActionPlace(verticalMultiple, firstButton);
+                        StackLayout actionPlace = Output.Interface.ActionPlace();
 
                         foreach (View enemy in Output.Interface.Represent(action.Do(out _, "Representer")))
                             actionPlace.Children.Add(enemy);
@@ -173,8 +168,6 @@ namespace Seeker
 
                         AddAftertext(ref Action, action.Aftertext, action.Aftertexts);
                     }
-
-                    firstButton = false;
                 }
             }
 
@@ -252,25 +245,6 @@ namespace Seeker
             {
                 Game.Continue.Save();
             }
-        }
-
-        private bool OnlyButtonsActions(Game.Paragraph paragraph)
-        {
-            if (paragraph.Actions.Count == 0)
-                return false;
-
-            foreach (Abstract.IActions action in paragraph.Actions)
-            {
-                List<string> outputs = action.Do(out _, "Representer");
-
-                if (outputs.Count == 0)
-                    return true;
-
-                if (String.IsNullOrEmpty(outputs[0]))
-                    return true;
-            }
-
-            return false;
         }
 
         private StackLayout MultipleButtonsPlace(Abstract.IActions action, StackLayout actionPlace)

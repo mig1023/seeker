@@ -490,21 +490,17 @@ namespace Seeker.Output
             return label;
         }
 
-        public static StackLayout ActionPlace(bool verticalMultiple = false,  bool firstButton = false)
+        public static StackLayout ActionPlace()
         {
-            double padding = Constants.ACTIONPLACE_PADDING;
 
             StackLayout stackLayout = new StackLayout
             {
                 Orientation = StackOrientation.Vertical,
                 Spacing = Constants.ACTIONPLACE_SPACING,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                Padding = padding,
+                Padding = Constants.ACTIONPLACE_PADDING,
                 BackgroundColor = Color.LightGray
             };
-
-            if (verticalMultiple && !firstButton)
-                stackLayout.Padding = new Thickness(padding, 0, padding, padding);
 
             if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.ActionBox)))
                 stackLayout.BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.ActionBox));
