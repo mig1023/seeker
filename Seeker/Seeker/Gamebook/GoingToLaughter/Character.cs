@@ -41,6 +41,8 @@ namespace Seeker.Gamebook.GoingToLaughter
 
         public override void Init()
         {
+            base.Init();
+
             Heroism = 0;
             Villainy = 0;
             Buffoonery = 5;
@@ -53,6 +55,8 @@ namespace Seeker.Gamebook.GoingToLaughter
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
+
             Heroism = this.Heroism,
             Villainy = this.Villainy,
             Buffoonery = this.Buffoonery,
@@ -79,6 +83,8 @@ namespace Seeker.Gamebook.GoingToLaughter
             Balance = int.Parse(save[4]);
             Advantages = new List<string>(save[5].Split(','));
             Disadvantages = new List<string>(save[6].Split(','));
+
+            IsProtagonist = true;
         }
     }
 }
