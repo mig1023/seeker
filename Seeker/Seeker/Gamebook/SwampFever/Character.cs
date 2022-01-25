@@ -59,7 +59,8 @@ namespace Seeker.Gamebook.SwampFever
 
         public override void Init()
         {
-            Name = String.Empty;
+            base.Init();
+
             Fury = 0;
             Creds = 0;
             Stigon = 0;
@@ -76,7 +77,9 @@ namespace Seeker.Gamebook.SwampFever
             LiveMucus = 0;
         }
 
-        public Character Clone() => new Character() {
+        public Character Clone() => new Character()
+        {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             Fury = this.Fury,
             Creds = this.Creds,
@@ -118,6 +121,8 @@ namespace Seeker.Gamebook.SwampFever
             Harmonizer = int.Parse(save[11]);
             AcousticMembrane = int.Parse(save[12]);
             LiveMucus = int.Parse(save[13]);
+
+            IsProtagonist = true;
         }
     }
 }
