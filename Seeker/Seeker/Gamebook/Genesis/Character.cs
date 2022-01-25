@@ -46,7 +46,8 @@ namespace Seeker.Gamebook.Genesis
 
         public override void Init()
         {
-            Name = String.Empty;
+            base.Init();
+
             MaxLife = 40;
             Life = MaxLife;
             Aura = 5;
@@ -58,6 +59,7 @@ namespace Seeker.Gamebook.Genesis
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             MaxLife = this.MaxLife,
             Life = this.Life,
@@ -83,6 +85,8 @@ namespace Seeker.Gamebook.Genesis
             Weapon = int.Parse(save[4]);
             Stealth = int.Parse(save[5]);
             Bonuses = int.Parse(save[6]);
+
+            IsProtagonist = true;
         }
     }
 }
