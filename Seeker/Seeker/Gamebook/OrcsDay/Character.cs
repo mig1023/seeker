@@ -39,7 +39,8 @@ namespace Seeker.Gamebook.OrcsDay
 
         public override void Init()
         {
-            Name = String.Empty;
+            base.Init();
+
             Muscle = 0;
             Wits = 0;
             Courage = 0;
@@ -55,6 +56,7 @@ namespace Seeker.Gamebook.OrcsDay
 
         public Character Clone() => new Character()
         {
+            IsProtagonist = this.IsProtagonist,
             Name = this.Name,
             Muscle = this.Muscle,
             Wits = this.Wits,
@@ -91,6 +93,8 @@ namespace Seeker.Gamebook.OrcsDay
             WayBack = int.Parse(save[9]);
             Bet = int.Parse(save[10]);
             Weapon = int.Parse(save[11]);
+
+            IsProtagonist = true;
         }
     }
 }
