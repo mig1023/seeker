@@ -38,12 +38,19 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public Character.SpecializationType? Specialization { get; set; }
 
-        public override List<string> Status() => new List<string>
+        public override List<string> Status()
         {
-            String.Format("Сила: {0}", protagonist.Strength),
-            String.Format("Жизни: {0}/{1}", protagonist.Hitpoints, protagonist.MaxHitpoints),
-            String.Format("Обращений: {0}", protagonist.Transformation),
-        };
+            List<string> statusLines = new List<string>
+            {
+                String.Format("Сила: {0}", protagonist.Strength),
+                String.Format("Жизни: {0}/{1}", protagonist.Hitpoints, protagonist.MaxHitpoints),
+            };
+
+            if (protagonist.Transformation > 0)
+                statusLines.Add(String.Format("Обращений: {0}", protagonist.Transformation));
+
+            return statusLines;
+        }
 
         public override List<string> AdditionalStatus()
         {
@@ -560,7 +567,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             if (wolf)
             {
                 int wolfWound = wound / 2;
-                fight.Add(String.Format("Форма волка защищает вас и вы теряете {0} вместо {1}!", wolfWound, wound));
+
+                string woundLine = Game.Services.CoinsNoun(wound, "Силу", "Силы", "Сил");
+                string woundWolfLine = Game.Services.CoinsNoun(wolfWound, "Силы", "Сил", "Сил");
+
+                fight.Add(String.Format("Форма волка защищает вас и вы теряете {0} {1} вместо {2} {3}!",
+                    wolfWound, woundLine, wound, woundWolfLine));
 
                 return wolfWound;
             }
