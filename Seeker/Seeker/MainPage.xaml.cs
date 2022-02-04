@@ -40,8 +40,10 @@ namespace Seeker
             UpdateStatus();
 
             if (toMain)
-                MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
+                ScrollToTop();
         }
+
+        private void ScrollToTop() => MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
 
         private void Gamebook_Click(string gamebook)
         {
@@ -67,6 +69,8 @@ namespace Seeker
 
             Output.Settings.Add(ref Action);
             Options.Children.Add(Output.Buttons.CloseSettings((s, args) => Gamebooks(toMain: true)));
+
+            ScrollToTop();
         }
 
         public void Error(string errorType, string message)
@@ -230,7 +234,7 @@ namespace Seeker
                 Options.Children.Add(Output.Interface.DebugInformation(id));
 
             if (!reload)
-                MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
+                ScrollToTop();
 
             UpdateStatus();
             CheckGameOver();
