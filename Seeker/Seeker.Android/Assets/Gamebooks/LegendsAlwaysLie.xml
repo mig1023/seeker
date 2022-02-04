@@ -1573,8 +1573,8 @@
 			<Id>159</Id>
 			<Text>Ваша специализация воин?</Text>
 			<Options>
-				<Option Destination="223" Text="Да"/>
-				<Option Destination="201" Text="Нет"/>
+				<Option Destination="223" Text="Да" OnlyIf="ВОИН"/>
+				<Option Destination="201" Text="Нет" OnlyIf="!ВОИН"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1764,7 +1764,7 @@
 			<Id>181</Id>
 			<Text>Попадать нужно в сердцевину – небольшую мишень, плывущую высоко над землей. Если ваша специализация метатель, то у вас, может, что-то из этой затеи и выйдет.\n\nЕсли же вы воин или маг, то ничего у вас не получается, остается только принять бой.</Text>
 			<Options>
-				<Option Destination="144" Text="Ваша специализация метатель"/>
+				<Option Destination="144" Text="Ваша специализация метатель" OnlyIf="МЕТАТЕЛЬ"/>
 				<Option Destination="292" Text="Принять бой"/>
 			</Options>
 		</Paragraph>
@@ -2063,8 +2063,8 @@
 			<Id>215</Id>
 			<Text>– Не морочьте мне голову, – сердито говорит кузнец, едва только бросив взгляд на ваш клинок. – С ним все в полном порядке.</Text>
 			<Options>
-				<Option Destination="315" Text="Ваша специализация маг"/>
-				<Option Destination="383" Text="Иначе"/>
+				<Option Destination="315" Text="Ваша специализация маг" OnlyIf="МАГ"/>
+				<Option Destination="383" Text="В ином случае"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3395,7 +3395,7 @@
 			<Triggers>IronOre</Triggers>
 			<Options>
 				<Option Destination="317" Text="Записано слово «болтовня»" OnlyIf="Babble"/>
-				<Option Destination="302" Text="Ваша специализация – воин"/>
+				<Option Destination="302" Text="Ваша специализация – воин" OnlyIf="ВОИН"/>
 				<Option Destination="165" Text="Все эти варианты вам не подходят"/>
 			</Options>
 		</Paragraph>
@@ -3809,7 +3809,7 @@
 				</Action>
 			</Actions>
 			<Options>
-				<Option Destination="361" Text="Ваша специализация – метатель ножей"/>
+				<Option Destination="361" Text="Ваша специализация – метатель ножей" OnlyIf="МЕТАТЕЛЬ"/>
 				<Option Destination="263" Text="В противном случае вы просто отбиваете нож мечом и идете вперед, чтобы разобраться с нападающим"/>
 			</Options>
 		</Paragraph>
@@ -3878,12 +3878,9 @@
 		<Paragraph>
 			<Id>391</Id>
 			<Text>От боли ящер резко дергается, вы же, вцепившись в рукоять, судорожно пытаетесь удержаться на спине исполина.</Text>
-			<Modifications>
-				<Modification Name="Hitpoints" Value="-4"/>
-			</Modifications>
 			<Options>
-				<Option Destination="107" Text="Ваша специализация воин, то ваша сила поможет вам справиться с этой непростой задачей"/>
-				<Option Destination="197" Text="Если же нет, то удержаться не выйдет, и при падении вы сильно повреждаете колено (–3 ЖИЗНИ)"/>
+				<Option Destination="107" Text="Ваша специализация воин, то ваша сила поможет вам справиться с этой непростой задачей" OnlyIf="ВОИН"/>
+				<Option Destination="197" Text="Если же нет, то удержаться не выйдет, и при падении вы сильно повреждаете колено (–3 ЖИЗНИ)" Do="Hitpoints" Value="-3"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4249,7 +4246,7 @@
 			<Id>429</Id>
 			<Text>Ваши зрачки сужаются, и мрак вокруг заметно светлеет. Теперь ясно видны подозрительные отверстия в стенах коридора. Длинные узкие бойницы на уровне вашей груди идут сначала по левой стене, через пяток шагов – по правой. Спустя еще такое же расстояние они видны в обоих стенах.\n\nНо это еще не все. Далее бойницы проложены вновь в двух стенах, но уже значительно выше, на локоть выше вашей головы. Если ваша специализация – магия, то\n\nИначе –</Text>
 			<Options>
-				<Option Destination="451" Text="Ваша специализация – магия"/>
+				<Option Destination="451" Text="Ваша специализация – магия" OnlyIf="МАГ"/>
 				<Option Destination="410"/>
 			</Options>
 		</Paragraph>
@@ -4314,7 +4311,7 @@
 				<Option Destination="570" Text="Продолжать бежать на жреца, надеясь опередить его и нанести удар до того, как он совершит задуманное"/>
 				<Option Destination="541" Text="Резко отпрыгнуть в сторону"/>
 				<Option Destination="593" Text="СГУСТОК" OnlyIf="ЗАКЛЯТИЙ > 0"/>
-				<Option Destination="557" Text="Ваша специализация метатель"/>
+				<Option Destination="557" Text="Ваша специализация метатель" OnlyIf="МЕТАТЕЛЬ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4952,7 +4949,7 @@
 				<Modification Name="ConneryHitpoints" Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="538" Text="Ваша специализация метатель"/>
+				<Option Destination="538" Text="Ваша специализация метатель" OnlyIf="МЕТАТЕЛЬ"/>
 				<Option Destination="532" Text="СГУСТОК" OnlyIf="ЗАКЛЯТИЙ > 0"/>
 				<Option Destination="478" Text="Броситься обратно, стараясь ступать по своим следам"/>
 			</Options>
@@ -5576,7 +5573,7 @@
 			<Id>569</Id>
 			<Text>– Такое ощущение, что я где-то такое уже видел, – Коннери поднимает с малахитовой столешницы стеклянный шарик. – Не знаешь, что это?</Text>
 			<Options>
-				<Option Destination="584" Text="Ваша специализация – маг, то ваш ответ: «Да»"/>
+				<Option Destination="584" Text="Ваша специализация – маг, то ваш ответ: «Да»" OnlyIf="МАГ"/>
 				<Option Destination="520" Text="Иначе вы вынуждены ответить «Нет»"/>
 			</Options>
 		</Paragraph>
@@ -6180,8 +6177,8 @@
 			<Id>631</Id>
 			<Text>Ваша специализация – метатель?</Text>
 			<Options>
-				<Option Destination="677" Text="Ваша специализация – метатель"/>
-				<Option Destination="659" Text="Иначе"/>
+				<Option Destination="677" Text="Ваша специализация – метатель" OnlyIf="МЕТАТЕЛЬ"/>
+				<Option Destination="659" Text="В ином случае"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -6326,15 +6323,15 @@
 			</Modifications>
 			<Options>
 				<Option Destination="680" Text="Он все еще жив, вы оттаскиваете его тело к месту, где оставили раненного Браннибора, раздумывая, что же делать дальше"/>
-				<Option Destination="661" Text="Иначе"/>
+				<Option Destination="661" Text="В ином случае"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>648</Id>
 			<Text>Ваша специализация – воин? Если нет, то камень вам не сдвинуть ни на дюйм и шар ударит в свою цель.</Text>
 			<Options>
-				<Option Destination="667" Text="Ваша специализация – воин"/>
-				<Option Destination="661" Text="Иначе"/>
+				<Option Destination="667" Text="Ваша специализация – воин" OnlyIf="ВОИН"/>
+				<Option Destination="661" Text="В ином случае"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
