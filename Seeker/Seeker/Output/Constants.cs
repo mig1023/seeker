@@ -75,12 +75,6 @@ namespace Seeker.Output
             [4] = Constants.BIG_FONT,
         };
 
-        public static List<string> ON_OFF_SETTING = new List<string>
-        {
-            "Выкл",
-            "Вкл",
-        };
-
         public static List<string> OPTION_SETTING = new List<string>
         {
             "Настройки игры",
@@ -94,6 +88,7 @@ namespace Seeker.Output
             "По названию",
             "По автору",
             "По размеру",
+            "По году издания",
         };
     }
 }

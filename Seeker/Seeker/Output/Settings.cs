@@ -26,10 +26,10 @@ namespace Seeker.Output
 
             SettingOption("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING);
             SettingOption("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING);
-            SettingOption("Текст по ширине", "Justyfy", Constants.ON_OFF_SETTING);
+            SettingOption("Текст по ширине", "Justyfy", null);
             SettingOption("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING);
-            SettingOption("Отображать меню", "SystemMenu", Constants.ON_OFF_SETTING);
-            SettingOption("Отладка", "Debug", Constants.ON_OFF_SETTING);
+            SettingOption("Отображать меню", "SystemMenu", null);
+            SettingOption("Отладка", "Debug", null);
             SettingOption("Сортировка", "Sort", Constants.SORT_SETTING);
 
             SettingCheatingBlock();
@@ -66,11 +66,11 @@ namespace Seeker.Output
             SettingGrid.Children.Add(brace, 1, currentRow);
             Grid.SetRowSpan(brace, 2);
 
-            SettingOption("Кнопка 'Назад'", "CheatingBack", Constants.ON_OFF_SETTING, row: currentRow);
+            SettingOption("Кнопка 'Назад'", "CheatingBack", null, row: currentRow);
 
             currentRow = AddNewRow(ref SettingGrid);
 
-            SettingOption("God mode", "Godmode", Constants.ON_OFF_SETTING, row: currentRow);
+            SettingOption("God mode", "Godmode", null, row: currentRow);
         }     
 
         private static void SettingButton(string settingName, SettingMethod Click, bool spacer = false)
@@ -115,32 +115,50 @@ namespace Seeker.Output
             }
             else
                 SettingGrid.Children.Add(settingTitle, 2, currentRow);
-                
-            Picker settingPicker = new Picker
+             
+            if (options == null)
             {
-                HorizontalOptions = LayoutOptions.End,
-                VerticalOptions = LayoutOptions.Center,
-                FontSize = Interface.Font(NamedSize.Medium),
-            };
-            
-            settingPicker.SelectedIndexChanged += (sender, e) => SettingChanged(sender, settingType);
+                Switch settingSwitcher = new Switch
+                {
+                    IsToggled = false,
+                    HorizontalOptions = LayoutOptions.End,
+                    VerticalOptions = LayoutOptions.Center,
+                };
+                settingSwitcher.Toggled += (sender, e) => SwitcherChanged(e, settingType);
 
-            foreach (string option in options)
-                settingPicker.Items.Add(option);
+                SettingGrid.Children.Add(settingSwitcher, 3, currentRow);
+            }
+            else
+            {
+                Picker settingPicker = new Picker
+                {
+                    HorizontalOptions = LayoutOptions.End,
+                    VerticalOptions = LayoutOptions.Center,
+                    FontSize = Interface.Font(NamedSize.Medium),
+                };
 
-            settingPicker.SelectedIndex = Game.Settings.GetValue(settingType);
+                settingPicker.SelectedIndexChanged += (sender, e) => SettingChanged(sender, settingType);
 
-            SettingGrid.Children.Add(settingPicker, 3, currentRow);   
+                foreach (string option in options)
+                    settingPicker.Items.Add(option);
+
+                settingPicker.SelectedIndex = Game.Settings.GetValue(settingType);
+
+                SettingGrid.Children.Add(settingPicker, 3, currentRow);
+            }
         }
 
         private static int AddNewRow(ref Grid settingGrid)
         {
-            settingGrid.RowDefinitions.Add(new RowDefinition());
+            settingGrid.RowDefinitions.Add(new RowDefinition { Height = 40 });
             return settingGrid.RowDefinitions.Count - 1;
         }
 
         private static void SettingChanged(object sender, string setting) =>
             Game.Settings.SetValue(setting, (sender as Picker).SelectedIndex);
+
+        private static void SwitcherChanged(ToggledEventArgs e, string setting) =>
+            Game.Settings.SetValue(setting, (e.Value ? 1 : 0));
 
         private static void SettingClick(object sender, SettingMethod method)
         {
