@@ -61,6 +61,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
             foreach (string spell in protagonist.Spells)
             {
+                if (String.IsNullOrEmpty(spell))
+                    continue;
+
                 if (currentSpells.ContainsKey(spell.ToLower()))
                     currentSpells[spell.ToLower()] += 1;
                 else
