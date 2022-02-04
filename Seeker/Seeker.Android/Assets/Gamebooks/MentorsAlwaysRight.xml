@@ -2582,7 +2582,7 @@
 			<Id>261</Id>
 			<Text>Итак, теперь у вас есть ВОЛЧИЙ ОБЕРЕГ. Он дает вам возможность двух дополнительных ОБРАЩЕНИЙ. Теперь возвращайтесь.</Text>
 			<Modifications>
-				<Modification Name="Transformation" Value="2"/>
+				<Modification Name="AddTransformation" Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="279"/>
