@@ -26,6 +26,14 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             [ColorTypes.BookColor] = "#4c0000",
         };
 
+        public static Dictionary<string, Character.SpecializationType> GetSpecializationType() =>
+            new Dictionary<string, Character.SpecializationType>
+        {
+            ["ВОИН"] = Character.SpecializationType.Warrior,
+            ["МАГ"] = Character.SpecializationType.Wizard,
+            ["МЕТАТЕЛЬ"] = Character.SpecializationType.Thrower,
+        };
+
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 687, 714, 715, 701, 702 };

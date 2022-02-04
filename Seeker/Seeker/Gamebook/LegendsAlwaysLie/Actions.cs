@@ -290,6 +290,12 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                         
                         if (oneOption.Contains("ДОВЕРИЕ <=") && (level < protagonist.ConneryTrust))
                             return false;
+
+                        if (option.Contains("ВОИН") || option.Contains("МАГ") || option.Contains("МЕТАТЕЛЬ"))
+                        {
+                            Character.SpecializationType spec = Constants.GetSpecializationType()[option.Replace("!", String.Empty)];
+                            return (option.Contains("!") ? (protagonist.Specialization != spec) : (protagonist.Specialization == spec));
+                        }
                     }
                     else if (oneOption.Contains("!"))
                     {
