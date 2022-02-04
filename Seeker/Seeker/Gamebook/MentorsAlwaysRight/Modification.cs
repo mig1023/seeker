@@ -20,6 +20,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             else if (Name == "HealingByVessel")
                 Game.Healing.Add("Выпить отвар из бурдюка,8");
 
+            else if (Name == "AddTransformation")
+                protagonist.Transformation += Value;
+
             else if (Name == "Transformation")
             {
                 protagonist.Transformation -= 1;
