@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Xamarin.Forms;
 
 namespace Seeker.Output
@@ -120,7 +118,7 @@ namespace Seeker.Output
             {
                 Switch settingSwitcher = new Switch
                 {
-                    IsToggled = false,
+                    IsToggled = (Game.Settings.GetValue(settingType) == 1),
                     HorizontalOptions = LayoutOptions.End,
                     VerticalOptions = LayoutOptions.Center,
                 };
