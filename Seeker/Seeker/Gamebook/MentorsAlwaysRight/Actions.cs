@@ -31,6 +31,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         public string ReactionWounds { get; set; }
         public string OnlyOne { get; set; }
 
+        static bool NextFightWithWolf = false;
+        static bool NextFightWithBear = false;
+
         public Abstract.IModification Damage { get; set; }
 
         public Character.SpecializationType? Specialization { get; set; }
@@ -361,6 +364,14 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             if (wounded && (protagonist.Elixir > 0))
                 staticButtons.Add("ЭЛИКСИР");
 
+            bool alreadyTransform = NextFightWithWolf || NextFightWithBear;
+
+            if (Game.Checks.ExistsInParagraph(actionName: "Fight") && (protagonist.Transformation > 0) && !alreadyTransform)
+                staticButtons.Add("ОБРАТИТЬСЯ ВОЛКОМ");
+
+            if (Game.Checks.ExistsInParagraph(actionName: "Fight") && (protagonist.Transformation > 0) && !alreadyTransform)
+                staticButtons.Add("ОБРАТИТЬСЯ МЕДВЕДЕМ");
+
             return staticButtons;
         }
 
@@ -377,6 +388,22 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             {
                 protagonist.Hitpoints = protagonist.MaxHitpoints;
                 protagonist.Elixir -= 1;
+
+                return true;
+            }
+            else if (action == "ОБРАТИТЬСЯ ВОЛКОМ")
+            {
+                protagonist.Transformation -= 1;
+                protagonist.Strength -= 2;
+                NextFightWithWolf = true;
+
+                return true;
+            }
+            else if (action == "ОБРАТИТЬСЯ МЕДВЕДЕМ")
+            {
+                protagonist.Transformation -= 1;
+                protagonist.Strength -= 2;
+                NextFightWithBear = true;
 
                 return true;
             }
@@ -528,14 +555,41 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         private bool IsMagicBlade() => Game.Option.IsTriggered("MagicSword");
 
+        private int HitWounds(ref List<string> fight, int wound, bool wolf)
+        {
+            if (wolf)
+            {
+                int wolfWound = wound / 2;
+                fight.Add(String.Format("Форма волка защищает вас и вы теряете {0} вместо {1}!", wolfWound, wound));
+
+                return wolfWound;
+            }
+            else
+                return wound;
+        }
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
 
             int round = 1, woundLine = 0, wounded = 0, death = 0, roundsWin = 0, incrementWounds = 2;
             bool warriorFight = (protagonist.Specialization == Character.SpecializationType.Warrior);
+            bool wolf = false, bear = false;
 
             List<Character> FightEnemies = new List<Character>();
+
+            if (NextFightWithWolf)
+            {
+                fight.Add("BOLD|Вы принимаете этот бой перекинувшись в волка. Это уменьшает наносимый вам урон в два раза!");
+                NextFightWithWolf = false;
+                wolf = true;
+            }
+            else if (NextFightWithBear)
+            {
+                fight.Add("BOLD|Вы принимаете этот бой перекинувшись в медведя. Это даёт вам Силу равную 14!");
+                NextFightWithBear = false;
+                bear = true;
+            }
 
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
@@ -576,13 +630,15 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     if (!Invincible)
                         fight.Add(String.Format("{0} (жизни: {1})", enemy.Name, enemy.Hitpoints));
 
+                    int protagonistStrength = (bear ? 14 : protagonist.Strength);
+
                     Game.Dice.DoubleRoll(out int firstProtagonistRoll, out int secondProtagonistRoll);
-                    int protagonistHitStrength = firstProtagonistRoll + secondProtagonistRoll + protagonist.Strength;
+                    int protagonistHitStrength = firstProtagonistRoll + secondProtagonistRoll + protagonistStrength;
 
                     fight.Add(String.Format(
                         "Ваш удар: {0} + {1} + {2} = {3}",
                         Game.Dice.Symbol(firstProtagonistRoll), Game.Dice.Symbol(secondProtagonistRoll),
-                        protagonist.Strength, protagonistHitStrength));
+                        protagonistStrength, protagonistHitStrength));
 
                     Game.Dice.DoubleRoll(out int firstEnemyRoll, out int secondEnemyRoll);
                     int enemyHitStrength = firstEnemyRoll + secondEnemyRoll + enemy.Strength;
@@ -599,7 +655,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     {
                         fight.Add("BAD|Аллигатор ударил хвостом! Вы теряете 5 жизней!");
 
-                        protagonist.Hitpoints -= 5;
+                        protagonist.Hitpoints -= HitWounds(ref fight, 5, wolf);
                         TailAttack = false;
 
                         woundLine = 0;
@@ -672,7 +728,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                             string[] wounds = ReactionWounds.Split('-');
                             int wound = int.Parse(GoodReaction(ref fight, showResult: true) ? wounds[0] : wounds[1]);
 
-                            protagonist.Hitpoints -= wound;
+                            protagonist.Hitpoints -= HitWounds(ref fight, wound, wolf);
 
                             if (wound > 0)
                                 fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, wound));
@@ -683,12 +739,12 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         {
                             fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, incrementWounds));
 
-                            protagonist.Hitpoints -= incrementWounds;
+                            protagonist.Hitpoints -= HitWounds(ref fight, incrementWounds, wolf);
 
                             incrementWounds *= 2;
                         }
                         else
-                            protagonist.Hitpoints -= (Wound > 0 ? Wound : 2);
+                            protagonist.Hitpoints -= HitWounds(ref fight, (Wound > 0 ? Wound : 2), wolf);
 
                         if (protagonist.Hitpoints <= 0)
                             return LostFight(fight);
