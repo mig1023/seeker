@@ -472,12 +472,13 @@ namespace Seeker.Gamebook.OrcsDay
         {
             List<string> results = new List<string> { "BOLD|CЧИТАЕМ:" };
 
-            int result = 0;
+            int result = 0, lines = 0;
 
             if (Character.Protagonist.Orcishness <= 0)
             {
                 results.Add("GOOD|+1 за то, что твоя Оркишность упала до нуля или ниже");
                 result += 1;
+                lines += 1;
 
                 if (Game.Option.IsTriggered("Кандидат в Властелины") && !Game.Option.IsTriggered("Тёмный Властелин"))
                 {
@@ -496,7 +497,11 @@ namespace Seeker.Gamebook.OrcsDay
 
                 results.Add(String.Format("{0}|{1}", color, trigger.Value));
                 result += (add ? 1 : -1);
+                lines += 1;
             }
+
+            if (lines == 0)
+                results.Add("Да уж, вообще нечего вспомнить...");
 
             results.Add(String.Format("BIG|BOLD|ИТОГО: {0}",  Game.Services.NegativeMeaning(result)));
 
