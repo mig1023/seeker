@@ -404,7 +404,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             else if (action == "ОБРАТИТЬСЯ ВОЛКОМ")
             {
                 protagonist.Transformation -= 1;
-                protagonist.Strength -= 2;
+                protagonist.Hitpoints -= 2;
                 NextFightWithWolf = true;
 
                 return true;
@@ -412,7 +412,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             else if (action == "ОБРАТИТЬСЯ МЕДВЕДЕМ")
             {
                 protagonist.Transformation -= 1;
-                protagonist.Strength -= 2;
+                protagonist.Hitpoints -= 2;
                 NextFightWithBear = true;
 
                 return true;
@@ -571,11 +571,11 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             {
                 int wolfWound = wound / 2;
 
-                string woundLine = Game.Services.CoinsNoun(wound, "Силу", "Силы", "Сил");
-                string woundWolfLine = Game.Services.CoinsNoun(wolfWound, "Силы", "Сил", "Сил");
+                string woundWolfLine = Game.Services.CoinsNoun(wolfWound, "Силу", "Силы", "Сил");
+                string woundLine = Game.Services.CoinsNoun(wound, "Силы", "Сил", "Сил");
 
                 fight.Add(String.Format("Форма волка защищает вас и вы теряете {0} {1} вместо {2} {3}!",
-                    wolfWound, woundLine, wound, woundWolfLine));
+                    wolfWound, woundWolfLine, wound, woundLine));
 
                 return wolfWound;
             }
