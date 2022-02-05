@@ -1463,7 +1463,7 @@
 			<Text>Коридор продолжается прямо, но еще один отходит от него налево. Решайте, куда направитесь вы.</Text>
 			<Options>
 				<Option Destination="203" Text="Прямо"/>
-				<Option Destination="658" Text="Налево"/>
+				<Option Destination="583" Text="Налево"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
