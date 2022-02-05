@@ -4004,7 +4004,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="594" Text="Если вы успели расправиться с ним за 4 раунда атаки"/>
-				<Option Destination="454" Text="Не успели"/>
+				<Option Destination="646" Text="Не успели"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
