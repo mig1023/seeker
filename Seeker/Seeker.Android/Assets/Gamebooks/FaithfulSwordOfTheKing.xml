@@ -251,7 +251,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="499" Text="Удачливы"/>
-				<Option Destination="546" Text="Нет"/>
+				<Option Destination="546" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -681,7 +681,7 @@
 			<Text>Былали ли вы уже в тюрьме?</Text>
 			<Options>
 				<Option Destination="615" Text="Уже были в тюрьме"/>
-				<Option Destination="307" Text="Нет"/>
+				<Option Destination="307" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -887,7 +887,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="5" Text="Удачлив"/>
-				<Option Destination="418" Text="Нет"/>
+				<Option Destination="418" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -974,7 +974,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="170" Text="Удачлив"/>
-				<Option Destination="14" Text="Нет"/>
+				<Option Destination="14" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1702,7 +1702,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="358" Text="У вас остался перстень короля"/>
-				<Option Destination="44" Text="Нет"/>
+				<Option Destination="44" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1727,7 +1727,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="430" Text="Ловкости хватило"/>
-				<Option Destination="288" Text="Нет"/>
+				<Option Destination="288" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2221,7 +2221,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="421" Text="Удачлив"/>
-				<Option Destination="109" Text="Нет"/>
+				<Option Destination="109" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2261,7 +2261,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="432" Text="Удачлив"/>
-				<Option Destination="365" Text="Нет"/>
+				<Option Destination="365" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2544,7 +2544,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="522" Text="Повезло"/>
-				<Option Destination="369" Text="Нет"/>
+				<Option Destination="369" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2952,7 +2952,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="371" Text="Удачливы"/>
-				<Option Destination="120" Text="Нет"/>
+				<Option Destination="120" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3061,7 +3061,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="644" Text="Выпали одинаковые числа"/>
-				<Option Destination="196" Text="Нет"/>
+				<Option Destination="196" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3105,7 +3105,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="277" Text="Удачливы"/>
-				<Option Destination="556" Text="Нет"/>
+				<Option Destination="556" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3253,7 +3253,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="537" Text="Удачливы"/>
-				<Option Destination="10" Text="Нет"/>
+				<Option Destination="10" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3307,7 +3307,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="234" Text="Удачливы"/>
-				<Option Destination="110" Text="Нет"/>
+				<Option Destination="110" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3657,7 +3657,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="446" Text="Ловкости хватило"/>
-				<Option Destination="29" Text="Нет"/>
+				<Option Destination="29" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3923,7 +3923,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="632" Text="Удачливы"/>
-				<Option Destination="198" Text="Нет"/>
+				<Option Destination="198" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4040,7 +4040,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="634" Text="Удачливы"/>
-				<Option Destination="474" Text="Нет"/>
+				<Option Destination="474" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4152,7 +4152,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="342" Text="Удачливы"/>
-				<Option Destination="103" Text="Нет"/>
+				<Option Destination="103" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4290,7 +4290,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="281" Text="Удачливы"/>
-				<Option Destination="31" Text="Нет"/>
+				<Option Destination="31" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4438,7 +4438,7 @@
 			<Text>Вскоре перед вами пристань, откуда можно без труда доплыть до Капденака всего за полтора экю. Так и поступите или нет?</Text>
 			<Options>
 				<Option Destination="133" Text="Так и поступите" Do="Ecu" Value="-150" OnlyIf="ЭКЮ >= 150"/>
-				<Option Destination="602" Text="Нет"/>
+				<Option Destination="602" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4696,7 +4696,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="647" Text="Удачливы"/>
-				<Option Destination="207" Text="Нет"/>
+				<Option Destination="207" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4759,7 +4759,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="648" Text="Удачливы"/>
-				<Option Destination="311" Text="Нет"/>
+				<Option Destination="311" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4964,7 +4964,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="108" Text="Удачливы"/>
-				<Option Destination="35" Text="Нет"/>
+				<Option Destination="35" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5020,7 +5020,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="85" Text="Удачливы"/>
-				<Option Destination="348" Text="Нет"/>
+				<Option Destination="348" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5028,7 +5028,7 @@
 			<Text>Дело идет к полудню, дорога сужается и уходит в красивый сосновый лес. Дышится легко, и на какое-то короткое время путешествие начинает казаться просто прогулкой. Внезапно ваше внимание привлекает тонкая веревка натянутая поперек дороги на высоте груди лошади. Неужели кто-то мог всерьез понадеяться на то, что вы среди белого дня ее не заметите?</Text>
 			<Options>
 				<Option Destination="548" Text="Уже встречались с подобным трюком"/>
-				<Option Destination="483" Text="Нет"/>
+				<Option Destination="483" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5176,7 +5176,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="383" Text="Повезло"/>
-				<Option Destination="142" Text="Нет"/>
+				<Option Destination="142" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5480,7 +5480,7 @@
 			<Text>Выехав на небольшую поляну, решаете, что это самое подходящее место для ночлега. Отпустив коня попастись, вы заворачиваетесь в плащ и, опустившись на траву, проваливаетесь в глубокий сон. Ночью вас будит громкое ржание Арбалета. На краю поляны появляются две пары горящих глаз. Волки! Надо разжечь огонь, но есть ли у вас огниво?</Text>
 			<Options>
 				<Option Destination="178" Text="Есть огниво"/>
-				<Option Destination="485" Text="Нет"/>
+				<Option Destination="485" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5728,7 +5728,7 @@
 			<Text>Направо отходит еще один коридор. Пойдете по нему или нет?</Text>
 			<Options>
 				<Option Destination="631" Text="Пойдете по нему"/>
-				<Option Destination="393" Text="Нет"/>
+				<Option Destination="393" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5813,7 +5813,7 @@
 			<Text>В этот момент вы замечаете, что навстречу вам движется что-то очень похожее на бродячий цирк: несколько пестро раскрашенных фургонов и завешенная грязным куском холста клетка на телеге. Когда вы уже поравнялись с ним, из третьей повозки выглядывает женщина лет сорока пяти-пятидесяти, судя по виду, хозяйка всего балагана. Она несколько секунд пристально вглядывается в ваше лицо, а потом просит остановиться, одновременно крича своему кучеру сделать то же самое. Повозки останавливаются, но задержитесь ли вы? Да или нет?</Text>
 			<Options>
 				<Option Destination="148" Text="Да"/>
-				<Option Destination="259" Text="Нет"/>
+				<Option Destination="259" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5880,7 +5880,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="297" Text="Повезло"/>
-				<Option Destination="655" Text="Нет"/>
+				<Option Destination="655" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5960,7 +5960,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="315" Text="Вы знаете это"/>
-				<Option Destination="656" Text="Нет"/>
+				<Option Destination="656" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -6251,7 +6251,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="303" Text="Удачливы"/>
-				<Option Destination="644" Text="Нет"/>
+				<Option Destination="644" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -6344,7 +6344,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="316" Text="Вскрывать письмо"/>
-				<Option Destination="279" Text="Нет"/>
+				<Option Destination="279" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -6444,7 +6444,7 @@
 			<Text>По бесстрастному лицу Майена трудно понять, правилен ответ или нет, но судя по тому, что он спокойно продолжает сидеть рядом, вы угадали. А тем временем герцог задает следующий вопрос: «Дорогой виконт, а что, Ленотр еще остался председателем парламента?». Несмотря на кажущуюся простоту, эта задачка еще сложнее. Конечно, лигист-парижанин не может не знать имени председателя парижского парламента, но в Гаскони не очень-то следят за столичной жизнью. Что вы ответите на этот раз? Да, нет или что Ленотр никогда и не был председателем парламента?</Text>
 			<Options>
 				<Option Destination="74" Text="Да"/>
-				<Option Destination="584" Text="Нет"/>
+				<Option Destination="584" Text="Не повезло"/>
 				<Option Destination="81" Text="Ленотр никогда и не был председателем парламента"/>
 			</Options>
 		</Paragraph>
