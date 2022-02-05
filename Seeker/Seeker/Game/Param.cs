@@ -25,6 +25,6 @@ namespace Seeker.Game
             (value > max ? max : Setter(value, current, character));
 
         public static int? Setter(int? value, int max, int? current, Abstract.ICharacter character) =>
-            (value.HasValue ? Setter((int)value, max, current, character) : (int?)null);
+            (value.HasValue ? Setter((int)value, max, (current ?? 0), character) : (int?)null);
     }
 }
