@@ -25,12 +25,13 @@ namespace Seeker.Output
             SettingOption("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING);
             SettingOption("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING);
             SettingOption("Текст по ширине", "Justyfy", null);
+
             SettingOption("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING);
             SettingOption("Отображать меню", "SystemMenu", null);
-            SettingOption("Отладка", "Debug", null);
             SettingOption("Сортировка", "Sort", Constants.SORT_SETTING);
 
             SettingCheatingBlock();
+            SettingOption("Данные отладки", "Debug", null);
 
             SettingButton("Сбросить сохранённые игры", () => Game.Continue.Clean(), spacer: true);
             SettingButton("Сбросить все настройки", () => Game.Settings.Clean());
