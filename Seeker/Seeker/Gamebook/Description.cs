@@ -8,6 +8,8 @@ namespace Seeker.Gamebook
 
         public string Title;
 
+        public string Original;
+
         public string XmlBook;
 
         public string BookColor;

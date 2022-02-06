@@ -204,6 +204,9 @@ namespace Seeker.Output
 
             StackLayout disclaimer = new StackLayout();
 
+            if (!String.IsNullOrEmpty(gamebook.Original))
+                AddDisclaimerElement(head: "Оригинальное название:", body: gamebook.Original, ref disclaimer, border);
+
             if (!String.IsNullOrEmpty(gamebook.Authors))
                 AddDisclaimerElement(head: "Авторы:", body: Regex.Unescape(gamebook.Authors), ref disclaimer, border);
             else

@@ -149,6 +149,7 @@ namespace Seeker.Game
             XmlNode data = Descriptions[description.Book];
 
             description.Title = StringParse(data["Title"]);
+            description.Original = StringParse(data["Original"]);
             description.Author = StringParse(data["Author"]);
             description.Authors = StringParse(data["Authors"]);
             description.Translator = StringParse(data["Translator"]);
