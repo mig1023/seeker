@@ -42,6 +42,7 @@ namespace Seeker.Gamebook
             ["Damanskiy"] = Damanskiy.Constants.GetLinks(),
             ["ByTheWillOfRome"] = ByTheWillOfRome.Constants.GetLinks(),
             ["OrcsDay"] = OrcsDay.Constants.GetLinks(),
+            ["MissionToUrpan"] = MissionToUrpan.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() => Books.Keys.ToList();
@@ -65,6 +66,9 @@ namespace Seeker.Gamebook
 
                 case 3:
                     return list.OrderByDescending(x => Game.Services.ParagraphOrder(x.Size)).ToList();
+
+                case 4:
+                    return list.OrderBy(x => x.Year).ToList();
 
                 default:
                     return list;

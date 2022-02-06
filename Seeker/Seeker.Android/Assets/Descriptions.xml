@@ -324,10 +324,20 @@
 		<Name>OrcsDay</Name>
 		<Title>День Орка</Title>
 		<Author>Кейси Трэйвис</Author>
+		<Original>Orc’s Day</Original>
 		<Translator>Jumangee, Anuta, Danger, Эргистал, Тара-сан и другие</Translator>
 		<Year>2008</Year>
 		<Text>В этой книге ты сыграешь роль орка – пятого колеса в колеснице фэнтези. Ты не достоин даже имени, и судьба твоя – умереть от руки героя.\n\nА может и нет. Тебе решать. Но помни... Ты НЕ герой.</Text>
 		<Paragraphs>100</Paragraphs>
 		<Size>10408</Size>
+	</Description>
+	<Description>
+		<Name>MissionToUrpan</Name>
+		<Title>Миссия на Урпан</Title>
+		<Author>Андрей Журавлёв</Author>
+		<Year>2022</Year>
+		<Text>Свободный пилот берётся за новую работу по доставке груза, не слишком вникнув в суть дела и возможные проблемы.</Text>
+		<Paragraphs>49</Paragraphs>
+		<Size>0</Size>
 	</Description>
 </Gamebooks>

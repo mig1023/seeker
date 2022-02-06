@@ -1,0 +1,18 @@
+<Gamebook>
+	<Paragraphs>
+		<Paragraph>
+			<Id>0</Id>
+			<Text>START</Text>
+			<Options>
+				<Option Destination="1" Text="В путь!"/>
+			</Options>
+		</Paragraph>
+		<Paragraph>
+			<Id>1</Id>
+			<Text>STOP</Text>
+			<Options>
+				<Option Destination="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
