@@ -9,5 +9,7 @@ namespace Seeker.Gamebook.MissionToUrpan
 
         public override List<string> Status() =>
             new List<string> { String.Format("Репутация: {0}", Character.Protagonist.Reputation) };
+
+        public override bool CheckOnlyIf(string option) => CheckOnlyIfTrigger(option);
     }
 }

@@ -21,6 +21,8 @@ namespace Seeker.Gamebook.MissionToUrpan
             [ColorTypes.BookColor] = "#0f1d3c",
         };
 
+        public override bool ShowDisabledOption() => true;
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
