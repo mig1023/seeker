@@ -33,7 +33,7 @@ namespace Seeker.Gamebook.MissionToUrpan
                 if (!Game.Option.IsTriggered(condition.Key))
                     continue;
 
-                results.Add(String.Format("{0}{1} очков за «{2}»", head, condition.Key, condition.Value));
+                results.Add(String.Format("{0}{1} очков за «{2}»", head, Math.Abs(condition.Value), condition.Key));
 
                 result += condition.Value;
                 lines += 1;
