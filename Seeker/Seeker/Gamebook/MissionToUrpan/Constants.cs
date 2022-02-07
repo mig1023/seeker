@@ -13,12 +13,26 @@ namespace Seeker.Gamebook.MissionToUrpan
             [ButtonTypes.Main] = "#0f1d3c",
             [ButtonTypes.Continue] = "#26334f",
             [ButtonTypes.System] = "#26334f",
+            [ButtonTypes.Action] = "#0d1a36",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#0d1a36",
             [ColorTypes.BookColor] = "#0f1d3c",
+        };
+
+        public static Dictionary<string, int> ResultCalculation() => new Dictionary<string, int>
+        {
+            ["Рана"] = -10,
+            ["Телохранитель"] = 15,
+            ["Проблемы с законом"] = 10,
+            ["Поломка"] = -20,
+            ["Два"] = -15,
+            ["Пилот боевого корабля"] = 20,
+            ["Миротворец"] = 10,
+            ["Задание выполнено"] = 20,
+            ["Лучший финал"] = 30,
         };
 
         public override bool ShowDisabledOption() => true;
