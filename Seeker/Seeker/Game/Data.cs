@@ -37,12 +37,15 @@ namespace Seeker.Game
 
         public static string InputResponse { get; set; }
 
-        public static void Clean()
+        public static void Clean(bool reStart = false)
         {
             InputResponse = String.Empty;
 
             Triggers.Clear();
             Path.Clear();
+
+            if (reStart)
+                return;
 
             Paragraphs = null;
             Actions = null;

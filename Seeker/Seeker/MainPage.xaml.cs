@@ -98,8 +98,8 @@ namespace Seeker
 
             if (startOfGame)
             {
+                Game.Data.Clean(reStart: true);
                 Game.Data.Protagonist();
-                Game.Data.Path.Clear();
             }
 
             Game.Paragraph paragraph = null;
