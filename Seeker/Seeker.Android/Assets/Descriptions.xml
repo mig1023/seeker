@@ -240,6 +240,7 @@
 		<Text>Стихи скажут о себе сами.</Text>
 		<Paragraphs>12</Paragraphs>
 		<Size>306</Size>
+		<Setting>Стихи</Setting>
 	</Description>
 	<Description>
 		<Name>Genesis</Name>
