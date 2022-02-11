@@ -27,8 +27,16 @@ namespace Seeker
 
             Game.Data.Actions = null;
 
+            string LastSetting = String.Empty;
+
             foreach (Description gamebook in List.GetSortedBooks())
             {
+                if ((List.Sort() == 5) && (LastSetting != gamebook.Setting))
+                {
+                    Options.Children.Add(Output.Interface.SettingSplitter(gamebook.Setting));
+                    LastSetting = gamebook.Setting;
+                }
+
                 Options.Children.Add(Output.Interface.GamebookImage(gamebook));
                 Options.Children.Add(Output.Buttons.GamebookButton(gamebook, (sender, e) => Gamebook_Click(gamebook.Book)));
 

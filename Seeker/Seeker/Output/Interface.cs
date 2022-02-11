@@ -17,6 +17,15 @@ namespace Seeker.Output
             Aspect = Aspect.AspectFill,
         };
 
+        public static Label SettingSplitter(string setting) => new Label
+        {
+            Text = String.Format("― {0} ―", setting),
+            HorizontalTextAlignment = TextAlignment.Center,
+            FontSize = Font(NamedSize.Large),
+            HorizontalOptions = LayoutOptions.Center,
+            Margin = new Thickness(0, 20),
+        };
+
         public static Image IllustrationImage(string image) => new Image
         {
             Source = image,
