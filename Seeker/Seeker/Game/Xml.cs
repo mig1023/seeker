@@ -158,6 +158,7 @@ namespace Seeker.Game
             description.Text = StringParse(data["Text"]);
             description.Paragraphs = StringParse(data["Paragraphs"]);
             description.Size = StringParse(data["Size"]);
+            description.Setting = StringParse(data["Setting"]);
         }
 
         private static void DescriptionLoad()

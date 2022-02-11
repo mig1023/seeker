@@ -70,6 +70,9 @@ namespace Seeker.Gamebook
                 case 4:
                     return list.OrderBy(x => x.Year).ToList();
 
+                case 5:
+                    return list.OrderBy(x => x.Setting).ToList();
+
                 default:
                     return list;
             }

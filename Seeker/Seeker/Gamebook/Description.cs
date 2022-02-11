@@ -36,6 +36,8 @@ namespace Seeker.Gamebook
 
         public string Text;
 
+        public string Setting;
+
         public Links Links;
     }
 }
