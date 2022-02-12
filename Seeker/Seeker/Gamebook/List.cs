@@ -47,6 +47,8 @@ namespace Seeker.Gamebook
 
         public static List<string> GetBooks() => Books.Keys.ToList();
 
+        public static int Sort() => Game.Settings.GetValue("Sort");
+
         public static List<Description> GetSortedBooks()
         {
             List<Description> list = new List<Description>();
@@ -54,9 +56,7 @@ namespace Seeker.Gamebook
             foreach (string game in List.GetBooks())
                 list.Add(List.GetDescription(game));
 
-            int sort = Game.Settings.GetValue("Sort");
-
-            switch (sort)
+            switch (Sort())
             {
                 case 1:
                     return list.OrderBy(x => x.Title).ToList();
@@ -71,7 +71,7 @@ namespace Seeker.Gamebook
                     return list.OrderBy(x => x.Year).ToList();
 
                 case 5:
-                    return list.OrderBy(x => x.Setting).ToList();
+                    return list.OrderBy(x => x.Setting).ThenBy(x => x.Title).ToList();
 
                 default:
                     return list;
