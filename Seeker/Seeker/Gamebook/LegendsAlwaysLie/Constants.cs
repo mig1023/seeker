@@ -40,6 +40,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 714, 715, 716 };
 
+        public override bool ShowDisabledOption() => true;
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
