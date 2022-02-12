@@ -31,7 +31,7 @@ namespace Seeker
 
             foreach (Description gamebook in List.GetSortedBooks())
             {
-                if ((List.Sort() == 5) && (LastSetting != gamebook.Setting))
+                if ((List.Sort() == 6) && (LastSetting != gamebook.Setting))
                 {
                     Options.Children.Add(Output.Interface.SettingSplitter(gamebook.Setting));
                     LastSetting = gamebook.Setting;
