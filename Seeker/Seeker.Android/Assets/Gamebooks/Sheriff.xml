@@ -147,9 +147,9 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>19</Id>
-		<Text>- В амбаре его убили.\n\nО Ясно,$ на предыдущий параграф</Text>
+		<Text>- В амбаре его убили.</Text>
 		<Options>
-			<Option Destination="0"/>
+			<Option Destination="92" text="Ясно"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -164,11 +164,11 @@
 		<Id>21</Id>
 		<Text></Text>
 		<Options>
-			<Option Destination="42" Text="Если отсутствует «Лево»: Посмотреть влево, $ ^«Лево»"/>
-			<Option Destination="66" Text="Если отсутствует «Право»: Посмотреть вправо, $ ^«Право»"/>
-			<Option Destination="33" Text="Если отсутствует «Портсигар»: Посмотреть вверх"/>
-			<Option Destination="72" Text="Если отсутствует «Низ»: Посмотреть вниз, $ ^«Низ»"/>
-			<Option Destination="18" Text="Если отмечено «Портсигар»: Закончить осмотр"/>
+			<Option Destination="42" Text="Посмотреть влево" OnlyIf="Лево" Do="Trigger" ValueString="Лево"/>
+			<Option Destination="66" Text="Посмотреть вправо" OnlyIf="Право" Do="Trigger" ValueString="Право"/>
+			<Option Destination="33" Text="Посмотреть вверх" OnlyIf="Портсигар" Do="Trigger" ValueString="Портсигар"/>
+			<Option Destination="72" Text="Посмотреть вниз" OnlyIf="Низ" Do="Trigger" ValueString="Низ"/>
+			<Option Destination="18" Text="Закончить осмотр" OnlyIf="Портсигар"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
