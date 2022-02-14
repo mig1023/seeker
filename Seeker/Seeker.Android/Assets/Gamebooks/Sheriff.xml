@@ -10,9 +10,9 @@
 		<Id>1</Id>
 		<Text>Выберите уровень сложности:</Text>
 		<Options>
-			<Option Destination="76" Text="Easy"/>
-			<Option Destination="76" Text="Medium"/>
-			<Option Destination="76" Text="Hard"/>
+			<Option Destination="76" Text="Easy" Do="Trigger" ValueString="Easy"/>
+			<Option Destination="76" Text="Medium" Do="Trigger" ValueString="Medium"/>
+			<Option Destination="76" Text="Hard" Do="Trigger" ValueString="Hard"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -277,9 +277,9 @@
 		<Id>36</Id>
 		<Text>На улице стояли Косой Джо, Хмурый Эдди. Тут же стояла повозка, на которой был установлен пулемет Гатлинга. Позади дымящегося аппарата стоял Генри Херрисон.\n\n- И откуда у тебя это, Генри?\n\n- Эхо войны.\n\n- Завтра же сдашь все в участок.\n\n- Конечно, конечно, шериф, - но по глазам видно, что так просто он с ним не расстанется.\n\n- Ты хотел меня поцеловать, - притянула Виктория Дэниэла к себе.\n\n- Ну, я думал, мы умрем.\n\nНаконец их губы сомкнулись в страстном поцелуе.</Text>
 		<Options>
-			<Option Destination="29" Text="Если отмечено «Изи»: Конец!"/>
-			<Option Destination="52" Text="Если отмечено «медиум»: Конец!"/>
-			<Option Destination="73" Text="Если отмечено «Хард»: Конец!"/>
+			<Option Destination="29" Text="Конец!" OnlyIf="Easy"/>
+			<Option Destination="52" Text="Конец!" OnlyIf="Medium"/>
+			<Option Destination="73" Text="Конец!" OnlyIf="Hard"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
