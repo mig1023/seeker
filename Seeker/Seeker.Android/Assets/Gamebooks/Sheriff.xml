@@ -232,9 +232,10 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>30</Id>
-		<Text>Тело хозяйки борделя нелепо взмахнуло руками и покатилось по лестнице.\n\nДикий визг огласил особняк и толпы девиц бросились со всех сторон, буквально разорвав вас на кусочки.\n\nО Если в наличии 1 «Вжух»: Вжух!, $ на предыдущий параграф, «Вжух» -1</Text>
+		<Text>Тело хозяйки борделя нелепо взмахнуло руками и покатилось по лестнице.\n\nДикий визг огласил особняк и толпы девиц бросились со всех сторон, буквально разорвав вас на кусочки.</Text>
 		<Options>
-			<Option Destination="0"/>
+			<Option Destination="74" OnlyIf="ВЖУХ >= 1" Do="OneMoreTime"/>
+			<Option Destination="0" OnlyIf="ВЖУХ &lt; 1"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -244,7 +245,7 @@
 			<Option Destination="61" Text="Осмотреть дробовик" OnlyIf="!Дробовик" Do="Trigger" ValueString="Дробовик"/>
 			<Option Destination="58" Text="Обыскать одежду Билли" OnlyIf="Патроны" Do="Trigger" ValueString="Патроны"/>
 			<Option Destination="25" Text="Отодвинуть тело в сторону" OnlyIf="!Женская перчатка»" Do="Trigger" ValueString="!Женская перчатка»"/>
-			<Option Destination="18" Text="Если отмечено «Женская перчатка», отмечено «Дробовик», отмечено «Патроны»: Продолжить осмотр места преступления"/>
+			<Option Destination="18" Text="Продолжить осмотр места преступления" OnlyIf="Женская перчатка, Дробовик, Патроны"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
