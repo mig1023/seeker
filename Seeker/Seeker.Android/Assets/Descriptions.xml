@@ -376,4 +376,14 @@
 		<Size>5159</Size>
 		<Setting>Научная фантастика</Setting>
 	</Description>
+	<Description>
+		<Name>Sheriff</Name>
+		<Title>Шериф</Title>
+		<Author>Zaratystra</Author>
+		<Year>2022</Year>
+		<Text>Вам предстоит найти убийцу и разобраться в непростом деле.</Text>
+		<Paragraphs>92</Paragraphs>
+		<Size>0</Size>
+		<Setting>Юмор</Setting>
+	</Description>
 </Gamebooks>
