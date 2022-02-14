@@ -656,8 +656,8 @@
 		<Id>88</Id>
 		<Text>- Да разве упомнишь всех. Похожие перчатки носят девочки мадам Жу-жу, поспрашивай у\n\nнеё.</Text>
 		<Options>
-			<Option Destination="89" Text=""/>
-			<Option Destination="89" Text=""/>
+			<Option Destination="17" Text="- Ну ладно, хватит о делах, наливай."/>
+			<Option Destination="17" Text="- Спасибо, пойду я домой."/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
