@@ -425,9 +425,9 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>55</Id>
-		<Text>- Молчишь? Ну молчи - молчи.\n\nО Далее, $ на предыдущий параграф</Text>
+		<Text>- Молчишь? Ну молчи - молчи.</Text>
 		<Options>
-			<Option Destination="0"/>
+			<Option Destination="46"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -441,14 +441,14 @@
 		<Id>57</Id>
 		<Text>- Вампиры.\n\n- Врешь, вампиров не бывает! - подал голос Джо. Дэн строго посмотрел в его сторону, и он заткнулся.\n\n- Значит, вампиры, ну-ну. Судье это будешь рассказывать. Завтра с утра отправимся к нему.</Text>
 		<Options>
-			<Option Destination="6" Text="Далее"/>
+			<Option Destination="6"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
 		<Id>58</Id>
-		<Text>В карманах нашлись запасные патроны к дробовику россыпью и больше ничего.\n\nО Забрать как вещдок., $ на предыдущий параграф</Text>
+		<Text>В карманах нашлись запасные патроны к дробовику россыпью и больше ничего.</Text>
 		<Options>
-			<Option Destination="0"/>
+			<Option Destination="31" Text="Забрать как вещдок"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
