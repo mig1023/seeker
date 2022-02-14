@@ -48,10 +48,10 @@
 		<Id>6</Id>
 		<Text></Text>
 		<Options>
-			<Option Destination="82" Text="Если отсутствует «имя»: - Как тебя зовут?, $ У«имя»"/>
-			<Option Destination="32" Text="Если отсутствует «вещи»: - Это твои вещи? (показать портсигар и перчатку), $  «вещи»"/>
-			<Option Destination="46" Text="Если отсутствует «Билли Томми»: - Зачем ты убила Билли и Томми?, $ ^«Билли Томми»"/>
-			<Option Destination="59" Text="Если отмечено «имя», отмечено «вещи», отмечено «Билли Томми»:Уйти"/>
+			<Option Destination="82" Text="«Как тебя зовут?»" OnlyIf="!имя" Do="Trigger" ValueString="имя"/>
+			<Option Destination="32" Text="«Это твои вещи?» (показать портсигар и перчатку)" OnlyIf="!вещи" Do="Trigger" ValueString="вещи"/>
+			<Option Destination="46" Text="«Зачем ты убила Билли и Томми?»" OnlyIf="!Билли Томми" Do="Trigger" ValueString="Билли Томми"/>
+			<Option Destination="59" Text="Уйти" OnlyIf="имя, вещи, Билли Томми"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
