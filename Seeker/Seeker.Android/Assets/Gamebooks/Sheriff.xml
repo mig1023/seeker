@@ -132,8 +132,8 @@
 		<Id>17</Id>
 		<Text>Утром Дэниэла разбудил настойчивый стук в дверь.</Text>
 		<Options>
-			<Option Destination="78" Text="Если отмечено «В говно»: Как же раскалывается голова"/>
-			<Option Destination="78" Text="Если отсутствует «В говно»: Я полон сил и энергии"/>
+			<Option Destination="78" Text="Как же раскалывается голова" OnlyIf="В хлам"/>
+			<Option Destination="78" Text="Я полон сил и энергии" OnlyIf="!В хлам"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -202,9 +202,10 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>26</Id>
-		<Text>- Тебе как всегда?\n\n- Да, наливай...\n\nУтро следующего дня, $-У «В говно»</Text>
+		<Text>- Тебе как всегда?\n\n- Да, наливай...</Text>
+		<Triggers>В хлам</Triggers>
 		<Options>
-			<Option Destination="17"/>
+			<Option Destination="17" Text="Утро следующего дня"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
@@ -585,8 +586,8 @@
 		<Id>78</Id>
 		<Text>Не дожидаясь приглашения в комнату, вошел Косой Джо. - Сэр, прибыл в восемь утра, как вы и приказывали.</Text>
 		<Options>
-			<Option Destination="60" Text="Если отмечено «В говно»: Заткнись, Джо, и подай мне бутылку с виски!"/>
-			<Option Destination="80" Text="Если отсутствует «В говно»: Молодец, из тебя выйдет толк"/>
+			<Option Destination="60" Text="Заткнись, Джо, и подай мне бутылку с виски!" OnlyIf="В хлам"/>
+			<Option Destination="80" Text="Молодец, из тебя выйдет толк" OnlyIf="!В хлам"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
