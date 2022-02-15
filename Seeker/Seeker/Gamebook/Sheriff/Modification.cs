@@ -9,6 +9,7 @@ namespace Seeker.Gamebook.Sheriff
             if (Name == "Level")
             {
                 Character.Protagonist.Whoosh += Constants.Levels()[ValueString];
+                Game.Option.Trigger(ValueString);
             }
             else if (Name == "CleanNotebook")
             {
