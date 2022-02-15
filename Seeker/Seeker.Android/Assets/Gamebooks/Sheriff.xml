@@ -102,7 +102,7 @@
 		<Id>13</Id>
 		<Text>Шериф лежал в своей кровати, уставившись безразличными глазами в потолок. В его теле не осталось ни капли крови.\n\nРядом лежал заряженный револьвер, которым он не успел воспользоватся так же как и бедняга Билли своим дробовиком.</Text>
 		<Options>
-			<Option Destination="74" OnlyIf="ВЖУХ >= 1" Do="Whoosh" Value="-1"/>
+			<Option Destination="74" Text="Вжууууух!" OnlyIf="ВЖУХ >= 1" Do="Whoosh" Value="-1"/>
 			<Option Destination="0" OnlyIf="ВЖУХ &lt; 1"/>
 		</Options>
 	</Paragraph>
@@ -231,7 +231,7 @@
 		<Id>30</Id>
 		<Text>Тело хозяйки борделя нелепо взмахнуло руками и покатилось по лестнице.\n\nДикий визг огласил особняк и толпы девиц бросились со всех сторон, буквально разорвав вас на кусочки.</Text>
 		<Options>
-			<Option Destination="74" OnlyIf="ВЖУХ >= 1" Do="Whoosh" Value="-1"/>
+			<Option Destination="86" Text="Вжууууух!" OnlyIf="ВЖУХ >= 1" Do="Whoosh" Value="-1"/>
 			<Option Destination="0" OnlyIf="ВЖУХ &lt; 1"/>
 		</Options>
 	</Paragraph>
@@ -397,7 +397,7 @@
 		<Id>51</Id>
 		<Text>Выбив дверь, они оказались в обширном подвале. Неярко светили масляные лампы, в их свете было хорошо видно скопление людей в ковбойских шляпах. Так вот где собрались все неудачливые клиенты этого заведения!\n\nДэниэл и Виктория отстреливались, а когда кончились патроны, в ход пошли ножи. Но в конечном итоге их смяли числом и разорвали на части.</Text>
 		<Options>
-			<Option Destination="74" OnlyIf="ВЖУХ >= 1" Do="Whoosh" Value="-1"/>
+			<Option Destination="77" Text="Вжууууух!" OnlyIf="ВЖУХ >= 1" Do="Whoosh" Value="-1"/>
 			<Option Destination="0" OnlyIf="ВЖУХ &lt; 1"/>
 		</Options>
 	</Paragraph>
@@ -476,7 +476,7 @@
 		<Id>62</Id>
 		<Text>Выстрел. Но в кресле уже никого нет.\n\n- Не люблю, когда меня не слушаются, - прошептали из-за спины, и два огромных клыка вонзились в шею.</Text>
 		<Options>
-			<Option Destination="74" OnlyIf="ВЖУХ >= 1" Do="Whoosh" Value="-1"/>
+			<Option Destination="20" Text="Вжууууух!" OnlyIf="ВЖУХ >= 1" Do="Whoosh" Value="-1"/>
 			<Option Destination="0" OnlyIf="ВЖУХ &lt; 1"/>
 		</Options>
 	</Paragraph>
