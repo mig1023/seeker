@@ -93,7 +93,7 @@ namespace Seeker.Output
             string text = (!String.IsNullOrEmpty(gamebook.Authors) ? gamebook.Authors.Split(',', '-')[0] : gamebook.Author);
 
             if (List.Sort() == Constants.SORT_BY_AUTHORS)
-                gamebook.AuthorsIndex(out text);
+                text = gamebook.AuthorsIndex();
 
             string disclaimerText = String.Format("© {0}, {1}", text.Trim() + AndOtherMark(gamebook), gamebook.Year);
 

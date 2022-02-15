@@ -39,11 +39,11 @@ namespace Seeker
 
                 if ((List.Sort() == Output.Constants.SORT_BY_AUTHORS))
                 {
-                    string marker = gamebook.AuthorsIndex(out string _)[0].ToString();
+                    string marker = gamebook.AuthorsIndex()[0].ToString();
 
                     if (LastMarker != marker)
                     {
-                        Options.Children.Add(Output.Interface.SortSplitter(marker));
+                        Options.Children.Add(Output.Interface.SortSplitter(marker.ToUpper()));
                         LastMarker = marker;
                     }
                 }

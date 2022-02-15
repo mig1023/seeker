@@ -24,6 +24,10 @@ namespace Seeker.Gamebook
 
         public string Authors;
 
+        public bool SinglePseudonym;
+
+        public bool FullPseudonym;
+
         public int Year;
 
         public string Paragraphs;
@@ -40,21 +44,19 @@ namespace Seeker.Gamebook
 
         public Links Links;
 
-        public string AuthorsIndex(out string autorsOutput)
+        public string AuthorsIndex()
         {
             string author = Author + Authors;
             string[] elements = author.Split(' ');
 
-            if (elements.Length > 1)
-            {
-                autorsOutput = String.Format("{0} {1}", elements[1], elements[0]);
-                return elements[1];
-            }
+            if (!SinglePseudonym && !FullPseudonym && (elements.Length > 1))
+                return String.Format("{0} {1}", elements[1].Replace(",", String.Empty), elements[0]);
+
+            else if (FullPseudonym)
+                return Author;
+
             else
-            {
-                autorsOutput = elements[0];
                 return elements[0];
-            }
         }
     }
 }

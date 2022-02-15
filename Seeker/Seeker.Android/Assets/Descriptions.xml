@@ -64,6 +64,7 @@
 		<Title>Рандеву</Title>
 		<Original>Rendez-Vous</Original>
 		<Author>Ал Торо</Author>
+		<FullPseudonym/>
 		<Translator>Мария Ерошкина</Translator>
 		<Year>2020</Year>
 		<Text>Уважаемые игроки, это приключение не похоже на большинство книг-игр, прочитанных вами ранее. Считайте его просто фантастической историей, в которую можно погрузиться и пережить от первого лица.</Text>
@@ -125,6 +126,7 @@
 		<Name>InvisibleFront</Name>
 		<Title>На невидимых фронтах</Title>
 		<Author>mmvvss</Author>
+		<SinglePseudonym/>
 		<Year>2018</Year>
 		<Text>Вам предстоит влезть в шкуру сотрудника всесильной советской разведки и попробовать внести свою лепту в борьбу с акулами империализма.</Text>
 		<Paragraphs>139</Paragraphs>
@@ -191,6 +193,7 @@
 		<Name>PensionerSimulator</Name>
 		<Title>Симулятор пенсионерки</Title>
 		<Authors>Zaratystra - оригинальная история,\nthe_arsonist - Кровавая охота</Authors>
+		<SinglePseudonym/>
 		<Translators>Перевод: Мария Ерошкина\nАдаптация перевода: Zaratystra\nРедактор: Wervek</Translators>
 		<Year>2018</Year>
 		<Text>Все совпадения случайны. Всё написанное художественный вымысел. Автор уважает стариков.</Text>
@@ -236,6 +239,7 @@
 		<Name>LastHokku</Name>
 		<Title>Последнее хокку</Title>
 		<Author>Юркий Слон</Author>
+		<FullPseudonym/>
 		<Year>2021</Year>
 		<Text>Стихи скажут о себе сами.</Text>
 		<Paragraphs>12</Paragraphs>
@@ -327,7 +331,7 @@
 	<Description>
 		<Name>WildDeath</Name>
 		<Title>Дикая смерть</Title>
-		<Author>Dima Brodovskiy</Author>
+		<Author>Дмитрий Бродовский</Author>
 		<Year>2019</Year>
 		<Text>События происходят в альтернативной реальности, где развитие остановилось во временах Дикого запада.</Text>
 		<Paragraphs>48</Paragraphs>
@@ -380,6 +384,7 @@
 		<Name>Sheriff</Name>
 		<Title>Шериф</Title>
 		<Author>Zaratystra</Author>
+		<SinglePseudonym/>
 		<Year>2022</Year>
 		<Text>Вам предстоит найти убийцу и разобраться в непростом деле.</Text>
 		<Paragraphs>92</Paragraphs>
