@@ -289,7 +289,9 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>37</Id>
-		<Text></Text>
+		<Images>
+			<Image Image="Sheriff_Woman.jpg"/>
+		</Images>
 		<Options>
 			<Option Destination="68" Text="«У тебя уже получается намного лучше»"/>
 		</Options>
@@ -645,9 +647,11 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>85</Id>
-		<Text>- Хм, неплохо.</Text>
+		<Images>
+			<Image Image="Sheriff_Place.jpg"/>
+		</Images>
 		<Options>
-			<Option Destination="67"/>
+			<Option Destination="67" Text="«Хм, неплохо»"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
