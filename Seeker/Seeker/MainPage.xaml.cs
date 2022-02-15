@@ -27,14 +27,25 @@ namespace Seeker
 
             Game.Data.Actions = null;
 
-            string LastSetting = String.Empty;
+            string LastMarker = String.Empty;
 
             foreach (Description gamebook in List.GetSortedBooks())
             {
-                if ((List.Sort() == 6) && (LastSetting != gamebook.Setting))
+                if ((List.Sort() == Output.Constants.SORT_BY_SETTINGS) && (LastMarker != gamebook.Setting))
                 {
-                    Options.Children.Add(Output.Interface.SettingSplitter(gamebook.Setting));
-                    LastSetting = gamebook.Setting;
+                    Options.Children.Add(Output.Interface.SortSplitter(gamebook.Setting));
+                    LastMarker = gamebook.Setting;
+                }
+
+                if ((List.Sort() == Output.Constants.SORT_BY_AUTHORS))
+                {
+                    string marker = gamebook.AuthorsIndex(out string _)[0].ToString();
+
+                    if (LastMarker != marker)
+                    {
+                        Options.Children.Add(Output.Interface.SortSplitter(marker));
+                        LastMarker = marker;
+                    }
                 }
 
                 Options.Children.Add(Output.Interface.GamebookImage(gamebook));

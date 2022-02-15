@@ -17,7 +17,7 @@ namespace Seeker.Output
             Aspect = Aspect.AspectFill,
         };
 
-        public static Label SettingSplitter(string setting) => new Label
+        public static Label SortSplitter(string setting) => new Label
         {
             Text = String.Format("― {0} ―", setting),
             HorizontalTextAlignment = TextAlignment.Center,
@@ -85,10 +85,17 @@ namespace Seeker.Output
             return statusLabels;
         }
 
+        private static string AndOtherMark(Description gamebook) =>
+            (!String.IsNullOrEmpty(gamebook.Authors) ? " и др." : String.Empty);
+
         public static Label GamebookDisclaimer(Description gamebook)
         {
-            string text = (!String.IsNullOrEmpty(gamebook.Authors) ? gamebook.Authors.Split(',', '-')[0] + " и др." : gamebook.Author);
-            string disclaimerText = String.Format("© {0}, {1}", text.Trim(), gamebook.Year);
+            string text = (!String.IsNullOrEmpty(gamebook.Authors) ? gamebook.Authors.Split(',', '-')[0] : gamebook.Author);
+
+            if (List.Sort() == Constants.SORT_BY_AUTHORS)
+                gamebook.AuthorsIndex(out text);
+
+            string disclaimerText = String.Format("© {0}, {1}", text.Trim() + AndOtherMark(gamebook), gamebook.Year);
 
             Label disclaimer = new Label
             {

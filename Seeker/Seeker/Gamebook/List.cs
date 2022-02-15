@@ -43,6 +43,7 @@ namespace Seeker.Gamebook
             ["ByTheWillOfRome"] = ByTheWillOfRome.Constants.GetLinks(),
             ["OrcsDay"] = OrcsDay.Constants.GetLinks(),
             ["MissionToUrpan"] = MissionToUrpan.Constants.GetLinks(),
+            ["Sheriff"] = Sheriff.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() => Books.Keys.ToList();
@@ -62,7 +63,7 @@ namespace Seeker.Gamebook
                     return list.OrderBy(x => x.Title).ToList();
 
                 case 2:
-                    return list.OrderBy(x => x.Author + x.Authors).ToList();
+                    return list.OrderBy(x => x.AuthorsIndex(out string _)).ToList();
 
                 case 3:
                     return list.OrderByDescending(x => Game.Services.ParagraphSize(x.Paragraphs)).ToList();
