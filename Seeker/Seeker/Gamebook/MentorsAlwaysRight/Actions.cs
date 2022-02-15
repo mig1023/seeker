@@ -466,7 +466,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             {
                 foreach (string opt in option.Split(','))
                 {
-                    if (Game.Option.IsTriggered(opt.Trim()))
+                    if (!Game.Option.IsTriggered(opt.Trim()))
                         return false;
                 }
 
