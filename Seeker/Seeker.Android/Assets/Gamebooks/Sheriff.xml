@@ -46,7 +46,6 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>6</Id>
-		<Text></Text>
 		<Options>
 			<Option Destination="82" Text="«Как тебя зовут?»" OnlyIf="!имя" Do="Trigger" ValueString="имя"/>
 			<Option Destination="32" Text="«Это твои вещи?» (показать портсигар и перчатку)" OnlyIf="!вещи" Do="Trigger" ValueString="вещи"/>
@@ -139,7 +138,6 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>18</Id>
-		<Text></Text>
 		<Options>
 			<Option Destination="31" Text="Осмотреть тело" OnlyIf="!Женская перчатка, !Дробовик, !Патроны"/>
 			<Option Destination="21" Text="Осмотреть Амбар" OnlyIf="!Портсигар"/>
@@ -163,12 +161,11 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>21</Id>
-		<Text></Text>
 		<Options>
-			<Option Destination="42" Text="Посмотреть влево" OnlyIf="Лево" Do="Trigger" ValueString="Лево"/>
-			<Option Destination="66" Text="Посмотреть вправо" OnlyIf="Право" Do="Trigger" ValueString="Право"/>
-			<Option Destination="33" Text="Посмотреть вверх" OnlyIf="Портсигар" Do="Trigger" ValueString="Портсигар"/>
-			<Option Destination="72" Text="Посмотреть вниз" OnlyIf="Низ" Do="Trigger" ValueString="Низ"/>
+			<Option Destination="42" Text="Посмотреть влево" OnlyIf="!Лево" Do="Trigger" ValueString="Лево"/>
+			<Option Destination="66" Text="Посмотреть вправо" OnlyIf="!Право" Do="Trigger" ValueString="Право"/>
+			<Option Destination="33" Text="Посмотреть вверх" OnlyIf="!Портсигар" Do="Trigger" ValueString="Портсигар"/>
+			<Option Destination="72" Text="Посмотреть вниз" OnlyIf="!Низ" Do="Trigger" ValueString="Низ"/>
 			<Option Destination="18" Text="Закончить осмотр" OnlyIf="Портсигар"/>
 		</Options>
 	</Paragraph>
@@ -243,7 +240,7 @@
 		<Text>Дэн откинул шкуру в сторону.\n\n- Тело кто-нибудь трогал после смерти?\n\n- Нет, сэр, только прикрыли шкурой.\n\n- Так, что тут у нас? Ага, труп мужчины. Горло перерезано чем-то острым, но крови почти нет. Хм, странно.\n\n- Вы правы, сэр, когда мы с отцом режем свиней, обычно всё вокруг залито кровищей, если вовремя не подставить корыто.\n\n- Значит, кто-то слил с него всю кровь как со свиньи. Убийца очень силён.\n\n- Это ужасно, сэр, - прокомментировал Джо.\n\n- Рядом с убитым лежит дробовик. Джо, это его оружие?\n\n- Да, сэр.</Text>
 		<Options>
 			<Option Destination="61" Text="Осмотреть дробовик" OnlyIf="!Дробовик" Do="Trigger" ValueString="Дробовик"/>
-			<Option Destination="58" Text="Обыскать одежду Билли" OnlyIf="Патроны" Do="Trigger" ValueString="Патроны"/>
+			<Option Destination="58" Text="Обыскать одежду Билли" OnlyIf="!Патроны" Do="Trigger" ValueString="Патроны"/>
 			<Option Destination="25" Text="Отодвинуть тело в сторону" OnlyIf="!Женская перчатка»" Do="Trigger" ValueString="!Женская перчатка»"/>
 			<Option Destination="18" Text="Продолжить осмотр места преступления" OnlyIf="Женская перчатка, Дробовик, Патроны"/>
 		</Options>
