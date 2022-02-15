@@ -6,7 +6,15 @@ namespace Seeker.Gamebook.Sheriff
     {
         public override void Do()
         {
-            base.Do(Character.Protagonist);
+            if (Name == "CleanNotebook")
+            {
+                foreach (string clean in Constants.CleaningNotebookList())
+                    Game.Option.Trigger(clean, remove: true);
+            }
+            else
+            {
+                base.Do(Character.Protagonist);
+            }
         }
     }
 }

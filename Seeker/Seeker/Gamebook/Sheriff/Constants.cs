@@ -20,6 +20,21 @@ namespace Seeker.Gamebook.Sheriff
             [ColorTypes.BookColor] = "#293e39",
         };
 
+        public static List<string> CleaningNotebookList() => new List<string>
+        {
+            "Билли убит в амбаре",
+            "Все любили Билли",
+            "Убит ночью",
+            "Не успел защититься",
+            "У убийцы есть рука",
+            "Убийца женщина",
+            "Надо проверить салон мадам Жу-жу",
+            "Женская перчатка",
+            "Дробовик",
+            "Патроны",
+            "Портсигар",
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
