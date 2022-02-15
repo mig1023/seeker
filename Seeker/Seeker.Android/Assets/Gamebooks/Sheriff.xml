@@ -700,7 +700,11 @@
 		<Id>92</Id>
 		<Text>Дэниэл извлек потрепанный блокнот, готовясь делать заметки.</Text>
 		<Options>
-			<Option Destination="18"/>
+			<Option Destination="19" Text="«Где его убили?»" OnlyIf="!Билли убит в амбаре" Do="Trigger" ValueString="Билли убит в амбаре"/>
+			<Option Destination="79" Text="«Кого вы подозреваете в убийстве?»" OnlyIf="!Все любили Билли" Do="Trigger" ValueString="Все любили Билли"/>
+			<Option Destination="27" Text="«Когда случилось убийство?»" OnlyIf="!Убит ночью" Do="Trigger" ValueString="Убит ночью"/>
+			<Option Destination="24" Text="«Мне всё ясно, убийца - садовник!»" OnlyIf="Билли убит в амбаре, Все любили Билли"/>
+			<Option Destination="21" Text="«Ведите меня в амбар!»" OnlyIf="Билли убит в амбаре, Все любили Билли"/>
 		</Options>
 	</Paragraph>
 </Paragraphs>
