@@ -241,7 +241,7 @@
 		<Options>
 			<Option Destination="61" Text="Осмотреть дробовик" OnlyIf="!Дробовик" Do="Trigger" ValueString="Дробовик"/>
 			<Option Destination="58" Text="Обыскать одежду Билли" OnlyIf="!Патроны" Do="Trigger" ValueString="Патроны"/>
-			<Option Destination="25" Text="Отодвинуть тело в сторону" OnlyIf="!Женская перчатка»" Do="Trigger" ValueString="!Женская перчатка»"/>
+			<Option Destination="25" Text="Отодвинуть тело в сторону" OnlyIf="!Женская перчатка" Do="Trigger" ValueString="Женская перчатка"/>
 			<Option Destination="18" Text="Продолжить осмотр места преступления" OnlyIf="Женская перчатка, Дробовик, Патроны"/>
 		</Options>
 	</Paragraph>
