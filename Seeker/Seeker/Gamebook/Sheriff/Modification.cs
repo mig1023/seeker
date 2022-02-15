@@ -6,7 +6,11 @@ namespace Seeker.Gamebook.Sheriff
     {
         public override void Do()
         {
-            if (Name == "CleanNotebook")
+            if (Name == "Level")
+            {
+                Character.Protagonist.Whoosh += Constants.Levels()[ValueString];
+            }
+            else if (Name == "CleanNotebook")
             {
                 foreach (string clean in Constants.CleaningNotebookList())
                     Game.Option.Trigger(clean, remove: true);

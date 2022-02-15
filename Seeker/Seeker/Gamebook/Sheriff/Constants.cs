@@ -35,6 +35,13 @@ namespace Seeker.Gamebook.Sheriff
             "Портсигар",
         };
 
+        public static Dictionary<string, int> Levels() => new Dictionary<string, int>
+        {
+            ["Easy"] = 100,
+            ["Medium"] = 1,
+            ["Hard"] = 0,
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

@@ -10,9 +10,9 @@
 		<Id>1</Id>
 		<Text>Выберите уровень сложности:</Text>
 		<Options>
-			<Option Destination="76" Text="Easy" Do="Trigger" ValueString="Easy"/>
-			<Option Destination="76" Text="Medium" Do="Trigger" ValueString="Medium"/>
-			<Option Destination="76" Text="Hard" Do="Trigger" ValueString="Hard"/>
+			<Option Destination="76" Text="Easy" Do="Level" ValueString="Easy"/>
+			<Option Destination="76" Text="Medium" Do="Level" ValueString="Medium"/>
+			<Option Destination="76" Text="Hard" Do="Level" ValueString="Hard"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
