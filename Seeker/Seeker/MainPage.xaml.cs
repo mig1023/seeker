@@ -31,7 +31,7 @@ namespace Seeker
 
             foreach (Description gamebook in List.GetSortedBooks())
             {
-                AddSplitters(gamebook, ref LastMarker);
+                Output.Interface.AddSplitters(gamebook, ref LastMarker, ref Options);
 
                 Options.Children.Add(Output.Interface.GamebookImage(gamebook));
                 Options.Children.Add(Output.Buttons.GamebookButton(gamebook, (sender, e) => Gamebook_Click(gamebook.Book)));
@@ -45,34 +45,6 @@ namespace Seeker
 
             if (toMain)
                 ScrollToTop();
-        }
-
-        private void AddSplitters(Description gamebook, ref string lastMarker)
-        {
-            if ((List.Sort() == Output.Constants.SORT_BY_SETTINGS) && (lastMarker != gamebook.Setting))
-                AddSplitter(gamebook.Setting, ref lastMarker, gamebook.Setting);
-
-            if ((List.Sort() == Output.Constants.SORT_BY_AUTHORS))
-            {
-                string marker = gamebook.AuthorsIndex()[0].ToString();
-
-                if (lastMarker != marker)
-                    AddSplitter(marker.ToUpper(), ref lastMarker, marker);
-            }
-
-            if ((List.Sort() == Output.Constants.SORT_BY_TITLE))
-            {
-                string marker = gamebook.Title[0].ToString();
-
-                if (lastMarker != marker)
-                    AddSplitter(marker.ToUpper(), ref lastMarker, marker);
-            }
-        }
-
-        private void AddSplitter(string splitter, ref string lastMarker, string marker)
-        {
-            Options.Children.Add(Output.Interface.SortSplitter(splitter));
-            lastMarker = marker;
         }
 
         private void ScrollToTop() => MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);

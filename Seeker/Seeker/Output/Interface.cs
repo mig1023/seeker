@@ -17,6 +17,34 @@ namespace Seeker.Output
             Aspect = Aspect.AspectFill,
         };
 
+        public static void AddSplitters(Description gamebook, ref string lastMarker, ref StackLayout options)
+        {
+            if ((List.Sort() == Constants.SORT_BY_SETTINGS) && (lastMarker != gamebook.Setting))
+                AddSplitter(gamebook.Setting, ref lastMarker, gamebook.Setting, ref options);
+
+            if ((List.Sort() == Constants.SORT_BY_AUTHORS))
+            {
+                string marker = gamebook.AuthorsIndex()[0].ToString();
+
+                if (lastMarker != marker)
+                    AddSplitter(marker.ToUpper(), ref lastMarker, marker, ref options);
+            }
+
+            if ((List.Sort() == Constants.SORT_BY_TITLE))
+            {
+                string marker = gamebook.Title[0].ToString();
+
+                if (lastMarker != marker)
+                    AddSplitter(marker.ToUpper(), ref lastMarker, marker, ref options);
+            }
+        }
+
+        private static void AddSplitter(string splitter, ref string lastMarker, string marker, ref StackLayout options)
+        {
+            options.Children.Add(Interface.SortSplitter(splitter));
+            lastMarker = marker;
+        }
+
         public static Label SortSplitter(string setting) => new Label
         {
             Text = String.Format("― {0} ―", setting),
