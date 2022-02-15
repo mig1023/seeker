@@ -26,6 +26,7 @@ namespace Seeker.Output
         public static double SYS_MENU_SPACING = 4;
         public static double SYS_MENU_HIGHT = 25;
 
+        public static int SORT_BY_TITLE = 1;
         public static int SORT_BY_AUTHORS = 2;
         public static int SORT_BY_SETTINGS = 6;
 

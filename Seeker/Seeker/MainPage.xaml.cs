@@ -59,6 +59,14 @@ namespace Seeker
                 if (lastMarker != marker)
                     AddSplitter(marker.ToUpper(), ref lastMarker, marker);
             }
+
+            if ((List.Sort() == Output.Constants.SORT_BY_TITLE))
+            {
+                string marker = gamebook.Title[0].ToString();
+
+                if (lastMarker != marker)
+                    AddSplitter(marker.ToUpper(), ref lastMarker, marker);
+            }
         }
 
         private void AddSplitter(string splitter, ref string lastMarker, string marker)
