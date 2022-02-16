@@ -381,7 +381,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             if (enemyCount > 2)
                 return ChangeFightStyle("Ох, сколько их набежало!", ref fight, "downTo", Character.FightStyles.Fullback);
             else if (enemyCount > 1)
-                return ChangeFightStyle("Надо аккуратно быть их по очереди!", ref fight, "downTo", Character.FightStyles.Defensive);
+                return ChangeFightStyle("Надо аккуратно бить их по очереди!", ref fight, "downTo", Character.FightStyles.Defensive);
 
             List<int> story = AttackStory[protagonist.Name];
 
