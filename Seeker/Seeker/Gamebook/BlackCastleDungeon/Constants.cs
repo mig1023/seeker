@@ -26,6 +26,8 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 619 };
 
+        public override int? GetParagraphsStatusesLimit() => 620;
+
         public static List<string> StaticSpells() => new List<string>
         {
             "ЗАКЛЯТИЕ КОПИИ", "ЗАКЛЯТИЕ СИЛЫ", "ЗАКЛЯТИЕ СЛАБОСТИ"
