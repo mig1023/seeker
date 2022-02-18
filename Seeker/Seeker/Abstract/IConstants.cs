@@ -14,6 +14,8 @@ namespace Seeker.Abstract
 
         List<int> GetParagraphsWithoutStatuses();
 
+        int? GetParagraphsStatusesLimit();
+
         bool ShowDisabledOption();
     }
 }

@@ -21,6 +21,8 @@ namespace Seeker.Prototypes
 
         public virtual List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
 
+        public virtual int? GetParagraphsStatusesLimit() => null;
+
         public virtual bool ShowDisabledOption() => false;
     }
 }

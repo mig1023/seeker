@@ -359,7 +359,13 @@ namespace Seeker
 
             List<string> statuses = (Game.Data.Actions == null ? null : Game.Data.Actions.Status());
 
-            if ((statuses == null) || Game.Data.Constants.GetParagraphsWithoutStatuses().Contains(Game.Data.CurrentParagraphID))
+            bool withoutStatuses = (statuses == null) ||
+                Game.Data.Constants.GetParagraphsWithoutStatuses().Contains(Game.Data.CurrentParagraphID);
+
+            int? statusesIsLimited = (statuses == null ? null : Game.Data.Constants.GetParagraphsStatusesLimit());
+            bool statusesLimit = (statusesIsLimited != null) && (Game.Data.CurrentParagraphID >= statusesIsLimited);
+
+            if (withoutStatuses || statusesLimit)
             {
                 StatusBorder.IsVisible = false;
                 MainGrid.RowDefinitions[1].Height = 0;
