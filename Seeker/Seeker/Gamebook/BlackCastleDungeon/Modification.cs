@@ -6,8 +6,12 @@ namespace Seeker.Gamebook.BlackCastleDungeon
     {
         public override void Do()
         {
-            if (Name == "RemoveSpell")
+            if (Name == "Cleaning")
+                Game.Data.Clean(reStart: true);
+
+            else if (Name == "RemoveSpell")
                 Character.Protagonist.Spells.RemoveAt(Character.Protagonist.Spells.IndexOf(ValueString));
+
             else
                 base.Do(Character.Protagonist);
         }
