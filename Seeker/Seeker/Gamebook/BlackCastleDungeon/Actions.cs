@@ -380,7 +380,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             protagonist.Mastery = oldMastery;
 
             fight.Add(String.Empty);
-            fight.Add(Result(win, "Вы ПОБЕДИЛИ|Вы ПРОИГРАЛИ("));
+            fight.Add(Result(win, "Вы ПОБЕДИЛИ|Вы ПРОИГРАЛИ"));
 
             return fight;
         }
