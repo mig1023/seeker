@@ -29,6 +29,7 @@ namespace Seeker.Output
             SettingOption("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING);
             SettingOption("Отображать меню", "SystemMenu", null);
             SettingOption("Сортировка", "Sort", Constants.SORT_SETTING);
+            SettingOption("Без оформления", "WithoutStyles", null);
 
             SettingCheatingBlock();
             SettingOption("Данные отладки", "Debug", null);

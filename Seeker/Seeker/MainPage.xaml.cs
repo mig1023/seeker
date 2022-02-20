@@ -33,7 +33,9 @@ namespace Seeker
             {
                 Output.Interface.AddSplitters(gamebook, ref LastMarker, ref Options);
 
-                Options.Children.Add(Output.Interface.GamebookImage(gamebook));
+                if (!Game.Settings.IsEnabled("WithoutStyles"))
+                    Options.Children.Add(Output.Interface.GamebookImage(gamebook));
+
                 Options.Children.Add(Output.Buttons.GamebookButton(gamebook, (sender, e) => Gamebook_Click(gamebook.Book)));
 
                 Output.Interface.GamebookDisclaimerAdd(gamebook, ref Options);
