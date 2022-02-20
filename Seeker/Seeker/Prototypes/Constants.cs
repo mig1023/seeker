@@ -49,8 +49,9 @@ namespace Seeker.Prototypes
             [ColorTypes.StatusBar] = "#5e5e5e",
             [ColorTypes.StatusFont] = "#ffffff",
             [ColorTypes.Font] = "#000000",
-            [ColorTypes.BookColor] = "#000000",
-            [ColorTypes.BookFontColor] = "#ffffff",
+            [ColorTypes.BookColor] = "#ffffff",
+            [ColorTypes.BookFontColor] = "#000000",
+            [ColorTypes.BookBorderColor] = "#000000",
         };
     }
 }

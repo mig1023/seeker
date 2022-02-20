@@ -20,7 +20,10 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public override string GetButtonsColor(ButtonTypes type)
         {
-            if ((type == ButtonTypes.Border) || (type == ButtonTypes.Continue) || (type == ButtonTypes.System))
+            if (Game.Settings.IsEnabled("WithoutStyles"))
+                return base.GetButtonsColor(type);
+
+            else if ((type == ButtonTypes.Border) || (type == ButtonTypes.Continue) || (type == ButtonTypes.System))
                 return String.Empty;
 
             else if (type == ButtonTypes.Font)
@@ -68,7 +71,10 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         public override string GetColor(Game.Data.ColorTypes type) 
         {
-            if (type == ColorTypes.BookColor)
+            if (Game.Settings.IsEnabled("WithoutStyles"))
+                return base.GetColor(type);
+
+            else if (type == ColorTypes.BookColor)
                 return "#990066";
 
             if (type == ColorTypes.StatusBar)
