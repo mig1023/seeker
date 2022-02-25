@@ -264,7 +264,17 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>26</Id>
-		<Text>В ярости полуорки хватают дубины и собираются проломить вам череп. Сражаться с ними придется одновременно.\n\nПервый палач\n\nМастерство 7 Выносливость 7\n\nВторой палач\n\nМастерство 8 Выносливость 6\n\n</Text>
+		<Text>В ярости полуорки хватают дубины и собираются проломить вам череп. Сражаться с ними придется одновременно.</Text>
+		<Actions>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="Первый палач" Mastery="7" Endurance="7"/>
+					<Enemy Name="Второй палач" Mastery="8" Endurance="6"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="110" Text="При вашей победе"/>
 		</Options>
