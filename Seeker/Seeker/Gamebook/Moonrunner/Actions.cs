@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.Moonrunner
 
         public int DevastatingAttack { get; set; }
         public int RoundsToFight { get; set; }
+        public int WoundsLimit { get; set; }
         public bool ThisIsSkill { get; set; }
         public bool BitesEveryRound { get; set; }
         public bool Invulnerable { get; set; }
@@ -103,7 +104,8 @@ namespace Seeker.Gamebook.Moonrunner
             return new List<string> { "RELOAD" };
         }
 
-        private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Endurance > 0).Count() == 0;
+        private bool NoMoreEnemies(List<Character> enemies) =>
+            enemies.Where(x => x.Endurance > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() == 0;
 
         public List<string> Fight()
         {
