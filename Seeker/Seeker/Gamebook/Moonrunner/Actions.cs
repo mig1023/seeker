@@ -16,6 +16,7 @@ namespace Seeker.Gamebook.Moonrunner
         public bool ThisIsSkill { get; set; }
         public bool BitesEveryRound { get; set; }
         public bool Invulnerable { get; set; }
+        public bool EnemyMasteryInc { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -193,6 +194,13 @@ namespace Seeker.Gamebook.Moonrunner
                             fight.Add(String.Empty);
                             fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                             return fight;
+                        }
+
+                        if (EnemyMasteryInc)
+                        {
+                            fight.Add("BOLD|Мастерство противника увеличилось на единицу");
+                            enemy.MaxMastery += 1;
+                            enemy.Mastery += 1;
                         }
                     }
                     else
