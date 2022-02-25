@@ -4705,7 +4705,9 @@
 				<Benefit Name="Skill" ValueString="Выживание"/>
 				<Benefit Name="MaxLife" Value="1"/>
 				<Benefit Name="Money" Value="-10"/>
-				<Aftertext>В то время, как другие, возможно, оплакивают крах цивилизации, вам открываются новые возможности и тайны мира.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">В то время, как другие, возможно, оплакивают крах цивилизации, вам открываются новые возможности и тайны мира.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
@@ -4718,7 +4720,9 @@
 				<Benefit Name="Skill" ValueString="Стрельба"/>
 				<Benefit Name="Money" Value="10"/>
 				<Benefit Name="Shots" Value="6"/>
-				<Aftertext>Сейчас трудные времена, сильный диктует законы слабым.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Сейчас трудные времена, сильный диктует законы слабым.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
@@ -4729,7 +4733,9 @@
 				<Benefit Name="Skill" ValueString="Кибернетика"/>
 				<Benefit Name="Skill" ValueString="Знание улиц"/>
 				<Benefit Name="Skill" ValueString="Воровство"/>
-				<Aftertext>Даже когда мир мучительно умирает, правительства  продолжают делить  остатки  власти и богатства. Вы крадете секреты и продаете их тем, кто больше заплатит.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Даже когда мир мучительно умирает, правительства  продолжают делить  остатки  власти и богатства. Вы крадете секреты и продаете их тем, кто больше заплатит.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
@@ -4742,7 +4748,9 @@
 				<Benefit Name="Skill" ValueString="Стрельба"/>
 				<Benefit Name="Money" Value="5"/>
 				<Benefit Name="Shots" Value="6"/>
-				<Aftertext>Немногие решаются пересекать ледяные пустоши между городами, поэтому смелый путешественник может получить хорошую прибыль.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Немногие решаются пересекать ледяные пустоши между городами, поэтому смелый путешественник может получить хорошую прибыль.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
@@ -4753,7 +4761,9 @@
 				<Benefit Name="Skill" ValueString="Рукопашный бой"/>
 				<Benefit Name="Skill" ValueString="Хитрость"/>
 				<Benefit Name="Skill" ValueString="Управление парадоксом"/>
-				<Aftertext>Ты одарен особым взглядом, поэтому тебе известно, что человечество обречено, если не предпринять шагов во спасение.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Ты одарен особым взглядом, поэтому тебе известно, что человечество обречено, если не предпринять шагов во спасение.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
@@ -4764,7 +4774,9 @@
 				<Benefit Name="Skill" ValueString="Знания"/>
 				<Benefit Name="Skill" ValueString="Пилотирование"/>
 				<Benefit Name="Skill" ValueString="Выживание"/>
-				<Aftertext>Большинство ничего не понимает в машинах, созданных предками, но вы усвоили, что знание — это сила.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Большинство ничего не понимает в машинах, созданных предками, но вы усвоили, что знание — это сила.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
@@ -4775,7 +4787,9 @@
 				<Benefit Name="Skill" ValueString="Хитрость"/>
 				<Benefit Name="Skill" ValueString="Управление парадоксом"/>
 				<Benefit Name="Skill" ValueString="Воровство"/>
-				<Aftertext>Будучи с рождения одаренным странными способностями, вы не являетесь человеком в полном смысле этого слова. Другие наверняка убьют вас, если узнают ваш секрет.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Будучи с рождения одаренным странными способностями, вы не являетесь человеком в полном смысле этого слова. Другие наверняка убьют вас, если узнают ваш секрет.</Aftertext>
+				</Aftertexts>
 			</Action>
 		</Actions>
 		<Options>
@@ -4790,74 +4804,98 @@
 				<Name>Get</Name>
 				<Button>Выбрать</Button>
 				<Skill>Ловкость</Skill>
-				<Aftertext>Это умение выделывать акробатичские финты, быстро бегать, преодолевать препятствия, держать равновесие и прыгать. Персонаж, обладающий этим умением, очень проворный и сообразительный.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Это умение выделывать акробатичские финты, быстро бегать, преодолевать препятствия, держать равновесие и прыгать. Персонаж, обладающий этим умением, очень проворный и сообразительный.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Выбрать</Button>
 				<Skill>Рукопашный Бой</Skill>
-				<Aftertext>Возможность использовать боевые искусства, включающие элементы каратэ, джиу-джитсу и тайджи.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Возможность использовать боевые искусства, включающие элементы каратэ, джиу-джитсу и тайджи.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Выбрать</Button>
 				<Skill>Хитрость</Skill>
-				<Aftertext>Умение находить удачное решение в любой сложной ситуации. Всегда пригодится.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Умение находить удачное решение в любой сложной ситуации. Всегда пригодится.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Выбрать</Button>
 				<Skill>Кибернетика</Skill>
-				<Aftertext>Практически забытая в умирающем мире двадцать третьего столетия наука программирования и управления компьютерами.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Практически забытая в умирающем мире двадцать третьего столетия наука программирования и управления компьютерами.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Выбрать</Button>
 				<Skill>ПСИ</Skill>
-				<Aftertext>Позволяет чувствовать опасность и читать чужие мысли. Вы должны иметь при себе пси-фокусировщик для того, чтобы использовать это умение.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Позволяет чувствовать опасность и читать чужие мысли. Вы должны иметь при себе пси-фокусировщик для того, чтобы использовать это умение.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Выбрать</Button>
 				<Skill>Знания</Skill>
-				<Aftertext>Совокупность легенд, исторических и базовых знаний, которые дают вам хорошее представление о том, с чем вы можете столкнуться.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Совокупность легенд, исторических и базовых знаний, которые дают вам хорошее представление о том, с чем вы можете столкнуться.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Выбрать</Button>
 				<Skill>Управление парадоксом</Skill>
-				<Aftertext>Умение влиять на законы мироздания. Оно медленнее и не такое удобное, как ПСИ, но иногда дает потрясающие результаты. Для использования необходим пси-фокусировщик.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Умение влиять на законы мироздания. Оно медленнее и не такое удобное, как ПСИ, но иногда дает потрясающие результаты. Для использования необходим пси-фокусировщик.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Выбрать</Button>
 				<Skill>Пилотирование</Skill>
-				<Aftertext>Позволяет управлять практически любым средством передвижения: от аэрокара до космического шаттла.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Позволяет управлять практически любым средством передвижения: от аэрокара до космического шаттла.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Выбрать</Button>
 				<Skill>Стрельба</Skill>
 				<Benefit Name="Shots" Value="6"/>
-				<Aftertext>Умение использовать дальнобойное оружие. Конечно, для его использования необходимо оружие — бризальный пистолет.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Умение использовать дальнобойное оружие. Конечно, для его использования необходимо оружие — бризальный пистолет.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Выбрать</Button>
 				<Skill>Знание улиц</Skill>
-				<Aftertext>Обладая этим умением, вы никогда не потеряетесь ни в одном городе. Там, где другие видят мешанину домов и лабиринт освещенных неоном улиц, вы чувствуете себя как дома.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Обладая этим умением, вы никогда не потеряетесь ни в одном городе. Там, где другие видят мешанину домов и лабиринт освещенных неоном улиц, вы чувствуете себя как дома.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Выбрать</Button>
 				<Skill>Воровство</Skill>
-				<Aftertext>Техники воровства и шпионажа: карманничество, вскрытие замков, а также возможность скрыться в тени.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Техники воровства и шпионажа: карманничество, вскрытие замков, а также возможность скрыться в тени.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get</Name>
 				<Button>Выбрать</Button>
 				<Skill>Выживание</Skill>
-				<Aftertext>Способность, которая избавит вас от проблем в пустынных и необитаемых регионах: лесах, пустынях, болотах и горах.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Способность, которая избавит вас от проблем в пустынных и необитаемых регионах: лесах, пустынях, болотах и горах.</Aftertext>
+				</Aftertexts>
 			</Action>
 		</Actions>
 		<Options>
