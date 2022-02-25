@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.Moonrunner
             [ButtonTypes.Main] = "#454a61",
             [ButtonTypes.Option] = "#7c3532",
             [ButtonTypes.Continue] = "#7c3532",
+            [ButtonTypes.Action] = "#654948",
             [ButtonTypes.System] = "#8478a6",
         };
 
@@ -20,6 +21,7 @@ namespace Seeker.Gamebook.Moonrunner
         {
             [ColorTypes.BookColor] = "#454a61",
             [ColorTypes.StatusBar] = "#632a28",
+            [ColorTypes.ActionBox] = "#e3d9d9",
         };
 
         public static Links GetLinks() => new Links
