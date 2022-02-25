@@ -7927,35 +7927,45 @@
 				<Button>Добавить, Отбавить</Button>
 				<Text>СИЛА</Text>
 				<Stat>Strength</Stat>
-				<Aftertext>Способность персонажа поднимать и переносить тяжести, бороться, а также общая выносливость.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Способность персонажа поднимать и переносить тяжести, бороться, а также общая выносливость.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get, Decrease</Name>
 				<Button>Добавить, Отбавить</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Stat>Skill</Stat>
-				<Aftertext>Скорость реакции, умение держать равновесие, уворачиваться, прыгать, а также ловкость рук (точные движения кистей и пальцев, включая игру на музыкальных инструментах).</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Скорость реакции, умение держать равновесие, уворачиваться, прыгать, а также ловкость рук (точные движения кистей и пальцев, включая игру на музыкальных инструментах).</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get, Decrease</Name>
 				<Button>Добавить, Отбавить</Button>
 				<Text>МУДРОСТЬ</Text>
 				<Stat>Wisdom</Stat>
-				<Aftertext>Общие знания, жизненный опыт, способность к анализу и логическим рассуждениям, умение замечать детали и делать правильные выводы.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Общие знания, жизненный опыт, способность к анализу и логическим рассуждениям, умение замечать детали и делать правильные выводы.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get, Decrease</Name>
 				<Button>Добавить, Отбавить</Button>
 				<Text>ХИТРОСТЬ</Text>
 				<Stat>Cunning</Stat>
-				<Aftertext>Способность обманывать, жульничать, воровские навыки, а также находчивость и умение быстро находить решения в сложных ситуациях.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Способность обманывать, жульничать, воровские навыки, а также находчивость и умение быстро находить решения в сложных ситуациях.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get, Decrease</Name>
 				<Button>Добавить, Отбавить</Button>
 				<Text>КРАСНОРЕЧИЕ</Text>
 				<Stat>Oratory</Stat>
-				<Aftertext>Способность разговорить собеседника, дар убеждения, умение слагать стихи и песни.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Способность разговорить собеседника, дар убеждения, умение слагать стихи и песни.</Aftertext>
+				</Aftertexts>
 			</Action>
 		</Actions>
 		<Options>
