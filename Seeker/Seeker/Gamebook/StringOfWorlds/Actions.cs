@@ -376,7 +376,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                         if (enemyLost)
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("BIG|GOOD|Вы ПОБЕДИЛИ :)"));
+                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                             return fight;
                         }
                     }
@@ -393,19 +393,19 @@ namespace Seeker.Gamebook.StringOfWorlds
                         if ((protagonist.Strength <= 0) || (HeroWoundsLimit && (protagonist.Strength <= 2)))
                         {
                             fight.Add(String.Empty);
-                            fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
+                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                             return fight;
                         }
                     }
                     else
-                        fight.Add(String.Format("BOLD|Ничья в раунде"));
+                        fight.Add("BOLD|Ничья в раунде");
 
                     attackAlready = true;
 
                     if ((RoundsToWin > 0) && (RoundsToWin <= round))
                     {
                         fight.Add(String.Empty);
-                        fight.Add(String.Format("BAD|Отведённые на победу раунды истекли.", RoundsToWin));
+                        fight.Add("BAD|Отведённые на победу раунды истекли.");
                         fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                         return fight;
                     }
