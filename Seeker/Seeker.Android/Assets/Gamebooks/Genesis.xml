@@ -1975,21 +1975,27 @@
 				<Button>Увеличить, Уменьшить</Button>
 				<Text>ЛОВКОСТЬ</Text>
 				<Bonus>Skill</Bonus>
-				<Aftertext>Это умение двигаться, преодолевать препятствия, общая подвижность. Чем она выше, тем вы быстрее.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Это умение двигаться, преодолевать препятствия, общая подвижность. Чем она выше, тем вы быстрее.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get, Decrease</Name>
 				<Button>Увеличить, Уменьшить</Button>
 				<Text>ХОЛОДНОЕ ОРУЖИЕ</Text>
 				<Bonus>Weapon</Bonus>
-				<Aftertext>Параметр, показывающий умение владеть холодным оружием. Тут все просто: чем он выше, тем вы более тренированный боец.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Параметр, показывающий умение владеть холодным оружием. Тут все просто: чем он выше, тем вы более тренированный боец.</Aftertext>
+				</Aftertexts>
 			</Action>
 			<Action>
 				<Name>Get, Decrease</Name>
 				<Button>Увеличить, Уменьшить</Button>
 				<Text>СТЕЛС</Text>
 				<Bonus>Stealth</Bonus>
-				<Aftertext>Параметр, показывающий способности к маскировке, умение замечать важные детали, находить нестандартные решения в опасных ситуациях, креативность.</Aftertext>
+				<Aftertexts>
+					<Aftertext Size="small">Параметр, показывающий способности к маскировке, умение замечать важные детали, находить нестандартные решения в опасных ситуациях, креативность.</Aftertext>
+				</Aftertexts>
 			</Action>
 		</Actions>
 		<Options>
