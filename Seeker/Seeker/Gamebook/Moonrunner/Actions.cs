@@ -17,6 +17,7 @@ namespace Seeker.Gamebook.Moonrunner
         public bool BitesEveryRound { get; set; }
         public bool Invulnerable { get; set; }
         public bool EnemyMasteryInc { get; set; }
+        public bool DoubleFail { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -153,6 +154,13 @@ namespace Seeker.Gamebook.Moonrunner
 
                     fight.Add(String.Format("Сила его удара: {0} + {1} + {2} = {3}",
                         Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength));
+
+                    if (DoubleFail && (enemyRollFirst == enemyRollSecond))
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add("BOLD|У противника выпал дубль!");
+                        return fight;
+                    }
 
                     if ((protagonistHitStrength > enemyHitStrength) && (!attackAlready || Game.Option.IsTriggered("Сражение")))
                     {
