@@ -56,6 +56,28 @@ namespace Seeker.Gamebook.Moonrunner
             return enemies;
         }
 
+        public List<string> Luck()
+        {
+            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
+
+            bool goodLuck = (firstDice + secondDice) <= protagonist.Luck;
+
+            List<string> luckCheck = new List<string> { String.Format(
+                "Проверка удачи: {0} + {1} {2} {3}",
+                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck
+            ) };
+
+            luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
+
+            if (protagonist.Luck > 1)
+            {
+                protagonist.Luck -= 1;
+                luckCheck.Add("Уровень удачи снижен на единицу");
+            }
+
+            return luckCheck;
+        }
+
         public List<string> Get()
         {
             if (ThisIsSkill && (protagonist.SkillSlots >= 1))
