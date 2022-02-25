@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.Moonrunner
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.BookColor] = "#454a61",
+            [ColorTypes.StatusBar] = "#632a28",
         };
 
         public static Links GetLinks() => new Links
