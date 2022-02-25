@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.Moonrunner
 
         public bool ThisIsSkill { get; set; }
         public bool DevastatingAttack { get; set; }
+        public bool BitesEveryRound { get; set; }
         public int RoundsToFight { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -112,6 +113,12 @@ namespace Seeker.Gamebook.Moonrunner
 
                 bool attackAlready = false;
                 int protagonistHitStrength = 0;
+
+                if (BitesEveryRound && (protagonist.Endurance > 1))
+                {
+                    fight.Add("BAD|Из-за укусов вы теряете одну Выносливость!");
+                    protagonist.Endurance -= 1;
+                }
 
                 foreach (Character enemy in FightEnemies)
                 {
