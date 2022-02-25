@@ -12,7 +12,7 @@ namespace Seeker.Gamebook.Moonrunner
         public List<Character> Enemies { get; set; }
 
         public bool ThisIsSkill { get; set; }
-
+        public bool DevastatingAttack { get; set; }
         public int RoundsToFight { get; set; }
 
         public override List<string> Status() => new List<string>
@@ -159,7 +159,7 @@ namespace Seeker.Gamebook.Moonrunner
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
-                        protagonist.Endurance -= 2;
+                        protagonist.Endurance -= (DevastatingAttack ? 4 : 2);
 
                         if (protagonist.Endurance <= 0)
                         {
