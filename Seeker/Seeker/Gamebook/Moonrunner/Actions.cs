@@ -22,6 +22,9 @@ namespace Seeker.Gamebook.Moonrunner
 
         public override bool CheckOnlyIf(string option) => CheckOnlyIfTrigger(option);
 
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
+
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool disabledSkillSlots = ThisIsSkill && (protagonist.SkillSlots < 1);
@@ -63,5 +66,9 @@ namespace Seeker.Gamebook.Moonrunner
 
             return new List<string> { "RELOAD" };
         }
+
+        public override bool IsHealingEnabled() => protagonist.Endurance < protagonist.MaxEndurance;
+
+        public override void UseHealing(int healingLevel) => protagonist.Endurance += healingLevel;
     }
 }
