@@ -11,10 +11,11 @@ namespace Seeker.Gamebook.Moonrunner
 
         public List<Character> Enemies { get; set; }
 
-        public bool ThisIsSkill { get; set; }
-        public bool DevastatingAttack { get; set; }
-        public bool BitesEveryRound { get; set; }
+        public int DevastatingAttack { get; set; }
         public int RoundsToFight { get; set; }
+        public bool ThisIsSkill { get; set; }
+        public bool BitesEveryRound { get; set; }
+        public bool Invulnerable { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -55,16 +56,21 @@ namespace Seeker.Gamebook.Moonrunner
                 return enemies;
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance));
+            {
+                if (enemy.Endurance > 0)
+                    enemies.Add(String.Format("{0}\nмастерство {1}  выносливость {2}", enemy.Name, enemy.Mastery, enemy.Endurance));
+                else
+                    enemies.Add(String.Format("{0}\nмастерство {1} ", enemy.Name, enemy.Mastery));
+            }
 
             return enemies;
         }
 
-        public List<string> Luck()
+        private List<string> Luck(out bool goodLuck)
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
 
-            bool goodLuck = (firstDice + secondDice) <= protagonist.Luck;
+            goodLuck = (firstDice + secondDice) <= protagonist.Luck;
 
             List<string> luckCheck = new List<string> { String.Format(
                 "Проверка удачи: {0} + {1} {2} {3}",
@@ -82,6 +88,8 @@ namespace Seeker.Gamebook.Moonrunner
             return luckCheck;
         }
 
+        public List<string> Luck() => Luck(out bool _);
+
         public List<string> Get()
         {
             if (ThisIsSkill && (protagonist.SkillSlots >= 1))
@@ -92,7 +100,6 @@ namespace Seeker.Gamebook.Moonrunner
 
             return new List<string> { "RELOAD" };
         }
-
 
         private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Endurance > 0).Count() == 0;
 
@@ -122,10 +129,13 @@ namespace Seeker.Gamebook.Moonrunner
 
                 foreach (Character enemy in FightEnemies)
                 {
-                    if (enemy.Endurance <= 0)
+                    if ((enemy.Endurance <= 0) && !Invulnerable)
                         continue;
 
-                    fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
+                    if (Invulnerable)
+                        fight.Add(enemy.Name);
+                    else
+                        fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
 
                     if (!attackAlready)
                     {
@@ -145,17 +155,27 @@ namespace Seeker.Gamebook.Moonrunner
 
                     if ((protagonistHitStrength > enemyHitStrength) && (!attackAlready || Game.Option.IsTriggered("Сражение")))
                     {
-                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
-
-                        enemy.Endurance -= 2;
-
-                        bool enemyLost = NoMoreEnemies(FightEnemies);
-
-                        if (enemyLost)
+                        if (Invulnerable)
                         {
-                            fight.Add(String.Empty);
-                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
-                            return fight;
+                            fight.AddRange(Luck(out bool goodLuck));
+
+                            if (goodLuck)
+                                return fight;
+                        }
+                        else
+                        {
+                            fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+
+                            enemy.Endurance -= 2;
+
+                            bool enemyLost = NoMoreEnemies(FightEnemies);
+
+                            if (enemyLost)
+                            {
+                                fight.Add(String.Empty);
+                                fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                                return fight;
+                            }
                         }
                     }
                     else if (protagonistHitStrength > enemyHitStrength)
@@ -166,7 +186,7 @@ namespace Seeker.Gamebook.Moonrunner
                     {
                         fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
 
-                        protagonist.Endurance -= (DevastatingAttack ? 4 : 2);
+                        protagonist.Endurance -= (DevastatingAttack > 0 ? DevastatingAttack : 2);
 
                         if (protagonist.Endurance <= 0)
                         {
