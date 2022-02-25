@@ -3101,7 +3101,16 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>350</Id>
-		<Text>Конрад уже рядом. Со своим сверкающим мачете он стал безжалостным и неутомимым орудием убийства. Сражайтесь с ним.\n\nКонрад\n\nМастерство 10 Выносливость 12\n\n</Text>
+		<Text>Конрад уже рядом. Со своим сверкающим мачете он стал безжалостным и неутомимым орудием убийства. Сражайтесь с ним.</Text>
+		<Actions>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="Конрад" Mastery="10" Endurance="12"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="293" Text="Если вам удалось победить"/>
 		</Options>
