@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.Moonrunner
 {
@@ -11,6 +12,8 @@ namespace Seeker.Gamebook.Moonrunner
         public List<Character> Enemies { get; set; }
 
         public bool ThisIsSkill { get; set; }
+
+        public int RoundsToFight { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -87,6 +90,101 @@ namespace Seeker.Gamebook.Moonrunner
             }
 
             return new List<string> { "RELOAD" };
+        }
+
+
+        private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Endurance > 0).Count() == 0;
+
+        public List<string> Fight()
+        {
+            List<string> fight = new List<string>();
+
+            List<Character> FightEnemies = new List<Character>();
+
+            foreach (Character enemy in Enemies)
+                FightEnemies.Add(enemy.Clone());
+
+            int round = 1;
+
+            while (true)
+            {
+                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+
+                bool attackAlready = false;
+                int protagonistHitStrength = 0;
+
+                foreach (Character enemy in FightEnemies)
+                {
+                    if (enemy.Endurance <= 0)
+                        continue;
+
+                    fight.Add(String.Format("{0} (выносливость {1})", enemy.Name, enemy.Endurance));
+
+                    if (!attackAlready)
+                    {
+                        Game.Dice.DoubleRoll(out int protagonistRollFirst, out int protagonistRollSecond);
+                        protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + protagonist.Mastery;
+
+                        fight.Add(String.Format("Сила вашего удара: {0} + {1} + {2} = {3}",
+                            Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
+                            protagonist.Mastery, protagonistHitStrength));
+                    }
+
+                    Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
+                    int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
+
+                    fight.Add(String.Format("Сила его удара: {0} + {1} + {2} = {3}",
+                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength));
+
+                    if ((protagonistHitStrength > enemyHitStrength) && (!attackAlready || Game.Option.IsTriggered("Сражение")))
+                    {
+                        fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
+
+                        enemy.Endurance -= 2;
+
+                        bool enemyLost = NoMoreEnemies(FightEnemies);
+
+                        if (enemyLost)
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
+                            return fight;
+                        }
+                    }
+                    else if (protagonistHitStrength > enemyHitStrength)
+                    {
+                        fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
+                    }
+                    else if (protagonistHitStrength < enemyHitStrength)
+                    {
+                        fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
+
+                        protagonist.Endurance -= 2;
+
+                        if (protagonist.Endurance <= 0)
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
+                            return fight;
+                        }
+                    }
+                    else
+                        fight.Add("BOLD|Ничья в раунде");
+
+                    attackAlready = true;
+
+                    if ((RoundsToFight > 0) && (RoundsToFight <= round))
+                    {
+                        fight.Add(String.Empty);
+                        fight.Add("BOLD|Отведённые на победу раунды истекли.");
+                        return fight;
+                    }
+
+                    fight.Add(String.Empty);
+                }
+
+                round += 1;
+            }
         }
 
         public override bool IsHealingEnabled() => protagonist.Endurance < protagonist.MaxEndurance;

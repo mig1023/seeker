@@ -1819,7 +1819,18 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>223</Id>
-		<Text>Понимая, что разговоры не помогут, вы обнажаете меч. Сражаться с ними придется одновременно:\n\nФерно\n\nМастерство 8 Выносливость 8\n\nПервый Стражник\n\nМастерство 7 Выносливость 6\n\nВторой Стражник\n\nМастерство 8 Выносливость 5</Text>
+		<Text>Понимая, что разговоры не помогут, вы обнажаете меч. Сражаться с ними придется одновременно:</Text>
+		<Actions>
+			<Action>
+				<Name>Fight</Name>
+				<Button>Сражаться</Button>
+				<Enemies>
+					<Enemy Name="Ферно" Mastery="8" Endurance="8"/>
+					<Enemy Name="Первый Стражник" Mastery="7" Endurance="6"/>
+					<Enemy Name="Второй Стражник" Mastery="8" Endurance="5"/>
+				</Enemies>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="124" Text="Если вам удалось перебить всю стражу"/>
 		</Options>
