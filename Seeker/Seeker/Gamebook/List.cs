@@ -45,6 +45,7 @@ namespace Seeker.Gamebook
             ["MissionToUrpan"] = MissionToUrpan.Constants.GetLinks(),
             ["Sheriff"] = Sheriff.Constants.GetLinks(),
             ["Moonrunner"] = Moonrunner.Constants.GetLinks(),
+            ["DeathOfAntiquary"] = DeathOfAntiquary.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() => Books.Keys.ToList();
