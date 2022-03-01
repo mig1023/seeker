@@ -509,7 +509,8 @@
 		<Options>
 			<Option Destination="393" Text="Направитесь в приют для душевнобольных"/>
 			<Option Destination="23" Text="Направитесь в таверну «Старый осьминог»"/>
-			<Option Destination="207" Text="Направитесь на Солодовую улицу" Aftertext="Или, возможно, у вас есть повод посетить мельницу или пойти к Монашеским воротам?"/>
+			<Option Destination="207" Text="Направитесь на Солодовую улицу"/>
+			<Option Destination="64" Text="Пойти к Монашеским воротам" OnlyIf="Монашеские ворота"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
