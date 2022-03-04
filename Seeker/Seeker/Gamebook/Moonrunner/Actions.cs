@@ -28,7 +28,60 @@ namespace Seeker.Gamebook.Moonrunner
             String.Format("Золото: {0}", protagonist.Gold)
         };
 
-        public override bool CheckOnlyIf(string option) => CheckOnlyIfTrigger(option);
+        public override bool CheckOnlyIf(string option)
+        {
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("|"))
+            {
+                return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
+            }
+            else if (option.Contains(";"))
+            {
+                string[] options = option.Split(';');
+
+                int optionMustBe = int.Parse(options[0]);
+                string direction = options[1];
+                int optionCount = options.Where(x => Game.Option.IsTriggered(x.Trim())).Count();
+
+                switch (direction)
+                {
+                    case "less":
+                        return optionCount < optionMustBe;
+
+                    case "more":
+                        return optionCount > optionMustBe;
+
+                    case "exactly":
+                    default:
+                        return optionCount == optionMustBe;
+                }
+            }
+            else
+            {
+                foreach (string oneOption in option.Split(','))
+                {
+                    if (oneOption.Contains(">") || oneOption.Contains("<"))
+                    {
+                        int level = Game.Services.LevelParse(oneOption);
+
+                        if (oneOption.Contains("ВЫНОСЛИВОСТЬ <") && (level <= protagonist.Endurance))
+                            return false;
+                    }
+                    else if (oneOption.Contains("!"))
+                    {
+                        if (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim()))
+                            return false;
+                    }
+                    else if (!Game.Option.IsTriggered(oneOption.Trim()))
+                        return false;
+                }
+
+                return true;
+            }
+        }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
