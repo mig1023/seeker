@@ -2059,11 +2059,8 @@
 	<Paragraph>
 		<Id>206</Id>
 		<Text>Еще пара ступенек, и вы сможете разобрать слова. Одна, вторая, вы прислушиваетесь и слышите… «Хочу-у-у е-е-есть, хочу-у-у е-е-есть» - звучит в вашей голове. Это череп снова проголодался. Нужно коснуться его рукой (и потерять 4 Выносливости).</Text>
-		<Modifications>
-			<Modification Name="Endurance" Value="-4"/>
-		</Modifications>
 		<Options>
-			<Option Destination="296" Text="Сделать это"/>
+			<Option Destination="296" Text="Сделать это" Do="Endurance" Value="-4"/>
 			<Option Destination="191" Text="Не делать"/>
 		</Options>
 	</Paragraph>
