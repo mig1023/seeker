@@ -180,6 +180,21 @@ namespace Seeker.Gamebook.Moonrunner
             return dices;
         }
 
+        public List<string> DiceWounds()
+        {
+            List<string> wounds = new List<string> { };
+
+            int dice = Game.Dice.Roll();
+
+            wounds.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
+           
+            protagonist.Endurance -= dice * 2;
+
+            wounds.Add(String.Format("BIG|BAD|Вы потеряли жизней: {0}", dice * 2));
+
+            return wounds;
+        }
+
         private bool NoMoreEnemies(List<Character> enemies) =>
             enemies.Where(x => x.Endurance > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() == 0;
 
