@@ -24,6 +24,8 @@ namespace Seeker.Gamebook.Moonrunner
             [ColorTypes.ActionBox] = "#e3d9d9",
         };
 
+        public override bool ShowDisabledOption() => true;
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
