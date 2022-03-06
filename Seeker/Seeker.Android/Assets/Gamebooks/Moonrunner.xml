@@ -985,12 +985,18 @@
 			<Text Size="small">Потеряйте 4 Выносливости.</Text>
 			<Text>Затем киньте кубик 3 раза.</Text>
 		</Texts>
+		<Actions>
+			<Action>
+				<Name>ThreeDice</Name>
+				<Button>Кинуть три кубика</Button>
+			</Action>
+		</Actions>
 		<Modifications>
 			<Modification Name="Endurance" Value="-4"/>
 		</Modifications>
 		<Options>
 			<Option Destination="338" Text="Сумма больше вашей Выносливости"/>
-			<Option Destination="123" Text="Нет"/>
+			<Option Destination="123" Text="Меньше"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>

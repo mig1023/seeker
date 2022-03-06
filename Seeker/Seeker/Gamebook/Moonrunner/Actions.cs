@@ -157,6 +157,29 @@ namespace Seeker.Gamebook.Moonrunner
             return new List<string> { "RELOAD" };
         }
 
+        public List<string> ThreeDice()
+        {
+            List<string> dices = new List<string> { };
+
+            int dicesResult = 0;
+
+            for (int i = 1; i <= 3; i++)
+            {
+                int dice = Game.Dice.Roll();
+
+                dicesResult += dice;
+
+                dices.Add(String.Format("На {0} кубикe выпало: {1}", i, Game.Dice.Symbol(dice)));
+            }
+
+            dices.Add(String.Format("BOLD|Итого выпало: {0}", dicesResult));
+
+            dices.Add(dicesResult > protagonist.Endurance ?
+                "BIG|BAD|Больше, чем выносливость :(" : "BIG|GOOD|Меньше, чем выносливость :)");
+
+            return dices;
+        }
+
         private bool NoMoreEnemies(List<Character> enemies) =>
             enemies.Where(x => x.Endurance > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() == 0;
 
