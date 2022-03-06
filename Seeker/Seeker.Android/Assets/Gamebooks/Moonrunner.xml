@@ -2884,11 +2884,8 @@
 	<Paragraph>
 		<Id>288</Id>
 		<Text>Вы обдумываете, как лучше стащить флакон, как жуткий голос звучит в вашей голове: «Хочу-у-у е-есть… хочу-у е-есть». Это проклятый череп хочет еды прямо сейчас! Если вы согласны его накормить, то достаточно незаметно сунуть руку в заплечный мешок и коснуться его пальцами (и потерять 2 Выносливости).</Text>
-		<Modifications>
-			<Modification Name="Endurance" Value="-2"/>
-		</Modifications>
 		<Options>
-			<Option Destination="235" Text="Накормить"/>
+			<Option Destination="235" Text="Накормить" Do="Endurance" Value="-2"/>
 			<Option Destination="221" Text="Просто проигнорировать голос"/>
 		</Options>
 	</Paragraph>
