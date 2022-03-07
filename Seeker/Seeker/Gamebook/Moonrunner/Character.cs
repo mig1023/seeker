@@ -39,6 +39,13 @@ namespace Seeker.Gamebook.Moonrunner
 
         public int SkillSlots { get; set; }
 
+        private int _enemySpells;
+        public int EnemySpells
+        {
+            get => _enemySpells;
+            set => _enemySpells = Game.Param.Setter(value, _enemySpells, this);
+        }
+
         public override void Init()
         {
             base.Init();
@@ -51,6 +58,7 @@ namespace Seeker.Gamebook.Moonrunner
             Luck = MaxLuck;
             Gold = 15;
             SkillSlots = 4;
+            EnemySpells = 10;
 
             Game.Healing.Add(name: "Поесть", healing: 4, portions: 3);
         }
@@ -67,10 +75,12 @@ namespace Seeker.Gamebook.Moonrunner
             Luck = this.Luck,
             Gold = this.Gold,
             SkillSlots = this.SkillSlots,
+            EnemySpells = this.EnemySpells,
         };
 
         public override string Save() => String.Join("|",
-            MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck, Luck, Gold, SkillSlots
+            MaxMastery, Mastery, MaxEndurance, Endurance, MaxLuck,
+            Luck, Gold, SkillSlots, EnemySpells
         );
 
         public override void Load(string saveLine)
@@ -85,6 +95,7 @@ namespace Seeker.Gamebook.Moonrunner
             Luck = int.Parse(save[5]);
             Gold = int.Parse(save[6]);
             SkillSlots = int.Parse(save[7]);
+            EnemySpells = int.Parse(save[8]);
 
             IsProtagonist = true;
         }

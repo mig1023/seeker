@@ -2479,14 +2479,21 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>249</Id>
-		<Text>Выпавшее на кубике число покажет заклинание, которое он на вас направит. На столько же уменьшится его магическая Сила Нотуры. Если выпадет заклинание, на которое не хватит силы или которое уже было, киньте кубик снова. И так, пока магическая сила не уменьшится до нуля.\n\nЗаклинания:</Text>
+		<Text>Выпавшее на кубике число покажет заклинание, которое он на вас направит. На столько же уменьшится его магическая Сила Нотуры.</Text>	
+		<Actions>
+			<Action>
+				<Name>SpellsDice</Name>
+				<Button>Кинуть кубик</Button>
+				<Aftertext>Если выпадет заклинание, на которое не хватит силы или которое уже было, киньте кубик снова. И так, пока магическая сила не уменьшится до нуля.\n\nЗаклинания:</Aftertext>
+			</Action>
+		</Actions>
 		<Options>
-			<Option Destination="273" Text="1"/>
-			<Option Destination="242" Text="2"/>
-			<Option Destination="325" Text="3"/>
-			<Option Destination="354" Text="4"/>
-			<Option Destination="67" Text="5"/>
-			<Option Destination="335" Text="6" Aftertext="Отразив первое заклинание, посмотрите на свой Листок Путешественника:"/>
+			<Option Destination="273" Text="Первое" OnlyIf="!первое" Do="Trigger" ValueString="первое"/>
+			<Option Destination="242" Text="Второе" OnlyIf="!второе" Do="Trigger" ValueString="второе"/>
+			<Option Destination="325" Text="Третье" OnlyIf="!третье" Do="Trigger" ValueString="третье"/>
+			<Option Destination="354" Text="Четвёртое" OnlyIf="!четвёртое" Do="Trigger" ValueString="четвёртое"/>
+			<Option Destination="67" Text="Пятое" OnlyIf="!пятое" Do="Trigger" ValueString="пятое"/>
+			<Option Destination="335" Text="Шестое"  OnlyIf="!шестое" Do="Trigger" ValueString="шестое" Aftertext="Отразив первое заклинание, посмотрите на свой Листок Путешественника:"/>
 			<Option Destination="188" Text="Отразив первое заклинание, посмотрите на свой Листок Путешественника. Если там записано слово “ecproc”" OnlyIf="ecproc" Aftertext="Если нет, сражайтесь дальше."/>
 			<Option Destination="30" Text="Если вы смогли выдержать все его заклятья"/>
 		</Options>

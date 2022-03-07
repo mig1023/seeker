@@ -24,6 +24,16 @@ namespace Seeker.Gamebook.Moonrunner
             [ColorTypes.ActionBox] = "#e3d9d9",
         };
 
+        public static Dictionary<int, string> SpellsList() => new Dictionary<int, string>
+        {
+            [1] = "первое",
+            [2] = "второе",
+            [3] = "третье",
+            [4] = "четвёртое",
+            [5] = "пятое",
+            [6] = "шестое",
+        };
+
         public override bool ShowDisabledOption() => true;
 
         public static Links GetLinks() => new Links

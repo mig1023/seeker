@@ -195,6 +195,42 @@ namespace Seeker.Gamebook.Moonrunner
             return wounds;
         }
 
+        public List<string> SpellsDice()
+        {
+            List<string> spell = new List<string> { };
+
+            if (protagonist.EnemySpells <= 0)
+            {
+                spell.Add("BIG|GOOD|Вы смогли выдержать все его заклятья :)");
+                return spell;
+            }
+
+            int dice = 0;
+
+            while (true)
+            {
+                dice = Game.Dice.Roll();
+
+                spell.Add(String.Format("На кубике выпало: {0}", Game.Dice.Symbol(dice)));
+
+                if (Game.Option.IsTriggered(Constants.SpellsList()[dice])) 
+                    spell.Add("Уже было, кидаем ещё раз.");
+                else
+                    break;
+            }
+
+            protagonist.EnemySpells -= dice;
+
+            spell.Add(String.Format("Сила Натуры Грула снижается на {0} и теперь равен {1}", dice, protagonist.EnemySpells));
+
+            spell.Add(String.Format("BIG|BAD|Вам нужно выдержать заклятье: {0}", Constants.SpellsList()[dice]));
+
+            if (Game.Option.IsTriggered("ecproc"))
+                spell.Add("Выдержав это заклятье, посмотрите пункт про слово “ecproc”");
+
+            return spell;
+        }
+
         private bool NoMoreEnemies(List<Character> enemies) =>
             enemies.Where(x => x.Endurance > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() == 0;
 
