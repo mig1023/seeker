@@ -3860,7 +3860,9 @@
 		<Id>392</Id>
 		<Text>За самой трещиной лаз расширяется, превращаясь в коридор, по которому можно идти в полный рост. Но до чего же здесь темно!</Text>
 		<Options>
-			<Option Destination="560" Text="У вас есть спички" OnlyIf="Спички" Aftertext="Если спичек нет, то решайте:"/>
+			<Option Destination="560" Text="У вас есть спички" OnlyIf="Спички">
+				<Text>Если спичек нет, то решайте:</Text>
+			</Option>
 			<Option Destination="641" Text="Вернетесь"/>
 			<Option Destination="241" Text="Пойдете вперед"/>
 		</Options>
