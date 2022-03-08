@@ -1201,7 +1201,9 @@
 			<Option Destination="219" Text="Зеркало" OnlyIf="Зеркальце"/>
 			<Option Destination="256" Text="Нож" OnlyIf="Нож"/>
 			<Option Destination="285" Text="Томагавк" OnlyIf="Томагавк"/>
-			<Option Destination="349" Text="Подзорную трубу" Aftertext="Если ничего этого вы ей дать не можете..."/>
+			<Option Destination="349" Text="Подзорную трубу">
+				<Text>Если ничего этого вы ей дать не можете...</Text>
+			</Option>
 			<Option Destination="67"/>
 		</Options>
 	</Paragraph>
