@@ -4038,7 +4038,9 @@
 		<Options>
 			<Option Destination="251" Text="Завернуть в салун"/>
 			<Option Destination="307" Text="Пообедать в ресторане"/>
-			<Option Destination="382" Text="Пообедать на постоялом дворе для пассажиров дилижансов" Aftertext="Если не хотите посетить ни одно из этих заведений:"/>
+			<Option Destination="382" Text="Пообедать на постоялом дворе для пассажиров дилижансов">
+				<Text>Если не хотите посетить ни одно из этих заведений:</Text>
+			</Option>
 			<Option Destination="91"/>
 		</Options>
 	</Paragraph>
