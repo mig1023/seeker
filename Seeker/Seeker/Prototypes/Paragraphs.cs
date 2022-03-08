@@ -110,9 +110,9 @@ namespace Seeker.Prototypes
             Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
             OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
             Singleton = Game.Xml.StringParse(xmlOption.Attributes["Singleton"]),
-            Aftertext = Game.Xml.StringParse(xmlOption.Attributes["Aftertext"]),
-            Aftertexts = Game.Xml.TextsParse(xmlOption, aftertext: true),
             Input = Game.Xml.StringParse(xmlOption.Attributes["Input"]),
+            Aftertext = Game.Xml.StringParse(xmlOption.SelectSingleNode("Text")),
+            Aftertexts = Game.Xml.TextsParse(xmlOption),
         };
 
         public Game.Option OptionsTemplate(XmlNode xmlOption)
