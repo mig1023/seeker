@@ -6222,7 +6222,9 @@
 		</Actions>
 		<Options>
 			<Option Destination="171" Text="Предложить серебряный медальон" OnlyIf="Медальон"/>
-			<Option Destination="237" Text="Предложить самородки" OnlyIf="САМОРОДКОВ >= 1" Aftertext="Если вы делать этого не станете:"/>
+			<Option Destination="237" Text="Предложить самородки" OnlyIf="САМОРОДКОВ >= 1">
+				<Text>Если вы делать этого не станете:</Text>
+			</Option>
 			<Option Destination="115"/>
 		</Options>
 	</Paragraph>
