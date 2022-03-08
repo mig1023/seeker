@@ -1439,8 +1439,12 @@
 		<Options>
 			<Option Destination="307" Text="В ресторан"/>
 			<Option Destination="251" Text="В салун"/>
-			<Option Destination="382" Text="На постоялый двор" Aftertext="Или вам нужно купить что-нибудь для путешествия?"/>
-			<Option Destination="91" Text="Что-нибудь купить" Aftertext="Если же хотите покинуть город немедленно – что ж, дорогу вы знаете..."/>
+			<Option Destination="382" Text="На постоялый двор">
+				<Text>Или вам нужно купить что-нибудь для путешествия?</Text>
+			</Option>
+			<Option Destination="91" Text="Что-нибудь купить">
+				<Text>Если же хотите покинуть город немедленно – что ж, дорогу вы знаете...</Text>
+			</Option>
 			<Option Destination="132"/>
 		</Options>
 	</Paragraph>
