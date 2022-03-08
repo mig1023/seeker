@@ -6427,7 +6427,9 @@
 		</Modifications>
 		<Options>
 			<Option Destination="259" Text="Попытаете счастья на другом уступе"/>
-			<Option Destination="120" Text="Осмотрите расщелину" Aftertext="Или сочтете, что хватит с вас приключений – пора двигаться дальше:"/>
+			<Option Destination="120" Text="Осмотрите расщелину">
+				<Text>Или сочтете, что хватит с вас приключений – пора двигаться дальше:</Text>
+			</Option>
 			<Option Destination="331"/>
 		</Options>
 	</Paragraph>
