@@ -6275,7 +6275,9 @@
 		<Id>642</Id>
 		<Text>Если есть спички, можете набрать сухого камыша и разложить костер:</Text>
 		<Options>
-			<Option Destination="211" Text="Набрать сухого камыша" OnlyIf="Спички" Aftertext="Если спичек нет или вы не хотите разжигать огонь:"/>
+			<Option Destination="211" Text="Набрать сухого камыша" OnlyIf="Спички">
+				<Text>Если спичек нет или вы не хотите разжигать огонь:</Text>
+			</Option>
 			<Option Destination="523"/>
 		</Options>
 	</Paragraph>
