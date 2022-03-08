@@ -914,7 +914,9 @@
 		<Options>
 			<Option Destination="136" Text="Золотые часы" OnlyIf="Часы"/>
 			<Option Destination="171" Text="Серебряный медальон" OnlyIf="Медальон"/>
-			<Option Destination="237" Text="У вас есть самородки" OnlyIf="САМОРОДКОВ >= 1" Aftertext="Если ничего этого нет, торг не состоится: все другие ваши вещи хозяина не заинтересуют."/>
+			<Option Destination="237" Text="У вас есть самородки" OnlyIf="САМОРОДКОВ >= 1">
+				<Text>Если ничего этого нет, торг не состоится: все другие ваши вещи хозяина не заинтересуют.</Text>
+			</Option>
 			<Option Destination="115"/>
 		</Options>
 	</Paragraph>
