@@ -654,7 +654,9 @@
 	<Paragraph>
 		<Id>56</Id>
 		<Options>
-			<Option Destination="31" Text="Вы еще не были в аптеке и хотите зайти туда" Aftertext="Если не хотите – что ж, пора в дорогу:"/>
+			<Option Destination="31" Text="Вы еще не были в аптеке и хотите зайти туда">
+				<Text>Если не хотите – что ж, пора в дорогу:</Text>
+			</Option>
 			<Option Destination="132"/>
 		</Options>
 	</Paragraph>
