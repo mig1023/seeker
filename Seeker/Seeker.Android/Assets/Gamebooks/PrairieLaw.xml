@@ -6238,7 +6238,9 @@
 			<Option Destination="281" Text="Лассо" OnlyIf="Лассо"/>
 			<Option Destination="228" Text="Любую из добытых вами шкур" OnlyIf="ШКУР >= 1"/>
 			<Option Destination="184" Text="Нож" OnlyIf="Нож"/>
-			<Option Destination="93" Text="Самородок" OnlyIf="САМОРОДКОВ >= 1" Aftertext="Если ничего этого нет:"/>
+			<Option Destination="93" Text="Самородок" OnlyIf="САМОРОДКОВ >= 1">
+				<Text>Если ничего этого нет:</Text>
+			</Option>
 			<Option Destination="167" Text="Придется драться"/>
 		</Options>
 	</Paragraph>
