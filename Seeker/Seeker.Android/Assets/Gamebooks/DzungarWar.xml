@@ -7940,7 +7940,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="322" Text="Вернуться в пещеру отшельника" Aftertext="Изучить укрепления джунгаров, в этом случае:"/>
+				<Option Destination="322" Text="Вернуться в пещеру отшельника">
+					<Text>Изучить укрепления джунгаров, в этом случае:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
@@ -7957,7 +7959,9 @@
 			</Action>
 		</Actions>
 		<Options>		
-			<Option Destination="286" Text="В случае успеха" Aftertext="В случае провала: если это была первая проверка способностей в мире теней?"/>
+			<Option Destination="286" Text="В случае успеха">
+				<Text>В случае провала: если это была первая проверка способностей в мире теней?</Text>
+			</Option>
 			<Option Destination="322" Text="Первая"/>
 			<Option Destination="414" Text="Уже были раньше"/>	
 		</Options>
