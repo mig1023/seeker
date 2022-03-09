@@ -106,7 +106,9 @@
 		<Options>
 			<Option Destination="11" Text="Гай Марцел"/>
 			<Option Destination="8" Text="Секст Плавт"/>
-			<Option Destination="9" Text="Тит Ламий" Aftertext="Если вы закончили разговоры, то можете отдать свои первые распоряжения:"/>
+			<Option Destination="9" Text="Тит Ламий">
+				<Text>Если вы закончили разговоры, то можете отдать свои первые распоряжения:</Text>
+			</Option>
 			<Option Destination="6"/>
 		</Options>
 	</Paragraph>
