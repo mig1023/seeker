@@ -1676,7 +1676,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="182" Text="У Алдара Косе жеребец-ахалтекинец" OnlyIf="ЕДИНИЦЫ_ВРЕМЕНИ > 0, AkhalTeke" Aftertext="Иначе:"/>
+				<Option Destination="182" Text="У Алдара Косе жеребец-ахалтекинец" OnlyIf="ЕДИНИЦЫ_ВРЕМЕНИ > 0, AkhalTeke">
+					<Text>Иначе:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
