@@ -490,11 +490,15 @@
 			</Action>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="24" Text="Переодеться и зайти" OnlyIf="PartyClothes" Aftertext="Если у Алдара есть ханский перстень, показать его воинам. Они обязаны будут пропустить человека несмотря на его вид:"/>
+				<Option Destination="24" Text="Переодеться и зайти" OnlyIf="PartyClothes">
+					<Text>Если у Алдара есть ханский перстень, показать его воинам. Они обязаны будут пропустить человека несмотря на его вид:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="24" Text="Есть ханский перстень" OnlyIf="KhansRing" Aftertext="Если нет ни денег ни перстня, придётся полагаться на свои способности:"/>
+				<Option Destination="24" Text="Есть ханский перстень" OnlyIf="KhansRing">
+					<Text>Если нет ни денег ни перстня, придётся полагаться на свои способности:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
