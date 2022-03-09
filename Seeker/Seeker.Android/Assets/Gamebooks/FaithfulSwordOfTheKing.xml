@@ -2651,7 +2651,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="295" Text="Всадник в зелёном камзоле" OnlyIf="GreenCamisole" Aftertext="...если нет, — деритесь:"/>
+				<Option Destination="295" Text="Всадник в зелёном камзоле" OnlyIf="GreenCamisole">
+					<Text>...если нет, — деритесь:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
