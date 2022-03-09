@@ -4458,7 +4458,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="188" Text="Отмечено ключевое слово «Буддист»" OnlyIf="Буддист" Aftertext="Иначе:"/>
+				<Option Destination="188" Text="Отмечено ключевое слово «Буддист»" OnlyIf="Буддист">
+					<Text>Иначе:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
