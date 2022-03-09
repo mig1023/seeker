@@ -3083,7 +3083,9 @@
 		<Text>Удержаться не удается. Вы срываетесь вниз, навстречу поднимающейся пасти...\n\nЕсли вы зашли под первым уровнем:</Text>
 		<Options>
 			<Option Destination="344" Text="Записано ключевое слово «просветление»" OnlyIf="Просветление"/>
-			<Option Destination="363" Text="Нет этого слова" Aftertext="Если вы зашли под вторым уровнем:"/>
+			<Option Destination="363" Text="Нет этого слова">
+				<Text>Если вы зашли под вторым уровнем:</Text>
+			</Option>
 			<Option Destination="374"/>
 		</Options>
 	</Paragraph>
