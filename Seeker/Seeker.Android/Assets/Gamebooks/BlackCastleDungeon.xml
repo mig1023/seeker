@@ -3156,7 +3156,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="504" Text="Покинуть таверну и бежать" Aftertext="Воспользоваться же заклятием Копии вам не удастся: Водяной этого не допустит."/>
+				<Option Destination="504" Text="Покинуть таверну и бежать">
+					<Text>Воспользоваться же заклятием Копии вам не удастся: Водяной этого не допустит.</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
