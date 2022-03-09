@@ -1893,7 +1893,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="79" Text="Стражник подкуплен" OnlyIf="CorruptGuard" Aftertext="Иначе же — сражайтесь:"/>
+				<Option Destination="79" Text="Стражник подкуплен" OnlyIf="CorruptGuard">
+					<Text>Иначе же — сражайтесь:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
