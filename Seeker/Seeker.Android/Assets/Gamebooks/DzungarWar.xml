@@ -3708,7 +3708,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="322" Text="Вернуться в пещеру отшельника" Aftertext="Собрать сведения о составе джунгарских войск, в этом случае:"/>
+				<Option Destination="322" Text="Вернуться в пещеру отшельника">
+					<Text>Собрать сведения о составе джунгарских войск, в этом случае:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
@@ -3719,7 +3721,9 @@
 		</Actions>
 		<Triggers>Воин</Triggers>
 		<Options>
-			<Option Destination="656" Text="В случае успеха" Aftertext="В случае провала: это была первая проверка способностей в мире теней?"/>
+			<Option Destination="656" Text="В случае успеха">
+				<Text>В случае провала: это была первая проверка способностей в мире теней?</Text>
+			</Option>
 			<Option Destination="322" Text="Первая"/>
 			<Option Destination="474" Text="Уже были раньше"/>
 		</Options>
