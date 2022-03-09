@@ -7197,7 +7197,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="581" Text="Отмечено ключевое слово «Серик»" OnlyIf="Серик" Aftertext="В противном случае:"/>
+				<Option Destination="581" Text="Отмечено ключевое слово «Серик»" OnlyIf="Серик">
+					<Text>В противном случае:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
