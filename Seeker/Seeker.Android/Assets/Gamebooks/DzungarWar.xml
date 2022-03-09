@@ -4880,7 +4880,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="379" Text="Отмечено ключевое слово «Табун», но не отмечены слова «Скакун» или «Тулпар»" OnlyIf="Табун, !Скакун, !Тулпар" Aftertext="Иначе:"/>
+				<Option Destination="379" Text="Отмечено ключевое слово «Табун», но не отмечены слова «Скакун» или «Тулпар»" OnlyIf="Табун, !Скакун, !Тулпар">
+					<Text>Иначе:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
