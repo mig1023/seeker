@@ -7708,7 +7708,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="641" Text="Имя Берика знакомо Алдару" OnlyIf="Берик" Aftertext="В противном случае:"/>
+				<Option Destination="641" Text="Имя Берика знакомо Алдару" OnlyIf="Берик">
+					<Text>В противном случае:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
