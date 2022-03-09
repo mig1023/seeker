@@ -2604,7 +2604,9 @@
 	<Paragraph>
 		<Id>280</Id>
 		<Options>
-			<Option Destination="30" Text="Если вы еще не служили в кавалерии" Aftertext="Если уже служили - (глава «Децебал»)"/>
+			<Option Destination="30" Text="Если вы еще не служили в кавалерии">
+				<Text>Если уже служили - (глава «Децебал»)</Text>
+			</Option>
 		</Options>
 	</Paragraph>
 	<Paragraph>
