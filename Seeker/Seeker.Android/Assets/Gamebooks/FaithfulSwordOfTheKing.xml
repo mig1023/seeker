@@ -6681,7 +6681,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="476" Text="Подчинитесь" Aftertext="Или будете драться с ним?"/>
+				<Option Destination="476" Text="Подчинитесь">
+					<Text>Или будете драться с ним?</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
