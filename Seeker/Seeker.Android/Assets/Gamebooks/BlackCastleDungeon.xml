@@ -2479,7 +2479,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="565" Text="Знаете пароль" Aftertext="Если вы не знаете пароль, то придется пробиваться с помощью своего меча."/>
+				<Option Destination="565" Text="Знаете пароль">
+					<Text>Если вы не знаете пароль, то придется пробиваться с помощью своего меча.</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
