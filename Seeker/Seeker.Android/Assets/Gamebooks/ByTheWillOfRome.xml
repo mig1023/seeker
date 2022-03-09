@@ -373,7 +373,9 @@
 		<Options>
 			<Option Destination="18" Text="Витрувий"/>
 			<Option Destination="43" Text="Флавий"/>
-			<Option Destination="31" Text="Мирмидон" Aftertext="Если вы закончили разговоры:"/>
+			<Option Destination="31" Text="Мирмидон">
+				<Text>Если вы закончили разговоры:</Text>
+			</Option>
 			<Option Destination="16"/>
 		</Options>
 	</Paragraph>
