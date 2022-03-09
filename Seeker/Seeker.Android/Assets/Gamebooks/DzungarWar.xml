@@ -7219,7 +7219,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="531" Text="Отмечено ключевое слово «Солончак»" OnlyIf="Солончак" Aftertext="Иначе:"/>
+				<Option Destination="531" Text="Отмечено ключевое слово «Солончак»" OnlyIf="Солончак">
+					<Text>Иначе:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
