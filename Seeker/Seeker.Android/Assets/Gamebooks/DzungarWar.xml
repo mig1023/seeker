@@ -3854,7 +3854,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="186" Text="Отмечено ключевое слово «Тулпар» (при неотмеченном ключевом слове «Скакун»)" OnlyIf="Тулпар, !Скакун" Aftertext="В противном случае:"/>
+				<Option Destination="186" Text="Отмечено ключевое слово «Тулпар» (при неотмеченном ключевом слове «Скакун»)" OnlyIf="Тулпар, !Скакун">
+					<Text>В противном случае:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
