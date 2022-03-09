@@ -6622,7 +6622,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="506" Text="Отмечено ключевое слово «Ерик»" OnlyIf="Ерик" Aftertext="В противном случае:"/>
+				<Option Destination="506" Text="Отмечено ключевое слово «Ерик»" OnlyIf="Ерик">
+					<Text>В противном случае:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
