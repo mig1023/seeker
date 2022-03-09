@@ -48,7 +48,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="386" Text="Достать 100 ТАНЬГА из кошеля" Do="Tanga" Value="-100" OnlyIf="ТАНЬГА >= 100" Aftertext="Иначе придётся сразиться с духами:"/>
+				<Option Destination="386" Text="Достать 100 ТАНЬГА из кошеля" Do="Tanga" Value="-100" OnlyIf="ТАНЬГА >= 100">
+					<Text>Иначе придётся сразиться с духами:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
