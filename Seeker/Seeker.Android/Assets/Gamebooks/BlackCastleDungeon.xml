@@ -174,7 +174,9 @@
 			<Modification Name="Endurance" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="557" Text="Воспользоваться заклятием Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ" Aftertext="Если вы победите их, то можете откинуть ставни и осмотреть домик или же уйти и направиться к центральному строению:"/>
+			<Option Destination="557" Text="Воспользоваться заклятием Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ">
+				<Text>Если вы победите их, то можете откинуть ставни и осмотреть домик или же уйти и направиться к центральному строению:</Text>
+			</Option>
 			<Option Destination="120" Text="Осмотреть домик"/>
 			<Option Destination="416" Text="Уйти и направиться к центральному строению"/>
 		</Options>
