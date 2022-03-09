@@ -3570,7 +3570,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="661" Text="Поторговаться" OnlyIf="!Bargain" Aftertext="В случае провала он может купить товар по изначальной стоимости."/>
+			<Option Destination="661" Text="Поторговаться" OnlyIf="!Bargain">
+				<Text>В случае провала он может купить товар по изначальной стоимости.</Text>
+			</Option>
 			<Option Destination="77"/>
 		</Options>
 	</Paragraph>
