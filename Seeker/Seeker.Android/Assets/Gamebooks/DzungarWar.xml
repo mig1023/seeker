@@ -5518,7 +5518,9 @@
 		<Options>
 			<Option Destination="560" Text="Отмечено ключевое слово «Барымта»" OnlyIf="Барымта"/>
 			<Option Destination="568" Text="Отмечено ключевое слово «Святыня»" OnlyIf="Святыня"/>
-			<Option Destination="576" Text="Отмечено ключевое слово «Взрыв»" OnlyIf="Взрыв" Aftertext="Если отмечены несколько слов - посмотреть разные варианты по очереди."/>
+			<Option Destination="576" Text="Отмечено ключевое слово «Взрыв»" OnlyIf="Взрыв">
+				<Text>Если отмечены несколько слов - посмотреть разные варианты по очереди.</Text>
+			</Option>
 			<Option Destination="585"/>
 		</Options>
 	</Paragraph>
