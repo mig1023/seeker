@@ -1228,7 +1228,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="189" Text="Алдар Косе знает человека по имени Серик" OnlyIf="Serik" Aftertext="Если же нет, то:"/>
+				<Option Destination="189" Text="Алдар Косе знает человека по имени Серик" OnlyIf="Serik">
+					<Text>Если же нет, то:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
