@@ -4145,7 +4145,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="497" Text="Покинуть харчевню" Aftertext="Если же деньги есть, то:"/>
+				<Option Destination="497" Text="Покинуть харчевню">
+				<Text>Если же деньги есть, то:</Text>
+			</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
@@ -4318,7 +4320,9 @@
 		<Options>
 			<Option Destination="514" Text="Посетить уйгурское поселение и кульджинский базар"/>
 			<Option Destination="536" Text="Попроситься на приём к китайскому наместнику"/>
-			<Option Destination="545" Text="Покинуть Кульджу и отправиться дальше" Aftertext="Несмотря на опасность, остаться здесь, чтобы поговорить с кем-то из русских (если Алдар этого ещё не делал):"/>
+			<Option Destination="545" Text="Покинуть Кульджу и отправиться дальше">
+				<Text>Несмотря на опасность, остаться здесь, чтобы поговорить с кем-то из русских (если Алдар этого ещё не делал):</Text>
+			</Option>
 			<Option Destination="447" Text="С купцом Штейном"/>
 			<Option Destination="429" Text="С отцом Ионой"/>
 		</Options>
