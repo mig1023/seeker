@@ -4883,7 +4883,9 @@
 			<Option Destination="41" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 			<Option Destination="476" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
 			<Option Destination="172" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-			<Option Destination="347" Text="Продолжать драться" Aftertext="Можете, если есть желание, попробовать убежать:"/>
+			<Option Destination="347" Text="Продолжать драться">
+				<Text>Можете, если есть желание, попробовать убежать:</Text>
+			</Option>
 			<Option Destination="601" Text="Попробовать убежать"/>
 		</Options>
 	</Paragraph>
