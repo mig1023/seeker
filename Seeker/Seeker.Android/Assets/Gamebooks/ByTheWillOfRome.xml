@@ -155,7 +155,9 @@
 		<Options>
 			<Option Destination="43" Text="Флавий"/>
 			<Option Destination="31" Text="Мирмидон"/>
-			<Option Destination="40" Text="Аврелий" Aftertext="Если вы закончили разговоры:"/>
+			<Option Destination="40" Text="Аврелий">
+				<Text>Если вы закончили разговоры:</Text>
+			</Option>
 			<Option Destination="16"/>
 		</Options>
 	</Paragraph>
