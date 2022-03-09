@@ -4567,7 +4567,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="99" Text="Отмечено ключевое слово «Хищник»" OnlyIf="Хищник" Aftertext="Иначе:"/>
+				<Option Destination="99" Text="Отмечено ключевое слово «Хищник»" OnlyIf="Хищник">
+					<Text>Иначе:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
