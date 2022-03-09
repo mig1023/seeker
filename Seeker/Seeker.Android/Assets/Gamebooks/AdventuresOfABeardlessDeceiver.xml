@@ -2544,7 +2544,9 @@
 			</Action>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="102" Text="Есть записка Джанибека" OnlyIf="Note" Aftertext="Иначе:"/>
+				<Option Destination="102" Text="Есть записка Джанибека" OnlyIf="Note">
+					<Text>Иначе:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
