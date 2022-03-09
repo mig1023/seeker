@@ -244,7 +244,9 @@
 			</Action>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="194" Text="Знает слабое место персидского торговца" Aftertext="Иначе можно попытаться обмануть толстяка. Тогда:"/>
+				<Option Destination="194" Text="Знает слабое место персидского торговца">
+					<Text>Иначе можно попытаться обмануть толстяка. Тогда:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
@@ -255,7 +257,9 @@
 		</Actions>
 		<Options>
 			<Option Destination="185" Text="В случае успеха"/>
-			<Option Destination="67" Text="В случае провала" Aftertext="Либо же, не обращая внимания ни на что, продолжить путь на северо-запад к караван-сараю:"/>
+			<Option Destination="67" Text="В случае провала">
+				<Text>Либо же, не обращая внимания ни на что, продолжить путь на северо-запад к караван-сараю:</Text>
+			</Option>
 			<Option Destination="8"/>
 		</Options>
 	</Paragraph>
