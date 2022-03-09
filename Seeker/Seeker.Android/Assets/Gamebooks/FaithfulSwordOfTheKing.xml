@@ -1401,7 +1401,9 @@
 		<Id>142</Id>
 		<Text>Видя, что вы пытаетесь скрыться за деревьями, черные фигуры достают пистолеты и стреляют вам вслед. Одна из пуль попадает Арбалету в голову, вторая — вам в живот. Конец наступит всего через несколько часов. Выход один — попросить Бога о помощи:</Text>
 		<Options>
-			<Option Destination="521" OnlyIf="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention" Aftertext="Если не сделаете это, то остается только достойно встретить смерть…"/>
+			<Option Destination="521" OnlyIf="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention">
+				<Text>Если не сделаете это, то остается только достойно встретить смерть…</Text>
+			</Option>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
