@@ -5705,7 +5705,9 @@
 			<Modification Name="MaxSkill" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="591" Text="Всадник в зелёном камзоле" OnlyIf="GreenCamisole" Aftertext="...если нет:"/>
+			<Option Destination="591" Text="Всадник в зелёном камзоле" OnlyIf="GreenCamisole">
+				<Text>...если нет:</Text>
+			</Option>
 			<Option Destination="188"/>
 		</Options>
 	</Paragraph>
