@@ -173,7 +173,9 @@
 			</Action>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="241" Text="Не отмечено слово «Пастух», но отмечено слово «Дружба»" OnlyIf="Дружба, !Пастух" Aftertext="В любом другом случае:"/>
+				<Option Destination="241" Text="Не отмечено слово «Пастух», но отмечено слово «Дружба»" OnlyIf="Дружба, !Пастух">
+					<Text>В любом другом случае:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
