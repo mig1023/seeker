@@ -6962,7 +6962,9 @@
 			<Modification Name="Danger" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="537" Text="Остаться в крепости ночлег" Aftertext="Продолжить путь (в зависимости от того, в какую сторону Алдар Косе направляется):"/>
+			<Option Destination="537" Text="Остаться в крепости ночлег">
+				<Text>Продолжить путь (в зависимости от того, в какую сторону Алдар Косе направляется):</Text>
+			</Option>
 			<Option Destination="373" Text="На юг, в Кульджу"/>
 			<Option Destination="649" Text="На север, в Семиречье"/>
 		</Options>
