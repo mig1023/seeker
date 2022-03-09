@@ -211,11 +211,15 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="32" Text="У Алдара донской рысак" OnlyIf="ЕДИНИЦЫ_ВРЕМЕНИ > 0, DonsHorse" Aftertext="Иначе, можно попробовать:"/>
+				<Option Destination="32" Text="У Алдара донской рысак" OnlyIf="ЕДИНИЦЫ_ВРЕМЕНИ > 0, DonsHorse">
+					<Text>Иначе, можно попробовать:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="54" Text="Взять немного левее" OnlyIf="ЕДИНИЦЫ_ВРЕМЕНИ > 0, !DonsHorse" Aftertext="Либо прыгнуть в широком месте, тогда:"/>
+				<Option Destination="54" Text="Взять немного левее" OnlyIf="ЕДИНИЦЫ_ВРЕМЕНИ > 0, !DonsHorse">
+					<Text>Либо прыгнуть в широком месте, тогда:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
