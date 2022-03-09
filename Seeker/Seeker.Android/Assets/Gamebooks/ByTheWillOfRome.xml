@@ -3266,7 +3266,9 @@
 			<Modification Name="Honor" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="370" Text="Если вы еще не командовали пехотой" Aftertext="Если уже командовали - глава «Децебал»"/>
+			<Option Destination="370" Text="Если вы еще не командовали пехотой">
+				<Text>Если уже командовали - глава «Децебал».</Text>
+			</Option>
 		</Options>
 	</Paragraph>
 	<Paragraph>
