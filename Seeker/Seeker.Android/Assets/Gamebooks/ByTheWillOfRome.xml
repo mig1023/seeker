@@ -407,7 +407,9 @@
 			<Option Destination="48" Text="Купите у Флавия несколько спинтрий"/>
 			<Option Destination="18" Text="Откажетесь и решаете поговорить с другими посетителями палатки: Витрувий"/>
 			<Option Destination="31" Text="Мирмидон"/>
-			<Option Destination="40" Text="Аврелий" Aftertext="Если вы закончили разговоры:"/>
+			<Option Destination="40" Text="Аврелий">
+				<Text>Если вы закончили разговоры:</Text>
+			</Option>
 			<Option Destination="16"/>
 		</Options>
 	</Paragraph>
