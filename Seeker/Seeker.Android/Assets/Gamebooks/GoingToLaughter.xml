@@ -10614,7 +10614,9 @@
 			<Modification Name="Inspiration" Value="25"/>
 		</Modifications>
 		<Options>
-			<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Дежа вю" Aftertext="Если воля к жизни пересилила и недуг отступил, вычёркивайте недостаток «Сумасшествие»:"/>
+			<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Дежа вю">
+				<Text>Если воля к жизни пересилила и недуг отступил, вычёркивайте недостаток «Сумасшествие»:</Text>
+			</Option>
 			<Option Destination="993" Text="Воля к жизни пересилила!"/>
 		</Options>
 	</Paragraph>
