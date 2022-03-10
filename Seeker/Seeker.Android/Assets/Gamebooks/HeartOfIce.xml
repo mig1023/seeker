@@ -726,7 +726,9 @@
 			<Option Destination="204" Text="В медпункт"/>
 			<Option Destination="51" Text="В спортзал"/>
 			<Option Destination="447" Text="В оружейную"/>
-			<Option Destination="94" Text="В столовую" Aftertext="Если вы думаете, что везение уже на исходе и лучше уйти прежде, чем раскроется ваш обман:"/>
+			<Option Destination="94" Text="В столовую">
+				<Text>Если вы думаете, что везение уже на исходе и лучше уйти прежде, чем раскроется ваш обман:</Text>
+			</Option>
 			<Option Destination="311" Text="Лучше уйти"/>
 		</Options>
 	</Paragraph>
