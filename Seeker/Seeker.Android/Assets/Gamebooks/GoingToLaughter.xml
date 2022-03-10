@@ -6794,7 +6794,9 @@
 			<Option Destination="1150" Text="Если у Вас развита интуиция" OnlyIf="Интуиция"/>
 			<Option Destination="1157" Text="Если Вы набожный" OnlyIf="Набожность"/>
 			<Option Destination="1148" Text="Если Вы предусмотрительны" OnlyIf="Предусмотрительность"/>
-			<Option Destination="1139" Text="Если Вы везучий" OnlyIf="Везение" Aftertext="А если ничего из предложенного не подходит:"/>
+			<Option Destination="1139" Text="Если Вы везучий" OnlyIf="Везение">
+				<Text>А если ничего из предложенного не подходит:</Text>
+			</Option>
 			<Option Destination="340"/>
 		</Options>
 	</Paragraph>
