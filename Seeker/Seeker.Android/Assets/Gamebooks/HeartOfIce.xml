@@ -1003,7 +1003,9 @@
 		<Options>
 			<Option Destination="77" Text="О Сахаре"/>
 			<Option Destination="59" Text="О Гизе"/>
-			<Option Destination="143" Text="О Кахире" Aftertext="Или распрощаться с ним:"/>
+			<Option Destination="143" Text="О Кахире">
+				<Text>Или распрощаться с ним:</Text>
+			</Option>
 			<Option Destination="95"/>
 		</Options>
 	</Paragraph>
