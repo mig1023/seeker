@@ -1208,7 +1208,9 @@
 		<Triggers>Немезида</Triggers>
 		<Options>
 			<Option Destination="182" Text="Владеете Знаниями" OnlyIf="Знания"/>
-			<Option Destination="182" Text="Не владеете" Aftertext="Если же вы закончили дела в библиотеке:"/>
+			<Option Destination="182" Text="Не владеете">
+				<Text>Если же вы закончили дела в библиотеке:</Text>
+			</Option>
 			<Option Destination="73"/>
 		</Options>
 	</Paragraph>
