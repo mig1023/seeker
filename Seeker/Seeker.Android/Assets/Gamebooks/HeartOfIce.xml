@@ -616,7 +616,9 @@
 			<Modification Name="Shots" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="282" Text="Снять щит и выстрелить снова" Aftertext="Также вы можете:"/>
+			<Option Destination="282" Text="Снять щит и выстрелить снова">
+				<Text>Также вы можете:</Text>
+			</Option>
 			<Option Destination="107" Text="Отступить туда, откуда пришли"/>
 			<Option Destination="129" Text="Попробуете проскользнуть в туннели на другой стороне"/>
 		</Options>
