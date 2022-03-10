@@ -843,7 +843,9 @@
 			<Option Destination="126" Text="Чеймом Голготом"/>
 			<Option Destination="104" Text="Кайлом Боше"/>
 			<Option Destination="148" Text="Янусом Гаунтом"/>
-			<Option Destination="170" Text="Бароном Сириазисом" Aftertext="Или же вы можете просто отправиться спать..."/>
+			<Option Destination="170" Text="Бароном Сириазисом">
+				<Text>Или же вы можете просто отправиться спать...</Text>
+			</Option>
 			<Option Destination="192"/>
 		</Options>
 	</Paragraph>
