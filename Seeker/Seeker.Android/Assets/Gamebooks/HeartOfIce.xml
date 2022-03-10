@@ -953,11 +953,15 @@
 	<Paragraph>
 		<Id>95</Id>
 		<Options>
-			<Option Destination="353" Text="Есть ИД-карта, и вы хотите использовать ее" OnlyIf="ИД-карта" Aftertext="В противном случае, если вы еще этого не делали, вы можете попытаться разузнать что-нибудь:"/>
+			<Option Destination="353" Text="Есть ИД-карта, и вы хотите использовать ее" OnlyIf="ИД-карта">
+				<Text>В противном случае, если вы еще этого не делали, вы можете попытаться разузнать что-нибудь:</Text>
+			</Option>
 			<Option Destination="401" Text="О Бароне Сириазисе"/>
 			<Option Destination="422" Text="О Чейме Голготе"/>
 			<Option Destination="380" Text="О Гильгамеше"/>
-			<Option Destination="11" Text="О Сфинксе" Aftertext="Или вы хотите отдохнуть:"/>
+			<Option Destination="11" Text="О Сфинксе">
+				<Text>Или вы хотите отдохнуть:</Text>
+			</Option>
 			<Option Destination="311" Text="Отдохнуть"/>
 		</Options>
 	</Paragraph>
