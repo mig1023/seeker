@@ -333,7 +333,9 @@
 			<Modification Name="Hitpoints" Value="2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="72" Text="Что-то из этого есть" OnlyIf="Vessel" Aftertext="А если нет, то, увы, калиостр бесполезен, хотя на всякий случай можете прихватить его с собой. Теперь пора уходить..."/>
+			<Option Destination="72" Text="Что-то из этого есть" OnlyIf="Vessel">
+				<Text>А если нет, то, увы, калиостр бесполезен, хотя на всякий случай можете прихватить его с собой. Теперь пора уходить...</Text>
+			</Option>
 			<Option Destination="357"/>
 		</Options>
 	</Paragraph>
