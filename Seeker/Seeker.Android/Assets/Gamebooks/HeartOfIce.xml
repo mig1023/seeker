@@ -4666,7 +4666,9 @@
 		<Options>
 			<Option Destination="297" Text="О Глоси"/>
 			<Option Destination="318" Text="О Гильгамеше"/>
-			<Option Destination="383" Text="О Сердце Волента" Aftertext="Если не хотите ни о чём спрашивать, то можете:"/>
+			<Option Destination="383" Text="О Сердце Волента">
+				<Text>Если не хотите ни о чём спрашивать, то можете:</Text>
+			</Option>
 			<Option Destination="276" Text="Подняться на Исследовательский уровень"/>
 			<Option Destination="361" Text="Решить, что пора уходить"/>
 		</Options>
