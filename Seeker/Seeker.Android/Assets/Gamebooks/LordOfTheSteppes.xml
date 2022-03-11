@@ -5511,7 +5511,9 @@
 		<Options>
 			<Option Destination="609" Text="Осмотреть место убийства"/>
 			<Option Destination="409" Text="Поговорить с гончаром, живущим напротив"/>
-			<Option Destination="718" Text="С родителями убитого" Aftertext="А может, имеет смысл еще раз побеседовать с кем-нибудь:"/>
+			<Option Destination="718" Text="С родителями убитого">
+				<Text>А может, имеет смысл еще раз побеседовать с кем-нибудь:</Text>
+			</Option>
 			<Option Destination="824" Text="С вдовой"/>
 			<Option Destination="526" Text="С братом убитого"/>
 			<Option Destination="255" Text="С соседом"/>
