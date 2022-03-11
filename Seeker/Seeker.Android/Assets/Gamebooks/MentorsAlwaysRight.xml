@@ -2233,10 +2233,14 @@
 		<Text>На дверях выгравированы разные изображения. На тех, что в правой стене, изображены:</Text>
 		<Options>
 			<Option Destination="552" Text="Голова вепря"/>
-			<Option Destination="288" Text="Орел" Aftertext="Двери слева от вас также покрыты гравировкой:"/>
+			<Option Destination="288" Text="Орел">
+				<Text>Двери слева от вас также покрыты гравировкой:</Text>
+			</Option>
 			<Option Destination="103" Text="Голова ястреба"/>
 			<Option Destination="450" Text="Голова совы"/>
-			<Option Destination="355" Text="Горящая свеча" Aftertext="Если передумаете шастать по дверям, можете подняться на третий этаж:"/>
+			<Option Destination="355" Text="Горящая свеча">
+				<Text>Если передумаете шастать по дверям, можете подняться на третий этаж:</Text>
+			</Option>
 			<Option Destination="60"/>
 		</Options>
 	</Paragraph>
