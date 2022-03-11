@@ -1740,7 +1740,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="198" Text="ОБОРОТЕНЬ" OnlyIf="ВОЛК" Do="Transformation" Aftertext="Иначе - деритесь:"/>
+				<Option Destination="198" Text="ОБОРОТЕНЬ" OnlyIf="ВОЛК" Do="Transformation">
+					<Text>Иначе - деритесь:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
