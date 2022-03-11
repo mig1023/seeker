@@ -1855,7 +1855,9 @@
 		</Actions>
 		<Options>
 			<Option Destination="211" Text="По ней на запад"/>
-			<Option Destination="256" Text="По ней на северо-запад" Aftertext="Но если вы не хотите пройтись по ней, то можете двигаться на север:"/>
+			<Option Destination="256" Text="По ней на северо-запад">
+				<Text>Но если вы не хотите пройтись по ней, то можете двигаться на север:</Text>
+			</Option>
 			<Option Destination="55"/>
 		</Options>
 	</Paragraph>
