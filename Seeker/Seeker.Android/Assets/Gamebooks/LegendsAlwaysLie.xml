@@ -1383,7 +1383,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="125" Aftertext="Если хоть раз не удалось, то линия вашей судьбы оборвется здесь, в грязи богом забытого ущелья…"/>
+			<Option Destination="125">
+				<Text>Если хоть раз не удалось, то линия вашей судьбы оборвется здесь, в грязи богом забытого ущелья…</Text>
+			</Option>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
