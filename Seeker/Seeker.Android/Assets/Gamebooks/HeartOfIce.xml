@@ -4239,7 +4239,9 @@
 		</Actions>	
 		<Options>
 			<Option Destination="283" Text="Хотите также купить или продать оружие или другие необычные предметы"/>
-			<Option Destination="434" Text="Хотите заплатить за генетические улучшения" Aftertext="Если вы закончили с покупками:"/>
+			<Option Destination="434" Text="Хотите заплатить за генетические улучшения">
+				<Text>Если вы закончили с покупками:</Text>
+			</Option>
 			<Option Destination="414" Text="Владеете Знанием улиц" OnlyIf="Знание улиц"/>
 			<Option Destination="25" Text="Не владеете"/>
 		</Options>
