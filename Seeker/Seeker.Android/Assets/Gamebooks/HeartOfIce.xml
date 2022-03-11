@@ -2023,7 +2023,9 @@
 			<Modification Name="Shots" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="420" Text="Вернуться в руины и продолжить путешествие пешком" Aftertext="Отправиться по подземке в другом направлении, у вас есть выбор:"/>
+			<Option Destination="420" Text="Вернуться в руины и продолжить путешествие пешком">
+				<Text>Отправиться по подземке в другом направлении, у вас есть выбор:</Text>
+			</Option>
 			<Option Destination="50" Text="Кахира"/>
 			<Option Destination="31" Text="Тарабул"/>
 			<Option Destination="74" Text="Гиза"/>
