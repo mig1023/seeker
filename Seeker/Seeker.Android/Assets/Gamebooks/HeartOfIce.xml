@@ -1943,7 +1943,9 @@
 		<Triggers>Лунный</Triggers>
 		<Options>
 			<Option Destination="116" Text="Владеете Кибернетикой" OnlyIf="Кибернетика"/>
-			<Option Destination="138" Text="Нет" Aftertext="Если же вы закончили дела в библиотеке:"/>
+			<Option Destination="138" Text="Нет">
+				<Text>Если же вы закончили дела в библиотеке:</Text>
+			</Option>
 			<Option Destination="73"/>
 		</Options>
 	</Paragraph>
