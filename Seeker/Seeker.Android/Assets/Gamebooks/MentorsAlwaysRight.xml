@@ -1166,7 +1166,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="501" Text="Перелом излечен" OnlyIf="FractureCured" Aftertext="Если же ЛЕЧИЛОК у вас больше нет:"/>
+			<Option Destination="501" Text="Перелом излечен" OnlyIf="FractureCured">
+				<Text>Если же ЛЕЧИЛОК у вас больше нет:</Text>
+			</Option>
 			<Option Destination="77"/>
 		</Options>
 	</Paragraph>
