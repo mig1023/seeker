@@ -530,9 +530,13 @@
 		<Options>
 			<Option Destination="194" Text="Стальная"/>
 			<Option Destination="270" Text="Медная"/>
-			<Option Destination="103" Text="Деревянная, проклепанная гвоздями" Aftertext="В левой две одинаковые простенькие двери:"/>
+			<Option Destination="103" Text="Деревянная, проклепанная гвоздями">
+				<Text>В левой две одинаковые простенькие двери:</Text>
+			</Option>
 			<Option Destination="475" Text="Правая"/>
-			<Option Destination="292" Text="Левая" Aftertext="Есть еще одна:"/>
+			<Option Destination="292" Text="Левая">
+				<Text>Есть еще одна:</Text>
+			</Option>
 			<Option Destination="34" Text="Из слоновой кости"/>
 		</Options>
 	</Paragraph>
