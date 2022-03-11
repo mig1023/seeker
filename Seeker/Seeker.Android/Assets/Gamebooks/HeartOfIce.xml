@@ -3029,7 +3029,9 @@
 		<Id>284</Id>
 		<Text>Вы одновременно выхватываете оружие.</Text>
 		<Options>
-			<Option Destination="327" Text="Есть навык стрельбы" OnlyIf="Стрельба" Aftertext="В противном случае решайте: будете ли вы целиться..."/>
+			<Option Destination="327" Text="Есть навык стрельбы" OnlyIf="Стрельба">
+				<Text>В противном случае решайте: будете ли вы целиться...</Text>
+			</Option>
 			<Option Destination="348" Text="В грудь"/>
 			<Option Destination="369" Text="В горло"/>
 			<Option Destination="391" Text="Промеж глаз"/>
