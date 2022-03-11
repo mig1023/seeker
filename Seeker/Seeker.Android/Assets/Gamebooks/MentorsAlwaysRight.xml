@@ -291,7 +291,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="343" Text="Убить его метательным ножом" OnlyIf="МЕТАТЕЛЬ" Aftertext="Иначе - деритесь:"/>
+				<Option Destination="343" Text="Убить его метательным ножом" OnlyIf="МЕТАТЕЛЬ">
+					<Text>Иначе - деритесь:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
