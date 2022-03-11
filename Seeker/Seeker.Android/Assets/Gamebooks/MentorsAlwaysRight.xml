@@ -1141,7 +1141,9 @@
 			<Modification Name="Hitpoints" Value="-5"/>
 		</Modifications>
 		<Options>
-			<Option Destination="437" Text="Использовать ЛЕЧИЛКУ" Do="Spell" ValueString="ЛЕЧЕНИЕ" OnlyIf="ЛЕЧЕНИЕ" Aftertext="Иначе вы тут же отдадите концы от потери крови и болевого шока..."/>
+			<Option Destination="437" Text="Использовать ЛЕЧИЛКУ" Do="Spell" ValueString="ЛЕЧЕНИЕ" OnlyIf="ЛЕЧЕНИЕ">
+				<Text>Иначе вы тут же отдадите концы от потери крови и болевого шока...</Text>
+			</Option>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
