@@ -1740,7 +1740,9 @@
 	<Paragraph>
 		<Id>165</Id>
 		<Options>
-			<Option Destination="187" Text="Владеете Знанием улиц" OnlyIf="Знание улиц" Aftertext="Расположиться на ночь:"/>
+			<Option Destination="187" Text="Владеете Знанием улиц" OnlyIf="Знание улиц">
+				<Text>Расположиться на ночь:</Text>
+			</Option>
 			<Option Destination="209" Text="В парке"/>
 			<Option Destination="231" Text="На тихой боковой улице"/>
 			<Option Destination="253" Text="На открытой площади"/>
