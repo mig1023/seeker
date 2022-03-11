@@ -3161,7 +3161,9 @@
 		<Triggers>Мини-Глоси</Triggers>
 		<Options>
 			<Option Destination="339" Text="Обладаете знаниями Кибернетики" OnlyIf="Кибернетика"/>
-			<Option Destination="360" Text="Не обладаете" Aftertext="Если вы просто хотите подождать пока Риза аль-Байхаки придет за вами:"/>
+			<Option Destination="360" Text="Не обладаете">
+				<Text>Если вы просто хотите подождать пока Риза аль-Байхаки придет за вами:</Text>
+			</Option>
 			<Option Destination="275"/>
 		</Options>
 	</Paragraph>
