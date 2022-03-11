@@ -3302,7 +3302,9 @@
 		<Id>329</Id>
 		<Text>На улице темнеет, и надо поторопиться. Что предпримите теперь:</Text>
 		<Options>
-			<Option Destination="718" Text="Наведаетесь к родителям покойного" Aftertext="Повторно побеседуете с кем-нибудь:"/>
+			<Option Destination="718" Text="Наведаетесь к родителям покойного">
+				<Text>Повторно побеседуете с кем-нибудь:</Text>
+			</Option>
 			<Option Destination="824" Text="C вдовой"/>
 			<Option Destination="255" Text="C соседом"/>
 			<Option Destination="526" Text="C братом убитого"/>
