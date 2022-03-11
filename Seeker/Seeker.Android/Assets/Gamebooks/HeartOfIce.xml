@@ -4118,7 +4118,9 @@
 		<Options>
 			<Option Destination="104" Text="С Боше"/>
 			<Option Destination="126" Text="С Голготом"/>
-			<Option Destination="148" Text="С Гаунтом" Aftertext="Без Управления парадоксом вы останетесь неподвижно лежать на снегу долгие часы — потеряйте 1 единицу Здоровья:"/>
+			<Option Destination="148" Text="С Гаунтом">
+				<Text>Без Управления парадоксом вы останетесь неподвижно лежать на снегу долгие часы — потеряйте 1 единицу Здоровья:</Text>
+			</Option>
 			<Option Destination="192" Do="Life" Value="-1"/>
 		</Options>
 	</Paragraph>
