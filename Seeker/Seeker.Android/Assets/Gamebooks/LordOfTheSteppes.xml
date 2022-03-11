@@ -6044,7 +6044,9 @@
 		<Options>
 			<Option Destination="554" Text="Осмотрите теперь дом убитого"/>
 			<Option Destination="409" Text="Зайдете в гости к гончару"/>
-			<Option Destination="718" Text="Отправитесь к родителям мастера" Aftertext="Еще раз побеседуете со свидетелями, но тогда с кем:"/>
+			<Option Destination="718" Text="Отправитесь к родителям мастера">
+				<Text>Еще раз побеседуете со свидетелями, но тогда с кем:</Text>
+			</Option>
 			<Option Destination="824" Text="С вдовой"/>
 			<Option Destination="835" Text="С братом убитого"/>
 			<Option Destination="255" Text="С соседом"/>
