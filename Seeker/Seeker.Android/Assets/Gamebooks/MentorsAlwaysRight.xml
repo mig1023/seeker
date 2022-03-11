@@ -620,7 +620,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="343" Text="Вы камуфлировались грязью" OnlyIf="Camouflage" Aftertext="Иначе - бросьте кубик:"/>
+				<Option Destination="343" Text="Вы камуфлировались грязью" OnlyIf="Camouflage">
+					<Text>Иначе - бросьте кубик:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Dice</Name>
