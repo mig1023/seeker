@@ -4790,7 +4790,9 @@
 			<Modification Name="Hitpoints" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="503" OnlyIf="Sand" Aftertext="Второй замок выглядит идентичным первому и рыться в нем у вас уже нет никакого желания."/>
+			<Option Destination="503" OnlyIf="Sand">
+				<Text>Второй замок выглядит идентичным первому и рыться в нем у вас уже нет никакого желания.</Text>
+			</Option>
 			<Option Destination="493" Text="Решите, чем бы еще вам заняться"/>
 		</Options>
 	</Paragraph>
