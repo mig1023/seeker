@@ -407,7 +407,9 @@
 		<Id>39</Id>
 		<Text>Кстати, сколько вы оставили золотых?</Text>
 		<Options>
-			<Option Destination="109" Text="Больше двух" Aftertext="Иначе продолжайте путь:"/>
+			<Option Destination="109" Text="Больше двух">
+				<Text>Иначе продолжайте путь:</Text>
+			</Option>
 			<Option Destination="479"/>
 		</Options>
 	</Paragraph>
