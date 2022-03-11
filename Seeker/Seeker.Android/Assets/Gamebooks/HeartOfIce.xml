@@ -1507,7 +1507,9 @@
 		<Options>
 			<Option Destination="77" Text="О Сахаре"/>
 			<Option Destination="59" Text="О Гизе"/>
-			<Option Destination="99" Text="Попросить совета, где лучше остановиться на ночь" Aftertext="Или уйти:"/>
+			<Option Destination="99" Text="Попросить совета, где лучше остановиться на ночь">
+				<Text>Или уйти:</Text>
+			</Option>
 			<Option Destination="95"/>
 		</Options>
 	</Paragraph>
