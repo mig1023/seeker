@@ -8515,7 +8515,9 @@
 			<Option Destination="115" Text="Голубого"/>
 			<Option Destination="52" Text="Синего"/>
 			<Option Destination="863" Text="Дадите ему простой воды"/>
-			<Option Destination="383" Text="Сначала умоетесь и выпьете обычной воды" Aftertext="Попробуете на вкус воду из одного из отравленных родников, находящихся на вашей стороне:"/>
+			<Option Destination="383" Text="Сначала умоетесь и выпьете обычной воды">
+				<Text>Попробуете на вкус воду из одного из отравленных родников, находящихся на вашей стороне:</Text>
+			</Option>
 			<Option Destination="262" Text="Прозрачного"/>
 			<Option Destination="878" Text="Голубого"/>
 			<Option Destination="775" Text="Синего"/>
