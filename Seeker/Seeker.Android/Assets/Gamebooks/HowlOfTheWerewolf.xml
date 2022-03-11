@@ -245,7 +245,9 @@
 			<Option Destination="469" Text="Тройка"/>
 			<Option Destination="106" Text="Четвёрка"/>
 			<Option Destination="305" Text="Пятёрка"/>
-			<Option Destination="354" Text="Шестёрка" Aftertext="Если вы уже были на этом параграфе, и если вам выпало число, которые вы выбрасывали раньше, бросьте кубик снова:"/>
+			<Option Destination="354" Text="Шестёрка">
+				<Text>Если вы уже были на этом параграфе, и если вам выпало число, которые вы выбрасывали раньше, бросьте кубик снова:</Text>
+			</Option>
 			<Option Destination="20" Text="Бросить кубик ещё раз"/>
 		</Options>
 	</Paragraph>
