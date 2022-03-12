@@ -5353,7 +5353,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="476" Text="Ваша скорость на высоте" Aftertext="Если же ваша реакция запаздывает, то, увы, эльфийская стрела положит конец вашему походу..."/>
+			<Option Destination="476" Text="Ваша скорость на высоте">
+				<Text>Если же ваша реакция запаздывает, то, увы, эльфийская стрела положит конец вашему походу...</Text>
+			</Option>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
@@ -5391,7 +5393,9 @@
 		</Actions>
 		<Options>
 			<Option Destination="238" Text="В сторону идола"/>
-			<Option Destination="395" Text="Прямо в яму" Aftertext="Если же вы убили его без этого:"/>
+			<Option Destination="395" Text="Прямо в яму">
+				<Text>Если же вы убили его без этого:</Text>
+			</Option>
 			<Option Destination="279"/>
 		</Options>
 	</Paragraph>
