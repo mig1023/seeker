@@ -5310,7 +5310,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="121" Text="Теряете сознание" Aftertext="Если же вы устояли на ногах, то можете:"/>
+			<Option Destination="121" Text="Теряете сознание">
+				<Text>Если же вы устояли на ногах, то можете:</Text>
+			</Option>
 			<Option Destination="313" Text="Отвесить ему ответную зуботычину"/>
 			<Option Destination="231" Text="Выхватить меч"/>
 		</Options>
