@@ -2837,7 +2837,9 @@
 		<Text>Взмыв в рассеченное молниями небо, хищник летит на вас.</Text>
 		<Options>
 			<Option Destination="62" Text="Если у вас есть сфера алхимика"/>
-			<Option Destination="91" Text="Если вы владеете навыком Скалолазание" OnlyIf="Скалолазание" Aftertext="Иначе – остается только:"/>
+			<Option Destination="91" Text="Если вы владеете навыком Скалолазание" OnlyIf="Скалолазание">
+				<Text>Иначе – остается только:</Text>
+			</Option>
 			<Option Destination="15" Text="Бежать"/>
 			<Option Destination="112" Text="Драться"/>
 		</Options>
