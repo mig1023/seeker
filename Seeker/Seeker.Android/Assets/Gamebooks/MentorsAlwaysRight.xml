@@ -4662,7 +4662,9 @@
 		<Id>460</Id>
 		<Text>Подло брошенный аркан застает вас врасплох и тугая петля захлестывает ваше туловище, прижимая руки к телу. Хазрат пришпоривает коня...</Text>
 		<Options>
-			<Option Destination="149" Text="Попытаться освободиться при помощи МЕДВЕДЯ" OnlyIf="МЕДВЕДЬ" Do="Transformation" Aftertext="В противном случае:"/>
+			<Option Destination="149" Text="Попытаться освободиться при помощи МЕДВЕДЯ" OnlyIf="МЕДВЕДЬ" Do="Transformation">
+				<Text>В противном случае:</Text>
+			</Option>
 			<Option Destination="505"/>
 		</Options>
 	</Paragraph>
