@@ -3900,7 +3900,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="323" Text="Вам это удалось" Aftertext="Если же вы сочтете белые ступеньки слишком опасными, то можете попробовать:"/>
+			<Option Destination="323" Text="Вам это удалось">
+				<Text>Если же вы сочтете белые ступеньки слишком опасными, то можете попробовать:</Text>
+			</Option>
 			<Option Destination="290" Text="Ступить на черную"/>
 			<Option Destination="185" Text="Взбежать по перилам"/>
 		</Options>
