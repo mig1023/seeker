@@ -4565,7 +4565,9 @@
 		<Id>450</Id>
 		<Text>Увы, эту дверь вам удастся открыть только в том случае, если у вас есть черный ключ...</Text>
 		<Options>
-			<Option Destination="486" Text="Ключ есть" OnlyIf="BlackKey" Aftertext="Если же у вас его нет..."/>
+			<Option Destination="486" Text="Ключ есть" OnlyIf="BlackKey">
+				<Text>Если же у вас его нет...</Text>
+			</Option>
 			<Option Destination="220"/>
 		</Options>
 	</Paragraph>
