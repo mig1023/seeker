@@ -3202,7 +3202,9 @@
 	<Paragraph>
 		<Id>314</Id>
 		<Options>
-			<Option Destination="295" Text="Если у вас записано слово “cainam”" OnlyIf="cainam" Aftertext="Если нет – возвращайтесь, потеряв 1 Час:"/>
+			<Option Destination="295" Text="Если у вас записано слово “cainam”" OnlyIf="cainam">
+				<Text>Если нет – возвращайтесь, потеряв 1 Час:</Text>
+			</Option>
 			<Option Destination="20"/>
 		</Options>
 	</Paragraph>
