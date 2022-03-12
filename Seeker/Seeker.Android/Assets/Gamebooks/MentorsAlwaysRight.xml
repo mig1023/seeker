@@ -2609,7 +2609,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="180" Text="Выпал чет" Aftertext="Если же нечет, то, увы, свой маневр вы начали слишком поздно:"/>
+			<Option Destination="180" Text="Выпал чет">
+				<Text>Если же нечет, то, увы, свой маневр вы начали слишком поздно:</Text>
+			</Option>
 			<Option Destination="197" Text="Выпал нечет"/>
 		</Options>
 	</Paragraph>
