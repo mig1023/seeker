@@ -3040,7 +3040,9 @@
 			</Action>
 		</Actions>	
 		<Options>
-			<Option Destination="462" Text="Ваша скорость на высоте" Aftertext="Иначе удар ядовитого хвоста положит конец вашему походу..."/>
+			<Option Destination="462" Text="Ваша скорость на высоте">
+				<Text>Иначе удар ядовитого хвоста положит конец вашему походу...</Text>
+			</Option>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
@@ -3173,7 +3175,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="108" Text="Ваша СИЛА не меньше 13" OnlyIf="СИЛА >= 13" Aftertext="Если она меньше, то еще раз бросьте кубик:"/>
+				<Option Destination="108" Text="Ваша СИЛА не меньше 13" OnlyIf="СИЛА >= 13">
+					<Text>Если она меньше, то еще раз бросьте кубик:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>SimpleDice</Name>
