@@ -3373,7 +3373,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="65" Aftertext="Если же вы выбросите дубль, то, увы, уже не встанете - проломлена грудная клетка..."/>
+			<Option Destination="65">
+				<Text>Если же вы выбросите дубль, то, увы, уже не встанете - проломлена грудная клетка...</Text>
+			</Option>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
