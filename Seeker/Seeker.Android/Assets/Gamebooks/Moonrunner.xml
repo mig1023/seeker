@@ -2518,8 +2518,12 @@
 			<Option Destination="325" Text="Третье" OnlyIf="!третье" Do="Trigger" ValueString="третье"/>
 			<Option Destination="354" Text="Четвёртое" OnlyIf="!четвёртое" Do="Trigger" ValueString="четвёртое"/>
 			<Option Destination="67" Text="Пятое" OnlyIf="!пятое" Do="Trigger" ValueString="пятое"/>
-			<Option Destination="335" Text="Шестое"  OnlyIf="!шестое" Do="Trigger" ValueString="шестое" Aftertext="Отразив первое заклинание, посмотрите на свой Листок Путешественника:"/>
-			<Option Destination="188" Text="Отразив первое заклинание, посмотрите на свой Листок Путешественника. Если там записано слово “ecproc”" OnlyIf="ecproc" Aftertext="Если нет, сражайтесь дальше."/>
+			<Option Destination="335" Text="Шестое"  OnlyIf="!шестое" Do="Trigger" ValueString="шестое">
+				<Text>Отразив первое заклинание, посмотрите на свой Листок Путешественника:</Text>
+			</Option>
+			<Option Destination="188" Text="Отразив первое заклинание, посмотрите на свой Листок Путешественника. Если там записано слово “ecproc”" OnlyIf="ecproc">
+				<Text>Если нет, сражайтесь дальше.</Text>
+			</Option>
 			<Option Destination="30" Text="Если вы смогли выдержать все его заклятья"/>
 		</Options>
 	</Paragraph>
