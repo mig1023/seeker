@@ -4141,7 +4141,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="145" Text="Вы не успели прикончить вожака крысюков" Aftertext="Иначе - к бою:"/>
+				<Option Destination="145" Text="Вы не успели прикончить вожака крысюков">
+				<Text>Иначе - к бою:</Text>
+			</Option>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
