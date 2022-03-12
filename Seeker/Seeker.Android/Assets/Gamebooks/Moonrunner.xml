@@ -3988,7 +3988,9 @@
 			<Modification Name="Endurance" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="140" Text="Теперь можете попробовать подняться, цепляясь за ручки, если еще не делали этого" Aftertext="Либо остается лишь ждать и молиться:"/>
+			<Option Destination="140" Text="Теперь можете попробовать подняться, цепляясь за ручки, если еще не делали этого">
+				<Text>Либо остается лишь ждать и молиться:</Text>
+			</Option>
 			<Option Destination="170"/>
 		</Options>
 	</Paragraph>
