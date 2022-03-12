@@ -5293,7 +5293,9 @@
 			<Option Destination="275" Text="Что он здесь делает"/>
 			<Option Destination="473" Text="Много ли в округе его братьев-храмовников"/>
 			<Option Destination="506" Text="Где находится ближайшая деревня"/>
-			<Option Destination="80" Text="Что, по его мнению, происходит в этой загадочной местности" Aftertext="В любое время можете уйти:"/>
+			<Option Destination="80" Text="Что, по его мнению, происходит в этой загадочной местности">
+				<Text>В любое время можете уйти:</Text>
+			</Option>
 			<Option Destination="4"/>
 		</Options>
 	</Paragraph>
