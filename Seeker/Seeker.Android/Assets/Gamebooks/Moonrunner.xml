@@ -2376,7 +2376,9 @@
 			<Modification Name="Luck" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="181" Text="Если вы владеете навыком Ловкость рук" OnlyIf="Ловкость рук" Aftertext="Если нет – вам не суждено выбраться из ловушки. Ваше приключение закончено…"/>
+			<Option Destination="181" Text="Если вы владеете навыком Ловкость рук" OnlyIf="Ловкость рук">
+				<Text>Если нет – вам не суждено выбраться из ловушки. Ваше приключение закончено…</Text>
+			</Option>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
