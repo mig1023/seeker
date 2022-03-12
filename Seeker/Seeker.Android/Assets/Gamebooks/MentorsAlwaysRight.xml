@@ -2813,7 +2813,9 @@
 			<Modification Name="Gold" Value="3"/>
 		</Modifications>
 		<Options>
-			<Option Destination="239" Text="Вы убили шамана" Aftertext="Иначе пора уходить..."/>
+			<Option Destination="239" Text="Вы убили шамана">
+				<Text>Иначе пора уходить...</Text>
+			</Option>
 			<Option Destination="57"/>
 		</Options>
 	</Paragraph>
