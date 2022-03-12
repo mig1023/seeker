@@ -3519,7 +3519,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="326" Text="Осмотреть комнату получше" Aftertext="Либо выйти и заглянуть…"/>
+			<Option Destination="326" Text="Осмотреть комнату получше">
+				<Text>Либо выйти и заглянуть…</Text>
+			</Option>
 			<Option Destination="386" Text="В северную дверь"/>
 			<Option Destination="141" Text="В восточную дверь"/>
 		</Options>
