@@ -3834,7 +3834,9 @@
 		<Text>Ваша попытка увенчается успехом только в том случае, если ваша СИЛА не меньше 13. Тогда у вас получится разжать челюсти этой ловушке:</Text>
 		<Options>
 			<Option Destination="528" Text="Силы достаточно" OnlyIf="СИЛА >= 13"/>
-			<Option Destination="528" Text="МЕДВЕДЬ" OnlyIf="МЕДВЕДЬ" Do="Transformation" Aftertext="Иначе, потеряв с хлещущей кровью еще 2 ЖИЗНИ, остается лишь рубануть по барельефу мечом:"/>
+			<Option Destination="528" Text="МЕДВЕДЬ" OnlyIf="МЕДВЕДЬ" Do="Transformation">
+				<Text>Иначе, потеряв с хлещущей кровью еще 2 ЖИЗНИ, остается лишь рубануть по барельефу мечом:</Text>
+			</Option>
 			<Option Destination="449" Do="Hitpoints" Value="-2"/>
 		</Options>
 	</Paragraph>
