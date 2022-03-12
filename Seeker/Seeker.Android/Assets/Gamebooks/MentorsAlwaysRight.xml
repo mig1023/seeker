@@ -2878,7 +2878,9 @@
 		<Text>Из сидячего положения вывернуться невероятно сложно, а вампир уже склоняется над вашей шеей. Разомкнуть смертельные объятья вы сможете лишь только если:</Text>
 		<Options>
 			<Option Destination="509" Text="Ваша СИЛА не меньше 13" OnlyIf="СИЛА >= 13"/>
-			<Option Destination="509" Text="С помощью МЕДВЕДЯ" OnlyIf="МЕДВЕДЬ" Do="Transformation" Aftertext="Иначе - быть вам выпитым досуха..."/>
+			<Option Destination="509" Text="С помощью МЕДВЕДЯ" OnlyIf="МЕДВЕДЬ" Do="Transformation">
+				<Text>Иначе - быть вам выпитым досуха...</Text>
+			</Option>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
