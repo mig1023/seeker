@@ -4949,7 +4949,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="548" Text="Заслон" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН" Aftertext="...либо СРЕАГИРОВАТЬ:"/>
+				<Option Destination="548" Text="Заслон" Do="Spell" ValueString="ЗАСЛОН" OnlyIf="ЗАСЛОН">
+					<Text>...либо СРЕАГИРОВАТЬ:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Reaction</Name>
@@ -4957,7 +4959,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="548" Text="Успешно среагировали" Aftertext="Если ни то, ни другое у вас не выйдет, то два арбалетных болта прервут ваш полет самым неприятным образом..."/>
+			<Option Destination="548" Text="Успешно среагировали">
+				<Text>Если ни то, ни другое у вас не выйдет, то два арбалетных болта прервут ваш полет самым неприятным образом...</Text>
+			</Option>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
