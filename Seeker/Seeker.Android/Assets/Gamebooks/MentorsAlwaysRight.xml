@@ -3237,7 +3237,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="508" Text="МЕДВЕДЬ" OnlyIf="МЕДВЕДЬ" Do="Transformation" Aftertext="Иначе - сражайтесь:"/>
+				<Option Destination="508" Text="МЕДВЕДЬ" OnlyIf="МЕДВЕДЬ" Do="Transformation">
+					<Text>Иначе - сражайтесь:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
