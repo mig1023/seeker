@@ -2243,7 +2243,9 @@
 		<Options>
 			<Option Destination="247" Text="На восток"/>
 			<Option Destination="226" Text="На запад"/>
-			<Option Destination="212" Text="На север" Aftertext="Выбирайся отсюда!"/>
+			<Option Destination="212" Text="На север">
+				<Text>Выбирайся отсюда!</Text>
+			</Option>
 		</Options>
 	</Paragraph>
 	<Paragraph>
