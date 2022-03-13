@@ -636,7 +636,9 @@
 		</Actions>
 		<Options>
 			<Option Destination="85" Text="Если ты победил орков и здоровье девушки выше 0"/>
-			<Option Destination="21" Text="Если ты победил орков, но здоровье девушки равно 0" Aftertext="Если ты проиграл..."/>
+			<Option Destination="21" Text="Если ты победил орков, но здоровье девушки равно 0">
+				<Text>Если ты проиграл...</Text>
+			</Option>
 			<Option Destination="17" Text="В первый раз" OnlyIf="!Уже пил из бутыли"/>
 			<Option Destination="0" OnlyIf="Уже пил из бутыли"/>
 		</Options>
