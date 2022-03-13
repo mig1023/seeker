@@ -1586,7 +1586,9 @@
 		<Options>
 			<Option Destination="297" Text="На север"/>
 			<Option Destination="241" Text="На запад"/>
-			<Option Destination="281" Text="На восток" Aftertext="Решай быстрей!"/>
+			<Option Destination="281" Text="На восток">
+				<Text>Решай быстрей!</Text>
+			</Option>
 		</Options>
 	</Paragraph>
 	<Paragraph>
