@@ -1777,7 +1777,9 @@
 		<Text>Ужасное место! В лицо летят подхваченные порывами ураганного ветра колючие песчинки. Жара, духота, пыль!\n\nПрикрой ладонью глаза и беги!\n\nНа ощупь ты находишь два пути.</Text>
 		<Options>
 			<Option Destination="222" Text="На север"/>
-			<Option Destination="220" Text="На юг" Aftertext="Быстрее выбирайся!"/>
+			<Option Destination="220" Text="На юг">
+				<Text>Быстрее выбирайся!</Text>
+			</Option>
 		</Options>
 	</Paragraph>
 	<Paragraph>
