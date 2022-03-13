@@ -2641,7 +2641,9 @@
 		<Options>
 			<Option Destination="239" Text="Дверь с цифрой два"/>
 			<Option Destination="251" Text="Дверь три"/>
-			<Option Destination="102" Text="Дверь четыре, но в нее можно войти, только если ты дважды одержишь победу" Aftertext="Решай же быстрей, куда направишься!"/>
+			<Option Destination="102" Text="Дверь четыре, но в нее можно войти, только если ты дважды одержишь победу">
+				<Text>Решай же быстрей, куда направишься!</Text>
+			</Option>
 		</Options>
 	</Paragraph>
 	<Paragraph>
