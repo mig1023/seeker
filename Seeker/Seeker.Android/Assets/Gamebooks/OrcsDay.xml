@@ -167,7 +167,9 @@
 			<Modification Name="Orcishness" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="83" Text="Если ты победил тролля" Aftertext="Если нет, ты погиб и Великая Окрская Революция вместе с тобой..."/>
+			<Option Destination="83" Text="Если ты победил тролля">
+				<Text>Если нет, ты погиб и Великая Окрская Революция вместе с тобой...</Text>
+			</Option>
 			<Option Destination="0"/>
 		</Options>
 	</Paragraph>
