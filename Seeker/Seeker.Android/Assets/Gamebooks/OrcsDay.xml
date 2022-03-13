@@ -1510,7 +1510,9 @@
 			<Modification Name="Orcishness" Value="-2"/>
 		</Modifications>
 		<Options>
-			<Option Destination="65" Text="Узнать, так ли это" OnlyIf="!Обрёл имя" Aftertext="Затем возвращайся сюда и решай:"/>
+			<Option Destination="65" Text="Узнать, так ли это" OnlyIf="!Обрёл имя">
+				<Text>Затем возвращайся сюда и решай:</Text>
+			</Option>
 			<Option Destination="48" Text="Ответить ей, что ты орк"/>
 			<Option Destination="72" Text="Ответить ей, что ты приключенец под маскировкой"/>
 		</Options>
