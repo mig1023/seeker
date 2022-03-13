@@ -541,7 +541,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="65" Text="Попробовать получить имя" OnlyIf="!Обрёл имя" Aftertext="Затем возвращайся сюда и сделай проверку Удачи:"/>
+				<Option Destination="65" Text="Попробовать получить имя" OnlyIf="!Обрёл имя">
+					<Text>Затем возвращайся сюда и сделай проверку Удачи:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
