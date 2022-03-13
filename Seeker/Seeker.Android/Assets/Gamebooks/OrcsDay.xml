@@ -1436,7 +1436,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="100" Text="Если ты смог победить Галроса и кто-то из других орков тоже жив" Aftertext="В ином случае..."/>
+			<Option Destination="100" Text="Если ты смог победить Галроса и кто-то из других орков тоже жив">
+				<Text>В ином случае...</Text>
+			</Option>
 			<Option Destination="101" Text="Переходи к подсчёту результата" Do="Trigger" ValueString="Гибель"/>
 		</Options>
 	</Paragraph>
