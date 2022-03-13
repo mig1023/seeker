@@ -1197,7 +1197,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="56" Text="Пойти за ним" Aftertext="Чтобы убить его, проверь свою Удаль и сравни с показателем 'Оркишность + 5':"/>
+				<Option Destination="56" Text="Пойти за ним">
+					<Text>Чтобы убить его, проверь свою Удаль и сравни с показателем 'Оркишность + 5':</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
