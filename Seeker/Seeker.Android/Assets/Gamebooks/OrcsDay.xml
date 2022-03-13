@@ -469,7 +469,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="25" Text="Атаковать её" Aftertext="Чтобы попытаться поговорить с ней, проверь свои Мозги и сравни с параметром 'Оркишность + 3':"/>
+				<Option Destination="25" Text="Атаковать её">
+					<Text>Чтобы попытаться поговорить с ней, проверь свои Мозги и сравни с параметром 'Оркишность + 3':</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
@@ -483,8 +485,12 @@
 			<Modification Name="WayBack" Value="32"/>
 		</Modifications>
 		<Options>		
-			<Option Destination="51" Text="Если успешно" Aftertext="Если ты провалился, ты можешь сделать последнюю попытку победить свою Оркишность:"/>
-			<Option Destination="55" Text="Предпринять попытку противостоять своей природе" Aftertext="Если в итоге ты смог одолеть:"/>		
+			<Option Destination="51" Text="Если успешно">
+				<Text>Если ты провалился, ты можешь сделать последнюю попытку победить свою Оркишность:</Text>
+			</Option>
+			<Option Destination="55" Text="Предпринять попытку противостоять своей природе">
+				<Text>Если в итоге ты смог одолеть:</Text>
+			</Option>		
 			<Option Destination="51" Text="Если получилось"/>
 			<Option Destination="25" Text="Если не решишься пытаться"/>
 		</Options>
