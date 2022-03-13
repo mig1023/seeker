@@ -903,7 +903,9 @@
 		<Options>
 			<Option Destination="57" Text="Свернешь налево"/>
 			<Option Destination="276" Text="Свернешь направо"/>
-			<Option Destination="39" Text="Побежишь вперед" Aftertext="Не стой же, как истукан! Действуй!"/>
+			<Option Destination="39" Text="Побежишь вперед">
+				<Text>Не стой же, как истукан! Действуй!</Text>
+			</Option>
 		</Options>
 	</Paragraph>
 	<Paragraph>
