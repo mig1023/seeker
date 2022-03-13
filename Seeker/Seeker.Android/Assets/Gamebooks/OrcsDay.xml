@@ -287,7 +287,9 @@
 		</Modifications>
 		<Triggers>Бетани</Triggers>
 		<Options>
-			<Option Destination="65" Text="Попробуй узнать своё имя" OnlyIf="!Обрёл имя" Aftertext="Затем возвращайся сюда и решай:"/>
+			<Option Destination="65" Text="Попробуй узнать своё имя" OnlyIf="!Обрёл имя">
+				<Text>Затем возвращайся сюда и решай:</Text>
+			</Option>
 			<Option Destination="92" Text="Использовать зелье для спасения Бетани"/>
 			<Option Destination="64" Text="Позволишь Бетани умереть"/>
 		</Options>
