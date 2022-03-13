@@ -1057,7 +1057,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="101" Text="Переходи к Подсчёту результата" Do="Trigger" ValueString="Гибель" Aftertext="Если ты победил их, то ты можешь:"/>
+			<Option Destination="101" Text="Переходи к Подсчёту результата" Do="Trigger" ValueString="Гибель">
+				<Text>Если ты победил их, то ты можешь:</Text>
+			</Option>
 			<Option Destination="3" Text="Посмотреть, что есть в комнате охраны"/>
 			<Option Destination="47" Text="Уйти"/>
 		</Options>
