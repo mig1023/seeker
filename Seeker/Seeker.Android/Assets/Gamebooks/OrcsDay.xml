@@ -179,7 +179,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="56" Text="Пойти за ним" Aftertext="Попытаться убить его, сравнив свою Удаль с параметром 'Оркишность + 5':"/>
+				<Option Destination="56" Text="Пойти за ним">
+					<Text>Попытаться убить его, сравнив свою Удаль с параметром 'Оркишность + 5':</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
@@ -190,7 +192,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="38" Text="Повезло" Aftertext="В обратном случае в тебе ещё слишком много от орка, чтобы восстать против закона..."/>
+			<Option Destination="38" Text="Повезло">
+				<Text>В обратном случае в тебе ещё слишком много от орка, чтобы восстать против закона...</Text>
+			</Option>
 			<Option Destination="56"/>
 		</Options>
 	</Paragraph>
