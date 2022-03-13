@@ -442,9 +442,15 @@
 			<Modification Name="WayBack" Value="30"/>
 		</Modifications>
 		<Options>
-			<Option Destination="66" Text="Если есть" OnlyIf="Обрёл имя" Aftertext="Иначе тебе необходимо перебороть свою Оркишнсть:"/>
-			<Option Destination="55" Text="Предпринять попытку противостоять своей природе" Aftertext="Если в итоге ты смог одолеть:"/>				
-			<Option Destination="66" Text="Если у тебя получилось" Aftertext="Иначе приключенцы понимают, что ты орк, и убивают тебя..."/>
+			<Option Destination="66" Text="Если есть" OnlyIf="Обрёл имя">
+				<Text>Иначе тебе необходимо перебороть свою Оркишнсть:</Text>
+			</Option>
+			<Option Destination="55" Text="Предпринять попытку противостоять своей природе">
+				<Text>Если в итоге ты смог одолеть:</Text>
+			</Option>				
+			<Option Destination="66" Text="Если у тебя получилось">
+				<Text>Иначе приключенцы понимают, что ты орк, и убивают тебя...</Text>
+			</Option>
 			<Option Destination="101" Text="Переходи к Подсчёту результатов" Do="Trigger" ValueString="Гибель"/>
 		</Options>
 	</Paragraph>
