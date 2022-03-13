@@ -122,7 +122,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="68" Text="Если проверка провалилась, с орками придётся драться" Aftertext="Если проверка успешна и..."/>
+			<Option Destination="68" Text="Если проверка провалилась, с орками придётся драться">
+				<Text>Если проверка успешна и...</Text>
+			</Option>
 			<Option Destination="3" Text="Тебе хочется открыть дверь и узнать, чего они хотели"/>
 			<Option Destination="47" Text="Тебе просто хочется уйти"/>
 		</Options>
