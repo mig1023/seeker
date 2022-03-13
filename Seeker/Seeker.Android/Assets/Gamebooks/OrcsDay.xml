@@ -1144,7 +1144,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="93" Text="Если ты победил тролля, то сразись с Галросом" Aftertext="Если тролль побеждает, ты погиб - и Великая Оркская Революция вместе с тобой..."/>
+			<Option Destination="93" Text="Если ты победил тролля, то сразись с Галросом">
+				<Text>Если тролль побеждает, ты погиб - и Великая Оркская Революция вместе с тобой...</Text>
+			</Option>
 			<Option Destination="101" Text="Перейди к Подсчету результатов" Do="Trigger" ValueString="Гибель"/>		
 		</Options>
 	</Paragraph>
