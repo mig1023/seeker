@@ -1111,7 +1111,9 @@
 			</Action>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="31" Text="Вернись обратно и выбери другой вариант" Aftertext="В случае провала ты атакуешь:"/>
+				<Option Destination="31" Text="Вернись обратно и выбери другой вариант">
+					<Text>В случае провала ты атакуешь:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
@@ -1122,7 +1124,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="12" Text="Если ты победил этих орков" Aftertext="В противном случае - ты безымянный труп. Стоит начать с самого начала... желаем удачи в следующий раз..."/>
+			<Option Destination="12" Text="Если ты победил этих орков">
+				<Text>В противном случае - ты безымянный труп. Стоит начать с самого начала... желаем удачи в следующий раз...</Text>
+			</Option>
 			<Option Destination="101" Text="Переходи к Подсчёту результата" Do="Trigger" ValueString="Гибель"/>
 		</Options>
 	</Paragraph>
