@@ -2543,7 +2543,9 @@
 			<Option Destination="285" Text="Дверь с цифрой один"/>
 			<Option Destination="280" Text="Дверь под номером два"/>
 			<Option Destination="272" Text="Дверь три"/>
-			<Option Destination="102" Text="Дверь четыре, но в нее можно войти после двух побед на арене" Aftertext="Решай быстрей, куда направишься!"/>
+			<Option Destination="102" Text="Дверь четыре, но в нее можно войти после двух побед на арене">
+				<Text>Решай быстрей, куда направишься!</Text>
+			</Option>
 		</Options>
 	</Paragraph>
 	<Paragraph>
