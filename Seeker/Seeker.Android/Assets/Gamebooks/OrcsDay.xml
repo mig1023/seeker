@@ -583,7 +583,9 @@
 			<Modification Name="WayBack" Value="37"/>
 		</Modifications>
 		<Options>
-			<Option Destination="55" Text="Чтобы предпринять последнюю попытку противостоять своей природе" Aftertext="Если в итоге ты смог одолеть:"/>
+			<Option Destination="55" Text="Чтобы предпринять последнюю попытку противостоять своей природе">
+				<Text>Если в итоге ты смог одолеть:</Text>
+			</Option>
 			<Option Destination="95"/>
 		</Options>
 	</Paragraph>
