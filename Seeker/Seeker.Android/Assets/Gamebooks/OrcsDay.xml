@@ -713,7 +713,9 @@
 			</Action>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="32" Text="Предложить ей сдаться" Aftertext="Чтобы сказать ей, что не причинишь ей вреда, сделай проверку Оркишность со сложностью 10:"/>
+				<Option Destination="32" Text="Предложить ей сдаться">
+					<Text>Чтобы сказать ей, что не причинишь ей вреда, сделай проверку Оркишность со сложностью 10:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
@@ -723,7 +725,9 @@
 			</Action>
 		</Actions>
 		<Options>			
-			<Option Destination="51" Text="Если проверка провалена" Aftertext="Если успешна, тебе придётся выбрать один из предыдущих вариантов."/>
+			<Option Destination="51" Text="Если проверка провалена">
+				<Text>Если успешна, тебе придётся выбрать один из предыдущих вариантов.</Text>
+			</Option>
 		</Options>
 	</Paragraph>
 	<Paragraph>
