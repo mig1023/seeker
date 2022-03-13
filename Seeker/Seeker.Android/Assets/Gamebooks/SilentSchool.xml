@@ -864,7 +864,9 @@
 			<Option Destination="101" Text="В кабинет английского языка" OnlyIf="!Кабинет34"/>
 			<Option Destination="66" Text="В кабинет математики (№35)" OnlyIf="!Кабинет35"/>
 			<Option Destination="117" Text="В кабинет немецкого языка (№36)" OnlyIf="!Кабинет36"/>
-			<Option Destination="96" Text="В мужской туалет" Aftertext="Если я уже был в каком-то из кабинетов, то второй раз туда заходить я не намерен."/>
+			<Option Destination="96" Text="В мужской туалет">
+				<Text>Если я уже был в каком-то из кабинетов, то второй раз туда заходить я не намерен.</Text>
+			</Option>
 		</Options>
 	</Paragraph>
 	<Paragraph>
