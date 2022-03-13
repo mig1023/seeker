@@ -1705,7 +1705,9 @@
 		<Options>
 			<Option Destination="294" Text="Одна на север"/>
 			<Option Destination="202" Text="Другая на запад"/>
-			<Option Destination="296" Text="Третья на восток" Aftertext="Ты поворачиваешь ручку, распахиваешь ближайшую дверь и выходишь."/>
+			<Option Destination="296" Text="Третья на восток">
+				<Text>Ты поворачиваешь ручку, распахиваешь ближайшую дверь и выходишь.</Text>
+			</Option>
 		</Options>
 	</Paragraph>
 	<Paragraph>
