@@ -1475,7 +1475,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="9" Text="Если ты проиграл" Aftertext="Если ты победишь приключенцев и..."/>
+			<Option Destination="9" Text="Если ты проиграл">
+				<Text>Если ты победишь приключенцев и...</Text>
+			</Option>
 			<Option Destination="85" Text="Здоровье девушки не достигло нуля"/>
 			<Option Destination="21" Text="Здоровье девушки равно нулю"/>		
 		</Options>
