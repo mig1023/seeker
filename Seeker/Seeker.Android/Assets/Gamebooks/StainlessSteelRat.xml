@@ -1716,7 +1716,9 @@
 		<Options>
 			<Option Destination="253" Text="На север"/>
 			<Option Destination="341" Text="На запад"/>
-			<Option Destination="297" Text="На юг" Aftertext="Боясь, что обвалится потолок, ты спешишь."/>
+			<Option Destination="297" Text="На юг">
+				<Text>Боясь, что обвалится потолок, ты спешишь.</Text>
+			</Option>
 		</Options>
 	</Paragraph>
 	<Paragraph>
