@@ -936,7 +936,9 @@
 			<Modification Name="Orcishness" Value="-1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="76" Text="Если ты победил тролля" Aftertext="В противном случае ты - мертвец..."/>
+			<Option Destination="76" Text="Если ты победил тролля">
+				<Text>В противном случае ты - мертвец...</Text>
+			</Option>
 			<Option Destination="101" Text="Перейди к Подсчету результата" Do="Trigger" ValueString="Гибель"/>
 		</Options>
 	</Paragraph>
