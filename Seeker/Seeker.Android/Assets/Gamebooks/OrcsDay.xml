@@ -873,7 +873,9 @@
 			</Action>
 		</Actions>
 		<Options>
-			<Option Destination="89" Text="Если победишь его" Aftertext="Если он победит тебя, ты мертвец..."/>
+			<Option Destination="89" Text="Если победишь его">
+				<Text>Если он победит тебя, ты мертвец...</Text>
+			</Option>
 			<Option Destination="101" Text="Переходи к Подсчету результата" Do="Trigger" ValueString="Гибель"/>
 		</Options>
 	</Paragraph>
