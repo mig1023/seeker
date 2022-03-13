@@ -2216,7 +2216,9 @@
 		<Text>Заполненный ржавыми пыльными механизмами склад. Обойдя его, ты обнаруживаешь две двери.</Text>
 		<Options>
 			<Option Destination="295" Text="На север"/>
-			<Option Destination="269" Text="На запад" Aftertext="Решай быстрей, куда направишься."/>
+			<Option Destination="269" Text="На запад">
+				<Text>Решай быстрей, куда направишься.</Text>
+			</Option>
 		</Options>
 	</Paragraph>
 	<Paragraph>
