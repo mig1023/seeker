@@ -666,7 +666,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="53" Text="Драться с ним" Aftertext="Чтобы постараться перехитрить его, проверь свою Оркишность и сравни с показателем '8':"/>
+				<Option Destination="53" Text="Драться с ним">
+					<Text>Чтобы постараться перехитрить его, проверь свою Оркишность и сравни с показателем '8':</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>Test</Name>
@@ -679,7 +681,9 @@
 			<Modification Name="WayBack" Value="42"/>
 		</Modifications>
 		<Options>
-			<Option Destination="62" Text="В случае неудачи" Aftertext="Если преуспеешь, значит, в тебе слишком много от орка - и ты..."/>
+			<Option Destination="62" Text="В случае неудачи">
+				<Text>Если преуспеешь, значит, в тебе слишком много от орка - и ты...</Text>
+			</Option>
 			<Option Destination="53" Text="Атакуешь его"/>
 			<Option Destination="55" Text="Хочешь предпринять последнюю отчаянную попытку преодолеть свою Оркишность"/>
 		</Options>
