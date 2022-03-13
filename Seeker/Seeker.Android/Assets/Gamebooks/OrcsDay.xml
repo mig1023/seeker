@@ -33,7 +33,9 @@
 		</Modifications>
 		<Options>
 			<Option Destination="28" Text="Убить её"/>
-			<Option Destination="67" Text="Проделать с ней другие грязные штучки" Aftertext="Погорить с ней, при условии, что..."/>
+			<Option Destination="67" Text="Проделать с ней другие грязные штучки">
+				<Text>Погорить с ней, при условии, что...</Text>
+			</Option>
 			<Option Destination="98" Text="Поблизости нет орков"/>
 			<Option Destination="40" Text="Они торчат здесь"/>
 		</Options>
