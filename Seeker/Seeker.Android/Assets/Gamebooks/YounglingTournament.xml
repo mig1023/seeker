@@ -4389,7 +4389,9 @@
 		<Actions>
 			<Action>
 				<Name>Option</Name>
-				<Option Destination="420" Text="Вледеете приёмом «Защита от Подсечки»" OnlyIf="Защита от Подсечки" Aftertext="Иначе придётся бросить кубик:"/>
+				<Option Destination="420" Text="Вледеете приёмом «Защита от Подсечки»" OnlyIf="Защита от Подсечки">
+					<Text>Иначе придётся бросить кубик:</Text>
+				</Option>
 			</Action>
 			<Action>
 				<Name>SimpleDice</Name>
