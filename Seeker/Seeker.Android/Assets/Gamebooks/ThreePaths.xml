@@ -1257,7 +1257,9 @@
 		<Id>152</Id>
 		<Text>Конан вошёл в небольшой зал. Из него на верхний этаж вела лестница. С юга и севера были входы на каменные галереи.</Text>
 		<Options>
-			<Option Destination="39" Text="Подниметесь наверх" Aftertext="Или пойдёте:"/>
+			<Option Destination="39" Text="Подниметесь наверх">
+				<Text>Или пойдёте:</Text>
+			</Option>
 			<Option Destination="231" Text="На юг" OnlyIf="10"/>
 			<Option Destination="164" Text="На юг" OnlyIf="!10"/>
 			<Option Destination="250" Text="На север" OnlyIf="19"/>
