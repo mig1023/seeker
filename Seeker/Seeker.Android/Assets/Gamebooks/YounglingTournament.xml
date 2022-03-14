@@ -2654,7 +2654,9 @@
 		</Texts>
 		<Triggers>Замысел</Triggers>
 		<Options>
-			<Option Destination="251" Text="Предложите Ливии в спарринге подтянуть фехтование" Aftertext="Оставите ее, чтобы тоже заняться подготовкой и направитесь:"/>
+			<Option Destination="251" Text="Предложите Ливии в спарринге подтянуть фехтование">
+				<Text>Оставите ее, чтобы тоже заняться подготовкой и направитесь:</Text>
+			</Option>
 			<Option Destination="239" Text="В Библиотеку"/>
 			<Option Destination="237" Text="На поиски спарринг-партнера"/>
 		</Options>
