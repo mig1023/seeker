@@ -870,7 +870,9 @@
 		<Text>Через некоторое время Конан обнаружил нечто, очевидно заслуживающее внимания - бронзовый рычаг, спрятанный за ковром на стене.</Text>
 		<Triggers>13</Triggers>
 		<Options>
-			<Option Destination="67" Text="Надавите на рычаг!" Aftertext="Не будете делать этой глупости и..."/>
+			<Option Destination="67" Text="Надавите на рычаг!">
+				<Text>Не будете делать этой глупости и...</Text>
+			</Option>
 			<Option Destination="111" Text="Пройдёте в дверь напротив"/>
 			<Option Destination="75" Text="Выйдете в коридор"/>
 		</Options>
