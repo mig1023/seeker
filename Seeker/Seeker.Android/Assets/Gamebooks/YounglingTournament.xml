@@ -2862,7 +2862,9 @@
 			<Option Destination="271" Text="«Встречный удар»" OnlyIf="БИБЛИОТЕКА &lt;= 1"/>
 			<Option Destination="272" Text="«Защита от встречного удара»" OnlyIf="БИБЛИОТЕКА &lt;= 1"/>
 			<Option Destination="273" Text="«Защита от Подсечки»" OnlyIf="БИБЛИОТЕКА &lt;= 1"/>
-			<Option Destination="274" Text="«Защита от Удара с разворота»" OnlyIf="БИБЛИОТЕКА &lt;= 1" Aftertext="Вы можете выбрать только два приема, их изучение займет все время до обеда."/>
+			<Option Destination="274" Text="«Защита от Удара с разворота»" OnlyIf="БИБЛИОТЕКА &lt;= 1">
+				<Text>Вы можете выбрать только два приема, их изучение займет все время до обеда.</Text>
+			</Option>
 			<Option Destination="264" Text="После окончания обучения отправляетесь в столовую"/>
 		</Options>
 	</Paragraph>
