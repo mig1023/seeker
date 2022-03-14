@@ -2142,7 +2142,9 @@
 			<Modification Name="Time" Value="1"/>
 		</Modifications>
 		<Options>
-			<Option Destination="282" Text="Начнёте спуск в кратер" Aftertext="Двинетесь в обход воронки:"/>
+			<Option Destination="282" Text="Начнёте спуск в кратер">
+				<Text>Двинетесь в обход воронки:</Text>
+			</Option>
 			<Option Destination="276" Text="С правой (западной) стороны"/>
 			<Option Destination="328" Text="С левой (восточной) стороны"/>
 		</Options>
