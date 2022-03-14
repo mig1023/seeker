@@ -998,7 +998,9 @@
 		<Options>		
 			<Option Destination="210" Text="Посмотрите, что находится за дверью, расположенной слева за алтарём" OnlyIf="7"/>
 			<Option Destination="66" Text="Посмотрите, что находится за дверью, расположенной слева за алтарём" OnlyIf="!7"/>
-			<Option Destination="226" Text="Направитесь в жилище слуг справа от алтаря" Aftertext="Вернётесь ко входу и пойдёте:"/>
+			<Option Destination="226" Text="Направитесь в жилище слуг справа от алтаря">
+				<Text>Вернётесь ко входу и пойдёте:</Text>
+			</Option>
 			<Option Destination="144" Text="В южную дверь"/>
 			<Option Destination="34" Text="В северную дверь"/>
 		</Options>
