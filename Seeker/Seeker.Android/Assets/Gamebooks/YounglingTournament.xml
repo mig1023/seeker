@@ -1005,8 +1005,10 @@
 			<Option Destination="99" Text="Предвидение Силы"/>
 			<Option Destination="101" Text="Прыжок Силы"/>
 			<Option Destination="102" Text="Толчок Силы"/>
-			<Option Destination="103" Text="Притяжение Силы"/>
-			<Option Destination="104" Text="Можно также попросить Проводника обучить вас одной из неизвестных вам техник"/>
+			<Option Destination="103" Text="Притяжение Силы">
+				<Text>Можно также попросить Проводника обучить вас одной из неизвестных вам техник:</Text>
+			</Option>
+			<Option Destination="104" Text="Неизвестная техника"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
