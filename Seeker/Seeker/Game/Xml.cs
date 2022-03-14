@@ -11,16 +11,11 @@ namespace Seeker.Game
     {
         private static Dictionary<string, XmlNode> Descriptions { get; set; }
 
-        public static int IntParse(string text)
-        {
-            bool success = int.TryParse(text, out int value);
+        public static int IntParse(string text) => int.TryParse(text, out int value) ? value : 0;
 
-            return (success ? value : 0);
-        }
+        public static int IntParse(XmlNode xmlNode) => IntParse(xmlNode?.InnerText ?? "0");
 
-        public static int IntParse(XmlNode xmlNode) => (xmlNode == null ? 0 : IntParse(xmlNode.InnerText));
-
-        public static string StringParse(XmlNode xmlNode) => (xmlNode == null ? String.Empty : xmlNode.InnerText);
+        public static string StringParse(XmlNode xmlNode) => xmlNode?.InnerText ?? String.Empty;
 
         public static Dictionary<string, string> ImagesParse(XmlNode xmlNode)
         {
