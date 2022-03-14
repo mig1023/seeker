@@ -1438,7 +1438,9 @@
 			<Modification Name="Hitpoints" Value="-5"/>
 		</Modifications>
 		<Options>
-			<Option Destination="118" Text="Выносливость упала до нуля" Aftertext="Иначе же бейте снова:"/>
+			<Option Destination="118" Text="Выносливость упала до нуля">
+				<Text>Иначе же бейте снова:</Text>
+			</Option>
 			<Option Destination="125" Text="Чо май (отсечь руку с оружием)"/>
 			<Option Destination="120" Text="Сай ча (обезглавить противника)"/>
 			<Option Destination="121" Text="Сай ток (рассечь противника пополам, удар на уровне талии)"/>
