@@ -350,7 +350,15 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>37</Id>
-		<Text>Ты на мгновение замешкался перед выстрелом. Лишь на мгновение...\n\nПроверка: Везение</Text>
+		<Text>Ты на мгновение замешкался перед выстрелом. Лишь на мгновение...</Text>
+		<Actions>
+			<Action>
+				<Name>Test</Name>
+				<Text>Проверка: Везение</Text>
+				<Button>Пройти проверку</Button>
+				<Stat>Luck</Stat>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="353" Text="Успех"/>
 			<Option Destination="226" Text="Неудача"/>
