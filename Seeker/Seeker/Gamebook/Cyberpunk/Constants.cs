@@ -12,8 +12,8 @@ namespace Seeker.Gamebook.Cyberpunk
         {
             [ButtonTypes.Main] = "#118984",
             [ButtonTypes.Action] = "#0c5c58",
-            [ButtonTypes.Option] = "#40a09c",
-            [ButtonTypes.Continue] = "#40a09c",
+            [ButtonTypes.Option] = "#79bcb9",
+            [ButtonTypes.Continue] = "#79bcb9",
             [ButtonTypes.System] = "#66b3af",
         };
 
@@ -21,6 +21,13 @@ namespace Seeker.Gamebook.Cyberpunk
         {
             [ColorTypes.BookColor] = "#118984",
             [ColorTypes.StatusBar] = "#094542",
+        };
+
+        public static Dictionary<string, string> CharactersParams() => new Dictionary<string, string>
+        {
+            ["Planning"] = "Планирование",
+            ["Preparation"] = "Подготовка",
+            ["Luck"] = "Везение",
         };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 587, 588, 589 };

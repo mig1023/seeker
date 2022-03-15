@@ -11,6 +11,16 @@ namespace Seeker.Gamebook.Cyberpunk
 
         public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
 
+        public override Abstract.IActions ActionParse(XmlNode xmlAction)
+        {
+            Actions action = (Actions)ActionTemplate(xmlAction, new Actions());
+
+            foreach (string param in GetProperties(action))
+                SetProperty(action, param, xmlAction);
+
+            return action;
+        }
+
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
             Xml.ModificationParse(xmlModification, new Modification());
     }
