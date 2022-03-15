@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.Cyberpunk
         public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#118984",
+            [ButtonTypes.Action] = "#0c5c58",
             [ButtonTypes.Option] = "#40a09c",
             [ButtonTypes.Continue] = "#40a09c",
             [ButtonTypes.System] = "#66b3af",
@@ -19,6 +20,7 @@ namespace Seeker.Gamebook.Cyberpunk
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.BookColor] = "#118984",
+            [ColorTypes.StatusBar] = "#094542",
         };
 
         public static Links GetLinks() => new Links
