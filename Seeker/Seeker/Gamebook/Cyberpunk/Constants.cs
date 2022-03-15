@@ -23,6 +23,8 @@ namespace Seeker.Gamebook.Cyberpunk
             [ColorTypes.StatusBar] = "#094542",
         };
 
+        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 587, 588, 589 };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
