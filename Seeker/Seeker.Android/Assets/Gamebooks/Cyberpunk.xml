@@ -2383,7 +2383,14 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>257</Id>
-		<Text>Очень благородно с твоей стороны, док! Ты хороший врач, но не останешься ли ты на дне с таким подходом?\n\nПроверка: Везение + Подготовка</Text>
+		<Text>Очень благородно с твоей стороны, док! Ты хороший врач, но не останешься ли ты на дне с таким подходом?</Text>
+		<Actions>
+			<Action>
+				<Name>Test</Name>
+				<Button>Пройти проверку</Button>
+				<Stat>Luck, Preparation</Stat>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="270" Text="Успех"/>
 			<Option Destination="65" Text="Неудача"/>
