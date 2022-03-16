@@ -87,7 +87,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение + Подготовка</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck, Preparation</Stat>
 			</Action>
@@ -119,7 +118,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Планирование + Подготовка</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Planning, Preparation</Stat>
 				<Aftertext>Прибавь 10 к проверяемому показателю, если Карьеризм больше, чем Мораль.</Aftertext>
@@ -186,7 +184,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Планирование + Подготовка</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Planning, Preparation</Stat>
 			</Action>
@@ -262,7 +259,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Планирование + Подготовка</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Planning, Preparation</Stat>
 			</Action>
@@ -296,7 +292,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение + Подготовка</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck, Preparation</Stat>
 			</Action>
@@ -354,7 +349,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck</Stat>
 			</Action>
@@ -397,7 +391,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Планирование + Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Planning, Luck</Stat>
 			</Action>
@@ -423,7 +416,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение + Подготовка</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck, Preparation</Stat>
 			</Action>
@@ -522,7 +514,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение + Подготовка</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck, Preparation</Stat>
 			</Action>
@@ -590,7 +581,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение + Подготовка</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck, Preparation</Stat>
 			</Action>
@@ -758,7 +748,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение + Подготовка</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck, Preparation</Stat>
 			</Action>
@@ -808,7 +797,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck</Stat>
 			</Action>
@@ -876,7 +864,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Планирование + Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Planning, Luck</Stat>
 			</Action>
@@ -907,7 +894,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение + Подготовка</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck, Preparation</Stat>
 			</Action>
@@ -983,7 +969,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение + Подготовка</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck, Preparation</Stat>
 			</Action>
@@ -1008,7 +993,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Планирование + Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Planning, Luck</Stat>
 			</Action>
@@ -1042,7 +1026,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck</Stat>
 			</Action>
@@ -1211,7 +1194,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Планирование + Подготовка</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Planning, Preparation</Stat>
 			</Action>
@@ -1290,7 +1272,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck</Stat>
 			</Action>
@@ -1389,7 +1370,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck</Stat>
 			</Action>
@@ -1421,7 +1401,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck</Stat>
 			</Action>
@@ -1451,7 +1430,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Планирование + Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Planning, Luck</Stat>
 			</Action>
@@ -1651,7 +1629,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck</Stat>
 			</Action>
@@ -1711,7 +1688,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение + Планирование</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck, Planning</Stat>
 			</Action>
@@ -1739,7 +1715,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Планирование + Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Planning, Luck</Stat>
 			</Action>
@@ -1755,7 +1730,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение + Планирование</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck, Planning</Stat>
 			</Action>
@@ -1786,7 +1760,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Планирование + Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Planning, Luck</Stat>
 			</Action>
@@ -1809,7 +1782,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck</Stat>
 			</Action>
@@ -1864,7 +1836,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Text>Проверка: Везение + Подготовка</Text>
 				<Button>Пройти проверку</Button>
 				<Stat>Luck, Preparation</Stat>
 			</Action>
@@ -1903,7 +1874,14 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>201</Id>
-		<Text>В итоге старшие решают обойтись своими силами. Командир «Чистого Мира» явно недоволен, однако он не в том положении, чтобы спорить. В лагере закипела работа. Медики ещё раз проверяют все немногочисленные запасы. Теперь вы будете принимать раненых по новой системе, разработанной Главным целителем. Врачи должны быть готовы к любым неожиданностям и высокой нагрузке.\n\nТы участвуешь в подготовке к будущим боевым действиям наравне с остальными.\n\nПроверка: Планирование + Везение</Text>
+		<Text>В итоге старшие решают обойтись своими силами. Командир «Чистого Мира» явно недоволен, однако он не в том положении, чтобы спорить. В лагере закипела работа. Медики ещё раз проверяют все немногочисленные запасы. Теперь вы будете принимать раненых по новой системе, разработанной Главным целителем. Врачи должны быть готовы к любым неожиданностям и высокой нагрузке.\n\nТы участвуешь в подготовке к будущим боевым действиям наравне с остальными.</Text>
+		<Actions>
+			<Action>
+				<Name>Test</Name>
+				<Button>Пройти проверку</Button>
+				<Stat>Planning, Luck</Stat>
+			</Action>
+		</Actions>
 		<Options>
 			<Option Destination="516" Text="Успех"/>
 			<Option Destination="568" Text="Неудача"/>
