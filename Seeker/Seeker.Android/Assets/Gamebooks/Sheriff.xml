@@ -329,7 +329,7 @@
 		<Text>Солнце почти село, завтра трудный день.</Text>
 		<Options>
 			<Option Destination="17" Text="Отправиться спать"/>
-			<Option Destination="43" Text="В салун, пропустить бокальчик виски перед сном."/>
+			<Option Destination="43" Text="В салун, пропустить бокальчик виски перед сном"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
