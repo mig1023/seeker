@@ -10,6 +10,8 @@ namespace Seeker.Gamebook.Cyberpunk
         private static Random rand = new Random();
 
         public string Stat { get; set; }
+        public bool MultipliedLuck { get; set; }
+        public bool DividedLuck { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -71,11 +73,25 @@ namespace Seeker.Gamebook.Cyberpunk
             int paramsLevel = 0;
             string paramsLine = "Параметры: ";
 
-            foreach (string stat in Stat.Split(','))
+            if (MultipliedLuck)
             {
-                int param = GetProperty(protagonist, stat.Trim());
-                paramsLevel += param;
-                paramsLine += String.Format("{0} ({1}) + ", param, Constants.CharactersParams()[stat.Trim()]);
+                paramsLevel = protagonist.Luck * 2;
+                paramsLine += String.Format("{0} (везение) x 2", protagonist.Luck);
+            }
+            else if (DividedLuck)
+            {
+                paramsLevel = protagonist.Luck / 2;
+                paramsLine += String.Format("{0} (везение) / 2", protagonist.Luck);
+            }
+            else
+            {
+                foreach (string stat in Stat.Split(','))
+                {
+                    int param = GetProperty(protagonist, stat.Trim());
+                    paramsLevel += param;
+                    paramsLine += String.Format("{0} ({1}) + ",
+                        param, Constants.CharactersParams()[stat.Trim()].ToLower());
+                }
             }
 
             test.Add(String.Format("{0} = {1}", paramsLine.TrimEnd(' ', '+'), paramsLevel));
