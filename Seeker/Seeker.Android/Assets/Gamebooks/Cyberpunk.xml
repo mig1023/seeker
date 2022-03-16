@@ -2032,8 +2032,15 @@
 	<Paragraph>
 		<Id>218</Id>
 		<Text>Ты уверен, что дело того стоит, однако задача предстоит непростая. Нужно не только бесследно исчезнуть из скального убежища, но и незаметно проследить за хорошо подготовленной группой сектантов.</Text>
+		<Actions>
+			<Action>
+				<Name>Test</Name>
+				<Button>Пройти проверку</Button>
+				<Stat>Luck, Preparation</Stat>
+			</Action>
+		</Actions>
 		<Options>
-			<Option Destination="256" Text="Проверка: Везение + Подготовка Успех"/>
+			<Option Destination="256" Text="Успех"/>
 			<Option Destination="278" Text="Неудача"/>
 		</Options>
 	</Paragraph>
