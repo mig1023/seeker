@@ -45,6 +45,8 @@ namespace Seeker.Prototypes
 
         public virtual List<string> Representer() => new List<string> { };
 
+        public virtual string ButtonText() => Button;
+
         public virtual List<string> Status() => null;
 
         public virtual List<string> AdditionalStatus() => null;

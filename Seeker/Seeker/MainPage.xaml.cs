@@ -169,7 +169,8 @@ namespace Seeker
                         if (!action.Name.Contains(","))
                         {
                             EventHandler actionClick = (object sender, EventArgs e) => Action_Click(action, actionPlace);
-                            actionPlace.Children.Add(Output.Buttons.Action(action.Button, actionClick, action.IsButtonEnabled()));
+                            bool enabled = action.IsButtonEnabled();
+                            actionPlace.Children.Add(Output.Buttons.Action(action.ButtonName(), actionClick, enabled));
                         }
                         else
                             actionPlace.Children.Add(MultipleButtonsPlace(action, actionPlace));

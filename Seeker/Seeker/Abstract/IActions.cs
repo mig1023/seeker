@@ -26,6 +26,8 @@ namespace Seeker.Abstract
 
         List<string> StaticButtons();
 
+        string ButtonText();
+
         bool StaticAction(string action);
 
         bool GameOver(out int toEndParagraph, out string toEndText);
