@@ -5409,7 +5409,7 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Stat>Luck, Preparation, </Stat>
+				<Stat>Luck, Preparation</Stat>
 			</Action>
 		</Actions>
 		<Options>
