@@ -69,29 +69,21 @@ namespace Seeker.Gamebook.Cyberpunk
             List<string> test = new List<string>();
 
             int paramsLevel = 0;
+            string paramsLine = "Параметры: ";
 
-            string[] stats = Stat.Split(',');
-
-            foreach (string stat in stats)
+            foreach (string stat in Stat.Split(','))
             {
                 int param = GetProperty(protagonist, stat.Trim());
                 paramsLevel += param;
-
-                test.Add(String.Format("{0}: {1}", Constants.CharactersParams()[stat.Trim()], param));
+                paramsLine += String.Format("{0} ({1}) + ", param, Constants.CharactersParams()[stat.Trim()]);
             }
 
-            test.Add(String.Format("ИТОГО: {0}", paramsLevel));
+            test.Add(String.Format("{0} = {1}", paramsLine.TrimEnd(' ', '+'), paramsLevel));
 
             int dice = PercentageDice();
 
-            test.Add(String.Format("BOLD|Бросок кубика: {0}", dice));
-
-            bool result = dice <= paramsLevel;
-            string comparison = Game.Services.Сomparison(dice, paramsLevel);
-
-            test.Add(String.Format("Бросок {0} суммы параметров, равной {1}", comparison, paramsLevel));
-
-            test.Add(Result(result, "УСПЕХ|НЕУДАЧА"));
+            test.Add(String.Format("BOLD|BIG|Бросок кубика: {0} - {1}!", dice, Game.Services.Сomparison(dice, paramsLevel)));
+            test.Add(Result((dice <= paramsLevel), "УСПЕХ|НЕУДАЧА"));
 
             return test;
         }
