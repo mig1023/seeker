@@ -18,8 +18,21 @@ namespace Seeker.Gamebook.Cyberpunk
             String.Format("Везение: {0}", protagonist.Luck),
         };
 
-        public override List<string> Representer() => new List<string> { Text };
+        public override List<string> Representer()
+        {
+            if (String.IsNullOrEmpty(Text))
+            {
+                string line = "Проверка: ";
 
+                foreach (string stat in Stat.Split(','))
+                    line += String.Format("{0} + ", Constants.CharactersParams()[stat.Trim()]);
+
+                return new List<string> { line.TrimEnd(' ', '+') };
+            }
+            else
+                return new List<string> { Text };
+        }
+            
         public override bool CheckOnlyIf(string option)
         {
             if (String.IsNullOrEmpty(option))
