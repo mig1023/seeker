@@ -78,6 +78,27 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return enemies;
         }
 
+        public override string ButtonText()
+        {
+            if (!String.IsNullOrEmpty(Button))
+                return Button;
+
+            switch (Name)
+            {
+                case "DiceCheck":
+                    return "Кинуть кубик" + (Dices > 0 ? "и" : String.Empty);
+
+                case "Fight":
+                    return "Сражаться";
+
+                case "Get":
+                    return "Купить";
+
+                default:
+                    return Button;
+            }
+        }
+
         public override List<string> Status() => new List<string>
         {
             String.Format("Жизнь: {0}/{1}", protagonist.Endurance, protagonist.MaxEndurance),
