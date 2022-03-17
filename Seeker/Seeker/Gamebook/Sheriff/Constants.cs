@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.Sheriff
             [ButtonTypes.Main] = "#7d2c1c",
             [ButtonTypes.Option] = "#b45b27",
             [ButtonTypes.Continue] = "#b45b27",
-            [ButtonTypes.System] = "#db8d50",
+            [ButtonTypes.System] = "#f0d1b9",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
