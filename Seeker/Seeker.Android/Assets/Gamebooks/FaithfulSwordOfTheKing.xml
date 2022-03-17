@@ -45,7 +45,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="10"/>
 				</Enemies>
@@ -62,7 +61,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ СЛУГА" Skill="6" Strength="8"/>
 					<Enemy Name="ВТОРОЙ СЛУГА" Skill="6" Strength="7"/>
@@ -245,7 +243,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -259,7 +256,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ДВОРЯНИН" Skill="8" Strength="10"/>
 				</Enemies>
@@ -363,7 +359,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЧЁРНАЯ ФИГУРА" Skill="8" Strength="8"/>
 				</Enemies>
@@ -408,7 +403,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПРОХОЖИЙ" Skill="8" Strength="10"/>
 				</Enemies>
@@ -536,7 +530,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ХОЗЯИН ДОМА" Skill="7" Strength="9"/>
 				</Enemies>
@@ -664,7 +657,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЛОДОЧНИК" Skill="5" Strength="8"/>
 				</Enemies>
@@ -745,7 +737,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ЛИГИСТ" Skill="9" Strength="10"/>
 					<Enemy Name="ВТОРОЙ ЛИГИСТ" Skill="8" Strength="8"/>
@@ -881,7 +872,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -968,7 +958,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1050,7 +1039,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="6" Strength="10"/>
 				</Enemies>
@@ -1106,7 +1094,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ГРАБИТЕЛЬ" Skill="7" Strength="9"/>
 					<Enemy Name="ВТОРОЙ ГРАБИТЕЛЬ" Skill="7" Strength="8"/>
@@ -1178,7 +1165,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ТЮРЕМЩИК" Skill="9" Strength="6"/>
 				</Enemies>
@@ -1427,7 +1413,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1899,7 +1884,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ОХРАННИК" Skill="7" Strength="9"/>
 				</Enemies>
@@ -2142,7 +2126,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="8"/>
 				</Enemies>
@@ -2181,7 +2164,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ШЕВАЛЬЕ ДО МИШУАР" Skill="9" Strength="8"/>
 				</Enemies>
@@ -2219,7 +2201,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2259,7 +2240,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2273,7 +2253,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ХОЗЯИН ДОМА" Skill="8" Strength="10"/>
 				</Enemies>
@@ -2289,7 +2268,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ БРОДЯГА" Skill="6" Strength="8"/>
 					<Enemy Name="ВТОРОЙ БРОДЯГА" Skill="7" Strength="8"/>
@@ -2417,7 +2395,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="НЕИЗВЕСТНЫЙ" Skill="11" Strength="12"/>
 				</Enemies>
@@ -2452,7 +2429,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВЕПРЬ" Skill="10" Strength="12"/>
 				</Enemies>
@@ -2475,7 +2451,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ДВОРЯНИН" Skill="9" Strength="10"/>
 				</Enemies>
@@ -2491,7 +2466,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="9"/>
 					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="8"/>
@@ -2542,7 +2516,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2657,7 +2630,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЛЕГИСТ" Skill="12" Strength="14"/>
 				</Enemies>
@@ -2743,7 +2715,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЛЕГИСТ" Skill="7" Strength="8"/>
 				</Enemies>
@@ -2952,7 +2923,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2972,7 +2942,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЛЕГИСТ" Skill="12" Strength="14"/>
 				</Enemies>
@@ -3036,7 +3005,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ШЕВАЛЬЕ ДЕ БУАЗО" Skill="8" Strength="8"/>
 				</Enemies>
@@ -3107,7 +3075,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3255,7 +3222,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3309,7 +3275,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3337,7 +3302,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ СЛУГА" Skill="6" Strength="8"/>
 					<Enemy Name="ВТОРОЙ СЛУГА" Skill="6" Strength="7"/>
@@ -3442,7 +3406,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="БРОДЯГА" Skill="8" Strength="6"/>
 				</Enemies>
@@ -3807,7 +3770,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ КАВАЛЕРИСТ" Skill="7" Strength="8"/>
 				</Enemies>
@@ -3857,7 +3819,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ЧЕЛОВЕК С ТОПОРОМ" Skill="8" Strength="8"/>
 					<Enemy Name="ВТОРОЙ ЧЕЛОВЕК С ТОПОРОМ" Skill="7" Strength="6"/>
@@ -3925,7 +3886,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4003,7 +3963,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЧАСОВОЙ" Skill="7" Strength="8"/>
 				</Enemies>
@@ -4019,7 +3978,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ШЕВАЛЬЕ ДЕ МИШУАР" Skill="9" Strength="8"/>
 				</Enemies>
@@ -4042,7 +4000,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4154,7 +4111,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4292,7 +4248,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4369,7 +4324,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ СОЛДАТ" Skill="6" Strength="6"/>
 					<Enemy Name="ВТОРОЙ СОЛДАТ" Skill="7" Strength="6"/>
@@ -4431,7 +4385,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ МОНАХ" Skill="7" Strength="8"/>
 					<Enemy Name="ВТОРОЙ МОНАХ" Skill="7" Strength="7"/>
@@ -4549,7 +4502,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВОЛК" Skill="7" Strength="10"/>
 					<Enemy Name="ВОЛЧИЦА" Skill="6" Strength="8"/>
@@ -4700,7 +4652,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4714,7 +4665,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГЕРЦОГ ДЕ ЛАВЕЛЕТТ" Skill="6" Strength="14"/>
 				</Enemies>
@@ -4763,7 +4713,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4968,7 +4917,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4989,7 +4937,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГРАФ МОРТОН" Skill="10" Strength="12"/>
 				</Enemies>
@@ -5024,7 +4971,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5141,7 +5087,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ УБИЙЦА" Skill="9" Strength="8"/>
 					<Enemy Name="ВТОРОЙ УБИЙЦА" Skill="8" Strength="7"/>
@@ -5180,7 +5125,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5211,7 +5155,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ СОЛДАТ" Skill="7" Strength="8"/>
 					<Enemy Name="ВТОРОЙ СОЛДАТ" Skill="6" Strength="8"/>
@@ -5235,7 +5178,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГРАФ МОРТОН" Skill="10" Strength="12"/>
 				</Enemies>
@@ -5280,7 +5222,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ОБОРВАНЕЦ" Skill="6" Strength="8"/>
 					<Enemy Name="ВТОРОЙ ОБОРВАНЕЦ" Skill="7" Strength="8"/>
@@ -5380,7 +5321,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ КАВАЛЕРИСТ" Skill="7" Strength="9"/>
 					<Enemy Name="ВТОРОЙ КАВАЛЕРИСТ" Skill="7" Strength="8"/>
@@ -5398,7 +5338,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СОЛДАТ" Skill="7" Strength="8"/>
 				</Enemies>
@@ -5442,7 +5381,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="10"/>
 				</Enemies>
@@ -5662,7 +5600,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5833,7 +5770,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="МОЛОДОЙ ДВОРЯНИН" Skill="8" Strength="8"/>
 				</Enemies>
@@ -5886,7 +5822,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -6234,7 +6169,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГОНЕЦ" Skill="7" Strength="8"/>
 				</Enemies>
@@ -6257,7 +6191,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -6687,7 +6620,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПОСЛАНЕЦ ГУБЕРНАТОРА" Skill="9" Strength="8"/>
 				</Enemies>
@@ -6733,7 +6665,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="МЕДВЕДЬ" Skill="1" Strength="8"/>
 				</Enemies>
