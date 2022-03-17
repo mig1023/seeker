@@ -108,6 +108,24 @@ namespace Seeker.Gamebook.StringOfWorlds
             return enemies;
         }
 
+        public override string ButtonText()
+        {
+            switch (Name)
+            {
+                case "Fight":
+                    return "Сражаться";
+
+                case "Luck":
+                    return "Проверить удачу";
+                
+                case "LuckRecovery":
+                    return "Восстановить 1 цифру удачи";
+
+                default:
+                    return Button;
+            }
+        }
+
         private string LuckNumbers()
         {
             string luckListShow = String.Empty;
