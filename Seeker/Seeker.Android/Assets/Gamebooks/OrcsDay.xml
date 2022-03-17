@@ -85,7 +85,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Courage</Stat>
 				<LevelNull/>
 				<OrcishnessTest/>
@@ -116,7 +115,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Muscle</Stat>
 				<Level>10</Level>
 			</Action>
@@ -155,7 +153,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Зомби-тролль" Attack="10" Defense="9" Hitpoints="5"/>
 				</Enemies>
@@ -185,7 +182,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Courage</Stat>
 				<Level>5</Level>
 				<OrcishnessTest/>
@@ -220,7 +216,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wits</Stat>
 				<Level>10</Level>
 			</Action>
@@ -259,7 +254,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wits</Stat>
 				<Level>5</Level>
 				<OrcishnessTest/>
@@ -359,7 +353,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wits</Stat>
 				<Level>9</Level>
 				<OrcishnessTest/>
@@ -395,7 +388,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wits</Stat>
 				<Level>5</Level>
 				<OrcishnessTest/>
@@ -475,7 +467,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wits</Stat>
 				<Level>3</Level>
 				<OrcishnessTest/>
@@ -547,7 +538,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Luck</Stat>
 				<Level>9</Level>
 			</Action>
@@ -595,7 +585,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Мортимер Нечихающий" Attack="9" Defense="9" Hitpoints="5"/>
 				</Enemies>
@@ -611,7 +600,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Luck</Stat>
 				<Level>10</Level>
 			</Action>
@@ -627,7 +615,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Орки" Attack="9" Defense="9" Hitpoints="6"/>
 				</Enemies>
@@ -649,7 +636,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Другие орки" Attack="8" Defense="5" Hitpoints="5"/>
 				</Enemies>
@@ -672,7 +658,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Orcishness</Stat>
 				<Level>8</Level>
 			</Action>
@@ -719,7 +704,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Orcishness</Stat>
 				<Level>10</Level>
 			</Action>
@@ -736,7 +720,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Luck</Stat>
 				<Level>9</Level>
 			</Action>
@@ -763,7 +746,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Luck</Stat>
 				<Level>10</Level>
 			</Action>
@@ -779,7 +761,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Luck</Stat>
 				<Level>10</Level>
 			</Action>
@@ -795,7 +776,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Courage</Stat>
 				<Level>6</Level>
 				<OrcishnessTest/>		
@@ -865,7 +845,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Единственный Орк" Attack="7" Defense="6" Hitpoints="3"/>
 				</Enemies>
@@ -885,7 +864,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Luck</Stat>
 				<Level>5</Level>
 				<OrcishnessTest/>
@@ -926,7 +904,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Зомби-тролль" Attack="10" Defense="9" Hitpoints="6"/>
 				</Enemies>
@@ -957,7 +934,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Luck</Stat>
 				<Level>10</Level>
 			</Action>
@@ -989,7 +965,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wits</Stat>
 				<Level>4</Level>
 				<OrcishnessTest/>
@@ -1049,7 +1024,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Три орка" Attack="8" Defense="8" Hitpoints="4"/>
 				</Enemies>
@@ -1104,7 +1078,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Orcishness</Stat>
 				<Level>12</Level>
 				<Aftertext>Если тебе везёт, в тебе ещё слишком много орочьего духа, чтобы напасть на других орков:</Aftertext>
@@ -1117,7 +1090,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Другие орки" Attack="8" Defense="5" Hitpoints="5"/>
 				</Enemies>
@@ -1136,7 +1108,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Зомби-тролль" Attack="10" Defense="9" Hitpoints="6"/>
 				</Enemies>
@@ -1203,7 +1174,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Courage</Stat>
 				<Level>5</Level>
 				<OrcishnessTest/>
@@ -1229,14 +1199,12 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wits</Stat>
 				<Level>10</Level>
 				<Aftertext>Или:</Aftertext>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Luck</Stat>
 				<Level>10</Level>
 			</Action>
@@ -1291,7 +1259,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Зомби-тролль" Attack="8" Defense="7" Hitpoints="6"/>
 				</Enemies>
@@ -1299,7 +1266,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wits</Stat>
 				<Level>8</Level>
 				<OrcishnessTest/>
@@ -1348,7 +1314,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Галрос Бессмертный" Attack="10" Defense="11" Hitpoints="8"/>
 				</Enemies>
@@ -1369,7 +1334,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Luck</Stat>
 				<Level>5</Level>
 				<OrcishnessTest/>
@@ -1377,7 +1341,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wits</Stat>
 				<Level>5</Level>
 				<OrcishnessTest/>
@@ -1394,7 +1357,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Мортимер Нечихающий" Attack="10" Defense="10" Hitpoints="6"/>
 				</Enemies>
@@ -1427,7 +1389,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Галрос Бессмертный" Attack="10" Defense="11" Hitpoints="8"/>
 				</Enemies>
@@ -1464,7 +1425,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Приключенцы" Attack="10" Defense="8" Hitpoints="5"/>
 				</Enemies>
