@@ -12,8 +12,8 @@ namespace Seeker.Gamebook.DeathOfAntiquary
         {
             [ButtonTypes.Main] = "#2e2e2e",
             [ButtonTypes.Option] = "#2e2e2e",
-            [ButtonTypes.Continue] = "#575757",
-            [ButtonTypes.System] = "#6c6c6c",
+            [ButtonTypes.Continue] = "#9a9a9a",
+            [ButtonTypes.System] = "#d6d6d6",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
