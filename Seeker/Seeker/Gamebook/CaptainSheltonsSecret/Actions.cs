@@ -71,6 +71,27 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return enemies;
         }
 
+        public override string ButtonText()
+        {
+            switch (Name)
+            {
+                case "Fight":
+                    return (GroupFight ? "Пусть сражаются" : "Сражаться");
+
+                case "Luck":
+                    return "Проверить удачу";
+
+                case "LuckRecovery":
+                    return "Восстановить 1 цифру удачи";
+
+                case "LuckLose":
+                    return "Потеряйте 1 цифру удачи";
+
+                default:
+                    return Button;
+            }
+        }
+
         public List<string> Break()
         {
             List<string> breakingDoor = new List<string> { "Ломаете дверь:" };
