@@ -85,7 +85,6 @@
 		<Actions>
 			<Action>
 				<Name>FireFight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="Первый Дроид" Accuracy="4" Hitpoints="10" Firepower="5"/>
 					<Enemy Name="Второй Дроид" Accuracy="7" Hitpoints="10" Firepower="5"/>
@@ -129,7 +128,6 @@
 		<Actions>
 			<Action>
 				<Name>FireFight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="Первый HH-108" Accuracy="7" Hitpoints="10" Shield="15" Firepower="10"/>
 					<Enemy Name="Второй HH-108" Accuracy="7" Hitpoints="10" Shield="15" Firepower="10"/>
@@ -1046,7 +1044,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>15</Level>
 			</Action>
 		</Actions>
@@ -1236,7 +1233,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Проводник" Skill="8" Rang="1" Speed="3" Hitpoints="20" SwordTechnique="Elasticity"/>
 				</Enemies>
@@ -1314,7 +1310,6 @@
 		<Actions>
 			<Action>
 				<Name>MixedFightAttack</Name>
-				<Button>Атаковать</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1328,7 +1323,6 @@
 		<Actions>
 			<Action>
 				<Name>MixedFightDefence</Name>
-				<Button>Атаковать</Button>
 				<Aftertext>Если полученное число меньше единицы, то вычтите из Выносливости противника Силу его выстрела — вам удается отразить выстрел противника в него самого.\n\nВы можете защищаться не больше 5 раундов, после чего нужно решать — отступить или атаковать.\n\nВы также можете атаковать противника в конце любого раунда.</Aftertext>
 			</Action>
 		</Actions>
@@ -1623,7 +1617,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>15</Level>
 			</Action>
 		</Actions>
@@ -1956,7 +1949,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>14</Level>
 			</Action>
 		</Actions>
@@ -2631,7 +2623,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>16</Level>
 			</Action>
 		</Actions>
@@ -2749,7 +2740,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>25</Level>
 			</Action>
 		</Actions>
@@ -3485,7 +3475,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -3543,12 +3532,10 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>— Как тебе такой удар? — спрашивает он, явно довольный собой, и принимает защитную стойку. — Твоя очередь атаковать! Покажи, на что способен!</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -3569,7 +3556,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -3611,14 +3597,12 @@
 		<Actions>
 			<Action>
 				<Name>EnemyDiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<BonusTechnique>Push</BonusTechnique>
 				<Enemy>Кирк Драгус,30</Enemy>
 				<Aftertext>Вы бросаетесь на противника.</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -3639,7 +3623,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -3676,7 +3659,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -3702,7 +3684,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -3720,7 +3701,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -3760,7 +3740,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -3792,7 +3771,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>20</Level>
 			</Action>
 		</Actions>
@@ -3812,7 +3790,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -3836,7 +3813,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Hitpoints="30"/>
 				</Enemies>
@@ -3906,7 +3882,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>А Кирку засчитайте еще один укол.</Aftertext>
 			</Action>
 		</Actions>
@@ -3928,7 +3903,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Hitpoints="30"/>
 				</Enemies>
@@ -3955,14 +3929,12 @@
 		<Actions>
 			<Action>
 				<Name>EnemyDiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<BonusTechnique>Push</BonusTechnique>
 				<Enemy>Кирк Драгус,30</Enemy>
 				<Aftertext>Продолжается дуэль на световых мечах:</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -3982,7 +3954,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>15</Level>
 			</Action>
 		</Actions>
@@ -4002,14 +3973,12 @@
 		<Actions>
 			<Action>
 				<Name>EnemyDiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<BonusTechnique>Push</BonusTechnique>
 				<Enemy>Кирк Драгус,30</Enemy>
 				<Aftertext>Продолжается дуэль на световых мечах:</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -4037,7 +4006,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -4065,7 +4033,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 				</Enemies>
@@ -4338,7 +4305,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4397,7 +4363,6 @@
 			</Action>
 			<Action>
 				<Name>SimpleDice</Name>
-				<Button>Бросить кубик</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4412,7 +4377,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4455,14 +4419,12 @@
 		<Actions>
 			<Action>
 				<Name>EnemyDiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<BonusTechnique>Push</BonusTechnique>
 				<Enemy>Жюль Трито,26</Enemy>
 				<Aftertext>Вы бросаетесь на противника. Продолжается дуэль на световых мечах.</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4484,7 +4446,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4520,7 +4481,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4547,7 +4507,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4567,7 +4526,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4608,7 +4566,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4641,7 +4598,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>21</Level>
 			</Action>
 		</Actions>
@@ -4661,7 +4617,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4686,7 +4641,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4754,7 +4708,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>А Жюлю засчитайте еще один укол.</Aftertext>
 			</Action>
 		</Actions>
@@ -4779,7 +4732,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4806,14 +4758,12 @@
 		<Actions>
 			<Action>
 				<Name>EnemyDiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<BonusTechnique>Push</BonusTechnique>
 				<Enemy>Жюль Трито,26</Enemy>
 				<Aftertext>Продолжается дуэль на световых мечах:</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4834,7 +4784,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>25</Level>
 			</Action>
 		</Actions>
@@ -4854,14 +4803,12 @@
 		<Actions>
 			<Action>
 				<Name>EnemyDiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<BonusTechnique>Push</BonusTechnique>
 				<Enemy>Жюль Трито,26</Enemy>
 				<Aftertext>Продолжается дуэль на световых мечах:</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4890,7 +4837,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4920,7 +4866,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -4946,7 +4891,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -5033,7 +4977,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -5061,7 +5004,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -5090,7 +5032,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 				</Enemies>
@@ -5230,7 +5171,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5284,12 +5224,10 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>— Как тебе такой удар? — спрашивает он, явно довольный собой, и принимает защитную стойку. — Твоя очередь атаковать! Покажи, на что способен!</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5313,7 +5251,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5355,14 +5292,12 @@
 		<Actions>
 			<Action>
 				<Name>EnemyDiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<BonusTechnique>Push</BonusTechnique>
 				<Enemy>Артхт Тархтхтх,24</Enemy>
 				<Aftertext>Вы бросаетесь на противника.</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5383,7 +5318,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5418,7 +5352,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5444,7 +5377,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5463,7 +5395,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5501,7 +5432,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5533,7 +5463,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>23</Level>
 			</Action>
 		</Actions>
@@ -5553,7 +5482,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5577,7 +5505,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5647,7 +5574,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>А Артхта Тархтхтху засчитайте еще один укол.</Aftertext>
 			</Action>
 		</Actions>
@@ -5669,7 +5595,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5696,14 +5621,12 @@
 		<Actions>
 			<Action>
 				<Name>EnemyDiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<BonusTechnique>Push</BonusTechnique>
 				<Enemy>Артхт Тархтхтх,24</Enemy>
 				<Aftertext>Продолжается дуэль на световых мечах.</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5723,7 +5646,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>25</Level>
 			</Action>
 		</Actions>
@@ -5741,14 +5663,12 @@
 		<Actions>
 			<Action>
 				<Name>EnemyDiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<BonusTechnique>Push</BonusTechnique>
 				<Enemy>Артхт Тархтхтх,24</Enemy>
 				<Aftertext>Продолжается дуэль на световых мечах.</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5776,7 +5696,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5803,7 +5722,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -5828,7 +5746,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 				</Enemies>
@@ -6157,12 +6074,10 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>Вы вынуждены переключиться на Скорость Силы, иначе никакого владения мечом не будет достаточно, чтобы успевать отбить атаки обоих оставшихся противников.\n\nНачинается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Эван Макгил" Skill="8" Rang="2" Speed="3" Hitpoints="20"/>
 					<Enemy Name="Винс Гирт" Skill="10" Rang="3" Speed="2" Hitpoints="22"/>
@@ -6191,7 +6106,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					<Enemy Name="Винс Гирт" Skill="10" Rang="3" Speed="2" Hitpoints="22"/>
@@ -6220,7 +6134,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					<Enemy Name="Эван Макгил" Skill="8" Rang="2" Speed="3" Hitpoints="20"/>
@@ -6260,7 +6173,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					<Enemy Name="Эван Макгил" Skill="8" Rang="2" Speed="3" Hitpoints="20"/>
@@ -6545,7 +6457,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -6597,7 +6508,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -6640,14 +6550,12 @@
 		<Actions>
 			<Action>
 				<Name>EnemyDiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<BonusTechnique>Push</BonusTechnique>
 				<Enemy>Марика Затт,25</Enemy>
 				<Aftertext>Вы бросаетесь на противницу. Продолжается дуэль на световых мечах.</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -6669,7 +6577,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -6705,7 +6612,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -6733,7 +6639,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -6753,7 +6658,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -6794,7 +6698,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -6827,7 +6730,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>22</Level>
 			</Action>
 		</Actions>
@@ -6847,7 +6749,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -6872,7 +6773,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -6940,7 +6840,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -6964,7 +6863,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -6992,14 +6890,12 @@
 		<Actions>
 			<Action>
 				<Name>EnemyDiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<BonusTechnique>Push</BonusTechnique>
 				<Enemy>Марика Затт,25</Enemy>
 				<Aftertext>Продолжается дуэль на световых мечах.</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -7020,7 +6916,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>25</Level>
 			</Action>
 		</Actions>
@@ -7040,14 +6935,12 @@
 		<Actions>
 			<Action>
 				<Name>EnemyDiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<BonusTechnique>Push</BonusTechnique>
 				<Enemy>Марика Затт,25</Enemy>
 				<Aftertext>Продолжается дуэль на световых мечах.</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -7075,7 +6968,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -7105,7 +6997,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -7131,7 +7022,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -7214,7 +7104,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -7239,12 +7128,10 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>— Как тебе такой приемчик? — с издевкой интересуется Марика Затт.\n\nВ ответ вы бросаетесь на нее с удвоенной яростью.</Aftertext>
 			</Action>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 				</Enemies>
@@ -7482,7 +7369,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>25</Level>
 			</Action>
 		</Actions>
@@ -7517,7 +7403,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -7534,7 +7419,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>26</Level>
 			</Action>
 		</Actions>
@@ -7557,7 +7441,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertexts>
 					<Aftertext>Вы вскакиваете, а она снова ТОЛКАЕТ вас, отбрасывая назад, но вы уже подготовлены, и успеваете вовремя поставить блок.</Aftertext>
 					<Aftertext Size="small">Отнимите 1 у себя из Выносливости.\n</Aftertext>
@@ -7597,7 +7480,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>В ярости от боли, вы разрываете стальную хватку вокруг горла и приземляетесь на песок.</Aftertext>
 			</Action>
 		</Actions>
@@ -7616,7 +7498,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Ливия Умай" Skill="8" Rang="2" Speed="3" Hitpoints="15"/>
 				</Enemies>
@@ -7735,7 +7616,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>22</Level>
 			</Action>
 		</Actions>
@@ -7750,7 +7630,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>22</Level>
 			</Action>
 		</Actions>
@@ -7765,7 +7644,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>20</Level>
 			</Action>
 		</Actions>
@@ -8001,7 +7879,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>26</Level>
 			</Action>
 		</Actions>
@@ -8015,7 +7892,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>24</Level>
 			</Action>
 		</Actions>
@@ -8029,7 +7905,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>28</Level>
 			</Action>
 		</Actions>
@@ -8044,7 +7919,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>23</Level>
 			</Action>
 		</Actions>
@@ -8150,7 +8024,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>24</Level>
 			</Action>
 		</Actions>
@@ -8164,7 +8037,6 @@
 		<Actions>
 			<Action>
 				<Name>ForceTest</Name>
-				<Button>Пройти проверку</Button>
 				<Level>30</Level>
 			</Action>
 		</Actions>
@@ -8198,7 +8070,6 @@
 		<Actions>
 			<Action>
 				<Name>SwordFight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Арладо Ураки" Skill="18" Rang="2" Speed="3" Hitpoints="30" SwordTechnique="Confidence"/>
 				</Enemies>
