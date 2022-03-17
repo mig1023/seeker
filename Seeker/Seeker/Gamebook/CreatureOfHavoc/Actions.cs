@@ -32,6 +32,21 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             return enemies;
         }
 
+        public override string ButtonText()
+        {
+            switch (Name)
+            {
+                case "Fight":
+                    return "Сражаться";
+
+                case "Luck":
+                    return "Испытай удачу";
+
+                default:
+                    return Button;
+            }
+        }
+
         public override List<string> Status() => new List<string>
         {
             String.Format("Мастерство: {0}", protagonist.Mastery),
