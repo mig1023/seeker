@@ -22,7 +22,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -36,7 +35,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КУСТ-ХИЩНИК" Skill="9" Strength="10"/>
 				</Enemies>
@@ -104,7 +102,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЗМЕЯ" Skill="12" Strength="12"/>
 				</Enemies>
@@ -181,7 +178,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ МУРАВЕЙ" Skill="8" Strength="10"/>
 					<Enemy Name="ВТОРОЙ МУРАВЕЙ" Skill="8" Strength="8"/>
@@ -290,7 +286,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ШАР-ХИЩНИК" Skill="10" Strength="6"/>
 				</Enemies>
@@ -376,7 +371,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СОРОКОНОЖКА" Skill="7" Strength="6"/>
 				</Enemies>
@@ -437,7 +431,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="«РОСЯНКА»" Skill="7" Strength="8"/>
 				</Enemies>
@@ -686,7 +679,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="РЫЦАРЬ" Skill="10" Strength="12"/>
 				</Enemies>
@@ -742,7 +734,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЖУК" Skill="9" Strength="9"/>
 				</Enemies>
@@ -849,7 +840,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ МУРАВЕЙ" Skill="9" Strength="10"/>
 					<Enemy Name="ВТОРОЙ МУРАВЕЙ" Skill="9" Strength="8"/>
@@ -884,7 +874,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="РАКОСКОРПИОН" Skill="9" Strength="9"/>
 				</Enemies>
@@ -914,7 +903,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -1150,7 +1138,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ЗВЕРЬ" Skill="9" Strength="10"/>
 					<Enemy Name="ВТОРОЙ ЗВЕРЬ" Skill="9" Strength="8"/>
@@ -1177,7 +1164,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="«КУЗНЕЧИК»" Skill="10" Strength="10"/>
 				</Enemies>
@@ -1278,7 +1264,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1292,7 +1277,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1420,7 +1404,6 @@
 		<Actions>
 			<Action>
 				<Name>LuckRecovery</Name>
-				<Button>Восстановить 1 цифру удачи</Button>
 				<Aftertext>Над Воротами — кодовый номер: 27. Не забудьте его записать!\n\nЕсли на вас шлем — обязательно снимите его: в других Мирах он может выглядеть нелепо. Можете положить его в рюкзак (вдруг пригодится!) или оставить здесь.\n\nА теперь остается лишь сделать шаг вперед...\n\nЕсли мир, который вы покидаете, был не первым на вашем пути, то сложите кодовые номера, которые удалось записать.</Aftertext>
 			</Action>
 		</Actions>
@@ -1460,7 +1443,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПОВАР" Skill="8" Strength="12"/>
 				</Enemies>
@@ -1526,7 +1508,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ГРАБИТЕЛЬ" Skill="9" Strength="10"/>
 					<Enemy Name="ВТОРОЙ ГРАБИТЕЛЬ" Skill="9" Strength="11"/>
@@ -1733,7 +1714,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1762,7 +1742,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СТРАЖНИК" Skill="8" Strength="8"/>
 				</Enemies>
@@ -1813,7 +1792,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1850,7 +1828,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1871,7 +1848,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1927,7 +1903,6 @@
 		<Actions>
 			<Action>
 				<Name>LuckRecovery</Name>
-				<Button>Восстановить 1 цифру удачи</Button>
 				<Aftertext>Над Воротами в скале выбит кодовый номер: 103. Вы не забыли, что обещали записывать номера всех Ворот?\n\nРазумеется, оставаться здесь опасно, и вы, не колеблясь, шагаете в световой столб.\n\nЕсли мир, который вы покидаете, был не первым на вашем пути, то сложите все кодовые номера, которые вам удалось записать.</Aftertext>
 			</Action>
 		</Actions>
@@ -2169,7 +2144,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПАУК" Skill="9" Strength="8"/>
 				</Enemies>
@@ -2365,7 +2339,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="РОБОТ" Skill="8" Strength="8"/>
 				</Enemies>
@@ -2504,7 +2477,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЭЙНАР ЧЕРНЫЙ ЩИТ" Skill="10" Strength="12"/>
 				</Enemies>
@@ -2698,7 +2670,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КУСТ-ВАМПИР" Skill="11" Strength="8"/>
 				</Enemies>
@@ -2744,7 +2715,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2884,7 +2854,6 @@
 		<Actions>
 			<Action>
 				<Name>LuckRecovery</Name>
-				<Button>Восстановить 1 цифру удачи</Button>
 				<Aftertext>На стене — кодовый номер: 215. Вы не забыли, что должны записать его?</Aftertext>
 			</Action>
 		</Actions>
@@ -3021,7 +2990,6 @@
 		<Actions>
 			<Action>
 				<Name>LuckRecovery</Name>
-				<Button>Восстановить 1 цифру удачи</Button>
 				<Aftertext>На скале рядом с Воротами можно, хотя и с трудом, прочесть их кодовый номер: 48. Не забудьте эту цифру!\n\nКоротко вздохнув, вы медленно вплываете в световой поток...\n\nЕсли мир, который вы покидаете, был не первым на вашем пути, то сложите все кодовые номера Ворот, которые удалось записать.</Aftertext>
 			</Action>
 		</Actions>
@@ -3084,7 +3052,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3189,7 +3156,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="БЕРТОЛЬД ИЗ СОРГЕЙЛЯ" Skill="10" Strength="10"/>
 				</Enemies>
@@ -3344,7 +3310,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<RemoveTrigger>AntiGravityRing</RemoveTrigger>
@@ -3544,7 +3509,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3611,7 +3575,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3750,7 +3713,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ОБЕЗЬЯНОПАУК" Skill="10" Strength="10"/>
 				</Enemies>
@@ -3774,7 +3736,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3922,7 +3883,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4048,7 +4008,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4115,7 +4074,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПИРАТ" Skill="9" Strength="9"/>
 				</Enemies>
@@ -4179,7 +4137,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4335,7 +4292,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4426,7 +4382,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="БЕЗУМЕЦ" Skill="9" Strength="12"/>
 				</Enemies>
@@ -4648,7 +4603,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПАЛЕАНДР НЕУКРОТИМЫЙ" Skill="10" Strength="12"/>
 				</Enemies>
@@ -4707,7 +4661,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="НАГЛЕЦ" Skill="11" Strength="10"/>
 				</Enemies>
@@ -4754,7 +4707,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4768,7 +4720,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="БРОНСОН" Skill="10" Strength="10"/>
 				</Enemies>
@@ -5143,7 +5094,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5476,7 +5426,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="МУРАВЕЙ" Skill="9" Strength="8"/>
 				</Enemies>
@@ -5821,7 +5770,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СЕРЕБРИСТЫЙ ЗВЕРЬ" Skill="9" Strength="10"/>
 				</Enemies>
@@ -5871,7 +5819,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="«БАБОЧКА»" Skill="8" Strength="8"/>
 				</Enemies>
@@ -5889,7 +5836,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5927,7 +5873,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СОРОКОНОЖКА" Skill="12" Strength="6"/>
 				</Enemies>
@@ -6040,7 +5985,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -6097,7 +6041,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ШЕРШЕНЬ" Skill="8" Strength="8"/>
 					<Enemy Name="ВТОРОЙ ШЕРШЕНЬ" Skill="8" Strength="6"/>
@@ -6164,7 +6107,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ РАЗБОЙНИК" Skill="9" Strength="8"/>
 					<Enemy Name="ВТОРОЙ РАЗБОЙНИК" Skill="9" Strength="9"/>
