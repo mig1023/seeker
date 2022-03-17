@@ -42,6 +42,15 @@ namespace Seeker.Gamebook.GoingToLaughter
             String.Format("Вдохновение: {0}", protagonist.Inspiration)
         };
 
+        public override string ButtonText()
+        {
+            if (Name == "DiceValues")
+                return "Кинуть кубик" + (DiceOfDice || (Dices > 0) ? "и" : String.Empty);
+
+            else
+                return Button;
+        }
+
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             if (protagonist.Buffoonery <= 0)
