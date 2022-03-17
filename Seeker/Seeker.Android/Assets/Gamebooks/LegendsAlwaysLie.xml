@@ -341,7 +341,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -481,7 +480,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРНАТЫЙ ДЕМОН" Strength="11" Hitpoints="12"/>
 				</Enemies>
@@ -611,7 +609,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<Dices>1</Dices>
 				<Aftertext>Коннери протягивает руку, но вы гордо мотаете головой и пружинисто поднимаетесь сами. Легенда ты или нет, дядя, но я еще и сам могу встать.\n\nА потом через тропу вдруг стремглав проносится белый пушистый кролик. От неожиданности вы оба хватаетесь за мечи, и не напрасно. Следом за ним огромными легкими скачками бежит длинный и худой птицеподобный демон. Пересекая Тропу, он шипит от боли – находиться на ней ему явно дискомфортно. Но тут он замечает вас, и с удивлением замирает на месте. Блестящие перья топорщатся, глазные яблоки бешено вращаются, клюв удивленно нацеливается на вас:\n\n– Ссссмертные? На Тропе? Я не видел смертных уже очень, очень давно.\n\nКоннери открывает рот, чтобы ответить.</Aftertext>
 			</Action>
@@ -983,7 +980,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1125,7 +1121,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1168,7 +1163,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВЕЛИКАН-КОПЬЕНОСЕЦ" Strength="11" Hitpoints="10"/>
 				</Enemies>
@@ -1227,7 +1221,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1277,7 +1270,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВЕЛИКАН" Strength="13" Hitpoints="16"/>
 				</Enemies>
@@ -1557,7 +1549,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВЕЛИКАН" Strength="13" Hitpoints="14"/>
 				</Enemies>
@@ -1688,7 +1679,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВЕЛИКАН" Strength="12" Hitpoints="12"/>
 				</Enemies>
@@ -1914,7 +1904,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Damage Name="Hitpoints" Value="-6"/>
 				<Aftertext>Если же проверка реакции была неудачной, потеряйте 6 ЖИЗНЕЙ, от страшного удара сзади. Когда вы поднимитесь обратно на ноги, все уже будет кончено. Если же вы были быстры, словно ветер, то вы наверняка успеете… Сделать что?</Aftertext>
 			</Action>
@@ -2096,7 +2085,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВЕЛИКАН" Strength="11" Hitpoints="10"/>
 				</Enemies>
@@ -2164,7 +2152,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="САБЛЕРУКИЙ ГОЛЕМ" Strength="11" Hitpoints="2"/>
 				</Enemies>
@@ -2276,7 +2263,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Damage Name="Hitpoints" Value="-4"/>
 				<Aftertext>Замешкались – теряете 4 ЖИЗНИ.\n\nКоннери играючи отбил предназначенный ему болт. Гном мрачнеет, но поднимает с земли новые боеприпасы и деловито заряжает арбалет. Надо что-то предпринимать, не стоять же, как мишень.</Aftertext>
 			</Action>
@@ -2474,7 +2460,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВЕЛИКАН НА НОСОРОГЕ" Strength="13" Hitpoints="14"/>
 				</Enemies>
@@ -2527,7 +2512,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Damage Name="Hitpoints" Value="-4"/>
 				<Aftertext>Если ваши рефлексы подведут – теряете 4 ЖИЗНИ. Если все в порядке, то вам удастся увернуться.\n\nПроследив свой бросок, конунг делает движение бедрами, и ковер забирает влево. Едва не чиркнув по склону в крутом вираже, он начинает огибать гору. Маневренности этого колдовского транспортного средства позавидовал бы даже ястреб.\n\nВы поднимаете Коннери. Легендарный ведьмак совсем плох – лицо восковое, лоб усеивают крупные капли пота. Кажется, от падения он опять потерял сознание. До храма не более полусотни шагов, но вы уже различаете топот за своей спиной. Носороги спустились на равнину и набирают разбег. Насколько они близко, вы предпочитаете не смотреть.\n\n– Все будет пучком, старикан, – приговариваете вы, неся Коннери на спине. Ноги его бессильно волочатся по земле. – Ты только не вздумай умирать. Сегодня хреновый день для смерти, знаешь ли.\n\nВойна и орки, какой же он тяжелый! Раздобрел на тюремных харчах, старый пень. До храма остается полтора десятка шагов, и тут из его пасти, из самой ее сумеречной тени вам навстречу шагает великан. На нем накидка из шкур снежных барсов, в руке зажато длинное копье. Даже если бы сейчас случился Армагеддон, он и то был бы менее некстати, чем этот страж-копьеносец.\n\n– Да чтоб тебя, – вы бессильно останавливаетесь в тупом отчаянии. Потом, сбросив оцепенение, опускаете напарника на землю и беретесь за меч. Если дорога в храм лежит через твой труп, приятель – что ж, так тому и быть.</Aftertext>
 			</Action>
@@ -2552,7 +2536,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КОНДОР" Strength="11" Hitpoints="7"/>
 				</Enemies>
@@ -2599,7 +2582,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СУККУБ" Strength="10" Hitpoints="12"/>
 				</Enemies>
@@ -2656,13 +2638,11 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Damage Name="Hitpoints" Value="-2"/>
 				<Aftertext>(не успеете – он заденет вас, потеряете 2 ЖИЗНИ) и оседает на землю.\n\nВы оборачиваетесь – за вашей спиной поднимается с земли великан. Вам повезло, что у него нет оружия, но и с голыми руками он опасный противник.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВЕЛИКАН" Strength="11" Hitpoints="12"/>
 				</Enemies>
@@ -2748,7 +2728,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3052,7 +3031,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Damage Name="Hitpoints" Value="-4"/>
 				<Aftertext>Если промедлите, теряете 4 ЖИЗНИ.\n\nРуки у рыжебородого уже трясутся. Еще бы, с обеих сторон к нему неумолимо надвигаются двое людей в черном. Он судорожно развязывает свой мешок, путаясь в тесемках, и достает небольшой металлический шар.\n\n– Фас! – командует он шарику.\n\nТот внезапно раскладывается в маленького стального паучка. Ведьмачьим острым зрением вы отмечаете поблескивающие маслянистым коготки. Наверняка яд. Паучок очень прытко бросается к вам, но на полпути вдруг с шипением и треском останавливается. Внутри него что-то еле слышно жужжит. Затем он опять окукливается, трансформируясь в металлическую сферу.\n\n– Сломалась твоя игрушка, – ехидно замечает Коннери, подходя к гному. Тот пытается что-то возразить, но получает мощный подзатыльник и кубарем скатывается с ящиков на землю.\n\n– В другой раз, перед расстрелом мирных путников из арбалета, советую хорошенько подумать.\n\nВы проходите мимо свернувшегося в шар паучка. Неясно, опасна эта гадость еще или нет. Если хотите, можете взять его с собой. В таком случае поместите его в мешок и запишите слово «сфера».\n\nКоннери в это время допрашивает гнома.\n\n– Расскажи нам, милый друг, что же ты забыл в столь суровом месте, и что у тебя в этих проклятых ящиках?\n\nКоротышка упрямо зыркает глазами поверх бороды и молчит.</Aftertext>
 			</Action>
@@ -3149,7 +3127,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="МЕДВЕДЬ" Strength="11" Hitpoints="12"/>
 				</Enemies>
@@ -3366,7 +3343,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ТРОЛЛЬ" Strength="9" Hitpoints="10"/>
 					<Enemy Name="ВТОРОЙ ТРОЛЛЬ" Strength="9" Hitpoints="10"/>
@@ -3396,7 +3372,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3457,7 +3432,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<Trigger>Missing</Trigger>
 				<DiceBonus>-2</DiceBonus>
 				<Dices>1</Dices>
@@ -3501,7 +3475,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Aftertext>При хорошем раскладе вам удается удержаться и переправиться на другой берег. При плохом — вы падаете вниз.</Aftertext>
 			</Action>
 		</Actions>
@@ -3539,7 +3512,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГОРНЫЙ ВОЛК" Strength="12" Hitpoints="16"/>
 				</Enemies>
@@ -3559,7 +3531,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Triggers>Fury</Triggers>
@@ -3612,7 +3583,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КАМЫШОВЫЙ КОТ" Strength="10" Hitpoints="10"/>
 					<Enemy Name="КАМЫШОВАЯ КОШКА" Strength="10" Hitpoints="10"/>
@@ -3696,7 +3666,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -3797,7 +3766,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВОЛЧИЦА" Strength="11" Hitpoints="17"/>
 				</Enemies>
@@ -3817,7 +3785,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Benefit Name="Hitpoints" Value="-2"/>
 				<Damage Name="Hitpoints" Value="-5"/>
 				<Aftertext>Атака была настолько внезапной, что полностью уйти от поражения у вас не получится при любом раскладе. Если ваши рефлексы были на высоте, то метательный нож лишь оцарапает вам плечо (-2 ЖИЗНИ). Если нет, то нож воткнется вам в руку (–5 ЖИЗНЕЙ).\n\nБуквально через секунду в вашу сторону устремляется еще один, точно такой же снаряд, но теперь вы наготове.</Aftertext>
@@ -3879,7 +3846,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<DiceBonus>-2</DiceBonus>
 				<Dices>1</Dices>
 				<Aftertext>Коннери нигде не видно. Вы отчаянно пытаетесь затормозить, но тщетно – за гладкие камни не ухватиться, а течение слишком стремительно.\n\nНа северном берегу, чуть ниже по реке, виден просвет в утесах. Длинная узкая ложбина прорезает скалы ножом, доходя до самой воды. На южном, откуда вы шли, вообще один сплошной обрыв, так что вариантов у вас немного.</Aftertext>
@@ -3966,7 +3932,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4024,7 +3989,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Damage Name="Hitpoints" Value="-30"/>
 				<Aftertext>Если реакция подведет вас, то атака джинна будет смертельной, и ваше приключение окончено…\n\nЕсли же ваши рефлексы на высоте, то вы несомненно успеете – но что именно?</Aftertext>
 			</Action>
@@ -4128,7 +4092,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Damage Name="Hitpoints" Value="-4"/>
 				<Aftertext>В случае, если ваша скорость окажется недостаточной, теряете 4 ЖИЗНИ. Если же ваша реакция на высоте, то вы успеваете отпрянуть к левой стене как раз вовремя, чтобы остаться целым и невредимым.\n\nОднако, напарник ваш чуточку замешкался, и это стоит ему аж 5 ЖИЗНЕЙ. Рана на его плече выглядит крайне скверно. Дела идут все хуже и хуже, но вы находите в себе силы подбодрить ведьмака:\n\n– Держись, половина пройдена.</Aftertext>
 			</Action>
@@ -4155,7 +4118,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Damage Name="Hitpoints" Value="-2"/>
 				<Aftertext>Если с реакцией у вас окажется туго, то получи те удар по спине и потеряйте 2 ЖИЗНИ. Если же все хорошо, то вы молодец, успеваете отпрыгнуть.\n\nОтбросило вас или вы сами отпрыгнули, но повернувшись, вы понимаете одно – Коннери остался где-то по ту сторону. Стены в зале разгораются все ярче, все сильнее. Плиты заканчивают движение, свет пронизывает их насквозь, и вы с изумлением понимаете, что стоите в зеркальном лабиринте.\n\nСлева от вас плиты еще не разогрелись, не пропитались светом, они все еще матово-полупрозрачны. А вот справа и позади – самые натуральные зеркала. Десятки ваших отражений сбивают с толку, но где-то за ними слышна забористая ругань Коннери, и вы немного успокаиваетесь. Ничего c ним не случилось.\n\n– Эй, – окликаете вы напарника. – Я тут.</Aftertext>
 			</Action>
@@ -4477,7 +4439,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4608,7 +4569,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4764,7 +4724,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КОРОЛЬ-ЗОМБИ" Strength="12" Hitpoints="8"/>
 				</Enemies>
@@ -4914,7 +4873,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5160,7 +5118,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Benefit Name="Hitpoints" Value="-2"/>
 				<Damage Name="Hitpoints" Value="-30"/>
 				<Aftertext>Если проверка неудачна, то вы останетесь под решеткой навсегда, пришпиленный к полу, будто жук булавками…\n\nЕсли все прошло хорошо, значит, вы успели прокатиться под падающей решеткой. Оцарапанная рука (–2 ЖИЗНИ) не в счет.\n\nКоннери помогает вам подняться, и вы вместе уходите вперед по коридору, который приводит вас к золотистой двери.</Aftertext>
@@ -5627,7 +5584,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ЛАНТАН" Strength="13" Hitpoints="16"/>
 					<Enemy Name="ВТОРОЙ ЛАНТАН" Strength="13" Hitpoints="16"/>
@@ -5670,7 +5626,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Damage Name="Hitpoints" Value="-30"/>
 				<Aftertext>Если у вас вышла заминка, то она окажется смертельной, и вы упадете в бездонный провал…\n\nЕсли все в порядке, то вам чудом удастся сохранить равновесие.\n\n– Вниз не смотри! – кричит сзади Коннери. Вы слушаетесь и без труда преодолеваете провал.</Aftertext>
 			</Action>
@@ -5792,7 +5747,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5863,7 +5817,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5987,7 +5940,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Aftertext>Если ваши рефлексы подведут вас, то снаряд достигнет своей цели\n\nЕсли же вы быстры как ветер, то вы успеете отбить летящий шар. В этом случае:</Aftertext>
 			</Action>
 		</Actions>
@@ -6191,7 +6143,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -6318,7 +6269,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КАРДА" Strength="12" Hitpoints="14"/>
 				</Enemies>
@@ -6447,7 +6397,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceCheck</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>Если ваша специализация маг, смотрите вариант «чет». Иначе все решает не умение, а чистое везение.</Aftertext>
 			</Action>
 		</Actions>
@@ -6582,7 +6531,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -6625,7 +6573,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КАРДА" Strength="15" Hitpoints="14"/>
 				</Enemies>
@@ -6693,7 +6640,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КАРДА" Strength="14" Hitpoints="14"/>
 				</Enemies>
@@ -6746,7 +6692,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Damage Name="Hitpoints" Value="-3"/>
 				<Aftertext>Если ваша реакция запаздывает, придется потерять 3 ЖИЗНИ.</Aftertext>
 			</Action>
@@ -6796,7 +6741,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -6900,7 +6844,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПУМА" Strength="12" Hitpoints="6"/>
 				</Enemies>
