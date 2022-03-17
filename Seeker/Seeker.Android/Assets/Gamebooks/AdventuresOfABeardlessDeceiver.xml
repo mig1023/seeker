@@ -32,7 +32,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>7</Level>
 			</Action>
@@ -108,7 +107,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>9</Level>
 			</Action>
@@ -223,7 +221,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>13</Level>
 			</Action>
@@ -250,7 +247,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>11</Level>
 			</Action>
@@ -269,7 +265,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>10</Level>
 			</Action>
@@ -299,7 +294,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>10</Level>
 			</Action>
@@ -384,7 +378,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>9</Level>
 			</Action>
@@ -423,7 +416,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>7</Level>
 			</Action>
@@ -460,13 +452,11 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>11</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>11</Level>
 			</Action>
@@ -502,7 +492,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>12</Level>
 			</Action>
@@ -541,14 +530,12 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>11</Level>
 				<TablesGame/>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>11</Level>
 				<TablesGame/>
@@ -643,7 +630,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>9</Level>
 			</Action>
@@ -793,7 +779,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>9</Level>
 			</Action>
@@ -965,7 +950,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>9</Level>
 			</Action>
@@ -1005,7 +989,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>10</Level>
 			</Action>
@@ -1045,7 +1028,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>13</Level>
 			</Action>
@@ -1234,7 +1216,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>11</Level>
 			</Action>
@@ -1279,7 +1260,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>9</Level>
 			</Action>
@@ -1295,7 +1275,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>8</Level>
 			</Action>
@@ -1544,7 +1523,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>13</Level>
 			</Action>
@@ -1587,7 +1565,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>10</Level>
 			</Action>
@@ -1682,7 +1659,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>11</Level>
 			</Action>
@@ -1706,7 +1682,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>11</Level>
 			</Action>
@@ -1820,7 +1795,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<GuessBonus/>
 				<Stat>Wisdom</Stat>
 				<Level>11</Level>
@@ -1896,7 +1870,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>9</Level>
 			</Action>
@@ -1929,14 +1902,12 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>12</Level>
 				<TablesGame/>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>12</Level>
 				<TablesGame/>
@@ -2068,7 +2039,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Wisdom</Stat>
 				<Level>11</Level>
 			</Action>
@@ -2192,7 +2162,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Oratory</Stat>
 				<Level>11</Level>
 			</Action>
@@ -2320,7 +2289,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>8</Level>
 			</Action>
@@ -2361,13 +2329,11 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>10</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>10</Level>
 			</Action>
@@ -2449,13 +2415,11 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>12</Level>
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>12</Level>
 			</Action>
@@ -2550,7 +2514,6 @@
 			</Action>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<GreatKhanSpecialCheck/>
 				<Stat>Oratory</Stat>
 				<Level>20</Level>
@@ -2591,7 +2554,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Strength</Stat>
 				<Level>10</Level>
 			</Action>
@@ -2637,7 +2599,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Cunning</Stat>
 				<Level>7</Level>
 			</Action>
@@ -2797,7 +2758,6 @@
 		<Actions>
 			<Action>
 				<Name>Test</Name>
-				<Button>Проверить</Button>
 				<Stat>Skill</Stat>
 				<Level>10</Level>
 			</Action>
