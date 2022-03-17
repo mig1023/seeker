@@ -12,7 +12,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>ТЕРМИТ</EnemyName>
 				<EnemyCombination>5-4</EnemyCombination>
 				<Benefit Name="Creds" Value="5"/>
@@ -163,7 +162,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>БЛУДЕНЬ</EnemyName>
 				<EnemyCombination>6-6-5-5-4-4</EnemyCombination>
 				<Aftertext>Ничья невозможна, т. к. безумный враг будет постоянно преследовать вас. Деритесь не на жизнь, а на смерть.</Aftertext>
@@ -328,7 +326,6 @@
 		<Actions>
 			<Action>
 				<Name>MentalTest</Name>
-				<Button>Проверка</Button>
 				<Level>4</Level>
 			</Action>
 		</Actions>
@@ -390,7 +387,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>ЗАГРЕБАЛО</EnemyName>
 				<EnemyCombination>5-4-4-4-4-4-2</EnemyCombination>
 			</Action>
@@ -720,7 +716,6 @@
 		<Actions>
 			<Action>
 				<Name>MentalTest</Name>
-				<Button>Проверка</Button>
 				<Level>4</Level>
 			</Action>
 		</Actions>
@@ -747,7 +742,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>МИМИКРОИД</EnemyName>
 				<EnemyCombination>6-5-4-3-2</EnemyCombination>
 			</Action>
@@ -815,7 +809,6 @@
 		<Actions>
 			<Action>
 				<Name>MentalTest</Name>
-				<Button>Проверка</Button>
 				<Level>3</Level>
 				<DeathTest/>
 				<Aftertext>Прозвучал выстрел. Патс подло стреляет сзади. Если проверка пройдена, то вы успели увернуться. Предстоит бой с "оборотнем в погонах"! В противном случае харвестер подбит и ограблен. Ваше приключение тут обрывается. Впоследствии Патс объявит вас мёртвым грабителем.</Aftertext>
@@ -831,7 +824,6 @@
 		<Actions>
 			<Action>
 				<Name>MentalTest</Name>
-				<Button>Проверка</Button>
 				<Level>3</Level>
 			</Action>
 		</Actions>
@@ -845,7 +837,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>ИЗОТРОНОХОД</EnemyName>
 				<EnemyCombination>6-6-5-5-2</EnemyCombination>
 				<Aftertext>Ничья с последующим отступлением невозможны, т.к. гидронейская техника превосходит вашу по скорости.</Aftertext>
@@ -869,7 +860,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>ТОПИГЛОТ</EnemyName>
 				<EnemyCombination>4-4-4-2-2-2</EnemyCombination>
 				<Aftertext>В случае поражения вы станете обедом для озёрного монстра.</Aftertext>
@@ -956,7 +946,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>СВАРИТЕЛЬ</EnemyName>
 				<EnemyCombination>5-5-5-4-3-2</EnemyCombination>
 				<Aftertext>При поражении вы превратитесь в бульон, а ваша машина в дырявую кастрюлю.</Aftertext>
@@ -980,7 +969,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>БРОНЕТАНК</EnemyName>
 				<EnemyCombination>6-4-3-3</EnemyCombination>
 				<Trigger>20</Trigger>
@@ -1088,7 +1076,6 @@
 		<Actions>
 			<Action>
 				<Name>MentalTest</Name>
-				<Button>Проверка</Button>
 				<Level>5</Level>
 			</Action>
 		</Actions>
@@ -1128,7 +1115,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>ОГНЕПОКЛОННИК</EnemyName>
 				<EnemyCombination>5-5-2</EnemyCombination>
 				<Benefit Name="Stigon" Value="1"/>
@@ -1157,7 +1143,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>УТИЛИЗАТОР</EnemyName>
 				<EnemyCombination>6-5-5-5-4-3</EnemyCombination>
 				<Aftertext>Если бой завершится ничьёй, то вы можете прекратить огонь и подождать дальнейших действий робота.</Aftertext>
@@ -1183,7 +1168,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>МЕРЗЛОБА</EnemyName>
 				<EnemyCombination>5-5-4-3</EnemyCombination>
 				<Benefit Name="Stigon" Value="2"/>
@@ -1255,7 +1239,6 @@
 		<Actions>
 			<Action>
 				<Name>MentalTest</Name>
-				<Button>Проверка</Button>
 				<Level>4</Level>
 			</Action>
 		</Actions>
@@ -1333,7 +1316,6 @@
 		<Actions>
 			<Action>
 				<Name>MentalTest</Name>
-				<Button>Проверка</Button>
 				<Level>3</Level>
 			</Action>
 		</Actions>
@@ -1356,7 +1338,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>МУТАВОРМ</EnemyName>
 				<EnemyCombination>5-5-5-5-3-3</EnemyCombination>
 				<Trigger>14</Trigger>
@@ -1463,7 +1444,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>ГРОМЫХАЛО</EnemyName>
 				<EnemyCombination>6-6-6-6-5-5-5</EnemyCombination>
 				<Aftertext>При ничейном исходе боя монстр отступит. При поражении ваш мозг взорвётся, не выдержав деструктивного звука.</Aftertext>
@@ -1528,7 +1508,6 @@
 		<Actions>
 			<Action>
 				<Name>MentalTest</Name>
-				<Button>Проверка</Button>
 				<Level>5</Level>
 			</Action>
 		</Actions>
@@ -1616,7 +1595,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>МУТАВОРМ</EnemyName>
 				<EnemyCombination>6-6-6-6-3-3</EnemyCombination>
 				<Benefit Name="Creds" Value="150"/>
@@ -1655,7 +1633,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>ОГНЕХВОСТ</EnemyName>
 				<EnemyCombination>5-5-3-2-2</EnemyCombination>
 			</Action>
@@ -1799,7 +1776,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>ГРОЗДЕГЛАВ</EnemyName>
 				<EnemyCombination>4-4-4-4-1-1</EnemyCombination>
 				<Trigger>26</Trigger>
@@ -1862,7 +1838,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>ТЕХНОКРОТ</EnemyName>
 				<EnemyCombination>5-5-5-2-2-2-2</EnemyCombination>
 				<Benefit Name="Stigon" Value="1"/>
@@ -1896,7 +1871,6 @@
 		<Actions>
 			<Action>
 				<Name>MentalTest</Name>
-				<Button>Проверка</Button>
 				<Level>5</Level>
 			</Action>
 		</Actions>
@@ -1928,7 +1902,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<EnemyName>МЕРТВОКРЫЛЫ</EnemyName>
 				<EnemyCombination>4-4-4-4-4-4</EnemyCombination>
 				<Trigger>27</Trigger>
