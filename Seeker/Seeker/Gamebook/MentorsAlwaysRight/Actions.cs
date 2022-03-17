@@ -107,6 +107,27 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return enemies;
         }
 
+        public override string ButtonText()
+        {
+            if (!String.IsNullOrEmpty(Button))
+                return Button;
+
+            switch (Name)
+            {
+                case "Fight":
+                    return "Сражаться";
+
+                case "Reaction":
+                    return "Реагируйте";
+
+                case "DiceWounds":
+                    return "Кинуть кубик" + (Dices > 0 ? "и" : String.Empty);
+
+                default:
+                    return Button;
+            }
+        }
+
         public List<string> Camouflage()
         {
             Game.Option.Trigger("Camouflage");
