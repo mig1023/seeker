@@ -55,7 +55,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ДРОВОСЕК" Mastery="5" Endurance="4"/>
 					<Enemy Name="ВТОРОЙ ДРОВОСЕК" Mastery="6" Endurance="7"/>
@@ -138,7 +137,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -162,7 +160,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВАЯ ЛЕТУЧАЯ МЫШЬ" Mastery="6" Endurance="8"/>
 					<Enemy Name="ВТОРАЯ ЛЕТУЧАЯ МЫШЬ" Mastery="5" Endurance="7"/>
@@ -335,7 +332,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ОРК" Mastery="6" Endurance="8"/>
 				</Enemies>
@@ -347,7 +343,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГОБЛИН" Mastery="7" Endurance="5"/>
 				</Enemies>
@@ -386,7 +381,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ДРАКОН" Mastery="9" Endurance="4"/>
 				</Enemies>
@@ -425,7 +419,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ГОБЛИН" Mastery="6" Endurance="9"/>
 					<Enemy Name="ВТОРОЙ ГОБЛИН" Mastery="7" Endurance="5"/>
@@ -444,7 +437,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ДРАКОН" Mastery="9" Endurance="4"/>
 				</Enemies>
@@ -563,7 +555,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 			<Action>
 				<Name>Option</Name>
@@ -573,7 +564,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="8" Endurance="8"/>
 				</Enemies>
@@ -669,7 +659,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="НАЧАЛЬНИК СТРАЖИ" Mastery="9" Endurance="5"/>
 				</Enemies>
@@ -917,7 +906,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЖЕНЩИНА-ВАМПИР" Mastery="11" Endurance="14"/>
 				</Enemies>
@@ -959,7 +947,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1006,7 +993,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГОБЛИН" Mastery="8" Endurance="9"/>
 				</Enemies>
@@ -1070,7 +1056,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1102,12 +1087,10 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 				<Aftertext>Если вы удачливы, то вам удается оседлать коня Первого рыцаря, и ваша СИЛА УДАРА не изменяется, если же нет — драться все же придется, стоя на земле.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 				</Enemies>
@@ -1208,7 +1191,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ РАЗБОЙНИК" Mastery="6" Endurance="4"/>
 					<Enemy Name="ВТОРОЙ РАЗБОЙНИК" Mastery="7" Endurance="8"/>
@@ -1784,7 +1766,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 					<Enemy Name="ВТОРОЙ ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
@@ -1880,7 +1861,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГОБЛИН" Mastery="7" Endurance="9"/>
 				</Enemies>
@@ -2092,7 +2072,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ОБЕЗЬЯНА" Mastery="9" Endurance="14"/>
 				</Enemies>
@@ -2125,7 +2104,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2139,7 +2117,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="5" Endurance="8"/>
 				</Enemies>
@@ -2352,7 +2329,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПРИЗРАК" Mastery="10" Endurance="9"/>
 				</Enemies>
@@ -2372,7 +2348,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПАУК" Mastery="8" Endurance="8"/>
 				</Enemies>
@@ -2487,7 +2462,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЛЕВ" Mastery="9" Endurance="15"/>
 				</Enemies>
@@ -2567,7 +2541,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГИЕНА" Mastery="6" Endurance="6"/>
 				</Enemies>
@@ -2786,7 +2759,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГОБЛИН" Mastery="6" Endurance="9"/>
 				</Enemies>
@@ -2822,7 +2794,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="БАРЛАД ДЭРТ" Mastery="14" Endurance="12"/>
 				</Enemies>
@@ -2901,7 +2872,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 					<Enemy Name="ВТОРОЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
@@ -2910,7 +2880,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ТРЕТИЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 				</Enemies>
@@ -2918,7 +2887,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КАПИТАН РЫЦАРЕЙ" Mastery="12" Endurance="12"/>
 				</Enemies>
@@ -2990,7 +2958,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 				</Enemies>
@@ -3062,7 +3029,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ДРАКОН" Mastery="12" Endurance="8"/>
 				</Enemies>
@@ -3164,7 +3130,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВОДЯНОЙ" Mastery="7" Endurance="7"/>
 				</Enemies>
@@ -3190,7 +3155,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ОРК" Mastery="8" Endurance="5"/>
 					<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="7"/>
@@ -3442,7 +3406,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ТРОЛЛЬ" Mastery="9" Endurance="14"/>
 				</Enemies>
@@ -3596,7 +3559,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ЧЕЛОВЕК" Mastery="8" Endurance="5"/>
 					<Enemy Name="ВТОРОЙ ЧЕЛОВЕК" Mastery="6" Endurance="9"/>
@@ -3830,7 +3792,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3965,7 +3926,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4101,7 +4061,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 				<Aftertext>Если вы не удачливы, то дерево падает прямо на вас раньше, чем вы успеваете понять, что происходит. Доверчивость сослужила вам плохую службу. Вы забыли, что лес наводнен шпионами злого волшебника и попались на удочку одного из них. Ваше путешествие закончено.</Aftertext>
 			</Action>
 		</Actions>
@@ -4504,7 +4463,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4645,7 +4603,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ОРК" Mastery="10" Endurance="6"/>
 				</Enemies>
@@ -4653,7 +4610,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="7"/>
 					<Enemy Name="ТРЕТИЙ ОРК" Mastery="7" Endurance="7"/>
@@ -4692,7 +4648,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4765,7 +4720,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ОРК" Mastery="7" Endurance="7"/>
 				</Enemies>
@@ -4934,7 +4888,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ТОРГОВЕЦ" Mastery="6" Endurance="12"/>
 				</Enemies>
@@ -5027,7 +4980,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ОБОРОТЕНЬ" Mastery="10" Endurance="10"/>
 				</Enemies>
@@ -5045,7 +4997,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="МЕДВЕДИЦА" Mastery="8" Endurance="10"/>
 				</Enemies>
@@ -5087,7 +5038,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ГОБЛИН" Mastery="8" Endurance="10"/>
 					<Enemy Name="ВТОРОЙ ГОБЛИН" Mastery="6" Endurance="8"/>
@@ -5156,7 +5106,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГОБЛИН" Mastery="4" Endurance="7"/>
 				</Enemies>
@@ -5164,7 +5113,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ГОБЛИН" Mastery="8" Endurance="9"/>
 				</Enemies>
@@ -5209,7 +5157,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="11" Endurance="14"/>
 				</Enemies>
@@ -5298,7 +5245,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГАРПИЯ" Mastery="10" Endurance="12"/>
 				</Enemies>
@@ -5345,7 +5291,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="8" Endurance="8"/>
 				</Enemies>
@@ -5394,7 +5339,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЛЕСОВИЧОК" Mastery="6" Endurance="8"/>
 				</Enemies>
@@ -5438,7 +5382,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 				</Enemies>
@@ -5465,7 +5408,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ОРК" Mastery="10" Endurance="6"/>
 				</Enemies>
@@ -5473,12 +5415,10 @@
 			</Action>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 				<Aftertext>Если вы удачливы, то остальные Орки не захотят умирать, защищая ворота, и убегут в лес. Если же нет, то придется драться со всеми.</Aftertext>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="7"/>
 					<Enemy Name="ТРЕТИЙ ОРК" Mastery="7" Endurance="7"/>
@@ -5580,7 +5520,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ГОБЛИН" Mastery="4" Endurance="9"/>
 					<Enemy Name="ВТОРОЙ ГОБЛИН" Mastery="7" Endurance="5"/>
@@ -5780,7 +5719,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПОВАР" Mastery="8" Endurance="10"/>
 				</Enemies>
