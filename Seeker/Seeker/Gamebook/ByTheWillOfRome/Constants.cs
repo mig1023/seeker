@@ -25,6 +25,8 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
         public override bool ShowDisabledOption() => true;
 
+        public override string ButtonText() => "Купить";
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
