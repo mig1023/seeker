@@ -128,7 +128,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГРАБИТЕЛЬ" Skill="9" Strength="10"/>
 				</Enemies>
@@ -176,7 +175,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="10" Cartridges="4"/>
@@ -355,7 +353,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
 					<Enemy Name="ВОИН" Skill="9" Strength="12" Cartridges="4"/>
@@ -394,7 +391,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="МОШЕННИК" Skill="8" Strength="8"/>
 				</Enemies>
@@ -873,7 +869,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="БАНДИТ" Skill="8" Strength="10"/>
 				</Enemies>
@@ -1055,7 +1050,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
 					<Enemy Name="ЭЛЬ-ХАБАЛИ" Skill="11" Strength="12" Cartridges="6"/>
@@ -1111,7 +1105,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ИНДЕЕЦ" Skill="6" Strength="6"/>
 				</Enemies>
@@ -1137,7 +1130,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ПРОТИВНИК" Skill="9" Strength="9" Cartridges="5"/>
@@ -1248,7 +1240,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="НАЛЕТЧИК" Skill="8" Strength="8"/>
 				</Enemies>
@@ -1515,7 +1506,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
 					<Enemy Name="СТЕРВЯТНИК ДЖО" Skill="11" Strength="12" Cartridges="6"/>
@@ -1596,7 +1586,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ИНДЕЕЦ" Skill="9" Strength="9" Cartridges="3"/>
@@ -1714,7 +1703,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="10" Cartridges="4"/>
@@ -2122,7 +2110,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="РОДЖЕРС-СТАРШИЙ" Skill="10" Strength="8"/>
 					<Enemy Name="РОДЖЕРС-МЛАДШИЙ" Skill="9" Strength="8"/>
@@ -2354,7 +2341,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВОИН" Skill="10" Strength="12"/>
 				</Enemies>
@@ -2495,7 +2481,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
 					<Enemy Name="ФОСТЕР" Skill="12" Strength="12" Cartridges="6"/>
@@ -2527,7 +2512,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СТЕРВЯТНИК ДЖО" Skill="10" Strength="12"/>
 				</Enemies>
@@ -2605,7 +2589,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
 					<Enemy Name="НЕЗНАКОМЕЦ" Skill="9" Strength="9" Cartridges="5"/>
@@ -3078,7 +3061,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЭЛЬ-ХАБАЛИ" Skill="11" Strength="12"/>
 				</Enemies>
@@ -3217,7 +3199,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ БАНДИТ" Skill="8" Strength="9" Cartridges="3"/>
@@ -3460,7 +3441,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
 					<Enemy Name="КОНОКРАД" Skill="8" Strength="8" Cartridges="4"/>
@@ -4058,7 +4038,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="НОЧНОЙ ВИЗИТЕР" Skill="7" Strength="8"/>
 				</Enemies>
@@ -4198,7 +4177,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="МЕДВЕДЬ" Skill="12" Strength="14"/>
 				</Enemies>
@@ -4290,7 +4268,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КОНОКРАД" Skill="8" Strength="9"/>
 				</Enemies>
@@ -4543,7 +4520,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПУМА" Skill="10" Strength="10"/>
 				</Enemies>
@@ -4801,7 +4777,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЧАСОВОЙ" Skill="8" Strength="8"/>
 				</Enemies>
@@ -5272,7 +5247,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="НАЛЕТЧИК" Skill="7" Strength="10"/>
 				</Enemies>
@@ -5438,7 +5412,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВОИН" Skill="10" Strength="12"/>
 				</Enemies>
@@ -5638,7 +5611,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ФОСТЕР" Skill="12" Strength="2"/>
 				</Enemies>
@@ -5668,7 +5640,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="РЫСЬ" Skill="8" Strength="10"/>
 				</Enemies>
@@ -6089,7 +6060,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
 					<Enemy Name="НЕЗНАКОМЕЦ" Skill="6" Strength="8" Cartridges="3"/>
@@ -6439,7 +6409,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Firefight/>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ГРАБИТЕЛЬ" Skill="9" Strength="9" Cartridges="3"/>
