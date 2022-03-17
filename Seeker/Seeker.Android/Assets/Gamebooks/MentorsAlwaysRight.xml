@@ -57,7 +57,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ТВАРЬ ИЗ КУРГАНА" Strength="14" Hitpoints="8"/>
 				</Enemies>
@@ -152,7 +151,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубики</Button>
 				<Dices>2</Dices>
 				<Aftertext>Неизвестно, что это было, но надо двигаться дальше...</Aftertext>
 			</Action>
@@ -219,7 +217,6 @@
 			<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ДИКИЙ ПЕС" Strength="9" Hitpoints="6"/>
 				</Enemies>
@@ -271,7 +268,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КОЧЕВНИК-ХАЗРАТ" Strength="10" Hitpoints="10"/>
 				</Enemies>
@@ -297,7 +293,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="12"/>
 				</Enemies>
@@ -626,7 +621,6 @@
 			</Action>
 			<Action>
 				<Name>Dice</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>Выпал:</Aftertext>
 			</Action>
 		</Actions>
@@ -650,7 +644,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ТРОГЛОДИТ" Strength="12" Hitpoints="10"/>
 				</Enemies>
@@ -702,7 +695,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -832,7 +824,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -853,7 +844,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПУМА" Strength="9" Hitpoints="6"/>
 				</Enemies>
@@ -1116,7 +1106,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЖЕРЕБЕЦ" Strength="9" Hitpoints="10"/>
 				</Enemies>
@@ -1178,7 +1167,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="РАМАРЕС" Strength="15"/>
 				</Enemies>
@@ -1613,7 +1601,6 @@
 		<Actions>
 			<Action>
 				<Name>LeechFight</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>Если выпадет 1 или 2, то ей удастся прокусить ваш сапог (-2 ЖИЗНИ). В любом случае вы давите ее каблуком и вскоре уже стоите на берегу реки. Одного взгляда достаточно, чтобы понять - мост через реку сгорел давным-давно...</Aftertext>
 			</Action>
 		</Actions>
@@ -1627,7 +1614,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1655,7 +1641,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубики</Button>
 				<Dices>2</Dices>
 				<Aftertext>Таким ударом только быков на бойне убивать - после этой мысли сознание окутывает спасительная пелена.</Aftertext>
 			</Action>
@@ -1707,7 +1692,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ВОЛК" Strength="10" Hitpoints="9"/>
 					<Enemy Name="ВТОРОЙ ВОЛК" Strength="9" Hitpoints="8"/>
@@ -1746,7 +1730,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="9"/>
 				</Enemies>
@@ -1845,7 +1828,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВАЯ ГИЕНА" Strength="9" Hitpoints="11"/>
 					<Enemy Name="ВТОРАЯ ГИЕНА" Strength="9" Hitpoints="10"/>
@@ -1922,7 +1904,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЭЛЬФ" Strength="11"/>
 				</Enemies>
@@ -1965,7 +1946,6 @@
 		<Actions>
 			<Action>
 				<Name>StoneThrow</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>Ваш бросок был точен, если вы выкинули 5 или 6, или же если вашей специализацией является метание ножей. Если же вы выкинули другое число, то, увы, промахнулись, и вам придется сражаться с рептилией...</Aftertext>
 			</Action>
 		</Actions>
@@ -1988,7 +1968,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ДРАКОНИД" Strength="13" Hitpoints="13"/>
 				</Enemies>
@@ -2005,7 +1984,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Aftertext>Как у вас со скоростью?</Aftertext>
 			</Action>
 		</Actions>
@@ -2029,7 +2007,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГАРПИЯ" Strength="11" Hitpoints="10"/>
 				</Enemies>
@@ -2384,7 +2361,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПАУК" Strength="10" Hitpoints="11"/>
 				</Enemies>
@@ -2427,7 +2403,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="МАНТИКОРА" Strength="12" Hitpoints="17"/>
 				</Enemies>
@@ -2468,7 +2443,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="НАЕМНИК" Strength="11" Hitpoints="12"/>
 				</Enemies>
@@ -2605,7 +2579,6 @@
 		<Actions>
 			<Action>
 				<Name>Dice</Name>
-				<Button>Кинуть кубик</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2728,7 +2701,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГРИФОН" Strength="13" Hitpoints="10"/>
 				</Enemies>
@@ -2755,7 +2727,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="УДАВ" Strength="11" Hitpoints="6"/>
 				</Enemies>
@@ -2794,7 +2765,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="БОГОМОЛ" Strength="9" Hitpoints="12"/>
 				</Enemies>
@@ -2890,7 +2860,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЧЕТЫРЁХНОГИЙ МУТАНТ" Strength="10" Hitpoints="14"/>
 				</Enemies>
@@ -2991,7 +2960,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ОБЕЗЬЯНОЧЕЛОВЕК" Strength="11" Hitpoints="15"/>
 				</Enemies>
@@ -3008,7 +2976,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -3036,7 +3003,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>	
 		<Options>
@@ -3052,7 +3018,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3114,7 +3079,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3136,7 +3100,6 @@
 			</Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГИГАНТ" Strength="12" Hitpoints="15"/>
 				</Enemies>
@@ -3162,7 +3125,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3181,7 +3143,6 @@
 			</Action>
 			<Action>
 				<Name>SimpleDice</Name>
-				<Button>Кинуть кубики</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3243,7 +3204,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ХРАМОВНИК" Strength="12" Hitpoints="13"/>
 				</Enemies>
@@ -3295,7 +3255,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ДЕМОН" Strength="14" Hitpoints="16"/>
 				</Enemies>
@@ -3368,7 +3327,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубики</Button>
 				<Dices>2</Dices>
 			</Action>
 		</Actions>
@@ -3437,7 +3395,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ТРОЛЛЬ" Strength="9" Hitpoints="12"/>
 				</Enemies>
@@ -3468,7 +3425,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="12"/>
 				</Enemies>
@@ -3493,7 +3449,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 					<Enemy Name="ВТОРАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
@@ -3563,7 +3518,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3629,7 +3583,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3738,7 +3691,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3752,7 +3704,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ХРАМОВНИК" Strength="11" Hitpoints="11"/>
 				</Enemies>
@@ -3769,7 +3720,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЛЕШИЙ" Strength="10" Hitpoints="12"/>
 				</Enemies>
@@ -3975,7 +3925,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="МУМИЯ" Strength="10" Hitpoints="14"/>
 				</Enemies>
@@ -4062,7 +4011,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="НАЕМНИК" Strength="11" Hitpoints="4"/>
 				</Enemies>
@@ -4089,7 +4037,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 					<Enemy Name="ВТОРАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
@@ -4123,7 +4070,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="МУТАНТ-ТЕЛЕПАТ" Strength="10" Hitpoints="13"/>
 				</Enemies>
@@ -4147,7 +4093,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="АЛЛИГАТОР-МУТАНТ" Strength="12" Hitpoints="13"/>
 				</Enemies>
@@ -4182,7 +4127,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ РАЗБОЙНИК" Strength="8" Hitpoints="8"/>
 					<Enemy Name="ВТОРОЙ РАЗБОЙНИК" Strength="8" Hitpoints="8"/>
@@ -4220,7 +4164,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Damage Name="Hitpoints" Value="-3"/>
 				<Aftertext>Если ваша реакция запаздывает, то вы теряете три ЖИЗНИ, не успев увернуться от его выстрела.\n\nТем временем гном поднимает руку с еще одним арбалетом, но вы уже благоразумно скрываетесь за камнями. Не гном, а ходячий арсенал какой-то попался.</Aftertext>
 			</Action>
@@ -4267,7 +4210,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ХАЗРАТ" Strength="11" Hitpoints="10"/>
 					<Enemy Name="ВТОРОЙ ХАЗРАТ" Strength="10" Hitpoints="10"/>
@@ -4431,12 +4373,10 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>...даже одежда ваша задымилась в том месте, куда угодил меткий плевок коварной твари. Громадный прыжок - и она атакует:</Aftertext>
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПРЫГУН" Strength="10" Hitpoints="12"/>
 				</Enemies>
@@ -4494,7 +4434,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГАРПИЯ" Strength="11" Hitpoints="10"/>
 				</Enemies>
@@ -4539,7 +4478,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕШИЙ ХАЗРАТ" Strength="9" Hitpoints="8"/>
 					<Enemy Name="КОННЫЙ ХАЗРАТ" Strength="10" Hitpoints="12"/>
@@ -4577,7 +4515,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ИЗУРОДОВАННЫЙ МЕДВЕДЬ" Strength="11" Hitpoints="8"/>
 				</Enemies>
@@ -4682,7 +4619,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЛАНТАН" Strength="11" Hitpoints="12"/>
 				</Enemies>
@@ -4795,7 +4731,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ТВАРЬ ИЗ ЧАНА" Strength="11" Hitpoints="16"/>
 				</Enemies>
@@ -4870,7 +4805,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПТЕРОДАКТИЛЬ" Strength="13" Hitpoints="10"/>
 				</Enemies>
@@ -4905,7 +4839,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4935,7 +4868,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4955,7 +4887,6 @@
 			</Action>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5024,7 +4955,6 @@
 		<Actions>
 			<Action>
 				<Name>DicesGame</Name>
-				<Button>Кинуть кубик</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5064,7 +4994,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5081,7 +5010,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5101,7 +5029,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КИКИМОРА" Strength="10" Hitpoints="13"/>
 				</Enemies>
@@ -5143,7 +5070,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="РЫЦАРЬ-ХРАМОВНИК" Strength="11" Hitpoints="10"/>
 				</Enemies>
@@ -5160,7 +5086,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВАМПИР" Strength="11" Hitpoints="10"/>
 				</Enemies>
@@ -5305,7 +5230,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceWounds</Name>
-				<Button>Кинуть кубик</Button>
 				<Aftertext>Если выпала шестёрка - удар слишком силен и вы теряете сознание:</Aftertext>
 			</Action>
 		</Actions>
@@ -5349,7 +5273,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5383,7 +5306,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВОЛК-ОБОРОТЕНЬ" Strength="11" Hitpoints="14"/>
 				</Enemies>
@@ -5425,7 +5347,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -5439,7 +5360,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="БАРОНЕТ Де МАССАР" Strength="10" Hitpoints="12"/>
 				</Enemies>
@@ -5494,7 +5414,6 @@
 		<Actions>
 			<Action>
 				<Name>Reaction</Name>
-				<Button>Реагируйте</Button>
 				<Damage Name="Hitpoints" Value="-3"/>
 				<Aftertext>Если вы не успеет увернуться, то теряете 3 ЖИЗНИ.</Aftertext>
 			</Action>
