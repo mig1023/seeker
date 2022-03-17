@@ -186,7 +186,7 @@ namespace Seeker.Gamebook.OctopusIsland
             if (!fightStart)
                 fight.Add(String.Empty);
 
-            fight.Add(String.Format("BOLD|В БОЙ ВСТУПАЕТ {0}", protagonist.Name.ToUpper()));
+            fight.Add(String.Format("HEAD|BOLD|*** В БОЙ ВСТУПАЕТ {0} ***", protagonist.Name.ToUpper()));
 
             if (fightStart)
                 fight.Add(String.Empty);
