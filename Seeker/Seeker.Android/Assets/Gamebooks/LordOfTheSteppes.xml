@@ -25,7 +25,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>СОЛЕНАЯ РЫБА</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -34,7 +33,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ВЯЛЕНАЯ РЫБА</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -43,7 +41,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>МЕД</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -52,7 +49,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>МОЛОКО</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -231,7 +227,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ВИНО</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -240,7 +235,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ПИВО</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -299,7 +293,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Незнакомец" Attack="7" Defence="14" Endurance="8" Initiative="8"/>
 				</Enemies>
@@ -530,7 +523,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceCheck</Name>
-				<Button>Кинуть кубики</Button>
 				<Dices>1</Dices>
 				<Aftertext>Если выпадет 1, 2 или 3 - ваш бросок был удачен, и кинжал вонзится в плечо врага, отнимите у него перед началом боя 4 Жизни; 4 или 5 - бросок был неудачен, и кинжал лишь слегка задел неприятеля, не причинив ему вреда; 6 - бросок был чрезвычайно удачен и пробил противнику руку, оставив глубокую рану - перед началом боя отнимите у него 5 Жизней и 1 Нападение.\n\nПочувствовав удар кинжала, степняк проворно отпрыгивает в сторону и оглядывается в поисках врага. Теперь скрываться бессмысленно, и вы выскакиваете с громким боевым кличем, пытаясь ошеломить противника.</Aftertext>
 			</Action>
@@ -638,7 +630,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Волк" Attack="8" Defence="13" Endurance="8" Initiative="10" SpecialTechnique="Reaction"/>
 				</Enemies>
@@ -763,7 +754,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>Первый меч</Text>
 				<Price>30</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -771,7 +761,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>Второй меч</Text>
 				<Price>27</Price>
 				<Benefit Name="ExtendedDamage"/>
@@ -779,7 +768,6 @@
 			</Action>			
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>Третий меч</Text>
 				<Price>38</Price>	
 				<Benefit Name="ExtendedDamage"/>
@@ -938,7 +926,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceCheck</Name>
-				<Button>Кинуть кубик</Button>
 				<Dices>1</Dices>
 			</Action>
 		</Actions>
@@ -1060,7 +1047,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>Пропуск к хану</Text>
 				<Price>10</Price>
 				<Trigger>Пропуск к хану</Trigger>
@@ -1197,7 +1183,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый степняк" Attack="9" Defence="14" Endurance="10" Initiative="9"/>
 					<Enemy Name="Второй степняк" Attack="9" Defence="14" Endurance="10" Initiative="9"/>
@@ -1223,7 +1208,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Степняк-командир" Attack="8" Defence="14" Endurance="8" Initiative="9"/>
 				</Enemies>
@@ -1304,7 +1288,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый всадник" Attack="9" Defence="14" Endurance="10" Initiative="9"/>
 					<Enemy Name="Второй всадник" Attack="9" Defence="14" Endurance="10" Initiative="9"/>
@@ -1466,7 +1449,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Угрим" Attack="10" Defence="14" Endurance="10" Initiative="9" SpecialTechnique="IgnoreReaction"/>
 				</Enemies>
@@ -1521,7 +1503,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый бродяга" Attack="7" Defence="13" Endurance="8" Initiative="7"/>
 					<Enemy Name="Второй бродяга" Attack="6" Defence="13" Endurance="7" Initiative="6"/>
@@ -1580,8 +1561,7 @@
 		<Text>Вы выходите из укрытия, и оставшиеся в живых сразу замечают свидетеля произошедшей схватки. В руках у вас нет оружия, но разгоряченные боем мужчины, кажется, принимают неожиданно появившегося путника за очередного врага. Они с диким воплем бросаются на вас, несмотря на свои раны и ваши слова о том, что вы не собираетесь на них нападать. Делать нечего - придется обороняться.</Text>
 		<Actions>
 			<Action>
-				<Name>Fight</Name>
-				<Button>Сражаться</Button>			
+				<Name>Fight</Name>			
 				<Enemies>
 					<Enemy Name="Первый незнакомец" Attack="10" Defence="15" Endurance="4" Initiative="9"/>
 					<Enemy Name="Второй незнакомец" Attack="9" Defence="14" Endurance="3" Initiative="9"/>
@@ -1690,8 +1670,7 @@
 		<Text>Вы с блаженством опускаетесь на землю и расслабляетесь. Теперь вы начинаете чувствовать, что ноги гудят, нервы напряжены, от беспорядочных мыслей голова идет кругом. Окружающая обстановка успокаивает и придает сил. Но спать сейчас не нужно, и вы это прекрасно осознаете. Нужно вставать и идти в деревню, чтобы провести ночь в безопасности. Вы прикрываете глаза, чтобы запомнить этот чудесный миг, как вдруг раздавшийся рядом шорох заставляет насторожиться. Это не птица и не мышь, а кто-то несколько больших размеров. Рука непроизвольно ложится на рукоять, а ухо пытается уловить самые тихие звуки, чтобы понять, кто же бродит поблизости. Но неведомое существо и не собирается скрываться. Колосья раздвигаются, и внезапно рядом, словно из земли, вырастает смешной карлик ростом чуть выше вашего пояса. На вид это маленький старичок с длинной белой бородой. Он делает движение рукой, словно вытирает под носом, и злобно смотрит на вас. Это полевой - дальний родственник домовых, живущих в деревнях. Вы слышали об этом духе, оберегающем крестьянские поля, но никогда не думали, что он действительно существует, а уж тем более в таком сердитом виде.\n\n- Ты. ты. - он злобно каркает, брызжа слюной во все стороны. - Как ты смеешь топтать мои угодья! Сейчас я научу тебя приличиям!\n\nВы безуспешно пытаетесь доказать, что не хотели обидеть полевого, но он сегодня явно не в настроении и не собирается слушать оправдания. На ваших глазах ближайшие ржаные колосья сжимаются в твердые плотные пучки и оказываются в руке у своего хозяина. Он делает взмах, и на земле остается глубокий след от его странного оружия. Этого движения достаточно, чтобы оценить силу и опасность безобидного на первый взгляд старичка. Придется отбиваться.</Text>
 		<Actions>
 			<Action>
-				<Name>Fight</Name>
-				<Button>Сражаться</Button>			
+				<Name>Fight</Name>			
 				<Enemies>
 					<Enemy Name="Полевой" Attack="8" Defence="15" Endurance="8" Initiative="8" SpecialTechnique="IgnoreFirstStrike"/>
 				</Enemies>
@@ -1867,7 +1846,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Allies>
 					<Ally Name="Незнакомец" Attack="10" Defence="15" Endurance="8" Initiative="9"/>
 				</Allies>
@@ -1903,7 +1881,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый разбойник" Attack="8" Defence="15" Endurance="10" Initiative="9"/>
 					<Enemy Name="Второй разбойник" Attack="8" Defence="14" Endurance="19" Initiative="9"/>
@@ -2079,7 +2056,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Степняк-лазутчик" Attack="8" Defence="14" Endurance="9" Initiative="11"/>
 				</Enemies>
@@ -2159,7 +2135,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>КОРОТКИЙ МЕЧ</Text>
 				<Price>25</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -2169,7 +2144,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ДЛИННЫЙ КИНЖАЛ</Text>
 				<Price>28</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -2447,7 +2421,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый всадник" Attack="12" Defence="16" Endurance="12" Initiative="11"/>
 					<Enemy Name="Второй всадник" Attack="12" Defence="16" Endurance="12" Initiative="11"/>
@@ -2574,7 +2547,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ДОСПЕХ</Text>
 				<Price>15</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -2614,7 +2586,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Пьяный степняк" Attack="7" Defence="13" Endurance="10" Initiative="7"/>
 				</Enemies>
@@ -2778,7 +2749,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceCheck</Name>
-				<Button>Кинуть кубики</Button>
 				<Dices>2</Dices>
 				<Initiative/>
 			</Action>
@@ -3007,7 +2977,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый оборотень" Attack="10" Defence="14" Endurance="5" Initiative="8"/>
 					<Enemy Name="Второй оборотень" Attack="8" Defence="15" Endurance="9" Initiative="10"/>
@@ -3183,7 +3152,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый воин" Attack="9" Defence="14" Endurance="11" Initiative="9"/>
 					<Enemy Name="Второй воин" Attack="8" Defence="14" Endurance="10" Initiative="9"/>
@@ -3278,7 +3246,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ЕДА В ДОРОГУ</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -3316,7 +3283,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый бродяга" Attack="7" Defence="13" Endurance="8" Initiative="7"/>
 					<Enemy Name="Второй бродяга" Attack="6" Defence="13" Endurance="7" Initiative="6"/>
@@ -3340,7 +3306,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Опытный авантюрист" Attack="12" Defence="15" Endurance="6" Initiative="11" SpecialTechnique="Reaction, TwoBlades"/>
 				</Enemies>
@@ -3372,7 +3337,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Allies>
 					<Ally Name="Первый незнакомец" Attack="10" Defence="15" Endurance="8" Initiative="9"/>
 					<Ally Name="Второй незнакомец" Attack="9" Defence="14" Endurance="5" Initiative="9"/>
@@ -3571,7 +3535,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Разбойник" Attack="10" Defence="15" Endurance="8" Initiative="9"/>
 				</Enemies>
@@ -3614,7 +3577,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Егуп" Attack="9" Defence="15" Endurance="12" Initiative="9"/>
 				</Enemies>
@@ -3811,7 +3773,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceCheck</Name>
-				<Button>Кинуть кубик</Button>
 				<Dices>1</Dices>
 			</Action>
 		</Actions>
@@ -4010,7 +3971,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Угрим" Attack="10" Defence="14" Endurance="10" Initiative="9" SpecialTechnique="IgnoreReaction"/>
 					<Enemy Name="Первый фальшивомонетчик" Attack="8" Defence="14" Endurance="10" Initiative="9"/>
@@ -4079,7 +4039,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Всадник" Attack="8" Defence="15" Endurance="10" Initiative="9"/>
 				</Enemies>
@@ -4112,7 +4071,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceCheck</Name>
-				<Button>Кинуть кубик</Button>
 				<Dices>1</Dices>
 				<Odd/>
 			</Action>
@@ -4216,7 +4174,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый степняк" Attack="9" Defence="14" Endurance="10" Initiative="9"/>
 					<Enemy Name="Второй степняк" Attack="9" Defence="14" Endurance="10" Initiative="9"/>
@@ -4663,7 +4620,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый дружинник" Attack="8" Defence="14" Endurance="9" Initiative="10"/>
 					<Enemy Name="Второй дружинник" Attack="7" Defence="14" Endurance="4" Initiative="9"/>
@@ -4689,7 +4645,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый телохранитель хана" Attack="12" Defence="17" Endurance="14" Initiative="11" SpecialTechnique="PowerfulStrike"/>
 					<Enemy Name="Второй телохранитель хана" Attack="12" Defence="17" Endurance="14" Initiative="11" SpecialTechnique="FirstStrike, IgnoreReaction"/>
@@ -4837,7 +4792,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый всадник" Attack="11" Defence="16" Endurance="12" Initiative="10"/>
 					<Enemy Name="Второй всадник" Attack="11" Defence="16" Endurance="12" Initiative="10"/>
@@ -4855,7 +4809,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Шпион" Attack="10" Defence="15" Endurance="10" Initiative="10" SpecialTechnique="PowerfulStrike"/>
 				</Enemies>
@@ -4907,7 +4860,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>СЫР</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -4917,7 +4869,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ПИВО</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -5051,7 +5002,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Лазутчик" Attack="8" Defence="14" Endurance="10" Initiative="9"/>
 				</Enemies>
@@ -5120,7 +5070,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ПЕРВОЕ ЗЕЛЬЕ</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -5128,7 +5077,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ВТОРОЕ ЗЕЛЬЕ</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -5136,7 +5084,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ТРЕТЬЕ ЗЕЛЬЕ</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -5145,7 +5092,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ЧЕТВЁРТОЕ ЗЕЛЬЕ</Text>
 				<Price>5</Price>
 				<Multiple/>
@@ -5153,7 +5099,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ПЯТОЕ ЗЕЛЬЕ</Text>
 				<Price>6</Price>
 				<Multiple/>
@@ -5162,7 +5107,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ЗЕЛЬЕ СИЛЫ МЕДВЕДЯ</Text>
 				<Price>10</Price>
 				<Multiple/>
@@ -5172,7 +5116,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ЗЕЛЬЕ ЛОВКОСТИ</Text>
 				<Price>7</Price>
 				<Multiple/>
@@ -5230,7 +5173,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ПЕРВЫЙ МЕЧ</Text>
 				<Price>35</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -5238,7 +5180,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ВТОРОЙ МЕЧ</Text>
 				<Price>38</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -5247,7 +5188,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>КОЛЬЧУГА</Text>
 				<Price>45</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -5349,7 +5289,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ВЯЛЕНАЯ РЫБА</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -5358,7 +5297,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ШЛЕМ ИЗ ТОЛСТОЙ КОЖИ</Text>
 				<Price>10</Price>
 				<Benefit Name="MaxEndurance" Value="1"/>
@@ -5394,7 +5332,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>Снотворное</Text>
 				<Price>3</Price>
 				<Trigger>Снотворное</Trigger>
@@ -5556,7 +5493,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Незнакомец" Attack="10" Defence="15" Endurance="4" Initiative="9"/>
 				</Enemies>
@@ -5679,7 +5615,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ШЕЛКОВАЯ НАКИДКА</Text>
 				<Price>8</Price>
 				<Trigger>Шелковая накидка</Trigger>
@@ -5704,7 +5639,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>Охранная грамота</Text>
 				<Price>5</Price>
 				<Trigger>Охранная грамота</Trigger>
@@ -6021,7 +5955,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Allies>
 					<Ally Name="Опытный авантюрист" Attack="12" Defence="15" Endurance="10" Initiative="11" SpecialTechnique="Reaction, TwoBlades"/>
 				</Allies>
@@ -6120,7 +6053,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ОТВАР ПОДОРОЖНИКА</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -6129,7 +6061,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ЦВЕТОЧНЫЙ ОТВАР</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -6138,7 +6069,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ПУЧОК ПОДОРОЖНИКА</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -6147,7 +6077,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ЛИСТЬЯ ЛЕЧЕБНОГО ЛОПУХА</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -6156,7 +6085,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ПРОТИВОЯДИЕ</Text>
 				<Price>3</Price>
 				<Trigger>Противоядие</Trigger>
@@ -6183,7 +6111,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый медведь" Attack="9" Defence="15" Endurance="9" Initiative="8" SpecialTechnique="ExtendedDamage"/>
 					<Enemy Name="Второй медведь" Attack="9" Defence="14" Endurance="8" Initiative="8" SpecialTechnique="PowerfulStrike"/>
@@ -6283,7 +6210,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceCheck</Name>
-				<Button>Кинуть кубики</Button>
 				<Dices>2</Dices>
 				<Initiative/>
 			</Action>
@@ -6309,7 +6235,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Ученик дриза" Attack="13" Defence="19" Endurance="20" Initiative="12" SpecialTechnique="Reaction, TotalProtection, ExtendedDamage"/>
 				</Enemies>
@@ -6328,7 +6253,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый степняк" Attack="9" Defence="14" Endurance="10" Initiative="9"/>
 					<Enemy Name="Второй степняк" Attack="9" Defence="14" Endurance="10" Initiative="9"/>
@@ -6492,7 +6416,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Оборотень" Attack="9" Defence="15" Endurance="14" Initiative="14" SpecialTechnique="PowerfulStrike"/>
 				</Enemies>
@@ -6635,7 +6558,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Allies>
 					<Ally Name="Воевода" Attack="9" Defence="15" Endurance="12" Initiative="9" SpecialTechnique="PowerfulStrike"/>
 					<Ally Name="Крестьянин" Attack="7" Defence="13" Endurance="10" Initiative="9"/>
@@ -6744,14 +6666,12 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>МЕЧ</Text>
 				<Price>20</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>КОЛЬЧУГА</Text>
 				<Price>30</Price>
 				<Benefit Name="MaxDefence" Value="2"/>
@@ -6771,7 +6691,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Призрак Сухэ" Attack="8" Defence="14" Endurance="12" Initiative="13" SpecialTechnique="IgnorePowerfulStrike, IgnoreFirstStrike"/>
 				</Enemies>
@@ -6933,7 +6852,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Древень-разбоиник" Attack="11" Defence="15" Endurance="11" Initiative="9" SpecialTechnique="powerfulStrike, Reaction"/>
 				</Enemies>
@@ -6974,7 +6892,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Овинник" Attack="10" Defence="13" Endurance="8" Initiative="8"/>
 				</Enemies>
@@ -7026,7 +6943,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый всадник" Attack="9" Defence="15" Endurance="12" Initiative="9" SpecialTechnique="Reaction"/>
 					<Enemy Name="Второй всадник" Attack="9" Defence="14" Endurance="10" Initiative="9"/>
@@ -7049,7 +6965,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый воин" Attack="8" Defence="14" Endurance="10" Initiative="9"/>
 					<Enemy Name="Второй воин" Attack="8" Defence="14" Endurance="10" Initiative="9"/>
@@ -7058,7 +6973,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Кешиктен" Attack="12" Defence="16" Endurance="12" Initiative="11" SpecialTechnique="PowerfulStrike"/>
 					<Enemy Name="Багатур" Attack="12" Defence="17" Endurance="14" Initiative="11" SpecialTechnique="Reaction"/>
@@ -7139,7 +7053,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый путник" Attack="8" Defence="14" Endurance="9" Initiative="9" SpecialTechnique="Reaction"/>
 					<Enemy Name="Второй путник" Attack="6" Defence="13" Endurance="8" Initiative="8"/>
@@ -7183,7 +7096,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Степняк-лазутчик" Attack="8" Defence="14" Endurance="9" Initiative="11"/>
 				</Enemies>
@@ -7268,7 +7180,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ХЛЕБЦЫ</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -7277,7 +7188,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>СОК ИЗ ЯГОД</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -7286,7 +7196,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>СОЛОНИНА</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -7295,7 +7204,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ТРАВЯНОЙ ОТВАР</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -7304,7 +7212,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>МАЗЬ ЗЕЛЕНОГО ЦВЕТА</Text>
 				<Price>7</Price>
 				<Benefit Name="MaxInitiative" Value="2"/>
@@ -7313,7 +7220,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ЖИЛЕТ</Text>
 				<Price>12</Price>
 				<Benefit Name="MaxEndurance" Value="2"/>
@@ -7381,7 +7287,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>АЛМАЗ</Text>
 				<Price>32</Price>
 				<Trigger>Алмаз</Trigger>
@@ -7449,7 +7354,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>МЕЧ С ДЛИННОЙ РУКОЯТЬЮ</Text>
 				<Price>35</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -7457,7 +7361,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>КУРТКА</Text>
 				<Price>36</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -7465,7 +7368,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>МЯСНЫЕ КОЛБАСКИ</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -7474,7 +7376,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ХЛЕБЦЫ</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -7483,7 +7384,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>МЕД</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -7492,7 +7392,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>МОЛОКО</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -7560,7 +7459,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый всадник" Attack="12" Defence="17" Endurance="14" Initiative="11" SpecialTechnique="IgnoreFirstStrike"/>
 					<Enemy Name="Второй всадник" Attack="12" Defence="17" Endurance="14" Initiative="11" SpecialTechnique="PowerfulStrike"/> 
@@ -7599,7 +7497,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Чучело волка" Attack="8" Defence="14" Endurance="8" Initiative="10" SpecialTechnique="Reaction, IgnoreFirstStrike"/>
 					<Enemy Name="Чучело медведя" Attack="7" Defence="15" Endurance="11" Initiative="8" SpecialTechnique="ExtendedDamage"/>
@@ -7705,7 +7602,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый разбойник" Attack="7" Defence="14" Endurance="8" Initiative="9"/>
 					<Enemy Name="Второй разбойник" Attack="7" Defence="14" Endurance="8" Initiative="10"/>
@@ -7744,7 +7640,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Дерево-страж" Attack="8" Defence="16" Endurance="12" Initiative="7"/>
 				</Enemies>
@@ -7848,7 +7743,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Степняк" Attack="8" Defence="13" Endurance="10" Initiative="11"/>
 				</Enemies>
@@ -7987,7 +7881,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Незнакомец" Attack="10" Defence="15" Endurance="6" Initiative="9"/>
 				</Enemies>
@@ -8131,7 +8024,6 @@
 		<Actions>
 			<Action>
 				<Name>DiceCheck</Name>
-				<Button>Кинуть кубик</Button>
 				<Dices>1</Dices>
 			</Action>
 		</Actions>
@@ -8188,7 +8080,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ЯБЛОКИ</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -8197,7 +8088,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>КУСОК СЫРА</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -8206,7 +8096,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>МОЛОКО</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -8215,7 +8104,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>МЕДОВУХА</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -8223,7 +8111,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>СЫТА</Text>
 				<Price>1</Price>
 				<Multiple/>
@@ -8241,7 +8128,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Предводитель разбойников" Attack="9" Defence="15" Endurance="11" Initiative="10" SpecialTechnique="IgnoreFirstStrike, IgnoreReaction"/>
 					<Enemy Name="Первый разбойник" Attack="8" Defence="15" Endurance="10" Initiative="9"/>
@@ -8335,7 +8221,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Каменный страж" Attack="12" Defence="17" Endurance="14" Initiative="11" SpecialTechnique="FirstStrike"/>
 				</Enemies>
@@ -8462,7 +8347,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый мерзавец" Attack="9" Defence="14" Endurance="16" Initiative="9" SpecialTechnique="PowerfulStrike"/>
 					<Enemy Name="Второй мерзавец" Attack="8" Defence="14" Endurance="16" Initiative="9"/>
@@ -8757,7 +8641,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Каменный страж" Endurance="14"/>
 				</Enemies>
@@ -8851,7 +8734,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ПЕРВЫЙ МЕЧ</Text>
 				<Price>15</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -8859,7 +8741,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ВТОРОЙ МЕЧ</Text>
 				<Price>30</Price>
 				<Benefit Name="MaxAttack" Value="2"/>
@@ -8867,7 +8748,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>САБЛЯ</Text>
 				<Price>35</Price>
 				<Benefit Name="MaxAttack" Value="1"/>
@@ -8877,7 +8757,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ДОСПЕХ</Text>
 				<Price>20</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -8885,7 +8764,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ДОСПЕХ</Text>
 				<Price>30</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -8894,7 +8772,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ДОСПЕХ</Text>
 				<Price>45</Price>
 				<Benefit Name="MaxDefence" Value="1"/>
@@ -8911,7 +8788,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ВЯЛЕНОЕ МЯСО</Text>
 				<Price>3</Price>
 				<Multiple/>
@@ -8920,7 +8796,6 @@
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>ЛЕПЕШКА</Text>
 				<Price>2</Price>
 				<Multiple/>
@@ -9018,7 +8893,6 @@
 		<Actions>	
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый всадник" Attack="9" Defence="14" Endurance="10" Initiative="9"/>
 					<Enemy Name="Второй всадник" Attack="9" Defence="14" Endurance="10" Initiative="9"/> 
