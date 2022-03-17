@@ -12,7 +12,7 @@ namespace Seeker.Gamebook.MissionToUrpan
         {
             [ButtonTypes.Main] = "#0f1d3c",
             [ButtonTypes.Continue] = "#26334f",
-            [ButtonTypes.System] = "#26334f",
+            [ButtonTypes.System] = "#bdc1ca",
             [ButtonTypes.Action] = "#0d1a36",
         };
 
