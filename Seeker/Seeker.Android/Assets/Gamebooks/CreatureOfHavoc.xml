@@ -42,7 +42,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="УДУШАЮЩИЕ ЛОЗЫ" Mastery="10" Endurance="13"/>
 				</Enemies>
@@ -116,7 +115,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ДРОВОСЕК" Mastery="8" Endurance="9"/>
 				</Enemies>
@@ -278,7 +276,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КВИММЕЛЬ КОСТЛЯВЫЙ" Mastery="8" Endurance="7"/>
 				</Enemies>
@@ -353,7 +350,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВОИН ХАОСА" Mastery="9" Endurance="7"/>
 				</Enemies>
@@ -385,7 +381,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ХОББИТ" Mastery="6" Endurance="6"/>
 					<Enemy Name="ВТОРОЙ ХОББИТ" Mastery="5" Endurance="6"/>
@@ -427,7 +422,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВОИН ХАОСА" Mastery="8" Endurance="8"/>
 				</Enemies>
@@ -450,7 +444,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="РЫЦАРЬ В ЛАТАХ" Mastery="8" Endurance="9"/>
 				</Enemies>
@@ -466,7 +459,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Испытай удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -488,7 +480,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СИЛЬНОРУК" Mastery="7" Endurance="8"/>
 				</Enemies>
@@ -600,7 +591,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КРОВАВЫЙ ОРК" Mastery="7" Endurance="5"/>
 				</Enemies>
@@ -754,7 +744,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ТАГРУФФ" Mastery="14" Endurance="14"/>
 				</Enemies>
@@ -811,7 +800,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПОЖИРАТЕЛЬ" Mastery="10" Endurance="8"/>
 				</Enemies>
@@ -912,7 +900,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ОХРАННИК" Mastery="9" Endurance="10"/>
 				</Enemies>
@@ -958,7 +945,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЭЛЬФ" Mastery="7" Endurance="6"/>
 				</Enemies>
@@ -1063,7 +1049,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Испытай удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1294,7 +1279,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Испытай удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1308,7 +1292,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СМОТРИТЕЛЬ АДСКОГО ОГНЯ" Mastery="14" Endurance="14"/>
 				</Enemies>
@@ -1333,7 +1316,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЧЕЛОВЕК-ЖАБА" Mastery="9" Endurance="9"/>
 				</Enemies>
@@ -1394,7 +1376,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="РОЗИНА ИЗ ДРИ" Mastery="8" Endurance="7"/>
 				</Enemies>
@@ -1479,7 +1460,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Испытай удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1567,7 +1547,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="САБЛЕРУКИЙ МОНСТР" Mastery="9" Endurance="15"/>
 				</Enemies>
@@ -1638,7 +1617,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КВИММЕЛЬ КОСТЛЯВЫЙ" Mastery="8" Endurance="7"/>
 				</Enemies>
@@ -1734,7 +1712,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Испытай удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1876,7 +1853,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ХОББИТ" Mastery="5" Endurance="6"/>
 				</Enemies>
@@ -2094,7 +2070,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ОДИННАДЦАТЫЙ" Mastery="7" Endurance="9"/>
 				</Enemies>
@@ -2182,7 +2157,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ОФИДИОТАВР" Mastery="9" Endurance="8"/>
 				</Enemies>
@@ -2207,7 +2181,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЖУК-ТРУПОЕД" Mastery="7" Endurance="6"/>
 				</Enemies>
@@ -2223,7 +2196,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ОРК" Mastery="7" Endurance="7"/>
 					<Enemy Name="ВТОРОЙ ОРК" Mastery="8" Endurance="7"/>
@@ -2321,7 +2293,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ПОЛУОРК" Mastery="6" Endurance="6"/>
 				</Enemies>
@@ -2370,7 +2341,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВОИН ХАОСА" Mastery="8" Endurance="7"/>
 				</Enemies>
@@ -2395,7 +2365,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый ВОИН" Mastery="8" Endurance="9"/>
 					<Enemy Name="Второй ВОИН" Mastery="7" Endurance="8"/>
@@ -2444,7 +2413,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="БЕШЕНЫЙ ЗВЕРЬ" Mastery="7" Endurance="8"/>
 				</Enemies>
@@ -2472,7 +2440,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Испытай удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2571,7 +2538,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВОИН ХАОСА" Mastery="9" Endurance="8"/>
 				</Enemies>
@@ -2712,7 +2678,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="СЕЛЯНИН" Mastery="7" Endurance="8"/>
 				</Enemies>
@@ -2728,7 +2693,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="РЫЦАРЬ В ЛАТАХ" Mastery="8" Endurance="9"/>
 				</Enemies>
@@ -2921,7 +2885,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Испытай удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2988,7 +2951,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЖЕНЩИНА-ВОИН" Mastery="7" Endurance="7"/>
 					<Enemy Name="ВОР" Mastery="8" Endurance="6"/>
@@ -3098,7 +3060,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ГИГАНТСКИЙ ШЕРШЕНЬ" Mastery="6" Endurance="7"/>
 				</Enemies>
@@ -3178,7 +3139,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый ГОБЛИН" Mastery="6" Endurance="5"/>
 					<Enemy Name="Второй ГОБЛИН" Mastery="5" Endurance="5"/>
@@ -3306,7 +3266,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЖЕРЕБЕЦ" Mastery="7" Endurance="5"/>
 				</Enemies>
@@ -3323,7 +3282,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый ЖУК-ТРУПОЕД" Mastery="7" Endurance="6"/>
 					<Enemy Name="Второй ЖУК-ТРУПОЕД" Mastery="8" Endurance="5"/>
@@ -3342,7 +3300,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЧЕЛОВЕК-НОСОРОГ" Mastery="8" Endurance="9"/>
 				</Enemies>
@@ -3528,7 +3485,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЖУК-ТРУПОЕД" Mastery="7" Endurance="6"/>
 				</Enemies>
@@ -3620,7 +3576,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Испытай удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3740,7 +3695,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ВОИН ХАОСА" Mastery="7" Endurance="8"/>
 				</Enemies>
@@ -3832,7 +3786,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КВИММЕЛЬ КОСТЛЯВЫЙ" Mastery="8" Endurance="7"/>
 				</Enemies>
@@ -3876,7 +3829,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый ЗОМБИ" Mastery="6" Endurance="7"/>
 					<Enemy Name="Второй ЗОМБИ" Mastery="7" Endurance="7"/>
@@ -4006,7 +3958,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="ЧЁРНЫЙ ЭЛЬФ" Mastery="7" Endurance="6"/>
 				</Enemies>
@@ -4056,7 +4007,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый РАЗБОЙНИК" Mastery="8" Endurance="9"/>
 					<Enemy Name="Второй РАЗБОЙНИК" Mastery="8" Endurance="7"/>
@@ -4205,7 +4155,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый ПОЖИРАТЕЛЬ ПЛОТИ" Mastery="6" Endurance="7"/>
 					<Enemy Name="Второй ПОЖИРАТЕЛЬ ПЛОТИ" Mastery="5" Endurance="6"/>
@@ -4258,7 +4207,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="КРОВАВЫЙ ОРК" Mastery="7" Endurance="5"/>
 				</Enemies>
@@ -4287,7 +4235,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Испытай удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
