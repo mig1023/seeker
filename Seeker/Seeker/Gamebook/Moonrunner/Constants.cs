@@ -14,7 +14,7 @@ namespace Seeker.Gamebook.Moonrunner
             [ButtonTypes.Option] = "#80538a",
             [ButtonTypes.Continue] = "#aa8cb1",
             [ButtonTypes.Action] = "#7e0059",
-            [ButtonTypes.System] = "#8478a6",
+            [ButtonTypes.System] = "#ddd1df",
         };
 
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
