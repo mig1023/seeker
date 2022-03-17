@@ -61,6 +61,31 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             return enemies;
         }
 
+        public override string ButtonText()
+        {
+            switch (Name)
+            {
+                case "Fight":
+                    return "Сражаться";
+
+                case "Luck":
+                    return "Проверить удачу";
+
+                case "Dice":
+                case "DiceGold":
+                case "DiceAnxiety":
+                case "DiceWounds":
+                    return "Кинуть кубик";
+
+                case "DicesRestore":
+                case "DicesEndurance":
+                    return "Кинуть кубики";
+
+                default:
+                    return Button;
+            }
+        }
+
         public override List<string> Status() => new List<string>
         {
             String.Format("Мастерство: {0}", protagonist.Mastery),
