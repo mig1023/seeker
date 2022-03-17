@@ -156,6 +156,21 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return enemies;
         }
 
+        public override string ButtonText()
+        {
+            switch (Name)
+            {
+                case "Fight":
+                    return "Сражаться";
+
+                case "Luck":
+                    return "Проверить удачу";
+
+                default:
+                    return Button;
+            }
+        }
+
         public List<string> Luck()
         {
             Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
