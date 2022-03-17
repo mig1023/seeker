@@ -17,5 +17,7 @@ namespace Seeker.Abstract
         int? GetParagraphsStatusesLimit();
 
         bool ShowDisabledOption();
+
+        string ButtonText();
     }
 }

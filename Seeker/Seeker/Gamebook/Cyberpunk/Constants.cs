@@ -32,6 +32,8 @@ namespace Seeker.Gamebook.Cyberpunk
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 587, 588, 589 };
 
+        public override string ButtonText() => "Пройти проверку";
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

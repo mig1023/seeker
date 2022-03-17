@@ -35,8 +35,6 @@ namespace Seeker.Gamebook.Cyberpunk
                 return new List<string> { Text };
         }
 
-        public override string ButtonText() => "Пройти проверку";
-
         public override bool CheckOnlyIf(string option)
         {
             if (String.IsNullOrEmpty(option))

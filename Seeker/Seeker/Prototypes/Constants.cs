@@ -33,6 +33,8 @@ namespace Seeker.Prototypes
 
         public virtual bool ShowDisabledOption() => false;
 
+        public virtual string ButtonText() => String.Empty;
+
         private static Dictionary<ButtonTypes, string> DefaultButtons() => new Dictionary<ButtonTypes, string>
         {
             [ButtonTypes.Main] = "#dcdcdc",
