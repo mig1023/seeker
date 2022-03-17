@@ -458,21 +458,18 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>Жетон по цене 12х2</Text>
 				<Price>24</Price>
 				<Trigger>12</Trigger>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>Жетон по цене 13х2</Text>
 				<Price>26</Price>
 				<Trigger>13</Trigger>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>Жетон по цене 10х2</Text>
 				<Price>20</Price>
 				<Trigger>10</Trigger>
@@ -767,21 +764,18 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>Жетон</Text>
 				<Price>12</Price>
 				<Trigger>12</Trigger>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>Жетон</Text>
 				<Price>13</Price>
 				<Trigger>13</Trigger>
 			</Action>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>Жетон</Text>
 				<Price>10</Price>
 				<Trigger>10</Trigger>
@@ -1298,7 +1292,6 @@
 		<Actions>
 			<Action>
 				<Name>Get</Name>
-				<Button>Купить</Button>
 				<Text>Провизия</Text>
 				<Trigger>Еда №3</Trigger>
 				<Price>50</Price>
