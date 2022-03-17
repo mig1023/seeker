@@ -254,7 +254,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ БАНДИТ" Hitpoints="3" Accuracy="3"/>
 					<Enemy Name="ВТОРОЙ БАНДИТ" Hitpoints="3" Accuracy="3"/>
@@ -271,7 +270,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ БАНДИТ" Hitpoints="3" Accuracy="3"/>
 					<Enemy Name="ВТОРОЙ БАНДИТ" Hitpoints="3" Accuracy="3" First="true"/>
@@ -441,7 +439,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="КЛЯЙСТ" Hitpoints="3" Accuracy="3" First="true"/>
 				</Enemies>
@@ -589,7 +586,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ДЭВИС" Hitpoints="3" Accuracy="3" First="true"/>
 				</Enemies>
@@ -643,7 +639,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="МАРТИН" Hitpoints="3" Accuracy="3"/>
 					<Enemy Name="ЮРГЕН" Hitpoints="3" Accuracy="3" First="true"/>
@@ -1141,7 +1136,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ИТАЛЬЯНЕЦ" Hitpoints="3" Accuracy="3" First="true"/>
 				</Enemies>
@@ -1182,7 +1176,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="3"/>
 					<Enemy Name="ВТОРОЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="2" First="true"/>
@@ -1199,7 +1192,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ЮРГЕН" Hitpoints="3" Accuracy="3"/>
 				</Enemies>
@@ -1215,7 +1207,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="МАРТИН" Hitpoints="3" Accuracy="3" First="true"/>
 					<Enemy Name="ИТАЛЬЯНЕЦ" Hitpoints="3" Accuracy="2"/>
@@ -1232,7 +1223,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="МАРТИН" Hitpoints="3" Accuracy="3"/>
 					<Enemy Name="ЮРГЕН" Hitpoints="3" Accuracy="2" First="true"/>
@@ -1286,7 +1276,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ГЕСТАПОВКА" Hitpoints="3" Accuracy="2" First="true"/>
 				</Enemies>
@@ -1302,7 +1291,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ГЕСТАПОВКА" Hitpoints="3" Accuracy="2"/>
 				</Enemies>
@@ -1400,7 +1388,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="4" First="true"/>
 				</Enemies>
@@ -1416,7 +1403,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="4"/>
 					<Enemy Name="ВТОРОЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="4"/>
@@ -1437,7 +1423,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="1" First="true"/>
 					<Enemy Name="ВТОРОЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="1" First="true"/>
@@ -1483,7 +1468,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ВОДИТЕЛЬ" Hitpoints="3" Accuracy="3" First="true"/>
 				</Enemies>
@@ -1549,7 +1533,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="АВТОМАТЧИК" Hitpoints="3" Accuracy="5" WithoutCartridges="true"/>
 					<Enemy Name="ФОН ГОФ" Hitpoints="2" Accuracy="3" First="true"/>
@@ -1575,7 +1558,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="АВТОМАТЧИК" Hitpoints="3" Accuracy="5" WithoutCartridges="true"/>
 					<Enemy Name="ГЕСТАПОВЕЦ С РЕВОЛЬВЕРОМ" Hitpoints="3" Accuracy="2" First="true"/>
@@ -1592,7 +1574,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="АВТОМАТЧИК" Hitpoints="3" Accuracy="5" WithoutCartridges="true"/>
 					<Enemy Name="ГЕСТАПОВЕЦ С РЕВОЛЬВЕРОМ" Hitpoints="3" Accuracy="2"/>
@@ -1609,7 +1590,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ВОДИТЕЛЬ" Hitpoints="3" Accuracy="3" First="true"/>
 				</Enemies>
@@ -1625,7 +1605,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ВОДИТЕЛЬ" Hitpoints="3" Accuracy="3"/>
 				</Enemies>
@@ -1790,7 +1769,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="3"/>
 					<Enemy Name="ВТОРОЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="2" First="true"/>
@@ -2039,7 +2017,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ФРИЦ БРЁНИНГ" Hitpoints="3" Accuracy="3"/>
 					<Enemy Name="КАЙЗЕР" Hitpoints="3" Accuracy="3" Animal="true"/>
@@ -2068,7 +2045,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="3"/>
 					<Enemy Name="ВТОРОЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="3"/>
@@ -2304,7 +2280,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ МАТРОС" Hitpoints="2" Accuracy="3"/>
 					<Enemy Name="ВТОРОЙ МАТРОС" Hitpoints="3" Accuracy="3" First="true"/>
@@ -2406,7 +2381,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="БРАНДТ" Hitpoints="4" Accuracy="3"/>
 				</Enemies>
@@ -2531,7 +2505,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ АВТОМАТЧИК" Hitpoints="3" Accuracy="4"/>
 					<Enemy Name="ВТОРОЙ АВТОМАТЧИК" Hitpoints="3" Accuracy="4"/>
@@ -2568,7 +2541,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ МАТРОС" Hitpoints="2" Accuracy="3"/>
 					<Enemy Name="ВТОРОЙ МАТРОС" Hitpoints="3" Accuracy="3"/>
@@ -2586,7 +2558,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ МАТРОС" Hitpoints="2" Accuracy="3"/>
 					<Enemy Name="ВТОРОЙ МАТРОС" Hitpoints="3" Accuracy="3" First="true"/>
@@ -2604,7 +2575,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ АВТОМАТЧИК" Hitpoints="3" Accuracy="4"/>
 					<Enemy Name="ВТОРОЙ АВТОМАТЧИК" Hitpoints="3" Accuracy="4"/>
@@ -2637,7 +2607,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ МАТРОС" Hitpoints="4" Accuracy="3"/>
 					<Enemy Name="ВТОРОЙ МАТРОС" Hitpoints="3" Accuracy="3" First="true"/>
@@ -2713,7 +2682,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="3"/>
 					<Enemy Name="ВТОРОЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="3"/>
@@ -2748,7 +2716,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Перестрелка</Button>
 				<Enemies>
 					<Enemy Name="ПЕРВЫЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="3"/>
 					<Enemy Name="ВТОРОЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="3"/>
