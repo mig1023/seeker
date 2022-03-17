@@ -29,6 +29,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return enemies;
         }
 
+        public override string ButtonText() => (Name == "Fight" ? "Сражаться" : Button);
+
         public override List<string> Status() => new List<string>
         {
             String.Format("Сила: {0}", protagonist.Strength),
