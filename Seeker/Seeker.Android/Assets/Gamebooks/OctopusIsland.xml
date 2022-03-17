@@ -111,7 +111,6 @@
 		<Actions>
 			<Action>
 				<Name>Dinner</Name>
-				<Button>Пообедать</Button>
 				<Aftertext>После обеда вы продолжаете свой путь в менее опасное место.</Aftertext>
 				<Dinner>5</Dinner>
 			</Action>
@@ -176,7 +175,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Ро-пёс" Skill="9" Hitpoint="10"/>
 				</Enemies>
@@ -230,7 +228,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<WoundsToWin>3</WoundsToWin>
 				<Enemies>
 					<Enemy Name="Ро-орёл" Skill="8" Hitpoint="8"/>
@@ -255,7 +252,6 @@
 		<Actions>
 			<Action>
 				<Name>Dinner</Name>
-				<Button>Пообедать</Button>
 				<Aftertext>Пообедав, вы направитесь в менее опасный район.</Aftertext>
 				<Dinner>5</Dinner>
 			</Action>
@@ -381,7 +377,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Ро-гадюка" Skill="5" Hitpoint="5"/>
 				</Enemies>
@@ -449,7 +444,6 @@
 		<Actions>
 			<Action>
 				<Name>Dinner</Name>
-				<Button>Пообедать</Button>
 				<Aftertext>Теперь, когда вы закончили переход через Большой Каньон, вы стоите у входа в прерию Хёлей.</Aftertext>
 				<Dinner>5</Dinner>
 			</Action>
@@ -551,7 +545,6 @@
 		<Actions>
 			<Action>
 				<Name>Dinner</Name>
-				<Button>Пообедать</Button>
 				<Aftertext>После обеда вы почти согрелись и следующие два часа шагаете без всяких происшествий. Вы покидаете равнину Белёсых Трав и вступаете в область Луж.</Aftertext>
 				<Dinner>10</Dinner>
 			</Action>
@@ -727,7 +720,6 @@
 		<Actions>
 			<Action>
 				<Name>Dinner</Name>
-				<Button>Пообедать</Button>
 				<Aftertext>После еды вы наконец отправляетесь в путь и шагаете без всяких происшествий целых два часа. Вы покидаете равнину Белёсых Трав и входите в область Луж.</Aftertext>
 				<Dinner>5</Dinner>
 			</Action>
@@ -762,7 +754,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Двухголовое чудовище" Skill="6" Hitpoint="7"/>
 				</Enemies>
@@ -926,7 +917,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Ярби" Skill="15" Hitpoint="15"/>
 				</Enemies>
@@ -943,7 +933,6 @@
 		<Actions>
 			<Action>
 				<Name>Dinner</Name>
-				<Button>Пообедать</Button>
 				<Aftertext>После обеда вы продолжаете свой путь, направляясь в менее опасный район.</Aftertext>
 				<Dinner>5</Dinner>
 			</Action>
@@ -1022,7 +1011,6 @@
 		<Actions>
 			<Action>
 				<Name>Dinner</Name>
-				<Button>Пообедать</Button>
 				<Aftertext>После обеда вы продолжаете свой переход в менее опасное место.</Aftertext>
 				<Dinner>5</Dinner>
 			</Action>
@@ -1079,7 +1067,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Ро-собака" Skill="9" Hitpoint="10"/>
 				</Enemies>
@@ -1111,7 +1098,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Юксан" Skill="12" Hitpoint="11"/>
 				</Enemies>
@@ -1137,7 +1123,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Хёля" Skill="8" Hitpoint="7"/>
 				</Enemies>
@@ -1168,7 +1153,6 @@
 		<Actions>
 			<Action>
 				<Name>Dinner</Name>
-				<Button>Пообедать</Button>
 				<Aftertext>А сейчас вы вступаете в область Луж. Это обширное пустынное пространство, неровная почва, которая покрыта мрачными колючими зарослями, изредка разбросанными пучками выжженной солнцем травы и многочисленными лужами мутной чёрной воды, которые и дали название местности. С первых шагов Ксолотл кажется обеспокоенным и нервничает, что с ним бывает крайне редко.\n\n- Тебе что-то не нравится? - тихо спрашивает его Суи.\n\n- Да ничего, - отвечает Ксолотл. - Просто этот уголок ничуть не лучше, чем плато Торфяных Мхов. Придя сюда, мы ничего не выиграли. - Он изучает карту, сверяясь с компасом, и заключает: - Нам надо направиться на северо-запад. Если повезёт, то мы выйдем к Озеру.\n\nВы целый час бредёте в выбранном Ксолотлом направлении и наконец выходите к Озеру.</Aftertext>
 				<Dinner>5</Dinner>
 			</Action>
@@ -1214,7 +1198,6 @@
 		<Actions>
 			<Action>
 				<Name>Dinner</Name>
-				<Button>Пообедать</Button>
 				<Aftertext>Пообедав, вы с прежней предосторожностью продолжаете пробираться через Холмы.</Aftertext>
 				<Dinner>5</Dinner>
 			</Action>
@@ -1235,7 +1218,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Чудовище" Skill="7" Hitpoint="6"/>
 				</Enemies>
@@ -1337,7 +1319,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Ярби" Skill="15" Hitpoint="14"/>
 				</Enemies>
@@ -1354,7 +1335,6 @@
 		<Actions>
 			<Action>
 				<Name>Dinner</Name>
-				<Button>Пообедать</Button>
 				<Aftertext>После еды вы снова чувствуете себя в хорошей форме и целый час шагаете без всяких происшествий. Вы покидаете Большие Скалы и вступаете в область Луж.</Aftertext>
 				<Dinner>5</Dinner>
 			</Action>
@@ -1412,7 +1392,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Оссем" Skill="8" Hitpoint="7"/>
 				</Enemies>
@@ -1495,7 +1474,6 @@
 		<Actions>
 			<Action>
 				<Name>Dinner</Name>
-				<Button>Пообедать</Button>
 				<Aftertext>Итак, вы заканчиваете переход через Большой Каньон и оказываетесь на подступах к прерии Хёлей.</Aftertext>
 				<Dinner>5</Dinner>
 			</Action>
@@ -1612,7 +1590,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Ро-кошка" Skill="8" Hitpoint="9"/>
 				</Enemies>
@@ -1674,7 +1651,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Ярби" Skill="15" Hitpoint="14"/>
 				</Enemies>
@@ -1743,7 +1719,6 @@
 		<Actions>
 			<Action>
 				<Name>Dinner</Name>
-				<Button>Пообедать</Button>
 				<Aftertext>После обеда вам становится легче, головная боль исчезает, и вы продолжаете путь к Озеру, куда вскоре и приходите.</Aftertext>
 				<Dinner>5</Dinner>
 			</Action>
@@ -1819,7 +1794,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Робот-боец" Skill="15" Hitpoint="14"/>
 				</Enemies>
@@ -1836,7 +1810,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Ро-паук" Skill="9" Hitpoint="10"/>
 				</Enemies>
@@ -1861,7 +1834,6 @@
 		<Actions>
 			<Action>
 				<Name>Dinner</Name>
-				<Button>Пообедать</Button>
 				<Aftertext>После обеда вы чувствуете новый прилив сил и шагаете, не встречая препятствий, целых два часа. И вот вы уже покидаете равнину Белёсых Трав и вступаете в область Луж.</Aftertext>
 				<Dinner>5</Dinner>
 			</Action>
