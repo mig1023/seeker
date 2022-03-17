@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.OrcsDay
             [ButtonTypes.Main] = "#a4be84",
             [ButtonTypes.Continue] = "#cad9b7",
             [ButtonTypes.Action] = "#72855c",
-            [ButtonTypes.System] = "#cad9b7",
+            [ButtonTypes.System] = "#e9efe2",
             [ButtonTypes.Font] = "#000000",
         };
 
