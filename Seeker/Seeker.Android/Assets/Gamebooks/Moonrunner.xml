@@ -44,7 +44,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Конрад" Mastery="10" Endurance="12"/>
 				</Enemies>
@@ -151,7 +150,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Modifications>
@@ -177,7 +175,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -223,7 +220,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Блуждающий в тумане" Mastery="7" Endurance="8"/>
 				</Enemies>
@@ -257,7 +253,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Барон Милеску" Mastery="9" Endurance="15"/>
 				</Enemies>
@@ -290,7 +285,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый палач" Mastery="7" Endurance="7"/>
 					<Enemy Name="Второй палач" Mastery="8" Endurance="6"/>
@@ -667,7 +661,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Арголис" Mastery="8" Endurance="13"/>
 				</Enemies>
@@ -685,7 +678,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -899,7 +891,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Мандрейк" Mastery="8" Endurance="8"/>
 				</Enemies>
@@ -1016,7 +1007,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Чудовище" Mastery="10" Endurance="8"/>
 				</Enemies>
@@ -1063,7 +1053,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Повелитель мертвых" Mastery="10" Endurance="13"/>
 				</Enemies>
@@ -1145,7 +1134,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1159,7 +1147,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Мистер Килмамей" Mastery="8" Endurance="10"/>
 					<Enemy Name="Мистер Хогг" Mastery="7" Endurance="10"/>
@@ -1264,7 +1251,6 @@
 			<Action>
 				<Name>DiceWounds</Name>
 				<Button>Кинуть кубик</Button>
-				<Dices>1</Dices>
 				<Aftertext>Но все же вам удается сбежать из логова ужасного призрака, теперь пора начинать охоту.</Aftertext>
 			</Action>
 		</Actions>
@@ -1384,7 +1370,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1406,7 +1391,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Обсианский хищник" Mastery="11"/>
 				</Enemies>
@@ -1478,7 +1462,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Монстр" Mastery="9" Endurance="13"/>
 				</Enemies>
@@ -1585,7 +1568,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Убийца" Mastery="9" Endurance="7"/>
 				</Enemies>
@@ -1630,7 +1612,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Блуждающий в тумане" Mastery="7" Endurance="8"/>
 				</Enemies>
@@ -1835,7 +1816,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -1903,7 +1883,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Барон Милеску" Mastery="9" Endurance="15"/>
 				</Enemies>
@@ -2042,7 +2021,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Конрад Заар" Mastery="8" Endurance="8"/>
 				</Enemies>
@@ -2149,7 +2127,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Темный эльф" Mastery="8" Endurance="7"/>
 				</Enemies>
@@ -2255,7 +2232,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Ферно" Mastery="8" Endurance="8"/>
 					<Enemy Name="Первый Стражник" Mastery="7" Endurance="6"/>
@@ -2543,7 +2519,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Конрад" Mastery="10" Endurance="12"/>
 				</Enemies>
@@ -2648,7 +2623,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Темный эльф" Mastery="8" Endurance="7"/>
 				</Enemies>
@@ -2664,7 +2638,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -2685,7 +2658,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Первый пациент" Mastery="6" Endurance="8"/>
 					<Enemy Name="Второй пациент" Mastery="5" Endurance="8"/>
@@ -2744,7 +2716,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Древний воин" Mastery="7" Endurance="9"/>
 				</Enemies>
@@ -2919,7 +2890,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Блуждающий в тумане" Mastery="7" Endurance="8"/>
 				</Enemies>
@@ -3006,7 +2976,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Конрад" Mastery="10" Endurance="12"/>
 				</Enemies>
@@ -3082,7 +3051,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Монстр Кадеруэлша" Mastery="11" Endurance="14"/>
 				</Enemies>
@@ -3497,7 +3465,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -3511,7 +3478,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Летучая мышь" Mastery="6" Endurance="6"/>
 				</Enemies>
@@ -3551,7 +3517,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Конрад" Mastery="10" Endurance="12"/>
 				</Enemies>
@@ -3596,7 +3561,6 @@
 			</Action>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Ксен-Вайп" Mastery="8" Endurance="7"/>
 				</Enemies>
@@ -3690,7 +3654,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Ай-Хулуд" Mastery="9" Endurance="8"/>
 				</Enemies>
@@ -3877,7 +3840,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Тролль" Mastery="8" Endurance="8"/>
 				</Enemies>
@@ -3945,7 +3907,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Дворянин" Mastery="7" Endurance="8"/>
 					<Enemy Name="Орк" Mastery="8" Endurance="6"/>
@@ -4000,7 +3961,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Дама с моноклем" Mastery="7" Endurance="10"/>
 				</Enemies>
@@ -4026,7 +3986,6 @@
 		<Actions>
 			<Action>
 				<Name>Luck</Name>
-				<Button>Проверить удачу</Button>
 			</Action>
 		</Actions>
 		<Options>
@@ -4057,7 +4016,6 @@
 		<Actions>
 			<Action>
 				<Name>Fight</Name>
-				<Button>Сражаться</Button>
 				<Enemies>
 					<Enemy Name="Блуждающий в тумане" Mastery="7" Endurance="8"/>
 				</Enemies>
