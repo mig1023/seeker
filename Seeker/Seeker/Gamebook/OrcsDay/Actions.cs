@@ -76,6 +76,21 @@ namespace Seeker.Gamebook.OrcsDay
             return enemies;
         }
 
+        public override string ButtonText()
+        {
+            switch (Name)
+            {
+                case "Fight":
+                    return "Сражаться";
+
+                case "Test":
+                    return "Проверить";
+
+                default:
+                    return Button;
+            }
+        }
+
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             if (ZombiePotionTest && !Game.Option.IsTriggered("Зелье управление зомби"))
