@@ -62,8 +62,6 @@ namespace Seeker.Gamebook.Cyberpunk
             }
         }
 
-        private int PercentageDice() => rand.Next(100) + 1;
-
         public List<string> Test()
         {
             List<string> test = new List<string>();
@@ -94,7 +92,7 @@ namespace Seeker.Gamebook.Cyberpunk
 
             test.Add(String.Format("{0} = {1}", paramsLine.TrimEnd(' ', '+'), paramsLevel));
 
-            int dice = PercentageDice();
+            int dice = Game.Dice.Roll(size: 100);
 
             test.Add(String.Format("BOLD|BIG|Бросок кубика: {0} - {1}!", dice, Game.Services.Сomparison(dice, paramsLevel)));
             test.Add(Result((dice <= paramsLevel), "УСПЕХ|НЕУДАЧА"));
