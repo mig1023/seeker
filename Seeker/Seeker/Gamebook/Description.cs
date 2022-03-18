@@ -46,8 +46,9 @@ namespace Seeker.Gamebook
 
         public string AuthorsIndex()
         {
-            string author = Author + Authors;
-            string[] elements = author.Split(' ');
+            string allAuthors = Author + Authors;
+            string firstAuthor = allAuthors.Split(new string[] { "\\n" }, StringSplitOptions.RemoveEmptyEntries)[0];
+            string[] elements = firstAuthor.Split(' ');
 
             if (!SinglePseudonym && !FullPseudonym && (elements.Length > 1))
                 return String.Format("{0} {1}", elements[1].Replace(",", String.Empty), elements[0]);
@@ -56,7 +57,7 @@ namespace Seeker.Gamebook
                 return Author;
 
             else
-                return elements[0];
+                return elements[0].Replace(",", String.Empty);
         }
     }
 }
