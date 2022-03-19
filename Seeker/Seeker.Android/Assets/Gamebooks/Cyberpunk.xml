@@ -220,7 +220,7 @@
 			<Option Destination="188" Text="Кибер 40 (для максимального усиления)" Do="Trigger" ValueString="Кибер 40">
 				<Text>Киберконечность, полное покрытие торса пластинчатой бронёй, нейропроцессор со встроенными усилителями силы.\n\nЕсли пока не решился на установку киберимплантов, запиши ключевое слово «Кибер 0».</Text>
 			</Option>
-			<Option Destination="188" Text="Кибер 0" Do="Trigger" ValueString="Кибер 0">
+			<Option Destination="188" Text="Кибер 0" Do="Trigger" ValueString="Кибер 0"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
