@@ -13,12 +13,20 @@ namespace Seeker.Gamebook.Cyberpunk
         public bool MultipliedLuck { get; set; }
         public bool DividedLuck { get; set; }
 
-        public override List<string> Status() => new List<string>
+        public override List<string> AdditionalStatus()
         {
-            String.Format("Планирование: {0}", protagonist.Planning),
-            String.Format("Подготовка: {0}", protagonist.Preparation),
-            String.Format("Везение: {0}", protagonist.Luck),
-        };
+            List<string> statusLines = new List<string>
+            {
+                String.Format("Везение: {0}", protagonist.Luck),
+                String.Format("Подготовка: {0}", protagonist.Preparation),
+                String.Format("Планирование: {0}", protagonist.Planning),
+            };
+
+            if (protagonist.Cybernetics > 1)
+                statusLines.Insert(0, String.Format("Кибернетика: {0}", protagonist.Cybernetics));
+
+            return statusLines;
+        }
 
         public override List<string> Representer()
         {

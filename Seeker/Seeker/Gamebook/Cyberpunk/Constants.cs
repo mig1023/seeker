@@ -20,7 +20,7 @@ namespace Seeker.Gamebook.Cyberpunk
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.BookColor] = "#118984",
-            [ColorTypes.StatusBar] = "#094542",
+            [ColorTypes.AdditionalStatus] = "#094542",
         };
 
         public static Dictionary<string, string> CharactersParams() => new Dictionary<string, string>
