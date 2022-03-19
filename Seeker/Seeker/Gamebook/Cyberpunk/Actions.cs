@@ -122,7 +122,7 @@ namespace Seeker.Gamebook.Cyberpunk
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            if (!String.IsNullOrEmpty(Stat))
+            if ((Name == "Get, Decrease") && (!String.IsNullOrEmpty(Stat)))
             {
                 int stat = GetProperty(protagonist, Stat);
 
