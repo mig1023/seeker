@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.Cyberpunk
 {
@@ -55,6 +56,10 @@ namespace Seeker.Gamebook.Cyberpunk
             if (String.IsNullOrEmpty(option))
             {
                 return true;
+            }
+            else if (option.Contains("|"))
+            {
+                return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
             }
             else if (option.Contains(">") || option.Contains("<"))
             {
