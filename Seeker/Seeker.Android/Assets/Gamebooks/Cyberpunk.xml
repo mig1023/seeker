@@ -4166,7 +4166,7 @@
 			<Option Destination="444" Text="Кибер 20 (для минимального усиления)" Do="Trigger" ValueString="Кибер 20"/>
 			<Option Destination="444" Text="Кибер 30 (для среднего усиления)" Do="Trigger" ValueString="Кибер 30"/>
 			<Option Destination="444" Text="Кибер 40 (для максимального усиления)" Do="Trigger" ValueString="Кибер 40"/>
-			<Option Destination="444">
+			<Option Destination="444"/>
 		</Options>
 	</Paragraph>
 	<Paragraph>
