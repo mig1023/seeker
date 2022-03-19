@@ -28,6 +28,7 @@ namespace Seeker.Gamebook.Cyberpunk
             ["Planning"] = "Планирование",
             ["Preparation"] = "Подготовка",
             ["Luck"] = "Везение",
+            ["Cybernetics"] = "Кибернетика",
         };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 587, 588, 589 };

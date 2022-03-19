@@ -27,6 +27,13 @@ namespace Seeker.Gamebook.Cyberpunk
             set => _luck = Game.Param.Setter(value, _luck, this);
         }
 
+        private int _cybernetics;
+        public int Cybernetics
+        {
+            get => _cybernetics;
+            set => _cybernetics = Game.Param.Setter(value, max: 99, _cybernetics, this);
+        }
+
         public override void Init()
         {
             base.Init();
@@ -34,6 +41,7 @@ namespace Seeker.Gamebook.Cyberpunk
             Planning = 0;
             Preparation = 0;
             Luck = 0;
+            Cybernetics = 1;
         }
 
         public Character Clone() => new Character()
@@ -43,9 +51,10 @@ namespace Seeker.Gamebook.Cyberpunk
             Planning = this.Planning,
             Preparation = this.Preparation,
             Luck = this.Luck,
+            Cybernetics = this.Cybernetics,
         };
 
-        public override string Save() => String.Join("|", Planning, Preparation, Luck);
+        public override string Save() => String.Join("|", Planning, Preparation, Luck, Cybernetics);
 
         public override void Load(string saveLine)
         {
@@ -54,6 +63,7 @@ namespace Seeker.Gamebook.Cyberpunk
             Planning = int.Parse(save[0]);
             Preparation = int.Parse(save[1]);
             Luck = int.Parse(save[2]);
+            Cybernetics = int.Parse(save[3]);
 
             IsProtagonist = true;
         }

@@ -22,7 +22,14 @@ namespace Seeker.Gamebook.Cyberpunk
 
         public override List<string> Representer()
         {
-            if (String.IsNullOrEmpty(Text))
+            if (Name == "Get, Decrease")
+            {
+                int statValue = GetProperty(protagonist, Stat);
+                string statName = Constants.CharactersParams()[Stat];
+
+                return new List<string> { String.Format("{0} (значение: {1})", statName.ToUpper(), statValue) };
+            }
+            else if (String.IsNullOrEmpty(Text))
             {
                 string line = "Проверка: ";
 
@@ -99,5 +106,24 @@ namespace Seeker.Gamebook.Cyberpunk
 
             return test;
         }
+
+        public override bool IsButtonEnabled(bool secondButton = false)
+        {
+            if (!String.IsNullOrEmpty(Stat))
+            {
+                int stat = GetProperty(protagonist, Stat);
+
+                if (secondButton)
+                    return (stat > 1);
+                else
+                    return (stat < 99);
+            }
+            else
+                return true;
+        }
+
+        public List<string> Get() => ChangeProtagonistParam(Stat, protagonist, String.Empty);
+
+        public List<string> Decrease() => ChangeProtagonistParam(Stat, protagonist, String.Empty, decrease: true);
     }
 }
