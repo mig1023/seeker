@@ -21,6 +21,7 @@ namespace Seeker.Gamebook.Cyberpunk
         {
             [ColorTypes.BookColor] = "#118984",
             [ColorTypes.AdditionalStatus] = "#094542",
+            [ColorTypes.AdditionalFont] = "#ffffff",
         };
 
         public static Dictionary<string, string> CharactersParams() => new Dictionary<string, string>
