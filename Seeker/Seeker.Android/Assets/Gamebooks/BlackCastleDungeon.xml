@@ -1288,7 +1288,14 @@
 	</Paragraph>
 	<Paragraph>
 		<Id>128</Id>
-		<Text>Вы пробуете красное вино. Оно действительно великолепно. Прибавьте 4 ВЫНОСЛИВОСТИ, поблагодарите Тролля и покиньте погреб через дверь в противоположном конце прохода между полками.</Text>
+		<Texts>
+			<Text>Вы пробуете красное вино. Оно действительно великолепно.</Text>
+			<Text Size="small">Прибавьте 4 ВЫНОСЛИВОСТИ.</Text>
+			<Text>Поблагодарите Тролля и покиньте погреб через дверь в противоположном конце прохода между полками.</Text>
+		</Texts>
+		<Modifications>
+			<Modification Name="Endurance" Value="4"/>
+		</Modifications>
 		<Options>
 			<Option Destination="207"/>
 		</Options>
@@ -1312,6 +1319,9 @@
 	<Paragraph>
 		<Id>131</Id>
 		<Text>Вы вознаграждены за свою смелость. Это Микстура выносливости. Можете прибавить 6 ВЫНОСЛИВОСТЕЙ и отправляться дальше.</Text>
+		<Modifications>
+			<Modification Name="Endurance" Value="6"/>
+		</Modifications>
 		<Options>
 			<Option Destination="305"/>
 		</Options>
