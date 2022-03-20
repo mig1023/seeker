@@ -2030,6 +2030,7 @@
 		<Modifications>
 			<Modification Name="Healing" ValueString="Поесть,3,2"/>
 			<Modification Name="Endurance" Value="4"/>
+			<Modification Name="Gold" Value="30"/>
 		</Modifications>
 		<Options>
 			<Option Destination="20"/>
@@ -2444,6 +2445,10 @@
 	<Paragraph>
 		<Id>243</Id>
 		<Text>Не обращая внимания на свои раны, вы быстро обыскиваете тело убийцы. На его запястье татуировка в виде головы оборотня! Так же у него 11 золотых и фляга с целебным напитком. Можете выпить его в любое время (кроме битвы), он восстановит вам 3 Выносливости. Но когда вы заканчиваете осмотр, вы видите, что люди со всей таверны окружили вас и достали мечи. «От тебя слишком много проблем, - говорит Эвирон, - думаю, тебе лучше убраться отсюда».</Text>
+		<Modifications>
+			<Modification Name="Gold" Value="11"/>
+			<Modification Name="Healing" ValueString="Выпить целебный напиток,3"/>
+		</Modifications>
 		<Options>
 			<Option Destination="120" Text="Попробуете успокоить хозяйку, чтобы она разрешила вам остаться"/>
 			<Option Destination="92" Text="Уйдете из «Старого осьминога», как она просит"/>
