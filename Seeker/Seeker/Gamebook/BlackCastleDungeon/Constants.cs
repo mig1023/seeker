@@ -8,14 +8,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#151515",
-            [ButtonTypes.Action] = "#3f3f3f",
-            [ButtonTypes.Option] = "#696969",
-            [ButtonTypes.System] = "#f9f9f9",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#2a2a2a",
