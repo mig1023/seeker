@@ -8,14 +8,6 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#4682b4",
-            [ButtonTypes.Action] = "#6495ed",
-            [ButtonTypes.Option] = "#696969",
-            [ButtonTypes.Continue] = "#90b4d2",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#b5cde1",
