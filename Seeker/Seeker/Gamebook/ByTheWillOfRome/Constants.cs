@@ -8,15 +8,6 @@ namespace Seeker.Gamebook.ByTheWillOfRome
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#670b0c",
-            [ButtonTypes.Option] = "#670b0c",
-            [ButtonTypes.Continue] = "#b38585",
-            [ButtonTypes.Action] = "#6d0101",
-            [ButtonTypes.System] = "#d1b5b5",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.BookColor] = "#670b0c",
