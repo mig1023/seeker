@@ -1,4 +1,13 @@
 <GameBook>
+	<Introduction>
+		<Buttons>
+			<Color Type="Main">#51514b</Color>
+            <Color Type="Option">#858581</Color>
+			<Color Type="Action">#939393</Color>
+            <Color Type="Continue">#a9a9a6</Color>
+            <Color Type="System">#b8b8b8</Color>
+		</Buttons>
+	</Introduction>
 	<Paragraphs>
 		<Paragraph>
 			<Id>0</Id>
