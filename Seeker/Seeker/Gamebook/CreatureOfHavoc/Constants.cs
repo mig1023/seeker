@@ -8,15 +8,6 @@ namespace Seeker.Gamebook.CreatureOfHavoc
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#145334",
-            [ButtonTypes.Action] = "#104229",
-            [ButtonTypes.Option] = "#42755c",
-            [ButtonTypes.Continue] = "#7d9188",
-            [ButtonTypes.System] = "#9db6aa",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#c9d7d0",
