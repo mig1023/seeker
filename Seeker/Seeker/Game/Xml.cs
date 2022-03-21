@@ -131,6 +131,14 @@ namespace Seeker.Game
             Game.Data.Load = gamebook.Links.Load;
             Game.Data.Debug = gamebook.Links.Debug;
             Game.Data.CheckOnlyIf = gamebook.Links.CheckOnlyIf;
+
+            // tmp
+
+            if (xmlFile.SelectSingleNode("GameBook/Introduction") != null)
+            {
+                foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Introduction/Buttons/Color"))
+                    Game.Data.Constants.LoadButtonsColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText);
+            }
         }
 
         public static void GetXmlDescriptionData(ref Description description)

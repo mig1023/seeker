@@ -7,14 +7,25 @@ namespace Seeker.Prototypes
 {
     class Constants
     {
-        public virtual Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>();
+        private Dictionary<ButtonTypes, string> ButtonsColorsList = new Dictionary<ButtonTypes, string>();
+        private Dictionary<ColorTypes, string> ColorsList = new Dictionary<ColorTypes, string>();
 
-        public virtual Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>();
+        public virtual Dictionary<ButtonTypes, string> ButtonsColors() => ButtonsColorsList;
+
+        public virtual Dictionary<ColorTypes, string> Colors() => ColorsList;
 
         public virtual string GetButtonsColor(ButtonTypes type)
         {
-            Dictionary<ButtonTypes, string> color = (Game.Settings.IsEnabled("WithoutStyles") ? DefaultButtons() : ButtonsColors());
+            Dictionary<ButtonTypes, string> color = (Game.Settings.IsEnabled("WithoutStyles") ? DefaultButtons() : ButtonsColorsList);
             return (color.ContainsKey(type) ? color[type] : String.Empty);
+        }
+
+        public virtual void LoadButtonsColor(string type, string color)
+        {
+            bool success = Enum.TryParse(type, out ButtonTypes buttonTypes);
+
+            if (success)
+                ButtonsColorsList.Add(buttonTypes, color);
         }
 
         public virtual string GetColor(Game.Data.ColorTypes type)
