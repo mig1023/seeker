@@ -8,14 +8,6 @@ namespace Seeker.Gamebook.YounglingTournament
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#c0ac6c",
-            [ButtonTypes.Continue] = "#e6d9ae",
-            [ButtonTypes.Action] = "#c0a23b",
-            [ButtonTypes.System] = "#f9f9f9",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#e8d17e",
