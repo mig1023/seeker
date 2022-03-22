@@ -159,6 +159,17 @@ namespace Seeker.Game
             description.Paragraphs = StringParse(data["Paragraphs"]);
             description.Size = StringParse(data["Size"]);
             description.Setting = StringParse(data["Setting"]);
+
+            XmlNode colors = data.SelectSingleNode("Colors");
+
+            if (colors != null)
+            {
+                description.BookColor = StringParse(colors["Book"]);
+                description.FontColor = StringParse(colors["Font"]);
+                description.BorderColor = StringParse(colors["Border"]);
+            }
+            else
+                description.BookColor = StringParse(data["Color"]);
         }
 
         private static void DescriptionLoad()

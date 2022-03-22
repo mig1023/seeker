@@ -74,9 +74,6 @@ namespace Seeker.Gamebook.StringOfWorlds
             if (Game.Settings.IsEnabled("WithoutStyles"))
                 return base.GetColor(type);
 
-            else if (type == ColorTypes.BookColor)
-                return "#990066";
-
             if (type == ColorTypes.StatusBar)
                 return HexColor(StatusColor[0], StatusColor[1], StatusColor[2]);
 

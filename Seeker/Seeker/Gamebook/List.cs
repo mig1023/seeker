@@ -98,10 +98,6 @@ namespace Seeker.Gamebook
 
             Abstract.IConstants data = book.Links.Constants;
 
-            book.BookColor = data.GetColor(Game.Data.ColorTypes.BookColor);
-            book.FontColor = data.GetColor(Game.Data.ColorTypes.BookFontColor);
-            book.BorderColor = data.GetColor(Game.Data.ColorTypes.BookBorderColor);
-
             return book;
         }
     }
