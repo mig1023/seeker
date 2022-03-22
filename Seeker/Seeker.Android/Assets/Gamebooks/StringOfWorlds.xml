@@ -1,4 +1,7 @@
 <GameBook>
+	<Introduction>
+		<Buttons/>
+	</Introduction>
 	<Paragraphs>
 		<Paragraph>
 			<Id>0</Id>
