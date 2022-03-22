@@ -50,27 +50,27 @@ namespace Seeker.Game
         {
             string textByParagraph = String.Empty;
 
-            if (Game.Data.XmlParagraphs[id]["Text"] != null)
-                textByParagraph = Game.Data.XmlParagraphs[id]["Text"].InnerText;
+            if (Data.XmlParagraphs[id]["Text"] != null)
+                textByParagraph = Data.XmlParagraphs[id]["Text"].InnerText;
 
-            string textByOption = Game.Data.Actions.TextByOptions(optionName);
+            string textByOption = Data.Actions.TextByOptions(optionName);
 
             return (String.IsNullOrEmpty(textByOption) ? textByParagraph : textByOption);
         }
 
         public static void AllTextParse(ref StackLayout textPlace, int id, string optionName)
         {
-            string text = Game.Xml.TextParse(id, optionName);
+            string text = Xml.TextParse(id, optionName);
 
             if (!String.IsNullOrEmpty(text))
-                textPlace.Children.Add(Output.Interface.Text(text));
+                textPlace.Children.Add(Interface.Text(text));
 
-            foreach (Output.Text texts in Game.Xml.TextsParse(Game.Data.XmlParagraphs[id]))
+            foreach (Text texts in Xml.TextsParse(Data.XmlParagraphs[id]))
             {
                 if (texts.Selected)
-                    textPlace.Children.Add(Output.Interface.Text(texts, selected: true));
+                    textPlace.Children.Add(Interface.Text(texts, selected: true));
                 else
-                    textPlace.Children.Add(Output.Interface.Text(texts));
+                    textPlace.Children.Add(Interface.Text(texts));
             }
                 
         }
@@ -108,37 +108,32 @@ namespace Seeker.Game
 
         public static void GameLoad(string name)
         {
-            Game.Data.XmlParagraphs.Clear();
-            Game.Data.Triggers.Clear();
+            Data.XmlParagraphs.Clear();
+            Data.Triggers.Clear();
             Healing.Clear();
 
             if (String.IsNullOrEmpty(name))
                 throw new Exception("Gamebook name not found");
 
-            Gamebook.Description gamebook = Gamebook.List.GetDescription(name);
+            Description gamebook = List.GetDescription(name);
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.LoadXml(DependencyService.Get<Abstract.IAssets>().GetFromAssets(gamebook.XmlBook));
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Paragraphs/Paragraph"))
-                Game.Data.XmlParagraphs.Add(Game.Xml.IntParse(xmlNode["Id"]), xmlNode);
+                Data.XmlParagraphs.Add(Xml.IntParse(xmlNode["Id"]), xmlNode);
 
-            Game.Data.Paragraphs = gamebook.Links.Paragraphs;
-            Game.Data.Actions = gamebook.Links.Actions;
-            Game.Data.Constants = gamebook.Links.Constants;
-            Game.Data.Protagonist = gamebook.Links.Protagonist;
-            Game.Data.Save = gamebook.Links.Save;
-            Game.Data.Load = gamebook.Links.Load;
-            Game.Data.Debug = gamebook.Links.Debug;
-            Game.Data.CheckOnlyIf = gamebook.Links.CheckOnlyIf;
+            Data.Paragraphs = gamebook.Links.Paragraphs;
+            Data.Actions = gamebook.Links.Actions;
+            Data.Constants = gamebook.Links.Constants;
+            Data.Protagonist = gamebook.Links.Protagonist;
+            Data.Save = gamebook.Links.Save;
+            Data.Load = gamebook.Links.Load;
+            Data.Debug = gamebook.Links.Debug;
+            Data.CheckOnlyIf = gamebook.Links.CheckOnlyIf;
 
-            // tmp
-
-            if (xmlFile.SelectSingleNode("GameBook/Introduction") != null)
-            {
-                foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Introduction/Buttons/Color"))
-                    Game.Data.Constants.LoadButtonsColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText);
-            }
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Introduction/Buttons/Color"))
+                Data.Constants.LoadButtonsColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText);
         }
 
         public static void GetXmlDescriptionData(ref Description description)
@@ -171,7 +166,7 @@ namespace Seeker.Game
             Descriptions = new Dictionary<string, XmlNode>();
 
             XmlDocument xmlFile = new XmlDocument();
-            xmlFile.LoadXml(DependencyService.Get<Abstract.IAssets>().GetFromAssets(Game.Data.DescriptionXml));
+            xmlFile.LoadXml(DependencyService.Get<Abstract.IAssets>().GetFromAssets(Data.DescriptionXml));
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("Gamebooks/Description"))
                 Descriptions.Add(xmlNode["Name"].InnerText, xmlNode);
