@@ -8,15 +8,6 @@ namespace Seeker.Gamebook.SwampFever
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#5c6649",
-            [ButtonTypes.Action] = "#5a6546",
-            [ButtonTypes.Option] = "#5c6649",
-            [ButtonTypes.Continue] = "#8c937f",
-            [ButtonTypes.System] = "#717963",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#485432",
