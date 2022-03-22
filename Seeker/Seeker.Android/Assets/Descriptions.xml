@@ -173,6 +173,10 @@
 		<Paragraphs>300</Paragraphs>
 		<Size>21071</Size>
 		<Setting>История</Setting>
+		<Colors>
+			<Book>#fcdd76</Book>
+			<Font>#000000</Font>
+		</Colors>
 	</Description>
 	<Description>
 		<Name>OctopusIsland</Name>
