@@ -8,14 +8,6 @@ namespace Seeker.Gamebook.ThreePaths
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#009999",
-            [ButtonTypes.Option] = "#009999",
-            [ButtonTypes.Action] = "#005b5b",
-            [ButtonTypes.Continue] = "#6fc5c5",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#007a7a",
