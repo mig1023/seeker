@@ -8,15 +8,6 @@ namespace Seeker.Gamebook.DzungarWar
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#93684f",
-            [ButtonTypes.Action] = "#8c7254",
-            [ButtonTypes.Option] = "#a88672",
-            [ButtonTypes.Continue] = "#b99e8e",
-            [ButtonTypes.System] = "#cebbaf",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#f1e6d1",
