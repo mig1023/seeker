@@ -11,7 +11,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#870808",
-            [ColorTypes.BookColor] = "#911",
         };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 660 };
