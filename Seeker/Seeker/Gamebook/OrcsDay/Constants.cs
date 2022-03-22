@@ -8,15 +8,6 @@ namespace Seeker.Gamebook.OrcsDay
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#a4be84",
-            [ButtonTypes.Continue] = "#cad9b7",
-            [ButtonTypes.Action] = "#72855c",
-            [ButtonTypes.System] = "#e9efe2",
-            [ButtonTypes.Font] = "#000000",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Font] = "#000000",
