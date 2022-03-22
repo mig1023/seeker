@@ -1,4 +1,12 @@
 <GameBook>
+	<Introduction>
+		<Buttons>
+			<Color Type="Main">#c93c20</Color>
+			<Color Type="Action">#c93c20</Color>
+            <Color Type="Option">#c93c20</Color>
+            <Color Type="System">#eeeeee</Color>
+		</Buttons>
+	</Introduction>
 	<Paragraphs>
 		<Paragraph>
 			<Id>0</Id>
