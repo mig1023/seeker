@@ -8,15 +8,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#383e3b",
-            [ButtonTypes.Action] = "#516f72",
-            [ButtonTypes.Option] = "#738b8e",
-            [ButtonTypes.Continue] = "#738b8e",
-            [ButtonTypes.System] = "#9dadaf",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#c2cccd",
