@@ -8,12 +8,6 @@ namespace Seeker.Gamebook.LandOfUnwaryBears
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#9e003a",
-            [ButtonTypes.System] = "#f9f9f9",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.BookColor] = "#9e003a",
