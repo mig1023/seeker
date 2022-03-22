@@ -1,11 +1,11 @@
 <GameBook>
 	<Introduction>
 		<Buttons>
-			<Color Type="Main">911</Color>
-			<Color Type="Action">ba2020</Color>
-            <Color Type="Option">dbabab</Color>
-            <Color Type="Continue">dbabab</Color>
-            <Color Type="System">f0dddd</Color>
+			<Color Type="Main">#911</Color>
+			<Color Type="Action">#ba2020</Color>
+            <Color Type="Option">#dbabab</Color>
+            <Color Type="Continue">#dbabab</Color>
+            <Color Type="System">#f0dddd</Color>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>

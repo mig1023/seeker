@@ -23,7 +23,7 @@ namespace Seeker.Prototypes
             bool success = Enum.TryParse(type, out ButtonTypes buttonTypes);
 
             if (success)
-                ButtonsColorsList.Add(buttonTypes, String.Format("#{0}", color));
+                ButtonsColorsList.Add(buttonTypes, color);
         }
 
         public virtual string GetColor(Game.Data.ColorTypes type)
