@@ -8,15 +8,6 @@ namespace Seeker.Gamebook.HeartOfIce
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#389fcf",
-            [ButtonTypes.Option] = "#6ab7db",
-            [ButtonTypes.Action] = "#0679b0",
-            [ButtonTypes.Continue] = "#6ab7db",
-            [ButtonTypes.System] = "#1f93c9",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#0787c4",
