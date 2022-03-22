@@ -11,7 +11,6 @@ namespace Seeker.Gamebook.SilentSchool
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#2a2a2a",
-            [ColorTypes.BookColor] = "#151515",
         };
 
         public static Links GetLinks() => new Links
