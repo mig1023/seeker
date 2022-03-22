@@ -8,14 +8,6 @@ namespace Seeker.Gamebook.DeathOfAntiquary
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#2e2e2e",
-            [ButtonTypes.Option] = "#2e2e2e",
-            [ButtonTypes.Continue] = "#9a9a9a",
-            [ButtonTypes.System] = "#d6d6d6",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.BookColor] = "#2e2e2e",
