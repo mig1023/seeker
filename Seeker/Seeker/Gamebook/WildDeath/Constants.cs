@@ -8,13 +8,6 @@ namespace Seeker.Gamebook.WildDeath
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#86964f",
-            [ButtonTypes.Continue] = "#b6c095",
-            [ButtonTypes.System] = "#cbd2b4",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.BookColor] = "#86964f",
