@@ -14,7 +14,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             [ColorTypes.ActionBox] = "#7cb281",
             [ColorTypes.StatusBar] = "#005100",
             [ColorTypes.AdditionalStatus] = "#99b999",
-            [ColorTypes.BookColor] = "#5da130",
         };
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 30, 60, 90 };
