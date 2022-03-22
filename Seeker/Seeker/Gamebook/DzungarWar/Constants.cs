@@ -15,7 +15,6 @@ namespace Seeker.Gamebook.DzungarWar
             [ColorTypes.StatusBar] = "#dcc18c",
             [ColorTypes.StatusFont] = "#000000",
             [ColorTypes.AdditionalStatus] = "#ebdcbe",
-            [ColorTypes.BookColor] = "#533818",
         };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 658, 659, 660 };
