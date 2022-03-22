@@ -8,15 +8,6 @@ namespace Seeker.Gamebook.Cyberpunk
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#118984",
-            [ButtonTypes.Action] = "#0c5c58",
-            [ButtonTypes.Option] = "#84c2bf",
-            [ButtonTypes.Continue] = "#84c2bf",
-            [ButtonTypes.System] = "#cde6e5",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.BookColor] = "#118984",

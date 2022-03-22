@@ -8,7 +8,6 @@ namespace Seeker.Gamebook.Cyberpunk
     {
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
-        private static Random rand = new Random();
 
         public string Stat { get; set; }
         public bool MultipliedLuck { get; set; }
