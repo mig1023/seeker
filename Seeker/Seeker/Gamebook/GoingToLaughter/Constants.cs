@@ -8,15 +8,6 @@ namespace Seeker.Gamebook.GoingToLaughter
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#441012",
-            [ButtonTypes.Option] = "#441012",
-            [ButtonTypes.Continue] = "#814548",
-            [ButtonTypes.Action] = "#693f41",
-            [ButtonTypes.System] = "#f3f0f0",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#2f0b0c",
