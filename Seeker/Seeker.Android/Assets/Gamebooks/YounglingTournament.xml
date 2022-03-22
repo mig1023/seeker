@@ -1,10 +1,10 @@
 <GameBook>
 	<Introduction>
 		<Buttons>
-			<Color Type="Main">#c0ac6c</Color>
-            <Color Type="Continue">#e6d9ae</Color>
-			<Color Type="Action">#c0a23b</Color>
-            <Color Type="System">#f9f9f9</Color>
+			<Color Type="Main">c0ac6c</Color>
+            <Color Type="Continue">e6d9ae</Color>
+			<Color Type="Action">c0a23b</Color>
+            <Color Type="System">f9f9f9</Color>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>

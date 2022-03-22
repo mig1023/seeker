@@ -1,9 +1,9 @@
 <GameBook>
 	<Introduction>
 		<Buttons>
-			<Color Type="Main">#118984</Color>
-            <Color Type="Continue">#5c6b7a</Color>
-            <Color Type="System">#546270</Color>
+			<Color Type="Main">118984</Color>
+            <Color Type="Continue">5c6b7a</Color>
+            <Color Type="System">546270</Color>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
