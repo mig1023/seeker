@@ -8,15 +8,6 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#fcdd76",
-            [ButtonTypes.Action] = "#fcdd76",
-            [ButtonTypes.Option] = "#fcdd76",
-            [ButtonTypes.Font] = "#000000",
-            [ButtonTypes.Continue] = "#fdeeba",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#fce391",
