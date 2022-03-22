@@ -11,7 +11,6 @@ namespace Seeker.Gamebook.ThreePaths
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#007a7a",
-            [ColorTypes.BookColor] = "#009999",
         };
 
         public static Links GetLinks() => new Links
