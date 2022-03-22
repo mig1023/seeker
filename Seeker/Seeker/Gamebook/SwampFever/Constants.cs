@@ -15,7 +15,6 @@ namespace Seeker.Gamebook.SwampFever
             [ColorTypes.ActionBox] = "#707a60",
             [ColorTypes.AdditionalStatus] = "#34411c",
             [ColorTypes.AdditionalFont] = "#ffffff",
-            [ColorTypes.BookColor] = "#ff557c48",
         };
 
         public static Dictionary<int, string> GetRangeTypes() => new Dictionary<int, string>
