@@ -10,8 +10,6 @@ namespace Seeker.Prototypes
         private Dictionary<ButtonTypes, string> ButtonsColorsList = new Dictionary<ButtonTypes, string>();
         private Dictionary<ColorTypes, string> ColorsList = new Dictionary<ColorTypes, string>();
 
-        public virtual Dictionary<ButtonTypes, string> ButtonsColors() => ButtonsColorsList;
-
         public virtual Dictionary<ColorTypes, string> Colors() => ColorsList;
 
         public virtual string GetButtonsColor(ButtonTypes type)
@@ -25,7 +23,7 @@ namespace Seeker.Prototypes
             bool success = Enum.TryParse(type, out ButtonTypes buttonTypes);
 
             if (success)
-                ButtonsColorsList.Add(buttonTypes, color);
+                ButtonsColorsList.Add(buttonTypes, String.Format("#{0}", color));
         }
 
         public virtual string GetColor(Game.Data.ColorTypes type)
