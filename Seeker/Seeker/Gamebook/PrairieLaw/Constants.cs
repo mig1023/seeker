@@ -8,13 +8,6 @@ namespace Seeker.Gamebook.PrairieLaw
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#b66247",
-            [ButtonTypes.Action] = "#8f4445",
-            [ButtonTypes.Option] = "#a04c4d",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#b85d43",
