@@ -8,13 +8,6 @@ namespace Seeker.Gamebook.StainlessSteelRat
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#425161",
-            [ButtonTypes.Continue] = "#5c6b7a",
-            [ButtonTypes.System] = "#546270",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#4a5b6c",
