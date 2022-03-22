@@ -8,14 +8,6 @@ namespace Seeker.Gamebook.RockOfTerror
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#191919",
-            [ButtonTypes.Action] = "#2a2a2a",
-            [ButtonTypes.Option] = "#494949",
-            [ButtonTypes.Continue] = "#2f2f2f",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#000000",
