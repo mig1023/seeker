@@ -8,16 +8,6 @@ namespace Seeker.Gamebook.InvisibleFront
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#d52b1e",
-            [ButtonTypes.Option] = "#d52b1e",
-            [ButtonTypes.Continue] = "#e57f78",
-            [ButtonTypes.Font] = "#eede49",
-            [ButtonTypes.Continue] = "#e57f78",
-            [ButtonTypes.System] = "#eca5a0",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#ffdadb",
