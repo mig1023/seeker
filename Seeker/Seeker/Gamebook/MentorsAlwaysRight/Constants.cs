@@ -8,15 +8,6 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#3662ae",
-            [ButtonTypes.Action] = "#203a68",
-            [ButtonTypes.Option] = "#9ab0d6",
-            [ButtonTypes.Continue] = "#9ab0d6",
-            [ButtonTypes.System] = "#ccd7ea",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#e0e7f2",
