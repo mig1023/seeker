@@ -8,15 +8,6 @@ namespace Seeker.Gamebook.Moonrunner
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#72407d",
-            [ButtonTypes.Option] = "#80538a",
-            [ButtonTypes.Continue] = "#aa8cb1",
-            [ButtonTypes.Action] = "#7e0059",
-            [ButtonTypes.System] = "#ddd1df",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.BookColor] = "#72407d",
