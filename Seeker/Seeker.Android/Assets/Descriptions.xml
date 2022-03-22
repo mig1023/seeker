@@ -77,6 +77,11 @@
 		<Paragraphs>80</Paragraphs>
 		<Size>10847</Size>
 		<Setting>Научная фантастика</Setting>
+		<Colors>
+			<Book>#ffffff</Book>
+			<Font>#000000</Font>
+			<Border>#000000</Border>
+		</Colors>
 	</Description>
 	<Description>
 		<Name>SwampFever</Name>
