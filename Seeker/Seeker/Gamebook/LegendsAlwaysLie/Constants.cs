@@ -8,15 +8,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#911",
-            [ButtonTypes.Action] = "#ba2020",
-            [ButtonTypes.Option] = "#cc8888",
-            [ButtonTypes.Continue] = "#cc8888",
-            [ButtonTypes.System] = "#e6c5c5",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.Background] = "#f5e7e5",
