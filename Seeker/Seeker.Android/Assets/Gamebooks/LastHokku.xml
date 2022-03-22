@@ -1,4 +1,10 @@
 <GameBook>
+	<Introduction>
+		<Buttons>
+			<Color Type="Main">#deb887</Color>
+			<Color Type="Font">#000000</Color>
+		</Buttons>
+	</Introduction>
 	<Paragraphs>
 		<Paragraph>
 			<Id>0</Id>

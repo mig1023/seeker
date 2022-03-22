@@ -8,12 +8,6 @@ namespace Seeker.Gamebook.LastHokku
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ButtonTypes, string> ButtonsColors() => new Dictionary<ButtonTypes, string>
-        {
-            [ButtonTypes.Main] = "#deb887",
-            [ButtonTypes.Font] = "#000000",
-        };
-
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.BookColor] = "#deb887",
