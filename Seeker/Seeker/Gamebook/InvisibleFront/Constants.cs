@@ -13,8 +13,6 @@ namespace Seeker.Gamebook.InvisibleFront
             [ColorTypes.Background] = "#ffdadb",
             [ColorTypes.StatusBar] = "#aa2218",
             [ColorTypes.StatusFont] = "#eede49",
-            [ColorTypes.BookColor] = "#d52b1e",
-            [ColorTypes.BookFontColor] = "#eede49",
             [ColorTypes.SystemFont] = "#f7f1b6",
         };
 

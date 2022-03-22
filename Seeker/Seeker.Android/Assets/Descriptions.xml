@@ -148,6 +148,10 @@
 		<Paragraphs>139</Paragraphs>
 		<Size>15237</Size>
 		<Setting>Шпионы</Setting>
+		<Colors>
+			<Book>#d52b1e</Book>
+			<Font>#eede49</Font>
+		</Colors>
 	</Description>
 	<Description>
 		<Name>SilentSchool</Name>
