@@ -1,20 +1,10 @@
 ﻿using System.Collections.Generic;
-using static Seeker.Output.Buttons;
-using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.HowlOfTheWerewolf
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
-
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.Background] = "#c2cccd",
-            [ColorTypes.StatusBar] = "#253130",
-            [ColorTypes.AdditionalStatus] = "#a8b7b8",
-            [ColorTypes.ActionBox] = "#a8b7b8",
-        };
 
         public static Dictionary<int, string> GetCountName() => new Dictionary<int, string>
         {
