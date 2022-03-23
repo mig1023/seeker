@@ -32,8 +32,6 @@ namespace Seeker.Prototypes
             [ColorTypes.BookBorderColor] = "#000000",
         };
 
-        public virtual Dictionary<ColorTypes, string> Colors() => ColorsList;
-
         public virtual string GetButtonsColor(ButtonTypes type)
         {
             Dictionary<ButtonTypes, string> color = (Game.Settings.IsEnabled("WithoutStyles") ? DefaultButtons : ButtonsColorsList);

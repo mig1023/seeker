@@ -170,7 +170,7 @@ namespace Seeker
                         {
                             EventHandler actionClick = (object sender, EventArgs e) => Action_Click(action, actionPlace);
                             bool enabled = action.IsButtonEnabled();
-                            actionPlace.Children.Add(Output.Buttons.Action(action.ButtonName(), actionClick, enabled));
+                            actionPlace.Children.Add(Output.Buttons.Action(action.ButtonText(), actionClick, enabled));
                         }
                         else
                             actionPlace.Children.Add(MultipleButtonsPlace(action, actionPlace));
