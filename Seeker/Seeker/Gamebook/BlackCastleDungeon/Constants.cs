@@ -1,17 +1,10 @@
 ﻿using System.Collections.Generic;
-using static Seeker.Output.Buttons;
-using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.BlackCastleDungeon
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
-
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.StatusBar] = "#2a2a2a",
-        };
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 619 };
 
