@@ -1,21 +1,10 @@
 ﻿using System.Collections.Generic;
-using static Seeker.Output.Buttons;
-using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.SwampFever
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
-
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.Background] = "#485432",
-            [ColorTypes.Font] = "#eaece8",
-            [ColorTypes.ActionBox] = "#707a60",
-            [ColorTypes.AdditionalStatus] = "#34411c",
-            [ColorTypes.AdditionalFont] = "#ffffff",
-        };
 
         public static Dictionary<int, string> GetRangeTypes() => new Dictionary<int, string>
         {
