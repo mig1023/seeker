@@ -15,8 +15,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             [ColorTypes.StatusBar] = "#bcaa8f",
             [ColorTypes.StatusFont] = "#000000",
             [ColorTypes.AdditionalStatus] = "#d0c3b0",
-            [ColorTypes.BookColor] = "#ebd5b3",
-            [ColorTypes.BookFontColor] = "#000000",
         };
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1 };

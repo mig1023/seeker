@@ -215,6 +215,10 @@
 		<Paragraphs>620</Paragraphs>
 		<Size>48672</Size>
 		<Setting>История</Setting>
+		<Colors>
+			<Book>#ebd5b3</Book>
+			<Font>#000000</Font>
+		</Colors>
 	</Description>
 	<Description>
 		<Name>PensionerSimulator</Name>
