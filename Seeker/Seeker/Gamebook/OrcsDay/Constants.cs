@@ -13,10 +13,8 @@ namespace Seeker.Gamebook.OrcsDay
             [ColorTypes.Font] = "#000000",
             [ColorTypes.SystemFont] = "#000000",
             [ColorTypes.ActionBox] = "#c8d8b5",
-            [ColorTypes.BookColor] = "#a4be84",
             [ColorTypes.StatusBar] = "#72855c",
             [ColorTypes.AdditionalStatus] = "#c8d8b5",
-            [ColorTypes.BookFontColor] = "#000000",
         };
 
         public static Dictionary<string, string> StatNames() => new Dictionary<string, string>

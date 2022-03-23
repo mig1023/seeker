@@ -426,6 +426,10 @@
 		<Paragraphs>100</Paragraphs>
 		<Size>10408</Size>
 		<Setting>Юмор</Setting>
+		<Colors>
+			<Book>#a4be84</Book>
+			<Font>#000000</Font>
+		</Colors>
 	</Description>
 	<Description>
 		<Name>MissionToUrpan</Name>
