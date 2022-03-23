@@ -13,7 +13,6 @@ namespace Seeker.Gamebook.YounglingTournament
             [ColorTypes.StatusBar] = "#e8d17e",
             [ColorTypes.StatusFont] = "#000000",
             [ColorTypes.ActionBox] = "#e6d9ae",
-            [ColorTypes.BookColor] = "#c0ac6c",
         };
 
         public override bool ShowDisabledOption() => true;
