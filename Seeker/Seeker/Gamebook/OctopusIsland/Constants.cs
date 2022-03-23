@@ -11,7 +11,6 @@ namespace Seeker.Gamebook.OctopusIsland
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#ce4f36",
-            [ColorTypes.BookColor] = "#c93c20",
         };
 
         public static Links GetLinks() => new Links
