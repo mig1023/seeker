@@ -340,6 +340,11 @@
 		<Paragraphs>266</Paragraphs>
 		<Size>28509</Size>
 		<Setting>Шпионы</Setting>
+		<Colors>
+			<Book>#ffffff</Book>
+			<Font>#000000</Font>
+			<Border>#000000</Border>
+		</Colors>
 	</Description>
 	<Description>
 		<Name>LandOfUnwaryBears</Name>
