@@ -162,16 +162,19 @@ namespace Seeker.Game
 
             XmlNode colors = data.SelectSingleNode("Colors");
 
-            if (colors != null)
+            if ((colors != null) || Settings.IsEnabled("WithoutStyles"))
             {
-                description.BookColor = StringParse(colors["Book"]);
-                description.FontColor = StringParse(colors["Font"]);
-                description.BorderColor = StringParse(colors["Border"]);
+                description.BookColor = ColorLoad(colors, "Book", Data.ColorTypes.BookColor);
+                description.FontColor = ColorLoad(colors, "Font", Data.ColorTypes.BookFontColor);
+                description.BorderColor = ColorLoad(colors, "Border", Data.ColorTypes.BookBorderColor);
             }
             else
-                description.BookColor = StringParse(data["Color"]);
+                description.BookColor = ColorLoad(data, "Color", Data.ColorTypes.BookColor);
         }
 
+        private static string ColorLoad(XmlNode xmlNode, string name, Data.ColorTypes defaultColor) =>
+            Settings.IsEnabled("WithoutStyles") ? Prototypes.Constants.DefaultColor(defaultColor) : StringParse(xmlNode[name]);
+ 
         private static void DescriptionLoad()
         {
             Descriptions = new Dictionary<string, XmlNode>();
