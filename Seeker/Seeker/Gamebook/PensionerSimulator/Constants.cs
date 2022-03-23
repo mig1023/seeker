@@ -8,11 +8,6 @@ namespace Seeker.Gamebook.PensionerSimulator
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.BookColor] = "#030436",
-        };
-
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
 
         public static Links GetLinks() => new Links
