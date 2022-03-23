@@ -11,8 +11,6 @@ namespace Seeker.Gamebook.Damanskiy
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.SystemFont] = "#000000",
-            [ColorTypes.BookColor] = "#d8d8d8",
-            [ColorTypes.BookFontColor] = "#000000",
         };
 
         public static Links GetLinks() => new Links

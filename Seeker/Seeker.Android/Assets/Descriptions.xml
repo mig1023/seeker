@@ -410,6 +410,10 @@
 		<Paragraphs>894</Paragraphs>
 		<Size>118276</Size>
 		<Setting>История</Setting>
+		<Colors>
+			<Book>#d8d8d8</Book>
+			<Font>#000000</Font>
+		</Colors>
 	</Description>
 	<Description>
 		<Name>OrcsDay</Name>
