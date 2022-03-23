@@ -1,19 +1,10 @@
 ﻿using System.Collections.Generic;
-using static Seeker.Output.Buttons;
-using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.YounglingTournament
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
-
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.StatusBar] = "#e8d17e",
-            [ColorTypes.StatusFont] = "#000000",
-            [ColorTypes.ActionBox] = "#e6d9ae",
-        };
 
         public override bool ShowDisabledOption() => true;
 
