@@ -1,5 +1,11 @@
 <GameBook>
 	<Introduction>
+		<Styles>
+            <Color Type="ActionBox">#efefef</Color>
+            <Color Type="StatusBar">#FFFFFF</Color>
+            <Color Type="StatusFont">#000000</Color>
+            <Color Type="StatusBorder">#000000</Color>
+		</Styles>
 		<Buttons>
 			<Color Type="Main">#FFFFFF</Color>
 			<Color Type="Action">#FFFFFF</Color>
