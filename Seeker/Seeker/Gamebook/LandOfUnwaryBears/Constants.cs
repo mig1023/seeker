@@ -8,12 +8,6 @@ namespace Seeker.Gamebook.LandOfUnwaryBears
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.BookColor] = "#9e003a",
-        };
-
-
         public override string GetFont() => "RobotoFont";
 
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.small;
