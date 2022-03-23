@@ -11,7 +11,6 @@ namespace Seeker.Gamebook.MissionToUrpan
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#0d1a36",
-            [ColorTypes.BookColor] = "#0f1d3c",
         };
 
         public static Dictionary<string, int> ResultCalculation() => new Dictionary<string, int>
