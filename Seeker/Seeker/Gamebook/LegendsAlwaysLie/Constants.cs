@@ -1,20 +1,10 @@
 ﻿using System.Collections.Generic;
-using static Seeker.Output.Buttons;
-using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.LegendsAlwaysLie
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
-
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.Background] = "#f5e7e5",
-            [ColorTypes.StatusBar] = "#870808",
-            [ColorTypes.AdditionalStatus] = "#b70b0b",
-            [ColorTypes.AdditionalFont] = "#ffffff",
-        };
 
         public static Dictionary<string, Character.SpecializationType> GetSpecializationType() =>
             new Dictionary<string, Character.SpecializationType>
