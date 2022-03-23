@@ -1,19 +1,10 @@
 ﻿using System.Collections.Generic;
-using static Seeker.Output.Buttons;
-using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.StainlessSteelRat
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
-
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.Background] = "#4a5b6c",
-            [ColorTypes.Font] = "#c3c6c8",
-            [ColorTypes.SystemFont] = "#ffffff",
-        };
 
         public static Links GetLinks() => new Links
         {
