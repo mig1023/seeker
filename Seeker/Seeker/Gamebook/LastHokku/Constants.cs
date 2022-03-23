@@ -8,12 +8,6 @@ namespace Seeker.Gamebook.LastHokku
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.BookColor] = "#deb887",
-            [ColorTypes.BookFontColor] = "#000000",
-        };
-
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
 
         public static List<int> GetParagraphsWithoutHokkuCreation() => new List<int> { 0, 1, 9, 10, 11, 12 };

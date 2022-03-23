@@ -280,6 +280,10 @@
 		<Paragraphs>12</Paragraphs>
 		<Size>306</Size>
 		<Setting>Стихи</Setting>
+		<Colors>
+			<Book>#deb887</Book>
+			<Font>#000000</Font>
+		</Colors>
 	</Description>
 	<Description>
 		<Name>Genesis</Name>
