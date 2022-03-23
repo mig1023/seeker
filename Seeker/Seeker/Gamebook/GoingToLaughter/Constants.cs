@@ -11,7 +11,6 @@ namespace Seeker.Gamebook.GoingToLaughter
         public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
         {
             [ColorTypes.StatusBar] = "#2f0b0c",
-            [ColorTypes.BookColor] = "#441012",
         };
 
         public static Dictionary<string, string> IncompatiblesDisadvantages => new Dictionary<string, string>
