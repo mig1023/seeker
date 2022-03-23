@@ -12,7 +12,6 @@ namespace Seeker.Gamebook.PrairieLaw
         {
             [ColorTypes.StatusBar] = "#b85d43",
             [ColorTypes.AdditionalStatus] = "#d69b8b",
-            [ColorTypes.BookColor] = "#b66247",
         };
 
         public static Dictionary<int, int> Skills() => new Dictionary<int, int>
