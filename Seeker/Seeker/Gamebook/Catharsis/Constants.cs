@@ -15,7 +15,6 @@ namespace Seeker.Gamebook.Catharsis
             [ColorTypes.StatusFont] = "#000000",
             [ColorTypes.AdditionalStatus] = "#bfbfbf",
             [ColorTypes.ActionBox] = "#b8b8b8",
-            [ColorTypes.BookColor] = "#51514b",
         };
 
         public static Dictionary<string, int> GetStartValues() => new Dictionary<string, int>
