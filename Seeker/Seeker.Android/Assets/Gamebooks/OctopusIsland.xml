@@ -1,5 +1,8 @@
 <GameBook>
 	<Introduction>
+		<Styles>
+            <Color Type="StatusBar">#ce4f36</Color>
+		</Styles>
 		<Buttons>
 			<Color Type="Main">#c93c20</Color>
 			<Color Type="Action">#c93c20</Color>
