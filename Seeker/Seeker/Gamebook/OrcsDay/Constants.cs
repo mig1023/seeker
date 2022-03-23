@@ -1,21 +1,10 @@
 ﻿using System.Collections.Generic;
-using static Seeker.Output.Buttons;
-using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.OrcsDay
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
-
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.Font] = "#000000",
-            [ColorTypes.SystemFont] = "#000000",
-            [ColorTypes.ActionBox] = "#c8d8b5",
-            [ColorTypes.StatusBar] = "#72855c",
-            [ColorTypes.AdditionalStatus] = "#c8d8b5",
-        };
 
         public static Dictionary<string, string> StatNames() => new Dictionary<string, string>
         {
