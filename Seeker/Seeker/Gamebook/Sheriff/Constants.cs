@@ -8,11 +8,6 @@ namespace Seeker.Gamebook.Sheriff
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.BookColor] = "#7d2c1c",
-        };
-
         public static List<string> CleaningNotebookList() => new List<string>
         {
             "Билли убит в амбаре",
