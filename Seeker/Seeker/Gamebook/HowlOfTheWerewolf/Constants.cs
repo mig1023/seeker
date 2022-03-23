@@ -14,7 +14,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             [ColorTypes.StatusBar] = "#253130",
             [ColorTypes.AdditionalStatus] = "#a8b7b8",
             [ColorTypes.ActionBox] = "#a8b7b8",
-            [ColorTypes.BookColor] = "#383e3b",
         };
 
         public static Dictionary<int, string> GetCountName() => new Dictionary<int, string>
