@@ -1,21 +1,10 @@
 ﻿using System.Collections.Generic;
-using static Seeker.Output.Buttons;
-using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.Genesis
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
-
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.Background] = "#293342",
-            [ColorTypes.Font] = "#b6cbd8",
-            [ColorTypes.StatusBar] = "#3c5363",
-            [ColorTypes.ActionBox] = "#69707a",
-            [ColorTypes.SystemFont] = "#b1b5ba",
-        };
 
         public static Dictionary<string, int> GetStartValues() => new Dictionary<string, int>
         {
