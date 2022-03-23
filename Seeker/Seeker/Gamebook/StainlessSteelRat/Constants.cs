@@ -13,7 +13,6 @@ namespace Seeker.Gamebook.StainlessSteelRat
             [ColorTypes.Background] = "#4a5b6c",
             [ColorTypes.Font] = "#c3c6c8",
             [ColorTypes.SystemFont] = "#ffffff",
-            [ColorTypes.BookColor] = "#333f4b",
         };
 
         public static Links GetLinks() => new Links
