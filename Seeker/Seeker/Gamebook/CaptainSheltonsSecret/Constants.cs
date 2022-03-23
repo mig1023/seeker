@@ -1,19 +1,10 @@
 ﻿using System.Collections.Generic;
-using static Seeker.Output.Buttons;
-using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.CaptainSheltonsSecret
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
-
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.Background] = "#b5cde1",
-            [ColorTypes.ActionBox] = "#8fb3f2",
-            [ColorTypes.StatusBar] = "#0a5c96",
-        };
 
         public static Dictionary<int, int> Masterys() => new Dictionary<int, int>
         {
