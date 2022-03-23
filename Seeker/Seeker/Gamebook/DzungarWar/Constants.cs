@@ -1,21 +1,10 @@
 ﻿using System.Collections.Generic;
-using static Seeker.Output.Buttons;
-using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.DzungarWar
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
-
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.Background] = "#f1e6d1",
-            [ColorTypes.ActionBox] = "#af8f69",
-            [ColorTypes.StatusBar] = "#dcc18c",
-            [ColorTypes.StatusFont] = "#000000",
-            [ColorTypes.AdditionalStatus] = "#ebdcbe",
-        };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 658, 659, 660 };
 
