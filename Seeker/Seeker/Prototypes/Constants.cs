@@ -50,8 +50,16 @@ namespace Seeker.Prototypes
 
         public virtual string GetColor(Game.Data.ColorTypes type)
         {
-            Dictionary<ColorTypes, string> color = (Game.Settings.IsEnabled("WithoutStyles") ? DefaultColors : Colors());
+            Dictionary<ColorTypes, string> color = (Game.Settings.IsEnabled("WithoutStyles") ? DefaultColors : ColorsList);
             return (color.ContainsKey(type) ? color[type] : String.Empty);
+        }
+
+        public virtual void LoadColor(string type, string color)
+        {
+            bool success = Enum.TryParse(type, out Game.Data.ColorTypes colorTypes);
+
+            if (success)
+                ColorsList.Add(colorTypes, color);
         }
 
         public static string DefaultColor(Game.Data.ColorTypes type) => DefaultColors[type];

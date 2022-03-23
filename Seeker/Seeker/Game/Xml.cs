@@ -134,6 +134,9 @@ namespace Seeker.Game
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Introduction/Buttons/Color"))
                 Data.Constants.LoadButtonsColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText);
+
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Introduction/Styles/Color"))
+                Data.Constants.LoadColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText);
         }
 
         public static void GetXmlDescriptionData(ref Description description)
