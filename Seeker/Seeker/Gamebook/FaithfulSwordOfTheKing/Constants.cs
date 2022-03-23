@@ -1,17 +1,10 @@
 ﻿using System.Collections.Generic;
-using static Seeker.Output.Buttons;
-using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
-
-        public override Dictionary<ColorTypes, string> Colors() => new Dictionary<ColorTypes, string>
-        {
-            [ColorTypes.StatusBar] = "#870808",
-        };
 
         public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 660 };
 
