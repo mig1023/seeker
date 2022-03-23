@@ -1,5 +1,9 @@
 <GameBook>
 	<Introduction>
+		<Styles>
+            <Color Type="Background">#c9d7d0</Color>
+            <Color Type="StatusBar">#0e3b24</Color>
+		</Styles>
 		<Buttons>
 			<Color Type="Main">#145334</Color>
 			<Color Type="Action">#104229</Color>
