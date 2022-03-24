@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Последнее хокку</Title>
 		<Buttons>
 			<Color Type="Main">#deb887</Color>
 			<Color Type="Font">#000000</Color>
