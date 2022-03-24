@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Остров Осьминогов</Title>
 		<Styles>
             <Color Type="StatusBar">#ce4f36</Color>
 		</Styles>
