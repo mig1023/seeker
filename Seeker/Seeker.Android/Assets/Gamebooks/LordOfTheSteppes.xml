@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Владыка степей</Title>
 		<Styles>
             <Color Type="StatusBar">#b42806</Color>
             <Color Type="StatusFont">#ffffff</Color>
