@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>На невидимых фронтах</Title>
 		<Styles>
             <Color Type="Background">#ffdadb</Color>
             <Color Type="StatusBar">#aa2218</Color>
