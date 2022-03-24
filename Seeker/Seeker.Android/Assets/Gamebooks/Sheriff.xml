@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Шериф</Title>
 		<Buttons>
 			<Color Type="Main">#7d2c1c</Color>
             <Color Type="Option">#b45b27</Color>
