@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Вой оборотня</Title>	
 		<Styles>
             <Color Type="Background">#c2cccd</Color>
             <Color Type="StatusBar">#253130</Color>
