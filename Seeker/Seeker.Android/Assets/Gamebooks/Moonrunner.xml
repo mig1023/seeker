@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Лунатик</Title>
 		<Styles>
             <Color Type="StatusBar">#44264b</Color>
 			<Color Type="ActionBox">#e3d9d9</Color>
