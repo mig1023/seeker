@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using Xamarin.Forms;
 using static Seeker.Output.Interface;
+using static Seeker.Output.Buttons;
+using static Seeker.Game.Data;
 
 namespace Seeker.Output
 {
@@ -95,6 +97,27 @@ namespace Seeker.Output
             "По размеру (объём)",
             "По году издания",
             "По тематике",
+        };
+
+        public static Dictionary<ButtonTypes, string> DEFAULT_BUTTONS = new Dictionary<ButtonTypes, string>
+        {
+            [ButtonTypes.Main] = "#dcdcdc",
+            [ButtonTypes.Action] = "#9d9d9d",
+            [ButtonTypes.Option] = "#f1f1f1",
+            [ButtonTypes.Font] = "#000000",
+            [ButtonTypes.Continue] = "#f1f1f1",
+            [ButtonTypes.System] = "#f1f1f1",
+        };
+
+        public static Dictionary<ColorTypes, string> DEFAULT_COLORS = new Dictionary<ColorTypes, string>
+        {
+            [ColorTypes.ActionBox] = "#d7d7d7",
+            [ColorTypes.StatusBar] = "#5e5e5e",
+            [ColorTypes.StatusFont] = "#ffffff",
+            [ColorTypes.Font] = "#000000",
+            [ColorTypes.BookColor] = "#ffffff",
+            [ColorTypes.BookFontColor] = "#000000",
+            [ColorTypes.BookBorderColor] = "#000000",
         };
     }
 }

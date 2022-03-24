@@ -10,7 +10,7 @@ namespace Seeker.Output
 
         public static Button Action(string actionName, EventHandler onClick, bool enabled = true)
         {
-            string color = Game.Data.Constants.GetButtonsColor(ButtonTypes.Action);
+            string color = Game.Data.Constants.GetColor(ButtonTypes.Action);
 
             Button actionButton = new Button
             {
@@ -40,7 +40,7 @@ namespace Seeker.Output
             if (Game.Data.Constants.ShowDisabledOption() || !String.IsNullOrEmpty(option.Aftertext))
                 optionColor = !String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf);
 
-            string color = Game.Data.Constants.GetButtonsColor(optionColor ?
+            string color = Game.Data.Constants.GetColor(optionColor ?
                 Buttons.ButtonTypes.Option : Buttons.ButtonTypes.Main);
 
             bool isEnabled = !(!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf));
@@ -64,7 +64,7 @@ namespace Seeker.Output
 
         public static Button Additional(string text, EventHandler onClick)
         {
-            string color = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
+            string color = Game.Data.Constants.GetColor(Buttons.ButtonTypes.Continue);
 
             Button additionButton = new Button
             {
@@ -81,8 +81,8 @@ namespace Seeker.Output
 
         public static Button System(string text, EventHandler onClick)
         {
-            string defaultColor = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
-            string systemColor = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.System);
+            string defaultColor = Game.Data.Constants.GetColor(Buttons.ButtonTypes.Continue);
+            string systemColor = Game.Data.Constants.GetColor(Buttons.ButtonTypes.System);
             string color = (String.IsNullOrEmpty(systemColor) ? defaultColor : systemColor);
 
             Button systemButton = new Button
@@ -144,7 +144,7 @@ namespace Seeker.Output
 
         public static Button GameOver(string text, EventHandler onClick)
         {
-            string colorLine = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
+            string colorLine = Game.Data.Constants.GetColor(Buttons.ButtonTypes.Continue);
 
             Color color = Color.Gray;
 
@@ -169,9 +169,9 @@ namespace Seeker.Output
         {
             if (!system)
             {
-                if (!String.IsNullOrEmpty(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border)))
+                if (!String.IsNullOrEmpty(Game.Data.Constants.GetColor(Buttons.ButtonTypes.Border)))
                 {
-                    button.BorderColor = Color.FromHex(Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Border));
+                    button.BorderColor = Color.FromHex(Game.Data.Constants.GetColor(Buttons.ButtonTypes.Border));
                     button.BorderWidth = Constants.BORDER_WIDTH;
                 }
                 else
@@ -185,7 +185,7 @@ namespace Seeker.Output
             }
             else
             {
-                string font = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Font);
+                string font = Game.Data.Constants.GetColor(Buttons.ButtonTypes.Font);
                 button.TextColor = (String.IsNullOrEmpty(font) ? Color.White : Color.FromHex(font));
             }
 

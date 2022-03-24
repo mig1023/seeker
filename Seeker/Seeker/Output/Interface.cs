@@ -339,7 +339,7 @@ namespace Seeker.Output
                         Text = param[1],
                     };
 
-                    string background = Game.Data.Constants.GetButtonsColor(Buttons.ButtonTypes.Continue);
+                    string background = Game.Data.Constants.GetColor(Buttons.ButtonTypes.Continue);
 
                     StackLayout splitterForm = new StackLayout
                     {

@@ -4,11 +4,11 @@ namespace Seeker.Abstract
 {
     interface IConstants
     {
-        void LoadButtonsColor(string type, string value);
-
         void LoadColor(string type, string value);
 
-        string GetButtonsColor(Output.Buttons.ButtonTypes type);
+        void LoadColor(string type, string value, bool button);
+
+        string GetColor(Output.Buttons.ButtonTypes type);
 
         string GetColor(Game.Data.ColorTypes type);
 
