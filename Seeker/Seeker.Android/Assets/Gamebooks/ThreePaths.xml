@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Три дороги</Title>
 		<Styles>
             <Color Type="StatusBar">#007a7a</Color>
 		</Styles>
