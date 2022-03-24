@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Смерть антиквара</Title>
 		<Buttons>
 			<Color Type="Main">#2e2e2e</Color>
             <Color Type="Option">#2e2e2e</Color>
