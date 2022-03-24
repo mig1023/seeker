@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Симулятор пенсионерки</Title>
 		<Buttons>
 			<Color Type="Main">#030436</Color>
             <Color Type="Option">#35365e</Color>
