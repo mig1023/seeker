@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Миссия на Урпан</Title>
 		<Styles>
             <Color Type="StatusBar">#0d1a36</Color>
 		</Styles>
