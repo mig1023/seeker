@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>По воле Рима</Title>
 		<Styles>
             <Color Type="StatusBar">#520809</Color>
 		</Styles>
