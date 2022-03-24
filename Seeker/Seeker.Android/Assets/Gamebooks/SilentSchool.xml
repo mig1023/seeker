@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Silent School</Title>
 		<Styles>
             <Color Type="StatusBar">#2a2a2a</Color>
 		</Styles>
