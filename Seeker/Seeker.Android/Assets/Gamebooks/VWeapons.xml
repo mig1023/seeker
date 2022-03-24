@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Оружие возмездия</Title>
 		<Styles>
             <Color Type="ActionBox">#efefef</Color>
             <Color Type="StatusBar">#FFFFFF</Color>
