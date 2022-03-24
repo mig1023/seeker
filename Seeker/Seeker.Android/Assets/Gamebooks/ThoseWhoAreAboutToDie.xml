@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Идущие на смерть</Title>
 		<Styles>
             <Color Type="StatusBar">#fce391</Color>
             <Color Type="StatusFont">#000000</Color>
