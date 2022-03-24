@@ -31,6 +31,7 @@ namespace Seeker.Output
         public static int SORT_BY_TITLE = 1;
         public static int SORT_BY_AUTHORS = 2;
         public static int SORT_BY_SETTINGS = 6;
+        public static int SORT_BY_PLAYTHROUGH_TIME = 7;
 
         public static Dictionary<TextFontSize, double> FontSize = new Dictionary<TextFontSize, double>
         {
@@ -97,6 +98,21 @@ namespace Seeker.Output
             "По размеру (объём)",
             "По году издания",
             "По тематике",
+            "По времени прохождения",
+        };
+
+        public static List<string> PLAYTHROUGH_TIME = new List<string>
+        {
+            "На пять минут",
+            "На часок-другой",
+            "На весь вечер",
+        };
+
+        public static Dictionary<string, int> PLAYTHROUGH_TIME_NODE = new Dictionary<string, int>
+        {
+            ["ShortPlaythrough"] = 0,
+            ["MediumPlaythrough"] = 1,
+            ["LongPlaythrough"] = 2,
         };
 
         public static Dictionary<ButtonTypes, string> DEFAULT_BUTTONS = new Dictionary<ButtonTypes, string>

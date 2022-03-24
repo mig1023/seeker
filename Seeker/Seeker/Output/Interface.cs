@@ -22,7 +22,7 @@ namespace Seeker.Output
             if ((List.Sort() == Constants.SORT_BY_SETTINGS) && (lastMarker != gamebook.Setting))
                 AddSplitter(gamebook.Setting, ref lastMarker, gamebook.Setting, ref options);
 
-            if ((List.Sort() == Constants.SORT_BY_AUTHORS))
+            if (List.Sort() == Constants.SORT_BY_AUTHORS)
             {
                 string marker = gamebook.AuthorsIndex()[0].ToString();
 
@@ -30,9 +30,17 @@ namespace Seeker.Output
                     AddSplitter(marker.ToUpper(), ref lastMarker, marker, ref options);
             }
 
-            if ((List.Sort() == Constants.SORT_BY_TITLE))
+            if (List.Sort() == Constants.SORT_BY_TITLE)
             {
                 string marker = gamebook.Title[0].ToString();
+
+                if (lastMarker != marker)
+                    AddSplitter(marker.ToUpper(), ref lastMarker, marker, ref options);
+            }
+
+            if (List.Sort() == Constants.SORT_BY_PLAYTHROUGH_TIME)
+            {
+                string marker = Constants.PLAYTHROUGH_TIME[gamebook.PlaythroughTime];
 
                 if (lastMarker != marker)
                     AddSplitter(marker.ToUpper(), ref lastMarker, marker, ref options);

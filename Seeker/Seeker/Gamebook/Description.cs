@@ -34,6 +34,8 @@ namespace Seeker.Gamebook
 
         public string Size;
 
+        public int PlaythroughTime;
+
         public string Translator;
 
         public string Translators;

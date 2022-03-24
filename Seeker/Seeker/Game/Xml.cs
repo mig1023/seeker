@@ -106,6 +106,15 @@ namespace Seeker.Game
             return texts;
         }
 
+        public static int PlaythrougParse(XmlNode xmlNode)
+        {
+            foreach (string type in Constants.PLAYTHROUGH_TIME_NODE.Keys)
+                if (xmlNode[type] != null)
+                    return Constants.PLAYTHROUGH_TIME_NODE[type];
+
+            return 2;
+        }
+
         public static void GameLoad(string name)
         {
             Data.XmlParagraphs.Clear();
@@ -161,6 +170,7 @@ namespace Seeker.Game
             description.Text = StringParse(data["Text"]);
             description.Paragraphs = StringParse(data["Paragraphs"]);
             description.Size = StringParse(data["Size"]);
+            description.PlaythroughTime = PlaythrougParse(data);
             description.Setting = StringParse(data["Setting"]);
 
             XmlNode colors = data.SelectSingleNode("Colors");
