@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Катарсис</Title>
 		<Styles>
             <Color Type="Background">#cdcdcd</Color>
             <Color Type="StatusBar">#b8b8b8</Color>
