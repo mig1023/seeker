@@ -1,5 +1,6 @@
 <GameBook>
 	<Introduction>
+		<Title>Разрушитель</Title>
 		<Styles>
             <Color Type="Background">#c9d7d0</Color>
             <Color Type="StatusBar">#0e3b24</Color>
