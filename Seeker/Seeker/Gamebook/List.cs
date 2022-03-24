@@ -81,7 +81,7 @@ namespace Seeker.Gamebook
                     return list.OrderBy(x => x.Setting).ThenBy(x => x.Title).ToList();
 
                 case 7:
-                    return list.OrderBy(x => x.PlaythroughTime).ThenBy(x => x.Paragraphs).ToList();
+                    return list.OrderBy(x => x.PlaythroughTime).ThenBy(x => Game.Services.ParagraphSize(x.Paragraphs)).ToList();
 
                 default:
                     return list;

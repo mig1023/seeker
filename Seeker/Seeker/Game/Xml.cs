@@ -112,7 +112,7 @@ namespace Seeker.Game
                 if (xmlNode[type] != null)
                     return Constants.PLAYTHROUGH_TIME_NODE[type];
 
-            return 2;
+            return 1;
         }
 
         public static void GameLoad(string name)
