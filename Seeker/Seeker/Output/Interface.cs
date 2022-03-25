@@ -23,28 +23,19 @@ namespace Seeker.Output
                 AddSplitter(gamebook.Setting, ref lastMarker, gamebook.Setting, ref options);
 
             if (List.Sort() == Constants.SORT_BY_AUTHORS)
-            {
-                string marker = gamebook.AuthorsIndex()[0].ToString();
-
-                if (lastMarker != marker)
-                    AddSplitter(marker.ToUpper(), ref lastMarker, marker, ref options);
-            }
+                AddSplitter(gamebook.AuthorsIndex()[0].ToString(), ref options, ref lastMarker);
 
             if (List.Sort() == Constants.SORT_BY_TITLE)
-            {
-                string marker = gamebook.Title[0].ToString();
-
-                if (lastMarker != marker)
-                    AddSplitter(marker.ToUpper(), ref lastMarker, marker, ref options);
-            }
+                AddSplitter(gamebook.Title[0].ToString(), ref options, ref lastMarker);
 
             if (List.Sort() == Constants.SORT_BY_PLAYTHROUGH_TIME)
-            {
-                string marker = Constants.PLAYTHROUGH_TIME[gamebook.PlaythroughTime];
+                AddSplitter(Constants.PLAYTHROUGH_TIME[gamebook.PlaythroughTime], ref options, ref lastMarker);
+        }
 
-                if (lastMarker != marker)
-                    AddSplitter(marker.ToUpper(), ref lastMarker, marker, ref options);
-            }
+        private static void AddSplitter(string marker, ref StackLayout options, ref string lastMarker)
+        {
+            if (lastMarker != marker)
+                AddSplitter(marker.ToUpper(), ref lastMarker, marker, ref options);
         }
 
         private static void AddSplitter(string splitter, ref string lastMarker, string marker, ref StackLayout options)
