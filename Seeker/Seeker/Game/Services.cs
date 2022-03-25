@@ -59,22 +59,5 @@ namespace Seeker.Game
             else
                 return String.Format("{0} тыс. слов", (fullSize / 1000));
         }
-
-        public static string ParagraphSizeLine(string line)
-        {
-            string paragraphs = CoinsNoun(ParagraphSize(line), "параграф", "параграфа", "параграфов");
-            return String.Format("{0} {1}", line, paragraphs);
-        }
-
-        public static int ParagraphSize(string line)
-        {
-            if (line.Contains("("))
-            {
-                string subSize = line.Substring(0, line.IndexOf(" "));
-                return Xml.IntParse(subSize);
-            }
-            else
-                return Xml.IntParse(line);
-        }
     }
 }

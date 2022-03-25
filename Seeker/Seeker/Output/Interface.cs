@@ -272,7 +272,7 @@ namespace Seeker.Output
             if (!String.IsNullOrEmpty(gamebook.Text))
                 AddDisclaimerElement(head: "Описание:", body: Regex.Unescape(gamebook.Text), ref disclaimer, border, little: true);
 
-            string paragraphs = Game.Services.ParagraphSizeLine(gamebook.Paragraphs);
+            string paragraphs = gamebook.ParagraphSizeLine();
             string size = Game.Services.SizeParse(gamebook.Size);
             AddDisclaimerElement(head: "Обьём:", body: String.Format("{0} / {1}", paragraphs, size), ref disclaimer, border);            
 

@@ -61,5 +61,23 @@ namespace Seeker.Gamebook
             else
                 return elements[0].Replace(",", String.Empty);
         }
+
+        public int ParagraphSize()
+        {
+            if (Paragraphs.Contains("("))
+            {
+                string subSize = Paragraphs.Substring(0, Paragraphs.IndexOf(" "));
+                return Game.Xml.IntParse(subSize);
+            }
+            else
+                return Game.Xml.IntParse(Paragraphs);
+        }
+
+        public string ParagraphSizeLine()
+        {
+            int size = ParagraphSize();
+            string paragraphs = Game.Services.CoinsNoun(size, "параграф", "параграфа", "параграфов");
+            return String.Format("{0} {1}", size, paragraphs);
+        }
     }
 }

@@ -69,7 +69,7 @@ namespace Seeker.Gamebook
                     return list.OrderBy(x => x.AuthorsIndex()).ThenBy(x => x.Year).ToList();
 
                 case 3:
-                    return list.OrderByDescending(x => Game.Services.ParagraphSize(x.Paragraphs)).ToList();
+                    return list.OrderByDescending(x => x.ParagraphSize()).ToList();
 
                 case 4:
                     return list.OrderByDescending(x => int.Parse(x.Size)).ToList();
@@ -81,7 +81,7 @@ namespace Seeker.Gamebook
                     return list.OrderBy(x => x.Setting).ThenBy(x => x.Title).ToList();
 
                 case 7:
-                    return list.OrderBy(x => x.PlaythroughTime).ThenBy(x => Game.Services.ParagraphSize(x.Paragraphs)).ToList();
+                    return list.OrderBy(x => x.PlaythroughTime).ThenBy(x => x.ParagraphSize()).ToList();
 
                 default:
                     return list;
