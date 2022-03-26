@@ -14,8 +14,6 @@ namespace Seeker.Gamebook.Cyberpunk
             ["Cybernetics"] = "Кибернетика",
         };
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 587, 588, 589 };
-
         public override string ButtonText() => "Пройти проверку";
 
         public static Links GetLinks() => new Links
