@@ -13,8 +13,6 @@ namespace Seeker.Gamebook.Genesis
             ["Stealth"] = 3,
         };
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 201, 202, 203, 204, 205, 206, 207 };
-
         public override bool ShowDisabledOption() => true;
 
         public static Links GetLinks() => new Links
