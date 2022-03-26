@@ -32,8 +32,6 @@ namespace Seeker.Gamebook.OrcsDay
             ["Раб своей природы"] = "-1 за то, что стал рабом своей оркской натуры",
         };
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 102, 103 };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
