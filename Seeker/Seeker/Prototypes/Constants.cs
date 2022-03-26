@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using static Seeker.Output.Buttons;
 using static Seeker.Game.Data;
+using System.Linq;
+using System.Xml;
 
 namespace Seeker.Prototypes
 {
@@ -10,6 +12,8 @@ namespace Seeker.Prototypes
         private Dictionary<ButtonTypes, string> ButtonsColorsList = null;
 
         private Dictionary<ColorTypes, string> ColorsList = null;
+
+        private List<int> ParagraphsWithoutStatuses = null;
 
         public virtual string GetColor(ButtonTypes type)
         {
@@ -31,6 +35,7 @@ namespace Seeker.Prototypes
         {
             ButtonsColorsList = new Dictionary<ButtonTypes, string>();
             ColorsList = new Dictionary<ColorTypes, string>();
+            ParagraphsWithoutStatuses = new List<int> { 0 };
         }
 
         public virtual void LoadColor(string type, string color, bool button)
@@ -49,13 +54,19 @@ namespace Seeker.Prototypes
                 ColorsList.Add(colorTypes, color);
         }
 
+        public virtual List<int> GetParagraphsWithoutStatuses() => ParagraphsWithoutStatuses;
+
+        public virtual void LoadParagraphsWithoutStatuses(XmlNode paragraphs)
+        {
+            if (paragraphs != null)
+                ParagraphsWithoutStatuses = paragraphs.InnerText.Split(',').Select(x => int.Parse(x)).ToList();
+        }
+
         public static string DefaultColor(Game.Data.ColorTypes type) => Output.Constants.DEFAULT_COLORS[type];
 
         public virtual string GetFont() => String.Empty;
 
         public virtual Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.normal;
-
-        public virtual List<int> GetParagraphsWithoutStatuses() => new List<int> { 0 };
 
         public virtual int? GetParagraphsStatusesLimit() => null;
 

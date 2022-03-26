@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Xml;
 
 namespace Seeker.Abstract
 {
@@ -19,6 +20,8 @@ namespace Seeker.Abstract
         Output.Interface.TextFontSize GetFontSize();
 
         List<int> GetParagraphsWithoutStatuses();
+
+        void LoadParagraphsWithoutStatuses(XmlNode paragraphs);
 
         int? GetParagraphsStatusesLimit();
 

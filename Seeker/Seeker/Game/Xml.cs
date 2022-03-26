@@ -148,6 +148,9 @@ namespace Seeker.Game
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Introduction/Styles/Color"))
                 Data.Constants.LoadColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText);
+
+            XmlNode withoutStatuses = xmlFile.SelectSingleNode("GameBook/Introduction/WithoutStatuses");
+            Data.Constants.LoadParagraphsWithoutStatuses(withoutStatuses);
         }
 
         public static void GetXmlDescriptionData(ref Description description)
