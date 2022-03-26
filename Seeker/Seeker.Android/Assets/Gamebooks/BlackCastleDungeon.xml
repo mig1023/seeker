@@ -1289,7 +1289,6 @@
 			<Triggers>GreenSword, GreenArmour</Triggers>
 			<Modifications>
 				<Modification Name="MaxMastery" Value="1"/>
-				<Modification Name="Mastery" Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="434"/>
