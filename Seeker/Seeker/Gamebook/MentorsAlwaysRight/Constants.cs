@@ -8,8 +8,6 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 556, 557, 558, 559 };
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 556, 557, 558, 559 };
-
         public static Dictionary<string, Character.SpecializationType> GetSpecializationType()
         {
             return new Dictionary<string, Character.SpecializationType>
