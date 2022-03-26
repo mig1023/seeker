@@ -141,6 +141,8 @@ namespace Seeker.Game
             Data.Debug = gamebook.Links.Debug;
             Data.CheckOnlyIf = gamebook.Links.CheckOnlyIf;
 
+            Data.Constants.Clean();
+
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Introduction/Buttons/Color"))
                 Data.Constants.LoadColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText, button: true);
 

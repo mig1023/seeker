@@ -7,9 +7,9 @@ namespace Seeker.Prototypes
 {
     class Constants
     {
-        private Dictionary<ButtonTypes, string> ButtonsColorsList = new Dictionary<ButtonTypes, string>();
+        private Dictionary<ButtonTypes, string> ButtonsColorsList = null;
 
-        private Dictionary<ColorTypes, string> ColorsList = new Dictionary<ColorTypes, string>();
+        private Dictionary<ColorTypes, string> ColorsList = null;
 
         public virtual string GetColor(ButtonTypes type)
         {
@@ -25,6 +25,12 @@ namespace Seeker.Prototypes
                 Output.Constants.DEFAULT_COLORS : ColorsList);
 
             return (color.ContainsKey(type) ? color[type] : String.Empty);
+        }
+
+        public void Clean()
+        {
+            ButtonsColorsList = new Dictionary<ButtonTypes, string>();
+            ColorsList = new Dictionary<ColorTypes, string>();
         }
 
         public virtual void LoadColor(string type, string color, bool button)

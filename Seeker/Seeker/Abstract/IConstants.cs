@@ -4,6 +4,8 @@ namespace Seeker.Abstract
 {
     interface IConstants
     {
+        void Clean();
+
         void LoadColor(string type, string value);
 
         void LoadColor(string type, string value, bool button);
