@@ -12,6 +12,7 @@
             <Color Type="Continue">#db8784</Color>
             <Color Type="System">#f2f2f2</Color>
 		</Buttons>
+		<WithoutStatuses>0, 904, 905, 906</WithoutStatuses>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>

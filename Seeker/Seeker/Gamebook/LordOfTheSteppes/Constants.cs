@@ -16,8 +16,6 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             ["Initiative"] = 10,
         };
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 904, 905, 906 };
-
         public static Dictionary<Character.SpecialTechniques, string> TechniquesNames() => new Dictionary<Character.SpecialTechniques, string>
         {
             [Character.SpecialTechniques.TwoBlades] = "Бой двумя клинками",
