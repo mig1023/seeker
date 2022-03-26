@@ -18,8 +18,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 687, 714, 715, 701, 702 };
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 714, 715, 716 };
-
         public override bool ShowDisabledOption() => true;
 
         public static Links GetLinks() => new Links
