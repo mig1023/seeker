@@ -18,10 +18,10 @@ namespace Seeker.Gamebook.StringOfWorlds
 
         private static Random random = new Random();
 
-        public override string GetButtonsColor(ButtonTypes type)
+        public override string GetColor(ButtonTypes type)
         {
             if (Game.Settings.IsEnabled("WithoutStyles"))
-                return base.GetButtonsColor(type);
+                return base.GetColor(type);
 
             else if ((type == ButtonTypes.Border) || (type == ButtonTypes.Continue) || (type == ButtonTypes.System))
                 return String.Empty;
@@ -84,9 +84,8 @@ namespace Seeker.Gamebook.StringOfWorlds
                 return String.Empty;
         }
 
-        private string СontrastColor(List<int> color) => ((color[0] * 0.299) + (color[1] * 0.587) + (color[2] * 0.114)) > 186 ? "#000000" : "#FFFFFF";
-
-        public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1, 665 };
+        private string СontrastColor(List<int> color) =>
+            ((color[0] * 0.299) + (color[1] * 0.587) + (color[2] * 0.114)) > 186 ? "#000000" : "#FFFFFF";
 
         public static Dictionary<int, int> Skills() => new Dictionary<int, int>
         {
