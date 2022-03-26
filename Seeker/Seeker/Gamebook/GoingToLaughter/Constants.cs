@@ -36,8 +36,6 @@ namespace Seeker.Gamebook.GoingToLaughter
 
         public override bool ShowDisabledOption() => true;
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 1393, 1394 };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

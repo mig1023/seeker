@@ -11,6 +11,7 @@
 			<Color Type="Action">#693f41</Color>
             <Color Type="System">#f3f0f0</Color>
 		</Buttons>
+		<WithoutStatuses>0, 1393, 1394</WithoutStatuses>		
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
