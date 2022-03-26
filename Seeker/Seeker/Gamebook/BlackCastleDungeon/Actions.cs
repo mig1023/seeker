@@ -13,6 +13,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
         public int StrengthPenlty { get; set; }
+        public int ExtendedDamage { get; set; }
 
         public bool ThisIsSpell { get; set; }
 
@@ -294,7 +295,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                     {
                         fight.Add(String.Format("BAD|{0} ранил {1}", enemy.Name, (copyFight ? "копию" : "вас")));
                         
-                        protagonist.Endurance -= 2;
+                        protagonist.Endurance -= (ExtendedDamage > 0 ? ExtendedDamage : 2);
 
                         if (protagonist.Endurance <= 0)
                             return false;

@@ -5076,13 +5076,15 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>518</Id>
-			<Text>Вы обнажаете меч и кидаетесь в бой. Торговец неповоротлив, но удар его очень силен. Поэтому всякий раз, когда он ранит вас, вычитайте у себя не 2, а 3 ВЫНОСЛИВОСТИ.</Text>
+			<Text>Вы обнажаете меч и кидаетесь в бой.</Text>
 			<Actions>
 				<Action>
 					<Name>Fight</Name>
 					<Enemies>
 						<Enemy Name="ТОРГОВЕЦ" Mastery="6" Endurance="12"/>
 					</Enemies>
+					<ExtendedDamage>3</ExtendedDamage>
+					<Aftertext>Торговец неповоротлив, но удар его очень силен. Поэтому всякий раз, когда он ранит вас, вычитайте у себя не 2, а 3 ВЫНОСЛИВОСТИ.</Aftertext>
 				</Action>
 			</Actions>
 			<Options>
