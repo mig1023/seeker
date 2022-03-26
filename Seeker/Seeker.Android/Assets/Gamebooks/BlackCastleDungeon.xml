@@ -2400,6 +2400,8 @@
 			<Triggers>SilverWhistle</Triggers>
 			<Modifications>
 				<Modification Name="Endurance" Value="5"/>
+				<Benefit Name="Healing" ValueString="Выпить вина,3"/>
+				<Benefit Name="Healing" ValueString="Съесть гоблинской еды,2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="531" Text="Свернуть на нее"/>
