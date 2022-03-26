@@ -6,8 +6,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
     {
         public static Constants StaticInstance = new Constants();
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 660 };
-
         public static Dictionary<int, int> Skills = new Dictionary<int, int>
         {
             [1] = 12,

@@ -11,6 +11,7 @@
             <Color Type="Continue">#dbabab</Color>
             <Color Type="System">#f0dddd</Color>
 		</Buttons>
+		<WithoutStatuses>0, 660</WithoutStatuses>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
