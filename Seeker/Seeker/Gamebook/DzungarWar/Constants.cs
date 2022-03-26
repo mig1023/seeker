@@ -6,8 +6,6 @@ namespace Seeker.Gamebook.DzungarWar
     {
         public static Constants StaticInstance = new Constants();
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 658, 659, 660 };
-
         public static Dictionary<string, string> StatNames() => new Dictionary<string, string>
         {
             ["Strength"] = "силы",
