@@ -4907,7 +4907,11 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>500</Id>
-			<Text>Вы храбро выпиваете жидкость. Это микстура жизни. Прибавьте себе 6 ВЫНОСЛИВОСТЕЙ и уходите из домика.</Text>
+			<Texts>
+				<Text>Вы храбро выпиваете жидкость. Это микстура жизни.</Text>
+				<Text Size="small">Прибавьте себе 6 ВЫНОСЛИВОСТЕЙ.</Text>
+				<Text>Теперь уходите из домика.</Text>
+			</Texts>
 			<Modifications>
 				<Modification Name="Endurance" Value="6"/>
 			</Modifications>
