@@ -14,6 +14,7 @@
             <Color Type="Continue">#8dbd6e</Color>
             <Color Type="System">#c7dfb9</Color>
 		</Buttons>
+		<WithoutStatuses>0, 205</WithoutStatuses>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>

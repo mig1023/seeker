@@ -8,8 +8,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 30, 60, 90 };
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 205 };
-
         public static Dictionary<string, string> StatNames = new Dictionary<string, string>
         {
             ["Strength"] = "силы",
