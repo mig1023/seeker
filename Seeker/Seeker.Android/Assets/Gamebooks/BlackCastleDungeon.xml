@@ -10,6 +10,7 @@
             <Color Type="Option">#696969</Color>
             <Color Type="System">#f9f9f9</Color>
 		</Buttons>
+		<WithoutStaticsButtons>0, 619</WithoutStaticsButtons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>

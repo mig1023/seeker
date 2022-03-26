@@ -8,8 +8,6 @@ namespace Seeker.Gamebook.BlackCastleDungeon
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 619 };
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 619 };
-
         public override int? GetParagraphsStatusesLimit() => 620;
 
         public static List<string> StaticSpells() => new List<string>
