@@ -6,8 +6,6 @@ namespace Seeker.Gamebook.VWeapons
     {
         public static Constants StaticInstance = new Constants();
 
-        public override List<int> GetParagraphsWithoutStatuses() => new List<int> { 0, 266 };
-
         public static Dictionary<string, string> healingParts = new Dictionary<string, string>
         {
             ["головы"] = "Head",
