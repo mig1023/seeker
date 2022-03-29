@@ -75,9 +75,8 @@ namespace Seeker.Gamebook
 
         public string ParagraphSizeLine()
         {
-            int size = ParagraphSize();
-            string paragraphs = Game.Services.CoinsNoun(size, "параграф", "параграфа", "параграфов");
-            return String.Format("{0} {1}", size, paragraphs);
+            string paragraphs = Game.Services.CoinsNoun(ParagraphSize(), "параграф", "параграфа", "параграфов");
+            return String.Format("{0} {1}", Paragraphs, paragraphs);
         }
     }
 }
