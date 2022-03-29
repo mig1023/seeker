@@ -265,7 +265,8 @@ namespace Seeker.Output
 
             string paragraphs = gamebook.ParagraphSizeLine();
             string size = Game.Services.SizeParse(gamebook.Size);
-            AddDisclaimerElement(head: "Обьём:", body: String.Format("{0} / {1}", paragraphs, size), ref disclaimer, border);            
+            string separator = (paragraphs.Contains('(') ? "\n" : " / ");
+            AddDisclaimerElement(head: "Обьём:", body: String.Join(String.Empty, paragraphs, separator, size), ref disclaimer, border);            
 
             border.GestureRecognizers.Add(CloseTapped(border));
 
