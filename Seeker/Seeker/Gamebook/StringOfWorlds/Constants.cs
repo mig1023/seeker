@@ -84,6 +84,8 @@ namespace Seeker.Gamebook.StringOfWorlds
                 return String.Empty;
         }
 
+        public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1, 665 };
+
         private string СontrastColor(List<int> color) =>
             ((color[0] * 0.299) + (color[1] * 0.587) + (color[2] * 0.114)) > 186 ? "#000000" : "#FFFFFF";
 
