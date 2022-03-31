@@ -109,7 +109,7 @@ namespace Seeker.Gamebook.Moonrunner
             bool disabledSkillSlots = ThisIsSkill && (protagonist.SkillSlots < 1);
             bool disabledSkillAlready = ThisIsSkill && Game.Option.IsTriggered(Text);
 
-            return !(disabledSkillSlots || disabledSkillAlready);
+            return !(disabledSkillSlots || disabledSkillAlready || Used);
         }
 
         public override List<string> Representer()
@@ -170,6 +170,16 @@ namespace Seeker.Gamebook.Moonrunner
             {
                 Game.Option.Trigger(Text);
                 protagonist.SkillSlots -= 1;
+            }
+
+            else if ((Price > 0) && (protagonist.Gold >= Price))
+            {
+                protagonist.Gold -= Price;
+
+                Used = true;
+
+                if (Benefit != null)
+                    Benefit.Do();
             }
 
             return new List<string> { "RELOAD" };
