@@ -3733,6 +3733,7 @@
 					<Enemies>
 						<Enemy Name="Ай-Хулуд" Mastery="9" Endurance="8"/>
 					</Enemies>
+					<ThreeDiceAttack/>
 				</Action>
 			</Actions>
 			<Options>

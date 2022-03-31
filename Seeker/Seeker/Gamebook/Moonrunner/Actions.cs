@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.Moonrunner
         public bool Invulnerable { get; set; }
         public bool EnemyMasteryInc { get; set; }
         public bool DoubleFail { get; set; }
+        public bool ThreeDiceAttack { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -262,6 +263,18 @@ namespace Seeker.Gamebook.Moonrunner
         private bool NoMoreEnemies(List<Character> enemies) =>
             enemies.Where(x => x.Endurance > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() == 0;
 
+        private List<int> TripleDiceRoll(out int failIndex)
+        {
+            List<int> dices = new List<int>();
+
+            for (int i = 0; i < 3; i++)
+                dices.Add(Game.Dice.Roll());
+
+            failIndex = dices.IndexOf(dices.Min());
+
+            return dices;
+        }
+
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -306,17 +319,32 @@ namespace Seeker.Gamebook.Moonrunner
                             protagonist.Mastery, protagonistHitStrength));
                     }
 
-                    Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
-                    int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
+                    int enemyHitStrength = 0;
 
-                    fight.Add(String.Format("Сила его удара: {0} + {1} + {2} = {3}",
-                        Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength));
-
-                    if (DoubleFail && (enemyRollFirst == enemyRollSecond))
+                    if (ThreeDiceAttack && !Game.Option.IsTriggered("Акробатика"))
                     {
-                        fight.Add(String.Empty);
-                        fight.Add("BOLD|У противника выпал дубль!");
-                        return fight;
+                        List<int> dices = TripleDiceRoll(out int failIndex);
+
+                        enemyHitStrength += dices.Sum() - dices[failIndex] + enemy.Mastery;
+
+                        fight.Add(String.Format("Сила его удара: {0} + {1} + {2} (отбрасываем наименьшее значение: {3}) + {4} = {5}",
+                            Game.Dice.Symbol(dices[0]), Game.Dice.Symbol(dices[1]), Game.Dice.Symbol(dices[2]),
+                            dices[failIndex], enemy.Mastery, enemyHitStrength));
+                    }
+                    else
+                    {
+                        Game.Dice.DoubleRoll(out int enemyRollFirst, out int enemyRollSecond);
+                        enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Mastery;
+
+                        fight.Add(String.Format("Сила его удара: {0} + {1} + {2} = {3}",
+                            Game.Dice.Symbol(enemyRollFirst), Game.Dice.Symbol(enemyRollSecond), enemy.Mastery, enemyHitStrength));
+
+                        if (DoubleFail && (enemyRollFirst == enemyRollSecond))
+                        {
+                            fight.Add(String.Empty);
+                            fight.Add("BOLD|У противника выпал дубль!");
+                            return fight;
+                        }
                     }
 
                     if ((protagonistHitStrength > enemyHitStrength) && (!attackAlready || Game.Option.IsTriggered("Сражение")))
