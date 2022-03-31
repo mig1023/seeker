@@ -275,7 +275,7 @@
 				</Action>
 			</Actions>
 			<Options>
-				<Option Destination="352" Text="Да"/>
+				<Option Destination="352" Text="Да" OnlyIf="Кол"/>
 				<Option Destination="312" Text="Нет"/>
 			</Options>
 		</Paragraph>
@@ -1927,7 +1927,7 @@
 				</Action>
 			</Actions>
 			<Options>
-				<Option Destination="352" Text="У вас есть осиновый кол"/>
+				<Option Destination="352" Text="У вас есть осиновый кол" OnlyIf="Кол"/>
 				<Option Destination="312" Text="Нет"/>
 			</Options>
 		</Paragraph>
@@ -2648,6 +2648,13 @@
 					<Trigger>Крест</Trigger>
 					<Text>Крест</Text>
 					<Price>3</Price>
+				</Action>
+				<Action>
+					<Name>Get</Name>
+					<Button>Купить</Button>
+					<Trigger>Кол</Trigger>
+					<Text>Деревянный кол</Text>
+					<Price>8</Price>
 					<Aftertext>Поверьте, это будет самая удачная сделка в вашей жизни». Можете согласиться или отклонить его предложение. Но в любом случае, пока кровь барона Милеску с вами, после каждой битвы, в который вам удастся убить врага, вам придется проверять свою Удачу и, если вам не повезет, нужно будет перейти на параграф 49.\n\nЗдесь больше делать нечего, и вы возвращайтесь, потеряв 1 Час</Aftertext>
 				</Action>
 			</Actions>
