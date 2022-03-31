@@ -16,6 +16,19 @@ namespace Seeker.Gamebook.Moonrunner
             [6] = "шестое",
         };
 
+        public static List<string> Skills() => new List<string>
+        {
+            "Акробатика",
+            "Скалолазание",
+            "Сражение",
+            "Интеллект",
+            "Маскировка",
+            "Взлом",
+            "Ловкость рук",
+            "Скрытность",
+            "Поиск следов",
+        };
+
         public override bool ShowDisabledOption() => true;
 
         public static Links GetLinks() => new Links
