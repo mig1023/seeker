@@ -28,8 +28,6 @@ namespace Seeker.Gamebook.OctopusIsland
             return enemies;
         }
 
-        public override string ButtonText() => (Name == "Dinner" ? "Пообедать" : "Сражаться");
-
         public override List<string> Status() => new List<string>
         {
             String.Format("Обедов: {0}", protagonist.Food),
