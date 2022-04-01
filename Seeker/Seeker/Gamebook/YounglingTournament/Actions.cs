@@ -144,30 +144,6 @@ namespace Seeker.Gamebook.YounglingTournament
             return enemies;
         }
 
-        public override string ButtonText()
-        {
-            switch (Name)
-            {
-                case "SwordFight":
-                case "MixedFightAttack":
-                    return "Сражаться";
-
-                case "FireFight":
-                    return "Перестрелка";
-
-                case "ForceTest":
-                    return "Пройти проверку";
-
-                case "SimpleDice":
-                case "DiceWounds":
-                case "EnemyDiceWounds":
-                    return "Кинуть кубик";
-
-                default:
-                    return Button;
-            }
-        }
-
         public List<string> DiceWounds()
         {
             List<string> diceCheck = new List<string> { };
