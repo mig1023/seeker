@@ -57,27 +57,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             return enemies;
         }
 
-        public override string ButtonText()
-        {
-            if (!String.IsNullOrEmpty(Button))
-                return Button;
-
-            switch (Name)
-            {
-                case "Fight":
-                    return "Сражаться";
-
-                case "Reaction":
-                    return "Реагируйте";
-
-                case "DiceWounds":
-                    return "Кинуть кубик";
-
-                default:
-                    return Button;
-            }
-        }
-
         public override List<string> Status() => new List<string>
         {
             String.Format("Жизни Коннери: {0}/30", protagonist.ConneryHitpoints),

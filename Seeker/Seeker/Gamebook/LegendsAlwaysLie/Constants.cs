@@ -14,6 +14,13 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             ["МЕТАТЕЛЬ"] = Character.SpecializationType.Thrower,
         };
 
+        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
+        {
+            ["Fight"] = "Сражаться",
+            ["Reaction"] = "Реагируйте",
+            ["DiceWounds"] = "Кинуть кубик",
+        };
+
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 687, 714, 715, 701, 702 };
