@@ -18,6 +18,11 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             ["Popularity"] = "популярности",
         };
 
+        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
+        {
+            ["Test"] = "Проверить",
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

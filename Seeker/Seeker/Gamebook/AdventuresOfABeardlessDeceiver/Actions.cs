@@ -39,8 +39,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
                 return new List<string> { };
         }
 
-        public override string ButtonText() => (Name == "Test" ? "Проверить" : Button);
-            
         public override List<string> Status() => new List<string>
         {
             String.Format("Деньги: {0}", protagonist.Tanga),
