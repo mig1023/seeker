@@ -52,8 +52,6 @@ namespace Seeker.Gamebook.VWeapons
             return enemies;
         }
 
-        public override string ButtonText() => (Name == "Fight" ? "Перестрелка" : Button);
-
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Dead, out toEndParagraph, out toEndText);
 

@@ -15,6 +15,11 @@ namespace Seeker.Gamebook.VWeapons
             ["ног"] = "Legs",
         };
 
+        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
+        {
+            ["Fight"] = "Перестрелка",
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
