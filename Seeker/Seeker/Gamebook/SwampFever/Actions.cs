@@ -45,21 +45,6 @@ namespace Seeker.Gamebook.SwampFever
             String.Format("Ярость: {0}", Constants.GetFuryLevel()[protagonist.Fury]),
         };
 
-        public override string ButtonText()
-        {
-            switch (Name)
-            {
-                case "Fight":
-                    return "Сражаться";
-
-                case "MentalTest":
-                    return "Проверка";
-
-                default:
-                    return Button;
-            }
-        }
-
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.HarversterDestroyed, out toEndParagraph, out toEndText);
 

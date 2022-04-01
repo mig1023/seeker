@@ -48,6 +48,12 @@ namespace Seeker.Gamebook.SwampFever
             [2] = "Берсерк",
         };
 
+        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
+        {
+            ["Fight"] = "Сражаться",
+            ["MentalTest"] = "Проверка",
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
