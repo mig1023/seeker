@@ -32,6 +32,12 @@ namespace Seeker.Gamebook.OrcsDay
             ["Раб своей природы"] = "-1 за то, что стал рабом своей оркской натуры",
         };
 
+        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
+        {
+            ["Fight"] = "Сражаться",
+            ["Test"] = "Проверить",
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
