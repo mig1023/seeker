@@ -114,21 +114,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return enemies;
         }
 
-        public override string ButtonText()
-        {
-            switch (Name)
-            {
-                case "Fight":
-                    return "Сражаться";
-
-                case "Luck":
-                    return "Проверить удачу";
-
-                default:
-                    return Button;
-            }
-        }
-
         public List<string> Luck()
         {
             int luckDice = Game.Dice.Roll();
