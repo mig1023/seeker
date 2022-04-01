@@ -29,21 +29,6 @@ namespace Seeker.Gamebook.Moonrunner
             String.Format("Золото: {0}", protagonist.Gold)
         };
 
-        public override string ButtonText()
-        {
-            switch (Name)
-            {
-                case "Fight":
-                    return "Сражаться";
-
-                case "Luck":
-                    return "Проверить удачу";
-
-                default:
-                    return Button;
-            }
-        }
-
         public override bool CheckOnlyIf(string option)
         {
             if (String.IsNullOrEmpty(option))
