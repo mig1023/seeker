@@ -550,7 +550,7 @@ namespace Seeker.Gamebook.OrcsDay
 
                 overcome.Add("BOLD|Борьба:");
 
-                overcome.Add(String.Format("С обной стороны: {0} (смелость) + {1} (мозги) = {2}",
+                overcome.Add(String.Format("С одной стороны: {0} (смелость) + {1} (мозги) = {2}",
                     protagonist.Courage, protagonist.Wits, sense));
 
                 overcome.Add(String.Format("С другой: {0} (мышцы) + {1} (оркишность) + 5 = {2}",
