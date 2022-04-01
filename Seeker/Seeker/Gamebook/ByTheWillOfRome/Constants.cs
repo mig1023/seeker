@@ -8,7 +8,10 @@ namespace Seeker.Gamebook.ByTheWillOfRome
 
         public override bool ShowDisabledOption() => true;
 
-        public override string ButtonText() => "Купить";
+        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
+        {
+            ["Get"] = "Купить",
+        };
 
         public static Links GetLinks() => new Links
         {
