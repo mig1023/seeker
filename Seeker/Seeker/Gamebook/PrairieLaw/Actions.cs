@@ -63,8 +63,6 @@ namespace Seeker.Gamebook.PrairieLaw
             return enemies;
         }
 
-        public override string ButtonText() => (Name == "Fight" ? "Сражаться" : Button);
-
         public override bool CheckOnlyIf(string option)
         {
             if (String.IsNullOrEmpty(option))

@@ -68,6 +68,11 @@ namespace Seeker.Gamebook.PrairieLaw
             [16] = "❻",
         };
 
+        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
+        {
+            ["Fight"] = "Сражаться",
+        };
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
