@@ -16,6 +16,11 @@ namespace Seeker.Gamebook.DzungarWar
             ["Danger"] = "опасности",
         };
 
+        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
+        {
+            ["Test"] = "Проверить",
+        };
+
         public override bool ShowDisabledOption() => true;
 
         public static Links GetLinks() => new Links

@@ -111,8 +111,6 @@ namespace Seeker.Gamebook.DzungarWar
             }
         }
 
-        public override string ButtonText() => (Name == "Test" ? "Проверить" : Button);
-
         public override List<string> Status()
         {
             List<string> statusLines = new List<string>();
