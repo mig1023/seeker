@@ -72,6 +72,6 @@ namespace Seeker.Prototypes
 
         public virtual bool ShowDisabledOption() => false;
 
-        public virtual string ButtonText() => String.Empty;
+        public virtual Dictionary<string, string> ButtonText() => new Dictionary<string, string>();
     }
 }

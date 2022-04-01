@@ -27,6 +27,6 @@ namespace Seeker.Abstract
 
         bool ShowDisabledOption();
 
-        string ButtonText();
+        Dictionary<string, string> ButtonText();
     }
 }

@@ -45,8 +45,19 @@ namespace Seeker.Prototypes
 
         public virtual List<string> Representer() => new List<string> { };
 
-        public virtual string ButtonText() => (String.IsNullOrEmpty(Button) ? Game.Data.Constants.ButtonText() : Button);
-            
+        public virtual string ButtonText()
+        {
+            if (!String.IsNullOrEmpty(Button))
+                return Button;
+
+            Dictionary<string, string> texts = Game.Data.Constants.ButtonText();
+
+            if (texts.ContainsKey(Name))
+                return texts[Name];
+            else
+                return String.Empty;
+        }
+                        
         public virtual List<string> Status() => null;
 
         public virtual List<string> AdditionalStatus() => null;
