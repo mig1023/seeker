@@ -6,8 +6,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
     {
         public static Constants StaticInstance = new Constants();
 
-        public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 1 };
-
         public static Dictionary<int, string> HealthLine() => new Dictionary<int, string>
         {
             [0] = "мертв",

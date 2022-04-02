@@ -58,7 +58,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             List<string> staticButtons = new List<string> { };
 
-            if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
+            if (Game.Data.Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
 
             if (IsPosibleResurrection())

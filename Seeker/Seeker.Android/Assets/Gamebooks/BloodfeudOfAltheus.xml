@@ -15,6 +15,7 @@
             <Color Type="Continue">#f5ead9</Color>
             <Color Type="Font">#000000</Color>
 		</Buttons>
+		<WithoutStaticsButtons>0, 1</WithoutStaticsButtons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
