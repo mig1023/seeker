@@ -2,6 +2,7 @@
 	<Introduction>
 		<Title>Вереница миров или выводы из закона Мэрфи</Title>
 		<Buttons/>
+		<WithoutStaticsButtons>0, 1, 665</WithoutStaticsButtons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>

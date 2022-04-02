@@ -29,15 +29,11 @@ namespace Seeker.Gamebook.StringOfWorlds
         {
             List<string> staticButtons = new List<string> { };
 
-            if (Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
-            {
+            if (Game.Data.Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
-            }
 
             if ((protagonist.Equipment == "Тюбик") && (protagonist.Strength < protagonist.MaxStrength))
-            {
                 staticButtons.Add("СЪЕСТЬ ПАСТУ");
-            }
 
             return staticButtons;
         }
