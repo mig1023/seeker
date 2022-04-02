@@ -59,18 +59,19 @@ namespace Seeker.Prototypes
 
         public virtual List<int> GetParagraphsWithoutStatuses() => ParagraphsWithoutStatuses;
 
-        public virtual void LoadParagraphsWithoutStatuses(XmlNode paragraphs)
-        {
-            if (paragraphs != null)
-                ParagraphsWithoutStatuses = paragraphs.InnerText.Split(',').Select(x => int.Parse(x)).ToList();
-        }
-
         public virtual List<int> GetParagraphsWithoutStaticsButtons() => ParagraphsWithoutStaticsButtons;
 
-        public virtual void LoadParagraphsWithoutStaticsButtons(XmlNode paragraphs)
+        public virtual void LoadParagraphsWithoutSomething(XmlNode paragraphs, bool staticButtons = false)
         {
-            if (paragraphs != null)
-                ParagraphsWithoutStaticsButtons = paragraphs.InnerText.Split(',').Select(x => int.Parse(x)).ToList();
+            if (paragraphs == null)
+                return;
+
+            List<int> something = paragraphs.InnerText.Split(',').Select(x => int.Parse(x)).ToList();
+
+            if (staticButtons)
+                ParagraphsWithoutStaticsButtons = something;
+            else
+                ParagraphsWithoutStatuses = something;
         }
 
         public static string DefaultColor(Game.Data.ColorTypes type) => Output.Constants.DEFAULT_COLORS[type];

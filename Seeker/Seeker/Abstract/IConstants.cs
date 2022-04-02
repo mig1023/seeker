@@ -21,11 +21,9 @@ namespace Seeker.Abstract
 
         List<int> GetParagraphsWithoutStatuses();
 
-        void LoadParagraphsWithoutStatuses(XmlNode paragraphs);
-
         List<int> GetParagraphsWithoutStaticsButtons();
 
-        void LoadParagraphsWithoutStaticsButtons(XmlNode paragraphs);
+        void LoadParagraphsWithoutSomething(XmlNode paragraphs, bool staticButtons = false);
 
         int? GetParagraphsStatusesLimit();
 

@@ -150,10 +150,10 @@ namespace Seeker.Game
                 Data.Constants.LoadColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText);
 
             XmlNode withoutStatuses = xmlFile.SelectSingleNode("GameBook/Introduction/WithoutStatuses");
-            Data.Constants.LoadParagraphsWithoutStatuses(withoutStatuses);
+            Data.Constants.LoadParagraphsWithoutSomething(withoutStatuses);
 
             XmlNode withoutStaticsButtons = xmlFile.SelectSingleNode("GameBook/Introduction/WithoutStaticsButtons");
-            Data.Constants.LoadParagraphsWithoutStaticsButtons(withoutStaticsButtons);
+            Data.Constants.LoadParagraphsWithoutSomething(withoutStaticsButtons, staticButtons: true);
         }
 
         public static void GetXmlDescriptionData(ref Description description)
