@@ -15,6 +15,8 @@ namespace Seeker.Prototypes
 
         private List<int> ParagraphsWithoutStatuses = null;
 
+        private List<int> ParagraphsWithoutStaticsButtons = null;
+
         public virtual string GetColor(ButtonTypes type)
         {
             Dictionary<ButtonTypes, string> color = (Game.Settings.IsEnabled("WithoutStyles") ?
@@ -36,6 +38,7 @@ namespace Seeker.Prototypes
             ButtonsColorsList = new Dictionary<ButtonTypes, string>();
             ColorsList = new Dictionary<ColorTypes, string>();
             ParagraphsWithoutStatuses = new List<int> { 0 };
+            ParagraphsWithoutStaticsButtons = new List<int> { 0 };
         }
 
         public virtual void LoadColor(string type, string color, bool button)
@@ -60,6 +63,14 @@ namespace Seeker.Prototypes
         {
             if (paragraphs != null)
                 ParagraphsWithoutStatuses = paragraphs.InnerText.Split(',').Select(x => int.Parse(x)).ToList();
+        }
+
+        public virtual List<int> GetParagraphsWithoutStaticsButtons() => ParagraphsWithoutStaticsButtons;
+
+        public virtual void LoadParagraphsWithoutStaticsButtons(XmlNode paragraphs)
+        {
+            if (paragraphs != null)
+                ParagraphsWithoutStaticsButtons = paragraphs.InnerText.Split(',').Select(x => int.Parse(x)).ToList();
         }
 
         public static string DefaultColor(Game.Data.ColorTypes type) => Output.Constants.DEFAULT_COLORS[type];

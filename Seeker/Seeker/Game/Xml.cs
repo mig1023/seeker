@@ -151,6 +151,9 @@ namespace Seeker.Game
 
             XmlNode withoutStatuses = xmlFile.SelectSingleNode("GameBook/Introduction/WithoutStatuses");
             Data.Constants.LoadParagraphsWithoutStatuses(withoutStatuses);
+
+            XmlNode withoutStaticsButtons = xmlFile.SelectSingleNode("GameBook/Introduction/WithoutStaticsButtons");
+            Data.Constants.LoadParagraphsWithoutStaticsButtons(withoutStaticsButtons);
         }
 
         public static void GetXmlDescriptionData(ref Description description)
