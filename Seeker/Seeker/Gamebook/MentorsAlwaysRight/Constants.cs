@@ -6,8 +6,6 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
     {
         public static Constants StaticInstance = new Constants();
 
-        public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 556, 557, 558, 559 };
-
         public static Dictionary<string, Character.SpecializationType> GetSpecializationType() =>
             new Dictionary<string, Character.SpecializationType>
         {
