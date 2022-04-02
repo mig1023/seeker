@@ -8,15 +8,13 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 556, 557, 558, 559 };
 
-        public static Dictionary<string, Character.SpecializationType> GetSpecializationType()
+        public static Dictionary<string, Character.SpecializationType> GetSpecializationType() =>
+            new Dictionary<string, Character.SpecializationType>
         {
-            return new Dictionary<string, Character.SpecializationType>
-            {
-                ["ВОИН"] = Character.SpecializationType.Warrior,
-                ["МАГ"] = Character.SpecializationType.Wizard,
-                ["МЕТАТЕЛЬ"] = Character.SpecializationType.Thrower,
-            };
-        }
+            ["ВОИН"] = Character.SpecializationType.Warrior,
+            ["МАГ"] = Character.SpecializationType.Wizard,
+            ["МЕТАТЕЛЬ"] = Character.SpecializationType.Thrower,
+        };
 
         public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
         {
