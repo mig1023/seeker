@@ -6,8 +6,6 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
     {
         public static Constants StaticInstance = new Constants();
 
-        public static List<int> GetParagraphsWithoutStaticsButtons() => new List<int> { 0, 30, 60, 90 };
-
         public static Dictionary<string, string> StatNames = new Dictionary<string, string>
         {
             ["Strength"] = "силы",
