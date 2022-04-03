@@ -11,6 +11,10 @@ namespace Seeker.Gamebook.Moonrunner
                 foreach (string skill in Constants.Skills())
                     Game.Option.Trigger(skill, remove: true);
             }
+            else if (Name == "GoldOffer")
+            {
+                Character.Protagonist.Gold -= Character.Protagonist.Offer;
+            }
             else
                 base.Do(Character.Protagonist);
         }

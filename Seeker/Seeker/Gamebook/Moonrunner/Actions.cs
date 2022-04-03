@@ -74,6 +74,9 @@ namespace Seeker.Gamebook.Moonrunner
 
                         if (oneOption.Contains("ЗОЛОТО >=") && (level > protagonist.Gold))
                             return false;
+
+                        if (oneOption.Contains("ПРЕДЛОЖЕНИЕ >=") && (level > protagonist.Offer))
+                            return false;
                     }
                     else if (oneOption.Contains("!"))
                     {

@@ -407,7 +407,7 @@
 			<Id>37</Id>
 			<Text>Вы показываете жадным негодяям деньги.\n\nНо устроит ли их эта сумма?</Text>
 			<Options>
-				<Option Destination="329" Text="Если в вашей руке 6 золотых или больше" OnlyIf="ЗОЛОТО >= 6"/>
+				<Option Destination="329" Text="Если в вашей руке 6 золотых или больше" OnlyIf="ПРЕДЛОЖЕНИЕ >= 6"/>
 				<Option Destination="26" Text="Если меньше"/>
 			</Options>
 		</Paragraph>
@@ -3381,9 +3381,8 @@
 		<Paragraph>
 			<Id>329</Id>
 			<Text>«Как вам будет угодно, босс» - ухмыляется один из палачей, выхватывая деньги из ваших рук. Но то, что происходит потом, довольно забавно – вместо того, чтобы разделить деньги, они начинаются драться за них!\n\nТеперь им точно не до вас.</Text>
-					<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
-				<Modification Name="Endurance" Value="-2"/>
+			<Modifications>
+				<Modification Name="GoldOffer"/>
 			</Modifications>
 			<Options>
 				<Option Destination="110"/>
