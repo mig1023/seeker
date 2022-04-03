@@ -20,6 +20,7 @@ namespace Seeker.Gamebook.Moonrunner
         public bool EnemyMasteryInc { get; set; }
         public bool DoubleFail { get; set; }
         public bool ThreeDiceAttack { get; set; }
+        public string Stat { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -92,6 +93,16 @@ namespace Seeker.Gamebook.Moonrunner
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
+            if (!String.IsNullOrEmpty(Stat))
+            {
+                int stat = GetProperty(protagonist, Stat);
+
+                if (secondButton)
+                    return (stat > 0);
+                else
+                    return (stat < protagonist.Gold);
+            }
+
             bool disabledSkillSlots = ThisIsSkill && (protagonist.SkillSlots < 1);
             bool disabledSkillAlready = ThisIsSkill && Game.Option.IsTriggered(Text);
 
@@ -107,10 +118,18 @@ namespace Seeker.Gamebook.Moonrunner
                 string gold = Game.Services.CoinsNoun(Price, "золотой", "золотых", "золотых");
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
             }
-            else if (ThisIsSkill)
+            else if (!String.IsNullOrEmpty(Stat))
             {
-                return new List<string> { Text };
+                int currentStat = GetProperty(protagonist, Stat);
+                string diffLine = String.Empty;
+
+                if (currentStat > 0)
+                    diffLine = String.Format(" (текущее: {0})", currentStat);
+
+                return new List<string> { String.Format("{0}{1}", Text, diffLine) };
             }
+            else if (ThisIsSkill)
+                return new List<string> { Text };
 
             if (Enemies == null)
                 return enemies;
@@ -152,12 +171,15 @@ namespace Seeker.Gamebook.Moonrunner
 
         public List<string> Get()
         {
-            if (ThisIsSkill && (protagonist.SkillSlots >= 1))
+            if (!String.IsNullOrEmpty(Stat))
+            {
+                SetProperty(protagonist, Stat, GetProperty(protagonist, Stat) + 1);
+            }
+            else if (ThisIsSkill && (protagonist.SkillSlots >= 1))
             {
                 Game.Option.Trigger(Text);
                 protagonist.SkillSlots -= 1;
             }
-
             else if ((Price > 0) && (protagonist.Gold >= Price))
             {
                 protagonist.Gold -= Price;
@@ -170,6 +192,8 @@ namespace Seeker.Gamebook.Moonrunner
 
             return new List<string> { "RELOAD" };
         }
+
+        public List<string> Decrease() => ChangeProtagonistParam(Stat, protagonist, String.Empty, decrease: true);
 
         public List<string> ThreeDice()
         {
