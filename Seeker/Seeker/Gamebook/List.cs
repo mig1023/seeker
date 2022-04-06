@@ -90,16 +90,15 @@ namespace Seeker.Gamebook
 
         public static Description GetDescription(string name)
         {
-            Description book = new Description();
-                
-            book.Links = Books[name];
-            book.Book = name;
-            book.Illustration = string.Format("{0}.jpg", name);
-            book.XmlBook = string.Format("Gamebooks/{0}.xml", name);
+            Description book = new Description
+            {
+                Links = Books[name],
+                Book = name,
+                Illustration = string.Format("{0}.jpg", name),
+                XmlBook = string.Format("Gamebooks/{0}.xml", name),
+            };
 
             Game.Xml.GetXmlDescriptionData(ref book);
-
-            Abstract.IConstants data = book.Links.Constants;
 
             return book;
         }

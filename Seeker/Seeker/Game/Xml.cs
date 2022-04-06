@@ -72,7 +72,6 @@ namespace Seeker.Game
                 else
                     textPlace.Children.Add(Interface.Text(texts));
             }
-                
         }
 
         public static List<Text> TextsParse(XmlNode xmlNode, bool aftertext = false)
