@@ -16,6 +16,7 @@
             <Color Type="System">#cebbaf</Color>
 		</Buttons>
 		<WithoutStatuses>0, 658, 659, 660</WithoutStatuses>
+		<ShowDisabledOption/>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>

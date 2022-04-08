@@ -21,8 +21,6 @@ namespace Seeker.Gamebook.DzungarWar
             ["Test"] = "Проверить",
         };
 
-        public override bool ShowDisabledOption() => true;
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
