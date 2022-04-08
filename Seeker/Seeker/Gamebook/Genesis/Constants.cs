@@ -13,8 +13,6 @@ namespace Seeker.Gamebook.Genesis
             ["Stealth"] = 3,
         };
 
-        public override bool ShowDisabledOption() => true;
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
