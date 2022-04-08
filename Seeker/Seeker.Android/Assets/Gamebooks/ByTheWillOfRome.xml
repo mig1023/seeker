@@ -11,6 +11,7 @@
             <Color Type="Action">#6d0101</Color>
             <Color Type="System">#d1b5b5</Color>
 		</Buttons>
+		<ShowDisabledOption/>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>

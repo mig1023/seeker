@@ -6,8 +6,6 @@ namespace Seeker.Gamebook.ByTheWillOfRome
     {
         public static Constants StaticInstance = new Constants();
 
-        public override bool ShowDisabledOption() => true;
-
         public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
         {
             ["Get"] = "Купить",
