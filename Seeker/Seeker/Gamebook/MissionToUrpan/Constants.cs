@@ -19,8 +19,6 @@ namespace Seeker.Gamebook.MissionToUrpan
             ["Лучший финал"] = 30,
         };
 
-        public override bool ShowDisabledOption() => true;
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
