@@ -12,6 +12,7 @@
 			<Color Type="Action">#7e0059</Color>
             <Color Type="System">#ddd1df</Color>
 		</Buttons>
+		<ShowDisabledOption/>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
@@ -28,6 +29,7 @@
 				<Option Destination="12" Text="Попытаетесь помочь Беннету"/>
 				<Option Destination="33" Text="Заглянете в ящик, где лежит золото и письмо"/>
 				<Option Destination="80" Text="Подбежите к окну"/>
+				<Option Destination="14" Text="TEST"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>

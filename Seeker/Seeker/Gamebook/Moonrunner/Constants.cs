@@ -35,8 +35,6 @@ namespace Seeker.Gamebook.Moonrunner
             ["Luck"] = "Проверить удачу",
         };
 
-        public override bool ShowDisabledOption() => true;
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
