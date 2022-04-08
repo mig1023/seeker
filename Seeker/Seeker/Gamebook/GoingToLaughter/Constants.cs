@@ -34,8 +34,6 @@ namespace Seeker.Gamebook.GoingToLaughter
             "Триумфатор", "Лютня", "Записная книжка", "Бревиарий",
         };
 
-        public override bool ShowDisabledOption() => true;
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
