@@ -12,6 +12,7 @@
             <Color Type="Font">#000000</Color>
             <Color Type="Continue">#fdeeba</Color>
 		</Buttons>
+		<ShowDisabledOption/>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
