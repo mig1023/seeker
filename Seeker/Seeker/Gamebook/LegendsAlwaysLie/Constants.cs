@@ -23,8 +23,6 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
 
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
 
-        public override bool ShowDisabledOption() => true;
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

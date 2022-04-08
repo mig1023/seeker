@@ -16,6 +16,7 @@
 		</Buttons>
 		<WithoutStatuses>0, 714, 715, 716</WithoutStatuses>
 		<WithoutStaticsButtons>0, 687, 714, 715, 701, 702</WithoutStaticsButtons>
+		<ShowDisabledOption/>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
