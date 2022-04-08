@@ -153,6 +153,9 @@ namespace Seeker.Game
 
             XmlNode withoutStaticsButtons = xmlFile.SelectSingleNode("GameBook/Introduction/WithoutStaticsButtons");
             Data.Constants.LoadParagraphsWithoutSomething(withoutStaticsButtons, staticButtons: true);
+
+            if (Xml.BoolParse(xmlFile.SelectSingleNode("GameBook/Introduction/ShowDisabledOption")))
+                Data.Constants.LoadEnabledDisabledOption();
         }
 
         public static void GetXmlDescriptionData(ref Description description)

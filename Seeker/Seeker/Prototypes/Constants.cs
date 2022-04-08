@@ -17,6 +17,8 @@ namespace Seeker.Prototypes
 
         private List<int> ParagraphsWithoutStaticsButtons = null;
 
+        private bool ShowDisabledOptionStatus = false;
+
         public virtual string GetColor(ButtonTypes type)
         {
             Dictionary<ButtonTypes, string> color = (Game.Settings.IsEnabled("WithoutStyles") ?
@@ -39,6 +41,7 @@ namespace Seeker.Prototypes
             ColorsList = new Dictionary<ColorTypes, string>();
             ParagraphsWithoutStatuses = new List<int> { 0 };
             ParagraphsWithoutStaticsButtons = new List<int> { 0 };
+            ShowDisabledOptionStatus = false;
         }
 
         public virtual void LoadColor(string type, string color, bool button)
@@ -82,7 +85,9 @@ namespace Seeker.Prototypes
 
         public virtual int? GetParagraphsStatusesLimit() => null;
 
-        public virtual bool ShowDisabledOption() => false;
+        public void LoadEnabledDisabledOption() => ShowDisabledOptionStatus = true;
+
+        public virtual bool ShowDisabledOption() => ShowDisabledOptionStatus;
 
         public virtual Dictionary<string, string> ButtonText() => new Dictionary<string, string>();
     }

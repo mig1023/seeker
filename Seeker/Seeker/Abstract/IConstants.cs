@@ -27,6 +27,8 @@ namespace Seeker.Abstract
 
         int? GetParagraphsStatusesLimit();
 
+        void LoadEnabledDisabledOption();
+
         bool ShowDisabledOption();
 
         Dictionary<string, string> ButtonText();
