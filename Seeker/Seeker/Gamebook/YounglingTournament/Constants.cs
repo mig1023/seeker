@@ -6,8 +6,6 @@ namespace Seeker.Gamebook.YounglingTournament
     {
         public static Constants StaticInstance = new Constants();
 
-        public override bool ShowDisabledOption() => true;
-
         public static int GetMaxTechniqueValue() => 4;
 
         public static Dictionary<Character.SwordTypes, string> SwordSkillsNames() => new Dictionary<Character.SwordTypes, string>
