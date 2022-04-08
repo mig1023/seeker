@@ -16,6 +16,7 @@
             <Color Type="System">#1f93c9</Color>
 		</Buttons>
 		<WithoutStatuses>0, 454, 455, 456, 457</WithoutStatuses>
+		<ShowDisabledOption/>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>

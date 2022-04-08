@@ -6,8 +6,6 @@ namespace Seeker.Gamebook.HeartOfIce
     {
         public static Constants StaticInstance = new Constants();
 
-        public override bool ShowDisabledOption() => true;
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
