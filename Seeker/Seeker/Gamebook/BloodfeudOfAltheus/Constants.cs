@@ -19,8 +19,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             ["Fight"] = "Сражаться",
         };
 
-        public override bool ShowDisabledOption() => true;
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
