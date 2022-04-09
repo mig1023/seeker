@@ -12,7 +12,7 @@
 			<Color Type="Action">#7e0059</Color>
             <Color Type="System">#ddd1df</Color>
 		</Buttons>
-		<ShowDisabledOption/>
+		<DisabledOption>Show</DisabledOption>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
