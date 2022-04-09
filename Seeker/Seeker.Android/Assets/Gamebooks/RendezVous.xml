@@ -16,6 +16,7 @@
             <Color Type="Continue">#FFFFFF</Color>
             <Color Type="System">#f4f4f4</Color>
 		</Buttons>
+		<DisabledOption>Hide</DisabledOption>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
