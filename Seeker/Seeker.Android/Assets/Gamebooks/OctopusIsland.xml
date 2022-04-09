@@ -10,6 +10,7 @@
             <Color Type="Option">#c93c20</Color>
             <Color Type="System">#eeeeee</Color>
 		</Buttons>
+		<DisabledOption>Hide</DisabledOption>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
