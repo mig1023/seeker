@@ -17,6 +17,7 @@
             <Color Type="System">#f4f4f4</Color>
 		</Buttons>
 		<WithoutStatuses>0, 266</WithoutStatuses>
+		<DisabledOption>Hide</DisabledOption>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
