@@ -10,6 +10,7 @@
 			<Color Type="Action">#005b5b</Color>
             <Color Type="Continue">#6fc5c5</Color>
 		</Buttons>
+		<DisabledOption>Hide</DisabledOption>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
