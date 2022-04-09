@@ -13,6 +13,7 @@
             <Color Type="System">#cde6e5</Color>
 		</Buttons>
 		<WithoutStatuses>0, 587, 588, 589</WithoutStatuses>
+		<DisabledOption>Hide</DisabledOption>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
