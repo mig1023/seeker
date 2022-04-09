@@ -16,7 +16,7 @@
             <Color Type="Font">#000000</Color>
 		</Buttons>
 		<WithoutStaticsButtons>0, 1</WithoutStaticsButtons>
-		<ShowDisabledOption/>
+		<DisabledOption>Show</DisabledOption>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
