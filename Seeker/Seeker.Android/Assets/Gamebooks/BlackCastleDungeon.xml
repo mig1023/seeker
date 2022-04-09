@@ -12,6 +12,7 @@
 		</Buttons>
 		<WithoutStatuses>0, 619</WithoutStatuses>
 		<WithoutStaticsButtons>0, 619</WithoutStaticsButtons>
+		<DisabledOption>Hide</DisabledOption>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
