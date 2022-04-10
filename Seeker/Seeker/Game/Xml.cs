@@ -142,7 +142,7 @@ namespace Seeker.Game
 
             Data.Constants.Clean();
 
-            foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Introduction/Buttons/Color"))
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Introduction/ButtonsStyles/Color"))
                 Data.Constants.LoadColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText, button: true);
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Introduction/Styles/Color"))
@@ -156,6 +156,9 @@ namespace Seeker.Game
 
             if (Xml.StringParse(xmlFile.SelectSingleNode("GameBook/Introduction/DisabledOption")) == "Show")
                 Data.Constants.LoadEnabledDisabledOption();
+
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Introduction/Buttons/Button"))
+                Data.Constants.LoadButtonText(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText);
         }
 
         public static void GetXmlDescriptionData(ref Description description)

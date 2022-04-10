@@ -13,6 +13,8 @@ namespace Seeker.Prototypes
 
         private Dictionary<ColorTypes, string> ColorsList = null;
 
+        private Dictionary<string, string> ButtonTextList = null;
+
         private List<int> ParagraphsWithoutStatuses = null;
 
         private List<int> ParagraphsWithoutStaticsButtons = null;
@@ -41,6 +43,7 @@ namespace Seeker.Prototypes
             ColorsList = new Dictionary<ColorTypes, string>();
             ParagraphsWithoutStatuses = new List<int> { 0 };
             ParagraphsWithoutStaticsButtons = new List<int> { 0 };
+            ButtonTextList = new Dictionary<string, string>();
             ShowDisabledOptionStatus = false;
         }
 
@@ -89,6 +92,8 @@ namespace Seeker.Prototypes
 
         public virtual bool ShowDisabledOption() => ShowDisabledOptionStatus;
 
-        public virtual Dictionary<string, string> ButtonText() => new Dictionary<string, string>();
+        public virtual Dictionary<string, string> ButtonText() => ButtonTextList;
+
+        public void LoadButtonText(string button, string text) => ButtonTextList.Add(button, text);
     }
 }
