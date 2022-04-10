@@ -6,11 +6,11 @@
             <Color Type="Font">#c3c6c8</Color>
             <Color Type="StatusFont">#ffffff</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#118984</Color>
             <Color Type="Continue">#5c6b7a</Color>
             <Color Type="System">#546270</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<DisabledOption>Hide</DisabledOption>
 	</Introduction>
 	<Paragraphs>
