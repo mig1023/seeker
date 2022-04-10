@@ -8,13 +8,13 @@
             <Color Type="ActionBox">#389fcf</Color>
             <Color Type="StatusBar">#5c7ca5</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#389fcf</Color>
 			<Color Type="Option">#6ab7db</Color>
 			<Color Type="Action">#0679b0</Color>
             <Color Type="Continue">#6ab7db</Color>
             <Color Type="System">#1f93c9</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<WithoutStatuses>0, 454, 455, 456, 457</WithoutStatuses>
 		<DisabledOption>Show</DisabledOption>
 	</Introduction>
