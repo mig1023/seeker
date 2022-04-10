@@ -4,6 +4,11 @@
 		<Buttons/>
 		<WithoutStaticsButtons>0, 1, 665</WithoutStaticsButtons>
 		<DisabledOption>Hide</DisabledOption>
+		<Buttons>
+			<Button Type="Fight">Сражаться</Button>
+			<Button Type="Luck">Проверить удачу</Button>
+			<Button Type="LuckRecovery">Восстановить 1 цифру удачи</Button>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>

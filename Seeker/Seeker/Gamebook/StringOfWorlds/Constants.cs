@@ -149,13 +149,6 @@ namespace Seeker.Gamebook.StringOfWorlds
             [16] = "❻",
         };
 
-        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
-        {
-            ["Fight"] = "Сражаться",
-            ["Luck"] = "Проверить удачу",
-            ["LuckRecovery"] = "Восстановить 1 цифру удачи",
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
