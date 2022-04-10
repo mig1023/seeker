@@ -6,11 +6,6 @@ namespace Seeker.Gamebook.ByTheWillOfRome
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
-        {
-            ["Get"] = "Купить",
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
