@@ -4,12 +4,12 @@
 		<Styles>
 			<Color Type="SystemFont">#8f8f8f</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#d8d8d8</Color>
 			<Color Type="Continue">#e7e7e7</Color>
 			<Color Type="System">#efefef</Color>
 			<Color Type="Font">#000000</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<DisabledOption>Hide</DisabledOption>
 	</Introduction>
 	<Paragraphs>
