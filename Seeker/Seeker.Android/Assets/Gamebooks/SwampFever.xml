@@ -8,14 +8,18 @@
             <Color Type="AdditionalStatus">#34411c</Color>
             <Color Type="AdditionalFont">#ffffff</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#5c6649</Color>
 			<Color Type="Action">#5a6546</Color>
             <Color Type="Option">#5c6649</Color>
             <Color Type="Continue">#8c937f</Color>
             <Color Type="System">#717963</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<DisabledOption>Hide</DisabledOption>
+		<Buttons>
+			<Button Type="Fight">Сражаться</Button>
+			<Button Type="MentalTest">Проверка</Button>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
