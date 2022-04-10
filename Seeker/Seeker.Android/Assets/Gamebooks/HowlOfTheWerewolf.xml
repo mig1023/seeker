@@ -7,14 +7,24 @@
             <Color Type="AdditionalStatus">#a8b7b8</Color>
             <Color Type="ActionBox">#a8b7b8</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#383e3b</Color>
 			<Color Type="Action">#516f72</Color>
             <Color Type="Option">#738b8e</Color>
             <Color Type="Continue">#738b8e</Color>
             <Color Type="System">#9dadaf</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<DisabledOption>Hide</DisabledOption>
+		<Buttons>
+			<Button Type="Fight">Сражаться</Button>
+			<Button Type="Luck">Проверить удачу</Button>
+			<Button Type="Dice">Кинуть кубик</Button>
+			<Button Type="DiceGold">Кинуть кубик</Button>
+			<Button Type="DiceAnxiety">Кинуть кубик</Button>
+			<Button Type="DiceWounds">Кинуть кубик</Button>
+			<Button Type="DicesRestore">Кинуть кубики</Button>
+			<Button Type="DicesEndurance">Кинуть кубики</Button>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>

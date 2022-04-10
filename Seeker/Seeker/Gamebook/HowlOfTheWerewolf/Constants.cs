@@ -23,18 +23,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             [3] = "второе окно",
         };
 
-        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
-        {
-            ["Fight"] = "Сражаться",
-            ["Luck"] = "Проверить удачу",
-            ["Dice"] = "Кинуть кубик",
-            ["DiceGold"] = "Кинуть кубик",
-            ["DiceAnxiety"] = "Кинуть кубик",
-            ["DiceWounds"] = "Кинуть кубик",
-            ["DicesRestore"] = "Кинуть кубики",
-            ["DicesEndurance"] = "Кинуть кубики",
-        };
-
         public static int GetUlrichMastery() => 8;
 
         public static int GetVanRichtenMastery() => 10;
