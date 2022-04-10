@@ -5,13 +5,13 @@
             <Color Type="StatusBar">#fce391</Color>
             <Color Type="StatusFont">#000000</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#fcdd76</Color>
 			<Color Type="Action">#fcdd76</Color>
             <Color Type="Option">#fcdd76</Color>
             <Color Type="Font">#000000</Color>
             <Color Type="Continue">#fdeeba</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<DisabledOption>Show</DisabledOption>
 	</Introduction>
 	<Paragraphs>
