@@ -20,17 +20,6 @@ namespace Seeker.Gamebook.YounglingTournament
             [Character.SwordTypes.JarKai] = "Джар-Кай",
         };
 
-        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
-        {
-            ["SwordFight"] = "Сражаться",
-            ["MixedFightAttack"] = "Сражаться",
-            ["FireFight"] = "Перестрелка",
-            ["ForceTest"] = "Пройти проверку",
-            ["SimpleDice"] = "Кинуть кубик",
-            ["DiceWounds"] = "Кинуть кубик",
-            ["EnemyDiceWounds"] = "Кинуть кубик",
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
