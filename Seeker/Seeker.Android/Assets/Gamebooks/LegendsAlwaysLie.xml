@@ -7,16 +7,21 @@
             <Color Type="AdditionalStatus">#b70b0b</Color>
             <Color Type="AdditionalFont">#ffffff</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#911</Color>
 			<Color Type="Action">#ba2020</Color>
             <Color Type="Option">#cc8888</Color>
             <Color Type="Continue">#cc8888</Color>
             <Color Type="System">#e6c5c5</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<WithoutStatuses>0, 714, 715, 716</WithoutStatuses>
 		<WithoutStaticsButtons>0, 687, 714, 715, 701, 702</WithoutStaticsButtons>
 		<DisabledOption>Show</DisabledOption>
+		<Buttons>
+			<Button Type="Fight">Сражаться</Button>
+			<Button Type="Reaction">Реагируйте</Button>
+			<Button Type="DiceWounds">Кинуть кубик</Button>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
