@@ -26,12 +26,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             [6] = 20
         };
 
-        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
-        {
-            ["Fight"] = "Сражаться",
-            ["Luck"] = "Проверить удачу",
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

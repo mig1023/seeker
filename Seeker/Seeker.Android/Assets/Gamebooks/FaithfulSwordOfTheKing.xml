@@ -4,15 +4,19 @@
 		<Styles>
             <Color Type="StatusBar">#870808</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#911</Color>
 			<Color Type="Action">#ba2020</Color>
             <Color Type="Option">#dbabab</Color>
             <Color Type="Continue">#dbabab</Color>
             <Color Type="System">#f0dddd</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<WithoutStatuses>0, 660</WithoutStatuses>
 		<DisabledOption>Hide</DisabledOption>
+		<Buttons>
+			<Button Type="Fight">Сражаться</Button>
+			<Button Type="Luck">Проверить удачу</Button>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
