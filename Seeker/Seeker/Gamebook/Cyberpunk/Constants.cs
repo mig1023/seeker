@@ -14,11 +14,6 @@ namespace Seeker.Gamebook.Cyberpunk
             ["Cybernetics"] = "Кибернетика",
         };
 
-        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
-        {
-            ["Test"] = "Пройти проверку",
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
