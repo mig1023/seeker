@@ -1,12 +1,12 @@
 <GameBook>
 	<Introduction>
 		<Title>Шериф</Title>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#7d2c1c</Color>
             <Color Type="Option">#b45b27</Color>
             <Color Type="Continue">#b45b27</Color>
             <Color Type="System">#f0d1b9</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<DisabledOption>Hide</DisabledOption>
 	</Introduction>
 	<Paragraphs>
