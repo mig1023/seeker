@@ -1,10 +1,10 @@
 <GameBook>
 	<Introduction>
 		<Title>В краю непуганных медведей</Title>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#9e003a</Color>
             <Color Type="System">#f9f9f9</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<DisabledOption>Hide</DisabledOption>
 	</Introduction>
 	<Paragraphs>
