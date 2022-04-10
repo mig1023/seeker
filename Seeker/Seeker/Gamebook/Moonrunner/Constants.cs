@@ -29,12 +29,6 @@ namespace Seeker.Gamebook.Moonrunner
             "Поиск следов",
         };
 
-        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
-        {
-            ["Fight"] = "Сражаться",
-            ["Luck"] = "Проверить удачу",
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
