@@ -8,15 +8,19 @@
             <Color Type="StatusBar">#72855c</Color>
             <Color Type="AdditionalStatus">#c8d8b5</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#a4be84</Color>
 			<Color Type="Continue">#cad9b7</Color>
 			<Color Type="Action">#72855c</Color>
             <Color Type="System">#e9efe2</Color>
             <Color Type="Font">#000000</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<WithoutStatuses>0, 102, 103</WithoutStatuses>
 		<DisabledOption>Hide</DisabledOption>
+		<Buttons>
+			<Button Type="Fight">Сражаться</Button>
+			<Button Type="Test">Проверить</Button>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
