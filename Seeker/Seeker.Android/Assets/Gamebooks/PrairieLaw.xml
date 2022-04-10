@@ -5,12 +5,15 @@
             <Color Type="StatusBar">#b85d43</Color>
             <Color Type="AdditionalStatus">#d69b8b</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#b66247</Color>
 			<Color Type="Action">#8f4445</Color>
             <Color Type="Option">#a04c4d</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<DisabledOption>Hide</DisabledOption>
+		<Buttons>
+			<Button Type="Fight">Сражаться</Button>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
