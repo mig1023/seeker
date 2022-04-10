@@ -7,7 +7,7 @@
             <Color Type="StatusFont">#000000</Color>
             <Color Type="StatusBorder">#000000</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#FFFFFF</Color>
 			<Color Type="Action">#FFFFFF</Color>
             <Color Type="Option">#FFFFFF</Color>
@@ -15,7 +15,7 @@
             <Color Type="Border">#000000</Color>
             <Color Type="Continue">#FFFFFF</Color>
             <Color Type="System">#f4f4f4</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<DisabledOption>Hide</DisabledOption>
 	</Introduction>
 	<Paragraphs>
