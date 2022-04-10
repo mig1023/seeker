@@ -4,13 +4,17 @@
 		<Styles>
             <Color Type="StatusBar">#ce4f36</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#c93c20</Color>
 			<Color Type="Action">#c93c20</Color>
             <Color Type="Option">#c93c20</Color>
             <Color Type="System">#eeeeee</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<DisabledOption>Hide</DisabledOption>
+		<Buttons>
+			<Button Type="Dinner">Пообедать</Button>
+			<Button Type="Fight">Сражаться</Button>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>

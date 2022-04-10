@@ -6,12 +6,6 @@ namespace Seeker.Gamebook.OctopusIsland
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
-        {
-            ["Dinner"] = "Пообедать",
-            ["Fight"] = "Сражаться",
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
