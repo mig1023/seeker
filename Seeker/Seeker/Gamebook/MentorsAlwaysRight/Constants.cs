@@ -14,12 +14,6 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             ["МЕТАТЕЛЬ"] = Character.SpecializationType.Thrower,
         };
 
-        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
-        {
-            ["Fight"] = "Сражаться",
-            ["Luck"] = "Проверить удачу",
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

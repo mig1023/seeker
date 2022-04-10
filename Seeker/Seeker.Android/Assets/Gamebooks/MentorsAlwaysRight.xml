@@ -8,16 +8,20 @@
             <Color Type="AdditionalStatus">#5e7092</Color>
             <Color Type="AdditionalFont">#ced4de</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#3662ae</Color>
 			<Color Type="Action">#203a68</Color>
             <Color Type="Option">#9ab0d6</Color>
             <Color Type="Continue">#9ab0d6</Color>
             <Color Type="System">#ccd7ea</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<WithoutStatuses>0, 556, 557, 558, 559</WithoutStatuses>
 		<WithoutStaticsButtons>0, 556, 557, 558, 559</WithoutStaticsButtons>
 		<DisabledOption>Hide</DisabledOption>
+		<Buttons>
+			<Button Type="Fight">Сражаться</Button>
+			<Button Type="Luck">Проверить удачу</Button>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
