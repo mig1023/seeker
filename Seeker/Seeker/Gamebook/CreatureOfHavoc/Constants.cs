@@ -6,12 +6,6 @@ namespace Seeker.Gamebook.CreatureOfHavoc
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Dictionary<string, string> ButtonText() => new Dictionary<string, string>
-        {
-            ["Fight"] = "Сражаться",
-            ["Luck"] = "Испытай удачу",
-        };
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

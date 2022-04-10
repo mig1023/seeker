@@ -5,14 +5,18 @@
             <Color Type="Background">#c9d7d0</Color>
             <Color Type="StatusBar">#0e3b24</Color>
 		</Styles>
-		<Buttons>
+		<ButtonsStyles>
 			<Color Type="Main">#145334</Color>
 			<Color Type="Action">#104229</Color>
             <Color Type="Option">#42755c</Color>
             <Color Type="Continue">#7d9188</Color>
             <Color Type="System">#9db6aa</Color>
-		</Buttons>
+		</ButtonsStyles>
 		<DisabledOption>Hide</DisabledOption>
+		<Buttons>
+			<Button Type="Fight">Сражаться</Button>
+			<Button Type="Luck">Испытай удачу</Button>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
