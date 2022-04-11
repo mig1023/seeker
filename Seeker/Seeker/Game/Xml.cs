@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml;
 using Seeker.Gamebook;
 using Seeker.Output;
@@ -158,7 +159,12 @@ namespace Seeker.Game
                 Data.Constants.LoadEnabledDisabledOption();
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Introduction/Buttons/Button"))
-                Data.Constants.LoadButtonText(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText);
+            {
+                List<string> types = xmlNode.Attributes["Type"].InnerText.Split(',').Select(x => x.Trim()).ToList();
+
+                foreach (string type in types)
+                    Data.Constants.LoadButtonText(type, xmlNode.InnerText);
+            }
         }
 
         public static void GetXmlDescriptionData(ref Description description)
