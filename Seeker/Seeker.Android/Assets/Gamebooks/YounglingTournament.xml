@@ -14,13 +14,10 @@
 		</ButtonsStyles>
 		<DisabledOption>Show</DisabledOption>
 		<Buttons>
-			<Button Type="SwordFight">Сражаться</Button>
-			<Button Type="MixedFightAttack">Сражаться</Button>
+			<Button Type="SwordFight, MixedFightAttack">Сражаться</Button>
 			<Button Type="FireFight">Перестрелка</Button>
 			<Button Type="ForceTest">Пройти проверку</Button>
-			<Button Type="SimpleDice">Кинуть куби</Button>
-			<Button Type="DiceWounds">Кинуть куби</Button>
-			<Button Type="EnemyDiceWounds">Кинуть куби</Button>
+			<Button Type="SimpleDice, DiceWounds, EnemyDiceWounds">Кинуть кубик</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
