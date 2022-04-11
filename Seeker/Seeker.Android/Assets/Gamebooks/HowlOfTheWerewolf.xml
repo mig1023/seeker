@@ -18,12 +18,7 @@
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
 			<Button Type="Luck">Проверить удачу</Button>
-			<Button Type="Dice">Кинуть кубик</Button>
-			<Button Type="DiceGold">Кинуть кубик</Button>
-			<Button Type="DiceAnxiety">Кинуть кубик</Button>
-			<Button Type="DiceWounds">Кинуть кубик</Button>
-			<Button Type="DicesRestore">Кинуть кубики</Button>
-			<Button Type="DicesEndurance">Кинуть кубики</Button>
+			<Button Type="Dice, DiceGold, DiceAnxiety, DiceWounds, DicesRestore, DicesEndurance">Кинуть кубик</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
