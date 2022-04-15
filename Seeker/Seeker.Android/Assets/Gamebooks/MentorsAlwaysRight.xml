@@ -15,8 +15,10 @@
             <Color Type="Continue">#9ab0d6</Color>
             <Color Type="System">#ccd7ea</Color>
 		</ButtonsStyles>
-		<WithoutStatuses>0, 556, 557, 558, 559</WithoutStatuses>
-		<WithoutStaticsButtons>0, 556, 557, 558, 559</WithoutStaticsButtons>
+		<Paragraphs>
+			<List Type="WithoutStatuses">0, 556, 557, 558, 559</List>
+			<List Type="WithoutStaticsButtons">0, 556, 557, 558, 559</List>
+		</Paragraphs>
 		<DisabledOption>Hide</DisabledOption>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
