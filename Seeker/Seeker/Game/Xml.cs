@@ -149,12 +149,6 @@ namespace Seeker.Game
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Introduction/Styles/Color"))
                 Data.Constants.LoadColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText);
 
-            XmlNode withoutStatuses = xmlFile.SelectSingleNode("GameBook/Introduction/WithoutStatuses");
-            Data.Constants.LoadParagraphsWithoutSomething(withoutStatuses);
-
-            XmlNode withoutStaticsButtons = xmlFile.SelectSingleNode("GameBook/Introduction/WithoutStaticsButtons");
-            Data.Constants.LoadParagraphsWithoutSomething(withoutStaticsButtons, staticButtons: true);
-
             if (Xml.StringParse(xmlFile.SelectSingleNode("GameBook/Introduction/DisabledOption")) == "Show")
                 Data.Constants.LoadEnabledDisabledOption();
 
@@ -165,6 +159,9 @@ namespace Seeker.Game
                 foreach (string type in types)
                     Data.Constants.LoadButtonText(type, xmlNode.InnerText);
             }
+
+            Data.Constants.LoadParagraphsWithoutSomething(xmlFile, "WithoutStatuses");
+            Data.Constants.LoadParagraphsWithoutSomething(xmlFile, "WithoutStaticsButtons");
         }
 
         public static void GetXmlDescriptionData(ref Description description)

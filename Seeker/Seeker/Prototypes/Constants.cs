@@ -67,16 +67,20 @@ namespace Seeker.Prototypes
 
         public virtual List<int> GetParagraphsWithoutStaticsButtons() => ParagraphsWithoutStaticsButtons;
 
-        public virtual void LoadParagraphsWithoutSomething(XmlNode paragraphs, bool staticButtons = false)
+        public virtual void LoadParagraphsWithoutSomething(XmlDocument xmlFile, string type)
         {
+            string nodeName = String.Format("GameBook/Introduction/Paragraphs/List[@Type='{0}']", type);
+            XmlNode paragraphs = xmlFile.SelectSingleNode(nodeName);
+
             if (paragraphs == null)
                 return;
 
             List<int> something = paragraphs.InnerText.Split(',').Select(x => int.Parse(x)).ToList();
 
-            if (staticButtons)
+            if (type == "WithoutStaticsButtons")
                 ParagraphsWithoutStaticsButtons = something;
-            else
+
+            else if (type == "WithoutStatuses")
                 ParagraphsWithoutStatuses = something;
         }
 
