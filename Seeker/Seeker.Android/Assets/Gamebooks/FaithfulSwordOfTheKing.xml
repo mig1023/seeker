@@ -11,7 +11,9 @@
             <Color Type="Continue">#dbabab</Color>
             <Color Type="System">#f0dddd</Color>
 		</ButtonsStyles>
-		<WithoutStatuses>0, 660</WithoutStatuses>
+		<Paragraphs>
+			<List Type="WithoutStatuses">0, 660</List>
+		</Paragraphs>
 		<DisabledOption>Hide</DisabledOption>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
