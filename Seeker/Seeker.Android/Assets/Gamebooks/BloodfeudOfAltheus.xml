@@ -15,7 +15,9 @@
             <Color Type="Continue">#f5ead9</Color>
             <Color Type="Font">#000000</Color>
 		</ButtonsStyles>
-		<WithoutStaticsButtons>0, 1</WithoutStaticsButtons>
+		<Paragraphs>
+			<List Type="WithoutStaticsButtons">0, 1</List>
+		</Paragraphs>
 		<DisabledOption>Show</DisabledOption>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
