@@ -2,7 +2,9 @@
 	<Introduction>
 		<Title>Вереница миров или выводы из закона Мэрфи</Title>
 		<Buttons/>
-		<WithoutStaticsButtons>0, 1, 665</WithoutStaticsButtons>
+		<Paragraphs>
+			<List Type="WithoutStaticsButtons">0, 1, 665</List>
+		</Paragraphs>
 		<DisabledOption>Hide</DisabledOption>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
