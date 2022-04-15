@@ -14,8 +14,10 @@
             <Color Type="Continue">#8dbd6e</Color>
             <Color Type="System">#c7dfb9</Color>
 		</ButtonsStyles>
-		<WithoutStatuses>0, 205</WithoutStatuses>
-		<WithoutStaticsButtons>0, 30, 60, 90</WithoutStaticsButtons>
+		<Paragraphs>
+			<List Type="WithoutStatuses">0, 205</List>
+			<List Type="WithoutStaticsButtons">0, 30, 60, 90</List>
+		</Paragraphs>
 		<DisabledOption>Hide</DisabledOption>
 		<Buttons>
 			<Button Type="Test">Проверить</Button>
