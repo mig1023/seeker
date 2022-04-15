@@ -12,7 +12,9 @@
             <Color Type="Continue">#db8784</Color>
             <Color Type="System">#f2f2f2</Color>
 		</ButtonsStyles>
-		<WithoutStatuses>0, 904, 905, 906</WithoutStatuses>
+		<Paragraphs>
+			<List Type="WithoutStatuses">0, 904, 905, 906</List>
+		</Paragraphs>
 		<DisabledOption>Hide</DisabledOption>
 	</Introduction>
 	<Paragraphs>
