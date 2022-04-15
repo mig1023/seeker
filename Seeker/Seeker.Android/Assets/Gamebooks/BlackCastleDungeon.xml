@@ -10,8 +10,10 @@
             <Color Type="Option">#696969</Color>
             <Color Type="System">#f9f9f9</Color>
 		</ButtonsStyles>
-		<WithoutStatuses>0, 619</WithoutStatuses>
-		<WithoutStaticsButtons>0, 619</WithoutStaticsButtons>
+		<Paragraphs>
+			<List Type="WithoutStatuses">0, 619</List>
+			<List Type="WithoutStaticsButtons">0, 619</List>
+		</Paragraphs>
 		<DisabledOption>Hide</DisabledOption>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
