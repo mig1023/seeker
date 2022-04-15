@@ -16,7 +16,9 @@
             <Color Type="Continue">#FFFFFF</Color>
             <Color Type="System">#f4f4f4</Color>
 		</ButtonsStyles>
-		<WithoutStatuses>0, 266</WithoutStatuses>
+		<Paragraphs>
+			<List Type="WithoutStatuses">0, 266</List>
+		</Paragraphs>
 		<DisabledOption>Hide</DisabledOption>
 		<Buttons>
 			<Button Type="Fight">Перестрелка</Button>
