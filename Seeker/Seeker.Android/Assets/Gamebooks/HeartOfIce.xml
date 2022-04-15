@@ -15,7 +15,9 @@
             <Color Type="Continue">#6ab7db</Color>
             <Color Type="System">#1f93c9</Color>
 		</ButtonsStyles>
-		<WithoutStatuses>0, 454, 455, 456, 457</WithoutStatuses>
+		<Paragraphs>
+			<List Type="WithoutStatuses">0, 454, 455, 456, 457</List>
+		</Paragraphs>
 		<DisabledOption>Show</DisabledOption>
 	</Introduction>
 	<Paragraphs>
