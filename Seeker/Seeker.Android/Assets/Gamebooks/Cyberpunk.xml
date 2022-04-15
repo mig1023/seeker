@@ -12,7 +12,9 @@
             <Color Type="Continue">#84c2bf</Color>
             <Color Type="System">#cde6e5</Color>
 		</ButtonsStyles>
-		<WithoutStatuses>0, 587, 588, 589</WithoutStatuses>
+		<Paragraphs>
+			<List Type="WithoutStatuses">0, 587, 588, 589</List>
+		</Paragraphs>
 		<DisabledOption>Hide</DisabledOption>
 		<Buttons>
 			<Button Type="Test">Пройти проверку</Button>
