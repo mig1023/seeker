@@ -3700,7 +3700,7 @@
 			<Text>Навыки меткости, рукопашного боя и стелса индивидуальны для каждого маршала. Они зависят от его умений, увлечений, специализации и других факторов «предыдущей жизни». Все маршалы индивидуальны и с разной эффективностью и стилем выполняют работу. Поэтому пять очков опыта вы можете распределить между последними тремя параметрами на свое усмотрение:</Text>
 			<Actions>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Увеличить, Уменьшить</Button>
 					<Text>МЕТКОСТЬ</Text>
 					<Bonus>Accuracy</Bonus>
@@ -3709,7 +3709,7 @@
 					</Aftertexts>
 				</Action>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Увеличить, Уменьшить</Button>
 					<Text>РУКОПАШНЫЙ БОЙ</Text>
 					<Bonus>Fight</Bonus>
@@ -3718,7 +3718,7 @@
 					</Aftertexts>
 				</Action>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Увеличить, Уменьшить</Button>
 					<Text>СТЕЛС</Text>
 					<Bonus>Stealth</Bonus>
