@@ -92,7 +92,7 @@ namespace Seeker.Prototypes
 
         public virtual int? GetParagraphsStatusesLimit() => null;
 
-        public void LoadEnabledDisabledOption() => ShowDisabledOptionStatus = true;
+        public void LoadEnabledDisabledOption(string option) => ShowDisabledOptionStatus = (option == "Show");
 
         public virtual bool ShowDisabledOption() => ShowDisabledOptionStatus;
 
