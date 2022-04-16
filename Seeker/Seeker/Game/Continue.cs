@@ -25,11 +25,11 @@ namespace Seeker.Game
 
         public static void Save()
         {
-            string triggers = String.Join(",", Game.Data.Triggers);
+            string triggers = String.Join(",", Data.Triggers);
             string healing = Healing.Save();
-            int paragraph = Game.Data.CurrentParagraphID;
-            string character = Game.Data.Save();
-            string path = String.Join(",", Game.Data.Path);
+            int paragraph = Data.CurrentParagraphID;
+            string character = Data.Save();
+            string path = String.Join(",", Data.Path);
 
             App.Current.Properties[CurrentGameName] =
                 String.Format("{0}@{1}@{2}@{3}@{4}", paragraph, triggers, healing, character, path);
@@ -41,15 +41,15 @@ namespace Seeker.Game
 
             string[] save = saveLine.Split('@');
 
-            Game.Data.CurrentParagraphID = int.Parse(save[0]);
-            Game.Data.Triggers = save[1].Split(',').ToList();
+            Data.CurrentParagraphID = int.Parse(save[0]);
+            Data.Triggers = save[1].Split(',').ToList();
 
             Healing.Load(save[2]);
-            Game.Data.Load(save[3]);
+            Data.Load(save[3]);
 
-            Game.Data.Path = save[4].Split(',').ToList();
+            Data.Path = save[4].Split(',').ToList();
 
-            return Game.Data.CurrentParagraphID;
+            return Data.CurrentParagraphID;
         }
 
         public static void Remove() => App.Current.Properties.Remove(CurrentGameName);

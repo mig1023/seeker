@@ -65,7 +65,7 @@ namespace Seeker.Output
             {
                 Placeholder = "Введите свой ответ",
                 BindingContext = binding,
-                FontFamily = Output.Interface.TextFontFamily(),
+                FontFamily = Interface.TextFontFamily(),
             };
 
             field.TextChanged += changed;

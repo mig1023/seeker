@@ -46,7 +46,7 @@ namespace Seeker.Game
             foreach (Healing currentHealing in HealingList.Where(x => x.Name == healingName[0].Trim()))
             {
                 currentHealing.Portion -= 1;
-                Game.Data.Actions.UseHealing(currentHealing.Level);
+                Data.Actions.UseHealing(currentHealing.Level);
                 return;
             }
         }
@@ -55,7 +55,7 @@ namespace Seeker.Game
         {
             List<string> allHealing = new List<string>();
 
-            if (!Game.Data.Actions.IsHealingEnabled())
+            if (!Data.Actions.IsHealingEnabled())
                 return allHealing;
 
             foreach (Healing currentHealing in HealingList.Where(x => x.Portion > 0))

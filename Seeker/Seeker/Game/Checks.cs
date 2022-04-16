@@ -6,8 +6,8 @@ namespace Seeker.Game
     {
         public static bool ExistsInParagraph(string actionName = "", string actionText = "", string optionText = "")
         {
-            if (Game.Data.CurrentParagraph.Actions != null)
-                foreach (Abstract.IActions action in Game.Data.CurrentParagraph.Actions)
+            if (Data.CurrentParagraph.Actions != null)
+                foreach (Abstract.IActions action in Data.CurrentParagraph.Actions)
                 {
                     if (!String.IsNullOrEmpty(actionName) && action.Name.ToUpper().Contains(actionName.ToUpper()))
                         return true;
@@ -16,8 +16,8 @@ namespace Seeker.Game
                         return true;
                 }
 
-            if (Game.Data.CurrentParagraph.Options != null)
-                foreach (Option option in Game.Data.CurrentParagraph.Options)
+            if (Data.CurrentParagraph.Options != null)
+                foreach (Option option in Data.CurrentParagraph.Options)
                     if (!String.IsNullOrEmpty(optionText) && option.Text.ToUpper().Contains(optionText.ToUpper()))
                         return true;
 

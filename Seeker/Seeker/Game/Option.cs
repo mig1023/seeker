@@ -24,11 +24,11 @@ namespace Seeker.Game
 
             foreach (string trigger in triggerList)
                 if (remove)
-                    Game.Data.Triggers.RemoveAll(x => x == trigger.Trim());
+                    Data.Triggers.RemoveAll(x => x == trigger.Trim());
                 else
-                    Game.Data.Triggers.Add(trigger.Trim());
+                    Data.Triggers.Add(trigger.Trim());
         }
 
-        public static bool IsTriggered(string trigger) => Game.Data.Triggers.Contains(trigger);
+        public static bool IsTriggered(string trigger) => Data.Triggers.Contains(trigger);
     }
 }
