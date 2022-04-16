@@ -18,7 +18,7 @@
 		<Paragraphs>
 			<List Type="WithoutStatuses">0, 658, 659, 660</List>
 		</Paragraphs>
-		<DisabledOption>Show</DisabledOption>
+		<DisabledOption Value="Show"/>
 		<Buttons>
 			<Button Type="Test">Проверить</Button>
 		</Buttons>
