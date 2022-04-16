@@ -7,7 +7,7 @@
             <Color Type="Continue">#9a9a9a</Color>
             <Color Type="System">#d6d6d6</Color>
 		</ButtonsStyles>
-		<DisabledOption>Hide</DisabledOption>
+		<DisabledOption Value="Hide"/>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
