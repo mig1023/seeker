@@ -11,7 +11,7 @@
             <Color Type="Continue">#5c6b7a</Color>
             <Color Type="System">#546270</Color>
 		</ButtonsStyles>
-		<DisabledOption>Hide</DisabledOption>
+		<DisabledOption Value="Hide"/>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
