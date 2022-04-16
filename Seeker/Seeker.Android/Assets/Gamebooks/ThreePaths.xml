@@ -2112,21 +2112,21 @@
 			<Text>Уважаемый Читатель!\n\nПоскольку герой этого приключения - Ученик Мага, в своих странствиях он может пользоваться заклинаниями. Хаген умеет творить:</Text>
 			<Actions>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Выбрать, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ ПОЗНАНИЯ</Text>
 					<ThisIsSpell/>
 					<Aftertext>Это заклинание, будучи наложено на любой объект, открывает вам его истинную сущность. Особенно рекомендуется использовать в случае, если вы подозреваете, что видимая вами картина - лишь иллюзия.</Aftertext>
 				</Action>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Выбрать, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ МОЛНИИ</Text>
 					<ThisIsSpell/>
 					<Aftertext>Произнёсший это заклинание чародей бросает во врага молнию. Это отличное оружие, которое обладает и деморализующим воздействием на противника.</Aftertext>
 				</Action>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Выбрать, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ ПАРАЛИЧА</Text>
 					<ThisIsSpell/>
