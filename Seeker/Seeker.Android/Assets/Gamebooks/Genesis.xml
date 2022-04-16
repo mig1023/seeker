@@ -2005,7 +2005,7 @@
 			</Texts>
 			<Actions>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Увеличить, Уменьшить</Button>
 					<Text>ЛОВКОСТЬ</Text>
 					<Bonus>Skill</Bonus>
@@ -2014,7 +2014,7 @@
 					</Aftertexts>
 				</Action>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Увеличить, Уменьшить</Button>
 					<Text>ХОЛОДНОЕ ОРУЖИЕ</Text>
 					<Bonus>Weapon</Bonus>
@@ -2023,7 +2023,7 @@
 					</Aftertexts>
 				</Action>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Увеличить, Уменьшить</Button>
 					<Text>СТЕЛС</Text>
 					<Bonus>Stealth</Bonus>
