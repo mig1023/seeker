@@ -510,7 +510,7 @@
 			</Texts>
 			<Actions>
 				<Action>
-					<Name>Result</Name>
+					<Type>Result</Type>
 					<Button>Подсчитать</Button>
 					<Aftertext>Максимальный результат равен 100 (при условии достижении финала обозначенного как «Конец»).\n\nКаков ваш итоговый результат при первом прохождении?</Aftertext>
 				</Action>
