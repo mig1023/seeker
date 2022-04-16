@@ -5576,9 +5576,9 @@
 				<Text Font="Bold">Выберите, какой из параметров будем иметь МАКСИМАЛЬНОЕ значение:</Text>
 			</Texts>
 			<Options>
-				<Option Destination="589" Text="Планирование" OnlyIf="ПЛАНИРОВАНИЕ &lt;= 0" Do="Planning" Value="20"/>
-				<Option Destination="589" Text="Подготовка" OnlyIf="ПОДГОТОВКА &lt;= 0" Do="Preparation" Value="20"/>
-				<Option Destination="589" Text="Везение" OnlyIf="ВЕЗЕНИЕ &lt;= 0" Do="Luck" Value="20"/>
+				<Option Destination="589" Text="Планирование" OnlyIf="ПЛАНИРОВАНИЕ &lt;= 0" Do="Planning" Value="40"/>
+				<Option Destination="589" Text="Подготовка" OnlyIf="ПОДГОТОВКА &lt;= 0" Do="Preparation" Value="40"/>
+				<Option Destination="589" Text="Везение" OnlyIf="ВЕЗЕНИЕ &lt;= 0" Do="Luck" Value="40"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
