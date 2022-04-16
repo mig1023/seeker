@@ -18,7 +18,7 @@
 		<Paragraphs>
 			<List Type="WithoutStaticsButtons">0, 1</List>
 		</Paragraphs>
-		<DisabledOption>Show</DisabledOption>
+		<DisabledOption Value="Show"/>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
 		</Buttons>
