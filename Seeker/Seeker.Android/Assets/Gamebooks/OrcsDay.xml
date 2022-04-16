@@ -18,7 +18,7 @@
 		<Paragraphs>
 			<List Type="WithoutStatuses">0, 102, 103</List>
 		</Paragraphs>
-		<DisabledOption>Hide</DisabledOption>
+		<DisabledOption Value="Hide"/>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
 			<Button Type="Test">Проверить</Button>
