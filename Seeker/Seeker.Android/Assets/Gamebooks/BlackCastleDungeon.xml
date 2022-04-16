@@ -76,7 +76,7 @@
 			<Text>Сражаться с двумя Дровосеками вам придется одновременно. Вы можете воспользоваться заклятием Копии. </Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ДРОВОСЕК" Mastery="5" Endurance="4"/>
 						<Enemy Name="ВТОРОЙ ДРОВОСЕК" Mastery="6" Endurance="7"/>
@@ -162,7 +162,7 @@
 			<Id>14</Id>
 			<Actions>
 				<Action>
-					<Name>Luck</Name>
+					<Type>Luck</Type>
 				</Action>
 			</Actions>
 			<Options>
@@ -189,7 +189,7 @@
 			</Texts>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПЕРВАЯ ЛЕТУЧАЯ МЫШЬ" Mastery="6" Endurance="8"/>
 						<Enemy Name="ВТОРАЯ ЛЕТУЧАЯ МЫШЬ" Mastery="5" Endurance="7"/>
@@ -375,18 +375,18 @@
 			<Text>Вы входите внутрь и понимаете, что попали на Заставу, поставленную здесь специально для того, чтобы не пропускать таких, как вы. Орк-часовой бросается на вас так стремительно, что вы не успеваете применить заклятия, и вам приходится драться с ним.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ОРК" Mastery="6" Endurance="8"/>
 					</Enemies>
 					<Aftertext>Если вы убили его, то сделали это как раз вовремя: из погреба с бутылкой вина поднимается Гоблин. Увидев вас, он бросает бутылку и хватается за боевой топор.</Aftertext>
 				</Action>
 				<Action>
-					<Name>Option</Name>
+					<Type>Option</Type>
 					<Option Destination="143" Text="Попробовать убежать"/>
 				</Action>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ГОБЛИН" Mastery="7" Endurance="5"/>
 					</Enemies>
@@ -427,7 +427,7 @@
 			</Texts>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ДРАКОН" Mastery="9" Endurance="4"/>
 					</Enemies>
@@ -465,7 +465,7 @@
 			<Text>Вам придется драться с ними одновременно, но вы можете воспользоваться заклятием Копии.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ГОБЛИН" Mastery="6" Endurance="9"/>
 						<Enemy Name="ВТОРОЙ ГОБЛИН" Mastery="7" Endurance="5"/>
@@ -483,7 +483,7 @@
 			<Text>Огонь прижигает Дракону отлетевшую голову — она больше не отрастет. Вы же продолжаете бой.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ДРАКОН" Mastery="9" Endurance="4"/>
 					</Enemies>
@@ -608,16 +608,16 @@
 			<Text>Вы взбираетесь наверх, но на полпути вдруг понимаете, что странно знакомая веревочная лестница напоминает… гигантскую паутину! В ужасе вы начинаете спускаться, но поздно. То, что казалось вам логовом или гнездом, оказывается брюхом гигантского паука, и он быстро-быстро начинает подтягивать вас к себе.</Text>
 			<Actions>
 				<Action>
-					<Name>Luck</Name>
+					<Type>Luck</Type>
 				</Action>
 				<Action>
-					<Name>Option</Name>
+					<Type>Option</Type>
 					<Option Destination="558" Text="Если вы удачливы">
 						<Text>Если вы не удачливы, то паук затягивает вас на дерево, и вам приходится драться с ним. Во время боя уменьшайте вашу СИЛУ УДАРА на 1. Ведь вы не слишком-то привыкли драться на деревьях. Пользоваться заклятием Огня на дереве неразумно. Копии же просто негде будет поместиться. Однако вы можете воспользоваться заклятиями либо Силы, либо Слабости.</Text>
 					</Option>
 				</Action>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="8" Endurance="8"/>
 					</Enemies>
@@ -712,7 +712,7 @@
 			<Text>Начальник стражи не успевает даже открыть рот, как вы накидываетесь на него с мечом. Но будьте осторожны: ведь Орки в соседней комнате не глухие. Вы можете воспользоваться заклятием Копии. </Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="НАЧАЛЬНИК СТРАЖИ" Mastery="9" Endurance="5"/>
 					</Enemies>
@@ -942,7 +942,7 @@
 			<Text>Вы просите накормить вас. Повар соглашается, но требует за это плату 2 золотых. Если согласны, то отдайте ему деньги, и он нальет вам тарелку горячих щей.</Text>
 			<Actions>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Заплатить</Button>
 					<Text>ТАРЕЛКА ЩЕЙ</Text>
 					<Price>2</Price>
@@ -967,7 +967,7 @@
 			<Text>Заклятия вам не помогут: она слишком искусная колдунья, чтобы ее можно было удивить иллюзией или копией.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ЖЕНЩИНА-ВАМПИР" Mastery="11" Endurance="14"/>
 					</Enemies>
@@ -1008,7 +1008,7 @@
 			<Text>Вы решаете идти по дороге дальше, не обращая внимания на ощущение опасности, исходящее от этого узкого прохода. Но вскоре понимаете, что иногда все же стоит доверять своим предчувствиям. Послышался шум обвала, и с вершин обоих холмов вниз начинают катиться огромные валуны. Но откуда они там взялись? Вы готовы поклясться, что еще несколько минут назад их там не было. Так и есть: это ловушка! Теперь остается надеяться только на свою удачливость.</Text>
 			<Actions>
 				<Action>
-					<Name>Luck</Name>
+					<Type>Luck</Type>
 				</Action>
 			</Actions>
 			<Options>
@@ -1054,7 +1054,7 @@
 			<Text>Перед вами широкая полноводная река с быстрым течением. Дорога пересекает ее по небольшому прочному мосту, но у моста охрана. Это Гоблин — один из воинов бесчисленной армии Черного замка. Размахивая ятаганом, он приближается к вам. Вы столкнулись с ним настолько неожиданно, что времени наложить заклятие уже нет и выход лишь один: драться.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ГОБЛИН" Mastery="8" Endurance="9"/>
 					</Enemies>
@@ -1117,7 +1117,7 @@
 			<Id>109</Id>
 			<Actions>
 				<Action>
-					<Name>Luck</Name>
+					<Type>Luck</Type>
 				</Action>
 			</Actions>
 			<Options>
@@ -1152,11 +1152,11 @@
 			<Text>Вы накладываете заклятие Огня, и мгновенно появившийся в воздухе огненный шар ударяет в грудь Первого рыцаря, не ожидавшего от вас такого коварства. Огонь прожигает толстые латы и достигает цели: корчась от боли, рыцарь падает с лошади. Теперь перед вами только один противник, а времени на новые заклятия уже нет. Если вы деретесь с ним стоя на земле, вычитайте 1 из своей СИЛЫ УДАРА. Если же вы хотите драться с ним на равных, то:</Text>
 			<Actions>
 				<Action>
-					<Name>Luck</Name>
+					<Type>Luck</Type>
 					<Aftertext>Если вы удачливы, то вам удается оседлать коня Первого рыцаря, и ваша СИЛА УДАРА не изменяется, если же нет — драться все же придется, стоя на земле.</Aftertext>
 				</Action>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 					</Enemies>
@@ -1259,7 +1259,7 @@
 			<Text>Вы внезапно обнажаете меч и наносите удар ближайшему разбойнику. Вам удается ранить его, но драться придется все равно одновременно со всеми тремя. Если хотите, воспользуйтесь заклятием Копии.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ РАЗБОЙНИК" Mastery="6" Endurance="4"/>
 						<Enemy Name="ВТОРОЙ РАЗБОЙНИК" Mastery="7" Endurance="8"/>
@@ -1734,7 +1734,7 @@
 			<Text>Вы не ошиблись — этот человек торговец, обосновавшийся в лесу не так давно. По его словам, опасностей вокруг нет никаких, все это сказки да слухи, распускаемые теми, кому хочется прослыть героями, побывав в самом обычном лесу. Он предлагает вам свои товары:</Text>
 			<Actions>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить</Button>
 					<Text>ЯБЛОКО</Text>
 					<Price>1</Price>
@@ -1743,7 +1743,7 @@
 					<Aftertext>Добавит 1 ВЫНОСЛИВОСТЬ</Aftertext>
 				</Action>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить</Button>
 					<Text>МАНДАРИН</Text>
 					<Price>2</Price>
@@ -1752,7 +1752,7 @@
 					<Aftertext>Добавит 2 ВЫНОСЛИВОСТИ</Aftertext>
 				</Action>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить</Button>
 					<Text>АПЕЛЬСИН</Text>
 					<Price>1</Price>
@@ -1761,7 +1761,7 @@
 					<Aftertext>Добавит 1 ВЫНОСЛИВОСТЬ</Aftertext>
 				</Action>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить</Button>
 					<Trigger>Banana</Trigger>
 					<Text>БАНАН</Text>
@@ -1771,7 +1771,7 @@
 					<Aftertext>Добавит 2 ВЫНОСЛИВОСТИ</Aftertext>
 				</Action>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить</Button>
 					<Text>МОЛОКО</Text>
 					<Price>2</Price>
@@ -1779,7 +1779,7 @@
 					<Aftertext>Прибавит 3 ВЫНОСЛИВОСТИ.\n\nЗа 4 золотых он предлагает наполнить вашу флягу целиком:</Aftertext>
 				</Action>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Наполнить флягу целиком</Button>
 					<Text>ВОДА</Text>
 					<Price>4</Price>
@@ -1787,7 +1787,7 @@
 					<Aftertext>или за 2 — наполовину:</Aftertext>
 				</Action>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Наполнить флягу наполовину</Button>
 					<Text>ВОДА</Text>
 					<Price>2</Price>
@@ -1858,7 +1858,7 @@
 			<Text>Вам придется не только драться сразу с обоими Зелеными рыцарями, но и вычитать 1 из своей СИЛЫ УДАРА, поскольку вы стоите на земле, а они атакуют вас сверху, с коней.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 						<Enemy Name="ВТОРОЙ ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
@@ -1957,7 +1957,7 @@
 			<Text>Берег охраняется: как только вы достигаете его, из кустов выскакивает Гоблин и, размахивая саблей, бросается на вас. Воспользоваться заклятиями уже не успеваете.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ГОБЛИН" Mastery="7" Endurance="9"/>
 					</Enemies>
@@ -2118,7 +2118,7 @@
 			<Text>Купите еду (за каждую порцию рыбы ценой в 1 золотой вы можете восстановить 2 ВЫНОСЛИВОСТИ).</Text>
 			<Actions>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить порцию</Button>
 					<Text>РЫБА</Text>
 					<Price>1</Price>
@@ -2179,7 +2179,7 @@
 			<Text>Обезьяна угрожающе рычит и надвигается на вас. Вы выбираете бой.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ОБЕЗЬЯНА" Mastery="9" Endurance="14"/>
 					</Enemies>
@@ -2211,7 +2211,7 @@
 			<Text>Вы подходите к сторожке, но не успеваете заглянуть в окно, как на пороге появляется пьяный Гоблин. Он застывает, увидев вас, и хочет крикнуть, чтобы позвать остальных.</Text>
 			<Actions>
 				<Action>
-					<Name>Luck</Name>
+					<Type>Luck</Type>
 				</Action>
 			</Actions>
 			<Options>
@@ -2224,7 +2224,7 @@
 			<Text>Вы накладываете заклятие Слабости и начинаете бой. Не забудьте вычитать 1 из своей СИЛЫ УДАРА.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="5" Endurance="8"/>
 					</Enemies>
@@ -2446,7 +2446,7 @@
 			<Text>Вы входите в комнату. Как только переступаете порог, одежда на вешалке начинает шевелиться, и через несколько секунд появляется кошмарный Призрак. Он похож на живого мертвеца: остекленевшие глаза, бессмысленное лицо, рот, из которого вывалились все зубы, а синий распухший язык высунут наружу. Он идет на вас безоружный, но его правая рука рассекает воздух как меч. Придется драться с ним. Заклятия не помогут — Призрак не боится их.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПРИЗРАК" Mastery="10" Endurance="9"/>
 					</Enemies>
@@ -2465,7 +2465,7 @@
 			<Text>Решив не доверять подозрительным лесным указателям, вы сворачиваете налево, но уже через несколько метров Можете пожалеть о своем выборе. С быстротой молнии откуда-то сверху на вас набрасывается гигантский паук. Наложить какое-либо заклятие, кроме заклятия Копии, уже некогда. Можете, если хотите воспользоваться им — бой предстоит нелегкий.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПАУК" Mastery="8" Endurance="8"/>
 					</Enemies>
@@ -2576,13 +2576,13 @@
 			<Text>Вы стучите молотком по двери, и выходит привратник — огромный лев, закованный в латы. </Text>
 			<Actions>
 				<Action>
-					<Name>Option</Name>
+					<Type>Option</Type>
 					<Option Destination="565" Text="Знаете пароль">
 						<Text>Если вы не знаете пароль, то придется пробиваться с помощью своего меча.</Text>
 					</Option>
 				</Action>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ЛЕВ" Mastery="9" Endurance="15"/>
 					</Enemies>
@@ -2661,7 +2661,7 @@
 			<Text>Ну что ж, деритесь.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ГИЕНА" Mastery="6" Endurance="6"/>
 					</Enemies>
@@ -2882,7 +2882,7 @@
 			<Text>Вы накладываете заклятие Огня, и огненный шар попадает в грудь первого Гоблина. Один из противников мертв, но остается еще второй. Если хотите, воспользуйтесь заклятием Копии, и выясните, кто же победит. </Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ГОБЛИН" Mastery="6" Endurance="9"/>
 					</Enemies>
@@ -2917,7 +2917,7 @@
 			<Text>Барлад Дэрт смотрит на ваше оторопевшее лицо, потом начинает хохотать. Это длится довольно долго, и вам начинает надоедать затянувшаяся пауза. Неужели ничего нельзя сделать? В отчаянии вы бросаетесь на волшебника с голыми руками. Он настолько не ожидает этого, что даже не успевает встать из-за стола, но уже через несколько мгновений как рыба выскальзывает из ваших рук. «Ну, что ж, — говорит он задумчиво, — придется тебя проучить. Я буду драться с тобой». В руках у него оказывается меч, клинок которого светится в полутьме кабинета.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="БАРЛАД ДЭРТ" Mastery="14" Endurance="12"/>
 					</Enemies>
@@ -2991,15 +2991,15 @@
 			<Text>Узкая длинная комната переходит в широкую парадную лестницу, поднимающуюся наверх. У подножия лестницы четыре больших деревянных кресла: три слева и одно справа. Резная спинка правого кресла украшена большой золотой короной. В креслах — Зеленые рыцари. На них нет ни шлемов, ни тяжелых лат, только легкие панцири и мантии с вышитым на них силуэтом Черного замка. Рыцарь, сидящий в кресле с короной, — Капитан Зеленых рыцарей. Он указывает на вас двум другим. Они встают с кресел и медленно приближаются к вам. С лязгом, от которого холодеет кровь, мечи вылетают из ножен. Сердце учащенно бьется: вы понимаете, что наконец-то добрались до сердца цитадели. Если вам нечего противопоставить безмолвной страже, то придется драться. Капитан обезвредит любое ваше заклятие, можно даже и не пытаться их использовать. Вам придется сражаться с ними одновременной.</Text>
 			<Actions>
 				<Action>
-					<Name>Option</Name>
+					<Type>Option</Type>
 					<Option Destination="170" Text="Есть Оберег" OnlyIf="Amulet"/>
 				</Action>
 				<Action>
-					<Name>Option</Name>
+					<Type>Option</Type>
 					<Option Destination="606" Text="Есть серебряный сосуд" OnlyIf="SilverVessel"/>
 				</Action>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 						<Enemy Name="ВТОРОЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
@@ -3007,14 +3007,14 @@
 					<Aftertext>А через 6 раундов атаки к ним присоединится еще один рыцарь.</Aftertext>
 				</Action>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ТРЕТИЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 					</Enemies>
 					<Aftertext>Когда вы победите двух рыцарей, в дело вступит Капитан.</Aftertext>
 				</Action>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="КАПИТАН РЫЦАРЕЙ" Mastery="12" Endurance="12"/>
 					</Enemies>
@@ -3089,7 +3089,7 @@
 			</Texts>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 					</Enemies>
@@ -3171,7 +3171,7 @@
 			</Texts>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ДРАКОН" Mastery="12" Endurance="8"/>
 					</Enemies>
@@ -3266,13 +3266,13 @@
 			<Text>Если хотите, во время боя можете покинуть таверну и бежать.</Text>
 			<Actions>
 				<Action>
-					<Name>Option</Name>
+					<Type>Option</Type>
 					<Option Destination="504" Text="Покинуть таверну и бежать">
 						<Text>Воспользоваться же заклятием Копии вам не удастся: Водяной этого не допустит.</Text>
 					</Option>
 				</Action>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ВОДЯНОЙ" Mastery="7" Endurance="7"/>
 					</Enemies>
@@ -3297,7 +3297,7 @@
 			<Text>Пока Орки не успели понять, в чем дело, вы нападаете на них. Сражаться с ними придется одновременно. Если хотите, можете воспользоваться заклятием Копии.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ОРК" Mastery="8" Endurance="5"/>
 						<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="7"/>
@@ -3556,7 +3556,7 @@
 			<Text>Вы без предупреждения нападаете на Тролля. Хозяин винного погреба без труда развеет ваши заклятия, поэтому драться с ним придется, надеясь только на себя и на свой меч.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ТРОЛЛЬ" Mastery="9" Endurance="14"/>
 					</Enemies>
@@ -3713,7 +3713,7 @@
 			<Text>Они атакуют вас одновременно.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ЧЕЛОВЕК" Mastery="8" Endurance="5"/>
 						<Enemy Name="ВТОРОЙ ЧЕЛОВЕК" Mastery="6" Endurance="9"/>
@@ -3946,7 +3946,7 @@
 			<Id>401</Id>
 			<Actions>
 				<Action>
-					<Name>Luck</Name>
+					<Type>Luck</Type>
 				</Action>
 			</Actions>
 			<Options>
@@ -4088,7 +4088,7 @@
 			<Id>415</Id>
 			<Actions>
 				<Action>
-					<Name>Luck</Name>
+					<Type>Luck</Type>
 				</Action>
 			</Actions>
 			<Options>
@@ -4223,7 +4223,7 @@
 			<Text>Оборотень говорит вам, что если идти все время прямо, можно достигнуть ворот Черного замка, и скрывается в лесу. Вы продолжаете свой путь по дороге, как вдруг огромное дерево со зловещим треском наклоняется и…</Text>
 			<Actions>
 				<Action>
-					<Name>Luck</Name>
+					<Type>Luck</Type>
 					<Aftertext>Если вы не удачливы, то дерево падает прямо на вас раньше, чем вы успеваете понять, что происходит. Доверчивость сослужила вам плохую службу. Вы забыли, что лес наводнен шпионами злого волшебника и попались на удочку одного из них. Ваше путешествие закончено.</Aftertext>
 				</Action>
 			</Actions>
@@ -4381,7 +4381,7 @@
 			<Text>Крестьянин говорит, что и сам может вам продать еду, и приглашает к себе домой. Однако вы не решаетесь заходить в хату, и он выносит во двор то, что может предложить. Тут вас ожидает сразу два сюрприза. Во-первых, еда совсем не такая, какую вы ожидали встретить в деревне. Крестьянин принес:</Text>
 			<Actions>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить</Button>
 					<Text>АНАНАС</Text>
 					<Price>2</Price>
@@ -4390,7 +4390,7 @@
 					<Aftertext>Добавит 3 ВЫНОСЛИВОСТЬ.</Aftertext>
 				</Action>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить</Button>
 					<Trigger>Banana</Trigger>
 					<Text>БАНАН</Text>
@@ -4400,39 +4400,39 @@
 					<Aftertext>Добавит 2 ВЫНОСЛИВОСТИ.\n\nНо он притащил еще и кучу вещей, которые, как он считает, могут пригодиться в дороге.</Aftertext>
 				</Action>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить</Button>
 					<Text>КРАСИВЫЙ КУСОЧЕК ДЕРЕВА</Text>
 					<Price>1</Price>
 				</Action>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить</Button>
 					<Trigger>CurlyKey</Trigger>
 					<Text>ФИГУРНЫЙ КЛЮЧ</Text>
 					<Price>2</Price>
 				</Action>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить</Button>
 					<Text>ПОПОНА ДЛЯ ЛОШАДИ</Text>
 					<Price>5</Price>
 				</Action>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить</Button>
 					<Trigger>PieceOfMetal</Trigger>
 					<Text>БЛЕСТЯЩИЙ КУСОК МЕТАЛЛА</Text>
 					<Price>3</Price>
 				</Action>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить</Button>
 					<Text>СДЕЛАННУЮ ИЗ ЗОЛОТА УСТРИЦУ</Text>
 					<Price>8</Price>
 				</Action>
 				<Action>
-					<Name>Get</Name>
+					<Type>Get</Type>
 					<Button>Купить</Button>
 					<Trigger>SilverBracelet</Trigger>
 					<Text>СЕРЕБРЯНЫЙ БРАСЛЕТ</Text>
@@ -4641,7 +4641,7 @@
 			<Text>Осторожно приближаетесь к хрустальной кровати с правой стороны и склоняетесь над Принцессой. Но в этот момент чувствуете, как в ногу вонзается что-то острое. Это металлический шип, которого вы не заметили.</Text>
 			<Actions>
 				<Action>
-					<Name>Luck</Name>
+					<Type>Luck</Type>
 				</Action>
 			</Actions>
 			<Options>
@@ -4788,14 +4788,14 @@
 			<Text>Первым нападает Орк с мечом, который расспрашивал вас. Если хотите, воспользуйтесь заклятием Копии.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ОРК" Mastery="10" Endurance="6"/>
 					</Enemies>
 					<Aftertext>Если убили его за три раунда атаки, то сражайтесь с двумя остальными. Если же нет, то через три раунда оставшиеся два Орка приходят на помощь своему предводителю, и вам придется биться с тремя сразу.</Aftertext>
 				</Action>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="7"/>
 						<Enemy Name="ТРЕТИЙ ОРК" Mastery="7" Endurance="7"/>
@@ -4833,7 +4833,7 @@
 			<Id>491</Id>
 			<Actions>
 				<Action>
-					<Name>Luck</Name>
+					<Type>Luck</Type>
 				</Action>
 			</Actions>
 			<Options>
@@ -4909,7 +4909,7 @@
 			<Text>Вы накладываете заклятие Огня, и возникший в воздухе огненный шар испепеляет расспрашивавшего вас Орка. Остаются двое: один в ужасе убегает в лес, бросив у ворот оружие, а второй принимает ваш вызов. </Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ОРК" Mastery="7" Endurance="7"/>
 					</Enemies>
@@ -5088,7 +5088,7 @@
 			<Text>Вы обнажаете меч и кидаетесь в бой.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ТОРГОВЕЦ" Mastery="6" Endurance="12"/>
 					</Enemies>
@@ -5190,7 +5190,7 @@
 			<Text>Вы быстро догоняете волка, который снова становится человеком и готовится к бою. В руках у него появляется меч. Вы можете воспользоваться только заклятием Копии, все остальные заклятия Оборотень без труда развеет.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ОБОРОТЕНЬ" Mastery="10" Endurance="10"/>
 					</Enemies>
@@ -5207,7 +5207,7 @@
 			<Text>Вы можете воспользоваться заклятием Силы, увеличив на 2 свою СИЛУ УДАРА, или заклятием Слабости, уменьшив на 2 СИЛУ УДАРА медведицы, а также заклятием Копии.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="МЕДВЕДИЦА" Mastery="8" Endurance="10"/>
 					</Enemies>
@@ -5238,17 +5238,17 @@
 			<Text>Вы открываете дверь и видите, что у входа на этаж стоит охрана — два здоровенных Гоблина с зазубренными мечами. Если у вас есть пропуск, предъявите его, иначе придется драться.</Text>
 			<Actions>
 				<Action>
-					<Name>Option</Name>
+					<Type>Option</Type>
 					<Option Destination="552" Text="Предъявить пропуск" OnlyIf="Pass"/>
 				</Action>
 				<Action>
-					<Name>Option</Name>
+					<Type>Option</Type>
 					<Option Destination="592" Text="Воспользоваться латами" OnlyIf="GreenArmour">
 						<Text>Если вы пользуетесь заклятием Силы, увеличьте на 2 свою СИЛУ УДАРА, если заклятием Слабости, уменьшите на 2 СИЛУ УДАРА любого из Гоблинов. Можете также воспользоваться заклятием Копии.</Text>
 					</Option>
 				</Action>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ГОБЛИН" Mastery="8" Endurance="10"/>
 						<Enemy Name="ВТОРОЙ ГОБЛИН" Mastery="6" Endurance="8"/>
@@ -5316,14 +5316,14 @@
 			<Text>Гоблин успевает позвать на помощь. Вам же приходится обнажать меч и драться.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ГОБЛИН" Mastery="4" Endurance="7"/>
 					</Enemies>
 					<Aftertext>Как только вы убиваете Гоблина, из дома появляется еще один. Он менее пьян и будет не столь легким противником.</Aftertext>
 				</Action>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ВТОРОЙ ГОБЛИН" Mastery="8" Endurance="9"/>
 					</Enemies>
@@ -5367,7 +5367,7 @@
 			<Text>Вы можете наложить какое-нибудь заклятие или сразиться с рыцарем без помощи магии.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="11" Endurance="14"/>
 					</Enemies>
@@ -5455,7 +5455,7 @@
 			<Text>Первое, что вам бросается в глаза — огромный письменный стол посреди комнаты. Он весь завален большими свитками, в которых без труда можно узнать карты. Волшебник готовит нашествие на королевство — вы пришли как нельзя вовремя. За столом — невысокий усталого вида человек, который оторвал взгляд от бумаг и смотрит на вас. Неужели это и есть всемогущий маг? Но вы-то его представляли себе совсем другим. Барлад Дэрт терпеливо смотрит некоторое время, потом щелкает пальцами, как бы совершая привычное и давно уже надоевшее ему действие. Он обращает внимание на вас внимания не больше, чем на надоедливую муху. После этого чародей вновь погружается в работу. А к вам приближается одна из фигур, стоявшая на постаменте в углу комнаты — вы сначала приняли ее за скульптуру. Но колдовство оживило ее: к вам подходит отвратительная Гарпия — полуженщина-полуптица. Вам придется драться с ней, надеясь только на себя да на заклятие Копии, если оно у вас есть. Вы можете также избавиться от Гарпии, кинув ей зеркальце (опять же, если оно у вас есть). Тогда она станет наслаждаться своим отражением и оставит вас в покое.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ГАРПИЯ" Mastery="10" Endurance="12"/>
 					</Enemies>
@@ -5501,7 +5501,7 @@
 			<Text>Вам удается перерубить лестницу мечом и спрыгнуть на землю. Конечно, Паук погонится за вами, но теперь вы будете драться на равных, используя либо заклятие Силы, которое позволит вам прибавить 2 к вашей СИЛЕ УДАРА, либо заклятие Слабости, которое позволит вычитать 2 из СИЛЫ УДАРА гигантского Паука, либо заклятие Копии.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="8" Endurance="8"/>
 					</Enemies>
@@ -5549,7 +5549,7 @@
 			<Text>Вы достаете меч и кидаетесь на Лесовичка. Он немало удивлен, но готов дать отпор и вынимает свой меч, который вам кажется кинжалом.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ЛЕСОВИЧОК" Mastery="6" Endurance="8"/>
 					</Enemies>
@@ -5592,7 +5592,7 @@
 			<Text>Вы можете воспользоваться заклятием Силы, Слабости, Огня или просто атаковать Зеленого рыцаря, надеясь только на себя.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 					</Enemies>
@@ -5618,18 +5618,18 @@
 			<Text>Вооруженный мечом Орк, который расспрашивал вас, принимает на себя первый удар (можете использовать заклятие Копии).</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ОРК" Mastery="10" Endurance="6"/>
 					</Enemies>
 					<Aftertext>Если вы убили его за три раунда атаки, то сражайтесь с двумя остальными. Если же нет, то через три раунда они приходят на помощь своему предводителю, и вам придется биться с тремя сразу. После того как первый Орк все же будет повержен, если хотите:</Aftertext>
 				</Action>
 				<Action>
-					<Name>Luck</Name>
+					<Type>Luck</Type>
 					<Aftertext>Если вы удачливы, то остальные Орки не захотят умирать, защищая ворота, и убегут в лес. Если же нет, то придется драться со всеми.</Aftertext>
 				</Action>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="7"/>
 						<Enemy Name="ТРЕТИЙ ОРК" Mastery="7" Endurance="7"/>
@@ -5738,7 +5738,7 @@
 			<Text>Вы накладываете заклятие Слабости и начинаете бой. Сражаться с обоими Гоблинами вам придется одновременно, так что можете воспользоваться еще и заклятием Копии.</Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ГОБЛИН" Mastery="4" Endurance="9"/>
 						<Enemy Name="ВТОРОЙ ГОБЛИН" Mastery="7" Endurance="5"/>
@@ -5948,7 +5948,7 @@
 			<Text>Вы достаете меч и внезапно наносите удар ближайшему поваренку. Он падает замертво. Потом поворачиваетесь к повару. </Text>
 			<Actions>
 				<Action>
-					<Name>Fight</Name>
+					<Type>Fight</Type>
 					<Enemies>
 						<Enemy Name="ПОВАР" Mastery="8" Endurance="10"/>
 					</Enemies>
@@ -6073,7 +6073,7 @@
 			<Text>Как и положено в сказках, путешествие начинается перед королевским дворцом. Узнав, зачем вы пришли, стражники провожают вас в Тронный зал, и вы предстаете перед Королем. Обрадованный тем, что есть еще в его королевстве герои, готовые рискнуть даже своей жизнью ради его дочери, он отправляет вас к придворному астрологу и волшебнику, лучшему в королевстве знатоку Белой магии — Майлину. Ведь вам придется сражаться не только с воинами, но и со злыми духами — без волшебства в дороге не обойтись.\n\nОднако даже Майлин не может предвидеть всего могущества Барлада Дэрта, да и времени на учебу у вас совсем мало. Он лишь успевает научить вас самым необходимым заклятиям и дать несколько советов. Вот заклятия, которые вы изучили:</Text>
 			<Actions>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Добавить, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ ЛЕВИТАЦИИ</Text>
 					<ThisIsSpell/>
@@ -6082,7 +6082,7 @@
 					</Aftertexts>
 				</Action>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Добавить, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ ОГНЯ</Text>
 					<ThisIsSpell/>
@@ -6091,7 +6091,7 @@
 					</Aftertexts>
 				</Action>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Добавить, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ ИЛЛЮЗИИ</Text>
 					<ThisIsSpell/>
@@ -6100,7 +6100,7 @@
 					</Aftertexts>
 				</Action>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Добавить, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ СИЛЫ</Text>
 					<ThisIsSpell/>
@@ -6109,7 +6109,7 @@
 					</Aftertexts>
 				</Action>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Добавить, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ СЛАБОСТИ</Text>
 					<ThisIsSpell/>
@@ -6118,7 +6118,7 @@
 					</Aftertexts>
 				</Action>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Добавить, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ КОПИИ</Text>
 					<ThisIsSpell/>
@@ -6127,7 +6127,7 @@
 					</Aftertexts>
 				</Action>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Добавить, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ</Text>
 					<ThisIsSpell/>
@@ -6136,7 +6136,7 @@
 					</Aftertexts>
 				</Action>
 				<Action>
-					<Name>Get, Decrease</Name>
+					<Type>Get, Decrease</Type>
 					<Button>Добавить, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ ПЛАВАНИЯ</Text>
 					<ThisIsSpell/>
