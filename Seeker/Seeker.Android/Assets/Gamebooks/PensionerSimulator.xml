@@ -5,7 +5,7 @@
 			<Color Type="Main">#030436</Color>
             <Color Type="Option">#35365e</Color>
 		</ButtonsStyles>
-		<DisabledOption>Hide</DisabledOption>
+		<DisabledOption Value="Hide"/>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
