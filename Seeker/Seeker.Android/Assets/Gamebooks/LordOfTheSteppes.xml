@@ -15,7 +15,7 @@
 		<Paragraphs>
 			<List Type="WithoutStatuses">0, 904, 905, 906</List>
 		</Paragraphs>
-		<DisabledOption>Hide</DisabledOption>
+		<DisabledOption Value="Hide"/>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
