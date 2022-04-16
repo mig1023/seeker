@@ -11,7 +11,7 @@
             <Color Type="Action">#6d0101</Color>
             <Color Type="System">#d1b5b5</Color>
 		</ButtonsStyles>
-		<DisabledOption>Show</DisabledOption>
+		<DisabledOption Value="Show"/>
 		<Buttons>
 			<Button Type="Get">Купить</Button>
 		</Buttons>
