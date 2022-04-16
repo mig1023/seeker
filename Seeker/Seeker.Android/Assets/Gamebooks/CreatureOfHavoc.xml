@@ -12,7 +12,7 @@
             <Color Type="Continue">#7d9188</Color>
             <Color Type="System">#9db6aa</Color>
 		</ButtonsStyles>
-		<DisabledOption>Hide</DisabledOption>
+		<DisabledOption Value="Hide"/>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
 			<Button Type="Luck">Испытай удачу</Button>
