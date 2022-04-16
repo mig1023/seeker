@@ -15,7 +15,7 @@
 		<Paragraphs>
 			<List Type="WithoutStatuses">0, 587, 588, 589</List>
 		</Paragraphs>
-		<DisabledOption>Hide</DisabledOption>
+		<DisabledOption Value="Hide"/>
 		<Buttons>
 			<Button Type="Test">Пройти проверку</Button>
 		</Buttons>
