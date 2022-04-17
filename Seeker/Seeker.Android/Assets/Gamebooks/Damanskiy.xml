@@ -10,7 +10,9 @@
 			<Color Type="System">#efefef</Color>
 			<Color Type="Font">#000000</Color>
 		</ButtonsStyles>
-		<DisabledOption Value="Hide"/>
+		<Settings>
+			<DisabledOption Value="Hide"/>
+		</Settings>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
