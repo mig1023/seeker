@@ -18,7 +18,9 @@
 			<List Type="WithoutStatuses">0, 205</List>
 			<List Type="WithoutStaticsButtons">0, 30, 60, 90</List>
 		</Paragraphs>
-		<DisabledOption Value="Hide"/>
+		<Settings>
+			<DisabledOption Value="Hide"/>
+		</Settings>
 		<Buttons>
 			<Button Type="Test">Проверить</Button>
 		</Buttons>
