@@ -19,7 +19,9 @@
 			<List Type="WithoutStatuses">0, 556, 557, 558, 559</List>
 			<List Type="WithoutStaticsButtons">0, 556, 557, 558, 559</List>
 		</Paragraphs>
-		<DisabledOption Value="Hide"/>
+		<Settings>
+			<DisabledOption Value="Hide"/>
+		</Settings>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
 			<Button Type="Luck">Проверить удачу</Button>
