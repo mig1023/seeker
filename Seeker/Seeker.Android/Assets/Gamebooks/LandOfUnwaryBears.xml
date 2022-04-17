@@ -5,7 +5,9 @@
 			<Color Type="Main">#9e003a</Color>
             <Color Type="System">#f9f9f9</Color>
 		</ButtonsStyles>
-		<DisabledOption Value="Hide"/>
+		<Settings>
+			<DisabledOption Value="Hide"/>
+		</Settings>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
