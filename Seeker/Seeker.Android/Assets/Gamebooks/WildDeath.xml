@@ -6,7 +6,9 @@
             <Color Type="Continue">#b6c095</Color>
             <Color Type="System">#cbd2b4</Color>
 		</ButtonsStyles>
-		<DisabledOption Value="Hide"/>
+		<Settings>
+			<DisabledOption Value="Hide"/>
+		</Settings>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
