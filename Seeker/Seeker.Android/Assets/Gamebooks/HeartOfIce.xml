@@ -18,7 +18,9 @@
 		<Paragraphs>
 			<List Type="WithoutStatuses">0, 454, 455, 456, 457</List>
 		</Paragraphs>
-		<DisabledOption Value="Show"/>
+		<Settings>
+			<DisabledOption Value="Show"/>
+		</Settings>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
