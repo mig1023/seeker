@@ -14,7 +14,9 @@
             <Color Type="Continue">#738b8e</Color>
             <Color Type="System">#9dadaf</Color>
 		</ButtonsStyles>
-		<DisabledOption Value="Hide"/>
+		<Settings>
+			<DisabledOption Value="Hide"/>
+		</Settings>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
 			<Button Type="Luck">Проверить удачу</Button>
