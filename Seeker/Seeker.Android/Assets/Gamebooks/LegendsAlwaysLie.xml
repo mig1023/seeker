@@ -18,7 +18,9 @@
 			<List Type="WithoutStatuses">0, 714, 715, 716</List>
 			<List Type="WithoutStaticsButtons">0, 687, 714, 715, 701, 702</List>
 		</Paragraphs>
-		<DisabledOption Value="Show"/>
+		<Settings>
+			<DisabledOption Value="Show"/>
+		</Settings>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
 			<Button Type="Reaction">Реагируйте</Button>
