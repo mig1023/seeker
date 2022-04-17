@@ -5,7 +5,9 @@
 		<Paragraphs>
 			<List Type="WithoutStaticsButtons">0, 1, 665</List>
 		</Paragraphs>
-		<DisabledOption Value="Hide"/>
+		<Settings>
+			<DisabledOption Value="Hide"/>
+		</Settings>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
 			<Button Type="Luck">Проверить удачу</Button>
