@@ -149,7 +149,7 @@ namespace Seeker.Game
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Styles/Color")))
                 Data.Constants.LoadColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText);
 
-            string dasbledOption = Xml.StringParse(xmlFile.SelectSingleNode(Intro("DisabledOption")).Attributes["Value"]);
+            string dasbledOption = Xml.StringParse(xmlFile.SelectSingleNode(Intro("Settings/DisabledOption")).Attributes["Value"]);
             Data.Constants.LoadEnabledDisabledOption(dasbledOption);
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Buttons/Button")))
