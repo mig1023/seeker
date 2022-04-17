@@ -12,7 +12,9 @@
 			<Color Type="Action">#c0a23b</Color>
             <Color Type="System">#f9f9f9</Color>
 		</ButtonsStyles>
-		<DisabledOption Value="Show"/>
+		<Settings>
+			<DisabledOption Value="Show"/>
+		</Settings>
 		<Buttons>
 			<Button Type="SwordFight, MixedFightAttack">Сражаться</Button>
 			<Button Type="FireFight">Перестрелка</Button>
