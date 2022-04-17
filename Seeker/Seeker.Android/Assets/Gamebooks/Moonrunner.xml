@@ -12,7 +12,9 @@
 			<Color Type="Action">#7e0059</Color>
             <Color Type="System">#ddd1df</Color>
 		</ButtonsStyles>
-		<DisabledOption Value="Show"/>
+		<Settings>
+			<DisabledOption Value="Show"/>
+		</Settings>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
 			<Button Type="Luck">Проверить удачу</Button>
