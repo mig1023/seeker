@@ -15,7 +15,9 @@
             <Color Type="Continue">#8c937f</Color>
             <Color Type="System">#717963</Color>
 		</ButtonsStyles>
-		<DisabledOption Value="Hide"/>
+		<Settings>
+			<DisabledOption Value="Hide"/>
+		</Settings>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
 			<Button Type="MentalTest">Проверка</Button>
