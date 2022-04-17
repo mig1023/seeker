@@ -10,7 +10,9 @@
 			<Color Type="Action">#8f4445</Color>
             <Color Type="Option">#a04c4d</Color>
 		</ButtonsStyles>
-		<DisabledOption Value="Hide"/>
+		<Settings>
+			<DisabledOption Value="Hide"/>
+		</Settings>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
 		</Buttons>
