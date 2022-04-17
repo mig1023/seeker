@@ -10,7 +10,9 @@
             <Color Type="Option">#c93c20</Color>
             <Color Type="System">#eeeeee</Color>
 		</ButtonsStyles>
-		<DisabledOption Value="Hide"/>
+		<Settings>
+			<DisabledOption Value="Hide"/>
+		</Settings>
 		<Buttons>
 			<Button Type="Dinner">Пообедать</Button>
 			<Button Type="Fight">Сражаться</Button>
