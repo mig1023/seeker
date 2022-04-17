@@ -10,7 +10,9 @@
             <Color Type="System">#bdc1ca</Color>
             <Color Type="Action">#0d1a36</Color>
 		</ButtonsStyles>
-		<DisabledOption Value="Show"/>
+		<Settings>
+			<DisabledOption Value="Show"/>
+		</Settings>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph>
