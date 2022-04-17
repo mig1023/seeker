@@ -14,7 +14,9 @@
 			<List Type="WithoutStatuses">0, 619</List>
 			<List Type="WithoutStaticsButtons">0, 619</List>
 		</Paragraphs>
-		<DisabledOption Value="Hide"/>
+		<Settings>
+			<DisabledOption Value="Hide"/>
+		</Settings>
 		<Buttons>
 			<Button Type="Fight">Сражаться</Button>
 			<Button Type="Luck">Проверить удачу</Button>
