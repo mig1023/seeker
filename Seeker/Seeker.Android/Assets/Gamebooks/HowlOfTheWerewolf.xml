@@ -6,14 +6,12 @@
             <Color Type="StatusBar">#253130</Color>
             <Color Type="AdditionalStatus">#a8b7b8</Color>
             <Color Type="ActionBox">#a8b7b8</Color>
-		</Styles>
-		<ButtonsStyles>
 			<Color Type="Main">#383e3b</Color>
 			<Color Type="Action">#516f72</Color>
             <Color Type="Option">#738b8e</Color>
             <Color Type="Continue">#738b8e</Color>
             <Color Type="System">#9dadaf</Color>
-		</ButtonsStyles>
+		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
