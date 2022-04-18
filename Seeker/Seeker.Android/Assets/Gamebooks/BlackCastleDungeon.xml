@@ -3,13 +3,11 @@
 		<Title>Подземелья чёрного замка</Title>
 		<Styles>
             <Color Type="StatusBar">#2a2a2a</Color>
-		</Styles>
-		<ButtonsStyles>
 			<Color Type="Main">#151515</Color>
             <Color Type="Action">#3f3f3f</Color>
             <Color Type="Option">#696969</Color>
             <Color Type="System">#f9f9f9</Color>
-		</ButtonsStyles>
+		</Styles>
 		<Paragraphs>
 			<List Type="WithoutStatuses">0, 619</List>
 			<List Type="WithoutStaticsButtons">0, 619</List>
