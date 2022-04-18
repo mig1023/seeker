@@ -2,16 +2,14 @@
 	<Introduction>
 		<Title>Идущие на смерть</Title>
 		<Styles>
-            <Color Type="StatusBar">#fce391</Color>
-            <Color Type="StatusFont">#000000</Color>
-		</Styles>
-		<ButtonsStyles>
 			<Color Type="Main">#fcdd76</Color>
 			<Color Type="Action">#fcdd76</Color>
             <Color Type="Option">#fcdd76</Color>
-            <Color Type="Font">#000000</Color>
+            <Color Type="ButtonFont">#000000</Color>
+			<Color Type="StatusBar">#fce391</Color>
+            <Color Type="StatusFont">#000000</Color>
             <Color Type="Continue">#fdeeba</Color>
-		</ButtonsStyles>
+		</Styles>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
