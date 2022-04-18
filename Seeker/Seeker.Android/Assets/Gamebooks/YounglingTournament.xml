@@ -5,13 +5,11 @@
             <Color Type="StatusBar">#e8d17e</Color>
             <Color Type="StatusFont">#000000</Color>
             <Color Type="ActionBox">#e6d9ae</Color>
-		</Styles>
-		<ButtonsStyles>
 			<Color Type="Main">#c0ac6c</Color>
             <Color Type="Continue">#e6d9ae</Color>
 			<Color Type="Action">#c0a23b</Color>
             <Color Type="System">#f9f9f9</Color>
-		</ButtonsStyles>
+		</Styles>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
