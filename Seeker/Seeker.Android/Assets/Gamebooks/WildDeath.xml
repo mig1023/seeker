@@ -1,11 +1,11 @@
 <GameBook>
 	<Introduction>
 		<Title>Дикая смерть</Title>
-		<ButtonsStyles>
+		<Styles>
 			<Color Type="Main">#86964f</Color>
             <Color Type="Continue">#b6c095</Color>
             <Color Type="System">#cbd2b4</Color>
-		</ButtonsStyles>
+		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
