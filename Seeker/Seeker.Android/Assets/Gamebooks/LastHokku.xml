@@ -1,10 +1,10 @@
 <GameBook>
 	<Introduction>
 		<Title>Последнее хокку</Title>
-		<ButtonsStyles>
+		<Styles>
 			<Color Type="Main">#deb887</Color>
-			<Color Type="Font">#000000</Color>
-		</ButtonsStyles>
+			<Color Type="ButtonFont">#000000</Color>
+		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
