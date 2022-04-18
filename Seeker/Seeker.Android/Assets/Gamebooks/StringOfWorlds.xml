@@ -1,7 +1,6 @@
 <GameBook>
 	<Introduction>
 		<Title>Вереница миров или выводы из закона Мэрфи</Title>
-		<Buttons/>
 		<Paragraphs>
 			<List Type="WithoutStaticsButtons">0, 1, 665</List>
 		</Paragraphs>
