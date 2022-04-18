@@ -3,13 +3,11 @@
 		<Title>Остров Осьминогов</Title>
 		<Styles>
             <Color Type="StatusBar">#ce4f36</Color>
-		</Styles>
-		<ButtonsStyles>
 			<Color Type="Main">#c93c20</Color>
 			<Color Type="Action">#c93c20</Color>
             <Color Type="Option">#c93c20</Color>
             <Color Type="System">#eeeeee</Color>
-		</ButtonsStyles>
+		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
