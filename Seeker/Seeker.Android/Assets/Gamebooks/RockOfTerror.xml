@@ -6,13 +6,11 @@
             <Color Type="Font">#FFFFFF</Color>
             <Color Type="StatusBar">#151515</Color>
             <Color Type="StatusFont">#b2b2b2</Color>
-		</Styles>
-		<ButtonsStyles>
 			<Color Type="Main">#191919</Color>
 			<Color Type="Action">#2a2a2a</Color>
             <Color Type="Option">#494949</Color>
             <Color Type="Continue">#2f2f2f</Color>
-		</ButtonsStyles>
+		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
