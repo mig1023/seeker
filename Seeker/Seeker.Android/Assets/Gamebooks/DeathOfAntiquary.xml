@@ -1,12 +1,12 @@
 <GameBook>
 	<Introduction>
 		<Title>Смерть антиквара</Title>
-		<ButtonsStyles>
+		<Styles>
 			<Color Type="Main">#2e2e2e</Color>
             <Color Type="Option">#2e2e2e</Color>
             <Color Type="Continue">#9a9a9a</Color>
             <Color Type="System">#d6d6d6</Color>
-		</ButtonsStyles>
+		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
