@@ -1,10 +1,10 @@
 <GameBook>
 	<Introduction>
 		<Title>Симулятор пенсионерки</Title>
-		<ButtonsStyles>
+		<Styles>
 			<Color Type="Main">#030436</Color>
             <Color Type="Option">#35365e</Color>
-		</ButtonsStyles>
+		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
