@@ -2,20 +2,18 @@
 	<Introduction>
 		<Title>Оружие возмездия</Title>
 		<Styles>
-            <Color Type="ActionBox">#efefef</Color>
-            <Color Type="StatusBar">#FFFFFF</Color>
-            <Color Type="StatusFont">#000000</Color>
-            <Color Type="StatusBorder">#000000</Color>
-		</Styles>
-		<ButtonsStyles>
 			<Color Type="Main">#FFFFFF</Color>
 			<Color Type="Action">#FFFFFF</Color>
             <Color Type="Option">#FFFFFF</Color>
-            <Color Type="Font">#000000</Color>
+            <Color Type="ButtonFont">#000000</Color>
+			<Color Type="ActionBox">#efefef</Color>
+            <Color Type="StatusBar">#FFFFFF</Color>
+            <Color Type="StatusFont">#000000</Color>
+            <Color Type="StatusBorder">#000000</Color>
             <Color Type="Border">#000000</Color>
             <Color Type="Continue">#FFFFFF</Color>
             <Color Type="System">#f4f4f4</Color>
-		</ButtonsStyles>
+		</Styles>
 		<Paragraphs>
 			<List Type="WithoutStatuses">0, 266</List>
 		</Paragraphs>
