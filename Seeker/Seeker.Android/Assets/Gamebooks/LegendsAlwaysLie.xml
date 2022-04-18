@@ -6,14 +6,12 @@
             <Color Type="StatusBar">#870808</Color>
             <Color Type="AdditionalStatus">#b70b0b</Color>
             <Color Type="AdditionalFont">#ffffff</Color>
-		</Styles>
-		<ButtonsStyles>
 			<Color Type="Main">#911</Color>
 			<Color Type="Action">#ba2020</Color>
             <Color Type="Option">#cc8888</Color>
             <Color Type="Continue">#cc8888</Color>
             <Color Type="System">#e6c5c5</Color>
-		</ButtonsStyles>
+		</Styles>
 		<Paragraphs>
 			<List Type="WithoutStatuses">0, 714, 715, 716</List>
 			<List Type="WithoutStaticsButtons">0, 687, 714, 715, 701, 702</List>
