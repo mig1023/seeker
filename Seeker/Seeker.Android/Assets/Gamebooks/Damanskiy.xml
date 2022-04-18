@@ -2,14 +2,12 @@
 	<Introduction>
 		<Title>Даманский</Title>
 		<Styles>
-			<Color Type="SystemFont">#8f8f8f</Color>
-		</Styles>
-		<ButtonsStyles>
 			<Color Type="Main">#d8d8d8</Color>
 			<Color Type="Continue">#e7e7e7</Color>
 			<Color Type="System">#efefef</Color>
-			<Color Type="Font">#000000</Color>
-		</ButtonsStyles>
+			<Color Type="SystemFont">#8f8f8f</Color>
+			<Color Type="ButtonFont">#000000</Color>
+		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
