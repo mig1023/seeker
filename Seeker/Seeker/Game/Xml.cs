@@ -143,9 +143,6 @@ namespace Seeker.Game
 
             Data.Constants.Clean();
 
-            foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("ButtonsStyles/Color")))
-                Data.Constants.LoadColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText, button: true);
-
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Styles/Color")))
                 Data.Constants.LoadColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText);
 

@@ -6,7 +6,7 @@ namespace Seeker.Output
 {
     class Buttons
     {
-        public enum ButtonTypes { Main, Action, Option, Font, Border, Continue, System }
+        public enum ButtonTypes { Main, Action, Option, ButtonFont, Border, Continue, System }
 
         public static Button Action(string actionName, EventHandler onClick, bool enabled = true)
         {
@@ -185,7 +185,7 @@ namespace Seeker.Output
             }
             else
             {
-                string font = Game.Data.Constants.GetColor(Buttons.ButtonTypes.Font);
+                string font = Game.Data.Constants.GetColor(Buttons.ButtonTypes.ButtonFont);
                 button.TextColor = (String.IsNullOrEmpty(font) ? Color.White : Color.FromHex(font));
             }
 

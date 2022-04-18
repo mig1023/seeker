@@ -47,20 +47,13 @@ namespace Seeker.Prototypes
             ShowDisabledOptionStatus = false;
         }
 
-        public virtual void LoadColor(string type, string color, bool button)
-        {
-            bool success = Enum.TryParse(type, out ButtonTypes buttonTypes);
-
-            if (success)
-                ButtonsColorsList.Add(buttonTypes, color);
-        }
-
         public virtual void LoadColor(string type, string color)
         {
-            bool success = Enum.TryParse(type, out Game.Data.ColorTypes colorTypes);
-
-            if (success)
+            if (Enum.TryParse(type, out ColorTypes colorTypes))
                 ColorsList.Add(colorTypes, color);
+
+            else if (Enum.TryParse(type, out ButtonTypes buttonTypes))
+                ButtonsColorsList.Add(buttonTypes, color);
         }
 
         public virtual List<int> GetParagraphsWithoutStatuses() => ParagraphsWithoutStatuses;

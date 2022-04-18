@@ -9,8 +9,6 @@ namespace Seeker.Abstract
 
         void LoadColor(string type, string value);
 
-        void LoadColor(string type, string value, bool button);
-
         string GetColor(Output.Buttons.ButtonTypes type);
 
         string GetColor(Game.Data.ColorTypes type);
@@ -27,7 +25,7 @@ namespace Seeker.Abstract
 
         int? GetParagraphsStatusesLimit();
 
-        void LoadEnabledDisabledOption();
+        void LoadEnabledDisabledOption(string option);
 
         bool ShowDisabledOption();
 

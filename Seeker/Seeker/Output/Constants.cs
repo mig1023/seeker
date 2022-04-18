@@ -120,7 +120,7 @@ namespace Seeker.Output
             [ButtonTypes.Main] = "#dcdcdc",
             [ButtonTypes.Action] = "#9d9d9d",
             [ButtonTypes.Option] = "#f1f1f1",
-            [ButtonTypes.Font] = "#000000",
+            [ButtonTypes.ButtonFont] = "#000000",
             [ButtonTypes.Continue] = "#f1f1f1",
             [ButtonTypes.System] = "#f1f1f1",
         };
