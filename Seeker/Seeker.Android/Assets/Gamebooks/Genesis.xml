@@ -7,14 +7,12 @@
             <Color Type="StatusBar">#3c5363</Color>
 			<Color Type="ActionBox">#69707a</Color>
             <Color Type="StatusFont">#b1b5ba</Color>
-		</Styles>
-		<ButtonsStyles>
 			<Color Type="Main">#4c687c</Color>
             <Color Type="Option">#6f8696</Color>
 			<Color Type="Action">#445d6f</Color>
             <Color Type="Continue">#849fb3</Color>
             <Color Type="System">#3c5363</Color>
-		</ButtonsStyles>
+		</Styles>
 		<Paragraphs>
 			<List Type="WithoutStatuses">0, 201, 202, 203, 204, 205, 206, 207</List>
 		</Paragraphs>
