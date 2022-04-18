@@ -4,14 +4,12 @@
 		<Styles>
             <Color Type="StatusBar">#44264b</Color>
 			<Color Type="ActionBox">#e3d9d9</Color>
-		</Styles>
-		<ButtonsStyles>
 			<Color Type="Main">#72407d</Color>
 			<Color Type="Option">#80538a</Color>
 			<Color Type="Continue">#aa8cb1</Color>
 			<Color Type="Action">#7e0059</Color>
             <Color Type="System">#ddd1df</Color>
-		</ButtonsStyles>
+		</Styles>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
