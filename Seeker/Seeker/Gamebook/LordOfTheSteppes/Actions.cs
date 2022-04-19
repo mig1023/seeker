@@ -42,7 +42,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 string coins = Game.Services.CoinsNoun(Price, "монета", "монеты", "монет");
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, coins) };
             }
-            else if (!String.IsNullOrEmpty(Text) || (Name == "Get"))
+            else if (!String.IsNullOrEmpty(Text) || (Type == "Get"))
             {
                 return new List<string> { Text };
             }
@@ -83,7 +83,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             if (!String.IsNullOrEmpty(Button))
                 return Button;
 
-            switch (Name)
+            switch (Type)
             {
                 case "DiceCheck":
                     return "Кинуть кубик" + (Dices > 0 ? "и" : String.Empty);
