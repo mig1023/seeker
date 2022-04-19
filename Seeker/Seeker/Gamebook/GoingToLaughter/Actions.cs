@@ -44,7 +44,7 @@ namespace Seeker.Gamebook.GoingToLaughter
 
         public override string ButtonText()
         {
-            if (Name == "DiceValues")
+            if (Type == "DiceValues")
                 return "Кинуть кубик" + (DiceOfDice || (Dices > 0) ? "и" : String.Empty);
 
             else
