@@ -112,7 +112,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             if (!String.IsNullOrEmpty(Button))
                 return Button;
 
-            switch (Name)
+            switch (Type)
             {
                 case "Fight":
                     return "Сражаться";
@@ -141,8 +141,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             bool bySpellAdd = ThisIsSpell && (protagonist.Magicpoints <= 0) && !secondButton;
             bool bySpellRemove = ThisIsSpell && !protagonist.Spells.Contains(Text) && secondButton;
-            bool byCureSpell = (Name == "CureFracture") && (CureSpellCount() < Wound);
-            bool bySell = (Name == "Sell") && !Game.Option.IsTriggered(Trigger);
+            bool byCureSpell = (Type == "CureFracture") && (CureSpellCount() < Wound);
+            bool bySell = (Type == "Sell") && !Game.Option.IsTriggered(Trigger);
             bool bySpecButton = (Specialization != null) && (protagonist.Specialization != Character.SpecializationType.Nope);
             bool byPrice = (Price > 0) && (protagonist.Gold < Price);
             bool byTrigger = Game.Option.IsTriggered(OnlyOne);
