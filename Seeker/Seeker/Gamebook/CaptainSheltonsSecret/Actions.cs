@@ -51,7 +51,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         {
             List<string> enemies = new List<string>();
 
-            if (Name == "Get")
+            if (Type == "Get")
                 return new List<string> { Text };
 
             if (Enemies == null)
@@ -73,7 +73,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
         public override string ButtonText()
         {
-            switch (Name)
+            switch (Type)
             {
                 case "Fight":
                     return (GroupFight ? "Пусть сражаются" : "Сражаться");
