@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Seeker.Game;
 
 namespace Seeker.Prototypes
 {
@@ -12,7 +13,7 @@ namespace Seeker.Prototypes
         public string Trigger { get; set; }
         public string Text { get; set; }
         public bool Used { get; set; }
-        public Game.Option Option { get; set; }
+        public Option Option { get; set; }
         public int Price { get; set; }
         public bool Multiple { get; set; }
 
@@ -24,7 +25,7 @@ namespace Seeker.Prototypes
             List<string> actionResult = new List<string>();
 
             if (trigger)
-                Game.Option.Trigger(Trigger);
+                Option.Trigger(Trigger);
 
             string actionName = (String.IsNullOrEmpty(action) ? Type : action);
 
@@ -50,7 +51,7 @@ namespace Seeker.Prototypes
             if (!String.IsNullOrEmpty(Button))
                 return Button;
 
-            Dictionary<string, string> texts = Game.Data.Constants.ButtonText();
+            Dictionary<string, string> texts = Data.Constants.ButtonText();
 
             if (texts.ContainsKey(Type))
                 return texts[Type];
@@ -74,10 +75,10 @@ namespace Seeker.Prototypes
                 return true;
 
             else if (option.Contains("!"))
-                return !Game.Option.IsTriggered(option.Replace("!", String.Empty).Trim());
+                return !Option.IsTriggered(option.Replace("!", String.Empty).Trim());
 
             else
-                return Game.Option.IsTriggered(option);
+                return Option.IsTriggered(option);
         }
 
         public virtual bool GameOver(out int toEndParagraph, out string toEndText)
@@ -119,11 +120,11 @@ namespace Seeker.Prototypes
 
         public virtual bool IsHealingEnabled() => false;
 
-        public virtual void UseHealing(int healingLevel) => Game.Services.DoNothing();
+        public virtual void UseHealing(int healingLevel) => Services.DoNothing();
 
         public virtual string TextByOptions(string option) => String.Empty;
 
-        public List<string> SimpleDice() => new List<string> { String.Format("BIG|Кубик: {0}", Game.Dice.Symbol(Game.Dice.Roll())) };
+        public List<string> SimpleDice() => new List<string> { String.Format("BIG|Кубик: {0}", Dice.Symbol(Dice.Roll())) };
 
         public int GetProperty(object protagonist, string property) =>
             (int)protagonist.GetType().GetProperty(property).GetValue(protagonist, null);
