@@ -52,8 +52,8 @@ namespace Seeker.Gamebook.SwampFever
         {
             bool disabledByPrice = (Price > 0) && (protagonist.Creds < Price);
             bool disabledByUsed = (String.IsNullOrEmpty(EnemyName) && (Benefit != null) && (GetProperty(protagonist, Benefit.Name) > 0));
-            bool disabledSellingMembrane = (Name == "SellAcousticMembrane") && (protagonist.AcousticMembrane <= 0);
-            bool disabledSellingMucus = (Name == "SellLiveMucus") && (protagonist.LiveMucus <= 0);
+            bool disabledSellingMembrane = (Type == "SellAcousticMembrane") && (protagonist.AcousticMembrane <= 0);
+            bool disabledSellingMucus = (Type == "SellLiveMucus") && (protagonist.LiveMucus <= 0);
 
             return !(disabledByPrice || disabledByUsed || disabledSellingMembrane || disabledSellingMucus);
         }
