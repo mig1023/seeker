@@ -41,10 +41,10 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 return new List<string> { String.Format("{0}, {1} {2}", Text, Price, gold) };
             }
 
-            if (!String.IsNullOrEmpty(Text) || (Name == "Get"))
+            if (!String.IsNullOrEmpty(Text) || (Type == "Get"))
                 return new List<string> { Text };
 
-            if (Name == "WolfFight")
+            if (Type == "WolfFight")
                 return new List<string> { "Битва с волками" };
 
             if (Enemies == null)
