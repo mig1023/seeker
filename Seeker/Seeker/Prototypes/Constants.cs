@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using static Seeker.Output.Buttons;
-using static Seeker.Game.Data;
 using System.Linq;
 using System.Xml;
+using Seeker.Game;
+using static Seeker.Output.Buttons;
+using static Seeker.Game.Data;
 
 namespace Seeker.Prototypes
 {
@@ -23,15 +24,15 @@ namespace Seeker.Prototypes
 
         public virtual string GetColor(ButtonTypes type)
         {
-            Dictionary<ButtonTypes, string> color = (Game.Settings.IsEnabled("WithoutStyles") ?
+            Dictionary<ButtonTypes, string> color = (Settings.IsEnabled("WithoutStyles") ?
                 Output.Constants.DEFAULT_BUTTONS : ButtonsColorsList);
 
             return (color.ContainsKey(type) ? color[type] : String.Empty);
         }
 
-        public virtual string GetColor(Game.Data.ColorTypes type)
+        public virtual string GetColor(Data.ColorTypes type)
         {
-            Dictionary<ColorTypes, string> color = (Game.Settings.IsEnabled("WithoutStyles") ?
+            Dictionary<ColorTypes, string> color = (Settings.IsEnabled("WithoutStyles") ?
                 Output.Constants.DEFAULT_COLORS : ColorsList);
 
             return (color.ContainsKey(type) ? color[type] : String.Empty);
@@ -77,7 +78,7 @@ namespace Seeker.Prototypes
                 ParagraphsWithoutStatuses = something;
         }
 
-        public static string DefaultColor(Game.Data.ColorTypes type) => Output.Constants.DEFAULT_COLORS[type];
+        public static string DefaultColor(Data.ColorTypes type) => Output.Constants.DEFAULT_COLORS[type];
 
         public virtual string GetFont() => String.Empty;
 
