@@ -26,7 +26,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             else if ((type == ButtonTypes.Border) || (type == ButtonTypes.Continue) || (type == ButtonTypes.System))
                 return String.Empty;
 
-            else if (type == ButtonTypes.Font)
+            else if (type == ButtonTypes.ButtonFont)
                 return СontrastColor(LastColor);
 
             else
