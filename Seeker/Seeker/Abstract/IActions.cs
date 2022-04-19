@@ -4,7 +4,7 @@ namespace Seeker.Abstract
 {
     interface IActions
     {
-        string Name { get; set; }
+        string Type { get; set; }
         string Button { get; set; }
         string Aftertext { get; set; }
         List<Output.Text> Aftertexts { get; set; }

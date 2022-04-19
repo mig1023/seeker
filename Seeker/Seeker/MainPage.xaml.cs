@@ -154,7 +154,7 @@ namespace Seeker
             {
                 foreach (Abstract.IActions action in paragraph.Actions)
                 {
-                    if (action.Name == "Option")
+                    if (action.Type == "Option")
                     {
                         Action.Children.Add(AddOptionButton(action.Option, ref gameOver));
                         AddAftertext(ref Action, action.Option.Aftertext, action.Option.Aftertexts);
@@ -166,7 +166,7 @@ namespace Seeker
                         foreach (View enemy in Output.Interface.Represent(action.Do(out _, "Representer")))
                             actionPlace.Children.Add(enemy);
 
-                        if (!action.Name.Contains(","))
+                        if (!action.Type.Contains(","))
                         {
                             EventHandler actionClick = (object sender, EventArgs e) => Action_Click(action, actionPlace);
                             bool enabled = action.IsButtonEnabled();
@@ -265,7 +265,7 @@ namespace Seeker
 
             StackLayout buttonPlace = Output.Interface.MultipleButtonsPlace();
 
-            foreach (string act in action.Name.Split(','))
+            foreach (string act in action.Type.Split(','))
             {
                 EventHandler actionClick = (object sender, EventArgs e) =>
                     Action_Click(action, actionPlace, anotherAction: act.Trim());

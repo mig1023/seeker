@@ -5,7 +5,7 @@ namespace Seeker.Prototypes
 {
     class Actions
     {
-        public string Name { get; set; }
+        public string Type { get; set; }
         public string Button { get; set; }
         public string Aftertext { get; set; }
         public List<Output.Text> Aftertexts { get; set; }
@@ -26,7 +26,7 @@ namespace Seeker.Prototypes
             if (trigger)
                 Game.Option.Trigger(Trigger);
 
-            string actionName = (String.IsNullOrEmpty(action) ? Name : action);
+            string actionName = (String.IsNullOrEmpty(action) ? Type : action);
 
             try
             {
@@ -52,8 +52,8 @@ namespace Seeker.Prototypes
 
             Dictionary<string, string> texts = Game.Data.Constants.ButtonText();
 
-            if (texts.ContainsKey(Name))
-                return texts[Name];
+            if (texts.ContainsKey(Type))
+                return texts[Type];
             else
                 return String.Empty;
         }

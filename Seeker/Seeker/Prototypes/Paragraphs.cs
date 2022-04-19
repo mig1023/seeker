@@ -52,7 +52,7 @@ namespace Seeker.Prototypes
 
         public Abstract.IActions ActionTemplate(XmlNode xmlAction, Abstract.IActions actions)
         {
-            actions.Name = Game.Xml.StringParse(xmlAction["Type"]);
+            actions.Type = Game.Xml.StringParse(xmlAction["Type"]);
             actions.Button = Game.Xml.StringParse(xmlAction["Button"]);
             actions.Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]);
             actions.Aftertexts = Game.Xml.TextsParse(xmlAction, aftertext: true);
@@ -75,7 +75,7 @@ namespace Seeker.Prototypes
             if (xmlAction["Benefit"] != null)
                 action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
-            if (action.Name == "Option")
+            if (action.Type == "Option")
                 action.Option = OptionParse(xmlAction["Option"]);
 
             return action;
