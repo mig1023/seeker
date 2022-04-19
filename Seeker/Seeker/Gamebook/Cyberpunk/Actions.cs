@@ -30,7 +30,7 @@ namespace Seeker.Gamebook.Cyberpunk
 
         public override List<string> Representer()
         {
-            if (Name == "Get, Decrease")
+            if (Type == "Get, Decrease")
             {
                 int statValue = GetProperty(protagonist, Stat);
                 string statName = Constants.CharactersParams()[Stat];
@@ -121,7 +121,7 @@ namespace Seeker.Gamebook.Cyberpunk
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            if ((Name == "Get, Decrease") && (!String.IsNullOrEmpty(Stat)))
+            if ((Type == "Get, Decrease") && (!String.IsNullOrEmpty(Stat)))
             {
                 int stat = GetProperty(protagonist, Stat);
 
