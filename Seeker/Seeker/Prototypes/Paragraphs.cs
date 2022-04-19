@@ -12,20 +12,20 @@ namespace Seeker.Prototypes
         internal Random random = new Random();
 
         public virtual Abstract.IActions ActionParse(XmlNode xmlAction) => null;
-        public virtual Game.Option OptionParse(XmlNode xmlOption) => OptionsTemplate(xmlOption);
+        public virtual Option OptionParse(XmlNode xmlOption) => OptionsTemplate(xmlOption);
         public virtual Abstract.IModification ModificationParse(XmlNode xmlxmlModification) => null;
 
-        public virtual Game.Paragraph Get(int id, XmlNode xmlParagraph)
+        public virtual Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = new Game.Paragraph { Options = new List<Option>() };
+            Paragraph paragraph = new Paragraph { Options = new List<Option>() };
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
                 Option option = new Option
                 {
-                    Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]),
-                    Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
-                    Aftertext = Game.Xml.StringParse(xmlOption.Attributes["Aftertext"]),
+                    Destination = Xml.IntParse(xmlOption.Attributes["Destination"]),
+                    Text = Xml.StringParse(xmlOption.Attributes["Text"]),
+                    Aftertext = Xml.StringParse(xmlOption.Attributes["Aftertext"]),
                 };
 
                 paragraph.Options.Add(option);
@@ -34,9 +34,9 @@ namespace Seeker.Prototypes
             return paragraph;
         }
 
-        public Game.Paragraph Get(XmlNode xmlParagraph)
+        public Paragraph Get(XmlNode xmlParagraph)
         {
-            Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
                 paragraph.Options.Add(OptionParse(xmlOption));
@@ -52,14 +52,14 @@ namespace Seeker.Prototypes
 
         public Abstract.IActions ActionTemplate(XmlNode xmlAction, Abstract.IActions actions)
         {
-            actions.Type = Game.Xml.StringParse(xmlAction["Type"]);
-            actions.Button = Game.Xml.StringParse(xmlAction["Button"]);
-            actions.Aftertext = Game.Xml.StringParse(xmlAction["Aftertext"]);
-            actions.Aftertexts = Game.Xml.TextsParse(xmlAction, aftertext: true);
-            actions.Trigger = Game.Xml.StringParse(xmlAction["Trigger"]);
-            actions.Text = Game.Xml.StringParse(xmlAction["Text"]);
-            actions.Price = Game.Xml.IntParse(xmlAction["Price"]);
-            actions.Multiple = Game.Xml.BoolParse(xmlAction["Multiple"]);
+            actions.Type = Xml.StringParse(xmlAction["Type"]);
+            actions.Button = Xml.StringParse(xmlAction["Button"]);
+            actions.Aftertext = Xml.StringParse(xmlAction["Aftertext"]);
+            actions.Aftertexts = Xml.TextsParse(xmlAction, aftertext: true);
+            actions.Trigger = Xml.StringParse(xmlAction["Trigger"]);
+            actions.Text = Xml.StringParse(xmlAction["Text"]);
+            actions.Price = Xml.IntParse(xmlAction["Price"]);
+            actions.Multiple = Xml.BoolParse(xmlAction["Multiple"]);
 
             return actions;
         }
@@ -92,34 +92,34 @@ namespace Seeker.Prototypes
             return modification;
         }
 
-        public Game.Paragraph ParagraphTemplate(XmlNode xmlParagraph) => new Game.Paragraph
+        public Paragraph ParagraphTemplate(XmlNode xmlParagraph) => new Paragraph
         {
             Options = new List<Option>(),
             Actions = new List<Abstract.IActions>(),
             Modification = new List<Abstract.IModification>(),
 
-            Trigger = Game.Xml.StringParse(xmlParagraph["Triggers"]),
-            LateTrigger = Game.Xml.StringParse(xmlParagraph["LateTriggers"]),
-            RemoveTrigger = Game.Xml.StringParse(xmlParagraph["RemoveTriggers"]),
+            Trigger = Xml.StringParse(xmlParagraph["Triggers"]),
+            LateTrigger = Xml.StringParse(xmlParagraph["LateTriggers"]),
+            RemoveTrigger = Xml.StringParse(xmlParagraph["RemoveTriggers"]),
 
-            Images = Game.Xml.ImagesParse(xmlParagraph["Images"]),
+            Images = Xml.ImagesParse(xmlParagraph["Images"]),
         };
 
-        public Game.Option OptionsTemplateWithoutDestination(XmlNode xmlOption) => new Option()
+        public Option OptionsTemplateWithoutDestination(XmlNode xmlOption) => new Option()
         {
-            Text = Game.Xml.StringParse(xmlOption.Attributes["Text"]),
-            OnlyIf = Game.Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
-            Singleton = Game.Xml.StringParse(xmlOption.Attributes["Singleton"]),
-            Input = Game.Xml.StringParse(xmlOption.Attributes["Input"]),
-            Aftertext = Game.Xml.StringParse(xmlOption.SelectSingleNode("Text")),
-            Aftertexts = Game.Xml.TextsParse(xmlOption),
+            Text = Xml.StringParse(xmlOption.Attributes["Text"]),
+            OnlyIf = Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
+            Singleton = Xml.StringParse(xmlOption.Attributes["Singleton"]),
+            Input = Xml.StringParse(xmlOption.Attributes["Input"]),
+            Aftertext = Xml.StringParse(xmlOption.SelectSingleNode("Text")),
+            Aftertexts = Xml.TextsParse(xmlOption),
         };
 
-        public Game.Option OptionsTemplate(XmlNode xmlOption)
+        public Option OptionsTemplate(XmlNode xmlOption)
         {
-            Game.Option option = OptionsTemplateWithoutDestination(xmlOption);
+            Option option = OptionsTemplateWithoutDestination(xmlOption);
 
-            option.Destination = Game.Xml.IntParse(xmlOption.Attributes["Destination"]);
+            option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
 
             return option;
         }
@@ -129,7 +129,7 @@ namespace Seeker.Prototypes
             Option option = OptionsTemplate(xmlOption);
 
             if (xmlOption.Attributes["Do"] != null)
-                option.Do = Game.Xml.ModificationParse(xmlOption, modification, name: "Do");
+                option.Do = Xml.ModificationParse(xmlOption, modification, name: "Do");
 
             return option;
         }
