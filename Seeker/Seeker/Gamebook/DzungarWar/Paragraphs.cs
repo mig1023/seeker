@@ -23,7 +23,7 @@ namespace Seeker.Gamebook.DzungarWar
             if (bargain && Game.Option.IsTriggered("Bargain"))
                 action.Price /= 2;
 
-            if (action.Name == "Option")
+            if (action.Type == "Option")
                 action.Option = OptionParse(xmlAction["Option"]);
 
             return action;
