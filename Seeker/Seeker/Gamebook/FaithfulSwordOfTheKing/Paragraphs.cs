@@ -20,7 +20,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
             action.MeritalArt = MeritalArtsParse(xmlAction["MeritalArt"]);
 
-            if (action.Name == "Option")
+            if (action.Type == "Option")
                 action.Option = OptionParse(xmlAction["Option"]);
 
             if (xmlAction["Benefit"] != null)

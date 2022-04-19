@@ -102,7 +102,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             if (Price > 0)
                 return new List<string> { String.Format("{0}, {1} экю", Text, ToEcu(Price)) };
 
-            if (Name == "Get")
+            if (Type == "Get")
                 return new List<string> { Text };
 
             if (Enemies == null)
