@@ -35,7 +35,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
                     action.Enemies.Add(EnemyParse(xmlEnemy));
             }
 
-            if (action.Name == "Option")
+            if (action.Type == "Option")
                 action.Option = OptionParse(xmlAction["Option"]);
 
             return action;

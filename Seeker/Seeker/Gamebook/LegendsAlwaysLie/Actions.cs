@@ -193,11 +193,11 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         {
             bool bySpecButton = (Specialization != null) && (protagonist.Specialization != Character.SpecializationType.Nope);
             bool byPrice = (Price > 0) && (protagonist.Gold < Price);
-            bool byCureSprain = (Name == "CureSprain") && (protagonist.Magicpoints <= 0);
+            bool byCureSprain = (Type == "CureSprain") && (protagonist.Magicpoints <= 0);
 
             bool byAlreadyDecided = (FoodSharing != null) && Game.Option.IsTriggered("FoodSharing");
-            bool byFootwraps = ((Name == "FootwrapsDeadlyReplacement") ||
-                (Name == "FootwrapsReplacement")) && protagonist.Footwraps <= 0;
+            bool byFootwraps = ((Type == "FootwrapsDeadlyReplacement") ||
+                (Type == "FootwrapsReplacement")) && protagonist.Footwraps <= 0;
 
             return !(bySpecButton || byPrice || byCureSprain || byAlreadyDecided || byFootwraps || Disabled);
         }
