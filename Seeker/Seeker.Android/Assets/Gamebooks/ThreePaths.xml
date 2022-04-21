@@ -3,8 +3,7 @@
 		<Title>Три дороги</Title>
 		<Styles>
             <Color Type="StatusBar">#007a7a</Color>
-			<Color Type="Main">#009999</Color>
-            <Color Type="Option">#009999</Color>
+			<Color Type="Main, Option">#009999</Color>
 			<Color Type="Action">#005b5b</Color>
             <Color Type="Continue">#6fc5c5</Color>
 		</Styles>
