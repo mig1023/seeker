@@ -3,8 +3,7 @@
 		<Title>Шериф</Title>
 		<Styles>
 			<Color Type="Main">#7d2c1c</Color>
-            <Color Type="Option">#b45b27</Color>
-            <Color Type="Continue">#b45b27</Color>
+            <Color Type="Option, Continue">#b45b27</Color>
             <Color Type="System">#f0d1b9</Color>
 		</Styles>
 		<Settings>
