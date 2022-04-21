@@ -4,12 +4,10 @@
 		<Styles>
             <Color Type="Background">#c2cccd</Color>
             <Color Type="StatusBar">#253130</Color>
-            <Color Type="AdditionalStatus">#a8b7b8</Color>
-            <Color Type="ActionBox">#a8b7b8</Color>
+            <Color Type="AdditionalStatus, ActionBox">#a8b7b8</Color>
 			<Color Type="Main">#383e3b</Color>
 			<Color Type="Action">#516f72</Color>
-            <Color Type="Option">#738b8e</Color>
-            <Color Type="Continue">#738b8e</Color>
+            <Color Type="Option, Continue">#738b8e</Color>
             <Color Type="System">#9dadaf</Color>
 		</Styles>
 		<Settings>
