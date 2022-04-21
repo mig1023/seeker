@@ -144,22 +144,22 @@ namespace Seeker.Game
             Data.Constants.Clean();
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Styles/Color")))
-                Data.Constants.LoadColor(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText);
+                foreach (string type in Multiples(xmlNode, "Type"))
+                    Data.Constants.LoadColor(type, xmlNode.InnerText);
 
             string dasbledOption = Xml.StringParse(xmlFile.SelectSingleNode(Intro("Settings/DisabledOption")).Attributes["Value"]);
             Data.Constants.LoadEnabledDisabledOption(dasbledOption);
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Buttons/Button")))
-            {
-                List<string> types = xmlNode.Attributes["Type"].InnerText.Split(',').Select(x => x.Trim()).ToList();
-
-                foreach (string type in types)
+                foreach (string type in Multiples(xmlNode, "Type"))
                     Data.Constants.LoadButtonText(type, xmlNode.InnerText);
-            }
 
             Data.Constants.LoadParagraphsWithoutSomething(xmlFile, "WithoutStatuses");
             Data.Constants.LoadParagraphsWithoutSomething(xmlFile, "WithoutStaticsButtons");
         }
+
+        private static List<string> Multiples(XmlNode xmlNode, string attributes) =>
+            xmlNode.Attributes[attributes].InnerText.Split(',').Select(x => x.Trim()).ToList();
 
         private static string Intro(string node) => String.Format("GameBook/Introduction/{0}", node);
 
