@@ -2,11 +2,10 @@
 	<Introduction>
 		<Title>Миссия на Урпан</Title>
 		<Styles>
-            <Color Type="StatusBar">#0d1a36</Color>
 			<Color Type="Main">#0f1d3c</Color>
+            <Color Type="Action, StatusBar">#0d1a36</Color>
             <Color Type="Continue">#26334f</Color>
             <Color Type="System">#bdc1ca</Color>
-            <Color Type="Action">#0d1a36</Color>
 		</Styles>
 		<Settings>
 			<DisabledOption Value="Show"/>
