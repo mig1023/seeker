@@ -6,8 +6,7 @@
             <Color Type="AdditionalFont">#ffffff</Color>
 			<Color Type="Main">#118984</Color>
 			<Color Type="Action">#0c5c58</Color>
-            <Color Type="Option">#84c2bf</Color>
-            <Color Type="Continue">#84c2bf</Color>
+            <Color Type="Option, Continue">#84c2bf</Color>
             <Color Type="System">#cde6e5</Color>
 		</Styles>
 		<Paragraphs>
