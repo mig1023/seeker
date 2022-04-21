@@ -3,7 +3,7 @@
 		<Title>Скала ужаса</Title>
 		<Styles>
             <Color Type="Background">#000000</Color>
-            <Color Type="Font">#FFFFFF</Color>
+            <Color Type="Font">#ffffff</Color>
             <Color Type="StatusBar">#151515</Color>
             <Color Type="StatusFont">#b2b2b2</Color>
 			<Color Type="Main">#191919</Color>
