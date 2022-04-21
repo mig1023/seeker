@@ -3,15 +3,13 @@
 		<Title>Катарсис</Title>
 		<Styles>
             <Color Type="Background">#cdcdcd</Color>
-            <Color Type="StatusBar">#b8b8b8</Color>
+            <Color Type="StatusBar, ActionBox, System">#b8b8b8</Color>
             <Color Type="StatusFont">#000000</Color>
             <Color Type="AdditionalStatus">#bfbfbf</Color>
-			<Color Type="ActionBox">#b8b8b8</Color>
 			<Color Type="Main">#51514b</Color>
             <Color Type="Option">#858581</Color>
 			<Color Type="Action">#939393</Color>
             <Color Type="Continue">#a9a9a6</Color>
-            <Color Type="System">#b8b8b8</Color>
 		</Styles>
 		<Settings>
 			<DisabledOption Value="Show"/>
