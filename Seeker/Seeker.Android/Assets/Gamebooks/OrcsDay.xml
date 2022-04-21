@@ -4,14 +4,10 @@
 		<Styles>
 			<Color Type="Main">#a4be84</Color>
 			<Color Type="Continue">#cad9b7</Color>
-			<Color Type="Action">#72855c</Color>
+			<Color Type="Action, StatusBar">#72855c</Color>
             <Color Type="System">#e9efe2</Color>
-			<Color Type="Font">#000000</Color>
-            <Color Type="ButtonFont">#000000</Color>
-			<Color Type="SystemFont">#000000</Color>
-            <Color Type="ActionBox">#c8d8b5</Color>
-            <Color Type="StatusBar">#72855c</Color>
-            <Color Type="AdditionalStatus">#c8d8b5</Color>
+			<Color Type="Font, ButtonFont, SystemFont">#000000</Color>
+            <Color Type="ActionBox, AdditionalStatus">#c8d8b5</Color>
 		</Styles>
 		<Paragraphs>
 			<List Type="WithoutStatuses">0, 102, 103</List>
