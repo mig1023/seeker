@@ -3,9 +3,7 @@
 		<Title>Остров Осьминогов</Title>
 		<Styles>
             <Color Type="StatusBar">#ce4f36</Color>
-			<Color Type="Main">#c93c20</Color>
-			<Color Type="Action">#c93c20</Color>
-            <Color Type="Option">#c93c20</Color>
+			<Color Type="Main, Action, Option">#c93c20</Color>
             <Color Type="System">#eeeeee</Color>
 		</Styles>
 		<Settings>
