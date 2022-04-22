@@ -110,6 +110,14 @@ namespace Seeker.Gamebook.Cyberpunk
                 paramsLevel = protagonist.Luck / 2;
                 paramsLine += String.Format("{0} (везение) / 2", protagonist.Luck);
             }
+            else if (Stat.StartsWith("Selfcontrol"))
+            {
+                paramsLevel = int.Parse(Stat.Replace("Selfcontrol", String.Empty));
+                paramsLine += String.Format("{0} ({1}) + ",
+                    paramsLevel, Constants.CharactersParams()[Stat.Trim()].ToLower());
+
+                Game.Option.Trigger(Stat, remove: true);
+            }
             else
             {
                 foreach (string stat in Stat.Split(','))
@@ -142,8 +150,14 @@ namespace Seeker.Gamebook.Cyberpunk
                 else
                     return (stat < 99);
             }
+            else if ((Type == "Test") && Stat.StartsWith("Selfcontrol"))
+            {
+                return Game.Option.IsTriggered(Stat);
+            }
             else
+            {
                 return true;
+            }
         }
 
         public List<string> Get() => ChangeProtagonistParam(Stat, protagonist, String.Empty);

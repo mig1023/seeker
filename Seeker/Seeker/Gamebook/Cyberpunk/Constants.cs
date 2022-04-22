@@ -14,6 +14,10 @@ namespace Seeker.Gamebook.Cyberpunk
             ["Cybernetics"] = "Кибернетика",
             ["Morality"] = "Мораль",
             ["Careerism"] = "Карьеризм",
+            ["Selfcontrol25"] = "Самообладание 25",
+            ["Selfcontrol50"] = "Самообладание 50",
+            ["Selfcontrol75"] = "Самообладание 75",
+            ["Selfcontrol100"] = "Самообладание 100",
         };
 
         public static List<string> NormalizationParams() => new List<string> { "Planning", "Preparation", "Luck" };
