@@ -1,4 +1,4 @@
-<GameBook>
+<Gamebook>
 	<Introduction>
 		<Title>Шериф</Title>
 		<Styles>
@@ -733,4 +733,4 @@
 			</Options>
 		</Paragraph>
 	</Paragraphs>
-</GameBook>
+</Gamebook>
