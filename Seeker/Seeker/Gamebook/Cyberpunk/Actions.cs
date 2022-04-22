@@ -66,7 +66,7 @@ namespace Seeker.Gamebook.Cyberpunk
             {
                 return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
             }
-            else if (option.Contains(">") || option.Contains("<"))
+            else if (option.Contains(">") || option.Contains("<") || option.Contains("="))
             {
                 int level = Game.Services.LevelParse(option);
 
@@ -77,6 +77,12 @@ namespace Seeker.Gamebook.Cyberpunk
                     return false;
 
                 else if (option.Contains("ВЕЗЕНИЕ <=") && (level < protagonist.Luck))
+                    return false;
+
+                else if (option.Contains("МОРАЛЬ =") && (level != protagonist.Morality))
+                    return false;
+
+                else if (option.Contains("КАРЬЕРИЗМ =") && (level != protagonist.Careerism))
                     return false;
 
                 return true;
