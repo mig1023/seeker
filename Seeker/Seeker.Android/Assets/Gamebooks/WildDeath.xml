@@ -1,4 +1,4 @@
-<GameBook>
+<Gamebook>
 	<Introduction>
 		<Title>Дикая смерть</Title>
 		<Styles>
@@ -375,4 +375,4 @@
 			</Options>
 		</Paragraph>
 	</Paragraphs>
-</GameBook>
+</Gamebook>
