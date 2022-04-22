@@ -12,7 +12,11 @@ namespace Seeker.Gamebook.Cyberpunk
             ["Preparation"] = "Подготовка",
             ["Luck"] = "Везение",
             ["Cybernetics"] = "Кибернетика",
+            ["Morality"] = "Мораль",
+            ["Careerism"] = "Карьеризм",
         };
+
+        public static List<string> NormalizationParams() => new List<string> { "Planning", "Preparation", "Luck" };
 
         public static Links GetLinks() => new Links
         {

@@ -25,6 +25,12 @@ namespace Seeker.Gamebook.Cyberpunk
             if (protagonist.Cybernetics > 1)
                 statusLines.Insert(0, String.Format("Кибернетика: {0}", protagonist.Cybernetics));
 
+            if (protagonist.Morality > 1)
+                statusLines.Insert(0, String.Format("Мораль: {0}", protagonist.Morality));
+
+            if (protagonist.Careerism > 1)
+                statusLines.Insert(0, String.Format("Карьеризм: {0}", protagonist.Careerism));
+
             return statusLines;
         }
 

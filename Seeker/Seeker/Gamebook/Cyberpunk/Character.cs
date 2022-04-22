@@ -34,6 +34,32 @@ namespace Seeker.Gamebook.Cyberpunk
             set => _cybernetics = Game.Param.Setter(value, max: 99, _cybernetics, this);
         }
 
+        private int _morality;
+        public int Morality
+        {
+            get => _morality;
+            set
+            {
+                _morality = Game.Param.Setter(value, max: 100, _morality, this);
+
+                if (_morality > 0)
+                    _careerism = 100 - _morality;
+            }
+        }
+
+        private int _careerism;
+        public int Careerism
+        {
+            get => _careerism;
+            set
+            {
+                _careerism = Game.Param.Setter(value, max: 100, _careerism, this);
+
+                if (_careerism > 0)
+                    _morality = 100 - _careerism;
+            }
+        }
+
         public override void Init()
         {
             base.Init();
@@ -42,6 +68,8 @@ namespace Seeker.Gamebook.Cyberpunk
             Preparation = 0;
             Luck = 0;
             Cybernetics = 1;
+            Morality = 0;
+            Careerism = 0;
         }
 
         public Character Clone() => new Character()
@@ -52,9 +80,12 @@ namespace Seeker.Gamebook.Cyberpunk
             Preparation = this.Preparation,
             Luck = this.Luck,
             Cybernetics = this.Cybernetics,
+            Morality = this.Morality,
+            Careerism = this.Careerism,
         };
 
-        public override string Save() => String.Join("|", Planning, Preparation, Luck, Cybernetics);
+        public override string Save() => String.Join("|",
+            Planning, Preparation, Luck, Cybernetics, Morality, Careerism);
 
         public override void Load(string saveLine)
         {
@@ -64,6 +95,8 @@ namespace Seeker.Gamebook.Cyberpunk
             Preparation = int.Parse(save[1]);
             Luck = int.Parse(save[2]);
             Cybernetics = int.Parse(save[3]);
+            Morality = int.Parse(save[4]);
+            Careerism = int.Parse(save[5]);
 
             IsProtagonist = true;
         }
