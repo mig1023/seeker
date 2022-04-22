@@ -218,11 +218,14 @@ namespace Seeker
                 }
             }
 
+            if (optionCount > 1)
+                gameOver = false;
+
             if (startOfGame && Game.Continue.IsGameSaved())
             {
                 Options.Children.Add(Output.Buttons.Additional("Продолжить предыдущую игру", Continue_Click));
             }
-            else if (!startOfGame && (Game.Data.Actions != null) && !(gameOver && (optionCount == 1)))
+            else if (!startOfGame && (Game.Data.Actions != null) && !gameOver)
             {
                 foreach (string buttonName in Game.Healing.List())
                     AddAdditionalButton(buttonName, HealingButton_Click);
@@ -248,14 +251,10 @@ namespace Seeker
 
             Game.Option.Trigger(paragraph.LateTrigger);
 
-            if (!startOfGame && gameOver && (optionCount == 1))
-            {
+            if (!startOfGame && gameOver)
                 Game.Continue.Remove();
-            }
             else if (!startOfGame)
-            {
                 Game.Continue.Save();
-            }
         }
 
         private StackLayout MultipleButtonsPlace(Abstract.IActions action, StackLayout actionPlace)
@@ -427,6 +426,9 @@ namespace Seeker
         private void CheckGameOver()
         {
             if ((Game.Data.Actions == null) || !Game.Data.Actions.GameOver(out int toEndParagraph, out string toEndText))
+                return;
+
+            if (Game.Settings.GetValue("Godmode") == 1)
                 return;
 
             Options.Children.Clear();
