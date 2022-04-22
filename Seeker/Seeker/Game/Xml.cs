@@ -129,7 +129,7 @@ namespace Seeker.Game
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.LoadXml(DependencyService.Get<Abstract.IAssets>().GetFromAssets(gamebook.XmlBook));
 
-            foreach (XmlNode xmlNode in xmlFile.SelectNodes("GameBook/Paragraphs/Paragraph"))
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes("Gamebook/Paragraphs/Paragraph"))
                 Data.XmlParagraphs.Add(Xml.IntParse(xmlNode["Id"]), xmlNode);
 
             Data.Paragraphs = gamebook.Links.Paragraphs;
@@ -161,7 +161,7 @@ namespace Seeker.Game
         private static List<string> Multiples(XmlNode xmlNode, string attributes) =>
             xmlNode.Attributes[attributes].InnerText.Split(',').Select(x => x.Trim()).ToList();
 
-        private static string Intro(string node) => String.Format("GameBook/Introduction/{0}", node);
+        private static string Intro(string node) => String.Format("Gamebook/Introduction/{0}", node);
 
         public static void GetXmlDescriptionData(ref Description description)
         {
