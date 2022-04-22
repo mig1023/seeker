@@ -1,4 +1,4 @@
-<GameBook>
+<Gamebook>
 	<Introduction>
 		<Title>Миссия на Урпан</Title>
 		<Styles>
@@ -519,4 +519,4 @@
 			</Options>
 		</Paragraph>
 	</Paragraphs>
-</GameBook>
+</Gamebook>
