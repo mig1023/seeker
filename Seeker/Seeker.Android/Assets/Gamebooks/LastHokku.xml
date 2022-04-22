@@ -1,4 +1,4 @@
-<GameBook>
+<Gamebook>
 	<Introduction>
 		<Title>Последнее хокку</Title>
 		<Styles>
@@ -116,4 +116,4 @@
 			</Options>
 		</Paragraph>
 	</Paragraphs>
-</GameBook>
+</Gamebook>
