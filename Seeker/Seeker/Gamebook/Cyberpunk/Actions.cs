@@ -49,6 +49,10 @@ namespace Seeker.Gamebook.Cyberpunk
 
                 return new List<string> { String.Format("{0} (значение: {1})", statName.ToUpper(), statValue) };
             }
+            else if ((Type == "DiceRoll") || (Type == "OddDiceRoll"))
+            {
+                return new List<string> { };
+            }
             else if (String.IsNullOrEmpty(Text))
             {
                 string line = "Проверка: ";
@@ -59,7 +63,9 @@ namespace Seeker.Gamebook.Cyberpunk
                 return new List<string> { line.TrimEnd(' ', '+') };
             }
             else
+            {
                 return new List<string> { Text };
+            }
         }
 
         public override bool CheckOnlyIf(string option)
@@ -177,6 +183,20 @@ namespace Seeker.Gamebook.Cyberpunk
             {
                 return true;
             }
+        }
+
+        public List<string> DiceRoll() => new List<string> { String.Format("BIG|Кубик: {0}", Game.Dice.Roll(size: 100)) };
+
+        public List<string> OddDiceRoll()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dice = Game.Dice.Roll(size: 100);
+
+            diceCheck.Add(String.Format("На кубикe выпало: {0}", dice));
+            diceCheck.Add(dice % 2 == 0 ? "BIG|ЧЁТНОЕ ЧИСЛО!" : "BIG|НЕЧЁТНОЕ ЧИСЛО!");
+
+            return diceCheck;
         }
 
         public List<string> Get() => ChangeProtagonistParam(Stat, protagonist, String.Empty);
