@@ -14,6 +14,8 @@ namespace Seeker.Gamebook.Cyberpunk
             ["Cybernetics"] = "Кибернетика",
             ["Morality"] = "Мораль",
             ["Careerism"] = "Карьеризм",
+            ["BlackMarket"] = "Чёрный рынок",
+            ["Clan"] = "Клан",
             ["Selfcontrol25"] = "Самообладание 25",
             ["Selfcontrol50"] = "Самообладание 50",
             ["Selfcontrol75"] = "Самообладание 75",

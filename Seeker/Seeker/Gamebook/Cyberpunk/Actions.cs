@@ -31,6 +31,12 @@ namespace Seeker.Gamebook.Cyberpunk
             if (protagonist.Careerism > 1)
                 statusLines.Insert(0, String.Format("Карьеризм: {0}", protagonist.Careerism));
 
+            if (protagonist.BlackMarket > 1)
+                statusLines.Insert(0, String.Format("Чёрный рынок: {0}", protagonist.BlackMarket));
+
+            if (protagonist.Clan > 1)
+                statusLines.Insert(0, String.Format("Клан: {0}", protagonist.Clan));
+
             return statusLines;
         }
 
@@ -65,6 +71,18 @@ namespace Seeker.Gamebook.Cyberpunk
             else if (option.Contains("|"))
             {
                 return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
+            }
+            else if (option == "BlackMarketDominate")
+            {
+                return (protagonist.BlackMarket > protagonist.Clan);
+            }
+            else if (option == "ClantDominate")
+            {
+                return (protagonist.BlackMarket < protagonist.Clan);
+            }
+            else if (option == "BlackMarketEquality")
+            {
+                return (protagonist.BlackMarket == protagonist.Clan);
             }
             else if (option.Contains(">") || option.Contains("<") || option.Contains("="))
             {
@@ -144,11 +162,12 @@ namespace Seeker.Gamebook.Cyberpunk
             if ((Type == "Get, Decrease") && (!String.IsNullOrEmpty(Stat)))
             {
                 int stat = GetProperty(protagonist, Stat);
+                bool cybernetics = (Stat == "Cybernetics");
 
                 if (secondButton)
-                    return (stat > 1);
+                    return (stat > (cybernetics ? 1 : 0));
                 else
-                    return (stat < 99);
+                    return (stat < (cybernetics ? 99 : 100));
             }
             else if ((Type == "Test") && Stat.StartsWith("Selfcontrol"))
             {

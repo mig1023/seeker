@@ -60,6 +60,32 @@ namespace Seeker.Gamebook.Cyberpunk
             }
         }
 
+        private int _blackMarket;
+        public int BlackMarket
+        {
+            get => _blackMarket;
+            set
+            {
+                _blackMarket = Game.Param.Setter(value, max: 100, _blackMarket, this);
+
+                if ((_blackMarket > 0) || (_clan > 0))
+                    _clan = 100 - _blackMarket;
+            }
+        }
+
+        private int _clan;
+        public int Clan
+        {
+            get => _clan;
+            set
+            {
+                _clan = Game.Param.Setter(value, max: 100, _clan, this);
+
+                if ((_blackMarket > 0) || (_clan > 0))
+                    _blackMarket = 100 - _clan;
+            }
+        }
+
         public override void Init()
         {
             base.Init();
@@ -70,6 +96,8 @@ namespace Seeker.Gamebook.Cyberpunk
             Cybernetics = 1;
             Morality = 0;
             Careerism = 0;
+            BlackMarket = 0;
+            Clan = 0;
         }
 
         public Character Clone() => new Character()
@@ -82,10 +110,12 @@ namespace Seeker.Gamebook.Cyberpunk
             Cybernetics = this.Cybernetics,
             Morality = this.Morality,
             Careerism = this.Careerism,
+            BlackMarket = this.BlackMarket,
+            Clan = this.Clan,
         };
 
         public override string Save() => String.Join("|",
-            Planning, Preparation, Luck, Cybernetics, Morality, Careerism);
+            Planning, Preparation, Luck, Cybernetics, Morality, Careerism, BlackMarket, Clan);
 
         public override void Load(string saveLine)
         {
@@ -97,6 +127,8 @@ namespace Seeker.Gamebook.Cyberpunk
             Cybernetics = int.Parse(save[3]);
             Morality = int.Parse(save[4]);
             Careerism = int.Parse(save[5]);
+            BlackMarket = int.Parse(save[6]);
+            Clan = int.Parse(save[7]);
 
             IsProtagonist = true;
         }
