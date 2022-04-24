@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Seeker.Game
 {
@@ -7,15 +6,7 @@ namespace Seeker.Game
     {
         private static Random rand = new Random();
 
-        private static Dictionary<int, string> dices = new Dictionary<int, string>
-        {
-            [1] = "⚀",
-            [2] = "⚁",
-            [3] = "⚂",
-            [4] = "⚃",
-            [5] = "⚄",
-            [6] = "⚅",
-        };
+        private static string DiceSymbols = "⚀⚁⚂⚃⚄⚅";
 
         public static int Roll(int dices = 1, int size = 6)
         {
@@ -29,10 +20,10 @@ namespace Seeker.Game
 
         public static void DoubleRoll(out int firstDice, out int secondDice)
         {
-            firstDice = Game.Dice.Roll();
-            secondDice = Game.Dice.Roll();
+            firstDice = Dice.Roll();
+            secondDice = Dice.Roll();
         }
 
-        public static string Symbol(int dice) => dices[dice];
+        public static string Symbol(int dice) => DiceSymbols[dice-1].ToString();
     }
 }
