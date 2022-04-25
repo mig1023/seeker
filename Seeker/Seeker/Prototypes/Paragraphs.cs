@@ -38,7 +38,7 @@ namespace Seeker.Prototypes
         {
             Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
                 paragraph.Options.Add(OptionParse(xmlOption));
 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
@@ -76,7 +76,7 @@ namespace Seeker.Prototypes
                 action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
             if (action.Type == "Option")
-                action.Option = OptionParse(xmlAction["Option"]);
+                action.Option = OptionInActionParse(xmlAction);
 
             return action;
         }
@@ -105,16 +105,32 @@ namespace Seeker.Prototypes
             Images = Xml.ImagesParse(xmlParagraph["Images"]),
         };
 
-        public Option OptionsTemplateWithoutDestination(XmlNode xmlOption) => new Option()
+        public Option OptionInActionParse(XmlNode xmlAction)
         {
-            Text = Xml.StringParse(xmlOption.Attributes["Text"]),
-            OnlyIf = Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
-            Singleton = Xml.StringParse(xmlOption.Attributes["Singleton"]),
-            Input = Xml.StringParse(xmlOption.Attributes["Input"]),
-            Aftertext = Xml.StringParse(xmlOption.SelectSingleNode("Text")),
-            Aftertexts = Xml.TextsParse(xmlOption),
-        };
+            if (xmlAction["Gameover"] != null)
+                return new Option() { Destination = 0 };
+            else
+                return OptionParse(xmlAction["Option"]);
+        }
 
+        public Option OptionsTemplateWithoutDestination(XmlNode xmlOption)
+        {
+            if (xmlOption.Name == "Gameover")
+                return new Option() { Destination = 0 };
+
+            Option newOption = new Option()
+            {
+                Text = Xml.StringParse(xmlOption.Attributes["Text"]),
+                OnlyIf = Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
+                Singleton = Xml.StringParse(xmlOption.Attributes["Singleton"]),
+                Input = Xml.StringParse(xmlOption.Attributes["Input"]),
+                Aftertext = Xml.StringParse(xmlOption.SelectSingleNode("Text")),
+                Aftertexts = Xml.TextsParse(xmlOption),
+            };
+
+            return newOption;
+        }
+            
         public Option OptionsTemplate(XmlNode xmlOption)
         {
             Option option = OptionsTemplateWithoutDestination(xmlOption);
