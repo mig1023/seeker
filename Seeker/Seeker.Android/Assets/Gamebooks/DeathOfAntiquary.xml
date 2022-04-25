@@ -288,7 +288,7 @@
 			<Id>33</Id>
 			<Text>Тарасов взял отгулы и сильно запил.\n\nКогда у него закончились деньги, он отнес клетку с попугаем на рынок и продал его за 10 долларов...</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -428,7 +428,7 @@
 			<Id>48</Id>
 			<Text>КОНЕЦ</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
