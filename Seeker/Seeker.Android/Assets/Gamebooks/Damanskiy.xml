@@ -6792,7 +6792,7 @@
 				<Text Alignment="Right">Полковник Герасимов\n\n</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -6808,7 +6808,7 @@
 				<Text Alignment="Right">Полковник Герасимов\n\n</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -6824,7 +6824,7 @@
 				<Text Alignment="Right">Полковник Герасимов\n\n</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -6840,7 +6840,7 @@
 				<Text Alignment="Right">Полковник Герасимов\n\n</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -6850,7 +6850,7 @@
 				<Text>В боях за Даманский (2-16 марта 1969 года) погибли 58 советских воинов, 94 получили тяжелые ранения. За проявленный героизм четверо военнослужащих получили звание Героя Советского Союза. Двое из них — посмертно. Китайские потери советская сторона исчисляла в 700-800 убитых, но некоторые источники (например, японские СМИ) называли цифры до 3000. Официально же китайская сторона данные о своих потерях держит в секрете до сих пор.</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
