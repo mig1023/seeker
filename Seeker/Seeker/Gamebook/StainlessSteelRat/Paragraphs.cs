@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.StainlessSteelRat
         {
             Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
                 Option option = OptionsTemplateWithoutDestination(xmlOption);
 
