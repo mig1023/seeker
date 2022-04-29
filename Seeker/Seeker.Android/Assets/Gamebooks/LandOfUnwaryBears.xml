@@ -603,7 +603,7 @@
 				<Text Font="Bold">ПОЛУЧЕНО ДОСТИЖЕНИЕ «СОВЕТ ДА ЛЮБОВЬ!»\n</Text>
 			</Texts>
 			<Options>
-				<Gameover/>
+				<Option Destination="0"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
