@@ -12,7 +12,7 @@ namespace Seeker.Gamebook.OrcsDay
         {
             Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
                 Option option = OptionsTemplateWithoutDestination(xmlOption);
 
@@ -58,7 +58,7 @@ namespace Seeker.Gamebook.OrcsDay
             }
 
             if (action.Type == "Option")
-                action.Option = OptionInActionParse(xmlAction);
+                action.Option = OptionParse(xmlAction["Option"]);
 
             action.Benefit = Xml.ModificationParse(xmlAction["Benefit"], new Modification());
 
