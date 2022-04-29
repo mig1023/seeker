@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.InvisibleFront
         {
             Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
                 paragraph.Options.Add(OptionParse(xmlOption));
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
