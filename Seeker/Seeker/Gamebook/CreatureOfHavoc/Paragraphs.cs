@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         {
             Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
                 Option option = OptionsTemplate(xmlOption);
 
