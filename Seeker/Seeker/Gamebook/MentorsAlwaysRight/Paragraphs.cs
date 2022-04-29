@@ -33,7 +33,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             }
 
             if (action.Type == "Option")
-                action.Option = OptionInActionParse(xmlAction);
+                action.Option = OptionParse(xmlAction["Option"]);
 
             return action;
         }
