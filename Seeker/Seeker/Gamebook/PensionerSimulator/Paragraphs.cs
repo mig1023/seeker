@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.PensionerSimulator
         {
             Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
                 paragraph.Options.Add(OptionParseWithDo(xmlOption, new Modification()));
 
             return paragraph;
