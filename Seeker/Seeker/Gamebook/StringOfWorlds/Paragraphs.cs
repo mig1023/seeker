@@ -16,7 +16,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             Constants.RandomColor();
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
                 Option option = OptionsTemplateWithoutDestination(xmlOption);
 
