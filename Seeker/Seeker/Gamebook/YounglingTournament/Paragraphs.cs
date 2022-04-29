@@ -12,7 +12,7 @@ namespace Seeker.Gamebook.YounglingTournament
         {
             Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
             {
                 Option option = OptionsTemplateWithoutDestination(xmlOption);
 
@@ -64,7 +64,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 action.Benefit = Xml.ModificationParse(xmlAction["Benefit"], new Modification());
 
             if (action.Type == "Option")
-                action.Option = OptionInActionParse(xmlAction);
+                action.Option = OptionParse(xmlAction["Option"]);
 
             return action;
         }
