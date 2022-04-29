@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             }
 
             if (action.Type == "Option")
-                action.Option = OptionInActionParse(xmlAction);
+                action.Option = OptionParse(xmlAction["Option"]);
 
             action.Benefit = Xml.ModificationParse(xmlAction["Benefit"], new Modification());
 
