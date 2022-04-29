@@ -63,7 +63,7 @@ namespace Seeker.Prototypes
 
         public virtual void LoadParagraphsWithoutSomething(XmlDocument xmlFile, string type)
         {
-            string nodeName = String.Format("GameBook/Introduction/Paragraphs/List[@Type='{0}']", type);
+            string nodeName = String.Format("Gamebook/Introduction/Paragraphs/List[@Type='{0}']", type);
             XmlNode paragraphs = xmlFile.SelectSingleNode(nodeName);
 
             if (paragraphs == null)
