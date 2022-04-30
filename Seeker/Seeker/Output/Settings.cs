@@ -23,13 +23,19 @@ namespace Seeker.Output
             };
 
             SettingOption("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING);
-            SettingDescription("Выбор шрифта определяет не только отображение текста, но и текст кнопок, а также меню. " +
-                "Будьте внимательны: не любой шрифт хорошо подойдёт под настройки некоторых игры.");
+            SettingDescription("Выбор шрифта определяет не только отображение текста " +
+                "параграфов, но и текст кнопок, а также меню. Будьте внимательны: не " +
+                "любой шрифт хорошо подойдёт под настройки некоторых игры.");
 
             SettingOption("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING);
             SettingOption("Текст по ширине", "Justyfy", null);
 
             SettingOption("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING);
+            SettingDescription("Многие игры содержат дополнительные опции выбора, зависящие " +
+                "от параметров персонажа или найденных артефактов. Другие содержат секретные " +
+                "переходы, которые появляются только при особых условиях. Отображаются ли " +
+                "такие опции выбора в меню параграфа обычно зависит от настроек конкретной игры.");
+
             SettingOption("Отображать меню", "SystemMenu", null);
             SettingOption("Сортировка", "Sort", Constants.SORT_SETTING);
             SettingOption("Без оформления", "WithoutStyles", null);
@@ -102,7 +108,7 @@ namespace Seeker.Output
 
         private static void SettingDescription(string settingDescription)
         {
-            int currentRow = AddNewRow(ref SettingGrid);
+            int currentRow = AddNewRow(ref SettingGrid, settingsRow: false);
 
             Label description = new Label
             {
@@ -166,9 +172,13 @@ namespace Seeker.Output
             }
         }
 
-        private static int AddNewRow(ref Grid settingGrid)
+        private static int AddNewRow(ref Grid settingGrid, bool settingsRow = true)
         {
-            settingGrid.RowDefinitions.Add(new RowDefinition { Height = 40 });
+            if (settingsRow)
+                settingGrid.RowDefinitions.Add(new RowDefinition { Height = 40 });
+            else
+                settingGrid.RowDefinitions.Add(new RowDefinition());
+
             return settingGrid.RowDefinitions.Count - 1;
         }
 
