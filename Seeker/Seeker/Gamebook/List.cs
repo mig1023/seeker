@@ -55,10 +55,7 @@ namespace Seeker.Gamebook
 
         public static List<Description> GetSortedBooks()
         {
-            List<Description> list = new List<Description>();
-
-            foreach (string game in List.GetBooks())
-                list.Add(List.GetDescription(game));
+            List<Description> list = new List<Description>(List.GetBooks().Select(x => List.GetDescription(x)));
 
             switch (Sort())
             {
