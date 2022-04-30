@@ -70,6 +70,24 @@ namespace Seeker.Gamebook
             return russianList;
         }
 
+        private static List<Description> SortByAuthors(List<Description> list)
+        {
+            List<Description> engishList = new List<Description>(list
+                .Where(x => Regex.Match(x.AuthorsIndex(), @"^[A-Za-z]").Success)
+                .OrderBy(x => x.AuthorsIndex())
+                .ThenBy(x => x.Year)
+                .ToList());
+
+            List<Description> russianList = new List<Description>(list
+                .Where(x => !Regex.Match(x.AuthorsIndex(), @"^[A-Za-z]").Success)
+                .OrderBy(x => x.AuthorsIndex())
+                .ThenBy(x => x.Year)
+                .ToList());
+
+            russianList.AddRange(engishList);
+            return russianList;
+        }
+
         public static List<Description> GetSortedBooks()
         {
             List<Description> list = new List<Description>(List.GetBooks().Select(x => List.GetDescription(x)));
@@ -80,7 +98,7 @@ namespace Seeker.Gamebook
                     return SortByTitle(list);
 
                 case 2:
-                    return list.OrderBy(x => x.AuthorsIndex()).ThenBy(x => x.Year).ToList();
+                    return SortByAuthors(list);
 
                 case 3:
                     return list.OrderByDescending(x => x.ParagraphSize()).ToList();
