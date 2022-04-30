@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Seeker.Gamebook
 {
@@ -53,6 +54,22 @@ namespace Seeker.Gamebook
 
         public static int Sort() => Game.Settings.GetValue("Sort");
 
+        private static List<Description> SortByTitle(List<Description> list)
+        {
+            List<Description> engishList = new List<Description>(list
+                .Where(x => Regex.Match(x.Title, @"^[A-Za-z]").Success)
+                .OrderBy(x => x.Title)
+                .ToList());
+
+            List<Description> russianList = new List<Description>(list
+                .Where(x => !Regex.Match(x.Title, @"^[A-Za-z]").Success)
+                .OrderBy(x => x.Title)
+                .ToList());
+
+            russianList.AddRange(engishList);
+            return russianList;
+        }
+
         public static List<Description> GetSortedBooks()
         {
             List<Description> list = new List<Description>(List.GetBooks().Select(x => List.GetDescription(x)));
@@ -60,7 +77,7 @@ namespace Seeker.Gamebook
             switch (Sort())
             {
                 case 1:
-                    return list.OrderBy(x => x.Title).ToList();
+                    return SortByTitle(list);
 
                 case 2:
                     return list.OrderBy(x => x.AuthorsIndex()).ThenBy(x => x.Year).ToList();
