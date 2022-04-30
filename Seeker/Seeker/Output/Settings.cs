@@ -23,6 +23,9 @@ namespace Seeker.Output
             };
 
             SettingOption("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING);
+            SettingDescription("Выбор шрифта определяет не только отображение текста, но и текст кнопок, а также меню. " +
+                "Будьте внимательны: не любой шрифт хорошо подойдёт под настройки некоторых игры.");
+
             SettingOption("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING);
             SettingOption("Текст по ширине", "Justyfy", null);
 
@@ -95,6 +98,21 @@ namespace Seeker.Output
 
             SettingGrid.Children.Add(settingButton, 0, currentRow);
             Grid.SetColumnSpan(settingButton, 4);
+        }
+
+        private static void SettingDescription(string settingDescription)
+        {
+            int currentRow = AddNewRow(ref SettingGrid);
+
+            Label description = new Label
+            {
+                Text = settingDescription,
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                FontSize = Interface.Font(NamedSize.Micro),
+            };
+
+            SettingGrid.Children.Add(description, 0, currentRow);
+            Grid.SetColumnSpan(description, 4);
         }
 
         private static void SettingOption(string settingName, string settingType, List<string> options, int? row = null)
