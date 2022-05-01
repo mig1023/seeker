@@ -6,5 +6,17 @@
 			<Option>Yanone</Option>
 			<Option>Roboto</Option>
 		</Options>
+		<Description>Выбор шрифта определяет не только отображение текста параграфов, но и текст кнопок, а также меню. Будьте внимательны: не любой шрифт хорошо подойдёт под настройки некоторых игры.</Description>
+	</Setting>
+	<Setting>
+		<Name>Размер шрифта</Name>
+		<Type>FontSize</Type>
+		<Options>
+			<Option>Настройки игры</Option>
+			<Option>Очень мелкий</Option>
+			<Option>Мелкий</Option>
+			<Option>Нормальный</Option>
+			<Option>Крупный</Option>
+		</Options>
 	</Setting>
 </Settings>
