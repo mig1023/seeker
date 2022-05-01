@@ -15,6 +15,7 @@ namespace Seeker.Game
         public const int StartParagraph = 0;
 
         public const string DescriptionXml = "Descriptions.xml";
+        public const string SettingsXml = "Settings.xml";
 
         public static Paragraph CurrentParagraph { get; set; }
         public static int CurrentParagraphID { get; set; }

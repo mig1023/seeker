@@ -1,0 +1,10 @@
+<Settings>
+	<Setting>
+		<Name>Основной шрифт</Name>
+		<Type>FontType</Type>
+		<Options>
+			<Option>Yanone</Option>
+			<Option>Roboto</Option>
+		</Options>
+	</Setting>
+</Settings>

@@ -9,6 +9,11 @@ namespace Seeker.Output
         private static Grid SettingGrid;
         private delegate void SettingMethod();
 
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public List<string> Options { get; set; }
+        public string Description { get; set; }
+
         public static void Add(ref StackLayout settings)
         {
             SettingGrid = new Grid
@@ -22,26 +27,37 @@ namespace Seeker.Output
                 },
             };
 
-            SettingOption("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING);
-            SettingDescription("Выбор шрифта определяет не только отображение текста " +
-                "параграфов, но и текст кнопок, а также меню. Будьте внимательны: не " +
-                "любой шрифт хорошо подойдёт под настройки некоторых игры.");
+            foreach (Settings setting in Game.Xml.GetXmlSettings())
+            {
+                SettingOption(setting.Name, setting.Type, setting.Options);
 
-            SettingOption("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING);
-            SettingOption("Текст по ширине", "Justyfy", null);
+                if (!String.IsNullOrEmpty(setting.Description))
+                    SettingDescription(setting.Description);
+            }
 
-            SettingOption("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING);
-            SettingDescription("Многие игры содержат дополнительные опции выбора, зависящие " +
-                "от параметров персонажа или найденных артефактов. Другие содержат секретные " +
-                "переходы, которые появляются только при особых условиях. Отображаются ли " +
-                "такие опции выбора в меню параграфа обычно зависит от настроек конкретной игры.");
 
-            SettingOption("Отображать меню", "SystemMenu", null);
-            SettingOption("Сортировка", "Sort", Constants.SORT_SETTING);
-            SettingOption("Без оформления", "WithoutStyles", null);
+
+            //SettingOption("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING);
+            //SettingDescription("Выбор шрифта определяет не только отображение текста " +
+            //    "параграфов, но и текст кнопок, а также меню. Будьте внимательны: не " +
+            //    "любой шрифт хорошо подойдёт под настройки некоторых игры.");
+
+            //SettingOption("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING);
+            //SettingOption("Текст по ширине", "Justyfy", null);
+
+            //SettingOption("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING);
+            //SettingDescription("Многие игры содержат дополнительные опции выбора, зависящие " +
+            //    "от параметров персонажа или найденных артефактов. Другие содержат секретные " +
+            //    "переходы, которые появляются только при особых условиях. Отображаются ли " +
+            //    "такие опции выбора в меню параграфа обычно зависит от настроек конкретной игры.");
+
+            //SettingOption("Отображать меню", "SystemMenu", null);
+            //SettingOption("Сортировка", "Sort", Constants.SORT_SETTING);
+            //SettingOption("Без оформления", "WithoutStyles", null);
+            //SettingOption("Данные отладки", "Debug", null);
 
             SettingCheatingBlock();
-            SettingOption("Данные отладки", "Debug", null);
+            
 
             SettingButton("Сбросить сохранённые игры", () => Game.Continue.Clean(), spacer: true);
             SettingButton("Сбросить все настройки", () => Game.Settings.Clean());

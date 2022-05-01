@@ -11,6 +11,7 @@ namespace Seeker.Game
     class Xml
     {
         private static Dictionary<string, XmlNode> Descriptions { get; set; }
+        private static List<XmlNode> SettingsData { get; set; }
 
         public static int IntParse(string text) => int.TryParse(text, out int value) ? value : 0;
 
@@ -200,6 +201,33 @@ namespace Seeker.Game
                 description.BookColor = ColorLoad(data, "Color", Data.ColorTypes.BookColor);
         }
 
+        public static List<Output.Settings> GetXmlSettings()
+        {
+            if (SettingsData == null)
+                SettingsLoad();
+
+            List<Output.Settings> settings = new List<Output.Settings>();
+
+            foreach (XmlNode data in SettingsData)
+            {
+                Output.Settings setting = new Output.Settings
+                {
+                    Name = StringParse(data["Name"]),
+                    Type = StringParse(data["Type"]),
+                    Description = StringParse(data["Description"]),
+                };
+
+                setting.Options = new List<string>();
+
+                foreach (XmlNode option in data.SelectNodes("Options/Option"))
+                    setting.Options.Add(option.InnerText);
+
+                settings.Add(setting);
+            }
+
+            return settings;
+        }
+
         private static string ColorLoad(XmlNode xmlNode, string name, Data.ColorTypes defaultColor) =>
             Settings.IsEnabled("WithoutStyles") ? Prototypes.Constants.DefaultColor(defaultColor) : StringParse(xmlNode[name]);
  
@@ -212,6 +240,17 @@ namespace Seeker.Game
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes("Gamebooks/Description"))
                 Descriptions.Add(xmlNode["Name"].InnerText, xmlNode);
+        }
+
+        private static void SettingsLoad()
+        {
+            SettingsData = new List<XmlNode>();
+
+            XmlDocument xmlFile = new XmlDocument();
+            xmlFile.LoadXml(DependencyService.Get<Abstract.IAssets>().GetFromAssets(Data.SettingsXml));
+
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes("Settings/Setting"))
+                SettingsData.Add(xmlNode);
         }
     }
 }
