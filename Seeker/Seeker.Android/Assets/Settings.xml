@@ -51,4 +51,8 @@
             <Option>По времени прохождения</Option>
 		</Options>
 	</Setting>
+	<Setting>
+		<Name>Без оформления</Name>
+		<Type>WithoutStyles</Type>
+	</Setting>
 </Settings>
