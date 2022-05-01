@@ -55,4 +55,8 @@
 		<Name>Без оформления</Name>
 		<Type>WithoutStyles</Type>
 	</Setting>
+	<Setting>
+		<Name>Данные отладки</Name>
+		<Type>Debug</Type>
+	</Setting>
 </Settings>

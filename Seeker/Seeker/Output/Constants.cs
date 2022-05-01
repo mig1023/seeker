@@ -53,26 +53,11 @@ namespace Seeker.Output
             [TextFontSize.big] = Font(NamedSize.Large),
         };
 
-        //public static List<string> FONT_TYPE_SETTING = new List<string>
-        //{
-        //    "Yanone",
-        //    "Roboto",
-        //};
-
         public static Dictionary<int, string> FONT_TYPE_VALUES = new Dictionary<int, string>
         {
             [0] = "YanoneFont",
             [1] = "RobotoFont",
         };
-
-        //public static List<string> FONT_SIZE_SETTING = new List<string>
-        //{
-        //    "Настройки игры",
-        //    "Очень мелкий",
-        //    "Мелкий",
-        //    "Нормальный",
-        //    "Крупный",
-        //};
 
         public static Dictionary<int, double> FONT_SIZE_VALUES = new Dictionary<int, double>
         {
@@ -80,25 +65,6 @@ namespace Seeker.Output
             [2] = Interface.Font(NamedSize.Medium),
             [3] = Interface.Font(NamedSize.Large),
             [4] = Constants.BIG_FONT,
-        };
-
-        public static List<string> OPTION_SETTING = new List<string>
-        {
-            "Настройки игры",
-            "Отображать",
-            "Скрывать",
-        };
-
-        public static List<string> SORT_SETTING = new List<string>
-        {
-            "По умолчанию",
-            "По названию",
-            "По автору",
-            "По размеру (параграфы)",
-            "По размеру (объём)",
-            "По году издания",
-            "По тематике",
-            "По времени прохождения",
         };
 
         public static List<string> PLAYTHROUGH_TIME = new List<string>
