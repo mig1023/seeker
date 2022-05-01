@@ -53,11 +53,11 @@ namespace Seeker.Output
             [TextFontSize.big] = Font(NamedSize.Large),
         };
 
-        public static List<string> FONT_TYPE_SETTING = new List<string>
-        {
-            "Yanone",
-            "Roboto",
-        };
+        //public static List<string> FONT_TYPE_SETTING = new List<string>
+        //{
+        //    "Yanone",
+        //    "Roboto",
+        //};
 
         public static Dictionary<int, string> FONT_TYPE_VALUES = new Dictionary<int, string>
         {
@@ -65,14 +65,14 @@ namespace Seeker.Output
             [1] = "RobotoFont",
         };
 
-        public static List<string> FONT_SIZE_SETTING = new List<string>
-        {
-            "Настройки игры",
-            "Очень мелкий",
-            "Мелкий",
-            "Нормальный",
-            "Крупный",
-        };
+        //public static List<string> FONT_SIZE_SETTING = new List<string>
+        //{
+        //    "Настройки игры",
+        //    "Очень мелкий",
+        //    "Мелкий",
+        //    "Нормальный",
+        //    "Крупный",
+        //};
 
         public static Dictionary<int, double> FONT_SIZE_VALUES = new Dictionary<int, double>
         {

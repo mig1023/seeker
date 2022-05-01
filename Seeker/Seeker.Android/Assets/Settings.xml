@@ -19,4 +19,8 @@
 			<Option>Крупный</Option>
 		</Options>
 	</Setting>
+	<Setting>
+		<Name>Текст по ширине</Name>
+		<Type>Justyfy</Type>
+	</Setting>
 </Settings>

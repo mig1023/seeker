@@ -222,6 +222,9 @@ namespace Seeker.Game
                 foreach (XmlNode option in data.SelectNodes("Options/Option"))
                     setting.Options.Add(option.InnerText);
 
+                if (setting.Options.Count == 0)
+                    setting.Options = null;
+
                 settings.Add(setting);
             }
 

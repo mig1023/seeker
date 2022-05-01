@@ -37,13 +37,13 @@ namespace Seeker.Output
 
 
 
-            //SettingOption("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING);
-            //SettingDescription("Выбор шрифта определяет не только отображение текста " +
-            //    "параграфов, но и текст кнопок, а также меню. Будьте внимательны: не " +
-            //    "любой шрифт хорошо подойдёт под настройки некоторых игры.");
+                //SettingOption("Основной шрифт", "FontType", Constants.FONT_TYPE_SETTING);
+                //SettingDescription("Выбор шрифта определяет не только отображение текста " +
+                //    "параграфов, но и текст кнопок, а также меню. Будьте внимательны: не " +
+                //    "любой шрифт хорошо подойдёт под настройки некоторых игры.");
 
-            //SettingOption("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING);
-            //SettingOption("Текст по ширине", "Justyfy", null);
+                //SettingOption("Размер шрифта", "FontSize", Constants.FONT_SIZE_SETTING);
+                //SettingOption("Текст по ширине", "Justyfy", null);
 
             //SettingOption("Недоступные опции", "DisabledOption", Constants.OPTION_SETTING);
             //SettingDescription("Многие игры содержат дополнительные опции выбора, зависящие " +
