@@ -61,7 +61,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
         public override bool IsButtonEnabled(bool secondButton = false) =>
             !(Used || ((Price > 0) && (protagonist.Sestertius < Price)));
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
