@@ -98,7 +98,7 @@ namespace Seeker.Gamebook.OctopusIsland
         public override bool IsButtonEnabled(bool secondButton = false) =>
             !((DinnerHitpointsBonus > 0) && ((protagonist.Food <= 0) || DinnerAlready));
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
