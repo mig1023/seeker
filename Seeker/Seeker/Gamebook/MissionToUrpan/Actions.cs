@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.MissionToUrpan
         public override List<string> Status() =>
             new List<string> { String.Format("Репутация: {0}", protagonist.Reputation) };
 
-        public override bool CheckOnlyIf(string option) => CheckOnlyIfTrigger(option);
+        public override bool Availability(string option) => AvailabilityTrigger(option);
 
         public List<string> Result()
         {
