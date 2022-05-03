@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.InvisibleFront
             String.Format("Вербовка: {0}", protagonist.Recruitment)
         };
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
