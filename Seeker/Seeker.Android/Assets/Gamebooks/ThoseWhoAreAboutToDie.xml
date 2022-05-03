@@ -52,7 +52,7 @@
 			<Id>4</Id>
 			<Text>Ты наносишь удар в щит. Ели твоя Сила выше 7, то его рука немеет и он продолжает драться без щита:</Text>
 			<Options>
-				<Option Destination="36" Text="Его рука онемела" OnlyIf="СИЛА > 7">
+				<Option Destination="36" Text="Его рука онемела" Availability="СИЛА > 7">
 					<Text>Если нет, то ты наносишь удар в щит. Он стойко его переносит и бьёт тебя в область правого предплечья.</Text>
 				</Option>
 				<Option Destination="55" Text="Поставить блок кинжалами"/>
@@ -136,10 +136,10 @@
 			<Id>13</Id>
 			<Text>Ты прыгаешь навстречу ретиарию, он поднимает трезубец, готовясь принять на него.\n\nЕсли твоя Реакция больше 7 пунктов, а Сила больше 6 пунктов, то ты успеваешь среагировать. </Text>
 			<Options>
-				<Option Destination="9" OnlyIf="РЕАКЦИЯ > 7, СИЛА > 6">
+				<Option Destination="9" Availability="РЕАКЦИЯ > 7, СИЛА > 6">
 					<Text>Если меньше хотя бы один из параметров, то ретиарий успевает поднять трезубец и с силой бьёт им. Зубцы глубоко входят в твою грудь и ты умираешь...</Text>
 				</Option>
-				<Option Destination="0" Text="Начать сначала" OnlyIf="РЕАКЦИЯ &lt;= 7|СИЛА &lt;= 6"/>
+				<Option Destination="0" Text="Начать сначала" Availability="РЕАКЦИЯ &lt;= 7|СИЛА &lt;= 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -230,8 +230,8 @@
 				<Modification Name="Reaction" Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Destination="12" Text="Выносливость более 10 пунктов" OnlyIf="ВЫНОСЛИВОСТЬ > 10"/>
-				<Option Destination="44" Text="Выносливость 10 или менее пунктов" OnlyIf="ВЫНОСЛИВОСТЬ &lt;= 10"/>
+				<Option Destination="12" Text="Выносливость более 10 пунктов" Availability="ВЫНОСЛИВОСТЬ > 10"/>
+				<Option Destination="44" Text="Выносливость 10 или менее пунктов" Availability="ВЫНОСЛИВОСТЬ &lt;= 10"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -292,19 +292,19 @@
 			<Id>30</Id>
 			<Text>Если твоя Выносливость больше 8, то тебе удаётся выполнить манёвр.\n\nСекутор, думая что ты не сможешь прийти в себя так быстро после такого удара, расслабляется, за что и платит жизнью. Ты достаёшь его кинжалом и он падает, заливая песок кровью.</Text>
 			<Options>
-				<Option Destination="100" OnlyIf="ВЫНОСЛИВОСТЬ > 8">
+				<Option Destination="100" Availability="ВЫНОСЛИВОСТЬ > 8">
 					<Text>Если Выносливость 8 или меньше, то, значит, ты не рассчитал свои силы. Круги перед глазами не способствуют быстрому координированию действий. В глазах у тебя плывёт и ты неправильно рассчитываешь, с какой скоростью надо было двигаться. Гладиус секутора обрывает твою жизнь.</Text>
 				</Option>
-				<Option Destination="0" Text="Начать сначала" OnlyIf="ВЫНОСЛИВОСТЬ &lt;= 8"/>
+				<Option Destination="0" Text="Начать сначала" Availability="ВЫНОСЛИВОСТЬ &lt;= 8"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>31</Id>
 			<Text>Покрепче перехватив рукояти кинжалов, ты медленно подходишь к противнику. Ретиарий резко делает выпад трезубцем, целя тебе в грудь.</Text>
 			<Options>
-				<Option Destination="51" Text="Реакции до 6 пунктов" OnlyIf="РЕАКЦИЯ &lt;= 5"/>
-				<Option Destination="5" Text="Реакции от 6 до 9 пунктов" OnlyIf="РЕАКЦИЯ > 5, РЕАКЦИЯ &lt;= 9"/>
-				<Option Destination="19" Text="Реакции 10 и выше пунктов" OnlyIf="РЕАКЦИЯ > 10"/>
+				<Option Destination="51" Text="Реакции до 6 пунктов" Availability="РЕАКЦИЯ &lt;= 5"/>
+				<Option Destination="5" Text="Реакции от 6 до 9 пунктов" Availability="РЕАКЦИЯ > 5, РЕАКЦИЯ &lt;= 9"/>
+				<Option Destination="19" Text="Реакции 10 и выше пунктов" Availability="РЕАКЦИЯ > 10"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -326,8 +326,8 @@
 			<Id>34</Id>
 			<Text>Так и происходит, ретиарий бросает в тебя сеть. Ты пытаешься отпрыгнуть в сторону.</Text>
 			<Options>
-				<Option Destination="8" Text="Если твоя реакция больше 7" OnlyIf="РЕАКЦИЯ > 7"/>
-				<Option Destination="43" Text="Если она меньше или равна 7" OnlyIf="РЕАКЦИЯ &lt;= 7"/>
+				<Option Destination="8" Text="Если твоя реакция больше 7" Availability="РЕАКЦИЯ > 7"/>
+				<Option Destination="43" Text="Если она меньше или равна 7" Availability="РЕАКЦИЯ &lt;= 7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -356,7 +356,7 @@
 			<Id>38</Id>
 			<Text>Размахнувшись, ты пытаешься ударить противника в пах.</Text>
 			<Options>
-				<Option Destination="20" Text="Реакция больше 6" OnlyIf="РЕАКЦИЯ > 6">
+				<Option Destination="20" Text="Реакция больше 6" Availability="РЕАКЦИЯ > 6">
 					<Text>Если Реакция меньше 6, то попытка не увенчалась успехом, то твоя нога ударяется в вовремя подставленный щит и вы продолжаете бой:</Text>
 				</Option>
 				<Option Destination="2"/>
@@ -366,10 +366,10 @@
 			<Id>39</Id>
 			<Text>Если твоя Реакция больше 10, то ты проскакиваешь под удар.</Text>
 			<Options>
-				<Option Destination="3" Text="Реакция больше 10" OnlyIf="РЕАКЦИЯ > 10">
+				<Option Destination="3" Text="Реакция больше 10" Availability="РЕАКЦИЯ > 10">
 					<Text>Если нет, то меч секутора с размаху обрушивается на твоё плечо, глубоко разрубая его и ты больше не сможешь участвовать в Больших Играх.</Text>
 				</Option>
-				<Option Destination="0" Text="Начать сначала" OnlyIf="РЕАКЦИЯ &lt;= 10"/>
+				<Option Destination="0" Text="Начать сначала" Availability="РЕАКЦИЯ &lt;= 10"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -420,8 +420,8 @@
 			<Id>46</Id>
 			<Text>Ретиарий успевает взмахнуть трезубцем и бьёт им тебя по рукам.</Text>
 			<Options>
-				<Option Destination="35" Text="Выносливость меньше 8" OnlyIf="ВЫНОСЛИВОСТЬ &lt;= 8"/>
-				<Option Destination="25" Text="Выносливость 8, либо больше" OnlyIf="ВЫНОСЛИВОСТЬ > 7"/>
+				<Option Destination="35" Text="Выносливость меньше 8" Availability="ВЫНОСЛИВОСТЬ &lt;= 8"/>
+				<Option Destination="25" Text="Выносливость 8, либо больше" Availability="ВЫНОСЛИВОСТЬ > 7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -517,11 +517,11 @@
 				<Modification Name="ReactionByReaction" Value="7"/>
 			</Modifications>
 			<Options>
-				<Option Destination="6" Text="Твоя Реакция больше 7" OnlyIf="РЕАКЦИЯ > 7">
+				<Option Destination="6" Text="Твоя Реакция больше 7" Availability="РЕАКЦИЯ > 7">
 					<Text>Намереваясь защититься от удара гладиуса, ты пропускаешь коварный удар кромкой щита по подбородку. Из уголка рта вытекает кровь, в глазах мутнеет, а выщербленные зубы режут осколками дёсна. Потеряй 2 реакции.\n\nТы находишься всё ещё достаточно близко к противнику.</Text>
 				</Option>
-				<Option Destination="38" Text="Попытаться ударить ногой в промежность" OnlyIf="РЕАКЦИЯ &lt;= 7"/>
-				<Option Destination="30" Text="Пырнуть правым кинжалом в бок, за внутренней кромкой щита" OnlyIf="РЕАКЦИЯ &lt;= 7"/>
+				<Option Destination="38" Text="Попытаться ударить ногой в промежность" Availability="РЕАКЦИЯ &lt;= 7"/>
+				<Option Destination="30" Text="Пырнуть правым кинжалом в бок, за внутренней кромкой щита" Availability="РЕАКЦИЯ &lt;= 7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -550,8 +550,8 @@
 			<Id>60</Id>
 			<Text>Если твоя Сила больше 9, то ты выкручиваешь ему руку, он роняет щит и в дальнейшем бою бьётся с одним мечом.</Text>
 			<Options>
-				<Option Destination="40" Text="Сила больше 9" OnlyIf="СИЛА > 9"/>
-				<Option Destination="2" Text="Сила меньше или равна 9" OnlyIf = "СИЛА &lt;= 9"/>
+				<Option Destination="40" Text="Сила больше 9" Availability="СИЛА > 9"/>
+				<Option Destination="2" Text="Сила меньше или равна 9" Availability="СИЛА &lt;= 9"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -567,10 +567,10 @@
 		<Paragraph>
 			<Id>62</Id>
 			<Options>
-				<Option Destination="70" Text="Сила более 4" OnlyIf="СИЛА > 4">
+				<Option Destination="70" Text="Сила более 4" Availability="СИЛА > 4">
 					<Text>Если твоя Сила менее 4, то слабый удар всё же разбивает блок кинжалов и достаёт по твоей голове. Ничего не видя из-за заливающей лицо крови, ты падаешь на землю. Ты проиграл.</Text>
 				</Option>
-				<Option Destination="0" Text="Начать сначала" OnlyIf="СИЛА &lt;= 4"/>
+				<Option Destination="0" Text="Начать сначала" Availability="СИЛА &lt;= 4"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -635,8 +635,8 @@
 			<Id>71</Id>
 			<Text>Ты с недоумением наблюдаешь за противником. Он делает какие-то совершенно абсурдные и бесполезные движения, видимо пытаясь бахвалиться искусством владения меча. Неожиданно фракиец бросает меч в тебя!</Text>
 			<Options>
-				<Option Destination="64" Text="Реакция выше 7" OnlyIf="РЕАКЦИЯ > 7"/>
-				<Option Destination="77" Text="Реакция равна или ниже 7" OnlyIf="РЕАКЦИЯ &lt;= 7"/>
+				<Option Destination="64" Text="Реакция выше 7" Availability="РЕАКЦИЯ > 7"/>
+				<Option Destination="77" Text="Реакция равна или ниже 7" Availability="РЕАКЦИЯ &lt;= 7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -658,8 +658,8 @@
 			<Id>76</Id>
 			<Text>Проверь свою Реакцию.</Text>
 			<Options>
-				<Option Destination="63" Text="Реакция более 7" OnlyIf="РЕАКЦИЯ > 7"/>
-				<Option Destination="68" Text="Реакция равна или меньше 7" OnlyIf="РЕАКЦИЯ &lt;= 7"/>
+				<Option Destination="63" Text="Реакция более 7" Availability="РЕАКЦИЯ > 7"/>
+				<Option Destination="68" Text="Реакция равна или меньше 7" Availability="РЕАКЦИЯ &lt;= 7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -718,7 +718,7 @@
 			<Id>82</Id>
 			<Text>Ланисту ты нашёл на тренировочном поле под навесом. К столбу был привязан вниз головой раб, истекающий кровью. Рядом с ним, под дождём, стояли два преторианца и били его палками. Обойдя стороной место расправы, ты подошёл к ланисте и покорно встал, дожидаясь, когда на тебя обратят внимание.\n\n- А, это ты, подойди, - сказал ланиста. - Видишь, что происходит с непокорными глупцами? - кивнул он в сторону висящего раба.\n\n- А в чём его вина? - робко поинтересовался ты.\n\n- Не твоё дело, раб.\n\nТы согласно киваешь.\n\nЕсли в первый день боёв ты ходил посмотреть на новеньких гладиаторов, то ты помнишь его.\n\nНо ты пришёл по делу и, рискуя оказаться в опале, ты решаешься на ещё один вопрос:\n\n- А сегодня будут Игры?\n\n- Что? А, нет. Прискакал всадник и сказал, что на сегодня Игры закрыты. Но без дела ты не останешься. Ты и ещё несколько опытнейших гладиаторов отправятся в загородный дом, услаждать взор знати боями.\n\nЕсли в первый день боёв ты подходил к ланисте, то ты его вспомнишь, если нет, ты, кивнув, отправляешься в барак, приготовить своё оружие.</Text>
 			<Options>
-				<Option Destination="88" Text="Ты помнишь его" OnlyIf="88"/>
+				<Option Destination="88" Text="Ты помнишь его" Availability="88"/>
 				<Option Destination="83"/>
 			</Options>
 		</Paragraph>
@@ -777,7 +777,7 @@
 			<Id>90</Id>
 			<Text>Схватив под руку, ты заталкиваешь его в свою комнату. Туний недоумённо взирает на тебя. Ты закрываешь дверь и предлагаешь ему присесть.\n\n- Туний, что происходит?\n\n- Ты про Знак?\n\n- И про него тоже.\n\n- Ты с нами? - недоверчиво косится гопломах.\n\n- Да, - как можно уверенней киваешь ты.\n\n- Завтра будет покушение на императора, а нас хотят увезти за город, под предлогом показательных боёв для знати. И я не уверен, что мы вернёмся оттуда живыми.\n\nТы пытаешься что-то понять, но мысли путаются.\n\n- И что? - задаёшь ты глупейший вопрос.\n\n- Что-что, - недовольно бурчит Туний. - Кому-то придётся отравиться, причём по-настоящему, чтобы у лекарей не возникло подозрений, а завтра выпить настойку, которую приготовил Мунц, чтобы выйти на арену.\n\nСлишком многое непонятно, не известно. Почему заговорщики хотят спасти императора? Кто настолько влиятельный помогает им? Или кому помогают гладиаторы?\n\n- Не хочешь быть отравленным? - прерывает размышления Туний. - Всё равно все погибнем. Кто-то в загородном доме, а кто-то на арене, спасая императора. Так что выбор состоит только в месте гибели. - Туний печально улыбнулся.</Text>
 			<Options>
-				<Option Destination="261" Text="Ты говорил с раненым человеком и кое-что вспоминаешь" OnlyIf="261"/>
+				<Option Destination="261" Text="Ты говорил с раненым человеком и кое-что вспоминаешь" Availability="261"/>
 				<Option Destination="86"/>
 			</Options>
 		</Paragraph>
@@ -873,10 +873,10 @@
 			<Id>100</Id>
 			<Text>Ну что же. Сегодняшний день опять за тобой, злому року не удалось отправить тебя потоками Леты. Чем теперь займётся победитель?</Text>
 			<Options>
-				<Option Destination="93" Text="Сходит в бани" OnlyIf="!Бани"/>
-				<Option Destination="94" Text="Поест" OnlyIf="!Обед"/>
-				<Option Destination="95" Text="Пойдёт спать" OnlyIf="!Сон"/>
-				<Option Destination="96" Text="Сходит в массажную комнату" OnlyIf="!Массаж"/>
+				<Option Destination="93" Text="Сходит в бани" Availability="!Бани"/>
+				<Option Destination="94" Text="Поест" Availability="!Обед"/>
+				<Option Destination="95" Text="Пойдёт спать" Availability="!Сон"/>
+				<Option Destination="96" Text="Сходит в массажную комнату" Availability="!Массаж"/>
 				<Option Destination="73" Text="Если ты уже побывал везде, где хотел"/>
 			</Options>
 		</Paragraph>
@@ -1047,8 +1047,8 @@
 			<Id>122</Id>
 			<Text>Ты бросаешься на второго легионера и бьёшь его в грудь. Он успевает выставить свой гладиус, блокируя удар.</Text>
 			<Options>
-				<Option Destination="112" Text="Сила больше 9" OnlyIf="СИЛА > 9"/>
-				<Option Destination="131" Text="Сила меньше или равна 9" OnlyIf="СИЛА &lt;= 9"/>
+				<Option Destination="112" Text="Сила больше 9" Availability="СИЛА > 9"/>
+				<Option Destination="131" Text="Сила меньше или равна 9" Availability="СИЛА &lt;= 9"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1163,8 +1163,8 @@
 			<Id>138</Id>
 			<Text>Ты наносишь сокрушительный удар по первому легионеру. Он пытается уклониться.</Text>
 			<Options>
-				<Option Destination="115" Text="Реакция больше 9" OnlyIf="РЕАКЦИЯ > 9"/>
-				<Option Destination="117" Text="Реакция меньше или равна 9"  OnlyIf="РЕАКЦИЯ &lt;= 9"/>
+				<Option Destination="115" Text="Реакция больше 9" Availability="РЕАКЦИЯ > 9"/>
+				<Option Destination="117" Text="Реакция меньше или равна 9"  Availability="РЕАКЦИЯ &lt;= 9"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1193,8 +1193,8 @@
 			<Id>142</Id>
 			<Text>Быстрым прыжком ты сокращаешь дистанцию с копейщиком. Он бьёт тебя древком в грудь, но тебя защищает надёжная кираса и ты даже не замечаешь удара. Рубанув по горлу копьеносца, ты не собираешься лицезреть потоки крови, бьющие из раны и быстро разворачиваешься, ведь сзади остался бандит с топором.\n\nПроверь свою Реакцию.</Text>
 			<Options>
-				<Option Destination="154" Text="Реакция больше 5" OnlyIf="РЕАКЦИЯ > 5"/>
-				<Option Destination="156" Text="Реакция 5 или меньше" OnlyIf="РЕАКЦИЯ &lt;= 5"/>
+				<Option Destination="154" Text="Реакция больше 5" Availability="РЕАКЦИЯ > 5"/>
+				<Option Destination="156" Text="Реакция 5 или меньше" Availability="РЕАКЦИЯ &lt;= 5"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1268,8 +1268,8 @@
 			<Id>152</Id>
 			<Text>Проверь свою Реакцию.</Text>
 			<Options>
-				<Option Destination="161" Text="Реакция больше 6" OnlyIf="РЕАКЦИЯ > 6"/>
-				<Option Destination="146" Text="Реакция 6 или меньше" OnlyIf="РЕАКЦИЯ &lt;= 6"/>
+				<Option Destination="161" Text="Реакция больше 6" Availability="РЕАКЦИЯ > 6"/>
+				<Option Destination="146" Text="Реакция 6 или меньше" Availability="РЕАКЦИЯ &lt;= 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1349,8 +1349,8 @@
 			<Id>162</Id>
 			<Text>Ты хватаешь топор за рукоять и с силой дёргаешь на себя.\n\nПроверь свою Силу.\n\nЕсли 4 или меньше, то на 167.\n\nЕсли она больше 4, то</Text>
 			<Options>
-				<Option Destination="157" Text="Сила больше 4" OnlyIf="СИЛА > 4"/>
-				<Option Destination="167" Text="Сила 4 или меньше" OnlyIf="СИЛА &lt;= 4"/>
+				<Option Destination="157" Text="Сила больше 4" Availability="СИЛА > 4"/>
+				<Option Destination="167" Text="Сила 4 или меньше" Availability="СИЛА &lt;= 4"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1364,16 +1364,16 @@
 			<Id>165</Id>
 			<Text>Проверь свою Реакцию.</Text>
 			<Options>
-				<Option Destination="155" Text="Реакция больше 7" OnlyIf="РЕАКЦИЯ > 7"/>
-				<Option Destination="159" Text="Реакция 7 или меньше" OnlyIf="РЕАКЦИЯ &lt;= 7"/>
+				<Option Destination="155" Text="Реакция больше 7" Availability="РЕАКЦИЯ > 7"/>
+				<Option Destination="159" Text="Реакция 7 или меньше" Availability="РЕАКЦИЯ &lt;= 7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>166</Id>
 			<Text>Проверь свою Силу.</Text>
 			<Options>
-				<Option Destination="143" Text="Сила больше 4" OnlyIf="СИЛА > 4"/>
-				<Option Destination="153" Text="Сила 4 или меньше" OnlyIf="СИЛА &lt;= 4"/>
+				<Option Destination="143" Text="Сила больше 4" Availability="СИЛА > 4"/>
+				<Option Destination="153" Text="Сила 4 или меньше" Availability="СИЛА &lt;= 4"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1432,8 +1432,8 @@
 			<Id>173</Id>
 			<Text>Отбросив гладиус в сторону, ты готовишься встретить врага. Он подбегает и бьёт тебя ножом в живот.\n\nПроверь свою Реакцию.</Text>
 			<Options>
-				<Option Destination="181" Text="Реакция больше 6" OnlyIf="РЕАКЦИЯ > 6"/>
-				<Option Destination="188" Text="Реакция 6 или меньше" OnlyIf="РЕАКЦИЯ &lt;= 6"/>
+				<Option Destination="181" Text="Реакция больше 6" Availability="РЕАКЦИЯ > 6"/>
+				<Option Destination="188" Text="Реакция 6 или меньше" Availability="РЕАКЦИЯ &lt;= 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1827,8 +1827,8 @@
 			<Id>224</Id>
 			<Text>Уповая на военную удачу, ты бросаешься вперёд в немыслимом кульбите, нанося одновременно два удара по приближающимся врагам. Сила более 8. Реакция более 8. Выносливость более 6.</Text>
 			<Options>
-				<Option Destination="248" Text="Все условия твоих навыков будут выполнены" OnlyIf="СИЛА > 8, РЕАКЦИЯ > 8, ВЫНОСЛИВОСТЬ > 6"/>
-				<Option Destination="255" Text="Хоть один параметр ниже требуемого" OnlyIf="СИЛА &lt;= 8|РЕАКЦИЯ &lt;= 8|ВЫНОСЛИВОСТЬ &lt;= 6"/>
+				<Option Destination="248" Text="Все условия твоих навыков будут выполнены" Availability="СИЛА > 8, РЕАКЦИЯ > 8, ВЫНОСЛИВОСТЬ > 6"/>
+				<Option Destination="255" Text="Хоть один параметр ниже требуемого" Availability="СИЛА &lt;= 8|РЕАКЦИЯ &lt;= 8|ВЫНОСЛИВОСТЬ &lt;= 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1972,8 +1972,8 @@
 			<Id>241</Id>
 			<Text>Зубцы вил рвут твою кожу на рёбрах. Дикая боль пронзает твоё тело, глаза застит пелена тумана.</Text>
 			<Options>
-				<Option Destination="232" Text="Выносливость больше 6" OnlyIf="ВЫНОСЛИВОСТЬ > 6"/>
-				<Option Destination="250" Text="Выносливость 6 или меньше" OnlyIf="ВЫНОСЛИВОСТЬ &lt;= 6"/>
+				<Option Destination="232" Text="Выносливость больше 6" Availability="ВЫНОСЛИВОСТЬ > 6"/>
+				<Option Destination="250" Text="Выносливость 6 или меньше" Availability="ВЫНОСЛИВОСТЬ &lt;= 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2018,8 +2018,8 @@
 			<Id>247</Id>
 			<Text>Проверь свою Силу.</Text>
 			<Options>
-				<Option Destination="223" Text="Сила больше 7" OnlyIf="СИЛА > 7"/>
-				<Option Destination="235" Text="Сила 7 или меньше" OnlyIf="СИЛА &lt;= 7"/>
+				<Option Destination="223" Text="Сила больше 7" Availability="СИЛА > 7"/>
+				<Option Destination="235" Text="Сила 7 или меньше" Availability="СИЛА &lt;= 7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2055,8 +2055,8 @@
 			<Id>252</Id>
 			<Text>Спрятав ножи за пояс, ты готовишься встретить врага. Он подбегает и бьёт тебя ножом в живот.\n\nПроверь свою Реакцию.</Text>
 			<Options>
-				<Option Destination="259" Text="Реакция больше 6" OnlyIf="РЕАКЦИЯ > 6"/>
-				<Option Destination="244" Text="Реакция 6 или меньше" OnlyIf="РЕАКЦИЯ &lt;= 6"/>
+				<Option Destination="259" Text="Реакция больше 6" Availability="РЕАКЦИЯ > 6"/>
+				<Option Destination="244" Text="Реакция 6 или меньше" Availability="РЕАКЦИЯ &lt;= 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2070,8 +2070,8 @@
 			<Id>254</Id>
 			<Text>Проверь свою Реакцию.</Text>
 			<Options>
-				<Option Destination="262" Text="Реакция больше 8" OnlyIf="РЕАКЦИЯ > 8"/>
-				<Option Destination="256" Text="Реакция 8 или меньше" OnlyIf="РЕАКЦИЯ &lt;= 8"/>
+				<Option Destination="262" Text="Реакция больше 8" Availability="РЕАКЦИЯ > 8"/>
+				<Option Destination="256" Text="Реакция 8 или меньше" Availability="РЕАКЦИЯ &lt;= 8"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2092,8 +2092,8 @@
 			<Id>257</Id>
 			<Text>Проверь свою Силу.</Text>
 			<Options>
-				<Option Destination="267" Text="Сила больше 3" OnlyIf="СИЛА > 3"/>
-				<Option Destination="256" Text="Сила 3 или меньше" OnlyIf="СИЛА &lt;= 3"/>
+				<Option Destination="267" Text="Сила больше 3" Availability="СИЛА > 3"/>
+				<Option Destination="256" Text="Сила 3 или меньше" Availability="СИЛА &lt;= 3"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2227,8 +2227,8 @@
 			<Id>275</Id>
 			<Text>Проверь свою Реакцию.</Text>
 			<Options>
-				<Option Destination="268" Text="Реакция больше 6" OnlyIf="РЕАКЦИЯ > 6"/>
-				<Option Destination="288" Text="Реакция 6 или меньше" OnlyIf="РЕАКЦИЯ &lt;= 6"/>
+				<Option Destination="268" Text="Реакция больше 6" Availability="РЕАКЦИЯ > 6"/>
+				<Option Destination="288" Text="Реакция 6 или меньше" Availability="РЕАКЦИЯ &lt;= 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2287,8 +2287,8 @@
 			<Id>283</Id>
 			<Text>Проверь свою Силу.</Text>
 			<Options>
-				<Option Destination="280" Text="Сила больше 6" OnlyIf="СИЛА > 6"/>
-				<Option Destination="290" Text="Сила она 6 или меньше" OnlyIf="СИЛА &lt;= 6"/>
+				<Option Destination="280" Text="Сила больше 6" Availability="СИЛА > 6"/>
+				<Option Destination="290" Text="Сила она 6 или меньше" Availability="СИЛА &lt;= 6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2309,8 +2309,8 @@
 			<Id>286</Id>
 			<Text>Слуга, кружась вокруг тебя, пытается сбить с толку. Наконец он бросается на тебя, пытаясь левой рукой перехватить колун за рукоять. Ты наносишь встречный удар.\n\nПроверь свою Реакцию.</Text>
 			<Options>
-				<Option Destination="294" Text="Реакция больше 7" OnlyIf="РЕАКЦИЯ > 7"/>
-				<Option Destination="291" Text="Реакция 7 или меньше" OnlyIf="РЕАКЦИЯ &lt;= 7"/>
+				<Option Destination="294" Text="Реакция больше 7" Availability="РЕАКЦИЯ > 7"/>
+				<Option Destination="291" Text="Реакция 7 или меньше" Availability="РЕАКЦИЯ &lt;= 7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2331,32 +2331,32 @@
 			<Id>289</Id>
 			<Text>Размахнувшись, ты наносишь удар колуном. Проверь свою Силу.</Text>
 			<Options>
-				<Option Destination="285" Text="Сила больше 5" OnlyIf="СИЛА > 5"/>
-				<Option Destination="292" Text="Сила 5 или меньше" OnlyIf="СИЛА &lt;= 5"/>
+				<Option Destination="285" Text="Сила больше 5" Availability="СИЛА > 5"/>
+				<Option Destination="292" Text="Сила 5 или меньше" Availability="СИЛА &lt;= 5"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>290</Id>
 			<Text>Ты попадаешь по руке слуги, сжимающей нож, но выбить оружие не получается. Слуга бросается на тебя, метя в живот. Проверь свою Реакцию.</Text>
 			<Options>
-				<Option Destination="281" Text="Реакция больше 5" OnlyIf="РЕАКЦИЯ > 5"/>
-				<Option Destination="293" Text="Реакция 5 или меньше" OnlyIf="РЕАКЦИЯ &lt;= 5"/>
+				<Option Destination="281" Text="Реакция больше 5" Availability="РЕАКЦИЯ > 5"/>
+				<Option Destination="293" Text="Реакция 5 или меньше" Availability="РЕАКЦИЯ &lt;= 5"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>291</Id>
 			<Text>Слуга подныривает под твой удар и хватает рукоять колуна левой рукой, а правой наносит удар ножом. Ты пытаешься защититься левой рукой. Проверь свою Реакцию.</Text>
 			<Options>
-				<Option Destination="284" Text="Реакция больше 5" OnlyIf="РЕАКЦИЯ > 5"/>
-				<Option Destination="287" Text="Реакция 5 или меньше" OnlyIf="РЕАКЦИЯ &lt;= 5"/>
+				<Option Destination="284" Text="Реакция больше 5" Availability="РЕАКЦИЯ > 5"/>
+				<Option Destination="287" Text="Реакция 5 или меньше" Availability="РЕАКЦИЯ &lt;= 5"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>292</Id>
 			<Text>Ты более привычен к ножам. Сильно размахнувшись, ты вывихиваешь себе руку и с криком роняешь колун. Слуга победно вскрикивает и подбегает к тебе, нанося удар ножом.\n\nПроверь свою Выносливость.</Text>
 			<Options>
-				<Option Destination="299" Text="Выносливость больше 7" OnlyIf="ВЫНОСЛИВОСТЬ > 7"/>
-				<Option Destination="295" Text="Выносливость 7 или меньше" OnlyIf="ВЫНОСЛИВОСТЬ &lt;= 5"/>
+				<Option Destination="299" Text="Выносливость больше 7" Availability="ВЫНОСЛИВОСТЬ > 7"/>
+				<Option Destination="295" Text="Выносливость 7 или меньше" Availability="ВЫНОСЛИВОСТЬ &lt;= 5"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
