@@ -35,15 +35,15 @@ namespace Seeker.Output
 
         public static Button Option(Game.Option option, EventHandler onClick)
         {
-            bool optionColor = !String.IsNullOrEmpty(option.OnlyIf) && !option.OnlyIf.Contains(">") && !option.OnlyIf.Contains("<");
+            bool optionColor = !String.IsNullOrEmpty(option.Availability) && !option.Availability.Contains(">") && !option.Availability.Contains("<");
 
             if (Game.Data.Constants.ShowDisabledOption() || !String.IsNullOrEmpty(option.Aftertext))
-                optionColor = !String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf);
+                optionColor = !String.IsNullOrEmpty(option.Availability) && !Game.Data.Availability(option.Availability);
 
             string color = Game.Data.Constants.GetColor(optionColor ?
                 Buttons.ButtonTypes.Option : Buttons.ButtonTypes.Main);
 
-            bool isEnabled = !(!String.IsNullOrEmpty(option.OnlyIf) && !Game.Data.CheckOnlyIf(option.OnlyIf));
+            bool isEnabled = !(!String.IsNullOrEmpty(option.Availability) && !Game.Data.Availability(option.Availability));
 
             Button optionButton = new Button
             {

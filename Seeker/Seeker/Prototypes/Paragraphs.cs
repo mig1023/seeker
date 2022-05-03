@@ -108,7 +108,7 @@ namespace Seeker.Prototypes
         public Option OptionsTemplateWithoutDestination(XmlNode xmlOption) => new Option()
         {
             Text = Xml.StringParse(xmlOption.Attributes["Text"]),
-            OnlyIf = Xml.StringParse(xmlOption.Attributes["OnlyIf"]),
+            Availability = Xml.StringParse(xmlOption.Attributes["Availability"]),
             Singleton = Xml.StringParse(xmlOption.Attributes["Singleton"]),
             Input = Xml.StringParse(xmlOption.Attributes["Input"]),
             Aftertext = Xml.StringParse(xmlOption.SelectSingleNode("Text")),

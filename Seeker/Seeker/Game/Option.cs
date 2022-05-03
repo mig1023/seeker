@@ -7,7 +7,7 @@ namespace Seeker.Game
     {
         public int Destination { get; set; }
         public string Text { get; set; }
-        public string OnlyIf { get; set; }
+        public string Availability { get; set; }
         public string Singleton { get; set; }
         public string Aftertext { get; set; }
         public List<Output.Text> Aftertexts { get; set; }

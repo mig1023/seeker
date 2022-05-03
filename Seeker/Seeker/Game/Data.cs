@@ -31,7 +31,7 @@ namespace Seeker.Game
         public static Abstract.IConstants Constants;
 
         public static Gamebook.Links.ProtagonistMethod Protagonist;
-        public static Gamebook.Links.CheckOnlyIfMethod CheckOnlyIf;
+        public static Gamebook.Links.AvailabilityMethod Availability;
         public static Gamebook.Links.StringMethod Save;
         public static Gamebook.Links.LoadMethod Load;
         public static Gamebook.Links.StringMethod Debug;
@@ -52,7 +52,7 @@ namespace Seeker.Game
             Actions = null;
             Constants = null;
             Protagonist = null;
-            CheckOnlyIf = null;
+            Availability = null;
         }
     }
 }

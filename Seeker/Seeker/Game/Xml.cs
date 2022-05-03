@@ -140,7 +140,7 @@ namespace Seeker.Game
             Data.Save = gamebook.Links.Save;
             Data.Load = gamebook.Links.Load;
             Data.Debug = gamebook.Links.Debug;
-            Data.CheckOnlyIf = gamebook.Links.CheckOnlyIf;
+            Data.Availability = gamebook.Links.Availability;
 
             Data.Constants.Clean();
 

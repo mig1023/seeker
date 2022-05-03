@@ -67,9 +67,9 @@ namespace Seeker.Prototypes
 
         public virtual bool StaticAction(string action) => false;
 
-        public virtual bool CheckOnlyIf(string option) => true;
+        public virtual bool Availability(string option) => true;
 
-        public static bool CheckOnlyIfTrigger(string option)
+        public static bool AvailabilityTrigger(string option)
         {
             if (String.IsNullOrEmpty(option))
                 return true;

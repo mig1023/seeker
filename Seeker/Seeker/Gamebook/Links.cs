@@ -10,7 +10,7 @@ namespace Seeker.Gamebook
 
         public delegate void LoadMethod(string saveLine);
 
-        public delegate bool CheckOnlyIfMethod(string option);
+        public delegate bool AvailabilityMethod(string option);
 
         public ProtagonistMethod Protagonist;
 
@@ -20,7 +20,7 @@ namespace Seeker.Gamebook
 
         public StringMethod Debug;
 
-        public CheckOnlyIfMethod CheckOnlyIf;
+        public AvailabilityMethod Availability;
 
         public Abstract.IParagraphs Paragraphs;
 

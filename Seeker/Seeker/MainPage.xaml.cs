@@ -188,10 +188,10 @@ namespace Seeker
             foreach (Game.Option option in paragraph.Options)
             {
                 bool mustBeVisible = OptionVisibility(option.Aftertext);
-                bool onlyIf = Game.Data.CheckOnlyIf(option.OnlyIf);
-                bool singleIf = !String.IsNullOrEmpty(option.Singleton) && Game.Data.CheckOnlyIf(option.Singleton);
+                bool onlyIf = Game.Data.Availability(option.Availability);
+                bool singleIf = !String.IsNullOrEmpty(option.Singleton) && Game.Data.Availability(option.Singleton);
 
-                if (!String.IsNullOrEmpty(option.OnlyIf) && !onlyIf && !singleIf && !mustBeVisible)
+                if (!String.IsNullOrEmpty(option.Availability) && !onlyIf && !singleIf && !mustBeVisible)
                     continue;
 
                 Button button = AddOptionButton(option, ref gameOver);
