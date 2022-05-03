@@ -43,7 +43,7 @@ namespace Seeker.Gamebook.ThreePaths
             return new List<string> { "RELOAD" };
         }
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
