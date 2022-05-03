@@ -62,7 +62,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             Destination = destination,
             Text = text,
-            OnlyIf = onlyIf,
+            Availability = onlyIf,
         };
     }
 }

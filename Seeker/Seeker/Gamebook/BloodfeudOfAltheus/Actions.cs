@@ -120,7 +120,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return (normal || brooch);
         }
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option) || (option == "selectOnly") || (option == null) || String.IsNullOrEmpty(option))
             {
@@ -189,7 +189,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     return level >= protagonist.Shame;
                 }
 
-                return CheckOnlyIfTrigger(option);
+                return AvailabilityTrigger(option);
             }
         }
 
