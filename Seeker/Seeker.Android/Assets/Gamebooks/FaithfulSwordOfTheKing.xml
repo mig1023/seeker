@@ -181,7 +181,7 @@
 				<Modification Name="Honor" Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="417" Text="Поужинать в соседний трактир" Do="Ecu" Value="-50" OnlyIf="ЭКЮ >= 50"/>
+				<Option Destination="417" Text="Поужинать в соседний трактир" Do="Ecu" Value="-50" Availability="ЭКЮ >= 50"/>
 				<Option Destination="93" Text="Искать место для ночлега"/>
 			</Options>
 		</Paragraph>
@@ -200,7 +200,7 @@
 			<Id>18</Id>
 			<Text>Если у вас есть лишние полэкю, то переночуйте в гостинице, если же нет, то лучше выехать за город и, завернувшись в плащ, постараться уснуть неподалеку от дороги.</Text>
 			<Options>
-				<Option Destination="545" Text="Переночуете в гостинице" Do="Ecu" Value="-50" OnlyIf="ЭКЮ >= 50"/>
+				<Option Destination="545" Text="Переночуете в гостинице" Do="Ecu" Value="-50" Availability="ЭКЮ >= 50"/>
 				<Option Destination="480" Text="Постараться уснуть неподалеку от дороги"/>
 			</Options>
 		</Paragraph>
@@ -449,7 +449,7 @@
 			<Id>44</Id>
 			<Text>Наступает утро. Деньги уже разошлись по карманам разбойников, им пора отправляться «на работу». «Ладно, благородный, — говорит один из них, — пожил, погулял и хватит. Готовься к смерти». Хотите попросить о помощи Бога или попробуете обойтись своими силами?</Text>
 			<Options>
-				<Option Destination="427" Text="Попросить о помощи Бога" OnlyIf="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention"/>
+				<Option Destination="427" Text="Попросить о помощи Бога" Availability="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention"/>
 				<Option Destination="244" Text="Попробуете обойтись своими силами"/>
 			</Options>
 		</Paragraph>
@@ -646,9 +646,9 @@
 			<Id>64</Id>
 			<Text>Вот уже и Париж. Как долго вы путешествовали?</Text>
 			<Options>
-				<Option Destination="518" Text="6 дней или меньше" OnlyIf="ДЕНЬ &lt;= 6"/>
-				<Option Destination="431" Text="7 дней" OnlyIf="ДЕНЬ = 7"/>
-				<Option Destination="45" Text="8 или больше" OnlyIf="ДЕНЬ >= 8"/>
+				<Option Destination="518" Text="6 дней или меньше" Availability="ДЕНЬ &lt;= 6"/>
+				<Option Destination="431" Text="7 дней" Availability="ДЕНЬ = 7"/>
+				<Option Destination="45" Text="8 или больше" Availability="ДЕНЬ >= 8"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -790,7 +790,7 @@
 			<Id>78</Id>
 			<Text>Ваш противник, истекая кровью, отскакивает в сторону. Если у вас есть ладанка, то пришло время обратиться к ее помощи. Если нет, то он больше не будет тратить на вас свои силы, хотя вы и рветесь продолжить бой.</Text>
 			<Options>
-				<Option Destination="279" Text="Воспользоваться ладанкой" OnlyIf="Incense"/>
+				<Option Destination="279" Text="Воспользоваться ладанкой" Availability="Incense"/>
 				<Option Destination="624"/>
 			</Options>
 		</Paragraph>
@@ -871,7 +871,7 @@
 			<Id>87</Id>
 			<Text>Зайдя в караулку, сразу же чувствуете, как ваши руки с боков оказываются прижатыми к телу железной хваткой двух стражников, вошедших сразу за вами. Лейтенант забирает у вас шпагу и деньги и кладет все это на стол у стены. А из задней комнаты выходит какой-то человек в зеленом камзоле.</Text>
 			<Options>
-				<Option Destination="117" Text="Вы знаете его" OnlyIf="GreenCamisole"/>
+				<Option Destination="117" Text="Вы знаете его" Availability="GreenCamisole"/>
 				<Option Destination="328"/>
 			</Options>
 		</Paragraph>
@@ -1232,7 +1232,7 @@
 			<Id>126</Id>
 			<Text>Вы перегородили боковую улицу?</Text>
 			<Options>
-				<Option Destination="576" Text="Вы перегородили боковую улицу" OnlyIf="StreetIsBlocked"/>
+				<Option Destination="576" Text="Вы перегородили боковую улицу" Availability="StreetIsBlocked"/>
 				<Option Destination="641" Text="Не перегородили"/>
 			</Options>
 		</Paragraph>
@@ -1265,9 +1265,9 @@
 			<Id>130</Id>
 			<Text>Городские ворота открыты, попасть в город не составит труда. Если у вас есть конкретный адрес, по которому может ждать союзник Генриха, то лучше отправиться сразу туда. Если нет, то остается только одно место, где вы можете собраться с мыслями и решить, что делать дальше, — ваш собственный дом.</Text>
 			<Options>
-				<Option Destination="454" Text="Улица Пьер-о-Реаль, дом 11" OnlyIf="PierreAuxRealStreet"/>
-				<Option Destination="555" Text="Улица Ваннери, дом 5" OnlyIf="VenneraStreet"/>
-				<Option Destination="181" Text="К графу де Ноайлю" OnlyIf="CountDeNoaille"/>
+				<Option Destination="454" Text="Улица Пьер-о-Реаль, дом 11" Availability="PierreAuxRealStreet"/>
+				<Option Destination="555" Text="Улица Ваннери, дом 5" Availability="VenneraStreet"/>
+				<Option Destination="181" Text="К графу де Ноайлю" Availability="CountDeNoaille"/>
 				<Option Destination="562"/>
 			</Options>
 		</Paragraph>
@@ -1408,7 +1408,7 @@
 			<Id>142</Id>
 			<Text>Видя, что вы пытаетесь скрыться за деревьями, черные фигуры достают пистолеты и стреляют вам вслед. Одна из пуль попадает Арбалету в голову, вторая — вам в живот. Конец наступит всего через несколько часов. Выход один — попросить Бога о помощи:</Text>
 			<Options>
-				<Option Destination="521" OnlyIf="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention">
+				<Option Destination="521" Availability="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention">
 					<Text>Если не сделаете это, то остается только достойно встретить смерть…</Text>
 				</Option>
 				<Option Destination="0"/>
@@ -1512,7 +1512,7 @@
 			<Text>Если вы хотите воспользоваться пистолетом, если владеете искусством стрельбы из двух сразу, и они у вас есть, если же надеетесь только на шпагу.</Text>
 			<Options>
 				<Option Destination="6" Text="Воспользоваться пистолетом"/>
-				<Option Destination="94" Text="Владеете искусством стрельбы из двух сразу" OnlyIf="TwoPistols"/>
+				<Option Destination="94" Text="Владеете искусством стрельбы из двух сразу" Availability="TwoPistols"/>
 				<Option Destination="333" Text="Надеетесь на шпагу"/>
 			</Options>
 		</Paragraph>
@@ -1624,7 +1624,7 @@
 			<Text>Свернув с дороги и пропетляв за холмами, вы добираетесь до излучины реки, которая, кажется, не видна от моста. Брода поблизости нет, и выхода только два: либо вернуться на дорогу и все же проехать через мост, либо переплыть реку. Если вы не умеете плавать, то можете попробовать пересечь ее, держась за коня.</Text>
 			<Options>
 				<Option Destination="214" Text="Проехать через мост"/>
-				<Option Destination="12" Text="Умеете плавать" OnlyIf="Swimming"/>
+				<Option Destination="12" Text="Умеете плавать" Availability="Swimming"/>
 				<Option Destination="419" Text="Попробовать пересечь ее, держась за коня"/>
 			</Options>
 		</Paragraph>
@@ -1673,7 +1673,7 @@
 			<Id>168</Id>
 			<Text>Если у вас есть экю на ужин и ночлег, можете воспользоваться услугами постоялого двора. Если нет, то чем ночевать на улице, лучше уж побыстрее доехать до Тура.</Text>
 			<Options>
-				<Option Destination="43" Text="Воспользоваться услугами постоялого двора" Do="Ecu" Value="-100" OnlyIf="ЭКЮ >= 100"/>
+				<Option Destination="43" Text="Воспользоваться услугами постоялого двора" Do="Ecu" Value="-100" Availability="ЭКЮ >= 100"/>
 				<Option Destination="497" Text="Побыстрее доехать до Тура"/>
 			</Options>
 		</Paragraph>
@@ -1899,7 +1899,7 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="79" Text="Стражник подкуплен" OnlyIf="CorruptGuard">
+					<Option Destination="79" Text="Стражник подкуплен" Availability="CorruptGuard">
 						<Text>Иначе же — сражайтесь:</Text>
 					</Option>
 				</Action>
@@ -2031,7 +2031,7 @@
 			<Options>
 				<Option Destination="362" Text="Лезть прямо в пекло"/>
 				<Option Destination="85" Text="Съездить в Тур"/>
-				<Option Destination="105" Text="Подняться по реке почти до самого Невера" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
+				<Option Destination="105" Text="Подняться по реке почти до самого Невера" Do="Ecu" Value="-200" Availability="ЭКЮ >= 200"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2128,7 +2128,7 @@
 			<Id>215</Id>
 			<Text>Если вы умеете плавать, то; если же решите доплыть до кареты, держась за лошадь. Иначе остается только одно: попытаться спрыгнуть к экипажу с моста, а там будь что будет.</Text>
 			<Options>
-				<Option Destination="160" Text="Вы умеете плавать" OnlyIf="Swimming"/>
+				<Option Destination="160" Text="Вы умеете плавать" Availability="Swimming"/>
 				<Option Destination="13" Text="Решите доплыть до кареты, держась за лошадь"/>
 				<Option Destination="410" Text="Попытаться спрыгнуть к экипажу с моста"/>
 			</Options>
@@ -2425,8 +2425,8 @@
 			</Actions>
 			<Options>
 				<Option Destination="412" Text="Вы уменьшили его СИЛУ до 2"/>
-				<Option Destination="521" Text="Он уменьшил вашу СИЛУ до 2 и вы хотите воззвать к Богу" OnlyIf="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention"/>
-				<Option Destination="0" Text="Вы погибли: придётся начинать сначала..." OnlyIf="DivineIntervention"/>
+				<Option Destination="521" Text="Он уменьшил вашу СИЛУ до 2 и вы хотите воззвать к Богу" Availability="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention"/>
+				<Option Destination="0" Text="Вы погибли: придётся начинать сначала..." Availability="DivineIntervention"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2645,7 +2645,7 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="295" Text="Всадник в зелёном камзоле" OnlyIf="GreenCamisole">
+					<Option Destination="295" Text="Всадник в зелёном камзоле" Availability="GreenCamisole">
 						<Text>...если нет, — деритесь:</Text>
 					</Option>
 				</Action>
@@ -2758,7 +2758,7 @@
 			<Options>
 				<Option Destination="179" Text="На Париж"/>
 				<Option Destination="85" Text="Добраться через Блуа до Тура"/>
-				<Option Destination="105" Text="Нанять лодку и подняться по Луаре до Невера" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
+				<Option Destination="105" Text="Нанять лодку и подняться по Луаре до Невера" Do="Ecu" Value="-200" Availability="ЭКЮ >= 200"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2957,7 +2957,7 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="464" Text="Назвать герцога по имени" OnlyIf="DukeName">
+					<Option Destination="464" Text="Назвать герцога по имени" Availability="DukeName">
 						<Text>...если нет, — деритесь. Однако перед боем противник быстро перекладывает шпагу в левую руку, и если вы не владеете аналогичным искусством фехтования, придется на время поединка вычитать у себя 1 ЛОВКОСТЬ.</Text>
 					</Option>
 				</Action>
@@ -3690,7 +3690,7 @@
 			<Text>Тот, кто с вами говорил, как будто только этого и ожидал. Не растерявшись, он делает знак рукой, и двое других выхватывают топоры. Оружие мощное и непривычное, тем труднее будет с ними справиться. Если ваши пистолеты заряжены, то сколько — один или два (если, конечно, умеете стрелять из двух сразу)? Если же нет, то деритесь.</Text>
 			<Options>
 				<Option Destination="38" Text="У вас один заряженный пистолет"/>
-				<Option Destination="447" Text="Два заряженных пистолета" OnlyIf="TwoPistols"/>
+				<Option Destination="447" Text="Два заряженных пистолета" Availability="TwoPistols"/>
 				<Option Destination="381" Text="Драться"/>
 			</Options>
 		</Paragraph>
@@ -3925,7 +3925,7 @@
 			<Id>390</Id>
 			<Text>Когда вы подплываете к Блуа, то видите, что на пристани уже стоит большой отряд солдат, держащих под уздцы взмыленных лошадей. Если вы хотите - можете отдать еще 2 экю, чтобы лодочник доставил вас в Орлеан. Если же у вас нет ни денег, ни желания высаживаться на землю, то остается только убить хозяина лодки и управлять суденышком самому.</Text>
 			<Options>
-				<Option Destination="606" Text="В Орлеан" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
+				<Option Destination="606" Text="В Орлеан" Do="Ecu" Value="-200" Availability="ЭКЮ >= 200"/>
 				<Option Destination="144" Text="Пристать к берегу"/>
 				<Option Destination="66" Text="Убить хозяина лодки"/>
 			</Options>
@@ -4360,7 +4360,7 @@
 			<Id>433</Id>
 			<Text>Сражение заканчивается, даже не успев перейти в побоище. Ведь у вас не сто рук, к тому же монахи вооружены пистолетами. Последнее, что вы видите — дуло одного из них, нацеленное прямо в грудь. Если хотите и есть возможность попросить Бога о помощи, сделайте это:</Text>
 			<Options>
-				<Option Destination="601" OnlyIf="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention">
+				<Option Destination="601" Availability="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention">
 					<Text>Иначе же ваша миссия останется невыполненной…</Text>
 				</Option>
 				<Option Destination="0"/>
@@ -4380,8 +4380,8 @@
 			<Id>435</Id>
 			<Text>Решив, что все ворота охраняются, вы идете на пристань и спрашиваете у владельцев небольших лодочек, во что обойдется доехать до Блуа или до самого Орлеана. Цены следующие: до Блуа — 2 экю, до Орлеана — 5.</Text>
 			<Options>
-				<Option Destination="390" Text="До Блуа" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
-				<Option Destination="530" Text="До Орлеана" Do="Ecu" Value="-500" OnlyIf="ЭКЮ >= 500"/>
+				<Option Destination="390" Text="До Блуа" Do="Ecu" Value="-200" Availability="ЭКЮ >= 200"/>
+				<Option Destination="530" Text="До Орлеана" Do="Ecu" Value="-500" Availability="ЭКЮ >= 500"/>
 				<Option Destination="250" Text="Вернуться"/>
 			</Options>
 		</Paragraph>
@@ -4420,7 +4420,7 @@
 			<Id>439</Id>
 			<Text>Вскоре перед вами пристань, откуда можно без труда доплыть до Капденака всего за полтора экю. Так и поступите или нет?</Text>
 			<Options>
-				<Option Destination="133" Text="Так и поступите" Do="Ecu" Value="-150" OnlyIf="ЭКЮ >= 150"/>
+				<Option Destination="133" Text="Так и поступите" Do="Ecu" Value="-150" Availability="ЭКЮ >= 150"/>
 				<Option Destination="602" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
@@ -4452,7 +4452,7 @@
 			<Text>Повозку с осужденным охраняет несколько кавалеристов. Вы нападаете на первого.</Text>
 			<Options>
 				<Option Destination="376" Text="У вас есть пистолет"/>
-				<Option Destination="134" Text="Умеете стрелять из двух сразу" OnlyIf="TwoPistols"/>
+				<Option Destination="134" Text="Умеете стрелять из двух сразу" Availability="TwoPistols"/>
 				<Option Destination="532" Text="Пистолета нет"/>
 			</Options>
 		</Paragraph>
@@ -4645,7 +4645,7 @@
 			<Options>
 				<Option Destination="477" Text="На Шатоден"/>
 				<Option Destination="596" Text="На Орлеан"/>
-				<Option Destination="606" Text="Подняться до Орлеана вверх по Луаре" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
+				<Option Destination="606" Text="Подняться до Орлеана вверх по Луаре" Do="Ecu" Value="-200" Availability="ЭКЮ >= 200"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4659,9 +4659,9 @@
 			<Id>462</Id>
 			<Text>Если у вас есть письмо к кому-нибудь из тех, кто находится на балу, то лучше всего показать его и потребовать, чтобы вас пропустили. Но если нет, — придется отвечать на неприятный вопрос, кто вы такой.</Text>
 			<Options>
-				<Option Destination="270" Text="Письмо герцегу Майенскому" OnlyIf="LetterToTheDuke"/>
-				<Option Destination="302" Text="Рекомендательное письмо герцегу Майенскому" OnlyIf="LetterOfRecommendationToTheDuke"/>
-				<Option Destination="192" Text="Рекомендательное письмо от губернатора Орлеана" OnlyIf="GovernorsLetterOfRecommendation"/>
+				<Option Destination="270" Text="Письмо герцегу Майенскому" Availability="LetterToTheDuke"/>
+				<Option Destination="302" Text="Рекомендательное письмо герцегу Майенскому" Availability="LetterOfRecommendationToTheDuke"/>
+				<Option Destination="192" Text="Рекомендательное письмо от губернатора Орлеана" Availability="GovernorsLetterOfRecommendation"/>
 				<Option Destination="394" Text="Вы — граф де Монлюк, бывший приближенный Генриха III"/>
 				<Option Destination="637" Text="Вы — шевалье де Рево, католик и лигист из Беарна"/>
 				<Option Destination="270" Text="Вы — виконт де Тессе из Парижа"/>
@@ -4764,7 +4764,7 @@
 			<Text>Как ни странно, они видели дворянина, которого вы им описываете, причем не так давно. А это значит, что в Невере могут быть уже предупреждены о вашем приезде. Поедете в город или за 2 экю спуститесь по реке до Вьерзона, а оттуда уже продолжите сухопутное путешествие?</Text>
 			<Options>
 				<Option Destination="105" Text="Поедете в город"/>
-				<Option Destination="204" Text="Спуститесь по реке до Вьерзона" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
+				<Option Destination="204" Text="Спуститесь по реке до Вьерзона" Do="Ecu" Value="-200" Availability="ЭКЮ >= 200"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5663,7 +5663,7 @@
 				<Modification Name="MaxSkill" Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="591" Text="Всадник в зелёном камзоле" OnlyIf="GreenCamisole">
+				<Option Destination="591" Text="Всадник в зелёном камзоле" Availability="GreenCamisole">
 					<Text>...если нет:</Text>
 				</Option>
 				<Option Destination="188"/>
@@ -5825,7 +5825,7 @@
 				<Modification Name="Strength" Value="-4"/>
 			</Modifications>
 			<Options>
-				<Option Destination="313" Text="Обратиться к помощи Бога" OnlyIf="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention"/>
+				<Option Destination="313" Text="Обратиться к помощи Бога" Availability="!DivineIntervention" Do="Trigger" ValueString="DivineIntervention"/>
 				<Option Destination="256" Text="Рассказать все, как есть"/>
 			</Options>
 		</Paragraph>
@@ -6452,7 +6452,7 @@
 			<Id>634</Id>
 			<Text>Арбалет почти скатывается к реке по крутому склону. Дальше пути нет, но у маленькой пристани привязаны несколько лодок. Если у вас есть 3 экю, киньте их лодочнику и он отвезет вас вниз по Луаре в Орлеан, иначе же выбирайтесь обратно на дорогу.</Text>
 			<Options>
-				<Option Destination="606" Text="Вниз по Луаре в Орлеан" Do="Ecu" Value="-300" OnlyIf="ЭКЮ >= 300"/>
+				<Option Destination="606" Text="Вниз по Луаре в Орлеан" Do="Ecu" Value="-300" Availability="ЭКЮ >= 300"/>
 				<Option Destination="56" Text="Обратно на дорогу"/>
 			</Options>
 		</Paragraph>
@@ -6496,7 +6496,7 @@
 			<Options>
 				<Option Destination="85" Text="В Тура"/>
 				<Option Destination="179" Text="В Париж"/>
-				<Option Destination="105" Text="До Невера" Do="Ecu" Value="-200" OnlyIf="ЭКЮ >= 200"/>
+				<Option Destination="105" Text="До Невера" Do="Ecu" Value="-200" Availability="ЭКЮ >= 200"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
