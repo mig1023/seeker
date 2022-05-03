@@ -101,7 +101,7 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="65" Text="Узнать, так ли это" OnlyIf="!Обрёл имя">
+					<Option Destination="65" Text="Узнать, так ли это" Availability="!Обрёл имя">
 						<Text>- Я обычный орк, такой же, как вы, - произносишь ты. - Любой из вас может это, если действительно захочет.\n\nЭто очень не по-орковски, поэтому вычти один из своей Оркишности.\n\nОрк, с которым ты разговариваешь, выглядит озадаченным, поэтому ты разъясняешь:\n\n- Я просто орк. Ты можешь быть таким же, как я.\n\nВ глазах орков вокруг тебя появляется огонь, а затем они внезапно склоняют свои головы перед тобой.\n\n- Да! Мы хотим быть такими же как ты! Веди нас! Мы убьём волшебника, заберём все сокровища себе!\n\nПроверь свою Смелость и сравни с Оркишностью:</Text>
 					</Option>
 				</Action>
@@ -303,7 +303,7 @@
 			</Modifications>
 			<Triggers>Бетани</Triggers>
 			<Options>
-				<Option Destination="65" Text="Попробуй узнать своё имя" OnlyIf="!Обрёл имя">
+				<Option Destination="65" Text="Попробуй узнать своё имя" Availability="!Обрёл имя">
 					<Text>Затем возвращайся сюда и решай:</Text>
 				</Option>
 				<Option Destination="92" Text="Использовать зелье для спасения Бетани"/>
@@ -456,7 +456,7 @@
 				<Modification Name="WayBack" Value="30"/>
 			</Modifications>
 			<Options>
-				<Option Destination="66" Text="Если есть" OnlyIf="Обрёл имя">
+				<Option Destination="66" Text="Если есть" Availability="Обрёл имя">
 					<Text>Иначе тебе необходимо перебороть свою Оркишнсть:</Text>
 				</Option>
 				<Option Destination="55" Text="Предпринять попытку противостоять своей природе">
@@ -554,7 +554,7 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="65" Text="Попробовать получить имя" OnlyIf="!Обрёл имя">
+					<Option Destination="65" Text="Попробовать получить имя" Availability="!Обрёл имя">
 						<Text>Затем возвращайся сюда и сделай проверку Удачи:</Text>
 					</Option>
 				</Action>
@@ -648,8 +648,8 @@
 				<Option Destination="21" Text="Если ты победил орков, но здоровье девушки равно 0">
 					<Text>Если ты проиграл...</Text>
 				</Option>
-				<Option Destination="17" Text="В первый раз" OnlyIf="!Уже пил из бутыли"/>
-				<Option Destination="0" OnlyIf="Уже пил из бутыли"/>
+				<Option Destination="17" Text="В первый раз" Availability="!Уже пил из бутыли"/>
+				<Option Destination="0" Availability="Уже пил из бутыли"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1492,7 +1492,7 @@
 				<Modification Name="Orcishness" Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Destination="65" Text="Узнать, так ли это" OnlyIf="!Обрёл имя">
+				<Option Destination="65" Text="Узнать, так ли это" Availability="!Обрёл имя">
 					<Text>Затем возвращайся сюда и решай:</Text>
 				</Option>
 				<Option Destination="48" Text="Ответить ей, что ты орк"/>
