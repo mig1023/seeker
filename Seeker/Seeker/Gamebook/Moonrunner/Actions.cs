@@ -30,7 +30,7 @@ namespace Seeker.Gamebook.Moonrunner
             String.Format("Золото: {0}", protagonist.Gold)
         };
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
