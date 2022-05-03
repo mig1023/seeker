@@ -28,7 +28,7 @@ namespace Seeker.Gamebook.RockOfTerror
             return protagonist.Time >= 720;
         }
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
@@ -52,7 +52,7 @@ namespace Seeker.Gamebook.RockOfTerror
             }
             else
             {
-                return CheckOnlyIfTrigger(option.Trim());
+                return AvailabilityTrigger(option.Trim());
             }
         }
     }

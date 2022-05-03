@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.RockOfTerror
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
-            CheckOnlyIf = Actions.StaticInstance.CheckOnlyIf,
+            Availability = Actions.StaticInstance.Availability,
             Paragraphs = Paragraphs.StaticInstance,
             Actions = Actions.StaticInstance,
             Constants = StaticInstance,
