@@ -50,7 +50,7 @@ namespace Seeker.Gamebook.Catharsis
             return !(disabledByBonusesRemove || disabledByBonusesAdd);
         }
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
