@@ -58,7 +58,7 @@ namespace Seeker.Gamebook.SwampFever
             return !(disabledByPrice || disabledByUsed || disabledSellingMembrane || disabledSellingMucus);
         }
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
