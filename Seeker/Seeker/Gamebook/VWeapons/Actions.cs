@@ -61,7 +61,7 @@ namespace Seeker.Gamebook.VWeapons
 
         private bool SpecialFCheck() => ((protagonist.Suspicions >= 4) && !Game.Option.IsTriggered("F"));
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
