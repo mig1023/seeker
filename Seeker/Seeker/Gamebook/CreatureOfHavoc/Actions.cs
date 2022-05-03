@@ -42,7 +42,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
 
-        public override bool CheckOnlyIf(string option) => CheckOnlyIfTrigger(option);
+        public override bool Availability(string option) => AvailabilityTrigger(option);
 
         public List<string> Luck() => GoodLuck(out bool _, notInline: true);
 
