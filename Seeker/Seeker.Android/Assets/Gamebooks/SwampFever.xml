@@ -85,8 +85,8 @@
 			<Id>6</Id>
 			<Text>Вы мчитесь по заброшенному шоссе, проложенному во время глобального освоения. Магистраль имеет 10 полос движения. Она в отличном состоянии, несмотря на длительное запустение. Дорогу не обслуживали более века, но покрытие проезжей части не пострадало. Причина кроется в сверхпрочном материале, в неокарбоните. Он износостойкий, не подвержен перепадам температур и коррозии. Единственным минусом неокарбонита считается его токсичность. Часто на дороге появляются сияющие символы в хаотичном порядке. В прошлом они были средством регулировки движения и управлялись центральным компьютером. Нынче голографические знаки, надписи, числа возникают спонтанно и лишены смысла.</Text>
 			<Options>
-				<Option Destination="96" OnlyIf="2"/>
-				<Option Destination="20" OnlyIf="!2"/>
+				<Option Destination="96" Availability="2"/>
+				<Option Destination="20" Availability="!2"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -329,8 +329,8 @@
 			<Id>31</Id>
 			<Text>Харвестер едет по торфяной жиже, увязая в жидкой грязи. Но мощь мотора и гребные винты выручают вас. Вы неспешно выбираетесь на полянку с чудной растительностью. Кислотно-зелёные кусты меняют свою форму.</Text>
 			<Options>
-				<Option Destination="52" OnlyIf="19"/>
-				<Option Destination="68" OnlyIf="!19"/>
+				<Option Destination="52" Availability="19"/>
+				<Option Destination="68" Availability="!19"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -430,8 +430,8 @@
 			<Id>39</Id>
 			<Text>Вы прибыли на свалку. Гравитационные трубы, идущие с Порта Грёз, выбрасывают сюда новый мусор. Вода в округе приобрела ядовитый окрас от нечистот. Груды органических и промышленных отходов находятся в разных местах. Весь полигон разбит на отсеки в зависимости от типа мусора</Text>
 			<Options>
-				<Option Destination="8" OnlyIf="3"/>
-				<Option Destination="129" OnlyIf="!3"/>
+				<Option Destination="8" Availability="3"/>
+				<Option Destination="129" Availability="!3"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -507,11 +507,11 @@
 			<Id>42</Id>
 			<Text>Харвестер въезжает на плато, где расположен Порт Грёз. На горизонте появляются силуэты высоких зданий. Прямую дорогу освещают два Небесных Тела. Это спутники Стигии: холодная Криона и скалистая Тарпея.</Text>
 			<Options>
-				<Option Destination="55" OnlyIf="23"/>
-				<Option Destination="165" OnlyIf="22, !23"/>
-				<Option Destination="32" OnlyIf="21, !23, !22"/>
-				<Option Destination="83" OnlyIf="20, !23, !22, !21"/>
-				<Option Destination="113" OnlyIf="!20, !23, !22, !21"/>
+				<Option Destination="55" Availability="23"/>
+				<Option Destination="165" Availability="22, !23"/>
+				<Option Destination="32" Availability="21, !23, !22"/>
+				<Option Destination="83" Availability="20, !23, !22, !21"/>
+				<Option Destination="113" Availability="!20, !23, !22, !21"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -604,8 +604,8 @@
 			<Id>51</Id>
 			<Text>Вы прибываете на территорию бывшего религиозного поселения. Над стоячей водой, надо мхами, над болотными кочками, возвышаются ржавые кресты.</Text>
 			<Options>
-				<Option Destination="5" OnlyIf="8"/>
-				<Option Destination="104" OnlyIf="!8"/>
+				<Option Destination="5" Availability="8"/>
+				<Option Destination="104" Availability="!8"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -648,8 +648,8 @@
 			<Id>56</Id>
 			<Text>Вы подъехали к исполинской статуе, наполовину погружённой в болото. Первоначально композиция изображала счастливого колониста с Земли, который приветствовал странников взмахом руки. Теперь он похож на тонущего человека в отчаянной попытке выбраться из трясины. На мемориальной плите, треснутой и заросшей, высечена надпись "Вечная Слава Мелиораторам!" Говорят, что второй губернатор Порта Грёз растратил стратегический запас поселения на сей памятник. "Великий Мелиоратор" рухнул уже через год после установки, средств на реставрацию не оказалось, и его прозвали Павшим Колоссом. Постепенно он уходит в зловонную жижу всё глубже. По местному поверью, Порт Грёз существует до тех пор, пока Колосс окончательно не скроется в топях.</Text>
 			<Options>
-				<Option Destination="127" OnlyIf="1"/>
-				<Option Destination="112" OnlyIf="!1"/>
+				<Option Destination="127" Availability="1"/>
+				<Option Destination="112" Availability="!1"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -687,8 +687,8 @@
 			<Id>60</Id>
 			<Text>Вы подъехали к огромной воронке с отвесными стенами. Дна не видно, направленный в яму свет от фар теряется во тьме. От обширного кратера расходятся волнистые трещины, словно реки от озера. Мегапровал произошёл из-за применения колонистами супероружия. Резонансно-Аккумулятивная Бомба (или сокращённо Резак-Бомба) была сброшена здесь, чтобы уничтожить опасных существ. Однако многие твари не только выжили, но и приспособились к Резак-излучению. Погибли лишь слабые, другие адаптировались и стали ещё сильнее.</Text>
 			<Options>
-				<Option Destination="86" OnlyIf="14"/>
-				<Option Destination="134" OnlyIf="!14"/>
+				<Option Destination="86" Availability="14"/>
+				<Option Destination="134" Availability="!14"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -710,16 +710,16 @@
 			<Id>63</Id>
 			<Text>Вы прибыли на территорию знаменитого озера. Оно прозвано «Клейким», благодаря своей затвердевающей субстанции. Говорят, что странная жидкость действует подобно паутине: она обездвиживает погрузившийся в неё предмет. Объезд невозможен, т.к. дорога вдоль берега затоплена после недавнего разлива озера.</Text>
 			<Options>
-				<Option Destination="14" OnlyIf="4"/>
-				<Option Destination="148" OnlyIf="!4"/>
+				<Option Destination="14" Availability="4"/>
+				<Option Destination="148" Availability="!4"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>64</Id>
 			<Text>Вы мчитесь по заливному лугу. Минуете радужное поле цветов и тормозите у кручи. Впереди обрыв с тихой речкой. Над водой клубится серебристый туман.</Text>
 			<Options>
-				<Option Destination="73" OnlyIf="17"/>
-				<Option Destination="121" OnlyIf="!17"/>
+				<Option Destination="73" Availability="17"/>
+				<Option Destination="121" Availability="!17"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -958,8 +958,8 @@
 			<Id>87</Id>
 			<Text>Вы едете по снежной долине. Деревья и кустарники сверкают под покрывалом инея. Учёные объясняют местное снижение температуры наличием криоплиты в литосфере Стигии. Впереди предстало огромное ледяное озеро. Серебристый блеск вышибает слезу.</Text>
 			<Options>
-				<Option Destination="147" OnlyIf="9"/>
-				<Option Destination="28" OnlyIf="!9"/>
+				<Option Destination="147" Availability="9"/>
+				<Option Destination="28" Availability="!9"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1006,8 +1006,8 @@
 			<Id>91</Id>
 			<Text>Вы съехали в низменность, окутанную мраком. Лишь колючие деревья слабо мерцают во тьме. Вы включили фары и движетесь в тёмном перелеске.</Text>
 			<Options>
-				<Option Destination="118" OnlyIf="5"/>
-				<Option Destination="11" OnlyIf="!5"/>
+				<Option Destination="118" Availability="5"/>
+				<Option Destination="11" Availability="!5"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1251,8 +1251,8 @@
 			<Id>115</Id>
 			<Text>Харвестер едет по неровной тропе, подпрыгивая на ухабах. Дорожка проходит между крутых скал. С горных вершин стекают ручьи, из-за чего путь становится скользким.</Text>
 			<Options>
-				<Option Destination="7" OnlyIf="10"/>
-				<Option Destination="50" OnlyIf="!10"/>
+				<Option Destination="7" Availability="10"/>
+				<Option Destination="50" Availability="!10"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1291,8 +1291,8 @@
 			<Id>119</Id>
 			<Text>Вы едете через мшистое болото. Сухие деревья растопырили голые ветки. Редкие валуны заросли оранжевым лишайником. Пожухлая трава тихо шуршит. Растворяясь в пелене, вдали струится багровый дым. Перед вами открылась обширная прогалина.</Text>
 			<Options>
-				<Option Destination="23" OnlyIf="6"/>
-				<Option Destination="57" OnlyIf="!6"/>
+				<Option Destination="23" Availability="6"/>
+				<Option Destination="57" Availability="!6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1328,8 +1328,8 @@
 			<Id>123</Id>
 			<Text>Вы очутились во влажной долине с экзотичной флорой. Сплетённые колонии водорослей поднимаются ввысь на десяток метров. Они похожи на великие деревья с кронами в виде рогов, за это сходство их назвали Дендрогами. Изумляет не только их размер, но и причудливое изменение цвета. В зависимости от настроения дендроги меняют окрас. Сейчас от близости харвестера их жёлтые стволы стали красными.</Text>
 			<Options>
-				<Option Destination="74" OnlyIf="15"/>
-				<Option Destination="10" OnlyIf="!15"/>
+				<Option Destination="74" Availability="15"/>
+				<Option Destination="10" Availability="!15"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1350,8 +1350,8 @@
 			<Id>125</Id>
 			<Text>Вы едете по запруженной долине. Вода отливает рыжим светом. Высокий тростник стоит зелёной стеной на дороге, заслоняя обзор. Пересекая Медную Заводь, вы обратили внимание на голый островок. На коротком участке тихая река пересохла, обнажив галечный грунт.</Text>
 			<Options>
-				<Option Destination="17" OnlyIf="13"/>
-				<Option Destination="59" OnlyIf="!13"/>
+				<Option Destination="17" Availability="13"/>
+				<Option Destination="59" Availability="!13"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1386,8 +1386,8 @@
 			<Id>128</Id>
 			<Text>Вы проезжаете топкую местность. Рыхлая почва трескается под харвестером, и гусеницы наполовину погружаются в жижу. Болотный газ мерно горит над трясиной, будто свеча покойника.</Text>
 			<Options>
-				<Option Destination="65" OnlyIf="7"/>
-				<Option Destination="94" OnlyIf="!7"/>
+				<Option Destination="65" Availability="7"/>
+				<Option Destination="94" Availability="!7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1413,8 +1413,8 @@
 			<Id>131</Id>
 			<Text>Вы пересекаете необъятные пустоши, залитые голубым светом. Сильный ветер заунывно воет, словно рыдает от одиночества. На пустом горизонте не видно ничего, кроме бескрайней дали. Глинистая почва испещрена трещинами.</Text>
 			<Options>
-				<Option Destination="53" OnlyIf="16"/>
-				<Option Destination="35" OnlyIf="!16"/>
+				<Option Destination="53" Availability="16"/>
+				<Option Destination="35" Availability="!16"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1439,8 +1439,8 @@
 			<Id>134</Id>
 			<Text>Вы объезжаете трещины, держась подальше от краёв. Ощущается необычный магнетизм. Бездна, будто живая, хочет подманить и поглотить харвестер.</Text>
 			<Options>
-				<Option Destination="154" OnlyIf="12"/>
-				<Option Destination="2" OnlyIf="!12"/>
+				<Option Destination="154" Availability="12"/>
+				<Option Destination="2" Availability="!12"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1520,8 +1520,8 @@
 			<Id>143</Id>
 			<Text>Харвестер едет по влажной долине, подпрыгивая на кочках. Эти пружинистые холмики имеют весьма необычную природу. По заявлению учёных из обсерватории, болотные бугры растут парно. По мере взросления кочки дистанцируются, но сохраняют единую корневую систему. Они словно разлучённые близнецы.</Text>
 			<Options>
-				<Option Destination="103" OnlyIf="11"/>
-				<Option Destination="133" OnlyIf="!11"/>
+				<Option Destination="103" Availability="11"/>
+				<Option Destination="133" Availability="!11"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1542,8 +1542,8 @@
 			<Id>145</Id>
 			<Text>Объезжая буераки, вы прибыли на равнинный участок. Прекрасный вид открылся взору. Цветущий край играет буйством красок. Вы замедляетесь, изучая побеги растений. Несмотря на богатство флоры, стигона не видно. </Text>
 			<Options>
-				<Option Destination="114" OnlyIf="18"/>
-				<Option Destination="38" OnlyIf="!18"/>
+				<Option Destination="114" Availability="18"/>
+				<Option Destination="38" Availability="!18"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1582,8 +1582,8 @@
 			<Id>150</Id>
 			<Text>Двигаясь по извилистой тропе, вы заехали в тенистый лес, где вместо деревьев растут высокие грибы. Их толстые ножки усеяны бороздками. На сводчатых шляпах сверкают минеральные хлопья. Здесь кипит жизнь, повсюду копошатся насекомые разных форм и размеров. Прожорливые твари хватают друг друга налету. Каждый хочет выжить в беспощадной борьбе за жизнь. «Они совсем, как старатели на Стигии», - с самоиронией думаете вы. На мгновение приходит желание бросить всё и вернуться домой. На поверхность триплекса садится толстая двуглавая стрекоза, закрывая обзор. Вы сжигаете летучую гадость, и ненужные мысли исчезают. Не время рассуждать - пора действовать! Планета таит в себе много опасностей. Нужно быть начеку до прибытия в Порт Грёз.</Text>
 			<Options>
-				<Option Destination="117" OnlyIf="5"/>
-				<Option Destination="48" OnlyIf="!5"/>
+				<Option Destination="117" Availability="5"/>
+				<Option Destination="48" Availability="!5"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1676,16 +1676,16 @@
 			<Id>159</Id>
 			<Text>Вы едете по каменистой тропе. Пересекаете степной участок и оказываетесь в чахлом лесу, где отдельно растущие деревья лишены листьев. Они сухие и колючие. Когда-то тут пытались культивировать фрукты с планеты Эдем. Но на Стигии съедобные плоды мутировали и стали токсичными. Затем фруктовые деревья навсегда осыпались.</Text>
 			<Options>
-				<Option Destination="183" OnlyIf="26"/>
-				<Option Destination="185" OnlyIf="!26"/>
+				<Option Destination="183" Availability="26"/>
+				<Option Destination="185" Availability="!26"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>160</Id>
 			<Text>Вы пересекаете заросшие травой поля. Пышные растения образуют сложные узоры, превращая землю в пёстрый ковёр. Иногда тут пасутся травоядные животные.</Text>
 			<Options>
-				<Option Destination="170" OnlyIf="28"/>
-				<Option Destination="196" OnlyIf="!28"/>
+				<Option Destination="170" Availability="28"/>
+				<Option Destination="196" Availability="!28"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1737,16 +1737,16 @@
 			<Id>166</Id>
 			<Text>Харвестер мчится по травянистым коврам, скрывающих неровности почвы. Одиноко растущие деревья и кусты переливаются песочным цветом. Стаи мелких птиц снуют повсюду в погоне за добычей. Их основная пища - это полчища насекомых.</Text>
 			<Options>
-				<Option Destination="171" OnlyIf="24"/>
-				<Option Destination="200" OnlyIf="!24"/>
+				<Option Destination="171" Availability="24"/>
+				<Option Destination="200" Availability="!24"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>167</Id>
 			<Text>Вы скользите по илу на берегу озера. Плавучие цветы покрывают поверхность воды пёстрым ковром. Ветер колышет стебли рогоза и осоки. В редких местах просвечивают «окна» с тёмной водой.</Text>
 			<Options>
-				<Option Destination="198" OnlyIf="27"/>
-				<Option Destination="177" OnlyIf="!27"/>
+				<Option Destination="198" Availability="27"/>
+				<Option Destination="177" Availability="!27"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1780,16 +1780,16 @@
 			<Id>171</Id>
 			<Text>Когда-то тут царил Огнехвост, грозный хищник контролирующий популяцию тварей ползучих и летающих. Нынче насекомые и птицы неимоверно размножились. Вы оказались в безумном карнавале живности. Пикирующие птицы ударяются о корпус харвестера. Жирные мухи забиваются в дула орудий.</Text>
 			<Options>
-				<Option Destination="156" OnlyIf="25"/>
-				<Option Destination="179" OnlyIf="!25"/>
+				<Option Destination="156" Availability="25"/>
+				<Option Destination="179" Availability="!25"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>172</Id>
 			<Text>Вы заехали на заливной луг, где в изобилии цветут растения. Сильный аромат привлекает сюда разных насекомых, среди которых преобладают красные пчёлы.</Text>
 			<Options>
-				<Option Destination="182" OnlyIf="30"/>
-				<Option Destination="199" OnlyIf="!30"/>
+				<Option Destination="182" Availability="30"/>
+				<Option Destination="199" Availability="!30"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1883,8 +1883,8 @@
 			<Id>180</Id>
 			<Text>Харвестер мчится по долине, где почва насыщена солью. Белёсая земля практически лишена растительности. Скудные побеги с листьями имеют бледный оттенок. Соляные холмы, местами покрытые известняком, блестят как зеркала.</Text>
 			<Options>
-				<Option Destination="194" OnlyIf="29"/>
-				<Option Destination="168" OnlyIf="!29"/>
+				<Option Destination="194" Availability="29"/>
+				<Option Destination="168" Availability="!29"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
