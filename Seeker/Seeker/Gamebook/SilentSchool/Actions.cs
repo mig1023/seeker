@@ -50,7 +50,7 @@ namespace Seeker.Gamebook.SilentSchool
         public override bool IsButtonEnabled(bool secondButton = false) =>
             !((HarmedMyself > 0) && ((protagonist.HarmSelfAlready > 0) || (protagonist.Life <= HarmedMyself)));
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
