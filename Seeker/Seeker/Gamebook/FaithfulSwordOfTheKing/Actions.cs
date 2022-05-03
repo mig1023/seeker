@@ -61,7 +61,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return !(disabledMeritalArtButton || disabledGetOptions || disabledByPrice);
         }
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
@@ -91,7 +91,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             }
             else
             {
-                return CheckOnlyIfTrigger(option);
+                return AvailabilityTrigger(option);
             }
         }
 
