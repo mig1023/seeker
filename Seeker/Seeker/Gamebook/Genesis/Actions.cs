@@ -46,7 +46,7 @@ namespace Seeker.Gamebook.Genesis
         }
 
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
