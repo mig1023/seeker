@@ -6,6 +6,6 @@ namespace Seeker.Gamebook.DeathOfAntiquary
     {
         public static Actions StaticInstance = new Actions();
 
-        public override bool CheckOnlyIf(string option) => CheckOnlyIfTrigger(option);
+        public override bool Availability(string option) => AvailabilityTrigger(option);
     }
 }
