@@ -130,7 +130,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return !(disabledByChoosed || disabledByBonusesAdd || disabledByBonusesRemove || disabledByPrice || disabledByUsed);
         }
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
