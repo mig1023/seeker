@@ -118,7 +118,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             return !(disabledSpellAdd || disabledSpellRemove || disabledGetOptions || disabledByPrice);
         }
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
                 return true;
@@ -130,7 +130,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
                 return protagonist.Spells.Contains(option);
 
             else
-                return CheckOnlyIfTrigger(option);
+                return AvailabilityTrigger(option);
         }
 
         public override List<string> Representer()
