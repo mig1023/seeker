@@ -57,7 +57,7 @@ namespace Seeker.Gamebook.StringOfWorlds
         public override bool IsButtonEnabled(bool secondButton = false) =>
             !(!String.IsNullOrEmpty(Equipment) && !String.IsNullOrEmpty(protagonist.Equipment));
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
@@ -84,7 +84,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                     return protagonist.Equipment == "Зажигалка";
 
                 else
-                    return CheckOnlyIfTrigger(option);
+                    return AvailabilityTrigger(option);
             }
         }
 
