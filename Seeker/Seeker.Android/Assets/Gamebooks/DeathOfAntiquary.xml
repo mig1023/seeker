@@ -37,14 +37,14 @@
 			<Id>3</Id>
 			<Text>Вы сидели в клетке и все слышали. Какое новое слово вы хотите запомнить?</Text>
 			<Options>
-				<Option Destination="54" Text="Анжела" OnlyIf="!анжела" Do="Trigger" ValueString="анжела"/>
-				<Option Destination="54" Text="Яков Левинзон" OnlyIf="!левинзон" Do="Trigger" ValueString="левинзон"/>
-				<Option Destination="54" Text="завещание" OnlyIf="!завещание" Do="Trigger" ValueString="завещание"/>
-				<Option Destination="54" Text="картина" OnlyIf="!картина" Do="Trigger" ValueString="картина"/>
-				<Option Destination="54" Text="Улика" OnlyIf="!улика" Do="Trigger" ValueString="улика"/>
-				<Option Destination="54" Text="Обыск" OnlyIf="!обыск" Do="Trigger" ValueString="обыск"/>
-				<Option Destination="54" Text="Записка" OnlyIf="!записка" Do="Trigger" ValueString="записка"/>
-				<Option Destination="54" Text="Письма" OnlyIf="!письма" Do="Trigger" ValueString="письма"/>
+				<Option Destination="54" Text="Анжела" Availability="!анжела" Do="Trigger" ValueString="анжела"/>
+				<Option Destination="54" Text="Яков Левинзон" Availability="!левинзон" Do="Trigger" ValueString="левинзон"/>
+				<Option Destination="54" Text="завещание" Availability="!завещание" Do="Trigger" ValueString="завещание"/>
+				<Option Destination="54" Text="картина" Availability="!картина" Do="Trigger" ValueString="картина"/>
+				<Option Destination="54" Text="Улика" Availability="!улика" Do="Trigger" ValueString="улика"/>
+				<Option Destination="54" Text="Обыск" Availability="!обыск" Do="Trigger" ValueString="обыск"/>
+				<Option Destination="54" Text="Записка" Availability="!записка" Do="Trigger" ValueString="записка"/>
+				<Option Destination="54" Text="Письма" Availability="!письма" Do="Trigger" ValueString="письма"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -136,15 +136,15 @@
 			<Id>16</Id>
 			<Text>К вечеру в кабинет к Тарасову пришла для дачи показаний домработница Лариса Павловна.\n\nЭто была полноватая, но крепкая женщина с грубым пухлым лицом. На вид лет 50. Она чувствовала себя неуверенно в кабинете следователя и от волнения мяла в руке носовой платок.\n\n- У вас есть ключ от квартиры Розенблата?\n\n- Да, есть. Они сами мне его дали.\n\n- А зачем вам ключ, если когда вы убираете в квартире всегда был или покойный или его жена?\n\n- Михаил Самсонович дал ключ, чтобы я не отвлекала его от работы в его кабинете. Его раздражало, когда я звонила в дверь и он должен был через все комнаты идти открывать мне.\n\n- Понятно. А что вы скажете про его жену Анжелу? Она на двадцать лет моложе мужа. Это не приводило к каким-то... э-ээ ... недоразумениям?\n\n- Ну, всякое бывало, - смутилась домработница. - Бывало что и ругались.\n\n- А из-за чего ругались?\n\n- Анжела хотела уехать жить в Израиль и уговаривала мужа. А он не хотел.\n\n- Понятно. А вы не слышали ничего в их разговорах насчет картины Брейгеля?\n\n- Картины?... Ах, да! Был один разговор, но не с Анжелой. Покойный, земля ему пухом, говорил о какой-то картине с Яковом Левинзоном. Это его близкий товарищ.\n\n- А вы знаете Лариса Павловна, что эта картина была очень дорогой.\n\n- Да, откуда же я знаю! Помилуй бог. Это вы у Якова Левинзона спросите.\n\n- А покойный не получал никаких писем. Он не вел с кем-то переписку?\n\n- Письма?... Ему иногда приходили письма из университетов. Анжела говорила, что мужа приглашали кажется в Вену на конференцию по этой... как ее... забыла это мудреное слово. Ну, там собирались те, кто изучал древние монеты.\n\nНо покойный не любил никуда ездить. Он был домоседом.\n\n- Понятно. Ну ладно, не буду больше вас мучить. На этом следователь решил закончить допрос.\n\nКакие новые слова вы хотите запомнить?</Text>
 			<Options>
-				<Option Destination="64" Text="Анжела" OnlyIf="!анжела" Do="Trigger" ValueString="анжела"/>
-				<Option Destination="64" Text="Яков Левинзон" OnlyIf="!левинзон" Do="Trigger" ValueString="левинзон"/>
-				<Option Destination="64" Text="Израиль" OnlyIf="!израиль" Do="Trigger" ValueString="израиль"/>
-				<Option Destination="64" Text="завещание" OnlyIf="!завещание" Do="Trigger" ValueString="завещание"/>
-				<Option Destination="64" Text="картина" OnlyIf="!картина" Do="Trigger" ValueString="картина"/>
-				<Option Destination="64" Text="Письма" OnlyIf="!письма" Do="Trigger" ValueString="письма"/>
-				<Option Destination="64" Text="Улика" OnlyIf="!улика" Do="Trigger" ValueString="улика"/>
-				<Option Destination="64" Text="Обыск" OnlyIf="!обыск" Do="Trigger" ValueString="обыск"/>
-				<Option Destination="64" Text="Записка" OnlyIf="!записка" Do="Trigger" ValueString="записка"/>
+				<Option Destination="64" Text="Анжела" Availability="!анжела" Do="Trigger" ValueString="анжела"/>
+				<Option Destination="64" Text="Яков Левинзон" Availability="!левинзон" Do="Trigger" ValueString="левинзон"/>
+				<Option Destination="64" Text="Израиль" Availability="!израиль" Do="Trigger" ValueString="израиль"/>
+				<Option Destination="64" Text="завещание" Availability="!завещание" Do="Trigger" ValueString="завещание"/>
+				<Option Destination="64" Text="картина" Availability="!картина" Do="Trigger" ValueString="картина"/>
+				<Option Destination="64" Text="Письма" Availability="!письма" Do="Trigger" ValueString="письма"/>
+				<Option Destination="64" Text="Улика" Availability="!улика" Do="Trigger" ValueString="улика"/>
+				<Option Destination="64" Text="Обыск" Availability="!обыск" Do="Trigger" ValueString="обыск"/>
+				<Option Destination="64" Text="Записка" Availability="!записка" Do="Trigger" ValueString="записка"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -218,8 +218,8 @@
 			<Options>
 				<Option Destination="48" Text="Заткнись идиот!"/>
 				<Option Destination="48" Text="О зохэн вэй!"/>
-				<Option Destination="48" Text="«Фак ми!» и женские стоны из порнофильма" OnlyIf="фак-ми"/>
-				<Option Destination="48" Text="«Владимирский центра-а-а-л...»" OnlyIf="владимирский централ"/>
+				<Option Destination="48" Text="«Фак ми!» и женские стоны из порнофильма" Availability="фак-ми"/>
+				<Option Destination="48" Text="«Владимирский центра-а-а-л...»" Availability="владимирский централ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -248,14 +248,14 @@
 			<Id>29</Id>
 			<Text>Запомните еще одно слово!</Text>
 			<Options>
-				<Option Destination="77" Text="Анжела" OnlyIf="!анжела" Do="Trigger" ValueString="анжела"/>
-				<Option Destination="77" Text="Яков Левинзон" OnlyIf="!левинзон" Do="Trigger" ValueString="левинзон"/>
-				<Option Destination="77" Text="завещание" OnlyIf="!завещание" Do="Trigger" ValueString="завещание"/>
-				<Option Destination="77" Text="картина" OnlyIf="!картина" Do="Trigger" ValueString="картина"/>
-				<Option Destination="77" Text="Улика" OnlyIf="!улика" Do="Trigger" ValueString="улика"/>
-				<Option Destination="77" Text="Обыск" OnlyIf="!обыск" Do="Trigger" ValueString="обыск"/>
-				<Option Destination="77" Text="Записка" OnlyIf="!записка" Do="Trigger" ValueString="записка"/>
-				<Option Destination="77" Text="Письма" OnlyIf="!письма" Do="Trigger" ValueString="письма"/>
+				<Option Destination="77" Text="Анжела" Availability="!анжела" Do="Trigger" ValueString="анжела"/>
+				<Option Destination="77" Text="Яков Левинзон" Availability="!левинзон" Do="Trigger" ValueString="левинзон"/>
+				<Option Destination="77" Text="завещание" Availability="!завещание" Do="Trigger" ValueString="завещание"/>
+				<Option Destination="77" Text="картина" Availability="!картина" Do="Trigger" ValueString="картина"/>
+				<Option Destination="77" Text="Улика" Availability="!улика" Do="Trigger" ValueString="улика"/>
+				<Option Destination="77" Text="Обыск" Availability="!обыск" Do="Trigger" ValueString="обыск"/>
+				<Option Destination="77" Text="Записка" Availability="!записка" Do="Trigger" ValueString="записка"/>
+				<Option Destination="77" Text="Письма" Availability="!письма" Do="Trigger" ValueString="письма"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -334,16 +334,16 @@
 			<Id>39</Id>
 			<Text>Вы сидели в клетке и покачиваясь на жердочке, слушали разговор.\n\nЛевинзон нагло врал Тарасову. Картина была подлинником и вы с Яковом планировали ее продать немецкому дипломату. Тот должен был приехать в Москву по делам в посольстве и вы договаривались передать ему картину в обмен на миллион долларов.\n\nПереговоры вел Левинзон. Он хорошо знал немецкий и его родственник был знаком с немецком дипломатом. По этой цепочке Яков и вышел на покупателя.\n\nВы договорились, что Яков получит 20% от суммы. Яков вел переписку со своим родственником в Берлине по интернету.\n\nТолько теперь вам закралась в голову мысль, что единственный, кто выиграл бы от вашей смерти - это ваш друг. Он знал, где вы хранили картину.\n\nСтрашная догадка возбудила вас. Точнее это возбудило попугая и он закричал...</Text>
 			<Options>
-				<Option Destination="15" Text="Анжела" OnlyIf="анжела"/>
-				<Option Destination="46" Text="Яков Левинзон" OnlyIf="левинзон"/>
+				<Option Destination="15" Text="Анжела" Availability="анжела"/>
+				<Option Destination="46" Text="Яков Левинзон" Availability="левинзон"/>
 				<Option Destination="37" Text="Заткнись идиот!"/>
 				<Option Destination="67" Text="О зохэн вэй!"/>
-				<Option Destination="35" Text="Израиль" OnlyIf="израиль"/>
-				<Option Destination="5" Text="картина" OnlyIf="картина"/>
-				<Option Destination="57" Text="Улика" OnlyIf="улика"/>
-				<Option Destination="7" Text="«Фак ми!» и женские стоны из порнофильма" OnlyIf="фак-ми"/>
-				<Option Destination="76" Text="Записка" OnlyIf="записка"/>
-				<Option Destination="76" Text="«Владимирский центра-а-а-л...»" OnlyIf="владимирский централ"/>
+				<Option Destination="35" Text="Израиль" Availability="израиль"/>
+				<Option Destination="5" Text="картина" Availability="картина"/>
+				<Option Destination="57" Text="Улика" Availability="улика"/>
+				<Option Destination="7" Text="«Фак ми!» и женские стоны из порнофильма" Availability="фак-ми"/>
+				<Option Destination="76" Text="Записка" Availability="записка"/>
+				<Option Destination="76" Text="«Владимирский центра-а-а-л...»" Availability="владимирский централ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -374,14 +374,14 @@
 				<Text>Выберите слова которые вам кажутся полезными, чтобы помочь своими подсказками следователю раскрыть преступление.\n\nВыберите какое-то одно слово или фразу.</Text>
 			</Texts>
 			<Options>
-				<Option Destination="16" Text="Анжела" OnlyIf="!анжела" Do="Trigger" ValueString="анжела"/>
-				<Option Destination="16" Text="Яков Левинзон" OnlyIf="!левинзон" Do="Trigger" ValueString="левинзон"/>
-				<Option Destination="16" Text="Завещание" OnlyIf="!завещание" Do="Trigger" ValueString="завещание"/>
-				<Option Destination="16" Text="Израиль" OnlyIf="!израиль" Do="Trigger" ValueString="израиль"/>
-				<Option Destination="16" Text="картина" OnlyIf="!картина" Do="Trigger" ValueString="картина"/>
-				<Option Destination="16" Text="письма" OnlyIf="!письма" Do="Trigger" ValueString="письма"/>
-				<Option Destination="16" Text="улика" OnlyIf="!улика" Do="Trigger" ValueString="улика"/>
-				<Option Destination="16" Text="обыск" OnlyIf="!обыск" Do="Trigger" ValueString="обыск"/>
+				<Option Destination="16" Text="Анжела" Availability="!анжела" Do="Trigger" ValueString="анжела"/>
+				<Option Destination="16" Text="Яков Левинзон" Availability="!левинзон" Do="Trigger" ValueString="левинзон"/>
+				<Option Destination="16" Text="Завещание" Availability="!завещание" Do="Trigger" ValueString="завещание"/>
+				<Option Destination="16" Text="Израиль" Availability="!израиль" Do="Trigger" ValueString="израиль"/>
+				<Option Destination="16" Text="картина" Availability="!картина" Do="Trigger" ValueString="картина"/>
+				<Option Destination="16" Text="письма" Availability="!письма" Do="Trigger" ValueString="письма"/>
+				<Option Destination="16" Text="улика" Availability="!улика" Do="Trigger" ValueString="улика"/>
+				<Option Destination="16" Text="обыск" Availability="!обыск" Do="Trigger" ValueString="обыск"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -392,14 +392,14 @@
 				<Text>Что вы крикнете в ответ?</Text>
 			</Texts>
 			<Options>
-				<Option Destination="68" Text="Анжела" OnlyIf="анжела"/>
-				<Option Destination="68" Text="Яков Левинзон" OnlyIf="левинзон"/>
-				<Option Destination="68" Text="Израиль" OnlyIf="израиль"/>
-				<Option Destination="68" Text="завещание" OnlyIf="завещание"/>
-				<Option Destination="68" Text="картина" OnlyIf="картина"/>
-				<Option Destination="70" Text="письма" OnlyIf="письма"/>
-				<Option Destination="68" Text="Улика" OnlyIf="улика"/>
-				<Option Destination="68" Text="Записка" OnlyIf="записка"/>
+				<Option Destination="68" Text="Анжела" Availability="анжела"/>
+				<Option Destination="68" Text="Яков Левинзон" Availability="левинзон"/>
+				<Option Destination="68" Text="Израиль" Availability="израиль"/>
+				<Option Destination="68" Text="завещание" Availability="завещание"/>
+				<Option Destination="68" Text="картина" Availability="картина"/>
+				<Option Destination="70" Text="письма" Availability="письма"/>
+				<Option Destination="68" Text="Улика" Availability="улика"/>
+				<Option Destination="68" Text="Записка" Availability="записка"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -478,14 +478,14 @@
 			<Id>54</Id>
 			<Text>Вы можете запомнить еще одно слово!</Text>
 			<Options>
-				<Option Destination="29" Text="Анжела" OnlyIf="!анжела" Do="Trigger" ValueString="анжела"/>
-				<Option Destination="29" Text="Яков Левинзон" OnlyIf="!левинзон" Do="Trigger" ValueString="левинзон"/>
-				<Option Destination="29" Text="Завещание" OnlyIf="!завещание" Do="Trigger" ValueString="завещание"/>
-				<Option Destination="29" Text="картина" OnlyIf="!картина" Do="Trigger" ValueString="картина"/>
-				<Option Destination="29" Text="письма" OnlyIf="!письма" Do="Trigger" ValueString="письма"/>
-				<Option Destination="29" Text="улика" OnlyIf="!улика" Do="Trigger" ValueString="улика"/>
-				<Option Destination="29" Text="обыск" OnlyIf="!обыск" Do="Trigger" ValueString="обыск"/>
-				<Option Destination="29" Text="Записка" OnlyIf="!записка" Do="Trigger" ValueString="записка"/>
+				<Option Destination="29" Text="Анжела" Availability="!анжела" Do="Trigger" ValueString="анжела"/>
+				<Option Destination="29" Text="Яков Левинзон" Availability="!левинзон" Do="Trigger" ValueString="левинзон"/>
+				<Option Destination="29" Text="Завещание" Availability="!завещание" Do="Trigger" ValueString="завещание"/>
+				<Option Destination="29" Text="картина" Availability="!картина" Do="Trigger" ValueString="картина"/>
+				<Option Destination="29" Text="письма" Availability="!письма" Do="Trigger" ValueString="письма"/>
+				<Option Destination="29" Text="улика" Availability="!улика" Do="Trigger" ValueString="улика"/>
+				<Option Destination="29" Text="обыск" Availability="!обыск" Do="Trigger" ValueString="обыск"/>
+				<Option Destination="29" Text="Записка" Availability="!записка" Do="Trigger" ValueString="записка"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -556,17 +556,17 @@
 			<Id>64</Id>
 			<Text>Когда домработница ушла, Тарасов подошел к вашей клетке и щелкнув пальцем по прутьям сказал:\n\n- Ну? Что думаешь, приятель?... Кто мог убить антиквара? Молчишь? Не знаешь. Вот и я н знаю... Пока не знаю!\n\nЧто вы хотите прокричать в ответ?</Text>
 			<Options>
-				<Option Destination="14" Text="Анжела" OnlyIf="анжела"/>
-				<Option Destination="11" Text="Яков Левинзон" OnlyIf="левинзон"/>
+				<Option Destination="14" Text="Анжела" Availability="анжела"/>
+				<Option Destination="11" Text="Яков Левинзон" Availability="левинзон"/>
 				<Option Destination="13" Text="Заткнись идиот!"/>
 				<Option Destination="25" Text="О зохэн вэй!"/>
-				<Option Destination="61" Text="Израиль" OnlyIf="израиль"/>
-				<Option Destination="60" Text="завещание" OnlyIf="завещание"/>
-				<Option Destination="65" Text="картина" OnlyIf="картина"/>
-				<Option Destination="78" Text="Улика" OnlyIf="улика"/>
-				<Option Destination="47" Text="«Фак ми!» и женские стоны из порнофильма" OnlyIf="фак-ми"/>
-				<Option Destination="31" Text="Записка" OnlyIf="записка"/>
-				<Option Destination="58" Text="«Владимирский центра-а-а-л...»" OnlyIf="владимирский централ"/>
+				<Option Destination="61" Text="Израиль" Availability="израиль"/>
+				<Option Destination="60" Text="завещание" Availability="завещание"/>
+				<Option Destination="65" Text="картина" Availability="картина"/>
+				<Option Destination="78" Text="Улика" Availability="улика"/>
+				<Option Destination="47" Text="«Фак ми!» и женские стоны из порнофильма" Availability="фак-ми"/>
+				<Option Destination="31" Text="Записка" Availability="записка"/>
+				<Option Destination="58" Text="«Владимирский центра-а-а-л...»" Availability="владимирский централ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -610,16 +610,16 @@
 			<Id>70</Id>
 			<Text>"Письма!... Письма!... Письма-письма!!" - кричал попугай.\n\n- Причем тут обыск у Левинзона и письма? - раздраженно буркнул Тарасов. Что крикнете ему в ответ?</Text>
 			<Options>
-				<Option Destination="68" Text="Анжела" OnlyIf="анжела"/>
-				<Option Destination="68" Text="Яков Левинзон" OnlyIf="левинзон"/>
-				<Option Destination="68" Text="Израиль" OnlyIf="израиль"/>
-				<Option Destination="68" Text="завещание" OnlyIf="завещание"/>
-				<Option Destination="68" Text="картина" OnlyIf="картина"/>
-				<Option Destination="42" Text="Улика" OnlyIf="улика"/>
-				<Option Destination="68" Text="«Фак ми!» и женские стоны из порнофильма" OnlyIf="фак-ми"/>
-				<Option Destination="68" Text="Обыск" OnlyIf="обыск"/>
-				<Option Destination="68" Text="Записка" OnlyIf="записка"/>
-				<Option Destination="68" Text="«Владимирский центра-а-а-л...»" OnlyIf="владимирский централ"/>
+				<Option Destination="68" Text="Анжела" Availability="анжела"/>
+				<Option Destination="68" Text="Яков Левинзон" Availability="левинзон"/>
+				<Option Destination="68" Text="Израиль" Availability="израиль"/>
+				<Option Destination="68" Text="завещание" Availability="завещание"/>
+				<Option Destination="68" Text="картина" Availability="картина"/>
+				<Option Destination="42" Text="Улика" Availability="улика"/>
+				<Option Destination="68" Text="«Фак ми!» и женские стоны из порнофильма" Availability="фак-ми"/>
+				<Option Destination="68" Text="Обыск" Availability="обыск"/>
+				<Option Destination="68" Text="Записка" Availability="записка"/>
+				<Option Destination="68" Text="«Владимирский центра-а-а-л...»" Availability="владимирский централ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -647,13 +647,13 @@
 			<Id>74</Id>
 			<Text>"Обыск!" - крикнул попугай.\n\n- Ха! А ты я вижу умная птица. Быстро учишь новые слова. Так ты у меня скоро все статьи УК знать будешь.\n\n"Обыск!... Обыск!... Обыск!!!!" - снова затараторил попугай.\n\n- Что обыск? У кого обыск?... У Анжелы? У Левинзона? Или у домработницы?... Что вы крикнете в ответ?</Text>
 			<Options>
-				<Option Destination="75" Text="Анжела" OnlyIf="анжела"/>
-				<Option Destination="44" Text="Яков Левинзон" OnlyIf="левинзон"/>
-				<Option Destination="17" Text="Израиль" OnlyIf="израиль"/>
-				<Option Destination="45" Text="завещание" OnlyIf="завещание"/>
-				<Option Destination="51" Text="картина" OnlyIf="картина"/>
-				<Option Destination="22" Text="Улика" OnlyIf="улика"/>
-				<Option Destination="49" Text="Записка" OnlyIf="записка"/>
+				<Option Destination="75" Text="Анжела" Availability="анжела"/>
+				<Option Destination="44" Text="Яков Левинзон" Availability="левинзон"/>
+				<Option Destination="17" Text="Израиль" Availability="израиль"/>
+				<Option Destination="45" Text="завещание" Availability="завещание"/>
+				<Option Destination="51" Text="картина" Availability="картина"/>
+				<Option Destination="22" Text="Улика" Availability="улика"/>
+				<Option Destination="49" Text="Записка" Availability="записка"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -675,14 +675,14 @@
 			<Id>77</Id>
 			<Text>Поздно вечером, Тарасов закончил писать отчет и подошел к клетке чтобы покормить попугая.\n\n- Ну что дружище? Время расследования подходит к концу, а мне даже нечего представить полковнику. Одни подозрения и ни одной улики!...\n\nЧто вы хотите прокричать следователю?</Text>
 			<Options>
-				<Option Destination="2" Text="Анжела" OnlyIf="анжела"/>
-				<Option Destination="59" Text="Яков Левинзон" OnlyIf="левинзон"/>
-				<Option Destination="4" Text="Израиль" OnlyIf="израиль"/>
-				<Option Destination="69" Text="завещание" OnlyIf="завещание"/>
-				<Option Destination="30" Text="картина" OnlyIf="картина"/>
-				<Option Destination="80" Text="Улика" OnlyIf="улика"/>
-				<Option Destination="74" Text="Обыск" OnlyIf="обыск"/>
-				<Option Destination="50" Text="Записка" OnlyIf="записка"/>
+				<Option Destination="2" Text="Анжела" Availability="анжела"/>
+				<Option Destination="59" Text="Яков Левинзон" Availability="левинзон"/>
+				<Option Destination="4" Text="Израиль" Availability="израиль"/>
+				<Option Destination="69" Text="завещание" Availability="завещание"/>
+				<Option Destination="30" Text="картина" Availability="картина"/>
+				<Option Destination="80" Text="Улика" Availability="улика"/>
+				<Option Destination="74" Text="Обыск" Availability="обыск"/>
+				<Option Destination="50" Text="Записка" Availability="записка"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
