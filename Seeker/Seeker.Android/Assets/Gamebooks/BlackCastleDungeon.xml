@@ -27,7 +27,7 @@
 			<Triggers>Продолжение</Triggers>
 			<Options>
 				<Option Destination="619" Text="В путь!"/>
-				<Option Destination="620" Text="Ты нужен Барладу Дэрту!" OnlyIf="Продолжение"/>
+				<Option Destination="620" Text="Ты нужен Барладу Дэрту!" Availability="Продолжение"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -58,9 +58,9 @@
 			<Text>Через несколько минут вы достигаете реки. На другом ее берегу разбиты палатки, горят костры, между которыми снуют Гоблины и Орки. Река подходит к высокому центральному строению и заканчивается у него, как дорога у ворот, но по шуму воды вы понимаете, что она небольшим водопадом стекает куда-то вниз, в подземелье. Теперь вы можете либо вернуться обратно и направиться к зданию в центре двора, либо попытаться перебраться через реку (тогда вам надо решить, каким заклятием вы воспользуетесь: Плавания или Левитации), либо воспользоваться заклятием Плавания и поплыть по течению реки, чтобы проникнуть в подземелье замка.</Text>
 			<Options>
 				<Option Destination="416" Text="Вернуться обратно и направиться к зданию в центре двора"/>
-				<Option Destination="372" Text="Заклятие Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
-				<Option Destination="103" Text="Заклятие Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
-				<Option Destination="311" Text="Заклятием Плавания и поплыть по течению реки" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				<Option Destination="372" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				<Option Destination="103" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+				<Option Destination="311" Text="Заклятием Плавания и поплыть по течению реки" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -103,9 +103,9 @@
 				<Modification Name="Endurance" Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Destination="36" Text="Заклятия Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-				<Option Destination="314" Text="Заклятия Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-				<Option Destination="112" Text="Заклятия Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="36" Text="Заклятия Силы" Availability="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+				<Option Destination="314" Text="Заклятия Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				<Option Destination="112" Text="Заклятия Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 				<Option Destination="183" Text="Драться"/>
 			</Options>
 		</Paragraph>
@@ -145,8 +145,8 @@
 			<Text>Вы проходите сквозь небольшую дубовую рощицу и выходите к озеру. Оно огромно — другого берега почти не видно. Вы можете или попробовать построить плот и перебраться через озеро на нем, или использовать заклятия. Что вы сделаете?\nПостроите плот, воспользуетесь заклятием Плавания, воспользуетесь заклятием Левитации?</Text>
 			<Options>
 				<Option Destination="312" Text="Построите плот"/>
-				<Option Destination="201" Text="Воспользуетесь заклятием Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
-				<Option Destination="425" Text="Воспользуетесь заклятием Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+				<Option Destination="201" Text="Воспользуетесь заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				<Option Destination="425" Text="Воспользуетесь заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -174,9 +174,9 @@
 			<Id>15</Id>
 			<Text>Вы подзываете хозяина поближе и, выхватив меч, нападаете на него. Первый удар ваш, Водяной ранен, и ему ничего не остается, как принять бой. Он сражается с вами водорослями, каждый удар которых оставляет острые глубокие порезы. Вы можете воспользоваться заклятиями Силы, Слабости, Огня или драться с ним без помощи магии.</Text>
 			<Options>
-				<Option Destination="417" Text="Заклятие Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-				<Option Destination="228" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-				<Option Destination="521" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="417" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+				<Option Destination="228" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				<Option Destination="521" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 				<Option Destination="326" Text="Драться без помощи магии"/>
 			</Options>
 		</Paragraph>
@@ -201,7 +201,7 @@
 				<Modification Name="Endurance" Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="557" Text="Воспользоваться заклятием Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ">
+				<Option Destination="557" Text="Воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ">
 					<Text>Если вы победите их, то можете откинуть ставни и осмотреть домик или же уйти и направиться к центральному строению:</Text>
 				</Option>
 				<Option Destination="120" Text="Осмотреть домик"/>
@@ -221,7 +221,7 @@
 			<Id>18</Id>
 			<Text>Торговец говорит, что может сообщить кое-что интересное и полезное для вас, но за информацию просит 7 золотых или какой-нибудь подарок. Заплатите ему, поищите в заплечном мешке подарок или вежливо поблагодарите и уйдете. А может быть решите, что лучше убить его и обыскать лавку?</Text>
 			<Options>
-				<Option Destination="327" Text="Заплатите ему" OnlyIf="ЗОЛОТО >= 7"/>
+				<Option Destination="327" Text="Заплатите ему" Availability="ЗОЛОТО >= 7"/>
 				<Option Destination="217" Text="Поищите в заплечном мешке подарок"/>
 				<Option Destination="106" Text="Вежливо поблагодарите и уйдете"/>
 				<Option Destination="518" Text="Лучше убить его и обыскать лавку"/>
@@ -276,7 +276,7 @@
 			<Id>23</Id>
 			<Text>Торговец говорит, что может сообщить кое-что полезное для вас, но за информацию просит 7 золотых или какой-нибудь подарок. Заплатите ему, поищите в заплечном мешке подарок, или вежливо поблагодарите и уйдете? А может быть решите, что лучше убить его и поискать, нет ли чего интересного в лавке.</Text>
 			<Options>
-				<Option Destination="327" Text="Заплатить ему" OnlyIf="ЗОЛОТО >= 7"/>
+				<Option Destination="327" Text="Заплатить ему" Availability="ЗОЛОТО >= 7"/>
 				<Option Destination="217" Text="Поищите в заплечном мешке подарок"/>
 				<Option Destination="106" Text="Вежливо поблагодарите и уйдете"/>
 				<Option Destination="518" Text="Лучше убить его"/>
@@ -346,14 +346,14 @@
 			<Text>Вы спускаетесь по лестнице и открываете дверь.</Text>
 			<Options>
 				<Option Destination="10"/>
-				<Option Destination="90" Text="Воспользоваться латами" OnlyIf="GreenArmour"/>
+				<Option Destination="90" Text="Воспользоваться латами" Availability="GreenArmour"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>31</Id>
 			<Text>Стражники спрашивают, чем же вы собираетесь торговать. Если у вас есть шкура лисы, покажите ее как образец и проходите, если же нет, ни одна другая вещь из вашего заплечного мешка не привлечет их внимания, и вам придется драться.</Text>
 			<Options>
-				<Option Destination="48" Text="Покажите шкуру лисы" OnlyIf="FoxSkin"/>
+				<Option Destination="48" Text="Покажите шкуру лисы" Availability="FoxSkin"/>
 				<Option Destination="428" Text="Придется драться"/>
 			</Options>
 		</Paragraph>
@@ -437,7 +437,7 @@
 				<Modification Name="Endurance" Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Destination="451" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="451" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 				<Option Destination="454" Text="Дракон убит"/>
 			</Options>
 		</Paragraph>
@@ -548,7 +548,7 @@
 			<Options>
 				<Option Destination="101" Text="К деревне"/>
 				<Option Destination="262" Text="К лесу"/>
-				<Option Destination="187" Text="Пойти поискать клад" OnlyIf="PirateTreasure"/>
+				<Option Destination="187" Text="Пойти поискать клад" Availability="PirateTreasure"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -581,7 +581,7 @@
 			<Id>51</Id>
 			<Text>Неутомимо ведет вас вперед дорога, уже несколько часов идете по ней, а ловушек и опасностей все еще не видно. Вы уже начинаете надеяться, что лес пропустит вас и скоро покажутся высокие башни Черного замка. Неужели вы будете первым, кто доберется до них? А может быть, главные опасности не в лесу, а в самом замке? Задумавшись вы чуть было не проходите мимо незаметной тропинки, отходящей налево от дороги. Посмотрев в ту сторону, замечаете, что через густую листву невдалеке от дороги виднеется белый домик с красной черепичной крышей. Свернете к нему или решите, что дорога ведет вас в правильном направлении, и поторопитесь к цели?</Text>
 			<Options>
-				<Option Destination="81" Text="За клубочком" OnlyIf="Clew"/>
+				<Option Destination="81" Text="За клубочком" Availability="Clew"/>
 				<Option Destination="21" Text="Свернете к нему"/>
 				<Option Destination="400" Text="Поторопитесь к цели"/>
 			</Options>
@@ -600,7 +600,7 @@
 			<Options>
 				<Option Destination="519" Text="Попробуете с ними поговорить"/>
 				<Option Destination="328" Text="Будете драться"/>
-				<Option Destination="113" Text="Воспользоваться латами" OnlyIf="GreenArmour"/>
+				<Option Destination="113" Text="Воспользоваться латами" Availability="GreenArmour"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -625,8 +625,8 @@
 				</Action>
 			</Actions>
 			<Options>
-				<Option Destination="410" Text="Заклятие Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-				<Option Destination="219" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				<Option Destination="410" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+				<Option Destination="219" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				<Option Destination="189"/>
 			</Options>
 		</Paragraph>
@@ -678,7 +678,7 @@
 			<Id>61</Id>
 			<Text>Вы идете по левому коридору. Неожиданно одна из его стен превращается в решетку. За ней — небольшие каменные помещения, похожие на тюремные камеры. Вы подносите свет к первой из них. За решеткой павлин. Вы настолько удивлены, что несколько минут стоите в растерянности. Кому понадобилось держать павлина в каменном мешке в подземелье? Если у вас есть перо павлина, достаньте его, если же нет, посмотрите, кто сидит за следующей решеткой.</Text>
 			<Options>
-				<Option Destination="267" Text="Достаньте перо павлина" OnlyIf="PeacockFeather"/>
+				<Option Destination="267" Text="Достаньте перо павлина" Availability="PeacockFeather"/>
 				<Option Destination="147" Text="Кто сидит за следующей решеткой"/>
 			</Options>
 		</Paragraph>
@@ -762,7 +762,7 @@
 			<Text>Вы подходите к окну и выглядываете наружу. Все еще стоит ночь, и почти ничего не видно, кроме черных зубцов стены и силуэтов сторожевых башенок на фоне звездного неба. Теперь вы можете или отойти от окна или воспользоваться заклятием Левитации, вылететь наружу и посмотреть, нет ли где-нибудь еще открытых окон.</Text>
 			<Options>
 				<Option Destination="39" Text="Отойти от окна"/>
-				<Option Destination="273" Text="Воспользоваться заклятием Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+				<Option Destination="273" Text="Воспользоваться заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1219,7 +1219,7 @@
 			<Options>
 				<Option Destination="190" Text="Прямо к воротам"/>
 				<Option Destination="236" Text="Пойти налево в обход замка"/>
-				<Option Destination="167" Text="Есть волшебный пояс" OnlyIf="MoleBelt"/>
+				<Option Destination="167" Text="Есть волшебный пояс" Availability="MoleBelt"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1277,7 +1277,7 @@
 			<Id>124</Id>
 			<Text>Торговец нисколько не удивляется и говорит, что тогда он может сообщить вам кое-что интересное, но это будет стоить 7 золотых. Впрочем, он согласен и на скромный подарок. Заплатите ему, поищите в заплечном мешке подарок или вежливо поблагодарите и уйдете. А может быть, решите, что лучше убить его и осмотреть лавку?</Text>
 			<Options>
-				<Option Destination="327" Text="Заплатите ему" OnlyIf="ЗОЛОТО >= 7"/>
+				<Option Destination="327" Text="Заплатите ему" Availability="ЗОЛОТО >= 7"/>
 				<Option Destination="217" Text="Поищите подарок"/>
 				<Option Destination="106" Text="Поблагодарите и уйдете"/>
 				<Option Destination="518" Text="Убить и осмотреть лавку"/>
@@ -1398,9 +1398,9 @@
 			<Id>137</Id>
 			<Text>Сколько монет вы кинете нищенке? Три, шесть или восемь? Если у вас нет столько денег, то вам придется отгонять ее мечом.</Text>
 			<Options>
-				<Option Destination="458" Text="3 золотых" OnlyIf="ЗОЛОТО >= 3"/>
-				<Option Destination="369" Text="6 золотых" OnlyIf="ЗОЛОТО >= 6"/>
-				<Option Destination="274" Text="8 золотых" OnlyIf="ЗОЛОТО >= 8"/>
+				<Option Destination="458" Text="3 золотых" Availability="ЗОЛОТО >= 3"/>
+				<Option Destination="369" Text="6 золотых" Availability="ЗОЛОТО >= 6"/>
+				<Option Destination="274" Text="8 золотых" Availability="ЗОЛОТО >= 8"/>
 				<Option Destination="522" Text="Отгонять ее мечом"/>
 			</Options>
 		</Paragraph>
@@ -1446,7 +1446,7 @@
 			<Id>142</Id>
 			<Text>Свисток нравится торговцу, но он не знает, что с ним делать. Он предлагает кроме свистка дать ему еще 2 золотых. Вы можете либо согласиться с предложением и отдать деньги и свисток, либо отказаться и уйти.</Text>
 			<Options>
-				<Option Destination="443" Text="Согласиться с предложением" OnlyIf="ЗОЛОТО >= 2"/>
+				<Option Destination="443" Text="Согласиться с предложением" Availability="ЗОЛОТО >= 2"/>
 				<Option Destination="106" Text="Отказаться и уйти"/>
 			</Options>
 		</Paragraph>
@@ -1484,7 +1484,7 @@
 			<Id>147</Id>
 			<Text>За следующей решеткой вы видите человека и облегченно вздыхаете. С ним хоть поговорить можно. Но он напоминает вам сумасшедшего: смотрит в одну точку, бормочет что-то про какой-то серебряный свисток и отказывается разговаривать. Если у вас есть серебряный свисток, вы можете показать его несчастному, в противном случае вам придется вернуться (остальные клетки оказываются пустыми), возвратиться на развилку и выбирать, куда вы пойдете: налево или обратно.</Text>
 			<Options>
-				<Option Destination="460" Text="Показать серебряный свисток" OnlyIf="SilverWhistle"/>
+				<Option Destination="460" Text="Показать серебряный свисток" Availability="SilverWhistle"/>
 				<Option Destination="348" Text="Возвратиться и пойти налево"/>
 				<Option Destination="537" Text="Возвратиться и пойти обратно"/>
 			</Options>
@@ -1533,8 +1533,8 @@
 			<Id>153</Id>
 			<Text>Попробуете наложить заклятие Огня или Иллюзии?</Text>
 			<Options>
-				<Option Destination="538" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-				<Option Destination="370" Text="Заклятие Иллюзии" OnlyIf="ЗАКЛЯТИЕ ИЛЛЮЗИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+				<Option Destination="538" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="370" Text="Заклятие Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1602,7 +1602,7 @@
 			<Options>
 				<Option Destination="371" Text="Напасть на него"/>
 				<Option Destination="276" Text="Пойдете дальше"/>
-				<Option Destination="135" Text="Трое из Авенло" OnlyIf="ThreeFromAvenlo"/>
+				<Option Destination="135" Text="Трое из Авенло" Availability="ThreeFromAvenlo"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1648,7 +1648,7 @@
 				<Option Destination="560" Text="Осмотреть шкаф"/>
 				<Option Destination="288" Text="Осмотреть карты на столе"/>
 				<Option Destination="493" Text="Сделано и то, и другое"/>
-				<Option Destination="152" Text="Открыть тайный проход на лестницу" OnlyIf="HiddenLadder"/>
+				<Option Destination="152" Text="Открыть тайный проход на лестницу" Availability="HiddenLadder"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1893,7 +1893,7 @@
 			<Id>186</Id>
 			<Text>Проводник говорит, что понял это сразу, как только посмотрел на вас. Он и сам ненавидит злого волшебника и уже помогал вашим предшественникам. Но за услуги он просит 2 золотых. Заплатите или откажетесь и уйдете?</Text>
 			<Options>
-				<Option Destination="456" Text="Заплатите" OnlyIf="ЗОЛОТО >= 2"/>
+				<Option Destination="456" Text="Заплатите" Availability="ЗОЛОТО >= 2"/>
 				<Option Destination="229" Text="Откажетесь и уйдете"/>
 			</Options>
 		</Paragraph>
@@ -1942,7 +1942,7 @@
 				<Option Destination="449" Text="Азартный игрок"/>
 				<Option Destination="26" Text="Собираетесь наняться служить в его армии"/>
 				<Option Destination="341" Text="Сражаться"/>
-				<Option Destination="618" Text="Сказать пароль домика" OnlyIf="Password"/>
+				<Option Destination="618" Text="Сказать пароль домика" Availability="Password"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1980,9 +1980,9 @@
 			<Id>194</Id>
 			<Text>Что вы можете ей предложить? Перо павлина, серебряный браслет, белую стрелу. Если у вас нет ничего подходящего, можете или дать денег, или сразиться с ней.</Text>
 			<Options>
-				<Option Destination="27" Text="Перо павлина" OnlyIf="PeacockFeather"/>
-				<Option Destination="270" Text="Серебряный браслет" OnlyIf="SilverBracelet"/>
-				<Option Destination="533" Text="Белую стрелу" OnlyIf="WhiteArrow"/>
+				<Option Destination="27" Text="Перо павлина" Availability="PeacockFeather"/>
+				<Option Destination="270" Text="Серебряный браслет" Availability="SilverBracelet"/>
+				<Option Destination="533" Text="Белую стрелу" Availability="WhiteArrow"/>
 				<Option Destination="137" Text="Дать денег"/>
 				<Option Destination="522" Text="Сразиться"/>
 			</Options>
@@ -2142,8 +2142,8 @@
 			<Id>211</Id>
 			<Text>Вы оказываетесь на берегу широкой полноводной реки. Течение сильное и быстрое, вброд ее не перейти. По берегу, где вы сейчас стоите, вправо идет узкая тропинка. Можете или пойти по ней, или попробовать перебраться через реку. Вы воспользуетесь заклятием Левитации? Заклятием Плавания? Или пойдете по тропинке?</Text>
 			<Options>
-				<Option Destination="9" Text="Заклятием Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
-				<Option Destination="313" Text="Заклятием Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				<Option Destination="9" Text="Заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+				<Option Destination="313" Text="Заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				<Option Destination="423" Text="Пойти по тропинке"/>
 			</Options>
 		</Paragraph>
@@ -2151,8 +2151,8 @@
 			<Id>212</Id>
 			<Text>Вы подходите к огромному озеру. Другого берега почти не видно, но неподалеку виднеется небольшой островок. Лодки на берегу нет и придется либо воспользоваться заклятием Плавания, либо заклятием Левитации. Или же можете вернуться и попробовать пройти через кустарник.</Text>
 			<Options>
-				<Option Destination="5" Text="Заклятием Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
-				<Option Destination="105" Text="Заклятием Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+				<Option Destination="5" Text="Заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				<Option Destination="105" Text="Заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				<Option Destination="177" Text="Вернуться и попробовать пройти через кустарник"/>
 			</Options>
 		</Paragraph>
@@ -2200,9 +2200,9 @@
 			<Id>217</Id>
 			<Text>Что вы можете ему предложить? Белую стрелу, бриллиант, серебряный свисток. Если у вас ничего нет, то, как ни жаль, придется уходить.</Text>
 			<Options>
-				<Option Destination="354" Text="Белую стрелу" OnlyIf="WhiteArrow"/>
-				<Option Destination="28" Text="Бриллиант" OnlyIf="Diamond"/>
-				<Option Destination="142" Text="Серебряный свисток" OnlyIf="SilverWhistle"/>
+				<Option Destination="354" Text="Белую стрелу" Availability="WhiteArrow"/>
+				<Option Destination="28" Text="Бриллиант" Availability="Diamond"/>
+				<Option Destination="142" Text="Серебряный свисток" Availability="SilverWhistle"/>
 				<Option Destination="106" Text="Уйти"/>
 			</Options>
 		</Paragraph>
@@ -2257,7 +2257,7 @@
 			<Id>222</Id>
 			<Text>Вы на другом берегу. Пока перебирались через реку, успели заметить справа, ниже по реке, мост, который наверняка должен охраняться. Понимая, что идти к нему не стоит, выбираете тропинку, которая должна вывести на дорогу, идущую от моста. Направление оказывается правильным, но путь занимает гораздо больше времени, чем можно было предположить. Когда вы выходите на опушку, уже смеркается. Перед вами высится Черный замок, и ужас исходит от его мрачных башен. Вы понимаете, что главные трудности впереди. Как проникнуть в замок? Если у вас есть волшебный пояс, вы можете воспользоваться им, иначе либо идите к воротам в той стене, которая перед вами, или же, если вы не хотите иметь дело с охраной, попробуйте, не выходя из леса, направиться влево, в обход замка.</Text>
 			<Options>
-				<Option Destination="167" Text="Есть волшебный пояс" OnlyIf="MoleBelt"/>
+				<Option Destination="167" Text="Есть волшебный пояс" Availability="MoleBelt"/>
 				<Option Destination="190" Text="К стене впереди"/>
 				<Option Destination="236" Text="Направиться влево, в обход замка"/>
 			</Options>
@@ -2286,7 +2286,7 @@
 			<Id>225</Id>
 			<Text>На этот раз в клетке животное — олень. Вы недоумеваете, кому пришло в голову заточить оленя в этом мрачном подземелье. Если у вас нет шкуры оленя, то идите дальше.</Text>
 			<Options>
-				<Option Destination="144" Text="Есть шкура оленя" OnlyIf="DeerSkin"/>
+				<Option Destination="144" Text="Есть шкура оленя" Availability="DeerSkin"/>
 				<Option Destination="465" Text="Идти дальше"/>
 			</Options>
 		</Paragraph>
@@ -2301,9 +2301,9 @@
 			<Id>227</Id>
 			<Text>Люк заперт, и открыть его не удается. Если у вас есть какие-то идеи по поводу того, что могло бы послужить ключом, попробуйте отпереть замок. Может быть, есть медный ключик, кусок металла или фигурный ключ. Если у вас нет ничего подобного, придется покинуть домик.</Text>
 			<Options>
-				<Option Destination="63" Text="Медный ключик" OnlyIf="CopperKey"/>
-				<Option Destination="150" Text="Кусок металла" OnlyIf="PieceOfMetal"/>
-				<Option Destination="473" Text="Фигурный ключ" OnlyIf="CurlyKey"/>
+				<Option Destination="63" Text="Медный ключик" Availability="CopperKey"/>
+				<Option Destination="150" Text="Кусок металла" Availability="PieceOfMetal"/>
+				<Option Destination="473" Text="Фигурный ключ" Availability="CurlyKey"/>
 				<Option Destination="416" Text="Покинуть домик"/>
 			</Options>
 		</Paragraph>
@@ -2386,7 +2386,7 @@
 			<Text>Вероятно, не надо было двигаться в обход Черного замка: ведь если не рискнуть войти в ворота, то вряд ли представится другая возможность преодолеть высокие мрачные стены. Теперь перед вами южная стена, без единой бойницы и без единого просвета. Волшебник явно не боится штурма, только башенки по краям внимательно смотрят в сторону леса.\nПойдете дальше?\n\nИли попробуете перелететь через стену, используя заклятие Левитации?</Text>
 			<Options>
 				<Option Destination="331" Text="Пойти дальше"/>
-				<Option Destination="87" Text="Использовать заклятие Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+				<Option Destination="87" Text="Использовать заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2529,11 +2529,11 @@
 			<Id>252</Id>
 			<Text>Как только закрылась дверь, из угла комнаты на вас бросаются крысы. Вы с ужасом замечаете, что они не обыкновенные, а каменные. Если хотите, можете показать им пропуск, надеясь, что это поможет, или же можете воспользоваться заклятиями Слабости или Огня. Или просто выньте меч и сразитесь с ними.</Text>
 			<Options>
-				<Option Destination="564" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-				<Option Destination="541" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="564" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				<Option Destination="541" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 				<Option Destination="494" Text="Сразитесь с ними"/>
 				<Option Destination="364" Text="Если есть меч Зеленого рыцаря"/>
-				<Option Destination="272" Text="Предъявить пропуск" OnlyIf="Pass"/>
+				<Option Destination="272" Text="Предъявить пропуск" Availability="Pass"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2558,9 +2558,9 @@
 			<Text>Заговорив с ними, вы выясняете, что, как ни странно, они вполне довольны своей жизнью, и их ничего не интересует, кроме денег. Из соседней комнаты появляется хозяйка гарема. Можете попробовать найти с ней общий язык, подарив ей какой-нибудь подарок, или дать деньги женам мага. Но сколько: 1 золотой, 4 золотых или 6 золотых. Или попробуйте извиниться за вторжение и пройдете через комнату к двери.</Text>
 			<Options>
 				<Option Destination="551" Text="Подарить ей какой-нибудь подарок"/>
-				<Option Destination="79" Text="1 золотой" OnlyIf="ЗОЛОТО >= 1"/>
-				<Option Destination="382" Text="4 золотых" OnlyIf="ЗОЛОТО >= 4"/>
-				<Option Destination="495" Text="6 золотых" OnlyIf="ЗОЛОТО >= 6"/>
+				<Option Destination="79" Text="1 золотой" Availability="ЗОЛОТО >= 1"/>
+				<Option Destination="382" Text="4 золотых" Availability="ЗОЛОТО >= 4"/>
+				<Option Destination="495" Text="6 золотых" Availability="ЗОЛОТО >= 6"/>
 				<Option Destination="198" Text="Извиниться за вторжение"/>
 			</Options>
 		</Paragraph>
@@ -2751,9 +2751,9 @@
 			<Options>
 				<Option Destination="279" Text="Подойти к зеркалу"/>
 				<Option Destination="385" Text="Подойти к столикам"/>
-				<Option Destination="475" Text="Воспользоваться золотым апельсином" OnlyIf="GoldenOrange"/>
-				<Option Destination="324" Text="Воспользоваться кольцом с рубином" OnlyIf="RingWithRuby"/>
-				<Option Destination="444" Text="Воспользоваться кольцом с изумрудом" OnlyIf="RingWithEmerald"/>
+				<Option Destination="475" Text="Воспользоваться золотым апельсином" Availability="GoldenOrange"/>
+				<Option Destination="324" Text="Воспользоваться кольцом с рубином" Availability="RingWithRuby"/>
+				<Option Destination="444" Text="Воспользоваться кольцом с изумрудом" Availability="RingWithEmerald"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2767,11 +2767,11 @@
 			<Id>277</Id>
 			<Text>Вы входите в комнату, и дверь закрывается. В ту же секунду комната погружается во тьму. Но это не просто темнота — она живет, дышит, чьи-то руки трогают вас, чье-то дыхание едва уловимым ветерком касается лица, воздух вокруг колеблется. Вы осторожно проводите рукой по стене, пытаясь нащупать выход. Если есть свеча или светильник, зажгите их. Если же нет, то через несколько мгновений послышится голос. Вам кажется, что он идет отовсюду: и справа, и слева, и даже из-под ног. «Никто не может безнаказанно нарушать покой духов тьмы!» В углу комнаты появляется слабый свет, но его достаточно, чтобы разглядеть человеческий скелет, который лежит вдоль стены. Невидимая рука, держащая свечу, движется: вот еще один скелет, он уже сидит, прислонившись к той же стене, вот еще один, еще. А вот уже не скелет, человек погиб совсем недавно, и вы с ужасом узнаете в нем одного из пажей, которых видели в королевских покоях. Видимо, вы путешествуете слишком долго, и паж был следующим, кто вызвался освободить Принцессу. По лесу он наверняка прошел быстрее — и вот такая смерть… Может быть, поможет какая-нибудь вещица из вашего заплечного мешка? Что вы достанете? Подсвечник. Перо павлина. Серебряный сосуд. Золотое ожерелье.</Text>
 			<Options>
-				<Option Destination="554" Text="Подсвечник" OnlyIf="Candlestick"/>
-				<Option Destination="78" Text="Перо павлина" OnlyIf="PeacockFeather"/>
-				<Option Destination="386" Text="Серебряный сосуд" OnlyIf="SilverVessel"/>
-				<Option Destination="429" Text="Золотое ожерелье" OnlyIf="GoldNecklace"/>
-				<Option Destination="287" Text="Зажечь свечу" OnlyIf="CandleAndFlint"/>
+				<Option Destination="554" Text="Подсвечник" Availability="Candlestick"/>
+				<Option Destination="78" Text="Перо павлина" Availability="PeacockFeather"/>
+				<Option Destination="386" Text="Серебряный сосуд" Availability="SilverVessel"/>
+				<Option Destination="429" Text="Золотое ожерелье" Availability="GoldNecklace"/>
+				<Option Destination="287" Text="Зажечь свечу" Availability="CandleAndFlint"/>
 				<Option Destination="572" Text="Нет ни одного из этих предметов"/>
 			</Options>
 		</Paragraph>
@@ -2793,7 +2793,7 @@
 			<Text>Вы подходите к зеркалу, но не замечаете ничего необычного. Его обрамляет золотая рама с изображениями сцен из жизни гарпий. Но как следует насладиться прекрасным орнаментом вам не дают.</Text>
 			<Options>
 				<Option Destination="509"/>
-				<Option Destination="266" Text="Открыть тайный проход на лестницу" OnlyIf="HiddenLadder"/>
+				<Option Destination="266" Text="Открыть тайный проход на лестницу" Availability="HiddenLadder"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2824,9 +2824,9 @@
 			<Id>283</Id>
 			<Text>Что вы покажете рыцарю как пропуск? Зеркальце? Бронзовый свисток? Золотое кольцо? Если у вас нет ни одного из этих предметов, то путь вперед придется прокладывать мечом.</Text>
 			<Options>
-				<Option Destination="387" Text="Зеркальце" OnlyIf="Mirror"/>
-				<Option Destination="69" Text="Бронзовый свисток" OnlyIf="BronzeWhistle"/>
-				<Option Destination="233" Text="Золотое кольцо" OnlyIf="GoldRing"/>
+				<Option Destination="387" Text="Зеркальце" Availability="Mirror"/>
+				<Option Destination="69" Text="Бронзовый свисток" Availability="BronzeWhistle"/>
+				<Option Destination="233" Text="Золотое кольцо" Availability="GoldRing"/>
 				<Option Destination="567" Text="Сражаться"/>
 			</Options>
 		</Paragraph>
@@ -2992,11 +2992,11 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="170" Text="Есть Оберег" OnlyIf="Amulet"/>
+					<Option Destination="170" Text="Есть Оберег" Availability="Amulet"/>
 				</Action>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="606" Text="Есть серебряный сосуд" OnlyIf="SilverVessel"/>
+					<Option Destination="606" Text="Есть серебряный сосуд" Availability="SilverVessel"/>
 				</Action>
 				<Action>
 					<Type>Fight</Type>
@@ -3100,7 +3100,7 @@
 				<Modification Name="Endurance" Value="-3"/>
 			</Modifications>
 			<Options>
-				<Option Destination="111" Text="Наложить заклятие Копии" OnlyIf="ЗАКЛЯТИЕ КОПИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ КОПИИ"/>
+				<Option Destination="111" Text="Наложить заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ КОПИИ"/>
 				<Option Destination="126" Text="Если победили"/>
 			</Options>
 		</Paragraph>
@@ -3208,7 +3208,7 @@
 				<Option Destination="31" Text="Бродячий торговец"/>
 				<Option Destination="439" Text="Азартный игрок"/>
 				<Option Destination="146" Text="Собираетесь наняться в армию чародея"/>
-				<Option Destination="122" Text="Сказать пароль домика" OnlyIf="Password"/>
+				<Option Destination="122" Text="Сказать пароль домика" Availability="Password"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3242,7 +3242,7 @@
 				<Option Destination="522" Text="Замахнетесь"/>
 				<Option Destination="137" Text="Дадите денег"/>
 				<Option Destination="194" Text="Предложите подарок"/>
-				<Option Destination="343" Text="Предъявить пропуск" OnlyIf="Pass"/>
+				<Option Destination="343" Text="Предъявить пропуск" Availability="Pass"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3400,7 +3400,7 @@
 			<Id>339</Id>
 			<Text>Если вы действительно уже встречали кого-то из их знакомых, назовите его имя. Если же вы обманули их, то ваш обман непременно откроется, и лучше уж самому начать бой.</Text>
 			<Options>
-				<Option Destination="66" Text="Назовёте имя Гиены" OnlyIf="HyenaName"/>
+				<Option Destination="66" Text="Назовёте имя Гиены" Availability="HyenaName"/>
 				<Option Destination="123" Text="Начать бой"/>
 			</Options>
 		</Paragraph>
@@ -3422,9 +3422,9 @@
 			<Id>341</Id>
 			<Text>Вы можете воспользоваться заклятиями Силы, Слабости, Огня или драться мечом.</Text>
 			<Options>
-				<Option Destination="164" Text="Заклятие Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-				<Option Destination="289" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-				<Option Destination="506" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="164" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+				<Option Destination="289" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				<Option Destination="506" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 				<Option Destination="487" Text="Драться"/>
 			</Options>
 		</Paragraph>
@@ -3510,7 +3510,7 @@
 			<Id>351</Id>
 			<Text>Крестьянин внимательно смотрит на вас и говорит, что может проводить к человеку, который вам нужен. Через несколько домов живет торговец, поставляющий в Черный замок сено для лошадей волшебника. Тот за небольшую плату (3 золотых) соглашается спрятать вас на одном из возов под сеном и доставить в замок. Примете его предложение или откажетесь и покинете деревню по одной из дорог: на юг или на запад?</Text>
 			<Options>
-				<Option Destination="574" Text="Принять предложение" OnlyIf="ЗОЛОТО >= 3"/>
+				<Option Destination="574" Text="Принять предложение" Availability="ЗОЛОТО >= 3"/>
 				<Option Destination="235" Text="Отказаться и покинуть деревню на юг"/>
 				<Option Destination="2" Text="Отказаться и покинуть деревню на запад"/>
 			</Options>
@@ -3526,7 +3526,7 @@
 			<Id>353</Id>
 			<Text>Ранним утром вы выходите на перекресток. От дороги отходят две тропинки. Вы пойдете по тропинке направо, налево или пойдете по дороге прямо и посмотрите, куда она вас приведет?</Text>
 			<Options>
-				<Option Destination="383" Text="За клубочком" OnlyIf="Clew"/>
+				<Option Destination="383" Text="За клубочком" Availability="Clew"/>
 				<Option Destination="154" Text="По тропинке направо"/>
 				<Option Destination="237" Text="По тропинке налево"/>
 				<Option Destination="181" Text="По дороге прямо"/>
@@ -3545,9 +3545,9 @@
 			<Id>355</Id>
 			<Text>Что, по-вашему, может послужить пропуском? Золотое кольцо? Бронзовый свисток? Четки? Если у вас нет ни одного из этих предметов, вам придется драться.</Text>
 			<Options>
-				<Option Destination="233" Text="Золотое кольцо" OnlyIf="GoldRing"/>
-				<Option Destination="69" Text="Бронзовый свисток" OnlyIf="BronzeWhistle"/>
-				<Option Destination="168" Text="Четки" OnlyIf="Beads"/>
+				<Option Destination="233" Text="Золотое кольцо" Availability="GoldRing"/>
+				<Option Destination="69" Text="Бронзовый свисток" Availability="BronzeWhistle"/>
+				<Option Destination="168" Text="Четки" Availability="Beads"/>
 				<Option Destination="543" Text="Драться"/>
 			</Options>
 		</Paragraph>
@@ -3682,7 +3682,7 @@
 			<Id>370</Id>
 			<Text>Заклятие Иллюзии не действует на стариков. Хотите наложить заклятие Огня или наберетесь терпения?</Text>
 			<Options>
-				<Option Destination="538" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="538" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 				<Option Destination="68" Text="Ждать"/>
 			</Options>
 		</Paragraph>
@@ -3728,8 +3728,8 @@
 			<Id>375</Id>
 			<Text>Вы подходите к реке, но вброд ее не перейти. Вам придется использовать заклятия: либо Плавания, либо Левитации. Если хотите, можете, используя заклятие Плавания, попробовать проплыть по течению под замок, надеясь попасть в подземелье незамеченным. Если же у вас нет ни одного из этих заклятий или вы не хотите их использовать, идите к палаткам.</Text>
 			<Options>
-				<Option Destination="254" Text="Заклятье Плавания" OnlyIf="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
-				<Option Destination="508" Text="Заклятье Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+				<Option Destination="254" Text="Заклятье Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				<Option Destination="508" Text="Заклятье Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				<Option Destination="311" Text="Попробовать проплыть по течению под замок"/>
 				<Option Destination="424" Text="К палаткам"/>
 			</Options>
@@ -3841,8 +3841,8 @@
 			<Options>
 				<Option Destination="577" Text="Выхватить меч"/>
 				<Option Destination="293" Text="Стоять и смотреть"/>
-				<Option Destination="605" Text="Есть золотое кольцо" OnlyIf="GoldRing"/>
-				<Option Destination="605" Text="Есть золотой амулет" OnlyIf="GoldAmulet"/>
+				<Option Destination="605" Text="Есть золотое кольцо" Availability="GoldRing"/>
+				<Option Destination="605" Text="Есть золотой амулет" Availability="GoldAmulet"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3880,7 +3880,7 @@
 			<Id>393</Id>
 			<Text>Дверь заперта. Есть ли у вас медный ключик? Если да, то достаньте его и откройте дверь. Если же нет, то попробуйте открыть или ту дверь, что за вами, или же ту, что слева от вас.</Text>
 			<Options>
-				<Option Destination="291" Text="Есть медный ключик" OnlyIf="CopperKey"/>
+				<Option Destination="291" Text="Есть медный ключик" Availability="CopperKey"/>
 				<Option Destination="337" Text="Попробуете открыть дверь за вами"/>
 				<Option Destination="595" Text="Попробуете открыть дверь слева"/>
 			</Options>
@@ -3889,9 +3889,9 @@
 			<Id>394</Id>
 			<Text>Что вы хотите ей подарить? Бронзовый свисток, зеркальце или флакончик духов. Если вам нечего дарить, то придется с ней сразиться.</Text>
 			<Options>
-				<Option Destination="294" Text="Бронзовый свисток" OnlyIf="BronzeWhistle"/>
-				<Option Destination="596" Text="Зеркальце" OnlyIf="Mirror"/>
-				<Option Destination="171" Text="Флакончик духов" OnlyIf="PerfumeBottle"/>
+				<Option Destination="294" Text="Бронзовый свисток" Availability="BronzeWhistle"/>
+				<Option Destination="596" Text="Зеркальце" Availability="Mirror"/>
+				<Option Destination="171" Text="Флакончик духов" Availability="PerfumeBottle"/>
 				<Option Destination="93" Text="Сражаться"/>
 			</Options>
 		</Paragraph>
@@ -3937,7 +3937,7 @@
 			<Id>400</Id>
 			<Text>Лес меняется, теперь вдоль дороги растут только сосны, словно часовые, поставленные для того, чтобы не дать вам свернуть с выбранного пути. Примерно через полтора часа ходьбы вы выходите на развилку: от той дороги, по которой шли, отходит еще одна — направо. На перекрестке стоит покосившийся указатель, деревянная стрелка смотрит направо, но дожди давно уже смыли надпись и разобрать ее не удается. Пойдете, куда указывает стрелка, или не будете сворачивать?</Text>
 			<Options>
-				<Option Destination="430" Text="За клубочком" OnlyIf="Clew"/>
+				<Option Destination="430" Text="За клубочком" Availability="Clew"/>
 				<Option Destination="514" Text="Пойдете, куда указывает стрелка"/>
 				<Option Destination="35" Text="Не будете сворачивать"/>
 			</Options>
@@ -3989,10 +3989,10 @@
 			</Modifications>
 			<Options>
 				<Option Destination="183" Text="Выхватить меч"/>
-				<Option Destination="36" Text="Заклятие Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-				<Option Destination="334" Text="Заклятие Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-				<Option Destination="7" Text="Заклятие Копии" OnlyIf="ЗАКЛЯТИЕ КОПИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ КОПИИ"/>
-				<Option Destination="112" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="36" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+				<Option Destination="334" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				<Option Destination="7" Text="Заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ КОПИИ"/>
+				<Option Destination="112" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4032,8 +4032,8 @@
 			<Id>409</Id>
 			<Text>Вы приходите в себя и видите, что лежите на полу в просторной клетке. Клетка стоит у стены в большой комнате с толстыми каменными стенами. По сырости на них вы сразу понимаете, что это должен быть один из подземных этажей замка, но какой? Впрочем, сейчас надо думать о том, как выбраться отсюда. Вы оглядываетесь. Из мебели в комнате только стол, два покосившихся стула да небольшой ларь, стоящий у стены. За столом — два Гоблина. Они увлечены игрой в кости и не обращают на вас никакого внимания. Неудивительно: даже если бы они и знали, что вы пришли в себя, шансов выбраться из клетки у вас все равно нет. Комнату освещает единственная свеча, горящая на столе, и в ее мерцающем свете вы видите, что рядом со столом на полу валяются ваши вещи: игра идет на них. Вам же остается надеяться только на свою магию. Вы попробуете использовать заклятие Иллюзии, Огня или у вас нет ни того, ни другого?</Text>
 			<Options>
-				<Option Destination="200" Text="Заклятие Иллюзии" OnlyIf="ЗАКЛЯТИЕ ИЛЛЮЗИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
-				<Option Destination="114" Text="Заклятие Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="200" Text="Заклятие Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+				<Option Destination="114" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 				<Option Destination="56" Text="Нет ни того, ни другого"/>
 			</Options>
 		</Paragraph>
@@ -4060,9 +4060,9 @@
 			<Text>Внезапно небо над головой темнеет, и вы видите, как на поляну опускается огромный двухголовый Дракон. Теперь понятно, почему деревья по краям обуглены, но уже слишком поздно. Однако Дракон не торопится нападать. Он опускается на землю и внимательно смотрит в вашу сторону, как будто чего-то ждет. Вы можете либо биться с ним, либо использовать заклятия — Огня, Силы или Слабости. А может быть, лучше предложить миролюбивому Дракону подарок?</Text>
 			<Options>
 				<Option Destination="316" Text="Биться"/>
-				<Option Destination="37" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-				<Option Destination="357" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-				<Option Destination="256" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				<Option Destination="37" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="357" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+				<Option Destination="256" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				<Option Destination="516" Text="Предложить подарок"/>
 			</Options>
 		</Paragraph>
@@ -4153,9 +4153,9 @@
 			<Id>423</Id>
 			<Text>Тропинка петляет вдоль реки, то отдаляясь, то приближаясь к воде. По краям растет высокий густой кустарник, и поначалу вы продвигаетесь вперед осторожно. Один поворот, второй, третий, опасности нет, и вы начинаете идти быстрее. Вскоре тропинка вновь спускается на берег реки, но что это? Вы вышли к мосту, а около него — охрана. Два Гоблина поставлены здесь для того, чтобы никто посторонний не мог перебраться через реку. Ваша одежда ясно показывает им, что вы не служите волшебнику. Скорее решайте, что делать, ведь они атакуют вас. Наложите заклятие Силы, Слабости, Огня или будете драться с ними?</Text>
 			<Options>
-				<Option Destination="58" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-				<Option Destination="580" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-				<Option Destination="290" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="58" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+				<Option Destination="580" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				<Option Destination="290" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 				<Option Destination="40" Text="Драться с ними"/>
 			</Options>
 		</Paragraph>
@@ -4186,7 +4186,7 @@
 			<Id>427</Id>
 			<Text>Дверь заперта. Есть ли у вас золотой свисток? Если нет, то можете попробовать или выломать ее, или выйти в другую дверь: правую, левую или среднюю.</Text>
 			<Options>
-				<Option Destination="583" Text="Золотой свисток" OnlyIf="GoldenWhistle"/>
+				<Option Destination="583" Text="Золотой свисток" Availability="GoldenWhistle"/>
 				<Option Destination="597" Text="Выломать ее"/>
 				<Option Destination="398" Text="Выйти в правую дверь"/>
 				<Option Destination="206" Text="Выйти в левую дверь"/>
@@ -4197,9 +4197,9 @@
 			<Id>428</Id>
 			<Text>Вы можете воспользоваться заклятиями Огня, Силы, Слабости или же просто сражаться мечом.</Text>
 			<Options>
-				<Option Destination="499" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-				<Option Destination="85" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-				<Option Destination="390" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				<Option Destination="499" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="85" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+				<Option Destination="390" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				<Option Destination="569" Text="Сражаться мечом"/>
 			</Options>
 		</Paragraph>
@@ -4372,7 +4372,7 @@
 			<Id>447</Id>
 			<Text>Вы пытаетесь успокоить медведицу, говорите, что не желаете ей зла, но она продолжает двигаться на вас. И тут вы решаете спросить, не надо ли ей чем-нибудь помочь. Зверь с удивлением останавливается, смотрит умными черными глазами и показывает лапой на медвежонка. Вы подходите ближе и понимаете, что он болен. Но ведь вы не лекарь. Есть только один способ помочь медведице: истратить заклятие Исцеления. Если оно у вас есть и вы хотите истратить его на медвежонка, то действуйте. Если же нет или не хотите, то вы обманули надежды медведицы, и вам придется драться с ней.</Text>
 			<Options>
-				<Option Destination="62" Text="Исцелить медвежонка" OnlyIf="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"/>
+				<Option Destination="62" Text="Исцелить медвежонка" Availability="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"/>
 				<Option Destination="529" Text="Драться с медведицей"/>
 			</Options>
 		</Paragraph>
@@ -4723,7 +4723,7 @@
 				<Option Destination="345" Text="О самом волшебнике"/>
 				<Option Destination="208" Text="О Принцессе"/>
 				<Option Destination="591" Text="Уйти из библиотеки"/>
-				<Option Destination="455" Text="Трое из Авенло" OnlyIf="ThreeFromAvenlo"/>
+				<Option Destination="455" Text="Трое из Авенло" Availability="ThreeFromAvenlo"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5033,9 +5033,9 @@
 			<Id>513</Id>
 			<Text>После двух ударов одна из голов Дракона отлетает. Он отскакивает назад, а у вас появляется время, чтобы, если хотите, успеть наложить заклятие. Воспользуетесь передышкой и наложите заклятие?</Text>
 			<Options>
-				<Option Destination="41" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
-				<Option Destination="476" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-				<Option Destination="172" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				<Option Destination="41" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="476" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+				<Option Destination="172" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				<Option Destination="347" Text="Продолжать драться">
 					<Text>Можете, если есть желание, попробовать убежать:</Text>
 				</Option>
@@ -5068,10 +5068,10 @@
 			<Id>516</Id>
 			<Text>Что вы ему предложите: Коготь дракона? Бриллиант? Гребень? Перо аиста? Если же вам нечего ему предложить, придется драться.</Text>
 			<Options>
-				<Option Destination="134" Text="Коготь дракона" OnlyIf="DragonClaw"/>
-				<Option Destination="42" Text="Бриллиант" OnlyIf="Diamond"/>
-				<Option Destination="161" Text="Гребень" OnlyIf="Comb"/>
-				<Option Destination="488" Text="Перо аиста" OnlyIf="StorkFeather"/>
+				<Option Destination="134" Text="Коготь дракона" Availability="DragonClaw"/>
+				<Option Destination="42" Text="Бриллиант" Availability="Diamond"/>
+				<Option Destination="161" Text="Гребень" Availability="Comb"/>
+				<Option Destination="488" Text="Перо аиста" Availability="StorkFeather"/>
 				<Option Destination="316" Text="Драться"/>
 			</Options>
 		</Paragraph>
@@ -5080,7 +5080,7 @@
 			<Text>Вы уже на середине озера, когда внезапно замечаете стаю крупных рыб, плывущую наперерез. Хотите узнать, питаются ли они людьми, или воспользуетесь заклятием Левитации?</Text>
 			<Options>
 				<Option Destination="359" Text="Подождать"/>
-				<Option Destination="105" Text="Заклятье Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+				<Option Destination="105" Text="Заклятье Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5165,7 +5165,7 @@
 			<Id>525</Id>
 			<Text>Вы подходите к дереву и замечаете, что кто-то еще хочет воспользоваться прохладной тенью. С дерева спускается Обезьяна, которая в отличие от вас явно не собирается делить тень с кем бы то ни было. Если у вас есть банан, чтобы умилостивить Обезьяну, если же нет, то вам придется драться с ней, и победитель воспользуется тенью.</Text>
 			<Options>
-				<Option Destination="349" Text="Есть банан" OnlyIf="Banana"/>
+				<Option Destination="349" Text="Есть банан" Availability="Banana"/>
 				<Option Destination="215" Text="Драться с ней"/>
 			</Options>
 		</Paragraph>
@@ -5239,11 +5239,11 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="552" Text="Предъявить пропуск" OnlyIf="Pass"/>
+					<Option Destination="552" Text="Предъявить пропуск" Availability="Pass"/>
 				</Action>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="592" Text="Воспользоваться латами" OnlyIf="GreenArmour">
+					<Option Destination="592" Text="Воспользоваться латами" Availability="GreenArmour">
 						<Text>Если вы пользуетесь заклятием Силы, увеличьте на 2 свою СИЛУ УДАРА, если заклятием Слабости, уменьшите на 2 СИЛУ УДАРА любого из Гоблинов. Можете также воспользоваться заклятием Копии.</Text>
 					</Option>
 				</Action>
@@ -5272,8 +5272,8 @@
 			<Id>534</Id>
 			<Text>В конце лестницы — огромная белая дверь с черными силуэтами замка. Она гораздо уместней смотрелась бы в конце шикарной парадной лестницы, чем той, по которой вы спустились. Дверь без труда открывается, и вы попадаете в прихожую. Вдоль стен стоят красивые резные диваны. Судя по всему, здесь когда-то было что-то вроде приемной. Но везде толстый слой пыли, на диванах давно уже никто не сидел. Из приемной ведет пять дверей. Перед вами едва ли не самый сложный выбор за все путешествие. Три двери гладкие: правая, левая и средняя. Но на двух есть рисунки. На второй справа нарисована белая стрела и под ней в дереве вырезано какое-то углубление. На второй слева нарисован золотой орел, под ним тоже виднеется углубление в форме орла. Если у вас есть белая стрела, вы можете попробовать открыть дверь с соответствующим рисунком, если есть бляха с золотым орлом, сделайте то же самое. Если же нет, то эти двери останутся неприступны, какие бы усилия вы ни прилагали. Но у вас все же остается выбор: войти в правую дверь, левую или в среднюю.</Text>
 			<Options>
-				<Option Destination="71" Text="Есть белая стрела" OnlyIf="WhiteArrow"/>
-				<Option Destination="362" Text="Есть бляха с золотым орлом" OnlyIf="BadgeWithAnEagle"/>
+				<Option Destination="71" Text="Есть белая стрела" Availability="WhiteArrow"/>
+				<Option Destination="362" Text="Есть бляха с золотым орлом" Availability="BadgeWithAnEagle"/>
 				<Option Destination="478" Text="Войти в правую дверь"/>
 				<Option Destination="603" Text="Войти левую дверь"/>
 				<Option Destination="282" Text="Войти в среднюю дверь"/>
@@ -5290,8 +5290,8 @@
 			<Id>536</Id>
 			<Text>Завернув за угол коридора, вы останавливаетесь как вкопанный. Перед вами Зеленый рыцарь. Его меч направлен прямо на вас, забрало опущено. «Пропуск», — глухо доносится из-под шлема. Если у вас есть Оберег, если есть серебряный сосуд, то можете попробовать ими воспользоваться. Иначе вам придется либо подумать о том, что может служить пропуском, либо атаковать.</Text>
 			<Options>
-				<Option Destination="363" Text="Есть Оберег" OnlyIf="Amulet"/>
-				<Option Destination="479" Text="Есть серебряный сосуд" OnlyIf="SilverVessel"/>
+				<Option Destination="363" Text="Есть Оберег" Availability="Amulet"/>
+				<Option Destination="479" Text="Есть серебряный сосуд" Availability="SilverVessel"/>
 				<Option Destination="283" Text="Подумать"/>
 				<Option Destination="567" Text="Атаковать"/>
 			</Options>
@@ -5307,7 +5307,7 @@
 			<Id>538</Id>
 			<Text>В воздухе появляется огненный шар и направляется к одному из стариков. К вашему огромному разочарованию, старик щелкает пальцами, и шар исчезает. Теперь можете или попробовать заклятие Иллюзии, или же спокойно ждите, что будет дальше.</Text>
 			<Options>
-				<Option Destination="370" Text="Заклятье Иллюзии" OnlyIf="ЗАКЛЯТИЕ ИЛЛЮЗИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+				<Option Destination="370" Text="Заклятье Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				<Option Destination="68" Text="Спокойно ждать"/>
 			</Options>
 		</Paragraph>
@@ -5339,7 +5339,7 @@
 			<Id>540</Id>
 			<Text>Вы подходите к среднему сундуку. Есть ли у вас фигурный ключ? Если да, то вам удастся его открыть, если нет, то лучше заняться большим, маленьким или вернуться в залу, откуда вы пришли.</Text>
 			<Options>
-				<Option Destination="284" Text="Есть фигурный ключ" OnlyIf="CurlyKey"/>
+				<Option Destination="284" Text="Есть фигурный ключ" Availability="CurlyKey"/>
 				<Option Destination="474" Text="Заняться большим сундуком"/>
 				<Option Destination="380" Text="Заняться маленьким сундуком"/>
 				<Option Destination="39" Text="Вернуться в залу"/>
@@ -5349,7 +5349,7 @@
 			<Id>541</Id>
 			<Text>Вы накладываете заклятие, но огонь не в силах разрушить камень. Теперь вам придется сражаться с крысами. Есть ли у вас меч Зеленого рыцаря? </Text>
 			<Options>
-				<Option Destination="364" Text="Есть меч Зеленого рыцаря" OnlyIf="GreenSword"/>
+				<Option Destination="364" Text="Есть меч Зеленого рыцаря" Availability="GreenSword"/>
 				<Option Destination="494" Text="Нет меча"/>
 			</Options>
 		</Paragraph>
@@ -5437,9 +5437,9 @@
 			<Id>551</Id>
 			<Text>Что вы хотите ей подарить: Зеркальце? Гребень? Оберег? Если у вас нет ни одного из этих предметов, то вернитесь и выберите что-нибудь другое.</Text>
 			<Options>
-				<Option Destination="92" Text="Зеркальце" OnlyIf="Mirror"/>
-				<Option Destination="296" Text="Гребень" OnlyIf="Comb"/>
-				<Option Destination="490" Text="Оберег" OnlyIf="Amulet"/>
+				<Option Destination="92" Text="Зеркальце" Availability="Mirror"/>
+				<Option Destination="296" Text="Гребень" Availability="Comb"/>
+				<Option Destination="490" Text="Оберег" Availability="Amulet"/>
 				<Option Destination="255" Text="Придумать что-то другое"/>
 			</Options>
 		</Paragraph>
@@ -5583,7 +5583,7 @@
 			<Options>
 				<Option Destination="556" Text="В правую"/>
 				<Option Destination="277" Text="В ту, что напротив"/>
-				<Option Destination="483" Text="Заклятье Левитации" OnlyIf="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+				<Option Destination="483" Text="Заклятье Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				<Option Destination="39" Text="Вернуться в залу"/>
 			</Options>
 		</Paragraph>
@@ -5600,9 +5600,9 @@
 				</Action>
 			</Actions>
 			<Options>
-				<Option Destination="395" Text="Заклятье Силы" OnlyIf="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
-				<Option Destination="299" Text="Заклятье Слабости" OnlyIf="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
-				<Option Destination="96" Text="Заклятье Огня" OnlyIf="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+				<Option Destination="395" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+				<Option Destination="299" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				<Option Destination="96" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ" Do="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
 				<Option Destination="241"/>
 			</Options>
 		</Paragraph>
@@ -6029,7 +6029,7 @@
 			<Id>613</Id>
 			<Text>Он требует 10 золотых и готов выписать за это пропуск. Согласитесь на его условия или все же будете драться?</Text>
 			<Options>
-				<Option Destination="246" Text="Согласиться" OnlyIf="ЗОЛОТО >= 10"/>
+				<Option Destination="246" Text="Согласиться" Availability="ЗОЛОТО >= 10"/>
 				<Option Destination="65" Text="Драться"/>
 			</Options>
 		</Paragraph>
@@ -6705,7 +6705,7 @@
 			<Text>Ну вот вы и добрались! Поздравьте себя. Ну, потому что вокруг кроме вас никого нет - так что поздравлять придётся самому. Хотя нет, стойте. Рановато откупоривать катэнское! Вы ведь ещё не проверили, те ли предметы собрали.\n\nВы стучите себя по передатчику и бодро докладываете:\n\n- Ваше Темнейшество! Задание выполнено. Все посты проверены, пароли сменены, ловушки расставлены, брошюры розданы.\n\nВоздух на полянке внезапно темнеет, и перед вами материализуется сам Барлад Дэрт.\n\n- Посмотрим, что ты там насобирал, - лениво бросает маг.</Text>
 			<Options>
 				<Option Destination="744" Text="Выложить перед Барладом Дэртом весь компотный набор"/>
-				<Option Destination="743" Text="Выложить перед Барладом Дэртом правильный компотный набор" OnlyIf="Кожура апельсина, Семечко лимона, Мякоть грейпфрута, Кожура ореха, Мякоть яблока, Семечко сливы, Семечко персика, Семечко кокоса, Мякоть груши, Кожура ананаса, Семечко финика, Мякоть инжира, Семечко кизила, Мякоть айвы, Кожура арбуза, Кожура дыни, Мякоть помело, Семечко киви, Кожура авокадо, Мякоть смоквы, Кожура агавы, Кожура банана, Мякоть манго" Do="Trigger" ValueString="Зелёный рыцарь"/>
+				<Option Destination="743" Text="Выложить перед Барладом Дэртом правильный компотный набор" Availability="Кожура апельсина, Семечко лимона, Мякоть грейпфрута, Кожура ореха, Мякоть яблока, Семечко сливы, Семечко персика, Семечко кокоса, Мякоть груши, Кожура ананаса, Семечко финика, Мякоть инжира, Семечко кизила, Мякоть айвы, Кожура арбуза, Кожура дыни, Мякоть помело, Семечко киви, Кожура авокадо, Мякоть смоквы, Кожура агавы, Кожура банана, Мякоть манго" Do="Trigger" ValueString="Зелёный рыцарь"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
