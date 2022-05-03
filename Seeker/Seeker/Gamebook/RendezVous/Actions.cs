@@ -13,7 +13,7 @@ namespace Seeker.Gamebook.RendezVous
 
         public override List<string> Status() => new List<string> { String.Format("Осознание: {0}", protagonist.Awareness) };
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
