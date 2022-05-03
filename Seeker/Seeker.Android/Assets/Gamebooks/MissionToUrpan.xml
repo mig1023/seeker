@@ -55,7 +55,7 @@
 			</Texts>
 			<Triggers>Рана, Защита</Triggers>
 			<Options>
-				<Option Destination="10" Text="Есть бластер" OnlyIf="Бластер"/>
+				<Option Destination="10" Text="Есть бластер" Availability="Бластер"/>
 				<Option Destination="45" Text="Нет"/>
 			</Options>
 		</Paragraph>
@@ -100,7 +100,7 @@
 			<Id>9</Id>
 			<Text>Фрегат, перейдя на сверхсветовую скорость, влетел в зону обозначенную как вход в червоточину. В этом месте пространство сжималось, соединяя две точки в разных частях космоса.\n\nЧерез мгновение Джек увидел вокруг совсем другие звёзды и корабль, следуя установленному курсу направился к ближайшему солнцу — Клавирус — Тау.\n\n— Всё идёт холосо, — довольно улыбался будущий диктатор.\n\n— Не накаркай, — проворчал Джек.</Text>
 			<Options>
-				<Option Destination="16" Text="Есть ключевое слово «рампа»" OnlyIf="Рампа"/>
+				<Option Destination="16" Text="Есть ключевое слово «рампа»" Availability="Рампа"/>
 				<Option Destination="37" Text="Нет"/>
 			</Options>
 		</Paragraph>
@@ -132,7 +132,7 @@
 				<Modification Name="Reputation" Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="10" Text="Есть бластер" OnlyIf="Бластер"/>
+				<Option Destination="10" Text="Есть бластер" Availability="Бластер"/>
 				<Option Destination="45" Text="Нет"/>
 			</Options>
 		</Paragraph>
@@ -280,7 +280,7 @@
 			<Id>27</Id>
 			<Text>— Они хотеть мой контлакт, — продолжил объяснять гуманоид. — Хотеть ресурсы Урпана. Но пока я жив, не могут их взять.\n\n— И много ещё этих конкурентов? — Джек стал озираться по сторонам.\n\n— Пару сотен, — прикинул в уме гуманоид. — Пару сотен миллионов. Все мои соотечественники. Но на этой станции их мало. По традиции нашей расы только один из нас может брать контлакт на новую систему.\n\n— Предупреждать надо о таких нюансах, — Джек с трудом подавил желание стукнуть гуманоида по его лысой голове.</Text>
 			<Options>
-				<Option Destination="5" Text="Есть ключевое слово «защита»" OnlyIf="Защита"/>
+				<Option Destination="5" Text="Есть ключевое слово «защита»" Availability="Защита"/>
 				<Option Destination="41" Text="Ключевого слова нет"/>
 			</Options>
 		</Paragraph>
@@ -457,7 +457,7 @@
 				<Modification Name="Reputation" Value="3"/>
 			</Modifications>
 			<Options>
-				<Option Destination="11" Text="Есть ключевое слово «миротворец»" OnlyIf="Миротворец"/>
+				<Option Destination="11" Text="Есть ключевое слово «миротворец»" Availability="Миротворец"/>
 				<Option Destination="36" Text="Ключевого слова нет"/>
 			</Options>
 		</Paragraph>
