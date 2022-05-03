@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
 
-        public override bool CheckOnlyIf(string option)
+        public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
             {
@@ -43,7 +43,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             }
             else
             {
-                return CheckOnlyIfTrigger(option);
+                return AvailabilityTrigger(option);
             }
         }
 
