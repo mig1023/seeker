@@ -244,7 +244,7 @@ namespace Seeker.Gamebook.OrcsDay
             return gameLines;
         }
 
-        public override bool CheckOnlyIf(string option) => CheckOnlyIfTrigger(option);
+        public override bool Availability(string option) => AvailabilityTrigger(option);
 
         private int Protection(ref List<string> fight)
         {
