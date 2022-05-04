@@ -21,8 +21,10 @@ namespace Seeker.Gamebook.YounglingTournament
                 else
                     option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
 
-                if (xmlOption.Attributes["Do"] != null)
-                    option.Do = Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
+                XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
+
+                if (optionMod != null)
+                    option.Do = Xml.ModificationParse(optionMod, new Modification());
 
                 paragraph.Options.Add(option);
             }
