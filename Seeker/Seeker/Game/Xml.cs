@@ -34,12 +34,12 @@ namespace Seeker.Game
 
         public static bool BoolParse(XmlNode xmlNode) => xmlNode != null;
 
-        public static Abstract.IModification ModificationParse(XmlNode xmlNode, Abstract.IModification modification, string name = "Name")
+        public static Abstract.IModification ModificationParse(XmlNode xmlNode, Abstract.IModification modification)
         {
             if (xmlNode == null)
                 return null;
 
-            modification.Name = StringParse(xmlNode.Attributes[name]);
+            modification.Name = StringParse(xmlNode.Attributes["Name"]);
             modification.Value = IntParse(xmlNode.Attributes["Value"]);
             modification.ValueString = StringParse(xmlNode.Attributes["ValueString"]);
             modification.Empty = BoolParse(xmlNode.Attributes["Empty"]);
