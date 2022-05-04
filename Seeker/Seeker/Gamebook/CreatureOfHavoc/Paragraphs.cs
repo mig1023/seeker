@@ -25,8 +25,10 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     option.Destination = int.Parse(destinations[random.Next(destinations.Count())]);
                 }
 
-                if (xmlOption.Attributes["Do"] != null)
-                    option.Do = Xml.ModificationParse(xmlOption, new Modification(), name: "Do");
+                XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
+
+                if (optionMod != null)
+                    option.Do = Xml.ModificationParse(optionMod, new Modification());
 
                 paragraph.Options.Add(option);
             }
