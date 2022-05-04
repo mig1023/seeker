@@ -24,11 +24,13 @@ namespace Seeker.Gamebook.InvisibleFront
         {
             Option option = OptionsTemplate(xmlOption);
 
-            if (xmlOption.Attributes["Do"] != null)
-            {
-                Modification modification = new Modification { Name = Xml.StringParse(xmlOption.Attributes["Do"]) };
+            XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
 
-                ValueParse(xmlOption, ref modification);
+            if (optionMod != null)
+            {
+                Modification modification = new Modification { Name = Xml.StringParse(optionMod.Attributes["Name"]) };
+
+                ValueParse(optionMod, ref modification);
 
                 option.Do = modification;
             }
