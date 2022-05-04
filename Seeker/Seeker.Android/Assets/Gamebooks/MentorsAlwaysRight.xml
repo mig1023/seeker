@@ -516,8 +516,12 @@
 			<Id>50</Id>
 			<Text>Удар точен, но в предсмертной судороге обезьян спускает курок. Если вы не поставите ЗАСЛОН, стрела прошьет ваше бедро, и придется отнять у себя 5 ЖИЗНЕЙ:</Text>
 			<Options>
-				<Option Destination="503" Text="ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" Availability="ЗАСЛОН"/>
-				<Option Destination="503" Do="Hitpoints" Value="-5"/>
+				<Option Destination="503" Text="ЗАСЛОН" Availability="ЗАСЛОН">
+					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+				</Option>
+				<Option Destination="503">
+					<Modification Name="Hitpoints" Value="-5"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -532,7 +536,9 @@
 			<Text>Чахлая растительность на склонах возвышенностей, которые и холмами-то трудно назвать, наводит изрядную тоску. Но внезапно раздавшееся сбоку рычание заставляет насторожиться. К вам приближаются сразу три приземистых степных волка. Трусливые твари, они нападают только имея численный перевес, и то не всегда, если дичь опасна. Но эти, похоже, настроены серьезно.</Text>
 			<Options>
 				<Option Destination="168" Text="Обнажите меч"/>
-				<Option Destination="387" Text="ВОЛК" Availability="ВОЛК" Do="Transformation"/>
+				<Option Destination="387" Text="ВОЛК" Availability="ВОЛК">
+					<Modification Name="Transformation"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -566,7 +572,9 @@
 			<Text>Потрескавшаяся каменистая земля по мере вашего продвижения постепенно меняет облик. Невысокая, выжженая солнцем трава, чуть поодаль какой-то валун... Прерывая ваши наблюдения, этот самый валун начинает медленно подниматься, расправляя свои крылья и по-кошачьи прогибаясь. Кровь холодеет у вас в жилах. Это грифон! Крылья и голова орла на массивном львином теле - крайне смертоносная нечисть, в случае схватки у вас от силы один шанс из десяти. Вот орлиная голова медленно поворачивается в вашу сторону.</Text>
 			<Options>
 				<Option Destination="10" Text="Замереть"/>
-				<Option Destination="87" Text="Если ОБОРОТЕНЬ" Availability="ВОЛК" Do="Transformation"/>
+				<Option Destination="87" Text="Если ОБОРОТЕНЬ" Availability="ВОЛК">
+					<Modification Name="Transformation"/>
+				</Option>
 				<Option Destination="328" Text="Начать медленно отходить к дороге"/>
 				<Option Destination="551" Text="Обнажить меч, решив, что сегодня неплохой день для смерти"/>
 			</Options>
@@ -702,7 +710,9 @@
 			<Text>Через некоторое время ваше чутье подсказывает, что с воздухом что-то не то...</Text>
 			<Options>
 				<Option Destination="177" Text="Есть расшитый золотом пояс" Availability="GoldEmbroideredBelt"/>
-				<Option Destination="35" Text="ВОЛК" Availability="ВОЛК" Do="Transformation"/>
+				<Option Destination="35" Text="ВОЛК" Availability="ВОЛК">
+					<Modification Name="Transformation"/>
+				</Option>
 				<Option Destination="16" Text="Будете бегом пересекать странное место"/>
 			</Options>
 		</Paragraph>
@@ -1372,7 +1382,9 @@
 				<Option Destination="550" Text="Присесть"/>
 				<Option Destination="349" Text="Подпрыгнуть"/>
 				<Option Destination="161" Text="Встретить гада рубящим ударом снизу"/>
-				<Option Destination="500" Text="ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" Availability="ЗАСЛОН"/>
+				<Option Destination="500" Text="ЗАСЛОН" Availability="ЗАСЛОН">
+					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1582,7 +1594,9 @@
 			<Id>155</Id>
 			<Text>- Ты проиграл, приятель, - гоблин выжидающе смотрит на вас. - Плати, таков уговор.</Text>
 			<Options>
-				<Option Destination="206" Text="Отдадите ему четыре золотых" Do="Gold" Value="-4" Availability="ЗОЛОТО >= 4"/>
+				<Option Destination="206" Text="Отдадите ему четыре золотых" Availability="ЗОЛОТО >= 4">
+					<Modification Name="Gold" Value="-4"/>
+				</Option>
 				<Option Destination="231" Text="Дадите ему понять, что никакого уговора не было"/>
 			</Options>
 		</Paragraph>
@@ -1601,7 +1615,9 @@
 			</Modifications>
 			<Options>
 				<Option Destination="352" Text="Попробуете разомкнуть их самостоятельно"/>
-				<Option Destination="233" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ" Do="Transformation"/>		
+				<Option Destination="233" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ">
+					<Modification Name="Transformation"/>
+				</Option>		
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1654,10 +1670,16 @@
 				<Option Destination="26" Text="Развернутся и убежать"/>
 				<Option Destination="382" Text="Сжать покрепче меч и принять бой"/>
 				<Option Destination="143" Text="Что-нибудь сказать демону, чтобы втянуть его в разговор"/>
-				<Option Destination="92" Text="Ударить его СГУСТКОМ" Do="Spell" ValueString="СГУСТОК" Availability="СГУСТОК"/>
+				<Option Destination="92" Text="Ударить его СГУСТКОМ" Availability="СГУСТОК">
+					<Modification Name="Spell" ValueString="СГУСТОК"/>
+				</Option>
 				<Option Destination="331" Text="Попытаться прорваться к столику за спиной демона"/>
-				<Option Destination="213" Text="ВОЛК" Availability="ВОЛК" Do="Transformation"/>
-				<Option Destination="8" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ" Do="Transformation"/>
+				<Option Destination="213" Text="ВОЛК" Availability="ВОЛК">
+					<Modification Name="Transformation"/>
+				</Option>
+				<Option Destination="8" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ">
+					<Modification Name="Transformation"/>
+				</Option>
 				<Option Destination="362" Text="У вас есть эльфийская стрела" Availability="ElvenArrow"/>
 			</Options>
 		</Paragraph>
@@ -1783,8 +1805,12 @@
 				<Option Destination="242" Text="Соврать, сказав, что проходите обряд посвящения ведьмаков - вам надо убить какую-нибудь нечисть и принести в Академию трофей">
 					<Text>Попытаться бежать. Это возможно лишь в том случае, если вы прибегнете к помощи:</Text>
 				</Option>
-				<Option Destination="536" Text="МЕДВЕДЯ" Availability="МЕДВЕДЬ" Do="Transformation"/>
-				<Option Destination="439" Text="ВОЛКА" Availability="ВОЛК" Do="Transformation"/>
+				<Option Destination="536" Text="МЕДВЕДЯ" Availability="МЕДВЕДЬ">
+					<Modification Name="Transformation"/>
+				</Option>
+				<Option Destination="439" Text="ВОЛКА" Availability="ВОЛК">
+					<Modification Name="Transformation"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2070,9 +2096,13 @@
 			<Id>201</Id>
 			<Text>До леса, казалось бы, рукой подать, но, судя по нарастающему свисту сзади, тварь вас настигает.</Text>
 			<Options>
-				<Option Destination="341" Text="ВОЛК" Availability="ВОЛК" Do="Transformation"/>
+				<Option Destination="341" Text="ВОЛК" Availability="ВОЛК">
+					<Modification Name="Transformation"/>
+				</Option>
 				<Option Destination="354" Text="Принять бой"/>
-				<Option Destination="414" Text="Поставить ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" Availability="ЗАСЛОН"/>
+				<Option Destination="414" Text="Поставить ЗАСЛОН" Availability="ЗАСЛОН">
+					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2129,7 +2159,9 @@
 			<Options>
 				<Option Destination="17" Text="Упасть на землю"/>
 				<Option Destination="495" Text="Поднять голову и посмотреть в чем дело"/>
-				<Option Destination="251" Text="ВОЛК" Availability="ВОЛК" Do="Transformation"/>
+				<Option Destination="251" Text="ВОЛК" Availability="ВОЛК">
+					<Modification Name="Transformation"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2189,7 +2221,9 @@
 			<Text>Подъем проходит безболезненно, но едва вы ставите ногу на площадку третьего этажа, буквально из ниоткуда в вас ударяет струя пламени. Времени у вас хватает только для того, чтобы:</Text>
 			<Options>
 				<Option Destination="258" Text="Упасть навзничь"/>
-				<Option Destination="542" Text="Поставить ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" Availability="ЗАСЛОН"/>
+				<Option Destination="542" Text="Поставить ЗАСЛОН" Availability="ЗАСЛОН">
+					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+				</Option>
 				<Option Destination="305" Text="Прижаться к стене"/>
 			</Options>
 		</Paragraph>
@@ -2508,8 +2542,12 @@
 				<Option Destination="268" Text="Поднять руки и попробовать вступить в переговоры"/>
 				<Option Destination="49" Text="Нырнуть в проход между валунами"/>
 				<Option Destination="492" Text="Отступить к идолу"/>
-				<Option Destination="205" Text="ВОЛК" Availability="ВОЛК" Do="Transformation"/>
-				<Option Destination="297" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ" Do="Transformation"/>
+				<Option Destination="205" Text="ВОЛК" Availability="ВОЛК">
+					<Modification Name="Transformation"/>
+				</Option>
+				<Option Destination="297" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ">
+					<Modification Name="Transformation"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2711,7 +2749,9 @@
 			</Modifications>
 			<Options>
 				<Option Destination="419" Text="Ударить 'лжековрик' мечом"/>
-				<Option Destination="129" Text="СГУСТОК" Do="Spell" ValueString="СГУСТОК" Availability="СГУСТОК"/>
+				<Option Destination="129" Text="СГУСТОК" Availability="СГУСТОК">
+					<Modification Name="Spell" ValueString="СГУСТОК"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2918,7 +2958,9 @@
 			<Options>
 				<Option Destination="393" Text="Вступите в бой"/>
 				<Option Destination="481" Text="С размаху рубанете по пирамидке"/>
-				<Option Destination="27" Text="СГУСТОК" Do="Spell" ValueString="СГУСТОК" Availability="СГУСТОК"/>
+				<Option Destination="27" Text="СГУСТОК" Availability="СГУСТОК">
+					<Modification Name="Spell" ValueString="СГУСТОК"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2966,8 +3008,12 @@
 			<Options>
 				<Option Destination="488" Text="Вы стоите сейчас лицом к руслу, быть может, рвануть к нему"/>
 				<Option Destination="133" Text="Предпочтете обороняться, не сходя с места"/>
-				<Option Destination="36" Text="ВОЛК" Availability="ВОЛК" Do="Transformation"/>
-				<Option Destination="472" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ" Do="Transformation"/>
+				<Option Destination="36" Text="ВОЛК" Availability="ВОЛК">
+					<Modification Name="Transformation"/>
+				</Option>
+				<Option Destination="472" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ">
+					<Modification Name="Transformation"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3779,7 +3825,9 @@
 				<Option Destination="497" Text="Согласиться на кости"/>
 				<Option Destination="525" Text="На абсолютно неизвестный вам 'отбой'"/>
 				<Option Destination="231" Text="Атаковать нахала"/>
-				<Option Destination="304" Text="ОБОРОТЕНЬ" Availability="ВОЛК" Do="Transformation"/>
+				<Option Destination="304" Text="ОБОРОТЕНЬ" Availability="ВОЛК">
+					<Modification Name="Transformation"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3813,7 +3861,9 @@
 				<Option Destination="528" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ" Do="Transformation">
 					<Text>Иначе, потеряв с хлещущей кровью еще 2 ЖИЗНИ, остается лишь рубануть по барельефу мечом:</Text>
 				</Option>
-				<Option Destination="449" Do="Hitpoints" Value="-2"/>
+				<Option Destination="449">
+					<Modification Name="Hitpoints" Value="-2"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3901,8 +3951,12 @@
 			<Id>388</Id>
 			<Text>Ничего подобного вам в Академии не преподавали. Больше всего эта тварь напоминает гигантского, в два ваших роста, пса, с которого содрали почти всю плоть. По идее, подобный монстр вообще не может быть живым. Но его глаза горят мрачным багровым огнем, и, поскрипывая оставшимися сухожилиями, он бросается на вас. Ваши действия:</Text>
 			<Options>
-				<Option Destination="361" Text="ВОЛК" Availability="ВОЛК" Do="Transformation"/>
-				<Option Destination="496" Text="СГУСТОК" Do="Spell" ValueString="СГУСТОК" Availability="СГУСТОК"/>
+				<Option Destination="361" Text="ВОЛК" Availability="ВОЛК">
+					<Modification Name="Transformation"/>
+				</Option>
+				<Option Destination="496" Text="СГУСТОК" Availability="СГУСТОК">
+					<Modification Name="Spell" ValueString="СГУСТОК"/>
+				</Option>
 				<Option Destination="445" Text="Старый добрый меч"/>
 			</Options>
 		</Paragraph>
@@ -4137,7 +4191,9 @@
 				<Option Destination="2" Text="Привстать и рубануть ее мечом"/>
 				<Option Destination="302" Text="Кувырнуться вперед"/>
 				<Option Destination="443" Text="Кувырнуться назад (с этой стороны ее конец вроде бы поближе)"/>
-				<Option Destination="499" Text="ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" Availability="ЗАСЛОН"/>
+				<Option Destination="499" Text="ЗАСЛОН" Availability="ЗАСЛОН">
+					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4451,7 +4507,9 @@
 			<Text>Хлопок! Еще одна дымка раскрывается в воздухе и начинает опускаться на вас. Теперь не успеть ни назад, ни вперед.</Text>
 			<Options>
 				<Option Destination="2" Text="Рубанете ее мечом"/>
-				<Option Destination="499" Text="ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" Availability="ЗАСЛОН"/>
+				<Option Destination="499" Text="ЗАСЛОН" Availability="ЗАСЛОН">
+					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4668,7 +4726,9 @@
 			<Id>464</Id>
 			<Text>Не уйти!</Text>
 			<Options>
-				<Option Destination="193" Text="Возможно спасет ВОЛК" Availability="ВОЛК" Do="Transformation"/>
+				<Option Destination="193" Text="Возможно спасет ВОЛК" Availability="ВОЛК">
+					<Modification Name="Transformation"/>
+				</Option>
 				<Option Destination="102" Text="Принять неравный бой"/>
 			</Options>
 		</Paragraph>
@@ -4853,7 +4913,8 @@
 			<Id>484</Id>
 			<Text>Выпрыгнув из-за своего укрытия, бросаете песок в хазратов и сбиваете прицел лучнику. Стрела уходит мимо, но вы понимаете, что запорошив глаза кочевникам вы не остановили их скакунов...</Text>
 			<Options>
-				<Option Destination="448" Text="Использовать ЗАСЛОН" Do="Spell" ValueString="ЗАСЛОН" Availability="ЗАСЛОН">
+				<Option Destination="448" Text="Использовать ЗАСЛОН" Availability="ЗАСЛОН">
+					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
 					<Text>Иначе вас попросту стопчут через пару секунд...</Text>
 				</Option>
 				<Option Destination="0"/>
@@ -4869,7 +4930,9 @@
 			</Actions>
 			<Options>
 				<Option Destination="546" Text="Успели"/>
-				<Option Destination="245" Text="Иначе теряете 3 ЖИЗНИ и принимаете бой" Do="Hitpoints" Value="-3"/>
+				<Option Destination="245" Text="Иначе теряете 3 ЖИЗНИ и принимаете бой">
+					<Modification Name="Hitpoints" Value="-3"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
