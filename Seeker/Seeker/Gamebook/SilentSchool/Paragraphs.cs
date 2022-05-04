@@ -30,14 +30,16 @@ namespace Seeker.Gamebook.SilentSchool
             else
                 option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
 
-            if (xmlOption.Attributes["Do"] != null)
-            {
-                Modification modification = new Modification { Name = Xml.StringParse(xmlOption.Attributes["Do"]) };
+            XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
 
-                if (int.TryParse(xmlOption.Attributes["Value"].Value, out _))
-                    modification.Value = Xml.IntParse(xmlOption.Attributes["Value"]);
+            if (optionMod != null)
+            {
+                Modification modification = new Modification { Name = Xml.StringParse(optionMod.Attributes["Name"]) };
+
+                if (int.TryParse(optionMod.Attributes["Value"].Value, out _))
+                    modification.Value = Xml.IntParse(optionMod.Attributes["Value"]);
                 else
-                    modification.ValueString = Xml.StringParse(xmlOption.Attributes["Value"]);
+                    modification.ValueString = Xml.StringParse(optionMod.Attributes["Value"]);
 
                 option.Do = modification;
             }
