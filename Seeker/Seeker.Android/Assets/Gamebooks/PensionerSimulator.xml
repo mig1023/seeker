@@ -315,8 +315,12 @@
 			<Id>39</Id>
 			<Text>Надо хорошо вооружится. Кастет или трость?</Text>
 			<Options>
-				<Option Destination="41" Text="Кастет" Do="Trigger" Value="Кастет"/>
-				<Option Destination="41" Text="Трость" Do="Trigger" Value="Трость"/>
+				<Option Destination="41" Text="Кастет">
+					<Modification Name="Trigger" Value="Кастет"/>
+				</Option>
+				<Option Destination="41" Text="Трость">
+					<Modification Name="Trigger" Value="Трость"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -456,7 +460,9 @@
 			<Text>- Мой немецкий друг интересуется: «Не видели ли вы Семёна?» - направляет она ствол на местных бомжей.\n\nОдин, трясясь, протягивает руку в дырявой рукавице и показывает пальцем наверх.\n\n- На последнем этаже.\n\nПетровна быстро оказывается на месте, не тратя время на осмотр других этажей. За минуту она находит запертую металлическую дверь. Вот оно.</Text>
 			<Options>
 				<Option Destination="25" Text="Ну вот и граната пригодилась" Availability="Граната"/>
-				<Option Destination="60" Text="Жаль грануту не захватила" Do="Trigger" Value="Холод" Availability="!Граната"/>
+				<Option Destination="60" Text="Жаль грануту не захватила" Availability="!Граната">
+					<Modification Name="Trigger" Value="Холод"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -505,8 +511,12 @@
 			<Id>63</Id>
 			<Text>Остальные старушки тоже протягивают у кого что есть. Армейский нож или граната?</Text>
 			<Options>
-				<Option Destination="39" Text="Нож" Do="Trigger" Value="Армейский нож"/>
-				<Option Destination="39" Text="Граната" Do="Trigger" Value="Граната"/>
+				<Option Destination="39" Text="Нож">
+					<Modification Name="Trigger" Value="Армейский нож"/>
+				</Option>
+				<Option Destination="39" Text="Граната">
+					<Modification Name="Trigger" Value="Граната"/>
+				</Option>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
