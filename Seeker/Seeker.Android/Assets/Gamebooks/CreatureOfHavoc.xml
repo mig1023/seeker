@@ -971,7 +971,9 @@
 				</Action>
 			</Actions>
 			<Options>
-				<Option Destination="243" Text="Не хочешь драться с Эльфом, получай пинок (отними 2 от уровня своей ВЫНОСЛИВОСТИ)" Do="Endurance" Value="-2"/>
+				<Option Destination="243" Text="Не хочешь драться с Эльфом, получай пинок (отними 2 от уровня своей ВЫНОСЛИВОСТИ)">
+					<Modification Name="Endurance" Value="-2"/>
+				</Option>
 				<Option Destination="27" Text="Победил эльфа"/>
 			</Options>
 		</Paragraph>
@@ -3293,7 +3295,9 @@
 				<Aftertext>Если ты победишь коня, сможешь полакомиться его питательным мясом – оно позволит тебе увеличить на 5 уровень твоей ВЫНОСЛИВОСТИ.</Aftertext>
 			</Actions>
 			<Options>
-				<Option Destination="386" Do="Endurance" Value="5"/>
+				<Option Destination="386">
+					<Modification Name="Endurance" Value="5"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
