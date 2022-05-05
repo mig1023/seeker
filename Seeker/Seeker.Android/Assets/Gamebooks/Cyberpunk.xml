@@ -250,16 +250,21 @@
 			<Id>20</Id>
 			<Text>Медтехи «БиоХим Инжиниринг» рекомендуют один из трёх стандартных комплектов кибернетики, подобранных под вероятные задачи и оптимизированных с точки зрения послеоперационного восстановления:</Text>
 			<Options>
-				<Option Destination="188" Text="Кибер 20 (для минимального усиления)" Do="Trigger" ValueString="Кибер 20">
+				<Option Destination="188" Text="Кибер 20 (для минимального усиления)">
+					<Modification Name="Trigger" ValueString="Кибер 20"/>
 					<Text>Небольшие, но очень полезные модификации. Включает продвинутый оптический интерфейс, интегрированный со смартганом — «умным оружием». Гарантирует точность стрельбы и даёт дополнительные эффекты вроде ночного зрения.</Text>
 				</Option>
-				<Option Destination="188" Text="Кибер 30 (для среднего усиления)" Do="Trigger" ValueString="Кибер 30">
+				<Option Destination="188" Text="Кибер 30 (для среднего усиления)">
+					<Modification Name="Trigger" ValueString="Кибер 30"/>
 					<Text>Замена руки на киберконечность и базовая броня в виде прошивки кожи.</Text>
 				</Option>
-				<Option Destination="188" Text="Кибер 40 (для максимального усиления)" Do="Trigger" ValueString="Кибер 40">
+				<Option Destination="188" Text="Кибер 40 (для максимального усиления)">
+					<Modification Name="Trigger" ValueString="Кибер 40"/>
 					<Text>Киберконечность, полное покрытие торса пластинчатой бронёй, нейропроцессор со встроенными усилителями силы.\n\nЕсли пока не решился на установку киберимплантов, запиши ключевое слово «Кибер 0».</Text>
 				</Option>
-				<Option Destination="188" Text="Кибер 0" Do="Trigger" ValueString="Кибер 0"/>
+				<Option Destination="188" Text="Кибер 0">
+					<Modification Name="Trigger" ValueString="Кибер 0"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -4377,9 +4382,15 @@
 			<Id>437</Id>
 			<Text>После боя с террористами ваше подразделение получает небольшой отдых. Капрал сообщает, что желающие могут даже отправиться на базу в Найт-Сити для кибернетического апгрейда.\n\nЕсли ты хочешь поставить или улучшить киберимпланты, воспользуйся этой возможностью. Как ты помнишь, возможно: Минимальное («Кибер 20»), Среднее («Кибер 30») или Максимальное («Кибер 40») улучшение.</Text>
 			<Options>
-				<Option Destination="444" Text="Кибер 20 (для минимального усиления)" Do="Trigger" ValueString="Кибер 20"/>
-				<Option Destination="444" Text="Кибер 30 (для среднего усиления)" Do="Trigger" ValueString="Кибер 30"/>
-				<Option Destination="444" Text="Кибер 40 (для максимального усиления)" Do="Trigger" ValueString="Кибер 40"/>
+				<Option Destination="444" Text="Кибер 20 (для минимального усиления)">
+					<Modification Name="Trigger" ValueString="Кибер 20"/>
+				</Option>
+				<Option Destination="444" Text="Кибер 30 (для среднего усиления)">
+					<Modification Name="Trigger" ValueString="Кибер 30"/>
+				</Option>
+				<Option Destination="444" Text="Кибер 40 (для максимального усиления)">
+					<Modification Name="Trigger" ValueString="Кибер 40"/>
+				</Option>
 				<Option Destination="444"/>
 			</Options>
 		</Paragraph>
@@ -5812,9 +5823,15 @@
 				<Text Font="Bold">Выберите, какой из параметров будем иметь МАКСИМАЛЬНОЕ значение:</Text>
 			</Texts>
 			<Options>
-				<Option Destination="589" Text="Планирование" Availability="ПЛАНИРОВАНИЕ &lt;= 0" Do="Planning" Value="40"/>
-				<Option Destination="589" Text="Подготовка" Availability="ПОДГОТОВКА &lt;= 0" Do="Preparation" Value="40"/>
-				<Option Destination="589" Text="Везение" Availability="ВЕЗЕНИЕ &lt;= 0" Do="Luck" Value="40"/>
+				<Option Destination="589" Text="Планирование" Availability="ПЛАНИРОВАНИЕ &lt;= 0">
+					<Modification Name="Planning" Value="40"/>
+				</Option>
+				<Option Destination="589" Text="Подготовка" Availability="ПОДГОТОВКА &lt;= 0">
+					<Modification Name="Preparation" Value="40"/>
+				</Option>
+				<Option Destination="589" Text="Везение" Availability="ВЕЗЕНИЕ &lt;= 0">
+					<Modification Name="Luck" Value="40"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5823,9 +5840,15 @@
 				<Text Font="Bold">Выберите, какой из параметров будем иметь МИНИМАЛЬНОЕ значение:</Text>
 			</Texts>
 			<Options>
-				<Option Destination="1" Text="Планирование" Availability="ПЛАНИРОВАНИЕ &lt;= 0" Do="Planning" Value="20"/>
-				<Option Destination="1" Text="Подготовка" Availability="ПОДГОТОВКА &lt;= 0" Do="Preparation" Value="20"/>
-				<Option Destination="1" Text="Везение" Availability="ВЕЗЕНИЕ &lt;= 0" Do="Luck" Value="20"/>
+				<Option Destination="1" Text="Планирование" Availability="ПЛАНИРОВАНИЕ &lt;= 0">
+					<Modification Name="Planning" Value="20"/>
+				</Option>
+				<Option Destination="1" Text="Подготовка" Availability="ПОДГОТОВКА &lt;= 0">
+					<Modification Name="Preparation" Value="20"/>
+				</Option>
+				<Option Destination="1" Text="Везение" Availability="ВЕЗЕНИЕ &lt;= 0">
+					<Modification Name="Luck" Value="20"/>
+				</Option>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
