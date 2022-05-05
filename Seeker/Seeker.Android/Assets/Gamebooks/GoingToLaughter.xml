@@ -8893,7 +8893,9 @@
 				<Option Destination="827" Text="Если Вы живучий" Availability="Живучесть">
 					<Text>Если же нет, и если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 20 пунктов Героизма и 20 пунктов Вдохновения.</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=20, Inspiration=20, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=20, Inspiration=20, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -9278,7 +9280,9 @@
 				<Option Destination="827" Text="Вы живучий" Availability="Живучесть">
 					<Text>Если же нет, и если попадаете на этот параграф впервые, добавьте себе ключевые слова «Дежа вю», запишите 20 пунктов Героизма и 20 пунктов Вдохновения...</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=20, Inspiration=20, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=20, Inspiration=20, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -9834,7 +9838,9 @@
 				<Option Destination="931" Text="Вы живучий" Availability="Живучесть">
 					<Text>Если нет, и Вы попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 15 пунктов Героизма и 15 пунктов Вдохновения...</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -10822,7 +10828,9 @@
 				<Option Destination="1029" Text="Если Вы набожный, везучий или у Вас развита интуиция, то Вы благополучно миновали камнепад и, добежав аж до винтовой лестницы за поворотом, устремились наверх" Availability="Набожность|Везение|Интуиция">
 					<Text>Если же нет, то - увы, Вас погребло под завалом. Если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 15 пунктов Героизма и 15 пунктов Вдохновения...</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -12138,7 +12146,9 @@
 				<Option Destination="335" Text="Если Вы обучались сражению, везучий или живучий, Вы благополучно пережили весь этот кошмар и, дожавшись когда экипаж подлатает корабль, использовав материалы с голландской шхуны, благополучно добрались до папиной свадьбы">
 					<Text>Если же нет, Вам, к сожалению, было не суждено доплыть до берега и воссоединиться с отцом: если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения...</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -12148,7 +12158,9 @@
 				<Option Destination="335" Availability="Набожность|Везение|Живучесть">
 					<Text>Если же нет, Вам, к сожалению, было не суждено доплыть до берега и воссоединиться с отцом: если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения...</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -12180,7 +12192,9 @@
 				<Option Destination="335">
 					<Text>Если же нет, Вам, к сожалению, было не суждено доплыть до берега и воссоединиться с отцом: если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения.</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -12744,7 +12758,9 @@
 				<Option Destination="1365" Text="В подземный тоннель" Availability="Везение">
 					<Text>Если же нет, то Вы просто на некоторое время оттянули свою кончину: если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 5 пунктов Героизма и 5 пунктов Вдохновения.</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=5, Inspiration=5, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=5, Inspiration=5, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -12933,7 +12949,9 @@
 				<Option Destination="1371" Text="Если Вы везучий или артистичный, то прошли мимо, беседуя с Авикдором, и стражники ничего не заметили" Availability="Везение|Артистизм">
 					<Text>А если нет - у вас ничего не получится, потому что сейчас уже все стражники в курсе случившегося, перевернули город вверх дном и жаждут Вашей крови. Если Вас застукали и узнали - то Вас не только могут убить на месте, но даже и получат за это награду. Если Вы попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 5 пунктов Героизма и 5 пунктов Вдохновения.</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=5, Inspiration=5, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=5, Inspiration=5, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -13566,7 +13584,9 @@
 				<Option Destination="1384" Do="StaticBonuses" ValueString="Heroism=25, Inspiration=25">
 					<Text>Если же нет, то небольшая армия профессионально обученных воинов-сарацинов жестоко подавила бунт, перебив множество невольников, и Вас заодно...</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -13682,7 +13702,9 @@
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=10, Inspiration=10, Се ля ви">
 					<Text>В случае провала – Вы просто погибли смертью храбрых, а Д`Ладье сумел-таки взять Кокань. Если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 15 пунктов Героизма и 15 пунктов Вдохновения.</Text>
 				</Option>
-				<Option Destination="1392" Singleton="Невезение|Малодушие|Рассеянность|Сумасшествие" Do="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+				<Option Destination="1392" Singleton="Невезение|Малодушие|Рассеянность|Сумасшествие">
+					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -13771,8 +13793,12 @@
 				<Text Size="small">Если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения.</Text>
 			</Texts>
 			<Options>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Малодушие|Забывчивость|Рассеянность|Сумасшествие|Обжорство|Плохой слух|Плохое зрение|Суеверие|Невезение" Aftetext="В ином случае, войска, под Вашим чутким руководством, вскоре взяли город. Ангерран Д`Ладье объявил о своём праве на коканский престол, и, таким образом, конфликт был улажен сравнительно малой кровью. Запишите достижение «Изменник». Если Вы в первый раз очутились на этом параграфе, запишите ключевые слова «Се ля ви», 10 пунктов Героизма и 10 пунктов Вдохновения..." Do="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=10, Inspiration=10, Се ля ви"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Малодушие|Забывчивость|Рассеянность|Сумасшествие|Обжорство|Плохой слух|Плохое зрение|Суеверие|Невезение" Aftetext="В ином случае, войска, под Вашим чутким руководством, вскоре взяли город. Ангерран Д`Ладье объявил о своём праве на коканский престол, и, таким образом, конфликт был улажен сравнительно малой кровью. Запишите достижение «Изменник». Если Вы в первый раз очутились на этом параграфе, запишите ключевые слова «Се ля ви», 10 пунктов Героизма и 10 пунктов Вдохновения...">
+					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				</Option>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=10, Inspiration=10, Се ля ви"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -13861,7 +13887,9 @@
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Availability="Живучесть|Везение|Смекалка|Наблюдательность|Набожность" Do="StaticBonuses" ValueString="Heroism=10, Inspiration=10, Се ля ви">
 					<Text>В противном случае, Вы пали на поле сражения, а войско Ангеррана вскоре было разбито. Если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения...</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает и эта концовка тоже, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает и эта концовка тоже, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -13892,7 +13920,9 @@
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Малодушие|Забывчивость|Рассеянность|Сумасшествие|Обжорство|Плохой слух|Плохое зрение|Суеверие|Невезение" Do="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю">
 					<Text>В ином случае, Ваш отряд ворвался прямиком в королевскую опочивальню, расправившись с королём и его телохранителям на месте, а вскоре – Ангерран Д`Ладье объявил о своём праве на коканский престол, и, таким образом, конфликт был улажен сравнительно малой кровью. Запишите достижение «Изменник». Если Вы в первый раз очутились на этом параграфе, запишите ключевые слова «Се ля ви», 10 пунктов Героизма и 10 пунктов Вдохновения.</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=10, Inspiration=10, Се ля ви"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=10, Inspiration=10, Се ля ви"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14241,7 +14271,9 @@
 				<Option Destination="1297">
 					<Text>Если же нет, Вам, к сожалению, Вам было не суждено пережить абордажный бой...</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14251,7 +14283,9 @@
 				<Option Destination="1297" Text="Если Вы набожный, везучий или живучий, Вы благополучно пережили шторм и получаете +15 пунктов Героизма и +15 пунктов Вдохновения" Availability="Набожность|Везение|Живучесть" Do="StaticBonuses" ValueString="Heroism=15, Inspiration=15">
 					<Text>Если же нет, корабль пошёл ко дну вместе с Вами и всем экипажем. Если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения.</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14266,8 +14300,12 @@
 			</Modifications>
 			<Triggers>Дежа вю</Triggers>
 			<Options>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Невезение|Малодушие|Рассеянность|Суеверие" Do="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
-				<Option Destination="1297" Text="Если же Вы преодолели свои страхи и волнения, то благополучно избавились от этого досадного недоразумения (Вы получаете +25 пунктов Героизма и +25 пунктов Вдохновения!) и продолжили плаванье" Do="StaticBonuses" ValueString="Heroism=25, Inspiration=25"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Невезение|Малодушие|Рассеянность|Суеверие">
+					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				</Option>
+				<Option Destination="1297" Text="Если же Вы преодолели свои страхи и волнения, то благополучно избавились от этого досадного недоразумения (Вы получаете +25 пунктов Героизма и +25 пунктов Вдохновения!) и продолжили плаванье">
+					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14289,7 +14327,9 @@
 				<Option Destination="1297" Text="После чего Вы, добравшись живым и здоровым до порта, оставив все ужасы позади, с облегчением пропускаете с капитаном по-маленькой: в такой ситуации это не грех (Вы получаете +25 пунктов Героизма и +25 пунктов Вдохновения!)" Do="StaticBonuses" ValueString="Heroism=25, Inspiration=25" Singleton="Набожность|ЗЛОДЕЙСТВО &lt; 6">
 					<Text>Если же нет, Вам, к сожалению, было не суждено доплыть до берега: если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения.</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14303,7 +14343,9 @@
 				<Option Destination="1066" Text="В этот момент Вам настолько тяжело, что Вы не в состоянии думать, и поэтому Вы просто бредёте прочь. Сейчас Вам не до короля, не до вельмож, и вообще ни до чего-либо на свете" Availability="Набожность|Везение|Живучесть" Do="StaticBonuses" ValueString="Heroism=25, Inspiration=25">
 					<Text>Если же у Вас нет таких достоинств - вы гибнете вместе с малышкой под завалом.\n\nЕсли попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 15 пунктов Героизма и 15 пунктов Вдохновения.</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14540,7 +14582,9 @@
 				<Option Destination="1312" Text="Если Вы живучий, то пуля лишь слегка зацепила Вас. Царапина, не страшно" Availability="Живучесть">
 					<Text>А если нет, то увы, Вас сразили наповал. Если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 15 пунктов Героизма и 15 пунктов Вдохновения.</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Do="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
+					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14567,7 +14611,9 @@
 				<Option Destination="1335" Text="Если Вы уже попадали на этот параграф, не читайте написанного ниже, а сразу переходите на следующий по списку" Singleton="1334" Availability="1334">
 					<Text>Француз совершает резкий выпад. Если Вы невезучий и не выдержали проверку, эта сволочь оставила Вам шрам на память, да ещё и насмехается. Он просто издевается над Вами!\n\nЕсли же Вы сумели выдержать проверку, то своевременно отвели вражеский клинок в сторону, умело отразив атаку.</Text>
 				</Option>
-				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!" Do="StaticBonuses" ValueString="Buffoonery=-1"/>
+				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!">
+					<Modification Name="StaticBonuses" ValueString="Buffoonery=-1"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14577,7 +14623,9 @@
 				<Option Destination="1336" Text="Если Вы уже попадали на этот параграф, не читайте написанного ниже, а сразу переходите на следующий по списку" Singleton="1335" Availability="1335">
 					<Text>В какой-то момент Вы обнаруживаете брешь в обороне француза, и наносите ему резкий удар, оставив ему шрам на память. Не смертельно, зато больно и постыдно.</Text>
 				</Option>
-				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!" Do="StaticBonuses" ValueString="Inspiration=5,Heroism=5"/>
+				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!">
+					<Modification Name="StaticBonuses" ValueString="Inspiration=5,Heroism=5"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14587,7 +14635,9 @@
 				<Option Destination="1337" Text="Если Вы уже попадали на этот параграф, не читайте написанного ниже, а сразу переходите на следующий по списку" Singleton="1336" Availability="1336">
 					<Text>Отпарировав точный, но всё-таки недостаточно быстрый удар француза, Вы наносите ему порез, и на белой сорочке выступает алое пятно. Этого мало, для того чтоб убить противника, но начало положено.</Text>
 				</Option>
-				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!" Do="StaticBonuses" ValueString="Inspiration=5,Heroism=5"/>
+				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!">
+					<Modification Name="StaticBonuses" ValueString="Inspiration=5,Heroism=5"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14597,7 +14647,9 @@
 				<Option Destination="1338" Text="Если Вы уже попадали на этот параграф, не читайте написанного ниже, а сразу переходите на следующий по списку" Singleton="1337" Availability="1337">
 					<Text>Воспользовавшись короткой заминкой во время боя, Вы отпускаете колкие шуточки в адрес француза, чем вызываете его ярость и смех окружающих. Впрочем, это достаточно опытный боец, умеющий подавлять эмоции так, чтобы они не затуманивали разум.</Text>
 				</Option>
-				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!" Do="StaticBonuses" ValueString="Buffoonery=1"/>
+				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!">
+					<Modification Name="StaticBonuses" ValueString="Buffoonery=1"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14802,7 +14854,9 @@
 				<Option Destination="1361" Text="Если Вы уже попадали на этот параграф, не читайте написанного ниже, а сразу переходите на следующий" Singleton="1360" Availability="1360">
 					<Text>Противник стремительно несётся на Вас, но Вы уступаете ему путь, напутствовав увесистым пинком под зад.\n\nЛюдям-то смешно, а Вы оба уже злые, уставшие и измотанные...</Text>
 				</Option>
-				<Option Destination="1338" Do="StaticBonuses" ValueString="Buffoonery=1"/>
+				<Option Destination="1338">
+					<Modification Name="StaticBonuses" ValueString="Buffoonery=1"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
