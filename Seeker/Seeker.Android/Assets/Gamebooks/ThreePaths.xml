@@ -158,7 +158,9 @@
 			<Options>
 				<Option Destination="145" Text="Зайдёте в зал?" Availability="12"/>
 				<Option Destination="109" Text="Зайдёте в зал?" Availability="!12"/>
-				<Option Destination="29" Text="Вернётесь в коридор?" Do="Trigger" Value="12"/>
+				<Option Destination="29" Text="Вернётесь в коридор?">
+					<Modification Name="Trigger" Value="12"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -175,7 +177,9 @@
 			<Options>
 				<Option Destination="49" Text="Займётесь исследованием помещения"/>
 				<Option Destination="121" Text="Подойдёте к жрецам поближе"/>
-				<Option Destination="29" Text="Покинете эту комнату?" Do="Trigger" Value="12"/>
+				<Option Destination="29" Text="Покинете эту комнату?">
+					<Modification Name="Trigger" Value="12"/>
+				</Option>
 				<Option Destination="9" Text="Подождёте ещё некоторое время"/>
 			</Options>
 		</Paragraph>
@@ -424,7 +428,9 @@
 			<Text>После продолжительных поисков Конан обнаружил странный выступ в стене - вероятно, здесь находится замаскированная дверь.</Text>
 			<Options>
 				<Option Destination="155" Text="Попробуете открыть"/>
-				<Option Destination="29" Text="Лучше не надо! (Выходите из библиотеки в коридор)" Do="Trigger" Value="12"/>
+				<Option Destination="29" Text="Лучше не надо! (Выходите из библиотеки в коридор)">
+					<Modification Name="Trigger" Value="12"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -921,7 +927,9 @@
 				<Option Destination="19" Text="Просто затаитесь на некоторое время в тени"/>
 				<Option Destination="121" Text="Осторожно подойдёте поближе к жрецам"/>
 				<Option Destination="49" Text="Принципиально не обращая внимания на их присутствие, тщательно обследуете помещение"/>
-				<Option Destination="29" Text="Выйдете отсюда поскорей" Do="Trigger" Value="12"/>
+				<Option Destination="29" Text="Выйдете отсюда поскорей">
+					<Modification Name="Trigger" Value="12"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1024,7 +1032,9 @@
 			<Options>
 				<Option Destination="9" Text="Понюхаете благовония, дымящиеся в курильнице"/>
 				<Option Destination="101" Text="Заговорите со жрецами"/>
-				<Option Destination="29" Text="Выйдете из библиотеки в коридор" Do="Trigger" Value="12"/>
+				<Option Destination="29" Text="Выйдете из библиотеки в коридор">
+					<Modification Name="Trigger" Value="12"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1720,7 +1730,9 @@
 			<Id>205</Id>
 			<Text>Киммериец осторожно просунул руку в узкую отдушину. А вдруг это ловушка? Но тут его рука нащупала какой-то предмет. Это был масляный светильник. Подле него лежали кремень и кресало.</Text>
 			<Options>
-				<Option Destination="163" Text="Возьмёте ценные находки с собой" Do="Trigger" Value="12"/>
+				<Option Destination="163" Text="Возьмёте ценные находки с собой">
+					<Modification Name="Trigger" Value="12"/>
+				</Option>
 				<Option Destination="157" Text="Оставите эти совершенно бесполезные вещи на месте и двинетесь дальше"/>
 			</Options>
 		</Paragraph>
@@ -6608,9 +6620,15 @@
 			<Id>789</Id>
 			<Text>В маленькой хижине, на счастье, никого не было. В углу в беспорядке было свалено какое-то тряпьё, а на крючке висела старая женская одежда. Кроме неё и внушительных размеров железного лома, здесь определённо не было ничего ценного.</Text>
 			<Options>
-				<Option Destination="659" Text="Переоденетесь в безобидную старушку" Do="Trigger" Value="7"/>
-				<Option Destination="623" Text="Захватите с собой железный лом"  Do="Trigger" Value="5"/>
-				<Option Destination="659" Text="Захватите с собой железный лом и переоденетесь в старушку" Do="Trigger" Value="9"/>
+				<Option Destination="659" Text="Переоденетесь в безобидную старушку">
+					<Modification Name="Trigger" Value="7"/>
+				</Option>
+				<Option Destination="623" Text="Захватите с собой железный лом">
+					<Modification Name="Trigger" Value="5"/>
+				</Option>
+				<Option Destination="659" Text="Захватите с собой железный лом и переоденетесь в старушку">
+					<Modification Name="Trigger" Value="9"/>
+				</Option>
 				<Option Destination="615" Text="Не будете здесь ничего трогать и выйдете на улицу"/>
 			</Options>
 		</Paragraph>
