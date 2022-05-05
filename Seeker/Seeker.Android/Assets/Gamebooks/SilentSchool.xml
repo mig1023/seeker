@@ -305,7 +305,9 @@
 			<Text>Схватка будет очень суровой, и победа в ней достанется мне лишь ценой 7 ЖИЗНЕЙ</Text>
 			<Options>
 				<Option Destination="54" Availability="Стеклоочиститель"/>
-				<Option Destination="12" Availability="!Стеклоочиститель" Do="Life" Value="-7"/>
+				<Option Destination="12" Availability="!Стеклоочиститель">
+					<Modification Name="Life" Value="-7"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -862,7 +864,9 @@
 				<Modification Name="WayBack" Value="91"/>
 			</Modifications>
 			<Options>
-				<Option Destination="61" Text="Покурить" Availability="Курильщик, В поиске сигарет, !Покурил на 91" Do="Trigger" Value="Покурил на 91"/>
+				<Option Destination="61" Text="Покурить" Availability="Курильщик, В поиске сигарет, !Покурил на 91">
+					<Modification Name="Trigger" Value="Покурил на 91"/>
+				</Option>
 				<Option Destination="147"/>
 			</Options>
 		</Paragraph>
@@ -939,8 +943,12 @@
 			<Id>99</Id>
 			<Text>На выходе из вестибюля я сталкиваюсь с охранником. Крепкий дядька, военный пенсионер, размахивает длинным фонариком как дубинкой.</Text>
 			<Options>
-				<Option Destination="82" Text="Грааль позволит мне мгновенно устранить его" Availability="!Заминка, ГРААЛЬ >= 1" Do="Grail" Value="-1"/>
-				<Option Destination="144" Text="Грааль позволит мне мгновенно устранить его" Availability="Заминка, ГРААЛЬ >= 1" Do="Grail" Value="-1"/>
+				<Option Destination="82" Text="Грааль позволит мне мгновенно устранить его" Availability="!Заминка, ГРААЛЬ >= 1">
+					<Modification Name="Grail" Value="-1"/>
+				</Option>
+				<Option Destination="144" Text="Грааль позволит мне мгновенно устранить его" Availability="Заминка, ГРААЛЬ >= 1">
+					<Modification Name="Grail" Value="-1"/>
+				</Option>
 				<Option Destination="175" Text="Драться"/>
 				<Option Destination="133" Text="Прикрыть голову и пробежать мимо"/>
 			</Options>
@@ -953,7 +961,9 @@
 				<Modification Name="WayBack" Value="100"/>
 			</Modifications>
 			<Options>
-				<Option Destination="61" Text="Покурить" Availability="Курильщик, В поиске сигарет, !Покурил на 100" Do="Trigger" Value="Покурил на 100"/>
+				<Option Destination="61" Text="Покурить" Availability="Курильщик, В поиске сигарет, !Покурил на 100">
+					<Modification Name="Trigger" Value="Покурил на 100"/>
+				</Option>
 				<Option Destination="192"/>
 			</Options>
 		</Paragraph>
@@ -1354,7 +1364,9 @@
 			<Id>144</Id>
 			<Text>Где-то я потратил чуть больше времени, чем следовало, а может тетка из РОНО бегает быстрее ветра - но именно ее рука хватает меня за локоть.</Text>
 			<Options>
-				<Option Destination="82" Text="Грааль (два выстрела: один эту стальную бабу не остановит)" Availability="ГРААЛЬ >= 2" Do="Grail" Value="-2"/>
+				<Option Destination="82" Text="Грааль (два выстрела: один эту стальную бабу не остановит)" Availability="ГРААЛЬ >= 2">
+					<Modification Name="Grail" Value="-2"/>
+				</Option>
 				<Option Destination="175" Text="Остается лишь попытаться скинуть ее с себя"/>
 			</Options>
 		</Paragraph>
@@ -1670,7 +1682,9 @@
 			<Text>Я подхожу к двери и дергаю ручку. Заперто.\n\n- Кто там? - доносится дрожащий голос.\n\nЛюбовь Николаевна, русский и литература, милейшая старушка. По крайней мере, я не один.\n\n- Любовь Николаевна, это я, Сухов, - шепчу я. - Рад, что вы в трезвом уме. Пили вчера небось? Перестук легких шагов - русичка подбежала к двери.\n\n- Константин Юрьевич, я так рада что вы живы, - доносится до моего слуха взволнованный голос.\n\n- Я и пила-то всего ничего, два фужера шампанского, у дочки был день рождения... Но как вы узнали?\n\n- Эти два бокала спасли вам... - тут я понимаю, что говорить «жизнь» еще рановато. - ... рассудок. Откройте мне, Любовь Николаевна.\n\n- Я бы рада, но я сломала ключ, - убитым голосом говорит старушка. - Так торопилась закрыть дверь, в коридоре сущий белам творился. Сухов, вы же не бросите меня здесь? Сухов?\n\nВыбивать дверь - это неминуемо привлечь к себе внимание, отчетливо понимаю я. Трезво оценив обстановку, решаю:</Text>
 			<Triggers>Кабинет25</Triggers>
 			<Options>
-				<Option Destination="188" Text="Бросить русичку. Если выберусь - приведу ей подмогу, успокаиваю я себя" Do="Trigger" Value="Помощь"/>
+				<Option Destination="188" Text="Бросить русичку. Если выберусь - приведу ей подмогу, успокаиваю я себя">
+					<Modification Name="Trigger" Value="Помощь"/>
+				</Option>
 				<Option Destination="123" Text="Попытаться помочь ей"/>
 			</Options>
 		</Paragraph>
@@ -1775,7 +1789,9 @@
 			<Id>193</Id>
 			<Text>- Вссять! - по команде трудовика вся его зондеркоманда набрасывается на меня.</Text>
 			<Options>
-				<Option Destination="149" Text="Грааль (пять выстрелов)" Availability="ГРААЛЬ >= 5" Do="Grail" Value="-5"/>
+				<Option Destination="149" Text="Грааль (пять выстрелов)" Availability="ГРААЛЬ >= 5">
+					<Modification Name="Grail" Value="-5"/>
+				</Option>
 				<Option Destination="106" Text="Рукопашная"/>
 			</Options>
 		</Paragraph>
