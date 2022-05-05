@@ -1906,7 +1906,9 @@
 			</Modifications>
 			<Options>
 				<Option Destination="254" Text="Параметр МЕТКОСТЬ 13 или больше" Availability="МЕТКОСТЬ >= 13"/>
-				<Option Destination="82" Text="Входите в шот" Do="Trigger" ValueString="Беглец"/>
+				<Option Destination="82" Text="Входите в шот">
+					<Modification Name="Trigger" ValueString="Беглец"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3547,7 +3549,9 @@
 			<Id>385</Id>
 			<Text>Показываете пульсар охраннику. Громила явно ценитель оружия и сразу понимает что это - его глаза алчно заблестели.\n\nНо отдавать такое опасное оружие темным личностям поступок явно не гуманный. Попав на улицу, пульсар, скорее всего, будет использован в преступных целях.</Text>
 			<Options>
-				<Option Destination="132" Text="Вас это не волнует, отдаете пульсар (уменьшите АУРУ на 2)" Do="Aura" Value="-2"/>
+				<Option Destination="132" Text="Вас это не волнует, отдаете пульсар (уменьшите АУРУ на 2)">
+					<Modification Name="Aura" Value="-2"/>
+				</Option>
 				<Option Destination="198" Text="Передумали - либо уходите искать провайдера"/>
 				<Option Destination="132" Text="Отдаете аптечку или гранату"/>
 			</Options>
