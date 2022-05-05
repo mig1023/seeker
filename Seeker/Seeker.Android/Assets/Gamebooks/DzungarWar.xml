@@ -76,7 +76,8 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="386" Text="Достать 100 ТАНЬГА из кошеля" Do="Tanga" Value="-100" Availability="ТАНЬГА >= 100">
+					<Option Destination="386" Text="Достать 100 ТАНЬГА из кошеля" Availability="ТАНЬГА >= 100">
+						<Modification Name="Tanga" Value="-100"/>
 						<Text>Иначе придётся сразиться с духами:</Text>
 					</Option>
 				</Action>
@@ -337,7 +338,8 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="386" Text="Достать 50 ТАНЬГА из кошеля" Do="Tanga" Value="-50" Availability="ТАНЬГА >= 50">
+					<Option Destination="386" Text="Достать 50 ТАНЬГА из кошеля" Availability="ТАНЬГА >= 50">
+						<Modification Name="Tanga" Value="-50"/>
 						<Text>Иначе придётся пройти это испытание:</Text>
 					</Option>
 				</Action>
@@ -978,7 +980,9 @@
 			<Triggers>Пушкарь</Triggers>
 			<Options>
 				<Option Destination="257" Text="Завершить путешествие и направиться вместе с офицерами к казахскому ополчению"/>
-				<Option Destination="428" Text="Попрощаться с ними и продолжить свои поиски в Семиречье (в этом случае +2 ОПАСНОСТИ)" Do="Danger" Value="2"/>
+				<Option Destination="428" Text="Попрощаться с ними и продолжить свои поиски в Семиречье (в этом случае +2 ОПАСНОСТИ)">
+					<Modification Name="Danger" Value="2"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1035,7 +1039,9 @@
 			<Triggers>Барымта, Пушкарь</Triggers>
 			<Options>
 				<Option Destination="257" Text="Завершить путешествие и направиться вместе с Азимханом и офицерами к казахскому ополчению"/>
-				<Option Destination="428" Text="Попрощаться со всеми и продолжить свои поиски в Семиречье (в этом случае +4 ОПАСНОСТИ)" Do="Danger" Value="4"/>
+				<Option Destination="428" Text="Попрощаться со всеми и продолжить свои поиски в Семиречье (в этом случае +4 ОПАСНОСТИ)">
+					<Modification Name="Danger" Value="4"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2352,7 +2358,9 @@
 			<Triggers>Барымта</Triggers>
 			<Options>
 				<Option Destination="257" Text="Завершить путешествие и направиться вместе с Шандором к казахскому ополчению"/>
-				<Option Destination="428" Text="Попрощаться с ним и продолжить свои поиски в Семиречье (в этом случае +3 ОПАСНОСТИ)" Do="Danger" Value="3"/>
+				<Option Destination="428" Text="Попрощаться с ним и продолжить свои поиски в Семиречье (в этом случае +3 ОПАСНОСТИ)">
+					<Modification Name="Danger" Value="3"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3412,7 +3420,9 @@
 			<Triggers>Барымта</Triggers>
 			<Options>
 				<Option Destination="257" Text="Завершить путешествие и направиться вместе с Азимханом к казахскому ополчению"/>
-				<Option Destination="428" Text="Попрощаться с Азимханом и продолжить свои поиски в Семиречье (в этом случае +3 ОПАСНОСТИ)" Do="Danger" Value="3"/>
+				<Option Destination="428" Text="Попрощаться с Азимханом и продолжить свои поиски в Семиречье (в этом случае +3 ОПАСНОСТИ)">
+					<Modification Name="Danger" Value="3"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5382,7 +5392,9 @@
 				<Modification Name="Danger" Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="389" Text="Заплатить 50 ТАНЬГА бухарцу" Do="Tanga" Value="-50" Availability="ТАНЬГА >= 50"/>
+				<Option Destination="389" Text="Заплатить 50 ТАНЬГА бухарцу" Availability="ТАНЬГА >= 50">
+					<Modification Name="Tanga" Value="-50"/>
+				</Option>
 				<Option Destination="401" Text="Попытать счастья в качестве новобранца"/>
 				<Option Destination="575" Text="Покинуть эти места"/>
 			</Options>
