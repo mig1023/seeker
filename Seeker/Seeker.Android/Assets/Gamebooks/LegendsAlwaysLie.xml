@@ -979,7 +979,9 @@
 			<Options>
 				<Option Destination="118" Text="У вас записано слово «деньги»" Availability="Money"/>
 				<Option Destination="19" Text="Вы прислушаетесь к своему внутреннему голосу и откажетесь"/>
-				<Option Destination="90" Text="Доверитесь выбору Коннери и примете предложение лепрекона (сразу отнимите у себя три золотых)" Do="Gold" Value="-3" Availability="!Money, ЗОЛОТО >= 3"/>
+				<Option Destination="90" Text="Доверитесь выбору Коннери и примете предложение лепрекона (сразу отнимите у себя три золотых)" Availability="!Money, ЗОЛОТО >= 3">
+					<Modification Name="Gold" Value="-3"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1584,7 +1586,9 @@
 			</Actions>
 			<Options>
 				<Option Destination="174" Text="Предпринять попытку убежать"/>
-				<Option Destination="229" Text="Вы победили" Do="Gold" Value="2"/>
+				<Option Destination="229" Text="Вы победили">
+					<Modification Name="Gold" Value="2"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3887,7 +3891,9 @@
 			<Text>От боли ящер резко дергается, вы же, вцепившись в рукоять, судорожно пытаетесь удержаться на спине исполина.</Text>
 			<Options>
 				<Option Destination="107" Text="Ваша специализация воин, то ваша сила поможет вам справиться с этой непростой задачей" Availability="ВОИН"/>
-				<Option Destination="197" Text="Если же нет, то удержаться не выйдет, и при падении вы сильно повреждаете колено (–3 ЖИЗНИ)" Do="Hitpoints" Value="-3"/>
+				<Option Destination="197" Text="Если же нет, то удержаться не выйдет, и при падении вы сильно повреждаете колено (–3 ЖИЗНИ)">
+					<Modification Name="Hitpoints" Value="-3"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -5433,7 +5439,9 @@
 				<Option Destination="574" Text="Уровень его ДОВЕРИЯ меньше 6" Availability="ДОВЕРИЕ &lt; 6">
 					<Text>– Безусловно, ты псих, – кряхтит напарник, раскорячившись между стен. – Но можно рискнуть.\n\nКак ни странно, все у вас получилось. Через минуту вы уже стоите на развилке и, кажется, заметно выросли в глазах легендарного ведьмака (+1 ДОВЕРИЕ).\n\n– Значит, путь лежит через двери, – задумчиво говорит Коннери. – В какую пойдем?</Text>
 				</Option>
-				<Option Destination="540" Text="Войдите в понравившуюся дверь" Do="ConneryTrust" Value="1" Availability="ДОВЕРИЕ >= 6"/>
+				<Option Destination="540" Text="Войдите в понравившуюся дверь" Availability="ДОВЕРИЕ >= 6">
+					<Modification Name="ConneryTrust" Value="1"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
