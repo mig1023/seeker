@@ -155,8 +155,8 @@ namespace Seeker.Game
                 foreach (string type in Multiples(xmlNode, "Type"))
                     Data.Constants.LoadButtonText(type, xmlNode.InnerText);
 
-            Data.Constants.LoadParagraphsWithoutSomething(xmlFile, "WithoutStatuses");
-            Data.Constants.LoadParagraphsWithoutSomething(xmlFile, "WithoutStaticsButtons");
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/List")))
+                Data.Constants.LoadList(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText.Split(',').ToList());
         }
 
         private static List<string> Multiples(XmlNode xmlNode, string attributes) =>

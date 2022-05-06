@@ -21,7 +21,7 @@ namespace Seeker.Abstract
 
         List<int> GetParagraphsWithoutStaticsButtons();
 
-        void LoadParagraphsWithoutSomething(XmlDocument xmlFile, string type);
+        void LoadList(string name, List<string> list);
 
         int? GetParagraphsStatusesLimit();
 

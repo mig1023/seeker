@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Xml;
 using Seeker.Game;
 using static Seeker.Output.Buttons;
 using static Seeker.Game.Data;
+using System.Reflection;
 
 namespace Seeker.Prototypes
 {
@@ -16,9 +16,9 @@ namespace Seeker.Prototypes
 
         private Dictionary<string, string> ButtonTextList = null;
 
-        private List<int> ParagraphsWithoutStatuses = null;
+        public List<int> WithoutStatuses { get; set; }
 
-        private List<int> ParagraphsWithoutStaticsButtons = null;
+        public List<int> WithoutStaticsButtons { get; set; }
 
         private bool ShowDisabledOptionStatus = false;
 
@@ -42,8 +42,8 @@ namespace Seeker.Prototypes
         {
             ButtonsColorsList = new Dictionary<ButtonTypes, string>();
             ColorsList = new Dictionary<ColorTypes, string>();
-            ParagraphsWithoutStatuses = new List<int> { 0 };
-            ParagraphsWithoutStaticsButtons = new List<int> { 0 };
+            WithoutStatuses = new List<int> { 0 };
+            WithoutStaticsButtons = new List<int> { 0 };
             ButtonTextList = new Dictionary<string, string>();
             ShowDisabledOptionStatus = false;
         }
@@ -57,25 +57,19 @@ namespace Seeker.Prototypes
                 ButtonsColorsList.Add(buttonTypes, color);
         }
 
-        public virtual List<int> GetParagraphsWithoutStatuses() => ParagraphsWithoutStatuses;
+        public virtual List<int> GetParagraphsWithoutStatuses() => WithoutStatuses;
 
-        public virtual List<int> GetParagraphsWithoutStaticsButtons() => ParagraphsWithoutStaticsButtons;
+        public virtual List<int> GetParagraphsWithoutStaticsButtons() => WithoutStaticsButtons;
 
-        public virtual void LoadParagraphsWithoutSomething(XmlDocument xmlFile, string type)
+        public virtual void LoadList(string name, List<string> list)
         {
-            string nodeName = String.Format("Gamebook/Introduction/Constants/List[@Type='{0}']", type);
-            XmlNode paragraphs = xmlFile.SelectSingleNode(nodeName);
+            PropertyInfo param = this.GetType().GetProperty(name);
 
-            if (paragraphs == null)
-                return;
+            if (param.PropertyType == typeof(List<int>))
+                this.GetType().GetProperty(name).SetValue(this, list.Select(x => int.Parse(x)).ToList());
+            else
+                this.GetType().GetProperty(name).SetValue(this, list);
 
-            List<int> something = paragraphs.InnerText.Split(',').Select(x => int.Parse(x)).ToList();
-
-            if (type == "WithoutStaticsButtons")
-                ParagraphsWithoutStaticsButtons = something;
-
-            else if (type == "WithoutStatuses")
-                ParagraphsWithoutStatuses = something;
         }
 
         public static string DefaultColor(Data.ColorTypes type) => Output.Constants.DEFAULT_COLORS[type];
