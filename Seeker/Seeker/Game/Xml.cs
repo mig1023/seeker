@@ -157,6 +157,16 @@ namespace Seeker.Game
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/List")))
                 Data.Constants.LoadList(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText.Split(',').ToList());
+
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/Dictionary")))
+            {
+                List<XmlNode> xmlNodes = xmlNode.SelectNodes("Item").Cast<XmlNode>().ToList();
+
+                Dictionary<string, string> items = xmlNodes
+                    .ToDictionary(x => x.Attributes["Key"].InnerText, x => x.Attributes["Value"].InnerText);
+
+                Data.Constants.LoadDictionary(xmlNode.Attributes["Type"].InnerText, items);
+            }
         }
 
         private static List<string> Multiples(XmlNode xmlNode, string attributes) =>

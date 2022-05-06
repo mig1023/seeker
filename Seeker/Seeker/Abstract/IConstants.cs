@@ -23,6 +23,8 @@ namespace Seeker.Abstract
 
         void LoadList(string name, List<string> list);
 
+        void LoadDictionary(string name, Dictionary<string, string> dictionary);
+
         int? GetParagraphsStatusesLimit();
 
         void LoadEnabledDisabledOption(string option);

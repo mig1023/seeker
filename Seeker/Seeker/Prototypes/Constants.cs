@@ -63,13 +63,32 @@ namespace Seeker.Prototypes
 
         public virtual void LoadList(string name, List<string> list)
         {
-            PropertyInfo param = this.GetType().GetProperty(name);
+            PropertyInfo listType = this.GetType().GetProperty(name);
 
-            if (param.PropertyType == typeof(List<int>))
+            if (listType.PropertyType == typeof(List<int>))
                 this.GetType().GetProperty(name).SetValue(this, list.Select(x => int.Parse(x)).ToList());
             else
                 this.GetType().GetProperty(name).SetValue(this, list);
+        }
 
+        public virtual void LoadDictionary(string name, Dictionary<string, string> dictionary)
+        {
+            PropertyInfo dictType = this.GetType().GetProperty(name);
+
+            if (dictType.PropertyType == typeof(Dictionary<int, string>))
+                this.GetType().GetProperty(name).SetValue(
+                    this, dictionary.Select(x => new { key = int.Parse(x.Key), value = x.Value }));
+
+            else if (dictType.PropertyType == typeof(Dictionary<string, int>))
+                this.GetType().GetProperty(name).SetValue(
+                    this, dictionary.Select(x => new { key = x.Key, value = int.Parse(x.Value) }));
+
+            else if (dictType.PropertyType == typeof(Dictionary<int, int>))
+                this.GetType().GetProperty(name).SetValue(
+                    this, dictionary.Select(x => new { key = int.Parse(x.Key), value = int.Parse(x.Value) }));
+
+            else
+                this.GetType().GetProperty(name).SetValue(this, dictionary);
         }
 
         public static string DefaultColor(Data.ColorTypes type) => Output.Constants.DEFAULT_COLORS[type];
