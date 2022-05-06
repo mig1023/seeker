@@ -9,6 +9,13 @@
 		</Styles>
 		<Constants>
 			<List Type="WithoutStatuses">0, 266</List>
+			<Dictionary Type="HealingParts">
+				<Item Key="головы" Value="Head"/>
+				<Item Key="плеч" Value="ShoulderGirdle"/>
+				<Item Key="корпуса" Value="Body"/>
+				<Item Key="рук" Value="Hands"/>
+				<Item Key="ног" Value="Legs"/>
+			</Dictionary>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
