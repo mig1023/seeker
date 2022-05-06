@@ -7,9 +7,9 @@
 			<Color Type="ActionBox">#efefef</Color>
             <Color Type="System">#f4f4f4</Color>
 		</Styles>
-		<Paragraphs>
+		<Constants>
 			<List Type="WithoutStatuses">0, 266</List>
-		</Paragraphs>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
