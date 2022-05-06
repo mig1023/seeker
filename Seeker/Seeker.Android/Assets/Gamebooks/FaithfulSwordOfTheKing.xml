@@ -8,9 +8,9 @@
             <Color Type="Option, Continue">#dbabab</Color>
             <Color Type="System">#f0dddd</Color>
 		</Styles>
-		<Paragraphs>
+		<Constants>
 			<List Type="WithoutStatuses">0, 660</List>
-		</Paragraphs>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
