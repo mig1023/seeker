@@ -6,14 +6,7 @@ namespace Seeker.Gamebook.VWeapons
     {
         public static Constants StaticInstance = new Constants();
 
-        public static Dictionary<string, string> healingParts = new Dictionary<string, string>
-        {
-            ["головы"] = "Head",
-            ["плеч"] = "ShoulderGirdle",
-            ["корпуса"] = "Body",
-            ["рук"] = "Hands",
-            ["ног"] = "Legs",
-        };
+        public static Dictionary<string, string> HealingParts { get; set; }
 
         public static Links GetLinks() => new Links
         {

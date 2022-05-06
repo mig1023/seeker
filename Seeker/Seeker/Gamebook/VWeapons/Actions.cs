@@ -271,8 +271,8 @@ namespace Seeker.Gamebook.VWeapons
             if (Time != 0)
                 protagonist.Time += Time;
 
-            foreach (string parts in Constants.healingParts.Keys.ToList())
-                HealingAction(ref healing, parts, ref healingPoints, Constants.healingParts[parts]);
+            foreach (string parts in Constants.HealingParts.Keys.ToList())
+                HealingAction(ref healing, parts, ref healingPoints, Constants.HealingParts[parts]);
 
             return healing;
         }
