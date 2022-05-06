@@ -85,7 +85,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (protagonist.Spells.Contains("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ") && (protagonist.Endurance < protagonist.MaxEndurance))
                 staticButtons.Add("ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ");
 
-            foreach (string spell in Constants.StaticSpells())
+            foreach (string spell in Constants.StaticSpells)
                 if (ParagraphWithFight(spell) && protagonist.Spells.Contains(spell) && !SpellActivate[spell])
                     staticButtons.Add(spell);
 
@@ -99,7 +99,7 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             if (action.Contains("ИСЦЕЛЕНИЯ"))
                 protagonist.Endurance += 8;
 
-            if (Constants.StaticSpells().Contains(action))
+            if (Constants.StaticSpells.Contains(action))
                 SpellActivate[action] = true;
 
             return true;
