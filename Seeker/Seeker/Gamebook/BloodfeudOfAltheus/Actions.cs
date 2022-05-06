@@ -536,7 +536,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     }
 
                     fight.Add(String.Format("Вы: {0}ы, {1}: {2}",
-                        Constants.HealthLine()[protagonist.Health], enemy.Name, Constants.HealthLine()[enemy.Health]));
+                        Constants.HealthLine[protagonist.Health], enemy.Name, Constants.HealthLine[enemy.Health]));
 
                     int protagonistRollFirst = Game.Dice.Roll();
                     int protagonistRollSecond = 0;
