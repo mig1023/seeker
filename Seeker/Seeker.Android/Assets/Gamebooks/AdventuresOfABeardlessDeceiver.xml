@@ -11,10 +11,10 @@
             <Color Type="Option, Continue">#8dbd6e</Color>
             <Color Type="System">#c7dfb9</Color>
 		</Styles>
-		<Paragraphs>
+		<Constants>
 			<List Type="WithoutStatuses">0, 205</List>
 			<List Type="WithoutStaticsButtons">0, 30, 60, 90</List>
-		</Paragraphs>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
