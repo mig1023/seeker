@@ -11,6 +11,7 @@
 		<Constants>
 			<List Type="WithoutStatuses">0, 619</List>
 			<List Type="WithoutStaticsButtons">0, 619</List>
+			<List Type="StaticSpells">ЗАКЛЯТИЕ КОПИИ, ЗАКЛЯТИЕ СИЛЫ, ЗАКЛЯТИЕ СЛАБОСТИ</List>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
