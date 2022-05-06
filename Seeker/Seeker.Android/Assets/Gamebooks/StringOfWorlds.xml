@@ -1,9 +1,9 @@
 <Gamebook>
 	<Introduction>
 		<Title>Вереница миров или выводы из закона Мэрфи</Title>
-		<Paragraphs>
+		<Constants>
 			<List Type="WithoutStaticsButtons">0, 1, 665</List>
-		</Paragraphs>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
