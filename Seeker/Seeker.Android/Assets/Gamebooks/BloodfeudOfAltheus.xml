@@ -10,9 +10,9 @@
             <Color Type="StatusBar">#bcaa8f</Color>
             <Color Type="AdditionalStatus">#d0c3b0</Color>
 		</Styles>
-		<Paragraphs>
+		<Constants>
 			<List Type="WithoutStaticsButtons">0, 1</List>
-		</Paragraphs>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
