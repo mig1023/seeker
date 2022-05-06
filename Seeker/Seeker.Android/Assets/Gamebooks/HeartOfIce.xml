@@ -10,9 +10,9 @@
 			<Color Type="Action">#0679b0</Color>
             <Color Type="System">#1f93c9</Color>
 		</Styles>
-		<Paragraphs>
+		<Constants>
 			<List Type="WithoutStatuses">0, 454, 455, 456, 457</List>
-		</Paragraphs>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
