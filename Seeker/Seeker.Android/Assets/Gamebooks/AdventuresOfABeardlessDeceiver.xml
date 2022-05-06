@@ -14,6 +14,14 @@
 		<Constants>
 			<List Type="WithoutStatuses">0, 205</List>
 			<List Type="WithoutStaticsButtons">0, 30, 60, 90</List>
+			<Dictionary Type="StatNames">
+				<Item Key="Strength" Value="силы"/>
+				<Item Key="Skill" Value="ловкости"/>
+				<Item Key="Wisdom" Value="мудрости"/>
+				<Item Key="Cunning" Value="хитрости"/>
+				<Item Key="Oratory" Value="красноречия"/>
+				<Item Key="Popularity" Value="популярности"/>
+			</Dictionary>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
