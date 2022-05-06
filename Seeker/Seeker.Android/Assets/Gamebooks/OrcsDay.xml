@@ -9,9 +9,9 @@
 			<Color Type="Font, ButtonFont, SystemFont">#000000</Color>
             <Color Type="ActionBox, AdditionalStatus">#c8d8b5</Color>
 		</Styles>
-		<Paragraphs>
+		<Constants>
 			<List Type="WithoutStatuses">0, 102, 103</List>
-		</Paragraphs>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
