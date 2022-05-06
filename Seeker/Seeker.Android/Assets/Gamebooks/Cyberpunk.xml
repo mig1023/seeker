@@ -9,9 +9,9 @@
             <Color Type="Option, Continue">#84c2bf</Color>
             <Color Type="System">#cde6e5</Color>
 		</Styles>
-		<Paragraphs>
+		<Constants>
 			<List Type="WithoutStatuses">0, 587, 588, 589</List>
-		</Paragraphs>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
