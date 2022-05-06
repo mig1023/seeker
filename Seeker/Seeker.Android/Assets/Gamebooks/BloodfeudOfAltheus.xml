@@ -12,6 +12,12 @@
 		</Styles>
 		<Constants>
 			<List Type="WithoutStaticsButtons">0, 1</List>
+			<Dictionary Type="HealthLine">
+				<Item Key="0" Value="мертв"/>
+				<Item Key="1" Value="тяжело ранен"/>
+				<Item Key="2" Value="ранен"/>
+				<Item Key="3" Value="здоров"/>
+			</Dictionary>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
