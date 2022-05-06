@@ -6,15 +6,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
     {
         public static Constants StaticInstance = new Constants();
 
-        public static Dictionary<string, string> StatNames = new Dictionary<string, string>
-        {
-            ["Strength"] = "силы",
-            ["Skill"] = "ловкости",
-            ["Wisdom"] = "мудрости",
-            ["Cunning"] = "хитрости",
-            ["Oratory"] = "красноречия",
-            ["Popularity"] = "популярности",
-        };
+        public static Dictionary<string, string> StatNames { get; set; }
 
         public static Links GetLinks() => new Links
         {
