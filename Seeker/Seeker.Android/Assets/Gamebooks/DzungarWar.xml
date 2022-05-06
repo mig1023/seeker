@@ -13,9 +13,9 @@
             <Color Type="Continue">#b99e8e</Color>
             <Color Type="System">#cebbaf</Color>
 		</Styles>
-		<Paragraphs>
+		<Constants>
 			<List Type="WithoutStatuses">0, 658, 659, 660</List>
-		</Paragraphs>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
