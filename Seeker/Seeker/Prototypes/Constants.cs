@@ -77,15 +77,15 @@ namespace Seeker.Prototypes
 
             if (dictType.PropertyType == typeof(Dictionary<int, string>))
                 this.GetType().GetProperty(name).SetValue(
-                    this, dictionary.Select(x => new { key = int.Parse(x.Key), value = x.Value }));
+                    this, dictionary.ToDictionary(x => int.Parse(x.Key), x => x.Value));
 
             else if (dictType.PropertyType == typeof(Dictionary<string, int>))
                 this.GetType().GetProperty(name).SetValue(
-                    this, dictionary.Select(x => new { key = x.Key, value = int.Parse(x.Value) }));
+                    this, dictionary.ToDictionary(x => x.Key, x => int.Parse(x.Value)));
 
             else if (dictType.PropertyType == typeof(Dictionary<int, int>))
                 this.GetType().GetProperty(name).SetValue(
-                    this, dictionary.Select(x => new { key = int.Parse(x.Key), value = int.Parse(x.Value) }));
+                    this, dictionary.ToDictionary(x => int.Parse(x.Key), x => int.Parse(x.Value)));
 
             else
                 this.GetType().GetProperty(name).SetValue(this, dictionary);
