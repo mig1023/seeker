@@ -93,13 +93,11 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
         public static void EnemyMultiplier(int count, ref Actions action, Character enemy)
         {
-            Dictionary<int, string> countLine = Constants.GetCountName();
-
             string name = enemy.Name;
 
             for (int i = 0; i < count; i++)
             {
-                enemy.Name = countLine[i + 1] + " " + name;
+                enemy.Name = Constants.GetCountName[i + 1] + " " + name;
                 action.Enemies.Add(enemy.Clone());
             }
         }

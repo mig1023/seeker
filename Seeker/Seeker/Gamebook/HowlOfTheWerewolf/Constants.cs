@@ -6,22 +6,9 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
     {
         public static Constants StaticInstance = new Constants();
 
-        public static Dictionary<int, string> GetCountName() => new Dictionary<int, string>
-        {
-            [1] = "Первый",
-            [2] = "Второй",
-            [3] = "Третий",
-            [4] = "Четвёртый",
-            [5] = "Пятый",
-            [6] = "Шестой",
-        };
+        public static Dictionary<int, string> GetCountName { get; set; }
 
-        public static Dictionary<int, string> GetPassageName() => new Dictionary<int, string>
-        {
-            [1] = "дверь",
-            [2] = "первое окно",
-            [3] = "второе окно",
-        };
+        public static Dictionary<int, string> GetPassageName { get; set; }
 
         public static int GetUlrichMastery() => 8;
 

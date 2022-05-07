@@ -765,7 +765,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             PassageDice(out int dice, out int protagonistPassage);
 
             fight.Add(String.Format("Вы обороняете: {0} / 2 = {1}, это {2}",
-                Game.Dice.Symbol(dice), protagonistPassage, Constants.GetPassageName()[protagonistPassage]));
+                Game.Dice.Symbol(dice), protagonistPassage, Constants.GetPassageName[protagonistPassage]));
 
             fight.Add(String.Empty);
 
@@ -776,7 +776,7 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                 PassageDice(out int wolfDice, out int wolfPassage);
 
                 fight.Add(String.Format("{0} волк: {1} / 2 = {2}, ломится через {3}",
-                    wolf, Game.Dice.Symbol(wolfDice), wolfPassage, Constants.GetPassageName()[wolfPassage]));
+                    wolf, Game.Dice.Symbol(wolfDice), wolfPassage, Constants.GetPassageName[wolfPassage]));
 
                 if (protagonistPassage == wolfPassage)
                     woulfCount += 1;
