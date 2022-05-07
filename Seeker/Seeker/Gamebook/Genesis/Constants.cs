@@ -6,12 +6,7 @@ namespace Seeker.Gamebook.Genesis
     {
         public static Constants StaticInstance = new Constants();
 
-        public static Dictionary<string, int> GetStartValues() => new Dictionary<string, int>
-        {
-            ["Skill"] = 30,
-            ["Weapon"] = 15,
-            ["Stealth"] = 3,
-        };
+        public static Dictionary<string, int> GetStartValues { get; set; }
 
         public static Links GetLinks() => new Links
         {
