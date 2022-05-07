@@ -6,10 +6,7 @@ namespace Seeker.Gamebook.InvisibleFront
     {
         public static Constants StaticInstance = new Constants();
 
-        public static List<string> GetApartments() => new List<string>
-        {
-            "один", "два", "три", "один", "два", "три"
-        };
+        public static List<string> GetApartments { get; set; }
 
         public static Links GetLinks() => new Links
         {

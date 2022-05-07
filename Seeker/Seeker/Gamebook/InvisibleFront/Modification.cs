@@ -10,7 +10,7 @@ namespace Seeker.Gamebook.InvisibleFront
                 Game.Option.Trigger(Game.Dice.Roll() > 3 ? "предатель" : "не предатель");
 
             else if (Name == "Apartment")
-                Game.Option.Trigger(Constants.GetApartments()[Game.Dice.Roll() - 1]);
+                Game.Option.Trigger(Constants.GetApartments[Game.Dice.Roll() - 1]);
 
             else
                 base.Do(Character.Protagonist);
