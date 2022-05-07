@@ -12,6 +12,42 @@
             <Color Type="Continue">#8c937f</Color>
             <Color Type="System">#717963</Color>
 		</Styles>
+		<Constants>
+			<Dictionary Type="GetRangeTypes">
+				<Item Key="6" Value="ДАЛЬНЯЯ ДИСТАНЦИЯ"/>
+				<Item Key="5" Value="СРЕДНЯЯ ДИСТАНЦИЯ"/>
+				<Item Key="4" Value="БЛИЖНЯЯ ДИСТАНЦИЯ"/>
+			</Dictionary>
+			<Dictionary Type="GetUpgrates">
+				<Item Key="1" Value="SecondEngine|Второй двигатель"/>
+				<Item Key="2" Value="Stealth|Стелс-покрытие"/>
+				<Item Key="3" Value="Radar|Радар"/>
+				<Item Key="4" Value="CircularSaw|Циркулярная пила"/>
+				<Item Key="5" Value="Flamethrower|Реактивный огнемёт"/>
+				<Item Key="6" Value="PlasmaCannon|Спаренная плазмопушка"/>
+			</Dictionary>
+			<Dictionary Type="GetPurchases">
+				<Item Key="Месячное проживание на Земле" Value="5"/>
+				<Item Key="Круиз по галактике" Value="10"/>
+				<Item Key="Робот-помощник" Value="50"/>
+				<Item Key="Жена/муж-андроид" Value="100"/>
+				<Item Key="Звёздный ялик" Value="150"/>
+				<Item Key="Кибермодификация тела" Value="200"/>
+				<Item Key="Биомодификация тела" Value="300"/>
+				<Item Key="Чудо-омоложение" Value="400"/>
+				<Item Key="Особняк на Эдеме" Value="500"/>
+				<Item Key="Остров на Гидронее" Value="750"/>
+				<Item Key="Космический фрегат" Value="1000"/>
+				<Item Key="Колонизация нового планетоида" Value="1500"/>
+			</Dictionary>
+			<Dictionary Type="GetFuryLevel">
+				<Item Key="-2" Value="Монах"/>
+				<Item Key="-1" Value="Пацифист"/>
+				<Item Key="0" Value="Путник"/>
+				<Item Key="1" Value="Милитарист"/>
+				<Item Key="2" Value="Берсерк"/>
+			</Dictionary>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
