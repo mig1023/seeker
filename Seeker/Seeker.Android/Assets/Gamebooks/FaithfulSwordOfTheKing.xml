@@ -10,6 +10,22 @@
 		</Styles>
 		<Constants>
 			<List Type="WithoutStatuses">0, 660</List>
+			<Dictionary Type="Skills">
+				<Item Key="1" Value="12"/>
+				<Item Key="2" Value="8"/>
+				<Item Key="3" Value="10"/>
+				<Item Key="4" Value="7"/>
+				<Item Key="5" Value="9"/>
+				<Item Key="6" Value="11"/>
+			</Dictionary>
+			<Dictionary Type="Strengths">
+				<Item Key="1" Value="22"/>
+				<Item Key="2" Value="18"/>
+				<Item Key="3" Value="14"/>
+				<Item Key="4" Value="24"/>
+				<Item Key="5" Value="16"/>
+				<Item Key="6" Value="20"/>
+			</Dictionary>	
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
