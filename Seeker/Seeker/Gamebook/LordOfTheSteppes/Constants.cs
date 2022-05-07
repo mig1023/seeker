@@ -8,13 +8,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
         public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
 
-        public static Dictionary<string, int> GetStartValues() => new Dictionary<string, int>
-        {
-            ["Attack"] = 8,
-            ["Defence"] = 15,
-            ["Endurance"] = 14,
-            ["Initiative"] = 10,
-        };
+        public static Dictionary<string, int> GetStartValues { get; set; }
 
         public static Dictionary<Character.SpecialTechniques, string> TechniquesNames() => new Dictionary<Character.SpecialTechniques, string>
         {

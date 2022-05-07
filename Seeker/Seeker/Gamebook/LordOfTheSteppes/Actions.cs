@@ -32,7 +32,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             if (!String.IsNullOrEmpty(Stat))
             {
-                int diff = (GetProperty(protagonist, Stat) - Constants.GetStartValues()[Stat]);
+                int diff = (GetProperty(protagonist, Stat) - Constants.GetStartValues[Stat]);
                 string diffLine = (diff > 0 ? String.Format(" (+{0})", diff) : String.Empty);
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
@@ -121,7 +121,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 (protagonist.SpecialTechnique.Count > 0);
 
             bool disabledByBonusesRemove = !String.IsNullOrEmpty(Stat) &&
-                ((GetProperty(protagonist, Stat) - Constants.GetStartValues()[Stat]) <= 0) && secondButton;
+                ((GetProperty(protagonist, Stat) - Constants.GetStartValues[Stat]) <= 0) && secondButton;
 
             bool disabledByBonusesAdd = (!String.IsNullOrEmpty(Stat)) && (protagonist.Bonuses <= 0) && !secondButton;
             bool disabledByPrice = (Price > 0) && (protagonist.Coins < Price);
