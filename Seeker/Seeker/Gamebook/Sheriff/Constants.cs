@@ -6,27 +6,9 @@ namespace Seeker.Gamebook.Sheriff
     {
         public static Constants StaticInstance = new Constants();
 
-        public static List<string> CleaningNotebookList() => new List<string>
-        {
-            "Билли убит в амбаре",
-            "Все любили Билли",
-            "Убит ночью",
-            "Не успел защититься",
-            "У убийцы есть рука",
-            "Убийца женщина",
-            "Надо проверить салон мадам Жу-жу",
-            "Женская перчатка",
-            "Дробовик",
-            "Патроны",
-            "Портсигар",
-        };
+        public static List<string> CleaningNotebookList { get; set; }
 
-        public static Dictionary<string, int> Levels() => new Dictionary<string, int>
-        {
-            ["Easy"] = 100,
-            ["Medium"] = 1,
-            ["Hard"] = 0,
-        };
+        public static Dictionary<string, int> Levels { get; set; }
 
         public static Links GetLinks() => new Links
         {

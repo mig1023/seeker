@@ -8,12 +8,12 @@ namespace Seeker.Gamebook.Sheriff
         {
             if (Name == "Level")
             {
-                Character.Protagonist.Whoosh += Constants.Levels()[ValueString];
+                Character.Protagonist.Whoosh += Constants.Levels[ValueString];
                 Game.Option.Trigger(ValueString);
             }
             else if (Name == "CleanNotebook")
             {
-                foreach (string clean in Constants.CleaningNotebookList())
+                foreach (string clean in Constants.CleaningNotebookList)
                     Game.Option.Trigger(clean, remove: true);
             }
             else
