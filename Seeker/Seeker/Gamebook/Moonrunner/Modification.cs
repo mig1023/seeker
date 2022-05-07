@@ -8,7 +8,7 @@ namespace Seeker.Gamebook.Moonrunner
         {
             if (Name == "Oblivion")
             {
-                foreach (string skill in Constants.Skills())
+                foreach (string skill in Constants.Skills)
                     Game.Option.Trigger(skill, remove: true);
             }
             else if (Name == "GoldOffer")

@@ -6,28 +6,9 @@ namespace Seeker.Gamebook.Moonrunner
     {
         public static Constants StaticInstance = new Constants();
 
-        public static Dictionary<int, string> SpellsList() => new Dictionary<int, string>
-        {
-            [1] = "первое",
-            [2] = "второе",
-            [3] = "третье",
-            [4] = "четвёртое",
-            [5] = "пятое",
-            [6] = "шестое",
-        };
+        public static Dictionary<int, string> SpellsList { get; set; }
 
-        public static List<string> Skills() => new List<string>
-        {
-            "Акробатика",
-            "Скалолазание",
-            "Сражение",
-            "Интеллект",
-            "Маскировка",
-            "Взлом",
-            "Ловкость рук",
-            "Скрытность",
-            "Поиск следов",
-        };
+        public static List<string> Skills { get; set; }
 
         public static Links GetLinks() => new Links
         {
