@@ -15,7 +15,7 @@ namespace Seeker.Gamebook.Catharsis
         {
             if (!String.IsNullOrEmpty(Bonus))
             {
-                int diff = (GetProperty(protagonist, Bonus) - Constants.GetStartValues()[Bonus]);
+                int diff = (GetProperty(protagonist, Bonus) - Constants.GetStartValues[Bonus]);
                 string diffLine = (diff > 0 ? String.Format(" (+{0})", diff) : String.Empty);
 
                 return new List<string> { String.Format("{0}{1}", Text, diffLine) };
@@ -43,7 +43,7 @@ namespace Seeker.Gamebook.Catharsis
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool disabledByBonusesRemove = !String.IsNullOrEmpty(Bonus) &&
-                ((GetProperty(protagonist, Bonus) - Constants.GetStartValues()[Bonus]) <= 0) && secondButton;
+                ((GetProperty(protagonist, Bonus) - Constants.GetStartValues[Bonus]) <= 0) && secondButton;
 
             bool disabledByBonusesAdd = (!String.IsNullOrEmpty(Bonus)) && (protagonist.Bonuses <= 0) && !secondButton;
 

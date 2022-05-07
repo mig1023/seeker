@@ -6,12 +6,7 @@ namespace Seeker.Gamebook.Catharsis
     {
         public static Constants StaticInstance = new Constants();
 
-        public static Dictionary<string, int> GetStartValues() => new Dictionary<string, int>
-        {
-            ["Fight"] = 10,
-            ["Accuracy"] = 10,
-            ["Stealth"] = 3,
-        };
+        public static Dictionary<string, int> GetStartValues { get; set; }
 
         public static Links GetLinks() => new Links
         {
