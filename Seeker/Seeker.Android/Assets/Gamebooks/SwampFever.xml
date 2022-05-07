@@ -2,15 +2,15 @@
 	<Introduction>
 		<Title>Болотная лихорадка</Title>
 		<Styles>
-            <Color Type="Background">#485432</Color>
-            <Color Type="Font">#eaece8</Color>
-            <Color Type="ActionBox">#707a60</Color>
-            <Color Type="AdditionalStatus">#34411c</Color>
-            <Color Type="AdditionalFont">#ffffff</Color>
+			<Color Type="Background">#485432</Color>
+			<Color Type="Font">#eaece8</Color>
+			<Color Type="ActionBox">#707a60</Color>
+			<Color Type="AdditionalStatus">#34411c</Color>
+			<Color Type="AdditionalFont">#ffffff</Color>
 			<Color Type="Main, Option">#5c6649</Color>
 			<Color Type="Action">#5a6546</Color>
-            <Color Type="Continue">#8c937f</Color>
-            <Color Type="System">#717963</Color>
+			<Color Type="Continue">#8c937f</Color>
+			<Color Type="System">#717963</Color>
 		</Styles>
 		<Constants>
 			<Dictionary Type="GetRangeTypes">
