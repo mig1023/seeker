@@ -7,6 +7,19 @@
             <Color Type="Continue">#26334f</Color>
             <Color Type="System">#bdc1ca</Color>
 		</Styles>
+		<Constants>
+			<Dictionary Type="ResultCalculation">
+				<Item Key="Рана" Value="-10"/>
+				<Item Key="Телохранитель" Value="15"/>
+				<Item Key="Проблемы с законом" Value="10"/>
+				<Item Key="Поломка" Value="-20"/>
+				<Item Key="Два" Value="-15"/>
+				<Item Key="Пилот боевого корабля" Value="20"/>
+				<Item Key="Миротворец" Value="10"/>
+				<Item Key="Задание выполнено" Value="20"/>
+				<Item Key="Лучший финал" Value="30"/>
+			</Dictionary>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
