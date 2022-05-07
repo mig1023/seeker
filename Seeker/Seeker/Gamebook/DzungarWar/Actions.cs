@@ -82,7 +82,7 @@ namespace Seeker.Gamebook.DzungarWar
             else if (Level > 0)
             {
                 return new List<string> { String.Format("Проверка {0}, уровень {1}",
-                    Constants.StatNames()[Stat], TestLevelWithPenalty(Level, out List<string> _)) };
+                    Constants.StatNames[Stat], TestLevelWithPenalty(Level, out List<string> _)) };
             }
             else if (!String.IsNullOrEmpty(Stat) && !StatToMax)
             {
@@ -328,7 +328,7 @@ namespace Seeker.Gamebook.DzungarWar
 
             resultLine.Add(String.Format(
                 "Проверка {0}: {1} + {2} + {3} {4} {5}",
-                Constants.StatNames()[stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
+                Constants.StatNames[stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
                 currentStat, (result ? ">=" : "<"), level));
         }
 
@@ -389,7 +389,7 @@ namespace Seeker.Gamebook.DzungarWar
                 levels.Add(test, finalLevel);
 
                 testLines.Add(String.Format("Проверка {0}: {1} x {2:f1} = {3} {4} коррекция, итого {5}",
-                    Constants.StatNames()[test], currentStat, approximateStatUnit, approximateLevel, approximateFix, finalLevel));
+                    Constants.StatNames[test], currentStat, approximateStatUnit, approximateLevel, approximateFix, finalLevel));
             }
 
             testLines.Add(String.Empty);

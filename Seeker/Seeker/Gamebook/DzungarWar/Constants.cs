@@ -6,15 +6,7 @@ namespace Seeker.Gamebook.DzungarWar
     {
         public static Constants StaticInstance = new Constants();
 
-        public static Dictionary<string, string> StatNames() => new Dictionary<string, string>
-        {
-            ["Strength"] = "силы",
-            ["Skill"] = "ловкости",
-            ["Wisdom"] = "мудрости",
-            ["Cunning"] = "хитрости",
-            ["Oratory"] = "красноречия",
-            ["Danger"] = "опасности",
-        };
+        public static Dictionary<string, string> StatNames { get; set; }
 
         public static Links GetLinks() => new Links
         {
