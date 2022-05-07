@@ -15,6 +15,14 @@
 		</Styles>
 		<Constants>
 			<List Type="WithoutStatuses">0, 658, 659, 660</List>
+			<Dictionary Type="StatNames">
+				<Item Key="Strength" Value="силы"/>
+				<Item Key="Skill" Value="ловкости"/>
+				<Item Key="Wisdom" Value="мудрости"/>
+				<Item Key="Cunning" Value="хитрости"/>
+				<Item Key="Oratory" Value="красноречия"/>
+				<Item Key="Danger" Value="опасности"/>
+			</Dictionary>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
