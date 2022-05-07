@@ -26,7 +26,7 @@ namespace Seeker.Gamebook.MissionToUrpan
                 lines += 1;
             }
 
-            foreach (KeyValuePair<string, int> condition in Constants.ResultCalculation())
+            foreach (KeyValuePair<string, int> condition in Constants.ResultCalculation)
             {
                 string head = (condition.Value > 0 ? "GOOD|+" : "BAD|-");
 

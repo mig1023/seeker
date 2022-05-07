@@ -6,18 +6,7 @@ namespace Seeker.Gamebook.MissionToUrpan
     {
         public static Constants StaticInstance = new Constants();
 
-        public static Dictionary<string, int> ResultCalculation() => new Dictionary<string, int>
-        {
-            ["Рана"] = -10,
-            ["Телохранитель"] = 15,
-            ["Проблемы с законом"] = 10,
-            ["Поломка"] = -20,
-            ["Два"] = -15,
-            ["Пилот боевого корабля"] = 20,
-            ["Миротворец"] = 10,
-            ["Задание выполнено"] = 20,
-            ["Лучший финал"] = 30,
-        };
+        public static Dictionary<string, int> ResultCalculation { get; set; }
 
         public static Links GetLinks() => new Links
         {
