@@ -55,11 +55,11 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             int dice = Game.Dice.Roll(dices: 2);
 
-            MaxSkill = Constants.Skills()[dice];
+            MaxSkill = Constants.Skills[dice];
             Skill = MaxSkill;
-            MaxStrength = Constants.Strengths()[dice];
+            MaxStrength = Constants.Strengths[dice];
             Strength = MaxStrength;
-            Charm = Constants.Charms()[dice];
+            Charm = Constants.Charms[dice];
 
             Blaster = 1;
             GateCode = 0;
