@@ -6,6 +6,14 @@
             <Color Type="Option, Continue">#b45b27</Color>
             <Color Type="System">#f0d1b9</Color>
 		</Styles>
+		<Constants>
+			<List Type="CleaningNotebookList"> Билли убит в амбаре, Все любили Билли, Убит ночью, Не успел защититься, У убийцы есть рука, Убийца женщина, Надо проверить салон мадам Жу-жу, Женская перчатка, Дробовик, Патроны, Портсигар</List>
+			<Dictionary Type="Levels">
+				<Item Key="Easy" Value="100"/>
+				<Item Key="Medium" Value="1"/>
+				<Item Key="Hard" Value="0"/>
+			</Dictionary>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
