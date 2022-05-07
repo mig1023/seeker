@@ -10,6 +10,17 @@
 			<Color Type="Action">#7e0059</Color>
             <Color Type="System">#ddd1df</Color>
 		</Styles>
+		<Constants>
+			<Dictionary Type="SpellsList">
+				<Item Key="1" Value="первое"/>
+				<Item Key="2" Value="второе"/>
+				<Item Key="3" Value="третье"/>
+				<Item Key="4" Value="четвёртое"/>
+				<Item Key="5" Value="пятое"/>
+				<Item Key="6" Value="шестое"/>
+			</Dictionary>
+			<List Type="Skills">Акробатика, Скалолазание, Сражение, Интеллект, Маскировка, Взлом, Ловкость рук, Скрытность, Поиск следов</List>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
