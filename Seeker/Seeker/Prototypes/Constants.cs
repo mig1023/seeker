@@ -68,7 +68,7 @@ namespace Seeker.Prototypes
             if (listType.PropertyType == typeof(List<int>))
                 this.GetType().GetProperty(name).SetValue(this, list.Select(x => int.Parse(x)).ToList());
             else
-                this.GetType().GetProperty(name).SetValue(this, list);
+                this.GetType().GetProperty(name).SetValue(this, list.Select(x => x.Trim()).ToList());
         }
 
         public virtual void LoadDictionary(string name, Dictionary<string, string> dictionary)
