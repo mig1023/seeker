@@ -2,11 +2,11 @@
 	<Introduction>
 		<Title>Silent School</Title>
 		<Styles>
-            <Color Type="StatusBar">#2a2a2a</Color>
+			<Color Type="StatusBar">#2a2a2a</Color>
 			<Color Type="Main">#434343</Color>
 			<Color Type="Action">#555555</Color>
-            <Color Type="Option">#686868</Color>
-            <Color Type="System">#eeeeee</Color>
+			<Color Type="Option">#686868</Color>
+			<Color Type="System">#eeeeee</Color>
 		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
