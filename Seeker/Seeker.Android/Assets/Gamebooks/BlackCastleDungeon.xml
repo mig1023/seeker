@@ -2,11 +2,11 @@
 	<Introduction>
 		<Title>Подземелья чёрного замка</Title>
 		<Styles>
-            <Color Type="StatusBar">#2a2a2a</Color>
+			<Color Type="StatusBar">#2a2a2a</Color>
 			<Color Type="Main">#151515</Color>
-            <Color Type="Action">#3f3f3f</Color>
-            <Color Type="Option">#696969</Color>
-            <Color Type="System">#f9f9f9</Color>
+			<Color Type="Action">#3f3f3f</Color>
+			<Color Type="Option">#696969</Color>
+			<Color Type="System">#f9f9f9</Color>
 		</Styles>
 		<Constants>
 			<List Type="WithoutStatuses">0, 619</List>
