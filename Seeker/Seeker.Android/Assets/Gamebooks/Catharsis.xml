@@ -11,6 +11,13 @@
 			<Color Type="Action">#939393</Color>
             <Color Type="Continue">#a9a9a6</Color>
 		</Styles>
+		<Constants>
+			<Dictionary Type="GetStartValues">
+				<Item Key="Fight" Value="10"/>
+				<Item Key="Accuracy" Value="10"/>
+				<Item Key="Stealth" Value="3"/>
+			</Dictionary>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
 		</Settings>
