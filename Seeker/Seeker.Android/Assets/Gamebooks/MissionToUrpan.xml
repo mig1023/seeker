@@ -3,9 +3,9 @@
 		<Title>Миссия на Урпан</Title>
 		<Styles>
 			<Color Type="Main">#0f1d3c</Color>
-            <Color Type="Action, StatusBar">#0d1a36</Color>
-            <Color Type="Continue">#26334f</Color>
-            <Color Type="System">#bdc1ca</Color>
+			<Color Type="Action, StatusBar">#0d1a36</Color>
+			<Color Type="Continue">#26334f</Color>
+			<Color Type="System">#bdc1ca</Color>
 		</Styles>
 		<Constants>
 			<Dictionary Type="ResultCalculation">
