@@ -212,7 +212,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             SetProperty(protagonist, Target, (GetProperty(protagonist, Target) + dicesResult));
 
             diceValues.Add(String.Format("BIG|BOLD|Вы добавили +{0} к {1}",
-                dicesResult, Constants.ParamNames()[Target]));
+                dicesResult, Constants.ParamNames[Target]));
 
             return diceValues;
         }

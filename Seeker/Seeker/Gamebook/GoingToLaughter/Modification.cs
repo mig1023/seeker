@@ -50,7 +50,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             }
             else if (name == "SleepCleansing")
             {
-                Game.Data.Triggers = Game.Data.Triggers.Intersect(Constants.SleepCleaningSurvive()).ToList();
+                Game.Data.Triggers = Game.Data.Triggers.Intersect(Constants.SleepCleaningSurvive).ToList();
             }
             else
             {

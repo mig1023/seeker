@@ -6,33 +6,11 @@ namespace Seeker.Gamebook.GoingToLaughter
     {
         public static Constants StaticInstance = new Constants();
 
-        public static Dictionary<string, string> IncompatiblesDisadvantages => new Dictionary<string, string>
-        {
-            ["Пьянство"] = "Набожность",
-            ["Алчность"] = "Набожность",
-            ["Суеверие"] = "Набожность",
-            ["Похоть"] = "Набожность",
-            ["Жестокосердие"] = "Набожность",
-            ["Азартность"] = "Набожность",
-            ["Невезение"] = "Везение",
-            ["Рассеянность"] = "Наблюдательность",
-            ["Обжорство"] = "Эквилибристика, Акробатика",
-            ["Малодушие"] = "Вспыльчивость",
-        };
+        public static Dictionary<string, string> IncompatiblesDisadvantages { get; set; }
 
-        public static Dictionary<string, string> ParamNames() => new Dictionary<string, string>
-        {
-            ["Heroism"] = "Героизму",
-            ["Villainy"] = "Злодейству",
-            ["Buffoonery"] = "Шутовству",
-            ["Inspiration"] = "Вдохновению",
-        };
+        public static Dictionary<string, string> ParamNames { get; set; }
 
-        public static List<string> SleepCleaningSurvive() => new List<string>
-        {
-            "Дежа вю", "Се ля ви", "Шерше ля фам",
-            "Триумфатор", "Лютня", "Записная книжка", "Бревиарий",
-        };
+        public static List<string> SleepCleaningSurvive { get; set; }
 
         public static Links GetLinks() => new Links
         {
