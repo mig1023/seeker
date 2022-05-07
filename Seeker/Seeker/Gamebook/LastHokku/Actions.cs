@@ -10,7 +10,7 @@ namespace Seeker.Gamebook.LastHokku
 
         public override string TextByOptions(string option)
         {
-            if (!Constants.GetParagraphsWithoutHokkuCreation().Contains(Game.Data.CurrentParagraphID) && !String.IsNullOrEmpty(option))
+            if (!Constants.GetParagraphsWithoutHokkuCreation.Contains(Game.Data.CurrentParagraphID) && !String.IsNullOrEmpty(option))
                 protagonist.Hokku.Add(option);
 
             if (protagonist.Hokku.Count >= 7)
