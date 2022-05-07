@@ -11,6 +11,28 @@
 		</Styles>
 		<Constants>
 			<List Type="WithoutStatuses">0, 102, 103</List>
+			<Dictionary Type="StatNames">
+				<Item Key="Muscle" Value="мышцы"/>
+				<Item Key="Wits" Value="мозги"/>
+				<Item Key="Courage" Value="смелость"/>
+				<Item Key="Luck" Value="удачу"/>
+				<Item Key="Orcishness" Value="оркишность"/>
+			</Dictionary>
+			<Dictionary Type="ResultCalculation">
+				<Item Key="!Гибель" Value="+1 за то, что ты ещё жив"/>
+				<Item Key="Обрёл имя" Value="+1 за то, что обрёл имя"/>
+				<Item Key="Выбрался из подземелья" Value=" +1 за то, что выбрался из подземелья"/>
+				<Item Key="Кузнец своей судьбы" Value=" +1 за то, что стал кузнецом своей судьбы"/>
+				<Item Key="Приключенец" Value="+1 за то, что стал искателем приключений"/>
+				<Item Key="Вместе с ней, !Девушка погибла" Value="+1 за то, что девушка-рабыня осталась с тобой и в живых"/>
+				<Item Key="Бетани" Value="+1 за то, что узнал, как зовут девушку-рабыню"/>
+				<Item Key="Поцелуй" Value="+1 за то, что тебя поцеловала девушка-рабыня"/>
+				<Item Key="Галрос Бессмертный" Value="+1 за то, что одолел Галроса"/>
+				<Item Key="Мортимер Нечихающий" Value="+1 за то, что одолел Мортимера"/>
+				<Item Key="Тёмный Властелин" Value="-1 за то, что стал новым Темным Властелином"/>
+				<Item Key="Ограблен" Value="-1 за то, что был ограблен"/>
+				<Item Key="Раб своей природы" Value="-1 за то, что стал рабом своей оркской натуры"/>
+			</Dictionary>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
