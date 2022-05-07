@@ -2,9 +2,9 @@
 	<Introduction>
 		<Title>Остров Осьминогов</Title>
 		<Styles>
-            <Color Type="StatusBar">#ce4f36</Color>
+			<Color Type="StatusBar">#ce4f36</Color>
 			<Color Type="Main, Action, Option">#c93c20</Color>
-            <Color Type="System">#eeeeee</Color>
+			<Color Type="System">#eeeeee</Color>
 		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
