@@ -10,6 +10,25 @@
 		</Styles>
 		<Constants>
 			<List Type="WithoutStatuses">0, 1393, 1394</List>
+			<Dictionary Type="IncompatiblesDisadvantages">
+				<Item Key="Пьянство" Value="Набожность"/>
+				<Item Key="Алчность" Value="Набожность"/>
+				<Item Key="Суеверие" Value="Набожность"/>
+				<Item Key="Похоть" Value="Набожность"/>
+				<Item Key="Жестокосердие" Value="Набожность"/>
+				<Item Key="Азартность" Value="Набожность"/>
+				<Item Key="Невезение" Value="Везение"/>
+				<Item Key="Рассеянность" Value="Наблюдательность"/>
+				<Item Key="Обжорство" Value="Эквилибристика, Акробатика"/>
+				<Item Key="Малодушие" Value="Вспыльчивость"/>
+			</Dictionary>
+			<Dictionary Type="ParamNames">
+				<Item Key="Heroism" Value="Героизму"/>
+				<Item Key="Villainy" Value="Злодейству"/>
+				<Item Key="Buffoonery" Value="Шутовству"/>
+				<Item Key="Inspiration" Value="Вдохновению"/>
+			</Dictionary>
+			<List Type="SleepCleaningSurvive">Дежа вю, Се ля ви, Шерше ля фам, Триумфатор, Лютня, Записная книжка, Бревиарий</List>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
