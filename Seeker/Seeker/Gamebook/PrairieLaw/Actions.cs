@@ -108,7 +108,7 @@ namespace Seeker.Gamebook.PrairieLaw
             string luckListShow = String.Empty;
 
             for (int i = 1; i < 7; i++)
-                luckListShow += String.Format("{0} ", protagonist.Luck[i] ? Constants.LuckList()[i] : Constants.LuckList()[i + 10]);
+                luckListShow += String.Format("{0} ", Constants.LuckList[protagonist.Luck[i] ? i : i + 10]);
 
             return luckListShow;
         }

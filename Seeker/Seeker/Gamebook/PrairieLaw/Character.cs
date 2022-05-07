@@ -68,11 +68,11 @@ namespace Seeker.Gamebook.PrairieLaw
 
             int dice = Game.Dice.Roll(dices: 2);
 
-            MaxSkill = Constants.Skills()[dice];
+            MaxSkill = Constants.Skills[dice];
             Skill = MaxSkill;
-            MaxStrength = Constants.Strengths()[dice];
+            MaxStrength = Constants.Strengths[dice];
             Strength = MaxStrength;
-            Charm = Constants.Charms()[dice];
+            Charm = Constants.Charms[dice];
 
             Cents = 1500;
             Cartridges = 6;
