@@ -10,6 +10,9 @@
             <Color Type="StatusBar">#aa2218</Color>
             <Color Type="SystemFont">#f7f1b6</Color>
 		</Styles>
+		<Constants>
+			<List Type="GetApartments">один, два, три, один, два, три</List>
+		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
 		</Settings>
