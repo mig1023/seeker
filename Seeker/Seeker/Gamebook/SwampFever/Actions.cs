@@ -42,7 +42,7 @@ namespace Seeker.Gamebook.SwampFever
             String.Format("Котировка: 1:{0}", protagonist.Rate),
             String.Format("Стигон: {0}/6", protagonist.Stigon),
             String.Format("Креды: {0}", protagonist.Creds),
-            String.Format("Ярость: {0}", Constants.GetFuryLevel()[protagonist.Fury]),
+            String.Format("Ярость: {0}", Constants.GetFuryLevel[protagonist.Fury]),
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
@@ -135,7 +135,7 @@ namespace Seeker.Gamebook.SwampFever
             return new List<string> { "RELOAD" };
         }
 
-        private string GetUpgratesValues(int index, int part) => Constants.GetUpgrates()[index].Split('|')[part - 1];
+        private string GetUpgratesValues(int index, int part) => Constants.GetUpgrates[index].Split('|')[part - 1];
 
         private bool Upgrade(ref List<int> myCombination, ref List<string> myCombinationLine, ref List<string> fight)
         {
@@ -143,7 +143,7 @@ namespace Seeker.Gamebook.SwampFever
 
             bool upgradeInAction = false;
 
-            for (int i = 1; i <= Constants.GetUpgrates().Count; i++)
+            for (int i = 1; i <= Constants.GetUpgrates.Count; i++)
                 upgrades += GetProperty(protagonist, GetUpgratesValues(i, part: 1));
 
             if (upgrades == 0)
@@ -155,7 +155,7 @@ namespace Seeker.Gamebook.SwampFever
 
             fight.Add(String.Format("Кубик проверки апгрейда: {0}", Game.Dice.Symbol(upgradeDice)));
 
-            for (int i = 1; i <= Constants.GetUpgrates().Count; i++)
+            for (int i = 1; i <= Constants.GetUpgrates.Count; i++)
             {
                 if (GetProperty(protagonist, GetUpgratesValues(i, part: 1)) == 0)
                     continue;
@@ -182,7 +182,7 @@ namespace Seeker.Gamebook.SwampFever
         {
             List<string> fight = new List<string>();
 
-            Dictionary<int, string> rangeType = Constants.GetRangeTypes();
+            Dictionary<int, string> rangeType = Constants.GetRangeTypes;
 
             List<int> myCombination = new List<int>();
             List<string> myCombinationLine = new List<string>();
@@ -489,7 +489,7 @@ namespace Seeker.Gamebook.SwampFever
             bool affordable = false;
             bool? prevAffordable = null;
 
-            foreach (KeyValuePair<string, int> purchase in Constants.GetPurchases().OrderBy(x => x.Value))
+            foreach (KeyValuePair<string, int> purchase in Constants.GetPurchases.OrderBy(x => x.Value))
             {
                 affordable = (purchase.Value <= protagonist.Creds);
                 string affLine = (affordable ? "GOOD|BOLD|" : String.Empty);
