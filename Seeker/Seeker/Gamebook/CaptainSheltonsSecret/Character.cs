@@ -52,9 +52,9 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             int dice = Game.Dice.Roll(dices: 2);
 
             Name = "Главный герой";
-            MaxMastery = Constants.Masterys()[dice];
+            MaxMastery = Constants.Masterys[dice];
             Mastery = MaxMastery;
-            MaxEndurance = Constants.Endurances()[dice];
+            MaxEndurance = Constants.Endurances[dice];
             Endurance = MaxEndurance;
             Gold = 15;
             Luck = new List<bool> { false, true, true, true, true, true, true };
