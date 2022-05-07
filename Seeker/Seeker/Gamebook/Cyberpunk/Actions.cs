@@ -45,7 +45,7 @@ namespace Seeker.Gamebook.Cyberpunk
             if (Type == "Get, Decrease")
             {
                 int statValue = GetProperty(protagonist, Stat);
-                string statName = Constants.CharactersParams()[Stat];
+                string statName = Constants.CharactersParams[Stat];
 
                 return new List<string> { String.Format("{0} (значение: {1})", statName.ToUpper(), statValue) };
             }
@@ -58,7 +58,7 @@ namespace Seeker.Gamebook.Cyberpunk
                 string line = "Проверка: ";
 
                 foreach (string stat in Stat.Split(','))
-                    line += String.Format("{0} + ", Constants.CharactersParams()[stat.Trim()]);
+                    line += String.Format("{0} + ", Constants.CharactersParams[stat.Trim()]);
 
                 return new List<string> { line.TrimEnd(' ', '+') };
             }
@@ -138,7 +138,7 @@ namespace Seeker.Gamebook.Cyberpunk
             {
                 paramsLevel = int.Parse(Stat.Replace("Selfcontrol", String.Empty));
                 paramsLine += String.Format("{0} ({1}) + ",
-                    paramsLevel, Constants.CharactersParams()[Stat.Trim()].ToLower());
+                    paramsLevel, Constants.CharactersParams[Stat.Trim()].ToLower());
 
                 Game.Option.Trigger(Stat, remove: true);
             }
@@ -149,7 +149,7 @@ namespace Seeker.Gamebook.Cyberpunk
                     int param = GetProperty(protagonist, stat.Trim());
                     paramsLevel += param;
                     paramsLine += String.Format("{0} ({1}) + ",
-                        param, Constants.CharactersParams()[stat.Trim()].ToLower());
+                        param, Constants.CharactersParams[stat.Trim()].ToLower());
                 }
             }
 

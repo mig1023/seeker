@@ -6,23 +6,9 @@ namespace Seeker.Gamebook.Cyberpunk
     {
         public static Constants StaticInstance = new Constants();
 
-        public static Dictionary<string, string> CharactersParams() => new Dictionary<string, string>
-        {
-            ["Planning"] = "Планирование",
-            ["Preparation"] = "Подготовка",
-            ["Luck"] = "Везение",
-            ["Cybernetics"] = "Кибернетика",
-            ["Morality"] = "Мораль",
-            ["Careerism"] = "Карьеризм",
-            ["BlackMarket"] = "Чёрный рынок",
-            ["Clan"] = "Клан",
-            ["Selfcontrol25"] = "Самообладание 25",
-            ["Selfcontrol50"] = "Самообладание 50",
-            ["Selfcontrol75"] = "Самообладание 75",
-            ["Selfcontrol100"] = "Самообладание 100",
-        };
+        public static Dictionary<string, string> CharactersParams { get; set; }
 
-        public static List<string> NormalizationParams() => new List<string> { "Planning", "Preparation", "Luck" };
+        public static List<string> NormalizationParams { get; set; }
 
         public static Links GetLinks() => new Links
         {
