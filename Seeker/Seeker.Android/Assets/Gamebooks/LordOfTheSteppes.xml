@@ -12,6 +12,12 @@
 		</Styles>
 		<Constants>
 			<List Type="WithoutStatuses">0, 904, 905, 906</List>
+			<Dictionary Type="GetStartValues">
+				<Item Key="Attack" Value="8"/>
+				<Item Key="Defence" Value="15"/>
+				<Item Key="Endurance" Value="14"/>
+				<Item Key="Initiative" Value="10"/>
+			</Dictionary>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
