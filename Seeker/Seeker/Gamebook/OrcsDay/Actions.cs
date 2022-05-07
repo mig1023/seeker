@@ -43,17 +43,17 @@ namespace Seeker.Gamebook.OrcsDay
             if (OrcishnessTest && (Level > 0))
             {
                 return new List<string> { String.Format("Проверка {0}\nуровень Оркишность ({1}) + {2}",
-                    Constants.StatNames()[Stat], protagonist.Orcishness, Level) };
+                    Constants.StatNames[Stat], protagonist.Orcishness, Level) };
             }
             else if (OrcishnessTest)
             {
                 return new List<string> { String.Format("Проверка {0}\nпо уровню Оркишности",
-                    Constants.StatNames()[Stat]) };
+                    Constants.StatNames[Stat]) };
             }
             else if (Level > 0)
             {
                 return new List<string> { String.Format("Проверка {0}, уровень {1}",
-                    Constants.StatNames()[Stat], Level) };
+                    Constants.StatNames[Stat], Level) };
             }
             else if (!String.IsNullOrEmpty(Stat))
             {
@@ -179,7 +179,7 @@ namespace Seeker.Gamebook.OrcsDay
                 okResult = (firstDice + secondDice) + currentStat >= protagonist.Orcishness + Level;
 
                 testLines.Add(String.Format("Проверка на {0}: {1} + {2} + {3} {4} {5}{6}",
-                    Constants.StatNames()[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
+                    Constants.StatNames[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
                     currentStat, (okResult ? ">=" : "<"), protagonist.Orcishness, 
                     (Level > 0 ? String.Format(" + {0}", Level) : String.Empty)));
             }
@@ -188,7 +188,7 @@ namespace Seeker.Gamebook.OrcsDay
                 okResult = (firstDice + secondDice) + currentStat >= Level;
 
                 testLines.Add(String.Format("Проверка на {0}: {1} + {2} + {3} {4} {5}",
-                    Constants.StatNames()[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
+                    Constants.StatNames[Stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
                     currentStat, (okResult ? ">=" : "<"), Level));
             }
 
@@ -487,7 +487,7 @@ namespace Seeker.Gamebook.OrcsDay
                 }
             }
 
-            foreach (KeyValuePair<string, string> trigger in Constants.ResultCalculation())
+            foreach (KeyValuePair<string, string> trigger in Constants.ResultCalculation)
             {
                 bool add = trigger.Value.Contains("+");
                 string color = (add ? "GOOD" : "BAD");
