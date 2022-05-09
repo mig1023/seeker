@@ -22,7 +22,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             }
             else
             {
-                return String.Empty;
+                return base.GetColor(type);
             }
         }
 
