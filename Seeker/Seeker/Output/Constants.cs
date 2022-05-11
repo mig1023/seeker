@@ -14,6 +14,7 @@ namespace Seeker.Output
         public static Color BACKGROUND = Color.FromHex("#f7f7f7");
         public static Color LINK_COLOR_DEFAULT = Color.Black;
         public static Color SPLITTER_COLOR_DEFAULT = Color.FromHex("#bdbdbd");
+        public static Color PICKER_BACKGROUND = Color.FromHex("#ededed");
 
         public static double BIG_FONT = 25;
         public static double STATUSBAR_FONT = 12;
@@ -27,6 +28,7 @@ namespace Seeker.Output
         public static double DISCLAIMER_BORDER = 8;
         public static double SYS_MENU_SPACING = 4;
         public static double SYS_MENU_HIGHT = 25;
+        public static double SETTINGS_SPLITTER = 8;
 
         public static int SORT_BY_TITLE = 1;
         public static int SORT_BY_AUTHORS = 2;

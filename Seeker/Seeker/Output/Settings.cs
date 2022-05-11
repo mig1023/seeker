@@ -76,7 +76,7 @@ namespace Seeker.Output
         }
 
         private static void SettingSplitter(ref StackLayout settings) =>
-            settings.Children.Add(new BoxView { HeightRequest = 8 });
+            settings.Children.Add(new BoxView { HeightRequest = Constants.SETTINGS_SPLITTER });
 
         private static void SettingButton(string settingName, SettingMethod Click, ref StackLayout settings, bool spacer = false)
         {
@@ -148,7 +148,7 @@ namespace Seeker.Output
                     VerticalOptions = LayoutOptions.Center,
                     FontSize = Interface.Font(NamedSize.Medium),
                     HorizontalTextAlignment = TextAlignment.Center,
-                    BackgroundColor = Color.FromHex("#ededed"),
+                    BackgroundColor = Constants.PICKER_BACKGROUND,
                 };
 
                 settingPicker.SelectedIndexChanged += (sender, e) => SettingChanged(sender, settingType);
