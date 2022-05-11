@@ -21,9 +21,13 @@ namespace Seeker.Output
 
                 if (!String.IsNullOrEmpty(setting.Description))
                     SettingDescription(setting.Description, ref settings);
+
+                SettingSplitter(ref settings);
             }
 
             SettingCheatingBlock(ref settings);
+
+            SettingSplitter(ref settings);
 
             SettingButton("Сбросить сохранённые игры", () => Game.Continue.Clean(), ref settings, spacer: true);
             SettingButton("Сбросить все настройки", () => Game.Settings.Clean(), ref settings);
@@ -69,7 +73,10 @@ namespace Seeker.Output
             stackLayout.Children.Add(twoLine);
 
             settings.Children.Add(stackLayout);
-        }     
+        }
+
+        private static void SettingSplitter(ref StackLayout settings) =>
+            settings.Children.Add(new BoxView { HeightRequest = 8 });
 
         private static void SettingButton(string settingName, SettingMethod Click, ref StackLayout settings, bool spacer = false)
         {
