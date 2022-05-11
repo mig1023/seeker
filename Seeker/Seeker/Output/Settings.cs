@@ -6,7 +6,6 @@ namespace Seeker.Output
 {
     class Settings
     {
-        private static Grid SettingGrid;
         private delegate void SettingMethod();
 
         public string Name { get; set; }
@@ -16,46 +15,35 @@ namespace Seeker.Output
 
         public static void Add(ref StackLayout settings)
         {
-            SettingGrid = new Grid
-            {
-                ColumnDefinitions =
-                {
-                    new ColumnDefinition { Width = 20 },
-                    new ColumnDefinition { Width = 12 },
-                    new ColumnDefinition(),
-                    new ColumnDefinition(),
-                },
-            };
-
             foreach (Settings setting in Game.Xml.GetXmlSettings())
             {
-                SettingOption(setting.Name, setting.Type, setting.Options);
+                SettingOption(setting.Name, setting.Type, setting.Options, ref settings);
 
                 if (!String.IsNullOrEmpty(setting.Description))
-                    SettingDescription(setting.Description);
+                    SettingDescription(setting.Description, ref settings);
             }
 
-            SettingCheatingBlock();
+            SettingCheatingBlock(ref settings);
 
-            SettingButton("Сбросить сохранённые игры", () => Game.Continue.Clean(), spacer: true);
-            SettingButton("Сбросить все настройки", () => Game.Settings.Clean());
-
-            settings.Children.Add(SettingGrid);
+            SettingButton("Сбросить сохранённые игры", () => Game.Continue.Clean(), ref settings, spacer: true);
+            SettingButton("Сбросить все настройки", () => Game.Settings.Clean(), ref settings);
         }
 
-        private static void SettingCheatingBlock()
+        private static void SettingCheatingBlock(ref StackLayout settings)
         {
-            int currentRow = AddNewRow(ref SettingGrid);
-
-            VerticalText settingTitle = new VerticalText
+            StackLayout stackLayout = new StackLayout
             {
-                Value = "Читерство",
-                VerticalOptions = LayoutOptions.Center,
-                LeftRotate = true,
+                Orientation = StackOrientation.Horizontal,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
             };
 
-            SettingGrid.Children.Add(settingTitle, 0, currentRow);
-            Grid.SetRowSpan(settingTitle, 2);
+            Label settingTitle = new Label
+            {
+                Text = "Читерство",
+                VerticalOptions = LayoutOptions.Center,
+            };
+
+            stackLayout.Children.Add(settingTitle);
 
             Label brace = new Label
             {
@@ -63,23 +51,28 @@ namespace Seeker.Output
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 FontSize = 50,
                 FontFamily = Interface.TextFontFamily("RobotoFontThin"),
-                Margin = new Thickness(-5, -10, 0, 0),
+                Margin = new Thickness(0, -10, 0, 0),
             };
 
-            SettingGrid.Children.Add(brace, 1, currentRow);
-            Grid.SetRowSpan(brace, 2);
+            stackLayout.Children.Add(brace);
 
-            SettingOption("Кнопка 'Назад'", "CheatingBack", null, row: currentRow);
+            StackLayout twoLine = new StackLayout
+            {
+                Orientation = StackOrientation.Vertical,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+            };
 
-            currentRow = AddNewRow(ref SettingGrid);
+            SettingOption("Кнопка 'Назад'", "CheatingBack", null, ref twoLine);
 
-            SettingOption("God mode", "Godmode", null, row: currentRow);
+            SettingOption("God mode", "Godmode", null, ref twoLine);
+
+            stackLayout.Children.Add(twoLine);
+
+            settings.Children.Add(stackLayout);
         }     
 
-        private static void SettingButton(string settingName, SettingMethod Click, bool spacer = false)
+        private static void SettingButton(string settingName, SettingMethod Click, ref StackLayout settings, bool spacer = false)
         {
-            int currentRow = AddNewRow(ref SettingGrid);
-
             Label settingButton = new Label
             {
                 Text = settingName,
@@ -96,14 +89,11 @@ namespace Seeker.Output
             click.Tapped += (sender, e) => SettingClick(sender, Click);
             settingButton.GestureRecognizers.Add(click);
 
-            SettingGrid.Children.Add(settingButton, 0, currentRow);
-            Grid.SetColumnSpan(settingButton, 4);
+            settings.Children.Add(settingButton);
         }
 
-        private static void SettingDescription(string settingDescription)
+        private static void SettingDescription(string settingDescription, ref StackLayout settings)
         {
-            int currentRow = AddNewRow(ref SettingGrid, settingsRow: false);
-
             Label description = new Label
             {
                 Text = settingDescription,
@@ -111,13 +101,16 @@ namespace Seeker.Output
                 FontSize = Interface.Font(NamedSize.Micro),
             };
 
-            SettingGrid.Children.Add(description, 0, currentRow);
-            Grid.SetColumnSpan(description, 4);
+            settings.Children.Add(description);
         }
 
-        private static void SettingOption(string settingName, string settingType, List<string> options, int? row = null)
+        private static void SettingOption(string settingName, string settingType, List<string> options, ref StackLayout settings)
         {
-            int currentRow = row ?? AddNewRow(ref SettingGrid);
+            StackLayout stackLayout = new StackLayout
+            {
+                Orientation = StackOrientation.Horizontal,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+            };
 
             Label settingTitle = new Label
             {
@@ -126,33 +119,29 @@ namespace Seeker.Output
                 FontSize = Interface.Font(NamedSize.Small),
             };
 
-            if (row == null)
-            {
-                SettingGrid.Children.Add(settingTitle, 0, currentRow);
-                Grid.SetColumnSpan(settingTitle, 3);
-            }
-            else
-                SettingGrid.Children.Add(settingTitle, 2, currentRow);
-             
+            stackLayout.Children.Add(settingTitle);
+
             if (options == null)
             {
                 Switch settingSwitcher = new Switch
                 {
                     IsToggled = (Game.Settings.GetValue(settingType) == 1),
-                    HorizontalOptions = LayoutOptions.End,
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
                     VerticalOptions = LayoutOptions.Center,
                 };
                 settingSwitcher.Toggled += (sender, e) => SwitcherChanged(e, settingType);
 
-                SettingGrid.Children.Add(settingSwitcher, 3, currentRow);
+                stackLayout.Children.Add(settingSwitcher);
             }
             else
             {
                 Picker settingPicker = new Picker
                 {
-                    HorizontalOptions = LayoutOptions.End,
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
                     VerticalOptions = LayoutOptions.Center,
                     FontSize = Interface.Font(NamedSize.Medium),
+                    HorizontalTextAlignment = TextAlignment.Center,
+                    BackgroundColor = Color.FromHex("#ededed"),
                 };
 
                 settingPicker.SelectedIndexChanged += (sender, e) => SettingChanged(sender, settingType);
@@ -162,18 +151,10 @@ namespace Seeker.Output
 
                 settingPicker.SelectedIndex = Game.Settings.GetValue(settingType);
 
-                SettingGrid.Children.Add(settingPicker, 3, currentRow);
+                stackLayout.Children.Add(settingPicker);
             }
-        }
 
-        private static int AddNewRow(ref Grid settingGrid, bool settingsRow = true)
-        {
-            if (settingsRow)
-                settingGrid.RowDefinitions.Add(new RowDefinition { Height = 40 });
-            else
-                settingGrid.RowDefinitions.Add(new RowDefinition());
-
-            return settingGrid.RowDefinitions.Count - 1;
+            settings.Children.Add(stackLayout);
         }
 
         private static void SettingChanged(object sender, string setting) =>
