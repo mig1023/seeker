@@ -32,6 +32,8 @@ namespace Seeker.Gamebook
 
         public string Paragraphs;
 
+        public bool OnlyFirstParagraphsValue;
+
         public string Size;
 
         public int PlaythroughTime;
@@ -64,13 +66,20 @@ namespace Seeker.Gamebook
 
         public int ParagraphSize()
         {
-            if (Paragraphs.Contains("("))
+            if (Paragraphs.Contains("(") && OnlyFirstParagraphsValue)
             {
-                string subSize = Paragraphs.Substring(0, Paragraphs.IndexOf(" "));
-                return Game.Xml.IntParse(subSize);
+                int start = Paragraphs.IndexOf("(") + 1;
+                int len = Paragraphs.IndexOf("+") - Paragraphs.IndexOf("(") - 1;
+
+                return Game.Xml.IntParse(Paragraphs.Substring(start, len));
             }
             else
-                return Game.Xml.IntParse(Paragraphs);
+            {
+                string paragraphs = (Paragraphs.Contains("(") ?
+                    Paragraphs.Substring(0, Paragraphs.IndexOf(" ")) : Paragraphs);
+
+                return Game.Xml.IntParse(paragraphs);
+            }
         }
 
         public string ParagraphSizeLine()
