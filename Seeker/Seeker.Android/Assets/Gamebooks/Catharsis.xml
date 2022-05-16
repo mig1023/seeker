@@ -1864,7 +1864,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-20"/>
-				<Modification Name="Healing" ValueString="Использовать аптечку,10,-1"/>
+				<Modification Name="Healing" Value="Использовать аптечку,10,-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="283"/>
@@ -1914,7 +1914,7 @@
 			<Options>
 				<Option Destination="254" Text="Параметр МЕТКОСТЬ 13 или больше" Availability="МЕТКОСТЬ >= 13"/>
 				<Option Destination="82" Text="Входите в шот">
-					<Modification Name="Trigger" ValueString="Беглец"/>
+					<Modification Name="Trigger" Value="Беглец"/>
 				</Option>
 			</Options>
 		</Paragraph>
