@@ -156,8 +156,8 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-3"/>
-				<Modification Name="ByTrigger" ValueString="Буррек -> 1"/>
-				<Modification Name="ByNotTrigger" ValueString="Шуба|Зимняя одежда -> -1"/>
+				<Modification Name="ByTrigger" Value="Буррек -> 1"/>
+				<Modification Name="ByNotTrigger" Value="Шуба|Зимняя одежда -> -1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="403"/>
@@ -208,7 +208,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-6"/>
-				<Modification Name="ByTrigger" ValueString="Бронежилет -> 2"/>
+				<Modification Name="ByTrigger" Value="Бронежилет -> 2"/>
 			</Modifications>
 			<RemoveTriggers>Молоток</RemoveTriggers>
 			<Options>
@@ -270,7 +270,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-3"/>
-				<Modification Name="ByTrigger" ValueString="Бронежилет -> 2"/>
+				<Modification Name="ByTrigger" Value="Бронежилет -> 2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="48"/>
@@ -356,7 +356,7 @@
 				<Text>Если вы еще в состоянии продолжать путь:</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="ByNotTrigger" ValueString="Выживание -> -1"/>
+				<Modification Name="ByNotTrigger" Value="Выживание -> -1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="100"/>
@@ -381,7 +381,7 @@
 				<Text>Когда рассвет наконец заливает небо серебром и оставляет розовато-золотистые дорожки на снегу, вы с удивлением обнаруживаете, что по вашим щекам бегут слезы радости. Вы пережили еще один день крайне суровых испытаний.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="ByNotTrigger" ValueString="Выживание -> -1"/>
+				<Modification Name="ByNotTrigger" Value="Выживание -> -1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="125"/>
@@ -444,7 +444,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-3"/>
-				<Modification Name="ByTrigger" ValueString="Бронежилет -> 1"/>
+				<Modification Name="ByTrigger" Value="Бронежилет -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="415"/>
@@ -459,7 +459,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-3"/>
-				<Modification Name="ByTrigger" ValueString="Рукопашный Бой -> 2"/>
+				<Modification Name="ByTrigger" Value="Рукопашный Бой -> 2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="154"/>
@@ -562,8 +562,8 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-4"/>
-				<Modification Name="ByTrigger" ValueString="Выживание -> 2"/>
-				<Modification Name="ByTrigger" ValueString="Буррек -> 1"/>
+				<Modification Name="ByTrigger" Value="Выживание -> 2"/>
+				<Modification Name="ByTrigger" Value="Буррек -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="100"/>
@@ -658,7 +658,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-5"/>
-				<Modification Name="ByTrigger" ValueString="Рукопашный Бой -> 2"/>
+				<Modification Name="ByTrigger" Value="Рукопашный Бой -> 2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="72"/>
@@ -672,7 +672,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-2"/>
-				<Modification Name="ByTrigger" ValueString="Рукопашный Бой -> 1"/>
+				<Modification Name="ByTrigger" Value="Рукопашный Бой -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="110"/>
@@ -1381,7 +1381,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-4"/>
-				<Modification Name="ByTrigger" ValueString="Бронежилет -> 1"/>
+				<Modification Name="ByTrigger" Value="Бронежилет -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="85"/>
@@ -1409,7 +1409,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-2"/>
-				<Modification Name="ByTrigger" ValueString="Бронежилет -> 1"/>
+				<Modification Name="ByTrigger" Value="Бронежилет -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="410"/>
@@ -1574,8 +1574,8 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-4"/>
-				<Modification Name="ByTrigger" ValueString="Выживание -> 1"/>
-				<Modification Name="ByTrigger" ValueString="Буррек -> 2"/>
+				<Modification Name="ByTrigger" Value="Выживание -> 1"/>
+				<Modification Name="ByTrigger" Value="Буррек -> 2"/>
 			</Modifications>
 			<RemoveTriggers>Буррек</RemoveTriggers>
 			<Options>
@@ -1712,7 +1712,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-3"/>
-				<Modification Name="ByTrigger" ValueString="Выживание -> 1"/>
+				<Modification Name="ByTrigger" Value="Выживание -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="8" Text="Владеете Рукопашным боем, и у вас есть короткий меч" Availability="Рукопашный Бой, Короткий меч"/>
@@ -1954,7 +1954,7 @@
 			<Options>
 				<Option Destination="203" Text="Разыскать Кайла Боше и рассказать ему, что добыли аэрокар"/>
 				<Option Destination="159" Text="Если нет, то вычеркните ключевое слово «Алмаз»">
-					<Modification Name="RemoveTrigger" ValueString="Алмаз"/>
+					<Modification Name="RemoveTrigger" Value="Алмаз"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -2072,8 +2072,8 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="1"/>
-				<Modification Name="ByTrigger" ValueString="Аптечка|Аэрокар -> 1"/>
-				<Modification Name="ByTrigger" ValueString="Песочные часы -> -1"/>
+				<Modification Name="ByTrigger" Value="Аптечка|Аэрокар -> 1"/>
+				<Modification Name="ByTrigger" Value="Песочные часы -> -1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="83"/>
@@ -2477,7 +2477,7 @@
 				<Text>Если вам удалось выжить, то вы наконец доходите до Изиды и переходите на западный берег реки по старому железному мосту. Отсюда и до горизонта тянутся широкие просторы дюн цвета слоновой кости под темным, как мокрый камень, небом. Это Ледяные пустоши Сахары, тысячи километров неизведанной пустыни, необитаемые снежные поля, изуродованные несчетными арктическими штормами. Это ужасное препятствие отделяет вас от вашей цели.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="ByNotTrigger" ValueString="Шуба|Выживание -> 1"/>
+				<Modification Name="ByNotTrigger" Value="Шуба|Выживание -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="393"/>
@@ -2615,7 +2615,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="2"/>
-				<Modification Name="ByTrigger" ValueString="Выживание -> 1"/>
+				<Modification Name="ByTrigger" Value="Выживание -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="117" Text="Владеете Знанием улиц" Availability="Знание улиц"/>
@@ -2720,8 +2720,8 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-6"/>
-				<Modification Name="ByTrigger" ValueString="Рукопашный Бой -> 2"/>
-				<Modification Name="ByTrigger" ValueString="Киборг -> 1"/>
+				<Modification Name="ByTrigger" Value="Рукопашный Бой -> 2"/>
+				<Modification Name="ByTrigger" Value="Киборг -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="281"/>
@@ -2743,7 +2743,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-4"/>
-				<Modification Name="ByTrigger" ValueString="Киборг -> 1"/>
+				<Modification Name="ByTrigger" Value="Киборг -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="431"/>
@@ -2786,7 +2786,7 @@
 					<Text>Большой усилитель</Text>
 					<Price>7</Price>
 					<Benefit Name="MaxLife" Value="5"/>
-					<Benefit Name="RemoveSkill" ValueString="Ловкость"/>
+					<Benefit Name="RemoveSkill" Value="Ловкость"/>
 					<Aftertext>Большой усилитель будет стоить для вас 7 скадов и усилит вашу кожу, добавив 5 единиц Здоровья сверх изначального уровня (таким образом, если вы начали путешествие с 10 единицами, их предельное значение увеличится до 15). Однако ретровирус замедлит ваши рефлексы, поэтому вы потеряете умение Ловкость, если оно у вас было.</Aftertext>
 				</Action>
 				<Action>
@@ -2867,7 +2867,7 @@
 				<Text>Единственные люди, которых вы замечаете — это группа хамаданских аскетов на косматых верблюдах. Они не обращают на вас никакого внимания, поскольку их вера диктует презрение к чужакам. С глубоким пренебрежением поправляя свои грязно-белые тюрбаны, они проходят мимо через одинокие снежные поля.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="ByFood" Value="1" ValueString="Выживание"/>
+				<Modification Name="ByFood" Value="1" Value="Выживание"/>
 			</Modifications>
 			<Options>
 				<Option Destination="393"/>
@@ -2936,7 +2936,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-6"/>
-				<Modification Name="ByTrigger" ValueString="Бронежилет -> 2"/>
+				<Modification Name="ByTrigger" Value="Бронежилет -> 2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="301"/>
@@ -3088,7 +3088,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-2"/>
-				<Modification Name="ByTrigger" ValueString="Выживание -> 1"/>
+				<Modification Name="ByTrigger" Value="Выживание -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="199"/>
@@ -3132,7 +3132,7 @@
 			<Text>С высоты тридцати метров Ледяные пустоши напоминают сверкающее море снега с островками голых черных скал. Ветер со свистом гуляет по земле, гоняя клубы снежной пыли, которые образуют странные фигуры на окружающих скалах. Вы почти не видите признаков жизни. Это одна из самых заброшенных областей в мире. Дневной свет мрачен и бледен, сумерки похожи на голубоватый дым, а ночное небо покрыто тысячами звезд, сияющих в разрывах огромных кучевых облаков.\n\nНеуловимо проходят дни. И наконец, всматриваясь вдаль, вы видите мрачные черные стены разрушенного города. Вы прибыли в Дью-Эн.</Text>
 			<Options>
 				<Option Destination="191" Text="Записано ключевое слово «Алмаз»" Availability="Алмаз">
-					<Modification Name="RemoveTrigger" ValueString="Алмаз"/>
+					<Modification Name="RemoveTrigger" Value="Алмаз"/>
 				</Option>
 				<Option Destination="213" Text="Нет"/>
 			</Options>
@@ -3181,7 +3181,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-1"/>
-				<Modification Name="ByTrigger" ValueString="Выживание -> 1"/>
+				<Modification Name="ByTrigger" Value="Выживание -> 1"/>
 			</Modifications>
 			<Triggers>Коса</Triggers>
 			<Options>
@@ -3289,7 +3289,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-9"/>
-				<Modification Name="ByTrigger" ValueString="Рукопашный Бой -> 4"/>
+				<Modification Name="ByTrigger" Value="Рукопашный Бой -> 4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="415"/>
@@ -3383,7 +3383,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-2"/>
-				<Modification Name="ByTrigger" ValueString="Выживание -> 1"/>
+				<Modification Name="ByTrigger" Value="Выживание -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="393"/>
@@ -3405,7 +3405,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-4"/>
-				<Modification Name="ByTrigger" ValueString="Рукопашный Бой -> 2"/>
+				<Modification Name="ByTrigger" Value="Рукопашный Бой -> 2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="253"/>
@@ -3443,7 +3443,7 @@
 				<Text Size="small">Если вы ранены, и у вас есть аптечка, вы можете восстановить 1 единицу Здоровья. Если у вас есть аэрокар «Скат», то аптечка найдется в его хранилище. Вычеркните ключевое слово «Песочные часы».</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="ByTrigger" ValueString="Аптечка|Аэрокар -> 1"/>
+				<Modification Name="ByTrigger" Value="Аптечка|Аэрокар -> 1"/>
 			</Modifications>
 			<RemoveTriggers>Песочные часы</RemoveTriggers>
 			<Options>
@@ -3508,7 +3508,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-5"/>
-				<Modification Name="ByTrigger" ValueString="Рукопашный Бой -> 2"/>
+				<Modification Name="ByTrigger" Value="Рукопашный Бой -> 2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="72"/>
@@ -4005,7 +4005,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-3"/>
-				<Modification Name="ByTrigger" ValueString="Бронежилет -> 1"/>
+				<Modification Name="ByTrigger" Value="Бронежилет -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="415"/>
@@ -4251,8 +4251,8 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-2"/>
-				<Modification Name="ByTrigger" ValueString="Буррек -> 1"/>
-				<Modification Name="ByTrigger" ValueString="Шуба|Зимняя одежда -> 1"/>
+				<Modification Name="ByTrigger" Value="Буррек -> 1"/>
+				<Modification Name="ByTrigger" Value="Шуба|Зимняя одежда -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="403" Text="Есть поляризационные очки" Availability="Поляризационные очки"/>
@@ -4358,7 +4358,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="ByFood" Value="1"/>
-				<Modification Name="ByNotTrigger" ValueString="Выживание -> -2"/>
+				<Modification Name="ByNotTrigger" Value="Выживание -> -2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="379" Text="Обладаете Знаниями" Availability="Знания"/>
@@ -4419,7 +4419,7 @@
 				<Option Destination="445" Text="Пойдете искать Вайру Сингха, чтобы узнать его мнение"/>
 				<Option Destination="427" Text="Подолжите настаивать на участии Гильгамеша в экспедиции"/>
 				<Option Destination="16" Text="Согласитесь оставить его (вычеркните ключевое слово «Гильгамеш», запишите вместо него слово «Урук»)">
-					<Modification Name="ReplaceTrigger" ValueString="Гильгамеш -> Урук"/>
+					<Modification Name="ReplaceTrigger" Value="Гильгамеш -> Урук"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -4589,8 +4589,8 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Life" Value="-4"/>
-				<Modification Name="ByTrigger" ValueString="Шуба|Зимняя одежда -> 2"/>
-				<Modification Name="ByTrigger" ValueString="Выживание|Буррек -> 1"/>
+				<Modification Name="ByTrigger" Value="Шуба|Зимняя одежда -> 2"/>
+				<Modification Name="ByTrigger" Value="Выживание|Буррек -> 1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="444"/>
@@ -4896,10 +4896,10 @@
 					<Button>Выбрать</Button>
 					<Choice/>
 					<Text>Исследователь</Text>
-					<Benefit Name="Skill" ValueString="Рукопашный бой"/>
-					<Benefit Name="Skill" ValueString="Знания"/>
-					<Benefit Name="Skill" ValueString="Знание улиц"/>
-					<Benefit Name="Skill" ValueString="Выживание"/>
+					<Benefit Name="Skill" Value="Рукопашный бой"/>
+					<Benefit Name="Skill" Value="Знания"/>
+					<Benefit Name="Skill" Value="Знание улиц"/>
+					<Benefit Name="Skill" Value="Выживание"/>
 					<Benefit Name="MaxLife" Value="1"/>
 					<Benefit Name="Money" Value="-10"/>
 					<Aftertexts>
@@ -4911,10 +4911,10 @@
 					<Button>Выбрать</Button>
 					<Text>Охотник за головами</Text>
 					<Choice/>
-					<Benefit Name="Skill" ValueString="Хитрость"/>
-					<Benefit Name="Skill" ValueString="Пилотирование"/>
-					<Benefit Name="Skill" ValueString="Знание улиц"/>
-					<Benefit Name="Skill" ValueString="Стрельба"/>
+					<Benefit Name="Skill" Value="Хитрость"/>
+					<Benefit Name="Skill" Value="Пилотирование"/>
+					<Benefit Name="Skill" Value="Знание улиц"/>
+					<Benefit Name="Skill" Value="Стрельба"/>
 					<Benefit Name="Money" Value="10"/>
 					<Benefit Name="Shots" Value="6"/>
 					<Aftertexts>
@@ -4926,10 +4926,10 @@
 					<Button>Выбрать</Button>
 					<Text>Шпион</Text>
 					<Choice/>
-					<Benefit Name="Skill" ValueString="Ловкость"/>
-					<Benefit Name="Skill" ValueString="Кибернетика"/>
-					<Benefit Name="Skill" ValueString="Знание улиц"/>
-					<Benefit Name="Skill" ValueString="Воровство"/>
+					<Benefit Name="Skill" Value="Ловкость"/>
+					<Benefit Name="Skill" Value="Кибернетика"/>
+					<Benefit Name="Skill" Value="Знание улиц"/>
+					<Benefit Name="Skill" Value="Воровство"/>
 					<Aftertexts>
 						<Aftertext Size="small">Даже когда мир мучительно умирает, правительства  продолжают делить  остатки  власти и богатства. Вы крадете секреты и продаете их тем, кто больше заплатит.</Aftertext>
 					</Aftertexts>
@@ -4939,10 +4939,10 @@
 					<Button>Выбрать</Button>
 					<Text>Торговец</Text>
 					<Choice/>
-					<Benefit Name="Skill" ValueString="ПСИ"/>
-					<Benefit Name="Skill" ValueString="Знания"/>
-					<Benefit Name="Skill" ValueString="Знание улиц"/>
-					<Benefit Name="Skill" ValueString="Стрельба"/>
+					<Benefit Name="Skill" Value="ПСИ"/>
+					<Benefit Name="Skill" Value="Знания"/>
+					<Benefit Name="Skill" Value="Знание улиц"/>
+					<Benefit Name="Skill" Value="Стрельба"/>
 					<Benefit Name="Money" Value="5"/>
 					<Benefit Name="Shots" Value="6"/>
 					<Aftertexts>
@@ -4954,10 +4954,10 @@
 					<Button>Выбрать</Button>
 					<Text>Провидец</Text>
 					<Choice/>
-					<Benefit Name="Skill" ValueString="ПСИ"/>
-					<Benefit Name="Skill" ValueString="Рукопашный бой"/>
-					<Benefit Name="Skill" ValueString="Хитрость"/>
-					<Benefit Name="Skill" ValueString="Управление парадоксом"/>
+					<Benefit Name="Skill" Value="ПСИ"/>
+					<Benefit Name="Skill" Value="Рукопашный бой"/>
+					<Benefit Name="Skill" Value="Хитрость"/>
+					<Benefit Name="Skill" Value="Управление парадоксом"/>
 					<Aftertexts>
 						<Aftertext Size="small">Ты одарен особым взглядом, поэтому тебе известно, что человечество обречено, если не предпринять шагов во спасение.</Aftertext>
 					</Aftertexts>
@@ -4967,10 +4967,10 @@
 					<Button>Выбрать</Button>
 					<Text>Ученый</Text>
 					<Choice/>
-					<Benefit Name="Skill" ValueString="Кибернетика"/>
-					<Benefit Name="Skill" ValueString="Знания"/>
-					<Benefit Name="Skill" ValueString="Пилотирование"/>
-					<Benefit Name="Skill" ValueString="Выживание"/>
+					<Benefit Name="Skill" Value="Кибернетика"/>
+					<Benefit Name="Skill" Value="Знания"/>
+					<Benefit Name="Skill" Value="Пилотирование"/>
+					<Benefit Name="Skill" Value="Выживание"/>
 					<Aftertexts>
 						<Aftertext Size="small">Большинство ничего не понимает в машинах, созданных предками, но вы усвоили, что знание — это сила.</Aftertext>
 					</Aftertexts>
@@ -4980,10 +4980,10 @@
 					<Button>Выбрать</Button>
 					<Text>Мутант</Text>
 					<Choice/>
-					<Benefit Name="Skill" ValueString="Ловкость"/>
-					<Benefit Name="Skill" ValueString="Хитрость"/>
-					<Benefit Name="Skill" ValueString="Управление парадоксом"/>
-					<Benefit Name="Skill" ValueString="Воровство"/>
+					<Benefit Name="Skill" Value="Ловкость"/>
+					<Benefit Name="Skill" Value="Хитрость"/>
+					<Benefit Name="Skill" Value="Управление парадоксом"/>
+					<Benefit Name="Skill" Value="Воровство"/>
 					<Aftertexts>
 						<Aftertext Size="small">Будучи с рождения одаренным странными способностями, вы не являетесь человеком в полном смысле этого слова. Другие наверняка убьют вас, если узнают ваш секрет.</Aftertext>
 					</Aftertexts>
