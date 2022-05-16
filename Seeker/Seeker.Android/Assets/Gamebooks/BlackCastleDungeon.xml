@@ -60,13 +60,13 @@
 			<Options>
 				<Option Destination="416" Text="Вернуться обратно и направиться к зданию в центре двора"/>
 				<Option Destination="372" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="103" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="311" Text="Заклятием Плавания и поплыть по течению реки" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -111,13 +111,13 @@
 			</Modifications>
 			<Options>
 				<Option Destination="36" Text="Заклятия Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="314" Text="Заклятия Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="112" Text="Заклятия Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="183" Text="Драться"/>
 			</Options>
@@ -159,10 +159,10 @@
 			<Options>
 				<Option Destination="312" Text="Построите плот"/>
 				<Option Destination="201" Text="Воспользуетесь заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="425" Text="Воспользуетесь заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -192,13 +192,13 @@
 			<Text>Вы подзываете хозяина поближе и, выхватив меч, нападаете на него. Первый удар ваш, Водяной ранен, и ему ничего не остается, как принять бой. Он сражается с вами водорослями, каждый удар которых оставляет острые глубокие порезы. Вы можете воспользоваться заклятиями Силы, Слабости, Огня или драться с ним без помощи магии.</Text>
 			<Options>
 				<Option Destination="417" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="228" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="521" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="326" Text="Драться без помощи магии"/>
 			</Options>
@@ -225,7 +225,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="557" Text="Воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Если вы победите их, то можете откинуть ставни и осмотреть домик или же уйти и направиться к центральному строению:</Text>
 				</Option>
 				<Option Destination="120" Text="Осмотреть домик"/>
@@ -462,7 +462,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="451" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="454" Text="Дракон убит"/>
 			</Options>
@@ -652,10 +652,10 @@
 			</Actions>
 			<Options>
 				<Option Destination="410" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="219" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="189"/>
 			</Options>
@@ -793,7 +793,7 @@
 			<Options>
 				<Option Destination="39" Text="Отойти от окна"/>
 				<Option Destination="273" Text="Воспользоваться заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1566,10 +1566,10 @@
 			<Text>Попробуете наложить заклятие Огня или Иллюзии?</Text>
 			<Options>
 				<Option Destination="538" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="370" Text="Заклятие Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1775,7 +1775,7 @@
 					<Text>ЯБЛОКО</Text>
 					<Price>1</Price>
 					<Multiple/>
-					<Benefit Name="Healing" ValueString="Съесть яблоко,1"/>
+					<Benefit Name="Healing" Value="Съесть яблоко,1"/>
 					<Aftertext>Добавит 1 ВЫНОСЛИВОСТЬ</Aftertext>
 				</Action>
 				<Action>
@@ -1784,7 +1784,7 @@
 					<Text>МАНДАРИН</Text>
 					<Price>2</Price>
 					<Multiple/>
-					<Benefit Name="Healing" ValueString="Съесть мандарин,2"/>
+					<Benefit Name="Healing" Value="Съесть мандарин,2"/>
 					<Aftertext>Добавит 2 ВЫНОСЛИВОСТИ</Aftertext>
 				</Action>
 				<Action>
@@ -1793,7 +1793,7 @@
 					<Text>АПЕЛЬСИН</Text>
 					<Price>1</Price>
 					<Multiple/>
-					<Benefit Name="Healing" ValueString="Съесть апельсин,1"/>
+					<Benefit Name="Healing" Value="Съесть апельсин,1"/>
 					<Aftertext>Добавит 1 ВЫНОСЛИВОСТЬ</Aftertext>
 				</Action>
 				<Action>
@@ -1803,7 +1803,7 @@
 					<Text>БАНАН</Text>
 					<Price>2</Price>
 					<Multiple/>
-					<Benefit Name="Healing" ValueString="Съесть банан,2"/>
+					<Benefit Name="Healing" Value="Съесть банан,2"/>
 					<Aftertext>Добавит 2 ВЫНОСЛИВОСТИ</Aftertext>
 				</Action>
 				<Action>
@@ -1819,7 +1819,7 @@
 					<Button>Наполнить флягу целиком</Button>
 					<Text>ВОДА</Text>
 					<Price>4</Price>
-					<Benefit Name="Healing" ValueString="Попить,2"/>
+					<Benefit Name="Healing" Value="Попить,2"/>
 					<Aftertext>или за 2 — наполовину:</Aftertext>
 				</Action>
 				<Action>
@@ -1827,7 +1827,7 @@
 					<Button>Наполнить флягу наполовину</Button>
 					<Text>ВОДА</Text>
 					<Price>2</Price>
-					<Benefit Name="Healing" ValueString="Попить,2"/>
+					<Benefit Name="Healing" Value="Попить,2"/>
 					<Aftertext>Если вы хотите что-то купить — покупайте. Все, кроме молока и воды (если вам не в чем ее нести), можете съесть сразу же или взять с собой. Если хотите, можете купить еще и заплечный мешок — он стоит 8 золотых, но в него помещается больше, чем в ваш: не 7, а 9 предметов. Однако два заплечных мешка нести неудобно, и если свой у вас еще с собой, вы должны будете оставить его в доме у торговца. Теперь можете либо уходить, либо попробовать поговорить с ним еще.</Aftertext>
 				</Action>
 			</Actions>
@@ -2159,7 +2159,7 @@
 					<Text>РЫБА</Text>
 					<Price>1</Price>
 					<Multiple/>
-					<Benefit Name="Healing" ValueString="Поесть рыбы,2"/>
+					<Benefit Name="Healing" Value="Поесть рыбы,2"/>
 					<Aftertext>Вы благодарите радушного хозяина и уходите.</Aftertext>
 				</Action>
 			</Actions>
@@ -2179,10 +2179,10 @@
 			<Text>Вы оказываетесь на берегу широкой полноводной реки. Течение сильное и быстрое, вброд ее не перейти. По берегу, где вы сейчас стоите, вправо идет узкая тропинка. Можете или пойти по ней, или попробовать перебраться через реку. Вы воспользуетесь заклятием Левитации? Заклятием Плавания? Или пойдете по тропинке?</Text>
 			<Options>
 				<Option Destination="9" Text="Заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="313" Text="Заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="423" Text="Пойти по тропинке"/>
 			</Options>
@@ -2192,10 +2192,10 @@
 			<Text>Вы подходите к огромному озеру. Другого берега почти не видно, но неподалеку виднеется небольшой островок. Лодки на берегу нет и придется либо воспользоваться заклятием Плавания, либо заклятием Левитации. Или же можете вернуться и попробовать пройти через кустарник.</Text>
 			<Options>
 				<Option Destination="5" Text="Заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="105" Text="Заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="177" Text="Вернуться и попробовать пройти через кустарник"/>
 			</Options>
@@ -2431,7 +2431,7 @@
 			<Options>
 				<Option Destination="331" Text="Пойти дальше"/>
 				<Option Destination="87" Text="Использовать заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -2457,8 +2457,8 @@
 			<Triggers>SilverWhistle</Triggers>
 			<Modifications>
 				<Modification Name="Endurance" Value="5"/>
-				<Benefit Name="Healing" ValueString="Выпить вина,3"/>
-				<Benefit Name="Healing" ValueString="Съесть гоблинской еды,2"/>
+				<Benefit Name="Healing" Value="Выпить вина,3"/>
+				<Benefit Name="Healing" Value="Съесть гоблинской еды,2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="531" Text="Свернуть на нее"/>
@@ -2576,10 +2576,10 @@
 			<Text>Как только закрылась дверь, из угла комнаты на вас бросаются крысы. Вы с ужасом замечаете, что они не обыкновенные, а каменные. Если хотите, можете показать им пропуск, надеясь, что это поможет, или же можете воспользоваться заклятиями Слабости или Огня. Или просто выньте меч и сразитесь с ними.</Text>
 			<Options>
 				<Option Destination="564" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="541" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="494" Text="Сразитесь с ними"/>
 				<Option Destination="364" Text="Если есть меч Зеленого рыцаря"/>
@@ -3151,7 +3151,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="111" Text="Наложить заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ КОПИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ КОПИИ"/>
 				</Option>
 				<Option Destination="126" Text="Если победили"/>
 			</Options>
@@ -3475,13 +3475,13 @@
 			<Text>Вы можете воспользоваться заклятиями Силы, Слабости, Огня или драться мечом.</Text>
 			<Options>
 				<Option Destination="164" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="289" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="506" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="487" Text="Драться"/>
 			</Options>
@@ -3741,7 +3741,7 @@
 			<Text>Заклятие Иллюзии не действует на стариков. Хотите наложить заклятие Огня или наберетесь терпения?</Text>
 			<Options>
 				<Option Destination="538" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="68" Text="Ждать"/>
 			</Options>
@@ -3789,10 +3789,10 @@
 			<Text>Вы подходите к реке, но вброд ее не перейти. Вам придется использовать заклятия: либо Плавания, либо Левитации. Если хотите, можете, используя заклятие Плавания, попробовать проплыть по течению под замок, надеясь попасть в подземелье незамеченным. Если же у вас нет ни одного из этих заклятий или вы не хотите их использовать, идите к палаткам.</Text>
 			<Options>
 				<Option Destination="254" Text="Заклятье Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="508" Text="Заклятье Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="311" Text="Попробовать проплыть по течению под замок"/>
 				<Option Destination="424" Text="К палаткам"/>
@@ -4054,16 +4054,16 @@
 			<Options>
 				<Option Destination="183" Text="Выхватить меч"/>
 				<Option Destination="36" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="334" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="7" Text="Заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ КОПИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ КОПИИ"/>
 				</Option>
 				<Option Destination="112" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -4105,10 +4105,10 @@
 			<Text>Вы приходите в себя и видите, что лежите на полу в просторной клетке. Клетка стоит у стены в большой комнате с толстыми каменными стенами. По сырости на них вы сразу понимаете, что это должен быть один из подземных этажей замка, но какой? Впрочем, сейчас надо думать о том, как выбраться отсюда. Вы оглядываетесь. Из мебели в комнате только стол, два покосившихся стула да небольшой ларь, стоящий у стены. За столом — два Гоблина. Они увлечены игрой в кости и не обращают на вас никакого внимания. Неудивительно: даже если бы они и знали, что вы пришли в себя, шансов выбраться из клетки у вас все равно нет. Комнату освещает единственная свеча, горящая на столе, и в ее мерцающем свете вы видите, что рядом со столом на полу валяются ваши вещи: игра идет на них. Вам же остается надеяться только на свою магию. Вы попробуете использовать заклятие Иллюзии, Огня или у вас нет ни того, ни другого?</Text>
 			<Options>
 				<Option Destination="200" Text="Заклятие Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 				<Option Destination="114" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="56" Text="Нет ни того, ни другого"/>
 			</Options>
@@ -4137,13 +4137,13 @@
 			<Options>
 				<Option Destination="316" Text="Биться"/>
 				<Option Destination="37" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="357" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="256" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="516" Text="Предложить подарок"/>
 			</Options>
@@ -4236,13 +4236,13 @@
 			<Text>Тропинка петляет вдоль реки, то отдаляясь, то приближаясь к воде. По краям растет высокий густой кустарник, и поначалу вы продвигаетесь вперед осторожно. Один поворот, второй, третий, опасности нет, и вы начинаете идти быстрее. Вскоре тропинка вновь спускается на берег реки, но что это? Вы вышли к мосту, а около него — охрана. Два Гоблина поставлены здесь для того, чтобы никто посторонний не мог перебраться через реку. Ваша одежда ясно показывает им, что вы не служите волшебнику. Скорее решайте, что делать, ведь они атакуют вас. Наложите заклятие Силы, Слабости, Огня или будете драться с ними?</Text>
 			<Options>
 				<Option Destination="58" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="580" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="290" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="40" Text="Драться с ними"/>
 			</Options>
@@ -4286,13 +4286,13 @@
 			<Text>Вы можете воспользоваться заклятиями Огня, Силы, Слабости или же просто сражаться мечом.</Text>
 			<Options>
 				<Option Destination="499" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="85" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="390" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="569" Text="Сражаться мечом"/>
 			</Options>
@@ -4467,7 +4467,7 @@
 			<Text>Вы пытаетесь успокоить медведицу, говорите, что не желаете ей зла, но она продолжает двигаться на вас. И тут вы решаете спросить, не надо ли ей чем-нибудь помочь. Зверь с удивлением останавливается, смотрит умными черными глазами и показывает лапой на медвежонка. Вы подходите ближе и понимаете, что он болен. Но ведь вы не лекарь. Есть только один способ помочь медведице: истратить заклятие Исцеления. Если оно у вас есть и вы хотите истратить его на медвежонка, то действуйте. Если же нет или не хотите, то вы обманули надежды медведицы, и вам придется драться с ней.</Text>
 			<Options>
 				<Option Destination="62" Text="Исцелить медвежонка" Availability="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ"/>
 				</Option>
 				<Option Destination="529" Text="Драться с медведицей"/>
 			</Options>
@@ -4482,7 +4482,7 @@
 					<Text>АНАНАС</Text>
 					<Price>2</Price>
 					<Multiple/>
-					<Benefit Name="Healing" ValueString="Съесть ананас,3"/>
+					<Benefit Name="Healing" Value="Съесть ананас,3"/>
 					<Aftertext>Добавит 3 ВЫНОСЛИВОСТЬ.</Aftertext>
 				</Action>
 				<Action>
@@ -4492,7 +4492,7 @@
 					<Text>БАНАН</Text>
 					<Price>2</Price>
 					<Multiple/>
-					<Benefit Name="Healing" ValueString="Съесть банан,2"/>
+					<Benefit Name="Healing" Value="Съесть банан,2"/>
 					<Aftertext>Добавит 2 ВЫНОСЛИВОСТИ.\n\nНо он притащил еще и кучу вещей, которые, как он считает, могут пригодиться в дороге.</Aftertext>
 				</Action>
 				<Action>
@@ -5130,13 +5130,13 @@
 			<Text>После двух ударов одна из голов Дракона отлетает. Он отскакивает назад, а у вас появляется время, чтобы, если хотите, успеть наложить заклятие. Воспользуетесь передышкой и наложите заклятие?</Text>
 			<Options>
 				<Option Destination="41" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="476" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="172" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="347" Text="Продолжать драться">
 					<Text>Можете, если есть желание, попробовать убежать:</Text>
@@ -5183,7 +5183,7 @@
 			<Options>
 				<Option Destination="359" Text="Подождать"/>
 				<Option Destination="105" Text="Заклятье Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -5412,7 +5412,7 @@
 			<Text>В воздухе появляется огненный шар и направляется к одному из стариков. К вашему огромному разочарованию, старик щелкает пальцами, и шар исчезает. Теперь можете или попробовать заклятие Иллюзии, или же спокойно ждите, что будет дальше.</Text>
 			<Options>
 				<Option Destination="370" Text="Заклятье Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 				<Option Destination="68" Text="Спокойно ждать"/>
 			</Options>
@@ -5690,7 +5690,7 @@
 				<Option Destination="556" Text="В правую"/>
 				<Option Destination="277" Text="В ту, что напротив"/>
 				<Option Destination="483" Text="Заклятье Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="39" Text="Вернуться в залу"/>
 			</Options>
@@ -5709,13 +5709,13 @@
 			</Actions>
 			<Options>
 				<Option Destination="395" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СИЛЫ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="299" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="96" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" ValueString="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="241"/>
 			</Options>
@@ -6286,16 +6286,16 @@
 			<Text>Вы решаете, что недурно бы проверить периметр замка. А вдруг там потайные двери есть какие? Или кладка где выкрошилась. С кладкой и, правда, нелады: в нескольких местах вы замечаете отвалившиеся камни. Вы быстро готовите раствор и заделываете дырки в стене. Под конец вы натыкаетесь на странное место. Вроде бы та же стена, но трава полностью вытоптана, словно тут часто ходят. Вы очень внимательно обшариваете всё и находите контуры потайной двери.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="700" Text="Зло">
-					<Modification Name="Trigger" ValueString="Мякоть кизила"/>
+					<Modification Name="Trigger" Value="Мякоть кизила"/>
 				</Option>
 				<Option Destination="679" Text="Добро">
-					<Modification Name="Trigger" ValueString="Кожура кизила"/>
+					<Modification Name="Trigger" Value="Кожура кизила"/>
 				</Option>
 				<Option Destination="672" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="714" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Семечко кизила"/>
+					<Modification Name="Trigger" Value="Семечко кизила"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6312,16 +6312,16 @@
 			<Text>Вы открываете тяжёлую парадную дверь и заходите в большую, шикарно обставленную комнату. Здесь собралось несколько Зелёных Рыцарей, а на кресле с баронской короной сидит не кто иной, как Капитан. Чуть позвякивают шпоры Рыцарей, воздух наполнен неторопливым говором беседы. От множества восковых свечей стоит тяжеловатый дух. Довольно тепло, несмотря на позднюю осень и туман, заплывающий в окно. Как себя поведёте:</Text>
 			<Options>
 				<Option Destination="710" Text="Зло">
-					<Modification Name="Trigger" ValueString="Семечко лимона"/>
+					<Modification Name="Trigger" Value="Семечко лимона"/>
 				</Option>
 				<Option Destination="667" Text="Добро">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="724" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Кожура лимона"/>
+					<Modification Name="Trigger" Value="Кожура лимона"/>
 				</Option>
 				<Option Destination="698" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Мякоть лимона"/>
+					<Modification Name="Trigger" Value="Мякоть лимона"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6338,16 +6338,16 @@
 			<Text>Вы подходите к дверям караульного помещения. Тут стражники - а это, преимущественно, гоблины и люди - коротают долгие зимние часы, маясь от безделья. Вообще-то они должны обходить по периметру Чёрный Замок и собирать мусор и опавшие листья. Ну, а также, разумеется, следить за злобными героями, покушающимися на их повелителя. Но это в идеале. Сейчас внутри весь комплект - восемь стражников. От дыма самокруток не продохнуть. А они ещё и напердели тут. Объедки на полу спрессовались в тонкую липкую корку.\n\n- Ставлю пять медяков против восьми! - орёт толстый гоблин.\n\nВ руках другого, который ещё толще, стаканчик с игральными костями.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="684" Text="Зло">
-					<Modification Name="Trigger" ValueString="Семечко кокоса"/>
+					<Modification Name="Trigger" Value="Семечко кокоса"/>
 				</Option>
 				<Option Destination="715" Text="Добро">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="736" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Кожура кокоса"/>
+					<Modification Name="Trigger" Value="Кожура кокоса"/>
 				</Option>
 				<Option Destination="637" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Мякоть кокоса"/>
+					<Modification Name="Trigger" Value="Мякоть кокоса"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6399,16 +6399,16 @@
 			<Text>Вы довольно долго бредёте по коридорам, огибая замок. Да, в покои принцессы вполне можно добраться без всякого плутания по канализациям и тюрьмам Замка. Конечно, это будет не по-геройски. Переоткрыв кучу дверей, вы, наконец, заходите в уютную комнатку. Это почти будуар. Ну почти. Тут очень мило. Для Чёрного Замка. Принцесса прихорашивается перед зеркалом. На ваш вкус она худовата. В том смысле, что тощая. Ключицы выпирают как рёбра вешалки. В ямочки, пожалуй, стакан воды налить можно. Волосы тонкие. На лице конопушки. Вот в Катэне, в порту девчонки - это да!\n\nКстати, а что вы тут забыли? Пароль принцессе знать не нужно, с героем она драться не будет. Шпионить против папочки явно тоже.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="718" Text="Зло">
-					<Modification Name="Trigger" ValueString="Кожура персика"/>
+					<Modification Name="Trigger" Value="Кожура персика"/>
 				</Option>
 				<Option Destination="687" Text="Добро">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="730" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Мякоть персика"/>
+					<Modification Name="Trigger" Value="Мякоть персика"/>
 				</Option>
 				<Option Destination="632" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Семечко персика"/>
+					<Modification Name="Trigger" Value="Семечко персика"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6446,16 +6446,16 @@
 			<Text>Такого дуба ещё поискать. Раскидистый, листва густо-зелёная как драконья чешуя, жёлуди как золотые монетки висят. Крона необъятная, словно море. Морщинистая грубая кора нагрета солнцем. Вы подходите ближе и начинаете оглядываться, задрав голову к небу.\n\nВ ветвях замечаете гнездо.\n\nВ гнезде сидит орёл.\n\nИнтересно, что он тут забыл - орлы же на скалах селятся. Как вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="670" Text="Зло">
-					<Modification Name="Trigger" ValueString="Семечко банана"/>
+					<Modification Name="Trigger" Value="Семечко банана"/>
 				</Option>
 				<Option Destination="734" Text="Добро">
-					<Modification Name="Trigger" ValueString="Мякоть банана"/>
+					<Modification Name="Trigger" Value="Мякоть банана"/>
 				</Option>
 				<Option Destination="746" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="749" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Кожура банана"/>
+					<Modification Name="Trigger" Value="Кожура банана"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6478,16 +6478,16 @@
 			<Text>Вы заходите в комнату, где ещё темнее, чем у тролля в не скажу где! Комната абсолютно пуста, посреди на стуле стоит шкатулка с затейливым орнаментом. Пахнет катэнскими притираниями. Хотя, зачем бы они духу. Как себя поведёте:</Text>
 			<Options>
 				<Option Destination="652" Text="Зло">
-					<Modification Name="Trigger" ValueString="Кожура апельсина"/>
+					<Modification Name="Trigger" Value="Кожура апельсина"/>
 				</Option>
 				<Option Destination="706" Text="Добро">
-					<Modification Name="Trigger" ValueString="Мякоть апельсина"/>
+					<Modification Name="Trigger" Value="Мякоть апельсина"/>
 				</Option>
 				<Option Destination="708" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Семечко апельсина"/>
+					<Modification Name="Trigger" Value="Семечко апельсина"/>
 				</Option>
 				<Option Destination="644" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6524,16 +6524,16 @@
 			<Text>Вы долго петляете по катакомбам Чёрного Замка. Здесь ходят редко - Барлад Дэрт сажает в темницу не для того, чтобы ежедневно устраивать рандеву с заключёнными. Пол в лужах, которые зарастают коркой плесени. Воздушные потоки лениво снуют туда-сюда. Пахнет то пригорелой яичницей, то потными лошадьми, то крепким орочьим духом. Эхо ведёт себя неподобающе: вместо равномерного затихающего отражения ваших шагов, вы то слышите их, то не слышите вовсе. А иногда эхо надвигается на вас из глубины, закруживает в танце и убегает за спину. На стенах то и дело попадаются странные знаки: какие-то птицы, перья, стрелы.\n\nОднажды пламя факела выхватывает надпись «БД - не то, что вы думаете. Подпись АШ&amp;Br-s». Пытаясь разгадать эту головоломку, вы доходите до тюрьмы. В камерах никого нет, кроме одной. В ней сидит тощий старик с безумными глазами. Перед самой камерой лежит шкура оленя. Старик безуспешно пытается дотянуться до неё то рукой, то ногой, то самодельным крюком на верёвке, свитой из простыни. Ничего не выходит.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="676" Text="Зло">
-					<Modification Name="Trigger" ValueString="Кожура ореха"/>
+					<Modification Name="Trigger" Value="Кожура ореха"/>
 				</Option>
 				<Option Destination="678" Text="Добро">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="716" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Семечко ореха"/>
+					<Modification Name="Trigger" Value="Семечко ореха"/>
 				</Option>
 				<Option Destination="701" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Мякоть ореха"/>
+					<Modification Name="Trigger" Value="Мякоть ореха"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6549,16 +6549,16 @@
 			<Text>Вы выходите к хижине, притаившейся среди вековых деревьев. Точнее было бы сказать, сросшейся с ними. Мхи покрывают брёвна так густо, что их вообще не видно. Лопухи высятся, словно частокол. Полевые цветы подступают к самому порогу. Пчёлы с весёлым жужжанием носятся туда-сюда. В воздухе стоит медвяный аромат. Опавшие листья, которые никто не убирал, возможно, веками, так и хрустят при каждом шаге. В маленьких круглых окошках мелькает свет.\n\nВы отворяете дверь и заходите внутрь. Домик, в общем-то, просторный, но от множества вещей здесь как-то даже тесновато. Связки луковиц и пучки сушёных трав густо покрывают стены и балки потолка. Несколько столов завалены необычными предметами. Ёжкин кот, тут даже перегонный куб есть! И стеллажи с книгами. И чучело аллигатора! Куда это вы попали???\n\nИз глубины комнаты к вам выходит опрятный старичок. На нём посеревшая от многократных стирок хламида, когда-то бывшая снежно-белой. На пальцах несколько колец с крупными драгоценными камнями. На шее цепочка - видимо, с каким-то кулоном, но вы замечаете лишь верхнюю часть. Приятным голосом старичок произносит:\n\n- Приветствую тебя, юноша! Я - белый Марк Хэнкок! Как вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="685" Text="Зло">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="671" Text="Добро">
-					<Modification Name="Trigger" ValueString="Семечко киви"/>
+					<Modification Name="Trigger" Value="Семечко киви"/>
 				</Option>
 				<Option Destination="673" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Кожура киви"/>
+					<Modification Name="Trigger" Value="Кожура киви"/>
 				</Option>
 				<Option Destination="723" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Мякоть киви"/>
+					<Modification Name="Trigger" Value="Мякоть киви"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6599,16 +6599,16 @@
 			<Text>Вы приближаетесь к небольшой полянке, облюбованной драконом. Вокруг сплошной уголь в той или иной форме: обожжённые коряги, горелое мясо - геройское, видимо; обугленные кости, расплавленный металл, совсем непонятные ошмётки. Пахнет, разумеется, дымом. Что удивительно, самим драконом не пахнет никак. Обычные, и даже волшебные животные имеют свои отличительные запахи. Тот же Пегас пахнет как лошадь. Тигр пахнет тигром. Даже рыба имеет свой запах. А вот дракон почему-то нет. Его можно опознать лишь по запаху разрушений, которые несёт его дыхание. Драконы - твари хитрые. Ну, плюс ко всему остальному. Так что надо хорошо подумать, прежде чем соваться в его логово.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="717" Text="Зло">
-					<Modification Name="Trigger" ValueString="Мякоть инжира"/>
+					<Modification Name="Trigger" Value="Мякоть инжира"/>
 				</Option>
 				<Option Destination="739" Text="Добро">
-					<Modification Name="Trigger" ValueString="Семечко инжира"/>
+					<Modification Name="Trigger" Value="Семечко инжира"/>
 				</Option>
 				<Option Destination="748" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="742" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Кожура инжира"/>
+					<Modification Name="Trigger" Value="Кожура инжира"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6617,16 +6617,16 @@
 			<Text>Подземная галерея приводит вас к широкой массивной двери. Дверь приоткрыта, из-за неё доносится звон медной посуды и долетают аппетитные запахи. Вы заходите внутрь. Вы на средневековой кухне. Точнее, на средневековой кухне тролля. Тут всё по-средневековому, только чуть... хм грязнее. Связки лука под потолком. В полу крышка люка. Под ней ледник, где хранятся колбасы. Вдоль стенки вытянулось сразу несколько плит, под которыми полыхает огонь. В медных котлах и кастрюлях кипит солдатская похлёбка. Она вкусна, но состав лучше не узнавать. С боков сделаны шкафчики. В них куча всего. Вы замечаете короба с названиями «Крепкий порошок», «Сладкий порошок», «Порох», «Пудра», «Катэнский укроп» и «Дежурное блюдо». Тут же батарея бутылей. Повар-тролль что-то бурчит под нос, помешивая в котле обглоданной костью.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="660" Text="Зло">
-					<Modification Name="Trigger" ValueString="Кожура яблока"/>
+					<Modification Name="Trigger" Value="Кожура яблока"/>
 				</Option>
 				<Option Destination="722" Text="Добро">
-					<Modification Name="Trigger" ValueString="Семечко яблока"/>
+					<Modification Name="Trigger" Value="Семечко яблока"/>
 				</Option>
 				<Option Destination="702" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="703" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Мякоть яблока"/>
+					<Modification Name="Trigger" Value="Мякоть яблока"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6731,16 +6731,16 @@
 			<Text>Пригибаясь и с опаской косясь на застывших у входа гаргулов, вы заползаете внутрь. Тишина тут, и правда, могильная. Если бы вы могли видеть ваши ноги, то заметили, как от каждого шага в морозный воздух взлетают фонтанчики пыли. Но вы не видите. Только слышите, как хрустят тараканы под ногами. Вы плотнее кутаетесь в плащ. Надо скорее заканчивать и валить отседова. Вдруг, вы наступаете на какой-то скрытый механизм, который какой-то древний гад устроил в этом склепе для таких хороших парней, как вы.\n\nПеред вами материализуется огромный шлем, из которого несётся гулкий глас:\n\n- КТО ТЫ???\n\nВы - не будь дураком - придумываете первое попавшееся имечко, чтобы не выдать духу настоящего.\n\n- ЗАЧЕМ ТЫ ПОТРЕВОЖИЛ ПОКОЙ ГРАФА ЭЛКА? Как вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="737" Text="Зло">
-					<Modification Name="Trigger" ValueString="Кожура грейпфрута"/>
+					<Modification Name="Trigger" Value="Кожура грейпфрута"/>
 				</Option>
 				<Option Destination="625" Text="Добро">
-					<Modification Name="Trigger" ValueString="Семечко грейпфрута"/>
+					<Modification Name="Trigger" Value="Семечко грейпфрута"/>
 				</Option>
 				<Option Destination="693" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="732" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Мякоть грейпфрута"/>
+					<Modification Name="Trigger" Value="Мякоть грейпфрута"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6806,16 +6806,16 @@
 			<Text>Вы отходите от Чёрного Замка и спускаетесь вниз по течению реки. Тут устроен ближний пост. Это просто хибара, в которой дежурят два гоблина. Из трубы вьётся дымок. Пахнет жареной свининой. Вот, ухари!\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="697" Text="Зло">
-					<Modification Name="Trigger" ValueString="Кожура айвы"/>
+					<Modification Name="Trigger" Value="Кожура айвы"/>
 				</Option>
 				<Option Destination="656" Text="Добро">
-					<Modification Name="Trigger" ValueString="Семечко айвы"/>
+					<Modification Name="Trigger" Value="Семечко айвы"/>
 				</Option>
 				<Option Destination="658" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Мякоть айвы"/>
+					<Modification Name="Trigger" Value="Мякоть айвы"/>
 				</Option>
 				<Option Destination="664" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6838,16 +6838,16 @@
 			<Text>Уже несколько минут вы идёте по тропе разбойников. В прямом смысле. В переносном вы это давным-давно делаете. Тропа широкая, хорошо утоптанная, с указателями и беседками для отдыха. Нет, а вы чего ожидали? Кто по плохой тропе ходить-то будет? Кого они грабить-то будут? Разумеется, разбойники обустроили тропу, чтобы торговцам было удобнее тут передвигаться. Следят за порядком. Ну, вы понимаете. Вы идёте около часа. Внезапно из-за большого дуба вам навстречу выходят три амбала. Один ещё издалека с ленцой кричит:\n\n- Кошелёк или жизнь?!\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="745" Text="Зло">
-					<Modification Name="Trigger" ValueString="Семечко дыни"/>
+					<Modification Name="Trigger" Value="Семечко дыни"/>
 				</Option>
 				<Option Destination="645" Text="Добро">
-					<Modification Name="Trigger" ValueString="Кожура дыни"/>
+					<Modification Name="Trigger" Value="Кожура дыни"/>
 				</Option>
 				<Option Destination="636" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="731" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Мякоть дыни"/>
+					<Modification Name="Trigger" Value="Мякоть дыни"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6856,16 +6856,16 @@
 			<Text>Чтобы добраться до дерева патруля, вам приходится идти довольно долго. Впрочем, это даже приятно. Птички щебечут, сухие листья шуршат под ногами. Ветерок проносится в еловых ветвях. Рыжики норовят выставить тёмно-оранжевые шляпки из песка. Белки цокают на ветках. В небе проплывают пушистые облака, точь-в-точь как взбитые сливки. Ну, красотень! Однако, у вас есть задание - его надо выполнять. Наконец, вы подходите к высокому кедру, у которого пасутся две лошади в полном конном доспехе. Рядом о чём-то беседуют два Зелёных Рыцаря.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="707" Text="Зло">
-					<Modification Name="Trigger" ValueString="Кожура помело"/>
+					<Modification Name="Trigger" Value="Кожура помело"/>
 				</Option>
 				<Option Destination="750" Text="Добро">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="669" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Семечко помело"/>
+					<Modification Name="Trigger" Value="Семечко помело"/>
 				</Option>
 				<Option Destination="692" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Мякоть помело"/>
+					<Modification Name="Trigger" Value="Мякоть помело"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6874,16 +6874,16 @@
 			<Text>Вы у главных ворот Чёрного Замка. Тут на цепи прикован Чёрный Крылатый Лев. Он выглядит довольно внушительно. Мало того, что он, подобно гаргульям, из камня, так ещё и два метра в холке - не менее. В довесок к этому он ещё и разумный. Вы в который раз поражаетесь - как это Барлад смог посадить Льва на цепь? Очень странно. Тем не менее, вам дано конкретное задание: сменить пароль, и выпендриваться тут особо нечего. Зверюга, наверняка, злопамятная, так что грубить не надо. На добро и лесть ей тоже плевать. Поэтому просто сообщите новый пароль:</Text>
 			<Options>
 				<Option Destination="695" Text="«Щит Тьмы»">
-					<Modification Name="Trigger" ValueString="Семечко сливы"/>
+					<Modification Name="Trigger" Value="Семечко сливы"/>
 				</Option>
 				<Option Destination="640" Text="«Песнь Льда и Пламени»">
-					<Modification Name="Trigger" ValueString="Кожура сливы"/>
+					<Modification Name="Trigger" Value="Кожура сливы"/>
 				</Option>
 				<Option Destination="649" Text="«Розенкранц и Гильденстерн мертвы»">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="709" Text="«Пёс войны и боль мира»">
-					<Modification Name="Trigger" ValueString="Мякоть сливы"/>
+					<Modification Name="Trigger" Value="Мякоть сливы"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6929,16 +6929,16 @@
 			<Text>Пегас с шумом рассекает воздух и радостно ржёт. Видать, давно его не выпускали полетать. Однако, вы понимаете, что это непорядок! Ведь какой-нибудь ушлый герой может воспользоваться летающим конём и натворить дел. Срочно надо что-то предпринять!\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="735" Text="Зло">
-					<Modification Name="Trigger" ValueString="Семечко ананаса"/>
+					<Modification Name="Trigger" Value="Семечко ананаса"/>
 				</Option>
 				<Option Destination="655" Text="Добро">
-					<Modification Name="Trigger" ValueString="Кожура ананаса"/>
+					<Modification Name="Trigger" Value="Кожура ананаса"/>
 				</Option>
 				<Option Destination="630" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="665" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Мякоть ананаса"/>
+					<Modification Name="Trigger" Value="Мякоть ананаса"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6948,7 +6948,7 @@
 			<Options>
 				<Option Destination="744" Text="Выложить перед Барладом Дэртом весь компотный набор"/>
 				<Option Destination="743" Text="Выложить перед Барладом Дэртом правильный компотный набор" Availability="Кожура апельсина, Семечко лимона, Мякоть грейпфрута, Кожура ореха, Мякоть яблока, Семечко сливы, Семечко персика, Семечко кокоса, Мякоть груши, Кожура ананаса, Семечко финика, Мякоть инжира, Семечко кизила, Мякоть айвы, Кожура арбуза, Кожура дыни, Мякоть помело, Семечко киви, Кожура авокадо, Мякоть смоквы, Кожура агавы, Кожура банана, Мякоть манго">
-					<Modification Name="Trigger" ValueString="Зелёный рыцарь"/>
+					<Modification Name="Trigger" Value="Зелёный рыцарь"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -6964,16 +6964,16 @@
 			<Text>Вы следуете по дороге, указанной табличкой. Дорога ровная, хорошо утоптанная. Видать, народ часто захаживает к водяному. Правда, не очень понятно, зачем. От деревни до деревни можно добраться за день - лес не так уж и велик, а люди предпочитают селиться поближе друг к другу. Если же кто отправляется в пограничные с лесом городки, то и обедает, и ночует в трактирах за пределами леса. Экономический нонсенс. Тем не менее, таверна водяного явно не бедствует - крыша починена, труба оштукатурена, стены побелены, кольцо на двери так и блестит медным бочком в лучах осеннего солнышка. Даже стёкла в окнах целы. Вкусный запах доносится с заднего двора - наверно, для свиней похлёбку варят.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="726" Text="Зло">
-					<Modification Name="Trigger" ValueString="Кожура манго"/>
+					<Modification Name="Trigger" Value="Кожура манго"/>
 				</Option>
 				<Option Destination="666" Text="Добро">
-					<Modification Name="Trigger" ValueString="Мякоть манго"/>
+					<Modification Name="Trigger" Value="Мякоть манго"/>
 				</Option>
 				<Option Destination="631" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="711" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Семечко манго"/>
+					<Modification Name="Trigger" Value="Семечко манго"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -7011,16 +7011,16 @@
 			<Text>Вы подходите к логову обезьяны. Его несложно узнать по куче объедков. Ну да, похожих на те значки, что подкидывает вам Барлад Дэрт: кожура, семечки, гнилая мякоть. Кости... Да и запашок тут тот ещё. Вообще, может она больная, обезьяна-то - так что вы поосторожнее.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="635" Text="Зло">
-					<Modification Name="Trigger" ValueString="Кожура арбуза"/>
+					<Modification Name="Trigger" Value="Кожура арбуза"/>
 				</Option>
 				<Option Destination="629" Text="Добро">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="675" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Семечко арбуза"/>
+					<Modification Name="Trigger" Value="Семечко арбуза"/>
 				</Option>
 				<Option Destination="694" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Мякоть арбуза"/>
+					<Modification Name="Trigger" Value="Мякоть арбуза"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -7199,16 +7199,16 @@
 			<Text>Решив, что всё подождёт, а дрова нет, идёте к костру, пока он не прогорел. Над костром висит котёл с кашей. Рядом кашеварит гнолл в забавном шлеме, украшенном головой утки. Иногда он подносит ложку с кашей к самому клюву утки.\n\n- Ну, как? - спрашивает он. Вы так и не можете понять, то ли он кормит утку, то ли просит продегустировать. Сами вы не рискуете отведать из котла. Кстати, как вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="647" Text="Зло">
-					<Modification Name="Trigger" ValueString="Кожура груши"/>
+					<Modification Name="Trigger" Value="Кожура груши"/>
 				</Option>
 				<Option Destination="627" Text="Добро">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="704" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Мякоть груши"/>
+					<Modification Name="Trigger" Value="Мякоть груши"/>
 				</Option>
 				<Option Destination="628" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Семечко груши"/>
+					<Modification Name="Trigger" Value="Семечко груши"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -7217,16 +7217,16 @@
 			<Text>Вы идёте себе и идёте по лесу. И, наконец, выходите к красивому домику с соломенной крышей и маленькими опрятными окошками. Тут даже клумбы есть - с бегониями. Птички порхают с цветка на цветок. Нет, не колибри, конечно. Вы не знаете, как они называются. Ежики бегают в корнях древних деревьев, окружающих домик. Солнышко пригревает. Замануха, короче. Тут живёт доверенный человек чёрного мага. Специально сюда переселённый с тем, чтобы собирать полезную информацию, приглядывать за лесом, ну, и, при случае, подкладывать свиней героям. Вы слышали про него - мастер своего дела.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="713" Text="Зло">
-					<Modification Name="Trigger" ValueString="Мякоть смоквы"/>
+					<Modification Name="Trigger" Value="Мякоть смоквы"/>
 				</Option>
 				<Option Destination="690" Text="Добро">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="642" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Кожура смоквы"/>
+					<Modification Name="Trigger" Value="Кожура смоквы"/>
 				</Option>
 				<Option Destination="719" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Семечко смоквы"/>
+					<Modification Name="Trigger" Value="Семечко смоквы"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -7317,16 +7317,16 @@
 			<Text>Насвистывая весёлую песенку, вы прогулочным шагом фланируете меж светлых берёзовых стволов, освещённых летним тёплым солнцем. Крики всё ближе. Вы замечаете за деревьями какое-то движение. Несколько оборванцев - штук пять-шесть - избивают ногами полуголого человека. Человек явно при смерти: он харкает кровью и жалобно стонет, не пытаясь даже поднять рук для защиты. Из множества рваных неглубоких ран капает кровь. Что будете делать, милейший? С одной стороны - какое вам до всего этого дело? С другой - может, какое-то и есть.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="663" Text="Зло">
-					<Modification Name="Trigger" ValueString="Семечко агавы"/>
+					<Modification Name="Trigger" Value="Семечко агавы"/>
 				</Option>
 				<Option Destination="651" Text="Добро">
-					<Modification Name="Trigger" ValueString="Кожура агавы"/>
+					<Modification Name="Trigger" Value="Кожура агавы"/>
 				</Option>
 				<Option Destination="705" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Мякоть агавы"/>
+					<Modification Name="Trigger" Value="Мякоть агавы"/>
 				</Option>
 				<Option Destination="621" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -7382,16 +7382,16 @@
 			<Text>Вы у въездных ворот. Здесь дежурят несколько крупных гоблинов. Мост через ров уже опущен. Хотя туман до сих пор не рассеялся, но утренняя смена уже на посту, и ей полагается поджидать любых гостей чёрного мага. Обычно это торговцы разнообразной едой. Иногда забредают ремесленники и актёры. Терпкий смолистый запах леса долетает до ворот с редкими порывами ветра. Во рву бурлит вода, отведённая из ближайшей речки. Солдаты тихо переговариваются между собой.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="661" Text="Зло">
-					<Modification Name="Trigger" ValueString="Кожура финика"/>
+					<Modification Name="Trigger" Value="Кожура финика"/>
 				</Option>
 				<Option Destination="728" Text="Добро">
-					<Modification Name="Trigger" ValueString="Мякоть финика"/>
+					<Modification Name="Trigger" Value="Мякоть финика"/>
 				</Option>
 				<Option Destination="639" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Семечко финика"/>
+					<Modification Name="Trigger" Value="Семечко финика"/>
 				</Option>
 				<Option Destination="634" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -7484,16 +7484,16 @@
 			<Text>Вы на околице довольно крупной деревни. Вы же бывалый путешественник, что вам рассказывать, как выглядит деревня? Вы их тысячи перевидали. Разномастные домики, деревянные - каменных нет. К лесу - поплоше, пониже. В центру - побогаче, иногда в два этажа. Колодец на деревенской площади. Отпорная городьба по периметру. Крестьяне, занятые работой на огородах. Крестьянки, болтающие у колодца. Запах навоза с полей. Запах жарящейся яичницы из домов. Ну до вечера можно описывать! Короче, вы в деревне. Тут сходятся несколько торговых путей, поэтому деревня на подъёме. На деревенской площади стоит важный староста - дородный мужик, пузо навыкате. Вот вам к нему.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="623" Text="Зло">
-					<Modification Name="Trigger" ValueString="Кожура авокадо"/>
+					<Modification Name="Trigger" Value="Кожура авокадо"/>
 				</Option>
 				<Option Destination="662" Text="Добро">
-					<Modification Name="Trigger" ValueString="Рыцарь-неумёха"/>
+					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="741" Text="Грозно">
-					<Modification Name="Trigger" ValueString="Семечко авокадо"/>
+					<Modification Name="Trigger" Value="Семечко авокадо"/>
 				</Option>
 				<Option Destination="727" Text="Льстиво">
-					<Modification Name="Trigger" ValueString="Мякоть авокадо"/>
+					<Modification Name="Trigger" Value="Мякоть авокадо"/>
 				</Option>
 			</Options>
 		</Paragraph>
