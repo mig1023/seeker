@@ -456,7 +456,7 @@
 			<Options>
 				<Option Destination="109" Text="10 метров"/>
 				<Option Destination="109" Text="20 метров">
-					<Modification Name="Trigger" ValueString="20 метров"/>
+					<Modification Name="Trigger" Value="20 метров"/>
 				</Option>
 				<Option Destination="109" Text="30 метров"/>
 				<Option Destination="109" Text="40 метров"/>
@@ -1135,7 +1135,7 @@
 				<Option Destination="119" Text="Позади колоны"/>
 				<Option Destination="119" Text="По бокам колоны"/>
 				<Option Destination="119" Text="Впереди и позади колоны">
-					<Modification Name="Trigger" ValueString="Расположение кавалерии"/>
+					<Modification Name="Trigger" Value="Расположение кавалерии"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1165,7 +1165,7 @@
 			<Options>
 				<Option Destination="113" Text="Броситься догонять грабителей"/>
 				<Option Destination="140" Text="Поблагодарить бога, что вы остались живы, и возвращаться в лагерь">
-					<Modification Name="RemoveTrigger" ValueString="Бирюза"/>
+					<Modification Name="RemoveTrigger" Value="Бирюза"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1216,7 +1216,7 @@
 				<Option Destination="129" Text="О дисциплине"/>
 				<Option Destination="129" Text="О чистоте оружия"/>
 				<Option Destination="129" Text="Об исправной обуви">
-					<Modification Name="Trigger" ValueString="Исправная обувь"/>
+					<Modification Name="Trigger" Value="Исправная обувь"/>
 				</Option>
 				<Option Destination="129" Text="О стройности шеренг"/>
 			</Options>
@@ -1339,13 +1339,13 @@
 			<Options>
 				<Option Destination="134" Text="Попросить у него снабдить вашу когорту едой" Availability="!Помощь легата"/>
 				<Option Destination="145" Text="Попросить снабдить вас инструментами">
-					<Modification Name="Trigger" ValueString="Инструменты"/>
+					<Modification Name="Trigger" Value="Инструменты"/>
 				</Option>
 				<Option Destination="145" Text="Попросить дать вам две баллисты">
-					<Modification Name="Trigger" ValueString="Баллисты"/>
+					<Modification Name="Trigger" Value="Баллисты"/>
 				</Option>
 				<Option Destination="145" Text="Попросить у легата взять из арсенала нужное вам количество тяжелых дротиков" Availability="Пилумы">
-					<Modification Name="RemoveTrigger" ValueString="Пилумы"/>
+					<Modification Name="RemoveTrigger" Value="Пилумы"/>
 				</Option>
 				<Option Destination="145" Text="Не будете ни о чём просить"/>
 			</Options>
@@ -1759,13 +1759,13 @@
 			<Options>
 				<Option Destination="134" Text="Попросить у него снабдить вашу когорту едой" Availability="!Помощь легата"/>
 				<Option Destination="145" Text="Попросить снабдить вас инструментами">
-					<Modification Name="Trigger" ValueString="Инструменты"/>
+					<Modification Name="Trigger" Value="Инструменты"/>
 				</Option>
 				<Option Destination="145" Text="Попросить дать вам две баллисты">
-					<Modification Name="Trigger" ValueString="Баллисты"/>
+					<Modification Name="Trigger" Value="Баллисты"/>
 				</Option>
 				<Option Destination="145" Text="Попросить у легата взять из арсенала нужное вам количество тяжелых дротиков" Availability="Пилумы">
-					<Modification Name="RemoveTrigger" ValueString="Пилумы"/>
+					<Modification Name="RemoveTrigger" Value="Пилумы"/>
 				</Option>
 				<Option Destination="145" Text="Не будете ни о чём просить"/>
 			</Options>
@@ -1911,10 +1911,10 @@
 			<Text>Ваше приближение заметили, но мародеры были рассыпаны по огромному пространству и многие продолжали грабить дома, не зная о возникшей опасности.</Text>
 			<Options>
 				<Option Destination="203" Text="Приказать захватывать мародеров в плен">
-					<Modification Name="Trigger" ValueString="Мародеров в плен"/>
+					<Modification Name="Trigger" Value="Мародеров в плен"/>
 				</Option>
 				<Option Destination="203" Text="Приказать никого не щадить">
-					<Modification Name="Trigger" ValueString="Никого не щадить"/>
+					<Modification Name="Trigger" Value="Никого не щадить"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -2076,7 +2076,7 @@
 			<Text>После короткого отдыха ваш отряд направился по дороге и вскоре впереди вы заметили небольшую виллу. На холмах паслось небольшое стадо коров, и вы направили отряд прямиком к ним. Вас встретил грозный лай сторожевых собак и пастух-дак с длинной суковатой палкой. Он настороженно следил за вашим отрядом.</Text>
 			<Options>
 				<Option Destination="356" Text="Вы можете реквизировать коров (запишите слово «вражда»)">
-					<Modification Name="Trigger" ValueString="Вражда"/>
+					<Modification Name="Trigger" Value="Вражда"/>
 				</Option>
 				<Option Destination="335" Text="Хотите поговорить с даком"/>
 			</Options>
@@ -2126,10 +2126,10 @@
 			<Text>Вы поскакали к парадному входу в виллу. Издалека вы заметили, как двое варваров тащат по двору какую-то женщину в белой тунике. Завидев вас, один из грабителей взвалил на плечи женщину, и побежал в строну рощи. Вскоре оба варвара скрылись из вида. Когда вы въехали во двор, никого уже не было. За вами во двор усадьбы вбежали ваши легионеры. Вы приказали обыскать виллу и ближайший поселок.</Text>
 			<Options>
 				<Option Destination="209" Text="Приказать захватывать мародеров в плен">
-					<Modification Name="Trigger" ValueString="Мародеров в плен"/>
+					<Modification Name="Trigger" Value="Мародеров в плен"/>
 				</Option>
 				<Option Destination="209" Text="Приказать никого не щадить">
-					<Modification Name="Trigger" ValueString="Никого не щадить"/>
+					<Modification Name="Trigger" Value="Никого не щадить"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -3133,7 +3133,7 @@
 			<Text>Вы спросили пастуха, чей это скот. Дак пробурчал что-то непонятное. Из всего вы поняли лишь римское имя Теренций. Судя по всему, эти коровы принадлежали местному римскому землевладельцу.</Text>
 			<Options>
 				<Option Destination="356" Text="Если вы решили реквизировать скот (запишите слово «вражда»)">
-					<Modification Name="Trigger" ValueString="Вражда"/>
+					<Modification Name="Trigger" Value="Вражда"/>
 				</Option>
 				<Option Destination="339" Text="Решаете поискать провизию в другом месте"/>
 			</Options>
