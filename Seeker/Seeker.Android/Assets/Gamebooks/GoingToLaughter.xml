@@ -698,8 +698,8 @@
 			<Modifications>
 				<Modification Name="Heroism" Value="5"/>
 				<Modification Name="Inspiration" Value="1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение->Inspiration=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Пение->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Пение->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="40"/>
@@ -1000,12 +1000,12 @@
 				<Text>Разобрались со всем этим?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Набожность->Inspiration=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Набожность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Суеверие->Inspiration=3"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Пьянство->Inspiration=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Забывчивость->Buffoonery=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Сумасшествие->Inspiration=1"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Набожность->Inspiration=10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Набожность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Суеверие->Inspiration=3"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Пьянство->Inspiration=1"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Забывчивость->Buffoonery=1"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Сумасшествие->Inspiration=1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="519"/>
@@ -1060,8 +1060,8 @@
 				<Modification Name="Heroism" Value="1"/>
 				<Modification Name="Buffoonery" Value="1"/>
 				<Modification Name="Inspiration" Value="1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Танец->Heroism=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Танец->Buffoonery=1"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Танец->Heroism=1"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Танец->Buffoonery=1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="464"/>
@@ -1478,8 +1478,8 @@
 				<Text>Ваши товарищи по безумию тоже радуются, и хотя они пляшут и поют не так хорошо как Вы, но тоже очень стараются.\n\nВсем хорошо и весело, слюни и сопли летят счастливыми брызгами по бедламу, и только дежурные отнюдь не рады всему этому безобразию.\n\nБезумцев утихомиривают, а Вас — бросают в тёмное мрачное помещение, чтоб знали, как себя вести.\n\nКонечно, с сумасшедшего взятки гладки, да и раньше Вы вели себя вполне благопристойно. Но и оставлять такое поведение без последствий тоже не могут.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение, Танец->Heroism=6"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение, Танец->Inspiration=6"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Пение, Танец->Heroism=6"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Пение, Танец->Inspiration=6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="464"/>
@@ -2041,12 +2041,12 @@
 				<Text Size="small">Если у Вас имеются такие достоинства как «Красноречие», «Артистизм», «Верховая езда», «Предусмотрительность» и «Сражение» — добавьте по пункту Героизма за каждое.\nЕсли у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма.\nЗа каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="640" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -2161,8 +2161,8 @@
 				<Text>Потихонечку и без особых приключений Вы мирно добредаете до площади.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Рассеянность->Buffoonery=-1"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Плохое зрение->Buffoonery=-1"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Рассеянность->Buffoonery=-1"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Плохое зрение->Buffoonery=-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="525"/>
@@ -2304,7 +2304,7 @@
 			<Modifications>
 				<Modification Name="Buffoonery" Value="2"/>
 				<Modification Name="Heroism" Value="10"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность, Пение, Танец, Красноречие, Везение, Смекалка, Чревовещание, Наблюдательность, Интуиция, Эрудиция->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность, Пение, Танец, Красноречие, Везение, Смекалка, Чревовещание, Наблюдательность, Интуиция, Эрудиция->Heroism=10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="606" Text="Воспользоваться случаем и выступить перед народом с речью о необходимости свергнуть монарха"/>
@@ -2455,7 +2455,7 @@
 				<Text>- Братан! - крепко и душевно обняв Вас, главарь голодранцев расчувствовался: - Крыси... Тьфу!\n\nПоняв, что чуть не ляпнул что-то не то, он тотчас же осёкся и, покосившись на стражников, засеменил прочь, увлекая Вас следом.\n\nДелать нечего, и Вы поспешили за ним. В конце концов, Вы сами решили связаться с этими ребятами, вот сами теперь и разбирайтесь...</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="10,2,5"/>
+				<Modification Name="MusicalPerformance" Value="10,2,5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3003,7 +3003,7 @@
 				<Text>- Ладно, попели и будет. Пошли, познакомлю тебя с одним человеком, - торопит Вас косматый босяк. Вы пожимаете плечами и следуете за ним.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="0,0,1"/>
+				<Modification Name="MusicalPerformance" Value="0,0,1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3046,7 +3046,7 @@
 				<Text>- Потрясающе! Нужно будет запомнить! Пошли, обязательно потом споёшь её нашему атаману! - похлопав Вас по спине, заявил главарь. Кивнув, Вы направились следом за оборванцами.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="6,2,6"/>
+				<Modification Name="MusicalPerformance" Value="6,2,6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3060,7 +3060,7 @@
 				<Text>- Это было просто замечательно! - одобрительно похлопал Вас по плечу главный голодранец. - Определённо, ты будешь одним из нас. Но сперва это должен одобрить наш атаман. Я, конечно же, замолвлю за тебя словечко, а дальше - смотри сам.\n\nПоблагодарив его, вы следуете за ним.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="5,2,5"/>
+				<Modification Name="MusicalPerformance" Value="5,2,5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3074,7 +3074,7 @@
 				<Text>- Сойдёт, - кивает главарь босяков. - Хорошо. Из тебя, скорее всего, выйдет толк. Но пока нужно присмотреться. И тебя ещё должен одобрить тот, кому подчиняюсь я.\n\n- Погоди, так ты что, получается, тут не самый главный? - интересуетесь Вы.\n\n- Хех, чудной ты, отец! Конечно же! У нас всё как в любом уважающем себя королевстве - есть и свой король, и свои вельможи. Пошли, скоро тебя ему представят, - подмигнув, обещает космач. Вам остаётся только идти за ним следом и готовиться к встрече с королём бродяг.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="2,0,0"/>
+				<Modification Name="MusicalPerformance" Value="2,0,0"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3102,7 +3102,7 @@
 				<Text>- Ну, ладно, отец. Поёшь ты хорошо, спору нет. Думаю, у нас найдётся для тебя работёнка. Нужно только обсудить один вопрос кое с кем. Пошли, дружище, - похлопав Вас по плечу.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="3,0,0"/>
+				<Modification Name="MusicalPerformance" Value="3,0,0"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3138,7 +3138,7 @@
 				<Text>- Сразу видно - наш человек! - не без уважения отмечает главный босяк. - Пошли, познакомлю тебя с одним моим хорошим другом!</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="2,0,2"/>
+				<Modification Name="MusicalPerformance" Value="2,0,2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3152,7 +3152,7 @@
 				<Text>- Бедный Вилли. А ты - можешь стать богатым, если покрутишься вблизи нужных людей. Но ты молодец, всего в одночасье лишился, а сноровку не теряешь и руки не опускаешь. Уже в строю. Я уважаю таких людей, правда, - глядя Вам в глаза, поделился главный босяк, при этом поглаживая небритый подбородок. - Ладно, значит так, Ваше шутовское сиятельство: сейчас я познакомлю тебя с одним очень влиятельным и важным человеком, но только заруби себе на носу, что ты не должен об этом распространяться. Понял? Если ты произведёшь на него хорошее впечатление - значит, считай дело выгорело. Но не вздумай ему дерзить или перебивать. Он любит производить впечатление простачка, трещащего без умолку, но это просто маска. Он так прощупывает и следит за тобой. Покажешь себя молодцом - он это оценит. Не трусь и не бойся, но и не борзей. Знай во всём меру. Усёк? Ну, тогда пошли. Я поручусь за тебя, а ты уж меня не позорь.\n\nНапоследок покосившись на стражников (ответивших такими же неприязненными взглядами), босяк повёл Вас прочь от ворот королевского замка.\n\nВы сами ввязались в эту историю, решив как-либо связать себя с этими людьми, так что - без претензий.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="4,0,0"/>
+				<Modification Name="MusicalPerformance" Value="4,0,0"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3245,7 +3245,7 @@
 				<Text>- Это было очень сильно, - согласился космач. - Эх, сегодня же пойду и крепко-крепко обниму свою старушку. Спасибо тебе, редко можно услышать что-то такое. Смеяться, конечно, хорошо и здорово. Но иногда - нужно и плакать. А заставить плакать от красивой песни, умеет далеко не каждый. Это, брат, у тебя настоящий дар от Бога! Не преувеличиваю. Ну, что тут теперь скажешь - обязательно нужно, чтобы ты спел как-нибудь эту песню нашему атаману. А знаешь, пошли, познакомлю тебя с ним прямо сейчас. Может быть, что-то путное подскажет. И смотри, много языком не мели, не нарывайся и не зарывайся, знай меру и не перегибай палку. С ним не каждого встречного знакомят - он что ваш лорд, абы с кем не якшается. Усёк?\n\nА Вы что? А Вы - ничего. Остаётся только пойти следом за косматым и морально готовиться ко встрече с атаманом бродяг.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="12,2,0"/>
+				<Modification Name="MusicalPerformance" Value="12,2,0"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3259,7 +3259,7 @@
 				<Text>- Что ж, трогательно, - грустно вздохнув, оценил космач. - Ну, шут с тобой. Пошли.\n\nИ Вам осталось лишь последовать за ним.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="5,1,0"/>
+				<Modification Name="MusicalPerformance" Value="5,1,0"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3273,7 +3273,7 @@
 				<Text>- Ну, что сказать, парень, ты - молодец. Пошли, покажу тебе нашего атамана, - произнёс космач, и Вам осталось лишь последовать за ним и его людьми.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="2,1,1"/>
+				<Modification Name="MusicalPerformance" Value="2,1,1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3294,7 +3294,7 @@
 				<Text>- Недурно, недурно, - оценил косматый голодранец. - Хорошо, моё слово ты имеешь. Если одобрит наш старшой - считай, что ты один из нас.\n\nВам остаётся лишь кивнуть и следовать за ним.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="3,0,0"/>
+				<Modification Name="MusicalPerformance" Value="3,0,0"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3308,7 +3308,7 @@
 				<Text>- Складно поёшь! Хорошо, был ты шутом королевским, а теперь, значица, будешь нашенским! Пошли, дружище! - и с этими словами космач повёл Вас прочь.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="4,0,1"/>
+				<Modification Name="MusicalPerformance" Value="4,0,1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3322,7 +3322,7 @@
 				<Text>- Ну, ты силён! - не без восхищения оценил главный бродяга. - Я чувствую, из тебя определённо выйдет толк! Пошли, представлю тебя нашему атаману!\n\nЧто делать?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="5,0,5"/>
+				<Modification Name="MusicalPerformance" Value="5,0,5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3343,7 +3343,7 @@
 				<Text>- Складно поёшь. Хорошо, считай, что ты с нами, - кивает главарь, уводя Вас прочь.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="3,1,0"/>
+				<Modification Name="MusicalPerformance" Value="3,1,0"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3364,7 +3364,7 @@
 				<Text>- Потенциал есть, - с видом знатока (ой, можно подумать!..) заявляет главный голодранец. - Идём, познакомлю тебя с моим атаманом.\n\nДелать нечего, нужно идти.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="1,1,1"/>
+				<Modification Name="MusicalPerformance" Value="1,1,1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -3386,7 +3386,7 @@
 				<Text>- Ну, что я могу сказать: недурно, хотя бывает и получше, - от всего сердца признался космач и, в общем-то, в данном конкретном случае Вы с ним вполне согласны. - Ладно, отец, пошли, познакомлю тебя с нашим главным.\n\nПоскольку Вы сами хотели примкнуть к этим бродягам - отказываться сейчас было бы верхом глупости, и Вы идёте следом за бродягами и их вожаком под подозрительные взгляды королевских стражников у ворот замка.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MusicalPerformance" ValueString="2,2,2"/>
+				<Modification Name="MusicalPerformance" Value="2,2,2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="13"/>
@@ -4284,7 +4284,7 @@
 				<Text Size="small">Запишите себе недостаток «Сумасшествие», если у Вас его ещё не было.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Disadvantage" ValueString="Сумасшествие"/>
+				<Modification Name="Disadvantage" Value="Сумасшествие"/>
 			</Modifications>
 			<Options>
 				<Option Destination="185"/>
@@ -4445,11 +4445,11 @@
 				<Text Size="small">Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. Если Вы Набожны - ещё 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния, недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность, Набожность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="628" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -4474,7 +4474,7 @@
 				<Modification Name="Heroism" Value="5"/>
 				<Modification Name="Inspiration" Value="5"/>
 				<Modification Name="Buffoonery" Value="1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Артистизм, Красноречие->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Артистизм, Красноречие->Heroism=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="751"/>
@@ -4555,7 +4555,7 @@
 				<Modification Name="Heroism" Value="5"/>
 				<Modification Name="Inspiration" Value="5"/>
 				<Modification Name="Buffoonery" Value="1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Артистизм, Красноречие->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Артистизм, Красноречие->Heroism=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="751"/>
@@ -5099,7 +5099,7 @@
 				<Text Size="small">Если Вы жестокосердный - добивайте «падаль» и получайте 6 пунктов Злодейства. Если нет - всё, хорош, проучили дурака, и хватит.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Villainy=6"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Villainy=6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="996"/>
@@ -5273,7 +5273,7 @@
 			<Id>488</Id>
 			<Text>Если у Вас записано «Избавитель», «Сновидец», «Обращенный», «Попрошайка», ««Наставник», «Комедиант», «Флибустьер», «Гаргантюа», «Казнокрад», «Подрывник», «Лазутчик», «Изменник», «Бомбардировщик», «Соратник», «Отшельник» или «Оптимист», - добавьте себе 25 пунктов Героизма за каждое достижение. Потом возвращайтесь на параграф с которого пришли.</Text>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Trigger->Избавитель, Сновидец, Обращенный, Попрошайка, Наставник, Комедиант, Флибустьер, Гаргантюа, Казнокрад, Подрывник, Лазутчик, Изменник, Бомбардировщик, Соратник, Отшельник, Оптимист->Heroism=25"/>
+				<Modification Name="DynamicBonuses" Value="Trigger->Избавитель, Сновидец, Обращенный, Попрошайка, Наставник, Комедиант, Флибустьер, Гаргантюа, Казнокрад, Подрывник, Лазутчик, Изменник, Бомбардировщик, Соратник, Отшельник, Оптимист->Heroism=25"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1392"/>
@@ -5359,7 +5359,7 @@
 			<Id>497</Id>
 			<Text>Если у Вас записано «Мегера», «Вертихвостка», «Безумная», «Муза» или «Одалиска» - добавьте себе 25 пунктов Героизма за каждое достижение. Потом возвращайтесь на параграф с которого пришли.</Text>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Trigger->Мегера, Вертихвостка, Безумная, Муза, Одалиска->Heroism=25"/>
+				<Modification Name="DynamicBonuses" Value="Trigger->Мегера, Вертихвостка, Безумная, Муза, Одалиска->Heroism=25"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1392"/>
@@ -5558,7 +5558,7 @@
 			<Id>518</Id>
 			<Text>Если у Вас записано «Сусанин», «Флагеллант», «Невольник», «Мародёр» или «Вигилант» - добавьте себе по 25 пунктов Героизма за каждое достижение. Потом возвращайтесь на параграф с которого пришли.</Text>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Trigger->Сусанин, Флагеллант, Невольник, Мародёр, Вигилант->Heroism=25"/>
+				<Modification Name="DynamicBonuses" Value="Trigger->Сусанин, Флагеллант, Невольник, Мародёр, Вигилант->Heroism=25"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1392"/>
@@ -6005,12 +6005,12 @@
 				<Text Size="small">Если у Вас имеются такие достоинства как «Красноречие», «Артистизм», «Верховая езда», «Предусмотрительность» и «Сражение» — добавьте по пункту Героизма за каждое. Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="757" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -6045,11 +6045,11 @@
 				<Text Size="small">Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1076" Text="Если у Вас имеется 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -6305,11 +6305,11 @@
 				</Action>
 			</Actions>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="591" Text="Если у Вас имеется 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -6330,11 +6330,11 @@
 				<Text Size="small">Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1087" Text="Если у Вас имеется 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -6389,11 +6389,11 @@
 				<Text Size="small">Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1089" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -6429,11 +6429,11 @@
 				<Text Size="small">Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1101" Text="Если у Вас имеется 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -6472,12 +6472,12 @@
 				<Text Size="small">Если у Вас имеются такие достоинства как «Красноречие», «Артистизм», «Верховая езда», «Предусмотрительность» и «Сражение» — добавьте по пункту Героизма за каждое. Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="640" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -6635,7 +6635,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Heroism" Value="20"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Villainy=12"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Villainy=12"/>
 			</Modifications>
 			<Options>
 				<Option Destination="633"/>
@@ -6751,12 +6751,12 @@
 				</Action>
 			</Actions>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Villainy=12"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Villainy=12"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1129" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -7288,7 +7288,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Heroism" Value="1"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Villainy=6"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Villainy=6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="670" Text="Откроете камеры и выпустите узников"/>
@@ -7463,7 +7463,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Buffoonery" Value="-2"/>
-				<Modification Name="Disadvantage" ValueString="Сумасшествие"/>
+				<Modification Name="Disadvantage" Value="Сумасшествие"/>
 			</Modifications>
 			<Options>
 				<Option Destination="185"/>
@@ -7706,7 +7706,7 @@
 			<Modifications>
 				<Modification Name="Heroism" Value="10"/>
 				<Modification Name="Inspiration" Value="10"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Пение->Heroism=10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="751"/>
@@ -7953,11 +7953,11 @@
 				<Text Size="small">Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1076" Text="Если у Вас имеется 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -8367,9 +8367,9 @@
 				<Modification Name="Buffoonery" Value="1"/>
 				<Modification Name="Heroism" Value="5"/>
 				<Modification Name="Inspiration" Value="5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Buffoonery=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Inspiration=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Buffoonery=1"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="769"/>
@@ -8504,9 +8504,9 @@
 				<Modification Name="Buffoonery" Value="1"/>
 				<Modification Name="Heroism" Value="5"/>
 				<Modification Name="Inspiration" Value="5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Buffoonery=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Inspiration=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Buffoonery=1"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="769"/>
@@ -8633,12 +8633,12 @@
 				<Modification Name="Heroism" Value="5"/>
 				<Modification Name="Inspiration" Value="5"/>
 				<Modification Name="Buffoonery" Value="1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение->Inspiration=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Пение->Buffoonery=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Музицирование->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Музицирование->Inspiration=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Музицирование->Buffoonery=1"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Пение->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Пение->Inspiration=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Пение->Buffoonery=1"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Музицирование->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Музицирование->Inspiration=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Музицирование->Buffoonery=1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="501"/>
@@ -8708,7 +8708,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="1392" Text="Ваc сразила пуля" Singleton="Невезение, Рассеянность, Малодушие">
-					<Modification Name="StaticBonuses" ValueString="Heroism=20, Inspiration=20, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=20, Inspiration=20, Дежа вю"/>
 					<Text>Если же всё прошло блаополучно, то Вы потихонечку слиняли в лес, пока все эти ребята увлечены сражением...</Text>
 				</Option>
 				<Option Destination="767"/>
@@ -8757,7 +8757,7 @@
 			<Text>- Ух ты, какой дерзкий выискался! - недовольный Вашим ответом, хохотнул мародёр. - А тебя не учили, что отвечать вопросом на вопрос - по меньшей мере, невежливо?\n\n- Зависит от ситуации, - решительно и твёрдо продолжаете Вы, как будто сила и преимущество на Вашей стороне. - Не на всякий вопрос следует отвечать.\n\n- Ишь ты! И что, совсем нас не боишься? - не то с улыбкой, не то с оскалом интересуется другой хмырь, с явными признаками сифилиса на бандитской роже.\n\n- А должен? - приподняв бровь, интересуетесь Вы. - Толпой на одного я, знаешь ли, тоже орёл, сильный и смелый.\n\nНа самом деле Вам, конечно же, страшно. Но если поддаться панике - легче не будет. А это, в конце концов, всего лишь люди и, судя по всему, не самые хорошо обученные.\n\nХорошо обученные много зарабатывают и не сбегают, а эти - стервятники, а не орлы. Они могут много бахвалиться друг перед другом, но про таких как они и придумана народная пословица: «Молодец против овец, против молодца - сам овца».\n\n- Ну, что ж, уважаю, - промолвил верзила в ворованном бургигьоте и толстом суконном колете, прежде чем разрядить в Вас свой пистолет.</Text>
 			<Options>
 				<Option Destination="827" Text="Если Вы живучий" Availability="Живучесть">
-					<Modification Name="StaticBonuses" ValueString="Heroism=20, Inspiration=20, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=20, Inspiration=20, Дежа вю"/>
 					<Text>Если же нет, и если попадаете на этот параграф впервые - добавьте ключевые слова «Дежа вю», запишите 20 пунктов Героизма и 20 пунктов Вдохновения.</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории"/>
@@ -8902,7 +8902,7 @@
 			</Texts>
 			<Options>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Рассеянность">
-					<Modification Name="StaticBonuses" ValueString="Heroism=2, Inspiration=20, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=2, Inspiration=20, Дежа вю"/>
 					<Text>Если же нет, то всё, слава Богу, обошлось.\n\nЕсли Вы ещё живы - возвращайтесь на параграф с которого пришли, не лезьте, куда не просят, и не трогайте, что попало!</Text>
 				</Option>
 				<Option Destination="717"/>
@@ -8916,7 +8916,7 @@
 					<Text>Если же нет, и если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 20 пунктов Героизма и 20 пунктов Вдохновения.</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=20, Inspiration=20, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=20, Inspiration=20, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -8974,8 +8974,8 @@
 			<Modifications>
 				<Modification Name="Heroism" Value="5"/>
 				<Modification Name="Inspiration" Value="5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Inspiration=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="474"/>
@@ -9048,11 +9048,11 @@
 				<Text Size="small">Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. Если Вы Набожны - ещё 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния, недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность, Набожность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1087" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -9076,8 +9076,8 @@
 			<Modifications>
 				<Modification Name="Heroism" Value="5"/>
 				<Modification Name="Inspiration" Value="5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Inspiration=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="818"/>
@@ -9303,7 +9303,7 @@
 					<Text>Если же нет, и если попадаете на этот параграф впервые, добавьте себе ключевые слова «Дежа вю», запишите 20 пунктов Героизма и 20 пунктов Вдохновения...</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=20, Inspiration=20, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=20, Inspiration=20, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -9462,7 +9462,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Buffoonery" Value="1"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Суеверие->Buffoonery=-1"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Суеверие->Buffoonery=-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1226" Text="Сначала Вы хотите обойти и осмотреть все комнаты и помещения, а также прилегающие территории"/>
@@ -9504,8 +9504,8 @@
 			<Modifications>
 				<Modification Name="Heroism" Value="5"/>
 				<Modification Name="Inspiration" Value="5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Inspiration=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="365"/>
@@ -9578,8 +9578,8 @@
 			<Modifications>
 				<Modification Name="Heroism" Value="5"/>
 				<Modification Name="Inspiration" Value="5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие->Inspiration=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="678"/>
@@ -9593,7 +9593,7 @@
 				<Text>Если же нет, Вы находите в себе силы сдержаться и оставляете этих подонков в живых.\n\nВ любом случае, отдышавшись - Вы побрели дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Villainy=12"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Villainy=12"/>
 			</Modifications>
 			<Options>
 				<Option Destination="888"/>
@@ -9861,7 +9861,7 @@
 					<Text>Если нет, и Вы попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 15 пунктов Героизма и 15 пунктов Вдохновения...</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -10649,7 +10649,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Дежа вю"/>
 					<Text>Если воля к жизни пересилила и недуг отступил, вычёркивайте недостаток «Сумасшествие»:</Text>
 				</Option>
 				<Option Destination="993" Text="Воля к жизни пересилила!"/>
@@ -10852,7 +10852,7 @@
 					<Text>Если же нет, то - увы, Вас погребло под завалом. Если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 15 пунктов Героизма и 15 пунктов Вдохновения...</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -11043,7 +11043,7 @@
 			</Texts>
 			<Options>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Старые счёты">
-					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
 					<Text>Если же всё в порядке - Вы всласть поглазели на носорога (о том, откуда он тут взялся, Вы, возможно, узнаете позднее, или как-нибудь в другой раз), а позднее побрели в собор</Text>
 				</Option>
 				<Option Destination="348" Text="В собор"/>
@@ -11217,12 +11217,12 @@
 				<Text Size="small">Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Старые счёты->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1246" Text="Если у Вас в итоге набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -11363,11 +11363,11 @@
 				<Text Size="small">Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. Если Вы Набожны - ещё 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния, недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность, Набожность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1280" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -11463,11 +11463,11 @@
 				<Text Size="small">Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. Если Вы Набожны - ещё 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния, недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность, Набожность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1267" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -11528,11 +11528,11 @@
 				<Text Size="small">Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. Если Вы Набожны - ещё 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния, недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность, Набожность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1254" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -11599,11 +11599,11 @@
 				<Text Size="small">Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. Если Вы Набожны - ещё 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния, недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность, Набожность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1274" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -11700,10 +11700,10 @@
 			</Texts>
 			<Options>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Се ля ви"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Се ля ви"/>
 					<Text>В случае успеха, Ваш поход закончился благополучно, а Ваша троица вскоре покинула Кокань и зажила припеваючи на чужбине. Запишите достижение «Казнокрад». Если Вы в первый раз очутились на этом параграфе, запишите ключевые слова «Се ля ви», 10 пунктов Героизма и 10 пунктов Вдохновения.</Text>
 				</Option>
-				<Option Destination="1392" Text="Если Вас не устраивает и эта концовка тоже, и Вы желаете другого завершения истории" ValueString="Heroism=10, Inspiration=10, Се ля ви"/>
+				<Option Destination="1392" Text="Если Вас не устраивает и эта концовка тоже, и Вы желаете другого завершения истории" Value="Heroism=10, Inspiration=10, Се ля ви"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -12172,7 +12172,7 @@
 					<Text>Если же нет, Вам, к сожалению, было не суждено доплыть до берега и воссоединиться с отцом: если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения...</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -12184,7 +12184,7 @@
 					<Text>Если же нет, Вам, к сожалению, было не суждено доплыть до берега и воссоединиться с отцом: если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения...</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -12206,7 +12206,7 @@
 					<Text>Если же Вы невезучий и не выдержали проверку, то мощный боевой корабль Абубакара разнёс Вашу шхуну под орех, поубивав почти весь экипаж ещё задолго до абордажа, и мавры бегло вынесли что успели с уходящего на дно судна. В таком случае, если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения...</Text>
 				</Option>
 				<Option Destination="335" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Невезение">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
 					<Text>Если же Вы не являетесь определённо везучим или невезучим, то бросьте кость, и если выпавшее значение от 1-3, всё закончилось мрачно, а если от 4-6 – благополучно. Как обычно, Вы можете использовать неизрасходованные пункты Вдохновения для переброса результата.</Text>
 				</Option>
 			</Options>
@@ -12219,7 +12219,7 @@
 					<Text>Если же нет, Вам, к сожалению, было не суждено доплыть до берега и воссоединиться с отцом: если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения.</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -12323,12 +12323,12 @@
 				<Text Size="small">Если у Вас имеются такие достоинства как «Красноречие», «Артистизм», «Верховая езда», «Предусмотрительность» и «Сражение» — добавьте по пункту Героизма за каждое. Если у Вас есть достоинство «Популярность» - добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="640" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -12406,11 +12406,11 @@
 				</Action>
 			</Actions>
 			<Modifications>
-				<Modification Name="DynamicBonuses" ValueString="Advantage->Популярность, Набожность->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Buffoonery->1->Heroism=10"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Inspiration->1->Heroism=5"/>
-				<Modification Name="DynamicBonuses" ValueString="Param->Villainy->6->Heroism=-10"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Buffoonery->1->Heroism=10"/>
+				<Modification Name="DynamicBonuses" Value="Param->Inspiration->1->Heroism=5"/>
+				<Modification Name="DynamicBonuses" Value="Param->Villainy->6->Heroism=-10"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1129" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -12523,7 +12523,7 @@
 			</Texts>
 			<Options>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Малодушие|Суеверие">
-					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
 					<Text>Если же всё прошло благополучно, Вы находите в себе силы воззвать к Создателю. Если Вы набожный, и Ваша вера сильна, то кадавры возвращаются обратно в свои могилы и засыпают вечным сном, попутно забрав с собой тех, кто призвал их...</Text>
 				</Option>
 				<Option Destination="1310" Availability="Набожность"/>
@@ -12786,7 +12786,7 @@
 					<Text>Если же нет, то Вы просто на некоторое время оттянули свою кончину: если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 5 пунктов Героизма и 5 пунктов Вдохновения.</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=5, Inspiration=5, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=5, Inspiration=5, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -12977,7 +12977,7 @@
 					<Text>А если нет - у вас ничего не получится, потому что сейчас уже все стражники в курсе случившегося, перевернули город вверх дном и жаждут Вашей крови. Если Вас застукали и узнали - то Вас не только могут убить на месте, но даже и получат за это награду. Если Вы попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 5 пунктов Героизма и 5 пунктов Вдохновения.</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=5, Inspiration=5, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=5, Inspiration=5, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -13091,7 +13091,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="1151">
-					<Modification Name="StaticBonuses" ValueString="Villainy=6"/>
+					<Modification Name="StaticBonuses" Value="Villainy=6"/>
 					<Text>Если же мушкетон был заряжен пулей, он пробил панцирь на груди впередистоящего швейцарца, сразив его наповал (добавьте 6 пунктов Злодейства), но остальные, рассвирипев, бросаются на вас с товарищем, завязывая бой.\n\nГуальтеро вскоре падает, сражёный их ударами.\n\nА Вы, понимая, что этот бой Вам не вытянуть в одиночку, бежите без оглядки, петляя тёмными коридорами, пока по воле случая не натыкаетесь на лестницу, выводящую Вас к потайному люку.\n\nДалее Вы оказываетесь в коридоре замка, где ходят и бродят придворные.</Text>
 				</Option>
 				<Option Destination="1121">
@@ -13345,7 +13345,7 @@
 			</Texts>
 			<Modifications>
 				<Modification Name="Buffoonery" Value="-1"/>
-				<Modification Name="DynamicBonuses" ValueString="Disadvantage->Суеверие->Buffoonery=-1"/>
+				<Modification Name="DynamicBonuses" Value="Disadvantage->Суеверие->Buffoonery=-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="885"/>
@@ -13538,7 +13538,7 @@
 					<Text>Если же Вы не обладаете такими достоинствами, но при этом наделены малодушием, сумасшествием, рассеянностью, невезением, плохим зрением, забывчивостью или суеверием, то Вы заблудились, натолкнувшись на одну из многочисленных ловушек королевского лабиринта, и погибли. В таком случае, если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 15 пунктов Героизма и 15 пунктов Вдохновения</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Малодушие|Сумасшествие|Забывчивость|Рассеянность|Невезение|Плохое зрение|Суеверие">
-					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
 					<Text>Если у вас нет ни перечисленных достоинств, ни указанных недостатков:</Text>
 				</Option>
 				<Option Destination="158"/>
@@ -13611,11 +13611,11 @@
 			</Modifications>
 			<Options>
 				<Option Destination="1384">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25"/>
 					<Text>Если же нет, то небольшая армия профессионально обученных воинов-сарацинов жестоко подавила бунт, перебив множество невольников, и Вас заодно...</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -13730,11 +13730,11 @@
 			</Texts>
 			<Options>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=10, Inspiration=10, Се ля ви"/>
+					<Modification Name="StaticBonuses" Value="Heroism=10, Inspiration=10, Се ля ви"/>
 					<Text>В случае провала – Вы просто погибли смертью храбрых, а Д`Ладье сумел-таки взять Кокань. Если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 15 пунктов Героизма и 15 пунктов Вдохновения.</Text>
 				</Option>
 				<Option Destination="1392" Singleton="Невезение|Малодушие|Рассеянность|Сумасшествие">
-					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -13825,10 +13825,10 @@
 			</Texts>
 			<Options>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Малодушие|Забывчивость|Рассеянность|Сумасшествие|Обжорство|Плохой слух|Плохое зрение|Суеверие|Невезение" Aftetext="В ином случае, войска, под Вашим чутким руководством, вскоре взяли город. Ангерран Д`Ладье объявил о своём праве на коканский престол, и, таким образом, конфликт был улажен сравнительно малой кровью. Запишите достижение «Изменник». Если Вы в первый раз очутились на этом параграфе, запишите ключевые слова «Се ля ви», 10 пунктов Героизма и 10 пунктов Вдохновения...">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=10, Inspiration=10, Се ля ви"/>
+					<Modification Name="StaticBonuses" Value="Heroism=10, Inspiration=10, Се ля ви"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -13916,11 +13916,11 @@
 			</Texts>
 			<Options>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Availability="Живучесть|Везение|Смекалка|Наблюдательность|Набожность">
-					<Modification Name="StaticBonuses" ValueString="Heroism=10, Inspiration=10, Се ля ви"/>
+					<Modification Name="StaticBonuses" Value="Heroism=10, Inspiration=10, Се ля ви"/>
 					<Text>В противном случае, Вы пали на поле сражения, а войско Ангеррана вскоре было разбито. Если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения...</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает и эта концовка тоже, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -13950,11 +13950,11 @@
 			</Texts>
 			<Options>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Малодушие|Забывчивость|Рассеянность|Сумасшествие|Обжорство|Плохой слух|Плохое зрение|Суеверие|Невезение">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
 					<Text>В ином случае, Ваш отряд ворвался прямиком в королевскую опочивальню, расправившись с королём и его телохранителям на месте, а вскоре – Ангерран Д`Ладье объявил о своём праве на коканский престол, и, таким образом, конфликт был улажен сравнительно малой кровью. Запишите достижение «Изменник». Если Вы в первый раз очутились на этом параграфе, запишите ключевые слова «Се ля ви», 10 пунктов Героизма и 10 пунктов Вдохновения.</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=10, Inspiration=10, Се ля ви"/>
+					<Modification Name="StaticBonuses" Value="Heroism=10, Inspiration=10, Се ля ви"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -14287,7 +14287,7 @@
 			<Modifications>
 				<Modification Name="Heroism" Value="25"/>
 				<Modification Name="Inspiration" Value="25"/>
-				<Modification Name="Advantage" ValueString="Сражение"/>
+				<Modification Name="Advantage" Value="Сражение"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1297"/>
@@ -14305,7 +14305,7 @@
 					<Text>Если же нет, Вам, к сожалению, Вам было не суждено пережить абордажный бой...</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -14314,11 +14314,11 @@
 			<Text>В тот момент, когда Вы пребывали в блаженной уверенности, что плаванье пройдёт гладко, по закону подлости разыгрался чудовищный шторм.\n\nКорабль кренило и так и эдак; по головам нещадно хлестал жуткий ливень; небо высвечивалось от ярких молний, делавших на миг светло, будто днём; доски скрипели, чудовищный гром ранил слух, а волны накрывали палубу, унося людей и бочки.\n\nДействуя отважно и решительно, капитан Клеменс велел повыбрасывать за борт всё, не церемонясь ни с дорогими товарами, ни с милыми сердцу вещами. Не время их беречь.\n\nЗа борт полетели и меха, и шелка, и рундуки, и ядра, и книппели, и всё, до чего только добрались руки. Впрочем, и этого было мало. Казалось, что шпангоуты вот-вот не выдержат и треснут. Корабль то и дело давал течь, которую тотчас же спешно заделывали.\n\nОставалось лишь привязать себя к корабельным мачтам и молить Бога о спасении.</Text>
 			<Options>
 				<Option Destination="1297" Text="Если Вы набожный, везучий или живучий, Вы благополучно пережили шторм и получаете +15 пунктов Героизма и +15 пунктов Вдохновения" Availability="Набожность|Везение|Живучесть">
-					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15"/>
+					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15"/>
 					<Text>Если же нет, корабль пошёл ко дну вместе с Вами и всем экипажем. Если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения.</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -14335,10 +14335,10 @@
 			<Triggers>Дежа вю</Triggers>
 			<Options>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Невезение|Малодушие|Рассеянность|Суеверие">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
 				</Option>
 				<Option Destination="1297" Text="Если же Вы преодолели свои страхи и волнения, то благополучно избавились от этого досадного недоразумения (Вы получаете +25 пунктов Героизма и +25 пунктов Вдохновения!) и продолжили плаванье">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -14347,11 +14347,11 @@
 			<Text>С утра ничего не предвещало беды. Капитан Клеменс хвастался своим дорогим дальнобойным штуцером, рассказывая, как однажды просто застрелил из него испанского капитана издали, вызвав на корабле трабукеров настоящую панику, позволившую избежать полномасштабного сражения.\n\nНо в этот момент в каюту забежал юнга, доложив, что в поле видимости появился сарацинский корабль, принадлежавший капитану Абубакару ибн Хамиду.\n\nНе так давно Вы уже видели его в порту, и грозные мавры в тюрбанных шлемах, панцирях с арабесками, вооружённые карамультуками, скимитарами и прочими буздыганами оказали на Вас своеобразное впечатление, надолго засев в памяти.\n\nОсобенно воитель в ерихонке с белым плюмажем, вооружённый парой сабель с елманью.\n\nНамечалось что-то серьёзное. И капитан, знавший Абубакара как облупленного, всерьёз сомневался, что его ожидает визит вежливости.\n\n- Абубакар - вероломный подлец и подонок, - предупредил он, забивая молотком пулю в штуцер. - С одной стороны, он, конечно же, держит слово. Вот только достаточно формально. И если он обещает, что не убьёт Вас, это означает лишь то, что он не сделает этого собственноручно. Эта тварь уже кидала людей и била ножом в спину не раз и не два. Но король Гунфрид малоразборчив в своих связях и симпатиях и ведёт с ним дела. Любит он восточные побрякушки, знаете ли.\n\nТем не менее, Карстен Клеменс не желал начинать конфликт первым, поэтому велел экипажу подготовиться для отражения атаки, но прежде попытаться оторваться.</Text>
 			<Options>
 				<Option Destination="1297" Text="Если Вы везучий, «Иосиф Обручник» благополучно оторвался и ушёл от преследователей (вы получаете +15 пунктов Героизма и +15 пунктов Вдохновения!)">
-					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15"/>
+					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15"/>
 					<Text>Если же Вы невезучий и не выдержали проверку, то мощный боевой корабль Абубакара разделал Вашу шхуну под орех, поубивав почти весь экипаж ещё задолго до абордажа, и мавры бегло вынесли что успели с уходящего на дно судна.\n\nВ таком случае, если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения.</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
 					<Text>Если же Вы не являетесь определённо везучим или невезучим, то бросьте кость, и если выпавшее значение от 1-3, всё закончилось мрачно, а если от 4-6 – благополучно.\n\nКак обычно, Вы можете использовать неизрасходованные пункты Вдохновения для переброса результата.</Text>
 				</Option>
 			</Options>
@@ -14361,11 +14361,11 @@
 			<Text>Ночь, звёзды, полная луна. Дует лёгкий бриз. Морской воздух солёный, прохладный и бодрящий.\n\nМатросы курят трубки, выпивают, поют нехитрые морские песни о море и любимых женщинах, которые дожидаются их из плаванья, с надеждой приходя на берег и вглядываясь в морскую даль.\n\nДаже капитан отложил лоцию и вышел на палубу, чтобы потравить байки с экипажем. На мачте появляются огни Святого Эльма, которые, согласно поверью, приносят морякам удачу.\n\nУ всех хорошее настроение.\n\n.Которое тотчас же проходит, стоит появиться в поле зрения мрачному и зловещему кораблю-призраку.\n\nОн выделяется на фоне ночного моря, источая неестественный свет, и движется, не рассекая волн. Его рваные паруса вздымаются, словно во время шторма, когда ветерок приятен и спокоен. На его борту стоят жуткие матросы, бескровно бледные, словно покойники, с пустыми и безжизненными глазами. И движется он прямо на Вас...\n\nЕсли Вы набожный или у Вас имеется менее 6 пунктов Злодейства, корабль-призрак исчезает столь же неожиданно, как и возник, а оцепеневшие матросы постепенно приходят в себя, падают на колени и молятся Господу.</Text>
 			<Options>
 				<Option Destination="1297" Text="После чего Вы, добравшись живым и здоровым до порта, оставив все ужасы позади, с облегчением пропускаете с капитаном по-маленькой: в такой ситуации это не грех (Вы получаете +25 пунктов Героизма и +25 пунктов Вдохновения!)">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25" Singleton="Набожность|ЗЛОДЕЙСТВО &lt; 6"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25" Singleton="Набожность|ЗЛОДЕЙСТВО &lt; 6"/>
 					<Text>Если же нет, Вам, к сожалению, было не суждено доплыть до берега: если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения.</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -14378,11 +14378,11 @@
 			</Texts>
 			<Options>
 				<Option Destination="1066" Text="В этот момент Вам настолько тяжело, что Вы не в состоянии думать, и поэтому Вы просто бредёте прочь. Сейчас Вам не до короля, не до вельмож, и вообще ни до чего-либо на свете" Availability="Набожность|Везение|Живучесть">
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25"/>
 					<Text>Если же у Вас нет таких достоинств - вы гибнете вместе с малышкой под завалом.\n\nЕсли попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 15 пунктов Героизма и 15 пунктов Вдохновения.</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -14595,7 +14595,7 @@
 			</Texts>
 			<Options>
 				<Option Destination="1319" Availability="Везение, !Плохое зрение" >
-					<Modification Name="StaticBonuses" ValueString="Heroism=25, Inspiration=25, Villainy=6, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Villainy=6, Дежа вю"/>
 					<Text>Если же убить француза не удалось, возвращайтесь на параграф 1322 и испытайте судьбу снова!</Text>
 				</Option>
 				<Option Destination="1322" Text="Если же убить француза не удалось, возвращайтесь назад и испытайте судьбу снова!"/>
@@ -14622,7 +14622,7 @@
 					<Text>А если нет, то увы, Вас сразили наповал. Если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 15 пунктов Героизма и 15 пунктов Вдохновения.</Text>
 				</Option>
 				<Option Destination="1392" Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
-					<Modification Name="StaticBonuses" ValueString="Heroism=15, Inspiration=15, Дежа вю"/>
+					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -14651,7 +14651,7 @@
 					<Text>Француз совершает резкий выпад. Если Вы невезучий и не выдержали проверку, эта сволочь оставила Вам шрам на память, да ещё и насмехается. Он просто издевается над Вами!\n\nЕсли же Вы сумели выдержать проверку, то своевременно отвели вражеский клинок в сторону, умело отразив атаку.</Text>
 				</Option>
 				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!">
-					<Modification Name="StaticBonuses" ValueString="Buffoonery=-1"/>
+					<Modification Name="StaticBonuses" Value="Buffoonery=-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -14663,7 +14663,7 @@
 					<Text>В какой-то момент Вы обнаруживаете брешь в обороне француза, и наносите ему резкий удар, оставив ему шрам на память. Не смертельно, зато больно и постыдно.</Text>
 				</Option>
 				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!">
-					<Modification Name="StaticBonuses" ValueString="Inspiration=5,Heroism=5"/>
+					<Modification Name="StaticBonuses" Value="Inspiration=5,Heroism=5"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -14675,7 +14675,7 @@
 					<Text>Отпарировав точный, но всё-таки недостаточно быстрый удар француза, Вы наносите ему порез, и на белой сорочке выступает алое пятно. Этого мало, для того чтоб убить противника, но начало положено.</Text>
 				</Option>
 				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!">
-					<Modification Name="StaticBonuses" ValueString="Inspiration=5,Heroism=5"/>
+					<Modification Name="StaticBonuses" Value="Inspiration=5,Heroism=5"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -14687,7 +14687,7 @@
 					<Text>Воспользовавшись короткой заминкой во время боя, Вы отпускаете колкие шуточки в адрес француза, чем вызываете его ярость и смех окружающих. Впрочем, это достаточно опытный боец, умеющий подавлять эмоции так, чтобы они не затуманивали разум.</Text>
 				</Option>
 				<Option Destination="1332" Text="Возвращайтесь и испытайте судьбу снова!">
-					<Modification Name="StaticBonuses" ValueString="Buffoonery=1"/>
+					<Modification Name="StaticBonuses" Value="Buffoonery=1"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -14894,7 +14894,7 @@
 					<Text>Противник стремительно несётся на Вас, но Вы уступаете ему путь, напутствовав увесистым пинком под зад.\n\nЛюдям-то смешно, а Вы оба уже злые, уставшие и измотанные...</Text>
 				</Option>
 				<Option Destination="1338">
-					<Modification Name="StaticBonuses" ValueString="Buffoonery=1"/>
+					<Modification Name="StaticBonuses" Value="Buffoonery=1"/>
 				</Option>
 			</Options>
 		</Paragraph>
