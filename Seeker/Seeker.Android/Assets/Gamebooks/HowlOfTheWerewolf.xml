@@ -669,7 +669,7 @@
 					<Button>Купить зелье</Button>
 					<Text>ЗЕЛЬЕ ИСЦЕЛЕНИЯ</Text>
 					<Price>4</Price>
-					<Benefit Name="Healing" ValueString="Выпить зелье Исцеления,-1"/>
+					<Benefit Name="Healing" Value="Выпить зелье Исцеления,-1"/>
 					<Aftertext>В любой момент, кроме боя, восстановит вашу Выносливость до начального уровня.</Aftertext>
 				</Action>
 				<Action>
@@ -677,7 +677,7 @@
 					<Button>Купить зелье</Button>
 					<Text>ЗЕЛЬЕ ЛОВКОСТИ</Text>
 					<Price>6</Price>
-					<Benefit Name="Healing" ValueString="Выпить зелье Ловкости,-2"/>
+					<Benefit Name="Healing" Value="Выпить зелье Ловкости,-2"/>
 					<Aftertext>Выпив это зелье, вы можете восстановить до начального уровня ваше Мастерство.</Aftertext>
 				</Action>
 				<Action>
@@ -685,7 +685,7 @@
 					<Button>Купить зелье</Button>
 					<Text>ЗЕЛЬЕ ФОРТУНЫ</Text>
 					<Price>5</Price>
-					<Benefit Name="Healing" ValueString="Выпить зелье Фортуны,-3"/>
+					<Benefit Name="Healing" Value="Выпить зелье Фортуны,-3"/>
 					<Aftertext>Если вы выпьете этот напиток, ваша Удача восстановится до начального уровня.</Aftertext>
 				</Action>
 				<Action>
@@ -2101,7 +2101,7 @@
 					<Button>Купить</Button>
 					<Text>ПРОВИЗИЯ</Text>
 					<Price>3</Price>
-					<Benefit Name="Healing" ValueString="Поесть,4"/>
+					<Benefit Name="Healing" Value="Поесть,4"/>
 					<Multiple/>
 					<Aftertext>Сделав покупки, решайте, куда отправитесь дальше.</Aftertext>
 				</Action>
