@@ -40,10 +40,13 @@ namespace Seeker.Game
                 return null;
 
             modification.Name = StringParse(xmlNode.Attributes["Name"]);
-            modification.Value = IntParse(xmlNode.Attributes["Value"]);
-            modification.ValueString = StringParse(xmlNode.Attributes["ValueString"]);
             modification.Empty = BoolParse(xmlNode.Attributes["Empty"]);
             modification.Restore = BoolParse(xmlNode.Attributes["Restore"]);
+
+            if (int.TryParse(xmlNode.Attributes["Value"].InnerText, out _))
+                modification.Value = IntParse(xmlNode.Attributes["Value"]);
+            else
+                modification.ValueString = StringParse(xmlNode.Attributes["Value"]);
 
             return modification;
         }
