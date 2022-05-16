@@ -308,7 +308,7 @@
 					<Text>Если же провалил, что ж...\n\nЧетверо приключенцев? От тебя не осталось ничего, кроме мокрого пятна на полу, формой напоминающего орка.</Text>
 				</Option>
 				<Option Destination="101" Text="Перейти к подсчёту результатов">
-					<Modification Name="Trigger" ValueString="Гибель"/>
+					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -351,7 +351,7 @@
 					<Button>Взять</Button>
 					<Text>ПУЗЫРЁК</Text>
 					<Price>1</Price>
-					<Benefit Name="Healing" ValueString="Выпить из пузырька,3"/>
+					<Benefit Name="Healing" Value="Выпить из пузырька,3"/>
 					<Aftertext>Рюкзак, наполненный пятью сотнями золотых слитков:</Aftertext>
 				</Action>
 				<Action>
@@ -471,7 +471,7 @@
 			<Text>Падая замертво от ран, ты видишь, как Мортимер встаёт из-за стола.\n\n- Вы знаете, он был прав - кое-кто действительно жульничал. Я. - ухмыляясь, он пускает молнию в одного из орков. - Что ж, по-видимому, мне придётся прибраться в этом гадюшнике. Как жаль. Галрос предпочитает живых слуг мёртвым.\n\nТы умер безымянным орком. Может, в следующий раз тебе повезёт больше...</Text>
 			<Options>
 				<Option Destination="101" Text="Перейти к подсчёту результатов">
-					<Modification Name="Trigger" ValueString="Гибель"/>
+					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -492,7 +492,7 @@
 					<Text>Иначе приключенцы понимают, что ты орк, и убивают тебя...</Text>
 				</Option>
 				<Option Destination="101" Text="Переходи к Подсчёту результатов">
-					<Modification Name="Trigger" ValueString="Гибель"/>
+					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -739,7 +739,7 @@
 					<Button>Взять</Button>
 					<Text>БУТЫЛОЧКА С ЦЕЛИТЕЛЬНЫМ ЗЕЛЬЕМ</Text>
 					<Price>1</Price>
-					<Benefit Name="Healing" ValueString="Выпить из пузырька,3"/>
+					<Benefit Name="Healing" Value="Выпить из пузырька,3"/>
 					<Aftertext>Продолжая обыск, ты открыл дверь ещё одной комнаты в покоях Мортимера и... обнаружил сюрприз. Человеческую девушку, носящую "одежду" рабынь Галроса. Увидев тебя и толпу орков позади, она сначала теряется от неожиданности, а затем бросается к кровати и достаёт из-под матраса нож.\n\n- Ты никогда не получишь меня, орк! - кричит она, держа кинжал наготове.</Aftertext>
 				</Action>
 				<Action>
@@ -906,7 +906,7 @@
 					<Text>Если он победит тебя, ты мертвец...</Text>
 				</Option>
 				<Option Destination="101" Text="Переходи к Подсчету результата">
-					<Modification Name="Trigger" ValueString="Гибель"/>
+					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -969,7 +969,7 @@
 					<Text>В противном случае ты - мертвец...</Text>
 				</Option>
 				<Option Destination="101" Text="Перейди к Подсчету результата">
-					<Modification Name="Trigger" ValueString="Гибель"/>
+					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1086,7 +1086,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="101" Text="Переходи к Подсчёту результата">
-					<Modification Name="Trigger" ValueString="Гибель"/>
+					<Modification Name="Trigger" Value="Гибель"/>
 					<Text>Если ты победил их, то ты можешь:</Text>
 				</Option>
 				<Option Destination="3" Text="Посмотреть, что есть в комнате охраны"/>
@@ -1155,7 +1155,7 @@
 					<Text>В противном случае - ты безымянный труп. Стоит начать с самого начала... желаем удачи в следующий раз...</Text>
 				</Option>
 				<Option Destination="101" Text="Переходи к Подсчёту результата">
-					<Modification Name="Trigger" ValueString="Гибель"/>
+					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1176,7 +1176,7 @@
 					<Text>Если тролль побеждает, ты погиб - и Великая Оркская Революция вместе с тобой...</Text>
 				</Option>
 				<Option Destination="101" Text="Перейди к Подсчету результатов">
-					<Modification Name="Trigger" ValueString="Гибель"/>
+					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>		
 			</Options>
 		</Paragraph>
@@ -1337,7 +1337,7 @@
 					<Text>Если нет, ты погиб и Великая Оркская Революция вместе с тобой...</Text>
 				</Option>
 				<Option Destination="101" Text="Перейди к Подсчету результата">
-					<Modification Name="Trigger" ValueString="Гибель"/>
+					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1462,7 +1462,7 @@
 					<Text>В ином случае...</Text>
 				</Option>
 				<Option Destination="101" Text="Переходи к подсчёту результата">
-					<Modification Name="Trigger" ValueString="Гибель"/>
+					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
 		</Paragraph>
