@@ -470,7 +470,7 @@
 			<Text>Наступает утро. Деньги уже разошлись по карманам разбойников, им пора отправляться «на работу». «Ладно, благородный, — говорит один из них, — пожил, погулял и хватит. Готовься к смерти». Хотите попросить о помощи Бога или попробуете обойтись своими силами?</Text>
 			<Options>
 				<Option Destination="427" Text="Попросить о помощи Бога" Availability="!DivineIntervention">
-					<Modification Name="Trigger" ValueString="DivineIntervention"/>
+					<Modification Name="Trigger" Value="DivineIntervention"/>
 				</Option>
 				<Option Destination="244" Text="Попробуете обойтись своими силами"/>
 			</Options>
@@ -1433,7 +1433,7 @@
 			<Text>Видя, что вы пытаетесь скрыться за деревьями, черные фигуры достают пистолеты и стреляют вам вслед. Одна из пуль попадает Арбалету в голову, вторая — вам в живот. Конец наступит всего через несколько часов. Выход один — попросить Бога о помощи:</Text>
 			<Options>
 				<Option Destination="521" Availability="!DivineIntervention">
-					<Modification Name="Trigger" ValueString="DivineIntervention"/>
+					<Modification Name="Trigger" Value="DivineIntervention"/>
 					<Text>Если не сделаете это, то остается только достойно встретить смерть…</Text>
 				</Option>
 				<Option Destination="0"/>
@@ -2455,7 +2455,7 @@
 			<Options>
 				<Option Destination="412" Text="Вы уменьшили его СИЛУ до 2"/>
 				<Option Destination="521" Text="Он уменьшил вашу СИЛУ до 2 и вы хотите воззвать к Богу" Availability="!DivineIntervention">
-					<Modification Name="Trigger" ValueString="DivineIntervention"/>
+					<Modification Name="Trigger" Value="DivineIntervention"/>
 				</Option>
 				<Option Destination="0" Text="Вы погибли: придётся начинать сначала..." Availability="DivineIntervention"/>
 			</Options>
@@ -4396,7 +4396,7 @@
 			<Text>Сражение заканчивается, даже не успев перейти в побоище. Ведь у вас не сто рук, к тому же монахи вооружены пистолетами. Последнее, что вы видите — дуло одного из них, нацеленное прямо в грудь. Если хотите и есть возможность попросить Бога о помощи, сделайте это:</Text>
 			<Options>
 				<Option Destination="601" Availability="!DivineIntervention">
-					<Modification Name="Trigger" ValueString="DivineIntervention"/>
+					<Modification Name="Trigger" Value="DivineIntervention"/>
 					<Text>Иначе же ваша миссия останется невыполненной…</Text>
 				</Option>
 				<Option Destination="0"/>
@@ -5872,7 +5872,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="313" Text="Обратиться к помощи Бога" Availability="!DivineIntervention">
-					<Modification Name="Trigger" ValueString="DivineIntervention"/>
+					<Modification Name="Trigger" Value="DivineIntervention"/>
 				</Option>
 				<Option Destination="256" Text="Рассказать все, как есть"/>
 			</Options>
@@ -6314,7 +6314,7 @@
 					<Text>ЕДА В ДОРОГУ</Text>
 					<Price>200</Price>
 					<Multiple/>
-					<Benefit Name="Healing" ValueString="Поесть,2"/>
+					<Benefit Name="Healing" Value="Поесть,2"/>
 					<Aftertext>Теперь надо либо выбираться из города, либо ждать вечера и пытаться встретиться с курьером.</Aftertext>
 				</Action>
 			</Actions>
@@ -6440,7 +6440,7 @@
 					<Text>ЕДА</Text>
 					<Price>200</Price>
 					<Multiple/>
-					<Benefit Name="Healing" ValueString="Поесть,2"/>
+					<Benefit Name="Healing" Value="Поесть,2"/>
 				</Action>
 			</Actions>
 			<Options>
