@@ -170,7 +170,7 @@ namespace Seeker.Prototypes
         {
             string xmlField = (maxPrefix && param.StartsWith("Max")) ? param.Substring(3) : param;
 
-            object propetyValue = PropertyByType(action, value.Attributes[xmlField], param);
+            object propetyValue = PropertyByType(action, value.Attributes[Services.ValueStringFuse(xmlField)], param);
 
             if (propetyValue != null)
                 action.GetType().GetProperty(param).SetValue(action, propetyValue);

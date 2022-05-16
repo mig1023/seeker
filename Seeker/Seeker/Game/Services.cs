@@ -59,5 +59,7 @@ namespace Seeker.Game
             else
                 return String.Format("{0} тыс. слов", (fullSize / 1000));
         }
+
+        public static string ValueStringFuse(string value) => (value == "ValueString" ? "Value" : value);
     }
 }
