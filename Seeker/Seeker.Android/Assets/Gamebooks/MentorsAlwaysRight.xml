@@ -517,7 +517,7 @@
 			<Text>Удар точен, но в предсмертной судороге обезьян спускает курок. Если вы не поставите ЗАСЛОН, стрела прошьет ваше бедро, и придется отнять у себя 5 ЖИЗНЕЙ:</Text>
 			<Options>
 				<Option Destination="503" Text="ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+					<Modification Name="Spell" Value="ЗАСЛОН"/>
 				</Option>
 				<Option Destination="503">
 					<Modification Name="Hitpoints" Value="-5"/>
@@ -1167,7 +1167,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="437" Text="Использовать ЛЕЧИЛКУ" Availability="ЛЕЧЕНИЕ">
-					<Modification Name="Spell" ValueString="ЛЕЧЕНИЕ"/>
+					<Modification Name="Spell" Value="ЛЕЧЕНИЕ"/>
 					<Text>Иначе вы тут же отдадите концы от потери крови и болевого шока...</Text>
 				</Option>
 				<Option Destination="0"/>
@@ -1221,7 +1221,7 @@
 			<Text>Осиротевшие кони уносятся прочь, а вы быстро осматриваете убитых. Добыча невелика: пара кожаных перчаток, полупустой бурдюк с водой (+3 ЖИЗНИ) да один золотой.</Text>
 			<Modifications>
 				<Modification Name="Gold" Value="1"/>
-				<Modification Name="Healing" ValueString="Выпить воды из бурдюка,3"/>
+				<Modification Name="Healing" Value="Выпить воды из бурдюка,3"/>
 			</Modifications>
 			<Triggers>Vessel</Triggers>
 			<Options>
@@ -1241,7 +1241,7 @@
 			<Text>Вы успеваете сбросить с себя противную тварь, но она ужалила вас. Ведьмачьи чувства говорят, что подавляющая волю отрава уже растекается по телу. Вас спасет только ЛЕЧИЛКА (не добавляя ЖИЗНЕЙ):</Text>
 			<Options>
 				<Option Destination="249" Text="Использовать ЛЕЧИЛКУ" Availability="ЛЕЧЕНИЕ">
-					<Modification Name="Spell" ValueString="ЛЕЧЕНИЕ"/>
+					<Modification Name="Spell" Value="ЛЕЧЕНИЕ"/>
 					<Text>Иначе ноги ваши подкашиваются и паразит забирается на вас, получая нового наездника...</Text>
 				</Option>
 				<Option Destination="0"/>
@@ -1385,7 +1385,7 @@
 				<Option Destination="349" Text="Подпрыгнуть"/>
 				<Option Destination="161" Text="Встретить гада рубящим ударом снизу"/>
 				<Option Destination="500" Text="ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+					<Modification Name="Spell" Value="ЗАСЛОН"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1673,7 +1673,7 @@
 				<Option Destination="382" Text="Сжать покрепче меч и принять бой"/>
 				<Option Destination="143" Text="Что-нибудь сказать демону, чтобы втянуть его в разговор"/>
 				<Option Destination="92" Text="Ударить его СГУСТКОМ" Availability="СГУСТОК">
-					<Modification Name="Spell" ValueString="СГУСТОК"/>
+					<Modification Name="Spell" Value="СГУСТОК"/>
 				</Option>
 				<Option Destination="331" Text="Попытаться прорваться к столику за спиной демона"/>
 				<Option Destination="213" Text="ВОЛК" Availability="ВОЛК">
@@ -2105,7 +2105,7 @@
 				</Option>
 				<Option Destination="354" Text="Принять бой"/>
 				<Option Destination="414" Text="Поставить ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+					<Modification Name="Spell" Value="ЗАСЛОН"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -2226,7 +2226,7 @@
 			<Options>
 				<Option Destination="258" Text="Упасть навзничь"/>
 				<Option Destination="542" Text="Поставить ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+					<Modification Name="Spell" Value="ЗАСЛОН"/>
 				</Option>
 				<Option Destination="305" Text="Прижаться к стене"/>
 			</Options>
@@ -2236,7 +2236,7 @@
 			<Text>В таком случае вас спасет лишь ЗАСЛОН, если вы догадались им запастись:</Text>
 			<Options>
 				<Option Destination="375" Text="Воспользоваться ЗАСЛОНОМ" Availability="ЗАСЛОН">
-					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+					<Modification Name="Spell" Value="ЗАСЛОН"/>
 					<Text>Иначе новый удар повергнет вас наземь, а там уже вся крона обрушится на вас шквалом ударов...</Text>
 				</Option>
 				<Option Destination="0"/>
@@ -2661,7 +2661,7 @@
 			<Id>260</Id>
 			<Text>Внутри землянки ни одной живой души. Нельзя сказать, чтобы она была бедно обставлена, поскольку никакой обстановки здесь нет вообще. Несколько шкур на полу, камень вместо стола - вот и все. Кстати, на камне лежит солидный кусок вяленого мяса, который вы, недолго думая, разрубаете пополам. Можете оставить несколько монет за позаимствованное мясо (когда надумаете его съесть, прибавите себе 4 ЖИЗНИ), и уходите.</Text>
 			<Modifications>
-				<Modification Name="Healing" ValueString="Поесть вяленого мяса,4"/>
+				<Modification Name="Healing" Value="Поесть вяленого мяса,4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="39"/>
@@ -2755,7 +2755,7 @@
 			<Options>
 				<Option Destination="419" Text="Ударить 'лжековрик' мечом"/>
 				<Option Destination="129" Text="СГУСТОК" Availability="СГУСТОК">
-					<Modification Name="Spell" ValueString="СГУСТОК"/>
+					<Modification Name="Spell" Value="СГУСТОК"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -2965,7 +2965,7 @@
 				<Option Destination="393" Text="Вступите в бой"/>
 				<Option Destination="481" Text="С размаху рубанете по пирамидке"/>
 				<Option Destination="27" Text="СГУСТОК" Availability="СГУСТОК">
-					<Modification Name="Spell" ValueString="СГУСТОК"/>
+					<Modification Name="Spell" Value="СГУСТОК"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -2984,7 +2984,7 @@
 			<Text>Удивительно, но заклинание помогает - так, во всяком случае, утверждает "пациент". Высокий хазрат спрыгивает с коня, долго вас обнимает, хлопает по плечу и еще всякими способами выражает благодарность (в частности высыпает вам в карман 4 золотых).\n\n- Сотник Субэдай ценит друзей, - приговаривает он, вручая вам деревянный оберег в форме змеи. - Где-то поблизости рыщет наш шаман, говорит, что-то здесь происходит странное, древние силы просыпаются, очень злые, да. Встретишь его, покажешь оберег, скажешь - друг Субэдая.\n\nНа этой лирической ноте вы и прощаетесь.</Text>
 			<Modifications>
 				<Modification Name="Gold" Value="4"/>
-				<Modification Name="Spell" ValueString="ЛЕЧЕНИЕ"/>
+				<Modification Name="Spell" Value="ЛЕЧЕНИЕ"/>
 			</Modifications>
 			<Triggers>Amulet</Triggers>
 			<Options>
@@ -3357,7 +3357,7 @@
 			<Text>Разрубив в воздухе брошенный в вас аркан, вы понимаете, что теряете драгоценные секунды. Слишком слаженно атакуют трое хазратов. Через пару секунд вас просто собьют с ног и затопчут копытами...</Text>
 			<Options>
 				<Option Destination="448" Text="Успели поставить ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+					<Modification Name="Spell" Value="ЗАСЛОН"/>
 					<Text>Иначе, максимум, что вы успеете - прихватить с собой одного кочевника...</Text>
 				</Option>
 				<Option Destination="0"/>
@@ -3964,7 +3964,7 @@
 					<Modification Name="Transformation"/>
 				</Option>
 				<Option Destination="496" Text="СГУСТОК" Availability="СГУСТОК">
-					<Modification Name="Spell" ValueString="СГУСТОК"/>
+					<Modification Name="Spell" Value="СГУСТОК"/>
 				</Option>
 				<Option Destination="445" Text="Старый добрый меч"/>
 			</Options>
@@ -4201,7 +4201,7 @@
 				<Option Destination="302" Text="Кувырнуться вперед"/>
 				<Option Destination="443" Text="Кувырнуться назад (с этой стороны ее конец вроде бы поближе)"/>
 				<Option Destination="499" Text="ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+					<Modification Name="Spell" Value="ЗАСЛОН"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -4342,7 +4342,7 @@
 			<Id>424</Id>
 			<Text>Краткий разговор с шаманом дает вам кое-какую полезную информацию. Оказывается, вы находитесь на территории давно заброшенного святилища хазратов.\n\n- В древности, - говорит шаман, - этими местами правило великое зло и наши предки ушли отсюда. И сейчас, спустя много веков, зло возвращается. Кто-то вновь гневает богов, творя черное колдовство и изменяя живую плоть.\n\nЖивотные и растения здесь ведут себя ненормально, я даже не могу с ними общаться, а чем дальше на север, тем страшнее перемены. Источник всего этого где-то за рекой, но мои попытки магического сканирования бесполезны. Такое ощущение, что лес завешен черной пеленой. Не знаю, что принесло сюда тебя, ведьмак, - шаман искоса смотрит на вас, - но, на мой взгляд, ты слишком молод и неопытен, чтобы выжить здесь. Глядя на тебя, я вижу линии твоего будущего, - он прикрывает глаза. - Схватки, боль, обман...\n\nШаман открывает глаза и взгляд его печален:\n\n- Одно могу сказать тебе, воин: если ты пройдешь этот путь до конца, то тебе суждено измениться. Мир в твоих глазах больше никогда не будет ясным и дружелюбным.\n\nНапоследок кочевники оставляют вам кусок вяленого мяса (когда надумаете съесть +2 ЖИЗНИ) и уезжают. Шаман успевает напоследок крикнуть:\n\n- Берегись ястреба и черных ступенек, парень, - и скрывается за валунами, оставляя вас в глубоком раздумье по поводу того, во что же вы все-таки вляпались.</Text>
 			<Modifications>
-				<Modification Name="Healing" ValueString="Съесть кусак вяленого мяса,2"/>
+				<Modification Name="Healing" Value="Съесть кусак вяленого мяса,2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="57"/>
@@ -4517,7 +4517,7 @@
 			<Options>
 				<Option Destination="2" Text="Рубанете ее мечом"/>
 				<Option Destination="499" Text="ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+					<Modification Name="Spell" Value="ЗАСЛОН"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -4924,7 +4924,7 @@
 			<Text>Выпрыгнув из-за своего укрытия, бросаете песок в хазратов и сбиваете прицел лучнику. Стрела уходит мимо, но вы понимаете, что запорошив глаза кочевникам вы не остановили их скакунов...</Text>
 			<Options>
 				<Option Destination="448" Text="Использовать ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+					<Modification Name="Spell" Value="ЗАСЛОН"/>
 					<Text>Иначе вас попросту стопчут через пару секунд...</Text>
 				</Option>
 				<Option Destination="0"/>
@@ -4981,7 +4981,7 @@
 				<Action>
 					<Type>Option</Type>
 					<Option Destination="548" Text="Заслон" Availability="ЗАСЛОН">
-						<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+						<Modification Name="Spell" Value="ЗАСЛОН"/>
 						<Text>...либо СРЕАГИРОВАТЬ:</Text>
 					</Option>
 				</Action>
@@ -5594,7 +5594,7 @@
 			<Text>Но прыжок левого богомола имеет очень невысокую, хотя и невероятно длинную траекторию. Вот, оказывается, что это такое - оказаться меж двух огней.\n\nМысль эта - последнее, что вы успеваете подумать, пытаясь заслониться мечом в своем неудобном положении и прекрасно понимая, что вы не успеваете...</Text>
 			<Options>
 				<Option Destination="500" Text="Поставить ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" ValueString="ЗАСЛОН"/>
+					<Modification Name="Spell" Value="ЗАСЛОН"/>
 					<Text>Если сделать этого вы не можете:</Text>
 				</Option>
 				<Option Destination="286"/>
