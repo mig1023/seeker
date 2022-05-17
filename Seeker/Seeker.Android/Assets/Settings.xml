@@ -55,6 +55,7 @@
 	<Setting>
 		<Name>Без оформления</Name>
 		<Type>WithoutStyles</Type>
+		<Description>Вариант игры в высоком контрасте, без цветового оформления и без рисунков и иллюстраций.</Description>
 	</Setting>
 	<Setting>
 		<Name>Данные отладки</Name>
