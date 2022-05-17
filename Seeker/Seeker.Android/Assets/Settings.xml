@@ -42,13 +42,13 @@
 		<Type>Sort</Type>
 		<Options>
 			<Option>По умолчанию</Option>
-            <Option>По названию</Option>
-            <Option>По автору</Option>
-            <Option>По размеру (параграфы)</Option>
-            <Option>По размеру (объём)</Option>
-            <Option>По году издания</Option>
-            <Option>По тематике</Option>
-            <Option>По времени прохождения</Option>
+			<Option>По названию</Option>
+			<Option>По автору</Option>
+			<Option>По размеру (параграфы)</Option>
+			<Option>По размеру (объём)</Option>
+			<Option>По году издания</Option>
+			<Option>По тематике</Option>
+			<Option>По времени прохождения</Option>
 		</Options>
 		<Description>Выбор порядка отображения книг-игр на начальном экране.</Description>
 	</Setting>
