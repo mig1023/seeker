@@ -126,7 +126,8 @@ namespace Seeker
             {
                 foreach (string image in paragraph.Images.Keys.ToList())
                 {
-                    Text.Children.Add(Output.Interface.IllustrationImage(image));
+                    if (!Game.Settings.IsEnabled("WithoutStyles"))
+                        Text.Children.Add(Output.Interface.IllustrationImage(image));
 
                     if (!String.IsNullOrEmpty(paragraph.Images[image]))
                         Text.Children.Add(Output.Interface.Text(paragraph.Images[image]));
