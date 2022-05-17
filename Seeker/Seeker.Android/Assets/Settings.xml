@@ -50,6 +50,7 @@
             <Option>По тематике</Option>
             <Option>По времени прохождения</Option>
 		</Options>
+		<Description>Выбор порядка отображения книг-игр на начальном экране.</Description>
 	</Setting>
 	<Setting>
 		<Name>Без оформления</Name>
