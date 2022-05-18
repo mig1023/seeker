@@ -131,7 +131,8 @@ namespace Seeker
 
             Game.Xml.AllTextParse(ref Text, id, optionName, out string text);
 
-            Speach(text);
+            if (Game.Settings.IsEnabled("Audiobook"))
+                Speach(text);
 
             if ((paragraph.Images != null) && (paragraph.Images.Count > 0))
             {
