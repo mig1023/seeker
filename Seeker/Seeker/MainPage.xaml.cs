@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 using Seeker.Gamebook;
 
 namespace Seeker
@@ -92,6 +93,14 @@ namespace Seeker
             Options.Children.Add(Output.Buttons.CloseSettings((s, arg) => Gamebooks(toMain: true)));
         }
 
+        private async void Speach(string text)
+        {
+            List<string> lines = text.Split(new string[] { "\\n\\n" }, StringSplitOptions.RemoveEmptyEntries).ToList();
+
+            foreach (string line in lines)
+                await TextToSpeech.SpeakAsync(line);
+        }
+
         public void Paragraph(int id, bool reload = false, bool loadGame = false,
             string optionName = "", Abstract.IModification optionModification = null)
         {
@@ -120,7 +129,9 @@ namespace Seeker
             else
                 paragraph = Game.Data.CurrentParagraph;
 
-            Game.Xml.AllTextParse(ref Text, id, optionName);
+            Game.Xml.AllTextParse(ref Text, id, optionName, out string text);
+
+            Speach(text);
 
             if ((paragraph.Images != null) && (paragraph.Images.Count > 0))
             {

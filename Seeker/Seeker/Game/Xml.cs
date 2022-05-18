@@ -63,9 +63,9 @@ namespace Seeker.Game
             return (String.IsNullOrEmpty(textByOption) ? textByParagraph : textByOption);
         }
 
-        public static void AllTextParse(ref StackLayout textPlace, int id, string optionName)
+        public static void AllTextParse(ref StackLayout textPlace, int id, string optionName, out string text)
         {
-            string text = Xml.TextParse(id, optionName);
+            text = Xml.TextParse(id, optionName);
 
             if (!String.IsNullOrEmpty(text))
                 textPlace.Children.Add(Interface.Text(text));
