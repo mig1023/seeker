@@ -472,13 +472,17 @@
 					<Type>DiceCheck</Type>
 					<Button>Кинуть один кубик</Button>
 					<Dices>1</Dices>
-					<Aftertext>или</Aftertext>
+					<After>
+						<Text>или</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>DiceCheck</Type>
 					<Button>Кинуть два кубика</Button>
 					<Dices>2</Dices>
-					<Aftertext>\u00A0</Aftertext>
+					<After>
+						<Text>\u00A0</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
