@@ -79,11 +79,11 @@ namespace Seeker.Game
             }
         }
 
-        public static List<Text> TextsParse(XmlNode xmlNode, bool aftertext = false)
+        public static List<Text> TextsParse(XmlNode xmlNode, bool action = false)
         {
             List<Text> texts = new List<Text>();
 
-            foreach (XmlNode text in xmlNode.SelectNodes(aftertext ? "Aftertexts/Aftertext" : "Texts/Text"))
+            foreach (XmlNode text in xmlNode.SelectNodes(String.Format("{0}/Text", action ? "After" : "Texts")))
             {
                 string font = StringParse(text.Attributes["Font"]);
 

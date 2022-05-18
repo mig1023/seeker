@@ -54,8 +54,7 @@ namespace Seeker.Prototypes
         {
             actions.Type = Xml.StringParse(xmlAction["Type"]);
             actions.Button = Xml.StringParse(xmlAction["Button"]);
-            actions.Aftertext = Xml.StringParse(xmlAction["Aftertext"]);
-            actions.Aftertexts = Xml.TextsParse(xmlAction, aftertext: true);
+            actions.Aftertexts = Xml.TextsParse(xmlAction, action: true);
             actions.Trigger = Xml.StringParse(xmlAction["Trigger"]);
             actions.Text = Xml.StringParse(xmlAction["Text"]);
             actions.Price = Xml.IntParse(xmlAction["Price"]);
