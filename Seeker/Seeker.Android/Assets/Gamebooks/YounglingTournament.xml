@@ -1260,7 +1260,9 @@
 					<HeroHitpointsLimith>3</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>2</EnemyHitpointsLimith>
 					<WithoutTechnique/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nСпособности Силы применять во ЭТОГО время боя нельзя — это тренировка, и нацелена она именно на совершенствование навыков владения световым мечом.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя.\n\nСпособности Силы применять во ЭТОГО время боя нельзя — это тренировка, и нацелена она именно на совершенствование навыков владения световым мечом.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -1344,7 +1346,9 @@
 			<Actions>
 				<Action>
 					<Type>MixedFightDefence</Type>
-					<Aftertext>Если полученное число меньше единицы, то вычтите из Выносливости противника Силу его выстрела — вам удается отразить выстрел противника в него самого.\n\nВы можете защищаться не больше 5 раундов, после чего нужно решать — отступить или атаковать.\n\nВы также можете атаковать противника в конце любого раунда.</Aftertext>
+					<After>
+						<Text>Если полученное число меньше единицы, то вычтите из Выносливости противника Силу его выстрела — вам удается отразить выстрел противника в него самого.\n\nВы можете защищаться не больше 5 раундов, после чего нужно решать — отступить или атаковать.\n\nВы также можете атаковать противника в конце любого раунда.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -3502,7 +3506,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>20</EnemyHitpointsLimith>
 					<EnemyRoundWin>4</EnemyRoundWin>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -3553,7 +3559,9 @@
 			<Actions>
 				<Action>
 					<Type>DiceWounds</Type>
-					<Aftertext>— Как тебе такой удар? — спрашивает он, явно довольный собой, и принимает защитную стойку. — Твоя очередь атаковать! Покажи, на что способен!</Aftertext>
+					<After>
+						<Text>— Как тебе такой удар? — спрашивает он, явно довольный собой, и принимает защитную стойку. — Твоя очередь атаковать! Покажи, на что способен!</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -3562,7 +3570,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -3581,7 +3591,9 @@
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
 					<SpeedActivate/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -3620,7 +3632,9 @@
 					<Type>EnemyDiceWounds</Type>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Кирк Драгус,30</Enemy>
-					<Aftertext>Вы бросаетесь на противника.</Aftertext>
+					<After>
+						<Text>Вы бросаетесь на противника.</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -3629,7 +3643,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -3649,7 +3665,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -3686,7 +3704,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<EnemyHitpointsPenalty>3</EnemyHitpointsPenalty>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -3709,7 +3729,9 @@
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
 					<SpeedActivate/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -3727,7 +3749,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -3766,7 +3790,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>	
 			<Modifications>
@@ -3815,7 +3841,9 @@
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -3838,7 +3866,9 @@
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Hitpoints="30"/>
 					</Enemies>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -3903,7 +3933,9 @@
 			<Actions>
 				<Action>
 					<Type>DiceWounds</Type>
-					<Aftertext>А Кирку засчитайте еще один укол.</Aftertext>
+					<After>
+						<Text>А Кирку засчитайте еще один укол.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -3928,7 +3960,9 @@
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Hitpoints="30"/>
 					</Enemies>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -3952,7 +3986,9 @@
 					<Type>EnemyDiceWounds</Type>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Кирк Драгус,30</Enemy>
-					<Aftertext>Продолжается дуэль на световых мечах:</Aftertext>
+					<After>
+						<Text>Продолжается дуэль на световых мечах:</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -3961,7 +3997,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -3996,7 +4034,9 @@
 					<Type>EnemyDiceWounds</Type>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Кирк Драгус,30</Enemy>
-					<Aftertext>Продолжается дуэль на световых мечах:</Aftertext>
+					<After>
+						<Text>Продолжается дуэль на световых мечах:</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -4005,7 +4045,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -4032,7 +4074,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -4059,7 +4103,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-					<Aftertext>Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -4333,7 +4379,9 @@
 					<EnemyHitpointsLimith>20</EnemyHitpointsLimith>
 					<EnemyRoundWin>1</EnemyRoundWin>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -4403,7 +4451,9 @@
 					</Enemies>
 					<SpeedActivate/>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -4442,7 +4492,9 @@
 					<Type>EnemyDiceWounds</Type>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Жюль Трито,26</Enemy>
-					<Aftertext>Вы бросаетесь на противника. Продолжается дуэль на световых мечах.</Aftertext>
+					<After>
+						<Text>Вы бросаетесь на противника. Продолжается дуэль на световых мечах.</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -4452,7 +4504,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -4473,7 +4527,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -4509,7 +4565,9 @@
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<EnemyHitpointsPenalty>3</EnemyHitpointsPenalty>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -4533,7 +4591,9 @@
 					</Enemies>
 					<SpeedActivate/>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -4553,7 +4613,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -4593,7 +4655,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -4643,7 +4707,9 @@
 					</Enemies>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -4667,7 +4733,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -4729,7 +4797,9 @@
 			<Actions>
 				<Action>
 					<Type>DiceWounds</Type>
-					<Aftertext>А Жюлю засчитайте еще один укол.</Aftertext>
+					<After>
+						<Text>А Жюлю засчитайте еще один укол.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -4757,7 +4827,9 @@
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -4781,7 +4853,9 @@
 					<Type>EnemyDiceWounds</Type>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Жюль Трито,26</Enemy>
-					<Aftertext>Продолжается дуэль на световых мечах:</Aftertext>
+					<After>
+						<Text>Продолжается дуэль на световых мечах:</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -4791,7 +4865,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -4826,7 +4902,9 @@
 					<Type>EnemyDiceWounds</Type>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Жюль Трито,26</Enemy>
-					<Aftertext>Продолжается дуэль на световых мечах:</Aftertext>
+					<After>
+						<Text>Продолжается дуэль на световых мечах:</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -4836,7 +4914,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -4864,7 +4944,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -4893,7 +4975,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -4917,7 +5001,9 @@
 					</Enemies>
 					<SpeedActivate/>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -5004,7 +5090,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -5031,7 +5119,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -5059,7 +5149,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -5198,7 +5290,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>20</EnemyHitpointsLimith>
 					<EnemyRoundWin>4</EnemyRoundWin>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -5245,7 +5339,9 @@
 			<Actions>
 				<Action>
 					<Type>DiceWounds</Type>
-					<Aftertext>— Как тебе такой удар? — спрашивает он, явно довольный собой, и принимает защитную стойку. — Твоя очередь атаковать! Покажи, на что способен!</Aftertext>
+					<After>
+						<Text>— Как тебе такой удар? — спрашивает он, явно довольный собой, и принимает защитную стойку. — Твоя очередь атаковать! Покажи, на что способен!</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -5254,7 +5350,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>20</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -5276,7 +5374,9 @@
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
 					<SpeedActivate/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -5315,7 +5415,9 @@
 					<Type>EnemyDiceWounds</Type>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Артхт Тархтхтх,24</Enemy>
-					<Aftertext>Вы бросаетесь на противника.</Aftertext>
+					<After>
+						<Text>Вы бросаетесь на противника.</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -5324,7 +5426,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -5344,7 +5448,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -5379,7 +5485,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<EnemyHitpointsPenalty>3</EnemyHitpointsPenalty>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -5402,7 +5510,9 @@
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
 					<SpeedActivate/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -5421,7 +5531,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>	
 			<Options>
@@ -5458,7 +5570,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -5507,7 +5621,9 @@
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -5530,7 +5646,9 @@
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -5595,7 +5713,9 @@
 			<Actions>
 				<Action>
 					<Type>DiceWounds</Type>
-					<Aftertext>А Артхта Тархтхтху засчитайте еще один укол.</Aftertext>
+					<After>
+						<Text>А Артхта Тархтхтху засчитайте еще один укол.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -5620,7 +5740,9 @@
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
-					<Aftertext>Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -5644,7 +5766,9 @@
 					<Type>EnemyDiceWounds</Type>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Артхт Тархтхтх,24</Enemy>
-					<Aftertext>Продолжается дуэль на световых мечах.</Aftertext>
+					<After>
+						<Text>Продолжается дуэль на световых мечах.</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -5653,7 +5777,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -5686,7 +5812,9 @@
 					<Type>EnemyDiceWounds</Type>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Артхт Тархтхтх,24</Enemy>
-					<Aftertext>Продолжается дуэль на световых мечах.</Aftertext>
+					<After>
+						<Text>Продолжается дуэль на световых мечах.</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -5695,7 +5823,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -5722,7 +5852,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -5748,7 +5880,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -5771,7 +5905,9 @@
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
 					<SpeedActivate/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -6095,7 +6231,9 @@
 			<Actions>
 				<Action>
 					<Type>DiceWounds</Type>
-					<Aftertext>Вы вынуждены переключиться на Скорость Силы, иначе никакого владения мечом не будет достаточно, чтобы успевать отбить атаки обоих оставшихся противников.\n\nНачинается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Aftertext>
+					<After>
+						<Text>Вы вынуждены переключиться на Скорость Силы, иначе никакого владения мечом не будет достаточно, чтобы успевать отбить атаки обоих оставшихся противников.\n\nНачинается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -6104,7 +6242,9 @@
 						<Enemy Name="Винс Гирт" Skill="10" Rang="3" Speed="2" Hitpoints="22"/>
 					</Enemies>
 					<SpeedActivate/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<RemoveTriggers>Корпускула Комы</RemoveTriggers>
@@ -6132,7 +6272,9 @@
 						<Enemy Name="Винс Гирт" Skill="10" Rang="3" Speed="2" Hitpoints="22"/>
 					</Enemies>
 					<SpeedActivate/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -6160,7 +6302,9 @@
 						<Enemy Name="Эван Макгил" Skill="8" Rang="2" Speed="3" Hitpoints="20"/>
 					</Enemies>
 					<SpeedActivate/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -6200,7 +6344,9 @@
 						<Enemy Name="Винс Гирт" Skill="10" Rang="3" Speed="2" Hitpoints="22"/>
 					</Enemies>
 					<SpeedActivate/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -6485,7 +6631,9 @@
 					<EnemyHitpointsLimith>20</EnemyHitpointsLimith>
 					<HeroRoundWin>3</HeroRoundWin>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -6534,7 +6682,9 @@
 					</Enemies>
 					<SpeedActivate/>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -6573,7 +6723,9 @@
 					<Type>EnemyDiceWounds</Type>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Марика Затт,25</Enemy>
-					<Aftertext>Вы бросаетесь на противницу. Продолжается дуэль на световых мечах.</Aftertext>
+					<After>
+						<Text>Вы бросаетесь на противницу. Продолжается дуэль на световых мечах.</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -6583,7 +6735,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -6604,7 +6758,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -6640,7 +6796,9 @@
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<EnemyHitpointsPenalty>3</EnemyHitpointsPenalty>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -6665,7 +6823,9 @@
 					</Enemies>
 					<SpeedActivate/>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -6685,7 +6845,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -6725,7 +6887,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -6775,7 +6939,9 @@
 					</Enemies>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -6799,7 +6965,9 @@
 					</Enemies>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -6889,7 +7057,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -6913,7 +7083,9 @@
 					<Type>EnemyDiceWounds</Type>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Марика Затт,25</Enemy>
-					<Aftertext>Продолжается дуэль на световых мечах.</Aftertext>
+					<After>
+						<Text>Продолжается дуэль на световых мечах.</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -6923,7 +7095,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -6958,7 +7132,9 @@
 					<Type>EnemyDiceWounds</Type>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Марика Затт,25</Enemy>
-					<Aftertext>Продолжается дуэль на световых мечах.</Aftertext>
+					<After>
+						<Text>Продолжается дуэль на световых мечах.</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -6968,7 +7144,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -6995,7 +7173,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -7024,7 +7204,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -7048,7 +7230,9 @@
 					</Enemies>
 					<SpeedActivate/>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -7131,7 +7315,9 @@
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
 					<NoStrikeBack/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -7149,7 +7335,9 @@
 			<Actions>
 				<Action>
 					<Type>DiceWounds</Type>
-					<Aftertext>— Как тебе такой приемчик? — с издевкой интересуется Марика Затт.\n\nВ ответ вы бросаетесь на нее с удвоенной яростью.</Aftertext>
+					<After>
+						<Text>— Как тебе такой приемчик? — с издевкой интересуется Марика Затт.\n\nВ ответ вы бросаетесь на нее с удвоенной яростью.</Text>
+					</After>
 				</Action>
 				<Action>
 					<Type>SwordFight</Type>
@@ -7158,7 +7346,9 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -7462,10 +7652,10 @@
 			<Actions>
 				<Action>
 					<Type>DiceWounds</Type>
-					<Aftertexts>
-						<Aftertext>Вы вскакиваете, а она снова ТОЛКАЕТ вас, отбрасывая назад, но вы уже подготовлены, и успеваете вовремя поставить блок.</Aftertext>
-						<Aftertext Size="small">Отнимите 1 у себя из Выносливости.\n</Aftertext>
-					</Aftertexts>
+					<After>
+						<Text>Вы вскакиваете, а она снова ТОЛКАЕТ вас, отбрасывая назад, но вы уже подготовлены, и успеваете вовремя поставить блок.</Text>
+						<Text Size="small">Отнимите 1 у себя из Выносливости.\n</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -7501,7 +7691,9 @@
 			<Actions>
 				<Action>
 					<Type>DiceWounds</Type>
-					<Aftertext>В ярости от боли, вы разрываете стальную хватку вокруг горла и приземляетесь на песок.</Aftertext>
+					<After>
+						<Text>В ярости от боли, вы разрываете стальную хватку вокруг горла и приземляетесь на песок.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Modifications>
@@ -7523,7 +7715,9 @@
 						<Enemy Name="Ливия Умай" Skill="8" Rang="2" Speed="3" Hitpoints="15"/>
 					</Enemies>
 					<SpeedActivate/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -8096,7 +8290,9 @@
 					</Enemies>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
 					<SpeedActivate/>
-					<Aftertext>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.</Aftertext>
+					<After>
+						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
