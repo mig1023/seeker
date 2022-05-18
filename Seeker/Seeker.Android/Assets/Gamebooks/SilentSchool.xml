@@ -413,7 +413,9 @@
 					<Type>Get</Type>
 					<Button>Ранить себя на 10 жизней</Button>
 					<HarmedMyself>10</HarmedMyself>
-					<Aftertext>Чем больше - тем аутентичнее я буду смотреться.\n\nПокончив с этим, я решаю пройти сквозь зомби.</Aftertext>
+					<After>
+						<Text>Чем больше - тем аутентичнее я буду смотреться.\n\nПокончив с этим, я решаю пройти сквозь зомби.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -472,11 +474,11 @@
 					<Type>Get</Type>
 					<Button>Взять</Button>
 					<Text>Флейта</Text>
-					<Aftertexts>
-						<Aftertext>Из будки тем временем доносится серия щелчков - неведомый зверь добрался до диджейского пульта и каскадом обрушил все тумблеры. Внезапно оживает школьная радиостанция. Знакомая мелодия, но я не сразу узнаю исполнителя.</Aftertext>
-						<Aftertext Font="Italic">'Cause this is thriller, thriller night\nAnd no one's gonna save you from the beast about strike\nYou know it's thriller, thriller night\nYou're fighting for your life inside a killer, thriller tonight</Aftertext>
-						<Aftertext>Блин, это ж Майкл мир его праху Джексон. «Триллер», клип еще такой был. Зомби на сцене начинают шевелиться. Встают, подергиваясь в такт музыке. Было бы смешно, если бы не было так страшно. Я бросаюсь к двери, ведущей на лестницу.</Aftertext>
-					</Aftertexts>
+					<After>
+						<Text>Из будки тем временем доносится серия щелчков - неведомый зверь добрался до диджейского пульта и каскадом обрушил все тумблеры. Внезапно оживает школьная радиостанция. Знакомая мелодия, но я не сразу узнаю исполнителя.</Text>
+						<Text Font="Italic">'Cause this is thriller, thriller night\nAnd no one's gonna save you from the beast about strike\nYou know it's thriller, thriller night\nYou're fighting for your life inside a killer, thriller tonight</Text>
+						<Text>Блин, это ж Майкл мир его праху Джексон. «Триллер», клип еще такой был. Зомби на сцене начинают шевелиться. Встают, подергиваясь в такт музыке. Было бы смешно, если бы не было так страшно. Я бросаюсь к двери, ведущей на лестницу.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -763,7 +765,9 @@
 					<Type>Get</Type>
 					<Button>Выбрать</Button>
 					<Text>Баскетбольный мяч</Text>
-					<Aftertext>Теперь это будет мое оружие.\n\nСтрашно, очень страшно, но надо двигаться. Гирей я высаживаю дверь и выбегаю спортзал.</Aftertext>
+					<After>
+						<Text>Теперь это будет мое оружие.\n\nСтрашно, очень страшно, но надо двигаться. Гирей я высаживаю дверь и выбегаю спортзал.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
@@ -833,7 +837,9 @@
 					<Type>Get</Type>
 					<Button>Взять</Button>
 					<Text>Линейка</Text>
-					<Aftertext>В столе нахожу шоколадный батончик. Больше в классе ничего интересного нет, и я выхожу обратно в коридор.</Aftertext>
+					<After>
+						<Text>В столе нахожу шоколадный батончик. Больше в классе ничего интересного нет, и я выхожу обратно в коридор.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Triggers>Шоколадка</Triggers>
@@ -996,7 +1002,9 @@
 					<Type>DiceWounds</Type>
 					<Button>Кинуть кубики</Button>
 					<Dices>2</Dices>
-					<Aftertext>К счастью, мне удается повернуть собачку замка и, выбежав наружу, захлопнуть за собой дверь.</Aftertext>
+					<After>
+						<Text>К счастью, мне удается повернуть собачку замка и, выбежав наружу, захлопнуть за собой дверь.</Text>
+					</After>
 				</Action>
 			</Actions>
 			<Options>
