@@ -12,8 +12,8 @@
 			<Color Type="System">#e6c5c5</Color>
 		</Styles>
 		<Constants>
-			<List Type="WithoutStatuses">0, 714, 715, 716</List>
-			<List Type="WithoutStaticsButtons">0, 687, 714, 715, 701, 702</List>
+			<List Name="WithoutStatuses">0, 714, 715, 716</List>
+			<List Name="WithoutStaticsButtons">0, 687, 714, 715, 701, 702</List>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
