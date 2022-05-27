@@ -13,12 +13,12 @@
 			<Color Type="System">#717963</Color>
 		</Styles>
 		<Constants>
-			<Dictionary Type="GetRangeTypes">
+			<Dictionary Name="GetRangeTypes">
 				<Item Name="6">ДАЛЬНЯЯ ДИСТАНЦИЯ</Item>
 				<Item Name="5">СРЕДНЯЯ ДИСТАНЦИЯ</Item>
 				<Item Name="4">БЛИЖНЯЯ ДИСТАНЦИЯ</Item>
 			</Dictionary>
-			<Dictionary Type="GetUpgrates">
+			<Dictionary Name="GetUpgrates">
 				<Item Name="1">SecondEngine|Второй двигатель</Item>
 				<Item Name="2">Stealth|Стелс-покрытие</Item>
 				<Item Name="3">Radar|Радар</Item>
@@ -26,7 +26,7 @@
 				<Item Name="5">Flamethrower|Реактивный огнемёт</Item>
 				<Item Name="6">PlasmaCannon|Спаренная плазмопушка</Item>
 			</Dictionary>
-			<Dictionary Type="GetPurchases">
+			<Dictionary Name="GetPurchases">
 				<Item Name="Месячное проживание на Земле">5</Item>
 				<Item Name="Круиз по галактике">10</Item>
 				<Item Name="Робот-помощник">50</Item>
@@ -40,7 +40,7 @@
 				<Item Name="Космический фрегат">1000</Item>
 				<Item Name="Колонизация нового планетоида">1500</Item>
 			</Dictionary>
-			<Dictionary Type="GetFuryLevel">
+			<Dictionary Name="GetFuryLevel">
 				<Item Name="-2">Монах</Item>
 				<Item Name="-1">Пацифист</Item>
 				<Item Name="0">Путник</Item>
