@@ -12,6 +12,7 @@
 			<Color Type="Continue">#a9a9a6</Color>
 		</Styles>
 		<Constants>
+			<List Type="WithoutStatuses">0, 401, 402</List>
 			<Dictionary Type="GetStartValues">
 				<Item Name="Fight">10</Item>
 				<Item Name="Accuracy">10</Item>
