@@ -9,15 +9,15 @@
 		</Styles>
 		<Constants>
 			<Dictionary Type="ResultCalculation">
-				<Item Key="Рана" Value="-10"/>
-				<Item Key="Телохранитель" Value="15"/>
-				<Item Key="Проблемы с законом" Value="10"/>
-				<Item Key="Поломка" Value="-20"/>
-				<Item Key="Два" Value="-15"/>
-				<Item Key="Пилот боевого корабля" Value="20"/>
-				<Item Key="Миротворец" Value="10"/>
-				<Item Key="Задание выполнено" Value="20"/>
-				<Item Key="Лучший финал" Value="30"/>
+				<Item Name="Рана">-10</Item>
+				<Item Name="Телохранитель">15</Item>
+				<Item Name="Проблемы с законом">10</Item>
+				<Item Name="Поломка">-20</Item>
+				<Item Name="Два">-15</Item>
+				<Item Name="Пилот боевого корабля">20</Item>
+				<Item Name="Миротворец">10</Item>
+				<Item Name="Задание выполнено">20</Item>
+				<Item Name="Лучший финал">30</Item>
 			</Dictionary>
 		</Constants>
 		<Settings>
