@@ -9,8 +9,8 @@
 			<Color Type="System">#f3f0f0</Color>
 		</Styles>
 		<Constants>
-			<List Type="WithoutStatuses">0, 1393, 1394</List>
-			<Dictionary Type="IncompatiblesDisadvantages">
+			<List Name="WithoutStatuses">0, 1393, 1394</List>
+			<Dictionary Name="IncompatiblesDisadvantages">
 				<Item Name="Пьянство">Набожность</Item>
 				<Item Name="Алчность">Набожность</Item>
 				<Item Name="Суеверие">Набожность</Item>
@@ -22,13 +22,13 @@
 				<Item Name="Обжорство">Эквилибристика, Акробатика</Item>
 				<Item Name="Малодушие">Вспыльчивость</Item>
 			</Dictionary>
-			<Dictionary Type="ParamNames">
+			<Dictionary Name="ParamNames">
 				<Item Name="Heroism">Героизму</Item>
 				<Item Name="Villainy">Злодейству</Item>
 				<Item Name="Buffoonery">Шутовству</Item>
 				<Item Name="Inspiration">Вдохновению</Item>
 			</Dictionary>
-			<List Type="SleepCleaningSurvive">Дежа вю, Се ля ви, Шерше ля фам, Триумфатор, Лютня, Записная книжка, Бревиарий</List>
+			<List Name="SleepCleaningSurvive">Дежа вю, Се ля ви, Шерше ля фам, Триумфатор, Лютня, Записная книжка, Бревиарий</List>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
