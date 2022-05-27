@@ -12,12 +12,12 @@
 		</Styles>
 		<Constants>
 			<Dictionary Type="SpellsList">
-				<Item Key="1" Value="первое"/>
-				<Item Key="2" Value="второе"/>
-				<Item Key="3" Value="третье"/>
-				<Item Key="4" Value="четвёртое"/>
-				<Item Key="5" Value="пятое"/>
-				<Item Key="6" Value="шестое"/>
+				<Item Name="1">первое</Item>
+				<Item Name="2">второе</Item>
+				<Item Name="3">третье</Item>
+				<Item Name="4">четвёртое</Item>
+				<Item Name="5">пятое</Item>
+				<Item Name="6">шестое</Item>
 			</Dictionary>
 			<List Type="Skills">Акробатика, Скалолазание, Сражение, Интеллект, Маскировка, Взлом, Ловкость рук, Скрытность, Поиск следов</List>
 		</Constants>
