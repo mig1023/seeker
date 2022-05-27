@@ -9,9 +9,9 @@
 		<Constants>
 			<List Type="CleaningNotebookList"> Билли убит в амбаре, Все любили Билли, Убит ночью, Не успел защититься, У убийцы есть рука, Убийца женщина, Надо проверить салон мадам Жу-жу, Женская перчатка, Дробовик, Патроны, Портсигар</List>
 			<Dictionary Type="Levels">
-				<Item Key="Easy" Value="100"/>
-				<Item Key="Medium" Value="1"/>
-				<Item Key="Hard" Value="0"/>
+				<Item Name="Easy">100</Item>
+				<Item Name="Medium">1</Item>
+				<Item Name="Hard">0</Item>
 			</Dictionary>
 		</Constants>
 		<Settings>
