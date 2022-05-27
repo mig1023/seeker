@@ -11,20 +11,20 @@
 		<Constants>
 			<List Type="WithoutStatuses">0, 660</List>
 			<Dictionary Type="Skills">
-				<Item Key="1" Value="12"/>
-				<Item Key="2" Value="8"/>
-				<Item Key="3" Value="10"/>
-				<Item Key="4" Value="7"/>
-				<Item Key="5" Value="9"/>
-				<Item Key="6" Value="11"/>
+				<Item Name="1">12</Item>
+				<Item Name="2">8</Item>
+				<Item Name="3">10</Item>
+				<Item Name="4">7</Item>
+				<Item Name="5">9</Item>
+				<Item Name="6">11</Item>
 			</Dictionary>
 			<Dictionary Type="Strengths">
-				<Item Key="1" Value="22"/>
-				<Item Key="2" Value="18"/>
-				<Item Key="3" Value="14"/>
-				<Item Key="4" Value="24"/>
-				<Item Key="5" Value="16"/>
-				<Item Key="6" Value="20"/>
+				<Item Name="1">22</Item>
+				<Item Name="2">18</Item>
+				<Item Name="3">14</Item>
+				<Item Name="4">24</Item>
+				<Item Name="5">16</Item>
+				<Item Name="6">20</Item>
 			</Dictionary>	
 		</Constants>
 		<Settings>
