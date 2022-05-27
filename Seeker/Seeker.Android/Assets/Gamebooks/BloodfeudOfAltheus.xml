@@ -13,10 +13,10 @@
 		<Constants>
 			<List Type="WithoutStaticsButtons">0, 1</List>
 			<Dictionary Type="HealthLine">
-				<Item Key="0" Value="мертв"/>
-				<Item Key="1" Value="тяжело ранен"/>
-				<Item Key="2" Value="ранен"/>
-				<Item Key="3" Value="здоров"/>
+				<Item Name="0">мертв</Item>
+				<Item Name="1">тяжело ранен</Item>
+				<Item Name="2">ранен</Item>
+				<Item Name="3">здоров</Item>
 			</Dictionary>
 		</Constants>
 		<Settings>
