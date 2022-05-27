@@ -2,8 +2,8 @@
 	<Introduction>
 		<Title>Вереница миров или выводы из закона Мэрфи</Title>
 		<Constants>
-			<List Type="WithoutStaticsButtons">0, 1, 665</List>
-			<Dictionary Type="Skills">
+			<List Name="WithoutStaticsButtons">0, 1, 665</List>
+			<Dictionary Name="Skills">
 				<Item Name="2">8</Item>
 				<Item Name="3">10</Item>
 				<Item Name="4">12</Item>
@@ -16,7 +16,7 @@
 				<Item Name="11">10</Item>
 				<Item Name="12">11</Item>
 			</Dictionary>
-			<Dictionary Type="Strengths">
+			<Dictionary Name="Strengths">
 				<Item Name="2">22</Item>
 				<Item Name="3">20</Item>
 				<Item Name="4">16</Item>
@@ -29,7 +29,7 @@
 				<Item Name="11">18</Item>
 				<Item Name="12">20</Item>
 			</Dictionary>
-			<Dictionary Type="Charms">
+			<Dictionary Name="Charms">
 				<Item Name="2">8</Item>
 				<Item Name="3">6</Item>
 				<Item Name="4">5</Item>
@@ -42,7 +42,7 @@
 				<Item Name="11">7</Item>
 				<Item Name="12">5</Item>
 			</Dictionary>
-			<Dictionary Type="LuckList">
+			<Dictionary Name="LuckList">
 				<Item Name="1">①</Item>
 				<Item Name="2">②</Item>
 				<Item Name="3">③</Item>
