@@ -13,10 +13,10 @@
 		<Constants>
 			<List Type="WithoutStatuses">0, 904, 905, 906</List>
 			<Dictionary Type="GetStartValues">
-				<Item Key="Attack" Value="8"/>
-				<Item Key="Defence" Value="15"/>
-				<Item Key="Endurance" Value="14"/>
-				<Item Key="Initiative" Value="10"/>
+				<Item Name="Attack">8</Item>
+				<Item Name="Defence">15</Item>
+				<Item Name="Endurance">14</Item>
+				<Item Name="Initiative">10</Item>
 			</Dictionary>
 		</Constants>
 		<Settings>
