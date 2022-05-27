@@ -166,7 +166,7 @@ namespace Seeker.Game
                 List<XmlNode> xmlNodes = xmlNode.SelectNodes("Item").Cast<XmlNode>().ToList();
 
                 Dictionary<string, string> items = xmlNodes
-                    .ToDictionary(x => x.Attributes["Key"].InnerText, x => x.Attributes["Value"].InnerText);
+                    .ToDictionary(x => x.Attributes["Name"].InnerText, x => x.InnerText);
 
                 Data.Constants.LoadDictionary(xmlNode.Attributes["Type"].InnerText, items);
             }
