@@ -11,7 +11,7 @@
 			<Color Type="System">#9dadaf</Color>
 		</Styles>
 		<Constants>
-			<Dictionary Type="GetCountName">
+			<Dictionary Name="GetCountName">
 				<Item Name="1">Первый</Item>
 				<Item Name="2">Второй</Item>
 				<Item Name="3">Третий</Item>
@@ -19,7 +19,7 @@
 				<Item Name="5">Пятый</Item>
 				<Item Name="6">Шестой</Item>
 			</Dictionary>
-			<Dictionary Type="GetPassageName">
+			<Dictionary Name="GetPassageName">
 				<Item Name="1">дверь</Item>
 				<Item Name="2">первое окно</Item>
 				<Item Name="3">второе окно</Item>
