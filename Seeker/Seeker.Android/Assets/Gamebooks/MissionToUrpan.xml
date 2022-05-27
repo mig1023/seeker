@@ -8,7 +8,7 @@
 			<Color Type="System">#bdc1ca</Color>
 		</Styles>
 		<Constants>
-			<Dictionary Type="ResultCalculation">
+			<Dictionary Name="ResultCalculation">
 				<Item Name="Рана">-10</Item>
 				<Item Name="Телохранитель">15</Item>
 				<Item Name="Проблемы с законом">10</Item>
