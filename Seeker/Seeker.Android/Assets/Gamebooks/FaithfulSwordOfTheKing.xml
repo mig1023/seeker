@@ -9,8 +9,8 @@
 			<Color Type="System">#f0dddd</Color>
 		</Styles>
 		<Constants>
-			<List Type="WithoutStatuses">0, 660</List>
-			<Dictionary Type="Skills">
+			<List Name="WithoutStatuses">0, 660</List>
+			<Dictionary Name="Skills">
 				<Item Name="1">12</Item>
 				<Item Name="2">8</Item>
 				<Item Name="3">10</Item>
@@ -18,7 +18,7 @@
 				<Item Name="5">9</Item>
 				<Item Name="6">11</Item>
 			</Dictionary>
-			<Dictionary Type="Strengths">
+			<Dictionary Name="Strengths">
 				<Item Name="1">22</Item>
 				<Item Name="2">18</Item>
 				<Item Name="3">14</Item>
