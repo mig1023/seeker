@@ -159,7 +159,7 @@ namespace Seeker.Game
                     Data.Constants.LoadButtonText(type, xmlNode.InnerText);
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/List")))
-                Data.Constants.LoadList(xmlNode.Attributes["Type"].InnerText, xmlNode.InnerText.Split(',').ToList());
+                Data.Constants.LoadList(xmlNode.Attributes["Name"].InnerText, xmlNode.InnerText.Split(',').ToList());
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/Dictionary")))
             {
@@ -168,7 +168,7 @@ namespace Seeker.Game
                 Dictionary<string, string> items = xmlNodes
                     .ToDictionary(x => x.Attributes["Name"].InnerText, x => x.InnerText);
 
-                Data.Constants.LoadDictionary(xmlNode.Attributes["Type"].InnerText, items);
+                Data.Constants.LoadDictionary(xmlNode.Attributes["Name"].InnerText, items);
             }
         }
 
