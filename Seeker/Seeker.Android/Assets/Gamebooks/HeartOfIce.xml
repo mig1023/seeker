@@ -11,7 +11,7 @@
 			<Color Type="System">#1f93c9</Color>
 		</Styles>
 		<Constants>
-			<List Type="WithoutStatuses">0, 454, 455, 456, 457</List>
+			<List Name="WithoutStatuses">0, 454, 455, 456, 457</List>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Show"/>
