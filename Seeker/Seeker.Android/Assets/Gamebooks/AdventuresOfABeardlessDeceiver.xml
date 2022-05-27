@@ -12,9 +12,9 @@
 			<Color Type="System">#c7dfb9</Color>
 		</Styles>
 		<Constants>
-			<List Type="WithoutStatuses">0, 205</List>
-			<List Type="WithoutStaticsButtons">0, 30, 60, 90</List>
-			<Dictionary Type="StatNames">
+			<List Name="WithoutStatuses">0, 205</List>
+			<List Name="WithoutStaticsButtons">0, 30, 60, 90</List>
+			<Dictionary Name="StatNames">
 				<Item Name="Strength">силы</Item>
 				<Item Name="Skill">ловкости</Item>
 				<Item Name="Wisdom">мудрости</Item>
