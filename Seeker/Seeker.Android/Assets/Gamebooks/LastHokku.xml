@@ -6,7 +6,7 @@
 			<Color Type="ButtonFont">#000000</Color>
 		</Styles>
 		<Constants>
-			<List Type="GetParagraphsWithoutHokkuCreation">0, 1, 9, 10, 11, 12</List>
+			<List Name="GetParagraphsWithoutHokkuCreation">0, 1, 9, 10, 11, 12</List>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
