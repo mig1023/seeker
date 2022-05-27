@@ -13,9 +13,9 @@
 		</Styles>
 		<Constants>
 			<Dictionary Type="GetStartValues">
-				<Item Key="Fight" Value="10"/>
-				<Item Key="Accuracy" Value="10"/>
-				<Item Key="Stealth" Value="3"/>
+				<Item Name="Fight">10</Item>
+				<Item Name="Accuracy">10</Item>
+				<Item Name="Stealth">3</Item>
 			</Dictionary>
 		</Constants>
 		<Settings>
