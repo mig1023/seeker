@@ -4,57 +4,57 @@
 		<Constants>
 			<List Type="WithoutStaticsButtons">0, 1, 665</List>
 			<Dictionary Type="Skills">
-				<Item Key="2" Value="8"/>
-				<Item Key="3" Value="10"/>
-				<Item Key="4" Value="12"/>
-				<Item Key="5" Value="9"/>
-				<Item Key="6" Value="11"/>
-				<Item Key="7" Value="9"/>
-				<Item Key="8" Value="10"/>
-				<Item Key="9" Value="8"/>
-				<Item Key="10" Value="9"/>
-				<Item Key="11" Value="10"/>
-				<Item Key="12" Value="11"/>
+				<Item Name="2">8</Item>
+				<Item Name="3">10</Item>
+				<Item Name="4">12</Item>
+				<Item Name="5">9</Item>
+				<Item Name="6">11</Item>
+				<Item Name="7">9</Item>
+				<Item Name="8">10</Item>
+				<Item Name="9">8</Item>
+				<Item Name="10">9</Item>
+				<Item Name="11">10</Item>
+				<Item Name="12">11</Item>
 			</Dictionary>
 			<Dictionary Type="Strengths">
-				<Item Key="2" Value="22"/>
-				<Item Key="3" Value="20"/>
-				<Item Key="4" Value="16"/>
-				<Item Key="5" Value="18"/>
-				<Item Key="6" Value="20"/>
-				<Item Key="7" Value="20"/>
-				<Item Key="8" Value="16"/>
-				<Item Key="9" Value="24"/>
-				<Item Key="10" Value="22"/>
-				<Item Key="11" Value="18"/>
-				<Item Key="12" Value="20"/>
+				<Item Name="2">22</Item>
+				<Item Name="3">20</Item>
+				<Item Name="4">16</Item>
+				<Item Name="5">18</Item>
+				<Item Name="6">20</Item>
+				<Item Name="7">20</Item>
+				<Item Name="8">16</Item>
+				<Item Name="9">24</Item>
+				<Item Name="10">22</Item>
+				<Item Name="11">18</Item>
+				<Item Name="12">20</Item>
 			</Dictionary>
 			<Dictionary Type="Charms">
-				<Item Key="2" Value="8"/>
-				<Item Key="3" Value="6"/>
-				<Item Key="4" Value="5"/>
-				<Item Key="5" Value="8"/>
-				<Item Key="6" Value="6"/>
-				<Item Key="7" Value="7"/>
-				<Item Key="8" Value="7"/>
-				<Item Key="9" Value="7"/>
-				<Item Key="10" Value="6"/>
-				<Item Key="11" Value="7"/>
-				<Item Key="12" Value="5"/>
+				<Item Name="2">8</Item>
+				<Item Name="3">6</Item>
+				<Item Name="4">5</Item>
+				<Item Name="5">8</Item>
+				<Item Name="6">6</Item>
+				<Item Name="7">7</Item>
+				<Item Name="8">7</Item>
+				<Item Name="9">7</Item>
+				<Item Name="10">6</Item>
+				<Item Name="11">7</Item>
+				<Item Name="12">5</Item>
 			</Dictionary>
 			<Dictionary Type="LuckList">
-				<Item Key="1" Value="①"/>
-				<Item Key="2" Value="②"/>
-				<Item Key="3" Value="③"/>
-				<Item Key="4" Value="④"/>
-				<Item Key="5" Value="⑤"/>
-				<Item Key="6" Value="⑥"/>
-				<Item Key="11" Value="❶"/>
-				<Item Key="12" Value="❷"/>
-				<Item Key="13" Value="❸"/>
-				<Item Key="14" Value="❹"/>
-				<Item Key="15" Value="❺"/>
-				<Item Key="16" Value="❻"/>
+				<Item Name="1">①</Item>
+				<Item Name="2">②</Item>
+				<Item Name="3">③</Item>
+				<Item Name="4">④</Item>
+				<Item Name="5">⑤</Item>
+				<Item Name="6">⑥</Item>
+				<Item Name="11">❶</Item>
+				<Item Name="12">❷</Item>
+				<Item Name="13">❸</Item>
+				<Item Name="14">❹</Item>
+				<Item Name="15">❺</Item>
+				<Item Name="16">❻</Item>
 			</Dictionary>
 		</Constants>
 		<Settings>
