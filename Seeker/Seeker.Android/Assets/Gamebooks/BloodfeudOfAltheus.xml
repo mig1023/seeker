@@ -11,8 +11,8 @@
 			<Color Type="AdditionalStatus">#d0c3b0</Color>
 		</Styles>
 		<Constants>
-			<List Type="WithoutStaticsButtons">0, 1</List>
-			<Dictionary Type="HealthLine">
+			<List Name="WithoutStaticsButtons">0, 1</List>
+			<Dictionary Name="HealthLine">
 				<Item Name="0">мертв</Item>
 				<Item Name="1">тяжело ранен</Item>
 				<Item Name="2">ранен</Item>
