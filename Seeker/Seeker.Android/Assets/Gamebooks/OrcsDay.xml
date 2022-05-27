@@ -10,15 +10,15 @@
 			<Color Type="ActionBox, AdditionalStatus">#c8d8b5</Color>
 		</Styles>
 		<Constants>
-			<List Type="WithoutStatuses">0, 102, 103</List>
-			<Dictionary Type="StatNames">
+			<List Name="WithoutStatuses">0, 102, 103</List>
+			<Dictionary Name="StatNames">
 				<Item Name="Muscle">мышцы</Item>
 				<Item Name="Wits">мозги</Item>
 				<Item Name="Courage">смелость</Item>
 				<Item Name="Luck">удачу</Item>
 				<Item Name="Orcishness">оркишность</Item>
 			</Dictionary>
-			<Dictionary Type="ResultCalculation">
+			<Dictionary Name="ResultCalculation">
 				<Item Name="!Гибель">+1 за то, что ты ещё жив</Item>
 				<Item Name="Обрёл имя">+1 за то, что обрёл имя</Item>
 				<Item Name="Выбрался из подземелья"> +1 за то, что выбрался из подземелья</Item>
