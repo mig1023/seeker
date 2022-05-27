@@ -11,8 +11,8 @@
 			<Color Type="System">#f2f2f2</Color>
 		</Styles>
 		<Constants>
-			<List Type="WithoutStatuses">0, 904, 905, 906</List>
-			<Dictionary Type="GetStartValues">
+			<List Name="WithoutStatuses">0, 904, 905, 906</List>
+			<Dictionary Name="GetStartValues">
 				<Item Name="Attack">8</Item>
 				<Item Name="Defence">15</Item>
 				<Item Name="Endurance">14</Item>
