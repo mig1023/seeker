@@ -2124,7 +2124,7 @@
 			<Actions>
 				<Action>
 					<Type>Get, Decrease</Type>
-					<Button>Выбрать, Убрать</Button>
+					<Button>Выбрать, Отказаться</Button>
 					<Text>ЗАКЛЯТИЕ ПОЗНАНИЯ</Text>
 					<ThisIsSpell/>
 					<After>
@@ -2133,7 +2133,7 @@
 				</Action>
 				<Action>
 					<Type>Get, Decrease</Type>
-					<Button>Выбрать, Убрать</Button>
+					<Button>Выбрать, Отказаться</Button>
 					<Text>ЗАКЛЯТИЕ МОЛНИИ</Text>
 					<ThisIsSpell/>
 					<After>
@@ -2142,7 +2142,7 @@
 				</Action>
 				<Action>
 					<Type>Get, Decrease</Type>
-					<Button>Выбрать, Убрать</Button>
+					<Button>Выбрать, Отказаться</Button>
 					<Text>ЗАКЛЯТИЕ ПАРАЛИЧА</Text>
 					<ThisIsSpell/>
 					<After>
