@@ -64,5 +64,6 @@
 	<Setting>
 		<Name>Данные отладки</Name>
 		<Type>Debug</Type>
+		<Description>Отображение внутренних настроек, переменных, ключей, а так же пройденного пути в хронологии параграфов.</Description>
 	</Setting>
 </Settings>
