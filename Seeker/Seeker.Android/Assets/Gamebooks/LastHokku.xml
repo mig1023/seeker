@@ -10,6 +10,7 @@
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
+			<StartParagraph Value="1"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
@@ -115,7 +116,7 @@
 		<Paragraph>
 			<Id>12</Id>
 			<Options>
-				<Option Destination="0" Text="И создай ещё лучше..."/>
+				<Option Destination="1" Text="И создай ещё лучше..."/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
