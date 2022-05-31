@@ -22,6 +22,8 @@ namespace Seeker.Prototypes
 
         private bool ShowDisabledOptionStatus = false;
 
+        private int StartParagraph = 0;
+
         public virtual string GetColor(ButtonTypes type)
         {
             Dictionary<ButtonTypes, string> color = (Settings.IsEnabled("WithoutStyles") ?
@@ -102,6 +104,16 @@ namespace Seeker.Prototypes
         public void LoadEnabledDisabledOption(string option) => ShowDisabledOptionStatus = (option == "Show");
 
         public virtual bool ShowDisabledOption() => ShowDisabledOptionStatus;
+
+        public void LoadStartParagraphOption(string option)
+        {
+            if (int.TryParse(option, out int paragraph) && (paragraph > 0))
+                StartParagraph = paragraph;
+            else
+                StartParagraph = 0;
+        }
+
+        public virtual int GetStartParagraph() => StartParagraph;
 
         public virtual Dictionary<string, string> ButtonText() => ButtonTextList;
 

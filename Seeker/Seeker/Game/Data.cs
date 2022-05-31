@@ -12,7 +12,7 @@ namespace Seeker.Game
             AdditionalFont, BookColor, BookFontColor, BookBorderColor, SystemFont,
         }
 
-        public const int StartParagraph = 0;
+        public const int PhysicalStartParagraph = 0;
 
         public const string DescriptionXml = "Descriptions.xml";
         public const string SettingsXml = "Settings.xml";

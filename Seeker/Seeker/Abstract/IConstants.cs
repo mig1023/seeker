@@ -31,6 +31,10 @@ namespace Seeker.Abstract
 
         bool ShowDisabledOption();
 
+        void LoadStartParagraphOption(string option);
+
+        int GetStartParagraph();
+
         Dictionary<string, string> ButtonText();
 
         void LoadButtonText(string button, string text);

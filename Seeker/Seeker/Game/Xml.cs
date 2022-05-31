@@ -151,8 +151,8 @@ namespace Seeker.Game
                 foreach (string type in Multiples(xmlNode, "Type"))
                     Data.Constants.LoadColor(type, xmlNode.InnerText);
 
-            string dasbledOption = Xml.StringParse(xmlFile.SelectSingleNode(Intro("Settings/DisabledOption")).Attributes["Value"]);
-            Data.Constants.LoadEnabledDisabledOption(dasbledOption);
+            Data.Constants.LoadEnabledDisabledOption(SettingParse(xmlFile, "DisabledOption"));
+            Data.Constants.LoadStartParagraphOption(SettingParse(xmlFile, "StartParagraph"));
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Buttons/Button")))
                 foreach (string type in Multiples(xmlNode, "Type"))
@@ -171,6 +171,9 @@ namespace Seeker.Game
                 Data.Constants.LoadDictionary(xmlNode.Attributes["Name"].InnerText, items);
             }
         }
+
+        private static string SettingParse(XmlDocument xmlFile, string option) =>
+            Xml.StringParse(xmlFile.SelectSingleNode(Intro(String.Format("Settings/{0}", option)))?.Attributes["Value"]) ?? String.Empty;
 
         private static List<string> Multiples(XmlNode xmlNode, string attributes) =>
             xmlNode.Attributes[attributes].InnerText.Split(',').Select(x => x.Trim()).ToList();

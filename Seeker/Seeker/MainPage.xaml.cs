@@ -107,7 +107,9 @@ namespace Seeker
             if (optionModification != null)
                 optionModification.Do();
 
-            bool startOfGame = (id == Game.Data.StartParagraph);
+            bool physicalStartOfGame = (id == Game.Data.PhysicalStartParagraph);
+            bool logicalStartOfGame = (id == Game.Data.Constants.GetStartParagraph());
+            bool startOfGame = physicalStartOfGame || logicalStartOfGame;
 
             PageClean();
 
@@ -234,7 +236,7 @@ namespace Seeker
             if (optionCount > 1)
                 gameOver = false;
 
-            if (startOfGame && Game.Continue.IsGameSaved())
+            if (physicalStartOfGame && Game.Continue.IsGameSaved())
             {
                 Options.Children.Add(Output.Buttons.Additional("Продолжить предыдущую игру", Continue_Click));
             }
