@@ -19,59 +19,59 @@ namespace Seeker.Gamebook.DzungarWar
 
         static bool NextTestWithTincture = false, NextTestWithGinseng = false, NextTestWithAirag = false;
 
-        private int TestLevelWithPenalty(int level, out List<string> penaltyLine)
-        {
-            penaltyLine = new List<string> { };
+        //private int TestLevelWithPenalty(int level, out List<string> penaltyLine)
+        //{
+        //    penaltyLine = new List<string> { };
 
-            if (NextTestWithTincture)
-            {
-                level -= 4;
-                penaltyLine.Add("Бонус в -4 к уровню проверки за настойку");
-            }
+        //    if (NextTestWithTincture)
+        //    {
+        //        level -= 4;
+        //        penaltyLine.Add("Бонус в -4 к уровню проверки за настойку");
+        //    }
 
-            if (NextTestWithGinseng)
-            {
-                level -= 8;
-                penaltyLine.Add("Бонус в -8 к уровню проверки за отвар женьшеня");
-            }
+        //    if (NextTestWithGinseng)
+        //    {
+        //        level -= 8;
+        //        penaltyLine.Add("Бонус в -8 к уровню проверки за отвар женьшеня");
+        //    }
 
-            if (NextTestWithAirag)
-            {
-                level -= 2;
-                penaltyLine.Add("Бонус в -2 к уровню проверки за айраг");
-            }
+        //    if (NextTestWithAirag)
+        //    {
+        //        level -= 2;
+        //        penaltyLine.Add("Бонус в -2 к уровню проверки за айраг");
+        //    }
 
-            if (String.IsNullOrEmpty(TriggerTestPenalty))
-                return level;
+        //    if (String.IsNullOrEmpty(TriggerTestPenalty))
+        //        return level;
 
-            string[] penalties = TriggerTestPenalty.Split(';');
+        //    string[] penalties = TriggerTestPenalty.Split(';');
 
-            foreach (string eachPenalty in penalties)
-            {
-                string[] penalty = eachPenalty.Split(',');
+        //    foreach (string eachPenalty in penalties)
+        //    {
+        //        string[] penalty = eachPenalty.Split(',');
 
-                if (penalty[0].Trim() == "Вино")
-                {
-                    int bottles = Game.Data.Triggers.Where(x => x == "Кувшин вина").Count();
+        //        if (penalty[0].Trim() == "Вино")
+        //        {
+        //            int bottles = Game.Data.Triggers.Where(x => x == "Кувшин вина").Count();
 
-                    if (bottles > 0)
-                    {
-                        level += (bottles * -1);
-                        penaltyLine.Add(String.Format("Пенальти -{0} за покупку {0} кувшинов", bottles));
-                    }
-                }
-                else if (Game.Option.IsTriggered(penalty[0].Trim()))
-                {
-                    level += int.Parse(penalty[1].Trim());
-                    penaltyLine.Add(String.Format("Пенальти {0} к уровню проверки за ключевое слово {1}", penalty[1].Trim(), penalty[0].Trim()));
-                }
-            }
+        //            if (bottles > 0)
+        //            {
+        //                level += (bottles * -1);
+        //                penaltyLine.Add(String.Format("Пенальти -{0} за покупку {0} кувшинов", bottles));
+        //            }
+        //        }
+        //        else if (Game.Option.IsTriggered(penalty[0].Trim()))
+        //        {
+        //            level += int.Parse(penalty[1].Trim());
+        //            penaltyLine.Add(String.Format("Пенальти {0} к уровню проверки за ключевое слово {1}", penalty[1].Trim(), penalty[0].Trim()));
+        //        }
+        //    }
 
-            if (level < 0)
-                level = 0;
+        //    if (level < 0)
+        //        level = 0;
 
-            return level;
-        }
+        //    return level;
+        //}
 
         public override List<string> Representer()
         {
@@ -81,8 +81,10 @@ namespace Seeker.Gamebook.DzungarWar
             }
             else if (Level > 0)
             {
-                return new List<string> { String.Format("Проверка {0}, уровень {1}",
-                    Constants.StatNames[Stat], TestLevelWithPenalty(Level, out List<string> _)) };
+                int testResult = Services.TestLevelWithPenalty(Level, out List<string> _,
+                    ref NextTestWithTincture, ref NextTestWithGinseng, ref NextTestWithAirag, TriggerTestPenalty);
+
+                return new List<string> { String.Format("Проверка {0}, уровень {1}", Constants.StatNames[Stat], testResult) };
             }
             else if (!String.IsNullOrEmpty(Stat) && !StatToMax)
             {
@@ -309,34 +311,13 @@ namespace Seeker.Gamebook.DzungarWar
             }
         }
 
-        private void TestParam(string stat, int level, out bool result, out List<string> resultLine)
-        {
-            resultLine = new List<string>();
-
-            level = TestLevelWithPenalty(level, out List<string> penalties);
-
-            NextTestWithTincture = false;
-            NextTestWithGinseng = false;
-            NextTestWithAirag = false;
-
-            resultLine.AddRange(penalties);
-
-            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
-            int currentStat = GetProperty(protagonist, stat);
-
-            result = (firstDice + secondDice) + currentStat >= level;
-
-            resultLine.Add(String.Format(
-                "Проверка {0}: {1} + {2} + {3} {4} {5}",
-                Constants.StatNames[stat], Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice),
-                currentStat, (result ? ">=" : "<"), level));
-        }
-
         public List<string> Test()
         {
             List<string> testLines = new List<string>();
 
-            TestParam(Stat, Level, out bool testIsOk, out List<string> result);
+            Services.TestParam(Stat, Level, out bool testIsOk, out List<string> result,
+                ref NextTestWithTincture, ref NextTestWithGinseng, ref  NextTestWithAirag,
+                GetProperty(protagonist, Stat), TriggerTestPenalty);
 
             testLines.AddRange(result);
             testLines.Add(Result(testIsOk, "АЛДАР СПРАВИЛСЯ|АЛДАР НЕ СПРАВИЛСЯ"));
@@ -397,7 +378,9 @@ namespace Seeker.Gamebook.DzungarWar
 
             foreach (string test in tests)
             {
-                TestParam(test, levels[test], out bool thisTestIsOk, out List<string> result);
+                Services.TestParam(test, levels[test], out bool thisTestIsOk, out List<string> result,
+                    ref NextTestWithTincture, ref NextTestWithGinseng, ref NextTestWithAirag,
+                    GetProperty(protagonist, test), TriggerTestPenalty);
 
                 testLines.AddRange(result);
                 testLines.Add(thisTestIsOk ? "GOOD|Алдар справился" : "BAD|Алдар не справился");
