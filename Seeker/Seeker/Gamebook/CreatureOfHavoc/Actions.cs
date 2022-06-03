@@ -151,25 +151,6 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             return skillCheck;
         }
 
-        private bool WoundAndDeath(ref List<string> fight, ref Character protagonist, string enemy, int wounds = 2)
-        {
-            if (wounds == 2)
-                fight.Add(String.Format("BAD|{0} ранил вас", enemy));
-
-            protagonist.Endurance -= wounds;
-
-            if (protagonist.Endurance <= 0)
-            {
-                fight.Add(String.Empty);
-                fight.Add(String.Format("BIG|BAD|Вы ПРОИГРАЛИ :("));
-                return true;
-            }
-            else
-                return false;
-        }
-
-        private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Endurance > 0).Count() == 0;
-
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -238,7 +219,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                         if (goodLuck)
                             fight.Add(String.Format("BOLD|{0} не смог вас ранить", enemy.Name));
 
-                        else if (WoundAndDeath(ref fight, ref protagonist, enemy.Name))
+                        else if (Services.WoundAndDeath(ref fight, ref protagonist, enemy.Name))
                             return fight;
                     }
                     else if (GiantHornet && doubleDiceEnemy)
@@ -250,7 +231,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                             fight.Add("GOOD|Вы наносите шершню удар Мгновенной Смерти");
                             fight.Add("BAD|Но вы теряете 6 пунктов выносливости");
 
-                            if (WoundAndDeath(ref fight, ref protagonist, enemy.Name, wounds: 6))
+                            if (Services.WoundAndDeath(ref fight, ref protagonist, enemy.Name, wounds: 6))
                                 return fight;
                             else
                             {
@@ -286,7 +267,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
                         previousRoundWound = true;
 
-                        bool enemyLost = NoMoreEnemies(FightEnemies);
+                        bool enemyLost = Services.NoMoreEnemies(FightEnemies);
 
                         if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                         {
@@ -301,7 +282,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                     }
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
-                        if (WoundAndDeath(ref fight, ref protagonist, enemy.Name))
+                        if (Services.WoundAndDeath(ref fight, ref protagonist, enemy.Name))
                             return fight;
                     }
                     else
