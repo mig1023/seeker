@@ -61,7 +61,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             if (Game.Data.Constants.GetParagraphsWithoutStaticsButtons().Contains(Game.Data.CurrentParagraphID))
                 return staticButtons;
 
-            if (IsPosibleResurrection())
+            if (Services.IsPosibleResurrection())
                 staticButtons.Add("ВОЗЗВАТЬ К ЗЕВСУ ЗА РАВНОДУШИЕМ");
 
             if (protagonist.Resurrection > 0)
@@ -112,14 +112,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public override bool IsButtonEnabled(bool secondButton = false) =>
             !((Type == "DiceSpendGlory") && ((protagonist.Glory - protagonist.Shame) < 6));
 
-        private static bool IsPosibleResurrection()
-        {
-            bool normal = (protagonist.Resurrection > 0);
-            bool brooch = (protagonist.BroochResurrection > 0) && ((protagonist.Glory - protagonist.Shame) >= 10);
-
-            return (normal || brooch);
-        }
-
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option) || (option == "selectOnly") || (option == null) || String.IsNullOrEmpty(option))
@@ -132,62 +124,38 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 string value = (values.Length > 1 ? values[1] : "nope");
 
                 if (option.Contains("!ПОКРОВИТЕЛЬ"))
-                {
                     return protagonist.Patron != value;
-                }
                 else if (option.Contains("ПОКРОВИТЕЛЬ"))
-                {
                     return protagonist.Patron == value;
-                }
 
                 if (option.Contains("БЕЗРАЗЛИЧЕН"))
-                {
                     return !protagonist.IsGodsFavor(value) && !protagonist.IsGodsDisFavor(value);
-                }
 
                 if (option.Contains("!БЛАГОСКЛОНЕН"))
-                {
                     return !protagonist.IsGodsFavor(value);
-                }
                 else if (option.Contains("БЛАГОСКЛОНЕН"))
-                {
                     return protagonist.IsGodsFavor(value);
-                }
 
                 if (option.Contains("!НЕМИЛОСТИВ"))
-                {
                     return !protagonist.IsGodsDisFavor(value);
-                }
                 else if (option.Contains("НЕМИЛОСТИВ"))
-                {
                     return protagonist.IsGodsDisFavor(value);
-                }
                     
                 if (option.Contains("ВОСКРЕШЕНИЕ"))
-                {
-                    return IsPosibleResurrection();
-                }
+                    return Services.IsPosibleResurrection();
 
                 values = option.Split('>', '=');
                 int level = (values.Length > 1 ? int.Parse(values[1]) : 0);
 
                 if (option.Contains("СЛАВА >"))
-                {
                     return level < protagonist.Glory;
-                }
                 else if (option.Contains("СЛАВА <="))
-                {
                     return level >= protagonist.Glory;
-                }
 
                 if (option.Contains("ПОЗОР >"))
-                {
                     return level < protagonist.Shame;
-                }
                 else if (option.Contains("ПОЗОР <="))
-                {
                     return level >= protagonist.Shame;
-                }
 
                 return AvailabilityTrigger(option);
             }
@@ -430,67 +398,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             }
         }
 
-        private int UseGloryInFight(Character enemy, ref List<string> fight)
-        {
-            bool graveInjury = (protagonist.Health < 2);
-            bool cantFightOtherwise = (protagonist.Strength + (graveInjury ? 6 : 12) < enemy.Defence);
-
-            int availableGlory = (protagonist.Glory - protagonist.Shame);
-
-            if (cantFightOtherwise && (availableGlory < 1))
-            {
-                fight.Add("Кажется, что положение безнадёжно...");
-                return -1;
-            }
-
-            if (!cantFightOtherwise)
-                return 0;
-
-            int needGlory = (enemy.Defence - protagonist.Strength + (graveInjury ? 6 : 12) + 2);
-
-            if (needGlory > availableGlory)
-            {
-                fight.Add("Не хватит очков Славы, чтобы что-то исправить...");
-                return -1;
-            }
-            else
-            {
-                fight.Add("Вам придётся использовать Славу!");
-
-                protagonist.Glory -= needGlory;
-                return needGlory;
-            }
-
-        }
-
-        private bool NoMoreEnemies(List<Character> enemies, bool noHealthy = false)
-        {
-            foreach (Character enemy in enemies)
-            {
-                if (!noHealthy && enemy.Health > 0)
-                    return false;
-
-                if (noHealthy && (enemy.Health > 1))
-                    return false;
-            }
-               
-            return true;
-        }
-
-        private int ComradeBonus(List<Character> enemies, int currentEnemy)
-        {
-            int bonus = 0;
-
-            if ((currentEnemy + 1) == enemies.Count)
-                return bonus;
-
-            for (int i = currentEnemy + 1; i < enemies.Count; i++)
-                if (enemies[i].Health > 1)
-                    bonus += 1;
-
-            return bonus;
-        }
-
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -543,10 +450,10 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     string secondRollLine = String.Empty;
                     bool autoFail = false;
 
-                    int useGlory = UseGloryInFight(enemy, ref fight);
+                    int useGlory = Services.UseGloryInFight(enemy, ref fight);
                     string useGloryLine = (useGlory > 0 ? String.Format(" + {0} Славы", useGlory) : String.Empty);
 
-                    if ((protagonist.Health > 1) || NoMoreEnemies(FightEnemies, noHealthy: true))
+                    if ((protagonist.Health > 1) || Services.NoMoreEnemies(FightEnemies, noHealthy: true))
                     {
                         protagonistRollSecond = Game.Dice.Roll();
                         secondRollLine = String.Format(" + {0}", Game.Dice.Symbol(protagonistRollSecond));
@@ -573,7 +480,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                         enemy.Health -= 1;
 
-                        bool enemyLost = NoMoreEnemies(FightEnemies, noHealthy: !FightToDeath);
+                        bool enemyLost = Services.NoMoreEnemies(FightEnemies, noHealthy: !FightToDeath);
 
                         if (enemyLost)
                         {
@@ -589,7 +496,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     int enemyRollSecond = 0;
                     string ememySecondRollLine = String.Empty;
 
-                    if ((enemy.Health > 1) || NoMoreEnemies(FightEnemies, noHealthy: true))
+                    if ((enemy.Health > 1) || Services.NoMoreEnemies(FightEnemies, noHealthy: true))
                     {
                         enemyRollSecond = Game.Dice.Roll();
                         ememySecondRollLine = String.Format(" + {0}", Game.Dice.Symbol(enemyRollSecond));
@@ -602,7 +509,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     int enemyHitStrength = enemyRollFirst + enemyRollSecond + enemy.Strength;
 
-                    int comradesBonus = ComradeBonus(FightEnemies, currentEnemy);
+                    int comradesBonus = Services.ComradeBonus(FightEnemies, currentEnemy);
                     string comradesBonusLine = String.Empty;
 
                     if (comradesBonus > 0)
