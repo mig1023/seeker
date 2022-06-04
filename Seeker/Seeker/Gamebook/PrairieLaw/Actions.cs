@@ -19,8 +19,6 @@ namespace Seeker.Gamebook.PrairieLaw
         public string SellPrices { get; set; }
         public string RemoveTrigger { get; set; }
 
-        private string ToDollars(int cents) => String.Format("{0:f2}", (double)cents / 100).TrimEnd('0').TrimEnd(',').Replace(',', '.');
-
         public override List<string> Status() => new List<string>
         {
             String.Format("Ловкость: {0}", protagonist.Skill),
@@ -31,7 +29,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public override List<string> AdditionalStatus() => new List<string>
         {
             String.Format("Патронов: {0}", protagonist.Cartridges),
-            String.Format("Долларов: {0:f2}", ToDollars(protagonist.Cents))
+            String.Format("Долларов: {0:f2}", Services.ToDollars(protagonist.Cents))
         };
 
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
@@ -42,7 +40,7 @@ namespace Seeker.Gamebook.PrairieLaw
             List<string> enemies = new List<string>();
 
             if (Price > 0)
-                return new List<string> { String.Format("{0}, {1:f2}$", Text, ToDollars(Price)) };
+                return new List<string> { String.Format("{0}, {1:f2}$", Text, Services.ToDollars(Price)) };
 
             else if (!String.IsNullOrEmpty(Text))
                 return new List<string> { Text };
@@ -103,22 +101,12 @@ namespace Seeker.Gamebook.PrairieLaw
             }
         }
 
-        private string LuckNumbers()
-        {
-            string luckListShow = String.Empty;
-
-            for (int i = 1; i < 7; i++)
-                luckListShow += String.Format("{0} ", Constants.LuckList[protagonist.Luck[i] ? i : i + 10]);
-
-            return luckListShow;
-        }
-
         public List<string> Luck()
         {
             List<string> luckCheck = new List<string>
             {
                 "Цифры удачи:",
-                "BIG|" + LuckNumbers()
+                "BIG|" + Services.LuckNumbers()
             };
 
             int goodLuck = Game.Dice.Roll();
@@ -157,7 +145,7 @@ namespace Seeker.Gamebook.PrairieLaw
             }
 
             luckRecovery.Add("Цифры удачи теперь:");
-            luckRecovery.Add("BIG|" + LuckNumbers());
+            luckRecovery.Add("BIG|" + Services.LuckNumbers());
 
             return luckRecovery;
         }
@@ -280,7 +268,7 @@ namespace Seeker.Gamebook.PrairieLaw
                 {
                     int price = (anySkin ? prices["Любая шкура"] : prices[skin]);
 
-                    salesReport.Add(String.Format("{0} - купил за {1:f2}$", skin, ToDollars(price)));
+                    salesReport.Add(String.Format("{0} - купил за {1:f2}$", skin, Services.ToDollars(price)));
                     cents += price;
                     saledIndexes.Add(index);
                     sold += 1;
@@ -299,7 +287,7 @@ namespace Seeker.Gamebook.PrairieLaw
             salesReport.Add(String.Empty);
             salesReport.Add("BIG|ИТОГО:");
             salesReport.Add(String.Format("Вы продали шкур: {0}", sold));
-            salesReport.Add(String.Format("GOOD|Вы получили: {0:f2}$", ToDollars(cents)));
+            salesReport.Add(String.Format("GOOD|Вы получили: {0:f2}$", Services.ToDollars(cents)));
 
             protagonist.Cents += cents;
 
@@ -315,8 +303,8 @@ namespace Seeker.Gamebook.PrairieLaw
             protagonist.Cents += cents;
 
             salesReport.Add(String.Format("Вы продали самородков: {0}", protagonist.Nuggets));
-            salesReport.Add(String.Format("Цена за один: {0:f2}$", ToDollars(price)));
-            salesReport.Add(String.Format("GOOD|Вы получили: {0:f2}$", ToDollars(cents)));
+            salesReport.Add(String.Format("Цена за один: {0:f2}$", Services.ToDollars(price)));
+            salesReport.Add(String.Format("GOOD|Вы получили: {0:f2}$", Services.ToDollars(cents)));
 
             protagonist.Nuggets = 0;
 
@@ -436,28 +424,6 @@ namespace Seeker.Gamebook.PrairieLaw
             return gameReport;
         }
 
-        private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Strength > (EnemyWoundsLimit ? 2 : 0)).Count() == 0;
-
-        private bool FirefightContinue(List<Character> enemies, ref List<string> fight, bool firefight)
-        {
-            if (!firefight)
-                return false;
-
-            if (protagonist.Cartridges > 0)
-                return true;
-
-            if (enemies.Where(x => x.Cartridges > 0).Count() > 0)
-                return true;
-
-            if (firefight)
-            {
-                fight.Add("BOLD|У всех закончились патроны, дальше бой продолжится на кулаках");
-                fight.Add(String.Empty);
-            }
-
-            return false;
-        }
-
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -472,7 +438,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
             while (true)
             {
-                firefight = FirefightContinue(FightEnemies, ref fight, firefight);
+                firefight = Services.FirefightContinue(FightEnemies, ref fight, firefight);
 
                 fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
 
@@ -529,7 +495,7 @@ namespace Seeker.Gamebook.PrairieLaw
 
                         enemy.Strength -= (firefight ? 3 : 2);
 
-                        bool enemyLost = NoMoreEnemies(FightEnemies);
+                        bool enemyLost = Services.NoMoreEnemies(FightEnemies, EnemyWoundsLimit);
 
                         if (enemyLost)
                         {
