@@ -104,22 +104,12 @@ namespace Seeker.Gamebook.StringOfWorlds
             return enemies;
         }
 
-        private string LuckNumbers()
-        {
-            string luckListShow = String.Empty;
-
-            for (int i = 1; i < 7; i++)
-                luckListShow += String.Format("{0} ", Constants.LuckList[protagonist.Luck[i] ? i : i + 10]);
-
-            return luckListShow;
-        }
-
         public List<string> Luck()
         {
             List<string> luckCheck = new List<string>
             {
                 "Цифры удачи:",
-                "BIG|" + LuckNumbers()
+                "BIG|" + Services.LuckNumbers()
             };
 
             int goodLuck = Game.Dice.Roll();
@@ -156,7 +146,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                 luckRecovery.Add("BAD|Все цифры и так счастливые!");
 
             luckRecovery.Add("Цифры удачи теперь:");
-            luckRecovery.Add("BIG|" + LuckNumbers());
+            luckRecovery.Add("BIG|" + Services.LuckNumbers());
 
             return luckRecovery;
         }
@@ -314,8 +304,6 @@ namespace Seeker.Gamebook.StringOfWorlds
             return new List<string> { "RELOAD" };
         }
 
-        private bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Strength > (EnemyWoundsLimit ? 2 : 0)).Count() == 0;
-
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -367,7 +355,7 @@ namespace Seeker.Gamebook.StringOfWorlds
 
                         enemy.Strength -= 2;
 
-                        bool enemyLost = NoMoreEnemies(FightEnemies);
+                        bool enemyLost = Services.NoMoreEnemies(FightEnemies, EnemyWoundsLimit);
 
                         if (enemyLost)
                         {
