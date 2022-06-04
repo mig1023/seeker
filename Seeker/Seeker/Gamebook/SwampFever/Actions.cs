@@ -135,8 +135,6 @@ namespace Seeker.Gamebook.SwampFever
             return new List<string> { "RELOAD" };
         }
 
-        private string GetUpgratesValues(int index, int part) => Constants.GetUpgrates[index].Split('|')[part - 1];
-
         private bool Upgrade(ref List<int> myCombination, ref List<string> myCombinationLine, ref List<string> fight)
         {
             int upgrades = 0;
@@ -144,7 +142,7 @@ namespace Seeker.Gamebook.SwampFever
             bool upgradeInAction = false;
 
             for (int i = 1; i <= Constants.GetUpgrates.Count; i++)
-                upgrades += GetProperty(protagonist, GetUpgratesValues(i, part: 1));
+                upgrades += GetProperty(protagonist, Services.GetUpgratesValues(i, part: 1));
 
             if (upgrades == 0)
                 return upgradeInAction;
@@ -157,13 +155,13 @@ namespace Seeker.Gamebook.SwampFever
 
             for (int i = 1; i <= Constants.GetUpgrates.Count; i++)
             {
-                if (GetProperty(protagonist, GetUpgratesValues(i, part: 1)) == 0)
+                if (GetProperty(protagonist, Services.GetUpgratesValues(i, part: 1)) == 0)
                     continue;
 
                 bool inAction = (upgradeDice == i);
 
-                fight.Add(String.Format("{0}{1} - {2}",
-                    (inAction ? "GOOD|" : String.Empty), GetUpgratesValues(i, part: 2), (inAction ? "В ДЕЙСТВИИ!" : "нет")));
+                fight.Add(String.Format("{0}{1} - {2}", (inAction ? "GOOD|" : String.Empty),
+                    Services.GetUpgratesValues(i, part: 2), (inAction ? "В ДЕЙСТВИИ!" : "нет")));
 
                 if (inAction)
                 {
@@ -222,7 +220,7 @@ namespace Seeker.Gamebook.SwampFever
                     fight.Add(String.Empty);
                     fight.Add("BOLD|МАНЕВРИРОВАНИЕ");
 
-                    int maneuvers = CountInCombination(myCombination, 1);
+                    int maneuvers = Services.CountInCombination(myCombination, 1);
                     bool failManeuvers = true;
 
                     foreach (int dice in new int[] { 6, 5, 4 })
@@ -299,7 +297,7 @@ namespace Seeker.Gamebook.SwampFever
                             string bonuses = String.Empty;
 
                             int myDice = Game.Dice.Roll();
-                            int myBonus = CountInCombination(myCombination, range);
+                            int myBonus = Services.CountInCombination(myCombination, range);
                             int myAttack = myDice + myBonus;
 
                             if (myBonus > 0)
@@ -310,7 +308,7 @@ namespace Seeker.Gamebook.SwampFever
                             bonuses = String.Empty;
 
                             int enemyDice = Game.Dice.Roll();
-                            int enemyBonus = CountInCombination(enemyCombination, range);
+                            int enemyBonus = Services.CountInCombination(enemyCombination, range);
                             int enemyAttack = enemyDice + enemyBonus;
 
                             if (enemyBonus > 0)
@@ -356,8 +354,8 @@ namespace Seeker.Gamebook.SwampFever
                         string bonuses = String.Empty, penalties = String.Empty;
 
                         int myDice = Game.Dice.Roll();
-                        int myBonus = CountInCombination(myCombination, 3);
-                        int myPenalty = CountInCombination(enemyCombination, 2);
+                        int myBonus = Services.CountInCombination(myCombination, 3);
+                        int myPenalty = Services.CountInCombination(enemyCombination, 2);
                         int enemyEvasion = myDice + myBonus - myPenalty;
 
                         if (myBonus > 0)
@@ -398,8 +396,8 @@ namespace Seeker.Gamebook.SwampFever
                         string bonuses = String.Empty, penalties = String.Empty;
 
                         int enemyDice = Game.Dice.Roll();
-                        int enemyBonus = CountInCombination(enemyCombination, 3);
-                        int enemyPenalty = CountInCombination(myCombination, 2);
+                        int enemyBonus = Services.CountInCombination(enemyCombination, 3);
+                        int enemyPenalty = Services.CountInCombination(myCombination, 2);
                         int myEvasion = enemyDice + enemyBonus - enemyPenalty;
 
                         if (enemyBonus > 0)
@@ -428,12 +426,7 @@ namespace Seeker.Gamebook.SwampFever
             }
         }
 
-        private int CountInCombination(List<int> combination, int dice)
-        {
-            Dictionary<int, int> counts = combination.GroupBy(x => x).ToDictionary(k => k.Key, v => v.Count());
 
-            return (counts.ContainsKey(dice) ? counts[dice] : 0);
-        }
 
         public List<string> SellStigon()
         {
@@ -473,15 +466,6 @@ namespace Seeker.Gamebook.SwampFever
             return accountingReport;
         }
 
-        private void PurchasesHeads(ref List<string> purchasesReport, bool affordable, bool? prevAffordable)
-        {
-            if (affordable && (prevAffordable == null))
-                purchasesReport.Add("BOLD|ВАМ ДОСТУПНО:");
-
-            else if (prevAffordable != affordable)
-                purchasesReport.Add("\nBOLD|ВАМ ПОКА ЕЩЁ НЕ ДОСТУПНО:");
-        }
-
         public List<string> VariousPurchases()
         {
             List<string> purchasesReport = new List<string>();
@@ -494,7 +478,7 @@ namespace Seeker.Gamebook.SwampFever
                 affordable = (purchase.Value <= protagonist.Creds);
                 string affLine = (affordable ? "GOOD|BOLD|" : String.Empty);
 
-                PurchasesHeads(ref purchasesReport, affordable, prevAffordable);
+                Services.PurchasesHeads(ref purchasesReport, affordable, prevAffordable);
                 purchasesReport.Add(String.Format("{0}{1} — {2} кредов.", affLine, purchase.Key, purchase.Value));
 
                 prevAffordable = affordable;
@@ -739,22 +723,6 @@ namespace Seeker.Gamebook.SwampFever
             return huntReport;
         }
 
-        private List<string> PursuitWin(List<string> pursuitReport)
-        {
-            protagonist.Stigon += 1;
-
-            pursuitReport.Add("BIG|GOOD|Вы настигли шар :)");
-            return pursuitReport;
-        }
-
-        private List<string> PursuitFail(List<string> pursuitReport)
-        {
-            protagonist.Fury += 1;
-
-            pursuitReport.Add("BIG|BAD|Вы упустили куст :(");
-            return pursuitReport;
-        }
-
         public List<string> Pursuit()
         {
             List<string> pursuitReport = new List<string>();
@@ -775,7 +743,7 @@ namespace Seeker.Gamebook.SwampFever
                     Game.Dice.Symbol(myDirection), Game.Dice.Symbol(mySpeed)));
 
                 if ((myDirection == tumbleweedDirection) && (mySpeed == tumbleweedSpeed))
-                    return PursuitWin(pursuitReport);
+                    return Services.PursuitWin(pursuitReport);
 
                 if (myDirection == tumbleweedDirection)
                 {
@@ -785,7 +753,7 @@ namespace Seeker.Gamebook.SwampFever
                     pursuitReport.Add(String.Format("Вы почти настигли куст и меняете скорость: {0}", Game.Dice.Symbol(mySpeed)));
 
                     if (mySpeed == tumbleweedSpeed)
-                        return PursuitWin(pursuitReport);
+                        return Services.PursuitWin(pursuitReport);
                 }
                 else if (mySpeed == tumbleweedSpeed)
                 {
@@ -795,7 +763,7 @@ namespace Seeker.Gamebook.SwampFever
                     pursuitReport.Add(String.Format("Вы почти настигли куст и меняете направление: {0}", Game.Dice.Symbol(myDirection)));
 
                     if (myDirection == tumbleweedDirection)
-                        return PursuitWin(pursuitReport);
+                        return Services.PursuitWin(pursuitReport);
                 }
 
                 pursuitReport.Add("BAD|Настигнуть куст не удалось");
@@ -804,7 +772,7 @@ namespace Seeker.Gamebook.SwampFever
                     pursuitReport.Add("Преследование продолжается");
 
                 else if (reRoll)
-                    return PursuitFail(pursuitReport);
+                    return Services.PursuitFail(pursuitReport);
 
                 else
                 {
@@ -822,42 +790,11 @@ namespace Seeker.Gamebook.SwampFever
                     if ((tumbleweedDirection + tumbleweedSpeed) <= (myDirection + mySpeed))
                         pursuitReport.Add("Преследование продолжается");
                     else
-                        return PursuitFail(pursuitReport);
+                        return Services.PursuitFail(pursuitReport);
                 }
 
                 pursuitReport.Add(String.Empty);
             }
-        }
-
-        private int ThinkAboutMovement(int myPosition, int step, List<int> bombs, ref List<string> cavityReport)
-        {
-            int myMovementType = 0;
-
-            if (!bombs.Contains(myPosition + 4) && !bombs.Contains(myPosition + 3) && !bombs.Contains(myPosition + 5))
-            {
-                cavityReport.Add("Думаем: попробуем рвануть на гусеницах");
-                myMovementType = 6;
-            }
-            else if (!bombs.Contains(myPosition + 2) && (!bombs.Contains(myPosition + 1) || !bombs.Contains(myPosition + 3)))
-            {
-                cavityReport.Add("Думаем: попробуем тихонечко, на гребных винтах");
-                myMovementType = 1;
-            }
-            else if ((step > 2))
-            {
-                cavityReport.Add("Думаем: опасно, но нужно срочно прорываться, иначе накроет лава!");
-                myMovementType = 6;
-            }
-            else
-                cavityReport.Add("Думаем: лучше постоим нафиг");
-
-            if (bombs.Contains(myPosition) && (myMovementType == 0))
-            {
-                cavityReport.Add("Думаем: сейчас на вас упадёт вулканическая бомба - нужно рвать когти!");
-                myMovementType = Game.Dice.Roll();
-            }
-
-            return myMovementType;
         }
 
         public List<string> SulfurCavity()
@@ -878,7 +815,7 @@ namespace Seeker.Gamebook.SwampFever
                 cavityReport.Add(String.Format("Вулканические бомбы бьют по клеткам: {0}, {1} и {2}",
                     Game.Dice.Symbol(bombs[0]), Game.Dice.Symbol(bombs[1]), Game.Dice.Symbol(bombs[2])));
 
-                int myMovementType = ThinkAboutMovement(myPosition, step, bombs, ref cavityReport);
+                int myMovementType = Services.ThinkAboutMovement(myPosition, step, bombs, ref cavityReport);
                 int myMove = 0;
 
                 if (myMovementType > 3)
