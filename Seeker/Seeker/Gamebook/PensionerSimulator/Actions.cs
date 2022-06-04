@@ -9,22 +9,18 @@ namespace Seeker.Gamebook.PensionerSimulator
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
-            {
                 return true;
-            }
-            else
+
+            foreach (string oneOption in option.Split(','))
             {
-                foreach (string oneOption in option.Split(','))
-                {
-                    if (oneOption.Contains("!") && (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim())))
-                        return false;
+                if (oneOption.Contains("!") && (Game.Option.IsTriggered(oneOption.Replace("!", String.Empty).Trim())))
+                    return false;
 
-                    else if (!oneOption.Contains("!") && (!Game.Option.IsTriggered(oneOption.Trim())))
-                        return false;
-                }
-
-                return true;
+                else if (!oneOption.Contains("!") && (!Game.Option.IsTriggered(oneOption.Trim())))
+                    return false;
             }
+
+            return true;
         }
     }
 }
