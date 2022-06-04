@@ -148,30 +148,6 @@ namespace Seeker.Gamebook.Moonrunner
             return enemies;
         }
 
-        private List<string> Luck(out bool goodLuck)
-        {
-            Game.Dice.DoubleRoll(out int firstDice, out int secondDice);
-
-            goodLuck = (firstDice + secondDice) <= protagonist.Luck;
-
-            List<string> luckCheck = new List<string> { String.Format(
-                "Проверка удачи: {0} + {1} {2} {3}",
-                Game.Dice.Symbol(firstDice), Game.Dice.Symbol(secondDice), (goodLuck ? "<=" : ">"), protagonist.Luck
-            ) };
-
-            luckCheck.Add(goodLuck ? "BIG|GOOD|УСПЕХ :)" : "BIG|BAD|НЕУДАЧА :(");
-
-            if (protagonist.Luck > 1)
-            {
-                protagonist.Luck -= 1;
-                luckCheck.Add("Уровень удачи снижен на единицу");
-            }
-
-            return luckCheck;
-        }
-
-        public List<string> Luck() => Luck(out bool _);
-
         public List<string> Get()
         {
             if (!String.IsNullOrEmpty(Stat))
@@ -272,21 +248,6 @@ namespace Seeker.Gamebook.Moonrunner
             return spell;
         }
 
-        private bool NoMoreEnemies(List<Character> enemies) =>
-            enemies.Where(x => x.Endurance > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() == 0;
-
-        private List<int> TripleDiceRoll(out int failIndex)
-        {
-            List<int> dices = new List<int>();
-
-            for (int i = 0; i < 3; i++)
-                dices.Add(Game.Dice.Roll());
-
-            failIndex = dices.IndexOf(dices.Min());
-
-            return dices;
-        }
-
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -335,7 +296,7 @@ namespace Seeker.Gamebook.Moonrunner
 
                     if (ThreeDiceAttack && !Game.Option.IsTriggered("Акробатика"))
                     {
-                        List<int> dices = TripleDiceRoll(out int failIndex);
+                        List<int> dices = Services.TripleDiceRoll(out int failIndex);
 
                         enemyHitStrength += dices.Sum() - dices[failIndex] + enemy.Mastery;
 
@@ -363,7 +324,7 @@ namespace Seeker.Gamebook.Moonrunner
                     {
                         if (Invulnerable)
                         {
-                            fight.AddRange(Luck(out bool goodLuck));
+                            fight.AddRange(Services.Luck(out bool goodLuck));
 
                             if (goodLuck)
                                 return fight;
@@ -374,7 +335,7 @@ namespace Seeker.Gamebook.Moonrunner
 
                             enemy.Endurance -= 2;
 
-                            bool enemyLost = NoMoreEnemies(FightEnemies);
+                            bool enemyLost = Services.NoMoreEnemies(FightEnemies, WoundsLimit);
 
                             if (enemyLost)
                             {
