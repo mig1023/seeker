@@ -135,13 +135,11 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return new List<string> { "Вы успешно себя закамуфлировали грязью :)" };
         }
 
-        private int CureSpellCount() => protagonist.Spells.Where(x => x.Contains("ЛЕЧЕНИЕ")).Count();
-
         public override bool IsButtonEnabled(bool secondButton = false)
         {
             bool bySpellAdd = ThisIsSpell && (protagonist.Magicpoints <= 0) && !secondButton;
             bool bySpellRemove = ThisIsSpell && !protagonist.Spells.Contains(Text) && secondButton;
-            bool byCureSpell = (Type == "CureFracture") && (CureSpellCount() < Wound);
+            bool byCureSpell = (Type == "CureFracture") && (Services.CureSpellCount() < Wound);
             bool bySell = (Type == "Sell") && !Game.Option.IsTriggered(Trigger);
             bool bySpecButton = (Specialization != null) && (protagonist.Specialization != Character.SpecializationType.Nope);
             bool byPrice = (Price > 0) && (protagonist.Gold < Price);
@@ -215,7 +213,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             List<string> reaction = new List<string>();
 
-            bool goodReaction = GoodReaction(ref reaction);
+            bool goodReaction = Services.GoodReaction(ref reaction);
 
             reaction.Add(Result(goodReaction, "СРЕАГИРОВАЛИ|НЕ СРЕАГИРОВАЛИ"));
 
@@ -264,21 +262,6 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             }
 
             return fight;
-        }
-
-        private bool GoodReaction(ref List<string> reaction, bool showResult = false)
-        {
-            int reactionLevel = (int)Math.Floor((double)protagonist.Hitpoints / 5);
-            reaction.Add(String.Format("Уровнь реакции: {0} / 5 = {1}", protagonist.Hitpoints, reactionLevel));
-
-            int reactionDice = Game.Dice.Roll();
-            bool goodReaction = reactionDice <= reactionLevel;
-            reaction.Add(String.Format("Реакция: {0} {1} {2}", Game.Dice.Symbol(reactionDice), (goodReaction ? "<=" : ">"), reactionLevel));
-
-            if (showResult)
-                reaction.Add(goodReaction ? "BOLD|Реакции хватило" : "BOLD|Реакция подвела");
-
-            return goodReaction;
         }
 
         public List<string> Dice()
@@ -337,7 +320,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 
         public List<string> CureRabies()
         {
-            if (CureSpellCount() < 1)
+            if (Services.CureSpellCount() < 1)
                 return new List<string> { "BIG|BAD|У вас нет ЛЕЧИЛКИ :(" };
 
             List<string> cure = new List<string> { };
@@ -357,7 +340,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
         {
             if (Wound > 1)
             {
-                if (CureSpellCount() < 2)
+                if (Services.CureSpellCount() < 2)
                     return new List<string> { "BIG|BAD|У вас нет двух ЛЕЧИЛОК :(" };
 
                 for (int i = 0; i <= 1; i++)
@@ -367,7 +350,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             }    
             else
             {
-                if (CureSpellCount() < 1)
+                if (Services.CureSpellCount() < 1)
                     return new List<string> { "BIG|BAD|У вас нет ЛЕЧИЛКИ :(" };
 
                 protagonist.Spells.Remove("ЛЕЧЕНИЕ");
@@ -389,7 +372,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             bool wounded = (protagonist.Hitpoints < protagonist.MaxHitpoints);
             bool inOption = Game.Checks.ExistsInParagraph(actionText: "ЛЕЧИЛК", optionText: "ЛЕЧИЛК");
 
-            if (wounded && (CureSpellCount() > 0) && !inOption)
+            if (wounded && (Services.CureSpellCount() > 0) && !inOption)
                 staticButtons.Add("ЛЕЧИЛКА");
 
             if (wounded && (protagonist.Elixir > 0))
@@ -506,104 +489,6 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return true;
         }
 
-        private void WinFightEnding(ref List<string> fight, int wounded)
-        {
-            if (IsPoisonedBlade())
-            {
-                Game.Option.Trigger("PoisonedBlade", remove: true);
-            }
-
-            if (Poison)
-            {
-                if (wounded > 3)
-                {
-                    protagonist.Hitpoints /= 2;
-
-                    fight.Add(String.Empty);
-                    fight.Add("BAD|Из-за яда вы теряете половину оставшихся жизней...");
-                }
-
-                fight.Add(String.Empty);
-
-                if (protagonist.Specialization == Character.SpecializationType.Thrower)
-                    fight.Add("BOLD|Вы смазали ядом свои метательные ножи, теперь они будут отнимать у противника не 3, а 4 жизни");
-                else
-                    fight.Add("BOLD|Вы смазали ядом свой меч, в следующем бою он будет отнимать у противника по 5 жизней");
-
-                Game.Option.Trigger("PoisonedBlade");
-            }
-            else if (Regeneration)
-            {
-                int hitpointsBonus = Game.Dice.Roll();
-
-                protagonist.Hitpoints += hitpointsBonus;
-
-                fight.Add(String.Empty);
-                fight.Add(String.Format("GOOD|Благодаря крови, попавшей на вас, вы восстановили {0} жизни", hitpointsBonus));
-            }
-
-            if (Game.Option.IsTriggered("Rabies"))
-            {
-                protagonist.Strength -= 1;
-
-                fight.Add(String.Empty);
-                fight.Add("BAD|Вы дополнительно теряете 1 Силу за невылеченную болезнь...");
-            }
-        }
-
-        private bool EnemyLostFight(List<Character> FightEnemies, ref List<string> fight, int wounded = 0)
-        {
-
-            if (FightEnemies.Where(x => x.Hitpoints > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() > 0)
-            {
-                return false;
-            }
-            else if (Invincible)
-            {
-                return false;
-            }
-            else
-            {
-                fight.Add(String.Empty);
-                fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
-
-                WinFightEnding(ref fight, wounded);
-
-                return true;
-            }
-        }
-
-        private List<string> LostFight(List<string> fight)
-        {
-            fight.Add(String.Empty);
-            fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
-
-            return fight;
-        }
-
-        private bool IsPoisonedBlade() => (Game.Option.IsTriggered("PoisonedBlade") &&
-            (protagonist.Specialization != Character.SpecializationType.Thrower));
-
-        private bool IsMagicBlade() => Game.Option.IsTriggered("MagicSword");
-
-        private int HitWounds(ref List<string> fight, int wound, bool wolf)
-        {
-            if (wolf)
-            {
-                int wolfWound = wound / 2;
-
-                string woundWolfLine = Game.Services.CoinsNoun(wolfWound, "Силу", "Силы", "Сил");
-                string woundLine = Game.Services.CoinsNoun(wound, "Силы", "Сил", "Сил");
-
-                fight.Add(String.Format("Форма волка защищает вас и вы теряете {0} {1} вместо {2} {3}!",
-                    wolfWound, woundWolfLine, wound, woundLine));
-
-                return wolfWound;
-            }
-            else
-                return wound;
-        }
-
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
@@ -648,7 +533,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     fight.Add(String.Format("GOOD|{0} ранен метательными ножами и потерял {1} жизни", FightEnemies[0].Name, wound));
                     fight.Add(String.Empty);
 
-                    if (EnemyLostFight(FightEnemies, ref fight))
+                    if (Services.EnemyLostFight(FightEnemies, ref fight, WoundsLimit, Invincible, Poison, Regeneration))
                         return fight;
                 }
 
@@ -685,19 +570,19 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         enemy.Strength, enemyHitStrength));
 
                     if (ReactionFight)
-                        reactionFail = !GoodReaction(ref fight, showResult: true);
+                        reactionFail = !Services.GoodReaction(ref fight, showResult: true);
 
                     if (TailAttack && (firstEnemyRoll == secondEnemyRoll))
                     {
                         fight.Add("BAD|Аллигатор ударил хвостом! Вы теряете 5 жизней!");
 
-                        protagonist.Hitpoints -= HitWounds(ref fight, 5, wolf);
+                        protagonist.Hitpoints -= Services.HitWounds(ref fight, 5, wolf);
                         TailAttack = false;
 
                         woundLine = 0;
 
                         if (protagonist.Hitpoints <= 0)
-                            return LostFight(fight);
+                            return Services.LostFight(fight);
                     }
                     else if (warriorFight && (firstProtagonistRoll == secondProtagonistRoll) && (firstProtagonistRoll == 6) && (!ReactionFight || !reactionFail))
                     {
@@ -710,7 +595,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     }
                     else if ((protagonistHitStrength > enemyHitStrength) && (!ReactionFight || !reactionFail))
                     {
-                        int woundLevel = (IsMagicBlade() ? 3 : 2);
+                        int woundLevel = (Services.IsMagicBlade() ? 3 : 2);
 
                         if (EvenWound)
                         {
@@ -737,7 +622,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                             woundLine += 1;
                             roundsWin += 1;
 
-                            if (IsPoisonedBlade())
+                            if (Services.IsPoisonedBlade())
                             {
                                 enemy.Hitpoints -= 5;
                                 fight.Add(String.Format("BOLD|Из-за яда, рана отнимает у {0} сразу 5 жизней", enemy.Name));
@@ -749,7 +634,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         if (enemy.Hitpoints <= 0)
                             death += 1;
 
-                        if (EnemyLostFight(FightEnemies, ref fight))
+                        if (Services.EnemyLostFight(FightEnemies, ref fight, WoundsLimit, Invincible, Poison, Regeneration))
                             return fight;
                     }
                     else if ((protagonistHitStrength < enemyHitStrength) || reactionFail)
@@ -762,9 +647,9 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         if (!String.IsNullOrEmpty(ReactionWounds))
                         {
                             string[] wounds = ReactionWounds.Split('-');
-                            int wound = int.Parse(GoodReaction(ref fight, showResult: true) ? wounds[0] : wounds[1]);
+                            int wound = int.Parse(Services.GoodReaction(ref fight, showResult: true) ? wounds[0] : wounds[1]);
 
-                            protagonist.Hitpoints -= HitWounds(ref fight, wound, wolf);
+                            protagonist.Hitpoints -= Services.HitWounds(ref fight, wound, wolf);
 
                             if (wound > 0)
                                 fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, wound));
@@ -775,15 +660,15 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         {
                             fight.Add(String.Format("{0} нанёс урон: {1}", enemy.Name, incrementWounds));
 
-                            protagonist.Hitpoints -= HitWounds(ref fight, incrementWounds, wolf);
+                            protagonist.Hitpoints -= Services.HitWounds(ref fight, incrementWounds, wolf);
 
                             incrementWounds *= 2;
                         }
                         else
-                            protagonist.Hitpoints -= HitWounds(ref fight, (Wound > 0 ? Wound : 2), wolf);
+                            protagonist.Hitpoints -= Services.HitWounds(ref fight, (Wound > 0 ? Wound : 2), wolf);
 
                         if (protagonist.Hitpoints <= 0)
-                            return LostFight(fight);
+                            return Services.LostFight(fight);
                     }
                     else
                     {
@@ -801,7 +686,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                     if ((RoundsToWin > 0) && (RoundsToWin <= round))
                     {
                         fight.Add("BAD|Отведённые на победу раунды истекли.");
-                        return LostFight(fight);
+                        return Services.LostFight(fight);
                     }
 
                     if ((DeathLimit > 0) && (death >= DeathLimit))
