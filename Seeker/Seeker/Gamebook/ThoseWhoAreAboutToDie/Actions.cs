@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
             }
             else if (option.Contains("|"))
             {
-                return option.Split('|').Where(x => !OneParamFail(x) || Game.Option.IsTriggered(x.Trim())).Count() > 0;
+                return option.Split('|').Where(x => !Services.OneParamFail(x) || Game.Option.IsTriggered(x.Trim())).Count() > 0;
             }
             else
             {
@@ -35,7 +35,7 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
                 {
                     if (oneOption.Contains(">") || oneOption.Contains("<"))
                     {
-                        if (OneParamFail(oneOption))
+                        if (Services.OneParamFail(oneOption))
                             return false;
                     }
                     else if (oneOption.Contains("!"))
@@ -51,35 +51,6 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
                 return true;
             }
-        }
-
-        private static bool OneParamFail(string oneOption)
-        {
-            if (ParamFail("СИЛА", oneOption, protagonist.Strength))
-                return true;
-
-            else if (ParamFail("РЕАКЦИЯ", oneOption, protagonist.Reaction))
-                return true;
-
-            else if (ParamFail("ВЫНОСЛИВОСТЬ", oneOption, protagonist.Endurance))
-                return true;
-
-            else
-                return false;
-        }
-
-        private static bool ParamFail(string paramName, string option, int param)
-        {
-            int level = Game.Services.LevelParse(option);
-
-            if (option.Contains(String.Format("{0} >", paramName)) && (level >= param))
-                return true;
-
-            else if (option.Contains(String.Format("{0} <=", paramName)) && (level < param))
-                return true;
-
-            else
-                return false;
         }
 
         public List<string> TryToWound()
