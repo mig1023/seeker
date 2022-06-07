@@ -295,10 +295,11 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                 FightEnemies.Add(enemy.Clone());
 
             int round = 1, enemyWounds = 0, shoots = 0;
+            bool multiplePistols = (protagonist.Pistols > 1) && (protagonist.BulletsAndGubpowder > 1);
 
             if (WithoutShooting)
                 shoots = 0;
-            else if ((protagonist.MeritalArt == Character.MeritalArts.TwoPistols) && (protagonist.Pistols > 1) && (protagonist.BulletsAndGubpowder > 1))
+            else if ((protagonist.MeritalArt == Character.MeritalArts.TwoPistols) && multiplePistols)
                 shoots = 2;
             else if ((protagonist.Pistols > 0) && (protagonist.BulletsAndGubpowder > 0))
                 shoots = 1;
@@ -316,14 +317,14 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     (shoots > 1 ? String.Format("{0} ", pistol) : String.Empty),
                     Game.Dice.Symbol(shootDice), (hit ? "попал" : "промах")));
 
-                if (hit)
+                if (!hit)
+                    continue;
+
+                foreach (Character enemy in FightEnemies.Where(x => x.Strength > 0))
                 {
-                    foreach (Character enemy in FightEnemies.Where(x => x.Strength > 0))
-                    {
-                        fight.Add(String.Format("GOOD|{0} убит", enemy.Name));
-                        enemy.Strength = 0;
-                        break;
-                    }
+                    fight.Add(String.Format("GOOD|{0} убит", enemy.Name));
+                    enemy.Strength = 0;
+                    break;
                 }
             }
 
@@ -342,7 +343,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     Character enemy = FightEnemies.Where(x => x.Strength > 0).FirstOrDefault();
 
                     enemy.Strength -= 4;
-                    fight.Add(String.Format("Тайный удар шпагой: {0} теряет 4 силы, у него осталось {1}", enemy.Name, enemy.Strength));
+                    fight.Add(String.Format("Тайный удар шпагой: {0} теряет 4 силы, у него осталось {1}",
+                        enemy.Name, enemy.Strength));
+
                     fight.Add(String.Empty);
                 }
 
@@ -360,25 +363,27 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     if (!attackAlready)
                     {
                         protagonistRoll = Game.Dice.Roll();
-                        int protagonistSkill = protagonist.Skill - SkillPenalty - (protagonist.MeritalArt == Character.MeritalArts.LefthandFencing ? 0 : enemy.LeftHandPenalty);
+
+                        int protagonistSkill = protagonist.Skill - SkillPenalty -
+                            (protagonist.MeritalArt == Character.MeritalArts.LefthandFencing ? 0 : enemy.LeftHandPenalty);
                         protagonistHitStrength = (protagonistRoll * 2) + protagonistSkill;
 
                         fight.Add(String.Format("Мощность вашего удара: {0} x 2 + {1} = {2}",
-                            Game.Dice.Symbol(protagonistRoll), protagonistSkill, protagonistHitStrength
-                        ));
+                            Game.Dice.Symbol(protagonistRoll), protagonistSkill, protagonistHitStrength));
                     }
 
                     int enemyRoll = Game.Dice.Roll();
                     int enemyHitStrength = (enemyRoll * 2) + enemy.Skill;
 
                     fight.Add(String.Format("Мощность его удара: {0} x 2 + {1} = {2}",
-                        Game.Dice.Symbol(enemyRoll), enemy.Skill, enemyHitStrength
-                    ));
+                        Game.Dice.Symbol(enemyRoll), enemy.Skill, enemyHitStrength));
 
                     if ((protagonistHitStrength > enemyHitStrength) && !attackAlready)
                     {
                         if ((enemy.Chainmail > 0) && (protagonistRoll == 3))
+                        {
                             fight.Add(String.Format("BOLD|Кольчуга отразила удар!"));
+                        }
                         else
                         {
                             fight.Add(String.Format("GOOD|{0} ранен", enemy.Name));
@@ -389,7 +394,6 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                             if (enemyWound)
                                 return fight;
                         }
-
                     }
                     else if (protagonistHitStrength > enemyHitStrength)
                     {
@@ -398,7 +402,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                     else if (protagonistHitStrength < enemyHitStrength)
                     {
                         if ((protagonist.Chainmail > 0) && (enemyRoll == 6))
+                        {
                             fight.Add(String.Format("BOLD|Кольчуга отразила удар!"));
+                        }
                         else
                         {
                             fight.Add(String.Format("BAD|{0} ранил вас", enemy.Name));
@@ -426,7 +432,9 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
                         }
                     }
                     else
+                    {
                         fight.Add(String.Format("BOLD|Ничья в раунде"));
+                    }
 
                     attackAlready = true;
 
