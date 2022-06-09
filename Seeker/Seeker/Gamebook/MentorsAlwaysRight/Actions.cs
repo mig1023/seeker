@@ -634,7 +634,7 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
                         if (enemy.Hitpoints <= 0)
                             death += 1;
 
-                        if (Services.EnemyLostFight(FightEnemies, ref fight, WoundsLimit, Invincible, Poison, Regeneration))
+                        if (Services.EnemyLostFight(FightEnemies, ref fight, WoundsLimit, Invincible, Poison, Regeneration, wounded))
                             return fight;
                     }
                     else if ((protagonistHitStrength < enemyHitStrength) || reactionFail)
