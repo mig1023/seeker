@@ -71,8 +71,18 @@ namespace Seeker.Output
                 Text = text,
                 BackgroundColor = (String.IsNullOrEmpty(color) ? Color.LightGray : Color.FromHex(color)),
                 FontFamily = Interface.TextFontFamily(standart: true),
-                FontSize = Interface.Font(NamedSize.Default),
             };
+
+            if (Game.Settings.IsEnabled("LargeAddButtons"))
+            {
+                additionButton.FontSize = Interface.Font(NamedSize.Default);
+            }
+            else
+            {
+                additionButton.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
+                additionButton.HeightRequest = Constants.SYS_MENU_HIGHT;
+                additionButton.Padding = 0;
+            }
 
             additionButton.Clicked += onClick;
 

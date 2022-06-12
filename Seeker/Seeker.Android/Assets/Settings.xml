@@ -38,6 +38,11 @@
 		<Type>SystemMenu</Type>
 	</Setting>
 	<Setting>
+		<Name>Большие кнопки доп.опций</Name>
+		<Type>LargeAddButtons</Type>
+		<Description>Кнопки дополнительных опций (таких как еда или лечение) будут такого же размера, как и обычные кнопки.</Description>
+	</Setting>
+	<Setting>
 		<Name>Сортировка</Name>
 		<Type>Sort</Type>
 		<Options>
