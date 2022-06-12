@@ -10,22 +10,8 @@
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses">0, 660</List>
-			<Dictionary Name="Skills">
-				<Item Name="1">12</Item>
-				<Item Name="2">8</Item>
-				<Item Name="3">10</Item>
-				<Item Name="4">7</Item>
-				<Item Name="5">9</Item>
-				<Item Name="6">11</Item>
-			</Dictionary>
-			<Dictionary Name="Strengths">
-				<Item Name="1">22</Item>
-				<Item Name="2">18</Item>
-				<Item Name="3">14</Item>
-				<Item Name="4">24</Item>
-				<Item Name="5">16</Item>
-				<Item Name="6">20</Item>
-			</Dictionary>	
+			<Dictionary Name="Skills" FromLine="1->12, 2->8, 3->10, 4->7, 5->9, 6->11"/>
+			<Dictionary Name="Strengths" FromLine="1->22, 2->18, 3->14, 4->24, 5->16, 6->20"/>	
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
