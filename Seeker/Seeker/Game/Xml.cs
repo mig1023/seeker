@@ -163,13 +163,27 @@ namespace Seeker.Game
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/Dictionary")))
             {
-                List<XmlNode> xmlNodes = xmlNode.SelectNodes("Item").Cast<XmlNode>().ToList();
+                Dictionary<string, string> items = new Dictionary<string, string>();
 
-                Dictionary<string, string> items = xmlNodes
-                    .ToDictionary(x => x.Attributes["Name"].InnerText, x => x.InnerText);
+                if (xmlNode.Attributes["FromLine"] != null)
+                {
+                    List<string> lines = xmlNode.Attributes["FromLine"].InnerText.Split(',').Select(x => x.Trim()).ToList();
+                    items = lines.ToDictionary(x => ItemLineSplit(x), x => ItemLineSplit(x, second: true));
+                }
+                else
+                {
+                    List<XmlNode> xmlNodes = xmlNode.SelectNodes("Item").Cast<XmlNode>().ToList();
+                    items = xmlNodes.ToDictionary(x => x.Attributes["Name"].InnerText, x => x.InnerText);
+                }
 
                 Data.Constants.LoadDictionary(xmlNode.Attributes["Name"].InnerText, items);
             }
+        }
+
+        private static string ItemLineSplit(string keyValue, bool second = false)
+        {
+            List<string> items = keyValue.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            return items[second ? 1 : 0];
         }
 
         private static string SettingParse(XmlDocument xmlFile, string option) =>
