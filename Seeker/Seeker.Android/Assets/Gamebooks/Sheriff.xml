@@ -8,11 +8,7 @@
 		</Styles>
 		<Constants>
 			<List Name="CleaningNotebookList"> Билли убит в амбаре, Все любили Билли, Убит ночью, Не успел защититься, У убийцы есть рука, Убийца женщина, Надо проверить салон мадам Жу-жу, Женская перчатка, Дробовик, Патроны, Портсигар</List>
-			<Dictionary Name="Levels">
-				<Item Name="Easy">100</Item>
-				<Item Name="Medium">1</Item>
-				<Item Name="Hard">0</Item>
-			</Dictionary>
+			<Dictionary Name="Levels" FromLine="Easy->100, Medium->1, Hard->0"/>
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
