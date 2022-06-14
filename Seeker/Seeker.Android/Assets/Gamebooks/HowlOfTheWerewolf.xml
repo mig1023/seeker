@@ -29,9 +29,9 @@
 			<DisabledOption Value="Hide"/>
 		</Settings>
 		<Buttons>
-			<Button Type="Fight">Сражаться</Button>
-			<Button Type="Luck">Проверить удачу</Button>
-			<Button Type="Dice, DiceGold, DiceAnxiety, DiceWounds, DicesRestore, DicesEndurance">Кинуть кубик</Button>
+			<Button Action="Fight">Сражаться</Button>
+			<Button Action="Luck">Проверить удачу</Button>
+			<Button Action="Dice, DiceGold, DiceAnxiety, DiceWounds, DicesRestore, DicesEndurance">Кинуть кубик</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
