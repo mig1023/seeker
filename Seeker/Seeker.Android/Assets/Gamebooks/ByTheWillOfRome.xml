@@ -13,7 +13,7 @@
 			<DisabledOption Value="Show"/>
 		</Settings>
 		<Buttons>
-			<Button Type="Get">Купить</Button>
+			<Button Action="Get">Купить</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
