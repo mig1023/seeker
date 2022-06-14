@@ -14,8 +14,8 @@
 			<DisabledOption Value="Hide"/>
 		</Settings>
 		<Buttons>
-			<Button Type="Fight">Сражаться</Button>
-			<Button Type="Luck">Испытай удачу</Button>
+			<Button Action="Fight">Сражаться</Button>
+			<Button Action="Luck">Испытай удачу</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
