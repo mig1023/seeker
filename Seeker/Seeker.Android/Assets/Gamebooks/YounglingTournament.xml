@@ -13,10 +13,10 @@
 			<DisabledOption Value="Show"/>
 		</Settings>
 		<Buttons>
-			<Button Type="SwordFight, MixedFightAttack">Сражаться</Button>
-			<Button Type="FireFight">Перестрелка</Button>
-			<Button Type="ForceTest">Пройти проверку</Button>
-			<Button Type="SimpleDice, DiceWounds, EnemyDiceWounds">Кинуть кубик</Button>
+			<Button Action="SwordFight, MixedFightAttack">Сражаться</Button>
+			<Button Action="FireFight">Перестрелка</Button>
+			<Button Action="ForceTest">Пройти проверку</Button>
+			<Button Action="SimpleDice, DiceWounds, EnemyDiceWounds">Кинуть кубик</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
