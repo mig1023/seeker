@@ -155,7 +155,7 @@ namespace Seeker.Game
             Data.Constants.LoadStartParagraphOption(SettingParse(xmlFile, "StartParagraph"));
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Buttons/Button")))
-                foreach (string type in Multiples(xmlNode, "Type"))
+                foreach (string type in Multiples(xmlNode, "Action"))
                     Data.Constants.LoadButtonText(type, xmlNode.InnerText);
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/List")))
