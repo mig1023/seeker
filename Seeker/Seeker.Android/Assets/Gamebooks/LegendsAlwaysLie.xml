@@ -19,9 +19,9 @@
 			<DisabledOption Value="Show"/>
 		</Settings>
 		<Buttons>
-			<Button Type="Fight">Сражаться</Button>
-			<Button Type="Reaction">Реагируйте</Button>
-			<Button Type="DiceWounds">Кинуть кубик</Button>
+			<Button Action="Fight">Сражаться</Button>
+			<Button Action="Reaction">Реагируйте</Button>
+			<Button Action="DiceWounds">Кинуть кубик</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
