@@ -805,7 +805,7 @@
 			<Options>
 				<Option Destination="43" Text="Спускаешься с дуба, не трогая рубильника"/>
 				<Option Destination="5" Text="Решишь поставить его в нейтральное положение"/>
-				<Option Destination="5" Text="Предпочтёшь поставить рубильник в верхнее положение"/>
+				<Option Destination="161" Text="Предпочтёшь поставить рубильник в верхнее положение"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
