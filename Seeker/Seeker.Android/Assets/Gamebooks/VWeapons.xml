@@ -21,7 +21,7 @@
 			<DisabledOption Value="Hide"/>
 		</Settings>
 		<Buttons>
-			<Button Type="Fight">Перестрелка</Button>
+			<Button Action="Fight">Перестрелка</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
