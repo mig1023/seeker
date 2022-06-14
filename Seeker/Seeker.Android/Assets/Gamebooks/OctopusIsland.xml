@@ -10,8 +10,8 @@
 			<DisabledOption Value="Hide"/>
 		</Settings>
 		<Buttons>
-			<Button Type="Dinner">Пообедать</Button>
-			<Button Type="Fight">Сражаться</Button>
+			<Button Action="Dinner">Пообедать</Button>
+			<Button Action="Fight">Сражаться</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
