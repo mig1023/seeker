@@ -23,7 +23,7 @@
 			<DisabledOption Value="Show"/>
 		</Settings>
 		<Buttons>
-			<Button Type="Fight">Сражаться</Button>
+			<Button Action="Fight">Сражаться</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
