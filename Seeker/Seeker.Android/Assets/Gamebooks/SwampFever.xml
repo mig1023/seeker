@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Болотная лихорадка</Title>
+		<Copyright>Пётр Прокошев</Copyright>
 		<Styles>
 			<Color Type="Background">#485432</Color>
 			<Color Type="Font">#eaece8</Color>
