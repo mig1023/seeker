@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Сердце льда</Title>
+		<Copyright>Дэйв Моррис</Copyright>
 		<Styles>
 			<Color Type="Background">#0787c4</Color>
 			<Color Type="Font, SystemFont">#d3f0fd</Color>
