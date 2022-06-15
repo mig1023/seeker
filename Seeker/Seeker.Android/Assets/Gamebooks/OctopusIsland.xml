@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Остров Осьминогов</Title>
+		<Copyright>Филипп Эбли</Copyright>
 		<Styles>
 			<Color Type="StatusBar">#ce4f36</Color>
 			<Color Type="Main, Action, Option">#c93c20</Color>
