@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Месть Альтея</Title>
+		<Copyright>Джон Баттерфилд, Дэвид Хонигман и Филип Паркер</Copyright>
 		<Styles>
 			<Color Type="Main, Action">#ebd5b3</Color>
 			<Color Type="Option, Background">#f9f2e8</Color>
