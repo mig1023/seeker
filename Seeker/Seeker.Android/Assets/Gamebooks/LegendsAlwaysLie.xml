@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Легенды всегда врут</Title>
+		<Copyright>Роман Островерхов</Copyright>
 		<Styles>
 			<Color Type="Background">#f5e7e5</Color>
 			<Color Type="StatusBar">#870808</Color>
