@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>На невидимых фронтах</Title>
+		<Copyright>mmvvss</Copyright>
 		<Styles>
 			<Color Type="Main, Option">#d52b1e</Color>
 			<Color Type="Continue">#e57f78</Color>
