@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>По закону прерии</Title>
+		<Copyright>Ольга Голотвина</Copyright>
 		<Styles>
 			<Color Type="StatusBar">#b85d43</Color>
 			<Color Type="AdditionalStatus">#d69b8b</Color>
