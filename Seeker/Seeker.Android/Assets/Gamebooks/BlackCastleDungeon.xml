@@ -10,8 +10,8 @@
 			<Color Type="System">#f9f9f9</Color>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses">0, 619</List>
-			<List Name="WithoutStaticsButtons">0, 619</List>
+			<List Name="WithoutStatuses">0, 619, 753</List>
+			<List Name="WithoutStaticsButtons">0, 619, 753</List>
 			<List Name="StaticSpells">ЗАКЛЯТИЕ КОПИИ, ЗАКЛЯТИЕ СИЛЫ, ЗАКЛЯТИЕ СЛАБОСТИ</List>
 		</Constants>
 		<Settings>
