@@ -8002,7 +8002,18 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>791</Id>
-			<Text>Обезьяна угрожающе рычит и надвигается на вас, вы выбираете бой.\n\nОБЕЗЬЯНА\n\nМастерство 9	Выносливость 14\n\nЕсли вы победили ее</Text>
+			<Text>Обезьяна угрожающе рычит и надвигается на вас, вы выбираете бой.</Text>
+			<Actions>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ОБЕЗЬЯНА" Mastery="9" Endurance="14"/>
+					</Enemies>
+					<After>
+						<Text>Если вы победили ее:</Text>
+					</After>
+				</Action>
+			</Actions>
 			<Options>
 				<Option Destination="1911"/>
 			</Options>
