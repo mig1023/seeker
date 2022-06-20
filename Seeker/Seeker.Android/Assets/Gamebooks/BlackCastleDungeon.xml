@@ -8052,7 +8052,20 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>796</Id>
-			<Text>Пока Орки не успели понять, в чем дело, вы нападаете на них.\n\nПЕРВЫЙ ОРК\n\nМастерство 8	Выносливость 7\n\nВТОРОЙ ОРК\n\nМастерство 7	Выносливость 9\n\nСражаться с ними придется одновременно. Если хотите, можете воспользоваться заклятием Копии.</Text>
+			<Text>Пока Орки не успели понять, в чем дело, вы нападаете на них.</Text>
+			<Actions>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ПЕРВЫЙ ОРК" Mastery="8" Endurance="7"/>
+						<Enemy Name="ВТОРОЙ ОРК" Mastery="7" Endurance="9"/>
+					</Enemies>
+					<RoundsToWin>10</RoundsToWin>
+					<After>
+						<Text>Сражаться с ними придется одновременно. Если хотите, можете воспользоваться заклятием Копии.</Text>
+					</After>
+				</Action>
+			</Actions>
 			<Options>
 				<Option Destination="1835" Text="Если убили обоих врагов за 10 раундов атаки"/>
 				<Option Destination="1769" Text="Если нет"/>
