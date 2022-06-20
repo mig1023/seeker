@@ -8342,7 +8342,19 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>826</Id>
-			<Text>Они атакуют вас одновременно.\n\nПЕРВЫЙ ЧЕЛОВЕК\n\nМастерство 9	Выносливость 7\n\nВТОРОЙ ЧЕЛОВЕК\n\nМастерство 7	выносливость 7\n\nЕсли вам удалось победить их</Text>
+			<Text>Они атакуют вас одновременно.</Text>
+			<Actions>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ПЕРВЫЙ ЧЕЛОВЕК" Mastery="9" Endurance="7"/>
+						<Enemy Name="ПЕРВЫЙ ЧЕЛОВЕК" Mastery="7" Endurance="7"/>
+					</Enemies>
+					<After>
+						<Text>Если вам удалось победить их:</Text>
+					</After>
+				</Action>
+			</Actions>
 			<Options>
 				<Option Destination="1253"/>
 			</Options>
