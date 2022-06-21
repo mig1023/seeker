@@ -10025,10 +10025,23 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1013</Id>
-			<Text>ВОДЯНОЙ\n\nМастерство 8	Выносливость 6\n\nВоспользоваться же заклятием Копии вам не удастся: Водяной этого не допустит.</Text>
+			<Actions>
+				<Action>
+					<Type>Option</Type>
+					<Option Destination="1962" Text="Если хотите, во время боя можете покинуть таверну и бежать"/>
+				</Action>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ВОДЯНОЙ" Mastery="8" Endurance="6"/>
+					</Enemies>
+					<After>
+						<Text>Воспользоваться же заклятием Копии вам не удастся: Водяной этого не допустит.</Text>
+					</After>
+				</Action>
+			</Actions>
 			<Options>
 				<Option Destination="1353" Text="Если вы победили его"/>
-				<Option Destination="1962" Text="Если хотите, во время боя можете покинуть таверну и бежать"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
