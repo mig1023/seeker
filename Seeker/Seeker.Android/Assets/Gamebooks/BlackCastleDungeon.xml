@@ -9220,10 +9220,25 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>927</Id>
-			<Text>или сразиться с рыцарем без помощи магии.\n\nЗЕЛЕНЫЙ РЫЦАРЬ\n\nМастерство 11	Выносливость 15</Text>
+			<Actions>
+				<Action>
+					<Type>Option</Type>
+					<Option Destination="1739" Text="Вы можете наложить какое-нибудь заклятие">
+						<Text>Или сразиться с рыцарем без помощи магии:</Text>
+					</Option>
+				</Action>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="11" Endurance="15"/>
+					</Enemies>
+					<After>
+						<Text>Если вам удалось победить рыцаря, то идите по коридору дальше, пока не дойдете до двери:</Text>
+					</After>
+				</Action>
+			</Actions>
 			<Options>
-				<Option Destination="1739" Text="Вы можете наложить какое-нибудь заклятие"/>
-				<Option Destination="798" Text="Если вам удалось победить рыцаря, то идите по коридору дальше, пока не дойдете до двери"/>
+				<Option Destination="798"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
