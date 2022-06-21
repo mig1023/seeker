@@ -11350,7 +11350,18 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1170</Id>
-			<Text>Вы накладываете заклятие Слабости и начинаете бой:\n\nСВИРЕПЫЙ ЧЕЛОВЕКООБРАЗНЫЙ ЗВЕРЬ\n\nМастерство 9     Выносливость 10\n\nЕсли убили его, то идите дальше по тропинке</Text>
+			<Text>Вы накладываете заклятие Слабости и начинаете бой:</Text>
+			<Actions>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="СВИРЕПЫЙ ЧЕЛОВЕКООБРАЗНЫЙ ЗВЕРЬ" Mastery="9" Endurance="10"/>
+					</Enemies>
+					<After>
+						<Text>Если убили его, то идите дальше по тропинке.</Text>
+					</After>
+				</Action>
+			</Actions>
 			<Options>
 				<Option Destination="981"/>
 			</Options>
