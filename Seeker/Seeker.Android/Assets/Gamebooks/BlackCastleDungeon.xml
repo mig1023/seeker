@@ -12034,7 +12034,7 @@
 			<Text>Свисток нравится торговцу, но он не знает, что с ним делать. Он предлагает кроме свистка дать ему еще 2 золотых.</Text>
 			<Options>
 				<Option Destination="941" Text="Вы можете либо согласиться с предложением и отдать деньги и свисток"/>
-				<Option Destination="1107" Text="отказаться и уйти –"/>
+				<Option Destination="1107" Text="отказаться и уйти"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14236,7 +14236,7 @@
 			<Text>Люк заперт.\n\n.</Text>
 			<Options>
 				<Option Destination="1885" Text="Если хотите открыть, то подумайте, чем это сделать: если у вас есть красивый кусочек дерева"/>
-				<Option Destination="1004" Text="если фигурный ключ –"/>
+				<Option Destination="1004" Text="если фигурный ключ"/>
 				<Option Destination="1439" Text="если 1 золотой"/>
 				<Option Destination="1052" Text="если 5 золотых"/>
 				<Option Destination="1837" Text="Если нет, то можете взять, если еще не делали этого, серебряный сосуд"/>
@@ -17510,12 +17510,12 @@
 			<Id>1940</Id>
 			<Text>Вы кидаете переданный вам кубик, и у вас выпадает цифра:</Text>
 			<Options>
-				<Option Destination="1855" Text="1 –"/>
-				<Option Destination="1651" Text="2 –"/>
-				<Option Destination="1730" Text="3 –"/>
-				<Option Destination="1629" Text="4 –"/>
-				<Option Destination="1912" Text="5 –"/>
-				<Option Destination="1378" Text="6 –"/>
+				<Option Destination="1855" Text="1"/>
+				<Option Destination="1651" Text="2"/>
+				<Option Destination="1730" Text="3"/>
+				<Option Destination="1629" Text="4"/>
+				<Option Destination="1912" Text="5"/>
+				<Option Destination="1378" Text="6"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
