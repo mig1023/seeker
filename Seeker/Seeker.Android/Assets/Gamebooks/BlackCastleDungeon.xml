@@ -9121,7 +9121,18 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>915</Id>
-			<Text>Вы можете воспользоваться заклятием Копии.\n\nГОБЛИН\n\nМастерство 8	Выносливость 8\n\nЕсли вы убили Гоблина, возьмите его бронзовый свисток и перейдите мост</Text>
+			<Text>Вы можете воспользоваться заклятием Копии.</Text>
+			<Actions>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ГОБЛИН" Mastery="8" Endurance="8"/>
+					</Enemies>
+					<After>
+						<Text>Если вы убили Гоблина, возьмите его бронзовый свисток и перейдите мост.</Text>
+					</After>
+				</Action>
+			</Actions>
 			<Options>
 				<Option Destination="1321"/>
 			</Options>
