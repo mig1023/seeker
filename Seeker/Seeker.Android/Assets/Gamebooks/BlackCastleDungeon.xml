@@ -16103,7 +16103,11 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1760</Id>
-			<Text>… ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Actions>
+				<Action>
+					<Type>Luck</Type>
+				</Action>
+			</Actions>
 			<Options>
 				<Option Destination="1643" Text="Удачливы"/>
 				<Option Destination="1358"Text="Нет"/>
@@ -16599,10 +16603,15 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1825</Id>
-			<Text>Осторожно приближаетесь к хрустальной кровати с правой стороны и склоняетесь над Принцессой. Но в этот момент чувствуете, как в ногу вонзается что-то остро. Это металлический шип, которого вы не заметили. ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Text>Осторожно приближаетесь к хрустальной кровати с правой стороны и склоняетесь над Принцессой. Но в этот момент чувствуете, как в ногу вонзается что-то остро. Это металлический шип, которого вы не заметили.</Text>
+			<Actions>
+				<Action>
+					<Type>Luck</Type>
+				</Action>
+			</Actions>
 			<Options>
-				<Option Destination="1777" Text="Если удачливы"/>
-				<Option Destination="881" Text="если же нет"/>
+				<Option Destination="1777" Text="Удачливы"/>
+				<Option Destination="881" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -16733,10 +16742,15 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1842</Id>
-			<Text>Стоит вам оказаться в темном мрачном помещении, как понимаете, что совершили ошибку. Тишину темницы потрясает яростное рычание. В темноте вы видите два зеленовато-желтых глаза, пылающих ненавистью, и в этот момент лев прыгает. ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Text>Стоит вам оказаться в темном мрачном помещении, как понимаете, что совершили ошибку. Тишину темницы потрясает яростное рычание. В темноте вы видите два зеленовато-желтых глаза, пылающих ненавистью, и в этот момент лев прыгает.</Text>
+			<Actions>
+				<Action>
+					<Type>Luck</Type>
+				</Action>
+			</Actions>
 			<Options>
 				<Option Destination="1543" Text="Удачливы"/>
-				<Option Destination="1957" Text="Если же нет"/>
+				<Option Destination="1957" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -17378,7 +17392,11 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1926</Id>
-			<Text>ПРОВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Actions>
+				<Action>
+					<Type>Luck</Type>
+				</Action>
+			</Actions>
 			<Options>
 				<Option Destination="1405" Text="Удачливы"/>
 				<Option Destination="1593"Text="Нет"/>
