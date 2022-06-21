@@ -11073,15 +11073,54 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1141</Id>
-			<Text>Вы выходите из укрытия, и рыцари от неожиданности привстают со своих мест. На них только легкие панцири и мантии с вышитым на них силуэтом Черного замка. Потом рыцарь за столом кивает двум другим. Они встают с сидений и вынимают свои мечи.\n\nИтак:\n\nПЕРВЫЙ РЫЦАРЬ\n\nМастерство 10	Выносливость 10\n\nВТОРОЙ РЫЦАРЬ\n\nМастерство 10	Выносливость 8\n\nВам придется сражаться с ними одновременно.\n\nА через 10 раундов атаки к ним придет на помощь\n\nТРЕТИЙ РЫЦАРЬ\n\nМастерство 10	Выносливость 10\n\nЕсли вы перебили Зеленых рыцарей, то можете либо осмотреть комнату:</Text>
+			<Text>Вы выходите из укрытия, и рыцари от неожиданности привстают со своих мест. На них только легкие панцири и мантии с вышитым на них силуэтом Черного замка. Потом рыцарь за столом кивает двум другим. Они встают с сидений и вынимают свои мечи.</Text>
+			<Actions>
+				<Action>
+					<Type>Option</Type>
+					<Option Destination="779" Text="Если у вас есть Оберег"/>
+				</Action>
+				<Action>
+					<Type>Option</Type>
+					<Option Destination="1492" Text="Если есть серебряный сосуд"/>
+					<After>
+						<Text>Если хотите, попробуйте наложить заклятия:</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Option</Type>
+					<Option Destination="1203" Text="Огня"/>
+				</Action>
+				<Action>
+					<Type>Option</Type>
+					<Option Destination="1664" Text="Копии"/>
+					<After>
+						<Text>Итак:</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ПЕРВЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
+						<Enemy Name="ВТОРОЙ РЫЦАРЬ" Mastery="10" Endurance="8"/>
+					</Enemies>
+					<After>
+						<Text>Вам придется сражаться с ними одновременно. Позднее к ним на помощь приходит третий:</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ТРЕТИЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
+					</Enemies>
+					<After>
+						<Text>Если вы перебили Зеленых рыцарей, то можете либо осмотреть комнату:</Text>
+					</After>
+				</Action>
+			</Actions>
 			<Options>
-				<Option Destination="779" Text="Если у вас есть Оберег"/>
-				<Option Destination="1492" Text="Если есть серебряный сосуд"/>
-				<Option Destination="1203" Text="Если хотите, попробуйте наложить заклятие Огня"/>
-				<Option Destination="1664" Text="заклятие Копии"/>
-				<Option Destination="847" Text="подойти к шкафу"/>
-				<Option Destination="1851" Text="к бумагам на столе"/>
-				<Option Destination="1949" Text="либо выйти через дверь, через которую вошли рыцари"/>
+				<Option Destination="847" Text="Подойти к шкафу"/>
+				<Option Destination="1851" Text="К бумагам на столе"/>
+				<Option Destination="1949" Text="Выйти через дверь, через которую вошли рыцари"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
