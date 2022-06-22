@@ -11717,7 +11717,18 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1201</Id>
-			<Text>Вы накладываете заклятие Слабости и начинаете бой.\n\nГИГАНТСКИЙ ПАУК\n\nМастерство 5	Выносливость 8\n\nНе забудьте вычесть 1 из своей СИЛЫ УДАРА.\n\nЕсли вы победили,</Text>
+			<Text>Вы накладываете заклятие Слабости и начинаете бой.</Text>
+			<Actions>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="5" Endurance="8"/>
+					</Enemies>
+					<After>
+						<Text>Не забудьте вычесть 1 из своей СИЛЫ УДАРА.\n\nЕсли вы победили:</Text>
+					</After>
+				</Action>
+			</Actions>
 			<Options>
 				<Option Destination="1104"/>
 			</Options>
