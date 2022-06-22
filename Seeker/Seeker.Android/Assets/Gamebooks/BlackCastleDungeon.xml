@@ -11785,9 +11785,16 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1208</Id>
-			<Text>ДУХ МЕРТВЫХ\n\nМастерство 10	Выносливость 13.</Text>
+			<Actions>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ДУХ МЕРТВЫХ" Mastery="10" Endurance="13"/>
+					</Enemies>
+				</Action>
+			</Actions>
 			<Options>
-				<Option Destination="1486" Text="Во время битвы можете попытаться убежать"/>
+				<Option Destination="1486" Text="Вместо битвы можете попытаться убежать"/>
 				<Option Destination="1564" Text="Но если удалось победить"/>
 			</Options>
 		</Paragraph>
