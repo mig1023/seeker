@@ -15678,10 +15678,26 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1668</Id>
-			<Text>если же нет придется пробиваться с помощью меча.\n\nЛЕВ\n\nМастерство 9	Выносливость 16</Text>
+			<Actions>
+				<Action>
+					<Type>Option</Type>
+					<Option Destination="1537" Text="Если знаете пароль"/>
+					<After>
+						<Text>Если же нет придется пробиваться с помощью меча:</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ЛЕВ" Mastery="9" Endurance="16"/>
+					</Enemies>
+					<After>
+						<Text>Убив льва, вы можете перешагнуть через него и войти.</Text>
+					</After>
+				</Action>
+			</Actions>
 			<Options>
-				<Option Destination="1537" Text="Если знаете пароль"/>
-				<Option Destination="1586" Text="Убив льва, вы можете перешагнуть через него и войти"/>
+				<Option Destination="1586"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
