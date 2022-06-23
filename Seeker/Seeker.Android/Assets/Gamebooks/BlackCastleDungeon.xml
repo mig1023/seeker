@@ -14788,7 +14788,15 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1558</Id>
-			<Text>ПЕРВЫЙ РЫЦАРЬ\n\nМастерство 10	Выносливость 10\n\nВТОРОЙ РЫЦАРЬ\n\nМастерство 10	Выносливость 11.</Text>
+			<Actions>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ПЕРВЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
+						<Enemy Name="ВТОРОЙ РЫЦАРЬ" Mastery="10" Endurance="11"/>
+					</Enemies>
+				</Action>
+			</Actions>
 			<Options>
 				<Option Destination="1773" Text="Вы можете воспользоваться заклятием Огня"/>
 				<Option Destination="1708" Text="Если вы остались целы после боя, то идите дальше"/>
