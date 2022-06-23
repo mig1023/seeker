@@ -16350,7 +16350,18 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1747</Id>
-			<Text>ЗЛОЙ ДУХ\n\nМастерство 10     Выносливость 6\n\nЗаклятия вам не помогут.</Text>
+			<Actions>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ЗЛОЙ ДУХ" Mastery="10" Endurance="6"/>
+					</Enemies>
+					<WoundsToWin>2</WoundsToWin>
+					<After>
+						<Text>Заклятия вам не помогут.</Text>
+					</After>
+				</Action>
+			</Actions>
 			<Options>
 				<Option Destination="1952" Text="Если не хотите драться, то можете убежать"/>
 				<Option Destination="871" Text="Если ранили его 2 раза"/>
