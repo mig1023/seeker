@@ -13757,13 +13757,26 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1437</Id>
-			<Text>Интересно, что привлекло ваше внимание, что вы решились на такой риск?\n\nГОБЛИН\n\nМастерство 8	Выносливость 11.</Text>
+			<Text>Интересно, что привлекло ваше внимание, что вы решились на такой риск?</Text>
+			<Actions>
+				<Action>
+					<Type>Fight</Type>
+					<Enemies>
+						<Enemy Name="ГОБЛИН" Mastery="8" Endurance="11"/>
+					</Enemies>
+					<After>
+						<Text>Если вы убили его, то можете:</Text>
+					</After>
+				</Action>
+			</Actions>
 			<Options>
-				<Option Destination="1782" Text="Если вы убили его, то можете либо поискать выход с башни"/>
-				<Option Destination="1544" Text="подойдете к краю стены и посмотрите сквозь зубцы вниз"/>
-				<Option Destination="1589" Text="либо, если, конечно, у вас есть еще одно заклинание Левитации, подняться по воздуху вверх"/>
-				<Option Destination="1660" Text="в окно справа"/>
-				<Option Destination="1828" Text="в окно слева"/>
+				<Option Destination="1782" Text="Поискать выход с башни"/>
+				<Option Destination="1544" Text="Подойдете к краю стены и посмотрите сквозь зубцы вниз">
+					<Text>Либо, если, конечно, у вас есть еще одно заклинание Левитации, можете подняться по воздуху:</Text>
+				</Option>
+				<Option Destination="1589" Text="Вверх"/>
+				<Option Destination="1660" Text="В окно справа"/>
+				<Option Destination="1828" Text="В окно слева"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
