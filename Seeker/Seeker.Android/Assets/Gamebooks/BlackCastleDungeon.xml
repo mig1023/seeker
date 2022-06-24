@@ -12083,6 +12083,9 @@
 		<Paragraph>
 			<Id>1230</Id>
 			<Text>Вы изо всех сил ударяете ногой о стену, но она не ломается, а вы чувствуете резкую боль в ноге. Это растяжение – потеряйте 6 ВЫНОСЛИВОСТЕЙ. Нога еще поболит, но потом боль пройдет. Так что теперь попробуйте разобрать стену руками.</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="-6"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1488"/>
 			</Options>
@@ -12152,16 +12155,21 @@
 		<Paragraph>
 			<Id>1237</Id>
 			<Text>Вы осторожно кладете конверт на место и, отдохнув (восстановите 2 ВЫНОСЛИВОСТИ), отправляетесь в путь.</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="2"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1205"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>1238</Id>
-			<Text>Вы осторожно идете по дороге. Интуиция подсказывает, что впереди опасность. Через четверть часа показывается развилка.\n\nВы можете:\n\nно ошибаться нельзя – от этого зависит ваша жизнь.</Text>
+			<Text>Вы осторожно идете по дороге. Интуиция подсказывает, что впереди опасность. Через четверть часа показывается развилка.\n\nВы можете свернуть:</Text>
 			<Options>
-				<Option Destination="1227" Text="свернуть направо"/>
-				<Option Destination="998" Text="налево"/>
+				<Option Destination="1227" Text="Направо"/>
+				<Option Destination="998" Text="Налево">
+					<Text>Но ошибаться нельзя – от этого зависит ваша жизнь.</Text>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -12415,6 +12423,9 @@
 		<Paragraph>
 			<Id>1266</Id>
 			<Text>Ночь проходит спокойно (восстановите 3 ВЫНОСЛИВОСТИ).\n\nПроснувшись с рассветом, вы отправляетесь в путь.</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="3"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1256"/>
 			</Options>
