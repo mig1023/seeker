@@ -11141,10 +11141,16 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1130</Id>
-			<Text>ПРВЕРЬТЕ СВОЮ УДАЧУ.</Text>
+			<Actions>
+				<Action>
+					<Type>Luck</Type>
+				</Action>
+			</Actions>
 			<Options>
-				<Option Destination="876" Text="Удачливы"/>
-				<Option Destination="0" Text="Больше вам никогда не встать…"/>
+				<Option Destination="876" Text="Удачливы">
+					<Text>Если не удачливы, то вы падаете вниз головой и ломаете позвоночник. Больше вам никогда не встать...</Text>
+				</Option>
+				<Option Destination="0"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
