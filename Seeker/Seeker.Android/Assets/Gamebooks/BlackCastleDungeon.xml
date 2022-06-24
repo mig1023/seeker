@@ -15633,6 +15633,9 @@
 		<Paragraph>
 			<Id>1625</Id>
 			<Text>Это вино. Добавьте себе 5 ВЫНОСЛИВОСТЕЙ. Интересно, какой здесь запас вина? Но теперь это неважно, и вам придется выходить и идти дальше.</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="5"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1429"/>
 			</Options>
@@ -15919,6 +15922,9 @@
 		<Paragraph>
 			<Id>1661</Id>
 			<Text>Примерно на четвертые сутки все ваши силы иссякают (потеряйте 16 ВЫНОСЛИВОСТЕЙ). Голод дает о себе знать. Не померли ли вы, потеряв столько сил?</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="-16"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1760" Text="Если вы живы"/>
 				<Option Destination="1358" Text="Если вы не выдержали, и ваша ВЫНОСЛИВОСТЬ на нуле"/>
@@ -16069,6 +16075,9 @@
 		<Paragraph>
 			<Id>1678</Id>
 			<Text>Через несколько метров пол проваливается под вами, и вы летите вниз.\n\nПри полете ударяетесь обо что-то головой (потеряйте 3 ВЫНОСЛИВОСТИ) и теряете сознание…</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="-3"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1688"/>
 			</Options>
@@ -16084,6 +16093,9 @@
 		<Paragraph>
 			<Id>1680</Id>
 			<Text>Вы наклоняетесь над краном и пробуете жидкость. Это микстура Жизни (восстановите 8 ВЫНОСЛИВОСТЕЙ). Теперь уходите из комнаты</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="8"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1429"/>
 			</Options>
@@ -16369,6 +16381,9 @@
 		<Paragraph>
 			<Id>1712</Id>
 			<Text>Вы открываете сундук, но… он пуст. Видимо, его временно принесли в кухню за неимением лучшего места. Можете быстро поесть суп из котла и восстановить 3 ВЫНОСЛИВОСТИ, после чего придется уходить</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="3"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1450"/>
 			</Options>
@@ -16414,6 +16429,9 @@
 		<Paragraph>
 			<Id>1718</Id>
 			<Text>«Ты обманул меня, - рычит Лев. – Ты не знаешь пароля!». Его сильная лапа наносит удар прежде, чем вы успеваете защититься (потеряйте 2 ВЫНОСЛИВОСТИ). После этого вам придется пробиваться силой, – вернитесь и сражайтесь со Львом</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="-2"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1668"/>
 			</Options>
@@ -16454,6 +16472,9 @@
 		<Paragraph>
 			<Id>1723</Id>
 			<Text>Вы поворачиваетесь к Начальнику стражи и говорите: «Мне поручили передать вам…», но не заканчиваете фразу, видя, как глаза его лезут на лоб, а рука тянется к звонку. Он дергает за шнур звонка, и комната наполняется вооруженными Орками. Вы пытаетесь сопротивляться, но один из Орков, подкравшись сзади, бьет своим мечом плашмя по голове (потеряйте 2 ВЫНОСЛИВОСТИ), и вы теряете сознание…</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="-2"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1642"/>
 			</Options>
@@ -16549,6 +16570,9 @@
 		<Paragraph>
 			<Id>1734</Id>
 			<Text>Мясо вполне сносно и добавляет вам 7 ВЫНОСЛИВОСТЕЙ.</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="7"/>
+			</Modifications>
 			<Options>
 				<Option Destination="845" Text="Хотите попробовать еще и овощи"/>
 				<Option Destination="1826" Text="покинете комнату и вернетесь на перекресток"/>
@@ -16691,6 +16715,9 @@
 		<Paragraph>
 			<Id>1751</Id>
 			<Text>Вероятно, вы спросили что-то не то, потому что один из Орков, глядя прямо в глаза, невозмутимо дергает какой-то рычаг под столом, и вы проваливаетесь вниз. Последнее, что почувствовали – тупую боль в голове от сильного удара (потеряйте 4 ВЫНОСЛИВОСТИ) – и сознание покинуло вас…</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="-4"/>
+			</Modifications>
 			<Options>
 				<Option Destination="794"/>
 			</Options>
@@ -16889,6 +16916,9 @@
 		<Paragraph>
 			<Id>1777</Id>
 			<Text>Слава богу, вы смогли сдержать крик. Потеряйте 7 ВЫНОСЛИВОСТЕЙ за укол волшебным шипом и обойдите кровать с другой стороны</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="-7"/>
+			</Modifications>
 			<Options>
 				<Option Destination="979"/>
 			</Options>
@@ -17185,6 +17215,9 @@
 		<Paragraph>
 			<Id>1814</Id>
 			<Text>Буфет переполняют разнообразные сладости. Вы можете подкрепиться ими и восстановить 7 ВЫНОСЛИВОСТЕЙ.\n\nПосле этого надо уходить:</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="7"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1375" Text="через дверь в правой стене"/>
 				<Option Destination="1524" Text="через дверь в левой стене"/>
@@ -17244,6 +17277,9 @@
 		<Paragraph>
 			<Id>1821</Id>
 			<Text>После того, как двери лифта закрылись, происходит резкий толчок. Вы падаете и, пытаясь за что-нибудь ухватиться, ударяетесь о каменную стенку лифта (потеряйте 1 ВЫНОСЛИВОСТЬ). Под вами слышится какое-то бурление и бульканье, но о причине этого вы не успеваете задуматься, - двери лифта открываются, и вы выходите</Text>
+			<Modifications>
+				<Modification Name="Endurance" Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1519"/>
 			</Options>
