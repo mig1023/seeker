@@ -8972,10 +8972,133 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>885</Id>
-			<Text>Вы не ошиблись – этот человек торговец, обосновавшийся в лесу не так давно. По его словам, опасностей вокруг нет никаких, все это сказки да слухи, распускаемые теми, кому хочется прослыть героями, побывав в самом обычном лесу. Он предлагает вам свои товары: яблоко (стоит 1 золотой и добавит 2 ВЫНОСЛИВОСТИ), мандарин (стоит 2 золотых и добавит 3 ВЫНОСЛИВОСТИ), апельсин (стоит 1 золотой и добавит 2 ВЫНОСЛИВОСТИ), банан (стоит 2 золотых и добавит 3 ВЫНОСЛИВОСТИ), груша (стоит 1 золотой и добавит 2 ВЫНОСЛИВОСТИ), молоко (стоит 2 золотых и добавит 4 ВЫНОСЛИВОСТИ). За 4 золотых он предлагает наполнить вашу флягу целиком или за 2 – наполовину. Воды торговец может дать бесплатно столько, сколько поместится в вашей фляге. Кроме фруктов, у него еще есть: сыр (стоит 3 золотых и добавит 4 ВЫНОСЛИВОСТИ), колбаса (стоит 3 золотых и добавит 5 ВЫНОСЛИВОСТЕЙ), хлеб (стоит 3 золотых и добавит 4 ВЫНОСЛИВОСТИ), мясо (стоит 4 золотых и добавит 6 ВЫНОСЛИВОСТЕЙ). Если вы что-то хотите купить – покупайте. Все, кроме молока и воды (если вам не в чем ее нести), можете съесть сразу или же взять с собой. Если хотите, можете купить еще и заплечный мешок. Он стоит 7 золотых, но в него помещается больше чем в ваш: не 7, а 9 предметов. Однако два заплечных мешка нести неудобно, и если свой у вас еще с собой, вы должны будете оставить его в доме у торговца.</Text>
+			<Text>Вы не ошиблись – этот человек торговец, обосновавшийся в лесу не так давно. По его словам, опасностей вокруг нет никаких, все это сказки да слухи, распускаемые теми, кому хочется прослыть героями, побывав в самом обычном лесу. Он предлагает вам свои товары:</Text>
+			<Actions>
+				<Action>
+					<Type>Get</Type>
+					<Button>Купить</Button>
+					<Text>ЯБЛОКО</Text>
+					<Price>1</Price>
+					<Benefit Name="Healing" Value="Съесть яблоко,2"/>
+					<After>
+						<Text>Добавит 2 ВЫНОСЛИВОСТЬ</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Get</Type>
+					<Button>Купить</Button>
+					<Text>МАНДАРИН</Text>
+					<Price>2</Price>
+					<Benefit Name="Healing" Value="Съесть мандарин,3"/>
+					<After>
+						<Text>Добавит 3 ВЫНОСЛИВОСТИ</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Get</Type>
+					<Button>Купить</Button>
+					<Text>АПЕЛЬСИН</Text>
+					<Price>1</Price>
+					<Benefit Name="Healing" Value="Съесть апельсин,2"/>
+					<After>
+						<Text>Добавит 2 ВЫНОСЛИВОСТЬ</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Get</Type>
+					<Button>Купить</Button>
+					<Trigger>Banana</Trigger>
+					<Text>БАНАН</Text>
+					<Price>2</Price>
+					<Benefit Name="Healing" Value="Съесть банан,3"/>
+					<After>
+						<Text>Добавит 3 ВЫНОСЛИВОСТИ</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Get</Type>
+					<Button>Купить</Button>
+					<Text>ГРУША</Text>
+					<Price>1</Price>
+					<Benefit Name="Healing" Value="Съесть грушу,2"/>
+					<After>
+						<Text>Добавит 2 ВЫНОСЛИВОСТИ</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Get</Type>
+					<Button>Купить</Button>
+					<Text>МОЛОКО</Text>
+					<Price>2</Price>
+					<Benefit Name="Endurance" Value="4"/>
+					<After>
+						<Text>Прибавит 4 ВЫНОСЛИВОСТИ.\n\nЗа 4 золотых он предлагает наполнить вашу флягу целиком:</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Get</Type>
+					<Button>Наполнить флягу целиком</Button>
+					<Text>ВОДА</Text>
+					<Price>4</Price>
+					<Benefit Name="Healing" Value="Попить,2"/>
+					<After>
+						<Text>...Или за 2 — наполовину:</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Get</Type>
+					<Button>Наполнить флягу наполовину</Button>
+					<Text>ВОДА</Text>
+					<Price>2</Price>
+					<Benefit Name="Healing" Value="Попить,2"/>
+					<After>
+						<Text>Кроме фруктов, у него еще есть:</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Get</Type>
+					<Button>Купить</Button>
+					<Text>СЫР</Text>
+					<Price>3</Price>
+					<Benefit Name="Healing" Value="Съесть сыр,4"/>
+					<After>
+						<Text>Добавит 4 ВЫНОСЛИВОСТИ</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Get</Type>
+					<Button>Купить</Button>
+					<Text>КОЛБАСА</Text>
+					<Price>3</Price>
+					<Benefit Name="Healing" Value="Съесть колбасу,5"/>
+					<After>
+						<Text>Добавит 5 ВЫНОСЛИВОСТИ</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Get</Type>
+					<Button>Купить</Button>
+					<Text>ХЛЕБ</Text>
+					<Price>3</Price>
+					<Benefit Name="Healing" Value="Съесть хлеб,4"/>
+					<After>
+						<Text>Добавит 4 ВЫНОСЛИВОСТИ</Text>
+					</After>
+				</Action>
+				<Action>
+					<Type>Get</Type>
+					<Button>Купить</Button>
+					<Text>МЯСО</Text>
+					<Price>4</Price>
+					<Benefit Name="Healing" Value="Съесть мясо,6"/>
+					<After>
+						<Text>Добавит 6 ВЫНОСЛИВОСТИ\n\nЕсли вы что-то хотите купить – покупайте. Все, кроме молока и воды (если вам не в чем ее нести), можете съесть сразу или же взять с собой. Если хотите, можете купить еще и заплечный мешок.</Text>
+					</After>
+				</Action>
+			</Actions>
 			<Options>
-				<Option Destination="1107" Text="Теперь, можете либо уходить"/>
-				<Option Destination="1067" Text="попробовать поговорить с ним еще"/>
+				<Option Destination="1107" Text="Уйти"/>
+				<Option Destination="1067" Text="Попробовать поговорить с ним еще"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
