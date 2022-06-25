@@ -9247,9 +9247,14 @@
 		<Paragraph>
 			<Id>905</Id>
 			<Text>Вы не только не проиграли своей ставки (заберите ее обратно), но и выиграли яблоко (добавит 2 ВЫНОСЛИВОСТИ), два мускатных печенья, каждое из которых добавит также по 2 ВЫНОСЛИВОСТИ, и 5 золотых.</Text>
+			<Modifications>
+				<Modification Name="Healing" Value="Съесть яблоко,2"/>
+				<Modification Name="Healing" Value="Съесть мускатное печенье,2,2"/>
+				<Modification Name="Gold" Value="5"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1579" Text="Сыграете еще"/>
-				<Option Destination="1672" Text="уйдете"/>
+				<Option Destination="1672" Text="Уйдете"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
