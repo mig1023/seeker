@@ -1792,7 +1792,6 @@
 					<Button>Купить</Button>
 					<Text>ЯБЛОКО</Text>
 					<Price>1</Price>
-					<Multiple/>
 					<Benefit Name="Healing" Value="Съесть яблоко,1"/>
 					<After>
 						<Text>Добавит 1 ВЫНОСЛИВОСТЬ</Text>
@@ -1803,7 +1802,6 @@
 					<Button>Купить</Button>
 					<Text>МАНДАРИН</Text>
 					<Price>2</Price>
-					<Multiple/>
 					<Benefit Name="Healing" Value="Съесть мандарин,2"/>
 					<After>
 						<Text>Добавит 2 ВЫНОСЛИВОСТИ</Text>
@@ -1814,7 +1812,6 @@
 					<Button>Купить</Button>
 					<Text>АПЕЛЬСИН</Text>
 					<Price>1</Price>
-					<Multiple/>
 					<Benefit Name="Healing" Value="Съесть апельсин,1"/>
 					<After>
 						<Text>Добавит 1 ВЫНОСЛИВОСТЬ</Text>
@@ -1826,7 +1823,6 @@
 					<Trigger>Banana</Trigger>
 					<Text>БАНАН</Text>
 					<Price>2</Price>
-					<Multiple/>
 					<Benefit Name="Healing" Value="Съесть банан,2"/>
 					<After>
 						<Text>Добавит 2 ВЫНОСЛИВОСТИ</Text>
