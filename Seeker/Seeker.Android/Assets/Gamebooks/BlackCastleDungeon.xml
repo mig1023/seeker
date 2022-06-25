@@ -8275,6 +8275,7 @@
 			<Text>Торговец мертв, и вы быстро осматриваете его лавку. После недолгих поисков находите 10 золотых. Но вы убили честного человека – потеряйте 1 УДАЧУ. Теперь уходите.</Text>
 			<Modifications>
 				<Modification Name="Luck" Value="-1"/>
+				<Modification Name="Gold" Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1107"/>
