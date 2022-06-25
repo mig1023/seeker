@@ -15249,6 +15249,10 @@
 		<Paragraph>
 			<Id>1553</Id>
 			<Text>Вы продули свою ставку, но зато вы выиграли бронзовый свисток, одно мускатное печенье, которое добавит 2 ВЫНОСЛИВОСТИ, и 1 золотой.</Text>
+			<Modifications>
+				<Modification Name="Healing" Value="Съесть мускатное печенье,2"/>
+				<Modification Name="Gold" Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1579" Text="Рискнете и сыграете следующий кон"/>
 				<Option Destination="1672" Text="уйдете"/>
@@ -15257,6 +15261,10 @@
 		<Paragraph>
 			<Id>1554</Id>
 			<Text>Вы берете булочки с тарелки. Они еще теплые – только недавно из печи. Вы можете съесть их сразу или положить в заплечный мешок. Каждая булочка восстановит вам 2 ВЫНОСЛИВОСТИ.</Text>
+			<Modifications>
+				<Modification Name="Healing" Value="Съесть булочки,2,2"/>
+				<Modification Name="Gold" Value="1"/>
+			</Modifications>
 			<Options>
 				<Option Destination="1759" Text="Теперь можете либо подойти к следующей картине"/>
 				<Option Destination="1260" Text="выйти, если считаете, что и так долго задержались у первой картины"/>
