@@ -7740,7 +7740,9 @@
 				<Option Destination="1047" Text="Построите плот">
 					<Text>Воспользуетесь заклятием:</Text>
 				</Option>
-				<Option Destination="825" Text="Плавания"/>
+				<Option Destination="825" Text="Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				</Option>
 				<Option Destination="1012" Text="Левитации">
 					<Text>Или пойдете вдоль берега на запад:</Text>
 				</Option>
@@ -8255,7 +8257,9 @@
 			<Id>814</Id>
 			<Text>Вам придется потратить заклятие Плавания.</Text>
 			<Options>
-				<Option Destination="872" Text="Сделаете это"/>
+				<Option Destination="872" Text="Сделаете это" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				</Option>
 				<Option Destination="1338" Text="Не станете"/>
 			</Options>
 		</Paragraph>
@@ -9556,7 +9560,9 @@
 				</Action>
 			</Actions>
 			<Options>
-				<Option Destination="1594" Text="Заклятие Плавания"/>
+				<Option Destination="1594" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				</Option>
 				<Option Destination="1657" Text="Заклятие Левитации"/>
 				<Option Destination="1757" Text="Если у вас есть Водолазный костюм"/>
 					<Text>Если у вас нет ни того, ни другого, идите вдоль берега, на запад, откуда прибежал Гоблин...</Text>
@@ -9670,8 +9676,9 @@
 					<Text>Вы воспользуетесь заклятием:</Text>
 				</Option>
 				<Option Destination="759" Text="Заклятием Левитации"/>
-				<Option Destination="1382" Text="Заклятием Плавания"/>
-				
+				<Option Destination="1382" Text="Заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -11507,7 +11514,9 @@
 			<Id>1144</Id>
 			<Text>Обшарив карманы Гоблина, находите бронзовый свисток. Через реку не проложено дороги, и нет моста, так что придется потратить заклятие:</Text>
 			<Options>
-				<Option Destination="1594" Text="Плавания"/>
+				<Option Destination="1594" Text="Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				</Option>
 				<Option Destination="1657" Text="Левитации">
 					<Text>Если у вас есть водолазный костюм, можете воспользоваться им:</Text>
 				</Option>
@@ -11607,9 +11616,13 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1155</Id>
-			<Text>Вам удается только долететь до середины озера, когда заклятие перестает действовать. Майлин же предупреждал вас: не переоцените свои силы.</Text>
+			<Text>Вам удается только долететь до середины озера, когда заклятие перестает действовать. Майлин же предупреждал вас: не переоцените свои силы. Теперь скорее накладывайте еще одно заклятие:</Text>
 			<Options>
-				<Option Destination="1394" Text="Теперь скорее накладывайте еще одно заклятие Левитации или Плавания">
+				<Option Destination="1394" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+				</Option>
+				<Option Destination="1394" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 					<Text>Иначе упадете в воду...</Text>
 				</Option>
 				<Option Destination="785"/>
@@ -11658,9 +11671,9 @@
 			<Id>1161</Id>
 			<Text>Он еще не успевает приблизиться, как вы на ходу кричите, что вам некогда, и идете дальше. Теперь перед вами три дороги.\n\nКуда вы пойдете:</Text>
 			<Options>
-				<Option Destination="832" Text="направо"/>
-				<Option Destination="1045" Text="налево"/>
-				<Option Destination="784" Text="прямо"/>
+				<Option Destination="832" Text="Направо"/>
+				<Option Destination="1045" Text="Налево"/>
+				<Option Destination="784" Text="Прямо"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -13438,7 +13451,9 @@
 			<Id>1349</Id>
 			<Text>Вы решаете идти по берегу. Другого берега по-прежнему не видно. Через несколько минут остров скрывается из виду, а еще через несколько – в воде появляется новый островок.\n\nЛодки на берегу нет, и, если все же хотите перебраться через озеро, придется:</Text>
 			<Options>
-				<Option Destination="810" Text="воспользоваться заклятием Плавания"/>
+				<Option Destination="810" Text="Воспользоваться заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				</Option>
 				<Option Destination="1332" Text="заклятием Левитации"/>
 				<Option Destination="924" Text="можете идти дальше по дорожке, ведущей вас по берегу"/>
 			</Options>
@@ -13578,10 +13593,16 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1367</Id>
-			<Text></Text>
+			<Text>Если у вас есть еще заклятия Плавания или Левитации, используйте их и достигните другого берега озера:</Text>
 			<Options>
-				<Option Destination="1334" Text="Если у вас есть еще заклятия Плавания или Левитации, используйте их и достигните другого берега озера"/>
-				<Option Destination="0" Text="Но это будет еще не скоро…"/>
+				<Option Destination="1334" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				</Option>
+				<Option Destination="1334" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<Text>Если же нет, то фруктов вам хватит надолго, и вы еще сможете узнать, кто охраняет золотой апельсин и для чего он нужен. Но это будет еще не скоро…</Text>
+				</Option>
+				<Option Destination="0"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -16540,7 +16561,9 @@
 			<Id>1697</Id>
 			<Text>Вы подходите к реке, но вброд ее не перейти.\n\nВам придется использовать заклятия:</Text>
 			<Options>
-				<Option Destination="1970" Text="Плавания"/>
+				<Option Destination="1970" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				</Option>
 				<Option Destination="1709" Text="Левитации"/>
 				<Option Destination="1451" Text="Если хотите, можете, используя заклятие Плавания, попробовать проплыть по течению реки под Замок, надеясь попасть в подземелье незамеченным"/>
 				<Option Destination="1834" Text="Если у вас есть скафандр, можете надеть его"/>
@@ -16617,12 +16640,16 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1704</Id>
-			<Text>Через несколько минут вы достигаете реки. На другом ее берегу разбиты палатки, горят костры, между которыми снуют Гоблины и Орки. Река подходит к высокому центральному строению и заканчивается у него, как дорога у ворот, но по шуму воды вы понимаете, что небольшим водопадом стекает куда-то вниз, в подземелье.\n\nлибо попытаться перебраться через реку (тогда вам надо решить,\n\nкаким заклятием вы воспользуетесь:</Text>
+			<Text>Через несколько минут вы достигаете реки. На другом ее берегу разбиты палатки, горят костры, между которыми снуют Гоблины и Орки. Река подходит к высокому центральному строению и заканчивается у него, как дорога у ворот, но по шуму воды вы понимаете, что небольшим водопадом стекает куда-то вниз, в подземелье.</Text>
 			<Options>
-				<Option Destination="1343" Text="Теперь вы можете либо вернуться обратно и направиться к зданию в центре двора"/>
-				<Option Destination="1774" Text="Плавания"/>
-				<Option Destination="1324" Text="Левитации"/>
-				<Option Destination="1451" Text="воспользоваться заклятием плавания и поплыть по течению реки, надеясь проникнуть в подземелье замка"/>
+				<Option Destination="1343" Text="Теперь вы можете либо вернуться обратно и направиться к зданию в центре двора">
+					<Text>Либо попытаться перебраться через реку (тогда вам надо решить, каким заклятием вы воспользуетесь):</Text>
+				</Option>
+				<Option Destination="1774" Text="Заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+				</Option>
+				<Option Destination="1324" Text="Заклятием Левитации"/>
+				<Option Destination="1451" Text="Заклятием Левитации, но поплыть по течению реки, надеясь проникнуть в подземелье замка"/>
 				<Option Destination="1418" Text="Если у вас есть водолазный костюм, вы можете надеть его"/>
 			</Options>
 		</Paragraph>
