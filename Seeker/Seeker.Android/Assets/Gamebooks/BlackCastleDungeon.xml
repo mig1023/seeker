@@ -8058,7 +8058,9 @@
 			<Id>794</Id>
 			<Text>Вы приходите в себя и видите, что лежите на полу в просторной клетке. Клетка стоит у стены в большой комнате с толстыми каменными стенами. По сырости на них вы сразу понимаете, что это должен быть один из подземных этажей замка, но какой? Впрочем, сейчас надо думать о том, как выбраться отсюда. Вы оглядываетесь. Из мебели в комнате только стол, два покосившихся стула да небольшой ларь, стоящий у стены. За столом – два Гоблина. Они увлечены игрой в кости и не обращают на вас никакого внимания. Неудивительно: даже если бы они и знали, что вы пришли в себя, шансов выбрать из клетки у вас все равно нет. Комнату освещает единственная свеча, горящая на столе, и в ее мерцающем свете вы видите, что рядом со столом на полу валяются ваши вещи: игра идет на них. Вам же остается надеяться только на свою магию.\n\nВы попробуете использовать заклятие:</Text>
 			<Options>
-				<Option Destination="1847" Text="Иллюзии"/>
+				<Option Destination="1847" Text="Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+				</Option>
 				<Option Destination="887" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Если у вас нет ни того ни другого:</Text>
@@ -11121,7 +11123,9 @@
 				<Option Destination="991" Text="Метание огня с помощью заклятия Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
-				<Option Destination="1094" Text="Превращение с помощью заклятия Иллюзии"/>
+				<Option Destination="1094" Text="Превращение с помощью заклятия Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+				</Option>
 				<Option Destination="890" Text="Воздушный трюк с помощью заклятия Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
@@ -15180,8 +15184,10 @@
 			<Id>1532</Id>
 			<Text>В воздухе появляется огненный шар и направляется к одному из стариков. К вашему огромному разочарованию, старик щелкает пальцами, и шар исчезает.</Text>
 			<Options>
-				<Option Destination="1036" Text="Теперь можете или попробовать или заклятие Иллюзии"/>
-				<Option Destination="1391" Text="спокойно ждите, что будет дальше"/>
+				<Option Destination="1036" Text="Попробовать заклятие Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+				</Option>
+				<Option Destination="1391" Text="Спокойно ждите, что будет дальше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -17723,7 +17729,9 @@
 				<Option Destination="1532" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
-				<Option Destination="1036" Text="Иллюзии"/>
+				<Option Destination="1036" Text="Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
