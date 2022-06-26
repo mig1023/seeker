@@ -14358,6 +14358,7 @@
 				<Option Destination="1828" Text="В окно слева" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
+			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>1438</Id>
