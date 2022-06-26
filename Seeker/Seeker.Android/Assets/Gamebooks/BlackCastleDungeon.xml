@@ -9790,7 +9790,7 @@
 			<Options>
 				<Option Destination="815" Text="Удачливы">
 					<Text>Если же нет, то вам не удастся всплыть, как бы вы не старались. И на поверхность этого забытого озера выплывет только ваш труп...</Text>
-				</Options>
+				</Option>
 				<Option Destination="0"/>
 			</Options>
 		</Paragraph>
