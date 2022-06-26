@@ -8059,7 +8059,8 @@
 			<Text>Вы приходите в себя и видите, что лежите на полу в просторной клетке. Клетка стоит у стены в большой комнате с толстыми каменными стенами. По сырости на них вы сразу понимаете, что это должен быть один из подземных этажей замка, но какой? Впрочем, сейчас надо думать о том, как выбраться отсюда. Вы оглядываетесь. Из мебели в комнате только стол, два покосившихся стула да небольшой ларь, стоящий у стены. За столом – два Гоблина. Они увлечены игрой в кости и не обращают на вас никакого внимания. Неудивительно: даже если бы они и знали, что вы пришли в себя, шансов выбрать из клетки у вас все равно нет. Комнату освещает единственная свеча, горящая на столе, и в ее мерцающем свете вы видите, что рядом со столом на полу валяются ваши вещи: игра идет на них. Вам же остается надеяться только на свою магию.\n\nВы попробуете использовать заклятие:</Text>
 			<Options>
 				<Option Destination="1847" Text="Иллюзии"/>
-				<Option Destination="887" Text="Огня">
+				<Option Destination="887" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Если у вас нет ни того ни другого:</Text>
 				</Option>
 				<Option Destination="1506"/>
@@ -8295,7 +8296,9 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="1398" Text="Можете воспользоваться заклятием Огня"/>
+					<Option Destination="1398" Text="Можете воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					</Option>
 				</Action>
 				<Action>
 					<Type>Fight</Type>
@@ -8615,7 +8618,9 @@
 				</Action>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="1654" Text="Огня"/>
+					<Option Destination="1654" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					</Option>
 				</Action>
 				<Action>
 					<Type>Fight</Type>
@@ -9820,7 +9825,9 @@
 			<Id>961</Id>
 			<Text>Вы можете воспользоваться:</Text>
 			<Options>
-				<Option Destination="1015" Text="Заклятием Огня"/>
+				<Option Destination="1015" Text="Заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+				</Option>
 				<Option Destination="1061" Text="Заклятием Силы"/>
 				<Option Destination="869" Text="Заклятием Слабости">
 					<Text>Или просто сражаться мечом:</Text>
@@ -10065,7 +10072,9 @@
 				</Action>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="1091" Text="Огня"/>
+					<Option Destination="1091" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					</Option>
 				</Action>
 				<Action>
 					<Type>Option</Type>
@@ -10452,7 +10461,8 @@
 			<Options>
 				<Option Destination="913" Text="Заклятие Силы"/>
 				<Option Destination="792" Text="Заклятие Слабости"/>
-				<Option Destination="1121" Text="Заклятие Огня">
+				<Option Destination="1121" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Надеяться только на свой меч и драться...</Text>
 				</Option>
 				<Option Destination="799"/>
@@ -10532,7 +10542,9 @@
 			<Id>1036</Id>
 			<Text>Заклятие Иллюзии не действует на стариков.</Text>
 			<Options>
-				<Option Destination="1532" Text="Хотите наложить заклятие Огня"/>
+				<Option Destination="1532" Text="Хотите наложить заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+				</Option>
 				<Option Destination="1391" Text="Наберетесь терпения"/>
 			</Options>
 		</Paragraph>
@@ -11106,7 +11118,9 @@
 			<Id>1103</Id>
 			<Text>Какой фокус вы им покажете:</Text>
 			<Options>
-				<Option Destination="991" Text="Метание огня с помощью заклятия Огня"/>
+				<Option Destination="991" Text="Метание огня с помощью заклятия Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+				</Option>
 				<Option Destination="1094" Text="Превращение с помощью заклятия Иллюзии"/>
 				<Option Destination="890" Text="Воздушный трюк с помощью заклятия Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
@@ -11310,7 +11324,9 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="856" Text="Можете воспользоваться заклятием Огня"/>
+					<Option Destination="856" Text="Можете воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					</Option>
 				</Action>
 				<Action>
 					<Type>Fight</Type>
@@ -11477,7 +11493,9 @@
 				</Action>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="1203" Text="Огня"/>
+					<Option Destination="1203" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					</Option>
 				</Action>
 				<Action>
 					<Type>Option</Type>
@@ -11978,9 +11996,11 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1190</Id>
-			<Text>После двух ударов одна из голов Дракона отлетает. Он отскакивает назад, а вас появляется время, чтобы, если хотите успеть наложить заклятие.</Text>
+			<Text>После двух ударов одна из голов Дракона отлетает. Он отскакивает назад, а вас появляется время, чтобы, если хотите успеть наложить заклятие. Воспользуетесь передышкой и наложите заклятие:</Text>
 			<Options>
-				<Option Destination="1925" Text="Воспользуетесь передышкой и наложите заклятие Огня"/>
+				<Option Destination="1925" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+				</Option>
 				<Option Destination="1023" Text="Силы"/>
 				<Option Destination="780" Text="Слабости"/>
 				<Option Destination="1889" Text="Копии или будете продолжать драться"/>
@@ -12008,7 +12028,9 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="893" Text="У вас еще одно заклятие Огня"/>
+					<Option Destination="893" Text="У вас еще одно заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					</Option>
 					<After>
 						<Text>Или будете драться с оставшейся головой? Она в свою очередь, дышит на вас огнем (потеряйте 2 ВЫНОСЛИВОСТИ).</Text>
 					</After>
@@ -12112,8 +12134,12 @@
 			<Id>1202</Id>
 			<Text>Внезапно небо над головой темнеет, и вы видите, как на поляну опускается огромный двухголовый дракон. Теперь понятно, почему деревья по краям обуглены, но уже слишком поздно. Однако дракон не торопится нападать. Он опускается на землю и внимательно смотрит в вашу сторону, как будто чего-то ждет.</Text>
 			<Options>
-				<Option Destination="1285" Text="Вы можете либо биться с ним"/>
-				<Option Destination="1193" Text="использовать заклятие Огня"/>
+				<Option Destination="1285" Text="Вы можете либо биться с ним">
+					<Text>Либо использовать заклятие:</Text>
+				</Option>
+				<Option Destination="1193" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+				</Option>
 				<Option Destination="945" Text="Силы"/>
 				<Option Destination="1936" Text="Слабости"/>
 				<Option Destination="769" Text="А может лучше предложить миролюбивому дракону подарок"/>
@@ -12297,7 +12323,9 @@
 				<Option Destination="913" Text="попробовать наложить заклятие: Силы"/>
 				<Option Destination="792" Text="Слабости"/>
 				<Option Destination="1026" Text="Копии"/>
-				<Option Destination="1121" Text="Огня"/>
+				<Option Destination="1121" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+				</Option>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -13115,7 +13143,9 @@
 			<Options>
 				<Option Destination="1140" Text="Наложите заклятие Силы"/>
 				<Option Destination="822" Text="Слабости"/>
-				<Option Destination="986" Text="Огня"/>
+				<Option Destination="986" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+				</Option>
 				<Option Destination="1320" Text="будете драться с ними"/>
 			</Options>
 		</Paragraph>
@@ -14403,11 +14433,13 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1453</Id>
-			<Text></Text>
+			<Text>Вы можете воспользоваться заклятиями:</Text>
 			<Options>
-				<Option Destination="1420" Text="Вы можете воспользоваться заклятиями Силы"/>
+				<Option Destination="1420" Text="Силы"/>
 				<Option Destination="1408" Text="Слабости"/>
-				<Option Destination="1941" Text="Огня"/>
+				<Option Destination="1941" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+				</Option>
 				<Option Destination="1381" Text="драться мечом"/>
 			</Options>
 		</Paragraph>
@@ -14960,7 +14992,9 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="1396" Text="Вы можете воспользоваться заклятием Огня"/>
+					<Option Destination="1396" Text="Вы можете воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					</Option>
 					<After>
 						<Text>Или же драться:</Text>
 					</After>
@@ -15436,7 +15470,9 @@
 				</Action>
 			</Actions>
 			<Options>
-				<Option Destination="1773" Text="Вы можете воспользоваться заклятием Огня"/>
+				<Option Destination="1773" Text="Вы можете воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+				</Option>
 				<Option Destination="1708" Text="Если вы остались целы после боя, то идите дальше"/>
 			</Options>
 		</Paragraph>
@@ -17172,11 +17208,13 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1756</Id>
-			<Text>Как только закрылась дверь, из угла комнаты на вас бросаются крысы. Вы с ужасом замечаете, что они не обыкновенные, а каменные.</Text>
+			<Text>Как только закрылась дверь, из угла комнаты на вас бросаются крысы. Вы с ужасом замечаете, что они не обыкновенные, а каменные. Если хотите, можете воспользоваться заклятием:</Text>
 			<Options>
-				<Option Destination="1863" Text="Если хотите, можете воспользоваться заклятием Слабости"/>
-				<Option Destination="888" Text="Огня"/>
-				<Option Destination="1386" Text="просто выньте меч и сразитесь с ними"/>
+				<Option Destination="1863" Text="Слабости"/>
+				<Option Destination="888" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+				</Option>
+				<Option Destination="1386" Text="Или просто выньте меч и сразитесь с ними"/>
 				<Option Destination="919" Text="Если у вас есть меч зеленого рыцаря"/>
 			</Options>
 		</Paragraph>
@@ -17680,9 +17718,11 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1819</Id>
-			<Text></Text>
+			<Text>Попробуете наложить заклятие:</Text>
 			<Options>
-				<Option Destination="1532" Text="Попробуете наложить заклятие Огня"/>
+				<Option Destination="1532" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+				</Option>
 				<Option Destination="1036" Text="Иллюзии"/>
 			</Options>
 		</Paragraph>
@@ -18197,11 +18237,13 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1879</Id>
-			<Text>Вы подзываете хозяина поближе и, выхватив меч, нападаете на него. Первый удар ваш, Водяной ранен, и ему ничего не остается, как принять бой. Он сражается с вами водорослями, каждый удар которых оставляет острые глубокие порезы.</Text>
+			<Text>Вы подзываете хозяина поближе и, выхватив меч, нападаете на него. Первый удар ваш, Водяной ранен, и ему ничего не остается, как принять бой. Он сражается с вами водорослями, каждый удар которых оставляет острые глубокие порезы. Вы можете воспользоваться заклятиями:</Text>
 			<Options>
-				<Option Destination="1504" Text="Вы можете воспользоваться заклятиями Силы"/>
+				<Option Destination="1504" Text="Силы"/>
 				<Option Destination="1086" Text="Слабости"/>
-				<Option Destination="1947" Text="Огня"/>
+				<Option Destination="1947" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+				</Option>
 				<Option Destination="1013" Text="драться с ним без помощи магии"/>
 			</Options>
 		</Paragraph>
