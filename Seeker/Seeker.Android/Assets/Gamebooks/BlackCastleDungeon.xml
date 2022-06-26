@@ -9585,7 +9585,7 @@
 				<Option Destination="1657" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
-				<Option Destination="1757" Text="Если у вас есть Водолазный костюм"/>
+				<Option Destination="1757" Text="Если у вас есть Водолазный костюм">
 					<Text>Если у вас нет ни того, ни другого, идите вдоль берега, на запад, откуда прибежал Гоблин...</Text>
 				</Option>
 				<Option Destination="1342"/>
