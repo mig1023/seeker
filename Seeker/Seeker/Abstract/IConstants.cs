@@ -25,7 +25,7 @@ namespace Seeker.Abstract
 
         void LoadDictionary(string name, Dictionary<string, string> dictionary);
 
-        int? GetParagraphsStatusesLimit();
+        string GetParagraphsStatusesLimit();
 
         void LoadEnabledDisabledOption(string option);
 
