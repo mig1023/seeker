@@ -8618,7 +8618,9 @@
 				</Action>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="1841" Text="Слабости"/>
+					<Option Destination="1841" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
+						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					</Option>
 				</Action>
 				<Action>
 					<Type>Option</Type>
@@ -9835,7 +9837,8 @@
 				<Option Destination="1061" Text="Заклятием Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
-				<Option Destination="869" Text="Заклятием Слабости">
+				<Option Destination="869" Text="Заклятием Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 					<Text>Или просто сражаться мечом:</Text>
 				</Option>
 				<Option Destination="1928"/>
@@ -10090,7 +10093,9 @@
 				</Action>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="1170" Text="Слабости"/>
+					<Option Destination="1170" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
+						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					</Option>
 					<After>
 						<Text>Или драться без них. Битва будет жаркая.</Text>
 					</After>
@@ -10470,7 +10475,9 @@
 				<Option Destination="913" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
-				<Option Destination="792" Text="Заклятие Слабости"/>
+				<Option Destination="792" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				</Option>
 				<Option Destination="1121" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Надеяться только на свой меч и драться...</Text>
@@ -11992,7 +11999,9 @@
 				</Action>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="1201" Text="Слабости"/>
+					<Option Destination="1201" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
+						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					</Option>
 				</Action>
 				<Action>
 					<Type>Fight</Type>
@@ -12018,7 +12027,9 @@
 				<Option Destination="1023" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
-				<Option Destination="780" Text="Слабости"/>
+				<Option Destination="780" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				</Option>
 				<Option Destination="1889" Text="Копии или будете продолжать драться"/>
 				<Option Destination="983" Text="Можете, если есть желание, попробовать убежать"/>
 			</Options>
@@ -12159,7 +12170,9 @@
 				<Option Destination="945" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
-				<Option Destination="1936" Text="Слабости"/>
+				<Option Destination="1936" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				</Option>
 				<Option Destination="769" Text="А может лучше предложить миролюбивому дракону подарок"/>
 			</Options>
 		</Paragraph>
@@ -12343,7 +12356,9 @@
 				<Option Destination="913" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
-				<Option Destination="792" Text="Слабости"/>
+				<Option Destination="792" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				</Option>
 				<Option Destination="1026" Text="Копии"/>
 				<Option Destination="1121" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
@@ -13005,7 +13020,8 @@
 				<Option Destination="1039" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
-				<Option Destination="1223" Text="Слабости">
+				<Option Destination="1223" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 					<Text>Если победили их:</Text>
 				</Option>
 				<Option Destination="1010"/>
@@ -13168,7 +13184,9 @@
 				<Option Destination="1140" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
-				<Option Destination="822" Text="Слабости"/>
+				<Option Destination="822" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				</Option>
 				<Option Destination="986" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
@@ -14466,7 +14484,9 @@
 				<Option Destination="1420" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
-				<Option Destination="1408" Text="Слабости"/>
+				<Option Destination="1408" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				</Option>
 				<Option Destination="1941" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
@@ -17242,7 +17262,9 @@
 			<Id>1756</Id>
 			<Text>Как только закрылась дверь, из угла комнаты на вас бросаются крысы. Вы с ужасом замечаете, что они не обыкновенные, а каменные. Если хотите, можете воспользоваться заклятием:</Text>
 			<Options>
-				<Option Destination="1863" Text="Слабости"/>
+				<Option Destination="1863" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				</Option>
 				<Option Destination="888" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
@@ -18276,7 +18298,9 @@
 				<Option Destination="1504" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
-				<Option Destination="1086" Text="Слабости"/>
+				<Option Destination="1086" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+				</Option>
 				<Option Destination="1947" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
