@@ -182,7 +182,7 @@ namespace Seeker.Game
 
         private static string ItemLineSplit(string keyValue, bool second = false)
         {
-            List<string> items = keyValue.Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            List<string> items = keyValue.Split(':').ToList();
             return items[second ? 1 : 0];
         }
 
