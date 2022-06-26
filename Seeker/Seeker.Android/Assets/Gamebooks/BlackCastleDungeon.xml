@@ -11122,7 +11122,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="1217" Text="Удачливы"/>
-				<Option Destination="1290"Text="Нет"/>
+				<Option Destination="1290" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -12641,7 +12641,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="804" Text="Удачливы"/>
-				<Option Destination="1075"Text="Нет"/>
+				<Option Destination="1075" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -17311,7 +17311,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="1643" Text="Удачливы"/>
-				<Option Destination="1358"Text="Нет"/>
+				<Option Destination="1358" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -18731,7 +18731,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="1405" Text="Удачливы"/>
-				<Option Destination="1593"Text="Нет"/>
+				<Option Destination="1593" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
