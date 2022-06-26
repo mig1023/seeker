@@ -10077,7 +10077,9 @@
 			<Actions>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="1091" Text="Копии"/>
+					<Option Destination="1091" Text="Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
+						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ КОПИИ"/>
+					</Option>
 				</Action>
 				<Action>
 					<Type>Option</Type>
@@ -11518,7 +11520,9 @@
 				</Action>
 				<Action>
 					<Type>Option</Type>
-					<Option Destination="1664" Text="Копии"/>
+					<Option Destination="1664" Text="Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
+						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ КОПИИ"/>
+					</Option>
 					<After>
 						<Text>Итак:</Text>
 					</After>
@@ -12030,7 +12034,7 @@
 				<Option Destination="780" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
-				<Option Destination="1889" Text="Копии или будете продолжать драться"/>
+				<Option Destination="1889" Text="Будете продолжать драться"/>
 				<Option Destination="983" Text="Можете, если есть желание, попробовать убежать"/>
 			</Options>
 		</Paragraph>
@@ -12359,7 +12363,9 @@
 				<Option Destination="792" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
-				<Option Destination="1026" Text="Копии"/>
+				<Option Destination="1026" Text="Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ КОПИИ"/>
+				</Option>
 				<Option Destination="1121" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
@@ -13016,7 +13022,9 @@
 				</Action>
 			</Actions>
 			<Options>
-				<Option Destination="1039" Text="Копии"/>
+				<Option Destination="1039" Text="Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ КОПИИ"/>
+				</Option>
 				<Option Destination="1039" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
@@ -14100,7 +14108,8 @@
 				<Modification Name="Endurance" Value="-4"/>
 			</Modifications>			
 			<Options>
-				<Option Destination="1267" Text="Вы можете попытаться наложить заклятие Копии">
+				<Option Destination="1267" Text="Вы можете попытаться наложить заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ КОПИИ"/>
 					<Text>Если же решили драться с ним на мечах, то учтите, что каждый раз вам придется вычитать из вашей СИЛЫ УДАРА 1, ведь он сражается на коне, а вы нет. Если вы победили:</Text>
 				</Option>
 				<Option Destination="788"/>
