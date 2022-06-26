@@ -11014,7 +11014,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="1175" Text="Удачливы"/>
-				<Option Destination="777"Text="Нет"/>
+				<Option Destination="777" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
