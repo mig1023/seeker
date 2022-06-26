@@ -4472,7 +4472,7 @@
 				<Option Destination="133" Text="Так и поступите" Availability="ЭКЮ >= 150">
 					<Modification Name="Ecu" Value="-150"/>
 				</Option>
-				<Option Destination="602" Text="Не повезло"/>
+				<Option Destination="602" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
