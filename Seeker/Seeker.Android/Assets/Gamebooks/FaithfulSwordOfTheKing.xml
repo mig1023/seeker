@@ -11,8 +11,8 @@
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses">0, 660</List>
-			<Dictionary Name="Skills" FromLine="1->12, 2->8, 3->10, 4->7, 5->9, 6->11"/>
-			<Dictionary Name="Strengths" FromLine="1->22, 2->18, 3->14, 4->24, 5->16, 6->20"/>	
+			<Dictionary Name="Skills" FromLine="1:12, 2:8, 3:10, 4:7, 5:9, 6:11"/>
+			<Dictionary Name="Strengths" FromLine="1:22, 2:18, 3:14, 4:24, 5:16, 6:20"/>	
 		</Constants>
 		<Settings>
 			<DisabledOption Value="Hide"/>
