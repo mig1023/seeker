@@ -16798,7 +16798,7 @@
 				<Option Destination="926" Text="Средний">
 					<Text>Можете выйти в дверь:</Text>
 				</Option>
-				<Option Destination="1756" Text=Правую"/>
+				<Option Destination="1756" Text="Правую"/>
 				<Option Destination="1096" Text="Левую"/>
 				<Option Destination="1740" Text="Среднюю"/>
 			</Options>
