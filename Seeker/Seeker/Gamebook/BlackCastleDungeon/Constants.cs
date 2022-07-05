@@ -6,7 +6,20 @@ namespace Seeker.Gamebook.BlackCastleDungeon
     {
         public static Constants StaticInstance = new Constants();
 
-        public override int? GetParagraphsStatusesLimit() => 620;
+        public override bool GetParagraphsStatusesLimit(out int limitStart, out int limitEnd)
+        {
+            if ((ParagraphsStatusesLimit != null) && (ParagraphsStatusesLimit.Count == 2))
+            {
+                limitStart = ParagraphsStatusesLimit[0];
+                limitEnd = ParagraphsStatusesLimit[1];
+
+                return true;
+            }
+            else
+                return base.GetParagraphsStatusesLimit(out limitStart, out limitEnd);
+        }
+
+        public static List<int> ParagraphsStatusesLimit { get; set; }
 
         public static List<string> StaticSpells { get; set; }
 

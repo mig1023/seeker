@@ -380,18 +380,13 @@ namespace Seeker
                 Game.Data.Constants.GetParagraphsWithoutStatuses().Contains(Game.Data.CurrentParagraphID);
 
             bool statusesLimit = false;
-            string statusesLimits = Game.Data.Constants?.GetParagraphsStatusesLimit() ?? String.Empty;
+            int limitStart = 0, limitEnd = 0;
+            bool isLimited = Game.Data.Constants?.GetParagraphsStatusesLimit(out limitStart, out limitEnd) ?? false;
 
             if (statuses == null)
-            {
                 statusesLimit = false;
-            }
-            else if (!String.IsNullOrEmpty(statusesLimits))
-            {
-                List<string> limits = statusesLimits.Split('-').ToList();
-                int current = Game.Data.CurrentParagraphID;
-                statusesLimit = (current >= int.Parse(limits[0])) && (current <= int.Parse(limits[1]));
-            }
+            else if (isLimited)
+                statusesLimit = (Game.Data.CurrentParagraphID >= limitStart) && (Game.Data.CurrentParagraphID <= limitEnd);
 
             if (withoutStatuses || statusesLimit)
             {

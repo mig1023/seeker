@@ -99,7 +99,13 @@ namespace Seeker.Prototypes
 
         public virtual Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.normal;
 
-        public virtual string GetParagraphsStatusesLimit() => String.Empty;
+        public virtual bool GetParagraphsStatusesLimit(out int limitStart, out int limitEnd)
+        {
+            limitStart = 0;
+            limitEnd = 0;
+
+            return false;
+        }
 
         public void LoadEnabledDisabledOption(string option) => ShowDisabledOptionStatus = (option == "Show");
 

@@ -12,6 +12,7 @@
 		<Constants>
 			<List Name="WithoutStatuses">0, 619, 753</List>
 			<List Name="WithoutStaticsButtons">0, 619, 753</List>
+			<List Name="ParagraphsStatusesLimit">620, 752</List>
 			<List Name="StaticSpells">ЗАКЛЯТИЕ КОПИИ, ЗАКЛЯТИЕ СИЛЫ, ЗАКЛЯТИЕ СЛАБОСТИ</List>
 		</Constants>
 		<Settings>
