@@ -62,7 +62,7 @@ namespace Seeker.Output
             return SetBorderAndTextColor(optionButton);
         }
 
-        public static Button Additional(string text, EventHandler onClick)
+        public static Button Additional(string text, EventHandler onClick, bool anywayLarge = false)
         {
             string color = Game.Data.Constants.GetColor(Buttons.ButtonTypes.Continue);
 
@@ -73,7 +73,7 @@ namespace Seeker.Output
                 FontFamily = Interface.TextFontFamily(standart: true),
             };
 
-            if (Game.Settings.IsEnabled("LargeAddButtons"))
+            if (anywayLarge || Game.Settings.IsEnabled("LargeAddButtons"))
             {
                 additionButton.FontSize = Interface.Font(NamedSize.Default);
             }

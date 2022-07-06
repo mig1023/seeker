@@ -238,7 +238,8 @@ namespace Seeker
 
             if (physicalStartOfGame && Game.Continue.IsGameSaved())
             {
-                Options.Children.Add(Output.Buttons.Additional("Продолжить предыдущую игру", Continue_Click));
+                Options.Children.Add(Output.Buttons.Additional("Продолжить предыдущую игру",
+                    Continue_Click, anywayLarge: true));
             }
             else if (!startOfGame && (Game.Data.Actions != null) && !gameOver)
             {
