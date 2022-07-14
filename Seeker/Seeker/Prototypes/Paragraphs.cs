@@ -19,11 +19,11 @@ namespace Seeker.Prototypes
         {
             Paragraph paragraph = new Paragraph { Options = new List<Option>() };
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
                 Option option = new Option
                 {
-                    Destination = Xml.IntParse(xmlOption.Attributes["Destination"]),
+                    Destination = GetDestination(xmlOption),
                     Text = Xml.StringParse(xmlOption.Attributes["Text"]),
                     Aftertext = Xml.StringParse(xmlOption.Attributes["Aftertext"]),
                 };
@@ -38,7 +38,7 @@ namespace Seeker.Prototypes
         {
             Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
                 paragraph.Options.Add(OptionParse(xmlOption));
 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
@@ -48,6 +48,17 @@ namespace Seeker.Prototypes
                 paragraph.Modification.Add(ModificationParse(xmlModification));
 
             return paragraph;
+        }
+
+        protected bool ThisIsGameover(XmlNode xmlOption) =>
+            xmlOption.Name == "GameOver";
+
+        protected int GetDestination(XmlNode xmlOption)
+        {
+            if (ThisIsGameover(xmlOption))
+                return Data.Constants.GetStartParagraph();
+            else
+                return Xml.IntParse(xmlOption.Attributes["Destination"]);
         }
 
         public Abstract.IActions ActionTemplate(XmlNode xmlAction, Abstract.IActions actions)
@@ -118,7 +129,7 @@ namespace Seeker.Prototypes
         {
             Option option = OptionsTemplateWithoutDestination(xmlOption);
 
-            option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+            option.Destination = GetDestination(xmlOption);
 
             return option;
         }
