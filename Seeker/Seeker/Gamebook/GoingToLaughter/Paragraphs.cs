@@ -13,15 +13,23 @@ namespace Seeker.Gamebook.GoingToLaughter
         {
             Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
                 Option option = OptionsTemplateWithoutDestination(xmlOption);
 
-                if (xmlOption.Attributes["Destination"].Value == "Random")
+                if (ThisIsGameover(xmlOption))
+                {
+                    option.Destination = GetDestination(xmlOption);
+                }
+                else if (xmlOption.Attributes["Destination"].Value == "Random")
+                {
                     option.Destination = id + 1 + random.Next(6);
+                }
                 else
+                {
                     option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
-
+                }
+                    
                 XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
 
                 if (optionMod != null)
