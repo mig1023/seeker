@@ -12,14 +12,22 @@ namespace Seeker.Gamebook.OrcsDay
         {
             Game.Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
                 Option option = OptionsTemplateWithoutDestination(xmlOption);
 
-                if (xmlOption.Attributes["Destination"].Value == "Back")
+                if (ThisIsGameover(xmlOption))
+                {
+                    option.Destination = GetDestination(xmlOption);
+                }
+                else if (xmlOption.Attributes["Destination"].Value == "Back")
+                {
                     option.Destination = Character.Protagonist.WayBack;
+                }
                 else
+                {
                     option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+                }
 
                 XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
 
