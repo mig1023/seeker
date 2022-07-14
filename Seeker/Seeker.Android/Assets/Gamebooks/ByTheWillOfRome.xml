@@ -566,7 +566,7 @@
 			<Id>56</Id>
 			<Text>[пустой параграф]</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1493,7 +1493,7 @@
 				<Text Font="Bold">Глава «Сарматские степи».</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1634,7 +1634,7 @@
 			<Id>166</Id>
 			<Text>Вы пнули несколько раз ногой своего врага, но его клинок скользнул по вашей сандалии и впился вам в икроножную мышцу. Вы вскрикнули от острой боли, и тут же острая сталь вонзилась вам в живот. Вы погибли...</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1836,7 +1836,7 @@
 			<Id>187</Id>
 			<Text>Вы вскочили на стол, но поскользнулись, наступив ногой на гроздь винограда. Неловко упав на бок на столешницу вы отмахнулись мечом от наседавшего дака. Но тут острая боль пронзила вашу спину. Римлянин ударил вас клинком, всадив его между ваших ребер.\n\nВы погибли...</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2603,7 +2603,7 @@
 				<Text Font="Bold">Глава «Сарматские степи».</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2656,7 +2656,7 @@
 			<Id>277</Id>
 			<Text>Сильный удар разом опрокинул вас лицом вниз. Вы услышали визг кабана. Не успев вскочить на ноги, вы получили сильнейший удар в бок. Острая боль пронзила ваши ребра. Кабан, мотая в стороны своей огромной головой, отшвырнул вас в сторону. Ваше безжизненное тело как тряпичная кукла отлетело на несколько метров в кустарник. Вы погибли.</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2803,7 +2803,7 @@
 			<Id>296</Id>
 			<Text>Вы резко развернулись и, уперев копье в землю, стали на колено, направив острие копья в сторону приближающегося кабана. Сильный удар огромной туши разом опрокинул вас назад. Вы услышали хруст ломающегося древка копья и визг боли кабана.\n\nНе успев вскочить на ноги, вы получили сильнейший удар в бок. Острая боль пронзила ваши ребра. Кабан, мотая своей огромной головой, отшвырнул вас в сторону. Ваше безжизненное тело как тряпичная кукла отлетело на несколько метров в кустарник. Вы погибли.</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2827,7 +2827,7 @@
 			<Id>299</Id>
 			<Text>Вы попытались жестами показать ей, то не собираетесь ее обижать и у вас мирные намерения. Не сдерживаемая больше вашим захватом, девушка резко выхватили из ваших ножен кинжал, и ударила наотмашь. Кровь, булькая толчками, хлынула из вашего рассеченного горла, и вы повалились в траву. Вы погибли.</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2850,7 +2850,7 @@
 			<Id>302</Id>
 			<Text>Вы подняли правую руку, приветствуя командира фракийских всадников. Рыжебородый фракиец на белом коне остановил свою лошадь возле вас и, не говоря ни слова, всадил вам в живот свой кинжал. Скорчившись от боли, вы упали на гриву вашего коня и затем рухнули на землю. Вы убиты.</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2891,7 +2891,7 @@
 				<Text Font="Bold">Глава «Децебал».</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2914,7 +2914,7 @@
 			<Id>310</Id>
 			<Text>Ваше копье пролетело мимо. Подскочивший варвар, ударил вас мечем. Вы погибли.</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2932,7 +2932,7 @@
 				<Text Font="Bold">Глава «Децебал».</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2996,7 +2996,7 @@
 			<Id>320</Id>
 			<Text>За спиной уже было слышно дыхание вашего врага и топот ног. Удар в спину свалил вас с ног. Второй удар обрушился на вашу голову. Вы убиты.</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3020,7 +3020,7 @@
 			<Id>323</Id>
 			<Text>Очередной удар врага опрокинул вас на спину. Вы выронили оружие, и наседающий варвар одним ударом отсек вам голову. Вы убиты.</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3062,7 +3062,7 @@
 				<Text Font="Bold">Глава «Сарматские степи».</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3072,7 +3072,7 @@
 				<Text Font="Bold">Глава «Децебал».</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3082,7 +3082,7 @@
 				<Text Font="Bold">Глава «Сарматские степи».</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 			<Paragraph>
@@ -3092,7 +3092,7 @@
 				<Text Font="Bold">Глава «Сарматские степи».</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3107,7 +3107,7 @@
 				<Modification Name="Legionaries" Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3130,7 +3130,7 @@
 				<Modification Name="Legionaries" Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3210,7 +3210,7 @@
 				<Text Font="Bold">Глава «Децебал».</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3405,7 +3405,7 @@
 			<Id>364</Id>
 			<Text>Вы развернулись и бросились бежать. На вашу голову обрушился сильный удар. Вы погибли.</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
