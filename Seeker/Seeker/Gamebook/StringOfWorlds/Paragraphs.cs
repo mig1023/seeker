@@ -16,11 +16,15 @@ namespace Seeker.Gamebook.StringOfWorlds
 
             Constants.RandomColor();
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
                 Option option = OptionsTemplateWithoutDestination(xmlOption);
 
-                if (xmlOption.Attributes["Destination"].Value == "Gate")
+                if (ThisIsGameover(xmlOption))
+                {
+                    option.Destination = GetDestination(xmlOption);
+                }
+                else if (xmlOption.Attributes["Destination"].Value == "Gate")
                 {
                     if (Character.Protagonist.GateCode <= 0)
                         continue;
