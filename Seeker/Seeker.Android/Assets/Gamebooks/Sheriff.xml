@@ -274,7 +274,7 @@
 				<Text Font="Bold">ПОЛУЧЕНО ДОСТИЖЕНИЕ «ОХОТНИК НА ВАМПИРОВ (EASY)»</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -468,7 +468,7 @@
 				<Text Font="Bold">ПОЛУЧЕНО ДОСТИЖЕНИЕ «ОХОТНИК НА ВАМПИРОВ (MEDIUM)»</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -625,7 +625,7 @@
 				<Text Font="Bold">ПОЛУЧЕНО ДОСТИЖЕНИЕ «ОХОТНИК НА ВАМПИРОВ (HARD)»</Text>
 			</Texts>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
