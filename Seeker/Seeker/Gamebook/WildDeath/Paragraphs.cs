@@ -13,12 +13,18 @@ namespace Seeker.Gamebook.WildDeath
         {
             Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/Option"))
+            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
                 Option option = OptionsTemplateWithoutDestination(xmlOption);
 
-                if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
+                if (ThisIsGameover(xmlOption))
+                {
+                    option.Destination = GetDestination(xmlOption);
+                }
+                else if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
+                {
                     option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+                }
                 else
                 {
                     List<string> destinations = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
