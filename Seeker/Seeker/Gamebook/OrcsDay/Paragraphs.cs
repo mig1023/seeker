@@ -43,7 +43,7 @@ namespace Seeker.Gamebook.OrcsDay
                 paragraph.Options.Insert(0, GetOption(destination: 33, text: "Получить имя"));
             }
                 
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
+            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/*"))
                 paragraph.Actions.Add(ActionParse(xmlAction));
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))

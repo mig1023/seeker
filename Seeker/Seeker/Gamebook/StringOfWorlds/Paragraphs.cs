@@ -48,7 +48,7 @@ namespace Seeker.Gamebook.StringOfWorlds
                 paragraph.Options.Add(option);
             }
 
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
+            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/*"))
                 paragraph.Actions.Add(ActionParse(xmlAction));
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
