@@ -1645,7 +1645,7 @@
 			<Options>
 				<Option Destination="209" Text="Забросить негодяю на крышу опасный «подарок»" Availability="Динамитная шашка, Спички">
 					<Text>Если не хотите или не можете сделать это, вам предстоит нелегкий бой..."</Text>
-				</Options>
+				</Option>
 				<Option Destination="245"/>
 			</Options>
 		</Paragraph>
