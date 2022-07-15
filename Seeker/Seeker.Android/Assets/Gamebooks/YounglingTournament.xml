@@ -105,13 +105,12 @@
 				<Text>Вы привычно изготавливаетесь к стрельбе, взяв на мушку стоящего в открывающемся проеме дроида, и двумя точными выстрелами выводите его из строя. Двое других открывают беспорядочную стрельбу, осыпая коридор выстрелами из ручных бластеров, отнимающих по 5 Выносливости при попадании. С ними придется вступить в перестрелку:</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>FireFight</Type>
+				<FireFight>
 					<Enemies>
 						<Enemy Name="Первый Дроид" Accuracy="4" Hitpoints="10" Firepower="5"/>
 						<Enemy Name="Второй Дроид" Accuracy="7" Hitpoints="10" Firepower="5"/>
 					</Enemies>
-				</Action>
+				</FireFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Accuracy" Value="1"/>
@@ -148,14 +147,13 @@
 				<Text Size="small">+2 Меткости на время боя</Text>
 			</Texts>	
 			<Actions>
-				<Action>
-					<Type>FireFight</Type>
+				<FireFight>
 					<Enemies>
 						<Enemy Name="Первый HH-108" Accuracy="7" Hitpoints="10" Shield="15" Firepower="10"/>
 						<Enemy Name="Второй HH-108" Accuracy="7" Hitpoints="10" Shield="15" Firepower="10"/>
 					</Enemies>
 					<AccuracyBonus>2</AccuracyBonus>
-				</Action>
+				</FireFight>
 			</Actions>
 			<Options>
 				<Option Destination="13" Text="Удалось их вывести из строя"/>
@@ -1064,10 +1062,9 @@
 			<Id>93</Id>
 			<Text>Вы тянетесь за Ливией Умай, направляясь за Течением Силы, которую она направляет.</Text>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>15</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="80" Text="Все в порядке"/>
@@ -1253,8 +1250,7 @@
 			<Id>107</Id>
 			<Text>Начинается дуэль на световых мечах.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Проводник" Skill="8" Rang="1" Speed="3" Hitpoints="20" SwordTechnique="Elasticity"/>
 					</Enemies>
@@ -1264,7 +1260,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя.\n\nСпособности Силы применять во ЭТОГО время боя нельзя — это тренировка, и нацелена она именно на совершенствование навыков владения световым мечом.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="114" Text="Удалось отбавить Выносливость противника до 2"/>
@@ -1332,9 +1328,8 @@
 			<Id>115</Id>
 			<Text>Умножьте Силу выстрела противника на его Меткость и разделите на Отражение используемого вами стиля боя. Целое число от получившегося значения вычтите из своей Выносливости:</Text>
 			<Actions>
-				<Action>
-					<Type>MixedFightAttack</Type>
-				</Action>
+				<MixedFightAttack>
+				</MixedFightAttack>
 			</Actions>
 			<Options>
 				<Option Destination="117" Text="Вы еще в состоянии двигаться"/>
@@ -1345,12 +1340,11 @@
 			<Id>116</Id>
 			<Text>Киньте кубик 2 раза и получившиеся числа сложите с Силой выстрела противника и его Меткостью, а потом разделите это число на Отражение используемого вами стиля боя. Целое число от получившегося значения вычтите из своей Выносливости:</Text>
 			<Actions>
-				<Action>
-					<Type>MixedFightDefence</Type>
+				<MixedFightDefence>
 					<After>
 						<Text>Если полученное число меньше единицы, то вычтите из Выносливости противника Силу его выстрела — вам удается отразить выстрел противника в него самого.\n\nВы можете защищаться не больше 5 раундов, после чего нужно решать — отступить или атаковать.\n\nВы также можете атаковать противника в конце любого раунда.</Text>
 					</After>
-				</Action>
+				</MixedFightDefence>
 			</Actions>
 			<Options>
 				<Option Destination="115" Text="Если вы хотите атаковать в конце любого раунда"/>
@@ -1641,10 +1635,9 @@
 			<Id>141</Id>
 			<Text>Большой шумной кампанией вы отправились в местный парк развлечений, где с упоением принялись играть в саббак на желания.</Text>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>15</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="149" Text="Все в порядке"/>
@@ -1973,10 +1966,9 @@
 			<Id>174</Id>
 			<Text>В комнату входят четверо джедаев — Кано Тур и все будущие учителя соклан.\n\n— Я привел не только Сеета Лиерта, но и остальных, джедаев, как видишь, — говорит Наставник. — Теперь ты довольна, Ливия? Можешь рассказать про Предвидение?\n\n— Могу, — Ливия кивает.\n\nСеет Лиарт хмурится:\n\n— Что за Предвидение?\n\nОтвечает Ливия:\n\n— Это видение я видела давно, и говорила про него Виго Дрейну. Я видела, как он возвращался в свою комнату, пил лекарства и ложился спать. Под утро к нему приходила женщина, они разговаривали, она уходила. Потом женщина встречалась с Кано Туром и видение заканчивалось.\n\n— Это все? — напряженно спрашивает Арладо Ураки. — Ты слышала, о чем они разговаривали?\n\n— Нет. Видение было глазами этой женщины. Она явно была форсюзером, но я не знаю, о чем они говорили.\n\n— Покажи мне! — женщина делает шаг к Ливии. — Я умею читать по губам. Мы можем узнать хотя бы то, что говорил Виго Дрейн.\n\nЛивия Умай кивает и протягивает ей руки. Кано Тур, неожиданно, пытается остановить ее:\n\n— Стойте! Это опасно!\n\nСеет Лиарт активирует световой меч и направляет на Наставника:\n\n— Не дергайся! — предупреждает он. — Это серьезные обвинения! Если эта женщина-форсюзер — последняя, кто была с Виго, она могла его отравить или убить какой-нибудь из техник Темной стороны!\n\nКано Тур, вздрогнувший от резкого выпада джедая-стража, показывает ладони рук перед грудью: мол, спокойнее, я вообще не шевелюсь. Против ожидания, он совсем не волнуется, наоборот, даже как-то расслабился после действий Сеета.\n\nАрладо и Ливия замирают на несколько долгих секунд, после чего вы чувствуете: девушка начинает заваливаться на вас.</Text>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>14</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="175" Text="Все в порядке"/>
@@ -2647,10 +2639,9 @@
 		<Paragraph>
 			<Id>245</Id>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>16</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="257" Text="Все в порядке"/>
@@ -2764,10 +2755,9 @@
 		<Paragraph>
 			<Id>256</Id>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>25</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="257" Text="Все в порядке"/>
@@ -3499,8 +3489,7 @@
 			<Id>318</Id>
 			<Text>Начинается дуэль на световых мечах.</Text>	
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -3510,7 +3499,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Thrust" Empty="true"/>
@@ -3558,14 +3547,12 @@
 				<Modification Name="EnemyThrust" Value="1"/>
 			</Modifications>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<After>
 						<Text>— Как тебе такой удар? — спрашивает он, явно довольный собой, и принимает защитную стойку. — Твоя очередь атаковать! Покажи, на что способен!</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</DiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -3574,7 +3561,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="320" Text="Если вам удалось отбавить Выносливость противника до 15"/>
@@ -3586,8 +3573,7 @@
 			<Id>322</Id>
 			<Text>Получив второй укол, противник чуть отступает. Он явно раздосадован тем, как обстоит дело, но по-прежнему настроен на победу.\n\nКороткая передышка нужна и вам.\n\nНо не проходит и секунды, как противник атакует снова, на этот раз, активировав Скорости Силы. Вы тоже используете эту технику, по-другому бороться с ней не получится.\n\nПродолжается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -3595,7 +3581,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="338" Text="Ваша Выносливость упала до 0"/>
@@ -3629,16 +3615,14 @@
 			<Id>325</Id>
 			<Text>Толчок Силы сносит Кирка в сторону и он падает на пол (бросьте кубик и вычтите из его Выносливости выпавшее число + ранг вашего Толчка Силы):</Text>	
 			<Actions>
-				<Action>
-					<Type>EnemyDiceWounds</Type>
+				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Кирк Драгус,30</Enemy>
 					<After>
 						<Text>Вы бросаетесь на противника.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</EnemyDiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -3647,7 +3631,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -3659,8 +3643,7 @@
 			<Id>326</Id>
 			<Text>Идея не слишком удачная — пусть вам и удалось подняться выше противника, это никаких дивидендов не дало — удар мечами, вы приземляетесь, и снова сходитесь в бою.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -3669,7 +3652,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -3697,8 +3680,7 @@
 				<Text>Продолжается дуэль на световых мечах:</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -3708,7 +3690,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="DarkSide" Value="50"/>
@@ -3724,8 +3706,7 @@
 			<Id>329</Id>
 			<Text>Вы решаете, что тянуть время нет смысла — и активируете Скорость Силы. Противник тоже ускоряется — другого способа противостоять этой технике нет.\n\nПродолжается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -3733,7 +3714,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="338" Text="Ваша Выносливость упала до 0"/>
@@ -3743,8 +3724,7 @@
 		<Paragraph>
 			<Id>330</Id>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -3753,7 +3733,7 @@
 					<After>
 						<Text>Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -3784,8 +3764,7 @@
 				<Text>Продолжается дуэль на световых мечах:</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -3794,7 +3773,7 @@
 					<After>
 						<Text>Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>	
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-5"/>
@@ -3817,10 +3796,9 @@
 			<Id>335</Id>
 			<Text>Вы отпрыгиваете назад, и тащите меч за собой. Кирк, раздосадованный тем, что вы ушли из-под удара, в ответ тянет меч на себя.\n\nНа некоторое время он зависает между вами, застывшими в напряженных позах.</Text>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>20</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="350" Text="Все в порядке"/>
@@ -3836,8 +3814,7 @@
 				<Text>Продолжается дуэль на световых мечах:</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -3845,7 +3822,7 @@
 					<After>
 						<Text>Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="10"/>
@@ -3861,8 +3838,7 @@
 			<Id>337</Id>
 			<Text>С каждым раундом вам все сложнее отбивать атаки противника. Еще две-три проигранных смены позиции, и вы уже не сможете сконцентрироваться и обороняться из-за усталости.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Hitpoints="30"/>
 					</Enemies>
@@ -3870,7 +3846,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -3932,12 +3908,11 @@
 				<Modification Name="EnemyThrust" Value="1"/>
 			</Modifications>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<After>
 						<Text>А Кирку засчитайте еще один укол.</Text>
 					</After>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Options>
 				<Option Destination="344" Text="Он нанес 3 укола" Singleton="УКОЛОВ У ВРАГА > 2"/>
@@ -3955,8 +3930,7 @@
 			<Id>345</Id>
 			<Text>Продолжается дуэль на световых мечах:</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Hitpoints="30"/>
 					</Enemies>
@@ -3964,7 +3938,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="341" Text="Если вам удалось отбавить Выносливость противника до 0"/>
@@ -3983,16 +3957,14 @@
 			<Id>347</Id>
 			<Text>Вы решаетесь на сложный маневр, работать с двумя потоками Силы непросто. Получается на удивление легко: Толчок Силы левой ладонью сметает Кирка, а рукоять светового меча ныряет в правую руку.\n\nПротивник поднимается и бросается на вас (бросьте кубик и отнимите у него выпавшее число + ранг вашей Техники Толчка Силы из Выносливости):</Text>		
 			<Actions>
-				<Action>
-					<Type>EnemyDiceWounds</Type>
+				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Кирк Драгус,30</Enemy>
 					<After>
 						<Text>Продолжается дуэль на световых мечах:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</EnemyDiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -4001,7 +3973,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -4012,10 +3984,9 @@
 		<Paragraph>
 			<Id>348</Id>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>15</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="347" Text="Все в порядке"/>
@@ -4031,16 +4002,14 @@
 				<Text>Толчок Силы отбрасывает готового продолжать атаку Кирка назад, позволяя занять вам защитную позицию. Противник поднимается и бросается на вас (бросьте кубик и отнимите у него выпавшее число + ранг вашей Техники Толчка Силы из Выносливости):</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>EnemyDiceWounds</Type>
+				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Кирк Драгус,30</Enemy>
 					<After>
 						<Text>Продолжается дуэль на световых мечах:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</EnemyDiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -4049,7 +4018,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-5"/>
@@ -4068,8 +4037,7 @@
 				<Text>Вам приходит в голову интересная мысль — возможно, тащить меч на себя и не стоит, а наоборот — направить его на противника, при этом активировав.\n\nКаково же было лицо Кирка Драгуса, когда ему в грудь прилетел ваш световой меч! Смесь боли, растерянности и злости, промелькнувшие на нем, с лихвой восполнили неприятные секунды, когда пришлось уворачиваться от мелькавшего в опасной близости светового меча.\n\nСнова вооружившись, вы нападаете на вставшего в защитную стойку противника.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -4078,7 +4046,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Thrust" Value="1"/>
@@ -4097,8 +4065,7 @@
 				<Text Size="small">Потеряйте 4 Выносливости от ожога.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
@@ -4107,7 +4074,7 @@
 					<After>
 						<Text>Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-5"/>
@@ -4371,8 +4338,7 @@
 			<Id>378</Id>
 			<Text>Начинается дуэль на световых мечах:</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4383,7 +4349,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Thrust" Empty="true"/>
@@ -4425,15 +4391,13 @@
 			<Id>381</Id>
 			<Text>Вы едва успеваете уклониться от атаки Жюля, как он совершает молниеносное движение — и делает зацеп вашей ноги, пытаясь провести подсечку!</Text>
 			<Actions>
-				<Action>
-					<Type>Option</Type>
+				<Option>
 					<Option Destination="420" Text="Вледеете приёмом «Защита от Подсечки»" Availability="Защита от Подсечки">
 						<Text>Иначе придётся бросить кубик:</Text>
 					</Option>
-				</Action>
-				<Action>
-					<Type>SimpleDice</Type>
-				</Action>
+				</Option>
+				<SimpleDice>
+				</SimpleDice>
 			</Actions>
 			<Options>
 				<Option Destination="420" Text="Выпало 1 или 2"/>
@@ -4445,8 +4409,7 @@
 			<Id>382</Id>
 			<Text>Получив второй укол, противник чуть отступает. Он явно раздосадован тем, как обстоит дело, но по-прежнему настроен на победу.\n\nКороткая передышка нужна и вам.\n\nНо не проходит и секунды, как противник атакует снова, на этот раз, активировав Скорости Силы. Вы тоже используете эту технику, по-другому бороться с ней не получится.\n\nПродолжается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4455,7 +4418,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="398" Text="Ваша Выносливость упала до 0"/>
@@ -4489,16 +4452,14 @@
 			<Id>385</Id>
 			<Text>Толчок Силы сносит Жюля в сторону и он падает на пол (бросьте кубик и вычтите из его Выносливости выпавшее число и ранг вашего Толчка Силы). Вы бросаетесь на противника.\n\nПродолжается дуэль на световых мечах.</Text>
 			<Actions>
-				<Action>
-					<Type>EnemyDiceWounds</Type>
+				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Жюль Трито,26</Enemy>
 					<After>
 						<Text>Вы бросаетесь на противника. Продолжается дуэль на световых мечах.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</EnemyDiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4508,7 +4469,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -4520,8 +4481,7 @@
 			<Id>386</Id>
 			<Text>Идея не слишком удачная — пусть вам и удалось подняться выше противника, это никаких дивидендов не дало — удар мечами, вы приземляетесь, и снова сходитесь в бою.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4531,7 +4491,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -4557,8 +4517,7 @@
 				<Text>Время вы выбрали с одной стороны удачное — нет необходимости поднимать противника в воздух, чтобы он собственным весом себя придушил, а с другой стороны — не слишком хорошее: противник высоко, ударить его не получится.\n\nСпустя некоторое время и, чуть помучившись, Жюль сбрасывает удушение, укрепив тело Силой (отнимите у него 3 Выносливости), и снова бросается на вас.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4569,7 +4528,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="DarkSide" Value="50"/>
@@ -4585,8 +4544,7 @@
 			<Id>389</Id>
 			<Text>Вы решаете, что тянуть время нет смысла — и активируете Скорость Силы. Противник тоже ускоряется — другого способа противостоять этой технике нет.\n\nПродолжается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4595,7 +4553,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="398" Text="Ваша Выносливость упала до 0"/>
@@ -4606,8 +4564,7 @@
 			<Id>390</Id>
 			<Text>Продолжается дуэль на световых мечах:</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4617,7 +4574,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -4648,8 +4605,7 @@
 				<Text>Продолжается дуэль на световых мечах:</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4659,7 +4615,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-5"/>
@@ -4682,10 +4638,9 @@
 			<Id>395</Id>
 			<Text>Вы отпрыгиваете назад, и тащите меч за собой. Жюль, раздосадованный тем, что вы ушли из-под удара, в ответ тянет меч на себя.\n\nНа некоторое время он зависает между вами, застывшими в напряженных позах.</Text>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>21</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="410" Text="Все в порядке"/>
@@ -4701,8 +4656,7 @@
 				<Text>Продолжается дуэль на световых мечах:</Text>
 			</Texts>		
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4711,7 +4665,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="10"/>
@@ -4727,8 +4681,7 @@
 			<Id>397</Id>
 			<Text>С каждым раундом вам все сложнее отбивать атаки противника. Еще две-три проигранных смены позиции, и вы уже не сможете сконцентрироваться и обороняться из-за усталости.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4737,7 +4690,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя.\n\nЖюль Трито знает защиту от Встречного удара, поэтому вам не удастся его провести. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -4796,12 +4749,11 @@
 				<Text>Противник неожиданно наносит Удар с разворота. Бросьте кубик и вычтите у себя выпавшее количество Выносливости:</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<After>
 						<Text>А Жюлю засчитайте еще один укол.</Text>
 					</After>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Modifications>
 				<Modification Name="EnemyThrust" Value="1"/>
@@ -4822,8 +4774,7 @@
 			<Id>405</Id>
 			<Text>Продолжается дуэль на световых мечах:</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4831,7 +4782,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="401" Text="Если вам удалось отбавить Выносливость противника до 0"/>
@@ -4850,16 +4801,14 @@
 			<Id>407</Id>
 			<Text>Вы решаетесь на сложный маневр, работать с двумя потоками Силы непросто. Получается на удивление легко: Толчок Силы левой ладонью сметает Жюля, а рукоять светового меча ныряет в правую руку.\n\nПротивник поднимается и бросается на вас (бросьте кубик и отнимите у него выпавшее число + ранг вашей Техники Толчка Силы из Выносливости):</Text>
 			<Actions>
-				<Action>
-					<Type>EnemyDiceWounds</Type>
+				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Жюль Трито,26</Enemy>
 					<After>
 						<Text>Продолжается дуэль на световых мечах:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</EnemyDiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4869,7 +4818,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -4880,10 +4829,9 @@
 		<Paragraph>
 			<Id>408</Id>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>25</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="407" Text="Все в порядке"/>
@@ -4899,16 +4847,14 @@
 				<Text>Толчок Силы отбрасывает готового продолжать атаку Жюля назад, позволяя занять вам защитную позицию. Противник поднимается и бросается на вас (бросьте кубик и отнимите у него выпавшее число + ранг вашей Техники Толчка Силы из Выносливости):</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>EnemyDiceWounds</Type>
+				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Жюль Трито,26</Enemy>
 					<After>
 						<Text>Продолжается дуэль на световых мечах:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</EnemyDiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4918,7 +4864,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="EnemyThrust" Value="1"/>
@@ -4937,8 +4883,7 @@
 				<Text>Вам приходит в голову интересная мысль — возможно, тащить меч на себя и не стоит, а наоборот — направить его на противника, при этом активировав.\n\nКаково же было лицо Жюля Трито, когда ему в грудь прилетел ваш световой меч! Смесь боли, растерянности и злости, промелькнувшие на нем, с лихвой восполнили неприятные секунды, когда пришлось уворачиваться от мелькавшего в опасной близости светового меча.\n\nСнова вооружившись, вы нападаете на вставшего в защитную стойку противника.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4948,7 +4893,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Thrust" Value="1"/>
@@ -4968,8 +4913,7 @@
 				<Text>С кривой улыбкой превосходства Жюль Трито снова атакует вас.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -4979,7 +4923,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-4"/>
@@ -4995,8 +4939,7 @@
 			<Id>412</Id>
 			<Text>Вы решаете не тянуть время, и активируете Скорость Силы, агрессивно атакуя противника.\n\nПродолжается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -5005,7 +4948,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="398" Text="Ваша Выносливость упала до 0"/>
@@ -5083,8 +5026,7 @@
 				<Text>Противник, рыкнув от разочарования, атакует с удвоенной яростью.</Text>
 			</Texts>	
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -5094,7 +5036,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-1"/>
@@ -5112,8 +5054,7 @@
 				<Text>Вы теряете равновесие и Жюль, воспользовавшись этим, наносит укол в левую руку.\n\n— Споткнулся? — насмешливо спрашивает он, подмигивая.\n\nВ ответ вы бросаетесь на него с удвоенной яростью.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -5123,7 +5064,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-6"/>
@@ -5142,8 +5083,7 @@
 				<Text>Вы падаете Жюль, воспользовавшись этим, наносит два укола.\n\n— Ноги не держат? — насмешливо спрашивает он, подмигивая.\n\nВ ответ вы бросаетесь на него с удвоенной яростью.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
@@ -5153,7 +5093,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-10"/>
@@ -5283,8 +5223,7 @@
 			<Id>435</Id>
 			<Text>Начинается дуэль на световых мечах.</Text>	
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5294,7 +5233,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Thrust" Empty="true"/>
@@ -5338,14 +5277,12 @@
 				<Text>После очередного с трудом отраженного выпада вы чуть открываетесь, Артхт делает молниеносное движение — и наносит укол!\n\nБросьте кубик и вычтите выпавшее число из Выносливости:</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<After>
 						<Text>— Как тебе такой удар? — спрашивает он, явно довольный собой, и принимает защитную стойку. — Твоя очередь атаковать! Покажи, на что способен!</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</DiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5354,7 +5291,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Thrust" Value="1"/>
@@ -5369,8 +5306,7 @@
 			<Id>439</Id>
 			<Text>Получив второй укол, противник чуть отступает. Он явно раздосадован тем, как обстоит дело, но по-прежнему настроен на победу.\n\nКороткая передышка нужна и вам не помешает.\n\nНо не проходит и секунды, как противник атакует снова, на этот раз, активировав Скорости Силы. Вы тоже используете эту технику, по-другому бороться с ней не получится.\n\nПродолжается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5378,7 +5314,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="455" Text="Ваша Выносливость упала до 0"/>
@@ -5412,16 +5348,14 @@
 			<Id>442</Id>
 			<Text>Толчок Силы сносит Артхта в сторону и он падает на пол (бросьте кубик и вычтите из его Выносливости выпавшее число и ранг вашего Толчка Силы):</Text>
 			<Actions>
-				<Action>
-					<Type>EnemyDiceWounds</Type>
+				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Артхт Тархтхтх,24</Enemy>
 					<After>
 						<Text>Вы бросаетесь на противника.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</EnemyDiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5430,7 +5364,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -5442,8 +5376,7 @@
 			<Id>443</Id>
 			<Text>Идея не слишком удачная — пусть вам и удалось подняться выше противника, это никаких дивидендов не дало — удар мечами, вы приземляетесь, и снова сходитесь в бою.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5452,7 +5385,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -5478,8 +5411,7 @@
 				<Text>Время вы выбрали с одной стороны удачное — нет необходимости поднимать противника в воздух, чтобы он собственным весом себя придушил, а с другой стороны — не слишком хорошее: противник высоко, ударить его не получится.\n\nСпустя некоторое время и, чуть помучившись, Артхт Тархтхтх сбрасывает удушение, укрепив тело Силой (отнимите у него 3 Выносливости), и снова бросается на вас.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5489,7 +5421,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="DarkSide" Value="50"/>
@@ -5505,8 +5437,7 @@
 			<Id>446</Id>
 			<Text>Вы решаете, что тянуть время нет смысла — и активируете Скорость Силы. Противник тоже ускоряется — другого способа противостоять этой технике нет.\n\nПродолжается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5514,7 +5445,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="455" Text="Ваша Выносливость упала до 0"/>
@@ -5525,8 +5456,7 @@
 			<Id>447</Id>
 			<Text>Продолжается дуэль на световых мечах.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5535,7 +5465,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>	
 			<Options>
 				<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -5564,8 +5494,7 @@
 				<Text>Решив, что оставите этот укол как фору для Артхта Тархтхтха, ловите меч. Удар противника оставляет неприятные ожоги на предплечье, но вы сжимаете зубы и продолжаете бой.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5574,7 +5503,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-5"/>
@@ -5597,10 +5526,9 @@
 			<Id>452</Id>
 			<Text>Вы отпрыгиваете назад, и тащите меч за собой. Артхт Тархтхтх, раздосадованный тем, что вы ушли из-под удара, в ответ тянет меч на себя.\n\nНа некоторое время он зависает между вами, застывшими в напряженных позах.</Text>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>23</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="467" Text="Все в порядке"/>
@@ -5616,8 +5544,7 @@
 				<Text>Продолжается дуэль на световых мечах.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5625,7 +5552,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="10"/>
@@ -5641,8 +5568,7 @@
 			<Id>454</Id>
 			<Text>С каждым раундом вам все сложнее отбивать атаки противника. Еще две-три проигранных смены позиции, и вы уже не сможете сконцентрироваться и обороняться из-за усталости.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5650,7 +5576,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -5712,12 +5638,11 @@
 				<Modification Name="EnemyThrust" Value="1"/>
 			</Modifications>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<After>
 						<Text>А Артхта Тархтхтху засчитайте еще один укол.</Text>
 					</After>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Options>
 				<Option Destination="461" Text="Он нанес 3 укола" Singleton="УКОЛОВ У ВРАГА > 2"/>
@@ -5735,8 +5660,7 @@
 			<Id>462</Id>
 			<Text>Продолжается дуэль на световых мечах.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5744,7 +5668,7 @@
 					<After>
 						<Text>Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="458" Text="Если вам удалось отбавить Выносливость противника до 0"/>
@@ -5763,16 +5687,14 @@
 			<Id>464</Id>
 			<Text>Вы решаетесь на сложный маневр, работать с двумя потоками Силы непросто. Получается на удивление легко: Толчок Силы левой ладонью сметает Артхта Тархтхтха, а рукоять светового меча ныряет в правую руку.\n\nПротивник поднимается и бросается на вас (бросьте кубик и отнимите у него выпавшее число + ранг вашей Техники Толчка Силы из Выносливости):</Text>
 			<Actions>
-				<Action>
-					<Type>EnemyDiceWounds</Type>
+				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Артхт Тархтхтх,24</Enemy>
 					<After>
 						<Text>Продолжается дуэль на световых мечах.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</EnemyDiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5781,7 +5703,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
@@ -5792,10 +5714,9 @@
 		<Paragraph>
 			<Id>465</Id>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>25</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="464" Text="Все в порядке"/>
@@ -5809,16 +5730,14 @@
 				<Text>К сожалению, вы не успеваете применить технику до удара, и перераспределить поток Силы удается уже только после того, как вы поймали меч, а Артхт Тархтхтх нанес укол. Удар противника оставляет неприятные ожоги на предплечье.\n\nТолчок Силы отбрасывает готового продолжать атаку Кирка назад, позволяя занять вам защитную позицию. Противник поднимается и бросается на вас (бросьте кубик и отнимите у него выпавшее число + ранг вашей Техники Толчка Силы из Выносливости):</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>EnemyDiceWounds</Type>
+				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Артхт Тархтхтх,24</Enemy>
 					<After>
 						<Text>Продолжается дуэль на световых мечах.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</EnemyDiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5827,7 +5746,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-5"/>
@@ -5846,8 +5765,7 @@
 				<Text>Вам приходит в голову интересная мысль — возможно, тащить меч на себя и не стоит, а наоборот — направить его на противника, при этом активировав.\n\nКаково же было лицо Артхта Тархтхтха, когда ему в грудь прилетел ваш световой меч! Смесь боли, растерянности и злости, промелькнувшие на нем, с лихвой восполнили неприятные секунды, когда пришлось уворачиваться от мелькавшего в опасной близости светового меча.\n\nСнова вооружившись, вы нападаете на вставшего в защитную стойку противника.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5856,7 +5774,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Thrust" Value="1"/>
@@ -5874,8 +5792,7 @@
 				<Text>Едва вам удалось стабилизировать положение меча, не давая Артхту Тархтхтху притянуть его, противник поменял тактику. Вместо того чтобы тащить меч на себя, он позволил вам притянуть меч, только сам ускорил и активировал клинок!\n\n— Ш-ш-ш! — зашипела ваша туника на груди, когда луч тренировочного меча прилетел в район сердца.\n\n— Ш-ш-ш, — зашипели и вы, деактивируя меч, взяв его в руку.\n\nС кривой превосходства Артхт Тархтхтх снова атаковал вас.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5884,7 +5801,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-4"/>
@@ -5900,8 +5817,7 @@
 			<Id>469</Id>
 			<Text>Вы решаете не тянуть время, и активируете Скорость Силы, агрессивно атакуя противника.\n\nПродолжается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
@@ -5909,7 +5825,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="455" Text="Ваша Выносливость упала до 0"/>
@@ -6230,14 +6146,12 @@
 				<Text>Легким воздействием вы внедряете Корпускулу Комы в мозг Марики Затт, и она падает к вашим ногам.\n\nВ ту же секунду вас атакует Эван, вы отражаете его удар и получаете укол от второго противника (бросьте кубик и вычтите выпавшее число из Выносливости):</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<After>
 						<Text>Вы вынуждены переключиться на Скорость Силы, иначе никакого владения мечом не будет достаточно, чтобы успевать отбить атаки обоих оставшихся противников.\n\nНачинается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</DiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Эван Макгил" Skill="8" Rang="2" Speed="3" Hitpoints="20"/>
 						<Enemy Name="Винс Гирт" Skill="10" Rang="3" Speed="2" Hitpoints="22"/>
@@ -6246,7 +6160,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<RemoveTriggers>Корпускула Комы</RemoveTriggers>
 			<Triggers>Темная сторона</Triggers>
@@ -6266,8 +6180,7 @@
 				<Text>Легким воздействием вы внедряете Корпускулу Комы в мозг Эвана Макгила, и он падает к вашим ногам.\n\nВ ту же секунду вас атакует Марика, вы отражаете ее удар и уходите от второго противника. Вы вынуждены переключиться на Скорость Силы, иначе никакого владения мечом не будет достаточно, чтобы успевать отбить атаки обоих оставшихся соперников.\n\nНачинается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 						<Enemy Name="Винс Гирт" Skill="10" Rang="3" Speed="2" Hitpoints="22"/>
@@ -6276,7 +6189,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="DarkSide" Value="50"/>
@@ -6296,8 +6209,7 @@
 				<Text>Легким воздействием вы внедряете Корпускулу Комы в мозг Винса Гарта, и он падает к вашим ногам.\n\nВ ту же секунду вас атакует Марика, вы отражаете ее удар и уходите от второго противника. Вы вынуждены переключиться на Скорость Силы, иначе никакого владения мечом не будет достаточно, чтобы успевать отбить атаки обоих оставшихся соперников.\n\nНачинается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 						<Enemy Name="Эван Макгил" Skill="8" Rang="2" Speed="3" Hitpoints="20"/>
@@ -6306,7 +6218,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="DarkSide" Value="50"/>
@@ -6337,8 +6249,7 @@
 			<Id>505</Id>
 			<Text>Начинается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 						<Enemy Name="Эван Макгил" Skill="8" Rang="2" Speed="3" Hitpoints="20"/>
@@ -6348,7 +6259,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="DarkSide" Value="50"/>
@@ -6623,8 +6534,7 @@
 			<Id>534</Id>
 			<Text>Начинается дуэль на световых мечах.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -6635,7 +6545,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="570" Text="Если у вас есть Корпускула Комы, и вы хотите ее использовать" Availability="Корпускула Комы"/>
@@ -6676,8 +6586,7 @@
 			<Id>538</Id>
 			<Text>Получив второй укол, противница чуть отступает. Она явно раздосадована тем, как обстоит дело, но по-прежнему настроена на победу.\n\nКороткая передышка нужна и вам...\n\nНо не проходит и секунды, как противница атакует снова, на этот раз, активировав Скорости Силы. Вы тоже используете эту технику, по-другому бороться с ней не получится.\n\nПродолжается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -6686,7 +6595,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="554" Text="Ваша Выносливость упала до 0"/>
@@ -6720,16 +6629,14 @@
 			<Id>541</Id>
 			<Text>Толчок Силы сносит Марику Затт в сторону, и она падает на пол (бросьте кубик и вычтите из ее Выносливости выпавшее число и ранг вашего Толчка Силы):</Text>
 			<Actions>
-				<Action>
-					<Type>EnemyDiceWounds</Type>
+				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Марика Затт,25</Enemy>
 					<After>
 						<Text>Вы бросаетесь на противницу. Продолжается дуэль на световых мечах.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</EnemyDiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -6739,7 +6646,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
@@ -6751,8 +6658,7 @@
 			<Id>542</Id>
 			<Text>Идея не слишком удачная — пусть вам и удалось подняться выше противницы, это никаких дивидендов не дало — удар мечами, вы приземляетесь, и снова сходитесь в бою.\n\nПродолжается дуэль на световых мечах.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -6762,7 +6668,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
@@ -6788,8 +6694,7 @@
 				<Text>Время вы выбрали с одной стороны удачное — нет необходимости поднимать противницу в воздух, чтобы он собственным весом себя придушил, а с другой стороны — не слишком хорошее: противница высоко, ударить ее не получится.\n\nСпустя некоторое время и, чуть помучившись, Марика сбрасывает удушение, укрепив тело Силой (отнимите у нее 3 Выносливости), и снова бросается на вас.\n\nПродолжается дуэль на световых мечах.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -6800,7 +6705,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="DarkSide" Value="50"/>
@@ -6817,8 +6722,7 @@
 			<Id>545</Id>
 			<Text>Вы решаете, что тянуть время нет смысла — и активируете Скорость Силы. Противница тоже ускоряется — другого способа противостоять этой технике нет.\n\nПродолжается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -6827,7 +6731,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="554" Text="Ваша Выносливость упала до 0"/>
@@ -6838,8 +6742,7 @@
 			<Id>546</Id>
 			<Text>Продолжается дуэль на световых мечах.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -6849,7 +6752,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
@@ -6880,8 +6783,7 @@
 				<Text>Продолжается дуэль на световых мечах.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -6891,7 +6793,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-5"/>
@@ -6914,10 +6816,9 @@
 			<Id>551</Id>
 			<Text>Вы отпрыгиваете назад, и тащите меч за собой. Марика раздосадованный тем, что вы ушли из-под удара, в ответ тянет меч на себя.\n\nНа некоторое время он зависает между вами, застывшими в напряженных позах.</Text>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>22</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="566" Text="Все в порядке"/>
@@ -6933,8 +6834,7 @@
 				<Text>Продолжается дуэль на световых мечах.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -6943,7 +6843,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="10"/>
@@ -6959,8 +6859,7 @@
 			<Id>553</Id>
 			<Text>С каждым раундом вам все сложнее отбивать атаки противника. Еще две-три проигранных смены позиции, и вы уже не сможете сконцентрироваться и обороняться из-за усталости.\n\nПродолжается дуэль на световых мечах.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -6969,7 +6868,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
@@ -7028,9 +6927,8 @@
 				<Text>Противница неожиданно наносит Удар с разворота. Бросьте кубик и вычтите у себя выпавшее количество Выносливости:</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
-				</Action>
+				<DiceWounds>
+				</DiceWounds>
 			</Actions>
 			<Modifications>
 				<Modification Name="EnemyThrust" Value="1"/>
@@ -7051,8 +6949,7 @@
 			<Id>561</Id>
 			<Text>Продолжается дуэль на световых мечах.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -7061,7 +6958,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="557" Text="Если вам удалось отбавить Выносливость противницы до 0"/>
@@ -7080,16 +6977,14 @@
 			<Id>563</Id>
 			<Text>Вы решаетесь на сложный маневр, работать с двумя потоками Силы непросто. Получается на удивление легко: Толчок Силы левой ладонью сметает Марику, а рукоять светового меча ныряет в правую.\n\nПротивница поднимается и бросается на вас (бросьте кубик и отнимите у нее выпавшее число + ранг вашей Техники Толчка Силы из Выносливости):</Text>
 			<Actions>
-				<Action>
-					<Type>EnemyDiceWounds</Type>
+				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Марика Затт,25</Enemy>
 					<After>
 						<Text>Продолжается дуэль на световых мечах.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</EnemyDiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -7099,7 +6994,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
@@ -7110,10 +7005,9 @@
 		<Paragraph>
 			<Id>564</Id>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>25</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="563" Text="Все в порядке"/>
@@ -7129,16 +7023,14 @@
 				<Text>Толчок Силы отбрасывает готовую продолжать атаку Марику назад, позволяя занять вам защитную позицию. Противница поднимается и бросается на вас (бросьте кубик и отнимите у нее выпавшее число + ранг вашей Техники Толчка Силы из Выносливости):</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>EnemyDiceWounds</Type>
+				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Марика Затт,25</Enemy>
 					<After>
 						<Text>Продолжается дуэль на световых мечах.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</EnemyDiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -7148,7 +7040,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="EnemyThrust" Value="1"/>
@@ -7166,8 +7058,7 @@
 				<Text>Вам приходит в голову интересная мысль — возможно, тащить меч на себя и не стоит, а наоборот — направить его на противника, при этом активировав.\n\nКаково же было лицо Марики Затт, когда ей в грудь прилетел ваш световой меч! Смесь боли, растерянности и злости, промелькнувшие на нем, с лихвой восполнили неприятные секунды, когда пришлось уворачиваться от мелькавшего в опасной близости светового меча.\n\nСнова вооружившись, вы нападаете на вставшую в защитную стойку противницу.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -7177,7 +7068,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Thrust" Value="1"/>
@@ -7197,8 +7088,7 @@
 				<Text>С кривой улыбкой превосходства Марика Затт снова атакует вас.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -7208,7 +7098,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-4"/>
@@ -7224,8 +7114,7 @@
 			<Id>568</Id>
 			<Text>Вы решаете не тянуть время, и активируете Скорость Силы, агрессивно атакуя противника.\n\nПродолжается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -7234,7 +7123,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="554" Text="Ваша Выносливость упала до 0"/>
@@ -7308,8 +7197,7 @@
 			<Id>576</Id>
 			<Text>Вы ожидаете этого, и привычным движением меняете вектор атаки, направляя удар в руку противницы. Но она, резко крутнув кистью, отражает ваш клинок.\n\n— Неплохая попытка, — замечает она. Спеси в ее голосе поубавилось, но она по-прежнему крайне уверена в себе.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -7319,7 +7207,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="536" Text="Если вам удалось отбавить Выносливость противницы до 15"/>
@@ -7334,14 +7222,12 @@
 				<Text>Вы получаете скользящий удар в бок — ничего серьезного, царапина  — но неприятно, что это засчитывается как укол (бросьте кубик и вычтите выпавшее число из Выносливости):</Text>
 			</Texts>	
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<After>
 						<Text>— Как тебе такой приемчик? — с издевкой интересуется Марика Затт.\n\nВ ответ вы бросаетесь на нее с удвоенной яростью.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SwordFight</Type>
+				</DiceWounds>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					</Enemies>
@@ -7350,7 +7236,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя.\n\nБой с двумя соперниками крайне энергозатратен, они подстраховывают друг друга, и применение приемов невозможно.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Modifications>
 				<Modification Name="EnemyThrust" Value="1"/>
@@ -7579,10 +7465,9 @@
 				<Text>Ливия Умай не дает вам ничего сделать — и быстро подняв руку, ТОЛКАЕТ вас.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>25</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Triggers>Одиночка</Triggers>
 			<Options>
@@ -7613,9 +7498,8 @@
 				<Text>Вас отбрасывает на несколько метров назад на песок (бросьте кубик и отнимите выпавшее число у себя из Выносливости):</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
-				</Action>
+				<DiceWounds>
+				</DiceWounds>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-3"/>
@@ -7629,10 +7513,9 @@
 			<Id>606</Id>
 			<Text>Едва вы снова занимаете устойчивое положение, как понимаете, что больше не ВИДИТЕ Ливию!</Text>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>26</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="607" Text="Все в порядке"/>
@@ -7651,13 +7534,12 @@
 			<Id>608</Id>
 			<Text>Понимания Силы не хватает, чтобы вовремя ощутить, откуда будет атака Ливии, и универсальный кувырок вперед вы делаете уже после того, как ее меч вонзается в плечо (бросьте кубик и вычтите выпавшее число у себя из Выносливости, отметьте, что вам нанесли укол):</Text>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<After>
 						<Text>Вы вскакиваете, а она снова ТОЛКАЕТ вас, отбрасывая назад, но вы уже подготовлены, и успеваете вовремя поставить блок.</Text>
 						<Text Size="small">Отнимите 1 у себя из Выносливости.\n</Text>
 					</After>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-1"/>
@@ -7690,12 +7572,11 @@
 				<Text>Пытаясь сопротивляться Удушению Силы, вы упускаете момент атаки Ливии, и она наносит вам укол в лодыжку (бросьте кубик и вычтите выпавшее число у себя из Выносливости):</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<After>
 						<Text>В ярости от боли, вы разрываете стальную хватку вокруг горла и приземляетесь на песок.</Text>
 					</After>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Modifications>
 				<Modification Name="StrengtheningTheBody" Value="1"/>
@@ -7710,8 +7591,7 @@
 			<Id>612</Id>
 			<Text>Вы активируете Скорость Силы прежде, чем Ливия Умай использует еще одну из своих бесконечных уловок.\n\nНачинается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Ливия Умай" Skill="8" Rang="2" Speed="3" Hitpoints="15"/>
 					</Enemies>
@@ -7719,7 +7599,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="615" Text="Ваша Выносливость упала до 0"/>
@@ -7830,10 +7710,9 @@
 			<Id>625</Id>
 			<Text>Дарий усмехается, как-то нехорошо обнажая зубы:\n\n— Лучше бы тебе не видеть того, что здесь происходит, Кай. Сидел бы себе в кантине, нет, приперся.\n\nОн делает стремительно еще шаг вперед и атакует вас ударом в шею!</Text>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>22</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="628" Text="Все в порядке"/>
@@ -7844,10 +7723,9 @@
 			<Id>626</Id>
 			<Text>— Ага! — хищно усмехается Дарий. — И не один!\n\nОн делает стремительно еще шаг вперед и атакует вас ударом в шею!</Text>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>22</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="628" Text="Все в порядке"/>
@@ -7858,10 +7736,9 @@
 			<Id>627</Id>
 			<Text>К вашему удивлению, Дарий делает маленький шажок назад. Глаза его делают резкие движения влево-вправо, как будто в поисках чего-то несуществующего у вас за спиной.\n\n— Я тут... — он запинается. — Слежу, чтобы никто из техников не помешал...\n\n— И кому тут не надо мешать? — вы делаете шаг вперед. Дарий отступает:\n\n— ...учителю...\n\nВы делаете еще шаг вперед, внимательно осматриваясь:\n\n— Твой учитель ведь ранен и остался там, где вы поймали Арладо Ураки. Дарий внезапно оживает и надменно усмехается:\n\n— Ты просто ничего не понимаешь. Влез туда, куда не следовало. И за это поплатишься!\n\nОн делает стремительно шаг вперед и атакует вас ударом в шею!</Text>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>20</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="628" Text="Все в порядке"/>
@@ -8093,10 +7970,9 @@
 		<Paragraph>
 			<Id>655</Id>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>26</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="662" Text="Все в порядке"/>
@@ -8106,10 +7982,9 @@
 		<Paragraph>
 			<Id>656</Id>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>24</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="662" Text="Все в порядке"/>
@@ -8119,10 +7994,9 @@
 		<Paragraph>
 			<Id>657</Id>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>28</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="664" Text="Все в порядке"/>
@@ -8133,10 +8007,9 @@
 			<Id>658</Id>
 			<Text>Легким усилием воли вы направляете в Даммара Ви Корпускулу Комы, и бывший соклан падает на пол, как подкошенный.\n\nАрладо Ураки удивленно восклицает:\n\n— И после этого ты отказываешься от ученичества у меня?! Я УЖЕ научила тебя большему, чем эта заносчивая джедайка!\n\nВ ответ Арладо Ураки ТОЛКАЕТ вас, а Арко Миратед нападает на Юлиану ван Хельт.</Text>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>23</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="667" Text="Все в порядке"/>
@@ -8238,10 +8111,9 @@
 		<Paragraph>
 			<Id>670</Id>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>24</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="675" Text="Все в порядке"/>
@@ -8251,10 +8123,9 @@
 		<Paragraph>
 			<Id>671</Id>
 			<Actions>
-				<Action>
-					<Type>ForceTest</Type>
+				<ForceTest>
 					<Level>30</Level>
-				</Action>
+				</ForceTest>
 			</Actions>
 			<Options>
 				<Option Destination="672" Text="Все в порядке"/>
@@ -8284,8 +8155,7 @@
 			<Id>674</Id>
 			<Text>В первой же атаке вы понимаете: разрыв в технике настолько велик, что лишь Скорость Силы может хоть как-то компенсировать его.\n\nНачинается дуэль на световых мечах с использованием Скорости Силы. Каждый противник теряет дополнительные пункты Выносливости за каждый раунд боя, независимо от его исхода.</Text>
 			<Actions>
-				<Action>
-					<Type>SwordFight</Type>
+				<SwordFight>
 					<Enemies>
 						<Enemy Name="Арладо Ураки" Skill="18" Rang="2" Speed="3" Hitpoints="30" SwordTechnique="Confidence"/>
 					</Enemies>
@@ -8294,7 +8164,7 @@
 					<After>
 						<Text>Вы можете выбрать любую из изученных техник боя. Вся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится.</Text>
 					</After>
-				</Action>
+				</SwordFight>
 			</Actions>
 			<Options>
 				<Option Destination="677" Text="Ваша Выносливость упала до 0"/>
