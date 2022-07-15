@@ -82,8 +82,7 @@
 			<Id>7</Id>
 			<Text>Похоже, вы нащупали уязвимое место монстра. Но учтите - даже если вы выигрываете раунд, у вас может не получится перерубить ногу твари с первого удара. Выиграв раунд, кидайте кубик. Чет - вам повезло, нечет - увы, вы ее даже не ранили.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ТВАРЬ ИЗ КУРГАНА" Strength="14" Hitpoints="8"/>
 					</Enemies>
@@ -91,7 +90,7 @@
 					<After>
 						<Text>Если вам удалось подрубить ей все 4 ноги:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="105"/>
@@ -108,13 +107,12 @@
 			<Id>9</Id>
 			<Text>Внезапность атаки застает вас врасплох. Свистнув в воздухе, гибкая, но увесистая ветка вроде бы мирного дерева хлестко бьет вас по шее (-4 ЖИЗНИ). От удара вы падаете на колени, слышен новый свист...</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
+				<Reaction>
 					<Button>Реагируйте ещё раз</Button>
 					<After>
 						<Text>Если вы не успеет увернуться, то теряете 3 ЖИЗНИ.</Text>
 					</After>
-				</Action>
+				</Reaction>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-4"/>
@@ -152,10 +150,9 @@
 			<Id>13</Id>
 			<Text>Тварь недоуменно наклоняет плоскую голову, глядя на наглого ведьмака, оказавшегося быстрее ее молниеносного плевка. Вы бросаете взгляд на то место, куда угодила ее слюна (там шипит и скручивается трава), и зря, поскольку гад опять надувает "воротник".</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
+				<Reaction>
 					<Button>Реагируйте еще раз</Button>
-				</Action>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="330" Text="Успели"/>
@@ -180,13 +177,12 @@
 			<Id>16</Id>
 			<Text>Ноги ваши слабеют, и, когда вы вновь достигаете живой, покрытой травой, земли, мутная пелена застилает вам глаза. Бросьте 2 кубика и отнимите выпавшее число от своей ЖИЗНИ:</Text>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<Dices>2</Dices>
 					<After>
 						<Text>Неизвестно, что это было, но надо двигаться дальше...</Text>
 					</After>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Options>
 				<Option Destination="458"/>
@@ -248,15 +244,14 @@
 			<Id>23</Id>
 			<Text>Воспользовавшись начавшейся свалкой, вы тихо покидаете деревню. На околице вас настигает одна, наиболее настырная псина. Схватка неизбежна.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ДИКИЙ ПЕС" Strength="9" Hitpoints="6"/>
 					</Enemies>
 					<After>
 						<Text>Победив, вы раздумываете, куда бы направиться далее...</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="190" Text="За время пребывания в деревне вы получили хоть одну рану, то есть были укушены собакой"/>
@@ -301,15 +296,14 @@
 			<Id>28</Id>
 			<Text>Отличный удар снизу вверх. Разрезанный кочевник падает, но второй достает вас кистенем (-1 ЖИЗНЬ). Сражайтесь:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="КОЧЕВНИК-ХАЗРАТ" Strength="10" Hitpoints="10"/>
 					</Enemies>
 					<After>
 						<Text>Если победа за вами:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-1"/>
@@ -322,21 +316,19 @@
 			<Id>29</Id>
 			<Text>Начинается игра в кошки-мышки между валунами. Где-то вокруг крутятся хазраты, особенно нервирует их шаман: мало ли чего выкинет. Наконец, выглянув из-за валуна, вы видите одного из кочевников. Притаился, гад. Если у вас есть метательный нож вкупе с соответствующим умением, то его бросок будет смертельным для хазрата (ведь можно тщательно прицелиться).</Text>
 			<Actions>
-				<Action>
-					<Type>Option</Type>
+				<Option>
 					<Option Destination="343" Text="Убить его метательным ножом" Availability="МЕТАТЕЛЬ">
 						<Text>Иначе - деритесь:</Text>
 					</Option>
-				</Action>
-				<Action>
-					<Type>Fight</Type>
+				</Option>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="12"/>
 					</Enemies>
 					<After>
 						<Text>Убив его, можете:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="343" Text="Двигаться дальше между камней"/>
@@ -419,21 +411,19 @@
 			<Id>38</Id>
 			<Text>- Продай ее мне, парень, - умоляет вас колдун. Отказ может быть небезопасен, да и плату он предлагает неплохую. Выбирайте: либо двадцать золотых, либо колдун применит на вас заклинание Благодати (+10 ЖИЗНЕЙ, даже если ваш максимально допустимый уровень ЖИЗНИ будет временно превышен):</Text>
 			<Actions>
-				<Action>
-					<Type>Get</Type>
+				<Get>
 					<Button>Выбрать деньги</Button>
 					<Benefit Name="Gold" Value="20"/>
 					<OnlyOne>WizardPay</OnlyOne>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Выбрать благодать</Button>
 					<Benefit Name="MaxHitpoints" Value="10"/>
 					<OnlyOne>WizardPay</OnlyOne>
 					<After>
 						<Text>Совершив приглянувшийся обмен, вы прощаетесь.</Text>
 					</After>
-				</Action>
+				</Get>
 			</Actions>
 			<Options>
 				<Option Destination="246"/>
@@ -662,18 +652,16 @@
 			<Id>63</Id>
 			<Text>С поверха башни внезапно срывается темный силуэт и расправляет крылья. Это гарпия, и она начинает свой патрульный облет периметра стены. Вжавшись в скудную тень от зубца стены, вы мысленно проклинаете полнолуние.</Text>
 			<Actions>
-				<Action>
-					<Type>Option</Type>
+				<Option>
 					<Option Destination="343" Text="Вы камуфлировались грязью" Availability="Camouflage">
 						<Text>Иначе - бросьте кубик:</Text>
 					</Option>
-				</Action>
-				<Action>
-					<Type>Dice</Type>
+				</Option>
+				<Dice>
 					<After>
 						<Text>Выпал:</Text>
 					</After>
-				</Action>
+				</Dice>
 			</Actions>
 			<Options>
 				<Option Destination="147" Text="Чет"/>
@@ -693,8 +681,7 @@
 			<Id>65</Id>
 			<Text>Взревев, вы бросаетесь в бой.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ТРОГЛОДИТ" Strength="12" Hitpoints="10"/>
 					</Enemies>
@@ -702,7 +689,7 @@
 					<After>
 						<Text>Каждый удар Троглодита будет отнимать 3 жизни. Победив, вы обыскиваете его, но находите лишь массивную серебряную цепь. Пора двигаться дальше:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="132" Text="На север, петляя между холмов"/>
@@ -748,9 +735,8 @@
 			<Id>70</Id>
 			<Text>Шорох. Какая-то тварь вылетает из кустов, целясь в вас:</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="271" Text="Все в порядке"/>
@@ -782,22 +768,18 @@
 			<Id>73</Id>
 			<Text>Чтобы вырваться из развалин, вам потребуется вся ваша скорость. Уворачиваясь от тянущихся к вам лап, вы должны СРЕАГИРОВАТЬ четыре раза подряд:</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
+				<Reaction>
 					<Button>Реагируйте первый раз</Button>
-				</Action>
-				<Action>
-					<Type>Reaction</Type>
+				</Reaction>
+				<Reaction>
 					<Button>Реагируйте второй раз</Button>
-				</Action>
-				<Action>
-					<Type>Reaction</Type>
+				</Reaction>
+				<Reaction>
 					<Button>Реагируйте третий раз</Button>
-				</Action>
-				<Action>
-					<Type>Reaction</Type>
+				</Reaction>
+				<Reaction>
 					<Button>Реагируйте четвёртый раз</Button>
-				</Action>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="193" Text="Вырвались из обители гулов"/>
@@ -863,13 +845,12 @@
 			<Id>81</Id>
 			<Text>Сумрак постепенно сгущается все больше. Вскоре вы проходите мимо обычной лужи, грязь вокруг которой наводит вас на мысль. В качестве ночной маскировки ей можно вымазать лицо.</Text>
 			<Actions>
-				<Action>
-					<Type>Camouflage</Type>
+				<Camouflage>
 					<Button>Разрисовать себя</Button>
 					<After>
 						<Text>Если хотите, то можете это сделать и продолжить путь:</Text>
 					</After>
-				</Action>
+				</Camouflage>
 			</Actions>
 			<Options>
 				<Option Destination="518"/>
@@ -879,9 +860,8 @@
 			<Id>82</Id>
 			<Text>Последняя из гарпий, явно не горя желанием погибнуть, разворачивается и улетает. Вы облегченно переводите дух, но внезапный шорох над головой напоминает о костях под ногами:</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="274" Text="Успели"/>
@@ -899,15 +879,14 @@
 			<Id>84</Id>
 			<Text>Сухая степь постепенно переходит в несколько неровную равнину, покрытую густой травой. Раздвигая высокие стебли, кто-то движется вам навстречу. Из зарослей появляется отощавшая лесная кошка. Неизвестно, что именно согнало пуму с ее привычной среды обитания, но она твердо намерена вами закусить.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПУМА" Strength="9" Hitpoints="6"/>
 					</Enemies>
 					<After>
 						<Text>Она не такой уж опасный противник. Победив, вы раздумываете, куда направится:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="179" Text="На север"/>
@@ -957,44 +936,38 @@
 			<Id>90</Id>
 			<Text>- Вы спасли мою жизнь, так что цены будут чисто символические, - приговаривает торговец, открывая короб. Ассортимент весьма пестрый, но вас могут заинтересовать следующие вещи:</Text>
 			<Actions>
-				<Action>
-					<Type>Get</Type>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Фигурная серебряная чаша</Text>
 					<Triggers>Vessel</Triggers>
 					<Price>3</Price>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Расшитый золотыми нитями пояс</Text>
 					<Trigger>GoldEmbroideredBelt</Trigger>
 					<Price>5</Price>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Рубиновые серьги</Text>
 					<Price>3</Price>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Моток веревки</Text>
 					<Trigger>Rope</Trigger>
 					<Price>2</Price>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Бурдюк с водой (добавит 3 ЖИЗНИ)</Text>
 					<Price>4</Price>
 					<After>
 						<Text>Если у вас есть серебряный подсвечник, торговец может купить его у вас за три золотых:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Sell</Type>
+				</Get>
+				<Sell>
 					<Button>Продать</Button>
 					<Text>Серебряный подсвечник</Text>
 					<Trigger>SilverCandlestick</Trigger>
@@ -1002,7 +975,7 @@
 					<After>
 						<Text>После уходите.</Text>
 					</After>
-				</Action>
+				</Sell>
 			</Actions>
 			<Options>
 				<Option Destination="380"/>
@@ -1167,15 +1140,14 @@
 			<Id>110</Id>
 			<Text>Однообразие равнины постепенно нарушается сочной зеленой травой. Навстречу вам движется галопом красавец жеребец. Залюбовавшись, вы не сразу понимаете, что вороной атакует вас. Красные, налитые кровью глаза не оставляют вам выбора. Меч сам прыгает в руку.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ЖЕРЕБЕЦ" Strength="9" Hitpoints="10"/>
 					</Enemies>
 					<After>
 						<Text>Победив:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="533"/>
@@ -1206,21 +1178,19 @@
 			<Id>113</Id>
 			<Text>Хруст лодыжки, адская боль - вы заработали закрытый перелом. Если у вас есть в запасе ЛЕЧИЛКА, она поможет вам залечить рану (ЖИЗНЕЙ она, конечно, не прибавит), но некоторая хромота все же будет сковывать ваши движения (-1 СИЛА). Полностью исцелить перелом могут лишь две ЛЕЧИЛКИ сразу, но добавят они лишь 4 ЖИЗНИ, а не 12.</Text>
 			<Actions>
-				<Action>
-					<Type>CureFracture</Type>
+				<CureFracture>
 					<Button>Использовать одну Лечилку</Button>
 					<Wound>1</Wound>
 					<OnlyOne>FractureCured</OnlyOne>
-				</Action>
-				<Action>
-					<Type>CureFracture</Type>
+				</CureFracture>
+				<CureFracture>
 					<Button>Использовать две Лечилки</Button>
 					<Wound>2</Wound>
 					<OnlyOne>FractureCured</OnlyOne>
 					<After>
 						<Text>Если вы вылечились, то возвращайтесь и выбирайте путь:</Text>
 					</After>
-				</Action>
+				</CureFracture>
 			</Actions>
 			<Options>
 				<Option Destination="501" Text="Перелом излечен" Availability="FractureCured">
@@ -1233,8 +1203,7 @@
 			<Id>114</Id>
 			<Text>Вращая перед собой мечом, Рамарес нападает.\n\n- Может, сразу бросишь меч, парень?\n\nНу уж дудки. Рамарес, конечно, боец первоклассный, но этот рейд ведьмаков изрядно потрепал его. Во всяком случае, он не прибегнул к своему коронному тигру-оборотню, да и сражаться ему придется лишь левой рукой. Шанс есть. Но во время боя вы не сможете использовать никаких своих спецэффектов, оборотней и заклинаний - ваш бывший наставник слишком хорошо знаком с их слабыми местами. Бой начинается:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="РАМАРЕС" Strength="15"/>
 					</Enemies>
@@ -1243,7 +1212,7 @@
 					<After>
 						<Text>Если вам удастся ранить его три раза:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="520"/>
@@ -1587,18 +1556,16 @@
 			<Id>152</Id>
 			<Text>Смех мага длится так долго, что вы всерьез начинаете опасаться, как бы он не помер. Все еще всхлипывая и вытирая слезы, он говорит:\n\n- Ну молодец, ну насмешил. Даже жалко, что такой веселый парень идет прямо в объятья смерти. Там, - он показывает рукой на север, - пробуждается очень древняя мощь. Тут везде и так видны следы великой магической битвы, той, где был повержен Аксион-Смертоносец... Впрочем, откуда тебе это знать, - колдун пренебрежительно цокает языком. - Но ты мне понравился, парень. Могу кое-чем помочь, не бесплатно, конечно. Вот хотя бы восстановлю тебе заклинания истраченные, кроме того, которое лечит. Могу клинок тебе зачаровать, или даже сеанс ясновидения устроить, может, чего полезного на будущее и узнаешь. За любую услугу беру чисто символическую плату - пять золотых. Ты не волнуйся - магия серая, нейтральная.\n\nВидно, что колдун не из новичков, да и предложения заманчивые. Итак, заплатив 5 монет, вы можете:</Text>
 			<Actions>
-				<Action>
-					<Type>GetMagicBlade</Type>
+				<GetMagicBlade>
 					<Button>Заколдовать</Button>
 					<Text>Заколдовать свой клинок (ваш удар отнимает три ЖИЗНИ)</Text>
 					<Price>5</Price>
-				</Action>
-				<Action>
-					<Type>RestoreSpells</Type>
+				</GetMagicBlade>
+				<RestoreSpells>
 					<Button>Восполнить</Button>
 					<Text>Восполнить недостающие заклинания</Text>
 					<Price>5</Price>
-				</Action>
+				</RestoreSpells>
 			</Actions>
 			<Options>
 				<Option Destination="455" Text="Согласится на сеанс ясновидения"/>
@@ -1676,12 +1643,11 @@
 			<Id>160</Id>
 			<Text>Впереди раздается журчание воды. Вы невольно ускоряете шаг, и вдруг замечаете присосавшуюся к вашему сапогу огромную пиявку.</Text>
 			<Actions>
-				<Action>
-					<Type>LeechFight</Type>
+				<LeechFight>
 					<After>
 						<Text>Если выпадет 1 или 2, то ей удастся прокусить ваш сапог (-2 ЖИЗНИ). В любом случае вы давите ее каблуком и вскоре уже стоите на берегу реки. Одного взгляда достаточно, чтобы понять - мост через реку сгорел давным-давно...</Text>
 					</After>
-				</Action>
+				</LeechFight>
 			</Actions>
 			<Options>
 				<Option Destination="280"/>
@@ -1691,9 +1657,8 @@
 			<Id>161</Id>
 			<Text>Но ваш меч лишь рассекает воздух, поскольку уже в прыжке тварь внезапно меняет траекторию, выпустив крылья, и резко взмывает вверх. Проклятье, инерция удара поворачивает вас влево, а спина не защищена. Шорох сзади...</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="94" Text="Успели"/>
@@ -1724,13 +1689,12 @@
 			<Id>163</Id>
 			<Text>Из кустов показываются двое ландскнехтов, в кольчугах Храма и с арбалетами в руках. Без лишних разговоров они подходят вплотную, и, пока один держит вас под прицелом, второй вырубает прикладом арбалета (бросьте 2 кубика и отнимите выпавшее число от своей ЖИЗНИ):</Text>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<Dices>2</Dices>
 					<After>
 						<Text>Таким ударом только быков на бойне убивать - после этой мысли сознание окутывает спасительная пелена.</Text>
 					</After>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Options>
 				<Option Destination="369" Text="Есть золотой браслет" Availability="GoldBracelet"/>
@@ -1777,8 +1741,7 @@
 			<Id>168</Id>
 			<Text>Атакуют вас они вполне профессионально, со всех сторон. Несмотря на свои небольшие размеры, они довольно опасные противники - стая побольше вас бы просто разорвала.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ВОЛК" Strength="10" Hitpoints="9"/>
 						<Enemy Name="ВТОРОЙ ВОЛК" Strength="9" Hitpoints="8"/>
@@ -1787,7 +1750,7 @@
 					<After>
 						<Text>После победы:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="447"/>
@@ -1811,22 +1774,20 @@
 			<Id>171</Id>
 			<Text>Степняк уже выбил оружие из рук своего противника, но тут вы подходите ближе и он разворачивает коня на вас.</Text>
 			<Actions>
-				<Action>
-					<Type>Option</Type>
+				<Option>
 					<Option Destination="198" Text="ОБОРОТЕНЬ" Availability="ВОЛК">
 						<Modification Name="Transformation"/>
 						<Text>Иначе - деритесь:</Text>
 					</Option>
-				</Action>
-				<Action>
-					<Type>Fight</Type>
+				</Option>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="9"/>
 					</Enemies>
 					<After>
 						<Text>Если вы победили, то:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="487"/>
@@ -1923,8 +1884,7 @@
 			<Id>181</Id>
 			<Text>Надежда, что этот степной падальщик струсит, пропадает, поскольку из-за туши поднимается еще одна гиена. Бой неизбежен:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВАЯ ГИЕНА" Strength="9" Hitpoints="11"/>
 						<Enemy Name="ВТОРАЯ ГИЕНА" Strength="9" Hitpoints="10"/>
@@ -1932,7 +1892,7 @@
 					<After>
 						<Text>Победив, вы размышляете над выбором маршрута. Слева по-прежнему виднеется дорога:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="211" Text="По ней на запад"/>
@@ -2001,8 +1961,7 @@
 			<Id>189</Id>
 			<Text>Смертоносный лук оказывается на земле, но молодой эльф извлекает из ножен легкую смертоносную рапиру:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ЭЛЬФ" Strength="11"/>
 					</Enemies>
@@ -2011,7 +1970,7 @@
 					<After>
 						<Text>Он неплохой фехтовальщик, но не настроен умирать - если вам удастся нанести ему четыре раны, эльф внезапно что-то выкрикивает и исчезает...</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="236"/>
@@ -2021,13 +1980,12 @@
 			<Id>190</Id>
 			<Text>Ваш ведьмачий организм очень чутко реагирует на любого рода отраву, поэтому вы быстро понимаете, что укусивший вас пес был болен. Вполне возможно, что и бешенством. Вас исцелит лишь ЛЕЧИЛКА (причем добавит она не 6, а только 3 ЖИЗНИ):</Text>
 			<Actions>
-				<Action>
-					<Type>CureRabies</Type>
+				<CureRabies>
 					<Button>Воспользоваться Лечилкой</Button>
 					<After>
 						<Text>Если же у вас ее нет, то умереть вы пока не умрете, сутки на ногах еще продержитесь, но вот после каждого боя будете терять 1 СИЛУ (слабеете быстро).</Text>
 					</After>
-				</Action>
+				</CureRabies>
 			</Actions>
 			<Triggers>Rabies</Triggers>
 			<Options>
@@ -2047,12 +2005,11 @@
 			<Id>192</Id>
 			<Text>Чтобы определить, попали ли вы, киньте кубик.</Text>
 			<Actions>
-				<Action>
-					<Type>StoneThrow</Type>
+				<StoneThrow>
 					<After>
 						<Text>Ваш бросок был точен, если вы выкинули 5 или 6, или же если вашей специализацией является метание ножей. Если же вы выкинули другое число, то, увы, промахнулись, и вам придется сражаться с рептилией...</Text>
 					</After>
-				</Action>
+				</StoneThrow>
 			</Actions>
 			<Options>
 				<Option Destination="97" Text="Бросок был точен"/>
@@ -2071,15 +2028,14 @@
 			<Id>194</Id>
 			<Text>Едва переступив порог комнаты, вы понимаете, что предстоит жестокая схватка. Против вас будет всего один противник, но зато далеко не слабый. Это костистый человеко-ящер, он же драконид. Закованный в толстую броню из чешуи, с шипами на хвосте и огромным топором в передних лапах, он еще и полуразумен. Идеальный страж, он выращивается с помощью геномагии и не размножается. Похоже, дверь, которую он охраняет, скрывает за собой нечто ценное.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ДРАКОНИД" Strength="13" Hitpoints="13"/>
 					</Enemies>
 					<After>
 						<Text>Победа - и вы входите в дверь:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="386"/>
@@ -2089,12 +2045,11 @@
 			<Id>195</Id>
 			<Text>Сухая степная земля по мере вашего продвижения постепенно покрывается желтой пыльной травой. Но что это - навстречу вам громадными скачками движется некто. Весьма уродливый, надо заметить: плоская треугольная голова на бочкообразном туловище, передние лапы практически атрофированы, зато задние очень мощные... Это еще что за гадина? Прыгун уже приблизился, затем внезапно остановился, и на его шее начал то надуваться, то опадать странный кожистый воротник. А вот открывается его безгубый рот и...</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
+				<Reaction>
 					<After>
 						<Text>Как у вас со скоростью?</Text>
 					</After>
-				</Action>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="13" Text="Хорошо"/>
@@ -2114,15 +2069,14 @@
 			<Id>197</Id>
 			<Text>Когда тварь срывается с ветки и расправляет крылья, вы с запозданием понимаете, что это была гарпия, переваривающая добычу. Век живи - век учись! Обнажив клинок, вы вступаете в бой:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ГАРПИЯ" Strength="11" Hitpoints="10"/>
 					</Enemies>
 					<After>
 						<Text>Победив, вы обследуете лежащие под деревом человеческие останки и находите кожаный кисет с вышивкой. Больше ничего интересного здесь нет и вы уходите прочь.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="180"/>
@@ -2479,8 +2433,7 @@
 			<Id>237</Id>
 			<Text>Арахнид принимает бой. Будьте осторожны - если он укусит вас более трех раз, то по окончании боя придется потерять еще половину от оставшейся ЖИЗНИ (яд, что вы хотите):</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПАУК" Strength="10" Hitpoints="11"/>
 					</Enemies>
@@ -2488,7 +2441,7 @@
 					<After>
 						<Text>Победив тварь, вы можете вымазать его ядом свой метательный нож (если он у вас имеется), и тогда его бросок будет отнимать у противника не 3, а 4 ЖИЗНИ. Если же ножа у вас нет, то можете проделать ту же манипуляцию с мечом, и в следующем бою ваша СИЛА УДАРА будет аж в 5 ЖИЗНЕЙ, но после первой же схватки яд сойдет. Теперь уходите.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="434"/>
@@ -2523,8 +2476,7 @@
 			<Id>241</Id>
 			<Text>Стараясь держаться в тени стены, вы бесшумно движетесь к воротам. Однако, ваше передвижение не остается незамеченным - из проема навстречу вам выходит страж. Впрочем, его движения настолько стремительны, что вам даже не сразу удается понять, что же это такое. Но от узнавания легче не становится. Это мантикора!! Тело льва, хвост скорпиона и голова, напоминающая человеческую. Некоторое облегчение вы испытываете от осознания, что это не взрослая особь, а детеныш, у которого нет столь ярко выраженных регенерационных и боевых навыков. Но даже этот молодняк - грозный противник. С тихим рыком мантикора атакует:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="МАНТИКОРА" Strength="12" Hitpoints="17"/>
 					</Enemies>
@@ -2532,7 +2484,7 @@
 					<After>
 						<Text>Во время боя через каждые четыре раунда она восстанавливает 1 ЖИЗНЬ. После вашей победы бросьте кубик и добавьте выпавшее к вашей ЖИЗНИ - ее кровь, которой вас забрызгает в схватке, окажет свое целебное воздействие.\n\nПосле победы над монстром-недорослем:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="11"/>
@@ -2565,8 +2517,7 @@
 			<Id>245</Id>
 			<Text>Два клинка со свистом вылетают из ножен и схватка начинается:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="НАЕМНИК" Strength="11" Hitpoints="12"/>
 					</Enemies>
@@ -2574,7 +2525,7 @@
 					<After>
 						<Text>Когда у него остается четыре или менее ЖИЗНЕЙ, наемник предлагает поделиться с вами кое-какой информацией в обмен на то, что вы отпустите его:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="418" Text="Согласитесь"/>
@@ -2707,9 +2658,8 @@
 			<Id>259</Id>
 			<Text>Бросьте кубик:</Text>
 			<Actions>
-				<Action>
-					<Type>Dice</Type>
-				</Action>
+				<Dice>
+				</Dice>
 			</Actions>
 			<Options>
 				<Option Destination="180" Text="Выпал чет">
@@ -2831,8 +2781,7 @@
 			<Id>272</Id>
 			<Text>Стараясь держаться в тени стены, вы медленно движетесь к воротам. Подойдя ближе, вы прислушиваетесь. Еле слышные звуки, доносящиеся изнутри, подтверждают вашу догадку - цитадель обитаема. Внезапно темнота приходит в движение и из проема ворот появляется массивная фигура. Это грифон!! Тело автоматически принимает боевую стойку, но вы понимаете, что шансов выжить у вас маловато. Хотя, если присмотреться, становится ясно, что тварь тоже не в идеальном состоянии: рваные раны на боку, сломанное крыло, ожог на груди - совсем недавно грифон выдержал жестокий бой. Шанс есть! И в глубокой тишине начинается схватка не на жизнь, а на смерть.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ГРИФОН" Strength="13" Hitpoints="10"/>
 					</Enemies>
@@ -2840,7 +2789,7 @@
 					<After>
 						<Text>Каждая нанесённая им рана будет отнимать 3 ЖИЗНИ. Если вы совершили этот подвиг:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="76"/>
@@ -2859,15 +2808,14 @@
 			<Id>274</Id>
 			<Text>Гигантский желтый удав падает с дерева туда, где секунду назад находились вы. Однако рано радоваться - ваши ноги захлестнул его длинный хвост и подтягивает вас к свивающемуся в кольца телу. Но сначала ему придется отведать стали:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="УДАВ" Strength="11" Hitpoints="6"/>
 					</Enemies>
 					<After>
 						<Text>К счастью, достаточно нескольких хороших ударов, чтобы нашинковать эту тварь...</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="523"/>
@@ -2899,8 +2847,7 @@
 			<Id>278</Id>
 			<Text>Останки гада падают на землю, а вы уже сталкиваетесь со вторым:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="БОГОМОЛ" Strength="9" Hitpoints="12"/>
 					</Enemies>
@@ -2908,7 +2855,7 @@
 					<After>
 						<Text>Каждая нанесённая им рана будет отнимать 3 ЖИЗНИ. Победив, переводите дух.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="384"/>
@@ -2997,15 +2944,14 @@
 			<Id>288</Id>
 			<Text>Никаких орлов за дверью нет, но навстречу вам поднимается омерзительный мутант, отдаленно напоминающий человека на четырех ногах. В руках у него оказываются два клинка странной формы, и он без промедления атакует:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ЧЕТЫРЁХНОГИЙ МУТАНТ" Strength="10" Hitpoints="14"/>
 					</Enemies>
 					<After>
 						<Text>Победив, вы осматриваете комнату, но, похоже, самым интересным здесь был ее странный обитатель.\n\nВы возвращаетесь в холл.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="220"/>
@@ -3105,15 +3051,14 @@
 			<Id>298</Id>
 			<Text>Арбалет отлетает в угол и с щелчком разряжается. Гориллоид хватается за нож и схватка начинается:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ОБЕЗЬЯНОЧЕЛОВЕК" Strength="11" Hitpoints="15"/>
 					</Enemies>
 					<After>
 						<Text>После победы:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="503"/>
@@ -3123,9 +3068,8 @@
 			<Id>299</Id>
 			<Text>Выжженная солнцем степь все больше напоминает гигантскую парилку (-1 ЖИЗНЬ), а солнце лишь начинает клониться к западу. И именно оттуда в вашу сторону движутся два всадника. По мере приближения становится ясно - это кочевники-хазраты. Подъехав, они останавливаются. Один из них, высокий и жилистый воин, говорит:\n\n- Доброй дороги, ведьмак. Ты случайно не видел здесь... - и внезапно резко выбрасывает вперед руку. Волосяной аркан со свистом рассекает воздух...</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Modifications>
 				<Modification Name="Hitpoints" Value="-1"/>
@@ -3150,9 +3094,8 @@
 			<Id>301</Id>
 			<Text>В этой спартански обставленной комнате ваше внимание сразу привлекает винтовая лестница в противоположном углу. Рядом с ней дверь, больше, казалось бы, ничего интересного.\n\nОт этого заблуждения вы избавляетесь при виде твари, сорвавшейся с люстры:</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>	
 			<Options>
 				<Option Destination="462" Text="Ваша скорость на высоте">
@@ -3165,9 +3108,8 @@
 			<Id>302</Id>
 			<Text>Насколько вы быстры?</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="225" Text="Успели"/>
@@ -3226,9 +3168,8 @@
 			<Id>309</Id>
 			<Text>Однако, стоит вам подойти ближе, как со спины парня на вас прыгает какая-то тварь.</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="249" Text="Успели"/>
@@ -3239,16 +3180,14 @@
 			<Id>310</Id>
 			<Text>В ответ гигант, разъярившись, отпускает вашу руку и наносит вам удар своим тяжелым кулаком. Вы можете успеть увернуться, если СРЕАГИРУЕТЕ, иначе теряете 4 ЖИЗНИ:</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
+				<Reaction>
 					<Button>Реагируйте</Button>
 					<Damage Name="Hitpoints" Value="-4"/>
 					<After>
 						<Text>Затем вы вступаете в бой. Гигант чертовски силен, его удары отнимут у вас не 2, а 4 ЖИЗНИ. Зато его скорость оставляет желать лучшего. РЕАГИРУЙТЕ во время каждого раунда. Если вы пропустите удар, но в этом раунде ваша реакция на высоте, то вы успеваете увернуться и ничего не теряете.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Fight</Type>
+				</Reaction>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ГИГАНТ" Strength="12" Hitpoints="15"/>
 					</Enemies>
@@ -3256,7 +3195,7 @@
 					<After>
 						<Text>Победив, можете осмотреть хижину.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="210"/>
@@ -3274,9 +3213,8 @@
 			<Id>312</Id>
 			<Text>Кости явно человеческие, лежат тут давно... Краем глаза вы улавливаете в траве какое-то движение.</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="15" Text="Успели"/>
@@ -3286,15 +3224,13 @@
 		<Paragraph>
 			<Id>313</Id>
 			<Actions>
-				<Action>
-					<Type>Option</Type>
+				<Option>
 					<Option Destination="108" Text="Ваша СИЛА не меньше 13" Availability="СИЛА >= 13">
 						<Text>Если она меньше, то еще раз бросьте кубик:</Text>
 					</Option>
-				</Action>
-				<Action>
-					<Type>SimpleDice</Type>
-				</Action>
+				</Option>
+				<SimpleDice>
+				</SimpleDice>
 			</Actions>
 			<Options>
 				<Option Destination="108" Text="Выпало 5 или 6"/>
@@ -3347,22 +3283,20 @@
 			<Id>319</Id>
 			<Text>Ваше движение истолковано храмовником однозначно:\n\n- Хочешь драться?! - рычит он и взмахивает своим топором. Опытный боец в доспехах, да еще и на коне - опасный противник.</Text>
 			<Actions>
-				<Action>
-					<Type>Option</Type>
+				<Option>
 					<Option Destination="508" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ">
 						<Modification Name="Transformation"/>
 						<Text>Иначе - сражайтесь:</Text>
 					</Option>
-				</Action>
-				<Action>
-					<Type>Fight</Type>
+				</Option>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ХРАМОВНИК" Strength="12" Hitpoints="13"/>
 					</Enemies>
 					<After>
 						<Text>Если вы победили:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="104"/>
@@ -3407,15 +3341,14 @@
 			<Id>324</Id>
 			<Text>Однако, демон не намерен отступать, и вы понимаете, что предстоит схватка не на жизнь, а на смерть. Он нападает осторожно, стараясь держаться вне досягаемости вашего страшного оружия:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ДЕМОН" Strength="14" Hitpoints="16"/>
 					</Enemies>
 					<After>
 						<Text>Если вы ранее сумели ранить его стрелой в руку, то уровень СИЛЫ и ЖИЗНИ демона будет меньше на два пункта.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="224"/>
@@ -3482,10 +3415,9 @@
 			<Id>332</Id>
 			<Text>Мощный удар узловатой дубины сбивает вас с ног. Бросьте два кубика и отнимите выпавшее от своей ЖИЗНИ.</Text>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<Dices>2</Dices>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Options>
 				<Option Destination="65">
@@ -3550,15 +3482,14 @@
 			<Id>340</Id>
 			<Text>Со склона навстречу вам неуклюже спрыгивает кряжистый пещерный тролль. Его глаза жмурятся от яркого дневного света, но он атакует, размахивая здоровенной дубиной:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ТРОЛЛЬ" Strength="9" Hitpoints="12"/>
 					</Enemies>
 					<After>
 						<Text>Убив его, осматриваете труп. Странно, очень странно - в Академии вам недвусмысленно утверждали, что горные тролли существа сугубо ночные, днем впадающие в спячку. С другой стороны вы понимаете, что столкнись вы с ним ночью где-нибудь в пещере, и вы бы так легко не отделались.\n\nНа шее у него висит симпатичный костяной амулет в виде чьей-то рогатой головы. Можете взять его и уходите.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="515"/>
@@ -3582,12 +3513,11 @@
 			<Id>343</Id>
 			<Text>Еще с одним хазратом вы сталкиваетесь около идола:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="12"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="532"/>
@@ -3606,8 +3536,7 @@
 			<Id>345</Id>
 			<Text>Гарпии атакуют вас:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 						<Enemy Name="ВТОРАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
@@ -3617,7 +3546,7 @@
 					<After>
 						<Text>Когда вы убьете двух из них:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="82"/>
@@ -3677,9 +3606,8 @@
 			<Id>353</Id>
 			<Text>Не отвлекаясь на разговор, вы настороженно следите за Фата-морганой, и, тем не менее, атака едва не застает вас врасплох.</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="402" Text="Успели"/>
@@ -3742,9 +3670,8 @@
 			<Id>360</Id>
 			<Text>Вскоре на пути попадается небольшой ручей. Через него перекинуто бревно, по которому вы легко переходите на другой берег. Подойдя к раскидистому многолетнему дубу, вы замечаете чуть поодаль какой-то блеск на земле... Внезапный шорох над головой.</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="440" Text="Успели"/>
@@ -3850,9 +3777,8 @@
 			<Id>372</Id>
 			<Text>Вокруг мечутся крысюки, а один из них (наверное, самый наглый), высовывается из-за колонны и бросает в вас дротик...</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="512" Text="Успели"/>
@@ -3863,15 +3789,14 @@
 			<Id>373</Id>
 			<Text>Навстречу вам скачет всадник. Это рыцарь-храмовник, и он не настроен на разговор. Подъехав, он спешивается, достает меч и спокойно говорит:\n\n- Защищайся, нечисть.\n\nВам ничего не остается, как принять бой:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ХРАМОВНИК" Strength="11" Hitpoints="11"/>
 					</Enemies>
 					<After>
 						<Text>Если победа за вами, то:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="159"/>
@@ -3881,15 +3806,14 @@
 			<Id>374</Id>
 			<Text>Взревев, леший выпрыгивает на поляну и нападает. Из его горла рвется рычание - видать, совсем ошалел от запаха крови и потому попался на вашу провокацию:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ЛЕШИЙ" Strength="10" Hitpoints="12"/>
 					</Enemies>
 					<After>
 						<Text>Если победа за вами, то:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="128"/>
@@ -3992,34 +3916,29 @@
 			<Id>385</Id>
 			<Text>Одновременно с вашим первым шагом из стены с щелчком вылетает стрела.</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
+				<Reaction>
 					<Button>Реагируйте на первой ступеньке</Button>
 					<Damage Name="Hitpoints" Value="-4"/>
 					<After>
 						<Text>Если вы не успеете увернуться, то получите серьезную рану (-4 ЖИЗНИ). Ту же операцию придется проделывать на каждой из оставшихся четырех белых ступенек:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Reaction</Type>
+				</Reaction>
+				<Reaction>
 					<Button>Реагируйте на второй ступеньке</Button>
 					<Damage Name="Hitpoints" Value="-4"/>
-				</Action>
-				<Action>
-					<Type>Reaction</Type>
+				</Reaction>
+				<Reaction>
 					<Button>Реагируйте на третьей ступеньке</Button>
 					<Damage Name="Hitpoints" Value="-4"/>
-				</Action>
-				<Action>
-					<Type>Reaction</Type>
+				</Reaction>
+				<Reaction>
 					<Button>Реагируйте на четвёртой ступеньке</Button>
 					<Damage Name="Hitpoints" Value="-4"/>
-				</Action>
-				<Action>
-					<Type>Reaction</Type>
+				</Reaction>
+				<Reaction>
 					<Button>Реагируйте на пятой ступеньке</Button>
 					<Damage Name="Hitpoints" Value="-4"/>
-				</Action>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="323" Text="Вам это удалось">
@@ -4099,15 +4018,14 @@
 			<Id>393</Id>
 			<Text>Монстр, рыча надвигается на вас. Вы принимаете бой:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="МУМИЯ" Strength="10" Hitpoints="14"/>
 					</Enemies>
 					<After>
 						<Text>Одолев его, вы можете:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="327" Text="Попытаться забрать пирамидку-летунью"/>
@@ -4187,8 +4105,7 @@
 			<Id>403</Id>
 			<Text>Вы снова скрещиваете мечи:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="НАЕМНИК" Strength="11" Hitpoints="4"/>
 					</Enemies>
@@ -4197,7 +4114,7 @@
 					</After>
 					<Benefit Name="Gold" Value="1"/>
 					<Trigger>Grapnel</Trigger>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="186"/>
@@ -4215,8 +4132,7 @@
 			<Id>405</Id>
 			<Text>Гарпии набрасываются на вас:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 						<Enemy Name="ВТОРАЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
@@ -4226,7 +4142,7 @@
 					<After>
 						<Text>Стоит вам убить всего одну, как...</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="468"/>
@@ -4250,8 +4166,7 @@
 			<Id>408</Id>
 			<Text>Эта тварь телепат! Открытие это нисколько вас не радует. Во время боя он просто считывает все ваши намерения. Придется положиться на свою скорость и драться на одних рефлексах. Перед каждым раундом схватки вам придется РЕАГИРОВАТЬ, и если ваша скорость окажется недостаточной, раунд для вас автоматически проигран. Метательный нож и СГУСТОК по понятным причинам бесполезны:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="МУТАНТ-ТЕЛЕПАТ" Strength="10" Hitpoints="13"/>
 					</Enemies>
@@ -4259,7 +4174,7 @@
 					<After>
 						<Text>Если удалось победить:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="166"/>
@@ -4269,14 +4184,12 @@
 			<Id>409</Id>
 			<Text>Вы начинаете смертельную пляску вокруг двухголового аллигатора.</Text>
 			<Actions>
-				<Action>
-					<Type>Option</Type>
+				<Option>
 					<Option Destination="145" Text="Вы не успели прикончить вожака крысюков">
 					<Text>Иначе - к бою:</Text>
 				</Option>
-				</Action>
-				<Action>
-					<Type>Fight</Type>
+				</Option>
+				<Fight>
 					<Enemies>
 						<Enemy Name="АЛЛИГАТОР-МУТАНТ" Strength="12" Hitpoints="13"/>
 					</Enemies>
@@ -4284,7 +4197,7 @@
 					<After>
 						<Text>Вдобавок, если во время схватки у крокодила выпадет дубль, то он ударит вас своим хвостом. Если вы не сталкивались ранее с его подобным трюком, то удар достигает цели (-5 ЖИЗНЕЙ). Последующие дубли этим уже не грозят - хвоста вы теперь опасаетесь.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="83"/>
@@ -4313,8 +4226,7 @@
 			<Id>412</Id>
 			<Text>Ваш меч со свистом вылетает из ножен. Три голодранца? Раз плюнуть!</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ РАЗБОЙНИК" Strength="8" Hitpoints="8"/>
 						<Enemy Name="ВТОРОЙ РАЗБОЙНИК" Strength="8" Hitpoints="8"/>
@@ -4323,7 +4235,7 @@
 					<After>
 						<Text>После победы:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="267"/>
@@ -4352,13 +4264,12 @@
 			<Id>415</Id>
 			<Text>- Чего еще от вас, людей, ожидать, - презрительно хмыкает гном. В его руке внезапно оказывается миниатюрный арбалет. Надо же, мерзавец был начеку...</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
+				<Reaction>
 					<Damage Name="Hitpoints" Value="-3"/>
 					<After>
 						<Text>Если ваша реакция запаздывает, то вы теряете три ЖИЗНИ, не успев увернуться от его выстрела.\n\nТем временем гном поднимает руку с еще одним арбалетом, но вы уже благоразумно скрываетесь за камнями. Не гном, а ходячий арсенал какой-то попался.</Text>
 					</After>
-				</Action>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="93"/>
@@ -4400,8 +4311,7 @@
 			<Id>420</Id>
 			<Text>- Айя! - пронзительный клич хазратов сопровождает их атаку:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ХАЗРАТ" Strength="11" Hitpoints="10"/>
 						<Enemy Name="ВТОРОЙ ХАЗРАТ" Strength="10" Hitpoints="10"/>
@@ -4409,7 +4319,7 @@
 					<After>
 						<Text>Если вы вышли победителем:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="115"/>
@@ -4565,21 +4475,19 @@
 			<Id>438</Id>
 			<Text>Чертовски больно (бросьте кубик и отнимите выпавшее от своей ЖИЗНИ):</Text>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<After>
 						<Text>...даже одежда ваша задымилась в том месте, куда угодил меткий плевок коварной твари. Громадный прыжок - и она атакует:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Fight</Type>
+				</DiceWounds>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПРЫГУН" Strength="10" Hitpoints="12"/>
 					</Enemies>
 					<After>
 						<Text>Победив, осматриваете труп. О таком в Академии не рассказывали, вдобавок в глаза бросаются явно асимметричные формы - наверняка мутант. Но откуда он здесь?</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="45"/>
@@ -4632,15 +4540,14 @@
 			<Id>444</Id>
 			<Text>Вскоре над вашей головой громко хлопают крылья, заставляя вас схватиться за меч. Вас атакует гарпия, крайне мерзкий крылан, которому в степи вообще-то охотиться не положено. Но не будешь же ей это объяснять!</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ГАРПИЯ" Strength="11" Hitpoints="10"/>
 					</Enemies>
 					<After>
 						<Text>Победив, вы раздумываете, куда двигаться дальше:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="67" Text="Вдоль русла, которое, изгибаясь, ведет прямо на север"/>
@@ -4678,8 +4585,7 @@
 			<Id>448</Id>
 			<Text>Прямо перед вашим лицом кони хазратов будто натыкаются на невидимый барьер. Двое кочевников вылетают из седел. Ваш меч настигает одного из них. Бросьте кубик, если выпадет 5 или 6, то вы зарубите и второго, и сражаться придется только с конным. Иначе он успевает встать и биться вам с обоими:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕШИЙ ХАЗРАТ" Strength="9" Hitpoints="8"/>
 						<Enemy Name="КОННЫЙ ХАЗРАТ" Strength="10" Hitpoints="12"/>
@@ -4687,7 +4593,7 @@
 					<After>
 						<Text>В случае победы:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="532"/>
@@ -4717,15 +4623,14 @@
 			<Id>451</Id>
 			<Text>Тропа, однако, постепенно забирает к западу. Внезапно под треск ветвей навстречу вам выходит медведь. Косолапый жутковато выглядит - справа его тело деформировано безобразными наростами, как будто его плоть потекла и застыла. Омерзительное зрелище. Но рассматривать его будете позже - он атакует:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ИЗУРОДОВАННЫЙ МЕДВЕДЬ" Strength="11" Hitpoints="8"/>
 					</Enemies>
 					<After>
 						<Text>Победив, вы обнаруживаете, что в темноте тропа пропала окончательно. Вы двинетесь сквозь лес:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="266" Text="На запад"/>
@@ -4824,8 +4729,7 @@
 			<Id>462</Id>
 			<Text>Вам удается увернуться. Кружа по комнате, вы рассматриваете парящего под потолком противника. Это лантан, или "летающая манта", хотя она больше напоминает летающего ската-хвостокола. В шипах на ее хвосте - сильный яд. Во время боя каждая ее рана будет в два раза сильнее предыдущей (2 ЖИЗНИ - 4 - 8 и т. д.) - чем больше яда в вашей крови, тем вы слабее:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ЛАНТАН" Strength="11" Hitpoints="12"/>
 					</Enemies>
@@ -4833,7 +4737,7 @@
 					<After>
 						<Text>После победы над монстром:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="493"/>
@@ -4940,15 +4844,14 @@
 			<Id>475</Id>
 			<Text>Вы оказываетесь в небольшом зале - лаборатории. Повсюду стоят массивные чаны, в которых что-то настойчиво булькает. Магии в этой комнате столько, что ее, кажется, можно потрогать руками.\n\nПрерывая ваши наблюдения из чана с ревом поднимается омерзительная тварь, вся покрытая слизью. Даже не понятно, что это такое - очертания тела отдаленно гуманоидные, но вместо рук - какие-то клешни. Защищайтесь:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ТВАРЬ ИЗ ЧАНА" Strength="11" Hitpoints="16"/>
 					</Enemies>
 					<After>
 						<Text>Убив этого необычайно живучего подонка, вы подобру-поздорову выходите обратно...</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="54"/>
@@ -5016,8 +4919,7 @@
 			<Id>482</Id>
 			<Text>Атакующую тварь встречает завеса стали:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПТЕРОДАКТИЛЬ" Strength="13" Hitpoints="10"/>
 					</Enemies>
@@ -5025,7 +4927,7 @@
 					<After>
 						<Text>Каждая нанесённая им рана будет отнимать 3 ЖИЗНИ. Победив, вы переводите дух и двигаетесь к лесу - на открытом пространстве становится слишком опасно.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="547"/>
@@ -5053,9 +4955,8 @@
 			<Id>485</Id>
 			<Text>- Жаль, - говорит наемник и его рука делает неуловимое движение. Вы были к этому готовы и шутя уворачиваетесь от брошенного ножа, но он бросает и второй!</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="546" Text="Успели"/>
@@ -5084,9 +4985,8 @@
 			<Id>488</Id>
 			<Text>Но, едва вы начинаете двигаться, богомол, что справа от вас, делает резкий прыжок. Ваша рука описывает дугу, готовясь отразить нападение, но насколько быстро?</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="6" Text="Вы успели"/>
@@ -5097,16 +4997,14 @@
 			<Id>489</Id>
 			<Text>Одновременно с прыжком вам надо успеть поставить ЗАСЛОН:</Text>
 			<Actions>
-				<Action>
-					<Type>Option</Type>
+				<Option>
 					<Option Destination="548" Text="Заслон" Availability="ЗАСЛОН">
 						<Modification Name="Spell" Value="ЗАСЛОН"/>
 						<Text>...либо СРЕАГИРОВАТЬ:</Text>
 					</Option>
-				</Action>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				</Option>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="548" Text="Успешно среагировали">
@@ -5172,9 +5070,8 @@
 			<Id>497</Id>
 			<Text>- Ставка стандартная - 4 золотых, - быстро сообщает гоблин и делает бросок на подвернувшемся плоском камне. Выпадает три и пять. - Твоя очередь, - говорит шустрый гоблин и протягивает вам стаканчик. Даже забавно. Бросьте два кубика:</Text>
 			<Actions>
-				<Action>
-					<Type>DicesGame</Type>
-				</Action>
+				<DicesGame>
+				</DicesGame>
 			</Actions>
 			<Options>
 				<Option Destination="454" Text="Выпало больше восьми"/>
@@ -5211,9 +5108,8 @@
 			<Id>501</Id>
 			<Text>Очень интересно! Двигаясь вперед, вы понимаете, что дорога, оставшаяся слева от вас, неуклонно заворачивает на северо-восток. Что-то не состыкуется этот факт с картой.\n\nЗадумавшись, вы попадаете ногой в замаскированную травой ямку. Это нора суслика! Киньте кубик.</Text>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
-				</Action>
+				<DiceWounds>
+				</DiceWounds>
 			</Actions>
 			<Options>
 				<Option Destination="113" Text="Выпала шестёрка">
@@ -5227,9 +5123,8 @@
 			<Id>502</Id>
 			<Text>Вас укусила гадюка! Снеся ей голову, вы бросаетесь отсасывать яд. Легкое головокружение - часть отравы все же попала в кровь. Бросьте кубик и отнимите выпавшее от своей ЖИЗНИ. Если выпадает 6, то теряете одну СИЛУ.\n\nПосле возвращайтесь, чтобы выбрать дальнейшую дорогу.</Text>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
-				</Action>
+				<DiceWounds>
+				</DiceWounds>
 			</Actions>
 			<Options>
 				<Option Destination="477"/>
@@ -5246,15 +5141,14 @@
 			<Id>504</Id>
 			<Text>Внезапно на лице девушки появляется звериный оскал. Одним громадным прыжком она выпрыгивает из ямы.\n\n- Тогда умри! - рычит лжедевчонка и замахивается рукой. хотя нет, уже когтистой лапой. Кикимора! Рукоять меча словно прыгает вам в ладонь:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="КИКИМОРА" Strength="10" Hitpoints="13"/>
 					</Enemies>
 					<After>
 						<Text>Победив, вы переводите дух. Похоже, можно двигаться дальше.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="311"/>
@@ -5289,15 +5183,14 @@
 			<Id>508</Id>
 			<Text>При виде медведя глаза рыцаря лезут на лоб, а его лошадь встает на дыбы и сбрасывает всадника. Впрочем, доспехи - не латы, и он успевает вскочить на ноги.\n\n- Ты меня своими сатанинскими штучками не возьмешь! - с этими словами рыцарь принимает бой.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="РЫЦАРЬ-ХРАМОВНИК" Strength="11" Hitpoints="10"/>
 					</Enemies>
 					<After>
 						<Text>Если когти медведя оказались сильнее стали:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="104"/>
@@ -5307,8 +5200,7 @@
 			<Id>509</Id>
 			<Text>Не на того нарвался, кровосос! С силой разомкнув объятья, вы отшвыриваете от себя «старика» сильным ударом головой в морду. Взревев, вампир вновь атакует вас, но ваш меч с серебряной насечкой встречает его:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ВАМПИР" Strength="11" Hitpoints="10"/>
 					</Enemies>
@@ -5316,7 +5208,7 @@
 					<After>
 						<Text>Располосовав его, вы быстро обшариваете таверну, но находите лишь янтарное ожерелье да медный кастет. После вы быстро покидаете ее и размышляете над выбором маршрута.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="182"/>
@@ -5453,12 +5345,11 @@
 			<Id>525</Id>
 			<Text>- Здорово, - говорит гоблин и тут же, подпрыгнув, наносит вам сокрушительный удар в подбородок. Бросьте кубик и отнимите выпавшее число от своей ЖИЗНИ.</Text>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<After>
 						<Text>Если выпала шестёрка - удар слишком силен и вы теряете сознание:</Text>
 					</After>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Options>
 				<Option Destination="121" Text="Теряете сознание">
@@ -5498,9 +5389,8 @@
 			<Id>529</Id>
 			<Text>В ответ доносится эльфийское ругательство: «Shat humans!» И с ним - щелчок спускаемой тетивы!</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="476" Text="Ваша скорость на высоте">
@@ -5531,8 +5421,7 @@
 			<Id>532</Id>
 			<Text>Итак, все воины-хазраты мертвы. Но где же шаман? Тихое рычание заставляет вас перевести глаза влево. Обходя идола, к вам направляется огромный матерый волк. В оборотней, значит, поиграть вздумал? Против ведьмака? И вы кидаетесь в бой:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ВОЛК-ОБОРОТЕНЬ" Strength="11" Hitpoints="14"/>
 					</Enemies>
@@ -5540,7 +5429,7 @@
 					<After>
 						<Text>Если вам удастся ранить его три раза подряд, то вы можете воспользоваться моментом и хорошенько пнуть оборотня:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="238" Text="В сторону идола"/>
@@ -5574,9 +5463,8 @@
 			<Id>535</Id>
 			<Text>По обостренному слуху бьет щелчок спускаемой тетивы.</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
-				</Action>
+				<Reaction>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="329" Text="Успешно"/>
@@ -5587,8 +5475,7 @@
 			<Id>536</Id>
 			<Text>Разорвав путы, огромный медведь оглашает рыком всю поляну. Расшатанные нервы кнехтов не выдерживают вашей метаморфозы и они, подвывая, рассыпаются по роще. Однако храмовник лишь ухмыляется и извлекает свой огромный двуручный меч.\n\n- Некогда наш фамильный клинок освятил сам святой Уриил, - говорит он и кидается в бой.\n\nИ, правда, какая-та сила против колдовских созданий заключена в этом клинке. Каждая рана храмовника отнимет у вас не 2, а 4 ЖИЗНИ.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="БАРОНЕТ Де МАССАР" Strength="10" Hitpoints="12"/>
 					</Enemies>
@@ -5596,7 +5483,7 @@
 					<After>
 						<Text>Победив, вы быстро хватаете свои вещи, и покидаете рощу, пока не опомнились разбежавшиеся храмовники. Позднее вы обнаружите еще одно последствие этой битвы - теперь каждый ОБОРОТЕНЬ будет стоить вам не 2, а 3 ЖИЗНИ. Магическая силища, видимо, у этого Уриила была неимоверная.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Triggers>PainfulTransformation</Triggers>
 			<Options>
@@ -5643,13 +5530,12 @@
 			<Id>541</Id>
 			<Text>Не успев сделать и несколько шагов, вы слышите звук рассекающего воздух камня.</Text>
 			<Actions>
-				<Action>
-					<Type>Reaction</Type>
+				<Reaction>
 					<Damage Name="Hitpoints" Value="-3"/>
 					<After>
 						<Text>Если вы не успеет увернуться, то теряете 3 ЖИЗНИ.</Text>
 					</After>
-				</Action>
+				</Reaction>
 			</Actions>
 			<Options>
 				<Option Destination="196"/>
@@ -5791,30 +5677,27 @@
 			<Id>558</Id>
 			<Text>Помимо общего курса обучения вы также проходили углубленную специализацию. У вас есть три варианта на выбор:</Text>
 			<Actions>
-				<Action>
-					<Type>Get</Type>
+				<Get>
 					<Button>Стать воином</Button>
 					<Specialization>Warrior</Specialization>
 					<After>
 						<Text>Сила воина равна тринадцати, одно обращение и одно заклинание. Кроме того, он использовать «Крыло ястреба» - неотразимый и страшный удар мечом, отнимающий у противника сразу половину ЖИЗНИ. Он очень сложен в исполнении, поэтому он получится лишь в том случае, если во время схватки вы выбросите на кубиках дубль из шестерок.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Стать магом</Button>
 					<Specialization>Wizard</Specialization>
 					<After>
 						<Text>Сила мага равна двенадцати, три заклинания и столько же обращений.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Стать метателем</Button>
 					<Specialization>Thrower</Specialization>
 					<After>
 						<Text>Сила метателя равна тринадцати, два заклинания, но обратиться он может только один раз. В снаряжении дополнительно имеется метательный нож. Перед каждым боем вы бросаете его в противника, и он автоматически теряет 3 ЖИЗНИ. Если вы одержите победу, и у вас будет время осмотреть труп, то вы изымаете обратно свой клинок и продолжаете им пользоваться.\n\nУчтите, что помимо всего перечисленного, специализация может вам пригодится в самый неожиданный момент. Воин, например, самый сильный из всей троицы, а маг может почувствовать заранее какую-то магическую ловушку.</Text>
 					</After>
-				</Action>
+				</Get>
 			</Actions>
 			<Options>
 				<Option Destination="559"/>
@@ -5824,26 +5707,23 @@
 			<Id>559</Id>
 			<Text>Пройдя начальный курс боевой магии, вы в совершенстве овладели тремя несложными заклинаниями:</Text>
 			<Actions>
-				<Action>
-					<Type>Get, Decrease</Type>
+				<Get-Decrease>
 					<Button>Добавить, Убрать</Button>
 					<Text>ЛЕЧЕНИЕ</Text>
 					<ThisIsSpell/>
 					<After>
 						<Text Size="small">Заклинание самоисцеления (уменьшительно именуемое всеми ведьмаками ЛЕЧИЛКА), добавляет 8 ЖИЗНЕЙ (кроме как во время боя).</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Get, Decrease</Type>
+				</Get-Decrease>
+				<Get-Decrease>
 					<Button>Добавить, Убрать</Button>
 					<Text>ЗАСЛОН</Text>
 					<ThisIsSpell/>
 					<After>
 						<Text Size="small">На несколько секунд создает между вами и противником невидимую магическую преграду.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Get, Decrease</Type>
+				</Get-Decrease>
+				<Get-Decrease>
 					<Button>Добавить, Убрать</Button>
 					<Text>СГУСТОК</Text>
 					<ThisIsSpell/>
@@ -5851,7 +5731,7 @@
 						<Text Size="small">Удар по противнику небольшим сгустком пламени, отнимающий у него 6 ЖИЗНЕЙ.</Text>
 						<Text>Применение любого заклинания обойдется вам в 2 ЖИЗНИ (т.о. ЛЕЧЕНИЕ добавляет вам "чистых" 6 ЖИЗНЕЙ). ЗАСЛОН применяется только в особо оговоренных в тексте случаях. Остальные заклинаниямогут применяться вами самостоятельно. Еще один нюанс – если СГУСТОК написан как один из вариантов – то после применения вы не отнимаете у противника ЖИЗНЬ, а смотрите указанный параграф. У противника может оказаться защита от магии, или же, напротив – вы выбрали верное время и место, и теперь начнется пожар, в котором сгорит целая группа врагов. Количество заклинаний, которые вы можете взять с собой, зависит от вашей специализации.\n\nЗаклинания вы должны выбрать сразу и вписать на свой Лист персонажа. Можно выбрать хоть три Лечилки, или наоборот, каждого по одному. Количество доступных вам заклинаний определится после выбора Специализации.</Text>
 					</After>
-				</Action>
+				</Get-Decrease>
 			</Actions>
 			<Options>
 				<Option Destination="1"/>
