@@ -135,7 +135,7 @@
 			<Options>
 				<Option Destination="341" Text="Попробуйте воспользоваться этой неразберихой, что попасть в музей бесплатно"/>
 				<Option Destination="130" Text="Встать в очередь и заплатить 3 золотых за билет" Availability="ЗОЛОТО >= 3">
-					<Modification Name=="Gold" Value="-3"/>
+					<Modification Name="Gold" Value="-3"/>
 					<Text>Если же вас ни то ни другое не устраивает, возвращайтесь, потеряв 1 Час:</Text>
 				</Option>
 				<Option Destination="20"/>
