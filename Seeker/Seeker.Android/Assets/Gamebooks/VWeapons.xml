@@ -209,11 +209,10 @@
 				<Text>Когда разведчик пришёл в себя, он понял, что серьёзно ранен:</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>Damage</Type>
+				<Damage>
 					<Button>ОСМОТРЕТЬ РАНУ</Button>
 					<Value>3</Value>
-				</Action>
+				</Damage>
 			</Actions>
 			<Modifications>
 				<Modification Name="Time" Value="-1"/>
@@ -297,13 +296,12 @@
 			<Id>27</Id>
 			<Text>Бандиты вошли в комнату с оружием наготове, уставившись на раскрытый сейф. Сергей ждал их за углом.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ БАНДИТ" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="ВТОРОЙ БАНДИТ" Hitpoints="3" Accuracy="3"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="24"/>
@@ -313,13 +311,12 @@
 			<Id>28</Id>
 			<Text>Массивный сейф закрыл Сергея, и ему осталось лишь выставить руку с маузером. Впрочем, тот стол, на котором стоял сейф, представлял собой куда менее надёжную защиту.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ БАНДИТ" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="ВТОРОЙ БАНДИТ" Hitpoints="3" Accuracy="3" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="24"/>
@@ -486,12 +483,11 @@
 			<Id>47</Id>
 			<Text>Огнев и Кляйст посмотрели друг на друга одновременно. Каждый из них уже держал палец на курке.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="КЛЯЙСТ" Hitpoints="3" Accuracy="3" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="44"/>
@@ -635,12 +631,11 @@
 			<Id>62</Id>
 			<Text>Огнев молниеносно выхватил свой маузер, однако и американец успел за это время навести на него ствол.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ДЭВИС" Hitpoints="3" Accuracy="3" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="63"/>
@@ -660,29 +655,26 @@
 			<Id>64</Id>
 			<Text>Набережная Альтштедхена была двухполосной дорогой на краю скалы, круто обрывающейся в море.\n\nОтправится в травмпункт и подлечиться:</Text>
 			<Actions>
-				<Action>
-					<Type>Healing</Type>
+				<Healing>
 					<Button>ПОДЛЕЧИТЬСЯ</Button>
 					<Value>2</Value>
 					<Time>-1</Time>
 					<After>
 						<Text>Забрать бомбу из тайника:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Bomb</Type>
+				</Healing>
+				<Bomb>
 					<Button>ЗАБРАТЬ БОМБУ</Button>
 					<Time>-1</Time>
 					<After>
 						<Text>Отправится в оружейный магазин и купить патроны:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Cartridges</Type>
+				</Bomb>
+				<Cartridges>
 					<Button>КУПИТЬ ПАТРОНЫ</Button>
 					<Value>8</Value>
 					<Time>-1</Time>
-				</Action>
+				</Cartridges>
 			</Actions>
 			<Options>
 				<Option Destination="51" Text="Отправиться на КПП порта"/>
@@ -694,14 +686,13 @@
 			<Id>65</Id>
 			<Text>Сергей проплыл мимо часовых и влез на пирс, извлекая из недр водолазного костюма маузер. Когда он вылез на берег, вышло так, что все трое заметили его сразу прямо на него...</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="МАРТИН" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="ЮРГЕН" Hitpoints="3" Accuracy="3" First="true"/>
 						<Enemy Name="ИТАЛЬЯНЕЦ" Hitpoints="3" Accuracy="2" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="120"/>
@@ -1199,12 +1190,11 @@
 			<Id>117</Id>
 			<Text>Сергей прокрался мимо Итальянца и оглушил двумя точными ударами Мартина и Юргена. Это не укрылось от внимания Итальянца. слышав шум, он резко развернулся и выстрелил Сергею в спину.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ИТАЛЬЯНЕЦ" Hitpoints="3" Accuracy="3" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="120"/>
@@ -1214,14 +1204,13 @@
 			<Id>118</Id>
 			<Text>Сергей тихо, но быстро подобрался к Итальянцу и ударил его по голове ручкой маузера, а затем подбежал к Мартину и оглушил его ударом ладони. Юрген развернулся, увидел перед собой дуло маузера, но не растерялся и ловким движением выбил его на пол. Завязался рукопашный бой между Сергеем и Юргеном.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Button>Рукопашный бой</Button>
 					<Dogfight/>
 					<Enemies>
 						<Enemy Name="ЮРГЕН" Hitpoints="3" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="115"/>
@@ -1239,13 +1228,12 @@
 			<Id>120</Id>
 			<Text>На звуки выстрелов на пирс прибежали с окрестных постов ещё двое часовых.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="ВТОРОЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="2" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="119"/>
@@ -1255,12 +1243,11 @@
 			<Id>121</Id>
 			<Text>Сергей подбежал и ударил Итальянца ручкой маузера по голове и он потерял сознание. К этому моменту в сторону Сергея уже бежали с оружием наперевес недавние знакомые Мартин и Юрген... Мартин - сдался!</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ЮРГЕН" Hitpoints="3" Accuracy="3"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="120"/>
@@ -1270,13 +1257,12 @@
 			<Id>122</Id>
 			<Text>Сергей выхватил маузер и, не обращая внимания на Итальянца, выстрелил в сердце Юргену.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="МАРТИН" Hitpoints="3" Accuracy="3" First="true"/>
 						<Enemy Name="ИТАЛЬЯНЕЦ" Hitpoints="3" Accuracy="2"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="120"/>
@@ -1286,13 +1272,12 @@
 			<Id>123</Id>
 			<Text>Сергей подкрался сзади к Итальянцу и ударил его ручкой маузера по голове. Итальянец тихо простонал и потерял сознание. К этому моменту в сторону Сергея уже бежали с оружием наперевес Мартин и Юрген.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="МАРТИН" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="ЮРГЕН" Hitpoints="3" Accuracy="2" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="120"/>
@@ -1339,12 +1324,11 @@
 			<Id>128</Id>
 			<Text>Сергей затаился в темноте. Когда женщина прошла мимо окна, Сергей увидел гестаповскую форму и незнакомое лицо. Это была не Грета! К этому моменту женщина уже отчётливо видела Сергея и целилась в него.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ГЕСТАПОВКА" Hitpoints="3" Accuracy="2" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="126"/>
@@ -1354,12 +1338,11 @@
 			<Id>129</Id>
 			<Text>Сергей навёл пистолет женщине прямо в сердце и спустил курок.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ГЕСТАПОВКА" Hitpoints="3" Accuracy="2"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="126"/>
@@ -1451,12 +1434,11 @@
 			<Id>139</Id>
 			<Text>Дальше всё произошло молниеносно. Один из мужчин попытался схватить радистку сзади за плечо, но упал и больше не поднялся. Из груди у него торчал шприц. Остальные гестаповцы выхватили оружие. Люди, гулявшие в парке, обратились в панику. Облокотившись на костыль и зажав рацию под мышкой, радистка поднялась на ноги и, спотыкаясь, побежала к заброшенному дому.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="4" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="141"/>
@@ -1466,13 +1448,12 @@
 			<Id>140</Id>
 			<Text>Дальше всё произошло молниеносно. Один из мужчин попытался схватить радистку, но упал и больше не поднялся. Из груди его торчал шприц. Остальные гестаповцы выхватили оружие. Люди, гулявшие в парке, разбежались в панике. Зажав рацию и костыль под мышкой, радистка, хромая, обежала к заброшенному дому.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="4"/>
 						<Enemy Name="ВТОРОЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="4"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="141"/>
@@ -1486,13 +1467,12 @@
 				<Text>«Дальше, не останавливайтесь» — сказала радистка - «По лестнице можно попасть на крышу и в соседний дом.»... Шаги раздались этажом ниже.\n\n— Стойте, — воскликнула Шефер, — Из этой комнаты только один выход. ы уже обрекли себя на смерть, как что теперь охраняйте меня, пока я не закончу передачу. Встаньте у выхода и не давайте никому войти в комнату.\n\nСергей выбежал в коридор и выбрал подходящую позицию для обстрела лестницы. Радистка была права: в комнате не было окон, а единственная дверь была у Сергея за спиной. Она была настолько узкой, что Сергей касался плечами двух сторон косяка одновременно. За спиной был слышен стук ключа Греты. Тишина нарушилась выстрелами. Стреляли с лестничной клетки и почти вслепую. Сергей увидел фигуры стрелявших на фоне оконного проёма, однако к этому моменту они уже успели сделать несколько выстрелов.</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="1" First="true"/>
 						<Enemy Name="ВТОРОЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="1" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Accuracy" Value="-1"/>
@@ -1531,12 +1511,11 @@
 			<Id>145</Id>
 			<Text>Сергей побежал через арку, и как только он вбежал в подворотню, прямо перед ним зажглись фары автомобиля, свет ударил в глаза.\n\nОгнев зажмурился, пока кто-то по ту сторону фар целил в него из пистолета.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ВОДИТЕЛЬ" Hitpoints="3" Accuracy="3" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="158"/>
@@ -1596,13 +1575,12 @@
 			<Id>152</Id>
 			<Text>Двое стоявших на коленях гестаповцев, которые проверяли пол, не успели вскочить на ноги и выхватить оружие, и поэтому реальную опасность для Огнева в этот момент представляли только молодой автоматчик и сам фон Гоф. Огнев бросился на автоматчика, прокручивая в голове дальнейшие действия: подъезды в доме сквозные, в этом подъезде выход на улицу закрыт на замок, но в соседнем он ещё утром был открыт.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="АВТОМАТЧИК" Hitpoints="3" Accuracy="5" WithoutCartridges="true"/>
 						<Enemy Name="ФОН ГОФ" Hitpoints="2" Accuracy="3" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Triggers>F</Triggers>
 			<Options>
@@ -1621,13 +1599,12 @@
 			<Id>154</Id>
 			<Text>Сергей добежал до конца коридора и увидел, что на пути возникла новая преграда в виде метлы, продетой в ручку двери с парадной стороны подъезда. Дворник зачем-то запер подъезд на ночь. В этот момент со двора в подъезд вбежало двое гестаповцев, один с автоматом и один с револьвером. Сергей обернулся, взводя курок.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="АВТОМАТЧИК" Hitpoints="3" Accuracy="5" WithoutCartridges="true"/>
 						<Enemy Name="ГЕСТАПОВЕЦ С РЕВОЛЬВЕРОМ" Hitpoints="3" Accuracy="2" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="156"/>
@@ -1637,13 +1614,12 @@
 			<Id>155</Id>
 			<Text>Сергей встал в темноте за угол и приготовился стрелять. В этот момент со двора в подъезд вбежало двое гестаповцев, один с автоматом и один с револьвером.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="АВТОМАТЧИК" Hitpoints="3" Accuracy="5" WithoutCartridges="true"/>
 						<Enemy Name="ГЕСТАПОВЕЦ С РЕВОЛЬВЕРОМ" Hitpoints="3" Accuracy="2"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="156"/>
@@ -1653,12 +1629,11 @@
 			<Id>156</Id>
 			<Text>Сергей выбил дверь на улицу, закрытую метлой, плечом и оказался на улице. Улица была пуста: ни машин ни людей. Только один чёрный «Опель» возле арки. Водитель слышал автоматные очереди в подъезде и сидел, положив руку с пистолетом на руль, угрюмо вглядываясь во мрак подворотни. Однако, услышав шум из подъезда, он понял, что ждёт Сергея не с той стороны и мгновенно направил пистолет в сторону разведчика.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ВОДИТЕЛЬ" Hitpoints="3" Accuracy="3" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="158"/>
@@ -1668,12 +1643,11 @@
 			<Id>157</Id>
 			<Text>Замедлив шаг, Сергей вынул метлу, приоткрыл дверь и осторожно вышел на улицу. Осторожность была не лишней. Улица была пуста: ни машин ни людей. Только чёрный «Опель» возле арки. Водитель положил руку с пистолетом на руль, вглядываясь во мрак подворотни. Фары не горели, но они включились бы и ослепили Огнева, попробуй он бежать через арку. Он, конечно же, заметил Сергея и сейчас, но к тому времени разведчик был готов отстреливаться.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ВОДИТЕЛЬ" Hitpoints="3" Accuracy="3"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="158"/>
@@ -1737,32 +1711,29 @@
 			<Id>162</Id>
 			<Text>Не отпуская газ, Огнев вывернул руль до упора, чёрный «Опель» скрылся за углом.\n\nЕсли по пути вы хотите заехать в травмпункт:</Text>
 			<Actions>
-				<Action>
-					<Type>Healing</Type>
+				<Healing>
 					<Button>ПОДЛЕЧИТЬСЯ</Button>
 					<Value>2</Value>
 					<Time>-1</Time>
 					<After>
 						<Text>Если по пути вы хотите заехать за бомбой:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Bomb</Type>
+				</Healing>
+				<Bomb>
 					<Button>ЗАБРАТЬ БОМБУ</Button>
 					<Time>-1</Time>
 					<After>
 						<Text>Если по пути вы хотите заехать купить патронов:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Cartridges</Type>
+				</Bomb>
+				<Cartridges>
 					<Button>КУПИТЬ ПАТРОНЫ</Button>
 					<Value>8</Value>
 					<Time>-1</Time>
 					<After>
 						<Text>Ехать к военно-морской базе:</Text>
 					</After>
-				</Action>
+				</Cartridges>
 			</Actions>
 			<Options>
 				<Option Destination="170"/>
@@ -1772,11 +1743,10 @@
 			<Id>163</Id>
 			<Text>«Опель» разогнался и помчался прямо под непрерывным градом пуль. Вскоре автоматчики отстали и стрельба прекратилась. Одна из пуль задела Сергея:</Text>
 			<Actions>
-				<Action>
-					<Type>Damage</Type>
+				<Damage>
 					<Button>ОСМОТРЕТЬ РАНУ</Button>
 					<Value>1</Value>
-				</Action>
+				</Damage>
 			</Actions>
 			<Options>
 				<Option Destination="162"/>
@@ -1824,15 +1794,14 @@
 			<Id>167</Id>
 			<Text>Сергей прокрался за спины двух часовых и приоткрыл дверь раздевалки. Увы, она скрипнула слишком громко. Расстояние между Сергеем и часовыми было столь малым, что он не успели выхватить ружья.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Button>Рукопашный бой</Button>
 					<Dogfight/>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ЧАСОВОЙ" Hitpoints="3"/>
 						<Enemy Name="ВТОРОЙ ЧАСОВОЙ" Hitpoints="3" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="119"/>
@@ -1842,13 +1811,12 @@
 			<Id>168</Id>
 			<Text>Сергей подошёл к часовым спереди, но вид человека, расхаживающего по территории базы в мокром акваланге, вызвал у них немало подозрений. Оба часовых тотчас же вытащили винтовки и открыли огонь.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="ВТОРОЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="2" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="119"/>
@@ -1968,21 +1936,19 @@
 			<Id>181</Id>
 			<Text>На лечение Сергея у Германа ушло довольно много времени:</Text>
 			<Actions>
-				<Action>
-					<Type>Healing</Type>
+				<Healing>
 					<Button>ПОДЛЕЧИТЬСЯ</Button>
 					<Value>3</Value>
 					<Time>-1</Time>
 					<After>
 						<Text>После того, как Герман обработал и перебинтовал все раны Сергея, он занялся Кайзером, и Фриц остался в медпункте со своим любимцем. Сергей же поблагодарил медбрата и покинул медпункт, направился к лифту.\n\nЕсли хотите, чтобы Герман вылечил Вас ещё раз, то перед тем, как щёлкнуть по одной из ссылок выше, соответствующих кнопкам лифта:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Healing</Type>
+				</Healing>
+				<Healing>
 					<Button>ПОДЛЕЧИТЬСЯ ЕЩЁ РАЗ</Button>
 					<Value>1</Value>
 					<Time>-1</Time>
-				</Action>
+				</Healing>
 			</Actions>
 			<Options>
 				<Option Destination="176" Text="Нажать кнопку «2»"/>
@@ -2092,14 +2058,13 @@
 			<Id>193</Id>
 			<Text>— Герман, помоги! — закричал Фриц Брёнинг, вынимая из-за спины винтовку и вбегая в медпункт вслед за Сергеем, — Этот человек не Эрвин Шмидт, это вражеский шпион, который выдаёт себя за него!\n\nОгрызок выпал из рук медбрата, и его пухлые пальцы потянулись в стол за оружием. Оружие Сергея было уже наготове, Кайзер сорвался с поводка Фрица и побежал, устремив злобный взгляд на сонную артерию разведчика.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ФРИЦ БРЁНИНГ" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="КАЙЗЕР" Hitpoints="3" Accuracy="3" Animal="true"/>
 						<Enemy Name="ГЕРМАН" Hitpoints="3" Accuracy="2" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="195"/>
@@ -2120,14 +2085,13 @@
 			<Id>195</Id>
 			<Text>Необходимость убивать людей - это то, что Сергей больше всего не любил в своей работе. Ему приходилось делать это много раз, но он так и не научился воспринимать это спокойно. Только что ты разговаривал с человеком, и вот он уже лежит перед тобой с твоей пулей во лбу, в метре от трупов своего любимца и рыжего медбрата. Но война есть война, и если бы Сергей не убил их, они убили бы его - или отдали бы в гестапо. прочем, ремени на сожаления не было, поскольку на звук выстрелов уже бежали трое часовых.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="ВТОРОЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="ТРЕТИЙ ЧАСОВОЙ" Hitpoints="3" Accuracy="2" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="196"/>
@@ -2141,21 +2105,19 @@
 				<Text>После этого разведчик осмотрел свои раны, обработал и перебинтовал их:</Text>
 			</Texts>
 			<Actions>
-				<Action>
-					<Type>Healing</Type>
+				<Healing>
 					<Button>ПОДЛЕЧИТЬСЯ</Button>
 					<Value>3</Value>
 					<Time>-1</Time>
 					<After>
 						<Text>Если Вы хотите уделить своему лечению больше времени:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Healing</Type>
+				</Healing>
+				<Healing>
 					<Button>ПОДЛЕЧИТЬСЯ ЕЩЁ РАЗ</Button>
 					<Value>1</Value>
 					<Time>-1</Time>
-				</Action>
+				</Healing>
 			</Actions>
 			<Modifications>
 				<Modification Name="Suspicions" Value="2"/>
@@ -2224,14 +2186,13 @@
 			<Id>202</Id>
 			<Text>Сергей выдернул чеку, оставив цилиндр со взрывчаткой на поясе у моряка. Все стоящие вокруг моряки тотчас же бросились врассыпную, а злосчастный владелец гранаты трясущимися руками вытащил гранату и метнул её в сторону. К несчастью, она полетела в сторону Сергея и ранила его осколком в спину.</Text>
 			<Actions>
-				<Action>
-					<Type>Damage</Type>
+				<Damage>
 					<Button>ОСМОТРЕТЬ РАНУ</Button>
 					<Value>1</Value>
 					<After>
 						<Text>Взрыв грянул в воздухе, накрыв волной осколков не менее семерых моряков. Все остальные судорожно бросились на землю. Брандт упал ничком прямо у ног Сергея и накрыл голову руками.</Text>
 					</After>
-				</Action>
+				</Damage>
 			</Actions>
 			<Options>
 				<Option Destination="205" Text="Захватить Брандта в заложники и бежать с ним вглубь бункера"/>
@@ -2359,13 +2320,12 @@
 			<Id>216</Id>
 			<Text>Не мешкая перед запертой дверью, разведчик бросился обратно. Тем временем, в бункер вбежали искавшие Сергея матросы. Точнее, пока только двое из них...</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ МАТРОС" Hitpoints="2" Accuracy="3"/>
 						<Enemy Name="ВТОРОЙ МАТРОС" Hitpoints="3" Accuracy="3" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="218"/>
@@ -2443,14 +2403,13 @@
 			<Id>224</Id>
 			<Text>Сергей потратил несколько драгоценных мгновений, чтобы нагнуться и дотянуться до респиратора. Этого времени хватило одному из матросов, чтобы прийти в себя после взрыва и выстрелить. Пуля попала Сергею в ногу:</Text>
 			<Actions>
-				<Action>
-					<Type>Damage</Type>
+				<Damage>
 					<Button>ОСМОТРЕТЬ РАНУ</Button>
 					<Value>1</Value>
 					<After>
 						<Text>Если хотите, то можете взять себе респиратор.</Text>
 					</After>
-				</Action>
+				</Damage>
 			</Actions>
 			<Triggers>R</Triggers>
 			<Options>
@@ -2462,8 +2421,7 @@
 			<Id>225</Id>
 			<Text>Сергей всегда был отличным стрелком, но в этот раз маузер словно не послушался его. Зато оружие в руках командора повело себя, как нельзя лучше, попадая точно в цель. Трудно было в это поверить, но Брандт, и впрямь, предвидел такое развитие событий и вывел из строя тот из двух своих маузеров, который держал на виду.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="БРАНДТ" Hitpoints="4" Accuracy="3"/>
 					</Enemies>
@@ -2471,7 +2429,7 @@
 					<After>
 						<Text>Примечание: поскольку в руках у Сергея неисправное оружие, то, невзирая на любые его характеристики, в этом бою его характеристики следующие (по завершении этого боя характеристики станут прежними): патронов: 6, на каждую атаку: -3 патрона.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="226"/>
@@ -2492,14 +2450,13 @@
 			<Id>227</Id>
 			<Text>Сергей подошёл к Брандту поближе, затем, резким ударом сломал командору кисть, оружие вылетело у командора из руки. Брандт, превозмогая боль, блокировал следующий удар Сергея, нацеленный ему в пах.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Button>Рукопашный бой</Button>
 					<Dogfight/>
 					<Enemies>
 						<Enemy Name="БРАНДТ" Hitpoints="4"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="226"/>
@@ -2588,14 +2545,13 @@
 			<Id>238</Id>
 			<Text>Расправившись с замком тремя выстрелами, Сергей опрометью бросился за дверь, вовремя, поскольку позади уже появились двое автоматчиков. С одним из них бежала на поводке собака. Сергей укрылся за углом.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ АВТОМАТЧИК" Hitpoints="3" Accuracy="4"/>
 						<Enemy Name="ВТОРОЙ АВТОМАТЧИК" Hitpoints="3" Accuracy="4"/>
 						<Enemy Name="СОБАКА" Hitpoints="2" Animal="true" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="211"/>
@@ -2624,14 +2580,13 @@
 			<Id>241</Id>
 			<Text>Сергей бросил отмычку на пол и достал оружие. К приёму гостей он был готов.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ МАТРОС" Hitpoints="2" Accuracy="3"/>
 						<Enemy Name="ВТОРОЙ МАТРОС" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="ТРЕТИЙ МАТРОС" Hitpoints="3" Accuracy="2" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="243"/>
@@ -2641,14 +2596,13 @@
 			<Id>242</Id>
 			<Text>Сергей продолжил возиться с отмычкой до тех пор, пока за спиной не раздались крики. Молниеносным движением разведчик выхватил маузер.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ МАТРОС" Hitpoints="2" Accuracy="3"/>
 						<Enemy Name="ВТОРОЙ МАТРОС" Hitpoints="3" Accuracy="3" First="true"/>
 						<Enemy Name="ТРЕТИЙ МАТРОС" Hitpoints="3" Accuracy="2" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="243"/>
@@ -2658,14 +2612,13 @@
 			<Id>243</Id>
 			<Text>Когда звуки выстрелов смолкли, в бункере стало тихо. Шагов наверху не было слышно. Конечно же, это были не все матросы, но остальные, как видно, не торопились следовать примеру своих товарищей по оружию. Ловко орудуя отмычкой, Сергей взломал дверь и оказался внутри. Когда он добежал до конца коридора, сзади появились двое матросов с собакой. Сергей встал за угол и начал отстреливаться.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ АВТОМАТЧИК" Hitpoints="3" Accuracy="4"/>
 						<Enemy Name="ВТОРОЙ АВТОМАТЧИК" Hitpoints="3" Accuracy="4"/>
 						<Enemy Name="СОБАКА" Hitpoints="2" Animal="true" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="211"/>
@@ -2690,13 +2643,12 @@
 			<Id>246</Id>
 			<Text>Сергей бросился в коридор со знамёнами и открыл широкую деревянную дверь. За ней не было ничего, кроме широкого стола, кресла, шкафа и графина. Эта комната была не более, чем убежищем для начальника штаба. Никакого управления ракетами в комнате не было. Сергей рванулся в необследованный коридор, но с лестницы уже выбежали двое матросов. Чтобы бежать дальше, придётся сначала расправиться с ними.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ МАТРОС" Hitpoints="4" Accuracy="3"/>
 						<Enemy Name="ВТОРОЙ МАТРОС" Hitpoints="3" Accuracy="3" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="218"/>
@@ -2765,14 +2717,13 @@
 			<Id>255</Id>
 			<Text>— Очень рад Вас видеть, — раздалось откуда-то из-за угла, — Боюсь, что вы арестованы.\n\nКогда Сергей обернулся, то увидел ухмыляющегося криминальрата гестапо фон Гофа собственной персоной. Рядом с ним стояло двое гестаповцев. Бежать было некуда, и Сергей молниеносно выхватил свой маузер и начал отстреливаться.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="ВТОРОЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="ФОН ГОФ" Hitpoints="2" Accuracy="3" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="253"/>
@@ -2799,14 +2750,13 @@
 			<Id>258</Id>
 			<Text>Сергей нажал первую попавшуюся кнопку лифта, но один из гестаповцев, проявив хорошую скорость реакции, бросился вперёд и не дал дверям лифта закрыться. Сергей выхватил из кобуры своё оружие. То же самое сделал каждый из троих гестаповцев.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="ВТОРОЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="3"/>
 						<Enemy Name="ТРЕТИЙ ГЕСТАПОВЕЦ" Hitpoints="3" Accuracy="2" First="true"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="259"/>
