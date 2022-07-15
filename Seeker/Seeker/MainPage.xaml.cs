@@ -181,7 +181,7 @@ namespace Seeker
                         foreach (View enemy in Output.Interface.Represent(action.Do(out _, "Representer")))
                             actionPlace.Children.Add(enemy);
 
-                        if (!action.Type.Contains(","))
+                        if (!action.Type.Contains("-"))
                         {
                             EventHandler actionClick = (object sender, EventArgs e) => Action_Click(action, actionPlace);
                             bool enabled = action.IsButtonEnabled();
@@ -280,7 +280,7 @@ namespace Seeker
 
             StackLayout buttonPlace = Output.Interface.MultipleButtonsPlace();
 
-            foreach (string act in action.Type.Split(','))
+            foreach (string act in action.Type.Split('-'))
             {
                 EventHandler actionClick = (object sender, EventArgs e) =>
                     Action_Click(action, actionPlace, anotherAction: act.Trim());

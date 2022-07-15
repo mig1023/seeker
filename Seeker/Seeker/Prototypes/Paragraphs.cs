@@ -41,7 +41,7 @@ namespace Seeker.Prototypes
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
                 paragraph.Options.Add(OptionParse(xmlOption));
 
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/Action"))
+            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/*"))
                 paragraph.Actions.Add(ActionParse(xmlAction));
 
             foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
@@ -63,7 +63,7 @@ namespace Seeker.Prototypes
 
         public Abstract.IActions ActionTemplate(XmlNode xmlAction, Abstract.IActions actions)
         {
-            actions.Type = Xml.StringParse(xmlAction["Type"]);
+            actions.Type = xmlAction.Name;
             actions.Button = Xml.StringParse(xmlAction["Button"]);
             actions.Aftertexts = Xml.TextsParse(xmlAction, action: true);
             actions.Trigger = Xml.StringParse(xmlAction["Trigger"]);
