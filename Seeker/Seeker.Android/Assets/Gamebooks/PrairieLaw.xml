@@ -46,10 +46,9 @@
 			<Id>2</Id>
 			<Text>Проверьте свое обаяние:</Text>
 			<Actions>
-				<Action>
-					<Type>Charm</Type>
+				<Charm>
 					<Button>Проверить обаяние</Button>
-				</Action>
+				</Charm>
 			</Actions>
 			<Options>
 				<Option Destination="441" Text="Оно не подвело вас"/>
@@ -82,10 +81,9 @@
 			<Id>6</Id>
 			<Text>Проверьте свою ловкость:</Text>
 			<Actions>
-				<Action>
-					<Type>Skill</Type>
+				<Skill>
 					<Button>Проверить ловкость</Button>
-				</Action>
+				</Skill>
 			</Actions>
 			<Options>
 				<Option Destination="151" Text="Ловкости не хватило"/>
@@ -111,10 +109,9 @@
 			<Id>9</Id>
 			<Text>Один из воинов неплохо говорит по-английски. Оказывается, они из рода Волка. Охраняют перевал, чтобы по их землям не шлялись незваные гости. Такие, как вы, например...\n\nВы пускаете в ход все свое красноречие, чтобы убедить индейцев в том, что вы им не враг.</Text>
 			<Actions>
-				<Action>
-					<Type>Charm</Type>
+				<Charm>
 					<Button>Проверить обаяние</Button>
-				</Action>
+				</Charm>
 			</Actions>
 			<Options>
 				<Option Destination="265" Text="Сумеете доказать воинам, что не таите дурных мыслей"/>
@@ -150,8 +147,7 @@
 			<Id>13</Id>
 			<Text>Схватка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ГРАБИТЕЛЬ" Skill="9" Strength="10"/>
 					</Enemies>
@@ -159,7 +155,7 @@
 					<After>
 						<Text>Если вы снизили его СИЛУ до 2:</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="624"/>
@@ -185,10 +181,9 @@
 			<Id>16</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="368" Text="Вам повезло"/>
@@ -199,14 +194,13 @@
 			<Id>17</Id>
 			<Text>Перестрелка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Firefight/>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="10" Cartridges="4"/>
 						<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="9" Strength="9" Cartridges="3"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="266"/>
@@ -254,15 +248,14 @@
 			<Id>22</Id>
 			<Text>Кобыла, которую вы купили, ничем не хуже прежней. Вы даже начинаете звать ее кличкой пропавшей лошадки. Но жаль потерянных денег! И до боли обидно сознавать, что вас одурачили.\n\nЕсли у вас найдутся еще полдоллара, можете купить чересседельную сумку взамен украденной.</Text>
 			<Actions>
-				<Action>
-					<Type>Get</Type>
+				<Get>
 					<Button>Заплатить</Button>
 					<Text>Сумка</Text>
 					<Price>50</Price>
 					<After>
 						<Text>Если вы этого не сделаете, то не сможете в дороге взять с собой ни одной находки, да и еду хранить будет негде.\n\nА теперь, пожалуй, самое время покинуть этот неприятный городишко.</Text>
 					</After>
-				</Action>
+				</Get>
 			</Actions>
 			<Options>
 				<Option Destination="91"/>
@@ -328,10 +321,9 @@
 			<Id>29</Id>
 			<Text>Без особой охоты соглашаетесь вы сыграть – но только одну партию. Бросьте кубик:</Text>
 			<Actions>
-				<Action>
-					<Type>DiceGame</Type>
+				<DiceGame>
 					<Button>Бросить кубик</Button>
-				</Action>
+				</DiceGame>
 			</Actions>
 			<Options>
 				<Option Destination="531" Text="Выпало четное число, вы выиграли"/>
@@ -358,8 +350,7 @@
 			<Id>32</Id>
 			<Text>Хозяин ранчо и его жена усаживают вас за стол. Тушеное мясо, свежевыпеченный хлеб и кофе прибавят 4 к вашей СИЛЕ. Разумеется, ни о какой плате за еду нет и речи. (Но и в дорогу обед не возьмешь, придется съесть его за столом.)\n\nНаутро, бодрый и отдохнувший (сон прибавил еще 2 к вашей СИЛЕ), собираетесь в путь. На прощание спрашиваете хозяина, нельзя ли купить у него патронов. Хозяин, подумав, отвечает, что патроны он продать может – полдоллара за пару. Но не больше дюжины, патроны ему самому нужны...</Text>
 			<Actions>
-				<Action>
-					<Type>Get</Type>
+				<Get>
 					<Button>Заплатить</Button>
 					<Text>Два патрона</Text>
 					<Price>50</Price>
@@ -368,7 +359,7 @@
 					<After>
 						<Text>Если вам подходит цена, выкладывайте деньги. А затем отправляйтесь в дорогу.</Text>
 					</After>
-				</Action>
+				</Get>
 			</Actions>
 			<Modifications>
 				<Modification Name="Strength" Value="6"/>
@@ -381,13 +372,12 @@
 			<Id>33</Id>
 			<Text>Перестрелка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Firefight/>
 					<Enemies>
 						<Enemy Name="ВОИН" Skill="9" Strength="12" Cartridges="4"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="306"/>
@@ -419,14 +409,13 @@
 			<Id>37</Id>
 			<Text>Стрельба в черте города запрещена, но, будем надеяться, вы и без оружия неплохо управитесь.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="МОШЕННИК" Skill="8" Strength="8"/>
 					</Enemies>
 					<HeroWoundsLimit/>
 					<EnemyWoundsLimit/>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="212" Text="Вы снизили его СИЛУ до 2"/>
@@ -512,59 +501,51 @@
 			<Id>47</Id>
 			<Text>Лавка размещается в просторном, похожем на сарай доме. Чернобородый хозяин весело приветствует вас и начинает выкладывать на низкий прилавок образцы своих товаров.\n\nА может быть, вы сами хотите что-нибудь продать? За хороший золотой самородок Торговец не пожалеет 20$.</Text>
 			<Actions>
-				<Action>
-					<Type>SellNuggets</Type>
+				<SellNuggets>
 					<Button>Продать самородки</Button>
 					<SellPrices>2000</SellPrices>
 					<After>
 						<Text>Не откажется он и от пушнины. Волчью шкуру, например, купит за 5 долларов, шкуру рыси – за 3, пумы – за 7. Кроличья шкурка идет за полдоллара. А если у вас есть шкуры медведя или бизона, то за каждую торговец тут же отсчитает по 10 долларов.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SellSkins</Type>
+				</SellNuggets>
+				<SellSkins>
 					<Button>Продать шкуры</Button>
 					<SellPrices>Шкура волка=500, Шкура рыси=300, Шкура пумы=700, Шкура кролика=50, Шкура медведя=1000, Шкура бизона=1000</SellPrices>
 					<After>
 						<Text>Беседуя, лавочник сдергивает с полок и бросает на прилавок все новые и новые товары:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</SellSkins>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Лассо</Text>
 					<Price>100</Price>
 					<Trigger>Лассо</Trigger>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Нож</Text>
 					<Price>150</Price>
 					<Trigger>Нож</Trigger>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Спички в кожаном кисете</Text>
 					<Price>50</Price>
 					<Trigger>Спички</Trigger>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Одеяло</Text>
 					<Price>100</Price>
 					<Trigger>Одеяло</Trigger>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Жевательный табак</Text>
 					<Trigger>Табак</Trigger>
 					<Price>50</Price>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Шесть патронов</Text>
 					<Price>100</Price>
@@ -573,23 +554,20 @@
 					<After>
 						<Text>На случай, если судьба забросит вас на индейскую территорию, лавочник советует запастись подарками для индейцев (любая вещь за полдоллара):</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Бусы</Text>
 					<Trigger>Бусы</Trigger>
 					<Price>50</Price>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Яркий пояс</Text>
 					<Trigger>Пояс</Trigger>
 					<Price>50</Price>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Зеркальце</Text>
 					<Price>50</Price>
@@ -597,14 +575,13 @@
 					<After>
 						<Text>Напоследок хозяин гордо водружает на прилавок странный предмет. Это медная морская подзорная труба. Бог весть как попала она в эти края... Эта вещь стоит дороже всего – 9 долларов:</Text>
 					</After>
-				</Action>		
-				<Action>
-					<Type>Get</Type>
+				</Get>		
+				<Get>
 					<Button>Купить</Button>
 					<Text>Подзорная труба</Text>
 					<Trigger>Подзорная труба</Trigger>
 					<Price>900</Price>
-				</Action>
+				</Get>
 			</Actions>
 			<Options>
 				<Option Destination="227" Text="Купили трубу (и, может быть, что-нибудь еще)"/>
@@ -616,10 +593,9 @@
 			<Id>48</Id>
 			<Text>Оглядев засыпанное обломками гранита дерево, налегаете на толстый сук, как на рычаг. Дерево медленно вздрагивает... подается... и вся каменная груда беспощадной лавиной обрушивается на вас.</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="278" Text="Повезло"/>
@@ -638,10 +614,9 @@
 			<Id>50</Id>
 			<Text>Проверьте свое обаяние:</Text>
 			<Actions>
-				<Action>
-					<Type>Charm</Type>
+				<Charm>
 					<Button>Проверить обаяние</Button>
-				</Action>
+				</Charm>
 			</Actions>
 			<Options>
 				<Option Destination="340" Text="Клятва прозвучала достаточно убедительно"/>
@@ -742,14 +717,13 @@
 			<Id>62</Id>
 			<Text>Перкинс рад случаю поболтать и вываливает на вас ворох местных сплетен. Когда удается вставить слово, вы интересуетесь, где тут можно купить патроны. Перкинс отвечает, что патроны он может продать и сам, по доллару за пару. А если туго с деньгами, он готов у вас что-нибудь купить. Например, шкуры. За волчью он даст 3 доллара, за шкуру пумы – 5, рыси – 2, а если есть медвежья или бизонья шкуры, то не поскупится и на 8$.</Text>
 			<Actions>
-				<Action>
-					<Type>SellSkins</Type>
+				<SellSkins>
 					<Button>Продать шкуры</Button>
 					<SellPrices>Шкура волка=300, Шкура рыси=200, Шкура пумы=500, кура медведя=800, Шкура бизона=800</SellPrices>
 					<After>
 						<Text>Решайте сами, устраивают ли вас такие цены.</Text>
 					</After>
-				</Action>
+				</SellSkins>
 			</Actions>
 			<Options>
 				<Option Destination="578"/>
@@ -814,10 +788,9 @@
 			<Id>70</Id>
 			<Text>Спасенный человек вам решительно не нравится. Его плоская рожа с перебитым носом и бегающими глазками не внушает доверия, а рассказ о пьяных дружках, шутки ради спихнувших его в шахту и забывших вытащить, просто нелеп. Но все же вы сделали доброе дело. Судьба обязательно отблагодарит вас за это.</Text>
 			<Actions>
-				<Action>
-					<Type>LuckRecovery</Type>
+				<LuckRecovery>
 					<Button>Восстановить 1 цифру удачи</Button>
-				</Action>
+				</LuckRecovery>
 			</Actions>
 			<Options>
 				<Option Destination="461"/>
@@ -855,10 +828,9 @@
 			<Id>74</Id>
 			<Text>Проверьте свое обаяние:</Text>
 			<Actions>
-				<Action>
-					<Type>Charm</Type>
+				<Charm>
 					<Button>Проверить обаяние</Button>
-				</Action>
+				</Charm>
 			</Actions>
 			<Options>
 				<Option Destination="328" Text="Производите впечатление порядочного человека"/>
@@ -869,8 +841,7 @@
 			<Id>75</Id>
 			<Text>В ресторане ничего не изменилось – та же грубая подделка под роскошь, тот же фальшивящий оркестр, та же певица, выводящая рулады. К сожалению, и цены те же: обед стоит 2 доллара (и прибавит 3 к вашей СИЛЕ).</Text>
 			<Actions>
-				<Action>
-					<Type>Get</Type>
+				<Get>
 					<Button>Заплатить</Button>
 					<Text>Обед</Text>
 					<Price>200</Price>
@@ -878,7 +849,7 @@
 					<After>
 						<Text>Но когда вы спрашиваете официанта о рулетке, он огорченно отвечает, что городские власти велели это дело прикрыть. Здесь, мол, ежедневно драки, проигравшиеся бедолаги не раз пытались убить и ограбить счастливчиков... да еще ходили слухи о мошенничестве.\n\nПополнить кошелек тут не удастся. Но ведь не корысть привела вас сюда! Где-то бродят убийцы, оставшиеся безнаказанными, а вы здесь преспокойно слушаете оркестр!\n\nС этой мыслью вы покидаете ресторан.</Text>
 					</After>
-				</Action>
+				</Get>
 			</Actions>	
 			<Options>
 				<Option Destination="91"/>
@@ -909,12 +880,11 @@
 			<Id>79</Id>
 			<Text>Стрелять нельзя: услышат на острове. Придется драться в утлой лодчонке, которая в любой момент может перевернуться (на время боя вычтите 1 из своей ЛОВКОСТИ).</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="БАНДИТ" Skill="8" Strength="10"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="160"/>
@@ -1090,13 +1060,12 @@
 			<Id>99</Id>
 			<Text>Перестрелка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Firefight/>
 					<Enemies>
 						<Enemy Name="ЭЛЬ-ХАБАЛИ" Skill="11" Strength="12" Cartridges="6"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="477"/>
@@ -1145,14 +1114,13 @@
 			<Id>105</Id>
 			<Text>Глаза юноши остаются холодными и недоверчивыми. Вы нагибаетесь, чтобы помочь ему встать, но молодой воин из последних сил вцепляется вам в горло.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ИНДЕЕЦ" Skill="6" Strength="6"/>
 					</Enemies>
 					<HeroWoundsLimit/>
 					<EnemyWoundsLimit/>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="418"/>
@@ -1170,14 +1138,13 @@
 			<Id>107</Id>
 			<Text>Вам придется вести перестрелку с двумя неизвестными противниками, засевшими в густом ивняке. Вы их не видите, стрелять приходится на звук и наугад, поэтому на время поединка вычтите 1 из своей ЛОВКОСТИ.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Firefight/>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ПРОТИВНИК" Skill="9" Strength="9" Cartridges="5"/>
 						<Enemy Name="ВТОРОЙ ПРОТИВНИК" Skill="8" Strength="10" Cartridges="5"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="595"/>
@@ -1266,10 +1233,9 @@
 			<Id>117</Id>
 			<Text>До чего же ухожена эта ферма! В каждой мелочи чувствуется хозяйская рука. Достаточно взглянуть на загон для скота, обнесенный жердями на крепких, глубоко вкопанных столбах. Или на сарай, над которым аккуратно надстроен сеновал. Или на гонтовую крышу дома – редкость в здешних краях...\n\nВладелец этого благоустроенного хозяйства – немолодой мужчина в саржевом рабочем костюме – отрывается от работы и тревожно глядит на вас. Кажется, ему очень хочется сбегать в дом за ружьем.\n\nПрикоснувшись к шляпе, представляетесь и просите разрешения заночевать здесь.</Text>
 			<Actions>
-				<Action>
-					<Type>Charm</Type>
+				<Charm>
 					<Button>Проверить обаяние</Button>
-				</Action>
+				</Charm>
 			</Actions>
 			<Options>
 				<Option Destination="453" Text="Оно не подвело вас"/>
@@ -1280,12 +1246,11 @@
 			<Id>118</Id>
 			<Text>Бандит стреляет в машиниста, но промахивается. В ту же секунду он спрыгивает на тендер и, пробежав по штабелю дров, устремляется к паровозу. Вы встаете у него на пути. Первым же ударом удается выбить револьвер из рук врага.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="НАЛЕТЧИК" Skill="8" Strength="8"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="530"/>
@@ -1341,10 +1306,9 @@
 			<Id>124</Id>
 			<Text>Обойдя котловину, замираете в узкой впадине – вероятно, когда-то здесь в озеро впадала река. Выбираете цель – косматого мрачного быка, стоящего к вам ближе всех. Теперь все решит точность выстрела, потому что раненый бизон очень опасен.</Text>
 			<Actions>
-				<Action>
-					<Type>Skill</Type>
+				<Skill>
 					<Button>Проверить ловкость</Button>
-				</Action>
+				</Skill>
 			</Actions>
 			<Options>
 				<Option Destination="649" Text="Ловкости не хватило"/>
@@ -1495,25 +1459,22 @@
 			<Id>140</Id>
 			<Text>Что он вытворяет, этот черт с копытами! То выгибается дугой в прыжке, то приземляется на прямых ногах так, что у вас позвоночник хрустит, то брыкается, вскидывая круп выше головы. И при этом еще ухитряется выгибать шею назад, чтобы укусить вас. Вы и так еле удерживаете равновесие, а тут еще надо вовремя врезать этому бандиту по злющей морде...\n\nНо вороной негодяй тоже не на новичка нарвался! Ваш незабвенный друг Дан Сэвидж не напрасно учил вас обращаться с лошадьми. С вас сошло семь потов, но конь побежден! Он стоит, расставив ноги, вывалив язык и тяжело раздувая взмыленные бока.\n\nФермер потрясен. Он мигом отсчитывает обещанную плату. Вы хотите купить здесь патроны, но, увы, ружейные патроны хозяина не подойдут к вашему кольту.\n\nПохоже, фермеру жаль расставаться с наличными. Он спрашивает, не согласитесь ли вы вместо десяти долларов взять самородок, который он купил у одного проезжего, или динамитную шашку (он уже и не помнит, как она к нему попала)...</Text>
 			<Actions>
-				<Action>
-					<Type>Get</Type>
+				<Get>
 					<Button>Выбрать</Button>
 					<Trigger>Самородок</Trigger>
 					<Benefit Name="Nuggets" Value="1"/>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Выбрать</Button>
 					<Trigger>Динамитная шашка</Trigger>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Выбрать</Button>
 					<Benefit Name="Cents" Value="1000"/>
 					<After>
 						<Text>Решайте, что вам больше по душе, и прощайтесь с фермером.</Text>
 					</After>
-				</Action>	
+				</Get>	
 			</Actions>
 			<Options>
 				<Option Destination="473"/>
@@ -1548,13 +1509,12 @@
 			<Id>144</Id>
 			<Text>Вам приходилось слышать, что этот негодяй – прекрасный стрелок. А сегодня вы в этом убеждаетесь...</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Firefight/>
 					<Enemies>
 						<Enemy Name="СТЕРВЯТНИК ДЖО" Skill="11" Strength="12" Cartridges="6"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="338"/>
@@ -1628,15 +1588,14 @@
 			<Id>153</Id>
 			<Text>Перестрелка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Firefight/>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ИНДЕЕЦ" Skill="9" Strength="9" Cartridges="3"/>
 						<Enemy Name="ВТОРОЙ ИНДЕЕЦ" Skill="8" Strength="10" Cartridges="4"/>
 						<Enemy Name="ТРЕТИЙ ИНДЕЕЦ" Skill="8" Strength="9" Cartridges="4"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="302"/>
@@ -1718,13 +1677,12 @@
 			<Id>163</Id>
 			<Text>Спасенная девушка рассказывает, что банда Мясника Фостера налетела на ранчо ее отца, подожгла дом, а один из бандитов затащил ее на седло...\n\nЧто ж, вы совершили благородный поступок. За это когда-нибудь судьба будет благосклонна к вам.</Text>
 			<Actions>
-				<Action>
-					<Type>LuckRecovery</Type>
+				<LuckRecovery>
 					<Button>Восстановить 1 цифру удачи</Button>
 					<After>
 						<Text>Девушка горячо благодарит вас и просит отвезти ее к отцу.</Text>
 					</After>
-				</Action>
+				</LuckRecovery>
 			</Actions>
 			<Options>
 				<Option Destination="92" Text="Окажете ей эту услугу"/>
@@ -1749,14 +1707,13 @@
 			<Id>166</Id>
 			<Text>Перестрелка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Firefight/>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="10" Cartridges="4"/>
 						<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="9" Cartridges="4"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="336"/>
@@ -1885,8 +1842,7 @@
 			<Id>181</Id>
 			<Text>Ресторан в этом захолустном городишке явно пытается поразить вас роскошью. Красные бархатные портьеры, канделябры «под золото», плюшевые скатерти, оркестр из четверых музыкантов с рожами забулдыг и блондинка, поющая о веселом ковбое на пегом мустанге.\n\nОфициант приносит меню. Обед обойдется в 2 доллара и прибавит 3 к вашей СИЛЕ.</Text> 	
 			<Actions>
-				<Action>
-					<Type>Get</Type>
+				<Get>
 					<Button>Заплатить</Button>
 					<Text>Обед</Text>
 					<Price>200</Price>
@@ -1894,7 +1850,7 @@
 					<After>
 						<Text>Если сейчас вы не голодны, попросите официанта собрать еду вам в дорогу.\n\nВы уже собираетесь покинуть ресторан, но официант негромко говорит, что на втором этаже – рулетка. Не угодно ли джентльмену слегка развлечься?</Text>
 					</After>
-				</Action>
+				</Get>
 			</Actions>	
 			<Options>
 				<Option Destination="7" Text="Есть деньги на игру и желание рискнуть"/>
@@ -1905,10 +1861,9 @@
 			<Id>182</Id>
 			<Text>Проверьте ваше обаяние:</Text>
 			<Actions>
-				<Action>
-					<Type>Charm</Type>
+				<Charm>
 					<Button>Проверить обаяние</Button>
-				</Action>
+				</Charm>
 			</Actions>
 			<Options>
 				<Option Destination="264" Text="Вы понравились машинисту"/>
@@ -1941,10 +1896,9 @@
 			<Id>186</Id>
 			<Text>Вы прицеливаетесь на всем скаку...</Text>
 			<Actions>
-				<Action>
-					<Type>Skill</Type>
+				<Skill>
 					<Button>Проверить ловкость</Button>
-				</Action>
+				</Skill>
 			</Actions>
 			<Options>
 				<Option Destination="631" Text="Ловкости не хватило"/>
@@ -1963,10 +1917,9 @@
 			<Id>188</Id>
 			<Text>Ваш взгляд долго обшаривает громадные, поросшие травой и ежевикой валуны. Вы уже было отчаялись, но внезапно замечаете, что меж дальних скал ящерицей скользнула тень человека. Привязав лошадь, вы немедленно бросаетесь туда, где увидели незнакомца.\n\nЗдесь понадобятся навыки следопыта, но справитесь ли вы?</Text>
 			<Actions>
-				<Action>
-					<Type>Skill</Type>
+				<Skill>
 					<Button>Проверить ловкость</Button>
-				</Action>
+				</Skill>
 			</Actions>
 			<Options>
 				<Option Destination="576" Text="Ловкости не хватило"/>
@@ -2043,14 +1996,13 @@
 			<Id>197</Id>
 			<Text>Чикита летит стрелой и вскоре начинает отрываться от погони. Преследователи беспорядочно стреляют вдогонку.\n\nБросьте кубик один раз. Выпавшая цифра покажет, на сколько уменьшат вашу СИЛУ полученные раны:</Text>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<Button>Кинуть кубик</Button>
 					<Dices>1</Dices>
 					<After>
 						<Text>Если вы все же удержались в седле, то вскоре с облегчением видите, что загадочный отряд безнадежно отстал.\n\nВы пытаетесь сообразить, куда завела вас бешеная скачка, и понимаете, что где-то рядом Ту-Попларс.</Text>
 					</After>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Options>
 				<Option Destination="411"/>
@@ -2067,8 +2019,7 @@
 			<Id>199</Id>
 			<Text>Вас встречает коренастый широкоплечий человек с хитрыми глазками.\n\n«Я – Джон Перкинс, – представляется он. – Заправляю в этом центре мировой цивилизации. Гостю всегда рад. У нас ведь только изредка дилижансы останавливаются... Сейчас отведем вашу гнедую красотку на конюшню – и прошу к столу!»\n\nОтличный (и недорогой – всего полдоллара) обед прибавляет 4 к вашей СИЛЕ.</Text>	
 			<Actions>
-				<Action>
-					<Type>Get</Type>
+				<Get>
 					<Button>Заплатить</Button>
 					<Text>Обед</Text>
 					<Price>50</Price>
@@ -2076,7 +2027,7 @@
 					<After>
 						<Text>Если не голодны или поистратились в дороге, можете отказаться от еды. А ночлег здесь бесплатный...\n\nЧто вы сделаете потом?</Text>
 					</After>
-				</Action>
+				</Get>
 			</Actions>	
 			<Options>
 				<Option Destination="72" Text="Пойдете спать"/>
@@ -2106,11 +2057,10 @@
 			<Id>202</Id>
 			<Text>Вы разворачиваете Чикиту и спешите укрыться в чаще. Вдогонку летят пули.\n\nБросьте кубик два раза. Сумма выпавших чисел покажет, на сколько уменьшат вашу СИЛУ полученные раны:</Text>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<Button>Кинуть кубики</Button>
 					<Dices>2</Dices>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Options>
 				<Option Destination="525"/>
@@ -2120,10 +2070,9 @@
 			<Id>203</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="335" Text="Вам повезло"/>
@@ -2162,8 +2111,7 @@
 			<Id>207</Id>
 			<Text>Эти парни напрашиваются на неприятности? Они их получат!\n\nВы разворачиваетесь и отвешиваете наглецу прямой короткий в челюсть.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="РОДЖЕРС-СТАРШИЙ" Skill="10" Strength="8"/>
 						<Enemy Name="РОДЖЕРС-МЛАДШИЙ" Skill="9" Strength="8"/>
@@ -2173,7 +2121,7 @@
 					<After>
 						<Text>Убивать их, конечно, не надо.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="4" Text="Снизили СИЛУ каждого до 2, чтобы неповадно было затевать драку"/>
@@ -2302,10 +2250,9 @@
 			<Id>222</Id>
 			<Text>Проверьте свою ловкость:</Text>
 			<Actions>
-				<Action>
-					<Type>Skill</Type>
+				<Skill>
 					<Button>Проверить ловкость</Button>
-				</Action>
+				</Skill>
 			</Actions>
 			<Options>
 				<Option Destination="71" Text="Ловкости не хватило"/>
@@ -2374,10 +2321,9 @@
 			<Id>230</Id>
 			<Text>Не зря вам нахваливали это лекарство! Жизнь понемногу возвращается к молодому индейцу. Он приходит в себя, впивается в вас настороженным взглядом. Призвав на помощь все свое знание языка, начинаете объяснять юноше, кто вы такой и как сюда попали.</Text>
 			<Actions>
-				<Action>
-					<Type>Charm</Type>
+				<Charm>
 					<Button>Проверить обаяние</Button>
-				</Action>
+				</Charm>
 			</Actions>
 			<Options>
 				<Option Destination="399" Text="Ваш рассказ прозвучит убедительно"/>
@@ -2395,12 +2341,11 @@
 			<Id>232</Id>
 			<Text>Пуля свистит у виска. Вы взмахиваете руками, падаете из седла и, застыв в тени скалы, притворяетесь убитым. Несколько минут воин медлит, затем мягко спрыгивает со скалы.\n\nОн допустил ошибку, спрыгнув слишком близко к вам! Резкая подсечка под колени – и индеец падает, выронив ружье...</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ВОИН" Skill="10" Strength="12"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="306"/>
@@ -2446,14 +2391,13 @@
 			<Id>237</Id>
 			<Text>За любой из самородков хозяин отсчитает по 10 долларов. Торговаться бесполезно. Но, похоже, они стоят дороже, потому что Перкинс пытается выспросить, где вы нашли золото. Вы оставляете его расспросы без ответа и берете деньги (если, конечно, согласны с ценой).</Text>
 			<Actions>
-				<Action>
-					<Type>SellNuggets</Type>
+				<SellNuggets>
 					<Button>Продать самородки</Button>
 					<SellPrices>1000</SellPrices>
 					<After>
 						<Text>Хозяин так обижен вашими недомолвками, что прекращает торговлю и заявляет, что пора спать. Вы вспоминаете, что не худо было бы проведать Чикиту, но Перкинс говорит, что совсем недавно заглядывал на конюшню – ваша лошадка мирно жует овес...</Text>
 					</After>
-				</Action>
+				</SellNuggets>
 			</Actions>
 			<Options>
 				<Option Destination="387"/>
@@ -2497,22 +2441,20 @@
 			<Id>242</Id>
 			<Text>Долго здесь задерживаться нельзя. Можно сделать 3 ставки.\n\nЕсли не хотите слишком рисковать, поставьте на цвет: загадайте заранее, красное или черное выиграет, и бросьте кубик. Четная цифра – красное, нечетная – черное. При выигрыше вы получаете 1 доллар, при проигрыше – теряете 1 доллар.</Text>
 			<Actions>
-				<Action>
-					<Type>RedOrBlackGame</Type>
+				<RedOrBlackGame>
 					<Button>Поставить на красное или на чёрное</Button>
 					<Roulette/>
 					<After>
 						<Text>Ставка на цифру рискованнее. Вы ставите доллар и бросаете кубик дважды. Если выпадут одинаковые цифры, ставка возвращается к вам увеличенной в пять раз; если разные – вы проигрываете.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>DoubleGame</Type>
+				</RedOrBlackGame>
+				<DoubleGame>
 					<Button>Поставить на цифры</Button>
 					<Roulette/>
 					<After>
 						<Text>Играть можно только на наличные, в долг здесь не верят.</Text>
 					</After>
-				</Action>
+				</DoubleGame>
 			</Actions>	
 			<Options>
 				<Option Destination="242" Text="Сыграть ещё раз"/>
@@ -2541,13 +2483,12 @@
 			<Id>245</Id>
 			<Text>Перестрелка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Firefight/>
 					<Enemies>
 						<Enemy Name="ФОСТЕР" Skill="12" Strength="12" Cartridges="6"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="445"/>
@@ -2572,12 +2513,11 @@
 			<Id>248</Id>
 			<Text>Схватка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="СТЕРВЯТНИК ДЖО" Skill="10" Strength="12"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="338"/>
@@ -2649,13 +2589,12 @@
 			<Id>257</Id>
 			<Text>Распахнув дверь, выскакиваете наружу – и тут же вас настигает пущенная с крыши пуля (вычтите 3 из СИЛЫ). К счастью, кольт уже у вас в руке. Вы готовы принять бой.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Firefight/>
 					<Enemies>
 						<Enemy Name="НЕЗНАКОМЕЦ" Skill="9" Strength="9" Cartridges="5"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Strength" Value="-3"/>
@@ -2950,11 +2889,10 @@
 			<Id>291</Id>
 			<Text>Кидайте кубик. Выпало четное число – доллар ваш, нечетное – повезло сопернику. Можете играть сколько угодно раз, лишь бы хватило денег.</Text>
 			<Actions>
-				<Action>
-					<Type>DiceLtlGame</Type>
+				<DiceLtlGame>
 					<Roulette/>
 					<Button>Бросить кубик</Button>
-				</Action>
+				</DiceLtlGame>
 			</Actions>
 			<Options>
 				<Option Destination="291" Text="Сыграть ещё раз"/>
@@ -3041,11 +2979,10 @@
 			<Id>301</Id>
 			<Text>Спрыгиваете на тендер и, подхватив тяжелое тело кочегара, пытаетесь перенести его в кабину. Двое скачущих слева бандитов яростно палят из кольтов. Вы – отличная мишень...\n\nБросьте кубик. Выпавшая цифра покажет, на сколько уменьшат вашу СИЛУ полученные раны.</Text>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<Button>Кинуть кубик</Button>
 					<Dices>1</Dices>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Options>
 				<Option Destination="598"/>
@@ -3121,12 +3058,11 @@
 			<Id>309</Id>
 			<Text>Схватка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ЭЛЬ-ХАБАЛИ" Skill="11" Strength="12"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="477"/>
@@ -3136,14 +3072,13 @@
 			<Id>310</Id>
 			<Text>Чикита, чувствуя вашу тревогу, показывает, на что она способна. Преследователи понемногу начинают отставать. В ярости они открывают огонь – а пуля, увы, быстрее коня.\n\nБросьте кубик дважды. Сумма выпавших чисел покажет, на сколько уменьшат вашу СИЛУ полученные раны:</Text>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<Button>Кинуть кубики</Button>
 					<Dices>2</Dices>
 					<After>
 						<Text>Если после этого вы останетесь живы, вам удастся уйти от погони и добраться до Ту-Попларс.</Text>
 					</After>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Options>
 				<Option Destination="411"/>
@@ -3189,10 +3124,9 @@
 			<Id>315</Id>
 			<Text>Вы окидываете наглеца холодным взглядом и небрежно сообщаете ему, что по такой крупной мишени трудно промахнуться.\n\nГлаза верзилы вспыхивают злобной радостью. Он уже стоит в позе профессионального стрелка перед поединком: ноги чуть расставлены, корпус слегка наклонен вперед, ладонь чуть зависла над низко подвешенной кобурой... Да, это опытный боец!</Text>
 			<Actions>
-				<Action>
-					<Type>Skill</Type>
+				<Skill>
 					<Button>Проверить ловкость</Button>
-				</Action>
+				</Skill>
 			</Actions>
 			<Options>
 				<Option Destination="168" Text="Проверка успешно пройдена"/>
@@ -3211,8 +3145,7 @@
 			<Id>317</Id>
 			<Text>О, аптекарь отлично знает, что требуется путешественникам, ковбоям и золотоискателям! Вот в этой бутыли – лучшее в мире лекарство от укусов змей и ядовитых насекомых, да и вообще от любого отравления. Да и стоит-то всего доллар!</Text>
 			<Actions>
-				<Action>
-					<Type>Get</Type>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Противоядие</Text>
 					<Trigger>Противоядие</Trigger>
@@ -3220,9 +3153,8 @@
 					<After>
 						<Text>А здесь – бальзам для исцеления ран, полдоллара за бутылку.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Бальзам для исцеления ран</Text>
 					<Benefit Name="Healing" Value="Применить бальзам для исцеления ран,5,2"/>
@@ -3231,16 +3163,15 @@
 					<After>
 						<Text>А вот это – внимание! – знаменитая Золотая Панацея, патентованное средство. Цена ей, правда, 3 доллара за пузырек, зато она пригодится на все... м-м... неудачные случаи жизни.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Золотая Панацея</Text>
 					<Trigger>Противоядие</Trigger>
 					<Benefit Name="Healing" Value="Принять Золотую Панацею,-1"/>
 					<Price>300</Price>
 					<Multiple/>
-				</Action>	
+				</Get>	
 			</Actions>
 			<Options>
 				<Option Destination="403" Text="Решили что-нибудь купить"/>
@@ -3265,14 +3196,13 @@
 			<Id>320</Id>
 			<Text>Перестрелка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Firefight/>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ БАНДИТ" Skill="8" Strength="9" Cartridges="3"/>
 						<Enemy Name="ВТОРОЙ БАНДИТ" Skill="9" Strength="8" Cartridges="3"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="152"/>
@@ -3374,10 +3304,9 @@
 			<Id>333</Id>
 			<Text>Вы кладете руку на дверной засов, чтобы войти в конюшню... и тут за спиной раздается выстрел.</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="68" Text="Вам повезло"/>
@@ -3388,10 +3317,9 @@
 			<Id>334</Id>
 			<Text>Пока достаете из сумки еду, ваш спасенный, уже слегка оправившись, собирает ветки для костра. У него есть спички, и вскоре вы сидите у огня и смотрите, как Смит жадно поглощает ваше угощение (не забудьте вычеркнуть еду из списка поклажи).\n\nНе жалейте о еде – вы же спасли человека!</Text>
 			<Actions>
-				<Action>
-					<Type>LuckRecovery</Type>
+				<LuckRecovery>
 					<Button>Восстановить 1 цифру удачи</Button>
-				</Action>
+				</LuckRecovery>
 			</Actions>
 			<Options>
 				<Option Destination="42"/>
@@ -3472,10 +3400,9 @@
 			<Id>344</Id>
 			<Text>Светловолосый парень, оглянувшись на своих приятелей, подсаживается к вам.\n\n«Откуда у тебя эта штука?» – тихо спрашивает он.\n\nВы шепотом рассказываете ему историю медальона.</Text>
 			<Actions>
-				<Action>
-					<Type>Charm</Type>
+				<Charm>
 					<Button>Проверить обаяние</Button>
-				</Action>
+				</Charm>
 			</Actions>
 			<Options>
 				<Option Destination="287" Text="Ваши слова прозвучат достаточно искренне"/>
@@ -3507,14 +3434,13 @@
 			<Id>348</Id>
 			<Text>Перестрелка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Firefight/>
 					<Enemies>
 						<Enemy Name="КОНОКРАД" Skill="8" Strength="8" Cartridges="4"/>
 					</Enemies>
 					<EnemyWoundsLimit/>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="292" Text="Вы снизили его СИЛУ до 2"/>
@@ -3540,10 +3466,9 @@
 			<Id>351</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="19" Text="Вам повезло"/>
@@ -3757,10 +3682,9 @@
 			<Id>376</Id>
 			<Text>Не опуская ружья, глядящего вам в лоб, золотоискатель хрипло требует, чтобы вы объяснили, за каким чертом вас занесло на его участок...</Text>
 			<Actions>
-				<Action>
-					<Type>Charm</Type>
+				<Charm>
 					<Button>Проверить обаяние</Button>
-				</Action>
+				</Charm>
 			</Actions>
 			<Options>
 				<Option Destination="179" Text="Сумеете убедить старика в том, что вы всего лишь безобидный путник, ищущий ночлега"/>
@@ -3840,10 +3764,9 @@
 			<Id>384</Id>
 			<Text>Как тут не вмешаться, если на ваших глазах происходит ограбление! Мгновенно вы оказываетесь на дороге, рука привычным движением выхватывает кольт из кобуры. Бандиты оборачиваются на треск ветвей, и один из них, бородатый верзила, вскидывает ружье...</Text>
 			<Actions>
-				<Action>
-					<Type>Skill</Type>
+				<Skill>
 					<Button>Проверить ловкость</Button>
-				</Action>
+				</Skill>
 			</Actions>
 			<Options>
 				<Option Destination="231" Text="Ловкости не хватило"/>
@@ -3919,10 +3842,9 @@
 			<Id>393</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="197" Text="Вам повезло"/>
@@ -3965,10 +3887,9 @@
 			<Id>398</Id>
 			<Text>Честному человеку незачем выслеживать вас, затаившись на крыше, а с бандитами у вас расчет короток! Вы поднимаете свой сорокапятикалиберный. Он может вогнать пулю в сосновую доску на девять дюймов, а уж крышу из жердей и глины прошьет, как игла – ткань. Но стрелять на звук – дело сложное.</Text>
 			<Actions>
-				<Action>
-					<Type>Skill</Type>
+				<Skill>
 					<Button>Проверить ловкость</Button>
-				</Action>
+				</Skill>
 			</Actions>
 			<Options>
 				<Option Destination="603" Text="Ловкости не хватило"/>
@@ -3979,10 +3900,9 @@
 			<Id>399</Id>
 			<Text>Недоверие и ненависть постепенно уходят из глаз молодого индейца. Вы помогаете ему встать на ноги, выводите из пещеры и подсаживаете в седло. Не бросать же беднягу здесь! Придется отвезти парнишку к его соплеменникам. Конечно, это задержит вас в пути, зато вы сделаете доброе дело.</Text>
 			<Actions>
-				<Action>
-					<Type>LuckRecovery</Type>
+				<LuckRecovery>
 					<Button>Восстановить 1 цифру удачи</Button>
-				</Action>
+				</LuckRecovery>
 			</Actions>
 			<Options>
 				<Option Destination="141"/>
@@ -4070,10 +3990,9 @@
 			<Id>410</Id>
 			<Text>Где-то неподалеку вы видели родник...\n\nСпрыгнув с седла и прихватив флягу, идете искать воду. Родник вы находите быстро и с полной флягой возвращаетесь к лошадям.\n\nСпасенная девушка уже очнулась и теперь стоит, держа ружье, снятое с седла бандита. Она бледна, губы ее закушены в кровь, но дуло ружья, направленное на вас, не дрожит. Девушка приняла вас за похитителя!</Text>
 			<Actions>
-				<Action>
-					<Type>Charm</Type>
+				<Charm>
 					<Button>Проверить обаяние</Button>
-				</Action>
+				</Charm>
 			</Actions>
 			<Options>
 				<Option Destination="570" Text="Вы внушаете доверие хотя бы настолько, чтобы напуганная до полусмерти девушка согласилась вас выслушать"/>
@@ -4104,13 +4023,12 @@
 			<Id>413</Id>
 			<Text>В лунном свете возникает силуэт человека с чем-то вроде дубинки в руке. Дубинка взлетает над вашей головой... но тут вы вскакиваете с постели и выкручиваете руку незваному гостю.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="НОЧНОЙ ВИЗИТЕР" Skill="7" Strength="8"/>
 					</Enemies>
 					<EnemyWoundsLimit/>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="538" Text="Вы снизили его СИЛУ до 2"/>
@@ -4170,10 +4088,9 @@
 			<Id>420</Id>
 			<Text>Сумеете ли вы убедительно солгать?</Text>
 			<Actions>
-				<Action>
-					<Type>Charm</Type>
+				<Charm>
 					<Button>Проверить обаяние</Button>
-				</Action>
+				</Charm>
 			</Actions>
 			<Options>
 				<Option Destination="520" Text="Вам удалось обмануть эту женщину, явно неглупую и наблюдательную"/>
@@ -4243,12 +4160,11 @@
 			<Id>428</Id>
 			<Text>Усталость после трудного дня берет свое, и вы забываетесь чутким тревожным сном. Будит вас отчаянное ржание бьющейся в ужасе лошади. Не успеваете схватиться за оружие, как на вас обрушивается мохнатая грузная туша... Гризли, ужас американских лесов!\n\nКаждый удар когтистой лапы вычтет 3 из вашей СИЛЫ. Если на поясе у вас нож, можете воспользоваться им и тоже наносить удары, уменьшающие СИЛУ зверя на 3. А если за спиной горит костер, левой рукой выхватите из огня пылающую ветку, используйте ее как оружие – и ваша ЛОВКОСТЬ на время боя увеличится на 1...</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="МЕДВЕДЬ" Skill="12" Strength="14"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="95"/>
@@ -4276,10 +4192,9 @@
 			<Id>431</Id>
 			<Text>Хорошо, что Чикита привязана в кустах! Двое спешиваются у колодца, и первые же фразы, которыми обмениваются, заставляют вас стиснуть зубы. Это бандиты из шайки Стервятника Джо! Заметят ли они привязанное к срубу лассо?</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="493" Text="Вам повезло"/>
@@ -4334,13 +4249,12 @@
 			<Id>438</Id>
 			<Text>Схватка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="КОНОКРАД" Skill="8" Strength="9"/>
 					</Enemies>
 					<EnemyWoundsLimit/>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="292" Text="Вы снизили его СИЛУ до 2"/>
@@ -4586,15 +4500,14 @@
 			<Id>468</Id>
 			<Text>К счастью, вы успели заметить в воде отражение летящей на вас желтой тени. Великолепная реакция спасает вам жизнь: падая, откатываетесь влево, и громадная пума лишь слегка задевает вас когтистой лапой (вычтите 2 из СИЛЫ). Обычно пумы не нападают на людей, но эта, вероятно, очень голодна...\n\nПадая, вы выронили револьвер. Поднять его не удастся.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ПУМА" Skill="10" Strength="10"/>
 					</Enemies>
 					<After>
 						<Text>Если у вас есть нож, можете прибавлять 1 к МОЩНОСТИ своего УДАРА.</Text>
 					</After>
-				</Action>
+				</Fight>
 			</Actions>
 			<Modifications>
 				<Modification Name="Strength" Value="-2"/>
@@ -4633,8 +4546,7 @@
 			<Id>472</Id>
 			<Text>После еды разносчик предлагает взглянуть на товары. Вещи те же, что можно купить в любой деревушке, но цены, цены...\n\n«Цены не нравятся? – смеется Уоррен. – Тогда иди в соседнюю лавочку, приятель!»\n\nОн прав. На много миль вокруг вы не встретите другого торговца. Поэтому вы прекращаете возражения и даже, увидев в коробе патроны, не заикаетесь о том, что продавать индейцам оружие запрещено. За патрон Уоррен требует по доллару.</Text>
 			<Actions>
-				<Action>
-					<Type>Get</Type>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Один патрон</Text>
 					<Price>100</Price>
@@ -4643,16 +4555,14 @@
 					<After>
 						<Text>Нож он может продать за 3 доллара, лассо за 2...</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Нож</Text>
 					<Price>300</Price>
 					<Trigger>Нож</Trigger>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Лассо</Text>
 					<Price>200</Price>
@@ -4660,23 +4570,20 @@
 					<After>
 						<Text>Можно выбрать что-нибудь для подарка индейцам: зеркальце, пачку жевательного табака, бусы, нарядный пояс – любая вещь за доллар.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Бусы</Text>
 					<Trigger>Бусы</Trigger>
 					<Price>100</Price>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Жевательный табак</Text>
 					<Trigger>Табак</Trigger>
 					<Price>100</Price>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Зеркальце</Text>
 					<Price>100</Price>
@@ -4684,9 +4591,8 @@
 					<After>
 						<Text>Есть у разносчика даже динамитная шашка – за 8 монет.</Text>
 					</After>
-				</Action>	
-				<Action>
-					<Type>Get</Type>
+				</Get>	
+				<Get>
 					<Button>Купить</Button>
 					<Text>Динамитная шашка</Text>
 					<Price>800</Price>
@@ -4694,23 +4600,21 @@
 					<After>
 						<Text>Если у вас туго с наличными, Уоррен может купить любую из добытых вами шкур – за 2 доллара.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SellSkins</Type>
+				</Get>
+				<SellSkins>
 					<Button>Продать</Button>
 					<SellPrices>Любая шкура=200</SellPrices>
 					<After>
 						<Text>За самородок он отсчитает полдоллара.</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SellNuggets</Type>
+				</SellSkins>
+				<SellNuggets>
 					<Button>Продать</Button>
 					<SellPrices>50</SellPrices>
 					<After>
 						<Text>Торговаться бесполезно. Хотите совершить сделку – воля ваша. А затем попрощайтесь с разносчиком, возьмите Чикиту под уздцы и идите дальше на юго-запад.</Text>
 					</After>
-				</Action>
+				</SellNuggets>
 			</Actions>
 			<Options>
 				<Option Destination="372"/>
@@ -4782,10 +4686,9 @@
 			<Id>481</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="426" Text="Вам повезет"/>
@@ -4835,10 +4738,9 @@
 			<Id>487</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="534" Text="Вам повезло"/>
@@ -4857,12 +4759,11 @@
 			<Id>489</Id>
 			<Text>«Здесь», – шепчет Джинкинс, подводя вас к покосившемуся заборчику.\n\nВы легко перемахиваете через препятствие и оказываетесь во дворике. Чернеющий в десяти шагах дом выглядит нежилым, ни проблеска света не пробивается в щели заколоченных ставней. Неужели вы обмануты и здесь никого нет?..\n\nЕще как есть! На вас молча наваливается невесть откуда взявшийся бандит – вероятно, часовой. Сопя, он пытается заломить вам руки за спину. Парень явно глуп: он не зовет дружков на помощь, не желая ни с кем делить честь поимки врага. Что ж, воспользуйтесь его самонадеянностью!</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ЧАСОВОЙ" Skill="8" Strength="8"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="233"/>
@@ -4880,10 +4781,9 @@
 			<Id>491</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="322" Text="Вам повезло"/>
@@ -4894,10 +4794,9 @@
 			<Id>492</Id>
 			<Text>Лассо разрезает воздух и, захлестнув острый обломок скалы, дрожит в руках, как струна. Быстро и ловко вы начинаете взбираться на уступ.</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="129" Text="Вам повезло"/>
@@ -5327,12 +5226,11 @@
 			<Id>543</Id>
 			<Text>Подтянувшись на руках, перебрасываете свое тело на тряскую крышу вагона – и чуть не плюхаетесь вниз: с другой стороны состава на крышу тоже карабкается какой-то смуглый длинноусый тип! Он мгновенно разбирается в ситуации и мертвой хваткой вцепляется в вас. Ни он, ни вы не успеваете достать оружие...</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="НАЛЕТЧИК" Skill="7" Strength="10"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="467"/>
@@ -5373,10 +5271,9 @@
 			<Id>548</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="268" Text="Вам повезло"/>
@@ -5492,12 +5389,11 @@
 			<Id>561</Id>
 			<Text>Схватка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ВОИН" Skill="10" Strength="12"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="397"/>
@@ -5514,58 +5410,50 @@
 			<Id>563</Id>
 			<Text>Лавочник встречает вас по-приятельски и первым делом спрашивает: не хотите ли вы что-нибудь продать. На золото цена прежняя: 20 долларов за самородок.</Text>
 			<Actions>
-				<Action>
-					<Type>SellNuggets</Type>
+				<SellNuggets>
 					<Button>Продать</Button>
 					<SellPrices>2000</SellPrices>
 					<After>
 						<Text>А может быть, вы в своих странствиях удачно поохотились? Шкуру медведя или бизона торговец купит у вас за 10 долларов, пумы – за 7, волка – за 5, рыси – за 3, кролика – за полдоллара...</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>SellSkins</Type>
+				</SellNuggets>
+				<SellSkins>
 					<Button>Продать</Button>
 					<SellPrices>Шкура волка=500, Шкура рыси=300, Шкура пумы=700, Шкура кролика=50, Шкура медведя=1000, Шкура бизона=1000</SellPrices>
 					<After>
 						<Text>Вы осматриваетесь. В лавке почти ничего не изменилось. Только подзорная труба больше не поблескивает медными боками на прилавке...\n\nА вот цены остались прежними: лассо – 1 доллар, нож – 2 доллара, спички в кожаном кисете – полдоллара, седло – 4 доллара, жевательный табак – полдоллара за плитку, патроны – доллар за полдюжины:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</SellSkins>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Лассо</Text>
 					<Price>100</Price>
 					<Trigger>Лассо</Trigger>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Нож</Text>
 					<Price>200</Price>
 					<Trigger>Нож</Trigger>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Спички в кожаном кисете</Text>
 					<Price>50</Price>
 					<Trigger>Спички</Trigger>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Седло</Text>
 					<Price>400</Price>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Жевательный табак</Text>
 					<Trigger>Табак</Trigger>
 					<Price>50</Price>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Шесть патронов</Text>
 					<Price>100</Price>
@@ -5574,28 +5462,25 @@
 					<After>
 						<Text>Подарки для индейцев (бусы, зеркала, яркие пояса) – любая вещь за полдоллара:</Text>
 					</After>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Бусы</Text>
 					<Trigger>Бусы</Trigger>
 					<Price>50</Price>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Яркий пояс</Text>
 					<Trigger>Пояс</Trigger>
 					<Price>50</Price>
-				</Action>
-				<Action>
-					<Type>Get</Type>
+				</Get>
+				<Get>
 					<Button>Купить</Button>
 					<Text>Зеркальце</Text>
 					<Price>50</Price>
 					<Trigger>Зеркальце</Trigger>
-				</Action>	
+				</Get>	
 			</Actions>
 			<Options>
 				<Option Destination="325" Text="Купите что-нибудь"/>
@@ -5647,10 +5532,9 @@
 			<Id>569</Id>
 			<Text>Как ни странно, конь довольно легко позволяет оседлать себя. Хитрец с нетерпением ждет минуты, когда сможет помериться силами с наездником и втоптать его в навоз загона. К сожалению, вы догадываетесь об этом уже в седле.</Text>
 			<Actions>
-				<Action>
-					<Type>Skill</Type>
+				<Skill>
 					<Button>Проверить ловкость</Button>
-				</Action>
+				</Skill>
 			</Actions>
 			<Options>
 				<Option Destination="140" Text="Проверка успешно пройдена"/>
@@ -5675,10 +5559,9 @@
 			<Id>572</Id>
 			<Text>Вы знаете этого негодяя – он не из тех, кто сражается в честном поединке. Он вас просто пристрелит, вот и все. Придется рискнуть...</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="135" Text="Вам повезло"/>
@@ -5697,12 +5580,11 @@
 			<Id>574</Id>
 			<Text>Схватка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="ФОСТЕР" Skill="12" Strength="2"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="445"/>
@@ -5726,12 +5608,11 @@
 			<Id>577</Id>
 			<Text>Хотя под ногами и тропа, но лошадь все же приходится вести в поводу.\n\nВнезапно Чикита начинает упрямиться и храпеть. Вы оборачиваетесь, чтобы успокоить ее... и тут на плечи вам обрушивается что-то живое, яростное, шипящее. Выпустив поводья, вы падаете, катитесь по земле, схватившись в смертельной схватке с огромной рысью. Достать оружие вы не можете.</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Enemies>
 						<Enemy Name="РЫСЬ" Skill="8" Strength="10"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="353"/>
@@ -5888,10 +5769,9 @@
 			<Id>596</Id>
 			<Text>Рискованная попытка! Индейцы ненавидят ложь и не прощают ее.</Text>
 			<Actions>
-				<Action>
-					<Type>Charm</Type>
+				<Charm>
 					<Button>Проверить обаяние</Button>
-				</Action>
+				</Charm>
 			</Actions>
 			<Options>
 				<Option Destination="162" Text="Сумели убедить вождя в том, что не пролили ни капли индейской крови"/>
@@ -5911,10 +5791,9 @@
 			<Id>598</Id>
 			<Text>Машинист протягивает руку – и вот вы уже в кабине. Кочегар приходит в себя. В лице его ни кровинки, но он улыбается, хотя тряска, несомненно, причиняет молодому индейцу сильную боль.\n\n«Ну и молодчина же вы! – бросает через плечо машинист, не отрываясь от рычагов. – Без вас этот парнишка был бы уже покойником...»\n\nОн прав – и ваш подвиг заслуживает награды.</Text>
 			<Actions>
-				<Action>
-					<Type>LuckRecovery</Type>
+				<LuckRecovery>
 					<Button>Восстановить 1 цифру удачи</Button>
-				</Action>
+				</LuckRecovery>
 			</Actions>
 			<Options>
 				<Option Destination="45"/>
@@ -6085,10 +5964,9 @@
 			<Id>618</Id>
 			<Text>Женщина, убирающая со столиков посуду, удивленно приподнимает брови. Да, разумеется, она хорошо знает здешнего маршала. Его зовут Дэвид Кленси, он на днях уехал из города, вернется на будущей неделе... Парень, что сидел за этим столом? Бог его ведает, приезжий какой-то...\n\nВ ярости бросаетесь вы к дверям.</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="540" Text="Вам повезло"/>
@@ -6146,14 +6024,13 @@
 			<Id>625</Id>
 			<Text>Перестрелка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Firefight/>
 					<Enemies>
 						<Enemy Name="НЕЗНАКОМЕЦ" Skill="6" Strength="8" Cartridges="3"/>
 					</Enemies>
 					<EnemyWoundsLimit/>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="293" Text="Вы снизили его СИЛУ до 2"/>
@@ -6163,10 +6040,9 @@
 			<Id>626</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="468" Text="Вам повезет"/>
@@ -6206,11 +6082,10 @@
 			<Id>631</Id>
 			<Text>Вы промахнулись, а второй раз выстрелить уже не удается. Один из всадников оборачивается и разряжает в вашу сторону весь барабан своего револьвера...\n\nБросьте кубик дважды. Сумма цифр покажет, на сколько уменьшат вашу СИЛУ полученные раны:</Text>
 			<Actions>
-				<Action>
-					<Type>DiceWounds</Type>
+				<DiceWounds>
 					<Button>Кинуть кубики</Button>
 					<Dices>2</Dices>
-				</Action>
+				</DiceWounds>
 			</Actions>
 			<Options>
 				<Option Destination="528"/>
@@ -6255,10 +6130,9 @@
 			<Id>636</Id>
 			<Text>Но вы замешкались. А голоса дружков Эль-Хабали уже близко...</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="274" Text="Вам повезло"/>
@@ -6269,8 +6143,7 @@
 			<Id>637</Id>
 			<Text>Хозяин теряет интерес к часам и скучным голосом предлагает за них 7 долларов. Соглашаться или нет – дело ваше.</Text>		
 			<Actions>
-				<Action>
-					<Type>Get</Type>
+				<Get>
 					<Button>Продать</Button>
 					<Text>Золотые часы</Text>
 					<Benefit Name="Cents" Value="700"/>
@@ -6278,7 +6151,7 @@
 					<After>
 						<Text>Если вы еще не предлагали Перкинсу серебряный медальон или самородки – можете сделать это сейчас.</Text>
 					</After>
-				</Action>
+				</Get>
 			</Actions>
 			<Options>
 				<Option Destination="171" Text="Предложить серебряный медальон" Availability="Медальон"/>
@@ -6410,10 +6283,9 @@
 			<Id>650</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Action>
-					<Type>Luck</Type>
+				<Luck>
 					<Button>Проверить удачу</Button>
-				</Action>
+				</Luck>
 			</Actions>
 			<Options>
 				<Option Destination="158" Text="Вам повезло"/>
@@ -6497,14 +6369,13 @@
 			<Id>659</Id>
 			<Text>Перестрелка:</Text>
 			<Actions>
-				<Action>
-					<Type>Fight</Type>
+				<Fight>
 					<Firefight/>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ГРАБИТЕЛЬ" Skill="9" Strength="9" Cartridges="3"/>
 						<Enemy Name="ВТОРОЙ ГРАБИТЕЛЬ" Skill="8" Strength="10" Cartridges="4"/>
 					</Enemies>
-				</Action>
+				</Fight>
 			</Actions>
 			<Options>
 				<Option Destination="236"/>
