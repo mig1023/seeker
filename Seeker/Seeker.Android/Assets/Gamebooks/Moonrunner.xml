@@ -65,7 +65,7 @@
 				<Text>В другой комнате склад, где лежит куча костюмов. Если вы владеете навыком Маскировка, то три из них – Брицианского дворянина, орка и вампира могут оказаться вам очень полезны. К сожалению, в ваш заплечный мешок поместится только один. В этой комнате больше ничего интересного нет, следующая оказывается кабинетом, там стоит сейф. Вы уже хотите зайти, как вдруг чувствуете запах дыма – коридор впереди горит, и огонь идет в вашу сторону!</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Healing" Value="Поесть,3,2"/>
+				<Healing Value="Поесть,3,2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="84" Text="Рискнете и заглянете в сейф"/>
@@ -193,7 +193,7 @@
 				</Luck>
 			</Actions>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="138" Text="Удача с вами"/>
@@ -313,7 +313,7 @@
 				<Text>Теперь, когда зло исчезло отсюда, решайте:</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="125" Text="Обыщете храм"/>
@@ -374,7 +374,7 @@
 				<Text>Через стекло одной из витрин на вас смотрит человек, похожий на мертвеца, с впавшими глаза и исхудавшей фигурой. Но потом вы с ужасом понимаете, что видите свое собственное отражение. Это проклятье Белтагора – теперь вы не только похожи на мертвого, вы будете искать смерти. Всегда, когда вам будет предложено сражаться, вы не сможете выбирать другие варианты, проклятье заставит вас вступить в бой.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="20" Text="Теперь возвращайтесь, потеряв 3 Часа"/>
@@ -440,7 +440,7 @@
 			<Id>39</Id>
 			<Text>Кроме сена, муки и крестьянской утвари удается найти еще немного провизии (можете записать ее как 1 Еду), топор (если вы безоружны, можете взять его с собой) и интересную листовку. Подобные листовки вы видели в Блекхэвене и раньше, их расклеивает Вечное братство розы и кубка, но про само Братство никто никогда не слышал, и мало кто верит в его существование. Любопытно, что в листовке упоминается таверна «Старый осьминог», возможно, Братство как-то связано с сектой оборотня? Больше ничего интересного тут нет, а решетка по-прежнему загораживает выход.\n\nОстается только:</Text>
 			<Modifications>
-				<Modification Name="Healing" Value="Поесть,3"/>
+				<Healing Value="Поесть,3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="389" Text="Заглянуть в подвал"/>
@@ -491,7 +491,7 @@
 				<Text Size="small">Можете прибавить 1 Удачу.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MaxLuck" Value="1"/>
+				<MaxLuck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="248" Text="Если маска еще не у вас, можете пойти к храму Белтагора"/>
@@ -564,7 +564,7 @@
 			</Texts>
 			<Triggers>retsam, esproc</Triggers>
 			<Modifications>
-				<Modification Name="MaxLuck" Value="1"/>
+				<MaxLuck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="84" Text="Заглянете в него"/>
@@ -664,7 +664,7 @@
 				<Text Size="small">Восстановите 1 Удачу.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="248" Text="Если вам еще не удалось раздобыть маску, можете отправиться к гробнице Белтагора"/>
@@ -687,7 +687,7 @@
 				<Text>Впрочем, ржавые железные ручки в стене ведут наверх, а на высоте около трех метров есть деревянная балка. На полу разбросаны остатки двенадцати тел, у каждого их них не хватает трех пальцев на правой руке! Внезапно люк над головой захлопывается, и в яму врывается поток воды, наверно, из реки неподалеку. Ледяная вода уже достает вам до колен, похоже, каждый, кто сюда попадает, обречен утонуть! Надо срочно искать выход.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<RemoveTriggers>Монашеские ворота</RemoveTriggers>
 			<Options>
@@ -782,7 +782,7 @@
 				<Text>«Эээ прошу прощения, заикающимся голосом извиняется Хогг, когда вы берете его за шкирку, - это все Килмамей. Он любит всякие козни. Я тут ни при чем. Смотрите, мы даже снизим плату до 2 золотых, как компенсацию за этот инцидент».\n\nВы принимаете извинения, но предупреждаете Хогга, что если они попробуют подобное еще раз, то сильно пожалеют об этом. «Большое спасибо, - елейным голосом говорит он, - а сейчас поговорим о деньгах. Заплатите нам 4 золотых, и встречаемся на кладбище через полчаса».</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="374" Text="Заплатите Хоггу" Availability="ЗОЛОТО >= 4">
@@ -807,7 +807,7 @@
 				<Text>Раду злобно смеется и исчезает в клубах дыма. Что вы будете делать?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="95" Text="Попробуете сбежать из храма"/>
@@ -823,7 +823,7 @@
 				<Text>Пока вы едите, она говорит: «Сегодня в полночь Вечное братство розы и кубка – мистическое секретное общество – собирается в «Старом осьминоге». Но Братство – это все лишь прикрытием для секты Оборотня. Вы должны наблюдать за таверной и действовать по обстоятельствам. Мне же придется покинуть Блекхэвен, я сделала для вас все, что могла. Возможно, когда-нибудь мы встретимся».\n\nВы благодарите Ван Хельденхаст за помощь и направляетесь к таверне. Но когда вы уже рядом… «Убийство! Помогите! Шокер! Убийство!» - кричат несколько человек на соседней улице.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="86" Text="Пойдете туда и посмотрите, что произошло"/>
@@ -838,7 +838,7 @@
 				<Text>Но что насчет мага? Вы следуете за ним, но он уже ушел. Бросаетесь в погоню, и видите, что уже слишком поздно – за домом течет река, а на середине ее лодка. Несколько рабов изо всех сил налегают на весла, увозя Раду в то место, про которое они говорили.\n\nЭто пустынное место все называют Конец надежды, до него не больше часа пути…</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="19"/>
@@ -848,7 +848,7 @@
 			<Id>77</Id>
 			<Text>Вы осторожно приоткрываете дверь. Что-то катится по полу и останавливается у вашей ноги. Наклонившись, вы подбираете флакон тонизирующего средства. Можете выпить его, что увеличит ваше Мастерство на 1 (даже превысив начальное значение).\n\nСтоит вам шагнуть в комнату, как дверь захлопывается за спиной, словно ваше вторжение обнаружено…</Text>
 			<Modifications>
-				<Modification Name="MaxMastery" Value="1"/>
+				<MaxMastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="365"/>
@@ -891,7 +891,7 @@
 			<Id>82</Id>
 			<Text>Наперсточник очень ловок, но куда ему до вас. Когда чашки останавливаются, вы показываете на нужную. «Ты уверен», - спрашивает Жубар, больше не улыбаясь. В ответ вы переворачиваете чашку. Под ней лежит золотой. «Проклятье, - кричит он, - я не верю в это!» Но это уже не важно, старику придется отдать вам выигрыш. После этого он угрюмо объявляет, что игра закончена, и в ярости выходит из таверны. Забрав деньги, решайте:</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="1"/>
+				<Gold Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="387" Text="Перекинетесь парой слов с Эвирон"/>
@@ -916,7 +916,7 @@
 			<Id>85</Id>
 			<Text>Используя все свое искусство, вы находите следы грабителей могил, приходите по ним к комнате на Королевской улице, где они живут, и выбиваете дверь. «Проклятье!» - в изумлении кричит Хогг. – «Нас обнаружили!» Это уж точно. Вы забираете назад все, что они у вас украли плюс еще 5 золотых, как компенсацию. Хогг умоляет: «Не убивайте нас, мы просто пошутили. Мы знаем, где череп, только нам нужно немного времени на подготовку». Вы говорите Хоггу, что если через полчаса он не будет на кладбище, за его жизнь никто не даст и ломаного гроша, а сами идете к воротам.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="5"/>
+				<Gold Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="364" Text="Если у вас есть специальный костюм и навык Маскировка, можете пока принять вид вампира" Availability="Маскировка"/>
@@ -936,7 +936,7 @@
 			<Id>87</Id>
 			<Text>Ваши враги снова оказались на шаг впереди – тело Сайласа Энтадора лежит на голом полу его душной каморки! Быстро осмотрев труп, вы находите два небольших прокола на его шее, видимо, от ядовитого укуса. В его левой руке зажат клочок бумаги. В комнате среди разломанной скромной мебели валяются 4 золотых, можете взять их себе, а на каминной полке лежит запечатанное письмо, адресованное вам!</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="4"/>
+				<Gold Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="167" Text="Посмотрите, что за бумага в руке у Энтадора"/>
@@ -1005,7 +1005,7 @@
 			<Id>94</Id>
 			<Text>В надежде найти разгадку смерти Беннета вы обыскиваете одежду убийцы. Там 3 золотых и сфера алхимика: стеклянный шар, внутри которого клубится смертельное облако густого тумана. Это могущественное оружие, но и вы не сможете избежать ядовитого тумана, если разобьете шар в закрытом помещении. Можете взять и то и другое с собой и думать, что делать дальше:</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="3"/>
+				<Gold Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="3" Text="Остаться в театре и заглянуть в другие помещения"/>
@@ -1019,7 +1019,7 @@
 				<Text Size="small">Потеряйте 4 Выносливости.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="178" Text="Теперь попробуете обыскать храм"/>
@@ -1056,7 +1056,7 @@
 				</ThreeDice>
 			</Actions>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="338" Text="Сумма больше вашей Выносливости"/>
@@ -1107,7 +1107,7 @@
 			<Id>103</Id>
 			<Text>Несколько минут у вас еще есть. Используя все свое искусство, вы сначала с большим трудом развязываете узлы на руках, а потом уже быстро выбираетесь из веревки и, оттолкнувшись от скалы, спрыгиваете на каменный пол комнаты пыток. Тут же вы понимаете, как сильно вам повезло – орки забрали только золото, а заплечный мешок кинули у стены, даже не развязывая. Все ваши вещи целы. Теперь уходите, пока не вернулись палачи – отсюда ведет только одна дверь.</Text>
 			<Modifications>
-				<Modification Name="Gold" Empty="true"/>
+				<Gold Empty="true"/>
 			</Modifications>
 			<Options>
 				<Option Destination="199"/>
@@ -1163,7 +1163,7 @@
 				<Text>Вы смотрите в щель на дверь таверны как раз вовремя – сгорбленная фигура выходит из «Старого осьминога». Незнакомец одет в темно-серый плащ, на спине вышита метка Оборотня!</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="139" Text="Последуете за ним"/>
@@ -1256,7 +1256,7 @@
 				<Text>Только как выполнить его просьбу? Больше здесь делать нечего, надо выбирать другую дверь, где вы еще не были. Какая надпись вас больше привлекает:</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="203" Text="«Большая потеха»"/>
@@ -1273,7 +1273,7 @@
 				<Text>«Раду, обрати внимание, - обращается он к своему помощнику, - с каким упорством этот идиот сопротивляется неизбежному». Глаза его сверкают жестоким удовлетворением, он снова поворачивается к вам: «Так что, покажете Раду, что я ошибся или ему убрать последнюю панель?» Что вы выберете?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="234" Text="Расскажете все"/>
@@ -1288,7 +1288,7 @@
 				<Text>Злобный голос Карама Грула гремит: «Умри, болван, умри-и-и…»\n\nПоднявшись с земли, вы заходите в таверну.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="40"/>
@@ -1302,8 +1302,8 @@
 				<Text>Вам помогает подняться какая-то пожилая женщина. Осмотрев вас в монокль, она говорит: «Хм… вроде, целый. Хорошо, пойдем, глупый. Большая часть секты уже на пути сюда. Попробуем спастись». С этими словами она направляется в сторону гавани.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
-				<Modification Name="Gold" Empty="true"/>
+				<Endurance Value="-2"/>
+				<Gold Empty="true"/>
 			</Modifications>
 			<Options>
 				<Option Destination="200" Text="Пойдете за ней"/>
@@ -1497,7 +1497,7 @@
 				<Text>Внезапно сознание проясняется, и вы понимаете, что с вами происходит.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="171"/>
@@ -1511,7 +1511,7 @@
 				<Text>В свете луны вы отправляетесь на север, прочь и города.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="369"/>
@@ -1612,7 +1612,7 @@
 				<Text>Когда вы приходите в себя, то понимаете, что привязаны к скале, под вами яма с отвратительной грязью, каких вы тут уже видели множество. Руки связаны за спиной… Минуточку… что это за запах? Дым! Вы поднимаете глаза и видите, что это горит веревка.\n\nВладеете ли вы навыком Ловкость рук?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="103" Text="Да" Availability="Ловкость рук"/>
@@ -1652,7 +1652,7 @@
 				<Text>Поражаясь причудам судьбы, вы выбираетесь из канализации и отправляетесь на север, прочь из Блекхэвена.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="19"/>
@@ -1666,7 +1666,7 @@
 				<Text>Предстоит смертельная драка, но сначала надо освободиться от веревки.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="261" Text="Вы владеете навыком Ловкость рук" Availability="Ловкость рук"/>
@@ -1826,7 +1826,7 @@
 			</Texts>
 			<Triggers>retsam</Triggers>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="94" Text="Осмотрите труп полуорка"/>
@@ -1857,7 +1857,7 @@
 				<Text Size="small">Потеряйте 4 Выносливости.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="95" Text="Попробуете сбежать через дверь"/>
@@ -1872,7 +1872,7 @@
 				<Text>Вы уже почти у цели, как вдруг слышите слова заклинания…</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="35"/>
@@ -1898,7 +1898,7 @@
 				<Text>Наконец открутив его, вы выбираетесь из жуткого устройства и, шатаясь, выходите из небольшой каменной хижины, где вас пытали. По счастливой случайности, негодяи не только забыли ваш заплечный мешок, но даже не удосужились заглянуть в него. Все ваши вещи целы. На улице темно, вы вспоминаете разговор Раду и Грула и понимаете, что за деревню они имели ввиду! Она называется Пенхалл, это в нескольких километрах от города.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="369" Text="Вы отправляетесь туда"/>
@@ -1977,7 +1977,7 @@
 				<Text>Если в будущем, у вас будет возможность посетить Конрада Заара на ветряной мельнице, можете сделать это.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Gold" Value="25"/>
+				<Gold Value="25"/>
 			</Modifications>
 			<Triggers>Мельница</Triggers>
 			<Options>
@@ -2006,7 +2006,7 @@
 				<Text Size="small">От боли потеряйте 2 Выносливости.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="261" Text="Вы владеете навыком Ловкость рук" Availability="Ловкость рук"/>
@@ -2083,9 +2083,9 @@
 				<Text>Когда вы просыпаетесь, она дает вам немного провизии (запишите 2 Еды), 30 золотых и меч (если он вам нужен). Затем она отвечает на ваши вопросы.\n\n«Я, профессор ван Хельденхаст, много лет пыталась найти Карама Грула, это существо неизвестного происхождения, чью жизненную силу более трехсот лет поддерживает таинственное магическое искусство, которое он сам разработал – Нотура. Если Грул достигнет высших ступеней мастерства в этой смеси магии, алхимии и физиологии, он станет хозяином мира. Но Нотура вполне может его уничтожить. После войны многие волшебные предметы нашли в руинах его Башни Инквизиции, шесть из них, уникальные талисманы Нотуры, мне удалось разыскать в Блекхэвене. Если вам удастся их раздобыть, вы получите некоторую защиту от темных сил Грула».\n\nВан Хельденхаст рассказывает вам, где найти каждый из них.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Healing" Value="Поесть,3,2"/>
-				<Modification Name="Endurance" Value="4"/>
-				<Modification Name="Gold" Value="30"/>
+				<Healing Value="Поесть,3,2"/>
+				<Endurance Value="4"/>
+				<Gold Value="30"/>
 			</Modifications>
 			<Options>
 				<Option Destination="20"/>
@@ -2192,7 +2192,7 @@
 				<Text>Вы все еще пытаетесь вытереть руки, уже покрывающиеся волдырями, как лошади набирают бешеную скорость. Вы уже портовом районе, известном своей дурной репутацией. Карета приближается к берегу реки, неужели и вода не остановит лошадей!</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="346" Text="Попробуете остановить их"/>
@@ -2272,7 +2272,7 @@
 				<Text>Вы благодарите леди за бесценную информацию и отправляетесь в далекий путь на север.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="19"/>
@@ -2353,7 +2353,7 @@
 				<Text>Теперь лучше идти в таверну, пока туман не добрался до вас.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MaxLuck" Value="1"/>
+				<MaxLuck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="40"/>
@@ -2391,7 +2391,7 @@
 				<Text>Если вы хотите выбраться отсюда живым, нужно уничтожить это проклятые шары. Какой вы разобьете первым?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="306" Text="С замком"/>
@@ -2425,8 +2425,8 @@
 				<Text Size="small">Потеряйте 2 Выносливости.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
-				<Modification Name="Luck" Value="-1"/>
+				<Endurance Value="-2"/>
+				<Luck Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="181" Text="Если вы владеете навыком Ловкость рук" Availability="Ловкость рук">
@@ -2505,8 +2505,8 @@
 			<Id>243</Id>
 			<Text>Не обращая внимания на свои раны, вы быстро обыскиваете тело убийцы. На его запястье татуировка в виде головы оборотня! Так же у него 11 золотых и фляга с целебным напитком. Можете выпить его в любое время (кроме битвы), он восстановит вам 3 Выносливости. Но когда вы заканчиваете осмотр, вы видите, что люди со всей таверны окружили вас и достали мечи. «От тебя слишком много проблем, - говорит Эвирон, - думаю, тебе лучше убраться отсюда».</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="11"/>
-				<Modification Name="Healing" Value="Выпить целебный напиток,3"/>
+				<Gold Value="11"/>
+				<Healing Value="Выпить целебный напиток,3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="120" Text="Попробуете успокоить хозяйку, чтобы она разрешила вам остаться"/>
@@ -2548,7 +2548,7 @@
 				<Text Size="small">Потеряйте 2 Выносливости.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="394" Text="Теперь забраться в окно невозможно, но можете попробовать зайти через дверь"/>
@@ -2631,7 +2631,7 @@
 				<Text>С трудом поднявшись, вы понимаете, что убийца ушел, и догнать его не получится.\n\nНо есть еще и другие зацепки – охота начинается.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="55"/>
@@ -2861,7 +2861,7 @@
 			<Id>273</Id>
 			<Text>«А ты неудачник, охотник», - смеется Грул, складывая пальцы в форме дурного глаза. Он сказал это не случайно – на вас ложится могущественное проклятие, и ваша Удача снижается до нуля. Но это еще не самое страшное, вы нервно ждете, что будет дальше.</Text>
 			<Modifications>
-				<Modification Name="Luck" Empty="true"/>
+				<Luck Empty="true"/>
 			</Modifications>
 			<Options>
 				<Option Destination="249"/>
@@ -2875,7 +2875,7 @@
 				<Text>Надежда только на то, что вам удастся перебросить его через плечо.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="261" Text="Если вы владеете навыком Сражение" Availability="Сражение"/>
@@ -2942,8 +2942,8 @@
 				<Text>И то и другое можете взять с собой, а теперь пора начинать охоту.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MaxLuck" Value="1"/>
-				<Modification Name="Gold" Value="3"/>
+				<MaxLuck Value="1"/>
+				<Gold Value="3"/>
 			</Modifications>
 			<Triggers>retsam</Triggers>
 			<Options>
@@ -2958,7 +2958,7 @@
 				<Text>Пользуясь вашим состоянием, женщина исчезает. Когда, через несколько минут, вы поднимаетесь на ноги, от нее не остается и следа.\n\nЕсть ли у вас брошь с Розовой чашей?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="197" Text="Да"/>
@@ -2972,7 +2972,7 @@
 				<Text Size="small">Потеряйте 4 Выносливости.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="337" Text="Выбраться из храма и вернуться к таверне"/>
@@ -3054,7 +3054,7 @@
 			<Id>291</Id>
 			<Text>В столе удается найти 10 золотых и гектограмму. Это шестиконечная звезда, отлитая из серебра, могущественный талисман против нежити. К сожалению, она не поможет вам против блуждающих в тумане, как не помогла Крисуэллу, но, возможно, пригодится в дальнейшем. Оставаться здесь дальше опасно, надо уходить, только куда:</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="10"/>
+				<Gold Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="397" Text="К колокольне"/>
@@ -3122,7 +3122,7 @@
 				<Text>«Ленивый идиот, - кричит надсмотрщик, стоящий за вашей спиной. – Что ты делаешь? Бери этот камень и неси его к воротам». Он показывает на лежащий кусок скалы. Он огромный, и вы сомневаетесь, что можете его поднять, тем не менее, орк нетерпеливо ждет.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="265" Text="Сделаете то, что сказал"/>
@@ -3181,7 +3181,7 @@
 			<Id>303</Id>
 			<Text>Достав из заплечного мешка костюм, вы подходите и показываете его толпе. «Вот ваш вампир, простая маскировка». Но люди по-прежнему не верят. «Мы сами знаем способы проверить, вампир ты или нет, - ворчит Хогг, - например, говорят, что если воткнуть в вампира кинжал, он не будет кричать».\n\nНо спустя долгое время вам наконец удается доказать, что вы не больше вампир, чем король Галлантарии. Вы едите чеснок, держите крест, прыгаете через воду, гладите лошадь до тех пор, пока толпа, наконец, не развязывает вас. Но не раньше, чем Хогг вытаскивает все золото из ваших карманов как «компенсацию расходов».\n\nНаконец, вы можете вернуться, потеряв 4 Часа.</Text>
 			<Modifications>
-				<Modification Name="Gold" Empty="true"/>
+				<Gold Empty="true"/>
 			</Modifications>
 			<Options>
 				<Option Destination="20"/>
@@ -3201,7 +3201,7 @@
 				<Text Size="small">Потеряйте 2 Выносливости.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="22" Text="Если вы хотите снять цепь с Арголиса"/>
@@ -3216,7 +3216,7 @@
 				<Text>Какой шар вы попробуете разбить следующим:</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="366" Text="Со щитом"/>
@@ -3231,7 +3231,7 @@
 				<Text>Когда Каннинг, наконец, возвращается, вы уже стоите на ногах, как ни в чем не бывало.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="345" Text="Теперь предложите свою помощь в поисках Шокера"/>
@@ -3487,8 +3487,8 @@
 				<Text>По чудищу проходит зыбь, оно победно ревет, пока стражники окружают ваше лежащее тело.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
-				<Modification Name="Endurance" Value="-2"/>
+				<Mastery Value="-1"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="107" Text="Попробуете поговорить с Ферно и его людьми"/>
@@ -3660,7 +3660,7 @@
 			<Id>352</Id>
 			<Text>От сильного удара барон падает на землю. Вы выхватываете кол и втыкаете его прямо в сердце вампиру. Разносится жуткий крик, тело барона снова превращается в темный порошок, а сильный ветер разносит его по ветру. Теперь Барон Милеску уничтожен навсегда. Несмотря на то, что вы лишись флакона с кровью, за эту блестящую победу можете восстановить 1 Удачу. Теперь возвращайтесь на параграф, с которого пришли.</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Gameover/>
@@ -3694,8 +3694,8 @@
 				<Text>Что же дальше?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Empty="true"/>
-				<Modification Name="Endurance" Value="1"/>
+				<Endurance Empty="true"/>
+				<Endurance Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="249"/>
@@ -3725,7 +3725,7 @@
 			</Texts>
 			<Triggers>Шокер</Triggers>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="393" Text="В приют для душевнобольных"/>
@@ -3811,7 +3811,7 @@
 				<Text>Теперь попробуете разбить шар:</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="25" Text="С мечом"/>
@@ -3833,7 +3833,7 @@
 				<Text>Ослепший, вы, спотыкаясь, пытаетесь выбраться из комнаты, успев разглядеть большую летучую мышь, которая и плюнула вам в лицо ядом. Когда вы снова можете видеть, то понимаете, что она, похоже, испугалась не меньше вас, и сейчас пытается улететь через открытую дверь.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="347" Text="Нападете на нее"/>
@@ -3980,7 +3980,7 @@
 				<Text>Так, а это еще что?! Сон мгновенно слетает – из дверей таверны выходит сгорбленная фигура в сером плаще. На спине незнакомца вышита метка Оборотня!</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="139" Text="Выберетесь из-под лодки и пойдете вслед за ним"/>
@@ -4060,8 +4060,8 @@
 				<Text>Пока вы пытаетесь перевязать рану, вода продолжает прибывать.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
-				<Modification Name="Endurance" Value="-2"/>
+				<Mastery Value="-1"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="140" Text="Теперь можете попробовать подняться, цепляясь за ручки, если еще не делали этого">
@@ -4154,7 +4154,7 @@
 				<Text>Какой шар вы попробуете разбить теперь?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="366" Text="Со щитом"/>
