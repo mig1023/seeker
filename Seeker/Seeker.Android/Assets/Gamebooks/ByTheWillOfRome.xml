@@ -74,8 +74,8 @@
 				<Text>Через неделю ваша когорта должна отправиться маршем в крепость Каструм-Данубий к лимесу за Дунаем. Это примерно в 60-ти милях от лагеря. Перед этим у вас есть немного времени, чтобы подготовить своих солдат.\n\nКакой приказ вы отдадите своим центурионам?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Legionaries" Value="23"/>
-				<Modification Name="Discipline" Value="-2"/>
+				<Legionaries Value="23"/>
+				<Discipline Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="47" Text="Обучать легионеров рукопашному бою"/>
@@ -213,7 +213,7 @@
 				<Text>Легат скривился и нехотя взял ваше письмо. Пробежав глазами по тексту, он позвал слугу и отдал все необходимые распоряжения на ваш счет.\n\nВам и вашим слугам выделили палатку в центре лагеря. Согласно распоряжению Квинта Фульвия вы были назначены командовать небольшой крепостью с гарнизоном, состоявшим всего из одной когорты солдат. Слуга-писец Фульвия вскользь упомянул, что эта крепость находится по другую сторону Дуная. Фактически это был дальний «забытый богами» форпост римского лимеса. Вам предписывалось в ближайшие дни отправиться туда со II-й Когортой, чтобы сменить тамошний гарнизон.\n\n- Для начала я назначу вас командовать кавалерийской турмой, - сказал легат. – Нам нужно достать продовольствие для легиона. Займитесь этим. Когда доставите в лагерь провизию, я отдам под ваше руководство легионеров II когорты. Можете идти.\n\nВы направились в свою палатку.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="1"/>
+				<Honor Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="20"/>
@@ -241,7 +241,7 @@
 				<Text Size="small">Вашей Чести -1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="-1"/>
+				<Honor Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="10"/>
@@ -261,7 +261,7 @@
 				<Text Size="small">Вам -1 Чести.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="-1"/>
+				<Honor Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="36" Text="Спросить у солдат, к какой когорте принадлежит этот наглый центурион"/>
@@ -363,7 +363,7 @@
 			</Texts>
 			<Triggers>Вражда</Triggers>
 			<Modifications>
-				<Modification Name="Honor" Value="-1"/>
+				<Honor Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="6"/>
@@ -405,7 +405,7 @@
 				<Text Size="small">Запишите слова «еда №1»; вычеркните на листике одну фигурку легионера.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Legionaries" Value="-1"/>
+				<Legionaries Value="-1"/>
 			</Modifications>
 			<Triggers>Еда №1</Triggers>
 			<Options>
@@ -580,7 +580,7 @@
 				<Text Size="small">Вашей Чести -1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="-1"/>
+				<Honor Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="69"/>
@@ -653,7 +653,7 @@
 				<Text Size="small">Отметьте на листике Дисциплина когорты +1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Discipline" Value="1"/>
+				<Discipline Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="100"/>
@@ -697,7 +697,7 @@
 				<Text Size="small">Прибавьте +1 Дисциплины на листике своей когорты.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Discipline" Value="1"/>
+				<Discipline Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="90"/>
@@ -758,7 +758,7 @@
 				<Text Size="small">Запишите слово «лентяи» и прибавьте к Дисциплине когорты +1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Discipline" Value="1"/>
+				<Discipline Value="1"/>
 			</Modifications>
 			<Triggers>Лентяи</Triggers>
 			<Options>
@@ -772,7 +772,7 @@
 				<Text Size="small">Вашей Чести +1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="1"/>
+				<Honor Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="90"/>
@@ -813,7 +813,7 @@
 				<Text Size="small">Прибавьте +1 Дисциплины вашей когорте.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Discipline" Value="1"/>
+				<Discipline Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="47"/>
@@ -931,7 +931,7 @@
 				<Text Size="small">Вычеркните 3 фигурки легионера на листике когорты.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Legionaries" Value="-3"/>
+				<Legionaries Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="100"/>
@@ -1014,7 +1014,7 @@
 				<Text Size="small">Отметьте это на своем листике - Дисциплина -1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Discipline" Value="-1"/>
+				<Discipline Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="100"/>
@@ -1041,7 +1041,7 @@
 				<Text Size="small">Запишите на своем листике - Дисциплина +1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Discipline" Value="1"/>
+				<Discipline Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="140"/>
@@ -1055,8 +1055,8 @@
 				<Text Size="small">Запишите на своем листике - Дисциплина -1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="-1"/>
-				<Modification Name="Discipline" Value="-1"/>
+				<Honor Value="-1"/>
+				<Discipline Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="100"/>
@@ -1096,8 +1096,8 @@
 				<Text Size="small">Вычеркните на листике одну фигурку легионера.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Discipline" Value="1"/>
-				<Modification Name="Legionaries" Value="-1"/>
+				<Discipline Value="1"/>
+				<Legionaries Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="140"/>
@@ -1240,7 +1240,7 @@
 				<Text>- Честно говоря, я ожидал от отпрыска знатного рода Фусков гораздо большего - язвительно заявил легат - Боюсь, что я обязан написать письмо в Сенат о вашей неготовности служить в нашем легионе. Но пока я не получу окончательного решения Сената, я вынужден оставить вас в должности младшего трибуна.\n\nОднако, если вы меня подведете, то «я умываю руки» - заявил Фульвий.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="-1"/>
+				<Honor Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="130"/>
@@ -1293,7 +1293,7 @@
 				<Text Size="small">Вычеркните у себя на листике 10 сестерциев.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Sestertius" Value="-10"/>
+				<Sestertius Value="-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="140"/>
@@ -1364,7 +1364,7 @@
 				<Text Size="small">Вычеркните две фигурки солдат из листика вашей когорты.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Legionaries" Value="-2"/>
+				<Legionaries Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="140"/>
@@ -1406,8 +1406,8 @@
 				<Text>- Ах, разумеется, можете не беспокоиться - смеясь, ответила она на ваши неловкие заверения.\n\nВы распрощались с незнакомкой, и пошли вниз. Вам пора было возвращаться в свой лагерь.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="-1"/>
-				<Modification Name="Sestertius" Value="50"/>
+				<Honor Value="-1"/>
+				<Sestertius Value="50"/>
 			</Modifications>
 			<Options>
 				<Option Destination="140"/>
@@ -1427,7 +1427,7 @@
 				<Text Size="small">Запишите Дисциплина +1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Discipline" Value="1"/>
+				<Discipline Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="152"/>
@@ -1440,7 +1440,7 @@
 				<Text Size="small">Запишите на свой листик +10 сестерциев.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Sestertius" Value="10"/>
+				<Sestertius Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="140"/>
@@ -1496,7 +1496,7 @@
 				<Text>Вы собрали своих солдат и объяснили им задачу, которую поставил перед вами легат. Старший декурион вашей турмы Феликс Аттиан рассказал вам, что ближайшие деревни принадлежат римским вельможам. Местные колоны (крестьяне) и вольноотпущенники платили налог землевладельцам. Заниматься реквизициями в этих деревнях означало напрашиваться на большие неприятности с местной властью. Однако вам ничего не оставалось, как выполнять приказ легата. Вы приказываете отряду направиться в ближайшие деревни римской знати.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Horsemen" Value="6"/>
+				<Horsemen Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="185"/>
@@ -1678,7 +1678,7 @@
 				<Text Size="small">Вам -10 сестерций за обед и за аренду телеги.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Sestertius" Value="-10"/>
+				<Sestertius Value="-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="140"/>
@@ -1708,7 +1708,7 @@
 				<Text Size="small">Запишите себе на листике +30 сестерциев.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Sestertius" Value="30"/>
+				<Sestertius Value="30"/>
 			</Modifications>
 			<Options>
 				<Option Destination="140"/>
@@ -1963,7 +1963,7 @@
 				<Text Size="small">Отметьте на своем листике - Дисциплина -1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Discipline" Value="-1"/>
+				<Discipline Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="206" Text="Если вы пред атакой виллы давали приказ «брать грабителей в плен»" Singleton="Мародеров в плен"/>
@@ -2005,8 +2005,8 @@
 			</Texts>
 			<Triggers>Рабы</Triggers>
 			<Modifications>
-				<Modification Name="Honor" Value="1"/>
-				<Modification Name="Legionaries" Value="-1"/>
+				<Honor Value="1"/>
+				<Legionaries Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="215"/>
@@ -2027,7 +2027,7 @@
 				<Text Size="small">Вам +1 Честь.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="1"/>
+				<Honor Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="215"/>
@@ -2147,7 +2147,7 @@
 				<Text>Этот инцидент совершенно отбил у вас охоту продолжать осмотр помещений виллы. Вы решили покинуть здание и строить свою когорту. Вам нужно было продолжать марш в сторону Дуная.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="-1"/>
+				<Honor Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="217"/>
@@ -2160,7 +2160,7 @@
 				<Text Size="small">Вам -1 Честь.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="-1"/>
+				<Honor Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="228"/>
@@ -2207,7 +2207,7 @@
 				<Text Size="small">Запишите на своем листике +100 сестерциев.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Sestertius" Value="100"/>
+				<Sestertius Value="100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="209" Text="Осмотрите помещения виллы"/>
@@ -2231,7 +2231,7 @@
 			</Texts>
 			<RemoveTriggers>Еда №1, Еда №2, Еда №3, Баллисты</RemoveTriggers>
 			<Modifications>
-				<Modification Name="Legionaries" Value="-1"/>
+				<Legionaries Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="245"/>
@@ -2316,7 +2316,7 @@
 				<Text Size="small">Отметьте на листике когорты -1 Дисциплина.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Discipline" Value="-1"/>
+				<Discipline Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="244"/>
@@ -2341,8 +2341,8 @@
 			</Texts>
 			<RemoveTriggers>Еда №1, Еда №2, Еда №3, Баллисты</RemoveTriggers>
 			<Modifications>
-				<Modification Name="Legionaries" Value="-1"/>
-				<Modification Name="Honor" Value="-1"/>
+				<Legionaries Value="-1"/>
+				<Honor Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="245"/>
@@ -2366,7 +2366,7 @@
 				<Text Size="small">Прикажете тренировать солдат рукопашному бою (запишите +1 боевого мастерства рукопашного боя) или метанию дротиков (запишите +1 боевого мастерства метания дротиков) или строевой подготовке (запишите на листике когорты Дисциплина +1).</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Discipline" Value="1"/>
+				<Discipline Value="1"/>
 				<Modification Name="FishFood"/>
 			</Modifications>
 			<Options>
@@ -3097,7 +3097,7 @@
 				<Text Font="Bold">Глава «Децебал».</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Legionaries" Value="-1"/>
+				<Legionaries Value="-1"/>
 			</Modifications>
 			<Options>
 				<Gameover/>
@@ -3120,7 +3120,7 @@
 				<Text Font="Bold">Глава «Децебал».</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Legionaries" Value="-2"/>
+				<Legionaries Value="-2"/>
 			</Modifications>
 			<Options>
 				<Gameover/>
@@ -3144,7 +3144,7 @@
 				<Text>После короткого, но кровопролитного боя вы недосчитались шестерых своих солдат (вычеркните -1 фигуру всадника на листике вашего отряда; вашему отряду +1 мастерства рукопашного боя).\n\nКогда враг был полностью рассеян. Вы нашли неподалеку в овраге большое стадо овец. Они не успели разбежаться, и вашим солдатам удалось согнать их в одну кучу. Вы были довольны. Вам было с чем возвращаться обратно в лагерь.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="1"/>
+				<Honor Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="367"/>
@@ -3182,7 +3182,7 @@
 				<Text>Через пару недель вы приступили к командованию когорты.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="-1"/>
+				<Honor Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="20"/>
@@ -3221,7 +3221,7 @@
 				<Text>Вы были ранены. Теперь ваш отряд должен был вернуться обратно в лагерь с невыполненным заданием. Вам предстоял неприятный разговор с легатом. Но гораздо больше вас беспокоило то, что теперь весь легион будет смеяться над вашей историей.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="-1"/>
+				<Honor Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="340"/>
@@ -3241,7 +3241,7 @@
 				<Text Size="small">Отметьте на листике - Дисциплина турмы +1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Discipline" Value="1"/>
+				<Discipline Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="352"/>
@@ -3255,7 +3255,7 @@
 				<Text>Вы были ранены. Теперь ваш отряд должен был вернуться обратно в лагерь с невыполненным заданием. Вам предстоял неприятный разговор с легатом. Но гораздо больше вас беспокоило то, что теперь весь легион будет смеяться над вашей историей.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="-1"/>
+				<Honor Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="340"/>
@@ -3332,7 +3332,7 @@
 				<Text>- Ничего удивительного - успокаивал вас квестор легиона - Наши отряды уже давно обыскали все в округе на многие мили.\n\nЧерез пару дней вас вызвал к себе легат.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Honor" Value="-1"/>
+				<Honor Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="370" Text="Если вы еще не командовали пехотой">
@@ -3462,7 +3462,7 @@
 				<Text Size="small">Вашей Чести +1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Sestertius" Value="-100"/>
+				<Sestertius Value="-100"/>
 			</Modifications>
 			<Options>
 				<Option Destination="370" Text="Если вы еще не командовали пехотой">
