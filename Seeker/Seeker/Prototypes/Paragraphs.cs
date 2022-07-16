@@ -44,7 +44,7 @@ namespace Seeker.Prototypes
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/*"))
                 paragraph.Actions.Add(ActionParse(xmlAction));
 
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
                 paragraph.Modification.Add(ModificationParse(xmlModification));
 
             return paragraph;
@@ -95,6 +95,9 @@ namespace Seeker.Prototypes
         {
             if (xmlModification == null)
                 return null;
+
+            if (xmlModification.Attributes["Name"] == null)
+                modification.GetType().GetProperty("Name").SetValue(modification, xmlModification.Name);
 
             foreach (string param in GetProperties(modification))
                 SetPropertyByAttr(modification, param, xmlModification);

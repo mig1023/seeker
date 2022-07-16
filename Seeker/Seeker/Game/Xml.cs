@@ -39,7 +39,11 @@ namespace Seeker.Game
             if (xmlNode == null)
                 return null;
 
-            modification.Name = StringParse(xmlNode.Attributes["Name"]);
+            if (xmlNode.Name == "Benefit")
+                modification.Name = xmlNode.Attributes["Name"].InnerText;
+            else
+                modification.Name = xmlNode.Name;
+
             modification.Empty = BoolParse(xmlNode.Attributes["Empty"]);
             modification.Restore = BoolParse(xmlNode.Attributes["Restore"]);
 
