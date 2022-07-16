@@ -81,7 +81,7 @@
 			</Texts>
 			<Triggers>Телохранитель</Triggers>
 			<Modifications>
-				<Modification Name="Reputation" Value="3"/>
+				<Reputation Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="41"/>
@@ -143,7 +143,7 @@
 				<Text Size="small">Уменьшите Репутацию на 1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Reputation" Value="-1"/>
+				<Reputation Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="10" Text="Есть бластер" Availability="Бластер"/>
@@ -158,7 +158,7 @@
 				<Text>Гуманоид дистанционно запрограммировал одного из роботов, Джек открыл трюм и сбросил Олимпа.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Reputation" Value="-1"/>
+				<Reputation Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="34"/>
@@ -260,7 +260,7 @@
 				<Text>— Почему нас больше не преследуют? — удивился Джек.\n\n— Мы вошли в зону интересов планеты Урпан, — объяснил гуманоид. — Ни здесь, ни на планете соотечественники не могут нападать на меня так как это поставит их вне нашего закона. Тепель они могут только заключать со мной конталкаты.\n\n— Странные вы ребята, — проворчал Джек.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Reputation" Value="1"/>
+				<Reputation Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="16"/>
@@ -284,7 +284,7 @@
 			</Texts>
 			<Triggers>Пилот боевого корабля</Triggers>
 			<Modifications>
-				<Modification Name="Reputation" Value="2"/>
+				<Reputation Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="16"/>
@@ -309,7 +309,7 @@
 			</Texts>
 			<Triggers>Бластер</Triggers>
 			<Modifications>
-				<Modification Name="Reputation" Value="-1"/>
+				<Reputation Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="18"/>
@@ -353,7 +353,7 @@
 			</Texts>
 			<Triggers>Два</Triggers>
 			<Modifications>
-				<Modification Name="Reputation" Value="-1"/>
+				<Reputation Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="16"/>
@@ -421,7 +421,7 @@
 				<Text Size="small">Уменьшите Репутацию на 1.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Reputation" Value="-1"/>
+				<Reputation Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="29"/>
@@ -468,7 +468,7 @@
 				<Text>Проследив как спасательная капсула вошла в атмосферу и успешно приземлилась на планете, Джек ввёл координаты станции Бочелли и включил автопилот. Путь назад прошёл спокойно.\n\nПришвартовавшись в том же восьмом ангаре, Джек направился в бар, чтобы снять напряжение от полёта.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Reputation" Value="3"/>
+				<Reputation Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="11" Text="Есть ключевое слово «миротворец»" Availability="Миротворец"/>
@@ -502,7 +502,7 @@
 			</Texts>
 			<Triggers>Рампа</Triggers>
 			<Modifications>
-				<Modification Name="Reputation" Value="2"/>
+				<Reputation Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="9"/>
