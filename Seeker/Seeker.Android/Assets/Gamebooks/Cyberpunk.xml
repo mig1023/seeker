@@ -639,7 +639,7 @@
 				<Text Size="small">Запиши на Лист персонажа два новых показателя — Мораль и Карьеризм. Они взаимосвязаны и в сумме всегда составляют 100. Сейчас твоя Мораль равна 40, а Карьеризм, соответственно, 60.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Morality" Value="40"/>
+				<Morality Value="40"/>
 			</Modifications>
 			<Options>
 				<Option Destination="203"/>
@@ -1628,7 +1628,7 @@
 				<Text Size="small">Запиши на Лист персонажа два новых показателя — Мораль и Карьеризм. Они взаимосвязаны и в сумме всегда составляют 100. Сейчас твоя Мораль равна 60, а Карьеризм, соответственно, 40.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Morality" Value="60"/>
+				<Morality Value="60"/>
 			</Modifications>
 			<Options>
 				<Option Destination="203"/>
@@ -4246,7 +4246,7 @@
 				<Text Size="small">Прибавь 10 к Карьеризму.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Careerism" Value="10"/>
+				<Careerism Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="493"/>
@@ -4437,7 +4437,7 @@
 				<Text Size="small">Прибавь 10 к Карьеризму.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Careerism" Value="10"/>
+				<Careerism Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="552"/>
@@ -5241,7 +5241,7 @@
 			<Id>537</Id>
 			<Text>Тебе хватает своих забот. Почему ты должен возиться с чужими недоработками? Если отсутствие предупреждений в меморандуме вообще является таковой. Вполне возможно, это сделано специально или по приказу начальства. Как ни крути, это не твоё дело.\n\nТы оставляешь всё как есть.\n\nПрибавь 10 к Карьеризму.</Text>
 			<Modifications>
-				<Modification Name="Careerism" Value="10"/>
+				<Careerism Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="12"/>
