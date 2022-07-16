@@ -30,8 +30,8 @@ namespace Seeker.Gamebook.StringOfWorlds
                         continue;
                     else
                     {
-                        foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
-                            if (xmlModification.Attributes["Name"].Value == "GateCode")
+                        foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
+                            if (xmlModification.Name == "GateCode")
                                 Character.Protagonist.GateCode += Xml.IntParse(xmlModification.Attributes["Value"]);
                         
                         option.Destination = Character.Protagonist.GateCode;
@@ -51,7 +51,7 @@ namespace Seeker.Gamebook.StringOfWorlds
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/*"))
                 paragraph.Actions.Add(ActionParse(xmlAction));
 
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
                 paragraph.Modification.Add(Xml.ModificationParse(xmlModification, new Modification()));
 
             return paragraph;

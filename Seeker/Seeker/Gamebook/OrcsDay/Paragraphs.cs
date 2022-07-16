@@ -46,7 +46,7 @@ namespace Seeker.Gamebook.OrcsDay
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/*"))
                 paragraph.Actions.Add(ActionParse(xmlAction));
 
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/Modification"))
+            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
                 paragraph.Modification.Add(ModificationParse(xmlModification));
 
             return paragraph;
