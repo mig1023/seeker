@@ -96,8 +96,8 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Modification Name="Luck" Value="-1"/>
-				<Modification Name="Gold" Value="1"/>
+				<Luck Value="-1"/>
+				<Gold Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="420" Text="Отправиться дальше"/>
@@ -111,7 +111,7 @@
 				<Text>Теперь вы можете попробовать заклятия Силы, Слабости, Огня или же надеяться только на свой меч и драться.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="36" Text="Заклятия Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
@@ -223,7 +223,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="557" Text="Воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
@@ -277,7 +277,7 @@
 			<Text>Он просит всего 2 золотых и говорит, что без него вы просто не найдете дороги, а то и вовсе утонете в болотах, которых немало поблизости. Воспользуетесь его предложением и скажете, что ищете Черный замок, попросите проводить вас до ближайшего жилья или откажетесь и уйдете?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="2"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="186" Text="Воспользуетесь предложением и скажете, что ищете Черный замок"/>
@@ -323,7 +323,7 @@
 				<Text>После этого надо уходить:</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="427" Text="Через дверь в той же стене, где вход">
@@ -338,7 +338,7 @@
 			<Id>26</Id>
 			<Text>Они со смехом отвечают, что не принимают воинов со стороны, а такие слабые и хилые, как вы, им вообще не нужны. Теперь вам придется драться со стражей.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="341"/>
@@ -390,7 +390,7 @@
 				<Text Size="small">Потеряйте 1 МАСТЕРСТВО.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="207"/>
@@ -458,7 +458,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="451" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
@@ -527,7 +527,7 @@
 				<Text>Теперь вам придется драться.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="316"/>
@@ -850,7 +850,7 @@
 				<Text>К тому же вам лучше поторопиться уйти, ведь если появится хозяин коня, то он вряд ли скажет вам спасибо.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="378" Text="Уйти"/>
@@ -867,7 +867,7 @@
 			<Id>79</Id>
 			<Text>Вы кидаете женщинам 1 золотой, из-за которого начинается драка. Жадность вас подвела, и теперь остается только один выход: быстро выбежать в следующую дверь, что вы и делаете, попадая в какой-то коридор.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="-1"/>
+				<Gold Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="325" Text="Выбежать в следующую дверь"/>
@@ -906,7 +906,7 @@
 				<Text>Вам придется вернуться и сразиться с ним.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="247" Text="Вернуться"/>
@@ -1170,7 +1170,7 @@
 				<Text>Другого выхода нет — возвращайтесь и деритесь с ним.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="309" Text="Вернуться"/>
@@ -1218,7 +1218,7 @@
 				<Text Size="small">Но вы плыли против течения, поэтому потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="424"/>
@@ -1327,7 +1327,7 @@
 			<Text>Враг убит. Если хотите, то можете взять с собой его латы. К сожалению, вы не успели поймать его лошадь, поэтому ни на лесных дорогах, ни при входе в замок латы не помогут: пеший рыцарь сразу же вызовет подозрения. Но если будет суждено проникнуть в замок, вы сможете ими воспользоваться. Пока латы на вас, ваша собственная одежда будет в заплечном мешке. Но будьте осторожны: ведь неизвестно, как должен вести себя Зеленый рыцарь, какие двери перед ним в замке открыты, а какие нет. Не злоупотребляйте переодеванием — можете попасть в беду. Карманы у противника пусты, но ведь главное богатство рыцаря — меч. Можете взять его с собой, он прибавит 1 МАСТЕРСТВО (в том числе и сверх изначального), но тогда ваш собственный меч придется либо оставить на поле боя, либо положить в заплечный мешок.</Text>
 			<Triggers>GreenSword, GreenArmour</Triggers>
 			<Modifications>
-				<Modification Name="MaxMastery" Value="1"/>
+				<MaxMastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="434"/>
@@ -1348,7 +1348,7 @@
 				<Text>Поблагодарите Тролля и покиньте погреб через дверь в противоположном конце прохода между полками.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="207"/>
@@ -1374,7 +1374,7 @@
 			<Id>131</Id>
 			<Text>Вы вознаграждены за свою смелость. Это Микстура выносливости. Можете прибавить 6 ВЫНОСЛИВОСТЕЙ и отправляться дальше.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="305"/>
@@ -1388,7 +1388,7 @@
 				<Text>В центре островка на высоком дереве растет апельсин, который привлекает ваше внимание. Сначала вы не можете понять, почему он блестит на солнце, но когда подходите ближе, то видите, что он из чистого золота. Рискнете сорвать его или будете выбираться с острова?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="336" Text="Сорвать его"/>
@@ -1466,7 +1466,7 @@
 				<Text Size="small">Потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="409"/>
@@ -1593,7 +1593,7 @@
 			<Text>Вы берете пояс и надеваете на себя. Теперь на вас Волшебный пояс (добавьте 1 УДАЧУ). С его помощью вы можете в любой момент (но только один раз за все путешествие) позвать на помощь крота. Он выроет ход, по которому сможете проникнуть во двор Черного замка когда вы увидите замок, если, конечно, будет такое желание, и воспользуйтесь помощью крота. Теперь же пора выбираться из берлоги. С поляны в глубь леса ведет какая-то дорога, и вы решаете пойти по ней.</Text>
 			<Triggers>MoleBelt</Triggers>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="44"/>
@@ -1621,8 +1621,8 @@
 				<Text>Сундук заколдован! Что вы сделаете теперь — обратите внимание на средний сундук, на маленький или же вернетесь обратно?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
-				<Modification Name="Mastery" Value="-1"/>
+				<Endurance Value="-2"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="540" Text="Средний сундук"/>
@@ -1647,7 +1647,7 @@
 				<Text>Сражайтесь, теперь уже другого выхода нет.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="316"/>
@@ -1743,7 +1743,7 @@
 			<Id>173</Id>
 			<Text>Вы открываете сундук, но он пуст. Видимо его только временно принесли на кухню за неимением лучшего места. Можете быстро поесть суп из котла и восстановить 2 ВЫНОСЛИВОСТИ, после чего придется уходить.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="2"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="379"/>
@@ -1848,7 +1848,7 @@
 			<Id>178</Id>
 			<Text>Вы гонитесь за зайцем, не разбирая дороги. Ветки хлещут по лицу, но голод гонит все вперед и вперед. Вдруг заяц жалобно пищит и начинает биться на земле. Подбежав ближе, вы видите, что он попал в одну из охотничьих ловушек, наверняка поставленных кем-нибудь из слуг волшебника. Итак, на этот раз они помогли вам, можете пообедать зайчатиной и восстановить 6 ВЫНОСЛИВОСТЕЙ. Однако с собой взять ее не в чем — все придется съесть на месте. Найти дорогу обратно уже невозможно, и вам приходится идти по тропинке, которая углубляется в лес от того места, где стояла ловушка.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="406"/>
@@ -1937,8 +1937,8 @@
 			<Id>187</Id>
 			<Text>Сворачиваете с тропинки и поднимаетесь на холм к двум березам. Вы не слишком-то поверили в этот клад, но почему бы не попробовать его поискать. Прикинув, где может быть середина между двумя деревьями, вы несколько раз втыкаете меч в мягкую землю. Наконец он во что-то упирается. Проходит немного времени, и закопанный ларец у вас в руках. Торопливо сбиваете замок. Внутри ларца лежат 10 золотых, серебряное кольцо и светильник. Можете взять с собой все, что хотите, и добавьте себе 1 УДАЧУ, даже если вы еще не тратили ее. Теперь возвращайтесь.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="10"/>
-				<Modification Name="Luck" Value="1"/>
+				<Gold Value="10"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="47"/>
@@ -1952,7 +1952,7 @@
 				<Text>...но мысль о том, что вы явно избежали какой-то опасности, придает силы. Вскоре вы выходите на большую дорогу: слева виднеется деревня (вы очень удивлены, увидев многолюдную деревню в Зачарованном лесу, но дымки над хатами говорят, что жителей в ней немало), справа дорога скрывается за поворотом. Куда вы пойдете: налево или направо?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="184" Text="Налево"/>
@@ -1964,7 +1964,7 @@
 			<Text>Паук мертв, и вы можете посмотреть, что он хранил в своей паутине. Вы находите 1 золотой, прекрасный бриллиант и золотой свисток. Берите с собой все, что пожелаете, спускайтесь с дерева и продолжайте путь.</Text>
 			<Triggers>GoldenWhistle, Diamond</Triggers>
 			<Modifications>
-				<Modification Name="Gold" Value="1"/>
+				<Gold Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="19"/>
@@ -2055,7 +2055,7 @@
 				<Text Size="small">Потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="346"/>
@@ -2108,7 +2108,7 @@
 				<Text>Отправляйтесь в путь с первыми лучами солнца. Времени терять нельзя: до цели еще не близко.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="353"/>
@@ -2122,8 +2122,8 @@
 				<Text>Теперь, когда вы достаточно наказаны за беспечное любопытство, вернитесь и сделайте более безопасный выбор.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
-				<Modification Name="Mastery" Value="-1"/>
+				<Endurance Value="-3"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="39"/>
@@ -2382,7 +2382,7 @@
 				<Text>По пути вы видели несколько силков — это наводит на размышления.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="406"/>
@@ -2418,7 +2418,7 @@
 				<Text>Но вот в конце концов лес позади, но за поворотом дороги…</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="102"/>
@@ -2455,7 +2455,7 @@
 			<Text>Оба противника мертвы, и вы можете осмотреть дом, в котором оказались. В нем нет ничего интересного, кроме картины, висящей на стене напротив входа. На ней рыцарь в зеленых латах и зеленом шлеме во весь опор скачет по лесной дороге. Картина любопытна, но ни о чем не напоминает: при дворе таких рыцарей не встречалось. Может быть, это воинство волшебника? Пока же ясно только одно: если этот рыцарь враг, то такая встреча не сулит ничего хорошего. Бутылка, которую нес Гоблин, разбилась, но в погребе удается найти еще одну и немного еды. Можете использовать и то, и другое или же взять с собой: вино восстановит вам 3 ВЫНОСЛИВОСТИ, еда - 2. В кармане у Орка лежит серебряный свисток, который вы можете взять себе. Теперь уходите. От Заставы в глубь леса ведет удобная широкая дорога, и вы быстро идете по ней, стараясь наверстать упущенное время. Направо от дороги отходит узенькая тропка. Хотите свернуть на нее или пойдете дальше?</Text>
 			<Triggers>SilverWhistle</Triggers>
 			<Modifications>
-				<Modification Name="Endurance" Value="5"/>
+				<Endurance Value="5"/>
 				<Benefit Name="Healing" Value="Выпить вина,3"/>
 				<Benefit Name="Healing" Value="Съесть гоблинской еды,2"/>
 			</Modifications>
@@ -2536,7 +2536,7 @@
 			<Text>Вы платите деньги, и Начальник стражи выписывает пропуск на небольшом кусочке пергамента. Он предупреждает, что пропуск действителен только на первые два этажа. Начальник стражи может проводить вас до лестницы, если скажете ему, что вам надо на 2-й этаж, или же уходите через противоположную дверь.</Text>
 			<Triggers>Pass</Triggers>
 			<Modifications>
-				<Modification Name="Gold" Value="-10"/>
+				<Gold Value="-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="550" Text="Скажете ему, что вам надо на 2-й этаж"/>
@@ -2682,7 +2682,7 @@
 			<Id>262</Id>
 			<Text>Через четверть часа снова в лесу. Вы путешествуете уже достаточно долго, но так и не смогли углубиться в лес, а ведь знаете, что Черный замок — сердце леса. Потеряйте 1 УДАЧУ. Перед вами снова лесная развилка. Вы пойдете направо? Или налево?</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="-1"/>
+				<Luck Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="117" Text="Направо"/>
@@ -2742,7 +2742,7 @@
 			<Id>268</Id>
 			<Text>Срываете огурец и пробуете. Вкус у него самый обычный, и вы без опаски съедаете огурец целиком. Восстановите 4 ВЫНОСЛИВОСТИ и покиньте комнату.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="80"/>
@@ -2790,7 +2790,7 @@
 			<Id>274</Id>
 			<Text>Старуха подбирает монеты, кланяется, после чего делает знак следовать за ней. Она открывает правую дверь и тает в воздухе. Но когда вы делаете шаг в сторону от двери, она снова возникает и снова настойчиво указывает на дверь справа. Повинуетесь ее настояниям и войдете или попробуете отогнать старуху мечом?</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="-8"/>
+				<Gold Value="-8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="542" Text="Повинуетесь и войдете"/>
@@ -2834,7 +2834,7 @@
 				<Text Size="small">Потеряйте 4 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="409"/>
@@ -3017,7 +3017,7 @@
 				<Text>Теперь вернитесь и попробуйте победить привратника в честном бою.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="257"/>
@@ -3149,7 +3149,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="111" Text="Наложить заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
@@ -3169,7 +3169,7 @@
 			<Id>311</Id>
 			<Text>Наложив заклятие Плавания, вступаете в реку. Течение такое быстрое, что уже через несколько секунд вы подплываете к тому месту, где река скрывается под замком. Сначала все идет так, как и ожидалось: после небольшого водопада, который удается миновать, отделавшись только легким ушибом (потеряйте 1 ВЫЕНОСЛИВОСТЬ), река выравнивается и течет в высокой трубе где-то по подземельям замка. Но когда по вашим расчетам вот-вот можно будет попасть в комнату, откуда слуги берут воду, вы внезапно ударяетесь о невидимую решетку и чувствуете, что начинаете тонуть. Барлад Дэрт надежно защитил свой замок от любопытных глаз. Решетка развеяла заклятие, а плавать вы не умеете. Вода начинает прибывать, теперь уже нельзя воспользоваться даже заклятием Левитации: вам не пролететь, не захлебнувшись, по узкому пространству между верхом трубы и водой. Есть только один выход: наложить еще одно заклятие Плавания и попытаться выплыть против течения. Но догадались ли вы запастись еще одним таким заклятием? Если же нет, то решетка пропустит только ваш труп, который послужит хорошей пищей Гоблинам и Оркам…</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="115" Text="Да, догадались"/>
@@ -3183,7 +3183,7 @@
 				<Text>После этого благополучно пересекаете озеро, но на противоположном берегу вас ждет еще один сюрприз.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="192"/>
@@ -3210,7 +3210,7 @@
 				<Text Size="small">Потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="409"/>
@@ -3235,7 +3235,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="513" Text="Удалось"/>
@@ -3339,7 +3339,7 @@
 			<Id>327</Id>
 			<Text>Ваши деньги исчезают в бездонном кармане торговца.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="-7"/>
+				<Gold Value="-7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="443"/>
@@ -3416,7 +3416,7 @@
 			<Text>Обшарив одежду разбойников, находите 7 золотых, перо аиста и пустой бронзовый кувшин. Можете взять с собой все, что считаете нужным, и идти дальше.</Text>
 			<Triggers>StorkFeather</Triggers>
 			<Modifications>
-				<Modification Name="Gold" Value="7"/>
+				<Gold Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="46"/>
@@ -3427,7 +3427,7 @@
 			<Text>Решаете сорвать золотой апельсин. Вокруг все тихо — ничего особенного не происходит. Можете взять его с собой и покинуть остров. Прибавьте себе 1 УДАЧУ, даже если вы еще ни разу не проверяли ее.</Text>
 			<Triggers>GoldenOrange</Triggers>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="24"/>
@@ -3466,7 +3466,7 @@
 				<Text>Отправляйтесь в путь с рассветом.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="509"/>
@@ -3496,7 +3496,7 @@
 				<Text>Встает солнце, и вы видите, что конец дороги близок.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="181"/>
@@ -3626,7 +3626,7 @@
 			</Actions>
 			<Triggers>GoldRing</Triggers>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="207"/>
@@ -3647,7 +3647,7 @@
 				<Text>Но когда вы просыпаетесь, то видите, что лес спрятал дорогу, по которой вы шли. Вместо этого перед вами широкий перекресток. И три дороги: направо, налево и прямо. Куда вы пойдете: направо, налево или прямо?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="2"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="510" Text="Направо"/>
@@ -3732,7 +3732,7 @@
 			<Id>369</Id>
 			<Text>Старуха подбирает монеты, кланяется и услужливо открывает правую дверь, после чего исчезает. Пойдете в эту дверь или в ту, что прямо?</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="-6"/>
+				<Gold Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="542" Text="В эту дверь"/>
@@ -3804,7 +3804,7 @@
 			<Id>376</Id>
 			<Text>Вы платите 2 золотых, и он подплывает к вам с пиалой, наполненной водой. Она чистая и прохладная, и вы с удовольствием пьете, но вдруг чувствуете, что настолько хотите спать, что не в силах этому сопротивляться. Засыпая, вы опускаетесь на пол таверны.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="-2"/>
+				<Gold Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="155"/>
@@ -3881,7 +3881,7 @@
 			<Id>385</Id>
 			<Text>Вы подходите к столикам. На их крышках выгравировано двенадцать рисунков, каждый из которых соответствует одному из месяцев. Но рассмотреть рисунки как следует вам не дают.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="-4"/>
+				<Gold Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="502"/>
@@ -3915,7 +3915,7 @@
 			<Id>389</Id>
 			<Text>Вы выпиваете жидкость. Это Микстура ужаса. Каждый раз, когда вы будете встречаться с врагом, вам потребуются все силы, чтобы подавить в себе ужас перед ним. Поэтому потеряйте 1 МАСТЕРСТВО. Теперь же закройте дверь и снова заприте ее.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="300"/>
@@ -4027,7 +4027,7 @@
 				<Text>Уходите в правую или левую дверь.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="547" Text="В правую"/>
@@ -4050,7 +4050,7 @@
 				<Text>Отбросив копье, он разворачивает лошадь и достает меч. Щит приворожил вас, привлек все внимание — дело явно не обошлось без колдовства. Теперь надо мгновенно решать, что делать: выхватить меч и драться, попробовать наложить заклятие Силы, Слабости, Копии, Огня.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="183" Text="Выхватить меч"/>
@@ -4125,7 +4125,7 @@
 			<Id>411</Id>
 			<Text>Мясо вполне сносно и добавляет вам 6 ВЫНОСЛИВОСТЕЙ. Хотите попробовать еще и овощи или покинете комнату через дверь в правой стене?</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="578" Text="Попробовать овощи"/>
@@ -4161,7 +4161,7 @@
 			<Text>Ваши противники повержены. Вы можете взять латы одного из них и понести с собой (они займут три места в вашем заплечном мешке). Однако проникнуть в замок они не помогут: ехать на лошади слишком опасно, а пеший рыцарь неизбежно вы зовет подозрение. Но если вам суждено будет попасть в замок, то прежде чем совершить выбор, куда пойти, решите, наденете ли вы латы. Пока латы на вас, ваша одежда будет занимать только одно место в заплечном мешке. Но будьте осторожны: ведь вы не знаете, как должен вести себя Зеленый рыцарь в замке, куда ему можно, а куда нельзя ходить. Не злоупотребляйте переодеванием — можете попасть в беду. В карманах у рыцарей вы находите 7 золотых и перо павлина — можете взять их с собой. Решив не рисковать, вы возвращаетесь к развилке и идете направо.</Text>
 			<Triggers>PeacockFeather</Triggers>
 			<Modifications>
-				<Modification Name="Gold" Value="10"/>
+				<Gold Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="338"/>
@@ -4374,7 +4374,7 @@
 				<Text>Наконец, дорога раздваивается. Вы изберете путь направо или налево?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="531" Text="Направо"/>
@@ -4412,7 +4412,7 @@
 				<Text>К утру выходите на какую-то дорогу, но понятия не имеете, куда идти.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="378"/>
@@ -4426,7 +4426,7 @@
 				<Text>К утру выходите на поляну, которую во всех направлениях пересекает множество следов крупных животных.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="119"/>
@@ -4436,7 +4436,7 @@
 			<Id>443</Id>
 			<Text>Торговец предлагает вам присесть у камина и рассказывает, куда ведут дороги от его дома. Справа в лесу Застава — слуги волшебника сторожат дорогу, и никто не может пройти мимо них незамеченным. Если же пойти по дороге, ведущей налево, то вы придете к небольшой хижине, в которой, насколько он знает, живет какой-то старичок. Скорее всего, старичок может помочь вам, но сам торговец по этой дороге ни разу не ходил и с обитателями хижины не встречался. Напоследок он рассказывает, что Черный замок действительно существует, но до него еще очень далеко. Проникнуть туда гораздо труднее, чем пройти через лес, и здесь он ничем не может помочь. Единственное, что можно посоветовать: идти в открытую лучше, чем прятаться. Когда однажды он пытался войти в замок со своими товарами (его туда так и не пустили), то видел, как стража извлекала из воза с сеном какого-то человека, пытавшегося проникнуть в цитадель незамеченным. Расправа была коротка и жестока. Больше он ничего не знает, и вам остается только распрощаться и покинуть лавку.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="-2"/>
+				<Gold Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="106"/>
@@ -4599,7 +4599,7 @@
 			<Id>456</Id>
 			<Text>Вы отдаете деньги и проводник с радостью прячет их в небольшой сундучок, стоящий в углу. После этого выходите из дома, проходите через сад и углубляетесь в лес. По дороге ваш проводник весело болтает: у него явно хорошее настроение. У начала узкой тропинки он пропускает вас вперед. Но что это? Через несколько шагов вы поскальзываетесь и по пояс проваливаетесь в вонючую засасывающую жижу. Вы оборачиваетесь, чтобы позвать на помощь, но проводника и след простыл. Ведь он на работе — маг неплохо за нее платит. Вам же надеяться больше не на что…</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="-2"/>
+				<Gold Value="-2"/>
 			</Modifications>
 			<Options>
 				<Gameover/>
@@ -4616,7 +4616,7 @@
 			<Id>458</Id>
 			<Text>Старуха подбирает монеты, кланяется и растворяется в воздухе. Но перед вами две двери. В какую из них вы пойдете: в противоположную от входа или в ту, что справа?</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="-3"/>
+				<Gold Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="252" Text="В противоположную от входа"/>
@@ -4710,7 +4710,7 @@
 				<Text>После этого придется пробиваться силой — вернитесь и сражайтесь со Львом.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="257"/>
@@ -4758,8 +4758,8 @@
 				<Text>Хотите еще раз попробовать поднять крышку или займетесь одним из двух других сундуков — средним или маленьким. А может быть, лучше уйти?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
-				<Modification Name="Mastery" Value="-1"/>
+				<Endurance Value="-2"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="159" Text="Еще раз попробовать"/>
@@ -4786,8 +4786,8 @@
 			<Id>477</Id>
 			<Text>Торговец мертв, и вы быстро осматриваете его лавку. После недолгих поисков находите 10 золотых. Кроме того, можете взять с собой любой товар, который торговец предлагал, но вы не купили. Загляните еще раз и выберите то, что понравится. Но вы убили честного человека — потеряйте 1 УДАЧУ. Теперь уходите.</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="-1"/>
-				<Modification Name="Gold" Value="10"/>
+				<Luck Value="-1"/>
+				<Gold Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="106"/>
@@ -4827,7 +4827,7 @@
 				<Text Size="small">Потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="60"/>
@@ -4854,7 +4854,7 @@
 			<Text>В сторожке вы не находите ничего интересного. Пить брагу, которой угощались Гоблины, нет ни малейшего желания: стоит только ее понюхать, как уже ясно, что на пользу она не пойдет. На столе лежат стаканчик с костями и вещи, на которые шла игра: бронзовый свисток, 3 золотых и медный браслет. Возьмите все, что понравилось, и идите к зданию в центре двора.</Text>
 			<Triggers>BronzeWhistle</Triggers>
 			<Modifications>
-				<Modification Name="Gold" Value="3"/>
+				<Gold Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="308"/>
@@ -4961,8 +4961,8 @@
 			<Id>495</Id>
 			<Text>Вы даете женщинам 6 золотых. Они поражены вашей щедростью и дают один маленький совет: побольше обращайте внимание на зеркала — ими пользуются не только женщины. Добавьте себе 1 УДАЧУ. Теперь же, выслушав жен мага, вы выходите из гарема и идете по новому коридору.</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
-				<Modification Name="Gold" Value="-6"/>
+				<Luck Value="1"/>
+				<Gold Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="325"/>
@@ -4993,7 +4993,7 @@
 				<Text>Теперь закройте дверь кладовки и снова заприте ее.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="MaxMastery" Value="1"/>
+				<MaxMastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="300"/>
@@ -5024,7 +5024,7 @@
 				<Text>Теперь уходите из домика.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="416"/>
@@ -5119,7 +5119,7 @@
 				<Text Size="small">Потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="409"/>
@@ -5160,7 +5160,7 @@
 				<Text>Если еще живы, возвращайтесь на дорогу.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-8"/>
+				<Endurance Value="-8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="98"/>
@@ -5230,7 +5230,7 @@
 				<Text>Теперь вам ничего не остается, как сражаться с ним мечом.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="326"/>
@@ -5252,7 +5252,7 @@
 				<Text>Теперь вернитесь и сделайте более удачный выбор.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-6"/>
+				<Endurance Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="39"/>
@@ -5797,7 +5797,7 @@
 			<Id>574</Id>
 			<Text>Вы платите деньги и прячетесь под сеном. Вскоре несколько возов отправляются в путь, но вам не видно, по какой дороге вы выезжаете из деревни. Через некоторое время становится жарко, и вы понимаете, что лес остался позади. Ветерок доносит запах водорослей и тины, потом слышатся пьяные голоса Гоблинов, и вам приходится затаить дыхание, когда телега останавливается прямо возле них. Но вот пост позади, под колесами слышится скрип бревен, вы чувствуете, что воз въезжает на мост. Потом еще около получаса дороги — и вновь голоса. На этот раз Орки. «Что под сеном?» спрашивает один из них крестьянина, и ужас охватывает вас. Тянутся долгие минуты, показавшиеся часами: стража осматривает несколько телег перед вами. Потом острая мгновенная боль — и все. Недоверчивый Орк ткнул мечом в ваш стог сена и лезвие прошло всего в нескольких сантиметрах от сердца. По крови, которая закапала на дорогу, стража понимает все — и вам никогда уже больше не увидеть солнца…</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="-2"/>
+				<Gold Value="-2"/>
 			</Modifications>
 			<Options>
 				<Gameover/>
@@ -5827,7 +5827,7 @@
 				<Text>«Ты слишком подл, чтобы оценить мое великодушие и терпение, говорит маг, — и будешь наказан за это».</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="293"/>
@@ -5841,7 +5841,7 @@
 				<Text>Хотите теперь попробовать мясо, если вы этого еще не делали, или поторопитесь уйти из комнаты через дверь в ее правой стене?</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="411" Text="Попробовать мясо"/>
@@ -5934,7 +5934,7 @@
 			<Id>588</Id>
 			<Text>Слава Богу, вы смогли сдержать крик. Потеряйте 6 ВЫНОСЛИВОСТЕЙ за укол волшебным шипом и обойдите кровать с другой стороны.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-6"/>
+				<Endurance Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="275"/>
@@ -5975,7 +5975,7 @@
 				<Text Size="small">Потеряйте 3 ВЫНОСЛИВОСТИ.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="409"/>
@@ -6046,7 +6046,7 @@
 				<Text>Если остались живы, то скрывайтесь в лесу, где Дракон не может вас преследовать.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Endurance" Value="-6"/>
+				<Endurance Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="232"/>
@@ -7807,7 +7807,7 @@
 			<Id>778</Id>
 			<Text>Через недлинный промежуток времени тропинка выходит на дорогу. Дорога ровная и безлюдная, и вы расслабляетесь. Вдруг обо что-то спотыкаетесь и падаете. Это всего-навсего булыжник, но вы ушиблись (потеряйте 2 ВЫНОСЛИВОСТИ). Наверное, вы просто устали.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1003"/>
@@ -7882,7 +7882,7 @@
 			<Id>788</Id>
 			<Text>Враг убит. Если хотите, то можете взять его шлем. Карманы у противника пусты, но ведь главное богатство рыцаря – меч. Можете взять его с собой, он прибавит 1 МАСТЕРСТВО (в том числе и сверх изначального), но тогда ваш собственный меч придется либо оставить на поле боя, либо положить в заплечный мешок.</Text>
 			<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1299"/>
@@ -8166,8 +8166,8 @@
 			<Id>816</Id>
 			<Text>Торговец мертв, и вы быстро осматриваете его лавку. После недолгих поисков находите 10 золотых. Но вы убили честного человека – потеряйте 1 УДАЧУ. Теперь уходите.</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="-1"/>
-				<Modification Name="Gold" Value="10"/>
+				<Luck Value="-1"/>
+				<Gold Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1107"/>
@@ -8216,7 +8216,7 @@
 			<Id>820</Id>
 			<Text>«Правильно, - одобрительно говорит Домик, - это дракон. Ну что ж, вот тебе печень дракона, она очень питательна (можете съесть ее сразу, можете положить в мешок; печень добавит 9 ВЫНОСЛИВОСТЕЙ). И вправду, не успели вы подумать, как это Домик будет вам что-то давать, падает сверток с печенью дракона, как будто брошенный откуда-то сверху. Вы решаете ничему не удивляться, и слушаете вторую загадку. «Легче легкого, проще простого, но чтобы попасть в замок, нет ничего ценнее». Если вы знаете, что это, то проделайте такое же сложение, если нет, придется уходить.</Text>
 			<Modifications>
-				<Modification Name="Healing" Value="Съесть печень дракона,9"/>
+				<Healing Value="Съесть печень дракона,9"/>
 			</Modifications>
 			<Options>
 				<Option Destination="806"/>
@@ -8293,7 +8293,7 @@
 			<Id>827</Id>
 			<Text>Решаете сорвать золотой апельсин. Вокруг все тихо – ничего особенного не происходит. Можете взять его с собой (когда он вам понадобится, прибавьте 750 к номеру параграфа, на котором будете находиться) и покинуть остров. Прибавьте себе 1 УДАЧУ, даже если вы еще ни разу не проверяли ее.</Text>
 			<Modifications>
-				<Modification Name="MaxLuck" Value="1"/>
+				<MaxLuck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1367"/>
@@ -8303,8 +8303,8 @@
 			<Id>828</Id>
 			<Text>На этот раз вы лезете с большей осторожностью, но с вывихом руки оказывается не так-то просто это сделать. Тем не менее, вы достигаете цели. Вы можете сорвать 6 бананов, потом или съесть сразу, или оставить на следующий раз. Один банан прибавит 2 ВЫНОСЛИВОСТИ и займет одно место в вашем мешке. Если вы сейчас съели все 6 бананов, то возьмите еще 6, но теперь только в заплечный мешок. Вы благополучно спускаетесь и, наевшись, отправляетесь в путь.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="12"/>
-				<Modification Name="Healing" Value="Съесть банан,2,6"/>
+				<Endurance Value="12"/>
+				<Healing Value="Съесть банан,2,6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1726"/>
@@ -8371,7 +8371,7 @@
 			<Id>835</Id>
 			<Text>Вы ищете место для ночлега, но ничего подходящего не находите. Придется спать прямо на земле под деревом в стороне от дороги. К счастью, ночь проходит спокойно (добавьте себе 4 ВЫНОСЛИВОСТИ). С рассветом отправляйтесь дальше.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="861"/>
@@ -8423,7 +8423,7 @@
 			<Id>841</Id>
 			<Text>Хозяин говорит, что до замка вы дойдете обязательно, если никуда не будете сворачивать, а будете все время прямо. Он ведь возит в Черный замок арбузы и знает этот путь очень хорошо. После чего вы взбираетесь на печку и сладко засыпаете на часок. После отдыха (добавьте 4 ВЫНОСЛИВОСТИ) вы собираетесь уходить, но хозяин вдруг зовет вас за собой. Он заводит вас в темную комнату, похоже, в кладовку, и протягивает вам кольцо: «Возьми его! Это Медное кольцо, - голос Хозяина переходит в шепот, - но оно не простое! Когда ты наденешь его на палец, то станешь невидимым. Невидимыми будут и твои вещи. Я иногда пользовался им, но теперь отдаю тебе. Я надеюсь, что ты убьешь жестокого мага. Его слуги постоянно грабят мое поле, да еще требуют денег. Возьми кольцо!».\n\nВы благодарите хозяина и кладете кольцо в мешок. Теперь, когда вы захотите им воспользоваться, то, надев его на палец, вы просто проходите мимо через препятствие, и ваши незадачливые враги вас не заметят.\n\nОднако, вы невидимы только для живых существ, а не для духов и призраков. И попав в какую-нибудь ловушку, переплывая через водную преграду или сражаясь с Барладом Дэртом, неважно, видимы вы или нет, – такие препятствия вам придется преодолевать своими силами.\n\nНу, а теперь пора уходить. Что вы предпримите:</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="765" Text="В благодарность за гостеприимство поищите в заплечном мешке подарок для Хозяина"/>
@@ -8459,7 +8459,7 @@
 			<Id>845</Id>
 			<Text>Приятные на вид овощи оказываются совершенно гнилыми внутри. Может быть, Орки и любят такую еду, но вас от нее сильно мутит. Потеряйте 1 ВЫНОСЛИВОСТЬ. Теперь поторопитесь выйти через дверь обратно.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1826"/>
@@ -8579,7 +8579,7 @@
 			<Id>855</Id>
 			<Text>В темноте вы сбиваетесь с дороги. Всю ночь приходится наугад продираться через чащу (потеряйте 5 ВЫНОСЛИВОСТЕЙ). К утру выходите на какую-то дорогу, но понятия не имеете, куда идти.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-5"/>
+				<Endurance Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="840"/>
@@ -8623,7 +8623,7 @@
 			<Id>860</Id>
 			<Text>Дракон решает, что вы предлагаете ему одеться (в самом деле, что ему делать с костюмом?) и возмущенно выпускает небольшую струю пламени в вашу сторону. Потеряйте 2 ВЫНОСЛИВОСТИ и сражайтесь, теперь уже другого выхода нет.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1285"/>
@@ -8641,7 +8641,7 @@
 			<Id>862</Id>
 			<Text>Вы не сдержались и свернули с дороги. Всего несколько шагов и вы выходите на узкую заросшую дорогу. Через лес продираться было трудно и неудобно – потеряйте 1 ВЫНОСЛИВОСТЬ. Дорога самая обычная, хотя и заброшенная.\n\nРешайте, куда направитесь по ней:</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1092" Text="На юг"/>
@@ -8764,7 +8764,7 @@
 			<Id>876</Id>
 			<Text>Вы падаете с большой высоты и получаете сильный ушиб (вычтите у себя 5 ВЫНОСЛИВОСТЕЙ). Но и за это скажите спасибо – вам еще «повезло». А теперь отправляйтесь дальше.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-5"/>
+				<Endurance Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1003"/>
@@ -8788,7 +8788,7 @@
 			<Id>879</Id>
 			<Text>Пьяные Гоблины начинают смеяться над вами и более-менее сильно колоть кончиками мечей и копий (от уколов теряете 3 ВЫНОСЛИВОСТИ).\n\nВам ничего не остается, как поскорей выбежать из комнаты, подальше от этого кошмара. Вы открываете первую попавшую дверь и быстро закрываете ее за собой.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1756"/>
@@ -9141,9 +9141,9 @@
 			<Id>905</Id>
 			<Text>Вы не только не проиграли своей ставки (заберите ее обратно), но и выиграли яблоко (добавит 2 ВЫНОСЛИВОСТИ), два мускатных печенья, каждое из которых добавит также по 2 ВЫНОСЛИВОСТИ, и 5 золотых.</Text>
 			<Modifications>
-				<Modification Name="Healing" Value="Съесть яблоко,2"/>
-				<Modification Name="Healing" Value="Съесть мускатное печенье,2,2"/>
-				<Modification Name="Gold" Value="5"/>
+				<Healing Value="Съесть яблоко,2"/>
+				<Healing Value="Съесть мускатное печенье,2,2"/>
+				<Gold Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1579" Text="Сыграете еще"/>
@@ -9202,7 +9202,7 @@
 			<Id>912</Id>
 			<Text>В сторожке вы не находите ничего интересного. Пить брагу, которой угощались Гоблины, нет ни малейшего желания: стоит только ее понюхать, как уже ясно, что на пользу она не пойдет. На столе лежат стаканчик с костями и вещи, на которые шла игра: бронзовый свисток, 3 золотых и медный браслет. Возьмите все, что понравилось, и идите к зданию в центре двора.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="3"/>
+				<Gold Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1598"/>
@@ -9296,7 +9296,7 @@
 			<Id>923</Id>
 			<Text>Хозяин кивает головой, но, судя по всему, не верит тому, что вы сказали.\n\nПосле обеда вы взбираетесь на печь прикорнуть часок-другой. Отдых даст еще 4 ВЫНОСЛИВОСТИ. Вы благодарите своего собеседника за обед и продолжаете путь по дорожке, ведущей от дома в лес.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1256"/>
@@ -9460,7 +9460,7 @@
 			<Id>937</Id>
 			<Text>Вы гонитесь за зайцем, не разбирая дороги. Ветки хлещут по лицу, но голод гонит все вперед и вперед. Вдруг заяц жалобно пищит и начинает биться на земле. Подбежав ближе, вы видите, что он попал в одну из охотничьих ловушек, наверняка поставленных кем-нибудь из слуг волшебника. Итак, на этот раз они помогли вам. Можете пообедать зайчатиной и восстановить 8 ВЫНОСЛИВОСТЕЙ. Однако с собой взять ее не в чем – все придется съесть на месте. Найти дорогу обратно уже невозможно и вам приходится идти по тропинке, которая углубляется в лес от того места, где стояла ловушка.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="8"/>
+				<Endurance Value="8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="988"/>
@@ -9604,7 +9604,7 @@
 			<Id>952</Id>
 			<Text>Вы подходите к ульям. Это действительно небольшая пасека, но никого не видно. Только через несколько минут понимаете, что никого и не надо: пчелы на этой волшебной пасеке сами являются зоркими часовыми. Целый рой насекомых накидывается на незваного гостя. Вам не удается защититься от укусов – не драться же с пчелами мечом. Потеряйте 9 ВЫНОСЛИВОСТЕЙ и, если еще живы, возвращайтесь на дорогу.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-9"/>
+				<Endurance Value="-9"/>
 			</Modifications>
 			<Options>
 				<Option Destination="997"/>
@@ -9669,7 +9669,7 @@
 			<Id>959</Id>
 			<Text>Вы вылетаете из пещеры. Солнце уже почти зашло, а вы все еще не пробрались в замок. Потеряйте 1 УДАЧУ.</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="-1"/>
+				<Luck Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="946"/>
@@ -9767,7 +9767,7 @@
 			<Id>970</Id>
 			<Text>Через четверть часа снова в лесу. Вы путешествуете уже достаточно долго, но так и не смогли углубиться в лес, а ведь знаете, что Черный замок – сердце леса. Потеряйте 1 УДАЧУ. Вскоре вы выходите на дорогу, идущую в нужном вам направлении.</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="-1"/>
+				<Luck Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="960"/>
@@ -9784,7 +9784,7 @@
 			<Id>972</Id>
 			<Text>Вы идете дальше, несмотря на усталость. Потеряйте еще 2 ВЫНОСЛИВОСТИ.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="942"/>
@@ -9794,7 +9794,7 @@
 			<Id>973</Id>
 			<Text>Хозяин весьма доволен. Он вас предупреждает, что когда вы переберетесь через реку (а вам нужно будет это сделать), то на берегу вас будет ожидать охрана: парочка Гоблинов. Хозяин желает вам удачи (добавьте себе 1 УДАЧУ). А вы продолжаете свой путь.</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1256"/>
@@ -9812,7 +9812,7 @@
 			<Id>975</Id>
 			<Text>Теперь Злой Дух не сделает вам вреда. Но ночью, в темноте вы сбиваетесь с пути, на вас наваливается усталость (потеряйте 4 ВЫНОСЛИВОСТИ). К утру выходите на какую-то дорогу.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="767"/>
@@ -9879,7 +9879,7 @@
 			<Id>983</Id>
 			<Text>Пытаетесь бежать, но огненное дыхание настигает вас. Потеряйте еще 8 ВЫНОСЛИВОСТЕЙ. Если остались живы, то скрывайтесь в лесу, где Дракон не может вас преследовать.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-8"/>
+				<Endurance Value="-8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="823"/>
@@ -10135,7 +10135,7 @@
 			<Id>1007</Id>
 			<Text>Вы вознаграждены за свою смелость. Это Микстура выносливости. Можете прибавить 8 ВЫНОСЛИВОСТЕЙ и отправляться дальше.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="8"/>
+				<Endurance Value="8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1261"/>
@@ -10236,8 +10236,8 @@
 			<Id>1016</Id>
 			<Text>Вам повезло: вы успеваете выкарабкаться за пределы желоба, цепляясь за кусты и исцарапав до крови руки (потеряйте 1 МАСТЕРСТВО и 2 ВЫНОСЛИВОСТИ), и шар проносится мимо. Потом опять с опаской спускаетесь в желоб и, решив больше не рисковать, подниметесь по нему вверх. Но наверху вас ждет сюрприз...</Text>
 			<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
-				<Modification Name="Endurance" Value="-2"/>
+				<Mastery Value="-1"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1156"/>
@@ -10314,7 +10314,7 @@
 			<Id>1026</Id>
 			<Text>Вы пытаетесь сосредоточиться на заклятии Копии. Но, к вашему ужасу, копия не появляется! Рыцари развеяли заклятие, после чего второй бросает копье, и оно ранит вас на излете. Потеряйте еще 4 ВЫНОСЛИВОСТИ. Теперь вы можете попробовать или заклятие:</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="913" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
@@ -10363,7 +10363,7 @@
 			<Id>1031</Id>
 			<Text>Когда вы задаете свой вопрос, один из Орков невозмутимо дергает рычаг под столом, и вы летите куда-то вниз. Вероятно, спросили что-то не то…\n\nКогда вы падаете, то от удара теряете сознание (и 2 ВЫНОСЛИВОСТИ)…</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="794"/>
@@ -10438,7 +10438,7 @@
 			<Id>1040</Id>
 			<Text>Вы выиграли 10 золотых. Однако вашу ставку вычеркните из своего имущества.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="10"/>
+				<Gold Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1579" Text="Будете играть еще"/>
@@ -10502,7 +10502,7 @@
 			<Id>1047</Id>
 			<Text>Вам удается построить плот, но на это уходят все ваши силы (потеряйте 6 ВЫНОСЛИВОСТЕЙ). Куда вы поплывете на плоту:</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-6"/>
+				<Endurance Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="813" Text="К противоположному берегу"/>
@@ -10596,7 +10596,7 @@
 			<Id>1057</Id>
 			<Text>Драгоценности мало интересуют Дракона, и он недвусмысленно дает вам это понять, дохнув на вас пламенем (потеряйте 3 ВЫНОСЛИВОСТИ).\n\nТеперь вам придется драться...</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1285"/>
@@ -10840,7 +10840,7 @@
 			<Id>1088</Id>
 			<Text>Обшарив одежду разбойников, находите вытесанную из камня фигурку Кентавра – полуконя-получеловека, курительную трубку, гребень из слоновой кости, 7 золотых, пустой бронзовый кувшин и огнетушитель.\n\nМожете взять с собой все, что считаете нужным. Если когда-нибудь понадобится каменный Кентавр, то обращайтесь к параграфу 434, а если понадобится огнетушитель – к параграфу 225.\n\nТеперь вы идете по дороге, ведущей прямо к замку.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="7"/>
+				<Gold Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1205"/>
@@ -10947,7 +10947,7 @@
 			<Id>1100</Id>
 			<Text>Вы идете всю ночь – за осторожность приходится платить усталостью (потеряйте 3 ВЫНОСЛИВОСТИ). К утру выходите на дорогу.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="805"/>
@@ -10991,7 +10991,7 @@
 			<Id>1104</Id>
 			<Text>Паук мертв, и вы можете посмотреть, что он хранил в своей паутине. Вы находите 1 золотой. Можете взять его собой, спускайтесь с дерева и продолжайте путь.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="1"/>
+				<Gold Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1923"/>
@@ -11279,7 +11279,7 @@
 				</Get>
 			</Actions>
 			<Modifications>
-				<Modification Name="Endurance" Value="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1315" Text="Воспользуетесь его предложением и скажете, что ищите Черный замок"/>
@@ -11413,7 +11413,7 @@
 			<Id>1145</Id>
 			<Text>«Ты не знаешь пароля!» – в ярости рычит Лев. И его лапа наносит удар прежде, чем вы успеваете защититься (потеряйте 2 ВЫНОСЛИВОСТИ).\n\nТеперь вернитесь и пробуйте победить привратника в честном бою.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1668"/>
@@ -11547,7 +11547,7 @@
 			<Id>1160</Id>
 			<Text>Вы идете по дороге всю ночь. В темноте приходится миновать несколько перекрестков, но вы не рискуете сворачивать с избранного пути. Начинает сказываться усталость, слипаются (потеряйте 4 ВЫНОСЛИВОСТИ). Встает солнце, и вы видите, что конец дороги близок.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="934"/>
@@ -11573,7 +11573,7 @@
 			<Id>1163</Id>
 			<Text>Вы садитесь отдохнуть и вдруг слышите стук капель… Вода! На ощупь находите это место и припадаете к нему губами (восстановите 7 ВЫНОСЛИВОСТЕЙ). Можете наполнить флягу, если она пуста (пользуйтесь этой водой так же, как и той, что была у вас в начале путешествия). После отдыха встаете и идете дальше.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="7"/>
+				<Endurance Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="942"/>
@@ -11676,7 +11676,7 @@
 			<Id>1173</Id>
 			<Text>В темноте устраиваетесь в дупле большого дерева. Ночь спите крепко. Добавьте себе 4 ВЫНОСЛИВОСТИ и отправляйтесь в путь с рассветом.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="805"/>
@@ -11927,7 +11927,7 @@
 			<Id>1197</Id>
 			<Text>Молоко в кувшине совсем свежее. Но выпить его придется на месте (добавьте 7 ВЫНОСЛИВОСТЕЙ).</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="7"/>
+				<Endurance Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1759" Text="Если хотите, то можете теперь подойти к другому полотну"/>
@@ -11945,7 +11945,7 @@
 			<Id>1199</Id>
 			<Text>Вы путешествуете уже достаточно долго, но так и не смогли углубиться в лес, а ведь знаете, что Черный замок – сердце леса. Потеряйте 1 УДАЧУ.\n\nПеред вами снова лесная развилка.</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="-1"/>
+				<Luck Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1276" Text="Пойдете направо"/>
@@ -12022,7 +12022,7 @@
 			<Id>1206</Id>
 			<Text>Вы располагаетесь на ночь под одним из деревьев, и ничто не прерывает ваш сон. Прибавьте себе 3 ВЫНОСЛИВОСТИ и отправляйтесь в путь с первыми лучами солнца. Времени терять нельзя, до цели еще не близко.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1129"/>
@@ -12108,7 +12108,7 @@
 			<Id>1215</Id>
 			<Text>За поясом у Орка находите флягу с водой. Можете взять ее с собой, тогда у вас будут две фляги. Воду эту можете использовать так же, как и вашу. В кармане у Орка лежит 3 золотых и игральная кость. Можете это взять себе, а теперь уходите.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="3"/>
+				<Gold Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1003"/>
@@ -12128,7 +12128,7 @@
 			<Id>1217</Id>
 			<Text>Вы удачно приземляетесь, не считая небольшой царапины (потеряйте 2 ВЫНОСЛИВОСТИ). Однако нужно выбираться.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1283" Text="Если есть веревка"/>
@@ -12165,7 +12165,7 @@
 			<Id>1221</Id>
 			<Text>На дороге появляются два скачущих во весь опор рыцаря. Оба закованы в тяжелые зеленые латы, на щитах силуэт Черного замка. Вы понимаете свою ошибку – это враги, а спрятаться уже некуда (если есть черная жемчужина – действуйте! - 482). Изображение замка на щите начинает расти, и вскоре вы видите только его, и ничего больше. Мрачный, угрюмый замок, по бокам невысокие сторожевые башенки, под одной из них исчезает голубая змейка. Неужели река! Но тогда замок должен быть огромен. Резкая боль заставляет прийти в себя. Один из рыцарей уже миновал вас, на полном скаку ударив копьем (потеряйте 4 ВЫНОСЛИВОСТИ). Отбросив копье, он разворачивает лошадь и достает меч. Щит приворожил вас, привлек все внимание – дело явно не обошлось без колдовства.\n\nТеперь надо мгновенно решать, что делать:</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="799" Text="Выхватить меч и драться">
@@ -12257,7 +12257,7 @@
 			<Id>1230</Id>
 			<Text>Вы изо всех сил ударяете ногой о стену, но она не ломается, а вы чувствуете резкую боль в ноге. Это растяжение – потеряйте 6 ВЫНОСЛИВОСТЕЙ. Нога еще поболит, но потом боль пройдет. Так что теперь попробуйте разобрать стену руками.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-6"/>
+				<Endurance Value="-6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1488"/>
@@ -12267,7 +12267,7 @@
 			<Id>1231</Id>
 			<Text>Вы выпиваете жидкость. Это микстура ужаса. Каждый раз, когда вы будете встречаться с врагом, вам потребуются все силы, чтобы подавить в себе ужас перед ним. Поэтому потеряйте 1 МАСТЕРСТВО. Теперь же закройте дверь и снова заприте ее.</Text>
 			<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1508"/>
@@ -12312,7 +12312,7 @@
 			<Id>1235</Id>
 			<Text>Ваши противники повержены. В карманах у рыцарей вы находите 7 золотых, перо павлина и прекрасную розу, которая, похоже, никогда не завянет.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="7"/>
+				<Gold Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1289" Text="Теперь можете отправляться дальше"/>
@@ -12331,7 +12331,7 @@
 			<Id>1237</Id>
 			<Text>Вы осторожно кладете конверт на место и, отдохнув (восстановите 2 ВЫНОСЛИВОСТИ), отправляетесь в путь.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="2"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1205"/>
@@ -12362,8 +12362,8 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Modification Name="Luck" Value="-1"/>
-				<Modification Name="Gold" Value="1"/>
+				<Luck Value="-1"/>
+				<Gold Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1131"/>
@@ -12573,7 +12573,7 @@
 			<Id>1263</Id>
 			<Text>Вы откидываете тяжелую крышку сундука, и вам в глаза ударяет сверканье множества золотых монет. Обезьяна удивленно смотрит на вас и зовет, указывая на какую-то дверь. Вы можете взять себе максимум 85 монет. Сундук слишком большой и тяжелый, чтобы тащить его весь с собой.\n\nТеперь решайте:</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="85"/>
+				<Gold Value="85"/>
 			</Modifications>
 			<Options>
 				<Option Destination="921" Text="последуете за обезьяной"/>
@@ -12601,7 +12601,7 @@
 			<Id>1266</Id>
 			<Text>Ночь проходит спокойно (восстановите 3 ВЫНОСЛИВОСТИ).\n\nПроснувшись с рассветом, вы отправляетесь в путь.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1256"/>
@@ -12611,7 +12611,7 @@
 			<Id>1267</Id>
 			<Text>Зеленый рыцарь как раз готовится нанести вам удар, и вы надеясь, что заклятие Копии защитит вас. Но Копия не появляется, и его удар достигает цели (потеряйте 2 ВЫНОСЛИВОСТИ). Другого выхода нет – возвращайтесь и деритесь с ним.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1409"/>
@@ -12680,7 +12680,7 @@
 			<Id>1275</Id>
 			<Text>Довольный собой, вы останавливаетесь. Однако, у вас сложилось впечатление, что дети больше удивлялись не тому, что вы использовали магию и как вы ей пользовались, а скорее зрелищности происходящего. Похоже, вы не первый, кто показывал им “фокусы”. Тут вы чувствуете, что они трогают вас за рукав рубахи и заговорщицки зовут вас что-то послушать. Наклоняясь, вы слушаете то, что они хотели вам сказать, и ваши догадки подтверждаются: оказывается, дети каким-то образом разузнали, как можно обращать заклятия противника на него самого, и теперь охотно делятся с вами этим секретом. Добавьте себе 1 УДАЧУ.\n\nКогда захотите этим воспользоваться, то просто обратите обратно на врага заклятие, которое он наложил на вас. Но с одним условием: вы можете обращать только те заклятия, которые сами знаете. Вы благодарите ребятишек за помощь и расстаетесь с ними друзьями.</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1196"/>
@@ -12704,7 +12704,7 @@
 			<Id>1278</Id>
 			<Text>С помощью меча вы прорубаете себе путь в непроходимых зарослях. Вскоре усталость дает о себе знать, а конца зарослям не видно. Вычтите у себя 1 выносливость и вернитесь к воротам.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="958"/>
@@ -12776,7 +12776,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1190"/>
@@ -12888,8 +12888,8 @@
 			<Id>1296</Id>
 			<Text>Вы залезаете на пальму и у самого верха вдруг нечаянно обрываетесь и падаете. При падении вывихиваете руку (потеряйте 1 МАСТЕРСТВО и 2 ВЫНОСЛИВОСТИ).</Text>
 			<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
-				<Modification Name="Endurance" Value="-2"/>
+				<Mastery Value="-1"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="828" Text="Попробуете залезть еще раз"/>
@@ -12949,7 +12949,7 @@
 			<Id>1303</Id>
 			<Text>В паутине вы находите 3 золотых, коготь дракона, бронзовый свисток и запечатанную бутылку вина. Как она попала сюда, вы только можете догадываться. Вероятно, Гоблин или Орк ненароком зашел сюда и не смог осилить злополучного паука. Берите себе все, что захотите (вино добавит 4 ВЫНОСЛИВОСТИ) и уходите по другой дороге.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="3"/>
+				<Gold Value="3"/>
 				<Benefit Name="Healing" Value="Выпить гоблинского вина,4"/>
 			</Modifications>
 			<Options>
@@ -13025,7 +13025,7 @@
 			<Id>1311</Id>
 			<Text>Несколько часов идете по коридору, а конца все нет. Вы ужасно устали (потеряйте 4 ВЫНОСЛИВОСТИ).</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1163" Text="Если хотите, можете прислониться к сырой стене и отдохнуть"/>
@@ -13036,7 +13036,7 @@
 			<Id>1312</Id>
 			<Text>Вы уже идете достаточно долго, пробираясь на ощупь в темноте, а коридор не изменяется. Все так же тесно, да к тому же и душно. Он вовсе не выложен из камня или кирпича, коридор просто выкопан в земле. Вскоре боль в согнутой спине дает о себе знать, потеряйте 3 ВЫНОСЛИВОСТИ.\n\nКогда начинаете жалеть, что связались с этим деревом, впереди забрезжил свет. Через минуту выходите из коридора через нору в земле и, щурясь от дневного света, проходите какое-то заброшенное поле и направляетесь к Замку.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1205"/>
@@ -13054,7 +13054,7 @@
 			<Id>1314</Id>
 			<Text>Через густой и темный лес продираться трудно. Пока искали дорогу, лишились 1 ВЫНОСЛИВОСТИ. В конце концов, вылезаете на какую-то тропинку и решаете направиться по ней.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1302"/>
@@ -13176,7 +13176,7 @@
 			<Id>1328</Id>
 			<Text>Вы берете пояс и надеваете на себя. Теперь на вас Волшебный пояс (добавьте 1 УДАЧУ). С его помощью можете в любой момент (но только один раз за все путешествие) позвать на помощь крота. Он выроет ход, по которому сможете проникнуть во двор Черного замка. Когда вы увидите замок, обратитесь к параграфу 1148, если, конечно, будет такое желание, и воспользуйтесь помощью крота. Теперь же пора выбираться из берлоги.</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1034"/>
@@ -13234,7 +13234,7 @@
 			<Id>1335</Id>
 			<Text>Остров кажется вам немного странным: он весь засажен прекрасными фруктовыми деревьями, но нигде не видно ни одной живой души. Среди деревьев больше всего апельсиновых, кроме того, растут бананы, мандарины, а также яблоки и груши. Можете сорвать по три плода каждого вида, и каждый из восстановит вам по 2 ВЫНОСЛИВОСТИ. В центре островка на высоком дереве растет апельсин, который привлекает ваше внимание. Сначала вы не можете понять, почему он блестит на солнце, но когда подходите ближе, то видите, что он из чистого золота.</Text>
 			<Modifications>
-				<Modification Name="Healing" Value="Съесть плодов с острова,2,15"/>
+				<Healing Value="Съесть плодов с острова,2,15"/>
 			</Modifications>
 			<Options>
 				<Option Destination="827" Text="Рискнете сорвать его"/>
@@ -13443,7 +13443,7 @@
 			<Id>1359</Id>
 			<Text>Настроение Хозяина меняется: он становится веселее и еще раз приглашает зайти и отдохнуть после дальней дороги. По вашей пыльной одежде он сразу понял, что пришли вы издалека. На этот раз вы принимаете его приглашение. Как только входите, сразу становится ясно, что Хозяин живет не один. Из кухни веет пряными запахами, запахом мясного супа и пирожков. Хозяин говорит, что это его женушка готовит обед, и приглашает вас за стол. Вы садитесь у окна и принимаетесь за еду. Горячий обед восстановит вам 6 ВЫНОСЛИВОСТЕЙ. За столом вы рассказываете, что вы не здешний и пришли издалека. Хозяина, однако, интересует, зачем и куда вы держите путь. Что вы ответите:</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="6"/>
+				<Endurance Value="6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="841" Text="Что ищете Черный замок, чтобы убить волшебника и освободить принцессу"/>
@@ -13637,8 +13637,8 @@
 			<Id>1379</Id>
 			<Text>Вы приподнимаете крышку большого сундука, но она вырывается из рук и со всей силы бьет по пальцам. Потеряйте 1 МАСТЕРСТВО и 2 ВЫНОСЛИВОСТИ.</Text>
 			<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
-				<Modification Name="Endurance" Value="-2"/>
+				<Mastery Value="-1"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1789" Text="Хотите еще раз попробовать поднять крышку"/>
@@ -13730,7 +13730,7 @@
 			<Id>1388</Id>
 			<Text>Срываете огурец и пробуете. Вкус у него самый обычный, и вы без опаски съедаете огурец целиком. Восстановите 4 ВЫНОСЛИВОСТИ и покиньте комнату или через:</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1812" Text="Левую дверь"/>
@@ -13869,7 +13869,7 @@
 			<Id>1406</Id>
 			<Text>Вы бросаете фигурку в мешок, и оттуда вырывается столб пламени, обдавший вас жаром (потеряйте 2 ВЫНОСЛИВОСТИ). Вы отскакиваете от него, а затем принимаете тушить водой из бадьи, стоящей рядом. Потушив, осматриваете мешок и не обнаруживаете ковра-самолета. Он сгорел – неужели от этого гномика? Остальные вещи целы. Вычеркните ковер из списка. Слава Богу, мешок цел остался! Теперь выходите обратно.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1708"/>
@@ -13900,7 +13900,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>			
 			<Options>
 				<Option Destination="1267" Text="Вы можете попытаться наложить заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
@@ -14052,7 +14052,7 @@
 			<Id>1428</Id>
 			<Text>Вы просите накормить вас. Повар соглашается, но просит за это плату – 2 золотых. Если согласны, то отдайте ему деньги, и он нальет вам тарелку горячих щей. Восстановите 5 ВЫНОСЛИВОСТЕЙ и уходите.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="5"/>
+				<Endurance Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1450"/>
@@ -14093,7 +14093,7 @@
 			<Id>1433</Id>
 			<Text>Вы храбро выпиваете жидкость. Это микстура жизни. Прибавьте себе 8 ВЫНОСЛИВОСТЕЙ и уходите из домика.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="8"/>
+				<Endurance Value="8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1343"/>
@@ -14119,7 +14119,7 @@
 			<Id>1436</Id>
 			<Text>Вы пробуете красное вино. Оно действительно великолепно. Прибавьте 5 ВЫНОСЛИВОСТЕЙ, поблагодарите Тролля и покиньте погреб через дверь в противоположном конце прохода между полками.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="5"/>
+				<Endurance Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1136"/>
@@ -14209,7 +14209,7 @@
 			<Id>1444</Id>
 			<Text>Вода самая обычная. Восстановите себе 4 ВЫНОСЛИВОСТИ. Теперь выходите из комнаты и идите дальше по коридору.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1429"/>
@@ -14265,7 +14265,7 @@
 			<Id>1451</Id>
 			<Text>Наложив заклятие Плавания, вступаете в реку. Течение такое быстрое, что уже через несколько секунд вы подплываете к тому месту, где река скрывается под замком. Сначала все идет так, как и ожидалось: после небольшого водопада, который удается миновать, отделавшись только легким ушибом (потеряйте 1 ВЫНОСЛИВОСТЬ), река выравнивается и течет в высокой трубе где-то по подземельям замка. Но когда по вашим расчетам вот-вот можно будет попасть в комнату, откуда слуги берут воду, вы внезапно ударяетесь о невидимую решетку и чувствуете, что начинаете тонуть. Барлад Дэрт надежно защитил свой замой от любопытных глаз.\n\nРешетка развеяла заклятие, а плавать вы не умеете. Вода начинает прибывать, теперь уже нельзя воспользоваться даже заклятием Левитации: вам не пролететь, не захлебнувшись, по узкому пространству между верхом трубы и водой. Есть только один выход: наложить еще одно заклятие Плавания и попытаться выплыть против течения. Но догадались ли вы запастись еще одним таким заклятием?</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1566" Text="Если да" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
@@ -14301,7 +14301,7 @@
 			<Id>1454</Id>
 			<Text>Библиотекарь обманул вас: он насторожился и решил поднять тревогу. Вы не в силах сопротивляться вбежавшей страже – Гоблинам, вооруженным боевыми топорами. Нескольких вам удается убить, но врагов слишком много. Сильный удар по голове (потеряйте 2 ВЫНОСЛИВОСТИ) – и вы теряете сознание…</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="794"/>
@@ -14469,7 +14469,7 @@
 			<Id>1474</Id>
 			<Text>Через несколько шагов тоннель заканчивается у невысокой двери. За ней крошечная комнатенка. Войдя, вы больно ударяетесь о низкий потолок головой (потеряйте 1 ВЫНОСЛИВОСТЬ). Потом выходите через такую же дверь, только в другой стене и попадаете не то в коридорчик, не то в разлом в стене. Вы стараетесь протиснуться в эту щель и с последним рывком вываливаетесь наружу.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1785"/>
@@ -14581,7 +14581,7 @@
 			<Id>1486</Id>
 			<Text>Вы пытаетесь отступить назад и захлопнуть дверь, но скелет не дает вам это сделать. Несмотря на то, что он только ранил вас, когда вы повернулись к нему спиной (потеряйте 2 ВЫНОСЛИВОСТИ), бегство не удалось. Вам придется вернуться и сразиться с ним.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1208"/>
@@ -14598,7 +14598,7 @@
 			<Id>1488</Id>
 			<Text>Кирпичи легко вынимаются, но за ними выложен еще один такой ряд. Его тоже удается разобрать, но кирпичи оказываются слишком тяжелыми, и к концу работы вы чувствуете усталость (потеряйте 1 ВЫНОСЛИВОСТЬ). За образовавшимся отверстием находите веревочную лесенку, ведущую вниз. Спустившись, открываете люк в полу и спрыгиваете вниз. Вы оказались на лестничной площадке. Перед вами дверь, которую вы открываете.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1818"/>
@@ -14811,7 +14811,7 @@
 			<Id>1510</Id>
 			<Text>Это меч Зеленого рыцаря. Он поможет вам лучше сражаться и быстрей побеждать. Добавьте 1 МАСТЕРСТВО и проходите через дверь справа.</Text>
 			<Modifications>
-				<Modification Name="Mastery" Value="1"/>
+				<Mastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1740"/>
@@ -14856,7 +14856,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1738" Text="Откинуть ставни и осмотреть домик"/>
@@ -14875,7 +14875,7 @@
 			<Id>1515</Id>
 			<Text>Вы проходите через комнату и понимаете, что совершили ошибку. За стеной зенит колокольчик, и при выходе вас встречает охрана. Короткий неравный бой, кто-то бьет сзади по голове (потеряйте 2 ВЫНОСЛИВОСТИ), и вы теряете сознание…</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1642"/>
@@ -14997,7 +14997,7 @@
 			<Id>1529</Id>
 			<Text>Вы выхватываете меч и бросаетесь вперед. Недобрый огонек вспыхивает в глазах у волшебника, и в следующую секунду ваш меч, вырванный из руки нечеловеческой силой (потеряйте 1 МАСТЕРСТВО), отлетает в другой конец комнаты. «Ты слишком подл, чтобы оценить мое великодушие и терпение, - говорит маг, - и будешь наказан за это»</Text>
 			<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1576"/>
@@ -15253,8 +15253,8 @@
 			<Id>1553</Id>
 			<Text>Вы продули свою ставку, но зато вы выиграли бронзовый свисток, одно мускатное печенье, которое добавит 2 ВЫНОСЛИВОСТИ, и 1 золотой.</Text>
 			<Modifications>
-				<Modification Name="Healing" Value="Съесть мускатное печенье,2"/>
-				<Modification Name="Gold" Value="1"/>
+				<Healing Value="Съесть мускатное печенье,2"/>
+				<Gold Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1579" Text="Рискнете и сыграете следующий кон"/>
@@ -15265,8 +15265,8 @@
 			<Id>1554</Id>
 			<Text>Вы берете булочки с тарелки. Они еще теплые – только недавно из печи. Вы можете съесть их сразу или положить в заплечный мешок. Каждая булочка восстановит вам 2 ВЫНОСЛИВОСТИ.</Text>
 			<Modifications>
-				<Modification Name="Healing" Value="Съесть булочки,2,2"/>
-				<Modification Name="Gold" Value="1"/>
+				<Healing Value="Съесть булочки,2,2"/>
+				<Gold Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1759" Text="Теперь можете либо подойти к следующей картине"/>
@@ -15379,7 +15379,7 @@
 			<Id>1566</Id>
 			<Text>Второе заклятие спасает вас: вы накладываете его, оттолкнувшись ногами от невидимой решетки, и оно благополучно выносит вас на берег. Но вы плыли против течения, поэтому потеряйте 2 ВЫНОСЛИВОСТИ.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1468"/>
@@ -15616,7 +15616,7 @@
 			<Id>1593</Id>
 			<Text>Подъемник не рассчитан на такую тяжесть. Один из канатов обрывается, и вы летите вниз. По пути задеваете что-то головой (потеряйте 5 ВЫНОСЛИВОСТЕЙ) – и теряете сознание…</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-5"/>
+				<Endurance Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="794"/>
@@ -15641,7 +15641,7 @@
 			<Id>1596</Id>
 			<Text>Вы пробуете белое вино, но вкус у него просто кошмарен. Оно явно предназначено не для людей. Постарайтесь не показать своего неудовольствия Троллю, потеряйте 1 МАСТЕРСТВО и уходите.</Text>
 			<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
+				<Mastery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1136"/>
@@ -15719,7 +15719,7 @@
 			<Id>1605</Id>
 			<Text>Камни очень тяжелы, но вы старательно снимаете их с сундука (потеряйте 3 ВЫНОСЛИВОСТИ) и поднимаете крышку.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1676"/>
@@ -15811,7 +15811,7 @@
 			<Id>1617</Id>
 			<Text>Вы говорите человеку о том, что вы один из тех, кто взялся спасти Принцессу и не побоялся найти и победить черного мага. Вы добавляете ко всему, что пока не выполнили своей миссии. Человек желает вам удачи (добавьте себе 1 УДАЧУ) и может кое-чем помочь. Он говорит, что наиболее опасными местами в замке являются тупики и комнаты-ловушки.\n\nПо некоторым признакам можно их определить: никогда не входите в тот коридор, в конце которого видна дверь – это наверняка ловушка. При большом выборе направлений, ловушки обычно находятся по краям.\n\nОсобенно много ловушек на том этаже, где покоится Принцесса. Потом Человек говорит, что скоро придет охрана, так что вам надо уходить.\n\nПоблагодарив за помощь, вы прощаетесь с ним и выходите в коридор за вашей спиной.</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1404"/>
@@ -15878,7 +15878,7 @@
 			<Id>1625</Id>
 			<Text>Это вино. Добавьте себе 5 ВЫНОСЛИВОСТЕЙ. Интересно, какой здесь запас вина? Но теперь это неважно, и вам придется выходить и идти дальше.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="5"/>
+				<Endurance Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1429"/>
@@ -16071,8 +16071,8 @@
 			<Id>1649</Id>
 			<Text>Подойдя поближе, вы видите, что картина изображает не битву, а расправу. В центре ее сидит на коне рыцарь в латах и шляпе темно-зеленого цвета. Рукой в железной перчатке он указывает воинам на горящую деревню. В другой руке у него меч. Гоблины на заднем плане картины выволакивают из хат крестьян, несколько орков с факелами поджигают дома. Может быть так завоевывались древни вокруг леса? Или это эпизод из жизни армии мага до его прихода в эти места? Но ваши размышления прерваны: с картиной что-то происходит. На ваших глазах Зеленый рыцарь разворачивает лошадь – теперь его перчатка направлена на вас. Вы окаменели и не в силах пошевелиться, настолько заворожило только что увиденное действие. Несколько Гоблинов, вооруженных луками, поднимают их и направляют на вас. Вы испытываете странное желание убежать от этой страшной картины, но она притягивает, приковывает к себе. Гоблины отпускают тетиву луков, стрелы летят прямо в вас, но что это? Вы чувствуете острую боль в левой руке и под правым коленом. Стрелы попали в вас! Не теряя времени, вы отскакиваете от картины. Все немедленно принимает прежний вид. Но стрелы все еще торчат! Вы осторожно вынимаете их, радуясь, что они хотя бы не отравлены. Потеряйте 1 МАСТЕРСТВО и 4 ВЫНОСЛИВОСТИ. Теперь, когда вы достаточно наказаны за беспечное любопытство, вернитесь и сделайте более безопасный выбор.</Text>
 			<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
-				<Modification Name="Endurance" Value="-4"/>
+				<Mastery Value="-1"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1545"/>
@@ -16167,7 +16167,7 @@
 			<Id>1661</Id>
 			<Text>Примерно на четвертые сутки все ваши силы иссякают (потеряйте 16 ВЫНОСЛИВОСТЕЙ). Голод дает о себе знать. Не померли ли вы, потеряв столько сил?</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-16"/>
+				<Endurance Value="-16"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1760" Text="Если вы живы"/>
@@ -16303,7 +16303,7 @@
 			<Id>1676</Id>
 			<Text>Открыть сундук не составляет труда. На его дне обнаруживаете пергаментный свиток, свернутый в трубочку. Вы разворачиваете его и пытаетесь понять, что на нем изображено. Там изображение плана помещения, в котором находится Принцесса. В зал ведут несколько ходов, в центре помещения стоит возвышение для Принцессы. Вы уже хотели было отложить свиток, как вдруг одна деталь привлекает ваше внимание.\n\nЭто то место, где указано зеркало. Сначала вы думаете, что это дверь, так как за зеркалом отчетливо нарисована лестница, ведущая вверх. Это может означать только одно: в зал Принцессы ведет потайной ход. Теперь, когда увидите зеркало и захотите воспользоваться им, вычтете 13 из номера параграфа, на котором будете находиться и прочтите, что будет дальше.\n\nТеперь уходите из комнаты и не забудьте добавить себе 1 УДАЧУ</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1212"/>
@@ -16321,7 +16321,7 @@
 			<Id>1678</Id>
 			<Text>Через несколько метров пол проваливается под вами, и вы летите вниз.\n\nПри полете ударяетесь обо что-то головой (потеряйте 3 ВЫНОСЛИВОСТИ) и теряете сознание…</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1688"/>
@@ -16339,7 +16339,7 @@
 			<Id>1680</Id>
 			<Text>Вы наклоняетесь над краном и пробуете жидкость. Это микстура Жизни (восстановите 8 ВЫНОСЛИВОСТЕЙ). Теперь уходите из комнаты</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="8"/>
+				<Endurance Value="8"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1429"/>
@@ -16356,8 +16356,8 @@
 			<Id>1682</Id>
 			<Text>Сворачиваете с дороги и подходите к дереву. Оно вроде сухое, и дупло тоже есть. Вы не слишком то поверили в этот клад, но почему бы и не попробовать его поискать. Прикинув, где может быть место под дуплом, вы несколько раз втыкаете меч в мягкую землю. Наконец он во что-то упирается. Проходит немного времени, и закопанный ларец у вас в руках. Торопливо сбиваете замок. Внутри ларца лежат 10 золотых, серебряное кольцо и светильник. Можете взять с собой все, что хотите, и добавьте себе 1 УДАЧУ, даже если вы еще не тратили ее. Если вам понадобится зажечь светильник, прибавьте 10 к номеру параграфа, на котором вы будете находиться. Теперь возвращайтесь</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
-				<Modification Name="Gold" Value="10"/>
+				<Luck Value="1"/>
+				<Gold Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="920"/>
@@ -16375,7 +16375,7 @@
 			<Id>1684</Id>
 			<Text>Вы забираете свою ставку и еще забираете 3 золотых. Вам повезло.</Text>
 			<Modifications>
-				<Modification Name="Gold" Value="3"/>
+				<Gold Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1579" Text="Стоит ли еще играть"/>
@@ -16429,7 +16429,7 @@
 			<Id>1690</Id>
 			<Text>Вы даете женщинам 6 золотых. Они поражены вашей щедростью и дают один маленький совет: побольше обращаете внимания на зеркала – ими пользуются не только женщины. Добавьте себе 1 УДАЧУ. Когда вы увидите зеркало, которым захотите воспользоваться, вычтете 13 из того параграфа, на котором вы его увидели. Теперь же, выслушав жен мага, вы выходите из гарема и идете к новой двери</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1147"/>
@@ -16446,7 +16446,7 @@
 			<Id>1692</Id>
 			<Text>Женщине наплевать на ваши шутки. Потеряйте 1 УДАЧУ. После этого она выключает связь</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="-1"/>
+				<Luck Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1702"/>
@@ -16648,8 +16648,8 @@
 			<Id>1711</Id>
 			<Text>Вы выиграли четыре яблока, каждое из которых, добавит по 2 ВЫНОСЛИВОСТИ и 12 золотых. А также можете вернуть себе свою ставку. Теперь вам лучше уйти: нескольким Гоблинам не понравилось ваше везение, и они смотрят на вас завистливо и как-то подозрительно.</Text>
 			<Modifications>
-				<Modification Name="Healing" Value="Съесть яблоко,2,4"/>
-				<Modification Name="Gold" Value="12"/>
+				<Healing Value="Съесть яблоко,2,4"/>
+				<Gold Value="12"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1672"/>
@@ -16659,7 +16659,7 @@
 			<Id>1712</Id>
 			<Text>Вы открываете сундук, но… он пуст. Видимо, его временно принесли в кухню за неимением лучшего места. Можете быстро поесть суп из котла и восстановить 3 ВЫНОСЛИВОСТИ, после чего придется уходить.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="3"/>
+				<Endurance Value="3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1450"/>
@@ -16707,7 +16707,7 @@
 			<Id>1718</Id>
 			<Text>«Ты обманул меня, - рычит Лев. – Ты не знаешь пароля!». Его сильная лапа наносит удар прежде, чем вы успеваете защититься (потеряйте 2 ВЫНОСЛИВОСТИ). После этого вам придется пробиваться силой, – вернитесь и сражайтесь со Львом</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1668"/>
@@ -16750,7 +16750,7 @@
 			<Id>1723</Id>
 			<Text>Вы поворачиваетесь к Начальнику стражи и говорите: «Мне поручили передать вам…», но не заканчиваете фразу, видя, как глаза его лезут на лоб, а рука тянется к звонку. Он дергает за шнур звонка, и комната наполняется вооруженными Орками. Вы пытаетесь сопротивляться, но один из Орков, подкравшись сзади, бьет своим мечом плашмя по голове (потеряйте 2 ВЫНОСЛИВОСТИ), и вы теряете сознание…</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1642"/>
@@ -16859,7 +16859,7 @@
 			<Id>1734</Id>
 			<Text>Мясо вполне сносно и добавляет вам 7 ВЫНОСЛИВОСТЕЙ.</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="7"/>
+				<Endurance Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="845" Text="Хотите попробовать еще и овощи"/>
@@ -17003,7 +17003,7 @@
 			<Id>1751</Id>
 			<Text>Вероятно, вы спросили что-то не то, потому что один из Орков, глядя прямо в глаза, невозмутимо дергает какой-то рычаг под столом, и вы проваливаетесь вниз. Последнее, что почувствовали – тупую боль в голове от сильного удара (потеряйте 4 ВЫНОСЛИВОСТИ) – и сознание покинуло вас…</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="794"/>
@@ -17207,7 +17207,7 @@
 			<Id>1777</Id>
 			<Text>Слава богу, вы смогли сдержать крик. Потеряйте 7 ВЫНОСЛИВОСТЕЙ за укол волшебным шипом и обойдите кровать с другой стороны</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-7"/>
+				<Endurance Value="-7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="979"/>
@@ -17299,8 +17299,8 @@
 			<Id>1789</Id>
 			<Text>Вы снова пробуете поднять крышку, и снова она падает на руку.\n\nПотеряйте еще 1 МАСТЕРСТВО и 2 ВЫНОСЛИВОСТИ.\n\nСундук заколдован! Что вы сделаете теперь:</Text>
 			<Modifications>
-				<Modification Name="Mastery" Value="-1"/>
-				<Modification Name="Endurance" Value="-2"/>
+				<Mastery Value="-1"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1961" Text="обратите внимание на средний сундук"/>
@@ -17423,7 +17423,7 @@
 				</Fight>
 			</Actions>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1136"/>
@@ -17508,7 +17508,7 @@
 			<Id>1814</Id>
 			<Text>Буфет переполняют разнообразные сладости. Вы можете подкрепиться ими и восстановить 7 ВЫНОСЛИВОСТЕЙ.\n\nПосле этого надо уходить:</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="7"/>
+				<Endurance Value="7"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1375" Text="через дверь в правой стене"/>
@@ -17574,7 +17574,7 @@
 			<Id>1821</Id>
 			<Text>После того, как двери лифта закрылись, происходит резкий толчок. Вы падаете и, пытаясь за что-нибудь ухватиться, ударяетесь о каменную стенку лифта (потеряйте 1 ВЫНОСЛИВОСТЬ). Под вами слышится какое-то бурление и бульканье, но о причине этого вы не успеваете задуматься, - двери лифта открываются, и вы выходите</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-1"/>
+				<Endurance Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1519"/>
@@ -17786,7 +17786,7 @@
 			<Id>1846</Id>
 			<Text>Человек в двери удивленно смотрит на вас, но не входит – вы успеваете предупредить его об опасности. Но видя, что вы не в силах встать, что сейчас наложит на вас заклятие Исцеления. И действительно: вы чувствуете прилив свежих сил (прибавьте 10 ВЫНОСЛИВОСТЕЙ). Теперь вы можете выйти из злополучного коридора</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="10"/>
+				<Endurance Value="10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1635"/>
@@ -17995,7 +17995,7 @@
 			<Id>1870</Id>
 			<Text>Вы доходит до конца коридора. На полу лежит красивый пушистый ковер. Вам так и хочется лечь на него и отдохнуть, не смотря на то, что он смотрится здесь довольно странно, как бы не к месту. Но что это… как только вы встаете на него, пол уходит из-под ваших ног, и вы чувствуете, что летите вниз. Потом сильно обо что-то ударяетесь и теряете 5 ВЫНОСЛИВОСТЕЙ. У вас ненадолго потемнело в глазах, и вы оглядываетесь, где очутились</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-5"/>
+				<Endurance Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1136"/>
@@ -18005,7 +18005,7 @@
 			<Id>1871</Id>
 			<Text>В этот момент секретный ящичек сам собой захлопывается и прищемляет вам палец (потеряйте 2 ВЫНОСЛИВОСТИ).</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1829" Text="Теперь вы можете выйти либо через дверь в углу напротив вас"/>
@@ -18039,7 +18039,7 @@
 			<Id>1875</Id>
 			<Text>В этот момент вы чувствуете, что ваш заплечный мешок ведет себя как-то странно. Вдруг из мешка вылетают песочные часы и разбиваются о пол. Поднимается такая песочная пыль, что вам приходится зажмурить глаза.\n\nКогда пыль исчезает, ножей и след простыл, а раны зажили. Тем не менее, вам все равно придется вычесть 5 ВЫНОСЛИВОСТЕЙ за те раны, которые были нанесены вам ножами. Но, согласитесь, вам повезло – все могло кончиться хуже. Вылезайте из люка назад и поднимайтесь по лестнице</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-5"/>
+				<Endurance Value="-5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1356"/>
@@ -18094,7 +18094,7 @@
 			<Id>1881</Id>
 			<Text>Вы делаете себе небольшой шалашик, но до ночи ждать приходится несколько часов. Наконец начинает смеркаться, и вы жалеете, что потратили зря столько времени. Наступает ночь. Вы чутко спите, но никто не нарушает вашего покоя. Добавьте себе 2 ВЫНОСЛИВОСТИ и отправляйтесь в путь с рассветом</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="2"/>
+				<Endurance Value="2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1512"/>
@@ -18113,7 +18113,7 @@
 			<Id>1883</Id>
 			<Text>Вы выпиваете жидкость и вдруг начинаете чувствовать, как наливаются силой ваши мускулы. Вы выпиваете зелье, называемое «Силой Дракона». Добавьте себе 5 МАСТЕРСТВА. Но учтите, если вы три раза кого-нибудь убьете в бою, то зелье теряет силу, и ваше МАСТЕРСТВО станет прежним. Теперь осмотрите сундук</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="5"/>
+				<Endurance Value="5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1731"/>
@@ -18253,7 +18253,7 @@
 			<Id>1900</Id>
 			<Text>Вода прозрачная и приятная на вкус (прибавьте 4 ВЫНОСЛИВОСТИ).\n\nТеперь уходите</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1869"/>
@@ -18307,7 +18307,7 @@
 			<Id>1905</Id>
 			<Text>Откупорив бутыль, вы подносите ее ко рту. После нескольких глотков у вас начинается кружиться голова и темнеет в глазах (потеряйте 3 ВЫНОСЛИВОСТИ).</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-3"/>
+				<Endurance Value="-3"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1883" Text="Выпьете до конца"/>
@@ -18500,7 +18500,7 @@
 			<Id>1927</Id>
 			<Text>Благодарите судьбу за ваше спасение! Вы успеваете ухватиться руками за ступеньки. Они ведут вверх в зияющее отверстие. Лестница оказывается длиннее, чем вы думали. Вот уже несколько этажей осталось позади, вы устали карабкаться вверх по отвесной стене (потеряйте 2 ВЫНОСЛИВОСТИ), а выхода все нет…. Наконец, вы видите конец пути, но тут вдруг огонь выскальзывает из ваших рук и падает вниз. Вы наблюдаете, как ваш огонек удаляется от вас, летя в пропасть. Но, главное – вы живы, и вам надо постараться самим не соскользнуть со ступенек. Уже в темноте вы достигаете верха и нащупываете ручку. Вы толкаете ее вперед и, выйдя в светлую просторную комнату, видите, что проход закрывается не дверью, а обычным зеркалом. Вам в голову приходит мысль, что, возможно, это не единственный потайной ход в замке, и если вам что-нибудь по этому поводу покажется подозрительным, вычтите 13 из номера параграфа, на котором будете находиться. Теперь осмотритесь в комнате, в которой оказались</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1733"/>
@@ -18604,7 +18604,7 @@
 			<Id>1934</Id>
 			<Text>Неподалеку в лесу виднеется шалаш. Он давно заброшен и может служить прекрасным местом для ночлега. Положив меч рядом, вы чутко спите, но ночь проходит спокойно. Добавьте себе 4 ВЫНОСЛИВОСТИ и отправляйтесь в путь с рассветом</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="4"/>
+				<Endurance Value="4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="987"/>
@@ -18636,7 +18636,7 @@
 			<Id>1938</Id>
 			<Text>Вы отгоняете их, грозя мечом, и понимаете, что сделали ошибку: ребята испугались и разбежались, а это может привести к нежелательным последствиям. Потеряйте 1 УДАЧУ – вы лишили радости детей. Теперь придется быстрее убираться из деревни.</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="-1"/>
+				<Luck Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="960"/>
@@ -18717,7 +18717,7 @@
 			<Id>1947</Id>
 			<Text>Вы накладываете заклятие и направляете огненный шар на Водяного, но он скрывается под водой. Шар следует за ним – и… гаснет. Водяной же выныривает обратно и наносит ответный удар водорослями (потеряйте 2 ВЫНОСЛИВОСТИ). Теперь вам ничего не остается, как сражаться с ним мечом</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1013"/>
@@ -18760,7 +18760,7 @@
 			<Id>1952</Id>
 			<Text>Ужас охватывает вас при виде призрака. Вы пытаетесь бежать, но в панике спотыкаетесь о корягу и падаете. Потеряйте 4 ВЫНОСЛИВОСТИ.\n\nЗлой Дух вновь возникает перед вами, и вам не удастся избавиться от него без боя</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-4"/>
+				<Endurance Value="-4"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1747"/>
@@ -18817,7 +18817,7 @@
 			<Id>1959</Id>
 			<Text>Ничего не выйдет. Вы теряете 2 ВЫНОСЛИВОСТИ, пытаясь выбить дверь плечом, но она сработана на редкость крепко.\n\nВам все же придется выбрать одну из оставшихся дверей:</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1740" Text="прямо"/>
@@ -18828,7 +18828,7 @@
 			<Id>1960</Id>
 			<Text>Вы сворачиваете с дороги и углубляетесь в лес. Через лесную чащобу идти трудно и неудобно – потеряйте 2 ВЫНОСЛИВОТИ. Вскоре выходите на какую-то дорогу. Она и в самом деле идет в правильном направлении</Text>
 			<Modifications>
-				<Modification Name="Endurance" Value="-2"/>
+				<Endurance Value="-2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="933"/>
@@ -18882,7 +18882,7 @@
 			<Id>1966</Id>
 			<Text>Вы выбираете щит. Он поможет вам отражать вражеские удары (прибавьте себе 1 МАСТЕРСТВО, даже если ваше изначальное МАСТЕРСТВО не изменялось). Теперь закройте дверь кладовки и снова заприте ее</Text>
 			<Modifications>
-				<Modification Name="MaxMastery" Value="1"/>
+				<MaxMastery Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1508"/>
@@ -18892,7 +18892,7 @@
 			<Id>1967</Id>
 			<Text>Вы чувствуете, как наливаются ваши мускулы. Когда вы сдвигаете камень в сторону, то находите какую-то одежду, похожую на водолазный костюм. Надев его, вы можете беспрепятственно плыть через любую водную преграду. Однако костюм займет два места в вашем заплечном мешке, но если вы его берете, то добавьте себе 1 УДАЧУ. Теперь идите назад...</Text>
 			<Modifications>
-				<Modification Name="Luck" Value="1"/>
+				<Luck Value="1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="910"/>
