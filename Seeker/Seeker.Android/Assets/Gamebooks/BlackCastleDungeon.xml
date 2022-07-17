@@ -13223,10 +13223,10 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1336</Id>
-			<Text></Text>
+			<Text>Вскоре видите тропинку, услужливо убегающую вправо.</Text>
 			<Options>
-				<Option Destination="1062" Text="Вскоре видите тропинку, услужливо убегающую вправо, пойдете по ней"/>
-				<Option Destination="830" Text="не будете сворачивать"/>
+				<Option Destination="1062" Text="Пойдете по ней"/>
+				<Option Destination="830" Text="Не будете сворачивать"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14923,9 +14923,8 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1523</Id>
-			<Text></Text>
 			<Options>
-				<Option Destination="1345" Text="Вы можете взять с собой и деньги, и человечка, если вы берете человечка, то"/>
+				<Option Destination="1345" Text="Вы можете взять с собой и деньги, и человечка, если вы берете человечка"/>
 				<Option Destination="1708" Text="Из сауны другого выхода нет, и вы выходите обратно в предбанник"/>
 			</Options>
 		</Paragraph>
@@ -16465,10 +16464,10 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1696</Id>
-			<Text></Text>
+			<Text>Но теперь перед вами две двери:</Text>
 			<Options>
-				<Option Destination="1581" Text="Но теперь перед вами две двери: дверь справа"/>
-				<Option Destination="1463" Text="и дверь слева"/>
+				<Option Destination="1581" Text="Дверь справа"/>
+				<Option Destination="1463" Text="Дверь слева"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -16886,11 +16885,11 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1740</Id>
-			<Text></Text>
+			<Text>Никакой стражи поблизости не видно, разве что в соседней комнате, и вы можете либо взять один из сосудов с алтаря, тогда какой: </Text>
 			<Options>
-				<Option Destination="1837" Text="Никакой стражи поблизости не видно, разве что в соседней комнате, и вы можете либо взять один из сосудов с алтаря, тогда какой: серебряный"/>
-				<Option Destination="940" Text="стеклянный"/>
-				<Option Destination="1756" Text="любо выйти в противоположную дверь"/>
+				<Option Destination="1837" Text="Серебряный"/>
+				<Option Destination="940" Text="Стеклянный"/>
+				<Option Destination="1756" Text="Либо выйти в противоположную дверь"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -17505,11 +17504,11 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1816</Id>
-			<Text></Text>
+			<Text>Что вы хотите ей подарить?</Text>
 			<Options>
-				<Option Destination="1438" Text="Что вы хотите ей подарить? Бронзовый свисток"/>
-				<Option Destination="1280" Text="зеркальце"/>
-				<Option Destination="1526" Text="флакончик духов"/>
+				<Option Destination="1438" Text="Бронзовый свисток"/>
+				<Option Destination="1280" Text="Зеркальце"/>
+				<Option Destination="1526" Text="Флакончик духов"/>
 				<Option Destination="1234" Text="Если вам нечего дарить, то придется с ней сразиться"/>
 			</Options>
 		</Paragraph>
@@ -18751,7 +18750,7 @@
 			<Text></Text>
 			<Options>
 				<Option Destination="1807" Text="Если у вас есть шкура лисы, то покажите ее как образец товара и проходите"/>
-				<Option Destination="1453" Text="если же нет, то что бы вы ни доставали из заплечного мешка, стражу это не заинтересует, и вам придется прокладывать путь в замок своим мечом"/>
+				<Option Destination="1453" Text="Если же нет, то что бы вы ни доставали из заплечного мешка, стражу это не заинтересует, и вам придется прокладывать путь в замок своим мечом"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -18846,9 +18845,9 @@
 			<Id>1965</Id>
 			<Text></Text>
 			<Options>
-				<Option Destination="1815" Text="Если у вас есть, что поставить на кон, делайте это быстрее, иначе придется поставить либо деньги"/>
-				<Option Destination="1672" Text="уходить"/>
-				<Option Destination="1663" Text="Если все же поставили на кон какую-нибудь вещицу из вашего мешка, тогда кидайте кость"/>
+				<Option Destination="1663" Text="Если поставили на кон какую-нибудь вещицу из вашего мешка, тогда кидайте кость"/>
+				<Option Destination="1815" Text="Если у вас её нет, то придется поставить либо деньги"/>
+				<Option Destination="1672" Text="Либо придётся уходить"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
