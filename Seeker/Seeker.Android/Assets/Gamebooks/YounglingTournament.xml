@@ -1328,8 +1328,7 @@
 			<Id>115</Id>
 			<Text>Умножьте Силу выстрела противника на его Меткость и разделите на Отражение используемого вами стиля боя. Целое число от получившегося значения вычтите из своей Выносливости:</Text>
 			<Actions>
-				<MixedFightAttack>
-				</MixedFightAttack>
+				<MixedFightAttack/>
 			</Actions>
 			<Options>
 				<Option Destination="117" Text="Вы еще в состоянии двигаться"/>
@@ -4396,8 +4395,7 @@
 						<Text>Иначе придётся бросить кубик:</Text>
 					</Option>
 				</Option>
-				<SimpleDice>
-				</SimpleDice>
+				<SimpleDice/>
 			</Actions>
 			<Options>
 				<Option Destination="420" Text="Выпало 1 или 2"/>
@@ -6927,8 +6925,7 @@
 				<Text>Противница неожиданно наносит Удар с разворота. Бросьте кубик и вычтите у себя выпавшее количество Выносливости:</Text>
 			</Texts>
 			<Actions>
-				<DiceWounds>
-				</DiceWounds>
+				<DiceWounds/>
 			</Actions>
 			<Modifications>
 				<EnemyThrust Value="1"/>
@@ -7498,8 +7495,7 @@
 				<Text>Вас отбрасывает на несколько метров назад на песок (бросьте кубик и отнимите выпавшее число у себя из Выносливости):</Text>
 			</Texts>
 			<Actions>
-				<DiceWounds>
-				</DiceWounds>
+				<DiceWounds/>
 			</Actions>
 			<Modifications>
 				<Hitpoints Value="-3"/>
