@@ -1084,7 +1084,6 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>136</Id>
-			<Text></Text>
 			<Options>
 				<Option Destination="55" Text="Закончив письмо родителям, я решил написать еще одно — Даше"/>
 				<Option Destination="155" Text="Может быть потом как-нибудь"/>
@@ -1412,7 +1411,6 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>180</Id>
-			<Text></Text>
 			<Options>
 				<Option Destination="206" Text="Закончив письмо родителям, я решил написать Даше"/>
 				<Option Destination="15" Text="Даше я решил пока не писать"/>
@@ -1519,7 +1517,7 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>192</Id>
-			<Text></Text>
+			<Text>Цена за бутылку оказалась втрое выше магазинной.</Text>
 			<Options>
 				<Option Destination="4" Text="Я решил ничего не покупать"/>
 				<Option Destination="150" Text="Я отдал деньги, взял бутылку и вернулся в свое купе"/>
@@ -1743,7 +1741,7 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>221</Id>
-			<Text></Text>
+			<Text>Озвученная цена за бутылку оказалась вдвое выше магазинной.</Text>
 			<Options>
 				<Option Destination="191" Text="Я решил ничего не покупать"/>
 				<Option Destination="148" Text="Я отдал деньги, взял бутылку и вернулся в свое купе"/>
@@ -6360,10 +6358,9 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>834</Id>
-			<Text></Text>
 			<Options>
-				<Option Destination="41" Text="По сути все решалось в тот момент, когда я стоял в кабинете начальника учебной заставы старшего лейтенанта Строганова со своей характеристикой в руках"/>
-				<Option Destination="894" Text="И теперь я еду домой"/>
+				<Option Destination="41" Text="Судьба — странная штука. Среди погибших в боях у Даманского ребят вполне мог оказаться и я. По сути все решалось в тот момент, когда я стоял в кабинете начальника учебной заставы старшего лейтенанта Строганова со своей характеристикой в руках"/>
+				<Option Destination="894" Text="Но все сложилось так, как сложилось. И теперь я еду домой"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -6534,9 +6531,9 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>856</Id>
-			<Text></Text>
+			<Text>С чего же начать? </Text>
 			<Options>
-				<Option Destination="688" Text="С чего же начать? Для начала выкрутил свечи"/>
+				<Option Destination="688" Text="Для начала выкрутил свечи"/>
 				<Option Destination="737" Text="Сразу полез в карбюратор"/>
 				<Option Destination="807" Text="Потрогал радиатор"/>
 			</Options>
@@ -6637,10 +6634,10 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>870</Id>
-			<Text></Text>
+			<Text>Проблема осталась. Оно и понятно. Потому что нужно было...</Text>
 			<Options>
-				<Option Destination="857" Text="Потому что нужно было заменить термостат"/>
-				<Option Destination="689" Text="заменить холодный патрубок"/>
+				<Option Destination="857" Text="Заменить термостат"/>
+				<Option Destination="689" Text="Заменить холодный патрубок"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
