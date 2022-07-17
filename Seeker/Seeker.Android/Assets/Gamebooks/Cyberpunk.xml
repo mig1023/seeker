@@ -701,7 +701,6 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>64</Id>
-			<Text></Text>
 			<Options>
 				<Option Destination="183" Text="Если ты медик"/>
 				<Option Destination="192" Text="Если нет"/>
@@ -736,7 +735,6 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>68</Id>
-			<Text></Text>
 			<Options>
 				<Option Destination="287" Text="Если записано ключевое слово «отец»" Availability="Отец"/>
 				<Option Destination="313" Text="Если записано ключевое слово «мать»" Availability="Мать"/>
@@ -1134,7 +1132,6 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>107</Id>
-			<Text></Text>
 			<Options>
 				<Option Destination="314" Text="Если записано ключевое слово «отец»" Availability="Отец"/>
 				<Option Destination="276" Text="Если записано ключевое слово «мать»" Availability="Мать"/>
@@ -2243,7 +2240,6 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>223</Id>
-			<Text></Text>
 			<Options>
 				<Option Destination="446" Text="Если записано ключевое слово «Кибер 0»" Availability="Кибер 0"/>
 				<Option Destination="365" Text="Если записано «Кибер 20»" Availability="Кибер 20"/>
@@ -2889,7 +2885,6 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>291</Id>
-			<Text></Text>
 			<Options>
 				<Option Destination="250" Text="Если записано ключевое слово «Кибер 0»" Availability="Кибер 0"/>
 				<Option Destination="260" Text="Если записано ключевое слово «Кибер 20»" Availability="Кибер 20"/>
@@ -4555,7 +4550,6 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>467</Id>
-			<Text></Text>
 			<Options>
 				<Option Destination="518" Text="Если у тебя установлены киберимпланты"/>
 				<Option Destination="414" Text="Если нет"/>
@@ -4875,7 +4869,6 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>500</Id>
-			<Text></Text>
 			<Options>
 				<Option Destination="505" Text="Если записано ключевое слово «Кибер 0»"/>
 				<Option Destination="510" Text="Если записано «Кибер 20»" Availability="Кибер 20"/>
