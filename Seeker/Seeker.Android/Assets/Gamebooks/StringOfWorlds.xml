@@ -603,7 +603,7 @@
 				<Text>А теперь идите дальше.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="StrengthRestore"/>
+				<StrengthRestore/>
 			</Modifications>
 			<Options>
 				<Option Destination="239"/>
@@ -1884,7 +1884,7 @@
 			<Id>199</Id>
 			<Text>Вы надолго задерживаетесь на полянке, ловя в ладони тяжелые медовые капли. Когда вы с неохотой отрываетесь от этого чудесного напитка, то обнаруживаете, что ваша СИЛА восстановилась до первоначального уровня.\n\nЭто хорошо, а что дальше?</Text>
 			<Modifications>
-				<Modification Name="StrengthRestore"/>
+				<StrengthRestore/>
 			</Modifications>
 			<Options>
 				<Option Destination="295"/>
@@ -3461,7 +3461,7 @@
 				<Text>За все время обеда в кают-компанию никто не входит.\n\nНаконец мелодия меняется, в стене вновь открывается щель, манипуляторы сгребают туда тарелки с нетронутыми порциями... Что же произошло с персоналом станции?\n\nПокинув кают-компанию, идете дальше по коридору. Ваша тревога растет...</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="StrengthRestore"/>
+				<StrengthRestore/>
 			</Modifications>
 			<Options>
 				<Option Destination="604"/>
@@ -4017,7 +4017,7 @@
 			<Id>429</Id>
 			<Text>«Добро пожаловать, сэр Майор! — громогласно восклицает хозяин замка. — Окажи нам честь — раздели нашу трапезу! Эй, друзья, потеснитесь!\n\nДвое захмелевших гостей на другом конце стола подвигаются, освобождая место, и вы, не заставляя себя упрашивать, втискиваетесь между ними. Вокруг отчаянный гам, каждый рассказывает что-то свое, не особенно заботясь, слушают ли его. Тощий молодой менестрель с лютней, стоя перед бароном, что-то поет, но до вас не доносится ни слова — все заглушает пьяная болтовня.\n\nЗато жареное мясо превосходно, вино восхитительно, и к концу трапезы ваша СИЛА восстанавливается до первоначального уровня.</Text>
 			<Modifications>
-				<Modification Name="StrengthRestore"/>
+				<StrengthRestore/>
 			</Modifications>
 			<Options>
 				<Option Destination="165"/>
@@ -4263,7 +4263,7 @@
 				<Text Size="small">Если на вас теплый плащ, можете выспаться спокойно (и прибавить 1 к своей СИЛЕ). Если плаща нет, придется всю ночь лязгать зубами (и СИЛА уменьшится на 1).</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="CapeProtect"/>
+				<CapeProtect/>
 			</Modifications>
 			<Options>
 				<Option Destination="571"/>
@@ -5160,7 +5160,7 @@
 				<Text>Жаль, что нельзя достать еще несколько таких плодов. На всякий случай трогаете нижние ветви ближайшего дерева, но они такие хрупкие, что ломаются в пальцах.\n\nКлуша раздраженно напоминает, что преступник Бронсон на дереве не сидит... Она права, вам надо спешить.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="StrengthRestore"/>
+				<StrengthRestore/>
 			</Modifications>
 			<Options>
 				<Option Destination="415"/>
@@ -6003,7 +6003,7 @@
 				<Text Size="small">СИЛА восстанавливается до первоначального уровня.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="StrengthRestore"/>
+				<StrengthRestore/>
 			</Modifications>
 			<Options>
 				<Option Destination="229"/>
