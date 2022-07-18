@@ -39,36 +39,5 @@ namespace Seeker.Gamebook.SwampFever
             pursuitReport.Add("BIG|BAD|Вы упустили куст :(");
             return pursuitReport;
         }
-
-        public static int ThinkAboutMovement(int myPosition, int step, List<int> bombs, ref List<string> cavityReport)
-        {
-            int myMovementType = 0;
-
-            if (!bombs.Contains(myPosition + 4) && !bombs.Contains(myPosition + 3) && !bombs.Contains(myPosition + 5))
-            {
-                cavityReport.Add("Думаем: попробуем рвануть на гусеницах");
-                myMovementType = 6;
-            }
-            else if (!bombs.Contains(myPosition + 2) && (!bombs.Contains(myPosition + 1) || !bombs.Contains(myPosition + 3)))
-            {
-                cavityReport.Add("Думаем: попробуем тихонечко, на гребных винтах");
-                myMovementType = 1;
-            }
-            else if ((step > 2))
-            {
-                cavityReport.Add("Думаем: опасно, но нужно срочно прорываться, иначе накроет лава!");
-                myMovementType = 6;
-            }
-            else
-                cavityReport.Add("Думаем: лучше постоим нафиг");
-
-            if (bombs.Contains(myPosition) && (myMovementType == 0))
-            {
-                cavityReport.Add("Думаем: сейчас на вас упадёт вулканическая бомба - нужно рвать когти!");
-                myMovementType = Game.Dice.Roll();
-            }
-
-            return myMovementType;
-        }
     }
 }
