@@ -3478,7 +3478,7 @@
 				<Hitpoints Restore="true"/>
 				<Thrust Empty="true"/>
 				<EnemyThrust Empty="true"/>
-				<Modification Name="NewForceTechniquesOrder"/>
+				<NewForceTechniquesOrder/>
 			</Modifications>
 			<Options>
 				<Option Destination="318"/>
@@ -3503,7 +3503,7 @@
 			<Modifications>
 				<Thrust Empty="true"/>
 				<EnemyThrust Empty="true"/>
-				<Modification Name="NewForceTechniquesOrder"/>
+				<NewForceTechniquesOrder/>
 			</Modifications>
 			<Options>
 				<Option Destination="354" Text="Если у вас есть Корпускула Комы, и вы хотите ее использовать" Availability="Корпускула Комы"/>
@@ -4228,7 +4228,7 @@
 				<Hitpoints Value="10"/>
 				<Thrust Empty="true"/>
 				<EnemyThrust Empty="true"/>
-				<Modification Name="NewForceTechniquesOrder"/>
+				<NewForceTechniquesOrder/>
 			</Modifications>
 			<Options>
 				<Option Destination="378"/>
@@ -4353,7 +4353,7 @@
 			<Modifications>
 				<Thrust Empty="true"/>
 				<EnemyThrust Empty="true"/>
-				<Modification Name="NewForceTechniquesOrder"/>
+				<NewForceTechniquesOrder/>
 			</Modifications>
 			<Options>
 				<Option Destination="414" Text="Если у вас есть Корпускула Комы, и вы хотите ее использовать" Availability="Корпускула Комы"/>
@@ -5211,7 +5211,7 @@
 				<Hitpoints Value="5"/>
 				<Thrust Empty="true"/>
 				<EnemyThrust Empty="true"/>
-				<Modification Name="NewForceTechniquesOrder"/>
+				<NewForceTechniquesOrder/>
 			</Modifications>
 			<Options>
 				<Option Destination="435"/>
@@ -5236,7 +5236,7 @@
 			<Modifications>
 				<Thrust Empty="true"/>
 				<EnemyThrust Empty="true"/>
-				<Modification Name="NewForceTechniquesOrder"/>
+				<NewForceTechniquesOrder/>
 			</Modifications>
 			<Options>
 				<Option Destination="471" Text="Если у вас есть Корпускула Комы, и вы хотите ее использовать" Availability="Корпускула Комы"/>
@@ -6045,7 +6045,7 @@
 			<Modifications>
 				<Thrust Empty="true"/>
 				<EnemyThrust Empty="true"/>
-				<Modification Name="NewForceTechniquesOrder"/>
+				<NewForceTechniquesOrder/>
 			</Modifications>
 			<Options>
 				<Option Destination="499" Text="Если у вас есть Корпускула Комы, то самое время применить ее" Availability="Корпускула Комы"/>
@@ -7337,7 +7337,7 @@
 			<Modifications>
 				<Thrust Empty="true"/>
 				<EnemyThrust Empty="true"/>
-				<Modification Name="NewForceTechniquesOrder"/>
+				<NewForceTechniquesOrder/>
 			</Modifications>
 			<Options>
 				<Option Destination="603"/>
@@ -8134,7 +8134,7 @@
 			<Modifications>
 				<Thrust Empty="true"/>
 				<EnemyThrust Empty="true"/>
-				<Modification Name="NewForceTechniquesOrder"/>
+				<NewForceTechniquesOrder/>
 			</Modifications>
 			<Options>
 				<Option Destination="674"/>
