@@ -2372,7 +2372,7 @@
 			<Id>246</Id>
 			<Text>– Сславный малый, – вновь слышите вы голос. – Духи зземли и камня благоссловляют тебя.\n\nВы чувствуете прилив сил (+2 ЖИЗНИ). Вдобавок, если в будущем при проверке реакции вам не повезет, вы имеете право один раз за игру изменить результат на положительный – благословление духов спасет вас от неприятностей.\n\nОтвесив короткий почтительный поклон, вы продолжаете свой путь.</Text>
 			<Modifications>
-				<Modification Name="Offering"/>
+				<Offering/>
 				<Hitpoints Value="2"/>
 			</Modifications>
 			<Triggers>WardSave</Triggers>
@@ -2440,7 +2440,7 @@
 				</FootwrapsDeadlyReplacement>
 			</Actions>
 			<Modifications>
-				<Modification Name="FootwrapsNeedReplacingDeadly"/>
+				<FootwrapsNeedReplacingDeadly/>
 			</Modifications>
 			<Options>
 				<Option Destination="267" Text="У вас записано слово «паника»" Availability="Panic">
@@ -2504,7 +2504,7 @@
 			<Id>255</Id>
 			<Text>– Сслушшай меня, – вновь возникает голос у вас в голове. – Когда пол под тобой горячч и хоччетсся подпрыгнуть – не делай этого. Ты поймешшь, когда придет время. А теперь сступай, твоя жжертва принята.\n\nВы почтительно отходите от идола, втайне раздумывая, не переплатили вы за обрывок неясной информации.</Text>
 			<Modifications>
-				<Modification Name="Offering"/>
+				<Offering/>
 			</Modifications>
 			<Options>
 				<Option Destination="424" Text="Принести жертву второму идолу и послушать, что он скажет (если у вас конечно есть еще 10 золотых)" Availability="RingWithRuby|NecklaceWithEmerald|ЗОЛОТО >= 10"/>
@@ -2653,7 +2653,7 @@
 			<Triggers>Legs</Triggers>
 			<Modifications>
 				<Hitpoints Value="-2"/>
-				<Modification Name="FootwrapsNeedReplacing"/>
+				<FootwrapsNeedReplacing/>
 			</Modifications>
 			<Options>
 				<Option Destination="205"/>
@@ -3304,7 +3304,7 @@
 			<Triggers>Legs</Triggers>
 			<Modifications>
 				<Hitpoints Value="-1"/>
-				<Modification Name="FootwrapsNeedReplacing"/>
+				<FootwrapsNeedReplacing/>
 			</Modifications>
 			<Options>
 				<Option Destination="250"/>
@@ -3861,7 +3861,7 @@
 			<Triggers>Missing, Legs</Triggers>
 			<Modifications>
 				<Hitpoints Value="-2"/>
-				<Modification Name="FootwrapsNeedReplacing"/>
+				<FootwrapsNeedReplacing/>
 			</Modifications>
 			<Options>
 				<Option Destination="250"/>
@@ -4208,7 +4208,7 @@
 			<Triggers>Idols, WardSave</Triggers>
 			<Modifications>
 				<Hitpoints Value="4"/>
-				<Modification Name="Offering"/>
+				<Offering/>
 			</Modifications>
 			<Options>
 				<Option Destination="388"/>
