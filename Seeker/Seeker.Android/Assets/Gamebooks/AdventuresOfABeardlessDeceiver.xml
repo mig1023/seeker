@@ -776,7 +776,7 @@
 				<Text>Соперница покидает поле соревнований, Алдар ещё некоторое время прогуливается, наблюдая за ханской юртой. Наконец её полог распахивается и оттуда выходят главы казахских племён, батыры и бии. Курултай закончен, и теперь нужно попасть на приём к хану.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="PopularityByTime"/>
+				<PopularityByTime/>
 			</Modifications>
 			<Options>
 				<Option Destination="174"/>
@@ -2091,7 +2091,7 @@
 				<Text>Гонка продолжается.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="UnitOfTime"/>
+				<UnitOfTime/>
 			</Modifications>
 			<Options>
 				<Option Destination="96" Text="Догнал" Availability="ЕДИНИЦЫ_ВРЕМЕНИ &lt;= 0"/>
