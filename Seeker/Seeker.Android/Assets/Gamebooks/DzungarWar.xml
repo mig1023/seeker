@@ -6116,7 +6116,7 @@
 				</Get>
 			</Actions>
 			<Modifications>
-				<Modification Name="SaleOfPredatorSkins"/>
+				<SaleOfPredatorSkins/>
 			</Modifications>
 			<Options>
 				<Option Destination="482" Text="Отмечено ключевое слово «Уйгур», и Алдар Косе впервые посещает кульджинский базар" Availability="Уйгур"/>
