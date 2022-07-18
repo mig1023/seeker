@@ -16506,28 +16506,34 @@
 			<Id>1700</Id>
 			<Text>Вы показываете заключенному серебряный свисток. Он подходит ближе к решетке и рассказывает о том, что когда-то был камердинером мага, а серебряный свисток – символ его должности. Свисток украли, а разгневанный волшебник бросил его за это в темницу. Камердинер умоляет вернуть ему свисток.</Text>
 			<Options>
-				<Option Destination="1783" Text="Сделаете это"/>
-				<Option Destination="1859" Text="откажетесь и пойдете дальше – в этом случае придется вернуться на вторую развилку и пойти вправо"/>
+				<Option Destination="1783" Text="Сделаете это">
+					<Text>Откажетесь и пойдете дальше – в этом случае придется вернуться на вторую развилку и пойти вправо...</Text>
+				</Option>
+				<Option Destination="1859"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>1701</Id>
 			<Text>Вы откидываете крышку люка и обнаруживаете небольшой подъемник. Очевидно, с его помощью с верхнего этажа в столовую спускают подносы с едой. Подъемник достаточно велик, чтобы вы могли в него поместиться, и им можно воспользоваться и подняться вверх.</Text>
 			<Options>
-				<Option Destination="1926" Text="Если хотите попробовать это сделать"/>
-				<Option Destination="1524" Text="Если же нет, то вы можете уйти через одну из четырех дверей: в дверь рядом с люком"/>
-				<Option Destination="1375" Text="в дверь напротив люка"/>
-				<Option Destination="1457" Text="в одну из дверей справа: правую"/>
-				<Option Destination="1569" Text="левую"/>
+				<Option Destination="1926" Text="Если хотите попробовать это сделать">
+					<Text>Если же нет, то вы можете уйти через одну из четырех дверей:</Text>
+				</Option>
+				<Option Destination="1524" Text="В дверь рядом с люком"/>
+				<Option Destination="1375" Text="В дверь напротив люка">
+					<Text>В одну из дверей справа:</Text>
+				</Option>
+				<Option Destination="1457" Text="Правую"/>
+				<Option Destination="1569" Text="Левую"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>1702</Id>
-			<Text>Вы выходите в коридор.</Text>
+			<Text>Вы выходите в коридор. Теперь можете пойти:</Text>
 			<Options>
-				<Option Destination="1870" Text="Теперь можете пойти прямо"/>
-				<Option Destination="1632" Text="вправо"/>
-				<Option Destination="1602" Text="влево"/>
+				<Option Destination="1870" Text="Прямо"/>
+				<Option Destination="1632" Text="Вправо"/>
+				<Option Destination="1602" Text="Влево"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -16578,8 +16584,8 @@
 			<Text>Старуха обирает монеты, кланяется и услужливо открывает левую дверь, после чего исчезает.</Text>
 			<Options>
 				<Option Destination="1360" Text="Пойдете в эту дверь"/>
-				<Option Destination="1556" Text="в ту, что за вашей спиной"/>
-				<Option Destination="1076" Text="все-таки подойдете к окну"/>
+				<Option Destination="1556" Text="В ту, что за вашей спиной"/>
+				<Option Destination="1076" Text="Все-таки подойдете к окну"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
