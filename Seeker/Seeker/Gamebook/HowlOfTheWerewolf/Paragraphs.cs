@@ -19,19 +19,19 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
-                Option option = OptionsTemplateWithoutDestination(xmlOption);
+                Option option = OptionsTemplateWithoutLink(xmlOption);
 
                 if (ThisIsGameover(xmlOption))
                 {
-                    option.Destination = GetDestination(xmlOption);
+                    option.Link = GetLink(xmlOption);
                 }
-                else if (xmlOption.Attributes["Destination"].Value == "Back")
+                else if (xmlOption.Attributes["Link"].Value == "Back")
                 {
-                    option.Destination = Character.Protagonist.WayBack;
+                    option.Link = Character.Protagonist.WayBack;
                 }
                 else
                 {
-                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+                    option.Link = Xml.IntParse(xmlOption.Attributes["Link"]);
                 }
 
                 XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
