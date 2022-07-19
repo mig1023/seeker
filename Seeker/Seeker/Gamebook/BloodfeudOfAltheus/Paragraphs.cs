@@ -17,7 +17,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 paragraph.Options.Add(OptionParse(xmlOption));
 
             if (Xml.BoolParse(xmlParagraph["IntuitiveSolution"]))
-                paragraph.Options.Add(GetOption(destination: id + 20, text: "Интуитивное решение", onlyIf: "selectOnly"));
+                paragraph.Options.Add(GetOption(link: id + 20, text: "Интуитивное решение", onlyIf: "selectOnly"));
 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/*"))
                 paragraph.Actions.Add(ActionParse(xmlAction));
@@ -58,9 +58,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Defence = Xml.IntParse(xmlEnemy.Attributes["Defence"]),
         };
 
-        private static Option GetOption(int destination, string text, string onlyIf) => new Option
+        private static Option GetOption(int link, string text, string onlyIf) => new Option
         {
-            Destination = destination,
+            Link = link,
             Text = text,
             Availability = onlyIf,
         };
