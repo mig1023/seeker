@@ -48,26 +48,26 @@
 			<Id>0</Id>
 			<Text>В этой книге ты сыграешь роль орка - пятого колеса в колеснице фэнтези. Ты не достоин даже имени, и судьба твоя - умереть от руки героя.\n\nА может и нет. Тебе решать. Но помни... Ты НЕ герой.</Text>
 			<Options>
-				<Option Destination="102"/>
+				<Option Link="102"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>1</Id>
 			<Text>Утро. По крайней мере, тебе так кажется. Сложно сказать точнее, находясь в подземелье. Всё, что тебе известно: ты проснулся, скатал в рулон кипу старых кож, сожрал быстрый завтрак (действительно быстрый - ты ловил его целых пятнадцать минут) и спустился сюда.\n\nСюда. В комнатёнку десять-на-десять шагов, которую ты охраняешь день изо дня и где ты ждёшь героев, которые могут сюда забрести. Тут есть сундук. Возможно, в нём лежат сокровища. Где-то там, внизу, злой колдун Галрос Бессмертный, которому принадлежат эти подземелья.\n\nА тут ты. Сидишь весь день напролёт, стареешь, ожидая когда какой-нибудь герой придёт и убьёт тебя...</Text>
 			<Options>
-				<Option Destination="44" Text="Остаться здесь в ожидании героя, который убьёт тебя"/>
-				<Option Destination="31" Text="Пойти в комнату отдыха"/>
-				<Option Destination="84" Text="Открыть сундук"/>
-				<Option Destination="18" Text="Убраться подальше отсюда"/>
+				<Option Link="44" Text="Остаться здесь в ожидании героя, который убьёт тебя"/>
+				<Option Link="31" Text="Пойти в комнату отдыха"/>
+				<Option Link="84" Text="Открыть сундук"/>
+				<Option Link="18" Text="Убраться подальше отсюда"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>2</Id>
 			<Text>- Мортимер держит здесь рабыню, - говорит самый крупный из орков и добавляет с косой ухмылкой. - И мы собираемся с ней позабавиться.\n\nТы не уверен, что смог бы отговорить их от этой идеи.</Text>
 			<Options>
-				<Option Destination="68" Text="Сразиться с сородичами"/>
-				<Option Destination="3" Text="Открыть им дверь"/>
-				<Option Destination="47" Text="Просто уйти"/>
+				<Option Link="68" Text="Сразиться с сородичами"/>
+				<Option Link="3" Text="Открыть им дверь"/>
+				<Option Link="47" Text="Просто уйти"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -77,19 +77,19 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="28" Text="Убить её"/>
-				<Option Destination="67" Text="Проделать с ней другие грязные штучки">
+				<Option Link="28" Text="Убить её"/>
+				<Option Link="67" Text="Проделать с ней другие грязные штучки">
 					<Text>Погорить с ней, при условии, что...</Text>
 				</Option>
-				<Option Destination="98" Text="Поблизости нет орков"/>
-				<Option Destination="40" Text="Они торчат здесь"/>
+				<Option Link="98" Text="Поблизости нет орков"/>
+				<Option Link="40" Text="Они торчат здесь"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>4</Id>
 			<Text>В пылу битвы ты замечаешь, что другие орки решили присоединиться. Увидев тебя в бою, они спешно пришли к тебе на помощь, обрушившись на Мортимера и приключенцев. Битва была скоротечной и кровавой, но вскоре в живых остались только орки. Орки обернулись к тебе, и один из них спросил:\n\n- Кто ты таков, похожий на орка, но дерущийся, как демон? Скажи нам своё имя!</Text>
 			<Options>
-				<Option Destination="8"/>
+				<Option Link="8"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -100,7 +100,7 @@
 			</Texts>
 			<Triggers>Много орков помогают</Triggers>
 			<Options>
-				<Option Destination="91" Text="Дерись с Мортимером"/>
+				<Option Link="91" Text="Дерись с Мортимером"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -114,8 +114,8 @@
 			<Id>7</Id>
 			<Text>Когда ваша битва с Мортимером уже подходиит к неизбежному концу, внезапно в комнату входит большая группа. Это люди, одетые в броню и с оружием в руках - приключенцы! Мортимер немедленно воскликнул: - Помогите мне! Я почти добил этого ужасного орка!</Text>
 			<Options>
-				<Option Destination="90" Text="Попробовать блефовать"/>
-				<Option Destination="46" Text="Собираешься продолжить сражение"/>
+				<Option Link="90" Text="Попробовать блефовать"/>
+				<Option Link="46" Text="Собираешься продолжить сражение"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -123,7 +123,7 @@
 			<Text>Ты думал, что получить имя будет так просто? Что ж, может быть.</Text>
 			<Actions>
 				<Option>
-					<Option Destination="65" Text="Узнать, так ли это" Availability="!Обрёл имя">
+					<Option Link="65" Text="Узнать, так ли это" Availability="!Обрёл имя">
 						<Text>- Я обычный орк, такой же, как вы, - произносишь ты. - Любой из вас может это, если действительно захочет.\n\nЭто очень не по-орковски, поэтому вычти один из своей Оркишности.\n\nОрк, с которым ты разговариваешь, выглядит озадаченным, поэтому ты разъясняешь:\n\n- Я просто орк. Ты можешь быть таким же, как я.\n\nВ глазах орков вокруг тебя появляется огонь, а затем они внезапно склоняют свои головы перед тобой.\n\n- Да! Мы хотим быть такими же как ты! Веди нас! Мы убьём волшебника, заберём все сокровища себе!\n\nПроверь свою Смелость и сравни с Оркишностью:</Text>
 					</Option>
 				</Option>
@@ -138,8 +138,8 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="26" Text="Если проверка успешна, ты возглавляешь Великую Оркскую Революцию"/>
-				<Option Destination="75" Text="В случае провала"/>
+				<Option Link="26" Text="Если проверка успешна, ты возглавляешь Великую Оркскую Революцию"/>
+				<Option Link="75" Text="В случае провала"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -149,7 +149,7 @@
 				<RestoreHitpoints/>
 			</Modifications>
 			<Options>
-				<Option Destination="96"/>
+				<Option Link="96"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -162,11 +162,11 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Destination="68" Text="Если проверка провалилась, с орками придётся драться">
+				<Option Link="68" Text="Если проверка провалилась, с орками придётся драться">
 					<Text>Если проверка успешна и...</Text>
 				</Option>
-				<Option Destination="3" Text="Тебе хочется открыть дверь и узнать, чего они хотели"/>
-				<Option Destination="47" Text="Тебе просто хочется уйти"/>
+				<Option Link="3" Text="Тебе хочется открыть дверь и узнать, чего они хотели"/>
+				<Option Link="47" Text="Тебе просто хочется уйти"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -174,7 +174,7 @@
 			<Text>Четверым из вас вместе удалось выследить Мортимера в его лаборатории.\n\n- Что это значит? - спросил он, когда вы вошли, но всё стало очевидно, когда ты напал на него.</Text>
 			<Triggers>Несколько орков помогают</Triggers>
 			<Options>
-				<Option Destination="91" Text="Битва с Мортимером">
+				<Option Link="91" Text="Битва с Мортимером">
 					<Text>Поскольку с тобой есть другие орки, в бою ты можешь вычесть два из Атаки и Защиты Мортимера.</Text>
 				</Option>
 			</Options>
@@ -186,7 +186,7 @@
 				<Orcishness Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Destination="58"/>
+				<Option Link="58"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -207,7 +207,7 @@
 				<Orcishness Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="83" Text="Если ты победил тролля">
+				<Option Link="83" Text="Если ты победил тролля">
 					<Text>Если нет, ты погиб и Великая Окрская Революция вместе с тобой...</Text>
 				</Option>
 				<Gameover/>
@@ -218,7 +218,7 @@
 			<Text>В охраняемую тобой комнату входит человек. Ты узнаёшь в нём одного из учеников Галроса, Мортимера Нечихающего (нужно много трудиться, чтобы подняться до Бессмертного).\n\n- А, ты здесь, - говорит он задиристым тоном. - Идём со мной. У меня есть работка для тебя.</Text>
 			<Actions>
 				<Option>
-					<Option Destination="56" Text="Пойти за ним">
+					<Option Link="56" Text="Пойти за ним">
 						<Text>Попытаться убить его, сравнив свою Удаль с параметром 'Оркишность + 5':</Text>
 					</Option>
 				</Option>
@@ -229,10 +229,10 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Destination="38" Text="Повезло">
+				<Option Link="38" Text="Повезло">
 					<Text>В обратном случае в тебе ещё слишком много от орка, чтобы восстать против закона...</Text>
 				</Option>
-				<Option Destination="56"/>
+				<Option Link="56"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -249,7 +249,7 @@
 				</Get-Decrease>
 			</Actions>
 			<Options>
-				<Option Destination="97"/>
+				<Option Link="97"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -262,8 +262,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Destination="11" Text="Если успешно, ты смог убедить орков идти вместе с тобой биться с Мортимером"/>
-				<Option Destination="68" Text="В обратном случае орки нападают на тебя"/>
+				<Option Link="11" Text="Если успешно, ты смог убедить орков идти вместе с тобой биться с Мортимером"/>
+				<Option Link="68" Text="В обратном случае орки нападают на тебя"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -274,7 +274,7 @@
 			</Modifications>
 			<Triggers>Уже пил из бутыли</Triggers>
 			<Options>
-				<Option Destination="40"/>
+				<Option Link="40"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -284,9 +284,9 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="31" Text="Пойти в комнату отдыха и обдумать всё это"/>
-				<Option Destination="80" Text="Продолжить идти вперёд"/>
-				<Option Destination="44" Text="Сдаёшься и решаешь вернуться к своим обязанностям"/>
+				<Option Link="31" Text="Пойти в комнату отдыха и обдумать всё это"/>
+				<Option Link="80" Text="Продолжить идти вперёд"/>
+				<Option Link="44" Text="Сдаёшься и решаешь вернуться к своим обязанностям"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -300,10 +300,10 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Destination="80" Text="Если бросок успешный, твой разум победит орочью натуру, и вы попытаетесь договориться">
+				<Option Link="80" Text="Если бросок успешный, твой разум победит орочью натуру, и вы попытаетесь договориться">
 					<Text>Если же провалил, что ж...\n\nЧетверо приключенцев? От тебя не осталось ничего, кроме мокрого пятна на полу, формой напоминающего орка.</Text>
 				</Option>
-				<Option Destination="101" Text="Перейти к подсчёту результатов">
+				<Option Link="101" Text="Перейти к подсчёту результатов">
 					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
@@ -312,7 +312,7 @@
 			<Id>20</Id>
 			<Text>Бродя по коридорам, ты завернул за угол и... видимо, это не твой счастливый день! Опять же, когда у орков бывают счастливые дни? Ты только что столкнулся с учеником Галроса - Мортимером и бандой орков, которая идёт за ним.\n\n- Что ты делаешь, орк? Ты должен стоять на страже, наглый выскочка!\n\nОн поднимает руку, и вдруг она загорается, а его глаза начинают светиться.</Text>
 			<Options>
-				<Option Destination="91" Text="Битвы с Мортимером"/>
+				<Option Link="91" Text="Битвы с Мортимером"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -323,11 +323,11 @@
 			</Modifications>
 			<Triggers>Бетани</Triggers>
 			<Options>
-				<Option Destination="65" Text="Попробуй узнать своё имя" Availability="!Обрёл имя">
+				<Option Link="65" Text="Попробуй узнать своё имя" Availability="!Обрёл имя">
 					<Text>Затем возвращайся сюда и решай:</Text>
 				</Option>
-				<Option Destination="92" Text="Использовать зелье для спасения Бетани"/>
-				<Option Destination="64" Text="Позволишь Бетани умереть"/>
+				<Option Link="92" Text="Использовать зелье для спасения Бетани"/>
+				<Option Link="64" Text="Позволишь Бетани умереть"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -362,7 +362,7 @@
 				</Get>
 			</Actions>
 			<Options>
-				<Option Destination="86"/>
+				<Option Link="86"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -372,9 +372,9 @@
 				<Orcishness Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="36" Text="Поговорить с ними"/>
-				<Option Destination="68" Text="Атаковать их"/>
-				<Option Destination="77" Text="Открыть им дверь"/>
+				<Option Link="36" Text="Поговорить с ними"/>
+				<Option Link="68" Text="Атаковать их"/>
+				<Option Link="77" Text="Открыть им дверь"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -404,8 +404,8 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="94" Text="Если ты успешно прошёл проверку Мозгов"/>
-				<Option Destination="41" Text="Если ты провалился"/>
+				<Option Link="94" Text="Если ты успешно прошёл проверку Мозгов"/>
+				<Option Link="41" Text="Если ты провалился"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -415,7 +415,7 @@
 				<Orcishness Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="74"/>
+				<Option Link="74"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -423,7 +423,7 @@
 			<Text>- Да! - провозглашаешь ты. - Я поведу вас!\n\nВытянув клинок из ножен, ты поднимаешь его вверх.\n\n- К оружию, мои орки! К оружию!\n\nВычти единицу из своей Оркишности. Монологи это не по орковской части.\n\n- Да, ты наш повелитль! Да! - орки поднимают свои мечи над собой и кричат. Спустя пару мгновений шум стихает, и голос проносится над группой. - Эммм... что значит "к оружию"?\n\nВыдохнув, ты объясняешь свои слова по-оркски.\n\n- Мы будем драться! Вот что это значит!\n\nСнова раздались приветствия, но твои надежды на Великую Оркскую Революцию немного ослабли. Ну ладно, довольно сильно.</Text>
 			<Actions>
 				<Option>
-					<Option Destination="13" Text="Решаешь вести своих орков к Галросу">
+					<Option Link="13" Text="Решаешь вести своих орков к Галросу">
 						<Text>Хочешь взять небольшую передышку чтобы всё спланировать, сделай проверку Мозгов со сложностью 'Оркишность + 5':</Text>
 					</Option>
 				</Option>
@@ -437,16 +437,16 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>			
-				<Option Destination="77" Text="Успешно"/>
-				<Option Destination="13" Text="Нет"/>
+				<Option Link="77" Text="Успешно"/>
+				<Option Link="13" Text="Нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>27</Id>
 			<Text>С помощью приключенцев ты смог быстро одолеть Мортимера. Ты радуешься, и они приступают к грабежу тела Мортимера, потому что так всегда поступают искатели приключений.</Text>
 			<Options>
-				<Option Destination="30" Text="Присоединиться к приключенцам"/>
-				<Option Destination="59" Text="Оставить их"/>
+				<Option Link="30" Text="Присоединиться к приключенцам"/>
+				<Option Link="59" Text="Оставить их"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -456,15 +456,15 @@
 				<Orcishness Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="78" Text="Продолжить то, что хотел сделать"/>
-				<Option Destination="98" Text="Передумал и захотел поговорить с ней"/>
+				<Option Link="78" Text="Продолжить то, что хотел сделать"/>
+				<Option Link="98" Text="Передумал и захотел поговорить с ней"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>29</Id>
 			<Text>Падая замертво от ран, ты видишь, как Мортимер встаёт из-за стола.\n\n- Вы знаете, он был прав - кое-кто действительно жульничал. Я. - ухмыляясь, он пускает молнию в одного из орков. - Что ж, по-видимому, мне придётся прибраться в этом гадюшнике. Как жаль. Галрос предпочитает живых слуг мёртвым.\n\nТы умер безымянным орком. Может, в следующий раз тебе повезёт больше...</Text>
 			<Options>
-				<Option Destination="101" Text="Перейти к подсчёту результатов">
+				<Option Link="101" Text="Перейти к подсчёту результатов">
 					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
@@ -476,16 +476,16 @@
 				<WayBack Value="30"/>
 			</Modifications>
 			<Options>
-				<Option Destination="66" Text="Если есть" Availability="Обрёл имя">
+				<Option Link="66" Text="Если есть" Availability="Обрёл имя">
 					<Text>Иначе тебе необходимо перебороть свою Оркишнсть:</Text>
 				</Option>
-				<Option Destination="55" Text="Предпринять попытку противостоять своей природе">
+				<Option Link="55" Text="Предпринять попытку противостоять своей природе">
 					<Text>Если в итоге ты смог одолеть:</Text>
 				</Option>				
-				<Option Destination="66" Text="Если у тебя получилось">
+				<Option Link="66" Text="Если у тебя получилось">
 					<Text>Иначе приключенцы понимают, что ты орк, и убивают тебя...</Text>
 				</Option>
-				<Option Destination="101" Text="Переходи к Подсчёту результатов">
+				<Option Link="101" Text="Переходи к Подсчёту результатов">
 					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
@@ -494,9 +494,9 @@
 			<Id>31</Id>
 			<Text>Ты заваливаешься в комнату отдыха. Обычно тут играют в карты компания орков, но сегодня это не так: здесь один из учеников Галроса, Мортимер Нечихающий (стать Бессмертным не так-то просто).</Text>
 			<Options>
-				<Option Destination="73" Text="Напасть на орков"/>
-				<Option Destination="15" Text="Сесть и сыграть в карты"/>
-				<Option Destination="91" Text="Напасть на Мортимера"/>
+				<Option Link="73" Text="Напасть на орков"/>
+				<Option Link="15" Text="Сесть и сыграть в карты"/>
+				<Option Link="91" Text="Напасть на Мортимера"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -504,7 +504,7 @@
 			<Text>Сузив глаза, девушка говорит:\n\n- Конечно. Я сдамся, а твои орки просто изнасилуют меня и убьют. Нет уж, спасибо. Она отступает к своей кровати и пытается что-то достать.</Text>
 			<Actions>
 				<Option>
-					<Option Destination="25" Text="Атаковать её">
+					<Option Link="25" Text="Атаковать её">
 						<Text>Чтобы попытаться поговорить с ней, проверь свои Мозги и сравни с параметром 'Оркишность + 3':</Text>
 					</Option>
 				</Option>
@@ -518,14 +518,14 @@
 				<WayBack Value="32"/>
 			</Modifications>
 			<Options>		
-				<Option Destination="51" Text="Если успешно">
+				<Option Link="51" Text="Если успешно">
 					<Text>Если ты провалился, ты можешь сделать последнюю попытку победить свою Оркишность:</Text>
 				</Option>
-				<Option Destination="55" Text="Предпринять попытку противостоять своей природе">
+				<Option Link="55" Text="Предпринять попытку противостоять своей природе">
 					<Text>Если в итоге ты смог одолеть:</Text>
 				</Option>		
-				<Option Destination="51" Text="Если получилось"/>
-				<Option Destination="25" Text="Если не решишься пытаться"/>
+				<Option Link="51" Text="Если получилось"/>
+				<Option Link="25" Text="Если не решишься пытаться"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -563,7 +563,7 @@
 				<RestoreHitpoints/>
 			</Modifications>
 			<Options>
-				<Option Destination="Back"/>
+				<Option Link="Back"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -571,7 +571,7 @@
 			<Text>- Ха! - рявкаешь ты в лицо Мортимера, а затем плюёшь в него. - Магово отродье! Думаешь, я буду служить тебе? У меня есть своя гордость. Я...\n\n- Ты? ТЫ? - не дав договорить, прерывает тебя Мортимер. - Несчастный кусок оркской слизи думает, что может грубить мне?! Да я поджарю тебя на этом самом месте!</Text>
 			<Actions>
 				<Option>
-					<Option Destination="65" Text="Попробовать получить имя" Availability="!Обрёл имя">
+					<Option Link="65" Text="Попробовать получить имя" Availability="!Обрёл имя">
 						<Text>Затем возвращайся сюда и сделай проверку Удачи:</Text>
 					</Option>
 				</Option>
@@ -584,24 +584,24 @@
 				<WayBack Value="34"/>
 			</Modifications>
 			<Options>
-				<Option Destination="5" Text="Тебе повезло"/>
-				<Option Destination="99" Text="Не повезло"/>
+				<Option Link="5" Text="Тебе повезло"/>
+				<Option Link="99" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>35</Id>
 			<Text>- Я мог бы убить тебя прямо сейчас, - произносит Мортимер, - но мне не хочется. Ты удивил меня, орк. Поэтому я предлагаю тебе работу - в качестве моего нового телохранителя.</Text>
 			<Options>
-				<Option Destination="58"/>
+				<Option Link="58"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>36</Id>
 			<Text>Что ты им скажешь?</Text>
 			<Options>
-				<Option Destination="2" Text="«Что вам там нужно?»"/>
-				<Option Destination="10" Text="«Пошли вон, пока я не разозлился!»"/>
-				<Option Destination="16" Text="«Мы можем сделать кое-что получше - мы можем убить Мортимера!»"/>
+				<Option Link="2" Text="«Что вам там нужно?»"/>
+				<Option Link="10" Text="«Пошли вон, пока я не разозлился!»"/>
+				<Option Link="16" Text="«Мы можем сделать кое-что получше - мы можем убить Мортимера!»"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -611,10 +611,10 @@
 				<WayBack Value="37"/>
 			</Modifications>
 			<Options>
-				<Option Destination="55" Text="Чтобы предпринять последнюю попытку противостоять своей природе">
+				<Option Link="55" Text="Чтобы предпринять последнюю попытку противостоять своей природе">
 					<Text>Если в итоге ты смог одолеть:</Text>
 				</Option>
-				<Option Destination="95"/>
+				<Option Link="95"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -628,7 +628,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="7" Text="Когда здоровье одного из вас упадёт до единицы (а это может произойти сразу же, если вы уже сражались раньше!)"/>
+				<Option Link="7" Text="Когда здоровье одного из вас упадёт до единицы (а это может произойти сразу же, если вы уже сражались раньше!)"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -641,8 +641,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Destination="80" Text="Тебе повезло"/>
-				<Option Destination="45" Text="Иначе"/>
+				<Option Link="80" Text="Тебе повезло"/>
+				<Option Link="45" Text="Иначе"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -659,12 +659,12 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="85" Text="Если ты победил орков и здоровье девушки выше 0"/>
-				<Option Destination="21" Text="Если ты победил орков, но здоровье девушки равно 0">
+				<Option Link="85" Text="Если ты победил орков и здоровье девушки выше 0"/>
+				<Option Link="21" Text="Если ты победил орков, но здоровье девушки равно 0">
 					<Text>Если ты проиграл...</Text>
 				</Option>
-				<Option Destination="17" Text="В первый раз" Availability="!Уже пил из бутыли"/>
-				<Option Destination="0" Availability="Уже пил из бутыли"/>
+				<Option Link="17" Text="В первый раз" Availability="!Уже пил из бутыли"/>
+				<Option Link="0" Availability="Уже пил из бутыли"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -678,8 +678,8 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="12" Text="Ты победил"/>
-				<Option Destination="29" Text="Ты проиграл"/>
+				<Option Link="12" Text="Ты победил"/>
+				<Option Link="29" Text="Ты проиграл"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -687,7 +687,7 @@
 			<Text>Вы с Бетани пробираетесь через подземелье осторожно, чтобы не привлекать внимание. Уже почти у выхода вы наталкиваетесь на патруль, практически буквально.\n\n- Эй! Ты что это делаешь? - говорит орк, упавший на спину из-за того, что пытался не врезаться в тебя.</Text>
 			<Actions>
 				<Option>
-					<Option Destination="53" Text="Драться с ним">
+					<Option Link="53" Text="Драться с ним">
 						<Text>Чтобы постараться перехитрить его, проверь свою Оркишность и сравни с показателем '8':</Text>
 					</Option>
 				</Option>
@@ -700,11 +700,11 @@
 				<WayBack Value="42"/>
 			</Modifications>
 			<Options>
-				<Option Destination="62" Text="В случае неудачи">
+				<Option Link="62" Text="В случае неудачи">
 					<Text>Если преуспеешь, значит, в тебе слишком много от орка - и ты...</Text>
 				</Option>
-				<Option Destination="53" Text="Атакуешь его"/>
-				<Option Destination="55" Text="Хочешь предпринять последнюю отчаянную попытку преодолеть свою Оркишность"/>
+				<Option Link="53" Text="Атакуешь его"/>
+				<Option Link="55" Text="Хочешь предпринять последнюю отчаянную попытку преодолеть свою Оркишность"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -729,10 +729,10 @@
 					</After>
 				</Get>
 				<Option>
-					<Option Destination="25" Text="Напасть на неё"/>
+					<Option Link="25" Text="Напасть на неё"/>
 				</Option>
 				<Option>
-					<Option Destination="32" Text="Предложить ей сдаться">
+					<Option Link="32" Text="Предложить ей сдаться">
 						<Text>Чтобы сказать ей, что не причинишь ей вреда, сделай проверку Оркишность со сложностью 10:</Text>
 					</Option>
 				</Option>
@@ -742,7 +742,7 @@
 				</Test>
 			</Actions>
 			<Options>			
-				<Option Destination="51" Text="Если проверка провалена">
+				<Option Link="51" Text="Если проверка провалена">
 					<Text>Если успешна, тебе придётся выбрать один из предыдущих вариантов.</Text>
 				</Option>
 			</Options>
@@ -760,8 +760,8 @@
 				<Orcishness Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="14" Text="Тебе повезло"/>
-				<Option Destination="88" Text="Не повезло"/>
+				<Option Link="14" Text="Тебе повезло"/>
+				<Option Link="88" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -769,7 +769,7 @@
 			<Text>Приключенцы догоняют тебя. Вскоре ты уже мертв. И ограблен, потому что именно так поступают приключенцы с теми, кого убивают. Например, с орками.\n\nТвоя история подошла к концу. Липкая история.</Text>
 			<Triggers>Гибель, Ограблен</Triggers>
 			<Options>
-				<Option Destination="101" Text="Переходи к Подсчёту результата"/>
+				<Option Link="101" Text="Переходи к Подсчёту результата"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -782,8 +782,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Destination="4" Text="Тебе повезло"/>
-				<Option Destination="60" Text="Не повезло"/>
+				<Option Link="4" Text="Тебе повезло"/>
+				<Option Link="60" Text="Не повезло"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -796,8 +796,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Destination="80" Text="Тебе везёт"/>
-				<Option Destination="20" Text="Не везёт"/>
+				<Option Link="80" Text="Тебе везёт"/>
+				<Option Link="20" Text="Не везёт"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -814,8 +814,8 @@
 				<Orcishness Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Destination="95" Text="Если успешно"/>
-				<Option Destination="37" Text="В ином случае"/>
+				<Option Link="95" Text="Если успешно"/>
+				<Option Link="37" Text="В ином случае"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -823,7 +823,7 @@
 			<Text>Туннель круто изгибается вверх. К счастью, вскоре появляются ступеньки, благодаря которым карабкаться становится легче. Кажется, уже больше получаса ты поднимаешься по туннелю, на каждом шагу ожидая атаки Галроса, но в итоге ты всё-таки видишь впереди свет.\n\nКогда ты вышел из туннеля, то обнаружил на небе полную луну. Спасибо Богам за это, ведь яркое палящее солнце так жестоко к оркским глазам. Остальные орки сначала озираются по сторонам, а потом начинают радоваться.\n\n- Мы свободны! Теперь мы свободны! Больше не служить Галросу!\n\nПоздравляем, ты успешно сбежал!</Text>
 			<Triggers>Выбрался из подземелья</Triggers>
 			<Options>
-				<Option Destination="100"/>
+				<Option Link="100"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -831,7 +831,7 @@
 			<Text>На пути отсюда ты встречаешь немало других орков, но никто из них не останавливает тебя. Да и с чего бы? Ты такой же орк, как и они. Ты совсем не примечателен, даже для простого орка.\n\nСпустя около часа твоего путешествия по подземелью Галроса, ты, наконец, выходишь из него. Снаружи день, и яркий солнечный свет ослепляет твои глаза, но это тебя совсем не беспокоит. Ты отправляешься в большой мир и теперь волен выбирать свой путь как свободный орк.\n\nЗдесь твоя история оканчивается.</Text>
 			<Triggers>Выбрался из подземелья, Кузнец своей судьбы</Triggers>
 			<Options>
-				<Option Destination="101" Text="Переходи к Подсчёту результата"/>
+				<Option Link="101" Text="Переходи к Подсчёту результата"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -858,14 +858,14 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="86"/>
+				<Option Link="86"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>52</Id>
 			<Text>- Замётано, - произносит Мортимер в ответ на твоё согласие. - А теперь у меня для тебя есть задание. Иди за мной.\n\nТы следуешь за Мортимером.</Text>
 			<Options>
-				<Option Destination="56"/>
+				<Option Link="56"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -882,10 +882,10 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="89" Text="Если победишь его">
+				<Option Link="89" Text="Если победишь его">
 					<Text>Если он победит тебя, ты мертвец...</Text>
 				</Option>
-				<Option Destination="101" Text="Переходи к Подсчету результата">
+				<Option Link="101" Text="Переходи к Подсчету результата">
 					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
@@ -901,8 +901,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Destination="66" Text="Если удалось"/>
-				<Option Destination="96" Text="Не получилось"/>
+				<Option Link="66" Text="Если удалось"/>
+				<Option Link="96" Text="Не получилось"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -917,17 +917,17 @@
 				</OvercomeOrcishness>
 			</Actions>
 			<Options>			
-				<Option Destination="33" Text="Ты одолел свою натуру"/>
-				<Option Destination="69" Text="Ты остался рабом своей Оркской природы"/>
+				<Option Link="33" Text="Ты одолел свою натуру"/>
+				<Option Link="69" Text="Ты остался рабом своей Оркской природы"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>56</Id>
 			<Text>Со смешанными чувствами ты следуешь за Мортимером в его аппартаменты. С одной стороны, это явное повышение в иерархии орков. С другой, твоё "повышение" делает тебя прислужником прислужника. И зачем ты родился орком? Неужели это твоя судьба - прожить всю свою жизнь, прислуживая какому-то тёмному властелину или ещё кому-то? Эта череда мыслей была прервана, когда Мортимер обратился к тебе снова:\n\n- Итак, мы на месте.\n\nОглядевшись, ты понимаешь, что пока ты предавался тяжким раздумьям, он привёл тебя в свои личные покои - комнату глубоко в подземелье.\n\nЕсли сравнивать с жилищами орков, это место можно назвать настоящим дворцом, с настоящей кроватью, шелковыми подушками, креслами со спинками, письменным столом...\n\nПосле, махнув рукой в сторону двери, он продолжил:\n\n- У меня есть важные дела кое-где ещё. Мне нужно, чтобы ты охранял мои драгоценности, пока меня нет. Ты будешь охранять эту дверь. Тебе нельзя входить и позволять входить кому-то ещё до моего возвращения.\n\nДаже не спросив, понял ли ты его инструкции, он просто уходит. Когда входная дверь в покои закрывается, тебя берёт злость из-за того, как он тобой манипулирует.</Text>
 			<Options>
-				<Option Destination="23" Text="Остаться здесь и сторожить дверь, как хороший орк"/>
-				<Option Destination="3" Text="Заглянуть в комнату, которую охраняешь"/>
-				<Option Destination="47" Text="Просто уйти"/>
+				<Option Link="23" Text="Остаться здесь и сторожить дверь, как хороший орк"/>
+				<Option Link="3" Text="Заглянуть в комнату, которую охраняешь"/>
+				<Option Link="47" Text="Просто уйти"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -944,10 +944,10 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="76" Text="Если ты победил тролля">
+				<Option Link="76" Text="Если ты победил тролля">
 					<Text>В противном случае ты - мертвец...</Text>
 				</Option>
-				<Option Destination="101" Text="Перейди к Подсчету результата">
+				<Option Link="101" Text="Перейди к Подсчету результата">
 					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
@@ -956,9 +956,9 @@
 			<Id>58</Id>
 			<Text>Ты смог удивить Мортимера, и он предлагает тебе работу своим телохранителем.</Text>
 			<Options>
-				<Option Destination="52" Text="Принять предложение Мортимера"/>
-				<Option Destination="87" Text="Подсказать Мортимеру, куда засунуть своё предложение"/>
-				<Option Destination="38" Text="Попытаться убить его"/>
+				<Option Link="52" Text="Принять предложение Мортимера"/>
+				<Option Link="87" Text="Подсказать Мортимеру, куда засунуть своё предложение"/>
+				<Option Link="38" Text="Попытаться убить его"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -971,24 +971,24 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Destination="80" Text="Если тебе повезло"/>
-				<Option Destination="70" Text="В ином случае"/>
+				<Option Link="80" Text="Если тебе повезло"/>
+				<Option Link="70" Text="В ином случае"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>60</Id>
 			<Text>Орки вламываются внутрь и атакуют приключенцев. Однако Мортимер не упускает шанса швырнуть в тебя молнией.</Text>
 			<Options>
-				<Option Destination="99"/>
+				<Option Link="99"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>61</Id>
 			<Text>Ты подумал, что следовало бы разоблачить Мортимера. Это могло бы стать ему хорошей наукой за то, что он обманывал орков. Однако в этом не было ничего нового - злые маги всегда дурят орков. Пожалуй, кто-то должен это исправить...\n\nТы не заметил, как твои ноги привели тебя обратно в твою комнату десять-на-десять с сундуком.</Text>
 			<Options>
-				<Option Destination="14" Text="Присесть и немного поразмышлять"/>
-				<Option Destination="84" Text="Попробовать открыть тот сундук"/>
-				<Option Destination="18" Text="Уйти"/>
+				<Option Link="14" Text="Присесть и немного поразмышлять"/>
+				<Option Link="84" Text="Попробовать открыть тот сундук"/>
+				<Option Link="18" Text="Уйти"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1002,16 +1002,16 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Destination="82" Text="Если преуспеешь"/>
-				<Option Destination="53" Text="В противном случае орк тебе не поверит"/>
+				<Option Link="82" Text="Если преуспеешь"/>
+				<Option Link="53" Text="В противном случае орк тебе не поверит"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>63</Id>
 			<Text>За время сражения орки сплотились вокруг тебя, и ты понимаешь, что проигравшие заплатили по счетам без видимых возражений. Один из орков подошёл к тебе.\n\n- Это... Это было самое великое зрелище, которое я только видел! Ты должен вести нас за собой! Скажи нам... как тебя зовут?</Text>
 			<Options>
-				<Option Destination="8" Text="Назвать своё имя"/>
-				<Option Destination="81" Text="Выбраться отсюда, пока никто пострашнее не понял, что ты убил Мортимера"/>
+				<Option Link="8" Text="Назвать своё имя"/>
+				<Option Link="81" Text="Выбраться отсюда, пока никто пострашнее не понял, что ты убил Мортимера"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1019,8 +1019,8 @@
 			<Text>Она просила тебя сохранить зелье. И ты сделал это. Аккуратно положив тело Бетани, ты понимаешь, что страшно зол. Проклятый Галрос! Если бы не он, ничего этого не случилось бы! Часть тебя хочет убить его, другая - просто выбраться отсюда...</Text>
 			<Triggers>Девушка погибла</Triggers>
 			<Options>
-				<Option Destination="50" Text="Попытаться выбраться из подземелья"/>
-				<Option Destination="20" Text="Попытаться найти Галроса"/>
+				<Option Link="50" Text="Попытаться выбраться из подземелья"/>
+				<Option Link="20" Text="Попытаться найти Галроса"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1028,7 +1028,7 @@
 			<Text>Поздравляем! Если ты читаешь это, значит, у тебя есть шанс получить собственное имя! Если твоя Оркишность уменьшится до нуля в любом месте игры, перейди по соответствующей опции, которая появится и выполни инструкции того параграфа.</Text>
 			<Triggers>Имя, Обрёл имя</Triggers>
 			<Options>
-				<Option Destination="Back"/>
+				<Option Link="Back"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1036,7 +1036,7 @@
 			<Text>Ты представляешься группе, они хлопают тебя по спине, делятся своей добычей, и вы впятером углубляетесь в подземелье.\n\nЧто ж, у тебя получилось. Теперь ты герой, но это книга, В Которой Ты Не Герой...</Text>
 			<Triggers>Приключенец</Triggers>
 			<Options>
-				<Option Destination="101" Text="Переходи к Подсчёту результата"/>
+				<Option Link="101" Text="Переходи к Подсчёту результата"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1046,7 +1046,7 @@
 				<Orcishness Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="28"/>
+				<Option Link="28"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1063,12 +1063,12 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="101" Text="Переходи к Подсчёту результата">
+				<Option Link="101" Text="Переходи к Подсчёту результата">
 					<Modification Name="Trigger" Value="Гибель"/>
 					<Text>Если ты победил их, то ты можешь:</Text>
 				</Option>
-				<Option Destination="3" Text="Посмотреть, что есть в комнате охраны"/>
-				<Option Destination="47" Text="Уйти"/>
+				<Option Link="3" Text="Посмотреть, что есть в комнате охраны"/>
+				<Option Link="47" Text="Уйти"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1076,7 +1076,7 @@
 			<Text>Утратив Удаль, ты становишься рабом своей Оркской природы. Ещё многое могло бы случиться после этого, но для тебя это конец истории.</Text>
 			<Triggers>Раб своей природы</Triggers>
 			<Options>
-				<Option Destination="101" Text="Перейди к Подсчету результата"/>
+				<Option Link="101" Text="Перейди к Подсчету результата"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1084,7 +1084,7 @@
 			<Text>К сожалению, в поисках выхода из подземелья ты заблудился. Попытавшись вернуться по своим следам, ты снова встретил приключенцев. Ты, конечно же, попытался убедить их в том, что ты друг, но они не отличат одного орка от другого, поэтому не поверили и убили тебя, а затем ограбили труп.\n\nТы мертв и обобран...</Text>
 			<Triggers>Гибель, Ограблен</Triggers>
 			<Options>
-				<Option Destination="101" Text="Переходи к Подсчёту результата"/>
+				<Option Link="101" Text="Переходи к Подсчёту результата"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1092,7 +1092,7 @@
 			<Text>Ты - один орк. Они - четверо приключенцев. Ты едва успел пожалеть о своём выборе прежде, чем погибнуть, а к тому времени, как твой дух начал сокрушаться в полной мере, они уже обобрали твоё тело.\n\nТы мёртв...</Text>
 			<Triggers>Гибель, Ограблен</Triggers>
 			<Options>
-				<Option Destination="101" Text="Перейди к Оценке результата"/>
+				<Option Link="101" Text="Перейди к Оценке результата"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1102,7 +1102,7 @@
 				<Orcishness Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="95"/>
+				<Option Link="95"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1117,7 +1117,7 @@
 					</After>
 				</Test>
 				<Option>
-					<Option Destination="31" Text="Вернись обратно и выбери другой вариант">
+					<Option Link="31" Text="Вернись обратно и выбери другой вариант">
 						<Text>В случае провала ты атакуешь:</Text>
 					</Option>
 				</Option>
@@ -1128,10 +1128,10 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="12" Text="Если ты победил этих орков">
+				<Option Link="12" Text="Если ты победил этих орков">
 					<Text>В противном случае - ты безымянный труп. Стоит начать с самого начала... желаем удачи в следующий раз...</Text>
 				</Option>
-				<Option Destination="101" Text="Переходи к Подсчёту результата">
+				<Option Link="101" Text="Переходи к Подсчёту результата">
 					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
@@ -1150,10 +1150,10 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="93" Text="Если ты победил тролля, то сразись с Галросом">
+				<Option Link="93" Text="Если ты победил тролля, то сразись с Галросом">
 					<Text>Если тролль побеждает, ты погиб - и Великая Оркская Революция вместе с тобой...</Text>
 				</Option>
-				<Option Destination="101" Text="Перейди к Подсчету результатов">
+				<Option Link="101" Text="Перейди к Подсчету результатов">
 					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>		
 			</Options>
@@ -1165,10 +1165,10 @@
 				<WayBack Value="75"/>
 			</Modifications>
 			<Options>
-				<Option Destination="55" Text="Сделай последнюю попытку победить свою природу">
+				<Option Link="55" Text="Сделай последнюю попытку победить свою природу">
 					<Text>Если в итоге ты смог одолеть:</Text>
 				</Option>
-				<Option Destination="26"/>
+				<Option Link="26"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1176,7 +1176,7 @@
 			<Text>Как только с зомби-троллем было покончено, вы с девушкой направились к потайному тоннелю Галроса.\n\nОн круто поднимается вверх, вскоре превращаясь в лестницу, и выводит вас на поверхность - под звёздное небо и полную луну. Внезапно девушка обнимает и целует тебя.\n\n- Как тебя зовут? - спрашивает она.\n\nЕсли у тебя есть имя, ты говоришь его ей. Если имени нет, а твоя Оркишность равняется нулю или ниже, ты можешь сейчас взять себе имя.\n\nНезависимо от того, есть ли у тебя имя, твоё путешествие подошло к концу...</Text>
 			<Triggers>Обрёл имя, Поцелуй, Выбрался из подземелья, Вместе с ней</Triggers>
 			<Options>
-				<Option Destination="101" Text="Перейди к Подсчету результата" />
+				<Option Link="101" Text="Перейди к Подсчету результата" />
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1186,17 +1186,17 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="22" Text="Поискать что-нибудь полезное в сундуке, который ты охранял"/>
-				<Option Destination="43" Text="Искать покои Мортимера"/>
-				<Option Destination="86" Text="Иди вперед, чтобы сразиться с троллем"/>
+				<Option Link="22" Text="Поискать что-нибудь полезное в сундуке, который ты охранял"/>
+				<Option Link="43" Text="Искать покои Мортимера"/>
+				<Option Link="86" Text="Иди вперед, чтобы сразиться с троллем"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>78</Id>
 			<Text>И тут в комнатёнку вламывается группа из четырёх приключенцев. Заметив твои намерения напасть на рабыню, они бросаются в атаку с воплями "Руки прочь от дамы!"</Text>
 			<Options>
-				<Option Destination="54" Text="Попытаться обмануть приключенцев, объяснив, что они неправильно поняли происходящее"/>
-				<Option Destination="19" Text="Сразиться с приключенцами"/>
+				<Option Link="54" Text="Попытаться обмануть приключенцев, объяснив, что они неправильно поняли происходящее"/>
+				<Option Link="19" Text="Сразиться с приключенцами"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1204,7 +1204,7 @@
 			<Text>Ты кричишь так, как может кричать только орк, встретившийся лицом к лицу с четырьмя приключенцами. Мгновение спустя прибегает ученик Галроса Мортимер, мечущий руками молнии, вместе с ним другие орки.\n\nВместе вы быстро справляетесь с приключенцами. Стряхивая пыль с рук, Мортимер смотрит на тебя.\n\n- Похоже, ты из ответственных орков. У меня есть для тебя работенка, пошли.</Text>
 			<Actions>
 				<Option>
-					<Option Destination="56" Text="Пойти за ним">
+					<Option Link="56" Text="Пойти за ним">
 						<Text>Чтобы убить его, проверь свою Удаль и сравни с показателем 'Оркишность + 5':</Text>
 					</Option>
 				</Option>
@@ -1215,17 +1215,17 @@
 				</Test>
 			</Actions>
 			<Options>	
-				<Option Destination="38" Text="Если преуспеешь"/>
-				<Option Destination="56" Text="Если провалишься, значит, в тебе всё ещё слишком много от орка, чтобы взбунтоваться против порядка"/>
+				<Option Link="38" Text="Если преуспеешь"/>
+				<Option Link="56" Text="Если провалишься, значит, в тебе всё ещё слишком много от орка, чтобы взбунтоваться против порядка"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>80</Id>
 			<Text>Поворачивая за угол, ты чуть не врезаешься в кого-то. Уже начинав обычное Оркишное приветствие (в переводе: "Прочь с дороги, шваль!"), ты понимаешь, что это не орк. Совсем не орк. Это молодая человеческая девушка, одетая, эм-м, в "одежду", если это можно так назвать, в которой Галрос любит видеть своих рабынь.</Text>
 			<Options>
-				<Option Destination="28" Text="Убить её"/>
-				<Option Destination="67" Text="Сделать с ней другие мерзости"/>
-				<Option Destination="98" Text="Поговорить с ней"/>
+				<Option Link="28" Text="Убить её"/>
+				<Option Link="67" Text="Сделать с ней другие мерзости"/>
+				<Option Link="98" Text="Поговорить с ней"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1245,8 +1245,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Destination="80" Text="Если тебе повезло"/>
-				<Option Destination="6" Text="В ином случае"/>
+				<Option Link="80" Text="Если тебе повезло"/>
+				<Option Link="6" Text="В ином случае"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1254,15 +1254,15 @@
 			<Text>Несколько минут спустя вы с Бетани выходите из подземелья под звёздное небо с полной луной. Вы убегаете от подземелья подальше и через десять минут бега чувствуете, наконец, что уже безопасно для небольшой передышки.\n\n- Мы сделали это! - говорит она. - Поверить не могу! О, спасибо... мой герой!\n\nПоздравляем! Если ты еще не заработал имя, сейчас оно у тебя появляется. А теперь твоя сказка окончена... пока... но ты - герой!</Text>
 			<Triggers>Обрёл имя, Выбрался из подземелья, Вместе с ней</Triggers>
 			<Options>
-				<Option Destination="101" Text="Перейди к Подсчету результата"/>
+				<Option Link="101" Text="Перейди к Подсчету результата"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>83</Id>
 			<Text>Одержав победу над троллем, вы замечаете, что отсюда есть две двери.\n\n- Куда ведут эти двери? - спрашиваешь ты орков, и один отвечает тебе:\n\n- Одна ведёт к Галросу. А другая - секретный спасательный тоннель, ведущий из подземелья.</Text>
 			<Options>
-				<Option Destination="93" Text="Идти в комнату Галроса"/>
-				<Option Destination="49" Text="Пойти в секретный тоннель"/>
+				<Option Link="93" Text="Идти в комнату Галроса"/>
+				<Option Link="49" Text="Пойти в секретный тоннель"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1272,9 +1272,9 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="39" Text="Убежать"/>
-				<Option Destination="79" Text="Позвать на помощь"/>
-				<Option Destination="71" Text="Сразиться с приключенцами"/>
+				<Option Link="39" Text="Убежать"/>
+				<Option Link="79" Text="Позвать на помощь"/>
+				<Option Link="71" Text="Сразиться с приключенцами"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1285,7 +1285,7 @@
 			</Modifications>
 			<Triggers>Поцелуй</Triggers>
 			<Options>
-				<Option Destination="98"/>
+				<Option Link="98"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1311,10 +1311,10 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Destination="83" Text="Если ты победил тролля">
+				<Option Link="83" Text="Если ты победил тролля">
 					<Text>Если нет, ты погиб и Великая Оркская Революция вместе с тобой...</Text>
 				</Option>
-				<Option Destination="101" Text="Перейди к Подсчету результата">
+				<Option Link="101" Text="Перейди к Подсчету результата">
 					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
@@ -1335,17 +1335,17 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="34" Text="Если проверка успешна"/>
-				<Option Destination="52" Text="Если ты провалился, в тебе ещё слишком много от орка, чтобы отказаться от его предложения"/>
+				<Option Link="34" Text="Если проверка успешна"/>
+				<Option Link="52" Text="Если ты провалился, в тебе ещё слишком много от орка, чтобы отказаться от его предложения"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>88</Id>
 			<Text>Ну, вот ты и получил то, чего ожидал. Приключенцы. Четверо. Трое из них в доспехах и с оружием. Четвёртый гость должно быть маг, поскольку она без брони и оружия. По личному опыту... эх, кого мы пытаемся обмануть? Ты же орк. Если бы ты раньше встречал приключенцев, ты уже был бы мёртв, ну, или нежитью, в зависимости от их нанимателя. В любом случае, тебе совершенно ясно, что ты серьёзно влип.</Text>
 			<Options>
-				<Option Destination="39" Text="Убежать"/>
-				<Option Destination="79" Text="Позвать на помощь"/>
-				<Option Destination="71" Text="Сразиться с приключенцами"/>
+				<Option Link="39" Text="Убежать"/>
+				<Option Link="79" Text="Позвать на помощь"/>
+				<Option Link="71" Text="Сразиться с приключенцами"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1364,7 +1364,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="101" Text="Переходи к Подсчету результата"/>
+				<Option Link="101" Text="Переходи к Подсчету результата"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1386,8 +1386,8 @@
 				</Test>
 			</Actions>
 			<Options>
-				<Option Destination="46" Text="Если ты провалил проверку, приключенцы присоединяются к Мортимеру"/>
-				<Option Destination="27" Text="Если проверка успешна, приключенцы присоединяются к тебе"/>
+				<Option Link="46" Text="Если ты провалил проверку, приключенцы присоединяются к Мортимеру"/>
+				<Option Link="27" Text="Если проверка успешна, приключенцы присоединяются к тебе"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1405,8 +1405,8 @@
 				<Orcishness Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="63" Text="Если благодаря какому-то удивительному вмешательству судьбы ты победил в схватке, значит, Мортимер мёртв"/>
-				<Option Destination="35" Text="Если же, что более вероятно, твоё Здодровье опустилось до нуля, а Мортимер жив"/>
+				<Option Link="63" Text="Если благодаря какому-то удивительному вмешательству судьбы ты победил в схватке, значит, Мортимер мёртв"/>
+				<Option Link="35" Text="Если же, что более вероятно, твоё Здодровье опустилось до нуля, а Мортимер жив"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1417,8 +1417,8 @@
 			</Modifications>
 			<Triggers>Поцелуй, Зелье управление зомби</Triggers>
 			<Options>
-				<Option Destination="42" Text="Отправиться по длинному пути к основному выходу"/>
-				<Option Destination="57" Text="Выбрать короткий путь, охраняемый Зомби-троллем"/>
+				<Option Link="42" Text="Отправиться по длинному пути к основному выходу"/>
+				<Option Link="57" Text="Выбрать короткий путь, охраняемый Зомби-троллем"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1436,10 +1436,10 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="100" Text="Если ты смог победить Галроса и кто-то из других орков тоже жив">
+				<Option Link="100" Text="Если ты смог победить Галроса и кто-то из других орков тоже жив">
 					<Text>В ином случае...</Text>
 				</Option>
-				<Option Destination="101" Text="Переходи к подсчёту результата">
+				<Option Link="101" Text="Переходи к подсчёту результата">
 					<Modification Name="Trigger" Value="Гибель"/>
 				</Option>
 			</Options>
@@ -1448,16 +1448,16 @@
 			<Id>94</Id>
 			<Text>Игра была в самом разгаре, но вдруг ты заметил неуловимый жест левой руки Мортимера - и вот, в его руках на одну карту больше, чем было!</Text>
 			<Options>
-				<Option Destination="5" Text="Обвинить Мортимера в мошенничестве"/>
-				<Option Destination="61" Text="Покинуть игру и попытаться забыть о произошедшем"/>
+				<Option Link="5" Text="Обвинить Мортимера в мошенничестве"/>
+				<Option Link="61" Text="Покинуть игру и попытаться забыть о произошедшем"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>95</Id>
 			<Text>- Отсюда есть два пути, - говорит девушка. - Длинный путь, более безопасный... Или короткий и быстрый.\n\n- Почему короткий путь не так безопасен?\n\n- Он проходит по туннелю через покои Галроса... и надо проскочить мимо зомби-тролля, который их охраняет, - отвечает она.</Text>
 			<Options>
-				<Option Destination="57" Text="Выбрать короткий путь отсюда, мимо зомби-тролля"/>
-				<Option Destination="42" Text="Выбрать длинный путь"/>
+				<Option Link="57" Text="Выбрать короткий путь отсюда, мимо зомби-тролля"/>
+				<Option Link="42" Text="Выбрать длинный путь"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1475,11 +1475,11 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="9" Text="Если ты проиграл">
+				<Option Link="9" Text="Если ты проиграл">
 					<Text>Если ты победишь приключенцев и...</Text>
 				</Option>
-				<Option Destination="85" Text="Здоровье девушки не достигло нуля"/>
-				<Option Destination="21" Text="Здоровье девушки равно нулю"/>		
+				<Option Link="85" Text="Здоровье девушки не достигло нуля"/>
+				<Option Link="21" Text="Здоровье девушки равно нулю"/>		
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1495,10 +1495,10 @@
 				</CardGames>
 			</Actions>
 			<Options>
-				<Option Destination="14" Text="Уйти отсюда и вернуться в комнату, которую должен охранять"/>
-				<Option Destination="73" Text="Решить, что орки мухлюют, и начать драку"/>
-				<Option Destination="91" Text="Решить, что Мортимер мухлюет, и наброситься на него"/>
-				<Option Destination="24" Text="Продолжить играть"/>
+				<Option Link="14" Text="Уйти отсюда и вернуться в комнату, которую должен охранять"/>
+				<Option Link="73" Text="Решить, что орки мухлюют, и начать драку"/>
+				<Option Link="91" Text="Решить, что Мортимер мухлюет, и наброситься на него"/>
+				<Option Link="24" Text="Продолжить играть"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1509,11 +1509,11 @@
 				<Orcishness Value="-2"/>
 			</Modifications>
 			<Options>
-				<Option Destination="65" Text="Узнать, так ли это" Availability="!Обрёл имя">
+				<Option Link="65" Text="Узнать, так ли это" Availability="!Обрёл имя">
 					<Text>Затем возвращайся сюда и решай:</Text>
 				</Option>
-				<Option Destination="48" Text="Ответить ей, что ты орк"/>
-				<Option Destination="72" Text="Ответить ей, что ты приключенец под маскировкой"/>
+				<Option Link="48" Text="Ответить ей, что ты орк"/>
+				<Option Link="72" Text="Ответить ей, что ты приключенец под маскировкой"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1531,10 +1531,10 @@
 			</Modifications>
 			<Triggers>Кандидат в Властелины</Triggers>
 			<Options>
-				<Option Destination="55" Text="Нужно побороть свою Оркишность">
+				<Option Link="55" Text="Нужно побороть свою Оркишность">
 					<Text>Если ты преуспеешь там, тогда ты станешь свободным и сможешь выбирать. Но что бы ты ни выбрал, а эта история подошла к концу.</Text>
 				</Option>
-				<Option Destination="101" Text="Переходи к Подсчету результата"/>
+				<Option Link="101" Text="Переходи к Подсчету результата"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1585,7 +1585,7 @@
 				</Get-Decrease>
 			</Actions>
 			<Options>
-				<Option Destination="103"/>
+				<Option Link="103"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1600,7 +1600,7 @@
 				</OrcishnessInit>
 			</Actions>
 			<Options>
-				<Option Destination="1"/>
+				<Option Link="1"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
