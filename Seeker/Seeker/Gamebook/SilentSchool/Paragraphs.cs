@@ -21,14 +21,14 @@ namespace Seeker.Gamebook.SilentSchool
 
         public override Option OptionParse(XmlNode xmlOption)
         {
-            Option option = OptionsTemplateWithoutDestination(xmlOption);
+            Option option = OptionsTemplateWithoutLink(xmlOption);
 
-            if (xmlOption.Attributes["Destination"].Value == "Change")
-                option.Destination = Character.Protagonist.ChangeDecision;
-            else if (xmlOption.Attributes["Destination"].Value == "Back")
-                option.Destination = Character.Protagonist.WayBack;
+            if (xmlOption.Attributes["Link"].Value == "Change")
+                option.Link = Character.Protagonist.ChangeDecision;
+            else if (xmlOption.Attributes["Link"].Value == "Back")
+                option.Link = Character.Protagonist.WayBack;
             else
-                option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+                option.Link = Xml.IntParse(xmlOption.Attributes["Link"]);
 
             XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
 
