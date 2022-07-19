@@ -10,6 +10,9 @@ namespace Seeker.Gamebook.LastHokku
 
         public override string TextByOptions(string option)
         {
+            if (protagonist.Hokku == null)
+                return String.Empty;
+
             if (!Constants.GetParagraphsWithoutHokkuCreation.Contains(Game.Data.CurrentParagraphID) && !String.IsNullOrEmpty(option))
                 protagonist.Hokku.Add(option);
 
