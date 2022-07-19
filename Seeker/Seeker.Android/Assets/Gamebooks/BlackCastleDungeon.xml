@@ -16123,7 +16123,7 @@
 			<Text>Вылетев наружу из окна, вы прежде всего смотрите вниз под вами два этажа. Слева окон не видно, справа загораживает вид на замок его угловая стена.</Text>
 			<Options>
 				<Option Destination="1475" Text="Облетите ее и посмотрите, что за углом"/>
-				<Option Destination="1589" Text="взлетите выше"/>
+				<Option Destination="1589" Text="Взлетите выше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -16135,10 +16135,10 @@
 		</Paragraph>
 		<Paragraph>
 			<Id>1660</Id>
-			<Text>Вы влетаете в очень странную комнату. Она совершено пуста: голые стены, никакой мебели. Из нее ведут две двери.</Text>
+			<Text>Вы влетаете в очень странную комнату. Она совершено пуста: голые стены, никакой мебели. Из нее ведут две двери. Вы выйдете:</Text>
 			<Options>
-				<Option Destination="1360" Text="Вы выйдете в правую"/>
-				<Option Destination="1556" Text="в левую дверь"/>
+				<Option Destination="1360" Text="В правую"/>
+				<Option Destination="1556" Text="В левую дверь"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -16157,7 +16157,7 @@
 			<Text>Вы держитесь за левую стенку тоннеля. Неожиданно нащупываете угол поворота.</Text>
 			<Options>
 				<Option Destination="1474" Text="Свернете туда"/>
-				<Option Destination="1673" Text="будете продолжать идти прямо"/>
+				<Option Destination="1673" Text="Будете продолжать идти прямо"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -16190,8 +16190,10 @@
 			<Id>1666</Id>
 			<Text>Из крана вдруг вырывается желтый газ и направляется к вам.</Text>
 			<Options>
-				<Option Destination="1780" Text="Если у вас есть череп, то достаньте его из своего мешка"/>
-				<Option Destination="0" Text="Вы не выполнили обещание, данное королю…"/>
+				<Option Destination="1780" Text="Если у вас есть череп, то достаньте его из своего мешка">
+					<Text>Если же нет, то газ настигает вас и съедает. От вас остается одна одежда. Вы не выполнили обещание, данное королю…</Text>
+				</Option>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -16228,15 +16230,15 @@
 			<Text>Вы торопитесь дальше по коридору, пока не видите с правой стороны дверь.</Text>
 			<Options>
 				<Option Destination="1521" Text="Пойдете в нее"/>
-				<Option Destination="1115" Text="поторопитесь дальше"/>
+				<Option Destination="1115" Text="Поторопитесь дальше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>1670</Id>
-			<Text>когда проходите мимо коридора, звезда начинает светиться.</Text>
+			<Text>Когда проходите мимо коридора, звезда начинает светиться.</Text>
 			<Options>
 				<Option Destination="1049" Text="Пойдете туда"/>
-				<Option Destination="1424" Text="дальше"/>
+				<Option Destination="1424" Text="Пойдете дальше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
