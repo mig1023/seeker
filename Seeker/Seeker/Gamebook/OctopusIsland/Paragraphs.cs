@@ -32,14 +32,14 @@ namespace Seeker.Gamebook.OctopusIsland
 
         public override Option OptionParse(XmlNode xmlOption)
         {
-            Option option = OptionsTemplateWithoutDestination(xmlOption);
+            Option option = OptionsTemplateWithoutLink(xmlOption);
 
-            if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
-                option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+            if (int.TryParse(xmlOption.Attributes["Link"].Value, out int _))
+                option.Link = Xml.IntParse(xmlOption.Attributes["Link"]);
             else
             {
-                List<string> destinations = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
-                option.Destination = int.Parse(destinations[random.Next(destinations.Count())]);
+                List<string> link = xmlOption.Attributes["Link"].Value.Split(',').ToList<string>();
+                option.Link = int.Parse(link[random.Next(link.Count())]);
             }
 
             return option;
