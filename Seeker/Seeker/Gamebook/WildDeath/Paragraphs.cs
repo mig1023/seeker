@@ -15,20 +15,20 @@ namespace Seeker.Gamebook.WildDeath
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
-                Option option = OptionsTemplateWithoutDestination(xmlOption);
+                Option option = OptionsTemplateWithoutLink(xmlOption);
 
                 if (ThisIsGameover(xmlOption))
                 {
-                    option.Destination = GetDestination(xmlOption);
+                    option.Link = GetLink(xmlOption);
                 }
-                else if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
+                else if (int.TryParse(xmlOption.Attributes["Link"].Value, out int _))
                 {
-                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+                    option.Link = Xml.IntParse(xmlOption.Attributes["Link"]);
                 }
                 else
                 {
-                    List<string> destinations = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
-                    option.Destination = int.Parse(destinations[random.Next(destinations.Count())]);
+                    List<string> link = xmlOption.Attributes["Link"].Value.Split(',').ToList<string>();
+                    option.Link = int.Parse(link[random.Next(link.Count())]);
                 }
 
                 paragraph.Options.Add(option);
