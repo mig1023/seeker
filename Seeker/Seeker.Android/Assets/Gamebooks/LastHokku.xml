@@ -17,7 +17,7 @@
 	<Paragraphs>
 		<Paragraph>
 			<Id>0</Id>
-			<Text>Стихи скажут о себе сами...</Text>
+			<Text>Стихи скажут о себе сами…</Text>
 			<Options>
 				<Option Link="1"/>
 			</Options>
@@ -93,31 +93,31 @@
 		<Paragraph>
 			<Id>8</Id>
 			<Options>
-				<Option Link="9" Text="Ты создал это хокку..."/>
+				<Option Link="9" Text="Ты создал это хокку…"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>9</Id>
 			<Options>
-				<Option Link="10" Text="Прочти его ещё раз..."/>
+				<Option Link="10" Text="Прочти его ещё раз…"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>10</Id>
 			<Options>
-				<Option Link="11" Text="Обдумай..."/>
+				<Option Link="11" Text="Обдумай…"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>11</Id>
 			<Options>
-				<Option Link="12" Text="Проникнись..."/>
+				<Option Link="12" Text="Проникнись…"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
 			<Id>12</Id>
 			<Options>
-				<Option Link="1" Text="И создай ещё лучше..."/>
+				<Option Link="1" Text="И создай ещё лучше…"/>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
