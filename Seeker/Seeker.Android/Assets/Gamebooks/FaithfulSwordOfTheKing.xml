@@ -616,7 +616,7 @@
 					<Type>DiceWound</Type>
 					<Button>Стрельба</Button>
 					<After>
-						<Text>Если на нем выпало от 1 до 5, вычтите у себя соответствующее количество СИЛ, если 6, то...</Text>
+						<Text>Если на нем выпало от 1 до 5, вычтите у себя соответствующее количество СИЛ, если 6, то…</Text>
 					</After>
 				</Action>
 			</Actions>
@@ -2456,7 +2456,7 @@
 				<Option Link="521" Text="Он уменьшил вашу СИЛУ до 2 и вы хотите воззвать к Богу" Availability="!DivineIntervention">
 					<Modification Name="Trigger" Value="DivineIntervention"/>
 				</Option>
-				<Option Link="0" Text="Вы погибли: придётся начинать сначала..." Availability="DivineIntervention"/>
+				<Option Link="0" Text="Вы погибли: придётся начинать сначала…" Availability="DivineIntervention"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2678,7 +2678,7 @@
 				<Action>
 					<Type>Option</Type>
 					<Option Link="295" Text="Всадник в зелёном камзоле" Availability="GreenCamisole">
-						<Text>...если нет, — деритесь:</Text>
+						<Text>…если нет, — деритесь:</Text>
 					</Option>
 				</Action>
 				<Action>
@@ -2992,7 +2992,7 @@
 				<Action>
 					<Type>Option</Type>
 					<Option Link="464" Text="Назвать герцога по имени" Availability="DukeName">
-						<Text>...если нет, — деритесь. Однако перед боем противник быстро перекладывает шпагу в левую руку, и если вы не владеете аналогичным искусством фехтования, придется на время поединка вычитать у себя 1 ЛОВКОСТЬ.</Text>
+						<Text>…если нет, — деритесь. Однако перед боем противник быстро перекладывает шпагу в левую руку, и если вы не владеете аналогичным искусством фехтования, придется на время поединка вычитать у себя 1 ЛОВКОСТЬ.</Text>
 					</Option>
 				</Action>
 				<Action>
@@ -5729,7 +5729,7 @@
 			</Modifications>
 			<Options>
 				<Option Link="591" Text="Всадник в зелёном камзоле" Availability="GreenCamisole">
-					<Text>...если нет:</Text>
+					<Text>…если нет:</Text>
 				</Option>
 				<Option Link="188"/>
 			</Options>
