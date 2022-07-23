@@ -51,7 +51,7 @@ namespace Seeker.Prototypes
         }
 
         protected bool ThisIsGameover(XmlNode xmlOption) =>
-            xmlOption.Name == "GameOver";
+            xmlOption.Name == "Gameover";
 
         protected int GetLink(XmlNode xmlOption)
         {
