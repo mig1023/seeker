@@ -54,7 +54,6 @@
 				<Option Link="257" Text="Рассмеяться нездоровым смехом" Singleton="Сумасшествие"/>
 				<Option Link="1389" Text="У Вас есть записная книжка" Availability="Записная книжка"/>
 				<Option Link="1385" Text="У Вас есть бревиарий" Availability="Бревиарий"/>
-				<Option Link="48" Text="TEST"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
