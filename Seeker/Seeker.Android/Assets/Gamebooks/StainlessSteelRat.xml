@@ -1,7 +1,5 @@
 <Gamebook>
 	<Introduction>
-		<Title>Крыса из нержавеющей стали</Title>
-		<Copyright>Гарри Гаррисон</Copyright>
 		<Styles>
 			<Color Type="Background">#4a5b6c</Color>
 			<Color Type="Font">#c3c6c8</Color>
