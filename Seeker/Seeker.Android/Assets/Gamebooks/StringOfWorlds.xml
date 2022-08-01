@@ -1,7 +1,5 @@
 <Gamebook>
 	<Introduction>
-		<Title>Вереница миров или выводы из закона Мэрфи</Title>
-		<Copyright>Ольга Голотвина</Copyright>
 		<Constants>
 			<List Name="WithoutStaticsButtons">0, 1, 665</List>
 			<Dictionary Name="Skills" FromLine="2:8, 3:10, 4:12, 5:9, 6:11, 7:9, 8:10, 9:8, 10:9, 11:10, 12:11"/>
