@@ -1,7 +1,5 @@
 <Gamebook>
 	<Introduction>
-		<Title>Рандеву</Title>
-		<Copyright>Ал Торо</Copyright>
 		<Styles>
 			<Color Type="Main, Action, Option, StatusBar, Continue">#ffffff</Color>
 			<Color Type="ButtonFont, StatusFont, StatusBorder, Border">#000000</Color>
