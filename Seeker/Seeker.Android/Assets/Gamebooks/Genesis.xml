@@ -1,7 +1,5 @@
 <Gamebook>
 	<Introduction>
-		<Title>Генезис</Title>
-		<Copyright>Андрей Журавлёв</Copyright>
 		<Styles>
 			<Color Type="Background">#293342</Color>
 			<Color Type="Font">#b6cbd8</Color>
