@@ -1,7 +1,5 @@
 <Gamebook>
 	<Introduction>
-		<Title>Миссия на Урпан</Title>
-		<Copyright>Андрей Журавлёв</Copyright>
 		<Styles>
 			<Color Type="Main">#0f1d3c</Color>
 			<Color Type="Action, StatusBar">#0d1a36</Color>
