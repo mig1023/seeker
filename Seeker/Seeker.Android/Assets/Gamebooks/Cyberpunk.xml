@@ -1,7 +1,5 @@
 <Gamebook>
 	<Introduction>
-		<Title>Киберпанк: Тени Найт-Сити</Title>
-		<Copyright>Мария Ерошкина</Copyright>
 		<Styles>
 			<Color Type="AdditionalStatus">#094542</Color>
 			<Color Type="AdditionalFont">#ffffff</Color>
