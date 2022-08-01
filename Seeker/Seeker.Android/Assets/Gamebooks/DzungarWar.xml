@@ -1,7 +1,5 @@
 <Gamebook>
 	<Introduction>
-		<Title>Джунгарское нашествие</Title>
-		<Copyright>Владимир Сизиков</Copyright>
 		<Styles>
 			<Color Type="Background">#f1e6d1</Color>
 			<Color Type="ActionBox">#af8f69</Color>
