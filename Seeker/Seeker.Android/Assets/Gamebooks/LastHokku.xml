@@ -1,7 +1,5 @@
 <Gamebook>
 	<Introduction>
-		<Title>Последнее хокку</Title>
-		<Copyright>Юркий Слон</Copyright>
 		<Styles>
 			<Color Type="Main">#deb887</Color>
 			<Color Type="ButtonFont">#000000</Color>
