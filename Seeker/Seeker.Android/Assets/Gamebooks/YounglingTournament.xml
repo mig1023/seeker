@@ -1,7 +1,5 @@
 <Gamebook>
 	<Introduction>
-		<Title>Турнир юнлингов</Title>
-		<Copyright>Александр Андросенко</Copyright>
 		<Styles>
 			<Color Type="StatusBar">#e8d17e</Color>
 			<Color Type="StatusFont">#000000</Color>
