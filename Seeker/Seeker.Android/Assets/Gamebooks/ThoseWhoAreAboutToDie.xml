@@ -1,7 +1,5 @@
 <Gamebook>
 	<Introduction>
-		<Title>Идущие на смерть</Title>
-		<Copyright>Александр Слюта</Copyright>
 		<Styles>
 			<Color Type="Main, Action, Option">#fcdd76</Color>
 			<Color Type="ButtonFont, StatusFont">#000000</Color>
