@@ -27,7 +27,7 @@
 			<DisabledOption Value="Show"/>
 		</Settings>
 		<Buttons>
-			<Button Action="Test">Проверить</Button>
+			<Test>Проверить</Test>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
