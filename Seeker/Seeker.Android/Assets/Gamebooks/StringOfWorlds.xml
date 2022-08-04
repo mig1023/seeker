@@ -11,9 +11,9 @@
 			<DisabledOption Value="Hide"/>
 		</Settings>
 		<Buttons>
-			<Button Action="Fight">Сражаться</Button>
-			<Button Action="Luck">Проверить удачу</Button>
-			<Button Action="LuckRecovery">Восстановить 1 цифру удачи</Button>
+			<Fight>Сражаться</Fight>
+			<Luck>Проверить удачу</Luck>
+			<LuckRecovery>Восстановить 1 цифру удачи</LuckRecovery>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
