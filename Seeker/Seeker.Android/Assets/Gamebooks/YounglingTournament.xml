@@ -13,8 +13,8 @@
 		</Settings>
 		<Buttons>
 			<Button Action="SwordFight, MixedFightAttack">Сражаться</Button>
-			<Button Action="FireFight">Перестрелка</Button>
-			<Button Action="ForceTest">Пройти проверку</Button>
+			<FireFight>Перестрелка</FireFight>
+			<ForceTest>Пройти проверку</ForceTest>
 			<Button Action="SimpleDice, DiceWounds, EnemyDiceWounds">Кинуть кубик</Button>
 		</Buttons>
 	</Introduction>
