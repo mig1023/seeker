@@ -51,8 +51,8 @@
 			<DisabledOption Value="Hide"/>
 		</Settings>
 		<Buttons>
-			<Button Action="Fight">Сражаться</Button>
-			<Button Action="MentalTest">Проверка</Button>
+			<Fight>Сражаться</Fight>
+			<MentalTest>Проверка</MentalTest>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
