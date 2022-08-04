@@ -30,7 +30,7 @@
 			<DisabledOption Value="Show"/>
 		</Settings>
 		<Buttons>
-			<Button Action="Test">Пройти проверку</Button>
+			<Test>Пройти проверку</Test>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
