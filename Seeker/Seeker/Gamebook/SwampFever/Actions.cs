@@ -426,8 +426,6 @@ namespace Seeker.Gamebook.SwampFever
             }
         }
 
-
-
         public List<string> SellStigon()
         {
             List<string> accountingReport = new List<string>();
@@ -471,15 +469,29 @@ namespace Seeker.Gamebook.SwampFever
         {
             List<string> purchasesReport = new List<string>();
 
-            bool affordable = false;
+            bool affordable = false, anything = false;
             bool? prevAffordable = null;
 
+           
+            if (protagonist.Creds >= 1500)
+            {
+                purchasesReport.Add("GOOD|BOLD|ВАМ ДОСТУПНО ВСЁ!! :)\n");
+                anything = true;
+            }
+            else if (protagonist.Creds < 5)
+            {
+                purchasesReport.Add("BAD|BOLD|ВАМ НЕ ДОСТУПНО НИЧЕГО!! :(\n");
+                anything = true;
+            }
+                
             foreach (KeyValuePair<string, int> purchase in Constants.GetPurchases.OrderBy(x => x.Value))
             {
-                affordable = (purchase.Value <= protagonist.Creds);
+                affordable = (purchase.Value <= protagonist.Creds) && !anything;
                 string affLine = (affordable ? "GOOD|BOLD|" : String.Empty);
 
-                Services.PurchasesHeads(ref purchasesReport, affordable, prevAffordable);
+                if (!anything)
+                    Services.PurchasesHeads(ref purchasesReport, affordable, prevAffordable);
+
                 purchasesReport.Add(String.Format("{0}{1} — {2} кредов.", affLine, purchase.Key, purchase.Value));
 
                 prevAffordable = affordable;
