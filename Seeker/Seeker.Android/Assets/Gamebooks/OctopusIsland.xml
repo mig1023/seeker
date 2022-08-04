@@ -9,8 +9,8 @@
 			<DisabledOption Value="Hide"/>
 		</Settings>
 		<Buttons>
-			<Button Action="Dinner">Пообедать</Button>
-			<Button Action="Fight">Сражаться</Button>
+			<Dinner>Пообедать</Dinner>
+			<Fight>Сражаться</Fight>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
