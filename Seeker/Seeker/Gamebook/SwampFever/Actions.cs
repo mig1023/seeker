@@ -433,19 +433,20 @@ namespace Seeker.Gamebook.SwampFever
             List<string> accountingReport = new List<string>();
 
             int soldStigon = protagonist.Stigon;
-            int earnedCreds = 0;
+            int earnedCreds = 0, sellNum = 0;
 
             accountingReport.Add(String.Format("В вашем грузовом отсеке {0} кубометров стигона", protagonist.Stigon));
             accountingReport.Add(String.Format("Курс стигона на начало продажи: 1:{0}", protagonist.Rate)); 
 
             while (protagonist.Stigon > 0)
             {
+                sellNum += 1;
                 accountingReport.Add(String.Empty);
 
                 protagonist.Stigon -= 1;
                 earnedCreds += protagonist.Rate;
-                accountingReport.Add(String.Format("BOLD|Продажа кубометра стигона: +{0} кредов", protagonist.Rate));
-                accountingReport.Add(String.Format("Итого к зачислению: {0} кредов", earnedCreds));
+                accountingReport.Add(String.Format("BOLD|Продажа {0} кубометра стигона: +{1} кредов", sellNum, protagonist.Rate));
+                accountingReport.Add(String.Format("Подытог к зачислению: {0} кредов", earnedCreds));
 
                 if (protagonist.Rate > 5)
                 {
