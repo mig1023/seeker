@@ -15,19 +15,19 @@ namespace Seeker.Gamebook.GoingToLaughter
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
-                Option option = OptionsTemplateWithoutLink(xmlOption);
+                Option option = OptionsTemplateWithoutDestination(xmlOption);
 
                 if (ThisIsGameover(xmlOption))
                 {
-                    option.Link = GetLink(xmlOption);
+                    option.Destination = GetDestination(xmlOption);
                 }
-                else if (xmlOption.Attributes["Link"].Value == "Random")
+                else if (xmlOption.Attributes["Destination"].Value == "Random")
                 {
-                    option.Link = id + 1 + random.Next(6);
+                    option.Destination = id + 1 + random.Next(6);
                 }
                 else
                 {
-                    option.Link = Xml.IntParse(xmlOption.Attributes["Link"]);
+                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
                 }
                     
                 XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
