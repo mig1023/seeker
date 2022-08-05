@@ -60,7 +60,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         private static Option GetOption(int link, string text, string onlyIf) => new Option
         {
-            Link = link,
+            Destination = link,
             Text = text,
             Availability = onlyIf,
         };
