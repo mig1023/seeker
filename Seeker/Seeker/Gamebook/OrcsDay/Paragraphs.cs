@@ -14,19 +14,19 @@ namespace Seeker.Gamebook.OrcsDay
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
-                Option option = OptionsTemplateWithoutLink(xmlOption);
+                Option option = OptionsTemplateWithoutDestination(xmlOption);
 
                 if (ThisIsGameover(xmlOption))
                 {
-                    option.Link = GetLink(xmlOption);
+                    option.Destination = GetDestination(xmlOption);
                 }
-                else if (xmlOption.Attributes["Link"].Value == "Back")
+                else if (xmlOption.Attributes["Destination"].Value == "Back")
                 {
-                    option.Link = Character.Protagonist.WayBack;
+                    option.Destination = Character.Protagonist.WayBack;
                 }
                 else
                 {
-                    option.Link = Xml.IntParse(xmlOption.Attributes["Link"]);
+                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
                 }
 
                 XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
@@ -40,7 +40,7 @@ namespace Seeker.Gamebook.OrcsDay
             if (Game.Option.IsTriggered("Имя") && (Character.Protagonist.Orcishness <= 0) && (id != 33))
             {
                 Character.Protagonist.WayBack = id;
-                paragraph.Options.Insert(0, GetOption(link: 33, text: "Получить имя"));
+                paragraph.Options.Insert(0, GetOption(destination: 33, text: "Получить имя"));
             }
                 
             foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/*"))
@@ -88,9 +88,9 @@ namespace Seeker.Gamebook.OrcsDay
             return enemy;
         }
 
-        private static Option GetOption(int link, string text) => new Option
+        private static Option GetOption(int destination, string text) => new Option
         {
-            Link = link,
+            Destination = destination,
             Text = text,
         };
     }
