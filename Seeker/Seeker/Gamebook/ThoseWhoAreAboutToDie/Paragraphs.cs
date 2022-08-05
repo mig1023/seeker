@@ -15,14 +15,14 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
 
         public override Option OptionParse(XmlNode xmlOption)
         {
-            Option option = OptionsTemplateWithoutLink(xmlOption);
+            Option option = OptionsTemplateWithoutDestination(xmlOption);
 
-            if (int.TryParse(xmlOption.Attributes["Link"].Value, out int _))
-                option.Link = Xml.IntParse(xmlOption.Attributes["Link"]);
+            if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
+                option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
             else
             {
-                List<string> link = xmlOption.Attributes["Link"].Value.Split(',').ToList<string>();
-                option.Link = int.Parse(link[random.Next(link.Count())]);
+                List<string> link = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
+                option.Destination = int.Parse(link[random.Next(link.Count())]);
             }
 
             return option;
