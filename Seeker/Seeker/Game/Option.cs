@@ -5,7 +5,7 @@ namespace Seeker.Game
 {
     class Option
     {
-        public int Link { get; set; }
+        public int Destination { get; set; }
         public string Text { get; set; }
         public string Availability { get; set; }
         public string Singleton { get; set; }

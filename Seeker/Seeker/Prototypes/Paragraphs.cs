@@ -23,7 +23,7 @@ namespace Seeker.Prototypes
             {
                 Option option = new Option
                 {
-                    Link = GetLink(xmlOption),
+                    Destination = GetDestination(xmlOption),
                     Text = Xml.StringParse(xmlOption.Attributes["Text"]),
                     Aftertext = Xml.StringParse(xmlOption.Attributes["Aftertext"]),
                 };
@@ -53,12 +53,12 @@ namespace Seeker.Prototypes
         protected bool ThisIsGameover(XmlNode xmlOption) =>
             xmlOption.Name == "Gameover";
 
-        protected int GetLink(XmlNode xmlOption)
+        protected int GetDestination(XmlNode xmlOption)
         {
             if (ThisIsGameover(xmlOption))
                 return Data.Constants.GetStartParagraph();
             else
-                return Xml.IntParse(xmlOption.Attributes["Link"]);
+                return Xml.IntParse(xmlOption.Attributes["Destination"]);
         }
 
         public Abstract.IActions ActionTemplate(XmlNode xmlAction, Abstract.IActions actions)
@@ -118,7 +118,7 @@ namespace Seeker.Prototypes
             Images = Xml.ImagesParse(xmlParagraph["Images"]),
         };
 
-        public Option OptionsTemplateWithoutLink(XmlNode xmlOption) => new Option()
+        public Option OptionsTemplateWithoutDestination(XmlNode xmlOption) => new Option()
         {
             Text = Xml.StringParse(xmlOption.Attributes["Text"]),
             Availability = Xml.StringParse(xmlOption.Attributes["Availability"]),
@@ -130,9 +130,9 @@ namespace Seeker.Prototypes
             
         public Option OptionsTemplate(XmlNode xmlOption)
         {
-            Option option = OptionsTemplateWithoutLink(xmlOption);
+            Option option = OptionsTemplateWithoutDestination(xmlOption);
 
-            option.Link = GetLink(xmlOption);
+            option.Destination = GetDestination(xmlOption);
 
             return option;
         }

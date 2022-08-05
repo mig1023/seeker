@@ -359,10 +359,10 @@ namespace Seeker
         {
             Output.Buttons.EmptyOptionTextFuse(option);
 
-            gameOver = (option.Link == 0);
+            gameOver = (option.Destination == 0);
 
             EventHandler optionClick = (object sender, EventArgs e) =>
-                Paragraph(option.Link, optionName: option.Text, optionModification: option.Do);
+                Paragraph(option.Destination, optionName: option.Text, optionModification: option.Do);
 
             return Output.Buttons.Option(option, optionClick);
         }
