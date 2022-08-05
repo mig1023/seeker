@@ -15,20 +15,20 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
-                Option option = OptionsTemplateWithoutLink(xmlOption);
+                Option option = OptionsTemplateWithoutDestination(xmlOption);
 
                 if (ThisIsGameover(xmlOption))
                 {
-                    option.Link = GetLink(xmlOption);
+                    option.Destination = GetDestination(xmlOption);
                 }
-                else if (int.TryParse(xmlOption.Attributes["Link"].Value, out int _))
+                else if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
                 {
-                    option.Link = Xml.IntParse(xmlOption.Attributes["Link"]);
+                    option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
                 }
                 else
                 {
-                    List<string> link = xmlOption.Attributes["Link"].Value.Split(',').ToList<string>();
-                    option.Link = int.Parse(link[random.Next(link.Count())]);
+                    List<string> link = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
+                    option.Destination = int.Parse(link[random.Next(link.Count())]);
                 }
 
                 XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
