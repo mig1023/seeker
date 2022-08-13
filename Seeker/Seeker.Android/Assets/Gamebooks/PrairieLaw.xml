@@ -8,9 +8,9 @@
 			<Color Type="Option">#a04c4d</Color>
 		</Styles>
 		<Constants>
-			<Dictionary Name="Skills" FromLine="2:8, 3:10, 4:12, 5:9, 6:11, 7:9, 8:10, 9:8, 10:9, 11:10, 12:11"/>
-			<Dictionary Name="Strengths" FromLine="2:22, 3:20, 4:16, 5:18, 6:20, 7:20, 8:16, 9:24, 10:22, 11:18, 12:20"/>
-			<Dictionary Name="Charms" FromLine="2:8, 3:6, 4:5, 5:8, 6:6, 7:7, 8:7, 9:7, 10:6, 11:7, 12:5"/>
+			<Dictionary Name="Skills" FromLineByOrder=", 8, 10, 12, 9, 11, 9, 10, 8, 9, 10, 11"/>
+			<Dictionary Name="Strengths" FromLineByOrder=", 22, 20, 16, 18, 20, 20, 16, 24, 22, 18, 20"/>
+			<Dictionary Name="Charms" FromLineByOrder=", 8, 6, 5, 8, 6, 7, 7, 7, 6, 7, 5"/>
 			<Dictionary Name="LuckList" FromLine="1:①, 2:②, 3:③, 4:④, 5:⑤, 6:⑥, 11:❶, 12:❷, 13:❸, 14:❹, 15:❺, 16:❻"/>
 		</Constants>
 		<Settings>
