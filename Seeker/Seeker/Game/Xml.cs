@@ -174,7 +174,15 @@ namespace Seeker.Game
             {
                 Dictionary<string, string> items = new Dictionary<string, string>();
 
-                if (xmlNode.Attributes["FromLine"] != null)
+                if (xmlNode.Attributes["FromLineByOrder"] != null)
+                {
+                    List<string> lines = xmlNode.Attributes["FromLineByOrder"].InnerText.Split(',').Select(x => x.Trim()).ToList();
+
+                    for (int i = 1; i <= lines.Count; i++)
+                        if (!String.IsNullOrEmpty(lines[i - 1]))
+                            items.Add(i.ToString(), lines[i - 1]);
+                }
+                else if (xmlNode.Attributes["FromLine"] != null)
                 {
                     List<string> lines = xmlNode.Attributes["FromLine"].InnerText.Split(',').Select(x => x.Trim()).ToList();
                     items = lines.ToDictionary(x => ItemLineSplit(x), x => ItemLineSplit(x, second: true));
