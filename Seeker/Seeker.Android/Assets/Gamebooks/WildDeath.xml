@@ -1,5 +1,6 @@
 <Gamebook>
 	<Introduction>
+		<Title>Дикая смерть</Title>
 		<Styles>
 			<Color Type="Main">#86964f</Color>
 			<Color Type="Continue">#b6c095</Color>
