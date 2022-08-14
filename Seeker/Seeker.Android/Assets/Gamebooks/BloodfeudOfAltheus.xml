@@ -1,5 +1,6 @@
 <Gamebook>
 	<Introduction>
+		<Title>Месть Альтея</Title>
 		<Styles>
 			<Color Type="Main, Action">#ebd5b3</Color>
 			<Color Type="Option, Background">#f9f2e8</Color>
