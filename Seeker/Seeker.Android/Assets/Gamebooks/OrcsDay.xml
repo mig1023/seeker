@@ -1,5 +1,6 @@
 <Gamebook>
 	<Introduction>
+		<Title>День Орка</Title>
 		<Styles>
 			<Color Type="Main">#a4be84</Color>
 			<Color Type="Continue">#cad9b7</Color>
