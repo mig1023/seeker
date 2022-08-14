@@ -1,5 +1,6 @@
 <Gamebook>
 	<Introduction>
+		<Title>Генезис</Title>
 		<Styles>
 			<Color Type="Background">#293342</Color>
 			<Color Type="Font">#b6cbd8</Color>
