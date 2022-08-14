@@ -1,5 +1,6 @@
 <Gamebook>
 	<Introduction>
+		<Title>Киберпанк: Тени Найт-Сити</Title>
 		<Styles>
 			<Color Type="AdditionalStatus">#094542</Color>
 			<Color Type="AdditionalFont">#ffffff</Color>
