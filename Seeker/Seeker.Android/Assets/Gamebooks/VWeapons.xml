@@ -1,5 +1,6 @@
 <Gamebook>
 	<Introduction>
+		<Title>Оружие возмездия</Title>
 		<Styles>
 			<Color Type="Main, Action, Option, StatusBar, Continue">#ffffff</Color>
 			<Color Type="ButtonFont, StatusFont, StatusBorder, Border">#000000</Color>
