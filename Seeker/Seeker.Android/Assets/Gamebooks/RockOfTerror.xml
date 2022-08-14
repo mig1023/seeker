@@ -1,5 +1,6 @@
 <Gamebook>
 	<Introduction>
+		<Title>Скала ужаса</Title>
 		<Styles>
 			<Color Type="Background">#000000</Color>
 			<Color Type="Font">#ffffff</Color>
