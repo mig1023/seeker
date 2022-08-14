@@ -265,8 +265,7 @@
 			<Id>25</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="499" Text="Удачливы"/>
@@ -895,8 +894,7 @@
 			<Id>89</Id>
 			<Text>Враги приближаются, и вот уже нервы у первого не выдерживают: он стреляет.</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="5" Text="Удачлив"/>
@@ -980,8 +978,7 @@
 			<Id>98</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="170" Text="Удачлив"/>
@@ -1429,8 +1426,7 @@
 			<Id>145</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="60" Text="Если вы удачливы"/>
@@ -2211,8 +2207,7 @@
 			<Id>223</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="421" Text="Удачлив"/>
@@ -2249,8 +2244,7 @@
 			<Id>227</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="432" Text="Удачлив"/>
@@ -2520,8 +2514,7 @@
 			<Id>254</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="522" Text="Повезло"/>
@@ -2924,8 +2917,7 @@
 			<Id>294</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="371" Text="Удачливы"/>
@@ -3071,8 +3063,7 @@
 			<Id>308</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="277" Text="Удачливы"/>
@@ -3217,8 +3208,7 @@
 			<Id>325</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="537" Text="Удачливы"/>
@@ -3269,8 +3259,7 @@
 			<Id>330</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="234" Text="Удачливы"/>
@@ -3870,8 +3859,7 @@
 			<Id>388</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="632" Text="Удачливы"/>
@@ -3984,8 +3972,7 @@
 			<Id>399</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="634" Text="Удачливы"/>
@@ -4095,8 +4082,7 @@
 			<Id>410</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="342" Text="Удачливы"/>
@@ -4232,8 +4218,7 @@
 			<Id>423</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="281" Text="Удачливы"/>
@@ -4637,8 +4622,7 @@
 			<Id>463</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="647" Text="Удачливы"/>
@@ -4696,8 +4680,7 @@
 			<Id>469</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="648" Text="Удачливы"/>
@@ -4901,8 +4884,7 @@
 			<Id>492</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="108" Text="Удачливы"/>
@@ -4953,8 +4935,7 @@
 			<Id>497</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="85" Text="Удачливы"/>
@@ -5106,8 +5087,7 @@
 			<Id>514</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="383" Text="Повезло"/>
@@ -5572,8 +5552,7 @@
 			<Id>557</Id>
 			<Text>Вы забыли только об одном: вас ищут, и в городе оставаться небезопасно.</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="185" Text="Фортуна с вами"/>
@@ -5794,8 +5773,7 @@
 			<Id>580</Id>
 			<Text>Проверьте свою удачу:</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="297" Text="Повезло"/>
@@ -6156,8 +6134,7 @@
 			<Id>618</Id>
 			<Text>Вместе с Арбалетом забираетесь в пещерку и слышите, как стук копыт усиливается, кони проносятся мимо, и их ржание стихает вдали. Можно выбираться, но тут вы замечаете, что в пещере есть еще несколько живых существ, причем, скорее всего, это ее хозяева. На полу шевелятся растревоженные вашим появлением змеи, отдыхающие после ночной охоты. Одна из них уже обвилась вокруг копыта Арбалета и ползет вверх по ноге, а две готовятся напасть на вас.</Text>
 			<Actions>
-				<Luck>
-				</Luck>
+				<Luck/>
 			</Actions>
 			<Options>
 				<Option Destination="303" Text="Удачливы"/>
