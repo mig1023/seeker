@@ -1,5 +1,6 @@
 <Gamebook>
 	<Introduction>
+		<Title>Подземелья чёрного замка</Title>
 		<Styles>
 			<Color Type="StatusBar">#2a2a2a</Color>
 			<Color Type="Main">#151515</Color>
