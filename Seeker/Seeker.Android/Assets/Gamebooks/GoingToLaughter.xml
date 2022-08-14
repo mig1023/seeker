@@ -1,5 +1,6 @@
 <Gamebook>
 	<Introduction>
+		<Title>Идущий на смех</Title>
 		<Styles>
 			<Color Type="StatusBar">#2f0b0c</Color>
 			<Color Type="Main, Option">#441012</Color>
