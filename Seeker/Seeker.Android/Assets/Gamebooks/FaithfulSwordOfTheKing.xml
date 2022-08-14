@@ -1,5 +1,6 @@
 <Gamebook>
 	<Introduction>
+		<Title>Верная шпага короля</Title>
 		<Styles>
 			<Color Type="StatusBar">#870808</Color>
 			<Color Type="Main">#911</Color>
