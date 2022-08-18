@@ -2,10 +2,10 @@
 	<Introduction>
 		<Title>Рандеву</Title>
 		<Styles>
-			<Color Type="Main, Action, Option, StatusBar, Continue">#ffffff</Color>
-			<Color Type="ButtonFont, StatusFont, StatusBorder, Border">#000000</Color>
-			<Color Type="ActionBox">#efefef</Color>
-			<Color Type="System">#f4f4f4</Color>
+			<Color Type="Main, Action, Option, StatusBar, Continue">ffffff</Color>
+			<Color Type="ButtonFont, StatusFont, StatusBorder, Border">000000</Color>
+			<Color Type="ActionBox">efefef</Color>
+			<Color Type="System">f4f4f4</Color>
 		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
