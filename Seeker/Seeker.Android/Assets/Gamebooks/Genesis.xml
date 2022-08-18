@@ -2,15 +2,15 @@
 	<Introduction>
 		<Title>Генезис</Title>
 		<Styles>
-			<Color Type="Background">#293342</Color>
-			<Color Type="Font">#b6cbd8</Color>
-			<Color Type="StatusBar, System">#3c5363</Color>
-			<Color Type="ActionBox">#69707a</Color>
-			<Color Type="StatusFont">#b1b5ba</Color>
-			<Color Type="Main">#4c687c</Color>
-			<Color Type="Option">#6f8696</Color>
-			<Color Type="Action">#445d6f</Color>
-			<Color Type="Continue">#849fb3</Color>
+			<Color Type="Background">293342</Color>
+			<Color Type="Font">b6cbd8</Color>
+			<Color Type="StatusBar, System">3c5363</Color>
+			<Color Type="ActionBox">69707a</Color>
+			<Color Type="StatusFont">b1b5ba</Color>
+			<Color Type="Main">4c687c</Color>
+			<Color Type="Option">6f8696</Color>
+			<Color Type="Action">445d6f</Color>
+			<Color Type="Continue">849fb3</Color>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses">0, 201, 202, 203, 204, 205, 206, 207</List>
