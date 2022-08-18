@@ -2,12 +2,12 @@
 	<Introduction>
 		<Title>Крыса из нержавеющей стали</Title>
 		<Styles>
-			<Color Type="Background">#4a5b6c</Color>
-			<Color Type="Font">#c3c6c8</Color>
-			<Color Type="SystemFont">#ffffff</Color>
-			<Color Type="Main">#425161</Color>
-			<Color Type="Continue">#5c6b7a</Color>
-			<Color Type="System">#546270</Color>
+			<Color Type="Background">4a5b6c</Color>
+			<Color Type="Font">c3c6c8</Color>
+			<Color Type="SystemFont">ffffff</Color>
+			<Color Type="Main">425161</Color>
+			<Color Type="Continue">5c6b7a</Color>
+			<Color Type="System">546270</Color>
 		</Styles>
 		<Settings>
 			<DisabledOption Value="Hide"/>
