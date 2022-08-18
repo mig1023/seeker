@@ -2,11 +2,11 @@
 	<Introduction>
 		<Title>Идущий на смех</Title>
 		<Styles>
-			<Color Type="StatusBar">#2f0b0c</Color>
-			<Color Type="Main, Option">#441012</Color>
-			<Color Type="Continue">#814548</Color>
-			<Color Type="Action">#693f41</Color>
-			<Color Type="System">#f3f0f0</Color>
+			<Color Type="StatusBar">2f0b0c</Color>
+			<Color Type="Main, Option">441012</Color>
+			<Color Type="Continue">814548</Color>
+			<Color Type="Action">693f41</Color>
+			<Color Type="System">f3f0f0</Color>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses">0, 1393, 1394</List>
