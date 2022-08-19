@@ -35,8 +35,6 @@ namespace Seeker.Gamebook.OrcsDay
 
         public int StatBonuses { get; set; }
 
-        public int WayBack { get; set; }
-
         public override void Init()
         {
             base.Init();
