@@ -17,7 +17,6 @@ namespace Seeker.Gamebook.SilentSchool
         public int Grail { get; set; }
         public int ChangeDecision { get; set; }
         public int HarmSelfAlready { get; set; }
-        public int WayBack { get; set; }
 
         public override void Init()
         {

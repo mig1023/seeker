@@ -25,8 +25,8 @@ namespace Seeker.Gamebook.SilentSchool
 
             if (xmlOption.Attributes["Destination"].Value == "Change")
                 option.Destination = Character.Protagonist.ChangeDecision;
-            else if (xmlOption.Attributes["Destination"].Value == "Back")
-                option.Destination = Character.Protagonist.WayBack;
+            else if (ThisIsBack(xmlOption))
+                option.Destination = GetDestination(xmlOption, wayBack: Character.Protagonist.WayBack);
             else
                 option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
 
