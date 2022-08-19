@@ -10,6 +10,8 @@ namespace Seeker.Prototypes
 
         public bool IsProtagonist { get; set; }
 
+        public int WayBack { get; set; }
+
         public virtual bool ThisIsProtagonist() => IsProtagonist;
 
         public virtual void Init()

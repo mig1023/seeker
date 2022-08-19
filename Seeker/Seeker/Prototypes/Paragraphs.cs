@@ -53,10 +53,15 @@ namespace Seeker.Prototypes
         protected bool ThisIsGameover(XmlNode xmlOption) =>
             xmlOption.Name == "Gameover";
 
-        protected int GetDestination(XmlNode xmlOption)
+        protected bool ThisIsBack(XmlNode xmlOption) =>
+            xmlOption.Name == "Back";
+
+        protected int GetDestination(XmlNode xmlOption, int? wayBack = null)
         {
             if (ThisIsGameover(xmlOption))
                 return Data.Constants.GetStartParagraph();
+            else if (ThisIsBack(xmlOption))
+                return wayBack ?? 0;
             else
                 return Xml.IntParse(xmlOption.Attributes["Destination"]);
         }
