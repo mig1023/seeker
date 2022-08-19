@@ -583,7 +583,7 @@
 				<Life Value="2"/>
 			</Modifications>
 			<Options>
-				<Option Destination="Back"/>
+				<Back/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
