@@ -562,7 +562,7 @@
 				<RestoreHitpoints/>
 			</Modifications>
 			<Options>
-				<Option Destination="Back"/>
+				<Back/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1027,7 +1027,7 @@
 			<Text>Поздравляем! Если ты читаешь это, значит, у тебя есть шанс получить собственное имя! Если твоя Оркишность уменьшится до нуля в любом месте игры, перейди по соответствующей опции, которая появится и выполни инструкции того параграфа.</Text>
 			<Triggers>Имя, Обрёл имя</Triggers>
 			<Options>
-				<Option Destination="Back"/>
+				<Back/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
