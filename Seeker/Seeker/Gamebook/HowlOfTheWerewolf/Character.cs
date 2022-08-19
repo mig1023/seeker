@@ -80,8 +80,6 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
             set => _vanrichten = Game.Param.Setter(value);
         }
 
-        public int WayBack { get; set; }
-
         public int SilverDaggers { get; set; }
 
         public override void Init()
