@@ -16,14 +16,8 @@ namespace Seeker.Gamebook.YounglingTournament
             {
                 Option option = OptionsTemplateWithoutDestination(xmlOption);
 
-                if (ThisIsGameover(xmlOption))
-                {
-                    option.Destination = GetDestination(xmlOption);
-                }
-                else if (xmlOption.Attributes["Destination"].Value == "Back")
-                {
-                    option.Destination = Character.Protagonist.WayBack;
-                }
+                if (ThisIsGameover(xmlOption) || ThisIsBack(xmlOption))
+                    option.Destination = GetDestination(xmlOption, wayBack: Character.Protagonist.WayBack);
                 else
                     option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
 

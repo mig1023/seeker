@@ -102,7 +102,6 @@ namespace Seeker.Gamebook.YounglingTournament
             set => _speed = Game.Param.Setter(value);
         }
 
-        public int WayBack { get; set; }
         public int Reading { get; set; }
         public int SecondPart { get; set; }
         public string SwordTechnique { get; set; }
