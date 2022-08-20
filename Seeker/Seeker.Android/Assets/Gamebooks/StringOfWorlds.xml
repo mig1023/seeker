@@ -930,7 +930,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="661" Text="Повезло"/>
-				<Option Destination="540" Text="вам или нет"/>
+				<Option Destination="540" Text="Вам или нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
