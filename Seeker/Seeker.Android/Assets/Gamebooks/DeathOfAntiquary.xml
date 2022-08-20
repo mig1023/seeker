@@ -43,10 +43,10 @@
 				<Option Destination="54" Text="Яков Левинзон" Availability="!левинзон">
 					<Modification Name="Trigger" Value="левинзон"/>
 				</Option>
-				<Option Destination="54" Text="завещание" Availability="!завещание">
+				<Option Destination="54" Text="Завещание" Availability="!завещание">
 					<Modification Name="Trigger" Value="завещание"/>
 				</Option>
-				<Option Destination="54" Text="картина" Availability="!картина">
+				<Option Destination="54" Text="Картина" Availability="!картина">
 					<Modification Name="Trigger" Value="картина"/>
 				</Option>
 				<Option Destination="54" Text="Улика" Availability="!улика">
@@ -161,10 +161,10 @@
 				<Option Destination="64" Text="Израиль" Availability="!израиль">
 					<Modification Name="Trigger" Value="израиль"/>
 				</Option>
-				<Option Destination="64" Text="завещание" Availability="!завещание">
+				<Option Destination="64" Text="Завещание" Availability="!завещание">
 					<Modification Name="Trigger" Value="завещание"/>
 				</Option>
-				<Option Destination="64" Text="картина" Availability="!картина">
+				<Option Destination="64" Text="Картина" Availability="!картина">
 					<Modification Name="Trigger" Value="картина"/>
 				</Option>
 				<Option Destination="64" Text="Письма" Availability="!письма">
@@ -288,10 +288,10 @@
 				<Option Destination="77" Text="Яков Левинзон" Availability="!левинзон">
 					<Modification Name="Trigger" Value="левинзон"/>
 				</Option>
-				<Option Destination="77" Text="завещание" Availability="!завещание">
+				<Option Destination="77" Text="Завещание" Availability="!завещание">
 					<Modification Name="Trigger" Value="завещание"/>
 				</Option>
-				<Option Destination="77" Text="картина" Availability="!картина">
+				<Option Destination="77" Text="Картина" Availability="!картина">
 					<Modification Name="Trigger" Value="картина"/>
 				</Option>
 				<Option Destination="77" Text="Улика" Availability="!улика">
@@ -399,7 +399,7 @@
 				<Option Destination="37" Text="Заткнись идиот!"/>
 				<Option Destination="67" Text="О зохэн вэй!"/>
 				<Option Destination="35" Text="Израиль" Availability="израиль"/>
-				<Option Destination="5" Text="картина" Availability="картина"/>
+				<Option Destination="5" Text="Картина" Availability="картина"/>
 				<Option Destination="57" Text="Улика" Availability="улика"/>
 				<Option Destination="7" Text="«Фак ми!» и женские стоны из порнофильма" Availability="фак-ми"/>
 				<Option Destination="76" Text="Записка" Availability="записка"/>
@@ -446,16 +446,16 @@
 				<Option Destination="16" Text="Израиль" Availability="!израиль">
 					<Modification Name="Trigger" Value="израиль"/>
 				</Option>
-				<Option Destination="16" Text="картина" Availability="!картина">
+				<Option Destination="16" Text="Картина" Availability="!картина">
 					<Modification Name="Trigger" Value="картина"/>
 				</Option>
-				<Option Destination="16" Text="письма" Availability="!письма">
+				<Option Destination="16" Text="Письма" Availability="!письма">
 					<Modification Name="Trigger" Value="письма"/>
 				</Option>
-				<Option Destination="16" Text="улика" Availability="!улика">
+				<Option Destination="16" Text="Улика" Availability="!улика">
 					<Modification Name="Trigger" Value="улика"/>
 				</Option>
-				<Option Destination="16" Text="обыск" Availability="!обыск">
+				<Option Destination="16" Text="Обыск" Availability="!обыск">
 					<Modification Name="Trigger" Value="обыск"/>
 				</Option>
 			</Options>
@@ -471,9 +471,9 @@
 				<Option Destination="68" Text="Анжела" Availability="анжела"/>
 				<Option Destination="68" Text="Яков Левинзон" Availability="левинзон"/>
 				<Option Destination="68" Text="Израиль" Availability="израиль"/>
-				<Option Destination="68" Text="завещание" Availability="завещание"/>
-				<Option Destination="68" Text="картина" Availability="картина"/>
-				<Option Destination="70" Text="письма" Availability="письма"/>
+				<Option Destination="68" Text="Завещание" Availability="завещание"/>
+				<Option Destination="68" Text="Картина" Availability="картина"/>
+				<Option Destination="70" Text="Письма" Availability="письма"/>
 				<Option Destination="68" Text="Улика" Availability="улика"/>
 				<Option Destination="68" Text="Записка" Availability="записка"/>
 			</Options>
@@ -563,16 +563,16 @@
 				<Option Destination="29" Text="Завещание" Availability="!завещание">
 					<Modification Name="Trigger" Value="завещание"/>
 				</Option>
-				<Option Destination="29" Text="картина" Availability="!картина">
+				<Option Destination="29" Text="Картина" Availability="!картина">
 					<Modification Name="Trigger" Value="картина"/>
 				</Option>
-				<Option Destination="29" Text="письма" Availability="!письма">
+				<Option Destination="29" Text="Письма" Availability="!письма">
 					<Modification Name="Trigger" Value="письма"/>
 				</Option>
-				<Option Destination="29" Text="улика" Availability="!улика">
+				<Option Destination="29" Text="Улика" Availability="!улика">
 					<Modification Name="Trigger" Value="улика"/>
 				</Option>
-				<Option Destination="29" Text="обыск" Availability="!обыск">
+				<Option Destination="29" Text="Обыск" Availability="!обыск">
 					<Modification Name="Trigger" Value="обыск"/>
 				</Option>
 				<Option Destination="29" Text="Записка" Availability="!записка">
@@ -653,8 +653,8 @@
 				<Option Destination="13" Text="Заткнись идиот!"/>
 				<Option Destination="25" Text="О зохэн вэй!"/>
 				<Option Destination="61" Text="Израиль" Availability="израиль"/>
-				<Option Destination="60" Text="завещание" Availability="завещание"/>
-				<Option Destination="65" Text="картина" Availability="картина"/>
+				<Option Destination="60" Text="Завещание" Availability="завещание"/>
+				<Option Destination="65" Text="Картина" Availability="картина"/>
 				<Option Destination="78" Text="Улика" Availability="улика"/>
 				<Option Destination="47" Text="«Фак ми!» и женские стоны из порнофильма" Availability="фак-ми"/>
 				<Option Destination="31" Text="Записка" Availability="записка"/>
@@ -705,8 +705,8 @@
 				<Option Destination="68" Text="Анжела" Availability="анжела"/>
 				<Option Destination="68" Text="Яков Левинзон" Availability="левинзон"/>
 				<Option Destination="68" Text="Израиль" Availability="израиль"/>
-				<Option Destination="68" Text="завещание" Availability="завещание"/>
-				<Option Destination="68" Text="картина" Availability="картина"/>
+				<Option Destination="68" Text="Завещание" Availability="завещание"/>
+				<Option Destination="68" Text="Картина" Availability="картина"/>
 				<Option Destination="42" Text="Улика" Availability="улика"/>
 				<Option Destination="68" Text="«Фак ми!» и женские стоны из порнофильма" Availability="фак-ми"/>
 				<Option Destination="68" Text="Обыск" Availability="обыск"/>
@@ -742,8 +742,8 @@
 				<Option Destination="75" Text="Анжела" Availability="анжела"/>
 				<Option Destination="44" Text="Яков Левинзон" Availability="левинзон"/>
 				<Option Destination="17" Text="Израиль" Availability="израиль"/>
-				<Option Destination="45" Text="завещание" Availability="завещание"/>
-				<Option Destination="51" Text="картина" Availability="картина"/>
+				<Option Destination="45" Text="Завещание" Availability="завещание"/>
+				<Option Destination="51" Text="Картина" Availability="картина"/>
 				<Option Destination="22" Text="Улика" Availability="улика"/>
 				<Option Destination="49" Text="Записка" Availability="записка"/>
 			</Options>
@@ -770,8 +770,8 @@
 				<Option Destination="2" Text="Анжела" Availability="анжела"/>
 				<Option Destination="59" Text="Яков Левинзон" Availability="левинзон"/>
 				<Option Destination="4" Text="Израиль" Availability="израиль"/>
-				<Option Destination="69" Text="завещание" Availability="завещание"/>
-				<Option Destination="30" Text="картина" Availability="картина"/>
+				<Option Destination="69" Text="Завещание" Availability="завещание"/>
+				<Option Destination="30" Text="Картина" Availability="картина"/>
 				<Option Destination="80" Text="Улика" Availability="улика"/>
 				<Option Destination="74" Text="Обыск" Availability="обыск"/>
 				<Option Destination="50" Text="Записка" Availability="записка"/>
