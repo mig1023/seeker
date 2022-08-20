@@ -3029,7 +3029,7 @@
 			<Text>В какую дверь теперь попробуете выйти: в ту, что перед вами, или в ту, что слева?</Text>
 			<Options>
 				<Option Destination="337" Text="В ту, что перед вами"/>
-				<Option Destination="595" Text="в ту, что слева"/>
+				<Option Destination="595" Text="В ту, что слева"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -15800,8 +15800,8 @@
 				<Option Destination="1496" Text="На четвертый">
 					<Text>Вниз:</Text>
 				</Option>
-				<Option Destination="1793" Text="на второй"/>
-				<Option Destination="1821" Text="на третий"/>
+				<Option Destination="1793" Text="На второй"/>
+				<Option Destination="1821" Text="На третий"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -17834,7 +17834,7 @@
 			<Text>Вы идете со стариком по коридору. Он безмолвно указывает путь.</Text>
 			<Options>
 				<Option Destination="1560" Text="Попробуете напасть на него"/>
-				<Option Destination="1706" Text="пойдете дальше"/>
+				<Option Destination="1706" Text="Пойдете дальше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
