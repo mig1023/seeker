@@ -1115,8 +1115,8 @@
 			<Id>107</Id>
 			<Text>Лестница приводит вас к двум дверям:</Text>
 			<Options>
-				<Option Destination="34" Text="правой"/>
-				<Option Destination="386" Text="левой"/>
+				<Option Destination="34" Text="Правой"/>
+				<Option Destination="386" Text="Левой"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
