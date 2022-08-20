@@ -5778,8 +5778,8 @@
 			</Modifications>
 			<Options>
 				<Option Destination="437" Text="Если вам удалось отбавить Выносливость противника до 15"/>
-				<Option Destination="439" Text="если вы нанесли ему 2 укола" Availability="УКОЛОВ > 1"/>
-				<Option Destination="448" Text="если ваша Выносливость упала до 5"/>
+				<Option Destination="439" Text="Если вы нанесли ему 2 укола" Availability="УКОЛОВ > 1"/>
+				<Option Destination="448" Text="Если ваша Выносливость упала до 5"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
