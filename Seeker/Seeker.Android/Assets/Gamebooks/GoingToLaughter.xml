@@ -31,7 +31,7 @@
 			<List Name="SleepCleaningSurvive">Дежа вю, Се ля ви, Шерше ля фам, Триумфатор, Лютня, Записная книжка, Бревиарий</List>
 		</Constants>
 		<Settings>
-			<DisabledOption Value="Show"/>
+			<ShowDisabledOption/>
 			<StartParagraph Value="1392"/>
 		</Settings>	
 	</Introduction>
