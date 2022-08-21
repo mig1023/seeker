@@ -8,7 +8,7 @@
 			<Color Type="Continue">fdeeba</Color>
 		</Styles>
 		<Settings>
-			<DisabledOption Value="Show"/>
+			<ShowDisabledOption/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
