@@ -49,7 +49,7 @@
 			</Dictionary>
 		</Constants>
 		<Settings>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Settings>
 		<Buttons>
 			<Fight>Сражаться</Fight>
