@@ -7,7 +7,7 @@
 			<Color Type="System">cbd2b4</Color>
 		</Styles>
 		<Settings>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
