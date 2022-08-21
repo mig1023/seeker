@@ -8,7 +8,7 @@
 			<Color Type="Continue">6fc5c5</Color>
 		</Styles>
 		<Settings>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
