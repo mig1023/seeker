@@ -6,7 +6,7 @@
 			<Color Type="System">f9f9f9</Color>
 		</Styles>
 		<Settings>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
