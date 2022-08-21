@@ -107,7 +107,7 @@ namespace Seeker.Prototypes
             return false;
         }
 
-        public void LoadEnabledDisabledOption(string option) => ShowDisabledOptionStatus = (option == "Show");
+        public void LoadEnabledDisabledOption(bool option) => ShowDisabledOptionStatus = option;
 
         public virtual bool ShowDisabledOption() => ShowDisabledOptionStatus;
 

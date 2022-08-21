@@ -27,7 +27,7 @@ namespace Seeker.Abstract
 
         bool GetParagraphsStatusesLimit(out int limitStart, out int limitEnd);
 
-        void LoadEnabledDisabledOption(string option);
+        void LoadEnabledDisabledOption(bool option);
 
         bool ShowDisabledOption();
 
