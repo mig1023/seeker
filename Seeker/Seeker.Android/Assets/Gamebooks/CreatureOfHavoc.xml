@@ -11,7 +11,7 @@
 			<Color Type="System">9db6aa</Color>
 		</Styles>
 		<Settings>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Settings>
 		<Buttons>
 			<Fight>Сражаться</Fight>
