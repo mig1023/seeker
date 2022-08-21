@@ -28,7 +28,7 @@
 			</Dictionary>
 		</Constants>
 		<Settings>
-			<DisabledOption Value="Show"/>
+			<ShowDisabledOption/>
 		</Settings>
 		<Buttons>
 			<Test>Пройти проверку</Test>
