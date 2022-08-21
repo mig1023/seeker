@@ -24,7 +24,7 @@
 			</Dictionary>
 		</Constants>
 		<Settings>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Settings>
 		<Buttons>
 			<Test>Проверить</Test>
