@@ -16,7 +16,7 @@
 			<List Name="WithoutStaticsButtons">0, 687, 714, 715, 701, 702</List>
 		</Constants>
 		<Settings>
-			<DisabledOption Value="Show"/>
+			<ShowDisabledOption/>
 		</Settings>
 		<Buttons>
 			<Fight>Сражаться</Fight>
