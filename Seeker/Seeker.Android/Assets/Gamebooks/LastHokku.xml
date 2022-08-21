@@ -9,7 +9,7 @@
 			<List Name="GetParagraphsWithoutHokkuCreation">0, 1, 9, 10, 11, 12</List>
 		</Constants>
 		<Settings>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 			<StartParagraph Value="1"/>
 		</Settings>
 	</Introduction>
