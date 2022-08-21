@@ -7,7 +7,7 @@
 			<Color Type="System">eeeeee</Color>
 		</Styles>
 		<Settings>
-			<DisabledOption Value="Hide"/>
+			<HideDisabledOption/>
 		</Settings>
 		<Buttons>
 			<Dinner>Пообедать</Dinner>
