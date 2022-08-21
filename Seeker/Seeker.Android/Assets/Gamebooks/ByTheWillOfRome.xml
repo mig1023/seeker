@@ -10,7 +10,7 @@
 			<Color Type="System">d1b5b5</Color>
 		</Styles>
 		<Settings>
-			<DisabledOption Value="Show"/>
+			<ShowDisabledOption/>
 		</Settings>
 		<Buttons>
 			<Get>Купить</Get>
