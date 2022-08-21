@@ -14,7 +14,7 @@
 			<List Name="WithoutStatuses">0, 454, 455, 456, 457</List>
 		</Constants>
 		<Settings>
-			<DisabledOption Value="Show"/>
+			<ShowDisabledOption/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
