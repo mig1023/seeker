@@ -118,7 +118,7 @@ namespace Seeker.Prototypes
 
             Trigger = Xml.StringParse(xmlParagraph["Triggers"]),
             LateTrigger = Xml.StringParse(xmlParagraph["LateTriggers"]),
-            RemoveTrigger = Xml.StringParse(xmlParagraph["RemoveTriggers"]),
+            RemoveTrigger = Xml.StringParse(xmlParagraph["Untriggers"]),
 
             Images = Xml.ImagesParse(xmlParagraph["Images"]),
         };
