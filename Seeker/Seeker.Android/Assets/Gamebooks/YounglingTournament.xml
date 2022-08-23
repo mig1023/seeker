@@ -3825,7 +3825,7 @@
 			<Modifications>
 				<Hitpoints Value="10"/>
 			</Modifications>
-			<RemoveTriggers>Концентрация</RemoveTriggers>
+			<Untriggers>Концентрация</Untriggers>
 			<Options>
 				<Option Destination="332" Text="Если вам удалось отбавить Выносливость противника до 5"/>
 				<Option Destination="322" Text="Если вы нанесли ему 2 укола" Availability="УКОЛОВ > 1"/>
@@ -4104,7 +4104,7 @@
 			<Modifications>
 				<DarkSide Value="50"/>
 			</Modifications>
-			<RemoveTriggers>Корпускула Комы</RemoveTriggers>
+			<Untriggers>Корпускула Комы</Untriggers>
 			<Triggers>Темная сторона</Triggers>
 			<Options>
 				<Option Destination="360"/>
@@ -4667,7 +4667,7 @@
 			<Modifications>
 				<Hitpoints Value="10"/>
 			</Modifications>
-			<RemoveTriggers>Концентрация</RemoveTriggers>
+			<Untriggers>Концентрация</Untriggers>
 			<Options>
 				<Option Destination="392" Text="Если вам удалось отбавить Выносливость противника до 5"/>
 				<Option Destination="382" Text="Если вы нанесли ему 2 укола" Availability="УКОЛОВ > 1"/>
@@ -4968,7 +4968,7 @@
 			<Modifications>
 				<DarkSide Value="50"/>
 			</Modifications>
-			<RemoveTriggers>Корпускула Комы</RemoveTriggers>
+			<Untriggers>Корпускула Комы</Untriggers>
 			<Triggers>Темная сторона</Triggers>
 			<Options>
 				<Option Destination="406"/>
@@ -5133,7 +5133,7 @@
 				<Text Size="small">Вычеркните ключевое слово «Обида».\nЗапишите ключевое слово «Поддержка».</Text>
 				<Text>— Ливия, я в тебя верю! Главное — не сдавайся и не бойся! Ты сможешь! — кричите вы ей вслед.\n\nДевушка удивленно оборачивается и, как вам кажется, на мгновение улыбается. Потом губы ее сосредоточенно сжимаются, и она уделяет все внимание противнику.</Text>
 			</Texts>
-			<RemoveTriggers>Обида</RemoveTriggers>
+			<Untriggers>Обида</Untriggers>
 			<Triggers>Поддержка</Triggers>
 			<Options>
 				<Option Destination="428"/>
@@ -5188,7 +5188,7 @@
 				<Text Size="small">Вычеркните ключевое слово «Обида».</Text>
 				<Text>Ливия Умай зло прищуривается, явно собираясь сказать какую-то гадость, как вдруг ее осеняет идея:\n\n— Ты что, меня специально пытался разозлить?! Чтобы я не проиграла?\n\n— Только сейчас догадалась? — иронично улыбаетесь вы.\n\n— Ах ты, скотина! — она шутя бьет вас по плечу. — Ну, смотри!!! Еще раз что-то подобное выкинешь — точно в финале разделаю!\n\n— Все, все, боюсь! — притворно поднимаете руки вы и смеетесь вместе с Ливией.\n\nНа бой тем временем вызывают Уайта, и он, получив от вас обоих пожелания победы, выходит на арену.</Text>
 			</Texts>
-			<RemoveTriggers>Обида</RemoveTriggers>
+			<Untriggers>Обида</Untriggers>
 			<Options>
 				<Option Destination="434"/>
 			</Options>
@@ -5554,7 +5554,7 @@
 			<Modifications>
 				<Hitpoints Value="10"/>
 			</Modifications>
-			<RemoveTriggers>Концентрация</RemoveTriggers>
+			<Untriggers>Концентрация</Untriggers>
 			<Options>
 				<Option Destination="449" Text="Если вам удалось отбавить Выносливость противника до 5"/>
 				<Option Destination="439" Text="Если вы нанесли ему 2 укола" Availability="УКОЛОВ > 1"/>
@@ -5845,7 +5845,7 @@
 			<Modifications>
 				<DarkSide Value="50"/>
 			</Modifications>
-			<RemoveTriggers>Корпускула Комы</RemoveTriggers>
+			<Untriggers>Корпускула Комы</Untriggers>
 			<Triggers>Темная сторона</Triggers>
 			<Options>
 				<Option Destination="463"/>
@@ -6159,7 +6159,7 @@
 					</After>
 				</SwordFight>
 			</Actions>
-			<RemoveTriggers>Корпускула Комы</RemoveTriggers>
+			<Untriggers>Корпускула Комы</Untriggers>
 			<Triggers>Темная сторона</Triggers>
 			<Modifications>
 				<DarkSide Value="50"/>
@@ -6192,7 +6192,7 @@
 				<DarkSide Value="50"/>
 				<WayBack Value="502"/>
 			</Modifications>
-			<RemoveTriggers>Корпускула Комы</RemoveTriggers>
+			<Untriggers>Корпускула Комы</Untriggers>
 			<Triggers>Темная сторона</Triggers>
 			<Options>
 				<Option Destination="600" Text="Вы отбавили Выносливость обоих противников до нуля"/>
@@ -6221,7 +6221,7 @@
 				<DarkSide Value="50"/>
 				<WayBack Value="503"/>
 			</Modifications>
-			<RemoveTriggers>Корпускула Комы</RemoveTriggers>
+			<Untriggers>Корпускула Комы</Untriggers>
 			<Triggers>Темная сторона</Triggers>
 			<Options>
 				<Option Destination="600" Text="Вы отбавили Выносливость обоих противников до нуля"/>
@@ -6311,7 +6311,7 @@
 			<Modifications>
 				<Hitpoints Value="10"/>
 			</Modifications>
-			<RemoveTriggers>Концентрация</RemoveTriggers>
+			<Untriggers>Концентрация</Untriggers>
 			<Options>
 				<Back/>
 			</Options>
@@ -6845,7 +6845,7 @@
 			<Modifications>
 				<Hitpoints Value="10"/>
 			</Modifications>
-			<RemoveTriggers>Концентрация</RemoveTriggers>
+			<Untriggers>Концентрация</Untriggers>
 			<Options>
 				<Option Destination="548" Text="Если вам удалось отбавить Выносливость противницы до 5"/>
 				<Option Destination="538" Text="Если вы нанесли ей 2 укола" Availability="УКОЛОВ > 1"/>
@@ -7142,7 +7142,7 @@
 			<Modifications>
 				<DarkSide Value="10"/>
 			</Modifications>
-			<RemoveTriggers>Корпускула Комы</RemoveTriggers>
+			<Untriggers>Корпускула Комы</Untriggers>
 			<Triggers>Темная сторона</Triggers>
 			<Options>
 				<Option Destination="562"/>
