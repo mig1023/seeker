@@ -113,7 +113,7 @@
 				<Life Value="-4"/>
 				<Aura Value="1"/>
 			</Modifications>
-			<RemoveTriggers>Ратрак</RemoveTriggers>
+			<Untriggers>Ратрак</Untriggers>
 			<Options>
 				<Option Destination="187"/>
 			</Options>
@@ -512,7 +512,7 @@
 			<Modifications>
 				<Life Value="-4"/>
 			</Modifications>
-			<RemoveTriggers>Ратрак</RemoveTriggers>
+			<Untriggers>Ратрак</Untriggers>
 			<Options>
 				<Option Destination="187"/>
 			</Options>
@@ -858,7 +858,7 @@
 				<Text>— Что-то неохота, — отвечаете вы, демонстративно зевая.\n\nОна удивленно смотрит на вас, разочарованно скривив губки.\n\n— Что за детский сад, Кремень? — взвивается Плантуш. — Хочу, не хочу, тебе вообще-то здесь деньги платят или ты забыл?!\n\n— Пусть остается, — безразлично вмешивается Синти.</Text>
 				<Text Size="small">Вычеркните ключевое слово «Синти» из списка.</Text>
 			</Texts>
-			<RemoveTriggers>Синти</RemoveTriggers>
+			<Untriggers>Синти</Untriggers>
 			<Options>
 				<Option Destination="36"/>
 			</Options>
@@ -931,7 +931,7 @@
 			<Modifications>
 				<Life Value="-4"/>
 			</Modifications>
-			<RemoveTriggers>Ратрак</RemoveTriggers>
+			<Untriggers>Ратрак</Untriggers>
 			<Options>
 				<Option Destination="187"/>
 			</Options>
@@ -983,7 +983,7 @@
 			<Modifications>
 				<Aura Value="-1"/>
 			</Modifications>
-			<RemoveTriggers>Синти</RemoveTriggers>
+			<Untriggers>Синти</Untriggers>
 			<Options>
 				<Option Destination="75" Text="Бежите к выходу со склада"/>
 				<Option Destination="151" Text="Бежите в ту сторону, куда ушла Синти"/>
@@ -1104,7 +1104,7 @@
 				<Text Size="small">Вычеркните из ключевых слов «Синти».</Text>
 				<Text>Можете выбрать другой вариант:</Text>
 			</Texts>
-			<RemoveTriggers>Синти</RemoveTriggers>
+			<Untriggers>Синти</Untriggers>
 			<Options>
 				<Option Destination="38" Text="Сходить в медпункт"/>
 				<Option Destination="52" Text="Поговорить с Плантушем по поводу конфискованного меча"/>
@@ -1225,7 +1225,7 @@
 				<Text Size="small">Если у вас записано слово «Лейра», вычеркните его.</Text>
 				<Text>Возвращайтесь в холл.</Text>
 			</Texts>
-			<RemoveTriggers>Лейра</RemoveTriggers>
+			<Untriggers>Лейра</Untriggers>
 			<Options>
 				<Option Destination="142"/>
 			</Options>
@@ -1350,7 +1350,7 @@
 				<Text Size="small">Вычеркните ключевое слово «ратрак» из списка.</Text>
 				<Text>Подтянувшись, выбираетесь на поверхность и осматриваете окружающую местность. Откуда взялась эта трещина? Шириной она не менее трех метров и ведет от самых стен шахты. Возможно, крушение корабля привело к подвижке льда, причем раскол, скорее всего, начинается от скважины.\n\nПутешествовать пешком, да еще в такую метель, рискованное занятие, поэтому решаете начать исследование станции с осмотра развалин шахты.</Text>
 			</Texts>
-			<RemoveTriggers>Ратрак</RemoveTriggers>
+			<Untriggers>Ратрак</Untriggers>
 			<Options>
 				<Option Destination="172"/>
 			</Options>
