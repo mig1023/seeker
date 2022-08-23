@@ -2863,7 +2863,7 @@
 			<Modifications>
 				<Cents Value="3000"/>
 			</Modifications>
-			<RemoveTriggers>Часы</RemoveTriggers>
+			<Untriggers>Часы</Untriggers>
 			<Options>
 				<Option Destination="555"/>
 			</Options>
@@ -5505,7 +5505,7 @@
 		<Paragraph>
 			<Id>566</Id>
 			<Text>Спустившись, вы долго и безуспешно дергаете лассо: петля надежно захлестнула каменный выступ. Увы, лассо придется бросить здесь. К тому же вы так исцарапались о камни, что лазать по скалам больше не тянет…</Text>
-			<RemoveTriggers>Лассо</RemoveTriggers>
+			<Untriggers>Лассо</Untriggers>
 			<Options>
 				<Option Destination="120" Text="Хотите исследовать расщелину"/>
 				<Option Destination="331" Text="Оседлаете Чикиту и поскачете дальше"/>
