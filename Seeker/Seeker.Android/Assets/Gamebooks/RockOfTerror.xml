@@ -806,7 +806,7 @@
 			<Modifications>
 				<Time Value="30"/>
 			</Modifications>
-			<RemoveTriggers>MarrelsMirror</RemoveTriggers>
+			<Untriggers>MarrelsMirror</Untriggers>
 			<Options>
 				<Option Destination="32"/>
 			</Options>
@@ -850,7 +850,7 @@
 				<Text Size="small">Прошло полчаса.</Text>
 			</Texts>
 			<Triggers>Anna</Triggers>
-			<RemoveTriggers>MarrelsMirror</RemoveTriggers>
+			<Untriggers>MarrelsMirror</Untriggers>
 			<Modifications>
 				<Time Value="30"/>
 			</Modifications>
