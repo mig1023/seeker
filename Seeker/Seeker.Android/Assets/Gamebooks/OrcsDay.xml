@@ -556,7 +556,7 @@
 				</Get>
 			</Actions>
 			<Triggers>Обрёл имя</Triggers>
-			<RemoveTriggers>Имя</RemoveTriggers>
+			<Untriggers>Имя</Untriggers>
 			<Modifications>
 				<StatBonuses Value="2"/>
 				<RestoreHitpoints/>
