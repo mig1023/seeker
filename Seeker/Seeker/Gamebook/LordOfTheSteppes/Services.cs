@@ -6,9 +6,11 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 {
     class Services
     {
-        public static bool IsProtagonist(string name) => name == Character.Protagonist.Name;
+        public static bool IsProtagonist(string name) =>
+            name == Character.Protagonist.Name;
 
-        public static Character FindEnemyIn(List<Character> Enemies) => Enemies.Where(e => e.Endurance > 0).FirstOrDefault();
+        public static Character FindEnemyIn(List<Character> Enemies) =>
+            Enemies.Where(e => e.Endurance > 0).FirstOrDefault();
 
         public static Character FindEnemy(Character fighter, List<Character> Allies, List<Character> Enemies)
         {
@@ -64,7 +66,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return specialRules;
         }
 
-        public static Character.FightStyles ChangeFightStyle(string motivation, ref List<string> fight, string direction, Character.FightStyles newFightStyles)
+        public static Character.FightStyles ChangeFightStyle(string motivation, ref List<string> fight,
+            string direction, Character.FightStyles newFightStyles)
         {
             bool goodDirectionUp = ((direction == "upTo") && ((int)Character.Protagonist.FightStyle < (int)newFightStyles));
             bool goodDirectionDown = ((direction == "downTo") && ((int)Character.Protagonist.FightStyle > (int)newFightStyles));
@@ -79,7 +82,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return newFightStyles;
         }
 
-        public static Character.FightStyles ChooseFightStyle(ref List<string> fight, Dictionary<string, List<int>> AttackStory, List<Character> Enemies)
+        public static Character.FightStyles ChooseFightStyle(ref List<string> fight,
+            Dictionary<string, List<int>> AttackStory, List<Character> Enemies)
         {
             if (Character.Protagonist.Endurance < (Character.Protagonist.MaxEndurance / 2))
                 return ChangeFightStyle("Дело дрянь!", ref fight, "downTo", Character.FightStyles.Fullback);

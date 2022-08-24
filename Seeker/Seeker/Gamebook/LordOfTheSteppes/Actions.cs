@@ -490,7 +490,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             }
         }
 
-        public override bool IsHealingEnabled() => protagonist.Endurance < protagonist.MaxEndurance;
+        public override bool IsHealingEnabled() =>
+            protagonist.Endurance < protagonist.MaxEndurance;
 
         public override void UseHealing(int healingLevel)
         {

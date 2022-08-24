@@ -6,11 +6,13 @@ namespace Seeker.Gamebook.LordOfTheSteppes
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
+        public override Output.Interface.TextFontSize GetFontSize() =>
+            Output.Interface.TextFontSize.little;
 
         public static Dictionary<string, int> GetStartValues { get; set; }
 
-        public static Dictionary<Character.SpecialTechniques, string> TechniquesNames() => new Dictionary<Character.SpecialTechniques, string>
+        public static Dictionary<Character.SpecialTechniques, string> TechniquesNames() =>
+            new Dictionary<Character.SpecialTechniques, string>
         {
             [Character.SpecialTechniques.TwoBlades] = "Бой двумя клинками",
             [Character.SpecialTechniques.TotalProtection] = "Веерная защита",
@@ -24,7 +26,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             [Character.SpecialTechniques.PoisonBlade] = "Отравленный клинок",
         };
 
-        public static Dictionary<Character.FightStyles, string> FightStyles() => new Dictionary<Character.FightStyles, string>
+        public static Dictionary<Character.FightStyles, string> FightStyles() =>
+            new Dictionary<Character.FightStyles, string>
         {
             [Character.FightStyles.Aggressive] = "агрессивный",
             [Character.FightStyles.Counterattacking] = "контратакующий",
