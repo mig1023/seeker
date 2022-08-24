@@ -10,10 +10,13 @@ namespace Seeker.Gamebook.LastHokku
 
         public List<string> Hokku { get; set; }
 
-        public override void Init() => Hokku = new List<string>();
+        public override void Init() =>
+            Hokku = new List<string>();
 
-        public override string Save() => String.Join("|", Hokku);
+        public override string Save() =>
+            String.Join("|", Hokku);
 
-        public override void Load(string saveLine) => Hokku = saveLine.Split('|').ToList();
+        public override void Load(string saveLine) =>
+            Hokku = saveLine.Split('|').ToList();
     }
 }

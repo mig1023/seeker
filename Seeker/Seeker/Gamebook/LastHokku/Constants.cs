@@ -6,7 +6,8 @@ namespace Seeker.Gamebook.LastHokku
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.big;
+        public override Output.Interface.TextFontSize GetFontSize() =>
+            Output.Interface.TextFontSize.big;
 
         public static List<int> GetParagraphsWithoutHokkuCreation { get; set; }
 
