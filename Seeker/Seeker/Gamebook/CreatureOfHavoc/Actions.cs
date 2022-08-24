@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Seeker.Gamebook.CreatureOfHavoc
 {
@@ -42,9 +41,11 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public override bool GameOver(out int toEndParagraph, out string toEndText) =>
             GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
 
-        public override bool Availability(string option) => AvailabilityTrigger(option);
+        public override bool Availability(string option) =>
+            AvailabilityTrigger(option);
 
-        public List<string> Luck() => GoodLuck(out bool _, notInline: true);
+        public List<string> Luck() =>
+            GoodLuck(out bool _, notInline: true);
 
         public List<string> GoodLuck(out bool goodLuck, bool notInline = false)
         {
@@ -96,9 +97,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         
         public List<string> Hunt()
         {
-            List<string> hunt = new List<string>();
-
-            hunt.Add("Пробуете поймать кого-нибудь...");
+            List<string> hunt = new List<string> { "Пробуете поймать кого-нибудь..." };
 
             hunt.AddRange(GoodLuck(out bool goodLuck));
 
@@ -117,9 +116,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
         public List<string> PoisonOrFood()
         {
-            List<string> food = new List<string>();
-
-            food.Add("Пробуете всё на вкус...");
+            List<string> food = new List<string> { "Пробуете всё на вкус..." };
 
             food.AddRange(GoodLuck(out bool goodLuck));
 

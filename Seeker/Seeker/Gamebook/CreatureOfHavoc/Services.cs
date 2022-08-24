@@ -23,6 +23,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 return false;
         }
 
-        public static bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Endurance > 0).Count() == 0;
+        public static bool NoMoreEnemies(List<Character> enemies) =>
+            enemies.Where(x => x.Endurance > 0).Count() == 0;
     }
 }
