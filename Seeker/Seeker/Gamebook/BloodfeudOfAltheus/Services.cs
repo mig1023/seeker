@@ -7,8 +7,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         public static bool IsPosibleResurrection()
         {
             bool normal = (Character.Protagonist.Resurrection > 0);
-            bool brooch = (Character.Protagonist.BroochResurrection > 0) && (
-                (Character.Protagonist.Glory - Character.Protagonist.Shame) >= 10);
+            bool glory = (Character.Protagonist.Glory - Character.Protagonist.Shame) >= 10;
+            bool brooch = (Character.Protagonist.BroochResurrection > 0) && glory;
 
             return (normal || brooch);
         }
