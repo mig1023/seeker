@@ -185,7 +185,8 @@ namespace Seeker.Gamebook.Cyberpunk
             }
         }
 
-        public List<string> DiceRoll() => new List<string> { String.Format("BIG|Кубик: {0}", Game.Dice.Roll(size: 100)) };
+        public List<string> DiceRoll() =>
+            new List<string> { String.Format("BIG|Кубик: {0}", Game.Dice.Roll(size: 100)) };
 
         public List<string> OddDiceRoll()
         {
@@ -199,8 +200,10 @@ namespace Seeker.Gamebook.Cyberpunk
             return diceCheck;
         }
 
-        public List<string> Get() => ChangeProtagonistParam(Stat, protagonist, String.Empty);
+        public List<string> Get() =>
+            ChangeProtagonistParam(Stat, protagonist, String.Empty);
 
-        public List<string> Decrease() => ChangeProtagonistParam(Stat, protagonist, String.Empty, decrease: true);
+        public List<string> Decrease() =>
+            ChangeProtagonistParam(Stat, protagonist, String.Empty, decrease: true);
     }
 }
