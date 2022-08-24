@@ -8,7 +8,8 @@ namespace Seeker.Gamebook.LandOfUnwaryBears
 
         public override string GetFont() => "RobotoFont";
 
-        public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.small;
+        public override Output.Interface.TextFontSize GetFontSize() =>
+            Output.Interface.TextFontSize.small;
 
         public static Links GetLinks() => new Links
         {
