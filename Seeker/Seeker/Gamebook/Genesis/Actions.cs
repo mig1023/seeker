@@ -102,10 +102,13 @@ namespace Seeker.Gamebook.Genesis
             return new List<string> { "RELOAD" };
         }
 
-        public List<string> Decrease() => ChangeProtagonistParam(Bonus, protagonist, "Bonuses", decrease: true);
+        public List<string> Decrease() =>
+            ChangeProtagonistParam(Bonus, protagonist, "Bonuses", decrease: true);
 
-        public override bool IsHealingEnabled() => protagonist.Life < protagonist.MaxLife;
+        public override bool IsHealingEnabled() =>
+            protagonist.Life < protagonist.MaxLife;
 
-        public override void UseHealing(int healingLevel) => protagonist.Life += healingLevel;
+        public override void UseHealing(int healingLevel) =>
+            protagonist.Life += healingLevel;
     }
 }
