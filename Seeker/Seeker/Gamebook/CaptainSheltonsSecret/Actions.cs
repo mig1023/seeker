@@ -30,21 +30,16 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
-            {
                 return true;
-            }
+
             else if (option.Contains(","))
-            {
                 return !(option.Split(',').Where(x => !Game.Option.IsTriggered(x.Trim())).Count() > 0);
-            }
+
             else if (option.Contains("ЗОЛОТО >="))
-            {
                 return int.Parse(option.Split('=')[1]) <= protagonist.Gold;
-            }
+
             else
-            {
                 return AvailabilityTrigger(option);
-            }
         }
 
         public override List<string> Representer()
@@ -391,8 +386,10 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             }
         }
 
-        public override bool IsHealingEnabled() => protagonist.Endurance < protagonist.MaxEndurance;
+        public override bool IsHealingEnabled() =>
+            protagonist.Endurance < protagonist.MaxEndurance;
 
-        public override void UseHealing(int healingLevel) => protagonist.Endurance += healingLevel;
+        public override void UseHealing(int healingLevel) =>
+            protagonist.Endurance += healingLevel;
     }
 }

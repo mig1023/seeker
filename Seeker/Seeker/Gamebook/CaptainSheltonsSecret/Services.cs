@@ -14,6 +14,7 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             return luckListShow;
         }
 
-        public static bool IsProtagonist(string name) => name == Character.Protagonist.Name;
+        public static bool IsProtagonist(string name) =>
+            name == Character.Protagonist.Name;
     }
 }
