@@ -9,7 +9,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) => base.Get(xmlParagraph);
+        public override Game.Paragraph Get(int id, XmlNode xmlParagraph) =>
+            base.Get(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
@@ -38,7 +39,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return action;
         }
 
-        public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
+        public override Option OptionParse(XmlNode xmlOption) =>
+            OptionParseWithDo(xmlOption, new Modification());
 
         private static Character.SpecializationType SpecializationParse(XmlNode xmlNode)
         {

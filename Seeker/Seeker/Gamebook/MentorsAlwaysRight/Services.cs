@@ -6,7 +6,8 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
 {
     class Services
     {
-        public static int CureSpellCount() => Character.Protagonist.Spells.Where(x => x.Contains("ЛЕЧЕНИЕ")).Count();
+        public static int CureSpellCount() =>
+            Character.Protagonist.Spells.Where(x => x.Contains("ЛЕЧЕНИЕ")).Count();
 
         public static bool GoodReaction(ref List<string> reaction, bool showResult = false)
         {
@@ -93,10 +94,13 @@ namespace Seeker.Gamebook.MentorsAlwaysRight
             return fight;
         }
 
-        public static bool IsPoisonedBlade() => (Game.Option.IsTriggered("PoisonedBlade") &&
-            (Character.Protagonist.Specialization != Character.SpecializationType.Thrower));
+        public static bool IsPoisonedBlade() =>
+            Game.Option.IsTriggered("PoisonedBlade")
+            &&
+            (Character.Protagonist.Specialization != Character.SpecializationType.Thrower);
 
-        public static bool IsMagicBlade() => Game.Option.IsTriggered("MagicSword");
+        public static bool IsMagicBlade() =>
+            Game.Option.IsTriggered("MagicSword");
 
         public static int HitWounds(ref List<string> fight, int wound, bool wolf)
         {
