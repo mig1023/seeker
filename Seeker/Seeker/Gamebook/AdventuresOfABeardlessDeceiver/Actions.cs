@@ -239,6 +239,7 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
             return new List<string> { "RELOAD" };
         }
 
-        public List<string> Decrease() => ChangeProtagonistParam(Stat, protagonist, "StatBonuses", decrease: true);
+        public List<string> Decrease() =>
+            ChangeProtagonistParam(Stat, protagonist, "StatBonuses", decrease: true);
     }
 }
