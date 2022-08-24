@@ -14,7 +14,8 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             ["МЕТАТЕЛЬ"] = Character.SpecializationType.Thrower,
         };
 
-        public override Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.little;
+        public override Output.Interface.TextFontSize GetFontSize() =>
+            Output.Interface.TextFontSize.little;
 
         public static Links GetLinks() => new Links
         {
