@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
 using static Seeker.Game.Data;
 
@@ -26,9 +25,11 @@ namespace Seeker.Gamebook.GoingToLaughter
             }
         }
 
-        private static int LltRandom() => 200 + Game.Dice.Roll(size: 40);
+        private static int LltRandom() =>
+            200 + Game.Dice.Roll(size: 40);
 
-        private static bool ParagraphWithSkills() => (CurrentParagraphID == 1393) || (CurrentParagraphID == 1394);
+        private static bool ParagraphWithSkills() =>
+            (CurrentParagraphID == 1393) || (CurrentParagraphID == 1394);
 
         public static Dictionary<string, string> IncompatiblesDisadvantages { get; set; }
 
