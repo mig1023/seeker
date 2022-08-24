@@ -366,6 +366,7 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
 
                         int protagonistSkill = protagonist.Skill - SkillPenalty -
                             (protagonist.MeritalArt == Character.MeritalArts.LefthandFencing ? 0 : enemy.LeftHandPenalty);
+
                         protagonistHitStrength = (protagonistRoll * 2) + protagonistSkill;
 
                         fight.Add(String.Format("Мощность вашего удара: {0} x 2 + {1} = {2}",
@@ -453,7 +454,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             }
         }
 
-        public override bool IsHealingEnabled() => protagonist.Strength < protagonist.MaxStrength;
+        public override bool IsHealingEnabled() =>
+            protagonist.Strength < protagonist.MaxStrength;
 
         public override void UseHealing(int healingLevel)
         {
