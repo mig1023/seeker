@@ -28,7 +28,8 @@ namespace Seeker.Gamebook.Moonrunner
             return luckCheck;
         }
 
-        public static List<string> Luck() => Luck(out bool _);
+        public static List<string> Luck() =>
+            Luck(out bool _);
 
         public static bool NoMoreEnemies(List<Character> enemies, int WoundsLimit) =>
             enemies.Where(x => x.Endurance > (WoundsLimit > 0 ? WoundsLimit : 0)).Count() == 0;
