@@ -58,7 +58,8 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             Discipline = this.Discipline,
         };
 
-        public override string Save() => String.Join("|", Sestertius, Honor, Legionaries, Horsemen, Discipline);
+        public override string Save() =>
+            String.Join("|", Sestertius, Honor, Legionaries, Horsemen, Discipline);
 
         public override void Load(string saveLine)
         {
