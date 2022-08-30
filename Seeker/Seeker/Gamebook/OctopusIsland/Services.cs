@@ -19,7 +19,8 @@ namespace Seeker.Gamebook.OctopusIsland
             return protagonistHitpoint;
         }
 
-        public static bool NoMoreEnemies(List<Character> enemies) => enemies.Where(x => x.Hitpoint > 0).Count() == 0;
+        public static bool NoMoreEnemies(List<Character> enemies) =>
+            enemies.Where(x => x.Hitpoint > 0).Count() == 0;
 
         public static void SaveCurrentWarriorHitPoints()
         {
