@@ -10,10 +10,17 @@ namespace Seeker.Gamebook.SilentSchool
         {
             int woundsBonus = (Game.Option.IsTriggered("Кайф") ? 2 : 1);
 
-            bool trigger = DoByName("Trigger", () => Game.Option.Trigger(ValueString));
-            bool change = DoByName("Change", () => protagonist.ChangeDecision = Value);
-            bool weapon = DoByName("Weapon", () => protagonist.Weapon = ValueString);
-            bool removeWeapon = DoByName("RemoveWeapon", () => protagonist.Weapon = String.Empty);
+            bool trigger = DoByName("Trigger",
+                () => Game.Option.Trigger(ValueString));
+
+            bool change = DoByName("Change",
+                () => protagonist.ChangeDecision = Value);
+
+            bool weapon = DoByName("Weapon",
+                () => protagonist.Weapon = ValueString);
+
+            bool removeWeapon = DoByName("RemoveWeapon",
+                () => protagonist.Weapon = String.Empty);
 
             bool woundsByWeapon2 = DoByName("WoundsByWeapon2",
                 () => protagonist.Life -= (String.IsNullOrEmpty(protagonist.Weapon) ? 4 : 2) * woundsBonus);
