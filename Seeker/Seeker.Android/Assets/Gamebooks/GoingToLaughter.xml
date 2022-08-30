@@ -8698,7 +8698,7 @@
 				<Gameover Text="Ваc сразила пуля" Singleton="Невезение, Рассеянность, Малодушие">
 					<Modification Name="StaticBonuses" Value="Heroism=20, Inspiration=20, Дежа вю"/>
 					<Text>Если же всё прошло блаополучно, то Вы потихонечку слиняли в лес, пока все эти ребята увлечены сражением…</Text>
-				</Option>
+				</Gameover>
 				<Option Destination="767"/>
 			</Options>
 		</Paragraph>
@@ -8892,7 +8892,7 @@
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Рассеянность">
 					<Modification Name="StaticBonuses" Value="Heroism=2, Inspiration=20, Дежа вю"/>
 					<Text>Если же нет, то всё, слава Богу, обошлось.\n\nЕсли Вы ещё живы - возвращайтесь на параграф с которого пришли, не лезьте, куда не просят, и не трогайте, что попало!</Text>
-				</Option>
+				</Gameover>
 				<Option Destination="717"/>
 			</Options>
 		</Paragraph>
@@ -8905,7 +8905,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=20, Inspiration=20, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -9292,7 +9292,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=20, Inspiration=20, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -9851,7 +9851,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -10640,7 +10640,7 @@
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Дежа вю"/>
 					<Text>Если воля к жизни пересилила и недуг отступил, вычёркивайте недостаток «Сумасшествие»:</Text>
-				</Option>
+				</Gameover>
 				<Option Destination="993" Text="Воля к жизни пересилила!"/>
 			</Options>
 		</Paragraph>
@@ -10842,7 +10842,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -11034,7 +11034,7 @@
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Старые счёты">
 					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
 					<Text>Если же всё в порядке - Вы всласть поглазели на носорога (о том, откуда он тут взялся, Вы, возможно, узнаете позднее, или как-нибудь в другой раз), а позднее побрели в собор</Text>
-				</Option>
+				</Gameover>
 				<Option Destination="348" Text="В собор"/>
 			</Options>
 		</Paragraph>
@@ -11688,7 +11688,7 @@
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Се ля ви"/>
 					<Text>В случае успеха, Ваш поход закончился благополучно, а Ваша троица вскоре покинула Кокань и зажила припеваючи на чужбине. Запишите достижение «Казнокрад». Если Вы в первый раз очутились на этом параграфе, запишите ключевые слова «Се ля ви», 10 пунктов Героизма и 10 пунктов Вдохновения.</Text>
-				</Option>
+				</Gameover>
 				<Gameover Text="Если Вас не устраивает и эта концовка тоже, и Вы желаете другого завершения истории" Value="Heroism=10, Inspiration=10, Се ля ви"/>
 			</Options>
 		</Paragraph>
@@ -12157,7 +12157,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -12169,7 +12169,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -12178,7 +12178,7 @@
 			<Options>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Text>Если же Вы преодолели свои страхи и волнения, то благополучно избавились от этого досадного недоразумения, и приплыли к отцу на свадьбу не просто так, а даже с трофеями:</Text>
-				</Option>
+				</Gameover>
 				<Option Destination="335"/>
 			</Options>
 		</Paragraph>
@@ -12204,7 +12204,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -12508,7 +12508,7 @@
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Малодушие|Суеверие">
 					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
 					<Text>Если же всё прошло благополучно, Вы находите в себе силы воззвать к Создателю. Если Вы набожный, и Ваша вера сильна, то кадавры возвращаются обратно в свои могилы и засыпают вечным сном, попутно забрав с собой тех, кто призвал их…</Text>
-				</Option>
+				</Gameover>
 				<Option Destination="1310" Availability="Набожность"/>
 			</Options>
 		</Paragraph>
@@ -12770,7 +12770,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=5, Inspiration=5, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -12961,7 +12961,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=5, Inspiration=5, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -13523,7 +13523,7 @@
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Малодушие|Сумасшествие|Забывчивость|Рассеянность|Невезение|Плохое зрение|Суеверие">
 					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
 					<Text>Если у вас нет ни перечисленных достоинств, ни указанных недостатков:</Text>
-				</Option>
+				</Gameover>
 				<Option Destination="158"/>
 			</Options>
 		</Paragraph>
@@ -13598,7 +13598,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -13713,10 +13713,10 @@
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=10, Inspiration=10, Се ля ви"/>
 					<Text>В случае провала – Вы просто погибли смертью храбрых, а Д`Ладье сумел-таки взять Кокань. Если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 15 пунктов Героизма и 15 пунктов Вдохновения.</Text>
-				</Option>
+				</Gameover>
 				<Gameover Singleton="Невезение|Малодушие|Рассеянность|Сумасшествие">
 					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -13807,10 +13807,10 @@
 			<Options>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Малодушие|Забывчивость|Рассеянность|Сумасшествие|Обжорство|Плохой слух|Плохое зрение|Суеверие|Невезение" Aftetext="В ином случае, войска, под Вашим чутким руководством, вскоре взяли город. Ангерран Д`Ладье объявил о своём праве на коканский престол, и, таким образом, конфликт был улажен сравнительно малой кровью. Запишите достижение «Изменник». Если Вы в первый раз очутились на этом параграфе, запишите ключевые слова «Се ля ви», 10 пунктов Героизма и 10 пунктов Вдохновения…">
 					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
-				</Option>
+				</Gameover>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=10, Inspiration=10, Се ля ви"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -13898,10 +13898,10 @@
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Availability="Живучесть|Везение|Смекалка|Наблюдательность|Набожность">
 					<Modification Name="StaticBonuses" Value="Heroism=10, Inspiration=10, Се ля ви"/>
 					<Text>В противном случае, Вы пали на поле сражения, а войско Ангеррана вскоре было разбито. Если попадаете на этот параграф впервые, добавьте ключевые слова «Дежа вю» и запишите 25 пунктов Героизма и 25 пунктов Вдохновения…</Text>
-				</Option>
+				</Gameover>
 				<Gameover Text="Если Вас не устраивает и эта концовка тоже, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -13931,10 +13931,10 @@
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Малодушие|Забывчивость|Рассеянность|Сумасшествие|Обжорство|Плохой слух|Плохое зрение|Суеверие|Невезение">
 					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
 					<Text>В ином случае, Ваш отряд ворвался прямиком в королевскую опочивальню, расправившись с королём и его телохранителям на месте, а вскоре – Ангерран Д`Ладье объявил о своём праве на коканский престол, и, таким образом, конфликт был улажен сравнительно малой кровью. Запишите достижение «Изменник». Если Вы в первый раз очутились на этом параграфе, запишите ключевые слова «Се ля ви», 10 пунктов Героизма и 10 пунктов Вдохновения.</Text>
-				</Option>
+				</Gameover>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=10, Inspiration=10, Се ля ви"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14284,7 +14284,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14297,7 +14297,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14314,7 +14314,7 @@
 			<Options>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Невезение|Малодушие|Рассеянность|Суеверие">
 					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
-				</Option>
+				</Gameover>
 				<Option Destination="1297" Text="Если же Вы преодолели свои страхи и волнения, то благополучно избавились от этого досадного недоразумения (Вы получаете +25 пунктов Героизма и +25 пунктов Вдохновения!) и продолжили плаванье">
 					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25"/>
 				</Option>
@@ -14331,7 +14331,7 @@
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
 					<Text>Если же Вы не являетесь определённо везучим или невезучим, то бросьте кость, и если выпавшее значение от 1-3, всё закончилось мрачно, а если от 4-6 – благополучно.\n\nКак обычно, Вы можете использовать неизрасходованные пункты Вдохновения для переброса результата.</Text>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14344,7 +14344,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=25, Inspiration=25, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14361,7 +14361,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -14598,7 +14598,7 @@
 				</Option>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории">
 					<Modification Name="StaticBonuses" Value="Heroism=15, Inspiration=15, Дежа вю"/>
-				</Option>
+				</Gameover>
 			</Options>
 		</Paragraph>
 		<Paragraph>
