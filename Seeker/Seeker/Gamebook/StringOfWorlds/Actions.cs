@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Seeker.Gamebook.StringOfWorlds
 {
@@ -277,11 +276,13 @@ namespace Seeker.Gamebook.StringOfWorlds
             int numberOfDeals = 0;
 
             foreach (string thing in new List<string> { "Веер", "Полоска ароматической смолы", "Мягкая серебристая шкура" })
+            {
                 if (Game.Option.IsTriggered(thing))
                 {
                     bargain.Add(String.Format("{0} - графиня покупает за монету", thing));
                     numberOfDeals += 1;
                 }
+            }
 
             if (numberOfDeals > 0)
             {
@@ -401,8 +402,10 @@ namespace Seeker.Gamebook.StringOfWorlds
             }
         }
 
-        public override bool IsHealingEnabled() => protagonist.Strength < protagonist.MaxStrength;
+        public override bool IsHealingEnabled() =>
+            protagonist.Strength < protagonist.MaxStrength;
 
-        public override void UseHealing(int healingLevel) => protagonist.Strength += healingLevel;
+        public override void UseHealing(int healingLevel) =>
+            protagonist.Strength += healingLevel;
     }
 }
