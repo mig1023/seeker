@@ -9,9 +9,11 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Paragraph Get(int id, XmlNode xmlParagraph) => base.Get(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) =>
+            base.Get(xmlParagraph);
 
-        public override Abstract.IActions ActionParse(XmlNode xmlAction) => (Actions)ActionTemplate(xmlAction, new Actions());
+        public override Abstract.IActions ActionParse(XmlNode xmlAction) =>
+            (Actions)ActionTemplate(xmlAction, new Actions());
 
         public override Option OptionParse(XmlNode xmlOption)
         {
