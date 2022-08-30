@@ -11,7 +11,8 @@ namespace Seeker.Gamebook.RendezVous
 
         public int Dices { get; set; }
 
-        public override List<string> Status() => new List<string> { String.Format("Осознание: {0}", protagonist.Awareness) };
+        public override List<string> Status() =>
+            new List<string> { String.Format("Осознание: {0}", protagonist.Awareness) };
 
         public override bool Availability(string option)
         {
