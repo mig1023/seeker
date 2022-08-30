@@ -114,7 +114,8 @@ namespace Seeker.Gamebook.OrcsDay
             return new List<string> { "RELOAD" };
         }
 
-        public List<string> Decrease() => ChangeProtagonistParam(Stat, protagonist, "StatBonuses", decrease: true);
+        public List<string> Decrease() =>
+            ChangeProtagonistParam(Stat, protagonist, "StatBonuses", decrease: true);
 
         public List<string> OrcishnessInit()
         {
@@ -244,7 +245,8 @@ namespace Seeker.Gamebook.OrcsDay
             return gameLines;
         }
 
-        public override bool Availability(string option) => AvailabilityTrigger(option);
+        public override bool Availability(string option) =>
+            AvailabilityTrigger(option);
 
         public List<string> Fight()
         {
@@ -534,8 +536,10 @@ namespace Seeker.Gamebook.OrcsDay
             }
         }
 
-        public override bool IsHealingEnabled() => protagonist.Hitpoints < 5;
+        public override bool IsHealingEnabled() =>
+            protagonist.Hitpoints < 5;
 
-        public override void UseHealing(int healingLevel) => protagonist.Hitpoints += healingLevel;
+        public override void UseHealing(int healingLevel) =>
+            protagonist.Hitpoints += healingLevel;
     }
 }

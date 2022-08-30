@@ -37,7 +37,8 @@ namespace Seeker.Gamebook.OrcsDay
                 Game.Option.Trigger("Вместе с ней");
         }
 
-        public static bool FightVsAdvanturer(string name) => name == "Приключенцы";
+        public static bool FightVsAdvanturer(string name) =>
+            name == "Приключенцы";
 
         public static bool CalculationCondition(string conditionParam)
         {
