@@ -7,7 +7,8 @@ namespace Seeker.Gamebook.SwampFever
     {
         private static Character protagonist = Character.Protagonist;
 
-        public static string GetUpgratesValues(int index, int part) => Constants.GetUpgrates[index].Split('|')[part - 1];
+        public static string GetUpgratesValues(int index, int part) =>
+            Constants.GetUpgrates[index].Split('|')[part - 1];
 
         public static int CountInCombination(List<int> combination, int dice)
         {
