@@ -7,7 +7,8 @@ namespace Seeker.Gamebook.RockOfTerror
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Paragraph Get(int id, XmlNode xmlParagraph) => base.Get(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) =>
+            base.Get(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction) =>
             base.ActionParse(xmlAction, new Actions(), GetProperties(new Actions()), new Modification());

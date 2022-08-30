@@ -12,7 +12,8 @@ namespace Seeker.Gamebook.RockOfTerror
         {
             TimeSpan time = TimeSpan.FromMinutes(protagonist.Time);
 
-            List<string> statusLines = new List<string> { String.Format("Прошедшее время: {0:d2}:{1:d2}", time.Hours, time.Minutes) };
+            List<string> statusLines = new List<string> {
+                String.Format("Прошедшее время: {0:d2}:{1:d2}", time.Hours, time.Minutes) };
 
             if (protagonist.MonksHeart != null)
                 statusLines.Add(String.Format("Сила сердца монаха: {0}", protagonist.MonksHeart));
