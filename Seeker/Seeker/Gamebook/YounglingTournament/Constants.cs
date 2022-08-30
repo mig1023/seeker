@@ -8,7 +8,8 @@ namespace Seeker.Gamebook.YounglingTournament
 
         public static int GetMaxTechniqueValue() => 4;
 
-        public static Dictionary<Character.SwordTypes, string> SwordSkillsNames() => new Dictionary<Character.SwordTypes, string>
+        public static Dictionary<Character.SwordTypes, string> SwordSkillsNames() =>
+            new Dictionary<Character.SwordTypes, string>
         {
             [Character.SwordTypes.Decisiveness] = "Решительности",
             [Character.SwordTypes.Elasticity] = "Эластичности",
