@@ -37,9 +37,7 @@ namespace Seeker.Gamebook.VWeapons
             List<string> enemies = new List<string>();
 
             if (Enemies == null)
-            {
                 return enemies;
-            }
 
             foreach (Character enemy in Enemies)
             {
@@ -108,9 +106,7 @@ namespace Seeker.Gamebook.VWeapons
                 return true;
             }
         }
-
         
-
         public List<string> Damage()
         {
             List<string> damage = new List<string>();

@@ -7,7 +7,8 @@ namespace Seeker.Gamebook.VWeapons
     class Services
     {
         public static bool SpecialCheck() =>
-            (Game.Option.IsTriggered("Mt") || Game.Option.IsTriggered("P")) &&
+            (Game.Option.IsTriggered("Mt") || Game.Option.IsTriggered("P"))
+            &&
             !Game.Option.IsTriggered("B") && Character.Protagonist.Suspicions <= 3;
 
         public static bool SpecialFCheck() =>
