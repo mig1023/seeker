@@ -602,7 +602,7 @@ namespace Seeker.Gamebook.SwampFever
                 int myForce = Game.Dice.Roll();
                 warReport.Add(String.Format("Вы тянете: {0}", Game.Dice.Symbol(myForce)));
 
-                int totalForce = erikForce + jonyForce + jonyForce;
+                int totalForce = erikForce + jonyForce + myForce;
 
                 if (battleCry)
                 {
@@ -631,7 +631,7 @@ namespace Seeker.Gamebook.SwampFever
                         break;
 
                     case 3:
-                        myForce += 2;
+                        totalForce += 2;
 
                         warReport.Add("Ваша тактика: «Резкий рывок»");
                         warReport.Add(String.Format("+2 к вашей тяге за рывок, итого тяга: {0}", totalForce));
