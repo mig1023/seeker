@@ -533,7 +533,8 @@ namespace Seeker.Gamebook.PrairieLaw
             }
         }
 
-        public override bool IsHealingEnabled() => protagonist.Strength < protagonist.MaxStrength;
+        public override bool IsHealingEnabled() =>
+            protagonist.Strength < protagonist.MaxStrength;
 
         public override void UseHealing(int healingLevel)
         {
