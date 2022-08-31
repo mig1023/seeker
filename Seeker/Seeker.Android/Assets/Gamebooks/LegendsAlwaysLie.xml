@@ -5972,14 +5972,16 @@
 			<Actions>
 				<Reaction>
 					<After>
-						<Text>Если ваши рефлексы подведут вас, то снаряд достигнет своей цели\n\nЕсли же вы быстры как ветер, то вы успеете отбить летящий шар. В этом случае:</Text>
+						<Text>Если ваши рефлексы подведут вас, то снаряд достигнет своей цели:</Text>
 					</After>
 				</Reaction>
 			</Actions>
 			<Options>
+				<Option Destination="661" Text="Снаряд достигнет своей цели">
+					<Text>Если же вы быстры как ветер, то вы успеете отбить летящий шар. В этом случае:</Text>
+				</Option>
 				<Option Destination="638" Text="У вас в руках орочий яхан"/>
-				<Option Destination="652" Text="Обычный ведьмачий меч"/>
-				<Option Destination="661" Text="Снаряд достигнет своей цели"/>
+				<Option Destination="652" Text="Обычный ведьмачий меч"/>	
 			</Options>
 		</Paragraph>
 		<Paragraph>
