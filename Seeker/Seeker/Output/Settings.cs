@@ -132,7 +132,7 @@ namespace Seeker.Output
             {
                 Switch settingSwitcher = new Switch
                 {
-                    IsToggled = (Game.Settings.GetValue(settingType) == 1),
+                    IsToggled = (Game.Settings.IsEnabled(settingType)),
                     HorizontalOptions = LayoutOptions.FillAndExpand,
                     VerticalOptions = LayoutOptions.Center,
                 };

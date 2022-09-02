@@ -423,22 +423,14 @@ namespace Seeker.Output
         public static double FontSize(TextFontSize size, bool italic = false)
         {
             if (Game.Settings.GetValue("FontType") == 1)
-            {
                 italic = false;
-            }
 
             if (italic && Constants.FontSizeItalic.ContainsKey(size))
-            {
                 return Constants.FontSizeItalic[size];
-            }
             else if (!italic && Constants.FontSize.ContainsKey(size))
-            {
                 return Constants.FontSize[size];
-            }
             else
-            {
                 return Font(NamedSize.Medium);
-            }
         }
 
         public static double Font(NamedSize namedSize)
@@ -450,13 +442,11 @@ namespace Seeker.Output
                 return Device.GetNamedSize(size, typeof(Label));
             }
             else
-            {
                 return Device.GetNamedSize(namedSize, typeof(Label));
-            }
         }
 
         private static string RedStyle(string line) =>
-            Game.Settings.GetValue("RedStyle") == 1 ? line.Replace("\\n\\n", "\\n\\t\\t\\t\\t") : line;
+            Game.Settings.IsEnabled("RedStyle") ? line.Replace("\\n\\n", "\\n\\t\\t\\t\\t") : line;
 
         public static ExtendedLabel Text(Text text)
         {
@@ -464,13 +454,9 @@ namespace Seeker.Output
             label.FontFamily = TextFontFamily(bold: text.Bold, italic: text.Italic);
 
             if (text.Alignment == "Center")
-            {
                 label.HorizontalTextAlignment = TextAlignment.Center;
-            }
             else if (text.Alignment == "Right")
-            {
                 label.HorizontalTextAlignment = TextAlignment.End;
-            }
 
             return label;
         }
@@ -500,7 +486,7 @@ namespace Seeker.Output
         public static ExtendedLabel Text(string text, bool defaultParams = false, bool italic = false,
             TextFontSize size = TextFontSize.nope, bool selected = false)
         {
-            bool justyfy = (defaultParams ? false : (Game.Settings.GetValue("Justyfy") == 1));
+            bool justyfy = (defaultParams ? false : (Game.Settings.IsEnabled("Justyfy")));
 
             ExtendedLabel label = new ExtendedLabel
             {

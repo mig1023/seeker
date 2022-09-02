@@ -438,7 +438,7 @@ namespace Seeker
             if ((Game.Data.Actions == null) || !Game.Data.Actions.GameOver(out int toEndParagraph, out string toEndText))
                 return;
 
-            if (Game.Settings.GetValue("Godmode") == 1)
+            if (Game.Settings.IsEnabled("Godmode"))
                 return;
 
             Options.Children.Clear();
