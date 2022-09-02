@@ -24,6 +24,10 @@
 		<Type>Justyfy</Type>
 	</Setting>
 	<Setting>
+		<Name>Красная строка вместо отступа</Name>
+		<Type>RedStyle</Type>
+	</Setting>
+	<Setting>
 		<Name>Недоступные опции</Name>
 		<Type>DisabledOption</Type>
 		<Options>

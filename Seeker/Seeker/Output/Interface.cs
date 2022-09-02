@@ -455,9 +455,12 @@ namespace Seeker.Output
             }
         }
 
+        private static string RedStyle(string line) =>
+            Game.Settings.GetValue("RedStyle") == 1 ? line.Replace("\\n\\n", "\\n\\t\\t\\t\\t") : line;
+
         public static ExtendedLabel Text(Text text)
         {
-            ExtendedLabel label = Text(text.Content, italic: text.Italic, size: text.Size, selected: text.Selected);
+            ExtendedLabel label = Text(RedStyle(text.Content), italic: text.Italic, size: text.Size, selected: text.Selected);
             label.FontFamily = TextFontFamily(bold: text.Bold, italic: text.Italic);
 
             if (text.Alignment == "Center")
@@ -502,7 +505,7 @@ namespace Seeker.Output
             ExtendedLabel label = new ExtendedLabel
             {
                 FontSize = FontSize(defaultParams ? TextFontSize.normal : TextFontSize.little),
-                Text = Regex.Unescape(text),
+                Text = Regex.Unescape(RedStyle(text)),
                 FontFamily = TextFontFamily(),
                 JustifyText = justyfy,
                 LineHeight = Constants.LINE_HEIGHT,

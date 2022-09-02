@@ -76,7 +76,7 @@ namespace Seeker.Game
         public static void AllTextParse(ref StackLayout textPlace, int id, string optionName, out string text)
         {
             text = Xml.TextParse(id, optionName);
-
+           
             if (!String.IsNullOrEmpty(text))
                 textPlace.Children.Add(Interface.Text(text));
 
