@@ -3530,7 +3530,8 @@
 					</Enemies>
 					<Trigger>Rellik</Trigger>
 					<After>
-						<Text>Запишите слово “Rellik” на Листке Приключения. Если вам удалось убить всех троих:</Text>
+						<Text Size="small">Запишите слово “Rellik” на Листке Приключения.</Text>
+						<Text>Если вам удалось убить всех троих:</Text>
 					</After>
 				</Fight>
 			</Actions>
