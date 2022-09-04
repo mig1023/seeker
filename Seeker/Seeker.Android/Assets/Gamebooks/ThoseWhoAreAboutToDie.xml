@@ -803,7 +803,10 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>93</ID>
-			<Text>Бани замечательно расслабили уставшее тело бойца.\n\nДобавь себе 3 Выносливости.</Text>
+			<Texts>
+				<Text>Бани замечательно расслабили уставшее тело бойца.</Text>
+				<Text Size="small">Добавь себе 3 Выносливости.</Text>
+			</Texts>
 			<Modifications>
 				<Endurance Value="3"/>
 			</Modifications>
