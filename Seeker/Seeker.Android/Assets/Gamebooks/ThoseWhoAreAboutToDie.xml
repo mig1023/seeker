@@ -817,7 +817,10 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>94</ID>
-			<Text>Питательный, но без излишеств, обед восстановил силы бойца.\n\nДобавь 2 силы.</Text>
+			<Texts>
+				<Text>Питательный, но без излишеств, обед восстановил силы бойца.</Text>
+				<Text Size="small">Добавь 2 силы.</Text>
+			</Texts>
 			<Modifications>
 				<Strength Value="2"/>
 			</Modifications>
