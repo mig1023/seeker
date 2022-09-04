@@ -2097,7 +2097,7 @@
 						<Enemy Name="Конрад Заар" Mastery="8" Endurance="8"/>
 					</Enemies>
 					<After>
-						<Text>Запишите слово “darnoc” на Листок Путешественника.</Text>
+						<Text Size="small">Запишите слово “darnoc” на Листок Путешественника.</Text>
 					</After>
 				</Fight>
 			</Actions>
