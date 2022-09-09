@@ -1201,7 +1201,7 @@
 			</Actions>		
 			<Options>
 				<Option Destination="424" Text="Вы попросили помощи у Посейдона"/>
-				<Option Destination="257" Text="Вы не стали этого делать "/>
+				<Option Destination="257" Text="Вы не стали этого делать"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
