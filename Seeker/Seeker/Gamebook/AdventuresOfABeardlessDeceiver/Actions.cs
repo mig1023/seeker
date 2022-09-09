@@ -110,7 +110,10 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            if (Level > 0)
+            if (Type == "SellHorse")
+                return Game.Option.IsTriggered("ArabianHorse");
+
+            else if (Level > 0)
                 return true;
 
             else if ((Price <= 0) && secondButton)
@@ -235,6 +238,14 @@ namespace Seeker.Gamebook.AdventuresOfABeardlessDeceiver
 
             else if(!String.IsNullOrEmpty(Stat))
                 ChangeProtagonistParam(Stat, protagonist, "StatBonuses");
+
+            return new List<string> { "RELOAD" };
+        }
+
+        public List<string> SellHorse()
+        {
+            protagonist.Tanga += 20;
+            Game.Option.Trigger("ArabianHorse", remove: true);
 
             return new List<string> { "RELOAD" };
         }
