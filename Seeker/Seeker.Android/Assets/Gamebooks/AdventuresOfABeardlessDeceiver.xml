@@ -2022,7 +2022,6 @@
 					<Price>10</Price>
 				</Get>
 			</Actions>
-			<Triggers>Arak</Triggers>
 			<Options>
 				<Option Destination="118" Text="Алдар Косе получал от Лихарева крупную наградуа" Availability="LargeSum"/>
 				<Option Destination="145" Text="Лихарев обещал подарить скакуна" Availability="GiftPromise"/>
