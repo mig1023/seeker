@@ -2724,7 +2724,7 @@
 				<Wisdom Value="2"/>
 			</Modifications>
 			<Options>
-				<Option Destination="99" Text="Начать сначала"/>
+				<Option Destination="99"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
