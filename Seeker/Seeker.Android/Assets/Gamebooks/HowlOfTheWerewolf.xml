@@ -2850,7 +2850,7 @@
 				<Change Value="1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="473" Text="Отправитесь в погоню за волчьей стаей "/>
+				<Option Destination="473" Text="Отправитесь в погоню за волчьей стаей"/>
 				<Option Destination="302" Text="Пойдете за помощью к Бабушке Зекове"/>
 			</Options>
 		</Paragraph>
