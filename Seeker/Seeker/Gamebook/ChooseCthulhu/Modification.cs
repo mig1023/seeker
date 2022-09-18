@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Seeker.Gamebook.MissionToUrpan
+namespace Seeker.Gamebook.ChooseCthulhu
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {

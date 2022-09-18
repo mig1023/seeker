@@ -1,0 +1,28 @@
+<Gamebook>
+	<Introduction>
+		<Title>Всегда выбирай Ктулху</Title>
+		<Styles>
+			<Color Type="Main">10424d</Color>
+			<Color Type="Option">429494</Color>
+		</Styles>
+		<Settings>
+			<HideDisabledOption/>
+		</Settings>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph>
+			<ID>0</ID>
+			<Text>START</Text>
+			<Options>
+				<Option Destination="1" Text="В путь!"/>
+			</Options>
+		</Paragraph>
+		<Paragraph>
+			<ID>1</ID>
+			<Text>END</Text>
+			<Options>
+				<Option Destination="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>

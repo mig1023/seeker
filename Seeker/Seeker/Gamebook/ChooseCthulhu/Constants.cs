@@ -1,12 +1,10 @@
 ﻿using System.Collections.Generic;
 
-namespace Seeker.Gamebook.MissionToUrpan
+namespace Seeker.Gamebook.ChooseCthulhu
 {
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
-
-        public static Dictionary<string, int> ResultCalculation { get; set; }
 
         public static Links GetLinks() => new Links
         {

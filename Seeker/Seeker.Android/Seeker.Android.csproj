@@ -395,12 +395,6 @@
     <AndroidAsset Include="Assets\Gamebooks\OrcsDay.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\MissionToUrpan.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Gamebooks\MissionToUrpan.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\Sheriff.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -432,6 +426,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Settings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Gamebooks\ChooseCthulhu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ChooseCthulhu.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

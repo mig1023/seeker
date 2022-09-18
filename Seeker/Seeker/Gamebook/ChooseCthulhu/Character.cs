@@ -1,32 +1,32 @@
 ﻿using System;
 
-namespace Seeker.Gamebook.MissionToUrpan
+namespace Seeker.Gamebook.ChooseCthulhu
 {
     class Character : Prototypes.Character, Abstract.ICharacter
     {
         public static Character Protagonist = new Character();
 
-        public int Reputation { get; set; }
+        public int Initiation { get; set; }
 
         public override void Init()
         {
             base.Init();
 
-            Reputation = 3;
+            Initiation = 3;
         }
 
         public Character Clone() => new Character()
         {
             IsProtagonist = this.IsProtagonist,
             Name = this.Name,
-            Reputation = this.Reputation,
+            Initiation = this.Initiation,
         };
 
-        public override string Save() => Reputation.ToString();
+        public override string Save() => Initiation.ToString();
 
         public override void Load(string saveLine)
         {
-            Reputation = int.Parse(saveLine);
+            Initiation = int.Parse(saveLine);
             IsProtagonist = true;
         }
     }
