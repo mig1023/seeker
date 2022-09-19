@@ -6,13 +6,18 @@ namespace Seeker.Gamebook.ChooseCthulhu
     {
         public static Character Protagonist = new Character();
 
-        public int Initiation { get; set; }
+        private int _initiation;
+        public int Initiation
+        {
+            get => _initiation;
+            set => _initiation = Game.Param.Setter(value, _initiation, this);
+        }
 
         public override void Init()
         {
             base.Init();
 
-            Initiation = 3;
+            Initiation = 0;
         }
 
         public Character Clone() => new Character()
