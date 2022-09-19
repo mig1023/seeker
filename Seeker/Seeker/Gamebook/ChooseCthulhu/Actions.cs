@@ -11,7 +11,16 @@ namespace Seeker.Gamebook.ChooseCthulhu
         public override List<string> Status() =>
             new List<string> { String.Format("Посвящение: {0}", protagonist.Initiation) };
 
-        public override bool Availability(string option) =>
-            AvailabilityTrigger(option);
+        public override bool Availability(string option)
+        {
+            if (String.IsNullOrEmpty(option))
+                return true;
+
+            else if (option.Contains(">"))
+                return Game.Services.LevelParse(option) >= protagonist.Initiation;
+
+            else
+                return AvailabilityTrigger(option.Trim());
+        }
     }
 }
