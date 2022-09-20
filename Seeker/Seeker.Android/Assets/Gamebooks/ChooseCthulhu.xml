@@ -3,7 +3,9 @@
 		<Title>Всегда выбирай Ктулху</Title>
 		<Styles>
 			<Color Type="Main">10424d</Color>
-			<Color Type="Option">429494</Color>
+			<Color Type="Option, System">52767e</Color>
+			<Color Type="StatusBar">3f6770</Color>
+			<Color Type="SystemFont">dce3e5</Color>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
