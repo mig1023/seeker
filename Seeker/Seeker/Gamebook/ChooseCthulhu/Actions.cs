@@ -17,7 +17,10 @@ namespace Seeker.Gamebook.ChooseCthulhu
                 return true;
 
             else if (option.Contains(">"))
-                return Game.Services.LevelParse(option) >= protagonist.Initiation;
+                return protagonist.Initiation > Game.Services.LevelParse(option);
+
+            else if (option.Contains("<"))
+                return protagonist.Initiation < Game.Services.LevelParse(option);
 
             else
                 return AvailabilityTrigger(option.Trim());
