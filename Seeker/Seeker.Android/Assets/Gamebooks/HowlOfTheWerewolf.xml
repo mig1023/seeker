@@ -2,13 +2,13 @@
 	<Introduction>
 		<Title>Вой оборотня</Title>
 		<Styles>
-			<Color Type="Background">c2cccd</Color>
-			<Color Type="StatusBar">253130</Color>
-			<Color Type="AdditionalStatus, ActionBox">a8b7b8</Color>
-			<Color Type="Main">383e3b</Color>
-			<Color Type="Action">516f72</Color>
-			<Color Type="Option, Continue">738b8e</Color>
-			<Color Type="System">9dadaf</Color>
+			<Color Name="Background">c2cccd</Color>
+			<Color Name="StatusBar">253130</Color>
+			<Color Name="AdditionalStatus, ActionBox">a8b7b8</Color>
+			<Color Name="Main">383e3b</Color>
+			<Color Name="Action">516f72</Color>
+			<Color Name="Option, Continue">738b8e</Color>
+			<Color Name="System">9dadaf</Color>
 		</Styles>
 		<Constants>
 			<Dictionary Name="GetCountName">
