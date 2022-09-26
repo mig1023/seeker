@@ -2,14 +2,14 @@
 	<Introduction>
 		<Title>Приключения безбородого обманщика</Title>
 		<Styles>
-			<Color Type="Background">dbeadc</Color>
-			<Color Type="ActionBox">7cb281</Color>
-			<Color Type="StatusBar">005100</Color>
-			<Color Type="AdditionalStatus">99b999</Color>
-			<Color Type="Main">5da130</Color>
-			<Color Type="Action">339933</Color>
-			<Color Type="Option, Continue">8dbd6e</Color>
-			<Color Type="System">c7dfb9</Color>
+			<Color Name="Background">dbeadc</Color>
+			<Color Name="ActionBox">7cb281</Color>
+			<Color Name="StatusBar">005100</Color>
+			<Color Name="AdditionalStatus">99b999</Color>
+			<Color Name="Main">5da130</Color>
+			<Color Name="Action">339933</Color>
+			<Color Name="Option, Continue">8dbd6e</Color>
+			<Color Name="System">c7dfb9</Color>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses">0, 205</List>
