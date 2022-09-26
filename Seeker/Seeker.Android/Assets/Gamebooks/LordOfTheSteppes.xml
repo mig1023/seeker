@@ -2,13 +2,13 @@
 	<Introduction>
 		<Title>Владыка степей</Title>
 		<Styles>
-			<Color Type="StatusBar">b42806</Color>
-			<Color Type="StatusFont">ffffff</Color>
-			<Color Type="Main">b80f0a</Color>
-			<Color Type="Action">a92605</Color>
-			<Color Type="Option">878787</Color>
-			<Color Type="Continue">db8784</Color>
-			<Color Type="System">f2f2f2</Color>
+			<Color Name="StatusBar">b42806</Color>
+			<Color Name="StatusFont">ffffff</Color>
+			<Color Name="Main">b80f0a</Color>
+			<Color Name="Action">a92605</Color>
+			<Color Name="Option">878787</Color>
+			<Color Name="Continue">db8784</Color>
+			<Color Name="System">f2f2f2</Color>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses">0, 904, 905, 906</List>
