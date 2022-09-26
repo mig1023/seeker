@@ -2,13 +2,13 @@
 	<Introduction>
 		<Title>На невидимых фронтах</Title>
 		<Styles>
-			<Color Type="Main, Option">d52b1e</Color>
-			<Color Type="Continue">e57f78</Color>
-			<Color Type="ButtonFont, StatusFont">eede49</Color>
-			<Color Type="System">eca5a0</Color>
-			<Color Type="Background">ffdadb</Color>
-			<Color Type="StatusBar">aa2218</Color>
-			<Color Type="SystemFont">f7f1b6</Color>
+			<Color Name="Main, Option">d52b1e</Color>
+			<Color Name="Continue">e57f78</Color>
+			<Color Name="ButtonFont, StatusFont">eede49</Color>
+			<Color Name="System">eca5a0</Color>
+			<Color Name="Background">ffdadb</Color>
+			<Color Name="StatusBar">aa2218</Color>
+			<Color Name="SystemFont">f7f1b6</Color>
 		</Styles>
 		<Constants>
 			<List Name="GetApartments">один, два, три, один, два, три</List>
