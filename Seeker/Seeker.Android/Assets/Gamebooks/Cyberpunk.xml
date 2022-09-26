@@ -2,12 +2,12 @@
 	<Introduction>
 		<Title>Киберпанк: Тени Найт-Сити</Title>
 		<Styles>
-			<Color Type="AdditionalStatus">094542</Color>
-			<Color Type="AdditionalFont">ffffff</Color>
-			<Color Type="Main">118984</Color>
-			<Color Type="Action">0c5c58</Color>
-			<Color Type="Option, Continue">84c2bf</Color>
-			<Color Type="System">cde6e5</Color>
+			<Color Name="AdditionalStatus">094542</Color>
+			<Color Name="AdditionalFont">ffffff</Color>
+			<Color Name="Main">118984</Color>
+			<Color Name="Action">0c5c58</Color>
+			<Color Name="Option, Continue">84c2bf</Color>
+			<Color Name="System">cde6e5</Color>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses">0, 587, 588, 589</List>
