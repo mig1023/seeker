@@ -2,12 +2,12 @@
 	<Introduction>
 		<Title>День Орка</Title>
 		<Styles>
-			<Color Type="Main">a4be84</Color>
-			<Color Type="Continue">cad9b7</Color>
-			<Color Type="Action, StatusBar">72855c</Color>
-			<Color Type="System">e9efe2</Color>
-			<Color Type="Font, ButtonFont, SystemFont">000000</Color>
-			<Color Type="ActionBox, AdditionalStatus">c8d8b5</Color>
+			<Color Name="Main">a4be84</Color>
+			<Color Name="Continue">cad9b7</Color>
+			<Color Name="Action, StatusBar">72855c</Color>
+			<Color Name="System">e9efe2</Color>
+			<Color Name="Font, ButtonFont, SystemFont">000000</Color>
+			<Color Name="ActionBox, AdditionalStatus">c8d8b5</Color>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses">0, 102, 103</List>
