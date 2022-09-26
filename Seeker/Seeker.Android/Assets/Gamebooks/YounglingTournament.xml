@@ -2,12 +2,12 @@
 	<Introduction>
 		<Title>Турнир юнлингов</Title>
 		<Styles>
-			<Color Type="StatusBar">e8d17e</Color>
-			<Color Type="StatusFont">000000</Color>
-			<Color Type="ActionBox, Continue">e6d9ae</Color>
-			<Color Type="Main">c0ac6c</Color>
-			<Color Type="Action">c0a23b</Color>
-			<Color Type="System">f9f9f9</Color>
+			<Color Name="StatusBar">e8d17e</Color>
+			<Color Name="StatusFont">000000</Color>
+			<Color Name="ActionBox, Continue">e6d9ae</Color>
+			<Color Name="Main">c0ac6c</Color>
+			<Color Name="Action">c0a23b</Color>
+			<Color Name="System">f9f9f9</Color>
 		</Styles>
 		<Settings>
 			<ShowDisabledOption/>
