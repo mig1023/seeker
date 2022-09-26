@@ -2,9 +2,9 @@
 	<Introduction>
 		<Title>Шериф</Title>
 		<Styles>
-			<Color Type="Main">7d2c1c</Color>
-			<Color Type="Option, Continue">b45b27</Color>
-			<Color Type="System">f0d1b9</Color>
+			<Color Name="Main">7d2c1c</Color>
+			<Color Name="Option, Continue">b45b27</Color>
+			<Color Name="System">f0d1b9</Color>
 		</Styles>
 		<Constants>
 			<List Name="CleaningNotebookList"> Билли убит в амбаре, Все любили Билли, Убит ночью, Не успел защититься, У убийцы есть рука, Убийца женщина, Надо проверить салон мадам Жу-жу, Женская перчатка, Дробовик, Патроны, Портсигар</List>
