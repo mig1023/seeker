@@ -2,8 +2,8 @@
 	<Introduction>
 		<Title>В краю непуганных медведей</Title>
 		<Styles>
-			<Color Type="Main">9e003a</Color>
-			<Color Type="System">f9f9f9</Color>
+			<Color Name="Main">9e003a</Color>
+			<Color Name="System">f9f9f9</Color>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
