@@ -2,8 +2,8 @@
 	<Introduction>
 		<Title>Симулятор пенсионерки</Title>
 		<Styles>
-			<Color Type="Main">030436</Color>
-			<Color Type="Option">35365e</Color>
+			<Color Name="Main">030436</Color>
+			<Color Name="Option">35365e</Color>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
