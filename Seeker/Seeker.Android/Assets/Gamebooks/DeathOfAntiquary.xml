@@ -2,9 +2,9 @@
 	<Introduction>
 		<Title>Смерть антиквара</Title>
 		<Styles>
-			<Color Type="Main, Option">2e2e2e</Color>
-			<Color Type="Continue">9a9a9a</Color>
-			<Color Type="System">d6d6d6</Color>
+			<Color Name="Main, Option">2e2e2e</Color>
+			<Color Name="Continue">9a9a9a</Color>
+			<Color Name="System">d6d6d6</Color>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
