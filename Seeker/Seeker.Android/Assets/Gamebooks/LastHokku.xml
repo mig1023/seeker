@@ -2,8 +2,8 @@
 	<Introduction>
 		<Title>Последнее хокку</Title>
 		<Styles>
-			<Color Type="Main">deb887</Color>
-			<Color Type="ButtonFont">000000</Color>
+			<Color Name="Main">deb887</Color>
+			<Color Name="ButtonFont">000000</Color>
 		</Styles>
 		<Constants>
 			<List Name="GetParagraphsWithoutHokkuCreation">0, 1, 9, 10, 11, 12</List>
