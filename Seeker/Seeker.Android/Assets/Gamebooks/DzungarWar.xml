@@ -2,16 +2,16 @@
 	<Introduction>
 		<Title>Джунгарское нашествие</Title>
 		<Styles>
-			<Color Type="Background">f1e6d1</Color>
-			<Color Type="ActionBox">af8f69</Color>
-			<Color Type="StatusBar">dcc18c</Color>
-			<Color Type="StatusFont">000000</Color>
-			<Color Type="AdditionalStatus">ebdcbe</Color>
-			<Color Type="Main">93684f</Color>
-			<Color Type="Action">8c7254</Color>
-			<Color Type="Option">a88672</Color>
-			<Color Type="Continue">b99e8e</Color>
-			<Color Type="System">cebbaf</Color>
+			<Color Name="Background">f1e6d1</Color>
+			<Color Name="ActionBox">af8f69</Color>
+			<Color Name="StatusBar">dcc18c</Color>
+			<Color Name="StatusFont">000000</Color>
+			<Color Name="AdditionalStatus">ebdcbe</Color>
+			<Color Name="Main">93684f</Color>
+			<Color Name="Action">8c7254</Color>
+			<Color Name="Option">a88672</Color>
+			<Color Name="Continue">b99e8e</Color>
+			<Color Name="System">cebbaf</Color>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses">0, 658, 659, 660</List>
