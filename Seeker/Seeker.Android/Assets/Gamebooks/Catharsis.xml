@@ -2,14 +2,14 @@
 	<Introduction>
 		<Title>Катарсис</Title>
 		<Styles>
-			<Color Type="Background">cdcdcd</Color>
-			<Color Type="StatusBar, ActionBox, System">b8b8b8</Color>
-			<Color Type="StatusFont">000000</Color>
-			<Color Type="AdditionalStatus">bfbfbf</Color>
-			<Color Type="Main">51514b</Color>
-			<Color Type="Option">858581</Color>
-			<Color Type="Action">939393</Color>
-			<Color Type="Continue">a9a9a6</Color>
+			<Color Name="Background">cdcdcd</Color>
+			<Color Name="StatusBar, ActionBox, System">b8b8b8</Color>
+			<Color Name="StatusFont">000000</Color>
+			<Color Name="AdditionalStatus">bfbfbf</Color>
+			<Color Name="Main">51514b</Color>
+			<Color Name="Option">858581</Color>
+			<Color Name="Action">939393</Color>
+			<Color Name="Continue">a9a9a6</Color>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses">0, 401, 402</List>
