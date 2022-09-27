@@ -65,8 +65,7 @@ namespace Seeker
                 Error("Ошибка XML-кода книги:", ex.Message);
                 return;
             }
-            
-            GamepageSettings();
+
             Paragraph(0);
         }
 
@@ -112,6 +111,7 @@ namespace Seeker
             bool startOfGame = physicalStartOfGame || logicalStartOfGame;
 
             PageClean();
+            GamepageSettings();
 
             if (startOfGame)
             {
