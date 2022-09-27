@@ -30,10 +30,13 @@ namespace Seeker.Gamebook.ChooseCthulhu
         {
             Services.CheckColorInit();
 
+            bool mainDuttons = (type == ButtonTypes.Main) || (type == ButtonTypes.Option);
+            bool supplButtons = (type == ButtonTypes.System) || (type == ButtonTypes.Continue);
+
             if (Game.Settings.IsEnabled("WithoutStyles"))
                 return base.GetColor(type);
 
-            else if ((type == ButtonTypes.Main) || (type == ButtonTypes.Option) || (type == ButtonTypes.System))
+            else if (mainDuttons || supplButtons)
                 return Services.HexColor(MainButtonColor[0], MainButtonColor[1], MainButtonColor[2]);
 
             else if (type == ButtonTypes.Border)
