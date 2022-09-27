@@ -2,8 +2,6 @@
 	<Introduction>
 		<Title>Всегда выбирай Ктулху</Title>
 		<Styles>
-			<Color Name="Main">10424d</Color>
-			<Color Name="Option, System">52767e</Color>
 			<Color Name="StatusBar">3f6770</Color>
 			<Color Name="SystemFont">dce3e5</Color>
 		</Styles>
