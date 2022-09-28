@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>По воле Рима</Title>
+		<Copyright>Константин Таро, 2010</Copyright>
 		<Styles>
 			<Color Name="StatusBar">520809</Color>
 			<Color Name="Main">670b0c</Color>
