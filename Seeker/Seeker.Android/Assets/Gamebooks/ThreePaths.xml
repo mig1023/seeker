@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Три дороги</Title>
+		<Copyright>Александр Бутягин, Дмитрий Чистов, 1999</Copyright>
 		<Styles>
 			<Color Name="StatusBar">007a7a</Color>
 			<Color Name="Main, Option">009999</Color>
