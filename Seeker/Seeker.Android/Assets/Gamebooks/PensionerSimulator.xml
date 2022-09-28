@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Симулятор пенсионерки</Title>
+		<Copyright>Zaratystra, the_arsonist, 2018</Copyright>
 		<Styles>
 			<Color Name="Main">030436</Color>
 			<Color Name="Option">35365e</Color>
