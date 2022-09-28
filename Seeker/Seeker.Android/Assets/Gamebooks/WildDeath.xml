@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Дикая смерть</Title>
+		<Copyright>Дмитрий Бродовский, 2019</Copyright>
 		<Styles>
 			<Color Name="Main">86964f</Color>
 			<Color Name="Continue">b6c095</Color>
