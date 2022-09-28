@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Скала ужаса</Title>
+		<Copyright>Дмитрий Тышевич, 2009</Copyright>
 		<Styles>
 			<Color Name="Background">000000</Color>
 			<Color Name="Font">ffffff</Color>
