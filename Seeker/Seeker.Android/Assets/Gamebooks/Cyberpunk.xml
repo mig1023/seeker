@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Киберпанк: Тени Найт-Сити</Title>
+		<Copyright>Мария Ерошкина, 2021</Copyright>
 		<Styles>
 			<Color Name="AdditionalStatus">094542</Color>
 			<Color Name="AdditionalFont">ffffff</Color>
