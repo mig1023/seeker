@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Верная шпага короля</Title>
+		<Copyright>Дмитрий Браславский, 1995</Copyright>
 		<Styles>
 			<Color Name="StatusBar">870808</Color>
 			<Color Name="Main">911</Color>
