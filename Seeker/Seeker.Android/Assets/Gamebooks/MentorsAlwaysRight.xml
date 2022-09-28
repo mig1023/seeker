@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Наставники всегда правы</Title>
+		<Copyright>Роман Островерхов, 2011</Copyright>
 		<Styles>
 			<Color Name="Background">e0e7f2</Color>
 			<Color Name="ActionBox">7988a4</Color>
