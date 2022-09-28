@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Шериф</Title>
+		<Copyright>Zaratystra, 2022</Copyright>
 		<Styles>
 			<Color Name="Main">7d2c1c</Color>
 			<Color Name="Option, Continue">b45b27</Color>
