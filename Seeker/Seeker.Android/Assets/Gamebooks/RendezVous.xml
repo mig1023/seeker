@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Рандеву</Title>
+		<Copyright>Ал Торо, 2020</Copyright>
 		<Styles>
 			<Color Name="Main, Action, Option, StatusBar, Continue">ffffff</Color>
 			<Color Name="ButtonFont, StatusFont, StatusBorder, Border">000000</Color>
