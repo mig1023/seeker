@@ -1,6 +1,7 @@
 <Gamebook>
 	<Introduction>
 		<Title>Идущий на смех</Title>
+		<Copyright>Геннадий Логинов, 2018</Copyright>
 		<Styles>
 			<Color Name="StatusBar">2f0b0c</Color>
 			<Color Name="Main, Option">441012</Color>
