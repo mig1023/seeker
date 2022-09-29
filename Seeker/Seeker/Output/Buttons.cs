@@ -35,7 +35,8 @@ namespace Seeker.Output
 
         public static Button Option(Game.Option option, EventHandler onClick)
         {
-            bool optionColor = !String.IsNullOrEmpty(option.Availability) && !option.Availability.Contains(">") && !option.Availability.Contains("<");
+            bool optionColor = !String.IsNullOrEmpty(option.Availability) &&
+                !option.Availability.Contains(">") && !option.Availability.Contains("<");
 
             if (Game.Data.Constants.ShowDisabledOption() || !String.IsNullOrEmpty(option.Aftertext))
                 optionColor = !String.IsNullOrEmpty(option.Availability) && !Game.Data.Availability(option.Availability);

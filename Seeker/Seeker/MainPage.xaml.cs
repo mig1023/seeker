@@ -111,7 +111,6 @@ namespace Seeker
             bool startOfGame = physicalStartOfGame || logicalStartOfGame;
 
             PageClean();
-            GamepageSettings();
 
             if (startOfGame)
             {
@@ -130,6 +129,8 @@ namespace Seeker
             }
             else
                 paragraph = Game.Data.CurrentParagraph;
+
+            GamepageSettings();
 
             Game.Xml.AllTextParse(ref Text, id, optionName, out string text);
 
