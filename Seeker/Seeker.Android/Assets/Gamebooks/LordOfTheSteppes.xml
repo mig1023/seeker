@@ -7649,7 +7649,7 @@
 				<Fight>
 					<Enemies>
 						<Enemy Name="Первый всадник" Attack="12" Defence="17" Endurance="14" Initiative="11" SpecialTechnique="IgnoreFirstStrike"/>
-						<Enemy Name="Второй всадник" Attack="12" Defence="17" Endurance="14" Initiative="11" SpecialTechnique="PowerfulStrike"/> 
+						<Enemy Name="Второй всадник" Attack="12" Defence="17" Endurance="14" Initiative="11" SpecialTechnique="PowerfulStrike"/>
 					</Enemies>
 					<Benefit Name="Coins" Value="12"/>
 					<Benefit Name="MaxAttack" Value="1"/>
@@ -9117,7 +9117,7 @@
 				<Fight>
 					<Enemies>
 						<Enemy Name="Первый всадник" Attack="9" Defence="14" Endurance="10" Initiative="9"/>
-						<Enemy Name="Второй всадник" Attack="9" Defence="14" Endurance="10" Initiative="9"/> 
+						<Enemy Name="Второй всадник" Attack="9" Defence="14" Endurance="10" Initiative="9"/>
 					</Enemies>
 					<Benefit Name="Coins" Value="2"/>
 					<After>
