@@ -4304,8 +4304,10 @@
 				<Option Destination="381" Text="Медальон" Availability="Медальон"/>
 				<Option Destination="381" Text="Зеркальце" Availability="Зеркальце"/>
 				<Option Destination="381" Text="Ожерелье с амулетами" Availability="Ожирелье"/>
-				<Option Destination="381" Text="Корона" Availability="Корона"/>
-				<Option Destination="306" Text="В вашем заплечном мешке нет ничего, что подойдет в качестве подарка или вы просто не хотите ничего отдават"/>
+				<Option Destination="381" Text="Корона" Availability="Корона">
+					<Text>В вашем заплечном мешке нет ничего, что подойдет в качестве подарка или вы просто не хотите ничего отдавать:</Text>
+				</Option>
+				<Option Destination="306"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
