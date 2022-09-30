@@ -268,31 +268,10 @@ namespace Seeker.Output
             string separator = (paragraphs.Contains('(') ? "\n" : " / ");
             AddDisclaimerElement(head: "Обьём:", body: String.Join(String.Empty, paragraphs, separator, size), ref disclaimer, border);
 
-            disclaimer.Children.Add(DisclaimerElement("Оригинал:", CloseTapped(border), bold: true));
-            disclaimer.Children.Add(XmlOriginalButton(gamebook.Book));
-
             border.GestureRecognizers.Add(CloseTapped(border));
 
             border.Content = disclaimer;
             options.Children.Add(border);
-        }
-
-        private static Label XmlOriginalButton(string gamebook)
-        {
-            Label settingButton = new Label
-            {
-                Text = "XML-исходник",
-                VerticalOptions = LayoutOptions.Center,
-                FontSize = Interface.Font(NamedSize.Small),
-                TextDecorations = TextDecorations.Underline,
-                Margin = new Thickness(5, 0, 5, 5)
-            };
-
-            TapGestureRecognizer click = new TapGestureRecognizer();
-            click.Tapped += (sender, e) => Game.Xml.GameCodeShow(gamebook);
-            settingButton.GestureRecognizers.Add(click);
-
-            return settingButton;
         }
 
         public static StackLayout SystemMenu() => new StackLayout()

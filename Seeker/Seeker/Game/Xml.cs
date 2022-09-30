@@ -3,12 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using Xamarin.Forms;
-using System.IO;
 using Seeker.Gamebook;
 using Seeker.Output;
-using Xamarin.Essentials;
-using System.Xml.Xsl;
-using System.Xml.Linq;
 
 namespace Seeker.Game
 {
@@ -139,19 +135,6 @@ namespace Seeker.Game
             xmlFile.LoadXml(DependencyService.Get<Abstract.IAssets>().GetFromAssets(name));
 
             return xmlFile;
-        }
-
-        public static async void GameCodeShow(string name)
-        {
-            Description gamebook = List.GetDescription(name);
-
-            string file = Path.Combine(FileSystem.CacheDirectory, String.Format("{0}.txt", name));
-            File.WriteAllText(file, DependencyService.Get<Abstract.IAssets>().GetFromAssets(gamebook.XmlBook));
-
-            await Launcher.OpenAsync(new OpenFileRequest
-            {
-                File = new ReadOnlyFile(file)
-            });
         }
 
         public static void GameLoad(string name)
