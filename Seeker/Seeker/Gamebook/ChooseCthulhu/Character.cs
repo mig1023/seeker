@@ -22,7 +22,7 @@ namespace Seeker.Gamebook.ChooseCthulhu
 
             Initiation = 0;
 
-            BackColor = new List<int> { 129, 147, 147 };
+            BackColor = new List<int> { 112, 144, 167 };
             BtnColor = new List<int> { 50, 88, 100 };
         }
 
