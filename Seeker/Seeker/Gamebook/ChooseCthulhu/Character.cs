@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.ChooseCthulhu
 {
@@ -33,11 +35,23 @@ namespace Seeker.Gamebook.ChooseCthulhu
             Initiation = this.Initiation,
         };
 
-        public override string Save() => Initiation.ToString();
+        public override string Save()
+        {
+            string backColor = String.Join(",", BackColor);
+            string btnColor = String.Join(",", BtnColor);
+
+            return String.Join("|", Initiation, backColor, btnColor);
+        }
 
         public override void Load(string saveLine)
         {
-            Initiation = int.Parse(saveLine);
+            string[] save = saveLine.Split('|');
+
+            Initiation = int.Parse(save[0]);
+
+            BackColor = save[1].Split(',').Select(x => int.Parse(x)).ToList();
+            BtnColor = save[2].Split(',').Select(x => int.Parse(x)).ToList();
+
             IsProtagonist = true;
         }
     }
