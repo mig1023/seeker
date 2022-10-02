@@ -5,12 +5,6 @@ namespace Seeker.Gamebook.ChooseCthulhu
 {
     class Services
     {
-        public static bool CheckColorInit()
-        {
-            bool needInit = (Constants.BackgroudColor == null) || (Constants.MainButtonColor == null);
-            return needInit ? Constants.InitColor() : Game.Services.DoNothing();
-        }
-
         public static int SubColor(int color, int value)
         {
             if (color >= value)
@@ -20,11 +14,13 @@ namespace Seeker.Gamebook.ChooseCthulhu
                 return 0;
         }
 
-        public static void ModColors(ref List<int> color)
+        public static List<int> ModColors(List<int> color)
         {
             color[0] = SubColor(color[0], 7);
             color[1] = SubColor(color[1], 6);
             color[2] = SubColor(color[2], 6);
+
+            return color;
         }
 
         public static string HexColor(int r, int g, int b)

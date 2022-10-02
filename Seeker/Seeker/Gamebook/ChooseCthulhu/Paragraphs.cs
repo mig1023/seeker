@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.ChooseCthulhu
 
         public override Paragraph Get(int id, XmlNode xmlParagraph)
         {
-            Constants.InitColor();
+            Constants.ChangeBackground();
             return base.Get(xmlParagraph);
         }
 

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-using static Seeker.Output.Buttons;
+﻿using static Seeker.Output.Buttons;
 using static Seeker.Game.Data;
 
 namespace Seeker.Gamebook.ChooseCthulhu
@@ -8,28 +6,16 @@ namespace Seeker.Gamebook.ChooseCthulhu
     class Constants : Prototypes.Constants, Abstract.IConstants
     {
         public static Constants StaticInstance = new Constants();
-        public static List<int> BackgroudColor = null;
-        public static List<int> MainButtonColor = null;
+        private static Character protagonist = Character.Protagonist;
 
-        public static bool InitColor()
+        public static void ChangeBackground()
         {
-            if (BackgroudColor == null)
-                BackgroudColor = new List<int> { 129, 147, 147 };
-            else
-                Services.ModColors(ref BackgroudColor);
-
-            if (MainButtonColor == null)
-                MainButtonColor = new List<int> { 0, 47, 62 };
-            else
-                Services.ModColors(ref MainButtonColor);
-
-            return true;
+            protagonist.BackColor = Services.ModColors(protagonist.BackColor);
+            protagonist.BtnColor = Services.ModColors(protagonist.BtnColor);
         }
 
         public override string GetColor(ButtonTypes type)
         {
-            Services.CheckColorInit();
-
             bool mainDuttons = (type == ButtonTypes.Main) || (type == ButtonTypes.Option);
             bool supplButtons = (type == ButtonTypes.System) || (type == ButtonTypes.Continue);
 
@@ -37,10 +23,10 @@ namespace Seeker.Gamebook.ChooseCthulhu
                 return base.GetColor(type);
 
             else if (mainDuttons || supplButtons)
-                return Services.HexColor(MainButtonColor[0], MainButtonColor[1], MainButtonColor[2]);
+                return Services.HexColor(protagonist.BtnColor[0], protagonist.BtnColor[1], protagonist.BtnColor[2]);
 
             else if (type == ButtonTypes.Border)
-                return Services.СontrastBorder(BackgroudColor, MainButtonColor);
+                return Services.СontrastBorder(protagonist.BackColor, protagonist.BtnColor);
 
             else
                 return base.GetColor(type);
@@ -48,21 +34,18 @@ namespace Seeker.Gamebook.ChooseCthulhu
 
         public override string GetColor(ColorTypes type)
         {
-            Services.CheckColorInit();
-
             if (Game.Settings.IsEnabled("WithoutStyles"))
                 return base.GetColor(type);
 
             else if (type == ColorTypes.Background)
-                return Services.HexColor(BackgroudColor[0], BackgroudColor[1], BackgroudColor[2]);
+                return Services.HexColor(protagonist.BackColor[0], protagonist.BackColor[1], protagonist.BackColor[2]);
 
             else if (type == ColorTypes.Font)
-                return Services.СontrastText(BackgroudColor);
+                return Services.СontrastText(protagonist.BackColor);
 
             else
                 return base.GetColor(type);
         }
-
 
         public static Links GetLinks() => new Links
         {
