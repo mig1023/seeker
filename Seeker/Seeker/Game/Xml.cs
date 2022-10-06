@@ -107,14 +107,13 @@ namespace Seeker.Game
                     Bold = style.Contains("Bold", ignoreCase),
                     Italic = style.Contains("Italic", ignoreCase),
                     Selected = style.Contains("Selected", ignoreCase),
-                    Alignment = StringParse(text.Attributes["Alignment"]),
                 };
 
                 outputText.Size = Interface.TextFontSize.nope;
 
                 foreach (string styleLine in style)
                 {
-                    if (Enum.TryParse(StringParse(text.Attributes["Size"]), out Interface.TextFontSize size))
+                    if (Enum.TryParse(styleLine, out Interface.TextFontSize size))
                         outputText.Size = size;
 
                     if ((styleLine == "Center") || (styleLine == "Right"))
