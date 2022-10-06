@@ -1541,7 +1541,7 @@
 		<Paragraph>
 			<ID>101</ID>
 			<Texts>
-				<Text Font="Bold" Alignment="Center">ПОДСЧЕТ РЕЗУЛЬТАТА</Text>
+				<Text Style="Bold, Center">ПОДСЧЕТ РЕЗУЛЬТАТА</Text>
 				<Text>Что ж, ты дошел до конца… хотя бы своего. Посмотрим, насколько ты был хорош.</Text>
 			</Texts>
 			<Actions>
