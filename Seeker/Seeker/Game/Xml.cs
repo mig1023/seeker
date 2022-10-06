@@ -89,30 +89,37 @@ namespace Seeker.Game
             }
         }
 
+        private static bool Contain(string text, string substring) =>
+            text.IndexOf(substring, StringComparison.OrdinalIgnoreCase) >= 0;
+
         public static List<Text> TextsParse(XmlNode xmlNode, bool action = false)
         {
             List<Text> texts = new List<Text>();
+            StringComparer ignoreCase = StringComparer.CurrentCultureIgnoreCase;
 
             foreach (XmlNode text in xmlNode.SelectNodes(String.Format("{0}/Text", action ? "After" : "Texts")))
             {
-                string font = StringParse(text.Attributes["Font"]);
+                List<string> style = StringParse(text.Attributes["Style"]).Split(',').Select(x => x.Trim()).ToList();
 
                 Text outputText = new Text
                 {
                     Content = text.InnerText,
-                    Bold = (font == "Bold"),
-                    Italic = (font == "Italic"),
+                    Bold = style.Contains("Bold", ignoreCase),
+                    Italic = style.Contains("Italic", ignoreCase),
+                    Selected = style.Contains("Selected", ignoreCase),
                     Alignment = StringParse(text.Attributes["Alignment"]),
-                    Selected = BoolParse(text.Attributes["Selected"]),
                 };
 
-                if (text.Attributes["Size"] != null)
+                outputText.Size = Interface.TextFontSize.nope;
+
+                foreach (string styleLine in style)
                 {
-                    Enum.TryParse(StringParse(text.Attributes["Size"]), out Interface.TextFontSize size);
-                    outputText.Size = size;
+                    if (Enum.TryParse(StringParse(text.Attributes["Size"]), out Interface.TextFontSize size))
+                        outputText.Size = size;
+
+                    if ((styleLine == "Center") || (styleLine == "Right"))
+                        outputText.Alignment = styleLine;
                 }
-                else
-                    outputText.Size = Interface.TextFontSize.nope;
 
                 texts.Add(outputText);
             }
