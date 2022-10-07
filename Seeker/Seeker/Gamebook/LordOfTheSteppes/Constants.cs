@@ -7,7 +7,7 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         public static Constants StaticInstance = new Constants();
 
         public override Output.Interface.TextFontSize GetFontSize() =>
-            Output.Interface.TextFontSize.little;
+            Output.Interface.TextFontSize.Little;
 
         public static Dictionary<string, int> GetStartValues { get; set; }
 
