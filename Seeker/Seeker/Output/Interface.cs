@@ -475,13 +475,20 @@ namespace Seeker.Output
                 ColumnDefinitions =
                 {
                     new ColumnDefinition { Width = new GridLength(2) },
+                    new ColumnDefinition { Width = new GridLength(2) },
                     new ColumnDefinition { }
                 },
                 Margin = Constants.TEXT_LABEL_MARGIN,
             };
 
-            grid.Children.Add(new BoxView { Color = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar)) }, 0, 0);
-            grid.Children.Add(Text(text), 1, 0);
+            BoxView verticalLine = new BoxView
+            {
+                Color = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.StatusBar)),
+                Margin = new Thickness(0, 3, 0, 0)
+            };
+
+            grid.Children.Add(verticalLine, 0, 0);
+            grid.Children.Add(Text(text), 2, 0);
 
             return grid;
         }
