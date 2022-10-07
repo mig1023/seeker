@@ -84,10 +84,10 @@ namespace Seeker
             PageClean();
 
             Text.Children.Add(Output.Interface.Text(
-                new Output.Text { Content = errorType, Bold = true, Size = Output.Interface.TextFontSize.big }));
+                new Output.Text { Content = errorType, Bold = true, Size = Output.Interface.TextFontSize.Big }));
 
             Text.Children.Add(Output.Interface.Text(
-                new Output.Text { Content = message, Size = Output.Interface.TextFontSize.big }));
+                new Output.Text { Content = message, Size = Output.Interface.TextFontSize.Big }));
 
             Options.Children.Add(Output.Buttons.CloseSettings((s, arg) => Gamebooks(toMain: true)));
         }
