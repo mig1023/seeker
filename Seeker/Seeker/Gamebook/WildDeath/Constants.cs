@@ -7,7 +7,7 @@ namespace Seeker.Gamebook.WildDeath
         public static Constants StaticInstance = new Constants();
 
         public override Output.Interface.TextFontSize GetFontSize() =>
-            Output.Interface.TextFontSize.big;
+            Output.Interface.TextFontSize.Big;
 
         public static Links GetLinks() => new Links
         {
