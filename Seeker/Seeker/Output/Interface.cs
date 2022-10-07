@@ -9,7 +9,7 @@ namespace Seeker.Output
 {
     class Interface
     {
-        public enum TextFontSize { micro, small, little, normal, big, nope };
+        public enum TextFontSize { Micro, Small, Little, Normal, Big, nope };
 
         public static Image GamebookImage(Description gamebookDescr) => new Image
         {
@@ -319,7 +319,7 @@ namespace Seeker.Output
         }
 
         private static Label Line(Color color, string line, params object[] prms) =>
-            new Label { Text = String.Format(line, prms), FontSize = FontSize(TextFontSize.micro), TextColor = color };
+            new Label { Text = String.Format(line, prms), FontSize = FontSize(TextFontSize.Micro), TextColor = color };
 
         public static List<View> Represent(List<string> enemiesLines)
         {
@@ -367,13 +367,13 @@ namespace Seeker.Output
                             enemy.Text = line;
                             enemy.Margin = new Thickness(0, Constants.REPRESENT_PADDING, 0, 0);
                             enemy.FontFamily = TextFontFamily();
-                            enemy.FontSize = FontSize(TextFontSize.small);
+                            enemy.FontSize = FontSize(TextFontSize.Small);
                         }
                         else
                         {
                             enemy.Text = line.ToUpper();
                             enemy.FontFamily = TextFontFamily(bold: true);
-                            enemy.FontSize = FontSize(TextFontSize.normal);
+                            enemy.FontSize = FontSize(TextFontSize.Normal);
                         }
 
                         enemies.Add(enemy);
@@ -500,7 +500,7 @@ namespace Seeker.Output
 
             ExtendedLabel label = new ExtendedLabel
             {
-                FontSize = FontSize(defaultParams ? TextFontSize.normal : TextFontSize.little),
+                FontSize = FontSize(defaultParams ? TextFontSize.Normal : TextFontSize.Little),
                 Text = Regex.Unescape(RedStyle(text)),
                 FontFamily = TextFontFamily(),
                 JustifyText = justyfy,
@@ -589,7 +589,7 @@ namespace Seeker.Output
                 foreach(string color in textTypes.Keys.Where(x => text.Contains(x)))
                     actions.TextColor = textTypes[color] ?? actions.TextColor;
 
-                actions.FontSize = FontSize(text.Contains("BIG|") ? TextFontSize.normal : TextFontSize.little);
+                actions.FontSize = FontSize(text.Contains("BIG|") ? TextFontSize.Normal : TextFontSize.Little);
 
                 if (text.Contains("BOLD|"))
                     bold = true;

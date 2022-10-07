@@ -97,7 +97,7 @@ namespace Seeker.Prototypes
 
         public virtual string GetFont() => String.Empty;
 
-        public virtual Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.normal;
+        public virtual Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.Normal;
 
         public virtual bool GetParagraphsStatusesLimit(out int limitStart, out int limitEnd)
         {

@@ -37,22 +37,22 @@ namespace Seeker.Output
 
         public static Dictionary<TextFontSize, double> FontSize = new Dictionary<TextFontSize, double>
         {
-            [TextFontSize.micro] = Font(NamedSize.Micro),
-            [TextFontSize.small] = Font(NamedSize.Small),
-            [TextFontSize.little] = Font(NamedSize.Medium),
-            [TextFontSize.normal] = Font(NamedSize.Large),
+            [TextFontSize.Micro] = Font(NamedSize.Micro),
+            [TextFontSize.Small] = Font(NamedSize.Small),
+            [TextFontSize.Little] = Font(NamedSize.Medium),
+            [TextFontSize.Normal] = Font(NamedSize.Large),
             [TextFontSize.nope] = Font(NamedSize.Large),
-            [TextFontSize.big] = BIG_FONT,
+            [TextFontSize.Big] = BIG_FONT,
         };
 
         public static Dictionary<TextFontSize, double> FontSizeItalic = new Dictionary<TextFontSize, double>
         {
-            [TextFontSize.micro] = Font(NamedSize.Micro),
-            [TextFontSize.small] = Font(NamedSize.Micro),
-            [TextFontSize.little] = Font(NamedSize.Small),
-            [TextFontSize.normal] = Font(NamedSize.Small),
+            [TextFontSize.Micro] = Font(NamedSize.Micro),
+            [TextFontSize.Small] = Font(NamedSize.Micro),
+            [TextFontSize.Little] = Font(NamedSize.Small),
+            [TextFontSize.Normal] = Font(NamedSize.Small),
             [TextFontSize.nope] = Font(NamedSize.Small),
-            [TextFontSize.big] = Font(NamedSize.Large),
+            [TextFontSize.Big] = Font(NamedSize.Large),
         };
 
         public static Dictionary<int, string> FONT_TYPE_VALUES = new Dictionary<int, string>
