@@ -15,7 +15,7 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
         };
 
         public override Output.Interface.TextFontSize GetFontSize() =>
-            Output.Interface.TextFontSize.little;
+            Output.Interface.TextFontSize.Little;
 
         public static Links GetLinks() => new Links
         {
