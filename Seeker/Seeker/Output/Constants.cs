@@ -22,6 +22,7 @@ namespace Seeker.Output
         public static double ACTIONPLACE_SPACING = 5;
         public static double ACTIONPLACE_PADDING = 20;
         public static double TEXT_LABEL_MARGIN = 5;
+        public static double TITLE_TXT_LABEL_MARGIN = 15;
         public static double BORDER_WIDTH = 1;
         public static double REPRESENT_PADDING = -10;
         public static double SPLITTER_HIGHT = 25;

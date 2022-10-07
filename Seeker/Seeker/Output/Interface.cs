@@ -392,22 +392,16 @@ namespace Seeker.Output
             int fontSetting = Game.Settings.GetValue("FontType");
 
             if (fontSetting > 0)
-            {
                 font = String.Format("{0}{1}", Constants.FONT_TYPE_VALUES[fontSetting], (bold ? "Bold" : String.Empty));
-            }
+
             else if (standart || (Game.Data.Constants == null) || String.IsNullOrEmpty(Game.Data.Constants.GetFont()))
-            {
                 font = (bold ? "YanoneFontBold" : "YanoneFont");
-            }
+
             else
-            {
                 font = String.Format("{0}{1}", Game.Data.Constants.GetFont(), (bold ? "Bold" : String.Empty));
-            }
                 
             if (italic)
-            {
                 font = "RobotoFontItalic";
-            }
 
             return TextFontFamily(font);
         }
@@ -427,8 +421,10 @@ namespace Seeker.Output
 
             if (italic && Constants.FontSizeItalic.ContainsKey(size))
                 return Constants.FontSizeItalic[size];
+
             else if (!italic && Constants.FontSize.ContainsKey(size))
                 return Constants.FontSize[size];
+
             else
                 return Font(NamedSize.Medium);
         }
@@ -457,9 +453,16 @@ namespace Seeker.Output
             label.FontFamily = TextFontFamily(bold: text.Bold, italic: text.Italic);
 
             if (text.Alignment == "Center")
+            {
                 label.HorizontalTextAlignment = TextAlignment.Center;
+
+                if (text.Bold)
+                    label.Margin = new Thickness(Constants.TEXT_LABEL_MARGIN, Constants.TITLE_TXT_LABEL_MARGIN);
+            }
             else if (text.Alignment == "Right")
+            {
                 label.HorizontalTextAlignment = TextAlignment.End;
+            }
 
             return label;
         }
@@ -516,22 +519,16 @@ namespace Seeker.Output
             int fontSize = Game.Settings.GetValue("FontSize");
 
             if (fontSize > 0)
-            {
                 label.FontSize = Constants.FONT_SIZE_VALUES[fontSize];
-            }
+
             else if (size != TextFontSize.nope)
-            {
                 label.FontSize = FontSize(size);
-            }
+
             else if(Game.Data.Constants != null)
-            {
                 label.FontSize = FontSize(Game.Data.Constants.GetFontSize(), italic: italic);
-            }
 
             if ((Game.Data.Constants != null) && !String.IsNullOrEmpty(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)))
-            {
                 label.TextColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font));
-            }
 
             return label;
         }
