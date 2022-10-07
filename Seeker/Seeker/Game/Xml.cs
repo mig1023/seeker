@@ -81,16 +81,8 @@ namespace Seeker.Game
                 textPlace.Children.Add(Interface.Text(text));
 
             foreach (Text texts in Xml.TextsParse(Data.XmlParagraphs[id]))
-            {
-                if (texts.Selected)
-                    textPlace.Children.Add(Interface.Text(texts, selected: true));
-                else
-                    textPlace.Children.Add(Interface.Text(texts));
-            }
+                textPlace.Children.Add(Interface.TextBySelect(texts));
         }
-
-        private static bool Contain(string text, string substring) =>
-            text.IndexOf(substring, StringComparison.OrdinalIgnoreCase) >= 0;
 
         public static List<Text> TextsParse(XmlNode xmlNode, bool action = false)
         {

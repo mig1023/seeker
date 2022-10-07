@@ -448,6 +448,9 @@ namespace Seeker.Output
         private static string RedStyle(string line) =>
             Game.Settings.IsEnabled("RedStyle") ? line.Replace("\\n\\n", "\\n\\t\\t\\t\\t") : line;
 
+        public static View TextBySelect(Text text) =>
+            text.Selected ? (View)SelectedText(text) : Text(text);
+
         public static ExtendedLabel Text(Text text)
         {
             ExtendedLabel label = Text(RedStyle(text.Content), italic: text.Italic, size: text.Size, selected: text.Selected);
@@ -461,7 +464,7 @@ namespace Seeker.Output
             return label;
         }
 
-        public static Grid Text(Text text, bool selected)
+        public static Grid SelectedText(Text text)
         {
             Grid grid = new Grid
             {
