@@ -66,12 +66,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             return action;
         }
 
-        public override Abstract.IModification ModificationParse(XmlNode xmlModification) => new Modification
-        {
-            Name = Xml.StringParse(xmlModification.Attributes["Name"]),
-            Value = Xml.IntParse(xmlModification.Attributes["Value"]),
-            Restore = Xml.BoolParse(xmlModification.Attributes["Restore"]),
-        };
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+            (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
 
         private Character EnemyParse(XmlNode xmlEnemy)
         {
