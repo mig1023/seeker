@@ -95,23 +95,42 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             return rocks;
         }
 
+        public List<string> Stoning()
+        {
+            List<string> stoning = new List<string> { "Селяне бросают камни..." };
+
+            stoning.AddRange(GoodLuck(out bool goodLuck));
+
+            if (!goodLuck)
+            {
+                protagonist.Endurance -= 2;
+
+                stoning.Add("Несколько камней попали по вам...");
+                stoning.Add("BAD|и вы потеряли ещё 2 выносливости!");
+            }
+            else
+                stoning.Add("GOOD|Селяне, к счастью, оказались косоглазые и вы ушли без дополнительного ущерба!");
+
+            return stoning;
+        }
+
         public List<string> Fruit()
         {
-            List<string> hunt = new List<string> { "Пробуете трясти дерево..." };
+            List<string> fruit = new List<string> { "Пробуете трясти дерево..." };
 
-            hunt.AddRange(GoodLuck(out bool goodLuck));
+            fruit.AddRange(GoodLuck(out bool goodLuck));
 
             if (goodLuck)
             {
                 protagonist.Endurance += 4;
 
-                hunt.Add("Волшебный плод падает к вашим ногам!");
-                hunt.Add("GOOD|Вы восстанавливаете 4 выносливости!");
+                fruit.Add("Волшебный плод падает к вашим ногам!");
+                fruit.Add("GOOD|Вы восстанавливаете 4 выносливости!");
             }
             else
-                hunt.Add("BAD|Вам не удалось добыть плодов...");
+                fruit.Add("BAD|Вам не удалось добыть плодов...");
 
-            return hunt;
+            return fruit;
         }
 
         public List<string> Hunt()
