@@ -10,6 +10,7 @@
 			<Color Name="Option">42755c</Color>
 			<Color Name="Continue">7d9188</Color>
 			<Color Name="System">9db6aa</Color>
+			<Color Name="ActionBox">87a094</Color>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
