@@ -224,6 +224,14 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                             Game.Dice.Symbol(protagonistRollFirst), Game.Dice.Symbol(protagonistRollSecond),
                             protagonist.Mastery, protagonistHitStrength));
 
+                        if (Game.Option.IsTriggered("Chestplate"))
+                        {
+                            protagonistHitStrength += 2;
+
+                            fight.Add(String.Format("+2 к мощности удара за нагрудную пластину, итого {0}",
+                                protagonistHitStrength));
+                        }
+
                         doubleDice = (protagonistRollFirst == protagonistRollSecond);
                         doubleSixes = doubleDice && (protagonistRollFirst == 6);
                     }
