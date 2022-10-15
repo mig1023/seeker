@@ -308,5 +308,11 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 round += 1;
             }
         }
+
+        public override bool IsHealingEnabled() =>
+            protagonist.Endurance < protagonist.MaxEndurance;
+
+        public override void UseHealing(int healingLevel) =>
+            protagonist.Endurance += healingLevel;
     }
 }
