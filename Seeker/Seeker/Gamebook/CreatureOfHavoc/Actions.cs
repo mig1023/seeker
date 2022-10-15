@@ -94,7 +94,26 @@ namespace Seeker.Gamebook.CreatureOfHavoc
 
             return rocks;
         }
-        
+
+        public List<string> Fruit()
+        {
+            List<string> hunt = new List<string> { "Пробуете трясти дерево..." };
+
+            hunt.AddRange(GoodLuck(out bool goodLuck));
+
+            if (goodLuck)
+            {
+                protagonist.Endurance += 4;
+
+                hunt.Add("Волшебный плод падает к вашим ногам!");
+                hunt.Add("GOOD|Вы восстанавливаете 4 выносливости!");
+            }
+            else
+                hunt.Add("BAD|Вам не удалось добыть плодов...");
+
+            return hunt;
+        }
+
         public List<string> Hunt()
         {
             List<string> hunt = new List<string> { "Пробуете поймать кого-нибудь..." };
@@ -109,7 +128,7 @@ namespace Seeker.Gamebook.CreatureOfHavoc
                 hunt.Add(String.Format("GOOD|Вы поймали {0} и получаете 2 выносливости", huntPray[Game.Dice.Roll() - 1].Trim()));
             }
             else
-                hunt.Add("BAD|Вам неудалось никого поймать");
+                hunt.Add("BAD|Вам не удалось никого поймать");
 
             return hunt;
         }
