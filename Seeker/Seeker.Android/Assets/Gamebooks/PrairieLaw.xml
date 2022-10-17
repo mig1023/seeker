@@ -832,7 +832,10 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>72</ID>
-			<Text>Усталость буквально валит вас с ног, и вы мгновенно засыпаете. Сон прибавит 2 к вашей СИЛЕ.</Text>
+			<Texts>
+				<Text>Усталость буквально валит вас с ног, и вы мгновенно засыпаете.</Text>
+				<Text Style="Small">Сон прибавит 2 к вашей СИЛЕ.</Text>
+			</Texts>
 			<Modifications>
 				<Strength Value="2"/>
 			</Modifications>
