@@ -1045,7 +1045,10 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>94</ID>
-			<Text>Резкая боль обжигает бок (вычтите 3 из своей СИЛЫ)…</Text>
+			<Texts>
+				<Text>Резкая боль обжигает бок…</Text>
+				<Text Style="Small">Вычтите 3 из своей СИЛЫ.</Text>
+			</Texts>
 			<Modifications>
 				<Strength Value="-3"/>
 			</Modifications>
