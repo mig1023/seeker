@@ -2872,7 +2872,11 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>278</ID>
-			<Text>Каменная волна с грохотом накрывает вас (вычтите 8 из своей СИЛЫ). Если после этого вы еще живы…</Text>
+			<Texts>
+				<Text>Каменная волна с грохотом накрывает вас.</Text>
+				<Text Style="Small">Вычтите 8 из своей СИЛЫ.</Text>
+				<Text>Если после этого вы еще живы…</Text>
+			</Texts>
 			<Modifications>
 				<Strength Value="-8"/>
 			</Modifications>
