@@ -3891,10 +3891,24 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>382</ID>
-			<Text>При постоялом дворе есть конюшня и чистая, тихая закусочная, где за доллар вас накормят (еда прибавит 3 к вашей СИЛЕ). Если вы сейчас не голодны, попросите завернуть вам еду с собой.</Text>
-			<Modifications>
-				<Strength Value="3"/>
-			</Modifications>
+			<Text>При постоялом дворе есть конюшня и чистая, тихая закусочная, где за доллар вас накормят (еда прибавит 3 к вашей СИЛЕ):</Text>		
+			<Actions>
+				<Get>
+					<Button>Заплатить</Button>
+					<Text>Поесть</Text>
+					<Price>100</Price>
+					<Benefit Name="Strength" Value="3"/>
+					<After>
+						<Text>Если вы сейчас не голодны, попросите завернуть вам еду с собой:</Text>
+					</After>
+				</Get>
+				<Get>
+					<Button>Еда с собой</Button>
+					<Text>Купить</Text>
+					<Price>100</Price>
+					<Benefit Name="Healing" Value="Съесть еду из закусочной,3"/>
+				</Get>
+			</Actions>
 			<Options>
 				<Option Destination="10"/>
 			</Options>
