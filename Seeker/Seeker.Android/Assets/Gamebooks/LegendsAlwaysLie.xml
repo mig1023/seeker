@@ -2318,7 +2318,13 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>222</ID>
-			<Text>Адская боль пронзает голову – такое ощущение, что кто-то воткнул в ваш мозг раскаленную спицу (–6 ЖИЗНЕЙ).</Text>
+			<Texts>
+				<Text>Адская боль пронзает голову – такое ощущение, что кто-то воткнул в ваш мозг раскаленную спицу.</Text>
+				<Text Style="Small">–6 ЖИЗНЕЙ.</Text>
+			</Texts>
+			<Modifications>
+				<Hitpoints Value="-6"/>
+			</Modifications>
 			<Options>
 				<Option Destination="187"/>
 			</Options>
