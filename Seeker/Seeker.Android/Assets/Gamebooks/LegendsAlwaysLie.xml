@@ -4577,7 +4577,11 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>431</ID>
-			<Text>Жар обжигает ваши ноги (–2 ЖИЗНИ), и вам остается лишь:</Text>
+			<Texts>
+				<Text>Жар обжигает ваши ноги…</Text>
+				<Text Style="Small">–2 ЖИЗНИ.</Text>
+				<Text>…и вам остается лишь:</Text>
+			</Texts>
 			<Modifications>
 				<Hitpoints Value="-2"/>
 			</Modifications>
