@@ -580,12 +580,6 @@
 		<Paragraph>
 			<ID>52</ID>
 			<Text>Улица, по которой вы едете, проходит прямо через рыночную площадь.</Text>
-			<Modifications>
-				<HadFoodToday Value="1"/>
-				<Strength Value="4"/>
-				<Day Value="1"/>
-				<Ecu Value="-150"/>
-			</Modifications>
 			<Options>
 				<Option Destination="613" Text="Надо на рынок"/>
 				<Option Destination="306" Text="Не надо"/>
