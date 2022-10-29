@@ -1493,7 +1493,10 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>140</ID>
-			<Text>Потеряйте 1 ЧЕСТЬ. Путь до Шатору проходит без приключений.</Text>
+			<Texts>
+				<Text Style="Small">Потеряйте 1 ЧЕСТЬ.</Text>
+				<Text>Путь до Шатору проходит без приключений.</Text>
+			</Texts>
 			<Modifications>
 				<Honor Value="-1"/>
 			</Modifications>
