@@ -1114,7 +1114,10 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>100</ID>
-			<Text>Черт, больно! Дротик впивается вам в ногу (-3 ЖИЗНИ).</Text>
+			<Texts>
+				<Text>Черт, больно! Дротик впивается вам в ногу.</Text>
+				<Text Style="Small">-3 ЖИЗНИ.</Text>
+			</Texts>
 			<Modifications>
 				<Hitpoints Value="-3"/>
 			</Modifications>
