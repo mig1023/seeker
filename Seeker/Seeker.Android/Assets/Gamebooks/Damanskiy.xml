@@ -6839,7 +6839,7 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>856</ID>
-			<Text>С чего же начать? </Text>
+			<Text>С чего же начать?</Text>
 			<Options>
 				<Option Destination="688" Text="Для начала выкрутил свечи"/>
 				<Option Destination="737" Text="Сразу полез в карбюратор"/>
