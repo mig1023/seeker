@@ -1,0 +1,29 @@
+<Gamebook>
+	<Introduction>
+		<Title>Серебряного века Силуэт</Title>
+		<Copyright>Константин Шепелин, 2014</Copyright>
+		<Styles>
+			<Color Name="Main, Action, Continue">f8ecc2</Color>
+			<Color Name="ButtonFont">000000</Color>
+		</Styles>
+		<Settings>
+			<HideDisabledOption/>
+		</Settings>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph>
+			<ID>0</ID>
+			<Text>Start</Text>
+			<Options>
+				<Option Destination="1" Text="В путь!"/>
+			</Options>
+		</Paragraph>
+		<Paragraph>
+			<ID>1</ID>
+			<Text>End.</Text>
+			<Options>
+				<Option Destination="0"/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>

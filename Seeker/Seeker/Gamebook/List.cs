@@ -48,6 +48,7 @@ namespace Seeker.Gamebook
             ["Moonrunner"] = Moonrunner.Constants.GetLinks(),
             ["DeathOfAntiquary"] = DeathOfAntiquary.Constants.GetLinks(),
             ["Cyberpunk"] = Cyberpunk.Constants.GetLinks(),
+            ["SilverAgeSilhouette"] = SilverAgeSilhouette.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() => Books.Keys.ToList();
