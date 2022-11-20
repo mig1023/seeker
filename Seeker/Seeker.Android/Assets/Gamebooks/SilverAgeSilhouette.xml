@@ -1809,9 +1809,9 @@
 			<ID>168</ID>
 			<Text>И вот, настало время подвести итог моим воспоминаниям. Что у меня записано в графе «стиль»?</Text>
 			<Options>
-				<Option Destination="157" Text="Если символист"/>
-				<Option Destination="147" Text="Если акмеист"/>
-				<Option Destination="134" Text="Если футурист"/>
+				<Option Destination="157" Text="Символист"/>
+				<Option Destination="147" Text="Акмеист"/>
+				<Option Destination="134" Text="Футурист"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
