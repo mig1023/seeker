@@ -1778,9 +1778,9 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>166</ID>
-			<Text> иначе - 48.\n\nЕсли у меня есть ВЕХА «Жена»,</Text>
 			<Options>
-				<Option Destination="294"/>
+				<Option Destination="294" Text="У меня есть ВЕХА «Жена»"/>
+				<Option Destination="48" Text="Иначе"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
