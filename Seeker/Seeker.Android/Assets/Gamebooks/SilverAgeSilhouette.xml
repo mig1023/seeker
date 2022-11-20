@@ -1763,9 +1763,8 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>164</ID>
-			<Text></Text>
 			<Options>
-				<Option Destination="88" Text="Если у меня есть уже одно попадание в Латунского"/>
+				<Option Destination="88" Text="У меня есть уже одно попадание в Латунского"/>
 				<Option Destination="167" Text="Иначе"/>
 			</Options>
 		</Paragraph>
