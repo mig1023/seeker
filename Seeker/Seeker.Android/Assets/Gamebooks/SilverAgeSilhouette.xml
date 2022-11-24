@@ -2512,8 +2512,8 @@
 			<ID>241</ID>
 			<Text>Теперь я складываю все оценки, выставленные строкам в моем стихотворении.</Text>
 			<Options>
-				<Option Destination="298" Text="Если получилось 33 или больше"/>
-				<Option Destination="48" Text="Иначе"/>
+				<Option Destination="298" Text="Получилось 33 или больше"/>
+				<Option Destination="48" Text="Получилось меньше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2527,8 +2527,8 @@
 			<ID>243</ID>
 			<Text>Теперь я складываю все оценки, выставленные строкам в моем стихотворении.</Text>
 			<Options>
-				<Option Destination="275" Text="Если получилось 33 или больше"/>
-				<Option Destination="298" Text="Иначе"/>
+				<Option Destination="275" Text="Получилось 33 или больше"/>
+				<Option Destination="298" Text="Получилось меньше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
