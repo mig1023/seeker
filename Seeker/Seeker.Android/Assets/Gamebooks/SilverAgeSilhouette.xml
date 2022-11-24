@@ -2463,10 +2463,9 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>236</ID>
-			<Text></Text>
 			<Options>
-				<Option Destination="226" Text="Если у меня есть ВЕХА «Жена»"/>
-				<Option Destination="132" Text="иначе"/>
+				<Option Destination="226" Text="У меня есть ВЕХА «Жена»"/>
+				<Option Destination="132" Text="Её нет"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
