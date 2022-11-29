@@ -2857,10 +2857,7 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>281</ID>
-			<Text>+++</Text>
-			<Options>
-				<Option Destination="0"/>
-			</Options>
+			<Text>[пустой параграф]</Text>
 		</Paragraph>
 		<Paragraph>
 			<ID>282</ID>
