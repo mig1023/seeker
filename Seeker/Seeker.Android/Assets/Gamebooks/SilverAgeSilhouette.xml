@@ -2952,7 +2952,9 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>292</ID>
-			<Text>Строка: «Пришли лета, и всюду льются слезы...» -- 6\n\nДалее</Text>
+			<Texts>
+				<Text Style="Italic">Строка: «Пришли лета, и всюду льются слезы...» -- 6</Text>
+			</Texts>
 			<Options>
 				<Option Destination="252"/>
 			</Options>
