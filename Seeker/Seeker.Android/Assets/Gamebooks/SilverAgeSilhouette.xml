@@ -2664,21 +2664,14 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>257</ID>
-			<Text>+++</Text>
-			<Options>
-				<Option Destination="0"/>
-			</Options>
+			<Text>[пустой параграф]</Text>
 		</Paragraph>
 		<Paragraph>
 			<ID>258</ID>
-			<Text>+++</Text>
-			<Options>
-				<Option Destination="0"/>
-			</Options>
+			<Text>[пустой параграф]</Text>
 		</Paragraph>
 		<Paragraph>
 			<ID>259</ID>
-			<Text>Теперь</Text>
 			<Options>
 				<Option Destination="221"/>
 			</Options>
