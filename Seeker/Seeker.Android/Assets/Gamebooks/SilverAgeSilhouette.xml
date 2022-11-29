@@ -2761,7 +2761,9 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>270</ID>
-			<Text>Строка: «А здесь весь год неспешно вянут лозы» -- 5\n\nДалее</Text>
+			<Texts>
+				<Text Style="Italic">Строка: «А здесь весь год неспешно вянут лозы» -- 5</Text>
+			</Texts>
 			<Options>
 				<Option Destination="252"/>
 			</Options>
