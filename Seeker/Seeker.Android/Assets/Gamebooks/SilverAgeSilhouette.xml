@@ -2924,7 +2924,9 @@
 		</Paragraph>
 		<Paragraph>
 			<ID>289</ID>
-			<Text>Строка: «Пора бы распрямить нам сколиозы» -- 1</Text>
+			<Texts>
+				<Text Style="Italic">Строка: «Пора бы распрямить нам сколиозы» -- 1</Text>
+			</Texts>
 			<Options>
 				<Option Destination="237" Text="Если у меня есть КЛЮЧ «Колченогий», то, не вычеркивая его"/>
 				<Option Destination="269" Text="Иначе"/>
