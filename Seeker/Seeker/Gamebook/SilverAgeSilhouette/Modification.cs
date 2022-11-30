@@ -19,6 +19,13 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
                 else
                     Game.Option.Trigger("Боец");
             }
+            else if (Name == "RevolutionaryOrRebel")
+            {
+                if (!Game.Option.IsTriggered("Революционер"))
+                    Game.Option.Trigger("Революционер");
+                else
+                    Game.Option.Trigger("Бунтарь");
+            }
             else
                 base.Do(Character.Protagonist);
         }
