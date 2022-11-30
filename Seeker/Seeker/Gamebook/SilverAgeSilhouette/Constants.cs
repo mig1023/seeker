@@ -6,6 +6,9 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
     {
         public static Constants StaticInstance = new Constants();
 
+        public override Output.Interface.TextFontSize GetFontSize() =>
+            Output.Interface.TextFontSize.Little;
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
