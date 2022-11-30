@@ -1781,9 +1781,9 @@
 			<ID>163</ID>
 			<Text>И вот, настало время подвести итог моим воспоминаниям. Что у меня записано в графе «стиль»?</Text>
 			<Options>
-				<Option Destination="157" Text="Символист"/>
-				<Option Destination="143" Text="Акмеист"/>
-				<Option Destination="232" Text="Футурист"/>
+				<Option Destination="157" Text="Символист" Availability="Символист"/>
+				<Option Destination="143" Text="Акмеист" Availability="Акмеист"/>
+				<Option Destination="232" Text="Футурист" Availability="Футурист"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -1834,9 +1834,9 @@
 			<ID>168</ID>
 			<Text>И вот, настало время подвести итог моим воспоминаниям. Что у меня записано в графе «стиль»?</Text>
 			<Options>
-				<Option Destination="157" Text="Символист"/>
-				<Option Destination="147" Text="Акмеист"/>
-				<Option Destination="134" Text="Футурист"/>
+				<Option Destination="157" Text="Символист" Availability="Символист"/>
+				<Option Destination="147" Text="Акмеист" Availability="Акмеист"/>
+				<Option Destination="134" Text="Футурист" Availability="Футурист"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -2517,9 +2517,9 @@
 			<ID>238</ID>
 			<Text>И вот, настало время подвести итог моим воспоминаниям. Что у меня записано в графе «стиль»?</Text>
 			<Options>
-				<Option Destination="243" Text="Символист"/>
-				<Option Destination="143" Text="Акмеист"/>
-				<Option Destination="241" Text="Футурист"/>
+				<Option Destination="243" Text="Символист" Availability="Символист"/>
+				<Option Destination="143" Text="Акмеист" Availability="Акмеист"/>
+				<Option Destination="241" Text="Футурист" Availability="Футурист"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -3079,11 +3079,15 @@
 			<Options>
 				<Option Destination="1" Text="СИМВОЛИСТ">
 					<Text>Или же я был одним из первых, отринувших сладкий дурман символа, провозгласивших материальность, предметность тематики и образов, точность слова? Брезгуя полутонами и полунамеками, отдавал ли я предпочтение описанию реальной, земной жизни? Жил ли я столь же вдумчиво и предметно, как и писал? Избегал ли пустых фантазий и переливов слов? Нырял ли я с холодной головой и горячим сердцем в самую пучину своей безжалостной эпохи, обходясь без анестезии путаной лирики и безумия кичливого авангардизма? Иными словами - стремился ли я достигнуть пика, вершины истинного совершенства в своем искусстве?</Text>
+					<Modification Name="Trigger" Value="Символист"/>
 				</Option>
 				<Option Destination="1" Text="АКМЕИСТ">
 					<Text>Или я был птицей совсем другого полета? Подлинным выноском своего революционного времени? Анархистом, скоморохом, балагуром и хулиганом? Тем, кто отрицает нелепые авторитеты прошлого?\n\nТем, кто закладывает дымящийся динамит стиха под уродливую громадину классического воззрения?\n\nТем, для кого слово - не символ, не образ, но звук - и в своей многомерности звука оно свободно от жестких рамок синтаксических периодов и пут логических связей?\n\nИначе говоря - был ли я ФУТУРИСТОМ?</Text>
+					<Modification Name="Trigger" Value="Акмеист"/>
 				</Option>
-				<Option Destination="1" Text="ФУТУРИСТ"/>
+				<Option Destination="1" Text="ФУТУРИСТ">
+					<Modification Name="Trigger" Value="Футурист"/>
+				</Option>
 			</Options>
 		</Paragraph>
 	</Paragraphs>
