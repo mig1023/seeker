@@ -6407,7 +6407,7 @@
 					<Button>Продать</Button>
 					<Text>Золотые часы</Text>
 					<Benefit Name="Cents" Value="700"/>
-					<RemoveTrigger>Часы</RemoveTrigger>
+					<Untrigger>Часы</Untrigger>
 					<After>
 						<Text>Если вы еще не предлагали Перкинсу серебряный медальон или самородки – можете сделать это сейчас.</Text>
 					</After>
