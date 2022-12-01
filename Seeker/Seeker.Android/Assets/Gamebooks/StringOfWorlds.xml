@@ -575,7 +575,7 @@
 		<Paragraph>
 			<ID>60</ID>
 			<Text>Ощущая идущее от кольца тепло, легко перелетаете через широкую черную полосу и мягко приземляетесь на узкой мраморной площадке у самых Ворот.\n\nИ тут же кольцо становится холодным, как лед. Больше оно никогда не поднимет вас в воздух.</Text>
-			<RemoveTrigger>AntiGravityRing</RemoveTrigger>
+			<Untriggers>AntiGravityRing</Untriggers>
 			<Options>
 				<Option Destination="532"/>
 			</Options>
@@ -674,7 +674,7 @@
 			<Modifications>
 				<Strength Value="-1"/>
 			</Modifications>
-			<RemoveTrigger>AntiGravityRing</RemoveTrigger>
+			<Untriggers>AntiGravityRing</Untriggers>
 			<Options>
 				<Option Destination="407"/>
 			</Options>
@@ -965,7 +965,7 @@
 		<Paragraph>
 			<ID>100</ID>
 			<Text>Вы включаете антигравитатор и легко перелетаете на мраморную площадку рядом с воротами. Увы, на этом запас энергии иссякает, а подзарядить пояс негде. Больше он не поднимет вас в воздух.</Text>
-			<RemoveTrigger>AntiGravityBelt</RemoveTrigger>
+			<Untriggers>AntiGravityBelt</Untriggers>
 			<Options>
 				<Option Destination="532"/>
 			</Options>
@@ -1059,7 +1059,7 @@
 			<Modifications>
 				<Strength Value="-1"/>
 			</Modifications>
-			<RemoveTrigger>AntiGravityBelt</RemoveTrigger>
+			<Untriggers>AntiGravityBelt</Untriggers>
 			<Options>
 				<Option Destination="407"/>
 			</Options>
@@ -1173,7 +1173,7 @@
 		<Paragraph>
 			<ID>122</ID>
 			<Text>Без особой надежды надеваете кольцо — и чувствуете, что оно становится все теплее… вот уже такое горячее, что рука с трудом терпит его… Точно мягкая волна подхватывает вас и, подбросив кверху, опускает на край колодца. И тут же кольцо становится холодным. Оно прекрасно сработало — и стало простой безделушкой… А вы возвращаетесь к развилке и сворачиваете в другой тоннель.</Text>
-			<RemoveTrigger>AntiGravityRing</RemoveTrigger>
+			<Untriggers>AntiGravityRing</Untriggers>
 			<Options>
 				<Option Destination="422"/>
 			</Options>
@@ -1603,7 +1603,7 @@
 		<Paragraph>
 			<ID>169</ID>
 			<Text>Кольцо согревает вам палец — и, соскользнув со стены, вы плавно опускаетесь к подножию холма, на котором стоит замок. В ту минуту, как ваши ноги касаются земли, кольцо становится холодным. Больше оно не сможет помочь вам.</Text>
-			<RemoveTrigger>AntiGravityRing</RemoveTrigger>
+			<Untriggers>AntiGravityRing</Untriggers>
 			<Options>
 				<Option Destination="37"/>
 			</Options>
@@ -1875,7 +1875,7 @@
 		<Paragraph>
 			<ID>198</ID>
 			<Text>Укрывшись в глубокой трещине стены, бросаете гранату. Грохот, яркая вспышка, порыв раскаленного воздуха — и все стихает.\n\nВы осторожно выглядываете. Мертвые твари буквально прикипели к стенам. Путь свободен.\n\nНо… Пройдя совсем немного, обнаруживаете, что впереди глухой тупик. Стоило тратить гранату! Все равно придется поворачивать к развилке и идти другим путем…</Text>
-			<RemoveTrigger>ProtonGrenade</RemoveTrigger>
+			<Untriggers>ProtonGrenade</Untriggers>
 			<Options>
 				<Option Destination="602"/>
 			</Options>
@@ -1978,7 +1978,7 @@
 		<Paragraph>
 			<ID>209</ID>
 			<Text>Вы плавно опускаетесь к подножию стены. Увы, полет исчерпал энергию антигравитатора. Зеленый «глазок» на пряжке погас, больше пояс вам не пригодится. Жаль…</Text>
-			<RemoveTrigger>AntiGravityBelt</RemoveTrigger>
+			<Untriggers>AntiGravityBelt</Untriggers>
 			<Options>
 				<Option Destination="37"/>
 			</Options>
@@ -2640,7 +2640,7 @@
 		<Paragraph>
 			<ID>276</ID>
 			<Text>Кольцо быстро нагревается на пальце — и мягкая волна поднимает вас над булыжной мостовой, над хлещущими пулеметными очередями… Вы уже собираетесь опуститься, как вдруг видите, что в конце улицы, куда направляете вы свой полет, клубятся густые облака багрового дыма. Рискнете приземлиться в самую его гущу? Или нырнете в открытое окно второго этажа?</Text>
-			<RemoveTrigger>AntiGravityRing</RemoveTrigger>
+			<Untriggers>AntiGravityRing</Untriggers>
 			<Options>
 				<Option Destination="168" Text="Рискнете приземлиться"/>
 				<Option Destination="132" Text="Нырнете в открытое окно"/>
@@ -3016,7 +3016,7 @@
 		<Paragraph>
 			<ID>316</ID>
 			<Text>Легкое прикосновение к пряжке — и вы взмываете над пулеметными очередями.\n\nВнезапно замечаете, что внизу — как раз там, где вы собирались приземлиться — из щелей и окон клубами выползает багровый дым и плотным туманом окутывает улицу. А тут, как нарочно, начинает мигать зеленый огонек на пряжке: энергия пояса-антигравитатора иссякает… Опуститесь на мостовую? Или нырнете в распахнутое окно второго этажа?</Text>
-			<RemoveTrigger>AntiGravityBelt</RemoveTrigger>
+			<Untriggers>AntiGravityBelt</Untriggers>
 			<Options>
 				<Option Destination="168" Text="Опуститесь на мостовую"/>
 				<Option Destination="132" Text="Нырнете в окно"/>
@@ -3300,7 +3300,7 @@
 		<Paragraph>
 			<ID>348</ID>
 			<Text>Грязная, непроглядно мутная вода смыкается вокруг вас. В тоннеле и так было темно, но здесь, на глубине… Вы медленно плывете вперед, пока не налетаете на толстую железную сеть, протянутую кем-то поперек тоннеля. Что там, за сетью — вам узнать не суждено, так как все попытки прорваться сквозь препятствие безрезультатны.\n\nВернувшись к началу тоннеля и вынырнув на поверхность, обнаруживаете, что запас воздуха в маленьком баллончике иссяк. Теперь маска уже ни на что не пригодна.</Text>
-			<RemoveTrigger>SnorkelingMask</RemoveTrigger>
+			<Untriggers>SnorkelingMask</Untriggers>
 			<Options>
 				<Option Destination="636"/>
 			</Options>
@@ -3319,7 +3319,7 @@
 			<Actions>
 				<Luck/>
 			</Actions>
-			<RemoveTrigger>AntiGravityRing</RemoveTrigger>
+			<Untriggers>AntiGravityRing</Untriggers>
 			<Options>
 				<Option Destination="606" Text="Повезло"/>
 				<Option Destination="54" Text="Нет"/>
@@ -3677,7 +3677,7 @@
 		<Paragraph>
 			<ID>390</ID>
 			<Text>Ваша добыча оказывается очень полезной. Легче птицы перелетаете вы пещеру над головами пиратов, которые ничего и не замечают… Но, приземлившись, обнаруживаете, что зеленый огонек на пряжке погас. Всё, энергия иссякла. Больше антигравитатором пользоваться нельзя.</Text>
-			<RemoveTrigger>AntiGravityBelt</RemoveTrigger>
+			<Untriggers>AntiGravityBelt</Untriggers>
 			<Options>
 				<Option Destination="202"/>
 			</Options>
@@ -4048,7 +4048,7 @@
 			<Modifications>
 				<Strength Value="-2"/>
 			</Modifications>
-			<RemoveTrigger>AntiGravityRing</RemoveTrigger>
+			<Untriggers>AntiGravityRing</Untriggers>
 			<Options>
 				<Option Destination="520"/>
 			</Options>
@@ -4237,7 +4237,7 @@
 		<Paragraph>
 			<ID>452</ID>
 			<Text>Укрывшись в простенке между домами, швыряете гранату. Переждав раскаленный вихрь взрыва, выглядываете из укрытия. Бронированная черепаха беспомощно лежит на спине. Оказывается, она передвигалась не на колесах и не на гусеницах: брюхо ее покрыто бахромой крошечных ножек… Впрочем, некогда разглядывать эту уродину — пора идти дальше.</Text>
-			<RemoveTrigger>ProtonGrenade</RemoveTrigger>
+			<Untriggers>ProtonGrenade</Untriggers>
 			<Options>
 				<Option Destination="520"/>
 			</Options>
@@ -4413,7 +4413,7 @@
 		<Paragraph>
 			<ID>472</ID>
 			<Text>Вы плавно взлетаете над улицей и приземляетесь позади стального чудовища, которое продолжает ползти своей дорогой. Увы, полет израсходовал остатки энергии. Зеленое свечение индикатора угасло — больше пояс-антигравитатор вам не пригодится.</Text>
-			<RemoveTrigger>AntiGravityBelt</RemoveTrigger>
+			<Untriggers>AntiGravityBelt</Untriggers>
 			<Options>
 				<Option Destination="520"/>
 			</Options>
@@ -4635,7 +4635,7 @@
 		<Paragraph>
 			<ID>497</ID>
 			<Text>Укрывшись меж громадными бревнами швыряете гранату в массивную тушу. Ярчайшая вспышка видна даже сквозь сомкнутые веки. Современная боевая технология, разумеется, оказывается победительницей: свирепый ящер разнесен в клочки.</Text>
-			<RemoveTrigger>ProtonGrenade</RemoveTrigger>
+			<Untriggers>ProtonGrenade</Untriggers>
 			<Options>
 				<Option Destination="257"/>
 			</Options>
@@ -5192,7 +5192,7 @@
 		<Paragraph>
 			<ID>559</ID>
 			<Text>Запас кислорода в баллончике невелик, его в обрез хватает, чтобы добраться до подводной пещеры.</Text>
-			<RemoveTrigger>SnorkelingMask</RemoveTrigger>
+			<Untriggers>SnorkelingMask</Untriggers>
 			<Options>
 				<Option Destination="315"/>
 			</Options>
