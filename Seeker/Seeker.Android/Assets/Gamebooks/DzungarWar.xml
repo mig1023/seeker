@@ -1201,7 +1201,7 @@
 				<Get>
 					<Button>Купить</Button>
 					<Trigger>Скакун</Trigger>
-					<RemoveTrigger>Боль</RemoveTrigger>
+					<Untrigger>Боль</Untrigger>
 					<Text>СКАКУН</Text>
 					<Price>200</Price>
 					<After>
@@ -6190,7 +6190,7 @@
 				<Get>
 					<Button>Купить жеребца</Button>
 					<Trigger>Скакун</Trigger>
-					<RemoveTrigger>Боль</RemoveTrigger>
+					<Untrigger>Боль</Untrigger>
 					<Text>ЖЕРЕБЕЦ-АХАЛТЕКИНЕЦ</Text>
 					<Price>250</Price>
 					<After>
