@@ -1929,7 +1929,7 @@
 					<Text>РАССКАЖЕТЕ О МЕСТОНАХОЖДЕНИИ БОШЕ</Text>
 					<Price>10</Price>
 					<Sell/>
-					<RemoveTrigger>Алмаз</RemoveTrigger>
+					<Untrigger>Алмаз</Untrigger>
 					<After>
 						<Text>В этом случае вычеркните ключевое слово «Алмаз», если оно у вас записано.</Text>
 					</After>
@@ -1957,7 +1957,7 @@
 			<Options>
 				<Option Destination="203" Text="Разыскать Кайла Боше и рассказать ему, что добыли аэрокар"/>
 				<Option Destination="159" Text="Если нет, то вычеркните ключевое слово «Алмаз»">
-					<Modification Name="RemoveTrigger" Value="Алмаз"/>
+					<Modification Name="Untrigger" Value="Алмаз"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -3032,14 +3032,14 @@
 				<Get>
 					<Button>Продать</Button>
 					<Text>Поляризационные очки</Text>
-					<RemoveTrigger>Поляризационные очки</RemoveTrigger>
+					<Untrigger>Поляризационные очки</Untrigger>
 					<Price>4</Price>
 					<SellIfAvailable/>
 				</Get>			
 				<Get>
 					<Button>Продать</Button>
 					<Text>Фонарик</Text>
-					<RemoveTrigger>Фонарик</RemoveTrigger>
+					<Untrigger>Фонарик</Untrigger>
 					<Price>5</Price>
 					<SellIfAvailable/>
 				</Get>
@@ -3047,14 +3047,14 @@
 					<Button>Продать</Button>
 					<Text>Противогаз</Text>
 					<Price>5</Price>
-					<RemoveTrigger>Противогаз</RemoveTrigger>
+					<Untrigger>Противогаз</Untrigger>
 					<SellIfAvailable/>
 				</Get>
 				<Get>
 					<Button>Продать</Button>
 					<Text>Шумовая граната</Text>
 					<Price>4</Price>
-					<RemoveTrigger>Шумовая граната</RemoveTrigger>
+					<Untrigger>Шумовая граната</Untrigger>
 					<After>
 						<Text>Покупайте и продавайте, что душе угодно.</Text>
 					</After>
@@ -3131,7 +3131,7 @@
 			<Text>С высоты тридцати метров Ледяные пустоши напоминают сверкающее море снега с островками голых черных скал. Ветер со свистом гуляет по земле, гоняя клубы снежной пыли, которые образуют странные фигуры на окружающих скалах. Вы почти не видите признаков жизни. Это одна из самых заброшенных областей в мире. Дневной свет мрачен и бледен, сумерки похожи на голубоватый дым, а ночное небо покрыто тысячами звезд, сияющих в разрывах огромных кучевых облаков.\n\nНеуловимо проходят дни. И наконец, всматриваясь вдаль, вы видите мрачные черные стены разрушенного города. Вы прибыли в Дью-Эн.</Text>
 			<Options>
 				<Option Destination="191" Text="Записано ключевое слово «Алмаз»" Availability="Алмаз">
-					<Modification Name="RemoveTrigger" Value="Алмаз"/>
+					<Modification Name="Untrigger" Value="Алмаз"/>
 				</Option>
 				<Option Destination="213" Text="Нет"/>
 			</Options>
@@ -3773,14 +3773,14 @@
 				<Get>
 					<Button>Продать</Button>
 					<Text>Фонарик</Text>
-					<RemoveTrigger>Фонарик</RemoveTrigger>
+					<Untrigger>Фонарик</Untrigger>
 					<Price>5</Price>
 					<SellIfAvailable/>
 				</Get>
 				<Get>
 					<Button>Продать</Button>
 					<Text>Аптечка</Text>
-					<RemoveTrigger>Аптечка</RemoveTrigger>
+					<Untrigger>Аптечка</Untrigger>
 					<Price>5</Price>
 					<SellIfAvailable/>
 				</Get>
@@ -3795,7 +3795,7 @@
 				<Get>
 					<Button>Продать</Button>
 					<Text>ИД-карта</Text>
-					<RemoveTrigger>ИД-карта</RemoveTrigger>
+					<Untrigger>ИД-карта</Untrigger>
 					<Price>10</Price>
 					<SellIfAvailable/>
 					<After>
