@@ -20,7 +20,7 @@ namespace Seeker.Gamebook.VWeapons
                 DoByTrigger("D", () => protagonist.Suspicions += 1, not: true);
             }
 
-            else if (Name == "RemoveTrigger")
+            else if (Name == "Untrigger")
                 Game.Option.Trigger(ValueString, remove: true);
 
             else
