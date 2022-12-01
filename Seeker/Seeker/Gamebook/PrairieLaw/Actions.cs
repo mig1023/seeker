@@ -17,7 +17,7 @@ namespace Seeker.Gamebook.PrairieLaw
         public int Dices { get; set; }
         public bool Roulette { get; set; }
         public string SellPrices { get; set; }
-        public string RemoveTrigger { get; set; }
+        public string Untrigger { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -228,8 +228,8 @@ namespace Seeker.Gamebook.PrairieLaw
 
         public List<string> Get()
         {
-            if (!String.IsNullOrEmpty(RemoveTrigger))
-                Game.Option.Trigger(RemoveTrigger, remove: true);
+            if (!String.IsNullOrEmpty(Untrigger))
+                Game.Option.Trigger(Untrigger, remove: true);
 
             if ((Price > 0) && (protagonist.Cents >= Price))
             {
