@@ -8,7 +8,7 @@ namespace Seeker.Gamebook.HeartOfIce
         {
             bool skill = DoByName("Skill", () => Character.Protagonist.Skills.Add(ValueString));
             bool rmSkill = DoByName("RemoveSkill", () => Character.Protagonist.Skills.RemoveAll(item => item == ValueString));
-            bool rmTrigger = DoByName("RemoveTrigger", () => Game.Option.Trigger(ValueString, remove: true));
+            bool rmTrigger = DoByName("Untrigger", () => Game.Option.Trigger(ValueString, remove: true));
             bool byTrigger = DoByName("ByTrigger", () => LifeByTrigger());
             bool byNotTrigger = DoByName("ByNotTrigger", () => LifeByTrigger(notLogic: true));
             bool byFood = DoByName("ByFood", () => LifeByFood());

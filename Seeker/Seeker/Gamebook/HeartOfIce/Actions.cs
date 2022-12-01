@@ -8,7 +8,7 @@ namespace Seeker.Gamebook.HeartOfIce
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
 
-        public string RemoveTrigger { get; set; }
+        public string Untrigger { get; set; }
         public string Skill { get; set; }
         public bool Choice { get; set; }
         public bool Sell { get; set; }
@@ -71,7 +71,7 @@ namespace Seeker.Gamebook.HeartOfIce
             if ((Price > 0) && (protagonist.Money >= Price))
             {
                 protagonist.Money += ((Sell || SellIfAvailable) ? Price : (Price * -1));
-                Game.Option.Trigger(RemoveTrigger, remove: true);
+                Game.Option.Trigger(Untrigger, remove: true);
 
                 if (SellIfAvailable && (SellType == "Пистолет"))
                     protagonist.Shots = 0;
@@ -110,8 +110,8 @@ namespace Seeker.Gamebook.HeartOfIce
 
         public bool Available()
         {
-            if (!String.IsNullOrEmpty(RemoveTrigger))
-                return Game.Option.IsTriggered(RemoveTrigger);
+            if (!String.IsNullOrEmpty(Untrigger))
+                return Game.Option.IsTriggered(Untrigger);
 
             else if (SellType == "Пистолет")
                 return protagonist.Shots > 0;
