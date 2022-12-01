@@ -21,6 +21,10 @@ namespace Seeker.Prototypes
             {
                 Game.Option.Trigger(ValueString);
             }
+            else if (Name == "Untrigger")
+            {
+                Game.Option.Trigger(ValueString, remove: true);
+            }
             else if (Name == "Healing")
             {
                 Game.Healing.Add(ValueString);

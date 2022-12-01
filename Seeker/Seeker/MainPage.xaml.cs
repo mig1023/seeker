@@ -154,7 +154,7 @@ namespace Seeker
             if (!loadGame && !reload && !walkingInCircles)
             {
                 Game.Option.Trigger(paragraph.Trigger);
-                Game.Option.Trigger(paragraph.RemoveTrigger, remove: true);
+                Game.Option.Trigger(paragraph.Untrigger, remove: true);
 
                 if ((paragraph.Modification != null) && (paragraph.Modification.Count > 0))
                     foreach (Abstract.IModification modification in paragraph.Modification)

@@ -16,6 +16,6 @@ namespace Seeker.Game
 
         public string LateTrigger { get; set; }
 
-        public string RemoveTrigger { get; set; }
+        public string Untrigger { get; set; }
     }
 }
