@@ -1164,7 +1164,7 @@
 			<Options>
 				<Option Destination="113" Text="Броситься догонять грабителей"/>
 				<Option Destination="140" Text="Поблагодарить бога, что вы остались живы, и возвращаться в лагерь">
-					<Modification Name="RemoveTrigger" Value="Бирюза"/>
+					<Modification Name="Untrigger" Value="Бирюза"/>
 				</Option>
 			</Options>
 		</Paragraph>
@@ -1343,7 +1343,7 @@
 					<Modification Name="Trigger" Value="Баллисты"/>
 				</Option>
 				<Option Destination="145" Text="Попросить у легата взять из арсенала нужное вам количество тяжелых дротиков" Availability="Пилумы">
-					<Modification Name="RemoveTrigger" Value="Пилумы"/>
+					<Modification Name="Untrigger" Value="Пилумы"/>
 				</Option>
 				<Option Destination="145" Text="Не будете ни о чём просить"/>
 			</Options>
@@ -1763,7 +1763,7 @@
 					<Modification Name="Trigger" Value="Баллисты"/>
 				</Option>
 				<Option Destination="145" Text="Попросить у легата взять из арсенала нужное вам количество тяжелых дротиков" Availability="Пилумы">
-					<Modification Name="RemoveTrigger" Value="Пилумы"/>
+					<Modification Name="Untrigger" Value="Пилумы"/>
 				</Option>
 				<Option Destination="145" Text="Не будете ни о чём просить"/>
 			</Options>
