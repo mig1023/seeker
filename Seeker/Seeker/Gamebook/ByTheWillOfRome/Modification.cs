@@ -6,7 +6,7 @@ namespace Seeker.Gamebook.ByTheWillOfRome
     {
         public override void Do()
         {
-            if (Name == "RemoveTrigger")
+            if (Name == "Untrigger")
             {
                 Game.Option.Trigger(ValueString, remove: true);
             }
