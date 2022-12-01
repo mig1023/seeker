@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.DzungarWar
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
 
-        public string RemoveTrigger { get; set; }
+        public string Untrigger { get; set; }
 
         public string Stat { get; set; }
         public int StatStep { get; set; }
@@ -363,7 +363,7 @@ namespace Seeker.Gamebook.DzungarWar
             {
                 protagonist.Tanga -= Price;
 
-                Game.Option.Trigger(RemoveTrigger, remove: true);
+                Game.Option.Trigger(Untrigger, remove: true);
 
                 if (Benefit != null)
                     Benefit.Do();
