@@ -26,6 +26,13 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
                 else
                     Game.Option.Trigger("Бунтарь");
             }
+            else if (Name == "LoserOrKissOfDeath")
+            {
+                if (!Game.Option.IsTriggered("Неудачник"))
+                    Game.Option.Trigger("Неудачник");
+                else
+                    Game.Option.Trigger("Поцелуй смерти");
+            }
             else
                 base.Do(Character.Protagonist);
         }
