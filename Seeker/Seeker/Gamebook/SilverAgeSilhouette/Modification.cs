@@ -33,6 +33,13 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
                 else
                     Game.Option.Trigger("Поцелуй смерти");
             }
+            else if (Name == "Monarchist")
+            {
+                if (!Game.Option.IsTriggered("Сын Отечества"))
+                    Game.Option.Trigger("Сын Отечества");
+                else
+                    Game.Option.Trigger("Монархист");
+            }
             else
                 base.Do(Character.Protagonist);
         }
