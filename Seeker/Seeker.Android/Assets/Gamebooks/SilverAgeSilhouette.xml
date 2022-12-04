@@ -30,6 +30,7 @@
 			<Options>
 				<Option Destination="3" Text="Я решил не утомляться шумной беседой и поднялся во второй этаж"/>
 				<Option Destination="92" Text="Я присоединился к гостям в их обсуждении"/>
+				<Option Destination="10" Text="TEST"/>
 			</Options>
 		</Paragraph>
 		<Paragraph>
@@ -108,6 +109,10 @@
 				<Text Style="Small">Пишу ВЕХУ «Неблагонадежный», КЛЮЧ «Эксцентрик».</Text>
 			</Texts>
 			<Triggers>Эксцентрик, Неблагонадежный</Triggers>
+			<Modifications>
+				<Rating Value="1"/>
+				<Verse Value="Для благоденствия моей страны!"/>
+			</Modifications>
 			<Options>
 				<Option Destination="30"/>
 			</Options>
