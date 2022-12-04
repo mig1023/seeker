@@ -12,7 +12,11 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
 
         public override void Do()
         {
-            if (Name == "FighterOrBrawler")
+            if (Name == "Verse")
+            {
+                Character.Protagonist.Verse.Add(ValueString);
+            }
+            else if (Name == "FighterOrBrawler")
             {
                 if (Game.Option.IsTriggered("Боец"))
                     TriggerReplace("Боец", "Дебошир");
