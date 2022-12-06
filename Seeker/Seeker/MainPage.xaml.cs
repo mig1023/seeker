@@ -192,7 +192,6 @@ namespace Seeker
                             actionPlace.Children.Add(MultipleButtonsPlace(action, actionPlace));
 
                         Action.Children.Add(actionPlace);
-
                         AddAftertext(ref Action, action.Aftertext, action.Aftertexts);
                     }
                 }
@@ -321,7 +320,7 @@ namespace Seeker
                 return;
 
             foreach (Output.Text aftertext in texts)
-                layout.Children.Add(Output.Interface.Text(aftertext));
+                layout.Children.Add(Output.Interface.TextBySelect(aftertext));
         }
 
         private Entry AddInputField(Game.Option option, object button)
