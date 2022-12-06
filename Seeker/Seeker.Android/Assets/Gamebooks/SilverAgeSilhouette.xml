@@ -3388,8 +3388,12 @@
 		<Paragraph>
 			<ID>289</ID>
 			<Texts>
-				<Text Style="Bold">Строка: «Пора бы распрямить нам сколиозы» -- 1</Text>
+				<Text Style="Bold">Строка: "Пора бы распрямить нам сколиозы"</Text>
 			</Texts>
+			<Modifications>
+				<Rating Value="1"/>
+				<Verse Value="Пора бы распрямить нам сколиозы"/>
+			</Modifications>
 			<Options>
 				<Option Destination="237" Text="Если у меня есть КЛЮЧ «Колченогий», то, не вычеркивая его" Availability="Колченогий"/>
 				<Option Destination="269" Text="Иначе"/>
