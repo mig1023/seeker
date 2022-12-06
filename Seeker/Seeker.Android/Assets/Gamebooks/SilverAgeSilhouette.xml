@@ -2660,6 +2660,7 @@
 				<Rating Value="3"/>
 				<Verse Value="Как хороши, как свежи ныне розы"/>
 			</Modifications>
+			<Triggers>Белогвардеец</Triggers>
 			<Options>
 				<Option Destination="283"/>
 			</Options>
@@ -2873,6 +2874,7 @@
 				<Rating Value="5"/>
 				<Verse Value="Но не прельщают сладкие прогнозы"/>
 			</Modifications>
+			<Triggers>Белогвардеец</Triggers>
 			<Options>
 				<Option Destination="283"/>
 			</Options>
@@ -2984,6 +2986,7 @@
 				<Rating Value="3"/>
 				<Verse Value="Как хороши, как свежи ныне розы"/>
 			</Modifications>
+			<Triggers>Белогвардеец</Triggers>
 			<Options>
 				<Option Destination="283"/>
 			</Options>
