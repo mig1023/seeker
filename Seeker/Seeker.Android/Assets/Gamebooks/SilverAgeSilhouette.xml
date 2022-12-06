@@ -3424,8 +3424,12 @@
 		<Paragraph>
 			<ID>292</ID>
 			<Texts>
-				<Text Style="Bold">Строка: «Пришли лета, и всюду льются слезы...» -- 6</Text>
+				<Text Style="Bold">Строка: "Пришли лета, и всюду льются слезы..."</Text>
 			</Texts>
+			<Modifications>
+				<Rating Value="6"/>
+				<Verse Value="Пришли лета, и всюду льются слезы..."/>
+			</Modifications>
 			<Options>
 				<Option Destination="252"/>
 			</Options>
