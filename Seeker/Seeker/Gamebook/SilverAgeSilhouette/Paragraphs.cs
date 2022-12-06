@@ -17,5 +17,8 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
             Xml.ModificationParse(xmlModification, new Modification());
+
+        public override Abstract.IActions ActionParse(XmlNode xmlAction) =>
+            (Actions)ActionTemplate(xmlAction, new Actions());
     }
 }

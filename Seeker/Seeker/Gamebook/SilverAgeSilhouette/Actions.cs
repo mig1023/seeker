@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Seeker.Gamebook.SilverAgeSilhouette
@@ -7,6 +8,8 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
     {
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
+
+        public List<string> Verse() => protagonist.Verse;
 
         public override bool Availability(string option)
         {
