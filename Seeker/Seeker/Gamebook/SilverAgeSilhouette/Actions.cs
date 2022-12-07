@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Seeker.Gamebook.SilverAgeSilhouette
 {
@@ -9,7 +10,8 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
         public static Actions StaticInstance = new Actions();
         private static Character protagonist = Character.Protagonist;
 
-        public List<string> Verse() => protagonist.Verse;
+        public List<string> Verse() =>
+            protagonist.Verse.Select(x => Regex.Unescape(x)).ToList();
 
         public override bool Availability(string option)
         {
