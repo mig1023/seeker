@@ -19,19 +19,33 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
             }
             else if (option.Contains("|"))
             {
-                return option.Split('|').Where(x => Game.Option.IsTriggered(x.Trim())).Count() > 0;
+                return option
+                    .Split('|')
+                    .Where(x => Game.Option.IsTriggered(x.Trim()))
+                    .Count() > 0;
             }
             else if (option.Contains("ОЦЕНКА"))
             {
-                int level = Game.Services.LevelParse(option);
+                bool logic = option.Contains("!");
 
-                if (option.Contains("ОЦЕНКА >=") && (level > protagonist.Rating))
-                    return false;
+                List<string> ratings = option
+                    .Replace("!", String.Empty)
+                    .Split(',')
+                    .Select(x => x.Trim())
+                    .ToList();
 
-                if (option.Contains("ОЦЕНКА <") && (level <= protagonist.Rating))
-                    return false;
+                foreach (string rating in ratings)
+                {
+                    int level = Game.Services.LevelParse(rating);
 
-                return true;
+                    if (rating.Contains("ОЦЕНКА >=") && (level > protagonist.Rating))
+                        return logic;
+
+                    if (rating.Contains("ОЦЕНКА <") && (level <= protagonist.Rating))
+                        return logic;
+                }
+
+                return !logic;
             }
             else
             {
