@@ -7,6 +7,7 @@
 			<Color Name="Option">fdfaf0</Color>
 			<Color Name="ButtonFont">000000</Color>
 			<Color Name="StatusBar">dfd4ae</Color>
+			<Color Name="ActionBox">fcf9ec</Color>
 		</Styles>
 		<Settings>
 			<ShowDisabledOption/>
@@ -470,7 +471,7 @@
 				<Text Style="Small">Если у меня нет КЛЮЧА «Революционер» - пишу его себе. Если у меня этот КЛЮЧ уже есть, пишу себе ВЕХУ «Бунтарь».</Text>
 			</Texts>
 			<Modifications>
-				<RevolutionaryOrRebel/>
+				<Add Value="Революционер --> Бунтарь"/>
 				<Rating Value="1"/>
 				<Verse Value="Кудах -\n\tтах -\n\t\tтах -\n\t\t\tЗа что все это мне?"/>
 			</Modifications>
@@ -899,7 +900,7 @@
 				<Text Style="Small">Если у меня был КЛЮЧ «Боец», меняю его на КЛЮЧ «Дебошир». Если не было — пишу КЛЮЧ «Боец».</Text>
 			</Texts>
 			<Modifications>
-				<FighterOrBrawler/>
+				<Replace Value="Боец --> Дебошир"/>
 			</Modifications>
 			<Options>
 				<Option Destination="150"/>
@@ -1489,7 +1490,7 @@
 				<Text Style="Small">Записать ВЕХУ «Неудачник». А если такая ВЕХА у меня уже есть, то пишу себе так же КЛЮЧ «Поцелуй смерти».</Text>
 			</Texts>
 			<Modifications>
-				<LoserOrKissOfDeath/>
+				<Add Value="Неудачник --> Поцелуй смерти"/>
 			</Modifications>
 			<Options>
 				<Option Destination="150"/>
@@ -1696,7 +1697,7 @@
 				<Text>- Слабовато, батенька, не дотягиваете пока, - сокрушенно говорил мне Гумилев. - Пока определим вас в мастеровые. Будем развивать и совершенствовать ваше стихосложение.\n\nТем не менее, я стал завсегдатаем в творческой мастерской Цеха. Когда меня забрили в армию, Гумилев лично помог мне оказаться в списках на «волчьи» билеты. Он тогда многим помог проскочить. Говорил: "Воевать должны солдаты. Литераторов нужно спасать" - хоть и сам потом ушел на войну.</Text>
 			</Texts>
 			<Modifications>
-				<RevolutionaryOrRebel/>
+				<Add Value="Революционер --> Бунтарь"/>
 				<Rating Value="1"/>
 				<Verse Value="Кудах -\n\tтах -\n\t\tтах -\n\t\t\tЗа что все это мне?"/>
 			</Modifications>
@@ -2292,7 +2293,7 @@
 				<Text Style="Small">Если у меня есть КЛЮЧ «Боец» и нет КЛЮЧА «Дебошир», пишу его себе.</Text>
 			</Texts>
 			<Modifications>
-				<FighterOrBrawler/>
+				<Replace Value="Боец --> Дебошир"/>
 			</Modifications>
 			<Options>
 				<Option Destination="212"/>
@@ -2508,7 +2509,7 @@
 				<Text Style="Small">Если у меня нет КЛЮЧА «Революционер» - пишу его себе. Если у меня этот КЛЮЧ уже есть, пишу себе ВЕХУ «Бунтарь».</Text>
 			</Texts>
 			<Modifications>
-				<RevolutionaryOrRebel/>
+				<Add Value="Революционер --> Бунтарь"/>
 			</Modifications>
 			<Options>
 				<Option Destination="176"/>
@@ -2621,7 +2622,7 @@
 				<Text>Жандармы обнаружили меня еще дышащим в сточных канавах Монмартра. Бедняга Пьер выходил меня. Я остался в неоплатном долгу перед ним. Мое лечение обошлось ему в целое состояние.\n\nНакануне войны по случаю 300-летия Дома Романовых политическим эмигрантам была предоставлена амнистия и я, что бы не усугублять и без того сложное материальное положение Пьера, предпочел вернуться на Родину.</Text>
 			</Texts>
 			<Modifications>
-				<LoserOrKissOfDeath/>
+				<Add Value="Неудачник --> Поцелуй смерти"/>
 			</Modifications>
 			<Options>
 				<Option Destination="73" Text="Если у меня есть ВЕХИ «Собственное издание» и «Слава», значит, я возвращаюсь в Россию как герой, окруженный лавровым венком почета" Availability="Собственное издание|Слава"/>
@@ -2844,7 +2845,7 @@
 			</Texts>
 			<Triggers>Сын Отечества</Triggers> 
 			<Modifications>
-				<Monarchist/>
+				<Add Value="Сын Отечества --> Монархист"/>
 			</Modifications>
 			<Options>
 				<Option Destination="176"/>
@@ -2865,7 +2866,7 @@
 				<Text Style="Small">Записываю ВЕХИ «Неудачник» и «Красноармеец». А если ВЕХА «Неудачник» у меня уже есть, то пишу себе так же КЛЮЧ «Поцелуй смерти».</Text>
 			</Texts>
 			<Modifications>
-				<LoserOrKissOfDeath/>
+				<Add Value="Неудачник --> Поцелуй смерти"/>
 			</Modifications>
 			<Triggers>Красноармеец</Triggers>
 			<Options>
