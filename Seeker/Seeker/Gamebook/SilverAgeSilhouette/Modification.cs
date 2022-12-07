@@ -1,51 +1,48 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.SilverAgeSilhouette
 {
     class Modification : Prototypes.Modification, Abstract.IModification
     {
-        private void TriggerReplace(string remove, string add)
-        {
-            Game.Option.Trigger(remove, true);
-            Game.Option.Trigger(add);
-        }
-
         public override void Do()
         {
             if (Name == "Verse")
-            {
                 Character.Protagonist.Verse.Add(ValueString);
-            }
-            else if (Name == "FighterOrBrawler")
-            {
-                if (Game.Option.IsTriggered("Боец"))
-                    TriggerReplace("Боец", "Дебошир");
-                else
-                    Game.Option.Trigger("Боец");
-            }
-            else if (Name == "RevolutionaryOrRebel")
-            {
-                if (!Game.Option.IsTriggered("Революционер"))
-                    Game.Option.Trigger("Революционер");
-                else
-                    Game.Option.Trigger("Бунтарь");
-            }
-            else if (Name == "LoserOrKissOfDeath")
-            {
-                if (!Game.Option.IsTriggered("Неудачник"))
-                    Game.Option.Trigger("Неудачник");
-                else
-                    Game.Option.Trigger("Поцелуй смерти");
-            }
-            else if (Name == "Monarchist")
-            {
-                if (!Game.Option.IsTriggered("Сын Отечества"))
-                    Game.Option.Trigger("Сын Отечества");
-                else
-                    Game.Option.Trigger("Монархист");
-            }
+
+            else if (Name == "Replace")
+                TriggerReplace(TriggerSplit(ValueString));
+
+            else if (Name == "Add")
+                TriggerAdd(TriggerSplit(ValueString));
+
             else
                 base.Do(Character.Protagonist);
+        }
+
+        private void TriggerReplace(List<string> triggers)
+        {
+            if (Game.Option.IsTriggered(triggers[0]))
+            {
+                Game.Option.Trigger(triggers[0], remove: true);
+                Game.Option.Trigger(triggers[1]);
+            }
+            else
+                Game.Option.Trigger(triggers[0]);
+        }
+
+        private void TriggerAdd(List<string> triggers) =>
+            Game.Option.Trigger(triggers[Game.Option.IsTriggered(triggers[0]) ? 1 : 0]);
+
+        private List<string> TriggerSplit(string triggersLine)
+        {
+            List<string> triggers = triggersLine
+                .Split(new string[] { "-->" }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(x => x.Trim())
+                .ToList();
+
+            return triggers;
         }
     }
 }
