@@ -16,43 +16,63 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
-            {
                 return true;
-            }
+
+            else if (option.Contains("||"))
+                return AvailabilityExclusiveTrigger(option);
+
             else if (option.Contains("|"))
-            {
-                return option
-                    .Split('|')
-                    .Where(x => Game.Option.IsTriggered(x.Trim()))
-                    .Count() > 0;
-            }
+                return AvailabilityMultiplesTrigger(option);
+
             else if (option.Contains("ОЦЕНКА"))
-            {
-                bool logic = option.Contains("!");
+                return AvailabilityRating(option);
 
-                List<string> ratings = option
-                    .Replace("!", String.Empty)
-                    .Split(',')
-                    .Select(x => x.Trim())
-                    .ToList();
-
-                foreach (string rating in ratings)
-                {
-                    int level = Game.Services.LevelParse(rating);
-
-                    if (rating.Contains("ОЦЕНКА >=") && (level > protagonist.Rating))
-                        return logic;
-
-                    if (rating.Contains("ОЦЕНКА <") && (level <= protagonist.Rating))
-                        return logic;
-                }
-
-                return !logic;
-            }
             else
-            {
                 return AvailabilityTrigger(option);
+        }
+
+        private bool AvailabilityRating(string option)
+        {
+            bool logic = option.Contains("!");
+
+            List<string> ratings = option
+                .Replace("!", String.Empty)
+                .Split(',')
+                .Select(x => x.Trim())
+                .ToList();
+
+            foreach (string rating in ratings)
+            {
+                int level = Game.Services.LevelParse(rating);
+
+                if (rating.Contains("ОЦЕНКА >=") && (level > protagonist.Rating))
+                    return logic;
+
+                if (rating.Contains("ОЦЕНКА <") && (level <= protagonist.Rating))
+                    return logic;
             }
+
+            return !logic;
+        }
+
+        private bool AvailabilityMultiplesTrigger(string option)
+        {
+            bool triggers = option
+                .Split('|')
+                .Where(x => Game.Option.IsTriggered(x.Trim()))
+                .Count() > 0;
+
+            return triggers;
+        }
+        
+        private bool AvailabilityExclusiveTrigger(string option)
+        {
+            List<string> triggers = option
+                .Split(new string[] { "||" }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(x => x.Trim())
+                .ToList();
+
+            return Game.Option.IsTriggered(triggers[0]) && !Game.Option.IsTriggered(triggers[1]);
         }
     }
 }
