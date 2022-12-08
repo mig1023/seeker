@@ -18,6 +18,9 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
             if (String.IsNullOrEmpty(option))
                 return true;
 
+            else if (option == "Нет издания или неудачник")
+                return AvailabilitySpecialTrigger();
+
             else if (option.Contains("||"))
                 return AvailabilityExclusiveTrigger(option);
 
@@ -73,6 +76,18 @@ namespace Seeker.Gamebook.SilverAgeSilhouette
                 .ToList();
 
             return Game.Option.IsTriggered(triggers[0]) && !Game.Option.IsTriggered(triggers[1]);
+        }
+
+        private bool AvailabilitySpecialTrigger()
+        {
+            if (!Game.Option.IsTriggered("Собственное издание"))
+                return true;
+
+            else if (Game.Option.IsTriggered("Неудачник"))
+                return true;
+
+            else
+                return false;
         }
     }
 }
