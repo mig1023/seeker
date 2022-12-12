@@ -12,6 +12,7 @@
 		<Settings>
 			<HideDisabledOption/>
 			<StartParagraph Value="1"/>
+			<DefaultFontSize Value="Big"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
