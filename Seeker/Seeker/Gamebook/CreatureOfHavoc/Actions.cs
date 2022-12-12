@@ -70,6 +70,9 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             return luckCheck;
         }
 
+        public override bool IsButtonEnabled(bool secondButton = false) =>
+            (Type == "Translation") ? Game.Option.IsTriggered("Translate") : true;
+
         public List<string> Rocks()
         {
             List<string> rocks = new List<string>();
