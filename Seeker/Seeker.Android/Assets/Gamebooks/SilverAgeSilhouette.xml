@@ -11,6 +11,7 @@
 		</Styles>
 		<Settings>
 			<ShowDisabledOption/>
+			<DefaultFontSize Value="Little"/>
 		</Settings>
 		<Buttons>
 			<Verse>Узнать свой стих</Verse>
