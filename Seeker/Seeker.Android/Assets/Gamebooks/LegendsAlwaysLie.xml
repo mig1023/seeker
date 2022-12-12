@@ -18,6 +18,7 @@
 		</Constants>
 		<Settings>
 			<ShowDisabledOption/>
+			<DefaultFontSize Value="Little"/>
 		</Settings>
 		<Buttons>
 			<Fight>Сражаться</Fight>
