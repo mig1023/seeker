@@ -33,6 +33,8 @@ namespace Seeker.Abstract
 
         void LoadStartParagraphOption(string option);
 
+        void LoadDefaultFontSize(string option);
+
         int GetStartParagraph();
 
         Dictionary<string, string> ButtonText();

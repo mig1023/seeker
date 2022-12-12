@@ -24,6 +24,8 @@ namespace Seeker.Prototypes
 
         private int StartParagraph = 0;
 
+        private Output.Interface.TextFontSize TextFontSizeDefault = Output.Interface.TextFontSize.Normal;
+
         public virtual string GetColor(ButtonTypes type)
         {
             Dictionary<ButtonTypes, string> color = (Settings.IsEnabled("WithoutStyles") ?
@@ -93,11 +95,10 @@ namespace Seeker.Prototypes
                 this.GetType().GetProperty(name).SetValue(this, dictionary);
         }
 
-        public static string DefaultColor(Data.ColorTypes type) => Output.Constants.DEFAULT_COLORS[type];
+        public static string DefaultColor(Data.ColorTypes type) =>
+            Output.Constants.DEFAULT_COLORS[type];
 
         public virtual string GetFont() => String.Empty;
-
-        public virtual Output.Interface.TextFontSize GetFontSize() => Output.Interface.TextFontSize.Normal;
 
         public virtual bool GetParagraphsStatusesLimit(out int limitStart, out int limitEnd)
         {
@@ -107,7 +108,8 @@ namespace Seeker.Prototypes
             return false;
         }
 
-        public void LoadEnabledDisabledOption(bool option) => ShowDisabledOptionStatus = option;
+        public void LoadEnabledDisabledOption(bool option) =>
+            ShowDisabledOptionStatus = option;
 
         public virtual bool ShowDisabledOption() => ShowDisabledOptionStatus;
 
@@ -118,6 +120,14 @@ namespace Seeker.Prototypes
             else
                 StartParagraph = 0;
         }
+        
+        public void LoadDefaultFontSize(string option)
+        {
+            if (Enum.TryParse(option, out Output.Interface.TextFontSize fontSize))
+                TextFontSizeDefault = fontSize;
+        }
+
+        public virtual Output.Interface.TextFontSize GetFontSize() => TextFontSizeDefault;
 
         public virtual int GetStartParagraph() => StartParagraph;
 
