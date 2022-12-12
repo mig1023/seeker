@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace Seeker.Gamebook.CreatureOfHavoc
 {
@@ -17,6 +18,8 @@ namespace Seeker.Gamebook.CreatureOfHavoc
         public bool Ophidiotaur { get; set; }
         public bool ManicBeast { get; set; }
         public bool GiantHornet { get; set; }
+
+        public string SomethingStrange { get; set; }
 
         public override List<string> Representer()
         {
@@ -184,6 +187,20 @@ namespace Seeker.Gamebook.CreatureOfHavoc
             skillCheck.Add(Result(goodSkill, "МАСТЕРСТВА ХВАТИЛО|МАСТЕРСТВА НЕ ХВАТИЛО"));
 
             return skillCheck;
+        }
+
+        public List<string> Translation()
+        {
+            Regex regex = new Regex(@"([^\.])\s");
+            string decode = regex.Replace(SomethingStrange, "$1");
+
+            foreach (char replace in Constants.TranslateReplaces.Values)
+                decode = decode.Replace(replace, ' ');
+
+            foreach (KeyValuePair<char, char> replace in Constants.TranslateReplaces)
+                decode = decode.Replace(replace.Key, replace.Value);
+
+            return new List<string> { decode };
         }
 
         public List<string> Fight()
