@@ -3871,6 +3871,9 @@
 					</After>
 				</Translation>
 			</Actions>
+			<Modifications>
+				<Luck Value="2"/>
+			</Modifications>
 			<Options>
 				<Option Destination="51" Text="Уйти через дверь, ведущую на запад"/>
 				<Option Destination="33" Text="Отправиться на восток"/>
