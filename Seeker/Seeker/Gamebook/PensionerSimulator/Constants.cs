@@ -6,9 +6,6 @@ namespace Seeker.Gamebook.PensionerSimulator
     {
         public static Constants StaticInstance = new Constants();
 
-        public override Output.Interface.TextFontSize GetFontSize() =>
-            Output.Interface.TextFontSize.Big;
-
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,
