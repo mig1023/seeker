@@ -22,6 +22,7 @@
 		</Constants>
 		<Settings>
 			<HideDisabledOption/>
+			<DefaultFontSize Value="Little"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
