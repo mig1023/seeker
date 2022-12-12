@@ -8,6 +8,7 @@
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
+			<DefaultFontSize Value="Small"/>
 		</Settings>
 	</Introduction>
 	<Paragraphs>
