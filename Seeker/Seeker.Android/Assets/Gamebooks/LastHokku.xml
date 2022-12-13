@@ -16,15 +16,13 @@
 		</Settings>
 	</Introduction>
 	<Paragraphs>
-		<Paragraph>
-			<ID>0</ID>
+		<Paragraph No="0">
 			<Text>Стихи скажут о себе сами…</Text>
 			<Options>
 				<Option Destination="1"/>
 			</Options>
 		</Paragraph>
-		<Paragraph>
-			<ID>1</ID>
+		<Paragraph No="1">
 			<Options>
 				<Option Destination="2" Text="Сверкающее"/>
 				<Option Destination="2" Text="Тёмное"/>
@@ -33,8 +31,7 @@
 				<Option Destination="2" Text="Безмолвное"/>
 			</Options>
 		</Paragraph>
-		<Paragraph>
-			<ID>2</ID>
+		<Paragraph No="2">
 			<Options>
 				<Option Destination="3" Text="солнце"/>
 				<Option Destination="3" Text="облако"/>
@@ -43,8 +40,7 @@
 				<Option Destination="3" Text="ничто"/>
 			</Options>
 		</Paragraph>
-		<Paragraph>
-			<ID>3</ID>
+		<Paragraph No="3">
 			<Options>
 				<Option Destination="4" Text="накрыло"/>
 				<Option Destination="4" Text="впитало"/>
@@ -53,8 +49,7 @@
 				<Option Destination="4" Text="изранило"/>
 			</Options>
 		</Paragraph>
-		<Paragraph>
-			<ID>4</ID>
+		<Paragraph No="4">
 			<Options>
 				<Option Destination="5" Text="небо"/>
 				<Option Destination="5" Text="землю"/>
@@ -63,8 +58,7 @@
 				<Option Destination="5" Text="весь мир"/>
 			</Options>
 		</Paragraph>
-		<Paragraph>
-			<ID>5</ID>
+		<Paragraph No="5">
 			<Options>
 				<Option Destination="6" Text="Время"/>
 				<Option Destination="6" Text="Я"/>
@@ -73,16 +67,14 @@
 				<Option Destination="6" Text="Жизнь"/>
 			</Options>
 		</Paragraph>
-		<Paragraph>
-			<ID>6</ID>
+		<Paragraph No="6">
 			<Options>
 				<Option Destination="7" Text="больше чем"/>
 				<Option Destination="7" Text="всего лишь"/>
 				<Option Destination="7" Text="это"/>
 			</Options>
 		</Paragraph>
-		<Paragraph>
-			<ID>7</ID>
+		<Paragraph No="7">
 			<Options>
 				<Option Destination="8" Text="слово"/>
 				<Option Destination="8" Text="смерть"/>
@@ -91,32 +83,27 @@
 				<Option Destination="8" Text="мой сон"/>
 			</Options>
 		</Paragraph>
-		<Paragraph>
-			<ID>8</ID>
+		<Paragraph No="8">
 			<Options>
 				<Option Destination="9" Text="Ты создал это хокку…"/>
 			</Options>
 		</Paragraph>
-		<Paragraph>
-			<ID>9</ID>
+		<Paragraph No="9">
 			<Options>
 				<Option Destination="10" Text="Прочти его ещё раз…"/>
 			</Options>
 		</Paragraph>
-		<Paragraph>
-			<ID>10</ID>
+		<Paragraph No="10">
 			<Options>
 				<Option Destination="11" Text="Обдумай…"/>
 			</Options>
 		</Paragraph>
-		<Paragraph>
-			<ID>11</ID>
+		<Paragraph No="11">
 			<Options>
 				<Option Destination="12" Text="Проникнись…"/>
 			</Options>
 		</Paragraph>
-		<Paragraph>
-			<ID>12</ID>
+		<Paragraph No="12">
 			<Options>
 				<Option Destination="1" Text="И создай ещё лучше…"/>
 			</Options>
