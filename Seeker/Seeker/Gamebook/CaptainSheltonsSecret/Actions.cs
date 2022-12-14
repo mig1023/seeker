@@ -124,6 +124,23 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
 
             int goodLuck = Game.Dice.Roll();
 
+            if (Game.Option.IsTriggered("EvenLuck"))
+            {
+                bool even = goodLuck % 2 == 0;
+
+                luckCheck.Add(String.Format("Проверка чётности: {0} - {1}чётное",
+                    Game.Dice.Symbol(goodLuck), even ? String.Empty : "не"));
+
+                if (even)
+                {
+                    luckCheck.Add("BIG|GOOD|УСПЕХ :)");
+                    luckCheck.Add("Благодаря Заклюятью нет необходимости зачёркивать квадрат удачи!");
+                    return luckCheck;
+                }
+                else
+                    luckCheck.Add("Увы, Заклятье Удачи тут не поможет...");
+            }
+
             luckCheck.Add(String.Format("Проверка удачи: {0} - {1}зачёркунтый",
                 Game.Dice.Symbol(goodLuck), (protagonist.Luck[goodLuck] ? "не " : String.Empty)));
 
