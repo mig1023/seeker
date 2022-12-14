@@ -5,7 +5,7 @@ namespace Seeker.Game
 {
     class Continue
     {
-        static string CurrentGameName { get; set; } 
+        private static string CurrentGameName { get; set; } 
 
         public static void CurrentGame(string name)
         {
@@ -21,7 +21,8 @@ namespace Seeker.Game
                 return null;
         }
 
-        public static bool IsGameSaved() => App.Current.Properties.TryGetValue(CurrentGameName, out _);
+        public static bool IsGameSaved() =>
+            App.Current.Properties.TryGetValue(CurrentGameName, out _);
 
         public static void Save()
         {
@@ -52,7 +53,8 @@ namespace Seeker.Game
             return Data.CurrentParagraphID;
         }
 
-        public static void Remove() => App.Current.Properties.Remove(CurrentGameName);
+        public static void Remove() =>
+            App.Current.Properties.Remove(CurrentGameName);
 
         public static void Clean()
         {

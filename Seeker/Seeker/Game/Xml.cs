@@ -13,11 +13,14 @@ namespace Seeker.Game
         private static Dictionary<string, XmlNode> Descriptions { get; set; }
         private static List<XmlNode> SettingsData { get; set; }
 
-        public static int IntParse(string text) => int.TryParse(text, out int value) ? value : 0;
+        public static int IntParse(string text) =>
+            int.TryParse(text, out int value) ? value : 0;
 
-        public static int IntParse(XmlNode xmlNode) => IntParse(xmlNode?.InnerText ?? "0");
+        public static int IntParse(XmlNode xmlNode) =>
+            IntParse(xmlNode?.InnerText ?? "0");
 
-        public static string StringParse(XmlNode xmlNode) => xmlNode?.InnerText ?? String.Empty;
+        public static string StringParse(XmlNode xmlNode) =>
+            xmlNode?.InnerText ?? String.Empty;
 
         public static Dictionary<string, string> ImagesParse(XmlNode xmlNode)
         {
@@ -32,7 +35,8 @@ namespace Seeker.Game
             return images;
         }
 
-        public static bool BoolParse(XmlNode xmlNode) => xmlNode != null;
+        public static bool BoolParse(XmlNode xmlNode) =>
+            xmlNode != null;
 
         public static Abstract.IModification ModificationParse(XmlNode xmlNode, Abstract.IModification modification)
         {
@@ -44,7 +48,6 @@ namespace Seeker.Game
             else
                 modification.Name = xmlNode.Name;
             
-
             modification.Empty = BoolParse(xmlNode.Attributes["Empty"]);
             modification.Restore = BoolParse(xmlNode.Attributes["Restore"]);
 
@@ -226,7 +229,8 @@ namespace Seeker.Game
         private static List<string> Multiples(XmlNode xmlNode, string attributes) =>
             xmlNode.Attributes[attributes].InnerText.Split(',').Select(x => x.Trim()).ToList();
 
-        private static string Intro(string node) => String.Format("Gamebook/Introduction/{0}", node);
+        private static string Intro(string node) =>
+            String.Format("Gamebook/Introduction/{0}", node);
 
         public static void GetXmlDescriptionData(ref Description description)
         {
