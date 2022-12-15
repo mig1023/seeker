@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.Cyberpunk
         public string Stat { get; set; }
         public bool MultipliedLuck { get; set; }
         public bool DividedLuck { get; set; }
+        public bool ReverseCheck { get; set; }
 
         public override List<string> AdditionalStatus()
         {
@@ -156,9 +157,10 @@ namespace Seeker.Gamebook.Cyberpunk
             test.Add(String.Format("{0} = {1}", paramsLine.TrimEnd(' ', '+'), paramsLevel));
 
             int dice = Game.Dice.Roll(size: 100);
+            bool success = ReverseCheck ? dice > paramsLevel : dice <= paramsLevel;
 
             test.Add(String.Format("BOLD|BIG|Бросок кубика: {0} - {1}!", dice, Game.Services.Сomparison(dice, paramsLevel)));
-            test.Add(Result((dice <= paramsLevel), "УСПЕХ|НЕУДАЧА"));
+            test.Add(Result(success, "УСПЕХ|НЕУДАЧА"));
 
             return test;
         }
