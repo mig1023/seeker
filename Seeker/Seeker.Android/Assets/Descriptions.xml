@@ -9,7 +9,7 @@
 		<OnlyFirstParagraphsValue/>
 		<Size>150021</Size>
 		<Setting>Фэнтези</Setting>
-		<Color>#151515</Color>
+		<Color>151515</Color>
 	</Description>
 	<Description>
 		<Name>CaptainSheltonsSecret</Name>
@@ -20,7 +20,7 @@
 		<Paragraphs>629</Paragraphs>
 		<Size>48184</Size>
 		<Setting>История</Setting>
-		<Color>#4682B4</Color>
+		<Color>4682B4</Color>
 	</Description>
 	<Description>
 		<Name>FaithfulSwordOfTheKing</Name>
@@ -31,7 +31,7 @@
 		<Paragraphs>660</Paragraphs>
 		<Size>50166</Size>
 		<Setting>История</Setting>
-		<Color>#911</Color>
+		<Color>911</Color>
 	</Description>
 	<Description>
 		<Name>AdventuresOfABeardlessDeceiver</Name>
@@ -42,7 +42,7 @@
 		<Paragraphs>205</Paragraphs>
 		<Size>41264</Size>
 		<Setting>История</Setting>
-		<Color>#5da130</Color>
+		<Color>5da130</Color>
 	</Description>
 	<Description>
 		<Name>DzungarWar</Name>
@@ -54,7 +54,7 @@
 		<Size>132278</Size>
 		<LongPlaythrough/>
 		<Setting>История</Setting>
-		<Color>#533818</Color>
+		<Color>533818</Color>
 	</Description>
 	<Description>
 		<Name>RockOfTerror</Name>
@@ -66,7 +66,7 @@
 		<Size>14164</Size>
 		<ShortPlaythrough/>
 		<Setting>История</Setting>
-		<Color>#000000</Color>
+		<Color>000000</Color>
 	</Description>
 	<Description>
 		<Name>RendezVous</Name>
@@ -82,9 +82,9 @@
 		<ShortPlaythrough/>
 		<Setting>Научная фантастика</Setting>
 		<Colors>
-			<Book>#ffffff</Book>
-			<Font>#000000</Font>
-			<Border>#000000</Border>
+			<Book>ffffff</Book>
+			<Font>000000</Font>
+			<Border>000000</Border>
 		</Colors>
 	</Description>
 	<Description>
@@ -96,7 +96,7 @@
 		<Paragraphs>200</Paragraphs>
 		<Size>17353</Size>
 		<Setting>Научная фантастика</Setting>
-		<Color>#ff557c48</Color>
+		<Color>ff557c48</Color>
 	</Description>
 	<Description>
 		<Name>MentorsAlwaysRight</Name>
@@ -107,7 +107,7 @@
 		<Paragraphs>559</Paragraphs>
 		<Size>37538</Size>
 		<Setting>Фэнтези</Setting>
-		<Color>#3662ae</Color>
+		<Color>3662ae</Color>
 	</Description>
 	<Description>
 		<Name>LegendsAlwaysLie</Name>
@@ -119,7 +119,7 @@
 		<Size>103081</Size>
 		<LongPlaythrough/>
 		<Setting>Фэнтези</Setting>
-		<Color>#4c0000</Color>
+		<Color>4c0000</Color>
 	</Description>
 	<Description>
 		<Name>StringOfWorlds</Name>
@@ -130,7 +130,7 @@
 		<Paragraphs>665</Paragraphs>
 		<Size>50282</Size>
 		<Setting>Приключения</Setting>
-		<Color>#990066</Color>
+		<Color>990066</Color>
 	</Description>
 	<Description>
 		<Name>ThreePaths</Name>
@@ -141,7 +141,7 @@
 		<Paragraphs>914 (253+307+354)</Paragraphs>
 		<Size>88028</Size>
 		<Setting>Фэнтези</Setting>
-		<Color>#009999</Color>
+		<Color>009999</Color>
 	</Description>
 	<Description>
 		<Name>InvisibleFront</Name>
@@ -154,8 +154,8 @@
 		<Size>15237</Size>
 		<Setting>Шпионы</Setting>
 		<Colors>
-			<Book>#d52b1e</Book>
-			<Font>#eede49</Font>
+			<Book>d52b1e</Book>
+			<Font>eede49</Font>
 		</Colors>
 	</Description>
 	<Description>
@@ -167,7 +167,7 @@
 		<Paragraphs>200</Paragraphs>
 		<Size>19273</Size>
 		<Setting>Приключения</Setting>
-		<Color>#151515</Color>
+		<Color>151515</Color>
 	</Description>
 	<Description>
 		<Name>ThoseWhoAreAboutToDie</Name>
@@ -179,8 +179,8 @@
 		<Size>21071</Size>
 		<Setting>История</Setting>
 		<Colors>
-			<Book>#fcdd76</Book>
-			<Font>#000000</Font>
+			<Book>fcdd76</Book>
+			<Font>000000</Font>
 		</Colors>
 	</Description>
 	<Description>
@@ -194,7 +194,7 @@
 		<Paragraphs>215</Paragraphs>
 		<Size>39379</Size>
 		<Setting>Приключения</Setting>
-		<Color>#c93c20</Color>
+		<Color>c93c20</Color>
 	</Description>
 	<Description>
 		<Name>CreatureOfHavoc</Name>
@@ -208,7 +208,7 @@
 		<Size>27237</Size>
 		<LongPlaythrough/>
 		<Setting>Фэнтези</Setting>
-		<Color>#145334</Color>
+		<Color>145334</Color>
 	</Description>
 	<Description>
 		<Name>BloodfeudOfAltheus</Name>
@@ -223,8 +223,8 @@
 		<LongPlaythrough/>
 		<Setting>История</Setting>
 		<Colors>
-			<Book>#ebd5b3</Book>
-			<Font>#000000</Font>
+			<Book>ebd5b3</Book>
+			<Font>000000</Font>
 		</Colors>
 	</Description>
 	<Description>
@@ -239,7 +239,7 @@
 		<Size>4993</Size>
 		<ShortPlaythrough/>
 		<Setting>Юмор</Setting>
-		<Color>#030436</Color>
+		<Color>030436</Color>
 	</Description>
 	<Description>
 		<Name>LordOfTheSteppes</Name>
@@ -251,7 +251,7 @@
 		<Size>220700</Size>
 		<LongPlaythrough/>
 		<Setting>История</Setting>
-		<Color>#b80f0a</Color>
+		<Color>b80f0a</Color>
 	</Description>
 	<Description>
 		<Name>HowlOfTheWerewolf</Name>
@@ -264,7 +264,7 @@
 		<Paragraphs>515</Paragraphs>
 		<Size>69351</Size>
 		<Setting>Фэнтези</Setting>
-		<Color>#383e3b</Color>
+		<Color>383e3b</Color>
 	</Description>
 	<Description>
 		<Name>StainlessSteelRat</Name>
@@ -277,7 +277,7 @@
 		<Paragraphs>350</Paragraphs>
 		<Size>34020</Size>
 		<Setting>Юмор</Setting>
-		<Color>#333f4b</Color>
+		<Color>333f4b</Color>
 	</Description>
 	<Description>
 		<Name>LastHokku</Name>
@@ -291,8 +291,8 @@
 		<ShortPlaythrough/>
 		<Setting>Стихи</Setting>
 		<Colors>
-			<Book>#deb887</Book>
-			<Font>#000000</Font>
+			<Book>deb887</Book>
+			<Font>000000</Font>
 		</Colors>
 	</Description>
 	<Description>
@@ -304,7 +304,7 @@
 		<Paragraphs>207</Paragraphs>
 		<Size>35017</Size>
 		<Setting>Научная фантастика</Setting>
-		<Color>#202b41</Color>
+		<Color>202b41</Color>
 	</Description>
 	<Description>
 		<Name>Catharsis</Name>
@@ -315,7 +315,7 @@
 		<Paragraphs>403</Paragraphs>
 		<Size>60066</Size>
 		<Setting>Научная фантастика</Setting>
-		<Color>#51514b</Color>
+		<Color>51514b</Color>
 	</Description>
 	<Description>
 		<Name>PrairieLaw</Name>
@@ -326,7 +326,7 @@
 		<Paragraphs>660</Paragraphs>
 		<Size>47630</Size>
 		<Setting>Приключения</Setting>
-		<Color>#b66247</Color>
+		<Color>b66247</Color>
 	</Description>
 	<Description>
 		<Name>HeartOfIce</Name>
@@ -339,7 +339,7 @@
 		<Paragraphs>457</Paragraphs>
 		<Size>66355</Size>
 		<Setting>Научная фантастика</Setting>
-		<Color>#4a6e9c</Color>
+		<Color>4a6e9c</Color>
 	</Description>
 	<Description>
 		<Name>VWeapons</Name>
@@ -351,9 +351,9 @@
 		<Size>28509</Size>
 		<Setting>Шпионы</Setting>
 		<Colors>
-			<Book>#ffffff</Book>
-			<Font>#000000</Font>
-			<Border>#000000</Border>
+			<Book>ffffff</Book>
+			<Font>000000</Font>
+			<Border>000000</Border>
 		</Colors>
 	</Description>
 	<Description>
@@ -366,7 +366,7 @@
 		<Size>8105</Size>
 		<ShortPlaythrough/>
 		<Setting>Юмор</Setting>
-		<Color>#9e003a</Color>
+		<Color>9e003a</Color>
 	</Description>
 	<Description>
 		<Name>YounglingTournament</Name>
@@ -378,7 +378,7 @@
 		<Size>80249</Size>
 		<LongPlaythrough/>
 		<Setting>Приключения</Setting>
-		<Color>#c0ac6c</Color>
+		<Color>c0ac6c</Color>
 	</Description>
 	<Description>
 		<Name>GoingToLaughter</Name>
@@ -390,7 +390,7 @@
 		<Size>256474</Size>
 		<LongPlaythrough/>
 		<Setting>История</Setting>
-		<Color>#441012</Color>
+		<Color>441012</Color>
 	</Description>
 	<Description>
 		<Name>WildDeath</Name>
@@ -402,7 +402,7 @@
 		<Size>2629</Size>
 		<ShortPlaythrough/>
 		<Setting>Юмор</Setting>
-		<Color>#86964f</Color>
+		<Color>86964f</Color>
 	</Description>
 	<Description>
 		<Name>ByTheWillOfRome</Name>
@@ -413,7 +413,7 @@
 		<Paragraphs>374</Paragraphs>
 		<Size>33252</Size>
 		<Setting>История</Setting>
-		<Color>#670b0c</Color>
+		<Color>670b0c</Color>
 	</Description>
 	<Description>
 		<Name>Damanskiy</Name>
@@ -426,8 +426,8 @@
 		<LongPlaythrough/>
 		<Setting>История</Setting>
 		<Colors>
-			<Book>#d8d8d8</Book>
-			<Font>#000000</Font>
+			<Book>d8d8d8</Book>
+			<Font>000000</Font>
 		</Colors>
 	</Description>
 	<Description>
@@ -443,8 +443,8 @@
 		<ShortPlaythrough/>
 		<Setting>Юмор</Setting>
 		<Colors>
-			<Book>#a4be84</Book>
-			<Font>#000000</Font>
+			<Book>a4be84</Book>
+			<Font>000000</Font>
 		</Colors>
 	</Description>
 	<Description>
@@ -459,7 +459,7 @@
 		<Size>17416</Size>
 		<ShortPlaythrough/>
 		<Setting>Приключения</Setting>
-		<Color>#10424d</Color>
+		<Color>10424d</Color>
 	</Description>
 	<Description>
 		<Name>Sheriff</Name>
@@ -472,7 +472,7 @@
 		<Size>5701</Size>
 		<ShortPlaythrough/>
 		<Setting>Юмор</Setting>
-		<Color>#7d2c1c</Color>
+		<Color>7d2c1c</Color>
 	</Description>
 	<Description>
 		<Name>Moonrunner</Name>
@@ -485,7 +485,7 @@
 		<Paragraphs>400</Paragraphs>
 		<Size>35688</Size>
 		<Setting>Фэнтези</Setting>
-		<Color>#72407d</Color>
+		<Color>72407d</Color>
 	</Description>
 	<Description>
 		<Name>DeathOfAntiquary</Name>
@@ -497,7 +497,7 @@
 		<Size>7876</Size>
 		<ShortPlaythrough/>
 		<Setting>Юмор</Setting>
-		<Color>#2e2e2e</Color>
+		<Color>2e2e2e</Color>
 	</Description>
 	<Description>
 		<Name>Cyberpunk</Name>
@@ -509,7 +509,7 @@
 		<Size>82736</Size>
 		<ShortPlaythrough/>
 		<Setting>Научная фантастика</Setting>
-		<Color>#118984</Color>
+		<Color>118984</Color>
 	</Description>
 	<Description>
 		<Name>SilverAgeSilhouette</Name>
@@ -520,6 +520,6 @@
 		<Paragraphs>300</Paragraphs>
 		<Size>71753</Size>
 		<Setting>Стихи</Setting>
-		<Color>#4e1e07</Color>
+		<Color>4e1e07</Color>
 	</Description>
 </Gamebooks>
