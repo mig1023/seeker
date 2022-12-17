@@ -1,0 +1,28 @@
+<Gamebook>
+	<Introduction>
+		<Title>Монстр наносит ответный удар</Title>
+		<Copyright>Хироси Ямамото, 1987</Copyright>
+		<Styles>
+			<Color Name="Main">4d5339</Color>
+			<Color Name="Option, Continue">405339</Color>
+			<Color Name="System">53644c</Color>
+		</Styles>
+		<Settings>
+			<HideDisabledOption/>
+		</Settings>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Option Destination="1" Text="В путь!"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>END</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>

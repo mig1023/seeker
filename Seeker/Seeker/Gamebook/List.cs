@@ -49,6 +49,7 @@ namespace Seeker.Gamebook
             ["DeathOfAntiquary"] = DeathOfAntiquary.Constants.GetLinks(),
             ["Cyberpunk"] = Cyberpunk.Constants.GetLinks(),
             ["SilverAgeSilhouette"] = SilverAgeSilhouette.Constants.GetLinks(),
+            ["StrikeBack"] = StrikeBack.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() => Books.Keys.ToList();
