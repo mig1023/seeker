@@ -300,8 +300,18 @@ namespace Seeker.Game
             return settings;
         }
 
-        private static string ColorLoad(XmlNode xmlNode, string name, Data.ColorTypes defaultColor) =>
-            Settings.IsEnabled("WithoutStyles") ? Prototypes.Constants.DefaultColor(defaultColor) : StringParse(xmlNode[name]);
+        private static string ColorLoad(XmlNode xmlNode, string name, Data.ColorTypes defaultColor)
+        {
+            if (Settings.IsEnabled("WithoutStyles"))
+            {
+                return Prototypes.Constants.DefaultColor(defaultColor);
+            }
+            else
+            {
+                string color = StringParse(xmlNode[name]);
+                return String.Format("#{0}", color);
+            }
+        }
  
         private static void DescriptionLoad()
         {
