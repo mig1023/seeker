@@ -283,8 +283,10 @@
 			<Options>
 				<Option Destination="44" Text="ВУРДАЛАКОМ"/>
 				<Option Destination="4" Text="ЗОМБИ"/>
-				<Option Destination="55" Text="ОБОРОТНЕМ"/>
-				<Option Destination="52" Text="Если ты КОБОЛЬД, стать: ЯЩЕРОЛЮДОМ"/>
+				<Option Destination="55" Text="ОБОРОТНЕМ">
+					<Text>Если ты КОБОЛЬД, стать:</Text>
+				</Option>
+				<Option Destination="52" Text="ЯЩЕРОЛЮДОМ"/>
 				<Option Destination="12" Text="ТРОГЛОДИТОМ"/>
 				<Option Destination="55" Text="ОБОРОТНЕМ"/>
 			</Options>
