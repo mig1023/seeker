@@ -256,13 +256,19 @@
 				<Option Destination="50" Text="в КОБОЛЬДА"/>
 				<Option Destination="58" Text="в ОРКА"/>
 				<Option Destination="74" Text="в ЧЕЛОВЕКА"/>
-				<Option Destination="66" Text="в ХОБГОБЛИНА"/>
-				<Option Destination="82" Text="Если ты КОБОЛЬД: в ЯЩЕРОЛЮДА"/>
+				<Option Destination="66" Text="в ХОБГОБЛИНА">
+					<Text>Если ты КОБОЛЬД:</Text>
+				</Option>
+				<Option Destination="82" Text="в ЯЩЕРОЛЮДА"/>
 				<Option Destination="15" Text="в ТРОГЛОДИТА"/>
-				<Option Destination="60" Text="в ОБОРОТНЯ"/>
-				<Option Destination="74" Text="Если ты ОРК: в ЧЕЛОВЕКА"/>
-				<Option Destination="60" Text="в ОБОРОТНЯ"/>
-				<Option Destination="90" Text="Если ты ХОБГОБЛИН: в СТРАШИЛУ"/>
+				<Option Destination="60" Text="в ОБОРОТНЯ">
+					<Text>Если ты ОРК:</Text>
+				</Option>
+				<Option Destination="74" Text="в ЧЕЛОВЕКА"/>
+				<Option Destination="60" Text="в ОБОРОТНЯ">
+					<Text>Если ты ХОБГОБЛИН:</Text>
+				</Option>
+				<Option Destination="90" Text="в СТРАШИЛУ"/>
 				<Option Destination="74" Text="в ЧЕЛОВЕКА"/>
 			</Options>
 		</Paragraph>
