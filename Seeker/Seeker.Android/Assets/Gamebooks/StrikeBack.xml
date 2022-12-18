@@ -29,8 +29,8 @@
 			</Texts>
 			<Options>
 				<Option Destination="9" Text="Выйдешь и заговоришь с карликами"/>
-				<Option Destination="17" Text="подкрадёшься поближе и попробуешь подслушать"/>
-				<Option Destination="94" Text="или, не желая с ними связываться, обойдёшь их и поспешишь дальше"/>
+				<Option Destination="17" Text="Подкрадёшься поближе и попробуешь подслушать"/>
+				<Option Destination="94" Text="Не желая с ними связываться, обойдёшь их и поспешишь дальше"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="2">
