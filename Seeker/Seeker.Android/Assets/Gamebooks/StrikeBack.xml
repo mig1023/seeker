@@ -36,8 +36,8 @@
 		<Paragraph No="2">
 			<Text>Обходишь постоялый двор сзади и пытаешься скрытно проникнуть через чёрный вход.</Text>
 			<Options>
-				<Option Destination="26" Text="Если ты ЧЕЛОВЕК"/>
-				<Option Destination="18" Text="если любое другое существо"/>
+				<Option Destination="26" Text="Ты ЧЕЛОВЕК"/>
+				<Option Destination="18" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="3">
