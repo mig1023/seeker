@@ -690,8 +690,8 @@
 		<Paragraph No="94">
 			<Text>Через какое-то время тебе повстречалась ползущая в траве средних размеров змея. Это безвредная, неядовитая змея, и, должно быть, очень вкусная.</Text>
 			<Options>
-				<Option Destination="97" Text="Если убиваешь змею"/>
-				<Option Destination="78" Text="Если оставляешь её в покое"/>
+				<Option Destination="97" Text="Убиваешь змею"/>
+				<Option Destination="78" Text="Оставляешь её в покое"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="95">
@@ -707,7 +707,7 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="97">
-			<Text>Так как змея некрупная и неядовитая, убить её будет нетрудно.\n\nX ЗМЕЯ\n\n■ Атака 1\n\n■ Защита 7\n\n■ Выносливость 1\n\nУбив змею</Text>
+			<Text>Так как змея некрупная и неядовитая, убить её будет нетрудно.\n\nX ЗМЕЯ\n\n■ Атака 1\n\n■ Защита 7\n\n■ Выносливость 1</Text>
 			<Options>
 				<Option Destination="70"/>
 			</Options>
@@ -738,7 +738,7 @@
 			</Texts>
 			<Options>
 				<Option Destination="131" Text="Подойдёшь и выяснишь, кто это такой"/>
-				<Option Destination="171" Text="или пойдёшь дальше, не обращая на неё внимания"/>
+				<Option Destination="171" Text="Пойдёшь дальше, не обращая на неё внимания"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="102">
