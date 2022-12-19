@@ -1476,6 +1476,7 @@
 			<Options>
 				<Option Destination="208" Text="Ты ВЕЛИКАЯ ЯЩЕРИЦА или ВЕЛИКАЯ ЗМЕЯ">
 					<Text>Если ты любое другое существо, брось одну кость:</Text>
+				</Option>
 				<Option Destination="208" Text="Выпало 1 или 2"/>
 				<Option Destination="202" Text="Выпало от 3 до 6"/>
 			</Options>
