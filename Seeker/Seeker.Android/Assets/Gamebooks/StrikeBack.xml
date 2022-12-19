@@ -2026,20 +2026,20 @@
 		<Paragraph No="282">
 			<Text>Ты яростно набрасываешься на закованную в серебряную броню Шейну.</Text>
 			<Options>
-				<Option Destination="225" Text="Если ты ЕДИНОРОГ"/>
-				<Option Destination="295" Text="Если ты МЕДУЗА"/>
-				<Option Destination="215" Text="Если ты ГАРПИЯ"/>
-				<Option Destination="288" Text="Если ты КЕНТАВР, МИНОТАВР, ГОРГУЛЬЯ, ВЕЛИКАН или ГИППОГРИФ"/>
-				<Option Destination="229" Text="Если любое другое существо"/>
+				<Option Destination="225" Text="Ты ЕДИНОРОГ"/>
+				<Option Destination="295" Text="Ты МЕДУЗА"/>
+				<Option Destination="215" Text="Ты ГАРПИЯ"/>
+				<Option Destination="288" Text="Ты КЕНТАВР, МИНОТАВР, ГОРГУЛЬЯ, ВЕЛИКАН или ГИППОГРИФ"/>
+				<Option Destination="229" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="283">
 			<Text>Ты с огромным трудом одолел левого древолюда, но тут оживает новое дерево и занимает место поверженного древолюда в строю. Перед тобой снова трое врагов.\n\nX ПРАВЫЙ ДРЕВОЛЮД\n\n■ Атака 7\n\n■ Защита 10\n\n■ Выносливость 32\n\nX ЦЕНТРАЛЬНЫЙ ДРЕВОЛЮД\n\n■ Атака 7\n\n■ Защита 10\n\n■ Выносливость 36\n\nX ЛЕВЫЙ ДРЕВОЛЮД\n\n■ Атака 7\n\n■ Защита 10\n\n■ Выносливость 32</Text>
 			<Options>
-				<Option Destination="249" Text="Если одолеешь правого древолюда"/>
-				<Option Destination="213" Text="Если одолеешь центрального"/>
-				<Option Destination="279" Text="Если одолеешь новоявленного левого древолюда"/>
-				<Option Destination="242" Text="Если бросишь бой и сбежишь"/>
+				<Option Destination="249" Text="Одолел правого древолюда"/>
+				<Option Destination="213" Text="Одолел центрального древолюда"/>
+				<Option Destination="279" Text="Одолел новоявленного левого древолюда"/>
+				<Option Destination="242" Text="Бросишь бой и сбежишь"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="284">
