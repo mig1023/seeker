@@ -2417,8 +2417,8 @@
 		<Paragraph No="336">
 			<Text>Взмыв в воздух, опускаешься к тонущему юноше, хватаешь его за шиворот и, поднатужившись, выволакиваешь на берег.</Text>
 			<Options>
-				<Option Destination="409" Text="Если ты убил Шейну в третьей части"/>
-				<Option Destination="303" Text="Если не убивал"/>
+				<Option Destination="409" Text="Ты убил Шейну в третьей части"/>
+				<Option Destination="303" Text="Не убивал"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="337">
