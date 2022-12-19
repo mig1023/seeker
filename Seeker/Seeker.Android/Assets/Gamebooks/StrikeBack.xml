@@ -2428,13 +2428,18 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="338">
-			<Text>Волшебник мёртв. Наконец твоя цель достигнута. С чувством триумфа покидаешь пещеру.\n\n339*\n\n— А как насчёт этого!\n\nВолшебник взмахнул руками, и с кончиков пальцев в тебя выстрелили ослепительные молнии.</Text>
+			<Text>Волшебник мёртв. Наконец твоя цель достигнута. С чувством триумфа покидаешь пещеру.</Text>
 			<Options>
-				<Option Destination="439" Text="Если ты ДРАКОН (любого вида)"/>
-				<Option Destination="330" Text="Если ты ИФРИТ, ДЕМОН или ФЕНИКС"/>
-				<Option Destination="426" Text="Если ты ДЖИНН"/>
-				<Option Destination="308" Text="Если любое другое существо"/>
-				<Option Destination="363" Text="Далее"/>
+				<Option Destination="439" Text="Ты ДРАКОН (любого вида)"/>
+				<Option Destination="330" Text="Ты ИФРИТ, ДЕМОН или ФЕНИКС"/>
+				<Option Destination="426" Text="Ты ДЖИНН"/>
+				<Option Destination="308" Text="Ты любое другое существо"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="339">
+			<Text>— А как насчёт этого!\n\nВолшебник взмахнул руками, и с кончиков пальцев в тебя выстрелили ослепительные молнии.</Text>
+			<Options>
+				<Option Destination="363"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="340">
