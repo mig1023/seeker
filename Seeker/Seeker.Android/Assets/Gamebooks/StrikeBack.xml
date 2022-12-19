@@ -2647,27 +2647,53 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="371">
-			<Text>Просторная сокровищница изобилует златом-серебром, да каменьями-самоцветами. Также в ней немало и оружия, но всё оно изготовлено в расчёте на человека, так что тебе от него никакой пользы.\n\nПоискав какое-то время, обнаруживаешь замешанный в груду самоцветов чёрный нефрит. Итак, кем ты станешь?</Text>
+			<Text>Просторная сокровищница изобилует златом-серебром, да каменьями-самоцветами. Также в ней немало и оружия, но всё оно изготовлено в расчёте на человека, так что тебе от него никакой пользы.\n\nПоискав какое-то время, обнаруживаешь замешанный в груду самоцветов чёрный нефрит. Итак, кем ты станешь?\n\nЕсли ты МАНТИКОРА:</Text>
 			<Options>
-				<Option Destination="347" Text="Если ты МАНТИКОРА: ХИМЕРОЙ"/>
+				<Option Destination="347" Text="ХИМЕРОЙ"/>
 				<Option Destination="342" Text="ВИВЕРНОЙ"/>
 				<Option Destination="346" Text="ИФРИТОМ"/>
-				<Option Destination="408" Text="ДРАГОНИ"/>
-				<Option Destination="347" Text="Если ты ГРИФОН или СФИНКС: ХИМЕРОЙ"/>
+				<Option Destination="408" Text="ДРАГОНИ">
+					<Text>Если ты ГРИФОН или СФИНКС:</Text>
+				</Option>
+				<Option Destination="347" Text="ХИМЕРОЙ"/>
 				<Option Destination="344" Text="РУХОМ"/>
-				<Option Destination="408" Text="ДРАГОНИ"/>
-				<Option Destination="346" Text="Если ты ДЖИНН: ИФРИТОМ"/>
-				<Option Destination="403" Text="Если ты ПЕГАС: КОШМАРОМ"/>
-				<Option Destination="327" Text="Если ты ИФРИТ: ДЕМОНОМ"/>
-				<Option Destination="322" Text="Если ты РУХ: ФЕНИКСОМ"/>
-				<Option Destination="376" Text="Если ты МОРОЗНАЯ САЛАМАНДРА: БЕЛЫМ ДРАКОНОМ"/>
-				<Option Destination="372" Text="Если ты ВИВЕРНА: ЧЁРНЫМ ДРАКОНОМ"/>
-				<Option Destination="422" Text="Если ты КОШМАР: ЗЕЛЁНЫМ ДРАКОНОМ"/>
-				<Option Destination="412" Text="Если ты ТРИТОН: СИНИМ ДРАКОНОМ"/>
-				<Option Destination="374" Text="Если ты ХИМЕРА: КРАСНЫМ ДРАКОНОМ"/>
-				<Option Destination="419" Text="Если ты ДРАГОНИ: ЗОЛОТЫМ ДРАКОНОМ"/>
-				<Option Destination="3777" Text="Если ты ГИДРА: ВСЕЦВЕТНЫМ ДРАКОНОМ"/>
-				<Option Destination="321" Text="Если ты любое другое существо, то ты не мог узнать ведущий сюда маршрут; похоже, ты так и не встретил Сатин из ледяной башни"/>
+				<Option Destination="408" Text="ДРАГОНИ">
+					<Text>Если ты ДЖИНН:</Text>
+				</Option>
+				<Option Destination="346" Text="ИФРИТОМ">
+					<Text>Если ты ПЕГАС:</Text>
+				</Option>
+				<Option Destination="403" Text="КОШМАРОМ">
+					<Text>Если ты ИФРИТ:</Text>
+				</Option>
+				<Option Destination="327" Text="ДЕМОНОМ">
+					<Text>Если ты РУХ:</Text>
+				</Option>
+				<Option Destination="322" Text="ФЕНИКСОМ">
+					<Text>Если ты МОРОЗНАЯ САЛАМАНДРА:</Text>
+				</Option>
+				<Option Destination="376" Text="БЕЛЫМ ДРАКОНОМ">
+					<Text>Если ты ВИВЕРНА:</Text>
+				</Option>
+				<Option Destination="372" Text="ЧЁРНЫМ ДРАКОНОМ">
+					<Text>Если ты КОШМАР:</Text>
+				</Option>
+				<Option Destination="422" Text="ЗЕЛЁНЫМ ДРАКОНОМ">
+					<Text>Если ты ТРИТОН:</Text>
+				</Option>
+				<Option Destination="412" Text="СИНИМ ДРАКОНОМ">
+					<Text>Если ты ХИМЕРА:</Text>
+				</Option>
+				<Option Destination="374" Text="КРАСНЫМ ДРАКОНОМ">
+					<Text>Если ты ДРАГОНИ:</Text>
+				</Option>
+				<Option Destination="419" Text="ЗОЛОТЫМ ДРАКОНОМ">
+					<Text>Если ты ГИДРА:</Text>
+				</Option>
+				<Option Destination="3777" Text="ВСЕЦВЕТНЫМ ДРАКОНОМ">
+					<Text>Если ты любое другое существо, то ты не мог узнать ведущий сюда маршрут; похоже, ты так и не встретил Сатин из ледяной башни:</Text>
+				</Option>
+				<Option Destination="321"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="372">
