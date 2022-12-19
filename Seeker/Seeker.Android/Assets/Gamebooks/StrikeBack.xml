@@ -1252,19 +1252,29 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="174">
-			<Text>Раскрываешь амулет и, как и говорил посланец смерти, внутри обнаруживаешь чёрный нефрит. Что ж, перед боем с Гленом надо превратиться в ещё более могучее существо. Читаешь заклинание превращения.\n\nКем ты хочешь стать теперь?\n\nЕсли ты любое другое существо, то ты не мог попасть на этот параграф, потому что не узнал об амулете от посланца смерти.</Text>
+			<Text>Раскрываешь амулет и, как и говорил посланец смерти, внутри обнаруживаешь чёрный нефрит. Что ж, перед боем с Гленом надо превратиться в ещё более могучее существо. Читаешь заклинание превращения.\n\nКем ты хочешь стать теперь?\n\nЕсли ты УМЕРТВИЕ:</Text>
 			<Options>
-				<Option Destination="137" Text="Если ты УМЕРТВИЕ: ПОСЛАНЦЕМ СМЕРТИ"/>
-				<Option Destination="107" Text="ВАМПИРОМ"/>
-				<Option Destination="104" Text="Если ты ЛЮДОЕД: МИНОТАВРОМ"/>
+				<Option Destination="137" Text="ПОСЛАНЦЕМ СМЕРТИ"/>
+				<Option Destination="107" Text="ВАМПИРОМ">
+					<Text>Если ты ЛЮДОЕД:</Text>
+				</Option>
+				<Option Destination="104" Text="МИНОТАВРОМ"/>
+				<Option Destination="177" Text="ГОРГУЛЬЕЙ">
+					<Text>Если ты САТИР:</Text>
+				</Option>
+				<Option Destination="104" Text="МИНОТАВРОМ"/>
+				<Option Destination="122" Text="КЕНТАВРОМ">
+					<Text>Если ты ВЕЛИКАЯ ЯЩЕРИЦА:</Text>
+				</Option>
 				<Option Destination="177" Text="ГОРГУЛЬЕЙ"/>
-				<Option Destination="104" Text="Если ты САТИР: МИНОТАВРОМ"/>
-				<Option Destination="122" Text="КЕНТАВРОМ"/>
-				<Option Destination="177" Text="Если ты ВЕЛИКАЯ ЯЩЕРИЦА: ГОРГУЛЬЕЙ"/>
+				<Option Destination="136" Text="КУРОЛИСКОМ">
+					<Text>Если ты ВЕЛИКАЯ ЗМЕЯ:</Text>
+				</Option>
 				<Option Destination="136" Text="КУРОЛИСКОМ"/>
-				<Option Destination="136" Text="Если ты ВЕЛИКАЯ ЗМЕЯ: КУРОЛИСКОМ"/>
-				<Option Destination="106" Text="МЕДУЗОЙ"/>
-				<Option Destination="176" Text="Далее"/>
+				<Option Destination="106" Text="МЕДУЗОЙ">
+					<Text>Если ты любое другое существо, то ты не мог попасть на этот параграф, потому что не узнал об амулете от посланца смерти:</Text>
+				</Option>
+				<Option Destination="176"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="175">
