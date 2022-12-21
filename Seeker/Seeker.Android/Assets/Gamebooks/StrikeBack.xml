@@ -4,12 +4,18 @@
 		<Copyright>Хироси Ямамото, 1987</Copyright>
 		<Styles>
 			<Color Name="Main">4d5339</Color>
-			<Color Name="Option, Continue">405339</Color>
+			<Color Name="Option">405339</Color>
+			<Color Name="Action">454a33</Color>
+			<Color Name="StatusBar">33422d</Color>
 			<Color Name="System">9fa99c</Color>
+			<Color Name="ActionBox">798674</Color>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
 		</Settings>
+		<Buttons>
+			<Fight>Сражаться</Fight>
+		</Buttons>
 	</Introduction>
 	<Paragraphs>
 		<Paragraph No="0">
@@ -82,7 +88,15 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="9">
-			<Text>Подняв руки и приняв максимально дружелюбный вид, выходишь. Однако, заметив тебя, карлики изменились в лице и подобрались.\n\n— Ого! Не ожидал встретить тут гоблина!\n\nИ схватив боевые топоры, они бросаются на тебя. Боя не избежать. Карлики атакуют первыми.\n\nX КАРЛИК А\n\n■ Атака 3\n\n■ Защита 9\n\n■ Выносливость 9\n\nX КАРЛИК В\n\n■ Атака 3\n\n■ Защита 9\n\n■ Выносливость 8</Text>
+			<Text>Подняв руки и приняв максимально дружелюбный вид, выходишь. Однако, заметив тебя, карлики изменились в лице и подобрались.\n\n— Ого! Не ожидал встретить тут гоблина!\n\nИ схватив боевые топоры, они бросаются на тебя. Боя не избежать. Карлики атакуют первыми:</Text>
+			<Actions>
+				<Fight>
+					<Enemies>
+						<Enemy Name="Карлик А" Attack="3" Defence="9" Endurance="9"/>
+						<Enemy Name="Карлик В" Attack="3" Defence="9" Endurance="8"/>
+					</Enemies>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Destination="25" Text="Если одолеешь обоих"/>
 			</Options>
