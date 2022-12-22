@@ -2426,7 +2426,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="291">
-			<Text>Ты схлестнулся с ручным стихиалем Блинкена.\n\nXСТИХИАЛЬ ВОЗДУХА\n\n■ Атака 8\n\n■ Защита 11\n\n■ Выносливость 54</Text>
+			<Text>Ты схлестнулся с ручным стихиалем Блинкена.</Text>
+			<Actions>
+				<Fight>
+					<Enemies>
+						<Enemy Name="Стихиаль воздуха" Attack="8" Defence="11" Endurance="54"/>
+					</Enemies>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Destination="270" Text="Победив стихиаля"/>
 			</Options>
