@@ -1763,7 +1763,14 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="215">
-			<Text>Шейна выхватывает меч в тот же миг, как ты на неё бросаешься. Это бой один на один.\n\nX Воительница ШЕЙНА\n\n■ Атака 4\n\n■ Защита 11\n\n■ Выносливость 18</Text>
+			<Text>Шейна выхватывает меч в тот же миг, как ты на неё бросаешься. Это бой один на один.</Text>
+			<Actions>
+				<Fight>
+					<Enemies>
+						<Enemy Name="Воительница ШЕЙНА" Attack="4" Defence="11" Endurance="18"/>
+					</Enemies>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Destination="259" Text="Очаровываешь Шейну своим пением"/>
 				<Option Destination="229" Text="Выносливость Шейны упадёт до 10 очков или ниже"/>
