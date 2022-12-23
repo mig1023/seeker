@@ -30,11 +30,14 @@ namespace Seeker.Gamebook.StrikeBack
             set => _endurance = Game.Param.Setter(value, max: MaxEndurance, _endurance, this);
         }
 
+        public string Creature { get; set; }
+
         public override void Init()
         {
             base.Init();
 
             Name = "Главный герой";
+            Creature = "ГОБЛИН";
 
             MaxAttack = 2;
             Attack = MaxAttack;
@@ -48,6 +51,7 @@ namespace Seeker.Gamebook.StrikeBack
         {
             IsProtagonist = this.IsProtagonist,
             Name = this.Name,
+            Creature = this.Creature,
             MaxAttack = this.MaxAttack,
             Attack = this.Attack,
             MaxDefence = this.MaxDefence,
@@ -57,7 +61,7 @@ namespace Seeker.Gamebook.StrikeBack
         };
 
         public override string Save() => String.Join("|",
-            MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance
+            MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance, Creature
         );
 
         public override void Load(string saveLine)
@@ -70,6 +74,8 @@ namespace Seeker.Gamebook.StrikeBack
             Defence = int.Parse(save[3]);
             MaxEndurance = int.Parse(save[4]);
             Endurance = int.Parse(save[5]);
+
+            Creature = save[6];
 
             IsProtagonist = true;
         }
