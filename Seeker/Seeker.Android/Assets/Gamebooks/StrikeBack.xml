@@ -808,7 +808,7 @@
 			<Options>
 				<Option Destination="92" Text="в КОБОЛЬДА"/>
 				<Option Destination="93" Text="в ОРКА"/>
-				<Option Destination="95" Text="в ХОБГОБЛИ"/>
+				<Option Destination="95" Text="в ХОБГОБЛИНА"/>
 				<Option Destination="87" Text="в ЧЕЛОВЕКА">
 					<Text>Если ты ХОБГОБЛИН:</Text>
 				</Option>
