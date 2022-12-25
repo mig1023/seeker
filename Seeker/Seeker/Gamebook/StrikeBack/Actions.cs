@@ -16,6 +16,8 @@ namespace Seeker.Gamebook.StrikeBack
         public int RoundsToWin { get; set; }
         public int WoundsToWin { get; set; }
         public bool NotToDeath { get; set; }
+        public int Count { get; set; }
+        public bool WoundsByDices { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -45,6 +47,32 @@ namespace Seeker.Gamebook.StrikeBack
                     enemy.Name, enemy.Attack, enemy.Defence, enemy.Endurance));
 
             return enemies;
+        }
+
+        public List<string> Dices()
+        {
+            List<string> diceCheck = new List<string> { };
+
+            int dices = Count == 0 ? 1 : Count;
+            int result = 0;
+            string lineFormat = ((dices > 1) || WoundsByDices ? String.Empty : "BIG|") +
+                "На{0} кубике выпало: {1}";
+
+            for (int i = 1; i <= dices; i++)
+            {
+                int dice = Game.Dice.Roll();
+                result += dice;
+                string diceNum = dices > 1 ? String.Format(" {0}", i) : String.Empty;
+                diceCheck.Add(String.Format(lineFormat, diceNum, Game.Dice.Symbol(dice)));
+            }
+
+            if (WoundsByDices)
+            {
+                protagonist.Endurance -= dices;
+                diceCheck.Add(String.Format("BIG|BAD|Ты потерял выносливостей: {0}", dices));
+            }
+
+            return diceCheck;
         }
 
         private static Character FindEnemyIn(List<Character> Enemies) =>
