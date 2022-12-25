@@ -1682,7 +1682,12 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="163">
-			<Text>Глен хватает висевший на груди крест и наставляет на тебя.\n\nБрось две кости.</Text>
+			<Text>Глен хватает висевший на груди крест и наставляет на тебя.\n\nБрось две кости:</Text>
+			<Actions>	
+				<Dices>
+					<Count>2</Count>
+				</Dices>
+			</Actions>
 			<Options>
 				<Option Destination="160" Text="Выпало 9 или больше"/>
 				<Option Destination="166" Text="Выпало 8 или меньше"/>
