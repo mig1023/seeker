@@ -946,6 +946,9 @@
 				<Text Style="Selected, Bold">СТРАШИЛА\nАтака 5\nЗащита 9\nВыносливость 12</Text>
 				<Text>Довольный, выходишь из комнаты. Брось одну кость.</Text>
 			</Texts>
+			<Actions>	
+				<Dices/>
+			</Actions>
 			<Modifications>
 				<Transformation Value="СТРАШИЛА,5,9,15"/>
 			</Modifications>
