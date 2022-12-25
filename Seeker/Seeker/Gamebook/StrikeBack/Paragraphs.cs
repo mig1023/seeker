@@ -39,6 +39,9 @@ namespace Seeker.Gamebook.StrikeBack
                     action.GroupFight = true;
             }
 
+            if (action.Type == "Option")
+                action.Option = OptionParse(xmlAction["Option"]);
+
             return action;
         }
 
