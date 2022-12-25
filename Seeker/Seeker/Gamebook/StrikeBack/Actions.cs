@@ -30,6 +30,15 @@ namespace Seeker.Gamebook.StrikeBack
         {
             List<string> enemies = new List<string>();
 
+            if ((Type != "Fight") && String.IsNullOrEmpty(Text))
+            {
+                return enemies;
+            }
+            else if (Type != "Fight")
+            {
+                return new List<string> { Text };
+            }
+
             if ((Allies != null) && GroupFight)
             {
                 enemies.Add(String.Format("Вы\nнападение {0}  защита {1}  жизнь {2}",
@@ -68,8 +77,8 @@ namespace Seeker.Gamebook.StrikeBack
 
             if (WoundsByDices)
             {
-                protagonist.Endurance -= dices;
-                diceCheck.Add(String.Format("BIG|BAD|Ты потерял выносливостей: {0}", dices));
+                protagonist.Endurance -= result;
+                diceCheck.Add(String.Format("BIG|BAD|Ты потерял выносливостей: {0}", result));
             }
 
             return diceCheck;
