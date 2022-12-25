@@ -436,6 +436,9 @@
 				<Text Style="Small">Вкусная и питательная пища восстанавливает тебе 2 очка Выносливости.</Text>
 				<Text>Насытившись, выходишь из кухни.\n\nБрось одну кость.</Text>
 			</Texts>
+			<Actions>	
+				<Dices/>
+			</Actions>
 			<Modifications>
 				<Endurance Value="2"/>
 			</Modifications>
