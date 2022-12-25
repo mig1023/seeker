@@ -80,6 +80,10 @@ namespace Seeker.Gamebook.StrikeBack
                 protagonist.Endurance -= result;
                 diceCheck.Add(String.Format("BIG|BAD|Ты потерял выносливостей: {0}", result));
             }
+            else if (dices > 1)
+            {
+                diceCheck.Add(String.Format("BIG|Выпало всего: {0}", result));
+            }
 
             return diceCheck;
         }
