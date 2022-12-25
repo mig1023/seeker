@@ -416,7 +416,13 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="42">
-			<Text>Вкусная и питательная пища восстанавливает тебе 2 очка Выносливости. Насытившись, выходишь из кухни.\n\nБрось одну кость.</Text>
+			<Texts>
+				<Text Style="Small">Вкусная и питательная пища восстанавливает тебе 2 очка Выносливости.</Text>
+				<Text>Насытившись, выходишь из кухни.\n\nБрось одну кость.</Text>
+			</Texts>
+			<Modifications>
+				<Endurance Value="2"/>
+			</Modifications>
 			<Options>
 				<Option Destination="7" Text="Выпало 1 или 2"/>
 				<Option Destination="23" Text="Выпало от 3 до 6"/>
