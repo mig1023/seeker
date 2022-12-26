@@ -18,7 +18,7 @@ namespace Seeker.Gamebook.StrikeBack
         public bool NotToDeath { get; set; }
         public int Count { get; set; }
         public bool WoundsByDices { get; set; }
-        public bool WoundsMultiple { get; set; }
+        public int WoundsMultiple { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -78,10 +78,10 @@ namespace Seeker.Gamebook.StrikeBack
 
             if (WoundsByDices)
             {
-                if (WoundsMultiple)
+                if (WoundsMultiple > 0)
                 {
-                    diceCheck.Add(String.Format("Сумма ({0}) умножается на два", result));
-                    result *= 2;
+                    diceCheck.Add(String.Format("Сумма ({0}) умножается на {1}", result, WoundsMultiple));
+                    result *= WoundsMultiple;
                 }
 
                 protagonist.Endurance -= result;
