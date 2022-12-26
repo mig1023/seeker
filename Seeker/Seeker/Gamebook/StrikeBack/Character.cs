@@ -31,7 +31,6 @@ namespace Seeker.Gamebook.StrikeBack
         }
 
         public string Creature { get; set; }
-        public int FindedWay { get; set; }
 
         public override void Init()
         {
@@ -46,7 +45,6 @@ namespace Seeker.Gamebook.StrikeBack
             Defence = MaxDefence;
             MaxEndurance = 5;
             Endurance = MaxEndurance;
-            FindedWay = 0;
         }
 
         public Character Clone() => new Character()
@@ -60,12 +58,11 @@ namespace Seeker.Gamebook.StrikeBack
             Defence = this.Defence,
             MaxEndurance = this.MaxEndurance,
             Endurance = this.Endurance,
-            FindedWay = this.FindedWay,
         };
 
         public override string Save() => String.Join("|",
-            MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance,
-            Creature, FindedWay
+            MaxAttack, Attack, MaxDefence, Defence, MaxEndurance,
+            Endurance, Creature
         );
 
         public override void Load(string saveLine)
@@ -79,7 +76,6 @@ namespace Seeker.Gamebook.StrikeBack
             MaxEndurance = int.Parse(save[4]);
             Endurance = int.Parse(save[5]);
             Creature = save[6];
-            FindedWay = int.Parse(save[7]);
 
             IsProtagonist = true;
         }

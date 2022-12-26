@@ -35,6 +35,10 @@ namespace Seeker.Abstract
 
         void LoadDefaultFontSize(string option);
 
+        void LoadDynamicOption(bool option);
+
+        bool GetDynamicOption();
+
         int GetStartParagraph();
 
         Dictionary<string, string> ButtonText();

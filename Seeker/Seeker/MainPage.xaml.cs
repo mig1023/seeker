@@ -172,7 +172,9 @@ namespace Seeker
                 {
                     if (action.Type == "Option")
                     {
-                        Action.Children.Add(AddOptionButton(action.Option, ref gameOver));
+                        Button button = AddOptionButton(action.Option, ref gameOver);
+                        Action.Children.Add(button);
+                        Game.Option.ListAdd(action.Option, button);
                         AddAftertext(ref Action, action.Option.Aftertext, action.Option.Aftertexts);
                     }
                     else
@@ -206,11 +208,21 @@ namespace Seeker
                 bool onlyIf = Game.Data.Availability(option.Availability);
                 bool singleIf = !String.IsNullOrEmpty(option.Singleton) && Game.Data.Availability(option.Singleton);
 
-                if (!String.IsNullOrEmpty(option.Availability) && !onlyIf && !singleIf && !mustBeVisible)
-                    continue;
+                bool hidden = !String.IsNullOrEmpty(option.Availability) && !onlyIf && !singleIf && !mustBeVisible;
 
                 Button button = AddOptionButton(option, ref gameOver);
 
+                if (hidden && Game.Data.Constants.GetDynamicOption())
+                {
+                    Game.Option.ListAdd(option, button);
+                    button.IsVisible = false;
+                    Options.Children.Add(button);
+                }
+                else if (hidden)
+                {
+                    continue;
+                }
+                    
                 Options.Children.Add(button);
 
                 if (!String.IsNullOrEmpty(option.Input))
@@ -517,6 +529,8 @@ namespace Seeker
             Action.Children.Clear();
             Options.Children.Clear();
             Footer.Children.Clear();
+
+            Game.Option.ListClean();
         }
     }
 }

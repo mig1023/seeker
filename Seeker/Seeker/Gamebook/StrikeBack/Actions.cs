@@ -113,18 +113,18 @@ namespace Seeker.Gamebook.StrikeBack
             {
                 int direction = Game.Dice.Roll(size: 2);
 
-                way.Add("GRAY|Изначально: " + (direction == 0 ? "налево" : "направо"));
+                way.Add("GRAY|Подбрасываем монетку: " + (direction == 1 ? "орёл": "решка"));
 
-                if ((wayPoint < 12) && (direction == 0))
+                if ((wayPoint < 12) && (direction == 2))
                 {
                     direction = 1;
-                    way.Add("GRAY|Корректировка направо");
+                    way.Add("GRAY|Так в стенку упрёмся, лучше пойдём направо");
                 }
 
                 if ((wayPoint >= 1250) && (direction == 1))
                 {
-                    direction = 0;
-                    way.Add("GRAY|Корректировка налево");
+                    direction = 2;
+                    way.Add("GRAY|Так в стенку упрёмся, лучше пойдём налево");
                 }
                     
                 if (direction == 1)
@@ -152,7 +152,7 @@ namespace Seeker.Gamebook.StrikeBack
                 }
                 else if ((wayPoint >= 301) && (wayPoint <= 450))
                 {
-                    protagonist.FindedWay = cleanWayPoint;
+                    Game.Option.OpenButtonByDestination(cleanWayPoint);
 
                     way.Add(String.Empty);
                     way.Add(String.Format("BIG|GOOD|Кхм, число {0} вроде бы подходит...", wayPoint));
@@ -164,23 +164,13 @@ namespace Seeker.Gamebook.StrikeBack
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
-            {
                 return true;
-            }
-            else if (option.Contains("КОМНАТА:"))
-            {
-                List<string> line = option
-                    .Split(':')
-                    .Select(x => x.Trim())
-                    .ToList();
 
-                bool success = int.TryParse(line[1], out int wayPoint);
-                return success && (wayPoint == protagonist.FindedWay);
-            }
+            else if (option.Contains("КОМНАТА"))
+                return false;
+
             else
-            {
                 return AvailabilityTrigger(option.Trim());
-            }
         }
 
         private static Character FindEnemyIn(List<Character> Enemies) =>
