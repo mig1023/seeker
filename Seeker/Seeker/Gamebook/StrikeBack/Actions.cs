@@ -59,6 +59,12 @@ namespace Seeker.Gamebook.StrikeBack
             return enemies;
         }
 
+        public List<string> InlineWoundsByDices()
+        {
+            WoundsByDices = true;
+            return Dices();
+        }
+
         public List<string> Dices()
         {
             List<string> diceCheck = new List<string> { };
