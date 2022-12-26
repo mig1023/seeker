@@ -95,10 +95,92 @@ namespace Seeker.Gamebook.StrikeBack
             }
             else if (dices > 1)
             {
-                diceCheck.Add(String.Format("BIG|Выпало всего: {0}", result));
+                diceCheck.Add(String.Format("BIG|BOLD|Выпало всего: {0}", result));
             }
 
             return diceCheck;
+        }
+
+        public List<string> FindTheWay()
+        {
+            List<string> way = new List<string>();
+
+            way.Add("BIG|Ищем путь:");
+
+            double wayPoint = 202;
+
+            while (true)
+            {
+                int direction = Game.Dice.Roll(size: 2);
+
+                way.Add("GRAY|Изначально: " + (direction == 0 ? "налево" : "направо"));
+
+                if ((wayPoint < 12) && (direction == 0))
+                {
+                    direction = 1;
+                    way.Add("GRAY|Корректировка направо");
+                }
+
+                if ((wayPoint >= 1250) && (direction == 1))
+                {
+                    direction = 0;
+                    way.Add("GRAY|Корректировка налево");
+                }
+                    
+                if (direction == 1)
+                {
+                    way.Add("BOLD|Поворачиваем направо...");
+                    double newWayPoint = wayPoint * 4;
+                    way.Add(String.Format("{0} * 4 = {1}", wayPoint, newWayPoint));
+                    wayPoint = newWayPoint;
+                }
+                else
+                {
+                    way.Add("BOLD|Поворачиваем налево...");
+                    double newWayPoint = (wayPoint - 1) / 3;
+                    way.Add(String.Format("({0} - 1) / 3 = {1}", wayPoint, newWayPoint));
+                    wayPoint = newWayPoint;
+                }
+
+                int cleanWayPoint = Convert.ToInt32(wayPoint);
+
+                if ((cleanWayPoint != wayPoint) || (wayPoint > 5000))
+                {
+                    way.Add(String.Empty);
+                    way.Add("BIG|BAD|Всё, тупик...");
+                    return way;
+                }
+                else if ((wayPoint >= 301) && (wayPoint <= 450))
+                {
+                    protagonist.FindedWay = cleanWayPoint;
+
+                    way.Add(String.Empty);
+                    way.Add(String.Format("BIG|GOOD|Кхм, число {0} вроде бы подходит...", wayPoint));
+                    return way;
+                }
+            }
+        }
+
+        public override bool Availability(string option)
+        {
+            if (String.IsNullOrEmpty(option))
+            {
+                return true;
+            }
+            else if (option.Contains("КОМНАТА:"))
+            {
+                List<string> line = option
+                    .Split(':')
+                    .Select(x => x.Trim())
+                    .ToList();
+
+                bool success = int.TryParse(line[1], out int wayPoint);
+                return success && (wayPoint == protagonist.FindedWay);
+            }
+            else
+            {
+                return AvailabilityTrigger(option.Trim());
+            }
         }
 
         private static Character FindEnemyIn(List<Character> Enemies) =>
