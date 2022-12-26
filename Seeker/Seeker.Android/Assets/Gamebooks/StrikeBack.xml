@@ -3771,10 +3771,44 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="369">
-			<Text>— Не хочешь сдаваться? Что за упрямец! Но тех, кто мне перечит, не ждёт ничего хорошего. И сейчас ты это как следует усвоишь!\n\nИ с этими словами волшебник принялся там и сям колоть тебя острым кинжалом. А поскольку ты не в силах даже пошевелиться, то и сопротивляться никак не можешь.\n\nКак долго ты сможешь вытерпеть эту жестокую пытку? Всякий раз, когда волшебник втыкает в тебя кинжал, брось одну кость — столько очков Выносливости ты теряешь. Повтори это 20 раз.</Text>
+			<Texts>
+				<Text>— Не хочешь сдаваться? Что за упрямец! Но тех, кто мне перечит, не ждёт ничего хорошего. И сейчас ты это как следует усвоишь!\n\nИ с этими словами волшебник принялся там и сям колоть тебя острым кинжалом. А поскольку ты не в силах даже пошевелиться, то и сопротивляться никак не можешь.\n\nКак долго ты сможешь вытерпеть эту жестокую пытку? Всякий раз, когда волшебник втыкает в тебя кинжал, брось одну кость — столько очков Выносливости ты теряешь. Повтори это 20 раз.</Text>
+			</Texts>
+			<Actions>	
+				<Option>
+					<Option Destination="319" Text="В любой момент ты можешь решить, что с тебя хватит, и сдаться"/>
+				</Option>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices>
+					<After>
+						<Text>Осталось ещё 10 раз:</Text>
+					</After>
+				</InlineWoundsByDices>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices/>
+				<InlineWoundsByDices>
+					<After>
+						<Text>Если после 20 уколов ты ещё жив, то чары удержания к тому времени спадут:</Text>
+					</After>
+				</InlineWoundsByDices>
+			</Actions>
 			<Options>
-				<Option Destination="319" Text="В любой момент ты можешь решить, что с тебя хватит, и сдаться"/>
-				<Option Destination="339" Text="После 20 уколов ты ещё жив, чары удержания к тому времени спадут"/>
+				<Option Destination="339"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="370">
