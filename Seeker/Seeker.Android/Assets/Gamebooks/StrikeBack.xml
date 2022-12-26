@@ -15,7 +15,7 @@
 		</Settings>
 		<Buttons>
 			<Fight>Сражаться</Fight>
-			<Dices>Бросить кости</Dices>
+			<Button Action="Dices, InlineWoundsByDices">Бросить кости</Button>
 		</Buttons>
 	</Introduction>
 	<Paragraphs>
@@ -27,6 +27,7 @@
 			</Texts>
 			<Options>
 				<Option Destination="1" Text="В путь!"/>
+				<Option Destination="369" Text="TEST"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
@@ -3941,7 +3942,18 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="378">
-			<Text>Сколько бы ты ни бился о лёд, твоё тело недостаточно массивное, чтобы его расколоть. Брось одну кость — столько очков Выносливости ты теряешь.\n\nОстаётся лишь сдаться да уйти отсюда.</Text>
+			<Texts>
+				<Text>Сколько бы ты ни бился о лёд, твоё тело недостаточно массивное, чтобы его расколоть.</Text>
+				<Text Style="Small">Брось одну кость — столько очков Выносливости ты теряешь:</Text>
+			</Texts>
+			<Actions>	
+				<Dices>
+					<WoundsByDices/>
+					<After>
+						<Text>Остаётся лишь сдаться да уйти отсюда.</Text>
+					</After>
+				</Dices>
+			</Actions>
 			<Options>
 				<Option Destination="433"/>
 			</Options>
