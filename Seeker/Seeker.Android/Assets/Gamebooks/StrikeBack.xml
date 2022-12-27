@@ -44,7 +44,7 @@
 		<Paragraph No="2">
 			<Text>Обходишь постоялый двор сзади и пытаешься скрытно проникнуть через чёрный вход.</Text>
 			<Options>
-				<Option Destination="26" Text="Ты ЧЕЛОВЕК"/>
+				<Option Destination="26" Text="Ты ЧЕЛОВЕК" Availability="ЧЕЛОВЕК"/>
 				<Option Destination="18" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
