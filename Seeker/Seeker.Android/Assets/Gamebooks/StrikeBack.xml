@@ -872,14 +872,14 @@
 		<Paragraph No="83">
 			<Text>В кого ты хочешь превратиться?\n\nЕсли ты ГОБЛИН:</Text>
 			<Options>
-				<Option Destination="92" Text="в КОБОЛЬДА"/>
-				<Option Destination="93" Text="в ОРКА"/>
-				<Option Destination="95" Text="в ХОБГОБЛИНА"/>
-				<Option Destination="87" Text="в ЧЕЛОВЕКА">
+				<Option Destination="92" Text="в КОБОЛЬДА" Availability="ГОБЛИН"/>
+				<Option Destination="93" Text="в ОРКА" Availability="ГОБЛИН"/>
+				<Option Destination="95" Text="в ХОБГОБЛИНА" Availability="ГОБЛИН"/>
+				<Option Destination="87" Text="в ЧЕЛОВЕКА" Availability="ГОБЛИН">
 					<Text>Если ты ХОБГОБЛИН:</Text>
 				</Option>
-				<Option Destination="76" Text="в СТРАШИЛУ"/>
-				<Option Destination="87" Text="в ЧЕЛОВЕКА"/>
+				<Option Destination="76" Text="в СТРАШИЛУ" Availability="ХОБГОБЛИН"/>
+				<Option Destination="87" Text="в ЧЕЛОВЕКА" Availability="ХОБГОБЛИН"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="84">
