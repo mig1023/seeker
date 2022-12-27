@@ -21,7 +21,6 @@ namespace Seeker.Prototypes
         public List<int> WithoutStaticsButtons { get; set; }
 
         private bool ShowDisabledOptionStatus = false;
-        private bool DynamicOptionStatus = false;
 
         private int StartParagraph = 0;
 
@@ -127,11 +126,6 @@ namespace Seeker.Prototypes
             if (Enum.TryParse(option, out Output.Interface.TextFontSize fontSize))
                 TextFontSizeDefault = fontSize;
         }
-
-        public void LoadDynamicOption(bool option) =>
-            DynamicOptionStatus = option;
-
-        public virtual bool GetDynamicOption() => DynamicOptionStatus;
 
         public virtual Output.Interface.TextFontSize GetFontSize() => TextFontSizeDefault;
 
