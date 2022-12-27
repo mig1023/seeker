@@ -1372,19 +1372,19 @@
 				</Dices>
 			</Actions>
 			<Options>
-				<Option Destination="160" Text="Выпало 11 или больше"/>
-				<Option Destination="167" Text="Выпало 10 или меньше">
+				<Option Destination="160" Text="Выпало 11 или больше" Availability="ПОСЛАНЕЦ СМЕРТИ"/>
+				<Option Destination="167" Text="Выпало 10 или меньше" Availability="ПОСЛАНЕЦ СМЕРТИ">
 					<Text>Если ты УМЕРТВИЕ:</Text>
 				</Option>
-				<Option Destination="160" Text="Выпало 9 или больше"/>
-				<Option Destination="167" Text="Выпало 8 или меньше">
+				<Option Destination="160" Text="Выпало 9 или больше" Availability="УМЕРТВИЕ"/>
+				<Option Destination="167" Text="Выпало 8 или меньше" Availability="УМЕРТВИЕ">
 					<Text>Если ты ВУРДАЛАК:</Text>
 				</Option>
-				<Option Destination="160" Text="Выпало 7 или больше"/>
-				<Option Destination="167" Text="Выпало 6 или меньше">
+				<Option Destination="160" Text="Выпало 7 или больше" Availability="ВУРДАЛАК"/>
+				<Option Destination="167" Text="Выпало 6 или меньше" Availability="ВУРДАЛАК">
 					<Text>Если ты СКЕЛЕТ или ЗОМБИ:</Text>
 				</Option>
-				<Option Destination="160" Text="Сколько бы ни выпало"/>
+				<Option Destination="160" Text="Сколько бы ни выпало" Availability="СКЕЛЕТ|ЗОМБИ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="129">
