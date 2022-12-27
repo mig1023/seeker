@@ -164,16 +164,25 @@ namespace Seeker.Gamebook.StrikeBack
         public override bool Availability(string option)
         {
             if (String.IsNullOrEmpty(option))
+            {
                 return true;
+            }
+            else if (option.Contains('|'))
+            {
+                foreach (string optionsPart in option.Split('|'))
+                    if (protagonist.Creature == optionsPart)
+                        return true;
 
-            else if (option.Contains("КОМНАТА"))
                 return false;
-
+            }
             else if (protagonist.Creature == option)
+            {
                 return true;
-
+            }
             else
+            {
                 return AvailabilityTrigger(option.Trim());
+            }
         }
 
         private static Character FindEnemyIn(List<Character> Enemies) =>
