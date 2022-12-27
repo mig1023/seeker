@@ -218,8 +218,8 @@
 		<Paragraph No="21">
 			<Text>Собравшись с духом, распахиваешь дверь в питейный зал.</Text>
 			<Options>
-				<Option Destination="5" Text="Ты ЧЕЛОВЕК"/>
-				<Option Destination="13" Text="Ты ГОБЛИН или КОБОЛЬД"/>
+				<Option Destination="5" Text="Ты ЧЕЛОВЕК" Availability="ЧЕЛОВЕК"/>
+				<Option Destination="13" Text="Ты ГОБЛИН или КОБОЛЬД" Availability="ГОБЛИН|КОБОЛЬД"/>
 				<Option Destination="61" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
