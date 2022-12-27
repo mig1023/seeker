@@ -11,8 +11,7 @@
 			<Color Name="ActionBox">bcc2b9</Color>
 		</Styles>
 		<Settings>
-			<HideDisabledOption/>
-			<DynamicOption/>
+			<ShowDisabledOption/>
 		</Settings>
 		<Buttons>
 			<Fight>Сражаться</Fight>
@@ -3281,10 +3280,10 @@
 				<FindTheWay/>
 			</Actions>
 			<Options>	
-				<Option Destination="352" Text="Зайти в найденную комнату" Availability="КОМНАТА: 352"/>
-				<Option Destination="356" Text="Зайти в найденную комнату" Availability="КОМНАТА: 356"/>
-				<Option Destination="357" Text="Зайти в найденную комнату" Availability="КОМНАТА: 357"/>
-				<Option Destination="448" Text="Зайти в найденную комнату" Availability="КОМНАТА: 448"/>
+				<Option Destination="352" Text="Зайти в найденную комнату" Dynamic="true"/>
+				<Option Destination="356" Text="Зайти в найденную комнату" Dynamic="true"/>
+				<Option Destination="357" Text="Зайти в найденную комнату" Dynamic="true"/>
+				<Option Destination="448" Text="Зайти в найденную комнату" Dynamic="true"/>
 				<Option Destination="321" Text="Попробовать ещё раз">
 					<Text>Если всё-так это тупик...</Text>
 				</Option>
