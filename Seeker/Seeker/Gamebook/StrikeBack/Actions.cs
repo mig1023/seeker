@@ -174,7 +174,7 @@ namespace Seeker.Gamebook.StrikeBack
         }
 
         private static Character FindEnemyIn(List<Character> Enemies) =>
-            Enemies.Where(e => e.Endurance > 0).FirstOrDefault();
+            Enemies.Where(x => x.Endurance > 0).OrderBy(y => Game.Dice.Roll(size: 100)).FirstOrDefault();
 
         private static Character FindEnemy(Character fighter, List<Character> Allies, List<Character> Enemies)
         {
