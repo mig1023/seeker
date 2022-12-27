@@ -169,6 +169,9 @@ namespace Seeker.Gamebook.StrikeBack
             else if (option.Contains("КОМНАТА"))
                 return false;
 
+            else if (protagonist.Creature == option)
+                return true;
+
             else
                 return AvailabilityTrigger(option.Trim());
         }
