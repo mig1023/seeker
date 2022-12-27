@@ -334,23 +334,23 @@
 		<Paragraph No="34">
 			<Text>Тихонько открываешь дверь. В комнате за ней всё тихо и спокойно, а на столе валяется гроссбух. Должно быть, это комната хозяина. Если нефрит где и спрятан, то именно здесь.\n\nОбшариваешь шкаф и стол, роешься под кроватью, но всё впустую. Уже собираясь уходить, замечаешь на столе цветочную вазу. Любить цветочки — как-то это не по-воровски! Поднимаешь и встряхиваешь вазу — внутри что-то стучит!\n\nПереворачиваешь её, и на стол выкатывается чёрный нефрит. Волшебный камень! Рамбл ещё не успел его продать. Хватаешь желанный самоцвет и произносишь заклинание превращения.\n\nВ кого попросишь превратить тебя?\n\nЕсли ты ГОБЛИН:</Text>
 			<Options>
-				<Option Destination="50" Text="в КОБОЛЬДА"/>
-				<Option Destination="58" Text="в ОРКА"/>
-				<Option Destination="74" Text="в ЧЕЛОВЕКА"/>
-				<Option Destination="66" Text="в ХОБГОБЛИНА">
+				<Option Destination="50" Text="в КОБОЛЬДА" Availability="ГОБЛИН"/>
+				<Option Destination="58" Text="в ОРКА" Availability="ГОБЛИН"/>
+				<Option Destination="74" Text="в ЧЕЛОВЕКА" Availability="ГОБЛИН"/>
+				<Option Destination="66" Text="в ХОБГОБЛИНА" Availability="ГОБЛИН">
 					<Text>Если ты КОБОЛЬД:</Text>
 				</Option>
-				<Option Destination="82" Text="в ЯЩЕРОЛЮДА"/>
-				<Option Destination="15" Text="в ТРОГЛОДИТА"/>
-				<Option Destination="60" Text="в ОБОРОТНЯ">
+				<Option Destination="82" Text="в ЯЩЕРОЛЮДА" Availability="КОБОЛЬД"/>
+				<Option Destination="15" Text="в ТРОГЛОДИТА" Availability="КОБОЛЬД"/>
+				<Option Destination="60" Text="в ОБОРОТНЯ" Availability="КОБОЛЬД">
 					<Text>Если ты ОРК:</Text>
 				</Option>
-				<Option Destination="74" Text="в ЧЕЛОВЕКА"/>
-				<Option Destination="60" Text="в ОБОРОТНЯ">
+				<Option Destination="74" Text="в ЧЕЛОВЕКА" Availability="ОРК"/>
+				<Option Destination="60" Text="в ОБОРОТНЯ" Availability="ОРК">
 					<Text>Если ты ХОБГОБЛИН:</Text>
 				</Option>
-				<Option Destination="90" Text="в СТРАШИЛУ"/>
-				<Option Destination="74" Text="в ЧЕЛОВЕКА"/>
+				<Option Destination="90" Text="в СТРАШИЛУ" Availability="ХОБГОБЛИН"/>
+				<Option Destination="74" Text="в ЧЕЛОВЕКА" Availability="ХОБГОБЛИН"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="35">
