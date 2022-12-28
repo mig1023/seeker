@@ -3002,7 +3002,7 @@
 		<Paragraph No="292">
 			<Text>Набрасываешься на немаленького голема.</Text>
 			<Options>
-				<Option Destination="299" Text="Ты ВЕЛИКАН"/>
+				<Option Destination="299" Text="Ты ВЕЛИКАН" Availability="ВЕЛИКАН"/>
 				<Option Destination="222" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
