@@ -3483,9 +3483,9 @@
 		<Paragraph No="338">
 			<Text>Волшебник мёртв. Наконец твоя цель достигнута. С чувством триумфа покидаешь пещеру.</Text>
 			<Options>
-				<Option Destination="439" Text="Ты ДРАКОН (любого вида)"/>
-				<Option Destination="330" Text="Ты ИФРИТ, ДЕМОН или ФЕНИКС"/>
-				<Option Destination="426" Text="Ты ДЖИНН"/>
+				<Option Destination="439" Text="Ты ДРАКОН (любого вида)" Availability="ЧЁРНЫЙ ДРАКОН|КРАСНЫЙ ДРАКОН|БЕЛЫЙ ДРАКОН|СИНИЙ ДРАКОН|ЗОЛОТОЙ ДРАКОН|ЗЕЛЁНЫЙ ДРАКОН"/>
+				<Option Destination="330" Text="Ты ИФРИТ, ДЕМОН или ФЕНИКС" Availability="ИФРИТ|ДЕМОН|ФЕНИКС"/>
+				<Option Destination="426" Text="Ты ДЖИНН" Availability="ДЖИНН"/>
 				<Option Destination="308" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
