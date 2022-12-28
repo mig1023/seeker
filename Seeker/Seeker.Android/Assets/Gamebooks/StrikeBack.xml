@@ -3324,10 +3324,10 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="417" Text="Если ты ДЖИНН, атаки гиппогрифа не могут повредить тебе">
+				<Option Destination="417" Text="Если ты ДЖИНН, атаки гиппогрифа не могут повредить тебе" Availability="ДЖИНН">
 					<Text>Если же ты ГАРПИЯ или ТРИТОН, то можешь попробовать очаровать юношу, чтобы прекратить бой:</Text>
 				</Option>
-				<Option Destination="431" Text="В случае успеха">
+				<Option Destination="431" Text="В случае успеха" Availability="ГАРПИЯ|ТРИТОН">
 					<Text>Если Выносливость гиппогрифа упадёт до 10 очков или ниже:</Text>
 				</Option>
 				<Option Destination="417"/>
