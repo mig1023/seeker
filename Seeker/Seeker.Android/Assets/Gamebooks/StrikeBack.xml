@@ -3126,22 +3126,22 @@
 		<Paragraph No="304">
 			<Text>Тщательно осмотрев пол пещеры, ты нашёл чёрный нефрит. Должно быть, Шторм Шэдоу в спешке обронил его. Повезло!\n\nНе теряя времени, произносишь заклинания превращения. Итак, кем ты хочешь стать на этот раз?\n\nЕсли ты МАНТИКОРА:</Text>
 			<Options>
-				<Option Destination="334" Text="ХИМЕРОЙ"/>
-				<Option Destination="397" Text="ВИВЕРНОЙ"/>
-				<Option Destination="337" Text="ИФРИТОМ"/>
-				<Option Destination="402" Text="ДРАГОНИ">
+				<Option Destination="334" Text="ХИМЕРОЙ" Availability="МАНТИКОРА"/>
+				<Option Destination="397" Text="ВИВЕРНОЙ" Availability="МАНТИКОРА"/>
+				<Option Destination="337" Text="ИФРИТОМ" Availability="МАНТИКОРА"/>
+				<Option Destination="402" Text="ДРАГОНИ" Availability="МАНТИКОРА">
 					<Text>Если ты ДЖИНН:</Text>
 				</Option>
-				<Option Destination="337" Text="ИФРИТОМ">
+				<Option Destination="337" Text="ИФРИТОМ" Availability="ДЖИНН">
 					<Text>Если ты ГРИФОН или СФИНКС:</Text>
 				</Option>
-				<Option Destination="334" Text="ХИМЕРОЙ"/>
-				<Option Destination="394" Text="РУХОМ"/>
-				<Option Destination="402" Text="ДРАГОНИ">
+				<Option Destination="334" Text="ХИМЕРОЙ" Availability="СФИНКС"/>
+				<Option Destination="394" Text="РУХОМ" Availability="СФИНКС"/>
+				<Option Destination="402" Text="ДРАГОНИ" Availability="СФИНКС">
 					<Text>Если ты ПЕГАС:</Text>
 				</Option>
-				<Option Destination="394" Text="РУХОМ"/>
-				<Option Destination="405" Text="КОШМАРОМ"/>
+				<Option Destination="394" Text="РУХОМ" Availability="ПЕГАС"/>
+				<Option Destination="405" Text="КОШМАРОМ" Availability="ПЕГАС"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="305">
