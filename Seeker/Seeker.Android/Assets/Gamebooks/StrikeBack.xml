@@ -4627,7 +4627,7 @@
 		<Paragraph No="441">
 			<Text>Перемахнув приближающийся водный вал, атакуешь волшебника.</Text>
 			<Options>
-				<Option Destination="384" Text="Ты ДЖИНН, ИФРИТ, ФЕНИКС или ДЕМОН"/>
+				<Option Destination="384" Text="Ты ДЖИНН, ИФРИТ, ФЕНИКС или ДЕМОН" Availability="ДЖИНН|ИФРИТ|ФЕНИКС|ДЕМОН"/>
 				<Option Destination="395" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
