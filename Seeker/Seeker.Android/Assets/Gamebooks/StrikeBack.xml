@@ -4690,7 +4690,7 @@
 		<Paragraph No="449">
 			<Text>Таранишь ледяную стену.</Text>
 			<Options>
-				<Option Destination="378" Text="Ты ГАРПИЯ или ГИППОГРИФ"/>
+				<Option Destination="378" Text="Ты ГАРПИЯ или ГИППОГРИФ" Availability="ГАРПИЯ|ГИППОГРИФ"/>
 				<Option Destination="388" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
