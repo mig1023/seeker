@@ -1769,8 +1769,8 @@
 		<Paragraph No="171">
 			<Text>Не задерживаясь, идёшь через кладбище к городу. Чтобы не вызывать подозрений, заматываешься в подобранное по дороге тряпьё.</Text>
 			<Options>
-				<Option Destination="141" Text="Ты ЧЕЛОВЕК или ОБОРОТЕНЬ"/>
-				<Option Destination="178" Text="Ты ЯЩЕРОЛЮД или СТРАШИЛА"/>
+				<Option Destination="141" Text="Ты ЧЕЛОВЕК или ОБОРОТЕНЬ" Availability="ЧЕЛОВЕК|ОБОРОТЕНЬ"/>
+				<Option Destination="178" Text="Ты ЯЩЕРОЛЮД или СТРАШИЛА" Availability="ЯЩЕРОЛЮД|СТРАШИЛА"/>
 				<Option Destination="148" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
