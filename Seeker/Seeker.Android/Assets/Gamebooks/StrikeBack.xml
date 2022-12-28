@@ -3597,7 +3597,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="375" Text="Ты ИФРИТ или ДЖИНН, то атаки ледяной статуи не смогут причинить тебе вреда"/>
+				<Option Destination="375" Text="Ты ИФРИТ или ДЖИНН, то атаки ледяной статуи не смогут причинить тебе вреда" Availability="ИФРИТ|ДЖИНН"/>
 				<Option Destination="375" Text="Одолел ледяную статую"/>
 			</Options>
 		</Paragraph>
