@@ -2125,7 +2125,7 @@
 		<Paragraph No="211">
 			<Text>Таранишь приближающийся смерч.</Text>
 			<Options>
-				<Option Destination="291" Text="Ты ДЖИНН"/>
+				<Option Destination="291" Text="Ты ДЖИНН" Availability="ДЖИНН"/>
 				<Option Destination="247" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
@@ -2290,22 +2290,22 @@
 		<Paragraph No="228">
 			<Text>Послушавшись Шейну, прекращаешь буйствовать.\n\n— Леди Шейна, вы в порядке?!!\n\nК вам со всех сторон подбегают не спускающие с Шейны встревоженных глаз солдаты.\n\n— Опустите оружие. Этот монстр не настолько злой.\n\nОтдав приказ подчинённым, она снова поворачивается к тебе. И внезапно мило и дружелюбно улыбается.\n\n— Ты мне нравишься, монстр. По правде говоря, я и сама ненавижу Блинкена. Если ты вместо меня отомстишь этому негодяю, я с радостью помогу тебе. А взамен прошу больше не чинить разорений в этой стране.\n\nПолучив твоё согласие, Шейна отводит тебя вглубь замка, к сокровищнице и отпирает стальную дверь, за которой лежат груды монет, драгоценностей, волшебных мечей и прочего.\n\n— Вот, выбирай один предмет, какой пожелаешь.\n\nТы мигом закапываешься в содержимое комнаты. Разумеется, богатства тебе ни к чему — всё, чего ты жаждешь, это волшебный чёрный нефрит.\n\nВ конце концов, ты находишь камень. Теперь читай заклинание и превращайся.\n\nЕсли ты ГАРПИЯ:</Text>
 			<Options>
-				<Option Destination="218" Text="в ГРИФОНА"/>
-				<Option Destination="266" Text="в СФИНКСА">
+				<Option Destination="218" Text="в ГРИФОНА" Availability="ГАРПИЯ"/>
+				<Option Destination="266" Text="в СФИНКСА" Availability="ГАРПИЯ">
 					<Text>Если ты ВЕЛИКАН:</Text>
 				</Option>
-				<Option Destination="298" Text="в ТРОЛЛЯ"/>
-				<Option Destination="264" Text="в МАНТИКОРУ"/>
-				<Option Destination="251" Text="в ДЖИННА"/>
-				<Option Destination="275" Text="в ТРИТОНА">
+				<Option Destination="298" Text="в ТРОЛЛЯ" Availability="ВЕЛИКАН"/>
+				<Option Destination="264" Text="в МАНТИКОРУ" Availability="ВЕЛИКАН"/>
+				<Option Destination="251" Text="в ДЖИННА" Availability="ВЕЛИКАН"/>
+				<Option Destination="275" Text="в ТРИТОНА" Availability="ВЕЛИКАН">
 					<Text>Если ты ГОРГУЛЬЯ:</Text>
 				</Option>
-				<Option Destination="234" Text="в ГАРПИЮ"/>
-				<Option Destination="236" Text="в АДСКУЮ ГОНЧУЮ">
+				<Option Destination="234" Text="в ГАРПИЮ" Availability="ГОРГУЛЬЯ"/>
+				<Option Destination="236" Text="в АДСКУЮ ГОНЧУЮ" Availability="ГОРГУЛЬЯ">
 					<Text>Если ты ГИППОГРИФ:</Text>
 				</Option>
-				<Option Destination="218" Text="в ГРИФОНА"/>
-				<Option Destination="239" Text="в ПЕГАСА"/>
+				<Option Destination="218" Text="в ГРИФОНА" Availability="ГИППОГРИФ"/>
+				<Option Destination="239" Text="в ПЕГАСА" Availability="ГИППОГРИФ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="229">
