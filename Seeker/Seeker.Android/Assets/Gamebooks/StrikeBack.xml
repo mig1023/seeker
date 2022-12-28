@@ -1606,7 +1606,7 @@
 		<Paragraph No="153">
 			<Text>Как эльф и говорил, внутри крипты обнаружилась потайная лестница, ведущая вниз.</Text>
 			<Options>
-				<Option Destination="150" Text="Ты ЧЕЛОВЕК, ЯЩЕРОЛЮД, ЗОМБИ или ВУРДАЛАК"/>
+				<Option Destination="150" Text="Ты ЧЕЛОВЕК, ЯЩЕРОЛЮД, ЗОМБИ или ВУРДАЛАК" Availability="ЧЕЛОВЕК|ЯЩЕРОЛЮД|ЗОМБИ|ВУРДАЛАК"/>
 				<Option Destination="180" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
