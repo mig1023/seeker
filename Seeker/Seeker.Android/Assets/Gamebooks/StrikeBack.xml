@@ -4529,8 +4529,8 @@
 		<Paragraph No="428">
 			<Text>Решаешь уклониться от боя и сбежать.</Text>
 			<Options>
-				<Option Destination="420" Text="Ты ТРИТОН или ГИДРА"/>
-				<Option Destination="358" Text="Ты ПЕГАС"/>
+				<Option Destination="420" Text="Ты ТРИТОН или ГИДРА" Availability="ТРИТОН|ГИДРА"/>
+				<Option Destination="358" Text="Ты ПЕГАС" Availability="ПЕГАС"/>
 				<Option Destination="306" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
