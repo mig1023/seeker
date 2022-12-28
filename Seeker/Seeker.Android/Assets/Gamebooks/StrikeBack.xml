@@ -2848,7 +2848,7 @@
 			<Options>
 				<Option Destination="241" Text="Повернувшись к всадникам спиной, побежишь по дороге"/>
 				<Option Destination="205" Text="Полезешь на склон"/>
-				<Option Destination="245" Text="Если ты КУРОЛИСК или ГОРГУЛЬЯ, то также можешь сбежать, взмыв в небо"/>
+				<Option Destination="245" Text="Если ты КУРОЛИСК или ГОРГУЛЬЯ, то также можешь сбежать, взмыв в небо" Availability="КУРОЛИСК|ГОРГУЛЬЯ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="279">
