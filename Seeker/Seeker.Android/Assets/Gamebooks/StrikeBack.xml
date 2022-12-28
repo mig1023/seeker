@@ -3483,7 +3483,7 @@
 		<Paragraph No="338">
 			<Text>Волшебник мёртв. Наконец твоя цель достигнута. С чувством триумфа покидаешь пещеру.</Text>
 			<Options>
-				<Option Destination="439" Text="Ты ДРАКОН (любого вида)" Availability="ЧЁРНЫЙ ДРАКОН|КРАСНЫЙ ДРАКОН|БЕЛЫЙ ДРАКОН|СИНИЙ ДРАКОН|ЗОЛОТОЙ ДРАКОН|ЗЕЛЁНЫЙ ДРАКОН"/>
+				<Option Destination="439" Text="Ты ДРАКОН (любого вида)" Availability="ЧЁРНЫЙ ДРАКОН|КРАСНЫЙ ДРАКОН|БЕЛЫЙ ДРАКОН|СИНИЙ ДРАКОН|ЗОЛОТОЙ ДРАКОН|ЗЕЛЁНЫЙ ДРАКОН|ВСЕЦВЕТНЫЙ ДРАКОН"/>
 				<Option Destination="330" Text="Ты ИФРИТ, ДЕМОН или ФЕНИКС" Availability="ИФРИТ|ДЕМОН|ФЕНИКС"/>
 				<Option Destination="426" Text="Ты ДЖИНН" Availability="ДЖИНН"/>
 				<Option Destination="308" Text="Ты любое другое существо"/>
@@ -3854,48 +3854,48 @@
 		<Paragraph No="371">
 			<Text>Просторная сокровищница изобилует златом-серебром, да каменьями-самоцветами. Также в ней немало и оружия, но всё оно изготовлено в расчёте на человека, так что тебе от него никакой пользы.\n\nПоискав какое-то время, обнаруживаешь замешанный в груду самоцветов чёрный нефрит. Итак, кем ты станешь?\n\nЕсли ты МАНТИКОРА:</Text>
 			<Options>
-				<Option Destination="347" Text="ХИМЕРОЙ"/>
-				<Option Destination="342" Text="ВИВЕРНОЙ"/>
-				<Option Destination="346" Text="ИФРИТОМ"/>
-				<Option Destination="408" Text="ДРАГОНИ">
+				<Option Destination="347" Text="ХИМЕРОЙ" Availability="МАНТИКОРА"/>
+				<Option Destination="342" Text="ВИВЕРНОЙ" Availability="МАНТИКОРА"/>
+				<Option Destination="346" Text="ИФРИТОМ" Availability="МАНТИКОРА"/>
+				<Option Destination="408" Text="ДРАГОНИ" Availability="МАНТИКОРА">
 					<Text>Если ты ГРИФОН или СФИНКС:</Text>
 				</Option>
-				<Option Destination="347" Text="ХИМЕРОЙ"/>
-				<Option Destination="344" Text="РУХОМ"/>
-				<Option Destination="408" Text="ДРАГОНИ">
+				<Option Destination="347" Text="ХИМЕРОЙ" Availability="ГРИФОН|СФИНКС"/>
+				<Option Destination="344" Text="РУХОМ" Availability="ГРИФОН|СФИНКС"/>
+				<Option Destination="408" Text="ДРАГОНИ" Availability="ГРИФОН|СФИНКС">
 					<Text>Если ты ДЖИНН:</Text>
 				</Option>
-				<Option Destination="346" Text="ИФРИТОМ">
+				<Option Destination="346" Text="ИФРИТОМ" Availability="ДЖИНН">
 					<Text>Если ты ПЕГАС:</Text>
 				</Option>
-				<Option Destination="403" Text="КОШМАРОМ">
+				<Option Destination="403" Text="КОШМАРОМ" Availability="ПЕГАС">
 					<Text>Если ты ИФРИТ:</Text>
 				</Option>
-				<Option Destination="327" Text="ДЕМОНОМ">
+				<Option Destination="327" Text="ДЕМОНОМ" Availability="ИФРИТ">
 					<Text>Если ты РУХ:</Text>
 				</Option>
-				<Option Destination="322" Text="ФЕНИКСОМ">
+				<Option Destination="322" Text="ФЕНИКСОМ" Availability="РУХ">
 					<Text>Если ты МОРОЗНАЯ САЛАМАНДРА:</Text>
 				</Option>
-				<Option Destination="376" Text="БЕЛЫМ ДРАКОНОМ">
+				<Option Destination="376" Text="БЕЛЫМ ДРАКОНОМ" Availability="МОРОЗНАЯ САЛАМАНДРА">
 					<Text>Если ты ВИВЕРНА:</Text>
 				</Option>
-				<Option Destination="372" Text="ЧЁРНЫМ ДРАКОНОМ">
+				<Option Destination="372" Text="ЧЁРНЫМ ДРАКОНОМ" Availability="ВИВЕРНА">
 					<Text>Если ты КОШМАР:</Text>
 				</Option>
-				<Option Destination="422" Text="ЗЕЛЁНЫМ ДРАКОНОМ">
+				<Option Destination="422" Text="ЗЕЛЁНЫМ ДРАКОНОМ" Availability="КОШМАР">
 					<Text>Если ты ТРИТОН:</Text>
 				</Option>
-				<Option Destination="412" Text="СИНИМ ДРАКОНОМ">
+				<Option Destination="412" Text="СИНИМ ДРАКОНОМ" Availability="ТРИТОН">
 					<Text>Если ты ХИМЕРА:</Text>
 				</Option>
-				<Option Destination="374" Text="КРАСНЫМ ДРАКОНОМ">
+				<Option Destination="374" Text="КРАСНЫМ ДРАКОНОМ" Availability="ХИМЕРА">
 					<Text>Если ты ДРАГОНИ:</Text>
 				</Option>
-				<Option Destination="419" Text="ЗОЛОТЫМ ДРАКОНОМ">
+				<Option Destination="419" Text="ЗОЛОТЫМ ДРАКОНОМ" Availability="ДРАГОНИ">
 					<Text>Если ты ГИДРА:</Text>
 				</Option>
-				<Option Destination="3777" Text="ВСЕЦВЕТНЫМ ДРАКОНОМ">
+				<Option Destination="377" Text="ВСЕЦВЕТНЫМ ДРАКОНОМ" Availability="ГИДРА">
 					<Text>Если ты любое другое существо, то ты не мог узнать ведущий сюда маршрут; похоже, ты так и не встретил Сатин из ледяной башни:</Text>
 				</Option>
 				<Option Destination="321"/>
