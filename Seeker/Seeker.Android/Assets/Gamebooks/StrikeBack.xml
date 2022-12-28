@@ -2519,30 +2519,30 @@
 		<Paragraph No="250">
 			<Text>— Да, ответ правильный. Однако, решение такой простенькой задачи заняло у тебя изрядно времени. Похоже, мозг монстра довольно ограничен.\n\nСтарик явно намекает, что ты — дурак. Осерчав, ты уже готов не раздумывая броситься на старика.\n\n— Ну, ну, уймись. Вот, как и обещал, — с этими словами старик бросает тебе уже привычный чёрный нефрит.\n\nНа всякий случай внимательно его осматриваешь, но самоцвет определённо подлинный. Скорее бы прочесть заклинание и превратиться!\n\nНо кем ты хочешь стать?\n\nЕсли ты ГОРГУЛЬЯ:</Text>
 			<Options>
-				<Option Destination="224" Text="ГАРПИЕЙ"/>
-				<Option Destination="256" Text="АДСКОЙ ГОНЧЕЙ">
+				<Option Destination="224" Text="ГАРПИЕЙ" Availability="ГОРГУЛЬЯ"/>
+				<Option Destination="256" Text="АДСКОЙ ГОНЧЕЙ" Availability="ГОРГУЛЬЯ">
 					<Text>Если ты МИНОТАВР:</Text>
 				</Option>
-				<Option Destination="290" Text="ВЕЛИКАНОМ"/>
-				<Option Destination="220" Text="ГОРГОНОМ">
+				<Option Destination="290" Text="ВЕЛИКАНОМ" Availability="МИНОТАВР"/>
+				<Option Destination="220" Text="ГОРГОНОМ" Availability="МИНОТАВР">
 					<Text>Если ты КЕНТАВР:</Text>
 				</Option>
-				<Option Destination="254" Text="ЕДИНОРОГОМ"/>
-				<Option Destination="226" Text="ГИППОГРИФОМ">
+				<Option Destination="254" Text="ЕДИНОРОГОМ" Availability="КЕНТАВР"/>
+				<Option Destination="226" Text="ГИППОГРИФОМ" Availability="КЕНТАВР">
 					<Text>Если ты МЕДУЗА:</Text>
 				</Option>
-				<Option Destination="284" Text="ГИДРОЙ"/>
-				<Option Destination="296" Text="ВАСИЛИСКОМ">
+				<Option Destination="284" Text="ГИДРОЙ" Availability="МЕДУЗА"/>
+				<Option Destination="296" Text="ВАСИЛИСКОМ" Availability="МЕДУЗА">
 					<Text>Если ты КУРОЛИСК:</Text>
 				</Option>
-				<Option Destination="226" Text="ГИППОГРИФОМ"/>
-				<Option Destination="296" Text="ВАСИЛИСКОМ"/>
-				<Option Destination="286" Text="САЛАМАНДРОЙ"/>
-				<Option Destination="294" Text="МОРОЗНОЙ САЛАМАНДРОЙ">
+				<Option Destination="226" Text="ГИППОГРИФОМ" Availability="КУРОЛИСК"/>
+				<Option Destination="296" Text="ВАСИЛИСКОМ" Availability="КУРОЛИСК"/>
+				<Option Destination="286" Text="САЛАМАНДРОЙ" Availability="КУРОЛИСК"/>
+				<Option Destination="294" Text="МОРОЗНОЙ САЛАМАНДРОЙ" Availability="КУРОЛИСК">
 					<Text>Если ты ОБОРОТЕНЬ:</Text>
 				</Option>
-				<Option Destination="256" Text="АДСКОЙ ГОНЧЕЙ"/>
-				<Option Destination="290" Text="ВЕЛИКАНОМ"/>
+				<Option Destination="256" Text="АДСКОЙ ГОНЧЕЙ" Availability="ОБОРОТЕНЬ"/>
+				<Option Destination="290" Text="ВЕЛИКАНОМ" Availability="ОБОРОТЕНЬ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="251">
