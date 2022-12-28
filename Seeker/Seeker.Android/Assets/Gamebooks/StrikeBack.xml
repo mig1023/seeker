@@ -2337,7 +2337,7 @@
 		<Paragraph No="231">
 			<Text>Всадник стремительно приближается. Вот он уже прямо перед тобой.</Text>
 			<Options>
-				<Option Destination="261" Text="Ты МЕДУЗА"/>
+				<Option Destination="261" Text="Ты МЕДУЗА" Availability="МЕДУЗА"/>
 				<Option Destination="238" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
@@ -2381,7 +2381,7 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="232" Text="Если ты победишь — повергнув рыцаря или превратив его в камень"/>
+				<Option Destination="232" Text="Если ты победил"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="236">
@@ -2432,8 +2432,8 @@
 		<Paragraph No="241">
 			<Text>Повернувшись к приближающемуся всаднику спиной, бросаешься наутёк. Разумеется, всадник пустится за тобой в погоню.</Text>
 			<Options>
-				<Option Destination="261" Text="Ты МЕДУЗА"/>
-				<Option Destination="248" Text="Ты КЕНТАВР"/>
+				<Option Destination="261" Text="Ты МЕДУЗА" Availability="МЕДУЗА"/>
+				<Option Destination="248" Text="Ты КЕНТАВР" Availability="КЕНТАВР"/>
 				<Option Destination="271" Text="Ты любое другое существо"/>
 			</Options>
 		</Paragraph>
