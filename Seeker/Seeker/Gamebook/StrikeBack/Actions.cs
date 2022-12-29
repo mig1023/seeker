@@ -19,6 +19,7 @@ namespace Seeker.Gamebook.StrikeBack
         public int Count { get; set; }
         public bool WoundsByDices { get; set; }
         public int WoundsMultiple { get; set; }
+        public bool WithoutProtagonist { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -209,11 +210,14 @@ namespace Seeker.Gamebook.StrikeBack
 
             int round = 1, enemyWounds = 0;
 
-            List<Character> FightAllies = new List<Character> { protagonist };
+            List<Character> FightAllies = new List<Character>();
             List<Character> FightEnemies = new List<Character>();
             List<Character> FightOrder = new List<Character>();
             Dictionary<string, int> WoundsCount = new Dictionary<string, int>();
             Dictionary<string, List<int>> AttackStory = new Dictionary<string, List<int>>();
+
+            if (!WithoutProtagonist)
+                FightAllies.Add(protagonist);
 
             foreach (Character enemy in Enemies)
                 FightEnemies.Add(enemy.Clone());
