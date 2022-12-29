@@ -318,13 +318,13 @@ namespace Seeker.Gamebook.StrikeBack
                     bool success = hitDiff > 0;
 
                     fight.Add(String.Format(
-                        "{0}: {1} это {2} силы атаки",
+                        "{0}: {1}, это {2} силы атаки",
                         (IsProtagonist(enemy.Name) ? "Ваша защита" : "Защита противника"),
                         enemy.Defence, Game.Services.Сomparison(enemy.Defence, hitStrength)));
 
                     if (IsProtagonist(enemy.Name))
                     {
-                        fight.Add(success ? "BAD|BOLD|Вы ранены" : "GOOD|Атака отбита");
+                        fight.Add(success ? "BAD|BOLD|Ты ранены" : "GOOD|Атака отбита");
                     }
                     else  if (FightAllies.Contains(enemy))
                     {
@@ -347,7 +347,7 @@ namespace Seeker.Gamebook.StrikeBack
 
                 if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                 {
-                    fight.Add("BIG|GOOD|ВЫ ПОБЕДИЛИ :)");
+                    fight.Add("BIG|GOOD|ТЫ ПОБЕДИЛ :)");
                     return fight;
                 }
 
@@ -355,7 +355,7 @@ namespace Seeker.Gamebook.StrikeBack
 
                 if (allyLost)
                 {
-                    fight.Add("BIG|BAD|ВЫ ПРОИГРАЛИ :(");
+                    fight.Add("BIG|BAD|ТЫ ПРОИГРАЛ :(");
 
                     if (NotToDeath)
                         protagonist.Endurance += 1;
@@ -366,7 +366,7 @@ namespace Seeker.Gamebook.StrikeBack
                 if ((RoundsToWin > 0) && (RoundsToWin <= round))
                 {
                     fight.Add("BAD|Отведённые на победу раунды истекли.");
-                    fight.Add("BIG|BAD|ВЫ ПРОИГРАЛИ :(");
+                    fight.Add("BIG|BAD|ТЫ ПРОИГРАЛ :(");
                     return fight;
                 }
 
