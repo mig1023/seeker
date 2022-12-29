@@ -104,9 +104,7 @@ namespace Seeker.Gamebook.StrikeBack
 
         public List<string> FindTheWay()
         {
-            List<string> way = new List<string>();
-
-            way.Add("BIG|Ищем путь:");
+            List<string> way = new List<string> { "BIG|Ищем путь:" };
 
             double wayPoint = 202;
 
@@ -203,6 +201,53 @@ namespace Seeker.Gamebook.StrikeBack
 
         private static bool IsProtagonist(string name) =>
             name == Character.Protagonist.Name;
+
+        public List<string> HobgoblinGame()
+        {
+            List<string> game = new List<string> { "BIG|Играем:" };
+
+            for (int round = 1; round < 5; round++)
+            {
+                if (protagonist.Endurance <= 0)
+                    continue;
+
+                game.Add(String.Empty);
+
+                Game.Dice.DoubleRoll(out int firstRoll, out int secondRoll);
+                int hitStrength = firstRoll + secondRoll + 1;
+
+                game.Add(String.Format(
+                    "Cила атаки кинжала: {0} + {1} + 1 = {2}",
+                    Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), hitStrength));
+
+                int hitDiff = hitStrength - protagonist.Defence;
+                bool success = hitDiff > 0;
+
+                game.Add(String.Format(
+                    "Твоя защита: {0}, это {1} силы атаки",
+                    protagonist.Defence, Game.Services.Сomparison(protagonist.Defence, hitStrength)));
+
+                if (success)
+                {
+                    protagonist.Endurance -= hitDiff;
+
+                    game.Add("BAD|BOLD|Ты ранен");
+
+                    game.Add(String.Format("Ты потерял вносливости: {0} (осталось: {1})",
+                       hitDiff, protagonist.Endurance));
+                }
+                else
+                {
+                    game.Add("GOOD|BOLD|Ты увернулся");
+                }
+            }
+
+            game.Add(String.Empty);
+            game.Add(protagonist.Endurance > 0 ? "BIG|GOOD|ТЫ ПОБЕДИЛ :)" : "BIG|BAD|ТЫ ПРОИГРАЛ :(");
+
+            return game;
+        }
+
 
         public List<string> Fight()
         {
