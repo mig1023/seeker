@@ -516,9 +516,7 @@
 			<Actions>	
 				<Dices/>
 			</Actions>
-			<Modifications>
-				<Transformation Value="КОБОЛЬД,1,8,3"/>
-			</Modifications>
+			<Transformation Value="КОБОЛЬД,1,8,3"/>
 			<Options>
 				<Option Destination="7" Text="Выпало 1 или 2"/>
 				<Option Destination="23" Text="Выпало от 3 до 6"/>
