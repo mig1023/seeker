@@ -2201,9 +2201,7 @@
 				<Text Style="Selected, Bold">ГИППОГРИФ\nАтака 5\nЗащита 9\nВыносливость 16</Text>
 				<Text>Однако, сомнительно, чтобы ты смог одолеть Блинкена. Нужно побыстрее найти следующий нефрит.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ГИППОГРИФ,5,9,16"/>
-			</Modifications>
+			<Transformation Value="ГИППОГРИФ,5,9,16"/>
 			<Options>
 				<Option Destination="214"/>
 			</Options>
