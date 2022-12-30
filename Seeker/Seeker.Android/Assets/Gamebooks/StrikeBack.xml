@@ -1152,9 +1152,7 @@
 				<Text Style="Selected, Little">Особая способность: Страх. Ты способен вселять страх в сердца людей и животных. В первом раунде боя брось одну кость. Если выпадет от 3 до 6, твой противник от страха первые три раунда не сможет атаковать.</Text>
 				<Text>Тебе не терпится поскорее расправиться с Гленом.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="САТИР,5,9,23"/>
-			</Modifications>
+			<Transformation Value="САТИР,5,9,23"/>
 			<Options>
 				<Option Destination="199"/>
 			</Options>
