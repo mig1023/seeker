@@ -2890,9 +2890,7 @@
 				<Text Style="Selected, Bold">ВЕЛИКАН\nАтака 8\nЗащита 9\nВыносливость 40</Text>
 				<Text>Никаких особых способностей у тебя нет, да они и ни к чему. Твоё гигантское тело само по себе оружие!</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ВЕЛИКАН,8,9,40"/>
-			</Modifications>
+			<Transformation Value="ВЕЛИКАН,8,9,40"/>
 			<Options>
 				<Option Destination="214"/>
 			</Options>
