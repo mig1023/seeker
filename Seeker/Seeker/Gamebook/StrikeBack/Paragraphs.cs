@@ -9,8 +9,17 @@ namespace Seeker.Gamebook.StrikeBack
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Paragraph Get(int id, XmlNode xmlParagraph) =>
-            base.Get(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph)
+        {
+            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+
+            XmlNode transformation = xmlParagraph.SelectSingleNode("Transformation");
+
+            if (transformation != null)
+                paragraph.Modification.Add(ModificationParse(transformation));
+
+            return base.Get(xmlParagraph, paragraph);
+        }
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {

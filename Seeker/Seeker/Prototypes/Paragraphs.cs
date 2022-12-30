@@ -34,10 +34,11 @@ namespace Seeker.Prototypes
             return paragraph;
         }
 
-        public Paragraph Get(XmlNode xmlParagraph)
-        {
-            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
+        public Paragraph Get(XmlNode xmlParagraph) =>
+            Get(xmlParagraph, ParagraphTemplate(xmlParagraph));
 
+        public Paragraph Get(XmlNode xmlParagraph, Paragraph paragraph)
+        {
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
                 paragraph.Options.Add(OptionParse(xmlOption));
 
