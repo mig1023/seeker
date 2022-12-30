@@ -1076,9 +1076,7 @@
 				<Text Style="Selected, Little">Особая способность: Удар рогами. Если твой противник крупнее человека, твоя Атака будет 7.</Text>
 				<Text>Вот таким превращением ты доволен.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="МИНОТАВР,5,8,27"/>
-			</Modifications>
+			<Transformation Value="МИНОТАВР,5,8,27"/>
 			<Options>
 				<Option Destination="176"/>
 			</Options>
