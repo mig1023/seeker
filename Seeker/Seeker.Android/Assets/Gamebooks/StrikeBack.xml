@@ -2184,9 +2184,7 @@
 				<Text Style="Selected, Bold">ГАРПИЯ\nАтака 3\nЗащита 8\nВыносливость 14</Text>
 				<Text Style="Selected, Little">Особая способность: Чарующее пение. Перед боем ты можешь запеть песню. Брось одну кость, если выпало от 3 до 6, противник становится твоим союзником, и бой прекращается. Если выпало 1 или 2, бой проходит как обычно.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ГАРПИЯ,3,8,14"/>
-			</Modifications>
+			<Transformation Value="ГАРПИЯ,3,8,14"/>
 			<Options>
 				<Option Destination="214" Text="Налюбовавшись своим новым телом"/>
 			</Options>
