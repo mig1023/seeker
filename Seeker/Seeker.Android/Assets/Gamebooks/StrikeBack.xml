@@ -965,9 +965,7 @@
 				<Text Style="Selected, Bold">ОРК\nАтака 3\nЗащита 8\nВыносливость 4</Text>
 				<Text>Тут ты видишь, что нефрит рассыпался. Один камень можно использовать лишь один раз. Чтобы превратиться в кого-то ещё, придётся найти другой камень.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ОРК,3,8,4"/>
-			</Modifications>
+			<Transformation Value="ОРК,3,8,4"/>
 			<Options>
 				<Option Destination="100"/>
 			</Options>
