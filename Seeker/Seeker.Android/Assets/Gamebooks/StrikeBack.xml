@@ -1886,9 +1886,7 @@
 				<Text Style="Selected, Bold">ЛЮДОЕД\nАтака 5\nЗащита 9\nВыносливость 19</Text>
 				<Text>Никто теперь не помешает тебе устроить бойню!</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ЛЮДОЕД,5,9,19"/>
-			</Modifications>
+			<Transformation Value="ЛЮДОЕД,5,9,19"/>
 			<Options>
 				<Option Destination="199"/>
 			</Options>
