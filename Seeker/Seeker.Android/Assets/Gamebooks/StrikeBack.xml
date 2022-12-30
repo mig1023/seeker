@@ -935,9 +935,7 @@
 			<Actions>	
 				<Dices/>
 			</Actions>
-			<Modifications>
-				<Transformation Value="СТРАШИЛА,5,9,15"/>
-			</Modifications>
+			<Transformation Value="СТРАШИЛА,5,9,15"/>
 			<Options>
 				<Option Destination="7" Text="Выпало 1 или 2"/>
 				<Option Destination="23" Text="Выпало от 3 до 6"/>
