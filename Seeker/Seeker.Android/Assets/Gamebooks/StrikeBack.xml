@@ -1791,9 +1791,7 @@
 				<Text Style="Selected, Bold">ГОРГУЛЬЯ\nАтака 4\nЗащита 9\nВыносливость 22</Text>
 				<Text>Твоё преимущество в том, что тебе можно повредить лишь волшебным оружием, но поскольку епископ наверняка будет вооружен волшебной булавой, то в битве с Гленом оно тебе не поможет.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ГОРГУЛЬЯ,4,9,22"/>
-			</Modifications>
+			<Transformation Value="ГОРГУЛЬЯ,4,9,22"/>
 			<Options>
 				<Option Destination="176"/>
 			</Options>
