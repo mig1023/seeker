@@ -2345,9 +2345,7 @@
 				<Text Style="Selected, Bold">ПЕГАС\nАтака 5\nЗащита 8\nВыносливость 30</Text>
 				<Text>Завершив превращение, выходишь из сокровищницы.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ПЕГАС,5,8,30"/>
-			</Modifications>
+			<Transformation Value="ПЕГАС,5,8,30"/>
 			<Options>
 				<Option Destination="204"/>
 			</Options>
