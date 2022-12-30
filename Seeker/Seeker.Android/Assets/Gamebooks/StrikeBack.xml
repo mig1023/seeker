@@ -535,9 +535,7 @@
 				<Text Style="Selected, Bold">ЯЩЕРОЛЮД\nАтака 4\nЗащита 9\nВыносливость 10</Text>
 				<Text>Не мигая, глядишь в глаза изумлённым людям. Что ж, пора им испытать твою силу на себе!</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ЯЩЕРОЛЮД,4,9,10"/>
-			</Modifications>
+			<Transformation Value="ЯЩЕРОЛЮД,4,9,10"/>
 			<Options>
 				<Option Destination="39"/>
 			</Options>
