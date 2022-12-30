@@ -641,9 +641,7 @@
 			<Actions>	
 				<Dices/>
 			</Actions>
-			<Modifications>
-				<Transformation Value="ОБОРОТЕНЬ,5,9,18"/>
-			</Modifications>
+			<Transformation Value="ОБОРОТЕНЬ,5,9,18"/>
 			<Options>
 				<Option Destination="7" Text="Выпало 1 или 2"/>
 				<Option Destination="23" Text="Выпало от 3 до 6"/>
