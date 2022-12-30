@@ -2322,9 +2322,7 @@
 				<Text Style="Selected, Little">Особая способность: Адское пламя. Один раз за три раунда вместо обычной атаки можешь выдохнуть из пасти огонь. Брось две кости — на столько очков снижается Выносливость твоего противника.</Text>
 				<Text>Завершив превращение, выходишь из сокровищницы.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="АДСКАЯ ГОНЧАЯ,4,9,18"/>
-			</Modifications>
+			<Transformation Value="АДСКАЯ ГОНЧАЯ,4,9,18"/>
 			<Options>
 				<Option Destination="204"/>
 			</Options>
