@@ -696,9 +696,7 @@
 			<Actions>	
 				<Dices/>
 			</Actions>
-			<Modifications>
-				<Transformation Value="ХОБГОБЛИН,3,8,6"/>
-			</Modifications>
+			<Transformation Value="ХОБГОБЛИН,3,8,6"/>
 			<Options>
 				<Option Destination="7" Text="Выпало 1 или 2"/>
 				<Option Destination="23" Text="Выпало от 3 до 6"/>
