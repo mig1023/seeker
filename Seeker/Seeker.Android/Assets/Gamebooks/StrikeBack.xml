@@ -2849,9 +2849,7 @@
 				<Text Style="Selected, Little">Особая способность: Излучает жар. Во время боя, из-за излучаемого твоим телом жара, противник каждый раунд автоматически теряет 4 очка Выносливости.</Text>
 				<Text>Моментально деревья вокруг тебя затрещали и задымились.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ХОБГОБЛИН,5,10,36"/>
-			</Modifications>
+			<Transformation Value="ХОБГОБЛИН,5,10,36"/>
 			<Options>
 				<Option Destination="214"/>
 			</Options>
