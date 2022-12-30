@@ -954,9 +954,7 @@
 				<Text Style="Selected, Bold">КОБОЛЬД\nАтака 1\nЗащита 8\nВыносливость 3</Text>
 				<Text>Но отыгрывать назад поздно. Нефрит рассыпался. Один нефрит может явить свою силу только один раз. Нужно как можно скорее найти другой камень и превратиться в другое существо.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="КОБОЛЬД,1,8,3"/>
-			</Modifications>
+			<Transformation Value="КОБОЛЬД,1,8,3"/>
 			<Options>
 				<Option Destination="100"/>
 			</Options>
