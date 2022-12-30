@@ -1108,9 +1108,7 @@
 				<Text Style="Selected, Little">Особая способность: Высасывание энергии с кровью. Всякий раз, когда твоя атака попадает в цель, Атака противника уменьшается на 1.</Text>
 				<Text>Что ж, можно не бояться Глена и иже с ним! Твоё сердце трепещет от злобного торжества.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ВАМПИР,7,10,32"/>
-			</Modifications>
+			<Transformation Value="ВАМПИР,7,10,32"/>
 			<Options>
 				<Option Destination="176"/>
 			</Options>
