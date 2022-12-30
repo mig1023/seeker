@@ -791,9 +791,7 @@
 				<Text Style="Selected, Bold">СТРАШИЛА\nАтака 5\nЗащита 9\nВыносливость 15</Text>
 				<Text>Что ж, если ты доволен новым телом, пора покинуть это место.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="СТРАШИЛА,5,9,15"/>
-			</Modifications>
+			<Transformation Value="СТРАШИЛА,5,9,15"/>
 			<Options>
 				<Option Destination="100"/>
 			</Options>
