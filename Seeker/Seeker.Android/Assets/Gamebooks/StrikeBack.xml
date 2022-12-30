@@ -983,9 +983,7 @@
 				<Text Style="Selected, Bold">ХОБГОБЛИН\nАтака 3\nЗащита 8\nВыносливость 6</Text>
 				<Text>Тут ты замечаешь, что волшебный нефрит рассыпался. Камень может лишь один раз явить свою силу. Чтобы превратиться в другое существо, придётся найти ещё один камень.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ХОБГОБЛИН,3,8,6"/>
-			</Modifications>
+			<Transformation Value="ХОБГОБЛИН,3,8,6"/>
 			<Options>
 				<Option Destination="100"/>
 			</Options>
