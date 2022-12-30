@@ -2135,9 +2135,7 @@
 				<Text Style="Selected, Bold">ГРИФОН\nАтака 7\nЗащита 9\nВыносливость 32</Text>
 				<Text>Завершив превращение, выходишь из сокровищницы.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ГРИФОН,7,9,32"/>
-			</Modifications>
+			<Transformation Value="ГРИФОН,7,9,32"/>
 			<Options>
 				<Option Destination="204"/>
 			</Options>
