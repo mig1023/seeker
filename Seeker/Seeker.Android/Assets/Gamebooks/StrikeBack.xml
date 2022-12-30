@@ -1266,9 +1266,7 @@
 				<Text Style="Selected, Bold">КЕНТАВР\nАтака 4\nЗащита 9\nВыносливость 18</Text>
 				<Text>Теперь ты с лёгкостью одолеешь обычного человека.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="КЕНТАВР,4,9,18"/>
-			</Modifications>
+			<Transformation Value="КЕНТАВР,4,9,18"/>
 			<Options>
 				<Option Destination="176"/>
 			</Options>
