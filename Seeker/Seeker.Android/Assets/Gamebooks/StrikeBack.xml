@@ -2611,9 +2611,7 @@
 				<Text Style="Selected, Little">Особая способность: Стрельба шипами. В каждом раунде боя ты, в дополнение к обычной атаке, можешь выстрелить во врага 6 шипами с Атакой 2. Но в день ты можешь выстрелить только 24 шипа.</Text>
 				<Text>Отныне тебе нечего бояться Блинкена и ему подобных.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="МАНТИКОРА,6,9,28"/>
-			</Modifications>
+			<Transformation Value="МАНТИКОРА,6,9,28"/>
 			<Options>
 				<Option Destination="204"/>
 			</Options>
