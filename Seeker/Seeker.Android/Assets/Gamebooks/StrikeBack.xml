@@ -2982,9 +2982,7 @@
 				<Text Style="Selected, Little">Особая способность: Регенерация. За один раунд ты восстанавливаешь 3 очка Выносливости. Однако, если Выносливость падает до нуля, ты погибаешь.</Text>
 				<Text>Завершив превращение, выходишь из сокровищницы.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ТРОЛЛЬ,6,9,30"/>
-			</Modifications>
+			<Transformation Value="ТРОЛЛЬ,6,9,30"/>
 			<Options>
 				<Option Destination="204"/>
 			</Options>
