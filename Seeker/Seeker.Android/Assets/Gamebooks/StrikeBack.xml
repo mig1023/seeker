@@ -170,9 +170,7 @@
 			<Actions>	
 				<Dices/>
 			</Actions>
-			<Modifications>
-				<Transformation Value="ТРОГЛОДИТ,2,9,8"/>
-			</Modifications>
+			<Transformation Value="ТРОГЛОДИТ,2,9,8"/>
 			<Options>
 				<Option Destination="7" Text="Выпало 1 или 2"/>
 				<Option Destination="23" Text="Выпало от 3 до 6"/>
