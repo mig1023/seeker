@@ -2522,9 +2522,7 @@
 				<Text Style="Selected, Little">Особая способность: Атака рогом с разбега. Если такая атака попадёт в цель, ты наносишь повреждения вдвое больше обычных. Однако в лесу, где негде разгоняться, эта способность неприменима.</Text>
 				<Text>Чувствуешь гордость за своё новое грациозное тело.</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="ЕДИНОРОГ,5,10,22"/>
-			</Modifications>
+			<Transformation Value="ЕДИНОРОГ,5,10,22"/>
 			<Options>
 				<Option Destination="214"/>
 			</Options>
