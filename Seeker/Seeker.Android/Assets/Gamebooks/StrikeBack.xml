@@ -1530,9 +1530,7 @@
 				<Text Style="Selected, Little">Особая способность: Высасывание энергии. Каждая вторая твоя атака, попавшая в цель, не только наносит обычные повреждения, но ещё и снижает Атаку противника на 1. Если Атака врага упадёт до нуля, он погибает.</Text>
 				<Text>Что ж, пора проучить этих людишек!</Text>
 			</Texts>
-			<Modifications>
-				<Transformation Value="УМЕРТВИЕ,4,9,21"/>
-			</Modifications>
+			<Transformation Value="УМЕРТВИЕ,4,9,21"/>
 			<Options>
 				<Option Destination="199"/>
 			</Options>
