@@ -7,18 +7,8 @@ namespace Seeker.Gamebook.InvisibleFront
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Paragraph Get(int id, XmlNode xmlParagraph)
-        {
-            Paragraph paragraph = ParagraphTemplate(xmlParagraph);
-
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
-                paragraph.Options.Add(OptionParse(xmlOption));
-
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
-                paragraph.Modification.Add(ModificationParse(xmlModification));
-
-            return paragraph;
-        }
+        public override Paragraph Get(int id, XmlNode xmlParagraph) =>
+            base.Get(xmlParagraph);
 
         public override Option OptionParse(XmlNode xmlOption)
         {
