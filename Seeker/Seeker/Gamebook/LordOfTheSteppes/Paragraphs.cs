@@ -58,7 +58,8 @@ namespace Seeker.Gamebook.LordOfTheSteppes
             return action;
         }
 
-        public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
+        public override Option OptionParse(XmlNode xmlOption) =>
+            OptionParseWithDo(xmlOption, new Modification());
 
         private static Character Falaley()
         {
@@ -122,7 +123,6 @@ namespace Seeker.Gamebook.LordOfTheSteppes
         private static Character.SpecialTechniques SpecialTechniquesParse(string xmlLine)
         {
             bool success = Enum.TryParse(xmlLine, out Character.SpecialTechniques value);
-
             return (success ? value : Character.SpecialTechniques.Nope);
         }
 
