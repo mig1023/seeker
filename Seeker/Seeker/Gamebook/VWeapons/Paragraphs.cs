@@ -29,10 +29,7 @@ namespace Seeker.Gamebook.VWeapons
                     foreach (string param in GetProperties(enemy))
                         SetPropertyByAttr(enemy, param, xmlEnemy);
 
-                    if (enemy.WithoutCartridges || enemy.Animal)
-                        enemy.Cartridges = 0;
-                    else
-                        enemy.Cartridges = 8;
+                    enemy.Cartridges = (enemy.WithoutCartridges || enemy.Animal) ? 0 : 8;
 
                     action.Enemies.Add(enemy);
                 }
