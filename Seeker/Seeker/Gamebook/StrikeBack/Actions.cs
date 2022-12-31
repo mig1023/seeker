@@ -43,8 +43,11 @@ namespace Seeker.Gamebook.StrikeBack
 
             if ((Allies != null) && GroupFight)
             {
-                enemies.Add(String.Format("Вы\nнападение {0}  защита {1}  жизнь {2}",
-                    protagonist.Attack, protagonist.Defence, protagonist.Endurance));
+                if (!WithoutProtagonist)
+                {
+                    enemies.Add(String.Format("Вы\nнападение {0}  защита {1}  жизнь {2}",
+                        protagonist.Attack, protagonist.Defence, protagonist.Endurance));
+                }
 
                 foreach (Character ally in Allies)
                     enemies.Add(String.Format("{0}\nнападение {1}  защита {2}  жизнь {3}",
@@ -271,7 +274,7 @@ namespace Seeker.Gamebook.StrikeBack
                 foreach (Character ally in Allies)
                     FightAllies.Add(ally.Clone());
 
-            if ((FightEnemies.Count > 1) && (FightAllies.Count == 1))
+            if ((FightEnemies.Count > 1) && (FightAllies.Count == 1) && !WithoutProtagonist)
             {
                 fight.Add("Противников много, а ты один, поэтому атакуют они первые :(");
                 fight.Add(String.Empty);
