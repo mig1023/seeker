@@ -13,19 +13,10 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
         {
             Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
-            foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
-                paragraph.Options.Add(OptionParse(xmlOption));
-
             if (Xml.BoolParse(xmlParagraph["IntuitiveSolution"]))
                 paragraph.Options.Add(GetOption(link: id + 20, text: "Интуитивное решение", onlyIf: "selectOnly"));
 
-            foreach (XmlNode xmlAction in xmlParagraph.SelectNodes("Actions/*"))
-                paragraph.Actions.Add(ActionParse(xmlAction));
-
-            foreach (XmlNode xmlModification in xmlParagraph.SelectNodes("Modifications/*"))
-                paragraph.Modification.Add(ModificationParse(xmlModification));
-
-            return paragraph;
+            return base.Get(xmlParagraph, paragraph);
         }
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
