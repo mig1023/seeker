@@ -9,7 +9,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
     {
         public static Paragraphs StaticInstance = new Paragraphs();
 
-        public override Paragraph Get(int id, XmlNode xmlParagraph) => base.Get(xmlParagraph);
+        public override Paragraph Get(int id, XmlNode xmlParagraph) =>
+            base.Get(xmlParagraph);
 
         public override Abstract.IActions ActionParse(XmlNode xmlAction)
         {
@@ -42,7 +43,8 @@ namespace Seeker.Gamebook.FaithfulSwordOfTheKing
             return action;
         }
 
-        public override Option OptionParse(XmlNode xmlOption) => OptionParseWithDo(xmlOption, new Modification());
+        public override Option OptionParse(XmlNode xmlOption) =>
+            OptionParseWithDo(xmlOption, new Modification());
 
         private static Character.MeritalArts MeritalArtsParse(XmlNode xmlNode)
         {
