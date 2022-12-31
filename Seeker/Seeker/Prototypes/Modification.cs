@@ -29,7 +29,7 @@ namespace Seeker.Prototypes
             {
                 Game.Healing.Add(ValueString);
             }
-            else
+            else if (!String.IsNullOrEmpty(Name))
             {
                 int currentValue = 0;
 
