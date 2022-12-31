@@ -10,47 +10,10 @@ namespace Seeker.Gamebook.InvisibleFront
         public override Paragraph Get(int id, XmlNode xmlParagraph) =>
             base.Get(xmlParagraph);
 
-        public override Option OptionParse(XmlNode xmlOption)
-        {
-            Option option = OptionsTemplate(xmlOption);
+        public override Option OptionParse(XmlNode xmlOption) =>
+            OptionParseWithDo(xmlOption, new Modification());
 
-            XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
-
-            if (optionMod != null)
-            {
-                Modification modification = new Modification { Name = Xml.StringParse(optionMod.Attributes["Name"]) };
-
-                ValueParse(optionMod, ref modification);
-
-                option.Do = modification;
-            }
-
-            return option;
-        }
-
-        public override Abstract.IModification ModificationParse(XmlNode xmlNode)
-        {
-            if (xmlNode == null)
-                return null;
-
-            Modification modification = new Modification
-            {
-                Name = Xml.StringParse(xmlNode.Attributes["Name"]),
-                Value = Xml.IntParse(xmlNode.Attributes["Value"]),
-            };
-
-            return modification;
-        }
-
-        private static void ValueParse(XmlNode xmlOption, ref Modification modification)
-        {
-            if (xmlOption.Attributes["Value"] == null)
-                return;
-
-            if (int.TryParse(xmlOption.Attributes["Value"].Value, out _))
-                modification.Value = Xml.IntParse(xmlOption.Attributes["Value"]);
-            else
-                modification.ValueString = Xml.StringParse(xmlOption.Attributes["Value"]);
-        }
+        public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
+            (Abstract.IModification)base.ModificationParse(xmlModification, new Modification());
     }
 }
