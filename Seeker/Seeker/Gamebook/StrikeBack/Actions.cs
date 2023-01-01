@@ -20,6 +20,7 @@ namespace Seeker.Gamebook.StrikeBack
         public bool WoundsByDices { get; set; }
         public int WoundsMultiple { get; set; }
         public bool WithoutProtagonist { get; set; }
+        public bool WithoutGameover { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -63,8 +64,14 @@ namespace Seeker.Gamebook.StrikeBack
             return enemies;
         }
 
-        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
-            GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
+        public override bool GameOver(out int toEndParagraph, out string toEndText)
+        {
+            if (!WithoutGameover)
+                return GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
+            else
+                return base.GameOver(out toEndParagraph, out toEndText);
+        }
+            
 
         public List<string> InlineWoundsByDices()
         {

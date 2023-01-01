@@ -208,21 +208,18 @@ namespace Seeker
                 bool onlyIf = Game.Data.Availability(option.Availability);
                 bool singleIf = !String.IsNullOrEmpty(option.Singleton) && Game.Data.Availability(option.Singleton);
 
-                bool hidden = !String.IsNullOrEmpty(option.Availability) && !onlyIf && !singleIf && !mustBeVisible;
-
                 Button button = AddOptionButton(option, ref gameOver);
 
-                if (hidden && Game.Data.Constants.GetDynamicOption())
+                if (option.Dynamic)
                 {
                     Game.Option.ListAdd(option, button);
                     button.IsVisible = false;
-                    Options.Children.Add(button);
                 }
-                else if (hidden)
+                else if (!String.IsNullOrEmpty(option.Availability) && !onlyIf && !singleIf && !mustBeVisible)
                 {
                     continue;
                 }
-                    
+                
                 Options.Children.Add(button);
 
                 if (!String.IsNullOrEmpty(option.Input))
@@ -445,9 +442,11 @@ namespace Seeker
                 MainScroll.BackgroundColor = Color.White;
         }
 
-        private void CheckGameOver()
+        private void CheckGameOver(Abstract.IActions currentAction = null)
         {
-            if ((Game.Data.Actions == null) || !Game.Data.Actions.GameOver(out int toEndParagraph, out string toEndText))
+            Abstract.IActions action = currentAction ?? Game.Data.Actions;
+
+            if ((action == null) || !action.GameOver(out int toEndParagraph, out string toEndText))
                 return;
 
             if (Game.Settings.IsEnabled("Godmode"))
@@ -475,7 +474,7 @@ namespace Seeker
                     actionPlace.Children.Add(actionLine);
 
                 UpdateStatus();
-                CheckGameOver();
+                CheckGameOver(action);
             }
         }
 
