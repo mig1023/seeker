@@ -63,6 +63,9 @@ namespace Seeker.Gamebook.StrikeBack
             return enemies;
         }
 
+        public override bool GameOver(out int toEndParagraph, out string toEndText) =>
+            GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
+
         public List<string> InlineWoundsByDices()
         {
             WoundsByDices = true;
