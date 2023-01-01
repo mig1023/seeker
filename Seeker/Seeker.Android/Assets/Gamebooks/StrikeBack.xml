@@ -501,7 +501,15 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="49">
-			<Text>Атакуешь раненых карликов.\n\nИспользуй оставшуюся у них после боя с лютоволком Выносливость.</Text>
+			<Text>Атакуешь раненых карликов.</Text>
+			<Actions>
+				<Fight>
+					<Enemies>
+						<Enemy Name="Карлик А" Attack="3" Defence="9" Endurance="9"/>
+						<Enemy Name="Карлик В" Attack="3" Defence="9" Endurance="8"/>
+					</Enemies>
+				</Fight>
+			</Actions>
 			<Options>
 				<Option Destination="25" Text="Если карлики повержены"/>
 			</Options>
