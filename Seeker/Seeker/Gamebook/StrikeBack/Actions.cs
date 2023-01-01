@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.StrikeBack
         {
             String.Format("Атака: {0}", protagonist.Attack),
             String.Format("Защита: {0}", protagonist.Defence),
-            String.Format("Выносливость: {0}", protagonist.Endurance),
+            String.Format("Выносливость: {0}/{1}", protagonist.Endurance, protagonist.MaxEndurance),
         };
 
         public override List<string> Representer()
