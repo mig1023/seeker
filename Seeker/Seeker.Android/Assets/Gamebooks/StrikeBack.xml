@@ -658,7 +658,7 @@
 			<Options>
 				<Option Destination="30" Text="Тихонечко и не поворачиваясь спиной, выйдешь из пещеры"/>
 				<Option Destination="54" Text="Попробуешь протиснуться мимо него вглубь пещеры"/>
-				<Option Destination="86" Text="У тебя есть какая-то еда и ты попытаешься его приручить"/>
+				<Option Destination="86" Text="У тебя есть какая-то еда и ты попытаешься его приручить" Availability="Мясо змеи"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="63">
@@ -729,8 +729,10 @@
 				<Text Style="Small">Если его съесть, ты восстановишь 2 очка Выносливости.</Text>
 				<Text>Можешь съесть мясо сейчас или взять с собой. Съесть его можно в любое время, кроме боя.</Text>
 			</Texts>
+			<Triggers>Мясо змеи</Triggers>
 			<Modifications>
 				<Endurance Value="2"/>
+				<Healing Value="Съесть мясо змеи,2"/>
 			</Modifications>
 			<Options>
 				<Option Destination="78" Text="Торопишься дальше"/>
