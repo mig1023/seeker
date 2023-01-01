@@ -51,14 +51,14 @@ namespace Seeker.Gamebook.StrikeBack
 
                 foreach (Character ally in Allies)
                     enemies.Add(String.Format("{0}\nнападение {1}  защита {2}  жизнь {3}",
-                        ally.Name, ally.Attack, ally.Defence, ally.Endurance));
+                        ally.Name, ally.Attack, ally.Defence, ally.GetEndurance()));
 
                 enemies.Add("SPLITTER|против");
             }
 
             foreach (Character enemy in Enemies)
                 enemies.Add(String.Format("{0}\nнападение {1}  защита {2}  жизнь {3}",
-                    enemy.Name, enemy.Attack, enemy.Defence, enemy.Endurance));
+                    enemy.Name, enemy.Attack, enemy.Defence, enemy.GetEndurance()));
 
             return enemies;
         }
@@ -268,11 +268,11 @@ namespace Seeker.Gamebook.StrikeBack
                 FightAllies.Add(protagonist);
 
             foreach (Character enemy in Enemies)
-                FightEnemies.Add(enemy.Clone());
+                FightEnemies.Add(enemy.Clone().SetEndurance());
 
             if (Allies != null)
                 foreach (Character ally in Allies)
-                    FightAllies.Add(ally.Clone());
+                    FightAllies.Add(ally.Clone().SetEndurance());
 
             if ((FightEnemies.Count > 1) && (FightAllies.Count == 1) && !WithoutProtagonist)
             {

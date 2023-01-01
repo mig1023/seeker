@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.StrikeBack
 {
@@ -27,8 +29,18 @@ namespace Seeker.Gamebook.StrikeBack
         public int Endurance
         {
             get => _endurance;
-            set => _endurance = Game.Param.Setter(value, max: MaxEndurance, _endurance, this);
+            set
+            {
+                _endurance = Game.Param.Setter(value, max: MaxEndurance, _endurance, this);
+
+                if (EnduranceSave)
+                    EnduranceLoss[this.Name] = _endurance;
+            }
         }
+        private bool EnduranceSave { get; set; }
+
+        private static Dictionary<string, int> EnduranceLoss = new Dictionary<string, int>();
+
 
         public string Creature { get; set; }
 
@@ -45,6 +57,9 @@ namespace Seeker.Gamebook.StrikeBack
             Defence = MaxDefence;
             MaxEndurance = 5;
             Endurance = MaxEndurance;
+
+            EnduranceLoss.Clear();
+            EnduranceSave = false;
         }
 
         public Character Clone() => new Character()
@@ -58,12 +73,23 @@ namespace Seeker.Gamebook.StrikeBack
             Defence = this.Defence,
             MaxEndurance = this.MaxEndurance,
             Endurance = this.Endurance,
+            EnduranceSave = true,
         };
 
+        public Character SetEndurance()
+        {
+            if (EnduranceLoss.ContainsKey(this.Name))
+                this.Endurance = EnduranceLoss[this.Name];
+
+            return this;
+        }
+
+        public int GetEndurance() =>
+            EnduranceLoss.ContainsKey(this.Name) ? EnduranceLoss[this.Name] : this.Endurance;
+
         public override string Save() => String.Join("|",
-            MaxAttack, Attack, MaxDefence, Defence, MaxEndurance,
-            Endurance, Creature
-        );
+            MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance, Creature,
+            String.Join(",", EnduranceLoss.Select(x => x.Key + "=" + x.Value).ToArray()));
 
         public override void Load(string saveLine)
         {
@@ -76,6 +102,16 @@ namespace Seeker.Gamebook.StrikeBack
             MaxEndurance = int.Parse(save[4]);
             Endurance = int.Parse(save[5]);
             Creature = save[6];
+
+            EnduranceLoss.Clear();
+
+            string[] endurances = save[7].Split(',');
+
+            foreach (string enduranceLine in endurances)
+            {
+                string[] endurance = enduranceLine.Split('=');
+                EnduranceLoss.Add(endurance[0], int.Parse(endurance[1]));
+            }
 
             IsProtagonist = true;
         }
