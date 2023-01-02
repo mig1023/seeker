@@ -273,7 +273,7 @@
 						<Enemy Name="Хобгоблин С" Attack="3" Defence="8" Endurance="4"/>
 						<Enemy Name="Хобгоблин D" Attack="3" Defence="8" Endurance="7"/>
 					</Enemies>
-					<SpecialTechnique>WithoutGameover</SpecialTechnique>
+					<SpecialTechnique>WithoutGameover, ToFirstDeathOnly</SpecialTechnique>
 				</Fight>
 			</Actions>
 			<Options>
