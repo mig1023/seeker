@@ -273,7 +273,7 @@
 						<Enemy Name="Хобгоблин С" Attack="3" Defence="8" Endurance="4"/>
 						<Enemy Name="Хобгоблин D" Attack="3" Defence="8" Endurance="7"/>
 					</Enemies>
-					<WithoutGameover/>
+					<SpecialTechnique>WithoutGameover</SpecialTechnique>
 				</Fight>
 			</Actions>
 			<Options>
@@ -928,7 +928,7 @@
 					<After>
 						<Text>Поскольку ты сидишь в укрытии, тебя карлики не атакуют. Тебе остаётся лишь смотреть, не отрывая глаз, за сражением лютоволка с карликами.</Text>
 					</After>
-					<WithoutProtagonist/>
+					<SpecialTechnique>WithoutProtagonist</SpecialTechnique>
 				</Fight>
 			</Actions>
 			<Options>
@@ -1031,7 +1031,7 @@
 						<Enemy Name="Хобгоблин C" Attack="3" Defence="8" Endurance="4"/>
 						<Enemy Name="Хобгоблин D" Attack="3" Defence="8" Endurance="7"/>
 					</Enemies>
-					<WithoutProtagonist/>
+					<SpecialTechnique>WithoutProtagonist</SpecialTechnique>
 					<After>
 						<Text>Поскольку ты сидишь в укрытии, тебя никто не атакует. Всё, что от тебя требуется — следить за боем хобгоблинов с лютоволком.</Text>
 					</After>
@@ -1146,7 +1146,7 @@
 					<After>
 						<Text>Особая способность: сосёт кровь. Всякий раз, когда атака летучей мыши попадает в цель, бросай две кости. Если выпадет от 2 до 8, то именно столько очков Выносливости ты дополнительно теряешь от высосанной крови.\n\nЕсли ты ОБОРОТЕНЬ, то в волчьем облике не получаешь ранений от летучей мыши. Потому что в нём тебя может ранить лишь волшебное оружие.</Text>
 					</After>
-					<WithoutGameover/>
+					<SpecialTechnique>WithoutGameover</SpecialTechnique>
 				</Fight>
 			</Actions>
 			<Options>
@@ -1557,7 +1557,7 @@
 					<After>
 						<Text>Особая способность: Высасывание энергии. Каждая вторая атака посланца смерти, попавшая в цель, не только наносит обычные повреждения, но ещё и снижает твою Атаку на 1. Если твоя Атака упадёт до нуля, ты погибнешь.</Text>
 					</After>
-					<WithoutGameover/>
+					<SpecialTechnique>WithoutGameover</SpecialTechnique>
 				</Fight>
 			</Actions>
 			<Options>
@@ -1621,7 +1621,7 @@
 					<After>
 						<Text>Особая способность: Высасывание энергии. Каждая вторая атака посланца смерти, попавшая в цель, не только наносит обычные повреждения, но ещё и снижает твою Атаку на 1. Если твоя Атака упадёт до нуля, ты погибнешь.</Text>
 					</After>
-					<WithoutGameover/>
+					<SpecialTechnique>WithoutGameover</SpecialTechnique>
 				</Fight>
 			</Actions>
 			<Options>
