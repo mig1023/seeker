@@ -176,7 +176,8 @@ namespace Seeker.Prototypes
                 return null;
         }
 
-        public List<string> GetProperties(object action) => action.GetType().GetProperties().Select(x => x.Name).ToList();
+        public List<string> GetProperties(object action) =>
+            action.GetType().GetProperties().Select(x => x.Name).ToList();
 
         public void SetProperty(object action, string param, XmlNode value)
         {
