@@ -8,6 +8,11 @@ namespace Seeker.Gamebook.StrikeBack
     {
         public static Character Protagonist = new Character();
 
+        public enum SpecialTechniques
+        {
+            WithoutProtagonist, WithoutGameover, Nope
+        };
+
         private int _attack;
         public int MaxAttack { get; set; }
         public int Attack
@@ -41,6 +46,7 @@ namespace Seeker.Gamebook.StrikeBack
 
         private static Dictionary<string, int> EnduranceLoss = new Dictionary<string, int>();
 
+        public List<SpecialTechniques> SpecialTechnique { get; set; }
 
         public string Creature { get; set; }
 
@@ -50,16 +56,15 @@ namespace Seeker.Gamebook.StrikeBack
 
             Name = "Главный герой";
             Creature = "ГОБЛИН";
-
             MaxAttack = 2;
             Attack = MaxAttack;
             MaxDefence = 8;
             Defence = MaxDefence;
             MaxEndurance = 5;
             Endurance = MaxEndurance;
-
             EnduranceLoss.Clear();
             EnduranceSave = false;
+            SpecialTechnique = new List<SpecialTechniques>();
         }
 
         public Character Clone() => new Character()
@@ -74,6 +79,7 @@ namespace Seeker.Gamebook.StrikeBack
             MaxEndurance = this.MaxEndurance,
             Endurance = this.Endurance,
             EnduranceSave = true,
+            SpecialTechnique = new List<SpecialTechniques>(this.SpecialTechnique),
         };
 
         public Character SetEndurance()
@@ -89,7 +95,8 @@ namespace Seeker.Gamebook.StrikeBack
 
         public override string Save() => String.Join("|",
             MaxAttack, Attack, MaxDefence, Defence, MaxEndurance, Endurance, Creature,
-            String.Join(",", EnduranceLoss.Select(x => x.Key + "=" + x.Value).ToArray()));
+            String.Join(",", EnduranceLoss.Select(x => x.Key + "=" + x.Value).ToArray()),
+            String.Join(":", SpecialTechnique.ConvertAll(e => e.ToString())).TrimEnd(':'));
 
         public override void Load(string saveLine)
         {
@@ -113,7 +120,28 @@ namespace Seeker.Gamebook.StrikeBack
                 EnduranceLoss.Add(endurance[0], int.Parse(endurance[1]));
             }
 
+            string[] specialTechniques = save[8].Split(':');
+
+            foreach (string specialTechnique in specialTechniques)
+            {
+                bool success = Enum.TryParse(specialTechnique, out SpecialTechniques value);
+
+                if (success)
+                    SpecialTechnique.Add(value);
+            }
+
             IsProtagonist = true;
+        }
+
+        public string GetSpecialTechniques()
+        {
+            if (SpecialTechnique.Count == 0)
+                return String.Empty;
+
+            if ((SpecialTechnique.Count == 1) && (SpecialTechnique[0] == SpecialTechniques.Nope))
+                return String.Empty;
+
+            return String.Format("\n{0}", String.Join(", ", SpecialTechnique.ConvertAll(e => Constants.TechniquesNames()[e])));
         }
     }
 }

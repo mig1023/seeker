@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Xml;
 using Seeker.Game;
 
@@ -26,6 +27,8 @@ namespace Seeker.Gamebook.StrikeBack
 
             foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
+
+            action.SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]);
 
             if (xmlAction["Allies"] != null)
             {
@@ -64,7 +67,28 @@ namespace Seeker.Gamebook.StrikeBack
             character.Endurance = character.MaxEndurance;
             character.Defence = character.MaxDefence;
 
+            character.SpecialTechnique = new List<Character.SpecialTechniques>();
+
+            string specialTechniques = Xml.StringParse(xmlNode.Attributes["SpecialTechnique"]);
+
+            foreach (string specialTechnique in specialTechniques.Split(','))
+                character.SpecialTechnique.Add(SpecialTechniquesParse(specialTechnique));
+
             return character;
+        }
+
+        private static Character.SpecialTechniques SpecialTechniquesParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return Character.SpecialTechniques.Nope;
+
+            return SpecialTechniquesParse(xmlNode.InnerText);
+        }
+
+        private static Character.SpecialTechniques SpecialTechniquesParse(string xmlLine)
+        {
+            bool success = Enum.TryParse(xmlLine, out Character.SpecialTechniques value);
+            return (success ? value : Character.SpecialTechniques.Nope);
         }
 
         public override Option OptionParse(XmlNode xmlOption) =>

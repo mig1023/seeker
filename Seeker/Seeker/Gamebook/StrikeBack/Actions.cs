@@ -11,6 +11,7 @@ namespace Seeker.Gamebook.StrikeBack
 
         public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
+        public Character.SpecialTechniques SpecialTechnique { get; set; }
 
         public bool GroupFight { get; set; }
         public int RoundsToWin { get; set; }
@@ -19,8 +20,6 @@ namespace Seeker.Gamebook.StrikeBack
         public int Count { get; set; }
         public bool WoundsByDices { get; set; }
         public int WoundsMultiple { get; set; }
-        public bool WithoutProtagonist { get; set; }
-        public bool WithoutGameover { get; set; }
 
         public override List<string> Status() => new List<string>
         {
@@ -44,29 +43,36 @@ namespace Seeker.Gamebook.StrikeBack
 
             if ((Allies != null) && GroupFight)
             {
-                if (!WithoutProtagonist)
+                if (SpecialTechnique == Character.SpecialTechniques.WithoutProtagonist)
                 {
-                    enemies.Add(String.Format("Вы\nнападение {0}  защита {1}  жизнь {2}",
-                        protagonist.Attack, protagonist.Defence, protagonist.Endurance));
+                    enemies.Add(String.Format("Вы\nнападение {0}  защита {1}  жизнь {2}{3}",
+                        protagonist.Attack, protagonist.Defence, protagonist.Endurance,
+                        protagonist.GetSpecialTechniques()));
                 }
 
                 foreach (Character ally in Allies)
-                    enemies.Add(String.Format("{0}\nнападение {1}  защита {2}  жизнь {3}",
-                        ally.Name, ally.Attack, ally.Defence, ally.GetEndurance()));
+                {
+                    enemies.Add(String.Format("{0}\nнападение {1}  защита {2}  жизнь {3}{4}",
+                        ally.Name, ally.Attack, ally.Defence, ally.GetEndurance(),
+                        ally.GetSpecialTechniques()));
+                }
 
                 enemies.Add("SPLITTER|против");
             }
 
             foreach (Character enemy in Enemies)
-                enemies.Add(String.Format("{0}\nнападение {1}  защита {2}  жизнь {3}",
-                    enemy.Name, enemy.Attack, enemy.Defence, enemy.GetEndurance()));
+            {
+                enemies.Add(String.Format("{0}\nнападение {1}  защита {2}  жизнь {3}{4}",
+                    enemy.Name, enemy.Attack, enemy.Defence, enemy.GetEndurance(),
+                    enemy.GetSpecialTechniques()));
+            }
 
             return enemies;
         }
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            if (!WithoutGameover)
+            if (SpecialTechnique != Character.SpecialTechniques.WithoutGameover)
                 return GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
             else
                 return base.GameOver(out toEndParagraph, out toEndText);
@@ -274,7 +280,9 @@ namespace Seeker.Gamebook.StrikeBack
             Dictionary<string, int> WoundsCount = new Dictionary<string, int>();
             Dictionary<string, List<int>> AttackStory = new Dictionary<string, List<int>>();
 
-            if (!WithoutProtagonist)
+            bool withoutProtagonist = SpecialTechnique == Character.SpecialTechniques.WithoutProtagonist;
+
+            if (!withoutProtagonist)
                 FightAllies.Add(protagonist);
 
             foreach (Character enemy in Enemies)
@@ -284,7 +292,7 @@ namespace Seeker.Gamebook.StrikeBack
                 foreach (Character ally in Allies)
                     FightAllies.Add(ally.Clone().SetEndurance());
 
-            if ((FightEnemies.Count > 1) && (FightAllies.Count == 1) && !WithoutProtagonist)
+            if ((FightEnemies.Count > 1) && (FightAllies.Count == 1) && !withoutProtagonist)
             {
                 fight.Add("Противников много, а ты один, поэтому атакуют они первые :(");
                 fight.Add(String.Empty);
