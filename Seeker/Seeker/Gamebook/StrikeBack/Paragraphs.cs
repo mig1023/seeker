@@ -28,7 +28,7 @@ namespace Seeker.Gamebook.StrikeBack
             foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
-            action.SpecialTechnique = SpecialTechniquesParse(xmlAction["SpecialTechnique"]);
+            action.SpecialTechniques = SpecialTechniquesListParse(xmlAction["SpecialTechnique"]);
 
             if (xmlAction["Allies"] != null)
             {
@@ -66,15 +66,21 @@ namespace Seeker.Gamebook.StrikeBack
             character.Attack = character.MaxAttack;
             character.Endurance = character.MaxEndurance;
             character.Defence = character.MaxDefence;
-
-            character.SpecialTechnique = new List<Character.SpecialTechniques>();
-
-            string specialTechniques = Xml.StringParse(xmlNode.Attributes["SpecialTechnique"]);
-
-            foreach (string specialTechnique in specialTechniques.Split(','))
-                character.SpecialTechnique.Add(SpecialTechniquesParse(specialTechnique));
+            character.SpecialTechnique = SpecialTechniquesListParse(xmlNode.Attributes["SpecialTechnique"]);
 
             return character;
+        }
+
+        private static List<Character.SpecialTechniques> SpecialTechniquesListParse(XmlNode xmlNode)
+        {
+            List<Character.SpecialTechniques> specialTechniques = new List<Character.SpecialTechniques>();
+
+            string techniquesLine = Xml.StringParse(xmlNode);
+
+            foreach (string specialTechnique in techniquesLine.Split(','))
+                specialTechniques.Add(SpecialTechniquesParse(specialTechnique));
+
+            return specialTechniques;
         }
 
         private static Character.SpecialTechniques SpecialTechniquesParse(XmlNode xmlNode)

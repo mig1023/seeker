@@ -11,7 +11,7 @@ namespace Seeker.Gamebook.StrikeBack
 
         public List<Character> Allies { get; set; }
         public List<Character> Enemies { get; set; }
-        public Character.SpecialTechniques SpecialTechnique { get; set; }
+        public List<Character.SpecialTechniques> SpecialTechniques { get; set; }
 
         public bool GroupFight { get; set; }
         public int RoundsToWin { get; set; }
@@ -43,7 +43,7 @@ namespace Seeker.Gamebook.StrikeBack
 
             if ((Allies != null) && GroupFight)
             {
-                if (SpecialTechnique == Character.SpecialTechniques.WithoutProtagonist)
+                if (SpecialTechniques.Contains(Character.SpecialTechniques.WithoutProtagonist))
                 {
                     enemies.Add(String.Format("Вы\nнападение {0}  защита {1}  жизнь {2}{3}",
                         protagonist.Attack, protagonist.Defence, protagonist.Endurance,
@@ -72,7 +72,7 @@ namespace Seeker.Gamebook.StrikeBack
 
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
-            if (SpecialTechnique != Character.SpecialTechniques.WithoutGameover)
+            if (SpecialTechniques?.Contains(Character.SpecialTechniques.WithoutGameover) ?? false)
                 return GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
             else
                 return base.GameOver(out toEndParagraph, out toEndText);
@@ -272,7 +272,7 @@ namespace Seeker.Gamebook.StrikeBack
         {
             List<string> fight = new List<string>();
 
-            int round = 1, enemyWounds = 0;
+            int round = 1, enemyWounds = 0, enemyDeath = 0, allyDeath = 0;
 
             List<Character> FightAllies = new List<Character>();
             List<Character> FightEnemies = new List<Character>();
@@ -280,7 +280,8 @@ namespace Seeker.Gamebook.StrikeBack
             Dictionary<string, int> WoundsCount = new Dictionary<string, int>();
             Dictionary<string, List<int>> AttackStory = new Dictionary<string, List<int>>();
 
-            bool withoutProtagonist = SpecialTechnique == Character.SpecialTechniques.WithoutProtagonist;
+            bool withoutProtagonist = SpecialTechniques.Contains(Character.SpecialTechniques.WithoutProtagonist);
+            bool toFirstDeath = SpecialTechniques.Contains(Character.SpecialTechniques.ToFirstDeathOnly);
 
             if (!withoutProtagonist)
                 FightAllies.Add(protagonist);
@@ -361,10 +362,18 @@ namespace Seeker.Gamebook.StrikeBack
                         enemy.Endurance -= hitDiff;
                         fight.Add(String.Format("{0} потерял вносливости: {1} (осталось: {2})",
                             enemy.Name, hitDiff, enemy.Endurance));
+
+                        if (toFirstDeath && (enemy.Endurance <= 0) && !IsProtagonist(enemy.Name))
+                        {
+                            fight.Add("BIG|BOLD|В бою случилась первая смерть!");
+                            return fight;
+                        }
                     }
                 }
 
                 bool enemyLost = FightEnemies.Where(x => (x.Endurance > 0) || (x.MaxEndurance == 0)).Count() == 0;
+
+                fight.Add(String.Empty);
 
                 if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                 {
@@ -390,8 +399,6 @@ namespace Seeker.Gamebook.StrikeBack
                     fight.Add("BIG|BAD|ТЫ ПРОИГРАЛ :(");
                     return fight;
                 }
-
-                fight.Add(String.Empty);
 
                 round += 1;
             }
