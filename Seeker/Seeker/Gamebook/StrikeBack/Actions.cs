@@ -348,10 +348,15 @@ namespace Seeker.Gamebook.StrikeBack
 
                     if (IsProtagonist(enemy.Name))
                     {
-                        if (werewolf && success)
+                        if (werewolf && success && !fighter.SpecialTechnique.Contains(Character.SpecialTechniques.RumbleKnife))
+                        {
                             fight.Add("GOOD|Атака противника не может навредить оборотню!");
+                            success = false;
+                        }
                         else
+                        {
                             fight.Add(success ? "BAD|BOLD|Ты ранены" : "GOOD|Атака отбита");
+                        }
                     }
                     else  if (FightAllies.Contains(enemy))
                     {

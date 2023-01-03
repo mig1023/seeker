@@ -9,7 +9,7 @@ namespace Seeker.Gamebook.StrikeBack
         public static Dictionary<Character.SpecialTechniques, string> TechniquesNames() =>
             new Dictionary<Character.SpecialTechniques, string>
         {
-            [Character.SpecialTechniques.Nope] = "",
+            [Character.SpecialTechniques.RumbleKnife] = "Волшебный кинжал",
         };
 
         public static Links GetLinks() => new Links
