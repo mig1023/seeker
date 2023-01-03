@@ -2520,7 +2520,7 @@
 						<Enemy Name="Левый Древолюд" Attack="7" Defence="10" Endurance="32"/>
 					</Enemies>
 					<After>
-						<Text>Ты должен все свои атаки сосредоточить на одном из трёх древолюдов.</Text>
+						<Text Style="Small">Ты должен все свои атаки сосредоточить на одном из трёх древолюдов.</Text>
 					</After>
 				</Fight>
 			</Actions>
