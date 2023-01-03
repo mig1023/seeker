@@ -10,7 +10,7 @@ namespace Seeker.Gamebook.StrikeBack
 
         public enum SpecialTechniques
         {
-            WithoutProtagonist, WithoutGameover, ToFirstDeathOnly, Nope
+            WithoutProtagonist, WithoutGameover, ToFirstDeathOnly, Werewolf, Nope
         };
 
         private int _attack;

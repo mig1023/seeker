@@ -282,6 +282,8 @@ namespace Seeker.Gamebook.StrikeBack
 
             bool withoutProtagonist = SpecialTechniques.Contains(Character.SpecialTechniques.WithoutProtagonist);
             bool toFirstDeath = SpecialTechniques.Contains(Character.SpecialTechniques.ToFirstDeathOnly);
+            bool werewolf = SpecialTechniques.Contains(Character.SpecialTechniques.Werewolf) &&
+                (protagonist.Creature == "ОБОРОТЕНЬ");
 
             if (!withoutProtagonist)
                 FightAllies.Add(protagonist);
@@ -346,7 +348,10 @@ namespace Seeker.Gamebook.StrikeBack
 
                     if (IsProtagonist(enemy.Name))
                     {
-                        fight.Add(success ? "BAD|BOLD|Ты ранены" : "GOOD|Атака отбита");
+                        if (werewolf && success)
+                            fight.Add("GOOD|Атака противника не может навредить оборотню!");
+                        else
+                            fight.Add(success ? "BAD|BOLD|Ты ранены" : "GOOD|Атака отбита");
                     }
                     else  if (FightAllies.Contains(enemy))
                     {
