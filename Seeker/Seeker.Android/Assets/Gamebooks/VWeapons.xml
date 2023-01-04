@@ -414,7 +414,7 @@
 		<Paragraph No="44">
 			<Text>Шум от поразившего Кляйста выстрела перебудил весь дом. Теперь оставалось лишь одно - бежать, но как? Сергей посмотрел на раскинувшийся за окном тротуар и улицу.</Text>
 			<Options>
-				<Option Destination="48" Text="Броситься во дверь"/>
+				<Option Destination="48" Text="Броситься в дверь"/>
 				<Option Destination="7" Text="Прыгнуть в окно и убежать по улице (подозрения +1)">
 					<Modification Name="Suspicions" Value="1"/>
 				</Option>
