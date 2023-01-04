@@ -60,6 +60,9 @@ namespace Seeker.Gamebook.VWeapons
                         fight.Add(String.Format(
                             "BAD|Вы также теряете 1 ед. меткости, теперь она равно {0}.",
                             protagonist.Accuracy));
+
+                        if (protagonist.Accuracy <= 0)
+                            fight.Add("BOLD|Вы больше не можете стрелять, придётся идти в рукопашную!");
                     }
 
                     break;
