@@ -1886,7 +1886,7 @@
 				<Option Destination="183" Text="«Я командор Густав Брандт, командующий этой базой, приказываю меня пропустить»"/>
 				<Option Destination="184" Text="Показать мандат" Availability="Mt"/>
 				<Option Destination="185" Text="Застрелить огнемётчика" Availability="M, ПАТРОНЫ >= 1"/>
-				<Option Destination="186" Text="У бежать с лестницы в приоткрытую дверь"/>
+				<Option Destination="186" Text="Убежать с лестницы в приоткрытую дверь"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="195">
