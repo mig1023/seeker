@@ -218,7 +218,7 @@ namespace Seeker.Gamebook.VWeapons
 
                     if (!dogFightprotagonist)
                     {
-                        fight.Add(String.Format("Вы стреляете{0}.", DamagedWeapon ? " трижды" : String.Empty));
+                        fight.Add(String.Format("Вы стреляете{0}…", DamagedWeapon ? " трижды" : String.Empty));
 
                         if (DamagedWeapon)
                             damagedWeapon -= 1;
