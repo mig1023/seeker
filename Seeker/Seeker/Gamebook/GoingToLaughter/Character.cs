@@ -43,14 +43,17 @@ namespace Seeker.Gamebook.GoingToLaughter
         {
             base.Init();
 
-            Heroism = 0;
-            Villainy = 0;
-            Buffoonery = 5;
-            Inspiration = 1;
+            if (Advantages == null)
+            {
+                Heroism = 0;
+                Villainy = 0;
+                Buffoonery = 5;
+                Inspiration = 1;
+                Balance = 0;
 
-            Advantages = new List<string>();
-            Disadvantages = new List<string>();
-            Balance = 0;
+                Advantages = new List<string>();
+                Disadvantages = new List<string>();
+            }            
         }
 
         public Character Clone() => new Character()
