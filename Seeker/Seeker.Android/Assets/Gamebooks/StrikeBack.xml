@@ -1962,8 +1962,8 @@
 		<Paragraph No="195">
 			<Text>Заговариваешь как можно дружелюбнее, и посланец смерти, покачиваясь, придвигается к тебе.</Text>
 			<Options>
-				<Option Destination="192" Text="Ты ВУРДАЛАК или ЗОМБИ" Availability="ВУРДАЛАК|ЗОМБИ"/>
-				<Option Destination="112" Text="Ты кто-то другой"/>
+				<Option Destination="192" Text="Ты ВУРДАЛАК или ЗОМБИ" Singleton="ВУРДАЛАК|ЗОМБИ"/>
+				<Option Destination="112" Text="Ты кто-то другой" Singleton="!ВУРДАЛАК,!ЗОМБИ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="196">
