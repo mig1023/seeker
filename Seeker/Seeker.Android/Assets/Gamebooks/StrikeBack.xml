@@ -3944,8 +3944,8 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="447" Text="Если ты ДЖИН, ИФРИТ, ФЕНИКС или ДЕМОН, атаки паука против твоего нематериального тела неэффективны" Availability="ДЖИН|ИФРИТ|ФЕНИКС|ДЕМОН"/>
-				<Option Destination="447" Text="Одолел паука"/>
+				<Option Destination="447" Text="Если ты ДЖИН, ИФРИТ, ФЕНИКС или ДЕМОН, атаки паука против твоего нематериального тела неэффективны" Singleton="ДЖИН|ИФРИТ|ФЕНИКС|ДЕМОН"/>
+				<Option Destination="447" Text="Одолел паука" Singleton="!ДЖИН,!ИФРИТ,!ФЕНИКС,!ДЕМОН"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="382">
