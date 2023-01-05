@@ -3167,9 +3167,9 @@
 		<Paragraph No="316">
 			<Text>Решаешь спасти утопающего.</Text>
 			<Options>
-				<Option Destination="423" Text="Ты МОРОЗНАЯ САЛАМАНДРА" Availability="МОРОЗНАЯ САЛАМАНДРА"/>
-				<Option Destination="444" Text="Ты ТРИТОН или ГИДРА" Availability="ТРИТОН|ГИДРА"/>
-				<Option Destination="336" Text="Ты любое другое существо"/>
+				<Option Destination="423" Text="Ты МОРОЗНАЯ САЛАМАНДРА" Singleton="МОРОЗНАЯ САЛАМАНДРА"/>
+				<Option Destination="444" Text="Ты ТРИТОН или ГИДРА" Singleton="ТРИТОН|ГИДРА"/>
+				<Option Destination="336" Text="Ты любое другое существо" Singleton="!МОРОЗНАЯ САЛАМАНДРА,!ТРИТОН,!ГИДРА"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="317">
