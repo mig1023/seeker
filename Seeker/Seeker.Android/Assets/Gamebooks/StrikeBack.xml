@@ -2378,9 +2378,9 @@
 		<Paragraph No="241">
 			<Text>Повернувшись к приближающемуся всаднику спиной, бросаешься наутёк. Разумеется, всадник пустится за тобой в погоню.</Text>
 			<Options>
-				<Option Destination="261" Text="Ты МЕДУЗА" Availability="МЕДУЗА"/>
-				<Option Destination="248" Text="Ты КЕНТАВР" Availability="КЕНТАВР"/>
-				<Option Destination="271" Text="Ты любое другое существо"/>
+				<Option Destination="261" Text="Ты МЕДУЗА" Singleton="МЕДУЗА"/>
+				<Option Destination="248" Text="Ты КЕНТАВР" Singleton="КЕНТАВР"/>
+				<Option Destination="271" Text="Ты любое другое существо" Singleton="!МЕДУЗА,!КЕНТАВР"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="242">
