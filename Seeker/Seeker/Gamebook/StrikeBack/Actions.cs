@@ -43,7 +43,7 @@ namespace Seeker.Gamebook.StrikeBack
 
             if ((Allies != null) && GroupFight)
             {
-                if (SpecialTechniques.Contains(Character.SpecialTechniques.WithoutProtagonist))
+                if (!SpecialTechniques.Contains(Character.SpecialTechniques.WithoutProtagonist))
                 {
                     enemies.Add(String.Format("Вы\nнападение {0}  защита {1}  жизнь {2}{3}",
                         protagonist.Attack, protagonist.Defence, protagonist.Endurance,
