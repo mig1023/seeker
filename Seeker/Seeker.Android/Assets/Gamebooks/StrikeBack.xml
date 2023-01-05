@@ -2289,8 +2289,8 @@
 		<Paragraph No="231">
 			<Text>Всадник стремительно приближается. Вот он уже прямо перед тобой.</Text>
 			<Options>
-				<Option Destination="261" Text="Ты МЕДУЗА" Availability="МЕДУЗА"/>
-				<Option Destination="238" Text="Ты любое другое существо"/>
+				<Option Destination="261" Text="Ты МЕДУЗА" Singleton="МЕДУЗА"/>
+				<Option Destination="238" Text="Ты любое другое существо" Singleton="!МЕДУЗА"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="232">
