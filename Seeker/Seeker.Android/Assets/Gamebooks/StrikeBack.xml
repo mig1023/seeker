@@ -1686,8 +1686,8 @@
 		<Paragraph No="165">
 			<Text>Атакуешь дерзкого эльфа.</Text>
 			<Options>
-				<Option Destination="162" Text="Ты ВУРДАЛАК или ЗОМБИ" Availability="ВУРДАЛАК|ЗОМБИ"/>
-				<Option Destination="132" Text="Ты любое другое существо"/>
+				<Option Destination="162" Text="Ты ВУРДАЛАК или ЗОМБИ" Singleton="ВУРДАЛАК|ЗОМБИ"/>
+				<Option Destination="132" Text="Ты любое другое существо" Singleton="!ВУРДАЛАК,!ЗОМБИ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="166">
