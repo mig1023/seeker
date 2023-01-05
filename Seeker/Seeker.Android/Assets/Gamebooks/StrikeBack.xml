@@ -2821,11 +2821,11 @@
 		<Paragraph No="282">
 			<Text>Ты яростно набрасываешься на закованную в серебряную броню Шейну.</Text>
 			<Options>
-				<Option Destination="225" Text="Ты ЕДИНОРОГ" Availability="ЕДИНОРОГ"/>
-				<Option Destination="295" Text="Ты МЕДУЗА" Availability="МЕДУЗА"/>
-				<Option Destination="215" Text="Ты ГАРПИЯ" Availability="ГАРПИЯ"/>
-				<Option Destination="288" Text="Ты КЕНТАВР, МИНОТАВР, ГОРГУЛЬЯ, ВЕЛИКАН или ГИППОГРИФ" Availability="КЕНТАВР|МИНОТАВР|ГОРГУЛЬЯ|ВЕЛИКАН|ГИППОГРИФ"/>
-				<Option Destination="229" Text="Ты любое другое существо"/>
+				<Option Destination="225" Text="Ты ЕДИНОРОГ" Singleton="ЕДИНОРОГ"/>
+				<Option Destination="295" Text="Ты МЕДУЗА" Singleton="МЕДУЗА"/>
+				<Option Destination="215" Text="Ты ГАРПИЯ" Singleton="ГАРПИЯ"/>
+				<Option Destination="288" Text="Ты КЕНТАВР, МИНОТАВР, ГОРГУЛЬЯ, ВЕЛИКАН или ГИППОГРИФ" Singleton="КЕНТАВР|МИНОТАВР|ГОРГУЛЬЯ|ВЕЛИКАН|ГИППОГРИФ"/>
+				<Option Destination="229" Text="Ты любое другое существо" Singleton="!ЕДИНОРОГ,!МЕДУЗА,!ГАРПИЯ,!КЕНТАВР,!МИНОТАВР,!ГОРГУЛЬЯ,!ВЕЛИКАН,!ГИППОГРИФ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="283">
