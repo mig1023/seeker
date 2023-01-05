@@ -2085,8 +2085,8 @@
 		<Paragraph No="211">
 			<Text>Таранишь приближающийся смерч.</Text>
 			<Options>
-				<Option Destination="291" Text="Ты ДЖИНН" Availability="ДЖИНН"/>
-				<Option Destination="247" Text="Ты любое другое существо"/>
+				<Option Destination="291" Text="Ты ДЖИНН" Singleton="ДЖИНН"/>
+				<Option Destination="247" Text="Ты любое другое существо" Singleton="!ДЖИНН"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="212">
