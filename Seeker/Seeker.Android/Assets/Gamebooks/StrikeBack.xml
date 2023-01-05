@@ -2064,8 +2064,8 @@
 		<Paragraph No="208">
 			<Text>Ненадёжная опора крошится под тобой, и ты соскальзываешь по склону назад. А всадники уже совсем рядом.</Text>
 			<Options>
-				<Option Destination="261" Text="Ты МЕДУЗА" Availability="МЕДУЗА"/>
-				<Option Destination="238" Text="Любое другое существо"/>
+				<Option Destination="261" Text="Ты МЕДУЗА" Singleton="МЕДУЗА"/>
+				<Option Destination="238" Text="Любое другое существо" Singleton="!МЕДУЗА"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="209">
