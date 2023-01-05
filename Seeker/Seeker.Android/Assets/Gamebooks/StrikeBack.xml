@@ -223,9 +223,9 @@
 		<Paragraph No="21">
 			<Text>Собравшись с духом, распахиваешь дверь в питейный зал.</Text>
 			<Options>
-				<Option Destination="5" Text="Ты ЧЕЛОВЕК" Availability="ЧЕЛОВЕК"/>
-				<Option Destination="13" Text="Ты ГОБЛИН или КОБОЛЬД" Availability="ГОБЛИН|КОБОЛЬД"/>
-				<Option Destination="61" Text="Ты любое другое существо"/>
+				<Option Destination="5" Text="Ты ЧЕЛОВЕК" Singleton="ЧЕЛОВЕК"/>
+				<Option Destination="13" Text="Ты ГОБЛИН или КОБОЛЬД" Singleton="ГОБЛИН|КОБОЛЬД"/>
+				<Option Destination="61" Text="Ты любое другое существо" Singleton="!ЧЕЛОВЕК, !ГОБЛИН, !КОБОЛЬД"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="22">
