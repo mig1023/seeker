@@ -4537,8 +4537,8 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="386" Text="Если ты ДЖИНН, ИФРИТ, ФЕНИКС или ДЕМОН, то атаки драконицы не могут ранить тебя" Availability="ДЖИНН|ИФРИТ|ФЕНИКС|ДЕМОН"/>
-				<Option Destination="386" Text="Ты одолел белую драконицу"/>
+				<Option Destination="386" Text="Если ты ДЖИНН, ИФРИТ, ФЕНИКС или ДЕМОН, то атаки драконицы не могут ранить тебя" Singleton="ДЖИНН|ИФРИТ|ФЕНИКС|ДЕМОН"/>
+				<Option Destination="386" Text="Ты одолел белую драконицу" Singleton="!ДЖИНН,!ИФРИТ,!ФЕНИКС,!ДЕМОН"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="443">
