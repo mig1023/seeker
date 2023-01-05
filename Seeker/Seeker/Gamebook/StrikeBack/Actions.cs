@@ -193,6 +193,20 @@ namespace Seeker.Gamebook.StrikeBack
 
                 return false;
             }
+            else if (option.Contains(','))
+            {
+                List<string> singlOption = option
+                    .Split(',')
+                    .Select(x => x.Trim())
+                    .Select(y => y.Replace("!", String.Empty))
+                    .ToList();
+
+                foreach (string optionsPart in singlOption)
+                    if (protagonist.Creature == optionsPart)
+                        return false;
+
+                return true;
+            }
             else if (protagonist.Creature == option)
             {
                 return true;
