@@ -211,6 +211,10 @@ namespace Seeker.Gamebook.StrikeBack
             {
                 return true;
             }
+            else if (protagonist.Creature == option.Replace("!", String.Empty))
+            {
+                return false;
+            }
             else
             {
                 return AvailabilityTrigger(option.Trim());
