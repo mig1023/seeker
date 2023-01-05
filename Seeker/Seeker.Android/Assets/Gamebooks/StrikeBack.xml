@@ -4422,9 +4422,9 @@
 		<Paragraph No="428">
 			<Text>Решаешь уклониться от боя и сбежать.</Text>
 			<Options>
-				<Option Destination="420" Text="Ты ТРИТОН или ГИДРА" Availability="ТРИТОН|ГИДРА"/>
-				<Option Destination="358" Text="Ты ПЕГАС" Availability="ПЕГАС"/>
-				<Option Destination="306" Text="Ты любое другое существо"/>
+				<Option Destination="420" Text="Ты ТРИТОН или ГИДРА" Singleton="ТРИТОН|ГИДРА"/>
+				<Option Destination="358" Text="Ты ПЕГАС" Singleton="ПЕГАС"/>
+				<Option Destination="306" Text="Ты любое другое существо" Singleton="!ТРИТОН,!ГИДРА,!ПЕГАС"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="429">
