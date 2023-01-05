@@ -3843,8 +3843,8 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="370" Text="Ты ИФРИТ или ДЖИНН, то атаки костяного дракона не в силах повредить твоему нематериальному телу" Availability="ИФРИТ|ДЖИНН"/>
-				<Option Destination="370" Text="Если ты победил"/>
+				<Option Destination="370" Text="Ты ИФРИТ или ДЖИНН, то атаки костяного дракона не в силах повредить твоему нематериальному телу" Singleton="ИФРИТ|ДЖИНН"/>
+				<Option Destination="370" Text="Если ты победил" Singleton="!ИФРИТ,!ДЖИНН"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="374">
