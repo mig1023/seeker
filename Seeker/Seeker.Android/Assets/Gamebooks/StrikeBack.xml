@@ -2756,11 +2756,11 @@
 		<Paragraph No="276">
 			<Text>Спрыгнув с причала, ныряешь в синее море.</Text>
 			<Options>
-				<Option Destination="233" Text="Ты ГИДРА" Availability="ГИДРА"/>
-				<Option Destination="221" Text="Ты ТРИТОН" Availability="ТРИТОН"/>
-				<Option Destination="244" Text="Ты САЛАМАНДРА" Availability="САЛАМАНДРА"/>
-				<Option Destination="263" Text="Ты МОРОЗНАЯ САЛАМАНДРА" Availability="МОРОЗНАЯ САЛАМАНДРА"/>
-				<Option Destination="246" Text="Ты любое другое существо"/>
+				<Option Destination="233" Text="Ты ГИДРА" Singleton="ГИДРА"/>
+				<Option Destination="221" Text="Ты ТРИТОН" Singleton="ТРИТОН"/>
+				<Option Destination="244" Text="Ты САЛАМАНДРА" Singleton="САЛАМАНДРА"/>
+				<Option Destination="263" Text="Ты МОРОЗНАЯ САЛАМАНДРА" Singleton="МОРОЗНАЯ САЛАМАНДРА"/>
+				<Option Destination="246" Text="Ты любое другое существо" Singleton="!ГИДРА,!ТРИТОН,!САЛАМАНДРА,!МОРОЗНАЯ САЛАМАНДРА"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="277">
