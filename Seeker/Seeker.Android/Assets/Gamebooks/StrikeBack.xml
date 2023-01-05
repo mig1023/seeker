@@ -3540,8 +3540,8 @@
 		<Paragraph No="353">
 			<Text>Собираешься поцеловать девушку, но та бешено упирается:\n\n— Нет! Прекратите! Вы не разрушите проклятие!\n\nПоэтому ты просто насильно привлекаешь её к себе и целуешь.</Text>
 			<Options>
-				<Option Destination="350" Text="Ты МОРОЗНАЯ САЛАМАНДРА" Availability="МОРОЗНАЯ САЛАМАНДРА"/>
-				<Option Destination="323" Text="Ты любое другое существо"/>
+				<Option Destination="350" Text="Ты МОРОЗНАЯ САЛАМАНДРА" Singleton="МОРОЗНАЯ САЛАМАНДРА"/>
+				<Option Destination="323" Text="Ты любое другое существо" Singleton="!МОРОЗНАЯ САЛАМАНДРА"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="354">
