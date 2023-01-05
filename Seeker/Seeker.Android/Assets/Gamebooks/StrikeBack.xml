@@ -631,6 +631,7 @@
 						<Enemy Name="Воин А" Attack="2" Defence="8" Endurance="5"/>
 						<Enemy Name="Воин B" Attack="2" Defence="8" Endurance="6"/>
 					</Enemies>
+					<SpecialTechnique>ToFirstDeathOnly</SpecialTechnique>
 					<After>
 						<Text>Разумеется, ты тоже должен принять участие в драке.</Text>
 					</After>
