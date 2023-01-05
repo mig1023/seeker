@@ -4241,8 +4241,8 @@
 				</Fight>
 			</Actions>
 			<Options>
-				<Option Destination="431" Text="Ты ТРИТОН или ГАРПИЯ, и тебе удалось очаровать юношу"  Availability="ТРИТОН|ГАРПИЯ"/>
-				<Option Destination="380" Text="Ты его убиваешь"/>
+				<Option Destination="431" Text="Ты ТРИТОН или ГАРПИЯ, и тебе удалось очаровать юношу" Singleton="ТРИТОН|ГАРПИЯ"/>
+				<Option Destination="380" Text="Ты его убиваешь" Singleton="!ТРИТОН,!ГАРПИЯ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="410">
