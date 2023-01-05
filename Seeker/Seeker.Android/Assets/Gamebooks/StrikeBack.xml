@@ -1787,7 +1787,7 @@
 				<Option Destination="106" Text="МЕДУЗОЙ" Availability="ВЕЛИКАЯ ЗМЕЯ">
 					<Text>Если ты любое другое существо, то ты не мог попасть на этот параграф, потому что не узнал об амулете от посланца смерти:</Text>
 				</Option>
-				<Option Destination="176"/>
+				<Option Destination="176" Singleton="!УМЕРТВИЕ,!ЛЮДОЕД,!САТИР,!ВЕЛИКАЯ ЯЩЕРИЦА,!ВЕЛИКАЯ ЗМЕЯ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="175">
