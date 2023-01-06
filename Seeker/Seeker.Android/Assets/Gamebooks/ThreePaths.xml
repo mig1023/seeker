@@ -158,7 +158,7 @@
 			<Options>
 				<Option Destination="49" Text="Займётесь исследованием помещения"/>
 				<Option Destination="121" Text="Подойдёте к жрецам поближе"/>
-				<Option Destination="29" Text="Покинете эту комнату?">
+				<Option Destination="29" Text="Покинете эту комнату">
 					<Modification Name="Trigger" Value="12"/>
 				</Option>
 				<Option Destination="9" Text="Подождёте ещё некоторое время"/>
