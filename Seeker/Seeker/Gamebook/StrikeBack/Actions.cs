@@ -285,12 +285,11 @@ namespace Seeker.Gamebook.StrikeBack
             return game;
         }
 
-
         public List<string> Fight()
         {
             List<string> fight = new List<string>();
 
-            int round = 1, enemyWounds = 0, enemyDeath = 0, allyDeath = 0;
+            int round = 1, enemyWounds = 0;
 
             List<Character> FightAllies = new List<Character>();
             List<Character> FightEnemies = new List<Character>();
