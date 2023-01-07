@@ -76,7 +76,13 @@ namespace Seeker.Output
         }
 
         private static void SettingSplitter(ref StackLayout settings) =>
-            settings.Children.Add(new BoxView { HeightRequest = Constants.SETTINGS_SPLITTER });
+            settings.Children.Add(new BoxView
+            {
+                HeightRequest = 1,
+                WidthRequest = 10,
+                Color = Color.LightGray,
+                Margin = new Thickness(0, 15),
+            });
 
         private static void SettingButton(string settingName, SettingMethod Click, ref StackLayout settings, bool spacer = false)
         {

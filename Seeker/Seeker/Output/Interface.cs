@@ -607,7 +607,6 @@ namespace Seeker.Output
                         HeightRequest = 1,
                         WidthRequest = 10,
                         Color = Color.Black,
-                        Margin = new Thickness(0)
                     };
 
                     actionLabels.Add(line);

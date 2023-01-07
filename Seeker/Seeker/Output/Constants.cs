@@ -29,7 +29,6 @@ namespace Seeker.Output
         public static double DISCLAIMER_BORDER = 8;
         public static double SYS_MENU_SPACING = 4;
         public static double SYS_MENU_HIGHT = 25;
-        public static double SETTINGS_SPLITTER = 8;
 
         public static int SORT_BY_TITLE = 1;
         public static int SORT_BY_AUTHORS = 2;
