@@ -558,9 +558,9 @@ namespace Seeker.Output
             HorizontalOptions = LayoutOptions.FillAndExpand,
         };
 
-        public static List<Label> Actions(List<string> actionsLines)
+        public static List<View> Actions(List<string> actionsLines)
         {
-            List<Label> actionLabels = new List<Label>();
+            List<View> actionLabels = new List<View>();
 
             foreach (string actionLine in actionsLines)
             {
@@ -581,6 +581,7 @@ namespace Seeker.Output
                     ["BIG|"] = null,
                     ["BOLD|"] = null,
                     ["HEAD|"] = null,
+                    ["LINE|"] = null,
                 };
 
                 foreach(string color in textTypes.Keys.Where(x => text.Contains(x)))
@@ -598,6 +599,19 @@ namespace Seeker.Output
                 }
                 else
                     actions.HorizontalTextAlignment = TextAlignment.Start;
+
+                if (text.Contains("LINE|"))
+                {
+                    BoxView line = new BoxView
+                    {
+                        HeightRequest = 1,
+                        WidthRequest = 10,
+                        Color = Color.Black,
+                        Margin = new Thickness(0)
+                    };
+
+                    actionLabels.Add(line);
+                }
 
                 foreach (string key in textTypes.Keys)
                     text = text.Replace(key, String.Empty);

@@ -470,7 +470,7 @@ namespace Seeker
                 Paragraph(Game.Data.CurrentParagraphID, reload: true);
             else
             {
-                foreach (Label actionLine in Output.Interface.Actions(actionResult))
+                foreach (View actionLine in Output.Interface.Actions(actionResult))
                     actionPlace.Children.Add(actionLine);
 
                 UpdateStatus();
