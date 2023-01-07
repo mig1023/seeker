@@ -53,7 +53,7 @@ namespace Seeker.Gamebook.SilentSchool
             if (xmlNode == null)
                 return null;
 
-            Modification modification = new Modification { Name = Xml.StringParse(xmlNode.Attributes["Name"]) };
+            Modification modification = new Modification { Name = xmlNode.Name };
 
             if (xmlNode.Attributes["Value"] == null)
                 return modification;
