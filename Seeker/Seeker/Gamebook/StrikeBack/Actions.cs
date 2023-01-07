@@ -428,6 +428,7 @@ namespace Seeker.Gamebook.StrikeBack
                 }
 
                 round += 1;
+                fight.Add("LINE|");
             }
         }
 
