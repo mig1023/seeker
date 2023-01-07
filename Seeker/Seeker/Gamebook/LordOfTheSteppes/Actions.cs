@@ -221,12 +221,12 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 if (protagonistStrength > enemyStrength)
                 {
                     fight.Add("GOOD|Вы нанесли ему удар");
-                    fight.Add(String.Empty);
 
                     enemyWounds += 1;
 
                     if (enemyWounds >= 3)
                     {
+                        fight.Add(String.Empty);
                         fight.Add("BIG|GOOD|Вы ПОБЕДИЛИ :)");
                         return fight;
                     }
@@ -234,18 +234,20 @@ namespace Seeker.Gamebook.LordOfTheSteppes
                 else if (protagonistStrength < enemyStrength)
                 {
                     fight.Add("BAD|Он нанёс вам удар");
-                    fight.Add(String.Empty);
 
                     protagonistWounds += 1;
 
                     if (protagonistWounds >= 4)
                     {
+                        fight.Add(String.Empty);
                         fight.Add("BIG|BAD|Вы ПРОИГРАЛИ :(");
                         return fight;
                     }
                 }
                 else
                     fight.Add("Вы парировали удары друг друга");
+
+                fight.Add(String.Empty);
             }
         }
 
