@@ -10,31 +10,24 @@ namespace Seeker.Gamebook.SilentSchool
         {
             int woundsBonus = (Game.Option.IsTriggered("Кайф") ? 2 : 1);
 
-            bool trigger = DoByName("Trigger",
-                () => Game.Option.Trigger(ValueString));
+            bool trigger = DoByName("Trigger", () => Game.Option.Trigger(ValueString));
+            bool change = DoByName("Change", () => protagonist.ChangeDecision = Value);
+            bool weapon = DoByName("Weapon", () => protagonist.Weapon = ValueString);
+            bool removeWeapon = DoByName("RemoveWeapon", () => protagonist.Weapon = String.Empty);
 
-            bool change = DoByName("Change",
-                () => protagonist.ChangeDecision = Value);
-
-            bool weapon = DoByName("Weapon",
-                () => protagonist.Weapon = ValueString);
-
-            bool removeWeapon = DoByName("RemoveWeapon",
-                () => protagonist.Weapon = String.Empty);
-
-            bool woundsByWeapon2 = DoByName("WoundsByWeapon2",
+            bool byWeapon2 = DoByName("WoundsByWeapon2",
                 () => protagonist.Life -= (String.IsNullOrEmpty(protagonist.Weapon) ? 4 : 2) * woundsBonus);
 
-            bool woundsByWeapon3 = DoByName("WoundsByWeapon3",
+            bool byWeapon3 = DoByName("WoundsByWeapon3",
                 () => protagonist.Life -= (protagonist.Weapon == "Гантеля" ? 3 : 6) * woundsBonus);
 
-            bool woundsByWeapon4 = DoByName("WoundsByWeapon4",
+            bool byWeapon4 = DoByName("WoundsByWeapon4",
                 () => protagonist.Life -= (protagonist.Weapon == "Флейта" ? 1 : 4) * woundsBonus);
 
-            bool woundsByBody = DoByName("WoundsByBody",
+            bool byBody = DoByName("WoundsByBody",
                 () => protagonist.Life -= (Game.Option.IsTriggered("Толстяк") ? 4 : 6) * woundsBonus);
 
-            if (trigger || change || weapon || removeWeapon || woundsByWeapon2 || woundsByWeapon3 || woundsByWeapon4 || woundsByBody)
+            if (trigger || change || weapon || removeWeapon || byWeapon2 || byWeapon3 || byWeapon4 || byBody)
             {
                 return;
             }
