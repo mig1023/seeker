@@ -73,11 +73,10 @@ namespace Seeker.Gamebook.StrikeBack
         public override bool GameOver(out int toEndParagraph, out string toEndText)
         {
             if (SpecialTechniques?.Contains(Character.SpecialTechniques.WithoutGameover) ?? false)
-                return GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
-            else
                 return base.GameOver(out toEndParagraph, out toEndText);
+            else
+                return GameOverBy(protagonist.Endurance, out toEndParagraph, out toEndText);
         }
-            
 
         public List<string> InlineWoundsByDices()
         {
