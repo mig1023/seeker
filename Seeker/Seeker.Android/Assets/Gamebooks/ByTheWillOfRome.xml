@@ -1028,8 +1028,8 @@
 				<Text Style="Small">Запишите на листике своей когорты — Мастерство рукопашного боя (+1).</Text>
 			</Texts>
 			<Options>
-				<Option Destination="46" Text="Если у вас записано слово «вражда»" Singleton="Вражда"/>
-				<Option Destination="140" Text="Если нет этого слова"/>
+				<Option Destination="46" Text="У вас записано слово «вражда»" Availability="Вражда"/>
+				<Option Destination="140" Text="Нет этого слова" Availability="!Вражда"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="117">
