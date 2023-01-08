@@ -1303,8 +1303,8 @@
 		</Paragraph>
 		<Paragraph No="145">
 			<Options>
-				<Option Destination="138" Text="Если у вас записано слово «гадание»" Availability="Гадание"/>
-				<Option Destination="152" Text="Если нет этого слова"/>
+				<Option Destination="138" Text="У вас записано слово «гадание»" Availability="Гадание"/>
+				<Option Destination="152" Text="Нет этого слова" Availability="!Гадание"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="146">
