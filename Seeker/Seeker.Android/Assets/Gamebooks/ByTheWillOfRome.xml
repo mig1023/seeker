@@ -1765,8 +1765,8 @@
 				<Discipline Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="206" Text="Если вы пред атакой виллы давали приказ «брать грабителей в плен»" Singleton="Мародеров в плен"/>
-				<Option Destination="208" Text="Если давали приказ «никого не щадить»" Singleton="Никого не щадить"/>
+				<Option Destination="206" Text="Вы пред атакой виллы давали приказ «брать грабителей в плен»" Singleton="Мародеров в плен"/>
+				<Option Destination="208" Text="Вы давали приказ «никого не щадить»" Singleton="Никого не щадить"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="203">
