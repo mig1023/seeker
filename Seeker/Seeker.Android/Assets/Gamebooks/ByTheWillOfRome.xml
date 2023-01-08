@@ -994,7 +994,7 @@
 		<Paragraph No="112">
 			<Options>
 				<Option Destination="123" Text="Перед походом не помешает всем немного расслабиться и погулять"/>
-				<Option Destination="120" Text="Если у вас нет спинтрий, то можете пойти купить их у квестора Флавия"/>
+				<Option Destination="120" Text="У вас нет спинтрий и вы хотите пойти купить их у квестора Флавия"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="113">
