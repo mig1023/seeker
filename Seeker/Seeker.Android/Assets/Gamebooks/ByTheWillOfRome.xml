@@ -2980,7 +2980,7 @@
 				<Honor Value="-1"/>
 			</Modifications>
 			<Options>
-				<Option Destination="370" Text="Если вы еще не командовали пехотой">
+				<Option Destination="370" Text="Вы еще не командовали пехотой">
 					<Text>Если уже командовали — глава «Децебал».</Text>
 				</Option>
 			</Options>
