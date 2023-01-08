@@ -534,8 +534,8 @@
 			</Texts>
 			<Triggers>Марс</Triggers>
 			<Options>
-				<Option Destination="46" Text="Если у вас записано слово «вражда»" Singleton="Вражда"/>
-				<Option Destination="47" Text="Если нет этого слова"/>
+				<Option Destination="46" Text="У вас записано слово «вражда»" Singleton="Вражда"/>
+				<Option Destination="47" Text="Нет этого слова" Singleton="!Вражда"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="60">
