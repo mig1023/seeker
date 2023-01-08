@@ -155,7 +155,6 @@
 					</After>
 				</Get>
 			</Actions>
-			<Triggers>Room</Triggers>
 			<Options>
 				<Option Destination="109"/>
 			</Options>
@@ -589,7 +588,6 @@
 					</After>
 				</Get>
 			</Actions>
-			<Triggers>Room</Triggers>
 			<Options>
 				<Option Destination="109"/>
 			</Options>
