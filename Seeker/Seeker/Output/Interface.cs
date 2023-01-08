@@ -325,12 +325,12 @@ namespace Seeker.Output
             TextColor = color
         };
 
-        private static View SplitterLine(Thickness thickness) => new BoxView
+        public static View SplitterLine(Thickness? thickness, Color? color) => new BoxView
         {
             HeightRequest = 1,
             WidthRequest = 10,
-            Color = Color.Black,
-            Margin = thickness,
+            Color = color ?? Color.Black,
+            Margin = thickness ?? new Thickness(0),
         };
 
         public static List<View> Represent(List<string> enemiesLines)
@@ -351,9 +351,9 @@ namespace Seeker.Output
                         Text = param[1],
                     };
 
-                    enemies.Add(SplitterLine(new Thickness(0, 10, 0, -2)));
+                    enemies.Add(SplitterLine(new Thickness(0, 10, 0, -2), null));
                     enemies.Add(splitter);
-                    enemies.Add(SplitterLine(new Thickness(0, -2, 0, 10)));
+                    enemies.Add(SplitterLine(new Thickness(0, -2, 0, 10), null));
                 }
                 else
                 {
@@ -604,16 +604,7 @@ namespace Seeker.Output
                     actions.HorizontalTextAlignment = TextAlignment.Start;
 
                 if (text.Contains("LINE|"))
-                {
-                    BoxView line = new BoxView
-                    {
-                        HeightRequest = 1,
-                        WidthRequest = 10,
-                        Color = Color.Black,
-                    };
-
-                    actionLabels.Add(line);
-                }
+                    actionLabels.Add(SplitterLine(null, null));
 
                 foreach (string key in textTypes.Keys)
                     text = text.Replace(key, String.Empty);
