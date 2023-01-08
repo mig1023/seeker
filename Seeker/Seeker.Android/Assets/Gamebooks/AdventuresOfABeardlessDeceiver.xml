@@ -1006,7 +1006,6 @@
 					</After>
 				</Get>
 			</Actions>
-			<Triggers>PartyClothes</Triggers>
 			<Options>
 				<Option Destination="40" Text="Если у Алдара есть такие деньги и желание, то можно сделать ставку и сыграть в нарды"/>
 				<Option Destination="128" Text="Просто посмотреть, как другие играют"/>
