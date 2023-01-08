@@ -2054,8 +2054,8 @@
 		</Paragraph>
 		<Paragraph No="236">
 			<Options>
-				<Option Destination="263" Text="Если вы, отбывая из своего лагеря, совершали ритуал в честь богини Фортуны"/>
-				<Option Destination="254" Text="Если нет"/>
+				<Option Destination="263" Text="Отбывая из своего лагеря, вы совершали ритуал в честь богини Фортуны"/>
+				<Option Destination="254" Text="Вы этого не делали"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="237">
