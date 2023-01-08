@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seeker.Gamebook.ByTheWillOfRome
 {
@@ -66,6 +67,14 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             if (String.IsNullOrEmpty(option))
             {
                 return true;
+            }
+            else if (option.Contains("|"))
+            {
+                foreach (string optionsPart in option.Split('|').Select(x => x.Trim()))
+                    if (Game.Option.IsTriggered(optionsPart))
+                        return true;
+
+                return false;
             }
             else
             {
