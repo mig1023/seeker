@@ -918,8 +918,8 @@
 		</Paragraph>
 		<Paragraph No="104">
 			<Options>
-				<Option Destination="106" Text="Если у вас записано слово «еда №1» или «еда №2»" Availability="Еда №1|Еда №2"/>
-				<Option Destination="137" Text="Если нет этих слов"/>
+				<Option Destination="106" Text="У вас записано слово «еда №1» или «еда №2»" Availability="Еда №1|Еда №2"/>
+				<Option Destination="137" Text="Нет этих слов" Availability="!Еда №1,!Еда №2"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="105">
