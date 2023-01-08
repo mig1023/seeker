@@ -3047,8 +3047,8 @@
 		</Paragraph>
 		<Paragraph No="366">
 			<Options>
-				<Option Destination="336" Text="Если Дисциплина вашего отряда больше 2-х" Availability="ДИСЦИПЛИНА >= 3"/>
-				<Option Destination="369" Text="Если нет"/>
+				<Option Destination="336" Text="Дисциплина вашего отряда больше 2-х" Availability="ДИСЦИПЛИНА >= 3"/>
+				<Option Destination="369" Text="Дисциплина ниже"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="367">
