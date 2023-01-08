@@ -3680,7 +3680,6 @@
 					<Level>11</Level>
 				</Test>
 			</Actions>
-			<Triggers>Хищник</Triggers>
 			<Options>
 				<Option Destination="221" Text="Обе проверки успешны"/>
 				<Option Destination="232" Text="В любом другом случае"/>
