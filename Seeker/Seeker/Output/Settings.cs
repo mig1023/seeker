@@ -22,12 +22,12 @@ namespace Seeker.Output
                 if (!String.IsNullOrEmpty(setting.Description))
                     SettingDescription(setting.Description, ref settings);
 
-                Interface.SplitterLine(new Thickness(0, 15), Color.LightGray);
+                SettingSplitter(ref settings);
             }
 
             SettingCheatingBlock(ref settings);
 
-            Interface.SplitterLine(new Thickness(0, 15), Color.LightGray);
+            SettingSplitter(ref settings);
 
             SettingButton("Сбросить сохранённые игры", () => Game.Continue.Clean(), ref settings, spacer: true);
             SettingButton("Сбросить все настройки", () => Game.Settings.Clean(), ref settings);
@@ -74,6 +74,9 @@ namespace Seeker.Output
 
             settings.Children.Add(stackLayout);
         }
+
+        private static void SettingSplitter(ref StackLayout settings) =>
+            settings.Children.Add(Interface.SplitterLine(new Thickness(0, 15), Color.LightGray));
 
         private static void SettingButton(string settingName, SettingMethod Click, ref StackLayout settings, bool spacer = false)
         {
