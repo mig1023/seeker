@@ -2642,8 +2642,8 @@
 		<Paragraph No="316">
 			<Text>Вы метнули в варвара свое копье.</Text>
 			<Options>
-				<Option Destination="322" Text="Если у вас записано слово «Марс»" Availability="Марс"/>
-				<Option Destination="310" Text="Если нет"/>
+				<Option Destination="322" Text="У вас записано слово «Марс»" Availability="Марс"/>
+				<Option Destination="310" Text="Не записано" Availability="!Марс"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="317">
