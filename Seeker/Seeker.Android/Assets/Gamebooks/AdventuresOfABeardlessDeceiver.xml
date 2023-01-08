@@ -1100,7 +1100,6 @@
 					</After>
 				</Get>
 			</Actions>
-			<Triggers>ArabianHorse</Triggers>
 			<Options>
 				<Option Destination="46"/>
 			</Options>
@@ -1720,7 +1719,6 @@
 					<Price>150</Price>
 				</Get>
 			</Actions>
-			<Triggers>PartyClothes</Triggers>
 			<Options>
 				<Option Destination="63" Text="Откликнуться на вызов" Availability="PartyClothes"/>
 				<Option Destination="27" Text="Отказаться от участия в этом соревновании"/>
@@ -1980,7 +1978,6 @@
 					</After>
 				</Get>
 			</Actions>
-			<Triggers>PartyClothes</Triggers>
 			<Options>
 				<Option Destination="74" Text="Принять участие в айтысе" Availability="Dombra"/>
 				<Option Destination="94" Text="Отказаться от участия и просто посмотреть на соревнование"/>
