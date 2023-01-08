@@ -1253,8 +1253,8 @@
 		</Paragraph>
 		<Paragraph No="140">
 			<Options>
-				<Option Destination="150" Text="Если вы вызвались служить в кавалерии"/>
-				<Option Destination="180" Text="Если вы вызвались служить в пехоте"/>
+				<Option Destination="150" Text="Вы вызвались служить в кавалерии"/>
+				<Option Destination="180" Text="Вы вызвались служить в пехоте"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="141">
