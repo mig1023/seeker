@@ -615,8 +615,8 @@
 		</Paragraph>
 		<Paragraph No="70">
 			<Options>
-				<Option Destination="68" Text="Если у вас записано слово «вражда»" Singleton="Вражда"/>
-				<Option Destination="64" Text="Если нет этого слова"/>
+				<Option Destination="68" Text="У вас записано слово «вражда»" Availability="Вражда"/>
+				<Option Destination="64" Text="Нет этого слова" Availability="!Вражда"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="71">
