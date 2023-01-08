@@ -803,10 +803,10 @@
 		</Paragraph>
 		<Paragraph No="90">
 			<Options>
-				<Option Destination="77" Text="Если у вас записано слово «жалоба»" Availability="Жалоба"/>
-				<Option Destination="85" Text="Если у вас записано слово «лентяи»" Availability="Лентяи"/>
-				<Option Destination="84" Text="Если записано слово «уважение»" Availability="Уважение"/>
-				<Option Destination="85" Text="Если нет этих слов"/>
+				<Option Destination="77" Text="У вас записано слово «жалоба»" Availability="Жалоба"/>
+				<Option Destination="85" Text="У вас записано слово «лентяи»" Availability="Лентяи"/>
+				<Option Destination="84" Text="Записано слово «уважение»" Availability="Уважение"/>
+				<Option Destination="85" Text="Нет этих слов" Availability="!Жалоба,!Лентяи,!Уважение"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="91">
