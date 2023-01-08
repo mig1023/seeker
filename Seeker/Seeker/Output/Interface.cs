@@ -318,8 +318,20 @@ namespace Seeker.Output
             return info;
         }
 
-        private static Label Line(Color color, string line, params object[] prms) =>
-            new Label { Text = String.Format(line, prms), FontSize = FontSize(TextFontSize.Micro), TextColor = color };
+        private static Label Line(Color color, string line, params object[] prms) => new Label
+        {
+            Text = String.Format(line, prms),
+            FontSize = FontSize(TextFontSize.Micro),
+            TextColor = color
+        };
+
+        private static View SplitterLine(Thickness thickness) => new BoxView
+        {
+            HeightRequest = 1,
+            WidthRequest = 10,
+            Color = Color.Black,
+            Margin = thickness,
+        };
 
         public static List<View> Represent(List<string> enemiesLines)
         {
@@ -339,18 +351,9 @@ namespace Seeker.Output
                         Text = param[1],
                     };
 
-                    string background = Game.Data.Constants.GetColor(Buttons.ButtonTypes.Continue);
-
-                    StackLayout splitterForm = new StackLayout
-                    {
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        HeightRequest = Constants.SPLITTER_HIGHT,
-                        BackgroundColor = (String.IsNullOrEmpty(background) ? Constants.SPLITTER_COLOR_DEFAULT : Color.FromHex(background)),
-                    };
-
-                    splitterForm.Children.Add(splitter);
-
-                    enemies.Add(splitterForm);
+                    enemies.Add(SplitterLine(new Thickness(0, 10, 0, -2)));
+                    enemies.Add(splitter);
+                    enemies.Add(SplitterLine(new Thickness(0, -2, 0, 10)));
                 }
                 else
                 {
