@@ -40,16 +40,21 @@ namespace Seeker.Gamebook.OctopusIsland
                 protagonist.SouhiHitpoint = protagonist.Hitpoint;
         }
 
-        private static string ShowCurrentWarrior() =>
-            String.Format("HEAD|BOLD|*** В БОЙ ВСТУПАЕТ {0} ***", protagonist.Name.ToUpper());
-
-        public static bool SetCurrentWarrior(ref List<string> fight, bool fightStart = false)
+        private static void ShowCurrentWarrior(ref List<string> fight, bool start)
         {
-            if (protagonist.Hitpoint > 3)
-            {
-                ShowCurrentWarrior();
+            if (!start)
+                fight.Add(String.Empty);
+
+            fight.Add(String.Format("HEAD|BOLD|*** В БОЙ ВСТУПАЕТ {0} ***", protagonist.Name.ToUpper()));
+            
+            if (start)
+                fight.Add(String.Empty);
+        }
+        
+        public static bool SetCurrentWarrior(ref List<string> fight, bool start = false)
+        {
+            if ((protagonist.Hitpoint > 3) && !start)
                 return true;
-            }
 
             SaveCurrentWarriorHitPoints();
 
@@ -80,14 +85,7 @@ namespace Seeker.Gamebook.OctopusIsland
             else
                 return false;
 
-            if (!fightStart)
-                fight.Add(String.Empty);
-
-            fight.Add(ShowCurrentWarrior());
-
-            if (fightStart)
-                fight.Add(String.Empty);
-
+            ShowCurrentWarrior(ref fight, start);
             return true;
         }
     }

@@ -127,7 +127,7 @@ namespace Seeker.Gamebook.OctopusIsland
 
             int round = 1, enemyWounds = 0;
 
-            Services.SetCurrentWarrior(ref fight, fightStart: true);
+            Services.SetCurrentWarrior(ref fight, start: true);
 
             while (true)
             {
