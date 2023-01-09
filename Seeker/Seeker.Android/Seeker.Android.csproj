@@ -445,6 +445,9 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\Gamebooks\StrikeBack.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\DeathOfAntiquary_Parrot.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

@@ -527,7 +527,11 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="55">
-			<Text>Из зеркала на вас смотрел попугай!!</Text>
+			<Images>
+				<Image Image="DeathOfAntiquary_Parrot.jpg">
+					<Text>Из зеркала на вас смотрел попугай!!</Text>
+				</Image>
+			</Images>
 			<Options>
 				<Option Destination="23"/>
 			</Options>
