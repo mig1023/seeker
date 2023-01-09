@@ -24,12 +24,22 @@ namespace Seeker.Gamebook.SilentSchool
         {
             Option option = OptionsTemplateWithoutDestination(xmlOption);
 
-            if (xmlOption.Attributes["Destination"].Value == "Change")
+            if (ThisIsGameover(xmlOption))
+            {
+                option.Destination = GetDestination(xmlOption);
+            }
+            else if (xmlOption.Attributes["Destination"].Value == "Change")
+            {
                 option.Destination = Character.Protagonist.ChangeDecision;
+            }
             else if (ThisIsBack(xmlOption))
+            {
                 option.Destination = GetDestination(xmlOption, wayBack: Character.Protagonist.WayBack);
+            }
             else
+            {
                 option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+            }
 
             XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
 
@@ -38,9 +48,13 @@ namespace Seeker.Gamebook.SilentSchool
                 Modification modification = new Modification { Name = Xml.StringParse(optionMod.Attributes["Name"]) };
 
                 if (int.TryParse(optionMod.Attributes["Value"].Value, out _))
+                {
                     modification.Value = Xml.IntParse(optionMod.Attributes["Value"]);
+                }
                 else
+                {
                     modification.ValueString = Xml.StringParse(optionMod.Attributes["Value"]);
+                }
 
                 option.Do = modification;
             }
@@ -56,12 +70,17 @@ namespace Seeker.Gamebook.SilentSchool
             Modification modification = new Modification { Name = xmlNode.Name };
 
             if (xmlNode.Attributes["Value"] == null)
+            {
                 return modification;
-
-            if (int.TryParse(xmlNode.Attributes["Value"].Value, out _))
+            }
+            else if (int.TryParse(xmlNode.Attributes["Value"].Value, out _))
+            {
                 modification.Value = Xml.IntParse(xmlNode.Attributes["Value"]);
+            }
             else
+            {
                 modification.ValueString = Xml.StringParse(xmlNode.Attributes["Value"]);
+            }
 
             return modification;
         }
