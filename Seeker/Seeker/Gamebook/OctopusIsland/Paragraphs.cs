@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using Seeker.Game;
@@ -35,8 +36,14 @@ namespace Seeker.Gamebook.OctopusIsland
         {
             Option option = OptionsTemplateWithoutDestination(xmlOption);
 
-            if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
+            if (ThisIsGameover(xmlOption))
+            {
+                option.Destination = GetDestination(xmlOption);
+            }
+            else if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
+            {
                 option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+            }
             else
             {
                 List<string> link = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
