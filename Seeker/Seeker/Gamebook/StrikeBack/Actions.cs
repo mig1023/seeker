@@ -327,7 +327,8 @@ namespace Seeker.Gamebook.StrikeBack
 
             while (true)
             {
-                fight.Add(String.Format("HEAD|BOLD|Раунд: {0}", round));
+                fight.Add(String.Format("HEAD|BOLD|*  *  *    РАУНД: {0}    *  *  * ", round));
+                fight.Add(String.Empty);
 
                 foreach (Character fighter in FightOrder)
                 {
@@ -339,8 +340,6 @@ namespace Seeker.Gamebook.StrikeBack
                     if (enemy == null)
                         continue;
 
-                    fight.Add(String.Empty);
-
                     if (GroupFight)
                         fight.Add(String.Format("BOLD|{0} выбрает противника для атаки: {1}", fighter.Name, enemy.Name));
                     else
@@ -350,8 +349,7 @@ namespace Seeker.Gamebook.StrikeBack
                     int hitStrength = firstRoll + secondRoll + fighter.Attack;
 
                     fight.Add(String.Format(
-                        "{0} cила атаки: {1} + {2} + {3} = {4}",
-                        (IsProtagonist(fighter.Name) ? "Ваша" : String.Format("{0} -", fighter.Name)),
+                        "Сила атаки: {0} + {1} + {2} (атака) = {3}",
                         Game.Dice.Symbol(firstRoll), Game.Dice.Symbol(secondRoll), fighter.Attack, hitStrength));
 
                     int hitDiff = hitStrength - enemy.Defence;
@@ -371,7 +369,7 @@ namespace Seeker.Gamebook.StrikeBack
                         }
                         else
                         {
-                            fight.Add(success ? "BAD|BOLD|Ты ранены" : "GOOD|Атака отбита");
+                            fight.Add(success ? "BAD|BOLD|Ты ранен" : "GOOD|Атака отбита");
                         }
                     }
                     else  if (FightAllies.Contains(enemy))
@@ -385,7 +383,11 @@ namespace Seeker.Gamebook.StrikeBack
 
                     if (success)
                     {
+                        fight.Add(String.Format("Тяжесть раны: {0} (сила атаки) - {1} (защита) = {2}",
+                            hitStrength, enemy.Defence, hitDiff));
+
                         enemy.Endurance -= hitDiff;
+
                         fight.Add(String.Format("{0} потерял вносливости: {1} (осталось: {2})",
                             enemy.Name, hitDiff, enemy.Endurance));
 
@@ -395,11 +397,11 @@ namespace Seeker.Gamebook.StrikeBack
                             return fight;
                         }
                     }
+
+                    fight.Add(String.Empty);
                 }
 
                 bool enemyLost = FightEnemies.Where(x => (x.Endurance > 0) || (x.MaxEndurance == 0)).Count() == 0;
-
-                fight.Add(String.Empty);
 
                 if (enemyLost || ((WoundsToWin > 0) && (WoundsToWin <= enemyWounds)))
                 {
@@ -427,7 +429,6 @@ namespace Seeker.Gamebook.StrikeBack
                 }
 
                 round += 1;
-                fight.Add("LINE|");
             }
         }
 
