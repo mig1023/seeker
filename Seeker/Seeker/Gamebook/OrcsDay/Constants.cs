@@ -10,6 +10,8 @@ namespace Seeker.Gamebook.OrcsDay
 
         public static Dictionary<string, string> ResultCalculation { get; set; }
 
+        public static Dictionary<string, string> Orcishness { get; set; }
+
         public static Links GetLinks() => new Links
         {
             Protagonist = Character.Protagonist.Init,

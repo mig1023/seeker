@@ -117,6 +117,20 @@ namespace Seeker.Gamebook.OrcsDay
         public List<string> Decrease() =>
             ChangeProtagonistParam(Stat, protagonist, "StatBonuses", decrease: true);
 
+        private string OrcishnessChange(string line)
+        {
+            if (line.StartsWith("+"))
+            {
+                protagonist.Orcishness += 1;
+                return String.Format("BAD|{0}", line);
+            }
+            else
+            {
+                protagonist.Orcishness -= 1;
+                return String.Format("GOOD|{0}", line);
+            }
+        }
+
         public List<string> OrcishnessInit()
         {
             Character orc = protagonist;
@@ -126,40 +140,22 @@ namespace Seeker.Gamebook.OrcsDay
             List<string> orcishness = new List<string> { "BOLD|Изначальное значение: 6" };
 
             if ((orc.Muscle < 0) || (orc.Wits < 0) || (orc.Courage < 0) || (orc.Luck < 0))
-            {
-                orcishness.Add("-1 Оркишность за отрицательный параметр");
-                orc.Orcishness -= 1;
-            }
+                orcishness.Add(OrcishnessChange(Constants.Orcishness["Negative"]));
 
             if (orc.Wits > orc.Muscle)
-            {
-                orcishness.Add("-1 Оркишность за то, что Мозги круче Мускулов");
-                orc.Orcishness -= 1;
-            }
+                orcishness.Add(OrcishnessChange(Constants.Orcishness["Wits"]));
 
             if (orc.Luck > 0)
-            {
-                orcishness.Add("-1 Оркишность за Удачу");
-                orc.Orcishness -= 1;
-            }
+                orcishness.Add(OrcishnessChange(Constants.Orcishness["Luck"]));
                 
             if ((orc.Muscle > orc.Wits) && (orc.Muscle > orc.Courage) || (orc.Muscle > orc.Luck))
-            {
-                orcishness.Add("+1 Оркишность за то, что Мышцы самое крутое");
-                orc.Orcishness += 1;
-            }
+                orcishness.Add(OrcishnessChange(Constants.Orcishness["Muscle"]));
 
             if (orc.Courage > orc.Wits)
-            {
-                orcishness.Add("+1 Оркишность за то, что Смелости больше, чем Мозгов");
-                orc.Orcishness += 1;
-            }
+                orcishness.Add(OrcishnessChange(Constants.Orcishness["Courage"]));
 
             if (orc.Courage > 2)
-            {
-                orcishness.Add("-1 Оркишность за то, что Смелости слишком много");
-                orc.Orcishness -= 1;
-            }
+                orcishness.Add(OrcishnessChange(Constants.Orcishness["TooMuch"]));
 
             orcishness.Add(String.Format("BIG|BOLD|Итоговая Оркишность: {0}", orc.Orcishness));
 
