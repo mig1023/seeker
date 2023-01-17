@@ -259,20 +259,13 @@ namespace Seeker
                     AddAdditionalButton(buttonName, StaticButton_Click);
             }
 
-            if (Game.Settings.IsEnabled("CheatingBack") && (Game.Data.Path.Count > 1))
-                Options.Children.Add(Output.Buttons.Additional("Читерство: Назад", Back_Click));
-
-            if (Game.Settings.IsEnabled("SystemMenu"))
-                Options.Children.Add(SystemMenu());
-
-            if (Game.Settings.IsEnabled("Debug"))
-                Options.Children.Add(Output.Interface.DebugInformation(id));
+            CheckGameOver();
+            OptionFooter(id);
 
             if (!reload)
                 ScrollToTop();
 
             UpdateStatus();
-            CheckGameOver();
 
             Game.Option.Trigger(paragraph.LateTrigger);
 
@@ -458,6 +451,20 @@ namespace Seeker
                 Paragraph(toEndParagraph, optionName: toEndText);
 
             Options.Children.Add(Output.Buttons.GameOver(toEndText, gameoverClick));
+
+
+        }
+
+        private void OptionFooter(int id)
+        {
+            if (Game.Settings.IsEnabled("CheatingBack") && (Game.Data.Path.Count > 1))
+                Options.Children.Add(Output.Buttons.Additional("Читерство: Назад", Back_Click));
+
+            if (Game.Settings.IsEnabled("SystemMenu"))
+                Options.Children.Add(SystemMenu());
+
+            if (Game.Settings.IsEnabled("Debug"))
+                Options.Children.Add(Output.Interface.DebugInformation(id));
         }
                
         private void Action_Click(Abstract.IActions action, StackLayout actionPlace, string anotherAction = "")
@@ -475,6 +482,7 @@ namespace Seeker
 
                 UpdateStatus();
                 CheckGameOver(action);
+                OptionFooter(Game.Data.CurrentParagraphID);
             }
         }
 
