@@ -34,6 +34,14 @@
 				<Item Name="Ограблен">-1 за то, что был ограблен</Item>
 				<Item Name="Раб своей природы">-1 за то, что стал рабом своей оркской натуры</Item>
 			</Dictionary>
+			<Dictionary Name="Orcishness">
+				<Item Name="Negative">-1 Оркишность за отрицательный параметр</Item>
+				<Item Name="Wits">-1 Оркишность за то, что Мозги круче Мускулов</Item>
+				<Item Name="Luck">-1 Оркишность за Удачу</Item>
+				<Item Name="Muscle">+1 Оркишность за то, что Мышцы самое крутое</Item>
+				<Item Name="Courage">+1 Оркишность за то, что Смелости больше, чем Мозгов</Item>
+				<Item Name="TooMuch">-1 Оркишность за то, что Смелости слишком много</Item>
+			</Dictionary>
 		</Constants>
 		<Settings>
 			<HideDisabledOption/>
