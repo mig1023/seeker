@@ -595,9 +595,12 @@
 						<Enemy Name="Мортимер Нечихающий" Attack="9" Defense="9" Hitpoints="5"/>
 					</Enemies>
 				</Fight>
+				<After>
+						<Text>Когда здоровье одного из вас упадёт до единицы (а это может произойти сразу же, если вы уже сражались раньше!):</Text>
+					</After>
 			</Actions>
 			<Options>
-				<Option Destination="7" Text="Когда здоровье одного из вас упадёт до единицы (а это может произойти сразу же, если вы уже сражались раньше!)"/>
+				<Option Destination="7"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="39">
