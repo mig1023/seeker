@@ -1143,8 +1143,10 @@
 				</Test>
 			</Actions>
 			<Options>	
-				<Option Destination="38" Text="Если преуспеешь"/>
-				<Option Destination="56" Text="Если провалишься, значит, в тебе всё ещё слишком много от орка, чтобы взбунтоваться против порядка"/>
+				<Option Destination="38" Text="Если преуспеешь">
+					<Text>Если провалишься, значит, в тебе всё ещё слишком много от орка, чтобы взбунтоваться против порядка...</Text>
+				</Option>
+				<Option Destination="56"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="80">
