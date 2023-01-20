@@ -14,10 +14,9 @@
 	<Paragraphs>
 		<Paragraph No="0">
 			<Text>Все совпадения случайны. Всё написанное художественный вымысел. Автор уважает стариков.</Text>
-			<Triggers>Продолжение</Triggers>
 			<Options>
 				<Option Destination="1" Text="В путь!"/>
-				<Option Destination="15" Text="Сразу к Кровавой Охоте" Availability="Продолжение"/>
+				<Option Destination="15" Text="Сразу к Кровавой Охоте" Style="35365e"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
