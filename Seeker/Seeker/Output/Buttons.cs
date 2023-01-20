@@ -44,6 +44,9 @@ namespace Seeker.Output
             string color = Game.Data.Constants.GetColor(optionColor ?
                 Buttons.ButtonTypes.Option : Buttons.ButtonTypes.Main);
 
+            if (!String.IsNullOrEmpty(option.Style))
+                color = option.Style;
+
             bool isEnabled = !(!String.IsNullOrEmpty(option.Availability) && !Game.Data.Availability(option.Availability));
 
             Button optionButton = new Button

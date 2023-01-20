@@ -15,6 +15,7 @@ namespace Seeker.Game
         public string Aftertext { get; set; }
         public List<Output.Text> Aftertexts { get; set; }
         public string Input { get; set; }
+        public string Style { get; set; }
 
         public Abstract.IModification Do { get; set; }
 

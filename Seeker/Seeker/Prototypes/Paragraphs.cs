@@ -133,6 +133,7 @@ namespace Seeker.Prototypes
             Input = Xml.StringParse(xmlOption.Attributes["Input"]),
             Aftertext = Xml.StringParse(xmlOption.SelectSingleNode("Text")),
             Aftertexts = Xml.TextsParse(xmlOption),
+            Style = Xml.StringParse(xmlOption.Attributes["Style"]),
         };
             
         public Option OptionsTemplate(XmlNode xmlOption)
