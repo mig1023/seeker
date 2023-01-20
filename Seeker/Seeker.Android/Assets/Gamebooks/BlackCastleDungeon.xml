@@ -29,8 +29,8 @@
 			<Triggers>Продолжение</Triggers>
 			<Options>
 				<Option Destination="619" Text="В путь!"/>
-				<Option Destination="620" Text="Ты нужен Барладу Дэрту!" Availability="Продолжение"/>
-				<Option Destination="753" Text="Ремейк" Availability="Продолжение"/>
+				<Option Destination="620" Text="Ты нужен Барладу Дэрту!" Style="696969"/>
+				<Option Destination="753" Text="Ремейк" Style="a5a5a5"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
