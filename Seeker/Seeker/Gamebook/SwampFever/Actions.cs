@@ -50,10 +50,21 @@ namespace Seeker.Gamebook.SwampFever
 
         public override bool IsButtonEnabled(bool secondButton = false)
         {
-            bool disabledByPrice = (Price > 0) && (protagonist.Creds < Price);
-            bool disabledByUsed = (String.IsNullOrEmpty(EnemyName) && (Benefit != null) && (GetProperty(protagonist, Benefit.Name) > 0));
+            bool disabledByPrice = (Price > 0) && (protagonist.Creds < Price);          
             bool disabledSellingMembrane = (Type == "SellAcousticMembrane") && (protagonist.AcousticMembrane <= 0);
             bool disabledSellingMucus = (Type == "SellLiveMucus") && (protagonist.LiveMucus <= 0);
+
+            bool disabledByUsed = false;
+
+            if ((Type == "Get") && (Text == "Серенитатин"))
+            {
+                return (GetProperty(protagonist, Benefit.Name) > -2) && (protagonist.Creds > 0);
+            }
+            else
+            {
+                bool already = GetProperty(protagonist, Benefit.Name) > 0;
+                disabledByUsed = (String.IsNullOrEmpty(EnemyName) && (Benefit != null) && already);
+            }
 
             return !(disabledByPrice || disabledByUsed || disabledSellingMembrane || disabledSellingMucus);
         }
