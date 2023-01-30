@@ -3,10 +3,10 @@
 		<Title>Три дороги</Title>
 		<Copyright>Александр Бутягин, Дмитрий Чистов, 1999</Copyright>
 		<Styles>
-			<Color Name="StatusBar">007a7a</Color>
-			<Color Name="Main, Option">009999</Color>
-			<Color Name="Action">005b5b</Color>
-			<Color Name="Continue">6fc5c5</Color>
+			<Color Name="StatusBar" Value="007a7a"/>
+			<Color Name="Main, Option" Value="009999"/>
+			<Color Name="Action" Value="005b5b"/>
+			<Color Name="Continue" Value="6fc5c5"/>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
