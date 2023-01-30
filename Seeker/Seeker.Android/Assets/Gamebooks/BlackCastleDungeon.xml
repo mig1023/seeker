@@ -3,11 +3,11 @@
 		<Title>Подземелья чёрного замка</Title>
 		<Copyright>Дмитрий Браславский, 1991</Copyright>
 		<Styles>
-			<Color Name="StatusBar">2a2a2a</Color>
-			<Color Name="Main">151515</Color>
-			<Color Name="Action">3f3f3f</Color>
-			<Color Name="Option">696969</Color>
-			<Color Name="System">f9f9f9</Color>
+			<Color Name="StatusBar" Value="2a2a2a"/>
+			<Color Name="Main" Value="151515"/>
+			<Color Name="Action" Value="3f3f3f"/>
+			<Color Name="Option" Value="696969"/>
+			<Color Name="System" Value="f9f9f9"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStatuses">0, 619, 753</List>
