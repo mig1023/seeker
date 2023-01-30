@@ -3,13 +3,13 @@
 		<Title>Месть Альтея</Title>
 		<Copyright>Джон Баттерфилд, Дэвид Хонигман и Филип Паркер, 1985</Copyright>
 		<Styles>
-			<Color Name="Main, Action">ebd5b3</Color>
-			<Color Name="Option, Background">f9f2e8</Color>
-			<Color Name="Continue">f5ead9</Color>
-			<Color Name="ButtonFont, StatusFont">000000</Color>
-			<Color Name="ActionBox">f3e5d1</Color>
-			<Color Name="StatusBar">bcaa8f</Color>
-			<Color Name="AdditionalStatus">d0c3b0</Color>
+			<Color Name="Main, Action" Value="ebd5b3"/>
+			<Color Name="Option, Background" Value="f9f2e8"/>
+			<Color Name="Continue" Value="f5ead9"/>
+			<Color Name="ButtonFont, StatusFont" Value="000000"/>
+			<Color Name="ActionBox" Value="f3e5d1"/>
+			<Color Name="StatusBar" Value="bcaa8f"/>
+			<Color Name="AdditionalStatus" Value="d0c3b0"/>
 		</Styles>
 		<Constants>
 			<List Name="WithoutStaticsButtons">0, 1</List>
