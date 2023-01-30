@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using Seeker.Gamebook;
 using System.Linq;
 using System.Text.RegularExpressions;
+using static Seeker.Game.Data;
 
 namespace Seeker.Output
 {
@@ -561,6 +562,12 @@ namespace Seeker.Output
             HorizontalOptions = LayoutOptions.FillAndExpand,
         };
 
+        private static Color GetGoodColors(Game.Data.ColorTypes color, Color defaultColor)
+        {
+            string hexColor = Game.Data.Constants.GetColor(color);
+            return String.IsNullOrEmpty(hexColor) ? defaultColor : Color.FromHex(hexColor);
+        }
+
         public static List<View> Actions(List<string> actionsLines)
         {
             List<View> actionLabels = new List<View>();
@@ -579,15 +586,15 @@ namespace Seeker.Output
                     ["YELLOW|"] = Color.Yellow,
                     ["GREEN|"] = Color.Green,
                     ["GRAY|"] = Color.Gray,
-                    ["BAD|"] = Color.Red,
-                    ["GOOD|"] = Color.Green,
+                    ["BAD|"] = GetGoodColors(ColorTypes.BadColor, Color.Red),
+                    ["GOOD|"] = GetGoodColors(ColorTypes.GoodColor, Color.Green),
                     ["BIG|"] = null,
                     ["BOLD|"] = null,
                     ["HEAD|"] = null,
                     ["LINE|"] = null,
                 };
 
-                foreach(string color in textTypes.Keys.Where(x => text.Contains(x)))
+                foreach (string color in textTypes.Keys.Where(x => text.Contains(x)))
                     actions.TextColor = textTypes[color] ?? actions.TextColor;
 
                 actions.FontSize = FontSize(text.Contains("BIG|") ? TextFontSize.Normal : TextFontSize.Little);

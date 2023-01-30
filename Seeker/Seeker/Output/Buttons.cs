@@ -6,7 +6,16 @@ namespace Seeker.Output
 {
     class Buttons
     {
-        public enum ButtonTypes { Main, Action, Option, ButtonFont, Border, Continue, System }
+        public enum ButtonTypes
+        {
+            Main,
+            Action,
+            Option,
+            ButtonFont,
+            Border,
+            Continue,
+            System,
+        };
 
         public static Button Action(string actionName, EventHandler onClick, bool enabled = true)
         {
