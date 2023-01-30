@@ -3,13 +3,13 @@
 		<Title>Лунатик</Title>
 		<Copyright>Стивен Хэнд, 1992</Copyright>
 		<Styles>
-			<Color Name="StatusBar">44264b</Color>
-			<Color Name="ActionBox">e3d9d9</Color>
-			<Color Name="Main">72407d</Color>
-			<Color Name="Option">80538a</Color>
-			<Color Name="Continue">aa8cb1</Color>
-			<Color Name="Action">7e0059</Color>
-			<Color Name="System">ddd1df</Color>
+			<Color Name="StatusBar" Value="44264b"/>
+			<Color Name="ActionBox" Value="e3d9d9"/>
+			<Color Name="Main" Value="72407d"/>
+			<Color Name="Option" Value="80538a"/>
+			<Color Name="Continue" Value="aa8cb1"/>
+			<Color Name="Action" Value="7e0059"/>
+			<Color Name="System" Value="ddd1df"/>
 		</Styles>
 		<Constants>
 			<Dictionary Name="SpellsList">
