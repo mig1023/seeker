@@ -12,6 +12,8 @@
 			<Color Name="Action">5a6546</Color>
 			<Color Name="Continue">8c937f</Color>
 			<Color Name="System">717963</Color>
+			<Color Name="GoodColor">145314</Color>
+			<Color Name="BadColor">7f0000</Color>
 		</Styles>
 		<Constants>
 			<Dictionary Name="GetRangeTypes">
