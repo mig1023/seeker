@@ -3,9 +3,9 @@
 		<Title>Дикая смерть</Title>
 		<Copyright>Дмитрий Бродовский, 2019</Copyright>
 		<Styles>
-			<Color Name="Main">86964f</Color>
-			<Color Name="Continue">b6c095</Color>
-			<Color Name="System">cbd2b4</Color>
+			<Color Name="Main" Value="86964f"/>
+			<Color Name="Continue" Value="b6c095"/>
+			<Color Name="System" Value="cbd2b4"/>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
