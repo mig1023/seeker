@@ -11,6 +11,7 @@
 			<Color Name="Action">2a2a2a</Color>
 			<Color Name="Option">494949</Color>
 			<Color Name="Continue">2f2f2f</Color>
+			<Color Name="SystemFont">a8a8a8</Color>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
