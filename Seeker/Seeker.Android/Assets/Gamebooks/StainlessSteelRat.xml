@@ -3,12 +3,12 @@
 		<Title>Крыса из нержавеющей стали</Title>
 		<Copyright>Гарри Гаррисон, 1985</Copyright>
 		<Styles>
-			<Color Name="Background">4a5b6c</Color>
-			<Color Name="Font">c3c6c8</Color>
-			<Color Name="SystemFont">ffffff</Color>
-			<Color Name="Main">425161</Color>
-			<Color Name="Continue">5c6b7a</Color>
-			<Color Name="System">546270</Color>
+			<Color Name="Background" Value="4a5b6c"/>
+			<Color Name="Font" Value="c3c6c8"/>
+			<Color Name="SystemFont" Value="ffffff"/>
+			<Color Name="Main" Value="425161"/>
+			<Color Name="Continue" Value="5c6b7a"/>
+			<Color Name="System" Value="546270"/>
 		</Styles>
 		<Settings>
 			<HideDisabledOption/>
