@@ -15,9 +15,9 @@
 		<Constants>
 			<List Name="WithoutStatuses">0, 401, 402</List>
 			<Dictionary Name="GetStartValues">
-				<Item Name="Fight">10</Item>
-				<Item Name="Accuracy">10</Item>
-				<Item Name="Stealth">3</Item>
+				<Item Name="Fight" Value="10"/>
+				<Item Name="Accuracy" Value="10"/>
+				<Item Name="Stealth" Value="3"/>
 			</Dictionary>
 		</Constants>
 		<Settings>
