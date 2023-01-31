@@ -16,12 +16,12 @@
 			<List Name="WithoutStatuses">0, 205</List>
 			<List Name="WithoutStaticsButtons">0, 30, 60, 90</List>
 			<Dictionary Name="StatNames">
-				<Item Name="Strength">силы</Item>
-				<Item Name="Skill">ловкости</Item>
-				<Item Name="Wisdom">мудрости</Item>
-				<Item Name="Cunning">хитрости</Item>
-				<Item Name="Oratory">красноречия</Item>
-				<Item Name="Popularity">популярности</Item>
+				<Item Name="Strength" Value="силы"/>
+				<Item Name="Skill" Value="ловкости"/>
+				<Item Name="Wisdom" Value="мудрости"/>
+				<Item Name="Cunning" Value="хитрости"/>
+				<Item Name="Oratory" Value="красноречия"/>
+				<Item Name="Popularity" Value="популярности"/>
 			</Dictionary>
 		</Constants>
 		<Settings>
