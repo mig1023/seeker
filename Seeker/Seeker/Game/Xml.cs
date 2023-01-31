@@ -176,7 +176,10 @@ namespace Seeker.Game
                 AddButtonsTexts(xmlNode);
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/List")))
-                Data.Constants.LoadList(xmlNode.Attributes["Name"].InnerText, xmlNode.InnerText.Split(',').ToList());
+            {
+                List<string> values = xmlNode.Attributes["Value"].InnerText.Split(',').ToList();
+                Data.Constants.LoadList(xmlNode.Attributes["Name"].InnerText, values);
+            }
 
             foreach (XmlNode xmlNode in xmlFile.SelectNodes(Intro("Constants/Dictionary")))
             {
