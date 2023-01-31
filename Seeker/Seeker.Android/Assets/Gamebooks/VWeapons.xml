@@ -9,7 +9,7 @@
 			<Color Name="System" Value="f4f4f4"/>
 		</Styles>
 		<Constants>
-			<List Name="WithoutStatuses">0, 266</List>
+			<List Name="WithoutStatuses" Value="0, 266"/>
 			<Dictionary Name="HealingParts">
 				<Item Name="головы" Value="Head"/>
 				<Item Name="плеч" Value="ShoulderGirdle"/>
