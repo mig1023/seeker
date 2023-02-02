@@ -111,8 +111,7 @@
 		<Setting>Фэнтези</Setting>
 		<Color>4c0000</Color>
 	</LegendsAlwaysLie>
-	<Description>
-		<Name>StringOfWorlds</Name>
+	<StringOfWorlds>
 		<Title>Вереница миров или выводы из закона Мэрфи</Title>
 		<Author>Ольга Голотвина</Author>
 		<Year>1995</Year>
@@ -121,7 +120,7 @@
 		<Size>50282</Size>
 		<Setting>Приключения</Setting>
 		<Color>990066</Color>
-	</Description>
+	</StringOfWorlds>
 	<Description>
 		<Name>ThreePaths</Name>
 		<Title>Три дороги</Title>
