@@ -100,8 +100,7 @@
 		<Setting>Фэнтези</Setting>
 		<Color>3662ae</Color>
 	</MentorsAlwaysRight>
-	<Description>
-		<Name>LegendsAlwaysLie</Name>
+	<LegendsAlwaysLie>
 		<Title>Легенды всегда врут</Title>
 		<Author>Роман Островерхов</Author>
 		<Year>2012</Year>
@@ -111,7 +110,7 @@
 		<LongPlaythrough/>
 		<Setting>Фэнтези</Setting>
 		<Color>4c0000</Color>
-	</Description>
+	</LegendsAlwaysLie>
 	<Description>
 		<Name>StringOfWorlds</Name>
 		<Title>Вереница миров или выводы из закона Мэрфи</Title>
