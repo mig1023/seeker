@@ -361,8 +361,7 @@
 		<Setting>История</Setting>
 		<Color>441012</Color>
 	</GoingToLaughter>
-	<Description>
-		<Name>WildDeath</Name>
+	<WildDeath>
 		<Title>Дикая смерть</Title>
 		<Author>Дмитрий Бродовский</Author>
 		<Year>2019</Year>
@@ -372,7 +371,7 @@
 		<ShortPlaythrough/>
 		<Setting>Юмор</Setting>
 		<Color>86964f</Color>
-	</Description>
+	</WildDeath>
 	<Description>
 		<Name>ByTheWillOfRome</Name>
 		<Title>По воле Рима</Title>
