@@ -314,8 +314,7 @@
 		<Setting>Научная фантастика</Setting>
 		<Color>4b899b</Color>
 	</HeartOfIce>
-	<Description>
-		<Name>VWeapons</Name>
+	<VWeapons>
 		<Title>Оружие возмездия</Title>
 		<Author>Андрей Тишин</Author>
 		<Year>2013</Year>
@@ -328,7 +327,7 @@
 			<Font>000000</Font>
 			<Border>000000</Border>
 		</Colors>
-	</Description>
+	</VWeapons>
 	<Description>
 		<Name>LandOfUnwaryBears</Name>
 		<Title>В краю непуганных медведей</Title>
