@@ -292,8 +292,7 @@
 		<Setting>Научная фантастика</Setting>
 		<Color>51514b</Color>
 	</Catharsis>
-	<Description>
-		<Name>PrairieLaw</Name>
+	<PrairieLaw>
 		<Title>По закону прерии</Title>
 		<Author>Ольга Голотвина</Author>
 		<Year>1995</Year>
@@ -302,7 +301,7 @@
 		<Size>47630</Size>
 		<Setting>Приключения</Setting>
 		<Color>b66247</Color>
-	</Description>
+	</PrairieLaw>
 	<Description>
 		<Name>HeartOfIce</Name>
 		<Title>Сердце льда</Title>
