@@ -233,8 +233,7 @@
 		<Setting>История</Setting>
 		<Color>b80f0a</Color>
 	</LordOfTheSteppes>
-	<Description>
-		<Name>HowlOfTheWerewolf</Name>
+	<HowlOfTheWerewolf>
 		<Title>Вой оборотня</Title>
 		<Original>Howl Of The Werewolf</Original>
 		<Author>Джонатан Грин</Author>
@@ -245,7 +244,7 @@
 		<Size>69351</Size>
 		<Setting>Фэнтези</Setting>
 		<Color>383e3b</Color>
-	</Description>
+	</HowlOfTheWerewolf>
 	<Description>
 		<Name>StainlessSteelRat</Name>
 		<Title>Крыса из нержавеющей стали</Title>
