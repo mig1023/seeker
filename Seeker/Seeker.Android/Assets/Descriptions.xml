@@ -20,8 +20,7 @@
 		<Setting>История</Setting>
 		<Color>4682B4</Color>
 	</CaptainSheltonsSecret>
-	<Description>
-		<Name>FaithfulSwordOfTheKing</Name>
+	<FaithfulSwordOfTheKing>
 		<Title>Верная шпага короля</Title>
 		<Author>Дмитрий Браславский</Author>
 		<Year>1995</Year>
@@ -30,7 +29,7 @@
 		<Size>50166</Size>
 		<Setting>История</Setting>
 		<Color>911</Color>
-	</Description>
+	</FaithfulSwordOfTheKing>
 	<Description>
 		<Name>AdventuresOfABeardlessDeceiver</Name>
 		<Title>Приключения безбородого обманщика</Title>
