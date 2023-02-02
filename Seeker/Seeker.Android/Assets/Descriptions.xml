@@ -339,8 +339,7 @@
 		<Setting>Юмор</Setting>
 		<Color>9e003a</Color>
 	</LandOfUnwaryBears>
-	<Description>
-		<Name>YounglingTournament</Name>
+	<YounglingTournament>
 		<Title>Турнир юнлингов</Title>
 		<Author>Александр Андросенко</Author>
 		<Year>2018</Year>
@@ -350,7 +349,7 @@
 		<LongPlaythrough/>
 		<Setting>Приключения</Setting>
 		<Color>c0ac6c</Color>
-	</Description>
+	</YounglingTournament>
 	<Description>
 		<Name>GoingToLaughter</Name>
 		<Title>Идущий на смех</Title>
