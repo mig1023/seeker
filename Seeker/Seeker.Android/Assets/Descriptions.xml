@@ -437,8 +437,7 @@
 		<Setting>Юмор</Setting>
 		<Color>7d2c1c</Color>
 	</Sheriff>
-	<Description>
-		<Name>Moonrunner</Name>
+	<Moonrunner>
 		<Title>Лунатик</Title>
 		<Original>Moonrunner</Original>
 		<Author>Стивен Хэнд</Author>
@@ -449,7 +448,7 @@
 		<Size>35688</Size>
 		<Setting>Фэнтези</Setting>
 		<Color>72407d</Color>
-	</Description>
+	</Moonrunner>
 	<Description>
 		<Name>DeathOfAntiquary</Name>
 		<Title>Смерть антиквара</Title>
