@@ -257,8 +257,7 @@
 		<Setting>Юмор</Setting>
 		<Color>333f4b</Color>
 	</StainlessSteelRat>
-	<Description>
-		<Name>LastHokku</Name>
+	<LastHokku>
 		<Title>Последнее хокку</Title>
 		<Author>Юркий Слон</Author>
 		<FullPseudonym/>
@@ -272,7 +271,7 @@
 			<Book>deb887</Book>
 			<Font>000000</Font>
 		</Colors>
-	</Description>
+	</LastHokku>
 	<Description>
 		<Name>Genesis</Name>
 		<Title>Генезис</Title>
