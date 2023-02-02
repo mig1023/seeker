@@ -1,6 +1,5 @@
 <Gamebooks>
-	<Description>
-		<Name>BlackCastleDungeon</Name>
+	<BlackCastleDungeon>
 		<Title>Подземелья чёрного замка</Title>
 		<Authors>Дмитрий Браславский,\nЮри Линн (дополнение),\nАлександр Молотков (ремейк)</Authors>
 		<Year>1991</Year>
@@ -10,7 +9,7 @@
 		<Size>150021</Size>
 		<Setting>Фэнтези</Setting>
 		<Color>151515</Color>
-	</Description>
+	</BlackCastleDungeon>
 	<Description>
 		<Name>CaptainSheltonsSecret</Name>
 		<Title>Тайна капитана Шелтона</Title>
