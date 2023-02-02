@@ -471,8 +471,7 @@
 		<Setting>Научная фантастика</Setting>
 		<Color>118984</Color>
 	</Cyberpunk>
-	<Description>
-		<Name>SilverAgeSilhouette</Name>
+	<SilverAgeSilhouette>
 		<Title>Серебряного века Силуэт</Title>
 		<Author>Константин Шепелин</Author>
 		<Year>2014</Year>
@@ -481,7 +480,7 @@
 		<Size>71753</Size>
 		<Setting>Стихи</Setting>
 		<Color>4e1e07</Color>
-	</Description>
+	</SilverAgeSilhouette>
 	<Description>
 		<Name>StrikeBack</Name>
 		<Title>Монстр наносит ответный удар</Title>
