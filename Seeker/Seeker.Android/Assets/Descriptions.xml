@@ -80,8 +80,7 @@
 			<Border>000000</Border>
 		</Colors>
 	</RendezVous>
-	<Description>
-		<Name>SwampFever</Name>
+	<SwampFever>
 		<Title>Болотная лихорадка</Title>
 		<Author>Пётр Прокошев</Author>
 		<Year>2017</Year>
@@ -90,7 +89,7 @@
 		<Size>17353</Size>
 		<Setting>Научная фантастика</Setting>
 		<Color>ff557c48</Color>
-	</Description>
+	</SwampFever>
 	<Description>
 		<Name>MentorsAlwaysRight</Name>
 		<Title>Наставники всегда правы</Title>
