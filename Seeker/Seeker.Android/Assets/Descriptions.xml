@@ -51,8 +51,7 @@
 		<Setting>История</Setting>
 		<Color>533818</Color>
 	</DzungarWar>
-	<Description>
-		<Name>RockOfTerror</Name>
+	<RockOfTerror>
 		<Title>Скала ужаса</Title>
 		<Author>Дмитрий Тышевич</Author>
 		<Year>2009</Year>
@@ -62,7 +61,7 @@
 		<ShortPlaythrough/>
 		<Setting>История</Setting>
 		<Color>000000</Color>
-	</Description>
+	</RockOfTerror>
 	<Description>
 		<Name>RendezVous</Name>
 		<Title>Рандеву</Title>
