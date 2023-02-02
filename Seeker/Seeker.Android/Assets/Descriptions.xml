@@ -481,8 +481,7 @@
 		<Setting>Стихи</Setting>
 		<Color>4e1e07</Color>
 	</SilverAgeSilhouette>
-	<Description>
-		<Name>StrikeBack</Name>
+	<StrikeBack>
 		<Title>Монстр наносит ответный удар</Title>
 		<Author>Хироси Ямамото</Author>
 		<Translator>Сергей Посниченко</Translator>
@@ -492,5 +491,5 @@
 		<Size>46222</Size>
 		<Setting>Фэнтези</Setting>
 		<Color>4d5339</Color>
-	</Description>
+	</StrikeBack>
 </Gamebooks>
