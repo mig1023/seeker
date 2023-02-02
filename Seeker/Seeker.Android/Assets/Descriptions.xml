@@ -328,8 +328,7 @@
 			<Border>000000</Border>
 		</Colors>
 	</VWeapons>
-	<Description>
-		<Name>LandOfUnwaryBears</Name>
+	<LandOfUnwaryBears>
 		<Title>В краю непуганных медведей</Title>
 		<Author>Геннадий Логинов</Author>
 		<Year>2020</Year>
@@ -339,7 +338,7 @@
 		<ShortPlaythrough/>
 		<Setting>Юмор</Setting>
 		<Color>9e003a</Color>
-	</Description>
+	</LandOfUnwaryBears>
 	<Description>
 		<Name>YounglingTournament</Name>
 		<Title>Турнир юнлингов</Title>
