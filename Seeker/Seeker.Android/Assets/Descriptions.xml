@@ -412,8 +412,7 @@
 			<Font>000000</Font>
 		</Colors>
 	</OrcsDay>
-	<Description>
-		<Name>ChooseCthulhu</Name>
+	<ChooseCthulhu>
 		<Title>Всегда выбирай Ктулху</Title>		
 		<Original>Choose Cthulhu 6: The dreams in the Witch House</Original>
 		<Author>Эдвард Райкер</Author>
@@ -425,7 +424,7 @@
 		<ShortPlaythrough/>
 		<Setting>Приключения</Setting>
 		<Color>10424d</Color>
-	</Description>
+	</ChooseCthulhu>
 	<Description>
 		<Name>Sheriff</Name>
 		<Title>Шериф</Title>
