@@ -245,8 +245,7 @@
 		<Setting>Фэнтези</Setting>
 		<Color>383e3b</Color>
 	</HowlOfTheWerewolf>
-	<Description>
-		<Name>StainlessSteelRat</Name>
+	<StainlessSteelRat>
 		<Title>Крыса из нержавеющей стали</Title>
 		<Original>You can be the Stainless Steel Rat</Original>
 		<Author>Гарри Гаррисон</Author>
@@ -257,7 +256,7 @@
 		<Size>34020</Size>
 		<Setting>Юмор</Setting>
 		<Color>333f4b</Color>
-	</Description>
+	</StainlessSteelRat>
 	<Description>
 		<Name>LastHokku</Name>
 		<Title>Последнее хокку</Title>
