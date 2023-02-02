@@ -62,8 +62,7 @@
 		<Setting>История</Setting>
 		<Color>000000</Color>
 	</RockOfTerror>
-	<Description>
-		<Name>RendezVous</Name>
+	<RendezVous>
 		<Title>Рандеву</Title>
 		<Original>Rendez-Vous</Original>
 		<Author>Ал Торо</Author>
@@ -80,7 +79,7 @@
 			<Font>000000</Font>
 			<Border>000000</Border>
 		</Colors>
-	</Description>
+	</RendezVous>
 	<Description>
 		<Name>SwampFever</Name>
 		<Title>Болотная лихорадка</Title>
