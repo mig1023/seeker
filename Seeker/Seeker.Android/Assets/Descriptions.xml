@@ -272,8 +272,7 @@
 			<Font>000000</Font>
 		</Colors>
 	</LastHokku>
-	<Description>
-		<Name>Genesis</Name>
+	<Genesis>
 		<Title>Генезис</Title>
 		<Author>Андрей Журавлёв</Author>
 		<Year>2013</Year>
@@ -282,7 +281,7 @@
 		<Size>35017</Size>
 		<Setting>Научная фантастика</Setting>
 		<Color>202b41</Color>
-	</Description>
+	</Genesis>
 	<Description>
 		<Name>Catharsis</Name>
 		<Title>Катарсис</Title>
