@@ -145,8 +145,7 @@
 			<Font>eede49</Font>
 		</Colors>
 	</InvisibleFront>
-	<Description>
-		<Name>SilentSchool</Name>
+	<SilentSchool>
 		<Title>Silent School</Title>
 		<Author>Роман Островерхов</Author>
 		<Year>2013</Year>
@@ -155,7 +154,7 @@
 		<Size>19273</Size>
 		<Setting>Приключения</Setting>
 		<Color>151515</Color>
-	</Description>
+	</SilentSchool>
 	<Description>
 		<Name>ThoseWhoAreAboutToDie</Name>
 		<Title>Идущие на смерть</Title>
