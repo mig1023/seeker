@@ -460,8 +460,7 @@
 		<Setting>Юмор</Setting>
 		<Color>2e2e2e</Color>
 	</DeathOfAntiquary>
-	<Description>
-		<Name>Cyberpunk</Name>
+	<Cyberpunk>
 		<Title>Киберпанк: Тени Найт-Сити</Title>
 		<Author>Мария Ерошкина</Author>
 		<Year>2021</Year>
@@ -471,7 +470,7 @@
 		<ShortPlaythrough/>
 		<Setting>Научная фантастика</Setting>
 		<Color>118984</Color>
-	</Description>
+	</Cyberpunk>
 	<Description>
 		<Name>SilverAgeSilhouette</Name>
 		<Title>Серебряного века Силуэт</Title>
