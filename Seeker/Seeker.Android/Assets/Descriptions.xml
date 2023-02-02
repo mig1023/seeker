@@ -372,8 +372,7 @@
 		<Setting>Юмор</Setting>
 		<Color>86964f</Color>
 	</WildDeath>
-	<Description>
-		<Name>ByTheWillOfRome</Name>
+	<ByTheWillOfRome>
 		<Title>По воле Рима</Title>
 		<Author>Константин Таро</Author>
 		<Year>2010</Year>
@@ -382,7 +381,7 @@
 		<Size>33252</Size>
 		<Setting>История</Setting>
 		<Color>670b0c</Color>
-	</Description>
+	</ByTheWillOfRome>
 	<Description>
 		<Name>Damanskiy</Name>
 		<Title>Даманский</Title>
