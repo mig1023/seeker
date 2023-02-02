@@ -168,8 +168,7 @@
 			<Font>000000</Font>
 		</Colors>
 	</ThoseWhoAreAboutToDie>
-	<Description>
-		<Name>OctopusIsland</Name>
+	<OctopusIsland>
 		<Title>Остров Осьминогов</Title>
 		<Original>Les conquérants de l'Impossible: L'ile aux pieuvres</Original>
 		<Author>Филипп Эбли</Author>
@@ -180,7 +179,7 @@
 		<Size>39379</Size>
 		<Setting>Приключения</Setting>
 		<Color>c93c20</Color>
-	</Description>
+	</OctopusIsland>
 	<Description>
 		<Name>CreatureOfHavoc</Name>
 		<Title>Разрушитель</Title>
