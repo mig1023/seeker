@@ -396,8 +396,7 @@
 			<Font>000000</Font>
 		</Colors>
 	</Damanskiy>
-	<Description>
-		<Name>OrcsDay</Name>
+	<OrcsDay>
 		<Title>День Орка</Title>
 		<Author>Кейси Трэйвис</Author>
 		<Original>Orc’s Day</Original>
@@ -412,7 +411,7 @@
 			<Book>a4be84</Book>
 			<Font>000000</Font>
 		</Colors>
-	</Description>
+	</OrcsDay>
 	<Description>
 		<Name>ChooseCthulhu</Name>
 		<Title>Всегда выбирай Ктулху</Title>		
