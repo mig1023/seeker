@@ -449,8 +449,7 @@
 		<Setting>Фэнтези</Setting>
 		<Color>72407d</Color>
 	</Moonrunner>
-	<Description>
-		<Name>DeathOfAntiquary</Name>
+	<DeathOfAntiquary>
 		<Title>Смерть антиквара</Title>
 		<Author>Константин Таро</Author>
 		<Year>2021</Year>
@@ -460,7 +459,7 @@
 		<ShortPlaythrough/>
 		<Setting>Юмор</Setting>
 		<Color>2e2e2e</Color>
-	</Description>
+	</DeathOfAntiquary>
 	<Description>
 		<Name>Cyberpunk</Name>
 		<Title>Киберпанк: Тени Найт-Сити</Title>
