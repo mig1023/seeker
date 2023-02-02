@@ -19,8 +19,14 @@ namespace Seeker.Gamebook.ThoseWhoAreAboutToDie
         {
             Option option = OptionsTemplateWithoutDestination(xmlOption);
 
-            if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
+            if (ThisIsGameover(xmlOption))
+            {
+                option.Destination = GetDestination(xmlOption);
+            }
+            else if (int.TryParse(xmlOption.Attributes["Destination"].Value, out int _))
+            {
                 option.Destination = Xml.IntParse(xmlOption.Attributes["Destination"]);
+            }
             else
             {
                 List<string> link = xmlOption.Attributes["Destination"].Value.Split(',').ToList<string>();
