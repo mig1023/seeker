@@ -40,8 +40,7 @@
 		<Setting>История</Setting>
 		<Color>5da130</Color>
 	</AdventuresOfABeardlessDeceiver>
-	<Description>
-		<Name>DzungarWar</Name>
+	<DzungarWar>
 		<Title>Джунгарское нашествие</Title>
 		<Author>Владимир Сизиков</Author>
 		<Year>2016</Year>
@@ -51,7 +50,7 @@
 		<LongPlaythrough/>
 		<Setting>История</Setting>
 		<Color>533818</Color>
-	</Description>
+	</DzungarWar>
 	<Description>
 		<Name>RockOfTerror</Name>
 		<Title>Скала ужаса</Title>
