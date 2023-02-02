@@ -302,8 +302,7 @@
 		<Setting>Приключения</Setting>
 		<Color>b66247</Color>
 	</PrairieLaw>
-	<Description>
-		<Name>HeartOfIce</Name>
+	<HeartOfIce>
 		<Title>Сердце льда</Title>
 		<Original>Heart Of Ice</Original>
 		<Author>Дэйв Моррис</Author>
@@ -314,7 +313,7 @@
 		<Size>66355</Size>
 		<Setting>Научная фантастика</Setting>
 		<Color>4b899b</Color>
-	</Description>
+	</HeartOfIce>
 	<Description>
 		<Name>VWeapons</Name>
 		<Title>Оружие возмездия</Title>
