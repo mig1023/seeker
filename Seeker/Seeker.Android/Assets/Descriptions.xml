@@ -10,8 +10,7 @@
 		<Setting>Фэнтези</Setting>
 		<Color>151515</Color>
 	</BlackCastleDungeon>
-	<Description>
-		<Name>CaptainSheltonsSecret</Name>
+	<CaptainSheltonsSecret>
 		<Title>Тайна капитана Шелтона</Title>
 		<Author>Дмитрий Браславский</Author>
 		<Year>1992</Year>
@@ -20,7 +19,7 @@
 		<Size>48184</Size>
 		<Setting>История</Setting>
 		<Color>4682B4</Color>
-	</Description>
+	</CaptainSheltonsSecret>
 	<Description>
 		<Name>FaithfulSwordOfTheKing</Name>
 		<Title>Верная шпага короля</Title>
