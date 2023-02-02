@@ -30,8 +30,7 @@
 		<Setting>История</Setting>
 		<Color>911</Color>
 	</FaithfulSwordOfTheKing>
-	<Description>
-		<Name>AdventuresOfABeardlessDeceiver</Name>
+	<AdventuresOfABeardlessDeceiver>
 		<Title>Приключения безбородого обманщика</Title>
 		<Author>Владимир Сизиков</Author>
 		<Year>2015</Year>
@@ -40,7 +39,7 @@
 		<Size>41264</Size>
 		<Setting>История</Setting>
 		<Color>5da130</Color>
-	</Description>
+	</AdventuresOfABeardlessDeceiver>
 	<Description>
 		<Name>DzungarWar</Name>
 		<Title>Джунгарское нашествие</Title>
