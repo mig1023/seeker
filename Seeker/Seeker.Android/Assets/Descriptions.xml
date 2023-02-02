@@ -425,8 +425,7 @@
 		<Setting>Приключения</Setting>
 		<Color>10424d</Color>
 	</ChooseCthulhu>
-	<Description>
-		<Name>Sheriff</Name>
+	<Sheriff>
 		<Title>Шериф</Title>
 		<Author>Zaratystra</Author>
 		<SinglePseudonym/>
@@ -437,7 +436,7 @@
 		<ShortPlaythrough/>
 		<Setting>Юмор</Setting>
 		<Color>7d2c1c</Color>
-	</Description>
+	</Sheriff>
 	<Description>
 		<Name>Moonrunner</Name>
 		<Title>Лунатик</Title>
