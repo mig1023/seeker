@@ -52,9 +52,11 @@ namespace Seeker.Gamebook
             ["StrikeBack"] = StrikeBack.Constants.GetLinks(),
         };
 
-        public static List<string> GetBooks() => Books.Keys.ToList();
+        public static List<string> GetBooks() =>
+            Books.Keys.ToList();
 
-        public static int Sort() => Game.Settings.GetValue("Sort");
+        public static int Sort() =>
+            Game.Settings.GetValue("Sort");
 
         private static List<Description> SortByTitle(List<Description> list)
         {

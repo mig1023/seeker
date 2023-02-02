@@ -323,8 +323,8 @@ namespace Seeker.Game
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.LoadXml(DependencyService.Get<Abstract.IAssets>().GetFromAssets(Data.DescriptionXml));
 
-            foreach (XmlNode xmlNode in xmlFile.SelectNodes("Gamebooks/Description"))
-                Descriptions.Add(xmlNode["Name"].InnerText, xmlNode);
+            foreach (XmlNode xmlNode in xmlFile.SelectNodes("Gamebooks/*"))
+                Descriptions.Add(xmlNode.Name, xmlNode);
         }
 
         private static void SettingsLoad()

@@ -50,7 +50,8 @@ namespace Seeker
                 ScrollToTop();
         }
 
-        private void ScrollToTop() => MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
+        private void ScrollToTop() =>
+            MainScroll.ScrollToAsync(MainScroll, ScrollToPosition.Start, true);
 
         private void Gamebook_Click(string gamebook)
         {
@@ -451,8 +452,6 @@ namespace Seeker
                 Paragraph(toEndParagraph, optionName: toEndText);
 
             Options.Children.Add(Output.Buttons.GameOver(toEndText, gameoverClick));
-
-
         }
 
         private void OptionFooter(int id)
