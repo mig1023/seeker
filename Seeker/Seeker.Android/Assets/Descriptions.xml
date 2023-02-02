@@ -155,8 +155,7 @@
 		<Setting>Приключения</Setting>
 		<Color>151515</Color>
 	</SilentSchool>
-	<Description>
-		<Name>ThoseWhoAreAboutToDie</Name>
+	<ThoseWhoAreAboutToDie>
 		<Title>Идущие на смерть</Title>
 		<Author>Александр Слюта</Author>
 		<Year>2009</Year>
@@ -168,7 +167,7 @@
 			<Book>fcdd76</Book>
 			<Font>000000</Font>
 		</Colors>
-	</Description>
+	</ThoseWhoAreAboutToDie>
 	<Description>
 		<Name>OctopusIsland</Name>
 		<Title>Остров Осьминогов</Title>
