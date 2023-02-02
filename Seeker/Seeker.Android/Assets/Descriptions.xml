@@ -131,8 +131,7 @@
 		<Setting>Фэнтези</Setting>
 		<Color>009999</Color>
 	</ThreePaths>
-	<Description>
-		<Name>InvisibleFront</Name>
+	<InvisibleFront>
 		<Title>На невидимых фронтах</Title>
 		<Author>mmvvss</Author>
 		<SinglePseudonym/>
@@ -145,7 +144,7 @@
 			<Book>d52b1e</Book>
 			<Font>eede49</Font>
 		</Colors>
-	</Description>
+	</InvisibleFront>
 	<Description>
 		<Name>SilentSchool</Name>
 		<Title>Silent School</Title>
