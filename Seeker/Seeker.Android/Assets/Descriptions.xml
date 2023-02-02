@@ -282,8 +282,7 @@
 		<Setting>Научная фантастика</Setting>
 		<Color>202b41</Color>
 	</Genesis>
-	<Description>
-		<Name>Catharsis</Name>
+	<Catharsis>
 		<Title>Катарсис</Title>
 		<Author>Андрей Журавлёв</Author>
 		<Year>2013</Year>
@@ -292,7 +291,7 @@
 		<Size>60066</Size>
 		<Setting>Научная фантастика</Setting>
 		<Color>51514b</Color>
-	</Description>
+	</Catharsis>
 	<Description>
 		<Name>PrairieLaw</Name>
 		<Title>По закону прерии</Title>
