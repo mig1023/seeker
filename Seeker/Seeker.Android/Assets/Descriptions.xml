@@ -121,8 +121,7 @@
 		<Setting>Приключения</Setting>
 		<Color>990066</Color>
 	</StringOfWorlds>
-	<Description>
-		<Name>ThreePaths</Name>
+	<ThreePaths>
 		<Title>Три дороги</Title>
 		<Authors>Александр Бутягин, Дмитрий Чистов</Authors>
 		<Year>1999</Year>
@@ -131,7 +130,7 @@
 		<Size>88028</Size>
 		<Setting>Фэнтези</Setting>
 		<Color>009999</Color>
-	</Description>
+	</ThreePaths>
 	<Description>
 		<Name>InvisibleFront</Name>
 		<Title>На невидимых фронтах</Title>
