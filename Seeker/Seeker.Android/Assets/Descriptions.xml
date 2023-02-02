@@ -90,8 +90,7 @@
 		<Setting>Научная фантастика</Setting>
 		<Color>ff557c48</Color>
 	</SwampFever>
-	<Description>
-		<Name>MentorsAlwaysRight</Name>
+	<MentorsAlwaysRight>
 		<Title>Наставники всегда правы</Title>
 		<Author>Роман Островерхов</Author>
 		<Year>2011</Year>
@@ -100,7 +99,7 @@
 		<Size>37538</Size>
 		<Setting>Фэнтези</Setting>
 		<Color>3662ae</Color>
-	</Description>
+	</MentorsAlwaysRight>
 	<Description>
 		<Name>LegendsAlwaysLie</Name>
 		<Title>Легенды всегда врут</Title>
