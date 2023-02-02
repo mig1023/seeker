@@ -209,8 +209,7 @@
 			<Font>000000</Font>
 		</Colors>
 	</BloodfeudOfAltheus>
-	<Description>
-		<Name>PensionerSimulator</Name>
+	<PensionerSimulator>
 		<Title>Симулятор пенсионерки</Title>
 		<Authors>Zaratystra,\nthe_arsonist (дополнение)</Authors>
 		<SinglePseudonym/>
@@ -222,7 +221,7 @@
 		<ShortPlaythrough/>
 		<Setting>Юмор</Setting>
 		<Color>030436</Color>
-	</Description>
+	</PensionerSimulator>
 	<Description>
 		<Name>LordOfTheSteppes</Name>
 		<Title>Владыка степей</Title>
