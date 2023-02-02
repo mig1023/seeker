@@ -222,8 +222,7 @@
 		<Setting>Юмор</Setting>
 		<Color>030436</Color>
 	</PensionerSimulator>
-	<Description>
-		<Name>LordOfTheSteppes</Name>
+	<LordOfTheSteppes>
 		<Title>Владыка степей</Title>
 		<Author>Сергей Ступин</Author>
 		<Year>2009</Year>
@@ -233,7 +232,7 @@
 		<LongPlaythrough/>
 		<Setting>История</Setting>
 		<Color>b80f0a</Color>
-	</Description>
+	</LordOfTheSteppes>
 	<Description>
 		<Name>HowlOfTheWerewolf</Name>
 		<Title>Вой оборотня</Title>
