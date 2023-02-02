@@ -350,8 +350,7 @@
 		<Setting>Приключения</Setting>
 		<Color>c0ac6c</Color>
 	</YounglingTournament>
-	<Description>
-		<Name>GoingToLaughter</Name>
+	<GoingToLaughter>
 		<Title>Идущий на смех</Title>
 		<Author>Геннадий Логинов</Author>
 		<Year>2018</Year>
@@ -361,7 +360,7 @@
 		<LongPlaythrough/>
 		<Setting>История</Setting>
 		<Color>441012</Color>
-	</Description>
+	</GoingToLaughter>
 	<Description>
 		<Name>WildDeath</Name>
 		<Title>Дикая смерть</Title>
