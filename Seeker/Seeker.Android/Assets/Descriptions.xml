@@ -193,8 +193,7 @@
 		<Setting>Фэнтези</Setting>
 		<Color>145334</Color>
 	</CreatureOfHavoc>
-	<Description>
-		<Name>BloodfeudOfAltheus</Name>
+	<BloodfeudOfAltheus>
 		<Title>Месть Альтея</Title>
 		<Original>Cretan Chronicles I: Bloodfeud Of Altheus</Original>
 		<Authors>Джон Баттерфилд, Дэвид Хонигман и Филип Паркер</Authors>
@@ -209,7 +208,7 @@
 			<Book>ebd5b3</Book>
 			<Font>000000</Font>
 		</Colors>
-	</Description>
+	</BloodfeudOfAltheus>
 	<Description>
 		<Name>PensionerSimulator</Name>
 		<Title>Симулятор пенсионерки</Title>
