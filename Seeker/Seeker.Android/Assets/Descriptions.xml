@@ -180,8 +180,7 @@
 		<Setting>Приключения</Setting>
 		<Color>c93c20</Color>
 	</OctopusIsland>
-	<Description>
-		<Name>CreatureOfHavoc</Name>
+	<CreatureOfHavoc>
 		<Title>Разрушитель</Title>
 		<Original>Creature of Havoc</Original>
 		<Author>Стив Джексон</Author>
@@ -193,7 +192,7 @@
 		<LongPlaythrough/>
 		<Setting>Фэнтези</Setting>
 		<Color>145334</Color>
-	</Description>
+	</CreatureOfHavoc>
 	<Description>
 		<Name>BloodfeudOfAltheus</Name>
 		<Title>Месть Альтея</Title>
