@@ -62,7 +62,7 @@ namespace Seeker.Gamebook.SwampFever
             }
             else
             {
-                bool already = GetProperty(protagonist, Benefit.Name) > 0;
+                bool already = Benefit != null && (GetProperty(protagonist, Benefit.Name) > 0);
                 disabledByUsed = (String.IsNullOrEmpty(EnemyName) && (Benefit != null) && already);
             }
 
