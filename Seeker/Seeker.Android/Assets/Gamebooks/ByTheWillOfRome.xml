@@ -3237,22 +3237,21 @@
 			</Options>
 		</Paragraph>
 		<Paragraph No="393">
-			<Text></Text>
+			<Text>[пустой параграф]</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="394">
-			<Text></Text>
+			<Text>[пустой параграф]</Text>
 			<Options>
-				<Option Destination="0"/>
+				<Gameover/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="395">
-			<Text>Первая линия легионеров бегом приблизилась к ручью и метнула дротики в наступающих варваров.\n\nЕсли нет - 419</Text>
+			<Text>Первая линия легионеров бегом приблизилась к ручью и метнула дротики в наступающих варваров.</Text>
 			<Options>
-				<Option Destination="376" Text="Если мастерство метания пилумов = 4 или более - 421 "/>
-				<Option Destination="376" Text="1 "/>
+				<Option Destination="376"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="396">
