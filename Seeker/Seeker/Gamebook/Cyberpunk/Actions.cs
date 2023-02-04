@@ -118,12 +118,15 @@ namespace Seeker.Gamebook.Cyberpunk
             }
         }
 
+        private static string GetParamLine(int level, string stat) =>
+            String.Format("{0} ({1}) +", level, Constants.CharactersParams[stat].ToLower());
+
         public List<string> Test()
         {
             List<string> test = new List<string>();
 
             int paramsLevel = 0;
-            string paramsLine = "Параметры: ";
+            string paramsLine = String.Empty;
 
             if (MultipliedLuck)
             {
@@ -138,10 +141,14 @@ namespace Seeker.Gamebook.Cyberpunk
             else if (Stat.StartsWith("Selfcontrol"))
             {
                 paramsLevel = int.Parse(Stat.Replace("Selfcontrol", String.Empty));
-                paramsLine += String.Format("{0} ({1}) + ",
-                    paramsLevel, Constants.CharactersParams[Stat.Trim()].ToLower());
+                paramsLine += GetParamLine(paramsLevel, Stat.Trim());
 
                 Game.Option.Trigger(Stat, remove: true);
+            }
+            else if (!Stat.Contains(','))
+            {
+                paramsLevel = GetProperty(protagonist, Stat.Trim());
+                paramsLine += GetParamLine(paramsLevel, Stat.Trim());
             }
             else
             {
@@ -149,12 +156,14 @@ namespace Seeker.Gamebook.Cyberpunk
                 {
                     int param = GetProperty(protagonist, stat.Trim());
                     paramsLevel += param;
-                    paramsLine += String.Format("{0} ({1}) + ",
-                        param, Constants.CharactersParams[stat.Trim()].ToLower());
+                    paramsLine += GetParamLine(param, stat.Trim());
                 }
             }
 
-            test.Add(String.Format("{0} = {1}", paramsLine.TrimEnd(' ', '+'), paramsLevel));
+            if (Stat.Contains(','))
+                test.Add(String.Format("Параметры: {0} = {1}", paramsLine.TrimEnd(' ', '+'), paramsLevel));
+            else
+                test.Add(String.Format("Параметр: {0}", paramsLine.TrimEnd(' ', '+')));
 
             int dice = Game.Dice.Roll(size: 100);
             bool success = ReverseCheck ? dice > paramsLevel : dice <= paramsLevel;
