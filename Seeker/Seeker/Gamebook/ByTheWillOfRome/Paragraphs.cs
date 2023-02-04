@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System;
+using System.Xml;
 using Seeker.Game;
 
 namespace Seeker.Gamebook.ByTheWillOfRome
@@ -14,8 +15,10 @@ namespace Seeker.Gamebook.ByTheWillOfRome
             foreach (XmlNode xmlOption in xmlParagraph.SelectNodes("Options/*"))
             {
                 bool addon = id >= Constants.AddonStartParagraph;
+                bool visibleBySetting = Game.Settings.GetValue("DisabledOption") == 1;
+                string availability = xmlOption.Attributes["Availability"]?.Value ?? String.Empty;
 
-                if (addon && !Game.Data.Availability(xmlOption.Attributes["Availability"].Value))
+                if (addon && !visibleBySetting && !Game.Data.Availability(availability))
                     continue;
 
                 paragraph.Options.Add(OptionParseWithDo(xmlOption, new Modification()));
