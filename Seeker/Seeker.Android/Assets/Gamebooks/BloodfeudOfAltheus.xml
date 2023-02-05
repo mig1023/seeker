@@ -3435,7 +3435,7 @@
 				<Option Destination="136" Text="Афина" Availability="ПОКРОВИТЕЛЬ Афина"/>
 				<Option Destination="488" Text="Арес, и вы желаете его помощи" Availability="ПОКРОВИТЕЛЬ Арес"/>
 				<Option Destination="136" Text="Или не желаете помощи Ареса" Availability="ПОКРОВИТЕЛЬ Арес"/>
-				<Option Destination="160" Text="Случилось так, что покровителя у вас нет"/>
+				<Option Destination="160" Text="Случилось так, что покровителя у вас нет" Availability="ПОКРОВИТЕЛЯ НЕТ"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="398">
