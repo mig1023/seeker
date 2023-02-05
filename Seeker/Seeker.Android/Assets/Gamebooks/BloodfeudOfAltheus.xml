@@ -2348,6 +2348,7 @@
 					<Enemies>
 						<Enemy Name="Прокруст" Strength="6" Defence="13"/>
 					</Enemies>
+					<Wound/>
 				</Fight>
 			</Actions>	
 			<Options>
