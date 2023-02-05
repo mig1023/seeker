@@ -124,7 +124,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 string[] values = option.Split(' ');
                 string value = (values.Length > 1 ? values[1] : "nope");
 
-                if (option.Contains("!ПОКРОВИТЕЛЬ"))
+                if (option.Contains("ПОКРОВИТЕЛЯ НЕТ"))
+                    return String.IsNullOrEmpty(protagonist.Patron.Trim());
+                else if (option.Contains("!ПОКРОВИТЕЛЬ"))
                     return protagonist.Patron != value;
                 else if (option.Contains("ПОКРОВИТЕЛЬ"))
                     return protagonist.Patron == value;
