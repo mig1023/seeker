@@ -563,6 +563,7 @@
 					<Enemies>
 						<Enemy Name="Вор" Strength="6" Defence="10"/>
 					</Enemies>
+					<Wound/>
 				</Fight>
 			</Actions>	
 			<Options>
