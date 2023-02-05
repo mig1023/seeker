@@ -14,7 +14,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Paragraph paragraph = ParagraphTemplate(xmlParagraph);
 
             if (Xml.BoolParse(xmlParagraph["IntuitiveSolution"]))
-                paragraph.Options.Add(GetOption(link: id + 20, text: "Интуитивное решение", onlyIf: "selectOnly"));
+                paragraph.Options.Add(GetOption(link: id + 20, text: "Интуитивное решение"));
 
             return base.Get(xmlParagraph, paragraph);
         }
@@ -49,11 +49,11 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             Defence = Xml.IntParse(xmlEnemy.Attributes["Defence"]),
         };
 
-        private static Option GetOption(int link, string text, string onlyIf) => new Option
+        private static Option GetOption(int link, string text) => new Option
         {
             Destination = link,
             Text = text,
-            Availability = onlyIf,
+            Style = "d3bfa1",
         };
     }
 }
