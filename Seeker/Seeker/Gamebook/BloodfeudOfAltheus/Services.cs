@@ -13,6 +13,18 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             return (normal || brooch);
         }
 
+        public static int WoundConverter(bool Wound, bool LastWound)
+        {
+            if (LastWound)
+                return 1;
+
+            else if (Wound)
+                return 2;
+
+            else
+                return 3;
+        }
+
         public static int UseGloryInFight(Character enemy, ref List<string> fight)
         {
             bool graveInjury = (Character.Protagonist.Health < 2);

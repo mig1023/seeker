@@ -12,6 +12,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
         public List<Character> Enemies { get; set; }
         public bool FightToDeath { get; set; }
+        public bool Wound { get; set; }
         public bool LastWound { get; set; }
         public bool YourRacing { get; set; }
         public bool Ichor { get; set; }
@@ -405,7 +406,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
             List<Character> FightEnemies = new List<Character>();
 
             foreach (Character enemy in Enemies)
-                FightEnemies.Add(enemy.Clone(LastWound));
+                FightEnemies.Add(enemy.Clone(Services.WoundConverter(Wound, LastWound)));
 
             int round = 1;
 
