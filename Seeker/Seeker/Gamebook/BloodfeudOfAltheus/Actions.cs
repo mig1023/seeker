@@ -463,7 +463,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         autoFail = (protagonistRollFirst + protagonistRollSecond) < 4;
                     }
                     else
+                    {
                         autoFail = (protagonistRollFirst == 1);
+                    }
 
                     bool autoHit = (protagonistRollFirst + protagonistRollSecond) > 10;
 
@@ -475,7 +477,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         weaponStrength, weaponName, useGloryLine, protagonistHitStrength
                     ));
 
-                    fight.Add(String.Format("Его защита: {0}", enemy.Defence));
+                    if (autoHit)
+                        fight.Add("GRAY|Мощность удара больше 10, вы попадаете авоматически!");
+                    else if (autoFail)
+                        fight.Add("GRAY|Мощность слишком мала, вы промахиваетесь авоматически!");
+                    else
+                        fight.Add(String.Format("Его защита: {0}", enemy.Defence));
 
                     if ((autoHit || (protagonistHitStrength > enemy.Defence)) && !autoFail)
                     {
@@ -493,7 +500,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         }
                     }
                     else
+                    {
                         fight.Add(String.Format("BOLD|Вы не смогли ранить противника", enemy.Name));
+                    }
 
                     int enemyRollFirst = Game.Dice.Roll();
                     int enemyRollSecond = 0;
@@ -529,7 +538,12 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     string needTotal = (String.IsNullOrEmpty(armourLine) ? String.Empty : String.Format(" = {0}", (protagonist.Defence + armourDefence)));
 
-                    fight.Add(String.Format("Ваша защита: {0}{1}{2}", protagonist.Defence, armourLine, needTotal));
+                    if (autoHit)
+                        fight.Add("GRAY|Мощность его удара больше 10, он попадает авоматически!");
+                    else if (autoFail)
+                        fight.Add("GRAY|Мощность его удара слишком мала, он промахиваетесь авоматически!");
+                    else
+                        fight.Add(String.Format("Ваша защита: {0}{1}{2}", protagonist.Defence, armourLine, needTotal));
 
                     if ((autoHit || (enemyHitStrength > (protagonist.Defence + armourDefence))) && !autoFail)
                     {
