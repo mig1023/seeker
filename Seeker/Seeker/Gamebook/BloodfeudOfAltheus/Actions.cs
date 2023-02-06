@@ -81,7 +81,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     protagonist.Glory -= 10;
                 }
                 else
+                {
                     protagonist.Resurrection -= 1;
+                }
 
                 if (protagonist.Glory == 0)
                     protagonist.Glory = 1;
@@ -225,8 +227,10 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 lance.Add("Вы получаете одно очко Позора");
             }
             else
+            {
                 lance.Add("BIG|GOOD|Бросок достиг цели :)");
-
+            }
+                
             return lance;
         }
 
@@ -244,7 +248,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 roll.Add("BIG|GOOD|Вам удалось :)");
             }
             else
+            {
                 roll.Add("BIG|BAD|Вам не удалось :(");
+            }
 
             return roll;
         }
@@ -268,7 +274,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 bareHands.Add("Вы получаете одно очко Позора");
             }
             else
+            {
                 bareHands.Add("BIG|GOOD|Вам хватило Силы :)");
+            }
 
             return bareHands;
         }
@@ -314,7 +322,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         return racing;
                     }
                     else
+                    {
                         racing.Add("Происшествие было несерьёзным, все колесницы продолжают гонку");
+                    }
                 }
                 else if (YourRacing && (protagonist.Patron == "Посейдон") && ((firstDice == 5) || (secondDice == 5)))
                 {
@@ -364,7 +374,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                 foreach (int i in new List<int> { 1, 2, 3, 4 })
                     if (teams[i] < 0)
+                    {
                         racing.Add(String.Format("{0}{1} команда выбыла из гонки", teamsColor[i], names[i]));
+                    }
                     else
                     {
                         string path = String.Empty;
@@ -375,7 +387,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         racing.Add(String.Format("{0}{1}█", teamsColor[i], path));
 
                         if (teams[i] == maxSector)
+                        {
                             doubleMaxSector = true;
+                        }
                         else if (teams[i] > maxSector)
                         {
                             maxSector = teams[i];
@@ -394,7 +408,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         racing.Add(winner == 2 ? "BIG|RED|Вы ПОБЕДИЛИ, Красная команда пришла первой! :)" : other);
                     }
                     else
+                    {
                         racing.Add(String.Format("BIG|{0}Гонка окончена, {1} команда победила!", teamsColor[winner], names[winner]));
+                    }
 
                     return racing;
                 }
@@ -418,7 +434,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 Game.Option.Trigger("Wounded", remove: true);
             }
             else
+            {
                 protagonist.Health = 3;
+            }
 
             protagonist.GetWeapons(out string weaponName, out int weaponStrength, out int _);
 
@@ -515,7 +533,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                         autoFail = (enemyRollFirst + enemyRollSecond) < 4;
                     }
                     else
+                    {
                         autoFail = (enemyRollFirst == 1);
+                    }
 
                     autoHit = (enemyRollFirst + enemyRollSecond) > 10;
 
@@ -531,8 +551,7 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     }
 
                     fight.Add(String.Format("Мощность его удара: {0}{1} + {2} Сила{3} = {4}",
-                        Game.Dice.Symbol(enemyRollFirst), ememySecondRollLine, enemy.Strength, comradesBonusLine, enemyHitStrength
-                    ));
+                        Game.Dice.Symbol(enemyRollFirst), ememySecondRollLine, enemy.Strength, comradesBonusLine, enemyHitStrength));
 
                     protagonist.GetArmour(out int armourDefence, out string armourLine);
 
@@ -555,7 +574,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                             Game.Option.Trigger("FirstWoundProtection", remove: true);
                         }
                         else
+                        {
                             protagonist.Health -= 1;
+                        }
 
                         if (protagonist.Health <= 0)
                         {
