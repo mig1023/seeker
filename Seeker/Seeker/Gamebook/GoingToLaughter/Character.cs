@@ -38,6 +38,7 @@ namespace Seeker.Gamebook.GoingToLaughter
         public List<string> Advantages { get; set; }
         public List<string> Disadvantages { get; set; }
         public int Balance { get; set; }
+        public int AbubakarOffer { get; set; }
 
         public override void Init()
         {
@@ -50,6 +51,7 @@ namespace Seeker.Gamebook.GoingToLaughter
                 Buffoonery = 5;
                 Inspiration = 1;
                 Balance = 0;
+                AbubakarOffer = 0;
 
                 Advantages = new List<string>();
                 Disadvantages = new List<string>();
@@ -68,10 +70,13 @@ namespace Seeker.Gamebook.GoingToLaughter
             Advantages = new List<string>(this.Advantages),
             Disadvantages = new List<string>(this.Disadvantages),
             Balance = this.Balance,
+            AbubakarOffer = this.AbubakarOffer,
         };
 
         public override string Save() => String.Join("|",
-            Heroism, Villainy, Buffoonery, Inspiration, Balance, String.Join(",", Advantages), String.Join(",", Disadvantages)
+            Heroism, Villainy, Buffoonery, Inspiration, Balance,
+            String.Join(",", Advantages), String.Join(",", Disadvantages),
+            AbubakarOffer
         );
 
         public override void Load(string saveLine)
@@ -86,6 +91,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             Balance = int.Parse(save[4]);
             Advantages = new List<string>(save[5].Split(','));
             Disadvantages = new List<string>(save[6].Split(','));
+            AbubakarOffer = int.Parse(save[7]);
 
             IsProtagonist = true;
         }

@@ -136,6 +136,12 @@ namespace Seeker.Gamebook.GoingToLaughter
 
                         if (oneOption.Contains("ЗЛОДЕЙСТВО <") && (level <= protagonist.Villainy))
                             return false;
+
+                        if (oneOption.Contains("ПРЕДЛОЖЕНИЕ >=") && (level > protagonist.AbubakarOffer))
+                            return false;
+
+                        if (oneOption.Contains("ПРЕДЛОЖЕНИЕ <") && (level <= protagonist.AbubakarOffer))
+                            return false;
                     }
                     else if (oneOption.Contains("!"))
                     {
