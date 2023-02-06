@@ -7756,8 +7756,8 @@
 				<Text>Ладно, и не такое в жизни видали. Просто с возрастом Вы стали несколько сентиментальнее...</Text>
 			</Texts>
 			<Modifications>
-			<Modification Name="Buffoonery" Value="-1"/>
-		</Modifications>
+				<Modification Name="Buffoonery" Value="-1"/>
+			</Modifications>
 			<Options>
 				<Option Destination="779"/>
 			</Options>
