@@ -471,9 +471,6 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     string secondRollLine = String.Empty;
                     bool autoFail = false;
 
-                    int useGlory = Services.UseGloryInFight(enemy, ref fight);
-                    string useGloryLine = (useGlory > 0 ? String.Format(" + {0} Славы", useGlory) : String.Empty);
-
                     if ((protagonist.Health > 1) || Services.NoMoreEnemies(FightEnemies, noHealthy: true))
                     {
                         protagonistRollSecond = Game.Dice.Roll();
@@ -487,18 +484,27 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
 
                     bool autoHit = (protagonistRollFirst + protagonistRollSecond) > 10;
 
-                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond + weaponStrength +
-                        useGlory + protagonist.Strength;
+                    int protagonistHitStrength = protagonistRollFirst + protagonistRollSecond +
+                        weaponStrength + protagonist.Strength;
+
+                    string useGloryLine = String.Empty;
+                    int useGlory = Services.UseGloryInFight(enemy, protagonistHitStrength,
+                        autoHit, autoFail, ref fight, out bool usedGlore);
+
+                    if (usedGlore)
+                    {
+                        useGloryLine =  String.Format(" + {0} Славы", useGlory);
+                        protagonistHitStrength += useGlory;
+                    }
 
                     fight.Add(String.Format("Мощность вашего удара: {0}{1} + {2} Сила + {3} {4}{5} = {6}",
                         Game.Dice.Symbol(protagonistRollFirst), secondRollLine, protagonist.Strength,
-                        weaponStrength, weaponName, useGloryLine, protagonistHitStrength
-                    ));
+                        weaponStrength, weaponName, useGloryLine, protagonistHitStrength));
 
                     if (autoHit)
-                        fight.Add("GRAY|Мощность удара больше 10, вы попадаете авоматически!");
+                        fight.Add("GRAY|На кубиках выпало больше 10, вы попадаете авоматически!");
                     else if (autoFail)
-                        fight.Add("GRAY|Мощность слишком мала, вы промахиваетесь авоматически!");
+                        fight.Add("GRAY|На кубиках выпало слишком мало, вы промахиваетесь авоматически!");
                     else
                         fight.Add(String.Format("Его защита: {0}", enemy.Defence));
 
@@ -558,9 +564,9 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                     string needTotal = (String.IsNullOrEmpty(armourLine) ? String.Empty : String.Format(" = {0}", (protagonist.Defence + armourDefence)));
 
                     if (autoHit)
-                        fight.Add("GRAY|Мощность его удара больше 10, он попадает авоматически!");
+                        fight.Add("GRAY|На кубиках выпало больше 10, он попадает авоматически!");
                     else if (autoFail)
-                        fight.Add("GRAY|Мощность его удара слишком мала, он промахиваетесь авоматически!");
+                        fight.Add("GRAY|На кубиках выпало слишком мало, он промахиваетесь авоматически!");
                     else
                         fight.Add(String.Format("Ваша защита: {0}{1}{2}", protagonist.Defence, armourLine, needTotal));
 

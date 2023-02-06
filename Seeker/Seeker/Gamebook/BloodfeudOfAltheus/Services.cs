@@ -25,27 +25,33 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 return 3;
         }
 
-        public static int UseGloryInFight(Character enemy, ref List<string> fight)
+        public static int UseGloryInFight(Character enemy, int protagonistHitStrength,
+            bool autoHit, bool autoFail, ref List<string> fight, out bool used)
         {
-            bool graveInjury = (Character.Protagonist.Health < 2);
-            bool cantFightOtherwise = (Character.Protagonist.Strength + (graveInjury ? 6 : 12) < enemy.Defence);
-
+            bool cantFightOtherwise = protagonistHitStrength < enemy.Defence;
             int availableGlory = (Character.Protagonist.Glory - Character.Protagonist.Shame);
+
+            if (autoHit || autoFail || !cantFightOtherwise)
+            {
+                used = false;
+                return 0;
+            }
 
             if (cantFightOtherwise && (availableGlory < 1))
             {
                 fight.Add("Кажется, что положение безнадёжно...");
-                return -1;
+
+                used = false;
+                return 0;
             }
 
-            if (!cantFightOtherwise)
-                return 0;
-
-            int needGlory = (enemy.Defence - Character.Protagonist.Strength + (graveInjury ? 6 : 12) + 2);
+            int needGlory = enemy.Defence - protagonistHitStrength + 1;
 
             if (needGlory > availableGlory)
             {
                 fight.Add("Не хватит очков Славы, чтобы что-то исправить...");
+
+                used = false;
                 return -1;
             }
             else
@@ -53,6 +59,8 @@ namespace Seeker.Gamebook.BloodfeudOfAltheus
                 fight.Add("Вам придётся использовать Славу!");
 
                 Character.Protagonist.Glory -= needGlory;
+
+                used = true;
                 return needGlory;
             }
         }
