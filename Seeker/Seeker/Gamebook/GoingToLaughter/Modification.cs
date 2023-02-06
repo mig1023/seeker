@@ -48,8 +48,12 @@ namespace Seeker.Gamebook.GoingToLaughter
                 protagonist.Inspiration += int.Parse(values[1]) * lutnaBonus;
                 protagonist.Buffoonery += int.Parse(values[2]) * lutnaBonus;
             }
-            else if (name == "SleepCleansing")
+            else if (name == "Awakening")
             {
+                protagonist.Villainy = 0;
+                protagonist.Buffoonery = 5;
+                protagonist.AbubakarOffer = 0;
+
                 Game.Data.Triggers = Game.Data.Triggers.Intersect(Constants.SleepCleaningSurvive).ToList();
             }
             else
