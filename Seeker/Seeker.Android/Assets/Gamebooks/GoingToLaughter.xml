@@ -488,7 +488,7 @@
 				<Option Destination="37" Text="Ударите незнакомца с криком «Изыди, нечистый!»"/>
 				<Option Destination="59" Text="Начнёте читать молитвы и осенять себя крестным знамением"/>
 				<Option Destination="428" Text="Вежливо ответите: «Да, я»"/>
-				<Option Destination="446" Text="А тебе-то что?»"/>
+				<Option Destination="446" Text="Грубо ответите: «Ну, я. А тебе-то что?»"/>
 				<Option Destination="454" Text="Сдержанно поинтересуетесь: «С кем честь имею?»"/>
 			</Options>
 		</Paragraph>
