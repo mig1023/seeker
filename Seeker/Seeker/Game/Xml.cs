@@ -102,6 +102,7 @@ namespace Seeker.Game
                     Bold = style.Contains("Bold", ignoreCase),
                     Italic = style.Contains("Italic", ignoreCase),
                     Selected = style.Contains("Selected", ignoreCase),
+                    Box = style.Contains("Box", ignoreCase),
                 };
 
                 outputText.Size = Interface.TextFontSize.nope;

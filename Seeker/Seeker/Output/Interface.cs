@@ -448,12 +448,23 @@ namespace Seeker.Output
         private static string RedStyle(string line) =>
             Game.Settings.IsEnabled("RedStyle") ? line.Replace("\\n\\n", "\\n\\t\\t\\t\\t") : line;
 
-        public static View TextBySelect(Text text) =>
-            text.Selected ? (View)SelectedText(text) : Text(text);
+        public static View TextBySelect(Text text)
+        {
+            if (text.Selected)
+                return SelectedText(text);
+            
+            else if (text.Box)
+                return BoxedText(text);
+
+            else
+                return Text(text);
+        }
 
         public static ExtendedLabel Text(Text text)
         {
-            ExtendedLabel label = Text(RedStyle(text.Content), italic: text.Italic, size: text.Size, selected: text.Selected);
+            bool selected = text.Selected || text.Box;
+
+            ExtendedLabel label = Text(RedStyle(text.Content), italic: text.Italic, size: text.Size, selected: selected);
             label.FontFamily = TextFontFamily(bold: text.Bold, italic: text.Italic);
 
             if (text.Alignment == "Center")
@@ -471,7 +482,30 @@ namespace Seeker.Output
             return label;
         }
 
-        public static Grid SelectedText(Text text)
+        private static View BoxedText(Text text)
+        {
+            StackLayout content = new StackLayout
+            {
+                BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Background)),
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                Padding = new Thickness(Constants.BOX_PADDING),
+                Children = { Text(text) },
+            };
+
+            StackLayout border = new StackLayout
+            {
+                BackgroundColor = Color.FromHex(Game.Data.Constants.GetColor(Game.Data.ColorTypes.Font)),
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                Padding = new Thickness(Constants.BOX_BORDER),
+                Children = { content },
+            };
+
+            return border;
+        }
+
+        private static View SelectedText(Text text)
         {
             Grid grid = new Grid
             {
