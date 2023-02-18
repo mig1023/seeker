@@ -8869,7 +8869,7 @@
 				<Text>После этих слов она снова отрубилась, и даже захрапела. И на этот раз — уже конкретно.</Text>
 			</Texts>
 			<Modifications>
-				<Modification Name="Buffoonery" Value="-1"/>
+				<Buffoonery Value="-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="937"/>
