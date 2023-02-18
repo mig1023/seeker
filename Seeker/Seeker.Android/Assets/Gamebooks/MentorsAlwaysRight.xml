@@ -627,10 +627,8 @@
 		<Paragraph No="63">
 			<Text>С поверха башни внезапно срывается темный силуэт и расправляет крылья. Это гарпия, и она начинает свой патрульный облет периметра стены. Вжавшись в скудную тень от зубца стены, вы мысленно проклинаете полнолуние.</Text>
 			<Actions>
-				<Option>
-					<Option Destination="343" Text="Вы камуфлировались грязью" Availability="Camouflage">
-						<Text>Иначе — бросьте кубик:</Text>
-					</Option>
+				<Option Destination="343" Text="Вы камуфлировались грязью" Availability="Camouflage">
+					<Text>Иначе — бросьте кубик:</Text>
 				</Option>
 				<Dice>
 					<After>
