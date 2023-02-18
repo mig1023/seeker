@@ -92,7 +92,7 @@ namespace Seeker.Prototypes
                 action.Benefit = ModificationParse(xmlAction["Benefit"]);
 
             if (action.Type == "Option")
-                action.Option = OptionParse(xmlAction["Option"]);
+                action.Option = OptionParse(xmlAction);
 
             return action;
         }
