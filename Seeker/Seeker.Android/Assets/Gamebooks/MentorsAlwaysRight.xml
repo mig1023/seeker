@@ -1711,11 +1711,9 @@
 		<Paragraph No="171">
 			<Text>Степняк уже выбил оружие из рук своего противника, но тут вы подходите ближе и он разворачивает коня на вас.</Text>
 			<Actions>
-				<Option>
-					<Option Destination="198" Text="ОБОРОТЕНЬ" Availability="ВОЛК">
-						<Modification Name="Transformation"/>
-						<Text>Иначе — деритесь:</Text>
-					</Option>
+				<Option Destination="198" Text="ОБОРОТЕНЬ" Availability="ВОЛК">
+					<Modification Name="Transformation"/>
+					<Text>Иначе — деритесь:</Text>
 				</Option>
 				<Fight>
 					<Enemies>
