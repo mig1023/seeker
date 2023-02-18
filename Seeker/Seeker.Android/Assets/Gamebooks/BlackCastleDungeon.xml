@@ -373,9 +373,7 @@
 						<Text>Если вы убили его, то сделали это как раз вовремя: из погреба с бутылкой вина поднимается Гоблин. Увидев вас, он бросает бутылку и хватается за боевой топор.</Text>
 					</After>
 				</Fight>
-				<Option>
-					<Option Destination="143" Text="Попробовать убежать"/>
-				</Option>
+				<Option Destination="143" Text="Попробовать убежать"/>
 				<Fight>
 					<Enemies>
 						<Enemy Name="ГОБЛИН" Mastery="7" Endurance="5"/>
