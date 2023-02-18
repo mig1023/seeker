@@ -644,8 +644,8 @@
 			<Modifications>
 				<Heroism Value="5"/>
 				<Inspiration Value="1"/>
-				<DynamicBonuses Value="Advantage->Пение->Heroism=5"/>
-				<DynamicBonuses Value="Advantage->Пение->Inspiration=5"/>
+				<Dynamic Value="Advantage->Пение->Heroism=5"/>
+				<Dynamic Value="Advantage->Пение->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="40"/>
@@ -915,12 +915,12 @@
 				<Text>Разобрались со всем этим?</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Набожность->Inspiration=10"/>
-				<DynamicBonuses Value="Advantage->Набожность->Heroism=10"/>
-				<DynamicBonuses Value="Disadvantage->Суеверие->Inspiration=3"/>
-				<DynamicBonuses Value="Disadvantage->Пьянство->Inspiration=1"/>
-				<DynamicBonuses Value="Disadvantage->Забывчивость->Buffoonery=1"/>
-				<DynamicBonuses Value="Disadvantage->Сумасшествие->Inspiration=1"/>
+				<Dynamic Value="Advantage->Набожность->Inspiration=10"/>
+				<Dynamic Value="Advantage->Набожность->Heroism=10"/>
+				<Dynamic Value="Disadvantage->Суеверие->Inspiration=3"/>
+				<Dynamic Value="Disadvantage->Пьянство->Inspiration=1"/>
+				<Dynamic Value="Disadvantage->Забывчивость->Buffoonery=1"/>
+				<Dynamic Value="Disadvantage->Сумасшествие->Inspiration=1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="519"/>
@@ -970,8 +970,8 @@
 				<Heroism Value="1"/>
 				<Buffoonery Value="1"/>
 				<Inspiration Value="1"/>
-				<DynamicBonuses Value="Advantage->Танец->Heroism=1"/>
-				<DynamicBonuses Value="Advantage->Танец->Buffoonery=1"/>
+				<Dynamic Value="Advantage->Танец->Heroism=1"/>
+				<Dynamic Value="Advantage->Танец->Buffoonery=1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="464"/>
@@ -1349,8 +1349,8 @@
 				<Text>Ваши товарищи по безумию тоже радуются, и хотя они пляшут и поют не так хорошо как Вы, но тоже очень стараются.\n\nВсем хорошо и весело, слюни и сопли летят счастливыми брызгами по бедламу, и только дежурные отнюдь не рады всему этому безобразию.\n\nБезумцев утихомиривают, а Вас — бросают в тёмное мрачное помещение, чтоб знали, как себя вести.\n\nКонечно, с сумасшедшего взятки гладки, да и раньше Вы вели себя вполне благопристойно. Но и оставлять такое поведение без последствий тоже не могут.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Пение, Танец->Heroism=6"/>
-				<DynamicBonuses Value="Advantage->Пение, Танец->Inspiration=6"/>
+				<Dynamic Value="Advantage->Пение, Танец->Heroism=6"/>
+				<Dynamic Value="Advantage->Пение, Танец->Inspiration=6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="464"/>
@@ -1859,12 +1859,12 @@
 				<Text Style="Small">Если у Вас имеются такие достоинства как «Красноречие», «Артистизм», «Верховая езда», «Предусмотрительность» и «Сражение» — добавьте по пункту Героизма за каждое.\nЕсли у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма.\nЗа каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
-				<DynamicBonuses Value="Advantage->Популярность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Dynamic Value="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
+				<Dynamic Value="Advantage->Популярность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="640" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -1969,8 +1969,8 @@
 				<Text>Потихонечку и без особых приключений Вы мирно добредаете до площади.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Disadvantage->Рассеянность->Buffoonery=-1"/>
-				<DynamicBonuses Value="Disadvantage->Плохое зрение->Buffoonery=-1"/>
+				<Dynamic Value="Disadvantage->Рассеянность->Buffoonery=-1"/>
+				<Dynamic Value="Disadvantage->Плохое зрение->Buffoonery=-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="525"/>
@@ -2098,7 +2098,7 @@
 			<Modifications>
 				<Buffoonery Value="2"/>
 				<Heroism Value="10"/>
-				<DynamicBonuses Value="Advantage->Популярность, Пение, Танец, Красноречие, Везение, Смекалка, Чревовещание, Наблюдательность, Интуиция, Эрудиция->Heroism=10"/>
+				<Dynamic Value="Advantage->Популярность, Пение, Танец, Красноречие, Везение, Смекалка, Чревовещание, Наблюдательность, Интуиция, Эрудиция->Heroism=10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="606" Text="Воспользоваться случаем и выступить перед народом с речью о необходимости свергнуть монарха"/>
@@ -4041,11 +4041,11 @@
 				<Text Style="Small">Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. Если Вы Набожны — ещё 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния, недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность, Набожность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="628" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -4068,7 +4068,7 @@
 				<Heroism Value="5"/>
 				<Inspiration Value="5"/>
 				<Buffoonery Value="1"/>
-				<DynamicBonuses Value="Advantage->Артистизм, Красноречие->Heroism=5"/>
+				<Dynamic Value="Advantage->Артистизм, Красноречие->Heroism=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="751"/>
@@ -4143,7 +4143,7 @@
 				<Heroism Value="5"/>
 				<Inspiration Value="5"/>
 				<Buffoonery Value="1"/>
-				<DynamicBonuses Value="Advantage->Артистизм, Красноречие->Heroism=5"/>
+				<Dynamic Value="Advantage->Артистизм, Красноречие->Heroism=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="751"/>
@@ -4628,7 +4628,7 @@
 				<Text Style="Small">Если Вы жестокосердный — добивайте «падаль» и получайте 6 пунктов Злодейства. Если нет — всё, хорош, проучили дурака, и хватит.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Villainy=6"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Villainy=6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="996"/>
@@ -4782,7 +4782,7 @@
 		<Paragraph No="488">
 			<Text>Если у Вас записано «Избавитель», «Сновидец», «Обращенный», «Попрошайка», ««Наставник», «Комедиант», «Флибустьер», «Гаргантюа», «Казнокрад», «Подрывник», «Лазутчик», «Изменник», «Бомбардировщик», «Соратник», «Отшельник» или «Оптимист», — добавьте себе 25 пунктов Героизма за каждое достижение. Потом возвращайтесь на параграф с которого пришли.</Text>
 			<Modifications>
-				<DynamicBonuses Value="Trigger->Избавитель, Сновидец, Обращенный, Попрошайка, Наставник, Комедиант, Флибустьер, Гаргантюа, Казнокрад, Подрывник, Лазутчик, Изменник, Бомбардировщик, Соратник, Отшельник, Оптимист->Heroism=25"/>
+				<Dynamic Value="Trigger->Избавитель, Сновидец, Обращенный, Попрошайка, Наставник, Комедиант, Флибустьер, Гаргантюа, Казнокрад, Подрывник, Лазутчик, Изменник, Бомбардировщик, Соратник, Отшельник, Оптимист->Heroism=25"/>
 			</Modifications>
 			<Options>
 				<Gameover/>
@@ -4859,7 +4859,7 @@
 		<Paragraph No="497">
 			<Text>Если у Вас записано «Мегера», «Вертихвостка», «Безумная», «Муза» или «Одалиска» — добавьте себе 25 пунктов Героизма за каждое достижение. Потом возвращайтесь на параграф с которого пришли.</Text>
 			<Modifications>
-				<DynamicBonuses Value="Trigger->Мегера, Вертихвостка, Безумная, Муза, Одалиска->Heroism=25"/>
+				<Dynamic Value="Trigger->Мегера, Вертихвостка, Безумная, Муза, Одалиска->Heroism=25"/>
 			</Modifications>
 			<Options>
 				<Gameover/>
@@ -5037,7 +5037,7 @@
 		<Paragraph No="518">
 			<Text>Если у Вас записано «Сусанин», «Флагеллант», «Невольник», «Мародёр» или «Вигилант» — добавьте себе по 25 пунктов Героизма за каждое достижение. Потом возвращайтесь на параграф с которого пришли.</Text>
 			<Modifications>
-				<DynamicBonuses Value="Trigger->Сусанин, Флагеллант, Невольник, Мародёр, Вигилант->Heroism=25"/>
+				<Dynamic Value="Trigger->Сусанин, Флагеллант, Невольник, Мародёр, Вигилант->Heroism=25"/>
 			</Modifications>
 			<Options>
 				<Gameover/>
@@ -5445,12 +5445,12 @@
 				<Text Style="Small">Если у Вас имеются такие достоинства как «Красноречие», «Артистизм», «Верховая езда», «Предусмотрительность» и «Сражение» — добавьте по пункту Героизма за каждое. Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
-				<DynamicBonuses Value="Advantage->Популярность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Dynamic Value="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
+				<Dynamic Value="Advantage->Популярность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="757" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -5483,11 +5483,11 @@
 				<Text Style="Small">Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1076" Text="Если у Вас имеется 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -5714,11 +5714,11 @@
 				</DiceValues>
 			</Actions>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="591" Text="Если у Вас имеется 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -5737,11 +5737,11 @@
 				<Text Style="Small">Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1087" Text="Если у Вас имеется 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -5792,11 +5792,11 @@
 				<Text Style="Small">Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1089" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -5829,11 +5829,11 @@
 				<Text Style="Small">Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1101" Text="Если у Вас имеется 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -5868,12 +5868,12 @@
 				<Text Style="Small">Если у Вас имеются такие достоинства как «Красноречие», «Артистизм», «Верховая езда», «Предусмотрительность» и «Сражение» — добавьте по пункту Героизма за каждое. Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
-				<DynamicBonuses Value="Advantage->Популярность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Dynamic Value="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
+				<Dynamic Value="Advantage->Популярность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="640" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -6018,7 +6018,7 @@
 			</Texts>
 			<Modifications>
 				<Heroism Value="20"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Villainy=12"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Villainy=12"/>
 			</Modifications>
 			<Options>
 				<Option Destination="633"/>
@@ -6122,12 +6122,12 @@
 				</DiceValues>
 			</Actions>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Villainy=12"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Villainy=12"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1129" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -6605,7 +6605,7 @@
 			</Texts>
 			<Modifications>
 				<Heroism Value="1"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Villainy=6"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Villainy=6"/>
 			</Modifications>
 			<Options>
 				<Option Destination="670" Text="Откроете камеры и выпустите узников"/>
@@ -6982,7 +6982,7 @@
 			<Modifications>
 				<Heroism Value="10"/>
 				<Inspiration Value="10"/>
-				<DynamicBonuses Value="Advantage->Пение->Heroism=10"/>
+				<Dynamic Value="Advantage->Пение->Heroism=10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="751"/>
@@ -7207,11 +7207,11 @@
 				<Text Style="Small">Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1076" Text="Если у Вас имеется 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -7582,9 +7582,9 @@
 				<Buffoonery Value="1"/>
 				<Heroism Value="5"/>
 				<Inspiration Value="5"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Buffoonery=1"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Heroism=5"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Inspiration=5"/>
+				<Dynamic Value="Advantage->Красноречие->Buffoonery=1"/>
+				<Dynamic Value="Advantage->Красноречие->Heroism=5"/>
+				<Dynamic Value="Advantage->Красноречие->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="769"/>
@@ -7706,9 +7706,9 @@
 				<Buffoonery Value="1"/>
 				<Heroism Value="5"/>
 				<Inspiration Value="5"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Buffoonery=1"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Heroism=5"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Inspiration=5"/>
+				<Dynamic Value="Advantage->Красноречие->Buffoonery=1"/>
+				<Dynamic Value="Advantage->Красноречие->Heroism=5"/>
+				<Dynamic Value="Advantage->Красноречие->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="769"/>
@@ -7822,12 +7822,12 @@
 				<Heroism Value="5"/>
 				<Inspiration Value="5"/>
 				<Buffoonery Value="1"/>
-				<DynamicBonuses Value="Advantage->Пение->Heroism=5"/>
-				<DynamicBonuses Value="Advantage->Пение->Inspiration=5"/>
-				<DynamicBonuses Value="Advantage->Пение->Buffoonery=1"/>
-				<DynamicBonuses Value="Advantage->Музицирование->Heroism=5"/>
-				<DynamicBonuses Value="Advantage->Музицирование->Inspiration=5"/>
-				<DynamicBonuses Value="Advantage->Музицирование->Buffoonery=1"/>
+				<Dynamic Value="Advantage->Пение->Heroism=5"/>
+				<Dynamic Value="Advantage->Пение->Inspiration=5"/>
+				<Dynamic Value="Advantage->Пение->Buffoonery=1"/>
+				<Dynamic Value="Advantage->Музицирование->Heroism=5"/>
+				<Dynamic Value="Advantage->Музицирование->Inspiration=5"/>
+				<Dynamic Value="Advantage->Музицирование->Buffoonery=1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="501"/>
@@ -8133,8 +8133,8 @@
 			<Modifications>
 				<Heroism Value="5"/>
 				<Inspiration Value="5"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Heroism=5"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Inspiration=5"/>
+				<Dynamic Value="Advantage->Красноречие->Heroism=5"/>
+				<Dynamic Value="Advantage->Красноречие->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="474"/>
@@ -8201,11 +8201,11 @@
 				<Text Style="Small">Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. Если Вы Набожны — ещё 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния, недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность, Набожность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1087" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -8227,8 +8227,8 @@
 			<Modifications>
 				<Heroism Value="5"/>
 				<Inspiration Value="5"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Heroism=5"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Inspiration=5"/>
+				<Dynamic Value="Advantage->Красноречие->Heroism=5"/>
+				<Dynamic Value="Advantage->Красноречие->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="818"/>
@@ -8579,7 +8579,7 @@
 			</Texts>
 			<Modifications>
 				<Buffoonery Value="1"/>
-				<DynamicBonuses Value="Disadvantage->Суеверие->Buffoonery=-1"/>
+				<Dynamic Value="Disadvantage->Суеверие->Buffoonery=-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1226" Text="Сначала Вы хотите обойти и осмотреть все комнаты и помещения, а также прилегающие территории"/>
@@ -8617,8 +8617,8 @@
 			<Modifications>
 				<Heroism Value="5"/>
 				<Inspiration Value="5"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Heroism=5"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Inspiration=5"/>
+				<Dynamic Value="Advantage->Красноречие->Heroism=5"/>
+				<Dynamic Value="Advantage->Красноречие->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="365"/>
@@ -8683,8 +8683,8 @@
 			<Modifications>
 				<Heroism Value="5"/>
 				<Inspiration Value="5"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Heroism=5"/>
-				<DynamicBonuses Value="Advantage->Красноречие->Inspiration=5"/>
+				<Dynamic Value="Advantage->Красноречие->Heroism=5"/>
+				<Dynamic Value="Advantage->Красноречие->Inspiration=5"/>
 			</Modifications>
 			<Options>
 				<Option Destination="678"/>
@@ -8697,7 +8697,7 @@
 				<Text>Если же нет, Вы находите в себе силы сдержаться и оставляете этих подонков в живых.\n\nВ любом случае, отдышавшись — Вы побрели дальше.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Villainy=12"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Villainy=12"/>
 			</Modifications>
 			<Options>
 				<Option Destination="888"/>
@@ -10172,12 +10172,12 @@
 				<Text Style="Small">Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Старые счёты->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1246" Text="Если у Вас в итоге набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -10304,11 +10304,11 @@
 				<Text Style="Small">Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. Если Вы Набожны — ещё 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния, недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность, Набожность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1280" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -10394,11 +10394,11 @@
 				<Text Style="Small">Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. Если Вы Набожны — ещё 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния, недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность, Набожность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1267" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -10453,11 +10453,11 @@
 				<Text Style="Small">Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. Если Вы Набожны — ещё 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния, недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность, Набожность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1254" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -10517,11 +10517,11 @@
 				<Text Style="Small">Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. Если Вы Набожны — ещё 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния, недостатки «Жестокосердие» и «Старые счёты» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность, Набожность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1274" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -11176,12 +11176,12 @@
 				<Text Style="Small">Если у Вас имеются такие достоинства как «Красноречие», «Артистизм», «Верховая езда», «Предусмотрительность» и «Сражение» — добавьте по пункту Героизма за каждое. Если у Вас есть достоинство «Популярность» — добавьте себе 10 пунктов Героизма. За каждый пункт Шутовства добавьте себе 10 пунктов Героизма, за каждый сохранённый пункт Вдохновения добавьте себе по 5 пунктов Героизма, за каждые 6 пунктов Злодеяния и недостаток «Жестокосердие» отнимите по 10 пунктов Героизма.</Text>
 			</Texts>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
-				<DynamicBonuses Value="Advantage->Популярность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие->Heroism=-10"/>
+				<Dynamic Value="Advantage->Красноречие, Артистизм, Верховая езда, Предусмотрительность, Сражение->Heroism=1"/>
+				<Dynamic Value="Advantage->Популярность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="640" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -11253,11 +11253,11 @@
 				</DiceValues>
 			</Actions>
 			<Modifications>
-				<DynamicBonuses Value="Advantage->Популярность, Набожность->Heroism=10"/>
-				<DynamicBonuses Value="Param->Buffoonery->1->Heroism=10"/>
-				<DynamicBonuses Value="Param->Inspiration->1->Heroism=5"/>
-				<DynamicBonuses Value="Param->Villainy->6->Heroism=-10"/>
-				<DynamicBonuses Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
+				<Dynamic Value="Advantage->Популярность, Набожность->Heroism=10"/>
+				<Dynamic Value="Param->Buffoonery->1->Heroism=10"/>
+				<Dynamic Value="Param->Inspiration->1->Heroism=5"/>
+				<Dynamic Value="Param->Villainy->6->Heroism=-10"/>
+				<Dynamic Value="Disadvantage->Жестокосердие, Старые счёты->Heroism=-10"/>
 			</Modifications>
 			<Options>
 				<Option Destination="1129" Text="Если у Вас набралось 100 пунктов Героизма" Availability="ГЕРОИЗМ >= 100"/>
@@ -12113,7 +12113,7 @@
 			</Texts>
 			<Modifications>
 				<Buffoonery Value="-1"/>
-				<DynamicBonuses Value="Disadvantage->Суеверие->Buffoonery=-1"/>
+				<Dynamic Value="Disadvantage->Суеверие->Buffoonery=-1"/>
 			</Modifications>
 			<Options>
 				<Option Destination="885"/>
