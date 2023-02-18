@@ -66,7 +66,7 @@ namespace Seeker.Gamebook.YounglingTournament
                 action.Benefit = Xml.ModificationParse(xmlAction["Benefit"], new Modification());
 
             if (action.Type == "Option")
-                action.Option = OptionParse(xmlAction["Option"]);
+                action.Option = OptionParse(xmlAction);
 
             return action;
         }
