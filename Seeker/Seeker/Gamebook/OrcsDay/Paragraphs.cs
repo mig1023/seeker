@@ -60,7 +60,7 @@ namespace Seeker.Gamebook.OrcsDay
             }
 
             if (action.Type == "Option")
-                action.Option = OptionParse(xmlAction["Option"]);
+                action.Option = OptionParse(xmlAction);
 
             action.Benefit = Xml.ModificationParse(xmlAction["Benefit"], new Modification());
 
