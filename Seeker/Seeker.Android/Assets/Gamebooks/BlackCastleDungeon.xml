@@ -13315,13 +13315,9 @@
 		<Paragraph No="1513">
 			<Text>Дверь со скрипом открывается, и вы входите внутрь. Вдруг чьи-то крылья бьют по лицу, и вы чувствуете сильный укус в плечо (потеряйте 1 ВЫНОСЛИВОСТЬ). Вам придется сражаться с летучими мышами – давними обитателями заброшенного домика.</Text>
 			<Actions>
-				<Option>
-					<Option Destination="1396" Text="Вы можете воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
-					</Option>
-					<After>
-						<Text>Или же драться:</Text>
-					</After>
+				<Option Destination="1396" Text="Вы можете воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Text>Или же драться:</Text>
 				</Option>
 				<Fight>
 					<Enemies>
