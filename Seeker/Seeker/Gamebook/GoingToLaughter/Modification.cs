@@ -23,7 +23,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             {
                 protagonist.Disadvantages.Add(ValueString);
             }
-            else if (name == "DynamicBonuses")
+            else if (name == "Dynamic")
             {
                 DynamicBonuses(ValueString);
             }
