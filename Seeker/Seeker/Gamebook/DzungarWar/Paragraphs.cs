@@ -25,7 +25,7 @@ namespace Seeker.Gamebook.DzungarWar
                 action.Price /= 2;
 
             if (action.Type == "Option")
-                action.Option = OptionParse(xmlAction["Option"]);
+                action.Option = OptionParse(xmlAction);
 
             return action;
         }
