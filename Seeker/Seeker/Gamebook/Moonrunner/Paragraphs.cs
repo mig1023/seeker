@@ -40,7 +40,7 @@ namespace Seeker.Gamebook.Moonrunner
             }
 
             if (action.Type == "Option")
-                action.Option = OptionParse(xmlAction["Option"]);
+                action.Option = OptionParse(xmlAction);
 
             if (xmlAction["Benefit"] != null)
                 action.Benefit = Xml.ModificationParse(xmlAction["Benefit"], new Modification());
