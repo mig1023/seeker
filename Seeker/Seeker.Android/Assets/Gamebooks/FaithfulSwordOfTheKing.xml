@@ -1848,10 +1848,8 @@
 		<Paragraph No="189">
 			<Text>Если вы о чем-то договаривались с человеком, охраняющим заключенного, то знаете, что надо делать:</Text>
 			<Actions>
-				<Option>
-					<Option Destination="79" Text="Стражник подкуплен" Availability="CorruptGuard">
-						<Text>Иначе же — сражайтесь:</Text>
-					</Option>
+				<Option Destination="79" Text="Стражник подкуплен" Availability="CorruptGuard">
+					<Text>Иначе же — сражайтесь:</Text>
 				</Option>
 				<Fight>
 					<Enemies>
