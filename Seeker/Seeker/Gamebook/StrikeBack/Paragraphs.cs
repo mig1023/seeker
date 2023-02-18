@@ -51,7 +51,7 @@ namespace Seeker.Gamebook.StrikeBack
             }
 
             if (action.Type == "Option")
-                action.Option = OptionParse(xmlAction["Option"]);
+                action.Option = OptionParse(xmlAction);
 
             return action;
         }
