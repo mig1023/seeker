@@ -9127,9 +9127,7 @@
 		</Paragraph>
 		<Paragraph No="1013">
 			<Actions>
-				<Option>
-					<Option Destination="1962" Text="Если хотите, во время боя можете покинуть таверну и бежать"/>
-				</Option>
+				<Option Destination="1962" Text="Если хотите, во время боя можете покинуть таверну и бежать"/>
 				<Fight>
 					<Enemies>
 						<Enemy Name="ВОДЯНОЙ" Mastery="8" Endurance="6"/>
