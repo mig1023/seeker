@@ -27,7 +27,7 @@ namespace Seeker.Gamebook.GoingToLaughter
             {
                 DynamicBonuses(ValueString);
             }
-            else if (name == "StaticBonuses")
+            else if (name == "Static")
             {
                 foreach (string param in ValueString.Split(','))
                 {
