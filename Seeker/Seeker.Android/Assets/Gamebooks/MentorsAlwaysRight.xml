@@ -3069,10 +3069,8 @@
 		</Paragraph>
 		<Paragraph No="313">
 			<Actions>
-				<Option>
-					<Option Destination="108" Text="Ваша СИЛА не меньше 13" Availability="СИЛА >= 13">
-						<Text>Если она меньше, то еще раз бросьте кубик:</Text>
-					</Option>
+				<Option Destination="108" Text="Ваша СИЛА не меньше 13" Availability="СИЛА >= 13">
+					<Text>Если она меньше, то еще раз бросьте кубик:</Text>
 				</Option>
 				<SimpleDice/>
 			</Actions>
