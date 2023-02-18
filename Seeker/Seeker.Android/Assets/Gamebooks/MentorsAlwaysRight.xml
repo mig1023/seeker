@@ -3957,10 +3957,8 @@
 		<Paragraph No="409">
 			<Text>Вы начинаете смертельную пляску вокруг двухголового аллигатора.</Text>
 			<Actions>
-				<Option>
-					<Option Destination="145" Text="Вы не успели прикончить вожака крысюков">
+				<Option Destination="145" Text="Вы не успели прикончить вожака крысюков">
 					<Text>Иначе — к бою:</Text>
-				</Option>
 				</Option>
 				<Fight>
 					<Enemies>
