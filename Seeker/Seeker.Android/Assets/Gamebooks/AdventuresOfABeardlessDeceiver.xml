@@ -1652,13 +1652,9 @@
 		<Paragraph No="130">
 			<Text>Заметив в сумке кусок зелёной скалы, боярин просит показать его. Повертев в руках, он передает его сидящему по правую руку старому человеку с козлиной бородкой. Тот внимательно рассматривает камень и что-то шепчет боярину Лихареву на ухо. Кочевник разбирает только одно слово — «малахит».\n\nВозвращая обломок обратно Алдару, Лихарев спрашивает:\n\n— Занятный камушек. И где же ты его нашел?</Text>
 			<Actions>
-				<Option>
-					<Option Destination="43" Text="Алдара Косе помнит наставления Афанасия" Availability="TipsFromAthanasius"/>
-				</Option>
-				<Option>
-					<Option Destination="137" Text="Есть знак Тенгри" Availability="TengriSymbol">
-						<Text>Если же нет ни того ни другого:</Text>
-					</Option>
+				<Option Destination="43" Text="Алдара Косе помнит наставления Афанасия" Availability="TipsFromAthanasius"/>
+				<Option Destination="137" Text="Есть знак Тенгри" Availability="TengriSymbol">
+					<Text>Если же нет ни того ни другого:</Text>
 				</Option>
 				<Test>
 					<GuessBonus/>
