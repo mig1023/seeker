@@ -10622,13 +10622,9 @@
 		<Paragraph No="1193">
 			<Text>Вы используете заклятие Огня, и огненный шар сжигает одну из голов Дракона.\n\n</Text>
 			<Actions>
-				<Option>
-					<Option Destination="893" Text="У вас еще одно заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-						<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
-					</Option>
-					<After>
-						<Text>Или будете драться с оставшейся головой? Она в свою очередь, дышит на вас огнем (потеряйте 2 ВЫНОСЛИВОСТИ).</Text>
-					</After>
+				<Option Destination="893" Text="У вас еще одно заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
+					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<Text>Или будете драться с оставшейся головой? Она в свою очередь, дышит на вас огнем (потеряйте 2 ВЫНОСЛИВОСТИ).</Text>
 				</Option>
 				<Fight>
 					<Enemies>
