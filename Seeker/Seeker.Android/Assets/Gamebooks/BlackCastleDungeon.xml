@@ -8367,10 +8367,8 @@
 		</Paragraph>
 		<Paragraph No="927">
 			<Actions>
-				<Option>
-					<Option Destination="1739" Text="Вы можете наложить какое-нибудь заклятие">
-						<Text>Или сразиться с рыцарем без помощи магии:</Text>
-					</Option>
+				<Option Destination="1739" Text="Вы можете наложить какое-нибудь заклятие">
+					<Text>Или сразиться с рыцарем без помощи магии:</Text>
 				</Option>
 				<Fight>
 					<Enemies>
