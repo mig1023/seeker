@@ -3121,11 +3121,9 @@
 		<Paragraph No="319">
 			<Text>Ваше движение истолковано храмовником однозначно:\n\n— Хочешь драться?! — рычит он и взмахивает своим топором. Опытный боец в доспехах, да еще и на коне — опасный противник.</Text>
 			<Actions>
-				<Option>
-					<Option Destination="508" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ">
-						<Modification Name="Transformation"/>
-						<Text>Иначе — сражайтесь:</Text>
-					</Option>
+				<Option Destination="508" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ">
+					<Modification Name="Transformation"/>
+					<Text>Иначе — сражайтесь:</Text>
 				</Option>
 				<Fight>
 					<Enemies>
