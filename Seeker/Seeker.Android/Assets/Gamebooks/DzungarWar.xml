@@ -3701,14 +3701,10 @@
 		<Paragraph No="335">
 			<Text>Алдар рассказывает о своих приключениях Алтынбаю и Азимхану. И чем дольше те слушают, тем большее удивление и недоверие читается на их лицах. Кто поверит небылицам джунгарского воина?</Text>
 			<Actions>
-				<Option>
-					<Option Destination="262" Text="Отмечены оба слова «Пастух» и «Дружба»" Availability="Пастух, Дружба"/>
-				</Option>
-				<Option>
-					<Option Destination="241" Text="Не отмечено слово «Пастух», но отмечено слово «Дружба»" Availability="Дружба, !Пастух">
-						<Text>В любом другом случае:</Text>
-					</Option>	
-				</Option>
+				<Option Destination="262" Text="Отмечены оба слова «Пастух» и «Дружба»" Availability="Пастух, Дружба"/>
+				<Option Destination="241" Text="Не отмечено слово «Пастух», но отмечено слово «Дружба»" Availability="Дружба, !Пастух">
+					<Text>В любом другом случае:</Text>
+				</Option>	
 				<Test>
 					<Stat>Oratory</Stat>
 					<TriggerTestPenalty>Переговорщик, -7</TriggerTestPenalty>
