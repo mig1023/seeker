@@ -7796,9 +7796,7 @@
 						<Enemy Name="ГОБЛИН" Mastery="8" Endurance="11"/>
 						<Enemy Name="ОРЕЛ-ЧАСОВОЙ" Mastery="7" Endurance="7"/>
 					</Enemies>
-					<After>
-						<Text>Если вы победили обоих стражей, то можете:</Text>
-					</After>
+					<After>Если вы победили обоих стражей, то можете:</After>
 				</Fight>
 			</Actions>
 			<Options>
