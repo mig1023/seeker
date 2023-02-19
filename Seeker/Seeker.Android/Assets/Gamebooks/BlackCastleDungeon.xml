@@ -8129,9 +8129,7 @@
 					<Enemies>
 						<Enemy Name="ГОБЛИН" Mastery="8" Endurance="8"/>
 					</Enemies>
-					<After>
-						<Text>Если вы убили Гоблина, возьмите его бронзовый свисток и перейдите мост.</Text>
-					</After>
+					<After>Если вы убили Гоблина, возьмите его бронзовый свисток и перейдите мост.</After>
 				</Fight>
 			</Actions>
 			<Options>
