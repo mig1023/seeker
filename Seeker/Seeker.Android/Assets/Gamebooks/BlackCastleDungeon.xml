@@ -7636,9 +7636,7 @@
 					<Enemies>
 						<Enemy Name="РУКА" Mastery="9" Endurance="8"/>
 					</Enemies>
-					<After>
-						<Text>Убив ее, можете:</Text>
-					</After>
+					<After>Убив ее, можете:</After>
 				</Fight>
 			</Actions>
 			<Options>
