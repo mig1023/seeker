@@ -2329,9 +2329,7 @@
 					<Enemies>
 						<Enemy Name="ЛЕВ" Mastery="9" Endurance="15"/>
 					</Enemies>
-					<After>
-						<Text>Убив льва, вы можете перешагнуть через него и войти.</Text>
-					</After>
+					<After>Убив льва, вы можете перешагнуть через него и войти.</After>
 				</Fight>
 			</Actions>
 			<Options>
