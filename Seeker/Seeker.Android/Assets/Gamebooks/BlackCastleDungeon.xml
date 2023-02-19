@@ -7077,9 +7077,7 @@
 						<Enemy Name="ПЕРВЫЙ ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 						<Enemy Name="ВТОРОЙ ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 					</Enemies>
-					<After>
-						<Text>Если вам удалось победить одного из рыцарей:</Text>
-					</After>
+					<After>Если вам удалось победить одного из рыцарей:</After>
 				</Fight>
 			</Actions>
 			<Options>
