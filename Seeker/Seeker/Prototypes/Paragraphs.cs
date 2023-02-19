@@ -25,7 +25,6 @@ namespace Seeker.Prototypes
                 {
                     Destination = GetDestination(xmlOption),
                     Text = Xml.StringParse(xmlOption.Attributes["Text"]),
-                    Aftertext = Xml.StringParse(xmlOption.Attributes["Aftertext"]),
                 };
 
                 paragraph.Options.Add(option);
