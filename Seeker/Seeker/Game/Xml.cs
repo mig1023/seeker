@@ -64,6 +64,34 @@ namespace Seeker.Game
             return modification;
         }
 
+        private static Text TextLineParse(XmlNode text)
+        {
+            StringComparer ignoreCase = StringComparer.CurrentCultureIgnoreCase;
+            List<string> style = StringParse(text.Attributes["Style"]).Split(',').Select(x => x.Trim()).ToList();
+
+            Text output = new Text
+            {
+                Content = text.InnerText,
+                Bold = style.Contains("Bold", ignoreCase),
+                Italic = style.Contains("Italic", ignoreCase),
+                Selected = style.Contains("Selected", ignoreCase),
+                Box = style.Contains("Box", ignoreCase),
+            };
+
+            output.Size = Interface.TextFontSize.nope;
+
+            foreach (string styleLine in style)
+            {
+                if (Enum.TryParse(styleLine, out Interface.TextFontSize size))
+                    output.Size = size;
+
+                if ((styleLine == "Center") || (styleLine == "Right"))
+                    output.Alignment = styleLine;
+            }
+
+            return output;
+        }
+
         public static string TextParse(int id, string optionName)
         {
             string textByParagraph = String.Empty;
@@ -89,37 +117,20 @@ namespace Seeker.Game
 
         public static List<Text> TextsParse(XmlNode xmlNode, bool action = false)
         {
-            List<Text> texts = new List<Text>();
-            StringComparer ignoreCase = StringComparer.CurrentCultureIgnoreCase;
-
-            foreach (XmlNode text in xmlNode.SelectNodes(String.Format("{0}/Text", action ? "After" : "Texts")))
+            if (action && (xmlNode["After"].ChildNodes == null))
             {
-                List<string> style = StringParse(text.Attributes["Style"]).Split(',').Select(x => x.Trim()).ToList();
-
-                Text outputText = new Text
-                {
-                    Content = text.InnerText,
-                    Bold = style.Contains("Bold", ignoreCase),
-                    Italic = style.Contains("Italic", ignoreCase),
-                    Selected = style.Contains("Selected", ignoreCase),
-                    Box = style.Contains("Box", ignoreCase),
-                };
-
-                outputText.Size = Interface.TextFontSize.nope;
-
-                foreach (string styleLine in style)
-                {
-                    if (Enum.TryParse(styleLine, out Interface.TextFontSize size))
-                        outputText.Size = size;
-
-                    if ((styleLine == "Center") || (styleLine == "Right"))
-                        outputText.Alignment = styleLine;
-                }
-
-                texts.Add(outputText);
+                return new List<Text> { TextLineParse(xmlNode["After"]) };
             }
+            else
+            {
+                List<Text> texts = new List<Text>();
+                string path = action ? "After" : "Texts";
+                
+                foreach (XmlNode text in xmlNode.SelectNodes(String.Format("{0}/Text", path)))
+                    texts.Add(TextLineParse(text));
 
-            return texts;
+                return texts;
+            }
         }
 
         public static int PlaythrougParse(XmlNode xmlNode)
