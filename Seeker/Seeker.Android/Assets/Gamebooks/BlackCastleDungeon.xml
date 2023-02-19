@@ -10743,9 +10743,7 @@
 					<Enemies>
 						<Enemy Name="ПАУК" Mastery="8" Endurance="6"/>
 					</Enemies>
-					<After>
-						<Text>Если вы победили паука, то можете поискать его логово.</Text>
-					</After>
+					<After>Если вы победили паука, то можете поискать его логово.</After>
 				</Fight>
 			</Actions>
 			<Options>
