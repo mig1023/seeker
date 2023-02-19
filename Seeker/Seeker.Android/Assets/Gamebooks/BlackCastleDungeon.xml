@@ -7824,27 +7824,21 @@
 					<Text>ЯБЛОКО</Text>
 					<Price>1</Price>
 					<Benefit Name="Healing" Value="Съесть яблоко,2"/>
-					<After>
-						<Text>Добавит 2 ВЫНОСЛИВОСТЬ</Text>
-					</After>
+					<After>Добавит 2 ВЫНОСЛИВОСТЬ</After>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Text>МАНДАРИН</Text>
 					<Price>2</Price>
 					<Benefit Name="Healing" Value="Съесть мандарин,3"/>
-					<After>
-						<Text>Добавит 3 ВЫНОСЛИВОСТИ</Text>
-					</After>
+					<After>Добавит 3 ВЫНОСЛИВОСТИ</After>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Text>АПЕЛЬСИН</Text>
 					<Price>1</Price>
 					<Benefit Name="Healing" Value="Съесть апельсин,2"/>
-					<After>
-						<Text>Добавит 2 ВЫНОСЛИВОСТЬ</Text>
-					</After>
+					<After>Добавит 2 ВЫНОСЛИВОСТЬ</After>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
@@ -7852,81 +7846,63 @@
 					<Text>БАНАН</Text>
 					<Price>2</Price>
 					<Benefit Name="Healing" Value="Съесть банан,3"/>
-					<After>
-						<Text>Добавит 3 ВЫНОСЛИВОСТИ</Text>
-					</After>
+					<After>Добавит 3 ВЫНОСЛИВОСТИ</After>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Text>ГРУША</Text>
 					<Price>1</Price>
 					<Benefit Name="Healing" Value="Съесть грушу,2"/>
-					<After>
-						<Text>Добавит 2 ВЫНОСЛИВОСТИ</Text>
-					</After>
+					<After>Добавит 2 ВЫНОСЛИВОСТИ</After>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Text>МОЛОКО</Text>
 					<Price>2</Price>
 					<Benefit Name="Endurance" Value="4"/>
-					<After>
-						<Text>Прибавит 4 ВЫНОСЛИВОСТИ.\n\nЗа 4 золотых он предлагает наполнить вашу флягу целиком:</Text>
-					</After>
+					<After>Прибавит 4 ВЫНОСЛИВОСТИ.\n\nЗа 4 золотых он предлагает наполнить вашу флягу целиком:</After>
 				</Get>
 				<Get>
 					<Button>Наполнить флягу целиком</Button>
 					<Text>ВОДА</Text>
 					<Price>4</Price>
 					<Benefit Name="Healing" Value="Попить,2"/>
-					<After>
-						<Text>...Или за 2 — наполовину:</Text>
-					</After>
+					<After>...Или за 2 — наполовину:</After>
 				</Get>
 				<Get>
 					<Button>Наполнить флягу наполовину</Button>
 					<Text>ВОДА</Text>
 					<Price>2</Price>
 					<Benefit Name="Healing" Value="Попить,2"/>
-					<After>
-						<Text>Кроме фруктов, у него еще есть:</Text>
-					</After>
+					<After>Кроме фруктов, у него еще есть:</After>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Text>СЫР</Text>
 					<Price>3</Price>
 					<Benefit Name="Healing" Value="Съесть сыр,4"/>
-					<After>
-						<Text>Добавит 4 ВЫНОСЛИВОСТИ</Text>
-					</After>
+					<After>Добавит 4 ВЫНОСЛИВОСТИ</After>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Text>КОЛБАСА</Text>
 					<Price>3</Price>
 					<Benefit Name="Healing" Value="Съесть колбасу,5"/>
-					<After>
-						<Text>Добавит 5 ВЫНОСЛИВОСТИ</Text>
-					</After>
+					<After>Добавит 5 ВЫНОСЛИВОСТИ</After>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Text>ХЛЕБ</Text>
 					<Price>3</Price>
 					<Benefit Name="Healing" Value="Съесть хлеб,4"/>
-					<After>
-						<Text>Добавит 4 ВЫНОСЛИВОСТИ</Text>
-					</After>
+					<After>Добавит 4 ВЫНОСЛИВОСТИ</After>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
 					<Text>МЯСО</Text>
 					<Price>4</Price>
 					<Benefit Name="Healing" Value="Съесть мясо,6"/>
-					<After>
-						<Text>Добавит 6 ВЫНОСЛИВОСТИ.\n\nЕсли вы что-то хотите купить – покупайте. Все, кроме молока и воды (если вам не в чем ее нести), можете съесть сразу или же взять с собой. Если хотите, можете купить еще и заплечный мешок.</Text>
-					</After>
+					<After>Добавит 6 ВЫНОСЛИВОСТИ.\n\nЕсли вы что-то хотите купить – покупайте. Все, кроме молока и воды (если вам не в чем ее нести), можете съесть сразу или же взять с собой. Если хотите, можете купить еще и заплечный мешок.</After>
 				</Get>
 			</Actions>
 			<Options>
