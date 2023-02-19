@@ -6978,9 +6978,7 @@
 						<Enemy Name="ТОРГОВЕЦ" Mastery="7" Endurance="17"/>
 					</Enemies>
 					<ExtendedDamage>4</ExtendedDamage>
-					<After>
-						<Text>Если вы убили его:</Text>
-					</After>
+					<After>Если вы убили его:</After>
 				</Fight>
 			</Actions>
 			<Options>
