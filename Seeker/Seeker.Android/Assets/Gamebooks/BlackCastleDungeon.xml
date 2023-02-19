@@ -1910,9 +1910,7 @@
 					<Price>1</Price>
 					<Multiple/>
 					<Benefit Name="Healing" Value="Поесть рыбы,2"/>
-					<After>
-						<Text>Вы благодарите радушного хозяина и уходите.</Text>
-					</After>
+					<After>Вы благодарите радушного хозяина и уходите.</After>
 				</Get>
 			</Actions>
 			<Options>
