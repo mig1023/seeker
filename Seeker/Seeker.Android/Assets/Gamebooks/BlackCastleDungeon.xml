@@ -870,9 +870,7 @@
 					<Text>ТАРЕЛКА ЩЕЙ</Text>
 					<Price>2</Price>
 					<Benefit Name="Endurance" Value="2"/>
-					<After>
-						<Text>Восстановите 4 ВЫНОСЛИВОСТИ и уходите.</Text>
-					</After>
+					<After>Восстановите 4 ВЫНОСЛИВОСТИ и уходите.</After>
 				</Get>
 			</Actions>
 			<Options>
