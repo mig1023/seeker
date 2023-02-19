@@ -3958,9 +3958,7 @@
 					<Price>2</Price>
 					<Multiple/>
 					<Benefit Name="Healing" Value="Съесть ананас,3"/>
-					<After>
-						<Text>Добавит 3 ВЫНОСЛИВОСТЬ.</Text>
-					</After>
+					<After>Добавит 3 ВЫНОСЛИВОСТЬ.</After>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
@@ -3969,9 +3967,7 @@
 					<Price>2</Price>
 					<Multiple/>
 					<Benefit Name="Healing" Value="Съесть банан,2"/>
-					<After>
-						<Text>Добавит 2 ВЫНОСЛИВОСТИ.\n\nНо он притащил еще и кучу вещей, которые, как он считает, могут пригодиться в дороге.</Text>
-					</After>
+					<After>Добавит 2 ВЫНОСЛИВОСТИ.\n\nНо он притащил еще и кучу вещей, которые, как он считает, могут пригодиться в дороге.</After>
 				</Get>
 				<Get>
 					<Button>Купить</Button>
@@ -4005,9 +4001,7 @@
 					<Trigger>SilverBracelet</Trigger>
 					<Text>СЕРЕБРЯНЫЙ БРАСЛЕТ</Text>
 					<Price>4</Price>
-					<After>
-						<Text>Сделайте необходимые покупки и покиньте деревню по одной из дорог: на юг или на запад.</Text>
-					</After>
+					<After>Сделайте необходимые покупки и покиньте деревню по одной из дорог: на юг или на запад.</After>
 				</Get>
 			</Actions>
 			<Triggers>SilverBracelet</Triggers>
