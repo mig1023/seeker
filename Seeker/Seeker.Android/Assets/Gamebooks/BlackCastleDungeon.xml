@@ -11925,9 +11925,7 @@
 					<Enemies>
 						<Enemy Name="ПРИЗРАК" Mastery="9" Endurance="11"/>
 					</Enemies>
-					<After>
-						<Text>Если вы победили Призрака, то он исчезает, а вы можете:</Text>
-					</After>
+					<After>Если вы победили Призрака, то он исчезает, а вы можете:</After>
 				</Fight>
 			</Actions>
 			<Options>
