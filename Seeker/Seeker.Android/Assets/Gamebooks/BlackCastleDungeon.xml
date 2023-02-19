@@ -8380,9 +8380,7 @@
 					<Enemies>
 						<Enemy Name="ПРОВОДНИК" Mastery="8" Endurance="8"/>
 					</Enemies>
-					<After>
-						<Text>Убив его, можете осмотреть комнату.</Text>
-					</After>
+					<After>Убив его, можете осмотреть комнату.</After>
 				</Fight>
 			</Actions>
 			<Options>
