@@ -12944,9 +12944,7 @@
 					<Enemies>
 						<Enemy Name="КАПИТАН РЫЦАРЕЙ" Mastery="12" Endurance="12"/>
 					</Enemies>
-					<After>
-						<Text>Если же произойдет чудо, и вы сможете перебить всю охрану, то можете:</Text>
-					</After>
+					<After>Если же произойдет чудо, и вы сможете перебить всю охрану, то можете:</After>
 				</Fight>
 			</Actions>
 			<Options>
