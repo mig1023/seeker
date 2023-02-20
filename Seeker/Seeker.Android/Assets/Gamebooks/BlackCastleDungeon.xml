@@ -13077,9 +13077,7 @@
 						<Enemy Name="ВТОРАЯ ЛЕТУЧАЯ МЫШЬ" Mastery="4" Endurance="7"/>
 						<Enemy Name="ТРЕТЬЯ ЛЕТУЧАЯ МЫШЬ" Mastery="4" Endurance="6"/>
 					</Enemies>
-					<After>
-						<Text>Сражаться с ними вам придется одновременно. Если вы победите их, то можете:</Text>
-					</After>
+					<After>Сражаться с ними вам придется одновременно. Если вы победите их, то можете:</After>
 				</Fight>
 			</Actions>
 			<Modifications>
