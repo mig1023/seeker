@@ -1064,9 +1064,7 @@
 			<Actions>
 				<DiceSpendGlory>
 					<Button>Потратить Славу</Button>
-					<After>
-						<Text>Иначе вам предстоит бороздить моря без вмешательства морского бога.</Text>
-					</After>
+					<After>Иначе вам предстоит бороздить моря без вмешательства морского бога.</After>
 				</DiceSpendGlory>
 			</Actions>		
 			<Options>
