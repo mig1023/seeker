@@ -16463,9 +16463,7 @@
 					<Enemies>
 						<Enemy Name="ШПИОН" Mastery="10" Endurance="12"/>
 					</Enemies>
-					<After>
-						<Text>Если вы убили его, то продолжайте свой путь...</Text>
-					</After>
+					<After>Если вы убили его, то продолжайте свой путь...</After>
 				</Fight>
 			</Actions>
 			<Options>
