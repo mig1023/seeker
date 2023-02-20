@@ -16196,9 +16196,7 @@
 					<Enemies>
 						<Enemy Name="ГОБЛИН" Mastery="10" Endurance="7"/>
 					</Enemies>
-					<After>
-						<Text>Если вы его победили, то можете:</Text>
-					</After>
+					<After>Если вы его победили, то можете:</After>
 				</Fight>
 			</Actions>
 			<Options>
