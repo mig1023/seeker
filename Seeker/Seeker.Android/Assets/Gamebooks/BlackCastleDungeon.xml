@@ -15024,9 +15024,7 @@
 						<Enemy Name="ЗЛОЙ ДУХ" Mastery="10" Endurance="6"/>
 					</Enemies>
 					<WoundsToWin>2</WoundsToWin>
-					<After>
-						<Text>Заклятия вам не помогут.</Text>
-					</After>
+					<After>Заклятия вам не помогут.</After>
 				</Fight>
 			</Actions>
 			<Options>
