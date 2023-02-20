@@ -734,9 +734,7 @@
 						<Enemy Name="ТАГРУФФ" Mastery="14" Endurance="14"/>
 					</Enemies>
 					<WoundsToWin>5</WoundsToWin>
-					<After>
-						<Text>Удалось снизить уровень его ВЫНОСЛИВОСТИ до 4, то...</Text>
-					</After>
+					<After>Удалось снизить уровень его ВЫНОСЛИВОСТИ до 4, то...</After>
 				</Fight>
 			</Actions>
 			<Modifications>
