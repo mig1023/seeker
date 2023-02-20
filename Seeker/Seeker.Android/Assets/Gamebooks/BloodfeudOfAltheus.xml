@@ -2416,9 +2416,7 @@
 						<Enemy Name="Первый мечник" Strength="5" Defence="14"/>
 						<Enemy Name="Второй мечник" Strength="5" Defence="14"/>
 					</Enemies>
-					<After>
-						<Text>Вспомните правила битвы с несколькими противниками.</Text>
-					</After>
+					<After>Вспомните правила битвы с несколькими противниками.</After>
 				</Fight>
 			</Actions>	
 			<Options>
