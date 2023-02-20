@@ -3969,9 +3969,7 @@
 					<Enemies>
 						<Enemy Name="Человек" Strength="7" Defence="13"/>
 					</Enemies>
-					<After>
-						<Text>Только на время этого боя отнимите 2 от своей Силы из-за морской болезни.</Text>
-					</After>
+					<After>Только на время этого боя отнимите 2 от своей Силы из-за морской болезни.</After>
 				</Fight>
 			</Actions>	
 			<IntuitiveSolution/>
