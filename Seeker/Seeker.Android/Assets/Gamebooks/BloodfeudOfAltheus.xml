@@ -433,9 +433,7 @@
 					</Enemies>
 					<FightToDeath/>
 					<Ichor/>
-					<After>
-						<Text>Вместо сражения вы можете попробовать выдернуть пробку.</Text>
-					</After>
+					<After>Вместо сражения вы можете попробовать выдернуть пробку.</After>
 				</Fight>
 			</Actions>	
 			<Options>
