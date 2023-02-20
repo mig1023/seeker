@@ -1383,9 +1383,7 @@
 			<Actions>
 				<Translation>
 					<SomethingStrange>Нкчт пжнп жесп здб нкж! Нжфж жлкотыир жшклуч тпампж жшьеф крбстьиш брадбр рбм фссб. Вждь оэтпим пкаглб збукоф шк. Биж щжаэт помпжип рфжкжак отыас жйчбсип баэтп мофзн бжшь</SomethingStrange>					
-					<After>
-						<Text>Что ты предпримешь?</Text>
-					</After>
+					<After>Что ты предпримешь?</After>
 				</Translation>
 			</Actions>
 			<Modifications>
