@@ -1832,9 +1832,7 @@
 						<Enemy Name="Горбун" Mastery="6" Endurance="7"/>
 					</Enemies>
 					<HitStrengthBonus>-1</HitStrengthBonus>				
-					<After>
-						<Text>Сражаться на шаткой лестнице очень неудобно, вам придется уменьшать на 1 свою Силу Удара.</Text>
-					</After>
+					<After>Сражаться на шаткой лестнице очень неудобно, вам придется уменьшать на 1 свою Силу Удара.</After>
 				</Fight>
 			</Actions>
 			<Options>
