@@ -811,9 +811,7 @@
 					</Enemies>
 					<RoundsToFight>2</RoundsToFight>
 					<WoundsLimit>7</WoundsLimit>
-					<After>
-						<Text>После двух Раундов Атаки или если вы снизили Выносливость вожака волков до 7 или меньше.</Text>
-					</After>
+					<After>После двух Раундов Атаки или если вы снизили Выносливость вожака волков до 7 или меньше.</After>
 				</Fight>
 			</Actions>
 			<Options>
