@@ -181,9 +181,7 @@
 						<Enemy Name="Детеныш паука" Mastery="6" Endurance="2"/>
 					</Enemies>
 					<RandomEnemyCount/>
-					<After>
-						<Text>Если вы уничтожили всех тварей, куда вы направитесь дальше?</Text>
-					</After>
+					<After>Если вы уничтожили всех тварей, куда вы направитесь дальше?</After>
 				</Fight>
 			</Actions>
 			<Options>
