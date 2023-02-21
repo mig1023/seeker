@@ -3586,9 +3586,7 @@
 					<Trigger>Кувшин вина</Trigger>
 					<Price>10</Price>
 					<Multiple/>
-					<After>
-						<Text>За каждый купленный кувшин уровень проверки снижается на 1 пункт:</Text>
-					</After>
+					<After>За каждый купленный кувшин уровень проверки снижается на 1 пункт:</After>
 				</Get>
 				<Test>
 					<Stat>Oratory</Stat>
