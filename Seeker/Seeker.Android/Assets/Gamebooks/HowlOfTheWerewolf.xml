@@ -259,9 +259,7 @@
 			</Texts>
 			<Actions>
 				<Dice>
-					<After>
-						<Text>Выпавшее число:</Text>
-					</After>
+					<After>Выпавшее число:</After>
 				</Dice>
 			</Actions>
 			<Modifications>
