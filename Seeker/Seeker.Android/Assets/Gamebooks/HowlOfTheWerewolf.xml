@@ -605,9 +605,7 @@
 						<Enemy Name="Упырь" Mastery="8" Endurance="8"/>
 					</Enemies>
 					<WoundsForTransformation>3</WoundsForTransformation>
-					<After>
-						<Text>Если вы получите больше двух ран, Трансформация продолжится.</Text>
-					</After>
+					<After>Если вы получите больше двух ран, Трансформация продолжится.</After>
 				</Fight>
 			</Actions>
 			<Options>
