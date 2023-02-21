@@ -2146,9 +2146,7 @@
 						<Enemy Name="Второй Волк" Mastery="6" Endurance="5"/>
 					</Enemies>
 					<RoundsToFight>2</RoundsToFight>
-					<After>
-						<Text>Теперь вы сражаетесь с тремя волками одновременно. После двух Раундов атаки:</Text>
-					</After>
+					<After>Теперь вы сражаетесь с тремя волками одновременно. После двух Раундов атаки:</After>
 				</Fight>
 			</Actions>
 			<Options>
