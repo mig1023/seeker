@@ -4648,9 +4648,7 @@
 					<Text>КРАСНОРЕЧИЕ</Text>
 					<Stat>Oratory</Stat>
 					<StatToMax/>
-					<After>
-						<Text>Облегчённо вздохнув, наш герой взмывает над озером.</Text>
-					</After>
+					<After>Облегчённо вздохнув, наш герой взмывает над озером.</After>
 				</Get>
 			</Actions>
 			<Modifications>
