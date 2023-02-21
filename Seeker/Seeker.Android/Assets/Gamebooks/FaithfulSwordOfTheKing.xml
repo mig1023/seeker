@@ -2501,9 +2501,7 @@
 					<Price>150</Price>
 					<Benefit Name="Strength" Value="4"/>
 					<Benefit Name="HadFoodToday" Value="1"/>
-					<After>
-						<Text>Можете восстановить 4 СИЛЫ и с утра отправиться в путь.</Text>
-					</After>
+					<After>Можете восстановить 4 СИЛЫ и с утра отправиться в путь.</After>
 				</Get>
 			</Actions>
 			<Options>
