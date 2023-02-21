@@ -673,9 +673,7 @@
 					<Enemies>
 						<Enemy Name="ЛОДОЧНИК" Skill="5" Strength="8"/>
 					</Enemies>
-					<After>
-						<Text>Лодка теперь ваша.</Text>
-					</After>
+					<After>Лодка теперь ваша.</After>
 				</Fight>
 			</Actions>
 			<Options>
