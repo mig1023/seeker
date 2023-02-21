@@ -656,9 +656,7 @@
 					<Price>100</Price>
 					<Benefit Name="Strength" Value="2"/>
 					<Benefit Name="HadFoodToday" Value="1"/>
-					<After>
-						<Text>И продолжать путь — до Перигё, где вы наметили заночевать, еще добрых тридцать лье.</Text>
-					</After>
+					<After>И продолжать путь — до Перигё, где вы наметили заночевать, еще добрых тридцать лье.</After>
 				</Get>
 			</Actions>
 			<Modifications>
