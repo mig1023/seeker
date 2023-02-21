@@ -3419,9 +3419,7 @@
 					<Untrigger>ИД-карта</Untrigger>
 					<Price>10</Price>
 					<SellIfAvailable/>
-					<After>
-						<Text>Продайте то, что хотите и внесите соответствующие изменения в Лист персонажа.</Text>
-					</After>
+					<After>Продайте то, что хотите и внесите соответствующие изменения в Лист персонажа.</After>
 				</Get>
 			</Actions>
 			<Options>
