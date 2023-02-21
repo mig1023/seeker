@@ -1568,9 +1568,7 @@
 						<Enemy Name="Подменыш" Mastery="6" Endurance="5"/>
 					</Enemies>
 					<WoundsForTransformation>2</WoundsForTransformation>
-					<After>
-						<Text>Если вы получите больше одной раны, Трансформация продолжится.</Text>
-					</After>
+					<After>Если вы получите больше одной раны, Трансформация продолжится.</After>
 				</Fight>
 			</Actions>
 			<Options>
