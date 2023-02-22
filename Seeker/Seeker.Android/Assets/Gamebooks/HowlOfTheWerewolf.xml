@@ -2490,9 +2490,7 @@
 						<Enemy Name="Волк" Mastery="7" Endurance="6"/>
 					</Enemies>
 					<Specificity>NeedForSpeed</Specificity>	
-					<After>
-						<Text>Если у вас нет способности Скорость, придется уменьшать свою Силу Удара на 1.</Text>
-					</After>
+					<After>Если у вас нет способности Скорость, придется уменьшать свою Силу Удара на 1.</After>
 				</Fight>
 			</Actions>
 			<Options>
