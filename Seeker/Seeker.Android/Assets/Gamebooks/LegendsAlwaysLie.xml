@@ -6647,9 +6647,7 @@
 					<Enemies>
 						<Enemy Name="КАРДА" Strength="15" Hitpoints="14"/>
 					</Enemies>
-					<After>
-						<Text>Победа над ней откроет вам путь.</Text>
-					</After>
+					<After>Победа над ней откроет вам путь.</After>
 				</Fight>
 			</Actions>
 			<Options>
