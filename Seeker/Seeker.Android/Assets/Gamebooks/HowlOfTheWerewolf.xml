@@ -5328,9 +5328,7 @@
 					</Enemies>
 					<WoundsLimit>4</WoundsLimit>
 					<WoundsForTransformation>3</WoundsForTransformation>
-					<After>
-						<Text>Если Человек-волк укусит вас больше двух раз, Трансформация продолжится.</Text>
-					</After>
+					<After>Если Человек-волк укусит вас больше двух раз, Трансформация продолжится.</After>
 				</Fight>
 			</Actions>
 			<Options>
