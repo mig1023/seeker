@@ -1440,9 +1440,7 @@
 				</Reaction>
 				<Reaction>
 					<Button>Реагируйте в третий раз</Button>
-					<After>
-						<Text>Если всё в порядке:</Text>
-					</After>
+					<After>Если всё в порядке:</After>
 				</Reaction>
 			</Actions>
 			<Options>
