@@ -5312,9 +5312,7 @@
 					</Enemies>
 					<RoundsToFight>3</RoundsToFight>
 					<WoundsLimit>6</WoundsLimit>
-					<After>
-						<Text>После трех Раундов Атаки или если вам удастся снизить его Выносливость до 6 или меньше:</Text>
-					</After>
+					<After>После трех Раундов Атаки или если вам удастся снизить его Выносливость до 6 или меньше:</After>
 				</Fight>
 			</Actions>
 			<Options>
