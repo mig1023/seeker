@@ -1765,9 +1765,7 @@
 					<Enemies>
 						<Enemy Name="ВЕЛИКАН" Strength="12" Hitpoints="12"/>
 					</Enemies>
-					<After>
-						<Text>Победа откроет вам путь.</Text>
-					</After>
+					<After>Победа откроет вам путь.</After>
 				</Fight>
 			</Actions>
 			<Options>
