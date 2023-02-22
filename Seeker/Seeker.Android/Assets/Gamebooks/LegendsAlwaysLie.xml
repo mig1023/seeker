@@ -6024,9 +6024,7 @@
 			<Text>Во-первых,</Text>
 			<Actions>
 				<Reaction>
-					<After>
-						<Text>Если ваши рефлексы подведут вас, то снаряд достигнет своей цели:</Text>
-					</After>
+					<After>Если ваши рефлексы подведут вас, то снаряд достигнет своей цели:</After>
 				</Reaction>
 			</Actions>
 			<Options>
@@ -6350,9 +6348,7 @@
 					<Enemies>
 						<Enemy Name="КАРДА" Strength="12" Hitpoints="14"/>
 					</Enemies>
-					<After>
-						<Text>Победа откроет вам путь.</Text>
-					</After>
+					<After>Победа откроет вам путь.</After>
 				</Fight>
 			</Actions>
 			<Options>
