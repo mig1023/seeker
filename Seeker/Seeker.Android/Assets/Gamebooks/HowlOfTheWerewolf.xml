@@ -3584,9 +3584,7 @@
 			</Texts>
 			<Actions>
 				<Dice>
-					<After>
-						<Text>Какое число на нем выпало:</Text>
-					</After>
+					<After>Какое число на нем выпало:</After>
 				</Dice>
 			</Actions>
 			<Modifications>
