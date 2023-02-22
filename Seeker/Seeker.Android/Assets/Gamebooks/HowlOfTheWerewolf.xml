@@ -5168,9 +5168,7 @@
 						<Enemy Name="Волчья Стая" Mastery="7" Endurance="14"/>
 					</Enemies>
 					<Specificity>Ulrich</Specificity>
-					<After>
-						<Text>Если вам удасться уменьшить Выносливость стаи до нуля, волки отступят от хижины.</Text>
-					</After>
+					<After>Если вам удасться уменьшить Выносливость стаи до нуля, волки отступят от хижины.</After>
 				</Fight>
 			</Actions>
 			<Options>
