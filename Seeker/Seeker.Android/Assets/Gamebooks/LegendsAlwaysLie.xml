@@ -3390,9 +3390,7 @@
 				<Reaction>
 					<Button>Реагируйте в четвёртый раз</Button>
 					<Damage Name="Hitpoints" Value="-2"/>
-					<After>
-						<Text>За каждый раз, когда вы промедлите, отнимите у себя 2 ЖИЗНИ.</Text>
-					</After>
+					<After>За каждый раз, когда вы промедлите, отнимите у себя 2 ЖИЗНИ.</After>
 				</Reaction>
 			</Actions>
 			<Options>
