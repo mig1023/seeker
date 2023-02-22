@@ -5279,9 +5279,7 @@
 						<Enemy Name="Вторая дикая свинья" Mastery="5" Endurance="4"/>
 						<Enemy Name="Третья дикая свинья" Mastery="5" Endurance="5"/>
 					</Enemies>
-					<After>
-						<Text>Если вам удалось разделаться с обезумевшими животными, решайте:</Text>
-					</After>
+					<After>Если вам удалось разделаться с обезумевшими животными, решайте:</After>
 				</Fight>
 			</Actions>
 			<Options>
