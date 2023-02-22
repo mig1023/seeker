@@ -2724,9 +2724,7 @@
 					</Enemies>	
 					<RoundsToFight>5</RoundsToFight>
 					<WoundsForTransformation>3</WoundsForTransformation>
-					<After>
-						<Text>Если вы получите больше двух ран, Трансформация продолжится.</Text>
-					</After>
+					<After>Если вы получите больше двух ран, Трансформация продолжится.</After>
 				</Fight>
 			</Actions>
 			<Options>
