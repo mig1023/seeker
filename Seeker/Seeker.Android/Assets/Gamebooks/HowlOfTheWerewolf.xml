@@ -4275,9 +4275,7 @@
 						<Enemy Name="Дикая корова" Mastery="8" Endurance="9"/>
 					</Enemies>
 					<Specificity>NeedForSpeed</Specificity>	
-					<After>
-						<Text>Сражаться сложно, ноги увязают в грязи. Если у вас нет способности Скорость, придется уменьшать на 1 свою Силу Удара.</Text>
-					</After>
+					<After>Сражаться сложно, ноги увязают в грязи. Если у вас нет способности Скорость, придется уменьшать на 1 свою Силу Удара.</After>
 				</Fight>
 			</Actions>
 			<Options>
@@ -4374,9 +4372,7 @@
 					<Enemies>
 						<Enemy Name="Второй книжный червь" Mastery="8" Endurance="6"/>
 					</Enemies>
-					<After>
-						<Text>Расправившись с ними, вы уходите из этой комнаты.</Text>
-					</After>
+					<After>Расправившись с ними, вы уходите из этой комнаты.</After>
 				</Fight>
 			</Actions>
 			<Triggers>Имя Круциуса</Triggers>
