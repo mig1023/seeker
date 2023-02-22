@@ -4416,9 +4416,7 @@
 				<ShareFood>
 					<Button>Поделить поровну</Button>
 					<FoodSharing>FiftyFifty</FoodSharing>
-					<After>
-						<Text>Всю провизию вы приканчиваете буквально за пару минут.</Text>
-					</After>
+					<After>Всю провизию вы приканчиваете буквально за пару минут.</After>
 				</ShareFood>
 			</Actions>
 			<Options>
