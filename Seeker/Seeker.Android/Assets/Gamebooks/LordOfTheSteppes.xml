@@ -1679,9 +1679,7 @@
 					<Enemies>
 						<Enemy Name="Опытный авантюрист" Attack="12" Defence="15" Endurance="6" Initiative="11" SpecialTechnique="Reaction, TwoBlades"/>
 					</Enemies>
-					<After>
-						<Text>Ваш соперник оказался на редкость умелым бойцом, недаром он уже одолел несколько своих врагов.\n\nКогда вы победите:</Text>
-					</After>
+					<After>Ваш соперник оказался на редкость умелым бойцом, недаром он уже одолел несколько своих врагов.\n\nКогда вы победите:</After>
 				</Fight>
 			</Actions>
 			<Options>
