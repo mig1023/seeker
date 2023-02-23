@@ -226,9 +226,7 @@
 					<Enemies>
 						<Enemy Name="ДИКИЙ ПЕС" Strength="9" Hitpoints="6"/>
 					</Enemies>
-					<After>
-						<Text>Победив, вы раздумываете, куда бы направиться далее...</Text>
-					</After>
+					<After>Победив, вы раздумываете, куда бы направиться далее...</After>
 				</Fight>
 			</Actions>
 			<Options>
