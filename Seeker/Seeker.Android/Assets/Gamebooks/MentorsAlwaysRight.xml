@@ -1059,9 +1059,7 @@
 					<Enemies>
 						<Enemy Name="ЖЕРЕБЕЦ" Strength="9" Hitpoints="10"/>
 					</Enemies>
-					<After>
-						<Text>Победив:</Text>
-					</After>
+					<After>Победив:</After>
 				</Fight>
 			</Actions>
 			<Options>
