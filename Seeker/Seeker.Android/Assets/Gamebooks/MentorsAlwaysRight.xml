@@ -1770,9 +1770,7 @@
 						<Enemy Name="ПЕРВАЯ ГИЕНА" Strength="9" Hitpoints="11"/>
 						<Enemy Name="ВТОРАЯ ГИЕНА" Strength="9" Hitpoints="10"/>
 					</Enemies>
-					<After>
-						<Text>Победив, вы размышляете над выбором маршрута. Слева по-прежнему виднеется дорога:</Text>
-					</After>
+					<After>Победив, вы размышляете над выбором маршрута. Слева по-прежнему виднеется дорога:</After>
 				</Fight>
 			</Actions>
 			<Options>
