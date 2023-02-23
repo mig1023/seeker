@@ -2651,9 +2651,7 @@
 						<Enemy Name="БОГОМОЛ" Strength="9" Hitpoints="12"/>
 					</Enemies>
 					<Wound>3</Wound>
-					<After>
-						<Text>Каждая нанесённая им рана будет отнимать 3 ЖИЗНИ. Победив, переводите дух.</Text>
-					</After>
+					<After>Каждая нанесённая им рана будет отнимать 3 ЖИЗНИ. Победив, переводите дух.</After>
 				</Fight>
 			</Actions>
 			<Options>
