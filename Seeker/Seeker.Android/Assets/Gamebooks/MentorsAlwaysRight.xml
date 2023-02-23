@@ -891,18 +891,14 @@
 					<Button>Купить</Button>
 					<Text>Бурдюк с водой (добавит 3 ЖИЗНИ)</Text>
 					<Price>4</Price>
-					<After>
-						<Text>Если у вас есть серебряный подсвечник, торговец может купить его у вас за три золотых:</Text>
-					</After>
+					<After>Если у вас есть серебряный подсвечник, торговец может купить его у вас за три золотых:</After>
 				</Get>
 				<Sell>
 					<Button>Продать</Button>
 					<Text>Серебряный подсвечник</Text>
 					<Trigger>SilverCandlestick</Trigger>
 					<Price>3</Price>
-					<After>
-						<Text>После уходите.</Text>
-					</After>
+					<After>После уходите.</After>
 				</Sell>
 			</Actions>
 			<Options>
