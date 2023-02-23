@@ -1892,9 +1892,7 @@
 					<Enemies>
 						<Enemy Name="ДРАКОНИД" Strength="13" Hitpoints="13"/>
 					</Enemies>
-					<After>
-						<Text>Победа — и вы входите в дверь:</Text>
-					</After>
+					<After>Победа — и вы входите в дверь:</After>
 				</Fight>
 			</Actions>
 			<Options>
