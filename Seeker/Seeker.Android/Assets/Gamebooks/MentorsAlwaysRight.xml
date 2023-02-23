@@ -1677,9 +1677,7 @@
 					<Enemies>
 						<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="9"/>
 					</Enemies>
-					<After>
-						<Text>Если вы победили, то:</Text>
-					</After>
+					<After>Если вы победили, то:</After>
 				</Fight>
 			</Actions>
 			<Options>
