@@ -390,9 +390,7 @@
 					<Button>Выбрать благодать</Button>
 					<Benefit Name="MaxHitpoints" Value="10"/>
 					<OnlyOne>WizardPay</OnlyOne>
-					<After>
-						<Text>Совершив приглянувшийся обмен, вы прощаетесь.</Text>
-					</After>
+					<After>Совершив приглянувшийся обмен, вы прощаетесь.</After>
 				</Get>
 			</Actions>
 			<Options>
