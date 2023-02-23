@@ -815,9 +815,7 @@
 					<Enemies>
 						<Enemy Name="ПУМА" Strength="9" Hitpoints="6"/>
 					</Enemies>
-					<After>
-						<Text>Она не такой уж опасный противник. Победив, вы раздумываете, куда направится:</Text>
-					</After>
+					<After>Она не такой уж опасный противник. Победив, вы раздумываете, куда направится:</After>
 				</Fight>
 			</Actions>
 			<Options>
