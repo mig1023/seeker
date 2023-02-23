@@ -1120,9 +1120,7 @@
 					</Enemies>
 					<Invincible/>
 					<RoundsWinToWin>3</RoundsWinToWin>
-					<After>
-						<Text>Если вам удастся ранить его три раза:</Text>
-					</After>
+					<After>Если вам удастся ранить его три раза:</After>
 				</Fight>
 			</Actions>
 			<Options>
