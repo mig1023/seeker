@@ -2991,9 +2991,7 @@
 					<Enemies>
 						<Enemy Name="Опытный авантюрист" Attack="12" Defence="15" Endurance="6" Initiative="11" SpecialTechnique="Reaction, TwoBlades"/>
 					</Enemies>
-					<After>
-						<Text>Незнакомец превосходно владеет оружием и дорого продаст свою жизнь. Давно вы не встречали такого умелого противника.</Text>
-					</After>
+					<After>Незнакомец превосходно владеет оружием и дорого продаст свою жизнь. Давно вы не встречали такого умелого противника.</After>
 				</Fight>
 			</Actions>
 			<Options>
