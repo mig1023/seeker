@@ -2934,9 +2934,7 @@
 					<Price>2</Price>
 					<Multiple/>
 					<Benefit Name="Healing" Value="Съесть дорожной еды,3"/>
-					<After>
-						<Text>Больше в трактире ничего примечательного не происходит.</Text>
-					</After>
+					<After>Больше в трактире ничего примечательного не происходит.</After>
 				</Get>
 			</Actions>
 			<Options>
