@@ -3713,9 +3713,7 @@
 					<Enemies>
 						<Enemy Name="МУМИЯ" Strength="10" Hitpoints="14"/>
 					</Enemies>
-					<After>
-						<Text>Одолев его, вы можете:</Text>
-					</After>
+					<After>Одолев его, вы можете:</After>
 				</Fight>
 			</Actions>
 			<Options>
