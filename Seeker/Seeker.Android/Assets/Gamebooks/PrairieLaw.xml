@@ -1367,9 +1367,7 @@
 				<Get>
 					<Button>Выбрать</Button>
 					<Benefit Name="Cents" Value="1000"/>
-					<After>
-						<Text>Решайте, что вам больше по душе, и прощайтесь с фермером.</Text>
-					</After>
+					<After>Решайте, что вам больше по душе, и прощайтесь с фермером.</After>
 				</Get>	
 			</Actions>
 			<Options>
