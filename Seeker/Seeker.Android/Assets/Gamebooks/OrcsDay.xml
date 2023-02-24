@@ -772,9 +772,7 @@
 					<Text>МАГИЧЕСКИЙ КЛИНОК</Text>
 					<Price>1</Price>
 					<Benefit Name="Weapon" Value="1"/>
-					<After>
-						<Text>В сопровождении девушки ты и остальные орки отправляетесь дальше.</Text>
-					</After>
+					<After>В сопровождении девушки ты и остальные орки отправляетесь дальше.</After>
 				</Get>
 			</Actions>
 			<Modifications>
