@@ -229,9 +229,7 @@
 					<Button>Увеличить, Уменьшить</Button>
 					<Text>Ставка</Text>
 					<Stat>Bet</Stat>
-					<After>
-						<Text>Выбрав, узнай, что будет дальше.</Text>
-					</After>
+					<After>Выбрав, узнай, что будет дальше.</After>
 				</Get-Decrease>
 			</Actions>
 			<Options>
