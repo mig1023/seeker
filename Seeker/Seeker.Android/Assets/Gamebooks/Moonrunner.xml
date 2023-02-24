@@ -1305,9 +1305,7 @@
 					</Enemies>
 					<DevastatingAttack>3</DevastatingAttack>
 					<Invulnerable/>
-					<After>
-						<Text>В конце каждого выигранного Раунда Атаки попробуйте Проверить свою Удачу.</Text>
-					</After>
+					<After>В конце каждого выигранного Раунда Атаки попробуйте Проверить свою Удачу.</After>
 				</Fight>
 			</Actions>
 			<Options>
