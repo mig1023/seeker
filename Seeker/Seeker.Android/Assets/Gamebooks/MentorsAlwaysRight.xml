@@ -4343,9 +4343,7 @@
 						<Enemy Name="ЛАНТАН" Strength="11" Hitpoints="12"/>
 					</Enemies>
 					<IncrementWounds/>
-					<After>
-						<Text>После победы над монстром:</Text>
-					</After>
+					<After>После победы над монстром:</After>
 				</Fight>
 			</Actions>
 			<Options>
