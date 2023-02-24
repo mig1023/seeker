@@ -2834,9 +2834,7 @@
 					<Enemies>
 						<Enemy Name="ОБЕЗЬЯНОЧЕЛОВЕК" Strength="11" Hitpoints="15"/>
 					</Enemies>
-					<After>
-						<Text>После победы:</Text>
-					</After>
+					<After>После победы:</After>
 				</Fight>
 			</Actions>
 			<Options>
