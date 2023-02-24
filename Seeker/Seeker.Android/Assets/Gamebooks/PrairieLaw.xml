@@ -3473,9 +3473,7 @@
 					<Text>Поесть</Text>
 					<Price>100</Price>
 					<Benefit Name="Strength" Value="3"/>
-					<After>
-						<Text>Если вы сейчас не голодны, попросите завернуть вам еду с собой:</Text>
-					</After>
+					<After>Если вы сейчас не голодны, попросите завернуть вам еду с собой:</After>
 				</Get>
 				<Get>
 					<Button>Еда с собой</Button>
