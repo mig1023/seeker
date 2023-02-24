@@ -4714,9 +4714,7 @@
 					<Enemies>
 						<Enemy Name="КИКИМОРА" Strength="10" Hitpoints="13"/>
 					</Enemies>
-					<After>
-						<Text>Победив, вы переводите дух. Похоже, можно двигаться дальше.</Text>
-					</After>
+					<After>Победив, вы переводите дух. Похоже, можно двигаться дальше.</After>
 				</Fight>
 			</Actions>
 			<Options>
