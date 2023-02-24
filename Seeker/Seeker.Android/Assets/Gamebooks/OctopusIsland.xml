@@ -171,9 +171,7 @@
 					<Enemies>
 						<Enemy Name="Ро-пёс" Skill="9" Hitpoint="10"/>
 					</Enemies>
-					<After>
-						<Text>На этот раз предстоит смертельная битва.</Text>
-					</After>
+					<After>На этот раз предстоит смертельная битва.</After>
 				</Fight>
 			</Actions>	
 			<Options>
