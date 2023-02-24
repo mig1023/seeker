@@ -1746,9 +1746,7 @@
 					<Enemies>
 						<Enemy Name="Барон Милеску" Mastery="9" Endurance="15"/>
 					</Enemies>
-					<After>
-						<Text>Возможно, вам удастся отбиться, но убить барона не так просто.</Text>
-					</After>
+					<After>Возможно, вам удастся отбиться, но убить барона не так просто.</After>
 				</Fight>
 			</Actions>
 			<Options>
