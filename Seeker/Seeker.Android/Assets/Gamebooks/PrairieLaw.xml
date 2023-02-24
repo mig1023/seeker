@@ -1550,9 +1550,7 @@
 			<Actions>
 				<LuckRecovery>
 					<Button>Восстановить 1 цифру удачи</Button>
-					<After>
-						<Text>Девушка горячо благодарит вас и просит отвезти ее к отцу.</Text>
-					</After>
+					<After>Девушка горячо благодарит вас и просит отвезти ее к отцу.</After>
 				</LuckRecovery>
 			</Actions>
 			<Options>
