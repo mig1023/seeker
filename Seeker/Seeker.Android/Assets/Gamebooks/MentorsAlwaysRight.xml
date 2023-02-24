@@ -4213,9 +4213,7 @@
 						<Enemy Name="ПЕШИЙ ХАЗРАТ" Strength="9" Hitpoints="8"/>
 						<Enemy Name="КОННЫЙ ХАЗРАТ" Strength="10" Hitpoints="12"/>
 					</Enemies>
-					<After>
-						<Text>В случае победы:</Text>
-					</After>
+					<After>В случае победы:</After>
 				</Fight>
 			</Actions>
 			<Options>
