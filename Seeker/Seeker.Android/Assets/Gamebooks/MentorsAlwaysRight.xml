@@ -3841,9 +3841,7 @@
 						<Enemy Name="МУТАНТ-ТЕЛЕПАТ" Strength="10" Hitpoints="13"/>
 					</Enemies>
 					<ReactionFight/>
-					<After>
-						<Text>Если удалось победить:</Text>
-					</After>
+					<After>Если удалось победить:</After>
 				</Fight>
 			</Actions>
 			<Options>
