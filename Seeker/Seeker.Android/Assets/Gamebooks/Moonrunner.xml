@@ -3226,9 +3226,7 @@
 					<Enemies>
 						<Enemy Name="Летучая мышь" Mastery="6" Endurance="6"/>
 					</Enemies>
-					<After>
-						<Text>Если вам удастся убить ее, можете:</Text>
-					</After>
+					<After>Если вам удастся убить ее, можете:</After>
 				</Fight>
 			</Actions>
 			<Options>
