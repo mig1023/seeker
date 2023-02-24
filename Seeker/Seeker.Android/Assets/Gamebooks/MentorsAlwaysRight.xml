@@ -3269,9 +3269,7 @@
 						<Enemy Name="ТРЕТЬЯ ГАРПИЯ" Strength="11" Hitpoints="10"/>
 					</Enemies>
 					<DeathLimit>2</DeathLimit>
-					<After>
-						<Text>Когда вы убьете двух из них:</Text>
-					</After>
+					<After>Когда вы убьете двух из них:</After>
 				</Fight>
 			</Actions>
 			<Options>
