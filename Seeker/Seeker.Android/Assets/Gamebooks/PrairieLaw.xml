@@ -335,9 +335,7 @@
 					<Price>50</Price>
 					<Multiple/>
 					<Benefit Name="Cartridges" Value="2"/>
-					<After>
-						<Text>Если вам подходит цена, выкладывайте деньги. А затем отправляйтесь в дорогу.</Text>
-					</After>
+					<After>Если вам подходит цена, выкладывайте деньги. А затем отправляйтесь в дорогу.</After>
 				</Get>
 			</Actions>
 			<Modifications>
