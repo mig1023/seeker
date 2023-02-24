@@ -3892,9 +3892,7 @@
 						<Enemy Name="ВТОРОЙ РАЗБОЙНИК" Strength="8" Hitpoints="8"/>
 						<Enemy Name="ТРЕТИЙ РАЗБОЙНИК" Strength="9" Hitpoints="8"/>
 					</Enemies>
-					<After>
-						<Text>После победы:</Text>
-					</After>
+					<After>После победы:</After>
 				</Fight>
 			</Actions>
 			<Options>
