@@ -3502,9 +3502,7 @@
 					<Enemies>
 						<Enemy Name="ХРАМОВНИК" Strength="11" Hitpoints="11"/>
 					</Enemies>
-					<After>
-						<Text>Если победа за вами, то:</Text>
-					</After>
+					<After>Если победа за вами, то:</After>
 				</Fight>
 			</Actions>
 			<Options>
