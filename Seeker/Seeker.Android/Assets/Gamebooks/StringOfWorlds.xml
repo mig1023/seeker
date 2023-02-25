@@ -346,9 +346,7 @@
 					<Enemies>
 						<Enemy Name="СОРОКОНОЖКА" Skill="7" Strength="6"/>
 					</Enemies>
-					<After>
-						<Text>Удалось ли вам победить?</Text>
-					</After>
+					<After>Удалось ли вам победить?</After>
 				</Fight>
 			</Actions>	
 			<Options>
