@@ -3413,9 +3413,7 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<After>
-						<Text>Бой идет до трех уколов.</Text>
-					</After>
+					<After>Бой идет до трех уколов.</After>
 				</SwordFight>
 			</Actions>	
 			<Modifications>
