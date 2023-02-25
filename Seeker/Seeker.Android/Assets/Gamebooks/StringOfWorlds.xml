@@ -5083,9 +5083,7 @@
 					<Enemies>
 						<Enemy Name="СЕРЕБРИСТЫЙ ЗВЕРЬ" Skill="9" Strength="10"/>
 					</Enemies>
-					<After>
-						<Text>Удалось ли вам его убить?</Text>
-					</After>
+					<After>Удалось ли вам его убить?</After>
 				</Fight>
 			</Actions>
 			<Options>
