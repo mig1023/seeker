@@ -1548,24 +1548,18 @@
 					<Button>ПОДЛЕЧИТЬСЯ</Button>
 					<Value>2</Value>
 					<Time>-1</Time>
-					<After>
-						<Text>Если по пути вы хотите заехать за бомбой:</Text>
-					</After>
+					<After>Если по пути вы хотите заехать за бомбой:</After>
 				</Healing>
 				<Bomb>
 					<Button>ЗАБРАТЬ БОМБУ</Button>
 					<Time>-1</Time>
-					<After>
-						<Text>Если по пути вы хотите заехать купить патронов:</Text>
-					</After>
+					<After>Если по пути вы хотите заехать купить патронов:</After>
 				</Bomb>
 				<Cartridges>
 					<Button>КУПИТЬ ПАТРОНЫ</Button>
 					<Value>8</Value>
 					<Time>-1</Time>
-					<After>
-						<Text>Ехать к военно-морской базе:</Text>
-					</After>
+					<After>Ехать к военно-морской базе:</After>
 				</Cartridges>
 			</Actions>
 			<Options>
