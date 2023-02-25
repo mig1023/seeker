@@ -1903,9 +1903,7 @@
 					<Button>ПОДЛЕЧИТЬСЯ</Button>
 					<Value>3</Value>
 					<Time>-1</Time>
-					<After>
-						<Text>Если Вы хотите уделить своему лечению больше времени:</Text>
-					</After>
+					<After>Если Вы хотите уделить своему лечению больше времени:</After>
 				</Healing>
 				<Healing>
 					<Button>ПОДЛЕЧИТЬСЯ ЕЩЁ РАЗ</Button>
