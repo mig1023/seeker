@@ -1346,9 +1346,7 @@
 						<Enemy Name="ВТОРОЙ ГРАБИТЕЛЬ" Skill="9" Strength="11"/>
 						<Enemy Name="ТРЕТИЙ ГРАБИТЕЛЬ" Skill="8" Strength="12"/>
 					</Enemies>
-					<After>
-						<Text>Удалось ли вам победить?</Text>
-					</After>
+					<After>Удалось ли вам победить?</After>
 				</Fight>
 			</Actions>	
 			<Options>
