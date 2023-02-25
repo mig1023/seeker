@@ -1900,9 +1900,7 @@
 					<Enemies>
 						<Enemy Name="ПАУК" Skill="9" Strength="8"/>
 					</Enemies>
-					<After>
-						<Text>В любой момент боя вы можете бежать.</Text>
-					</After>
+					<After>В любой момент боя вы можете бежать.</After>
 				</Fight>
 			</Actions>	
 			<Options>
