@@ -594,16 +594,12 @@
 					<Button>ПОДЛЕЧИТЬСЯ</Button>
 					<Value>2</Value>
 					<Time>-1</Time>
-					<After>
-						<Text>Забрать бомбу из тайника:</Text>
-					</After>
+					<After>Забрать бомбу из тайника:</After>
 				</Healing>
 				<Bomb>
 					<Button>ЗАБРАТЬ БОМБУ</Button>
 					<Time>-1</Time>
-					<After>
-						<Text>Отправится в оружейный магазин и купить патроны:</Text>
-					</After>
+					<After>Отправится в оружейный магазин и купить патроны:</After>
 				</Bomb>
 				<Cartridges>
 					<Button>КУПИТЬ ПАТРОНЫ</Button>
