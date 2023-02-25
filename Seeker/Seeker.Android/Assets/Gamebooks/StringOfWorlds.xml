@@ -2793,9 +2793,7 @@
 					<Enemies>
 						<Enemy Name="БЕРТОЛЬД ИЗ СОРГЕЙЛЯ" Skill="10" Strength="10"/>
 					</Enemies>
-					<After>
-						<Text>Вам удалось победить?</Text>
-					</After>
+					<After>Вам удалось победить?</After>
 				</Fight>
 			</Actions>	
 			<Options>
