@@ -920,9 +920,7 @@
 						<Enemy Name="Карлик А" Attack="3" Defence="9" Endurance="9"/>
 						<Enemy Name="Карлик В" Attack="3" Defence="9" Endurance="8"/>
 					</Enemies>
-					<After>
-						<Text>Поскольку ты сидишь в укрытии, тебя карлики не атакуют. Тебе остаётся лишь смотреть, не отрывая глаз, за сражением лютоволка с карликами.</Text>
-					</After>
+					<After>Поскольку ты сидишь в укрытии, тебя карлики не атакуют. Тебе остаётся лишь смотреть, не отрывая глаз, за сражением лютоволка с карликами.</After>
 					<SpecialTechnique>WithoutProtagonist</SpecialTechnique>
 				</Fight>
 			</Actions>
