@@ -3221,9 +3221,7 @@
 			</Modifications>
 			<Actions>
 				<DiceWounds>
-					<After>
-						<Text>— Как тебе такой удар? — спрашивает он, явно довольный собой, и принимает защитную стойку. — Твоя очередь атаковать! Покажи, на что способен!</Text>
-					</After>
+					<After>— Как тебе такой удар? — спрашивает он, явно довольный собой, и принимает защитную стойку. — Твоя очередь атаковать! Покажи, на что способен!</After>
 				</DiceWounds>
 				<SwordFight>
 					<Enemies>
@@ -3231,9 +3229,7 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
-					<After>
-						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
-					</After>
+					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
 				</SwordFight>
 			</Actions>
 			<Options>
