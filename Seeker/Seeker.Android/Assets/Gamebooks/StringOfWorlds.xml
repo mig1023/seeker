@@ -110,9 +110,7 @@
 					<Enemies>
 						<Enemy Name="ЗМЕЯ" Skill="12" Strength="12"/>
 					</Enemies>
-					<After>
-						<Text>Удалось ли вам победить?</Text>
-					</After>
+					<After>Удалось ли вам победить?</After>
 				</Fight>
 			</Actions>	
 			<Options>
