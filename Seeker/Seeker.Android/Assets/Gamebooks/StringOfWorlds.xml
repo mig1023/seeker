@@ -3595,9 +3595,7 @@
 					<Enemies>
 						<Enemy Name="ПИРАТ" Skill="9" Strength="9"/>
 					</Enemies>
-					<After>
-						<Text>Удалось ли вам победить?</Text>
-					</After>
+					<After>Удалось ли вам победить?</After>
 				</Fight>
 			</Actions>	
 			<Options>
