@@ -4301,9 +4301,7 @@
 						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					</Enemies>
 					<NoStrikeBack/>
-					<After>
-						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
-					</After>
+					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
 				</SwordFight>
 			</Actions>
 			<Options>
