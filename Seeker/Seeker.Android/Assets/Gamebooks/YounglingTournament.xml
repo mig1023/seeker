@@ -3457,9 +3457,7 @@
 						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					</Enemies>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<After>
-						<Text>Бой идет до трех уколов.</Text>
-					</After>
+					<After>Бой идет до трех уколов.</After>
 				</SwordFight>
 			</Actions>
 			<Modifications>
