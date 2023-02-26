@@ -4935,9 +4935,7 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<After>
-						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
-					</After>
+					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
 				</SwordFight>
 			</Actions>
 			<Modifications>
