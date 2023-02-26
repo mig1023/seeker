@@ -4771,9 +4771,7 @@
 						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					</Enemies>
 					<SpeedActivate/>
-					<After>
-						<Text>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</Text>
-					</After>
+					<After>Вы можете выбрать любую из изученных техник боя.\n\nВся ваша концентрация уходит на применение Скорости Силы, другие техники применить не получится. Бой идет до трех уколов.</After>
 				</SwordFight>
 			</Actions>
 			<Options>
@@ -4808,9 +4806,7 @@
 				<EnemyDiceWounds>
 					<BonusTechnique>Push</BonusTechnique>
 					<Enemy>Артхт Тархтхтх,24</Enemy>
-					<After>
-						<Text>Вы бросаетесь на противника.</Text>
-					</After>
+					<After>Вы бросаетесь на противника.</After>
 				</EnemyDiceWounds>
 				<SwordFight>
 					<Enemies>
@@ -4818,9 +4814,7 @@
 					</Enemies>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
-					<After>
-						<Text>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</Text>
-					</After>
+					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
 				</SwordFight>
 			</Actions>
 			<Options>
