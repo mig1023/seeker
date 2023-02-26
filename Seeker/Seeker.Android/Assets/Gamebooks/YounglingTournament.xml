@@ -4276,9 +4276,7 @@
 			</Texts>
 			<Actions>
 				<DiceWounds>
-					<After>
-						<Text>А Жюлю засчитайте еще один укол.</Text>
-					</After>
+					<After>А Жюлю засчитайте еще один укол.</After>
 				</DiceWounds>
 			</Actions>
 			<Modifications>
