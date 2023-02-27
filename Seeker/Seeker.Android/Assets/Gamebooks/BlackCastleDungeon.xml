@@ -9707,9 +9707,7 @@
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ШЕСТИЛАПЫЙ ЗВЕРЬ" Mastery="9" Endurance="7"/>
-					</Enemies>
+					<Enemy Name="ШЕСТИЛАПЫЙ ЗВЕРЬ" Mastery="9" Endurance="7"/>
 					<After>Если победили:</After>
 				</Fight>
 			</Actions>
