@@ -1985,9 +1985,7 @@
 			<Text>Вы накладываете заклятие Слабости и начинаете бой. Не забудьте вычитать 1 из своей СИЛЫ УДАРА.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="5" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="5" Endurance="8"/>
 					<StrengthPenlty>1</StrengthPenlty>
 				</Fight>
 			</Actions>
