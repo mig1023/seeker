@@ -13135,9 +13135,7 @@
 			<Text>Набравшись смелости, вы спускаетесь. Гоблин оборачивается и, увидев вас, выхватывает из ножен свой меч. У вас пока есть время наложить заклятия.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГОБЛИН" Mastery="10" Endurance="7"/>
-					</Enemies>
+					<Enemy Name="ГОБЛИН" Mastery="10" Endurance="7"/>
 					<After>Если вы его уничтожили, то можете:</After>
 				</Fight>
 			</Actions>
