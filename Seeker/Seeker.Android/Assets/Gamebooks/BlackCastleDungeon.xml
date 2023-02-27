@@ -15617,9 +15617,7 @@
 			<Text>Начальник стражи не успевает даже открыть рот, как вы накидываетесь на него с мечом. Но будьте осторожны: ведь Орки в соседней комнате не глухие.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="НАЧАЛЬНИК СТРАЖИ" Mastery="9" Endurance="6"/>
-					</Enemies>
+					<Enemy Name="НАЧАЛЬНИК СТРАЖИ" Mastery="9" Endurance="6"/>
 					<RoundsToWin>3</RoundsToWin>
 					<After>Вы можете воспользоваться заклятием Копии.</After>
 				</Fight>
