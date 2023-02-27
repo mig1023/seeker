@@ -112,7 +112,10 @@ namespace Seeker.Game
                 textPlace.Children.Add(Interface.Text(text));
 
             foreach (Text texts in Xml.TextsParse(Data.XmlParagraphs[id]))
+            {
                 textPlace.Children.Add(Interface.TextBySelect(texts));
+                text += String.Format("{0}\\n\\n", texts.Content);
+            }
         }
 
         private static bool OnlyTextChild(XmlNode xmlNode) =>

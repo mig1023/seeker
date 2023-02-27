@@ -109,7 +109,13 @@ namespace Seeker
             List<string> lines = text.Split(new string[] { "\\n\\n" }, StringSplitOptions.RemoveEmptyEntries).ToList();
 
             foreach (string line in lines)
-                await TextToSpeech.SpeakAsync(line);
+            {
+                List<string> phrases = line.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries).ToList();
+
+                foreach (string phrase in phrases)
+                    await TextToSpeech.SpeakAsync(phrase.Trim());
+            }
+                
         }
 
         public void Paragraph(int id, bool reload = false, bool loadGame = false,
@@ -422,9 +428,8 @@ namespace Seeker
             }
 
             List<string> additionalStatuses = (Game.Data.Actions == null ? null : Game.Data.Actions.AdditionalStatus());
-            bool withoutStatuses = Game.Data.Constants.GetParagraphsWithoutStatuses().Contains(Game.Data.CurrentParagraphID);
 
-            if ((additionalStatuses == null) || withoutStatuses)
+            if ((additionalStatuses == null) || Game.Data.Constants.GetParagraphsWithoutStatuses().Contains(Game.Data.CurrentParagraphID))
             {
                 AdditionalStatus.IsVisible = false;
                 MainGrid.ColumnDefinitions[1].Width = 0;
