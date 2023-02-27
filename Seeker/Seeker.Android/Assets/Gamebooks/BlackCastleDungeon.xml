@@ -31,6 +31,8 @@
 				<Option Destination="619" Text="В путь!"/>
 				<Option Destination="620" Text="Ты нужен Барладу Дэрту!" Style="696969"/>
 				<Option Destination="753" Text="Ремейк" Style="a5a5a5"/>
+				<Option Destination="33" Text="TEST" Style="a5a5a5"/>
+				<Option Destination="6" Text="TEST 2" Style="a5a5a5"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="1">
@@ -364,16 +366,12 @@
 			<Text>Вы входите внутрь и понимаете, что попали на Заставу, поставленную здесь специально для того, чтобы не пропускать таких, как вы. Орк-часовой бросается на вас так стремительно, что вы не успеваете применить заклятия, и вам приходится драться с ним.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ОРК" Mastery="6" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="ОРК" Mastery="6" Endurance="8"/>
 					<After>Если вы убили его, то сделали это как раз вовремя: из погреба с бутылкой вина поднимается Гоблин. Увидев вас, он бросает бутылку и хватается за боевой топор.</After>
 				</Fight>
 				<Option Destination="143" Text="Попробовать убежать"/>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГОБЛИН" Mastery="7" Endurance="5"/>
-					</Enemies>
+					<Enemy Name="ГОБЛИН" Mastery="7" Endurance="5"/>
 				</Fight>
 			</Actions>
 			<Options>
