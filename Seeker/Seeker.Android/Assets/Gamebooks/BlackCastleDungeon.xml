@@ -14387,9 +14387,7 @@
 			<Text>Вы подходите к Орку. Он понимает ваши намерения, как враждебные и вытаскивает из ножен свою саблю. Вам ничего не остается, как принять бой.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ОРК" Mastery="8" Endurance="5"/>
-					</Enemies>
+					<Enemy Name="ОРК" Mastery="8" Endurance="5"/>
 					<After>Если убили его, можете обшарить его карманы...</After>
 				</Fight>
 			</Actions>
