@@ -115,9 +115,12 @@ namespace Seeker.Game
                 textPlace.Children.Add(Interface.TextBySelect(texts));
         }
 
+        private static bool OnlyTextChild(XmlNode xmlNode) =>
+            !xmlNode.ChildNodes.OfType<XmlNode>().Any(x => x.NodeType != XmlNodeType.Text);
+
         public static List<Text> TextsParse(XmlNode xmlNode, bool action = false)
         {
-            if (action && (xmlNode["After"] != null) && (xmlNode["After"].ChildNodes == null))
+            if (action && (xmlNode["After"] != null) && OnlyTextChild(xmlNode["After"]))
             {
                 return new List<Text> { TextLineParse(xmlNode["After"]) };
             }
