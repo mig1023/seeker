@@ -10439,9 +10439,7 @@
 		<Paragraph No="1208">
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ДУХ МЕРТВЫХ" Mastery="10" Endurance="13"/>
-					</Enemies>
+					<Enemy Name="ДУХ МЕРТВЫХ" Mastery="10" Endurance="13"/>
 				</Fight>
 			</Actions>
 			<Options>
