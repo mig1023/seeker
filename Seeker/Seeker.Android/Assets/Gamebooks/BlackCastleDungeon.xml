@@ -8123,9 +8123,7 @@
 					<Text>Или сразиться с рыцарем без помощи магии:</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="11" Endurance="15"/>
-					</Enemies>
+					<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="11" Endurance="15"/>
 					<After>Если вам удалось победить рыцаря, то идите по коридору дальше, пока не дойдете до двери:</After>
 				</Fight>
 			</Actions>
