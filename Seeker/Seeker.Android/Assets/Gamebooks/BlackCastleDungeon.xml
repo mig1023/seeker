@@ -10254,9 +10254,7 @@
 					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="8" Endurance="9"/>
-					</Enemies>
+					<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="8" Endurance="9"/>
 					<After>Если вы победили:</After>
 				</Fight>
 			</Actions>
