@@ -14179,9 +14179,7 @@
 					<Text>Если же нет придется пробиваться с помощью меча:</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЛЕВ" Mastery="9" Endurance="16"/>
-					</Enemies>
+					<Enemy Name="ЛЕВ" Mastery="9" Endurance="16"/>
 					<After>Убив льва, вы можете перешагнуть через него и войти.</After>
 				</Fight>
 			</Actions>
