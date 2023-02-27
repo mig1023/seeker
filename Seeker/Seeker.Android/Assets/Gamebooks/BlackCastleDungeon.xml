@@ -2804,9 +2804,7 @@
 			</Texts>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ДРАКОН" Mastery="12" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="ДРАКОН" Mastery="12" Endurance="8"/>
 					<WoundsToWin>2</WoundsToWin>
 					<After>Удастся ли вам дважды ранить Дракона?</After>
 				</Fight>
