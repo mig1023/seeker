@@ -9851,9 +9851,7 @@
 					<After>Вам придется сражаться с ними одновременно. Позднее к ним на помощь приходит третий:</After>
 				</Fight>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ТРЕТИЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
-					</Enemies>
+					<Enemy Name="ТРЕТИЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 					<After>Если вы перебили Зеленых рыцарей, то можете либо осмотреть комнату:</After>
 				</Fight>
 			</Actions>
