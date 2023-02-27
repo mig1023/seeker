@@ -12272,9 +12272,7 @@
 			<Text>Интересно, что привлекло ваше внимание, что вы решились на такой риск?</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГОБЛИН" Mastery="8" Endurance="11"/>
-					</Enemies>
+					<Enemy Name="ГОБЛИН" Mastery="8" Endurance="11"/>
 					<After>Если вы убили его, то можете:</After>
 				</Fight>
 			</Actions>
