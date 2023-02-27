@@ -8857,9 +8857,7 @@
 			<Text>Вы выходите из своего укрытия и успеваете сделать знак человеку, чтобы тот пока отдохнул. Он смотрит на вас с благодарностью и нескрываемым удивлением, но все же садится прямо на землю. А вы продолжаете бой:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГОБЛИН" Mastery="9" Endurance="4"/>
-					</Enemies>
+					<Enemy Name="ГОБЛИН" Mastery="9" Endurance="4"/>
 					<RoundsToWin>3</RoundsToWin>
 				</Fight>
 			</Actions>
