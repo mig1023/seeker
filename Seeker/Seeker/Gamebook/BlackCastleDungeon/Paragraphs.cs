@@ -19,7 +19,11 @@ namespace Seeker.Gamebook.BlackCastleDungeon
             foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
-            if (xmlAction["Enemies"] != null)
+            if (xmlAction["Enemy"] != null)
+            {
+                action.Enemies = new List<Character> { EnemyParse(xmlAction["Enemy"]) };
+            }
+            else if (xmlAction["Enemies"] != null)
             {
                 action.Enemies = new List<Character>();
 
