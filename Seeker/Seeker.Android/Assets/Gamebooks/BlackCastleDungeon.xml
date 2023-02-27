@@ -11524,15 +11524,11 @@
 			<Text>Гоблин успевает позвать на помощь. Вам же приходится обнажать меч и драться.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГОБЛИН" Mastery="5" Endurance="7"/>
-					</Enemies>
+					<Enemy Name="ГОБЛИН" Mastery="5" Endurance="7"/>
 					<After>Как только вы убиваете Гоблина, из дома появляется еще один. Он менее пьян и будет не столь легким противником.</After>
 				</Fight>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ВТОРОЙ ГОБЛИН" Mastery="8" Endurance="10"/>
-					</Enemies>
+					<Enemy Name="ВТОРОЙ ГОБЛИН" Mastery="8" Endurance="10"/>
 					<After>Если же вы убиваете и второго гоблина, то остальные решают не искушать свою судьбу и убегают, выпрыгнув в окно.</After>
 				</Fight>
 			</Actions>
