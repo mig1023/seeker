@@ -2368,9 +2368,7 @@
 			<Text>Ну что ж, деритесь.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГИЕНА" Mastery="6" Endurance="6"/>
-					</Enemies>
+					<Enemy Name="ГИЕНА" Mastery="6" Endurance="6"/>
 					<After>Если вы убили ее, можете двигаться дальше.</After>
 				</Fight>
 			</Actions>
