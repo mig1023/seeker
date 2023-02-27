@@ -2300,9 +2300,7 @@
 					<Text>Если вы не знаете пароль, то придется пробиваться с помощью своего меча.</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЛЕВ" Mastery="9" Endurance="15"/>
-					</Enemies>
+					<Enemy Name="ЛЕВ" Mastery="9" Endurance="15"/>
 					<After>Убив льва, вы можете перешагнуть через него и войти.</After>
 				</Fight>
 			</Actions>
