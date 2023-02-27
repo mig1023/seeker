@@ -11059,9 +11059,7 @@
 			<Text>Вы достаете меч и нападаете на Дракона. Дохнув пламенем (потеряйте 4 ВЫНОСЛИВОСТИ), он бросается в бой.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ДРАКОН" Mastery="12" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="ДРАКОН" Mastery="12" Endurance="8"/>
 					<WoundsToWin>2</WoundsToWin>
 					<After>Вы можете воспользоваться заклятием Копии. Если удалось дважды ранить Дракона:</After>
 				</Fight>
