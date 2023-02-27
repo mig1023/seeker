@@ -8036,9 +8036,7 @@
 			<Text>Вы можете воспользоваться заклятием Копии.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГОБЛИН" Mastery="8" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="ГОБЛИН" Mastery="8" Endurance="8"/>
 					<After>Если вы убили Гоблина, возьмите его бронзовый свисток и перейдите мост.</After>
 				</Fight>
 			</Actions>
