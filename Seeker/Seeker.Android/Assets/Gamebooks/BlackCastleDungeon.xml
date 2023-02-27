@@ -8845,9 +8845,7 @@
 			<Actions>
 				<Option Destination="1962" Text="Если хотите, во время боя можете покинуть таверну и бежать"/>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ВОДЯНОЙ" Mastery="8" Endurance="6"/>
-					</Enemies>
+					<Enemy Name="ВОДЯНОЙ" Mastery="8" Endurance="6"/>
 					<After>Воспользоваться же заклятием Копии вам не удастся: Водяной этого не допустит.\n\nЕсли вы победили его:</After>
 				</Fight>
 			</Actions>
