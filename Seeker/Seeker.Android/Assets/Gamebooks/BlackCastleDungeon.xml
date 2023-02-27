@@ -455,9 +455,7 @@
 			<Text>Огонь прижигает Дракону отлетевшую голову — она больше не отрастет. Вы же продолжаете бой.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ДРАКОН" Mastery="9" Endurance="4"/>
-					</Enemies>
+					<Enemy Name="ДРАКОН" Mastery="9" Endurance="4"/>
 				</Fight>
 			</Actions>
 			<Options>
