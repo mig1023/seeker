@@ -2889,9 +2889,7 @@
 					<Text>Воспользоваться же заклятием Копии вам не удастся: Водяной этого не допустит.</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ВОДЯНОЙ" Mastery="7" Endurance="7"/>
-					</Enemies>
+					<Enemy Name="ВОДЯНОЙ" Mastery="7" Endurance="7"/>
 				</Fight>
 			</Actions>
 			<Options>
