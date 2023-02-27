@@ -84,11 +84,22 @@ namespace Seeker
         {
             PageClean();
 
-            Text.Children.Add(Output.Interface.Text(
-                new Output.Text { Content = errorType, Bold = true, Size = Output.Interface.TextFontSize.Big }));
+            Output.Text errText = new Output.Text
+            {
+                Content = errorType,
+                Bold = true,
+                Size = Output.Interface.TextFontSize.Big,
+            };
 
-            Text.Children.Add(Output.Interface.Text(
-                new Output.Text { Content = message, Size = Output.Interface.TextFontSize.Big }));
+            Text.Children.Add(Output.Interface.Text(errText));
+
+            Output.Text errMessage = new Output.Text
+            {
+                Content = message,
+                Size = Output.Interface.TextFontSize.Big,
+            };
+
+            Text.Children.Add(Output.Interface.Text(errMessage));
 
             Options.Children.Add(Output.Buttons.CloseSettings((s, arg) => Gamebooks(toMain: true)));
         }
@@ -192,7 +203,9 @@ namespace Seeker
                             actionPlace.Children.Add(Output.Buttons.Action(action.ButtonText(), actionClick, enabled));
                         }
                         else
+                        {
                             actionPlace.Children.Add(MultipleButtonsPlace(action, actionPlace));
+                        }
 
                         Action.Children.Add(actionPlace);
                         AddAftertext(ref Action, action.Aftertext, action.Aftertexts);
@@ -296,7 +309,6 @@ namespace Seeker
                     action.IsButtonEnabled(buttonIndex > 0));
 
                 button.HorizontalOptions = LayoutOptions.FillAndExpand;
-
                 buttonPlace.Children.Add(button);
 
                 buttonIndex += 1;
@@ -333,7 +345,6 @@ namespace Seeker
         private Entry AddInputField(Game.Option option, object button)
         {
             Game.Data.InputResponse = option.Input;
-
             return Output.Interface.Field(button, InputChange);
         }
 
@@ -411,8 +422,9 @@ namespace Seeker
             }
 
             List<string> additionalStatuses = (Game.Data.Actions == null ? null : Game.Data.Actions.AdditionalStatus());
+            bool withoutStatuses = Game.Data.Constants.GetParagraphsWithoutStatuses().Contains(Game.Data.CurrentParagraphID);
 
-            if ((additionalStatuses == null) || Game.Data.Constants.GetParagraphsWithoutStatuses().Contains(Game.Data.CurrentParagraphID))
+            if ((additionalStatuses == null) || withoutStatuses)
             {
                 AdditionalStatus.IsVisible = false;
                 MainGrid.ColumnDefinitions[1].Width = 0;
@@ -433,11 +445,8 @@ namespace Seeker
         private void GamepageSettings()
         {
             string backColor = Game.Data.Constants.GetColor(Game.Data.ColorTypes.Background);
-
-            if (!String.IsNullOrEmpty(backColor))
-                MainScroll.BackgroundColor = Color.FromHex(backColor);
-            else
-                MainScroll.BackgroundColor = Color.White;
+            bool emptyBackColor = !String.IsNullOrEmpty(backColor);
+            MainScroll.BackgroundColor = emptyBackColor ? Color.White : Color.FromHex(backColor);
         }
 
         private bool IsThisGameOver(Abstract.IActions currentAction = null)
@@ -479,7 +488,9 @@ namespace Seeker
             List<string> actionResult = action.Do(out bool reload, Trigger: true, action: anotherAction);
 
             if (reload)
+            {
                 Paragraph(Game.Data.CurrentParagraphID, reload: true);
+            }
             else
             {
                 foreach (View actionLine in Output.Interface.Actions(actionResult))
@@ -503,7 +514,6 @@ namespace Seeker
         private void HealingButton_Click(object sender, EventArgs e)
         {
             Game.Healing.Use((sender as Button).Text);
-
             Paragraph(Game.Data.CurrentParagraphID, reload: true);
         }
 
