@@ -8644,9 +8644,7 @@
 					<Text>Или драться без них. Битва будет жаркая.</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="СВИРЕПЫЙ ЧЕЛОВЕКООБРАЗНЫЙ ЗВЕРЬ" Mastery="11" Endurance="10"/>
-					</Enemies>
+					<Enemy Name="СВИРЕПЫЙ ЧЕЛОВЕКООБРАЗНЫЙ ЗВЕРЬ" Mastery="11" Endurance="10"/>
 					<After>Если победили, то идите дальше по тропинке.</After>
 				</Fight>
 			</Actions>
