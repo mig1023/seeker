@@ -405,9 +405,7 @@
 			</Texts>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ДРАКОН" Mastery="9" Endurance="4"/>
-					</Enemies>
+					<Enemy Name="ДРАКОН" Mastery="9" Endurance="4"/>
 				</Fight>
 			</Actions>
 			<Modifications>
