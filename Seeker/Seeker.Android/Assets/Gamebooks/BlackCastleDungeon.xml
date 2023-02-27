@@ -6896,9 +6896,7 @@
 			<Text>Вы обнажаете меч и кидаетесь в бой. Торговец неповоротлив, но удар его очень силен. Поэтому всякий раз, когда он ранит вас, вычитайте у себя не 2, а 4 ВЫНОСЛИВОСТИ.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ТОРГОВЕЦ" Mastery="7" Endurance="17"/>
-					</Enemies>
+					<Enemy Name="ТОРГОВЕЦ" Mastery="7" Endurance="17"/>
 					<ExtendedDamage>4</ExtendedDamage>
 					<After>Если вы убили его:</After>
 				</Fight>
