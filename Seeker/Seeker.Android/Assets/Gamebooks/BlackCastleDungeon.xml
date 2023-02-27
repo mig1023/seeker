@@ -1037,9 +1037,7 @@
 					<After>Если вы удачливы, то вам удается оседлать коня Первого рыцаря, и ваша СИЛА УДАРА не изменяется, если же нет — драться все же придется, стоя на земле.</After>
 				</Luck>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
-					</Enemies>
+					<Enemy Name="ЗЕЛЕНЫЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 				</Fight>
 			</Actions>
 			<Options>
