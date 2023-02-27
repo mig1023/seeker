@@ -1949,9 +1949,7 @@
 			<Text>Обезьяна угрожающе рычит и надвигается на вас. Вы выбираете бой.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ОБЕЗЬЯНА" Mastery="9" Endurance="14"/>
-					</Enemies>
+					<Enemy Name="ОБЕЗЬЯНА" Mastery="9" Endurance="14"/>
 				</Fight>
 			</Actions>
 			<Options>
