@@ -260,7 +260,7 @@ namespace Seeker
                     AddAdditionalButton(buttonName, StaticButton_Click);
             }
 
-            CheckGameOver();
+            IsThisGameOver();
             OptionFooter(id);
 
             if (!reload)
@@ -271,9 +271,13 @@ namespace Seeker
             Game.Option.Trigger(paragraph.LateTrigger);
 
             if (!startOfGame && gameOver)
+            {
                 Game.Continue.Remove();
+            }
             else if (!startOfGame)
+            {
                 Game.Continue.Save();
+            }
         }
 
         private StackLayout MultipleButtonsPlace(Abstract.IActions action, StackLayout actionPlace)
@@ -436,15 +440,15 @@ namespace Seeker
                 MainScroll.BackgroundColor = Color.White;
         }
 
-        private void CheckGameOver(Abstract.IActions currentAction = null)
+        private bool IsThisGameOver(Abstract.IActions currentAction = null)
         {
             Abstract.IActions action = currentAction ?? Game.Data.Actions;
 
             if ((action == null) || !action.GameOver(out int toEndParagraph, out string toEndText))
-                return;
+                return false;
 
             if (Game.Settings.IsEnabled("Godmode"))
-                return;
+                return false;
 
             Options.Children.Clear();
 
@@ -452,6 +456,8 @@ namespace Seeker
                 Paragraph(toEndParagraph, optionName: toEndText);
 
             Options.Children.Add(Output.Buttons.GameOver(toEndText, gameoverClick));
+
+            return true;
         }
 
         private void OptionFooter(int id)
@@ -480,8 +486,9 @@ namespace Seeker
                     actionPlace.Children.Add(actionLine);
 
                 UpdateStatus();
-                CheckGameOver(action);
-                OptionFooter(Game.Data.CurrentParagraphID);
+
+                if (IsThisGameOver(action))
+                    OptionFooter(Game.Data.CurrentParagraphID);
             }
         }
 
