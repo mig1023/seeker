@@ -2662,15 +2662,11 @@
 					<After>А через 6 раундов атаки к ним присоединится еще один рыцарь.</After>
 				</Fight>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ТРЕТИЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
-					</Enemies>
+					<Enemy Name="ТРЕТИЙ РЫЦАРЬ" Mastery="10" Endurance="10"/>
 					<After>Когда вы победите двух рыцарей, в дело вступит Капитан.</After>
 				</Fight>
 				<Fight>
-					<Enemies>
-						<Enemy Name="КАПИТАН РЫЦАРЕЙ" Mastery="12" Endurance="12"/>
-					</Enemies>
+					<Enemy Name="КАПИТАН РЫЦАРЕЙ" Mastery="12" Endurance="12"/>
 					<After>Если же произойдет чудо и вы сможете перебить всю охрану, то поднимитесь по лестнице на небольшой балкончик, куда выходят две двери. Вы пойдете в правую дверь или в левую?</After>
 				</Fight>
 			</Actions>
