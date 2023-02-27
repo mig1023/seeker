@@ -8155,15 +8155,11 @@
 			<Text>Лев не ошибся – он знал, что вы пойдете по звериной тропе. Тем более, он так голоден, что не побрезгует даже вами.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЛЕВ" Mastery="9" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="ЛЕВ" Mastery="9" Endurance="8"/>
 					<After>Если вы победили его, то сделали это как раз вовремя, так как навстречу вам выходит львица:</After>
 				</Fight>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЛЬВИЦА" Mastery="8" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="ЛЬВИЦА" Mastery="8" Endurance="8"/>
 					<After>Победив обоих львов, не рискуете идти дальше по звериной тропе и, дойдя до развилки, сворачиваете направо.</After>
 				</Fight>
 			</Actions>
