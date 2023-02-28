@@ -1504,9 +1504,7 @@
 			<Text>Сражайтесь:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Чудовище" Strength="22" Defence="14"/>
-					</Enemies>
+					<Enemy Name="Чудовище" Strength="22" Defence="14"/>
 					<FightToDeath/>
 				</Fight>
 			</Actions>	
