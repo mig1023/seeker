@@ -1137,9 +1137,7 @@
 			<Text>Сражайтесь:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Бык" Strength="10" Defence="18"/>
-					</Enemies>
+					<Enemy Name="Бык" Strength="10" Defence="18"/>
 					<FightToDeath/>
 				</Fight>
 			</Actions>	
