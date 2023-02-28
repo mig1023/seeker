@@ -3123,9 +3123,7 @@
 			<Text>Заметив вторжение на свою территорию, крысы вызывающе пищат и бросаются на вас. Бейтесь с ними одновременно.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Стая крыс" Strength="3" Defence="15"/>
-					</Enemies>
+					<Enemy Name="Стая крыс" Strength="3" Defence="15"/>
 					<FightToDeath/>
 				</Fight>
 			</Actions>	
