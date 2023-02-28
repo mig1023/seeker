@@ -1037,9 +1037,7 @@
 			<Text>Амазонка, одетая в леопардовую шкуру:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Амазонка" Strength="8" Defence="15"/>
-					</Enemies>
+					<Enemy Name="Амазонка" Strength="8" Defence="15"/>
 				</Fight>
 			</Actions>	
 			<Options>
