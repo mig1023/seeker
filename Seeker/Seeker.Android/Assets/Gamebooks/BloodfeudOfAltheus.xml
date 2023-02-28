@@ -3787,9 +3787,7 @@
 			<Text>Сражайтесь:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Чудовище" Strength="16" Defence="10"/>
-					</Enemies>
+					<Enemy Name="Чудовище" Strength="16" Defence="10"/>
 					<FightToDeath/>
 				</Fight>
 			</Actions>	
