@@ -4877,9 +4877,7 @@
 			<Text>Сражайтесь:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Морской змей" Strength="20" Defence="12"/>
-					</Enemies>
+					<Enemy Name="Морской змей" Strength="20" Defence="12"/>
 				</Fight>
 			</Actions>	
 			<Options>
