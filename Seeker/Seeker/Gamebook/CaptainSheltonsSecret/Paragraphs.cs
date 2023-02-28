@@ -19,7 +19,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
             foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
-            if (xmlAction["Allies"] != null)
+            if (xmlAction["Ally"] != null)
+            {
+                action.Enemies = new List<Character> { EnemyParse(xmlAction["Ally"]) };
+            }
+            else if (xmlAction["Allies"] != null)
             {
                 action.Allies = new List<Character>();
 
@@ -27,7 +31,11 @@ namespace Seeker.Gamebook.CaptainSheltonsSecret
                     action.Allies.Add(EnemyParse(xmlAlly));
             }
 
-            if (xmlAction["Enemies"] != null)
+            if (xmlAction["Enemy"] != null)
+            {
+                action.Enemies = new List<Character> { EnemyParse(xmlAction["Enemy"]) };
+            }
+            else if (xmlAction["Enemies"] != null)
             {
                 action.Enemies = new List<Character>();
 
