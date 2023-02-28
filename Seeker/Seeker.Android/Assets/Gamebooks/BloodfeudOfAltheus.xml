@@ -4815,12 +4815,9 @@
 			<Text>Одетый в черное человек не кажется удивленным, когда ваши сломанные конечности и окровавленная грудная клетка исцеляются и становятся невредимыми. Он удваивает свои усилия, но его натиск ослаб.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Человек" Strength="7" Defence="12"/>
-					</Enemies>
+					<Enemy Name="Человек" Strength="7" Defence="12"/>
 				</Fight>
 			</Actions>	
-			
 			<Options>
 				<Option Destination="121" Text="Сдаетесь"/>
 				<Option Destination="387" Text="Отступаете"/>
