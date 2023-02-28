@@ -1745,9 +1745,7 @@
 			<Text>Животное не может сдаться, а отступать уже слишком поздно:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Волк" Strength="2" Defence="12"/>
-					</Enemies>
+					<Enemy Name="Волк" Strength="2" Defence="12"/>
 					<FightToDeath/>
 				</Fight>
 			</Actions>	
