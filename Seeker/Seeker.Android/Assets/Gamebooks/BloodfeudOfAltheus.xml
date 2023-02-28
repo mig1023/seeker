@@ -1460,9 +1460,7 @@
 			<Text>Вепрь нападает на вас:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Вепрь" Strength="10" Defence="18"/>
-					</Enemies>
+					<Enemy Name="Вепрь" Strength="10" Defence="18"/>
 					<FightToDeath/>
 				</Fight>
 			</Actions>	
