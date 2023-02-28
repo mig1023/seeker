@@ -2228,9 +2228,7 @@
 			<Text>Воительница, облаченная в медвежью шкуру:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Воительница" Strength="7" Defence="14"/>
-					</Enemies>
+					<Enemy Name="Воительница" Strength="7" Defence="14"/>
 				</Fight>
 			</Actions>	
 			<Options>
