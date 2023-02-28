@@ -2988,9 +2988,7 @@
 			<Text>Сражайтесь:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Амазонка" Strength="7" Defence="13"/>
-					</Enemies>
+					<Enemy Name="Амазонка" Strength="7" Defence="13"/>
 				</Fight>
 			</Actions>	
 			<Options>
