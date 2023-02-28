@@ -4356,9 +4356,7 @@
 			<Text>Амазонка облачена в львиную шкуру и держит в руках копье. Она наносит первый удар, так как застала вас врасплох.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Амазонка" Strength="9" Defence="16"/>
-					</Enemies>
+					<Enemy Name="Амазонка" Strength="9" Defence="16"/>
 				</Fight>
 			</Actions>	
 			<Options>
