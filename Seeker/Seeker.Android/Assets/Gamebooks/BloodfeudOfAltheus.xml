@@ -4617,9 +4617,7 @@
 			<Text>Сразитесь с чудовищем:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Чудовище" Strength="18" Defence="11"/>
-					</Enemies>
+					<Enemy Name="Чудовище" Strength="18" Defence="11"/>
 				</Fight>
 			</Actions>	
 			<IntuitiveSolution/>
