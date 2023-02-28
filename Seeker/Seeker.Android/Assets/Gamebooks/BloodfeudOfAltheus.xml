@@ -2469,9 +2469,7 @@
 			<Text>Амазонка не сдается.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Амазонка" Strength="7" Defence="13"/>
-					</Enemies>
+					<Enemy Name="Амазонка" Strength="7" Defence="13"/>
 					<FightToDeath/>
 					<LastWound/>
 				</Fight>
