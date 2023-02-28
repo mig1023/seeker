@@ -4585,9 +4585,7 @@
 			<Text>Сражайтесь с амазонкой:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Амазонка" Strength="7" Defence="14"/>
-					</Enemies>
+					<Enemy Name="Амазонка" Strength="7" Defence="14"/>
 				</Fight>
 			</Actions>	
 			<Options>
