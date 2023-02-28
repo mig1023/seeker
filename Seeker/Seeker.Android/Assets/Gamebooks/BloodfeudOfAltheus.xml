@@ -185,9 +185,7 @@
 			<Text>Тяжело раненый Прокруст не сдается, а впадает в ярость. Он отбрасывает свою секиру, и за него теперь надо кидать всего один кубик, но в боевом раже его Сила равна 12, а Защита — 5.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Прокруст" Strength="12" Defence="5"/>
-					</Enemies>
+					<Enemy Name="Прокруст" Strength="12" Defence="5"/>
 					<LastWound/>
 				</Fight>
 			</Actions>	
