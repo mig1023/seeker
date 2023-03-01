@@ -2554,9 +2554,7 @@
 			</Texts>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="РЫЦАРЬ В ЛАТАХ" Mastery="8" Endurance="9"/>
-					</Enemies>
+					<Enemy Name="РЫЦАРЬ В ЛАТАХ" Mastery="8" Endurance="9"/>
 				</Fight>
 			</Actions>
 			<Modifications>
