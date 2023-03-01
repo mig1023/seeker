@@ -3534,9 +3534,7 @@
 			<Text>Как только поверженный тобой Воин падает к твоим ногам, в арочном проеме появляется еще один ВОИН ХАОСА. Тебе придется сразиться и с ним:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ВОИН ХАОСА" Mastery="7" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="ВОИН ХАОСА" Mastery="7" Endurance="8"/>
 				</Fight>
 			</Actions>
 			<Options>
