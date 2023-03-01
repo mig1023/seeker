@@ -2876,9 +2876,7 @@
 			<Text>Вы уже столько раз попадали в ловушки, расставленные Лигой, что на этот раз гнев одерживает победу над здравым смыслом.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ШЕВАЛЬЕ ДЕ БУАЗО" Skill="8" Strength="8"/>
-					</Enemies>
+					<Enemy Name="ШЕВАЛЬЕ ДЕ БУАЗО" Skill="8" Strength="8"/>
 				</Fight>
 			</Actions>
 			<Options>
