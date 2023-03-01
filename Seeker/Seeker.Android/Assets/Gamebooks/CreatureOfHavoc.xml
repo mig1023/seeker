@@ -364,9 +364,7 @@
 			<Text>Едва тебе удается справиться с врагом, как из арки появляется очередной ВОИН ХАОСА:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ВОИН ХАОСА" Mastery="9" Endurance="7"/>
-					</Enemies>
+					<Enemy Name="ВОИН ХАОСА" Mastery="9" Endurance="7"/>
 				</Fight>
 			</Actions>
 			<Options>
