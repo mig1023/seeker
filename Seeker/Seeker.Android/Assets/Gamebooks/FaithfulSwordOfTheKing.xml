@@ -3259,9 +3259,7 @@
 			<Text>Обнажив шпагу, резко делаете первый выпад; головорез рычит от боли и кидается вперед.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="БРОДЯГА" Skill="8" Strength="6"/>
-					</Enemies>
+					<Enemy Name="БРОДЯГА" Skill="8" Strength="6"/>
 					<RoundsToWin>4</RoundsToWin>
 				</Fight>
 			</Actions>
