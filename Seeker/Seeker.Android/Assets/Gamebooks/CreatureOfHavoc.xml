@@ -773,9 +773,7 @@
 			</Texts>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ПОЖИРАТЕЛЬ" Mastery="10" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="ПОЖИРАТЕЛЬ" Mastery="10" Endurance="8"/>
 				</Fight>
 			</Actions>
 			<Modifications>
