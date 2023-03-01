@@ -1317,9 +1317,7 @@
 			<Text>Не в силах сдержать себя, ты наотмашь бьешь старую гадалку:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="РОЗИНА ИЗ ДРИ" Mastery="8" Endurance="7"/>
-					</Enemies>
+					<Enemy Name="РОЗИНА ИЗ ДРИ" Mastery="8" Endurance="7"/>
 				</Fight>
 			</Actions>
 			<Options>
