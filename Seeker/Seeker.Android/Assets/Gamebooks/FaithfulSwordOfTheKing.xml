@@ -2175,9 +2175,7 @@
 			<Text>За дверью вас встречает сам хозяин дома. Лицо его перекошено от страха, но в руке шпага — он готов драться.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ХОЗЯИН ДОМА" Skill="8" Strength="10"/>
-					</Enemies>
+					<Enemy Name="ХОЗЯИН ДОМА" Skill="8" Strength="10"/>
 				</Fight>
 			</Actions>
 			<Options>
