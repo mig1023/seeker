@@ -2340,9 +2340,7 @@
 			<Text>Достав шпагу, вы атакуете дикого вепря.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ВЕПРЬ" Skill="10" Strength="12"/>
-					</Enemies>
+					<Enemy Name="ВЕПРЬ" Skill="10" Strength="12"/>
 				</Fight>
 			</Actions>
 			<Options>
