@@ -2357,9 +2357,7 @@
 			<Text>В ответ вы обнажаете шпагу, и мужчина без лишних слов делает то же самое. Женщина же отступает в сторону и с ужасом следит за поединком.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ДВОРЯНИН" Skill="9" Strength="10"/>
-					</Enemies>
+					<Enemy Name="ДВОРЯНИН" Skill="9" Strength="10"/>
 				</Fight>
 			</Actions>
 			<Options>
