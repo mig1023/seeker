@@ -2818,9 +2818,7 @@
 					<Text>...если нет, — деритесь. Однако перед боем противник быстро перекладывает шпагу в левую руку, и если вы не владеете аналогичным искусством фехтования, придется на время поединка вычитать у себя 1 ЛОВКОСТЬ.</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЛЕГИСТ" Skill="12" Strength="14"/>
-					</Enemies>
+					<Enemy Name="ЛЕГИСТ" Skill="12" Strength="14"/>
 					<WoundsToWin>3</WoundsToWin>
 					<LeftHandPenalty/>
 				</Fight>
