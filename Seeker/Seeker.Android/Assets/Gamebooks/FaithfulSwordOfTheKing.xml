@@ -660,9 +660,7 @@
 			<Text>Сражайтесь:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЛОДОЧНИК" Skill="5" Strength="8"/>
-					</Enemies>
+					<Enemy Name="ЛОДОЧНИК" Skill="5" Strength="8"/>
 					<After>Лодка теперь ваша.</After>
 				</Fight>
 			</Actions>
