@@ -3785,9 +3785,7 @@
 		<Paragraph No="397">
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ШЕВАЛЬЕ ДЕ МИШУАР" Skill="9" Strength="8"/>
-					</Enemies>
+					<Enemy Name="ШЕВАЛЬЕ ДЕ МИШУАР" Skill="9" Strength="8"/>
 				</Fight>
 			</Actions>
 			<Options>
