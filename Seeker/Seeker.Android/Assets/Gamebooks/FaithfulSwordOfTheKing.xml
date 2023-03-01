@@ -1828,9 +1828,7 @@
 					<Text>Иначе же — сражайтесь:</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ОХРАННИК" Skill="7" Strength="9"/>
-					</Enemies>
+					<Enemy Name="ОХРАННИК" Skill="7" Strength="9"/>
 					<RoundsToWin>5</RoundsToWin>
 				</Fight>
 			</Actions>
