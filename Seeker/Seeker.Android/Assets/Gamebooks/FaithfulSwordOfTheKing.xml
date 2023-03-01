@@ -381,9 +381,7 @@
 			<Text>Выстрел попадает в цель. Теперь деритесь, у вас остался только один противник.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЧЁРНАЯ ФИГУРА" Skill="8" Strength="8"/>
-					</Enemies>
+					<Enemy Name="ЧЁРНАЯ ФИГУРА" Skill="8" Strength="8"/>
 					<WithoutShooting/>
 				</Fight>
 			</Actions>
