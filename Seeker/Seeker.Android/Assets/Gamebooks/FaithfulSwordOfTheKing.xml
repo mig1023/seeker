@@ -4905,9 +4905,7 @@
 			<Text>«Проклятый шпион», — рычите вы, выхватывая шпагу. Граф удивлен, но готов защищаться.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГРАФ МОРТОН" Skill="10" Strength="12"/>
-					</Enemies>
+					<Enemy Name="ГРАФ МОРТОН" Skill="10" Strength="12"/>
 				</Fight>
 			</Actions>
 			<Modifications>
