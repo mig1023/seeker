@@ -422,9 +422,7 @@
 			<Text>Внезапно вы налетаете на ничего не подозревающего прохожего.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ПРОХОЖИЙ" Skill="8" Strength="10"/>
-					</Enemies>
+					<Enemy Name="ПРОХОЖИЙ" Skill="8" Strength="10"/>
 				</Fight>
 			</Actions>
 			<Options>
