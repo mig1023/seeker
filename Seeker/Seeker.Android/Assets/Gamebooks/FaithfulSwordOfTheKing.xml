@@ -6224,9 +6224,7 @@
 					<Text>Или будете драться с ним?</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ПОСЛАНЕЦ ГУБЕРНАТОРА" Skill="9" Strength="8"/>
-					</Enemies>
+					<Enemy Name="ПОСЛАНЕЦ ГУБЕРНАТОРА" Skill="9" Strength="8"/>
 				</Fight>
 			</Actions>
 			<Options>
