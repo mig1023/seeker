@@ -5813,9 +5813,7 @@
 			<Text>Развернув Арбалета, бросаетесь в бой.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГОНЕЦ" Skill="7" Strength="8"/>
-					</Enemies>
+					<Enemy Name="ГОНЕЦ" Skill="7" Strength="8"/>
 				</Fight>
 			</Actions>
 			<Options>
