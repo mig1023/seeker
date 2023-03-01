@@ -425,9 +425,7 @@
 			<Text>Твои надежды на спасение тают. Размахивая топором, к тебе приближается еще один ВОИН ХАОСА:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ВОИН ХАОСА" Mastery="8" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="ВОИН ХАОСА" Mastery="8" Endurance="8"/>
 				</Fight>
 			</Actions>
 			<Options>
