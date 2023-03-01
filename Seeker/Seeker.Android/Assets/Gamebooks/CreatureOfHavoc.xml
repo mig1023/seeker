@@ -579,9 +579,7 @@
 			</Texts>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="КРОВАВЫЙ ОРК" Mastery="7" Endurance="5"/>
-					</Enemies>
+					<Enemy Name="КРОВАВЫЙ ОРК" Mastery="7" Endurance="5"/>
 				</Fight>
 			</Actions>
 			<Modifications>
