@@ -3602,9 +3602,7 @@
 			<Text>Выстрел попадает в цель, вы же скрещиваете шпаги со вторым.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ВТОРОЙ КАВАЛЕРИСТ" Skill="7" Strength="8"/>
-					</Enemies>
+					<Enemy Name="ВТОРОЙ КАВАЛЕРИСТ" Skill="7" Strength="8"/>
 					<WithoutShooting/>
 				</Fight>
 			</Actions>
