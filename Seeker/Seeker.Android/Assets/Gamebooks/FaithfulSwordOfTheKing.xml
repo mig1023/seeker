@@ -2061,9 +2061,7 @@
 			<Text>К счастью, с вами съезжается только один всадник: другой в это время перезаряжает пистолет.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="8"/>
-					</Enemies>
+					<Enemy Name="ПЕРВЫЙ ВСАДНИК" Skill="8" Strength="8"/>
 					<RoundsToWin>4</RoundsToWin>
 					<WithoutShooting/>
 				</Fight>
