@@ -62,9 +62,7 @@
 			<Text>Пуля проносится возле самого уха Арбалета. Вы же, подпустив врага поближе, бьете без промаха. Остается второй, им и придется заняться.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="10"/>
-					</Enemies>
+					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="10"/>
 					<WithoutShooting/>
 				</Fight>
 			</Actions>
