@@ -3311,9 +3311,7 @@
 			</Texts>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЖУК-ТРУПОЕД" Mastery="7" Endurance="6"/>
-					</Enemies>
+					<Enemy Name="ЖУК-ТРУПОЕД" Mastery="7" Endurance="6"/>
 				</Fight>
 			</Actions>
 			<Modifications>
