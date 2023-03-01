@@ -295,9 +295,7 @@
 			<Text>Не раздумывая ни секунды, ты бросаешься на Квиммеля. Скелет хватает со стола два хирургических ножа– тебе предстоит битва не на жизнь, а на смерть:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="КВИММЕЛЬ КОСТЛЯВЫЙ" Mastery="8" Endurance="7"/>
-					</Enemies>
+					<Enemy Name="КВИММЕЛЬ КОСТЛЯВЫЙ" Mastery="8" Endurance="7"/>
 				</Fight>
 			</Actions>
 			<Options>
