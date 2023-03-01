@@ -870,9 +870,7 @@
 			<Text>Тебе предстоит отчаянная схватка:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ОХРАННИК" Mastery="9" Endurance="10"/>
-					</Enemies>
+					<Enemy Name="ОХРАННИК" Mastery="9" Endurance="10"/>
 				</Fight>
 			</Actions>
 			<Options>
