@@ -2512,9 +2512,7 @@
 					<Text>...если нет, — деритесь:</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЛЕГИСТ" Skill="12" Strength="14"/>
-					</Enemies>
+					<Enemy Name="ЛЕГИСТ" Skill="12" Strength="14"/>
 					<WoundsToWin>3</WoundsToWin>
 					<LeftHandPenalty/>
 				</Fight>
