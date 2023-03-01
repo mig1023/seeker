@@ -3797,9 +3797,7 @@
 					</After>
 				</Translation>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЧЁРНЫЙ ЭЛЬФ" Mastery="7" Endurance="6"/>
-					</Enemies>
+					<Enemy Name="ЧЁРНЫЙ ЭЛЬФ" Mastery="7" Endurance="6"/>
 					<RoundsToFight>2</RoundsToFight>
 					<After>Вы успеете сразиться только в течение двух раундов.</After>
 				</Fight>
