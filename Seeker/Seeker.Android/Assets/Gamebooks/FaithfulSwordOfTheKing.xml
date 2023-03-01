@@ -1143,9 +1143,7 @@
 			<Text>Сражайтесь:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ТЮРЕМЩИК" Skill="9" Strength="6"/>
-					</Enemies>
+					<Enemy Name="ТЮРЕМЩИК" Skill="9" Strength="6"/>
 					<RoundsToWin>4</RoundsToWin>
 				</Fight>
 			</Actions>
