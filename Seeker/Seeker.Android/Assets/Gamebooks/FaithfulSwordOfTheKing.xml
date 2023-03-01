@@ -5090,9 +5090,7 @@
 			<Text>Пуля попадает прямо в грудь первому из них, и он на всем скаку валится на землю. Остается второй.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="10"/>
-					</Enemies>
+					<Enemy Name="ВТОРОЙ ВСАДНИК" Skill="8" Strength="10"/>
 					<WithoutShooting/>
 				</Fight>
 			</Actions>
