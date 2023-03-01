@@ -1250,9 +1250,7 @@
 			<Text>Человек-Жаба замахивается трезубцем, и ты бросаешься в бой:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЧЕЛОВЕК-ЖАБА" Mastery="9" Endurance="9"/>
-					</Enemies>
+					<Enemy Name="ЧЕЛОВЕК-ЖАБА" Mastery="9" Endurance="9"/>
 				</Fight>
 			</Actions>
 			<Options>
