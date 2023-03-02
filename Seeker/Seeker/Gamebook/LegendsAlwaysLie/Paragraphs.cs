@@ -28,7 +28,11 @@ namespace Seeker.Gamebook.LegendsAlwaysLie
             if (xmlAction["Specialization"] != null)
                 action.Specialization = SpecializationParse(xmlAction["Specialization"]);
 
-            if (xmlAction["Enemies"] != null)
+            if (xmlAction["Enemy"] != null)
+            {
+                action.Enemies = new List<Character> { EnemyParse(xmlAction["Enemy"]) };
+            }
+            else if (xmlAction["Enemies"] != null)
             {
                 action.Enemies = new List<Character>();
 
