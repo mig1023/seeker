@@ -5321,9 +5321,7 @@
 			<Text>Вы неожиданно появляетесь из кустов и вихрем врываетесь в бой. Человек в роскошном поясе быстро соображает, что вы пришли на помощь именно ему. Понимают это и его противники. Теперь шансы сторон уравнялись. Вы встаете рядом с тем соратником, который дрался сразу с двумя врагами, так как он в первую очередь нуждается в вашей помощи.</Text>
 			<Actions>
 				<Fight>
-					<Allies>
-						<Ally Name="Опытный авантюрист" Attack="12" Defence="15" Endurance="10" Initiative="11" SpecialTechnique="Reaction, TwoBlades"/>
-					</Allies>
+					<Ally Name="Опытный авантюрист" Attack="12" Defence="15" Endurance="10" Initiative="11" SpecialTechnique="Reaction, TwoBlades"/>
 					<Enemies>
 						<Enemy Name="Первый незнакомец" Attack="10" Defence="15" Endurance="8" Initiative="9"/>
 						<Enemy Name="Второй незнакомец" Attack="9" Defence="14" Endurance="7" Initiative="9"/>
