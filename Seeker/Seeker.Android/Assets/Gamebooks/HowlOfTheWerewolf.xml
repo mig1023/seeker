@@ -228,9 +228,7 @@
 			<Text>Демоническая собака уже долго время нападает на паломников, пытающихся добраться до святыни. Но сегодня этому кошмару будет положен конец.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Шак" Mastery="7" Endurance="7"/>
-					</Enemies>
+					<Enemy Name="Шак" Mastery="7" Endurance="7"/>
 					<RoundsToFight>7</RoundsToFight>
 					<WoundsToFail>3</WoundsToFail>
 				</Fight>
