@@ -1657,9 +1657,7 @@
 			<Text>Издав яростный рык, ужасный Князь Оборотней бросается на вас.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Граф Варколак" Mastery="12" Endurance="16"/>
-					</Enemies>
+					<Enemy Name="Граф Варколак" Mastery="12" Endurance="16"/>
 					<RoundsToFight>7</RoundsToFight>
 					<WoundsLimit>6</WoundsLimit>
 					<WoundsForTransformation>1</WoundsForTransformation>
