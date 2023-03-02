@@ -60,19 +60,21 @@ namespace Seeker.Gamebook.HowlOfTheWerewolf
                     action.BenefitList.Add(Xml.ModificationParse(bonefit, new Modification()));
             }
 
-            if (xmlAction["Enemies"] != null)
+            if (xmlAction["Enemy"] != null)
+            {
+                Character enemy = EnemyParse(xmlAction["Enemy"]);
+
+                if (Xml.BoolParse(xmlAction["RandomEnemyCount"]))
+                    EnemyMultiplier(Dice.Roll(), ref action, enemy);
+                else
+                    action.Enemies = new List<Character> { enemy };
+            }
+            else if(xmlAction["Enemies"] != null)
             {
                 action.Enemies = new List<Character>();
 
                 foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
-                {
-                    Character enemy = EnemyParse(xmlEnemy);
-
-                    if (Xml.BoolParse(xmlAction["RandomEnemyCount"]))
-                        EnemyMultiplier(Dice.Roll(), ref action, enemy);
-                    else
-                        action.Enemies.Add(enemy);
-                }
+                    action.Enemies.Add(EnemyParse(xmlEnemy));
             }
 
             return action;
