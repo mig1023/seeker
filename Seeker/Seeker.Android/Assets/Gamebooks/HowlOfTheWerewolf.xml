@@ -418,9 +418,7 @@
 			</Texts>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Медведь" Mastery="8" Endurance="10"/>
-					</Enemies>
+					<Enemy Name="Медведь" Mastery="8" Endurance="10"/>
 					<WoundsForTransformation>3</WoundsForTransformation>
 					<After>Если медведь-оборотень нанесет вам больше двух ран, Трансформация продолжится.</After>
 				</Fight>
