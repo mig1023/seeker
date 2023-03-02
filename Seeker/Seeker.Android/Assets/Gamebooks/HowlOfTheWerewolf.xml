@@ -2988,9 +2988,7 @@
 			<Text>В чаше рядом с деревенским храмом была святая вода, и меч, окропленный ей, может ранить даже призраков. Взвыв от боли, волк бросается в бой.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Призрачный волк" Mastery="7" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="Призрачный волк" Mastery="7" Endurance="8"/>
 				</Fight>
 			</Actions>
 			<Options>
