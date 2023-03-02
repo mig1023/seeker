@@ -3171,9 +3171,7 @@
 			<Text>Нужно сражаться:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="МЕДВЕДЬ" Strength="11" Hitpoints="12"/>
-					</Enemies>
+					<Enemy Name="МЕДВЕДЬ" Strength="11" Hitpoints="12"/>
 					<After>После победы вы осматриваете берлогу зверя, и в груде костей находите 2 золотых и статуэтку нимфы с обломанной головой. Теперь пора уходить.</After>
 				</Fight>
 			</Actions>
