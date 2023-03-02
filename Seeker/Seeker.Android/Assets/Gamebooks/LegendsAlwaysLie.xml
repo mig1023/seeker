@@ -1226,9 +1226,7 @@
 			<Text>Вам надо управиться как можно быстрее, так используйте свои умения по максимуму.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ВЕЛИКАН-КОПЬЕНОСЕЦ" Strength="11" Hitpoints="10"/>
-					</Enemies>
+					<Enemy Name="ВЕЛИКАН-КОПЬЕНОСЕЦ" Strength="11" Hitpoints="10"/>
 					<RoundsToWin>5</RoundsToWin>
 				</Fight>
 			</Actions>
