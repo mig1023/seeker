@@ -6610,9 +6610,7 @@
 			<Text>Из всех противников, которых вам подкидывала судьба на плато горных великанов, это, несомненно, самый опасный.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="КАРДА" Strength="15" Hitpoints="14"/>
-					</Enemies>
+					<Enemy Name="КАРДА" Strength="15" Hitpoints="14"/>
 					<After>Победа над ней откроет вам путь.</After>
 				</Fight>
 			</Actions>
