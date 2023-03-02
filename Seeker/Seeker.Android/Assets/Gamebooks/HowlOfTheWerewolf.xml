@@ -2107,9 +2107,7 @@
 			<Text>С нечеловеческой яростью, пронзительно крича, вампирша бросается на вас.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Леди Маун" Mastery="10" Endurance="13"/>
-					</Enemies>
+					<Enemy Name="Леди Маун" Mastery="10" Endurance="13"/>
 					<WoundsLimit>4</WoundsLimit>
 				</Fight>
 			</Actions>
