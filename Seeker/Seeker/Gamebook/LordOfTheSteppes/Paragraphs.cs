@@ -31,20 +31,30 @@ namespace Seeker.Gamebook.LordOfTheSteppes
 
             bool falaleyHelp = Xml.BoolParse(xmlAction["FalaleyHelp"]) && Data.Triggers.Contains("Фалалей поможет");
 
-            if ((xmlAction["Allies"] != null) || falaleyHelp)
+            if ((xmlAction["Ally"] != null) || (xmlAction["Allies"] != null) || falaleyHelp)
             {
                 action.Allies = new List<Character> { new Character { Name = Character.Protagonist.Name } };
                 action.GroupFight = true;
             }
 
-            if (xmlAction["Allies"] != null)
+            if (xmlAction["Ally"] != null)
+            {
+                action.Enemies = new List<Character> { CharacterParse(xmlAction["Ally"], null) };
+            }
+            else if (xmlAction["Allies"] != null)
+            {
                 foreach (XmlNode xmlAlly in xmlAction.SelectNodes("Allies/Ally"))
                     action.Allies.Add(CharacterParse(xmlAlly, null));
+            }
 
             if (falaleyHelp)
                 action.Allies.Add(Falaley());
 
-            if (xmlAction["Enemies"] != null)
+            if (xmlAction["Enemy"] != null)
+            {
+                action.Enemies = new List<Character> { CharacterParse(xmlAction["Enemy"], action) };
+            }
+            else if (xmlAction["Enemies"] != null)
             {
                 action.Enemies = new List<Character>();
 
