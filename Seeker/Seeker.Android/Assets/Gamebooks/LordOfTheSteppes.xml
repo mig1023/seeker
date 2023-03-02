@@ -2968,9 +2968,7 @@
 			<Text>Ваш новый противник не ожидал такого поворота событий, но готов принять бой.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Опытный авантюрист" Attack="12" Defence="15" Endurance="6" Initiative="11" SpecialTechnique="Reaction, TwoBlades"/>
-					</Enemies>
+					<Enemy Name="Опытный авантюрист" Attack="12" Defence="15" Endurance="6" Initiative="11" SpecialTechnique="Reaction, TwoBlades"/>
 					<After>Незнакомец превосходно владеет оружием и дорого продаст свою жизнь. Давно вы не встречали такого умелого противника.</After>
 				</Fight>
 			</Actions>
