@@ -6313,9 +6313,7 @@
 			<Text>Глуповатая тактика, но почему-то она действует – движения карды заметно замедляются. Однако она все еще опасный противник.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="КАРДА" Strength="12" Hitpoints="14"/>
-					</Enemies>
+					<Enemy Name="КАРДА" Strength="12" Hitpoints="14"/>
 					<After>Победа откроет вам путь.</After>
 				</Fight>
 			</Actions>
