@@ -4834,9 +4834,7 @@
 				<Actions>
 				<Fight>
 					<Button>Драться</Button>
-					<Enemies>
-						<Enemy Name="Грендель" Mastery="8"/>
-					</Enemies>
+					<Enemy Name="Грендель" Mastery="8"/>
 					<Specificity>Invulnerable</Specificity>
 					<HitStrengthBonus>-1</HitStrengthBonus>
 					<RoundsWinToWin>2</RoundsWinToWin>
