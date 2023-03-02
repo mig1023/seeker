@@ -1663,12 +1663,8 @@
 			<Text>Вы неожиданно появляетесь на поляне, чтобы вступить в битву за тех, на чьей стороне имеется перевес. Однако здоровяк, заметив вас, отвлекается и пропускает такой удар, после которого безмолвно валится на землю, словно подрубленное дерево. Теперь вас двое против одного, и у вас есть все шансы на победу.</Text>
 			<Actions>
 				<Fight>
-					<Allies>
-						<Ally Name="Незнакомец" Attack="10" Defence="15" Endurance="8" Initiative="9"/>
-					</Allies>
-					<Enemies>
-						<Enemy Name="Опытный авантюрист" Attack="12" Defence="15" Endurance="6" Initiative="11" SpecialTechnique="Reaction, TwoBlades"/>
-					</Enemies>
+					<Ally Name="Незнакомец" Attack="10" Defence="15" Endurance="8" Initiative="9"/>
+					<Enemy Name="Опытный авантюрист" Attack="12" Defence="15" Endurance="6" Initiative="11" SpecialTechnique="Reaction, TwoBlades"/>
 					<After>Ваш соперник оказался на редкость умелым бойцом, недаром он уже одолел несколько своих врагов.\n\nКогда вы победите:</After>
 				</Fight>
 			</Actions>
