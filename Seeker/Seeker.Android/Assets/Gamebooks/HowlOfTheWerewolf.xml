@@ -4056,9 +4056,7 @@
 			</Texts>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Гигантский Паук" Mastery="7" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="Гигантский Паук" Mastery="7" Endurance="8"/>
 				</Fight>
 			</Actions>
 			<Modifications>
