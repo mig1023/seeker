@@ -290,9 +290,7 @@
 					<Text>Иначе — деритесь:</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="12"/>
-					</Enemies>
+					<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="12"/>
 					<After>Убив его, можете:</After>
 				</Fight>
 			</Actions>
