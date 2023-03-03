@@ -2613,9 +2613,7 @@
 			<Text>Останки гада падают на землю, а вы уже сталкиваетесь со вторым:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="БОГОМОЛ" Strength="9" Hitpoints="12"/>
-					</Enemies>
+					<Enemy Name="БОГОМОЛ" Strength="9" Hitpoints="12"/>
 					<Wound>3</Wound>
 					<After>Каждая нанесённая им рана будет отнимать 3 ЖИЗНИ. Победив, переводите дух.</After>
 				</Fight>
