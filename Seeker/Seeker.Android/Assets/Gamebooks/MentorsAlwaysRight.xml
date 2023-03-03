@@ -3729,12 +3729,10 @@
 			<Text>Вы снова скрещиваете мечи:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="НАЕМНИК" Strength="11" Hitpoints="4"/>
-					</Enemies>
-					<After>Убив, обыскиваете его и находите один золотой, стальной крюк — "кошку" и обтянутую кожей рукоять кинжала. Берите все, что хотите.</After>
+					<Enemy Name="НАЕМНИК" Strength="11" Hitpoints="4"/>
 					<Benefit Name="Gold" Value="1"/>
 					<Trigger>Grapnel</Trigger>
+					<After>Убив, обыскиваете его и находите один золотой, стальной крюк — "кошку" и обтянутую кожей рукоять кинжала. Берите все, что хотите.</After>
 				</Fight>
 			</Actions>
 			<Options>
