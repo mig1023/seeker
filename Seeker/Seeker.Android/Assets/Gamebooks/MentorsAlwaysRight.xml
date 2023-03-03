@@ -2313,9 +2313,7 @@
 			<Text>Два клинка со свистом вылетают из ножен и схватка начинается:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="НАЕМНИК" Strength="11" Hitpoints="12"/>
-					</Enemies>
+					<Enemy Name="НАЕМНИК" Strength="11" Hitpoints="12"/>
 					<WoundsLimit>4</WoundsLimit>
 					<After>Когда у него остается четыре или менее ЖИЗНЕЙ, наемник предлагает поделиться с вами кое-какой информацией в обмен на то, что вы отпустите его:</After>
 				</Fight>
