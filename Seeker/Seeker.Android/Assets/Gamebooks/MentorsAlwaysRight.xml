@@ -3194,9 +3194,7 @@
 			<Text>Еще с одним хазратом вы сталкиваетесь около идола:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="12"/>
-					</Enemies>
+					<Enemy Name="ХАЗРАТ" Strength="10" Hitpoints="12"/>
 				</Fight>
 			</Actions>
 			<Options>
