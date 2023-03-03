@@ -627,9 +627,7 @@
 			<Text>Взревев, вы бросаетесь в бой.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ТРОГЛОДИТ" Strength="12" Hitpoints="10"/>
-					</Enemies>
+					<Enemy Name="ТРОГЛОДИТ" Strength="12" Hitpoints="10"/>
 					<Wound>3</Wound>
 					<After>Каждый удар Троглодита будет отнимать 3 жизни. Победив, вы обыскиваете его, но находите лишь массивную серебряную цепь. Пора двигаться дальше:</After>
 				</Fight>
