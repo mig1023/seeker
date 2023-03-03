@@ -3461,9 +3461,7 @@
 			<Text>Взревев, леший выпрыгивает на поляну и нападает. Из его горла рвется рычание — видать, совсем ошалел от запаха крови и потому попался на вашу провокацию:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЛЕШИЙ" Strength="10" Hitpoints="12"/>
-					</Enemies>
+					<Enemy Name="ЛЕШИЙ" Strength="10" Hitpoints="12"/>
 					<After>Если победа за вами, то:</After>
 				</Fight>
 			</Actions>
