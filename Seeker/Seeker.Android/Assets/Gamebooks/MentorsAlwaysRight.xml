@@ -3002,9 +3002,7 @@
 					<Text>Иначе — сражайтесь:</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ХРАМОВНИК" Strength="12" Hitpoints="13"/>
-					</Enemies>
+					<Enemy Name="ХРАМОВНИК" Strength="12" Hitpoints="13"/>
 					<After>Если вы победили:</After>
 				</Fight>
 			</Actions>
