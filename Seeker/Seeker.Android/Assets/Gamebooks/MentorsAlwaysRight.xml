@@ -3656,9 +3656,7 @@
 			<Text>Монстр, рыча надвигается на вас. Вы принимаете бой:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="МУМИЯ" Strength="10" Hitpoints="14"/>
-					</Enemies>
+					<Enemy Name="МУМИЯ" Strength="10" Hitpoints="14"/>
 					<After>Одолев его, вы можете:</After>
 				</Fight>
 			</Actions>
