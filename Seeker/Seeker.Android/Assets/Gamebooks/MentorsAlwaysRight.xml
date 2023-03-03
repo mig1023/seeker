@@ -2793,9 +2793,7 @@
 			<Text>Арбалет отлетает в угол и с щелчком разряжается. Гориллоид хватается за нож и схватка начинается:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ОБЕЗЬЯНОЧЕЛОВЕК" Strength="11" Hitpoints="15"/>
-					</Enemies>
+					<Enemy Name="ОБЕЗЬЯНОЧЕЛОВЕК" Strength="11" Hitpoints="15"/>
 					<After>После победы:</After>
 				</Fight>
 			</Actions>
