@@ -272,9 +272,7 @@
 			</Texts>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="КОЧЕВНИК-ХАЗРАТ" Strength="10" Hitpoints="10"/>
-					</Enemies>
+					<Enemy Name="КОЧЕВНИК-ХАЗРАТ" Strength="10" Hitpoints="10"/>
 					<After>Если победа за вами:</After>
 				</Fight>
 			</Actions>
