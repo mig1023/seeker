@@ -2269,9 +2269,7 @@
 			<Actions>
 				<Fight>
 					<Firefight/>
-					<Enemies>
-						<Enemy Name="ФОСТЕР" Skill="12" Strength="12" Cartridges="6"/>
-					</Enemies>
+					<Enemy Name="ФОСТЕР" Skill="12" Strength="12" Cartridges="6"/>
 				</Fight>
 			</Actions>
 			<Options>
