@@ -983,10 +983,8 @@
 			<Text>Перестрелка:</Text>
 			<Actions>
 				<Fight>
+					<Enemy Name="ЭЛЬ-ХАБАЛИ" Skill="11" Strength="12" Cartridges="6"/>
 					<Firefight/>
-					<Enemies>
-						<Enemy Name="ЭЛЬ-ХАБАЛИ" Skill="11" Strength="12" Cartridges="6"/>
-					</Enemies>
 				</Fight>
 			</Actions>
 			<Options>
