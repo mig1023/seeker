@@ -21,22 +21,16 @@ namespace Seeker.Gamebook.Moonrunner
             foreach (string param in GetProperties(action))
                 SetProperty(action, param, xmlAction);
 
-            if (xmlAction["Enemies"] != null)
+            if (xmlAction["Enemy"] != null)
+            {
+                action.Enemies = new List<Character> { ParseEnemy(xmlAction["Enemy"]) };
+            }
+            else if (xmlAction["Enemies"] != null)
             {
                 action.Enemies = new List<Character>();
 
                 foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
-                {
-                    Character enemy = new Character();
-
-                    foreach (string param in GetProperties(enemy))
-                        SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
-
-                    enemy.Mastery = enemy.MaxMastery;
-                    enemy.Endurance = enemy.MaxEndurance;
-
-                    action.Enemies.Add(enemy);
-                }
+                    action.Enemies.Add(ParseEnemy(xmlEnemy));
             }
 
             if (action.Type == "Option")
@@ -50,5 +44,18 @@ namespace Seeker.Gamebook.Moonrunner
 
         public override Abstract.IModification ModificationParse(XmlNode xmlModification) =>
             Xml.ModificationParse(xmlModification, new Modification());
+
+        private Character ParseEnemy(XmlNode xmlEnemy)
+        {
+            Character enemy = new Character();
+
+            foreach (string param in GetProperties(enemy))
+                SetPropertyByAttr(enemy, param, xmlEnemy, maxPrefix: true);
+
+            enemy.Mastery = enemy.MaxMastery;
+            enemy.Endurance = enemy.MaxEndurance;
+
+            return enemy;
+        }
     }
 }
