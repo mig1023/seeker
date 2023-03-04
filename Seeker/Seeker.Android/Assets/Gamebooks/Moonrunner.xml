@@ -2655,9 +2655,7 @@
 			<Text>Вы подходите к двери с вывеской и видите, что под весами написано: «Крисуэлл, ростовщик». А рядом притаилось одно из этих отвратительных созданий!</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Блуждающий в тумане" Mastery="7" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="Блуждающий в тумане" Mastery="7" Endurance="8"/>
 					<DoubleFail/>
 				</Fight>
 			</Actions>
