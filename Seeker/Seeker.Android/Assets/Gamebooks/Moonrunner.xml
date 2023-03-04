@@ -3183,9 +3183,7 @@
 			<Text>Вы хватаете летучую мышь за кожаное крыло и втаскиваете тварь обратно в комнату. Она отбивается острыми когтями.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Летучая мышь" Mastery="6" Endurance="6"/>
-					</Enemies>
+					<Enemy Name="Летучая мышь" Mastery="6" Endurance="6"/>
 					<After>Если вам удастся убить ее, можете:</After>
 				</Fight>
 			</Actions>
