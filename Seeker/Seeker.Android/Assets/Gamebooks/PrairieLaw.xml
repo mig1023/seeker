@@ -2293,9 +2293,7 @@
 			<Text>Схватка:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="СТЕРВЯТНИК ДЖО" Skill="10" Strength="12"/>
-					</Enemies>
+					<Enemy Name="СТЕРВЯТНИК ДЖО" Skill="10" Strength="12"/>
 				</Fight>
 			</Actions>
 			<Options>
