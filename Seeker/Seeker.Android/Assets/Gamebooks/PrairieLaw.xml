@@ -2804,9 +2804,7 @@
 			<Text>Схватка:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЭЛЬ-ХАБАЛИ" Skill="11" Strength="12"/>
-					</Enemies>
+					<Enemy Name="ЭЛЬ-ХАБАЛИ" Skill="11" Strength="12"/>
 				</Fight>
 			</Actions>
 			<Options>
