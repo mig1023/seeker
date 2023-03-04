@@ -1390,10 +1390,8 @@
 			<Text>Вам приходилось слышать, что этот негодяй – прекрасный стрелок. А сегодня вы в этом убеждаетесь...</Text>
 			<Actions>
 				<Fight>
+					<Enemy Name="СТЕРВЯТНИК ДЖО" Skill="11" Strength="12" Cartridges="6"/>
 					<Firefight/>
-					<Enemies>
-						<Enemy Name="СТЕРВЯТНИК ДЖО" Skill="11" Strength="12" Cartridges="6"/>
-					</Enemies>
 				</Fight>
 			</Actions>
 			<Options>
