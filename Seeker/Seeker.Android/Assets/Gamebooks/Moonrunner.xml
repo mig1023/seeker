@@ -626,9 +626,7 @@
 					<Text>Иначе – деритесь:</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Арголис" Mastery="8" Endurance="13"/>
-					</Enemies>
+					<Enemy Name="Арголис" Mastery="8" Endurance="13"/>
 					<DevastatingAttack>4</DevastatingAttack>
 					<After>Из-за огромной силы демона каждый его удар, попавший в цель, отнимет 4 Выносливости.</After>
 				</Fight>
