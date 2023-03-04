@@ -382,9 +382,7 @@
 			<Text>Стрельба в черте города запрещена, но, будем надеяться, вы и без оружия неплохо управитесь.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="МОШЕННИК" Skill="8" Strength="8"/>
-					</Enemies>
+					<Enemy Name="МОШЕННИК" Skill="8" Strength="8"/>
 					<HeroWoundsLimit/>
 					<EnemyWoundsLimit/>
 				</Fight>
