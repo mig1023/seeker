@@ -986,9 +986,7 @@
 			<Text>Повелитель мертвых показывает кинжалом в вашу сторону, и его верные слуги бросаются в атаку. Из-за их укусов вы будете терять 1 Выносливость в каждом Раунде атаки!</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Повелитель мертвых" Mastery="10" Endurance="13"/>
-					</Enemies>
+					<Enemy Name="Повелитель мертвых" Mastery="10" Endurance="13"/>
 					<BitesEveryRound/>
 				</Fight>
 			</Actions>
