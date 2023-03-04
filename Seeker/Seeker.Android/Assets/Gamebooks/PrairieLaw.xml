@@ -348,9 +348,7 @@
 			<Actions>
 				<Fight>
 					<Firefight/>
-					<Enemies>
-						<Enemy Name="ВОИН" Skill="9" Strength="12" Cartridges="4"/>
-					</Enemies>
+					<Enemy Name="ВОИН" Skill="9" Strength="12" Cartridges="4"/>
 				</Fight>
 			</Actions>
 			<Options>
