@@ -21,13 +21,8 @@ namespace Seeker.Gamebook.OctopusIsland
             action.DinnerHitpointsBonus = Xml.IntParse(xmlAction["Dinner"]);
             action.ReturnedStuffs = Xml.BoolParse(xmlAction["ReturnedStuffs"]);
 
-            if (xmlAction["Enemies"] != null)
-            {
-                action.Enemies = new List<Character>();
-
-                foreach (XmlNode xmlEnemy in xmlAction.SelectNodes("Enemies/Enemy"))
-                    action.Enemies.Add(EnemyParse(xmlEnemy));
-            }
+            if (xmlAction["Enemy"] != null)
+                action.Enemies = new List<Character> { EnemyParse(xmlAction["Enemy"]) };
 
             return action;
         }
