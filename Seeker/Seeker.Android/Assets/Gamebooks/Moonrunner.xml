@@ -1478,9 +1478,7 @@
 			<Text>Очень аккуратно вы подходите к двери, но когда вам уже кажется, что твари не заметили вас, один из них выходит из тумана.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Блуждающий в тумане" Mastery="7" Endurance="8"/>
-					</Enemies>
+					<Enemy Name="Блуждающий в тумане" Mastery="7" Endurance="8"/>
 				</Fight>
 			</Actions>
 			<Options>
