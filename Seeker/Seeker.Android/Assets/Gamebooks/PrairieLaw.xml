@@ -3908,9 +3908,7 @@
 			<Text>Схватка:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="КОНОКРАД" Skill="8" Strength="9"/>
-					</Enemies>
+					<Enemy Name="КОНОКРАД" Skill="8" Strength="9"/>
 					<EnemyWoundsLimit/>
 				</Fight>
 			</Actions>
