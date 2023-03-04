@@ -4960,9 +4960,7 @@
 			<Text>Схватка:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ВОИН" Skill="10" Strength="12"/>
-					</Enemies>
+					<Enemy Name="ВОИН" Skill="10" Strength="12"/>
 				</Fight>
 			</Actions>
 			<Options>
