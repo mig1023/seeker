@@ -3216,9 +3216,7 @@
 			<Text>Конрад уже рядом. Со своим сверкающим мачете он стал безжалостным и неутомимым орудием убийства. Сражайтесь с ним.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Конрад" Mastery="10" Endurance="12"/>
-					</Enemies>
+					<Enemy Name="Конрад" Mastery="10" Endurance="12"/>
 				</Fight>
 			</Actions>
 			<Options>
