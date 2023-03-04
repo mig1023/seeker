@@ -5130,9 +5130,7 @@
 			<Text>Схватка:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ФОСТЕР" Skill="12" Strength="2"/>
-					</Enemies>
+					<Enemy Name="ФОСТЕР" Skill="12" Strength="2"/>
 				</Fight>
 			</Actions>
 			<Options>
