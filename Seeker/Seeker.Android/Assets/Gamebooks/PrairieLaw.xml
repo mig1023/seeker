@@ -138,9 +138,7 @@
 			<Text>Схватка:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГРАБИТЕЛЬ" Skill="9" Strength="10"/>
-					</Enemies>
+					<Enemy Name="ГРАБИТЕЛЬ" Skill="9" Strength="10"/>
 					<EnemyWoundsLimit/>
 					<After>Если вы снизили его СИЛУ до 2:</After>
 				</Fight>
@@ -983,8 +981,8 @@
 			<Text>Перестрелка:</Text>
 			<Actions>
 				<Fight>
-					<Enemy Name="ЭЛЬ-ХАБАЛИ" Skill="11" Strength="12" Cartridges="6"/>
 					<Firefight/>
+					<Enemy Name="ЭЛЬ-ХАБАЛИ" Skill="11" Strength="12" Cartridges="6"/>
 				</Fight>
 			</Actions>
 			<Options>
@@ -1049,11 +1047,11 @@
 			<Text>Вам придется вести перестрелку с двумя неизвестными противниками, засевшими в густом ивняке. Вы их не видите, стрелять приходится на звук и наугад, поэтому на время поединка вычтите 1 из своей ЛОВКОСТИ.</Text>
 			<Actions>
 				<Fight>
+					<Firefight/>
 					<Enemies>
 						<Enemy Name="ПЕРВЫЙ ПРОТИВНИК" Skill="9" Strength="9" Cartridges="5"/>
 						<Enemy Name="ВТОРОЙ ПРОТИВНИК" Skill="8" Strength="10" Cartridges="5"/>
 					</Enemies>
-					<Firefight/>
 				</Fight>
 			</Actions>
 			<Options>
@@ -1390,8 +1388,8 @@
 			<Text>Вам приходилось слышать, что этот негодяй – прекрасный стрелок. А сегодня вы в этом убеждаетесь...</Text>
 			<Actions>
 				<Fight>
-					<Enemy Name="СТЕРВЯТНИК ДЖО" Skill="11" Strength="12" Cartridges="6"/>
 					<Firefight/>
+					<Enemy Name="СТЕРВЯТНИК ДЖО" Skill="11" Strength="12" Cartridges="6"/>
 				</Fight>
 			</Actions>
 			<Options>
