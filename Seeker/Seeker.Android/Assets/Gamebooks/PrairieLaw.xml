@@ -811,9 +811,7 @@
 			<Text>Стрелять нельзя: услышат на острове. Придется драться в утлой лодчонке, которая в любой момент может перевернуться (на время боя вычтите 1 из своей ЛОВКОСТИ).</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="БАНДИТ" Skill="8" Strength="10"/>
-					</Enemies>
+					<Enemy Name="БАНДИТ" Skill="8" Strength="10"/>
 				</Fight>
 			</Actions>
 			<Options>
