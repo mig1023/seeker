@@ -997,9 +997,7 @@
 					<Text>В случае провала ты атакуешь:</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Другие орки" Attack="8" Defense="5" Hitpoints="5"/>
-					</Enemies>
+					<Enemy Name="Другие орки" Attack="8" Defense="5" Hitpoints="5"/>
 				</Fight>
 			</Actions>
 			<Options>
