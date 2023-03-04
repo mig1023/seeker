@@ -1029,9 +1029,7 @@
 			<Text>Глаза юноши остаются холодными и недоверчивыми. Вы нагибаетесь, чтобы помочь ему встать, но молодой воин из последних сил вцепляется вам в горло.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ИНДЕЕЦ" Skill="6" Strength="6"/>
-					</Enemies>
+					<Enemy Name="ИНДЕЕЦ" Skill="6" Strength="6"/>
 					<HeroWoundsLimit/>
 					<EnemyWoundsLimit/>
 				</Fight>
