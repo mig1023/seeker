@@ -3251,9 +3251,7 @@
 					<Text>Но если вы владеете навыком Сражение, то ей придется драться:</Text>
 				</Option>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Ксен-Вайп" Mastery="8" Endurance="7"/>
-					</Enemies>
+					<Enemy Name="Ксен-Вайп" Mastery="8" Endurance="7"/>
 					<WoundsLimit>3</WoundsLimit>
 				</Fight>
 			</Actions>
