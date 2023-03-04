@@ -5547,9 +5547,7 @@
 			<Actions>
 				<Fight>
 					<Firefight/>
-					<Enemies>
-						<Enemy Name="НЕЗНАКОМЕЦ" Skill="6" Strength="8" Cartridges="3"/>
-					</Enemies>
+					<Enemy Name="НЕЗНАКОМЕЦ" Skill="6" Strength="8" Cartridges="3"/>
 					<EnemyWoundsLimit/>
 				</Fight>
 			</Actions>
