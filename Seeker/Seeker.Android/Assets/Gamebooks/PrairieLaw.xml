@@ -2363,9 +2363,7 @@
 			<Actions>
 				<Fight>
 					<Firefight/>
-					<Enemies>
-						<Enemy Name="НЕЗНАКОМЕЦ" Skill="9" Strength="9" Cartridges="5"/>
-					</Enemies>
+					<Enemy Name="НЕЗНАКОМЕЦ" Skill="9" Strength="9" Cartridges="5"/>
 				</Fight>
 			</Actions>
 			<Modifications>
