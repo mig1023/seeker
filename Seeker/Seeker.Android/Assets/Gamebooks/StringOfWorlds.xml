@@ -3558,9 +3558,7 @@
 			<Text>Придётся драться:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ПИРАТ" Skill="9" Strength="9"/>
-					</Enemies>
+					<Enemy Name="ПИРАТ" Skill="9" Strength="9"/>
 					<After>Удалось ли вам победить?</After>
 				</Fight>
 			</Actions>	
