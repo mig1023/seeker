@@ -1193,9 +1193,7 @@
 			<Text>Сергей навёл пистолет женщине прямо в сердце и спустил курок.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГЕСТАПОВКА" Hitpoints="3" Accuracy="2"/>
-					</Enemies>
+					<Enemy Name="ГЕСТАПОВКА" Hitpoints="3" Accuracy="2"/>
 				</Fight>
 			</Actions>
 			<Options>
