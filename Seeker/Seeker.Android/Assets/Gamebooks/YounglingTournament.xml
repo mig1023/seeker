@@ -3292,9 +3292,7 @@
 			<Text>Идея не слишком удачная — пусть вам и удалось подняться выше противника, это никаких дивидендов не дало — удар мечами, вы приземляетесь, и снова сходитесь в бою.</Text>
 			<Actions>
 				<SwordFight>
-					<Enemies>
-						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
-					</Enemies>
+					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
