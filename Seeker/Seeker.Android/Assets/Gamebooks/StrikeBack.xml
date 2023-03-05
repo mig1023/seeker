@@ -3161,9 +3161,7 @@
 			<Text>Так как сидящий на гиппогрифе юноша все свои силы уделяет управлению зверем, он в бою не участвует, и ты сражаешься только с гиппогрифом.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Гиппогриф" Attack="5" Defence="9" Endurance="20"/>
-					</Enemies>
+					<Enemy Name="Гиппогриф" Attack="5" Defence="9" Endurance="20"/>
 				</Fight>
 			</Actions>
 			<Options>
