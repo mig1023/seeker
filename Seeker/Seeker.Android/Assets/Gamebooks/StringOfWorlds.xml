@@ -2338,9 +2338,7 @@
 			<Text>Придётся драться:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="КУСТ-ВАМПИР" Skill="11" Strength="8"/>
-					</Enemies>
+					<Enemy Name="КУСТ-ВАМПИР" Skill="11" Strength="8"/>
 					<After>Если вы победили — можете продолжать путь.</After>
 				</Fight>
 			</Actions>	
