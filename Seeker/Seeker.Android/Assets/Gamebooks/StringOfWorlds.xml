@@ -48,9 +48,7 @@
 			<Text>Придётся драться:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="КУСТ-ХИЩНИК" Skill="9" Strength="10"/>
-					</Enemies>
+					<Enemy Name="КУСТ-ХИЩНИК" Skill="9" Strength="10"/>
 					<After>Удалось ли вам победить?</After>
 				</Fight>
 			</Actions>	
