@@ -387,9 +387,7 @@
 			<Text>Вам трудно драться левой рукой (в правую вцепились прочные клейкие листья), поэтому на время боя вычтите 1 из своей ЛОВКОСТИ.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="«РОСЯНКА»" Skill="7" Strength="8"/>
-					</Enemies>
+					<Enemy Name="«РОСЯНКА»" Skill="7" Strength="8"/>
 					<After>Если вы победили, продолжайте путь.</After>
 				</Fight>
 			</Actions>	
