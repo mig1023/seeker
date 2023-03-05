@@ -265,9 +265,7 @@
 			<Text>Придётся драться:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ШАР-ХИЩНИК" Skill="10" Strength="6"/>
-					</Enemies>
+					<Enemy Name="ШАР-ХИЩНИК" Skill="10" Strength="6"/>
 					<After>Удалось ли вам победить?</After>
 				</Fight>
 			</Actions>	
