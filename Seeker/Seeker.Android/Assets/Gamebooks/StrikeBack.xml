@@ -1479,9 +1479,7 @@
 			<Text>Атакуешь юного священника. Тот отбивается небольшой серебряной дубинкой.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Юный священник" Attack="1" Defence="7" Endurance="6"/>
-					</Enemies>
+					<Enemy Name="Юный священник" Attack="1" Defence="7" Endurance="6"/>
 					<After>Если одолеешь священника:</After>
 				</Fight>
 			</Actions>
