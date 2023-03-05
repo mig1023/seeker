@@ -337,9 +337,7 @@
 			<Text>Шлем металлический, он неплохо экранирует излучение. А без своих телепатических штучек враг становится не таким уж и опасным.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="СОРОКОНОЖКА" Skill="7" Strength="6"/>
-					</Enemies>
+					<Enemy Name="СОРОКОНОЖКА" Skill="7" Strength="6"/>
 					<After>Удалось ли вам победить?</After>
 				</Fight>
 			</Actions>	
