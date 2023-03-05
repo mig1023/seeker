@@ -1078,9 +1078,7 @@
 				<Fight>
 					<Button>Рукопашный бой</Button>
 					<Dogfight/>
-					<Enemies>
-						<Enemy Name="ЮРГЕН" Hitpoints="3" First="true"/>
-					</Enemies>
+					<Enemy Name="ЮРГЕН" Hitpoints="3" First="true"/>
 				</Fight>
 			</Actions>
 			<Options>
