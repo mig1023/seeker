@@ -30,7 +30,11 @@ namespace Seeker.Gamebook.StrikeBack
 
             action.SpecialTechniques = SpecialTechniquesListParse(xmlAction["SpecialTechnique"]);
 
-            if (xmlAction["Allies"] != null)
+            if (xmlAction["Ally"] != null)
+            {
+                action.Enemies = new List<Character> { CharacterParse(xmlAction["Ally"], null) };
+            }
+            else if (xmlAction["Allies"] != null)
             {
                 action.GroupFight = true;
                 action.Allies = new List<Character>();
@@ -38,8 +42,12 @@ namespace Seeker.Gamebook.StrikeBack
                 foreach (XmlNode xmlAlly in xmlAction.SelectNodes("Allies/Ally"))
                     action.Allies.Add(CharacterParse(xmlAlly, null));
             }
-                
-            if (xmlAction["Enemies"] != null)
+
+            if (xmlAction["Enemy"] != null)
+            {
+                action.Enemies = new List<Character> { CharacterParse(xmlAction["Enemy"], action) };
+            }
+            else if (xmlAction["Enemies"] != null)
             {
                 action.Enemies = new List<Character>();
 
