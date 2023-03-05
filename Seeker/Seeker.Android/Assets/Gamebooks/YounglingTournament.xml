@@ -3220,9 +3220,7 @@
 					<After>— Как тебе такой удар? — спрашивает он, явно довольный собой, и принимает защитную стойку. — Твоя очередь атаковать! Покажи, на что способен!</After>
 				</DiceWounds>
 				<SwordFight>
-					<Enemies>
-						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
-					</Enemies>
+					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Speed="3" Hitpoints="30"/>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
 					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
