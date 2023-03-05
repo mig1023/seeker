@@ -1522,10 +1522,10 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Посланец смерти" Attack="4" Defence="9" Endurance="14"/>
+					<SpecialTechnique>WithoutGameover</SpecialTechnique>
 					<After>
 						<Text Style="Small">Особая способность: Высасывание энергии. Каждая вторая атака посланца смерти, попавшая в цель, не только наносит обычные повреждения, но ещё и снижает твою Атаку на 1. Если твоя Атака упадёт до нуля, ты погибнешь.</Text>
 					</After>
-					<SpecialTechnique>WithoutGameover</SpecialTechnique>
 				</Fight>
 			</Actions>
 			<Options>
@@ -1583,13 +1583,11 @@
 			<Text>Посланец смерти атакует тебя, а ты отвечаешь ударом волшебного меча.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Посланец смерти" Attack="4" Defence="9" Endurance="18"/>
-					</Enemies>
+					<Enemy Name="Посланец смерти" Attack="4" Defence="9" Endurance="18"/>
+					<SpecialTechnique>WithoutGameover</SpecialTechnique>
 					<After>
 						<Text Style="Small">Особая способность: Высасывание энергии. Каждая вторая атака посланца смерти, попавшая в цель, не только наносит обычные повреждения, но ещё и снижает твою Атаку на 1. Если твоя Атака упадёт до нуля, ты погибнешь.</Text>
 					</After>
-					<SpecialTechnique>WithoutGameover</SpecialTechnique>
 				</Fight>
 			</Actions>
 			<Options>
@@ -1614,9 +1612,7 @@
 			<Text>Понимая, что магия ему тут не поможет, эльф выхватил кинжал. Итак, сражение!</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Тёмный эльф" Attack="3" Defence="8" Endurance="12"/>
-					</Enemies>
+					<Enemy Name="Тёмный эльф" Attack="3" Defence="8" Endurance="12"/>
 					<After>
 						<Text Style="Small">Даже если ты ВУРДАЛАК, твоя парализующая способность не подействует. У эльфийского племени к вурдалачьему яду иммунитет. Бой проводится как обычно.</Text>
 					</After>
