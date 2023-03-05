@@ -3246,9 +3246,7 @@
 			<Text>Стоит вам дотронуться до ствола, как зверь спрыгивает с дерева. Из пасти выползают кривые клыки, и чудовище бросается в атаку.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ОБЕЗЬЯНОПАУК" Skill="10" Strength="10"/>
-					</Enemies>
+					<Enemy Name="ОБЕЗЬЯНОПАУК" Skill="10" Strength="10"/>
 					<After>Если вы победили, то ура!</After>
 				</Fight>
 			</Actions>	
