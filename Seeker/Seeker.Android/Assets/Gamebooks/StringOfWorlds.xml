@@ -605,9 +605,7 @@
 			<Text>Придётся драться:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="РЫЦАРЬ" Skill="10" Strength="12"/>
-					</Enemies>
+					<Enemy Name="РЫЦАРЬ" Skill="10" Strength="12"/>
 					<After>В любой момент боя вы можете попытаться сбежать.</After>
 				</Fight>
 			</Actions>	
