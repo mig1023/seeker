@@ -1145,9 +1145,7 @@
 			<Text>Начинается дуэль на световых мечах.</Text>
 			<Actions>
 				<SwordFight>
-					<Enemies>
-						<Enemy Name="Проводник" Skill="8" Rang="1" Speed="3" Hitpoints="20" SwordTechnique="Elasticity"/>
-					</Enemies>
+					<Enemy Name="Проводник" Skill="8" Rang="1" Speed="3" Hitpoints="20" SwordTechnique="Elasticity"/>
 					<HeroHitpointsLimith>3</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>2</EnemyHitpointsLimith>
 					<WithoutTechnique/>
