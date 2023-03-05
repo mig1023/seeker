@@ -105,9 +105,7 @@
 			<Text>Придётся драться:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЗМЕЯ" Skill="12" Strength="12"/>
-					</Enemies>
+					<Enemy Name="ЗМЕЯ" Skill="12" Strength="12"/>
 					<After>Удалось ли вам победить?</After>
 				</Fight>
 			</Actions>	
