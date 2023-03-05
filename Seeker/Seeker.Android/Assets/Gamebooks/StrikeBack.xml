@@ -558,9 +558,7 @@
 			<Text>Стоило тебе попытаться прошмыгнуть вглубь пещеры, как лютоволк, внезапно рассвирепев, набросился на тебя! Сражение неизбежно. Лютоволк атакует первым.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Лютоволк" Attack="5" Defence="8" Endurance="20"/>
-					</Enemies>
+					<Enemy Name="Лютоволк" Attack="5" Defence="8" Endurance="20"/>
 				</Fight>
 			</Actions>
 			<Options>
