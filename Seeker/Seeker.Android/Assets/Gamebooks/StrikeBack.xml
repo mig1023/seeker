@@ -1714,9 +1714,7 @@
 			<Text>— Гнусный монстр, прими заслуженную кару!\n\nВзмахнув булавой, Глен направился к тебе. Итак, да начнётся бой!</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Священник ГЛЕН" Attack="3" Defence="7" Endurance="18"/>
-					</Enemies>
+					<Enemy Name="Священник ГЛЕН" Attack="3" Defence="7" Endurance="18"/>
 				</Fight>
 			</Actions>
 			<Options>
