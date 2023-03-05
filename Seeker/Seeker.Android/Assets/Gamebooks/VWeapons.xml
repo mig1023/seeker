@@ -567,9 +567,7 @@
 			<Text>Огнев молниеносно выхватил свой маузер, однако и американец успел за это время навести на него ствол.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ДЭВИС" Hitpoints="3" Accuracy="3" First="true"/>
-					</Enemies>
+					<Enemy Name="ДЭВИС" Hitpoints="3" Accuracy="3" First="true"/>
 				</Fight>
 			</Actions>
 			<Options>
