@@ -2584,9 +2584,7 @@
 			<Text>— Проклятье!\n\nОсознав, что его конь внезапно сделался неподвижным, рыцарь спрыгивает с превратившегося в статую коня и с прежней отвагой атакует тебя.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Рыцарь" Attack="3" Defence="10" Endurance="13"/>
-					</Enemies>
+					<Enemy Name="Рыцарь" Attack="3" Defence="10" Endurance="13"/>
 					<After>Победишь ты рыцаря или превратишь его в камень?</After>
 				</Fight>
 			</Actions>
