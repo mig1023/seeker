@@ -3530,9 +3530,7 @@
 			<Text>Продолжается дуэль на световых мечах:</Text>
 			<Actions>
 				<SwordFight>
-					<Enemies>
-						<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Hitpoints="30"/>
-					</Enemies>
+					<Enemy Name="Кирк Драгус" Skill="10" Rang="3" Hitpoints="30"/>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
 				</SwordFight>
