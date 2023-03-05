@@ -1458,9 +1458,7 @@
 			<Text>Нападаешь на пьяницу.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Пьяница" Attack="1" Defence="7" Endurance="4"/>
-					</Enemies>
+					<Enemy Name="Пьяница" Attack="1" Defence="7" Endurance="4"/>
 					<After>
 						<Text Style="Small">Даже если ты ОБОРОТЕНЬ, то не стоит перекидываться посреди города — это привлечёт внимание. Поэтому сражаешься в человеческом облике.\nНужно всё сделать по-быстрому, пока шум не услышали горожане.</Text>
 					</After>
