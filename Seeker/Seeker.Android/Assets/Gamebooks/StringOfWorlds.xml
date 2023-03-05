@@ -5034,9 +5034,7 @@
 			<Text>Придётся драться:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="СЕРЕБРИСТЫЙ ЗВЕРЬ" Skill="9" Strength="10"/>
-					</Enemies>
+					<Enemy Name="СЕРЕБРИСТЫЙ ЗВЕРЬ" Skill="9" Strength="10"/>
 					<After>Удалось ли вам его убить?</After>
 				</Fight>
 			</Actions>
@@ -5077,9 +5075,7 @@
 			<Text>Придётся драться:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="«БАБОЧКА»" Skill="8" Strength="8"/>
-					</Enemies>
+					<Enemy Name="«БАБОЧКА»" Skill="8" Strength="8"/>
 					<After>В любой момент вы можете отступить. Но, может быть, вам удастся победить противника.</After>
 				</Fight>
 			</Actions>
