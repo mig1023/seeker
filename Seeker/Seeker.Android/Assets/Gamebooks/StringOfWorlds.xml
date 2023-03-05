@@ -2760,9 +2760,7 @@
 			<Text>Придётся драться:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="БЕРТОЛЬД ИЗ СОРГЕЙЛЯ" Skill="10" Strength="10"/>
-					</Enemies>
+					<Enemy Name="БЕРТОЛЬД ИЗ СОРГЕЙЛЯ" Skill="10" Strength="10"/>
 					<After>Вам удалось победить?</After>
 				</Fight>
 			</Actions>	
