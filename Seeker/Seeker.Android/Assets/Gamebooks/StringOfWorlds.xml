@@ -4733,9 +4733,7 @@
 			<Text>Вы легко догоняете аборигена, но он не намерен с вами разговаривать. Бросив в траву свою ношу, муравей поудобнее перехватывает заостренную палку.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="МУРАВЕЙ" Skill="9" Strength="8"/>
-					</Enemies>
+					<Enemy Name="МУРАВЕЙ" Skill="9" Strength="8"/>
 					<EnemyWoundsLimit/>
 				</Fight>
 			</Actions>
