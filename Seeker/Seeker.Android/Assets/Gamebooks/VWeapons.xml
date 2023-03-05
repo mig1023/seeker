@@ -1182,9 +1182,7 @@
 			<Text>Сергей затаился в темноте. Когда женщина прошла мимо окна, Сергей увидел гестаповскую форму и незнакомое лицо. Это была не Грета! К этому моменту женщина уже отчётливо видела Сергея и целилась в него.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ГЕСТАПОВКА" Hitpoints="3" Accuracy="2" First="true"/>
-					</Enemies>
+					<Enemy Name="ГЕСТАПОВКА" Hitpoints="3" Accuracy="2" First="true"/>
 				</Fight>
 			</Actions>
 			<Options>
