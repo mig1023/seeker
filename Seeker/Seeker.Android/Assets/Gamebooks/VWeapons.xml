@@ -2184,9 +2184,7 @@
 				<Fight>
 					<Button>Рукопашный бой</Button>
 					<Dogfight/>
-					<Enemies>
-						<Enemy Name="БРАНДТ" Hitpoints="4"/>
-					</Enemies>
+					<Enemy Name="БРАНДТ" Hitpoints="4"/>
 				</Fight>
 			</Actions>
 			<Options>
