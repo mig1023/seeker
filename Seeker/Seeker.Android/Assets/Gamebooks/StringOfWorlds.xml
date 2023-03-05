@@ -651,9 +651,7 @@
 			<Text>Придётся драться:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ЖУК" Skill="9" Strength="9"/>
-					</Enemies>
+					<Enemy Name="ЖУК" Skill="9" Strength="9"/>
 					<After>Если вы покончили с ним, можете выбраться из воронки и идти дальше, огибая стену колючего кустарника.</After>
 				</Fight>
 			</Actions>	
