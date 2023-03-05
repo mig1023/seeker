@@ -1025,9 +1025,7 @@
 			<Text>Придётся драться:</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="«КУЗНЕЧИК»" Skill="10" Strength="10"/>
-					</Enemies>
+					<Enemy Name="«КУЗНЕЧИК»" Skill="10" Strength="10"/>
 					<After>Вы победили?</After>
 				</Fight>
 			</Actions>	
