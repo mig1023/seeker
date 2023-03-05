@@ -996,9 +996,7 @@
 			<Text>Так как змея некрупная и неядовитая, убить её будет нетрудно.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Змея" Attack="1" Defence="7" Endurance="1"/>
-					</Enemies>
+					<Enemy Name="Змея" Attack="1" Defence="7" Endurance="1"/>
 				</Fight>
 			</Actions>
 			<Options>
