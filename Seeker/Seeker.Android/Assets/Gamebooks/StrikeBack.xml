@@ -2270,9 +2270,7 @@
 			<Text>Атакуешь сидящего на лошади рыцаря.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Рыцарь" Attack="3" Defence="10" Endurance="13"/>
-					</Enemies>
+					<Enemy Name="Рыцарь" Attack="3" Defence="10" Endurance="13"/>
 					<After>
 						<Text Style="Small">Пока ты сосредоточен на сражении с рыцарем, его конь в каждом раунде атакует тебя копытами, Атака 3. Ты не можешь атаковать коня. Если рыцарь погибнет, конь его сбросит и убежит.</Text>
 					</After>
