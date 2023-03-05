@@ -3999,9 +3999,7 @@
 			<Text>Идея не слишком удачная — пусть вам и удалось подняться выше противника, это никаких дивидендов не дало — удар мечами, вы приземляетесь, и снова сходитесь в бою.</Text>
 			<Actions>
 				<SwordFight>
-					<Enemies>
-						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
-					</Enemies>
+					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
