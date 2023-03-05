@@ -2848,9 +2848,7 @@
 			<Text>Ты схлестнулся с ручным стихиалем Блинкена.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Стихиаль воздуха" Attack="8" Defence="11" Endurance="54"/>
-					</Enemies>
+					<Enemy Name="Стихиаль воздуха" Attack="8" Defence="11" Endurance="54"/>
 				</Fight>
 			</Actions>
 			<Options>
