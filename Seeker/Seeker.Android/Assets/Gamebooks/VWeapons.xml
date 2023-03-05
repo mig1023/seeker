@@ -1065,9 +1065,7 @@
 			<Text>Сергей прокрался мимо Итальянца и оглушил двумя точными ударами Мартина и Юргена. Это не укрылось от внимания Итальянца. Услышав шум, он резко развернулся и выстрелил Сергею в спину.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="ИТАЛЬЯНЕЦ" Hitpoints="3" Accuracy="3" First="true"/>
-					</Enemies>
+					<Enemy Name="ИТАЛЬЯНЕЦ" Hitpoints="3" Accuracy="3" First="true"/>
 				</Fight>
 			</Actions>
 			<Options>
