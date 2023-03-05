@@ -3185,9 +3185,7 @@
 			<Text>Ты сражаешься с драконьей головой.</Text>
 			<Actions>
 				<Fight>
-					<Enemies>
-						<Enemy Name="Драконья голова" Attack="6" Defence="10" Endurance="18"/>
-					</Enemies>
+					<Enemy Name="Драконья голова" Attack="6" Defence="10" Endurance="18"/>
 					<After>
 						<Text Style="Small">Поскольку это не настоящий дракон, то он не может плеваться в тебя огнём или молниями. Можешь сражаться с ним, как обычно.</Text>
 					</After>
