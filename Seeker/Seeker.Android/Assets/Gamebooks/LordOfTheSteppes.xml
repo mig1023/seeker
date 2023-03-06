@@ -4645,8 +4645,10 @@
 				<Get>
 					<Text>ВТОРОЙ МЕЧ</Text>
 					<Price>38</Price>
-					<Benefit Name="MaxAttack" Value="1"/>
-					<Benefit Name="MaxInitiative" Value="2"/>
+					<Benefits>
+						<MaxAttack Value="1"/>
+						<MaxInitiative Value="2"/>
+					</Benefits>
 					<After>Искусно выполненная кольчуга прибавит 1 к Защите и 1 к максимальному значению Жизни:</After>
 				</Get>
 				<Get>
