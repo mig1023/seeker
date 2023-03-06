@@ -4243,9 +4243,7 @@
 			<Text>Продолжается дуэль на световых мечах:</Text>
 			<Actions>
 				<SwordFight>
-					<Enemies>
-						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
-					</Enemies>
+					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					<NoStrikeBack/>
 					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
 				</SwordFight>
