@@ -4307,9 +4307,7 @@
 					<After>Продолжается дуэль на световых мечах:</After>
 				</EnemyDiceWounds>
 				<SwordFight>
-					<Enemies>
-						<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
-					</Enemies>
+					<Enemy Name="Жюль Трито" Skill="10" Rang="3" Speed="3" Hitpoints="26"/>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
