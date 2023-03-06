@@ -4446,7 +4446,7 @@
 					<Button>Выбрать</Button>
 					<Text>Торговец</Text>
 					<Choice/>
-					<Benefits>		
+					<Benefits>
 						<Skill Value="ПСИ"/>
 						<Skill Value="Знания"/>
 						<Skill Value="Знание улиц"/>
@@ -4462,10 +4462,12 @@
 					<Button>Выбрать</Button>
 					<Text>Провидец</Text>
 					<Choice/>
-					<Benefit Name="Skill" Value="ПСИ"/>
-					<Benefit Name="Skill" Value="Рукопашный бой"/>
-					<Benefit Name="Skill" Value="Хитрость"/>
-					<Benefit Name="Skill" Value="Управление парадоксом"/>
+					<Benefits>
+						<Skill Value="ПСИ"/>
+						<Skill Value="Рукопашный бой"/>
+						<Skill Value="Хитрость"/>
+						<Skill Value="Управление парадоксом"/>
+					</Benefits>
 					<After>
 						<Text Style="Small">Ты одарен особым взглядом, поэтому тебе известно, что человечество обречено, если не предпринять шагов во спасение.</Text>
 					</After>
