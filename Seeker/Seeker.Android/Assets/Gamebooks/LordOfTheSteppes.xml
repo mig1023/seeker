@@ -42,7 +42,6 @@
 				<Option Destination="816" Text="Не хотите задерживаться и поторопитесь, как советовал князь, поскорее приступите к закупке товаров"/>
 				<Option Destination="349" Text="Уйдете с рынка"/>
 				<Option Destination="599" Text="Перед уходом можно подойти к толпе в глубине рынка и посмотреть, что там происходит"/>
-				<Option Destination="70" Text="TEST"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="2">
@@ -7815,9 +7814,11 @@
 				<Get>
 					<Text>САБЛЯ</Text>
 					<Price>35</Price>
-					<Benefit Name="MaxAttack" Value="1"/>
-					<Benefit Name="MaxInitiative" Value="1"/>
-					<Benefit Name="ExtendedDamage"/>
+					<Benefits>
+						<MaxAttack Value="1"/>
+						<MaxInitiative Value="1"/>
+						<ExtendedDamage/>
+					</Benefits>
 					<After>Первый доспех за 20 монет (прибавит 1 к Защите):</After>
 				</Get>
 				<Get>
@@ -7829,15 +7830,19 @@
 				<Get>
 					<Text>ДОСПЕХ</Text>
 					<Price>30</Price>
-					<Benefit Name="MaxDefence" Value="1"/>
-					<Benefit Name="MaxEndurance" Value="1"/>
+					<Benefits>
+						<MaxDefence Value="1"/>
+						<MaxEndurance Value="1"/>
+					</Benefits>
 					<After>Третий доспех за 45 монет (прибавит 1 к Защите и 2 к максимальному значению Жизни):</After>
 				</Get>
 				<Get>
 					<Text>ДОСПЕХ</Text>
 					<Price>45</Price>
-					<Benefit Name="MaxDefence" Value="1"/>
-					<Benefit Name="MaxEndurance" Value="2"/>
+					<Benefits>
+						<MaxDefence Value="1"/>
+						<MaxEndurance Value="2"/>
+					</Benefits>
 					<After>Также вы можете зайти в чайхану и перекусить (порция еды за 2 монеты восстановит 3 Жизни):</After>
 				</Get>
 				<Get>
