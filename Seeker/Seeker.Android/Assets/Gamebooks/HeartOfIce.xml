@@ -4490,10 +4490,12 @@
 					<Button>Выбрать</Button>
 					<Text>Мутант</Text>
 					<Choice/>
-					<Benefit Name="Skill" Value="Ловкость"/>
-					<Benefit Name="Skill" Value="Хитрость"/>
-					<Benefit Name="Skill" Value="Управление парадоксом"/>
-					<Benefit Name="Skill" Value="Воровство"/>
+					<Benefits>
+						<Skill Value="Ловкость"/>
+						<Skill Value="Хитрость"/>
+						<Skill Value="Управление парадоксом"/>
+						<Skill Value="Воровство"/>
+					</Benefits>
 					<After>
 						<Text Style="Small">Будучи с рождения одаренным странными способностями, вы не являетесь человеком в полном смысле этого слова. Другие наверняка убьют вас, если узнают ваш секрет.</Text>
 					</After>
