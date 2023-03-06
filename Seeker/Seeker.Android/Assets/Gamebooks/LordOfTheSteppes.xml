@@ -4573,8 +4573,10 @@
 					<Text>ЗЕЛЬЕ СИЛЫ МЕДВЕДЯ</Text>
 					<Price>10</Price>
 					<Multiple/>
-					<Benefit Name="MaxAttack" Value="1"/>
-					<Benefit Name="MaxEndurance" Value="2"/>
+					<Benefits>
+						<MaxAttack Value="1"/>
+						<MaxEndurance Value="2"/>
+					</Benefits>
 					<After>Другое зелье увеличит вашу ловкость (а вместе с ней — Защиту на 1), его стоимость — 7 монет:</After>
 				</Get>
 				<Get>
