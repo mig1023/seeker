@@ -6091,9 +6091,7 @@
 			<Text>Продолжается дуэль на световых мечах.</Text>
 			<Actions>
 				<SwordFight>
-					<Enemies>
-						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
-					</Enemies>
+					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<NoStrikeBack/>
 					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
