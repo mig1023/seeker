@@ -6296,9 +6296,7 @@
 			<Text>Вы ожидаете этого, и привычным движением меняете вектор атаки, направляя удар в руку противницы. Но она, резко крутнув кистью, отражает ваш клинок.\n\n— Неплохая попытка, — замечает она. Спеси в ее голосе поубавилось, но она по-прежнему крайне уверена в себе.</Text>
 			<Actions>
 				<SwordFight>
-					<Enemies>
-						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
-					</Enemies>
+					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>15</EnemyHitpointsLimith>
 					<NoStrikeBack/>
