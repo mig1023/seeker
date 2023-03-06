@@ -644,8 +644,10 @@
 					<Button>Оплатить обед</Button>
 					<Text>Пообедать</Text>
 					<Price>100</Price>
-					<Benefit Name="Strength" Value="2"/>
-					<Benefit Name="HadFoodToday" Value="1"/>
+					<Benefits>
+						<Strength Value="2"/>
+						<HadFoodToday Value="1"/>
+					</Benefits>
 					<After>И продолжать путь — до Перигё, где вы наметили заночевать, еще добрых тридцать лье.</After>
 				</Get>
 			</Actions>
