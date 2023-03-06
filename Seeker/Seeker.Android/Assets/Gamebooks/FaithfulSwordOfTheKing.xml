@@ -3410,8 +3410,10 @@
 					<Button>Заказать</Button>
 					<Text>Еда в номер</Text>
 					<Price>50</Price>
-					<Benefit Name="Strength" Value="2"/>
-					<Benefit Name="HadFoodToday" Value="1"/>
+					<Benefits>
+						<Strength Value="2"/>
+						<HadFoodToday Value="1"/>
+					</Benefits>
 				</Get>
 			</Actions>
 			<Modifications>
