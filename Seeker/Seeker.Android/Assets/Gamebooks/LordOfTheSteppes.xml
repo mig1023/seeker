@@ -42,6 +42,7 @@
 				<Option Destination="816" Text="Не хотите задерживаться и поторопитесь, как советовал князь, поскорее приступите к закупке товаров"/>
 				<Option Destination="349" Text="Уйдете с рынка"/>
 				<Option Destination="599" Text="Перед уходом можно подойти к толпе в глубине рынка и посмотреть, что там происходит"/>
+				<Option Destination="70" Text="TEST"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="2">
@@ -713,10 +714,12 @@
 				</Get>			
 				<Get>
 					<Text>Третий меч</Text>
-					<Price>38</Price>	
-					<Benefit Name="ExtendedDamage"/>
-					<Benefit Name="MaxAttack" Value="1"/>
-					<Benefit Name="MaxInitiative" Value="1"/>
+					<Price>38</Price>
+					<Benefits>
+						<ExtendedDamage/>
+						<MaxAttack Value="1"/>
+						<MaxInitiative Value="1"/>
+					</Benefits>
 					<After>Разобравшись с покупками, вы немного задерживаетесь, чтобы поболтать со старым кузнецом. Он жалуется вам на воров и проходимцев, которых всегда много в Каменке. Мастер советует вам быть осторожнее, особенно при посещении местных трактиров.\n\nТеперь пора попрощаться с мастером, к тому же он торопится вернуться к своим делам.</After>
 				</Get>
 			</Actions>
@@ -1925,17 +1928,21 @@
 				<Get>
 					<Text>КОРОТКИЙ МЕЧ</Text>
 					<Price>25</Price>
-					<Benefit Name="MaxAttack" Value="1"/>
-					<Benefit Name="ExtendedDamage"/>
-					<Benefit Name="PowerfulStrike"/>
+					<Benefits>
+						<MaxAttack Value="1"/>
+						<ExtendedDamage/>
+						<PowerfulStrike/>
+					</Benefits>
 					<After>и длинный кинжал не уступающий по своим характеристикам любому мечу, и сделанный таким образом, что позволяет успешно вести оборонительный бой (добавит 1 к Нападению, 1 к Защите):</After>
 				</Get>
 				<Get>
 					<Text>ДЛИННЫЙ КИНЖАЛ</Text>
 					<Price>28</Price>
-					<Benefit Name="MaxAttack" Value="1"/>
-					<Benefit Name="MaxDefence" Value="1"/>
-					<Benefit Name="PowerfulStrike"/>
+					<Benefits>
+					<MaxAttack Value="1"/>
+					<MaxDefence Value="1"/>
+					<PowerfulStrike/>
+					</Benefits>
 					<After>Каждое из зелий, имеющихся у древня, уникально, поэтому вы сможете купить только по одному каждого из них: зелье Скорости прибавит 2 к Инициативе:</After>
 				</Get>
 				<Get>
