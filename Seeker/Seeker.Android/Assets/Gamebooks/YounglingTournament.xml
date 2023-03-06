@@ -4747,9 +4747,7 @@
 			<Text>Идея не слишком удачная — пусть вам и удалось подняться выше противника, это никаких дивидендов не дало — удар мечами, вы приземляетесь, и снова сходитесь в бою.</Text>
 			<Actions>
 				<SwordFight>
-					<Enemies>
-						<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
-					</Enemies>
+					<Enemy Name="Артхт Тархтхтх" Skill="12" Rang="4" Speed="3" Hitpoints="24"/>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<After>Вы можете выбрать любую из изученных техник боя. Бой идет до трех уколов.</After>
