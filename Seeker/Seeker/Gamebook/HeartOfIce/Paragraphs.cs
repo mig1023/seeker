@@ -20,10 +20,14 @@ namespace Seeker.Gamebook.HeartOfIce
 
             if (xmlAction["Benefit"] != null)
             {
+                action.BenefitList = new List<Abstract.IModification> { ModificationParse(xmlAction["Benefit"]) };
+            }
+            else if (xmlAction["Benefits"] != null)
+            {
                 action.BenefitList = new List<Abstract.IModification>();
 
-                foreach (XmlNode bonefit in xmlAction.SelectNodes("Benefit"))
-                    action.BenefitList.Add(Xml.ModificationParse(bonefit, new Modification()));
+                foreach (XmlNode bonefit in xmlAction.SelectNodes("Benefits/*"))
+                    action.BenefitList.Add(ModificationParse(bonefit));
             }
 
             return action;
