@@ -5168,8 +5168,10 @@
 					<Button>Поужинать</Button>
 					<Text>Ужин</Text>
 					<Price>50</Price>
-					<Benefit Name="Strength" Value="2"/>
-					<Benefit Name="HadFoodToday" Value="1"/>
+					<Benefits>
+						<Strength Value="2"/>
+						<HadFoodToday Value="1"/>
+					</Benefits>
 					<After>Если же денег нет, а желудок пуст, потеряйте 2 СИЛЫ. Однако, несмотря на завтрашние трудности, спите вы спокойно, и сон приносит вам лишние 2 СИЛЫ. С рассветом вы отправляетесь к тюрьме.</After>
 				</Get>
 			</Actions>	
