@@ -5916,8 +5916,10 @@
 					<Button>Заказать ужин</Button>
 					<Text>Ужин</Text>
 					<Price>100</Price>
-					<Benefit Name="Strength" Value="3"/>
-					<Benefit Name="HadFoodToday" Value="1"/>
+					<Benefits>
+						<Strength Value="3"/>
+						<HadFoodToday Value="1"/>
+					</Benefits>
 					<After>Утром вы едете дальше.</After>
 				</Get>
 			</Actions>
