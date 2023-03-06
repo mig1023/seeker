@@ -3982,8 +3982,10 @@
 					<Button>Позавтракать</Button>
 					<Text>Еда</Text>
 					<Price>50</Price>
-					<Benefit Name="Strength" Value="1"/>
-					<Benefit Name="HadFoodToday" Value="1"/>
+					<Benefits>
+						<Strength Value="1"/>
+						<HadFoodToday Value="1"/>
+					</Benefits>
 					<After>Завтрак прибавит вам 1 СИЛУ, после чего вы направляетесь в конюшню седлать Арбалета.</After>
 				</Get>
 			</Actions>
