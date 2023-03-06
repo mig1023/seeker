@@ -4432,7 +4432,7 @@
 					<Button>Выбрать</Button>
 					<Text>Шпион</Text>
 					<Choice/>
-					<Benefits>			
+					<Benefits>	
 						<Skill Value="Ловкость"/>
 						<Skill Value="Кибернетика"/>
 						<Skill Value="Знание улиц"/>
@@ -4446,12 +4446,14 @@
 					<Button>Выбрать</Button>
 					<Text>Торговец</Text>
 					<Choice/>
-					<Benefit Name="Skill" Value="ПСИ"/>
-					<Benefit Name="Skill" Value="Знания"/>
-					<Benefit Name="Skill" Value="Знание улиц"/>
-					<Benefit Name="Skill" Value="Стрельба"/>
-					<Benefit Name="Money" Value="5"/>
-					<Benefit Name="Shots" Value="6"/>
+					<Benefits>		
+						<Skill Value="ПСИ"/>
+						<Skill Value="Знания"/>
+						<Skill Value="Знание улиц"/>
+						<Skill Value="Стрельба"/>
+						<Skill Value="5"/>
+						<Skill Value="6"/>
+					</Benefits>
 					<After>
 						<Text Style="Small">Немногие решаются пересекать ледяные пустоши между городами, поэтому смелый путешественник может получить хорошую прибыль.</Text>
 					</After>
