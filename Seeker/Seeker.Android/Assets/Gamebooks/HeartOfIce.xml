@@ -4400,12 +4400,14 @@
 					<Button>Выбрать</Button>
 					<Choice/>
 					<Text>Исследователь</Text>
-					<Benefit Name="Skill" Value="Рукопашный бой"/>
-					<Benefit Name="Skill" Value="Знания"/>
-					<Benefit Name="Skill" Value="Знание улиц"/>
-					<Benefit Name="Skill" Value="Выживание"/>
-					<Benefit Name="MaxLife" Value="1"/>
-					<Benefit Name="Money" Value="-10"/>
+					<Benefits>
+						<Skill Value="Рукопашный бой"/>
+						<Skill Value="Знания"/>
+						<Skill Value="Знание улиц"/>
+						<Skill Value="Выживание"/>
+						<MaxLife Value="1"/>
+						<Money Value="-10"/>
+					</Benefits>
 					<After>
 						<Text Style="Small">В то время, как другие, возможно, оплакивают крах цивилизации, вам открываются новые возможности и тайны мира.</Text>
 					</After>
@@ -4414,12 +4416,14 @@
 					<Button>Выбрать</Button>
 					<Text>Охотник за головами</Text>
 					<Choice/>
-					<Benefit Name="Skill" Value="Хитрость"/>
-					<Benefit Name="Skill" Value="Пилотирование"/>
-					<Benefit Name="Skill" Value="Знание улиц"/>
-					<Benefit Name="Skill" Value="Стрельба"/>
-					<Benefit Name="Money" Value="10"/>
-					<Benefit Name="Shots" Value="6"/>
+					<Benefits>
+						<Skill Value="Хитрость"/>
+						<Skill Value="Пилотирование"/>
+						<Skill Value="Знание улиц"/>
+						<Skill Value="Стрельба"/>
+						<Money Value="10"/>
+						<Shots Value="6"/>
+					</Benefits>
 					<After>
 						<Text Style="Small">Сейчас трудные времена, сильный диктует законы слабым.</Text>
 					</After>
