@@ -5848,9 +5848,7 @@
 			<Text>Идея не слишком удачная — пусть вам и удалось подняться выше противницы, это никаких дивидендов не дало — удар мечами, вы приземляетесь, и снова сходитесь в бою.\n\nПродолжается дуэль на световых мечах.</Text>
 			<Actions>
 				<SwordFight>
-					<Enemies>
-						<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
-					</Enemies>
+					<Enemy Name="Марика Затт" Skill="12" Rang="4" Speed="3" Hitpoints="25"/>
 					<HeroHitpointsLimith>5</HeroHitpointsLimith>
 					<EnemyHitpointsLimith>5</EnemyHitpointsLimith>
 					<NoStrikeBack/>
