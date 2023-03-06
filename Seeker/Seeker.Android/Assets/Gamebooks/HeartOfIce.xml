@@ -4476,10 +4476,12 @@
 					<Button>Выбрать</Button>
 					<Text>Ученый</Text>
 					<Choice/>
-					<Benefit Name="Skill" Value="Кибернетика"/>
-					<Benefit Name="Skill" Value="Знания"/>
-					<Benefit Name="Skill" Value="Пилотирование"/>
-					<Benefit Name="Skill" Value="Выживание"/>
+					<Benefits>
+						<Skill Value="Кибернетика"/>
+						<Skill Value="Знания"/>
+						<Skill Value="Пилотирование"/>
+						<Skill Value="Выживание"/>
+					</Benefits>
 					<After>
 						<Text Style="Small">Большинство ничего не понимает в машинах, созданных предками, но вы усвоили, что знание — это сила.</Text>
 					</After>
