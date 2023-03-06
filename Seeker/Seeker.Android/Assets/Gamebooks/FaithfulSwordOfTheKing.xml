@@ -5003,8 +5003,10 @@
 					<Button>Поужинать</Button>
 					<Text>Ужин</Text>
 					<Price>150</Price>
-					<Benefit Name="Strength" Value="2"/>
-					<Benefit Name="HadFoodToday" Value="1"/>
+					<Benefits>
+						<Strength Value="2"/>
+						<HadFoodToday Value="1"/>
+					</Benefits>
 					<After>И уже готовитесь лечь спать, когда вас привлекает один подозрительный разговор.</After>
 				</Get>
 			</Actions>
