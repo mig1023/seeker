@@ -5406,9 +5406,7 @@
 					<Button>Добавить, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ СЛАБОСТИ</Text>
 					<ThisIsSpell/>
-					<After>
-						<Text Style="Small">Сделает вашего врага неуклюжим и неповоротливым, ослабит СИЛУ его УДАРА.</Text>
-					</After>
+					<After Style="Small">Сделает вашего врага неуклюжим и неповоротливым, ослабит СИЛУ его УДАРА.</After>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Добавить, Убрать</Button>
