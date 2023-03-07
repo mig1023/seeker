@@ -5418,9 +5418,7 @@
 					<Button>Добавить, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ ИСЦЕЛЕНИЯ</Text>
 					<ThisIsSpell/>
-					<After>
-						<Text Style="Small">В любой момент (но не во время сражения) добавит вам 8 ВЫНОСЛИВОСТЕЙ.</Text>
-					</After>
+					<After Style="Small">В любой момент (но не во время сражения) добавит вам 8 ВЫНОСЛИВОСТЕЙ.</After>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Добавить, Убрать</Button>
