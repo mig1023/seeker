@@ -306,6 +306,8 @@ namespace Seeker.Output
             if (Game.Data.Triggers.Count > 0)
                 info.Children.Add(Line(fontColor, "Триггеры: {0}", String.Join(", ", Game.Data.Triggers)));
 
+            info.Children.Add(Line(fontColor, String.Empty));
+
             string debug = Game.Data.Debug();
 
             if (!String.IsNullOrEmpty(debug))
@@ -321,7 +323,13 @@ namespace Seeker.Output
             List<string> healings = Game.Healing.Debug();
 
             if (healings.Count > 0)
-                info.Children.Add(Line(fontColor, "Снаряжение:\n{0}", String.Join("\n", healings)));
+            {
+                info.Children.Add(Line(fontColor, "\nСнаряжение:"));
+
+                for (int i = 0; i < healings.Count; i++)
+                    info.Children.Add(Line(fontColor, "{0}. {1}", i + 1, healings[i]));
+            }
+                
 
             return info;
         }
@@ -364,7 +372,7 @@ namespace Seeker.Output
         {
             Text = String.Format(line, prms),
             FontSize = FontSize(TextFontSize.Micro),
-            TextColor = color
+            TextColor = color,
         };
 
         public static View SplitterLine(Thickness? thickness, Color? color) => new BoxView
