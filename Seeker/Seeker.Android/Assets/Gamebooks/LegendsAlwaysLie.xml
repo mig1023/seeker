@@ -2681,9 +2681,7 @@
 			<Actions>
 				<FootwrapsReplacement>
 					<Button>Поменять портянки</Button>
-					<After>
-						<Text Style="Small">Если нет, или же вы не хотите этого делать, запишите слово «ноги».</Text>
-					</After>
+					<After Style="Small">Если нет, или же вы не хотите этого делать, запишите слово «ноги».</After>
 				</FootwrapsReplacement>
 			</Actions>
 			<Triggers>Legs</Triggers>
