@@ -7114,9 +7114,7 @@
 					<Button>Добавить, Отбавить</Button>
 					<Text>СИЛА</Text>
 					<Stat>Strength</Stat>
-					<After>
-						<Text Style="Small">Способность персонажа поднимать и переносить тяжести, бороться, а также общая выносливость.</Text>
-					</After>
+					<After Style="Small">Способность персонажа поднимать и переносить тяжести, бороться, а также общая выносливость.</After>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Добавить, Отбавить</Button>
