@@ -4061,9 +4061,7 @@
 			<Actions>
 				<Fight>
 					<Enemy Name="Юноша" Attack="6" Defence="9" Endurance="36"/>
-					<After>
-						<Text Style="Small">Особая способность: Волшебный меч. Если юноша, атакуя, выбросит 11 или 12, ты моментально погибаешь.</Text>
-					</After>
+					<After Style="Small">Особая способность: Волшебный меч. Если юноша, атакуя, выбросит 11 или 12, ты моментально погибаешь.</After>
 				</Fight>
 			</Actions>
 			<Options>
