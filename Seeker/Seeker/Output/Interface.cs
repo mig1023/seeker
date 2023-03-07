@@ -309,7 +309,14 @@ namespace Seeker.Output
             string debug = Game.Data.Debug();
 
             if (!String.IsNullOrEmpty(debug))
-                info.Children.Add(Line(fontColor, "{0}", debug));
+            {
+                List<string> debugLines = debug.Split('\n').Where(x => !String.IsNullOrEmpty(x)).ToList();
+
+                if (debugLines.Count > 3)
+                    info.Children.Add(GridDebugParams(debugLines, fontColor));
+                else
+                    info.Children.Add(Line(fontColor, "{0}", debug));
+            }
 
             List<string> healings = Game.Healing.Debug();
 
@@ -317,6 +324,40 @@ namespace Seeker.Output
                 info.Children.Add(Line(fontColor, "Снаряжение:\n{0}", String.Join("\n", healings)));
 
             return info;
+        }
+
+        private static View GridDebugParams(List<string> debugLines, Color fontColor)
+        {
+            Grid grid = new Grid
+            {
+                RowDefinitions =
+                {
+                    new RowDefinition { Height = Constants.DEBUG_GRIDROW_HEIGHT },
+                },
+                ColumnDefinitions =
+                {
+                    new ColumnDefinition(),
+                    new ColumnDefinition(),
+                },
+                Padding = 0,
+                RowSpacing = 0,
+            };
+
+            int currentRow = 0;
+
+            for (int i = 0; i < debugLines.Count; i++)
+            {
+                int column = 1 - ((i + 1) % 2);
+                grid.Children.Add(Line(fontColor, "{0}", debugLines[i]), column, currentRow);
+
+                if ((i > 0) && (column == 1))
+                {
+                    grid.RowDefinitions.Add(new RowDefinition { Height = Constants.DEBUG_GRIDROW_HEIGHT });
+                    currentRow += 1;
+                }
+            }
+
+            return grid;
         }
 
         private static Label Line(Color color, string line, params object[] prms) => new Label

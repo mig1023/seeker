@@ -29,6 +29,7 @@ namespace Seeker.Output
         public static double SYS_MENU_HIGHT = 25;
         public static double BOX_BORDER = 1;
         public static double BOX_PADDING = 10;
+        public static double DEBUG_GRIDROW_HEIGHT = 14;
 
         public static int SORT_BY_TITLE = 1;
         public static int SORT_BY_AUTHORS = 2;
