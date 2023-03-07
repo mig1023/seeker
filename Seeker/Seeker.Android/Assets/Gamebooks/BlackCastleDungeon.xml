@@ -6559,9 +6559,7 @@
 					<Button>Добавить, Убрать</Button>
 					<Text>ЗАКЛЯТИЕ СИЛЫ</Text>
 					<ThisIsSpell/>
-					<After>
-						<Text Style="Small">Прибавит вам силу и увеличит вашу СИЛУ УДАРА.</Text>
-					</After>
+					<After Style="Small">Прибавит вам силу и увеличит вашу СИЛУ УДАРА.</After>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Добавить, Убрать</Button>
