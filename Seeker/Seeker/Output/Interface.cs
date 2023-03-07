@@ -306,7 +306,7 @@ namespace Seeker.Output
             if (Game.Data.Triggers.Count > 0)
                 info.Children.Add(Line(fontColor, "Триггеры: {0}", String.Join(", ", Game.Data.Triggers)));
 
-            info.Children.Add(Line(fontColor, String.Empty));
+            info.Children.Add(Interface.SplitterLine(new Thickness(0, 15), Color.LightGray));
 
             string debug = Game.Data.Debug();
 
@@ -324,7 +324,8 @@ namespace Seeker.Output
 
             if (healings.Count > 0)
             {
-                info.Children.Add(Line(fontColor, "\nСнаряжение:"));
+                info.Children.Add(Interface.SplitterLine(new Thickness(0, 15), Color.LightGray));
+                info.Children.Add(Line(fontColor, "Снаряжение:"));
 
                 for (int i = 0; i < healings.Count; i++)
                     info.Children.Add(Line(fontColor, "{0}. {1}", i + 1, healings[i]));
