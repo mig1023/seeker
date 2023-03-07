@@ -5152,9 +5152,7 @@
 					<Button>Добавить, Убрать</Button>
 					<Text>ЗАСЛОН</Text>
 					<ThisIsSpell/>
-					<After>
-						<Text Style="Small">На несколько секунд создает между вами и противником невидимую магическую преграду.</Text>
-					</After>
+					<After Style="Small">На несколько секунд создает между вами и противником невидимую магическую преграду.</After>
 				</Get-Decrease>
 				<Get-Decrease>
 					<Button>Добавить, Убрать</Button>
