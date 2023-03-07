@@ -450,7 +450,7 @@ namespace Seeker
         private void GamepageSettings()
         {
             string backColor = Game.Data.Constants.GetColor(Game.Data.ColorTypes.Background);
-            bool emptyBackColor = !String.IsNullOrEmpty(backColor);
+            bool emptyBackColor = String.IsNullOrEmpty(backColor);
             MainScroll.BackgroundColor = emptyBackColor ? Color.White : Color.FromHex(backColor);
         }
 
