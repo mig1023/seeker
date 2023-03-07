@@ -3266,9 +3266,7 @@
 			<Actions>
 				<LtlDiceSpendGloryWithOne>
 					<Button>Потратить Славу</Button>
-					<After>
-						<Text Style="Small">Киньте кубик, разделите результат на 2, округлите и добавьте единицу.</Text>
-					</After>
+					<After Style="Small">Киньте кубик, разделите результат на 2, округлите и добавьте единицу.</After>
 				</LtlDiceSpendGloryWithOne>
 			</Actions>
 			<Options>
