@@ -7138,9 +7138,7 @@
 					<Button>Добавить, Отбавить</Button>
 					<Text>КРАСНОРЕЧИЕ</Text>
 					<Stat>Oratory</Stat>
-					<After>
-						<Text Style="Small">Способность разговорить собеседника, дар убеждения, умение слагать стихи и песни.</Text>
-					</After>
+					<After Style="Small">Способность разговорить собеседника, дар убеждения, умение слагать стихи и песни.</After>
 				</Get-Decrease>
 			</Actions>
 			<Options>
