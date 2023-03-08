@@ -8116,7 +8116,7 @@
 			<Options>
 				<Option Destination="960" Text="На запад"/>
 				<Option Destination="1069" Text="На юг">
-					<Text>Пойдете дальше осматривать деревню...</Text>
+					<Text>Или пойдете дальше осматривать деревню...</Text>
 				</Option>
 				<Option Destination="955"/>
 			</Options>
