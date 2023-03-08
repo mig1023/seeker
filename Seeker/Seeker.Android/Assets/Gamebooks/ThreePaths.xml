@@ -490,8 +490,8 @@
 		<Paragraph No="65">
 			<Text>— Наше последнее предложение — пятьдесят пять!</Text>
 			<Options>
-				<Option Destination="127" Text="Идёт!"/>
-				<Option Destination="11" Text="Работать за такие деньги?! Лучше я вернусь в тюрьму!"/>
+				<Option Destination="127" Text="«Идёт!»"/>
+				<Option Destination="11" Text="«Работать за такие деньги?! Лучше я вернусь в тюрьму!»"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="66">
