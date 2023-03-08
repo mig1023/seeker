@@ -1824,7 +1824,7 @@
 				<Option Destination="41" Text="В «Коллекцию Невероятностей»"/>
 				<Option Destination="332" Text="В «Стрелы Лучника»"/>
 				<Option Destination="149" Text="Нанести визит Мадам Зельде"/>
-				<Option Destination="430" Text="Посмотрите представление Кукловода?"/>
+				<Option Destination="430" Text="Посмотрите представление Кукловода"/>
 				<Option Destination="186" Text="Просто покинуть цирк"/>
 			</Options>
 		</Paragraph>
