@@ -184,7 +184,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="122" Text="В широкий овальный тоннель"/>
-				<Option Destination="405" Text="В туннель, стены которого блестят от влаги?"/>
+				<Option Destination="405" Text="В туннель, стены которого блестят от влаги"/>
 				<Option Destination="31" Text="В расщелину, под углом пересекающую одну из стен пещеры"/>
 				<Option Destination="415" Text="В узкий, петляющий проход"/>
 			</Options>
