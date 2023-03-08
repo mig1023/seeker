@@ -686,8 +686,8 @@
 				<TimeForReading Value="-30"/>
 			</Modifications>
 			<Options>
-				<Option Destination="3" Text="Расскажите поподробнее, как вы познакомились?"/>
-				<Option Destination="80" Text="Какого рода опасность может таиться в телепортации через круг камней?"/>
+				<Option Destination="3" Text="«Расскажите поподробнее, как вы познакомились?»"/>
+				<Option Destination="80" Text="«Какого рода опасность может таиться в телепортации через круг камней?»"/>
 			</Options>
 		</Paragraph>
 		<Paragraph No="67">
