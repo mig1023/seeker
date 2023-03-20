@@ -492,4 +492,14 @@
 		<Setting>Фэнтези</Setting>
 		<Color>4d5339</Color>
 	</StrikeBack>
+	<CommunityOfWorms>
+		<Title>Общество червей</Title>
+		<Author>Пётр Прокошев</Author>
+		<Year>2017</Year>
+		<Text>Добро пожаловать в "Смертельную Игру". Чтобы выжить, нужна эрудиция и острый ум.</Text>
+		<Paragraphs>128</Paragraphs>
+		<Size>0</Size>
+		<Setting>Приключения</Setting>
+		<Color>191039</Color>
+	</CommunityOfWorms>
 </Gamebooks>

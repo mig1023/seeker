@@ -50,6 +50,7 @@ namespace Seeker.Gamebook
             ["Cyberpunk"] = Cyberpunk.Constants.GetLinks(),
             ["SilverAgeSilhouette"] = SilverAgeSilhouette.Constants.GetLinks(),
             ["StrikeBack"] = StrikeBack.Constants.GetLinks(),
+            ["CommunityOfWorms"] = CommunityOfWorms.Constants.GetLinks(),
         };
 
         public static List<string> GetBooks() =>

@@ -1,0 +1,27 @@
+<Gamebook>
+	<Introduction>
+		<Title>Общество червей</Title>
+		<Copyright>Пётр Прокошев, 2017</Copyright>
+		<Styles>
+			<Color Name="Main" Value="191039"/>
+			<Color Name="Option" Value="191039"/>
+		</Styles>
+		<Settings>
+			<ShowDisabledOption/>
+		</Settings>
+	</Introduction>
+	<Paragraphs>
+		<Paragraph No="0">
+			<Text>START</Text>
+			<Options>
+				<Option Destination="1" Text="В путь!"/>
+			</Options>
+		</Paragraph>
+		<Paragraph No="1">
+			<Text>STOP</Text>
+			<Options>
+				<Gameover/>
+			</Options>
+		</Paragraph>
+	</Paragraphs>
+</Gamebook>
