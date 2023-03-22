@@ -148,10 +148,10 @@
 			<Options>
 				<Option Destination="312" Text="Построите плот"/>
 				<Option Destination="201" Text="Воспользуетесь заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="425" Text="Воспользуетесь заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
