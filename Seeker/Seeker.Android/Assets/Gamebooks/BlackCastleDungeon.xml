@@ -10218,10 +10218,10 @@
 					<Text>Если же нет, то паук затягивает вас на дерево, и вам приходится драться с ним. Во время боя уменьшайте вашу СИЛУ УДАРА на 1. Ведь вы не слишком-то привыкли драться на деревьях.\n\nПользоваться заклятием Огня на дереве неразумно. Копии же просто негде будет поместиться. Однако вы можете воспользоваться заклятиями:</Text>
 				</Option>
 				<Option Destination="1279" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="1201" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Fight>
 					<Enemy Name="ГИГАНТСКИЙ ПАУК" Mastery="8" Endurance="9"/>
