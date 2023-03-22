@@ -13417,7 +13417,7 @@
 			<Options>
 				<Option Destination="1426" Text="Вы можете посмотреть, что за ней находится"/>
 				<Option Destination="1533" Text="С помощью заклятия Левитации вылететь в Окно и посмотреть, нет ли этажом выше открытых окон" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
