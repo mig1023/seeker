@@ -12311,7 +12311,7 @@
 					<Text>Но если у вас есть заклятие Левитации, то можете попробовать влететь в окно повыше:</Text>
 				</Option>
 				<Option Destination="1945" Text="Использовать заклятье" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
