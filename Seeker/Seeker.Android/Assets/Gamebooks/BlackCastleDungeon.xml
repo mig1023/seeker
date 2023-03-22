@@ -12040,7 +12040,7 @@
 			</Modifications>			
 			<Options>
 				<Option Destination="1267" Text="Вы можете попытаться наложить заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ КОПИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ КОПИИ"/>
 					<Text>Если же решили драться с ним на мечах, то учтите, что каждый раз вам придется вычитать из вашей СИЛЫ УДАРА 1, ведь он сражается на коне, а вы нет. Если вы победили:</Text>
 				</Option>
 				<Option Destination="788"/>
