@@ -7083,7 +7083,7 @@
 			<Text>Вам придется потратить заклятие Плавания.</Text>
 			<Options>
 				<Option Destination="872" Text="Сделаете это" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1338" Text="Не станете"/>
 			</Options>
