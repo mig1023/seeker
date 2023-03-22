@@ -7685,14 +7685,14 @@
 					<Text>Если у вас есть заклятие Левитации, то можете:</Text>
 				</Option>
 				<Option Destination="1589" Text="Подняться по воздуху вверх" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Или в какое-нибудь окно на вашем этаже:</Text>
 				</Option>
 				<Option Destination="1660" Text="В окно справа" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1828" Text="В окно слева" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
