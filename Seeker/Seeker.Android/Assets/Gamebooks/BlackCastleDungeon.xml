@@ -10027,7 +10027,7 @@
 			<Options>
 				<Option Destination="1128" Text="Если есть веревка"/>
 				<Option Destination="1158" Text="Если есть заклятие Левитации, то можете с его помощью перелететь скалу" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Иначе придется выбирать:</Text>
 				</Option>
 				<Option Destination="967" Text="Обойти скалу, если еще не делали этого"/>
