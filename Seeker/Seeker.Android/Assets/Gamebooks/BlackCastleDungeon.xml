@@ -6647,7 +6647,7 @@
 					<Text>Воспользуетесь заклятием:</Text>
 				</Option>
 				<Option Destination="825" Text="Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1012" Text="Левитации">
 					<Text>Или пойдете вдоль берега на запад:</Text>
