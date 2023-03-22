@@ -2737,7 +2737,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="111" Text="Наложить заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ КОПИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ КОПИИ"/>
 				</Option>
 				<Option Destination="126" Text="Если победили"/>
 			</Options>
