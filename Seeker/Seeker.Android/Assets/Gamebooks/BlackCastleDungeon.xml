@@ -7795,7 +7795,7 @@
 			<Options>
 				<Option Destination="1452" Text="Хотите узнать, питаются ли они людьми"/>
 				<Option Destination="1332" Text="Воспользуетесь заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
