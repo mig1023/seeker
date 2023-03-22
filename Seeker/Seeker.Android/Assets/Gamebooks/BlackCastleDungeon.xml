@@ -176,13 +176,13 @@
 			<Text>Вы подзываете хозяина поближе и, выхватив меч, нападаете на него. Первый удар ваш, Водяной ранен, и ему ничего не остается, как принять бой. Он сражается с вами водорослями, каждый удар которых оставляет острые глубокие порезы. Вы можете воспользоваться заклятиями Силы, Слабости, Огня или драться с ним без помощи магии.</Text>
 			<Options>
 				<Option Destination="417" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="228" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="521" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="326" Text="Драться без помощи магии"/>
 			</Options>
