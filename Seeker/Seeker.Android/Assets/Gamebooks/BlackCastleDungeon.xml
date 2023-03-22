@@ -2250,10 +2250,10 @@
 			<Text>Как только закрылась дверь, из угла комнаты на вас бросаются крысы. Вы с ужасом замечаете, что они не обыкновенные, а каменные. Если хотите, можете показать им пропуск, надеясь, что это поможет, или же можете воспользоваться заклятиями Слабости или Огня. Или просто выньте меч и сразитесь с ними.</Text>
 			<Options>
 				<Option Destination="564" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="541" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="494" Text="Сразитесь с ними"/>
 				<Option Destination="364" Text="Если есть меч Зеленого рыцаря"/>
