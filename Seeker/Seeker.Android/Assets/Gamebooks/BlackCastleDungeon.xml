@@ -9807,10 +9807,10 @@
 					<Text>Если хотите, попробуйте наложить заклятия:</Text>
 				</Option>
 				<Option Destination="1203" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1664" Text="Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ КОПИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ КОПИИ"/>
 					<Text>Итак:</Text>
 				</Option>
 				<Fight>
