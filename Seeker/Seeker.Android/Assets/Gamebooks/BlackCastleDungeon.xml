@@ -10907,7 +10907,7 @@
 			<Options>
 				<Option Destination="953" Text="Пойдете дальше"/>
 				<Option Destination="1907" Text="Попробуете перелететь через стену, используя заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
