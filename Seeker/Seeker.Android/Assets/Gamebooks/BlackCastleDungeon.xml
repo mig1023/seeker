@@ -5597,16 +5597,16 @@
 			<Text>Такого дуба ещё поискать. Раскидистый, листва густо-зелёная как драконья чешуя, жёлуди как золотые монетки висят. Крона необъятная, словно море. Морщинистая грубая кора нагрета солнцем. Вы подходите ближе и начинаете оглядываться, задрав голову к небу.\n\nВ ветвях замечаете гнездо.\n\nВ гнезде сидит орёл.\n\nИнтересно, что он тут забыл — орлы же на скалах селятся. Как вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="670" Text="Зло">
-					<Modification Name="Trigger" Value="Семечко банана"/>
+					<Trigger Value="Семечко банана"/>
 				</Option>
 				<Option Destination="734" Text="Добро">
-					<Modification Name="Trigger" Value="Мякоть банана"/>
+					<Trigger Value="Мякоть банана"/>
 				</Option>
 				<Option Destination="746" Text="Грозно">
-					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 				<Option Destination="749" Text="Льстиво">
-					<Modification Name="Trigger" Value="Кожура банана"/>
+					<Trigger Value="Кожура банана"/>
 				</Option>
 			</Options>
 		</Paragraph>
