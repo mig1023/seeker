@@ -148,10 +148,9 @@ namespace Seeker.Prototypes
         {
             Option option = OptionsTemplate(xmlOption);
 
-            XmlNode optionMod = xmlOption.SelectSingleNode("Modification");
-
-            if (optionMod != null)
-                option.Do = Xml.ModificationParse(optionMod, modification);
+            foreach (XmlNode optionMod in xmlOption.SelectNodes("*"))
+                if (!optionMod.Name.StartsWith("Text"))
+                    option.Do = Xml.ModificationParse(optionMod, modification);
 
             return option;
         }
