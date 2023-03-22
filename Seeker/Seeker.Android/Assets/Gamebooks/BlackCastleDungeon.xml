@@ -9295,7 +9295,7 @@
 					<Text>Воспользоваться заклятием Левитации, вылететь наружу и посмотреть, нет ли еще где-нибудь открытых окон:</Text>
 				</Option>
 				<Option Destination="1641" Text="Заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
