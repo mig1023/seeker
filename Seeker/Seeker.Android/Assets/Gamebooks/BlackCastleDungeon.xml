@@ -10236,13 +10236,13 @@
 			<Text>После двух ударов одна из голов Дракона отлетает. Он отскакивает назад, а вас появляется время, чтобы, если хотите успеть наложить заклятие. Воспользуетесь передышкой и наложите заклятие:</Text>
 			<Options>
 				<Option Destination="1925" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1023" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="780" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="1889" Text="Будете продолжать драться"/>
 				<Option Destination="983" Text="Попробовать убежать"/>
