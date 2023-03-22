@@ -13039,7 +13039,7 @@
 			<Text>В воздухе появляется огненный шар и направляется к одному из стариков. К вашему огромному разочарованию, старик щелкает пальцами, и шар исчезает.</Text>
 			<Options>
 				<Option Destination="1036" Text="Попробовать заклятие Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 				<Option Destination="1391" Text="Спокойно ждёте, что будет дальше"/>
 			</Options>
