@@ -3529,16 +3529,16 @@
 			<Options>
 				<Option Destination="183" Text="Выхватить меч"/>
 				<Option Destination="36" Text="Заклятие Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="334" Text="Заклятие Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="7" Text="Заклятие Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ КОПИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ КОПИИ"/>
 				</Option>
 				<Option Destination="112" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 			</Options>
 		</Paragraph>
