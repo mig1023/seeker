@@ -13297,7 +13297,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="1773" Text="Вы можете воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Если вы остались целы после боя, то идите дальше:</Text>
 				</Option>
 				<Option Destination="1708"/>
