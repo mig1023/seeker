@@ -2126,7 +2126,7 @@
 			<Options>
 				<Option Destination="331" Text="Пойти дальше"/>
 				<Option Destination="87" Text="Использовать заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
