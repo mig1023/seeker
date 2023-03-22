@@ -9000,7 +9000,7 @@
 			<Text>Заклятие Иллюзии не действует на стариков.</Text>
 			<Options>
 				<Option Destination="1532" Text="Хотите наложить заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1391" Text="Наберетесь терпения"/>
 			</Options>
