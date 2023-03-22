@@ -4962,13 +4962,13 @@
 			</Actions>
 			<Options>
 				<Option Destination="395" Text="Заклятье Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="299" Text="Заклятье Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="96" Text="Заклятье Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="241"/>
 			</Options>
