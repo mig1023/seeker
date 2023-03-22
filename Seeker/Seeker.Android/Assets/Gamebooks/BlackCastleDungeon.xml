@@ -9848,10 +9848,10 @@
 			<Text>Обшарив карманы Гоблина, находите бронзовый свисток. Через реку не проложено дороги, и нет моста, так что придется потратить заклятие:</Text>
 			<Options>
 				<Option Destination="1594" Text="Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1657" Text="Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Если у вас есть водолазный костюм, можете воспользоваться им:</Text>
 				</Option>
 				<Option Destination="1757" Text="Воспользоваться водолазным костюмом"/>
