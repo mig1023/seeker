@@ -9498,13 +9498,13 @@
 			<Text>Какой фокус вы им покажете:</Text>
 			<Options>
 				<Option Destination="991" Text="Метание огня с помощью заклятия Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1094" Text="Превращение с помощью заклятия Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 				<Option Destination="890" Text="Воздушный трюк с помощью заклятия Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
