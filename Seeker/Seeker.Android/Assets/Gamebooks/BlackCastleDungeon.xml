@@ -8601,16 +8601,16 @@
 			<Text>Вдруг на дорогу откуда-то сверху спрыгивает двухметровый человекообразный зверь. Он появился перед вами настолько неожиданно, что вы сначала испугались, а потом обратили внимание на зверя. Он похож на огромную гориллу и к тому же явно не собирается пропускать вас дальше. Зверь отпрыгивает на два метра в сторону, два раза бьет себе по груди и, оскалив клыки, смотрит на вас.\n\nВо время боя можете воспользоваться заклятиями:</Text>
 			<Actions>
 				<Option Destination="1091" Text="Копии" Availability="ЗАКЛЯТИЕ КОПИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ КОПИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ КОПИИ"/>
 				</Option>
 				<Option Destination="1091" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1157" Text="Силы" Availability="ЗАКЛЯТИЕ СИЛЫ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СИЛЫ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СИЛЫ"/>
 				</Option>
 				<Option Destination="1170" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 					<Text>Или драться без них. Битва будет жаркая.</Text>
 				</Option>
 				<Fight>
