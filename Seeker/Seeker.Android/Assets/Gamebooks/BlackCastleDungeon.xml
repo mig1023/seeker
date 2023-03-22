@@ -12373,7 +12373,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="1566" Text="Если да" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 					<Text>Если нет, то решетка пропустит только ваш труп, который послужит хорошей пищей Гоблинам и Оркам...</Text>
 				</Option>
 				<Gameover/>
