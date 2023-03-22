@@ -8274,10 +8274,10 @@
 					<Text>Вы воспользуетесь заклятием:</Text>
 				</Option>
 				<Option Destination="759" Text="Заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1382" Text="Заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 			</Options>
 		</Paragraph>
