@@ -10487,7 +10487,7 @@
 			<Options>
 				<Option Destination="1283" Text="Если есть веревка"/>
 				<Option Destination="1022" Text="Можете воспользоваться заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Если нет ни веревки, ни заклятия...</Text>
 				</Option>
 				<Option Destination="1225"/>
