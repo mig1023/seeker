@@ -6431,16 +6431,16 @@
 			<Text>Вы у въездных ворот. Здесь дежурят несколько крупных гоблинов. Мост через ров уже опущен. Хотя туман до сих пор не рассеялся, но утренняя смена уже на посту, и ей полагается поджидать любых гостей чёрного мага. Обычно это торговцы разнообразной едой. Иногда забредают ремесленники и актёры. Терпкий смолистый запах леса долетает до ворот с редкими порывами ветра. Во рву бурлит вода, отведённая из ближайшей речки. Солдаты тихо переговариваются между собой.\n\nКак вы себя поведёте:</Text>
 			<Options>
 				<Option Destination="661" Text="Зло">
-					<Modification Name="Trigger" Value="Кожура финика"/>
+					<Trigger Value="Кожура финика"/>
 				</Option>
 				<Option Destination="728" Text="Добро">
-					<Modification Name="Trigger" Value="Мякоть финика"/>
+					<Trigger Value="Мякоть финика"/>
 				</Option>
 				<Option Destination="639" Text="Грозно">
-					<Modification Name="Trigger" Value="Семечко финика"/>
+					<Trigger Value="Семечко финика"/>
 				</Option>
 				<Option Destination="634" Text="Льстиво">
-					<Modification Name="Trigger" Value="Рыцарь-неумёха"/>
+					<Trigger Value="Рыцарь-неумёха"/>
 				</Option>
 			</Options>
 		</Paragraph>
