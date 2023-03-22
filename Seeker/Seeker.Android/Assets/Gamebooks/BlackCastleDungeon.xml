@@ -411,7 +411,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="451" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="454" Text="Дракон убит"/>
 			</Options>
