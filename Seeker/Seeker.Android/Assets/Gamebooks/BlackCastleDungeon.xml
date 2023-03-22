@@ -207,7 +207,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="557" Text="Воспользоваться заклятием Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 					<Text>Если вы победите их, то можете откинуть ставни и осмотреть домик или же уйти и направиться к центральному строению:</Text>
 				</Option>
 				<Option Destination="120" Text="Осмотреть домик"/>
