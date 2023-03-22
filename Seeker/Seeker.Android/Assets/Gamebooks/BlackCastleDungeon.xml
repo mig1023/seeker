@@ -11692,10 +11692,10 @@
 			<Text>Если у вас есть еще заклятия Плавания или Левитации, используйте их и достигните другого берега озера:</Text>
 			<Options>
 				<Option Destination="1334" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1334" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 					<Text>Если же нет, то фруктов вам хватит надолго, и вы еще сможете узнать, кто охраняет золотой апельсин и для чего он нужен. Но это будет еще не скоро...</Text>
 				</Option>
 				<Gameover/>
