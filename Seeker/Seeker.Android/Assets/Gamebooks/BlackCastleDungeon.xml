@@ -4947,7 +4947,7 @@
 				<Option Destination="556" Text="В правую"/>
 				<Option Destination="277" Text="В ту, что напротив"/>
 				<Option Destination="483" Text="Заклятье Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="39" Text="Вернуться в залу"/>
 			</Options>
