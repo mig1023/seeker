@@ -1368,10 +1368,10 @@
 			<Text>Попробуете наложить заклятие Огня или Иллюзии?</Text>
 			<Options>
 				<Option Destination="538" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="370" Text="Заклятие Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
