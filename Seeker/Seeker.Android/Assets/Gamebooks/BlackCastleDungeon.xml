@@ -3253,7 +3253,7 @@
 			<Text>Заклятие Иллюзии не действует на стариков. Хотите наложить заклятие Огня или наберетесь терпения?</Text>
 			<Options>
 				<Option Destination="538" Text="Заклятие Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="68" Text="Ждать"/>
 			</Options>
