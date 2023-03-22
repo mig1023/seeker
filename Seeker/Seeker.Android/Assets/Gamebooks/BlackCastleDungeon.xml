@@ -58,13 +58,13 @@
 			<Options>
 				<Option Destination="416" Text="Вернуться обратно и направиться к зданию в центре двора"/>
 				<Option Destination="372" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="103" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="311" Text="Заклятием Плавания и поплыть по течению реки" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 			</Options>
 		</Paragraph>
