@@ -14877,10 +14877,10 @@
 			<Text>Как только закрылась дверь, из угла комнаты на вас бросаются крысы. Вы с ужасом замечаете, что они не обыкновенные, а каменные. Если хотите, можете воспользоваться заклятием:</Text>
 			<Options>
 				<Option Destination="1863" Text="Слабости" Availability="ЗАКЛЯТИЕ СЛАБОСТИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ СЛАБОСТИ"/>
 				</Option>
 				<Option Destination="888" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="919" Text="Если у вас есть меч зеленого рыцаря">
 					<Text>Или просто выньте меч и сразитесь с ними...</Text>
@@ -15329,10 +15329,10 @@
 			<Text>Попробуете наложить заклятие:</Text>
 			<Options>
 				<Option Destination="1532" Text="Огня" Availability="ЗАКЛЯТИЕ ОГНЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ОГНЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ОГНЯ"/>
 				</Option>
 				<Option Destination="1036" Text="Иллюзии" Availability="ЗАКЛЯТИЕ ИЛЛЮЗИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ИЛЛЮЗИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
