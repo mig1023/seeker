@@ -492,7 +492,7 @@
 			<Options>
 				<Option Destination="168" Text="Обнажите меч"/>
 				<Option Destination="387" Text="ВОЛК" Availability="ВОЛК">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 			</Options>
 		</Paragraph>
