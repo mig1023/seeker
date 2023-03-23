@@ -2686,7 +2686,7 @@
 			<Options>
 				<Option Destination="509" Text="Ваша СИЛА не меньше 13" Availability="СИЛА >= 13"/>
 				<Option Destination="509" Text="С помощью МЕДВЕДЯ" Availability="МЕДВЕДЬ">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 					<Text>Иначе — быть вам выпитым досуха...</Text>
 				</Option>
 				<Gameover/>
