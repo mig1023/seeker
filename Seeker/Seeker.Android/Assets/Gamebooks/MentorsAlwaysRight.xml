@@ -1273,7 +1273,7 @@
 				<Option Destination="349" Text="Подпрыгнуть"/>
 				<Option Destination="161" Text="Встретить гада рубящим ударом снизу"/>
 				<Option Destination="500" Text="ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" Value="ЗАСЛОН"/>
+					<Spell Value="ЗАСЛОН"/>
 				</Option>
 			</Options>
 		</Paragraph>
