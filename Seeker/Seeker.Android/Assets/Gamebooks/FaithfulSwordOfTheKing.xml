@@ -4415,7 +4415,7 @@
 				<Option Destination="477" Text="На Шатоден"/>
 				<Option Destination="596" Text="На Орлеан"/>
 				<Option Destination="606" Text="Подняться до Орлеана вверх по Луаре" Availability="ЭКЮ >= 200">
-					<Modification Name="Ecu" Value="-200"/>
+					<Ecu Value="-200"/>
 				</Option>
 			</Options>
 		</Paragraph>
