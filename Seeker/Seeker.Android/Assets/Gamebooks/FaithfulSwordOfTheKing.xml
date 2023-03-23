@@ -4199,7 +4199,7 @@
 			<Text>Вскоре перед вами пристань, откуда можно без труда доплыть до Капденака всего за полтора экю. Так и поступите или нет?</Text>
 			<Options>
 				<Option Destination="133" Text="Так и поступите" Availability="ЭКЮ >= 150">
-					<Modification Name="Ecu" Value="-150"/>
+					<Ecu Value="-150"/>
 				</Option>
 				<Option Destination="602" Text="Нет"/>
 			</Options>
