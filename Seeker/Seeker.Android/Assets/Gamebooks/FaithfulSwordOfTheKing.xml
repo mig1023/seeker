@@ -5498,7 +5498,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="313" Text="Обратиться к помощи Бога" Availability="!DivineIntervention">
-					<Modification Name="Trigger" Value="DivineIntervention"/>
+					<Trigger Value="DivineIntervention"/>
 				</Option>
 				<Option Destination="256" Text="Рассказать все, как есть"/>
 			</Options>
