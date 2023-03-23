@@ -1722,7 +1722,7 @@
 			<Options>
 				<Option Destination="255" Text="Бросить ему свой кошель"/>
 				<Option Destination="531" Text="Демонстративно кинуть под копыта коней один золотой" Availability="ЗОЛОТО >= 1">
-					<Modification Name="Gold" Value="-1"/>
+					<Gold Value="-1"/>
 					<Text>Ответить:</Text>
 				</Option>
 				<Option Destination="325" Text="«Подойди и возьми, если сумеешь»"/>
