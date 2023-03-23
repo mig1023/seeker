@@ -2612,7 +2612,7 @@
 				<Option Destination="179" Text="На Париж"/>
 				<Option Destination="85" Text="Добраться через Блуа до Тура"/>
 				<Option Destination="105" Text="Нанять лодку и подняться по Луаре до Невера" Availability="ЭКЮ >= 200">
-					<Modification Name="Ecu" Value="-200"/>
+					<Ecu Value="-200"/>
 				</Option>
 			</Options>
 		</Paragraph>
