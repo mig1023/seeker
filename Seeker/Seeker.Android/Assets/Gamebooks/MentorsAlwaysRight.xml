@@ -655,7 +655,7 @@
 			<Options>
 				<Option Destination="177" Text="Есть расшитый золотом пояс" Availability="GoldEmbroideredBelt"/>
 				<Option Destination="35" Text="ВОЛК" Availability="ВОЛК">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 				<Option Destination="16" Text="Будете бегом пересекать странное место"/>
 			</Options>
