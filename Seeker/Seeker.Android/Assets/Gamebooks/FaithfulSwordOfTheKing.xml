@@ -4160,10 +4160,10 @@
 			<Text>Решив, что все ворота охраняются, вы идете на пристань и спрашиваете у владельцев небольших лодочек, во что обойдется доехать до Блуа или до самого Орлеана. Цены следующие: до Блуа — 2 экю, до Орлеана — 5.</Text>
 			<Options>
 				<Option Destination="390" Text="До Блуа" Availability="ЭКЮ >= 200">
-					<Modification Name="Ecu" Value="-200"/>
+					<Ecu Value="-200"/>
 				</Option>
 				<Option Destination="530" Text="До Орлеана" Availability="ЭКЮ >= 500">
-					<Modification Name="Ecu" Value="-500"/>
+					<Ecu Value="-500"/>
 				</Option>
 				<Option Destination="250" Text="Вернуться"/>
 			</Options>
