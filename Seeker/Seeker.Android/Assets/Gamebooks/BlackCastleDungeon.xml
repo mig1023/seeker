@@ -15981,7 +15981,7 @@
 					<Text>Либо, если у вас есть заклятие Левитации, взмыть в воздух и посмотреть, что за окно виднеется этажом выше:</Text>
 				</Option>
 				<Option Destination="1733" Text="Взмыть в воздух" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
