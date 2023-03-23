@@ -2066,7 +2066,7 @@
 			<Text>В таком случае вас спасет лишь ЗАСЛОН, если вы догадались им запастись:</Text>
 			<Options>
 				<Option Destination="375" Text="Воспользоваться ЗАСЛОНОМ" Availability="ЗАСЛОН">
-					<Modification Name="Spell" Value="ЗАСЛОН"/>
+					<Spell Value="ЗАСЛОН"/>
 					<Text>Иначе новый удар повергнет вас наземь, а там уже вся крона обрушится на вас шквалом ударов...</Text>
 				</Option>
 				<Gameover/>
