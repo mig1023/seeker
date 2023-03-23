@@ -14460,13 +14460,13 @@
 					<Text>Либо попытаться перебраться через реку (тогда вам надо решить, каким заклятием вы воспользуетесь):</Text>
 				</Option>
 				<Option Destination="1774" Text="Заклятием Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1324" Text="Заклятием Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1451" Text="Заклятием Левитации, но поплыть по течению реки, надеясь проникнуть в подземелье замка" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1418" Text="Если у вас есть водолазный костюм, вы можете надеть его"/>
 			</Options>
