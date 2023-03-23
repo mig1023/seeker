@@ -2769,10 +2769,10 @@
 				<Option Destination="488" Text="Вы стоите сейчас лицом к руслу, быть может, рвануть к нему"/>
 				<Option Destination="133" Text="Предпочтете обороняться, не сходя с места"/>
 				<Option Destination="36" Text="ВОЛК" Availability="ВОЛК">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 				<Option Destination="472" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 			</Options>
 		</Paragraph>
