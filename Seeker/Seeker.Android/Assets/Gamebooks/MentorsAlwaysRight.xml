@@ -1933,11 +1933,11 @@
 			<Text>До леса, казалось бы, рукой подать, но, судя по нарастающему свисту сзади, тварь вас настигает.</Text>
 			<Options>
 				<Option Destination="341" Text="ВОЛК" Availability="ВОЛК">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 				<Option Destination="354" Text="Принять бой"/>
 				<Option Destination="414" Text="Поставить ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" Value="ЗАСЛОН"/>
+					<Spell Value="ЗАСЛОН"/>
 				</Option>
 			</Options>
 		</Paragraph>
