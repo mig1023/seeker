@@ -1514,7 +1514,7 @@
 			<Options>
 				<Option Destination="352" Text="Попробуете разомкнуть их самостоятельно"/>
 				<Option Destination="233" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>		
 			</Options>
 		</Paragraph>
