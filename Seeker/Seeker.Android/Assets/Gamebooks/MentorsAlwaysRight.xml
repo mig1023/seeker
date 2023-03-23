@@ -474,10 +474,10 @@
 			<Text>Удар точен, но в предсмертной судороге обезьян спускает курок. Если вы не поставите ЗАСЛОН, стрела прошьет ваше бедро, и придется отнять у себя 5 ЖИЗНЕЙ:</Text>
 			<Options>
 				<Option Destination="503" Text="ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" Value="ЗАСЛОН"/>
+					<Spell Value="ЗАСЛОН"/>
 				</Option>
 				<Option Destination="503">
-					<Modification Name="Hitpoints" Value="-5"/>
+					<Hitpoints Value="-5"/>
 				</Option>
 			</Options>
 		</Paragraph>
