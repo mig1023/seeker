@@ -2057,7 +2057,7 @@
 			<Options>
 				<Option Destination="258" Text="Упасть навзничь"/>
 				<Option Destination="542" Text="Поставить ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" Value="ЗАСЛОН"/>
+					<Spell Value="ЗАСЛОН"/>
 				</Option>
 				<Option Destination="305" Text="Прижаться к стене"/>
 			</Options>
