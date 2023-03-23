@@ -3490,7 +3490,7 @@
 				<Option Destination="525" Text="На абсолютно неизвестный вам «отбой»"/>
 				<Option Destination="231" Text="Атаковать нахала"/>
 				<Option Destination="304" Text="ОБОРОТЕНЬ" Availability="ВОЛК">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 			</Options>
 		</Paragraph>
