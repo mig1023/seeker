@@ -1561,14 +1561,14 @@
 				<Option Destination="382" Text="Сжать покрепче меч и принять бой"/>
 				<Option Destination="143" Text="Что-нибудь сказать демону, чтобы втянуть его в разговор"/>
 				<Option Destination="92" Text="Ударить его СГУСТКОМ" Availability="СГУСТОК">
-					<Modification Name="Spell" Value="СГУСТОК"/>
+					<Spell Value="СГУСТОК"/>
 				</Option>
 				<Option Destination="331" Text="Попытаться прорваться к столику за спиной демона"/>
 				<Option Destination="213" Text="ВОЛК" Availability="ВОЛК">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 				<Option Destination="8" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 				<Option Destination="362" Text="У вас есть эльфийская стрела" Availability="ElvenArrow"/>
 			</Options>
