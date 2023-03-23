@@ -3519,11 +3519,11 @@
 			<Options>
 				<Option Destination="528" Text="Силы достаточно" Availability="СИЛА >= 13"/>
 				<Option Destination="528" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 					<Text>Иначе, потеряв с хлещущей кровью еще 2 ЖИЗНИ, остается лишь рубануть по барельефу мечом:</Text>
 				</Option>
 				<Option Destination="449">
-					<Modification Name="Hitpoints" Value="-2"/>
+					<Hitpoints Value="-2"/>
 				</Option>
 			</Options>
 		</Paragraph>
