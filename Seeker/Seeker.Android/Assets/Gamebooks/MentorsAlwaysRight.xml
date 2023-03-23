@@ -525,7 +525,7 @@
 			<Options>
 				<Option Destination="10" Text="Замереть"/>
 				<Option Destination="87" Text="Если ОБОРОТЕНЬ" Availability="ВОЛК">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 				<Option Destination="328" Text="Начать медленно отходить к дороге"/>
 				<Option Destination="551" Text="Обнажить меч, решив, что сегодня неплохой день для смерти"/>
