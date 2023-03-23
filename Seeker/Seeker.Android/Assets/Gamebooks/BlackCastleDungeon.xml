@@ -14376,13 +14376,13 @@
 			<Text>Вы подходите к реке, но вброд ее не перейти.\n\nВам придется использовать заклятия:</Text>
 			<Options>
 				<Option Destination="1970" Text="Заклятие Плавания" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1709" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 				<Option Destination="1451" Text="Использовать заклятие Плавания, чтобы попробовать проплыть по течению реки под Замок, надеясь попасть в подземелье незамеченным" Availability="ЗАКЛЯТИЕ ПЛАВАНИЯ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ПЛАВАНИЯ"/>
 				</Option>
 				<Option Destination="1834" Text="Если у вас есть скафандр, можете надеть его">
 					<Text>Если же у вас нет ни одного из этих заклятий или вы не хотите их использовать, идите к палаткам...</Text>
