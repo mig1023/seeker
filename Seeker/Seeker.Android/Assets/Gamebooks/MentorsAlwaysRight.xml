@@ -4291,7 +4291,7 @@
 			<Text>Не уйти!</Text>
 			<Options>
 				<Option Destination="193" Text="Возможно спасет ВОЛК" Availability="ВОЛК">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 				<Option Destination="102" Text="Принять неравный бой"/>
 			</Options>
