@@ -4098,7 +4098,7 @@
 			<Options>
 				<Option Destination="2" Text="Рубанете ее мечом"/>
 				<Option Destination="499" Text="ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" Value="ЗАСЛОН"/>
+					<Spell Value="ЗАСЛОН"/>
 				</Option>
 			</Options>
 		</Paragraph>
