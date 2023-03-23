@@ -3605,10 +3605,10 @@
 			<Text>Ничего подобного вам в Академии не преподавали. Больше всего эта тварь напоминает гигантского, в два ваших роста, пса, с которого содрали почти всю плоть. По идее, подобный монстр вообще не может быть живым. Но его глаза горят мрачным багровым огнем, и, поскрипывая оставшимися сухожилиями, он бросается на вас. Ваши действия:</Text>
 			<Options>
 				<Option Destination="361" Text="ВОЛК" Availability="ВОЛК">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 				<Option Destination="496" Text="СГУСТОК" Availability="СГУСТОК">
-					<Modification Name="Spell" Value="СГУСТОК"/>
+					<Spell Value="СГУСТОК"/>
 				</Option>
 				<Option Destination="445" Text="Старый добрый меч"/>
 			</Options>
