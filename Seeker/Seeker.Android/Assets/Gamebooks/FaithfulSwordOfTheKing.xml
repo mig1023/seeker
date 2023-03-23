@@ -448,7 +448,7 @@
 			<Text>Наступает утро. Деньги уже разошлись по карманам разбойников, им пора отправляться «на работу». «Ладно, благородный, — говорит один из них, — пожил, погулял и хватит. Готовься к смерти». Хотите попросить о помощи Бога или попробуете обойтись своими силами?</Text>
 			<Options>
 				<Option Destination="427" Text="Попросить о помощи Бога" Availability="!DivineIntervention">
-					<Modification Name="Trigger" Value="DivineIntervention"/>
+					<Trigger Value="DivineIntervention"/>
 				</Option>
 				<Option Destination="244" Text="Попробуете обойтись своими силами"/>
 			</Options>
