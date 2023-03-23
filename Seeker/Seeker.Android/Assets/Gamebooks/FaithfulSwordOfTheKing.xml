@@ -1946,7 +1946,7 @@
 				<Option Destination="362" Text="Лезть прямо в пекло"/>
 				<Option Destination="85" Text="Съездить в Тур"/>
 				<Option Destination="105" Text="Подняться по реке почти до самого Невера" Availability="ЭКЮ >= 200">
-					<Modification Name="Ecu" Value="-200"/>
+					<Ecu Value="-200"/>
 				</Option>
 			</Options>
 		</Paragraph>
