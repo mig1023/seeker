@@ -4510,7 +4510,7 @@
 			<Text>Одновременно с прыжком вам надо успеть поставить ЗАСЛОН:</Text>
 			<Actions>
 				<Option Destination="548" Text="Заслон" Availability="ЗАСЛОН">
-					<Modification Name="Spell" Value="ЗАСЛОН"/>
+					<Spell Value="ЗАСЛОН"/>
 					<Text>...либо СРЕАГИРОВАТЬ:</Text>
 				</Option>
 				<Reaction/>
