@@ -1682,10 +1682,10 @@
 					<Text>Попытаться бежать. Это возможно лишь в том случае, если вы прибегнете к помощи:</Text>
 				</Option>
 				<Option Destination="536" Text="МЕДВЕДЯ" Availability="МЕДВЕДЬ">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 				<Option Destination="439" Text="ВОЛКА" Availability="ВОЛК">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 			</Options>
 		</Paragraph>
