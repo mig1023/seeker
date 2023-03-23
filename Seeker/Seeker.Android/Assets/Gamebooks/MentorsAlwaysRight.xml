@@ -4478,7 +4478,7 @@
 			<Options>
 				<Option Destination="546" Text="Успели"/>
 				<Option Destination="245" Text="Иначе теряете 3 ЖИЗНИ и принимаете бой">
-					<Modification Name="Hitpoints" Value="-3"/>
+					<Hitpoints Value="-3"/>
 				</Option>
 			</Options>
 		</Paragraph>
