@@ -4254,7 +4254,7 @@
 			<Text>Подло брошенный аркан застает вас врасплох и тугая петля захлестывает ваше туловище, прижимая руки к телу. Хазрат пришпоривает коня...</Text>
 			<Options>
 				<Option Destination="149" Text="Попытаться освободиться при помощи МЕДВЕДЯ" Availability="МЕДВЕДЬ">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 					<Text>В противном случае:</Text>
 				</Option>
 				<Option Destination="505"/>
