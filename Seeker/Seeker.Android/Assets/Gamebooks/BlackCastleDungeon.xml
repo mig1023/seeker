@@ -13558,7 +13558,7 @@
 					<Text>Или, если не боитесь летать на такой высоте, и не боитесь, что заклятие Левитации может подвести вас, то можете влететь в окно последнего пятого этажа:</Text>
 				</Option>
 				<Option Destination="1945" Text="Заклятие Левитации" Availability="ЗАКЛЯТИЕ ЛЕВИТАЦИИ">
-					<Modification Name="RemoveSpell" Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
+					<RemoveSpell Value="ЗАКЛЯТИЕ ЛЕВИТАЦИИ"/>
 				</Option>
 			</Options>
 		</Paragraph>
