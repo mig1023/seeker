@@ -2320,7 +2320,7 @@
 			<Options>
 				<Option Destination="412" Text="Вы уменьшили его СИЛУ до 2"/>
 				<Option Destination="521" Text="Он уменьшил вашу СИЛУ до 2 и вы хотите воззвать к Богу" Availability="!DivineIntervention">
-					<Modification Name="Trigger" Value="DivineIntervention"/>
+					<Trigger Value="DivineIntervention"/>
 				</Option>
 				<Option Destination="0" Text="Вы погибли: придётся начинать сначала..." Availability="DivineIntervention"/>
 			</Options>
