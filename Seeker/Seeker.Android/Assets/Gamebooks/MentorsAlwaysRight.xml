@@ -1492,7 +1492,7 @@
 			<Text>— Ты проиграл, приятель, — гоблин выжидающе смотрит на вас. — Плати, таков уговор.</Text>
 			<Options>
 				<Option Destination="206" Text="Отдадите ему четыре золотых" Availability="ЗОЛОТО >= 4">
-					<Modification Name="Gold" Value="-4"/>
+					<Gold Value="-4"/>
 				</Option>
 				<Option Destination="231" Text="Дадите ему понять, что никакого уговора не было"/>
 			</Options>
