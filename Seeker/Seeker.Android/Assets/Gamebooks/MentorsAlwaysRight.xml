@@ -3811,7 +3811,7 @@
 				<Option Destination="302" Text="Кувырнуться вперед"/>
 				<Option Destination="443" Text="Кувырнуться назад (с этой стороны ее конец вроде бы поближе)"/>
 				<Option Destination="499" Text="ЗАСЛОН" Availability="ЗАСЛОН">
-					<Modification Name="Spell" Value="ЗАСЛОН"/>
+					<Spell Value="ЗАСЛОН"/>
 				</Option>
 			</Options>
 		</Paragraph>
