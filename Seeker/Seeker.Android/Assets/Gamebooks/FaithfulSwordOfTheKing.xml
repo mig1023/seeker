@@ -187,7 +187,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="417" Text="Поужинать в соседний трактир" Availability="ЭКЮ >= 50">
-					<Modification Name="Ecu" Value="-50"/>
+					<Ecu Value="-50"/>
 				</Option>
 				<Option Destination="93" Text="Искать место для ночлега"/>
 			</Options>
