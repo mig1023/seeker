@@ -2348,10 +2348,10 @@
 				<Option Destination="49" Text="Нырнуть в проход между валунами"/>
 				<Option Destination="492" Text="Отступить к идолу"/>
 				<Option Destination="205" Text="ВОЛК" Availability="ВОЛК">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 				<Option Destination="297" Text="МЕДВЕДЬ" Availability="МЕДВЕДЬ">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 			</Options>
 		</Paragraph>
