@@ -2547,7 +2547,7 @@
 			<Options>
 				<Option Destination="419" Text="Ударить «лжековрик» мечом"/>
 				<Option Destination="129" Text="СГУСТОК" Availability="СГУСТОК">
-					<Modification Name="Spell" Value="СГУСТОК"/>
+					<Spell Value="СГУСТОК"/>
 				</Option>
 			</Options>
 		</Paragraph>
