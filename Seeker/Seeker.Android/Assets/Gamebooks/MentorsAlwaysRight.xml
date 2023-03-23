@@ -1654,7 +1654,7 @@
 			<Text>Степняк уже выбил оружие из рук своего противника, но тут вы подходите ближе и он разворачивает коня на вас.</Text>
 			<Actions>
 				<Option Destination="198" Text="ОБОРОТЕНЬ" Availability="ВОЛК">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 					<Text>Иначе — деритесь:</Text>
 				</Option>
 				<Fight>
