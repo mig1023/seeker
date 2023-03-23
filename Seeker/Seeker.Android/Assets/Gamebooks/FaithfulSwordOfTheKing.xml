@@ -6114,7 +6114,7 @@
 				<Option Destination="85" Text="В Тура"/>
 				<Option Destination="179" Text="В Париж"/>
 				<Option Destination="105" Text="До Невера" Availability="ЭКЮ >= 200">
-					<Modification Name="Ecu" Value="-200"/>
+					<Ecu Value="-200"/>
 				</Option>
 			</Options>
 		</Paragraph>
