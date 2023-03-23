@@ -4138,7 +4138,7 @@
 			<Text>Сражение заканчивается, даже не успев перейти в побоище. Ведь у вас не сто рук, к тому же монахи вооружены пистолетами. Последнее, что вы видите — дуло одного из них, нацеленное прямо в грудь. Если хотите и есть возможность попросить Бога о помощи, сделайте это:</Text>
 			<Options>
 				<Option Destination="601" Availability="!DivineIntervention">
-					<Modification Name="Trigger" Value="DivineIntervention"/>
+					<Trigger Value="DivineIntervention"/>
 					<Text>Иначе же ваша миссия останется невыполненной...</Text>
 				</Option>
 				<Gameover/>
