@@ -1069,7 +1069,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="437" Text="Использовать ЛЕЧИЛКУ" Availability="ЛЕЧЕНИЕ">
-					<Modification Name="Spell" Value="ЛЕЧЕНИЕ"/>
+					<Spell Value="ЛЕЧЕНИЕ"/>
 					<Text>Иначе вы тут же отдадите концы от потери крови и болевого шока...</Text>
 				</Option>
 				<Gameover/>
