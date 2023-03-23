@@ -1993,7 +1993,7 @@
 				<Option Destination="17" Text="Упасть на землю"/>
 				<Option Destination="495" Text="Поднять голову и посмотреть в чем дело"/>
 				<Option Destination="251" Text="ВОЛК" Availability="ВОЛК">
-					<Modification Name="Transformation"/>
+					<Transformation/>
 				</Option>
 			</Options>
 		</Paragraph>
