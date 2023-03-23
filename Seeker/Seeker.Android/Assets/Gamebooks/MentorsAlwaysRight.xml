@@ -2724,7 +2724,7 @@
 				<Option Destination="393" Text="Вступите в бой"/>
 				<Option Destination="481" Text="С размаху рубанете по пирамидке"/>
 				<Option Destination="27" Text="СГУСТОК" Availability="СГУСТОК">
-					<Modification Name="Spell" Value="СГУСТОК"/>
+					<Spell Value="СГУСТОК"/>
 				</Option>
 			</Options>
 		</Paragraph>
