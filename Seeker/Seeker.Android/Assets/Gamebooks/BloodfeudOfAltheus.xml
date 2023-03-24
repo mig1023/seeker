@@ -4943,7 +4943,7 @@
 				<Option Destination="147" Text="Отступаете"/>
 				<Option Destination="558" Text="Удалось победить"/>
 				<Option Destination="512" Text="Погибли, но можете воззвать к Зевсу" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
