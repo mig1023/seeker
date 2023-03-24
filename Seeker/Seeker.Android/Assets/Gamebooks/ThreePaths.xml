@@ -380,7 +380,7 @@
 			<Options>
 				<Option Destination="155" Text="Попробуете открыть"/>
 				<Option Destination="29" Text="Лучше не надо! (Выходите из библиотеки в коридор)">
-					<Modification Name="Trigger" Value="12"/>
+					<Trigger Value="12"/>
 				</Option>
 			</Options>
 		</Paragraph>
