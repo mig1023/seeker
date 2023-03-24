@@ -338,7 +338,7 @@
 				<Option Destination="301" Text="Оба ваших противника тяжело ранены"/>
 				<Option Destination="450" Text="Сдаетесь"/>
 				<Option Destination="134" Text="Погибли, но Зевс спас вас" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 				<Option Destination="134" Text="Бежите из таверны и покидаете Фивы"/>
 			</Options>
