@@ -852,7 +852,7 @@
 			</Modifications>
 			<Options>
 				<Option Destination="61" Text="Покурить" Availability="Курильщик, В поиске сигарет, !Покурил на 100">
-					<Modification Name="Trigger" Value="Покурил на 100"/>
+					<Trigger Value="Покурил на 100"/>
 				</Option>
 				<Option Destination="192"/>
 			</Options>
