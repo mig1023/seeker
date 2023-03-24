@@ -4172,7 +4172,7 @@
 			<Options>
 				<Option Destination="407" Text="Отступаете"/>
 				<Option Destination="230" Text="Погибли, и Зевс воскресил вас" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 				<Option Destination="556" Text="Сдаетесь"/>
 				<Option Destination="151" Text="Удалось убить троих из них"/>
