@@ -1585,7 +1585,7 @@
 			<Text>— Вссять! — по команде трудовика вся его зондеркоманда набрасывается на меня.</Text>
 			<Options>
 				<Option Destination="149" Text="Грааль (пять выстрелов)" Availability="ГРААЛЬ >= 5">
-					<Modification Name="Grail" Value="-5"/>
+					<Grail Value="-5"/>
 				</Option>
 				<Option Destination="106" Text="Рукопашная"/>
 			</Options>
