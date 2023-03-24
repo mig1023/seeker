@@ -3113,7 +3113,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="386">
-					<Modification Name="Endurance" Value="5"/>
+					<Endurance Value="5"/>
 				</Option>
 			</Options>
 		</Paragraph>
