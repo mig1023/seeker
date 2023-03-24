@@ -2315,7 +2315,7 @@
 				<Option Destination="21" Text="Удалось тяжело ранить его"/>
 				<Option Destination="571" Text="Сдаетесь"/>
 				<Option Destination="263" Text="Погибли, но Зевс воскресил вас" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
