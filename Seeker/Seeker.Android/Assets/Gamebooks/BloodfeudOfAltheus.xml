@@ -4787,7 +4787,7 @@
 			<Text>Вы готовы пожертвовать 6 очков Славы, чтобы умилостивить Посейдона?</Text>
 			<Options>
 				<Option Destination="424" Text="Готовы пожертвовать">
-					<Modification Name="Glory" Value="-6"/>
+					<Glory Value="-6"/>
 				</Option>
 				<Option Destination="257" Text="Рискнуть обойтись без этого, что возможно, вызовет его гнев"/>
 			</Options>
