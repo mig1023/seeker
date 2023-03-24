@@ -912,7 +912,7 @@
 			</Actions>
 			<Options>
 				<Option Destination="243" Text="Не хочешь драться с Эльфом, получай пинок (отними 2 от уровня своей ВЫНОСЛИВОСТИ)">
-					<Modification Name="Endurance" Value="-2"/>
+					<Endurance Value="-2"/>
 				</Option>
 				<Option Destination="27" Text="Победил эльфа"/>
 			</Options>
