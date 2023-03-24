@@ -4622,7 +4622,7 @@
 			<Options>
 				<Option Destination="108" Text="Да" Availability="SilverEarring"/>
 				<Option Destination="102" Text="Нет, получите от 1 до 6 очков Позора" Availability="!SilverEarring">
-					<Modification Name="DiceShame"/>
+					<DiceShame/>
 				</Option>
 			</Options>
 		</Paragraph>
