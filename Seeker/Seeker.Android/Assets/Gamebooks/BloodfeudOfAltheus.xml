@@ -2730,7 +2730,7 @@
 			<Text>Вы чувствуете, что ваши доспехи тянут вас ко дну. Вы пытаетесь скинуть их, но уже слишком поздно. Чудовище поймало вас, и вода станет вам могилой, если только вы не вознесете молитву Зевсу...</Text>
 			<Options>
 				<Option Destination="579" Text="Вознести молитву Зевсу" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 				<Gameover/>
 			</Options>
