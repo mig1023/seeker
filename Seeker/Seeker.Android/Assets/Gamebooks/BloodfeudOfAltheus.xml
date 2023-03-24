@@ -4128,7 +4128,7 @@
 			<Options>
 				<Option Destination="156" Text="Да" Availability="ПОКРОВИТЕЛЬ Афина"/>
 				<Option Destination="51" Text="Нет, получите 1 очко Позора и Немилость Афины" Availability="!ПОКРОВИТЕЛЬ Афина">
-					<Modification Name="Shame" Value="1"/>
+					<Shame Value="1"/>
 				</Option>
 			</Options>
 		</Paragraph>
