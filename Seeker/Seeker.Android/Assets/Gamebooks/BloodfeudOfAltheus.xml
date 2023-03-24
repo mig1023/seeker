@@ -1750,7 +1750,7 @@
 			<Options>
 				<Option Destination="400" Text="Убили его"/>
 				<Option Destination="277" Text="Умерли, но Зевс воскресил вас" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
