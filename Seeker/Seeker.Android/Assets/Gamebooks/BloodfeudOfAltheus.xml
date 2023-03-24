@@ -3900,7 +3900,7 @@
 				<Option Destination="600" Text="Они тяжело ранены"/>
 				<Option Destination="374" Text="Хотите сдаться"/>
 				<Option Destination="536" Text="Вы умерли и спасены Зевсом" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 				<Option Destination="536" Text="Вы хотите отступить"/>
 			</Options>
