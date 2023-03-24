@@ -1631,7 +1631,7 @@
 			<Options>
 				<Option Destination="174" Text="Предпринять попытку убежать"/>
 				<Option Destination="229" Text="Вы победили">
-					<Modification Name="Gold" Value="2"/>
+					<Gold Value="2"/>
 				</Option>
 			</Options>
 		</Paragraph>
