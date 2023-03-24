@@ -273,7 +273,7 @@
 			<Options>
 				<Option Destination="54" Availability="Стеклоочиститель"/>
 				<Option Destination="12" Availability="!Стеклоочиститель">
-					<Modification Name="Life" Value="-7"/>
+					<Life Value="-7"/>
 				</Option>
 			</Options>
 		</Paragraph>
