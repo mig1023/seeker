@@ -1300,7 +1300,7 @@
 			<Options>
 				<Option Destination="333" Text="Нападете на них"/>
 				<Option Destination="228" Text="Не станете нападать">
-					<Modification Name="Shame" Value="3"/>
+					<Shame Value="3"/>
 				</Option>
 			</Options>
 		</Paragraph>
