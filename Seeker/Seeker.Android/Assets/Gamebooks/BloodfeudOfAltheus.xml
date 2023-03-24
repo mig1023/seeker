@@ -4582,7 +4582,7 @@
 				<Option Destination="242" Text="Хотите перед боем обратиться к своему божественному покровителю за помощью"/>
 				<Option Destination="320" Text="Отступаете"/>
 				<Option Destination="320" Text="Погибли и спасены Зевсом" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 				<Option Destination="431" Text="Сдаетесь"/>
 				<Option Destination="273" Text="Тяжело ранили Амазонку"/>
