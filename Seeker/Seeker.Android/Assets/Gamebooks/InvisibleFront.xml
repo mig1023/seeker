@@ -410,13 +410,13 @@
 			<Text>Резидент, как всегда спокойный и собранный, выслушивает ваш доклад.\n\n— Что вам сказать, товарищ? Сами понимаете, результат должен быть противоположным. Назад ничего не вернуть, перспективный агент упущен. Не будем застревать на неудачах, надеюсь вы вынесете соответствующие уроки. Кем займётесь дальше?</Text>
 			<Options>
 				<Option Destination="34" Text="Фрау А." Availability="!А">
-					<Modification Name="Trigger" Value="А"/>
+					<Trigger Value="А"/>
 				</Option>
 				<Option Destination="107" Text="Мистер Б." Availability="!Б">
-					<Modification Name="Trigger" Value="Б"/>
+					<Trigger Value="Б"/>
 				</Option>
 				<Option Destination="92" Text="Господин В." Availability="!В">
-					<Modification Name="Trigger" Value="В"/>
+					<Trigger Value="В"/>
 				</Option>
 				<Option Destination="106" Text="Вы закончили работу со всеми кандидатами на вербовку" Availability="А, Б, В"/>
 			</Options>
