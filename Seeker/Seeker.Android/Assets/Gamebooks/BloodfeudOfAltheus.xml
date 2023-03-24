@@ -1945,7 +1945,7 @@
 				<Option Destination="153" Text="Сдаетесь"/>
 				<Option Destination="520" Text="Спасаетесь бегством"/>
 				<Option Destination="463" Text="Умираете и молите Зевса о спасении" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 				<Option Destination="83" Text="Удается тяжело ранить эринию"/>
 			</Options>
