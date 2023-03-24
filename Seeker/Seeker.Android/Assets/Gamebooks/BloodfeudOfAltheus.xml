@@ -2828,7 +2828,7 @@
 				<Option Destination="171" Text="Они оба тяжело ранены"/>
 				<Option Destination="374" Text="Вы сдались"/>
 				<Option Destination="553" Text="Вы убиты, но Зевс спасает вас" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 				<Option Destination="228" Text="Вам удается сбежать"/>
 			</Options>
