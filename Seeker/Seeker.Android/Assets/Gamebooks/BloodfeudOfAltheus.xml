@@ -2391,7 +2391,7 @@
 			</Actions>	
 			<Options>
 				<Option Destination="166" Text="Погибаете, но Зевс вас спасает" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 				<Option Destination="457" Text="Сдаться"/>
 				<Option Destination="289" Text="Отступить"/>
