@@ -978,7 +978,7 @@
 			<Options>
 				<Option Destination="11" Text="Встретиться с Фрау А"/>
 				<Option Destination="134" Text="Отправить любовное послание">
-					<Modification Name="Trigger" Value="А посл"/>
+					<Trigger Value="А посл"/>
 				</Option>
 			</Options>
 		</Paragraph>
