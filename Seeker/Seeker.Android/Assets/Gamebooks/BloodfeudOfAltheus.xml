@@ -2784,7 +2784,7 @@
 			<Options>
 				<Option Destination="517" Text="Атакуете амазонку"/>
 				<Option Destination="445" Text="Предпочтёте потерять 2 очка Славы">
-					<Modification Name="Glory" Value="-2"/>
+					<Glory Value="-2"/>
 				</Option>
 			</Options>
 		</Paragraph>
