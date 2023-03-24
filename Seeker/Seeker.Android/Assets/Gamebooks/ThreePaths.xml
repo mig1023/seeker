@@ -912,7 +912,7 @@
 				<Option Destination="9" Text="Понюхаете благовония, дымящиеся в курильнице"/>
 				<Option Destination="101" Text="Заговорите со жрецами"/>
 				<Option Destination="29" Text="Выйдете из библиотеки в коридор">
-					<Modification Name="Trigger" Value="12"/>
+					<Trigger Value="12"/>
 				</Option>
 			</Options>
 		</Paragraph>
