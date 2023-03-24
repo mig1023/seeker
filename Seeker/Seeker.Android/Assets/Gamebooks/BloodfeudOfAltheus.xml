@@ -5184,10 +5184,10 @@
 			<Options>
 				<Option Destination="526" Text="Победили"/>
 				<Option Destination="210" Text="Хотите отступить (не забудьте потерять 1 очко Славы, даже если ваша попытка к бегству не увенчалась успехом)">
-					<Modification Name="Glory" Value="1"/>
+					<Glory Value="1"/>
 				</Option>
 				<Option Destination="362" Text="Погибли, но Зевс воскресил вас" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
