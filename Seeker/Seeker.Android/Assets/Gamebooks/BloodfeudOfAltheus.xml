@@ -556,10 +556,10 @@
 				<Option Destination="438" Text="Удается тяжело ранить его"/>
 				<Option Destination="149" Text="Сдадитесь ему"/>
 				<Option Destination="86" Text="Погибли, но были спасены Зевсом" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 				<Option Destination="86" Text="Отступите (вычтите 1 очко Славы за попытку побега)">
-					<Modification Name="Glory" Value="-1"/>
+					<Glory Value="-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
