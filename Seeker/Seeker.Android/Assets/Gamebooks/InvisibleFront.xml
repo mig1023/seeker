@@ -821,13 +821,13 @@
 			<Text>— Поздравляю, товарищ, — резидент не скрывает хорошего настроения и выстукивает по столешнице какой-то мотивчик из современной эстрады. — Вы отлично справились с разработкой потенциального агента. Но не забывайтесь, чтобы никакого головокружения от успехов. Концентрация и осторожность — вот главные принципы работы разведчика. Продолжайте в том же духе. Кто следующий на очереди?</Text>
 			<Options>
 				<Option Destination="34" Text="Фрау А." Availability="!А">
-					<Modification Name="Trigger" Value="А"/>
+					<Trigger Value="А"/>
 				</Option>
 				<Option Destination="107" Text="Мистер Б." Availability="!Б">
-					<Modification Name="Trigger" Value="Б"/>
+					<Trigger Value="Б"/>
 				</Option>
 				<Option Destination="92" Text="Господин В." Availability="!В">
-					<Modification Name="Trigger" Value="В"/>
+					<Trigger Value="В"/>
 				</Option>
 				<Option Destination="106" Text="Вы закончили работу со всеми кандидатами на вербовку" Availability="А, Б, В"/>
 			</Options>
