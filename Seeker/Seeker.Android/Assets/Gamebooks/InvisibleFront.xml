@@ -909,7 +909,7 @@
 			<Options>
 				<Option Destination="69" Text="Перейти к делу"/>
 				<Option Destination="2" Text="Что-то с этим посетителем с газетой нечисто. Прервать контакт и покинуть кафе">
-					<Modification Name="Dissatisfaction" Value="1"/>
+					<Dissatisfaction Value="1"/>
 				</Option>
 			</Options>
 		</Paragraph>
