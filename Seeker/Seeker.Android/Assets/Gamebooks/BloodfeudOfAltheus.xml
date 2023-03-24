@@ -1145,7 +1145,7 @@
 				<Option Destination="282" Text="Удалось его одолеть"/>
 				<Option Destination="515" Text="Отступаете"/>
 				<Option Destination="335" Text="Погибли и были спасены Зевсом" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
