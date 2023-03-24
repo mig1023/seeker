@@ -469,7 +469,7 @@
 			<Options>
 				<Option Destination="112" Text="Подчиниться"/>
 				<Option Destination="93" Text="Проигнорировать">
-					<Modification Name="Apartment"/>
+					<Apartment/>
 				</Option>
 			</Options>
 		</Paragraph>
