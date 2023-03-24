@@ -4355,7 +4355,7 @@
 				<Option Destination="165" Text="Отступить"/>
 				<Option Destination="606" Text="Попытаетесь объяснить, что вы вовсе не шпион, а посланник мира, когда наступит ваша очередь атаковать"/>
 				<Option Destination="165" Text="Вы погибли, и Зевс спас вас, то вы приходите в себя" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
