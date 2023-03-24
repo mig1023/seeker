@@ -5095,7 +5095,7 @@
 			<Options>
 				<Option Destination="585" Text="Не можете или не хотите пойти на такую жертву"/>
 				<Option Destination="458" Text="Отдаете очки Славы">
-					<Modification Name="Glory" Value="-5"/>
+					<Glory Value="-5"/>
 				</Option>
 			</Options>
 		</Paragraph>
