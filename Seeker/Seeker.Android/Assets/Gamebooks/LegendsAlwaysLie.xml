@@ -1006,7 +1006,7 @@
 				<Option Destination="118" Text="У вас записано слово «деньги»" Availability="Money"/>
 				<Option Destination="19" Text="Вы прислушаетесь к своему внутреннему голосу и откажетесь"/>
 				<Option Destination="90" Text="Доверитесь выбору Коннери и примете предложение лепрекона (сразу отнимите у себя три золотых)" Availability="!Money, ЗОЛОТО >= 3">
-					<Modification Name="Gold" Value="-3"/>
+					<Gold Value="-3"/>
 				</Option>
 			</Options>
 		</Paragraph>
