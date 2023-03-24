@@ -3131,10 +3131,10 @@
 			<Options>
 				<Option Destination="490" Text="Решите отступить"/>
 				<Option Destination="51" Text="Погибли, но Зевс воскресил вас" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 				<Option Destination="213" Text="Вы одержали победу и ни разу не были ранены">
-					<Modification Name="Glory" Value="4"/>
+					<Glory Value="4"/>
 				</Option>
 				<Option Destination="451" Text="Победили, но крысы успели покусать вас"/>
 			</Options>
