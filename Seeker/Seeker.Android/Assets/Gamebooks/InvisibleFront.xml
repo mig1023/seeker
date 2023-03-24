@@ -743,7 +743,7 @@
 			<Options>
 				<Option Destination="112" Text="Беспрекословно подчиниться"/>
 				<Option Destination="93" Text="Остаться на месте">
-					<Modification Name="Apartment"/>
+					<Apartment/>
 				</Option>
 			</Options>
 		</Paragraph>
