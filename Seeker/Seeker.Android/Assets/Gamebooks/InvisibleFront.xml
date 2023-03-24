@@ -570,7 +570,7 @@
 			<Options>
 				<Option Destination="112" Text="Выполнить команду"/>
 				<Option Destination="93" Text="Ничего не делать">
-					<Modification Name="Apartment"/>
+					<Apartment/>
 				</Option>
 			</Options>
 		</Paragraph>
