@@ -1042,7 +1042,7 @@
 			</Actions>	
 			<Options>
 				<Option Destination="572" Text="Погибли, но были спасены Зевсом" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 				<Option Destination="97" Text="Отступили"/>
 				<Option Destination="376" Text="Сдаетесь"/>
