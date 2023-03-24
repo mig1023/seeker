@@ -1490,7 +1490,7 @@
 			<Triggers>Кабинет25</Triggers>
 			<Options>
 				<Option Destination="188" Text="Бросить русичку. Если выберусь — приведу ей подмогу, успокаиваю я себя">
-					<Modification Name="Trigger" Value="Помощь"/>
+					<Trigger Value="Помощь"/>
 				</Option>
 				<Option Destination="123" Text="Попытаться помочь ей"/>
 			</Options>
