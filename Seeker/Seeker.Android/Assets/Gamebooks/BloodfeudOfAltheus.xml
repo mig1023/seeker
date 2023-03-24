@@ -783,10 +783,10 @@
 			<Text>Вы должны выбрать:</Text>
 			<Options>
 				<Option Destination="405" Text="Потратить 3 очка Славы за помощь Афины">
-					<Modification Name="Glory" Value="-3"/>
+					<Glory Value="-3"/>
 				</Option>
 				<Option Destination="325" Text="Потерять 1 очко Славы, но остаться без её помощи">
-					<Modification Name="Glory" Value="-1"/>
+					<Glory Value="-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
