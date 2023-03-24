@@ -835,10 +835,10 @@
 			<Text>На выходе из вестибюля я сталкиваюсь с охранником. Крепкий дядька, военный пенсионер, размахивает длинным фонариком как дубинкой.</Text>
 			<Options>
 				<Option Destination="82" Text="Грааль позволит мне мгновенно устранить его" Availability="!Заминка, ГРААЛЬ >= 1">
-					<Modification Name="Grail" Value="-1"/>
+					<Grail Value="-1"/>
 				</Option>
 				<Option Destination="144" Text="Грааль позволит мне мгновенно устранить его" Availability="Заминка, ГРААЛЬ >= 1">
-					<Modification Name="Grail" Value="-1"/>
+					<Grail Value="-1"/>
 				</Option>
 				<Option Destination="175" Text="Драться"/>
 				<Option Destination="133" Text="Прикрыть голову и пробежать мимо"/>
