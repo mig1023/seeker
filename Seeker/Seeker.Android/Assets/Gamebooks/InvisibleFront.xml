@@ -781,17 +781,17 @@
 			<Text>Выходите в образовавшийся в стене проход. Вас встречает очередной полутёмный коридор. Когда ваши ноги совсем онемели от ходьбы босиком по бетонному полу, натыкаетесь свою одежду, аккуратно сложенную и невесть как здесь оказавшуюся. Проходите чуть дальше и видите перед собой стальную дверь, рядом с ней — двух солдат.\n\n— Пароль? — спрашивает солдат, у которого лицо покруглее, а лычки на погонах потолще.\n\nКакой пароль вам называл резидент?</Text>
 			<Options>
 				<Option Destination="3" Text="Устинов">
-					<Modification Name="Dissatisfaction" Value="1"/>
+					<Dissatisfaction Value="1"/>
 				</Option>
 				<Option Destination="3" Text="Циркалов">
-					<Modification Name="Dissatisfaction" Value="1"/>
+					<Dissatisfaction Value="1"/>
 				</Option>
 				<Option Destination="9" Text="Судоплатов"/>
 				<Option Destination="3" Text="Фрунзе">
-					<Modification Name="Dissatisfaction" Value="1"/>
+					<Dissatisfaction Value="1"/>
 				</Option>
 				<Option Destination="3" Text="Ай, да что ты как не родной, давай уже открывай дверь">
-					<Modification Name="Dissatisfaction" Value="1"/>
+					<Dissatisfaction Value="1"/>
 				</Option>
 			</Options>
 		</Paragraph>
