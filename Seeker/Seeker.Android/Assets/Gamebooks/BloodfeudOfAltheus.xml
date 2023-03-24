@@ -3932,7 +3932,7 @@
 			<Options>
 				<Option Destination="121" Text="Сдаетесь"/>
 				<Option Destination="570" Text="Погибаете, но вас спасает Зевс" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 				<Option Destination="387" Text="Отступаете"/>
 				<Option Destination="519" Text="Удается тяжело ранить противника"/>
