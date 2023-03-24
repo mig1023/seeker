@@ -4112,7 +4112,7 @@
 			<Options>
 				<Option Destination="307" Text="Вы сделали это"/>
 				<Option Destination="136" Text="Вы не готовы сделать это, потеряйте 1 очко Славы">
-					<Modification Name="Glory" Value="-1"/>
+					<Glory Value="-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
