@@ -3272,7 +3272,7 @@
 			<Options>
 				<Option Destination="373" Text="Cделали это"/>
 				<Option Destination="102" Text="Позволить себе помощь Геры или не хотите этого делать, потеряйте 1 очко Славы">
-					<Modification Name="Glory" Value="-1"/>
+					<Glory Value="-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
