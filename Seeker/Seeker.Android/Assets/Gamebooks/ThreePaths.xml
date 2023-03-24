@@ -819,7 +819,7 @@
 				<Option Destination="121" Text="Осторожно подойдёте поближе к жрецам"/>
 				<Option Destination="49" Text="Принципиально не обращая внимания на их присутствие, тщательно обследуете помещение"/>
 				<Option Destination="29" Text="Выйдете отсюда поскорей">
-					<Modification Name="Trigger" Value="12"/>
+					<Trigger Value="12"/>
 				</Option>
 			</Options>
 		</Paragraph>
