@@ -1687,7 +1687,7 @@
 				<Option Destination="225" Text="Победили эту жуткую тварь"/>
 				<Option Destination="515" Text="Убегаете, отказавшись от задания, которое дал вам отец"/>
 				<Option Destination="47" Text="Погибли, но Зевс воскресил вас" Availability="ВОСКРЕШЕНИЕ">
-					<Modification Name="Resurrection" Value="-1"/>
+					<Resurrection Value="-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
