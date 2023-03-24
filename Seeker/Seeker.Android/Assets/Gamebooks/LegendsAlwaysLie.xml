@@ -3897,7 +3897,7 @@
 			<Options>
 				<Option Destination="107" Text="Ваша специализация воин, то ваша сила поможет вам справиться с этой непростой задачей" Availability="ВОИН"/>
 				<Option Destination="197" Text="Если же нет, то удержаться не выйдет, и при падении вы сильно повреждаете колено (–3 ЖИЗНИ)">
-					<Modification Name="Hitpoints" Value="-3"/>
+					<Hitpoints Value="-3"/>
 				</Option>
 			</Options>
 		</Paragraph>
