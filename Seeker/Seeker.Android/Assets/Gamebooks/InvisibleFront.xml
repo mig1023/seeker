@@ -1041,7 +1041,7 @@
 			<Options>
 				<Option Destination="112" Text="Подчиниться"/>
 				<Option Destination="93" Text="Стоять и не двигаться">
-					<Modification Name="Apartment"/>
+					<Apartment/>
 				</Option>
 			</Options>
 		</Paragraph>
