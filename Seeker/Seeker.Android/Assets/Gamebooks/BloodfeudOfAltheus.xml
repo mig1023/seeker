@@ -2125,7 +2125,7 @@
 			</Actions>		
 			<Options>
 				<Option Destination="422" Text="Не можете себе позволить потратить очки Славы">
-					<Modification Name="Glory" Value="-1"/>
+					<Glory Value="-1"/>
 				</Option>
 				<Option Destination="536" Text="Сделали это"/>
 			</Options>
