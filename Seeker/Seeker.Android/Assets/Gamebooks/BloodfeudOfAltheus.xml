@@ -4143,7 +4143,7 @@
 			<Options>
 				<Option Destination="590" Text="Вы сделали это"/>
 				<Option Destination="54" Text="Вы передумали взывать к богине, потеряйте 1 очко Славы">
-					<Modification Name="Glory" Value="-1"/>
+					<Glory Value="-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
