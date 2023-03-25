@@ -9986,7 +9986,7 @@
 			</Texts>
 			<Options>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Старые счёты">
-					<Modification Name="Static" Value="Heroism=15, Inspiration=15, Дежа вю"/>
+					<Static Value="Heroism=15, Inspiration=15, Дежа вю"/>
 					<Text>Если же всё в порядке — Вы всласть поглазели на носорога (о том, откуда он тут взялся, Вы, возможно, узнаете позднее, или как-нибудь в другой раз), а позднее побрели в собор</Text>
 				</Gameover>
 				<Option Destination="348" Text="В собор"/>
