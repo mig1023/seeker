@@ -2444,13 +2444,13 @@
 			<Text>За каждый из советов придется заплатить отдельно, цена та же — одна монета. Гусляр говорит, что может рассказать вам о следующем:</Text>
 			<Options>
 				<Option Destination="494" Text="О селениях степняков" Availability="МОНЕТ >= 1">
-					<Modification Name="Coins" Value="-1"/>
+					<Coins Value="-1"/>
 				</Option>
 				<Option Destination="78" Text="О пограничных заставах" Availability="МОНЕТ >= 1">
-					<Modification Name="Coins" Value="-1"/>
+					<Coins Value="-1"/>
 				</Option>
 				<Option Destination="534" Text="О дороге до границы" Availability="МОНЕТ >= 1">
-					<Modification Name="Coins" Value="-1"/>
+					<Coins Value="-1"/>
 				</Option>
 				<Option Destination="832" Text="Вы узнали все, что хотите, попрощаетесь с музыкантом и отправиться дальше"/>
 			</Options>
