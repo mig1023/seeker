@@ -3018,7 +3018,7 @@
 			<Text>Уже поздно. Пришло время найти какой-нибудь приют на ночь. Отель «Оссиман» еще открыт и предлагает ночлег за 5 скадов.</Text>
 			<Options>
 				<Option Destination="333" Text="Хотите снять там номер, вычеркните эту сумму" Availability="ДЕНЬГИ >= 5">
-					<Modification Name="Money" Value="-5"/>
+					<Money Value="-5"/>
 				</Option>
 				<Option Destination="165" Text="Предпочитаете сэкономить и спать прямо на улице"/>
 			</Options>
