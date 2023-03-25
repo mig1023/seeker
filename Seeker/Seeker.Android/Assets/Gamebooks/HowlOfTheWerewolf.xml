@@ -818,7 +818,7 @@
 			<Options>
 				<Option Destination="4" Text="Записано слово Retsis" Availability="Retsis"/>
 				<Option Destination="134" Text="Позволить себе расслабиться и отдохнуть, заплатив всего 2 золотых" Availability="ЗОЛОТО >= 2">
-					<Modification Name="Gold" Value="-2"/>
+					<Gold Value="-2"/>
 				</Option>
 				<Option Destination="26" Text="Предпочтете, не отвлекаясь на цирковое представление, сразу войти в Балчи"/>
 			</Options>
