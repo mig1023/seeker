@@ -4938,7 +4938,7 @@
 				<Option Destination="492" Text="Отправиться на помощь кузнецу" Availability="Приближается ночь"/>
 				<Option Destination="480" Text="Сказать, что вы от Аникея" Availability="От Аникея"/>
 				<Option Destination="642" Text="Согласитесь расстаться с указанной суммой, избавив себя от дальнейших хлопот" Availability="МОНЕТ >= 5">
-					<Modification Name="Coins" Value="-5"/>
+					<Coins Value="-5"/>
 				</Option>
 				<Option Destination="110" Text="Откажетесь"/>
 			</Options>
