@@ -7868,7 +7868,7 @@
 			</Modifications>
 			<Options>
 				<Gameover Text="Ваc сразила пуля" Singleton="Невезение, Рассеянность, Малодушие">
-					<Modification Name="Static" Value="Heroism=20, Inspiration=20, Дежа вю"/>
+					<Static Value="Heroism=20, Inspiration=20, Дежа вю"/>
 					<Text>Если же всё прошло блаополучно, то Вы потихонечку слиняли в лес, пока все эти ребята увлечены сражением...</Text>
 				</Gameover>
 				<Option Destination="767"/>
