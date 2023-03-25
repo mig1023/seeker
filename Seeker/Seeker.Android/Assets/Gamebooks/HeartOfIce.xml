@@ -1765,7 +1765,7 @@
 			<Options>
 				<Option Destination="203" Text="Разыскать Кайла Боше и рассказать ему, что добыли аэрокар"/>
 				<Option Destination="159" Text="Если нет, то вычеркните ключевое слово «Алмаз»">
-					<Modification Name="Untrigger" Value="Алмаз"/>
+					<Untrigger Value="Алмаз"/>
 				</Option>
 			</Options>
 		</Paragraph>
