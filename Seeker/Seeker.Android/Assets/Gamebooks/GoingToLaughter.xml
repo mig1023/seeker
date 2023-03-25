@@ -12992,10 +12992,10 @@
 			<Triggers>Дежа вю</Triggers>
 			<Options>
 				<Gameover Text="Если Вас не устраивает эта концовка, и Вы желаете другого завершения истории" Singleton="Невезение|Малодушие|Рассеянность|Суеверие">
-					<Modification Name="Static" Value="Heroism=25, Inspiration=25, Дежа вю"/>
+					<Static Value="Heroism=25, Inspiration=25, Дежа вю"/>
 				</Gameover>
 				<Option Destination="1297" Text="Если же Вы преодолели свои страхи и волнения, то благополучно избавились от этого досадного недоразумения (Вы получаете +25 пунктов Героизма и +25 пунктов Вдохновения!) и продолжили плаванье">
-					<Modification Name="Static" Value="Heroism=25, Inspiration=25"/>
+					<Static Value="Heroism=25, Inspiration=25"/>
 				</Option>
 			</Options>
 		</Paragraph>
