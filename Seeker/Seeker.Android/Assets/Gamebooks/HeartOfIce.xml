@@ -3974,7 +3974,7 @@
 				<Option Destination="445" Text="Пойдете искать Вайру Сингха, чтобы узнать его мнение"/>
 				<Option Destination="427" Text="Подолжите настаивать на участии Гильгамеша в экспедиции"/>
 				<Option Destination="16" Text="Согласитесь оставить его (вычеркните ключевое слово «Гильгамеш», запишите вместо него слово «Урук»)">
-					<Modification Name="ReplaceTrigger" Value="Гильгамеш -> Урук"/>
+					<ReplaceTrigger Value="Гильгамеш -> Урук"/>
 				</Option>
 			</Options>
 		</Paragraph>
