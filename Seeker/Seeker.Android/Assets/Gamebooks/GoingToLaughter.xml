@@ -13494,7 +13494,7 @@
 					<Text>Противник стремительно несётся на Вас, но Вы уступаете ему путь, напутствовав увесистым пинком под зад.\n\nЛюдям-то смешно, а Вы оба уже злые, уставшие и измотанные...</Text>
 				</Option>
 				<Option Destination="1338">
-					<Modification Name="Static" Value="Buffoonery=1"/>
+					<Static Value="Buffoonery=1"/>
 				</Option>
 			</Options>
 		</Paragraph>
