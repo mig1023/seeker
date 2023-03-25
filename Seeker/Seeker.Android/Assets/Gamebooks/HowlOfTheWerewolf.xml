@@ -1038,7 +1038,7 @@
 			<Options>
 				<Option Destination="167"/>
 				<Option Destination="89" Text="Попробовать ещё раз" Availability="ЗОЛОТО >= 1">
-					<Modification Name="Gold" Value="-1"/>
+					<Gold Value="-1"/>
 				</Option>
 				<Option Destination="117" Text="У вас записано слово Retsis" Availability="Retsis"/>
 			</Options>
