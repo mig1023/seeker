@@ -491,10 +491,10 @@
 			<Text>Остальные старушки тоже протягивают у кого что есть. Армейский нож или граната?</Text>
 			<Options>
 				<Option Destination="39" Text="Нож">
-					<Modification Name="Trigger" Value="Армейский нож"/>
+					<Trigger Value="Армейский нож"/>
 				</Option>
 				<Option Destination="39" Text="Граната">
-					<Modification Name="Trigger" Value="Граната"/>
+					<Trigger Value="Граната"/>
 				</Option>
 			</Options>
 		</Paragraph>
