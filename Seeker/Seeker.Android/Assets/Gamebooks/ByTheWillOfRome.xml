@@ -414,7 +414,7 @@
 			<Options>
 				<Option Destination="109" Text="10 метров"/>
 				<Option Destination="109" Text="20 метров">
-					<Modification Name="Trigger" Value="20 метров"/>
+					<Trigger Value="20 метров"/>
 				</Option>
 				<Option Destination="109" Text="30 метров"/>
 				<Option Destination="109" Text="40 метров"/>
