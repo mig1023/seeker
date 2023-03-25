@@ -649,10 +649,10 @@
 					<Text>Потеряйте 3 единицы Здоровья и решайте:</Text>
 				</Option>
 				<Option Destination="4" Text="Отступить в парилку">
-					<Modification Name="Life" Value="-3"/>
+					<Life Value="-3"/>
 				</Option>
 				<Option Destination="26" Text="Отбиваться здесь">
-					<Modification Name="Life" Value="-3"/>
+					<Life Value="-3"/>
 				</Option>
 			</Options>
 		</Paragraph>
