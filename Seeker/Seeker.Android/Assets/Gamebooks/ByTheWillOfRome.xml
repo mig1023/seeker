@@ -1201,13 +1201,13 @@
 			<Options>
 				<Option Destination="134" Text="Попросить у него снабдить вашу когорту едой" Availability="!Помощь легата"/>
 				<Option Destination="145" Text="Попросить снабдить вас инструментами">
-					<Modification Name="Trigger" Value="Инструменты"/>
+					<Trigger Value="Инструменты"/>
 				</Option>
 				<Option Destination="145" Text="Попросить дать вам две баллисты">
-					<Modification Name="Trigger" Value="Баллисты"/>
+					<Trigger Value="Баллисты"/>
 				</Option>
 				<Option Destination="145" Text="Попросить у легата взять из арсенала нужное вам количество тяжелых дротиков" Availability="Пилумы">
-					<Modification Name="Untrigger" Value="Пилумы"/>
+					<Untrigger Value="Пилумы"/>
 				</Option>
 				<Option Destination="145" Text="Не будете ни о чём просить"/>
 			</Options>
