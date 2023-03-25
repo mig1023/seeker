@@ -3757,7 +3757,7 @@
 					<Text>Без Управления парадоксом вы останетесь неподвижно лежать на снегу долгие часы — потеряйте 1 единицу Здоровья:</Text>
 				</Option>
 				<Option Destination="192">
-					<Modification Name="Life" Value="-1"/>
+					<Life Value="-1"/>
 				</Option>
 			</Options>
 		</Paragraph>
